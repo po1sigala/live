@@ -17,9 +17,7 @@ const newWorkout = document.querySelector(".new-workout")
 let workoutType = null;
 let shouldNavigateAway = false;
 
-init();
-
-async function init() {
+async function initExercise() {
   let workout;
 
   if (location.search.split("=")[1] === undefined) {
@@ -31,6 +29,8 @@ async function init() {
   }
 
 }
+
+initExercise();
 
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
