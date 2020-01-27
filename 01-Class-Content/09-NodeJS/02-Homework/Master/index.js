@@ -1,10 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const open = require("open");
-const convertFactory = require("electron-html-to");
 const api = require("./api");
-const generateHTML = require("./generateHTML");
+const generateMarkdown = require("./generateMarkdown");
 
 const questions = [
   {
@@ -12,12 +10,23 @@ const questions = [
     name: "github",
     message: "What is your GitHub username?"
   },
+  {
+    type: "input",
+    name: "title",
+    message: "What is your project's name?"
+  },
+
+  {
+    type: "input",
+    name: "description",
+    message: "Please write a short description of your project"
+  },
 
   {
     type: "list",
     name: "color",
-    message: "What is your favorite color?",
-    choices: ["red", "blue", "green", "pink"]
+    message: "What kind of license should your project have?",
+    choices: ["MIT", "APACHE", "GNU", "No License"]
   }
 ];
 
@@ -33,32 +42,14 @@ function init() {
       .getUser(github)
       .then(response =>
         api.getTotalStars(github).then(stars => {
-          return generateHTML({
+          return generateMarkdown({
             stars,
             color,
             ...response.data
           });
         })
       )
-      .then(html => {
-        const conversion = convertFactory({
-          converterPath: convertFactory.converters.PDF
-        });
-
-        conversion({ html }, function(err, result) {
-          if (err) {
-            return console.error(err);
-          }
-
-          result.stream.pipe(
-            fs.createWriteStream(path.join(__dirname, "resume.pdf"))
-          );
-          conversion.kill();
-        });
-
-        open(path.join(process.cwd(), "resume.pdf"));
-      });
-  });
+  })
 }
 
 init();
