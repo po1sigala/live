@@ -30,7 +30,7 @@ const config = {
       "theme-color": "#ffffff",
       start_url: "http://localhost:3000",
       icons: [{
-        src: path.resolve("public/assets/images/icons/android-chrome-192x192.png"),
+        src: path.resolve("public/assets/images/icons/icon192x192.png"),
         sizes: [96, 128, 192, 256, 384, 512],
         destination: path.join("assets", "icons")
       }]

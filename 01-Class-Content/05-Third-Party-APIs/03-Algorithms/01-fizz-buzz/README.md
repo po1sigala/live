@@ -30,7 +30,7 @@ In this activity you will be writing code to create a function that solves the [
       13;
       14;
       ("Fizz Buzz");
-      ("Fizz");
+      16
       17;
       ("Fizz");
       19;

@@ -216,12 +216,6 @@ var imageSeed = [
     image: "/assets/images/35.jpg",
     rating: 0,
     date: new Date(Date.now())
-  },
-  {
-    description: "Awesomeness",
-    image: "/assets/images/36.jpg",
-    rating: 0,
-    date: new Date(Date.now())
   }
 ];
 

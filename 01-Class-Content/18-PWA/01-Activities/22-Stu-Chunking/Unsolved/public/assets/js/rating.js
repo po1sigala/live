@@ -32,8 +32,8 @@ export function createRatingForm(image) {
     form.appendChild(input);
     form.appendChild(label);
   }
-  mouseoverListener;
-  mouseleaveListener;
+  const mouseoverListener = '';
+  const mouseleaveListener = '';
   return form;
 }
 
