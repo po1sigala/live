@@ -106,19 +106,10 @@ self.addEventListener("fetch", function(evt) {
     return;
   }
 
-  evt.respondWith(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.match(evt.request).then(response => {
-        return response || fetch(evt.request);
-      });
-    })
-  );
-
-  evt.respondWith(
-    fetch(evt.request).catch(() => {
-      return caches.open(CACHE_NAME).then(cache => {
-        return cache.match("offline.html");
-      });
-    })
-  );
-});
+evt.respondWith(
+  caches.open(CACHE_NAME).then(cache => {
+    return cache.match(evt.request).then(response => {
+      return response || fetch(evt.request);
+    });
+  })
+)});
