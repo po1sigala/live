@@ -122,7 +122,7 @@ module.exports = config;
 
   * Webpack takes the dependency graph that was created and then packs all of the code and dependencies necessary into an output file specified within the configuration file.
 
-* Open the file `src/app.js` in your IDE.
+* Open the file `dist/app.js` in your IDE.
 
   * Show that the JavaScript is a minified bundle of `src/app.js` and any dependencies it has. 
 
@@ -140,7 +140,7 @@ module.exports = config;
 
   * `Hello webpack` appears in the console, coming from the file `bundle.js`.
 
-* Lastly run `npm build` from the command line and explain the following:
+* Lastly run `npm run build` from the command line and explain the following:
 
   * The build script set up in `package.json` runs and watches for any changes in our files, similar to how `nodemon` watches for changes. In order to kill the process, type `Ctrl + C` in your terminal.
 
@@ -336,7 +336,7 @@ plugins: [
     start_url: "/",
     icons: [
       {
-        src: path.resolve("public/assets/images/icons/android-chrome-192x192.png"),
+        src: path.resolve("public/assets/images/icons/icon192x192.png"),
         sizes: [96, 128, 192, 256, 384, 512],
         destination: path.join("assets", "icons")
       }
@@ -898,7 +898,7 @@ entry: {
       "theme-color": "#ffffff",
       start_url: "/",
       icons: [{
-        src: path.resolve("assets/images/icons/android-chrome-192x192.png"),
+        src: path.resolve("assets/images/icons/icon192x192.png"),
         sizes: [96, 128, 192, 256, 384, 512],
         destination: path.join("assets", "icons")
       }]
