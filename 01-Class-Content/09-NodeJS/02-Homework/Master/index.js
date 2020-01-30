@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const api = require("./api");
-const generateMarkdown = require("./generateMarkdown");
+const api = require("./utils/api");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
   {
@@ -38,6 +38,16 @@ const questions = [
     message: "What command should be run to run tests?",
     default: "npm test"
   },
+  {
+    type: "input",
+    name: "usage",
+    message: "What does the user need to know about using the repo?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "What does the user need to know about contributing to the repo?",
+  }
 ];
 
 function writeToFile(fileName, data) {

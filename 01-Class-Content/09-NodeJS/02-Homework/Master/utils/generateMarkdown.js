@@ -15,7 +15,7 @@ function renderLicenseSection(license) {
     return (
       `## License
 
-${license}`
+This project is licensed under the ${license} license.`
     )
   }
   return ''
@@ -36,9 +36,13 @@ ${data.description}
 
 * [Usage](#usage)
 
-* [Credits](#credits)
-
 * [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
 
 ## Installation
 
@@ -48,11 +52,15 @@ To install necessary dependencies, run the following command:
 ${data.installation}
 \`\`\`
 
+## Usage
+
+${data.usage}
+
 ${renderLicenseSection(data.license)}
   
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The Contributor Covenant is an industry standard, but you can always write your own.
+${data.contributing}
 
 ## Tests
 
