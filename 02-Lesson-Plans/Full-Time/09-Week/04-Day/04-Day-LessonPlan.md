@@ -474,7 +474,7 @@ app.use(compression());
 
 * In a separate tab, run `mongod`.
 
-* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered, installed, and that the service worker is caching files.
+* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered and installed.
 
   * When our app launches, it registers and installs the service worker.
 
@@ -482,15 +482,11 @@ app.use(compression());
 
   * Now, if we refresh the page, we can see that the service worker was installed and registered again.
 
-  * We can navigate to the Cache Storage tab to see that our files have been cached.
-
-  * Lastly, we can open the console to see the service worker object as well as a message saying that our files have been cached.
-
 * Ask the class the following question(s) and call on students for the corresponding answer(s):
 
   * ☝️ What are the 2 main steps in service worker lifecycle?
 
-  * 🙋 Installation and activation. There is also a waiting step that is often skipped. 
+  * 🙋 Installation and activation. There is also a waiting step that is often skipped.
 
 ---
 
