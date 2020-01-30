@@ -1,93 +1,73 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
+function generateProjectUrl(github, title) {
+  const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
+  return `https://github.com/${github}/${kebabCaseTitle}`;
+}
 
-const licenses = {
-  mit: {
-    name: "MIT"
-  },
-  apache: {
-    name: "APACHE"
-  },
-  gnu: {
-    name: "GNU"
+function renderLicenseBadge(license, github, title) {
+  if (license !== "None") {
+    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
   }
+  return ''
+}
+
+function renderLicenseSection(license) {
+  if (license !== "None") {
+    return (
+      `## License
+
+${license}`
+    )
+  }
+  return ''
 }
 
 function generateMarkdown(data) {
   return `
-  #${data.title}
-  [![GitHub license](https://img.shields.io/badge/license-${data.license.name}-blue.svg)](https://github.com/${data.username}/LICENSE)
-  
-  ## Description
-  ${data.description}
+# ${data.title}
+${renderLicenseBadge(data.license, data.github, data.title)}
 
-  ## Table of Contents 
-  
-  * [Installation](#installation)
+## Description
 
-  * [Usage](#usage)
+${data.description}
 
-  * [Credits](#credits)
+## Table of Contents 
 
-  * [License](#license)
+* [Installation](#installation)
 
-  ## Installation
+* [Usage](#usage)
 
-  To install necessary dependencies, run the following command:
-  
-  \`${data.installation}\`
-  
-  ## Usage
-  
-  ${data.usage}
-  
-  ## Credits
-  
-  ${data.credits}
-  
-  ## License
+* [Credits](#credits)
 
-  ${data.license}
-    
-  ## Badges
-  
-  Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by shields.io. You may not understand what they all represent now, but you will in time.
-  
-  ## Contributing
-  If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The Contributor Covenant is an industry standard, but you can always write your own.
-  
-  ## Tests
+* [License](#license)
 
-  To run tests, run the following command:
+## Installation
 
-  \`${data.test}\`
-  Go the extra mile and write tests for your application. Then provide examples on how to run them.
+To install necessary dependencies, run the following command:
+
+\`\`\`
+${data.installation}
+\`\`\`
+
+${renderLicenseSection(data.license)}
   
-  
+## Contributing
+
+If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The Contributor Covenant is an industry standard, but you can always write your own.
+
+## Tests
+
+To run tests, run the following command:
+
+\`\`\`
+${data.test}
+\`\`\`
+
+## Questions
+
+<img src="${data.avatar_url}" alt="avatar" style="border-radius: 16px" width="30" />
+
+If you have any questions about the repo, open an issue or contact [${data.github}](${data.url}) directly at ${data.email}.
+
 `;
 }
 
