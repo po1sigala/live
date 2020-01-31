@@ -8,6 +8,8 @@
 
 * Run the following command: `npm install sw-precache-webpack-plugin webpack-pwa-manifest -D`.
 
+* Update `webpack.config.js` to use the `SWPrecacheWebpackPlugin` and `WebpackPwaManifest` plugins.
+
 * In a separate tab in your terminal, start a mongodb server with `mongod`.
 
 * Run `npm start` to make sure that the application works as expected.
