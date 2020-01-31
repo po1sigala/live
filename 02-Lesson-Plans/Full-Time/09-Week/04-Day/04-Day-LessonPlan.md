@@ -584,7 +584,7 @@ console.log("Hello from your service worker file!");
 
   ![Threads](Images/sw-threads.png)
 
-* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following: 
+* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following:
 
   * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
 
