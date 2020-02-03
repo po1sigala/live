@@ -26,8 +26,8 @@ You will be employer-competitive if you are able to:
 * Implement Sequelize associations to join one or more tables
 * Configure Heroku for deployment of an application using Sequelize
 
-## Homework: Berger 2 The Sequel
-* In this assignment, you're going to Sequelize the Burger app you made last unit. We've split this exercise into three different tiers, all with different tasks and expectations. Finish whichever tier will provide you with the most reasonable challenge.
+## Homework: Reverse Engineer
+* In this assignment, you will reverse engineer the starter code provided and create a tutorial for the code. When joining a new team, you will be expected to inspect a lot of code that you have never seen before. Rather than having a team member explain every line for you, you will dissect the code by yourself, saving any questions for a member of your team.
 
 ## Helpful Links
 * [Sequelize Queries](http://docs.sequelizejs.com/en/latest/docs/querying/)
