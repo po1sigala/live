@@ -27,7 +27,7 @@ You will be employer-competitive if you are able to:
 * Configure Heroku for deployment of an application using Sequelize
 
 ## Homework: Reverse Engineer
-* In this assignment, you will reverse engineer the starter code provided and create a tutorial for the code. When joining a new team, you will be expected to inspect a lot of code that you have never seen before. Rather than having a team member explain every line for you, you will dissect the code by yourself, saving any questions for a member of your team.
+* In this assignment, you will reverse engineer the starter code provided and create a tutorial for the code. Begin inspecting the code to get an understanding of each file's responsibility. Then, in a Google Doc, write a tutorial explaining *every* file and its purpose.
 
 ## Helpful Links
 * [Sequelize Queries](http://docs.sequelizejs.com/en/latest/docs/querying/)
