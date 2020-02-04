@@ -8,27 +8,47 @@
 
 * NOTE: Remember to add `.pretty()` afterwards so the results are readable!
 
-* In the mongo shell, using the animals collection that you created in the last exercise:
+* Create a new db named `zoo` and insert at least 5 animals with the following attributes:
+  * `numLegs` an integer that points to the number of legs.
 
-* ***Sort by id:**
+  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
+
+  * `weight` an integer that points to the animals weight.
+
+  * `name` a string that points to the animal's name.
+
+* Example:
+
+  ```js
+  {
+    "name": "Panda",
+    "numLegs": 4,
+    "class": "mammal",
+    "weight": 254
+  }
+  ```
+
+* Using the animals collection that you created:
+
+* **Sort by id:**
 
 * The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
 
-```sql
+```js
 db.animals.find().sort({ _id:1 });
 db.animals.find().sort({ _id:-1 });
 ```
 
 * **Sort by an integer - numLegs:**
 
-```sql
+```js
 db.animals.find().sort({ numLegs:1 });
 db.animals.find().sort({ numLegs:-1 });
 ```
 
 * **Sort by a string - class:**
 
-```sql
+```js
 db.animals.find().sort({ class:1 });
 db.animals.find().sort({ class:-1 });
 ```
