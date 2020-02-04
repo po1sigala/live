@@ -29,8 +29,8 @@ You will be employer-competitive if you are able to:
 * Integrate Mongoose in a full-stack web application
 * Create query builders to populate documents using refs
 
-## Homework: All The News That's Fit To Scrape
-* In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
+## Homework: Workout Tracker
+Create and deploy full-stack workout tracker application. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 
 ## Helpful Links
 * [NoSQL](https://en.wikipedia.org/wiki/NoSQL)
