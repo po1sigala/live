@@ -9,13 +9,14 @@
 * NOTE: Remember to add `.pretty()` afterwards so the results are readable!
 
 * Create a new db named `zoo` and insert at least 5 animals with the following attributes:
-  * `numLegs` an integer that points to the number of legs.
 
-  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
+  * `numLegs` - a integer that points to the number of legs.
 
-  * `weight` an integer that points to the animals weight.
+  * `class` - a string that points to the animal's class ("reptile", "mammal" etc).
 
-  * `name` a string that points to the animal's name.
+  * `weight` - a integer that points to the animals weight.
+
+  * `name` - a string that points to the animal's name.
 
 * Example:
 
@@ -30,7 +31,7 @@
 
 * Using the animals collection that you created:
 
-* **Sort by id:**
+## Sort by id:
 
 * The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
 
@@ -39,14 +40,14 @@ db.animals.find().sort({ _id:1 });
 db.animals.find().sort({ _id:-1 });
 ```
 
-* **Sort by an integer - numLegs:**
+## Sort by an integer - numLegs:
 
 ```js
 db.animals.find().sort({ numLegs:1 });
 db.animals.find().sort({ numLegs:-1 });
 ```
 
-* **Sort by a string - class:**
+## Sort by a string - class:
 
 ```js
 db.animals.find().sort({ class:1 });
