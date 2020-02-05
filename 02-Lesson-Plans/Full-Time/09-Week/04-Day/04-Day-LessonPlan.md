@@ -102,13 +102,11 @@ function initLazyImages() {
 
 ### 3. Instructor Do: Intro Gallery App Full Optimization (5 mins)
 
-* Let students know they did a great job today. Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
-
-* For the final activity of the day students wil take the completed gallery application and minify all of the JS.
+* Let students know they are doing well! Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
 
 ### 4. Student Do: Optimize Gallery App (20 mins)
 
-* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/18-web-performance/01-Activities/06-Stu_Gallery-Optimize/Solved)
+* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved)
 
 ```md
 # Optimize Gallery App
@@ -128,13 +126,13 @@ In this activity you will use the Lazy Loading, GZip Compression, Image Compress
 
 * Now that the application is running, navigate to the [localhost](https://localhost:3000)
 
-* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report.
+* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
 
 * Now, using the compression npm package, enable gzip compression in the application.
 
 * Restart your server and run a new audit.
 
-* Next, using [ImageOptim Online](https://imageoptim.com/online), compress all of the images found within the `public/assets/images`
+* Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
 
 * Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
 
@@ -142,32 +140,30 @@ In this activity you will use the Lazy Loading, GZip Compression, Image Compress
 
 * Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
 
-* Create a `dist` folder in the root of your project folder
+* Create a `dist` folder in `/public`.
 
-  * Inside of `dist` create a file called `index.js`
+  * Inside of `public/dist` create a file called `index.js`
 
-  * Link this `index.js` to your application
+  * Link this `index.js` to your application in `public/index.html`.
 
-* Head to [Online Minification](http://refresh-sf.com/).
+* Head to [JSCompress](https://jscompress.com/).
 
-* Take the contents of `server.js` and paste it into the text area. Click `JavaScript`.
+* Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
 
-  * Take the resulting minified code and copy/paste it into your `dist/index.js`
-
-  * Go through the same process with the remaining JS files in the project.
+  * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
 
 * Finally, restart your server and run a new audit.
 ```
 
 ### 5. Instructor Do: Review Final Gallery App (5 mins)
 
-* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/18-PWA/01-Activities06-Stu_Gallery-Optimize/Solved) and run the following commands:
+* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
 
   * npm install
 
   * npm install compression
 
-* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/18-PWA/01-Activities06-Stu_Gallery-Optimize/Solved/server.js)
+* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
   
 ```js
 const compression = require("compression");
@@ -177,9 +173,9 @@ app.use(compression());
 
   * With these two lines of code we can easily enable GZip compression in our application for our served files.
 
-* Ask the class, "Is ImagOptim our only option for Image Compression?"
+* Ask the class, "Is Tiny PNG our only option for Image Compression?"
 
-  * We can use many different tools when looking to compress images. For our purposes we chose to use ImagOptim for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
+  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
 
   * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
 

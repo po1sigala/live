@@ -262,7 +262,7 @@ In this activity you will use Google Lighthouse to audit your second group proje
 
   * Bootstrap and jQuery are two examples of minified source code
 
-* Open [Online Minification](http://refresh-sf.com/) and paste the following code into the textarea:
+* Open [JSCompress](https://jscompress.com/) and paste the following code into the textarea:
 
     ```js
     var myArray = [1, 2, 3, 4, 5];
@@ -272,17 +272,17 @@ In this activity you will use Google Lighthouse to audit your second group proje
     }
     ```
 
-* Click the JavaScript button to minify the code snippet and explain the following point(s):
+* Click the `Compress JavaScript` button to minify the code snippet and explain the following point(s):
 
-* ![Minify JS](Images/minifyJS.png)
+* ![Minify JS](Images/minifyJS.jpg)
 
   * The minifier moved our `myArray` declaration into our `for loop`.
 
   * The minifier removed all whitespace between characters, and put all of our code on one line.
 
-  * The minification process resulted in a 25% decrease in the size of the JavaScript.
+  * The minification process resulted in a 30% decrease in the size of the JavaScript.
 
-  ![Minified](Images/minification.png)
+  ![Minified](Images/minification.jpg)
 
   * While the code may look different after minification, it will function exactly the same
 
@@ -292,7 +292,7 @@ In this activity you will use Google Lighthouse to audit your second group proje
 
 ### 11. Student Do: Minify your JavaScript (10 mins)
 
-* Direct students to the activity instructions located in [02-Stu_Minifiy-JS](../../../../01-Class-Content/18-PWA/01-Activities/02-Stu_Minifify-JS/README.md)
+* Direct students to the activity instructions located in [02-Stu_Minifiy-JS](../../../../01-Class-Content/18-PWA/01-Activities/02-Stu_Minify-JS/README.md)
 
 ```md
 # Minify Your JS
@@ -301,11 +301,13 @@ In this activity you will minify your JavaScript using an online tool.
 
 ## Instructions
 
-* Using the project you audited previously, navigate to [Online JavaScript/CSS/HTML Compressor](http://refresh-sf.com/)
+* Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
 
-* Copy the contents of one of your JS files into the compressor and click on the `JavaScript` button.
+* Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
 
-* Note the resulting Input/Output sizes of the JS as shown to the bottom right of the textarea.
+  * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
+
+* Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
 
 * Create a `dist` folder in the root of your project.
 
@@ -444,31 +446,17 @@ In this activity you are going to use an online compression tool to decrease ima
 
 ## Instructions
 
-* In this activity you will be using ImageOptim Online to compress images.
+* In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
 
 * First, unzip the `uncompressedImages.zip` file.
 
-* Next, navigate to [ImageOptim Online](https://imageoptim.com/online)
+* Next, navigate to [Tiny PNG](https://tinypng.com/).
 
-* Select the following options:
+  * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
 
-  * Quality - Medium
+* Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
 
-  * Color Quality - Auto
-
-  * Format - JPEG
-
-* Now that our options are selected, click `Choose Files`.
-
-* This will prompt you to select an image or images you would like to pass through the compressor.
-
-* Go ahead and choose 3-5 images. Before accepting the choices, note the original file sizes so you can compare against the compressed image.
-
-* Finally, click `Submit`.
-
-* Once the compression is complete, a `zip` file will automatically download to your computer.
-
-  * This will most likely be downloaded to your `Downloads` folder.
+* Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
 ```
 
 ### 18. Instructor Do: Review Image Compression (5 mins)
