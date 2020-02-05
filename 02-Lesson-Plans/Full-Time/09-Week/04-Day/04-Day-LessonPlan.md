@@ -330,7 +330,7 @@ app.use(compression());
       }
     ],
     "start_url": "/",
-    "background_color": "	#808080",
+    "background_color": "#808080",
     "display": "standalone",
     "theme_color": "#808080"
   } 
@@ -361,36 +361,36 @@ app.use(compression());
 * Direct students to the activity instructions found in [09-Stu_Manifest](../../../../01-Class-Content/18-PWA/01-Activities/09-Stu_Manifest)
 
 ```md
-  # Web App Manifest
+# Web App Manifest
 
-  In this activity, you will write your first progressive web application manifest.
+In this activity, you will write your first progressive web application manifest.
 
-  ## Instructions
+## Instructions
 
-  * Using the instructor demo as a guide, create a manifest for the Image Gallery app.
+* Using the instructor demo as a guide, create a manifest for the Image Gallery app.
 
-    * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
+  * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
 
-    * 🤔 How do you deploy a manifest?
+  * 🤔 How do you deploy a manifest? Hint: You will need to somehow link it with the web page. (See [Web App Manifest - Deploying a manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Deploying_a_manifest_with_the_link_tag).)
 
-  * When finished, run the commands:
+* When finished, run the commands:
 
-    * `npm install`
+  * `npm install`
 
-    * `npm run seed`
+  * `npm run seed`
 
-    * `npm start`
+  * `npm start`
 
-  * Navigate to [localhost:3000](http://localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
+* Navigate to [localhost:3000](localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
 
-  ## 💡 Hint(s)
+## 💡 Hint(s)
 
-  Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
+Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
 
-  ## 🏆 Bonus
+## 🏆 Bonus
 
-  * Add additional members to your manifest.
-  ```
+* Add additional members to your manifest.
+```
 
 ### 11. Instructor Do: Review Web App Manifest (10 mins)
 
