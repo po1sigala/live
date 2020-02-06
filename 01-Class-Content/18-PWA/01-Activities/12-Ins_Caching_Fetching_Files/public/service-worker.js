@@ -52,6 +52,7 @@ self.addEventListener("activate", function(evt) {
 
 // fetch
 self.addEventListener("fetch", function(evt) {
+  // cache successful requests to the API
   if (evt.request.url.includes("/api/")) {
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
@@ -72,5 +73,14 @@ self.addEventListener("fetch", function(evt) {
     );
 
     return;
-}});
+  }
+
+  // if the request is not for the API, serve static assets using "offline-first" approach.
+  // see https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook#cache-falling-back-to-network
+  evt.respondWith(
+    caches.match(evt.request).then(function(response) {
+      return response || fetch(evt.request);
+    })
+  );
+});
 

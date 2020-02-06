@@ -568,7 +568,7 @@ console.log("Hello from your service worker file!");
 
   * ✔️ The `fetch` listener intercepts all fetch requests and uses data from the cache to return a response.
 
-* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/) in your IDE and run the following commands:
+* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/) in your IDE and run the following commands:
 
   * `npm install`
 
@@ -580,7 +580,7 @@ console.log("Hello from your service worker file!");
 
   ![Threads](Images/sw-threads.png)
 
-* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following:
+* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/service-worker.js) in your IDE and explain the following:
 
   * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
 
@@ -677,8 +677,20 @@ console.log("Hello from your service worker file!");
       return cache.match(evt.request);
     });
   ```
+  
+  * _**Note for instructor:** You will notice that the api requests are not cached on the first visit, when the service worker is installed for the first time. Solutions to deal with this case are most likely too complicated to introduce at this point in the class. Simply refresh the page to allow the service worker to cache the api request making the posts from the database available when the page is viewed offline._
 
-* Open [13-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following: 
+  * If the request path does not include `/api`, then we will assume the requests is for a static file. The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
+
+  ```js
+  evt.respondWith(
+    caches.match(evt.request).then(function(response) {
+      return response || fetch(evt.request);
+    })
+  );
+  ```
+
+* Open [12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following:
 
   * We are going to skip past the DOM element creation and focus on the handling of our "like" POST request. 
 
@@ -697,7 +709,7 @@ console.log("Hello from your service worker file!");
     statusEl.innerText = "";
   ```
 
-  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether of not their save was successful. 
+  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether or not their save was successful. 
 
   ```js
   incrementLikesRequest(id, likes)
