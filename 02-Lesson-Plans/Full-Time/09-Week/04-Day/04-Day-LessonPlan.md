@@ -749,45 +749,7 @@ console.log("Hello from your service worker file!");
 
 * Direct students to the next activity located in [13-Stu_Caching_Fetching_Files](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Unsolved/).
 
-```md
-# Caching Files
-
-In this activity you will be enabling functionality to allow your application to work offline.
-
-## Instructions
-
-* Add the following code to your `service-worker.js` file.
-
-* Type out the following code snippets when adding them to your application, it will help you solidify what you are doing!
-
-* As you go through each step, keep your Chrome Develop tools open to monitor your progress and debug if needed.
-
-   1. Set Up Cache Files
-
-   ![Files To Cache](Images/cache-code.png)
-
-   1. Install and Register Your Service Worker
-
-   ![Register](Images/register-code.png)
-
-   1. If done successfully, you should see your static cache in your Application tab.
-
-   ![Static Cache](Images/static-cache.png)
-
-   1. Activate Service Worker
-
-   ![Activate](Images/activate-code.png)
-
-   1. Fetch Files
-
-   ![Fetch](Images/fetch-code.png)
-
-  * If done successfully you will see your data cache in your Application tab. At this point you should be able to put your application in offline mode for an offline experience.
-
-   ![Data Cache](Images/data-cache.png)
-
-   ![Offline](Images/offline.png)
-```
+* Instructions are here: [13-Stu_Caching_Fetching_Files/README.md](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/README.md/)
 
 ### 18. Instructor Do: Review Caching Files (5 mins)
 
@@ -798,16 +760,25 @@ In this activity you will be enabling functionality to allow your application to
   ```js
   const FILES_TO_CACHE = [
     '/',
-    '/offline.html',
     '/index.html',
+    '/favicon.ico',
+    '/manifest.webmanifest',
     '/assets/css/style.css',
-    '/assets/js/app.js',
     '/assets/js/loadImages.js',
-    '/assets/js/install.js',
+    '/assets/images/icons/icon-72x72.png',
+    '/assets/images/icons/icon-96x96.png',
+    '/assets/images/icons/icon-128x128.png',
+    '/assets/images/icons/icon-144x144.png',
+    '/assets/images/icons/icon-152x152.png',
+    '/assets/images/icons/icon-192x192.png',
+    '/assets/images/icons/icon-384x384.png',
+    '/assets/images/icons/icon-512x512.png',
     '/assets/images/1.jpg',
     '/assets/images/2.jpg',
-    ...
-    ...
+    '/assets/images/3.jpg',
+    '/assets/images/4.jpg',
+    '/assets/images/5.jpg',
+    // ...
   ];
 
   const CACHE_NAME = 'static-cache-v2';
