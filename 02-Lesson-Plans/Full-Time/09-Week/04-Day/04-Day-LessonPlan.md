@@ -498,13 +498,13 @@ app.use(compression());
 
 * Add the following script just above the closing `</body>` tag in `index.html`
 
-```js
+```html
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then((reg) => {
-          console.log('We found your service worker file!', reg);
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
         });
     });
   }
@@ -537,13 +537,13 @@ console.log("Hello from your service worker file!");
 
   * We tell the browser to register our service worker file.
 
-```js
+```html
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then((reg) => {
-          console.log('We found your service worker file!', reg);
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
         });
     });
   }
