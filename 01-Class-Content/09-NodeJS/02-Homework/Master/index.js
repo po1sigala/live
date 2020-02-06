@@ -1,10 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const open = require("open");
-const convertFactory = require("electron-html-to");
-const api = require("./api");
-const generateHTML = require("./generateHTML");
+const api = require("./utils/api");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
   {
@@ -12,12 +10,43 @@ const questions = [
     name: "github",
     message: "What is your GitHub username?"
   },
-
+  {
+    type: "input",
+    name: "title",
+    message: "What is your project's name?"
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Please write a short description of your project"
+  },
   {
     type: "list",
-    name: "color",
-    message: "What is your favorite color?",
-    choices: ["red", "blue", "green", "pink"]
+    name: "license",
+    message: "What kind of license should your project have?",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "What command should be run to install dependencies?",
+    default: "npm i"
+  },
+  {
+    type: "input",
+    name: "test",
+    message: "What command should be run to run tests?",
+    default: "npm test"
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "What does the user need to know about using the repo?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "What does the user need to know about contributing to the repo?",
   }
 ];
 
@@ -26,39 +55,15 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-  inquirer.prompt(questions).then(({ github, color }) => {
+  inquirer.prompt(questions).then((inquirerResponses) => {
     console.log("Searching...");
 
     api
-      .getUser(github)
-      .then(response =>
-        api.getTotalStars(github).then(stars => {
-          return generateHTML({
-            stars,
-            color,
-            ...response.data
-          });
-        })
-      )
-      .then(html => {
-        const conversion = convertFactory({
-          converterPath: convertFactory.converters.PDF
-        });
-
-        conversion({ html }, function(err, result) {
-          if (err) {
-            return console.error(err);
-          }
-
-          result.stream.pipe(
-            fs.createWriteStream(path.join(__dirname, "resume.pdf"))
-          );
-          conversion.kill();
-        });
-
-        open(path.join(process.cwd(), "resume.pdf"));
-      });
-  });
+      .getUser(inquirerResponses.github)
+      .then(({ data }) => {
+        writeToFile("README.md", generateMarkdown({ ...inquirerResponses, ...data }));
+      })
+  })
 }
 
 init();

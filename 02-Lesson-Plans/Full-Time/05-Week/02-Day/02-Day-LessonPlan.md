@@ -433,7 +433,7 @@ console.log(alias, gender, family, spouse); // print them by variable name
 
 * Once all the prompts have been answered, there should be a new `index.html` file added to the project directory. Open it in your web browser for the class to see.
 
-  * This assignment is like their homework, in which they'll use similar techniques to generate a PDF resume.
+  * This assignment is like their homework, in which they'll use similar techniques to generate a markdown README file.
 
 * Answer any high-level questions about the Mini Project or lesson ahead before students begin the first activity of the day.
 
