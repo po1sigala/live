@@ -6,7 +6,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ## Instructor Notes
 
-* `Summary: Complete activities 20-state/01-Activities/23-Stu_PupsterApp/ through 21-react/01-Activities/05-Ins_CustomHook.`
+* `Summary: Complete activities 20-state/01-Activities/22-Ins_IntroReactRouter/ through 21-react/01-Activities/05-Ins_CustomHook.`
 
 * As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
