@@ -24,7 +24,7 @@ Many students will benefit from more information about prototypal inheritance. T
 
   * [10.1 - Lesson Plan](01-Day_Intro-OOP/10.1-LESSON-PLAN.md)
 
-  * [10.2 - Lesson Plan](02-Day_Constructors/10.2-LESSON-PLAN.md)
+  * [10.2 - Lesson Plan](02-Test_Driven_development/10.2-LESSON-PLAN.md)
 
   * [10.3 - Lesson Plan](03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
 
