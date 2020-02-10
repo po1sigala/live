@@ -17,7 +17,9 @@ In this activity we will review passing props down the component tree in React.
   />
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
   />
   ```
 
@@ -25,14 +27,14 @@ In this activity we will review passing props down the component tree in React.
 
 * Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
 
-* The `API.loadUsers()` function returns an array of users that follow this format:
+* The `fetchUsers` function in `src/utils/API.js` returns an array of users that follow this format:
 
   ```js
   [
     {
-      login: "willsmith",
-      language: "JavaScript",
-      image: "https://api.github.com/users/name"
+      login: "username",
+      profileUrl: "https://github.com/username",
+      image: "https://avatars0.githubusercontent.com/u/00000000?v=4"
     }
   ];
   ```
@@ -47,12 +49,8 @@ In this activity we will review passing props down the component tree in React.
 
     * image: Gallery > CardContainer > Card > CardImage
 
-    * language: Gallery > CardContainer > Card > CardBody
+    * profileUrl: Gallery > CardContainer > Card > CardBody
 
     * handleClick: Gallery > CardContainer > Card > CardBtn
 
   * Each arrow click should _not_ make an additional API call.
-
-### Hints
-
-* Remember, `useState` is a great way to store information that your application may later need.
