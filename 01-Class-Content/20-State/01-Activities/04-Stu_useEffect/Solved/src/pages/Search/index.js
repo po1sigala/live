@@ -8,7 +8,6 @@ import Alert from "../../components/Alert";
 function Search() {
   const [search, setSearch] = useState("Wikipedia");
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
 
@@ -25,8 +24,7 @@ function Search() {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        setTitle(res.data[1]);
-        setDescription(res.data[2][0]);
+        setTitle(res.data[1][0]);
         setUrl(res.data[3][0]);
       })
       .catch(err => setError(err));
@@ -47,7 +45,7 @@ function Search() {
           handleInputChange={handleInputChange}
           results={search}
         />
-        <SearchResults title={title} description={description} url={url} />
+        <SearchResults title={title} url={url} />
       </Container>
     </div>
   );

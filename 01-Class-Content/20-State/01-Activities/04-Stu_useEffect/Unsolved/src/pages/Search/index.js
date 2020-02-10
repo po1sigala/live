@@ -9,7 +9,6 @@ class Search extends Component {
   state = {
     search: "Wikipedia",
     title: "",
-    description: "",
     url: "",
     error: ""
   };
@@ -27,8 +26,7 @@ class Search extends Component {
           throw new Error(res.data.message);
         }
         this.setState({
-          title: res.data[1],
-          description: res.data[2][0],
+          title: res.data[1][0],
           url: res.data[3][0],
           error: ""
         });
@@ -55,7 +53,6 @@ class Search extends Component {
         }
         this.setState({
           title: res.data[1],
-          description: res.data[2][0],
           url: res.data[3][0],
           error: ""
         });
@@ -77,7 +74,6 @@ class Search extends Component {
           />
           <SearchResults
             title={this.state.title}
-            description={this.state.description}
             url={this.state.url}
           />
         </Container>
