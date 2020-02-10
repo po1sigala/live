@@ -633,7 +633,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 
 ### 14. Students Do: Custom Hooks (15 mins)
 
-* Introduce [CustomHook Unsolved](../../../../01-Class-Content/21-react/01-Activities/06-Stu_CustomHook/Unsolved)
+* Introduce [06-Stu_CustomHook/Unsolved](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Unsolved)
 
 * In this activity we will practice using Custom Hooks by creating a `useDebounce` Hook that will delay the invoking of a function for a given number of milliseconds.
 
@@ -659,7 +659,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 
 ### 15. Instructor Do: Review Custom Hooks (10 mins)
 
-* Open [15-Stu_CustomHooks/](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/) in your browser.
+* Open [06-Stu_CustomHook/](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/) in your browser.
 
   * Type `software developer` into the Article Search Bar.
 
@@ -667,7 +667,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 
   * Slowly type out each letter of `software developer` and demonstrate that the API call occurs if there has been a period of over 500 milliseconds without any input changing.
 
-* Open [15-Stu_CustomHooks/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
 
   * We will use the `useEffect` and `useState` Hooks in our custom Hook.
 
@@ -706,7 +706,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
   export default useDebounce;
   ```
 
-* Open [15-Stu_CustomHooks/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
 
   * The `debouncedSearchTerm` variable is set up **outside** of the `useEffect` Hook. We pass in the existing `search` variable that is tied to our component state and pass in 500 as our second parameter.
 
@@ -719,30 +719,28 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 ```js
 const debouncedSearchTerm = useDebounce(search, 500);
 
-  useEffect(() => {
-    document.title = "Wikipedia Searcher";
-    if(!search) {
-      return;
-    }
-    if(debouncedSearchTerm) {
-      API.searchTerms(search)
-        .then(res => {
-          if(res.data.length === 0) {
-            throw new Error("No results found.");
-          }
-          if (res.data.status === "error") {
-            throw new Error(res.data.message);
-          }
-          setArticleState({
-            title: res.data[1],
-            description: res.data[2][0],
-            url: res.data[3][0]
-          });
-        })
-        .catch(err => setError(err));
-    }
-
-  }, [debouncedSearchTerm]);
+useEffect(() => {
+  document.title = "Wikipedia Searcher";
+  if (!search) {
+    return;
+  }
+  if (debouncedSearchTerm) {
+    API.searchTerms(search)
+      .then(res => {
+        if (res.data.length === 0) {
+          throw new Error("No results found.");
+        }
+        if (res.data.status === "error") {
+          throw new Error(res.data.message);
+        }
+        setArticleState({
+          title: res.data[1][0],
+          url: res.data[3][0]
+        });
+      })
+      .catch(err => setError(err));
+  }
+}, [debouncedSearchTerm]);
 ```
 
 ### 16. Instructor Do: Recommend Material (0 mins)
