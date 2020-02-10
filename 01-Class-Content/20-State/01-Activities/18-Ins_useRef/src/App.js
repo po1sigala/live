@@ -11,7 +11,14 @@ function Count() {
     case "subtract":
       return state - 1;
     case "change":
-      return inputRef.current.value;
+      // convert the value from the input into an integer
+      const newCount = parseInt(inputRef.current.value);
+
+      // only update the count if the value is numeric
+      if (isNaN(newCount)) {
+        return state
+      }
+      return newCount;
     default:
       return state;
     }
