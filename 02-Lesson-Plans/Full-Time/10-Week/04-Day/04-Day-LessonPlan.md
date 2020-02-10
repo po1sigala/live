@@ -569,7 +569,7 @@ const CardBtn = props => {
 
 ### 8. Students Do: Hooking in Context Activity (15 mins)
 
-- Introduce students to [useContext unsolved](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Unsolved)
+- Introduce students to [useContext unsolved](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Unsolved)
 
 ```md
 In this activity we will practice using the useContext Hook in React by creating a global state for our articles.
@@ -595,14 +595,13 @@ In this activity we will practice using the useContext Hook in React by creating
 
 ### 9. Instructor Do: Review Hooking in Context Activity (10 mins)
 
-- Open up [useContext Solved Search page](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Solved/src/pages/Search/index.js) in your IDE.
+- Open up [useContext Solved Search page](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/pages/Search/index.js) in your IDE.
 
-  - Note that the `articleState` only contains the necessary properties: `title`, `description`, and `url`.
+  - Note that the `articleState` only contains the necessary properties: `title` and `url`.
 
   ```js
   const [articleState, setArticleState] = useState({
     title: "",
-    description: "",
     url: ""
   });
   ```
@@ -622,8 +621,7 @@ In this activity we will practice using the useContext Hook in React by creating
           throw new Error(res.data.message);
         }
         setArticleState({
-          title: res.data[1],
-          description: res.data[2][0],
+          title: res.data[1][0],
           url: res.data[3][0]
         });
       })
@@ -631,7 +629,7 @@ In this activity we will practice using the useContext Hook in React by creating
   }, [search]);
   ```
 
-- Open up [SearchResults component](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Solved/src/components/SearchResults/index.js).
+- Open up [SearchResults component](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/components/SearchResults/index.js).
 
   - First, we import the context object from its utility file.
 
@@ -641,18 +639,17 @@ In this activity we will practice using the useContext Hook in React by creating
 
   ```js
   import ArticleContext from "../../utils/ArticleContext";
-  const SearchResults = () => {
-    const { title, description, url } = useContext(ArticleContext);
+  function SearchResults() {
+    const { title, url } = useContext(ArticleContext);
     return (
       <ul className="list-group search-results">
         <li className="list-group-item">
           <h2>{title}</h2>
-          <p>{description}</p>
           <a href={url}>{url}</a>
         </li>
       </ul>
     );
-  };
+  }
   ```
 
   - Show that we wrapped all of the components in a Context Provider.
