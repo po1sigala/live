@@ -6,7 +6,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ## Instructor Notes
 
-* `Summary: Complete activities 20-state/01-Activities/23-Stu_PupsterApp/ through 21-react/01-Activities/05-Ins_CustomHook.`
+* `Summary: Complete activities 20-state/01-Activities/22-Ins_IntroReactRouter/ through 21-react/01-Activities/05-Ins_CustomHook.`
 
 * As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
@@ -124,7 +124,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
       * We can treat this component exactly the same as we would a regular anchor tag, except we'd use the `to` prop rather than `href` to specify the path we want to navigate to.
 
-      * Explain that we can utilize `window.location.pathname` in order to get the path we're currently on if we need it. In our case we're using it to determine which `a` element should have the "active" class and be highlighted.
+      * Explain that we can utilize `useLocation` and `location.pathname` in order to get the path we're currently on if we need it. In our case we're using it to determine which `a` element should have the "active" class and be highlighted. (Explain that `useLocation` is a utility from React Router which allows our component to update if the location changes. We'll be digging more into the _Hooks API_ in the next unit.)
 
   * Go back to the `App` component and once more explain how each `Route` component is rendering its component. Inform students that the major takeaway here is that when the path in the address bar matches the path specified on a `Route` component's `path` prop, the component passed in is rendered.
 

@@ -53,7 +53,7 @@ You will be employer-competitive if are able to:
 
 
 ## Homework
-Create a command-line application that dynamically generates a PDF resume from a GitHub username.
+Create a command-line application that uses input from a user to dynamically generates a good README for a GitHub project.
 
 
 ## Helpful Links

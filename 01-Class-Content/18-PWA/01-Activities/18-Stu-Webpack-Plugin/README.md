@@ -8,11 +8,13 @@
 
 * Run the following command: `npm install sw-precache-webpack-plugin webpack-pwa-manifest -D`.
 
+* Update `webpack.config.js` to use the `SWPrecacheWebpackPlugin` and `WebpackPwaManifest` plugins.
+
 * In a separate tab in your terminal, start a mongodb server with `mongod`.
 
 * Run `npm start` to make sure that the application works as expected.
 
-* Using the entry point of `src/app.js`, make Webpack output a bundle file in a folder called `dist/`.
+* Using the entry point of `public/assets/js/app.js`, make Webpack output a bundle file in a folder called `dist/`.
 
 * In `index.html`, change the JavaScript file src to be your new bundle file.
 

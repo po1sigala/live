@@ -19,6 +19,8 @@ const config = {
     }),
     new WebpackPwaManifest({
       name: "Images App",
+      filename: "manifest.json",
+      inject: "false",
       short_name: "Images App",
       description: "An application for images",
       background_color: "#01579b",
