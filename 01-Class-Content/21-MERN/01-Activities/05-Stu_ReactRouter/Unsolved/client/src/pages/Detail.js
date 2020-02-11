@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
-function Detail(props) {
+function Detail() {
   const [book, setBook] = useState({})
-
-// Add code to get the book with an _id equal to the id in the route param
-// e.g. http://localhost:3000/books/:id
-// The book id for this route can be accessed using props.match.params.id
+  
+  // Add code to get the book with an _id equal to the id in the route param
+  // e.g. http://localhost:3000/books/:id
+  // The book id for this route can be accessed using the useParams hook
+  // from react-router-dom.
   useEffect(() => {
-    API.getBook(props.match.params.id)
-      .then(res => setBook(res.data ))
+    API.getBook(/* book id should be passed here */)
+      .then(res => setBook(res.data))
       .catch(err => console.log(err));
   }, [])
 

@@ -12,7 +12,10 @@ function Books() {
     useEffect(() => {
       loadBooks();
     }, []);
-  // Add code here to get all books from the database and store them using setBooks
+
+    function loadBooks() {
+      // Add code here to get all books from the database and store them using setBooks
+    }
 
     return (
       <Container fluid>
