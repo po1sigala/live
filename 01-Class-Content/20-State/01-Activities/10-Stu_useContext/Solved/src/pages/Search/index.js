@@ -9,7 +9,6 @@ import API from "../../utils/API";
 function Search() {
   const [articleState, setArticleState] = useState({
     title: "",
-    description: "",
     url: ""
   });
 
@@ -33,8 +32,7 @@ function Search() {
           throw new Error(res.data.message);
         }
         setArticleState({
-          title: res.data[1],
-          description: res.data[2][0],
+          title: res.data[1][0],
           url: res.data[3][0]
         });
       })
