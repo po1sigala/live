@@ -24,8 +24,6 @@ In this activity we will continue to practice using the Context API in React. Th
 
   * Update the application so that data pertaining to the user is stored in a nested object within the Gallery state.
 
-  * Uncomment the `<CardContainer />` and check to see if your card functions properly.
-
   * Add the ability to select a different language.
 
   * Ensure that data pertaining to the language is stored in a different nested object within the Gallery state.
