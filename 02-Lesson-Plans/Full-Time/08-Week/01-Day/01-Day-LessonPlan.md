@@ -53,7 +53,7 @@
 
 * Slack out the [requirements for project 2](../Project-Resources/README.md).
 
-* Let students know about the [starter code for project 2](../../../../01-Class-Content/14-Full-Stack/0-Supplemental/Sequelize-Passport-Example).
+* Let students know about the [starter code for project 2](../../../../01-Class-Content/14-Full-Stack/04-Supplemental/Sequelize-Passport-Example/server.js).
 
 * Answer any questions about project requirements.
 
