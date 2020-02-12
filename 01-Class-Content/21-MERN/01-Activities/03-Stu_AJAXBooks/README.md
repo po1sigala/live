@@ -16,7 +16,7 @@ In this activity we will add functionality to a full stack React application for
 
 * Open your browser to [localhost:3000](http://localhost:3000) and take a moment to study the rendered application.
 
-  * This example is a reading list application. Currently the app isn't fully functional.
+  * This example is a reading list application. **Currently the app isn't fully functional.**
 
 * Open up `client/src/pages/Books.js` and add code so that when the component mounts, it performs an AJAX request to retrieve all of the books in the database. Once the AJAX request is complete, it should set `books` equal to the array of books.
 
