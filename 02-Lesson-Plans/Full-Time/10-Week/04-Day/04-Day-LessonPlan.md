@@ -185,7 +185,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ### 4. Students Do: Prop Drilling (20 mins)
 
-- Introduce [Prop Drilling Unsolved](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Unsolved)
+- Introduce [08-Stu_PropDrilling/Unsolved](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Unsolved)
 
 ````md
 # Prop Drilling
@@ -194,11 +194,11 @@ In this activity we will review passing props down the component tree in React.
 
 ## Instructions
 
-- Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
 
-- Install axios by running `npm install axios` in your terminal.
+* Install axios by running `npm install axios` in your terminal.
 
-- **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
 
   ```html
   <link
@@ -207,54 +207,51 @@ In this activity we will review passing props down the component tree in React.
   />
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
   />
   ```
-````
 
-- Start the application in dev mode by running `npm start` in your terminal.
+* Start the application in dev mode by running `npm start` in your terminal.
 
-- Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
 
-- The `API.loadUsers()` function returns an array of users that follow this format:
+* The `fetchUsers` function in `src/utils/API.js` returns an array of users that follow this format:
 
   ```js
   [
     {
-      login: "willsmith",
-      language: "JavaScript",
-      image: "https://api.github.com/users/name"
+      login: "username",
+      profileUrl: "https://github.com/username",
+      image: "https://avatars0.githubusercontent.com/u/00000000?v=4"
     }
   ];
   ```
 
-- Update this application to accomplish the following:
+* Update this application to accomplish the following:
 
-  - The card on the gallery page should contain an image of the user, their programming language, and arrow buttons that allow for navigation through different users.
+  * The card on the gallery page should contain an image of the user, their programming language, and arrow buttons that allow for navigation through different users.
 
-  - The props should be passed through each component layer in the following manner:
+  * The props should be passed through each component layer in the following manner:
 
-    - title (login): Gallery > CardContainer > Card > CardHeading > CardTitle > CardTitleText
+    * title (login): Gallery > CardContainer > Card > CardHeading > CardTitle > CardTitleText
 
-    - image: Gallery > CardContainer > Card > CardImage
+    * image: Gallery > CardContainer > Card > CardImage
 
-    - language: Gallery > CardContainer > Card > CardBody
+    * profileUrl: Gallery > CardContainer > Card > CardBody
 
-    - handleClick: Gallery > CardContainer > Card > CardBtn
+    * handleClick: Gallery > CardContainer > Card > CardBtn
 
-  - Each arrow click should _not_ make an additional API call.
-
-### Hints
-
-- Remember, `useState` is a great way to store information that your application may later need.
+  * Each arrow click should _not_ make an additional API call.
 
 ````
 
 ### 5. Instructor Do: Review Prop Drilling (15 mins)
 
-* Run `npm start` in [Prop Drilling Solved](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Solved)  and demonstrate the functioning application in your browser.
+* Run `npm start` in [08-Stu_PropDrilling/Solved](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved) and demonstrate the functioning application in your browser.
 
-* Open [Gallery.js](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Solved/src/pages/Gallery.js)  in your IDE. Point out the following key aspects of the activity:
+* Open [Gallery.js](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/pages/Gallery.js)  in your IDE. Point out the following key aspects of the activity:
 
   * `Gallery.js` is a stateful component responsible for application logic such as performing API requests. It stores the data response from API requests in state.
 
@@ -272,7 +269,7 @@ In this activity we will review passing props down the component tree in React.
   const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
   const [userIndex, setUserIndex] = useState(0);
-````
+  ```
 
 - When the component mounts , we run `loadUsers`. Since the second argument is an empty array, `loadUsers` will only be ran once.
 
@@ -282,33 +279,31 @@ useEffect(() => {
 }, []);
 ```
 
-- `loadUsers` makes a request to our API using the `getLanguagesList` method and _then_ passes the result to the `loadUsers` method and updates the respective properties using their setter methods.
+- `loadUsers` makes a request to our API using the `fetchUsers` method and _then_ updates the respective properties using their setter methods.
 
 ```js
-loadUsers = () => {
-  API.getLanguagesList()
-    .then(languages => {
-      API.getUsersByLanguage(languages[0]).then(users => {
-        setUsers(users);
-        setUser(users[0]);
-      });
+function loadUsers() {
+  API.fetchUsers()
+    .then(users => {
+      setUsers(users);
+      setUser(users[0]);
     })
     .catch(err => console.log(err));
-};
+}
 ```
 
-- In the `return` block, we return a Row component with a CardContainer. We pass to the CardContainer title, image and handleBtnClick props.
+- In the `return` block, we return a Row component with a CardContainer. We pass to the CardContainer title, image, profileUrl, and handleBtnClick props.
 
 ```js
 return (
   <div>
     <h1 className="text-center">Welcome to LinkedUp</h1>
-    <h3 className="text-center">Click on the arrows to browse users</h3>
+    <p className="text-center h3">Click on the arrows to browse users</p>
     <Row>
       <CardContainer
         title={user.login}
         image={user.image}
-        language={user.language}
+        profileUrl={user.profileUrl}
         handleBtnClick={handleBtnClick}
       />
     </Row>
@@ -356,43 +351,36 @@ function previousUser(userIndex) {
 
 - Answer any questions related to `Gallery.js`.
 
-- Then open [Components/Card](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardContainer/index.js) and point out the following:
+- Then open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardContainer/index.js) and point out the following:
 
-  - The CardContainer component imports the Card component and passes to it the title, language, email, and handleBtnClick, props received from the Gallery component.
+  - The CardContainer component imports the Card component and passes to it the title, image, profileUrl, and handleBtnClick, props received from the Gallery component.
 
   - We use Object destructuring to get `props.title`, `props.image`, etc. This is not required, but it helps keep our code clean and easy to read.
 
 ```js
-import React from "react";
-import Card from "../Card";
-import "./style.css";
-
-function CardContainer({ title, image, language, email, handleBtnClick }) {
+function CardContainer({ title, image, profileUrl, handleBtnClick }) {
   return (
     <div className="jumbotron card-container">
       <Card
         title={title}
         image={image}
-        language={language}
-        email={email}
+        profileUrl={profileUrl}
         handleBtnClick={handleBtnClick}
       />
     </div>
   );
 }
-
-export default CardContainer;
 ```
 
-- Next, open [Components/Card](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Solved/src/components/Card/index.js) and point out the following:
+- Next, open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/Card/index.js) and point out the following:
 
-  - The Card component imports the CardBtn and CardTitle components.
+  - The Card component imports the CardHeading, CardImg, CardBtn and CardBody components.
 
 ```js
-import React from "react";
+import CardBody from "../CardBody";
 import CardBtn from "../CardBtn";
-import CardTitle from "../CardTitle";
-import "./style.css";
+import CardImg from "../CardImage";
+import CardHeading from "../CardHeading";
 ```
 
 - The Card component receives props from `CardContainer` and passes the `handleBtnClick` props to both instances of `CardBtn`.
@@ -402,19 +390,12 @@ import "./style.css";
 - Note the data-value props passed to each CardBtn component.
 
 ```js
-import React from "react";
-import CardBody from "../CardBody";
-import CardBtn from "../CardBtn";
-import CardImg from "../CardImage";
-import CardHeading from "../CardHeading";
-import "./style.css";
-
-function Card({ title, image, language, email, handleBtnClick }) {
+function Card({ title, image, profileUrl, handleBtnClick }) {
   return (
     <div>
       <CardHeading title={title} />
       <CardImg image={image} />
-      <CardBody language={language} email={email} />
+      <CardBody profileUrl={profileUrl} />
       {!image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
       <CardBtn
         style={{ opacity: image ? 1 : 0 }}
@@ -429,29 +410,23 @@ function Card({ title, image, language, email, handleBtnClick }) {
     </div>
   );
 }
-
-export default Card;
 ```
 
-- Next, open [Components/Card](../../../../01-Class-Content/20-state/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardBtn/index.js) and point out the following:
+- Next, open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardBtn/index.js) and point out the following:
 
   - The `CardBtn` component receives props from the Card component and renders them as attributes.
 
 ```js
-const CardBtn = props => {
+function CardBtn(props) {
   return (
-    <button
-      onClick={props.onClick}
-      className={`card-btn ${props["data-value"]}`}
-      {...props}
-    />
+    <button onClick={props.onClick} className={`card-btn ${props["data-value"]}`} {...props} />
   );
-};
+}
 ```
 
 - Open the components files in the following order: `CardHeading > CardTitle > CardTitleText`.
 
-  - Point out that each intermidiate component doesn't actually use props for anything besides passing the value down to the next component.
+  - Point out that each intermediate component doesn't actually use props for anything besides passing the value down to the next component.
 
 - Return to http://localhost:3000/gallery in the browser and, using the DOM Inspector, point out the corresponding attributes as well as the onClick event associated with each button.
 
@@ -498,7 +473,6 @@ const CardBtn = props => {
 - Open [DeveloperContext.js](../../../../01-Class-Content/20-state/01-Activities/09-Ins_useContext/src/utils/DeveloperContext.js) in your IDE and explain the following:
 
   - We create and export a new Context object initialized with default values:
-  -
 
   ```js
   import React from "react";
@@ -569,7 +543,7 @@ const CardBtn = props => {
 
 ### 8. Students Do: Hooking in Context Activity (15 mins)
 
-- Introduce students to [useContext unsolved](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Unsolved)
+- Introduce students to [useContext unsolved](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Unsolved)
 
 ```md
 In this activity we will practice using the useContext Hook in React by creating a global state for our articles.
@@ -595,14 +569,13 @@ In this activity we will practice using the useContext Hook in React by creating
 
 ### 9. Instructor Do: Review Hooking in Context Activity (10 mins)
 
-- Open up [useContext Solved Search page](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Solved/src/pages/Search/index.js) in your IDE.
+- Open up [useContext Solved Search page](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/pages/Search/index.js) in your IDE.
 
-  - Note that the `articleState` only contains the necessary properties: `title`, `description`, and `url`.
+  - Note that the `articleState` only contains the necessary properties: `title` and `url`.
 
   ```js
   const [articleState, setArticleState] = useState({
     title: "",
-    description: "",
     url: ""
   });
   ```
@@ -622,8 +595,7 @@ In this activity we will practice using the useContext Hook in React by creating
           throw new Error(res.data.message);
         }
         setArticleState({
-          title: res.data[1],
-          description: res.data[2][0],
+          title: res.data[1][0],
           url: res.data[3][0]
         });
       })
@@ -631,7 +603,7 @@ In this activity we will practice using the useContext Hook in React by creating
   }, [search]);
   ```
 
-- Open up [SearchResults component](../../../../01-Class-Content/20-state/01-Activities/10-Stu_useContext/Solved/src/components/SearchResults/index.js).
+- Open up [SearchResults component](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/components/SearchResults/index.js).
 
   - First, we import the context object from its utility file.
 
@@ -641,18 +613,17 @@ In this activity we will practice using the useContext Hook in React by creating
 
   ```js
   import ArticleContext from "../../utils/ArticleContext";
-  const SearchResults = () => {
-    const { title, description, url } = useContext(ArticleContext);
+  function SearchResults() {
+    const { title, url } = useContext(ArticleContext);
     return (
       <ul className="list-group search-results">
         <li className="list-group-item">
           <h2>{title}</h2>
-          <p>{description}</p>
           <a href={url}>{url}</a>
         </li>
       </ul>
     );
-  };
+  }
   ```
 
   - Show that we wrapped all of the components in a Context Provider.

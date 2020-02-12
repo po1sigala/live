@@ -2,10 +2,9 @@ import React from "react";
 
 function CardBody() {
   return (
-    <div>
-      <h4>Favorite language: LANGUAGE HERE</h4>
-      <h4>login: LOGIN HERE</h4>
-    </div>
+    <p className="h4 pt-3">
+      GitHub: <a target="blank" href={"#GITHUB PROFILE URL HERE"}>{"GITHUB PROFILE URL HERE"}</a>
+    </p>
   );
 }
 
