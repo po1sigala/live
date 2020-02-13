@@ -13,7 +13,7 @@
   4) Go to the `models` folder and open the `post.js` file.
 
   5) Create a Sequelize `Post` model here. The model should have a title property of type DataTypes.STRING, a body property of DataTypes.TEXT, and a category property of DataTypes.STRING. 
-  (<http://docs.sequelizejs.com/manual/tutorial/models-definition.html#data-types>)
+  (<https://sequelize.org/master/manual/model-basics.html#data-types>)
 
   6) To check if this worked, run `node server.js` in your terminal. Then open MySQL Workbench to check if a Posts table has been created.
 
