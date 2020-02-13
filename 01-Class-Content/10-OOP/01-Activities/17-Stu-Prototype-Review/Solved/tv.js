@@ -33,7 +33,7 @@ TV.prototype.findShow = function(show) {
     const showData = [
       "Show: " + response.data.name,
       "Genre(s): " + response.data.genres.join(", "),
-      "Rating: " + respon6se.data.rating.average,
+      "Rating: " + response.data.rating.average,
       "Network: " + response.data.network.name,
       "Summary: " + response.data.summary,
       "-".repeat(60)
