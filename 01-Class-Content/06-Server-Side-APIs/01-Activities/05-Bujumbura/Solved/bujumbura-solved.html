@@ -12,6 +12,10 @@
   <div class="wind"></div>
   <div class="humidity"></div>
   <div class="temp"></div>
+
+  <!-- Add extra div for the bonus Fahrenheit temp -->
+  <div class="tempF"></div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // This is our API key
@@ -19,7 +23,7 @@
 
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      "q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
+      "q=Bujumbura,Burundi&appid=" + APIKey;
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -39,16 +43,18 @@
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
         $(".wind").text("Wind Speed: " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").text("Temperature (F) " + response.main.temp);
-
-        // Converts the temp to Kelvin with the below formula
+        
+        // Convert the temp to fahrenheit
         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-        $(".tempF").text("Temperature (Kelvin) " + tempF);
+
+        // add temp content to html
+        $(".temp").text("Temperature (K) " + response.main.temp);
+        $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
 
         // Log the data in the console as well
         console.log("Wind Speed: " + response.wind.speed);
         console.log("Humidity: " + response.main.humidity);
-        console.log("Temperature (F): " + response.main.temp);
+        console.log("Temperature (F): " + tempF);
       });
   </script>
 </body>
