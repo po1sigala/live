@@ -12,7 +12,7 @@ TV.prototype.findShow = function(show) {
 
   axios.get(URL).then(function(response) {
     const showData = [
-      "Show: " + response.data.person.name,
+      "Show: " + response.data.name,
       "Genre(s): " + response.data.genres.join(", "),
       "Rating: " + response.data.rating.average,
       "Network: " + response.data.network.name,
