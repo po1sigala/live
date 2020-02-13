@@ -767,6 +767,8 @@ node index.js quotient 3 4
 
   * 🙋 It would be difficult for other developers to find our module and would require them to clone the GitHub repository, or copy/paste the source code, or keep track of the compressed file. If one developer updates the module, then everyone elses' code go out of sync and requires a transfer of files again.
 
+* **IMPORTANT NOTE:** The following activity, `01-Activities/10-Ins_npm`, will not behave as described if it is run from within the curriculum repo or another repo. First, copy the directory to another location so that there is not an ancestor directory containing a `package.json` file.
+
 * Run [10-Ins_npm/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/10-Ins_npm/index.js) from the command line and point out the following: 
 
   * Our application throws an error when we run it. 
