@@ -26,6 +26,8 @@
 
 1. In your `config.json` file, add `"use_env_variable":JAWSDB_URL"` to your `production` connection, as shown in the highlighted portion of this screenshot.
 
+![config.json](./Images/sequelize-deploy-config.png "config.json")
+
 2. Notice how `process.env.JAWSDB_URL` lets you plug in your connection details with just a single phrase. When you set up the `JawsDB` Provision, Heroku saved the connection info in an environment variable, which your `config.json` file references with the `"JAWSDB_URL"` string. Your deployed application will connect to the `production` database (JawsDB), while your local application will connect to the `development`.
 
 3. After adding the code above and pushing those changes to your GitHub repository's `master` branch, deploy your application to Heroku: `git push heroku master`.
