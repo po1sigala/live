@@ -12,7 +12,24 @@ In this activity you will convert a previous Promise-based activity to utilize a
 
   * The `combineAnimals` function contains a try/catch block.
   
-  * The goal of this activity is to mirror the functionality found in the previous `37-Stu_Promise-All` activity: animals should be read from each file and then combined into a new `combined.json` file.
+  * The goal of this activity is to read data for each animal from each of the `.json` files and then combine the data into a new `combined.json` file as an array of animal objects.
+
+    ```json
+    [
+      {
+        "name": "Frank",
+        "species": "cat",
+        "age": 10,
+        "gender": "M"
+      },
+      {
+        "name": "Loki",
+        "species": "dog",
+        "age": 5,
+        "gender": "M"
+      },
+      // ...
+    ```
 
 * Write code inside of the `try` block to read from each file (`dog.json`, `cat.json`, `goldfish.json`, `hamster.json`) one at a time using the async/await syntax.
 
