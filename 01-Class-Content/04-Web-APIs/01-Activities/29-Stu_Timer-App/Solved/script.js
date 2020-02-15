@@ -91,13 +91,19 @@ function renderTime() {
 // Notice no settings are changed other than to increment the secondsElapsed var
 function startTimer() {
   setTime();
-/* the "interval" variable here using "setInterval()" begins the recurring increment of the 
-   secondsElapsed variable which is used to check if the time is up */
-  interval = setInterval(function() {
-    secondsElapsed++;
-    //So renderTime() is called here once every second.
-    renderTime();
-  }, 1000);
+
+  // we only want to start the timer if minutes is > 0
+  if (totalSeconds > 0) {    
+    /* the "interval" variable here using "setInterval()" begins the recurring increment of the 
+       secondsElapsed variable which is used to check if the time is up */
+      interval = setInterval(function() {
+        secondsElapsed++;
+        //So renderTime() is called here once every second.
+        renderTime();
+      }, 1000);
+  } else {
+    alert("Minutes of work/rest must be greater than 0.")
+  }
 }
 
 /* This function stops the setInterval() set in startTimer but does not

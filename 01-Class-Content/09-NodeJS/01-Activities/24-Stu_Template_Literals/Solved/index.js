@@ -4,7 +4,7 @@ const music = {
   album: "Currents"
 };
 
-// write code between the <p> tags to output your objects data
+// write code between the <div> tags to output your objects data
 const songSnippet = `
   <div class="song">
      <p>

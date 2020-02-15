@@ -870,6 +870,10 @@ In this activity, we will create a "complete" button that successfully removes a
   1. Every time the user starts a timer, the minutes of work and minutes of rest should be saved to localStorage.
 
   2. Upon page load, the minutes of work and minutes of rest input fields should be initialized to their previously stored values.
+
+## Bonus
+
+Prevent the timer from running when the user enters invalid input. (numbers <= 0)
 ```
 
 ### 23. Instructor Do: Review Timer App (10 mins)

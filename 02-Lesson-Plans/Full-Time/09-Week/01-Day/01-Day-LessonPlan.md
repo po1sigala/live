@@ -77,6 +77,8 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
   2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     target_arch: x86_64
   ```
 
+  * _Note: Many students will have installed `mongod` as a service. Running `mongod` will produce an error in this case. Another way to verify that `mongod` is running is to have the student open a new terminal window and run `mongo`. Then, verify that the `mongo` cli connected to the `mongod` service successfully._
+
 * If there are any remaining students who do not have it installed and configured, ask them to raise their hand so a TA can help debug the issue.
 
 **Part 2: Install Robo 3T**

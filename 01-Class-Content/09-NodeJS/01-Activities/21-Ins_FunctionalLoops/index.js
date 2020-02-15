@@ -29,13 +29,20 @@ console.log(canWatchRatedR);
 // Whatever is returned from the callback at each iteration is what goes into that index of the new array
 
 const cardedMoviePatrons = moviePatrons.map(patron => {
-  if (patron.age >= 17) {
-    patron.canWatchRatedR = true;
+  // Copy the object being iterated over
+  const pObj = { ...patron };
+  // Do everything else the same
+  if (pObj.age >= 17) {
+    pObj.canWatchRatedR = true;
   } else {
-    patron.canWatchRatedR = false;
+    pObj.canWatchRatedR = false;
   }
-  return patron;
+  // Be sure to return the new obj, not the parameter
+  return pObj;
 });
 
-console.log("Carded Movie Patrons: ");
+console.log("Movie Patrons: ")
+console.log(moviePatrons);
+
+console.log("\nCarded Movie Patrons: ");
 console.log(cardedMoviePatrons);
