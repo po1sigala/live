@@ -32,11 +32,11 @@ This unit is filled with a lot of brand new topics. If you fall behind, make sur
 
 ### Time Tracker(s)
 
-  * [Unit 03-JavaScript Day 1 Time Tracker](https://drive.google.com/open?id=1pPL5Wap5uFfWC3DmVB49PO6BZym6I6zA)
+  * [Unit 03-JavaScript Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1K7kScd_vuN_U_XqExjIoojDCdchdsQo5p0UKDbHV2OI/edit?usp=sharing)
 
-  * [Unit 03-JavaScript Day 2 Time Tracker](https://drive.google.com/open?id=1LzKldJHGABe7HMnBXejZXYNRRlGfBDDX)
+  * [Unit 03-JavaScript Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1XJqB4Uv5WaGrcUeFgKwYwcgPhTMVR_oBnPjQ9ffLf4Y/edit?usp=sharing)
 
-  * [Unit 03-JavaScript Day 3 Time Tracker](https://drive.google.com/open?id=14DlwTNjSH6v3gc5rCts2IgVY0SZK8v_G)
+  * [Unit 03-JavaScript Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1F4XLF8qGDmEQS0947NyTNLbj6jMieneeXVqBuwUa-x4/edit#gid=1408554402)
 
 ## Algorithms
 
