@@ -3,7 +3,7 @@ var db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/webpackplugin",
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 var imageSeed = [
