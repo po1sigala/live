@@ -12,4 +12,4 @@ In this activity you are going to create a speed reading application. It will in
 
   * The two function names have been created for you, as well as a poem to speed read.
 
-* Fill out the necessary code that would create a countdown timer. When that timer completes, it should dissapear and speed reading should begin.
+* Fill out the necessary code that would create a countdown timer. When that timer completes, it should disappear and speed reading should begin.
