@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Jumbotron from "../../components/Jumbotron";
-import DeleteBtn from "../../components/DeleteBtn";
-import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import Jumbotron from "../components/Jumbotron";
+import DeleteBtn from "../components/DeleteBtn";
+import API from "../utils/API";
+import { Col, Row, Container } from "../components/Grid";
+import { List, ListItem } from "../components/List";
+import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Books() {
   // Setting our component's initial state
@@ -25,6 +25,7 @@ function Books() {
       .catch(err => console.log(err));
   };
 
+
     return (
       <Container fluid>
         <Row>
@@ -34,23 +35,23 @@ function Books() {
             </Jumbotron>
             <form>
               <Input
-                onChange={handleInputChange}
+                onChange={() => {}}
                 name="title"
                 placeholder="Title (required)"
               />
               <Input
-                onChange={handleInputChange}
+                onChange={() => {}}
                 name="author"
                 placeholder="Author (required)"
               />
               <TextArea
-                onChange={handleInputChange}
+                onChange={() => {}}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
+                onClick={() => {}}
               >
                 Submit Book
               </FormBtn>
@@ -70,7 +71,7 @@ function Books() {
                           {book.title} by {book.author}
                         </strong>
                       </a>
-                      <DeleteBtn onClick={() => deleteBook(book._id)} />
+                      <DeleteBtn onClick={() =>{}} />
                     </ListItem>
                   );
                 })}

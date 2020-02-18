@@ -4,7 +4,6 @@ import CardContainer from "../components/CardContainer";
 import Row from "../components/Row";
 
 function Gallery() {
-
   const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
   const [userIndex, setUserIndex] = useState(0);
@@ -13,10 +12,6 @@ function Gallery() {
   useEffect(() => {
     loadUsers();
   }, []);
-    
-  function capitalizeFirstLetter(string = "") {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
   function nextUser(userIndex) {
     // Ensure that the user index stays within our range of users
@@ -49,12 +44,10 @@ function Gallery() {
   }
 
   function loadUsers() {
-    API.getLanguagesList()
-      .then(languages => {
-        API.getUsersByLanguage(languages[0]).then((users) => {
-          setUsers(users);
-          setUser(users[0]);
-        });
+    API.fetchUsers()
+      .then(users => {
+        setUsers(users);
+        setUser(users[0]);
       })
       .catch(err => console.log(err));
   }
@@ -62,14 +55,12 @@ function Gallery() {
   return (
     <div>
       <h1 className="text-center">Welcome to LinkedUp</h1>
-      <h3 className="text-center">Click on the arrows to browse users</h3>
+      <p className="text-center h3">Click on the arrows to browse users</p>
       <Row>
         <CardContainer
-          title={capitalizeFirstLetter(user.firstname) +
-              " " + capitalizeFirstLetter(user.lastname)}
+          title={user.login}
           image={user.image}
-          language={user.language}
-          email={user.email}
+          profileUrl={user.profileUrl}
           handleBtnClick={handleBtnClick}
         />
       </Row>
@@ -77,6 +68,4 @@ function Gallery() {
   );
 }
 
-
 export default Gallery;
- 

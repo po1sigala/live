@@ -21,8 +21,8 @@ How do you deliver this? Here are some guidelines:
 
 * Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
 
-![Employee Summary 1](./Assets/10-OOP-homework-demo-1)
-![Employee Summary 2](./Assets/10-OOP-homework-demo-2)
+![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
+![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
 
 In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
@@ -89,7 +89,7 @@ methods:
 
   * name
   * id
-  * title
+  * email
   * getName()
   * getId()
   * getEmail()
@@ -167,9 +167,9 @@ We would like you to have well over 200 commits by graduation, so commit early a
 
 You are required to submit the following:
 
-* The URL of the deployed application
-
 * The URL of the GitHub repository
+
+* **Optional**: GIF of your CLI applications functionality
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

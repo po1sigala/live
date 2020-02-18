@@ -15,7 +15,7 @@
   6) Again, you won't need to touch the front end HTML or JavaScript to make any of this work.
 
   7) **HINT**: you will need to pass in an options object with a "where" attribute into both methods in order to filter these queries to target the Todos we want to update or delete.
-  <http://docs.sequelizejs.com/en/latest/docs/querying/#where>
+  <https://sequelize.org/master/manual/model-querying-basics.html#applying-where-clauses>
 
   8) Navigate to localhost:8080. If you can update and delete todos without errors, you were successful.
 

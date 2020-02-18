@@ -6,7 +6,7 @@ In this class, we will be building on students' proficiency with Node by introdu
 
 ## Instructor Notes
 
-* Complete activities `31-Stu_Callback-Review` through `40-Stu_Mini-Project`
+* Complete activities `24-Stu_Template_Literals` through `39-Stu_Async-Await`
 
 * While you would have naturally explained Promises and asynchronous behavior on a need to know basis before today, now is the time to dive deep and provide more thorough instruction for these topics.
 
@@ -433,7 +433,7 @@ console.log(alias, gender, family, spouse); // print them by variable name
 
 * Once all the prompts have been answered, there should be a new `index.html` file added to the project directory. Open it in your web browser for the class to see.
 
-  * This assignment is like their homework, in which they'll use similar techniques to generate a PDF resume.
+  * This assignment is like their homework, in which they'll use similar techniques to generate a markdown README file.
 
 * Answer any high-level questions about the Mini Project or lesson ahead before students begin the first activity of the day.
 
@@ -1163,7 +1163,24 @@ In this activity, you will convert a previous Promise-based activity to utilize 
 
   * The `combineAnimals` function contains a try/catch block.
   
-  * The goal of this activity is to mirror the functionality found in the previous `37-Stu_Promise-All` activity: animals should be read from each file and then combined into a new `combined.json` file.
+  * The goal of this activity is to read data for each animal from each of the `.json` files and then combine the data into a new `combined.json` file as an array of animal objects.
+
+    ```json
+    [
+      {
+        "name": "Frank",
+        "species": "cat",
+        "age": 10,
+        "gender": "M"
+      },
+      {
+        "name": "Loki",
+        "species": "dog",
+        "age": 5,
+        "gender": "M"
+      },
+      // ...
+    ```
 
 * Write code inside of the `try` block to read from each file (`dog.json`, `cat.json`, `goldfish.json`, `hamster.json`) one at a time using the async/await syntax.
 

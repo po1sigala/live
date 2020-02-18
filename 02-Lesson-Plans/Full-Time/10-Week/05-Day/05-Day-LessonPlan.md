@@ -215,13 +215,20 @@ In this activity we will practice using the `useReducer` Hook.
   ```js
   const inputRef = useRef();
   const [count, dispatch] = useReducer((state, action) => {
-    switch(action) {
+    switch (action) {
     case "add":
       return state + 1;
     case "subtract":
       return state - 1;
     case "change":
-      return inputRef.current.value;
+      // convert the value from the input into an integer
+      const newCount = parseInt(inputRef.current.value);
+
+      // only update the count if the value is numeric
+      if (isNaN(newCount)) {
+        return state
+      }
+      return newCount;
     default:
       return state;
     }

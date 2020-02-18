@@ -33,12 +33,12 @@
 
       function redirect(lat, lon) {
         // Compare latitude and longitude values
-        if (lat >= 30 && lon >= 90) {
+        if (lat >= 30 && lon <= -100) {
           // Redirect to a new page
-          window.location.href = "westcoast.html";
+          window.location.href = "western.html";
         } 
         else {
-          window.location.href = "eastcoast.html";
+          window.location.href = "eastern.html";
         }
       }
 

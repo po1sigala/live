@@ -6,7 +6,6 @@
   * [1. Installing MongoDB on Windows](#1-installing-mongodb-on-windows)
   * [2. Configuring MongoDB on Windows](#2-configuring-mongodb-on-windows)
   * [3. Installing MongoDB on MacOS](#3-installing-mongodb-on-macos)
-  * [4. Configuring MongoDB on MacOS](#4-configuring-mongodb-on-macos)
 
 - - -
 
@@ -77,34 +76,27 @@
 
 ## 3. Installing MongoDB on MacOS
 
-1. Run the following command in terminal:
+Use [the mongoDB Documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) as a reference if you encounter problems.
 
-2. `brew install mongodb`
+### Pre-requisites
 
-- - -
+* [XCode](https://developer.apple.com/xcode/) should have been installed as part of the pre-work.
+* [Homebrew](https://brew.sh/) should have been installed as part of the pre-work.
 
-## 4. Configuring MongoDB on MacOS
+### Installation
 
-1. **IMPORTANT**: You need to create a data directory for your MongoDB installation, or it will not work. 
+Run the following commands:
 
-2. Use the following exact commands (see note below if you want to know what these do):
+1. `brew tap mongodb/brew`
 
-   1. `sudo mkdir -p /data/db`
+2. `brew install mongodb-community@4.2` (The version may have changed. See [this guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#procedure) for the latest version to use with this command.)
 
-   2. `sudo chown -R $USER /data/db`
+### Run MongoDB as a Service
 
-   3. `sudo chmod go+w /data/db`
+`brew services start mongodb-community@4.2`
 
-3. With the data/db directory made, you're ready to run MongoDB. Enter this command in your terminal window: `mongod`
+Verify the service is running with `ps aux | grep -v grep | grep mongod`.
 
-4. **NOTE**: No "b" at the end, simply `mongod`
+If you don't see any output from the command above, try restarting the service with `brew services restart mongodb-community`.
 
-5. If mongod didn’t exit from your window, great job! You’ve installed MongoDB. Your instructor will take it from here.
-
-6. If mongod starts but closes after a series of prompts, make sure you created the data/db directory in your root directory, MongoDB cannot run without this directory (see steps 4.1-4.2).
-
-7. If you’re still encountering issues starting mongod, please ask for assistance from one of the TAs or the instructor.
-
-8. If you do not want to use homebrew, you can alternatively follow these instructions: <https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-os-x/>. However, installing MongoDB without homebrew can be a bit of a headache. Installing homebrew on your mac will make your life as a web developer a ton easier.
-
-_The commands in #2 create a directory with administrative privileges, make your account the owner of that directory (instead of the "root" account owning it), and add write permissions to that directory so the apps you write are able to update your database_
+If you are still encountering issues starting mongod, please ask for assistance from one of the TAs or the instructor.

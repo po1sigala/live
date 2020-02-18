@@ -9,6 +9,8 @@
 
 ## Instructor Notes
 
+`Complete activities 1-4 from Unit 15`
+
 * Praise students for making it to their second group projects.
 
 * Leverage the TAs to help any groups lagging behind during the lesson. We want to give students as much time to brainstorm project ideas as possible.
@@ -41,17 +43,17 @@
 
 * Explain that later this week we'll also cover the basics of agile development and testing web applications. 
 
-* Unlike project 1, we'll be providing students with some boilerplate code they can use to jump start their applications. Stress that despite the other material we have to cover this week, this will save them time and ensure they can dive in building features for their apps.
-
 * Assure the class that they'll have plenty of time to brainstorm project ideas before submitting their proposals for review by the end of class.
 
 * Students should sit with their groups during today's activities and work to follow along with the examples.
 
 ### 2. Instructor Do: Project 2 Slides (10 min)
 
-* Go through the slide deck [15-1 Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing).
+* Go through the slide deck [8.1 Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing).
 
 * Slack out the [requirements for project 2](../Project-Resources/README.md).
+
+* Let students know about the [starter code for project 2](../../../../01-Class-Content/14-Full-Stack/04-Supplemental/Sequelize-Passport-Example/server.js).
 
 * Answer any questions about project requirements.
 
@@ -61,11 +63,11 @@
 
 * We have created a written guide and video guide on how to connect a GitHub repository to a Heroku Application for continuous deployment. Please provide these to your students along with the following activity instructions.
 
-    [Connect Repo with Heroku Guide](../../../../01-Class-Content/16-project-2/03-Supplemental/Guides/GitHubHerokuConnect.md)
+    [Connect Repo with Heroku Guide](../../../../01-Class-Content/15-Project-2/04-Supplemental/GitHubHerokuConnect.md)
 
     [Connect Repo with Heroku Video](https://youtu.be/GgNcs9zlFSA?list=PLOFmg4xbN_TPrB6w4rThsFanVxJI_SfER)
 
-* Refer to `16-project-2/01-Activities/01-Stu_Create-Repository`, which contains the following instructions:
+* Refer to `15-Project-2/01-Activities/01-Stu_Create-Repository`, which contains the following instructions:
 
 * **Instructions**:
 
@@ -125,7 +127,7 @@
 
 * In this activity students will examine a JavaScript file without eslint and attempt to identify issues with the code.
 
-* Refer to `16-project-2/01-Activities/02-Stu_No-Lint-Example`, which contains the following instructions:
+* Refer to `15-Project-2/01-Activities/02-Stu_No-Lint-Example`, which contains the following instructions:
 
 * **Instructions**:
 
@@ -143,7 +145,7 @@
 
 ### 6. Instructor Do: Review No Lint Example (5 mins)
 
-* As a class, go over the previous activity's [solution](../../../../01-Class-Content/16-project-2/01-Activities/02-Stu_No-Lint-Example/Solved/README.md) comparing each point to parts of the code being referred to.
+* As a class, go over the previous activity's [solution](../../../../01-Class-Content/15-Project-2/01-Activities/02-Stu_No-Lint-Example/Solved/README.md) comparing each point to parts of the code being referred to.
 
 * Explain that while none of these are actual JavaScript errors, consistency is important because it makes code easier to understand, especially if working on a team with others. Additionally having a linter helps ensure code reviews aren't just nitpicks over stylistic opinions.
 
@@ -153,7 +155,7 @@
 
 * In this activity students will use eslint to fix issues with the calculator app from the previous activity.
 
-* Refer to `16-project-2/01-Activities/03-Stu_Eslint-Example`, which contains the following instructions:
+* Refer to `15-Project-2/01-Activities/03-Stu_Eslint-Example`, which contains the following instructions:
 
 * **Instructions**:
 
@@ -225,7 +227,7 @@
 
 * Instructional staff should be walking around answering questions and making sure groups can complete the activity.
 
-* Refer to `16-project-2/01-Activities/05-Travis-Setup`, which contains the following instructions:
+* Refer to `15-Project-2/01-Activities/04-Travis-Setup`, which contains the following instructions:
 
 * **Instructions**:
 
@@ -270,6 +272,8 @@
 
 * Click the "Install" button to complete the process.
 ```
+
+* Take some time to answer any lingering questions about Travis CI. Be sure to emphasize that students do not need to know the ins and outs of Travis to slowly begin integrating its build capabilities into their projects.
 
 - - -
 
