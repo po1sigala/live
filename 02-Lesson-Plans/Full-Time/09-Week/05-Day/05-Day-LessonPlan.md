@@ -228,19 +228,17 @@ function reset() {
 
 ### 5. Instructor Do: Demo Bundle Analyzer Plugin (5 mins)
 
-* Open `14-Ins-First-Plugin/package.json` in your IDE and explain the following: 
+* Open [17-Ins-First-Plugin/package.json](../../../../01-Class-Content/18-PWA/01-Activities/17-Ins-First-Plugin/package.json) in your IDE and explain the following: 
 
   * We've added webpack-bundle-analyzer to our devDependencies and the chart.js library to our dependencies.
 
   * The `webpack-bundle-analyzer` is a plugin that will build an interactive visualization of all of the dependencies in our project.
 
-* Open `14-Ins-First-Plugin/webpack.config.js` in your IDE and point out the following:
+* Open [17-Ins-First-Plugin/webpack.config.js](../../../../01-Class-Content/18-PWA/01-Activities/17-Ins-First-Plugin/webpack.config.js) in your IDE and point out the following:
 
   * Webpack plugins can be used to perform tasks that Webpack can't perform by default. Some of these tasks include asset management, additional bundle optimization, and adding PWA capabilities.
 
   * Plugins could be used multiple times in the same configuration file, so it is important that you create an instance of one by using the keyword `new`.
-
-* Open `14-Ins-First-Plugin/webpack.config.js` in your IDE and point out the following:
 
   * Emphasize that we've simply added a library so that we can analyze its impact on the total bundle size.
 
