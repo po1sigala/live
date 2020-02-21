@@ -16,8 +16,6 @@ In this activity we will adjust our Gallery app so that Webpack minifies and bun
 
   * `domMethods.js` Responsible for all functions related to manipulating the DOM.
 
-  * `hover.js` Responsible for the hover effect functions.
-
   * `rating.js` Handles the creation of the ratings form and the update method.
 
 * Adjust the files in the `FILES_TO_CACHE` array within `public/service-worker.js` so that the Webpack bundle is cached instead.
