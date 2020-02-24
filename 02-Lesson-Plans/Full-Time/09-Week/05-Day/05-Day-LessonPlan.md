@@ -532,9 +532,15 @@ In this activity we will adjust our Gallery app so that Webpack minifies and bun
 
 ### 12. Student Do: Gallery Lazy Loading JavaScript (15 mins)
 
-* Direct students to the activity instructions found in `22-Stu-Chunking`
+* Direct students to the activity instructions found in [22-Stu-Chunking/README.md](../../../../01-Class-Content/18-PWA/01-Activities/22-Stu-Chunking/README.md)
 
 ```md
+# Chunking
+
+In this activity, we will practice using multiple entry points to split up our JavaScript code.
+
+## Instructions
+
 * Run `npm install`.
 
 * In `webpack.config.js`, add entry points for JavaScript files for the three pages, home, detail, and favorites.
@@ -563,8 +569,6 @@ In this activity we will adjust our Gallery app so that Webpack minifies and bun
 
   * `rating.js` Handles the creation of the ratings form and the update method.
 
-* Adjust the files in the `FILES_TO_CACHE` array within `public/service-worker.js` so that the Webpack bundle is cached instead.
-
 * Run `npm start` and make sure that the application still works as expected.
 
 * Navigate to each page and make sure that the bundle files are all being cached by the service worker.
@@ -575,7 +579,7 @@ In this activity we will adjust our Gallery app so that Webpack minifies and bun
 
 * If extracting functionality from a JavaScript file causes any of the pages to stop working, do **not** continue until you understand why it's not working as expected.
 
-* Ask the instructor or a TA for help if get stuck or are unsure why a function isn't working.
+* Ask the instructor or a TA for help if you get stuck or are unsure why a function isn't working.
 ```
 
 ### 13. Instructor Do: Review Gallery Lazy Loading JavaScript (10 mins)
