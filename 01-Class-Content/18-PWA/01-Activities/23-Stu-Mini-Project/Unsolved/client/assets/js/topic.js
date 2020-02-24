@@ -13,20 +13,14 @@ function checkForIndexedDb() {
   return true;
 }
 
-function removePunctuationFromString(str) {
+function removeSpecialCharsFromString(str) {
   return str.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").replace(/\s/g, "");
 }
 
+// Creates pseudo-unique ids for articles
 function createArticleIds(articles) {
   return articles.map(article => {
-    const spacelessTitle = removePunctuationFromString(article.title);
-    article._id =
-      spacelessTitle[0] +
-      spacelessTitle[1] +
-      removePunctuationFromString(article.url)[9] +
-      removePunctuationFromString(article.url)[12] +
-      article.publishedAt[15] +
-      article.publishedAt[18];
+    article._id = removeSpecialCharsFromString(article.url)
     return article;
   });
 }
