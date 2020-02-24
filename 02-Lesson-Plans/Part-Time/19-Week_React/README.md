@@ -39,7 +39,7 @@ Next week we will learn more complex techniques for managing state in React. Avo
 
   * [Unit 19-React Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nK5WnZMudSzo7mAkiDdfCEEb2ihM9ooU/edit#gid=1423861022)
 
-  * [Unit 19-React Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1nK5WnZMudSzo7mAkiDdfCEEb2ihM9ooU/edit#gid=1423861022)
+  * [Unit 19-React Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1agZoqXM_xk9RjwW2W2Zcgep8L-i6s9zseHok_Q6ULeM/edit?usp=sharing)
 
 ## Algorithms
 

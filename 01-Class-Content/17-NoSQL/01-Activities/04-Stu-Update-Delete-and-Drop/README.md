@@ -16,22 +16,10 @@
 
 * Change the value of `gavecandy` to true for yourself.
 
-## Bonus
+## 🏆 Bonus
 
-* Add Extreme Basket Weaving to your array of hobbies.
-
-* Change the operating system of the student next to you.
-
-* Remove the student to the other side of you from your database.
-
-* Add a field of `gavecandy` with a value of `false` to everyone in the array.
-
-* Change the value of `gavecandy` to true for yourself.
+* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/insert-documents/](https://docs.mongodb.com/manual/tutorial/insert-documents/) to see how you can accomplish this.
 
 ## 💡 Hint(s)
 
 * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
-
-## 🏆 Bonus
-
-* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.

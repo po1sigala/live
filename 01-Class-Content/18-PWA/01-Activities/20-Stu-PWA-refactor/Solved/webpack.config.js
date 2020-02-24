@@ -1,4 +1,3 @@
-const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 
@@ -10,13 +9,6 @@ const config = {
   },
   mode: "development",
   plugins: [
-    new SWPrecacheWebpackPlugin({
-      cacheId: "my-domain-cache-id",
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: "service-worker.js",
-      minify: true,
-      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
-    }),
     new WebpackPwaManifest({
       name: "Images App",
       short_name: "Images App",
@@ -34,11 +26,13 @@ const config = {
       ]
     })
   ],
+  // configure webpack to use babel-loader to bundle our separate modules and transpile the code
+  // refer to https://github.com/babel/babel-loader for more information on the settings
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // files must end in ".js" to be transpiled
+        exclude: /node_modules/, // don't transpile code from "node_modules"
         use: {
           loader: "babel-loader",
           options: {
