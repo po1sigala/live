@@ -60,7 +60,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 * Inform students that we'll be providing them with a Create React App Express boilerplate which they can use for the homework assignment or projects. There's no need to completely understand every aspect of the code in order to be productive, but we're going to walk through an example to give them at least a working high level understanding. This set up is _loosely_ based off of [Fullstack React's Food Lookup Demo](https://github.com/fullstackreact/food-lookup-demo).
 
-* Open [07-Ins_Mern](../../../../01-Class-Content/20-react/01-Activities/07-Ins_Mern) in your editor and cd into it.
+* Open [01-Ins_Mern](../../../../01-Class-Content/21-MERN/01-Activities/01-Ins_Mern) in your editor and cd into it.
 
 * In your editor, point out your sidebar with the `client` folder expanded, ask the class: What's something unusual we see here?
 
@@ -120,12 +120,18 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 4. Students Do: React Recipes (15 mins)
 
-* Introduce [React Recipes](../../../../01-Class-Content/20-react/01-Activities/02-Stu_Recipes/)
+* Introduce [02-Stu_Recipes](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes)
 
 * In this example students will complete a recipe finder application by adding code to render a list of recipes retrieved from an AJAX request.
 
 ```md
 * Open [Unsolved](Unsolved) in your editor. From the root of the project folder, run `npm install` to install the required dependencies.
+
+* This application uses a Mongo database, so be sure to start `mongod`.
+
+* In order to initially populate the database, run the following command at the project root: `npm run seed`.
+
+* This should insert a few records into the MongoDB.
 
 * Run `npm start` to start the React app and Express server. Visit [localhost:3000](http://localhost:3000) in your web browser to view the app.
 
@@ -167,7 +173,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 * Currently the rendered `RecipeListItem` components are displaying hard coded recipe data. Modify the `RecipeListItem` component file so that it utilizes all of the passed props where appropriate. Look at the hard coded data to determine how each prop should be used.
 
-* If completed successfully, searching for a recipe in your browser should render dynamic results relevant to the search.
+* If completed successfully, searching for a recipe in your browser should render dynamic results relevant to the search. (Keep in mind the data set is limited so not all searches will return something. Try "pizza", "hamburger", "turkey", or "quinoa" for a few.)
 
   ![Recipe List](Images/03-RecipeList.gif)
 
@@ -189,11 +195,17 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 5. Instructor Do: Review React Recipes (10 mins)
 
-* Open [02-Stu_Recipes/Solved](../../../../01-Class-Content/20-react/01-Activities/02-Stu_Recipes/Solved) in your IDE.
+* Open [02-Stu_Recipes/Solved](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved) in your IDE.
 
 * Run `npm install` to install dependencies at the project root, this should also install the dependencies in the `client` folder.
 
-* Once complete, cd back up to the project root and run `npm start` to start the application. Open [localhost:3000](http://localhost:3000) in your browser to demonstrate the solution.
+* This application uses a Mongo database, so be sure to start `mongod`.
+
+* In order to initially populate the database, run the following command at the project root: `npm run seed`.
+
+* This should insert a few records into the MongoDB.
+
+* Cd back up to the project root and run `npm start` to start the application. Open [localhost:3000](http://localhost:3000) in your browser to demonstrate the solution.
 
   ![Recipe List](Images/06-RecipeList.gif)
 
@@ -201,7 +213,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
   * Avoid letting students get too hung up on the server side code. The main focus of today's lesson is still React, and they can dig into the code in its entirety on their own time.
 
-* Open the [client/src/App.js](../../../../01-Class-Content/20-react/01-Activities/02-Stu_Recipes/Solved/client/src/App.js) file and go over the new code:
+* Open the [client/src/App.js](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved/client/src/App.js) file and go over the new code:
 
   * Make sure everyone understands where the props we're passing the `RecipeListItem` components are coming from.
 
@@ -231,7 +243,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 </Row>
 ```
 
-* Now open [client/src/components/RecipeList/index.js](../../../../01-Class-Content/20-react/01-Activities/02-Stu_Recipes/Solved/client/src/components/RecipeList/index.js) in your IDE and point out the following:
+* Now open [client/src/components/RecipeList/index.js](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved/client/src/components/RecipeList/index.js) in your IDE and point out the following:
 
   * `props.thumbnail` (an image URL for the recipe) is passed to the `Thumbnail` component which renders the image
 
@@ -241,33 +253,33 @@ In this class, we will be deepening students understanding of ReactJS through re
 
   * `props.href` (the URL to the original recipe) is rendered inside of the anchor tag
 
-  ```js
-  export function RecipeListItem({
-    thumbnail = "https://placehold.it/300x300",
-    title,
-    ingredients,
-    href
-    }) {
-    return (
-      <li className="list-group-item">
-        <Container>
-          <Row>
-            <Col size="xs-4 sm-2">
-              <Thumbnail src={thumbnail} />
-            </Col>
-            <Col size="xs-8 sm-9">
-              <h3>{title}</h3>
-              <p>Ingredients: {ingredients}</p>
-              <a rel="noreferrer noopener" target="_blank" href={href}>
-                Go to recipe!
-              </a>
-            </Col>
-          </Row>
-        </Container>
-      </li>
-    );
-  }
-  ```
+```js
+export function RecipeListItem({
+  thumbnail,
+  title,
+  ingredients,
+  href
+}) {
+  return (
+    <li className="list-group-item">
+      <Container>
+        <Row>
+          <Col size="xs-4 sm-2">
+            <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
+          </Col>
+          <Col size="xs-8 sm-9">
+            <h3>{title}</h3>
+            <p>Ingredients: {ingredients}</p>
+            <a rel="noreferrer noopener" target="_blank" href={href}>
+              Go to recipe!
+            </a>
+          </Col>
+        </Row>
+      </Container>
+    </li>
+  );
+}
+```
 
 * Take a few minutes to answer any questions about this activity.
 
@@ -275,11 +287,17 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 6. Students Do: AJAX Books (10 mins)
 
-* Introduce students to [03-Stu_AJAXBooks Unsolved](../../../../01-Class-Content/20-react/01-Activities/03-Stu_AJAXBooks)
+* Introduce students to [03-Stu_AJAXBooks](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks)
 
 * In this activity students will work to add functionality to a full stack React Reading List application.
 
 ```md
+# AJAX Books
+
+In this activity we will add functionality to a full stack React application for retrieving books from a database.
+
+## Instructions
+
 * Open the [Unsolved](Unsolved) folder in your editor and run `npm install` at the project's root.
 
 * This application uses a Mongo database, so be sure to start `mongod`.
@@ -292,7 +310,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 * Open your browser to [localhost:3000](http://localhost:3000) and take a moment to study the rendered application.
 
-  * This example is a reading list application. Currently the app isn't fully functional.
+  * This example is a reading list application. **Currently the app isn't fully functional.**
 
 * Open up `client/src/pages/Books.js` and add code so that when the component mounts, it performs an AJAX request to retrieve all of the books in the database. Once the AJAX request is complete, it should set `books` equal to the array of books.
 
@@ -312,13 +330,13 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 7. Instructor Do: Review AJAX List (10 mins)
 
-* Open and run the [03-Stu_AJAXBooks/Solved](../../../../01-Class-Content/20-react/01-Activities/03-Stu_AJAXBooks/Solved) to the previous activity and demonstrate the result in your browser:
+* Open and run the [03-Stu_AJAXBooks/Solved](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks/Solved) to the previous activity and demonstrate the result in your browser:
 
   * ![Ajax List](Images/06-AJAXList.gif)
 
 * The goal of this activity was just to render the initial list of books. We'll work on actually making the form functional in the next activity.
 
-* Open the `Books` component [client/src/pages/Books.js](../../../../01-Class-Content/20-react/01-Activities/03-Stu_AJAXBooks/Solved/client/src/pages/Books.js) in your IDE.
+* Open the `Books` component [client/src/pages/Books.js](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks/Solved/client/src/pages/Books.js) in your IDE.
 
 * Have a volunteer explain the code to you.
 
@@ -379,7 +397,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 8. Students Do: AJAX Form Delete (15 mins)
 
-* Introduce students to [04-Stu_AJAXFormDelete](../../../../01-Class-Content/20-react/01-Activities/04-Stu_AJAXFormDelete/README.md)
+* Introduce students to [04-Stu_AJAXFormDelete](../../../../01-Class-Content/21-MERN/01-Activities/04-Stu_AJAXFormDelete)
 
 * In this activity students will add functionality to the React Reading List app to save and delete books.
 
@@ -412,7 +430,7 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 ### 9. Instructor Do: Review AJAX Form Delete (10 mins)
 
-* Open up the [04-Stu_AJAXFormDelete/Solved](../../../../01-Class-Content/20-react/01-Activities/04-Stu_AJAXFormDelete/Solved) to the previous activity and go over the new code as a class. The only changes that needed to be made are in the `client/src/pages/Books.js` file.
+* Open up the [04-Stu_AJAXFormDelete/Solved](../../../../01-Class-Content/21-MERN/01-Activities/04-Stu_AJAXFormDelete/Solved) to the previous activity and go over the new code as a class. The only changes that needed to be made are in the `client/src/pages/Books.js` file.
 
   * It may be easier to explain starting by going through the code in the `return` block involving the form elements.
 
@@ -431,16 +449,19 @@ return (
             onChange={handleInputChange}
             name="title"
             placeholder="Title (required)"
+            value={formObject.title}
           />
           <Input
             onChange={handleInputChange}
             name="author"
             placeholder="Author (required)"
+            value={formObject.author}
           />
           <TextArea
             onChange={handleInputChange}
             name="synopsis"
             placeholder="Synopsis (Optional)"
+            value={formObject.synopsis}
           />
           <FormBtn
             disabled={!(formObject.author && formObject.title)}
@@ -475,7 +496,7 @@ return (
       </Col>
     </Row>
   </Container>
-    );
+);
 ```
 
   * Ask the class: How roles do the `value`, `name`, and `onChange` props have in updating our component state with the form data?
@@ -516,7 +537,12 @@ return (
         author: formObject.author,
         synopsis: formObject.synopsis
       })
-        .then(res => loadBooks())
+        .then(() => setFormObject({
+          title: "",
+          author: "",
+          synopsis: ""
+        }))
+        .then(() => loadBooks())
         .catch(err => console.log(err));
     }
   };
@@ -561,7 +587,9 @@ return (
 
 ### 11. Students Do: React Router (20 mins)
 
-* Introduce [05-Stu_ReactRouter Unsolved](../../../../01-Class-Content/20-react/01-Activities/05-Stu_ReactRouter)
+* Introduce [05-Stu_ReactRouter](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter)
+
+* _The unsolved activity will throw exceptions until students complete the first part of the activity._
 
 * In this activity students will add React Router to the React Reading List in order to add a books `Detail` page and a `NoMatch` 404 page. Students will need to look up how to use route params with React Router.
 
@@ -615,9 +643,9 @@ return (
 
 ### 12. Instructor Do: Review React Router (15 mins)
 
-* Once time's up, go over the [05-Stu_ReactRouter/Solved](../../../../01-Class-Content/20-react/01-Activities/05-Stu_ReactRouter/Solved) version of the last activity.
+* Once time's up, go over the [05-Stu_ReactRouter/Solved](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved) version of the last activity.
 
-* Open the [client/src/App.js](../../../../01-Class-Content/20-react/01-Activities/05-Stu_ReactRouter/Solved/client/src/App.js) file in your IDE go over the new code:
+* Open the [client/src/App.js](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved/client/src/App.js) file in your IDE go over the new code:
 
   * Point out how both the `/` and `/books` `Route` components both render the `Books` component.
 
@@ -625,48 +653,58 @@ return (
 
   * This component is for rendering details about a particular book.
 
-  ```js
-  import React from "react";
-  import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-  import Books from "./pages/Books";
-  import Detail from "./pages/Detail";
-  import NoMatch from "./pages/NoMatch";
-  import Nav from "./components/Nav";
+```js
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Books from "./pages/Books";
+import Detail from "./pages/Detail";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
 
-  function App() {
-    return (
-      <Router>
-        <div>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Books} />
-            <Route exact path="/books" component={Books} />
-            <Route exact path="/books/:id" component={Detail} />
-            <Route component={NoMatch} />
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path={["/", "/books"]}>
+            <Books />
+          </Route>
+          <Route exact path="/books/:id">
+            <Detail />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
 
-  export default App;
-  ```
+export default App;
+```
 
   ![Details](Images/17-Details.png)
 
-  * Similar to routes in Express, we can utilize route parameters. The values of any route parameters are available to us inside of the rendered component on the `props.match.params` object. Inside of the `client/src/pages/Detail.js` file, we access the `id` parameter:
+  * Similar to routes in Express, we can utilize route parameters. The values of any route parameters are available to us inside of the rendered component the object provided by the `useParams` hook. Inside of the `client/src/pages/Detail.js` file, we access the `id` parameter:
 
   ```js
-  function Detail(props) {
-  const [book, setBook] = useState({})
+  import { Link, useParams } from "react-router-dom";
+  
+  // ...
 
-  // When this component mounts, grab the book with the _id of props.match.params.id
-  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-  useEffect(() => {
-    API.getBook(props.match.params.id)
-      .then(res => setBook(res.data ))
-      .catch(err => console.log(err));
-  }, [])
+  function Detail(props) {
+    const [book, setBook] = useState({})
+
+    // When this component mounts, grab the book with the _id of props.match.params.id
+    // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+    const {id} = useParams()
+    useEffect(() => {
+      API.getBook(id)
+        .then(res => setBook(res.data))
+        .catch(err => console.log(err));
+    }, [])
   ```
 
   * Go back to the `App.js` file and point out the `Route` component rendering the `NoMatch` component . Explain that this component _should_ be rendered on every route since we haven't provided it a `path` prop.
@@ -675,25 +713,30 @@ return (
 
 ```js
 <Router>
-    <div>
-      <Nav />
-      <Switch>
-        <Route exact path="/" component={Books} />
-        <Route exact path="/books" component={Books} />
-        <Route exact path="/books/:id" component={Detail} />
-        <Route component={NoMatch} />
-      </Switch>
-    </div>
-  </Router>
+  <div>
+    <Nav />
+    <Switch>
+      <Route exact path={["/", "/books"]}>
+        <Books />
+      </Route>
+      <Route exact path="/books/:id">
+        <Detail />
+      </Route>
+      <Route>
+        <NoMatch />
+      </Route>
+    </Switch>
+  </div>
+</Router>
 ```
 
 * Take another few minutes answering any remaining questions.
 
 ### 13. Students Do: Deploy (15 mins)
 
-* In this final activity, students are tasked with deploying the React Reading List app to Heroku. They can use the [06-Stu_ReactRouter/Solved](../../../../01-Class-Content/20-react/01-Activities/06-Stu_ReactRouter/Solved) version of the previous activity.
+* In this final activity, students are tasked with deploying the React Reading List app to Heroku. They can use the [05-Stu_ReactRouter/Solved](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved) version of the previous activity.
 
-* **Instructions:** [06-Stu_Deployment/README.md](../../../../01-Class-Content/20-react/01-Activities/06-Stu_Deployment/README.md)
+* **Instructions:** [06-Stu_Deployment/README.md](../../../../01-Class-Content/21-MERN/01-Activities/06-Stu_Deployment/README.md)
 
 ### 14. Instructor Do: Review Deploy (5 mins)
 

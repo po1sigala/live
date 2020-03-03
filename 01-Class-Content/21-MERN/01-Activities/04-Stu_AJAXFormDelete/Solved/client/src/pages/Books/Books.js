@@ -9,7 +9,11 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 function Books() {
   // Setting our component's initial state
   const [books, setBooks] = useState([])
-  const [formObject, setFormObject] = useState({})
+  const [formObject, setFormObject] = useState({
+    title: "",
+    author: "",
+    synopsis: ""
+  })
 
   // Load all books and store them with setBooks
   useEffect(() => {
@@ -48,7 +52,12 @@ function Books() {
         author: formObject.author,
         synopsis: formObject.synopsis
       })
-        .then(res => loadBooks())
+        .then(() => setFormObject({
+          title: "",
+          author: "",
+          synopsis: ""
+        }))
+        .then(() => loadBooks())
         .catch(err => console.log(err));
     }
   };
@@ -65,16 +74,19 @@ function Books() {
                 onChange={handleInputChange}
                 name="title"
                 placeholder="Title (required)"
+                value={formObject.title}
               />
               <Input
                 onChange={handleInputChange}
                 name="author"
                 placeholder="Author (required)"
+                value={formObject.author}
               />
               <TextArea
                 onChange={handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
+                value={formObject.synopsis}
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}

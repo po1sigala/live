@@ -102,13 +102,11 @@ function initLazyImages() {
 
 ### 3. Instructor Do: Intro Gallery App Full Optimization (5 mins)
 
-* Let students know they did a great job today. Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
-
-* For the final activity of the day students wil take the completed gallery application and minify all of the JS.
+* Let students know they are doing well! Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
 
 ### 4. Student Do: Optimize Gallery App (20 mins)
 
-* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/18-web-performance/01-Activities/06-Stu_Gallery-Optimize/Solved)
+* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved)
 
 ```md
 # Optimize Gallery App
@@ -128,13 +126,13 @@ In this activity you will use the Lazy Loading, GZip Compression, Image Compress
 
 * Now that the application is running, navigate to the [localhost](https://localhost:3000)
 
-* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report.
+* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
 
 * Now, using the compression npm package, enable gzip compression in the application.
 
 * Restart your server and run a new audit.
 
-* Next, using [ImageOptim Online](https://imageoptim.com/online), compress all of the images found within the `public/assets/images`
+* Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
 
 * Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
 
@@ -142,32 +140,30 @@ In this activity you will use the Lazy Loading, GZip Compression, Image Compress
 
 * Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
 
-* Create a `dist` folder in the root of your project folder
+* Create a `dist` folder in `/public`.
 
-  * Inside of `dist` create a file called `index.js`
+  * Inside of `public/dist` create a file called `index.js`
 
-  * Link this `index.js` to your application
+  * Link this `index.js` to your application in `public/index.html`.
 
-* Head to [Online Minification](http://refresh-sf.com/).
+* Head to [JSCompress](https://jscompress.com/).
 
-* Take the contents of `server.js` and paste it into the text area. Click `JavaScript`.
+* Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
 
-  * Take the resulting minified code and copy/paste it into your `dist/index.js`
-
-  * Go through the same process with the remaining JS files in the project.
+  * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
 
 * Finally, restart your server and run a new audit.
 ```
 
 ### 5. Instructor Do: Review Final Gallery App (5 mins)
 
-* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/18-PWA/01-Activities06-Stu_Gallery-Optimize/Solved) and run the following commands:
+* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
 
   * npm install
 
   * npm install compression
 
-* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/18-PWA/01-Activities06-Stu_Gallery-Optimize/Solved/server.js)
+* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
   
 ```js
 const compression = require("compression");
@@ -177,9 +173,9 @@ app.use(compression());
 
   * With these two lines of code we can easily enable GZip compression in our application for our served files.
 
-* Ask the class, "Is ImagOptim our only option for Image Compression?"
+* Ask the class, "Is Tiny PNG our only option for Image Compression?"
 
-  * We can use many different tools when looking to compress images. For our purposes we chose to use ImagOptim for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
+  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
 
   * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
 
@@ -330,7 +326,7 @@ app.use(compression());
       }
     ],
     "start_url": "/",
-    "background_color": "	#808080",
+    "background_color": "#808080",
     "display": "standalone",
     "theme_color": "#808080"
   } 
@@ -361,36 +357,36 @@ app.use(compression());
 * Direct students to the activity instructions found in [09-Stu_Manifest](../../../../01-Class-Content/18-PWA/01-Activities/09-Stu_Manifest)
 
 ```md
-  # Web App Manifest
+# Web App Manifest
 
-  In this activity, you will write your first progressive web application manifest.
+In this activity, you will write your first progressive web application manifest.
 
-  ## Instructions
+## Instructions
 
-  * Using the instructor demo as a guide, create a manifest for the Image Gallery app.
+* Using the instructor demo as a guide, create a manifest for the Image Gallery app.
 
-    * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
+  * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
 
-    * 🤔 How do you deploy a manifest?
+  * 🤔 How do you deploy a manifest? Hint: You will need to somehow link it with the web page. (See [Web App Manifest - Deploying a manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Deploying_a_manifest_with_the_link_tag).)
 
-  * When finished, run the commands:
+* When finished, run the commands:
 
-    * `npm install`
+  * `npm install`
 
-    * `npm run seed`
+  * `npm run seed`
 
-    * `npm start`
+  * `npm start`
 
-  * Navigate to [localhost:3000](http://localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
+* Navigate to [localhost:3000](localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
 
-  ## 💡 Hint(s)
+## 💡 Hint(s)
 
-  Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
+Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
 
-  ## 🏆 Bonus
+## 🏆 Bonus
 
-  * Add additional members to your manifest.
-  ```
+* Add additional members to your manifest.
+```
 
 ### 11. Instructor Do: Review Web App Manifest (10 mins)
 
@@ -474,7 +470,7 @@ app.use(compression());
 
 * In a separate tab, run `mongod`.
 
-* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered, installed, and that the service worker is caching files.
+* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered and installed.
 
   * When our app launches, it registers and installs the service worker.
 
@@ -482,15 +478,11 @@ app.use(compression());
 
   * Now, if we refresh the page, we can see that the service worker was installed and registered again.
 
-  * We can navigate to the Cache Storage tab to see that our files have been cached.
-
-  * Lastly, we can open the console to see the service worker object as well as a message saying that our files have been cached.
-
 * Ask the class the following question(s) and call on students for the corresponding answer(s):
 
   * ☝️ What are the 2 main steps in service worker lifecycle?
 
-  * 🙋 Installation and activation. There is also a waiting step that is often skipped. 
+  * 🙋 Installation and activation. There is also a waiting step that is often skipped.
 
 ---
 
@@ -506,13 +498,13 @@ app.use(compression());
 
 * Add the following script just above the closing `</body>` tag in `index.html`
 
-```js
+```html
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then((reg) => {
-          console.log('We found your service worker file!', reg);
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
         });
     });
   }
@@ -545,13 +537,13 @@ console.log("Hello from your service worker file!");
 
   * We tell the browser to register our service worker file.
 
-```js
+```html
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then((reg) => {
-          console.log('We found your service worker file!', reg);
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
         });
     });
   }
@@ -576,7 +568,7 @@ console.log("Hello from your service worker file!");
 
   * ✔️ The `fetch` listener intercepts all fetch requests and uses data from the cache to return a response.
 
-* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/) in your IDE and run the following commands:
+* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/) in your IDE and run the following commands:
 
   * `npm install`
 
@@ -588,7 +580,7 @@ console.log("Hello from your service worker file!");
 
   ![Threads](Images/sw-threads.png)
 
-* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following: 
+* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/service-worker.js) in your IDE and explain the following:
 
   * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
 
@@ -685,8 +677,20 @@ console.log("Hello from your service worker file!");
       return cache.match(evt.request);
     });
   ```
+  
+  * _**Note for instructor:** You will notice that the api requests are not cached on the first visit, when the service worker is installed for the first time. Solutions to deal with this case are most likely too complicated to introduce at this point in the class. Simply refresh the page to allow the service worker to cache the api request making the posts from the database available when the page is viewed offline._
 
-* Open [13-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following: 
+  * If the request path does not include `/api`, then we will assume the requests is for a static file. The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
+
+  ```js
+  evt.respondWith(
+    caches.match(evt.request).then(function(response) {
+      return response || fetch(evt.request);
+    })
+  );
+  ```
+
+* Open [12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following:
 
   * We are going to skip past the DOM element creation and focus on the handling of our "like" POST request. 
 
@@ -705,7 +709,7 @@ console.log("Hello from your service worker file!");
     statusEl.innerText = "";
   ```
 
-  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether of not their save was successful. 
+  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether or not their save was successful. 
 
   ```js
   incrementLikesRequest(id, likes)
@@ -745,45 +749,7 @@ console.log("Hello from your service worker file!");
 
 * Direct students to the next activity located in [13-Stu_Caching_Fetching_Files](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Unsolved/).
 
-```md
-# Caching Files
-
-In this activity you will be enabling functionality to allow your application to work offline.
-
-## Instructions
-
-* Add the following code to your `service-worker.js` file.
-
-* Type out the following code snippets when adding them to your application, it will help you solidify what you are doing!
-
-* As you go through each step, keep your Chrome Develop tools open to monitor your progress and debug if needed.
-
-   1. Set Up Cache Files
-
-   ![Files To Cache](Images/cache-code.png)
-
-   1. Install and Register Your Service Worker
-
-   ![Register](Images/register-code.png)
-
-   1. If done successfully, you should see your static cache in your Application tab.
-
-   ![Static Cache](Images/static-cache.png)
-
-   1. Activate Service Worker
-
-   ![Activate](Images/activate-code.png)
-
-   1. Fetch Files
-
-   ![Fetch](Images/fetch-code.png)
-
-  * If done successfully you will see your data cache in your Application tab. At this point you should be able to put your application in offline mode for an offline experience.
-
-   ![Data Cache](Images/data-cache.png)
-
-   ![Offline](Images/offline.png)
-```
+* Instructions are here: [13-Stu_Caching_Fetching_Files/README.md](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/README.md/)
 
 ### 18. Instructor Do: Review Caching Files (5 mins)
 
@@ -794,16 +760,25 @@ In this activity you will be enabling functionality to allow your application to
   ```js
   const FILES_TO_CACHE = [
     '/',
-    '/offline.html',
     '/index.html',
+    '/favicon.ico',
+    '/manifest.webmanifest',
     '/assets/css/style.css',
-    '/assets/js/app.js',
     '/assets/js/loadImages.js',
-    '/assets/js/install.js',
+    '/assets/images/icons/icon-72x72.png',
+    '/assets/images/icons/icon-96x96.png',
+    '/assets/images/icons/icon-128x128.png',
+    '/assets/images/icons/icon-144x144.png',
+    '/assets/images/icons/icon-152x152.png',
+    '/assets/images/icons/icon-192x192.png',
+    '/assets/images/icons/icon-384x384.png',
+    '/assets/images/icons/icon-512x512.png',
     '/assets/images/1.jpg',
     '/assets/images/2.jpg',
-    ...
-    ...
+    '/assets/images/3.jpg',
+    '/assets/images/4.jpg',
+    '/assets/images/5.jpg',
+    // ...
   ];
 
   const CACHE_NAME = 'static-cache-v2';

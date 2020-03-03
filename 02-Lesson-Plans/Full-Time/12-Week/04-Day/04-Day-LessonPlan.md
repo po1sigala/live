@@ -14,7 +14,7 @@ In today's class, students will have time both to outline their presentations, a
 
 * Once again, your students' success post-bootcamp depends on the quality of their projects. Their presentations compose much of this quality—students need to think about how to communicate the development process of their apps if they hope to impress interviewers with their experience.
 
-* Slack out the document on [Describing Technical Projects](../../../../01-Class-Content/17-project-2/03-Supplemental/DescribingTechnicalProjects.pdf), and explain that students _must_ write a "script" according to the template in the document that they can rehearse and use to discuss their projects in technical interviews.
+* Slack out the document on [Describing Technical Projects](../../../../01-Class-Content/15-Project-2/04-Supplemental/DescribingTechnicalProjects.pdf), and explain that students _must_ write a "script" according to the template in the document that they can rehearse and use to discuss their projects in technical interviews.
 
 ## Slides 
 

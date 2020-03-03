@@ -9,7 +9,6 @@ function SearchResults() {
     <ul className="list-group search-results">
       <li className="list-group-item">
         <h2>{article.title}</h2>
-        <p>{article.description}</p>
         <a href={article.url}>{article.url}</a>
       </li>
     </ul>

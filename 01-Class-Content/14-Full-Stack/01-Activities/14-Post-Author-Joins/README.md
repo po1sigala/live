@@ -13,7 +13,7 @@
   4) Navigate to the `post-api-routes.js` file.
 
   5) Add the "include" option to the queries specified in the comments. This is a feature called "eager loading". We want to "include" the Author model. Examples can be found here:
-  <http://docs.sequelizejs.com/manual/tutorial/models-usage.html#eager-loading>
+  <https://sequelize.org/master/manual/eager-loading.html>
 
   6) Navigate to the `author-api-routes.js` file and add the "include" option to the queries specified in the comments. Here we want to "include" the Post model.
 

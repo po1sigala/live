@@ -5,14 +5,24 @@ import CardImg from "../CardImage";
 import CardHeading from "../CardHeading";
 import "./style.css";
 
-function Card({ image }) {
+function Card(props) {
+  /* 
+    Add props to the components below as explained in the README for this activity.
+  */
   return (
     <div>
       <CardHeading />
-      <CardImg />
-      <CardBody />
-      <CardBtn style={{ opacity: image ? 1 : 0 }} />
-      <CardBtn style={{ opacity: image ? 1 : 0 }} />
+      <CardImg  />
+      <CardBody  />
+      {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+      <CardBtn
+        style={{ opacity: props.image ? 1 : 0 }}
+        data-value="back"
+      />
+      <CardBtn
+        style={{ opacity: props.image ? 1 : 0 }}
+        data-value="next"
+      />
     </div>
   );
 }

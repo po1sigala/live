@@ -77,6 +77,8 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
   2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     target_arch: x86_64
   ```
 
+  * _Note: Many students will have installed `mongod` as a service. Running `mongod` will produce an error in this case. Another way to verify that `mongod` is running is to have the student open a new terminal window and run `mongo`. Then, verify that the `mongo` cli connected to the `mongod` service successfully._
+
 * If there are any remaining students who do not have it installed and configured, ask them to raise their hand so a TA can help debug the issue.
 
 **Part 2: Install Robo 3T**
@@ -486,7 +488,7 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
 
   * ✔ We can sort by `integer`, `_id` and `class`.
 
-* Tell the students to create a new db named `zoo` and insert 10 animals with the following attributes:
+* Tell the students to create a new db named `zoo` and insert 5 animals with the following attributes:
 
   * `numLegs` an integer that points to the number of legs.
 
@@ -505,6 +507,12 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
     "class": "mammal",
     "weight": 254
   }
+
+  db.animals.insert({"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"});
+  db.animals.insert({"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"});
+  db.animals.insert({"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"});
+  db.animals.insert({"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"});
+  db.animals.insert({"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"});
   ```
 
 * Open [05-Ins-Sorting-In-Mongo/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/05-Ins-Sorting-In-Mongo/README.md) in your IDE and demonstrate some of the most common ways we sort using MongoDB.

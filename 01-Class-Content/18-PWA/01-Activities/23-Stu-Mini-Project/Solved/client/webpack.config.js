@@ -1,4 +1,3 @@
-const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 
@@ -28,13 +27,6 @@ const config = {
     ]
   },
   plugins: [
-    new SWPrecacheWebpackPlugin({
-      cacheId: "my-domain-cache-id",
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: "service-worker.js",
-      minify: true,
-      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
-    }),
     new WebpackPwaManifest({
       name: "Newsy app",
       short_name: "Newsy",

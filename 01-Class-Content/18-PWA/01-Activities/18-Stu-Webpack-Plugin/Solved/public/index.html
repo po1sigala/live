@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-  <link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="dist/manifest.json" />
   <title>Image Gallery</title>
 </head>
 
@@ -18,21 +18,15 @@
     <a class="navbar-brand" href="#">Image Gallery</a>
   </nav>
   <div class="container"></div>
-  <script src="/dist/bundle.js"></script>
-  <script type="text/javascript">
-    (function() {
-      if("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("./service-worker.js", {
-            scope: "http://localhost:3000"
-          })
-          .then(res => {
-            console.log(res);
-            console.log("Service Worker registered successfully.");
-          })
-          .catch(error => console.log("Service Worker registration failed:", error));
-      }
-    })();
+  <script src="./dist/bundle.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
+        });
+      });
+    }
   </script>
 </body>
 

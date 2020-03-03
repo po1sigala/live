@@ -11,6 +11,8 @@ function MiniBank(balance) {
     this.statement.push(value);
   },
   this.getStatement = function () {
+    // Calling Array#slice(0) returns a copy of the array.
+    // (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
     return this.statement.slice(0);
   },
   this.printStatement = function() {

@@ -1,38 +1,39 @@
-# Unit 09 Node.js and ES6+ Homework: Developer Profile Generator
+# Unit 09 Node.js and ES6+ Homework: Good README Generator
 
-Create a command-line application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command:
+Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
 
 ```sh
 node index.js
 ```
 
-The user will be prompted for a favorite color, which will be used as the background color for cards.
+The user will be prompted for their GitHub username, which will be used to make a call to the GitHub API to retrieve their email and profile image. They will then be prompted with questions about their project.
 
-The PDF will be populated with the following:
+The README will be populated with the following:
 
-* Profile image
-* User name
-* Links to the following:
-  * User location via Google Maps
-  * User GitHub profile
-  * User blog
-* User bio
-* Number of public repositories
-* Number of followers
-* Number of GitHub stars
-* Number of users following
+* At least one badge
+* Project title
+* Description
+* Table of Contents
+* Installation
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
+  * User GitHub profile picture
+  * User GitHub email
 
 Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
 
 ```
-AS A product manager
+AS A developer
 
-I WANT a developer profile generator
+I WANT a README generator
 
-SO THAT I can easily prepare reports for stakeholders
+SO THAT I can easily put together a good README for a new project
 ```
 
-Refer to the [design mockup](./Assets/09-NodeJS-homework-demo.pdf).
+Refer to the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md).
 
 ## Business Context
 
@@ -44,22 +45,29 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
 
 * GitHub repository with a unique name and a README describing project.
 
-* The application generates a PDF resume from the user provided GitHub profile.
+* The generated README includes a bio image from the user's GitHub profile.
 
-* The generated resume includes a bio image from the user's GitHub profile.
+* The generated README includes the user's email.
 
-* The generated resume includes the user's location and a link to their GitHub profile.
+* The generated README includes the following sections: 
+  * Title
+  * Description
+  * Table of Contents
+  * Installation
+  * Usage
+  * License
+  * Contributing
+  * Tests
+  * Questions
 
-* The generated resume includes the number of: public repositories, followers, GitHub stars and following count.
-
-* The background color of the generated PDF matches the color that the user provides.
+* The generated README includes 1 badge that's specific to the repository.
 
 ```
-GIVEN the developer has a GitHub profile
+GIVEN the developer has a GitHub profile and a repository
 
-WHEN prompted for the developer's GitHub username and favorite color
+WHEN prompted for the developer's GitHub username and repo specific information
 
-THEN a PDF profile is generated
+THEN a README for the repo is generated
 ```
 - - -
 

@@ -6,7 +6,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ## Instructor Notes
 
-* `Summary: Complete activities 20-state/01-Activities/23-Stu_PupsterApp/ through 21-react/01-Activities/05-Ins_CustomHook.`
+* `Summary: Complete activities 20-state/01-Activities/22-Ins_IntroReactRouter/ through 21-react/01-Activities/05-Ins_CustomHook.`
 
 * As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
@@ -124,7 +124,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
       * We can treat this component exactly the same as we would a regular anchor tag, except we'd use the `to` prop rather than `href` to specify the path we want to navigate to.
 
-      * Explain that we can utilize `window.location.pathname` in order to get the path we're currently on if we need it. In our case we're using it to determine which `a` element should have the "active" class and be highlighted.
+      * Explain that we can utilize `useLocation` and `location.pathname` in order to get the path we're currently on if we need it. In our case we're using it to determine which `a` element should have the "active" class and be highlighted. (Explain that `useLocation` is a utility from React Router which allows our component to update if the location changes. We'll be digging more into the _Hooks API_ in the next unit.)
 
   * Go back to the `App` component and once more explain how each `Route` component is rendering its component. Inform students that the major takeaway here is that when the path in the address bar matches the path specified on a `Route` component's `path` prop, the component passed in is rendered.
 
@@ -435,7 +435,7 @@ Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activ
 
 ### 11. Students Do: useEffect Activity (20 mins)
 
-Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-react/01-Activities/08-Ins_useState/Unsolved/src/App.js)
+Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Unsolved/src/App.js)
 
 ```md
   In this activity we will practice using the useState and useEffect Hooks in React by transforming a stateful class component into a functional component with React Hooks.
@@ -462,18 +462,17 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 
 ### 12. Instructor Do: Review useEffect (10 mins)
 
-* Run [11-Stu_useEffect/Solved/](../../../../01-Class-Content/21-react/01-Activities/08-Ins_useState/Solved/) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+* Run [04-Stu_useEffect/Unsolved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   * The application immediately queries the Wikipedia API based on input.
 
-* Open `11-Stu-useEffect/Solved/src/pages/Search/index.js` and explain the following:
+* Open [04-Stu-useEffect/Solved/src/pages/Search/index.js](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved/src/pages/Search/index.js) and explain the following:
 
   * All of the states have been set up at the top of the file.
 
   ```js
   const [search, setSearch] = useState("Wikipedia");
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
   ```
@@ -482,24 +481,23 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 
   ```js
   useEffect(() => {
-    document.title = "Wikipedia Searcher";
-    if(!search) {
+    if (!search) {
       return;
     }
+
     API.searchTerms(search)
       .then(res => {
-        if(res.data.length === 0) {
+        if (res.data.length === 0) {
           throw new Error("No results found.");
         }
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        setTitle(res.data[1]);
-        setDescription(res.data[2][0]);
+        setTitle(res.data[1][0]);
         setUrl(res.data[3][0]);
       })
       .catch(err => setError(err));
-  }, [state]);
+  }, [search]);
   ```
 
   * The `if(!search)` conditional ensures that we do not run a query if the input field is empty.
@@ -635,7 +633,7 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 
 ### 14. Students Do: Custom Hooks (15 mins)
 
-* Introduce [CustomHook Unsolved](../../../../01-Class-Content/21-react/01-Activities/06-Stu_CustomHook/Unsolved)
+* Introduce [06-Stu_CustomHook/Unsolved](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Unsolved)
 
 * In this activity we will practice using Custom Hooks by creating a `useDebounce` Hook that will delay the invoking of a function for a given number of milliseconds.
 
@@ -661,7 +659,7 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 
 ### 15. Instructor Do: Review Custom Hooks (10 mins)
 
-* Open [15-Stu_CustomHooks/](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/) in your browser.
+* Open [06-Stu_CustomHook/](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/) in your browser.
 
   * Type `software developer` into the Article Search Bar.
 
@@ -669,7 +667,7 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 
   * Slowly type out each letter of `software developer` and demonstrate that the API call occurs if there has been a period of over 500 milliseconds without any input changing.
 
-* Open [15-Stu_CustomHooks/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
 
   * We will use the `useEffect` and `useState` Hooks in our custom Hook.
 
@@ -708,7 +706,7 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
   export default useDebounce;
   ```
 
-* Open [15-Stu_CustomHooks/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/21-react/01-Activities/15-Stu_CustomHooks/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
 
   * The `debouncedSearchTerm` variable is set up **outside** of the `useEffect` Hook. We pass in the existing `search` variable that is tied to our component state and pass in 500 as our second parameter.
 
@@ -721,30 +719,28 @@ Files: [11-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/21-re
 ```js
 const debouncedSearchTerm = useDebounce(search, 500);
 
-  useEffect(() => {
-    document.title = "Wikipedia Searcher";
-    if(!search) {
-      return;
-    }
-    if(debouncedSearchTerm) {
-      API.searchTerms(search)
-        .then(res => {
-          if(res.data.length === 0) {
-            throw new Error("No results found.");
-          }
-          if (res.data.status === "error") {
-            throw new Error(res.data.message);
-          }
-          setArticleState({
-            title: res.data[1],
-            description: res.data[2][0],
-            url: res.data[3][0]
-          });
-        })
-        .catch(err => setError(err));
-    }
-
-  }, [debouncedSearchTerm]);
+useEffect(() => {
+  document.title = "Wikipedia Searcher";
+  if (!search) {
+    return;
+  }
+  if (debouncedSearchTerm) {
+    API.searchTerms(search)
+      .then(res => {
+        if (res.data.length === 0) {
+          throw new Error("No results found.");
+        }
+        if (res.data.status === "error") {
+          throw new Error(res.data.message);
+        }
+        setArticleState({
+          title: res.data[1][0],
+          url: res.data[3][0]
+        });
+      })
+      .catch(err => setError(err));
+  }
+}, [debouncedSearchTerm]);
 ```
 
 ### 16. Instructor Do: Recommend Material (0 mins)

@@ -30,9 +30,7 @@
       (function() {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("./service-worker.js", {
-              scope: "http://localhost:3000"
-            })
+            .register("./service-worker.js")
             .then(res => {
               console.log(res);
               console.log("Service Worker registered successfully.");
