@@ -358,6 +358,102 @@ In this example we will demonstrate how to handle simple forms with React.
 
 ### 11. Instructor Do: Review Fun With Forms (10 mins)
 
+
+* Open [Solved/components/Form/index.js](../../../../01-Class-Content/19-react/01-Activities/18-Stu_FunWithForms/Solved/components/Form/index.js) in your browser and demonstrate the application:
+
+  * Changing text in the `first name` and `last name` input fields causes the `hello` text to change after every key press.
+
+  * Submitting the form causes validation alerts if the first and last name inputs are left empty or the password length isn't greater than 6.
+
+* Open [Solved/components/Form/index.js](../../../../01-Class-Content/19-react/01-Activities/18-Stu_FunWithForms/Solved/components/Form/index.js) in your IDE and point out the following:
+
+  * The `input` element has an `onChange` attribute that is set to be a method declared earlier in the component
+
+  * `value` is set to `this.state.firstName`
+
+  * The paragraph above the form displays different properties from the state
+  
+```js
+<p>
+  Hello {this.state.firstName} {this.state.lastName}
+</p>
+<form className="form">
+  <input
+    value={this.state.firstName}
+    name="firstName"
+    onChange={this.handleInputChange}
+    type="text"
+    placeholder="First Name"
+  />
+```
+
+* Now scroll up to the spot where `handleInputChange()` is declared and point out the following:
+
+  * The `event` object is a built in parameter of callback functions of the `onChange()` event, just as with `onClick()`
+
+  * If the name of the field is `password`, its value is set to be a substring (the first 15 characters) of the input field. Note that there are many other ways of doing password validation, like adding a `minLength` attribute to the `input` element.
+
+  * `this.setState()` is used to dynamically add an input field and its value to the state. 
+
+```js
+handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
+
+    if (name === "password") {
+      value = value.substring(0, 15);
+    }
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
+```
+
+* Now direct students to the `handleFormSubmit()` method and point out the following:
+
+  * `event.preventDefault()` prevents the form from attempting to POST.
+
+  * If the `firstName` or `lastName` properties don't exist, the user is alerted.
+
+  * If the `password` is less than 6 characters long, the user is alerted.
+
+  * If we were to spend more time on a form that we expect to use in an app, we would want to handle validation errors a little more elegantly.
+
+  * After the form is submitted, the fields are all set to empty strings. 
+
+```js
+handleFormSubmit = event => {
+  // Preventing the default behavior of the form submit (which is to refresh the page)
+  event.preventDefault();
+  if (!this.state.firstName || !this.state.lastName) {
+    alert("Fill out your first and last name please!");
+  } else if (this.state.password.length < 6) {
+    alert(
+      `Choose a more secure password ${this.state.firstName} ${this.state
+        .lastName}`
+    );
+  } else {
+    alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+  }
+
+  this.setState({
+    firstName: "",
+    lastName: "",
+    password: ""
+  });
+};
+```
+
+* Ask the students the following question:
+
+  * ☝️ Think back to forms you've created in the past. Is there anything else we should do with our data after setting the application state?
+
+  * 🙋 We could add a POST request to `handleFormSubmit` so that the user's input can be sent to a server and saved in a database.
+
+
 ### 12. Instructor Do: AJAX Demo (15 mins)
 
 In this example we will demonstrate AJAX requests with React.
