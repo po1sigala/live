@@ -32,7 +32,7 @@ The following topics will be covered in this unit:
   * Box model
   * Positioning and floats
   * Color: hexadecimal, rgb and named
-* Git & Git wrkflow
+* Git & Git workflow
   * git clone
   * git add
   * git commit
