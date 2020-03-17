@@ -78,9 +78,9 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 * Demonstrate for students how we can quickly create a React application using Create React App. Run the following command in the terminal and have students follow along if they wish:
 
-  * `create-react-app reactpractice`
+  * `npx create-react-app reactpractice`
 
-    * Explain that to scaffold out a React app with create-react-app, we run `create-react-app` followed by a name for our application.
+    * Explain that to scaffold out a React app with create-react-app, we run `npx create-react-app` followed by a name for our application.
 
 * Once everything has been installed, cd into your application's directory and start the app by running `npm start` in your terminal and navigating to `localhost:3000`. Explain that this command starts our app in development mode, i.e. this "mode" is meant for development as our application will auto-reload as we make changes to it.
 

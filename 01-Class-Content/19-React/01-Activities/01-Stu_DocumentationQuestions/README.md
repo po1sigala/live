@@ -6,7 +6,7 @@ In this activity, we will begin by installing a few helpful packages and then ex
 
 ### Part 1
 
-* Begin installing Create React App globally by running the following command in your terminal:
+* Begin by executing Create React App by running the following command in your terminal:
 
 `npx create-react-app <appname>` where `<appname>` is what you want to name your app. Example: `npx create-react-app practiceapp`.
 
@@ -14,7 +14,7 @@ In this activity, we will begin by installing a few helpful packages and then ex
 
 * While those are installing, work with your group to answer each of the following questions using the [ReactJS Documentation](https://facebook.github.io/react/):
 
-1. In the previous section we installed Create React App. What is it for?
+1. In the previous section we executed Create React App. What is it for?
 
 2. What are some benefits of using ReactJS?
 
