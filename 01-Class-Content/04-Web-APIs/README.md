@@ -36,6 +36,13 @@ You will be employer-competitive if you are able to:
 * Use DOM API methods to handle events such as key presses and mouse clicks.
 * Research Web API documentation to implement new and unfamiliar interfaces.
 
+## Algorithms
+
+* 01-log-even-nums - Create a function that prints even numbers from 0 to a given number.
+
+* 02-countdown - Create a function that prints all whole numbers from a given positive number to 1.
+
+* 03-sum-array - Create a function that adds up all the numbers in a given array and returns the total.
 
 ## Homework: Code Quiz
 As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment. These assessments are typically a combination of multiple-choice questions and interactive coding challenges. In this homework assignment, your challenge is to build a code quiz of multiple-choice questions.
