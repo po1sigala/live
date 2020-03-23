@@ -38,7 +38,7 @@ In this unit, we will be introducing students to the NoSQL database with MongoDB
 
   * [Unit 17-NoSQL Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1lICiFCUP4-tUDzW8lw64clnlr9OlhczRgVDer8eRZrU/edit?usp=sharing)
 
-  * [Unit 17-NoSQL Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1a4JbqI3NUd2qe6nKqYF_w5X0TXz7tG_TKXa1fcvuaXM/edit?usp=sharing)
+  * [Unit 17-NoSQL Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1bYAmAub9oKysRzfmfXRBCTOonOhT11bgqARNUpwowl8/edit#gid=0)
 
 ## Algorithms
 
