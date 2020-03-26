@@ -12,7 +12,7 @@ function calculateTotal(total, tipAmount) {
   return parseFloat(total) + parseFloat(tipAmount);
 }
 
-function addTip() {
+function addTip(event) {
   event.preventDefault();
   var tipPercentage = tipEl.value * .01;
   var total = totalEl.value;
@@ -22,7 +22,7 @@ function addTip() {
   document.querySelector("#new-total").textContent = newTotal.toFixed(2);
 }
 
-function splitTotal() {
+function splitTotal(event) {
   event.preventDefault();
 
   var total = document.querySelector("#new-total").textContent;
