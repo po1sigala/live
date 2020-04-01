@@ -11,6 +11,16 @@ const questions = [
   },
   {
     type: "input",
+    name: "email",
+    message: "What is your email?"
+  },
+  {
+    type: "input",
+    name: "URL to Project",
+    message: "the URL to your project?"
+  },
+  {
+    type: "input",
     name: "title",
     message: "What is your project's name?"
   },
