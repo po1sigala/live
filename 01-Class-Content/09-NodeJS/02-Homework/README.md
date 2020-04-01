@@ -6,7 +6,7 @@ Create a command-line application that dynamically generates a README.md from a 
 node index.js
 ```
 
-The user will be prompted for their GitHub username, which will be used to make a call to the GitHub API to retrieve their email and profile image. They will then be prompted with questions about their project.
+The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
 
 The README will be populated with the following:
 
@@ -44,10 +44,6 @@ When creating an open source project on GitHub, it is important to have a qualit
 * Functional, deployed application.
 
 * GitHub repository with a unique name and a README describing project.
-
-* The generated README includes a bio image from the user's GitHub profile.
-
-* The generated README includes the user's email.
 
 * The generated README includes the following sections: 
   * Title
@@ -101,5 +97,3 @@ You are required to submit the following:
 
 * The URL of the GitHub repository
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

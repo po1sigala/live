@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-const api = require("./utils/api");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
@@ -56,13 +55,7 @@ function writeToFile(fileName, data) {
 
 function init() {
   inquirer.prompt(questions).then((inquirerResponses) => {
-    console.log("Searching...");
-
-    api
-      .getUser(inquirerResponses.github)
-      .then(({ data }) => {
-        writeToFile("README.md", generateMarkdown({ ...inquirerResponses, ...data }));
-      })
+    writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
   })
 }
 
