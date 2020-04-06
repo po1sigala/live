@@ -109,6 +109,13 @@ var renderNoteList = function(notes) {
 
   var noteListItems = [];
 
+  if (notes.length === 0) {
+    var $li = $("<li class='list-group-item'>");
+    var $span = $("<span>").text("No saved notes");      
+    $li.append($span);
+    noteListItems.push($li);
+  }
+
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
 
