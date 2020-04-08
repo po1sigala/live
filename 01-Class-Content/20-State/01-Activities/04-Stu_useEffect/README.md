@@ -12,7 +12,7 @@ In this activity we will practice using the useState and useEffect Hooks in Reac
 
 * Update this application to accomplish the following:
 
-* Create a functional component in place of the class component.
+* In `pages/Search/index.js`, Create a functional component in place of the class component.
 
 * Replace `this.state` and all instances of `this.setState` using the `useState` Hook.
 
