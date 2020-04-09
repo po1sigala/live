@@ -62,7 +62,7 @@
 
 * Click `PATH`, and the click the `Edit...` button. You should be prompted with this screen.
 
-![Edit...](./images/edit)
+![Edit...](./images/Edit.png)
 
 * Click `New...`, and enter the path to the new MySQL Install. 
 
