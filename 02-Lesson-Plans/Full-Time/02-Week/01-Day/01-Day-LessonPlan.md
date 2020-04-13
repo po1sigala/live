@@ -6,7 +6,7 @@ Today's class is focused on providing students with the very basics of JavaScrip
 
 ## Instructor Notes
 
-* `Summary: Complete Activities 1-13 in Unit 03`
+* `Summary: Complete Activities 1-18 in Unit 03`
 
 * Welcome to Week 3! In this class you will be giving students their first primer on JavaScript as a programming language. Many of your students will have little clue what JavaScript is, let alone how to use it. Be prepared for the simplest bugs, from missing quotation marks to utter confusion in setting a variable. Today will be all about the fundamentals.
 

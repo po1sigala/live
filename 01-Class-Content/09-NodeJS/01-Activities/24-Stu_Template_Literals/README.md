@@ -1,6 +1,6 @@
 # Template Literals
 
-* In this activity we will use ES6 template literals display .
+* In this activity we will use ES6 template literals to render html.
 
 ## Instructions
 

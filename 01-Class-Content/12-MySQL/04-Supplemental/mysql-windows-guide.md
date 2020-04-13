@@ -43,3 +43,27 @@
 * Click “No thanks, just start my download.”
 
 * Open the executable file and go through the installation process.
+
+## PATH setup
+
+* Now that we have installed MySQL, we need to make sure to add the PATH to the MySQL install to our Environmental Variables.
+
+* First press the `windows` key and search for PATH.
+
+* Click the option `Edit the system environmental variables`.
+
+* You should be prompted with this screen.
+
+![Edit System Environmental Variables](./images/SystemProperties.png)
+
+* Next, click `Environmental Variables`. You should be prompted with the following.
+
+![Environmental Variables](./images/EnvironmentVariables.png)
+
+* Click `PATH`, and the click the `Edit...` button. You should be prompted with this screen.
+
+![Edit...](./images/Edit.png)
+
+* Click `New...`, and enter the path to the new MySQL Install. 
+
+* Click `OK` on all the screens, and you are done. Restart your terminal completely for commands like `mysql x` to work.

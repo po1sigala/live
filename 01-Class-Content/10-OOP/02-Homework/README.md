@@ -169,7 +169,7 @@ You are required to submit the following:
 
 * The URL of the GitHub repository
 
-* **Optional**: GIF of your CLI applications functionality
+* A video demonstrating the entirety of the app's functionality 
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
