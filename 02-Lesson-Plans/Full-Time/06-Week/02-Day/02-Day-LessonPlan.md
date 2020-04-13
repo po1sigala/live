@@ -6,7 +6,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 ## Instructor Notes
 
-* `Summary: Complete activities 13-14 in Unit 11`
+* `Summary: Complete activities 12-14 and begin activity in Unit 11`
 
 * Welcome back! Today's class is one of the most important in the program. You will be walking students through the creation of Node/Express-based APIs and their utilization by front-end interfaces.
 
