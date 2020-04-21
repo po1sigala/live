@@ -313,7 +313,7 @@ app.get("/populateduser", (req, res) => {
 
   * 🙋 String value pairs, objects must be stringified and strings must be converted to JSON. Size limits.
 
-  * ☝️ rom the name, what do we think IndexedDB is?
+  * ☝️ From the name, what do we think IndexedDB is?
 
   * 🙋 The Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
 
