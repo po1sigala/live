@@ -17,7 +17,7 @@ function renderLastRegistered() {
   var email = localStorage.getItem("email");
   var password = localStorage.getItem("password");
 
-  if (email && password === null) {
+  if (!email || !password) {
     return;
   }
 
