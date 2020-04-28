@@ -178,13 +178,13 @@ In this activity we will create a bundle.js file with Webpack.
 
 # 4. Instructor Do: Review Budget Tracker (5 mins)
 
-* Open `13-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
+* Open `16-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
 
   * When we add multiple expenses, we see that our balance adjusts for each submission.
 
   * When we click the reset button, the expenses list gets cleared and the balance is reset to its original value.
 
-* Open `13-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
+* Open `16-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
 
   * At the top of the file, we bring in `module.exports` from the calculations file.
 
@@ -362,7 +362,7 @@ plugins: [
 
   * Normally, Webpack only knows how to process regular JavaScript. Loaders allow Webpack to compile and bundle non-JavaScript resources like CSS, HTML, TypeScript, and more. Specifically, the Babel loader goes through all of our JavaScript files and transpiles ES6 into ES5.
 
-* Open `16-Ins-Pure-Functions/webpack.config.js` in your IDE and point out the following:
+* Open `19-Ins-Pure-Functions/webpack.config.js` in your IDE and point out the following:
 
   * We've created a new object called module and within it define an array of rules. 
 
@@ -552,7 +552,7 @@ In this activity we will adjust our Gallery app so that Webpack minifies and bun
 <script type="text/javascript" src="./dist/chart.bundle.js"></script>
 ```
 
-* Open `07-Ins-Chunking` in your IDE and run the following commands from your command line:
+* Open `21-Ins-Chunking` in your IDE and run the following commands from your command line:
 
   * `npm install`
 
