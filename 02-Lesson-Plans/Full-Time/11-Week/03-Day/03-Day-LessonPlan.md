@@ -10,7 +10,7 @@ we would appreciate your feedback at the following link:
 
 Today, you'll prime your students to conceptualize their final projects. You'll run down the list of expectations and requirements for each of their weekly deliverables. Aside from that, you and the TAs will stick around to make sure each team has a solid idea for their project--they should have one by the end of the class.
 
-`Summary: Complete activity 7 in Unit 21`
+`Summary: Complete activities 01-02 in Unit 22-Computer-Science`
 
 ##### Instructor Priorities
 
@@ -87,7 +87,7 @@ Today, you'll prime your students to conceptualize their final projects. You'll 
 
 ### 7. Instructor Do: Review the solution to the previous problem (10 min)
 
-* Open up `0-Benchmark/Solutions/linearSearch.js`.
+* Open up `01-Benchmark/Solutions/linearSearch.js`.
 
 * Explain that this is an example of a "linear search".
 
