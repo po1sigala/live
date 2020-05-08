@@ -6,13 +6,13 @@ If you are opting out of career services, this is _still a required assignment_.
 
 ## Requirements
 
-- Submit an updated portfolio featuring project 1 and two exemplary homework assignments.
+* Submit an updated portfolio featuring project 1 and two exemplary homework assignments.
 
-- Submit an updated GitHub profile with pinned repositories featuring project 1 and two exemplary assignments.
+* Submit an updated GitHub profile with pinned repositories featuring project 1 and two exemplary assignments.
 
-- Submit an updated resume
+* Submit an updated resume
 
-- Submit an updated LinkedIn profile
+* Submit an updated LinkedIn profile
 
 ## Grading
 
@@ -44,13 +44,13 @@ Your updated portfolio should contain the following:
 
 4. A list of 3-5 projects. For each project, make sure you have the following:
 
-- Project title
+    * Project title
 
-- Link to the deployed version
+    * Link to the deployed version
 
-- Link to the GitHub repository
+    * Link to the GitHub repository
 
-- Screenshot of the deployed application
+    * Screenshot of the deployed application
 
 5. Ensure that your portfolio is free of grammar and spelling mistakes
 
@@ -59,10 +59,10 @@ Your updated portfolio should contain the following:
 Unfortunately, this is where it gets a little bit subjective. Your site should look
 "polished." Here are a few guidelines on what that means:
 
-- Mobile-first design
-- Choose a color palette for your site so it doesn't just look like
+* Mobile-first design
+* Choose a color palette for your site so it doesn't just look like
   the default bootstrap theme or an unstyled HTML site.
-- Make sure the font size is large enough to read, and that the colors don't cause eye strain.
+* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
 
 ## Updated GitHub Profile
 
@@ -70,7 +70,7 @@ Employers (and potential collaborators) _will_ look at your GitHub profile, so p
 
 1. Professional profile picture
 
-   - A photo or an image other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
+   * A photo or an image other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
 
 2. Biography
 
@@ -82,29 +82,25 @@ Employers (and potential collaborators) _will_ look at your GitHub profile, so p
 
 6. Pin 3-6 repositories that you want to highlight
 
-   - Navigate to [GitHub](https://github.com/) and go to your profile.
+   * Navigate to [GitHub](https://github.com/) and go to your profile.
 
-   - Click "Customize your pins"
+   * Click "Customize your pins"
 
-     <img src="./assets/customize.png"  height="300" />
+   * Click the checkboxes for your project and 2-3 homework assignments that you would like to share
 
-   - Click the checkboxes for your project and 2-3 homework assignments that you would like to share
-
-     <img src="./assets/pins.png" width="300" height="300" />
-
-   - Make sure each of these projects is deployed and add a link to the deployed project in their README files
+   * Make sure each of these projects is deployed and add a link to the deployed project in their README files
 
 7. Follow your classmates. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code.
 
 8. README files. Every pinned project should contain a README file with:
 
-   - Title of app
-   - Live link to deployed app
-   - List of technologies used
-   - 1-2 sentences explaining what the app is
-   - 2-3 Screenshots / gifs of the app
-   - License (usually MIT)
-   - Contact information for you and any collaborators
+   * Title of app
+   * Live link to deployed app
+   * List of technologies used
+   * 1-2 sentences explaining what the app is
+   * 2-3 Screenshots / gifs of the app
+   * License (usually MIT)
+   * Contact information for you and any collaborators
 
 9. Commit history. Every pinned repository should have at least 20 commits
 
@@ -116,11 +112,11 @@ Submit a clear, concise and compelling resume, tailored to the type of job youâ€
 
 Your resume should include:
 
-- a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub
+* a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub
 
-- technical skills section, with all programming languages and technologies listed
+* technical skills section, with all programming languages and technologies listed
 
-- 3 of your strongest projects/homework assignments with brief description, languages used, and URL
+* 3 of your strongest projects/homework assignments with brief description, languages used, and URL
 
 ### 4. Updated LinkedIn Profile
 
@@ -132,11 +128,11 @@ Update your LinkedIn Profile with a strong bio statement, a professional photo, 
 
 If you are a job-seeking student, then getting yourself marked as employer-ready is an important step to take because you'll get:
 
-- added to our employer referral list where we'll help match you with employers for interviews
+* added to our employer referral list where we'll help match you with employers for int`erviews
 
-- exclusive access to workshops for employer-ready students
+* exclusive access to workshops for employer-ready students
 
-- a statistically higher success rate in your job search
+* a statistically higher success rate in your job search
 
 So if you are going to be looking for a job at the end of bootcamp, go ahead and submit these updated items to your Career Materials Advisor (formerly, Profile Coach) via BootcampSpot.
 
