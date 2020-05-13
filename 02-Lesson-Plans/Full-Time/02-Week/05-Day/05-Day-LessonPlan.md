@@ -346,7 +346,7 @@ N/A
     var email = localStorage.getItem("email");
     var password = localStorage.getItem("password");
 
-    if (email && password === null) {
+    if (!email || !password) {
       return;
     }
     ```

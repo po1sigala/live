@@ -18,6 +18,12 @@ function renderTodos() {
 
     var li = document.createElement("li");
     li.textContent = todo;
+    li.setAttribute("data-index", i);
+
+    var button = document.createElement("button");
+    button.textContent = "Complete";
+
+    li.appendChild(button);
     todoList.appendChild(li);
   }
 }
@@ -26,8 +32,7 @@ function init() {
   // Write code here to check if there are todos in localStorage
   // If so, parse the value from localStorage and assign it to the todos variable
 
-  // Store updated todos in localStorage, re-render the list
-  storeTodos();
+  // Render todos to the DOM
   renderTodos();
 }
 
