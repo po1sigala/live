@@ -94,7 +94,7 @@ Create a command-line application that uses input from a user to dynamically gen
 
 ## Heads Up
 
-* This week you will be using Node.js. Be sure to have it installed on your computer before starting this module. You can follow the installation instructions for [Mac](./04-Supplemental/nodejs-install-mac.md) and [Windows](./04-Supplemental/nodejs-install-win.md) computers.
+* Starting this unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** attending your classes. You can follow the installation instructions for [Mac](./04-Supplemental/nodejs-install-mac.md) and [Windows](./04-Supplemental/nodejs-install-win.md) computers.  
 
 ## Helpful Links
 
