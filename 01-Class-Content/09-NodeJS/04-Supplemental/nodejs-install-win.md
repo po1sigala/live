@@ -1,12 +1,12 @@
 ### Node.js Installation Guide (Win)
 
-- Go to the [Node.js website](https://nodejs.org/en).
+* Go to the [Node.js website](https://nodejs.org/en).
 
-- Under "Download for Windows", click the green box with the LTS version of Node to download the installer.
+* Under "Download for Windows", click the green box with the LTS version of Node to download the installer.
 
-  - The correct version will be labeled "12.x.x LTS Recommended for Most Users", where "x.x" is a combination of numbers.
+  * The correct version will be labeled "12.x.x LTS Recommended for Most Users", where "x.x" is a combination of numbers.
 
-  - For example, the version shown in the following image is "12.14.1 LTS":
+  * For example, the version shown in the following image is "12.14.1 LTS":
 
     ![Node.js website with LTS version of Node installer highlighted](./assets/09-node-nodejs-demo-01.png)
 
