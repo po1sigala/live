@@ -1,36 +1,32 @@
-# Unit 04: Data Persistence with Local and Server Storage
+# Unit 04: Project 1
 
 ## Overview
 
-In this unit, we are starting to work with data-persistence. We will cover client-side data storage (localStorage and cookies), as well as server-side storage (Firebase).
+In this unit, students will begin work on their first Project of the Boot Camp, an API-powered web application that pulls data from multiple sources in a creative way.
 
-## Learning Objectives
+* Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-1/README.md) for detailed information on key topics and learning objectives.
 
-* By the end of this unit, students will be able to:
+## Instructor / TA Notes
 
-  * Incorporate cookies and sessions into web apps for persistent user experiences.
+* Some students may complain about group configurations, be sure to remind them of the following:
 
-  * Set up Firebase systems to store remote data.
+  * In the real-world, you don't get to choose your co-workers.
 
-  * Build apps that collect user input and save them to the cloud using AJAX in tandem with Firebase’s API.
+  * Working collaboratively is an important skill to acquire as a developer.
 
-  * Explain the key components of compelling web applications.
+* Make sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
 
-  * Conceptualize and build creative apps that rely on outside data sources.
+* Project presentations are on the last day of this unit. Remember, students must have deployed projects by presentation day, so encourage students to work on deploying their projects by Day 4 at the latest. Since you can always update deployed projects, it is recommended that students deploy early on and update their live version with every new feature.
 
-  * Assign tasks and resolve merge conflicts using Git and GitHub.
+  * Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) with students to prepare for their presentations on Day 4. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
 
-### Key Topics
+  * Prior to the last class, prepare a list of questions to ask each group to encourage discussion.
 
-* Client-side storage
-
-* Remote data management
-
-* Firebase
+  * Also collaborate with your TAs to prepare a slide deck of superlative "awards" for groups. Refer to [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing).
 
 ## Heads Up
 
-* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting the next unit! There are separate installation instructions for [Mac](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
+* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting the next unit! There are separate installation instructions for [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
 
 ### Lesson Plans
 
@@ -44,23 +40,17 @@ In this unit, we are starting to work with data-persistence. We will cover clien
 
 * [4.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-### Homework Activities
-
-* [Train Time (Recommended)](../../../01-Class-Content/07-firebase/02-Homework/Instructions/Homework_Train_Activity_Basic.md)
-
-* [Multiplayer Rock Paper Scissors (Quite the Challenge)](../../../01-Class-Content/07-firebase/02-Homework/Instructions/Homework_RPS_Activity_Challenge.md)
-
-* [Demo of Rock Paper Scissors Homework {Movie}](https://youtu.be/5b-aRZPWlls)
-
 ### Helpful Links
 
-* [Firebase Documentation](https://firebase.google.com/docs/)
+* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
-* [MomentJS Documentation](http://momentjs.com/)
+* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-* [HTML5 localStorage W3Schools](http://www.w3schools.com/html/html5_webstorage.asp)
+* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 
 ### Slide Shows
+
+* [04.1: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
 
 * [GitHub Collaboration and Project Week](https://docs.google.com/presentation/d/1gm9S6hZhJNv6bnyzsgpa1OuLixVLsipLjmhV7CUILqc/edit?usp=sharing)
 
