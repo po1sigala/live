@@ -1,4 +1,4 @@
-# Week 04: Data Persistence with Local and Server Storage
+# Unit 04: Data Persistence with Local and Server Storage
 
 ## Overview
 
@@ -30,7 +30,7 @@ In this unit, we are starting to work with data-persistence. We will cover clien
 
 ## Heads Up
 
-* Next week, students will learn Node.js. Make sure that you send out the instructions for installing Node.js before starting the next unit. 
+* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting the next unit! There are separate installation instructions for [Mac](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
 
 ### Lesson Plans
 
