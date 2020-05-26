@@ -1,4 +1,4 @@
-## Node.js Installation Guide (Mac)
+# Node.js Installation Guide (Mac)
 
 * Go to the [Node.js website](https://nodejs.org/en).
 

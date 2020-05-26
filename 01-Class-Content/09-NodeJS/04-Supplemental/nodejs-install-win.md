@@ -1,4 +1,4 @@
-### Node.js Installation Guide (Win)
+# Node.js Installation Guide (Win)
 
 * Go to the [Node.js website](https://nodejs.org/en).
 
