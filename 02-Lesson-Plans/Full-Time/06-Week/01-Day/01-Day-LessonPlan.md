@@ -19,6 +19,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Also note that in today's class, we will be introducing students to the plain Node approach for creating servers. Let them know that for today's class understanding the exact syntax is _less_ important than understanding the conceptual picture. You can also let them know that in the next class they will be introduced to Express.js, which will simplify some of the code complexity of today.
 
+* Remind students to have the **Heroku CLI installed** before coming to the next class!
 
 ## Learning Objectives
 
@@ -365,6 +366,14 @@ app.get('/obiwankenobi', function(req, res){
   * Spend a few moments researching what `express.json` is for and what `req.body` means in the context of Express.
 
   * Then research how you can POST data to the Express server.
+
+## Heads Up
+
+* In the next class, students will start using Heroku. 
+
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md).
+
+* Remind the students to have the Heroku CLI installed **before** coming to class!
 
 ### Lesson Plan Feedback
 
