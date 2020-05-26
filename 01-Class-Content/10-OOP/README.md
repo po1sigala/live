@@ -58,6 +58,10 @@ You will be employer-competitive if you are able to:
 
 * In this unit's assignment, you will create an application which generates html files using input from a command line interface.
 
+## Heads Up
+
+* In the next unit, you will use Heroku to host your web applications! Be sure to have the Heroku CLI installed on your computer **before** starting Unit 11 and attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
+
 ## Helpful Links
 
 * [Constructor Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
