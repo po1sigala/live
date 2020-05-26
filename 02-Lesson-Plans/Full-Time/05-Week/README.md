@@ -6,7 +6,7 @@ In this unit, we will be introducing students to application building with Node 
 
 ## Heads Up
 
-* In this unit, students are learning about Node.js. Be sure students have already installed Node.js on their [Mac](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) or [Windows](../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
+* In this unit, students are learning about Node.js. Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
 
 ### Lesson Plans
 
