@@ -12,6 +12,8 @@ In this class, students will learn the benefits of OOP and learn how to apply ma
 
 * Today's lesson will rely heavily on ES6 classes. It is recommended that you spend some time getting familiar with classes, subclasses, and the `super()` method before class starts.
 
+* In the next unit, students will start using Heroku. Advise the students to have the Heroku CLI installed before the next unit.
+
 ## Learning Objectives
 
 * Implement ES6 class syntax to instantiate multiple instances of a single type of object.
@@ -1085,6 +1087,12 @@ The completed game should meet the following criteria:
 ### 17. Review Unit 10 (45 mins)
 
 * Continue to answer lingering questions about the Mini Project. If no questions arise, lead a review session on unit 10 for the rest of class.
+
+* In the next unit, students will start using Heroku. 
+
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md).
+
+* Advise the students to have the Heroku CLI installed before the next unit.
 
 ### 18. END (0 mins)
 
