@@ -1,4 +1,4 @@
-## Heroku CLI Installation Guide
+# Heroku CLI Installation Guide
 
 * Sign up for a free [Heroku](https://signup.heroku.com/) account.
 
