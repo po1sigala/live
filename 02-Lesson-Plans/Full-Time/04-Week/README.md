@@ -8,7 +8,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 ## Instructor / TA Notes
 
-* Some students may complain about group configurations, be sure to remind them of the following:
+* Some students may complain about group configurations. Be sure to remind them of the following:
 
   * In the real-world, you don't get to choose your co-workers.
 

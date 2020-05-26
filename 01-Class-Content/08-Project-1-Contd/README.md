@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the second week of Project 1! This week, you will continue to work on your group project to build a web application from scratch. As you wrap up your project, be prepared to give a presentation on the last class of this unit. 
+Welcome to the second week of Project 1! This week, you will continue to work on your group project to build a web application from scratch. As you wrap up your project, be prepared to give a presentation during the last class day of this unit. 
 
 ## Heads Up
 
