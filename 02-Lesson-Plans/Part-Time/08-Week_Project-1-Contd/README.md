@@ -24,7 +24,7 @@ Make sure to remind students that they should try dealing with merge conflicts a
 
 ## Heads Up
 
-In the next unit we begin Node.js so make sure all students have Node installed prior to the start of unit 09.
+* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting Unit 09. There are separate installation instructions for [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
 
 ## Helpful Links
 
