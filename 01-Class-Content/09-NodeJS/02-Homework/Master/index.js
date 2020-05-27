@@ -8,16 +8,10 @@ const questions = [
     type: "input",
     name: "github",
     message: "What is your GitHub username?"
-  },
-  {
+  },{
     type: "input",
     name: "email",
-    message: "What is your email?"
-  },
-  {
-    type: "input",
-    name: "URL to Project",
-    message: "the URL to your project?"
+    message: "What is your email address?"
   },
   {
     type: "input",
@@ -64,8 +58,10 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-  inquirer.prompt(questions).then((inquirerResponses) => {
-    writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
+  inquirer.prompt(questions)
+  .then((inquirerResponses) => {
+    console.log("Generating README...");
+    writeToFile("README.md", generateMarkdown({...inquirerResponses}));
   })
 }
 

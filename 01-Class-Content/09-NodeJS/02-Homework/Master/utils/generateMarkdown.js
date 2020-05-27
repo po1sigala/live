@@ -1,11 +1,15 @@
-function generateProjectUrl(github, title) {
-  const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
-  return `https://github.com/${github}/${kebabCaseTitle}`;
+function renderLicenseBadge(license) {
+  if (license !== "None") {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+  }
+  return ''
 }
 
-function renderLicenseBadge(license, github, title) {
+function renderLicenseLink(license) {
   if (license !== "None") {
-    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
+    return (
+      `\n* [License](#license)\n`
+    )
   }
   return ''
 }
@@ -22,9 +26,8 @@ This project is licensed under the ${license} license.`
 }
 
 function generateMarkdown(data) {
-  return `
-# ${data.title}
-${renderLicenseBadge(data.license, data.github, data.title)}
+  return `# ${data.title}
+${renderLicenseBadge(data.license)}
 
 ## Description
 
@@ -35,9 +38,7 @@ ${data.description}
 * [Installation](#installation)
 
 * [Usage](#usage)
-
-* [License](#license)
-
+${renderLicenseLink(data.license)}
 * [Contributing](#contributing)
 
 * [Tests](#tests)
@@ -72,7 +73,7 @@ ${data.test}
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [${data.github}](${data.url}) directly at ${data.email}.
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at [${data.github}](https://github.com/${data.github}/).
 
 `;
 }
