@@ -1,4 +1,4 @@
-# Unit 11 and 12: Express and MySQL
+# Week 06: Express and MySQL
 
 ## Overview
 
@@ -14,17 +14,19 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Instructor / TA Notes
 
-This unit, there is a larger focus on the concept of server-side code. Make sure that the class can explain the purpose of server-side code to you before moving on to Express. 
+* This unit, there is a larger focus on the concept of server-side code. Make sure that the class can explain the purpose of server-side code to you before moving on to Express. 
 
-Students' first exposure to MySQL is most likely going to seem overwhelming. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
+* Students' first exposure to MySQL is most likely going to seem overwhelming. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
 
-Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
+* Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
 
 ## Heads Up
 
-This week we also start on MySQL. Make sure that you send out the instructions for installing to install MySQL before the midweek to minimize install time next unit.
+* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
 
-In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
+* This week we also start on MySQL. Make sure that you send out the instructions for installing to install MySQL before the midweek to minimize install time next unit.
+
+* In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 
 ## Helpful Links
 

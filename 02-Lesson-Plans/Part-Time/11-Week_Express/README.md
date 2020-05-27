@@ -12,7 +12,9 @@ This unit, there is a larger focus on the concept of server-side code. Make sure
 
 ## Heads Up
 
-Next week we start on MySQL. Make sure that you send out the instructions for installing to install MySQL by the end of this unit to minimize install time next unit.
+* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
+
+* Next week we start on MySQL. Make sure that you send out the instructions for installing to install MySQL by the end of this unit to minimize install time next unit.
 
 ## Helpful Links
 
