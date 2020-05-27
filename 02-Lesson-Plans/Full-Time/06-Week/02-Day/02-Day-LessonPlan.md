@@ -16,7 +16,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Be sure to slack out the [video walkthrough](https://youtu.be/ygk-kNstqK0) at the end of the activity! This will help students tremendously in understanding how to approach Express based application builds.
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) if they haven't installed it yet.
+* Make sure students have signed up for a Heroku account by now. Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) if they haven't installed it yet.
 
 ## Learning Objectives
 
@@ -174,7 +174,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * **Instructions:**
 
-  * Push the finished Star Wars app to Heroku following the steps from the Heroku Guide.
+  * Push the finished Star Wars app to Heroku following the steps from the [Heroku Guide](../../../../01-Class-Content/11-express/04-Supplemental/HerokuGuide.md)
 
   * **BONUS:** Begin making the below additional page for your Star Wars app. Push those changes up as you build the new feature. Specifically, this will require:
 

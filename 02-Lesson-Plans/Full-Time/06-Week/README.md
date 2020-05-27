@@ -22,7 +22,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Heads Up
 
-* In this unit, students are going to use Heroku to host their web applications. Be sure students have already [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
+* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
 
 * This week we also start on MySQL. Make sure that you send out the instructions for installing to install MySQL before the midweek to minimize install time next unit.
 

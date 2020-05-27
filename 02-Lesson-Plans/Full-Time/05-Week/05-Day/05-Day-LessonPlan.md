@@ -12,7 +12,7 @@ In this class, students will learn the benefits of OOP and learn how to apply ma
 
 * Today's lesson will rely heavily on ES6 classes. It is recommended that you spend some time getting familiar with classes, subclasses, and the `super()` method before class starts.
 
-* In the next unit, students will start using Heroku. Advise the students to have the Heroku CLI installed before the next unit.
+* In the next unit, students will start using Heroku. Advise the students to sign up for a Heroku account and have the Heroku CLI installed before the next unit.
 
 ## Learning Objectives
 
@@ -1090,9 +1090,9 @@ The completed game should meet the following criteria:
 
 * In the next unit, students will start using Heroku. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md).
+* Direct the students to the `04-Supplemental` folder where there are [instructions](../../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
 
-* Advise the students to have the Heroku CLI installed **before** the next unit.
+* Advise the students to sign up for a Heroku account and have the Heroku CLI installed **before** the next unit.
 
 ### 18. END (0 mins)
 

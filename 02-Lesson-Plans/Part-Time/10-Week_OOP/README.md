@@ -16,7 +16,7 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 * Next unit, we will be diving into servers and Express. Spend as much time as you can making sure that students understand Node.js fundamentals. 
 
-* In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) before starting the next unit. 
+* In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
 
 * Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
 

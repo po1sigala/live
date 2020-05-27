@@ -54,7 +54,7 @@ You will be employer-competitive if you are able to:
 
 ## Heads Up
 
-* Starting this unit, you will use Heroku to host your web applications! Be sure to have the Heroku CLI installed on your computer **before** attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
+* Starting this unit, you will use Heroku to host your web applications! Be sure to sign up for a [Heroku account](https://signup.heroku.com/) and have the Heroku CLI installed on your computer **before** attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
 
 ## Helpful Links
 
