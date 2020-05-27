@@ -1092,7 +1092,7 @@ The completed game should meet the following criteria:
 
 * Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md).
 
-* Advise the students to have the Heroku CLI installed before the next unit.
+* Advise the students to have the Heroku CLI installed **before** the next unit.
 
 ### 18. END (0 mins)
 
