@@ -10,6 +10,8 @@ In this unit, we will be introducing students to application building with Node 
 
 * In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
 
+* In the next unit, students will also start using MySQL. Be sure to send out the instructions for installing the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers before starting the next unit. 
+
 ### Lesson Plans
 
 * [5.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
