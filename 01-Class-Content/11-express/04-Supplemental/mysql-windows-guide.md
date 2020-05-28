@@ -58,6 +58,7 @@
 
 * Now that we have installed MySQL, we need to make sure to add the PATH to the MySQL install to our Environmental Variables.
 
+
 # PATH setup
 
 * Open any folder on your computer and click on "This PC" in the left-hand navigation bar.

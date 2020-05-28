@@ -24,7 +24,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
 
-* Students are also going to use MySQL. Be sure students have already installed the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers **before** coming to class.
+* Students are also going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers **before** coming to class.
 
 * In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 

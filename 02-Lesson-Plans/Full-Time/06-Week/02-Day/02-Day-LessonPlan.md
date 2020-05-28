@@ -369,7 +369,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * In the next class, students will start using MySQL. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
 * Remind the students to have both MySQL Server and Workbench installed **before** coming to class!
 

@@ -48,7 +48,7 @@ You will be employer-competitive if you are able to:
 
 * Explain and execute CRUD methods
 
-* Use both a GUI and the MySQL command prompt to interface with a database
+* Use both a GUI and the MySQL command line prompt to interface with a database
 
 * Create schema and seed files for development and production
 
