@@ -7,6 +7,7 @@ var minutesDisplay = document.querySelector("#minutes");
 var secondsDisplay = document.querySelector("#seconds");
 var workMinutesInput = document.querySelector("#work-minutes");
 var restMinutesInput = document.querySelector("#rest-minutes");
+var inputs = document.querySelector(".inputs")
 
 var totalSeconds = 0;
 var secondsElapsed = 0;
@@ -17,10 +18,10 @@ var interval;
    Some functions just change settings, some functions just call other functions,
    some functions just format strings or numbers, etc. */
 
-//this launches the app by calling setTime() and renderTime()
+// This launches the app by calling setTime() and renderTime()
 getTimePreferences();
 
-//These two functions are just for making sure the numbers look nice for the html elements
+// These two functions are just for making sure the numbers look nice for the html elements
 function getFormattedMinutes() {
   //
   var secondsLeft = totalSeconds - secondsElapsed;
@@ -52,9 +53,9 @@ function getFormattedSeconds() {
   return formattedSeconds;
 }
 
-/* This function just retrieves the values from the html input elements; Sort of 
+/* This function retrieves the values from the html input elements; Sort of
    getting run in the background, it sets the totalSeconds variable which
-   is used in getFormattedMinutes/Seconds() and the renderTime() function. 
+   is used in getFormattedMinutes/Seconds() and the renderTime() function.
    It essentially resets our timer */
 function setTime() {
   var minutes;
@@ -69,7 +70,7 @@ function setTime() {
   totalSeconds = minutes * 60;
 }
 
-//This function does 2 things. displays the time and checks to see if time is up.
+// This function does 2 things. displays the time and checks to see if time is up.
 function renderTime() {
   // When renderTime is called it sets the textContent for the timer html...
   minutesDisplay.textContent = getFormattedMinutes();
@@ -92,13 +93,14 @@ function renderTime() {
 function startTimer() {
   setTime();
 
-  // we only want to start the timer if minutes is > 0
-  if (totalSeconds > 0) {    
-    /* the "interval" variable here using "setInterval()" begins the recurring increment of the 
+  // We only want to start the timer if totalSeconds is > 0
+  if (totalSeconds > 0) {
+    /* The "interval" variable here using "setInterval()" begins the recurring increment of the
        secondsElapsed variable which is used to check if the time is up */
       interval = setInterval(function() {
         secondsElapsed++;
-        //So renderTime() is called here once every second.
+
+        // So renderTime() is called here once every second.
         renderTime();
       }, 1000);
   } else {
@@ -113,8 +115,8 @@ function pauseTimer() {
   renderTime();
 }
 
-/* This function stops the interval and also resets secondsElapsed 
-   and calls "setTime()" which effectively reset the timer 
+/* This function stops the interval and also resets secondsElapsed
+   and calls "setTime()" which effectively reset the timer
    to the input selections workMinutesInput.value and restMinutesInput.value */
 function stopTimer() {
   secondsElapsed = 0;
@@ -122,7 +124,7 @@ function stopTimer() {
   renderTime();
 }
 
-/* Our timer is fancy enough to handle 2 different settings at once this toggle 
+/* Our timer is fancy enough to handle 2 different settings at once this toggle
    function basically just specifies which of our 2 timer settings to use. */
 function toggleStatus(event) {
   var checked = event.target.checked;
@@ -141,13 +143,11 @@ function toggleStatus(event) {
 }
 
 function getTimePreferences() {
-  /* Here we check to see if any preferences have 
+  /* Here we check to see if any preferences have
      been set in the local storage via "setTimePreferences()" */
   var preferences = JSON.parse(localStorage.getItem("preferences"));
 
-  /* "setTimePreferences()" is actually never called so the below code will never run 
-     (ie. the "preferences" variable checked below will always be null.
-     The settings are always set by directly checking the input elements in the setTime() function) */
+  // If preferences have been set then use any value available
   if (preferences) {
     if (preferences.workMinutes) {
       workMinutesInput.value = preferences.workMinutes;
@@ -158,12 +158,11 @@ function getTimePreferences() {
     }
   }
 
-  //This is where the app is really kicked-off, setTime and renderTime are the two main routines.
+  // This is where the app is really kicked-off, setTime and renderTime are the two main routines.
   setTime();
   renderTime();
 }
 
-//This function is defined but never used.
 function setTimePreferences() {
   localStorage.setItem(
     "preferences",
@@ -178,3 +177,5 @@ playButton.addEventListener("click", startTimer);
 pauseButton.addEventListener("click", pauseTimer);
 stopButton.addEventListener("click", stopTimer);
 statusToggle.addEventListener("change", toggleStatus);
+inputs.addEventListener("change", setTimePreferences);
+inputs.addEventListener("keyup", setTimePreferences);
