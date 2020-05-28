@@ -8,13 +8,15 @@ In this week, we are starting working with databases by introducing MySQL and SQ
 
 ## Instructor / TA Notes
 
-Students' first exposure to MySQL is most likely going to seem overwhelming. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
+* In this unit, students are going to use MySQL. Be sure students have already installed the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers **before** coming to class.
 
-Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
+* Students' first exposure to MySQL is most likely going to seem overwhelming. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
+
+* Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
 
 ## Heads Up
 
-In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
+* In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 
 ## Helpful Links
 
