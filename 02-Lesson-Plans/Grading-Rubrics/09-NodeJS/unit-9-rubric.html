@@ -452,20 +452,55 @@
         this.title = "Unit 9 Node HW Rubric";
         this.categories = [
           {
-            title: "Deployment",
+            title: "Deliverables",
             subtitle: null,
             questions: [
               ,
               {
-                title: "Student submitted application GitHub URL",
-                score: 16,
-                message: "Missing GitHub submission URL",
+                title: "Student submitted a sample README generated from the application",
+                score: 10,
+                message: "Student did not submit a sample README generated from the application",
                 status: false
               },
               {
-                title: "GitHub Repo contains application code",
-                score: 20,
+                title: "Student submitted GitHub Repo containing application code",
+                score: 10,
                 message: "GitHub repo is empty",
+                status: false
+              }
+            ]
+          },
+          {
+            title: "Walkthrough Video",
+            subtitle: null,
+            questions: [
+              {
+                title:
+                  "Student includes link to walkthrough video in README",
+                score: 10,
+                message:
+                  "Student does not include link to walkthrough video in README",
+                status: false
+              },
+              {
+                title:
+                  "Walkthrough video demonstrates how to invoke the application",
+                score: 2,
+                message: "Walkthrough video does not demonstrate how to invoke the application",
+                status: false
+              },
+              {
+                title:
+                  "Walkthrough video demonstrates all of the prompts receiving user input",
+                score: 5,
+                message: "Walkthrough video does not demonstrate all of the prompts receiving user input",
+                status: false
+              },
+              {
+                title:
+                  "Walkthrough video demonstrates a generated README that matches the user input and has a functioning table of contents",
+                score: 10,
+                message: "Walkthrough video does not demonstrate a generated README that matches the user input and has a functioning table of contents",
                 status: false
               }
             ]
@@ -477,53 +512,44 @@
             questions: [
               {
                 title:
-                  "Application generates a README.md file from user provided GitHub profile",
+                  "Application generates a README.md file from user input",
                 score: 8,
                 message:
-                  "Application doesn't generate a README.md file from provided GitHub profile",
+                  "Application doesn't generate a README.md file from user input",
                 status: false
               },
               {
                 title:
-                  "Generated README includes bio image from GitHub profile",
+                  "Generated README includes Table of Contents that links to corresponding sections",
                 score: 8,
                 message:
-                  "Generated README doesn't include bio image from GitHub profile",
+                  "Generated README doesn't include Table of Contents that links to corresponding sections",
                 status: false
               },
               {
                 title:
-                  "Generated README includes email from GitHub profile",
+                  "Generated README includes title, description, installation, usage, contributing, and tests sections",
                 score: 8,
                 message:
-                  "Generated README doesn't include email from GitHub profile",
+                  "Generated README doesn't include title, description, installation, usage, contributing, and tests sections",
                 status: false
               },
               {
                 title:
-                  "Generated README includes Table of Contents",
+                  "Generated README includes a badge and license",
                 score: 8,
                 message:
-                  "Generated README doesn't include Table of Contents",
+                  "Generated READMe doesn't include a badge and license",
                 status: false
               },
               {
                 title:
-                  "Generated README includes title, description, installation, and usage sections",
-                score: 4,
+                  "Generated README includes a questions section with the user's email and link to GitHub profile",
+                score: 8,
                 message:
-                  "Generated README doesn't include title and description",
+                  "Generated README doesn't include a questions section with the user's email and link to GitHub profile",
                 status: false
-              },
-              {
-                title:
-                  "Generated README includes at least one badge, license, tests, and questions sections",
-                score: 4,
-                message:
-                  "Generated READMe doesn't include at least one badge, license, tests, and questions sections",
-                status: false
-              },
-
+              }
             ]
           },
           {
@@ -547,38 +573,25 @@
               {
                 title:
                   "Repository follows best practices for variable and function naming conventions, indentation, quality comments, etc.",
-                score: 3,
+                score: 2,
                 message:
                   "Code doesn't follow good practices for variable names, indentation, lacks quality comments",
                 status: false
               },
               {
                 title:
-                  "Repository contains quality README with description, screenshot, link to deployed application",
-                score: 7,
+                  "Repository contains multiple descriptive commit messages",
+                score: 2,
                 message:
-                  "Repo doesn't include a high quality README with screenshots, a description, link to deployed application",
-                status: false
-              }
-            ]
-          },
-          {
-            title: "Application Quality",
-            subtitle: null,
-            questions: [
-              {
-                title:
-                  "Application user experience is intuitive and easy to navigate",
-                score: 5,
-                message:
-                  "Application user experience could be more intuitive",
+                  "Repo doesn't contain multiple descriptive commit messages",
                 status: false
               },
               {
                 title:
-                  "Application user interface style is clean and polished",
+                  "Repository contains quality README with description and a link to walkthrough video",
                 score: 5,
-                message: "Application user interface needs work",
+                message:
+                  "Repo doesn't include a high quality README with description and a link to walkthrough video",
                 status: false
               }
             ]
