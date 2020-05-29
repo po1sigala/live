@@ -140,6 +140,16 @@
 
 * Type `quit` to exit the MySQL command line prompt.
 
+**Note:** You can also access the SQLite shell directly in VS Code! Depending on how you set up Git Bash, this may already be available to you. Select Terminal from your menu at the top of the screen and click on New Terminal in the drop-down menu. 
+
+![New Terminal is highlighted at the top of the Terminal drop-down menu in VS Code.](./images/12-sql-shell-demo-04.png)
+
+* If a terminal pops up at the bottom of your screen with `cmd`, `powershell`, or `bash` selected, you're good to go. You can click on this drop-down to choose the integrated terminal of your choice.
+
+![`bash` is highlighted in a drop-down menu in a terminal at the bottom of the VS Code screen.](./images/12-sql-shell-demo-05.png)
+
+* If you can't access an integrated terminal and you'd like to, see [the VS Code docs on the integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal#_windows).
+
 * Once you verify that the MySQL Shell can be initialized correctly, move onto installing MySQL Workbench below.
 
 

@@ -44,6 +44,8 @@
 
 ![In a MySQL GUI, "Start MySQL when your computer starts up" is highlighted in green.](./images/12-sql-mysql-mac-demo-07.png)
 
+* You may need to restart your computer to change these settings in your System Preferences.
+
 * Once you verify that the MySQL Server was correctly installed, move onto setting up the MySQL Shell below.
 
 
