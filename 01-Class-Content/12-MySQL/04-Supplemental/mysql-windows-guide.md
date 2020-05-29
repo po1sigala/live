@@ -140,7 +140,7 @@
 
 * Type `quit` to exit the MySQL command line prompt.
 
-**Note:** You can also access the SQLite shell directly in VS Code! Depending on how you set up Git Bash, this may already be available to you. Select Terminal from your menu at the top of the screen and click on New Terminal in the drop-down menu. 
+**Note:** You can also access the MySQL shell directly in VS Code! Depending on how you set up Git Bash, this may already be available to you. Select Terminal from your menu at the top of the screen and click on New Terminal in the drop-down menu. 
 
 ![New Terminal is highlighted at the top of the Terminal drop-down menu in VS Code.](./images/12-sql-shell-demo-04.png)
 
