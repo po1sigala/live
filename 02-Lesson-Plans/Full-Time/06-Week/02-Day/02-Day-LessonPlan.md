@@ -18,6 +18,8 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Make sure students have signed up for a Heroku account by now. Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) if they haven't installed it yet.
 
+* Remind students to have both **MySQL Server and Workbench installed** before coming to the next class!
+
 ## Learning Objectives
 
 * To gain a preliminary understanding of the basic elements of an Express server.
@@ -363,16 +365,17 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 - - -
 
-### End
+## Heads Up
 
-### MySQL Install
+* In the next class, students will start using MySQL. 
 
-* We will be coming up on MySQL next class. Let student's know to install MySQL Server and Workbench. Guides have been provided so slack these out to students:
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
-  * [MySQL Install Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md)
-  * [MySQL Install Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md)
+* Remind the students to have both MySQL Server and Workbench installed **before** coming to class!
 
 * If your class runs into trouble with this install process, feel free to use MAMP or any other installation solution that you would prefer to get the class ready.
+
+### End
 
 ### Troubleshooting Guide
 

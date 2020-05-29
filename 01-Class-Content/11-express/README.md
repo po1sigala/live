@@ -56,6 +56,8 @@ You will be employer-competitive if you are able to:
 
 * Starting this unit, you will use Heroku to host your web applications! Be sure to sign up for a [Heroku account](https://signup.heroku.com/) and have the Heroku CLI installed on your computer **before** attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
 
+* In the next unit, you will begin to use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** starting Unit 12 and attending your classes. You can follow these installation instructions for your [Mac](./04-Supplemental/mysql-mac-guide.md) or [Windows](./04-Supplemental/mysql-windows-guide.md) computers.
+
 ## Helpful Links
 
 * [Express.js](https://expressjs.com/)
