@@ -16,6 +16,10 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Be sure to slack out the [video walkthrough](https://youtu.be/ygk-kNstqK0) at the end of the activity! This will help students tremendously in understanding how to approach Express based application builds.
 
+* Make sure students have signed up for a Heroku account by now. Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) if they haven't installed it yet.
+
+* Remind students to have both **MySQL Server and Workbench installed** before coming to the next class!
+
 ## Learning Objectives
 
 * To gain a preliminary understanding of the basic elements of an Express server.
@@ -141,35 +145,47 @@ Today's class is focused on creating an Express-based web server. Students will 
 * Local development is fun, but it's much more fun to deploy and share with others!
 
 * Ask students what we've been using so far to deploy, and ask if anyone has any idea why that solution might not work now.
+
   * After students give suggestions, explain that GitHub Pages only hosts "static" pages, and doesn't support the server side of our application. 
+
   * Explain that GitHub Pages won't actually run any code for your app, it just hosts your HTML, CSS, JS, and other static files. It's similar to accessing your local files through your browser, only they're on a publicly accessible machine.
 
 * That means we need something that will both host our files _and_ run our server-side code.
 
 * Ask them if they can guess what we're going to use to host our full-stack application.
+
   * There are a ton of options, but specifically we're going to be using Heroku!
 
 * Explain that Heroku is a platform as a service (PaaS). It allows deployment of a back-end and will start up and host your web server and server-side code for you!
+
   * Explain that the value here is similar to that of GitHub Pages, but for your whole app.
+
   * Heroku will manage your application and give it a public URL that anyone can access.
 
 ### 10. Students Do: Deploy to Heroku (0:30)
 
 * Tell students that to wrap up today we're going to host that Star Wars app, so that even those in a galaxy far, far away can access it.
 
-* Then have students login to their Heroku accounts online. Many of them will have forgotten their passwords, and may spend a significant portion of this activity getting set up.
+* Then have students login to their Heroku accounts online. 
 
 * **File:**
-  * `01-Activities/14-FinalStarWarsApp` (solution, zipped)
-  * `03-Supplemental/HerokuGuide` (slacked out or link to class repo posted)
+
+  * [01-Activities/14-FinalStarWarsApp](../../../../01-Class-Content/11-express/01-Activities/14-FinalStarwarsApp) (solution, zipped)
+
+  * [04-Supplemental/HerokuGuide.md](../../../../01-Class-Content/11-express/04-Supplemental/HerokuGuide.md) (slacked out or link to class repo posted)
 
 * **Instructions:**
-  * Push the finished Star Wars app to heroku following the steps from the guide.
+
+  * Push the finished Star Wars app to Heroku following the steps from the [Heroku Guide](../../../../01-Class-Content/11-express/04-Supplemental/HerokuGuide.md)
 
   * **BONUS:** Begin making the below additional page for your Star Wars app. Push those changes up as you build the new feature. Specifically, this will require:
+
     * Create a new page on your Star Wars website that displays a table of ALL characters in the database. This will involve at minimum:
+
       * Creating a route in the server.js file for displaying data
+
       * Creating a route in the server.js file for sending users a new HTML file
+
       * Creating an HTML file that grabs data from the server.
 
 * Be sure to walk around and help students as they hit snags or have problems pushing to heroku, consulting the troubleshooting tips below as needed.
@@ -349,16 +365,17 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 - - -
 
-### End
+## Heads Up
 
-### MySQL Install
+* In the next class, students will start using MySQL. 
 
-* We will be coming up on MySQL next class. Let student's know to install MySQL Server and Workbench. Guides have been provided so slack these out to students:
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
-  * [MySQL Install Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md)
-  * [MySQL Install Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md)
+* Remind the students to have both MySQL Server and Workbench installed **before** coming to class!
 
 * If your class runs into trouble with this install process, feel free to use MAMP or any other installation solution that you would prefer to get the class ready.
+
+### End
 
 ### Troubleshooting Guide
 

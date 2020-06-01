@@ -1,16 +1,27 @@
-## Introduction to Node and NPM
+# Week 05: Introduction to Node and NPM
 
-### Overview
+## Overview
 
 In this unit, we will be introducing students to application building with Node and the use of external NPM packages.
 
+## Heads Up
+
+* In this unit, students are learning about Node.js. Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
+
+* In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
+
+* In the next unit, students will also start using MySQL. Be sure to send out the instructions for installing both the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers by the end of this unit to minimize install time next unit.
 
 ### Lesson Plans
 
 * [5.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+
 * [5.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+
 * [5.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+
 * [5.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+
 * [5.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
 ### Homework Activities
@@ -20,7 +31,9 @@ In this unit, we will be introducing students to application building with Node 
 ### Helpful Links
 
 * [Basic Intro to Node](https://blog.codeship.com/node-js-tutorial/)
+
 * [fs Documentation](https://nodejs.org/api/fs.html)
+
 * [InquirerJS](https://www.npmjs.com/package/inquirer)
 
 ### Slide Shows
