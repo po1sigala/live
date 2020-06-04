@@ -17,6 +17,8 @@ Students present their projects to their peers.
 
 * Congratulate your class! This is a major milestone in their journey. 
 
+* Remind students to have **Node.js installed** before coming to the next class!
+
 ## Learning Objectives
 
 * Speak technically about a feature implemented in the group project
@@ -44,6 +46,14 @@ N/A
 ### 3. Break (30 mins)
 
 ### 4. Student Do: Presentations (120 mins)
+
+### Heads Up
+
+* In the next class, students will start using Node.js. 
+
+* Direct the students to the `04-Supplemental` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers. 
+
+* Remind the students to have Node.js installed **before** coming to class!
 
 ### Lesson Plan Feedback
 
