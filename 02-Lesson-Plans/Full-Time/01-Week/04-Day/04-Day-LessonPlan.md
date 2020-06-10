@@ -177,7 +177,7 @@ Today's class is focused on introducing students to additional CSS styling techn
 
   * Then navigate to the [Google Fonts](https://www.google.com/fonts) web page and find a font-face students like.
 
-  * Then hit the "Quick Use" button.
+  * Then click the font card.
 
     ![2-GoogleFonts_1](Images/2-GoogleFonts_1.png)
 
