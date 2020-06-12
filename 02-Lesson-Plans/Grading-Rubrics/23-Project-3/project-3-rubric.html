@@ -447,7 +447,7 @@
         "use strict";
 
         function Model() {
-          this.title = "Group Project II Rubric";
+          this.title = "Group Project III Rubric";
           this.categories = [
             {
               title: "Deployment",
@@ -488,40 +488,55 @@
               subtitle: null,
               questions: [
                 {
+                  title: "Application uses ReactJS in some way",
+                  score: 5,
+                  message:
+                    "Application doesn't use ReactJS in some way",
+                  status: false
+                },
+                {
                   title: "Application uses a Node and Express backend",
-                  score: 7,
+                  score: 5,
                   message:
                     "Application doesn't use a Node and Express backend",
                   status: false
                 },
                 {
-                  title: "Application is backed by a MySQL database with a Sequelize ORM",
-                  score: 7,
+                  title: "Application is backed by a MySQL or MongoDB Database with a Sequelize ORM or Mongoose ODM",
+                  score: 5,
                   message:
-                    "Application isn't backed by a MySQL database with a Sequelize ORM",
+                    "Application isn't backed by a MySQL or MongoDB Database with a Sequelize ORM or Mongoose ODM",
                   status: false
                 },
                 {
                   title:
                     "Application utilizes both GET and POST routes for retrieving and adding new data",
-                  score: 7,
+                  score: 5,
                   message:
                     "Application doesn't utilize both GET and POST routes for retrieving and adding new data",
                   status: false
                 },
                 {
-                  title: "Application utilizes at least one new  library, package, or technology not covered in class",
-                  score: 7,
+                  title: "Application utilizes at least two new  library, package, or technology not covered in class",
+                  score: 5,
                   message:
-                    "Application doesn't use a new library, package, or technology",
+                    "Application doesn't use two new libraries, packages, or technologies",
                   status: false
                 },
                 {
                   title:
-                    "Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine",
-                  score: 7,
+                    "Application has a folder structure that meets the MVC paradigm",
+                  score: 5,
                   message:
-                    "Application does not have a folder structure that meets the MVC paradigm and does not use Handlebars.js as the template engine",
+                    "Application does not have a folder structure that meets the MVC paradigm",
+                  status: false
+                },
+                {
+                  title:
+                    "Application authenticates users in some way",
+                  score: 5,
+                  message:
+                    "Application does not authenticate users in some way",
                   status: false
                 }
               ]
