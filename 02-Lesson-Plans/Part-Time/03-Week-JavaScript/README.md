@@ -12,6 +12,11 @@ In every activity moving forward, pre-coded instructor demos are provided for yo
 
 This unit is filled with a lot of brand new topics. If you fall behind, make sure to adjust your plan accordingly.
 
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/03-JavaScript/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Helpful Links
 
 ### Lesson Plans

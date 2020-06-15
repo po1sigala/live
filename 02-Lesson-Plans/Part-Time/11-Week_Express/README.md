@@ -16,6 +16,11 @@ This unit, there is a larger focus on the concept of server-side code. Make sure
 
 * In the next unit, students will start using MySQL. Be sure to send out the instructions for installing both the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers by the end of this unit to minimize install time next unit.
 
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/11-Express/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Helpful Links
 
 ### Lesson Plans

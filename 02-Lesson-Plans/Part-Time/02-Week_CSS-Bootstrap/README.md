@@ -18,6 +18,11 @@ Next unit, we begin JavaScript, make sure to review the slide decks in advance.
 
 Next unit we will also provide students with common problems they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
 
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/02-CSS-Bootstrap/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Helpful Links
 
 ### Lesson Plans
