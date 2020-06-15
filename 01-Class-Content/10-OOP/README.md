@@ -54,9 +54,13 @@ You will be employer-competitive if you are able to:
 
 * Create more scalable applications that follow the OOP paradigm.
 
-## Homework: Word Guess With Constructors
+## Homework: Template Engine - Employee Summary
 
-* In this unit's assignment, you will create a Word Guess command-line game using constructor functions.
+* In this unit's assignment, you will create an application which generates html files using input from a command line interface.
+
+## Heads Up
+
+* In the next unit, you will use Heroku to host your web applications! Be sure to sign up for a [Heroku account](https://signup.heroku.com/) and have the Heroku CLI installed on your computer **before** starting Unit 11 and attending your classes. You can follow these [installation instructions](./04-Supplemental/heroku-install.md). 
 
 ## Helpful Links
 

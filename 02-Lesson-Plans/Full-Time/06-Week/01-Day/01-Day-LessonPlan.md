@@ -19,6 +19,9 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Also note that in today's class, we will be introducing students to the plain Node approach for creating servers. Let them know that for today's class understanding the exact syntax is _less_ important than understanding the conceptual picture. You can also let them know that in the next class they will be introduced to Express.js, which will simplify some of the code complexity of today.
 
+* Remind students to sign up for a Heroku account and have the **Heroku CLI installed** before coming to the next class!
+
+* In Unit 12, students will start using MySQL. Advise the students to have both MySQL Server and Workbench installed **before** the next unit.
 
 ## Learning Objectives
 
@@ -40,7 +43,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ### 1. Instructor Do: Server-Side Slide Show (0:25)
 
-* Welcome students to class and then dive into the slide deck [13-1 Intro to Node Servers](https://docs.google.com/presentation/d/1gWWPh5lp7DNAlYQwaj9idZ1WLmVc5w1VY_D46de8KOE/edit?usp=sharing). Be sure to spend the appropriate amount of time with this presentation. It offers students important warnings about the challenge of this week's class as well as advice on succeeding in the week ahead.
+* Welcome students to class and then dive into the slide deck [11.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing). Be sure to spend the appropriate amount of time with this presentation. It offers students important warnings about the challenge of this week's class as well as advice on succeeding in the week ahead.
 
 * Use the presentation as cues to ask your students basic review questions on servers and clients. Try to call on individual students as you proceed through these slides.
 
@@ -365,6 +368,20 @@ app.get('/obiwankenobi', function(req, res){
   * Spend a few moments researching what `express.json` is for and what `req.body` means in the context of Express.
 
   * Then research how you can POST data to the Express server.
+
+## Heads Up
+
+* In the next class, students will start using Heroku. 
+
+* Direct the students to the `04-Supplemental` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
+
+* Remind the students to sign up for a Heroku account and have the Heroku CLI installed **before** coming to class!
+
+* In a few classes, students will start using MySQL. 
+
+* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+
+* Advise the students to have both MySQL Server and Workbench installed **before** the next unit.
 
 ### Lesson Plan Feedback
 

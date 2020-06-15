@@ -6,7 +6,7 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
 
 ## Instructor Notes
 
-* Complete activities `1-8` in `17-NoSQL`
+* Complete activities `1-11` in `17-NoSQL`
 
 * Before class, make sure you install MongoDB and Robo 3T on your machine--you'll need both.
 
