@@ -28,6 +28,14 @@ In this unit, we will be introducing students to application building with Node 
 
 * [Liri Bot](../../../01-Class-Content/10-nodejs/02-Homework/Instructions/)
 
+## Career Connection
+Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[NodeJS](../../../01-Class-Content/09-NodeJS/04-Supplemental/CAREER-CONNECTION.md).
+[Object-oriented Programming](../../../01-Class-Content/10-OOP/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ### Helpful Links
 
 * [Basic Intro to Node](https://blog.codeship.com/node-js-tutorial/)

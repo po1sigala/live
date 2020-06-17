@@ -28,6 +28,14 @@ This content is self-paced, self-guided, and designed to help students continue 
 
 Alert instructional staff to expectations for the next unit, i.e: installations, challenging topics, preparation for projects, etc.
 
+## Career Connection
+Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[Project #2](../../../01-Class-Content/16-Project-2-Contd/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+
 ## Helpful Links
 
 
