@@ -20,6 +20,13 @@ Next unit we start to work on projects. It is recommended that you use some of t
 
 Make sure that these groups are created prior to class 07.1. Groups are made up of 3 or 4 students. Three is ideal, but not always possible. In groups of four (or more), it is easy for weaker students to be cut out of the workflow or hide behind their stronger teammates. **DO NOT allow students to work alone or in pairs.** Group projects are one of the few opportunities for students to work collaboratively. 
 
+
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/06-Server-Side-APIs/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+
 ## Helpful Links
 
 ### Lesson Plans
