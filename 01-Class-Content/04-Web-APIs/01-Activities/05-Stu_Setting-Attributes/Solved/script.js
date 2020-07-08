@@ -8,7 +8,7 @@ var siteTitles = document.querySelectorAll("h4");
 var sites = ["https://news.ycombinator.com/", "https://twitter.com", "https://instagram.com", "https://google.com", "https://reddit.com/r/webdev"];
 
 site1El.children[0].textContent = "Site 1";
-// site1El.children[1].setAttribute("href", "https://google.com");
+site1El.children[1].setAttribute("href", "https://google.com");
 site1El.children[1].children[0].setAttribute("src", "images/image_1.jpg");
 site1El.children[1].children[0].setAttribute("alt", "man working");
 site1El.children[1].children[0].setAttribute("style", "padding:10px;");
