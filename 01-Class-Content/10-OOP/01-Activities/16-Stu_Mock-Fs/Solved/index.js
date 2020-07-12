@@ -4,12 +4,12 @@ const fileIO = new FileIO();
 
 fileIO.write("message.txt", "Hello World!");
 
-let message = fileIO.read("message.txt");
+const message1 = fileIO.read("message.txt");
 
-console.log(message);
+console.log(message1);
 
 fileIO.append("message.txt", "\nGoodbye World!");
 
-message = fileIO.read("message.txt");
+const message2 = fileIO.read("message.txt");
 
-console.log(message);
+console.log(message2);
