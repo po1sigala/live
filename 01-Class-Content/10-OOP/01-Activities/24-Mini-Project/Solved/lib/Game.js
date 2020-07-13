@@ -77,10 +77,8 @@ class Game {
           type: "input",
           name: "choice",
           message: "Guess a letter!",
-          validate: function(val) {
-            // The users guess must be a number or letter
-            return /[a-z1-9]/gi.test(val);
-          }
+          // The users guess must be a number or letter
+          validate: val => /[a-z1-9]/gi.test(val),          
         }
       ])
       .then(val => {
