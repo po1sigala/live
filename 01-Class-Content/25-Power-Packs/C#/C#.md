@@ -26,7 +26,7 @@ First, let’s add the C# extension:
 
 For Macs, extensions can be found in View > Extension.
 
-![image alt text](image_0.png)
+![image alt text](./Images/image_0.png)
 
 ## Install .NET Core
 
@@ -44,7 +44,7 @@ To install the .NET Core SDK:
 
 3. Click the link to download the .NET Core X.X SDK.
 
-4. Double-check that the OS is correct and click the button to begin the download.![image alt text](image_1.png)
+4. Double-check that the OS is correct and click the button to begin the download.![image alt text](./Images/image_1.png)
 
 5. When the download is complete, choose the basic installation process.
 
@@ -80,7 +80,7 @@ This command will create a new folder called CatWorx that will contain your C# p
 
 As you can see, there are already some files and folders in the project:
 
-![image alt text](image_2.png)
+![image alt text](./Images/image_2.png)
 
 Let’s take a look at these:
 
@@ -888,7 +888,7 @@ class Employee
 
 Similar to JavaScript, this property can be accessed directly on an Employee instance using dot notation. For example, we could set this property inside Program's Main() method this way:
 
-![image alt text](image_3.png)
+![image alt text](./Images/image_3.png)
 
 But VS Code doesn’t like this, as indicated by the red squiggly line. If you try to run the program, you will get this warning:
 
@@ -1117,7 +1117,7 @@ employees.Add(currentEmployee.GetName());
 
 When we run our application, we're still prompted for first names. But the resulting list prints each employee's full name!
 
-![image alt text](image_4.png)
+![image alt text](./Images/image_4.png)
 
 # Update the Output Logic 
 
@@ -1375,7 +1375,7 @@ To beautify our CLI output, we want the first argument (ID) to be left-aligned a
 
 The results will look like this:
 
-![image alt text](image_5.png)
+![image alt text](./Images/image_5.png)
 
 You can learn more about the power of String.Format() in the [.NET API documentation](https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netframework-4.8).
 
@@ -1819,7 +1819,7 @@ To determine if these methods work, let's go ahead and run the application.
 
 Oh, what's this? The type or namespace 'Image' could not be found?
 
-![image alt text](image_6.png)
+![image alt text](./Images/image_6.png)
 
 The error actually states the fix to our problem. "Are you missing a using directive …?"
 
