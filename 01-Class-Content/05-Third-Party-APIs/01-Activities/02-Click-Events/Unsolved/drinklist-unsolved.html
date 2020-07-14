@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -28,8 +29,7 @@
     ];
 
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
-    // ...
-
+    var drinkEl = $("#drink-options");
 
     // ...
 
@@ -37,9 +37,18 @@
     // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
     // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
     // ...
+    $.each(drinkList, function(index, value) {
+      var drinkDiv = $("<div>").text(value)
+      drinkEl.append(drinkDiv);
+    })
+
+    for(var i = 0; i < drinkList.length; i++) {
+      var drinkDiv = $("<div>");
+      drinkDiv.text(drinkList[i]);
+      drinkEl.append(drinkDiv);
+    }
 
 
-    // ...
 
   </script>
 
