@@ -40,6 +40,13 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 * [4.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
+## Career Connection
+Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[Project #1](../../../01-Class-Content/08-Project-1-Contd/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ### Helpful Links
 
 * [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)

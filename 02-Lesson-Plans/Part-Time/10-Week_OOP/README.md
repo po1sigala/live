@@ -20,6 +20,11 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 * Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
 
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/10-OOP/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Helpful Links
 
 ### Lesson Plans

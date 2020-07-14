@@ -5,9 +5,9 @@ const dogs = {
   // Creates the property "noise" and sets it to "Woof!"
   noise: "Woof!",
   // Creates the method "makeNoise", which when called, prints dogs.noise if .raining is true
-  makeNoise: function() {
-  // The 'this' keyword refers to the object it's called from
-  // i.e. this.raining refers to the raining property of 'this' particular object
+  makeNoise() {
+    // The 'this' keyword refers to the object it's called from
+    // i.e. this.raining refers to the raining property of 'this' particular object
     if (this.raining === true) {
       console.log(this.noise);
     }
@@ -18,7 +18,7 @@ const dogs = {
 const cats = {
   raining: false,
   noise: "Meow!",
-  makeNoise: function() {
+  makeNoise() {
     if (this.raining === true) {
       console.log(this.noise);
     }
@@ -32,7 +32,7 @@ cats.makeNoise();
 
 // Creates a function called "massHysteria" which takes in both objects and
 // Prints a message to the screen if ".raining" is true for both of them
-const massHysteria = function(dogs, cats) {
+const massHysteria = (dogs, cats) => {
   if (dogs.raining === true && cats.raining === true) {
     console.log("DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!");
   }

@@ -394,7 +394,7 @@ Today's class is focused on introducing students to additional CSS styling techn
 
 ### 27. TA Do: Homework 2: Demo (5 min)
 
-* TA should come to the front of the class and explain what Homework #2 will look like. Essentially it is a recreation of the earlier portfolio, but this time using Bootstrap to build the layout instead. Let them know that they should find this version of the previous assignment much easier to accomplish.
+* TA should come to the front of the class and explain what Homework #2 will look like. This homework will require students to use Bootstrap to build a portfolio site matching the screenshots provided. 
 
 [02-Homework/Master](../../../../01-Class-Content/02-css-bootstrap/02-Homework/Master)
 

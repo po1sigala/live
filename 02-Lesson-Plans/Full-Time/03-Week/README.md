@@ -58,6 +58,14 @@ Also this week, we will be introducing students to the concept of APIs and the u
 * [Giphy Viewer](../../../01-Class-Content/06-ajax/02-Homework/Instructions/)
 * [Homework Demo](https://youtu.be/BqreERTLjgQ)
 
+## Career Connection
+Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Supplemental/CAREER-CONNECTION.md).
+[Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ### Helpful Links
 
 * [Eloquent JavaScript](http://eloquentjavascript.net/)

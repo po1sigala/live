@@ -29,6 +29,9 @@ function Movie(title, releaseYear) {
     this.releaseYear = releaseYear;
 }
 
+// You must use 'function' when assigning to prototype. 
+// Otherwise, 'this' will be the global object,
+// window in the browser, undefined in node.
 Movie.prototype.logInfo = function() {
     console.log(`${this.title} was released in ${this.releaseYear}`);
 };

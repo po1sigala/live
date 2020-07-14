@@ -6,17 +6,14 @@ class Word {
     // word.split - splits word into array of letters
     // .map - instantiate a new `Letter` for each character and return an array
     // referred to with the instance variable, `letters`
-    this.letters = word.split("").map(function(char) {
-      return new Letter(char);
-    });
+    this.letters = word.split("").map(char => new Letter(char));
   }
 
   getSolution() {
     return this.letters
-      .map(function(letter) {
-        // iterate over each letter
-        return letter.getSolution(); // return the solution for each to form an array of solved letters
-      })
+      // iterate over each letter and return the solution for each 
+      // to form an array of solved letters
+      .map(letter => letter.getSolution())
       .join(""); // create a string from the array of solved letters
   }
 
@@ -28,7 +25,7 @@ class Word {
   guessLetter(char) {
     // Checks to see if any of the letters in the array match the user's guess and updates `foundLetter`
     let foundLetter = false;
-    this.letters.forEach(function(letter) {
+    this.letters.forEach(letter => {
       if (letter.guess(char)) {
         foundLetter = true;
       }
@@ -44,9 +41,7 @@ class Word {
   // Returns true if all letters in the word have been guessed
   guessedCorrectly() {
     // The `every` method returns true if the callback function returns true for every element in the array
-    return this.letters.every(function(letter) {
-      return letter.visible;
-    });
+    return this.letters.every(letter => letter.visible);
   }
 }
 

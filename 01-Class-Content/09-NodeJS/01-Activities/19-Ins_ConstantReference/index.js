@@ -45,7 +45,7 @@ age++; // TypeError: Assignment to constant variable.
 
 // console.log(item);
 
-// const item = {
+// item = {
 //   id: 11,
 //   title: "Underwater Basket-Weaving Shoes",
 //   price: "$101.43"

@@ -20,6 +20,14 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
 
+## Career Connection
+Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[Express](../../../01-Class-Content/11-Express/04-Supplemental/CAREER-CONNECTION.md).
+[MySQL](../../../01-Class-Content/12-MySQL/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Heads Up
 
 * In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.

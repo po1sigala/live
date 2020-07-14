@@ -12,6 +12,11 @@ In this unit, we will be covering state management techniques in React. We will 
 
 * 20.3 will rely heavily on Redux concepts. It is recommended that you spend some time getting familiar with the activities before class starts.
 
+## Career Connection
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/20-State/04-Supplemental/CAREER-CONNECTION.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
 ## Heads Up
 
 Next unit we will start project 3. In the following unit we will cover Computer Science basics, so be sure to brush up on BigO, sorting, and algorithm basics.

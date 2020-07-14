@@ -29,7 +29,7 @@ TV.prototype.findActor = function(actor) {
 TV.prototype.findShow = function(show) {
   const URL = "http://api.tvmaze.com/singlesearch/shows?q=" + show;
 
-  axios.get(URL).then(function(response) {
+  axios.get(URL).then(response => {
     const showData = [
       "Show: " + response.data.name,
       "Genre(s): " + response.data.genres.join(", "),
