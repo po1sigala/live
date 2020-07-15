@@ -2,51 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript Content!</title>
+  <title>Basic jQuery Dump</title>
+
+  <!-- Added link to the jQuery library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
-  <h1>Drink Selection!</h1>
-  <hr>
+  <div id="empty-div"></div>
 
-  <!-- Here we create a generic drink-options div -->
-  <div id="drink-options"></div>
+  <!-- Here we're adding a bit of CSS -->
+  <style>
+    :root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    }
+
+    [data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+    }
+
+    body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    }
+
+    h1 {
+        color: var(--secondary-color);
+    }
+
+    a {
+        color: var(--primary-color);
+    }
+
+    .fancy {
+      font-size: 20px;
+      color: teal;
+      /* border:grey 3px dashed; */
+      /* display: inline-block; */
+      /* background-color: black; */
+      /* border-radius: 10em; */
+    }
+    .plain {
+      font-size: 40px;
+      color: brown
+      /* border:grey 3px dashed; */
+      /* background-color: black; */
+    }
+  </style>
 
   <script type="text/javascript">
+    var emptyDiv = $("#empty-div");
+    $("#empty-div").html("<h1>Hello friends!</h1>");
 
-    // Array holds all of the drinks available
-    var drinkList = [
-      "Coffee: $5",
-      "Espresso: $7",
-      "Cappuccino: $6",
-      "Latte: $4",
-      "Tea: $3",
-      "Ice Coffee: $6",
-      "Ice Espresso: $8",
-      "Ice Latte: $6",
-      "Ice Tea: $4"
-    ];
+    $("#empty-div").attr("class", "fancy")
 
-    // 1. Create code that "grabs" the div with the matching id (#drink-options);
-    var drinkEl = $("#drink-options");
+    // jQuery alternative to: var newDiv = document.createElement("div");
+    var newButton = $("<button>");
+    var newPasswordEl = $("<div>");
+    // jQuery alternative to: newDiv.textContent = "A pleasure to meet you!";
+    newButton.text("Generate Password");
 
-    // ...
+    // jQuery alternative to: document.querySelector("#empty-div").appendChild(newDiv);
+    emptyDiv.append(newButton);
+  
 
-
-    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
-    // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
-    // ...
-    $.each(drinkList, function(index, value) {
-      var drinkDiv = $("<div>").text(value)
-      drinkEl.append(drinkDiv);
-    })
-
-    for(var i = 0; i < drinkList.length; i++) {
-      var drinkDiv = $("<div>");
-      drinkDiv.text(drinkList[i]);
-      drinkEl.append(drinkDiv);
+    // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+    newButton.attr("class", "fancy");
+    
+    function getPasswordLetter() {
+      return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
     }
+
+    function passwordGenerator(num) {
+      var password = "";
+      for (var i = 0; i < num; i++) {
+        password = password + getPasswordLetter();
+      }
+      return password;
+    }
+    
+  
+
+    $(document).ready(function() {
+      emptyDiv.append(newPasswordEl);
+      newPasswordEl.attr("class", "plain")
+      newButton.click(function() {
+        newPasswordEl.text(passwordGenerator(15));
+        
+      })
+    })
+    
+   
 
 
 
