@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>jQuery Password Generator</title>
+    <title>jQuery Shopping List</title>
 
     <!-- Added link to the jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,40 +52,40 @@
     </style>
 
     <script type="text/javascript">
-      function getPasswordCharacter() {
-        return String.fromCharCode(Math.floor(Math.random() * 77) + 34);
-      }
-
-      function passwordGenerator(num) {
-        var password = "";
-        for (var i = 0; i < num; i++) {
-          password = password + getPasswordCharacter();
-        }
-        return password;
-      }
-
       $(document).ready(function () {
         // Step 1: Create/select DOM elements
         // Select the empty div and add the title
         var emptyDiv = $("#empty-div");
-        var newButton = $("<button>");
+        var buttonEl = $("<button>");
+        var inputEl = $("<input type='text'>");
+        var listEl = $("<ul>");
+        var itemEl = $("<li>");
+        var labelEl = $("<label>");
+        var formEl = $("<form>");
+        
+        // Map out the HTML structure
+        // 
 
         // ****************************************************************
         //  STEP 1: CREATE A NEW DOM ELEMENT FOR THE PASSWORD USING JQUERY
         // ****************************************************************
-        
+        labelEl.append(inputEl);
+        labelEl.text("Add an Item: ");
+        formEl.append(labelEl);
+
 
         // Hint: jQuery alternative to: var passwordDiv = document.createElement("div");
 
         // Step 2: Add text and style to the DOM element
         // Add text to the button
-        newButton.text("Generate Password");
+        newButton.text("Add");
 
         // Add a title to the page
-        emptyDiv.html("<h1>Password Generator</h1>");
+        emptyDiv.html("<h1>Shopping List</h1>");
+        emptyDiv.html("<p>What do you need?</p>");
 
         // Apply the ".fancy" class to the button using the jQuery ".attr" method.
-        newButton.attr("class", "fancy");
+        buttonEl.attr("class", "fancy");
 
         // Step 3: Append the DOM element to the page
         // Append the button to the page  
@@ -95,12 +95,14 @@
         // ****************************************************************  
         //           STEP 3: APPEND THE PASSWORD DIV TO THE PAGE
         // ****************************************************************
-        
+        emptyDiv.append(passwordDiv);
 
         // ****************************************************************  
         //           Step 4: CREATE THE EVENT LISTENER  
         // ****************************************************************
-        
+        newButton.click(function () {
+          passwordDiv.text(passwordGenerator(15));
+        });
 
         // Hint: Use the jQuery method, ".click", to create an event listener for the button
         // Hint: Use the jQuery method, ".text", to modify the text content of the password DOM element
