@@ -1,0 +1,22 @@
+:root {
+  --blue: #0c3559;
+  --darkblue: #092640;
+  --seablue: #687b8c;
+  --lightseablue: #aab9bf;
+  --light: #f2f2f2;
+}
+
+.btn-custom-sea {
+  background-color: var(--seablue);
+  color: var(--light);
+}
+
+.btn-custom-sea:hover {
+  background-color: var(--darkblue);
+  color: var(--light);
+}
+
+.btn-custom-darkblue {
+  background-color: var(--darkblue);
+  color: var(--light);
+}
