@@ -71,14 +71,22 @@
         var labelEl = $("<label>");
         var formEl = $("<form>");
         var headerEl = $("<h1>Shopping List</h1>");
+        // ****************************************************************
+        //        BONUS STEP 5: CREATE THE CLEAR BUTTON THEN ADD TEXT/STYLE
+        //*****************************************************************  
+        var clearEl = $("<button>");
+        clearEl.text("Clear");
+        clearEl.attr("class", "fancy");
 
         // Step 2: Add text and style to the DOM element
         // Add text to the button and label
         buttonEl.text("Add");
+         
         labelEl.text("Add an Item:");
 
         // Apply the ".fancy" class to the button using the jQuery ".attr" method.
         buttonEl.attr("class", "fancy");
+     
 
         // Step 3: Arrange: Create the hierarchical structure of the DOM elements and attach to the page
         // Map the HTML structure
@@ -94,25 +102,37 @@
         // </ul>
         emptyDiv.prepend(headerEl);
         // ****************************************************************
-        //           STEP 3: ARRANGE THE STRUCTURE OF THE FORM ELEMENTS 
+        //         STEP 3: ARRANGE THE STRUCTURE OF THE FORM ELEMENTS 
         // ****************************************************************
         emptyDiv.append(formEl);
         formEl.append(buttonEl);
+        formEl.append(clearEl);
         formEl.prepend(labelEl);
         labelEl.append(inputEl);
         emptyDiv.append(listEl);
 
         // ****************************************************************
-        //           Step 4: CREATE THE EVENT LISTENER
+        //              STEP 4: CREATE THE EVENT LISTENER
         // ****************************************************************
         // Hint: Use the ".submit" event listener.
-        // Hint: Prevent the refresh default behavior
+        // Hint: Prevent the default behavior of the submit event(refresh)
         // Hint: Use the ".val()" function to retrieve the input field value
+        // Hint: Clear the input field on submission
+        // Hint: To clear the list use a button and event listener
         formEl.submit(function (event) {
           event.preventDefault();
           listEl.prepend("<li>" + inputEl.val() + "</li>");
           inputEl.val("");
         });
+        // ****************************************************************
+        //           BONUS STEP 6: CLICK EVENT WILL CLEAR THE LIST
+        // ****************************************************************
+        clearEl.click(function() {
+          // this method clears the list
+          listEl.empty();
+          // this alternative method simply refreshes the browser
+          // location.reload();
+        })
       });
     </script>
   </body>

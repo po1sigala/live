@@ -1,6 +1,6 @@
-# Password Generator
+# Shopping List
 
-In this activity, you will use jQuery to create an event listener that will generate a password upon clicking a button.
+In this activity, you will use jQuery to create a shopping that will generate a password upon clicking a button.
 
 ### Instructions
 

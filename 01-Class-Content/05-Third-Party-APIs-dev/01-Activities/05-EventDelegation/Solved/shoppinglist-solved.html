@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Shopping List</title>
+
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="empty-div"></div>
+
+    <!-- Here we're adding a bit of CSS -->
+    <style>
+      :root {
+        --primary-color: rgba(42, 196, 230, 0.705);
+        --secondary-color: grey;
+        --light-primary: rgba(118, 216, 238, 0.995);
+        --dark-primary: rgb(27, 61, 61);
+        --font-color: #14c1e7;
+        --light-font: white;
+        --bg-color: black;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--font-color);
+        margin: 2em 5em;
+        font-size: 25px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      input {
+        height: 30px;
+        margin: 0 20px;
+      }
+
+      .fancy {
+        font-size: 22px;
+        padding: 5px;
+        color: var(--light-font);
+        margin: 2rem 0;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+      }
+
+      .item {
+        margin: 0 3px;
+      }
+
+      button:hover {
+        background-color: var(--light-primary);
+        font-weight: 500;
+        color: black;
+      }
+
+      button:active {
+        background-color: var(--dark-primary);
+        color: var(--light-font);
+      }
+    </style>
+
+    <script type="text/javascript">
+      var shoppingList = []; 
+      
+      $(document).ready(function () {
+        // Assemble: Create/select DOM elements
+        // Select the empty div and add the title
+
+        var emptyDiv = $("#empty-div");
+        var buttonEl = $("<button type='submit'>");
+        var inputEl = $("<input type='text'>");
+        var listEl = $("<ul>");
+        var labelEl = $("<label>");
+        var formEl = $("<form>");
+        var headerEl = $("<h1>Shopping List</h1>");
+
+        // Apply: Add text and style to the DOM element
+        // Add text to the button and label
+        buttonEl.text("Add");
+        labelEl.text("Add an Item:");
+
+        // Apply the ".fancy" class to the button using the jQuery ".attr" method.
+        buttonEl.attr("class", "fancy");
+
+        // Arrange: Create the hierarchical structure of the DOM elements and attach to the page
+        emptyDiv.prepend(headerEl);
+        emptyDiv.append(formEl);
+        formEl.append(buttonEl);
+        formEl.prepend(labelEl);
+        labelEl.append(inputEl);
+        emptyDiv.append(listEl);
+        // ****************************************************************
+        // ******************  STEP 1   ***********************************
+        // Create a function that clears then populates the shopping list
+        // Add a button to each item in the list
+        // Use the attribute data-id on the button to make unique
+        function populateList(list) {
+          listEl.empty();
+          for(var i = 0; i < list.length; i++) {
+            var itemEl = $("<li>");
+            itemEl.text(list[i]);
+            listEl.append(itemEl);
+            itemEl.prepend("<button class=item data-id=" + i + ">X</button>");
+          }
+        }
+        // ****************************************************************
+        // ******************  STEP 2   ***********************************
+        // Modify the event listener so the shopping items are stored in an array
+
+        formEl.submit(function (event) {
+          event.preventDefault();
+          // Validation so blank or other falsely values are not added
+          if(inputEl.val()) {
+            shoppingList.push(inputEl.val());
+          }
+          populateList(shoppingList);
+          inputEl.val("");
+        });
+        // ****************************************************************
+        // ******************  STEP 3   ***********************************
+        // Event Delegation: Target the parent element.
+        // Hint: Use the ".on" method
+        // Hint: Use this to retrieve the user selection
+        // Hint: Use the ".attr" method to retrieve the value of the "data-id"
+        listEl.on("click", "button", function() {
+          // console.log($(this).data());
+          var removeItem = ($(this).attr("data-id"));
+          // console.log(typeof removeItem);  => string
+          // Make removeItem a number
+          removeItem = parseInt(removeItem);
+          // Alternatively use the ".data" method which returns a number
+          // var removeItem = $(this).data("id");
+          var newList = [];
+          for(var i = 0; i < shoppingList.length; i++) {
+            if(removeItem !== i) {
+              newList.push(shoppingList[i]);
+            }
+          }
+          shoppingList = newList;
+          // console.log(shoppingList);
+          // Render a new list with the item removed
+          populateList(shoppingList);
+          // Clear the input
+          inputEl.val("");
+        })
+      });
+    </script>
+  </body>
+</html>
