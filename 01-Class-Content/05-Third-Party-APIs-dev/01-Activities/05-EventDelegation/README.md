@@ -1,15 +1,39 @@
-### File
+# Shopping List
 
-* [`sandwich-click-unsolved`](Unsolved/sandwich-click-unsolved.html)
+In this activity, you will use jQuery to remove items from a shopping list.
 
 ### Instructions
 
-* Add in the missing code such that clicking any of the sandwiches causes…
+* Open [`shoppinglist-unsolved`](Unsolved/shoppinglist-unsolved.html), examine the code, and do the following:
 
-  1. An alert message to popup saying something snarky about the sandwich type.
+    1. Change the handler of the submit event to populate a modifiable list
+   
+    2. Attach the click event listener to each item on the shopping list which removes that item.
 
-  2. A second alert message that displays to the user how many of that specific sandwich they've eaten.
+    3. Refactor the code to make it D.R.Y.
+   
+## Hint(s) 
+  * Need to use event delegation to attach the event listener
+  
+  * 
 
-  3. **HINT:** You will need counter variables.
+* **BONUS:** Discuss the following [topic about event delegation](https://api.jquery.com/on/#direct-and-delegated-events) and its merits with a classmate.
 
-* **BONUS:** Add an image to the `image-div` on the click event.
+
+# Activity name
+
+In this activity, you will use ...... to .......
+
+## Instructions
+
+* Open [file](path to file) and examine the code.
+
+* Open [file](path to file) and do the following:
+
+  * Create an....
+
+  * When a ....... it should .....
+
+## Hint(s)
+
+* Hints are guides, not answers.

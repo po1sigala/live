@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>jQuery Shopping List</title>
+    <title>jQuery Tic Tac Toe</title>
 
     <!-- Added link to the jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -57,7 +57,7 @@
 
       li {
         height: 200px;
-        width: 400px;
+        width: 150px;
         background-color: var(--secondary-color);
         border: var(--primary-color) 4px solid;
         font-size: 200px;
@@ -103,20 +103,34 @@
       $(document).ready(function () {
         // Assemble: Create/select DOM elements
         var rootEl = $("#root");
-        var c2El = $(".item-c2");
-        rootEl.prepend("<h1>Tic Tac Toe</h1>");
+        rootEl.prepend("<h1>Tic Tac Toe</h1>")
 
-        // ********* ACTIVITY 1 ********************  
-        // Starting from the root element, select all the boxes and change the background color to white
-        
+        // **********
+        // * STEP 1 *
+        // **********
+        // Starting from the root element, select all the boxes and turn them white in a single statement. 
+        // HINT: Use the ".css()" function to change element's background color
 
-        // ********* ACTIVITY 2 ********************  
+
+        // **********
+        // * STEP 2 *
+        // **********
         // Starting from rootEl, what is the statement that will use "O" to block the "X" from winning
+        // HINT: Use the ".closest()", or ".parent()" methods to go up the DOM tree
 
 
-        // ********* ACTIVITY 3 ********************  
-        // // Starting from ".item-c2", what is the statement that will win the game using "O"
-        
+        // **********
+        // * STEP 3 *
+        // **********
+        // Starting from the bottom row, middle square or ".item-c2", what is the statement that will win the game using "O"?
+        // HINT: Use the ".closest()", or ".parent()" methods to go up the DOM tree
+   
+
+        // ***********
+        // *  Bonus  *
+        // ***********
+        // Play a game from scratch with a classmate. Alternate the starting point to practice traversing up and down the DOM tree.
+        // Notice a pattern to create shortcuts to replace repetitive code with variables
 
 
       })
