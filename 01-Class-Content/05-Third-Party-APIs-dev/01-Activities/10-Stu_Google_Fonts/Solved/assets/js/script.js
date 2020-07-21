@@ -10,7 +10,7 @@ var printGuestData = function (name, comment) {
 
   var cardEl = $('<div>');
   // add a class of .custom-card
-  cardEl.addClass('card h-100 custom-card');
+  cardEl.addClass('card h-100');
   cardEl.appendTo(cardColumnEl);
 
   // add a class of .custom-card-header

@@ -1,7 +1,6 @@
 var formEl = $('#guestbook-form');
 var nameInputEl = $('#name-input');
 var commentInputEl = $('#comment-input');
-
 var guestBookDisplayEl = $('#guest-book-display');
 
 var printGuestData = function (name, comment) {
@@ -9,10 +8,12 @@ var printGuestData = function (name, comment) {
   cardColumnEl.addClass('col-12 col-sm-4 col-md-3');
 
   var cardEl = $('<div>');
-  cardEl.addClass('card h-100 custom-card');
+  // add another class for `custom-card`
+  cardEl.addClass('card h-100');
   cardEl.appendTo(cardColumnEl);
 
-  var cardName = $('<h5>').addClass('card-header custom-card-header').text(name);
+  // add another class for `custom-card-header`
+  var cardName = $('<h5>').addClass('card-header').text(name);
   cardName.appendTo(cardEl);
 
   var cardBodyEl = $('<div>');
@@ -36,7 +37,12 @@ var handleFormSubmit = function (event) {
     return;
   }
 
+  // print card with guest data
   printGuestData(nameInput, commentInput);
+
+  // reset form
+  nameInputEl.val('');
+  commentInputEl.val('');
 };
 
 formEl.on('submit', handleFormSubmit);
