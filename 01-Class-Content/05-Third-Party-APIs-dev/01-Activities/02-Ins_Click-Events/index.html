@@ -64,6 +64,8 @@
         var randomEl = $("<p class=theme>");
         var themeButton = $("<button>");
         var themeEl = $("<p class=theme>");
+        var refreshEl = $("<p class=theme>");
+        var refreshButton = $("<button class='fancy'>Refresh</button>")
 
         // Apply text, style
         alertButton.text("Alert");
@@ -87,15 +89,21 @@
         // rootEl.append(themeEl);
         rootEl.append("<hr>");
 
-        rootEl.append("<p>Click for a random number</p>");
+        rootEl.append("<p>Click for the next winning lottery number</p>");
         rootEl.append(lotteryButton);
         rootEl.append(randomEl);
+        rootEl.append("<hr>");
+
+        rootEl.append("<p>Click to refresh page</p>");
+        rootEl.append(refreshButton);
+
 
         // Click Events
         // Click event causes alert "Hello World"  
         alertButton.click(function () {
           alert("Hello World");
         });
+        
         // Click event causes alert light theme toggle 
         themeButton.on("click", function () {
           if(isDark) {
@@ -106,10 +114,16 @@
             isDark = !isDark;
           }
         });
+
         // Click event causes random number 
         lotteryButton.on("click", function () {
-          var random = Math.floor(Math.random() * 1000) + 1;
+          var random = Math.floor(Math.random() * 100000000) + 10000000;
           randomEl.text(random);
+        });
+
+         // Click event causes refresh 
+         refreshButton.on("click", function () {
+          location.reload();
         });
       });
     </script>
