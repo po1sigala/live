@@ -26,7 +26,7 @@ You will find grading rubrics, links to slide decks and time trackers, and lesso
 
 ## Need Help?
 
-For information regarding onboarding and training, consult the [Instructor Onboarding Guide](https://coding-bootcamp-instructor-onboarding-prework.readthedocs-hosted.com/en/latest/).
+For information about onboarding and training, please consult your Onboarding course in Canvas. If you don't have access or a Canvas account, please email support@bootcampspot.com and provide your name and university.
 
 Have a suggestion or feedback? Please submit it through our [FullStack-Ground Feedback & Suggestions Survey](https://forms.gle/pRduJubbPK9fu22R7)
 
