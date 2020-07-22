@@ -8,7 +8,7 @@ In this activity, you will use jQuery to create an event listener that will gene
 
 * Open [`password-unsolved`](Unsolved/password-unsolved.html) and do the following:
 
-  * Using the file above as a starting point, add the three missing lines of code.
+  * Using the file above as a starting point, add the missing lines of code.
   
   * When you click on the button, a random password should appear on the page.
   
@@ -16,4 +16,4 @@ In this activity, you will use jQuery to create an event listener that will gene
 
 * **HINT:**  You will need to create the element, append the element, then create an event listener. You will need to use each of the following methods/properties: `.text`, `.append`, and `.click`.
 
-* **BONUS:** Add an input field with a label that can modify the length of the password.
+* **BONUS:** Search in the docs to find a jQuery method that will add, not replace, the passwords on the page.
