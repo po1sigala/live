@@ -8,7 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-
     <!-- A root element anchors the page, notice it's a bit empty -->
     <div id="root"></div>
 
@@ -19,19 +18,20 @@
         margin: 2em 5em;
         font-size: 35px;
         font-weight: bold;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
       }
 
       h1 {
-        font-size: 35px;
+        font-size: 45px;
       }
 
       .fancy {
         font-size: 30px;
         padding: 10px;
         color: white;
-        margin: 3rem 0;
+        margin: 1rem 0;
         border-radius: 0.5rem;
-        background-color:  rgba(42, 196, 230, 0.705);
+        background-color: rgba(42, 196, 230, 0.705);
       }
 
       button:hover {
@@ -40,29 +40,76 @@
         color: black;
       }
 
+      .theme {
+        display: inline-block;
+        margin: 0 4rem;
+      }
+
       button:active {
-        background-color:  rgb(27, 61, 61);
+        background-color: rgb(27, 61, 61);
         color: white;
       }
     </style>
 
     <script type="text/javascript">
+      // light theme state
+      var isDark = true;
+
       $(document).ready(function () {
         // Assemble DOM elements
         var rootEl = $("#root");
-        var newButton = $("<button>");
-        var passwordEl = $("<div>");
-        // Apply text, style
-        newButton.text("Generate Password");
-        newButton.attr("class", "fancy");
-        // Attach to page
-        rootEl.prepend("<h1>Password Generator</h1>");  
-        rootEl.append(newButton);
-        rootEl.append(passwordEl);
+        var bodyEl;
+        var alertButton = $("<button>");
+        var lotteryButton = $("<button>");
+        var randomEl = $("<p class=theme>");
+        var themeButton = $("<button>");
+        var themeEl = $("<p class=theme>");
 
-        // TODO: Create a click event listener for the newButton that assigns a password with a length of 15 to the passwordEl element
-        newButton.click(function () {
-          passwordEl.text(passwordGenerator(15));
+        // Apply text, style
+        alertButton.text("Alert");
+        alertButton.attr("class", "fancy");
+
+        themeButton.text("Theme");
+        themeButton.attr("class", "fancy");
+
+        lotteryButton.text("Add");
+        lotteryButton.attr("class", "fancy");
+        // Attach to page
+        rootEl.prepend("<h1>Click Events</h1>");
+        rootEl.append("<hr>");
+        // alert button markup
+        rootEl.append("<p>Click for an alert</p>");
+        rootEl.append(alertButton);
+        rootEl.append("<hr>");
+        // Date button
+        rootEl.append("<p>Click to toggle light theme</p>");
+        rootEl.append(themeButton);
+        // rootEl.append(themeEl);
+        rootEl.append("<hr>");
+
+        rootEl.append("<p>Click for a random number</p>");
+        rootEl.append(lotteryButton);
+        rootEl.append(randomEl);
+
+        // Click Events
+        // Click event causes alert "Hello World"  
+        alertButton.click(function () {
+          alert("Hello World");
+        });
+        // Click event causes alert light theme toggle 
+        themeButton.on("click", function () {
+          if(isDark) {
+            $("body").css({"background-color": "white", "color":"black"})
+            isDark = !isDark;
+          } else {
+            $("body").css({"background-color": "black", "color":"#14c1e7"})
+            isDark = !isDark;
+          }
+        });
+        // Click event causes random number 
+        lotteryButton.on("click", function () {
+          var random = Math.floor(Math.random() * 1000) + 1;
+          randomEl.text(random);
         });
       });
     </script>
