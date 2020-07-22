@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>jQuery Password Generator</title>
+    <title>jQuery Click Events</title>
 
     <!-- Added link to the jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -47,23 +47,6 @@
     </style>
 
     <script type="text/javascript">
-      // returns a random character that includes alphanumeric and special character values
-      function getPasswordCharacter() {
-        return String.fromCharCode(Math.floor(Math.random() * 77) + 34);
-      }
-
-      // returns a string of concatenated characters of length num
-      function passwordGenerator(num) {
-        var password = "";
-        for (var i = 0; i < num; i++) {
-          password += getPasswordCharacter();
-        }
-        return password;
-      }
-
-      // TODO: Add the function wrapper that will ensure the DOM is rendered completely
-      // HINT: Make sure the "document" is "ready"
-      // https://learn.jquery.com/using-jquery-core/document-ready/
       $(document).ready(function () {
         // Assemble DOM elements
         var rootEl = $("#root");

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Tic Tac Toe</title>
+
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <ul id="one" class="level-1">
+        <li class="item-a1"></li>
+        <li id="b1" class="item-b1"></li>
+        <li id="c1" class="item-c1">X</li>
+      </ul>
+
+      <ul id="two" class="level-2">
+        <li class="item-a2">O</li>
+        <li id="b2" class="item-b2">X</li>
+        <li id="c2" class="item-c2"></li>
+      </ul>
+
+      <ul id="three" class="level-3">
+        <li class="item-a3"></li>
+        <li id="b3" class="item-b3"></li>
+        <li id="c3" class="item-c3"></li>
+      </ul>
+    </div>
+
+    <!-- Here we're adding a bit of CSS -->
+    <style>
+      :root {
+        --primary-color: rgba(42, 196, 230, 0.705);
+        --secondary-color: grey;
+        --light-primary: rgba(118, 216, 238, 0.995);
+        --dark-primary: rgb(27, 61, 61);
+        --font-color: #14c1e7;
+        --light-font: white;
+        --bg-color: black;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--font-color);
+        margin: 2em 5em;
+        font-size: 25px;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      li {
+        height: 200px;
+        width: 150px;
+        background-color: var(--secondary-color);
+        border: var(--primary-color) 4px solid;
+        font-size: 200px;
+        padding: 0 2rem;
+        margin: 0 2rem;
+        align-self: center;
+      }
+
+      input {
+        height: 30px;
+        margin: 0 20px;
+      }
+
+      .fancy {
+        font-size: 22px;
+        padding: 5px;
+        color: var(--light-font);
+        margin: 2rem 0;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+      }
+
+      .item {
+        margin: 0 3px;
+      }
+
+      button:hover {
+        background-color: var(--light-primary);
+        font-weight: 500;
+        color: black;
+      }
+
+      button:active {
+        background-color: var(--dark-primary);
+        color: var(--light-font);
+      }
+      h1 {
+        margin: 0 auto;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // Assemble: Create/select DOM elements
+        var rootEl = $("#root");
+        rootEl.prepend("<h1>Tic Tac Toe</h1>")
+
+        // **********
+        // * STEP 1 *
+        // **********
+        // Starting from the root element, select all the boxes and turn them white in a single statement. 
+        // HINT: Use the ".css()" function to change element's background color
+
+
+        // **********
+        // * STEP 2 *
+        // **********
+        // Starting from rootEl, what is the statement that will use "O" to block the "X" from winning
+        // HINT: Use the ".closest()", or ".parent()" methods to go up the DOM tree
+
+
+        // **********
+        // * STEP 3 *
+        // **********
+        // Starting from the bottom row, middle square or ".item-c2", what is the statement that will win the game using "O"?
+        // HINT: Use the ".closest()", or ".parent()" methods to go up the DOM tree
+   
+
+        // ***********
+        // *  Bonus  *
+        // ***********
+        // Play a game from scratch with a classmate. Alternate the starting point to practice traversing up and down the DOM tree.
+        // Notice a pattern to create shortcuts to replace repetitive code with variables
+
+
+      })
+    </script>
+  </body>
+</html>
