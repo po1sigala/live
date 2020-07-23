@@ -8,23 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="empty-div"></div>
+    <div id="root"></div>
 
     <!-- Add CSS -->
     <style>
-      :root {
-        --primary-color: rgba(42, 196, 230, 0.705);
-        --secondary-color: grey;
-        --light-primary: rgba(118, 216, 238, 0.995);
-        --dark-primary: rgb(27, 61, 61);
-        --font-color: #14c1e7;
-        --light-font: white;
-        --bg-color: black;
-      }
 
       body {
-        background-color: var(--bg-color);
-        color: var(--font-color);
+        background-color: black;
+        color: #14c1e7;
         margin: 2em 5em;
         font-size: 25px;
       }
@@ -41,10 +32,10 @@
       .fancy {
         font-size: 22px;
         padding: 5px;
-        color: var(--light-font);
+        color: white;
         margin: 2rem 0;
         border-radius: 0.5rem;
-        background-color: var(--primary-color);
+        background-color: rgba(42, 196, 230, 0.705);
       }
 
       .item {
@@ -52,23 +43,24 @@
       }
 
       button:hover {
-        background-color: var(--light-primary);
+        background-color: rgba(118, 216, 238, 0.995);
         font-weight: 500;
         color: black;
       }
 
       button:active {
-        background-color: var(--dark-primary);
-        color: var(--light-font);
+        background-color: rgb(27, 61, 61);
+        color: white
       }
     </style>
 
     <script type="text/javascript">
+
       // Once the DOM has loaded, we can manipulate the DOM elements
       $(document).ready(function () {
         // Assemble: Create/select DOM elements
         // Select the empty div and add the title
-        var emptyDiv = $("#empty-div");
+        var rootEl = $("#root");
         var buttonEl = $("<button>").attr("class", "fancy").attr("type", "submit").text("Add");
         var inputEl = $("<input>").attr("type", "text");
         var listEl = $("<ul>");
@@ -77,17 +69,19 @@
         var headerEl = $("<h1>").text("Shopping List");
 
         // Arrange: Create the hierarchical structure of the DOM elements and attach to the page
-        emptyDiv.prepend(headerEl);
-        emptyDiv.append(formEl);
+        rootEl.prepend(headerEl);
+        rootEl.append(formEl);
         formEl.append(buttonEl);
         formEl.prepend(labelEl);
         labelEl.append(inputEl);
-        emptyDiv.append(listEl);
+        rootEl.append(listEl);
 
-        // 1. Change the handler of the submit event to populate a modifiable list and add a button for each item
+        // TODO: Change the handler of the submit event to populate a modifiable list and add a button and the data-id-* for each item
+
         // HINT: Create an array to store the shopping list items
         var shoppingList = []; 
-        // Use the attribute data-id on the button to make unique
+
+        // Apply the attribute data-id-* on each button to make unique
         function populateList(list) {
           listEl.empty();
           for(var i = 0; i < list.length; i++) {
@@ -100,6 +94,7 @@
 
         formEl.submit(function (event) {
           event.preventDefault();
+
           // Validation so blank or other falsely values are not added
           if(inputEl.val()) {
             shoppingList.push(inputEl.val());
@@ -107,17 +102,18 @@
           populateList(shoppingList);
           inputEl.val("");
         });
-        // STEP 3
-        // Event Delegation: Target the parent element.
+
+        // TODO: Use event delegation and target the parent element.
         // Hint: Use the ".on" method
         // Hint: Use keyword this to retrieve the user's selection
         // Hint: Use the ".attr" method to retrieve the value of the "data-id"
         listEl.on("click", "button", function() {
-          // console.log($(this).data());
+
           var removeItem = ($(this).attr("data-id"));
-          // console.log(typeof removeItem);  => string
-          // Make removeItem a number
+         
+          // Convert removeItem into a number
           removeItem = parseInt(removeItem);
+
           // Alternatively use the ".data" method which returns a number
           // var removeItem = $(this).data("id");
           var newList = [];
@@ -127,9 +123,10 @@
             }
           }
           shoppingList = newList;
-          // console.log(shoppingList);
+
           // Render a new list with the item removed
           populateList(shoppingList);
+          
           // Clear the input
           inputEl.val("");
         })
