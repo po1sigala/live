@@ -2,16 +2,26 @@
 
 In this activity, you will use jQuery to complete a game of Tic Tac Toe.
 
+You will be the "O" player. Place the "O" to block and win.
+
 ### Instructions
 
 * Open [`TicTacToe-unsolved`](Unsolved/TicTacToe-unsolved.html), examine the code, and do the following:
 
-  * Use the preceding file as a starting point and add the statements that will accomplish the **three** requested actions.
+  * Use the preceding file as a starting point and add the statements that will accomplish the **three** requested actions noted by the `TODO:` in the comments. Read these instructions carefully and use the `HINT` provided if needed.
   
-  * Use DOM traversal methods in jQuery to move from the designated starting element to the target element.
+  * Use DOM traversal methods in jQuery to select all nine boxes and change the background to white for greater legibility
   
-  * Once the target element has been reached, perform the necessary action to complete the task.
+  * From the requested starting point, traverse down through the DOM tree and insert the "O" to block the "X" player from winning
+  
+  * From the requested starting point, traverse up through the DOM tree and insert the "O" for the win 
 
-* **HINT:**  You will need to use [multiple methods from jQuery to traverse](https://api.jquery.com/category/traversing/) from the starting element to the target element. It helps to change the style of the element as you traverse through the DOM as a visual aid to track the current location. You may need to use some of the following jQuery functions: `.text`, , `css`, `.eq`, and `.parent`, `.children`, `.closest`, `first`, and `last`.
+## Hint(s)  
 
-* **BONUS:** Try to play a game from start to finish with a classmate.
+* Reference [the official jQuery documents multiple methods from jQuery to traverse](https://api.jquery.com/category/traversing/) to understand what these methods are doing.
+
+* Change the style of the element as you traverse through the DOM as a visual aid to track the current location. 
+
+## Bonus 
+
+* Find alternative methods to traverse up and down the DOM tree by referencing the preceding jQuery documents.

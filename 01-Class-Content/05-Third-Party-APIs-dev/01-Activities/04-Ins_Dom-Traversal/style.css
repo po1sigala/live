@@ -1610,26 +1610,18 @@ form [type='radio'] {
 }
 
 /*  Custom Styles  */
+* { 
+  border: 2px solid #dedede; padding: 15px; margin: 15px; 
+}
+
+html { 
+  margin: 0; padding: 0; 
+}
+
 body {
-  background: url(fridge.png) no-repeat;
+  max-width: 600px; font-family: sans-serif; color: #333; 
 }
 
-#display {
-  margin-top: 78px;
-  height: 500px;
-  width: 220px;
-  margin-left: 60px;
-}
-
-#buttons {
-  padding-top: 60px;
-}
-
-.buttons {
-  margin-left: 20px;
-  display: inline-block;
-  font-size: 25px;
-  color: black;
-  border-style: solid;
-  width: 100px;
+ul { 
+  list-style-type: none; 
 }
