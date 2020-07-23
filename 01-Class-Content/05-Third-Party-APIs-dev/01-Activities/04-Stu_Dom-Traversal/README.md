@@ -25,3 +25,7 @@ You will be the "O" player. Place the "O" to block and win.
 ## Bonus 
 
 * Find alternative methods to traverse up and down the DOM tree by referencing the preceding jQuery documents.
+
+The completed activity will look like the following image:
+
+![The tic-tac-toe board shows "O" is victorious](./tic-tac-toe.jpg)

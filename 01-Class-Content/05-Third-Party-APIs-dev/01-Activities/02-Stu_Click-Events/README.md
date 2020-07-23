@@ -24,3 +24,6 @@ In this activity, you will use jQuery to generate a random password when a butto
   
 * Search in the docs to find the alternative method to add an event listener.
   
+The finished activity should look like the following image:
+
+![The input field and button are now followed by a random password of length 15.](./solved-demo.jpg)

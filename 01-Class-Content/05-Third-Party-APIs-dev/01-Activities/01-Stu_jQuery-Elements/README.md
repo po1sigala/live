@@ -12,11 +12,11 @@ In this activity, you will use jQuery to display a quote and its author.
 
 * Don’t forget to “incorporate” jQuery before you begin.
 
-* Don’t use any of the following methods: `createElement`, `textContent`, or `appendChild`.
+* Only use jQuery methods, do **NOT** use any of the following vanilla JavaScript methods: `createElement`, `textContent`, or `appendChild`.
 
 ## Bonus
 
-* Find the difference between `$("<div>")` vs `$("div")` in jQuery. 
+* Explain the difference between `$("<div>")` vs `$("div")` in jQuery. 
 
 * Research an alternative method that attaches elements as a sibling and not as a child
 

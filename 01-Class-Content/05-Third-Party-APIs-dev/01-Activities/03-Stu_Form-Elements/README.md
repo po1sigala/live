@@ -1,8 +1,8 @@
 # Shopping List
 
-In this activity, you will use jQuery to create a shopping list.
+In this activity, you will use jQuery to create a shopping list
 
-Enter a value into the input field and click on the button to add the item to the shopping list.
+Enter a value into the input field and click on the button to add the item to the shopping list
 
 ## Instructions
 
@@ -10,7 +10,7 @@ Enter a value into the input field and click on the button to add the item to th
 
   * Arrange the form elements using jQuery methods and attach the form to the `document` 
 
-  * Add the event listener and event handler on the `form` for the `submit` event. 
+  * Add the event listener and event handler on the `form` for the `submit` event 
   
   * Clear the form on form submission
 
@@ -21,7 +21,7 @@ Enter a value into the input field and click on the button to add the item to th
   
   * Prevent the default behavior of the `submit` event.
   
-  * Use jQuery's `val` to  
+  * Use jQuery's `val` method to retrieve the input field's data.
 
 ## Bonus
 
