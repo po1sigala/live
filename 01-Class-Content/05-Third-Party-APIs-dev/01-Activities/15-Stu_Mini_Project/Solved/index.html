@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Train Scheduler</title>
+</head>
+
+<body>
+
+  <header class="jumbotron jumbotron-fluid custom-jumbotron">
+    <div class="container text-center">
+      <h1>Train Scheduler</h1>
+      <h2>Time &amp; Date: <span id="time-display">00:00:00</span></h2>
+      <p class="lead">
+        Keep track of when your the next train is!
+      </p>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="row">
+      <section class="col-12 col-md-4 col-lg-3">
+        <div class="card custom-card">
+          <h3 class="card-header">
+            Instructions
+          </h3>
+          <div class="card-body">
+            <div class="card-text">
+              Click the button below to open a form and provide information for the following:
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Train Name</li>
+            <li class="list-group-item">Train Destination</li>
+            <li class="list-group-item">First Departure Time</li>
+            <li class="list-group-item">Train Frequency</li>
+          </ul>
+          <div class="card-footer">
+            <button class="btn btn-block custom-btn" data-toggle="modal" data-target="#train-modal">Add Train</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-12 col-md-8 col-lg-9">
+        <table class="table table-bordered custom-table">
+          <thead>
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Train Frequency</th>
+              <th scope="col">Time to Next Train</th>
+              <th scope="col">Next Train Departure</th>
+            </tr>
+          </thead>
+          <tbody id="train-display"></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade custom-modal" id="train-modal" tabindex="-1" role="dialog" aria-labelledby="train-modal-form"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="train-modal-form">Add a new train.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="train-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="train-name-input">Train Name</label>
+              <input type="text" id="train-name-input" class="form-control"
+                placeholder="Enter the train's name (e.g. The Coastal Corridor)" required />
+            </div>
+
+            <div class="form-group">
+              <label for="destination-input">Train Destination</label>
+              <input type="text" id="destination-input" class="form-control"
+                placeholder="Enter the train's destination (e.g. Central Station)" required />
+            </div>
+
+            <div class="form-group">
+              <label for="first-train-input">First Train Time</label>
+              <input type="time" id="first-train-input" class="form-control"
+                placeholder="Enter the train's first departure time" required />
+            </div>
+
+            <div class="form-group">
+              <label for="train-frequency-input">Train Frequency (mins)</label>
+              <input type="number" min='1' id="train-frequency-input" class="form-control"
+                placeholder="How often does this train come?" required />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn custom-btn">Submit Train Info</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
