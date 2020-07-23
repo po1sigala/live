@@ -1,19 +1,32 @@
 # Shopping List
 
-In this activity, you will use jQuery to create a shopping that will generate a password upon clicking a button.
+In this activity, you will use jQuery to create a shopping list.
 
-### Instructions
+Enter a value into the input field and click on the button to add the item to the shopping list.
 
-* Open [`password-unsolved`](Unsolved/password-unsolved.html) and examine the code
+## Instructions
 
-* Open [`password-unsolved`](Unsolved/password-unsolved.html) and do the following:
+* Open [`shopping-unsolved`](Unsolved/shopping-unsolved.html), examine the code, and do the following:
 
-  * Using the file above as a starting point, add the three missing lines of code.
+  * Arrange the form elements using jQuery methods and attach the form to the `document` 
+
+  * Add the event listener and event handler on the `form` for the `submit` event. 
   
-  * When you click on the button, a random password should appear on the page.
+  * Clear the form on form submission
+
+  * Follow the detailed instructions provided in the comments marked by `TODO:`
+   
+
+## Hint(s)
   
-  * When the button is clicked again, the password should be replaced by a new password.
+  * Prevent the default behavior of the `submit` event.
+  
+  * Use jQuery's `val` to  
 
-* **HINT:**  You will need to create the element, append the element, then create an event listener. You will need to use each of the following methods/properties: `.text`, `.append`, and `.click`.
+## Bonus
 
-* **BONUS:** Add an input field with a label that can modify the length of the password.
+  *  Change the order how the items are added to the shopping list, ie. if the item is added to the bottom of the list, now make it add to the top of the list. 
+
+The finished shopping list should look like the following image:
+
+![A shopping list with several items.](./shopping.jpg)

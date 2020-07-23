@@ -1,19 +1,26 @@
 # Password Generator
 
-In this activity, you will use jQuery to create an event listener that will generate a password upon clicking a button.
+In this activity, you will use jQuery to generate a random password when a button is clicked.
 
-### Instructions
+## Instructions
 
-* Open [`password-unsolved`](Unsolved/password-unsolved.html) and examine the code
+* Open [`password-unsolved`](Unsolved/password-unsolved.html), examine the code, and do the following:
 
-* Open [`password-unsolved`](Unsolved/password-unsolved.html) and do the following:
-
-  * Using the file above as a starting point, add the missing lines of code.
+  * Use the file above as a starting point and complete each `TODO:` comment instruction to complete this activity.
   
-  * When you click on the button, a random password should appear on the page.
+  * Wrap the DOM element modification statements in a function to ensure the `document` has completed rendering.
   
-  * When the button is clicked again, the password should be replaced by a new password.
+  * Create an event listener for the button element
+  
+  * Create an event handler that invokes the `passwordGenerator()` and stores the password in the password element.
 
-* **HINT:**  You will need to create the element, append the element, then create an event listener. You will need to use each of the following methods/properties: `.text`, `.append`, and `.click`.
+## Hint(s)  
 
-* **BONUS:** Search in the docs to find a jQuery method that will add, not replace, the passwords on the page.
+* There are several methods in jQuery that can add the event listener
+
+## Bonus 
+
+* Search in the docs to find a jQuery method that will add, not replace, the passwords to the page.
+  
+* Search in the docs to find the alternative method to add an event listener.
+  
