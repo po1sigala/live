@@ -3,53 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>jQuery Click Events</title>
-
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <!-- Added link to the jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- A root element anchors the page, notice it's a bit empty -->
     <div id="root"></div>
-
-    <style>
-      body {
-        background-color: black;
-        color: #14c1e7;
-        margin: 2em 5em;
-        font-size: 35px;
-        font-weight: bold;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-      }
-
-      h1 {
-        font-size: 45px;
-      }
-
-      .fancy {
-        font-size: 30px;
-        padding: 10px;
-        color: white;
-        margin: 1rem 0;
-        border-radius: 0.5rem;
-        background-color: rgba(42, 196, 230, 0.705);
-      }
-
-      button:hover {
-        background-color: rgba(118, 216, 238, 0.995);
-        font-weight: 500;
-        color: black;
-      }
-
-      .theme {
-        display: inline-block;
-        margin: 0 4rem;
-      }
-
-      button:active {
-        background-color: rgb(27, 61, 61);
-        color: white;
-      }
-    </style>
 
     <script type="text/javascript">
       // light theme state
@@ -100,10 +60,11 @@
 
         // Click Events
         // Click event causes alert "Hello World"  
+        // Vanilla JS equivalent: addEventListener 
         alertButton.click(function () {
           alert("Hello World");
         });
-        
+
         // Click event causes alert light theme toggle 
         themeButton.on("click", function () {
           if(isDark) {

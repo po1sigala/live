@@ -5,6 +5,7 @@
     <title>jQuery Shopping List</title>
 
     <!-- Add link to the jQuery library -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
@@ -13,45 +14,7 @@
     <!-- Add CSS -->
     <style>
 
-      body {
-        background-color: black;
-        color: #14c1e7;
-        margin: 2em 5em;
-        font-size: 25px;
-      }
-
-      ul {
-        list-style-type: none;
-      }
-
-      input {
-        height: 30px;
-        margin: 0 20px;
-      }
-
-      .fancy {
-        font-size: 22px;
-        padding: 5px;
-        color: white;
-        margin: 2rem 0;
-        border-radius: 0.5rem;
-        background-color: rgba(42, 196, 230, 0.705);
-      }
-
-      .item {
-        margin: 0 3px;
-      }
-
-      button:hover {
-        background-color: rgba(118, 216, 238, 0.995);
-        font-weight: 500;
-        color: black;
-      }
-
-      button:active {
-        background-color: rgb(27, 61, 61);
-        color: white
-      }
+ 
     </style>
 
     <script type="text/javascript">
@@ -81,7 +44,7 @@
         // HINT: Create an array to store the shopping list items
         var shoppingList = []; 
 
-        // Apply the attribute data-id-* on each button to make unique
+        // HINT: Create a button with the attribute data-id-* for each list item
         function populateList(list) {
           listEl.empty();
           for(var i = 0; i < list.length; i++) {
@@ -104,9 +67,9 @@
         });
 
         // TODO: Use event delegation and target the parent element.
-        // Hint: Use the ".on" method
-        // Hint: Use keyword this to retrieve the user's selection
-        // Hint: Use the ".attr" method to retrieve the value of the "data-id"
+        // HINT: Use the ".on" method
+        // HINT: Use keyword this to retrieve the user's selection
+        // HINT: Use the ".attr" method to retrieve the value of the "data-id"
         listEl.on("click", "button", function() {
 
           var removeItem = ($(this).attr("data-id"));
