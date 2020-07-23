@@ -33,3 +33,7 @@ Items added to the list are now removable by clicking the item's button
 * Discuss the following [topic about event delegation](https://api.jquery.com/on/#direct-and-delegated-events) and its merits with a classmate.
 
 * Refactor the code to make it D.R.Y.
+
+The finished activity will look like the following image:
+
+![The list of items have buttons that allow the item to be removed from the shopping list](./solved-demo.jpg)
