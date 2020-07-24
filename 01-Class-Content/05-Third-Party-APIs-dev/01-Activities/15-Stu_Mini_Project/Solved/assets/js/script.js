@@ -41,18 +41,14 @@ function printTrainData(name, destination, firstTime, frequency) {
 
 function getNextTrainMins(firstTrainTime, frequency) {
   // convert first train time into a moment object, but subtract a day to ensure it's a time in the past (makes it easier)
-  console.log(firstTrainTime);
   var firstTrainTimeParsed = moment(firstTrainTime, 'HH:mm').subtract(1, 'day');
 
   // get time between now and first train time in minutes
   var timeDiffTotal = moment().diff(firstTrainTimeParsed, 'minutes');
-  console.log(timeDiffTotal);
 
   // calculate how many minutes off we are by getting remainder of minutes between the overall time difference and the frequency of the train coming
   var minuteDiff = timeDiffTotal % frequency;
-  console.log(minuteDiff);
   var timeToNextTrain = parseInt(frequency - minuteDiff);
-  console.log(timeToNextTrain);
 
   return timeToNextTrain;
 }
@@ -63,11 +59,9 @@ function updateSchedule() {
     // convert rowHTML to jQuery object
     var trainRowEl = $(rowHTML);
     // get first train time
-    console.log(trainRowEl);
     var firstTrain = trainRowEl.attr('data-first-train');
     // get frequency of train departures from <td>
     var frequency = trainRowEl.find('.train-frequency').text();
-    console.log(firstTrain);
     // get time to next train
     var timeToNextTrain = getNextTrainMins(firstTrain, frequency);
     trainRowEl.find('.next-train-mins').text(timeToNextTrain);
