@@ -178,13 +178,13 @@ In this activity we will create a bundle.js file with Webpack.
 
 # 4. Instructor Do: Review Budget Tracker (5 mins)
 
-* Open `13-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
+* Open `16-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
 
   * When we add multiple expenses, we see that our balance adjusts for each submission.
 
   * When we click the reset button, the expenses list gets cleared and the balance is reset to its original value.
 
-* Open `13-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
+* Open `16-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
 
   * At the top of the file, we bring in `module.exports` from the calculations file.
 
