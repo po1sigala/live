@@ -30,8 +30,8 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
 
-// Add code for Datepicker widget here
+// Add code for Autocomplete widget here
 //
 
-// Add code for Autocomplete widget here
+// Add code for Datepicker widget here
 //

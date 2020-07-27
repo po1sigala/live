@@ -14,8 +14,10 @@ In this activity, you will apply some jQuery UI widgets to the "Skills Form" to 
 
   * Add an `Autocomplete` widget that will find and select from a pre-populated list of values as they type in the `Skill Name` field.
 
-  * Add a `Datepicker` widget that will show month and year dropdowns in place of the static month/year header. **Hint**: Look for "Display month & year menus" in the list of examples.
+    * Add an array of various skills to use in the widget.
+
+  * Add a `Datepicker` widget that will show month and year dropdowns in place of the static month/year header. Look for "Display month & year menus" in the list of examples on the `Datepicker` widget page.
 
 ## Hint(s)
 
-* You can refer to the [jQuery UI Demos](https://jqueryui.com/demos/) to find more information on the `Autocomplete` and `Datepicker` widgets.
+* You can refer to the [jQuery UI Docs](https://jqueryui.com/demos/) to find more information on the `Autocomplete` and `Datepicker` widgets.

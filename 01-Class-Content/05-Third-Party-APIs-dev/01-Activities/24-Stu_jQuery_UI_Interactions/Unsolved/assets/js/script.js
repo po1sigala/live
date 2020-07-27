@@ -30,7 +30,7 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
 
-// Datepicker widget
+// Autocomplete widget
 $(function () {
   var skillNames = [
     'Bootstrap',
@@ -57,7 +57,7 @@ $(function () {
   });
 });
 
-// Autocomplete widget
+// Datepicker widget
 $(function () {
   $('#datepicker').datepicker({
     changeMonth: true,
