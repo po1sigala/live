@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Traversing the DOM</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+      .fancy { background-color: lightblue; }
+    </style>
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+<body>
+  <div id="top"></div>
+  <h1>Developer Community Center</h1>
+  <p>The world's leading source on <strong>open-sources</strong> related to web </p>
+  <h2>Types of Resources</h2>
+  <ul>
+    <li>Stack Overflow</li>
+    <li>Twitter</li>
+    <li id="inside">Reddit</li>
+    <li >GitHub</li>
+  </ul>
+  <div id="bottom"></div>
+</body>
+
+<script>
+  // Select elements in the document programatically
+  // Starting from the <div id="top"> element, place a blue border around the title of the website
+  var topEl = $("#top");
+  topEl.siblings().first().css("border", "blue solid 2px");
+
+  // Starting from the <div id="bottom"> element, change the text to say Meetups
+  var bottomEl = $("#bottom");
+  bottomEl.siblings().eq(4).children().last().text("Meetups");
+
+  // Starting from <div id="top"> ppend an <li> to add Classmates to bottom of the list.
+  topEl.siblings().eq(3).append($("<li>Classmates</li>"));
+
+  // Starting from the <li id="inside"> element, add the fancy class to the <li>
+  var insideEl = $("#inside");
+  insideEl.closest("ul").children().addClass("fancy");
+    
+</script>
+
+</html>
+
