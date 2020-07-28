@@ -15,7 +15,7 @@ $(document).ready(function () {
     event.preventDefault();
     var date = inputEl.val();
     // TODO: Add code to render the time difference in the <div id="time">
-    // HINT: Research the fromNow moment method 
+    // HINT: Several methods have correct answers
 
 
   })

@@ -1,17 +1,18 @@
 // Print the following answers in the console.
-// TODO: What is today's date in the following format: Jan 1st, 1999?
+
+// What day of this year is Christmas?
+var newYearsDay = moment("2020-01-01");
+var christmasDay = moment("20201225");
+var daysDiff = newYearsDay.diff(christmasDay, "days");
+console.log(daysDiff); // 359
 
 
-// TODO: What day of the week will 1/1/2022 be?
+// Programmatically find the 100th day of the current year?
+// 1. Find the start of this year
+var startOfThisYear = moment().startOf('year');
+// 2. Find 100 days after the beginning of this year
+var hundredDays = startOfThisYear.add("100", "days").format("dddd MMMM Do, YYYY");
+console.log(hundredDays); // Friday April 10th, 2020
 
-
-// TODO: What day of the year is today? (out of 365)
-
-
-// TODO: What is the current time in the following format: HH:MM:SS
-
-
-// TODO: What is the current Unix Timestamp?
-
-
-// TODO: Parse the following Unix timestamp, 1318781876, and convert into any time/date format.
+// Check if newYearsDay is before Christmas
+newYearsDay.isBefore(christmasDay); // false
