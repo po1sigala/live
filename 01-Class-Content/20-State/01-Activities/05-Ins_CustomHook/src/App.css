@@ -1,5 +1,10 @@
-.App {
+.card {
   text-align: center;
-  margin-top: 200px;
+  margin: 200px auto 0 auto;
   font-size: 36px;
+  width: 1000px;
+}
+
+.btn-group {
+  margin: 0 auto;
 }
