@@ -1,8 +1,6 @@
 // Print the following answers in the console.
 // 1. What is today's date in the following format: Jan 1st, 1999?
 var now = moment();
-console.log(now);
-
 console.log(now.format("MM Do, YYYY"));
 
 // 2. What is the day of the week today?
