@@ -22,4 +22,10 @@ In this activity we will build a web page using only prebuilt Bootstrap UI compo
 
   * Card (with a list, header, and footer)
 
-* **HINT:** When in doubt, copy and paste an example from the Bootstrap documentation and use Chrome DevTools to breakdown the classes and styles used!
+## 💡Hint(s)
+
+When in doubt, copy and paste an example from the Bootstrap documentation and use Chrome DevTools to breakdown the classes and styles used!
+
+## 🏆 Bonus
+
+Learn about how Bootstrap came to be by [reading their documentation.](https://getbootstrap.com/docs/4.5/about/overview/) 

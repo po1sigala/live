@@ -9,11 +9,11 @@ var printGuestData = function (name, comment) {
   cardColumnEl.addClass('col-12 col-sm-4 col-md-3');
 
   var cardEl = $('<div>');
-  // add a class of .custom-card
+  // Add a class of .custom-card
   cardEl.addClass('card h-100 custom-card');
   cardEl.appendTo(cardColumnEl);
 
-  // add a class of .custom-card-header
+  // Add a class of .custom-card-header
   var cardName = $('<h5>').addClass('card-header custom-card-header').text(name);
   cardName.appendTo(cardEl);
 

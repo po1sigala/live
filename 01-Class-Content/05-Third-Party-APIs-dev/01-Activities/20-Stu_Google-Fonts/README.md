@@ -10,4 +10,12 @@ In this activity we will take a page and customize it further with Google Fonts.
 
 * In `style.css`, apply the selected fonts to both the `<body>` element and all heading elements (`<h1>` through `<h6>`). There should be no need to add class styles in this activity. 
 
-* **HINT:** There are web sites that help pick fonts. Check out [Typewolf](https://www.typewolf.com/google-fonts) and [FontPair](https://fontpair.co/) for inspiration!
+## 💡 Hint(s)
+
+There are web sites that help pick fonts. Check out [Typewolf](https://www.typewolf.com/google-fonts) and [FontPair](https://fontpair.co/) for inspiration!
+
+Don't forget to use the CSS `font-weight` and `font-style` properties to use bolder, thinner, or italicized fonts.
+
+## 🏆 Bonus
+
+Learn more about typography through [Google’s Design blog.](https://design.google/library/google-fonts/)
