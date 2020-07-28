@@ -1,13 +1,13 @@
 // save reference to important DOM elements
 var timeDisplayEl = $('#time-display');
-var trainModalBtnEl = $('#train-modal');
-var trainDisplayEl = $('#train-display');
-var trainModalEl = $('#train-modal');
-var trainFormEl = $('#train-form');
-var trainNameInputEl = $('#train-name-input');
-var destinationInputEl = $('#destination-input');
-var firstTrainInputEl = $('#first-train-input');
-var trainFrequencyInputEl = $('#train-frequency-input');
+var projectModalBtnEl = $('#project-modal');
+var projectDisplayEl = $('#project-display');
+var projectModalEl = $('#project-modal');
+var projectFormEl = $('#project-form');
+var projectNameInputEl = $('#project-name-input');
+var projectTypeInputEl = $('#project-type-input');
+var hourlyRateInputEl = $('#hourly-rate-input');
+var dueDateInputEl = $('#due-date-input');
 
 // handle displaying the time
 function displayTime() {
@@ -15,79 +15,69 @@ function displayTime() {
   timeDisplayEl.text(rightNow);
 }
 
-// handle printing train data to the page
-function printTrainData(name, destination, firstTime, frequency) {
-  // create row for data
-  var trainRowEl = $('<tr class="train-row">').attr('data-first-train', firstTime);
+// handle printing project data to the page
+function printProjectData(name, type, hourlyRate, dueDate) {
+  var projectRowEl = $('<tr>');
 
-  // create cell for name and add to train row
-  $('<td>').addClass('train-name').text(name).appendTo(trainRowEl);
-  // create cell for destination and add to train row
-  $('<td>').addClass('train-destination').text(destination).appendTo(trainRowEl);
-  // create cell for frequency and add to train row
-  $('<td>').addClass('train-frequency').text(frequency).appendTo(trainRowEl);
+  var projectNameTdEl = $('<td>').addClass('p-2').text(name);
+  var projectTypeTdEl = $('<td>').addClass('p-2').text(type);
+  var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
 
-  // calculate time until the next train comes
-  var timeToNextTrain = getNextTrainMins(firstTime, frequency);
-  $('<td>').addClass('next-train-mins').text(timeToNextTrain).appendTo(trainRowEl);
+  var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
 
-  // print next train time
-  var nextTrainTime = moment().add(timeToNextTrain, 'minutes').format('hh:mm a');
-  $('<td>').addClass('next-train-time').text(nextTrainTime).appendTo(trainRowEl);
+  var daysToDate = moment(dueDate, 'MM/DD').diff(moment(), 'days');
+  var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
 
-  trainDisplayEl.append(trainRowEl);
-  trainModalEl.modal('hide');
+  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
+  var totalTdEl = $('<td>')
+    .addClass('p-2')
+    .text('$' + totalEarnings);
+
+  var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
+
+  projectRowEl.append(
+    projectNameTdEl,
+    projectTypeTdEl,
+    rateTdEl,
+    dueDateTdEl,
+    daysLeftTdEl,
+    totalTdEl,
+    deleteProjectBtn
+  );
+
+  projectDisplayEl.append(projectRowEl);
+
+  projectModalEl.modal('hide');
 }
 
-function getNextTrainMins(firstTrainTime, frequency) {
-  // convert first train time into a moment object, but subtract a day to ensure it's a time in the past (makes it easier)
-  var firstTrainTimeParsed = moment(firstTrainTime, 'HH:mm').subtract(1, 'day');
-
-  // get time between now and first train time in minutes
-  var timeDiffTotal = moment().diff(firstTrainTimeParsed, 'minutes');
-
-  // calculate how many minutes off we are by getting remainder of minutes between the overall time difference and the frequency of the train coming
-  var minuteDiff = timeDiffTotal % frequency;
-  var timeToNextTrain = parseInt(frequency - minuteDiff);
-
-  return timeToNextTrain;
+function calculateTotalEarnings(rate, days) {
+  var dailyTotal = rate * 8;
+  var total = dailyTotal * days;
+  return total;
 }
 
-// handle updating train times
-function updateSchedule() {
-  $('.train-row').each(function (i, rowHTML) {
-    // convert rowHTML to jQuery object
-    var trainRowEl = $(rowHTML);
-    // get first train time
-    var firstTrain = trainRowEl.attr('data-first-train');
-    // get frequency of train departures from <td>
-    var frequency = trainRowEl.find('.train-frequency').text();
-    // get time to next train
-    var timeToNextTrain = getNextTrainMins(firstTrain, frequency);
-    trainRowEl.find('.next-train-mins').text(timeToNextTrain);
-
-    // print next train time
-    var nextTrainTime = moment().add(timeToNextTrain, 'minutes').format('hh:mm a');
-    trainRowEl.find('next-train-time').text(nextTrainTime);
-  });
+function handleDeleteProject(event) {
+  console.log(event.target);
+  var btnClicked = $(event.target);
+  btnClicked.parent('tr').remove();
 }
 
-// handle train form submission
-function handleTrainFormSubmit(event) {
+// handle project form submission
+function handleProjectFormSubmit(event) {
   event.preventDefault();
 
-  var trainName = trainNameInputEl.val().trim();
-  var trainDestination = destinationInputEl.val().trim();
-  var firstTrainTime = firstTrainInputEl.val().trim();
-  var trainFrequency = trainFrequencyInputEl.val().trim();
+  var projectName = projectNameInputEl.val().trim();
+  var projectType = projectTypeInputEl.val().trim();
+  var hourlyRate = hourlyRateInputEl.val().trim();
+  var dueDate = dueDateInputEl.val().trim();
 
-  printTrainData(trainName, trainDestination, firstTrainTime, trainFrequency);
+  printProjectData(projectName, projectType, hourlyRate, dueDate);
 
-  trainFormEl[0].reset();
+  projectFormEl[0].reset();
 }
 
-trainFormEl.on('submit', handleTrainFormSubmit);
-trainDisplayEl.sortable();
+projectFormEl.on('submit', handleProjectFormSubmit);
+projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject);
+dueDateInputEl.datepicker({ minDate: 1 });
 
 setInterval(displayTime, 1000);
-setInterval(updateSchedule, 30000);
