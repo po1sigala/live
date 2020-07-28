@@ -8,7 +8,7 @@ console.log(moment("1-1-2022", "M-D-YYYY").format("ddd MMM Do, YYYY"));
 // TODO: What day of the year is today? (out of 365)
 console.log(moment().format("DDD"));
 
-// TODO: What is the current time in the following format: HH:MM:SS
+// TODO: What is the current time in the format: hours:minutes:seconds
 console.log(moment().format("hh:mm:ss"));
 
 // TODO: What is the current Unix Timestamp?

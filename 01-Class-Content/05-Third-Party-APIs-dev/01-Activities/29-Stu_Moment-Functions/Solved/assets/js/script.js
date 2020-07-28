@@ -18,4 +18,3 @@ $(document).ready(function () {
     diffEl.text(diff);
   })
 });
-

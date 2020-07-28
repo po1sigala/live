@@ -8,7 +8,7 @@
 // TODO: What day of the year is today? (out of 365)
 
 
-// TODO: What is the current time in the following format: HH:MM:SS
+// TODO: What is the current time in the format: Hours:Minutes:Seconds
 
 
 // TODO: What is the current Unix Timestamp?
