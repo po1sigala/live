@@ -1,20 +1,26 @@
 $(document).ready(function () {
-  var rootEl = $("#root");
-  var formEl = $("<form class='form-group'>");
-  var buttonEl = $("<button class='calc'>Calculate</button>")
-  var inputEl = $("<input placeholder='MM/DD/YYYY' class='form-input' type='date'>");
-  var labelEl = $("<label class='form-label'>Enter a date</label>");
-  var diffEl = $("#time");
-  
-  formEl.append(labelEl);
-  formEl.append(buttonEl);
-  labelEl.append(inputEl);
-  rootEl.append(formEl);
+  var inputEl = $(".form-input");
+  var formEl = $(".form-group");
+  var answerEl = $("#answer");
 
   formEl.on("submit", function(event) {
     event.preventDefault();
     var date = inputEl.val();
-    var diff = moment(date, "YYYY-MM-DD").fromNow();
-    diffEl.text(diff);
+    var radioType = $("input[type='radio']:checked").val();
+
+    switch(radioType) {
+      case "time":
+        var diff = moment(date).fromNow();
+        answerEl.text(diff);
+      break;
+      case "hours":
+        var hours = moment(date).diff(moment(), "hours");
+        answerEl.text("in " + hours + " hours");
+      break;
+      case "days":
+        var days = moment(date).diff(moment(), "days");
+        answerEl.text("in " + days + " days");
+      break;
+    }
   })
 });

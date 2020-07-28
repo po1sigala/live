@@ -1628,6 +1628,16 @@ section {
   height: 3.3rem;
   display: block;
   width: 225px;
+  background-color: rgb(242, 239, 204);
+}
+
+.calc:hover {
+  background-color: rgb(238, 237, 223);
+}
+.calc:active {
+  background-color: rgba(238, 237, 223, 0.18);
+  color: rgb(244, 244, 191);
+  border: black solid 2px;
 }
 
 .jumbotron {
@@ -1640,9 +1650,9 @@ section {
   font-family: 'Krona One', sans-serif;
 }
 
-#time {
+#answer {
   font-family: 'Krona One', sans-serif;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .form-label {
