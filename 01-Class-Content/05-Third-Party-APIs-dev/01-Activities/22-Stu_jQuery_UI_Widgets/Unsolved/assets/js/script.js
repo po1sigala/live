@@ -23,15 +23,14 @@ var handleFormSubmit = function (event) {
 
   printSkills(nameInput, dateInput);
 
-  // resets form
   nameInputEl.val('');
   dateInputEl.val('');
 };
 
 formEl.on('submit', handleFormSubmit);
 
-// Add code for Autocomplete widget here
+// Add Autocomplete widget here
 //
 
-// Add code for Datepicker widget here
+// Add Datepicker widget here
 //

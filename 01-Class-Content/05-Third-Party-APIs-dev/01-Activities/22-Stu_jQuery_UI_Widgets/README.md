@@ -1,23 +1,33 @@
 # jQuery UI Widgets
 
-In this activity, you will apply some jQuery UI widgets to the "Skills Form" to make it more user-friendly.
+In this activity, you will work with a partner to use jQuery UI documentation to apply some jQuery UI widgets to the "Skills Form" to make it more user-friendly.
 
 ## Instructions
 
-* Open [index.html](Unsolved/index.html) and do the following:
+* Be sure to work with your partner!
 
-  * Apply the jQuery UI `<link>` element in the `<head>` section.
+* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/).
 
-  * Apply the jQuery UI `<script>` tag below the `<body>` section.
+* Using the documentation, implement the following jQuery UI widgets:
 
-* Open [script.js](Unsolved/assets/js/script.js) and do the following widgets:
+  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>` element and `<script>` tag.
 
-  * Add an `Autocomplete` widget that will find and select from a pre-populated list of values as they type in the `Skill Name` field.
+  * Open [script.js](Unsolved/assets/js/script.js) and add the following widgets:
 
-    * Add an array of various skills to use in the widget.
+    * An `Autocomplete` widget that will find and select from a pre-populated list of skills as users type in the "Skill Name" field of the "Skills Form". 
 
-  * Add a `Datepicker` widget that will show month and year dropdowns in place of the static month/year header. Look for "Display month & year menus" in the list of examples on the `Datepicker` widget page.
+    * A `Datepicker` widget that will show month and year dropdowns in place of the static month/year header. 
 
-## Hint(s)
+## 💡 Hint(s)
 
-* You can refer to the [jQuery UI Docs](https://jqueryui.com/demos/) to find more information on the `Autocomplete` and `Datepicker` widgets.
+* You will need to add an array of skills to use with the `Autocomplete` widget.
+
+* Look for "Display month & year menus" in the list of examples on the `Datepicker` widget page of the jQuery UI docs.
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge: 
+
+  * What build-in HTML feature can also help enforce a date? 
+
+* Use [Google](https://www.google.com) or another search engine to answer the above.

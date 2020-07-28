@@ -23,7 +23,6 @@ var handleFormSubmit = function (event) {
 
   printSkills(nameInput, dateInput);
 
-  // resets form
   nameInputEl.val('');
   dateInputEl.val('');
 };
@@ -65,5 +64,5 @@ $(function () {
   });
 });
 
-// Add code for Sortable interaction here
+// Add Sortable interaction here
 //
