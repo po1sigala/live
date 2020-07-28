@@ -1609,6 +1609,7 @@ form [type='radio'] {
   }
 }
 
+/* Custom Styles */
 body {
   background-color: rgb(242, 239, 204);
   color: black;
@@ -1642,4 +1643,17 @@ section {
 #time {
   font-family: 'Krona One', sans-serif;
   font-size: 35px;
+}
+
+.form-label {
+  border-right: black 1px dashed;
+  padding-right: 7px;
+}
+
+label:last-child {
+  border-right: none;
+}
+
+.radio-group {
+  margin-bottom: 1.5rem;
 }
