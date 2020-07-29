@@ -18,7 +18,7 @@ In this activity, you will use `<script>` to embed Javascript into your HTML fil
 
 * Then, write the Javascript to get it to work.  
 
-* Finally, open up the console again. In addition to the previous message, your two new messages should appear. 
+* Finally, open up the console again. In addition to the previous message, your two new messages should appear. Congrats, you have already planned and written your first few lines of Javascript code! 
 
 ## 💡 Hint
 
@@ -26,6 +26,6 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
 ## 🏆 Bonus
 
-Comments are an key part of a developer's toolbox. How do you write single-line and multi-line comments in Javascript? Why you think it so important to include comments in our code? 
+Comments are an key part of a developer's toolbox.  Why you think it so important to include comments in your code? How do you write single-line and multi-line comments in Javascript?
 
 
