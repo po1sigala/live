@@ -20,7 +20,9 @@ function printProjectData(name, type, hourlyRate, dueDate) {
   var projectRowEl = $('<tr>');
 
   var projectNameTdEl = $('<td>').addClass('p-2').text(name);
+
   var projectTypeTdEl = $('<td>').addClass('p-2').text(type);
+
   var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
 
   var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
@@ -29,12 +31,15 @@ function printProjectData(name, type, hourlyRate, dueDate) {
   var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
 
   var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
+
+  // You can also chain methods onto new lines to keep code clean
   var totalTdEl = $('<td>')
     .addClass('p-2')
     .text('$' + totalEarnings);
 
   var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
 
+  // By listing each `<td>` variable as an argument, each one will be appended in that order
   projectRowEl.append(
     projectNameTdEl,
     projectTypeTdEl,
