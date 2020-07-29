@@ -1661,8 +1661,10 @@ label:last-child {
 }
 
 .answer {
-  color: rgb(7, 61, 69);
+  color: rgb(36, 72, 77);
   font-size: 25px;
   margin-left: 4%;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bolder;
+  -webkit-text-stroke: .001rem grey;
 }
