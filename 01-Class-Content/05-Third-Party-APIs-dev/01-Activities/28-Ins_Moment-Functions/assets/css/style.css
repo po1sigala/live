@@ -1610,52 +1610,35 @@ form [type='radio'] {
 }
 
 /* Custom Styles */
+:root {
+  --main-color: teal;
+  --main-bg-color: rgba(142, 174, 173, 0.988);
+  --font-jumbo-color: white;
+  --jumbo-color: black;
+  --font-body-color: black;
+
+}
+
 body {
-  /* background-color: rgb(242, 239, 204); */
-  color: black;
+  background-color: var(--main-bg-color);
+  color: var(--jumbo-color);
   font-size: 25px;
-  background-image: url("../images/night.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 section {
   padding: 5rem;
 }
 
-.calc {
-  padding: 0.75rem;
-  font-size: 1.2rem;
-  border: 1px solid #484848;
-  border-radius: 0.3rem;
-  height: 3.3rem;
-  display: block;
-  width: 225px;
-  background-color: rgb(242, 239, 204);
-}
-
-.calc:hover {
-  background-color: rgb(238, 237, 223);
-}
-.calc:active {
-  background-color: rgba(238, 237, 223, 0.18);
-  color: rgb(244, 244, 191);
-  border: black solid 2px;
-}
-
 .jumbotron {
-  height: 20%;
+  height: 200px;
   width: 100%;
-  background-color:rgba(184, 181, 152, 0.831);
+  background-color: var(--jumbo-color);
+  color: var(--font-jumbo-color);
 }
 
 .title {
-  font-family: 'Krona One', sans-serif;
-}
-
-#answer {
-  font-family: 'Krona One', sans-serif;
-  font-size: 45px;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .form-label {
@@ -1669,4 +1652,17 @@ label:last-child {
 
 .radio-group {
   margin-bottom: 1.5rem;
+}
+
+.question {
+  color: var(--jumbo-color);
+  font-size: 25px;
+  padding: 15px 0;
+}
+
+.answer {
+  color: rgb(7, 61, 69);
+  font-size: 25px;
+  margin-left: 4%;
+  font-family: 'Pacifico', cursive ;
 }
