@@ -6,16 +6,26 @@ In this activity, you will use `<script>` to embed Javascript into your HTML fil
 
 * Under the comment `YOUR CODE HERE` embed Javascript into the existing HTML file using  `<script>` tags.
 
-* Now, we are ready to start  we are going to write "My name is YOURNAME" to the console.
+* Inside the `<script>` tags, write a message that will log on the console. The message should read: "Hello, my name is `YOURNAME`." 
 
-* To help explain your code, first write 
+* Don't forget to add a comment to explain what your code does.  
 
-* Now open up the console. Does your message appear? 
+* Now open up the console. Your message with your name should appear.
 
-* Confirm that it logged the text as you would expect.
+* Next, think about two more messages you would like to have log on the console.
+
+* For each message, write a comment explaining the code you need to write to get your message to appear on the console.  
+
+* Then, write the Javascript to get it to work.  
+
+* Finally, open up the console again. In addition to the previous message, your two new messages should appear. 
 
 ## 💡 Hint
 
-Make sure all of your Javascript code is written inside the `<script>` tags! 
+Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the developer's console on Chrome.
 
 ## 🏆 Bonus
+
+Comments are an key part of a developer's toolbox. How do you write single-line and multi-line comments in Javascript? Why you think it so important to include comments in our code? 
+
+
