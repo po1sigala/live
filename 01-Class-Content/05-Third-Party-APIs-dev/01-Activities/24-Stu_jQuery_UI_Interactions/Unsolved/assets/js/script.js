@@ -64,5 +64,5 @@ $(function () {
   });
 });
 
-// Add Sortable interaction here
+// Add interaction here
 //

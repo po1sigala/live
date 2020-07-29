@@ -10,7 +10,7 @@ In this activity, you will work with a partner to use jQuery UI documentation to
 
 * Using the documentation, implement the following jQuery UI widgets:
 
-  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>` element and `<script>` tag.
+  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>`  and `<script>` tag.
 
   * Open [script.js](Unsolved/assets/js/script.js) and add the following widgets:
 

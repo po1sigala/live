@@ -12,6 +12,8 @@
 
   * Open [script.js](Unsolved/assets/js/script.js) and add the jQuery UI interaction that will allow the user to drag and reorder the skills listed under "List of Skills".
 
+  * Add the option to style that white space in between the items shifting to be visible. 
+
 ## 💡 Hint(s)
 
 * Think about which interaction will allow a user to drag an element to a new spot on the list.
