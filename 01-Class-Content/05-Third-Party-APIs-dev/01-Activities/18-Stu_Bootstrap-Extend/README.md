@@ -1,6 +1,6 @@
 # Extending Bootstrap Styles
 
-In this activity we will take a page built with Bootstrap components and update the color styles to provide a custom theme using CSS. 
+In this activity you will work with a partner to take a page built with Bootstrap components and update the color styles to provide a custom theme using CSS.
 
 ## Instructions
 
@@ -12,10 +12,14 @@ In this activity we will take a page built with Bootstrap components and update 
 
 * Follow the instructions provided by the comments in the starter code in both `index.html` and `script.js`. Read the comments carefully, as they provide instruction as to what classes are needed and what pseudoclasses may be needed as well.
 
-## 💡 Hint(s)
-
-Don't forget to use the previous example as a guide to how custom styles can be applied with CSS.
-
 ## 🏆 Bonus
 
-Now that you know a bit about Bootstrap, familiarize yourself with similar UI frameworks such as [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind.](https://tailwindcss.com/)
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+
+  * Familiarize yourself with similar UI frameworks such as [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind.](https://tailwindcss.com/)
+
+* Check the [Solution](./Solved/index.html) after class and compare it against your own file. 
+
+## 💡 Hint(s)
+
+* Don't forget to use the previous example as a guide to how custom styles can be applied with CSS.
