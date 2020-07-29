@@ -22,7 +22,7 @@ In this activity, you will use `<script>` to embed Javascript into your HTML fil
 
 ## 💡 Hint
 
-Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the developer's console on Chrome.
+Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Developer's Console on Chrome.
 
 ## 🏆 Bonus
 
