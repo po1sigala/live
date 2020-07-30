@@ -1,14 +1,14 @@
 # Bootstrap Components
 
-In this activity we will build a web page using only prebuilt Bootstrap UI components.
+In this activity you will work with a partner build a web page using only prebuilt Bootstrap UI components.
 
 ## Instructions
 
-* Using the [Bootstrap documentation,](https://getbootstrap.com) add to the existing code in [Unsolved file](./Unsolved/index.html) to match this image:
+* Be sure to work with your partner!
 
-![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./solved-screenshot.png)
+* Open [the starter code](./Unsolved/index.html) and examine what's there first.
 
-* You will need to implement the following components:
+* Using the [Bootstrap documentation,](https://getbootstrap.com) add the following components to match the image below:
 
   * Navbar
 
@@ -22,10 +22,16 @@ In this activity we will build a web page using only prebuilt Bootstrap UI compo
 
   * Card (with a list, header, and footer)
 
-## 💡Hint(s)
-
-When in doubt, copy and paste an example from the Bootstrap documentation and use Chrome DevTools to breakdown the classes and styles used!
+![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./solved-screenshot.png)
 
 ## 🏆 Bonus
 
-Learn about how Bootstrap came to be by [reading their documentation.](https://getbootstrap.com/docs/4.5/about/overview/) 
+* If you have fully completed the above tasks, here is something you and your partner can do to further your knowledge:
+
+  * Learn about how Bootstrap came to be and how CSS frameworks like it can be useful.
+
+* Check the [Solution](./Solved/index.html) after class and compare it against your own file.
+
+## 💡Hint(s)
+
+* When in doubt, use the Bootstrap documentation and Chrome DevTools to breakdown the classes and styles used!
