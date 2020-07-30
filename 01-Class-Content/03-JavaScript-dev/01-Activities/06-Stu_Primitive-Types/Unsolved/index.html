@@ -42,28 +42,23 @@
  
     <script>
 
-/* Your task for this assignment is to debug the broken code and turn the frowns upside down.
- * Use typeof to test if a value has a type of string, number, boolean, or undefined.
- * You may also use console.log to test if the value of the variable is true or false.
- * The first one is done for you to help you get started. */
-
 
 /************ EXAMPLE ********* */
 
 var one = "64"; //expected type is number
 
-//To check the type of the value of the variable, use typeof
+//Check the type of the current data held in the variable using typeof
 console.log(typeof one);
 
-//Oh no, it looks like it is a string. To fix this code, remove the "" to make it a number
+//It looks like it is a string. To fix this code, remove the "" to make it a number
 var one = 64;
 
-//Now take a look. You have turned a frown upside down 😃. 
+//After changing your code, test it out. If it worked, a frown will be turned upside down.  
 
 
 
 
-/********* YOUR WORK STARTS HERE ********************* */
+/********* DEBUG THE CODE BELOW ********************* */
 
 //Using above as a guide, try these two on your own. 
 
@@ -73,7 +68,7 @@ var three = "false"; //Expected type is boolean
 
 
 
-//Now, using what you just practiced, try debugging the code below. Hint: At least one line of code already works! 
+//Now, using the method in the instructions as a guide as well as the practice above,  try debugging the code below. 
 
 var four = (false == "false");
 console.log("The value is " + four); //Expected value is true
@@ -81,27 +76,27 @@ console.log("The value is " + four); //Expected value is true
 var five = (23 === "23");
 console.log("The value is " + five); //Expected value is true
 
-var six = (23 == "23");
-console.log("The value is " + six); // Expected value is true
+var six = (true == "1");
+console.log("The value is " + six); // Expected value is false
 
 
 
-//These are trickier! Writing your own console.log() may help you debug
+//These are trickier! Writing your own console.log() to check the value may help you debug
 
-var seven = 12 + "23" // Expected value is 35
+var seven = 12 + "23" // Expected type is number, expected value is 35.
 
-var eight = (100 !== "100") === (100 != "100") //expected value is true
+var eight = "23" + 12 + 12 //Expected type is string, expected value is 2324
 
-var nine; //Expected type is boolean. Expected value is true.
-
-
+var nine; //Expected type is boolean, expected value is true.
 
 
+/********* DON'T CHANGE CODE BELOW THIS LINE ********************* */
 
-/* The code below is what turns the frowns upside down.
+
+/* The code below is the Javascript turns the frowns upside down.
  * It is okay if the code does not look completely familar
- * just yet! 
- * DO NOT CHANGE THE CODE BELOW THIS LINE*/  
+ * just yet! It will very soon.  */ 
+
 
 
 if (typeof one === "number") {
@@ -126,7 +121,7 @@ if (five === true) {
     document.getElementById("box-5").textContent = "😃";
 }
 
-if (six === true) {
+if (six === false) {
     document.getElementById("box-6").textContent = "😃";
 }
 
@@ -134,11 +129,11 @@ if (seven === 35) {
     document.getElementById("box-7").textContent = "😃";
 }
 
-if (eight === true) {
+if (eight === "2324") {
     document.getElementById("box-8").textContent = "😃";
 }
 
-if (nine === true && (typeof nine === "boolean")) {
+if (nine === true ) {
     document.getElementById("box-9").textContent = "😃";
 }
  
