@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <!--This is the game board. You don't need to change any code here-->
+    <h2 class = "text-center"> Turn That Frown Upside Down!</h2>
+    <div class="row mx-auto">
+        <div class="col-sm-4" id = "box-1">😞</div>
+        <div class="col-sm-4" id = "box-2">😞</div>
+        <div class="col-sm-4" id = "box-3">😞</div>
+      </div>
+
+      <div class="row mx-auto">
+        <div class="col-sm-4" id = "box-4">😞</div>
+        <div class="col-sm-4" id = "box-5">😞</div>
+        <div class="col-sm-4" id = "box-6">😞</div>
+      </div>
+
+      <div class="row mx-auto">
+        <div class="col-sm-4" id = "box-7">😞</div>
+        <div class="col-sm-4" id = "box-8">😞</div>
+        <div class="col-sm-4" id = "box-9">😞</div>
+      </div>
+
+     <!--Just like we have done with <script> css can be embedded in HTML. You don't need to change anything here-->
+      <style>
+          .col-sm-4 {
+              font-size: xx-large;
+              border: 5px solid black;
+          }
+
+          .row {
+              width: 80vw;
+          }
+    
+      </style>
+    
+ 
+    <script>
+
+//TODO: Debug the code below so that the variables evaluate to true or false as expected. If the code is correct, a happy face pops up!
+
+
+//All of these should evaluate to true 
+
+var one = true; 
+console.log(one);
+var two = false;
+var three = false;
+
+
+//All of these should evaluate to false 
+
+var four = true;
+var five = true;
+var six = true;
+
+
+
+//These are trickier! All of these should evaluate to true.
+
+var seven = false;
+var eight = false;
+var nine = false;
+
+
+
+//The code below is what turns the frowns upside down. DO NOT CHANGE THE CODE BELOW!  
+
+
+if (one === true) {
+    document.getElementById("box-1").textContent = "😃";
+}
+
+if (two === true) {
+    document.getElementById("box-2").textContent = "😃";
+}
+
+if (three === true) {
+    document.getElementById("box-3").textContent = "😃";
+}
+
+
+if (four === false) {
+    document.getElementById("box-4").textContent = "😃";
+}
+
+
+if (five === false) {
+    document.getElementById("box-5").textContent = "😃";
+}
+
+if (six === false) {
+    document.getElementById("box-6").textContent = "😃";
+}
+
+if (seven === true) {
+    document.getElementById("box-7").textContent = "😃";
+}
+
+if (eight === true) {
+    document.getElementById("box-8").textContent = "😃";
+}
+
+if (nine === true) {
+    document.getElementById("box-9").textContent = "😃";
+}
+ 
+       
+    </script>
+    
+</body>
+</html>

@@ -18,7 +18,7 @@ In this activity, you will use `<script>` to embed Javascript into your HTML fil
 
 * Then, write the Javascript to get it to work.  
 
-* Finally, open up the console again. In addition to the previous message, your two new messages should appear. Congrats, you have already planned and written your first few lines of Javascript code! 
+* Finally, open up the console again. In addition to the previous message, your two new messages should appear. Congrats, you just planned and wrote your first few lines of Javascript code! 
 
 ## 💡 Hint
 

@@ -8,7 +8,7 @@ In this activity, you work in pairs to to write introductions in the console usi
 
 * Next, convert the HTML comments inside the `<script>` tags to single-line Javascript comments since everything inside the `<script>` tags are Javasript. As you do that, make sure to talk with your partner about what code you will need to write below each comment to make it work.  
 
-* Now, do a bit of data collection. Ask your partner for their name, number of pets,and a fun fact about themselves. This is the data that will be stored in the variables.  
+* Now, do a bit of data collection. Ask your partner for their name, number of pets, and a fun fact about themselves. This is the data that will be stored in the variables.  
 
 * Once you have your data ready, go back to the code and declare the variables name, pets, and funFact using `var`. Then, assign the value of the variables to be Partner A's responses. 
 
