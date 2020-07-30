@@ -7,18 +7,17 @@ $(document).ready(function () {
     event.preventDefault();
     var date = inputEl.val();
     var radioType = $("input[type='radio']:checked").val();
-
+    // Format the date and find the difference in the requested time 
     switch(radioType) {
-      case "time":
-        var diff = moment(date).fromNow();
-        answerEl.text(diff);
-      break;
+      case "seconds":
+        var seconds;
+        answerEl.text("in " + seconds + " seconds");
       case "hours":
-        var hours = moment(date).diff(moment(), "hours");
+        var hours;
         answerEl.text("in " + hours + " hours");
       break;
       case "days":
-        var days = moment(date).diff(moment(), "days");
+        var days;
         answerEl.text("in " + days + " days");
       break;
     }

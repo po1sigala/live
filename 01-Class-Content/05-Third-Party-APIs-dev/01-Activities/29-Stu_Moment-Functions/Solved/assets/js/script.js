@@ -6,19 +6,20 @@ $(document).ready(function () {
   formEl.on("submit", function(event) {
     event.preventDefault();
     var date = inputEl.val();
+    var userDate = moment(date);
     var radioType = $("input[type='radio']:checked").val();
 
     switch(radioType) {
-      case "time":
-        var diff = moment(date).fromNow();
-        answerEl.text(diff);
+      case "seconds":
+        var seconds = userDate.diff(moment(), "seconds");
+        answerEl.text("in " + seconds + " seconds");
       break;
       case "hours":
-        var hours = moment(date).diff(moment(), "hours");
+        var hours = userDate.diff(moment(), "hours");
         answerEl.text("in " + hours + " hours");
       break;
       case "days":
-        var days = moment(date).diff(moment(), "days");
+        var days = userDate.diff(moment(), "days");
         answerEl.text("in " + days + " days");
       break;
     }
