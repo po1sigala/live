@@ -16,7 +16,7 @@ In this activity, you will work with a partner and research documentation to ans
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an 
+* If you have fully completed the above tasks, here is something you and your partner can work through as an bonus exercise. Read the docs to find how to measure the difference between two time stamps with `Moment.js`.
 
 * Check the [solution](./Solved/assets/js/script.js) after class and compare it against your own file. 
 
