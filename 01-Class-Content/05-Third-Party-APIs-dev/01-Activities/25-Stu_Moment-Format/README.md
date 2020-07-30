@@ -1,6 +1,6 @@
 # Moment Format
 
-In this activity, you will work with a partner and research documentation to answer the following questions.
+In this activity, you will work with a partner and research documentation to answer the questions form the Moment Quiz.
 
 ## Instructions
 
