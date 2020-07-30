@@ -13,28 +13,7 @@
     <script>
 
 
-/********* DEBUG THE CODE BELOW ********************* */
 
-
-var one = "64"; //expected type is number
-
-var two = 656302; //Expected type is string
-
-var three = "false"; //Expected type is boolean 
-
-
-
-
-
-
-
-//These are trickier! 
-
-var four = 12 + "23" // Expected type is number with value 35
-
-var five = "23" + 12 + four //Expected type is string with value 2347
-
-var six; //Expected type is boolean with value true
 
 
 
@@ -46,44 +25,44 @@ var six; //Expected type is boolean with value true
 /********* DON'T CHANGE CODE BELOW THIS LINE ********************* */
 
 
-/* The code below is the Javascript turns the frowns upside down.
+/* The code below is the Javascript that logs the correct and incorrect answers.
  * It is okay if the code does not look completely familar
  * just yet! It will very soon.  */ 
-
+ 
 var right = "✅"
 var wrong = "❌"
 
 
-if (typeof one === "number") {
+if (one == true) {
     console.log( "Number 1: " + right)
 } else {
     console.log( "Number 1: " + wrong)
 }
 
-if (typeof two === "string") {
+if (two == true) {
     console.log( "Number 2: " + right)
 } else {
     console.log( "Number 2: " + wrong)
 }
 
-if (three === false) {
+if (three) {
     console.log( "Number 3: " + right)
 } else {
     console.log( "Number 3: " + wrong)
 }
 
-if (four === 35) {
+if (four == false) {
     console.log( "Number 4: " + right)
 } else {
     console.log( "Number 4: " + wrong)
 }
-if (five === "2347") {
+if (five == false) {
     console.log( "Number 5: " + right)
 } else {
     console.log( "Number 5: " + wrong)
 }
 
-if (six === true ) {
+if (!six) {
     console.log( "Number 6: " + right)
 } else {
     console.log( "Number 6: " + wrong)

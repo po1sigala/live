@@ -7,107 +7,86 @@
     <title>Document</title>
 </head>
 <body>
-    <!--This is the game board. You don't need to change any code here-->
-    <h2 class = "text-center"> Turn That Frown Upside Down!</h2>
-    <div class="row mx-auto">
-        <div class="col-sm-4" id = "box-1">😞</div>
-        <div class="col-sm-4" id = "box-2">😞</div>
-        <div class="col-sm-4" id = "box-3">😞</div>
-      </div>
-
-      <div class="row mx-auto">
-        <div class="col-sm-4" id = "box-4">😞</div>
-        <div class="col-sm-4" id = "box-5">😞</div>
-        <div class="col-sm-4" id = "box-6">😞</div>
-      </div>
-
-      <div class="row mx-auto">
-        <div class="col-sm-4" id = "box-7">😞</div>
-        <div class="col-sm-4" id = "box-8">😞</div>
-        <div class="col-sm-4" id = "box-9">😞</div>
-      </div>
-
-      <style>
-          .col-sm-4 {
-              font-size: xx-large;
-              border: 5px solid black;
-          }
-
-          .row {
-              width: 80vw;
-          }
-    
-      </style>
-    
+   
+    <h1> Open Up the Console To See It Work </h1>
  
     <script>
 
-//TODO: Debug the code below so that the variables evaluate to true or false as expected. If the code is correct, a happy face pops up!
+
+/********* DEBUG THE CODE BELOW ********************* */
 
 
-//All of these should evaluate to true 
+var one = 64; //expected type is number
 
-var one = true; 
+var two = "656302"; //Expected type is string
 
-var two = false;
-var three = false;
-
-
-//All of these should evaluate to false 
-
-var four = true;
-var five = true;
-var six = true;
+var three = false; //Expected type is boolean 
 
 
 
-//These are trickier! All of these should evaluate to true.
-
-var seven = false;
-var eight = false;
-var nine = false;
 
 
 
-//The code below is what turns the frowns upside down. DO NOT CHANGE THE CODE BELOW!  
+
+//These are trickier! 
+
+var four = 12 + 23 // Expected type is number with value 35
+
+var five = "23" + (12 + four) //Expected type is string with value 2347
+
+var six = true; //Expected type is boolean with value true
 
 
-if (one === true) {
-    document.getElementById("box-1").textContent = "😃";
+
+
+
+
+
+
+/********* DON'T CHANGE CODE BELOW THIS LINE ********************* */
+
+
+/* The code below is the Javascript that logs the correct and incorrect answers.
+ * It is okay if the code does not look completely familar
+ * just yet! It will very soon.  */ 
+ 
+var right = "✅"
+var wrong = "❌"
+
+
+if (typeof one === "number") {
+    console.log( "Number 1: " + right)
+} else {
+    console.log( "Number 1: " + wrong)
 }
 
-if (two === true) {
-    document.getElementById("box-2").textContent = "😃";
+if (typeof two === "string") {
+    console.log( "Number 2: " + right)
+} else {
+    console.log( "Number 2: " + wrong)
 }
 
-if (three === true) {
-    document.getElementById("box-3").textContent = "😃";
+if (three === false) {
+    console.log( "Number 3: " + right)
+} else {
+    console.log( "Number 3: " + wrong)
 }
 
-
-if (four === false) {
-    document.getElementById("box-4").textContent = "😃";
+if (four === 35) {
+    console.log( "Number 4: " + right)
+} else {
+    console.log( "Number 4: " + wrong)
+}
+if (five === "2347") {
+    console.log( "Number 5: " + right)
+} else {
+    console.log( "Number 5: " + wrong)
 }
 
-
-if (five === false) {
-    document.getElementById("box-5").textContent = "😃";
-}
-
-if (six === false) {
-    document.getElementById("box-6").textContent = "😃";
-}
-
-if (seven === true) {
-    document.getElementById("box-7").textContent = "😃";
-}
-
-if (eight === true) {
-    document.getElementById("box-8").textContent = "😃";
-}
-
-if (nine === true) {
-    document.getElementById("box-9").textContent = "😃";
+if (six === true ) {
+    console.log( "Number 6: " + right)
+} else {
+    console.log( "Number 6: " + wrong)
 }
  
        
