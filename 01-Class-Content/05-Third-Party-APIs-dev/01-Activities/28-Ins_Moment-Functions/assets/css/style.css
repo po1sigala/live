@@ -1611,12 +1611,10 @@ form [type='radio'] {
 
 /* Custom Styles */
 :root {
-  --main-color: teal;
   --main-bg-color: rgba(142, 174, 173, 0.988);
-  --font-jumbo-color: white;
-  --jumbo-color: black;
+  --font-jumbo-color: rgb(166, 245, 245);
+  --jumbo-bg-color: black;
   --font-body-color: black;
-
 }
 
 body {
@@ -1633,7 +1631,7 @@ section {
 .jumbotron {
   height: 200px;
   width: 100%;
-  background-color: var(--jumbo-color);
+  background-color: var(--jumbo-bg-color);
   color: var(--font-jumbo-color);
 }
 
