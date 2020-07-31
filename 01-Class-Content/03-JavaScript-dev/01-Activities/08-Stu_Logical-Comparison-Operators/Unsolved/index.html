@@ -20,45 +20,50 @@
 var hungerLevel = 50;
 var isLunchTime = true;
 
-//Complete the expression using isLunchTime and the logical operator && so it evalutes to true
 
-var eatLunch = (hungerLevel === 50 && isLunchTime === true)
+// Eat Lunch? 
+
+//Complete expression using the variables hungerLevel and isLunchTime so it evaluates to false
+
+
+var eatLunch;
 
 
 // Eat Pizza?
 
-//Write expression to evaluate if hungerLevel is equal to 50 or isLunchTime is equal to falae.
-//The expression should evaluate to true. 
+//Create expression stored in eatPizza that evaluates to true when hungerLevel is equal to 50 PR isLunchTime is equal to false 
 
-var eatPizza = (hungerLevel === 50 || isLunchTime === false)
+var eatPizza;
 
 
 //Eat Snack? 
 
-//Write expression evaluating if isLunchTime does not equal true. It should evaluate to false. 
+//Create expression that evaluates to false when isLunchTime does not equal true. Store it in eatSnack.
 
-var eatSnack = (isLunchTime !== true)
+var eatSnack;
 
 //isHungry? 
 
 
-//Write expresssion that evaluates to true if hungerLevel is greater than or equal to 50. 
-//Store in a new variable named isHungry
+//Create expresssion that evaluates to true if hungerLevel is greater than or equal to 50 and store it in the variable isHungry
 
-var isHungry = (hungerLevel >= 50)
+var isHungry;
+
 
 
 // isEqual? 
 
-//Write an expression evaluating if doubleEquals is equal to tripleEquals. 
-//Store it a new variable called isEqual
-//Console log isEqual to check the results.
+//Write an expression evaluating if doubleEquals is equal to tripleEquals and store it in the variable  isEqual 
+
 
 var doubleEquals = ( 23 == "23");
 
 var tripleEquals = ( 23 === "23");
 
-var isEqual = false;
+var isEqual;
+
+//Console log isEqual to check results
+
 
 
 
@@ -76,7 +81,7 @@ var right = "✅";
 var wrong = "❌"
 
 
-if (eatLunch === true) {
+if (eatLunch === false) {
     console.log( "Eat Lunch?: " + right)
 } else {
     console.log( "Eat Lunch?: " + wrong)
@@ -88,7 +93,7 @@ if (eatPizza === true) {
     console.log( "Eat Pizza?: " + wrong)
 }
 
-if (!eatSnack) {
+if (!eatSnack && eatSnack != undefined) {
     console.log( "Eat Snack?: " + right)
 } else {
     console.log( "Eat Snack?: " + wrong)
