@@ -11,20 +11,20 @@
 <script>
     //There are six primitive data types in Javascript: undefined, number, string, boolean, bigint, and symbol.
 
-    //It is possible to declare a variable but not assign it a variable right away. 
+    //Undefined variables haven't been assigned values yet.
 
     var myUndefined;
-    //When that happens, it is undefined UNTIL it gets a value. Undefined is actually a data type!
+    
 
 
-    //Of the six primitive data types, three are the heavy lifters of Javascript datat types. They are essential to know.   
+    //Strings, numbers, and booleans are the primitive data types that are essential to know.     
 
 
     var myNumber = 100; //number
     var myString = "Hello World"; //string
     var myBoolean = true; //boolean
 
-    //There are also two more that round out the six, bigint and symbol. 
+    //Bigint and symbol are also primitive data types. It is enough to know they are part of the six primitive data types for now. 
   
     var myBigInt = 1234567890123456789012345678901234567890n; //Note the n at the end of the number
     var mySymbol = Symbol("a_symbol");
@@ -35,7 +35,7 @@
     console.log(typeof myUndefined) //logs undefined
     console.log(typeof myNumber)   //logs number
 
-    //You can also use typeof to evaluate the data directly 
+    //You can also use typeof to evaluate the data directly (no variable)
 
     console.log(typeof true) //logs boolean
     console.log(typeof "Howdy") //logs string
