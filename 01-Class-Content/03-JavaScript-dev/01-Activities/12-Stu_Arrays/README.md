@@ -9,9 +9,9 @@ In this activity, you use an array to store your classmate's names and then acce
 
 * Once you completed the introductions, you have one more task. There is a new student named Bob in class and he is going to take the place of the student currently first in your array. Replace the name of the first student in the array with name "Bob." 
 
-* Then, to check your work, write a conditional statement that evaluates if "Bob" is now the first item in the array. If true, introduce Bob using  "My name is STUDENTNAME" format (just like above). 
+* To make sure the student who Bob replaced is no longer listed, console log your array. Is Bob now first? 
 
-* To make sure the student who Bob replaced is no longer listed, console log your array. Note that nothing else changed except for the name of the student first in the array.
+* If time allows, practice using you Javascript skills to check your work. Write a conditional statement to check if Bob is the first student listed in the array.  If he is, then you should logout an introduction  that reads "My name is STUDENTNAME." If Bob is not the student name first in the array, console log the name of the student who is currently first.
 
 
 
@@ -24,6 +24,9 @@ Don't forget that arrays are zero-indexed!
 
 ## 🏆 Bonus
 
-The maximum number of elements in an array is huge: 4,294,967,295! Thankfully, there is no need to count the number of elements in an array by hand. What is the Javascript way of finding the length of an array? How might this information be useful? 
+Fun fact: The maximum number of elements in an array is 4,294,967,295! 
+
+Thankfully, there is no need to count the number of elements in an array by hand. What is the array property used to return the number of elements in an array? 
+
 
  
