@@ -4,15 +4,13 @@ In this activity, you will use typeof and console.log() to debug existing code.
 
 ## Instructions
 
-* Take a look at the index.html file. Don't worry if some of the code looks unfamiliar, you have all the tools you need to get the job done. All of your work will take place inside the `<script>` tags and under the comment that reads `DEBUG THE CODE BELOW `. 
+* Take a look at the index.html file. All of your work will take place inside the `<script>` tags and under the comment that reads `DEBUG THE CODE BELOW `. 
 
-* After reading through the comments to familiarize yourself with the code and your task, open up the console. You will see in the console that all the the answers are currently wrong and marked by an ❌.  To fix this app, all the ❌ should turn into ✅, marking a correct answer. To accomplish this, it will take a bit of debugging. 
+* Read through the comments and then open up the console. Currently, all the the answers are currently wrong and marked by an ❌.  To fix this app, all  ❌'s should turn into ✅, marking a correct answer.
 
-* To start debugging, first determine the current data types (use `typeof`) for each variable's value. Then, you know what the current type,  compare it to what is expected to get the ✅ to appear (for this exercise the expected type is provided in the comments).
+* To debug, first determine the current data types (use `typeof`) for each variable's value. Then, think about how you can change the current code to get the ✅ to appear.
 
- Then, think about ways you may get the existing code to match the expected type. Once you have a plan, implement the changes. 
-
-* Try to get as many ✅'s possible in the time alloted but don't worry if you don't get completely finished with this challenge especially the trickier ones. The goal is to get you thinking about data types and to practice debugging. 
+* Try to get as many ✅'s possible in the time alloted but don't worry if you don't get completely finished. The goal is to get you thinking about data types and to practice debugging. 
 
 ## 💡 Hints
 

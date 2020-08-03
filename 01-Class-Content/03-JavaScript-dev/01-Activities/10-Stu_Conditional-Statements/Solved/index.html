@@ -28,26 +28,26 @@
            console.log( "Shopping List"); //If returns false, console logs without name
        };
 
-//Uses && operator to add apples to the list if apple total is less than 10 and total of apples and bananas is less than 15
+    //Uses && operator to add apples to the list if apple total is less than 10 and total of apples and bananas is less than 15
 
        if ( (appleTotal + bananaTotal < 15 ) && (appleTotal < 10)) { 
         console.log("Apples ☐ ");
        }
 
-//If have less than or equal to five bananas, add to list
+    //If have less than or equal to five bananas, add to list
        if (bananaTotal <= 5 )  {
            console.log("Bananas ☐ ");
        }
-//If eggs are less than 24 or company is coming, add eggs to the list
+    //If eggs are less than 24 or company is coming, add eggs to the list
        if (eggsTotal < 24 || isCompanyComing) {
            console.log("Eggs ☐ ");
        }
-//If it is movie weekend or company is coming, add popcorn to the list
+    //If it is movie weekend or company is coming, add popcorn to the list
        if (isMovieWeekend  || isCompanyComing) {
            console.log("Popcorn ☐ ");
        }
 
-//If show inventory is true, show inventory, else console log "Inventory Hidden"
+    //If show inventory is true, show inventory, else console log "Inventory Hidden"
        if (showInventory) {
            console.log("----------------------------")
            console.log("Existing Inventory")

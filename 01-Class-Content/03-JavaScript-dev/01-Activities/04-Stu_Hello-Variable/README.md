@@ -19,12 +19,8 @@ The introduction on the console should look like this and contain Partner A's da
 - "My name is Abdul."
 - "I have 3 pet(s)."
 - "Fun fact: I like pineapple on my pizza." 
-
-* Now, go to the console and check it out! Did the introduction for Partner A appear?    
-
-* Next, reassign the values of the variables to equal Partner B's response.  
-
-* Open up the console again. Has the introduction changed? If you wanted to see Partner A's introduction again, how might you do that?
+   
+* Finally, reassign the values of the variables to equal Partner B's response.  
 
 ## 💡 Hint
 
