@@ -10,7 +10,9 @@
 
     <script>
 
-        //A for-loop allows you to execute code more than once.
+        //A for-loop allows you to execute code more than once
+
+        //The statements inside the for() describe how you want it to run
 
         for (i = 0; i < 5; i++) {
 
@@ -19,9 +21,18 @@
             console.log("This code has run " + i + " time/s before.");
             console.log("The first statement sets the starting point (a number) for i.");
             console.log("The second statemnt sets the condition on when it should run.");
-            console.log("The third statemnt increments i by one each time it is run.")
+            console.log("The third statement increments i by one each time it is run.");
             console.log("-------------------------------------------------------");
         }
+
+        //For-loops are often used to iterate over arrays
+
+        var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];
+
+        for (i=0; i < zooAnimals.length; i++) { //Note use of array property length
+            console.log("I am going to zoo to see " + zooAnimals[i] + ".");
+        }
+
     </script>
     
 </body>
