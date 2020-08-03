@@ -26,6 +26,6 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
 ## 🏆 Bonus
 
-Comments are an key part of a developer's toolbox.  Why you think it so important to include comments in your code? How do you write single-line and multi-line comments in Javascript?
+Comments are a key part of a developer's toolbox.  Why do you think it so important to include comments in your code? How do you write single-line and multi-line comments in Javascript?
 
 
