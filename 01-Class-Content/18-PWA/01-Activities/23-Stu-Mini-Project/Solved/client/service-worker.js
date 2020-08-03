@@ -7,6 +7,8 @@ const FILES_TO_CACHE = [
   '/dist/app.bundle.js',
   '/dist/favorites.bundle.js',
   '/dist/topic.bundle.js',
+  'https://fonts.googleapis.com/css?family=Istok+Web|Montserrat:800&display=swap',
+  'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
 ];
 
 const PRECACHE = 'precache-v1';
@@ -42,11 +44,7 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  if (
-    event.request.url.startsWith(self.location.origin) ||
-    event.request.url.startsWith('https://fonts.googleapis.com') ||
-    event.request.url.startsWith('https://cdn.cloudflare.com')
-  ) {
+  if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         if (cachedResponse) {

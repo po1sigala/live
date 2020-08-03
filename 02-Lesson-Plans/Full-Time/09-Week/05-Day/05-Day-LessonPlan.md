@@ -701,6 +701,8 @@ In this activity, we will practice using multiple entry points to split up our J
 
 # 16. Student Do: Work on Mini-Project (60 mins)
 
+* Spend a few minutes getting students acclimated to this application setup in terms of the npm scripts used. They will not have seen this yet, but it's a good preview for the upcoming MERN-related weeks.
+
 ```md
 # PWA Mini-Project
 
@@ -708,7 +710,13 @@ In this activity we will take an existing news aggregator application and transf
 
 ## Instructions
 
-* Open the [Unsolved](Unsolved) folder and install dependencies by running `npm install` at the project root.
+* Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application. 
+
+* We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
+
+* We use another library called `concurrently` in development so we can run two processes at once. One for our Express server and one for Webpack. This way we don't have to start and stop the server every time something changes.
+
+* Install dependencies by running `npm install` at the project root. This will also install the once in the `client` directory.
 
 * Start the app by running `npm start` from the project root.
 
@@ -726,9 +734,7 @@ In this activity we will take an existing news aggregator application and transf
 
 ### Part 1
 
-* In the `client/` folder, create a `package.json` file either with the command `npm init` or using a `package.json` from a previous activity.
-
-* Using the `webpack.config.js` from the previous activities, create a new `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
+* Using the `webpack.config.js` from the previous activities, update the `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
 
 * Create an entry point for each file in `assets/js`.
 
@@ -894,14 +900,16 @@ loadPage();
 
 ```js
 const FILES_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/favorites.html",
-  "/topic.html",
-  "/assets/css/style.css",
-  "/dist/app.bundle.js",
-  "/dist/favorites.bundle.js",
-  "/dist/topic.bundle.js"
+  '/',
+  '/index.html',
+  '/favorites.html',
+  '/topic.html',
+  '/assets/css/style.css',
+  '/dist/app.bundle.js',
+  '/dist/favorites.bundle.js',
+  '/dist/topic.bundle.js',
+  'https://fonts.googleapis.com/css?family=Istok+Web|Montserrat:800&display=swap',
+  'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
 ];
 ```
 
@@ -928,6 +936,7 @@ entry: {
   ```js
   plugins: [
     new WebpackPwaManifest({
+      fingerprint: false,
       name: "Newsy app",
       short_name: "Newsy",
       description: "An application that allows you to view different news articles and save your favorites.",
@@ -949,6 +958,8 @@ entry: {
   * Some students may be frustrated with the amount of time they needed to spend refactoring code so that it could be easily chunked by webpack.
 
   * If this is the case, remind students that one of the main motivations behind chunking is reducing the bundle size of your code. While there are many strategies one can take to split up their code, it is important that it's split in a way that makes the code reusable and clear in purpose. Sometimes this means large amounts of refactoring functions. This is time well spent since they are making their code easier to test and easier for other developers to work with.
+
+---
 
 ### 18. Review Unit 18 (40 mins)
 
