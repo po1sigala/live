@@ -3,10 +3,10 @@
 
 * Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
-* This activity uses Bootstrap, so make sure you have the CDN added to your `public/index.html` file.
+* This activity uses Bootstrap, so make sure you import `bootstrap.css` in `index.js`
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+```js
+import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
 * Open `src/components/JSXVariables.js` and notice the values being requested inside of the component:
