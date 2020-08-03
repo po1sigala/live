@@ -1,13 +1,13 @@
-import React from "react";
-import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
-import friends from "./friends.json";
-import "./App.css";
+import React from 'react';
+import FriendCard from './components/FriendCard';
+import Wrapper from './components/Wrapper';
+import Title from './components/Title';
+import friends from './friends.json';
 
 function App() {
   return (
     <Wrapper>
-      <h1 className="title">Friends List</h1>
+      <Title>Friends List</Title>
       <FriendCard
         name={friends[0].name}
         image={friends[0].image}
