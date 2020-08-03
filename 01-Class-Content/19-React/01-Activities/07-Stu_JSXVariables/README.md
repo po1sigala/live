@@ -3,11 +3,7 @@
 
 * Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
-* This activity uses Bootstrap, so make sure you import `bootstrap.css` in `index.js`
-
-```js
-import 'bootstrap/dist/css/bootstrap.min.css';
-```
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Open `src/components/JSXVariables.js` and notice the values being requested inside of the component:
 
