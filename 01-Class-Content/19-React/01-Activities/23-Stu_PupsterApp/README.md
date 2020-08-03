@@ -14,6 +14,15 @@ In this activity we will work to create an entire React application from scratch
 
 * This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
+* **Recommended:** Add the Font Awesome CDNs to your application's `index.html` file:
+
+  ```html
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  ```
+  
 * Open [https://pupster.netlify.com/](https://pupster.netlify.com/) in your web browser and take a few moments to study the example application. You will be basing your Pupster app off of this example.
 
   * This example contains 3 routes:

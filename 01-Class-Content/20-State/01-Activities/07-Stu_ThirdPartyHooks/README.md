@@ -8,11 +8,12 @@ In this activity we will practice using third party Hooks. Specifically, we will
 
 * Install react-hanger by running `npm install react-hanger` in your terminal.
 
-* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
+
+* **Recommended:** Add the Font Awesome CDNs to your application's `index.html` file:
 
   ```html
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
   ```
 
 * Start the application in dev mode by running `npm start` in your terminal.
