@@ -4,7 +4,13 @@ In this activity we will take an existing news aggregator application and transf
 
 ## Instructions
 
-* Open the [Unsolved](Unsolved) folder and install dependencies by running `npm install` at the project root.
+* Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application. 
+
+* We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
+
+* We use another library called `concurrently` in development so we can run two processes at once. One for our Express server and one for Webpack. This way we don't have to start and stop the server every time something changes.
+
+* Install dependencies by running `npm install` at the project root. This will also install the once in the `client` directory.
 
 * Start the app by running `npm start` from the project root.
 
@@ -22,9 +28,7 @@ In this activity we will take an existing news aggregator application and transf
 
 ### Part 1
 
-* In the `client/` folder, create a `package.json` file either with the command `npm init` or using a `package.json` from a previous activity.
-
-* Using the `webpack.config.js` from the previous activities, create a new `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
+* Using the `webpack.config.js` from the previous activities, update the `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
 
 * Create an entry point for each file in `assets/js`.
 
