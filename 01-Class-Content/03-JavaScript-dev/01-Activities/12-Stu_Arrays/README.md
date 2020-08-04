@@ -21,9 +21,10 @@ Don't forget that arrays are zero-indexed!
 
 ## 🏆 Bonus
 
-Fun fact: The maximum number of elements in an array is 4,294,967,295! 
+What array property can be used to determine the number of elements in an array? Why might this be useful? 
 
-Thankfully, there is no need to count the number of elements in an array by hand. What is the array property used to return the number of elements in an array? 
+
+ 
 
 
  

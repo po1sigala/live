@@ -8,7 +8,7 @@ In this activity, you use a loop to iterate over an array.
 * Now, use a for-loop to console log an introduction for every student's name in the array. The introduction should read "My name is STUDENTNAME." 
 
 
-## 💡 Hints
+## 💡 Hint
 
 Loops are a great way to write DRY (Don't Repeat Yourself) code. 
 
