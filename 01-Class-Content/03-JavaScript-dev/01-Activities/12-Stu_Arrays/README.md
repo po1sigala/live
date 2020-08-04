@@ -9,12 +9,12 @@ In this activity, you use an array to store your classmate's names and then acce
 
 * Once you completed the introductions, replace the name of the first student in the array with name "Bob." 
 
-* If time allows, practice using you Javascript skills to check your work. Write a conditional statement to check if Bob is the first student listed in the array.  If he is, write a console log to introduce Bob. Otherwise, console log the name of the student who is currently first.
+* If time allows, practice using you Javascript skills to check your work. Write a conditional statement to check if Bob is the first student listed in the array.  If so, write a console log to introduce Bob. Otherwise, console log the name of the student who is currently first.
 
 
 ## 💡 Hints
 
-Take a look back at the comments you made during the conditional statements exercise last class if you need a refresher on syntax.
+Take a look back at the comments you made during the conditional statements exercise last class if you need a refresher.
 
 Don't forget that arrays are zero-indexed!
 
