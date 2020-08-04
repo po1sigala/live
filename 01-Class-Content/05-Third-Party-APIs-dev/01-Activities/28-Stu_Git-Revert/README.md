@@ -2,29 +2,28 @@
 
 In this activity, we will use `git revert` to "undo" a commit made earlier while keeping the commit history.
 
-# Instructions
+## Instructions
 
 * Navigate to a directory where you usually store your coding files using your command line.
 
 * Create a new directory called `git_revert_demo`:
 
-  ```
+  ```bash
   mkdir git_revert_demo
   ```
 
 * `cd` into that newly created directory and initialize an empty git repo in the directory:
 
-  ```
+  ```bash
   cd git_revert_demo
   git init .
   ```
-
-  ![Set up git_revert_demo directory](Images/01-Set-up-directory.png)
+  
 * Open the `git_revert_demo` directory in your IDE and copy the [script.js](./script.js) file into it. You'll notice it is the code from our previous activity on jQuery UI Interactions.
 
 * Make the initial commit:
 
-  ```
+  ```bash
   git add .
   git commit -m 'initial commit'
   ```
@@ -86,7 +85,7 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   git commit -m 'added Datepicker widget'
   ```
 
-* Lastly, add the `Sortable` interaction:
+* Lastly, repeat for the `Sortable` interaction:
 
   ```js
   // Sortable interaction
@@ -119,7 +118,6 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
 
 * Check the `script.js` file to see if the `Sortable` interaction is no longer there.
 
-
 * If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful one is the `--no-edit` option. This will not open the commit message editor and will automatically write a commit message for you.
 
 * To test it out, let's say we want to revert the `added Autocomplete widget` commit. 
@@ -138,4 +136,4 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
 
 * Ask an instructor or TA if you get stuck or have any questions!
 
-* Check the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options) for reference.
+* Check the [Git Revert Docs](https://git-scm.com/docs/git-revert) for reference.
