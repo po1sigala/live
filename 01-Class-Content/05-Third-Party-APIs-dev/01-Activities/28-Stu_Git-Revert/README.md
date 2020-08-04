@@ -28,7 +28,7 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   git commit -m 'initial commit'
   ```
 
-* In the `script.js` file, add the `Autocomplete` widget and save the file:
+* In the `git_revert_demo/script.js` file, add the code for the `Autocomplete` widget and save the file:
 
   ```js
   // Autocomplete widget
@@ -59,7 +59,7 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   });
   ```
 
-* In your terminal, commit the changes:
+* In your terminal, add and commit the changes:
 
   ```bash
   git add .
@@ -78,7 +78,7 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   });
   ```
 
-* Commit the changes: 
+* Add and commit the changes: 
 
   ```bash
   git add .
@@ -97,7 +97,7 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   });
   ```
 
-* Commit the changes:
+* Add and commit the changes:
 
   ```bash
   git add .
@@ -105,6 +105,8 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   ```
 
 * In your terminal, run `git log` to see the commit history. You should see all 4 commits.
+
+  ![Git log with all 4 commits](Images/01-Git-log-4-commits.png)
 
 * Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can use the git command `git revert`.
 
@@ -115,6 +117,8 @@ In this activity, we will use `git revert` to "undo" a commit made earlier while
   ```
 
 * This will create a new commit which will open up the commit message editor prompting for a new commit message. When Git is finished, we can use `git log` to see that there is a new commit added which reverted the `added Sortable interaction` commit.
+
+  ![Git log after reverting sortable interaction commit](Images/02-Git-log-revert-sortable-interaction.png)
 
 * Check the `script.js` file to see if the `Sortable` interaction is no longer there.
 
