@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Open the console to see it work</h2>
+
+    <script>
+
+        //Fix the error in the code. How can you make the variable shout available to all functions?  
+
+        function justShout() {
+            console.log(shout + ", " + shout);
+        }
+
+        function shoutItAllOut() { 
+            var shout = "Shout";  
+            console.log(shout + " it all out! ");
+            console.log("--------------------------");
+        }
+
+       justShout();
+       shoutItAllOut();
+
+       //
+
+//Scope the variable animal to be local to each function. Do not use a global variable!  
+
+function sayLions() {
+          var animal = "Lions"; //This should stay a local variable
+          console.log(animal);
+      }
+    
+      function sayTigers() {
+          console.log("and " + animal + " and "); //This should log "and tigers and "
+      }
+
+      function sayBears() {   
+          console.log(animal + "! OH  MY!"); //This should log "bears! OH MY!"
+          console.log("--------------------------");
+      }
+
+//This one is trickier! Hint: You only need one variable declaration. Don't add code!
+
+    var sing = "Sing";  //Move this inside the function to make all console logs run as expected
+
+      function singAlong() {
+          console.log(sing + ",");
+
+          var singASong = function () { 
+              console.log(sing + " a song.");
+              console.log("--------------------------");
+          };
+          singASong();
+      }
+
+      singAlong();
+
+    </script>
+    
+</body>
+</html>
