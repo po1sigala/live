@@ -3,6 +3,7 @@
 In this activity, you will use an array to store your classmate's names and  access the array's elements using index. 
 
 ## Instructions
+
 * Create an array containing the name of five of your classmates. The data should be stored in the variable `students`. 
 
 * Now, console log an introduction for each student in the array by accessing each name using index. The introduction should read: "My name is STUDENTNAME." 
@@ -20,9 +21,3 @@ Don't forget that arrays are zero-indexed!
 ## 🏆 Bonus
 
 What array property can be used to determine the number of elements in an array? Why might this be useful? 
-
-
- 
-
-
- 
