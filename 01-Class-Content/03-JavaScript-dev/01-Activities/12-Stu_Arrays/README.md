@@ -2,7 +2,7 @@
 
 In this activity, you will use an array to store your classmate's names and  access the array's elements using index. 
 
-## Instructions
+## Instructions  
 
 * Create an array containing the name of five of your classmates. The data should be stored in the variable `students`. 
 
