@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Open up the console to see it work! </h1>
+
+  <script>
+    // Script tags are used to embed Javascript into HTML
+    
+    //These are the variables 
+
+    var name = "Ramona"; //This variable type is string
+    var appleTotal = 10; //This variable type is number
+    var bananaTotal = 3;
+    var eggsTotal = 13;
+    var popcornTotal = 3;
+    var showInventory = true; //This variable type is boolean
+    var isCompanyComing = false;
+    var isMovieWeekend = true;
+
+    if (typeof name === "string") { //This checks to make the value of the data after the equal sign is a string and not undefined
+      console.log(name + "'s Shopping List"); // Console logs with name 
+    } else {
+      console.log("Shopping List"); //If returns false, console logs without name
+    };
+
+    //Uses && operator to add apples to the list if apple total is less than 10 and total of apples and bananas is less than 15
+    if ((appleTotal + bananaTotal < 15) && (appleTotal < 10)) {
+      console.log("Apples ☐ ");
+    };
+
+    //If have less than or equal to five bananas, add to list
+    if (bananaTotal <= 5) {
+      console.log("Bananas ☐ ");
+    };
+
+    //If eggs are less than 24 or company is coming, add eggs to the list
+    if (eggsTotal < 24 || isCompanyComing) {
+      console.log("Eggs ☐ ");
+    };
+
+    //If it is movie weekend or company is coming, add popcorn to the list
+    if (isMovieWeekend || isCompanyComing) {
+      console.log("Popcorn ☐ ");
+    };
+
+    //If show inventory is true, show inventory, else console log "Inventory Hidden"
+    
+    if (showInventory) {
+      console.log("----------------------------");
+      console.log("Existing Inventory");
+      console.log("Apples: " + appleTotal);
+      console.log("Bananas: " + bananaTotal);
+      console.log("Fruit: " + (appleTotal + bananaTotal));
+      console.log("Eggs: " + eggsTotal);
+      console.log("Popcorn: " + popcornTotal);
+      console.log("----------------------------");
+    } else {
+      console.log("Inventory hidden").
+    };
+  </script>
+
+</body>
+
+</html>
