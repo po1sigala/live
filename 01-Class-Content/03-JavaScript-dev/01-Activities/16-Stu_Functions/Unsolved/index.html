@@ -10,42 +10,41 @@
 
     <script>
 
+        var storyWords = ["Jack", "Jill", "hill", "water"];
+
         //Example 1
-        
-        var storyWords = ["Jack", "Jill", "hill", "water"];
 
-        function tellStory() {
+        function tellStoryOne() {
             console.log(storyWords[0] + " and " + storyWords[1]);
-        };
+        }
 
-        tellStory();
+        tellStoryOne();
 
-        var tellMoreStory = function() {
+        var tellMoreStoryOne = function() {
             console.log("went up the " + storyWords[2]);
             console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
         };
 
-        tellMoreStory();
-        
-  
+        tellMoreStoryOne();  
+
+         /*--------------------------------------------------------------------------------------*/ 
+
         //Example 2
-      
-       /*
-        var storyWords = ["Jack", "Jill", "hill", "water"];
 
-        tellStory();
+        tellStoryTwo();
 
-        function tellStory() {
+        function tellStoryTwo() {
             console.log(storyWords[0] + " and " + storyWords[1]);
-        };
+        }
 
-        tellMoreStory();
+        tellMoreStoryTwo();
 
-        var tellMoreStory = function() {
+        var tellMoreStoryTwo = function() {
             console.log("went up the " + storyWords[2]);
             console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
         };
-        */
         
     </script>
     

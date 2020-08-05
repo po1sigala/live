@@ -9,55 +9,54 @@
     <h2>Open the console to see it work</h2>
 
     <script>
-        //Don't forget to comment out the Example that you DO NOT want to execute 
 
-        //Example 1
-        
         var storyWords = ["Jack", "Jill", "hill", "water"]; //This is an array
 
-        function tellStory() { // This uses the function keyword to declare the function. 
-            //This is the code that executes
+        //Example 1
+
+        function tellStoryOne() { //This uses the function keyword to declare the function. 
+
             console.log(storyWords[0] + " and " + storyWords[1]); //This is the code that executes
         }
 
-        tellStory();  //This calls the function using the name of the function plus ().
+        tellStoryOne();  //This calls the function 
 
-        var tellMoreStory = function() { // This stores a function as a value in a variable 
+        var tellMoreStoryOne = function() { //This stores a function as a value in a variable 
 
-            //This is the code that executes 
-            console.log("went up the " + storyWords[2]); // The console logs using array inded
+            //This is the code that executes
+
+            console.log("went up the " + storyWords[2]); // The console logs using array index
             console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
         };
 
-        tellMoreStory(); //To call a function expression you use the variable name plus ()
+        tellMoreStoryOne(); //This calls the function expression. 
         
-  
+        /*--------------------------------------------------------------------------------------*/
+
         //Example 2
       
-       
-        var storyWords = ["Jack", "Jill", "hill", "water"]; //This is the same array as above.
+        tellStoryTwo(); //Here the function is called before the function declaration.
 
-        tellStory(); //Here the function is called before the function declaration
+        //The function declaration works because is it moved to the top of the page before the code is run
 
-        //The function declaration works because function declarations are hoisted to the top of the code.
-        //So, the function declaration has already been "read" and is available for use.
-
-        function tellStory() {
+        function tellStoryTwo() {
             console.log(storyWords[0] + " and " + storyWords[1]);
         }
 
-        tellMoreStory();  //Here the function is called before the function expression
+         //tellMoreStoryTwo();
 
-        //Function expressions do not get hoisted to top like function declarations. So they have to wait their turn and be read in order
-        // In this case, since the function is called before its value is stored in a variable, it returns an error.
+        //Function expressions are read in order.
+        // Since the function was called before the function expression was created, it returns an error.
         
-
-        var tellMoreStory = function() {
+        var tellMoreStoryTwo = function() {
             console.log("went up the " + storyWords[2]);
             console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
         };
-        
-        
+
+        tellMoreStoryTwo(); //Calling the funetion below where it is created will make it work.  
+
     </script>
     
 </body>

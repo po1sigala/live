@@ -4,14 +4,16 @@ In this activity, you will work with a partner to dissect existing function decl
 
 ## Instructions
 
-* Working with a partner, compare and contrast the code in Example 1. Which one is a function declaration? Which one is a function expression? Do both functions perform the same task? What components are shared/different for each type of function?  Make sure you write ample comments explaining your observations. 
+* In Example 1, find the function declaration. One partner should describe the code, focusing on the key parts of the function and how it is called. The other partner should write ample comments on the code. These comments can be used for review. 
 
-* If time allows, compare Example 1 to Example 2. Do you think that both examples will work the same way? Then, comment out Example 1 and un-comment Example 2 so only the second example will execute. Run the code and discuss with your partner the results. Is it what you expected? 
+* Then, switch roles to discuss function expressions. What makes function expressions different from function declarations? Do both functions in Example 1 produce the same output? Don't forget the comments! 
 
-## 💡 Hints
+* Finally, take a look at Example 2. Unlike Example 1, one of the functions is broken. As a team, talk about what is different between the two examples. What do you think may be going on? If time allows, discuss how you might fix the code. 
 
 
-Commenting out code is a great way to prevent execution of a block of code without having to remove it completely. 
+## 💡 Hint
+
+Look for the keyword `function` to identify function declarations and function expressions.   
 
 ## 🏆 Bonus
 

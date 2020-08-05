@@ -14,27 +14,27 @@
 
         //Sort Method 
 
-        var villians = ["Magneto", "Voldemort", "Thanos", "Scar", "Sauron", "Joker"];
+        var villians = ["Magneto", "Voldemort", "Thanos", "Ursula", "Sauron", "Cruella de Vil"];
         villians.sort(); // sorts villians
         console.log(villians);
 
-        //Reverse method
+        //Sort and Reverse
 
-        var heroes = ["James Bond", "Indiana Jones", "Hans Solo", "Lassie"];
-        heroes.reverse();
+        var heroes = ["Princess Leia", "Indiana Jones", "Hans Solo", "Lassie"];
+        heroes.sort().reverse();
         console.log(heroes);
 
-        //Strings can also do a lot of the same things as arrays
-
-        // Use bracket notation to get character in a string note similarity to array
+        //Strings also have methods
 
         var myString = "Hello";
 
-        console.log(myString[0]); //logs H 
+        //Methods used search() and charAt()
 
-        //Then use a string method to check the index
-
-        console.log(myString.search("H")); //Logs 0 since H is first in the string
+        if(myString[0] === myString.search("H")) {  //Uses bracket notation to get first character 
+            console.log("The first letter of the string is H")
+        } else {
+            console.log( myString.charAt(0));  //Uses string method to get first character in string
+        }
 
     </script>
     

@@ -10,56 +10,57 @@
 
     <script>
 
-        //Fix the error in the code. How can you make the variable shout available to all functions?  
+        //Fix the error in the code. How can you make the variable shout available to all functions?
 
         function justShout() {
             console.log(shout + ", " + shout);
         }
 
-        function shoutItAllOut() { 
-            var shout = "Shout";  
+        function shoutItAllOut() {
+            var shout = "Shout";
             console.log(shout + " it all out! ");
             console.log("--------------------------");
         }
 
-       justShout();
-       shoutItAllOut();
+        justShout();
+        shoutItAllOut();
 
-       //
+        /*-------------------------------------------------------------------------------*/
 
-//Scope the variable animal to be local to each function. Do not use a global variable!  
+        //Scope the variable animal to be local to each function below.
 
-function sayLions() {
-          var animal = "Lions"; //This should stay a local variable
-          console.log(animal);
-      }
-    
-      function sayTigers() {
-          console.log("and " + animal + " and "); //This should log "and tigers and "
-      }
+        function sayLions() {
+            var animal = "Lions"; //Don't change this variable!
+            console.log(animal);
+        }
 
-      function sayBears() {   
-          console.log(animal + "! OH  MY!"); //This should log "bears! OH MY!"
-          console.log("--------------------------");
-      }
+        function sayTigers() {
+            console.log("and " + animal + " and "); //This should log "and tigers and "
+        }
 
-//This one is trickier! Hint: You only need one variable declaration. Don't add code!
+        function sayBears() {
+            console.log(animal + "! OH  MY!"); //This should log "bears! OH MY!"
+            console.log("--------------------------");
+        }
 
-    var sing = "Sing";  //Move this inside the function to make all console logs run as expected
+         /*-------------------------------------------------------------------------------*/
 
-      function singAlong() {
-          console.log(sing + ",");
+        //This one is trickier! Hint: You only need one variable declaration to make both the inner and outer console logs work.
 
-          var singASong = function () { 
-              console.log(sing + " a song.");
-              console.log("--------------------------");
-          };
-          singASong();
-      }
+        var sing = "Sing"; //Move this inside the function to make it a local variable
 
-      singAlong();
+        function singAlong() {
+            console.log(sing + ",");
+            var singASong = function () {
+                console.log(sing + " a song.");
+                console.log("--------------------------");
+            };
+            singASong();
+        }
+
+        singAlong();
 
     </script>
-    
+      
 </body>
 </html>
