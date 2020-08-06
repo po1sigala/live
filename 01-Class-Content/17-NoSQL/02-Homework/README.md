@@ -22,6 +22,12 @@ The user should be able to:
 
   * View multiple the combined weight of multiple exercises on the `stats` page.
 
+To deploy your application with a MongoDB database to Heroku, you'll need to be set up with a MongoDB Atlas account and connect a database from there to your application. Be sure to use these guides for support:
+
+  * [MongoDB Atlas - Account Setup](../04-Supplemental/MongoAtlas-Setup.md)
+
+  * [MongoDB Atlas - Deploying with Heroku](../04-Supplemental/MongoAtlas-Deploy.md)
+
 ## Commit Early and Often
 
 One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:

@@ -12,7 +12,7 @@ We'll use its free service tier to host our MongoDB databases for our production
 
 * To begin your sign up process, navigate to the [MongoDB Atlas sign up page,](https://www.mongodb.com/cloud/atlas/signup) which should look like this image:
 
-  ![The MongoDB Atlas sign up page shows us a form to create an account.](./images/100-mongodb-signup.png)
+  ![The MongoDB Atlas sign up page shows us a form to create an account.](./assets/images-atlas/100-mongodb-signup.png)
 
 * Fill out all of the required fields in the form and choose "I'm learning MongoDB" for the "How are you using MongoDB?" dropdown. When you're done, select the "Get started free" button to be brought to a page to choose your path and price tier.
 
@@ -20,7 +20,7 @@ We'll use its free service tier to host our MongoDB databases for our production
 
 * The next page looks something like this image:
 
-  ![The MongoDB Atlas path options show three different priced tiers.](./images/200-cluster-pick.png)
+  ![The MongoDB Atlas path options show three different priced tiers.](./assets/images-atlas/200-cluster-pick.png)
 
 * From this page, select the "Shared Cluster" plan on the left by clicking the "Create a cluster" button. This will begin the process of creating your first MongoDB Atlas cluster, which is simply a server that allows you to create and maintain multiple MongoDB databases.
 
@@ -30,7 +30,7 @@ We'll use its free service tier to host our MongoDB databases for our production
 
 * When you select the "Shared Cluster" tier, you should see a screen to create your starter cluster, resembling this image:
 
-  ![MongoDB Atlas displays options for creating your start cluster.](./images/300-cluster-provider.png)
+  ![MongoDB Atlas displays options for creating your start cluster.](./assets/images-atlas/300-cluster-provider.png)
 
 * On this page, you're prompted to pick a service provider and where you'd like the cluster to be hosted. Since it's free, the options don't matter too much, but it's easiest to just pick Amazon Web Services (AWS) as the provider and whatever recommended region is closest to you.
 
@@ -46,7 +46,7 @@ We'll use its free service tier to host our MongoDB databases for our production
 
 * **Add New Database User:** On the left-hand navigation menu, select the "Database Access" link underneath the "Security" header. The page should look like this image, where you can fill out the form as directed: 
 
-  ![The add user form allows us to create a new user with varying access to our databases.](./images/400-add-user.png)
+  ![The add user form allows us to create a new user with varying access to our databases.](./assets/images-atlas/400-add-user.png)
 
   * To fill out the form:
 
@@ -66,10 +66,12 @@ We'll use its free service tier to host our MongoDB databases for our production
 
   * Click "Add IP Address" to open up a modal that looks like this image:
 
-    ![The modal for allowing IP addresses provides a form to enter your IP address](./images/500-network-access.png)
+    ![The modal for allowing IP addresses provides a form to enter your IP address](./assets/images-atlas/500-network-access.png)
 
   * To make your database accessible from anywhere, click the button for "Allow Access From Anywhere" so it fills in the "Whitelist Entry:" value to `0.0.0.0/0`.
 
   * Click "Confirm" to finalize this process.
 
 * That's it for now! We don't need to worry about adding sample data or connecting just yet. 
+
+* Now that we're all set up with our accounts, let's create a [production-ready database for deployment!](./MongoAtlas-Deploy.md)
