@@ -1,7 +1,5 @@
 # Career Connection
 
-## Career Connection
-
 ![Career Services Logo](./assets/cs_logo.png#right)
 
 Now you've learned some of the fundamental technologies on which all web applications are built. And you added another tool to your skill set: JavaScript! Never underestimate the importance of JavaScript as a web technology. More than 94% of websites use it in some way. To learn more, read this [Medium.com article about JavaScript's importance to modern web developers](https://medium.com/@mindfiresolutions.usa/how-important-is-javascript-for-modern-web-developers-2854309b9f52).
@@ -10,17 +8,17 @@ If you search for JavaScript on [Indeed.com](https://indeed.com/), you'll find h
 
 You don't need to understand what a framework or library is right now. Just know that you can also search any of the following terms for valid JavaScript job postings:
 
-- NodeJS
+* NodeJS
 
-- Express
+* Express
 
-- React
+* React
 
-- Angular
+* Angular
 
-- Vue
+* Vue
 
-- jQuery
+* jQuery
 
 We'll teach you some of these technologies in this course, and you'll come to understand what all of them are. The bottom line is that JavaScript has invaded basically every area of web development!
 
