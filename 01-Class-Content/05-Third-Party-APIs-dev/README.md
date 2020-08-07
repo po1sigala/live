@@ -66,15 +66,15 @@ You will be employer-competitive if you are able to:
 
 ## Resources
 
-  * [jQuery API Docs](https://api.jquery.com/)
+* [jQuery API Docs](https://api.jquery.com/)
 
-  * [Bootstrap Docs](https://getbootstrap.com)
+* [Bootstrap Docs](https://getbootstrap.com)
 
-  * [Google Fonts Docs](https://fonts.google.com)
+* [Google Fonts Docs](https://fonts.google.com)
 
-  * [jQuery UI Docs](https://jqueryui.com/demos/)
+* [jQuery UI Docs](https://jqueryui.com/demos/)
 
-  * [Moment.js Docs](https://momentjs.com/docs/)
+* [Moment.js Docs](https://momentjs.com/docs/)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
