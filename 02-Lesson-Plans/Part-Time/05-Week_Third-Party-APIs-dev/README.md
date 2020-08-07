@@ -28,41 +28,41 @@ Next unit, we will work with Server-Side APIs. It is recommended that you try to
 
 ### Lesson Plans
 
-  * [05.1 - Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
+* [05.1 - Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
 
-  * [05.2 - Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
+* [05.2 - Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
 
-  * [05.3 - Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
+* [05.3 - Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
-  * [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
+* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
 
 ### Slide Decks
 
-  * N/A
+* N/A
 
 ### Algorithms
 
-  * [01-fizz-buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+* [01-fizz-buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
 
-  * [02-max-num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+* [02-max-num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
 
-  * [03-vowel-count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+* [03-vowel-count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
 ### Resources
 
-  * [jQuery API Docs](https://api.jquery.com/)
+* [jQuery API Docs](https://api.jquery.com/)
 
-  * [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
+* [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-  * [Bootstrap Docs](https://getbootstrap.com)
+* [Bootstrap Docs](https://getbootstrap.com)
 
-  * [Google Fonts Docs](https://fonts.google.com)
+* [Google Fonts Docs](https://fonts.google.com)
 
-  * [jQuery UI Docs](https://jqueryui.com/demos/)
+* [jQuery UI Docs](https://jqueryui.com/demos/)
 
-  * [Moment.js Docs](https://momentjs.com/docs/)
+* [Moment.js Docs](https://momentjs.com/docs/)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
