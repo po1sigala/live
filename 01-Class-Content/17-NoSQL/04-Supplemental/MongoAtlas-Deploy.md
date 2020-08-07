@@ -14,7 +14,7 @@ If you don't have a MongoDB Atlas account, please see our [Mongo Atlas Setup gui
 
   ![The MongoDB Atlas cluster shows that there are no databases created yet.](./assets/images-deploy/200-collections.png)
 
-* From this page, select the "Add My Own Data" button to open up a modal dialog. If you have already created a database in the past and need to create another one, you will need to click the "+ Create Database" button in the left column of the window pane. The modal should look like this image:
+* From this page, select the "Add My Own Data" button to open up a modal dialog. If you have previously created a database through MongoDB Atlas in the past and need to create another one for this app, you will need to click the "+ Create Database" button in the left column of the window pane instead. Either way, the resulting modal should look like this image:
 
   ![The modal dialog allows users to create a database name and starter collection](./assets/images-deploy/300-create-db.png)
 
@@ -102,4 +102,15 @@ If you don't have a MongoDB Atlas account, please see our [Mongo Atlas Setup gui
 
 * With this code in place, the `mongoose.connect()` command will attempt to use the environment variable first. If it's running on Heroku, it'll find that variable and use it. If it's running locally on your machine, it won't find that variable and fall back to use your local database connection instead.
 
-* That's all! Save your code and use you Git commands to add, commit, and push your code to Heroku.
+* Save your code and use you Git commands to add, commit, and push your code to Heroku, as this code shows:
+
+  ```bash
+  git add -A
+  git commit -m 'deploying'
+  # make sure you're pushing from your local master branch!
+  git push heroku master
+  ```
+
+* If everything worked correctly, use `heroku open` to open your app in the browser and see your work! If something isn't working, run `heroku logs` from the command line and see where there may be any issues.
+
+* Happy coding!

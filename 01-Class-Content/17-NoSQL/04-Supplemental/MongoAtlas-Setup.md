@@ -34,6 +34,8 @@ We'll use its free service tier to host our MongoDB databases for our production
 
 * On this page, you're prompted to pick a service provider and where you'd like the cluster to be hosted. Since it's free, the options don't matter too much, but it's easiest to just pick Amazon Web Services (AWS) as the provider and whatever recommended region is closest to you.
 
+* Feel free to skip the "Cluster Tier" and "Additional Settings" options, as they don't pertain to our work unless you want a paid plan.
+
 * Lower on this page, you have the option to name your cluster as well. If you leave it as is, it will be given a generic name like "Cluster0", but you may choose to provide it with your own name as well.
 
 * Once you've picked all of your settings for this cluster, select the "Create Cluster" button in the lower right hand side of the page and you'll be brought to your Mongo Atlas dashboard.
