@@ -6,7 +6,7 @@ In this activity we will practice using the useState hook in React.
 
 - Replace your React application's src folder with [Unsolved/src](Unsolved/src).
 
-- If you created a new React app, you will need to add the Bootstrap link to `index.html`.
+- If you created a new React app, you will need to install Bootstrap by running `npm install --save bootstrap` and adding `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`.
 
 - Start the application in dev mode by running `npm start` in your terminal.
 

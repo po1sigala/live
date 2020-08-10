@@ -1,8 +1,12 @@
+# Store
+
 In this activity you will be creating a store that contains the global state and a reducer. We will also add some functionality to our Todo list.
 
 # Instructions
 
 * Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Start the application in dev mode by running `npm start` in your terminal.
 

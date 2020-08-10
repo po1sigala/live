@@ -1,8 +1,12 @@
+# useReducer Hook
+
 In this activity we will practice using the `useReducer` Hook.
 
   # Instructions
 
   * Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+
+  * This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
   * Start the application in dev mode by running `npm start` in your terminal.
 
