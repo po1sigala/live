@@ -8,18 +8,14 @@ In this activity we will review passing props down the component tree in React.
 
 * Install axios by running `npm install axios` in your terminal.
 
-* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
+
+* **Recommended:** Add the Font Awesome CDNs to your application's `index.html` file:
 
   ```html
   <link
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous"
   />
   ```
 

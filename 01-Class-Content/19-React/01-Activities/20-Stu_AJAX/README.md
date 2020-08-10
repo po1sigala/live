@@ -6,11 +6,7 @@ In this activity we will create a simple React application with which users can 
 
 * Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). 
 
-* This example uses Bootstrap, so be sure to add the Bootstrap CDN to your application's `index.html` file. You may use the following snippet below:
-
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-```
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Be sure to install the axios library by running `npm install axios` in your terminal.
 

@@ -4,21 +4,21 @@ In this activity, we will utilize Bootstrap CSS and render components utilizing 
 
 ## Instructions
 
-* Replace your application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
+* Replace your application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. 
 
-* Add a Bootstrap CDN to the head of your React application's `index.html` file inside `public/index.html`.
+* Run `npm install --save bootstrap` in your command line to install Bootstrap.
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-```
+* Add `import 'bootstrap/dist/css/bootstrap.min.css';` to the `index.js` file.
 
-* Inside of the `src/components` folder, create a brand new file named `HelloBootstrap.js`. Add code to this file to accomplish the following:
+* Start the app in dev mode by running `npm start`.
+
+* Create a `components` folder and inside it create a brand new file named `HelloBootstrap.js`. Add code to this file to accomplish the following:
 
   * It should render a [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/), followed by a [Bootstrap Jumbotron](https://getbootstrap.com/docs/4.0/components/jumbotron/), and lastly a [Bootstrap Card](https://getbootstrap.com/docs/4.0/components/card/).
 
   * Set the default export of this file to be your `HelloBootstrap` component.
 
-* Update the `src/App.js` file so that it imports the `src/components/HelloBootstrap.js` file. Render the `HelloBootstrap` component instead of the paragraph that is currently being rendered.
+* Update the `src/App.js` file so that it imports the `src/components/HelloBootstrap.js` file. Render the `HelloBootstrap` component instead of the text that is currently being rendered.
 
 ### Hints
 
