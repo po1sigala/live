@@ -12,7 +12,7 @@ You and your group will use everything you’ve learned to create a real-world a
 
 * Be interactive (i.e: accept and respond to user input).
 
-* Use at least one new library, package, or technology not covered in class.
+* Use a CSS framework.
 
 * Use client-side storage to store persistent data.
 
@@ -53,11 +53,11 @@ This project is graded based on the following criteria:
 
     * Application uses at least 2 server-side APIs.
 
-	* Application is interactive (accepts and responds to user input).
+    * Application is interactive (accepts and responds to user input).
 
-	* Application uses client-side storage to store persistent data.
+    * Application uses client-side storage to store persistent data.
 
-    * Application uses at least one new library, package, or technology not covered in class.
+    * Application uses a CSS framework.
 
 ### Concept 10%
 
