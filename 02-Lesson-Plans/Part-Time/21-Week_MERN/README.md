@@ -33,11 +33,11 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Time Tracker(s)
 
-  * [Unit 21-MERN Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1mZOzw2A6_s5C_u-18Z1hFxNO4m9FqDc_qiq0c_Tis80/edit#gid=1323041200)
+  * [Unit 21-MERN Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1Qm57-Qog5yLsRSi7_9u-DhN3dkbNZiqQDv9f7ga9KcE/edit?usp=sharing)
 
-  * [Unit 21-MERN Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1uEOFspLvfjW6erY3dHVnOx5FXQal0ZUO9XIsYyobfXE/edit#gid=1526123852)
+  * [Unit 21-MERN Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nMYaCRVlwwzrXGESZLnLo5gI9ZmjGF8BUMpLcUeSCC0/edit?usp=sharing)
 
-  * [Unit 21-MERN Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1tCQWgjimAwuPSHc2KSJfYLKA2pEcMfHQf8AZnfWfYKA/edit#gid=1938794889)
+  * [Unit 21-MERN Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1Mbc793dllqCJxl6_lrtIEG0YckCePxwHr-Z3H7n7T7Y/edit?usp=sharing)
 
 ## Algorithms
 
