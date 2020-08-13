@@ -1,21 +1,24 @@
-# Installing MongoDB on your Machine
+# Install MongoDB
+
+This guide walks you through installing MongoDB on Windows and macOS.
 
 ### Contents
 
-* [Installing MongoDB on your Machine](#installing-mongodb-on-your-machine)
-  * [1. Installing MongoDB on Windows](#1-installing-mongodb-on-windows)
-  * [2. Configuring MongoDB on Windows](#2-configuring-mongodb-on-windows)
-  * [3. Installing MongoDB on MacOS](#3-installing-mongodb-on-macos)
+* [Install MongoDB on Windows](#install-mongodb-on-windows)
+* [Configure MongoDB on Windows](#configure-mongodb-on-windows)
+* [Install MongoDB on macOS](#install-mongodb-on-macos)
 
 - - -
 
-## 1. Installing MongoDB on Windows
+## Install MongoDB on Windows
 
-1. Go to the MongoDB download page: <a href="https://www.mongodb.com/download-center#community" target="_blank">MongoDB Download Center</a>
+This section contains instructions for installing MongoDB on Windows.
+
+1. Go to the <a href="https://www.mongodb.com/download-center#community" target="_blank">MongoDB Download Center</a>.
 
 2. Scroll down, go to the green box with the Community Server Tab highlighted.
 
-3. Go to the dropdown menu labeled "Version." Select "Windows 64-bit x64," then click the "DOWNLOAD (msi)" button.
+3. In the Version dropdown, choose "Windows 64-bit x64". Then click the "DOWNLOAD (msi)" button.
 
 4. The next page will thank you for downloading MongoDB then show a newsletter link. You can ignore this. In a few seconds, your browser will notify you that the file is downloading.
 
@@ -23,13 +26,13 @@
 
 * When the installer prompts you to "Choose Setup Type," click the Complete button, then carry on.
 
-* **DO NOT** Install `Compass` along with your MongoDB install.
+* **DO NOT** install Compass along with your MongoDB install.
 
 * A window might pop up mid-installation, asking you whether you’re sure you want to download a particular component of MongoDB. Click yes, otherwise the install will fail.
 
 - - -
 
-## 2. Configuring MongoDB on Windows
+## Configure MongoDB on Windows
 
 1. **IMPORTANT**: You need to create a data directory for your MongoDB installation, or it won't run. Open Git Bash, then cd your way to the root directory:
 
@@ -64,32 +67,32 @@
 
 15. **NOTE**: No "b" at the end, simply `mongod`
 
-16. If mongod is still running, great job! Now go ahead and open a new instace of Git Bash, and enter the command: `mongo`. This will initialize the Mongo Shell and allow you to begin entering commands via the Mongo Shell. Congratulations, you’ve installed MongoDB. Your instructor will take it from here.
+16. If `mongod` is still running, great job! Now go ahead and open a new instace of Git Bash, and enter the command: `mongo`. This will initialize the Mongo Shell and allow you to begin entering commands via the Mongo Shell. Congratulations, you’ve installed MongoDB. Your instructor will take it from here.
 
-17. If mongod didn’t run, and instead your bash threw a "command not found" error, make sure you added MongoDB’s bin directory to your PATH variable (see step B.3). Then, close out git bash and try running mongod again.
+17. If `mongod` didn’t run, and instead your bash threw a "command not found" error, make sure you added MongoDB’s bin directory to your PATH variable (see step B.3). Then, close out git bash and try running mongod again.
 
-18. If mongod starts but closes after a series of prompts, make sure you created the data/db directory in your root. MongoDB cannot run without this directory (see steps 2.1-2.2).
+18. If `mongod` starts but closes after a series of prompts, make sure you created the data/db directory in your root. MongoDB cannot run without this directory (see steps 2.1-2.2).
 
-19. If you’re still encountering issues starting mongod, please ask for assistance from one of the TAs or the instructor.
+19. If you're still encountering issues when attempting to start `mongod`, please ask for assistance from a TA or the instructor.
 
 - - -
 
-## 3. Installing MongoDB on MacOS
+## Install MongoDB on macOS
 
-Use [the mongoDB Documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) as a reference if you encounter problems.
+Refer to the [MongoDB Documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) if you encounter problems.
 
-### Pre-requisites
+### Prerequisites
 
-* [XCode](https://developer.apple.com/xcode/) should have been installed as part of the pre-work.
-* [Homebrew](https://brew.sh/) should have been installed as part of the pre-work.
+* [XCode](https://developer.apple.com/xcode/) should have been installed as part of the prework.
+* [Homebrew](https://brew.sh/) should have been installed as part of the prework.
 
-### Installation
+### Install MongoDB
 
 Run the following commands:
 
 1. `brew tap mongodb/brew`
 
-2. `brew install mongodb-community@4.2` (The version may have changed. See [this guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#procedure) for the latest version to use with this command.)
+2. `brew install mongodb-community@4.2` (The version may have changed. See the [MongoDB macOS installation guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#procedure) for the latest version to use with this command.)
 
 ### Run MongoDB as a Service
 
@@ -97,6 +100,6 @@ Run the following commands:
 
 Verify the service is running with `ps aux | grep -v grep | grep mongod`.
 
-If you don't see any output from the command above, try restarting the service with `brew services restart mongodb-community`.
+If you don't see any output from the preceding command, restart the service by using `brew services restart mongodb-community`.
 
-If you are still encountering issues starting mongod, please ask for assistance from one of the TAs or the instructor.
+If you're still encountering issues when attempting to start `mongod`, please ask for assistance from a TA or the instructor.
