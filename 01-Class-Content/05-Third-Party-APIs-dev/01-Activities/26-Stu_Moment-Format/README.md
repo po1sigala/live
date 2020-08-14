@@ -1,25 +1,33 @@
 # Moment Format
 
-In this activity, you will work with a partner and research documentation to answer the questions form the Moment Quiz.
+In this activity, you will work with a partner to use Moment.js documentation to format dates and print them on to the page.
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* Navigate to the [unsolved script file](./Unsolved/assets/js/script.js).
+* Navigate to the [Moment.js Docs](https://momentjs.com/docs/#/displaying/) in your browser.
 
-* Examine the code in the preceding file and follow the format instructions located in the `TODO:` comments. 
+* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
 
-* Refer to the [official documentation for Moment.js](https://momentjs.com/docs/#/displaying/) to implement the following feature:
+* Using the documentation, implement the following:
 
-  * Format the date as requested and assign to the declared variable. 
+  * We see a list of questions regarding different dates and different formatting of dates.
 
-## 🏆 Bonus
+  * We want to answer these questions and print the correct dates on to the page using the format requested.
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an bonus exercise. Read the docs to find how to measure the difference between two time stamps with `Moment.js`.
-
-* Check the [solution](./Solved/assets/js/script.js) after class and compare it against your own file. 
+  * Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
 
 ## 💡 Hint(s)
 
-* `Moment.js` is able to format ISO 8601 strings. More about this is located on the [official documentation page for Moment.js regarding parsing.](https://momentjs.com/docs/#/parsing/)
+* Refer to the official docs for [Moment.js parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
+
+* Check out [index.html](Unsolved/index.html) in your browser to see your progress.
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an bonus exercise: 
+  
+  * How can we measure the difference between two time stamps with `Moment.js`?
+
+* Read the [Moment.js Docs](https://momentjs.com/docs/) to dig deeper into how this works.
