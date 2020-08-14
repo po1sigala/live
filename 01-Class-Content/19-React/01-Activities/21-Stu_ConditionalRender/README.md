@@ -6,11 +6,7 @@ In this activity we will render one of four different components based upon our 
 
 * Replace your application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
-* This application uses Bootstrap, so make sure you're including the Bootstrap CSS CDN.
-  
-  ```html
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-  ```
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Navigate to [localhost:3000](http://localhost:3000) in your web browser and take a moment to study the rendered application.
 

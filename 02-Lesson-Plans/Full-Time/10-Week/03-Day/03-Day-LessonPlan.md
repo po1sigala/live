@@ -6,7 +6,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ## Instructor Notes
 
-- `Summary: Complete activities 19-React/01-Activities/22-Ins_IntroReactRouter/ through 20-State/01-Activities/05-Ins_CustomHook.`
+- `Summary: Complete activities 19-React/01-Activities/22-Ins_IntroReactRouter/ through 20-State/01-Activities/06-Stu_CustomHook.`
 
 - As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
@@ -251,7 +251,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ### 7. Instructor Do: useState Demo (10 mins)
 
-- Run `08-Ins_useState` by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+- Run `01-Ins_useState` by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   - When the application loads, 'Status' is set to the default string, 'content'.
 
@@ -259,7 +259,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
   - Clicking the 'Fill with Determination' button changes 'Status' to 'determined'.
 
-- Open [01-Ins_useState/src/App.js](../../../../01-Class-Content/20-react/01-Activities/01-Ins_useState/src/App.js) in your IDE and explain the following:
+- Open [01-Ins_useState/src/App.js](../../../../01-Class-Content/20-State/01-Activities/01-Ins_useState/src/App.js) in your IDE and explain the following:
 
   - From React, we import `useState`.
 
@@ -310,7 +310,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ### 8. Students Do: useState Activity (15 mins)
 
-Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/20-react/01-Activities/02-Stu_useState/Unsolved)
+Files: [02-Stu_useState/Unsolved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Unsolved)
 
 ```md
 In this activity we will practice using the useState hook in React.
@@ -338,7 +338,7 @@ In this activity we will practice using the useState hook in React.
 
 ### 9. Instructor Do: Review useState Activity (10 mins)
 
-- Run [02-Stu_useState/Solved](../../../../01-Class-Content/20-react/01-Activities/02-Stu_useState/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+- Run [02-Stu_useState/Solved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   - Email and password values entered into the input fields are rendered in the DOM.
 
@@ -404,7 +404,7 @@ In this activity we will practice using the useState hook in React.
 
   - For example, if one were to create a method that is responsible for creating a user, they could separate it into one regular method that creates the object/validates the data and one effect method that saves the user to a database.
 
-- Open up [03-Ins_useEffect/App.js](../../../../01-Class-Content/20-react/01-Activities/03-Ins_useEffect/App.js) in your IDE.
+- Open up [03-Ins_useEffect/App.js](../../../../01-Class-Content/20-State/01-Activities/03-Ins_useEffect/src/App.js) in your IDE.
 
   - Let the students know that `useEffect` is a method that takes two arguments.
 
@@ -460,7 +460,7 @@ In this activity we will practice using the useState and useEffect Hooks in Reac
 
 ### 12. Instructor Do: Review useEffect (10 mins)
 
-- Run [04-Stu_useEffect/Unsolved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+- Run [04-Stu_useEffect/Solved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   - The application immediately queries the Wikipedia API based on input.
 
@@ -540,7 +540,7 @@ In this activity we will practice using the useState and useEffect Hooks in Reac
 
 * Let students know that just as with `useState` and `useEffect`, different components that use the same custom Hook do **not** share the same state.
 
-- Open [CustomHook Demo](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/) in your browser.
+- Open [05-Ins_CustomHook](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/) in your browser.
 
 * Show students that when you change the value of the `status` input field, the corresponding section in the card updates.
 

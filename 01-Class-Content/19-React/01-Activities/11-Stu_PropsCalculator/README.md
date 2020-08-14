@@ -6,6 +6,8 @@ In this activity we will write a component that can perform some arithmetic usin
 
 * Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`.
+
 * Open your web browser to [localhost:3000](http://localhost:3000). Take a moment to observe the rendered app.
 
 * Open `src/components/Calculator.js` in your editor and take a moment to study the application's code.

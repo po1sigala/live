@@ -36,7 +36,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ### 1. Students Do: Third Party Hooks (20 mins)
 
-- If time permits, introduce students to [16-ThirdPartyHooks/Unsolved/](../../../../01-Class-Content/21-react/01-Activities/16-ThirdPartyHooks/Unsolved/README.md). Since this activity uses third party Hooks, only proceed with this activity if the students seem to have a solid grasp of Hooks. Otherwise, spend the rest of class answering lingering questions, reviewing, and skimming over the solution with the class.
+- If time permits, introduce students to [07-Stu_ThirdPartyHooks/](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/README.md). Since this activity uses third party Hooks, only proceed with this activity if the students seem to have a solid grasp of Hooks. Otherwise, spend the rest of class answering lingering questions, reviewing, and skimming over the solution with the class.
 
   - In this activity we will practice using third party Hooks. Specifically, we will be creating a survey form using the `react-hanger` package on npm.
 
@@ -89,7 +89,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ### 2. Instructor Do: Review Third Party Hooks (10 mins)
 
-- Replace your React application's src folder with [16-ThirdPartyHooks/Solved](../../../../01-Class-Content/21-react/01-Activities/16-ThirdPartyHooks/Solved/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
+- Replace your React application's src folder with [07-Stu_ThirdPartyHooks/Solved](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/Solved/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
 
 - Demonstrate that the application satisfies the requirements:
 
@@ -99,7 +99,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
   - Open the console and show that the form object contains the value from each field.
 
-- Open [Survey/index.js solved](../../../../01-Class-Content/21-react/01-Activities/16-ThirdPartyHooks/Solved/src/pages/Survey/index.js) in your IDE and demonstrate the following:
+- Open [Survey/index.js solved](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/Solved/src/pages/Survey/index.js) in your IDE and demonstrate the following:
 
   - Even though we used `textarea` instead of `input`, we can still use the `useInput` hook.
 
