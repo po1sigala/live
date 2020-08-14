@@ -1,37 +1,45 @@
 # Bootstrap Components
 
-In this activity you will work with a partner build a web page using only prebuilt Bootstrap UI components.
+In this activity, you will work with a partner to use the Bootstrap documentation to build a web page using only prebuilt Bootstrap UI components.
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* Open [the starter code](./Unsolved/index.html) and examine what's there first.
+* Navigate to the [Bootstrap documentation for Components](https://getbootstrap.com/docs/4.5/components/) in your browser.
 
-* Using the [Bootstrap documentation,](https://getbootstrap.com) add the following components to match the image below:
+* Open [index.html](./Unsolved/index.html) in your IDE and examine the code.
 
-  * Navbar
+* Using the documentation, implement the following:
 
-  * Jumbotron
+  * We are given a plain web page without any components.
 
-  * Alert
+  * Follow the instructions provided by the comments in the starter code to add these different components to the web page:
 
-  * Form
+    * Navbar
 
-  * List (with badges)
+    * Jumbotron
 
-  * Card (with a list, header, and footer)
+    * Alert
+
+    * Form
+
+    * List (with badges)
+
+    * Card (with a list, header, and footer)
+  
+* The result should look like this image:
 
 ![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./solved-screenshot.png)
 
-## 🏆 Bonus
-
-* If you have fully completed the above tasks, here is something you and your partner can do to further your knowledge:
-
-  * Learn about how Bootstrap came to be and how CSS frameworks like it can be useful.
-
-* Check the [Solution](./Solved/index.html) after class and compare it against your own file.
-
 ## 💡Hint(s)
 
-* When in doubt, use the Bootstrap documentation and Chrome DevTools to breakdown the classes and styles used!
+* When in doubt, use the Bootstrap documentation links in the comments and Chrome DevTools to breakdown the classes and styles used!
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge:
+
+  * How did Bootstrap come to be and how are CSS frameworks like it useful for developers?
+
+* Use [Google](https://www.google.com) or another search engine to research the above.
