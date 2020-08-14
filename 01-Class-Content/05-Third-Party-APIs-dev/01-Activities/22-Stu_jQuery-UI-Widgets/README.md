@@ -6,11 +6,19 @@ In this activity, you will work with a partner to use jQuery UI documentation to
 
 * Be sure to work with your partner!
 
-* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/).
+* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/) in your browser.
+
+* Open [index.html](Unsolved/index.html) in your browser.
+
+  * We are given a simple Skills Form.
+
+  * When we submit a Skill Name and Date, it is added to the List of Skills.
+
+  * But it would be nice if the Skill Name can be autocompleted as we type the name, and if we can view a calendar when choosing a date!
 
 * Using the documentation, implement the following jQuery UI widgets:
 
-  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>`  and `<script>` tag.
+  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>`  and `<script>` tags.
 
   * Open [script.js](Unsolved/assets/js/script.js) and add the following widgets:
 
@@ -20,13 +28,13 @@ In this activity, you will work with a partner to use jQuery UI documentation to
 
 ## 💡 Hint(s)
 
-* You will need to add an array of skills to use with the `Autocomplete` widget.
+* You will need to add an array of skills to use with the `Autocomplete` widget. For example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`. 
 
 * Look for "Display month & year menus" in the list of examples on the `Datepicker` widget page of the jQuery UI docs.
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge: 
+* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge: 
 
   * What build-in HTML feature can also help enforce a date? 
 

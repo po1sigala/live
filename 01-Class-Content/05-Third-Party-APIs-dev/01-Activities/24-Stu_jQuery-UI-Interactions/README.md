@@ -6,11 +6,21 @@
 
 * Be sure to work with your partner!
 
-* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/).
+* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/) in your browser.
+
+* Open [index.html](Unsolved/index.html) in your browser.
+
+  * We are given a Skills Form. 
+  
+  * When we submit a skill name and date, it is added to the List of Skills.
+
+  * But it would be nice if we can reorder the skills on the list!
+
+* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
 
 * Using the documentation, implement the following jQuery UI interaction:
 
-  * Open [script.js](Unsolved/assets/js/script.js) and add the jQuery UI interaction that will allow the user to drag and reorder the skills listed under "List of Skills".
+  * Add the appropriate jQuery UI interaction that will allow the user to drag and reorder the skills listed under "List of Skills".
 
   * Add the option to style that white space in between the items shifting to be visible. 
 
@@ -20,7 +30,7 @@
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge: 
+* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge: 
 
   * How exactly does this "HTML Drag and Drop" work?
 
