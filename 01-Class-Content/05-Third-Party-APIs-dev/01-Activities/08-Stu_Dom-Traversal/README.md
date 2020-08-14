@@ -1,31 +1,39 @@
-# Tic Tac Toe
+# jQuery DOM Traversal
 
-In this activity, you will use jQuery to complete a game of Tic Tac Toe.
+In this activity, you will work with a partner to use jQuery DOM Traversal documentation to search the DOM for the requested elements in a game of Tic Tac Toe.
 
-You will be the "O" player. Place the "O" to block and win.
+## Instructions
 
-### Instructions
+* Be sure to work with your partner!
 
-* Open [`TicTacToe-unsolved`](Unsolved/TicTacToe-unsolved.html), examine the code, and do the following:
+* Navigate to the [jQuery Docs on traversing](https://api.jquery.com/category/traversing) in your browser.
 
-  * Use the preceding file as a starting point and add the statements that will accomplish the **three** requested actions noted by the `TODO:` in the comments. Read these instructions carefully and use the `HINT` provided if needed.
+* Open [index.html](Unsolved/index.html) and [script.js](Unsolved/assets/js/index.js) in your IDE and examine the code.
+
+* Using the documentation, implement the following:
+
+  * Add the statements that will accomplish the **three** requested actions noted by the `TODO:` in the comments. Read these instructions carefully and use the `HINT` provided if needed.
   
-  * Use DOM traversal methods in jQuery to select all nine boxes and change the background to white for greater legibility
+  * Starting from `<div id="root">`, use DOM traversal methods in jQuery to select all nine tic-tac-toe boxes and change the background to white for greater legibility.
   
-  * From the requested starting point, traverse down through the DOM tree and insert the "O" to block the "X" player from winning
+  * Starting from `<div id="root">`, traverse down through the DOM tree and insert the "O" to block the "X" player from winning.
   
-  * From the requested starting point, traverse up through the DOM tree and insert the "O" for the win 
+  * Starting from `<div class="item-c2">`, traverse up through the DOM tree and insert the "O" for the win. 
 
-## Hint(s)  
-
-* Reference [the official jQuery documents multiple methods from jQuery to traverse](https://api.jquery.com/category/traversing/) to understand what these methods are doing.
-
-* Change the style of the element as you traverse through the DOM as a visual aid to track the current location. 
-
-## Bonus 
-
-* Find alternative methods to traverse up and down the DOM tree by referencing the preceding jQuery documents.
-
-The completed activity will look like the following image:
+* The result should look like this image:
 
 ![The tic-tac-toe board shows "O" is victorious](./tic-tac-toe.jpg)
+
+## 💡 Hint(s)  
+
+* You are the "O" player. Place the "O" to block and win.
+
+* Change the style of the element as you traverse through the DOM as a visual aid to track the current location. 
+  
+## 🏆 Bonus 
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+
+  * What are some alternative methods to traverse up and down the DOM tree? 
+
+* Use [Google](https://www.google.com) or another search engine to answer the above.

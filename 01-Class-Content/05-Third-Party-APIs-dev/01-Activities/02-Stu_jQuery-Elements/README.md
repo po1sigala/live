@@ -1,25 +1,35 @@
-# DOM Elements with jQuery
+# jQuery Elements
 
-In this activity, you will use jQuery to display a quote and its author.
+In this activity, you will work with a partner to use jQuery documentation to create HTML elements dynamically using jQuery.
 
 ## Instructions
 
-* Open [`hello-unsolved`](Unsolved/hello-unsolved.html), examine the code, and do the following:
+* Be sure to work with your partner!
+
+* Navigate to [jQuery API Docs](https://api.jquery.com/) in your browser.
+
+* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the comments.
+
+* Using the documentation, implement the following:
+
+  * We are given a blank web page.
+
+  * Follow the instructions provided by the comments in the starter code to create the various elements needed to append a quote by Carol Dweck to the page.
+
+* The result should look like this image:
+
+![A quote followed by the author.](./quote.jpg)  
+
+## 💡 Hint(s) 
+
+* Don’t forget to add jQuery to `index.html` before you begin.
+
+* Only use jQuery methods! Do **NOT** use any of the following vanilla JavaScript methods: `createElement`, `textContent`, or `appendChild`.
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
   
-  *  Read the instructions in the `TODO:` comments to select, create, and modify the elements
-
-## Hint(s) 
-
-* Don’t forget to “incorporate” jQuery before you begin.
-
-* Only use jQuery methods, do **NOT** use any of the following vanilla JavaScript methods: `createElement`, `textContent`, or `appendChild`.
-
-## Bonus
-
-* Explain the difference between `$("<div>")` vs `$("div")` in jQuery. 
-
-* Research an alternative method that attaches elements as a sibling and not as a child
-
-A completed activity will look like the following image:
-
-![A quote followed by the author.](./quote.jpg)
+  * How can we add event listeners using jQuery?
+  
+* Use [Google](https://www.google.com) or another search engine to answer the above.

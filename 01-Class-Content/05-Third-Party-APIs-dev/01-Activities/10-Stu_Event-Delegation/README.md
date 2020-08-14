@@ -1,39 +1,35 @@
-# Modifiable Shopping List 
+# jQuery Event Delegation 
 
-In this activity, you will use jQuery to remove items from a shopping list.
-
-Items added to the list are now removable by clicking the item's button
+In this activity, you will work with a partner to use jQuery documentation on Event Delegation to handle click events for a dynamically created button.
 
 ## Instructions
 
-* Open [`shoppinglist-unsolved`](Unsolved/shoppinglist-unsolved.html), examine the code, and do the following:
+* Be sure to work with your partner!
 
-  * Follow the directions listed in the `TODO:` comments to complete this activity 
+* Navigate to the [jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/) in your browser.
+
+* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
+
+* Using the documentation, implement the following:
+
+  * We are given a Shopping List form. We can add grocery items to the shopping list by using the form.
+
+  * When we click the `X` button next to a grocery item, it should be removed from the shopping list. 
+
+  * Follow the instructions provided by the comments in the starter code to use event delegation to target a parent element of the grocery items in order to handle the click event for the dynamically created buttons.
   
-  * Use event delegation to target a parent element in order to handle the click event for the dynamically created buttons
+  * Clear the input field on submission. 
+
+## 💡 Hint(s) 
+
+* In the event handler, create a new list by removing the user's selection.
   
-  * Change the handler of the submit event to populate a modifiable list
-   
-  * Attach the click event listener to each item on the shopping list which removes that item.
-  
-  * Clear the input field on submission 
-   
-## Hint(s) 
+* Use the new shopping list to call the `populateList()` in the event handler.
 
-* Need to use event delegation to attach the event listener
-  
-* Create an array to store the shopping list items
+## 🏆 Bonus
 
-* Use the `.on` method
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
 
-* Use keyword `this` to retrieve the user's selection
-
-## Bonus
-
-* Discuss the following [topic about event delegation](https://api.jquery.com/on/#direct-and-delegated-events) and its merits with a classmate.
-
-* Refactor the code to make it D.R.Y.
-
-The finished activity will look like the following image:
-
-![The list of items have buttons that allow the item to be removed from the shopping list](./solved-demo.jpg)
+  * What are some alternatives to using jQuery? Discuss the merits with your partner. 
+ 
+* You can read [You might not need jQuery](http://youmightnotneedjquery.com/) to see some options to jQuery. 
