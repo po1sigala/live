@@ -229,7 +229,7 @@ N/A
 
 * Re-introduce the NYT Article Search Application by visiting this link [nytarticle-search-fsf.herokuapp.com](https://nytarticle-search-fsf.herokuapp.com/).
 
-* Re-walk students through the high points of the application -- namely that it allows you to search the [New York Times Article API](https://developer.nytimes.com/docs/articlesearch-product/1/overview).
+* Re-walk students through the high points of the application -- namely that it allows you to search the [New York Times Article API](http://developer.nytimes.com/article_search_v2.json).
 
 * Then offer students the following commentary:
 
@@ -261,7 +261,7 @@ N/A
 
   * Data Team:
 
-    * Do preliminary research on the [API](https://developer.nytimes.com/docs/articlesearch-product/1/overview).
+    * Do preliminary research on the [API](http://developer.nytimes.com/article_search_v2.json).
 
     ![NYT-API](Images/NYT-API.png)
 
@@ -275,7 +275,7 @@ N/A
 
 * From time to time, offer the below helpful HINTs to students who may be stuck.
 
-  * All of you should be using the [API Console](https://developer.nytimes.com/docs/articlesearch-product/1/overview). The console allows you to create "test URLs". This way you can confirm that you are pinging the right URL.
+  * All of you should be using the [API Console](http://developer.nytimes.com/article_search_v2.json#/Console/GET/articlesearch.json). The console allows you to create "test URLs". This way you can confirm that you are pinging the right URL.
 
       ![6-NYT_1](Images/6-NYT_1.png)
 
