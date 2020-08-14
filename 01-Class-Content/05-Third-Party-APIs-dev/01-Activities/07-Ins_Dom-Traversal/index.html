@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Traversing the DOM</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <style>
-      .fancy { background-color: lightblue; }
-    </style>
-    <!-- Added link to the jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Traversing the DOM</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <style>
+    
+  </style>
+  
+</head>
 
 <body>
   <div id="top"></div>
@@ -23,26 +23,11 @@
     <li >GitHub</li>
   </ul>
   <div id="bottom"></div>
+  
+  <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 
-<script>
-  // Select elements in the document programatically
-  // Starting from the <div id="top"> element, place a blue border around the title of the website
-  var topEl = $("#top");
-  topEl.siblings().first().css("border", "blue solid 2px");
-
-  // Starting from the <div id="bottom"> element, change the text to say Meetups
-  var bottomEl = $("#bottom");
-  bottomEl.siblings().eq(4).children().last().text("Meetups");
-
-  // Starting from <div id="top"> ppend an <li> to add Classmates to bottom of the list.
-  topEl.siblings().eq(3).append($("<li>Classmates</li>"));
-
-  // Starting from the <li id="inside"> element, add the fancy class to the <li>
-  var insideEl = $("#inside");
-  insideEl.closest("ul").children().addClass("fancy");
-    
-</script>
-
 </html>
-

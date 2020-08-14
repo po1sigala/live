@@ -1,29 +1,41 @@
-# Password Generator Debugger
+# jQuery Click Events
 
-In this activity, you will fix the following click event to generate a random 15 character password when the button is clicked.
-
-Currently the random password is generated when the title of the website is clicked twice. The password also too short. Follow the instructions to fix the password generator.
+In this activity, you will work with a partner to debug the code for a password generator. 
 
 ## Instructions
 
-* Open [`password-unsolved`](Unsolved/password-unsolved.html), examine the code, and do the following:
+* Be sure to work with your partner!
+
+* As a frequent online shopper, I want to make sure my passwords for online stores are random, unique, and strong. So I want to utilize a Password Generator to create unique passwords for me to use!
+
+* Open [index.html](Unsolved/index.html) in your browser.
+
+  * When we click on the "Generate Password" button once, it should print a 15-character password on to the screen.
+
+  * However currently only single characters are generated when the "Generate Password" button is double-clicked!
+
+* Open [script.js](Unsolved/assets/js/script.js) and examine the code.
+
+* Using the following questions to guide you, try to debug and fix the code:
+
+  * Where in your code is the error happening?
+
+  * What is the expected behavior of the code?
+
+  * What is a good key word or phrase you can Google to find resources to help you debug?
+
+* The result should look like this image after you click the button once:
+
+![The input field and button are now followed by a random password of length 15](./solved-demo.jpg)
+
+## 💡 Hint(s)  
+
+* Research the [jQuery Docs on events listeners](https://api.jquery.com/category/events/) to find the method that will provide the operation we require.
   
-  * Attach the event listener to target the button
-  
-  * Modify the event listener so a single click of the button will generate a password
+## 🏆 Bonus 
 
-  * Change the event handler so the length of the generated password is 15 characters in length.
+* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge:
 
-## Hint(s)  
+  * What are alternative methods to add event listeners?
 
-* Research the [jQuery official documentation on events listeners](https://api.jquery.com/category/events/) to find the method that will provide the operation we require.
-
-## Bonus 
-
-* Research if/when the `$(document).ready()` is necessary by looking at the [jQuery's official documentation about `$(document).ready()`.](https://learn.jquery.com/using-jquery-core/document-ready/) 
-
-* Search in the docs to find the alternative methods to add an event listener such as the `on` method.
-  
-The finished activity should look like the following image:
-
-![The input field and button are now followed by a random password of length 15.](./solved-demo.jpg)
+* Use [Google](https://www.google.com) or another search engine to answer the above.
