@@ -1,4 +1,8 @@
 // Uncomment the lines below
+
+// const CACHE_NAME = "static-cache-v2";
+// const DATA_CACHE_NAME = "data-cache-v1";
+
 // const FILES_TO_CACHE = [
 //   '/',
 //   '/index.html',
@@ -53,6 +57,3 @@
 //   '/assets/images/37.jpg',
 //   '/assets/images/38.jpg'
 // ];
-
-// const CACHE_NAME = "static-cache-v2";
-// const DATA_CACHE_NAME = "data-cache-v1";
