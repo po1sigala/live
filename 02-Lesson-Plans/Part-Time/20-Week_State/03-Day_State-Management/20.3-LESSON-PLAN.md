@@ -722,7 +722,7 @@ In this activity we will create a CMS (Content Management System) that allows us
 
   4. SET_CURRENT_POST: Sets the current post in the store. This action will only be dispatched from the detail page.
 
-  5. SAVING: Defines whether or not a post is in the process of being saved to the database.
+  5. LOADING: Indicates when the app is saving a post or retrieving posts from the database.
 
 * Since this application is larger than our previous applications, we are going to create a separate file for our action types. By doing this, we will be able to import the actions into any component we would like, thus reducing the chance of mispelling them thanks to the autocomplete feature in our IDE.
 
