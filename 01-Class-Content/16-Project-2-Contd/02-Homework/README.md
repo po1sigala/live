@@ -7,7 +7,7 @@ If you are opting out of career services, this is *still a required assignment*.
 
 ## Requirements
 
-* Updated portfolio featuring projects 1 and 2 and at least four exemplary homework assignments. 
+* Updated portfolio featuring projects 1 and 2 and at least four exemplary homework assignments.
 
 * Update GitHub profile with pinned repositories featuring projects 1 and 2 and four exemplary assignments. 
 
@@ -52,6 +52,8 @@ Your updated site should have the following content:
   * Link to the GitHub repository
 
   * Screenshot of the deployed application
+
+* If there is no back end to your portfolio, deploy your site to GitHub Pages.
 
 
 #### Design
