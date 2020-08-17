@@ -305,8 +305,8 @@ function reset() {
 * Run the following commands to start the application:
 
 ```bash
-node seeders/seed.js
 npm install
+node seeders/seed.js
 npm start
 ```
 
