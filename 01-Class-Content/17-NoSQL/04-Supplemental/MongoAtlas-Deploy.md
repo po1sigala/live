@@ -20,7 +20,7 @@ First, you'll create a database for your application.
 
    ![The Create Database modal dialog allows users to create a database name and starter collection.](./assets/images-deploy/300-create-db.png)
 
-4. Fill out the form with the name of your database and a collection. You only need to create one collection to get started, so don't worry if you think your database will scale up or down in the future.
+4. Fill out the form with the name of your MongoDB database and a collection for that database. You only need to create one collection to get started, as your application will create them upon deploy, so don't worry if you think your database will scale up or down in the future.
 
 5. When you're done creating your database and initial collection, the dashboard should display them, as shown in the following image: 
 
