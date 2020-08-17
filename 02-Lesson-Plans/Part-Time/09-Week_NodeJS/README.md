@@ -31,7 +31,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
   * [09.2 - Lesson Plan](02-Day_ES6/09.2-LESSON-PLAN.md)
 
-  * [09.3 - Lesson Plan](03-Day_Aysnch-JS/09.3-LESSON-PLAN.md)
+  * [09.3 - Lesson Plan](03-Day_Asynch-JS/09.3-LESSON-PLAN.md)
 
 ### Slide Decks
 
