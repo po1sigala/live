@@ -563,7 +563,6 @@ const useUserStatus = () => {
   return {
     status: {
       value: statusState,
-
       onChange: (e) => setStatus(e.target.value),
     },
   };
@@ -721,8 +720,8 @@ export default App;
   };
   export default useDebounce;
   ```
-
-- Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+  
+- Open [06-Stu_CustomHook/Solved/src/pages/Search/index.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/pages/Search/index.js) in your IDE and point out the following:
 
   - The `debouncedSearchTerm` variable is set up **outside** of the `useEffect` Hook. We pass in the existing `search` variable that is tied to our component state and pass in 500 as our second parameter.
 
@@ -736,10 +735,10 @@ export default App;
 const debouncedSearchTerm = useDebounce(search, 500);
 
 useEffect(() => {
-  document.title = "Wikipedia Searcher";
   if (!search) {
     return;
   }
+
   if (debouncedSearchTerm) {
     API.searchTerms(search)
       .then((res) => {
@@ -749,10 +748,8 @@ useEffect(() => {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        setArticleState({
-          title: res.data[1][0],
-          url: res.data[3][0],
-        });
+        setTitle(res.data[1][0]);
+        setUrl(res.data[3][0]);
       })
       .catch((err) => setError(err));
   }
