@@ -1,6 +1,6 @@
 # Deploy with Heroku and MongoDB Atlas
 
-This guide walks you through the steps needed to deploy your application to Heroku with a MongoDB database using MongoDB Atlas.
+This guide walks you through the steps required to deploy your application to Heroku with a MongoDB database using MongoDB Atlas.
 
 If you don't yet have a MongoDB Atlas account, please see [Set Up MongoDB Atlas](./MongoAtlas-Setup.md) before you proceed.
 

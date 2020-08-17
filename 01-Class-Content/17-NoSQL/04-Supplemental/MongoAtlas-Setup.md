@@ -48,7 +48,7 @@ Next, you'll create a starter cluster.
 
 Because this is the first time you'll have seen this dashboard, you'll be guided through the steps to get started. Let's go through it here as well.
 
-1. **Create a Cluster**: You've already done this in the previous step, so we're all set here!
+1. **Create a Cluster**: You've already done this in the previous step, so you're all set here!
 
 2. **Add New Database User**: On the lefthand navigation menu, under Security, select the "Database Access" link. The following image shows the resulting modal with the options you'll select highlighted: 
 
@@ -56,27 +56,23 @@ Because this is the first time you'll have seen this dashboard, you'll be guided
 
     To fill out the form, follow these steps:
 
-   * Use the Password option as authentication method.
+   * For Authentication Method, choose Password.
   
-   * Create a username that you'll remember.
+   * Under Password Authentication, create a username and password that you'll remember.
   
-   * Create a password that you'll remember.
+   * Under Database User Privileges, select "Atlas admin".
 
-   * Select "Atlas admin" as Database User Privilege.
-
-   * Do not select "Temporary User" unless you want to make a new user every so often.
+   * Do not enable "Temporary User" unless you want to make a new user every so often.
   
-   * Click "Add User" to complete this process.
+   * When you're done, click "Add User".
 
-4. **Allow Your IP Address**: In the lefthand navigation menu, under Security, click the "Network Access" link. 
-
-     The following image shows the modal that will appear:
+4. **Allow Your IP Address**: Finally you'll allow your IP address. The following image shows the various parts of this step highlighted:
 
     ![The modal for allowing IP addresses provides a form to enter your IP address.](./assets/images-atlas/500-network-access.png)
        
-    Once there, follow these steps:
+    - In the lefthand navigation menu, under Security, click the "Network Access" link. 
 
-    -  Click "Add IP Address". 
+    -  Click the "Add IP Address" button. The "Add IP Whitelist Entry" modal will appear. 
 
     - To make your database accessible from anywhere, click "Allow Access From Anywhere". This will set the Whitelist Entry value to `0.0.0.0/0`.
 
