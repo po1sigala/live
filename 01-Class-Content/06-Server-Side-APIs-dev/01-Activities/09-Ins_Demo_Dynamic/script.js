@@ -10,7 +10,7 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data);
-      for (i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
         var userName = document.createElement('h3');
         var issueBody = document.createElement('p');
         userName.textContent = data[i].user.login;

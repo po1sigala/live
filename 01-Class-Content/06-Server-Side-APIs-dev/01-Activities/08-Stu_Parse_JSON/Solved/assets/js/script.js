@@ -5,7 +5,7 @@ fetch(requestUrl)
     return response.json();
   })
   .then(function (data) {
-    for (i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       console.log('Github Repo Issues \n----------');
       console.log(data[i].url);
       console.log(data[i].user.login);
