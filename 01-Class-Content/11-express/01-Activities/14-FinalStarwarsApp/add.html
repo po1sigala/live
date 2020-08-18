@@ -80,13 +80,14 @@
       const charAge = document.getElementById('age').value.trim();
       const charFp = document.getElementById('force-points').value.trim();
 
+      // Question: What is "e" short for?
       addBtn.onclick = (e) => {
         e.preventDefault();
         let newCharacter = {
           name: charName,
           role: charRole,
-          age: Number(charAge),
-          forcePOints: Number(charFp),
+          age: +charAge,
+          forcePOints: +charFp,
         };
 
         // Question: What does this code do??
