@@ -34,14 +34,10 @@ const characters = [
 
 // Routes
 // ===========================================================
-app.get('/', (req, res) => {
-  res.send('Welcome to the Star Wars Page!');
-});
+app.get('/', (req, res) => res.send('Welcome to the Star Wars Page!'));
 
 // Displays all characters
-app.get('/api/characters', (req, res) => {
-  return res.json(characters);
-});
+app.get('/api/characters', (req, res) => res.json(characters));
 
 // Displays a single character, or shows "No character found"
 app.get('/api/characters/:character', (req, res) => {
@@ -49,16 +45,14 @@ app.get('/api/characters/:character', (req, res) => {
   const chosen = req.params.character;
   console.log(chosen);
 
-  // Filter to show only the selected character
-  for (let i = 0; i < characters.length; i++) {
-    const currentChar = characters[i];
-    if (chosen === currentChar.routeName) {
-      return res.json(currentChar);
-    }
-  }
-
-  // Otherwise display "No character found"
-  return res.send('No character found');
+  /* Check each character routeName and see if the same as "chosen"
+   If the statement is true, send the character back as JSON,
+   otherwise tell the user no character was found */
+  characters.forEach((character) =>
+    chosen === character.routeName
+      ? res.json(character)
+      : res.send('No character found')
+  );
 });
 
 // Listener
