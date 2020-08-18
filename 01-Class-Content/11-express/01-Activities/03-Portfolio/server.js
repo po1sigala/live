@@ -72,9 +72,10 @@ const handleRequest = (req, res) => {
   }
 };
 
-// Start our server
+// Assign our createServer method to a variable called "server"
 const server = http.createServer(handleRequest);
 
+// Start our server
 server.listen(PORT, () => {
   // Callback triggered when server is successfully listening. Hurray!
   console.log(`Server listening on: http://localhost:${PORT}`);
