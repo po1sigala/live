@@ -48,11 +48,14 @@ app.get('/api/characters/:character', (req, res) => {
 
   /* Check each character routename and see if the chosen character is the same as it's routename
    If the statement is true, send it back as JSON, otherwise tell the user no character was found */
-  characters.forEach((character) =>
-    chosen === character.routeName
-      ? res.json(character)
-      : res.send('No character found')
-  );
+
+  for (let i = 0; i < characters.length; i++) {
+    if (chosen === characters[i].routeName) {
+      return res.json(characters[i]);
+    }
+  }
+
+  return res.json(false);
 });
 
 // Create New Characters - takes in JSON input
