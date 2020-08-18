@@ -49,7 +49,7 @@ app.get('/api/characters/:character', (req, res) => {
    If the statement is true, send the character back as JSON,
    otherwise tell the user no character was found */
 
-  for (var i = 0; i < characters.length; i++) {
+  for (let i = 0; i < characters.length; i++) {
     if (chosen === characters[i].routeName) {
       return res.json(characters[i]);
     }
