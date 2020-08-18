@@ -40,13 +40,17 @@ To install the .NET Core SDK:
 
 1. In a web browser, go to [.NET Core Guide | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/).
 
-2. Go to the section called "Download .NET Core X.X" (where X.X is the current version).
+2. Locate the **Install .NET Core** section. In the **DOWNLOAD** section, click on the **.NET Core downloads** link.
 
-3. Click the link to download the .NET Core X.X SDK.
+3. This will navigate you to a new page with the heading, **Download .NET Core**. Select the (recommended) version with the status LTS, or Long-Term Support.
 
-4. Double-check that the OS is correct and click the button to begin the download.![image alt text](./Images/image_1.png)
+4. This will navigate you to a new page with the heading, **Download .NET Core X.X**, with the version number matching the LTS version that was selected. Click on the link **See recommended downloads for the latest version of .NET**.
 
-5. When the download is complete, choose the basic installation process.
+5. This will bring you to a new page with the heading, **Download .NET**. Select the link, **Download .NET Core SDK**, shown in the following image:
+
+![The link, Download .NET Core SDK, is in the section to Build Apps](./Images/image_1.png)
+
+6. This will bring you to a new page with the heading, **Thanks for downloading ...**. A modal with input fields will request the download location for the new file. Once the file has been downloaded, open it to install...
 
 Let’s confirm that our C# environment was installed and will now enable us to build C# projects. Open a new terminal and type dotnet --info. You should see output similar to below:
 
@@ -2737,4 +2741,3 @@ For this particular module, though, answer these last few questions before wrapp
 2. What makes JSON difficult to import into C#?
 
 3. What are some classes, methods, etc. that can help with JSON parsing?
-
