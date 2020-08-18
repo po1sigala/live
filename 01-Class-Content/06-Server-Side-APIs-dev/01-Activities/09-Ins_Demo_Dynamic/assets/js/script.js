@@ -1,10 +1,9 @@
 var issueContainer = document.getElementById('issues');
 var fetchButton = document.getElementById('fetch-button');
 
-fetchButton.addEventListener('click', getApi);
-
 function getApi() {
-  fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
+  var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
+  fetch(requestUrl)
     .then(function (response) {
       return response.json();
     })
@@ -20,3 +19,4 @@ function getApi() {
       }
     });
 }
+fetchButton.addEventListener('click', getApi);

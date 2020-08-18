@@ -1,12 +1,10 @@
 var tableBody = document.getElementById('repo-table');
 var fetchButton = document.getElementById('fetch-button');
 
-fetchButton.addEventListener('click', getApi);
-
 function getApi() {
   //fetch request gets a list of all the repos for the node.js organization
-
-  fetch('https://api.github.com/orgs/nodejs/repos')
+  var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+  fetch(requestUrl)
     .then(function (response) {
       return response.json();
     })
@@ -24,3 +22,5 @@ function getApi() {
       }
     });
 }
+
+fetchButton.addEventListener('click', getApi);

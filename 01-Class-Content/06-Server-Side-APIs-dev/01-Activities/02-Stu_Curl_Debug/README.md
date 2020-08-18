@@ -14,13 +14,13 @@ In this activity, you will work with a partner using cURL { @TODO LEARNING OBJEC
 
   `curl http://api.github.com`
 
-  * After hitting enter, nothing happens, something is definitely wrong.
+  * After pressing the enter or return key, something is definitely wrong.
 
 * Sometimes our errors do not give us any feedback, and referring to documentation may be the only way to reach a resolution
 
   * Go to [https://docs.github.com/en/rest/overview/resources*in*the*rest*api#schema](https://docs.github.com/en/rest/overview/resources*in*the*rest*api#schema)
 
-  * Click root endpoint that is in the nav bar to the right and see if you can find the error iny our cURL command
+  * Under the "In the Article" subnavigation on the right, find the entry for "Root endpoint" and compare it with the failed cURL command we used.
 
 ## 💡 Hint(s)
 

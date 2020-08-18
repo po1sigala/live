@@ -1,11 +1,9 @@
 var repoList = document.querySelector('ul');
 var fetchButton = document.getElementById('fetch-button');
-fetchButton.addEventListener('click', getApi);
-
-// replace {USERNAME} with your github username
-var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
 
 function getApi() {
+  // replace {USERNAME} with your github username
+  var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -18,3 +16,5 @@ function getApi() {
       }
     });
 }
+
+fetchButton.addEventListener('click', getApi);
