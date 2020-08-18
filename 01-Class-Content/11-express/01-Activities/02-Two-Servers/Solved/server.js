@@ -16,9 +16,9 @@ const handleRequestOne = (request, response) => {
   );
 };
 
-function handleRequestTwo(request, response) {
+const handleRequestTwo = (request, response) => {
   response.end("Never trust a computer you can't throw out a window.");
-}
+};
 
 // =====================================================================
 

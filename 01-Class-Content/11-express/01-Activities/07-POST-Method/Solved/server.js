@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const PORT = 8080;
 
-function renderWelcomePage(req, res) {
+const renderWelcomePage = (req, res) => {
   fs.readFile(`${__dirname}/index.html`, (err, data) => {
     if (err) {
       res.writeHead(500, { 'Content-Type': 'text/html' });
@@ -18,7 +18,7 @@ function renderWelcomePage(req, res) {
       res.end(data);
     }
   });
-}
+};
 
 const renderThankYouPage = (req, res) => {
   // Saving the request posted data as a variable.
