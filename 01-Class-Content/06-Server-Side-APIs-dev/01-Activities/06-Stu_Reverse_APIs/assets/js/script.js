@@ -1,4 +1,4 @@
-requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
 
 // JQuery Ajax
 $.ajax({
@@ -23,7 +23,7 @@ fetch(requestUrl)
 //Browser XMLHttpRequest
 
 var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = () => {
+xhr.onreadystatechange = function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {
     console.log('XMLHttpRequest Response \n-------------');
     console.log(xhr.response);

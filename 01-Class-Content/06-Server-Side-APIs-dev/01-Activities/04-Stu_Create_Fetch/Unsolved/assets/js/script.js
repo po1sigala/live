@@ -5,6 +5,7 @@ var fetchButton = document.getElementById('fetch-button');
 function getApi() {
   // Insert the API url to get a list of your repos
   var requestUrl = '';
+
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
