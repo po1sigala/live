@@ -1,6 +1,6 @@
 # Create a fetch request
 
-In this activity, you will work with a partner to build a fetch request
+In this activity, you will work with a partner to request data from GitHub using the Fetch API.
 
 ## Instructions
 
