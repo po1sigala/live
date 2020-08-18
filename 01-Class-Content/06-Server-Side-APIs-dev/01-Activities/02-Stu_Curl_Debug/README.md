@@ -6,7 +6,7 @@ In this activity, you will work with a partner using curl { @TODO LEARNING OBJEC
 
 - Be sure to work with your partner!
 
-- As a developer, I want to test the api I plan to use with curl.
+- As a developer, I want to test the API I plan to use with curl.
 
 - When we use curl, we should receive a response from the server, but right now the terminal returns nothing.
 

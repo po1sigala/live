@@ -11,7 +11,7 @@ function getApi() {
       return response.json();
     })
     .then(function (data) {
-      for (i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
         var listItem = document.createElement('li');
         listItem.textContent = data[i].html_url;
         repoList.appendChild(listItem);
