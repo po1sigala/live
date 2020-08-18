@@ -57,7 +57,7 @@ app.get('/api/characters/:character', (req, res) => {
 
   /* Check each character routeName and see if the same as "chosen"
    If the statement is true, send the character back as JSON,
-   otherwise send back JSON containing the false boolean */
+   otherwise tell the user no character was found */
   characters.forEach((character) =>
     chosen === character.routeName ? res.json(character) : res.json(false)
   );
