@@ -1,5 +1,6 @@
 // Dependencies
 // ===========================================================
+// eslint-disable-next-line import/no-unresolved
 const express = require('express');
 
 const app = express();
@@ -53,6 +54,4 @@ app.get('/darthmaul', (req, res) => {
 
 // Listener
 // ===========================================================
-app.listen(PORT, () => {
-  console.log(`App listening on PORT ${PORT}`);
-});
+app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
