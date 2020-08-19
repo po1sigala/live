@@ -53,7 +53,7 @@ Your updated site should have the following content:
 
   * Screenshot of the deployed application
 
-* If there is no back end to your portfolio, deploy your site to GitHub Pages.
+* Deploy your portfolio to GitHub Pages
 
 
 #### Design
