@@ -129,7 +129,6 @@
               emailEl.outerHTML +
               phoneEl.outerHTML;
           }
-
           // Append all elements to the listItem
           listItem.appendChild(tableEl);
           listItem.appendChild(hrBreak);
@@ -201,10 +200,10 @@
             console.log('runWaitListQuery -> listItem', listItem);
             waitList.appendChild(listItem);
           }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
         });
-      .catch((error) => {
-        console.error('Error:', error);
-      });
     };
 
     // This function resets all of the data in our tables. This is intended to let you restart a demo.
