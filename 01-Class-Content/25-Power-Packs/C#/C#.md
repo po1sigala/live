@@ -77,22 +77,27 @@ How could we embark on learning a new programming language without creating a "H
 Let's navigate to the folder where you want your project to reside. At the command prompt, use dotnet to create a new console app called CatWorx.BadgeMaker.
 
 ```c#
-$ dotnet new console -o CatWorx
+$ dotnet new console -o CatWorx.BadgeMaker
 ```
 
-This command will create a new folder called CatWorx that will contain your C# project. In VS Code, select File from the main menu bar, and choose "Open Folder…" Navigate to the CatWorx folder that dotnet created. Double-click CatWorx to open it in the VS Code explorer pane.
+This command will create a new folder called CatWorx.BadgeMaker that will contain your C# project. In VS Code, select File from the main menu bar, and choose "Open Folder…" Navigate to the CatWorx.BadgeMaker folder that dotnet created. Double-click CatWorx.BadgeMaker to open it in the VS Code explorer pane.
 
 As you can see, there are already some files and folders in the project:
 
-![image alt text](./Images/image_2.png)
+![Folder tree of project files](./Images/image_2.png)
 
 Let’s take a look at these:
 
-* The bin and obj folders are used by .NET Core to execute the C# code. 
+* The obj folders are used by .NET Core to execute the C# code. 
 
-* The catworx.csproj file is very similar to a package.json file that contains your program's dependencies and packages.
+* The CatWorx.BadgeMaker.csproj file is very similar to a package.json file that contains your program's dependencies and packages.
 
-Let’s take a look at the Program.cs file:
+We will now take a look at the Program.cs file, which where we will develop the console application.
+Notice that when this file is opened, if you have your integrated terminal open as well, you wil see a series of dependencies install in the OUTPUT tab that will look similar to the following image:
+
+![In the OUTPUT window in the integrated terminal of VSCode, we can see a series of dependencies install.](./Images/image_22.png)
+
+Let’s take a look in the Program.cs file:
 
 ```c#
 using System;
@@ -109,7 +114,7 @@ namespace CatWorx.BadgeMaker
 }
 ```
 
-Let’s run the app. In the command line, type dotnet run.
+To run the app, navigate to the Catworx.BadgeMaker folder. Then in the command line, type dotnet run.
 
 The output should read "Hello, World!". Congrats—you are now a C# developer!
 
