@@ -42,7 +42,7 @@ Follow these guidelines for committing:
 
 * We would like you to have well over 200 commits by graduation, so commit early and often!
 
-* Deploy this site to GitHub Pages, using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
+* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
 
 ## Submission on BCS
