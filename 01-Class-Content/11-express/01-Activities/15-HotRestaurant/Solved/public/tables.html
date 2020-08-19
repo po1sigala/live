@@ -109,26 +109,35 @@
             const hrBreak = document.createElement('hr');
 
             const idEl = document.createElement('h2');
-            idEl.textContent = 'ID: ' + tableData[i].customerID;
+            idEl.textContent = `ID: ${tableData[i].customerID}`;
 
             const nameEl = document.createElement('h2');
-            nameEl.textContent = 'Name: ' + tableData[i].customerName;
+            nameEl.textContent = `Name: ${tableData[i].customerName}`;
 
             const emailEl = document.createElement('h2');
-            emailEl.textContent = 'Email: ' + tableData[i].customerEmail;
+            emailEl.textContent = `Email: ${tableData[i].customerEmail}`;
 
             const phoneEl = document.createElement('h2');
-            phoneEl.textContent = 'Phone: ' + tableData[i].phoneNumber;
+            phoneEl.textContent = `Phone: ${tableData[i].phoneNumber}`;
 
             // Append all elements to the listItem
-            listItem.appendChild(tableEl);
-            listItem.appendChild(hrBreak);
-            listItem.appendChild(idEl);
-            listItem.appendChild(nameEl);
-            listItem.appendChild(emailEl);
-            listItem.appendChild(phoneEl);
-            tableList.appendChild(listItem);
+            listItem.innerHTML +=
+              tableEl.outerHTML +
+              hrBreak.outerHTML +
+              idEl.outerHTML +
+              nameEl.outerHTML +
+              emailEl.outerHTML +
+              phoneEl.outerHTML;
           }
+
+          // Append all elements to the listItem
+          listItem.appendChild(tableEl);
+          listItem.appendChild(hrBreak);
+          listItem.appendChild(idEl);
+          listItem.appendChild(nameEl);
+          listItem.appendChild(emailEl);
+          listItem.appendChild(phoneEl);
+          tableList.appendChild(listItem);
         })
         .catch((error) => {
           console.error('Error:', error);
@@ -193,9 +202,9 @@
             waitList.appendChild(listItem);
           }
         });
-      // .catch((error) => {
-      //   console.error('Error:', error);
-      // });
+      .catch((error) => {
+        console.error('Error:', error);
+      });
     };
 
     // This function resets all of the data in our tables. This is intended to let you restart a demo.
