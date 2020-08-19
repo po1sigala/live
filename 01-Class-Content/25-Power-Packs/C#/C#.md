@@ -77,7 +77,7 @@ How could we embark on learning a new programming language without creating a "H
 Let's navigate to the folder where you want your project to reside. At the command prompt, use dotnet to create a new console app called CatWorx.BadgeMaker.
 
 ```c#
-$ dotnet new console -o CatWorx.BadgeMaker
+$ dotnet new console -o CatWorx
 ```
 
 This command will create a new folder called CatWorx that will contain your C# project. In VS Code, select File from the main menu bar, and choose "Open Folder…" Navigate to the CatWorx folder that dotnet created. Double-click CatWorx to open it in the VS Code explorer pane.
