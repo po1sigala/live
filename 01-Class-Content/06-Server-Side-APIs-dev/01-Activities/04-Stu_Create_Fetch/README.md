@@ -10,7 +10,7 @@ In this activity, you will work with a partner to request data from GitHub using
 
   * As a user, when I click the button, I want a list of repo URLs to appear on the page.
 
-* Go to [https://docs.github.com/en/rest/reference/repos#list*repositories*for*a*user](https://docs.github.com/en/rest/reference/repos#list*repositories*for*a*user) and find the endpoint to list the repositories for your GitHub username
+* Go to [GitHub API Docs](https://docs.github.com/en/rest/reference/repos#list*repositories*for*a*user) and find the endpoint to list the repositories for your GitHub username
 
 * Use this information to create the correct URL for the fetch request and assign it to the requestUrl variable.
 

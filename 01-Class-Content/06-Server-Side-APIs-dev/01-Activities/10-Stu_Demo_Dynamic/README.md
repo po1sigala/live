@@ -10,7 +10,7 @@ In this activity, you will work with a partner to write the code to generate the
 
 * As a developer I want to take the response data and generate dynamic html.
 
-* As a developer the data I want appear is the user login and the url to their github profile. Append it to the usersContainer
+* As a developer, the data I want to show in the `usersContainer` is the user login and the URL of their GitHub profile. 
 
 ## 💡 Hint(s)
 

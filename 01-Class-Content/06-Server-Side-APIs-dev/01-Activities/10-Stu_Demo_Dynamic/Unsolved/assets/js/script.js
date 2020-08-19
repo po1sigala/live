@@ -3,13 +3,15 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
   var requestUrl = 'https://api.github.com/users?per_page=5';
+
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
+      //Use the console to examine the response
       console.log(data);
-      //loop through the data and generate your html
+      //Loop through the data and generate your html
     });
 }
 fetchButton.addEventListener('click', getApi);

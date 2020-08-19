@@ -3,6 +3,7 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
   var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
+
   fetch(requestUrl)
     .then(function (response) {
       return response.json();

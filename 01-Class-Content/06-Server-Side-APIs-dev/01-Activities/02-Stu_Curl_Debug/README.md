@@ -1,6 +1,6 @@
 # cURL Debug
 
-In this activity, you will work with a partner using cURL { @TODO LEARNING OBJECTIVE }.
+In this activity, you will work with a partner using cURL
 
 ## Instructions
 
@@ -10,15 +10,19 @@ In this activity, you will work with a partner using cURL { @TODO LEARNING OBJEC
 
 * When we use cURL, we should receive a response from the server, but right now the terminal returns nothing.
 
-* Open up your terminal/gitbash and paste in the line, then hit enter.
+* Open up your terminal/gitbash.
 
-  `curl http://api.github.com`
+* Copy `curl http://api.github.com` 
+
+* Paste what you copied into the terminal and press enter or the return key
 
   * After pressing the enter or return key, something is definitely wrong.
 
+  * If all goes as expected, the terminal should have gone to the next line without returning any info.
+
 * Sometimes our errors do not give us any feedback, and referring to documentation may be the only way to reach a resolution
 
-  * Go to [https://docs.github.com/en/rest/overview/resources*in*the*rest*api#schema](https://docs.github.com/en/rest/overview/resources*in*the*rest*api#schema)
+  * Go to [GitHub API Docs](https://docs.github.com/en/rest/overview/resources*in*the*rest*api#schema)
 
   * Under the "In the Article" subnavigation on the right, find the entry for "Root endpoint" and compare it with the failed cURL command we used.
 

@@ -1,7 +1,6 @@
 # Parsing JSON
 
-In this activity, you will work with a partner to use to GitHub documentation to add a parameter to a fetch request.  
-You will then parse the response in the console.
+* In this activity, you will work with a partner to use the GitHub documentation to add a parameter to a fetch request and display the proper response in the console.
 
 ## Instructions
 
