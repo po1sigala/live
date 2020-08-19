@@ -40,7 +40,9 @@ Follow these guidelines for committing:
 
 * Test your application before you commit to ensure functionality at every step in the development process
 
-We would like you to have well over 200 commits by graduation, so commit early and often!
+* We would like you to have well over 200 commits by graduation, so commit early and often!
+
+* Deploy this site to GitHub Pages, using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
 
 ## Submission on BCS
