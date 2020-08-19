@@ -99,8 +99,8 @@
             const tableList = document.getElementById('tableList');
 
             // Then display the fields in the HTML (Section Name, Date, URL)
-            const listItem = document.createElement('li');
-            listItem.classList.add('list-group-item mt-4');
+            let listItem = document.createElement('li');
+            listItem.classList.add('list-group-item', 'mt-4');
 
             // Create elements for Table ID, ID, Name, Email, Phone
             const tableEl = document.createElement('h2');
@@ -128,15 +128,9 @@
               nameEl.outerHTML +
               emailEl.outerHTML +
               phoneEl.outerHTML;
+
+            tableList.appendChild(listItem);
           }
-          // Append all elements to the listItem
-          listItem.appendChild(tableEl);
-          listItem.appendChild(hrBreak);
-          listItem.appendChild(idEl);
-          listItem.appendChild(nameEl);
-          listItem.appendChild(emailEl);
-          listItem.appendChild(phoneEl);
-          tableList.appendChild(listItem);
         })
         .catch((error) => {
           console.error('Error:', error);
@@ -159,11 +153,12 @@
           // Loop through and display each of the customers
           for (var i = 0; i < waitData.length; i++) {
             // Get a reference to the waitList element and populate it with tables
-            const waitList = document.getElementById('#waitList');
+            const waitList = document.getElementById('waitList');
+            console.log('runWaitListQuery -> waitList', waitList);
 
             // Then display the fields in the HTML (Section Name, Date, URL)
             let listItem = document.createElement('li');
-            listItem.classList.add('list-group-item mt-4');
+            listItem.classList.add('list-group-item', 'mt-4');
 
             // Add elements that will display customer ID, name, email and phone number
             const tableEl = document.createElement('h2');
@@ -197,7 +192,6 @@
               emailEl.outerHTML +
               phoneEl.outerHTML;
 
-            console.log('runWaitListQuery -> listItem', listItem);
             waitList.appendChild(listItem);
           }
         })
