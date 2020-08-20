@@ -2064,18 +2064,17 @@ The second method will be System.Drawing.Image.FromStream(). As the method and [
 
 ## Time to Start Coding!
 
-Since we are dealing with an instance of the WebClient as client, let's use it to call the OpenRead() method and convert our photo URL into a Stream.
+Since we are dealing with an instance of the `WebClient` as client, let's use it to call the `OpenRead()` method and convert our photo URL into a `Stream`.
 
 ```c#
 using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Stream employeeStream = client.OpenRead(employee[i].GetPhotoUrl());
+    Stream employeeStream = client.OpenRead(employees[i].GetPhotoUrl());
   }
 }
 ```
-
 
 If we are not sure what the data type of a given variable will be, how do we check?  
 
@@ -2083,10 +2082,9 @@ If we are not sure what the data type of a given variable will be, how do we che
 
 ```c#
 // Simply chain the GetType() method
-Console.WriteLine(client.OpenRead(employee[i].GetPhotoUrl()).GetType());
+Console.WriteLine(client.OpenRead(employees[i].GetPhotoUrl()).GetType());
 => System.Net.WebFileStream
 ```
-
 
 So what data type would this be?
 
@@ -2103,7 +2101,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Stream employeeStream = client.OpenRead(employee[i].GetPhotoUrl());
+    Stream employeeStream = client.OpenRead(employees[i].GetPhotoUrl());
     Image photo = Image.FromStream(employeeStream);
   }
 }
@@ -2117,7 +2115,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
   }
 }
 ```
@@ -2141,29 +2139,22 @@ using(WebClient client = new WebClient())
 }
 ```
 
-
 Now in order to run and test our application, we will need an employee picture to enter at the command prompt for employee information. Please download a test employee picture from the internet [here](http://placekitten.com/200/300) and save it to our data directory. 
 
 **Hint:** If the application breaks at any point, carefully read through the error messages. Keep a special eye on the relative path for your employee image file from the root directory and pay close attention to the spelling of the file extension (jpeg, not jpg, for example).
-
-```c#
-data/300.jpeg
-```
-
-Now look in the *data* folder in the VS Code's explorer side menu and open the *employeeBadge.png. *We should see your employee's picture in the file *employeeBadge.png*. 
 
 Make a note that this file gets overwritten every time the application runs. How can we prevent an overwrite if we need to keep all our employee badge images? Please keep this in mind since we will need an answer very soon.
 
 Now let's move onto the second step: converting the badge template.
 
-We actually accomplished this step previously in this section and checked our result, so let's insert that code now. Add the highlighted code below:
+We actually accomplished this step previously in this section and checked our result. Replace `photo.Save("data/employeeBadge.png");` with the the following statements:
 
 ```c#
 using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
 
     Image background = Image.FromFile("badge.png");
     background.Save("data/employeeBadge.png");
@@ -2171,10 +2162,9 @@ using(WebClient client = new WebClient())
 }
 ```
 
+As you see, we've made a slight alteration and changed the variable name to `background` to signify that the badge image will be the background image onto which we will be printing our employee information.
 
-Let's make a slight alteration and change the variable name to background to signify that the badge image will be the background image onto which we will be printing our employee information.
-
-Now that these image conversions are complete, it's time to tackle the third step, so let's remove our background.Save method and create a canvas where we will be placing our images.
+Now that these image conversions are complete, it's time to tackle the third step. We will need to temporarily comment out the `background.Save()` statement so we can create the canvas where we will be placing our images.
 
 ## The Bitmap Class
 
@@ -2203,7 +2193,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
 
     Image background = Image.FromFile("badge.png");
     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
@@ -2213,17 +2203,17 @@ using(WebClient client = new WebClient())
 ```
 
 
-Please note that when we created a new Bitmap instance, we had to initialize the size parameters. We chose the height and width of the Bitmap  to reflect the size of our badge.
+Please note that when we created a new `Bitmap` instance, we had to initialize the size parameters. We chose the height and width of the `Bitmap` to reflect the size of our badge.
 
-Next we will need to convert this Bitmap into a Graphic object in order to use the Graphic methods to draw onto the our canvas using the DrawImage method. Please note that we have chosen to make badge our canvas where we will make our graphical modifications, ie adding pictures and text.
+Next we will need to convert this `Bitmap` into a `Graphic` object in order to use the `Graphic` methods to draw onto the our canvas using the `DrawImage` method. Please note that we have chosen to make `badge` our canvas where we will make our graphical modifications, i.e., adding pictures and text.
 
 ## The Graphics Class 
 
-The System.Drawing.Graphics class acts much like a wrapper around the badge bitmap and allows direct graphical modifications to the badge.
+The `System.Drawing.Graphics` class acts much like a wrapper around the badge bitmap and allows direct graphical modifications to the badge.
 
 To see how much this class has to offer, please dig deeper into the docs and check out the multitude of methods at your disposal [here](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
 
-As the document states midway down in the Remarks section, there is a suggestion to create a Graphics object from an image by using the FromImage method.
+As the document states midway down in the Remarks section, there is a suggestion to create a `Graphics` object from an image by using the FromImage method.
 
 Let's try that method now. How do you suppose it should look? Try to type out the expression here.
 
@@ -2234,7 +2224,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
     Image background = Image.FromFile("badge.png");
     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
     Graphics graphic = Graphics.FromImage(badge);
@@ -2257,7 +2247,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-     Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
      Image background = Image.FromFile("badge.png");
      Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
      Graphics graphic = Graphics.FromImage(badge);
@@ -2284,7 +2274,7 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-    Image photo = Image.FromStream(client.OpenRead(employee[i].GetPhotoUrl()));
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
     Image background = Image.FromFile("badge.png");
     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
     Graphics graphic = Graphics.FromImage(badge);
@@ -2307,7 +2297,7 @@ Let's save this image to a file. Please take a moment to write out the code that
 badge.Save("data/employeeBadge.png");
 ```
 
-Now let's check the image file to see if we were able to successfully input the employee picture onto the badge template. Let's run the application and create a single employee at the terminal prompt to create this badge image. Don't forget to include the URL for the employee test photo.
+Now let's check the image file to see if we were able to successfully input the employee picture onto the badge template. Let's run the application and create a single employee at the terminal prompt to create this badge image. Don't forget to include the URL for the employee test photo, which is simply the relative location of the photo we downloaded earlier: data/300.jpg
 
 Success! Woo-hoo!
 
@@ -2340,23 +2330,23 @@ using(WebClient client = new WebClient())
   ```
 
 
-Please note that StringAlignment, Font, and SolidBrush are all a part of the System.Drawing namespace.
+Please note that `StringAlignment`, `Font`, and `SolidBrush` are all a part of the `System.Drawing` namespace.
 
 Now that that's done, let's take another look at the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8) for the Graphics class and see if we can find a method that will help us accomplish this goal. 
 
 As you can see, there is a plethora of drawing methods that allow you to draw shapes, images, and strings.
 
-DrawString sounds like the right method that could help us. Take a minute to look over some of their examples in the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.drawstring?view=netframework-4.8).
+`DrawString` sounds like the right method that could help us. Take a minute to look over some of their examples in the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.drawstring?view=netframework-4.8).
 
-As can be seen in the Overloads section of the docs, there are a number of arguments that are needed to format and style the string. The second format appears to have the configuration we need. 
+As can be seen in the **Overloads** section of the docs, there are a number of arguments that are needed to format and style the string. The second format appears to have the configuration we need. 
 
 ```c#
 DrawString(String, Font, Brush, RectangleF, StringFormat)
 ```
 
-Draws the specified text string in the specified rectangle with the specified Brush and Font objects using the formatting attributes of the specified StringFormat.
+This code draws the specified text string in the specified rectangle. It uses the specified `Brush` and `Font` objects, and employs the formatting attributes of the specified `StringFormat`.
 
-Notice there are five arguments, each being a different object type, to correctly use the Graphics.DrawString method. Some of these attributes we have included as part of the styling parameters of this badge, including Font and StringFormat, which we have already declared at the beginning of this section.
+Notice there are five arguments, each being a different object type, to correctly use the `Graphics`.`DrawString` method. Some of these attributes we have included as part of the styling parameters of this badge, including `Font` and `StringFormat`, which we have already declared at the beginning of this section.
 
 The String argument will pertain to the text we would like to print onto the badge. 
 
@@ -2364,58 +2354,59 @@ In our first step, let's try to print the company name onto the badge.
 
 How would we go about accessing the company name from our employee?
 
-**Hint:** Take a look at the Employee class to see if there are any methods that could help us.
+**Hint:** Take a look at the `Employee` class to see if there are any methods that could help us.
 
 **Hint:** We are still in a for loop, so what type of level scope are we on with the employee List?
 
-Lucky for us, we have a method in our Employee class called GetCompanyName() that returns the employee's company name.
+We need to go back to the `Employee` class and add a function that will return the `CompanyName`.
 
-Since we are still in our for loop, we are on the object scope of the employee List and can access the instance method as so:
+Add the following function to the `Employee` class:
+
+```c#
+public string GetCompanyName() {
+    return "Cat Worx";
+}
+```
+
+Since we are still in our for loop, we are on the object scope of the employee List and can access the instance method, `GetCompanyName()` that we just added as so:
 
 ```c#
 employees[i].GetCompanyName();
 ```
 
-The second argument pertains to the Font, which we have already created and initialized as font from the Font class.
+The second argument pertains to the `Font`, which we have already created and initialized as font from the `Font` class.
 
-The third argument will be Brush, which will be the font color. We must create a new Brush object which we will initialize with the color white.
+The third argument will be `Brush`, which will be the font color. We must create a new Brush object which we will initialize with the color white.
 
-The fourth argument is the Rectangle object which again allows placement and sizing on the Bitmap badge.
+The fourth argument is the `Rectangle` object which again allows placement and sizing on the Bitmap badge.
 
-The fifth argument is the StringFormat object which allows for layout orientation and alignment. We will use the format instance object we declared previously for center alignment.
+The fifth argument is the `StringFormat` object which allows for layout orientation and alignment. We will use the format instance object we declared previously for center alignment.
 
 Let's try and configure this method including all five arguments with the correct object types.
 
 **Hint:** The order of the arguments is critical!
 
-```c#
-    graphic.DrawImage(photo, new Rectangle(PHOTO_START_X, PHOTO_START_Y, PHOTO_WIDTH, PHOTO_HEIGHT));
-  }
-    // Company name
-    graphic.DrawString(
-        employees[i].GetCompanyName(),
-        font,
-        new SolidBrush(Color.White),
-        new Rectangle(
-            COMPANY_NAME_START_X,
-            COMPANY_NAME_START_Y,
-            BADGE_WIDTH,
-            COMPANY_NAME_WIDTH
-        ),
-        format
-        );
-      }
-    } 
-  }
-}
-```
+When you're finshed, your work should look like the following code, which should come just before `badge.Save("data/employeeBadge.png");`.
 
-
-Now let's test our code and temporarily add our Save method to see if the company name appears in the right place.
+**Hint:** The order of the arguments is critical!
 
 ```c#
-badge.Save("data/employeeBadge.png");
+// Company name
+graphic.DrawString(
+  employees[i].GetCompanyName(),
+  font,
+  new SolidBrush(Color.White),
+  new Rectangle(
+      COMPANY_NAME_START_X,
+      COMPANY_NAME_START_Y,
+      BADGE_WIDTH,
+      COMPANY_NAME_WIDTH
+  ),
+format
+);
 ```
+
+Now let's test our code and once again use our `badge.Save("data/employeeBadge.png");` to see if the company name appears in the right place.
 
 Awesome. Now we just have a few more steps to complete to finish our badge.
 
@@ -2426,40 +2417,20 @@ The next step will be to print our employee's name on the badge. Let's see if yo
 **Hint:** Use the coordinate parameter constants given to you at the beginning of this section.
 
 ```c#
-    graphic.DrawImage(photo, new Rectangle(PHOTO_START_X, PHOTO_START_Y, PHOTO_WIDTH, PHOTO_HEIGHT));
-  }
-        // Company name
-        graphic.DrawString(
-        employees[i].GetCompanyName(),
-        font,
-        new SolidBrush(Color.White),
-        new Rectangle(
-            COMPANY_NAME_START_X,
-            COMPANY_NAME_START_Y,
-            BADGE_WIDTH,
-            COMPANY_NAME_WIDTH
-        ),
-        format
-        );
-      // Employee name
-        graphic.DrawString(
-        employees[i].GetFullName(),
-        font,
-        brush,
-        new Rectangle(
-            EMPLOYEE_NAME_START_X,
-            EMPLOYEE_NAME_START_Y,
-            BADGE_WIDTH,
-            EMPLOYEE_NAME_HEIGHT
-        ),
-        format
-        );
-      }
-    } 
-  }
-}
+// Employee name
+graphic.DrawString(
+    employees[i].GetName(),
+    font,
+    brush,
+    new Rectangle(
+        EMPLOYEE_NAME_START_X,
+        EMPLOYEE_NAME_START_Y,
+        BADGE_WIDTH,
+        EMPLOYEE_NAME_HEIGHT
+    ),
+  format
+);
 ```
-
 
 Don't forget to add the Save method to test the new addition to the badge.
 
@@ -2471,45 +2442,25 @@ Our next step will be to print our employee id number to the page.
 
 **Hint:** Rectangle's arguments must be in a specific order to give the expected results.
 
+As before, the new code should come before the `badge.Save("data/employeeBadge.png");` command:
+
 ```c#
-      // Employee name
-        graphic.DrawString(
-        employees[i].GetFullName(),
-        font,
-        brush,
-        new Rectangle(
-            EMPLOYEE_NAME_START_X,
-            EMPLOYEE_NAME_START_Y,
-            BADGE_WIDTH,
-            EMPLOYEE_NAME_HEIGHT
-        ),
-        format
-        );
-        // Employee ID
-        graphic.DrawString(
-        employees[i].GetId().ToString(),
-        monoFont,
-        brush,
-        new Rectangle(
+// Employee ID
+graphic.DrawString(
+    employees[i].GetId().ToString(),
+    monoFont,
+    brush,
+    new Rectangle(
         EMPLOYEE_ID_START_X,
         EMPLOYEE_ID_START_Y,
         EMPLOYEE_ID_WIDTH,
         EMPLOYEE_ID_HEIGHT
-          ),
-          format
-          );
-        }    
-      }
-    } 
-  }
-}
+    ),
+  format
+);
 ```
 
-Now let's check to see if our employee number printed correctly to the badge by inserting our create image file command: 
-
-```c#
-badge.Save("data/employeeBadge.png");
-```
+Now let's check to see if our employee number printed correctly by running the program.
 
 Let's run the application and create a single employee at the terminal prompt to create a badge image.
 
@@ -2525,9 +2476,16 @@ Try to code your solution.
 badge.Save("data/{0}_badge.png", employees[i].GetId());
 ```
 
-Hm, this code is giving an error—something about an inability to convert from 'string'. It could be that the Save method cannot read the string interpolation. We need to convert the filename into a string before placing it into the Save method argument. 
+Hm, this code is giving an error—something about an inability to convert from 'string'. It could be that the `Save` method cannot read the string interpolation. We need to convert the filename into a string before placing it into the `Save` method argument. 
 
-See if you can figure out how to use String.Format() to output a file path that looks like data/[id]_badge.png.
+See if you can figure out how to use `String.Format()` to output a file path that looks like `data/[id]_badge.png`.
+
+When you're finished, your work should look like this code:
+
+```c#
+string template = "data/{0}_badge.png";
+badge.Save(string.Format(template, employees[i].GetId()));
+```
 
 Now let's run this application and see if we were able to create our employee badges by creating multiple employees at the command prompt. See if different badges with the corresponding filenames were created successfully in the data folder.
 
@@ -2557,7 +2515,7 @@ So far, we’ve been manually entering employee data, which is definitely a usef
 
 ## A Random API
 
-We weren’t able to convince any companies to hand over their employee data, so we’ll use the next best thing: the [Random User Generator API](https://randomuser.me/documentation). This is a great API for prototyping front-end and back-end features when you don’t yet have access to real users. The API provides many options, but we’re only concerned with one endpoint: *[https://randomuser.me/api/?results=10&nat=us&inc=name,id,pictur*e](https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture)
+We weren’t able to convince any companies to hand over their employee data, so we’ll use the next best thing: the [Random User Generator API](https://randomuser.me/documentation). This is a great API for prototyping front-end and back-end features when you don’t yet have access to real users. The API provides many options, but we’re only concerned with one endpoint: *[https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture]*(https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture)
 
 This will give us ten random US citizens along with their names, fake IDs, and thumbnail photos in JSON format. Visit the URL in another tab and skim over the data to get familiar with how we would parse it. Note the nested object structure:
 
@@ -2609,37 +2567,65 @@ We’re in the final stretch, so code snippets will become less complete as to g
 
 **Steps:**
 
-1. Create a new PeopleFetcher class.
+1. Create a new `PeopleFetcher.cs` file in the root project directory.
 
-2. Move GetFromUser() method out of Program and into this new class.
+2. Create the `PeopleFetcher` class in the new `PeopleFetcher.cs` file with the following code:
+   
+```c#
+using System;
+using System.Collections.Generic;
 
-3. Create a new method called GetFromAPI().
+namespace  CatWorx.BadgeMaker {
+    class PeopleFetcher 
+    {
+      // code from GetEmployees() in Program.cs
+    }
+}
+```
 
-4. Make HTTP request to API endpoint.
+3. Remove the `GetEmployees()` function from the `Program.cs` and place it into the new `PeopleFetcher` class in the `PeopleFetcher.cs` file.
 
-5. Convert JSON to C# data types.
+5. In the new `PeopleFetcher.cs` file create a new method called `GetFromAPI()`.
 
-6. Create a new Employee for each person we fetched from the API.
+6. Make HTTP request to API endpoint.
+
+7. Convert JSON to C# data types.
+
+8. Create a new Employee for each person we fetched from the API.
 
 ## Preparing the Class (Steps 1-3)
 
-We chose to call our new class PeopleFetcher, since its purpose is to fetch people data from various places, be it the command line or an API. After creating this new class, move the GetFromUser() method out of Program and into PeopleFetcher. Define the method correctly so Program can call it like so:
+We chose to call our new class `PeopleFetcher`, since its purpose is to fetch people data from various places, be it the command line or an API. Calling on the `PeopleFetcher` class, we can call the method, `GetEmployees()` and store the data in `employees`.
 
 ```c#
-employees = PeopleFetcher.GetFromUser();
+employees = PeopleFetcher.GetEmployees();
 ```
 
-If you get stuck, refer back to the steps we took with Util and printing the employees to the console. This is another example of moving things around for the sake of organization. It’s perfectly normal to find yourself doing this at various stages during development. As you write more code, you’ll frequently spot places where you could divide a class into other classes. In fact, some design principles suggest that a class should only ever have *one* job, but we won’t go that far today.
+If you get stuck, refer back to the steps we took with Util and printing the employees to the console. 
+**Hint:** Remember that methods need to be made public to be accessed from other classes. 
 
-With the new PeopleFetcher class in place, run the app again as a quick sanity test to make sure everything still works before moving on. If things look good, add another method to PeopleFetcher called GetFromAPI(). This method will also return a List of Employee instances. It’s okay if it returns an empty List for now. We’ll worry about populating it later. Swap out the method calls in *Program.cs* to make it easier to test:
+This is another example of moving things around for the sake of organization. It’s perfectly normal to find yourself doing this at various stages during development. As you write more code, you’ll frequently spot places where you could divide a class into other classes. In fact, some design principles suggest that a class should only ever have *one* job, but we won’t go that far today.
+
+With the new PeopleFetcher class in place, run the app again as a quick sanity test to make sure everything still works before moving on. If things look good, add another method to PeopleFetcher called GetFromAPI(). This method will also return a List of Employee instances. It’s okay if it returns an empty List for now. Your work should look like the following code:
+
+```c#
+public static List<Employee> GetFromApi() {
+  List<Employee> employees = new List<Employee>();
+  return employees;
+}
+```
+
+We’ll worry about populating it later. Comment-out the existing assignment in `Program.cs` for `employees` and add the following statement:
 
 ```c#
 employees = PeopleFetcher.GetFromAPI();
 ```
 
+This is temporary for testing purposes to see if the API is returning the employee names properly.
+
 ## Calling the API (Step 4)
 
-Finally, our app is ready for that new feature! In PeopleFetcher, import the System.NET namespace. You may remember needing to import this namespace in the previous module when it was time to download images. We can use the same WebClient class from System.NET to download information from API endpoints:
+Finally, our app is ready for that new feature! In `PeopleFetcher`, import the `System.NET` namespace. You may remember needing to import this namespace in the previous module when it was time to download images. We can use the same `WebClient` class from `System.NET` to download information from API endpoints. Add the following code to the `GetFromApi()` method in `PeopleFetcher.cs` file, right before that method's return statement:
 
 ```c#
 using (WebClient client = new WebClient())
@@ -2649,13 +2635,14 @@ using (WebClient client = new WebClient())
 }
 ```
 
-We’re going to use a different method this time, though:
+We’re going to use a different method this time, though. 
+Replace `Image.FromStream(client.OpenRead("image.png"));` in the previous code snippet with this code:
 
 ```c#
-client.DownloadString("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
+string response = client.DownloadString("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
 ```
 
-The DownloadString() method will do exactly what it sounds like: it will download all of the information from this URL as a string. Save this in a string variable and console log it. If you see a massive block of unformatted JSON, you’re on the right track:
+The `DownloadString()` method will do exactly what it sounds like: it will download all of the information from this URL as a string. Save your work and print the response to the console to verify that the API request is working. If you see a massive block of unformatted JSON, you’re on the right track:
 
 ```json
 {"results":[{"name":{"title":"ms","first":"danielle","last":"reid"},"id":{"name":"SSN","value":"801-52-3803"},"picture":{"large":"https://randomuser.me/api/portraits/women/37.jpg","medium":"https://randomuser.me/api/portraits/med/women/37.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/37.jpg"}}],"info":{"seed":"ad252bbde80093d2","results":1,"page":1,"version":"1.2"}}
@@ -2681,16 +2668,24 @@ While C# doesn’t necessarily have JavaScript-like objects, it *does* have clas
 
 Alas, what we get from the API doesn’t line up that nicely. This is where the solution becomes a bit more open-ended, which is actually a good thing! What makes programming fun is how there’s always more than one way to solve a problem. If you google "C# parse json," you’ll find a wide variety of suggestions. One approach would be to create another class that acts as a *model* for the API and accounts for all of its nested properties. There are also additional .NET packages that could help us out here.
 
-Let’s try using the [Json.NET](https://www.newtonsoft.com/json/help/html/Introduction.htm) framework, since it won’t feel like as big of a departure from how we would do things the JavaScript way. Json.NET is available under the package name *Newtonsoft.Json*, so make sure you install it the same way you installed the drawing package in the previous module. Once installed, import the correct namespace:
+Let’s try using the [Json.NET](https://www.newtonsoft.com/json/help/html/Introduction.htm) framework, since it won’t feel like as big of a departure from how we would do things the JavaScript way. Json.NET is available under the package name `Newtonsoft.Json`, so make sure you install it the same way you installed the `Drawing` package in the previous section. 
+
+**Hint:** Run the following command at the CLI:
+
+```bash
+dotnet add package Newtonsoft.Json 
+```
+
+Once installed, import the correct namespace in the top of the `PeopleFetcher.cs` file:
 
 ```c#
 using Newtonsoft.Json.Linq;
 ```
 
-This gives us access to a new class called JObject that will allow us to parse the JSON. In fact, the first method we’ll use is called Parse():
+This gives us access to a new class called `JObject` that will allow us to parse the JSON. In fact, the first method we’ll use is called `Parse()`. Delete the statement, `Console.Write(response);`, you used to test the app. Add this code in its place (i.e., after the response assignment):
 
 ```c#
-JObject json = JObject.Parse(responseString);
+JObject json = JObject.Parse(response);
 ```
 
 This will convert the string we downloaded from the API into a "JObject," which has a useful method attached to it called SelectToken(). Go ahead and run these console logs to see what happens:
@@ -2737,11 +2732,27 @@ Employee employee = new Employee
 
 But wait, an Employee takes in three strings and an integer, and these aren't strings. They're JObjects. Look into how you can convert these to the right data types before giving them to the constructor. Fair warning, the ID won't be as straightforward to convert to an integer as it might seem.
 
-Once the data types are correct, add each new employee to the List that this method returns. Run the app. If successful, your *data* folder will become populated with ten random user badges!
+Once the data types are correct, add each new employee to the List that this method returns. The correct coding solution should more or less match the following code:
+
+```c#
+foreach (JToken token in json.SelectToken("results")) {
+  // Parse JSON data
+  Employee emp = new Employee
+  (
+      token.SelectToken("name.first").ToString(),
+      token.SelectToken("name.last").ToString(),
+      Int32.Parse(token.SelectToken("id.value").ToString().Replace("-", "")),
+      token.SelectToken("picture.large").ToString()
+  );
+  employees.Add(emp);
+}
+```
+
+Run the app. If successful, your `data` folder will become populated with ten random user badges!
 
 ## Finishing Touches
 
-Earlier, we swapped out the manual GetFromUser() method with our new GetFromAPI() method, but we want both options to be available in the final version of the app. Ideally, the app will first ask if the user wants to fetch data from the API. If he/she answers "yes," it will run the GetFromAPI() method. If "no," it will run the GetFromUser() method. In either case, once the employee data is collected, the app will still generate the CSV file and badge images. Go ahead and implement these final changes however you see fit. No hints; you got this!
+Earlier, we swapped out the manual `GetEmployees()` method with our new `GetFromAPI()` method, but we want both options to be available in the final version of the app. Ideally, the app will first ask if the user wants to fetch data from the API. If he/she answers "yes," it will run the `GetFromAPI()` method. If "no," it will run the `GetEmployees()` method. In either case, once the employee data is collected, the app will still generate the CSV file and badge images. Go ahead and implement these final changes however you see fit. No hints; you got this!
 
 Afterwards, make sure to properly celebrate (and ask for a raise). This app will save you and your company a lot of time now when it comes to creating new security badges for employees. Granted, there's always more that could be added to it, which means a chance to continue learning and strengthening your C# skills.
 
