@@ -175,23 +175,22 @@ Now that we have a basic understanding of how a program is set up, let’s explo
 
 ## Data Types
 
-Like JavaScript, C# has various data types that can store values, each with their own set of properties and unique behavior. The main distinction, however, is that C# is a statically typed language. This means that the data type is explicitly labeled when a variable is declared. Whereas in JavaScript, declaring a variable with the keyword var allowed the data type to be inferred, C# variables must be declared with a data type. The number one advantage of a statically typed language is that there is added stability and potential error catching done automatically by the compiler. 
-
-*JavaScript*
+Like JavaScript, C# has various data types that can store values, each with their own set of properties and unique behavior. The main distinction, however, is that C# is a statically typed language. This means that the data type is explicitly labeled when a variable is declared. Whereas in JavaScript, declaring a variable with the keyword var allowed the data type to be inferred, C# variables **must** be declared with a data type as shown in the following code block. 
 
 ```js
+// JavaScript
 var carModel = "Explorer";
 var carPrice = 500;
-console.log(typeof carModel);
-console.log(typeof carPrice);
 ```
 
-*C#*
-
 ```c#
+// C#
 string carModel = "Intrepid";
 int carPrice = 500;
 ```
+
+In the preceding code block for C#, notice the `carModel` was declared as a `string` and the `carPrice` was declared as `int` which is an integer. The advantage of a statically typed language is the added stability and potential error catching done automatically by the compiler. 
+
 
 ## Strings
 
@@ -205,8 +204,7 @@ greeting = greeting + "World";
 Console.WriteLine("greeting" + greeting);
 ```
 
-
-**Hint:** Unlike JavaScript, double quotes must be used for strings in C#. 
+**Hint:** Unlike JavaScript, double quotes **must** be used for strings in C#. 
 
 If you decided to copy and paste the code into VS Code, you will notice syntax errors. All the double quotes may need to be replaced by double quotes in VS Code due to incorrect character interpretation.
 
@@ -215,10 +213,12 @@ If you decided to copy and paste the code into VS Code, you will notice syntax e
 Alternatively, there are a few other ways to print variables in C#. You might recognize some similarities to JavaScript in the following code example:
 
 ```c#
-Console.WriteLine($"greeting {greeting}"); Console.WriteLine("greeting: {0}", greeting);
+Console.WriteLine($"greeting {greeting}"); 
+Console.WriteLine("greeting: {0}", greeting);
 ```
 
-Add
+In the preceding code block, the first statement interpolates the variable `greeting` with the use of the `$` and curly braces surround the variable, `{greeting}`.
+The second statement interpolates the variable, `greeting`, by associating the zero index with the second argument of the function call.
 
 ## Numbers
 
@@ -226,45 +226,49 @@ Just like JavaScript, number data types are used to store numbers. They have uni
 
 For example, integer values and decimal values have different data types in C#, as is the case in virtually all programming languages. Can you guess which is which in C#? That’s right—int and float.
 
-For an extensive summary of the large variety of data types and their uses, investigate what other built-in data types are available. 
+For an extensive summary of the variety of data types and their uses, take a look at the [official documentation on data types created by Microsoft, the maintainers of C#.](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types) 
 
-Now let’s look at the following code example:
+Now's let try an exercise to find out how to solve some basic math operations in C#.
+Try to solve the following problem by writing a solution in the `Main()` of the `Program.cs`.
 
 ```c#
-// How do you find the area of this circle?  Area = pi * radius^2
-int radius = 3;
-float pi = 3.14;
+// How do you find the area of a square?  Area = side * side
+float side = 3.14;
 ```
 
-Think about the following while you consider the code above: 
+Try to compute the solution programatically by placing the code in the `Main` function and replace the "Hello World!" statement in the `Program.cs` file. Then run the program with `dotnet run`.
 
-* Should you declare the variable area?
+Here are some questions to consider in case you get an error or get stuck. 
+
+* Do we need to declare the area as a variable?
 
 * What data type should area be?
 
-* How do you find the data type of a variable?
-
-* Is the error suggesting to use a different data type?
-
-* Think about using the C# Math library (more on this in the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.math.pow?view=netframework-4.8)).
+* What does the error suggest?
 
 Float is actually a very special data type with a little bit different syntax. 
 
-We should be using the data type double in this case, as the error suggests.
+The errorWe should be using the data type double in this case, as the error suggests.
 
 When trying to use the Math library, double usage is explicitly stated in the parameters, as you can see in the following code example:
 
 ```c#
-Int radius = 3;
-double pi = 3.14;
-double area = pi * Math.Pow( radius, 2);
+double side = 3.14;
+double area = side * side;
 Console.WriteLine("area: {0}", area);
+```
+
+If we wanted to find what the data type is of a variable, how would we accomplish this task?
+
+Use the `GetType()` function.
+
+```c#
 Console.WriteLine("area is a {0}", area.GetType());
 ```
 
 ## Math Operators
 
-Try to guess what the outcomes wil be for the following lines of code, then run them in your Main method:
+Try to guess what the outcomes will be for the following lines of code, then run them in your Main method:
 
 ```c#
 Console.WriteLine(2 * 3);         // Basic Arithmetic: +, -, /, *
@@ -281,27 +285,42 @@ num ++;
 Console.WriteLine(num);
 ```
 
-add
+As we can see from the results we received in the console, the math operations perform as expected in JavaScript. Strings concatenate and the math operators abide by math rules when it comes to the operation order.
 
 ## Booleans
 
-Add content
+C# also has a separate Boolean type, `bool`. We can declare any variable as a type `bool` and assign the variable a true or false value as seen in the following declaration.
+
+```c#
+bool isCold = true;
+Console.WriteLine(isCold ? "drink" : "add ice");  // output: drink
+Console.WriteLine(!isCold ? "drink" : "add ice");  // output: add ice
+```
+
+Run the preceding statements in the `Main()` function in the `Program.cs` file. 
 
 # Data Type Conversions
 
-In JavaScript, there was often a need to convert a string into an integer. Let’s tackle this problem now with C#.
+In JavaScript, there was often a need to convert data types. Let’s do this in C#.
 
-Imagine that you are given the string string stringNum = "2"; which you need to convert into an integer in order to run some math operations.
+Imagine that you are given the string, `stringNum = "2"`. In order use `stringNum` in a math operation, we need to do a data type conversion to a number.
 
-How do we convert stringNum into an integer or int data type?
+Try your hand at writing code that converts the `stringNum` text to an `Int32` and stores it into a variable. Print the variable and print the variable's type, as well.
 
-Do you remember how to check for data types in C#?
+**Hint:** Use the `Convert` class from the `System` namespace, specifically the `ToInt16()` method.
 
-> *Hint:* Use `GetType()`
+**Hint:** Use `GetType()`.
 
-> *Hint:* Use the Convert method from the System namespace.
+When you're finished, your work should match or be very similar to the following code:
 
-Convert.Int32
+```c#
+string stringNum = "2";
+int intNum = Convert.ToInt16(stringNum);
+Console.WriteLine(intNum);
+Console.WriteLine(intNum.GetType());
+```
+
+**Important:** `Int16` designates the storage available for the variable. This calculates to 16 bits which is 2^16 or 65,536 values, which is normally enough for daily computation. There are also Int32 and Int 64 for larger calculations when necessary. 
 
 Now let’s move on to some more complex data structures that will allow us to start building our application.
 
@@ -315,38 +334,55 @@ In this section, we will look at the following C# data structures:
 
 * Lists
 
-These more complex data types allow us to … they are different from the previous data types we described because … as you’ll see, they are powerful… 
+These more complex data types allow us to store lots of data in a structured format. Similar to how JavaScript used arrays and object literals, C# uses these data structures to maintain large sets of data with different accessobility operations. The choosing the "right" data structure for the job will optimize performance for the application.
 
 ## Dictionaries
 
 Similar to object literals in JavaScript, dictionaries in C# use a key-value pair relationship. But just as with the data types, the type of data that can be stored must be explicitly stated when the data structure is declared. 
 
-The following code example shows… Notice that we use angled brackets ( <> ) to declare data types:
+The following code example demonstrates how to implement a Dictionary in C#. 
+
+To use a Dictionary, you must first import `System.Collections.Generic` at the top of the `Program.cs` file.
 
 ```c#
-// Data types for Dictionary's key value pair must be declared, but can // be used in alternative combinations based on need. <string, double>
-// <int, string> etc. . . 
-Dictionary<int, string> myScoreBoard;
-// Now I can initialize the Dictionary with initial values
-// We will see that declaring and initializing variables or data structures are often done on the same line, but doesn’t have to be
-myScoreBoard = new Dictionary<int, string>()
-{
-  {"firstInning", 0}, 
-  {"secondInning", 1}
-}; 
-// Add method is used here to add key-value pairs into the dictionary
-myScoreBoard.Add("thirdInning",3);
-myScoreBoard.Add("fourthInning", 3); 
-myScoreBoard.Add("fifthInning", 5);
+using System.Collections.Generic;
 ```
 
-Now that the Dictionary myScoreBoard has been populated with data, can you figure out how to access the values assigned to the keys?
-
-**Hint:** Leverage your knowledge about objects in JavaScript.
-
-Add
+Data types for a Dictionary's key-value pair types are declared in angled brackets as shown in the following examples: 
 
 ```c#
+<string, double>
+<int, string> 
+```
+
+In the following code example, we are declaring that the variable, `myScoreBoard`, is a Dictionary that has a string key and an integer value:
+
+```c#
+Dictionary<string, int> myScoreBoard = new Dictionary<string, int>();
+```
+
+To populate the Dictionary, we use the `.Add()` method in multiple lines to add data.
+
+myScoreBoard.Add("firstInning", 10);
+myScoreBoard.Add("secondInning", 20);
+myScoreBoard.Add("thirdInning", 30);
+myScoreBoard.Add("fourthInning", 40);
+myScoreBoard.Add("fifthInning", 50);
+      
+Alternatively, we could initialize the Dictionary by listing the key-value pairs in a function call. Using this method, we pass a comma-separated list of key-value pairs in braces {} for each entry we wish to create:
+
+Dictionary<string, int> myScoreBoard = new Dictionary<string, int>(){
+    { "firstInning", 10 },
+    { "secondInning", 20},
+    { "thirdInning", 30},
+    { "fourthInning", 40},
+    { "fifthInning", 50}
+};
+
+This is functionally equivalent to the first method. 
+
+Use one of the patterns and form or the other, and then add this code below it:
+
 Console.WriteLine("----------------");
 Console.WriteLine("  Scoreboard");
 Console.WriteLine("----------------");
@@ -356,7 +392,6 @@ Console.WriteLine("   2   |    {0}", myScoreBoard["secondInning"]);
 Console.WriteLine("   3   |    {0}", myScoreBoard["thirdInning"]);
 Console.WriteLine("   4   |    {0}", myScoreBoard["fourthInning"]);
 Console.WriteLine("   5   |    {0}", myScoreBoard["fifthInning"]);
-```
 
 ### Arrays vs. Lists
 
