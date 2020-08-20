@@ -1,5 +1,4 @@
 // Dependencies
-// ===========================================================
 const express = require('express');
 
 const app = express();
@@ -31,7 +30,6 @@ const characters = [
 ];
 
 // Routes
-// ===========================================================
 app.get('/', (req, res) => {
   res.send('Welcome to the Star Wars Page!');
 });
@@ -46,5 +44,4 @@ app.get('/:character', (req, res) => {
 });
 
 // Listener
-// ===========================================================
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));

@@ -1,12 +1,10 @@
 // Dependencies
-// ===========================================================
 const express = require('express');
 
 const app = express();
 const PORT = 3000;
 
 // Data
-// ===========================================================
 const yoda = {
   name: 'Yoda',
   role: 'Jedi Master',
@@ -30,7 +28,6 @@ const darthmaul = {
 //
 
 // Routes
-// ===========================================================
 app.get('/', (req, res) => {
   res.send('Welcome to the Star Wars Page!');
 });
@@ -52,5 +49,4 @@ app.get('/darthmaul', (req, res) => {
 //
 
 // Listener
-// ===========================================================
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));

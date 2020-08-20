@@ -1,12 +1,12 @@
 // Dependencies
-// ===========================================================
+
 const express = require('express');
 
 const app = express();
 const PORT = 3000;
 
 // Data
-// ===========================================================
+
 const characters = [
   {
     routeName: 'yoda',
@@ -32,7 +32,7 @@ const characters = [
 ];
 
 // Routes
-// ===========================================================
+
 app.get('/', (req, res) => res.send('Welcome to the Star Wars Page!'));
 
 // Displays all characters
@@ -57,7 +57,7 @@ app.get('/api/characters/:character', (req, res) => {
 });
 
 // Listener
-// ===========================================================
+
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${PORT}`);
 });
