@@ -460,21 +460,32 @@ Now that the `List` is populated with employee data, how can we access our emplo
 Console.WriteLine("My employees include {0}, {1}, {2}, {3}", employees[0], employees[1], employees[2], employees[3]);
 ```
 
-Pretty laborious, right? Just imagine how time-consuming this would be if you worked at a large firm with hundreds of employees! 
+We used the same bracket notation, `[]`, we used with arrays. 
 
-In order to print out every element in the list without needing to hard code each element at every index, let’s think back to JavaScript and see if we can use a function to loop through our list.
+Can you predict what the output will look like here?
+
+Let's add this code to the `Main()` function and run the application to verify our prediction.
+We should get the following response in the terminal:
+
+```bash
+My employees include adam, amy, barbara, billy
+```
+
+Simple, but redundant, how can we keep our code DRY? Imagine a huge company that needed to create an employee list, this would take forever. Is there a process we used in JavaScript that led to a much more automated process to print array elements? 
+
+If you guessed loops you were correct!
 
 ## Loops
 
 Time to put your googling skills to work! See if you can find the correct function to iterate through the employees list.
 
-If you came up with for loops, you’re right! Just like in JavaScript, for loops can be used in C# to iterate through an array or (in our case) a list.
+If you came up with `for` loops, you’re right! Just like in JavaScript, `for` loops can be used in C# to iterate through an array or (in our case) a list.
 
 **Hint:** Google #1 search term for c# for loop is [here](https://www.tutorialsteacher.com/csharp/csharp-for-loop)[.](https://www.tutorialsteacher.com/csharp/csharp-for-loop)
 
 Can you note all the differences and similarities from Javascript?
 
-Type and run the following code:
+Replace the `Console.Writeline()` statement currently in the `Main()` function with the following code block and run the application:
 
 ```c#
 for (int i = 0; i < employees.Count; i++) 
@@ -483,22 +494,16 @@ for (int i = 0; i < employees.Count; i++)
 }
 ```
 
-An alternative C# offers in lieu of the for loop is the foreach statement. Here is an example (you don’t have to type this code):
+In the console, we are able to display each employee's name on a separate line:
 
-```c#
-foreach( string employee in employees)
-{
-  Console.WriteLine(employee)
-}
+```bash
+adam
+amy
+barbara
+billy
 ```
 
-Add content
-
-Try to think of how the foreach statement can be used to iterate through a dictionary or array.
-
-*INSERT CODE CHALLENGE*
-
-*Insert Reflective Question students can answer independently, and has them chew on an important concept you’ve covered above. *
+We will use a `List` to store the employee names for our Badge Maker application since the `List` can grow to accomodate the size of our company as well as have a familiar interface to access and populate data into the `List`.
 
 ## Let’s Review
 
@@ -561,57 +566,35 @@ It would be cumbersome to update this list every time the company hires a new em
 
 ```c#
 using System;
-
 using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
-
 {
-
     class Program
-
     {
-
         static void Main(string[] args)
-
         {
-
             List<string> employees = new List<string>() { "adam", "amy" };
-
             employees.Add("barbara");
-
             employees.Add("billy");
-
             Console.WriteLine("Please enter a name: ");
-
 		 // Get a name from the console and assign it to a variable
-
             string input = Console.ReadLine();
-
             employees.Add(input);
-
             for (int i = 0; i < employees.Count; i++) 
-
             {
-
                 Console.WriteLine(employees[i]);
-
             }
-
         }
-
     }
-
 }
 ```
 
-Run the program in the VS Code terminal by typing dotnet run. After typing in a name and pressing Enter, you should see that name added to the printed list. Note that the .NET runtime halts when it encounters Console.ReadLine() and waits for input. It then continues executing on the next line. 
+Run the program in the VS Code terminal by typing dotnet run. After typing in a name and pressing Enter, you should see that name added to the printed list. Note that the .NET runtime halts when it encounters `Console.ReadLine()` and waits for input. It then continues executing on the next line. 
 
-Now that we have an interactive command-line program, we can remove the hard coded list of names and accept all names from the user. 
+Now that we have an interactive command-line program, we can remove the hard coded list of names and accept all names from the user. Next, we'll get multiple employee names using a while loop, and we'll store them in a list.
 
-Get multiple employee names using a while loop, and store them in a list
-
-Similar to the way we iterated over the hard coded list of employee names and output each one to Console.WriteLine(), we can loop over Console.ReadLine() and store user input into the employee list.  
+Similar to the way we iterated over the hard coded list of employee names and output each one to Console.WriteLine(), we can loop over `Console.ReadLine()` and store user input into the employee list.  
 
 First, let’s remove the values we used to initialize the employees list, as well as the first two calls to employees.Add(). This will ensure that we are starting with an empty list.
 
@@ -619,49 +602,32 @@ First, let’s remove the values we used to initialize the employees list, as we
 static void Main(string[] args)
 {
     List<string> employees = new List<string>();
-
     Console.WriteLine("Please enter a name: ");
-
     string input = Console.ReadLine();
-
     employees.Add(input);
-
     for (int i = 0; i < employees.Count; i++) 
     {
-
       Console.WriteLine(employees[i]);
-
     }
 }
 ```
 
-Next, let’s wrap the Console.ReadLine() call in a while statement. You may recognize while from JavaScript, where it behaves exactly the same: it executes a statement or a block of statements while a specified Boolean expression evaluates to true.
+Next, let’s wrap the `Console.ReadLine()` call in a while statement. You may recognize while from JavaScript, where it behaves exactly the same: it executes a statement or a block of statements while a specified Boolean expression evaluates to true.
 
 ```c#
 static void Main(string[] args)
 {
   List<string> employees = new List<string>();
-
   // Collect user values until the value is an empty string
-
   while (true)
-
   {
-
       Console.WriteLine("Please enter a name: ");
-
       string input = Console.ReadLine();
-
       employees.Add(input);
-
   } 
-
   for (int i = 0; i < employees.Count; i++) 
-
   {
-
       Console.WriteLine(employees[i]);
-
   }
 }
 ```
@@ -682,11 +648,8 @@ We can check for this and break out of the loop:
 while (true)
 {
   Console.WriteLine("Please enter a name: (leave empty to exit): ");
-
   string input = Console.ReadLine();
-
   // Break if the user hits ENTER without typing a name
-
   if (input == "") 
   {
     break;
@@ -697,7 +660,7 @@ while (true)
 
 Remember, whenever you write a while statement, be sure to provide a mechanism to exit it, or you'll create an infinite loop!
 
-Now the employees list can be populated entirely from the command line! Nice work.
+Now the employees list can be populated entirely from the command line! Execute it by entering `dotnet run` in the terminal and confirm that it works as expected. Nice work.
 
 # Organize the Code
 
@@ -721,7 +684,7 @@ A method declaration, or **signature**, looks like this:
 
 [access_modifier] ["static"] return_type name([parameters])
 
-The parts in brackets are optional. We'll talk about access modifiers and the static keyword later in this tutorial, but remember this rule: *if a static method wants to call another method inside the same class directly, that method must also be static*. Because Main() is static, any other method it needs to call within Program must also be static. For now, let's focus on the return type and parameters. We know that GetEmployees() needs to return employee names, which we've decided to store in a list of strings. So let's make the return type of this method List<string>:
+The parts in brackets are optional. We'll talk about access modifiers and the static keyword later in this tutorial, but remember this rule: *if a static method wants to call another method inside the same class directly, that method must also be static*. Because `Main()` is static, any other method it needs to call within Program must also be static. For now, let's focus on the return type and parameters. We know that `GetEmployees()` needs to return employee names, which we've decided to store in a list of strings. So let's make the return type of this method `List<string>`:
 
 ```c#
 static List<string> GetEmployees()
@@ -730,23 +693,23 @@ static List<string> GetEmployees()
 }
 ```
 
+The function, `GetEmployees()`,  is going to be located after the closing block of the `Main()`.
+
 This method doesn't need parameters because it will know how to get employee names from the user all by itself. Now we can move all of the employee-getting code from Main() into this new method:
 
 ```c#
 static List<string> GetEmployees()
 {
   List<string> employees = new List<string>();
-
   while (true) 
   {
       Console.WriteLine("Please enter a name: (leave empty to exit): ");
-
       string input = Console.ReadLine();
-
       if (input == "") 
       {
         break;
       }
+
       employees.Add(input);
   }
   // This is important!
@@ -769,9 +732,27 @@ static void Main(string[] args)
     Console.WriteLine(employees[i]);
   }
 }
+
+static List<string> GetEmployees()
+{
+  List<string> employees = new List<string>();
+  while (true) 
+  {
+      Console.WriteLine("Please enter a name: (leave empty to exit): ");
+      string input = Console.ReadLine();
+      if (input == "") 
+      {
+        break;
+      }
+      
+      employees.Add(input);
+  }
+  // This is important!
+  return employees;
+}
 ```
 
-Note the syntax of the GetEmployees() method call. The left-hand side of the statement assigns a List<string> to employees. The right-hand side calls our new method, which returns a List<string>. This is very similar to the original employees declaration that we moved into getEmployees():
+Note the syntax of the `GetEmployees()` method call. The left-hand side of the statement assigns a `List<string>` to employees. The right-hand side calls our new method, which returns a `List<string>`. This is very similar to the original employees declaration that we moved into `getEmployees()`:
 
 ```c#
 List<string> employees = new List<string>();
@@ -779,16 +760,16 @@ List<string> employees = new List<string>();
 
 This symmetry is common in C#, and contributes to its elegance!
 
-Now that we've walked through moving the employee-getting logic into a method, try your hand at moving the employee-printing logic into a new PrintEmployees() method.
+Now that we've walked through moving the employee-getting logic into a method, try your hand at moving the employee-printing logic into a new `PrintEmployees()` method.
 
-**Hint:** GetEmployees() had a return type but no parameters. PrintEmployees() will require a parameter, but will not have a return type.
+**Hint:** `GetEmployees()` had a return type but no parameters. `PrintEmployees()` will require a parameter, but will not have a return type.
 
-This one is a little tricky, because we haven't talked about how to specify "no return type." If  we look at our Main() method, we can see that its signature states it will return void. Any method that does not return a value must be defined to return void. 
+This one is a little tricky, because we haven't talked about how to specify "no return type." If  we look at our `Main()` method, we can see that its signature states it will return void. Any method that does not return a value must be defined to return void. 
 
-Let's define PrintEmployees() below GetEmployees():
+Let's define `PrintEmployees()` below `GetEmployees()`:
 
 ```c#
-static void printEmployees(List<string> employees)
+static void PrintEmployees(List<string> employees)
 {
   for (int i = 0; i < employees.Count; i++) 
   {
@@ -1013,9 +994,7 @@ This is an easy, intuitive way to instantiate an Employee when you have all of t
 
 ```js
 var date = new Date('December 17, 1995 03:24:00');
-
 var regex = new RegExp("Fudge\\WSauce\\!?");
-
 var fancyPants = new Pants("fancy");
 ```
 
@@ -1023,41 +1002,32 @@ There are two popular constructors styles in JavaScript. Before ECMAScript 2015,
 
 ```js
 var Employee = function(firstName, lastName) {
-
   this.firstName = firstName;
-
   this.lastName = lastName;
-
   this.isEmployeeBob = function(name) {
-
     return name === "Bob";
   }
 }
 ```
 
-There's no obvious constructor here, just the magical behavior that assigns arguments from var e = new Employee("John", "Smith") to a mysterious place called this. We called it a constructor because it behaved similarly to conventional constructor methods in object-oriented programming languages. It was common to define *all* of a class's properties and behaviors within this function.
+There's no obvious constructor here, just the magical behavior that assigns arguments from `var e = new Employee("John", "Smith")` to a mysterious place called `this`. We called it a constructor because it behaved similarly to conventional constructor methods in object-oriented programming languages. It was common to define *all* of a class's properties and behaviors within this function.
 
-ECMAScript 2015 introduced a lot of object-oriented syntax, including classes and explicit constructor methods. You could now define a class like this:
+In JavaScript, we learned about OOP, classes and constructor methods. You can define a class in JavaScript like the following function:
 
 ```js
 class Employee {
-
   constructor(firstName, lastName) {
-
     this.firstName = firstName;
-
     this.lastName = lastName;
-
   }
 
   isEmployeeBob(name) {
-
     return name === "Bob";
-
+  }
 }
 ```
 
-constructor() makes it clear exactly what needs to happen before an instance of the class is returned to the new operator.  And thanks to the class syntax, other functions could be defined outside of the constructor for better clarity and organization. It's also much closer to the way in which constructor methods work in true object-oriented languages… like C#!
+A Constructor makes it clear exactly what needs to happen before an instance of the class is returned to the new operator.  And thanks to the class syntax, other functions could be defined outside of the constructor for better clarity and organization. It's also much closer to the way in which constructor methods work in true object-oriented languages… like C#!
 
 In C#, a class's constructor method has the same name as its class:
 
@@ -1080,9 +1050,7 @@ You may notice some significant differences in the C# version:
 
 * The constructor method must be made public.
 
-* When you use properties inside a class, this is optional.
-
-* Because this is optional, it's conventional to use camelCase parameters and PascalCase properties to avoid confusion and errors.
+* To distinguish between public and private variables, use PascalCase for public variables and camelCase for private variables.
 
 Why do you think the constructor must be made public?
 
@@ -1090,9 +1058,9 @@ Why do you think the constructor must be made public?
 
 If the constructor were defined as private, the new operator would not be able to call it, and it would not be able to return an instance of the class. There are some cases in which this can be useful, but we won't encounter those cases in this tutorial.
 
-Using the above C# example as a guide, see if you can update Employee to add a constructor that accepts a first name and sets the FirstName property.
+Using the above C# example as a guide, see if you can update `Employee` to add a constructor that accepts a first name and sets the `FirstName` property.
 
-You should now have an Employee class that looks like this:
+You should now have an `Employee` class that looks like this:
 
 ```c#
 class Employee
@@ -1112,7 +1080,7 @@ class Employee
 }
 ```
 
-Now that we can set the employee's first name when we instantiate Employee, let's update GetEmployees() in Program:
+Now that we can set the employee's first name when we instantiate Employee, let's update `GetEmployees()` in Program:
 
 ```c#
 // Create a new Employee instance
@@ -1122,7 +1090,7 @@ Employee currentEmployee = new Employee(input);
 employees.Add(input);
 ```
 
-While we're here, let's set the last name, too. Back in the Employee constructor:
+In `Employee.cs`, revise the `Employee` constructor to include the `lastName`, as shown in this code:
 
 ```c#
 Employee(string firstName, string lastName) {
@@ -1234,7 +1202,7 @@ Finally, we're no longer returning a list of strings; we're returning a list of 
 static List<Employee> GetEmployees()
 ```
 
-Now to update PrintEmployees(). First, we need to change the method signature to set the correct parameter type. It will accept a List<Employee> instead of a List<string>.
+Now to update `PrintEmployees()`. First, we need to change the method signature to set the correct parameter type. It will accept a `List<Employee>` instead of a `List<string>`.
 
 ```c#
 // Change the type of the employees parameter
@@ -1242,7 +1210,7 @@ Now to update PrintEmployees(). First, we need to change the method signature to
 static void PrintEmployees(List<Employee> employees)
 ```
 
-When we iterate over employees, we're no longer iterating over strings, but Employee instances! Now we'll get an employee's full name straight from the instance via GetName(). Let's update PrintEmployees() to use GetName():
+When we iterate over employees, we're no longer iterating over strings, but Employee instances! Now we'll get an employee's full name straight from the instance via `GetName()`. Let's update `PrintEmployees()` to use `GetName()`:
 
 ```c#
 for (int i = 0; i < employees.Count; i++) 
@@ -1252,9 +1220,18 @@ for (int i = 0; i < employees.Count; i++)
 }
 ```
 
-Let's run the app! It should behave exactly the same as it did before we made these changes. But don't be disappointed, because we've actually set the stage for a powerful application that can manage a massive list of complex employee data. Now is a great time to take a break and reflect on what you've learned and how much progress you've made!
+Before the app may be run, the employees declaration in` Main()` must be edited to match the class we're using. 
 
-**RESTING POINT**
+In the `Main()`, change the following statement `List<string> employees = GetEmployees();` to the following statement:
+
+```c#
+static void Main(string[] args) {
+  List<Employee> employees = GetEmployees();
+  PrintEmployees(employees);
+}
+```
+
+Now let's run the app! It should behave exactly the same as it did before we made these changes.  But don't be disappointed, because we've actually set the stage for a powerful application that can manage a massive list of complex employee data. Now is a great time to take a break and reflect on what you've learned and how much progress you've made!
 
 # Add remaining properties and methods to the Employee class
 
@@ -1277,51 +1254,35 @@ public Employee(string firstName, string lastName, int id, string photoUrl) {
 
 Now we can go back to Program and pass specific values in our Employee instances. We hard coded "Smith" for lastName, and we could hard code the other values, too. But at some point we're going to need to get all the values from the user via the CLI. Why put off until later what we can do now? Can you think of how we might be able to alter our user input logic to ask for each property, for each employee?
 
-Hint: You can call Console.ReadLine() multiple times in a row.
+Hint: You can call `Console.ReadLine()` multiple times in a row.
 
-There are a few ways we could do this, but a straightforward solution is to simply call Console.ReadLine() for each value we want from the user. Let's update Program's GetEmployees() method to do this, being careful to set the variables to the correct types, corresponding to Employee's property types.
+There are a few ways we could do this, but a straightforward solution is to simply call `Console.ReadLine()` for each value we want from the user. Let's update Program's GetEmployees() method to do this, being careful to set the variables to the correct types, corresponding to Employee's property types.
 
 ```c#
 static List<Employee> GetEmployees()
-
 {
-
 List<Employee> employees = new List<Employee>();
-
 while(true) 
 {
-
   // Move the initial prompt inside the loop, so it repeats for each employee
-
   Console.WriteLine("Enter first name (leave empty to exit): ");
 
   // change input to firstName
-
   string firstName = Console.ReadLine();
-
   if (firstName == "") 
   {
     break;
   }
 
   // add a Console.ReadLine() for each value
-
   Console.Write("Enter last name: ");
-
   string lastName = Console.ReadLine();
-
   Console.Write("Enter ID: ");
-
   int id = Console.ReadLine();
-
   Console.Write("Enter Photo URL:");
-
   string photoUrl = Console.ReadLine();
-
   Employee currentEmployee = new Employee(firstName, lastName, id, photoUrl);
-
   employees.Add(currentEmployee);
-
   }
 
   return employees;
@@ -1330,15 +1291,15 @@ while(true)
 
 That's a lot of code, so let's walk through it. (We'll talk about the red squiggly line under the ID assignment in a minute.)
 
-First, we moved the initial Console.ReadLine() prompt inside the while loop so that it repeats for each new employee entry.
+First, we moved the initial `Console.ReadLine()` prompt inside the while loop so that it repeats for each new employee entry.
 
 Then we changed input to firstName, because that's how we've been using it all along. Now that we have other values to capture, it makes sense to be more specific.
 
-Then we called Console.ReadLine() three more times, capturing lastName, ID, and photoUrl. But VS Code doesn't like how we captured ID. Can you figure out why?
+Then we called `Console.ReadLine()` three more times, capturing `lastName`, `ID`, and `photoUrl`. But VS Code doesn't like how we captured ID. Can you figure out why?
 
-**Hint:** Console.ReadLine() returns only string types.
+**Hint:** `Console.ReadLine()` returns only string types.
 
-It's because Console.ReadLine() returns a string, but we want to store it in an int variable type, to be consistent with how Employee stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the Int32.Parse() System method. This is similar to the parseInt() function in JavaScript. Let's update that line to turn the Console.ReadLine() string into an int:
+It's because `Console.ReadLine()` returns a string, but we want to store it in an int variable type, to be consistent with how Employee stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the Int32.Parse() System method. This is similar to the parseInt() function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an int:
 
 ```c#
 Console.Write("Enter ID: ");
@@ -1350,15 +1311,15 @@ Now VS Code should be happy and to make sure things still work, let's save our w
 
 Our application works, but it still only prints the employee's name to the console. We want to see *all* of the employee's information. In order to print it, we need to be able to get it out of the Employee instance. 
 
-Earlier in the project, we used dot notation to access Employee instance properties directly, but we have also used a method to access Employee's FirstName property. The argument for the latter approach was to simplify formatting. But there are lots of good reasons for accessing properties indirectly through methods:
+Earlier in the project, we used dot notation to access `Employee` instance properties directly, but we have also used a method to access Employee's `FirstName` property. The argument for the latter approach was to simplify formatting. But there are lots of good reasons for accessing properties indirectly through methods:
 
 * You can process the property before returning it, such as formatting or validating it.
 
 * You can change the type of the value before returning it.
 
-* You can provide a stable interface to the property, even if it changes internally. For example, GetId() will always return an integer ID, but maybe in the future the class will query a database to find the ID based on the employee's name.
+* You can provide a stable interface to the property, even if it changes internally. For example, `GetId()` will always return an integer `ID`. But maybe in the future, the class will query a database to find the ID based on the employee's name, which would be a string, and would therefore require type conversion.
 
-* You can return different values based on the time of day, e.g. GetGreeting() might return "Good Morning" before noon, and "Good Afternoon" later.
+* You can return different values based on the time of day, e.g. `GetGreeting()` might return "Good Morning" before noon, and "Good Afternoon" later.
 
 * You'll encounter endless other advantages as needs arise :)
 
@@ -1368,56 +1329,35 @@ Whew.
 
 Having said all that, you may guess that we're going to create methods inside Employee to return the remaining properties. Not only that, to double-down on encapsulation, we're going to change all of the property access modifiers to private to ensure that users of this class can only access them through the methods we provide. Hardcore.
 
-Here's the final Employee class:
-
-namespace CatWorx.BadgeMaker {
+Here's the final `Employee` class:
 
 ```c# 
-class Employee
+namespace CatWorx.BadgeMaker {
+  class Employee
+  {
+      private string FirstName;
+      private string LastName;
+      private int Id;
+      private string PhotoUrl;
+      public Employee(string firstName, string lastName, int id, string photoUrl) {
+          FirstName = firstName;
+          LastName = lastName;
+          Id = id;
+          PhotoUrl = photoUrl;
+      }
+      public string GetName() {
+          return  FirstName + " " + LastName;
+      }
+    
+      public int GetId() {
+          return Id;
+      }
 
-{
-
-    private string FirstName;
-
-    private string LastName;
-
-    private int Id;
-
-    private string PhotoUrl;
-
-    public Employee(string firstName, string lastName, int id, string photoUrl) {
-
-        FirstName = firstName;
-
-        LastName = lastName;
-
-        Id = id;
-
-        PhotoUrl = photoUrl;
-
-    }
-
-    public string GetName() {
-
-        return  FirstName + " " + LastName;
+      public string GetPhotoUrl() {
+          return PhotoUrl;
 
     }
-
-    public int GetId() {
-
-        return Id;
-
-    }
-
-    public string GetPhotoUrl() {
-
-        return PhotoUrl;
-
-    }
-
-  }
-
-}
+  ...
 ```
 
 The last step of this section is to print out all of the employee information for each employee. In Program's PrintEmployees() method, update the code in the for block:
@@ -1433,7 +1373,29 @@ for (int i = 0; i < employees.Count; i++)
 
 What's up with that mess of characters in the template string? You might recognize String.Format() from its brief introduction in Part 1. In C#, String.Format() works similarly to template literals in JavaScript; it takes a string to use as a template, and then fills in the placeholders with values. The major differences are that each placeholder can define how its value is formatted, and the values follow the template in the list of arguments.
 
-To beautify our CLI output, we want the first argument (ID) to be left-aligned and "padded" to at least 10 characters. Then we want to print a TAB character. Then we want the next argument (name) to be left-aligned and padded to 20 characters. Then want to print another TAB character. Finally, we want to print the last argument (photo URL) with no formatting.
+Let's walk through the formatting string, `string template = "{0,-10}\t{1,-20}\t{2}";`
+
+We want the first argument (argument {0}), the ID, to be left-aligned and "padded" to at least 10 characters:
+
+`{0,-10}`
+
+Then we want to print a TAB character. 
+
+`\t`
+
+Then we want the next argument (argument {1}), the name, to be left-aligned and padded to 20 characters. 
+
+`{1,-20}`
+
+Then want to print another TAB character. 
+
+`\t`
+
+Finally, we want to print the last argument (argument `{2})` , the photo URL, with no formatting.
+
+`{2}`
+
+Put that all together, and it makes `{0,-10}\t{1,-20}\t{2}`, which is the formatting formula for our output.
 
 The results will look like this:
 
@@ -1497,7 +1459,7 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-We defined the PrintEmployees() method above as **static**, meaning it belongs to the class itself instead of individual instances or objects. In other words, you don’t have to create a new** **Util object to use it. You can access this method directly from the class name:
+We defined the PrintEmployees() method above as **static**, meaning it belongs to the class itself instead of individual instances or objects. In other words, you don’t have to create a new **Util** object to use it. You can access this method directly from the class name:
 
 ```c#
 Util.PrintEmployees();
@@ -1558,7 +1520,7 @@ namespace CatWorx.BadgeMaker
       for (int i = 0; i < employees.Count; i++) 
       {
         string template = "{0,-10}\t{1,-20}\t{2}";
-        Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
+        Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
       }
     }
   }
@@ -1576,8 +1538,6 @@ Util.PrintEmployees(employees);
 Run the app again to make sure everything still works. 
 
 Congratulations! You just finished some much-needed code cleanup and paved the way for future features to be more easily added. Try your hand at the following code challenge to deepen your understanding of static and instance methods before moving on:
-
-*INSERT CODE CHALLENGE*
 
 ## CSV Files
 
@@ -1637,13 +1597,12 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-While this method doesn’t actually do anything yet, let’s prep our main Program to use it nonetheless. This will make it easier to test as we go along:
+While this method doesn’t actually do anything yet, let’s prep our main Program to use it nonetheless. This will make it easier to test as we go along. Put the following code in the `Main()` function of `Program.cs`, beneath `List<Employee> employees = GetEmployees();`:
 
 ```c#
 Util.PrintEmployees(employees);
 Util.MakeCSV(employees);
 ```
-
 
 ## Make the Folder (Step 3)
 
@@ -1707,7 +1666,7 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
 ```
 
 
-Run the code and verify if the text "ID,Name,PhotoUrl" appears in your CSV file. Cool, we’re almost there! The last thing we’re missing is to populate it with actual employee data. We can repurpose the for loop / console log logic we wrote earlier, just change Console.WriteLine() to **file.WriteLine()**. Give it a try on your own before referencing the completed code below:
+Run the code and verify if the text "ID,Name,PhotoUrl" appears in your CSV file. Cool, we’re almost there! The last thing we’re missing is to populate it with actual employee data. We can repurpose the for loop / console log logic we wrote earlier, just change `Console.WriteLine()` to **file.WriteLine()**. Give it a try on your own before referencing the completed code below:
 
 ```c#
 using (StreamWriter file = new StreamWriter("data/employees.csv"))
@@ -1719,7 +1678,7 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
   {
     // Write each employee to the file
     string template = "{0},{1},{2}";
-    file.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
+    file.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
   }
 }
 ```
@@ -1747,11 +1706,11 @@ As often is the case in the application-building process, much of your time in t
 
 And now we’ve reached the point in our project when we can create the security badges and deliver our end result! Let's reflect a bit and note that in previous sections, we created an application that could retrieve data from the user and implement an Employee class to enable us to store object instances in a data structure—in our case, a List—and write the employee data to a file. 
 
-Now we will use this data to output or write the employee's information to a template security badge, which we have provided [here](https://imgur.com/0EMSs68). Please place this image file at the root directory.
+Now we will use this data to output or write the employee's information to a template security badge, which we have provided [here](https://imgur.com/0EMSs68). Please place this image file in the root directory, and rename it `badge.png`.
 
 ## Pseudocode
 
-So how do we begin? This is a common question that can cause consternation and anxiety with programmers of all different levels. Fear not, having a rough draft of how to proceed, mapping out the key tasks necessary to accomplish your objectives, and outlining the sequence the tasks need to be executed, is a process we should be familiar with at this point. Let's do some pseudocoding! Although it may take some time, this is a vital step that is capable of increasing your efficiency and speeding up your workflow especially when working in a group to keep members on the same page. Please keep in mind in this exercise, it may be beneficial to think in terms of specific actions or functional step required. 
+So how do we begin? This is a common question that can cause consternation and anxiety with programmers of all different levels. Fear not, having a rough draft of how to proceed, mapping out the key tasks necessary to accomplish your objectives, and outlining the sequence the tasks need to be executed, is a process we should be familiar with at this point. Let's do some pseudocoding! Although it may take some time, this is a vital step that is capable of increasing your efficiency and speeding up your workflow especially when working in a group to keep members on the same page. Please keep in mind in this exercise, it may be beneficial to think in terms of specific actions or functional steps required. 
 
 So first let's establish our end goal of producing a security badge with the employee's picture, employee name, company name, and employee id number. So what are the essential tasks necessary to accomplish this task? A great way to compartmentalize a large objective is by creating sub-steps or smaller objectives that will lead us to the overall goal. 
 
@@ -1785,7 +1744,7 @@ Not sure what to write yet? Go back and review, then come back and think about y
 
 **Hint: ** What is the purpose of this method and do we need it to return anything?
 
-*INSERT CODE CHALLENGE MULTIPLE CHOICE - MODIFIERS*
+The following code shows the three methods we will have in the `Util` class by the end of this lesson. The first two have already been created. Go ahead and add the `MakeBadges()` function to your `Util` class in the location indicated in the code:
 
 ```c#
 class Util
@@ -1796,22 +1755,19 @@ class Util
 }
 ```
 
+As you'll see in your VSCode editor, the new method `MakeBadges()` will be outlineD in red. It will be very similar to the other `Util` methods in scope and function in that it will use the application's employee data to output a file or print to the console.
 
-## As you can see, the red highlight displays the new method MakeBadges() in the Util class. This is very similar to the other Util methods in scope and function in that they use the application's employee data to output a file or print to the console. 
-
-## In the code snippet, the other methods are simply folded to show placement of each method. Please note the order of these methods are not important since they are just the method declarations.
+To clarify, all the methods in the code above are closed. This is just to show a possible placement of each method, for the actual order of the methods in the class is arbitrary.
 
 Let’s break down the parts of the code:
 
-* Util class placement—Like the other methods in this class, MakeBadges() creates an output by modifying the data set and converting it to a file.
-
-* public—Must be accessible by the Main method.
+* public—Must be accessible by the `Main()` method.
 
 * void—The purpose of this method is to create a file, so there is no need for a return.
 
 * static—Scoped to class, so can be invoked directly without instantiating an object.
 
-* List<Employee> employees parameters—The data source of employee info.
+* `List<Employee>` employees parameters—The data source of employee info.
 
 ## Set Up System.Drawing
 
@@ -1845,7 +1801,7 @@ static void Main(string[] args)
 {
   List<Employee> employees = new List<Employee>();
 
-  employees = PeopleFetcher.GetFromUser();
+  employees = GetEmployees();
 
   Util.MakeCSV(employees);
   Util.MakeBadges(employees);
@@ -1854,15 +1810,17 @@ static void Main(string[] args)
 
 But wait, how do we check to see if this newImage object was created correctly?
 
-One option would be to save this image object into a new file. This option is appealing since it is a step we will need to accomplish anyway in our last step of our pseudocode. 
+One option would be to save this image object into a new file. This option is appealing since it is a step we will need to accomplish any way in our last step of our pseudocode. 
 
 Let's search Google again to find our answer. What should our search term be?
 
 Hint: "create image file c# "
 
-The first response is a Stack Overflow titled[ "Create a new image on the file system from ](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image)[System.Drawing.Image](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image)[?"](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image) From this answer, we can determine that in order to save the image, we need to use the Save method with the file path and image format in the parameter.
+One of the top responses is a Stack Overflow post titled ["Create a new image on the file system from System.Drawing.Image?](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image) 
 
-As good practice, it is sometimes normal to double check another search response to validate the first response. In the second search response is the [Image.Save](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.save?view=netframework-4.8)[ method](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.save?view=netframework-4.8) linking to Microsoft Docs and .NET. Navigating to this link, there is a section marked **o****verloads****, **where we see a few different configurations to the Save method. But it is the third option that most closely resembles the StackOverflow answer.
+From this answer, we can determine that in order to save the image, we need to use the Save method with the file path and image format in the parameter.
+
+As good practice, it is sometimes normal to double check another search response to validate the first response. [One of the other responses is the Image.Save method linking to Microsoft Docs and .NET.](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.save?view=netframework-4.8) Navigating to this link, there is a section marked **overloads**, where we see a few different configurations to the `Save` method. 
 
 Using this format, what can you determine would be the arguments if we wanted to save our new image into our *data* folder?
 
@@ -1930,7 +1888,7 @@ dotnet add package System.Drawing.Common
 ```
 
 
-Now head over to the catworx.csproj file to see if our package was included properly:
+Now head over to the `CatWorx.BadgeMaker.csproj` file to see if our package was included properly:
 
 ```c#
 <Project Sdk="Microsoft.NET.Sdk">
@@ -2001,7 +1959,7 @@ Please note these constants have been organized by element. The BADGE_WIDTH and 
 
 ## Build the Badges
 
-We will be finishing our second pseudocode step in this section which is inserting the employee information into our badge template. In order to do this, we will need another tool from the .NET Core that will allow us to import or download the employee information from our employee List. For this, we will use the WebClient class.
+Next, we'll be inserting the employee information into our badge template, to complete the second pseudocode step in this section. In order to do this, we will need another tool from the .NET Core that will allow us to import or download the employee information from our employee List. For this, we will use the WebClient class.
 
 This is an essential and powerful tool to have in your C# toolbelt. This package can also be used to send HTTP requests, read files, download webpages, and upload data from a resource using a multitude of methods.
 
@@ -2015,7 +1973,6 @@ using System.IO;
 using System.Net;
 using System.Drawing;
 using System.Collections.Generic;
-namespace CatWorx.BadgeMaker
 ```
 
 
@@ -2025,12 +1982,18 @@ Now that we can use the WebClient in our application, let's take a moment to rev
 WebClient client = new WebClient();
 ```
 
+Delete or comment out the previous image-making code that we used:
 
-Due to the fact that this part of our method will need to import files and download the photo URLs from our employee List, it will be a resource hog with our memory. 
+```c#
+Image newImage = Image.FromFile("badge.png");
+newImage.Save("data/employeeBadge.png");
+```
+
+Because importing files and downloading photos will consume a lot of memory, `WebClient` will be a resource hog in our application.
 
 .NET has a special statement that allows this resource to be removed once the code has finished running. Can you remember what statement this was? Please take some time and try to type your answer into our method.
 
-**Hint:** You used it for the StreamWriter class in the last section.
+**Hint:** You used it for the `StreamWriter` class in the last section.
 
 ```c#
 // instance of WebClient is disposed after code in the block has run
@@ -2039,7 +2002,6 @@ using(WebClient client = new WebClient())
 
 }
 ```
-
 
 The rest of the code for this section should reside in this function block. Thanks to .NET Core's using method, the resource dedicated in the parentheses will be disposed of after the code in the block has run, allowing this memory to be freed after use.
 
@@ -2753,8 +2715,6 @@ for (int i = 0; i < json.SelectToken("results").Count; i++)
 
 Do a bit of research and trial and error to see if you can successfully loop over results, console logging each person's first name (and only the first name for now) on every iteration. The following code challenge might also give you some ideas:
 
-*INSERT CODE CHALLENGE*
-
 ## Creating the Employees (Step 6)
 
 That last step was probably a bit tricky, but hopefully you have a loop set up now that's accessing a new JObject on every iteration, allowing you to perform sub queries:
@@ -2763,7 +2723,6 @@ That last step was probably a bit tricky, but hopefully you have a loop set up n
 // "person" is a new JObject derived from "results[i]"
 person.SelectToken("name.first")
 ```
-
 
 If you came across a different approach in your search, that's fine, too. What matters is that you were able to get the data (the ten first names). At the same time, we want to make sure we can get each person's last name, ID, and photo URL. All of this will feed nicely into our Employee constructor:
 
