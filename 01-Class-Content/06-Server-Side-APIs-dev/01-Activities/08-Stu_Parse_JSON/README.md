@@ -2,7 +2,7 @@
 
 * In this activity, you will work with a partner to use the GitHub documentation to add a parameter to a fetch request and display the proper response in the console.
 
-## Instructions
+## Instructionsx
 
 * Be sure to work with your partner!
 

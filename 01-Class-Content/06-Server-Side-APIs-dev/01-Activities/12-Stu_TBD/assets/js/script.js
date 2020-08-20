@@ -5,6 +5,5 @@ fetch(requestUrl)
     return response.json();
   })
   .then(function (data) {
-    console.log('Fetch Reponse \n-------------');
     console.log(data);
   });
