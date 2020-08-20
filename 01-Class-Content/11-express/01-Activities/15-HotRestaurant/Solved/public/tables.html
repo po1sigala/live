@@ -19,15 +19,16 @@
         <br />
 
         <div class="text-center">
-          <a href="/reserve"
-            ><button class="btn btn-lg btn-danger">
+          <a href="/reserve">
+            <button class="btn btn-lg btn-danger">
               <span class="fa fa-credit-card"></span> Make Reservation
-            </button></a
-          >
-          <a href="/"
-            ><button class="btn btn-lg btn-default">
-              <span class="fa fa-home"></span></button
-          ></a>
+            </button>
+          </a>
+          <a href="/">
+            <button class="btn btn-lg btn-default">
+              <span class="fa fa-home"></span>
+            </button>
+          </a>
         </div>
       </div>
 
@@ -96,7 +97,7 @@
 
             // Create elements for Table ID, ID, Name, Email, Phone
             const tableEl = document.createElement('h2');
-            tableEl.textContent = 'Table #' + (i + 1);
+            tableEl.textContent = `Table #${i + 1}`;
 
             const hrBreak = document.createElement('hr');
 
@@ -113,14 +114,14 @@
             phoneEl.textContent = `Phone: ${tableData[i].phoneNumber}`;
 
             // Append all elements to the listItem
-            listItem.innerHTML +=
-              tableEl.outerHTML +
-              hrBreak.outerHTML +
-              idEl.outerHTML +
-              nameEl.outerHTML +
-              emailEl.outerHTML +
-              phoneEl.outerHTML;
+            listItem.appendChild(tableEl);
+            listItem.appendChild(hrBreak);
+            listItem.appendChild(idEl);
+            listItem.appendChild(nameEl);
+            listItem.appendChild(emailEl);
+            listItem.appendChild(phoneEl);
 
+            // Append listItem to tableList
             tableList.appendChild(listItem);
           }
         })
@@ -176,13 +177,12 @@
             console.log('runWaitListQuery -> phoneEl', phoneEl);
 
             // Append all elements to the listItem
-            listItem.innerHTML +=
-              tableEl.outerHTML +
-              hrBreak.outerHTML +
-              idEl.outerHTML +
-              nameEl.outerHTML +
-              emailEl.outerHTML +
-              phoneEl.outerHTML;
+            listItem.appendChild(tableEl);
+            listItem.appendChild(hrBreak);
+            listItem.appendChild(idEl);
+            listItem.appendChild(nameEl);
+            listItem.appendChild(emailEl);
+            listItem.appendChild(phoneEl);
 
             waitList.appendChild(listItem);
           }
@@ -204,7 +204,7 @@
       })
         .then((response) => response.json())
         .then((data) => {
-          let waitList = document.getElementById('#waitList');
+          let waitList = document.getElementById('waitList');
           waitList.innerHTML = '';
 
           let tableList = document.getElementById('tableList');
