@@ -37,7 +37,7 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Directions for Future Development
 
-* Links to to the deployed application and the GitHub repository
+* Links to to the deployed application and the GitHub repository. Use this guide for [deploying your application to Heroku](../04-Supplemental/GitHubHerokuConnect.md) if you need a reminder on how to deploy!
 
 
 ## Grading Metrics 
