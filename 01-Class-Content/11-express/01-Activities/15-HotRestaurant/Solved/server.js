@@ -3,7 +3,6 @@
 // Series of npm packages that we will use to give our server useful functionality
 // ==============================================================================
 
-// eslint-disable-next-line import/no-unresolved
 const express = require('express');
 
 // ==============================================================================

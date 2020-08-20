@@ -1,5 +1,4 @@
 // Dependencies
-// eslint-disable-next-line import/no-unresolved
 const express = require('express');
 
 const app = express();
@@ -46,15 +45,14 @@ app.get('/api/characters/:character', (req, res) => {
 
   console.log(chosen);
 
-  /* Check each character routename and see if the chosen character is the same as it's routename
-   If the statement is true, send it back as JSON, otherwise tell the user no character was found */
-
+  // Check each character routename and see if the chosen character is the same as it's routename
   for (let i = 0; i < characters.length; i++) {
+    // If the statement is true, send it back as JSON
     if (chosen === characters[i].routeName) {
       return res.json(characters[i]);
     }
   }
-
+  // Otherwise tell the user no character was found
   return res.json(false);
 });
 
@@ -69,6 +67,4 @@ app.post('/api/characters', (req, res) => {
   res.json(newCharacter);
 });
 
-app.listen(PORT, () => {
-  console.log(`App listening on PORT ${PORT}`);
-});
+app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));

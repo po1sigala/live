@@ -1,15 +1,11 @@
-// ===============================================================================
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
 
 const tableData = require('../data/tableData');
 const waitListData = require('../data/waitinglistData');
 
-// ===============================================================================
 // ROUTING
-// ===============================================================================
 
 module.exports = (app) => {
   // API GET Requests
@@ -43,7 +39,6 @@ module.exports = (app) => {
     }
   });
 
-  // ---------------------------------------------------------------------------
   // I added this below code so you could clear out the table while working with the functionality.
   // Don"t worry about it!
 

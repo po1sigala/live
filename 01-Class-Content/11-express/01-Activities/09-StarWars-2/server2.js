@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-unused-vars */
 // Dependencies
 // ===========================================================
 const express = require('express');
