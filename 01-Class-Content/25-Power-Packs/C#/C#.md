@@ -10,7 +10,7 @@ Because you already have VS Code installed, it’s just a two-step process to en
 
 # Lesson 1: Set Up the C# Environment
 
-**Video**
+<!-- **Walk Through Video**  -->
 
 In order to set up VS Code to program in C#, you simply need to add a C# extension and install .NET Core. 
 
@@ -336,7 +336,7 @@ In this section, we will look at the following C# data structures:
 
 These more complex data types allow us to store lots of data in a structured format. Similar to how JavaScript used arrays and object literals, C# uses these data structures to maintain large sets of data with different accessobility operations. The choosing the "right" data structure for the job will optimize performance for the application.
 
-## Dictionaries
+### Dictionaries
 
 Similar to object literals in JavaScript, dictionaries in C# use a key-value pair relationship. But just as with the data types, the type of data that can be stored must be explicitly stated when the data structure is declared. 
 
@@ -363,14 +363,17 @@ Dictionary<string, int> myScoreBoard = new Dictionary<string, int>();
 
 To populate the Dictionary, we use the `.Add()` method in multiple lines to add data.
 
+```c#
 myScoreBoard.Add("firstInning", 10);
 myScoreBoard.Add("secondInning", 20);
 myScoreBoard.Add("thirdInning", 30);
 myScoreBoard.Add("fourthInning", 40);
 myScoreBoard.Add("fifthInning", 50);
-      
+``` 
+
 Alternatively, we could initialize the Dictionary by listing the key-value pairs in a function call. Using this method, we pass a comma-separated list of key-value pairs in braces {} for each entry we wish to create:
 
+```c#
 Dictionary<string, int> myScoreBoard = new Dictionary<string, int>(){
     { "firstInning", 10 },
     { "secondInning", 20},
@@ -378,11 +381,13 @@ Dictionary<string, int> myScoreBoard = new Dictionary<string, int>(){
     { "fourthInning", 40},
     { "fifthInning", 50}
 };
+```
 
 This is functionally equivalent to the first method. 
 
-Use one of the patterns and form or the other, and then add this code below it:
+Use one of the patterns above to populate Dictionary, myScoreboard, and then add the following code block, to print the Dictionary:
 
+```c#
 Console.WriteLine("----------------");
 Console.WriteLine("  Scoreboard");
 Console.WriteLine("----------------");
@@ -392,16 +397,21 @@ Console.WriteLine("   2   |    {0}", myScoreBoard["secondInning"]);
 Console.WriteLine("   3   |    {0}", myScoreBoard["thirdInning"]);
 Console.WriteLine("   4   |    {0}", myScoreBoard["fourthInning"]);
 Console.WriteLine("   5   |    {0}", myScoreBoard["fifthInning"]);
+```
 
-### Arrays vs. Lists
+Now run the code in the console with the terminal command `dotnet run`. You should receive the following display in the console:
 
-Just like in JavaScript, arrays are containers that hold multiple values. As you will recall, items in arrays can be accessed by their index, which starts at 0. 
+![A scoreboard is displayed with the formatting and content of the dictionary](./Images/image_23.png)
+
+### Arrays
+
+Similar to JavaScript, arrays are data structures that can store large amounts of data with similar accessibility features. As you will recall, items in arrays can be accessed by their index, which starts at 0. 
 
 However, there are a couple of notable distinctions in the way C# handles arrays. These are due to the fact that the **data type** of the array’s elements must be declared—just as we did for variables in C#. This constraint allows for only a single data type to be contained in the array. 
 
 Another distinction is that the **length** of the array must also be set when the array is declared. No new elements can be added or subtracted from the array.
 
-Let’s declare an array in C#. Type and run the code below (make sure to type it all out—no copying and pasting!).
+To declare an array in C#, we must declare the data type and size as shown in the following code block:
 
 ```c#
 string[] favFoods = new string[3]{ "pizza", "doughnuts", "icecream" };
@@ -411,21 +421,29 @@ string thirdFood = favFoods[2];
 Console.WriteLine("I like {0}, {1}, and {2}", firstFood, secondFood, thirdFood);
 ```
 
-Lists might seem more similar to arrays in JavaScript because their lengths are not static; they can expand to contain all the elements needed. 
+Remove any prior code in the `Main()` function and replace the preceding code.
 
-Until now, all the data types and structures were located in the System namespace. A list, however, is located in the System.Collections.Generic namespace, so remember to include this in the using statement at the top of the program.
+Run the code from the terminal with `dotnet run`.
+
+You should see the following output to the console:
+
+```bash
+I like pizza, doughnuts, and icecream
+```
+
+Just as in JavaScript, we can access the array using `[]` and the array's index.
+
+### Lists
+
+Now let's turn to lists in C#. Lists might seem more similar to arrays in JavaScript because their lengths are not static; they can expand to contain all the elements needed.
+
+Like dictionaries, lists are located in the `System.Collections.Generic` namespace. Therefore be sure to import this directive with the `using` statement at the top of the `Program.cs` file:
 
 ```c#
 using System.Collections.Generic;
 ```
 
-We chose to use a list to create our employee data for this module’s application. 
-
-Can you think of the reason we decided to go with a list instead of a dictionary or array?
-
-Next, you will run the app! Before you do that, remove or comment out earlier code snippets and leave only the following code exposed in the Main method.
-
-Type in the following and predict the output before executing the code.
+The following code block demonstrated how to declare a `List` and its data types using the angle bracket notation, similar to the `Dictionary`. We also added more employee names using the `Add()` method.
 
 ```c#
 List<string> employees = new List<string>() { "adam", "amy" };
@@ -434,7 +452,7 @@ employees.Add("barbara");
 employees.Add("billy");
 ```
 
-Now that the list is populated with employee data, how can we access our employees list to print the employee names to the console?
+Now that the `List` is populated with employee data, how can we access our employees list to print the employee names to the console?
 
 **Hint:** Leverage your knowledge of JavaScript arrays.
 
