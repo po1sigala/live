@@ -76,7 +76,7 @@
       const ageEl = document.getElementById('age');
       const fpEl = document.getElementById('force-points');
 
-      searchBtn.onclick = (e) => {
+      searchBtn.addEventListener('click', () => {
         let searchedCharacter = document
           .getElementById('character-search')
           .value.trim();
@@ -85,7 +85,7 @@
         // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
         searchedCharacter = searchedCharacter.replace(/\s+/g, '').toLowerCase();
 
-        fetch('/api/characters/' + searchedCharacter, {
+        fetch(`/api/characters/${searchedCharacter}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@
             const { name, role, age, forcePoints } = data;
 
             if (data) {
-              statsEl.setAttribute('style', 'display: "inline"');
+              statsEl.setAttribute('style', 'display: inline');
               nameEl.textContent = name;
               roleEl.textContent = role;
               ageEl.textContent = age;
@@ -105,13 +105,13 @@
             } else {
               nameEl.textContent =
                 'The force is not strong with this one. Your character was not found.';
-              statsEl.setAttribute('style', 'display: "none"');
+                statsEl.setAttribute('style', 'display: none');
             }
           })
           .catch((error) => {
             console.error(error);
           });
-      };
+      });
     </script>
   </body>
 </html>
