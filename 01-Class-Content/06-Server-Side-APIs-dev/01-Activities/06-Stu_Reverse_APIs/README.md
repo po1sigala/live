@@ -4,9 +4,9 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 ## Instructions
 
-* Be sure to work with your partner!
+ Be sure to work with your partner!
 
-* First open the [index.html](index.html) file in your browser
+* Open the [index.html](index.html) file in your browser
 
 * Open up Chrome DevTools to the console.
 
