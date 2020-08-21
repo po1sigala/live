@@ -1825,7 +1825,7 @@ Let's search Google again to find our answer. What should our search term be?
 
 One of the top responses is a Stack Overflow post titled ["Create a new image on the file system from System.Drawing.Image?](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image) 
 
-From this answer, we can determine that in order to save the image, we need to use the Save method with the file path and image format in the parameter.
+From this answer, we can determine that in order to save the image, we need to use the `Save()` method with the file path and image format in the parameter.
 
 As good practice, it is sometimes normal to double check another search response to validate the first response. [One of the other responses is the Image.Save method linking to Microsoft Docs and .NET.](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.save?view=netframework-4.8) Navigating to this link, there is a section marked **overloads**, where we see a few different configurations to the `Save` method. 
 
