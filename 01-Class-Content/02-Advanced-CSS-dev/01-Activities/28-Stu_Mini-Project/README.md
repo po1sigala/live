@@ -22,7 +22,7 @@ In this activity, you will work with a group to build a web page to hold a colle
 
 * Use Flexbox and media queries to create a responsive grid layout.
 
-* Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an [HTML <pre> element.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
+* Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an [HTML pre element.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 
 * Each CSS snippet can easily be highlighted for copying on click using the [CSS user-select property.](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
 
