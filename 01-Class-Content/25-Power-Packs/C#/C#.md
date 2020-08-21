@@ -283,7 +283,7 @@ num ++;
 Console.WriteLine(num);
 ```
 
-As we can see from the results we received in the console, the math operations perform as expected in JavaScript. Strings concatenate and the math operators abide by math rules when it comes to the operation order.
+As we can see from the results we received in the console, the math operations perform as expected. Strings concatenate and the math operators abide by math rules when it comes to the operation order.
 
 ## Booleans
 
