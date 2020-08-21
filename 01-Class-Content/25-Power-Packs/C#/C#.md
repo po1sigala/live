@@ -555,7 +555,7 @@ Now that we have our development environment set up, we're ready to build our ba
 
 * Refactor our code along the way to keep our project organized, maintainable, and extensible
 
-By the end of this step, our app will be able to accept information about multiple employees from the user, and print it all out to the CLI. It will also have a well-defined entity for employees in the form of a new Employee class.
+By the end of this step, our app will be able to accept information about multiple employees from the user, and print it all out to the CLI. It will also have a well-defined entity for employees in the form of a new `Employee` class.
 
 # Get a single employee name from the user with ReadLine()
 
@@ -2690,7 +2690,7 @@ This gives us access to a new class called `JObject` that will allow us to parse
 JObject json = JObject.Parse(response);
 ```
 
-This will convert the string we downloaded from the API into a "JObject," which has a useful method attached to it called SelectToken(). Go ahead and run these console logs to see what happens:
+This will convert the string we downloaded from the API into a `JObject`, which has a useful method attached to it called `SelectToken()`. Go ahead and run these console logs to see what happens:
 
 ```c#
 Console.WriteLine(json.SelectToken("results[0].name.first"));
@@ -2698,30 +2698,38 @@ Console.WriteLine(json.SelectToken("results[1].name.first"));
 Console.WriteLine(json.SelectToken("results[2].name.first"));
 ```
 
-Cool, right?! We were able to pull data out of the JSON string using a syntax we’re already familiar with: results[0].name.first. The caveat being that it was a string we had to pass into the SelectToken() method.
+If you encountered an error, take a look at the error message in the terminal as the first clue toward the fix.
 
-Knowing this, the command **json.SelectToken("results")** should give us the entire array of people objects for us to iterate over. Remember, though… this isn't really an Array or a List. It's a JObject. So a normal for loop won't help us here:
+If the error message in the terminal reads:
 
-```c#
-// Doesn't work; there's no Count() method on JObject
-for (int i = 0; i < json.SelectToken("results").Count; i++) 
-{
-
-}
+```bash
+Unhandled Exception: The type initializer for 'Gdip' threw an exception. Unable to load DLL `libgdiplus`: The specified module could not be found.
 ```
 
-Do a bit of research and trial and error to see if you can successfully loop over results, console logging each person's first name (and only the first name for now) on every iteration. The following code challenge might also give you some ideas:
+This means a module that's needed for the application to work is missing.
+
+For a Mac users, install the missing module with following command in the terminal:
+
+```bash
+brew install mono-libgdiplus
+```
+
+Now we should be able to pull data out of the JSON string using a syntax we’re already familiar with: `results[0].name.first`. The caveat being that it was a string we had to pass into the `SelectToken()` method.
+
+Knowing this, the command `json.SelectToken("results")` should give us the entire array of people objects for us to iterate over. Remember, though… this isn't really an array or a list. It's a `JObject`. So a normal for loop won't help us here:
+
+Do a bit of research and trial and error to see if you can successfully loop over results, console logging each person's first name (and only the first name for now) on every iteration. 
 
 ## Creating the Employees (Step 6)
 
-That last step was probably a bit tricky, but hopefully you have a loop set up now that's accessing a new JObject on every iteration, allowing you to perform sub queries:
+That last step was probably a bit tricky, but hopefully you have a loop set up now that's accessing a new `JObject` on every iteration, allowing you to perform sub queries:
 
 ```c#
 // "person" is a new JObject derived from "results[i]"
 person.SelectToken("name.first")
 ```
 
-If you came across a different approach in your search, that's fine, too. What matters is that you were able to get the data (the ten first names). At the same time, we want to make sure we can get each person's last name, ID, and photo URL. All of this will feed nicely into our Employee constructor:
+If you came across a different approach in your search, that's fine, too. What matters is that you were able to get the data (the ten first names). At the same time, we want to make sure we can get each person's last name, ID, and photo URL. All of this will feed nicely into our `Employee` constructor:
 
 ```c#
 Employee employee = new Employee
@@ -2732,7 +2740,7 @@ Employee employee = new Employee
 );
 ```
 
-But wait, an Employee takes in three strings and an integer, and these aren't strings. They're JObjects. Look into how you can convert these to the right data types before giving them to the constructor. Fair warning, the ID won't be as straightforward to convert to an integer as it might seem.
+But wait, an `Employee` takes in three strings and an integer, and these aren't strings. They're `JObject`s. Look into how you can convert these to the right data types before giving them to the constructor. Fair warning, the ID won't be as straightforward to convert to an integer as it might seem.
 
 Once the data types are correct, add each new employee to the List that this method returns. The correct coding solution should more or less match the following code:
 
