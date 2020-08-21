@@ -10,8 +10,6 @@ Because you already have VS Code installed, it’s just a two-step process to en
 
 # Lesson 1: Set Up the C# Environment
 
-<!-- **Walk Through Video**  -->
-
 In order to set up VS Code to program in C#, you simply need to add a C# extension and install .NET Core. 
 
 ## Add the C# Extension
@@ -54,7 +52,7 @@ To install the .NET Core SDK:
 
 Let’s confirm that our C# environment was installed and will now enable us to build C# projects. Open a new terminal and type `dotnet --info`. You should see output similar to below:
 
-```c#
+```bash
 $ dotnet --info
 .NET Core SDK (reflecting any global.json):
  Version:   2.2.106
@@ -76,7 +74,7 @@ How could we embark on learning a new programming language without creating a "H
 
 Let's navigate to the folder where you want your project to reside. At the command prompt, use dotnet to create a new console app called `CatWorx.BadgeMaker`.
 
-```c#
+```bash
 $ dotnet new console -o CatWorx.BadgeMaker
 ```
 
@@ -92,7 +90,7 @@ Let’s take a look at these:
 
 * The `CatWorx.BadgeMaker.csproj` file is very similar to a package.json file that contains your program's dependencies and packages.
 
-We will now take a look at the Program.cs file, which where we will develop the console application.
+We will now take a look at the `Program.cs` file, which where we will develop the console application.
 Notice that when this file is opened, if you have your integrated terminal open as well, you wil see a series of dependencies install in the OUTPUT tab that will look similar to the following image:
 
 ![In the OUTPUT window in the integrated terminal of VSCode, we can see a series of dependencies install.](./Images/image_22.png)
@@ -194,7 +192,7 @@ In the preceding code block for C#, notice the `carModel` was declared as a `str
 
 ## Strings
 
-Just as in JavaScript, C# strings store plain text. Let’s explore strings by doing a little coding. In this section, you will type some code examples in Program.cs and then run the app using dotnet run to see the output printed in the console. 
+Just as in JavaScript, C# strings store plain text. Let’s explore strings by doing a little coding. In this section, you will type some code examples in `Program.cs` and then run the app using dotnet run to see the output printed in the console. 
 
 Type the following code inside the Main method and try to guess what the outcome will be before executing the program. Notice how the variable greeting is declared as a string data type.
 
@@ -224,7 +222,7 @@ The second statement interpolates the variable, `greeting`, by associating the z
 
 Just like JavaScript, number data types are used to store numbers. They have unique properties inherent to the number data type. 
 
-For example, integer values and decimal values have different data types in C#, as is the case in virtually all programming languages. Can you guess which is which in C#? That’s right—int and float.
+For example, integer values and decimal values have different data types in C#, as is the case in virtually all programming languages. Can you guess which is which in C#? That’s right—`int` and `float`.
 
 For an extensive summary of the variety of data types and their uses, take a look at the [official documentation on data types created by Microsoft, the maintainers of C#.](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types) 
 
@@ -860,7 +858,7 @@ A better option for storing employee data is to create an `Employee` class, whic
 
 # Create an Employee Class
 
-Part 1 mentioned that Program is a class containing our program’s Main() entry point method. C# permits defining multiple classes in a single file, so we *could *put our `Employee` class in Program.cs. But for the sake of code organization we’ll follow the popular convention of defining classes in separate files.
+Part 1 mentioned that Program is a class containing our program’s Main() entry point method. C# permits defining multiple classes in a single file, so we *could *put our `Employee` class in `Program.cs`. But for the sake of code organization we’ll follow the popular convention of defining classes in separate files.
 
 With that aside, create a new file named *Employe.cs* in the *CatWorx* folder. Let’s start by crafting a minimal class:
 
@@ -877,7 +875,7 @@ namespace CatWorx.BadgeMaker
 
 Note the namespace scope declaration. By wrapping our class in the `CatWorx.BadgeMaker` namespace, we are able to access it directly from any class that uses `CatWorx.BadgeMaker`.   For example, if we wanted to use our `Employee` in a class in a separate project, say Corporate.HumanResources, we would add using `CatWorx.BadgeMaker` at the top of the file in which the HumanResources class was defined. We could then use `Employee` anywhere in that class.
 
-To ensure that this is a valid class that we can instantiate in our application, let’s go back to Program.cs and create a new `Employee` instance. We'll assign it to a variable named employee. 
+To ensure that this is a valid class that we can instantiate in our application, let’s go back to `Program.cs` and create a new `Employee` instance. We'll assign it to a variable named employee. 
 
 Remember that all variable declarations must include a type:
 
@@ -1427,7 +1425,7 @@ In this module, we'll complete our first "big" feature in the form of writing da
 
 ## Clean Up with Classes
 
-To start, create a new file in the same directory as Program.cs, but call this file `Util.cs`. This will become the class where we’ll handle any output-related logic. Type the following code in this new file:
+To start, create a new file in the same directory as `Program.cs`, but call this file `Util.cs`. This will become the class where we’ll handle any output-related logic. Type the following code in this new file:
 
 ```c#
 namespace CatWorx.BadgeMaker
@@ -1536,7 +1534,7 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-In Program.cs, delete the old `PrintEmployees()` method and replace the call to it with a call to the Util method:
+In `Program.cs`, delete the old `PrintEmployees()` method and replace the call to it with a call to the Util method:
 
 ```c#
 Util.PrintEmployees(employees);
@@ -1789,7 +1787,7 @@ Please take a few moments to ask yourself why this might be an important step.
 
 * The image must be translated into an instance object of the `Image` class in order to utilize the tools or methods in this class. 
 
-Now let's type the following snippet into the `MakeBadges()` method, and then call the method in the Program.cs file's `Main()` method just to see if our code is working.
+Now let's type the following snippet into the `MakeBadges()` method, and then call the method in the `Program.cs` file's `Main()` method just to see if our code is working.
 
 **Hint:** It is important to note that the location of the badge template file is crucial. We are able to simply call for the `badge.png` in this case, since we saved it in the root directory.
 
