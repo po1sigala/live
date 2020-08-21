@@ -234,7 +234,7 @@ Try to solve the following problem by writing a solution in the `Main()` of the 
 float side = 3.14;
 ```
 
-Try to compute the solution programatically by placing the code in the `Main` function and replace the "Hello World!" statement in the `Program.cs` file. Then run the program with `dotnet run`.
+Try to compute the solution programatically by placing the code in the `Main()` function and replace the "Hello World!" statement in the `Program.cs` file. Then run the program with `dotnet run`.
 
 Here are some questions to consider in case you get an error or get stuck. 
 
@@ -244,7 +244,7 @@ Here are some questions to consider in case you get an error or get stuck.
 
 * What does the error suggest?
 
-Float is actually a very special data type with a little bit different syntax. 
+`float` is actually a very special data type with a little bit different syntax. 
 
 The error we receive in the console is due to the data type mismatch in the operation. Reading the message not only points out the mistake, but also offers a solution-to use the `double` data type.
 
@@ -256,7 +256,7 @@ double area = side * side;
 Console.WriteLine("area: {0}", area);
 ```
 
-If we wanted to find what the data type is of a variable, how would we accomplish this task?
+How do we find what the data type of a variable is?
 
 Use the `GetType()` function.
 
@@ -287,7 +287,7 @@ As we can see from the results we received in the console, the math operations p
 
 ## Booleans
 
-C# also has a separate Boolean type, `bool`. We can declare any variable as a type `bool` and assign the variable a true or false value as seen in the following declaration.
+C# also has a separate Boolean type, `bool`. We can declare any variable as a type `bool` and assign the variable a `true` or `false` value as seen in the following declaration.
 
 ```c#
 bool isCold = true;
