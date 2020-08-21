@@ -30,7 +30,7 @@ const queryDanceSongs = () => {
   const query = connection.query(
     'SELECT * FROM songs WHERE genre=?',
     ['Dance'],
-    function (err, res) {
+    (err, res) => {
       if (err) throw err;
       for (let i = 0; i < res.length; i++) {
         console.log(
