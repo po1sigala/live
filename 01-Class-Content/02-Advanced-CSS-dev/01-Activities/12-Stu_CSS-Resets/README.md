@@ -1,6 +1,6 @@
 # Fix the CSS Reset
 
-In this activity, you will work with a partner to debug some broken code to better explain how a CSS reset works.
+In this activity, you will work with a partner to debug a broken webpage to better explain how a CSS reset works.
 
 ## Instructions
 
@@ -28,7 +28,7 @@ In this activity, you will work with a partner to debug some broken code to bett
 
 ## 💡 Hint(s)
 
-* Pay close attention to the Styles panel in the Chrome DevTools. It will highlight which styles are coming from which style sheet.
+* You won't need to write any new CSS rules to fix the styling on this page.
 
 ## 🏆 Bonus
 
