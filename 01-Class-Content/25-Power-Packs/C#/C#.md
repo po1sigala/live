@@ -112,7 +112,7 @@ namespace CatWorx.BadgeMaker
 }
 ```
 
-To run the app, navigate to the `Catworx.BadgeMaker` folder. Then in the command line, type `dotnet run`.
+To run the app, navigate to the `Catworx.BadgeMaker` folder in the terminal, then enter the command `dotnet run`.
 
 The output should read "Hello, World!". Congrats—you are now a C# developer!
 
@@ -568,23 +568,23 @@ using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            List<string> employees = new List<string>() { "adam", "amy" };
-            employees.Add("barbara");
-            employees.Add("billy");
-            Console.WriteLine("Please enter a name: ");
-		 // Get a name from the console and assign it to a variable
-            string input = Console.ReadLine();
-            employees.Add(input);
-            for (int i = 0; i < employees.Count; i++) 
-            {
-                Console.WriteLine(employees[i]);
-            }
-        }
+      List<string> employees = new List<string>() { "adam", "amy" };
+      employees.Add("barbara");
+      employees.Add("billy");
+      Console.WriteLine("Please enter a name: ");
+      // Get a name from the console and assign it to a variable
+      string input = Console.ReadLine();
+      employees.Add(input);
+      for (int i = 0; i < employees.Count; i++) 
+      {
+        Console.WriteLine(employees[i]);
+      }
     }
+  }
 }
 ```
 
@@ -599,14 +599,14 @@ First, let’s remove the values we used to initialize the employees list, as we
 ```c#
 static void Main(string[] args)
 {
-    List<string> employees = new List<string>();
-    Console.WriteLine("Please enter a name: ");
-    string input = Console.ReadLine();
-    employees.Add(input);
-    for (int i = 0; i < employees.Count; i++) 
-    {
-      Console.WriteLine(employees[i]);
-    }
+  List<string> employees = new List<string>();
+  Console.WriteLine("Please enter a name: ");
+  string input = Console.ReadLine();
+  employees.Add(input);
+  for (int i = 0; i < employees.Count; i++) 
+  {
+    Console.WriteLine(employees[i]);
+  }
 }
 ```
 
@@ -619,13 +619,13 @@ static void Main(string[] args)
   // Collect user values until the value is an empty string
   while (true)
   {
-      Console.WriteLine("Please enter a name: ");
-      string input = Console.ReadLine();
-      employees.Add(input);
+    Console.WriteLine("Please enter a name: ");
+    string input = Console.ReadLine();
+    employees.Add(input);
   } 
   for (int i = 0; i < employees.Count; i++) 
   {
-      Console.WriteLine(employees[i]);
+    Console.WriteLine(employees[i]);
   }
 }
 ```
@@ -701,14 +701,14 @@ static List<string> GetEmployees()
   List<string> employees = new List<string>();
   while (true) 
   {
-      Console.WriteLine("Please enter a name: (leave empty to exit): ");
-      string input = Console.ReadLine();
-      if (input == "") 
-      {
-        break;
-      }
+    Console.WriteLine("Please enter a name: (leave empty to exit): ");
+    string input = Console.ReadLine();
+    if (input == "") 
+    {
+      break;
+    }
 
-      employees.Add(input);
+    employees.Add(input);
   }
   // This is important!
   return employees;
@@ -736,14 +736,14 @@ static List<string> GetEmployees()
   List<string> employees = new List<string>();
   while (true) 
   {
-      Console.WriteLine("Please enter a name: (leave empty to exit): ");
-      string input = Console.ReadLine();
-      if (input == "") 
-      {
-        break;
-      }
+    Console.WriteLine("Please enter a name: (leave empty to exit): ");
+    string input = Console.ReadLine();
+    if (input == "") 
+    {
+      break;
+    }
       
-      employees.Add(input);
+    employees.Add(input);
   }
   // This is important!
   return employees;
@@ -785,26 +785,25 @@ Our entire Program class now looks like this:
 ```c#
 class Program
 {
-
   static List<string> GetEmployees()
   {
     List<string> employees = new List<string>();
-
     while (true)
     {
 
-        Console.WriteLine("Please enter a name: (leave empty to exit): ");
+      Console.WriteLine("Please enter a name: (leave empty to exit): ");
 
-        string input = Console.ReadLine();
+      string input = Console.ReadLine();
 
-        if (input == "")
-        {
-          break;
-        }
-        employees.Add(input);
+      if (input == "")
+      {
+        break;
+      }
+      employees.Add(input);
     }
     return employees;
   }
+
   static void PrintEmployees(List<string> employees)
   {
     for (int i = 0; i < employees.Count; i++)
@@ -815,11 +814,8 @@ class Program
 
   static void Main(string[] args)
   {
-
     List<string> employees = GetEmployees();
-
     PrintEmployees(employees);
-
   }
 }
 ```
@@ -897,21 +893,14 @@ When you define a class in C#, it registers that class name as a **custom type**
 while (true)
 {
   Console.WriteLine("Please enter a name: (leave empty to exit): ");
-
   string input = Console.ReadLine();
-
   if (input == "")
-
   {
-
-      break;
-
+    break;
   }
 
   // Create a new Employee instance
-
   Employee currentEmployee = new Employee();
-
   employees.Add(input);
 }
 ```
@@ -979,11 +968,8 @@ Let’s add the rest of the properties that we care about to the `Employee` clas
 class Employee
 {
   public string FirstName;
-
   public string LastName;
-
   public int Id;
-
   public string PhotoUrl;
 }
 ```
@@ -1072,15 +1058,10 @@ You should now have an `Employee` class that looks like this:
 class Employee
 {
   public string FirstName;
-
   public string LastName;
-
   public int Id;
-
   public string PhotoUrl;
-
   public Employee(string firstName) {
-
     FirstName = firstName;
   }
 }
@@ -1092,7 +1073,6 @@ Now that we can set the employee's first name when we instantiate `Employee`, le
 // Create a new Employee instance
 
 Employee currentEmployee = new Employee(input);
-
 employees.Add(input);
 ```
 
@@ -1100,11 +1080,8 @@ In `Employee.cs`, revise the `Employee` constructor to include the `lastName`, a
 
 ```c#
 Employee(string firstName, string lastName) {
-
-    FirstName = firstName;
-
-    LastName = lastName;
-
+  FirstName = firstName;
+  LastName = lastName;
 }
 ```
 
@@ -1112,9 +1089,7 @@ Later, we'll update our CLI logic to collect all of the employee values from the
 
 ```c#
 // Create a new Employee instance
-
 Employee currentEmployee = new Employee(input, "Smith");
-
 employees.Add(input);
 ```
 
@@ -1145,9 +1120,7 @@ Let's update Program to use this handy method:
 
 ```c#
 // Create a new Employee instance
-
 Employee currentEmployee = new Employee(input, "Smith");
-
 employees.Add(currentEmployee.GetName());
 ```
 
@@ -1177,25 +1150,19 @@ We simply change the List type from string to `Employee`:
 List<Employee> employees = new List<Employee>();
 ```
 
-We'll have to make a couple more changes in `GetEmployees()` to work with a List of employees.  First, we're no longer adding strings to employees, we're adding `Employee` instances:
+We'll have to make a couple more changes in `GetEmployees()` to work with a List of employees.  First, we're no longer adding strings to `employees`, we're adding `Employee` instances:
 
 ```c#
 while (true)
 {
-
   Console.WriteLine("Please enter a name: (leave empty to exit): ");
-
   string input = Console.ReadLine();
-
   if (input == "")
   {
     break;
   }
-
   Employee currentEmployee = new Employee(input, "Smith");
-
   // Add currentEmployee, not a string
-
   employees.Add(currentEmployee);
 } 
 ```        
@@ -1245,13 +1212,9 @@ Our `Employee` class still needs to store and return an employee's ID and photo 
 
 ```c#
 public Employee(string firstName, string lastName, int id, string photoUrl) {
-
     FirstName = firstName;
-
     LastName = lastName;
-
     Id = id;
-
     PhotoUrl = photoUrl;
 }
 ```
@@ -1309,7 +1272,6 @@ The problem is we want to store it in an `int` variable type, to be consistent w
 
 ```c#
 Console.Write("Enter ID: ");
-
 int id = Int32.Parse(Console.ReadLine());
 ```
 
@@ -1341,26 +1303,26 @@ Here's the final `Employee` class:
 namespace CatWorx.BadgeMaker {
   class Employee
   {
-      private string FirstName;
-      private string LastName;
-      private int Id;
-      private string PhotoUrl;
-      public Employee(string firstName, string lastName, int id, string photoUrl) {
-          FirstName = firstName;
-          LastName = lastName;
-          Id = id;
-          PhotoUrl = photoUrl;
-      }
-      public string GetName() {
-          return  FirstName + " " + LastName;
-      }
-    
-      public int GetId() {
-          return Id;
-      }
+    private string FirstName;
+    private string LastName;
+    private int Id;
+    private string PhotoUrl;
+    public Employee(string firstName, string lastName, int id, string photoUrl) {
+        FirstName = firstName;
+        LastName = lastName;
+        Id = id;
+        PhotoUrl = photoUrl;
+    }
+    public string GetName() {
+        return  FirstName + " " + LastName;
+    }
+  
+    public int GetId() {
+        return Id;
+    }
 
-      public string GetPhotoUrl() {
-          return PhotoUrl;
+    public string GetPhotoUrl() {
+        return PhotoUrl;
 
     }
   ...
@@ -1372,7 +1334,6 @@ The last step of this section is to print out all of the employee information fo
 for (int i = 0; i < employees.Count; i++) 
 {
   string template = "{0,-10}\t{1,-20}\t{2}";
-
   Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
 }
 ```
@@ -1487,18 +1448,18 @@ static void Main(string[] args)
 ```c#
 class Example
 {
-    // Example.StaticMethod();
-    public static void StaticMethod()
-    {
-        Console.WriteLine("Bananas");
-    }
-    
-    // Example thing = new Example();
-    // thing.InstanceMethod();
-    public void InstanceMethod()
-    {
-        Console.WriteLine("Oranges");
-    }
+  // Example.StaticMethod();
+  public static void StaticMethod()
+  {
+    Console.WriteLine("Bananas");
+  }
+  
+  // Example thing = new Example();
+  // thing.InstanceMethod();
+  public void InstanceMethod()
+  {
+    Console.WriteLine("Oranges");
+  }
 }
 ```
 
@@ -1591,7 +1552,7 @@ namespace CatWorx.BadgeMaker
   {
     public static void PrintEmployees(List<Employee> employees) 
     {
-        // ...
+      // ...
     }
 
     public static void MakeCSV(List<Employee> employees)
@@ -1653,7 +1614,7 @@ That alone will make a new (albeit empty) CSV file in the *data* folder. However
 ```c#
 using (StreamWriter file = new StreamWriter("data/employees.csv"))
 {
-    // Any code that needs the StreamWriter would go in here
+  // Any code that needs the StreamWriter would go in here
 }
 ```
 
@@ -1898,7 +1859,7 @@ Now head over to the `CatWorx.BadgeMaker.csproj` file to see if our package was 
 
  <PropertyGroup>
    <OutputType>Exe</OutputType>
-   <TargetFramework>netcoreapp2.2</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
  </PropertyGroup>
 
  <ItemGroup>
@@ -1912,7 +1873,7 @@ Now let's run our app from the root directory and see if we were able to accompl
 
 Success! We were able to import our badge template as well as create a new image file. While the image itself is not yet very impressive, this progresses us past an essential step. Now it's on to how to modify this image and customize our graphics.
 
-For more information about the ``System.Drawing`.Common` assembly, look [here](https://www.hanselman.com/blog/HowDoYouUseSystemDrawingInNETCore.aspx) and [here](https://developers.de/2018/01/22/how-to-use-system-drawing-in-net-core/)
+For more information about the ``System.Drawing.Common` assembly, look [here](https://www.hanselman.com/blog/HowDoYouUseSystemDrawingInNETCore.aspx) and [here](https://developers.de/2018/01/22/how-to-use-system-drawing-in-net-core/)
 
 ## Set the Graphics Parameters
 
@@ -2133,9 +2094,8 @@ using(WebClient client = new WebClient())
   for (int i = 0; i < employees.Count; i++)
   {
     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
- 
     photo.Save("data/employeeBadge.png");
- }
+  }
 }
 ```
 
@@ -2155,7 +2115,6 @@ using(WebClient client = new WebClient())
   for (int i = 0; i < employees.Count; i++)
   {
     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
-
     Image background = Image.FromFile("badge.png");
     background.Save("data/employeeBadge.png");
   }
@@ -2194,7 +2153,6 @@ using(WebClient client = new WebClient())
   for (int i = 0; i < employees.Count; i++)
   {
     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
-
     Image background = Image.FromFile("badge.png");
     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
 
@@ -2247,10 +2205,10 @@ using(WebClient client = new WebClient())
 {
   for (int i = 0; i < employees.Count; i++)
   {
-     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
-     Image background = Image.FromFile("badge.png");
-     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
-     Graphics graphic = Graphics.FromImage(badge);
+    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
+    Image background = Image.FromFile("badge.png");
+    Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
+    Graphics graphic = Graphics.FromImage(badge);
     graphic.DrawImage(background, new Rectangle(0, 0, BADGE_WIDTH, BADGE_HEIGHT));
   }
 }
@@ -2325,7 +2283,7 @@ Font monoFont = new Font("Courier New", FONT_SIZE);
 
 SolidBrush brush = new SolidBrush(Color.Black);
 
-using(WebClient client = new WebClient())
+using(WebClient client = new WebClient());
 {
   ```
 
@@ -2340,7 +2298,7 @@ As you can see, there is a plethora of drawing methods that allow you to draw sh
 As can be seen in the **Overloads** section of the docs, there are a number of arguments that are needed to format and style the string. The second format appears to have the configuration we need. 
 
 ```c#
-DrawString(String, Font, Brush, RectangleF, StringFormat)
+DrawString(String, Font, Brush, RectangleF, StringFormat);
 ```
 
 This code draws the specified text string in the specified rectangle. It uses the specified `Brush` and `Font` objects, and employs the formatting attributes of the specified `StringFormat`.
@@ -2363,7 +2321,7 @@ Add the following function to the `Employee` class:
 
 ```c#
 public string GetCompanyName() {
-    return "Cat Worx";
+  return "Cat Worx";
 }
 ```
 
@@ -2396,10 +2354,10 @@ graphic.DrawString(
   font,
   new SolidBrush(Color.White),
   new Rectangle(
-      COMPANY_NAME_START_X,
-      COMPANY_NAME_START_Y,
-      BADGE_WIDTH,
-      COMPANY_NAME_WIDTH
+    COMPANY_NAME_START_X,
+    COMPANY_NAME_START_Y,
+    BADGE_WIDTH,
+    COMPANY_NAME_WIDTH
   ),
 format
 );
@@ -2418,16 +2376,16 @@ The next step will be to print our employee's name on the badge. Let's see if yo
 ```c#
 // Employee name
 graphic.DrawString(
-    employees[i].GetName(),
-    font,
-    brush,
-    new Rectangle(
-        EMPLOYEE_NAME_START_X,
-        EMPLOYEE_NAME_START_Y,
-        BADGE_WIDTH,
-        EMPLOYEE_NAME_HEIGHT
-    ),
-  format
+  employees[i].GetName(),
+  font,
+  brush,
+  new Rectangle(
+    EMPLOYEE_NAME_START_X,
+    EMPLOYEE_NAME_START_Y,
+    BADGE_WIDTH,
+    EMPLOYEE_NAME_HEIGHT
+  ),
+format
 );
 ```
 
@@ -2446,16 +2404,16 @@ As before, the new code should come before the `badge.Save("data/employeeBadge.p
 ```c#
 // Employee ID
 graphic.DrawString(
-    employees[i].GetId().ToString(),
-    monoFont,
-    brush,
-    new Rectangle(
-        EMPLOYEE_ID_START_X,
-        EMPLOYEE_ID_START_Y,
-        EMPLOYEE_ID_WIDTH,
-        EMPLOYEE_ID_HEIGHT
-    ),
-  format
+  employees[i].GetId().ToString(),
+  monoFont,
+  brush,
+  new Rectangle(
+    EMPLOYEE_ID_START_X,
+    EMPLOYEE_ID_START_Y,
+    EMPLOYEE_ID_WIDTH,
+    EMPLOYEE_ID_HEIGHT
+  ),
+format
 );
 ```
 
@@ -2575,10 +2533,10 @@ using System;
 using System.Collections.Generic;
 
 namespace  CatWorx.BadgeMaker {
-    class PeopleFetcher 
-    {
-      // code from GetEmployees() in Program.cs
-    }
+  class PeopleFetcher 
+  {
+    // code from GetEmployees() in Program.cs
+  }
 }
 ```
 
@@ -2746,10 +2704,10 @@ foreach (JToken token in json.SelectToken("results")) {
   // Parse JSON data
   Employee emp = new Employee
   (
-      token.SelectToken("name.first").ToString(),
-      token.SelectToken("name.last").ToString(),
-      Int32.Parse(token.SelectToken("id.value").ToString().Replace("-", "")),
-      token.SelectToken("picture.large").ToString()
+    token.SelectToken("name.first").ToString(),
+    token.SelectToken("name.last").ToString(),
+    Int32.Parse(token.SelectToken("id.value").ToString().Replace("-", "")),
+    token.SelectToken("picture.large").ToString()
   );
   employees.Add(emp);
 }
