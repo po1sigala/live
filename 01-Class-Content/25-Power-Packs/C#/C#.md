@@ -297,7 +297,7 @@ Console.WriteLine(!isCold ? "drink" : "add ice");  // output: add ice
 
 Run the preceding statements in the `Main()` function in the `Program.cs` file. 
 
-# Data Type Conversions
+## Data Type Conversions
 
 In JavaScript, there was often a need to convert data types. Let’s do this in C#.
 
@@ -555,7 +555,7 @@ Now that we have our development environment set up, we're ready to build our ba
 
 By the end of this step, our app will be able to accept information about multiple employees from the user, and print it all out to the CLI. It will also have a well-defined entity for employees in the form of a new `Employee` class.
 
-# Get a single employee name from the user with ReadLine()
+## Get a single employee name from the user with ReadLine()
 
 In Part 1, we hard coded employee names to get familiar with coding C#. In the real world, our employee names and other information will come from outside the application.
 
@@ -660,7 +660,7 @@ Remember, whenever you write a while statement, be sure to provide a mechanism t
 
 Now the employees list can be populated entirely from the command line! Execute it by entering `dotnet run` in the terminal and confirm that it works as expected. Nice work.
 
-# Organize the Code
+## Organize the Code
 
 Let's review what Main() is currently doing:
 
@@ -824,7 +824,7 @@ class Program
 }
 ```
 
-# Create an Employee class with a Name property
+## Create an Employee class with a Name property
 
 Now that we can collect employee names and print them to the console, it’s time to flesh out the employee data. The badges we will be creating must display an employee’s first name, last name, identification number, and photograph. We’ll call these data **properties**. 
 
@@ -856,7 +856,7 @@ As we learned in Part 1, C# provides a [dictionary](https://docs.microsoft.com/e
 
 A better option for storing employee data is to create an `Employee` class, which will allow us to define each property type individually. 
 
-# Create an Employee Class
+## Create an Employee Class
 
 Part 1 mentioned that Program is a class containing our program’s Main() entry point method. C# permits defining multiple classes in a single file, so we *could *put our `Employee` class in `Program.cs`. But for the sake of code organization we’ll follow the popular convention of defining classes in separate files.
 
@@ -918,7 +918,7 @@ while (true)
 
 If we run our application now, it should behave the same as before. This is good; it assures us that our `Employee` class is working (although not very hard, for the time being).
 
-# Store the Employee Names
+## Store the Employee Names
 
 Let’s start adding properties to our `Employee` class. We’re only dealing with an employee’s first name right now, so let’s start there. Like all variable declarations in C#, we must specify the type. We’ll store employees’ first names as strings in a property named `FirstName`. 
 
