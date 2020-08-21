@@ -240,7 +240,7 @@ Here are some questions to consider in case you get an error or get stuck.
 
 * Do we need to declare the `area` as a variable?
 
-* What data type should area be?
+* What data type should `area` be?
 
 * What does the error suggest?
 
