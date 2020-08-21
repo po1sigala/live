@@ -128,13 +128,13 @@ Namespaces can be thought of as containers that have members. A member can be an
 
 * **Note:** Common conventions normally use a company name for the root namespace to ensure it is unique.
 
-* On the very first line, we are importing—you guessed it—a common namespace called `System`.
+* On the very first line, we are importing a common namespace called `System`.
 
 * The using Directive
 
 The first line in the program is using `System`;.
 
-Much like require or import when using modules in Node.js, in C# the using directive lets you use the corresponding namespace `System` without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with `System` and a period. 
+Much like `require` or `import` when using modules in Node.js, in C# the using directive lets you use the corresponding namespace `System` without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with `System` and a period. 
 
 The `System` namespace is part of the .NET framework and is a collection of commonly used methods, data types, and data structures as well as much more. These are the essential building blocks of a C# application.
 
@@ -238,9 +238,9 @@ Try to compute the solution programatically by placing the code in the `Main()` 
 
 Here are some questions to consider in case you get an error or get stuck. 
 
-* Do we need to declare the area as a variable?
+* Do we need to declare the `area` as a variable?
 
-* What data type should area be?
+* What data type should `area` be?
 
 * What does the error suggest?
 
@@ -256,9 +256,9 @@ double area = side * side;
 Console.WriteLine("area: {0}", area);
 ```
 
-How do we find what the data type of a variable is?
+How do we identify the data type of a variable?
 
-Use the `GetType()` function.
+We use the `GetType()` function.
 
 ```c#
 Console.WriteLine("area is a {0}", area.GetType());
@@ -283,7 +283,7 @@ num ++;
 Console.WriteLine(num);
 ```
 
-As we can see from the results we received in the console, the math operations perform as expected in JavaScript. Strings concatenate and the math operators abide by math rules when it comes to the operation order.
+As we can see from the results we received in the console, the math operations perform as expected. Strings concatenate and the math operators abide by math rules when it comes to the operation order.
 
 ## Booleans
 
