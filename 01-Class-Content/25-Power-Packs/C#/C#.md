@@ -238,7 +238,7 @@ Try to compute the solution programatically by placing the code in the `Main()` 
 
 Here are some questions to consider in case you get an error or get stuck. 
 
-* Do we need to declare the area as a variable?
+* Do we need to declare the `area` as a variable?
 
 * What data type should area be?
 
