@@ -256,7 +256,7 @@ double area = side * side;
 Console.WriteLine("area: {0}", area);
 ```
 
-How do we find what the data type of a variable is?
+How do we identify the data type of a variable?
 
 Use the `GetType()` function.
 
