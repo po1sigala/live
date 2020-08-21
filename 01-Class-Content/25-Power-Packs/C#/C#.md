@@ -34,7 +34,7 @@ Next we’ll install the .NET Core SDK from Microsoft. This package will install
 
 **📝 **The .NET Core SDK is not specific to VS Code and can be used with other source code editors. 
 
-For more information about dotnet, visit the [dotnet command Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet).
+For more information about `dotnet`, visit the [dotnet command Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet).
 
 To install the .NET Core SDK:
 
@@ -52,7 +52,7 @@ To install the .NET Core SDK:
 
 6. This will bring you to a new page with the heading, **Thanks for downloading ...**. A modal with input fields will request the download location for the new file. Once the file has been downloaded, open it to install...
 
-Let’s confirm that our C# environment was installed and will now enable us to build C# projects. Open a new terminal and type dotnet --info. You should see output similar to below:
+Let’s confirm that our C# environment was installed and will now enable us to build C# projects. Open a new terminal and type `dotnet --info`. You should see output similar to below:
 
 ```c#
 $ dotnet --info
@@ -74,13 +74,13 @@ If you get an error like "command not found," you may need to manually add a lin
 
 How could we embark on learning a new programming language without creating a "Hello, World!" application? We'll initialize a new C# project using the dotnet executable, which creates a "Hello World!" app for us!
 
-Let's navigate to the folder where you want your project to reside. At the command prompt, use dotnet to create a new console app called CatWorx.BadgeMaker.
+Let's navigate to the folder where you want your project to reside. At the command prompt, use dotnet to create a new console app called `CatWorx.BadgeMaker`.
 
 ```c#
 $ dotnet new console -o CatWorx.BadgeMaker
 ```
 
-This command will create a new folder called CatWorx.BadgeMaker that will contain your C# project. In VS Code, select File from the main menu bar, and choose "Open Folder…" Navigate to the CatWorx.BadgeMaker folder that dotnet created. Double-click CatWorx.BadgeMaker to open it in the VS Code explorer pane.
+This command will create a new folder called `CatWorx.BadgeMaker` that will contain your C# project. In VS Code, select File from the main menu bar, and choose "Open Folder…" Navigate to the `CatWorx.BadgeMaker` folder that dotnet created. Double-click `CatWorx.BadgeMaker` to open it in the VS Code explorer pane.
 
 As you can see, there are already some files and folders in the project:
 
@@ -88,16 +88,16 @@ As you can see, there are already some files and folders in the project:
 
 Let’s take a look at these:
 
-* The obj folders are used by .NET Core to execute the C# code. 
+* The `obj` folders are used by .NET Core to execute the C# code. 
 
-* The CatWorx.BadgeMaker.csproj file is very similar to a package.json file that contains your program's dependencies and packages.
+* The `CatWorx.BadgeMaker.csproj` file is very similar to a package.json file that contains your program's dependencies and packages.
 
 We will now take a look at the Program.cs file, which where we will develop the console application.
 Notice that when this file is opened, if you have your integrated terminal open as well, you wil see a series of dependencies install in the OUTPUT tab that will look similar to the following image:
 
 ![In the OUTPUT window in the integrated terminal of VSCode, we can see a series of dependencies install.](./Images/image_22.png)
 
-Let’s take a look in the Program.cs file:
+Let’s take a look in the `Program.cs` file:
 
 ```c#
 using System;
@@ -114,7 +114,7 @@ namespace CatWorx.BadgeMaker
 }
 ```
 
-To run the app, navigate to the Catworx.BadgeMaker folder. Then in the command line, type dotnet run.
+To run the app, navigate to the `Catworx.BadgeMaker` folder. Then in the command line, type `dotnet run`.
 
 The output should read "Hello, World!". Congrats—you are now a C# developer!
 
@@ -122,23 +122,23 @@ Next, let’s take a deeper dive into our C# app to understand how it works.
 
 ## Namespaces
 
-Next, you will notice the keyword namespace followed by the name of the app, CatWorx.BadgeMaker. Namespaces in C# are used to organize and provide a level of separation in the code—something like modules in Node.js. 
+Next, you will notice the keyword namespace followed by the name of the app, `CatWorx.BadgeMaker`. Namespaces in C# are used to organize and provide a level of separation in the code—something like modules in Node.js. 
 
 Namespaces can be thought of as containers that have members. A member can be another nested namespace, a method, or a class (as it is in this case).
 
-* Following namespace CatWorx.BadgeMaker, everything inside the curly braces can be interpreted as members of that namespace.
+* Following namespace `CatWorx.BadgeMaker`, everything inside the curly braces can be interpreted as members of that namespace.
 
 * **Note:** Common conventions normally use a company name for the root namespace to ensure it is unique.
 
-* On the very first line, we are importing—you guessed it—a common namespace called System.
+* On the very first line, we are importing—you guessed it—a common namespace called `System`.
 
 * The using Directive
 
-The first line in the program is using System;.
+The first line in the program is using `System`;.
 
-Much like require or import when using modules in Node.js, in C# the using directive lets you use the corresponding namespace System without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with System and a period. 
+Much like require or import when using modules in Node.js, in C# the using directive lets you use the corresponding namespace `System` without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with `System` and a period. 
 
-The System namespace is part of the .NET framework and is a collection of commonly used methods, data types, and data structures as well as much more. These are the essential building blocks of a C# application.
+The `System` namespace is part of the .NET framework and is a collection of commonly used methods, data types, and data structures as well as much more. These are the essential building blocks of a C# application.
 
 To learn more, check out [Microsoft’s documentation on System Namespace](https://docs.microsoft.com/en-us/dotnet/api/system?view=netframework-4.8).
 
@@ -248,9 +248,9 @@ Here are some questions to consider in case you get an error or get stuck.
 
 Float is actually a very special data type with a little bit different syntax. 
 
-The errorWe should be using the data type double in this case, as the error suggests.
+The error we receive in the console is due to the data type mismatch in the operation. Reading the message not only points out the mistake, but also offers a solution-to use the `double` data type.
 
-When trying to use the Math library, double usage is explicitly stated in the parameters, as you can see in the following code example:
+When trying to use the Math library, `double` usage is explicitly stated in the parameters, as you can see in the following code example:
 
 ```c#
 double side = 3.14;
@@ -340,9 +340,9 @@ These more complex data types allow us to store lots of data in a structured for
 
 Similar to object literals in JavaScript, dictionaries in C# use a key-value pair relationship. But just as with the data types, the type of data that can be stored must be explicitly stated when the data structure is declared. 
 
-The following code example demonstrates how to implement a Dictionary in C#. 
+The following code example demonstrates how to implement a `Dictionary` in C#. 
 
-To use a Dictionary, you must first import `System.Collections.Generic` at the top of the `Program.cs` file.
+To use a `Dictionary`, you must first import `System.Collections.Generic` at the top of the `Program.cs` file.
 
 ```c#
 using System.Collections.Generic;
@@ -355,13 +355,13 @@ Data types for a Dictionary's key-value pair types are declared in angled bracke
 <int, string> 
 ```
 
-In the following code example, we are declaring that the variable, `myScoreBoard`, is a Dictionary that has a string key and an integer value:
+In the following code example, we are declaring that the variable, `myScoreBoard`, is a `Dictionary` that has a string key and an integer value:
 
 ```c#
 Dictionary<string, int> myScoreBoard = new Dictionary<string, int>();
 ```
 
-To populate the Dictionary, we use the `.Add()` method in multiple lines to add data.
+To populate the `Dictionary`, we use the `.Add()` method in multiple lines to add data.
 
 ```c#
 myScoreBoard.Add("firstInning", 10);
@@ -371,7 +371,7 @@ myScoreBoard.Add("fourthInning", 40);
 myScoreBoard.Add("fifthInning", 50);
 ``` 
 
-Alternatively, we could initialize the Dictionary by listing the key-value pairs in a function call. Using this method, we pass a comma-separated list of key-value pairs in braces {} for each entry we wish to create:
+Alternatively, we could initialize the `Dictionary` by listing the key-value pairs in a function call. Using this method, we pass a comma-separated list of key-value pairs in braces, `{}`, for each entry we wish to create:
 
 ```c#
 Dictionary<string, int> myScoreBoard = new Dictionary<string, int>(){
@@ -385,7 +385,7 @@ Dictionary<string, int> myScoreBoard = new Dictionary<string, int>(){
 
 This is functionally equivalent to the first method. 
 
-Use one of the patterns above to populate Dictionary, myScoreboard, and then add the following code block, to print the Dictionary:
+Use one of the patterns above to populate `Dictionary`, `myScoreboard`, and then add the following code block, to print the `Dictionary`:
 
 ```c#
 Console.WriteLine("----------------");
@@ -678,7 +678,7 @@ Let's review what Main() is currently doing:
 
 That's a lot of work, and there's a lot more to come! Now is a good time to start organizing our code into separate, specialized methods. There is another principle in software design called the Single Responsibility Principle, which dictates that, "every module, class, or function should have responsibility over a single part of the functionality provided by the software."  That's a hard goal to achieve, but we can at least move closer to it. (If you're interested in learning more about these software design principles, see [Wikipedia's entry on SOLID](https://en.wikipedia.org/wiki/SOLID).)
 
-Let's try to make Main() as lightweight as possible by delegating the heavy lifting to some new methods. The type of work we've been doing so far can be grouped into two categories: getting employee data from the user, and printing the results to the console. So let's make two new methods, GetEmployees() and PrintEmployees(). Before we write code, let's consider what the parameters and return values for these methods might be. We know we're going to call GetEmployees() first, so it should probably return a list of employee names.  Once we have that, we can pass that list to PrintEmployees(). 
+Let's try to make Main() as lightweight as possible by delegating the heavy lifting to some new methods. The type of work we've been doing so far can be grouped into two categories: getting employee data from the user, and printing the results to the console. So let's make two new methods, `GetEmployees()` and `PrintEmployees()`. Before we write code, let's consider what the parameters and return values for these methods might be. We know we're going to call `GetEmployees()` first, so it should probably return a list of employee names.  Once we have that, we can pass that list to `PrintEmployees()`. 
 
 A method declaration, or **signature**, looks like this:
 
@@ -854,13 +854,13 @@ Employee</td>
 ```
 
 
-As we learned in Part 1, C# provides a [dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8) structure, which can store keys and values similar to Javascript objects. This seems like a candidate for storing our employee data, but remember that dictionaries can only store values of the same type. The employee data we’re dealing with is mostly strings except for IDs, which are integers. We *could *transform IDs into strings for storage using a technique called [casting](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions), but if we ever need to treat it like an integer we’ll need to "cast" it back into an integer. Because we can’t anticipate all the possible cases for dealing with these properties, it’s best to store them in their original types and only cast them to other types as the need arises. 
+As we learned in Part 1, C# provides a [dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.8) structure, which can store keys and values similar to Javascript objects. This seems like a candidate for storing our employee data, but remember that dictionaries can only store values of the same type. The employee data we’re dealing with is mostly strings except for IDs, which are integers. We could transform IDs into strings for storage using a technique called [casting](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions), but if we ever need to treat it like an integer we’ll need to "cast" it back into an integer. Because we can’t anticipate all the possible cases for dealing with these properties, it’s best to store them in their original types and only cast them to other types as the need arises. 
 
-A better option for storing employee data is to create an Employee class, which will allow us to define each property type individually. 
+A better option for storing employee data is to create an `Employee` class, which will allow us to define each property type individually. 
 
 # Create an Employee Class
 
-Part 1 mentioned that Program is a class containing our program’s Main() entry point method. C# permits defining multiple classes in a single file, so we *could *put our Employee class in Program.cs. But for the sake of code organization we’ll follow the popular convention of defining classes in separate files.
+Part 1 mentioned that Program is a class containing our program’s Main() entry point method. C# permits defining multiple classes in a single file, so we *could *put our `Employee` class in Program.cs. But for the sake of code organization we’ll follow the popular convention of defining classes in separate files.
 
 With that aside, create a new file named *Employe.cs* in the *CatWorx* folder. Let’s start by crafting a minimal class:
 
@@ -875,21 +875,25 @@ namespace CatWorx.BadgeMaker
 }
 ```
 
-Note the namespace scope declaration. By wrapping our class in the CatWorx.BadgeMaker namespace, we are able to access it directly from any class that uses CatWorx.BadgeMaker.   For example, if we wanted to use our Employee in a class in a separate project, say Corporate.HumanResources, we would add using CatWorx.BadgeMaker at the top of the file in which the HumanResources class was defined. We could then use Employee anywhere in that class.
+Note the namespace scope declaration. By wrapping our class in the `CatWorx.BadgeMaker` namespace, we are able to access it directly from any class that uses `CatWorx.BadgeMaker`.   For example, if we wanted to use our `Employee` in a class in a separate project, say Corporate.HumanResources, we would add using `CatWorx.BadgeMaker` at the top of the file in which the HumanResources class was defined. We could then use `Employee` anywhere in that class.
 
-To ensure that this is a valid class that we can instantiate in our application, let’s go back to Program.cs and create a new Employee instance. We'll assign it to a variable named employee. 
+To ensure that this is a valid class that we can instantiate in our application, let’s go back to Program.cs and create a new `Employee` instance. We'll assign it to a variable named employee. 
 
 Remember that all variable declarations must include a type:
 
+```c#
 dataType variableName = value
+```
 
-Can you guess what the data type of employee will be?
+Can you guess what the data type of `currentEmployee` will be?
 
-__________ currentEmployee = new Employee();
+```c#
+____?____ currentEmployee = new Employee();
+```
 
 **Hint:** Look at how we declared the employees list at the top of Main().
 
-When you define a class in C#, it registers that class name as a **custom type**, so the type of any instance of Employee is also Employee.
+When you define a class in C#, it registers that class name as a **custom type**, so the type of any instance of `Employee` is also `Employee`.
 
 ```c#
 while (true)
@@ -914,11 +918,11 @@ while (true)
 }
 ```
 
-If we run our application now, it should behave the same as before. This is good; it assures us that our Employee class is working (although not very hard, for the time being).
+If we run our application now, it should behave the same as before. This is good; it assures us that our `Employee` class is working (although not very hard, for the time being).
 
 # Store the Employee Names
 
-Let’s start adding properties to our Employee class. We’re only dealing with an employee’s first name right now, so let’s start there. Like all variable declarations in C#, we must specify the type. We’ll store employees’ first names as strings in a property named FirstName. 
+Let’s start adding properties to our `Employee` class. We’re only dealing with an employee’s first name right now, so let’s start there. Like all variable declarations in C#, we must specify the type. We’ll store employees’ first names as strings in a property named FirstName. 
 
 Properties are declared in the body of a class, like this:
 
@@ -929,13 +933,15 @@ class Employee
 }
 ```
 
-Similar to JavaScript, this property can be accessed directly on an Employee instance using dot notation. For example, we could set this property inside Program's Main() method this way:
+Similar to JavaScript, this property can be accessed directly on an `Employee` instance using dot notation. For example, we could set this property inside Program's Main() method this way:
 
 ![image alt text](./Images/image_3.png)
 
-But VS Code doesn’t like this, as indicated by the red squiggly line. If you try to run the program, you will get this warning:
+But VS Code doesn’t like this, as indicated by the red squiggly line. If you try to run the program, you will get this warning in the terminal:
 
+```bash
 Program.cs(22,26): error CS0122: 'Employee.FirstName' is inaccessible due to its protection level
+```
 
 What’s a protection level? By default, properties and methods defined in a class are given the protection level of private, which means that they can only be accessed within the class itself. If we try to access a private property from outside the class, we will get an error. Fortunately, we can control the access level of properties when we declare them, using an **access modifier**. Here’s how we would explicitly set the access level for the FirstName property when we declare it:
 
@@ -961,15 +967,15 @@ class Employee
 }
 ```
 
-When you save Employee, you’ll see that the red squiggly line under FirstName in Program has disappeared. If you run the application, you will see that there is no longer an error about protection levels.
+When you save `Employee`, you’ll see that the red squiggly line under FirstName in Program has disappeared. If you run the application, you will see that there is no longer an error about protection levels.
 
 Now that we understand the difference between public and private access modifiers, let’s take a moment to consider why they exist. JavasScript doesn’t use access modifiers, and it’s one of the most popular programming languages in the world!  But you may have seen JavaScript developers prepend variables with one or more underscores, like _sum, __currentIndex, or _calculateCatDensity(). This is a convention that simulates private variables, indicating that they are only useful in the context of the current code block. 
 
 It’s like a signal to other developers to say, "Don’t reference this variable anywhere else, even if JavaScript lets you, because it only makes sense right here." C# and other languages make access levels a first-class language feature, so that a developer may have full control over where a property or method may be used. If we declare something as private, we’re confident that it won’t leak out of our class and cause damage elsewhere. If we declare something as public, we’re confident that it’s safe everywhere.
 
-This concern about property access is part of the object-oriented software design principle of **encapsulation**, and we’re going to talk a little bit more about it as we flesh out Employee.
+This concern about property access is part of the object-oriented software design principle of **encapsulation**, and we’re going to talk a little bit more about it as we flesh out `Employee`.
 
-Let’s add the rest of the properties that we care about to the Employee class, making all of our properties public (for now), so we can access them from Program:
+Let’s add the rest of the properties that we care about to the `Employee` class, making all of our properties public (for now), so we can access them from Program:
 
 ```c#
 class Employee
@@ -986,11 +992,13 @@ class Employee
 
 ### About Constructors
 
-We’re now able to *store* values for these properties, but how do we *set* values for each employee? A convenient way would be to set them all at once when we create a new instance of the Employee class, like this:
+We’re now able to *store* values for these properties, but how do we *set* values for each employee? A convenient way would be to set them all at once when we create a new instance of the `Employee` class, like this:
 
+```c#
 Employee currentEmployee = new Employee("Vince", "McMahon", 123, "https://placekitten.com/300/300");
+```
 
-This is an easy, intuitive way to instantiate an Employee when you have all of the necessary values handy, and we can do this thanks to C#’s special **constructor method**. You are probably familiar with JavaScript constructors, which are called in exactly the same way; passing values to a class as arguments in parentheses:
+This is an easy, intuitive way to instantiate an `Employee` when you have all of the necessary values handy, and we can do this thanks to C#’s special **constructor method**. You are probably familiar with JavaScript constructors, which are called in exactly the same way; passing values to a class as arguments in parentheses:
 
 ```js
 var date = new Date('December 17, 1995 03:24:00');
@@ -1080,7 +1088,7 @@ class Employee
 }
 ```
 
-Now that we can set the employee's first name when we instantiate Employee, let's update `GetEmployees()` in Program:
+Now that we can set the employee's first name when we instantiate `Employee`, let's update `GetEmployees()` in Program:
 
 ```c#
 // Create a new Employee instance
@@ -1112,15 +1120,15 @@ Employee currentEmployee = new Employee(input, "Smith");
 employees.Add(input);
 ```
 
-Now we can create an Employee instance and set its FirstName and LastName properties in one statement. How might we put an employee's entire name, e.g., "John Smith," in the employees list? Here's one way:
+Now we can create an `Employee` instance and set its FirstName and LastName properties in one statement. How might we put an employee's entire name, e.g., "John Smith," in the employees list? Here's one way:
 
 ```c#
 employees.Add(currentEmployee.FirstName + " " + currentEmployee.LastName);
 ```
 
-This would mean that every time someone uses an Employee instance to get an employee's entire name, they would have to handle the formatting. As our application grows and the Employee class is used in more situations, a lot of similar code would have to be written in the calling classes. Let's make Employee more user-friendly by creating a GetName() method that does that work, returning a nicely-formatted, full name. 
+This would mean that every time someone uses an `Employee` instance to get an employee's entire name, they would have to handle the formatting. As our application grows and the `Employee` class is used in more situations, a lot of similar code would have to be written in the calling classes. Let's make `Employee` more user-friendly by creating a GetName() method that does that work, returning a nicely-formatted, full name. 
 
-In Employee:
+In `Employee`:
 
 ```c#
 public Employee(string firstName, string lastName) {
@@ -1133,7 +1141,7 @@ public string GetName() {
 }
 ```
 
-You may be getting the hang of type declarations by now, and you shouldn't be too surprised that they are required in method definitions. In addition to the access modifier public, we also define the type of value GetName() will return. Similar to Program's GetEmployees() method, this method also returns something, a string. So we must add this keyword to the method declaration.
+You may be getting the hang of type declarations by now, and you shouldn't be too surprised that they are required in method definitions. In addition to the access modifier public, we also define the type of value GetName() will return. Similar to Program's `GetEmployees()` method, this method also returns something, a string. So we must add this keyword to the method declaration.
 
 Let's update Program to use this handy method:
 
@@ -1151,27 +1159,27 @@ When we run our application, we're still prompted for first names. But the resul
 
 # Update the Output Logic 
 
-We've covered a lot of ground here, and the power of the Employee class is becoming apparent. But we have a few more employee properties to manage, and our employees list of first names isn't going to cut it. Employee can now output full names, and it will soon be able to output IDs and photo URLs, too. It makes sense to store Employee instances instead of simple strings.
+We've covered a lot of ground here, and the power of the `Employee` class is becoming apparent. But we have a few more employee properties to manage, and our `employees` list of first names isn't going to cut it. `Employee` can now output full names, and it will soon be able to output IDs and photo URLs, too. It makes sense to store `Employee` instances instead of simple strings.
 
-Let's upgrade employees to handle entire Employee instances.
+Let's upgrade `employees` to handle entire `Employee` instances.
 
-Currently, we're declaring employees like this in Program's GetEmployees() method:
+Currently, we're declaring `employees` like this in Program's `GetEmployees()` method:
 
 ```c#
 List<string> employees = new List<string>();
 ```
 
-How can we alter this declaration to handle Employee instances instead of strings?
+How can we alter this declaration to handle `Employee` instances instead of strings?
 
-Hint: Remember that Employee is now a custom type.
+Hint: Remember that `Employee` is now a custom type.
 
-We simply change the List type from string to Employee:
+We simply change the List type from string to `Employee`:
 
 ```c#
 List<Employee> employees = new List<Employee>();
 ```
 
-We'll have to make a couple more changes in GetEmployees() to work with a List of Employees.  First, we're no longer adding strings to employees, we're adding Employee instances:
+We'll have to make a couple more changes in `GetEmployees()` to work with a List of employees.  First, we're no longer adding strings to employees, we're adding `Employee` instances:
 
 ```c#
 while (true)
@@ -1194,7 +1202,7 @@ while (true)
 } 
 ```        
 
-Finally, we're no longer returning a list of strings; we're returning a list of Employee instances. So let's update the return value of the method:
+Finally, we're no longer returning a list of strings; we're returning a list of `Employee` instances. So let's update the return value of the method:
 
 ```c#
 // Update the method return type
@@ -1210,7 +1218,7 @@ Now to update `PrintEmployees()`. First, we need to change the method signature 
 static void PrintEmployees(List<Employee> employees)
 ```
 
-When we iterate over employees, we're no longer iterating over strings, but Employee instances! Now we'll get an employee's full name straight from the instance via `GetName()`. Let's update `PrintEmployees()` to use `GetName()`:
+When we iterate over employees, we're no longer iterating over strings, but `Employee` instances! Now we'll get an employee's full name straight from the instance via `GetName()`. Let's update `PrintEmployees()` to use `GetName()`:
 
 ```c#
 for (int i = 0; i < employees.Count; i++) 
@@ -1235,7 +1243,7 @@ Now let's run the app! It should behave exactly the same as it did before we mad
 
 # Add remaining properties and methods to the Employee class
 
-Our Employee class still needs to store and return an employee's ID and photo URL. It should be straightforward to update the constructor to accept these arguments and set them to the properties we've already defined. Don't forget to use camelCase for the parameters, and PascalCase when assigning them to properties:
+Our `Employee` class still needs to store and return an employee's ID and photo URL. It should be straightforward to update the constructor to accept these arguments and set them to the properties we've already defined. Don't forget to use camelCase for the parameters, and PascalCase when assigning them to properties:
 
 ```c#
 public Employee(string firstName, string lastName, int id, string photoUrl) {
@@ -1252,11 +1260,11 @@ public Employee(string firstName, string lastName, int id, string photoUrl) {
 
 # Collect all employee property values from the console, and print out all of the properties for each employee to the console
 
-Now we can go back to Program and pass specific values in our Employee instances. We hard coded "Smith" for lastName, and we could hard code the other values, too. But at some point we're going to need to get all the values from the user via the CLI. Why put off until later what we can do now? Can you think of how we might be able to alter our user input logic to ask for each property, for each employee?
+Now we can go back to Program and pass specific values in our `Employee` instances. We hard coded "Smith" for lastName, and we could hard code the other values, too. But at some point we're going to need to get all the values from the user via the CLI. Why put off until later what we can do now? Can you think of how we might be able to alter our user input logic to ask for each property, for each employee?
 
 Hint: You can call `Console.ReadLine()` multiple times in a row.
 
-There are a few ways we could do this, but a straightforward solution is to simply call `Console.ReadLine()` for each value we want from the user. Let's update Program's GetEmployees() method to do this, being careful to set the variables to the correct types, corresponding to Employee's property types.
+There are a few ways we could do this, but a straightforward solution is to simply call `Console.ReadLine()` for each value we want from the user. Let's update Program's `GetEmployees()` method to do this, being careful to set the variables to the correct types, corresponding to `Employee`'s property types.
 
 ```c#
 static List<Employee> GetEmployees()
@@ -1299,7 +1307,7 @@ Then we called `Console.ReadLine()` three more times, capturing `lastName`, `ID`
 
 **Hint:** `Console.ReadLine()` returns only string types.
 
-It's because `Console.ReadLine()` returns a string, but we want to store it in an int variable type, to be consistent with how Employee stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the Int32.Parse() System method. This is similar to the parseInt() function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an int:
+It's because `Console.ReadLine()` returns a string, but we want to store it in an int variable type, to be consistent with how `Employee` stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the `Int32.Parse()` method. This is similar to the `parseInt()` function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an int:
 
 ```c#
 Console.Write("Enter ID: ");
@@ -1309,9 +1317,9 @@ int id = Int32.Parse(Console.ReadLine());
 
 Now VS Code should be happy and to make sure things still work, let's save our work and run the application. When prompted for the photo URL, we recommend using the valuable Place Kitten service, which provides URLs for images of kittens. For example, [https://placekitten.com/300/300](https://placekitten.com/300/300). They are the best employees.
 
-Our application works, but it still only prints the employee's name to the console. We want to see *all* of the employee's information. In order to print it, we need to be able to get it out of the Employee instance. 
+Our application works, but it still only prints the employee's name to the console. We want to see *all* of the employee's information. In order to print it, we need to be able to get it out of the `Employee` instance. 
 
-Earlier in the project, we used dot notation to access `Employee` instance properties directly, but we have also used a method to access Employee's `FirstName` property. The argument for the latter approach was to simplify formatting. But there are lots of good reasons for accessing properties indirectly through methods:
+Earlier in the project, we used dot notation to access `Employee` instance properties directly, but we have also used a method to access `Employee`'s `FirstName` property. The argument for the latter approach was to simplify formatting. But there are lots of good reasons for accessing properties indirectly through methods:
 
 * You can process the property before returning it, such as formatting or validating it.
 
@@ -1327,7 +1335,7 @@ We mentioned the software design principle of encapsulation earlier. In short, u
 
 Whew.
 
-Having said all that, you may guess that we're going to create methods inside Employee to return the remaining properties. Not only that, to double-down on encapsulation, we're going to change all of the property access modifiers to private to ensure that users of this class can only access them through the methods we provide. Hardcore.
+Having said all that, you may guess that we're going to create methods inside `Employee` to return the remaining properties. Not only that, to double-down on encapsulation, we're going to change all of the property access modifiers to private to ensure that users of this class can only access them through the methods we provide. Hardcore.
 
 Here's the final `Employee` class:
 
@@ -1360,7 +1368,7 @@ namespace CatWorx.BadgeMaker {
   ...
 ```
 
-The last step of this section is to print out all of the employee information for each employee. In Program's PrintEmployees() method, update the code in the for block:
+The last step of this section is to print out all of the employee information for each employee. In Program's `PrintEmployees()` method, update the code in the for block:
 
 ```c#
 for (int i = 0; i < employees.Count; i++) 
@@ -1371,7 +1379,7 @@ for (int i = 0; i < employees.Count; i++)
 }
 ```
 
-What's up with that mess of characters in the template string? You might recognize String.Format() from its brief introduction in Part 1. In C#, String.Format() works similarly to template literals in JavaScript; it takes a string to use as a template, and then fills in the placeholders with values. The major differences are that each placeholder can define how its value is formatted, and the values follow the template in the list of arguments.
+What's up with that mess of characters in the template string? You might recognize String.Format() from its brief introduction in Part 1. In C#, `String.Format()` works similarly to template literals in JavaScript; it takes a string to use as a template, and then fills in the placeholders with values. The major differences are that each placeholder can define how its value is formatted, and the values follow the template in the list of arguments.
 
 Let's walk through the formatting string, `string template = "{0,-10}\t{1,-20}\t{2}";`
 
@@ -1419,7 +1427,7 @@ In this module, we'll complete our first "big" feature in the form of writing da
 
 ## Clean Up with Classes
 
-To start, create a new file in the same directory as Program.cs, but call this file Util.cs. This will become the class where we’ll handle any output-related logic. Type the following code in this new file:
+To start, create a new file in the same directory as Program.cs, but call this file `Util.cs`. This will become the class where we’ll handle any output-related logic. Type the following code in this new file:
 
 ```c#
 namespace CatWorx.BadgeMaker
@@ -1432,7 +1440,7 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-This probably looks familiar. It’s how we started our Employee class. Note that we want this to be available in the same namespace so other classes like Program can see and use it. Unlike Employee, though, we aren’t going to create new instances of this class:
+This probably looks familiar. It’s how we started our `Employee` class. Note that we want this to be available in the same namespace so other classes like Program can see and use it. Unlike `Employee`, though, we aren’t going to create new instances of this class:
 
 ```c#
 // What you won't be doing
@@ -1442,7 +1450,7 @@ Util thing = new Util();
 
 Instead, this class is going to be a collection of general methods that can be used again and again. It'd be like the WriteLine() method that's available on the Console class. We don't have to make a new Console() to use it. That would just be silly.
 
-We're already familiar with the public modifier, since it was integral to our Employee class. We’ll want the methods on Util to be public, as well, but there’s an extra modifier required to make this work correctly:
+We're already familiar with the public modifier, since it was integral to our `Employee` class. We’ll want the methods on Util to be public, as well, but there’s an extra modifier required to make this work correctly:
 
 ```c#
 namespace CatWorx.BadgeMaker
@@ -1459,7 +1467,7 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-We defined the PrintEmployees() method above as **static**, meaning it belongs to the class itself instead of individual instances or objects. In other words, you don’t have to create a new **Util** object to use it. You can access this method directly from the class name:
+We defined the `PrintEmployees()` method above as **static**, meaning it belongs to the class itself instead of individual instances or objects. In other words, you don’t have to create a new **Util** object to use it. You can access this method directly from the class name:
 
 ```c#
 Util.PrintEmployees();
@@ -1528,7 +1536,7 @@ namespace CatWorx.BadgeMaker
 ```
 
 
-In Program.cs, delete the old PrintEmployees() method and replace the call to it with a call to the Util method:
+In Program.cs, delete the old `PrintEmployees()` method and replace the call to it with a call to the Util method:
 
 ```c#
 Util.PrintEmployees(employees);
@@ -1565,7 +1573,7 @@ The goal at this point is to save all of our employee data to a CSV file located
 
 3. In the method, check to see if a *data* folder exists, and if not, create it.
 
-4. Create a new file located at *data/employees.csv*.
+4. Create a new file located at `data/employees.csv`.
 
 5. Loop over the given employees.
 
@@ -1573,7 +1581,7 @@ The goal at this point is to save all of our employee data to a CSV file located
 
 ## Add a New Method (Steps 1-2)
 
-Mirroring what we did previously with the PrintEmployees() method, add another static method to Util called MakeCSV:
+Mirroring what we did previously with the `PrintEmployees()` method, add another static method to Util called MakeCSV:
 
 ```c#
 using System;
@@ -1606,7 +1614,7 @@ Util.MakeCSV(employees);
 
 ## Make the Folder (Step 3)
 
-Ultimately, we want to output the CSV to a new folder called *data*, but there’s a problem… we don’t have a folder called *data*. We could solve this by creating the folder manually, but if the folder ever got deleted, our app would break. Let’s handle this with a bit of code. Inside of the MakeCSV() method, write the following:
+Ultimately, we want to output the CSV to a new folder called *data*, but there’s a problem… we don’t have a folder called *data*. We could solve this by creating the folder manually, but if the folder ever got deleted, our app would break. Let’s handle this with a bit of code. Inside of the `MakeCSV()` method, write the following:
 
 ```c#
 // Check to see if folder exists
@@ -1620,7 +1628,7 @@ if (!Directory.Exists("data"))
 
 This will check for the existence of the folder first, and if it doesn’t exist, it will create it for the first time. However, you probably already saw some errors pop up, because our Util class doesn’t know what Directory means. What does this usually suggest? Think about how to solve this before moving on.
 
-*HINT: How did we fix this issue with the List class?*
+**HINT:** How did we fix this issue with the `List` class?*
 
 Yep, we’re missing a namespace. If you look at the documentation for the [Directory class](https://docs.microsoft.com/en-us/dotnet/api/system.io.directory), you’ll notice that the namespace it falls under is called System.IO. Let’s go ahead and add that alongside our other imports:
 
@@ -1635,14 +1643,14 @@ This is a great stopping point now to run the app, making sure everything curren
 
 ## Make the CSV (Step 4)
 
-The System.IO namespace in the .NET framework provides other classes besides Directory that can help us with file system operations. One such class is System.IO.StreamWriter, which facilitates creating and writing to files. After the directory logic, create a new StreamWriter object:
+The System.IO namespace in the .NET framework provides other classes besides Directory that can help us with file system operations. One such class is `System.IO.StreamWriter`, which facilitates creating and writing to files. After the directory logic, create a new `StreamWriter` object:
 
 ```c#
 StreamWriter file = new StreamWriter("data/employees.csv");
 ```
 
 
-That alone will make a new (albeit empty) CSV file in the *data* folder. However, we’re not really following best practices here. In .NET apps, memory management is pretty important, and we don’t want potentially heavy resources to continue to hog up memory after we’re done using them. We could manually *dispose* the StreamWriter ourselves once we’re done with it (though after looking at the [documentation](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable), no thanks), or we could let .NET do it for us with a using statement:
+That alone will make a new (albeit empty) CSV file in the *data* folder. However, we’re not really following best practices here. In .NET apps, memory management is pretty important, and we don’t want potentially heavy resources to continue to hog up memory after we’re done using them. We could manually *dispose* the `StreamWriter` ourselves once we’re done with it (though after looking at the [documentation](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable), no thanks), or we could let .NET do it for us with a using statement:
 
 ```c#
 using (StreamWriter file = new StreamWriter("data/employees.csv"))
@@ -1652,7 +1660,7 @@ using (StreamWriter file = new StreamWriter("data/employees.csv"))
 ```
 
 
-Yes, it’s a little confusing that the keyword using has two different meanings depending on the context (importing a namespace versus temporarily "using" a resource). That’s just how it is sometimes. The important thing to remember is that whatever is defined in the parentheses is *only *available within the following set of curly brackets. Once that block of code runs, the resource (in this case, the StreamWriter) is disposed/removed.
+Yes, it’s a little confusing that the keyword using has two different meanings depending on the context (importing a namespace versus temporarily "using" a resource). That’s just how it is sometimes. The important thing to remember is that whatever is defined in the parentheses is *only *available within the following set of curly brackets. Once that block of code runs, the resource (in this case, the `StreamWriter`) is disposed/removed.
 
 ## Write the Data (Steps 5-6)
 
@@ -1690,13 +1698,13 @@ For our app, the next step is to create image files. The syntax is going to be d
 
 ## Reflection
 
-In this module, we refactored our code by adding another class, whose methods were defined as static. One of those static methods used the StreamWriter class to write content to a file. 
+In this module, we refactored our code by adding another class, whose methods were defined as static. One of those static methods used the `StreamWriter` class to write content to a file. 
 
 Think about the following questions, and make sure you feel good about your answers before moving to the next module:
 
 1. What does the static modifier mean?
 
-2. Why was it necessary to wrap the StreamWriter in a using statement?
+2. Why was it necessary to wrap the `StreamWriter` in a `using` statement?
 
 # Part 4: Create the Badges
 
@@ -1704,7 +1712,7 @@ Think about the following questions, and make sure you feel good about your answ
 
 As often is the case in the application-building process, much of your time in the beginning of the project is spent setting up the right environment, pseudocoding steps to help guide the process workflow, and making resources or data available to test iteratively to ensure progress is made on a function-to-function basis. 
 
-And now we’ve reached the point in our project when we can create the security badges and deliver our end result! Let's reflect a bit and note that in previous sections, we created an application that could retrieve data from the user and implement an Employee class to enable us to store object instances in a data structure—in our case, a List—and write the employee data to a file. 
+And now we’ve reached the point in our project when we can create the security badges and deliver our end result! Let's reflect a bit and note that in previous sections, we created an application that could retrieve data from the user and implement an `Employee` class to enable us to store object instances in a data structure—in our case, a List—and write the employee data to a file. 
 
 Now we will use this data to output or write the employee's information to a template security badge, which we have provided [here](https://imgur.com/0EMSs68). Please place this image file in the root directory, and rename it `badge.png`.
 
@@ -1726,7 +1734,7 @@ In the next section, we will start to work through these steps.
 
 ## MakeBadges()
 
-To start, we need to create our employee badges. Let's go ahead and create a placeholder method called MakeBadges()to do that. 
+To start, we need to create our employee badges. Let's go ahead and create a placeholder method called `MakeBadges()`to do that. 
 
 Consider the following as you think about creating this method:
 
@@ -1771,22 +1779,21 @@ Let’s break down the parts of the code:
 
 ## Set Up System.Drawing
 
-Let’s see what we can find about how to modify or manipulate graphics in C#. Let's begin with a quick internet search for "graphics C#". You’ll probably find as one of your search results the Graphics class in the System.Drawing namespace in [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
+Let’s see what we can find about how to modify or manipulate graphics in C#. Let's begin with a quick internet search for "graphics C#". You’ll probably find as one of your search results the Graphics class in the `System.Drawing` namespace in [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
 
-Upon further inspection, this choice seems promising. Scrolling on the side menu on the left shows the variety of tools available in the System.Drawing namespace, including some that sound applicable for our application like Graphics, Size Converter, Font, Rectangle, or Image.
+Upon further inspection, this choice seems promising. Scrolling on the side menu on the left shows the variety of tools available in the `System.Drawing` namespace, including some that sound applicable for our application like `Graphics`, `Size Converter`, `Font`, Rectangle, or `Image`.
 
-Looking at the first example on this page, an image object is created using a .jpg file. Taking a closer look, the Image type is being declared for the newImage variable. Let's try this code in our application and see if we can create a new image object from our badge template. 
+Looking at the first example on this page, an image object is created using a `.jpg` file. Taking a closer look, the `Image` type is being declared for the `newImage` variable. Let's try this code in our application and see if we can create a new `Image` object from our badge template. 
 
 Please take a few moments to ask yourself why this might be an important step.
 
-* The image must be translated into an instance object of the Image class in order to utilize the tools or methods in this class. 
+* The image must be translated into an instance object of the `Image` class in order to utilize the tools or methods in this class. 
 
-Now let's type the following snippet into the MakeBadges()method, and then call the method in the Program.cs file's Main method just to see if our code is working.
+Now let's type the following snippet into the `MakeBadges()` method, and then call the method in the Program.cs file's `Main()` method just to see if our code is working.
 
-**Hint:** It is important to note that the location of the badge template file is crucial. We are able to simply call for the badge.png in this case, since we saved it in the root directory.
+**Hint:** It is important to note that the location of the badge template file is crucial. We are able to simply call for the `badge.png` in this case, since we saved it in the root directory.
 
 *Util.cs*
-
 ```c#
 public static void MakeBadges(List<Employee> employees) {
   // Create image
@@ -1808,13 +1815,13 @@ static void Main(string[] args)
 }
 ```
 
-But wait, how do we check to see if this newImage object was created correctly?
+But wait, how do we check to see if this `newImage` object was created correctly?
 
-One option would be to save this image object into a new file. This option is appealing since it is a step we will need to accomplish any way in our last step of our pseudocode. 
+One option would be to save this `Image` object into a new file. This option is appealing since it is a step we will need to accomplish any way in our last step of our pseudocode. 
 
 Let's search Google again to find our answer. What should our search term be?
 
-Hint: "create image file c# "
+**Hint:** "create image file c#"
 
 One of the top responses is a Stack Overflow post titled ["Create a new image on the file system from System.Drawing.Image?](https://stackoverflow.com/questions/1230090/create-a-new-image-on-the-file-system-from-system-drawing-image) 
 
@@ -1834,22 +1841,21 @@ public static void MakeBadges(List<Employee> employees) {
 }
 ```
 
-
 To determine if these methods work, let's go ahead and run the application.
 
-Oh, what's this? The type or namespace 'Image' could not be found?
+Oh, what's this? The type or namespace `Image` could not be found?
 
 ![image alt text](./Images/image_6.png)
 
 The error actually states the fix to our problem. "Are you missing a using directive …?"
 
-*Why yes, we are. *
+**Why yes, we are.**
 
-In order to use the Image class, which namespace needs to be referenced? 
+In order to use the `Image` class, which namespace needs to be referenced? 
 
-System.Drawing 
+`System.Drawing` 
 
-Please take a moment and add the using directive to fix the code. 
+Please take a moment and add the `using` directive to fix the code. 
 
 
 What does this statement look like? Please type out the answer before continuing.
@@ -1861,7 +1867,7 @@ using System.Drawing;
 
 In what file do we add this code? 
 
-The answer is … the Util.cs file, because this is where we are using the Image class.
+The answer is … the Util.cs file, because this is where we are using the `Image` class.
 
 Now let's try to run our program again.
 
@@ -1871,22 +1877,21 @@ Parsing through our error message again, let's focus on the second part of the e
 
 *Yes, we are!*
 
-Wait, but what is an assembly reference?  We can think of it as a package, like in Node.js and npm, we often had to manually import packages into our applications using npm install
+Wait, but what is an assembly reference?  We can think of it as a package, like in Node.js and npm, we often had to manually import packages into our applications using `npm install`
 
-Basically we are being told that System.Drawing is not available in .NET Core so we will manually add this package to our application. 
+Basically we are being told that `System.Drawing` is not available in .NET Core so we will manually add this package to our application. 
 
-So how do we go about that task? Let's google another query. How about "How to use System.Drawing in .NET Core?"
+So how do we go about that task? Let's google another query. How about "How to use `System.Drawing` in .NET Core?"
 
-This search leads us to many responses that pertain to a new package called System.Drawing.Common. Look over the [documentation](https://www.nuget.org/packages/System.Drawing.Common/) for this package and see if you can identify if this is the right fit and how to install or add this package to your application.
+This search leads us to many responses that pertain to a new package called `System.Drawing.Common`. Look over the [documentation](https://www.nuget.org/packages/System.Drawing.Common/) for this package and see if you can identify if this is the right fit and how to install or add this package to your application.
 
-As you can see, the types or classes available to us for graphics functionality are the same ones we discovered when researching the System.Drawing namespace. In the next section, there are multiple tabs showing how to install this package depending on your coding platform or text editor. Let's use the one for .NET CLI, which we have been using with our .NET Core tool.
+As you can see, the types or classes available to us for graphics functionality are the same ones we discovered when researching the `System.Drawing` namespace. In the next section, there are multiple tabs showing how to install this package depending on your coding platform or text editor. Let's use the one for .NET CLI, which we have been using with our .NET Core tool.
 
 Type the following into the terminal associated with our root directory:
 
 ```c#
 dotnet add package System.Drawing.Common
 ```
-
 
 Now head over to the `CatWorx.BadgeMaker.csproj` file to see if our package was included properly:
 
@@ -1905,22 +1910,19 @@ Now head over to the `CatWorx.BadgeMaker.csproj` file to see if our package was 
 </Project>
 ```
 
-
 Now let's run our app from the root directory and see if we were able to accomplish our first pseudocode step of importing the template into our application. By looking into our data directory, we should now see an image file called employeeBadge.png. 
 
 Success! We were able to import our badge template as well as create a new image file. While the image itself is not yet very impressive, this progresses us past an essential step. Now it's on to how to modify this image and customize our graphics.
 
-For more information about the System.Drawing.Common assembly, look [here](https://www.hanselman.com/blog/HowDoYouUseSystemDrawingInNETCore.aspx) and [here](https://developers.de/2018/01/22/how-to-use-system-drawing-in-net-core/)
-
-*INSERT CODE CHALLENGE MULTIPLE CHOICE - reference assembly*
+For more information about the ``System.Drawing`.Common` assembly, look [here](https://www.hanselman.com/blog/HowDoYouUseSystemDrawingInNETCore.aspx) and [here](https://developers.de/2018/01/22/how-to-use-system-drawing-in-net-core/)
 
 ## Set the Graphics Parameters
 
-Now we can start by setting up some of the parameters in the MakeBadges() method that will be used as the style settings to determine the placement and size of the components we need to insert into the badge template. Remember, the objective is to add a photo, company name, employee name and id number to the security badge.
+Now we can start by setting up some of the parameters in the `MakeBadges()` method that will be used as the style settings to determine the placement and size of the components we need to insert into the badge template. Remember, the objective is to add a photo, company name, employee name and id number to the security badge.
 
-Now that we have our badge template as an instance of the Image class, we can set up the placement of the elements of our employee info by using "x" and "y" coordinates as well as the size of the elements being inserted. The layout parameters have been given to you so we can focus more on the code and less on how to pixel count. These could've been determined as easily as using trial and error for placement and size parameters, but that would’ve been quite time-consuming. 
+Now that we have our badge template as an instance of the `Image` class, we can set up the placement of the elements of our employee info by using "x" and "y" coordinates as well as the size of the elements being inserted. The layout parameters have been given to you so we can focus more on the code and less on how to pixel count. These could've been determined as easily as using trial and error for placement and size parameters, but that would’ve been quite time-consuming. 
 
-Please type/copy these layout parameters into the top of the function block of the MakeBadges() method.
+Please type/copy these layout parameters into the top of the function block of the `MakeBadges()` method.
 
 ```c#
 public static void MakeBadges(List<Employee> employees) 
@@ -1959,11 +1961,11 @@ Please note these constants have been organized by element. The BADGE_WIDTH and 
 
 ## Build the Badges
 
-Next, we'll be inserting the employee information into our badge template, to complete the second pseudocode step in this section. In order to do this, we will need another tool from the .NET Core that will allow us to import or download the employee information from our employee List. For this, we will use the WebClient class.
+Next, we'll be inserting the employee information into our badge template, to complete the second pseudocode step in this section. In order to do this, we will need another tool from the .NET Core that will allow us to import or download the employee information from our employee List. For this, we will use the `WebClient` class.
 
 This is an essential and powerful tool to have in your C# toolbelt. This package can also be used to send HTTP requests, read files, download webpages, and upload data from a resource using a multitude of methods.
 
-In order to use the WebClient class, we can either use the fully specified name System.Net.WebClient or add the using directive to include the namespace System.Net. In our case, we have decided to include our namespace for simplicity and readability in our program.
+In order to use the `WebClient` class, we can either use the fully specified name `System.Net.WebClient` or add the using directive to include the namespace System.Net. In our case, we have decided to include our namespace for simplicity and readability in our program.
 
 *Util.cs*
 
@@ -1976,7 +1978,7 @@ using System.Collections.Generic;
 ```
 
 
-Now that we can use the WebClient in our application, let's take a moment to review the docs and see the power and utility of this class: [WebClient docs](https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?view=netframework-4.8) and some [examples](https://www.dotnetperls.com/webclient).
+Now that we can use the `WebClient` in our application, let's take a moment to review the docs and see the power and utility of this class: [WebClient docs](https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient?view=netframework-4.8) and some [examples](https://www.dotnetperls.com/webclient).
 
 ```c#
 WebClient client = new WebClient();
@@ -2034,7 +2036,7 @@ using(WebClient client = new WebClient())
 ```
 
 
-Remember the employees List was inputted as the argument of this MakeBadges() method which allows us to access the employees List within the context of this Util method.
+Remember the employees List was inputted as the argument of this `MakeBadges()` method which allows us to access the employees List within the context of this Util method.
 
 Now that we have access to the List on an object instance level, we will be able to retrieve the employee information to populate the badge. 
 
@@ -2042,25 +2044,25 @@ In the next section, we will make the necessary file and URL conversions into th
 
 Render the Employee Photo 
 
-To render our employee photo onto the badge template, we will need to successfully achieve certain smaller objectives. First we need our image file and photo URL to be converted to objects that can be manipulated in the System.Drawing.Image class.
+To render our employee photo onto the badge template, we will need to successfully achieve certain smaller objectives. First we need our image file and photo URL to be converted to objects that can be manipulated in the `System.Drawing.Image` class.
 
-1. Convert the photo URL into Image.
+1. Convert the photo URL into `Image`.
 
-2. Convert badge template into Image.
+2. Convert badge template into `Image`.
 
 3. Place the images onto a canvas.
 
-So first off, let's get each employee photo and turn it into an Image stored in a variable called photo. Luckily we created an instance method in our Employee class called GetPhotoUrl() that will get our PhotoUrl property of our employee instance.
+So first off, let's get each employee photo and turn it into an `Image` stored in a variable called photo. Luckily we created an instance method in our `Employee` class called GetPhotoUrl() that will get our PhotoUrl property of our employee instance.
 
-Now before starting to code this step, let's determine some of the particular methods we may need to use to convert our photo URL into an Image. 
+Now before starting to code this step, let's determine some of the particular methods we may need to use to convert our photo URL into an `Image`. 
 
 * Convert our URL into what C# is known as a Stream. System.IO.Stream is a class that allows reading and writing of bytes or data from a source. For a deeper dive here are the [docs](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=netframework-4.8).
 
-* Convert this Stream into an Image.
+* Convert this Stream into an `Image`.
 
 The first method we will use will be WebClient.OpenRead(). As the [docs](https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient.openread?view=netframework-4.8) state "opens a readable stream for the data downloaded from a resource with the URI specified as a String"
 
-The second method will be System.Drawing.Image.FromStream(). As the method and [docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.fromstream?view=netframework-4.8) clearly indicate, this will create an Image from a Stream.
+The second method will be `System.Drawing.Image.FromStream()`. As the method and [docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.fromstream?view=netframework-4.8) clearly indicate, this will create an `Image` from a Stream.
 
 ## Time to Start Coding!
 
@@ -2092,7 +2094,7 @@ Let's dig in a little bit and parse out this long string.
 
 The first section gives the namespace System.Net. From there, we can quickly find the class as [WebFileStream](https://csharpdoc.hotexamples.com/class/System.Net/WebFileStream) by looking at the System.Net [docs](https://csharpdoc.hotexamples.com/namespace/System.Net). As we can see from the docs [here](https://csharpdoc.hotexamples.com/class/System.Net/WebFileStream), we can find that this class inherited from the System.IO.FileStream class that the document states [here](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netframework-4.8) "Provides a [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=netframework-4.8) for a file, supporting both synchronous and asynchronous read and write operations". Now that we are dealing with a Stream type, let's move to the second conversion.
 
-For the second method, we will convert the Stream into an Image using the Image.FromStream() method. We will need to declare a new variable called photo to store this data. What should the data type of photo be?
+For the second method, we will convert the Stream into an `Image` using the `Image.FromStream()` method. We will need to declare a new variable called photo to store this data. What should the data type of photo be?
 
 **Hint:** Think about the conversion process stated is the last paragraph.
 
@@ -2168,7 +2170,7 @@ Now that these image conversions are complete, it's time to tackle the third ste
 
 ## The Bitmap Class
 
-We will be using the System.Drawing.Bitmap class to create a canvas to place our images and text. A Bitmap is a representation of an image or graphic that uses pixels or tiny dots of color to create an image. 
+We will be using the `System.Drawing.Bitmap` class to create a canvas to place our images and text. A `Bitmap` is a representation of an image or graphic that uses pixels or tiny dots of color to create an image. 
 
 Video -  zooming into an image to see pixelation, super mario bros example possibly to show how pixelated things used to be 
 
@@ -2184,7 +2186,7 @@ Console.WriteLine(background.GetType());
 ```
 
 
-This is because Image is a subset type or inherits from the Bitmap class.
+This is because `Image` is a subset type or inherits from the `Bitmap` class.
 
 Let's now create the canvas that we will be using to create our badge by using the handy size constants we previously declared.
 
@@ -2213,11 +2215,11 @@ The `System.Drawing.Graphics` class acts much like a wrapper around the badge bi
 
 To see how much this class has to offer, please dig deeper into the docs and check out the multitude of methods at your disposal [here](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
 
-As the document states midway down in the Remarks section, there is a suggestion to create a `Graphics` object from an image by using the FromImage method.
+As the document states midway down in the Remarks section, there is a suggestion to create a `Graphics` object from an image by using the `FromImage` method.
 
 Let's try that method now. How do you suppose it should look? Try to type out the expression here.
 
-**Hint:** Check out [Microsoft’s documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.fromimage?view=netframework-4.8) on the Graphics.FromImage(Image) method for the correct syntax.
+**Hint:** Check out [Microsoft’s documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.fromimage?view=netframework-4.8) on the `Graphics.FromImage(Image)` method for the correct syntax.
 
 ```c#
 using(WebClient client = new WebClient())
@@ -2236,11 +2238,11 @@ Now that our Graphics object has been created, we can use the methods in the Gra
 
 Take another look at the [Graphics class docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8) and see if you can find a method that will help you accomplish this goal. As you can see, there is a plethora of methods specific to drawing, especially shapes, images, and strings.
 
-We will use a method called DrawImage. This method allows us to draw our images onto the badge.
+We will use a method called `DrawImage`. This method allows us to draw our images onto the badge.
 
 ### Step 1: Badge Template Image
 
-Add the following highlighted code to insert a badge template Image object named background onto the badge:
+Add the following highlighted code to insert a badge template `Image` object named background onto the badge:
 
 ```c#
 using(WebClient client = new WebClient())
@@ -2257,13 +2259,13 @@ using(WebClient client = new WebClient())
 ```
 
 
-It is important to note the use of the Rectangle class here. This special class is from System.Drawing.Rectangle and allows us to allocate a position and size on our badge.
+It is important to note the use of the `Rectangle` class here. This special class is from `System.Drawing.Rectangle` and allows us to allocate a position and size on our badge.
 
-If we think back to constructors in JavaScript, we can examine the Rectangle constructor's four arguments and think about how we will be instantiating a new object. The first two arguments indicate the position of the new Rectangle object, which starts at the top left corner: the X and Y coordinates respectively. The next two arguments relate to the size of the new Rectangle object: the width and height respectively. 
+If we think back to constructors in JavaScript, we can examine the `Rectangle` constructor's four arguments and think about how we will be instantiating a new object. The first two arguments indicate the position of the new `Rectangle` object, which starts at the top left corner: the X and Y coordinates respectively. The next two arguments relate to the size of the new `Rectangle` object: the width and height respectively. 
 
-**Note:** Take a look at the [Microsoft documentation on the Rectangle Struct](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.rectangle?view=netframework-4.8) to get a deeper understanding of the Rectangle class. 
+**Note:** Take a look at the [Microsoft documentation on the Rectangle Struct](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.rectangle?view=netframework-4.8) to get a deeper understanding of the `Rectangle` class. 
 
-To review, note that the DrawImage method's arguments involved taking in an Image object, then using the Rectangle object for placement and size.
+To review, note that the `DrawImage()` method's arguments involved taking in an `Image` object, then using the `Rectangle` object for placement and size.
 
 ### Step 2: Employee Photo
 
@@ -2285,7 +2287,7 @@ using(WebClient client = new WebClient())
 ```
 
 
-This step allowed us to insert our employee photo onto our graphic object with specific location coordinates, as well as specific size dimensions using Rectangle.
+This step allowed us to insert our employee photo onto our graphic object with specific location coordinates, as well as specific size dimensions using `Rectangle`.
 
 So how do we check this step to see if we are going in the right direction?
 
@@ -2297,7 +2299,7 @@ Let's save this image to a file. Please take a moment to write out the code that
 badge.Save("data/employeeBadge.png");
 ```
 
-Now let's check the image file to see if we were able to successfully input the employee picture onto the badge template. Let's run the application and create a single employee at the terminal prompt to create this badge image. Don't forget to include the URL for the employee test photo, which is simply the relative location of the photo we downloaded earlier: data/300.jpg
+Now let's check the image file to see if we were able to successfully input the employee picture onto the badge template. Let's run the application and create a single employee at the terminal prompt to create this badge image. Don't forget to include the URL for the employee test photo, which is simply the relative location of the photo we downloaded earlier: `data/300.jpg`
 
 Success! Woo-hoo!
 
@@ -2311,7 +2313,7 @@ We were able to create our image objects, transfer them onto a bitmap using the 
 
 In this section, we will finish up our badge by inserting the text for each employee's information, including the company name, employee name, and employee id number.
 
-First, let's do a little bit of styling to ensure our badge will look slick and professional. To do this, let’s include some font and alignment styling above the WebClient expression.
+First, let's do a little bit of styling to ensure our badge will look slick and professional. To do this, let’s include some font and alignment styling above the `WebClient` expression.
 
 Please add the following code for centering, font, and font color, referenced here as the brush color in the class SolidBrush: 
 
@@ -2440,7 +2442,7 @@ Our next step will be to print our employee id number to the page.
 
 **Hint:** It must format to String in the first argument.
 
-**Hint:** Rectangle's arguments must be in a specific order to give the expected results.
+**Hint:** `Rectangle`'s arguments must be in a specific order to give the expected results.
 
 As before, the new code should come before the `badge.Save("data/employeeBadge.png");` command:
 
@@ -2497,11 +2499,11 @@ During this lesson, you learned how to do the following:
 
 * Outline an objective list using pseudocode to guide your workflow and break down each step.
 
-* Using System.Drawing, you were able to research and use many of the classes and methods necessary to manipulate images and text.
+* Using `System.Drawing`, you were able to research and use many of the classes and methods necessary to manipulate images and text.
 
-* Understand how to convert objects for example a URL to Stream to Image allowed you to use different methods to draw the image onto the Bitmap badge using the Graphics wrapper.
+* Understand how to convert objects for example a URL to Stream to `Image` allowed you to use different methods to draw the image onto the Bitmap badge using the Graphics wrapper.
 
-* How to designate location and size using the Rectangle to illustrate the badge with text or images.
+* How to designate location and size using the `Rectangle` to illustrate the badge with text or images.
 
 * How to use the Save method to create a new file.
 
