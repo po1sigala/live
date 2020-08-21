@@ -1301,11 +1301,11 @@ First, we moved the initial `Console.ReadLine()` prompt inside the while loop so
 
 Then we changed input to `firstName`, because that's how we've been using it all along. Now that we have other values to capture, it makes sense to be more specific.
 
-Then we called `Console.ReadLine()` three more times, capturing `lastName`, `ID`, and `photoUrl`. But VS Code doesn't like how we captured ID. Can you figure out why?
+Then we called `Console.ReadLine()` three more times, capturing `lastName`, `ID`, and `photoUrl`.
 
-**Hint:** `Console.ReadLine()` returns only string types.
+If you see a highlight on the `ID` from the IDE, it may be because `Console.ReadLine()` returns only string types.
 
-It's because `Console.ReadLine()` returns a string, but we want to store it in an `int` variable type, to be consistent with how `Employee` stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the `Int32.Parse()` method. This is similar to the `parseInt()` function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an `int`:
+The problem is we want to store it in an `int` variable type, to be consistent with how `Employee` stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the `Int32.Parse()` method. This is similar to the `parseInt()` function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an `int`:
 
 ```c#
 Console.Write("Enter ID: ");
