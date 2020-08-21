@@ -258,7 +258,7 @@ Console.WriteLine("area: {0}", area);
 
 How do we identify the data type of a variable?
 
-Use the `GetType()` function.
+We use the `GetType()` function.
 
 ```c#
 Console.WriteLine("area is a {0}", area.GetType());
