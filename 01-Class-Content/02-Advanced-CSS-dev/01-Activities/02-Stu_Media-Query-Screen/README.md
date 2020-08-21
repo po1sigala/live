@@ -6,15 +6,15 @@ In this activity, you will work with a partner to implement basic media queries 
 
 * Be sure to work with your partner!
 
-* Open [style.css](./Unsolved/assets/css/styles.css) to examine the code and implement the following features:
+* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
 
   * As an online shopper, I want to view products on an online shop on my computer as well as my mobile phone.
 
   * When the screen size is larger than 980 px, the product cards on the screen are side-by-side.
 
-  * When I change the screen size to 980 px, then the product cards on the screen should be stacked on top of each other.
+  * When I change the screen size to 980 px, the product cards on the screen should be stacked on top of each other.
 
-  * When I change the screen size to 640 px, then the background color changes.
+  * When I change the screen size to 640 px, the background color changes.
 
 ## 💡 Hint(s)
 
