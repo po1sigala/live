@@ -922,7 +922,7 @@ If we run our application now, it should behave the same as before. This is good
 
 # Store the Employee Names
 
-Let’s start adding properties to our `Employee` class. We’re only dealing with an employee’s first name right now, so let’s start there. Like all variable declarations in C#, we must specify the type. We’ll store employees’ first names as strings in a property named FirstName. 
+Let’s start adding properties to our `Employee` class. We’re only dealing with an employee’s first name right now, so let’s start there. Like all variable declarations in C#, we must specify the type. We’ll store employees’ first names as strings in a property named `FirstName`. 
 
 Properties are declared in the body of a class, like this:
 
@@ -943,7 +943,7 @@ But VS Code doesn’t like this, as indicated by the red squiggly line. If you t
 Program.cs(22,26): error CS0122: 'Employee.FirstName' is inaccessible due to its protection level
 ```
 
-What’s a protection level? By default, properties and methods defined in a class are given the protection level of private, which means that they can only be accessed within the class itself. If we try to access a private property from outside the class, we will get an error. Fortunately, we can control the access level of properties when we declare them, using an **access modifier**. Here’s how we would explicitly set the access level for the FirstName property when we declare it:
+What’s a protection level? By default, properties and methods defined in a class are given the protection level of private, which means that they can only be accessed within the class itself. If we try to access a private property from outside the class, we will get an error. Fortunately, we can control the access level of properties when we declare them, using an **access modifier**. Here’s how we would explicitly set the access level for the `FirstName` property when we declare it:
 
 ```c#
 class Employee
@@ -952,13 +952,13 @@ class Employee
 }
 ```
 
-This is equivalent to the default access level of properties when we don’t explicitly define an access level. Can you guess the name of an access modifier that would allow us to access FirstName from within Program?
+This is equivalent to the default access level of properties when we don’t explicitly define an access level. Can you guess the name of an access modifier that would allow us to access `FirstName` from within Program?
 
 **Hint:** It’s the opposite of private.
 
 If you guessed public, you’re right! While there are several access levels (which you can read about [here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)), we’ll use only public and private in the scope of this tutorial.
 
-Let’s make FirstName accessible from Program by changing the access modifier to public:
+Let’s make `FirstName` accessible from Program by changing the access modifier to public:
 
 ```c#
 class Employee
@@ -967,7 +967,7 @@ class Employee
 }
 ```
 
-When you save `Employee`, you’ll see that the red squiggly line under FirstName in Program has disappeared. If you run the application, you will see that there is no longer an error about protection levels.
+When you save `Employee`, you’ll see that the red squiggly line under `FirstName` in Program has disappeared. If you run the application, you will see that there is no longer an error about protection levels.
 
 Now that we understand the difference between public and private access modifiers, let’s take a moment to consider why they exist. JavasScript doesn’t use access modifiers, and it’s one of the most popular programming languages in the world!  But you may have seen JavaScript developers prepend variables with one or more underscores, like _sum, __currentIndex, or _calculateCatDensity(). This is a convention that simulates private variables, indicating that they are only useful in the context of the current code block. 
 
@@ -1120,13 +1120,13 @@ Employee currentEmployee = new Employee(input, "Smith");
 employees.Add(input);
 ```
 
-Now we can create an `Employee` instance and set its FirstName and LastName properties in one statement. How might we put an employee's entire name, e.g., "John Smith," in the employees list? Here's one way:
+Now we can create an `Employee` instance and set its `FirstName` and `LastName` properties in one statement. How might we put an employee's entire name, e.g., "John Smith," in the employees list? Here's one way:
 
 ```c#
 employees.Add(currentEmployee.FirstName + " " + currentEmployee.LastName);
 ```
 
-This would mean that every time someone uses an `Employee` instance to get an employee's entire name, they would have to handle the formatting. As our application grows and the `Employee` class is used in more situations, a lot of similar code would have to be written in the calling classes. Let's make `Employee` more user-friendly by creating a GetName() method that does that work, returning a nicely-formatted, full name. 
+This would mean that every time someone uses an `Employee` instance to get an employee's entire name, they would have to handle the formatting. As our application grows and the `Employee` class is used in more situations, a lot of similar code would have to be written in the calling classes. Let's make `Employee` more user-friendly by creating a `GetName()` method that does that work, returning a nicely-formatted, full name. 
 
 In `Employee`:
 
@@ -1141,7 +1141,7 @@ public string GetName() {
 }
 ```
 
-You may be getting the hang of type declarations by now, and you shouldn't be too surprised that they are required in method definitions. In addition to the access modifier public, we also define the type of value GetName() will return. Similar to Program's `GetEmployees()` method, this method also returns something, a string. So we must add this keyword to the method declaration.
+You may be getting the hang of type declarations by now, and you shouldn't be too surprised that they are required in method definitions. In addition to the access modifier public, we also define the type of value `GetName()` will return. Similar to Program's `GetEmployees()` method, this method also returns something, a string. So we must add this keyword to the method declaration.
 
 Let's update Program to use this handy method:
 
@@ -1301,13 +1301,13 @@ That's a lot of code, so let's walk through it. (We'll talk about the red squigg
 
 First, we moved the initial `Console.ReadLine()` prompt inside the while loop so that it repeats for each new employee entry.
 
-Then we changed input to firstName, because that's how we've been using it all along. Now that we have other values to capture, it makes sense to be more specific.
+Then we changed input to `firstName`, because that's how we've been using it all along. Now that we have other values to capture, it makes sense to be more specific.
 
 Then we called `Console.ReadLine()` three more times, capturing `lastName`, `ID`, and `photoUrl`. But VS Code doesn't like how we captured ID. Can you figure out why?
 
 **Hint:** `Console.ReadLine()` returns only string types.
 
-It's because `Console.ReadLine()` returns a string, but we want to store it in an int variable type, to be consistent with how `Employee` stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the `Int32.Parse()` method. This is similar to the `parseInt()` function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an int:
+It's because `Console.ReadLine()` returns a string, but we want to store it in an `int` variable type, to be consistent with how `Employee` stores it. Not possible in C#. Fortunately, C# provides several utilities for altering, or "casting" values from one type into another. If we have a string that we want to store as an int, we can use the `Int32.Parse()` method. This is similar to the `parseInt()` function in JavaScript. Let's update that line to turn the `Console.ReadLine()` string into an `int`:
 
 ```c#
 Console.Write("Enter ID: ");
@@ -1779,7 +1779,7 @@ Let’s break down the parts of the code:
 
 ## Set Up System.Drawing
 
-Let’s see what we can find about how to modify or manipulate graphics in C#. Let's begin with a quick internet search for "graphics C#". You’ll probably find as one of your search results the Graphics class in the `System.Drawing` namespace in [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
+Let’s see what we can find about how to modify or manipulate graphics in C#. Let's begin with a quick internet search for "graphics C#". You’ll probably find as one of your search results the `Graphics` class in the `System.Drawing` namespace in [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
 
 Upon further inspection, this choice seems promising. Scrolling on the side menu on the left shows the variety of tools available in the `System.Drawing` namespace, including some that sound applicable for our application like `Graphics`, `Size Converter`, `Font`, Rectangle, or `Image`.
 
@@ -1910,7 +1910,7 @@ Now head over to the `CatWorx.BadgeMaker.csproj` file to see if our package was 
 </Project>
 ```
 
-Now let's run our app from the root directory and see if we were able to accomplish our first pseudocode step of importing the template into our application. By looking into our data directory, we should now see an image file called employeeBadge.png. 
+Now let's run our app from the root directory and see if we were able to accomplish our first pseudocode step of importing the template into our application. By looking into our data directory, we should now see an image file called `employeeBadge.png`. 
 
 Success! We were able to import our badge template as well as create a new image file. While the image itself is not yet very impressive, this progresses us past an essential step. Now it's on to how to modify this image and customize our graphics.
 
@@ -2176,9 +2176,9 @@ Video -  zooming into an image to see pixelation, super mario bros example possi
 
 You will find bitmaps everywhere since pixels are used heavily in digital media such as televisions, monitors, cell phones, video games, and even some famous [paintings](https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884).
 
-Bitmap is very useful allowing the pixel count on the x and y axis of our 2D image to map placement and size precisely. To find out more please dig deeper on your own.
+`Bitmap` is very useful allowing the pixel count on the x and y axis of our 2D image to map placement and size precisely. To find out more please dig deeper on your own.
 
-If you were to try and find the type of our photo or background, you will find they are actually Bitmap objects as well.
+If you were to try and find the type of our photo or background, you will find they are actually `Bitmap` objects as well.
 
 ```c#
 Console.WriteLine(photo.GetType());
@@ -2213,7 +2213,7 @@ Next we will need to convert this `Bitmap` into a `Graphic` object in order to u
 
 The `System.Drawing.Graphics` class acts much like a wrapper around the badge bitmap and allows direct graphical modifications to the badge.
 
-To see how much this class has to offer, please dig deeper into the docs and check out the multitude of methods at your disposal [here](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
+To see how much this class has to offer, take a look at the [official documentation on the System.Drawing.Graphics class](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8). 
 
 As the document states midway down in the Remarks section, there is a suggestion to create a `Graphics` object from an image by using the `FromImage` method.
 
@@ -2234,7 +2234,7 @@ using(WebClient client = new WebClient())
 }
 ```
 
-Now that our Graphics object has been created, we can use the methods in the Graphics class to insert images onto our badge.
+Now that our `Graphics` object has been created, we can use the methods in the `Graphics` class to insert images onto our badge.
 
 Take another look at the [Graphics class docs](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8) and see if you can find a method that will help you accomplish this goal. As you can see, there is a plethora of methods specific to drawing, especially shapes, images, and strings.
 
@@ -2307,7 +2307,7 @@ Success! Woo-hoo!
 
 *remember* Remove the Save method for now since our test succeeded.
 
-We were able to create our image objects, transfer them onto a bitmap using the Graphics class, and then successfully place them with the correct size dimensions. Please take a moment to bask in this accomplishment knowing your app is close to being complete!  
+We were able to create our image objects, transfer them onto a bitmap using the `Graphics` class, and then successfully place them with the correct size dimensions. Please take a moment to bask in this accomplishment knowing your app is close to being complete!  
 
 ## Print Employee Information
 
@@ -2331,10 +2331,9 @@ using(WebClient client = new WebClient())
 {
   ```
 
-
 Please note that `StringAlignment`, `Font`, and `SolidBrush` are all a part of the `System.Drawing` namespace.
 
-Now that that's done, let's take another look at the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8) for the Graphics class and see if we can find a method that will help us accomplish this goal. 
+Now that that's done, let's take another look at the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics?view=netframework-4.8) for the `Graphics` class and see if we can find a method that will help us accomplish this goal. 
 
 As you can see, there is a plethora of drawing methods that allow you to draw shapes, images, and strings.
 
@@ -2380,7 +2379,7 @@ The second argument pertains to the `Font`, which we have already created and in
 
 The third argument will be `Brush`, which will be the font color. We must create a new Brush object which we will initialize with the color white.
 
-The fourth argument is the `Rectangle` object which again allows placement and sizing on the Bitmap badge.
+The fourth argument is the `Rectangle` object which again allows placement and sizing on the `Bitmap` badge.
 
 The fifth argument is the `StringFormat` object which allows for layout orientation and alignment. We will use the format instance object we declared previously for center alignment.
 
@@ -2414,7 +2413,7 @@ Awesome. Now we just have a few more steps to complete to finish our badge.
 
 The next step will be to print our employee's name on the badge. Let's see if you can do this on your own.
 
-**Hint:** Leverage the previous step to fill out most of the arguments in the DrawString method.
+**Hint:** Leverage the previous step to fill out most of the arguments in the `DrawString` method.
 
 **Hint:** Use the coordinate parameter constants given to you at the beginning of this section.
 
@@ -2466,7 +2465,7 @@ Now let's check to see if our employee number printed correctly by running the p
 
 Let's run the application and create a single employee at the terminal prompt to create a badge image.
 
-Excellent. Have you noticed that the file employeeBadge.png is being rewritten every time we run our application? This was okay for testing purposes, but if we need many badges, overwriting our badge image files will not serve our final objective of creating image files for every badge for many employees.
+Excellent. Have you noticed that the file `employeeBadge.png` is being rewritten every time we run our application? This was okay for testing purposes, but if we need many badges, overwriting our badge image files will not serve our final objective of creating image files for every badge for many employees.
 
 How can we implement a change to our code so that we can have individual files for every employee's badge image?
 
@@ -2489,7 +2488,7 @@ string template = "data/{0}_badge.png";
 badge.Save(string.Format(template, employees[i].GetId()));
 ```
 
-Now let's run this application and see if we were able to create our employee badges by creating multiple employees at the command prompt. See if different badges with the corresponding filenames were created successfully in the data folder.
+Now let's run this application and see if we were able to create our employee badges by creating multiple employees at the command prompt. See if different badges with the corresponding filenames were created successfully in the `data` folder.
 
 Excellent—great job! Let's take a moment to review some of the objectives we were able to accomplish in this section.
 
@@ -2501,7 +2500,7 @@ During this lesson, you learned how to do the following:
 
 * Using `System.Drawing`, you were able to research and use many of the classes and methods necessary to manipulate images and text.
 
-* Understand how to convert objects for example a URL to Stream to `Image` allowed you to use different methods to draw the image onto the Bitmap badge using the Graphics wrapper.
+* Understand how to convert objects for example a URL to Stream to `Image` allowed you to use different methods to draw the image onto the `Bitmap` badge using the `Graphics` wrapper.
 
 * How to designate location and size using the `Rectangle` to illustrate the badge with text or images.
 
