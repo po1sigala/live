@@ -134,7 +134,7 @@ Namespaces can be thought of as containers that have members. A member can be an
 
 The first line in the program is using `System`;.
 
-Much like require or import when using modules in Node.js, in C# the using directive lets you use the corresponding namespace `System` without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with `System` and a period. 
+Much like `require` or `import` when using modules in Node.js, in C# the using directive lets you use the corresponding namespace `System` without needing to qualify its use when using one of its members. For example, without this naming shortcut, every time Console is used, it would need to be proceeded with `System` and a period. 
 
 The `System` namespace is part of the .NET framework and is a collection of commonly used methods, data types, and data structures as well as much more. These are the essential building blocks of a C# application.
 
