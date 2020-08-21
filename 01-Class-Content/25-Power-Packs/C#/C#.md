@@ -128,7 +128,7 @@ Namespaces can be thought of as containers that have members. A member can be an
 
 * **Note:** Common conventions normally use a company name for the root namespace to ensure it is unique.
 
-* On the very first line, we are importing—you guessed it—a common namespace called `System`.
+* On the very first line, we are importing a common namespace called `System`.
 
 * The using Directive
 
