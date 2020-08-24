@@ -1,11 +1,16 @@
 # Full Stack Lesson Plans
 
+[How To Approach Each Week](##how-to-approach-each-week)
+
+[Why We Teach What We Teach](##why-we-teach-what-we-teach)
+
+## How to Approach Each Week
+
 Here are some general tips and reminders for what to have done at each point of the week. 
 
 If you have any outstanding questions, check with your SSM.
 
-
-## Beginning of the Week
+### Beginning of the Week
 
 * Review both the instrucor-facing and student-facing Unit Overviews
 
@@ -16,7 +21,7 @@ If you have any outstanding questions, check with your SSM.
 * Ensure homework from previous week(s) is graded
 
 
-## Before Class Starts
+### Before Class Starts
 
 * Do a `git pull` of this repo.
 
@@ -27,7 +32,7 @@ If you have any outstanding questions, check with your SSM.
 * If you are at the beginning of the week (or unit for FT), be sure to include the student-facing Unit Overview.
 
 
-### What NOT to Move into Class Repo
+#### What NOT to Move into Class Repo
 
 **DO NOT** move anything in this folder, `02-Lesson-Plans` into the class repository. This includes, but is not limited to, the following content:
 
@@ -38,9 +43,9 @@ If you have any outstanding questions, check with your SSM.
 * Instructor-facing READMEs (such as this!)
 
 
-## Beginning of Class
+### Beginning of Class
 
-### Instructors
+#### Instructors
 
 * Start the Panopto recording. Copy/paste the link into the BCS session and slack out to students. Set "Primary Screen" to "Built-In Display" in order to record your active screen.
 
@@ -50,7 +55,7 @@ If you have any outstanding questions, check with your SSM.
 
 * Have students do a `git pull` of the class repo to have the class activities ready on their machine.
 
-### TAs
+#### TAs
 
 * Remind students to mark their attendance in BCS. Edit attendance as needed.
 
@@ -59,28 +64,54 @@ If you have any outstanding questions, check with your SSM.
 * Open the time tracker  to help the Instructor keep an eye on time.
 
 
-## During Class
+### During Class
 
-### All
+#### All
 
 * Instructional team members should be circulating the room and helping out during activities!
 
-### TAs
+#### TAs
 
 * Monitor the time tracker file and collaborate with the Instructor to make adjustments to the class schedule if needed.   
 
 * Push `Solved` activities to the class repo after reviewing the solutions together. Students can `git pull`.
 
 
-## End of Week (or Unit)
+### End of Week (or Unit)
 
 * Make the Career Services announcement (found in the Unit Overview)
 
 * Push solutions to any homework assignments that were due.
 
 
+## Why We Teach What We Teach
+
+Instructors and TAs (and students, sometimes) ask why we teach specific technologies or languages in this course. We are constantly assessing what we include in our curriculum, and the decision to remove, keep, or add a technology is based on a number of factors, including feedback from industry partners, changes in the web development landscape, and trends provided in instructor feedback.
+
+We recognize that there are as many opinions in web development as there are developers. Everything that we include in the curriculum is there for a specific reason. Here are some the most common questions about some of the technologies you'll teach in this course:
+
+### Why do we still teach `float`? Why don't we cover modern CSS layout, such as flexbox or CSS Grid?
+
+While we believe that it's important that students at least know what a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
+
+### Why do we still teach jQuery?
+
+Although jQuery is on the decline as a front-end framework as the dominance of React, Vue, and Angular continues, it remains a part of several legacy codebases. It's important that our students have some familiarity with it as they begin their careers in web development. However, we are in the process of isolating jQuery entirely to Unit 05: Third-Party APIs in favor of vanilla JavaScript. Isolating jQuery to one unit will allow us to replace it with a different technology as the web development landscape continues to change.
+
+### Why do we teach Sequelize?
+
+Object-relational mapping (ORM) is an important concept when working with relational datbases in object-oriented programming. While it's unlikely that students will use Sequelize exclusively in their careers as web developers, it serves as a good first step to introduce them to the concept of the ORM. It's important to emphasize to your students that they're more likely to encounter a different ORM (perhaps even a proprietary one), and that the important skills to retain are learning how an ORM works conceptually and how to dive into a new library or framework's documentation, a frequent task for any developer.
+
+### Why do we teach Handlebars?
+
+Almost every major programming language uses or has its own templating engine. Even applications that don’t use a templating engine use the concepts involved in templating. Students are likely to encounter templating in any development role they take on. Although Handlebars is not the most popular or common templating engine in use, it is an easy way to introduce student to the concepts of a templating engine, especially in the context of the Model-View-Controller (MVC) paradigm. It's important that you emphasize the concepts introduced while using Handlebars, especially so that your students are set up to understand the MVC folder structure as they begin to learn React.
+
+### Why do we teach Heroku? Why don't we teach cloud deployment through AWS instead?
+
+Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to push out some of the foundational technologies and concepts necessary to learn web development. However, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses&mdash;async content provided through an LMS&mdash;and AWS will be the focus of at least one of these courses (and potentially more!).
+
 - - -
 
 ### Copyright
 
-Coding Boot Camp (C) 2019. All Rights Reserved.
+Coding Boot Camp (C) 2020. All Rights Reserved.
