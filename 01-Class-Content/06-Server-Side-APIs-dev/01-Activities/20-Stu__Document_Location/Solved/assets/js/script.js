@@ -2,12 +2,10 @@ var badRequestUrl = 'https://api.github.com/unicorns';
 var redirectUrl = './404.html';
 
 fetch(badRequestUrl).then(function (response) {
-  // check the response value is equal to 404
+  // Check the response value is equal to 404.
   if (response.status === 404) {
-    // if the page is not on the 404 page, redirect to it.
-    if (document.location.href !== redirectUrl) {
-      document.location.replace(redirectUrl);
-    }
+    // If the page is not on the 404 page, redirect to it.
+    document.location.replace(redirectUrl);
   } else {
     return response.json();
   }

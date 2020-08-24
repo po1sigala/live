@@ -1,5 +1,5 @@
-requestUrl = 'https://api.github.com/orgs/nodejs/repos';
-badRequestUrl = 'https://api.github.com/orgs/nodejddd/repad';
+var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+var badRequestUrl = 'https://api.github.com/orgs/nodejddd/repad';
 
 fetch(requestUrl)
   .then(function (response) {

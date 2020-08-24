@@ -2,8 +2,8 @@ var requestUrl = 'https://api.github.com/orgs/nodejs/repos?per_page=5';
 
 var responseText = document.getElementById('response-text');
 
-function getApi(URL) {
-  fetch(URL)
+function getApi(requestUrl) {
+  fetch(requestUrl)
     .then(function (response) {
       if (response.status === 200) {
         responseText.textContent = response.status;

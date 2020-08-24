@@ -8,7 +8,7 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * As a developer, I want to see why my script file isn't loading
 
-* Open [index.html](index.html) in the browser.
+* Open [index.html](./Unsolved/index.html) in the browser.
 
 * Using the following questions, try to debug and fix the code:
   
@@ -26,6 +26,6 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * Expand your knowledge of Chrome DevTools but researching its features.
+  * Expand your knowledge of the Chrome DevTools by researching about the other features the Network Activity has to available to use.
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
