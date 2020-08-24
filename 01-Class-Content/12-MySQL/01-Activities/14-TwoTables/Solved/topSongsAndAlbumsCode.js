@@ -145,9 +145,13 @@ const songSearch = () => {
         'SELECT * FROM top5000 WHERE ?',
         { song: answer.song },
         (err, res) => {
-          console.log(
-            `Position: ${res[0].position} || Song: ${res[0].song} || Artist: ${res[0].artist} || Year: ${res[0].year}`
-          );
+          if (res[0]) {
+            console.log(
+              `Position: ${res[0].position} || Song: ${res[0].song} || Artist: ${res[0].artist} || Year: ${res[0].year}`
+            );
+          } else {
+            console.error(`No results for ${answer.song}`);
+          }
           runSearch();
         }
       );
