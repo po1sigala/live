@@ -8,9 +8,9 @@ In this activity, you will work with a partner to use CSS documentation to apply
 
 * Navigate to the [Fundamental text and font styling article](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) in your browser.
 
-* Using the CSS documentation, implement the following:
+* Open [index.html](./Unsolved/index.html) in the browser and examine the text on the page.
 
-  * Open [index.html](./Unsolved/index.html) in the browser and examine the text on the page. 
+* Using the CSS documentation, implement the following:
 
   * We are given a blog with all of the default styles reset.
 
