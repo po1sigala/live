@@ -6,7 +6,11 @@ In this activity, you will work with a partner to apply pseudo-classes to elemen
 
 * Be sure to work with your partner!
 
-* Open [index.html](./Unsolved/index.html) and [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+* Open [index.html](./Unsolved/index.html) in the browser and examine the page.
+
+* Open [style.css](./Unsolved/assets/css/style.css) to examine the CSS code.
+
+* Using HTML and CSS, implement the following features:
 
   * As a user, I want additional resource links at the bottom of the article.
 
