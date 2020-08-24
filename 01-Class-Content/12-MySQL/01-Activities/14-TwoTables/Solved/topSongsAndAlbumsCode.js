@@ -11,8 +11,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  // TODO: Remove this
-  password: 'starwars',
+  password: '',
   database: 'top_songsDB',
 });
 
