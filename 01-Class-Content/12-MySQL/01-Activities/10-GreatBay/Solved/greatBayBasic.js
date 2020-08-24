@@ -97,9 +97,9 @@ const bidAuction = () => {
           type: 'rawlist',
           choices() {
             const choiceArray = [];
-            for (let i = 0; i < results.length; i++) {
-              choiceArray.push(results[i].item_name);
-            }
+            results.forEach(({ item_name }) => {
+              choiceArray.push(item_name);
+            });
             return choiceArray;
           },
           message: 'What auction would you like to place a bid in?',
@@ -113,14 +113,14 @@ const bidAuction = () => {
       .then((answer) => {
         // get the information of the chosen item
         let chosenItem;
-        for (let i = 0; i < results.length; i++) {
-          if (results[i].item_name === answer.choice) {
-            chosenItem = results[i];
+        results.forEach((item) => {
+          if (item.item_name === answer.choice) {
+            chosenItem = item;
           }
-        }
+        });
 
         // determine if bid was high enough
-        if (chosenItem.highest_bid < parseInt(answer.bid, 10)) {
+        if (chosenItem.highest_bid < parseInt(answer.bid)) {
           // bid was high enough, so update db, let the user know, and start over
           connection.query(
             'UPDATE auctions SET ? WHERE ?',

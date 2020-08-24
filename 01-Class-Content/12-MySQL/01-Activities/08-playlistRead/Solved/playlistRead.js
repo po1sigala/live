@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   // Your username
   user: 'root',
 
-  // Your password
+  // Be sure to update with your own MySQL password!
   password: '',
   database: 'playlistDB',
 });
@@ -17,11 +17,9 @@ const connection = mysql.createConnection({
 const queryAllSongs = () => {
   connection.query('SELECT * FROM songs', (err, res) => {
     if (err) throw err;
-    for (let i = 0; i < res.length; i++) {
-      console.log(
-        `${res[i].id} | ${res[i].title} | ${res[i].artist} | ${res[i].genre}`
-      );
-    }
+    res.forEach(({ id, title, artist, genre }) => {
+      console.log(`${id} | ${title} | ${artist} | ${genre}`);
+    });
     console.log('-----------------------------------');
   });
 };
@@ -32,11 +30,9 @@ const queryDanceSongs = () => {
     ['Dance'],
     (err, res) => {
       if (err) throw err;
-      for (let i = 0; i < res.length; i++) {
-        console.log(
-          `${res[i].id} | ${res[i].title} | ${res[i].artist} | ${res[i].genre}`
-        );
-      }
+      res.forEach(({ id, title, artist, genre }) => {
+        console.log(`${id} | ${title} | ${artist} | ${genre}`);
+      });
     }
   );
 
