@@ -34,7 +34,7 @@ img {
   width: 100%;
 }
 
-/* Cards should split into two columns */
+/* Cards should split into two columns at 980px or smaller */
 @media screen and (max-width: 980px) {
   .card {
     width: 50%;
@@ -45,7 +45,7 @@ img {
   }
 }
 
-/* Cards should be stacked on top of each other */
+/* Cards should be stacked on top of each other at 640px or smaller */
 @media screen and (max-width: 640px) {
   .card {
     width: 100%;
