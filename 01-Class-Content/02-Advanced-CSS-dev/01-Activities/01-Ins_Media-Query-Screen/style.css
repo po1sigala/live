@@ -2,77 +2,77 @@
   box-sizing: border-box;
 }
 
-/* Style the body */
 body {
   font-family: Arial;
   margin: 0;
 }
 
-/* Header/logo Title */
-.header {
+header {
   padding: 60px;
   text-align: center;
   background: #92a8d1;
   color: white;
 }
 
-/* Style the top navigation bar */
-.navbar {
+nav {
   display: flex;
   background-color: #034f84;
 }
 
-/* Style the navigation bar links */
-.navbar p {
+nav p {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
 }
 
-/* Column container */
-.row {
+main {
   display: flex;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
+aside {
   flex: 30%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
-/* Main column */
-.main {
+section {
   flex: 70%;
   background-color: white;
   padding: 20px;
 }
 
-/* Fake image, just for this example */
-.fakeimg {
+/* Image Placeholders */
+.sample-img {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
+  height: 200px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #034f84;
+  color: white;
 }
 
 /* Small smartphones - image placeholders change color */
 @media screen and (max-width: 600px) {
-  .fakeimg {
+  .sample-img {
     background-color: #92a8d1;
   }
 }
 
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
-  .navbar {
+  nav {
     background-color: #f7cac9;
   }
 }
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
-  .header {
+  header {
     background: #f7786b;
   }
 }
