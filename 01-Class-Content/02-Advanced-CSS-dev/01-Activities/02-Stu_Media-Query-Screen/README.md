@@ -6,15 +6,19 @@ In this activity, you will work with a partner to implement basic media queries 
 
 * Be sure to work with your partner!
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+* Open [index.html](./Unsolved/index.html) in the browser and make the screen size smaller. Notice what happens to the products on the page.
 
-  * As an online shopper, I want to view products on an online shop on my computer as well as my mobile phone.
+  * As an online shopper, I want to view products clearly on my computer as well as my mobile phone.
+
+* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
 
   * When the screen size is larger than 980 px, the product cards on the screen are side-by-side.
 
-  * When I change the screen size to 980 px, the product cards on the screen should be stacked on top of each other.
+  * When I change the screen size to 980 px or smaller, the product cards on the screen should split into two columns.
 
-  * When I change the screen size to 640 px, the background color changes.
+  * When I change the screen size to 640 px or smaller, the product cards on the screen should be stacked on top of each other.
+
+* Optional: Just for fun, change the background color of the header each time the product cards change layout. 
 
 ## 💡 Hint(s)
 

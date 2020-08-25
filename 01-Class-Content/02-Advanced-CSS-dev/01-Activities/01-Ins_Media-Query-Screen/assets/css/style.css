@@ -27,16 +27,11 @@ nav p {
 
 main {
   display: flex;
-}
-
-aside {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
 section {
-  flex: 70%;
+  flex: 100%;
   background-color: white;
   padding: 20px;
 }

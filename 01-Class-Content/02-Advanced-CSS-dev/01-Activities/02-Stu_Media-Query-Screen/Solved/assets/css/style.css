@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: purple;
+  color: white;
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  float: left;
+  width: 25%;
+}
+
+.card > header {
+  padding: 20px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+/* Cards should split into two columns */
+@media screen and (max-width: 980px) {
+  .card {
+    width: 50%;
+  }
+  /* Change the header color */
+  header {
+    background: green;
+  }
+}
+
+/* Cards should be stacked on top of each other */
+@media screen and (max-width: 640px) {
+  .card {
+    width: 100%;
+  }
+  /* Change the header color */
+  header {
+    background: red;
+  }
+}
