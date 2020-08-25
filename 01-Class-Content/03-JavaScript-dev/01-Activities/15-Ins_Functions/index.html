@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+
+    <script>
+
+        //Functions are reusable blocks of code that perform a specific task
+
+        //This is a function declaration 
+
+        function declareHello() {  //note the function keyword
+            console.log("Hello, I am a function declaration.");
+            console.log("-----------------------------------");
+        }
+
+        //This is a function expression
+
+        var expressHello = function() { //note the function is stored in a variable like any other value
+            console.log("Hello, I am a function expression.");
+            console.log("-----------------------------------");
+        };
+
+        //This is how you call the functions above 
+
+        declareHello(); 
+        expressHello();
+
+        //Function declarations are reusable, you can use them again and again or even in another function
+
+        function manyHellos() {
+
+            declareHello();
+            expressHello();
+            declareHello();
+            expressHello();
+            declareHello();
+            expressHello();
+            declareHello();
+            expressHello();
+        };
+
+        manyHellos();
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+
+    <script>
+
+        var terms = ["comparison operator", "ARRAY", "primitive types", "function expression,"];
+
+        terms.pop();
+
+        terms.unshift("logical operator");
+
+        terms.push("functions");
+
+        terms[2] = terms[2].toLowerCase()
+
+       function logTerms() {
+           for (var i=0; i < terms.length; i++) {
+            console.log(terms[i])
+           }
+       }
+
+       logTerms();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+
+    <script>
+
+        var storyWords = ["Jack", "Jill", "hill", "water"]; //This is an array
+
+        //Example 1
+
+        function tellStoryOne() { //This uses the function keyword to declare the function. 
+
+            console.log(storyWords[0] + " and " + storyWords[1]); //This is the code that executes
+        }
+
+        tellStoryOne();  //This calls the function 
+
+        var tellMoreStoryOne = function() { //This stores a function as a value in a variable 
+
+            //This is the code that executes
+
+            console.log("went up the " + storyWords[2]); // The console logs using array index
+            console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
+        };
+
+        tellMoreStoryOne(); //This calls the function expression. 
+        
+        /*--------------------------------------------------------------------------------------*/
+
+        //Example 2
+      
+        tellStoryTwo(); //Here the function is called before the function declaration.
+
+        //The function declaration works because is it moved to the top of the page before the code is run
+
+        function tellStoryTwo() {
+            console.log(storyWords[0] + " and " + storyWords[1]);
+        }
+
+         //tellMoreStoryTwo();
+
+        //Function expressions are read in order.
+        // Since the function was called before the function expression was created, it returns an error.
+        
+        var tellMoreStoryTwo = function() {
+            console.log("went up the " + storyWords[2]);
+            console.log("to fetch a pail of " + storyWords[3] +".");
+            console.log("------------------------------------------");
+        };
+
+        tellMoreStoryTwo(); //Calling the funetion below where it is created will make it work.  
+
+    </script>
+    
+</body>
+</html>
