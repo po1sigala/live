@@ -30,7 +30,7 @@ In this activity, you will work with a group to build a web page to hold a colle
 
 * Must incorporate a bit of animation using the [CSS transition property.](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
 
-* You can pick what CSS styles you use to style the application, but the app needs to be responsive. Use these screenshots to gain an understanding of how it should look at different screen sizes:
+* You and your group can decide what CSS styles and colors you use to design the application, but the app needs to be a responsive. Use these screenshots to gain an understanding of how it should look at different screen sizes from a layout perspective:
 
   * At size **992px** and above:
 
@@ -43,6 +43,10 @@ In this activity, you will work with a group to build a web page to hold a colle
   * On mobile devices, anything under **768px**:
 
     ![On a mobile device, the application displays one CSS code snippet on a row before moving to the next row](./Images/300-app-mobile.png)
+
+## 💡 Hint
+
+* The HTML `<pre>` element is very literal about spaces and indentation. To gain a better understanding of how to work with it, check out this [article on styling the pre element.](https://css-tricks.com/considerations-styling-pre-tag/)
 
 ## 🏆 Bonus
 
