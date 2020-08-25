@@ -6,7 +6,7 @@ In this activity, you will work with a partner to display content based on the r
 
 * Be sure to work with your partner!
 
-* Open [index.html](./Unsolved/index.html) in your browser and see the response status in your console.
+* Open [index.html](./Unsolved/index.html) in your browser and open the console.
 
 * Open [script.js](./Unsolved/assets/js/script.js) to examine the code and implement the following features:
 

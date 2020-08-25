@@ -20,7 +20,7 @@ In this activity, you will work with a partner to debug some broken code using t
 
 ## 💡 Hint(s)
 
-* The error is in the html file.
+* Double check that the file locations are properly implemented by examining the folder structure. 
 
 ## 🏆 Bonus
 
