@@ -18,13 +18,21 @@ In this activity, you will work with a partner to apply pseudo-classes to elemen
 
   * When I move the mouse over the text "Show Resources," the resource links should display.
 
-* To meet these requirements, the page should look like the following image:
+* To meet these requirements, the page should look like the following image by default:
 
-  * { @TODO insert images }
+  ![The text "Show Resources" appears at the bottom of the article](./Images/resources-closed.png)
+
+* When the cursor is over the "Show Resources" text, the page should look like the following:
+
+  ![Three links to the MDN web docs appear under the text "Show Resources"](./Images/resources-open.png)
 
 * You can use the following resource links for the content:
 
-  * { @TODO insert links to docs }
+  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
 
 ## 💡 Hint(s)
 
