@@ -10,13 +10,11 @@ In this activity, you will work with a partner to debug a broken webpage to bett
 
   * As a user, I expect headings to be a larger font size
 
-  * As a user, I expect lists to have bullet points
-
-  * As a user, I expect spacing in between sections of the page
+  * As a user, I expect spacing in between the lines of text
 
 * To meet these requirements, the page should look like the following image:
 
-  * { @TODO insert image }
+  ![The blog layout has larger sized headers and spacing in between the lines of text](./Images/correct-styles.png)
 
 * Using the following questions, try to debug and fix the code:
   
