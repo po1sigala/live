@@ -140,6 +140,7 @@ main {
     'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
     monospace;
   white-space: pre-wrap;
+  overflow: auto;
   tab-size: 4;
   padding: 1.2rem 1rem;
   color: var(--gin);
@@ -173,7 +174,7 @@ main {
   }
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 992px) {
   header {
     width: 75%;
   }

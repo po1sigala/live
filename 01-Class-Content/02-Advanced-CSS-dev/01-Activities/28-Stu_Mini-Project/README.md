@@ -30,9 +30,19 @@ In this activity, you will work with a group to build a web page to hold a colle
 
 * Must incorporate a bit of animation using the [CSS transition property.](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
 
-* Use this screenshot as an example of how it can look, but use your imagination:
+* You can pick what CSS styles you use to style the application, but the app needs to be responsive. Use these screenshots to gain an understanding of how it should look at different screen sizes:
 
-> @TODO: Provide screenshot to provide an example of how this can look.
+  * At size **992px** and above:
+
+    ![On a desktop, the application displays three CSS code snippets on a row before moving to the next row](./Images/100-app-desktop.png)
+
+  * At size **768px** and above:
+
+    ![On a tablet, the application displays two CSS code snippets on a row before moving to the next row](./Images/200-app-tablet.png)
+
+  * On mobile devices, anything under **768px**:
+
+    ![On a mobile device, the application displays one CSS code snippet on a row before moving to the next row](./Images/300-app-mobile.png)
 
 ## 🏆 Bonus
 
