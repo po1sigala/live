@@ -20,4 +20,3 @@ console.log(galaxy);
 // Replace string method searches a string for a value "T" and replaces first instance of it with "t"
 console.log(galaxy[7].replace("T","t"));
 console.log(galaxy);
-

@@ -1,6 +1,6 @@
 # Native Javascript APIS - Array and string methods
 
-In this activity, you will work with a partner to usee MDN documentation to research array and string methods to solve a coding challenge. 
+In this activity, you will work with a partner to use MDN documentation to research array and string methods to solve a coding challenge. 
 
 ## Instructions
 
@@ -20,7 +20,7 @@ In this activity, you will work with a partner to usee MDN documentation to rese
 
   * When we use an array method to join the arrays `constellations` and  `planets`, a new array `galaxy` should be created. The arrays `constellations` and `planets` should not be altered.
 
-  * When we use a string method to search the `SaTurn` string in the `constellation` array, the string will be searched for `T` and replaced with `t`. The new string `Saturn` will be logged to console. The string `SaTurn` in the `constelllation` array will be unchanged.  
+  * When we use a string method to search the `SaTurn` string in the `constellation` array, the string will be searched for `T` and replaced with `t`. The new string `Saturn` will be logged to the console. The string `SaTurn` in the `constelllation` array will be unchanged.  
 
 ## 💡 Hints
 

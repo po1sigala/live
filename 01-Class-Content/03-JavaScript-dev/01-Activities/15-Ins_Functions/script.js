@@ -1,5 +1,4 @@
 // Functions are reusable blocks of code that perform a specific task
-
 // This is a function declaration 
 function declareHello() { 
   console.log("Hello, I am a function declaration.");
