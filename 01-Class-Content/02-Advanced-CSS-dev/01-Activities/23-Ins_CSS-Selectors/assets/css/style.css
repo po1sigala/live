@@ -67,7 +67,6 @@ article ul {
 /* Use :nth-child() to select every even list item */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
 article ul li:nth-child(even) {
-  list-style-type: disc;
   background-color: #6c7575;
   color: #cadbda;
 }
@@ -77,14 +76,13 @@ article ul li:nth-child(even) {
 article ul + p {
   background-color: #6c7575;
   color: #cadbda;
-  padding: 5px;
 }
 
 /* Use child combinator (>) to select every single <p> element that is a direct descendant (or child) of any <div> element in an <article> element */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator */
 article div > p {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #6c7575;
+  padding: 20px;
+  border: 4px solid #99f7f2;
 }
 
 footer {
