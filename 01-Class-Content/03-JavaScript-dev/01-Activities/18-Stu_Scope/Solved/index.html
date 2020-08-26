@@ -1,77 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iteration</title>
 </head>
+
 <body>
-    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+  
+  <h1 style="text-align:center">Open the Console to See the Magic ✨</h1>
 
-    <script>
+  <script src="script.js"></script>
 
-        //Fix the error in the code. How can you make the variable shout available to all functions? 
-
-        var shout = "Shout"; //Moved variable to the global scope
-
-        function justShout() {
-            console.log(shout + ", " + shout);
-        }
-
-        function shoutItAllOut() { 
-
-            //Removed variable from here
-
-            console.log(shout + " it all out! ");
-            console.log("--------------------------");
-        }
-
-       justShout();
-       shoutItAllOut();
-
-       /*-------------------------------------------------------------------------------*/
-
-        //Scope the variable animal to be local to each function. Do not use a global variable!  
-
-        function sayLions() {
-            var animal = "Lions"; //Don't change this variable! 
-            console.log(animal);
-        }
-    
-        function sayTigers() {
-            var animal = "tigers"; //Only this function has access to this variable
-            console.log("and " + animal + " and "); //This should log "and tigers and "
-        }
-
-        function sayBears() {
-            var animal = "bears"; //Only this function has access to this variable
-            console.log(animal + "! OH  MY!"); //This should log "bears! OH MY!"
-            console.log("--------------------------");
-        }
-
-        sayLions();
-        sayTigers();
-        sayBears();
-
-        /*-------------------------------------------------------------------------------*/
-
-        //This one is trickier! Hint: You only need one variable declaration to make both console logs that include the sing variable work. 
-
-        function singAlong() { //This is the outer function
-            var sing = "Sing"; //Declare the variable one time in the outer function
-            console.log(sing + ",");
-
-        //This is the inner function
-            var singASong = function () { 
-              console.log(sing + " a song.");//The inner function has access to the variable
-              console.log("--------------------------");
-            };
-            singASong(); 
-        }
-
-        singAlong();
-
-    </script>
-    
 </body>
 </html>
