@@ -65,56 +65,47 @@ In this class, we will request data from server-side APIs using Fetch and consum
   
 * Inform students that this unit is all about requesting and consuming data from server-side APIs using Fetch.
   
-* Explain that server-side APIs is a way for companies to exchange data.  This can be thought of as a contract to exchange data.  The rules of the contract is the API's documentation.  As long as you follow the rules, the server will send back the data to your application.
-
-* `You are welcome to use your analogy`. @TODO, rewrite this..
- Explain to the students that you can think of using server-side API like eating dinner at a restaurant.  The menu is the contract.    You send your request that travels through the internet.  In thisinternet is your waiter.  The waiter takes the request to the chef.  The chef is the server, he preps your data as the meal.  
+* Explain that server-side APIs is a way for companies to exchange data. This can be thought of as a contract to exchange data. The rules of the contract is the API's documentation. As long as you follow the rules, the server will send back the data to your application.
 
 * Ask the students the following question: 
 
-    * ☝️ Why do companies offer APIs?
+  * ☝️ Why do companies offer APIs?
 
-    * 🙋 Some companies do so as a way to sell a service.  Financial/Investment companies offer little to no API options unless you pay for access.  Other companies offer APIs to expand their reach.  For example Yelp offers their API to allow businesses to integrate Yelp into their websites.
+  * 🙋 Some companies do so as a way to sell a service.  Financial/Investment companies offer little to no API options unless you pay for access.  Other companies offer APIs to expand their reach.  For example Yelp offers their API to allow businesses to integrate Yelp into their websites.
 
-    * ☝️ Where do we get started learning jQuery?
+  * ☝️ Where do we get started learning jQuery?
 
-    * 🙋 By visiting the documentation!
+  * 🙋 By visiting the documentation!
 
 * Open the [Fetch Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and then scroll down to the first code block, a basic fetch request.
 
-    * Explain to the students that fetch begins with the URL of the server you are looking to receive data from
-    
-    * After the fetch request is completed, with the .then statement use to do something with the response. In this case we are using the built in .json() to convert the response to JSON.
-    
-    * Let them know we will discuss what is JSON a little later in the class.
-    
-    * After converting the response to JSON, we use another .then statement to do something with the data, in this example we console.log the data.
-    
-    * Let them know that this data is typically used to render dynamically generate elements.
-    
-
+  * Explain to the students that fetch begins with the URL of the server you are looking to receive data from
+  
+  * After the fetch request is completed, with the .then statement use to do something with the response. In this case we are using the built in `.json()` to convert the response to JSON.
+  
+  * Let them know we will discuss what is JSON a little later in the class.
+  
+  * After converting the response to JSON, we use another .then statement to do something with the data, in this example we console.log the data.
+  
+  * Let them know that this data is typically used to render dynamically generate elements.
 
 ### 2. Instructor Demo: cURL Demo (5 min) 
 
-* Open `your terminal` to demonstrate the following:
+* Open your terminal to show the following:
   
-    * Even though the primary focus is to use Fetch, there are other methods to communicate with APIs.
-  
-* In your terminal type  `curl https://api.github.com/users` and then press the enter or return key.
-   
-    * ☝️ What happened after I press enter/return
-    
-    * 🙋 Data appeared in the terminal
-  
-    * We are sending API request in our terminal, that goes through the internet.  The server receives that request, and sends back data to the client, which in this case is the terminal.
-    
-    * ☝️ Ask the class what is a good use case for cURL?
-    
-    * 🙋 We can use it to make sure our API URL is correct or working.
-    
-    
-    ``` 
+* Type `curl https://api.github.com/users` and then press the enter or return key.
 
+  * Github returned a list of the last 30 users who made a profile!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happened when I entered the curl command to github
+
+  * 🙋 We asked github for user informatiojn via our terminal!
+
+  * ☝️ What is a good use case for cURL?
+
+  * 🙋 We can use it to make sure our API URL is correct or working.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -488,7 +479,7 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 ### 10. BREAK (8PM - 15 mins)
 
-### 11. Instructor Review: Reverse APIs(10 min) 
+### 11. Instructor Review: Reverse APIs (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -522,8 +513,7 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-
-### 8. Instructor Demo: Different Parse (5 min) 
+### 8. Instructor Demo: Different Parse (5 min)
 
 * Ask the class, So when get these fetch requests, how do we know what data we need to capture in order to place on our web page?
 
@@ -537,17 +527,17 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
   * Close that array and open up the array under GitHub Repo Issues, expand the array, and then the first element in that array.
 
-     * 🔑 Scroll down the console and mention that different endpoints return different data.
+    * 🔑 Scroll down the console and mention that different endpoints return different data.
 
-     * 🔑 Make sure to mention that there is no login property in this response.
+    * 🔑 Make sure to mention that there is no login property in this response.
 
-     * 🔑 This means that everypoint can potentially return different data.
+    * 🔑 This means that everypoint can potentially return different data.
 
-      * 🔑 And through our developer journey, different APIs will have different endpoints and data that they will offer to you to use.
+    * 🔑 And through our developer journey, different APIs will have different endpoints and data that they will offer to you to use.
 
-     * 🔑 This means we need to learn to read through our response and find what pieces of data we wish to extract from our response array.
+    * 🔑 This means we need to learn to read through our response and find what pieces of data we wish to extract from our response array.
 
-     * 🔑 Point to the login property.  If we wanted to grab each users
+    * 🔑 Point to the login property.  If we wanted to grab each users
 
  ### 9. Student Do: Reverse API calls (15 min)  
 
