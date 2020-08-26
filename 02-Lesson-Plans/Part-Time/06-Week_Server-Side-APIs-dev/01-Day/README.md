@@ -435,6 +435,10 @@ In this activity, you will work with a partner to request data from GitHub using
 
     * Explain that sometimes we work in environments where a browser isn't available.
 
+    * Other methods such jQuery AJAX isn't available to use in the browser and this add additional over head for our web apps.
+
+    * If we arent using jQuery for any other purpose than AJAX, would be really feasible to use jQuery for just that?
+
     
 
 * Answer any questions before proceeding to the next activity.
@@ -484,8 +488,71 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 ### 10. BREAK (8PM - 15 mins)
 
+### 11. Instructor Review: Reverse APIs(10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Did anybody notice any differences in the way the data was structured in the responses?
+
+  * 🙋 The XHR request is different.
+
+* Explain to the class that xhr requests is the precedessor to fetch.  That part of the evolution of web APIs it to make certain tasks easier over time.
+
+  * ☝️ Did any of the responses look the same?
+
+  * 🙋 AJAX and fetch.
+
+* Some methods of API requests will return data in the same format.  Familarity helps when dealing with these situations.
+
+* Open @TODO file name in your ide.
+  
+  * ☝️ Ask the class do any of these methods look similar to each other?
+
+  * 🙋 AJAX and fetch look similar in setup.
+
+  * ☝️ So which method looks the most difficult to implement?
+
+  * 🙋 XHR requires more steps and additional setup.
+
+* Emphasize that the goal here is to see different methods to request APIs.
+
+* In their work environment, they would use whatever method that the employer required.
+  
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
 
+### 8. Instructor Demo: Different Parse (5 min) 
+
+* Ask the class, So when get these fetch requests, how do we know what data we need to capture in order to place on our web page?
+
+  * Open up @TODO filename in the browser, open up the Chrome DevTools and go to the console. Expand the array under GitHub Organization Users.
+
+    * 🔑 Point out that this data is an array of objects.  Expand the first element in the array.
+
+    * 🔑 Because this is an array, we can loop over each element and grab values from the object properties in each element.
+
+    * 🔑 Point to the login property.  If we wanted to grab each users login name, we would have to use this property value when looping through the array.
+
+  * Close that array and open up the array under GitHub Repo Issues, expand the array, and then the first element in that array.
+
+     * 🔑 Scroll down the console and mention that different endpoints return different data.
+
+     * 🔑 Make sure to mention that there is no login property in this response.
+
+     * 🔑 This means that everypoint can potentially return different data.
+
+      * 🔑 And through our developer journey, different APIs will have different endpoints and data that they will offer to you to use.
+
+     * 🔑 This means we need to learn to read through our response and find what pieces of data we wish to extract from our response array.
+
+     * 🔑 Point to the login property.  If we wanted to grab each users
+
+ ### 9. Student Do: Reverse API calls (15 min)  
+
+
+* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
 
 ---
