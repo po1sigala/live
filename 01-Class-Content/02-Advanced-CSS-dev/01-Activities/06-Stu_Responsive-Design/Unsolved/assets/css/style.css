@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #92a8d1;
+  color: white;
+}
+
+/* What happens when we set the display property to flex? */
+nav {
+  display: flex;
+  background-color: #034f84;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* What is the flex-wrap property? */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 80px;
+  text-align: center;
+}
+
+/* What does the justify-content property do? */
+.products {
+  flex: 4;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+What is it doing here? 
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card > header {
+  padding: 20px;
+}
+
+.card > p {
+  text-align: center;
+}
+
+.card > img {
+  width: 100%;
+}
+
+/* 
+What does the flex-shrink property specify?
+What is doing here? 
+*/
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  background: #034f84;
+  color: white;
+}
+
+/* 
+What does the flex-direction property define?
+What is it doing here? 
+*/
+@media screen and (max-width: 780px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
