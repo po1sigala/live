@@ -86,6 +86,7 @@ button {
 /* What does this CSS rule do? */
 select {
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   background-image: url("../images/arrow.png");
   background-repeat: no-repeat;
@@ -140,7 +141,9 @@ select {
 
 /* What does this selector mean? */
 .checkbox:checked + label::after {
-  content: " (thanks!)";
+  margin-left: 10px;
+  font-size: 90%;
+  content: "(thanks!)";
 }
 
 footer {
