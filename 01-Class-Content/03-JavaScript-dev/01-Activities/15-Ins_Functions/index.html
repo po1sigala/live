@@ -12,40 +12,52 @@
 
         //Functions are reusable blocks of code that perform a specific task
 
-        //This is a function declaration 
+        // This is a function declaration 
 
         function declareHello() {  //note the function keyword
             console.log("Hello, I am a function declaration.");
             console.log("-----------------------------------");
         }
 
-        //This is a function expression
+        // This is a function expression
 
         var expressHello = function() { //note the function is stored in a variable like any other value
             console.log("Hello, I am a function expression.");
             console.log("-----------------------------------");
         };
 
-        //This is how you call the functions above 
+        // This is how you call the functions above 
 
         declareHello(); 
         expressHello();
 
-        //Function declarations are reusable, you can use them again and again or even in another function
+        // Functions can take parameters. Parameters give the data you want to use a name
 
-        function manyHellos() {
+        function declareHelloAgain(x) {  //note the function keyword
+            console.log("Hello, I am a function declaration.");
+            console.log("My parameter's value is " + x);
+            //Return statements stop the execution of a function
+            return x;
+        }
 
-            declareHello();
-            expressHello();
-            declareHello();
-            expressHello();
-            declareHello();
-            expressHello();
-            declareHello();
-            expressHello();
+        //The value of the parameter is determined by the function argument
+        //Here the parameter x is given the value 7 when the function is declared
+
+        declareHelloAgain(7);
+
+        //Functions often take multiple parameters
+
+        var expressHelloAgain = function(x,y) { //note the function is stored in a variable like any other value
+            //Here the return value stops the execution of the function dnd returns the value of x+y
+            return x + y 
         };
 
-        manyHellos();
+        declareHelloAgain(7);
+
+        //The value returned by a function can be stored in a variable and logged
+        var resultexpressHelloAgain = expressHelloAgain("Hello, ", "World!");
+        console.log(resultexpressHelloAgain);
+
 
     </script>
     
