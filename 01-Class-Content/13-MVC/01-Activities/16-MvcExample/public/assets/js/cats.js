@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   //* UPDATE
   const changeSleepBtns = document.querySelectorAll('.change-sleep');
-  console.log('changeSleepBtn', changeSleepBtns);
 
   // Set up the event listener for the create button
   if (changeSleepBtns) {
