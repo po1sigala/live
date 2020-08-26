@@ -1,12 +1,18 @@
 # Hello Loops
 
-In this activity, you will use a loop to iterate over an array.
+In this activity, you will work with a partner to use a loop to iterate over an array.
 
-## Instructions   
+## Instructions
 
-* Create an array containing the name of five of your classmates. The data should be stored in the variable `students`. Note: You can use the same array from the last exercise.
+* Be sure to work with your partner!
 
-* Now, use a for-loop to console log an introduction for every student's name in the array. The introduction should read "My name is STUDENTNAME." 
+* Open [14-Stu_Iteration/Unsolved/script.js]() to examine the code and implement the following features:
+
+  * As a student, I want to store the name of five of my classmates in a single variable and log a greeting to each of them.
+
+  * When I log the length of the `students` array, then it should be the number `5` and the array should contain five strings with my classmates' names.
+
+   *When I iterate over the array using a for-loop, it should log to the console for each student, "Great to see you STUDENT_NAME." 
 
 ## 💡 Hint
 
@@ -14,4 +20,8 @@ Loops are a great way to write DRY (Don't Repeat Yourself) code.
 
 ## 🏆 Bonus
 
-What’s a while loop?
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+
+  * What’s a while loop?
+
+* Use [Google](https://www.google.com) or another search engine to research the above.

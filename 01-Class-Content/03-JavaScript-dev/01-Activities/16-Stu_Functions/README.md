@@ -1,15 +1,22 @@
 # Function Declarations and Expression
 
-In this activity, you will work with a partner to dissect existing function declarations and function expressions.
+In this activity, you will work with a partner to  dissect existing function declarations and function expressions.
 
 ## Instructions
 
-* In Example 1, find the function declaration. One partner should describe the code, focusing on the key parts of the function and how it is called. The other partner should write ample comments on the code. These comments can be used for review. 
+* Be sure to work with your partner!
 
-* Then, switch roles to discuss function expressions. What makes function expressions different from function declarations? Do both functions in Example 1 produce the same output? Don't forget the comments! 
+* Open [16-Stu_Functions/Unsolved/script.js]() to examine the code and implement the following features:
 
-* Finally, take a look at Example 2. Unlike Example 1, one of the functions is broken. As a team, talk about what is different between the two examples. What do you think may be going on? If time allows, discuss how you might fix the code. 
+  * As a developer, I want to create a reusable block of code that evaluates if two values are strictly equal, equal or not equal.
 
+  * When I provide two values in function arguments, then it should evaluate if the two functions are strictly equal.
+
+  * If the two values are strictly equal, it should log: "They are equal in type and value"
+
+  * Else if the two values are equal but not strictly equal, it should log: "They are equal in value"
+
+  * Else it should log "The values are not equal"
 
 ## 💡 Hint
 
@@ -17,4 +24,8 @@ Look for the keyword `function` to identify function declarations and function e
 
 ## 🏆 Bonus
 
-What is hoisting?
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+
+  * What is hoisting?
+
+* Use [Google](https://www.google.com) or another search engine to research the above.
