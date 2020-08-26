@@ -1,16 +1,23 @@
 # Native Javascript APIS - Array and string methods
 
-In this activity, you will use documentation to research array and string methods to solve a coding challenge 
+In this activity, you will work with a partner to usee MDN documentation to research array and string methods to solve a coding challenge. 
 
 ## Instructions
 
-* In this activity, you will need to do some research on your own.
+* Be sure to work with your partner!
 
-* Start by breaking down the problem into smaller steps and thinking about what questions you need to answer in order to solve the challenge. 
+* Navigate to the [MDN Web Docs: Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) in your browser.
 
-* Then, following directions in the comments, use array methods to add and remove elements from the provided arrays. You will also need to use string methods to format a string stored in a variable and a string stored in an array. Don't forget to check your work regularly with console logs to make sure you are getting the right results!
+* Open [20-Stu_Methods/Unsolved/script.js]() in your IDE and examine the code.
 
-* Finally, when you think you have solved the challenge, call the function `matchLyrics` at the bottom of your code. Are the performers matched up correctly with the lyrics? If not, try to pinpoint the changes needed to get the code to work. 
+* Using the documentation, implement the following
+
+  * We are given an array that contains a strings. 
+
+  * When we remove the last item of the array, the string `function expression` should be removed from the array.
+
+  * When we add `logical operator`to the beginning of the array, the length of the array should increase by 1 
+
 
 ## 💡 Hints
 
