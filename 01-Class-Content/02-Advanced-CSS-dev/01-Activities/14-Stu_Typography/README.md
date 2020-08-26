@@ -10,25 +10,27 @@ In this activity, you will work with a partner to use CSS documentation to apply
 
 * Open [index.html](./Unsolved/index.html) in the browser and examine the text on the page.
 
-* Using the CSS documentation, implement the following:
-
-  * We are given a blog with all of the default styles reset.
-
-  * As a user, I want to be able to read text that is visually appealing on the screen.
+  * We are given a blog with all of the default styles reset. The layout has been rebuilt, but the text still needs more work!
 
 * Open [style.css](./Unsolved/assets/css/style.css) in your IDE and examine the code.
 
-  * When I read regular body text, it should have a font size of 15-25 px.
+* Using the CSS documentation, implement the following:
 
-  * When I read the headings, it should be 180-200% of the body text.
+  * As a user, I want to view my body font as the default standard size of 16px.
 
-  * When I read paragraphs, it should have a line height of 120-145% of the font height.
+  * When I read paragraphs, it should have a line height of 1.5 times the font height.
+
+  * When I view the headings, it should be 150-200% of the font size and have a font family of serif.
+
+  * When I view the page, there should be a margin of 2-5% on the heading, paragraph, and list.
+
+  * When I see lists, it should be indented, have square bullet points and a font family of cursive.
 
 * The result should look like the following image:
 
-  { @TODO insert image }
+![CSS-Typography](./Images/CSS-Typography.png)
 
-* Add a few personal touches to the text! Check out web safe fonts and change the `font-family`. Play around with the `font-style` and `font-weight` to make the text slant and bold.
+* Add a few personal touches to the text! Play around with the `font-style` and `font-weight` to make the text slant and bold.
 
 ## 💡 Hint(s)
 
