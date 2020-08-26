@@ -8,29 +8,29 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
 * Complete activities `01-Ins_Demo_Curl` through `10-Stu_Demo_Dynamic`.
 
-* Take a few moments before class to get familiar with the [jQuery documentation](https://api.jquery.com/), as students will rely heavily on it in class and may need help finding answers.
+* Take a few moments before class to get familiar with the [Fetch documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and [GitHub API](https://docs.github.com/en/rest) as students will rely heavily on it in class and may need help finding answers.
 
-* Throughout the class, reiterate often that the DOM methods we have used previously like `document.getElementById`, `document.createElement`, and `Element.innerHTML` all have corresponding jQuery methods as well as a powerful selector feature, to select elements in the DOM.
+* Throughout the class will be working with Fetch Requests.
   
-* Students can get hung up on learning the correct syntax. Encourage them that the interface gets easier to understand with practice and time.
+* @TODO
 
-* If students continually question why they are learning jQuery, since we have already learned how to manipulate the DOM with vanilla JavaScript, it is due to the prevalence of jQuery on the web due to its long run of popularity. Also, how to learn new libraries and measure their benefits is an important skill to have.
+* @TODO
 
 ## Learning Objectives
 
-We will use Fetch to:
 
-* Create and select DOM elements
+
+* Client-Server Model
   
-* Assign content or styling to a DOM element 
+* Light introduction to cURL
 
-* Append, prepend, and replace elements to the DOM
+* Fetch
 
-* Traverse the DOM through parent, child, and sibling elements
+* Render fetched data
 
-* Attach event listeners and their corresponding event handling functionality 
+* Fetch vs AJAX vs XHR 
 
-* Delegate events for elements that have been dynamically created
+
 
 ## Time Tracker
 
@@ -67,7 +67,8 @@ We will use Fetch to:
   
 * Explain that server-side APIs is a way for companies to exchange data.  This can be thought of as a contract to exchange data.  The rules of the contract is the API's documentation.  As long as you follow the rules, the server will send back the data to your application.
 
-* `You are welcome to use your analogy`.  Explain to the students that you can think of using server-side API like eating dinner at a restaurant.  The menu is the contract.    You send your request that travels through the internet.  In thisinternet is your waiter.  The waiter takes the request to the chef.  The chef is the server, he preps your data as the meal.  
+* `You are welcome to use your analogy`. @TODO, rewrite this..
+ Explain to the students that you can think of using server-side API like eating dinner at a restaurant.  The menu is the contract.    You send your request that travels through the internet.  In thisinternet is your waiter.  The waiter takes the request to the chef.  The chef is the server, he preps your data as the meal.  
 
 * Ask the students the following question: 
 
@@ -79,27 +80,25 @@ We will use Fetch to:
 
     * 🙋 By visiting the documentation!
 
-* Open the [jQuery web site](https://jquery.com/) and then select the "API Documentation" menu link to open the documentation and do the following:
+* Open the [Fetch Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and then scroll down to the first code block, a basic fetch request.
 
-    * Review the menu on the left of different categories of DOM manipulation methods.
+    * Explain to the students that fetch begins with the URL of the server you are looking to receive data from
     
-    * In order to use these methods, we must first use the jQuery selector to choose an element to manipulate.
+    * After the fetch request is completed, with the .then statement use to do something with the response. In this case we are using the built in .json() to convert the response to JSON.
     
-    * In the Selectors category, select Basic to see how jQuery selects elements with attributes like `class` and `id` as well as by the element name, such as `$("div")`.
+    * Let them know we will discuss what is JSON a little later in the class.
     
-    * Once an element has been selected, we can use the dot notation to invoke a jQuery method.
+    * After converting the response to JSON, we use another .then statement to do something with the data, in this example we console.log the data.
     
-    * Go back to the main menu and select the CSS category for the `.css()` method.
+    * Let them know that this data is typically used to render dynamically generate elements.
     
-    * Demonstrate the following code `$("someElement").css("background-color", "grey")`.
-    
-    * Use the examples in the documentation to see how the methods work.
+
 
 ### 2. Instructor Demo: cURL Demo (5 min) 
 
 * Open `your terminal` to demonstrate the following:
   
-    * Even though the primary focus is to use Fetch in the web browser, there are other methods to communicate with APIs.
+    * Even though the primary focus is to use Fetch, there are other methods to communicate with APIs.
   
 * In your terminal type  `curl https://api.github.com/users` and then press the enter or return key.
    
@@ -107,17 +106,15 @@ We will use Fetch to:
     
     * 🙋 Data appeared in the terminal
   
-    * We are sending API request in our terminal, that goes through the internet.  The server receives that request, and sends back data.
+    * We are sending API request in our terminal, that goes through the internet.  The server receives that request, and sends back data to the client, which in this case is the terminal.
     
-    * We can find this link at [https://code.jquery.com/](https://code.jquery.com/). We chose the minified version of jQuery 3.5.1. 
+    * ☝️ Ask the class what is a good use case for cURL?
+    
+    * 🙋 We can use it to make sure our API URL is correct or working.
+    
     
     ``` 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ What are the vanilla JavaScript functions that can achieve similar results?
-
-    * 🙋 `document.createElement`, `document.querySelector`, `Element.textContent`, `Element.setAttribute`, `Element.className`, and `Element.style`.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -181,42 +178,50 @@ In this activity, you will work with a partner using cURL
 
   * ☝️ Ask the class how many caught the error, although a minor one.
 
-  * 🙋 The letter S was missing from the URL, it should be https://api.github.com
+  * 🙋 The letter S was missing from the URL, it should be `https://api.github.com`
+
+* Explain to the class, sometimes our problems with working with APIs is we didn't right the URL properly and not that the API itself isn't working.
 
   * ☝️ Ask the class this is called the root endpoint, what does that mean?
 
   * 🙋 The root endpoint is the starting point of the API, you are requesting from.
 
 * Open up your browser and go to `https://api.github.com`
+
+* Explain to the class these are all endpoints URLs for githubs API.  Point out the location of the root in a few of these.
   
-  * ☝️ Ask the class what is the start
+  * ☝️ Pointing to the root end to the foward slash after .com `https://api.github.com`
 
-  * 🙋 The root endpoint is the starting point of the API, you are requesting from.
+  * 🙋 The endpoint is what starts with the foward slash after the root endpoint.
+
+* Emphasize again that root endpoint is the starting point of API request.
+
+* The endpoint that starts with the foward slash and that allows us to request specific data from the API.
   
-
-
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What is the difference between `$("<div>")` vs `$("div")` in jQuery?
+    * ☝️ What is the difference between root endpoint vs the endpoint
 
-    * 🙋 `$("<div>")` creates a new `<div>` element. `$("div")` will select every `<div>` in the document and return them in an array.
+    * 🙋 The root endpoint is the starting point of the URL, the endpoint is what comes after the .com and allows us to request specific data.
 
     * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 We can refer to supplemental material, read the [jQuery documentation](https://api.jquery.com/), look at examples, and stick around for Office Hours to ask for help.
+    * 🙋 @TODO Documentation/API REFERENCE
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 5. Instructor Demo: Click Events (5 min) 
+### 5. Instructor Demo: Intro Fetch (5 min) 
 
 * Open `03-Ins_Demo-Fetch/index.html` in the browser and show the following:
 
     * 🔑 We click on the button, there is a slight delay, and the data appears.
     
     * 🔑 Earlier in the class we use the term consuming the API, that means that we accept the data response from the server and did something with it.
+
+
     
 * Open `03-Ins_Demo-Fetch/assets/js/script.js` in your IDE and show the following statements:
   
@@ -226,10 +231,11 @@ In this activity, you will work with a partner using cURL
     var requestUrl = 'https://api.github.com/orgs/nodejs/repos'; 
     ```
     
+    * 🔑 One more time point out the root endpoint and that the endpoint starts with `/orgs`.  
     * 🔑 The fetch request is sent and then we take the response and convert it into JSON.
     * 🔑 Let them know that JSON stands for JavaScript Object Notation.
     * 🔑 It is a representation of the data structure, it's not an object or an array.
-    * 🔑 It has key value pairs
+    * 🔑 Because it written like an Object, we are already familar with its structure.
 
     ```js
     fetch(requestUrl)
@@ -238,21 +244,55 @@ In this activity, you will work with a partner using cURL
     })
     ```
 
-    * 🔑 We add the event handler, `alert("Hello World")`, to the callback function.
+    * 🔑 When the button is clicked, this fetch request happens.
+    * 🔑 We get the response back and then convert that response to json.
+
+* Make mention of the event listener at the bottom, go through whatever comments that you feel are 
+
+    ```js
+    .then(function (data) {
+      //Loop over the data to generate a table, each table row will have a link to the repo url
+      for (var i = 0; i < data.length; i++) {
+        // Creating elements, tablerow, tabledata, and anchor
+        var createTableRow = document.createElement('tr');
+        var tableData = document.createElement('td');
+        var link = document.createElement('a');
+
+        // Setting the text of link and the href of the link
+        link.textContent = data[i].html_url;
+        link.href = data[i].html_url;
+
+        // Appending the link to the tabledata and then appending the tabledata to the tablerow
+        // The tablerow then gets appended to the tablebody
+        tableData.appendChild(link);
+        createTableRow.appendChild(tableData);
+        tableBody.appendChild(createTableRow);
+      }
+    });
+    } 
+    fetchButton.addEventListener('click', getApi);
+    ```
+  * 🔑 We use another then statement and the response passthrough as data.
+  * 🔑 We now use that data to dynamically generate elements.
+  * 🔑 This is a common use case for APIs.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What other types of event listeners are there?
+    * ☝️ In what we have seen so far, is there more than one root endpoint?
 
-    * 🙋 Mouse, Key, Browser events, and more
+    * 🙋 No, the root point remains the same.
+
+    * ☝️ But there are many endpoints, how do we find which ones we need to use?
+
+    * 🙋 We read the documentation.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 6. Student Do: Click Events (15 min) 
+### 6. Student Do: Create Fetch (15 min) 
 
-* Direct students to the activity instructions found in `04-Stu_Click-Events/README.md`.
+* Direct students to the activity instructions found in `04-Stu_Create-Fetch/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -269,7 +309,7 @@ In this activity, you will work with a partner to request data from GitHub using
 
   * As a user, when I click the button, I want a list of repo URLs to appear on the page.
 
-* Go to [GitHub API Docs](https://docs.github.com/en/rest/reference/repos-list-repositories-for-a-user) and find the endpoint to list the repositories for your GitHub username
+* Go to [GitHub API Docs](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user) and find the endpoint to list the repositories for your GitHub username
 
 * Use this information to create the correct URL for the fetch request and assign it to the requestUrl variable.
 
@@ -289,91 +329,113 @@ In this activity, you will work with a partner to request data from GitHub using
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 8. Instructor Review: Click Events (10 min) 
+### 8. Instructor Review: Create Fetch (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Go to [GitHub API Docs](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
 
-  * ☝️ How comfortable do you feel with adding click events with jQuery? (Poll via First of Five, Slack, or Zoom)
+* This should take you directly to the endpoint that is being used for this exercise.
+
+  * ☝️ Ask the class how comfortable they were with the concept of an endpoint.
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ `$(document).ready()` 
+    * ✔️ `/users/{username}/repos`  This is the endpoint.
     
-    * ✔️ Attach the click event
+    * ✔️ Let them know that this `{username}` is a placeholder for our GitHub username.
+    
+    * ✔️ We attached to the endpoint to the root endpoint.  `
 
-    * ✔️ Callback functions of event listeners are for event handling
+    * ✔️ We now use the URL combine to make our fetch request.
 
 * Open `04-Stu_Click-Events/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 We add the `ready()` function to ensure the DOM is available.
+    * 🔑 We place our endpoint URL in the requestUrl variable.
     
     ```js
-    $(document).ready()
+  function getApi() {
+    // replace {USERNAME} with your github username
+    var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
     ```
 
-    * 🔑 We attach the click event to the button element.
+    * 🔑 We then pass the requestUrl as an argument.
 
     ```js
-    newButton.click(function() {
-      passwordEl.text(passwordGenerator(15));
-    });
+    fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
     ```
 
-    * 🔑 We place the action in response to the click event, the event handler, in the callback function.
+    * 🔑 The fetch request will go out to API server when the button is clicked.
   
-    * We set the length of the password to 15 by assigning this value to the parameter of the `passwordGenerator`.
+    * 🔑 The fetch request receives a response and we convert it to JSON by using the .json() method.
+
+    ```js
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.textContent = data[i].html_url;
+        repoList.appendChild(listItem);
+      }
+    });
+    ```
+    * 🔑 We take this JSON and use it as data to dynamically generate HTML.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ Do the password functions need to be inside the `ready()` function?
+    * ☝️ @TODO - JSON question or 
 
-    * 🙋 No, since they are just logic and have nothing to do with manipulating the DOM.
+    * 🙋 @TODO
 
-    * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 We can refer to supplemental material, read the [jQuery Docs on mouse events](https://api.jquery.com/category/events/mouse-events/), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 8. Instructor Demo: Form Elements (5 min) 
+### 8. Instructor Demo: Different APIs (5 min) 
 
-* Open `05-Ins_Form-Elements/index.html` in the browser and demonstrate the following:
+* Let the class know that there is more than one way to get data from an API.
 
-    * 🔑 Open the browser console.
+    * 🔑 Go to [jQuery Docs](https://api.jquery.com/jquery.ajax/)
 
-    * 🔑 Fill out the form and click 'Submit'. We see the form input logged in the console.
+    * 🔑 Explain to them that this is how we would request data from APIs using jQuery.
 
-    * 🔑 We used jQuery to create the text input fields dynamically.
+    * 🔑 State that there is more than one way to request data from an API.
 
-* Open `05-Ins_Form-Elements/assets/js/script.js` in your IDE and show the following:
 
-    * We can use `append()` to attach the first name text input field to its corresponding label. 
+* Ask the class this following question, without prompting for an answer.
+
+    * Why use fetch?
+
+    * 🔑 It is the modern way to do things. 
+
+    * 🔑 It only requires one argument, the request URL.
+    
+    * 🔑 It is easier to read.
+
+    * 🔑 No need for a third party library.
+
+    * 🔑 It works in browser.
+
+  
+
+* Open Chome DevTools in the browser and go to the console.
+
+    * Even though we earlier use cURL to initially test out our API, you can directly do so in the browser.
  
-    ```js
-    firstLabelEl.append(firstEl);
-    ```
-    
-    * We can use `submit()` as the click event for the `<form>` element.
- 
-    ```js
-    formEl.submit(function (event) {
-    ```
-    
-    * We use the `event` to prevent the page refresh default action for the `submit` event.
-    
-    ```js
-    event.preventDefault();
-    ```
+    * In the console type or copy this and paste `fetch('https://api.github.com').then(response => response.json())
+    .then(console.log)`.  Press the enter or return key.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+    * Expand the response and show the data.
 
-    * ☝️ Can we use the `submit()` event for other elements beside forms?
+    * Ask the class, why did we use cURL earlier, when we could have started with fetch from the beginning.
 
-    * 🙋 No, `submit` can only be used with forms.
+    * Explain that sometimes we work in environments where a browser isn't available.
+
+    
 
 * Answer any questions before proceeding to the next activity.
 
@@ -381,7 +443,7 @@ In this activity, you will work with a partner to request data from GitHub using
 
 ### 9. Student Do: Reverse API calls (15 min) 
 
-* Direct students to the activity instructions found in `06-Stu_Form-Elements/README.md.`
+* Direct students to the activity instructions found in `06-Stu_Reverse_APIs/README.md.`
 
 * Break your students into pairs that will work together on this activity.
 
@@ -422,359 +484,9 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 ### 10. BREAK (8PM - 15 mins)
 
-### 11. Instructor Review: Form Elements (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with Form Elements in jQuery? (Poll via First of Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
-
-* Use the prompts and talking points below to review the following key (🔑) points:
-
-    * ✔️ `append()` 
-
-    * ✔️ `prepend()` 
-    
-    * ✔️ `submit()`
-
-* Open `06-Stu_Form-Elements/Solved/assets/js/script.js` in your IDE and explain the following: 
-
-    * In the first part, we create the form, with a series of prepending and appending to the form and root elements.
-
-    * 🔑 We attach the `<form>` to the root element using `append()`.
-
-    ```js
-    rootEl.append(formEl);
-    ```
-
-    * 🔑We attach the `<input>` to the `<label>` to create an association using `prepend()`.
-
-    ```js
-    formEl.prepend(labelEl);
-    ```
-
-    ```js
-    labelEl.append(inputEl);
-    ```
-    
-    * 🔑 We attach `submit()` to the `<form>` element.
-
-    ```js
-    formEl.submit(function(event) {
-    ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ What are some differences between the `click` and the `submit` events?
-
-    * 🙋 `submit` is used to post a form so can only be attached to form elements. `click` can be attached to any element. `submit` event is not strictly a mouse event whereas `click` is.
-
-    * ☝️ What can we do if we don't completely understand this?
-
-    * 🙋 We can refer to the supplemental material, read the [jQuery Docs on Forms](https://api.jquery.com/category/forms/), and stick around for Office Hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
-
-### 12. Instructor Demo: DOM Traversal (5 min) 
-
-* Open `07-Ins_Dom-Traversal/index.html` in the browser and demonstrate the following:
-    
-    * 🔑 We use traversal methods to select different elements and change the styling.
-    
-    * 🔑 We can travel down through the children elements or up through the parent elements.
-
-* Open `07-Ins_Dom-Traversal/index.html` in your IDE and show the following:
-    
-    *  We notice the position of the empty `<div>` in the markup.
-
-    ```html
-    <div id="top"></div>
-    ```
-
-* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and demonstrate the following:
-
-    * From the empty `<div>`, we can select elements in the DOM tree. 
-    
-    ```js
-    $("#top").siblings().first().css("border", "blue solid 2px");
-    ```
-
-    * We can chain methods together to combine searches.
-    
-    * We can use `css()` at each search to see which elements were returned.
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ What is the name of the method to traverse down one level to the descendant elements?
-
-    * 🙋 `children()` 
-    
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
-
-### 13. Student Do: DOM Traversal (15 min) 
-
-* Direct students to the activity instructions found in `08-Stu_Parse_JSON/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-```md
-# Parsing JSON
-
-* In this activity, you will work with a partner to use the GitHub documentation to add a parameter to a fetch request and display the proper response in the console.
-
-## Instructions
-
-* Be sure to work with your partner!
-
-* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list*repository*issues).
-
-* Open [script.js](./Unsolved/assets/js/script.js) and examine the code.
-
-* Using the documentation, implement the following:
-
-  * Add a parameter to the end requestUrl that will limit the results to just 5 issues.
-
-  * After doing so, run the page in the browser, it will console.log the results.
-
-  * Examine the results and note the issue url and the login of the user who wrote the issue
-
-  * Loop through the data in the area the script js file and console.log the issue url and the user login.
-
-## 💡 Hint(s)
-
-* Documentation will typically give you a list of parameters you can work with, in most cases these start with a question mark
-
-## 🏆 Bonus
-
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
-
-  * We connect to these API servers through DNS, but they are attached to an ip address, research how this works
-
-* Use [Google](https://www.google.com) or another search engine to answer the above.
-
-```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
-
-### 14. Instructor Review: DOM Traversal (10 min) 
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with traversing the DOM with jQuery? (Poll via First of Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
-
-* Use the prompts and talking points below to review the following key (🔑) points:
-
-    * ✔️ `closest()`, `find()` traverse
-
-    * ✔️ Method chaining
-
-    * ✔️ `first()`, `last()`, `eq()` select
-
-* Open `08-Stu_Dom-Traversal/Solved/assets/js/script.js` in your IDE and explain the following: 
-
-    * 🔑 We use the `find()` method to search all descendant elements with a selector. Then we use the `css()` method to change the styling.
-
-    ```js
-    rootEl.find("li").css("background-color", "white");
-    ```
-    
-    * 🔑 We can chain the methods together to combine searches. We can compartmentalize the search by row to make them more legible.
-
-    ```js
-    var rowThree = rootEl.children().last().children();
-    ```
-    
-    * 🔑 We use `first()`, to select the first element of the set of returned elements. We use the `text("O")` to insert the text "O".
-
-    ```js
-    rowThree.first().text("O");
-    ```
-    
-    * 🔑 We use `closest("div")`, to select all the ancestor elements that is a `<div>`.  
-
-    ```js
-    $(".item-c2").closest("div").children().children().eq(0).text("O");
-    ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ Which of the methods we used begins a search with itself?
-
-    * 🙋 `closest()` 
-
-    * ☝️ What is the utility of traversal methods?
-
-    * 🙋 Allows selection of elements when using the selector is not possible.
-
-    * ☝️ What can we do if we don't completely understand this?
-
-    * 🙋 We can refer to the supplemental material, read the [jQuery Docs on traversing](https://api.jquery.com/category/traversing), and stick around for Office Hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
-
-### 15. Instructor Demo: Event Delegation (5 min) 
-
-* Open `09-Ins_Event-Delegation/index.html` in your browser and demonstrate the following: 
-
-    * 🔑 We can create and render the letter elements when the "Display" button is clicked.
-
-    * 🔑 We can click on the letters to place on the refrigerator.
-
-* Open `09-Ins_Event-Delegation/assets/js/script.js` in your IDE and demonstrate the following:  
-    
-    * 🔑 We must delegate the event listener to the parent element, `<ul>`, because the letters are not available when the `document` loads.
-    
-    ```js
-    listEl.on("click", ".letter-button", function() {
-        var fridgeMagnet = $("<div>");
-        fridgeMagnet.addClass("letter fridge-color");
-        fridgeMagnet.text($(this).attr("data-letter"));
-        displayEl.append(fridgeMagnet);
-    });
-    ```
-
-    * 🔑 We use `on()` to attach the `click()` event so we only listen for the event on the descendants with the class selector `.letter-button`.
-    
-    * 🔑 We retrieve the user's selection using `$(this)` and assign the text content to the letter's `data-letter` attribute. 
-    
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ Is it necessary to use the `on()` method instead of the `click()` method when delegating events?
-
-    * 🙋 Yes, in order to leverage the `on()` method's extra feature that filters the descendant elements.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
-
-### 16. Student Do: Event Delegation (15 min) 
-
-* Direct students to the activity instructions found in `10-Stu_Event-Delegation/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-```md
-# jQuery Event Delegation 
-
-In this activity, you will work with a partner to use jQuery documentation on Event Delegation to handle click events for a dynamically created button.
-
-## Instructions
-
-* Be sure to work with your partner!
-
-* Navigate to the [jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/) in your browser.
-
-* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
-
-* Using the documentation, implement the following:
-
-  * We are given a Shopping List form. We can add grocery items to the shopping list by using the form.
-
-  * When we click the `X` button next to a grocery item, it should be removed from the shopping list. 
-
-  * Follow the instructions provided by the comments in the starter code to use event delegation to target a parent element of the grocery items in order to handle the click event for the dynamically created buttons.
-  
-  * Clear the input field on submission. 
-
-## 💡 Hint(s) 
-
-* In the event handler, create a new list by removing the user's selection.
-  
-* Use the new shopping list to call the `populateList()` in the event handler.
-
-## 🏆 Bonus
-
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
-
-  * What are some alternatives to using jQuery? Discuss the merits with your partner. 
- 
-* You can read [You might not need jQuery](http://youmightnotneedjquery.com/) to see some options to jQuery. 
-```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
-
-### 17. Instructor Review: Event Delegation (15 min)
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with event delegation? (Poll via First of Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
-
-* Use the prompts and talking points below to review the following key (🔑) points:
-
-    * ✔️ Target the parent element
-
-    * ✔️ `on()` 
-    
-    * ✔️ `data()` 
-
-* Open `10-Stu_Event-Delegation/Solved/assets/js/script.js`in your IDE and explain the following: 
-
-    * 🔑 We can attach the `on()` event listener to the parent element, `<ul>` to listen for the click on the shopping list item buttons.
-
-    ```js
-    listEl.on("click", "button", function() { 
-    ```
-
-    * 🔑 In the event handler, we use `$(this)` to select the button clicked by the user. 
-
-    ```js
-    var removeItem = $(this).attr("data-id");
-    ```
-
-    * 🔑 We use `attr("data-id")` to retrieve the value of the attribute, `data-id`, to identify the shopping item.
-     
-    ```js
-    removeItem = parseInt(removeItem);
-    ```
-
-    * We can create a new list by placing all the elements in a new array except the one selected by the user.
-
-    ```js
-    var newList = [];
-    for(var i = 0; i < shoppingList.length; i++) {
-      if(removeItem !== i) {
-        newList.push(shoppingList[i]);
-      }
-    }
-    shoppingList = newList;
-    ```
-
-    * We populate the new list with the `populateList()` function.
-
-    ```js
-    populateList(shoppingList);
-    ```
-
-    * We can clear the user input by setting its value to `""`.
-
-    ```js
-    inputEl.val("");
-    ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-    * ☝️ Are there any drawbacks with event delegating to ancestor elements, for example `<html>`, since this element will always be guaranteed to load?
-
-    * 🙋 Yes, all descendants of `<html>` that exist now or in the future matching the selector will fire the handler. Therefore it's best to select a parent closest to the target element to decrease the chances for errant function calls.
-
-    * ☝️ What can we do if we don't completely understand this?
-
-    * 🙋 We can refer to the supplemental material, read the [jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/), and stick around for Office Hours to ask for help.
-
-### 18. END (9:30PM)
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete [this anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
