@@ -12,9 +12,9 @@ In this activity, you will work with a partner to debug some broken code to impl
 
   * As a user, I don't want to scroll horizontally to see additional products
 
-* To meet these requirements, the page should look like the following image:
+* To meet these requirements, the page should look similar to the following image:
 
-  * { @TODO insert image }
+  ![The products that don't fit on the first line of the grid are moved to the second line](./Images/product-grid.png)
 
 * Using the following questions, try to debug and fix the code:
   

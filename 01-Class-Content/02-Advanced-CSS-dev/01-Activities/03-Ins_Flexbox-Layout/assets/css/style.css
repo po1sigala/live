@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.main-header {
+  /* Turns this element into a flexbox */
+  display: flex;
+  /* Defines how to distribute the empty space between child elements */
+  justify-content: space-between;
+  padding: 60px;
+  background: purple;
+  color: white;
+}
+
+main {
+  display: flex;
+  margin-top: 2%;
+}
+
+main .card {
+  /* Defines how much available space this element should grow to */
+  flex: 1 0 0;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.card header {
+  padding: 20px;
+  background: purple;
+  color: white;
+}
+
+.card.camera {
+  /* This element grows twice as wide as others */
+  flex: 2 0 0;
+}
