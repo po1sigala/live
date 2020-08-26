@@ -26,11 +26,11 @@ header {
   padding: 20px;
 }
 
-.card-text {
+.card > p {
   text-align: center;
 }
 
-img {
+.card > img {
   width: 100%;
 }
 
