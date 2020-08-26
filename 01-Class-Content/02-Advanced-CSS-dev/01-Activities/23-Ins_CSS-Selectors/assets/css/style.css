@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: #6c7575;
+  color: #cadbda;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  margin: 2% 0;
+  font-size: 250%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+nav a {
+  background-color: unset;
+  color: #99f7f2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex: 1 1 0;
+  max-width: 96%;
+  margin: 2% auto;
+}
+
+article {
+  border-bottom: 1px solid #b2c2c1;
+}
+
+article p {
+  margin: 2% 0;
+  font-size: 110%;
+}
+
+article ul {
+  margin-left: 5%;
+  font-size: 110%;
+  list-style: circle;
+}
+
+/* Learn all about these selectors and more at MDN */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+
+/* Use :nth-child() to select every even list item */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+article ul li:nth-child(even) {
+  list-style-type: disc;
+  background-color: #6c7575;
+  color: #cadbda;
+}
+
+/* Use adjacent sibling combinator (+) to select all <p> elements that come immediately after a <ul> element inside of an <article> element */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator */
+article ul + p {
+  background-color: #6c7575;
+  color: #cadbda;
+  padding: 5px;
+}
+
+/* Use child combinator (>) to select every single <p> element that is a direct descendant (or child) of any <div> element in an <article> element */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator */
+article div > p {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #6c7575;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #6c7575;
+  color: #cadbda;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+}
