@@ -12,22 +12,20 @@ In this activity, you will work with a partner to create an array and console lo
 
   * When I log the length of the `students` array holding the class members' names, then it should log the number `5`.
 
-  * When I log a welcome message in the console, the data in the array should be used to welcome each student with the name "Welcome to the class STUDENT_NAME"
+  * When I log a welcome message in the console, the data in the array should be used to welcome each student with the message: "Welcome to the class STUDENT_NAME"
 
-  * When the first student in the array leaves the class, I want to remove the name of that student and replace it with a new student named `Bob`.
+  * When the first student in the array is removed from the class, the student name should be replaced with the name `Bob`.
 
   * If `Bob` has replaced the first student in the array, I want to log "Bob is in class." Else, I want to log "STUDENT_NAME is still in class"
 
 ## 💡 Hints
 
-Take a look back at the comments you made during the conditional statements exercise last class if you need a refresher.
-
-Don't forget that arrays are zero-indexed!
+Don't forget that arrays are zero-indexed! That means the first index is 0, not 1. 
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * Arrays are zero-indexed. What is zero-indexing and why do you think it is used with arrays? 
+  * How could you use the array's length property to access the last element in an array of any length?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
