@@ -22,7 +22,7 @@ In this activity, you will work with a partner to use CSS documentation to enhan
 
 * The result should look like the following image:
 
-{ @TODO Insert screenshot }
+![CSS-box-styling](./CSS-Box-Styling.png)
 
 ## 💡 Hint(s)
 
