@@ -76,8 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-  //* DELETE
-  // Get the button
+  // DELETE
   const deleteCatBtns = document.querySelectorAll('.delete-cat');
 
   // Set up the event listeners for each delete button
