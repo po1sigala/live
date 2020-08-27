@@ -75,7 +75,6 @@ submitChirpBtn.addEventListener('click', (e) => {
       row.appendChild(chirpDate);
 
       chirpArea.prepend(row);
-      console.log(row);
     });
   // .catch((error) => console.error('Error:', error));
 
