@@ -47,7 +47,7 @@ nav a {
 
 .product-details {
   margin-left: 3%;
-  width: 70%;
+  flex: 0 0 60%;
 }
 
 footer {
@@ -70,7 +70,6 @@ footer {
   }
 
   .product-details {
-    width: 100%;
     margin-left: 0;
   }
 }

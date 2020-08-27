@@ -26,7 +26,7 @@ In this activity, you will work with a partner to debug some broken code to prop
 
 ## 💡 Hint(s)
 
-* Sometimes "fixing" one alignment issue can reveal additional problems with the parent elements. Take stock of all flexbox elements on the page!
+* Look up the other possible values for flexbox's alignment and justification properties.
 
 ## 🏆 Bonus
 
