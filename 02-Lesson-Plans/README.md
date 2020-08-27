@@ -92,7 +92,7 @@ We recognize that there are as many opinions in web development as there are dev
 
 ### Why do we still teach `float`? Why don't we cover modern CSS layout, such as flexbox or CSS Grid?
 
-While we believe that it's important that students at least know what a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
+A large part of our teaching philosophy is the idea that we should teach our students the problem before providing them the solution. Sometimes that means that we include topics that are outmoded. Flexbox and CSS Grid emerged to solve specific design challenges. So while we believe that it's important that students know what the historical context of a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
 
 ### Why do we still teach jQuery?
 
