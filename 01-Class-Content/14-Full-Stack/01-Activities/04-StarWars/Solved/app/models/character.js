@@ -2,29 +2,32 @@
 // =============================================================
 
 // Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
+const Sequelize = require('sequelize');
+// Sequelize (lowercase) references our connection to the DB.
+const sequelize = require('../config/connection.js');
 
 // Creates a "Character" model that matches up with DB
-var Character = sequelize.define("character", {
-  // the routeName gets saved as a string
-  routeName: Sequelize.STRING,
-  // the name of the character (a string)
-  name: Sequelize.STRING,
-  // the character's role (a string)
-  role: Sequelize.STRING,
-  // the character's age (a string)
-  age: Sequelize.INTEGER,
-  
-  // and the character's force points (an int)
-  forcePoints: Sequelize.INTEGER
-}, {
-  // disable the modification of tablenames; By default, sequelize will automatically
-  // transform all passed model names (first parameter of define) into plural.
-  // if you don't want that, set the following
-  freezeTableName: true
-});
+const Character = sequelize.define(
+  'character',
+  {
+    // The routeName gets saved as a string
+    routeName: Sequelize.STRING,
+    // The name of the character (a string)
+    name: Sequelize.STRING,
+    // The character's role (a string)
+    role: Sequelize.STRING,
+    // The character's age (a string)
+    age: Sequelize.INTEGER,
+
+    // The character's force points (an int)
+    forcePoints: Sequelize.INTEGER,
+  },
+  {
+    // Disable the modification of tablenames; By default, sequelize will automatically
+    // Transform all passed model names (first parameter of define) into plural. If not set:
+    freezeTableName: true,
+  }
+);
 
 // Syncs with DB
 Character.sync();

@@ -1,36 +1,36 @@
-// Code here handles what happens when a user submits a new character on the form.
-// Effectively it takes the form inputs then sends it to the server to save in the DB.
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
 
-// when user clicks add-btn
-$("#add-btn").on("click", function(event) {
-  event.preventDefault();
-
-  // make a newCharacter obj
-  var newCharacter = {
-    // name from name input
-    name: $("#name").val().trim(),
-    // role from role input
-    role: $("#role").val().trim(),
-    // age from age input
-    age: $("#age").val().trim(),
-    // points from force-points input
-    forcePoints: $("#force-points").val().trim()
+  // All data comes from the input fields
+  const newCharacter = {
+    name: document.getElementById('name').value.trim(),
+    role: document.getElementById('role').value.trim(),
+    age: document.getElementById('age').value.trim(),
+    forcePoints: document.getElementById('force-points').value.trim(),
   };
 
-  // send an AJAX POST-request with jQuery
-  $.post("/api/new", newCharacter)
-    // on success, run this callback
-    .then(function(data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding character...");
-    });
+  // Send POST request using the fetch API
+  fetch('/api/new', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newCharacter),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success in adding character:', data);
+      alert('Adding character!');
+    })
+    // .catch((error) => {
+    //   console.error('Error:', error);
+    //   alert(error)
+    // });
 
-  // empty each input box by replacing the value with an empty string
-  $("#name").val("");
-  $("#role").val("");
-  $("#age").val("");
-  $("#force-points").val("");
-
+  // Dump the content of the input boxes
+  document.getElementById('name').value = '';
+  document.getElementById('role').value = '';
+  document.getElementById('age').value = '';
+  document.getElementById('force-points').value = '';
 });
