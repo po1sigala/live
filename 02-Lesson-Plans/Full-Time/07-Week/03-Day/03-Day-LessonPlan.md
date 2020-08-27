@@ -114,7 +114,7 @@ Today we will be introducing students to the basics of Object-Relational Mapping
 
   * **Instructions**
 
-    * Add a delete button into the `index.handlebars` file next to each cat.
+    * Add a delete button next to each cat in the `cat-block.handlebars` file.
 
     * Add on to the following:
 
