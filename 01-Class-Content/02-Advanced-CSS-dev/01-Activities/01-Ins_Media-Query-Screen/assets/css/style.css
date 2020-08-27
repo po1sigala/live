@@ -10,17 +10,16 @@ body {
 header {
   padding: 60px;
   text-align: center;
-  background: #92a8d1;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 nav {
   display: flex;
-  background-color: #034f84;
+  background-color: #d8a47f;
 }
 
 nav p {
-  color: white;
   padding: 14px 20px;
   text-decoration: none;
 }
@@ -31,49 +30,50 @@ main {
 
 aside {
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #b9c6ae;
   padding: 20px;
   flex-wrap: wrap;
 }
 
 section {
   flex: 70%;
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
 }
 
 /* Image Placeholders */
 .sample-img {
-  background-color: #aaa;
+  background-color: #fff;
   width: 100%;
   padding: 20px;
   height: 200px;
+  border: 1px solid black;
 }
 
 footer {
   padding: 20px;
   text-align: center;
-  background: #034f84;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 /* Small smartphones - image placeholders change color */
 @media screen and (max-width: 600px) {
   .sample-img {
-    background-color: #92a8d1;
+    background-color: #8ac4ff;
   }
 }
 
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
   nav {
-    background-color: #f7cac9;
+    background-color: #bb8588;
   }
 }
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
   header {
-    background: #f7786b;
+    background: #772014;
   }
 }
