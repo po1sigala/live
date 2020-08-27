@@ -99,6 +99,8 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
   * GitHub returned a list of the last 30 users who made a profile!
 
+*  Ask the class the following questions (:point_up:) and call on students for the answers (:raising_hand:) (edited) 
+
     * ☝️ What happened when I entered the curl command to GitHub.
 
     * 🙋 We asked GitHub for user informatiojn via our terminal!
@@ -163,7 +165,7 @@ In this activity, you will work with a partner using cURL
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 4. Instructor Review: { ACTIVITY NAME } (10 mins) 
+### 4. Instructor Review: cURL Debug (10 mins) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
