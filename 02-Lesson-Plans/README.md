@@ -104,7 +104,13 @@ Object-relational mapping (ORM) is an important concept when working with relati
 
 ### Why do we teach Handlebars?
 
-Almost every major programming language uses or has its own templating engine. Even applications that don’t use a templating engine use the concepts involved in templating. Students are likely to encounter templating in any development role they take on. Although Handlebars is not the most popular or common templating engine in use, it is an easy way to introduce student to the concepts of a templating engine, especially in the context of the Model-View-Controller (MVC) paradigm. It's important that you emphasize the concepts introduced while using Handlebars, especially so that your students are set up to understand the MVC folder structure as they begin to learn React.
+Almost every major programming language uses or has its own templating engine. Even applications that don’t use a templating engine use the concepts involved in templating. Students are likely to encounter templating in any development role they take on. Although Handlebars is not the most popular or common templating engine in use, it is an easy way to introduce students to the concepts of a templating engine, especially in the context of the Model-View-Controller (MVC) paradigm.
+
+Template engines are common in Java and Python frameworks, such as Django, Flask, and Thymeleaf, and learning template engines will support students when making the transition to those languages.
+
+It's also important that you emphasize the concepts introduced while using Handlebars so that your students are set up to understand the MVC folder structure as they begin to learn React. Templating engines serve as an important step towards learning React, because the abstractions of a framework are challenging for beginners to understand.
+
+Finally, Handlebars is currently used in only two units and one project. We're in the process of isolating it to a single unit and a project, which will make it easier to remove or replace when that time comes in the future.
 
 ### Why do we teach Heroku? Why don't we teach cloud deployment through AWS instead?
 
