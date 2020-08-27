@@ -36,7 +36,9 @@ In this activity, you will work with a partner to apply pseudo-classes to elemen
 
 ## 💡 Hint(s)
 
-* Look up examples of how other developers used pseudo-classes in creative ways.
+* You will need to use the CSS `display` property.
+
+* Look up examples of how other developers used the `:hover` pseudo-class in creative ways.
 
 ## 🏆 Bonus
 
