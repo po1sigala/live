@@ -41,7 +41,7 @@ function sayWhat() {
 var sayWhatAgain = function () {
   var shadow = "Goodbye";
   console.log(shadow);   
-}
+};
 
 sayGoodbye();
 sayWhat();
