@@ -1,0 +1,100 @@
+/* Set the font size and line height */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: #6c7575;
+  color: #99f7f2;
+}
+
+/* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+h1 {
+}
+
+/* Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
+h2 {
+}
+
+/* Change header size to be slightly smaller than h2 and assign font family to serif */
+h3 {
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+nav a {
+  color: #99f7f2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex: 1 1 0;
+  max-width: 1200px;
+  margin: 2% auto;
+}
+
+section {
+  flex: 1 1 0;
+  padding-right: 5%;
+}
+
+article {
+  border-bottom: 1px solid #b2c2c1;
+}
+
+/* Add a margin to the top and bottom of the paragraphs */
+article p {
+}
+
+/* Add a margin to indent the list, give it square bullet points, and assign font family to cursive */
+article ul {
+}
+
+aside {
+  width: 25%;
+}
+
+input,
+button {
+  width: 100%;
+  margin: 2% 0;
+  padding: 1%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #6c7575;
+  color: #cadbda;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    padding-right: 0;
+  }
+
+  aside {
+    width: 100%;
+    text-align: center;
+  }
+}
