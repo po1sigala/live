@@ -15,9 +15,9 @@ justShout();
 shoutItAllOut();
  
 function sayLions() {
-var animal = "Lions"; 
-console.log(animal);
-return;
+  var animal = "Lions"; 
+  console.log(animal);
+  return;
 }
  
 // Tigers is declared locally so it only available to the sayTigers function 
