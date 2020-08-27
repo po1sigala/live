@@ -57,7 +57,6 @@ app.get('/', (req, res) => {
 });
 
 // Start our server so that it can begin listening to client requests.
-// Log (server-side) when our server has started
 app.listen(PORT, () =>
   console.log(`Server listening on: http://localhost:${PORT}`)
 );

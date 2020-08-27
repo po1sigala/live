@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.info('DOM loaded');
   }
 
-  //* UPDATE
+  // UPDATE
   const changeSleepBtns = document.querySelectorAll('.change-sleep');
 
   // Set up the event listener for the create button
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-  //* CREATE
+  // CREATE
   const createCatBtn = document.getElementById('create-form');
 
   if (createCatBtn) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           'Content-Type': 'application/json',
         },
 
-        // make sure to serialize the JSON body
+        // Make sure to serialize the JSON body
         body: JSON.stringify(newCat),
       }).then(() => {
         // Empty the form

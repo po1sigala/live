@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.info('DOM loaded');
   }
 
-  //* UPDATE
+  // UPDATE
   const changeSleepBtns = document.querySelectorAll('.change-sleep');
 
   // Set up the event listener for the create button
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-  //* CREATE
+  // CREATE
   const createCatBtn = document.getElementById('create-form');
 
   if (createCatBtn) {
