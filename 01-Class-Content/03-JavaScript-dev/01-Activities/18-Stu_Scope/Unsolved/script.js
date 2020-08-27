@@ -1,6 +1,6 @@
 function justShout() {
-   console.log(shout + ", " + shout);
-   return;
+  console.log(shout + ", " + shout);
+  return;
 }
 
 function shoutItAllOut() {

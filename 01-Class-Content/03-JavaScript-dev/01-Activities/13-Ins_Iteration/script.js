@@ -1,5 +1,4 @@
 // A for-loop allows you to execute code more than once
-
 // A for loop that starts with 0, runs while i is less an 5 and increments by 1
 for (var i = 0; i < 5; i++) {
     //This is the block of code that will run each time
