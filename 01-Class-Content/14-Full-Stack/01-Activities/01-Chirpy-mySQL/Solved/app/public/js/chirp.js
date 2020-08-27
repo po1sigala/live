@@ -55,8 +55,7 @@ submitChirpBtn.addEventListener('click', (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Successful POST new chirp!:', data);
-
+      console.log('Success in posting chirp!', data);
       const row = document.createElement('div');
       const chirpArea = document.getElementById('chirp-area');
       row.classList.add('chirp');
@@ -65,16 +64,20 @@ submitChirpBtn.addEventListener('click', (e) => {
       const chirpBody = document.createElement('p');
       const chirpDate = document.createElement('p');
 
-      chirpAuthor.textContent = `${author} chirped ..`;
-      chirpBody.textContent = `${body}`;
-      chirpDate.textContent = `At ${moment(created_at).format(
+      chirpAuthor.textContent = `${data.author} chirped: `;
+      chirpBody.textContent = `${data.body}`;
+      chirpDate.textContent = `At ${moment(data.created_at).format(
         'h:mma on dddd'
       )}`;
 
+      row.appendChild(chirpAuthor);
+      row.appendChild(chirpBody);
+      row.appendChild(chirpDate);
+
       chirpArea.prepend(row);
       console.log(row);
-    })
-    // .catch((error) => console.error('Error:', error));
+    });
+  // .catch((error) => console.error('Error:', error));
 
   // Empty the input box
   document.getElementById('author').value = '';
