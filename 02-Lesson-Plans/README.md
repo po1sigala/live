@@ -1,40 +1,44 @@
-# Full Stack Lesson Plans
+# Full-Stack Lesson Plans
 
-[How To Approach Each Week](##how-to-approach-each-week)
+Welcome, instructors and TAs! This directory contains the lessons plans and grading rubrics for the Full-Stack Boot Camp. 
 
-[Why We Teach What We Teach](##why-we-teach-what-we-teach)
+In addition, this README contains guidelines for [how to approach each class week](##how-to-approach-each-week), as well as background information about [why we teach what we teach](##why-we-teach-what-we-teach). We hope this information supports you as you take on the challenge of changing students' lives! 
+
 
 ## How to Approach Each Week
 
-Here are some general tips and reminders for what to have done at each point of the week. 
+Here are some general tips and reminders about things you should do at different times during the week: at the begining of the week, before class starts, at the beginning of class, during class, and at the end of class. 
 
-If you have any outstanding questions, check with your SSM.
+If you have any questions, please check with your SSM.
 
 ### Beginning of the Week
 
-* Review both the instrucor-facing and student-facing Unit Overviews
+At the beginning of the class week, complete the following tasks to prepare for class:  
 
-* Review the homework assignment(s) for this week
+* Review both the instrucor-facing and student-facing Unit Overviews.
 
-* Review the lesson plans for the week
+* Review the homework assignment(s) for the week.
 
-* Ensure homework from previous week(s) is graded
+* Review the lesson plans for the week.
+
+* Ensure that the homework from previous week(s) has been graded.
 
 
 ### Before Class Starts
 
+Before class starts, take the following steps to make sure you're prepared to teach: 
+
 * Do a `git pull` of this repo.
 
-* Refer to the Instructor Notes in the lesson plan and/or the associated time tracker for the range of activities to be covered in class.
+* Refer to the Instructor Notes in the lesson plan and/or the associated time tracker to understand the range of activities that you'll cover in class.
 
 * Push any `Unsolved` activities to the class repo for today's lesson. **DO NOT** push `Solved` folders until the end of class. 
 
 * If you are at the beginning of the week (or unit for FT), be sure to include the student-facing Unit Overview.
 
+#### What NOT to Move Into the Class Repo
 
-#### What NOT to Move into Class Repo
-
-**DO NOT** move anything in this folder, `02-Lesson-Plans` into the class repository. This includes, but is not limited to, the following content:
+**DO NOT** move anything in this folder, `02-Lesson-Plans`, into the class repository. This includes, but is not limited to, the following content:
 
 * Grading Rubrics
 
@@ -42,8 +46,9 @@ If you have any outstanding questions, check with your SSM.
 
 * Instructor-facing READMEs (such as this!)
 
-
 ### Beginning of Class
+
+This section contains steps that instructors and TAs should take at the beginning of every class. 
 
 #### Instructors
 
@@ -61,38 +66,37 @@ If you have any outstanding questions, check with your SSM.
 
 * Open the day's `LessonPlan.md` file and follow along.
 
-* Open the time tracker  to help the Instructor keep an eye on time.
-
+* Open the time tracker to help the instructor keep an eye on time.
 
 ### During Class
 
-#### All
+This section contains tasks tips and tasks for instructors and TAs to follow during class. 
 
-* Instructional team members should be circulating the room and helping out during activities!
+#### Instructors and TAs
+
+* All instructional team members should be circulating the room and helping out during activities!
 
 #### TAs
 
-* Monitor the time tracker file and collaborate with the Instructor to make adjustments to the class schedule if needed.   
+* Monitor the time tracker file and collaborate with the instructor to make adjustments to the class schedule if needed.   
 
 * Push `Solved` activities to the class repo after reviewing the solutions together. Students can `git pull`.
 
-
 ### End of Week (or Unit)
 
-* Make the Career Services announcement (found in the Unit Overview)
+* Make the Career Services announcement (found in the Unit Overview).
 
 * Push solutions to any homework assignments that were due.
 
-
 ## Why We Teach What We Teach
 
-Instructors and TAs (and students, sometimes) ask why we teach specific technologies or languages in this course. We are constantly assessing what we include in our curriculum, and the decision to remove, keep, or add a technology is based on a number of factors, including feedback from industry partners, changes in the web development landscape, and trends provided in instructor feedback.
+Instructors and TAs (and students, sometimes) ask why we teach certain technologies or languages in this course. We are constantly assessing what we include in our curriculum. The decision to remove, keep, or add a technology is based on a number of factors, including feedback from industry partners, changes in the web development landscape, and trends in instructor feedback.
 
-We recognize that there are as many opinions in web development as there are developers. Everything that we include in the curriculum is there for a specific reason. Here are some the most common questions about some of the technologies you'll teach in this course:
+There are as many opinions about web development as there are developers. Everything in the curriculum is there for a specific reason. Here are some the most common questions about some of the technologies you'll teach in this course:
 
 ### Why do we still teach `float`? Why don't we cover modern CSS layout, such as flexbox or CSS Grid?
 
-A large part of our teaching philosophy is the idea that we should teach our students the problem before providing them the solution. Sometimes that means that we include topics that are outmoded. Flexbox and CSS Grid emerged to solve specific design challenges. So while we believe that it's important that students know what the historical context of a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
+A large part of our teaching philosophy is the idea that we should teach our students the problem before providing the solution. Sometimes that means that we include topics that are outmoded. Flexbox and CSS Grid emerged to solve specific design challenges. So while we believe that it's important that students know what the historical context of a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
 
 ### Why do we still teach jQuery?
 
@@ -110,14 +114,10 @@ Template engines are common in Java and Python frameworks, such as Django, Flask
 
 It's also important that you emphasize the concepts introduced while using Handlebars so that your students are set up to understand the MVC folder structure as they begin to learn React. Templating engines serve as an important step towards learning React, because the abstractions of a framework are challenging for beginners to understand.
 
-Finally, Handlebars is currently used in only two units and one project. We're in the process of isolating it to a single unit and a project, which will make it easier to remove or replace when that time comes in the future.
+Finally, Handlebars is currently used in only two units and one project. We're in the process of isolating it to a single unit and project, which will make it easier to remove or replace when that time comes in the future.
 
 ### Why do we teach Heroku? Why don't we teach cloud deployment through AWS instead?
 
-Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to push out some of the foundational technologies and concepts necessary to learn web development. However, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses&mdash;async content provided through an LMS&mdash;and AWS will be the focus of at least one of these courses (and potentially more!).
+Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. Nonetheless, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses, and AWS will be the focus of at least one of these courses (and potentially more!).
 
-- - -
-
-### Copyright
-
-Coding Boot Camp (C) 2020. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
