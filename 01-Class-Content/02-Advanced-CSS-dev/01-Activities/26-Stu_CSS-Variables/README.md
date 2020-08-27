@@ -12,9 +12,11 @@ In this activity, you will work with a partner to update colors and border radiu
 
   * As a developer, I want to be able to update the text color and border radius of the cards without having to change each one individually.
 
-  * How can we declare a custom property on the `:root` pseudo-class in order change the text color to white?
+  * How can we declare custom properties on the `:root` pseudo-class?
 
-  * How can we change the border radius of the cards to be circles?
+  * How can we use those custom property values instead of using values that are repeated throughout the style sheet such as `#fff`?
+
+* Try and identify any colors or border radius values that are repeated in the style sheet and use CSS custom properties to maintain them in one location.
 
 ## 💡 Hint(s)
 
