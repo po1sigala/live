@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           'Content-Type': 'application/json',
         },
 
-        // make sure to serialize the JSON body
+        // Make sure to serialize the JSON body
         body: JSON.stringify(updatedQuote),
       }).then((response) => {
         // Check that the response is all good
