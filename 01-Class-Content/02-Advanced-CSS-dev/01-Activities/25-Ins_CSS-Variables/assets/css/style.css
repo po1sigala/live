@@ -1,7 +1,7 @@
 :root {
-  --dark: #6c7575;
-  --light: #cadbda;
-  --navlink-color: #99f7f2;
+  --dark: #13293d;
+  --light: #fff;
+  --navlink-color: #b9c6ae;
 }
 
 body {
@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
+  color: var(--light);
 }
 
 main {

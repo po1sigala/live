@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 h1 {
@@ -29,8 +29,7 @@ nav ul {
 }
 
 nav a {
-  background-color: unset;
-  color: #99f7f2;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -47,7 +46,7 @@ main {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #13293d;
 }
 
 article p {
@@ -61,36 +60,40 @@ article ul {
   list-style: circle;
 }
 
+article li {
+  margin: 5px 0;
+}
+
 /* Learn all about these selectors and more at MDN */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
 
 /* Use :nth-child() to select every even list item */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
 article ul li:nth-child(even) {
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #b9c6ae;
+  color: #13293d;
 }
 
 /* Use adjacent sibling combinator (+) to select all <p> elements that come immediately after a <ul> element inside of an <article> element */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator */
 article ul + p {
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 /* Use child combinator (>) to select every single <p> element that is a direct descendant (or child) of any <div> element in an <article> element */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator */
 article div > p {
   padding: 20px;
-  border: 4px solid #99f7f2;
+  border: 4px solid #b9c6ae;
 }
 
 footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {

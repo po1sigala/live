@@ -20,7 +20,7 @@ In this activity, you will work with a partner to create a media query for print
 
 ## 💡 Hint(s)
 
-* To print the URL on the page, how can we use the pseudo-element `:after` to take the value of the `href` attribute and display it in brackets after the link?
+* To print the URL on the page, how can we use the pseudo-element `::after` to take the value of the `href` attribute and display it in brackets after the link?
 
 ## 🏆 Bonus
 

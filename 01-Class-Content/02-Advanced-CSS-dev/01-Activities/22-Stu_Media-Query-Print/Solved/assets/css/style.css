@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 h1 {
@@ -29,13 +29,13 @@ nav ul {
 }
 
 nav a {
-  color: #99f7f2;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: white;
+  color: #fff;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #d8a47f;
 }
 
 article p {
@@ -77,9 +77,10 @@ label {
 }
 
 button {
-  color: white;
-  background-color: #497573;
+  color: #fff;
+  background-color: #13293d;
   border: none;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -102,13 +103,13 @@ select,
 button {
   padding: 1%;
   outline: none;
-  border: 1px solid #497573;
+  border: 1px solid #13293d;
 }
 
 .text-input:hover,
 select:hover,
 button:hover {
-  box-shadow: 0 0 5px #6c7575;
+  box-shadow: 0 0 5px #13293d;
 }
 
 .text-input:focus {
@@ -134,7 +135,7 @@ button:hover {
 }
 
 .checkbox:checked + label {
-  color: #999999;
+  color: #13293d;
   font-style: italic;
 }
 
@@ -146,8 +147,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -161,7 +162,7 @@ footer {
   form {
     display: none;
   }
-  p > a:after {
+  p a::after {
     content: '(' attr(href) ')';
   }
 }

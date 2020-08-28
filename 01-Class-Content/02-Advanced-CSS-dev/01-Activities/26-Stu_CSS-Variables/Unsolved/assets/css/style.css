@@ -1,5 +1,9 @@
 body {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
 }
 
 h1 {
@@ -15,17 +19,17 @@ h2 {
 header {
   padding: 40px;
   text-align: center;
-  background: #92a8d1;
+  background: #13293d;
   color: #fff;
 }
 
 nav {
   display: flex;
-  background-color: #034f84;
+  background-color: #d8a47f;
 }
 
 nav a {
-  color: #fff;
+  color: #13293d;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -33,12 +37,21 @@ nav a {
 
 nav a:hover {
   background-color: #fff;
-  color: #034f84;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
 }
 
 .products {
@@ -74,16 +87,7 @@ main {
   width: 100%;
 }
 
-footer {
-  width: 100%;
-  bottom: 0;
-  padding: 20px;
-  text-align: center;
-  background: #034f84;
-  color: #fff;
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   main,
   nav {
     flex-direction: column;
