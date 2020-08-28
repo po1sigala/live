@@ -27,7 +27,7 @@ In this activity, you will work with a partner to use CSS documentation to incor
     * When I read the blog, I want to be able to easily identify which word is the keyword with the tooltip by underlining the keyword and changing the cursor into a hand when I hover over it.
     
     * When the tooltip appears above the keyword, it should have the same background color and text color as the header and navbar items. Give the tooltip a rectangular shape and slightly smaller font size than the rest of the page.
-          
+
 * When in doubt, consult the CSS documentation. And like all things CSS, play around with the properties to position the tooltip where you want it.
 
 ## 💡 Hint(s)

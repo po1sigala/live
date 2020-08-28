@@ -31,7 +31,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9C6ae;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -78,11 +78,12 @@ article ul {
 }
 
 .three {
-  font-family: cursive;
+  font-family: monospace;
   font-weight: 100;
   font-style: normal;
 }
 
+/* Using DevTools, change the following properties to demonstrate the differences */
 .four {
   /* Change font family: serif, sans-serif, monospace, cursive */
   font-family: serif;
@@ -120,7 +121,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header, main {
+  header,
+  main {
     flex-direction: column;
   }
 
