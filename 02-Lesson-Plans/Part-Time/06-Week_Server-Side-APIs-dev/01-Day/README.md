@@ -35,7 +35,6 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
 
 ## Time Tracker
-@TODO ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
 | Start  | #   | Activity Name                       | Duration |
 |---     |---  |---                                  |---       |
 | 6:30PM | 1   | Instructor Do: Fetch Introduction   | 0:10     |
@@ -103,7 +102,7 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
     * ☝️ What happened when I entered the curl command to GitHub.
 
-    * 🙋 We asked GitHub for user informatiojn via our terminal!
+    * 🙋 We asked GitHub for user information via our terminal!
 
     * ☝️ What is a good use case for cURL?
 
@@ -392,7 +391,7 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 ### 11. Instructor Review: Reverse API calls  (10 mins) 
 
-* Open up @TODO filename in the browser into the console.
+* Open up `06-Stu_Reverse_APIs/Solved/index.html`.
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
@@ -402,7 +401,7 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
     * ✔️ AJAX and fetch data both came back as an array.
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `06-Stu_Reverse_APIs/Solved/assets/js/script.js` in your IDE and explain the following: 
 
     
     ```js
