@@ -7,16 +7,6 @@ body {
   margin: 0;
 }
 
-.main-header {
-  display: flex;
-  /* Forces elements to the next line if they don't fit */
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 60px;
-  background: purple;
-  color: white;
-}
-
 main {
   display: flex;
   /* Forces elements to the next line if they don't fit */
@@ -24,7 +14,17 @@ main {
   margin-top: 2%;
 }
 
-main .card {
+.main-header {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px;
+  background: #13293d;
+  color: #fff;
+}
+
+.card {
   flex: 1 0 0;
   padding: 10px;
   text-align: center;
@@ -34,8 +34,8 @@ main .card {
 
 .card header {
   padding: 20px;
-  background: purple;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 .card img {

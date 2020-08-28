@@ -5,22 +5,26 @@
 body {
   font-family: Arial;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
 }
 
 header {
   padding: 40px;
   text-align: center;
-  background: #92a8d1;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 nav {
   display: flex;
-  background-color: #034f84;
+  background-color: #d8a47f;
 }
 
 nav a {
-  color: white;
+  color: #13293d;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -29,7 +33,6 @@ nav a {
 .product {
   display: flex;
   width: 90%;
-  min-height: 100vh;
   margin: 1% auto;
 }
 
@@ -53,17 +56,18 @@ nav a {
 footer {
   padding: 20px;
   text-align: center;
-  background: #034f84;
-  color: white;
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   main,
   nav,
   .product {
     flex-direction: column;
   }
-  
+
   .product-slideshow button {
     /* Removes the slideshow buttons from the document flow */
     display: none;

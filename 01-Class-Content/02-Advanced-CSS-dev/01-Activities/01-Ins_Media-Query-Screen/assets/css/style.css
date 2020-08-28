@@ -41,6 +41,13 @@ section {
   padding: 20px;
 }
 
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
 /* Image Placeholders */
 .sample-img {
   background-color: #fff;
@@ -50,17 +57,12 @@ section {
   border: 1px solid black;
 }
 
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
-}
+/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 
-/* Small smartphones - image placeholders change color */
-@media screen and (max-width: 600px) {
-  .sample-img {
-    background-color: #8ac4ff;
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  header {
+    background: #772014;
   }
 }
 
@@ -71,9 +73,9 @@ footer {
   }
 }
 
-/* Tablets - header changes color */
-@media screen and (max-width: 992px) {
-  header {
-    background: #772014;
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;
   }
 }

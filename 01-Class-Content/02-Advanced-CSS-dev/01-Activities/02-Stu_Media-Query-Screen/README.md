@@ -12,11 +12,11 @@ In this activity, you will work with a partner to implement basic media queries 
 
 * Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
 
-  * When the screen size is larger than 980 px, the product cards on the screen are side-by-side.
+  * When the screen size is larger than 992 px, the product cards on the screen are side-by-side.
 
-  * When I change the screen size to 980 px or smaller, the product cards on the screen should split into two columns.
+  * When I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
 
-  * When I change the screen size to 640 px or smaller, the product cards on the screen should be stacked on top of each other.
+  * When I change the screen size to 768 px or smaller, the product cards on the screen should be stacked on top of each other.
 
 * Optional: Just for fun, change the background color of the header each time the product cards change layout. 
 

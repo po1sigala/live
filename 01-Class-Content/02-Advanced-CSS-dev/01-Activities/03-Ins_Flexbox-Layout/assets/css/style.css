@@ -7,22 +7,22 @@ body {
   margin: 0;
 }
 
+main {
+  display: flex;
+  margin-top: 2%;
+}
+
 .main-header {
   /* Turns this element into a flexbox */
   display: flex;
   /* Defines how to distribute the empty space between child elements */
   justify-content: space-between;
   padding: 60px;
-  background: purple;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
-main {
-  display: flex;
-  margin-top: 2%;
-}
-
-main .card {
+.card {
   /* Defines how much available space this element should grow to */
   flex: 1 0 0;
   padding: 10px;
@@ -33,8 +33,8 @@ main .card {
 
 .card header {
   padding: 20px;
-  background: purple;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 .card.camera {

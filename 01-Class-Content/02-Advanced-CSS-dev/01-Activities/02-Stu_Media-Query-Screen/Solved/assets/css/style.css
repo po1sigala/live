@@ -10,8 +10,8 @@ body {
 header {
   padding: 60px;
   text-align: center;
-  background: purple;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 .card {
@@ -34,24 +34,24 @@ header {
   width: 100%;
 }
 
-/* Cards should split into two columns at 980px or smaller */
-@media screen and (max-width: 980px) {
+/* Cards should split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
   .card {
     width: 50%;
   }
   /* Change the header color */
   header {
-    background: green;
+    background: #772014;
   }
 }
 
-/* Cards should be stacked on top of each other at 640px or smaller */
-@media screen and (max-width: 640px) {
+/* Cards should be stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }
   /* Change the header color */
   header {
-    background: red;
+    background: #8ac4ff;
   }
 }

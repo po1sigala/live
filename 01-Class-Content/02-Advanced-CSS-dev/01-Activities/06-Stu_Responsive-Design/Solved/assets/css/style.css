@@ -10,8 +10,8 @@ body {
 header {
   padding: 40px;
   text-align: center;
-  background: #92a8d1;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 /* 
@@ -20,11 +20,11 @@ The flex container becomes flexible
 */
 nav {
   display: flex;
-  background-color: #034f84;
+  background-color: #d8a47f;
 }
 
 nav a {
-  color: white;
+  color: #13293d;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -41,7 +41,7 @@ main {
 
 aside {
   flex: 1;
-  background-color: #f1f1f1;
+  background-color: #b9c6ae;
   padding: 80px;
   text-align: center;
 }
@@ -52,7 +52,7 @@ It is used to align the flex items; in our case, the product cards
 */
 .products {
   flex: 4;
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -95,8 +95,8 @@ footer {
   flex-shrink: 0;
   padding: 20px;
   text-align: center;
-  background: #034f84;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 /* 
@@ -105,7 +105,7 @@ It defines in which direction the container wants to stack the flex items
 What is it doing here? 
 We are telling the main body and navbar to stack vertically in a column
 */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   main,
   nav {
     flex-direction: column;

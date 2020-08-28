@@ -10,17 +10,17 @@ body {
 header {
   padding: 40px;
   text-align: center;
-  background: #92a8d1;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
 nav {
   display: flex;
-  background-color: #034f84;
+  background-color: #d8a47f;
 }
 
 nav a {
-  color: white;
+  color: #13293d;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -33,41 +33,42 @@ main {
 
 aside {
   flex: 1;
-  background-color: #f1f1f1;
+  background-color: #b9c6ae;
   padding: 20px;
 }
 
 section {
   flex: 3;
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
 }
 
 .sample-img {
-  background-color: #aaa;
+  background-color: #fff;
   width: 100%;
   padding: 20px;
   height: 200px;
+  border: 1px solid black;
 }
 
 footer {
   flex-shrink: 0;
   padding: 20px;
   text-align: center;
-  background: #034f84;
-  color: white;
+  background: #13293d;
+  color: #fff;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   main,
   nav {
     flex-direction: column;
   }
   header {
-    background: #f7cac9;
+    background: #772014;
   }
   nav,
   footer {
-    background-color: #f7786b;
+    background-color: #bb8588;
   }
 }
