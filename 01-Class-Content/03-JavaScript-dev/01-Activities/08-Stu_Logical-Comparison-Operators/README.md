@@ -1,31 +1,33 @@
-# Conditional Statements
+# Logical Comparison Operators 
 
-In this activity, you will work with a partner to create an algorithm using conditional statements. 
+In this activity, you will work with a partner to debug some broken code so that all the console logs return true. 
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* Open [10-Stu_Conditional-Statements/Unsolved/script.js]() to examine the code and implement the following features:
+* As a developer, I want to use comparison and logical operators to create logs that only read true. 
 
-  * As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to true, only one expression evaluates to true, or both expressions evaluate to false. 
+* When I open the console, all the logs should read "true", but right now they do not!
 
-  * If expression1 is true and expression2 is true, then log to the console: "True ✅ True ✅"
+* Open [08-Stu_Logical-Comarision-Operators/Unsolved/script.js]() and examine the code.
 
-  * Else if only expression1 is true, then log to the console: "True ✅ False ❌"
+* Using the following questions, try to debug and fix the code:
+  
+  * What is the current output for each console log?
+  
+  * How might you use a logical or conditional operator so the expression that the expression evaluates to true? 
+  
+  * What is a good key word or phrase you can Google to find resources to help you debug?
 
-  * Else if only expression2 is true, then log to the console: "False ❌ True ✅"
+## 💡 Hints
 
-  * Else, log to the console: "False ❌ False ❌"
-
-## 💡 Hint
-
-Don't code without a plan! Before writing your algorithm in Javascript, take a few minutes to talk with your partner and write out in everyday language what you need to do to make each line of code work. Then, using that plan, translate that pseudocode into your Javascript algorithm. 
+You probably have already run into comparison operators in math class! 
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  What’s a switch case? How might it be used to build Ramona's app a different way? 
+  * What is NaN? What happens when you use typeof to evaluate NaN? Is the answer what you expected? Why or why not?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
