@@ -48,20 +48,24 @@ footer {
   margin-top: auto;
 }
 
+/* Added some padding and styling for the photos */
 .photo {
   padding: 20px 10px;
   border: 2px solid #bfbfbf;
   background-color: #fff;
 }
 
+/* Use rotate to rotate the photo to the left or right */
 .rotate {
   transform: rotate(7deg);
 }
 
+/* Use scale to stretch the photo vertically or horizontally */
 .scale {
   transform: scale(1.5, 1);
 }
 
+/* Use skew to skew the photo to the left or right */
 .skew {
   transform: skew(15deg);
 }

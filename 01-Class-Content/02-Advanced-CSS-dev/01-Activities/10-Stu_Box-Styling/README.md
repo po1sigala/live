@@ -22,7 +22,7 @@ In this activity, you will work with a partner to use CSS documentation to enhan
 
 * The result should look like the following image:
 
-![CSS-box-styling](./Images/css-box-styling.png)
+![The product cards have rounded corners with a shadow and are rotated to the right](./Images/css-box-styling.png)
 
 ## 💡 Hint(s)
 

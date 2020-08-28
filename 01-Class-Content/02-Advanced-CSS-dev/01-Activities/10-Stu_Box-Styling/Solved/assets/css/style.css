@@ -63,6 +63,7 @@ footer {
   align-items: flex-start;
 }
 
+/* Added rotation, box-shadow, border-radius */
 .card {
   border-style: solid;
   border-width: 1px;
@@ -74,16 +75,17 @@ footer {
   margin: 20px;
 }
 
-.card > header {
+/* Added border-radius to match the card */
+.card header {
   border-radius: 50px 50px 0px 0px;
   padding: 20px;
 }
 
-.card > p {
+.card p {
   text-align: center;
 }
 
-.card > img {
+.card img {
   width: 100%;
 }
 
