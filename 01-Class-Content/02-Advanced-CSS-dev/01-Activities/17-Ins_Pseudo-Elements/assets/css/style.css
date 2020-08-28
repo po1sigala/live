@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 h1 {
@@ -18,10 +18,10 @@ h1 {
 }
 
 /* Added the rest of the header text */
-h1:after {
+h1::after {
   font-family: Impact;
   content: 'Pseudo Elements';
-  color: #99f7f2;
+  color: #8ac4ff;
   margin-left: 5px;
 }
 
@@ -36,18 +36,18 @@ h3 {
 }
 
 /* Added asterisk before every h3 heading */
-h3:before {
+h3::before {
   font-family: Impact;
   content: '\273A';
-  color: #6c7575;
+  color: #772014;
   margin-right: 5px;
 }
 
 /* Added symbols before and after the nav links */
-nav li:before,
-nav li:after {
+nav li::before,
+nav li::after {
   content: '\2766';
-  color: red;
+  color: #8ac4ff;
   padding: 1%;
   font-family: cursive;
 }
@@ -59,9 +59,13 @@ nav ul {
 }
 
 nav a {
-  color: #99f7f2;
+  color: #b9C6ae;
   font-weight: bold;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 main {
@@ -77,7 +81,7 @@ section {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #d8a47f;
 }
 
 article p {
@@ -111,16 +115,12 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  main {
+  header, main {
     flex-direction: column;
   }
 

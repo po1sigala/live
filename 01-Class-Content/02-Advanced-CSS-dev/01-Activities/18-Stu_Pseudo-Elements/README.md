@@ -32,7 +32,7 @@ In this activity, you will work with a partner to use CSS documentation to incor
 
 ## 💡 Hint(s)
 
-* How can we use the `:after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
+* How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
 * Don't get too hung up on what pieces of text to use for the keyword and tooltip!
 
