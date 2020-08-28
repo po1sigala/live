@@ -28,7 +28,7 @@ In this activity, you will work with a partner to use CSS documentation to apply
 
 * The result should look like the following image:
 
-  ![CSS-Typography](./Images/css-typography.png)
+  ![The blog page includes a monospaced list and headings with a serif font](./Images/CSS-Typography.png)
 
 * Add a few personal touches to the text! Play around with the `font-style` and `font-weight` to make the text slant and bold.
 
