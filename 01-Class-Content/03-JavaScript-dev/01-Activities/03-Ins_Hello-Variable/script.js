@@ -8,6 +8,10 @@ var city = "New York";
 var age = 32;
 var isAwesome = true;
 
+// To re-assign a variable, use only the name  
+age = 43;
+city = "Melbourne";
+
 // Variables can be used to log the their assigned value
 // Logs Abdul
 
