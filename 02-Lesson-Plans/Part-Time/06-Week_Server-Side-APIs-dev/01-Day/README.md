@@ -349,21 +349,47 @@ In this activity, you will work with a partner to request data from GitHub using
 
 * There is more than one way to request data from a server-side API.
   
-  * 🔑 XHR is the predecessor to fetch, requires more code to execute.
+  * 🔑 An `XMLHttpRequest` or `XHR` for short was the predecessor to `fetch`. `XHR` requests involve much more code than a simple `fetch.`
 
-  * 🔑 AJAX requires third party library, jQuery, to work.
+  ```js
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      console.log('XMLHttpRequest Response \n-------------');
+      console.log(xhr.response);
+    }
+  };
+  xhr.open('GET', requestUrl);
+  xhr.send();
+  ```
+
+  * 🔑 `AJAX` is another alternative to `Fetch`. `AJAX` requests require the use of the third-party library, jQuery, to work.
+  
+  ```js
+  $.ajax({
+    url: requestUrl,
+    method: 'GET',
+  }).then(function (response) {
+    console.log('Ajax Reponse \n-------------');
+    console.log(response);
+  });
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we learn about these different methods.
+  * ☝️ Why are we only using `fetch` if there are all these other options?
 
-    * 🙋 We read their documentation.
+  * 🙋 Fetch is simple and quick to use, and requires no third party libraries. This allows us to get up and running quickly!
+
+  * ☝️ How do we learn about these different methods of making API requests?
+
+  * 🙋 We read their documentation.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 9. Student Do: Reverse API calls (15 min) 
+### 9. Student Do: Reverse API calls (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Reverse_APIs/README.md.`
 
@@ -378,15 +404,13 @@ In this activity, you will work with a partner to reverse engineer the different
 
  Be sure to work with your partner!
 
-* Open the [index.html](index.html) file in your browser
+* Open the [index.html](index.html) file in your browser and open the console.
 
-* Open Chrome DevTools in the browser and go to the console. 
-
-* There are three responses in the console, examine the differences between them.
+  * There are three responses in the console, examine the differences between them.
 
 * Open [script.js](./assets/js/script.js) to examine the code.
 
-* Add comments to explain the code for the three different API methods.  
+  * Add code comments to explain the code for the three different API methods.  
 
 ## 💡 Hint(s)
 
@@ -396,7 +420,7 @@ In this activity, you will work with a partner to reverse engineer the different
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
 
-  * Whenever we do a fetch request, it goes through the DNS system. How are these URLs attached to DNS?
+  * Whenever we do a fetch request, it goes through the DNS system. What is DNS?
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
 ```
@@ -405,92 +429,107 @@ In this activity, you will work with a partner to reverse engineer the different
 
 ### 10. BREAK (8PM - 15 mins)
 
-### 11. Instructor Review: Reverse API calls  (10 mins) 
+### 11. Instructor Review: Reverse API calls  (10 min)
 
 * Open up `06-Stu_Reverse_APIs/Solved/index.html`.
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ There are many methods that can be used to request API data.
+  * ✔️ More than one way to make API calls.
 
-    * ✔️ XHR data requires more to write and the data is harder to consume.
+  * ✔️ XHR requires more code, harder to consume.
 
-    * ✔️ AJAX and fetch programmatically are structured very similarly, but handle errors differently.
+  * ✔️ AJAX is similar to `fetch`, handles errors differently.
 
 * Open `06-Stu_Reverse_APIs/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    
-    ```js
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            console.log('XMLHttpRequest Response \n-------------');
-            .log(xhr.response);
-        }
-    };
-    ```
-     * 🔑 XHR, we check the readyState to be `DONE` before we handle the response. 
-  
-    ```js
-    xhr.open('GET', requestUrl);
-    xhr.send();
-    ```
+  * 🔑 With XHR, we first check if `xhr.readtyState` equals `XMLHttpRequest.DONE`.
 
-    * 🔑 XHR initializes the api call with `.open`. and sends the request with `.send`.
+  ```js
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+  ```
 
-    ```js
-    // JQuery Ajax
-    $.ajax({
-        url: requestUrl,
-        method: 'GET',
-    }).then(function (response) {
-        console.log('Ajax Response \n-------------');
-        console.log(response);
-    });
-    ```
+  * 🔑 When the above condition is met, we log our XHR response.
 
-     * 🔑 jQuery uses `.ajax` to send the request to the API.   Upon completion the response is returned.
-  
-    ```js
-    // Browser Fetch Method
+  ```js
+    console.log('XMLHttpRequest Response \n-------------');
+    .log(xhr.response);
+  }
+  ```
 
-    fetch(requestUrl)
-        .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log('Fetch Response \n-------------');
-        console.log(data);
-    });
-    ```
+  * 🔑 XHR initializes the api call with `.open`. and sends the request with `.send`.
 
-    * 🔑 AJAX and fetch are structured similarly but they do not work exactly the same.  Fetch will still try to resolve the response with a 404/500 error.  
+  ```js
+  xhr.open('GET', requestUrl);
+  xhr.send();
+  ```
+
+  * 🔑 jQuery uses `.ajax` to send the request to the API.   Upon completion the response is returned.
+
+  ```js
+  $.ajax({
+    url: requestUrl,
+    method: 'GET',
+  }).then(function (response) {
+    console.log('Ajax Response \n-------------');
+    console.log(response);
+  });
+  ```
+
+  * 🔑 AJAX and fetch are structured similarly but do not function exactly the same. `Fetch` will try to resolve the response with a 404/500 error, while `AJAX` would not.  
+
+  ```js
+  fetch(requestUrl)
+      .then(function (response) {
+      return response.json();
+  })
+  .then(function (data) {
+      console.log('Fetch Response \n-------------');
+      console.log(data);
+  });
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What is the difference between AJAX and fetch?
+  * ☝️ What is the difference between AJAX and fetch?
 
-    * 🙋 Fetch will try to resolve the data even if there is a 404/500 error and is built into the browser.
+  * 🙋 Fetch will try to resolve the data even if there is a 404/500 error and is built into the browser.
 
-    * ☝️ What can we do if we are working with an API method we aren't familIar with?
+  * ☝️ What can we do if we are working with an API method we aren't familIar with?
 
-    * 🙋 Look up that method's documentation.
+  * 🙋 Look up that method's documentation.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 12. Instructor Demo: Parse JSON (5 min)
 
-  * Open up `07-Ins_Demo_Parse/index.html` in the browser to the console. Expand the array under GitHub Organization Users.
+* Open up `07-Ins_Demo_Parse/index.html` in the browser to the console. Expand the array under GitHub Organization Users.
 
-    * 🔑 We need to examine our API data to know what properties we wish to use from the data.
+  * 🔑 We need to examine the API response to know how to access the data we want to extract.
 
-    * 🔑 Because this is an array, we can loop over each element and grab values from the object properties in each element.
+  * 🔑 The response we receive is an array, meaning we can loop through the data, accessing whatever specific data we want.
 
+  ```js
+  fetch('https://api.github.com/orgs/nodejs/repos')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].name);
+    }
+  });
+  ```
+  
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What should we do before we use our data from an API response.
+  * ☝️ How can we iterate over an array of data?
 
-    * 🙋 We should examine the data so we know what values we want from it.
+  * 🙋 We can use a `for` loop, just like we would any other time we want to iterate over something!
+
+  * ☝️ What should we do before we use our data from an API response.
+
+  * 🙋 We should examine the data so we know what values we want from it.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -517,13 +556,13 @@ In this activity, you will work with a partner to reverse engineer the different
 
 * Using the documentation, implement the following:
 
-  * Add a parameter to the end requestUrl that will limit the results to just 5 issues.
+  * Add a `path` to the end of the `requestUrl` variable such that the response is limited to 5 issues.
 
-  * After doing so, run the page in the browser, it will console.log the results.
+  * After doing so, open the `index.html` in your browser and examine the response in the console.
 
-  * Examine the results and note the issue url and the login of the user who wrote the issue
+  * Note the issue URL and the login of the user who wrote the issue
 
-  * Loop through the data in the area in the script.js file and console.log the issue url and the user login.
+  * In the `script.js` file, loop through the data and `console.lo`g the issue URL and the user login.
 
 ## 💡 Hint(s)
 
@@ -540,7 +579,7 @@ In this activity, you will work with a partner to reverse engineer the different
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 14. Instructor Review: Parse JSON (10 mins) 
+### 14. Instructor Review: Parse JSON (10 mins)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -550,73 +589,102 @@ In this activity, you will work with a partner to reverse engineer the different
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Parameters are added to the after API endpoints starting with a question mark.
+  * ✔️ Response limit parameter after `?` in URL.
 
-    * ✔️ The response results are filtered based on the parameters used.
+  * ✔️ Parameters dictate different aspects of response.
 
-    * ✔️ Read the documentation to discover which parameters are available.
+  * ✔️ Documentation for parameters.
 
-* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues). Scroll down until you get to the per_page parameter.
+* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues) and show the following in the `parameter` list:
 
-    * 🔑 This is the parameter for per_page, we need to add this to the end of our request URL.
+  * The `per_page` parameter can be used to limit the amount of data that comes back in our response.
 
-* Open `[script.js](./Solved/assets/js/script.js)` in your browser into the console and explain the following: 
+* Open [script.js](./Solved/assets/js/script.js) in your IDE and explain the following: 
 
-    ```js
-    var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
-    ```
-    * 🔑 The parameter is added to the end of the request URL.
+  * 🔑 We add the `per_page` parameter to the end of our `requestUrl` variable and set the parameter to 5.
 
-    ```js
-    fetch(requestUrl)
-    ```
-
-    * 🔑 We fetch the request URL with the parameter.
-
-    ```js
-    .then(function (response) {
-      return response.json();
-    })
-    ```
-    
-    * 🔑 Upon completion of our request, we return the `response.json()`.
-
-    ```js
-    .then(function (data) {
-        for (var i = 0; i < data.length; i++) {
-            .log('Github Repo Issues \n----------');
-            console.log(data[i].url);
-            console.log(data[i].user.login);
-        }
-    });
+  ```js
+  var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
   ```
-    * 🔑 We loop through the data and console.log the properties from our API response.
+
+  * 🔑 We pass our completed `requestUrl` variable as an argument to our `fetch`. Upon completion of our request, we take the `response` and convert it to JSON in our `return`.
+
+  ```js
+  fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  ```
+
+  * 🔑 We loop through the data and console.log the properties from our API response. We use dot notation on our `data` iterator, logging the `.url` and `.user.login` properties.
+
+  ```js
+  .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+          .log('Github Repo Issues \n----------');
+          console.log(data[i].url);
+          console.log(data[i].user.login);
+      }
+  });
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ Where do we add the parameter in the request URL?
+  * ☝️ Where are parameters added to an endpoint?
 
-    * 🙋 At the end.
+  * 🙋 They are normally chained on the end of our endpoint URL.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ Where do we find a list of parameters for a given endpoint?
 
-    * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
+  * 🙋 It can almost always be found on the documentation page.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: Generate Dynamic Elements. (5 mins) 
+### 15. Instructor Demo: Generate Dynamic Elements. (5 mins)
 
 * Open `09-Ins_Demo_Dynamic/index.html` in your browser and demonstrate the following:
 
-    * 🔑 When we click on the button, dynamically generate HTML appears on the screen.
+  * 🔑 When we hit the `Click Me` button, the page is populated with dynamically generated HTML.
 
-    * 🔑 We see a list of the last 5 issues from the node repo and long with the users who posted them.
+  * 🔑 We see a list of the last 5 issues from the node repo and long with the users who posted them.
+
+* Open `09-Ins_Demo_Dynamic/assets/js/script.js` in your IDE and explain the following.
+
+  * We first grab our root elements we will append too later.
+
+  ```js
+  var issueContainer = document.getElementById('issues');
+  var fetchButton = document.getElementById('fetch-button');
+  ```
+
+  * We make our `fetch` request and then loop through the data. When we loop, we create new HTML elements, give them the content of the response, and append them to the page!
+
+  ```js
+  var userName = document.createElement('h3');
+  var issueBody = document.createElement('p');
+  userName.textContent = data[i].user.login;
+  issueBody.textContent = data[i].body;
+  issueContainer.append(userName);
+  issueContainer.append(issueBody);  
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we build this?
+  * ☝️ Can this all be done without a third party library?
 
-    * 🙋 We loop over the data provided by the fetch response.
+  * 🙋 Yes! Fetch and other features of vanilla JavaScript will allow us to achieve this.
+
+  * ☝️ How is this useful?
+
+  * 🙋 This allows us to display our API responses on our webpages....dynamically!
+
+  * ☝️ How would we build this?
+
+  * 🙋 We loop over the data provided by the fetch response. On each loop we create an HTML element, give it the content of our response, and append it to the page.
 
 * Let the students know that they only need to generate the dynamic elements,the fetch request has been provided for them in this upcoming activity.
 
@@ -624,7 +692,7 @@ In this activity, you will work with a partner to reverse engineer the different
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Demo_Dynamic/README.md`.
 
-### 16. Student Do: Generate Dynamic Elements.(15 mins) 
+### 16. Student Do: Generate Dynamic Elements.(15 mins)
 
 * Direct students to the activity instructions found in `10-Stu_Demo_Dynamic/README.md`.
 
@@ -643,7 +711,7 @@ In this activity, you will work with a partner to write the code to generate the
 
 * As a developer I want to take the response data and generate dynamic html.
 
-* As a developer, the data I want to show in the `usersContainer` is the user login and the URL of their GitHub profile. 
+* As a developer, what I want to show in the `usersContainer` is the user login and the URL of a the GitHub profile from the search.
 
 ## 💡 Hint(s)
 
@@ -664,78 +732,78 @@ In this activity, you will work with a partner to write the code to generate the
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with `generating html from fetch data`? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with generating html from fetch data? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ We received the response data from our fetch request.
+  * ✔️ `document.getElementById`
 
-    * ✔️ We determine what properties we need to use from the response.
+  * ✔️ `for loop`
 
-    * ✔️ We access those properties' values in order to display them on the page.
+  * ✔️ dot notation
 
-* Open `[index.html](./Solved/index.html)` in your browser into the console and explain the following: 
+  * ✔️ `document.createElement`
 
-    * Here is the console.log of the data. We look through this to find the properties we need.  We are using login and url
+  * ✔️ `.append`
 
-* Open `[script.js](./Solved/assets/js/script.js)` in your browser into the console and explain the following: 
+* Open [script.js](./Solved/assets/js/script.js) in your IDE and explain the following:
 
-    ```js
-    fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      //Using console.log to examine the data
-      console.log(data);
-    ```
+  * 🔑 We use `document.getElementById` to target our `users` and `fetch-button` divs. We save them to the variables `usersContainer` and `fetchButton` respectively.
 
-    * 🔑 We received the response data from our fetch request.
-  
-    ```js
-     for (var i = 0; i < data.length; i++) 
-    ```
+  ```js
+  var usersContainer = document.getElementById('users');
+  var fetchButton = document.getElementById('fetch-button');
+  ```
 
-    * 🔑 We loop through the response data.
+  * We use fetch to make a request to receive some data. We are sure to convert it to JSON so it can be more easily consumed.
 
-    ```js
-     for (var i = 0; i < data.length; i++) {
-        //Creating a h3 element and a p element
-        var userName = document.createElement('h3');
-        var userUrl = document.createElement('p');
-    ```
+  ```js
+  fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  ```
 
-    * 🔑 We create elements..
+  * 🔑 We use a `for loop` to iterate through the response data.
 
-    ```js
-        //Setting the text of the h3 element and p element.
-        userName.textContent = data[i].login;
-        userUrl.textContent = data[i].url;
-    ```
+  ```js
+  for (var i = 0; i < data.length; i++) 
+  ```
 
-    * 🔑 We take each property from the response as use the property's value as text content for our elements.
-  
-    ```js
-        //Appending the dynamically generated html to the div associated with the id="users"
-        //Append will attach the element as the bottom most child.
-        usersContainer.append(userName);
-        usersContainer.append(userUrl);
-      }
-    ```
+  * 🔑 On each iteration, we create an `H3` and `p` tag.
 
-    * 🔑 We append each element to `<div id="users">`.
+  ```js
+  var userName = document.createElement('h3');
+  var userUrl = document.createElement('p');
+  ```
+
+  * 🔑 We take the `.login` and `.url` properties off of the current iteration of our `data` array, making those the `textContent` of the `userName` and `userUrl` tags we created.
+
+  ```js
+  userName.textContent = data[i].login;
+  userUrl.textContent = data[i].url;
+  ```
+
+  * 🔑 We finally append the created elements with their newly added text content to the the `div
+
+  ```js
+  usersContainer.append(userName);
+  usersContainer.append(userUrl);
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ Why do we look at the response data properties?
+  * ☝️ Why do we look at the response data properties?
 
-    * 🙋 So we know what data we need to use.
+  * 🙋 So we know what data we need to use.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
+  * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 

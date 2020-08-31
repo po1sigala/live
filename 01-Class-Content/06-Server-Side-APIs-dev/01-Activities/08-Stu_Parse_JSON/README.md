@@ -6,19 +6,19 @@
 
 * Be sure to work with your partner!
 
-* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list*repository*issues).
+* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues).
 
 * Open [script.js](./Unsolved/assets/js/script.js) and examine the code.
 
 * Using the documentation, implement the following:
 
-  * Add a parameter to the end requestUrl that will limit the results to just 5 issues.
+  * Add a `path` to the end of the `requestUrl` variable such that the response is limited to 5 issues.
 
-  * After doing so, run the page in the browser, it will console.log the results.
+  * After doing so, open the `index.html` in your browser and examine the response in the console.
 
-  * Examine the results and note the issue url and the login of the user who wrote the issue
+  * Note the issue URL and the login of the user who wrote the issue
 
-  * Loop through the data in the area the script js file and console.log the issue url and the user login.
+  * In the `script.js` file, loop through the data and `console.lo`g the issue URL and the user login.
 
 ## 💡 Hint(s)
 

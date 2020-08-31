@@ -24,6 +24,6 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
 
-  * Whenever we do a fetch request, it goes through the DNS system. How are these URLs attached to DNS?
+  * Whenever we do a fetch request, it goes through the DNS system. What is DNS?
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
