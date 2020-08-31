@@ -8,13 +8,13 @@ In this activity, you will work with a partner to debug some broken code to impl
 
 * Open [index.html](./Unsolved/index.html) in the browser and examine the page's layout. Note that it currently does not meet the following requirements:
 
-  * As a user, I want to view all products in a grid
+  * As a user, I want to view all products in two or more rows
 
   * As a user, I don't want to scroll horizontally to see additional products
 
 * To meet these requirements, the page should look similar to the following image:
 
-  ![The products that don't fit on the first line of the grid are moved to the second line](./Images/product-grid.png)
+  ![The products that don't fit on the first line of the grid are moved to the second line](./Images/01-product-grid.png)
 
 * Using the following questions, try to debug and fix the code:
   

@@ -30,6 +30,14 @@ nav a {
   text-align: center;
 }
 
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
+}
+
 .product {
   display: flex;
   width: 90%;
@@ -51,14 +59,6 @@ nav a {
 .product-details {
   margin-left: 3%;
   flex: 0 0 60%;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
-  margin-top: auto;
 }
 
 @media screen and (max-width: 768px) {

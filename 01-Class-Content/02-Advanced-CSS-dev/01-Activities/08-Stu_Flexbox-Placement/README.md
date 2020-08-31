@@ -1,4 +1,4 @@
-# Fix the Flexbox Components
+# Fix the Flexbox Placement
 
 In this activity, you will work with a partner to debug some broken code to properly position elements with flexbox justification and alignment.
 
@@ -14,7 +14,7 @@ In this activity, you will work with a partner to debug some broken code to prop
 
 * To meet these requirements, the page should look like the following image:
 
-  ![The navigation links are aligned to the right, and the slideshow buttons are center aligned](./Images/product-page.png)
+  ![The navigation links are aligned to the right, and the slideshow buttons are center aligned](./Images/01-product-page.png)
 
 * Using the following questions, try to debug and fix the code:
   
