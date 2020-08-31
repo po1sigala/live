@@ -14,7 +14,7 @@ In this activity, you will work with a partner to debug a broken webpage to bett
 
 * To meet these requirements, the page should look like the following image:
 
-  ![The blog layout has larger sized headers and spacing in between the lines of text](./Images/correct-styles.png)
+  ![The blog layout has larger sized headers and spacing in between the lines of text](./Images/01-correct-styles.png)
 
 * Using the following questions, try to debug and fix the code:
   

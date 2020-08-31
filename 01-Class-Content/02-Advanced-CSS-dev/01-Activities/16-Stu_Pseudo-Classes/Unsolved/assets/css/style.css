@@ -87,6 +87,8 @@ footer {
   color: #fff;
 }
 
+/* TODO: Add styles to display and hide the resource links */
+
 @media screen and (max-width: 768px) {
   header, main {
     flex-direction: column;
