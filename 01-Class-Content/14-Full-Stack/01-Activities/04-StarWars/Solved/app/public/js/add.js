@@ -21,12 +21,12 @@ addBtn.addEventListener('click', (e) => {
     .then((response) => response.json())
     .then((data) => {
       console.log('Success in adding character:', data);
-      alert('Adding character!');
+      alert(`Adding character: ${newCharacter.name}!`);
     })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    //   alert(error)
-    // });
+    .catch((error) => {
+      console.error('Error:', error);
+      alert(error);
+    });
 
   // Dump the content of the input boxes
   document.getElementById('name').value = '';

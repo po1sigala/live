@@ -39,7 +39,6 @@ module.exports = (app) => {
       age: character.age,
       forcePoints: character.forcePoints,
     });
-
-    res.status(204).json("test");
+    res.status(200).json(character);
   });
 };
