@@ -1,17 +1,12 @@
-// Helper functions for showing and hiding
+// Helper functions for showing element
 const show = (el) => {
   el.style.display = 'block';
 };
 
-// Hide an element
-const hide = (el) => {
-  el.style.display = 'none';
-};
-
-// Helper function to delete a book
+// Helper function to preform DELETE on a book
 const removeBook = (e) => {
   const bookId = e.target.dataset.id;
-  console.log(`/api/book/${bookId}`);
+
   fetch(`/api/book/${bookId}`, {
     method: 'DELETE',
     headers: {
@@ -19,7 +14,7 @@ const removeBook = (e) => {
     },
   }).then(() => {
     console.log('deleted book');
-    hide(e.target.parentElement);
+    e.target.parentElement.remove();
   });
 };
 
