@@ -17,22 +17,19 @@ In this class, we will request data from server-side APIs using Fetch and consum
 * Students will be repeatedly asked to refer to the GitHub Documentation.
 
 ## Learning Objectives
+By the end of class, students will be able to
 
+* Understand the client-server model.
 
-
-* Client-Server Model
-  
 * Light introduction to cURL
 
-* Fetch
+* Understand the Fetch API and why we use it.
 
-* Render fetched data
+* Render fetched data using a fetch request.
 
-* Fetch vs AJAX vs XHR 
+* A light introduction to different API request methods using Fetch vs AJAX vs XHR. 
 
 * Light introduction to API parameters.
-
-
 
 ## Time Tracker
 | Start  | #   | Activity Name                       | Duration |
@@ -64,37 +61,52 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
 * Welcome students to class.
   
-* Inform students that this unit is all about requesting and consuming data from server-side APIs using Fetch.
+* Inform the students that this unit is primarily focused on the Client-Server Request/Response model using Fetch.
   
 * Explain that server-side APIs is a way for companies to exchange data. This can be thought of as a contract to exchange data. The rules of the contract is the API's documentation. As long as you follow the rules, the server will send back the data to your application.
 
-* Open up your browser and go to `https://api.github.com`
+* Open up your browser and go to `https://api.github.com` and point out the following:
 
-* Explain to the class these are all endpoints URLs for githubs API.  Point out the location of the root in a few of these.
+* These are all endpoint URLs for GitHub's API.
   
-* Explain to them that these URLs all have `https://api.github.com` in common and that is the root endpoint.
+* The root endpoint is the part of the URL they all have in common, in GitHub's case it's `https://api.github.com`.
 
 * The root-endpoint is the starting point of the API you're requesting from. 
 
-* The other endpoints start with the foward slash and come after the root endpoint. This allows us to request specific data from the API.
+* The other endpoints start with the forward slash and come after the root endpoint. This allows us to request specific data from the API.
 
-* Open the [Fetch Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and then scroll down to the first code block, a basic fetch request.
+* Open the [Fetch Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and scroll to the first code block, pointing out the following:
 
-  * Explain to the students that fetch begins with the URL of the server you are looking to receive data from
+  * Fetch requests begin with the URL of the server you are looking to receive data from.
+    ```js
+      fetch('http://example.com/movies.json')
+    ```
+
+  * Upon completion of our request, the .then statement allows us to do something with the response. In this case, we are using the built-in `.json()` to convert the response to JSON.
   
-  * After the fetch request is completed, with the .then statement use to do something with the response. In this case we are using the built in `.json()` to convert the response to JSON.
+    ```js
+    .then(function(response){
+      return response.json();
+    })
+    ```
+
+  * Assure students that we will cover JSON more later on in today's class. For now, all they need to know is it is a nicer way of formatting returned data for our viewing.
   
-  * Let them know we will discuss what is JSON a little later in the class.
+  * Next, we `.then()` finally console log our JSON formatted `data`.
   
-  * After converting the response to JSON, we use another .then statement to do something with the data, in this example we console.log the data.
-  
+    ```js
+    .then(function(data){
+      console.log(data)
+    });
+  ```
+
   * Let them know that this data is typically used to render dynamically generate elements.
 
 ### 2. Instructor Demo: cURL Demo (5 min) 
 
 * Open your terminal to show the following:
   
-* Type `curl https://api.github.com/users` and then press the enter or return key.
+* Open your terminal and type `curl https://api.github.com/users`, demonstrating the following:
 
   * GitHub returned a list of the last 30 users who made a profile!
 
@@ -129,23 +141,19 @@ In this activity, you will work with a partner using cURL
 
 * As a developer, I want to test the API I plan to use with cURL.
 
-* When we use cURL, we should receive a response from the server, but right now the terminal returns nothing.
+* When I use cURL, then I should receive a response from the server, but right now the terminal returns nothing.
 
-* Open up your terminal/gitbash.
+* Open up your terminal and type  `curl http://api.github.com` and hit `enter.
 
-* Copy `curl http://api.github.com` 
-
-* Paste what you copied into the terminal and press enter or the return key
-
-  * After pressing the enter or return key, something is definitely wrong.
+* Using the following questions, try to debug and fix the code:
 
   * If all goes as expected, the terminal should have gone to the next line without returning any info.
 
-* Sometimes our errors do not give us any feedback, and referring to documentation may be the only way to reach a resolution
+  * What error messages are being logged, if any?
 
-  * Go to [GitHub API Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#schema)
+  * Where must this error be stemming from?
 
-  * Under the "In the Article" subnavigation on the right, find the entry for "Root endpoint" and compare it with the failed cURL command we used.
+  * What is a good keyword or phrase you can Google to find resources to help you debug?
 
 ## 💡 Hint(s)
 
@@ -155,11 +163,9 @@ In this activity, you will work with a partner using cURL
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
 
-  * If you wanted to save your cURL reponse text to a file, how would you do so?
+  * If you wanted to save your cURL response text to a file, how would you do so?
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
-
-
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
@@ -168,22 +174,19 @@ In this activity, you will work with a partner using cURL
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Ask the class how many caught the error, although a minor one.
-
-  * 🙋 The letter S was missing from the URL, it should be `https://api.github.com`
+  * ☝️ How comfortable do you feel with cURL? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Small Errors are common.
+    * ✔️ Small errors are common.
 
-    * ✔️ They can prevent our request from working.
+    * ✔️ Errors can prevent our request from working.
 
-    * ✔️ Double checking the API URL is crucial.
+   * Go to [GitHub API Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint)
 
-* Open up your browser and go to `https://api.github.com`
-
+    * 🔑 The error is that the less S was missing from the URL.  It should be `https://api.github.com`.
 
     * 🔑 Double checking your work helps prevent small errors turning into big ones.
 
@@ -199,7 +202,6 @@ In this activity, you will work with a partner using cURL
 
 * Answer any questions before proceeding to the next activity.
 
-
 * Open `03-Ins_Demo-Fetch/index.html` in the browser and show the following:
 
     * 🔑 We click on the button, there is a slight delay, and the data appears.
@@ -208,26 +210,34 @@ In this activity, you will work with a partner using cURL
   
 * Open `03-Ins_Demo-Fetch/assets/js/script.js` in your IDE and show the following statements:
   
-    * We set the request URL, that the fetch function will use to request data.
+    * We set the request URL to a variable. This is the URL that our `fetch` method will use to request data.
     
     ```js
     var requestUrl = 'https://api.github.com/orgs/nodejs/repos'; 
     ```
-    * 🔑 We pass the requestUrl to fetch, note the root endpoint and the endpoint that follows.
+    * 🔑 We pass the requestUrl to the fetch method. Note the root endpoint URL and the endpoint portion that follows.
 
      ```js
     fetch(requestUrl)
+    ```
+
+    * 🔑 We then take the response and convert it into JSON and `return` the formatted response.
+
+    ```js
     .then(function (response) {
       return response.json();
     })
     ```
-    * 🔑 The fetch request is sent and then we take the response and convert it into JSON.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
     * ☝️ What do we need to pass through fetch to get an API to send back data?
 
     * 🙋 We pass through the URL of the API we wish to use.
+  
+    * ☝️ What do we with the response?
+
+    * 🙋 We take the response and convert it into JSON and `return` the formatted response.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -267,7 +277,6 @@ In this activity, you will work with a partner to request data from GitHub using
   * In fetch requests we use the URL, what is the difference between URL and URI?
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
-
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
@@ -282,38 +291,45 @@ In this activity, you will work with a partner to request data from GitHub using
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ The documentation has everything you need. `/users/{username}/repos` 
+    * ✔️ `/users/{username}/repos` 
 
-    * ✔️ We attached to the endpoint to the root endpoint. 
+    * ✔️ We attached our desired endpoint to our root endpoint. 
 
-    * ✔️ We now use the URL combine to make our fetch request.
+    * ✔️ The `root endpoint` + `endpoint` gives us the full request URL.
 
-* Open `04-Stu_Click-Events/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `04-Stu_Create-Fetch/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 We place take the endpoint and attached it to our root endpoint in the requestUrl variable.
+     We create a function called `getApi`.
+
+    ```js
+     getApi() {
+    ```
+
+    * 🔑 We save the full endpoint we would like to make a request to in a variable called requestUrl, replacing {USERNAME} with the username we would like to search.
     
     ```js
-    function getApi() {
     // replace {USERNAME} with your github username
     var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
     ```
 
-    * 🔑 We then pass the requestUrl as an argument.
+    * 🔑 We then pass the requestUrl as an argument to our fetch method.
 
     ```js
     fetch(requestUrl)
+    ```
+    * 🔑 We then pass the requestUrl as an argument to our fetch method.
+
+    ```js
     .then(function (response) {
       return response.json();
     })
     ```
 
-    * 🔑 The fetch request will go out to the API server when the button is clicked.
-
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
     * ☝️ How do we build our requestUrl?
 
-    * 🙋 We combine the endpoint with the root endpoint.
+    * 🙋 We attach our desired endpoint to the root endpoint.
 
     * ☝️ What can we do if we don't completely understand this?
 
@@ -323,13 +339,22 @@ In this activity, you will work with a partner to request data from GitHub using
 
 ### 8. Instructor Demo: Different APIs (5 min) 
 
-Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demonstrate the following:* Let the class know that there is more than one way to get data from an API.
+Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demonstrate the following:
 
-    * 🔑 Explain to them that this is how we would request data from APIs using jQuery.
+* Let the class know that there is more than one way to get data from an API.
+  
+    ```js
+    $.ajax({
+        method: "GET",
+        url: "https://api.github.com",
+    });
+    ```
 
-    * 🔑 State that there is more than one way to request data from an API.
-    
-* Open Chome DevTools in the browser and go to the console.  * In the console type or copy this and paste `fetch('https://api.github.com').then(response => response.json()) .then(console.log)`.  Press the enter or return key.
+    * 🔑 This is how we would request data from APIs using jQuery.
+ 
+* Open Chrome DevTools in the browser and go to the console.  
+  
+* In the console copy this and paste `fetch('https://api.github.com').then(function(response){return response.json()}) .then(console.log)`, demonstrating the following:
 
     * 🔑 We use fetch because it is built in the browser.
 
@@ -343,7 +368,6 @@ Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demo
 
 * Answer any questions before proceeding to the next activity.
 
-
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
 ### 9. Student Do: Reverse API calls (15 min) 
@@ -355,7 +379,7 @@ Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demo
 ```md
 # Reverse API calls
 
-In this activity, you will work with a partner to reverse engineer the code to different technologies to call APIs.
+In this activity, you will work with a partner to reverse engineer the different ways code can be used make API calls.
 
 ## Instructions
 
@@ -363,17 +387,17 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 * Open the [index.html](index.html) file in your browser
 
-* Open up Chrome DevTools to the console.
+* Open Chrome DevTools in the browser and go to the console. 
 
-* Examine the differences between three responses in the console
+* There are three responses in the console, examine the differences between them.
 
 * Open [script.js](./assets/js/script.js) to examine the code.
 
-* Comment on the differences between the 3 methods to return an API call. Also comment on the differences on the format of the data that was returned.
+* Add comments to explain the code for the three different API methods.  
 
 ## 💡 Hint(s)
 
-* No hints, just observe.
+* You may have to use Google to examine the differences between the 3 methods.
 
 ## 🏆 Bonus
 
@@ -382,7 +406,6 @@ In this activity, you will work with a partner to reverse engineer the code to d
   * Whenever we do a fetch request, it goes through the DNS system. How are these URLs attached to DNS?
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
-
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
@@ -395,11 +418,11 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Different ways to retrieve data from APIs will lead to different forms of data being returned.
+    * ✔️ There are many methods that can be used to request API data.
 
     * ✔️ XHR data requires more to write and the data is harder to consume.
 
-    * ✔️ AJAX and fetch data both came back as an array.
+    * ✔️ AJAX and fetch programmatically are structured very similarly, but handle errors differently.
 
 * Open `06-Stu_Reverse_APIs/Solved/assets/js/script.js` in your IDE and explain the following: 
 
@@ -412,11 +435,15 @@ In this activity, you will work with a partner to reverse engineer the code to d
             .log(xhr.response);
         }
     };
+    ```
+     * 🔑 XHR, we check the readyState to be `DONE` before we handle the response. 
+  
+    ```js
     xhr.open('GET', requestUrl);
     xhr.send();
     ```
 
-    * 🔑 XHR requires a lot more configuration to work properly.
+    * 🔑 XHR initializes the api call with `.open`. and sends the request with `.send`.
 
     ```js
     // JQuery Ajax
@@ -424,10 +451,14 @@ In this activity, you will work with a partner to reverse engineer the code to d
         url: requestUrl,
         method: 'GET',
     }).then(function (response) {
-        console.log('Ajax Reponse \n-------------');
+        console.log('Ajax Response \n-------------');
         console.log(response);
     });
+    ```
 
+     * 🔑 jQuery uses `.ajax` to send the request to the API.   Upon completion the response is returned.
+  
+    ```js
     // Browser Fetch Method
 
     fetch(requestUrl)
@@ -435,19 +466,20 @@ In this activity, you will work with a partner to reverse engineer the code to d
         return response.json();
     })
     .then(function (data) {
-        console.log('Fetch Reponse \n-------------');
+        console.log('Fetch Response \n-------------');
         console.log(data);
     });
     ```
-    * 🔑 AJAX and fetch looks almost the same.  They also return the data in the same format.
+
+    * 🔑 AJAX and fetch are structured similarly but they do not work exactly the same.  Fetch will still try to resolve the response with a 404/500 error.  
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ Why do we use fetch?
+    * ☝️ What is the difference between AJAX and fetch?
 
-    * 🙋 Because it is built into the browser.
+    * 🙋 Fetch will try to resolve the data even if there is a 404/500 error and is built into the browser.
 
-    * ☝️ What can we do if we are working with an API method we aren't familar with?
+    * ☝️ What can we do if we are working with an API method we aren't familIar with?
 
     * 🙋 Look up that method's documentation.
 
@@ -457,10 +489,9 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
   * Open up `07-Ins_Demo_Parse/index.html` in the browser to the console. Expand the array under GitHub Organization Users.
 
-
     * 🔑 We need to examine our API data to know what properties we wish to use from the data.
 
-    * 🔑 Because this is an array, we can loop over each element and grab values from the object properties in each element.}
+    * 🔑 Because this is an array, we can loop over each element and grab values from the object properties in each element.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -499,7 +530,7 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
   * Examine the results and note the issue url and the login of the user who wrote the issue
 
-  * Loop through the data in the area the script js file and console.log the issue url and the user login.
+  * Loop through the data in the area in the script.js file and console.log the issue url and the user login.
 
 ## 💡 Hint(s)
 
@@ -512,7 +543,6 @@ In this activity, you will work with a partner to reverse engineer the code to d
   * We connect to these API servers through DNS, but they are attached to an ip address, research how this works
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
-
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
@@ -521,21 +551,21 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with `reading the documentation`? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with reading the documentation? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Read the documenation
+    * ✔️ Parameters are added to the after API endpoints starting with a question mark.
 
-    * ✔️ Add the parameter
+    * ✔️ The response results are filtered based on the parameters used.
 
-    * ✔️ console.log the data in a loop.
+    * ✔️ Read the documentation to discover which parameters are available.
 
 * Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues). Scroll down until you get to the per_page parameter.
 
-    * 🔑 This is the paramater for per_page, we need to add this to the end of our request URL.
+    * 🔑 This is the parameter for per_page, we need to add this to the end of our request URL.
 
 * Open `[script.js](./Solved/assets/js/script.js)` in your browser into the console and explain the following: 
 
@@ -543,6 +573,20 @@ In this activity, you will work with a partner to reverse engineer the code to d
     var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
     ```
     * 🔑 The parameter is added to the end of the request URL.
+
+    ```js
+    fetch(requestUrl)
+    ```
+
+    * 🔑 We fetch the request URL with the parameter.
+
+    ```js
+    .then(function (response) {
+      return response.json();
+    })
+    ```
+    
+    * 🔑 Upon completion of our request, we return the `response.json()`.
 
     ```js
     .then(function (data) {
@@ -554,7 +598,6 @@ In this activity, you will work with a partner to reverse engineer the code to d
     });
   ```
     * 🔑 We loop through the data and console.log the properties from our API response.
-
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -569,7 +612,6 @@ In this activity, you will work with a partner to reverse engineer the code to d
 * Answer any questions before proceeding to the next activity.
 
 ### 15. Instructor Demo: Generate Dynamic Elements. (5 mins) 
-
 
 * Open `09-Ins_Demo_Dynamic/index.html` in your browser and demonstrate the following:
 
@@ -621,7 +663,6 @@ In this activity, you will work with a partner to write the code to generate the
   * Sometimes we need to use data that isn't from third party APIs.  The data maybe stored in json format within a file.  Research how to use fetch to read json from a data file.
 
 * Use [Google](https://www.google.com) or another search engine to answer the above.
-
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
@@ -636,11 +677,11 @@ In this activity, you will work with a partner to write the code to generate the
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Examine the data from the response in the console.
+    * ✔️ We received the response data from our fetch request.
 
-    * ✔️ Determine what properties we need to use.
+    * ✔️ We determine what properties we need to use from the response.
 
-    * ✔️ Loop through the data and generate HTML.
+    * ✔️ We access those properties' values in order to display them on the page.
 
 * Open `[index.html](./Solved/index.html)` in your browser into the console and explain the following: 
 
@@ -649,21 +690,41 @@ In this activity, you will work with a partner to write the code to generate the
 * Open `[script.js](./Solved/assets/js/script.js)` in your browser into the console and explain the following: 
 
     ```js
+    fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      //Using console.log to examine the data
+      console.log(data);
+    ```
+
+    * 🔑 We received the response data from our fetch request.
+  
+    ```js
      for (var i = 0; i < data.length; i++) 
     ```
 
-    * 🔑 We loop through the data
+    * 🔑 We loop through the response data.
 
     ```js
      for (var i = 0; i < data.length; i++) {
         //Creating a h3 element and a p element
         var userName = document.createElement('h3');
         var userUrl = document.createElement('p');
+    ```
 
+    * 🔑 We create elements..
+
+    ```js
         //Setting the text of the h3 element and p element.
         userName.textContent = data[i].login;
         userUrl.textContent = data[i].url;
+    ```
 
+    * 🔑 We take each property from the response as use the property's value as text content for our elements.
+  
+    ```js
         //Appending the dynamically generated html to the div associated with the id="users"
         //Append will attach the element as the bottom most child.
         usersContainer.append(userName);
@@ -671,7 +732,7 @@ In this activity, you will work with a partner to write the code to generate the
       }
     ```
 
-    * 🔑 We generate dynamic HTML using that data.
+    * 🔑 We append each element to `<div id="users">`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
