@@ -82,7 +82,7 @@ By the end of class, students will be able to
   * Fetch requests begin with the URL of the server you are looking to receive data from. In this case, our `root-endpoint` would be `http://example.com` with our `path` being `/movies.json`. Making a request to only a root-endpoint normally does not yield any results.
 
   ```js
-    fetch('http://example.com/movies.json')
+  fetch('http://example.com/movies.json')
   ```
 
   * Upon completion of our request, the `.then` statement allows us to do work with the response. In this case, we are using the built-in `.json()` to convert the response to JSON. Assure students that we will cover JSON more later on in today's class. For now, all they need to know is it is a nicer way of formatting returned data for our viewing.
