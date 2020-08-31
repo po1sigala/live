@@ -8,7 +8,7 @@ fetch('/api/books/long', {
 })
   .then((response) => response.json())
   .then((data) => {
-    console.log('Success in getting all books:', data);
+    console.log('Success in getting long books:', data);
     data.forEach(({ title, author, genre, pages }, i) => {
       const wellContainer = document.getElementById('well-section');
       const sectionBreak = document.createElement('hr');
