@@ -4,8 +4,7 @@
 const Sequelize = require('sequelize');
 
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-// TODO remove pw
-const sequelize = new Sequelize('starwars', 'root', 'starwars', {
+const sequelize = new Sequelize('starwars', 'root', '', {
   host: 'localhost',
   port: 3306,
   dialect: 'mysql',
