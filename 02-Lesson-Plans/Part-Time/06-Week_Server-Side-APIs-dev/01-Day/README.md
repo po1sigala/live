@@ -345,7 +345,7 @@ In this activity, you will work with a partner to request data from GitHub using
 
 ### 8. Instructor Demo: Different APIs (5 min)
 
-* Open `05-Ins_Different_APIs/assets/script/script.js` in your IDE and show the following:
+* Open `05-Ins_Different_APIs/assets/js/script.js` in your IDE and show the following:
 
 * There is more than one way to request data from a server-side API.
   
