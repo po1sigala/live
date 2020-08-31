@@ -345,30 +345,19 @@ In this activity, you will work with a partner to request data from GitHub using
 
 ### 8. Instructor Demo: Different APIs (5 min)
 
-Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demonstrate the following:
+* Open `05-Ins_Different_APIs/assets/script/script.js` in your IDE and show the following:
 
-* There is more than one way to request data from a server-side API. This is how we would request data from APIs using jQuery.
+* There is more than one way to request data from a server-side API.
   
-  ```js
-  $.ajax({
-      method: "GET",
-      url: "https://api.github.com",
-  });
-  ```
+  * 🔑 XHR is the predecessor to fetch, requires more code to execute.
 
-* Open Chrome DevTools in the browser and go to the console.  
-  
-* In the console copy this and paste `fetch('https://api.github.com').then(function(response){return response.json()}) .then(console.log)`, demonstrating the following:
-
-  * 🔑 We use fetch because it is built in the browser.
-
-  * 🔑 This allows us to avoid using third party libraries such as jQuery.
+  * 🔑 AJAX requires third party library, jQuery, to work.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we learn about using fetch?
+    * ☝️ How do we learn about these different methods.
 
-    * 🙋 We use the documentation.
+    * 🙋 We read their documentation.
 
 * Answer any questions before proceeding to the next activity.
 
