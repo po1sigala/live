@@ -21,15 +21,15 @@ By the end of class, students will be able to
 
 * Understand the client-server model.
 
-* Light introduction to cURL
+* How to use cURL to test an API response.
 
 * Understand the Fetch API and why we use it.
 
-* Render fetched data using a fetch request.
+* Render fetched data on the page after using a fetch request.
 
 * A light introduction to different API request methods using Fetch vs AJAX vs XHR. 
 
-* Light introduction to API parameters.
+* Understand the structure of an API parameter.
 
 ## Time Tracker
 | Start  | #   | Activity Name                       | Duration |
