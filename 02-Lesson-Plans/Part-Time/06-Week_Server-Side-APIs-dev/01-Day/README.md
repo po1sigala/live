@@ -1,6 +1,6 @@
 # 06.1 Part-Time Lesson Plan: Introduction to Fetch
 
-## Overview 
+## Overview
 
 In this class, we will request data from server-side APIs using Fetch and consume that data.
 
@@ -8,30 +8,32 @@ In this class, we will request data from server-side APIs using Fetch and consum
 
 * Complete activities `01-Ins_Demo_Curl` through `10-Stu_Demo_Dynamic`.
 
-* Take a few moments before class to get familiar with the [Fetch documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and [GitHub API](https://docs.github.com/en/rest) as students will rely heavily on it in class and may need help finding answers.
+* Students will be using Fetch today to make requests. Take a few moments before class to get familiar with the [Fetch documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-* Throughout the class will be working with Fetch Requests.
-  
-* They will use the API data to dynamically generate HTML.
+* We will only be hitting the [GitHub API](https://docs.github.com/en/rest), so check out the documentation and get familiarized. Students will rely heavily on it in class and may need help finding answers.
 
-* Students will be repeatedly asked to refer to the GitHub Documentation.
+* Students will be repeatedly asked to refer to the GitHub Documentation, so be sure to have the link on hand just in case.
+
+* This is students first exposure
 
 ## Learning Objectives
+
 By the end of class, students will be able to
 
 * Understand the client-server model.
 
-* How to use cURL to test an API response.
+* Use cURL to make a simple request to an API.
 
-* Understand the Fetch API and why we use it.
+* Understand and explain the Fetch API and why we use it.
 
-* Render fetched data on the page after using a fetch request.
+* Use JavaScript to render data obtained with `fetch()` on the page.
 
-* A light introduction to different API request methods using Fetch vs AJAX vs XHR. 
+* Understand and explain the differences between Fetch, AJAX, and XHR. 
 
 * Understand the structure of an API parameter.
 
 ## Time Tracker
+
 | Start  | #   | Activity Name                       | Duration |
 |---     |---  |---                                  |---       |
 | 6:30PM | 1   | Instructor Do: Fetch Introduction   | 0:10     |
@@ -61,70 +63,75 @@ By the end of class, students will be able to
 
 * Welcome students to class.
   
-* Inform the students that this unit is primarily focused on the Client-Server Request/Response model using Fetch.
+* Inform students that today is going to be about `fetch`. Fetch allows us to make `requests` to server-side APIs and receive a `response` that we can work with.
   
-* Explain that server-side APIs is a way for companies to exchange data. This can be thought of as a contract to exchange data. The rules of the contract is the API's documentation. As long as you follow the rules, the server will send back the data to your application.
+* Server-side APIs are a way organizations can offer developers, and eventually end users a way of receiving and consuming data.
+
+* Normally, APIs documentation will explain how to interact it to make proper requests and receive successful responses.
 
 * Open up your browser and go to `https://api.github.com` and point out the following:
 
-* These are all endpoint URLs for GitHub's API.
+  * These are all endpoint URLs for GitHub's API.
   
-* The root endpoint is the part of the URL they all have in common, in GitHub's case it's `https://api.github.com`.
+  * The root-endpoint is the part of the URL they all have in common, in GitHub's case it's `https://api.github.com`.
 
-* The root-endpoint is the starting point of the API you're requesting from. 
-
-* The other endpoints start with the forward slash and come after the root endpoint. This allows us to request specific data from the API.
+  * To make a specific request, we attach a `path` to the `root-endpoint`, leaving us with a complete `endpoint`.
 
 * Open the [Fetch Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and scroll to the first code block, pointing out the following:
 
-  * Fetch requests begin with the URL of the server you are looking to receive data from.
-    ```js
-      fetch('http://example.com/movies.json')
-    ```
+  * Fetch requests begin with the URL of the server you are looking to receive data from. In this case, our `root-endpoint` would be `http://example.com` with our `path` being `/movies.json`. Making a request to only a root-endpoint normally does not yield any results.
 
-  * Upon completion of our request, the .then statement allows us to do something with the response. In this case, we are using the built-in `.json()` to convert the response to JSON.
-  
-    ```js
-    .then(function(response){
-      return response.json();
-    })
-    ```
-
-  * Assure students that we will cover JSON more later on in today's class. For now, all they need to know is it is a nicer way of formatting returned data for our viewing.
-  
-  * Next, we `.then()` finally console log our JSON formatted `data`.
-  
-    ```js
-    .then(function(data){
-      console.log(data)
-    });
+  ```js
+    fetch('http://example.com/movies.json')
   ```
 
-  * Let them know that this data is typically used to render dynamically generate elements.
+  * Upon completion of our request, the `.then` statement allows us to do work with the response. In this case, we are using the built-in `.json()` to convert the response to JSON. Assure students that we will cover JSON more later on in today's class. For now, all they need to know is it is a nicer way of formatting returned data for our viewing.
+  
+  ```js
+  .then(function(response){
+    return response.json();
+  })
+  ```
+  
+  * Next, we use `.then()` to finally console log our JSON formatted `data`.
+  
+  ```js
+  .then(function(data){
+    console.log(data)
+  });
+  ```
 
-### 2. Instructor Demo: cURL Demo (5 min) 
+  * We can also use a tool called `cURL` to make simple requests via our terminal. Let's examine what this simpler request looks like.
 
-* Open your terminal to show the following:
+### 2. Instructor Demo: cURL Demo (5 min)
   
 * Open your terminal and type `curl https://api.github.com/users`, demonstrating the following:
 
   * GitHub returned a list of the last 30 users who made a profile!
 
-*  Ask the class the following questions (:point_up:) and call on students for the answers (:raising_hand:) (edited) 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋).
 
-    * ☝️ What happened when I entered the curl command to GitHub.
+  * ☝️ What happened when I entered the curl command to GitHub.
 
-    * 🙋 We asked GitHub for user information via our terminal!
+  * 🙋 We asked GitHub for user information via our terminal!
 
-    * ☝️ What is a good use case for cURL?
+  * ☝️ What is the `root-endpoint` in the above URL?
 
-    * 🙋 We can use it to make sure our API URL is correct or working.
+  * 🙋 `https://api.github.com`
+
+  * ☝ What is the `path` that gives us `users`?
+
+  * 🙋 `/users.`
+
+  * ☝️ What is a good use case for cURL?
+
+  * 🙋 We can use it to quickly make sure our API URL is correct or working without the need for JavaScript.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 3. Student Do: cURL Debug (15 min) 
+### 3. Student Do: cURL Debug (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Curl_Debug/README.md`.
 
@@ -133,21 +140,21 @@ By the end of class, students will be able to
 ```md
 # cURL Debug
 
-In this activity, you will work with a partner using cURL
+In this activity, you will work with a partner using `cURL`.
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* As a developer, I want to test the API I plan to use with cURL.
+* As a developer, I want to test the API I plan to use with `cURL`.
 
-* When I use cURL, then I should receive a response from the server, but right now the terminal returns nothing.
+* When I make a request with cURL, then I should receive a response from the server, but right now the terminal returns nothing.
 
-* Open up your terminal and type  `curl http://api.github.com` and hit `enter.
-
-* Using the following questions, try to debug and fix the code:
+* Open up your terminal and type  `curl http://api.github.com` and hit `enter`.
 
   * If all goes as expected, the terminal should have gone to the next line without returning any info.
+
+* Using the following questions, try to debug and fix the code:
 
   * What error messages are being logged, if any?
 
@@ -170,7 +177,7 @@ In this activity, you will work with a partner using cURL
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 4. Instructor Review: cURL Debug (10 mins) 
+### 4. Instructor Review: cURL Debug (10 mins)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -180,64 +187,65 @@ In this activity, you will work with a partner using cURL
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Small errors are common.
+  * ✔️ Typos can lead to lack of `response`
 
-    * ✔️ Errors can prevent our request from working.
+  * Go to [GitHub API Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint)
 
-   * Go to [GitHub API Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint)
+  * 🔑 When we examine the URL we entered, we can see that it is using `http` instead of `https`. Simple typos will cause our requests to not hit the proper endpoint, yielding no results.
 
-    * 🔑 The error is that the less S was missing from the URL.  It should be `https://api.github.com`.
-
-    * 🔑 Double checking your work helps prevent small errors turning into big ones.
+    ```bash
+    curl http://api.github.com
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What would we reference to know if our API URL is correct.
+  * ☝️ What would we reference to know if our API URL is correct.
 
-    * 🙋 The documentation
+  * 🙋 The documentation.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Stick around for Office Hours to ask for help.
+  * 🙋 Stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
+## 5. Instructor Demo: Create Fetch (5 min)
+
 * Open `03-Ins_Demo-Fetch/index.html` in the browser and show the following:
 
-    * 🔑 We click on the button, there is a slight delay, and the data appears.
-    
-    * 🔑 Earlier in the class we use the term consuming the API, that means that we accept the data response from the server and did something with it.
+  * 🔑 We hit the `Click Me` button and a list of NodeJS GitHub repositories appears.
   
 * Open `03-Ins_Demo-Fetch/assets/js/script.js` in your IDE and show the following statements:
   
-    * We set the request URL to a variable. This is the URL that our `fetch` method will use to request data.
-    
-    ```js
-    var requestUrl = 'https://api.github.com/orgs/nodejs/repos'; 
-    ```
-    * 🔑 We pass the requestUrl to the fetch method. Note the root endpoint URL and the endpoint portion that follows.
+  * We set our request URL to a variable. This is the URL that our `fetch` method will use to request data. The `path` we are making a request too here is `/orgs/nodejs/repos`.
 
-     ```js
-    fetch(requestUrl)
-    ```
+  ```js
+  var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+  ```
 
-    * 🔑 We then take the response and convert it into JSON and `return` the formatted response.
+  * 🔑 We pass the `requestUrl` variable as an argument to the `fetch` method.
 
-    ```js
-    .then(function (response) {
-      return response.json();
-    })
-    ```
+  ```js
+  fetch(requestUrl)
+  ```
+
+  * 🔑 We then take the response and convert it into JSON and `return` the formatted response.
+
+  ```js
+  .then(function (response) {
+    return response.json();
+  })
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What do we need to pass through fetch to get an API to send back data?
+  * ☝️ What do we need to pass through fetch to get an API to send back data?
 
-    * 🙋 We pass through the URL of the API we wish to use.
-  
-    * ☝️ What do we with the response?
+  * 🙋 We need a proper endpoint as provided by the documentation.
 
-    * 🙋 We take the response and convert it into JSON and `return` the formatted response.
+  * ☝️ How is a request like this useful?
+
+  * 🙋 It allows us as developers to quickly access all the data of a particular GitHub organization, or consume all the data from any available endpoint quickly.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -291,74 +299,70 @@ In this activity, you will work with a partner to request data from GitHub using
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ `/users/{username}/repos` 
+  * ✔️ `root-endpoint` + `path`  = `endpoint`.
 
-    * ✔️ We attached our desired endpoint to our root endpoint. 
+  * ✔️ `/users/{username}/repos`.
 
-    * ✔️ The `root endpoint` + `endpoint` gives us the full request URL.
+* Open `04-Stu_Create-Fetch/Solved/assets/js/script.js` in your IDE and explain the following:
 
-* Open `04-Stu_Create-Fetch/Solved/assets/js/script.js` in your IDE and explain the following: 
+  * We create a function called `getApi`.
 
-     We create a function called `getApi`.
+  ```js
+  function getApi() {
+  ```
 
-    ```js
-     getApi() {
-    ```
+  * 🔑 We save the full endpoint we would like to make a request to in a variable called `requestUrl`, replacing `{USERNAME}` with the username we would like to search.
 
-    * 🔑 We save the full endpoint we would like to make a request to in a variable called requestUrl, replacing {USERNAME} with the username we would like to search.
-    
-    ```js
-    // replace {USERNAME} with your github username
-    var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
-    ```
+  ```js
+  var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
+  ```
 
-    * 🔑 We then pass the requestUrl as an argument to our fetch method.
+  * We then pass the `requestUrl` variable as an argument to our `fetch` method.
 
-    ```js
-    fetch(requestUrl)
-    ```
-    * 🔑 We then pass the requestUrl as an argument to our fetch method.
+  ```js
+  fetch(requestUrl)
+  ```
 
-    ```js
-    .then(function (response) {
-      return response.json();
-    })
-    ```
+  * We take the response and convert it into JSON. Lastly we `return` the JSON formatted response.
+
+  ```js
+  .then(function (response) {
+    return response.json();
+  })
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we build our requestUrl?
+  * ☝️ How do we build our requestUrl?
 
-    * 🙋 We attach our desired endpoint to the root endpoint.
+  * 🙋 We attach our desired endpoint to the root endpoint.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
+  * 🙋 Read the [GitHub Docs](https://docs.github.com/en/rest), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Different APIs (5 min) 
+### 8. Instructor Demo: Different APIs (5 min)
 
 Open [jQuery Docs](https://api.jquery.com/jquery.ajax/) in your browser and demonstrate the following:
 
-* Let the class know that there is more than one way to get data from an API.
+* There is more than one way to request data from a server-side API. This is how we would request data from APIs using jQuery.
   
-    ```js
-    $.ajax({
-        method: "GET",
-        url: "https://api.github.com",
-    });
-    ```
+  ```js
+  $.ajax({
+      method: "GET",
+      url: "https://api.github.com",
+  });
+  ```
 
-    * 🔑 This is how we would request data from APIs using jQuery.
- 
 * Open Chrome DevTools in the browser and go to the console.  
   
 * In the console copy this and paste `fetch('https://api.github.com').then(function(response){return response.json()}) .then(console.log)`, demonstrating the following:
 
-    * 🔑 We use fetch because it is built in the browser.
+  * 🔑 We use fetch because it is built in the browser.
 
-    * 🔑 This allows us to avoid using third party libraries such as jQuery.
+  * 🔑 This allows us to avoid using third party libraries such as jQuery.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
