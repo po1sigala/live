@@ -13,7 +13,7 @@
   4) Navigate to the `post.js` file.
 
   5) You will need to set an `associate` property to the `Post` model after it's defined. There's an example of this type of association being done here: 
-  <https://github.com/sequelize/express-example/blob/master/models/task.js>
+  <https://github.com/sequelize/express-example/blob/legacy/models/task.js>
 
   * This may take a few tries to implement correctly in your own Post model (There's a lot of curly braces there!). You can verify your code works by starting your node server and then checking MySQL Workbench. If the Posts table now has a foreign key of AuthorId, you were successful.
 
