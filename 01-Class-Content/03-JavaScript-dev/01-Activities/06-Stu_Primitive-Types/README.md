@@ -6,7 +6,7 @@ In this activity, you will work with a partner to reverse engineer code to ident
 
 * Be sure to work with your partner!
 
-* Open [06-Stu_Primitive-Types/Unsolved/script.js]() to examine the code.
+* Open [script.js](06-Stu_Primitive-Types/Unsolved/script.js) to examine the code.
 
 * Insert comments where specified to explain what is happening in that block of code.
 

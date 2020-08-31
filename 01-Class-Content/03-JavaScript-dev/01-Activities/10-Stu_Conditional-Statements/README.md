@@ -6,7 +6,7 @@ In this activity, you will work with a partner to create an algorithm using cond
 
 * Be sure to work with your partner!
 
-* Open [10-Stu_Conditional-Statements/Unsolved/script.js]() to examine the code and implement the following features:
+* Open [script.js](10-Stu_Conditional-Statements/Unsolved/script.js) to examine the code and implement the following features:
 
   * As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to true, only one expression evaluates to true, or both expressions evaluate to false. 
 
