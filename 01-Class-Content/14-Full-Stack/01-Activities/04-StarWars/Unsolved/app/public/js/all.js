@@ -1,29 +1,44 @@
-// Code here handles what how the page displays all of the characters
-// It pings the server. The server then pings the database and displays all of the characters.
+// Code here will dictate how the page displays all the characters
 
-// make a get request to our api to grab every character
-$.get("/api", function(data) {
+fetch('/api', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success in grabbing all characters:', data);
+    data.forEach(({ name, role, age, forcePoints }, i) => {
+      // Parent div for other elements
+      const sectionBreak = document.createElement('hr');
+      const wellSection = document.createElement('div');
+      wellSection.classList.add('well');
 
-  // for each character that our server sends us back
-  for (var i = 0; i < data.length; i++) {
-    // create a parent div for the oncoming elements
-    var wellSection = $("<div>");
-    // add a class to this div: 'well'
-    wellSection.addClass("well");
-    // add an id to the well to mark which well it is
-    wellSection.attr("id", "character-well-" + i);
-    // append the well to the well section
-    $("#well-section").append(wellSection);
+      // Add an ID so we can tell each character apart
+      wellSection.setAttribute('id', `character-well-${i}`);
 
-    // Now add all of our character data to the well we just placed on the page
+      // Append the well to the well container
+      const wellContainer = document.getElementById('well-section');
+      wellContainer.appendChild(wellSection);
 
-    // make the name an h2,
-    $("#character-well-" + i).append("<h2>" + data[i].name + "</h2>");
-    // the role an h3,
-    $("#character-well-" + i).append("<h3>Role: " + data[i].role + "</h4>");
-    // the age an h3,
-    $("#character-well-" + i).append("<h3>Age: " + data[i].age + "</h4>");
-    // and the forcepoints an h3.
-    $("#character-well-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
-  }
-});
+      // Add all characters
+      const nameEl = document.createElement('h2');
+      nameEl.textContent = `Name: ${name}`;
+
+      const roleEl = document.createElement('h6');
+      roleEl.textContent = `Role: ${role}`;
+
+      const ageEl = document.createElement('h6');
+      ageEl.textContent = `Age: ${age}`;
+
+      const fpEl = document.createElement('h6');
+      fpEl.textContent = `Force Points: ${forcePoints}`;
+
+      wellSection.appendChild(nameEl);
+      wellSection.appendChild(roleEl);
+      wellSection.appendChild(ageEl);
+      wellSection.appendChild(fpEl);
+      wellSection.appendChild(sectionBreak);
+    });
+  });
