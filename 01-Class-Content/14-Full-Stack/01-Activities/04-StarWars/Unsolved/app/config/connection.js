@@ -12,8 +12,7 @@ const source = {
     port: 3306,
     user: 'root',
     // Be sure to update with your own MySQL Password!
-    // TODO: Remove this!!!
-    password: 'starwars',
+    password: '',
     database: 'starwars',
   },
 };
