@@ -1,22 +1,28 @@
 # Media Query for Print
 
-In this activity, you will work with a partner to create a media query for webpages viewed on a screen in print preview mode or actually printed on paper to look neatly organized and uncluttered.
+In this activity, you will work with a partner to create a media query for printing webpages so that it is organized and uncluttered on paper.
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+* Open [index.html](./Unsolved/index.html) in your browser and view in Print Preview Mode.
 
   * As a user, I want to print from the web but exclude UI elements so they don't clutter the page on paper.
 
-  * When I view a webpage in print preview mode, I want the page margins to be set at 2cm.
+* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
 
-  * If the webpage contains links, when the webpage is printed, I want to be able to see links' URLs printed on the page.
+  * When I print this blog post, I don't want the form to be printed.
+
+  * If the blog post contains links, I want to see the links' URLs printed on the page, however I don't want to see the header's links printed.
+
+* When printing the page from Google Chrome, the print preview should look something like this image:
+
+  ![The Chrome print preview section shows the page with the print media query styles applied](./Images/01-print-preview.png)
 
 ## 💡 Hint(s)
 
-* To print the URL on the page, how can we use the pseudo-element `:after` to take the value of the `href` attribute and display it in brackets after the link?
+* To print the URL on the page, how can we use the pseudo-element `::after` to take the value of the `href` attribute and display it in brackets after the link?
 
 ## 🏆 Bonus
 

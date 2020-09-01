@@ -12,17 +12,19 @@ In this activity, you will work with a partner to use the MDN web docs to implem
 
 * Using the documentation, implement the following:
 
-  * As a user, I want to see an icon next to every `<a>` element that links to a downloadable CSS file.
+  * As a user, I want to see an icon next to every `<a>` element that has a link to a downloadable CSS file in its `href` attribute.
 
   * As a developer, I want to use only CSS to insert this icon.
 
 * To meet these requirements, the page should look like the following image:
 
-  * { @TODO insert image }
+  ![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
 
 * You can use the following emoji for the icon: 📝
 
 ## 💡 Hint(s)
+
+* You can target a file type by its file extension (i.e. `.css`, `.html`, `.md`, etc.)
 
 * Pseudo-elements can help you accomplish this task!
 
