@@ -6,7 +6,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ## Instructor Notes
 
-- `Summary: Complete activities through`
+- `Summary: Complete activities 7-14 in Unit 20.`
 
 - The demos and activities will only include the `src` folder which you will need to replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
