@@ -30,6 +30,8 @@ Next unit, we begin JavaScript, make sure to review the slide decks in advance.
 
 Next unit we will also provide students with common problems they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
 
+> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Homework-Guide/README.md) during the first week of class.
+
 ## Career Connection
 Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 

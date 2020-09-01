@@ -16,6 +16,8 @@ The main goal of this unit is to help students get adjusted to an "average day" 
 
 A lot of time will be spent ensuring that students have properly installed all of the tools and programs from the prework.
 
+> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Homework-Guide/README.md) during the first week of class.
+
 ## Helpful Links
 
 * [Generating an SSH Key for GitHub](https://help.github.com/articles/generating-an-ssh-key/)
