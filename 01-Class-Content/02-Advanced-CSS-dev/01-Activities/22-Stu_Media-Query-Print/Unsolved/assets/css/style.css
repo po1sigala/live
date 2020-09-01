@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 h1 {
@@ -29,13 +29,13 @@ nav ul {
 }
 
 nav a {
-  color: #99f7f2;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: white;
+  color: #fff;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #d8a47f;
 }
 
 article p {
@@ -77,19 +77,28 @@ label {
 }
 
 button {
-  color: white;
-  background-color: #497573;
+  color: #fff;
+  background-color: #13293d;
   border: none;
   cursor: pointer;
 }
 
 select {
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #13293d;
+  color: #fff;
 }
 
 .text-input {
@@ -102,13 +111,13 @@ select,
 button {
   padding: 1%;
   outline: none;
-  border: 1px solid #497573;
+  border: 1px solid #13293d;
 }
 
 .text-input:hover,
 select:hover,
 button:hover {
-  box-shadow: 0 0 5px #6c7575;
+  box-shadow: 0 0 5px #13293d;
 }
 
 .text-input:focus {
@@ -134,20 +143,12 @@ button:hover {
 }
 
 .checkbox:checked + label {
-  color: #999999;
+  color: #13293d;
   font-style: italic;
 }
 
 .checkbox:checked + label::after {
   content: ' (thanks!)';
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
 }
 
 @media screen and (max-width: 768px) {
@@ -156,6 +157,4 @@ footer {
   }
 }
 
-/* Add a media query for print */
-
-/* What CSS at-rule is used to modify the margins when printing? */
+/* TODO: Add a media query for print */

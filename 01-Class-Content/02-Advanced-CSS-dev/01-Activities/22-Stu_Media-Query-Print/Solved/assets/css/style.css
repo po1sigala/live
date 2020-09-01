@@ -86,11 +86,20 @@ button {
 
 select {
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #13293d;
+  color: #fff;
 }
 
 .text-input {
@@ -143,14 +152,6 @@ button:hover {
   content: ' (thanks!)';
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-  background-color: #13293d;
-  color: #fff;
-}
-
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -165,9 +166,4 @@ footer {
   p a::after {
     content: '(' attr(href) ')';
   }
-}
-
-/* @page used to modify margins */
-@page {
-  margin: 2cm;
 }

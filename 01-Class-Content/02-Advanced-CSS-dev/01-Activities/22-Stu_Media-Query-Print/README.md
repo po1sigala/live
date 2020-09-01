@@ -16,7 +16,9 @@ In this activity, you will work with a partner to create a media query for print
 
   * If the blog post contains links, I want to see the links' URLs printed on the page, however I don't want to see the header's links printed.
 
-  * I want to see the blog post evenly centered on the page with a 2cm margin all around.
+* When printing the page from Google Chrome, the print preview should look something like this image:
+
+  ![The Chrome print preview section shows the page with the print media query styles applied](./Images/01-print-preview.png)
 
 ## 💡 Hint(s)
 
