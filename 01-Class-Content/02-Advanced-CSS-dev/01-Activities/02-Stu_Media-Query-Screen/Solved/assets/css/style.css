@@ -22,19 +22,19 @@ header {
   width: 25%;
 }
 
-.card > header {
+.card header {
   padding: 20px;
 }
 
-.card > p {
+.card p {
   text-align: center;
 }
 
-.card > img {
+.card img {
   width: 100%;
 }
 
-/* Cards should split into two columns at 992px or smaller */
+/* Cards are split into two columns at 992px or smaller */
 @media screen and (max-width: 992px) {
   .card {
     width: 50%;
@@ -45,7 +45,7 @@ header {
   }
 }
 
-/* Cards should be stacked on top of each other at 768px or smaller */
+/* Cards are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;

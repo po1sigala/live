@@ -55,17 +55,17 @@ footer {
   background-color: #fff;
 }
 
-/* Use rotate to rotate the photo to the left or right */
+/* We can use rotate to rotate the photo to the left or right */
 .rotate {
   transform: rotate(7deg);
 }
 
-/* Use scale to stretch the photo vertically or horizontally */
+/* We can use scale to stretch the photo vertically or horizontally */
 .scale {
   transform: scale(1.5, 1);
 }
 
-/* Use skew to skew the photo to the left or right */
+/* We can use skew to skew the photo to the left or right */
 .skew {
   transform: skew(15deg);
 }

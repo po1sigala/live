@@ -47,6 +47,20 @@ aside {
 }
 
 /* 
+What does the flex-shrink property specify?
+It specifies how much a flex item will shrink relative to the rest of the flex items
+What is doing here? 
+We are telling the footer to not shrink as much as the other items.
+*/
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
 What does the justify-content property do?
 It is used to align the flex items; in our case, the product cards 
 */
@@ -73,30 +87,16 @@ We are making the product card not growable, not shrinkable, and with an initial
   flex: 0 0 400px;
 }
 
-.card > header {
+.card header {
   padding: 20px;
 }
 
-.card > p {
+.card p {
   text-align: center;
 }
 
-.card > img {
+.card img {
   width: 100%;
-}
-
-/* 
-What does the flex-shrink property specify?
-It specifies how much a flex item will shrink relative to the rest of the flex items
-What is doing here? 
-We are telling the footer to not shrink as much as the other items.
-*/
-footer {
-  flex-shrink: 0;
-  padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
 }
 
 /* 

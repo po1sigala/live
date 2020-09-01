@@ -6,17 +6,13 @@ In this activity, you will work with a partner to reverse engineer code to figur
 
 * Be sure to work with your partner!
 
-* Open [index.html](./Unsolved/index.html) in your browser and open Chrome DevTools.
-
-  * Click the `Toggle Device Toolbar` to open the UI that enables you to simulate a mobile viewport.
-
-  * View the webpage as a smartphone, tablet, or set it as Responsive Viewport Mode and play around with the size.
-
-  * Notice what changes in terms of the layout when you change the screen size.
+* Open [index.html](./Unsolved/index.html) in your browser and notice what changes in terms of the layout when you change the screen size.
 
 * Open [style.css](./Unsolved/assets/css/style.css) to examine the code.
 
-* Insert comments where specified to explain how the layout is changing at each breakpoint.
+  * There are questions written as comments throughout the code. 
+
+  * Write your answers as comments under the questions in the space provided.
 
 ## 💡 Hint(s)
 

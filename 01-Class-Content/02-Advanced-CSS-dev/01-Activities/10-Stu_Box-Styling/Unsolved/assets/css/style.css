@@ -63,7 +63,7 @@ footer {
   align-items: flex-start;
 }
 
-/* Add properties to the cards to achieve the required look */
+/* TODO: Add properties to the cards to achieve the required look */
 .card {
   border-style: solid;
   border-width: 1px;

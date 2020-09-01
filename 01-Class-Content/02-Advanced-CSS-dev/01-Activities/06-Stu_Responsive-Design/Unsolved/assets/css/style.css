@@ -14,7 +14,10 @@ header {
   color: #fff;
 }
 
-/* What happens when we set the display property to flex? */
+/* 
+What happens when we set the display property to flex? 
+TODO: Write your answer here 
+*/
 nav {
   display: flex;
   background-color: #d8a47f;
@@ -27,7 +30,10 @@ nav a {
   text-align: center;
 }
 
-/* What is the flex-wrap property? */
+/* 
+What is the flex-wrap property? 
+TODO: Write your answer here 
+*/
 main {
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +46,23 @@ aside {
   text-align: center;
 }
 
-/* What does the justify-content property do? */
+/* 
+What does the flex-shrink property specify?
+What is doing here? 
+TODO: Write your answer here 
+*/
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+TODO: Write your answer here 
+*/
 .products {
   flex: 4;
   background-color: #fff;
@@ -53,6 +75,7 @@ aside {
 /* 
 What is the flex property a shorthand property for?
 What is it doing here? 
+TODO: Write your answer here 
 */
 .card {
   border-style: solid;
@@ -62,33 +85,22 @@ What is it doing here?
   flex: 0 0 400px;
 }
 
-.card > header {
+.card header {
   padding: 20px;
 }
 
-.card > p {
+.card p {
   text-align: center;
 }
 
-.card > img {
+.card img {
   width: 100%;
-}
-
-/* 
-What does the flex-shrink property specify?
-What is doing here? 
-*/
-footer {
-  flex-shrink: 0;
-  padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
 }
 
 /* 
 What does the flex-direction property define?
 What is it doing here? 
+TODO: Write your answer here 
 */
 @media screen and (max-width: 768px) {
   main,
