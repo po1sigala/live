@@ -51,7 +51,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Grading Requirements
 
-This challenge is graded based on the following criteria: 
+This homework is graded based on the following criteria: 
 
 
 ### Technical Acceptance Criteria: 40%
@@ -76,7 +76,7 @@ This challenge is graded based on the following criteria:
 
 ### Application Quality: 15%
 
-* Application resembles (at least 90%) screenshots provided in challenge instructions.
+* Application resembles (at least 90%) screenshots provided in the homework instructions.
 
 ### Repository Quality: 13%
 
