@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9C6ae;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -59,9 +59,9 @@ article p {
   font-size: 110%;
 }
 
-/* Style the keyword - underline, black text, grab cursor */
+/* TODO: Style the keyword - underline, black text, grab cursor */
 
-/* Position tooltip above the keyword, same color as header and nav links, no border-radius, smaller font size */
+/* TODO: Position tooltip above the keyword, same color as header and nav links, no border-radius, smaller font size */
 
 aside {
   width: 25%;
@@ -109,7 +109,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header, main {
+  header,
+  main {
     flex-direction: column;
   }
 

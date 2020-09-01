@@ -1,4 +1,4 @@
-/* Set the font size and line height */
+/* TODO: Set the font size and line height */
 body {
   display: flex;
   flex-direction: column;
@@ -13,15 +13,15 @@ header {
   color: #fff;
 }
 
-/* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+/* TODO: Change the heading size to 200%, give it a margin all around, and assign font family to serif */
 h1 {
 }
 
-/* Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
+/* TODO: Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
 h2 {
 }
 
-/* Change header size to be slightly smaller than h2 and assign font family to serif */
+/* TODO: Change header size to be slightly smaller than h2 and assign font family to serif */
 h3 {
 }
 
@@ -32,7 +32,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9C6ae;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -53,11 +53,11 @@ article {
   border-bottom: 1px solid #d8a47f;
 }
 
-/* Add a margin to the top and bottom of the paragraphs */
+/* TODO: Add a margin to the top and bottom of the paragraphs */
 article p {
 }
 
-/* Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
+/* TODO: Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
 article ul {
 }
 
@@ -81,7 +81,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header, main {
+  header,
+  main {
     flex-direction: column;
   }
 

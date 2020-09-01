@@ -65,20 +65,21 @@ article ul {
   list-style: circle;
 }
 
+/* Implement font stacks */
 .one {
-  font-family: sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 900;
   font-style: oblique;
 }
 
 .two {
-  font-family: serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .three {
-  font-family: monospace;
+  font-family: 'Menlo', 'Lucida Console', monospace;
   font-weight: 100;
   font-style: normal;
 }
