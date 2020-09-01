@@ -12,11 +12,11 @@ This specific type of conflict is not as common as others you will face througho
 
 * Navigate to your GitHub account and create new repository on GitHub called `conflict-resolution`. Make sure it's created with a `README.md` file by selecting the "Add a README file" checkbox. The page should look something like this image:
 
-  ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./Images/100-github-repo-create.png)
+  ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./Images/01-github-repo-create.png)
 
 * Now let's clone the newly created repository to our local machine. You can start to do so by clicking the green "Code" button, selecting the "SSH" option, and copying the value provided, as this image shows:
 
-  ![The GitHub repository shows the SSH connection string for the repo you just created.](./Images/200-repo-home.png)
+  ![The GitHub repository shows the SSH connection string for the repo you just created.](./Images/02-repo-home.png)
 
 * To perform the clone operation, you'll need to use the `git clone` command from your command line. Make sure you've navigated to the location you want your repository to be cloned to using the `cd` command, and then clone the repo with this command:
 
@@ -31,7 +31,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * Let's update our project's `README.md` file. Go ahead and open it in your VSCode editor. You should see something like this image with some slight differences depending on your VSCode configuration:
 
-  ![The VSCode editor screen shows our README file open with the title of the repo in header text](./Images/300-vscode-start.png)
+  ![The VSCode editor screen shows our README file open with the title of the repo in header text](./Images/03-vscode-start.png)
 
 * As of right now, there should just be the name of the repository listed using `#`, which is the markdown equivalent of an HTML `<h1>` element. Let's add some more to this file so there's a change to be tracked by Git. Add the following markdown text to the `README.md` file below what's already there:
 
@@ -43,7 +43,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * The result should look like this image in VSCode:
 
-  ![Our README file now has more text to help indicate some updates were made locally](./Images/400-vscode-updated.png)
+  ![Our README file now has more text to help indicate some updates were made locally](./Images/04-vscode-updated.png)
 
 * Great! Now let's save our work and make a similar update to the README file through the browser using GitHub.
 
@@ -53,7 +53,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * Navigate to the GitHub repository in your browser and you'll notice in the section that displays your `README.md` content, there's a little pencil icon in the upper right corner that will allow us to edit the file directly from GitHub upon click. If you're having trouble locating it, compare your screen to this image:
 
-  ![The GitHub repository allows us to select a pencil icon to edit our README file directly through the site](./Images/500-github-editbtn.png)
+  ![The GitHub repository allows us to select a pencil icon to edit our README file directly through the site](./Images/05-github-editbtn.png)
 
 * Once we enter this edit mode, we can add whatever we need to our `README.md` file, so let's add the following below the content that's already there:
 
@@ -67,7 +67,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * Let's commit this change to our GitHub repository, move a bit lower down the page and leave a commit title such as `Updated README.md on GitHub` and press the "Commit Changes" button. The page should look like this image before pressing the button:
 
-  ![The GitHub editor page shows the options for committing changes to our repository](./Images/600-github-edit.png)
+  ![The GitHub editor page shows the options for committing changes to our repository](./Images/06-github-edit.png)
 
 * Upon completion, you'll be brought back to the `README.md` file's view in GitHub so you can see your updated file.
 
@@ -105,7 +105,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * VSCode makes it easy for us to find and identify where our merge conflicts occur. Let's open it back up to view our `README.md` file again. You should see something like this image:
 
-  ![VSCode shows us where a merge conflict occurred in our content in a clean and organized way](./Images/700-vscode-conflict.png)
+  ![VSCode shows us where a merge conflict occurred in our content in a clean and organized way](./Images/07-vscode-conflict.png)
 
 * Notice the interesting syntax added to our file? That's added by Git when there's a conflict, it first lists what code is in the `HEAD`, which is their way of saying the most up-to-date content that's local. Then, after the dividing line of equal signs `=======`, is the `Incoming Change` which came from the GitHub remote when we ran `git pull`. 
 
@@ -117,7 +117,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * Once you have determined which content should remain, you can use VSCode's options to "Accept Current Change" (which is what you have locally), "Accept Incoming Change" (which is what came from the GitHub repository), or "Accept Both Changes" (which will merge both together). For this case, let's choose the first option to "Accept Current Change". The result should look like this image:
 
-  ![VSCode now shows the content of the README file with the chosen content to remain](./Images/800-vscode-conflictresolution.png)
+  ![VSCode now shows the content of the README file with the chosen content to remain](./Images/08-vscode-conflictresolution.png)
 
 * Great, you just handled a merge conflict! All we have to do now is save your file, commit the fixed code, and push it to GitHub, using the following commands:
 
