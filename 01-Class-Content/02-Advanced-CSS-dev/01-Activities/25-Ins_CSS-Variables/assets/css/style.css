@@ -1,4 +1,6 @@
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
 :root {
+  /* declare a variable with `--` syntax */
   --dark: #13293d;
   --light: #fff;
   --navlink-color: #b9c6ae;
@@ -15,6 +17,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  /* use CSS var() function to reference a variable created above */
   background-color: var(--dark);
   color: var(--light);
 }
@@ -59,6 +62,7 @@ main {
 }
 
 article {
+  /* If we were to change the value of `--dark`, then all references to it would change automatically */
   border-bottom: 1px solid var(--dark);
 }
 

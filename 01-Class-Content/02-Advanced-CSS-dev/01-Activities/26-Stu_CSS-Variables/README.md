@@ -1,6 +1,6 @@
 # CSS Variables
 
-In this activity, you will work with a partner to update colors and border radius using CSS custom properties.
+In this activity, you will work with a partner to create a more efficient style sheet using CSS variables.
 
 ## Instructions
 
@@ -10,17 +10,17 @@ In this activity, you will work with a partner to update colors and border radiu
 
 * Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
 
-  * As a developer, I want to be able to update the text color and border radius of the cards without having to change each one individually.
+  * As a developer, I want to manage CSS values that are used in multiple CSS rules in a more efficient manner.
 
-  * How can we declare custom properties on the `:root` pseudo-class?
+  * How can we declare CSS variables, also known as CSS custom properties, on the `:root` pseudo-class?
 
   * How can we use those custom property values instead of using values that are repeated throughout the style sheet such as `#fff`?
-
-* Try and identify any colors or border radius values that are repeated in the style sheet and use CSS custom properties to maintain them in one location.
 
 ## 💡 Hint(s)
 
 * Refer to [CSS Docs on CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+
+* Try and identify any colors or border radius values that are repeated in the style sheet and use CSS custom properties to maintain them in one location.
 
 ## 🏆 Bonus
 
