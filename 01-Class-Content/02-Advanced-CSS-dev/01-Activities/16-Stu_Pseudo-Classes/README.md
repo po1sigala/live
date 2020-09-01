@@ -20,11 +20,11 @@ In this activity, you will work with a partner to apply pseudo-classes to elemen
 
 * To meet these requirements, the page should look like the following image by default:
 
-  ![The text "Show Resources" appears at the bottom of the article](./Images/resources-closed.png)
+  ![The text "Show Resources" appears at the bottom of the article](./Images/01-resources-closed.png)
 
 * When the cursor is over the "Show Resources" text, the page should look like the following:
 
-  ![Three links to the MDN web docs appear under the text "Show Resources"](./Images/resources-open.png)
+  ![Three links to the MDN web docs appear under the text "Show Resources"](./Images/02-resources-open.png)
 
 * You can use the following resource links for the content:
 
@@ -36,7 +36,9 @@ In this activity, you will work with a partner to apply pseudo-classes to elemen
 
 ## 💡 Hint(s)
 
-* Look up examples of how other developers used pseudo-classes in creative ways.
+* You will need to use the CSS `display` property.
+
+* Look up examples of how other developers used the `:hover` pseudo-class in creative ways.
 
 ## 🏆 Bonus
 

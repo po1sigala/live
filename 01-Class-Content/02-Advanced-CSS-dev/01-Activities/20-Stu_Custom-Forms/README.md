@@ -20,7 +20,13 @@ In this activity, you will work with a partner to reverse engineer code to learn
 
 ## 💡 Hint(s)
 
-* This page uses several new pseudo-classes and CSS properties. Refer to online documentation if you're not sure what they do.
+* This page uses several new pseudo-classes and CSS properties. Refer to the following documentation if you're not sure what they do:
+
+  * [MDN web docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+  * [MDN web docs on appearance](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance)
+
+  * [MDN web docs on combinators](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 ## 🏆 Bonus
 

@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 h1 {
@@ -29,13 +29,13 @@ nav ul {
 }
 
 nav a {
-  color: #99f7f2;
+  color: #b9C6ae;
   font-weight: bold;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: white;
+  color: #fff;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #d8a47f;
 }
 
 article p {
@@ -77,9 +77,11 @@ label {
 }
 
 button {
-  color: white;
-  background-color: #497573;
+  padding: 1% 2%;
+  color: #fff;
+  background-color: #13293d;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -99,14 +101,15 @@ select {
   max-width: 100%;
 }
 
-.text-input, select, button {
+.text-input, select {
   padding: 1%;
   outline: none;
-  border: 1px solid #497573;
+  border: 1.2px solid #b9C6ae;
 }
 
-.text-input:hover, select:hover, button:hover {
-  box-shadow: 0 0 5px #6c7575;
+.text-input:hover, .checkbox:hover, 
+select:hover, button:hover {
+  box-shadow: 0 0 5px #999;
 }
 
 /* The right-side border changes when the element is clicked on or tabbed into */
@@ -150,8 +153,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {

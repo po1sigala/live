@@ -19,7 +19,7 @@ h1 {
 
 h2 {
   margin: 2% 0;
-  font-size: 250%;
+  font-size: 180%;
 }
 
 nav ul {
@@ -32,6 +32,10 @@ nav a {
   color: #b9C6ae;
   font-weight: bold;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 main {
@@ -55,10 +59,28 @@ article p {
   font-size: 110%;
 }
 
-article ul {
-  margin-left: 5%;
-  font-size: 110%;
-  list-style: circle;
+/* Keyword - Underline, black text, grab cursor */
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #000;
+  cursor: grab;
+}
+
+/* Position tooltip above the keyword, same color as header and nav links, no border-radius, smaller font size */
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color: #13293d;
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+  z-index: 1;
 }
 
 aside {
@@ -69,7 +91,8 @@ aside h2 {
   font-size: 150%;
 }
 
-input, button {
+input,
+button {
   width: 100%;
   margin: 2% 0;
   padding: 1%;
@@ -81,6 +104,28 @@ footer {
   padding: 2%;
   background-color: #13293d;
   color: #fff;
+}
+
+.resources .links {
+  display: none;
+  padding: 1% 0;
+}
+
+.resources:hover .links {
+  display: block;
+}
+
+.resources h3 {
+  font-size: 150%;
+}
+
+.links a {
+  color: #772014;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

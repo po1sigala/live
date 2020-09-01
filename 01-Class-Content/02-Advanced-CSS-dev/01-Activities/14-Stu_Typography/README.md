@@ -24,11 +24,11 @@ In this activity, you will work with a partner to use CSS documentation to apply
 
   * When I view the page, there should be a margin of 2-5% on the heading, paragraph, and list.
 
-  * When I see lists, it should be indented, have square bullet points and a font family of cursive.
+  * When I see lists, it should be indented, have square bullet points and a font family of monospace.
 
 * The result should look like the following image:
 
-![CSS-Typography](./Images/CSS-Typography.png)
+  ![The blog page includes a monospaced list and headings with a serif font](./Images/01-CSS-typography.png)
 
 * Add a few personal touches to the text! Play around with the `font-style` and `font-weight` to make the text slant and bold.
 

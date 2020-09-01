@@ -9,8 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 /* Change font size of headings */
@@ -31,7 +31,7 @@ nav ul {
 }
 
 nav a {
-  color: #99f7f2;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -49,7 +49,7 @@ section {
 }
 
 article {
-  border-bottom: 1px solid #b2c2c1;
+  border-bottom: 1px solid #d8a47f;
 }
 
 article p {
@@ -65,24 +65,26 @@ article ul {
   list-style: circle;
 }
 
+/* Implement font stacks */
 .one {
-  font-family: sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 900;
   font-style: oblique;
 }
 
 .two {
-  font-family: serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .three {
-  font-family: cursive;
+  font-family: 'Menlo', 'Lucida Console', monospace;
   font-weight: 100;
   font-style: normal;
 }
 
+/* Using DevTools, change the following properties to demonstrate the differences */
 .four {
   /* Change font family: serif, sans-serif, monospace, cursive */
   font-family: serif;
@@ -115,15 +117,12 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #6c7575;
-  color: #cadbda;
+  background-color: #13293d;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
+  header,
   main {
     flex-direction: column;
   }
