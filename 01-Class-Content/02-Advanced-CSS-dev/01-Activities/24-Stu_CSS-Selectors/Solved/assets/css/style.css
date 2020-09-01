@@ -22,12 +22,6 @@ h2 {
   font-size: 250%;
 }
 
-a[href*='.css']::after {
-  content: '📝';
-  display: inline-block;
-  margin-left: 3px;
-}
-
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -72,6 +66,13 @@ footer {
   padding: 2%;
   background-color: #13293d;
   color: #fff;
+}
+
+/* Use an attribute selector to select all <a> elements that have an href value that contains '.css' in it */
+a[href*='.css']::after {
+  content: '📝';
+  display: inline-block;
+  margin-left: 3px;
 }
 
 @media screen and (max-width: 768px) {
