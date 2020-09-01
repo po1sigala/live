@@ -71,7 +71,7 @@ By the end of class, students will be able to:
 
     * 🙋 It allows us to communicate with server-side APIs and request their data.
 
-* Explain to the class we need learn how to handle debug fetch requests @FIXME:
+* Explain to the class we need learn how to debug fetch requests @FIXME:
 
 * Go to [Response Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response) and then scroll down to response properties.
 
@@ -91,7 +91,7 @@ By the end of class, students will be able to:
         });
     ```
 
-    * The response.status returns a status code.
+    * The `response.status` returns a status code.
 
     * The code returned is based on whether the response was successful or not.
     
@@ -109,9 +109,9 @@ By the end of class, students will be able to:
 
     * 🔑 The Network Activity tab records the loading of local and remote resources.
 
-    * 🔑 The status codes indicate whether there were any issues with our resources@FIXME:
+    * 🔑 The status codes indicate whether we had an issue with our resources.
 
-    * 🔑 Point out the different status codes @FIXME:
+    * 🔑 Status codes will confirm whether our resource is working properly.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -212,11 +212,20 @@ In this activity, you will work with a partner to debug some broken code using t
     ```js
     .then(function (response) {
       if (response.status === 200) {
-        responseText.textContent = response.status;
+        
       }
     ```
 
-    * 🔑 If it does we `place`.@TODO:
+    * 🔑 If it does we place the status code `response.status` on the page.
+
+    ```js
+    responseText.textContent = response.status;
+    ```
+    * 🔑 We return `response.json()`.
+
+    ```js
+    return response.json();
+    ```
 
 * Open `13-Ins_Fetch_Status/index.html` in the browser to the network activity tab. After doing so, press `command/ctrl R ` to record the reload and demonstrate the following:
 
@@ -290,11 +299,12 @@ In this activity, you will work with a partner to display content based on the r
 
 * Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following: 
 
+    * 🔑 We send our fetch request.
+
     ```js
     fetch(requestUrl)
     ```
-
-    * 🔑 We send our fetch request.
+    * 🔑 We check the `response.status` and if it does not equal 200, we place the `response.status` on the page.
 
     ```js
     .then(function (response) {
@@ -302,20 +312,17 @@ In this activity, you will work with a partner to display content based on the r
         responseText.textContent = response.status;
       }
     ```
-
-     * 🔑 We check the `response.status` and if it does not equal 200, we place that `response.status` on the page.
+    * 🔑 We still return `response.json()` as fetch will still resolve response with errors, unless the error is due to a network failure.  
 
     ```js
     return response.json();
     ```
 
-    * 🔑 We still return `response.json()` as fetch will still resolve with errors, unless the error is due to a network failure.
-
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ @TODO: { DO WE END OUR REVIEWS WITH A QUESTION? }
+    * ☝️ How do we check if our fetch request is working properly?
 
-    * 🙋 @TODO: { YES, WE DO! }
+    * 🙋 We check the `response.status`.
 
     * ☝️ What can we do if we don't completely understand this?
 
@@ -329,19 +336,21 @@ In this activity, you will work with a partner to display content based on the r
 
     * 🔑 We can filter our fetch response using multiple parameters.
 
-    * 🔑 @TODO: { WE ALSO SEE THESE THINGS. }
-
 * Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your ide and demonstrate the following:
 
-     * 🔑 We attached multiple parameters after `?` in URL.
+    * 🔑 We attached multiple parameters after `?` in URL.
+
+    ```js
+    fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=30')
+    ```
 
     * 🔑  We use the `&` symbol to chain the parameters together.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we know which parameters? @FIXME:
+    * ☝️ How would we know which parameters we can chain together?
 
-    * 🙋 We read the documentation.
+    * 🙋 We read the API's documentation.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -395,15 +404,19 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ @TODO: { THIS }
+    * ✔️ We read the documentation for parameter definitions.
+    
+    * ✔️ We attached multiple parameters after `?` in URL.
 
-    * ✔️ @TODO: { THAT }
+    * ✔️ We use the `&` symbol to chain the parameters together.
 
-    * ✔️ @TODO: { THE OTHER }
+* Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues) in your browser.
 
-* Open `@TODO:/folder/file` in your IDE and explain the following: 
+    * We read the documentation for parameter definitions.
 
-    * @TODO: { WE DO THIS AND THE RESULT IS THAT }
+* Open `16-Stu_Deconstruct_Parameters/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+    * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
     ```
     @TODO: ADD CODE SNIPPET, TABBED
@@ -427,9 +440,23 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Open `17-Ins_Fetch_Options/assets/js/script.js` in your ide and demonstrate the following:
 
-    * 🔑 Fetch options are an object.
+    * 🔑 We write our fetch request.
 
-    * 🔑 We write @FIXME:
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
+    ```
+
+    * 🔑 Fetch options are passed through in an additional `init` object argument.
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+        method: 'GET',
+        credentials: 'same-origin',
+        redirect: 'follow',
+    })
+    ```
+
+    * 🔑 Fetch options are dependent on your site's and API's requirements:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -501,13 +528,26 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Open `18-Stu__Fetch_Options/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * @TODO: { WE DO THIS AND THE RESULT IS THAT }
+    * 🔑 We write our fetch request.
 
-    ```
-    @TODO: ADD CODE SNIPPET, TABBED
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5',
     ```
 
-    * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+    * 🔑 We pass through our `cache: reload` option as an object.
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+        cache: 'reload',
+    })
+    ```
+    * We write the remainder of our fetch request as normal.
+  
+    ```js
+    .then(function (response) {
+        return response.json();
+    })
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
