@@ -44,15 +44,15 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Lesson Plans
 
-  * [01.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+* [01.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
 
-  * [01.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+* [01.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
 
-  * [01.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+* [01.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
 
-  * [01.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+* [01.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
 
-  * [01.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* [01.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
 ### Slide Decks
 
