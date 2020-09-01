@@ -53,7 +53,6 @@ The following image shows the web application's appearance and functionality:
 
 This homework is graded based on the following criteria: 
 
-
 ### Technical Acceptance Criteria: 40%
 
 * Satisfies all of the above acceptance criteria plus the following code improvements:
