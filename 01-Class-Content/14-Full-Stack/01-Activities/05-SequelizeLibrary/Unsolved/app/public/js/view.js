@@ -1,90 +1,141 @@
-// When user hits the search-btn
-$("#search-btn").on("click", function(event) {
-  event.preventDefault();
+// Helper function for showing element
+const show = (el) => {
+  el.style.display = 'block';
+};
 
-  // Save the book they typed into the book-search input
-  var bookSearched = $("#book-search").val().trim();
+// Helper function to preform DELETE on a book
+const removeBook = (e) => {
+  const bookId = e.target.dataset.id;
 
-  // Make an AJAX get request to our api, including the user's book in the url
-  $.get("/api/" + bookSearched, function(data) {
-
-    console.log(data);
-    // Call our renderBooks function to add our books to the page
-    renderBooks(data);
-
+  fetch(`/api/book/${bookId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then(() => {
+    console.log('deleted book');
+    e.target.parentElement.remove();
   });
+};
 
-});
+// Function to render the books after getting data from our API
+const renderBooks = (data) => {
+  if (data.length) {
+    const statsEl = document.getElementById('stats');
+    statsEl.innerHTML = '';
+    show(statsEl);
 
-// When user hits the author-search-btn
-$("#author-search-btn").on("click", function() {
+    data.forEach(({ title, author, genre, pages, id }, i) => {
+      const booksDiv = document.createElement('div');
 
-  // Save the author they typed into the author-search input
-  var authorSearched = $("#author-search").val().trim();
+      // Create the elements to show book data
+      const titleEl = document.createElement('h2');
+      const authorEl = document.createElement('h6');
+      const genreEl = document.createElement('h6');
+      const pagesEl = document.createElement('h6');
 
-  // Make an AJAX get request to our api, including the user's author in the url
-  $.get("/api/author/" + authorSearched, function(data) {
+      // Create the delete button
+      const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add('delete');
+      deleteBtn.setAttribute('data-id', id);
 
-    // Log the data to the console
-    console.log(data);
-    // Call our renderBooks function to add our books to the page
-    renderBooks(data);
+      // Add text to the elements we just created
+      titleEl.textContent = `${i + 1} ${title}`;
+      authorEl.textContent = `Author: ${author}`;
+      genreEl.textContent = `Genre: ${genre}`;
+      pagesEl.textContent = `Pages: ${pages}`;
+      deleteBtn.textContent = 'DELETE BOOK';
 
-  });
+      // Append stuff to the new div
+      booksDiv.appendChild(titleEl);
+      booksDiv.appendChild(authorEl);
+      booksDiv.appendChild(genreEl);
+      booksDiv.appendChild(pagesEl);
+      booksDiv.appendChild(deleteBtn);
 
-});
-
-// When user hits the genre-search-btn
-$("#genre-search-btn").on("click", function() {
-
-  // Save the book they typed into the genre-search input
-  var genreSearched = $("#genre-search").val().trim();
-
-  // Make an AJAX get request to our api, including the user's genre in the url
-  $.get("/api/genre/" + genreSearched, function(data) {
-
-    console.log(data);
-    // Call our renderBooks function to add our books to the page
-    renderBooks(data);
-
-  });
-
-});
-
-function renderBooks(data) {
-  if (data.length !== 0) {
-
-    $("#stats").empty();
-    $("#stats").show();
-
-    for (var i = 0; i < data.length; i++) {
-
-      var div = $("<div>");
-
-      div.append("<h2>" + data[i].title + "</h2>");
-      div.append("<p>Author: " + data[i].author + "</p>");
-      div.append("<p>Genre: " + data[i].genre + "</p>");
-      div.append("<p>Pages: " + data[i].pages + "</p>");
-      div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE BOOK</button>");
-
-      $("#stats").append(div);
-
-    }
-
-    $(".delete").click(function() {
-
-      $.ajax({
-        method: "DELETE",
-        url: "/api/book/" + $(this).attr("data-id")
-      })
-        // On success, run the following code
-        .then(function() {
-          console.log("Deleted Successfully!");
-        });
-
-      $(this).closest("div").remove();
-
+      statsEl.appendChild(booksDiv);
     });
 
+    const deleteBtns = document.querySelectorAll('.delete');
+    deleteBtns.forEach((button) => {
+      button.addEventListener('click', removeBook);
+    });
   }
-}
+};
+
+// When a user clicks the search-btn
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Get the searched book value from the input field
+  const searchedBook = document.getElementById('book-search').value.trim();
+
+  // Preform GET request for the specific book
+  fetch(`/api/${searchedBook}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(`Success in searching for ${searchedBook}`, data);
+      renderBooks(data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+// When a user clicks the author-search-btn
+const authorSearchBtn = document.getElementById('author-search-btn');
+authorSearchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Get the searched book value from the input field
+  const searchedAuthor = document
+    .getElementById('author-searched')
+    .value.trim();
+
+  // Preform GET request for the specific book
+  fetch(`/api/author/${searchedAuthor}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(`Success in searching for ${searchedAuthor}`, data);
+      renderBooks(data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+// When a user clicks the genre-search-btn
+const genreSearchBtn = document.getElementById('genre-search-btn');
+genreSearchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Get the searched book value from the input field
+  const searchedGenre = document.getElementById('genre-search').value.trim();
+
+  // Preform GET request for the specific book
+  fetch(`/api/genre/${searchedGenre}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(`Success in searching for ${searchedGenre}`, data);
+      renderBooks(data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});

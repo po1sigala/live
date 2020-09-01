@@ -1,4 +1,4 @@
-// Helper functions for showing element
+// Helper function for showing element
 const show = (el) => {
   el.style.display = 'block';
 };
