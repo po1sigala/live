@@ -44,7 +44,7 @@ The following animation demonstrates the application functionality:
 
 ## Grading Requirements
 
-This challenge is graded based on the following criteria: 
+This homework is graded based on the following criteria: 
 
 ### Technical Acceptance Criteria: 40%
 
@@ -68,7 +68,7 @@ This challenge is graded based on the following criteria:
 
 * Application user interface style is clean and polished
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
+* Application resembles the mock-up functionality provided in the homework instructions
 
 ### Repository Quality: 13%
 
