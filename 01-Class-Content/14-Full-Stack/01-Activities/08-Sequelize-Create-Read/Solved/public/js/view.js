@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
       headers: {
         'Content-Type': 'application/json',
       },
-    })
-      .then((res) => res.json())
-      .then((data) => console.log('data'));
+    }).then(() =>
+      console.log('We work on the delete operation in the next activity.')
+    );
   };
 
   // Helper function for editing a todo
   const editToDo = (e) => {
-    console.log(e.target);
+    console.log('We work on editing in the next activity.');
   };
 
   // Construct a todo-item row
@@ -118,10 +118,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       body: JSON.stringify(todo),
     })
       .then((response) => response.json())
-      .then((res) => {
-        getTodos();
-      });
+      .then(() => getTodos());
   };
   todoForm.addEventListener('click', insertTodo);
-
 });
