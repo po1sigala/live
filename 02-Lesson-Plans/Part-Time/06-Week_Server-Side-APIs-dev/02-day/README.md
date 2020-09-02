@@ -1,4 +1,4 @@
-# XX.X Part-Time Lesson Plan: Introduction to Fetch continued
+# 06.2 Part-Time Lesson Plan: Introduction to Fetch continued
 
 ## Overview 
 
@@ -24,11 +24,11 @@ By the end of class, students will be able to:
 
 * Utilize the Chrome DevTools Network Activity Tab.
 
-* Implement and utilize the response object from a fetch request.
+* Implement and utilize the Response Object from a fetch request.
 
 * Deconstruct multiple parameters in an API request URL.
 
-* Implement fetch options for the fetch request.
+* Implement fetch options for a fetch request.
 
 * Utilize document location to replace the URL in the browser.
 
@@ -109,7 +109,7 @@ By the end of class, students will be able to:
   
 ### 2. Instructor Demo: Network Activity Tab (5 mins) 
 
-* Open `11-Ins_Network_Activity/index.html` in your browser to the network activity tab.  After doing so, press `command/ctrl R `to record the reload and demonstrate the following:
+* Open `11-Ins_Network_Activity/index.html` in your browser to the network activity tab.  After doing so, press `command/ctrl R` to record the reload and demonstrate the following:
 
     * 🔑 The Network Activity tab records the loading of local and remote resources.
 
@@ -219,10 +219,17 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Open `13-Ins_Fetch_Status/asset/js/script.js` in your ide and demonstrate the following: 
 
+    * We send the fetch request.
+
+    ```js
+    fetch(requestUrl)
+    ```
+
     * 🔑 We check to see if the `response.status` equals 200.
     
     ```js
-      if (response.status === 200)
+      .then(function (response) {
+      if (response.status === 200){
     ```
 
     * 🔑 If it does equal 200, we assign the status code from `response.status` to the `textContent`.
@@ -315,14 +322,19 @@ In this activity, you will work with a partner to display content based on the r
     fetch(requestUrl)
     ```
 
-    * 🔑 We check the `response.status` and if it does not equal 200, we place the `response.status` on the page.
+    * 🔑 We check if the `response.status` does not equal 200.
 
     ```js
     .then(function (response) {
-      if (response.status !== 200) {
-        responseText.textContent = response.status;
-      }
+      if (response.status !== 200) {    
     ```
+
+    * 🔑 We assign the `textContext` to be equal to the `response.status`.
+
+    ```js
+    responseText.textContent = response.status;
+    ```
+
     * 🔑 We still return `response.json()` as fetch will try to resolve the response, unless the error is due to a network failure.  
 
     ```js
@@ -345,7 +357,7 @@ In this activity, you will work with a partner to display content based on the r
 
 * Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/gists#list-public-gists) in your browser.
 
-    * 🔑 Using multiple parameters allows us to customize the response received from the API's server.
+    * 🔑 Using multiple parameters allows us to customize the response.
 
     * 🔑 We can find these parameters in the API's documentation.
 
