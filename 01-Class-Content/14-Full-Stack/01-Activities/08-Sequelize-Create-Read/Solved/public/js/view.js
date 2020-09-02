@@ -189,12 +189,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   const toggleComplete = (e) => {
     e.stopPropagation()
+    const spanEl = e.target.parentNode.children[0];
     const currentTodo = {
       text: e.target.parentNode.children[0].innerText,
       complete: false,
       id: e.target.dataset.id,
     };
     currentTodo.complete = !currentTodo.complete;
+    spanEl.style.textDecoration = 'line-through';
     updateTodo(currentTodo);
     console.log("toggleComplete -> currentTodo", currentTodo)
   };
