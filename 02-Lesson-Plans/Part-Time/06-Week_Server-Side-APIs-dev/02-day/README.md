@@ -26,7 +26,7 @@ By the end of class, students will be able to:
 
 * Implement and utilize the Response Object from a fetch request.
 
-* Deconstruct multiple parameters in an API request URL.
+* Implement deconstructed parameters in an API request URL.
 
 * Implement fetch options for a fetch request.
 
@@ -34,26 +34,26 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                       | Duration |
-|---     |---  |---                                  |---       |
-| 6:30PM | 1   | Instructor Do: Stoke Curiosity      | 0:10     |
-| 6:40PM | 2   | Instructor Demo: Network Activity   | 0:05     |
-| 6:45PM | 3   | Student Do: Network Activity        | 0:15     |
-| 7:00PM | 4   | Instructor Review: Network Activity | 0:10     |
-| 7:10PM | 5   | Instructor Demo: Fetch Status       | 0:05     |
-| 7:15PM | 6   | Student Do: Fetch Status            | 0:15     |
-| 7:30PM | 7   | Instructor Review: Fetch Status     | 0:10     |
-| 7:40PM | 8   | Instructor Demo: Deconstruct Parameters | 0:05     |
-| 7:45PM | 9   | Student Do: Deconstruct Parameters  | 0:15     |
-| 8:00PM | 10  | BREAK                               | 0:15     |
+| Start  | #   | Activity Name                             | Duration |
+|---     |---  |---                                        |---       |
+| 6:30PM | 1   | Instructor Do: Stoke Curiosity            | 0:10     |
+| 6:40PM | 2   | Instructor Demo: Network Activity         | 0:05     |
+| 6:45PM | 3   | Student Do: Network Activity              | 0:15     |
+| 7:00PM | 4   | Instructor Review: Network Activity       | 0:10     |
+| 7:10PM | 5   | Instructor Demo: Fetch Status             | 0:05     |
+| 7:15PM | 6   | Student Do: Fetch Status                  | 0:15     |
+| 7:30PM | 7   | Instructor Review: Fetch Status           | 0:10     |
+| 7:40PM | 8   | Instructor Demo: Deconstruct Parameters   | 0:05     |
+| 7:45PM | 9   | Student Do: Deconstruct Parameters        | 0:15     |
+| 8:00PM | 10  | BREAK                                     | 0:15     |
 | 8:15PM | 11  | Instructor Review: Deconstruct Parameters | 0:10     |
-| 8:25PM | 12  | Instructor Demo: Fetch Options      | 0:05     |
-| 8:30PM | 13  | Student Do: Fetch Options           | 0:15     |
-| 8:45PM | 14  | Instructor Review:                  | 0:10     |
-| 8:55PM | 15  | Instructor Demo: Document Location  | 0:05     |
-| 9:00PM | 16  | Student Do: Document Location       | 0:15     |
-| 9:15PM | 17  | Instructor Review: Document Location| 0:15     |
-| 9:30PM | 18  | END                                 | 0:00     |
+| 8:25PM | 12  | Instructor Demo: Fetch Options            | 0:05     |
+| 8:30PM | 13  | Student Do: Fetch Options                 | 0:15     |
+| 8:45PM | 14  | Instructor Review:                        | 0:10     |
+| 8:55PM | 15  | Instructor Demo: Document Location        | 0:05     |
+| 9:00PM | 16  | Student Do: Document Location             | 0:15     |
+| 9:15PM | 17  | Instructor Review: Document Location      | 0:15     |
+| 9:30PM | 18  | END                                       | 0:00     |
 
 ---
 
@@ -67,61 +67,67 @@ By the end of class, students will be able to:
 
 * Explain that in this class we will build upon the previous day's exercises by learning how to create complex fetch requests.  We will also learn about some options available to help us debug fetch requests.
 
-* Ask the students the following question: 
+* Ask the students the following question:
 
-    * ☝️ Can anyone offer a guess on how do we find out what went wrong with a fetch request, if it doesn't work as intended?
+  * ☝️ When something goes wrong with a `fetch` request, how do we find out what the issue was?
 
-    * 🙋 We can use the `Response Object` and the Chrome DevTools `Network Activity Tab` to help us find out what went wrong.
+  * 🙋 We can use the `Response Object` and the Chrome DevTools `Network Activity Tab` to help us find out what went wrong.
 
-    * ☝️ How can we find out about fetch debugging when we don't know what to do?
+  * ☝️ When trying to debug a problem, what would be a good step towards solving it?
 
-    * 🙋 We can search the web using `google.com`or by searching `stackoverflow.com`
+  * 🙋 We could use search engines like Google, tech forums like StackOverflow, or even do some rubber ducky debugging!
 
-* Go to [Response Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response) and then scroll down to response properties.
+* Open [Response Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response) in your browser and scroll to properties, then explain the following:
 
-    * The Response interface of the Fetch API represents the response to a request.
-    
-    * Click on the `Response.status ` property, and scroll down to the coded example.
+  * When we make a fetch request, we receive a response object back. That object contains methods that allow us to parse out particular pieces of data.
+  
+* Click on the `Response.status` property, and scroll down to the coded example.
 
-    ```js
-        var myImage = document.querySelector('img');
-        var myRequest = new Request('flowers.jpg');
-        fetch(myRequest).then(function(response) {
-            console.log(response.status); // returns 200
-            response.blob().then(function(myBlob) {
-                var objectURL = URL.createObjectURL(myBlob);
-                myImage.src = objectURL;
-            });
-        });
-    ```
+  ```js
+  var myImage = document.querySelector('img');
 
-    * The `response.status` returns a status code.
+  var myRequest = new Request('flowers.jpg');
 
-    * The code that is returned is based on whether the response was successful or not.
-    
-    * In this case the code is 200, which means success.
+  fetch(myRequest).then(function(response) {
+    console.log(response.status); // returns 200
+    response.blob().then(function(myBlob) {
+        var objectURL = URL.createObjectURL(myBlob);
+        myImage.src = objectURL;
+    });
+  });
+  ```
 
-* Ask the students the following question: 
+  * We can use the `response.status` method to receive a `status code`.
 
-    * ☝️ How can we learn about Response Object?
+  * HTTP response `status codes` are able to tell us whether a request was a success or failure.
 
-    * 🙋 By visiting the documentation!
+* Ask the students the following question:
+
+  * ☝️ How can we learn more about the Response object and status codes?
+
+  * 🙋 We can visit the documentation!
   
 ### 2. Instructor Demo: Network Activity Tab (5 mins) 
 
-* Open `11-Ins_Network_Activity/index.html` in your browser to the network activity tab.  After doing so, press `command/ctrl R` to record the reload and demonstrate the following:
+* Open `11-Ins_Network_Activity/index.html` in your browser to the network activity tab and demonstrate the following.
 
-    * 🔑 The Network Activity tab records the loading of local and remote resources.
+  * 🔑 Press `command/ctrl R` to record the reload.
 
-    * 🔑 The status codes indicate whether we had an issue with the resources.
+  * 🔑 The Network Activity tab records the loading of local and remote resources.
 
-    * 🔑 Status codes will confirm whether the resource is working properly.
+  * 🔑 The status codes indicate whether these resources came through successfully or not.
+
+  * 🔑 Status codes will quickly let us know what happened with a particular request.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we learn about using the Network Activity Tab.
+  * ☝️ What is the Network Activity tab useful for?
 
-    * 🙋 The Chrome DevTools documentation. 
+  * 🙋 It allows us to track requests and resources to and from our applications.
+
+  * ☝️ How do we learn about using the Network Activity Tab.
+
+  * 🙋 The Chrome DevTools documentation.
 
 * Reiterate that whenever we use a new library, framework, or technology, it's best we familiarize ourselves with the documentation as much as possible.
 
@@ -142,7 +148,9 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Be sure to work with your partner!
 
-* As a developer, I want to see why my script file isn't loading
+* As a developer, I want to load my script file when opening a page.
+
+* When I load my page, the script page should load on the Network Tab, but right now it's not!
 
 * Open [index.html](./Unsolved/index.html) in the browser.
 
@@ -169,7 +177,7 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 4. Instructor Review: Network Activity Tab (10 mins) 
+### 4. Instructor Review: Network Activity Tab (10 mins)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -179,82 +187,82 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Use the network activity tab.
+  * ✔️ Use the network activity tab.
 
-    * ✔️ Look at the status codes.
+  * ✔️ Look at the status codes.
 
-    * ✔️ Debug your code based on that information.
+  * ✔️ Debug your code based on that information.
 
 * Open in the browser to the network activity tab. After doing so, press `command/ctrl R ` to record the reload and demonstrate the following:
 
-    * 🔑 We examine the status of codes of the resources in the activity tab.
+  * 🔑 We examine the status of codes of the resources in the activity tab.
 
-    * 🔑 Red status codes indicate that there is an error.
+  * 🔑 Red status codes indicate that there is an error.
 
     * Mention that after debugging, the script.js file now has a status code of 200.
 
-* Open `12-Stu_Network_Activity/Solved/index.html` in your IDE and explain the following: 
+* Open `12-Stu_Network_Activity/Solved/index.html` in your IDE and explain the following:
 
-    * The script `src` URL was originally incorrect.  The web app works after using the correct relative path.
+  * We can see the `src` URL was originally incorrect.
 
-    ```html
-    <script src="./assets/js/script.js"></script>
-    ```
+  ```html
+  <script src="./script.js"></script>
+  ```
 
-    * 🔑 After correcting the error we can go back to the `Network Activity Tab` to check if the corrections work.
+  * If we change the `src` to the correct relative path, it works!
+
+  ```html
+  <script src="./assets/js/script.js"></script>
+  ```
+
+  * 🔑 After correcting the error we can go back to the `Network Activity Tab` to check if the corrections work.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How can we find out if something went wrong with the resources in the `Network Activity Tab`?
+  * ☝️ How can we find out if something went wrong with the resources in the `Network Activity Tab`?
 
-    * 🙋 By checking the status code for each resource.
+  * 🙋 By checking the status code for each resource.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Read the [Network Activity Tab](https://developers.google.com/web/tools/chrome-devtools/network) and stick around for Office Hours to ask for help.
+  * 🙋 Read the [Network Activity Tab docs](https://developers.google.com/web/tools/chrome-devtools/network) and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: 13-Ins_Fetch_Status (5 mins) 
-
-* Open `13-Ins_Fetch_Status/asset/js/script.js` in your ide and demonstrate the following: 
-
-    * We send the fetch request.
-
-    ```js
-    fetch(requestUrl)
-    ```
-
-    * 🔑 We check to see if the `response.status` equals 200.
-    
-    ```js
-      .then(function (response) {
-      if (response.status === 200){
-    ```
-
-    * 🔑 If it does equal 200, we assign the status code from `response.status` to the `textContent`.
-
-    ```js
-    responseText.textContent = response.status;
-    ```
-
-    * 🔑 We return `response.json()`.
-
-    ```js
-    return response.json();
-    ```
+### 5. Instructor Demo: Fetch Status (5 mins)
 
 * Open `13-Ins_Fetch_Status/index.html` in the browser to the network activity tab. After doing so, press `command/ctrl R ` to record the reload and demonstrate the following:
 
-    * 🔑 The status for the fetch request is listed with the value of 200.
+  * 🔑 The status for the fetch request is listed with the value of 200.
 
-    * 🔑 This confirms that the fetch request is successful.
+  * 🔑 This confirms that the fetch request is successful.
+
+* Open `13-Ins_Fetch_Status/asset/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We check to see if the `response.status` equals 200.
+  
+  ```js
+    .then(function (response) {
+    if (response.status === 200){
+  ```
+
+  * 🔑 If it does, we assign the status code from `response.status` to the `textContent`.
+
+  ```js
+  responseText.textContent = response.status;
+  ```
+
+  * 🔑 Finally, we return `response.json()`.
+
+  ```js
+  return response.json();
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do learn about using the `Response Object`.
+  * ☝️ How can we learn more about using the `Response Object`?
 
-    * 🙋 We read the documentation. 
+  * 🙋 We read the documentation.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -308,48 +316,48 @@ In this activity, you will work with a partner to display content based on the r
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ We check the `response.status.`
+  * ✔️ `response.status.`
 
-    * ✔️ We change the text content based on the `response.status`
+  * ✔️ text changes based on `response.status`
 
-    * ✔️ We return `response.json()`
+* Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following:
 
-* Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following: 
+  * 🔑 We check if the `response.status` does not equal 200.
 
-    * We send the fetch request.
+  ```js
+  .then(function (response) {
+    if (response.status !== 200) {
+  ```
 
-    ```js
-    fetch(requestUrl)
-    ```
+  * 🔑 We assign the `textContext` to be equal to the `response.status`.
 
-    * 🔑 We check if the `response.status` does not equal 200.
+  ```js
+  responseText.textContent = response.status;
+  ```
 
-    ```js
-    .then(function (response) {
-      if (response.status !== 200) {    
-    ```
+  * 🔑 We still return `response.json()` as fetch will try to resolve the response most of the time.  
 
-    * 🔑 We assign the `textContext` to be equal to the `response.status`.
-
-    ```js
-    responseText.textContent = response.status;
-    ```
-
-    * 🔑 We still return `response.json()` as fetch will try to resolve the response, unless the error is due to a network failure.  
-
-    ```js
-    return response.json();
-    ```
+  ```js
+  return response.json();
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we check if the fetch request is working properly?
+  * ☝️ Why is this useful?
 
-    * 🙋 We check the `response.status`.
+  * 🙋 Knowing the status codes of responses and working with them is vital to creating a good user experience.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ How does this help us as developers?
 
-    * 🙋 Read the [Response documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response), and stick around for Office Hours to ask for help.
+  * 🙋 Status codes allow us to quickly identify what is causing issues.
+
+  * ☝️ How do we check if the fetch request is working properly?
+
+  * 🙋 We check the `response.status`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 Read the [Response documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -357,23 +365,23 @@ In this activity, you will work with a partner to display content based on the r
 
 * Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/gists#list-public-gists) in your browser.
 
-    * 🔑 Using multiple parameters allows us to customize the response.
+  * 🔑 Using multiple parameters allows us to customize the response.
 
-    * 🔑 We can find these parameters in the API's documentation.
+  * 🔑 We can find these parameters in the API's documentation.
 
 * Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your ide and demonstrate the following:
 
-    * 🔑 We attached multiple parameters after `?` in the URL.
+  * 🔑 We attached multiple parameters after `?` in the URL.
 
-    ```js
-    fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=30')
-    ```
+  ```js
+  fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=30')
+  ```
 
-    * 🔑  We use the `&` symbol to chain the parameters together.
+  * 🔑  We use the `&` symbol to chain the parameters together.
 
-    ```js
-    ?since=2020-06-01&per_page=30
-    ```
+  ```js
+  ?since=2020-06-01&per_page=30
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
