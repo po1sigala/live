@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
   };
 
   // Update a todo (PUT)
-
   const updateTodo = (todo) => {
     console.log('attempting to update with', todo);
     fetch('/api/todos', {
@@ -119,10 +118,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
       // Update the text in the dom
       itemParent.childNodes[0].innerText = updatedTodo.text;
-      console.log(
-        'finishEdit -> itemParent.childNodes[0]',
-        itemParent.childNodes[0]
-      );
 
       // Call on our helper function to preform a PUT request
       updateTodo(updatedTodo);
@@ -146,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     // Containing row
     const newInputRow = document.createElement('li');
     newInputRow.classList.add('list-group-item', 'todo-item');
+    newInputRow.setAttribute('complete', todo.complete);
 
     // Span
     const rowSpan = document.createElement('span');
@@ -169,8 +165,9 @@ document.addEventListener('DOMContentLoaded', function (e) {
     const completeBtn = document.createElement('button');
     completeBtn.classList.add('complete', 'btn', 'btn-primary');
     completeBtn.innerText = '✓';
-    // completeBtn.addEventListener('click', toggleComplete);
-    completeBtn.addEventListener('click', () => console.log('toggle complete'));
+    completeBtn.setAttribute('data-id', todo.id);
+
+    completeBtn.addEventListener('click', toggleComplete);
 
     // Add event listener for editing
     newInputRow.addEventListener('click', editTodo);
@@ -188,6 +185,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
     }
 
     return newInputRow;
+  };
+
+  const toggleComplete = (e) => {
+    e.stopPropagation()
+    const currentTodo = {
+      text: e.target.parentNode.children[0].innerText,
+      complete: false,
+      id: e.target.dataset.id,
+    };
+    currentTodo.complete = !currentTodo.complete;
+    updateTodo(currentTodo);
+    console.log("toggleComplete -> currentTodo", currentTodo)
   };
 
   // Function to actually put the todo on the page
