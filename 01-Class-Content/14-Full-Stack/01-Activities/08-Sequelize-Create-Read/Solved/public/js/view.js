@@ -81,13 +81,39 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // Function to handle when a user cancels editing
   const cancelEdit = (e) => {
     const itemParent = e.target.parentElement;
-    for (let i = 0; i < itemParent.children.length; i++) {
-      const currentChild = itemParent.children[i];
+    if (itemParent) {
+      for (let i = 0; i < itemParent.children.length; i++) {
+        const currentChild = itemParent.children[i];
 
-      if (currentChild.tagName === 'INPUT') {
-        hide(currentChild);
-      } else {
-        show(currentChild);
+        if (currentChild.tagName === 'INPUT') {
+          hide(currentChild);
+        } else {
+          show(currentChild);
+        }
+      }
+    }
+  };
+
+  // Function to call when we are finished editing a todo
+  const finishEdit = (e) => {
+    if (e.keyCode === 13) {
+      const itemParent = e.target.parentElement;
+      const updatedTodo = {
+        text: e.target.value.trim(),
+        completed: false,
+      };
+      itemParent.childNodes[0].innerText = updatedTodo.text;
+
+      if (itemParent) {
+        for (let i = 0; i < itemParent.children.length; i++) {
+          const currentChild = itemParent.children[i];
+
+          if (currentChild.tagName === 'INPUT') {
+            hide(currentChild);
+          } else {
+            show(currentChild);
+          }
+        }
       }
     }
   };
@@ -125,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     // Add event listener for editing
     newInputRow.addEventListener('click', editTodo);
     rowInput.addEventListener('blur', cancelEdit);
+    rowInput.addEventListener('keyup', finishEdit);
 
     // Append all items to the row
     newInputRow.appendChild(rowSpan);
