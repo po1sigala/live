@@ -14,13 +14,13 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
   * We are given a 404 responses status.
 
-  * When we receive the 404 status, then our app should use the locaton.replace method to go to the 404.html page.
+  * When we receive the 404 status, then our app should use the location.replace method to go to the 404.html page.
 
   
 
 ## 💡 Hint(s)
 
-* Make sure you attach locaton.replace to the document.
+* Make sure you attach location.replace to the document.
 
 * Make sure you use the relative path of the 404.html file.
 

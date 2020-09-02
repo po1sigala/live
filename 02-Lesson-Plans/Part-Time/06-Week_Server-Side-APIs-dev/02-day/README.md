@@ -33,45 +33,49 @@ By the end of class, students will be able to:
 * Utilize document location to replace the URL in the browser.
 
 ## Time Tracker
-@TODO: ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
+
 | Start  | #   | Activity Name                       | Duration |
 |---     |---  |---                                  |---       |
 | 6:30PM | 1   | Instructor Do: Stoke Curiosity      | 0:10     |
-| 6:40PM | 2   | Instructor Demo:                    | 0:05     |
-| 6:45PM | 3   | Student Do:                         | 0:15     |
-| 7:00PM | 4   | Instructor Review:                  | 0:10     |
-| 7:10PM | 5   | Instructor Demo:                    | 0:05     |
-| 7:15PM | 6   | Student Do:                         | 0:15     |
-| 7:30PM | 7   | Instructor Review:                  | 0:10     |
-| 7:40PM | 8   | Instructor Demo:                    | 0:05     |
-| 7:45PM | 9   | Student Do:                         | 0:15     |
+| 6:40PM | 2   | Instructor Demo: Network Activity   | 0:05     |
+| 6:45PM | 3   | Student Do: Network Activity        | 0:15     |
+| 7:00PM | 4   | Instructor Review: Network Activity | 0:10     |
+| 7:10PM | 5   | Instructor Demo: Fetch Status       | 0:05     |
+| 7:15PM | 6   | Student Do: Fetch Status            | 0:15     |
+| 7:30PM | 7   | Instructor Review: Fetch Status     | 0:10     |
+| 7:40PM | 8   | Instructor Demo: Deconstruct Parameters| 0:05     |
+| 7:45PM | 9   | Student Do: Deconstruct Parameters  | 0:15     |
 | 8:00PM | 10  | BREAK                               | 0:15     |
-| 8:15PM | 11  | Instructor Review:                  | 0:10     |
-| 8:25PM | 12  | Instructor Demo:                    | 0:05     |
-| 8:30PM | 13  | Student Do:                         | 0:15     |
+| 8:15PM | 11  | Instructor Review: Deconstruct Parameters    | 0:10     |
+| 8:25PM | 12  | Instructor Demo: Fetch Options      | 0:05     |
+| 8:30PM | 13  | Student Do: Fetch Options           | 0:15     |
 | 8:45PM | 14  | Instructor Review:                  | 0:10     |
-| 8:55PM | 15  | Instructor Demo:                    | 0:05     |
-| 9:00PM | 16  | Student Do:                         | 0:15     |
-| 9:15PM | 17  | Instructor Review:                  | 0:15     |
+| 8:55PM | 15  | Instructor Demo: Document Location  | 0:05     |
+| 9:00PM | 16  | Student Do: Document Location       | 0:15     |
+| 9:15PM | 17  | Instructor Review: Document Location| 0:15     |
 | 9:30PM | 18  | END                                 | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Do: Stoke Curiosity (10 mins)
+### 1. Instructor Do: Stoke Curiosity (10 mins) @TODO: Review Stoke Curiosity
 
 * Welcome students to class.
 
 * Inform the students that we will be building upon the previous days activities and will be continuing to use the Fetch API.
 
+* Explain that in this class we will build upon our previous day's exercises by learning how to create complex fetch requests.  We will also learn some tools to help us debug our fetch requests.
+
 * Ask the students the following question: 
 
-    * ☝️ What purpose does fetch serve?
+    * ☝️ Can anyone offer a guess as how do we know what went wrong with our fetch request?
 
-    * 🙋 It allows us to communicate with server-side APIs and request their data.
+    * 🙋 We can use tools such as the `Response Object` and the Chrome DevTools `Network Activity Tab` to help debug our request.
 
-* Explain to the class we need learn how to debug fetch requests @FIXME:
+    * ☝️ How can we find out about fetch debugging when we don't know what to do?
+
+    * 🙋 Search the web using `google.com`or by visiting `stackoverflow.com`
 
 * Go to [Response Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Response) and then scroll down to response properties.
 
@@ -175,18 +179,24 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ @TODO: { THIS }
+    * ✔️ Examine the network activity tab.
 
-    * ✔️ @TODO: { THAT }
+    * ✔️ Look at the status codes.
 
-    * ✔️ @TODO: { THE OTHER }
+    * ✔️ Debug your code based on that information.
 
-* Open `@TODO:/folder/file` in your IDE and explain the following: 
+* Open in the browser to the network activity tab. After doing so, press `command/ctrl R ` to record the reload and demonstrate the following:
 
-    * @TODO: { WE DO THIS AND THE RESULT IS THAT }
+    * 🔑 We examine the status of codes of the resources in the activity tab.
 
-    ```
-    @TODO: ADD CODE SNIPPET, TABBED
+    * Mention that after debugging the script.js file now has a status code of 200, which is for success.
+
+* Open `12-Stu_Network_Activity/Solved/index.html` in your IDE and explain the following: 
+
+    * The script `src` URL was originally incorrect.  The web app works after using the correct relative path.
+
+    ```html
+    <script src="./assets/js/script.js"></script>
     ```
 
     * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
@@ -207,20 +217,18 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Open `13-Ins_Fetch_Status/asset/js/script.js` in your ide and demonstrate the following: 
 
-    * 🔑 We check to see the `response.status` equals 200.
+    * 🔑 We check to see if the `response.status` equals 200.
     
     ```js
-    .then(function (response) {
-      if (response.status === 200) {
-        
-      }
+      if (response.status === 200)
     ```
 
-    * 🔑 If it does we place the status code `response.status` on the page.
+    * 🔑 If it does equal 200, we place the status code `response.status` on the page.
 
     ```js
     responseText.textContent = response.status;
     ```
+
     * 🔑 We return `response.json()`.
 
     ```js
@@ -231,11 +239,11 @@ In this activity, you will work with a partner to debug some broken code using t
 
     * 🔑 The status for the fetch request is listed with the value of 200.
 
-    * 🔑 We check to see the `response.status` equals 200.
+    * 🔑 This confirms that our fetch request is successful.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do learn about using the Response Object.
+    * ☝️ How do learn about using the `Response Object`.
 
     * 🙋 We read the documentation. 
 
@@ -243,7 +251,7 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Fetch_Status`.
 
-### 6. Student Do: Fetch Response Status (15 mins) 
+### 6. Student Do: Fetch Status (15 mins) 
 
 * Direct students to the activity instructions found in `14-Stu_Fetch_Status/README.me`.
 
@@ -281,7 +289,7 @@ In this activity, you will work with a partner to display content based on the r
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 8. Instructor Review: Fetch Response Status (10 mins) 
+### 8. Instructor Review: Fetch Status (10 mins) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -291,19 +299,20 @@ In this activity, you will work with a partner to display content based on the r
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ We send our fetch request.
-
     * ✔️ We check our `response.status.`
+
+    * ✔️ We change our text content based on the `response.status`
 
     * ✔️ We return `response.json()`
 
 * Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 We send our fetch request.
+    * We send our fetch request.
 
     ```js
     fetch(requestUrl)
     ```
+
     * 🔑 We check the `response.status` and if it does not equal 200, we place the `response.status` on the page.
 
     ```js
@@ -312,7 +321,7 @@ In this activity, you will work with a partner to display content based on the r
         responseText.textContent = response.status;
       }
     ```
-    * 🔑 We still return `response.json()` as fetch will still resolve response with errors, unless the error is due to a network failure.  
+    * 🔑 We still return `response.json()` as fetch will try to resolve the response, unless the error is due to a network failure.  
 
     ```js
     return response.json();
@@ -332,13 +341,15 @@ In this activity, you will work with a partner to display content based on the r
 
 ### 8. Instructor Demo: Deconstruct Parameters (5 mins) 
 
-* Open `15-Ins_Deconstruct_Parameters/index.html` in your browser to the console and demonstrate the following:
+* Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/gists#list-public-gists) in your browser.
 
-    * 🔑 We can filter our fetch response using multiple parameters.
+    * 🔑 Using multiple parameters allows us to customize our response.
+
+    * 🔑 We can find these parameters in our API's documentation.
 
 * Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your ide and demonstrate the following:
 
-    * 🔑 We attached multiple parameters after `?` in URL.
+    * 🔑 We attached multiple parameters after `?` in the URL.
 
     ```js
     fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=30')
@@ -346,11 +357,15 @@ In this activity, you will work with a partner to display content based on the r
 
     * 🔑  We use the `&` symbol to chain the parameters together.
 
+    ```js
+    ?since=2020-06-01&per_page=30
+    ```
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we know which parameters we can chain together?
+    * ☝️ How would we know which parameters we can use in our fetch request?
 
-    * 🙋 We read the API's documentation.
+    * 🙋 By reading the API's documentation.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -404,35 +419,45 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ We read the documentation for parameter definitions.
+    * ✔️ Documentation for the parameter definitions.
     
-    * ✔️ We attached multiple parameters after `?` in URL.
+    * ✔️ Attached multiple parameters after `?` in the URL.
 
-    * ✔️ We use the `&` symbol to chain the parameters together.
+    * ✔️ Use the `&` symbol to chain the parameters together.
 
 * Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues) in your browser.
 
-    * We read the documentation for parameter definitions.
+    * We read the documentation to find each parameter's definition.
 
 * Open `16-Stu_Deconstruct_Parameters/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
-
+    * 🔑 We attached multiple parameters after `?` in the URL.
+  
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=10&state=open&sort=created& direction=desc')
     ```
-    @TODO: ADD CODE SNIPPET, TABBED
-    ```
 
-    * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+    * 🔑 We use the `&` symbol to chain the parameters together.
+    
+    ```js
+    per_page=10&state=open&sort=created&direction=desc
+    ```
+    
+    * Make sure you go over what each parameter filters in the comments section.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ @TODO: { DO WE END OUR REVIEWS WITH A QUESTION? }
+    * ☝️ Where do we write our parameters?
 
-    * 🙋 @TODO: { YES, WE DO! }
+    * 🙋 After `?` in the URL.
+
+    * ☝️ How do we chain our parameters?
+
+    * 🙋 With the `&` symbol.
 
     * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 @TODO: We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for Office Hours to ask for help.
+    * 🙋 We read our API's documentation and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -446,7 +471,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
     fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
     ```
 
-    * 🔑 Fetch options are passed through in an additional `init` object argument.
+    * 🔑 Fetch options are passed through as an additional `init` object argument.
 
     ```js
     fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
@@ -456,7 +481,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
     })
     ```
 
-    * 🔑 Fetch options are dependent on your site's and API's requirements:
+    * 🔑 Fetch options are optional.  Their usage is dependent on your API's and/or web app's requirements.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -483,7 +508,7 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Be sure to work with your partner!
 
-* Navigate to the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) in your browser.
+* Navigate to the [Fetch Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) in your browser.
 
 * Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
 
@@ -520,11 +545,11 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ We write our fetch request.
+    * ✔️ Write the fetch request.
 
-    * ✔️ We pass our fetch options.
+    * ✔️ Pass the fetch option(s).
 
-    * ✔️ Fetch options are situational.
+    * ✔️ The browser updates the cache.
 
 * Open `18-Stu__Fetch_Options/Solved/assets/js/script.js` in your IDE and explain the following: 
 
@@ -534,14 +559,17 @@ In this activity, you will work with a partner to use MDN documentation to imple
     fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5',
     ```
 
-    * 🔑 We pass through our `cache: reload` option as an object.
+    * 🔑 We pass through our `cache: reload` option using the `init` object.
+
+    * 🔑 The browser fetches the resource from the remote server without first looking in the cache, but then will update the cache with the downloaded resource.
 
     ```js
     fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
         cache: 'reload',
     })
     ```
-    * We write the remainder of our fetch request as normal.
+
+    * We write the remainder of our fetch request.
   
     ```js
     .then(function (response) {
@@ -551,85 +579,153 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ @TODO: { DO WE END OUR REVIEWS WITH A QUESTION? }
+    * ☝️ How do we write fetch options?
 
-    * 🙋 @TODO: { YES, WE DO! }
+    * 🙋 With an `init` object that is passed as an additional argument in the fetch request.
+
+    * ☝️ How do we know which fetch options to use with our API?
+
+    * 🙋 By reading the API's documentation.
 
     * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 @TODO: We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for Office Hours to ask for help.
+    * 🙋 Read the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: { ACTIVITY NAME } (5 mins) 
+### 15. Instructor Demo: Document Location (5 mins) 
 
-@TODO: USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Go to [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) and then scroll down to Syntax.
 
-* Open `@TODO:/folder/file` in your browser and demonstrate the following:
+    * 🔑 The Document.location is a read-only property returns a Location object.
 
-* Run `@TODO:/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+    * 🔑 This provides information on the URL of the document.
 
-    * 🔑 @TODO: { WHEN WE DO THIS, IT DOES THAT. }
+* Open your console and Run `document.location`.  Then expand the `location object` and demonstrate the following: 
 
-    * 🔑 @TODO: { WE ALSO SEE THESE THINGS. }
+    * 🔑 Here is the `location object` with the browser's current location.
+
+    * 🔑 We can use the `location.href` property to set the URL or get the URL.
+
+* In the console and Run `document.location.href = 'https://www.google.com'`. 
+
+    * 🔑 The browser URL changed to the value assigned to `document.location.href`.
+
+    * 🔑 The `location object` has other methods that can change the URL for specific purposes.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we build this?
+    * ☝️ How would we learn to use the `Location Object`?
 
-    * 🙋 @TODO: { YES, HOW? } 
+    * 🙋 Read the the documentation. [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO:/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu__Document_Location/README.md`.
 
-### 16. Student Do: { ACTIVITY NAME } (15 mins) 
+### 16. Student Do: Document Location (15 mins) 
 
-* Direct students to the activity instructions found in `@TODO:/folder/file`.
+* Direct students to the activity instructions found in `20-Stu__Document_Location/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
 ```md
-@TODO: ADD INSTRUCTIONS
+# Document Location
+
+In this activity, you will work with a partner to use MDN documentation to implement location replace.
+
+## Instructions
+
+* Be sure to work with your partner!
+
+* Navigate to the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace) in your browser.
+
+* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
+
+* Using the documentation, implement the following:
+
+  * We are given a 404 responses status.
+
+  * When we receive the 404 status, then our app should use the location.replace method to go to the 404.html page.
+
+## 💡 Hint(s)
+
+* Make sure you attach location.replace to the document.
+
+* Make sure you use the relative path of the 404.html file.
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+
+  * Sometimes APIs don’t return JSON, they can return other data formats such as XML. Research how to convert XML to JSON.
+
+* Use [Google](https://www.google.com) or another search engine to research the above.
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 17. Instructor Review: { ACTIVITY NAME } (15 mins)
+### 17. Instructor Review: Document Location (15 mins)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with `@TODO: TOPIC`? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with the `Location Object`? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ @TODO: { THIS }
+    * ✔️ Check the `response.status`.
 
-    * ✔️ @TODO: { THAT }
+    * ✔️ Replace the `document.location`.
 
-    * ✔️ @TODO: { THE OTHER }
+    * ✔️ The browser URL will go to new `document.location`.
 
-* Open `@TODO:/folder/file` in your IDE and explain the following: 
+* Open `20-Stu__Document_Location/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * @TODO: { WE DO THIS AND THE RESULT IS THAT }
+    * We set our redirect URL to a variable. This is the URL that our replace method will use.
 
+    ```js
+    var redirectUrl = './404.html';
     ```
-    @TODO: ADD CODE SNIPPET, TABBED
+
+    * We send our fetch request.
+
+    ```js
+    fetch(badRequestUrl)
     ```
 
-    * 🔑 @TODO: DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+    * 🔑 We check our `response.status` to see if it equals 404.
+    
+    ```js
+    if (response.status === 404)
+    ```
+    
+    * 🔑 If the `response.status` equals 404, we pass the `redirectURL` variable as an argument into our `document.location.replace` method.
+
+    ```js
+    document.location.replace(redirectUrl);
+    ```
+
+    *  If the `response.status` does not equal 404, we return `response.json()`.
+
+    ```js
+    else {
+        return response.json();
+    }
+    ```
+
+    * This time we did not return `response.json()` after the if statement because we are changing the `document.location` based on the `response.status`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ @TODO: { DO WE END OUR REVIEWS WITH A QUESTION? }
+    * ☝️ What happens when you place a URL as an argument in the `document.replace` method. @TODO: Review this question/answer.
 
-    * 🙋 @TODO: { YES, WE DO! }
+    * 🙋 The browser URL changed in the address bar, redirecting the site to the URL argument.
 
     * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 @TODO: We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for Office Hours to ask for help.
+    * 🙋 Read the [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) , and stick around for Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 
