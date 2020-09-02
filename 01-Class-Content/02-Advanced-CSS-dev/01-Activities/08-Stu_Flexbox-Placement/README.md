@@ -8,9 +8,9 @@ In this activity, you will work with a partner to debug some broken code to prop
 
 * Open [index.html](./Unsolved/index.html) in the browser and examine the different components on the page. Note that they currently do not meet the following requirements:
 
-  * As a user, I want the navigation buttons to be on the right side
+  * As a user, I want the navigation buttons to be on the right side.
 
-  * As a user, I want the slideshow buttons to be normal sized and centered alongside the image
+  * As a user, I want the slideshow buttons to be sized as smaller icons and centered alongside the image.
 
 * To meet these requirements, the page should look like the following image:
 
