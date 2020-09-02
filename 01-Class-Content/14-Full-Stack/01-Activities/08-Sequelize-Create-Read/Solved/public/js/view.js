@@ -2,24 +2,11 @@
 document.addEventListener('DOMContentLoaded', function (e) {
   console.log('dom loaded!');
 
-  const newItemInput = document.querySelector('input.new-item');
   const todoContainer = document.querySelector('.todo-container');
-
-  // Get all the items that we need to add event listeners to
-  const deleteBtns = document.querySelectorAll('button.delete');
-  const completeBtns = document.querySelectorAll('button.complete');
-  const todoItems = document.querySelectorAll('.todo-item');
   const todoForm = document.getElementById('todo-form');
-
-  console.log('completeBtns', completeBtns);
-  console.log('todoForm', todoForm);
-  console.log('todoItems', todoItems);
-  console.log('deleteBtns', deleteBtns);
 
   // Inital todos array
   let todos = [];
-
-  // Getting todos from the DB when the page loads
 
   // This function resets the todos displayed with new todos from the database
   const initializeRows = () => {
@@ -53,14 +40,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // Helper function to delete a todo
   const deleteTodo = (e) => {
     e.stopPropagation();
+    console.log('attempting to delete');
     const { id } = e.target.dataset;
+    console.log('deleteTodo -> id', id);
 
     fetch(`/api/todos/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() => getTodos());
+    })
+      .then((res) => res.json())
+      .then((data) => console.log('data'));
   };
 
   // Helper function for editing a todo
@@ -95,7 +86,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
     const completeBtn = document.createElement('button');
     completeBtn.classList.add('complete', 'btn', 'btn-primary');
     completeBtn.innerText = '✓';
-    completeBtn.addEventListener('click', toggleComplete);
+    // completeBtn.addEventListener('click', toggleComplete);
+    completeBtn.addEventListener('click', () => console.log('toggle complete'));
 
     // Append all items to the row
     newInputRow.appendChild(rowSpan);
@@ -103,15 +95,33 @@ document.addEventListener('DOMContentLoaded', function (e) {
     newInputRow.appendChild(delBtn);
     newInputRow.appendChild(completeBtn);
 
-    // newInputRow.find('button.delete').data('id', todo.id);
-    // newInputRow.find('input.edit').style.display = 'none';
-    // newInputRow.data('todo', todo);
-
     if (todo.complete) {
       rowSpan.style.textDecoration = 'line-through';
     }
 
-    console.log('createNewRow -> newInputRow', newInputRow);
     return newInputRow;
   };
+
+  // Function to actually put the todo on the page
+  const insertTodo = (e) => {
+    e.preventDefault();
+    const todo = {
+      text: document.getElementById('newTodo').value.trim(),
+      complete: false,
+    };
+
+    fetch('/api/todos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(todo),
+    })
+      .then((response) => response.json())
+      .then((res) => {
+        getTodos();
+      });
+  };
+  todoForm.addEventListener('click', insertTodo);
+
 });
