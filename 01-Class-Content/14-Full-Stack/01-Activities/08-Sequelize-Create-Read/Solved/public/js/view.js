@@ -4,9 +4,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   const todoContainer = document.querySelector('.todo-container');
   const todoForm = document.getElementById('todo-form');
+  const todoItems = document.querySelectorAll('.todo-item');
 
   // Inital todos array
   let todos = [];
+
+  // Helper function to hide items
+  const hide = (el) => {
+    el.style.display = 'none';
+  };
+  const show = (el) => {
+    el.style.display = 'inline';
+  };
 
   // This function resets the todos displayed with new todos from the database
   const initializeRows = () => {
@@ -40,23 +49,47 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // Helper function to delete a todo
   const deleteTodo = (e) => {
     e.stopPropagation();
-    console.log('attempting to delete');
     const { id } = e.target.dataset;
-    console.log('deleteTodo -> id', id);
 
     fetch(`/api/todos/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() =>
-      console.log('We work on the delete operation in the next activity.')
-    );
+    }).then(() => console.log('Delete method called'));
   };
 
-  // Helper function for editing a todo
-  const editToDo = (e) => {
-    console.log('We work on editing in the next activity.');
+  // Function to handle the editing of a todo when input is clicked
+  const editTodo = (e) => {
+    const itemChildren = e.target.children;
+    // console.log('editTodo -> itemChildren', itemChildren);
+    for (let i = 0; i < itemChildren.length; i++) {
+      const currentEl = itemChildren[i];
+
+      if (currentEl.tagName === 'INPUT') {
+        currentEl.value = currentEl.parentElement.children[0].innerText;
+        show(currentEl);
+        currentEl.focus();
+      }
+
+      if (currentEl.tagName === 'SPAN' || currentEl.tagName === 'BUTTON') {
+        hide(currentEl);
+      }
+    }
+  };
+
+  // Function to handle when a user cancels editing
+  const cancelEdit = (e) => {
+    const itemParent = e.target.parentElement;
+    for (let i = 0; i < itemParent.children.length; i++) {
+      const currentChild = itemParent.children[i];
+
+      if (currentChild.tagName === 'INPUT') {
+        hide(currentChild);
+      } else {
+        show(currentChild);
+      }
+    }
   };
 
   // Construct a todo-item row
@@ -89,6 +122,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
     // completeBtn.addEventListener('click', toggleComplete);
     completeBtn.addEventListener('click', () => console.log('toggle complete'));
 
+    // Add event listener for editing
+    newInputRow.addEventListener('click', editTodo);
+    rowInput.addEventListener('blur', cancelEdit);
+
     // Append all items to the row
     newInputRow.appendChild(rowSpan);
     newInputRow.appendChild(rowInput);
@@ -109,16 +146,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
       text: document.getElementById('newTodo').value.trim(),
       complete: false,
     };
-
-    fetch('/api/todos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(todo),
-    })
-      .then((response) => response.json())
-      .then(() => getTodos());
+    if (todo.text) {
+      fetch('/api/todos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(todo),
+      })
+        .then((response) => response.json())
+        .then(() => getTodos());
+    }
   };
-  todoForm.addEventListener('click', insertTodo);
+  todoForm.addEventListener('submit', insertTodo);
 });
