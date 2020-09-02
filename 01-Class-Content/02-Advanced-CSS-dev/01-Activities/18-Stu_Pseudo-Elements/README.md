@@ -6,7 +6,7 @@ In this activity, you will work with a partner to use CSS documentation to incor
 
 * Be sure to work with your partner!
 
-* Navigate to the [CSS Docs on Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) in your browser.
+* Navigate to the [CSS Docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) in your browser.
 
 * Open [index.html](./Unsolved/index.html) in the browser. We are given a blog post about CSS.
 
