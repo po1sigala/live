@@ -219,7 +219,7 @@ main {
   color: var(--secondary);
 }
 
-/* PORTFOLIO PROJECT IMAGES */
+/* portfolio project images */
 .run-buddy {
   background-image: url("../images/02-run-buddy.jpg");
 }
@@ -240,7 +240,7 @@ main {
   background-image: url("../images/02-portfolio-4.jpg");
 }
 
-/* END PORTFOLIO PROJECT IMAGES */
+/* end portfolio project images */
 
 @media screen and (max-width: 980px) {
   header {
