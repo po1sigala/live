@@ -94,6 +94,19 @@ document.addEventListener('DOMContentLoaded', function (e) {
     }
   };
 
+  // Update a todo (PUT)
+
+  const updateTodo = (todo) => {
+    console.log('attempting to update with', todo);
+    fetch('/api/todos', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(todo),
+    }).then((response) => console.log(response));
+  };
+
   // Function to call when we are finished editing a todo
   const finishEdit = (e) => {
     if (e.keyCode === 13) {
@@ -101,8 +114,18 @@ document.addEventListener('DOMContentLoaded', function (e) {
       const updatedTodo = {
         text: e.target.value.trim(),
         completed: false,
+        id: e.target.dataset.id,
       };
+
+      // Update the text in the dom
       itemParent.childNodes[0].innerText = updatedTodo.text;
+      console.log(
+        'finishEdit -> itemParent.childNodes[0]',
+        itemParent.childNodes[0]
+      );
+
+      // Call on our helper function to preform a PUT request
+      updateTodo(updatedTodo);
 
       if (itemParent) {
         for (let i = 0; i < itemParent.children.length; i++) {
@@ -138,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     const delBtn = document.createElement('button');
     delBtn.classList.add('delete', 'btn', 'btn-danger');
     delBtn.setAttribute('data-id', todo.id);
+    rowInput.setAttribute('data-id', todo.id);
     delBtn.innerText = 'x';
     delBtn.addEventListener('click', deleteTodo);
 
