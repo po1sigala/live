@@ -363,9 +363,11 @@ In this activity, you will work with a partner to display content based on the r
 
 ### 8. Instructor Demo: Deconstruct Parameters (5 mins) 
 
-* Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/gists#list-public-gists) in your browser.
+* Open up `15-Ins_Deconstruct_Parameters/index.html` in the browser to the console.
 
-  * 🔑 Using multiple parameters allows us to customize the response.
+  * 🔑 Sometimes we need to filter the response for specific information.
+
+  * 🔑 We are able to filter the response by using multiple parameters.
 
   * 🔑 We can find these parameters in the API's documentation.
 
@@ -374,13 +376,25 @@ In this activity, you will work with a partner to display content based on the r
   * 🔑 We attached multiple parameters after `?` in the URL.
 
   ```js
-  fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=30')
+  fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
   ```
 
   * 🔑  We use the `&` symbol to chain the parameters together.
 
   ```js
   ?since=2020-06-01&per_page=30
+  ```
+
+  * 🔑  Each parameter offers a specific filter, `since` filters for a start from date.
+
+  ```js
+  ?since=2020-06-01
+  ```
+
+  * 🔑  `per_page` filters the number of results returned, the default value is 30.
+
+  ```js
+  &per_page=100
   ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -408,7 +422,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Learning how to read documentation is a crucial skill to have in your developer toolbelt.
 
-* Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues) in your browser.
+* Open in your browser.
 
 * Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
 
