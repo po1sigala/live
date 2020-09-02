@@ -50,7 +50,7 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-    * Uses the Moment.js library to work with date and time
+  * Uses the Moment.js library to work with date and time
 
 ### Deployment: 32%
 
