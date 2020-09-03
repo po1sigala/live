@@ -1,94 +1,59 @@
-$(document).ready(function() {
-  // Getting references to the name input and author container, as well as the table body
-  var nameInput = $("#author-name");
-  var authorList = $("tbody");
-  var authorContainer = $(".author-container");
-  // Adding event listeners to the form to create a new object, and the button to delete
-  // an Author
-  $(document).on("submit", "#author-form", handleAuthorFormSubmit);
-  $(document).on("click", ".delete-author", handleDeleteButtonPress);
+// Wait for the DOM to completely load before we run our JS
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded! 🚀');
 
-  // Getting the initial list of Authors
+  const nameInput = document.getElementById('author-name');
+  const authorList = document.querySelector('tbody');
+  const authorContainer = document.querySelector('.author-container');
+
+  // TODO: Find good spot for these
+  // $(document).on('submit', '#author-form', handleAuthorFormSubmit);
+  // $(document).on('click', '.delete-author', handleDeleteButtonPress);
+
+  // Get the list of authors
   getAuthors();
 
-  // A function to handle what happens when the form is submitted to create a new Author
-  function handleAuthorFormSubmit(event) {
-    event.preventDefault();
-    // Don't do anything if the name fields hasn't been filled out
-    if (!nameInput.val().trim().trim()) {
-      return;
-    }
-    // Calling the upsertAuthor function and passing in the value of the name input
-    upsertAuthor({
-      name: nameInput
-        .val()
-        .trim()
-    });
-  }
-
-  // A function for creating an author. Calls getAuthors upon completion
-  function upsertAuthor(authorData) {
-    $.post("/api/authors", authorData)
-      .then(getAuthors);
-  }
-
-  // Function for creating a new list row for authors
-  function createAuthorRow(authorData) {
-    var newTr = $("<tr>");
-    newTr.data("author", authorData);
-    newTr.append("<td>" + authorData.name + "</td>");
-    if (authorData.Posts) {
-      newTr.append("<td> " + authorData.Posts.length + "</td>");
-    } else {
-      newTr.append("<td>0</td>");
-    }
-    newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>");
-    newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'>Create a Post</a></td>");
-    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>");
-    return newTr;
-  }
-
-  // Function for retrieving authors and getting them ready to be rendered to the page
-  function getAuthors() {
-    $.get("/api/authors", function(data) {
-      var rowsToAdd = [];
-      for (var i = 0; i < data.length; i++) {
-        rowsToAdd.push(createAuthorRow(data[i]));
-      }
-      renderAuthorList(rowsToAdd);
-      nameInput.val("");
-    });
-  }
-
-  // A function for rendering the list of authors to the page
-  function renderAuthorList(rows) {
-    authorList.children().not(":last").remove();
-    authorContainer.children(".alert").remove();
-    if (rows.length) {
-      console.log(rows);
-      authorList.prepend(rows);
-    }
-    else {
-      renderEmpty();
-    }
-  }
-
-  // Function for handling what to render when there are no authors
-  function renderEmpty() {
-    var alertDiv = $("<div>");
-    alertDiv.addClass("alert alert-danger");
-    alertDiv.text("You must create an Author before you can create a Post.");
-    authorContainer.append(alertDiv);
-  }
-
-  // Function for handling what happens when the delete button is pressed
-  function handleDeleteButtonPress() {
-    var listItemData = $(this).parent("td").parent("tr").data("author");
-    var id = listItemData.id;
-    $.ajax({
-      method: "DELETE",
-      url: "/api/authors/" + id
+  // Create an author
+  const insertAuthor = (authorData) => {
+    fetch('/api/authors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(authorData),
     })
-      .then(getAuthors);
-  }
+      .then(getAuthors)
+      .catch((err) => console.error(err));
+  };
+
+  // Handle when the author form is submitted
+  const handleAuthorFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!nameInput.value.trim()) {
+      alert('Please provide an author name');
+    }
+
+    insertAuthor({
+      name: nameInput.value.trim(),
+    });
+  };
+
+  // Create list row for authors
+  const createAuthorRow = ({ authorData }) => {
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-author', JSON.stringify(authorData));
+
+    const td = document.createElement('td');
+    td.textContent = authorData.name;
+    tr.appendChild(td);
+
+    const lengthTd = document.createElement('td');
+    if (authorData.Posts) {
+      lengthTd.textContent = authorData.Posts.length;
+    } else {
+      lengthTd.textContent = '0';
+    }
+    tr.appendChild(lengthTd);
+  };
 });
