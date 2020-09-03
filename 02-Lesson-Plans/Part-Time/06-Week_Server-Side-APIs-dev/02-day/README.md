@@ -343,7 +343,7 @@ In this activity, you will work with a partner to display content based on the r
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why is this useful?
+  * ☝️ Why are status codes useful?
 
   * 🙋 Knowing the status codes of responses and working with them is vital to creating a good user experience.
 
@@ -365,13 +365,13 @@ In this activity, you will work with a partner to display content based on the r
 
 * Open up `15-Ins_Deconstruct_Parameters/index.html` in the browser to the console.
 
-  * 🔑 Sometimes we need to filter the response for specific information.
+  * 🔑 Sometimes we need make a specific request to be sure we receive only the information we want.
 
-  * 🔑 We are able to filter the response by using multiple parameters.
+  * 🔑 We are able to change our requests by chaining parameters onto our `endpoints`.
 
-  * 🔑 We can find these parameters in the API's documentation.
+  * 🔑 We can find these parameters in the APIs documentation.
 
-* Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your ide and demonstrate the following:
+* Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your IDE and demonstrate the following:
 
   * 🔑 We attached multiple parameters after `?` in the URL.
 
@@ -379,19 +379,19 @@ In this activity, you will work with a partner to display content based on the r
   fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
   ```
 
-  * 🔑  We use the `&` symbol to chain the parameters together.
-
-  ```js
-  ?since=2020-06-01&per_page=30
-  ```
-
-  * 🔑  Each parameter offers a specific filter, `since` filters for a start from date.
+  * 🔑 Each parameter offers a specific filter, `since` filters for a start from date.
 
   ```js
   ?since=2020-06-01
   ```
 
-  * 🔑  `per_page` filters the number of results returned, the default value is 30.
+  * 🔑 We use the `&` symbol to chain the parameters together.
+
+  ```js
+  ?since=2020-06-01&per_page=100
+  ```
+
+  * 🔑 `per_page` filters the number of results returned. While the default value is 30, here we specify 100.
 
   ```js
   &per_page=100
@@ -399,9 +399,17 @@ In this activity, you will work with a partner to display content based on the r
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we know which parameters we can use in the fetch request?
+  * ☝️ Why is chaining parameters useful?
 
-    * 🙋 By reading the API's documentation.
+  * 🙋 It allows us to send a request that will only come back with relevant data, making us have to sort through less.
+
+  * ☝️ What are request parameters useful for?
+
+  * 🙋 We can make a more specific request.
+
+  * ☝️ How would we know which parameters we can use in the fetch request?
+
+  * 🙋 By reading the APIs documentation.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -420,13 +428,11 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 ## Instructions
 
-* Learning how to read documentation is a crucial skill to have in your developer toolbelt.
-
-* Open in your browser.
+* Be sure to work with your partner!
 
 * Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
 
-* Insert comments where specified to explain the parameters by using the parameter list in the documentation as a reference.
+* Insert comments where specified to explain the parameters used and what each one does for us.
 
 ## 💡 Hint(s)
 
@@ -445,7 +451,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 ### 10. BREAK (15 mins)
 
-### 11. Instructor Review: Deconstruct Parameters (10 mins) 
+### 11. Instructor Review: Deconstruct Parameters (10 mins)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -454,46 +460,64 @@ In this activity, you will work with a partner to reverse engineer API parameter
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
+  
+  * ✔️ Parameters after `?`
 
-    * ✔️ Documentation for the parameter definitions.
-    
-    * ✔️ Attached multiple parameters after `?` in the URL.
+  * ✔️ Chain parameters with `&`
 
-    * ✔️ Use the `&` symbol to chain the parameters together.
+  * ✔️ `state=open`
 
-* Navigate to the [GitHub Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues) in your browser.
+  * ✔️ `sort=created`
 
-    * 🔑 We read the documentation to find each parameter's definition.
+  * ✔️ `direction=desc`
 
 * Open `16-Stu_Deconstruct_Parameters/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 We attached multiple parameters after `?` in the URL.
-  
-    ```js
-    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=10&state=open&sort=created& direction=desc')
-    ```
+  * 🔑 We attached multiple parameters after `?` in the URL.
 
-    * 🔑 We use the `&` symbol to chain the parameters together.
-    
-    ```js
-    per_page=10&state=open&sort=created&direction=desc
-    ```
-    
-    * Make sure you go over what each parameter filters in the comments section.
+  ```js
+  fetch('.......?per_page=10&state=open&sort=created&direction=desc')
+  ```
+
+  * 🔑 We limit the results to 10 per page.
+  
+  ```js
+  per_page=10
+  ```
+
+  * 🔑 We chain multiple parameters using the `&` symbol. The first chained parameter is `state`, setting the value to `open`. This will show us only `open` issues.
+
+  ```js
+  per_page=10&state=open
+  ```
+
+  * 🔑 We `sort` them by their creation date.
+
+  ```js
+  sort=created
+  ```
+
+  * 🔑 We then pass a parameter to display them in `descending` order.
+
+  ```js
+  direction=desc
+  ```
+  
+  * Make sure you go over what each parameter filters in the comments section.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ Where do we write the parameters?
+  * ☝️ Where do we write the parameters?
 
-    * 🙋 After `?` in the URL.
+  * 🙋 After `?` in the URL.
 
-    * ☝️ How do we chain the parameters?
+  * ☝️ How do we chain multiple parameters?
 
-    * 🙋 With the `&` symbol.
+  * 🙋 With the `&` symbol.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 We read the API's documentation and stick around for Office Hours to ask for help.
+  * 🙋 We read the API's documentation and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -501,23 +525,23 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Open `17-Ins_Fetch_Options/assets/js/script.js` in your ide and demonstrate the following:
 
-    * 🔑 We write the fetch request.
+  * 🔑 We write the fetch request.
 
-    ```js
-    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
-    ```
+  ```js
+  fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
+  ```
 
-    * 🔑 Fetch options are passed through as an additional `init` object argument.
+  * 🔑 Fetch options are passed through as an additional `init` object argument.
 
-    ```js
-    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
-        method: 'GET',
-        credentials: 'same-origin',
-        redirect: 'follow',
-    })
-    ```
+  ```js
+  fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+      method: 'GET',
+      credentials: 'same-origin',
+      redirect: 'follow',
+  })
+  ```
 
-    * 🔑 Fetch options are optional.  Their usage is dependent on the API's documentation and/or the web app's requirements.
+  * 🔑 Fetch options are optional.  Their usage is dependent on the API's documentation and/or the web app's requirements.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
