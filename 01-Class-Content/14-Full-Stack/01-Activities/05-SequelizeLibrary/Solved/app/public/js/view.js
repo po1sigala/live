@@ -3,6 +3,10 @@ const show = (el) => {
   el.style.display = 'block';
 };
 
+const hide = (el) => {
+  el.style.display = 'none';
+};
+
 // Helper function to preform DELETE on a book
 const removeBook = (e) => {
   const bookId = e.target.dataset.id;
