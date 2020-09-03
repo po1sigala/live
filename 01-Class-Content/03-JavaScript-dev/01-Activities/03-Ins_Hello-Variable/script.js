@@ -3,11 +3,11 @@ var studentName;
 
 // Uses = to assign a value
 var studentName = "Abdul";
-var age = 32;
+var studentAge = 32;
 
 // To re-assign a variable, use only the name  
 studentName = "Tonya";
-age = 52;
+studentAge = 52;
 
 // To log a value directly to the console, place value between ()
 console.log("My name is ");
