@@ -553,7 +553,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu__Fetch_Options/README.md`.
 
-### 13. Student Do: Fetch Options (15 mins) 
+### 13. Student Do: Fetch Options (15 mins)
 
 * Direct students to the activity instructions found in `18-Stu__Fetch_Options/README.md`.
 
@@ -577,9 +577,9 @@ In this activity, you will work with a partner to use MDN documentation to imple
   * We are given a fetch request.
 
   * When we send the fetch request, the fetch request should have one option.
-  
-    * A cache with a value of reload.
-    
+
+  * A cache with a value of reload.
+
 ## 💡 Hint(s)
 
 * Remember to use an object to passthrough the options.
@@ -605,51 +605,51 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Write the fetch request.
+  * ✔️ Write the fetch request.
 
-    * ✔️ Pass the fetch option(s).
+  * ✔️ Pass the fetch option(s).
 
-    * ✔️ The browser updates the cache.
+  * ✔️ The browser updates the cache.
 
 * Open `18-Stu__Fetch_Options/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * 🔑 We write the fetch request.
+  * 🔑 We write the fetch request.
 
-    ```js
-    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5',
-    ```
+  ```js
+  fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5',
+  ```
 
-    * 🔑 We pass through the `cache: reload` option using the `init` object.
+  * 🔑 We pass through the `cache: reload` option using the `init` object.
 
-    * 🔑 The browser fetches the resource from the remote server without first looking in the cache, but then will update the cache with the downloaded resource.
+  * 🔑 The browser fetches the resource from the remote server without first looking in the cache, but then will update the cache with the downloaded resource.
 
-    ```js
-    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
-        cache: 'reload',
-    })
-    ```
+  ```js
+  fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+      cache: 'reload',
+  })
+  ```
 
-    * We write the remainder of the fetch request.
-  
-    ```js
-    .then(function (response) {
-        return response.json();
-    })
-    ```
+  * We write the remainder of the fetch request.
+
+  ```js
+  .then(function (response) {
+      return response.json();
+  })
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we write fetch options?
+  * ☝️ How do we write fetch options?
 
-    * 🙋 With an `init` object that is passed as an additional argument in the fetch request.
+  * 🙋 With an `init` object that is passed as an additional argument in the fetch request.
 
-    * ☝️ How do we know which fetch options to use with the API?
+  * ☝️ How do we know which fetch options to use with the API?
 
-    * 🙋 By reading the API's documentation.
+  * 🙋 By reading the API's documentation.
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Read the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and stick around for Office Hours to ask for help.
+  * 🙋 Read the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -657,27 +657,27 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Go to [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) and then scroll down to Syntax.
 
-    * 🔑 The Document.location is a read-only property that returns a Location object.
+  * 🔑 The Document.location is a read-only property that returns a Location object.
 
-    * 🔑 This provides information on the URL of the document.
+  * 🔑 This provides information on the URL of the document.
 
 * Open your console and Run `document.location`.  Then expand the `location object` and demonstrate the following: 
 
-    * 🔑 Here is the `location object` with the browser's current location.
+  * 🔑 Here is the `location object` with the browser's current location.
 
-    * 🔑 We can use the `location.href` property to set the URL or get the URL.
+  * 🔑 We can use the `location.href` property to set the URL or get the URL.
 
 * In the console and Run `document.location.href = 'https://www.google.com'`. 
 
-    * 🔑 The browser URL changed to the value assigned to `document.location.href`.
+  * 🔑 The browser URL changed to the value assigned to `document.location.href`.
 
-    * 🔑 The `location object` has other methods that can change the URL for specific purposes.
+  * 🔑 The `location object` has other methods that can change the URL for specific purposes.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How would we learn to use the `Location Object`?
+  * ☝️ How would we learn to use the `Location Object`?
 
-    * 🙋 Read the the documentation. [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) 
+  * 🙋 Read the the documentation. [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) 
 
 * Answer any questions before proceeding to the next activity.
 
@@ -735,45 +735,45 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-    * ✔️ Check the `response.status`.
+  * ✔️ Check the `response.status`.
 
-    * ✔️ Replace the `document.location`.
+  * ✔️ Replace the `document.location`.
 
-    * ✔️ The browser URL will go to new `document.location`.
+  * ✔️ The browser URL will go to new `document.location`.
 
 * Open `20-Stu__Document_Location/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-    * We set the redirect URL to a variable. This is the URL that the replace method will use.
+  * We set the redirect URL to a variable. This is the URL that the replace method will use.
 
-    ```js
-    var redirectUrl = './404.html';
-    ```
+  ```js
+  var redirectUrl = './404.html';
+  ```
 
-    * We send the fetch request.
+  * We send the fetch request.
 
-    ```js
-    fetch(badRequestUrl)
-    ```
+  ```js
+  fetch(badRequestUrl)
+  ```
 
-    * 🔑 We check the `response.status` to see if it equals 404.
-    
-    ```js
-    if (response.status === 404)
-    ```
-    
-    * 🔑 If the `response.status` equals 404, we pass the `redirectURL` variable as an argument into the `document.location.replace` method.
+  * 🔑 We check the `response.status` to see if it equals 404.
+  
+  ```js
+  if (response.status === 404)
+  ```
+  
+  * 🔑 If the `response.status` equals 404, we pass the `redirectURL` variable as an argument into the `document.location.replace` method.
 
-    ```js
-    document.location.replace(redirectUrl);
-    ```
+  ```js
+  document.location.replace(redirectUrl);
+  ```
 
-    *  If the `response.status` does not equal 404, we return `response.json()`.
+  *  If the `response.status` does not equal 404, we return `response.json()`.
 
-    ```js
-    else {
-        return response.json();
-    }
-    ```
+  ```js
+  else {
+      return response.json();
+  }
+  ```
 
     * This time we did not return `response.json()` after the if statement because we are changing the `document.location` based on the `response.status`.
 
