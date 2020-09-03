@@ -12,14 +12,14 @@ In this unit we introduce students to Node.js and the concepts of standard libra
 
 * If students continually question why they are learning Node.js, emphasize the client-server model.
 
-* Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers before coming to class.
+* Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers before coming to class.
 
 ## Heads Up
 
 Next week, we begin OOP, constructors, and classes. Try to spend some time this week to make sure that students get comfortable with ES6 and other node fundamentals so that it's not distracting when we move into more abstract concepts.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/09-NodeJS/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

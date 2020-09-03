@@ -51,7 +51,7 @@ THEN that will be shown on the page, and added to their transaction history when
 
 * We would like you to have well over 200 commits by graduation, so commit early and often!
 
-* Deploy your application with [Heroku and MongoDB Atlas.](../04-Supplemental/MongoAtlas-Deploy.md)
+* Deploy your application with [Heroku and MongoDB Atlas.](../04-Important/MongoAtlas-Deploy.md)
 
 ## Submission on BCS
 

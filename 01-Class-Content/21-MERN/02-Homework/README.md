@@ -20,7 +20,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 * We would like you to have well over 200 commits by graduation, so commit early and often!
 
-* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Supplemental/MERNHerokuDeploy.md) to do so.
+* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Important/MERNHerokuDeploy.md) to do so.
 
 ### Submission on BCS
 

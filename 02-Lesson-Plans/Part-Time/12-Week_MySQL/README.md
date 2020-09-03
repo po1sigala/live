@@ -14,12 +14,12 @@ In this week, we are starting working with databases by introducing MySQL and SQ
 
 ## Heads Up
 
-* In this unit, students are going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers **before** coming to class.
+* In this unit, students are going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers **before** coming to class.
 
 * In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/12-MySQL/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

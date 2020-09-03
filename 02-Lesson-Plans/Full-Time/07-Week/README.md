@@ -20,10 +20,10 @@ In this unit, students will learn how to set up web servers with Node.js and how
 * [Eat-Da-Burger Application (Demo) {Movie}](https://youtu.be/msvdn95x9OM)
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[MVC](../../../01-Class-Content/13-MVC/04-Supplemental/CAREER-CONNECTION.md).
-[Full-stack](../../../01-Class-Content/14-Full-Stack/04-Supplemental/CAREER-CONNECTION.md).
+[MVC](../../../01-Class-Content/13-MVC/04-Important/CAREER-CONNECTION.md).
+[Full-stack](../../../01-Class-Content/14-Full-Stack/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

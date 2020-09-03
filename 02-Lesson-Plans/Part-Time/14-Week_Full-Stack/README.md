@@ -17,7 +17,7 @@ This unit, we will introduce students to the Sequelize ORM as well as some valid
 Next unit we begin project work, so make sure to set up groups before the first class in the next unit.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/14-Full-Stack/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/14-Full-Stack/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

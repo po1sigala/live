@@ -53,7 +53,7 @@
 
 * Slack out the [requirements for project 2](../Project-Resources/README.md).
 
-* Let students know about the [starter code for project 2](../../../../01-Class-Content/14-Full-Stack/04-Supplemental/Sequelize-Passport-Example/server.js).
+* Let students know about the [starter code for project 2](../../../../01-Class-Content/14-Full-Stack/04-Important/Sequelize-Passport-Example/server.js).
 
 * Answer any questions about project requirements.
 
@@ -63,7 +63,7 @@
 
 * We have created a written guide and video guide on how to connect a GitHub repository to a Heroku Application for continuous deployment. Please provide these to your students along with the following activity instructions.
 
-    [Connect Repo with Heroku Guide](../../../../01-Class-Content/15-Project-2/04-Supplemental/GitHubHerokuConnect.md)
+    [Connect Repo with Heroku Guide](../../../../01-Class-Content/15-Project-2/04-Important/GitHubHerokuConnect.md)
 
     [Connect Repo with Heroku Video](https://youtu.be/GgNcs9zlFSA?list=PLOFmg4xbN_TPrB6w4rThsFanVxJI_SfER)
 

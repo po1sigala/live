@@ -15,7 +15,7 @@ This unit is intended to be a gentle introduction to computer science topics. So
 Project presentations will take place on the last day of class. You may want to refer to your calendar and determine which day of the week it falls on.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/22-Computer-Science/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/22-Computer-Science/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

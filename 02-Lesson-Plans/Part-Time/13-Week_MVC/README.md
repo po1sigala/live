@@ -17,7 +17,7 @@ In this unit, students will be diving into the basics of Handlebars, Object-Rela
 Next unit we will be spending some more time working with full stack applications, so it's okay if the syntax of client to server communication hasn't quite sunk in yet. 
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/13-MVC/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/13-MVC/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
