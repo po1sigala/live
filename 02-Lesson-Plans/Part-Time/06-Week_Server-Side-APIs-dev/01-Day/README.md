@@ -237,7 +237,16 @@ In this activity, you will work with a partner using `cURL`.
   })
   ```
 
-  * JSON stands for JavaScript Object Notation and is nothing more than simple JavaScript objects used to exchange data.
+  * JSON stands for JavaScript Object Notation. It nothing more than the use of simple javascript objects to exchange data between the client and server.  This makes the data easier to read and understand.
+
+  ```js
+  {
+  "firstName": "Lashawn",
+  "lastName": "Williams",
+  "age": 40,
+  "email":"lashawnwilliams@example.com"
+	}
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
