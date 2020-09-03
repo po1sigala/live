@@ -237,6 +237,8 @@ In this activity, you will work with a partner using `cURL`.
   })
   ```
 
+  * JSON is a data structure that is primarily used to transmit data between a server and web application.  It is based on the JavaScript object syntax, using key/value pairs.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What do we need to pass through fetch to get an API to send back data?
