@@ -12,6 +12,7 @@ fetch('https://api.github.com/orgs/nodejs/repos')
     return response.json();
   })
   .then(function (data) {
-    console.log('Github Repo Issues \n----------');
-    console.log(data);
-  });
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].name);
+  }
+});
