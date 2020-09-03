@@ -1,33 +1,21 @@
-// Declares student variable and assigns value "Abdul"
-var student = "Abdul";
+// Declares student variable 
+var studentName;
 
-// Each variable name should be unique, start with a letter, and should be descriptive
-var city = "New York";
-
-// Variables hold different types of data, not just text!  
+// Uses = to assign a value
+var studentName = "Abdul";
 var age = 32;
-var isAwesome = true;
 
 // To re-assign a variable, use only the name  
-age = 43;
-city = "Melbourne";
+studentName = "Tonya";
+age = 52;
 
-// Variables can be used to log the their assigned value
-// Logs Abdul
+// To log a value directly to the console, place value between ()
+console.log("My name is ");
 
-console.log(student); 
-
-// Logs New York
-console.log(city); 
- 
-// Pro-Tip: Don't put quotes around variable names!
-// Logs student because "student" is read as a value
-console.log("student");
-
-// Logs "Abdul" because student (no quotes) is read as a variable that holds the value "Abdul"
-console.log(student);
+// To log a value stored in a variable, place the variable's name between ()
+console.log(studentName);
 
 // Variables and values can be concatenated in a single console log using "+"
-// Logs "student: Abdul"
+// Logs "My name is Tonya"
 
-console.log("student" + ": " + student);
+console.log("My name is " + studentName);
