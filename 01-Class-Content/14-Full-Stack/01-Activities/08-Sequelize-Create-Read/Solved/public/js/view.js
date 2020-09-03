@@ -1,10 +1,9 @@
 // Wait for the DOM to completely load before we run our JS
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', (e) => {
   console.log('dom loaded!');
 
   const todoContainer = document.querySelector('.todo-container');
   const todoForm = document.getElementById('todo-form');
-  const todoItems = document.querySelectorAll('.todo-item');
 
   // Inital todos array
   let todos = [];
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() => console.log('Delete method called'));
+    }).then(getTodos);
   };
 
   // Function to handle the editing of a todo when input is clicked
@@ -188,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
   };
 
   const toggleComplete = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     const spanEl = e.target.parentNode.children[0];
     const currentTodo = {
       text: e.target.parentNode.children[0].innerText,
@@ -198,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     currentTodo.complete = !currentTodo.complete;
     spanEl.style.textDecoration = 'line-through';
     updateTodo(currentTodo);
-    console.log("toggleComplete -> currentTodo", currentTodo)
+    console.log('toggleComplete -> currentTodo', currentTodo);
   };
 
   // Function to actually put the todo on the page
