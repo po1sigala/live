@@ -6,7 +6,25 @@
 
 ## Key Topics
 
-* @TODO LIST KEY TOPICS OF UNIT
+* Media queries
+
+* Flexbox
+
+* Responsive design
+
+* CSS resets
+
+* Pseudo-classes
+
+* Pseudo-elements
+
+* CSS typography
+
+* HTML form customization
+
+* CSS variables
+
+* Advanced CSS selectors
 
 ## Comprehension Check
 
@@ -18,19 +36,39 @@ You will be employer-ready if you can answer the following questions:
 
 You will be employer-competitive if you are able to:
 
-* @TODO LIST LEARNING OBJECTIVES
+* Implement a flexbox layout for a responsive design
 
-## Homework
+* Explain and implement CSS custom properties (variables)
 
-@TODO WHAT WILL THE STUDENTS BUILD FOR THEIR HOMEWORK?
+* Explain and implement basic media queries
+
+* Explain and implement CSS selectors beyond single classes or elements
+
+* Perform a `git branch`, `push`, and `merge` workflow
+
+## Homework: Portfolio
+
+You will use HTML and advanced CSS techniques to build a responsive, mobile-friendly portfolio.
 
 ## Heads-Up
 
-* @TODO WHAT DOES THE STUDENT NEED TO DO TO PREPARE FOR THE NEXT UNIT?
+In the next unit, you will learn JavaScript fundamentals such as variables, functions, objects, and arrays.
 
 ## Resources
 
-* @TODO LIST ANY RESOURCES THAT WILL HELP THE STUDENTS GET THROUGH THIS UNIT
+* [MDN web docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+* [MDN web docs on flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+* [MDN web docs on text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+
+* [MDN web docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+* [MDN web docs on pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+* [MDN web docs on combinator selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+* [MDN web docs on CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
