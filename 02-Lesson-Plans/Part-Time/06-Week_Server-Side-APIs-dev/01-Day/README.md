@@ -237,7 +237,7 @@ In this activity, you will work with a partner using `cURL`.
   })
   ```
 
-  * JSON is a data structure that is primarily used to transmit data between a server and web application.  It is based on the JavaScript object syntax, using key/value pairs.
+  * JSON stands for JavaScript Object Notation and is nothing more than simple JavaScript objects used to exchange data.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
