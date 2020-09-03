@@ -521,7 +521,7 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Answer any questions before proceeding to the next activity.
 
-### 12. Instructor Demo: Fetch Options (5 mins) 
+### 12. Instructor Demo: Fetch Options (5 mins)
 
 * Open `17-Ins_Fetch_Options/assets/js/script.js` in your ide and demonstrate the following:
 
@@ -545,9 +545,9 @@ In this activity, you will work with a partner to reverse engineer API parameter
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ How do we learn about fetch options?
+  * ☝️ How do we learn about fetch options?
 
-    * 🙋 We read the documentation [Fetch Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+  * 🙋 We read the documentation [Fetch Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
 * Answer any questions before proceeding to the next activity.
 
