@@ -1,8 +1,6 @@
 // Wait for the DOM to completely load before we run our JS
 document.addEventListener('DOMContentLoaded', (e) => {
-  if (e) {
-    console.log('DOM loaded! 🚀');
-  }
+  console.log('DOM loaded! 🚀');
 
   // Check for query string and set flag, "updating", to false initially
   const url = window.location.search;
