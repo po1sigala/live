@@ -293,6 +293,6 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
 * ☝️ What can we do if we don't completely understand this?
 
-* 🙋 We can refer to supplemental material, read the [{ MDN Web Docs: The Script Element }]({ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script }), and stick around for Office Hours to ask for help.
+* 🙋 We can refer to supplemental material, read the [MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
