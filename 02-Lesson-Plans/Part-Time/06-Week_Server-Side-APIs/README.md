@@ -22,7 +22,7 @@ Make sure that these groups are created prior to class 07.1. Groups are made up 
 
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

@@ -424,7 +424,7 @@
 
 ### 23. Instructor Do: Slack GitHub Guide (2 mins)
 
-* At this point, slack the GitHub guide (found in `Supplemental > GitHub Help > "Steps to Upload GitHub"`). Let them know that this guide will be their best resource on completing their own GitHub pushes.
+* At this point, slack the GitHub guide (found in `Important > GitHub Help > "Steps to Upload GitHub"`). Let them know that this guide will be their best resource on completing their own GitHub pushes.
 
 ### 24. Students Do: Git Add, Commit, Push (15 mins)
 

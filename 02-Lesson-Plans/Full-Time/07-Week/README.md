@@ -33,7 +33,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 * [Postman](https://www.getpostman.com/)
 * [Codeschool's Express Course](https://www.codeschool.com/courses/building-blocks-of-express-js).
 * [Stack Overflow Ports Explanation](http://stackoverflow.com/questions/10182798/why-are-ports-below-1024-privileged)
-* [Heroku Deployment Guide for MySQL Projects](../../../01-Class-Content/14-handlebars/03-Supplemental/MySQLHerokuDeploymentProcess.pdf)
+* [Heroku Deployment Guide for MySQL Projects](../../../01-Class-Content/13-MVC/04-Important/MySQLHerokuDeploymentProcess.pdf)
 * [Understand JavaScript Callbacks](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
 * [Handlebars Website](http://handlebarsjs.com/)
 

@@ -15,7 +15,7 @@ This is a critical unit as it introduces real-world use cases for the programmin
 Students are very likely to come across jQuery solutions when searching for DOM/event resources. Make sure to let them know that we will cover jQuery in the next unit, so for now, do not consult resources that include the word `jQuery` or the `$` variable.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/04-Web-APIs/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/04-Web-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

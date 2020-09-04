@@ -19,7 +19,7 @@ In this week, we are starting working with databases by introducing MySQL and SQ
 * In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

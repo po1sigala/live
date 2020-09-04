@@ -19,7 +19,7 @@ In this unit we introduce students to Node.js and the concepts of standard libra
 Next week, we begin OOP, constructors, and classes. Try to spend some time this week to make sure that students get comfortable with ES6 and other node fundamentals so that it's not distracting when we move into more abstract concepts.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

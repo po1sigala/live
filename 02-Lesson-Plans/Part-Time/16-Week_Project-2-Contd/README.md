@@ -27,7 +27,7 @@ Before next unit, make sure you install MongoDB and Robo 3T on your machine--you
 If you haven't used MongoDB much in the past, take a look at next week's queries and solutions. This should prime you for the lecture.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/16-Project-2-Contd/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/16-Project-2-Contd/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

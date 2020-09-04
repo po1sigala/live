@@ -15,7 +15,7 @@ The main goal of this unit is to help students get adjusted to an "average day" 
 ## Career Connection
 Each week students receive a Career Connection document in the `04-Important` folder that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [Important folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
