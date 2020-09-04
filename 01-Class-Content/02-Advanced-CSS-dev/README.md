@@ -2,7 +2,9 @@
 
 ## Overview:
 
-@TODO PROVIDE OVERVIEW OF UNIT
+More and more users are browsing the web from a mobile device, which changes how developers think about layouts and design. Advanced CSS features like media queries and flexbox make it easier to accommodate multiple screen sizes and build apps with a mobile-first mindset.
+
+Similarly, website design has evolved to include many niceties that users now take for granted, things like animated hover effects, rounded corners, and shadows. In the old days of the web, these tricks would have required some hacky workarounds or even JavaScript logic, but newer CSS properties have simplified their implementation.
 
 ## Key Topics
 
@@ -18,11 +20,13 @@
 
 * Pseudo-elements
 
-* CSS typography
+* Transitions
 
-* HTML form customization
+* Typography
 
 * CSS variables
+
+* Advanced box styling
 
 * Advanced CSS selectors
 
@@ -30,7 +34,11 @@
 
 You will be employer-ready if you can answer the following questions:
 
-1. @TODO LIST 2-3 COMPREHENSION QUESTIONS
+1. What is a Git merge conflict and how do you resolve it?
+
+2. What are media queries and how do they work?
+
+3. What CSS techniques can be used to customize form elements?
 
 ## Learning Objectives
 
@@ -38,13 +46,13 @@ You will be employer-competitive if you are able to:
 
 * Implement a flexbox layout for a responsive design
 
-* Explain and implement CSS custom properties (variables)
-
 * Explain and implement basic media queries
+
+* Explain and implement CSS custom properties (variables)
 
 * Explain and implement CSS selectors beyond single classes or elements
 
-* Perform a `git branch`, `push`, and `merge` workflow
+* Resolve a merge conflict that results from a `git pull`
 
 ## Homework: Portfolio
 
