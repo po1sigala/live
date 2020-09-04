@@ -6,7 +6,7 @@ In today's class we'll reinforce the concepts we went over in the last class inc
 
 `Summary: Complete activities 11-14 in Unit 14`
 
-* When using any of the `Supplemental PDFs`, please download and open. Do NOT preview on GitHub as they may not display properly in the browser.
+* When using any of the `Important PDFs`, please download and open. Do NOT preview on GitHub as they may not display properly in the browser.
 
 ## Instructor Notes
 
