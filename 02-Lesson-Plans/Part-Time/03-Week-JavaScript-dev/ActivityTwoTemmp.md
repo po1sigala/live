@@ -33,7 +33,7 @@
 console.log("My name is ");
 
 ```
-* To log the value stored in a variable, use the variable's name to access the value it holds. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
+* To log the value stored in a variable, use the variable's name to give the console log access to the stored value. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
 
 ```
 console.log(studentName);
