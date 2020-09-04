@@ -68,8 +68,8 @@ footer {
   color: #fff;
 }
 
-/* Use an attribute selector to select all <a> elements that have an href value that contains '.css' in it */
-a[href*='.css']::after {
+/* Use an attribute selector to select all <a> elements that have an href value that ends with '.css' */
+a[href$='.css']::after {
   content: '📝';
   display: inline-block;
   margin-left: 3px;

@@ -134,7 +134,7 @@ footer {
   /* outline is like border, but on the outside of the box instead of inside */
   outline: 2px dashed var(--gin);
   outline-offset: -2px;
-  transition: all.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .code-card .card-header {
@@ -147,6 +147,12 @@ footer {
   border: 2px solid var(--gin);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
+}
+
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
 }
 
 /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
@@ -174,12 +180,6 @@ footer {
 /* on <pre> click, select all contents so the code is highlighted */
 .code-card pre:active {
   user-select: all;
-}
-
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
-.code-card:hover,
-.code-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
