@@ -1119,6 +1119,8 @@ In this activity we will continue to practice using the Context API in React. Th
 
 ### 18. End
 
+* Note that there is an extra `15-Bonus_ClassContext` example activity for students who are curious about using the Context API in regular class components.
+
 ### Lesson Plan Feedback
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
