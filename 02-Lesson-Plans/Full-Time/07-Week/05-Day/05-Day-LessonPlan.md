@@ -6,7 +6,7 @@ In today's class we'll reinforce the concepts we went over in the last class inc
 
 `Summary: Complete activities 11-14 in Unit 14`
 
-* When using any of the `Supplemental PDFs`, please download and open. Do NOT preview on GitHub as they may not display properly in the browser.
+* When using any of the `Important PDFs`, please download and open. Do NOT preview on GitHub as they may not display properly in the browser.
 
 ## Instructor Notes
 
@@ -26,9 +26,9 @@ In today's class we'll reinforce the concepts we went over in the last class inc
 
   * Make sure students are starting with the unsolved version for each activity, instead of just continuing to build on the previous activity. This will help ensure they're getting started on the right foot.
 
-  * We have created a sequelize deployment guide, video deployment guide, quick start guide, and CRUD action cheat sheet. These resources will be incredibly helpful to students so please be sure to zip up the Supplemental Folder and provide it to your students.
+  * We have created a sequelize deployment guide, video deployment guide, quick start guide, and CRUD action cheat sheet. These resources will be incredibly helpful to students so please be sure to zip up the Important Folder and provide it to your students.
 
-  * [Supplemental Materials](../../../../02-lesson-plans/part-time/15-Week/Supplemental)
+  * [Important Materials](../../../../01-Class-Content/14-Full-Stack/04-Important)
 
 ## Learning Objectives
 

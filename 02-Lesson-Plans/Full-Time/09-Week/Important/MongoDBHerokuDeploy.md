@@ -4,7 +4,7 @@
 
 * Below is a written guide on deploying MongoDB Projects utilizing JawsDB for use on Heroku.
 
-[Deployment Guide](../../../../02-lesson-plans/part-time/18-Week/Supplemental/MongoDBDeploy.md).
+[Deployment Guide](../../../../02-lesson-plans/part-time/18-Week/Important/MongoDBDeploy.md).
 
 * Below is a step by step video guide walking through how to do the same deployment.
 

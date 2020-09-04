@@ -21,18 +21,18 @@ Refer to the following links for detailed information on key topics, learning ob
 * Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[Express](../../../01-Class-Content/11-Express/04-Supplemental/CAREER-CONNECTION.md).
-[MySQL](../../../01-Class-Content/12-MySQL/04-Supplemental/CAREER-CONNECTION.md).
+[Express](../../../01-Class-Content/11-Express/04-Important/CAREER-CONNECTION.md).
+[MySQL](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads Up
 
-* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) on their computers.
+* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Important/heroku-install.md) on their computers.
 
-* Students are also going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers **before** coming to class.
+* Students are also going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers **before** coming to class.
 
 * In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
 

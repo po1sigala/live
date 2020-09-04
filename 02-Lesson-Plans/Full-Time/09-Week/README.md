@@ -20,13 +20,13 @@ In this unit, we will be introducing students to the NoSQL database with MongoDB
 
 ### Extra Resources
 
-* [Installing MongoDB](../../../01-Class-Content/18-mongo-mongoose/03-Supplemental/Installing-MongoDB.md)
+* [Installing MongoDB](./Important/Installing-MongoDB.md)
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[NoSQL](../../../01-Class-Content/17-NoSQL/04-Supplemental/CAREER-CONNECTION.md).
-[PWA](../../../01-Class-Content/18-PWA/04-Supplemental/CAREER-CONNECTION.md).
+[NoSQL](../../../01-Class-Content/17-NoSQL/04-Important/CAREER-CONNECTION.md).
+[PWA](../../../01-Class-Content/18-PWA/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

@@ -6,11 +6,11 @@ In this unit, we will be introducing students to application building with Node 
 
 ## Heads Up
 
-* In this unit, students are learning about Node.js. Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers.
+* In this unit, students are learning about Node.js. Be sure students have already installed Node.js on their [Mac](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) or [Windows](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers.
 
-* In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Supplemental/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
+* In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Important/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
 
-* In the next unit, students will also start using MySQL. Be sure to send out the instructions for installing both the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers by the end of this unit to minimize install time next unit.
+* In the next unit, students will also start using MySQL. Be sure to send out the instructions for installing both the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Important/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Important/mysql-windows-guide.md) computers by the end of this unit to minimize install time next unit.
 
 ### Lesson Plans
 
@@ -29,10 +29,10 @@ In this unit, we will be introducing students to application building with Node 
 * [Liri Bot](../../../01-Class-Content/10-nodejs/02-Homework/Instructions/)
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[NodeJS](../../../01-Class-Content/09-NodeJS/04-Supplemental/CAREER-CONNECTION.md).
-[Object-oriented Programming](../../../01-Class-Content/10-OOP/04-Supplemental/CAREER-CONNECTION.md).
+[NodeJS](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
+[Object-oriented Programming](../../../01-Class-Content/10-OOP/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
