@@ -7,26 +7,21 @@
   * A variable that has been declared using `var` but has not yet been assigned a value has the type of undefined.
 
   ```
-      var myUndefined;
-
+    var myUndefined;
   ```
 
   *  Strings should already look familar! Values with the type string are a series of characters and is surrounded by quotes
 
   ```
-
     var myStringWelcome = "Hello World"; 
     var myStringPassword = "865Password!2020";
-
   ```
 
   * In Javascript, a number can be either an integer (whole number) or a decimal. 
 
   ```
-
     var myNumberInt = 100;
     var myNumberDecimal = 100.100;
-
   ```
 
   *  Booleans are unique because they hold only two values: true or false
@@ -34,7 +29,6 @@
   ```
     var isMyBooleanTrue = true;
     var isMyBooleanFalse = false;
-
   ```
 
   *  Sometimes, developers want to check what type of value is stored in a variable. To evaluate type, use the `typeof` operator
@@ -51,20 +45,18 @@
 
     // Logs string
     console.log(typeof "Howdy");
-
   ```
 
 * Like value, type can also change when a variable is re-assigned. In this example, the variable `myVariable` has a value of `33` and a type of `number`. On re-assignment, `myVariable` has a value of `false` and a type of Boolean. 
 
 ```
-  // Logs number
-  var myVariable = 33;
-  console.log(typeof myVariable);
+    // Logs number
+    var myVariable = 33;
+    console.log(typeof myVariable);
 
-  // myVariable is reassigned; Logs false
-  myVariable = false;
-  console.log(typeof myVariable); 
-
+    // myVariable is reassigned; Logs false
+    myVariable = false;
+    console.log(typeof myVariable); 
 ```
 
 * Open `05-Ins_Primitive-Types/index.html` in your browser and navigate to the console. Point out the following:
@@ -136,129 +128,109 @@
 * The variable `one` has the whole number value of `64` and the type of `number.`
 
 ```
-var one = 64;
-
+  var one = 64;
 ```
 
 * Using `typeof` operator, `number` is logged.
 
 ```
-// Logs number
-console.log(typeof one);
-
+  // Logs number
+  console.log(typeof one);
 ```
 
 * The variable `two` has the value of `"656302"`. Since the value is surrounded by quotes, it is a string even if the characters inside the strings are numbers!
 
 ```
-var two = "656302";
-
+  var two = "656302";
 ```
 
 * Using the `typeof` operator, `string` is logged.
 
 ```
-// Logs string
-console.log(typeof two);
-
+  // Logs string
+  console.log(typeof two);
 ```
 
 * The variable `three` has a value of `false`. True and false values are booleans.
 
 ```
-var three = false;
-
+  var three = false;
 ```
 
 * Using the `typeof` operator, `boolean` is logged.
 
 ```
-// Logs boolean
-console.log(typeof three);
-
+  // Logs boolean
+  console.log(typeof three);
 ```
 
 * The variable `four` has a decimal value of 64.55. Since both integers and decimals are considered numbers in JavaScript, the type is `number`.
 
 ```
-var four = 64.55;
-
+  var four = 64.55;
 ```
 
 * Using the `typeof` operator, `number` is logged.
 
 ```
-// Logs number
-console.log(typeof four);
-
+  // Logs number
+  console.log(typeof four);
 ```
 
 * The variable `five` has a value of `"Howdy"`. It is a string.
 
 ```
-var five = "Howdy!";
-
+  var five = "Howdy!";
 ```
 
 * Using the `typeof` operator, `string` is logged.
 
 ```
-// Logs string
-console.log(typeof five);
-
+  // Logs string
+  console.log(typeof five);
 ```
 
 * The variable `six` is declared but has not yet been assigned a value. So the type returns `undefined`.
 
 ```
-var six;
-
+  var six;
 ```
 
 * Using the `typeof` operator, `string` is logged.
 
 ```
-// Logs undefined
-console.log(typeof six);
-
+  // Logs undefined
+  console.log(typeof six);
 ```
 
 * Reassigning the value can change both value and type.
 
 ```
-
-four = "Hello!";
-five = false;
-six = 23;
-
+  four = "Hello!";
+  five = false;
+  six = 23;
 ```
 
 * Since variable `four` now has a type of `string`, then using `typeof`, `string` is logged.
 
 ```
-// Logs string
-console.log(typeof four);
-
+  // Logs string
+  console.log(typeof four);
 ```
-
 * Since variable `five` now has a type of `boolean`, then using `typeof`, `boolean` is logged.
 
 ```
-// Logs boolean
-console.log(typeof five);
-
+  // Logs boolean
+  console.log(typeof five);
 ```
+
 * Since variable `six` now has been assigned a value using the `=` assignment operator, it is no longer `undefined`. Instead, the type is `number`.
 
 ```
-// Logs number
-console.log(typeof four);
-
+  // Logs number
+  console.log(typeof four);
 ```
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
     * ☝️ What are four primitive types of values? 
