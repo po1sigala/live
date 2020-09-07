@@ -5,7 +5,7 @@ var studentName;
 var studentName = "Abdul";
 var studentAge = 32;
 
-// To re-assign a variable, use only the name  
+// To re-assign a variable, use only the variable's name  
 studentName = "Tonya";
 studentAge = 52;
 

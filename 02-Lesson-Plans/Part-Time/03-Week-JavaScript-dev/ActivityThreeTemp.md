@@ -168,20 +168,18 @@
 
   * The variable `three` has a value of `false`. True and false values are booleans.
  
-
-    ```
+  ```
    var three = false;
 
-    ```
+  ```
 
   * Using the `typeof` operator, `boolean` is logged. 
 
   ```
-
    // Logs boolean
    console.log(typeof three); 
 
-    ```
+ ```
 
   * The variable `four` has a decimal value of 64.55. Since both integers and decimals are considered numbers in JavaScript, the type is `number`.
  
