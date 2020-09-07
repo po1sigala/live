@@ -137,7 +137,6 @@ The `+` operator is used to combine values in a single console log message.
 
   ```
     var name = "Sakura";
-
   ```
 
   * The variable's values are accessed using the variable name. Since the variables have assigned the values `"Sakura"`, `3` , `"I like pineapple on my pizza."`, that is the values that are used in the console logs below.  To create the longer messages, the `+` concatenation operator is used.
@@ -148,7 +147,7 @@ The `+` operator is used to combine values in a single console log message.
     console.log("Fun fact: " + funFact);
   ```
 
- * Re-assign a variables' values using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
+  * Re-assign a variables' values using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
 
   ```
     name = "Mateo";
