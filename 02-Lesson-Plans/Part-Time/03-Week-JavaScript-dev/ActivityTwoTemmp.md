@@ -155,7 +155,7 @@ The `+` operator is used to combine values in a single console log message.
     funFact = "I was a yo-yo champ in third grade."
   ```
 
- * After the variables are re-assigned, using the variable names will access the new values `"Mateo"`, `5`, `"I was a yo-yo champ in third grade."` when logged. Note that the console logs have not changed, only the values stored in the variables.
+  * After the variables are re-assigned, using the variable names will access the new values `"Mateo"`, `5`, `"I was a yo-yo champ in third grade."` when logged. Note that the console logs have not changed, only the values stored in the variables.
 
 ```
     console.log("My name is " + name + ".");

@@ -27,7 +27,7 @@ console.log(typeof six);
 // Reassigns variables
 four = "Hello!";
 five = false;
-seven = 23;
+six = 23;
 
 // Insert comments to explain what each console log below will log to the console
 // Logs string
@@ -37,5 +37,5 @@ console.log(typeof four);
 console.log(typeof five);
 
 // Logs number
-console.log(typeof seven);
+console.log(typeof six);
     
