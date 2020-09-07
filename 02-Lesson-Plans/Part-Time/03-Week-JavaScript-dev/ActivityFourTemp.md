@@ -3,7 +3,6 @@
 * Open `07-Ins_Logical-Comparison-Operators/script.js` in your IDE and demonstrate the following:
 
   * Arithmetic operators combine with numbers to form an expression that returns a single number. Since `a` is a number with a value of `100` and `b` is a number with a value `10`, then `a + b` evaluates to the single number `110.`
-
   ```
     var a = 100;
     var b = 10;
@@ -21,31 +20,31 @@
 
   * Modulus `%` is a special arithmatic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder is 0. 
 
-```
+  ```
     var a = 100;
     var b = 10;
 
     console.log(a % b);
-```
+  ```
 
   * Comparison operators combine with strings, booleans and numbers to form an expression that evaluates to true or false.
 
   * Compare equality of value with `==` or inequality with `!-`. Both `b` and `c` have the value `10` so they are equal. The first expression logs `true`. The second expression logs `false`.
 
-```
+  ```
     var b = 10;
     var c = "10";
 
     console.log(b == c);
     console.log(b != c);
-```
+  ```
 
   * To compare value and type, use strict equality operators `===` and `!==`. While `b` and `c` both have the value of `10` one is a string and one is number. So, they are not strictly equal. As a result, both of these expressions evaluate to `false`.
 
- ```
+  ```
     console.log(b !== c);
     console.log(b === c);
-```
+  ```
 
   * Evaluate greater than or less than with `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
 
@@ -59,7 +58,7 @@
   ```
     console.log(a <= b);
     console.log(a >= b);
-    ```
+  ```
 
   * It is also possible to compare expressions using logical operators.
 
