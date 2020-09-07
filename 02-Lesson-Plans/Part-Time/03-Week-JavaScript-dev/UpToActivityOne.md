@@ -84,98 +84,78 @@ By the end of class, students will be able to:
    * Point out that the code is made up of a series of conditions that decide which message will log to the console. For example, in the code below, if this condition is met, `True ✅ True ✅` will log. 
 
    ```
-        if(expression1 && expression2) {
-        console.log("True ✅ True ✅");
-
-   ```
+      if(expression1 && expression2) {
+      console.log("True ✅ True ✅");
+    ```
 
    * If not, the other conditions are tested. If none of the conditions are met, then `False ❌ False ❌` is logged.
 
    ```
-        } else {
-          console.log("False ❌ False ❌");
-        }
-
-    ```
+      } else {
+      console.log("False ❌ False ❌");
+      }
+  ```
 
 * Open `10-Stu_Conditional-Statements/Solved/index.html` and navigate to the console to show them that a single message `False ❌ False ❌` appears indicating none of the conditions are met.  
-
 
 * Assure the students that during class we will delve into this JavaScript code in more detail.
 
 ### 2. Instructor Demo: Script and Console.Log (5 mins)
 
-
 * Open `01-Ins_Script-ConsoleLog\index.html` in your IDE and note the following: 
 
-  *  In this HTML file, HTML and CSS are working together to provide style and structure to the page.
+  * In this HTML file, HTML and CSS are working together to provide style and structure to the page.
 
   ```
-        <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
-
+     <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
   ```
     
   * There is also something new: `<script>` tags for JavaScript
 
-    * Inline `<script>` tags allow you to write scripts directly in an HTML file.
+  * Inline `<script>` tags allow you to write scripts directly in an HTML file.
 
-  ```
-        <script>
-
-        //Console logs write data directly to the console.
-
-        console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-    
-        </script>
-   
-  ```
-    * Adding an src attribute to the opening `<script>` tag allows you to link to an external JavaScript file
-
-  ```
-        <script src="script.js"></script>
-
+  ``` 
+    <script>
+    //Console logs write data directly to the console.
+    console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+    </script> 
   ```
 
-    * You should write your `<script>` tags above the closing `</body>` tag to make sure your HTML and CSS load first.
+ * Adding an src attribute to the opening `<script>` tag allows you to link to an external JavaScript file
 
   ```
-
-        <body>
-            <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
-
-            <!--Inline script-->
-
-            <script>
-
-                //Console logs write data directly to the console.
-
-                console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-    
-            </script>
-
-            <!--Link to external Javascript file-->
-
-            <script src="script.js"></script>
-
-        </body>
-      
+    <script src="script.js"></script>
   ```
 
-  * 🔑 Console logs are JavaScript functions that log messages to the console.
+ * You should write your `<script>` tags above the closing `</body>` tag to make sure your HTML and CSS load first.
 
+  ```
+    <body>
+      <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+
+      <!--Inline script-->
+      <script>
+      //Console logs write data directly to the console.
+      console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+      </script>
+
+      <!--Link to external Javascript file-->
+      <script src="script.js"></script>
+    </body>    
+  ```
+
+* Console logs are JavaScript functions that log messages to the console.
 
 ```
-        console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-
+   console.log("This is the log for the 🔥INLINE🔥 JavasSript");
 ```
 
 * Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
 
-  * 🔑 JavaScript looks and performs the same whether it is written inline or in an external file. 
+  *  JavaScript looks and performs the same whether it is written inline or in an external file. 
 
   ```
-        console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
-
+     console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
   ```
 
 * Open `01-Ins_Script-ConsoleLog\index.html` in the browser and demo how to navigate to the console in Chrome Developer Tools. 
@@ -256,17 +236,12 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
   * Inline `<script>` tags add JavaScript directly in the HTML file
 
-
 ```
-
     <script>
-  
     console.log("This is inline JavaScript");
-
     </script>
 
 ```
-
   * Adding an src attribute to `<script>` tags, links to an external JavaScript file
 
   ```
@@ -277,22 +252,19 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
   * A console log is a JavaScript function. The message to the console is written between `()`. 
 
   ```
-
      console.log("This is inline JavaScript");
-
   ```
 
 * Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and navigate to the console. Show the students that the message written in between the `()`is that same as what appears in the console.
   
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* ☝️ What are two ways the `<script>` tag is used to add JavaScript to HTML files?
+  * ☝️ What are two ways the `<script>` tag is used to add JavaScript to HTML files?
 
-* 🙋 The `<script>` tag can be used to create inline JavaScript by writing code in between the opening and closing tags. The`<script>`tag when given an src attribute that equals the path to an external JavaScript file, links the HTML file to the external JavaScript page.
+  * 🙋 The `<script>` tag can be used to create inline JavaScript by writing code in between the opening and closing tags. The`<script>`tag when given an src attribute that equals the path to an external JavaScript file, links the HTML file to the external JavaScript page.
 
+  * ☝️ What can we do if we don't completely understand this?
 
-* ☝️ What can we do if we don't completely understand this?
-
-* 🙋 We can refer to supplemental material, read the [MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and stick around for Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
