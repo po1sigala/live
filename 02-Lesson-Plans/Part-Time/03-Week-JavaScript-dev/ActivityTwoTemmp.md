@@ -33,14 +33,14 @@
 console.log("My name is ");
 
 ```
-* To log the value stored in a variable, use the variable's name to give the console log access to the stored value. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
+* To log the value stored in a variable, use the variable's name to give the console log access to the value assigned to that variable. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
 
 ```
 console.log(studentName);
 
 ```
  
-* It is also possible to combine the value `"My name is "` and the value stored in the `studentName` variable into a single console log. Use the concatenation operator `+` to combine the values and log the message "My name is Tonya".
+* It is also possible to combine the value `"My name is "` and the value stored in the `studentName` variable into a single console log. Use the concatenation operator `+` to combine the values and log the message `"My name is Tonya"`.
 
 ```
 console.log("My name is " + studentName);
@@ -51,7 +51,7 @@ console.log("My name is " + studentName);
 
   * Since the value `"My name is "` is written directly between the `()`, the message `My name is ` is logged.
 
-  * Since the variable `studentName` is written in between the `()`, the variable's current value `Tonya` is logged. 
+  * Since the variable `studentName` is written in between the `()`, the variable's current assigned value `Tonya` is logged. 
 
   * Combining the value `"My name is "` and the value stored in the `studentName` variable with a `+` logs "My name is Tonya". 
 
@@ -73,7 +73,7 @@ console.log("My name is " + studentName);
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Hello-Variable/README.md`.
 
 ### 6. Student Do: Hello Variable (15 mins) 
 
@@ -90,7 +90,7 @@ In this activity, you will work with a partner to write introductions in the con
 
 * Be sure to work with your partner!
 
-* Open [04-Stu_Hello-Variable/Unsolved/script.js]() to implement the following features:
+* Open [script.js](04-Stu_Hello-Variable/Unsolved/script.js) to implement the following features:
 
   * As a class member, I want to input name, number of pets, and a fun fact about myself and log an introduction to the console. Then, by only re-assigning the variables, I want to introduce my partner.
 
@@ -138,7 +138,7 @@ The `+` operator is used to combine values in a single console log message.
 
   * ✔️ Accessing stored values
 
-* Open `@TODO/folder/` in your IDE and explain the following: 
+* Open `04-Stu_Hello-Variable/Solved/script.js` in your IDE and explain the following: 
 
   * Variables are declared using `var` and assigned a value using `=`.
 
@@ -147,42 +147,42 @@ The `+` operator is used to combine values in a single console log message.
 
   ```
 
-   * The variable's values are accessed using the variable name. Since the variables have assigned the values XXX, XXX, XXXX, that is the values that are used in the console logs below.  
+   * The variable's values are accessed using the variable name. Since the variables have assigned the values `"Sakura"`, `3` , `"I like pineapple on my pizza."`, that is the values that are used in the console logs below.  To create the longer messages, the `+` concatenation operator is used.
 
-  Add code here
+  ```
+  console.log("My name is " + name + ".");
+  console.log("I have " + pets + " pet(s).");
+  console.log("Fun fact: " + funFact);
 
   ```
 
-  * Re-assign a variable's value using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
+  * Re-assign a variables' values using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
 
   ```
-    name = "Mateo";
+  name = "Mateo";
+  pets = 5;
+  funFact = "I was a yo-yo champ in third grade."
 
   ```
 
-* After the variables are re-assigned, using the variable names will access the new values XXX XXX XXX XXXX when logged. 
+* After the variables are re-assigned, using the variable names will access the new values `"Mateo"`, `5`, `"I was a yo-yo champ in third grade."` when logged. Note that the console logs have not changed, only the values stored in the variables.
 
 ```
-
-Add code here
+console.log("My name is " + name + ".");
+console.log("I have " + pets + " pet(s).");
+console.log("Fun fact: " + funFact);
 
 ```
-
- * To form the longer, combined messages found in the introductions the concatenation operator `+` is used to combine values into a single message. 
-
-
-  ```
-   console.log("Fun fact: " + funFact);
-
-  ```
 
 * Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and navigate to the console. 
 
     * Note that the logs created by using `+` appear as a single message in the console. 
 
-    * In the first introduction, the console logs use the values stored in variables as originally assigned (XXX, XXX, and XXXX). 
+    * In the first introduction, the console logs use the values stored in variables as originally assigned (`"Sakura"`, `3` , `"I like pineapple on my pizza."`). 
 
-    * Then, point out that the second introduction, the console logs uses the new values  since the variable's values have been re-assigned (XXX,XXX, XXXX) 
+    * Then, point out that the second introduction, the console logs uses the re-assigned values (`"Mateo"`, `5`, `"I was a yo-yo champ in third grade."`). 
+    
+    * Point out that value re-assignment does not change all the console logs. Since JavaScript is read from top to bottom, when the value is re-assigned only the code executed after the re-assignment is changed. 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
