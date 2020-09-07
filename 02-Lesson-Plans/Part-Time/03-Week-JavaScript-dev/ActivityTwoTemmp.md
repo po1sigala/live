@@ -5,48 +5,43 @@
   * The `var` keyword is used to declare a variable. Following the `var`, the variable is given a unique name, or identifier.
 
   ```
-        var studentName;
-
+    var studentName;
   ```
 
   * Declaring a variable only gives it a name. To assign a value, use the `=` assignment operator followed by the value you want the variable to hold. 
 
   ```
-        var studentName = "Abdul";
-        var studentAge = 32;
-
+    var studentName = "Abdul";
+    var studentAge = 32;
   ```
 
   * The `=` assignment operator is also used to re-assign a new value to a variable. Use the variable's name followed by `=` and the new value. Since the variable has already been declared, there is no need to use `var` again.
 
   ```
-        studentName = "Tonya";
-        studentAge = 52;
-
+    studentName = "Tonya";
+    studentAge = 52;
   ``` 
 
-* Variable names are used to access the value the variable holds. 
+  * Variable names are used to access the value the variable holds. 
 
-* In the previous activity, we put a value directly into the `()` in a console log function to log a message. Since the value entered is `"My name is "` then that value logs to the console. 
+  * In the previous activity, we put a value directly into the `()` in a console log function to log a message. Since the value entered is `"My name is "` then that value logs to the console. 
 
-```
-console.log("My name is ");
+  ```
+    console.log("My name is ");
+  ```
 
-```
-* To log the value stored in a variable, use the variable's name to give the console log access to the value assigned to that variable. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
+  * To log the value stored in a variable, use the variable's name to give the console log access to the value assigned to that variable. Since the value of `studentName` has been re-assigned to the value `Tonya`, the value `Tonya` logs to the console. 
 
-```
-console.log(studentName);
-
-```
+  ```
+    console.log(studentName);
+  ```
  
-* It is also possible to combine the value `"My name is "` and the value stored in the `studentName` variable into a single console log. Use the concatenation operator `+` to combine the values and log the message `"My name is Tonya"`.
+  * It is also possible to combine the value `"My name is "` and the value stored in the `studentName` variable into a single console log. Use the concatenation operator `+` to combine the values and log the message `"My name is Tonya"`.
 
-```
-console.log("My name is " + studentName);
-
-```
-
+  ```
+    console.log("My name is " + studentName);
+  ```
+  
 * Open `O3-Ins_Hello-Variable/script.js` in your IDE and demonstrate the following:
 
   * Since the value `"My name is "` is written directly between the `()`, the message `My name is ` is logged.
@@ -54,8 +49,7 @@ console.log("My name is " + studentName);
   * Since the variable `studentName` is written in between the `()`, the variable's current assigned value `Tonya` is logged. 
 
   * Combining the value `"My name is "` and the value stored in the `studentName` variable with a `+` logs "My name is Tonya". 
-
-
+  
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What keyword is used to declare a variable? 
@@ -69,7 +63,6 @@ console.log("My name is " + studentName);
   * ☝️ How do you access the value assigned to a variable?  
 
   * 🙋 Use the variable's name.  
-
 
 * Answer any questions before proceeding to the next activity.
 
@@ -147,34 +140,31 @@ The `+` operator is used to combine values in a single console log message.
 
   ```
 
-   * The variable's values are accessed using the variable name. Since the variables have assigned the values `"Sakura"`, `3` , `"I like pineapple on my pizza."`, that is the values that are used in the console logs below.  To create the longer messages, the `+` concatenation operator is used.
+  * The variable's values are accessed using the variable name. Since the variables have assigned the values `"Sakura"`, `3` , `"I like pineapple on my pizza."`, that is the values that are used in the console logs below.  To create the longer messages, the `+` concatenation operator is used.
 
   ```
-  console.log("My name is " + name + ".");
-  console.log("I have " + pets + " pet(s).");
-  console.log("Fun fact: " + funFact);
-
+    console.log("My name is " + name + ".");
+    console.log("I have " + pets + " pet(s).");
+    console.log("Fun fact: " + funFact);
   ```
 
-  * Re-assign a variables' values using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
+ * Re-assign a variables' values using  `=`. The `var` keyword is not used during re-assignmment because the variable has already been declared.
 
   ```
-  name = "Mateo";
-  pets = 5;
-  funFact = "I was a yo-yo champ in third grade."
-
+    name = "Mateo";
+    pets = 5;
+    funFact = "I was a yo-yo champ in third grade."
   ```
 
-* After the variables are re-assigned, using the variable names will access the new values `"Mateo"`, `5`, `"I was a yo-yo champ in third grade."` when logged. Note that the console logs have not changed, only the values stored in the variables.
+ * After the variables are re-assigned, using the variable names will access the new values `"Mateo"`, `5`, `"I was a yo-yo champ in third grade."` when logged. Note that the console logs have not changed, only the values stored in the variables.
 
 ```
-console.log("My name is " + name + ".");
-console.log("I have " + pets + " pet(s).");
-console.log("Fun fact: " + funFact);
-
+    console.log("My name is " + name + ".");
+    console.log("I have " + pets + " pet(s).");
+    console.log("Fun fact: " + funFact);
 ```
 
-* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and navigate to the console. 
+* Open`01-Ins_S cript-ConsoleLog\Solved\index.html` in your browser and navigate to the console. 
 
     * Note that the logs created by using `+` appear as a single message in the console. 
 
@@ -194,12 +184,12 @@ console.log("Fun fact: " + funFact);
 
     * 🙋 To access the value stored in a variable, use the variable's name. To console log the value, the variable name is placed inside the `()`. 
 
-     * ☝️ How do you think the ability to re-assign values to a variable may be useful in your code? 
+    * ☝️ How do you think the ability to re-assign values to a variable may be useful in your code? 
 
     * 🙋 The ability to re-assign values to variables makes your code more flexible and reusable. In the activity we just completed, we were able to log new messages simply by re-assigning the values stored in the variables. 
 
-  * ☝️ What can we do if we don't completely understand this?
+    * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN Web Docs: Storing the Information You Need -- Variables](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), and stick around for Office Hours to ask for help.
+    * 🙋 We can refer to supplemental material, read the [MDN Web Docs: Storing the Information You Need -- Variables](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), and stick around for Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
