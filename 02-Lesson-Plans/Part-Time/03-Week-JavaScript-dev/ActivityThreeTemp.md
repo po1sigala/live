@@ -131,112 +131,108 @@
 
   * ✔️ Type re-assignment
 
+* Open `06-Stu_Primitive-Types/README.md` in your IDE and explain the following:
 
-* Open `06-Stu_Primitive-Types/README.md` in your IDE and explain the following: 
+* The variable `one` has the whole number value of `64` and the type of `number.`
 
-  * The variable `one` has the whole number value of `64` and the type of `number.` 
- 
+```
+var one = 64;
 
-    ```
-    var one = 64;
+```
 
-    ```
-  *  Using `typeof` operator, `number` is logged. 
+* Using `typeof` operator, `number` is logged.
 
-    ```
+```
+// Logs number
+console.log(typeof one);
 
-    // Logs number
-    console.log(typeof one);
+```
 
-    ```
+* The variable `two` has the value of `"656302"`. Since the value is surrounded by quotes, it is a string even if the characters inside the strings are numbers!
 
-  * The variable `two` has the value of `"656302"`. Since the value is surrounded by quotes, it is a string even if the characters inside the strings are numbers! 
- 
-  ```
-   var two = "656302";
+```
+var two = "656302";
 
-  ```
+```
 
-  * Using the `typeof` operator, `string` is logged. 
+* Using the `typeof` operator, `string` is logged.
 
-  ```
+```
+// Logs string
+console.log(typeof two);
 
-   // Logs string
-   console.log(typeof two); 
+```
 
-    ```
+* The variable `three` has a value of `false`. True and false values are booleans.
 
-  * The variable `three` has a value of `false`. True and false values are booleans.
- 
-  ```
-   var three = false;
+```
+var three = false;
 
-  ```
+```
 
-  * Using the `typeof` operator, `boolean` is logged. 
+* Using the `typeof` operator, `boolean` is logged.
 
-  ```
-   // Logs boolean
-   console.log(typeof three); 
+```
+// Logs boolean
+console.log(typeof three);
 
- ```
+```
 
-  * The variable `four` has a decimal value of 64.55. Since both integers and decimals are considered numbers in JavaScript, the type is `number`.
- 
+* The variable `four` has a decimal value of 64.55. Since both integers and decimals are considered numbers in JavaScript, the type is `number`.
 
-    ```
-   var four = 64.55;
+```
+var four = 64.55;
 
-    ```
+```
 
-   * Using the `typeof` operator, `number` is logged. 
+* Using the `typeof` operator, `number` is logged.
 
-  ```
+```
+// Logs number
+console.log(typeof four);
 
-   // Logs number
-   console.log(typeof four); 
+```
 
-    ```
+* The variable `five` has a value of `"Howdy"`. It is a string.
 
-  * The variable `five` has a value of `"Howdy"`. It is a string. 
+```
+var five = "Howdy!";
 
-    ```
-   var five = "Howdy!";
+```
 
-    ```
+* Using the `typeof` operator, `string` is logged.
 
-  * Using the `typeof` operator, `string` is logged. 
+```
+// Logs string
+console.log(typeof five);
 
-  ```
+```
 
-   // Logs string
-   console.log(typeof five); 
+* The variable `six` is declared but has not yet been assigned a value. So the type returns `undefined`.
 
-    ```
+```
+var six;
 
-  * The variable `six` is declared but has not yet been assigned a value. So the type returns `undefined`. 
+```
 
-    ```
-   var six;
+* Using the `typeof` operator, `string` is logged.
 
-    ```
+```
+// Logs undefined
+console.log(typeof six);
 
-  * Using the `typeof` operator, `string` is logged. 
+```
 
-  ```
+* Reassigning the value can change both value and type.
 
-   // Logs undefined
-   console.log(typeof six); 
+```
 
-  ```
-  * Reassigning the value can change both value and type.
-
-  ```
 four = "Hello!";
 five = false;
-six = 23; 
+six = 23;
 
-  ```
+```
+
 * Since variable `four` now has a type of `string`, then using `typeof`, `string` is logged.
 
 ```
@@ -252,13 +248,16 @@ console.log(typeof four);
 console.log(typeof five);
 
 ```
-
 * Since variable `six` now has been assigned a value using the `=` assignment operator, it is no longer `undefined`. Instead, the type is `number`.
+
 ```
 // Logs number
 console.log(typeof four);
 
 ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
   
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
