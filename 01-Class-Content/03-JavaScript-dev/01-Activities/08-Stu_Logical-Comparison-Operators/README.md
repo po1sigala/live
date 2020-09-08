@@ -10,7 +10,7 @@ In this activity, you will work with a partner to debug some broken code so that
 
 * When I open the console, all the logs should read "true", but right now they do not!
 
-* Open [script.js](08-Stu_Logical-Comarision-Operators/Unsolved/script.js) and examine the code.
+* Open [script.js](08-Stu_Logical-Comparision-Operators/Unsolved/script.js) and examine the code.
 
 * Using the following questions, try to debug and fix the code:
   
