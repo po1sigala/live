@@ -18,8 +18,8 @@ console.log(b == c);
 console.log(b != c);
 
 // Compares equality and type (strict equality)
-console.log(b !== c);
 console.log(b === c);
+console.log(b !== c);
 
 // Greater than or less than
 console.log(a > b);
