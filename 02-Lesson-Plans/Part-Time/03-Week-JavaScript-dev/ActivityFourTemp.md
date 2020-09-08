@@ -18,7 +18,7 @@
     console.log(a * b);
     ```
 
-  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder is 0. 
+  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder of `100` divided by `10` is `0`. 
 
   ```
     var a = 100;
@@ -27,9 +27,9 @@
     console.log(a % b);
   ```
 
-  * Comparison operators combine with strings, booleans and numbers to form an expression that evaluates to true or false.
+  * Comparison operators are not limited to numbers. They combine with strings, booleans and numbers to form an expression that evaluates to `true` or `false.`
 
-  * Compare equality of value with `==` or inequality with `!=`. The variables `b` and `c` both hold the value `10` so they are equal. As a result, the first expression logs `true`. The second expression logs `false`.
+  * To compare equality of value, use `==`. To compare inquality of value, use`!=`. The variables `b` and `c` both hold the value `10` so they are equal. As a result, the first expression logs `true`. The second expression logs `false`.
 
   ```
     var b = 10;
@@ -39,11 +39,16 @@
     console.log(b != c);
   ```
 
-  * To compare value and type, use strict equality operators `===` and `!==`. While `b` and `c` both hold the value of `10` one is a string and one is number. So, they are not strictly equal. As a result, the first log will be `true` and the second log will be `false`.
+  * To compare equality value and type, use strict equality operator `===`. While `b` and `c` both hold the value of `10` one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
 
   ```
-    console.log(b !== c);
-    console.log(b === c);
+  console.log(b === c);
+  ```
+
+ * To compare inequality of value or type, use `!==`. The values of `b` and `c` are both `10` but the types are different. Since either value or type is inequal, using `!==` will evaluate to `true`.
+
+  ```
+  console.log(b !== c);
   ```
 
   * To evaluate greater than or less than, use the  `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
@@ -60,7 +65,7 @@
     console.log(a >= b);
   ```
 
-  * It is also possible to determine logic between expressions using logical operators `and`, `or`, and `not`
+  * It is also possible to determine logic between expressions using logical operators `and`, `or`, and `not`.
 
   * The logical operator `&&` evaluates if both expressions evaluate to true. If the first expression evaluates to `true` AND the second evaluates evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. 
 
@@ -96,7 +101,7 @@
 
   * ☝️ What does an expression with an arithmatic expression evaluate to? 
 
-  * 🙋 A arithmatic expression adds, subtracts, multiplies, divides or returns the value of two numbers and returns a single number.
+  * 🙋 A arithmetic expression adds, subtracts, multiplies, divides or returns the value of two numbers and returns a single number.
 
   * ☝️ What operators are used to compare equality or greater than/less than? 
 
