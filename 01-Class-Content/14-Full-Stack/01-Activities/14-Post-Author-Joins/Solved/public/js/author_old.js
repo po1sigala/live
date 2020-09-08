@@ -67,6 +67,7 @@ $(document).ready(function () {
   // A function for rendering the list of authors to the page
   function renderAuthorList(rows) {
     authorList.children().not(':last').remove();
+    console.log("renderAuthorList -> authorList.children().not(':last')", authorList.children().not((':last')))
     authorContainer.children('.alert').remove();
     if (rows.length) {
       console.log(rows);
