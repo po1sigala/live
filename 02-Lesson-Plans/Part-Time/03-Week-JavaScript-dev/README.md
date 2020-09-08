@@ -10,7 +10,7 @@ In this unit, you will introduce students to the fundamentals of JavaScript  inc
 
 * This will be the first time some of the students are introduced to programming fundamentals and the JavaScript language. Encourage students by letting them know that the skills learned during this week will be used again and again and the syntax will become more familiar with practice. 
 
-* This is also a good opportunity for students to practice pseudocoding. If students are struggling with an activity, encourage them to talk it out in plain, non-jargon language with their partner. This will not only help them reinforce their fundamental understanding of JavaScript and gain clarity but also build the problem-solving skills needed to be successful JavaScript developers. 
+* This is also a good opportunity for students to practice pseudocoding. If students are struggling with an activity, encourage them to talk it out in plain language with their partner. This will not only help them reinforce their fundamental understanding of JavaScript and gain clarity but also build the problem-solving skills needed to be successful JavaScript developers. 
 
 * Take a few moments before class to get familiar with the various ways to access [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/open) on different machines so that you can talk students through the process of opening up the console easily on Mac and Windows setups.
 
