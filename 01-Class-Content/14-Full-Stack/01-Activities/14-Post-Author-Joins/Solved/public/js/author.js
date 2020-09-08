@@ -41,6 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .getElementById('author-form')
     .addEventListener('submit', handleAuthorFormSubmit);
 
+  // Event handler for the delete author button
+  const handleDeleteButtonPress = (e) => {
+    const { id } = e.target.parentElement.parentElement;
+    fetch(`/api/authors/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(getAuthors);
+  };
+
   // Create list row for authors
   const createAuthorRow = (authorData) => {
     const tr = document.createElement('tr');
@@ -88,26 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
     alertDiv.classList.add('alert', 'alert-danger');
     alertDiv.textContent = 'Must have at least one author to post';
     alertDiv.id = 'removeMe';
-    authorContainer.appendChild(alertDiv);
+    return alertDiv;
   };
 
   const renderAuthorList = (rows) => {
-    const authorChildren = authorList.childNodes;
-    authorChildren.forEach((child) => {
-      if (child.id !== 'form-row') {
-        child.remove();
-      }
-    });
+    authorList.innerHTML = '';
 
     if (rows.length) {
-      rows.forEach((row) => {
-        authorList.prepend(row);
-      });
       if (document.getElementById('removeMe')) {
         document.getElementById('removeMe').remove();
       }
+      rows.forEach((row) => authorList.append(row));
     } else {
-      renderEmpty();
+      document.querySelector('.author-container').appendChild(renderEmpty());
     }
   };
 
@@ -131,17 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nameInput.value = '';
       })
       .catch((error) => console.error('Error:', error));
-  };
-
-  // Event handler for the delete author button
-  const handleDeleteButtonPress = (e) => {
-    const { id } = e.target.parentElement.parentElement;
-    fetch(`/api/authors/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then(getAuthors);
   };
 
   // Get the list of authors

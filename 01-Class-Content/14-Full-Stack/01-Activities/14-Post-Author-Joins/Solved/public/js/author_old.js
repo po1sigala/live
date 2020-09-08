@@ -60,6 +60,7 @@ $(document).ready(function () {
         rowsToAdd.push(createAuthorRow(data[i]));
       }
       renderAuthorList(rowsToAdd);
+      console.log("getAuthors -> rowsToAdd", rowsToAdd)
       nameInput.val('');
     });
   }
