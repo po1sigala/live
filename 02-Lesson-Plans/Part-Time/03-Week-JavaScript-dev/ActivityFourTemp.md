@@ -29,7 +29,7 @@
 
   * Comparison operators combine with strings, booleans and numbers to form an expression that evaluates to true or false.
 
-  * Compare equality of value with `==` or inequality with `!-`. Both `b` and `c` have the value `10` so they are equal. The first expression logs `true`. The second expression logs `false`.
+  * Compare equality of value with `==` or inequality with `!=`. Both `b` and `c` have the value `10` so they are equal. The first expression logs `true`. The second expression logs `false`.
 
   ```
     var b = 10;
@@ -60,9 +60,9 @@
     console.log(a >= b);
   ```
 
-  * It is also possible to compare expressions using logical operators.
+  * It is also possible to determine logic between expressions using logical operators `and`, `or`, and `not`
 
-  * The logical operator `&&` evaluates if both expressions evaluate to true. If both evaluate to true, then true is returned. Otherwise, `false` is returned. 
+  * The logical operator `&&` evaluates if both expressions evaluate to true. If the first evaluates to `true` AND the second evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. 
 
   ```
     console.log(expression1 && expression2);
@@ -74,35 +74,49 @@
     console.log(expression1 || expression2);
   ```
 
-  * The logical operator `!` adds `not` to the expression. If the expression evaluates to `true`, then adding `!` will add a `not` turning it into `not true` or `false` (and vice-versa)
+  * The logical operator `!` adds `not` to an expression, negating it. If the expression evaluates to `true`, then adding `!` will add a `not` turning it into `not true` or `false` (and vice-versa).
 
   ```
-  // Returns true
-  console.log(expression2);
+    // Returns true
+    console.log(expression2);
 
-  // Returns false
-  console.log(!expression2);
+    // Returns false
+    console.log(!expression2);
   ```
   
-* Open `07-Ins_Logical-Comparison-Operators/index.html` and navigate to the console and demonstrate the following:
+* Open `07-Ins_Logical-Comparison-Operators/index.html` and navigate to the console and point out the following:
 
-  * When arithmetic operators are combined with numbers to form an expression, a single number is returned. The first five logs are the results of using `+`, `-`, `\`, `*` and `%`.
+  * When arithmetic operators are combined with numbers to form an expression, a single number is returned. The first five logs are the results of using `+`, `-`, `\`, `*` and `%` and return a single number.
 
-  * Logical and comparison operators evaluate to `true` or `false` as seen in the logs. 
+  * Expressions using logical and comparison operators evaluate to `true` or `false`. As a result, the remainder of the logs are `true` or `false`.
+
+  * As demonstrated in the final two console logs, using the `!` operator negates the expression, turning `true` to `false.`
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What does an expression with an arithmatic expression evaluate to? 
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 A arithmatic expression adds, subtracts, multiplies, divides or returns the value of two numbers and returns a single number.
+
+  * ☝️ What operators are used to compare equality or greater than/less than? 
+
+  * 🙋 Comparison operators
+
+  * ☝️ What operators determine logic between expressions?  
+
+  * 🙋 Logical operators 
+
+   * ☝️ What does an expression using a logical or comparison operator evaluate to? 
+
+  * 🙋 True or false 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
 
-### 13. Student Do: { ACTIVITY NAME } (15 mins)
+### 13. Student Do: Logical and Comparison Operators (15 mins)
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -112,21 +126,21 @@
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
 
-### 14. Instructor Review: { ACTIVITY NAME } (10 mins) 
+### 14. Instructor Review: Logical and Comparison Operators (10 mins) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with `@TODO TOPIC`? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `Logical and Comparison Operators`? (Poll via Fist of Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ Arithmetic operators
 
-  * ✔️ @TODO { THAT }
+  * ✔️ Conditional operators
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ Logical operators
 
 * Open `@TODO/folder/file` in your IDE and explain the following: 
 

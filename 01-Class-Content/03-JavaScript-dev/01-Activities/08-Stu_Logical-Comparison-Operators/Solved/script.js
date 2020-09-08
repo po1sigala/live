@@ -28,5 +28,5 @@ console.log(d < 1);
 console.log(expression1 && !expression2);
 
 // Remove (!) from expression1 so one is true 
-console.log( !expression1 || expression2);
+console.log( expression1 || expression2);
   
