@@ -58,7 +58,7 @@ You will be employer-ready if you can answer the following questions:
 
 You will be employer-competitive if you are able to: 
 
-* Add decision-making to your code using `if` and `if/else` statements. 
+* Implement complex decision-making to your code using `if` and `if/else` statements. 
 
 * Explain the difference between equality(`==`) and strict equality (`===`). 
 
