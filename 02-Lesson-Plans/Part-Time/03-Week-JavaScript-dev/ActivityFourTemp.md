@@ -225,7 +225,7 @@
     ```
     console.log(d < 1);
     ```
-    
+
   * Since `expression1` evaluates to `true` and `expression2` evaluates to `false`, using `&&` returns false because both expressions do not evaluate to `true`. Replacing `&&` with `||` works, because with `||` one expression or the other must be `true` for `true` to be returned.
 
     ```
@@ -254,7 +254,7 @@
 
   * 🙋 The logical operator `&&` returns true if both expressions are `true` while the logical operator `||` returns true if one expression or the other returns `true`.
 
-    * ☝️ How can you use a logical operator to negate an expression`? 
+  * ☝️ How can you use a logical operator to negate an expression`? 
 
   * 🙋 Use the `!` operator adds a `not`. So, an expression that returns true, returns `not true` or `false` and vice-versa.
 
