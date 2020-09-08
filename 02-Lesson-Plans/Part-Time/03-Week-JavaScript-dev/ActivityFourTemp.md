@@ -40,7 +40,7 @@
     console.log(b != c);
   ```
 
-  * To compare equality value AND type, use strict equality operator `===`. While `b` and `c` both hold the value of `10` one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
+  * To compare equality value AND type, use strict equality operator `===`. While `b` and `c` both hold the value of `10`, one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
 
   ```
     console.log(b === c);
@@ -225,13 +225,7 @@
     ```
     console.log(d < 1);
     ```
-
-  * Since `d` evaluates to `0`, it is less than `1`. So, the comparison operator `<` returns true.
-
-    ```
-    console.log(d < 1);
-    ```
-
+    
   * Since `expression1` evaluates to `true` and `expression2` evaluates to `false`, using `&&` returns false because both expressions do not evaluate to `true`. Replacing `&&` with `||` works, because with `||` one expression or the other must be `true` for `true` to be returned.
 
     ```
