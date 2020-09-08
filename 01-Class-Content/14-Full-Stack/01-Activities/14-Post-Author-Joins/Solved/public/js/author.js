@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nameInput = document.getElementById('author-name');
   const authorList = document.querySelector('tbody');
-  const authorContainer = document.querySelector('.author-container');
-
-  // TODO: Find good spot for these
-  // $(document).on('submit', '#author-form', handleAuthorFormSubmit);
-  // $(document).on('click', '.delete-author', handleDeleteButtonPress);
 
   // Create an author
   const insertAuthor = (authorData) => {
