@@ -19,7 +19,7 @@ overwhelmed, remind them that each activity builds on one another and they can l
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/03-JavaScript/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/03-JavaScript/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -31,11 +31,11 @@ Next unit, we will work with Web APIs. To preview the material, point out the st
 
 ### Lesson Plans
 
-* [03.1 - Lesson Plan](01-Day-JavaScript/05.1-LESSON-PLAN.md)
+* [03.1 - Lesson Plan](01-Day-JavaScript/03.1-LESSON-PLAN.md)
 
-* [03.2 - Lesson Plan](02-Day_JavaScript/05.2-LESSON-PLAN.md)
+* [03.2 - Lesson Plan](02-Day_JavaScript/03.2-LESSON-PLAN.md)
 
-* [03.3 - Lesson Plan](03-Day_JavaScript/05.3-LESSON-PLAN.md)
+* [03.3 - Lesson Plan](03-Day_JavaScript/03.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
