@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     alertDiv.classList.add('alert', 'alert-danger');
     alertDiv.textContent = 'Must have at least one author to post';
     alertDiv.id = 'removeMe';
+    alertDiv.style.marginRight = '5px';
     return alertDiv;
   };
 
