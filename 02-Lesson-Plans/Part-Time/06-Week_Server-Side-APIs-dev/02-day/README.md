@@ -363,7 +363,7 @@ In this activity, you will work with a partner to display content based on the r
 
 ### 8. Instructor Demo: Deconstruct Parameters (5 mins) 
 
-* Open up `15-Ins_Deconstruct_Parameters/index.html` in the browser to the console.
+* Open up `15-Ins_Deconstruct_Parameters/index.html` in the browser and navigate to the console, demonstrating the following:
 
   * 🔑 Sometimes we need make a specific request to be sure we receive only the information we want.
 
@@ -661,13 +661,13 @@ In this activity, you will work with a partner to use MDN documentation to imple
 
   * 🔑 This provides information on the URL of the document.
 
-* Open your console and Run `document.location`.  Then expand the `location object` and demonstrate the following: 
+* Open your browser and enter the console, typing `document.location` and hitting the `enter/return` key. Then expand the `location object` and demonstrate the following: 
 
-  * 🔑 Here is the `location object` with the browser's current location.
+  * 🔑 This is the `location object` which contains the browser's current location.
 
-  * 🔑 We can use the `location.href` property to set the URL or get the URL.
+  * 🔑 We can use the `location.href` property to set or get the URL.
 
-* In the console and Run `document.location.href = 'https://www.google.com'`. 
+* Now, type `document.location.href = 'https://www.google.com'` into the console and hit `enter/return` key. 
 
   * 🔑 The browser URL changed to the value assigned to `document.location.href`.
 
@@ -767,7 +767,7 @@ In this activity, you will work with a partner to use MDN documentation to imple
   document.location.replace(redirectUrl);
   ```
 
-  *  If the `response.status` does not equal 404, we return `response.json()`.
+  * If the `response.status` does not equal 404, we return `response.json()`.
 
   ```js
   else {
@@ -775,17 +775,17 @@ In this activity, you will work with a partner to use MDN documentation to imple
   }
   ```
 
-    * This time we did not return `response.json()` after the if statement because we are changing the `document.location` based on the `response.status`.
+  * This time we did not return `response.json()` after the if statement because we are changing the `document.location` based on the `response.status`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What does the `document.replace` method do? 
+  * ☝️ What does the `document.replace` method do? 
 
-    * 🙋 The `document.replace` method, replaces the current document with the URL that is passed as an argument.  
+  * 🙋 The `document.replace` method, replaces the current document with the URL that is passed as an argument.  
 
-    * ☝️ What can we do if we don't completely understand this?
+  * ☝️ What can we do if we don't completely understand this?
 
-    * 🙋 Read the [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) , and stick around for Office Hours to ask for help.
+  * 🙋 Read the [Location Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/location) , and stick around for Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 
