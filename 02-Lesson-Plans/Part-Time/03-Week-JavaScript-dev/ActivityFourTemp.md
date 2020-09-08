@@ -43,13 +43,13 @@
   * To compare equality value AND type, use strict equality operator `===`. While `b` and `c` both hold the value of `10` one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
 
   ```
-  console.log(b === c);
+    console.log(b === c);
   ```
 
- * To compare inequality of value OR type, use `!==`. The values of `b` and `c` are both `10` but the types are different. Since the type is inequal, using `!==` will evaluate to `true`.
+  * To compare inequality of value OR type, use `!==`. The values of `b` and `c` are both `10` but the types are different. Since the type is inequal, using `!==` will evaluate to `true`.
 
   ```
-  console.log(b !== c);
+    console.log(b !== c);
   ```
 
   * To evaluate greater than or less than, use the  `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
