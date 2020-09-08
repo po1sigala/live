@@ -18,7 +18,7 @@
     console.log(a * b);
     ```
 
-  * Modulus `%` is a special arithmatic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder is 0. 
+  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder is 0. 
 
   ```
     var a = 100;
@@ -29,7 +29,7 @@
 
   * Comparison operators combine with strings, booleans and numbers to form an expression that evaluates to true or false.
 
-  * Compare equality of value with `==` or inequality with `!=`. Both `b` and `c` have the value `10` so they are equal. The first expression logs `true`. The second expression logs `false`.
+  * Compare equality of value with `==` or inequality with `!=`. The variables `b` and `c` both hold the value `10` so they are equal. As a result, the first expression logs `true`. The second expression logs `false`.
 
   ```
     var b = 10;
@@ -39,21 +39,21 @@
     console.log(b != c);
   ```
 
-  * To compare value and type, use strict equality operators `===` and `!==`. While `b` and `c` both have the value of `10` one is a string and one is number. So, they are not strictly equal. As a result, both of these expressions evaluate to `false`.
+  * To compare value and type, use strict equality operators `===` and `!==`. While `b` and `c` both hold the value of `10` one is a string and one is number. So, they are not strictly equal. As a result, the first log will be `true` and the second log will be `false`.
 
   ```
     console.log(b !== c);
     console.log(b === c);
   ```
 
-  * Evaluate greater than or less than with `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
+  * To evaluate greater than or less than, use the  `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
 
   ```
     console.log(a > b);
     console.log(a < b);
   ```
 
-  * Greater than or equal to and less than or equal to can also be evaluated with `>=` or `<=`.
+  * To evaluate greater than or equal to and less than or equal to, use `>=` or `<=`. In this case, if `a` is greater than or equal or equal to`b`, the first expression returns `true`. If `a` is less than or equal to `b`, the second expression returns `true`.
 
   ```
     console.log(a <= b);
@@ -62,13 +62,13 @@
 
   * It is also possible to determine logic between expressions using logical operators `and`, `or`, and `not`
 
-  * The logical operator `&&` evaluates if both expressions evaluate to true. If the first evaluates to `true` AND the second evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. 
+  * The logical operator `&&` evaluates if both expressions evaluate to true. If the first expression evaluates to `true` AND the second evaluates evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. 
 
   ```
     console.log(expression1 && expression2);
   ``` 
 
-  * The logical operator `||` evaluates if one expression OR the other returns true.  If one evaluate to true, then true is returned. Otherwise, `false` is returned. 
+  * The logical operator `||` evaluates if one expression OR the other returns true.  If one expression evaluate to true, then true is returned. Otherwise, `false` is returned. 
 
   ```
     console.log(expression1 || expression2);
@@ -84,7 +84,7 @@
     console.log(!expression2);
   ```
   
-* Open `07-Ins_Logical-Comparison-Operators/index.html` and navigate to the console and point out the following:
+* Open `07-Ins_Logical-Comparison-Operators/index.html` and navigate to the console and explain the following:
 
   * When arithmetic operators are combined with numbers to form an expression, a single number is returned. The first five logs are the results of using `+`, `-`, `\`, `*` and `%` and return a single number.
 
@@ -149,8 +149,6 @@
     ```
     @TODO ADD CODE SNIPPET, TABBED
     ```
-
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
