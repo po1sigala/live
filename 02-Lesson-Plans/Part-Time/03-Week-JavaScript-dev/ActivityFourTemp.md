@@ -2,7 +2,7 @@
 
 * Open `07-Ins_Logical-Comparison-Operators/script.js` in your IDE and demonstrate the following:
 
-  * Arithmetic operators combine with numbers to form an expression that returns a single number. Since `a` is a number with a value of `100` and `b` is a number with a value `10`, then `a + b` evaluates to the single number `110`.
+  * We can use arithmetic operators to create simple math equations. We set the variable `a` to have a value of `100` and variable `b` to `10` . Both of these are of the data type `number.`  When we run `a + b` it will return the value, or evaluate to `110`.
   ```
     var a = 100;
     var b = 10;
@@ -10,7 +10,7 @@
     console.log(a + b);
   ```
 
-  * Arithmetic operators include `+`, `-`, `\` and `*`
+  * Arithmetic operators include addition(`+`), subtraction(`-`), division(`\`) and multiplication(`*`).
 
   ```
     console.log(a + b);
@@ -19,7 +19,7 @@
     console.log(a * b);
     ```
 
-  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since a is `100` and b is `10`, then the remainder of `100` divided by `10` is `0`. 
+  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since `a` is `100` and b is `10`, then the remainder of `100` divided by `10` is `0`. So, `0` is returned. 
 
   ```
     var a = 100;
@@ -30,7 +30,7 @@
 
   * Comparison operators are not limited to numbers. They combine with strings, booleans and numbers to form an expression that evaluates to `true` or `false.`
 
-  * To compare equality of value, use `==`. To compare inquality of value, use`!=`. The variables `b` and `c` both hold the value `10` so they are equal. As a result, the first expression logs `true`. The second expression logs `false`.
+  * We compare equality of value using the equality operator(`==`). Likewise, we compare inquality of value, using the inequality operator (`!=`). The variables `b` and `c` both hold the value `10` so their values are equal. As a result, the first expression logs `true`. The second expression logs `false`.
 
   ```
     var b = 10;
@@ -40,26 +40,26 @@
     console.log(b != c);
   ```
 
-  * To compare equality value AND type, use strict equality operator `===`. While `b` and `c` both hold the value of `10`, one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
+  * To compare equality value AND type, we use the strict equality operator (`===`). While `b` and `c` both hold the value of `10`, one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
 
   ```
     console.log(b === c);
   ```
 
-  * To compare inequality of value OR type, use `!==`. The values of `b` and `c` are both `10` but the types are different. Since the type is inequal, using `!==` will evaluate to `true`.
+  * To compare inequality of value OR type, we use `!==`. The values of `b` and `c` are both `10` but the types are different. Since the type is inequal, using `!==` evaluates to `true`.
 
   ```
     console.log(b !== c);
   ```
 
-  * To evaluate greater than or less than, use the  `>` or `<` operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
+  * To evaluate greater than or less than, we use the greater than (`>`) or less than (`<`) operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
 
   ```
     console.log(a > b);
     console.log(a < b);
   ```
 
-  * To evaluate greater than or equal to and less than or equal to, use `>=` or `<=`. In this case, if `a` is greater than or equal or equal to`b`, the first expression returns `true`. If `a` is less than or equal to `b`, the second expression returns `true`.
+  * To evaluate greater than or equal to and less than or equal to, we use `>=` or `<=`. In this case, if `a` is greater than or equal or equal to`b`, the first expression returns `true`. If `a` is less than or equal to `b`, the second expression returns `true`.
 
   ```
     console.log(a <= b);
