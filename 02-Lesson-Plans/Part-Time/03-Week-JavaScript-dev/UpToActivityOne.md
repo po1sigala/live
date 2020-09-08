@@ -234,7 +234,7 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
 * Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your IDE and explain the following:
 
-  * Inline `<script>` tags add JavaScript directly in the HTML file
+  * 🔑 Inline `<script>` tags add JavaScript directly in the HTML file
 
 ```
     <script>
@@ -249,7 +249,7 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
   ```
 
-  * A console log is a JavaScript function. The message to the console is written between `()`. 
+  * 🔑 A console log is a JavaScript function. The message to the console is written between `()`. 
 
   ```
      console.log("This is inline JavaScript");
