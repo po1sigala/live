@@ -175,7 +175,7 @@
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with `Logical and Comparison Operators`? (Poll via Fist of Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `Logical and Comparison Operators`? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
