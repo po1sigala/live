@@ -14,7 +14,7 @@ if (hungerLevel < 50) {
   console.log("Hungry!");
 }
 
-// If-else statement 
+// Else statement 
 // Evaluates to true so "Lunchtime" is logged
 if (isLunchTime === true) {
   console.log("Lunchtime");
@@ -36,7 +36,7 @@ if (!isLunchTime) {
   console.log("It's Lunchtime Already !!");
 }
 
-// Else-if allows you to test more than one condition
+// Else if allows you to test more than one condition
 // The first condition is false, so the second condition is evaluated. Logs "Cost Rating: $$""
 
 if (lunchBill < 10) {

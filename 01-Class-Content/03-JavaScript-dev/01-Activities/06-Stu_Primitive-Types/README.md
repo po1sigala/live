@@ -12,7 +12,7 @@ In this activity, you will work with a partner to reverse engineer code to ident
 
 ## 💡 Hint
 
-JavaScript is a loosely typed and dynamic programming language. That means that in Javascript, a variable can store any data type. In addition, the type of data that a variable stores can change by simply reassigning the variable.
+* Don't forget to look for the quotes. Only one primitive type is surrounded by quotes! 
 
 ## 🏆 Bonus
 

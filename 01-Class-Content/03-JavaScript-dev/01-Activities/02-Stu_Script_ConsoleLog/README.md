@@ -1,4 +1,4 @@
-# Adding Javascript to HTML 
+# Adding JavaScript to HTML 
 
 In this activity, you will work with a partner to use MDN Script Element documentation to link an external JavaScript file to an HTML file.
 
@@ -20,7 +20,7 @@ In this activity, you will work with a partner to use MDN Script Element documen
 
 ## 💡 Hint
 
-Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Developer's Console on Chrome. Alternatively, right-click on the page and select `Inspect`.
+* Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Developer's Console on Chrome. Alternatively, right-click on the page and select `Inspect`.
 
 ## 🏆 Bonus
 

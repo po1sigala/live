@@ -24,7 +24,7 @@ In this activity, you will work with a partner to write introductions in the con
 
 ## 💡 Hint
 
-The `+` sign can be used to combine text and variables in a single console log message.
+*  The `+` operator is used to combine values in a single console log message.
 
 ## 🏆 Bonus
 
