@@ -18,6 +18,6 @@ In this activity, you will work with a partner to reverse engineer code to ident
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * There are two more primitive value types in JavasScript. What is BigInt and Symbol?  
+  * There are two more primitive value types in JavaScript. What is BigInt and Symbol?  
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
