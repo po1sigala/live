@@ -10,7 +10,7 @@ In this unit, students will implement media queries and flexbox to create a resp
 
 * Remind students to do a `git pull` of the class repo each day to have that day's activities ready and open in VS Code. 
 
-* Be ready to use Chrome DevTools and the device emulator to quickly show different CSS concepts and different screen sizes.
+* Be ready to use Chrome DevTools and the device emulator to quickly show different CSS concepts on different screen sizes.
 
 * Make sure to remind students that although CSS is a broad language with many tricks to learn, they will continue to build their CSS knowledge throughout the entire course.
 
@@ -18,7 +18,7 @@ In this unit, students will implement media queries and flexbox to create a resp
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/02-Advanced-CSS/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/02-Advanced-CSS/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -26,7 +26,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 * Next week, you will introduce students to JavaScript! This may be a big leap for some students. Be prepared to answer a lot of questions and be available during Office Hours. 
 
-* Starting with the next unit, students will start solving common algorithms that they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
+* Starting with the next unit, students will start solving common algorithms that they will see in technical interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
 
 ## Helpful Links
 
@@ -36,7 +36,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
   * [02.2 - Lesson Plan](02-Day_Pseudo-Resets/02.2-LESSON-PLAN.md)
   
-  * [02.3 - Lesson Plan](03-Day_XXX/02.3-LESSON-PLAN.md)
+  * [02.3 - Lesson Plan](03-Day_CodePen-Mini-Project/02.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
@@ -44,7 +44,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-  * [02.1: TITLE]()
+  * [Unit 02: Advanced CSS]()
 
 ### Algorithms
 
