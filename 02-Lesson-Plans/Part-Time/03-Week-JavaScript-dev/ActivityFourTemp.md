@@ -3,96 +3,102 @@
 * Open `07-Ins_Logical-Comparison-Operators/script.js` in your IDE and demonstrate the following:
 
   * We can use arithmetic operators to create simple math equations. We set the variable `a` to have a value of `100` and variable `b` to `10` . Both of these are of the data type `number.`  When we run `a + b` it will return the value, or evaluate to `110`.
-  ```
-    var a = 100;
-    var b = 10;
 
-    console.log(a + b);
+  ```js
+  var a = 100;
+  var b = 10;
+
+  console.log(a + b);
   ```
 
   * Arithmetic operators include addition(`+`), subtraction(`-`), division(`\`) and multiplication(`*`).
 
-  ```
-    console.log(a + b);
-    console.log(a - b);
-    console.log(a / b);
-    console.log(a * b);
+  ```js
+  console.log(a + b);
+  console.log(a - b);
+  console.log(a / b);
+  console.log(a * b);
     ```
 
-  * Modulus `%` is a special arithmetic operator that evalutes remainder. Since `a` is `100` and b is `10`, then the remainder of `100` divided by `10` is `0`. So, `0` is returned. 
+  * Modulus `%` is an arithmetic operator that allows us return the `remainder` or what is left over after dividing one number by another. When we divide `100` by `10`, the remainder is `0` because `10` divides into `100` evenly.  So, `a%b` returns `0`.
 
-  ```
-    var a = 100;
-    var b = 10;
+  ```js
+  var a = 100;
+  var b = 10;
 
-    console.log(a % b);
-  ```
-
-  * Comparison operators are not limited to numbers. They combine with strings, booleans and numbers to form an expression that evaluates to `true` or `false.`
-
-  * We compare equality of value using the equality operator(`==`). Likewise, we compare inquality of value, using the inequality operator (`!=`). The variables `b` and `c` both hold the value `10` so their values are equal. As a result, the first expression logs `true`. The second expression logs `false`.
-
-  ```
-    var b = 10;
-    var c = "10";
-
-    console.log(b == c);
-    console.log(b != c);
+  console.log(a % b);
   ```
 
-  * To compare equality value AND type, we use the strict equality operator (`===`). While `b` and `c` both hold the value of `10`, one is a string and the other is number. So, both value and type are not equal. As a result, using `===` will log `false`.
+  * In addition to peforming math equations, we can also use comparison operators to determine the equality of difference of values. 
 
-  ```
-    console.log(b === c);
+  * We can compare if two values are equal using the equality operator(`==`). The value of `b` and `c` are both `10`. So, `b == c` returns `true`.
+
+  ```js
+  var b = 10;
+  var c = "10";
+
+  console.log(b == c);
   ```
 
-  * To compare inequality of value OR type, we use `!==`. The values of `b` and `c` are both `10` but the types are different. Since the type is inequal, using `!==` evaluates to `true`.
+  * We can also test for inequality using the inequality operator(`!=`). Since the value of `b` and `c` are both `10`, `b != c` returns `false.` 
 
+  ```js
+  console.log(b != c);
   ```
-    console.log(b !== c);
+
+  * Using `==` only tests for equality of value. To test strict equality, we use `===`. The value of `b` and `c` are both `10` but one is a `string` and the other is a `number`. Since they are not equal in both value and type, `b === c` returns `false`.
+
+  ```js
+  console.log(b === c);
+  ```
+
+  * We can also test for inequality of value or type using `!==`. The variables `b` and `c` do not have the same type (one is a `string` and the other is a `number`). So either value or type is inequal, `b !== c ` returns `true`.
+
+  ```js
+  console.log(b !== c);
   ```
 
   * To evaluate greater than or less than, we use the greater than (`>`) or less than (`<`) operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true`.
 
-  ```
-    console.log(a > b);
-    console.log(a < b);
+  ```js
+  console.log(a > b);
+  console.log(a < b);
   ```
 
   * To evaluate greater than or equal to and less than or equal to, we use `>=` or `<=`. In this case, if `a` is greater than or equal or equal to`b`, the first expression returns `true`. If `a` is less than or equal to `b`, the second expression returns `true`.
 
-  ```
-    console.log(a <= b);
-    console.log(a >= b);
+  ```js
+  console.log(a <= b);
+  console.log(a >= b);
   ```
 
-  * It is also possible to determine logic between expressions using logical operators `and`, `or`, and `not`.
+  * It is also possible to determine logic between expressions using logical operators and(`&&`), or(`||`), and not(`!`).
 
-  * The logical operator `&&` evaluates if both expressions evaluate to true. If the first expression evaluates to `true` AND the second evaluates evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. 
+  * We use the logical operator `&&` to check if both expressions evaluate to `true`.  If both expressions evaluate to `true`, then `true` is returned. Otherwise, `false` is returned.
 
-  ```
-    console.log(expression1 && expression2);
+  ```js
+  console.log(expression1 && expression2);
   ``` 
 
-  * The logical operator `||` evaluates if one expression OR the other expression returns true.  If one expression evaluate to true, then true is returned. Otherwise, `false` is returned. 
+  * We use the logical operator `!!` to check if one expression OR the other evaluates to true.  If one expressions evaluates to `true`, then `true` is returned. Otherwise, `false` is returned
 
+  ```js
+  console.log(expression1 || expression2);
   ```
-    console.log(expression1 || expression2);
-  ```
 
-  * The logical operator `!` adds `not` to an expression, negating it. If the expression evaluates to `true`, then adding `!` will add a `not` turning it into `not true` or `false` (and vice-versa).
+  * The logical operator `!` adds `not` to an expression, negating it. If the expression evaluates to `true`, then we can add `!` to it, making it `not true` or `false` (or vice-versa.)
 
-  ```
-    // Returns true
-    console.log(expression2);
+  ```js
+  // Returns true
+  console.log(expression2);
 
-    // Returns false
-    console.log(!expression2);
+  // Returns false
+  console.log(!expression2);
   ```
   
 * Open `07-Ins_Logical-Comparison-Operators/index.html` and navigate to the console and explain the following:
 
-  * When arithmetic operators are combined with numbers to form an expression, a single number is returned. The first five logs are the results of using `+`, `-`, `\`, `*` and `%` and return a single number.
+  * When arithmetic operators can be used with numbers to create math equations. These equations return a single number as seen in the first five logs.  
 
   * Expressions using logical and comparison operators evaluate to `true` or `false`. As a result, the remainder of the logs are `true` or `false`.
 
@@ -100,11 +106,11 @@
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What does an expression with an arithmatic expression evaluate to? 
+  * ☝️ What can arithmetic operators do? 
 
-  * 🙋 A arithmetic expression adds, subtracts, multiplies, divides or returns the value of two numbers and returns a single number.
+  * 🙋 A arithmetic operator can perform simplee math problems like adding, subtracting, multiplying, dividing or even finding the remainder. 
 
-  * ☝️ What operators are used to compare equality or greater than/less than? 
+  * ☝️ What type of operators are used to evaluate equality and difference? 
 
   * 🙋 Comparison operators
 
@@ -112,7 +118,7 @@
 
   * 🙋 Logical operators 
 
-   * ☝️ What does an expression using a logical or comparison operator evaluate to? 
+  * ☝️ What does an expression using a logical or comparison operator evaluate to? 
 
   * 🙋 True or false 
 
@@ -183,66 +189,70 @@
 
 * Open `09-Stu-Logical-Comparison-Operators/Solved/script.js` in your IDE and explain the following: 
 
-  * The numerical expressions stored in `d` and `e` evaluate numbers and return a single number. Since `c` holds a number with the value of `100` and  `b` holds a number with a value of `50`, the remainder of `100` divided by `50` is 0. So `d` holds the value of `0`. Likewise, `100` divided by `2` is `50`, so `e` holds a value of `50`.
+  * Variables `d` and `e` use arithmetic operators to perform simple math. Since `c` has a value of `100` and `b` has a value of `50`, then the remainder of `100` divided by `50` is `0`. So the value of `d` is `0`. Likewise, the value of `e` is `100` divided by `2` or `50`. Both variables `d` and `e` have the type of `number`.
 
-    ```
-    var b = 50;
-    var c = 100;
-    var d = c % b;
-    var e = c / 2;
-    ```
+  ```js
+  var b = 50;
+  var c = 100;
+  var d = c % b;
+  var e = c / 2;
+  ```
 
-  * Expressions using logical operators evaluate to `true` or `false`. So, `expression1` evaluates to `true` and `expression2` evaluates to `false`. 
+  * Both `b` and `e` have the value of `50` and the type of `number`. So, `expression1` evaluates to `true`.
 
-    ```
-    // Evaluates to true
-    var expression1 = (b === e);
+  ```js
+  // Evaluates to true
+  var expression1 = (b === e);
+  ```
 
-    // Evaluates to false
-    var expression2 = (e < d);
-    ```
+  * The variable `e` has a value of `50` and variable `d` has a value of `0`. Since `50` is not less than `0`,`expression` evaluates to `false.`
 
-  * Since `a` holds the value `50` with the type of `string` and `b` holds the value `50` with the type of `number`, `===` returns false because while the values are equal, the type is not. However, `==` returns true, since `==` evaluates only value (not type!) and the values are equal. 
+  ```js
+  // Evaluates to false
+  var expression2 = (e < d);
+  ```
 
-    ```
-    console.log(a == b);
-    ```
+  * Since `a` holds the value `50` with the type of `string` and `b` holds the value `50` with the type of `number`, `===` returns `false` because while the values are equal, the type is not. However, `==` returns `true`, since `==` evaluates only value (not type!).
+
+  ```js
+  console.log(a == b);
+  ```
 
   * The variables `b` and `e` both hold the value `50` and the type `number`. Since they are equal in value and type, `===` returns true. 
 
-    ```
-    console.log(b === e);
-    ```
+  ```js
+  console.log(b === e);
+  ```
 
   * Since `c` is greater than `b`, the comparison operator `>` returns true. 
 
-    ```
-    console.log(c > b);
-    ```
+  ```js
+  console.log(c > b);
+  ```
 
-  * Since `d` evaluates to `0`, it is less than `1`. So, the comparison operator `<` returns true.
+  * Since `d` evaluates to `0`, it is less than `1`. So, the comparison operator `<` returns `true`.
 
-    ```
-    console.log(d < 1);
-    ```
+  ```js
+  console.log(d < 1);
+  ```
 
-  * Since `expression1` evaluates to `true` and `expression2` evaluates to `false`, using `&&` returns false because both expressions do not evaluate to `true`. Replacing `&&` with `||` works, because with `||` one expression or the other must be `true` for `true` to be returned.
+  * Since `expression1` evaluates to `true` and `expression2` evaluates to `false`, using `&&` returns `false`. Replacing `&&` with `||` works, because with `||` only one expression or the other must be `true` in order for `true` to be returned.
 
-    ```
-    console.log(expression1 || expression2);
-    ```
+  ```js
+  console.log(expression1 || expression2);
+  ```
   
-  * Alternately, the `&&` works if a `!` operator is used. Since `expression1` evaluates to `true`, negating the second expression will make it `not false` or also `true`. If both expressions then evaluate to `true`, using the `&&` operator in combination with the added `!` will also return true. 
+  * Alternately, using `&&` works if a `!` operator is adding. Since `expression1` evaluates to `true`, negating the second expression will make it `not false` or also `true`.  Since both expressions now evaluate to `true`, then `true` is returned. 
 
-    ```
-    console.log(expression1 && !expression2);
-    ```
+  ```js
+  console.log(expression1 && !expression2);
+  ```
 
-  * Since `expression1` has been negated, it evaluates to `false`. The second expression `expression2` is also false. Remove `!` negation from the first expression so that it returns `true`. Because `expression` or `expression2` returns true, using `||` returns true.
+  * Since `expression1` has been negated, it evaluates to `false`. The second expression `expression2` is also false. Remove `!` negation from the first expression so that it returns `true`. Because either `expression1` or `expression2` returns true, using `||` returns `true`.
 
-    ```
+  ```js
     console.log( expression1 || expression2);
-    ```
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
