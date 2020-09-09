@@ -20,9 +20,9 @@ In this activity, you will work with a partner to debug some broken code so that
   
   * What is a good key word or phrase you can Google to find resources to help you debug?
 
-## 💡 Hints
+## 💡 Hint
 
-You probably have already run into comparison operators in math class! 
+* As seen in the prior activities, a single `=` is an assignment operator, not a comparison operator. To test equality use `==` or `===`.
 
 ## 🏆 Bonus
 
