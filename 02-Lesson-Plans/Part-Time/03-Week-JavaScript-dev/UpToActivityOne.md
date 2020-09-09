@@ -84,16 +84,16 @@ By the end of class, students will be able to:
    * Point out that the code is made up of a series of conditions that decide which message will log to the console. For example, in the code below, if this condition is met, `True ✅ True ✅` will log. 
 
    ```
-    if(expression1 && expression2) {
-    console.log("True ✅ True ✅");
-    ```
+   if(expression1 && expression2) {
+   console.log("True ✅ True ✅");
+   ```
 
    * If not, the other conditions are tested. If none of the conditions are met, then `False ❌ False ❌` is logged.
 
    ```
-    } else {
-    console.log("False ❌ False ❌");
-    }
+   } else {
+   console.log("False ❌ False ❌");
+   }
    ```
 
 * Open `10-Stu_Conditional-Statements/Solved/index.html` and navigate to the console to show them that a single message `False ❌ False ❌` appears indicating none of the conditions are met.  
@@ -107,7 +107,7 @@ By the end of class, students will be able to:
   * In this HTML file, HTML and CSS are working together to provide style and structure to the page.
 
   ```
-    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+  <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
   ```
     
   * There is also something new: `<script>` tags for JavaScript
@@ -115,39 +115,39 @@ By the end of class, students will be able to:
   * Inline `<script>` tags allow you to write scripts directly in an HTML file.
 
   ``` 
-    <script>
-    //Console logs write data directly to the console.
-    console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-    </script> 
+  <script>
+  //Console logs write data directly to the console.
+  console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+  </script> 
   ```
 
   * Adding an src attribute to the opening `<script>` tag allows you to link to an external JavaScript file
 
   ```
-    <script src="script.js"></script>
+  <script src="script.js"></script>
   ```
 
   * You should write your `<script>` tags above the closing `</body>` tag to make sure your HTML and CSS load first.
 
   ```
-    <body>
-      <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+  <body>
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
 
-      <!--Inline script-->
-      <script>
-      //Console logs write data directly to the console.
-      console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-      </script>
+    <!--Inline script-->
+    <script>
+    //Console logs write data directly to the console.
+    console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+    </script>
 
-      <!--Link to external Javascript file-->
-      <script src="script.js"></script>
-    </body>    
+    <!--Link to external Javascript file-->
+    <script src="script.js"></script>
+  </body>    
   ```
 
   * Console logs are JavaScript functions that log messages to the console.
 
   ```
-   console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+  console.log("This is the log for the 🔥INLINE🔥 JavasSript");
   ```
 
   * Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
@@ -155,7 +155,7 @@ By the end of class, students will be able to:
   *  JavaScript looks and performs the same whether it is written inline or in an external file. 
 
   ```
-    console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
+  console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
   ```
 
 * Open `01-Ins_Script-ConsoleLog\index.html` in the browser and demo how to navigate to the console in Chrome Developer Tools. 
@@ -236,23 +236,21 @@ Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Dev
 
   * 🔑 Inline `<script>` tags add JavaScript directly in the HTML file
 
-```
-    <script>
-    console.log("This is inline JavaScript");
-    </script>
-
-```
+  ```
+  <script>
+  console.log("This is inline JavaScript");
+  </script>
+  ```
   * Adding an src attribute to `<script>` tags, links to an external JavaScript file
 
   ```
-     <script src="script.js"></script>
-
+  <script src="script.js"></script>
   ```
 
   * 🔑 A console log is a JavaScript function. The message to the console is written between `()`. 
 
   ```
-     console.log("This is inline JavaScript");
+  console.log("This is inline JavaScript");
   ```
 
 * Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and navigate to the console. Show the students that the message written in between the `()`is that same as what appears in the console.
