@@ -1,7 +1,7 @@
-// Declares student variable 
+// Declares student variable using var keyword 
 var studentName;
 
-// Uses = to assign a value
+// Uses assignment operator(=) to assign a value
 var studentName = "Abdul";
 var studentAge = 32;
 
@@ -9,13 +9,12 @@ var studentAge = 32;
 studentName = "Tonya";
 studentAge = 52;
 
-// To log a value directly to the console, place value between ()
-console.log("My name is ");
-
-// To log a value stored in a variable, place the variable's name between ()
+// To access a value stored in a variable, use the variable's name
 console.log(studentName);
 
-// Variables and values can be concatenated in a single console log using "+"
-// Logs "My name is Tonya"
+//To combine the message with a variable value use the concatenation operator(+)
+//Logs "My name is "
+console.log("My name is ");
 
+// Logs "My name is Tonya"
 console.log("My name is " + studentName);
