@@ -84,17 +84,17 @@ By the end of class, students will be able to:
    * Point out that the code is made up of a series of conditions that decide which message will log to the console. For example, in the code below, if this condition is met, `True ✅ True ✅` will log. 
 
    ```
-      if(expression1 && expression2) {
-      console.log("True ✅ True ✅");
+    if(expression1 && expression2) {
+    console.log("True ✅ True ✅");
     ```
 
    * If not, the other conditions are tested. If none of the conditions are met, then `False ❌ False ❌` is logged.
 
    ```
-      } else {
-      console.log("False ❌ False ❌");
-      }
-  ```
+    } else {
+    console.log("False ❌ False ❌");
+    }
+   ```
 
 * Open `10-Stu_Conditional-Statements/Solved/index.html` and navigate to the console to show them that a single message `False ❌ False ❌` appears indicating none of the conditions are met.  
 
@@ -107,7 +107,7 @@ By the end of class, students will be able to:
   * In this HTML file, HTML and CSS are working together to provide style and structure to the page.
 
   ```
-     <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
   ```
     
   * There is also something new: `<script>` tags for JavaScript
@@ -121,13 +121,13 @@ By the end of class, students will be able to:
     </script> 
   ```
 
- * Adding an src attribute to the opening `<script>` tag allows you to link to an external JavaScript file
+  * Adding an src attribute to the opening `<script>` tag allows you to link to an external JavaScript file
 
   ```
     <script src="script.js"></script>
   ```
 
- * You should write your `<script>` tags above the closing `</body>` tag to make sure your HTML and CSS load first.
+  * You should write your `<script>` tags above the closing `</body>` tag to make sure your HTML and CSS load first.
 
   ```
     <body>
@@ -144,18 +144,18 @@ By the end of class, students will be able to:
     </body>    
   ```
 
-* Console logs are JavaScript functions that log messages to the console.
+  * Console logs are JavaScript functions that log messages to the console.
 
-```
+  ```
    console.log("This is the log for the 🔥INLINE🔥 JavasSript");
-```
+  ```
 
-* Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
+  * Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
 
   *  JavaScript looks and performs the same whether it is written inline or in an external file. 
 
   ```
-     console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
+    console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
   ```
 
 * Open `01-Ins_Script-ConsoleLog\index.html` in the browser and demo how to navigate to the console in Chrome Developer Tools. 
