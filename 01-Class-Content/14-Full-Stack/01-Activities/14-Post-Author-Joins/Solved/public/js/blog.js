@@ -3,12 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded! 🚀');
 
   const blogContainer = document.querySelector('.blog-container');
-  const postCategorySelect = document.getElementById('category');
-
-  // TODO find a spot for these
-  // Click events for the edit and delete buttons
-  // $(document).on('click', 'button.delete', handlePostDelete);
-  // $(document).on('click', 'button.edit', handlePostEdit);
 
   // Variable to hold our posts
   let posts;
@@ -55,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(getPosts(postCategorySelect.value));
+    }).then(getPosts());
   };
 
   // Create HTML rows for the blog container
@@ -83,11 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'x';
     deleteBtn.classList.add('delete', 'btn', 'btn-danger');
+    deleteBtn.addEventListener('click', handlePostDelete);
 
     // Edit button
     const editButton = document.createElement('button');
     editButton.textContent = 'EDIT';
     editButton.classList.add('edit', 'btn', 'btn-info');
+    editButton.addEventListener('click', handlePostEdit);
 
     const newPostTitle = document.createElement('h2');
     const newPostDate = document.createElement('small');
@@ -110,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newPostCardHeading.append(editButton);
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostAuthor);
+    newPostCardBody.append(newPostBody);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
     newPostCard.setAttribute('data-post', JSON.stringify(post));
@@ -118,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return newPostCard;
   };
 
+  // Helper function to display something when there are no posts
   const displayEmpty = (id) => {
     const query = window.location.search;
     let partial = '';
@@ -131,5 +129,23 @@ document.addEventListener('DOMContentLoaded', () => {
     messageH2.style.marginTop = '50px';
     messageH2.innerHTML = `No posts yet${partial}, navigate <a href='/cms${query}'>here</a> in order to get started.`;
     blogContainer.append(messageH2);
+  };
+
+  // Handle when we click the delete post button
+  const handlePostDelete = (e) => {
+    const currentPost = JSON.parse(
+      e.target.parentElement.parentElement.dataset.post
+    );
+
+    deletePost(currentPost.id);
+  };
+
+  // Handle when we click the edit post button
+  const handlePostEdit = (e) => {
+    const currentPost = JSON.parse(
+      e.target.parentElement.parentElement.dataset.post
+    );
+
+    window.location.href = `/cms?post_id=${currentPost.id}`;
   };
 });
