@@ -8,9 +8,9 @@ In this activity, you will work with a partner to debug some broken code so that
 
 * As a developer, I want to use comparison and logical operators to create logs that only read true. 
 
-* When I open the console, all the logs should read "true", but right now they do not!
+* When I open the console, all the logs should read `true`, but right now they do not!
 
-* Open [08-Stu_Logical-Comarision-Operators/Unsolved/script.js]() and examine the code.
+* Open [script.js](08-Stu_Logical-Comparision-Operators/Unsolved/script.js) and examine the code.
 
 * Using the following questions, try to debug and fix the code:
   
