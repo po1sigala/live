@@ -1,4 +1,4 @@
-var badmath = require('badmath');
+const badmath = require('badmath');
 
 console.log(badmath.pie);
 

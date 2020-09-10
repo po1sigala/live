@@ -1,14 +1,6 @@
 module.exports = {
-  sum(a, b) {
-    return a + b;
-  },
-  difference(a, b) {
-    return a - b;
-  },
-  product(a, b) {
-    return a * b;
-  },
-  quotient(a, b) {
-    return a / b;
-  },
+  sum: (a, b) => a + b,
+  difference: (a, b) => a - b,
+  product: (a, b) => a * b,
+  quotient: (a, b) => a / b,
 };
