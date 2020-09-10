@@ -6,6 +6,7 @@ fetch(requestUrl)
     return response.json();
   })
   .then(function (data) {
+    console.log('Github Repo Issues \n----------');
     console.log(data);
     // TODO: Loop through the response
     // TODO: Console log each issue's URL and each user's login

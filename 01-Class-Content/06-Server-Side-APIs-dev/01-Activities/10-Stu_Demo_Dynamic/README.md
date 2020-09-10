@@ -6,11 +6,13 @@ In this activity, you will work with a partner to write the code to generate the
 
 * Be sure to work with your partner!
 
-* Open [index.html](./Unsolved/index.html) to examine the response in the console. Then open [script.js](./Unsolved/assets/js/script.js) to implement the following features:
+* Open [index.html](./Unsolved/index.html) in the browser to examine the response in the console. 
 
-* As a developer I want to take the response data and generate dynamic html.
+* Open [script.js](./Unsolved/assets/js/script.js) in your IDE to implement the following features:
 
-* As a developer, the data I want to show in the `usersContainer` is the user login and the URL of their GitHub profile. 
+  * As a developer, I want to take the response data and generate dynamic HTML.
+
+  * As a developer, the data I want to show in the `usersContainer` is the user login and the URL of their GitHub profile. 
 
 ## 💡 Hint(s)
 
