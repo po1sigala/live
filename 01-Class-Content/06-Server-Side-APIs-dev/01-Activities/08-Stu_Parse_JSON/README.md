@@ -12,13 +12,15 @@
 
 * Using the documentation, implement the following:
 
+  * Edit the `requestUrl` to get GitHub issues associated with Twitter's Chill repo.
+
   * Add a `path` to the end of the `requestUrl` variable such that the response is limited to 5 issues.
 
-  * After doing so, open the `index.html` in your browser and examine the response in the console.
+* Open [index.html](./Unsolved/index.html) in your browser and examine the response in the console.
 
-  * Note the issue URL and the login of the user who wrote the issue
+  * Note the issue URL and the login of the user who wrote the issue.
 
-  * In the `script.js` file, loop through the data and `console.lo`g the issue URL and the user login.
+  * Back in the `script.js` file, loop through the data and `console.log` the issue URL and the user login.
 
 ## 💡 Hint(s)
 
