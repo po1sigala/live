@@ -18,9 +18,9 @@ In this unit, students will implement media queries and flexbox to create a resp
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/02-Advanced-CSS/04-Important/CAREER-CONNECTION.md).
+* Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/02-Advanced-CSS/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
@@ -44,7 +44,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-  * [Unit 02: Advanced CSS]()
+  * [Unit 02: Advanced CSS](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
 
 ### Algorithms
 
