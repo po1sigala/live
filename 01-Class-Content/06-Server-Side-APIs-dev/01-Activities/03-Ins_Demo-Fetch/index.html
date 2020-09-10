@@ -6,20 +6,28 @@
     <title>Fetch Demo</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
-    <div class="container">
-      <table class="table mx-auto my-4">
-        <thead>
-          <th scope="col" style="margin: 10px;">
-            <button class="btn btn-primary" id="fetch-button">
+  <body class="min-100-vh flex-column">
+    <header class="p-5 text-center text-white bg-primary">
+      <h1>Server-Side APIs</h1>
+    </header>
+    <main class="flex-row justify-center align-center col-auto p-4 bg-light">
+      <section class="card card-rounded col-7 bg-white">
+        <header class="card-header text-center">
+          <h2 class="text-white">
+            Fetch Demo
+          </h2>
+        </header>
+        <table class="card-body table mx-auto my-4">
+          <th>
+            <button class="btn btn-danger" id="fetch-button">
               Click Me
             </button>
             <p class="my-4">Results</p>
           </th>
-        </thead>
-        <tbody id="repo-table" class="mx-auto"></tbody>
-      </table>
+          <tbody id="repo-table" class="mx-auto text-center"></tbody>
+        </table>
+      </section>
       <script src="./assets/js/script.js"></script>
-    </div>
+    </main>
   </body>
 </html>
