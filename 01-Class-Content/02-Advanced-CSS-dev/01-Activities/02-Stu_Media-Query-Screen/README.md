@@ -1,28 +1,30 @@
-# Media Queries for Screen
+# 🏗️ Implement Media Queries for Screens
 
-In this activity, you will work with a partner to implement basic media queries for screen.
-
-## Instructions
-
-* Be sure to work with your partner!
-
-* Open [index.html](./Unsolved/index.html) in the browser and make the screen size smaller. Notice what happens to the products on the page.
+Work with a partner to implement the following user story:
 
 * As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+## Acceptance Criteria
 
-  * When the screen size is larger than 992 px, the product cards on the screen are side-by-side.
+* It's done when the screen size is larger than 992 px, and the product cards on the screen are side-by-side.
 
-  * But when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
+* It's done when I change the screen size to 992 px or smaller, and the product cards on the screen split into two columns.
 
-  ![The product cards are split into two columns evenly](./Images/01-product-columns.png)
-
-  * When I change the screen size to 768 px or smaller, the product cards on the screen should be stacked on top of each other.
-
-  ![The product cards are stacked on top of each other](./Images/02-products-stacked.png)
+* It's done when I change the screen size to 768 px or smaller, and the product cards on the screen become stacked on top of each other.
 
 * Optional: Just for fun, change the background color of the header each time the product cards change layout. 
+
+## Assets
+
+The following image demonstrates the web application's appearance at 992 px or smaller:
+
+![The product cards are split into two columns evenly](./Images/01-product-columns.png)
+
+The following image demonstrates the web application's appearance at 768 px or smaller:
+
+![The product cards are stacked on top of each other](./Images/02-products-stacked.png)
+
+---
 
 ## 💡 Hint(s)
 

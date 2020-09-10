@@ -1,32 +1,30 @@
-# Fix the Flexbox Layout
+# 🐛 Product Cards Run Off the Page
 
-In this activity, you will work with a partner to debug some broken code to implement a grid layout with flexbox properties.
+Work with a partner to resolve the following issue:
 
-## Instructions
+* As a user, I want to view all products in two or more rows.
 
-* Be sure to work with your partner!
+* As a user, I don't want to scroll horizontally to see additional products.
 
-* Open [index.html](./Unsolved/index.html) in the browser and examine the page's layout. Note that it currently does not meet the following requirements:
+## Expected Behavior
 
-  * As a user, I want to view all products in two or more rows
+Product cards that don't fit within the first row should display on the next row.
 
-  * As a user, I don't want to scroll horizontally to see additional products
+## Actual Behavior
 
-* To meet these requirements, the page should look similar to the following image:
+Product cards run off the page in a single row.
 
-  ![The products that don't fit on the first line of the grid are moved to the second line](./Images/01-product-grid.png)
+## Assets
 
-* Using the following questions, try to debug and fix the code:
-  
-  * What do the DevTools reveal about the elements?
-  
-  * What CSS rules in [style.css](./Unsolved/assets/css/style.css) are affecting these elements?
-  
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+The following image demonstrates the web application's appearance:
+
+![The products that don't fit on the first line of the grid are moved to the second line](./Images/01-product-grid.png)
+
+---
 
 ## 💡 Hint(s)
 
-* Research what the default behavior of flexbox is and experiment with some of flexbox's other properties to see how to change those defaults.
+* What additional flexbox properties could help direct the behavior of child elements?
 
 ## 🏆 Bonus
 
