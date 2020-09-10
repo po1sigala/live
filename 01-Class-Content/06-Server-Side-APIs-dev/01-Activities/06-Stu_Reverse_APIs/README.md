@@ -6,19 +6,21 @@ In this activity, you will work with a partner to reverse engineer the code to d
 
  Be sure to work with your partner!
 
-* Open the [index.html](index.html) file in your browser
+* Open the [index.html](Unsolved/index.html) file in your browser.
 
-* Open up Chrome DevTools to the console.
+  * Open up Chrome DevTools to the console.
 
-* Examine the differences between three responses in the console
+  * Examine the differences between three responses in the console.
 
 * Open [script.js](./assets/js/script.js) to examine the code.
 
-* Comment on the differences between the 3 methods to return an API call. Also comment on the differences on the format of the data that was returned.
+  * Comment on the differences between the 3 methods to return an API call. 
+  
+  * Comment on the differences on the format of the data that was returned.
 
 ## 💡 Hint(s)
 
-* No hints, just observe.
+* Look at how each method is making a request and how they get a response.
 
 ## 🏆 Bonus
 
