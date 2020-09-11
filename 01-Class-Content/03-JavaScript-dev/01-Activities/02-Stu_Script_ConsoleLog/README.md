@@ -1,4 +1,4 @@
-# Adding Javascript to HTML 
+# Adding JavaScript to HTML 
 
 In this activity, you will work with a partner to use MDN Script Element documentation to link an external JavaScript file to an HTML file.
 
@@ -8,9 +8,9 @@ In this activity, you will work with a partner to use MDN Script Element documen
 
 * Navigate to the [MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) in your browser.
 
-* Open [02-Stu_Script_ConsoleLog/Unsolved/index.html]() in your IDE and examine the code.
+* Open [index.html](02-Stu_Script_ConsoleLog/Unsolved/index.html) in your IDE and examine the code.
 
-* Locate [02-Stu_Script_ConsoleLog/Unsolved/script.js]() in the same folder as the `index.html`. This is the external Javascript file you will link to the HTML. 
+* Locate [script.js](02-Stu_Script_ConsoleLog/Unsolved/script.js) in the same folder as the `index.html`. This is the external Javascript file you will link to the HTML. 
 
 * Using the documentation, implement the following:
 
@@ -20,7 +20,7 @@ In this activity, you will work with a partner to use MDN Script Element documen
 
 ## 💡 Hint
 
-Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Developer's Console on Chrome. Alternatively, right-click on the page and select `Inspect`.
+* Use `Cmd + Option + J` on a Mac or `Cmd +Shift +J` on Windows to open up the Developer's Console on Chrome. Alternatively, right-click on the page and select `Inspect`.
 
 ## 🏆 Bonus
 
