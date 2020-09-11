@@ -18,8 +18,6 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 * Students may feel a little overwhelmed with the new unusual syntax. Remind them that at the end of the day, we're still just working with JavaScript. Prioritize making sure they understand concepts, rather than worrying about them perfectly memorizing syntax. Memorization will come with practice and repetition, so work on instilling concepts early on.
 
-* Explain any unfamiliar ES6 syntax as you go along as necessary, but try not to go deeper than necessary. Students will have plenty of time to practice ES6 as we go through the material over the next two weeks.
-
 * **Important:** In order to avoid continuous NPM installs, all of today's activity Solved and Unsolved versions include only a `src` folder. Students and yourself should scaffold out a React app once with Create React App, and then swap out the `src` folder for each activity. It's recommended that you completely restart the dev server between activities.
 
 ### Learning Objectives
@@ -52,7 +50,7 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 ### 2. Partners Do: Installation + Documentation Research (15 mins)
 
-* Have students work with partners and introduce them to [14-Stu_DocumentationQuestions](../../../../01-Class-Content/19-react/01-Activities/01-Stu_DocumentationQuestions/README.md).
+* Have students work with partners and introduce them to [01-Stu_DocumentationQuestions](../../../../01-Class-Content/19-react/01-Activities/01-Stu_DocumentationQuestions/README.md).
 
 * The first task in this assignment instructs them to install Create React App if they haven't already. Instructional staff should be walking around offering assistance with the research questions, as well as the installation process (which should be fairly straight forward).
 
@@ -196,7 +194,7 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 * Explain that we're now going to go over how we can add Bootstrap to a React project.
 
-* Replace your React application's src folder with [06-Ins_HelloBootstrap/src](../../../../01-Class-Content/19-react/01-Activities/06-Ins_HelloBootstrap/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
+* Replace your React application's src folder with [04-Ins_HelloBootstrap/src](../../../../01-Class-Content/19-react/01-Activities/04-Ins_HelloBootstrap/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
 
   ![No Bootstrap](Images/04-NoBootstrap.png)
 
@@ -260,13 +258,13 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 - - -
 
-### 10. Everyone Do: BREAK (15 mins)
+### 10. Everyone Do: BREAK (30 mins)
 
 - - -
 
 ### 13. Instructor Do: JSX Variables (8 mins)
 
-* Replace your React app's `src` folder with [19-Ins_JSXVariables/src](../../../../01-Class-Content/19-react/01-Activities/06-Ins_JSXVariables/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
+* Replace your React app's `src` folder with [06-Ins_JSXVariables/src](../../../../01-Class-Content/19-react/01-Activities/06-Ins_JSXVariables/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
 * Once the app starts, open [localhost:3000](http://localhost:3000) in your web browser.
 
@@ -364,7 +362,7 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 * **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/09-Stu_StyleProp/README.md)
 
-* Slack out `22-Stu_StyleProp/Unsolved`
+* Slack out `09-Stu_StyleProp/Unsolved`
 
 ### 18. Instructor Do: Go through Slides (10 mins) (High)
 

@@ -6,6 +6,7 @@
 
 * Must use a CSS framework _other than_ Bootstrap
 
+* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Important/MERNHerokuDeploy.md) to do so.
 
 ## Presentation Requirements
 

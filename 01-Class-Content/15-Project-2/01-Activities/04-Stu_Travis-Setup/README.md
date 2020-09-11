@@ -44,6 +44,6 @@ In this activity we will set up the project repo with Travis CI to ensure that l
 
 * Click the "Install" button to complete the process.
 
-* In the [starter code](`../../../14-Full-Stack/04-Supplemental/Sequelize-Passport-Example`), note that there is a `travis.yml` file that specifies the steps of the build process. 
+* In the [starter code](`../../../14-Full-Stack/04-Important/Sequelize-Passport-Example`), note that there is a `travis.yml` file that specifies the steps of the build process. 
 
 * Make a small change to the project, add, commit, and push your code to ensure that Travis runs the linter.

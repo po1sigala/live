@@ -373,13 +373,13 @@ app.get('/obiwankenobi', function(req, res){
 
 * In the next class, students will start using Heroku. 
 
-* Direct the students to the `04-Supplemental` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
+* Direct the students to the `04-Important` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Important/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
 
 * Remind the students to sign up for a Heroku account and have the Heroku CLI installed **before** coming to class!
 
 * In a few classes, students will start using MySQL. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+* Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
 * Advise the students to have both MySQL Server and Workbench installed **before** the next unit.
 

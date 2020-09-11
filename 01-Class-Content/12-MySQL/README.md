@@ -60,7 +60,7 @@ You will be employer-competitive if you are able to:
 
 ## Heads Up
 
-* Starting this unit, you will use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** attending your classes. You can follow these installation instructions for your [Mac](./04-Supplemental/mysql-mac-guide.md) or [Windows](./04-Supplemental/mysql-windows-guide.md) computers.
+* Starting this unit, you will use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** attending your classes. You can follow these installation instructions for your [Mac](./04-Important/mysql-mac-guide.md) or [Windows](./04-Important/mysql-windows-guide.md) computers.
 
 ## Helpful Links
 
