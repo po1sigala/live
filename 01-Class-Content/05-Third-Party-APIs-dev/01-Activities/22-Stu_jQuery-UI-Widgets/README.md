@@ -1,30 +1,22 @@
-# jQuery UI Widgets
+# 📖 Enhance UI with jQuery UI Widgets
 
-In this activity, you will work with a partner to use jQuery UI documentation to apply some jQuery UI widgets to the "Skills Form" to make it more user-friendly.
+Work with a partner to implement the following user stories:
 
-## Instructions
+* As a user, I want to easily choose a skill from a list to use in the form.
 
-* Be sure to work with your partner!
+* As a user, I want to easily select a date from a datepicker instead of writing it out manually.
 
-* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/) in your browser.
+## Acceptance Criteria
 
-* Open [index.html](Unsolved/index.html) in your browser.
+* It's done when the form input for entering a skill has an autocomplete feature added to it to pick from a list of skills.
 
-  * We are given a simple Skills Form.
+* It's done when the form input for entering a date has a datepicker feature added to it to select by month and year.
 
-  * When we submit a Skill Name and Date, it is added to the List of Skills.
+## 📝 Note(s)
 
-  * But it would be nice if the Skill Name can be autocompleted as we type the name, and if we can view a calendar when choosing a date!
+Refer to the documentation: 
 
-* Using the documentation, implement the following jQuery UI widgets:
-
-  * Open [index.html](Unsolved/index.html) and apply the jQuery UI `<link>`  and `<script>` tags.
-
-  * Open [script.js](Unsolved/assets/js/script.js) and add the following widgets:
-
-    * An `Autocomplete` widget that will find and select from a pre-populated list of skills as users type in the "Skill Name" field of the "Skills Form". 
-
-    * A `Datepicker` widget that will show month and year dropdowns in place of the static month/year header. 
+[jQuery UI Docs](https://jqueryui.com/demos/)
 
 ## 💡 Hint(s)
 

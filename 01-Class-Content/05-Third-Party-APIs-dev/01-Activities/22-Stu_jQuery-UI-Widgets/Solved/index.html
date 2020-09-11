@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -12,8 +10,10 @@
     <!-- jQuery UI <link> tag -->
     <link
       rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
     <title>jQuery UI Widgets</title>
   </head>
   <body>
@@ -41,7 +41,7 @@
             <div class="form-group row">
               <label for="date" class="col-sm-4 col-form-label">Date: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="datepicker" />
+                <input type="text" class="form-control" id="datepicker" autocomplete="off" />
               </div>
             </div>
             <button type="submit" value="Submit" class="btn btn-info">

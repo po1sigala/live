@@ -1,6 +1,12 @@
-# jQuery Event Delegation 
+# 📖 Implement Shopping List Item Deletion
 
-In this activity, you will work with a partner to use jQuery documentation on Event Delegation to handle click events for a dynamically created button.
+Work with a partner to implement the following user story:
+
+* As an online shopper, I want to have the ability to remove items from my list.
+
+## Acceptance Criteria
+
+* It's done when each item's delete button (`X`) can be clicked to remove the item. 
 
 ## Instructions
 

@@ -1,30 +1,30 @@
-# jQuery Form Elements
+# 📖 Implement a Shopping List Form
 
-In this activity, you will work with a partner to use jQuery documentation to determine how jQuery handles forms using jQuery methods like `submit()` and `val()` to create a shopping list.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As an online shopper, I want to be able to add a items to my shopping list so I can view them all in one place.
 
-* Be sure to work with your partner!
+* As an online shopper, I want to be able to quickly add another item to my list. 
 
-* Navigate to the [jQuery Docs on Forms](https://api.jquery.com/category/forms/) in your browser.
+## Acceptance Criteria
 
-* Open [script.js](Unsolved/assets/js/script.js) and examine the code.
+* It's done when the form can be submitted and the value in the input field is captured and printed to the page as a list item.
 
-* Using the documentation, implement the following:
+* It's done when the form's input field is cleared upon a successful submission.
 
-  * As a busy working parent, I want to be able to quickly create a shopping list for groceries.
+## 📝 Note(s)
 
-  * When I enter an item to the shopping list form, it should appear on the page in a list of shopping items.
+Refer to the documentation: 
 
-  * Follow the instructions provided by the comments in the starter code to arrange the form elements using jQuery methods and attach the form to the webpage.
+[jQuery Docs on Forms](https://api.jquery.com/category/forms/)
 
-  * Add the event listener and event handler on the `form` for the `submit()` event. 
-  
-  * Clear the form on form submission.
+## Assets
 
-* The result should look like this image:
+The following image demonstrates the web application's appearance and functionality:
 
-![A shopping list with several items.](./shopping.jpg)
+![A shopping list with several items.](./Images/01-shopping.jpg)
+
+---
 
 ## 💡 Hint(s)
 
@@ -36,8 +36,6 @@ In this activity, you will work with a partner to use jQuery documentation to de
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
  
-  * Change the order of how the items are added to the shopping list.
-  
-  * For example, if the item is added to the bottom of the list, now make it added to the top of the list or vice versa.
+  * How can we reset form elements using plain JavaScript?
 
 * Use [Google](https://www.google.com) or another search engine to research how to do it.

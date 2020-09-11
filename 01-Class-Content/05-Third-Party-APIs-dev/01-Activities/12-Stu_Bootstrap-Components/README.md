@@ -1,40 +1,42 @@
-# Bootstrap Components
+# 📖 Add Bootstrap Components to the Page
 
-In this activity, you will work with a partner to use the Bootstrap documentation to build a web page using only prebuilt Bootstrap UI components.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to be able to quickly put together a web page without having to write custom CSS.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [Bootstrap documentation for Components](https://getbootstrap.com/docs/4.5/components/) in your browser.
+* It's done when the page has a styled navbar.
 
-* Open [index.html](./Unsolved/index.html) in your IDE and examine the code.
+* It's done when the page has a styled jumbotron.
 
-* Using the documentation, implement the following:
+* It's done when the page has a styled and dismissible alert box.
 
-  * We are given a plain web page without any components.
+* It's done when the page has a styled form.
 
-  * Follow the instructions provided by the comments in the starter code to add these different components to the web page:
+* It's done when the page has a styled list with badges.
 
-    * Navbar
+* It's done when the page has a styled card with a list, header, and footer.
 
-    * Jumbotron
+## 📝 Note(s)
 
-    * Alert
+Refer to the documentation: 
 
-    * Form
+[Bootstrap documentation for Components](https://getbootstrap.com/docs/4.5/components/)
 
-    * List (with badges)
+## Assets
 
-    * Card (with a list, header, and footer)
-  
-* The result should look like this image:
+The following image demonstrates the web application's appearance and functionality:
 
-![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./solved-screenshot.png)
+![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./Images/01-solved-screenshot.png)
+
+---
 
 ## 💡Hint(s)
 
 * When in doubt, use the Bootstrap documentation links in the comments and Chrome DevTools to breakdown the classes and styles used!
+
+* Look down the left-hand side of the Bootstrap documentation to see the different types of components.
 
 ## 🏆 Bonus
 

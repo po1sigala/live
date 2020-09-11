@@ -1,28 +1,26 @@
-# Moment Format
+# 📖 Create Solutions to the Date Quiz
 
-In this activity, you will work with a partner to use Moment.js documentation to format dates and print them on to the page.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to be able to view the correct answers to multiple questions about dates and time.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [Moment.js Docs](https://momentjs.com/docs/#/displaying/) in your browser.
+* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
 
-* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
+## 📝 Note(s)
 
-* Using the documentation, implement the following:
+Refer to the documentation: 
 
-  * We see a list of questions regarding different dates and different formatting of dates.
-
-  * We want to answer these questions and print the correct dates on to the page using the format requested.
-
-  * Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
+[Moment.js Docs](https://momentjs.com/docs/#/displaying/)
 
 ## 💡 Hint(s)
 
 * Refer to the official docs for [Moment.js parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
 
-* Check out [index.html](Unsolved/index.html) in your browser to see your progress.
+* Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
+
+* Save often and check [index.html](Unsolved/index.html) in your browser to see your progress.
 
 ## 🏆 Bonus
 

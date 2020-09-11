@@ -1,24 +1,26 @@
-# jQuery Elements
+# 📖 Create HTML elements with jQuery
 
-In this activity, you will work with a partner to use jQuery documentation to create HTML elements dynamically using jQuery.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to be greeted with a quote by an author when I open the page.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to [jQuery API Docs](https://api.jquery.com/) in your browser.
+* It's done when the page dynamically displays a quote by an author and the author's name on load.
 
-* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the comments.
+## 📝 Note(s)
 
-* Using the documentation, implement the following:
+Refer to the documentation: 
 
-  * We are given a blank web page.
+[jQuery API Docs](https://api.jquery.com/)
 
-  * Follow the instructions provided by the comments in the starter code to create the various elements needed to append a quote by Carol Dweck to the page.
+## Assets
 
-* The result should look like this image:
+The following image demonstrates the web application's appearance and functionality:
 
-![A quote followed by the author.](./quote.jpg)  
+![A quote followed by the author.](./Images/01-quote.jpg)  
+
+---
 
 ## 💡 Hint(s) 
 

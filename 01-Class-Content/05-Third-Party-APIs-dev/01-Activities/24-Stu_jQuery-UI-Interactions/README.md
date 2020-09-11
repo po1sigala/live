@@ -1,28 +1,20 @@
-# jQuery UI Interactions
+# 📖 Implement a Sortable List with Drag and Drop
 
-* In this activity, you will work with a partner to use jQuery UI documentation to apply a jQuery UI interaction to the "List of Skills" so that a user can reorder the list items.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to be able to sort my list of skills using the mouse to drag and drop them.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [jQuery UI Docs](https://jqueryui.com/demos/) in your browser.
+* It's done when the list of skills can be reorganized and sorted using drag and drop functionality.
 
-* Open [index.html](Unsolved/index.html) in your browser.
+* It's done when a placeholder is fill in empty space.
 
-  * We are given a Skills Form. 
-  
-  * When we submit a skill name and date, it is added to the List of Skills.
+## 📝 Note(s)
 
-  * But it would be nice if we can reorder the skills on the list!
+Refer to the documentation: 
 
-* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
-
-* Using the documentation, implement the following jQuery UI interaction:
-
-  * Add the appropriate jQuery UI interaction that will allow the user to drag and reorder the skills listed under "List of Skills".
-
-  * Add the option to style that white space in between the items shifting to be visible. 
+[jQuery UI Docs](https://jqueryui.com/demos/)
 
 ## 💡 Hint(s)
 
@@ -32,6 +24,6 @@
 
 * If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge: 
 
-  * How exactly does this "HTML Drag and Drop" work?
+  * Can we implement drag and drop functionality without jQuery? 
 
 * Use [Google](https://www.google.com) or another search engine to dig deeper into how this works.

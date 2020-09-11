@@ -22,7 +22,7 @@ In this activity, you will work with a partner to use jQuery DOM Traversal docum
 
 * The result should look like this image:
 
-![The tic-tac-toe board shows "O" is victorious](./tic-tac-toe.jpg)
+![The tic-tac-toe board shows "O" is victorious](./Images/01-tic-tac-toe.jpg)
 
 ## 💡 Hint(s)  
 
