@@ -1,4 +1,4 @@
-# Hello Loops
+# 🏗️Iterate Over an Array to Log Messages to Console
 
 In this activity, you will work with a partner to use a loop to iterate over an array.
 

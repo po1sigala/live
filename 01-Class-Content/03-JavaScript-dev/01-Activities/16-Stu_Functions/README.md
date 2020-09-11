@@ -1,12 +1,12 @@
-# Function Declarations and Expression
+🏗️Write Function to Evaluate Equality of Two Values
 
-In this activity, you will work with a partner to  dissect existing function declarations and function expressions.
+In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
 ## Instructions
 
 * Be sure to work with your partner!
 
-* Open [16-Stu_Functions/Unsolved/script.js]() to examine the code and implement the following features:
+* Open [script.js](16-Stu_Functions/Unsolved/script.js) to examine the code and implement the following features:
 
   * As a developer, I want to create a reusable block of code that evaluates if two values are strictly equal, equal or not equal.
 

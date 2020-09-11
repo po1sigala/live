@@ -1,4 +1,4 @@
-# Hello Array 
+# 🏗️Log Messages to Console Using an Array
 
 In this activity, you will work with a partner to create an array and console log messages using the array's data. 
 
