@@ -24,9 +24,13 @@ console.log(c > b);
 console.log(d < 1);
 
 // Use logical operators so all expressions below log to the console as true
-// Add logical not (!) to second expression so both true
+// Use || to return true
+console.log(expression1 || expression2);
+
+//Use ! and && to return true
 console.log(expression1 && !expression2);
 
+
 // Remove (!) from expression1 so one is true 
-console.log( !expression1 || expression2);
+console.log( expression1 || expression2);
   

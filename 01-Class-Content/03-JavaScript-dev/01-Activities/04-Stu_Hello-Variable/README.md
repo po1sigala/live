@@ -6,7 +6,7 @@ In this activity, you will work with a partner to write introductions in the con
 
 * Be sure to work with your partner!
 
-* Open [04-Stu_Hello-Variable/Unsolved/script.js]() to implement the following features:
+* Open [script.js](04-Stu_Hello-Variable/Unsolved/script.js) to implement the following features:
 
   * As a class member, I want to input name, number of pets, and a fun fact about myself and log an introduction to the console. Then, by only re-assigning the variables, I want to introduce my partner.
 
@@ -24,7 +24,7 @@ In this activity, you will work with a partner to write introductions in the con
 
 ## 💡 Hint
 
-The `+` sign can be used to combine text and variables in a single console log message.
+*  The `+` operator is used to combine values in a single console log message.
 
 ## 🏆 Bonus
 
