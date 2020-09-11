@@ -1,24 +1,22 @@
-# Media Query for Print
+# 🏗️ Implement Media Queries for Print
 
-In this activity, you will work with a partner to create a media query for printing webpages so that it is organized and uncluttered on paper.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to print from the web but exclude UI elements so they don't clutter the page on paper.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in your browser and view in Print Preview Mode.
+* It's done when the user prints the blog post, and the form isn't included.
 
-  * As a user, I want to print from the web but exclude UI elements so they don't clutter the page on paper.
+* It's done when the printed blog page displays the links' URLs (but not the header links' URLs).
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+## Assets
 
-  * When I print this blog post, I don't want the form to be printed.
+The following image demonstrates the web application's print preview appearance:
 
-  * If the blog post contains links, I want to see the links' URLs printed on the page, however I don't want to see the header's links printed.
+![The Chrome print preview section shows the page with the print media query styles applied](./Images/01-print-preview.png)
 
-* When printing the page from Google Chrome, the print preview should look something like this image:
-
-  ![The Chrome print preview section shows the page with the print media query styles applied](./Images/01-print-preview.png)
+---
 
 ## 💡 Hint(s)
 

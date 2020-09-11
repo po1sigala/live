@@ -1,30 +1,34 @@
-# Box Styling
+# 📖 Implement Box Styling on Product Cards
 
-In this activity, you will work with a partner to use CSS documentation to enhance the UI of the product cards on the page.
+Work with a partner to implement the following user stories:
 
-## Instructions
+* As the store owner, I want to display the product cards with rounded corners.
 
-* Be sure to work with your partner!
+* As the store owner, I want to give the product cards a 3D look by dropping a shadow and rotating it slightly.
 
-* Open [index.html](Unsolved/index.html) in your browser and look at how the product cards are presented on the page. Note that it currently does not meet the following requirements:
+## Acceptance Criteria
 
-  * As the store owner, I want to display the product cards with rounded corners.
+* It's done when the product cards have rounded corners, drop shadows, and a rotated appearance.
 
-  * As the store owner, I want to give the product cards a 3D look by dropping a shadow and rotating it slightly.
+* The solution does not have to look exactly like the image below. Play around with the properties and have fun!
 
-* Open [style.css](Unsolved/assets/css/style.css) in your IDE and examine the code.
+## 📝 Note(s)
 
-* Using the [CSS Create Fancy Boxes Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/create_fancy_boxes), implement the changes to fulfill the requirements.
+Refer to the documentation:
 
-* The result should look like the following image:
+[MDN web docs on creating fancy boxes](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/create_fancy_boxes)
 
-  ![The product cards have rounded corners with a shadow and are rotated to the right](./Images/01-css-box-styling.png)
+## Assets
+
+The following image demonstrates the web application's appearance:
+
+![The product cards have rounded corners with a shadow and are rotated to the right](./Images/01-css-box-styling.png)
+
+---
 
 ## 💡 Hint(s)
 
 * Look into CSS border and background properties, like `border-radius`, `box-shadow`, and `transform`.
-
-* The solution does not have to look exactly like the image above. Play around with the properties and have fun!
 
 ## 🏆 Bonus
 

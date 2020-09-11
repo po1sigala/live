@@ -1,44 +1,40 @@
-# Pseudo-Classes
+# 🏗️ Implement an Interactive Resources List
 
-In this activity, you will work with a partner to apply pseudo-classes to elements to enhance the UI.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want additional resource links at the bottom of the article.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in the browser and examine the page.
+* It's done when the resource links are initially hidden on page load.
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the CSS code.
+* It's done when the user moves the mouse over the text "Show Resources," and the resource links display.
 
-* Using HTML and CSS, implement the following features:
+## Assets
 
-  * As a user, I want additional resource links at the bottom of the article.
+The following image demonstrates the web application's default appearance and functionality:
 
-  * When the page loads, the resource links should initially be hidden.
+![The text "Show Resources" appears at the bottom of the article](./Images/01-resources-closed.png)
 
-  * When I move the mouse over the text "Show Resources," the resource links should display.
+The following image demonstrates the web application's appearance and functionality when the cursor is over the "Show Resources" text:
 
-* To meet these requirements, the page should look like the following image by default:
+![Three links to the MDN web docs appear under the text "Show Resources"](./Images/02-resources-open.png)
 
-  ![The text "Show Resources" appears at the bottom of the article](./Images/01-resources-closed.png)
-
-* When the cursor is over the "Show Resources" text, the page should look like the following:
-
-  ![Three links to the MDN web docs appear under the text "Show Resources"](./Images/02-resources-open.png)
-
-* You can use the following resource links for the content:
+You can use the following resource links for the content:
 
   * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 
   * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 
   * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+  
+---
 
 ## 💡 Hint(s)
 
-* You will need to use the CSS `display` property.
+* How would the CSS `display` property help?
 
-* Look up examples of how other developers used the `:hover` pseudo-class in creative ways.
+* What examples can you find of other developers using the `:hover` pseudo-class in creative ways?
 
 ## 🏆 Bonus
 

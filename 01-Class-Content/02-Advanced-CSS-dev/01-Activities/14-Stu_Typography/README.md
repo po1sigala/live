@@ -1,40 +1,40 @@
-# Typography
+# 📖 Implement Typographic Styles
 
-In this activity, you will work with a partner to use CSS documentation to apply typographic properties to text to make the blog more readable after a CSS reset.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to read a blog that uses visually appealing font styles.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [Fundamental text and font styling article](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) in your browser.
+* It's done when the body font has the standard size of 16px.
 
-* Open [index.html](./Unsolved/index.html) in the browser and examine the text on the page.
+* It's done when paragraphs have a line height of 1.5 times the font height.
 
-  * We are given a blog with all of the default styles reset. The layout has been rebuilt, but the text still needs more work!
+* It's done when headings are 150-200% of the font size and have a font family of serif.
 
-* Open [style.css](./Unsolved/assets/css/style.css) in your IDE and examine the code.
+* It's done when there is a margin of 2-5% on the heading, paragraph, and list.
 
-* Using the CSS documentation, implement the following:
+* It's done when the list is indented, has square bullet points, and a font family of monospace.
 
-  * As a user, I want to view my body font as the default standard size of 16px.
+* Working with CSS should be a creative experience for you! Your end product should look as close to the solution as possible, but feel free to try out other looks!
 
-  * When I read paragraphs, it should have a line height of 1.5 times the font height.
+## 📝 Note(s)
 
-  * When I view the headings, it should be 150-200% of the font size and have a font family of serif.
+Refer to the documentation: 
 
-  * When I view the page, there should be a margin of 2-5% on the heading, paragraph, and list.
+[MDN web docs on fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
-  * When I see lists, it should be indented, have square bullet points and a font family of monospace.
+## Assets
 
-* The result should look like the following image:
+The following image demonstrates the web application's appearance:
 
-  ![The blog page includes a monospaced list and headings with a serif font](./Images/01-CSS-typography.png)
+![The blog page includes a monospaced list and headings with a serif font](./Images/01-CSS-typography.png)
 
-* Add a few personal touches to the text! Play around with the `font-style` and `font-weight` to make the text slant and bold.
+--- 
 
 ## 💡 Hint(s)
 
-* Working with CSS should be a creative experience for you! Your end product should look as close to the solution as possible, but feel free to try out other looks!
+* What values for `font-weight` and `font-style` can you use to give the page a more personal touch?
 
 ## 🏆 Bonus
 

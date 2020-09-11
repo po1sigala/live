@@ -1,32 +1,34 @@
-# Advanced CSS Selectors
+# 📖 Implement an Icon for Downloadable Style Sheets
 
-In this activity, you will work with a partner to use the MDN web docs to implement CSS selectors beyond single classes and elements.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to see an icon next to every `<a>` element that has a link to a downloadable CSS file in its `href` attribute.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [MDN web docs on Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) in your browser.
+* It's done when any link to a CSS file displays a 📝 emoji after the link text.
 
-* Open [index.html](./Unsolved/index.html) and [style.css](./Unsolved/assets/css/style.css) in your IDE and examine the code.
+* It's done when the 📝 emoji is inserted using only CSS.
 
-* Using the documentation, implement the following:
+## 📝 Note(s)
 
-  * As a user, I want to see an icon next to every `<a>` element that has a link to a downloadable CSS file in its `href` attribute.
+Refer to the documentation: 
 
-  * As a developer, I want to use only CSS to insert this icon.
+[MDN web docs on Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
-* To meet these requirements, the page should look like the following image:
+## Assets
 
-  ![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
+The following image demonstrates the web application's appearance:
 
-* You can use the following emoji for the icon: 📝
+![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
+
+---
 
 ## 💡 Hint(s)
 
-* You can target a file type by its file extension (i.e. `.css`, `.html`, `.md`, etc.)
+* How can you target a file type by its file extension (i.e., `.css`, `.html`, `.md`, etc.)?
 
-* Pseudo-elements can help you accomplish this task!
+* How can you use pseudo-elements to accomplish this task?
 
 ## 🏆 Bonus
 
