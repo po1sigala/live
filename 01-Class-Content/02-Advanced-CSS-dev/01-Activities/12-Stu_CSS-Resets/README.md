@@ -1,32 +1,30 @@
-# Fix the CSS Reset
+# 🐛 Custom Font Styles Aren't Loading
 
-In this activity, you will work with a partner to debug a broken webpage to better explain how a CSS reset works.
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+* As a user, I expect headings to be a larger font size.
 
-* Be sure to work with your partner!
+* As a user, I expect spacing in between the lines of text.
 
-* Open [index.html](./Unsolved/index.html) in the browser and examine the page's styles. Note that they currently do not meet the following requirements:
+## Expected Behavior
 
-  * As a user, I expect headings to be a larger font size
+The blog title and article headings should be a larger font size.
 
-  * As a user, I expect spacing in between the lines of text
+## Actual Behavior
 
-* To meet these requirements, the page should look like the following image:
+The headings are the same size as the other text on the page.
 
-  ![The blog layout has larger sized headers and spacing in between the lines of text](./Images/01-correct-styles.png)
+## Assets
 
-* Using the following questions, try to debug and fix the code:
-  
-  * What do the DevTools reveal about the CSS rules being applied?
-  
-  * What do the style sheets in the [assets/css folder](./Unsolved/assets/css/) have in common?
-  
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+The following image demonstrates the web application's appearance:
+
+![The blog layout has larger sized headers and spacing in between the lines of text](./Images/01-correct-styles.png)
+
+---
 
 ## 💡 Hint(s)
 
-* You won't need to write any new CSS rules to fix the styling on this page.
+* How can you fix the styling without writing any new CSS rules?
 
 ## 🏆 Bonus
 

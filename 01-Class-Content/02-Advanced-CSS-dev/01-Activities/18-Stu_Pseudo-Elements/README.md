@@ -1,40 +1,32 @@
-# Pseudo-Elements
+# 📖 Implement a CSS Tooltip
 
-In this activity, you will work with a partner to use CSS documentation to incorporate pseudo-elements in order to create tooltips.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to hover over keywords and read short info on them instead of having all of the text on the page.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [CSS Docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) in your browser.
+* It's done when special keywords are underlined and change the cursor to a hand icon when the user hovers over them.
 
-* Open [index.html](./Unsolved/index.html) in the browser. We are given a blog post about CSS.
+* It's done when the user hovers over a keyword, and a rectangular tooltip appears next to the keyword.
 
-  * As a visitor to this blog, I want to hover over keywords and read short info on it instead of having all of the text on the page.
+  * For example, if the keyword is "Cascading Style Sheets," the tooltip would say "Commonly known as CSS."
 
-* Open both [index.html](./Unsolved/index.html) and [style.css](./Unsolved/assets/css/style.css) in your IDE to examine the code.
+* It's done when the tooltip has the same background color and text color as the header and navbar items.
 
-* Using the CSS documentation, implement the following features:
+## 📝 Note(s)
 
-  * In `index.html`, determine which pieces of text can be used as a tooltip for a keyword. 
+Refer to the documentation: 
 
-  * For example, for the first tooltip we can use "Cascading Style Sheets" and assign the tooltip text to say "Commonly known as CSS". Choose one more keyword and phrase to use for tooltips from the other paragraphs.
+[MDN web docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 
-  * How can you designate the keyword to use a `data-descr` custom data attribute for the tooltip text?
-
-  * In `style.css`, style the keyword and tooltip. 
-  
-  * When I read the blog, I want to be able to easily identify which word is the keyword with the tooltip by underlining the keyword and changing the cursor into a hand when I hover over it.
-    
-  * When the tooltip appears above the keyword, it should have the same background color and text color as the header and navbar items. Give the tooltip a rectangular shape and slightly smaller font size than the rest of the page.
-
-* When in doubt, consult the CSS documentation. And like all things CSS, play around with the properties to position the tooltip where you want it.
+---
 
 ## 💡 Hint(s)
 
 * How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
-* Don't get too hung up on what pieces of text to use for the keyword and tooltip!
+* How can you designate the keyword to use a `data-descr` custom data attribute for the tooltip text?
 
 ## 🏆 Bonus
 

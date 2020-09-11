@@ -1,26 +1,22 @@
-# CSS Variables
+# 🏗️ Implement CSS Variables in Style Sheet
 
-In this activity, you will work with a partner to create a more efficient style sheet using CSS variables.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to manage CSS values that are used in multiple CSS rules in a more efficient manner.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in your browser and notice the different cards laid out on the page.
+* It's done when any repeated color values are defined once as a CSS variable.
 
-* Open [style.css](./Unsolved/assets/css/style.css) to examine the code and implement the following features:
+* It's done when any repeated border radius values are defined once as a CSS variable.
 
-  * As a developer, I want to manage CSS values that are used in multiple CSS rules in a more efficient manner.
-
-  * How can we declare CSS variables, also known as CSS custom properties, on the `:root` pseudo-class?
-
-  * How can we use those custom property values instead of using values that are repeated throughout the style sheet such as `#fff`?
+---
 
 ## 💡 Hint(s)
 
-* Refer to [CSS Docs on CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+* How can we declare CSS variables, also known as CSS custom properties, on the `:root` pseudo-class?
 
-* Try and identify any colors or border radius values that are repeated in the style sheet and use CSS custom properties to maintain them in one location.
+* How can we use those custom property values instead of using values that are repeated throughout the style sheet such as `#fff`?
 
 ## 🏆 Bonus
 

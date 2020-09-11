@@ -1,6 +1,6 @@
 # 🐛 Product Cards Run Off the Page
 
-Work with a partner to resolve the following issue:
+Work with a partner to resolve the following issue(s):
 
 * As a user, I want to view all products in two or more rows.
 

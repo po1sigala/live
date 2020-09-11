@@ -1,6 +1,6 @@
 # 🐛 Link and Button Placement is Incorrect
 
-Work with a partner to resolve the following issue:
+Work with a partner to resolve the following issue(s):
 
 * As a user, I want the navigation links to be on the right side.
 
