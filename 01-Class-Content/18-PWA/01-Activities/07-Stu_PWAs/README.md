@@ -9,7 +9,7 @@ In this activity, you will install a progressive web application (PWA) using you
 
 * iOs:
 
-  * 1. Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/) with Safari.
+  * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
 
   * 2. Tap the Share button in Safari.
 
@@ -21,7 +21,7 @@ In this activity, you will install a progressive web application (PWA) using you
 
 * Android:
 
-  * 1. Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/) with Chrome.
+  * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
 
   * 2. Tap the menu button in the upper right corner of Chrome.
 
