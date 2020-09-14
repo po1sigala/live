@@ -2,7 +2,9 @@
 
 ## Overview
 
-In this class, we will be deepening students understanding of ReactJS through reviewing all of the concepts covered over the previous few classes to build applications. We will also cover connecting Create React App to an Express backend as well as deploying to Heroku.
+In this class, we will be deepening students understanding of ReactJS through reviewing all of the concepts covered over the previous few classes to build applications. We will also cover connecting Create React App to an Express backend as well as deploying to Heroku. 
+
+At the end of class, we will introduce the final project's requirements and help the students conceptualize their project idea.
 
 ## Instructor Notes
 
@@ -12,6 +14,8 @@ In this class, we will be deepening students understanding of ReactJS through re
 
 * Today's class will introduce little new material but will provide plenty of opportunity to review concepts covered over the past few classes.
 
+* Leverage the TAs to help any groups struggling to conceptualize their final project idea. We want to give students as much time to brainstorm project ideas as possible.
+
 ## Learning Objectives
 
 * To obtain a basic understanding of connecting a Create React App to an Express backend.
@@ -19,6 +23,8 @@ In this class, we will be deepening students understanding of ReactJS through re
 * To become comfortable communicating with an Express server from a React app.
 
 * To increase understanding and comfort using React Router.
+
+* To conceptualize final project idea with project group.
 
 ## Slides
 
