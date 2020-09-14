@@ -1,26 +1,22 @@
-# Conditional Statements
+# 🏗️Create an Algorithm Using Conditional Statements
 
-In this activity, you will work with a partner to create an algorithm using conditional statements. 
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to `true`, only one expression evaluates to `true`, or both expressions evaluate to `false`.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [script.js](10-Stu_Conditional-Statements/Unsolved/script.js) to examine the code and implement the following features:
+* It's done when if `expression1` is true and `expression2` is true, this message is logged to the console: "True ✅ True ✅"
 
-  * As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to true, only one expression evaluates to true, or both expressions evaluate to false. 
+* Else, it's done when if only `expression1` is true, this message is logged to the console: "True ✅ False ❌".
 
-  * If `expression1` is true and `expression2` is true, then log to the console: "True ✅ True ✅"
+* Else, it's done when if only `expression2` is true, then this message is logged to the console: "False ❌ True ✅".
 
-  * Else if only `expression1` is true, then log to the console: "True ✅ False ❌"
-
-  * Else if only `expression2` is true, then log to the console: "False ❌ True ✅"
-
-  * Else, log to the console: "False ❌ False ❌"
+* Else, it's done if none of the conditions above are true, then this message logs to the console: "False ❌ False ❌".
 
 ## 💡 Hint
 
-* Don't code without a plan! Before writing your algorithm in Javascript, take a few minutes to talk with your partner and write out in everyday language what you need to do to make each line of code work. Then, using that plan, translate that pseudocode into your Javascript algorithm. 
+* Do you have a plan? Before writing your algorithm, it is helpful to write out a plain in plain English that describes how you will use code to get it done. 
 
 ## 🏆 Bonus
 

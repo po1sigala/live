@@ -1,28 +1,20 @@
-# Logical Comparison Operators 
+# 🐛 Logging Expressions Using Logical and Conditional Operators Return False
 
-In this activity, you will work with a partner to debug some broken code so that all the console logs return true. 
-
-## Instructions
-
-* Be sure to work with your partner!
-
-* As a developer, I want to use comparison and logical operators to create logs that only read true. 
+Work with a partner to resolve the following issue(s):
 
 * When I open the console, all the logs should read `true`, but right now they do not!
 
-* Open [script.js](08-Stu_Logical-Comparision-Operators/Unsolved/script.js) and examine the code.
+## Expected Behavior
 
-* Using the following questions, try to debug and fix the code:
-  
-  * What is the current output for each console log?
-  
-  * How might you use a logical or conditional operator so the expression that the expression evaluates to true? 
-  
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+When an expression is logged to the console, it should return `true`.
+
+## Actual Behavior
+
+When an expression is logged to the console, it is returning `false`.
 
 ## 💡 Hint
 
-* As seen in the prior activities, a single `=` is an assignment operator, not a comparison operator. To test equality use `==` or `===`.
+* What is the difference between `=`, `==`, and `===`? Which one is an assignment operator? Which one evaluates if the values are equal? Which one evaluates if values and types are equal? 
 
 ## 🏆 Bonus
 
