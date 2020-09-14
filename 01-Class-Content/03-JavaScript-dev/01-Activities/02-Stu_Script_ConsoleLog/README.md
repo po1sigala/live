@@ -1,4 +1,4 @@
-# Adding JavaScript to HTML 
+# Link HTML file to JavaScript file
 
 In this activity, you will work with a partner to use MDN Script Element documentation to link an external JavaScript file to an HTML file.
 
