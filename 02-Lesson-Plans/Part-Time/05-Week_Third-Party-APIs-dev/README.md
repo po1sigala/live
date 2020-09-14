@@ -16,7 +16,7 @@ In this unit, you will implement CDNs to leverage third-party APIs, such as CSS 
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/05-Third-Party-APIs/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -40,7 +40,7 @@ Next unit, we will work with Server-Side APIs. It is recommended that you try to
 
 ### Slide Decks
 
-* N/A
+* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
 
 ### Algorithms
 
