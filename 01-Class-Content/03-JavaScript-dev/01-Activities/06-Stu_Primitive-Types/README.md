@@ -10,10 +10,6 @@ Refer to the documentation:
 
 [MDN Web Docs: JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
-## 💡 Hint
-
-What is the only primitive type that is enclosed in quotes? 
-
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
