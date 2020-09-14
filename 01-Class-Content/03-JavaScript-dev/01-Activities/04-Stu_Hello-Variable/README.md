@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * I am done when I store a fun fact in variable called `funFact` and this line is logged to the console: "Fun fact: `VALUE_STORED_IN_VARIABLE_FUNFACT`."
 
-* I am done when I re-assign the values of `name`, `pets` and `funFact` with my new partner's information the the introduction lines reflect the new values.
+* I am done when I re-assign the values of `name`, `pets` and `funFact` with my new partner's information the the logs in the console reflect the new values.
 
 ## 💡 Hint
 

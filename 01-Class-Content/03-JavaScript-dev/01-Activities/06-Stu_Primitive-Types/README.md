@@ -1,18 +1,18 @@
 # 📐Add Comments to Implementation of Typeof to Evaluate Primitive Types
 
-In this activity, you will work with a partner to reverse engineer code to identify primitve value types.
+Work with a partner to add comments describing the functionality of the code found in [script.js](06-Stu_Primitive-Types/Unsolved/script.js).
 
-## Instructions
+## 📝 Notes
 
-* Be sure to work with your partner!
+Refer to the documentation: 
 
-* Open [script.js](06-Stu_Primitive-Types/Unsolved/script.js) to examine the code.
+[MDN Web Docs: typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 
-* Insert comments where specified to explain what is happening in that block of code.
+[MDN Web Docs: JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
 ## 💡 Hint
 
-* Don't forget to look for the quotes. Only one primitive type is surrounded by quotes! 
+What is the only primitive type that is enclosed in quotes? 
 
 ## 🏆 Bonus
 
