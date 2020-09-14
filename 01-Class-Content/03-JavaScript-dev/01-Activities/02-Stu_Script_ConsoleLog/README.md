@@ -17,7 +17,7 @@ Refer to the documentation:
 
 ## 💡 Hint
 
-* It is best practice to add a link to an external JavaScript file above what closing HTML tag? 
+It is best practice to add a link to an external JavaScript file above what closing HTML tag? 
 
 ## 🏆 Bonus
 
