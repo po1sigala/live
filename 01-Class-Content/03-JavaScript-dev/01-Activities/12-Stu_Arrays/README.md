@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint
 
-Don't forget that arrays are zero-indexed! That means the first index is 0, not 1. 
+What is the first index in an array? Is is `0` or `1`? 
 
 ## 🏆 Bonus
 
