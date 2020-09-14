@@ -6,7 +6,9 @@ In this activity, you will work with a partner to debug some broken code using t
 
 * Be sure to work with your partner!
 
-* As a developer, I want to see why my script file isn't loading
+* As a developer, I want to load my script file when opening a page.
+
+* When I load my page, the script page should load on the Network Tab, but right now it's not!
 
 * Open [index.html](./Unsolved/index.html) in the browser.
 
