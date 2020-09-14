@@ -28,9 +28,9 @@ At the end of class, we will introduce the final project's requirements and help
 
 ## Slides
 
-[11.1: MERN](https://docs.google.com/presentation/d/1pTDZ37jFNFVHDa6v9qxRHr_CtKVWj0WOJ2O5p_ZlDEY/edit?usp=sharing)
+[11.1: MERN](https://docs.google.com/presentation/d/1pO7pPyaCtPqP-d7fwkqORi9Mcx8wcZXlXLAUvJPyOEA/edit?usp=sharing)
 
-[Final Projects](https://docs.google.com/presentation/d/1ulUf1lCaj4sH1K7ym8sZL1IOuvHDeiwbe_NAOBqhwE8/edit?usp=sharing)
+[Final Project](https://docs.google.com/presentation/d/1FrCs35N0763wNqv6SRKFgF0IcDzBa5J7r6XM46nHqy4/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -756,7 +756,9 @@ export default App;
 
 ### 15. Instructor Do: What's Next? (03 mins)
 
-* You'll explain the next few weeks of classes in the next set of slides.
+* Open the [Final Project Slides](https://docs.google.com/presentation/d/1FrCs35N0763wNqv6SRKFgF0IcDzBa5J7r6XM46nHqy4/edit?usp=sharing) and explain what to expect in the last few classes.
+
+* Congratulate the students on getting this far! Go over what they have learned in the past few months.
 
 * Tell them about the lectures they can expect, as well as final project presentations and their day with potential employers.
 
@@ -774,9 +776,9 @@ export default App;
 
 ### 16. Instructor Do: Final Project - The Deets (07 mins)
 
-* Spend a few minutes introducing the [requirements for the final project](https://docs.google.com/presentation/d/1ulUf1lCaj4sH1K7ym8sZL1IOuvHDeiwbe_NAOBqhwE8/edit?usp=sharing)
+* Spend a few minutes introducing the requirements for the final project (Slides 7-20).
 
-* Tell students should challenge themselves, and that you'll take no excuses. They've made it this far already &mdash; it's time for them to take everything they learned and produce their best work yet (Slides 12 to 16).
+* Tell students should challenge themselves, and that you'll take no excuses. They've made it this far already &mdash; it's time for them to take everything they learned and produce their best work yet.
 
 * **Go over what's expected for the project:**
 
@@ -816,9 +818,9 @@ export default App;
 
   * Must meet good quality coding standards (indentation, scoping, naming).
 
-* **Finally, go over each week's deliverable**
+* **Finally, go over each Project Deliverables**
 
-  * **Week 1**: A detailed plan of action with the following:
+  * **Deliverable 1**: A detailed plan of action with the following:
 
     * An overview of the intended application and WHY you feel it's valuable.
 
@@ -830,15 +832,15 @@ export default App;
 
     * A set of DETAILED screen-by-screen design layouts with annotations describing all UI/UX components and all data relevant to the screen.
 
-      * On this note, show Slides 26-27 as an example of a UI/UX and Data Flow layout. Tell the class that you'll expect something akin to these drafts.
+      * On this note, show Slides 18-19 as an example of a UI/UX and Data Flow layout. Tell the class that you'll expect something akin to these drafts.
 
-  * **Week 2**: A functioning **minimal viable product** (i.e., a prototype version of your app that shows the intended function). This should be as close to a working app as possible and include:
+  * **Deliverable 2**: A functioning **minimal viable product** (i.e., a prototype version of your app that shows the intended function). This should be as close to a working app as possible and include:
 
     * A 5-7 minute presentation that discusses what your app is, what it does, and how it works. You will be presenting to instructors and TAs during class.
 
     * A screenshot of your Jira, Trello, or Project Management Board that shows breakdown of tasks assigned to group members with a schedule. This should be updated to reflect remaining priorities and completed tasks.
 
-  * **Week 3**: A significantly more polished version of the app.
+  * **Deliverable 3**: A significantly more polished version of the app.
 
     * This should literally seem like an app that you would submit.
 
@@ -852,13 +854,15 @@ export default App;
       * Enhancements
       * UI Polishing
 
-  * **Week 4**: The Presentation!
+  * **Deliverable 4**: The Presentation!
     * A 7-10 minute demonstration of your app.
     * More on this as we near closer to the end.
 
+* Ask if anyone has any questions before moving on.
+
 ### 17. Students Do: Conceptualize the Final App (70 mins)
 
-* When you close the Power Point, direct your students to form into their groups to think about the app they'll create over the next month.
+* When you close the Slide Deck, direct your students to form into their groups to think about the app they'll create over the next month.
 
 * By the time the class ends, they should tell you the following details about their project:
 
