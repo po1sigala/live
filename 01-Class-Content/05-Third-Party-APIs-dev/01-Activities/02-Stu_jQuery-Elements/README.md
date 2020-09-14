@@ -18,7 +18,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![A quote followed by the author.](./Images/01-quote.jpg)  
+![A quote followed by the author.](./Images/01-quote.png)  
 
 ---
 

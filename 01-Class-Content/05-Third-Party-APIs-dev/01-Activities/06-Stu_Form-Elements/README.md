@@ -22,7 +22,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![A shopping list with several items.](./Images/01-shopping.jpg)
+![A shopping list with several items.](./Images/01-solution-screenshot.png)
 
 ---
 

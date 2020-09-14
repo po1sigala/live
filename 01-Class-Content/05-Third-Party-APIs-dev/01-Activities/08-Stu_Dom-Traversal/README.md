@@ -22,7 +22,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The tic-tac-toe board shows "O" is victorious](./Images/01-tic-tac-toe.jpg)
+![The tic-tac-toe board shows "O" is victorious](./Images/01-solution-screenshot.png)
 
 ---
 

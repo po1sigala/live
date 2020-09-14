@@ -1,4 +1,3 @@
-# jQuery Click Events
 # 🐛 Password generator returns a single character only on double-click
 
 Work with a partner to resolve the following issue(s):
@@ -25,7 +24,7 @@ When a user double-clicks the "Generate Password" button, a two character passwo
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The input field and button are now followed by a random password of length 15](./Images/01-solved-demo.jpg)
+![The input field and button are now followed by a random password of length 15](./Images/01-solution-screenshot.png)
 
 ---
 

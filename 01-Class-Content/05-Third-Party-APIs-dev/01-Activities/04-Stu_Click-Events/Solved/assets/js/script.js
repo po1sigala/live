@@ -16,7 +16,7 @@ function passwordGenerator(num) {
 }
 
 // Generate a password of length 15
-passwordBtnEl.on('dblclick', function () {
+passwordBtnEl.on('click', function () {
   var newPassword = passwordGenerator(15);
   passwordDisplayEl.text(newPassword);
 });
