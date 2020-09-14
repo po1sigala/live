@@ -13,7 +13,7 @@ When a user clicks the "Generate Password" button once, a 15-character password 
 
 ## Actual Behavior
 
-When a user double-clicks the "Generate Password" button, a single character password is printed to the page.
+When a user double-clicks the "Generate Password" button, a two character password is printed to the page.
 
 ## Steps to Reproduce the Problem
 

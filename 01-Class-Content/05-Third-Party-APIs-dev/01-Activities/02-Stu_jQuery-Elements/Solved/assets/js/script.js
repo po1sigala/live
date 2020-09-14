@@ -1,26 +1,28 @@
-// TODO: Select the existing DOM element, <div id="empty-div">, and assign to a new variable
-var rootEl = $("#root");
+// Select the existing DOM element, <div id="empty-div">, and assign to a new variable
+var rootEl = $('#root');
 
-// TODO: Create a `<p>` element to store the quote's author and assign to a new variable 
-var authorEl = $("<p>");  
-  
-// TODO: Add text to the author element
-authorEl.text("~ Carol Dweck");
+// Create a `<p>` element to store the quote's author and assign to a new variable
+var authorEl = $('<p>');
 
-// TODO: Create a `<h1>` element and assign to new variable
-var quoteEl = $("<h1>");
+// Add text to the author element
+authorEl.text('~ Carol Dweck');
 
-// TODO: Add the class `plain` to the author element
-authorEl.addClass("plain");
+// Create a `<h1>` element and assign to new variable
+var quoteEl = $('<h1>');
 
-// TODO: Add a meaningful quote to the quote element
-quoteEl.text("Love Challenges, Be Intrigued by Mistakes, Enjoy Effort, and Keep Learning.");
+// Add the class `plain` to the author element
+authorEl.addClass('plain');
 
-// TODO: Apply the class `fancy` to the quote element
-quoteEl.attr("class", "fancy");
+// Add a meaningful quote to the quote element
+quoteEl.text(
+  'Love Challenges, Be Intrigued by Mistakes, Enjoy Effort, and Keep Learning.'
+);
 
-// TODO: Append the quote element to the page 
+// Apply the class `fancy` to the quote element
+quoteEl.attr('class', 'fancy');
+
+// Append the quote element to the page
 rootEl.append(quoteEl);
 
-// TODO: Attach the author element to the quote element
+// Attach the author element to the quote element
 quoteEl.append(authorEl);
