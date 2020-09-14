@@ -10,10 +10,10 @@ In this unit, we will introduce students to the Sequelize ORM.
 
 ### Helpful Links
 
-* [Heroku Deployment Guide for Sequelize Projects](Supplemental/Guides/SequelizeHerokuDeploymentProcess.md)
-* [Sequelize Quick Start Guide](Supplemental/Guides/SequelizeQuickStartGuide.pdf)
-* [Sequelize CRUD Actions Cheat Sheet](Supplemental/Guides/SequelizeCRUDActionsCheatSheet.pdf)
-* [Passport and Sequelize Example](Supplemental/Sequelize-Passport-Example)
+* [Heroku Deployment Guide for Sequelize Projects](Important/Guides/SequelizeHerokuDeploymentProcess.md)
+* [Sequelize Quick Start Guide](Important/Guides/SequelizeQuickStartGuide.pdf)
+* [Sequelize CRUD Actions Cheat Sheet](Important/Guides/SequelizeCRUDActionsCheatSheet.pdf)
+* [Passport and Sequelize Example](Important/Sequelize-Passport-Example)
 * [Sequelize Queries](http://docs.sequelizejs.com/en/latest/docs/querying/)
 * [Sequelize Associations Part 1](http://docs.sequelizejs.com/en/latest/docs/associations/)
 * [Sequelize Association Part 2](http://docs.sequelizejs.com/en/latest/api/associations/)

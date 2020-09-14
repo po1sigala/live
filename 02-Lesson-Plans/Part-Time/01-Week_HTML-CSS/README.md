@@ -13,9 +13,9 @@ First off, welcome and thank you so much for being a part of our program! Thanks
 The main goal of this unit is to help students get adjusted to an "average day" of our bootcamp. Be sure to encourage students plenty and focus heavily on keeping students engaged. This unit is crucial in setting the tone for units to come.
 
 ## Career Connection
-Each week students receive a Career Connection document in the `04-Supplemental` folder that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive a Career Connection document in the `04-Important` folder that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [Important folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -23,7 +23,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 A lot of time will be spent ensuring that students have properly installed all of the tools and programs from the prework.
 
-> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Homework-Guide/README.md) during the first week of class.
+> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Homework-Guide/README.md) during the first week of class.
 
 ## Helpful Links
 

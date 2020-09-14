@@ -30,13 +30,13 @@ Next unit, we begin JavaScript, make sure to review the slide decks in advance.
 
 Next unit we will also provide students with common problems they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
 
-> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Supplemental/Homework-Guide/README.md) during the first week of class.
+> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Homework-Guide/README.md) during the first week of class.
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[HTML-CSS](../../../01-Class-Content/01-HTML-CSS/04-Supplemental/CAREER-CONNECTION.md).
-[CSS-Bootstrap](../../../01-Class-Content/02-CSS-Bootstrap/04-Supplemental/CAREER-CONNECTION.md).
+[HTML-CSS](../../../01-Class-Content/01-HTML-CSS/04-Important/CAREER-CONNECTION.md).
+[CSS-Bootstrap](../../../01-Class-Content/02-CSS-Bootstrap/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
