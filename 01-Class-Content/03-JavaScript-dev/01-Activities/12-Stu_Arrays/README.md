@@ -1,4 +1,4 @@
-# 🏗️Log Messages to Console Using an Array
+# 🏗️Log Welcome Messages to Console Using an Array
 
 Work with a partner to implement the following user story:
 
@@ -10,20 +10,21 @@ Work with a partner to implement the following user story:
 
 * Open [script.js](12-Stu_Arrays/Unsolved/script.js) to implement the following features:
 
-  * It is done when I log the length of the `students` array holding the class members' names, the number `5` is logged.
+  * It is done when I log the length of the `students` array holding the class members' names and the number `5` is logged.
 
-  * It is done when I log a welcome message in the console, the data in the array is used to welcome each student with the message: "Welcome to the class STUDENT_NAME".
+  * It is done when I log a welcome message in the console and the data in the array is used to welcome each student with the message: "Welcome to the class STUDENT_NAME".
 
-  * It is done when the first student in the array is removed from the class, the student name is replaced with the name `Bob`.
+  * It is done when the first student in the array is removed from the class and the student name is replaced with the name `Bob`.
 
-  * It is done when I test if `Bob` has replaced the first student in the array, if `Bob` has replaced the first name, the message "Bob is in class" logs to the console.  Else, if Bob is not the first name in the array, the message "STUDENT_NAME is still in class" is logged. 
+  * It is done when I test if `Bob` has replaced the first student in the array and if `Bob` has replaced the first name, the message "Bob is in class" logs to the console.  Else, if Bob is not the first name in the array, the message "STUDENT_NAME is still in class" is logged. 
 
 ## Assets
 
+The following image demonstrates the web application's appearance and functionality:
+
 ![Image of console logs of successfully completed task](assets/image.png)
 
-
-## 💡 Hints
+## 💡 Hint
 
 Don't forget that arrays are zero-indexed! That means the first index is 0, not 1. 
 
