@@ -1,4 +1,4 @@
-# 📐Add Comments to Implementation of Typeof to Evaluate Primitive Types
+# 📐 Add Comments to Implementation of Typeof to Evaluate Primitive Types
 
 Work with a partner to add comments describing the functionality of the code found in [script.js](06-Stu_Primitive-Types/Unsolved/script.js).
 

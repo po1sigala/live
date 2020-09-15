@@ -1,4 +1,4 @@
-# 🏗️Create an Algorithm Using Conditional Statements
+# 🏗️ Create an Algorithm Using Conditional Statements
 
 Work with a partner to implement the following user story:
 
