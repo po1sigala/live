@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint
 
-* Do you have a plan? Before writing your algorithm, it is helpful to write out a plain in plain language that describes how you will use code to get it done. 
+* Do you have a plan? Before writing your algorithm, it is helpful to write out a plan in plain language that describes how you will use JavaScript to get it done. 
 
 ## 🏆 Bonus
 
