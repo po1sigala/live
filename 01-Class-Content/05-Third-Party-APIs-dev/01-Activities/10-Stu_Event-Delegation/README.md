@@ -1,30 +1,24 @@
-# jQuery Event Delegation 
+# 📖 Implement Shopping List Item Deletion
 
-In this activity, you will work with a partner to use jQuery documentation on Event Delegation to handle click events for a dynamically created button.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As an online shopper, I want to have the ability to remove items from my list.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/) in your browser.
+* It's done when each item's "Remove" button can be clicked to remove its respective shopping list item. 
 
-* Open [script.js](Unsolved/assets/js/script.js) in your IDE and examine the code.
+## 📝 Note(s)
 
-* Using the documentation, implement the following:
+Refer to the documentation: 
 
-  * We are given a Shopping List form. We can add grocery items to the shopping list by using the form.
-
-  * When we click the `X` button next to a grocery item, it should be removed from the shopping list. 
-
-  * Follow the instructions provided by the comments in the starter code to use event delegation to target a parent element of the grocery items in order to handle the click event for the dynamically created buttons.
-  
-  * Clear the input field on submission. 
+[jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
 ## 💡 Hint(s) 
 
-* In the event handler, create a new list by removing the user's selection.
+* Use your knowledge in DOM traversal to select an element's parent.
   
-* Use the new shopping list to call the `populateList()` in the event handler.
+* The jQuery method for deleting an element is `.remove()`.
 
 ## 🏆 Bonus
 

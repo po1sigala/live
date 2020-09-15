@@ -1,6 +1,5 @@
 // save reference to important DOM elements
 var timeDisplayEl = $('#time-display');
-var projectModalBtnEl = $('#project-modal');
 var projectDisplayEl = $('#project-display');
 var projectModalEl = $('#project-modal');
 var projectFormEl = $('#project-form');
@@ -37,7 +36,9 @@ function printProjectData(name, type, hourlyRate, dueDate) {
     .addClass('p-2')
     .text('$' + totalEarnings);
 
-  var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
+  var deleteProjectBtn = $('<td>')
+    .addClass('p-2 delete-project-btn text-center')
+    .text('X');
 
   // By listing each `<td>` variable as an argument, each one will be appended in that order
   projectRowEl.append(

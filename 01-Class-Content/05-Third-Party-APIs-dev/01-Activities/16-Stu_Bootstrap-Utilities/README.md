@@ -1,24 +1,34 @@
-# Bootstrap Utility Classes
+# 📖 Adjust Positioning and Styling on the Page
 
-In this activity, you will work with a partner to use the Bootstrap documentation on utilities to take a Bootstrap form component and center it on the page to make it more visually appealing using utility classes.
+Work with a partner to implement the following user stories:
 
-## Instructions
+* As a developer, I want to be able to center the form on the page horizontally and vertically using no custom CSS.
 
-* Be sure to work with your partner!
+* As a developer, I want to be able to adjust and add style to the page without writing any custom CSS.
 
-* Navigate to the [Bootstrap documentation for utilities](https://getbootstrap.com/docs/4.5/getting-started/introduction/) in your browser.
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in your IDE and examine the code.
+* It's done when the main content on the page is centered horizontally and vertically on the page.
 
-* Using the documentation, implement the following:
+* It's done when the background color of the page is dark.
 
-  * We are given a form without any layout formatting.
+* It's done when the background color of the form is white.
 
-  * Follow the instructions provided by the comments in the starter code to apply utility classes to the form in order to center it on the page.
+* It's done when the text color of the header on the page is white.
 
-* The result should look like this image:
+## 📝 Note(s)
 
-![The solution shows the form is centered on the page with a dark background.](./solved-screenshot.png)
+Refer to the documentation (Look for Utilities in the left navigation menu): 
+
+[Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![The solution shows the form is centered on the page with a dark background.](./Images/01-solved-screenshot.png)
+
+---
 
 ## 💡 Hint(s)
 

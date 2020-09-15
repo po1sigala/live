@@ -1,11 +1,7 @@
-body {
-  background-color: black;
-}
-
 .fancy {
   font-size: 35px;
   color: rgb(48, 218, 236);
-  width: 1080px;
+  width: 98%;
   font-style: italic;
 }
 

@@ -1,32 +1,32 @@
-# jQuery Click Events
+# 🐛 Password generator returns a single character only on double-click
 
-In this activity, you will work with a partner to debug the code for a password generator. 
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+* As a user, I should be able to click the "Generate Password" button only once to retrieve the password, not twice.
 
-* Be sure to work with your partner!
+* As a user, I should be able to generate a 15-character password upon click. 
 
-* As a frequent online shopper, I want to make sure my passwords for online stores are random, unique, and strong. So I want to utilize a Password Generator to create unique passwords for me to use!
+## Expected Behavior
 
-* Open [index.html](Unsolved/index.html) in your browser.
+When a user clicks the "Generate Password" button once, a 15-character password is printed to the page.
 
-  * When we click on the "Generate Password" button once, it should print a 15-character password on to the screen.
+## Actual Behavior
 
-  * However currently only single characters are generated when the "Generate Password" button is double-clicked!
+When a user double-clicks the "Generate Password" button, a two character password is printed to the page.
 
-* Open [script.js](Unsolved/assets/js/script.js) and examine the code.
+## Steps to Reproduce the Problem
 
-* Using the following questions to guide you, try to debug and fix the code:
+1. Click on the "Generate Password" button once to see nothing happens.
 
-  * Where in your code is the error happening?
+2. Double-click on the "Generate Password" button and a single character password is printed on the page.
 
-  * What is the expected behavior of the code?
+## Assets
 
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+The following image demonstrates the web application's appearance and functionality:
 
-* The result should look like this image after you click the button once:
+![The input field and button are now followed by a random password of length 15](./Images/01-solution-screenshot.png)
 
-![The input field and button are now followed by a random password of length 15](./solved-demo.jpg)
+---
 
 ## 💡 Hint(s)  
 

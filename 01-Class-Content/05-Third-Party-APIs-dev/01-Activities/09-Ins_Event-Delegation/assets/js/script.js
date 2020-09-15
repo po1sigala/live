@@ -1,50 +1,80 @@
+var displayEl = $('#display');
+var showLettersBtnEl = $('#show-letters-btn');
+var buttonListEl = $('#buttons');
+var clearEl = $('#clear');
+
+// Immediately hide the clear button
+clearEl.hide();
+
 function renderLetters() {
-  var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+  var letters = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z',
+    '_',
+  ];
 
   // Dynamically create buttons
   // Create a for-loop to iterate through the letters array.
   for (var i = 0; i < letters.length; i++) {
     // Create button
-    var letterBtn = $("<button>");
-    // Assign style to the button  
-    letterBtn.addClass("letter-button letter letter-button-color");
+    var letterBtn = $('<button>');
+    // Assign style to the button
+    letterBtn.addClass('letter-button btn btn-info');
     // Assign the letter to the data-letter attribute
-    letterBtn.attr("data-letter", letters[i]);
+    letterBtn.attr('data-letter', letters[i]);
     // Display the letter
     letterBtn.text(letters[i]);
     // Attach the letter element
-    $("#buttons").append(letterBtn);
+    buttonListEl.append(letterBtn);
   }
 }
 
-$(document).ready(function() {
-  // Assemble the DOM elements
-  var renderLetterEl = $("<button class='buttons'>Display</button>");
-  var listEl = $("#buttons");
-  listEl.append(renderLetterEl); 
-  // Display button will display the letters
-  var displayEl = $("#display");
-  // Clear button will clear the refrigerator of letters
-  var clearEl = $("#clear");
-  // Hide the Clear button until the letters are displayed
-  clearEl.hide();
-  
-  // Delegate event listener to the parent element, <div id="buttons"> 
-  listEl.on("click", ".letter-button", function() {
-    var fridgeMagnet = $("<div>");
-    fridgeMagnet.addClass("letter fridge-color");
-    fridgeMagnet.text($(this).attr("data-letter"));
-    displayEl.append(fridgeMagnet);
-  });
+// Delegate event listener to the parent element, <div id="buttons">
+buttonListEl.on('click', '.letter-button', function (event) {
+  var displayLetterEl = $('<div>');
 
-  // Renders the letters on the Display button
-  renderLetterEl.on("click", function() {
-    renderLetters();
-    renderLetterEl.hide();
-    clearEl.show();
-  })
-  // Clears the refrigerator of letter on click
-  clearEl.on("click", function() {
-    displayEl.empty();
-  });
+  displayLetterEl.addClass('letter');
+
+  // get letter from clicked letter button's `data-letter` attribute and use it for display
+  displayLetterEl.text($(event.target).attr('data-letter'));
+  displayEl.append(displayLetterEl);
+});
+
+// Renders the letters on the Display button
+showLettersBtnEl.on('click', function () {
+  // render letters
+  renderLetters();
+  // hide show letters button
+  showLettersBtnEl.hide();
+  // display clear button
+  clearEl.show();
+});
+
+// Clears the refrigerator of letter on click
+clearEl.on('click', function () {
+  displayEl.empty();
 });

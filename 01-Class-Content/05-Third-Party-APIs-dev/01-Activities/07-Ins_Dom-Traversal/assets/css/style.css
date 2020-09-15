@@ -1,21 +1,10 @@
-* { 
-  border: 2px solid #dedede; padding: 15px; margin: 15px; 
+main {
+  margin: 3rem auto;
+  max-width: 90vw;
+  width: 50ch;
 }
 
-html { 
-  margin: 0; padding: 0; 
-}
-
-body {
-  max-width: 600px; 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: #333; 
-}
-
-ul { 
-  list-style-type: none; 
-}
-
-.fancy { 
-  background-color: lightblue; 
+ul {
+  list-style-type: none;
+  padding: 0;
 }

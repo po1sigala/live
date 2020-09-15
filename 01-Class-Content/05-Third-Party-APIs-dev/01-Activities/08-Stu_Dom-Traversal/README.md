@@ -1,34 +1,34 @@
-# jQuery DOM Traversal
+# 📖 Implement Tic Tac Toe Automation
 
-In this activity, you will work with a partner to use jQuery DOM Traversal documentation to search the DOM for the requested elements in a game of Tic Tac Toe.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a game developer, I want to automate certain aspects of Tic Tac Toe.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [jQuery Docs on traversing](https://api.jquery.com/category/traversing) in your browser.
+* It's done when the board's tiles is automatically styled on page load.
 
-* Open [index.html](Unsolved/index.html) and [script.js](Unsolved/assets/js/index.js) in your IDE and examine the code.
+* It's done when the "X" player is blocked from winning.
 
-* Using the documentation, implement the following:
+* It's done when the "O" player has won.
 
-  * Add the statements that will accomplish the **three** requested actions noted by the `TODO:` in the comments. Read these instructions carefully and use the `HINT` provided if needed.
-  
-  * Starting from `<div id="root">`, use DOM traversal methods in jQuery to select all nine tic-tac-toe boxes and change the background to white for greater legibility.
-  
-  * Starting from `<div id="root">`, traverse down through the DOM tree and insert the "O" to block the "X" player from winning.
-  
-  * Starting from `<div class="item-c2">`, traverse up through the DOM tree and insert the "O" for the win. 
+## 📝 Note(s)
 
-* The result should look like this image:
+Refer to the documentation: 
 
-![The tic-tac-toe board shows "O" is victorious](./tic-tac-toe.jpg)
+[jQuery Docs on traversing](https://api.jquery.com/category/traversing) 
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![The tic-tac-toe board shows "O" is victorious](./Images/01-solution-screenshot.png)
+
+---
 
 ## 💡 Hint(s)  
 
-* You are the "O" player. Place the "O" to block and win.
-
-* Change the style of the element as you traverse through the DOM as a visual aid to track the current location. 
+* There are multiple ways to accomplish a goal using method-chaining!
   
 ## 🏆 Bonus 
 

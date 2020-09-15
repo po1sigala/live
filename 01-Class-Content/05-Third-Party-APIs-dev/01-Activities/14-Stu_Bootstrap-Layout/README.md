@@ -1,24 +1,28 @@
-# Bootstrap Layouts
+# 📖 Implement Responsive Layout
 
-In this activity, you will work with a partner and use the Bootstrap documentation for the Grid to update an existing web page to make better use of space by implementing layout properties provided by Bootstrap.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As developer, I want to be able to create a responsive layout without having to write custom CSS.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [Bootstrap documentation for the Grid](https://getbootstrap.com/docs/4.5/layout/grid/) in your browser.
+* It's done when the page displays a multi-column layout on large screens and matches the mockup below.
 
-* Open [index.html](./Unsolved/index.html) in your IDE and examine the code.
+* It's done when the screen displays in a single-column layout on smaller screens and matches how it looks currently.
 
-* Using the documentation, implement the following:
+## 📝 Note(s)
 
-  * We are given a web page that is currently not using any layout.
+Refer to the documentation: 
 
-  * Follow the instructions provided by the comments in the starter code to build the layout. 
-  
-* The result should look like this image:
+[Bootstrap documentation for the Grid](https://getbootstrap.com/docs/4.5/layout/grid/)
 
-![The solution shows a page layout with multiple rows and columns using Bootstrap's grid system.](./solved-screenshot.png)
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![The solution shows a page layout with multiple rows and columns using Bootstrap's grid system.](./Images/01-solved-screenshot.png)
+
+---
 
 ## 💡 Hint(s)
 

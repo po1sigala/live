@@ -1,74 +1,41 @@
-// Once the DOM has loaded, we can manipulate the DOM elements
-$(document).ready(function() {
-  // Assemble: Create/select DOM elements
-  // Select the empty `<div>` and add the title
-  var rootEl = $("#root");
-  var buttonEl = $("<button>").attr("class", "fancy").attr("type", "submit").text("Add");
-  var inputEl = $("<input>").attr("type", "text");
-  var listEl = $("<ul>");
-  var labelEl = $("<label>").text("Add an Item:");
-  var formEl = $("<form>");
-  var headerEl = $("<h1>").text("Shopping List");
+var shoppingFormEl = $('#shopping-form');
+var shoppingListEl = $('#shopping-list');
 
-  // Arrange: Create the hierarchical structure of the DOM elements and attach to the page
-  rootEl.prepend(headerEl);
-  rootEl.append(formEl);
-  formEl.append(buttonEl);
-  formEl.prepend(labelEl);
-  labelEl.append(inputEl);
-  rootEl.append(listEl);
+function handleFormSubmit(event) {
+  event.preventDefault();
 
-  // Create an array to store the shopping list items
-  var shoppingList = []; 
-  
-  // Populates the list by first clearing the list on the page then repopulating it with the new list, the button and button attribute `data-id-*`
-  function populateList(list) {
-    listEl.empty();
-    for(var i = 0; i < list.length; i++) {
-      var itemEl = $("<li>");
-      itemEl.text(list[i]);
-      listEl.append(itemEl);
-      itemEl.prepend("<button class=item data-id=" + i + ">X</button>");
-    }
+  var shoppingItem = $('input[name="shopping-input"]').val();
+
+  if (!shoppingItem) {
+    console.log('No shopping item filled out in form!');
+    return;
   }
-  
-  // Change the handler of the submit event to populate a modifiable list
-  formEl.submit(function(event) {
-    event.preventDefault();
 
-    // Validation so blank or other falsely values are not added
-    if(inputEl.val()) {
-      shoppingList.push(inputEl.val());
-    }
-    // populate the new grocery list
-    populateList(shoppingList);
-    inputEl.val("");
-  });
+  var shoppingListItemEl = $(
+    '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
+  );
+  shoppingListItemEl.text(shoppingItem);
 
-  // Delegated the event to the parent element, `<ul>`
-  listEl.on("click", "button", function() {
-    // `$(this)` selects the element selected by the click
-    var removeItem = $(this).attr("data-id");
-    // Alternatively
-    // var removeItem = $(this).data("id");
-   
-    // Convert `removeItem` into a number
-    removeItem = parseInt(removeItem);
+  // add delete button to remove shopping list item
+  shoppingListItemEl.append(
+    '<button class="btn btn-danger btn-small delete-item-btn">Remove</button>'
+  );
 
-    // Alternatively use the `.data` method which returns a number
-    // var removeItem = $(this).data("id");
-    var newList = [];
-    for(var i = 0; i < shoppingList.length; i++) {
-      if(removeItem !== i) {
-        newList.push(shoppingList[i]);
-      }
-    }
-    shoppingList = newList;
+  // print to the page
+  shoppingListEl.append(shoppingListItemEl);
 
-    // Render a new list with the item removed
-    populateList(shoppingList);
-    
-    // Clear the input
-    inputEl.val("");
-  })
-});
+  // clear the form input element
+  $('input[name="shopping-input"]').val('');
+}
+
+function handleRemoveItem(event) {
+  // convert button we pressed (`event.target`) to a jQuery DOM object
+  var btnClicked = $(event.target);
+
+  // get the parent `<li>` element from the button we pressed and remove it
+  btnClicked.parent('li').remove();
+}
+
+// use event delegation on the `shoppingListEl` to listen for click on any element with a class of `delete-item-btn`
+shoppingListEl.on('click', '.delete-item-btn', handleRemoveItem);
+shoppingFormEl.on('submit', handleFormSubmit);

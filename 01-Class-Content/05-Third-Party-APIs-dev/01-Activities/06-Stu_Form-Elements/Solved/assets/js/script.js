@@ -1,43 +1,25 @@
-$(document).ready(function () {
-  // Assemble DOM elements
-  var rootEl = $("#root");
-  var buttonEl = $("<button class='fancy' type='submit'>Add</button>");
-  var inputEl = $("<input placeholder='Item' type='text'>");
-  var listEl = $("<ul>");
-  var labelEl = $("<label>Add an Item</label>");
-  var formEl = $("<form>");
-  var headerEl = $("<h1>Shopping List</h1>");
+var shoppingFormEl = $('#shopping-form');
+var shoppingListEl = $('#shopping-list');
 
-  // Map the HTML structure
-  // <h1></h1>
-  // <form>
-  //   <label>
-  //     <input> </input>
-  //   </label>
-  //   <button > </button>
-  // </form>
-  // <ul>
-  //   Add grocery items on submit
-  // </ul>
+// create function to handle form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
 
-  // TODO: Arrange the form elements to match the preceding hierarchical structure and attach to the root element
-  // `prepend()` to ensure the `<h1>` is at the top of the page.
-  rootEl.prepend(headerEl);
-  // `append()` the form so it sits under the `<h1>`
-  rootEl.append(formEl);
-  // attach the button
-  formEl.append(buttonEl);
-  // `prepend()` so the label appears above the button
-  formEl.prepend(labelEl);
-  // `append()` the `<input>` to nest the element
-  labelEl.append(inputEl);
-  // Append the grocery list to `rootEl` so it appears beneath the `<form>`
-  rootEl.append(listEl);
+  // select form element by its `name` attribute and get its value
+  var shoppingItem = $('input[name="shopping-input"]').val();
 
-  // TODO: Create a submit event listener on the form element
-  formEl.submit(function (event) {
-    event.preventDefault();
-    listEl.append("<li>" + inputEl.val() + "</li>");
-    inputEl.val("");
-  });
-});
+  // if there's nothing in the form entered, don't print to the page
+  if (!shoppingItem) {
+    console.log('No shopping item filled out in form!');
+    return;
+  }
+
+  // print to the page
+  shoppingListEl.append('<li>' + shoppingItem + '</li>');
+
+  // clear the form input element
+  $('input[name="shopping-input"]').val('');
+}
+
+// Create a submit event listener on the form element
+shoppingFormEl.on('submit', handleFormSubmit);

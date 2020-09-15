@@ -1,20 +1,20 @@
-# Extending Bootstrap Styles
+# 🏗 Add Custom Styles to the Page 
 
-In this activity, you will work with a partner to take a page built with Bootstrap components and update the color styles to provide a custom theme using CSS.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a user, I want to visit a site that uses a custom color theme and branding.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) and [script.js](./Unsolved/assets/js/script.js) in your IDE to examine the code and implement the following features:
+* It's done when the page is not utilizing the generic colors provided by Bootstrap.
 
-  * We are given a guestbook that is using only the basic Bootstrap colors.
+## Assets
 
-  * Follow the instructions provided by the comments in the starter code to apply CSS styles to the guestbook to make it more colorful!
-
-* The result should look like this image:
+The following image demonstrates the web application's appearance and functionality:
 
 ![The solution shows that there are custom colors used instead of the built-in colors provided by Bootstrap.](./solved-screenshot.png)
+
+---
 
 ## 💡 Hint(s)
 
