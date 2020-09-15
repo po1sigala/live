@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It is done when if `expression1` is true and `expression2` is true, this message is logged to the console: "True ✅ True ✅"
+* It is done when the message "True ✅ True ✅" is logged when both `expression1` and `expression2` are true.
 
-* Else, it is done when if only `expression1` is true, this message is logged to the console: "True ✅ False ❌".
+* It is done when the message "True ✅ False ❌" is logged when `expression1` is true. 
 
-* Else, it is done when if only `expression2` is true, then this message is logged to the console: "False ❌ True ✅".
+* It is done when the message "False ❌ True ✅" is logged when `expression2` is true. 
 
-* Else, it is done if none of the conditions above are true, then this message logs to the console: "False ❌ False ❌".
+* It is done when the message "False ❌ False ❌" is logged when both `expression1` and `expression2` are false. 
 
 ## 💡 Hint
 
