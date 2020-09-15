@@ -1,31 +1,27 @@
-# Conditional Statements
+# 🏗️ Create an Algorithm Using Conditional Statements
 
-In this activity, you will work with a partner to create an algorithm using conditional statements. 
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to `true`, only one expression evaluates to `true`, or both expressions evaluate to `false`.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [script.js](10-Stu_Conditional-Statements/Unsolved/script.js) to examine the code and implement the following features:
+* It is done when the message "True ✅ True ✅" is logged when both `expression1` and `expression2` are true.
 
-  * As a developer, I want to write an algorithm that will take in two expressions and evaluate if both expressions evaluate to true, only one expression evaluates to true, or both expressions evaluate to false. 
+* It is done when the message "True ✅ False ❌" is logged when `expression1` is true. 
 
-  * If `expression1` is true and `expression2` is true, then log to the console: "True ✅ True ✅"
+* It is done when the message "False ❌ True ✅" is logged when `expression2` is true. 
 
-  * Else if only `expression1` is true, then log to the console: "True ✅ False ❌"
-
-  * Else if only `expression2` is true, then log to the console: "False ❌ True ✅"
-
-  * Else, log to the console: "False ❌ False ❌"
+* It is done when the message "False ❌ False ❌" is logged when both `expression1` and `expression2` are false. 
 
 ## 💡 Hint
 
-* Don't code without a plan! Before writing your algorithm in Javascript, take a few minutes to talk with your partner and write out in everyday language what you need to do to make each line of code work. Then, using that plan, translate that pseudocode into your Javascript algorithm. 
+* Do you have a plan? Before writing your algorithm, it is helpful to write out a plan in plain language that describes how you will use JavaScript to get it done. 
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  What’s a switch case? How might it be used to build Ramona's app a different way? 
+  What is a switch case? 
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
