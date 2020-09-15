@@ -85,7 +85,7 @@ You will be employer-competitive if you are able to:
 
 * [📹 Let's Code jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
 
-* [📹 Git Revert video](https://2u-20.wistia.com/medias/r60i2dwhrw)
+* [📹 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
