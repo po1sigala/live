@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when if `expression1` is true and `expression2` is true, this message is logged to the console: "True ✅ True ✅"
+* It is done when if `expression1` is true and `expression2` is true, this message is logged to the console: "True ✅ True ✅"
 
-* Else, it's done when if only `expression1` is true, this message is logged to the console: "True ✅ False ❌".
+* Else, it is done when if only `expression1` is true, this message is logged to the console: "True ✅ False ❌".
 
-* Else, it's done when if only `expression2` is true, then this message is logged to the console: "False ❌ True ✅".
+* Else, it is done when if only `expression2` is true, then this message is logged to the console: "False ❌ True ✅".
 
-* Else, it's done if none of the conditions above are true, then this message logs to the console: "False ❌ False ❌".
+* Else, it is done if none of the conditions above are true, then this message logs to the console: "False ❌ False ❌".
 
 ## 💡 Hint
 
@@ -22,6 +22,6 @@ Work with a partner to implement the following user story:
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  What’s a switch case? How might it be used to build Ramona's app a different way? 
+  What is a switch case? 
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
