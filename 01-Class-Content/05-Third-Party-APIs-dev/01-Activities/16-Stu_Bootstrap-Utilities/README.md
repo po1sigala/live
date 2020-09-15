@@ -18,9 +18,9 @@ Work with a partner to implement the following user stories:
 
 ## 📝 Note(s)
 
-Refer to the documentation: 
+Refer to the documentation (Look for Utilities in the left navigation menu): 
 
-[Bootstrap documentation for utilities](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+[Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 ## Assets
 

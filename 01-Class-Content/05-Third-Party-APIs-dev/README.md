@@ -26,16 +26,6 @@ The following topics will be covered in this unit:
 
 * Moment.js
 
-## Comprehension Check
-
-You will be employer-ready if you can answer the following questions: 
-
-1. What is jQuery? 
-
-2. What is the difference between a library and a framework?
-
-3. Why is dynamically generated HTML an issue for developers working with jQuery?
-
 ## Learning Objectives
 
 You will be employer-competitive if you are able to: 
@@ -56,6 +46,18 @@ You will be employer-competitive if you are able to:
 
 * Utilize Moment.js to format dates and calculate time differences
 
+## Technical Interview Preparation
+
+### Algorithms
+
+* [01-fizz-buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+
+* [02-max-num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+
+* [03-vowel-count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+
+* [max-num walkthrough video](https://2u-20.wistia.com/medias/f9eao2cvjt)
+
 ## Homework: Day Planner
 
 * Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
@@ -75,6 +77,14 @@ You will be employer-competitive if you are able to:
 * [jQuery UI Docs](https://jqueryui.com/demos/)
 
 * [Moment.js Docs](https://momentjs.com/docs/)
+
+* [jQuery video](https://2u-20.wistia.com/medias/g63k1z1sb3)
+
+* [Bootstrap video](https://2u-20.wistia.com/medias/e8xteir5a7)
+
+* [jQuery UI and Moment.js video](https://2u-20.wistia.com/medias/5hp2hoodod)
+
+* [Git Revert video](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
