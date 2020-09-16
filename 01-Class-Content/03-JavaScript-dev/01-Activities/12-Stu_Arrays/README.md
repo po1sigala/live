@@ -1,4 +1,4 @@
-# 🏗️Log Welcome Messages to Console Using an Array
+# 🏗️ Log Welcome Messages to Console Using an Array
 
 Work with a partner to implement the following user story:
 
