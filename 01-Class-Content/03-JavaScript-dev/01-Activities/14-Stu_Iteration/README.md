@@ -6,11 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Instructions
 
-* It is done when I store the name of five of my classmates in a single variable named `students`.
+* It is done when the names of five classmates are stored in a single variable named `students`.
 
-* It is done when I use the array property `length` to log the total number of elements in the `students` array. 
+* It is done when the total number of elements in the `students` array is logged to the console. 
 
-* It is done when I iterate over the `students` array and the greeting "Great to see you, CLASSMATE_NAME" logs to the console for each classmate.
+* It is done when using a for loop the greeting "Great to see you, CLASSMATE_NAME" logs to the console for each classmate's name in the `students` array. 
 
 ## 💡 Hint
 
