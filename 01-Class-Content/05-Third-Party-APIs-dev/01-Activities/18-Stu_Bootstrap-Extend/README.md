@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The solution shows that there are custom colors used instead of the built-in colors provided by Bootstrap.](./solved-screenshot.png)
+![The solution shows that there are custom colors used instead of the built-in colors provided by Bootstrap.](./Images/01-solved-screenshot.png)
 
 ---
 
