@@ -2,7 +2,7 @@
 var students = ["Sarah", "Orlando", "Heather", "Ismael", "Hung"];
 
 // Logs length of the students array
-console.log("students");
+console.log("students.length");
 
 // Now, write a console log introducing each student
 console.log("Welcome to the class " + students[0]);
