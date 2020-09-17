@@ -8,5 +8,5 @@
   // Increments by 1
   for(var i=0; i < students.length; i++) {
     // This statement will run each time the loop is executed
-    console.log("Great to see you, " + students[i]);
+    console.log("Great to see you, " + students[i] + "!");
   }

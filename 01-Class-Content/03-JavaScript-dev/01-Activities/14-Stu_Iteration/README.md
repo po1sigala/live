@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It is done when the total number of elements in the `students` array is logged to the console. 
 
-* It is done when using a for loop the greeting "Great to see you, CLASSMATE_NAME" logs to the console for each classmate's name in the `students` array. 
+* It is done when using a for loop the greeting "Great to see you, CLASSMATE_NAME!" logs to the console for each classmate's name in the `students` array. 
 
 ## 💡 Hint
 
