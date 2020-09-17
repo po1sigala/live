@@ -1,4 +1,4 @@
-# Implement the PUT and DELETE Route with Your Own Parametors
+# 🏗️ Implement the PUT and DELETE Route with Your Own Parametors
 
 Work with a partner to implement the following user story:
 
@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I can delete a book in my database based on the parameters set (e.g bookid).
+* It's done when I can delete a book in my database based on the parameters set (e.g. bookid).
 
 * It's done when I can update the number of pages a book has in my database.
 
