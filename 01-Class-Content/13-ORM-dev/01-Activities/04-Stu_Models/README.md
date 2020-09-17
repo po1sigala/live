@@ -14,6 +14,18 @@ When Sequelize syncs the model with the database, the table name should be `book
 
 The table name is `books`, and the primary key is `id`.
 
+## Steps to Reproduce the Problem
+
+1. Run `npm start` from the command line to start the server and sync the database.
+
+2. Run `mysql -u root -p` to log into the MySQL shell.
+
+3. In the MySQL shell, run `USE library_db;` to switch to the library database.
+
+4. Try to run `DESCRIBE book;`, and it will fail, because the table name is `books`.
+
+5. Run `DESCRIBE books;` and note that the primary key is named `id`.
+
 ---
 
 ## 💡 Hint(s)
