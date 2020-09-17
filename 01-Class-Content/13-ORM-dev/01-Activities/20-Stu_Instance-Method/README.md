@@ -1,37 +1,24 @@
-# 🏗️ TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; START WITH A VERB! E.G: Implement Media Queries for Screens
+# 🏗️ Create a custom instance method
 
 Work with a partner to implement the following user story:
 
-* @TODO WRITE A BRIEF DESCRIPTION OF THE ACTIVITY FRAMED AS A USER STORY OR STORIES, E.G:
-
-* As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
+* As an Developer, I want to write a custom instance method in my login route that compares the entered password to a hashed password
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY, E.G:
 
-* It's done when the screen size is larger than 992 px, the product cards on the screen are side-by-side.
+* It's done when the method returns a boolean to indicate whether or not a password matches the hashed password stored in the record.
 
-* It's done when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
-
-
-@TODO IF APPLICABLE, INCLUDE A 'DESIGN MOCKUP' 
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-![]()
-
----
 
 ## 💡 Hint(s)
 
-* Hints are guides, not answers, framed as questions. 
+* { @TODO Check on when students see instance methods - i.e. Look at unit __ for how to write an instance method}
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! }
+  * { @TODO Create Bonus Question }
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+
