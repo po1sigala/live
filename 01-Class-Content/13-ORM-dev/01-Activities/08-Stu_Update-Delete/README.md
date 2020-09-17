@@ -2,13 +2,13 @@
 
 Work with a partner to implement the following user story:
 
-* As a user, I want to be able to delete and update data in my database based on specific requirements.
+* As an user, I want to be able to update and remove certain books of my choice from my collection.
 
 ## Acceptance Criteria
 
-* It's done when I can delete a book in my database based on the parameters set (e.g. bookid).
+* It's done when a book can be updated based on specific parametors (e.g. 'numberOfPges').
 
-* It's done when I can update the number of pages a book has in my database.
+* It's done when a book can be deleted based on specific parametors (e.g. 'bookid').
 
 ---
 

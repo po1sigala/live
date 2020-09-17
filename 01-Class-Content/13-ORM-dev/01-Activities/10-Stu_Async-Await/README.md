@@ -2,13 +2,15 @@
 
 Work with a partner to implement the following user story:
 
-* As a user, I want to be able to query my database using the CRUD methods provided by Sequelize. 
+* As a user, I should still be able to create, update, and delete from my collection of books.
 
-* As a developer, my code should be refactored using async / await instead of promises in my seed file.
+* As a developer, my code should be less cluttered with promises and instead use async / await for easier readability.
 
 ## Acceptance Criteria
 
-* It's done when all of my queries are done asynchronously.
+* It's done when a book can still be created, updated, and deleted from the database.
+
+* It's done when my 'seed.js' no longer uses promises and utilizes async / await.
 
 ---
 
