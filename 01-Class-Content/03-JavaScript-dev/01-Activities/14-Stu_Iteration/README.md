@@ -4,7 +4,7 @@ Work with a partner to implement the following user story:
 
 * As a member of the class, I want to store a list of my classmates and use that list to create a greeting for each student on the list. 
 
-## Instructions
+## Acceptance Criteria 
 
 * It is done when the names of five classmates are stored in a single variable named `students`.
 

@@ -1,12 +1,14 @@
-🏗️ Write Function to Evaluate Equality of Two Values
+# 🏗️ Write Function to Evaluate Equality of Two Values
 
 Work with a partner to implement the following user story:
 
 * In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
-## Instructions
+* In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
-* It is done when I provide two values in function arguments and it evaluates if the two functions are strictly equal.
+## Acceptance Criteria 
+
+* It is done when I provide two values in function arguments and the function evaluates the values' equality. 
 
 * It is done if "They are equal in type and value" is logged if the values are strictly equal. 
 
@@ -14,10 +16,9 @@ Work with a partner to implement the following user story:
 
 * It is done if "The values are not equal" if the values are not equal or strictly equal. 
 
-
-## 💡 Hint
-
-What is the difference between `==` and `===`?   
+## 💡 Hints
+ 
+How can we use parameters to give a name to the two values that we want to evaluate with our function? 
 
 ## 🏆 Bonus
 
