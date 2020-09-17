@@ -1,18 +1,18 @@
 # Unit 13 Mini Project: Travel Planner
 
-In this activity, you will work with a group to build a web page to hold a collection of CSS snippets. What better way to learn CSS than to build a knowledge base of CSS?
+## Overview
 
-## Instructions
+In this mini project, you will work with a group to build an API using Node, Express, MySQL, and Sequelize and deploy it to Heroku.
 
-Work with a group to implement the following user story:
+## User Stories
 
-  * As a user, I want to be able to create an account.
+* As a user, I want to be able to create an account.
 
-  * As a user, I want to be able to view all of the trips I'm taking along with their locations.
+* As a user, I want to be able to view all of the trips I'm taking along with their locations.
 
-  * As a user, I want to be able to create a new trip for myself using a location from a list.
+* As a user, I want to be able to create a new trip for myself using a location from a list.
 
-  * As a user, I want to be able to create and view location data.
+* As a user, I want to be able to create and view location data.
 
 ### Acceptance Criteria
 
@@ -64,7 +64,7 @@ Work with a group to implement the following user story:
 
   * Users have many Locations and Locations have many Users through Trips (Many-To-Many association)
 
-## 📝 Note(s)
+## 📝 Notes
 
 * Refer to the documentation: 
 
@@ -78,7 +78,7 @@ Work with a group to implement the following user story:
 
   * @TODO: provide sample JSON body data
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * Build the models first and then the functionality that goes into the routes.
 
