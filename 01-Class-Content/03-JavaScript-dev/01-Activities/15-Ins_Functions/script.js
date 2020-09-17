@@ -14,11 +14,15 @@ var expressHello = function() {
   return;
 };
 
-// This is how you call the functions above. Note the ()!
+// Functions must be called to execute
 declareHello(); 
 expressHello();
 
-// Functions can take parameters. Parameters give the data you want to use a name
+//Functions can be called again to make the block of code execute again
+declareHello(); 
+
+// Functions can take parameters.
+// Parameters give a name to the data to be passed into the function
 function declareHelloAgain(x,y,z) { 
   console.log("Hello, my parameter's values are " + x + ", " + y + ", and " + z);
   console.log("-----------------------------------");
