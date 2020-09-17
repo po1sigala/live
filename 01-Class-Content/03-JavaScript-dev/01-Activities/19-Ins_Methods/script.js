@@ -27,8 +27,8 @@ console.log(logicalOperators);
 
 //String Methods
 //Replaces "String" with "World" and returns new string
-var myStringAllCaps = myString.replace("String", "World");
+var myNewString = myString.replace("String", "World");
 console.log(myString);
 
 //The orginal string is unchanged
-console.log(myStringAllCaps);
+console.log(myString);
