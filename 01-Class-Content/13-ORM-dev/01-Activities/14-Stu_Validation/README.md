@@ -1,32 +1,28 @@
-# 📖 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; START WITH A VERB! E.G: Implement Media Queries for Screens
+# 📖 Add validations to the User model
 
 Work with a partner to implement the following user story:
 
-* @TODO WRITE A BRIEF DESCRIPTION OF THE ACTIVITY FRAMED AS A USER STORY OR STORIES, E.G:
-
-* As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
-
+* As a developer, I want to add validations to the User model in order prevent bad data from being saved in the database.
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY, E.G:
+* It's done when it prevents NULL values from being entered for the username, email and password fields.
 
-* It's done when the screen size is larger than 992 px, the product cards on the screen are side-by-side.
+* It's done when it prevents the password from being shorter than 8 characters.
 
-* It's done when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
-
+* It's done when it prevents duplicate email addresses being entered. 
 
 ## 📝 Note(s)
 
 Refer to the documentation: 
 
-[@TODO INSERT DOCUMENTATION HERE](@TODO URL)
+[Sequelize Manual on Validations and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
 
-@TODO IF APPLICABLE, INCLUDE A 'DESIGN MOCKUP' 
+@TODO Add a screenshot of the unit tests passing
 ## Assets
 
-The following image demonstrates the web application's appearance and functionality:
+The following image demonstrates the application passing all the unit tests:
 
 ![]()
 
@@ -34,12 +30,12 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hint(s)
 
-* { @TODO Include hints to point students in the right direction. Remember, hints are guides, not answers! }
+* What are some built-in validators that we can use to accomplish this?
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! }
+  * What are regular expressions?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.

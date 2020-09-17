@@ -1,31 +1,31 @@
-# 🐛 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; SHORT & DESCRIPTIVE, E.G: Submit button on landing page returns 404 (state the problem)
+# 🐛 Routes send back 200 status code every time
 
 Work with a partner to resolve the following issue(s):
 
-* @TODO USER STORY, E.G: Users should be able to see items added to their lists update in real-time.
+* As a developer, I want to see proper HTTP status codes returned so I can be aware of any errors.
 
 ## Expected Behavior
 
-@TODO E.G: When a user adds an item to their list it renders immediately. 
+* When there is an error with the request, the 500 status code is returned.
+
+* When a user does not exist in the database, the 404 status code is returned along with a message "No user found with this id".
 
 ## Actual Behavior
 
-@TODO E.G: When a user adds an item to their list they must refresh the page to see it render.
+* When there is an error with the request or if the user does not exist in the database, the 200 status code is returned.
 
-
-@TODO IF APPLICABLE: 
 ## Steps to Reproduce the Problem
 
-1. @TODO, E.G: Enter an item name in the form field and click 'Add'. 
+1. Run `npm start` in your command line to start the server.
 
-2. @TODO, E.G: Item does not render in list. 
+2. Open Insomnia Core and make a GET request to `/:id` using an invalid user's id.
 
-3. @TODO E.G: Refresh the page to see item rendered in list.
+3. Notice the 200 status code returned.
 
-@TODO IF APPLICABLE, INCLUDE A 'DESIGN MOCKUP' 
+@TODO Will include a screenshot of Insomnia Core returning a 404 status code
 ## Assets
 
-The following image demonstrates the web application's appearance and functionality:
+The following image demonstrates the route returning the proper response:
 
 ![]()
 
@@ -33,12 +33,12 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hint(s)
 
-* Hints are guides, not answers, framed as questions. 
+* What do the various HTTP status codes means and how can we return it?
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! }
+  * What other principles make up "REST"?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
