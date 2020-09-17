@@ -66,7 +66,7 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
 ## 📝 Notes
 
-* Refer to the documentation: 
+Refer to the documentation: 
 
   * [Sequelize docs on One-To-Many relationships](https://sequelize.org/master/manual/assocs.html#one-to-many-relationships)
 
@@ -74,7 +74,7 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
   * [@TODO: Link to soon to exist Heroku JawsDB deploy guide]()
 
-* Use this sample data as the request body for the POST routes:
+Use this sample data as the request body for the POST routes:
 
   * @TODO: provide sample JSON body data
 
