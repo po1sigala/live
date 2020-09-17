@@ -1,12 +1,13 @@
-
 var constellations = ["Orion", "Scorpius", "Lyra", "Ursa Major", "Ursa Minor"];
-var planets = ["Earth", "SaTurn", "Mars", "Jupiter", "Uranus", "Venus"];
+var planets = ["Earth", "Saturn", "Mars", "Jupiter", "Uranus", "Venus"];
+var star = "polaris";
 
-// The unshift method adds an element to the beginning of the array and returns the length
-console.log(constellations.unshift("Canis Major"));
+// The unshift method adds an element to the beginning of the array 
+constellations.unshift("Canis Major");
+console.log(constellations);
 
-// The pop method removes the last element from an array and returns the element 
-console.log(planets.pop());
+// The pop method removes the last element in the array
+planets.pop();
 // The original array is changed
 console.log(planets);
 
@@ -17,6 +18,8 @@ console.log(planets);
 console.log(constellations);
 console.log(galaxy);
 
-// Replace string method searches a string for a value "T" and replaces first instance of it with "t"
-console.log(galaxy[7].replace("T","t"));
-console.log(galaxy);
+// The toUpperCase method makes all the letters in the string "polaris" capital letters
+var upperCaseStar = star.toUpperCase();
+console.log(upperCaseStar);
+// The original string is unchanged
+console.log(star);

@@ -24,12 +24,12 @@ function sayTigers() {
   return;
 }
 
-// TODO: The function 'sayBears' should return "Bears! OH  MY!". 
+// TODO: The variable 'bears' should only declared once and 'sayBears' should return "Bears! OH MY!". 
 var bears = "Bears";
 
 function sayBears() {
     var bears = "Pandas";
-    console.log(bears + "! OH  MY!");
+    console.log(bears + "! OH MY!");
     return;
 }
 

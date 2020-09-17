@@ -10,9 +10,9 @@
 
 * It is done when `Venus` is removed from the `planets` array.
 
-* It is done when the arrays `constellations` and  `planets` are joined to form a neew array named `galaxy`. The arrays `constellations` and `planets` should not be altered.
+* It is done when the arrays `constellations` and `planets` are joined to form a new array named `galaxy`. The arrays `constellations` and `planets` should not be altered.
 
-* It is done when the `T` in the string `"SaTurn"` is replaced with a lower-case `t` and the new string `Saturn` is logged to the console. 
+* It is done when the string "polaris" is converted into all capital letters and the new string is stored in a variable.
 
 ## 📝 Notes
 
