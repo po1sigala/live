@@ -1,6 +1,10 @@
-# Scope 
+# 🐞  
 
-In this activity, you will work with a partner to debug some broken code to learn more about scope.
+Work with a partner to resolve the following issue(s):
+
+* As a developer, I want to log a series of messages to the console.
+
+
 
 ## Instructions
 

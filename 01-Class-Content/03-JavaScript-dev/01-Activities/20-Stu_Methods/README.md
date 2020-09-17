@@ -1,30 +1,26 @@
-# Native Javascript APIS - Array and string methods
+# 📖 Implement Array and String Methods
 
-In this activity, you will work with a partner to use MDN documentation to research array and string methods to solve a coding challenge. 
+ Work with a partner to implement the following user story:
 
-## Instructions
+ * As an developer, I want to use array methods to add and remove elements from an array and join two arrays. I also want to use a string method to alter an existing string. 
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [MDN Web Docs: Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) in your browser.
+* It is done when the string `Canis Major` is added as the first element of the `constellations` array and no elements are removed. 
 
-* Open [20-Stu_Methods/Unsolved/script.js]() in your IDE and examine the code.
+* It is done when `Venus` is removed from the `planets` array.
 
-* Using the documentation, implement the following
+* It is done when the arrays `constellations` and  `planets` are joined to form a neew array named `galaxy`. The arrays `constellations` and `planets` should not be altered.
 
-  * We are given two arrays `constellations` and `planets` that hold strings.  
+* It is done when the `T` in the string `"SaTurn"` is replaced with a lower-case `t` and the new string `Saturn` is logged to the console. 
 
-  * When we use an array method to add a the string `Canis Major` to the `constellations` array, `Canis Major` should be the first string in the array. The length of the `constellations` array after `Canis Major` is added should be returned. 
+## 📝 Notes
 
-  * When we use an array method to remove the last element in the `planets` array, the last element `Venus` should be returned and the `planets` array should no longer no longer contain `Venus` when logged.
+Refer to the documentation:
 
-  * When we use an array method to join the arrays `constellations` and  `planets`, a new array `galaxy` should be created. The arrays `constellations` and `planets` should not be altered.
+[MDN Web Docs: Array Instance Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
 
-  * When we use a string method to search the `SaTurn` string in the `constellation` array, the string will be searched for `T` and replaced with `t`. The new string `Saturn` will be logged to the console. The string `SaTurn` in the `constelllation` array will be unchanged.  
-
-## 💡 Hints
-
-The MDN docs have a useful [list](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods) of string methods.
+[MDN Web Docs: String Instance Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
 
 ## 🏆 Bonus
 
