@@ -78,6 +78,8 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
   * @TODO: provide sample JSON body data
 
+---
+
 ## 💡 Hints
 
 * Build the models first and then the functionality that goes into the routes.
