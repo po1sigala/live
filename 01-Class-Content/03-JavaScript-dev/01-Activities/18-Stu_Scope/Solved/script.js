@@ -36,6 +36,10 @@ function sayBears() {
   console.log(bears + "! OH  MY!");
   return;
  }
+
+sayLions();
+sayTigers();
+sayBears();
  
 // Declaring sing in the outer function makes it available to the inner and outer function
 function singAlong() {

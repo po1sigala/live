@@ -33,6 +33,10 @@ function sayBears() {
     return;
 }
 
+sayLions();
+sayTigers();
+sayBears();
+
 // TODO: The variable 'sing' should be declared once in the local scope.
 var sing = "Sing"; 
 
