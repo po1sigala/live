@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As an book owner, I want to see what books belong in my collection.
+* As a book owner, I want to see what books belong in my collection.
 
 ## Acceptance Criteria
 

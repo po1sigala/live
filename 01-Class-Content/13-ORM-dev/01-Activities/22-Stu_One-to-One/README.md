@@ -1,20 +1,19 @@
-# 📐 Add Comments to Implementation of { @TODO LEARNING OBJECTIVE }
+# 📐 Add Comments to Implementation of a One-to-One Association
 
 Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
 
-@TODO IF APPLICABLE, INCLUDE HINTS AS 'NOTES'
 ## 📝 Note(s)
 
 Refer to the documentation: 
 
-[@TODO INSERT DOCUMENTATION HERE](@TODO URL)
+[Sequelize docs on associations](https://sequelize.org/master/manual/assocs.html)
 
 ---
 
 ## 🏆 Bonus
 
-If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! }
+  * What is an Entity Relationship Diagram (ERD)?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
