@@ -24,13 +24,13 @@ The table name is `books`, and the primary key is `id`.
 
 4. Try to run `DESCRIBE book;`, and it will fail, because the table name is `books`.
 
-5. Run `DESCRIBE books;` and note that the primary key is named `id`.
+5. Run `DESCRIBE books;` and note that the primary key is named `id` and not `bookId`.
 
 ---
 
 ## 💡 Hint(s)
 
-* What options do the [Sequelize docs on model basics](https://sequelize.org/master/manual/model-basics.html) outline when it comes to naming tables and fields?
+* What options does Sequelize provide when it comes to naming tables and fields?
 
 ## 🏆 Bonus
 

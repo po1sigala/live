@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[dotenv npm package](https://www.npmjs.com/package/dotenv)
+* [dotenv npm package](https://www.npmjs.com/package/dotenv)
 
 ---
 
