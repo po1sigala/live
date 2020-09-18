@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As an user, I want to be able to update and remove certain books of my choice from my collection.
+* As a comic book store owner, I want to be able to update and remove certain comic books of my choice from my inventory.
 
 ## Acceptance Criteria
 

@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a user, I should still be able to create, update, and delete from my collection of books.
+* As a developer, all my CRUD commands should still work when querying the database.
 
 * As a developer, my code should be less cluttered with promises and instead use async / await for easier readability.
 
