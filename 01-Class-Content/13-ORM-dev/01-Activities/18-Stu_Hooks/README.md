@@ -10,8 +10,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY, E.G:
-
 * It's done when the direct method uses a hook to hash the user's password before it is created.
 
 * It's done when the direct method uses a hook to hash the user's password before it is updated.
@@ -21,7 +19,7 @@ Work with a partner to implement the following user story:
 
 * What did you learn about hashing a password in the previous lesson?
 
-* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options? 
+* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options? [Sequelize Manual on Hooks](https://sequelize.org/master/manual/hooks.html)
 
 ## 🏆 Bonus
 

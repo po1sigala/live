@@ -6,10 +6,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+* It's done when the model includes an instance method.
 
-* It's done when the model includes an instance method .
-
-* It's done when the instance method compares the user's input with the hashed password.
+* It's done when the instance method compares the user's input with the user's hashed password.
 
 
 ## 💡 Hint(s)
@@ -20,7 +19,7 @@ Work with a partner to implement the following user story:
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * { @TODO Create Bonus Question }
+  * How can we DRY up our code using Sequelize's static model methods?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
 
