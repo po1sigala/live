@@ -13,12 +13,14 @@ Trip.init(
       primaryKey: true,
       autoIncrement: true
     },
-    comment_text: {
-      type: DataTypes.STRING,
+    trip_date: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    traveller_amount: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      validate: {
-        len: [1]
-      }
+      defaultValue: 1
     },
     traveller_id: {
       type: DataTypes.INTEGER,
