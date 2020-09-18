@@ -2,12 +2,14 @@
 
 Work with a partner to implement the following user story:
 
-* As an Developer, I want to write a custom instance method in my login route that compares the entered password to a hashed password
+* As a user, I want to login to my account with my password.
 
 ## Acceptance Criteria
 
 
-* It's done when the method returns a boolean to indicate whether or not a password matches the hashed password stored in the record.
+* It's done when the model includes an instance method .
+
+* It's done when the instance method compares the user's input with the hashed password.
 
 
 ## 💡 Hint(s)

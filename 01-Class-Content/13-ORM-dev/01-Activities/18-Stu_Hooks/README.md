@@ -2,25 +2,26 @@
 
 Work with a partner to implement the following user story:
 
-* As a Developer, I want to write a method using bcrypt that will store a hashed password in the user's record.
+* As a user, I want to be able to login with my password.
 
-* As Developer, I want to write a direct method using the beforeCreate hook to make sure that a user's password is hashed before the record is created.
+* As a user, I want to be able to change my password.
 
-* As a Developer, I want to write a direct method using the beforeUpdate hook to make sure that a user's password is hashed before it is updated.
+* As a user, I want to know that my password is being stored securely.
 
 ## Acceptance Criteria
 
 @TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY, E.G:
 
-* It's done when the code successfully creates a user record with a hashed password.
+* It's done when the direct method uses a hook to hash the user's password before it is created.
 
-* It's done when the code successfully updates a user record with a hashed password.
+* It's done when the direct method uses a hook to hash the user's password before it is updated.
 
 
 ## 💡 Hint(s)
 
 * What did you learn about hashing a password in the previous lesson?
-* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from your other options? 
+
+* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options? 
 
 ## 🏆 Bonus
 
