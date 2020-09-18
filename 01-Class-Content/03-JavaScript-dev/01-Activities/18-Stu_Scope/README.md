@@ -10,7 +10,7 @@ When the console is opened, a series of messages should log to the console.
 
 ## Actual Behavior
 
-When the console is opened, an error message indicates that at least one variable is undefined. 
+When the console is opened, an error message indicates that at least one variable is undefined and messages do not log. 
 
 ## 💡 Hint
 

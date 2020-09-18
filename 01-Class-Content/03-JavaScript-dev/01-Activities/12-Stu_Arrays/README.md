@@ -2,9 +2,8 @@
 
 Work with a partner to implement the following user story:
 
-* As an instructor, I want to create a group of my students' names and use the data from that group
- to welcome each of my students to class. I also want to remove a student who has left the class and 
- replace the name with a new student's name. 
+* As an instructor, I want to create a list of my students' names and use that list
+ to welcome each of my students to class. I also want to remove a student who has left the class and replace the name with a new student's name. 
 
 ## Acceptance Criteria 
 

@@ -14,6 +14,7 @@ function shoutItAllOut() {
 justShout();
 shoutItAllOut();
  
+// Lions is declared locally so it is available only to the sayLions function
 function sayLions() {
   var animal = "Lions"; 
   console.log(animal);
