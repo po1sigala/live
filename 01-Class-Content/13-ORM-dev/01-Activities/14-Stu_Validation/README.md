@@ -19,7 +19,7 @@ Refer to the documentation:
 [Sequelize Manual on Validations and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
 
-@TODO Add a screenshot of the unit tests passing
+@TODO Add a screenshot of the unit tests passing(??)
 ## Assets
 
 The following image demonstrates the application passing all the unit tests:

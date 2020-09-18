@@ -18,14 +18,14 @@ Work with a partner to resolve the following issue(s):
 
 1. Run `npm start` in your command line to start the server.
 
-2. Open Insomnia Core and make a GET request to `/:id` using an invalid user's id.
+2. Open Insomnia Core and make a GET request to `api/users/10`.
 
 3. Notice the 200 status code returned.
 
-@TODO Will include a screenshot of Insomnia Core returning a 404 status code
+@TODO Will include a code block returning the correct 404 status code
 ## Assets
 
-The following image demonstrates the route returning the proper response:
+The following code block demonstrates the expected JSON response:
 
 ![]()
 
