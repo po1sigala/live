@@ -2,7 +2,7 @@
 
  Work with a partner to implement the following user story:
 
- * As an developer, I want to use array methods to add and remove elements from an array and join two arrays. I also want to use a string method to alter an existing string. 
+ * As an developer, I want to use array methods to add and remove elements from an array and join two arrays. I also want to use a string method to return a new string that contains only capital letters.  
 
 ## Acceptance Criteria
 
