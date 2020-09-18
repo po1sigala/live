@@ -19,7 +19,7 @@ Work with a partner to implement the following user story:
 
 * What did you learn about hashing a password in the previous lesson?
 
-* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options? [Sequelize Manual on Hooks](https://sequelize.org/master/manual/hooks.html)
+* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options?
 
 ## 🏆 Bonus
 

@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add validations to the User model in order prevent bad data from being saved in the database.
+* As a developer, I want to add validations to the User model in order to prevent bad data from being saved in the database.
 
 ## Acceptance Criteria
 
@@ -16,15 +16,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[Sequelize Manual on Validations and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
-
-
-@TODO Add a screenshot of the unit tests passing(??)
-## Assets
-
-The following image demonstrates the application passing all the unit tests:
-
-![]()
+* [Sequelize Manual on Validations and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
 ---
 
