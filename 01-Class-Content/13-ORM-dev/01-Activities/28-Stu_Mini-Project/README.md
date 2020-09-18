@@ -1,18 +1,16 @@
 # Unit 13 Mini Project: Travel Planner
 
-## Overview
-
 In this mini project, you will work with a group to build an API using Node, Express, MySQL, and Sequelize and deploy it to Heroku.
 
 ## User Stories
 
-* As a user, I want to be able to create an account.
+* As a traveller, I want to be able to create an account.
 
-* As a user, I want to be able to view all of the trips I'm taking along with their locations.
+* As a traveller, I want to be able to create a new trip for myself using a location from a list.
 
-* As a user, I want to be able to create a new trip for myself using a location from a list.
+* As a traveller, I want to be able to create and view location data.
 
-* As a user, I want to be able to create and view location data.
+* As a traveller, I want to be able to view all of the trips I'm taking along with their locations.
 
 ### Acceptance Criteria
 
