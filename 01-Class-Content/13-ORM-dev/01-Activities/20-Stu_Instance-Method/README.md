@@ -13,7 +13,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint(s)
 
-* { @TODO Check on when students see instance methods - i.e. Look at unit __ for how to write an instance method}
+* What do object methods and instance methods have in common?
 
 ## 🏆 Bonus
 
