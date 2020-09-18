@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 The following JSON code block is an example of what should return in Insomnia:
 
-# @TODO: Add JSON codeblock of returning data
+@TODO: Add JSON codeblock of returning data
 
 ---
 
