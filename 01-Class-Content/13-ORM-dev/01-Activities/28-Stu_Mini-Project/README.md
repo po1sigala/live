@@ -90,6 +90,8 @@ Use this sample data as the request body for the POST routes:
 
 ## 🏆 Bonus
 
-* Add validations to all of the model data.
+If you have fully completed the above tasks, here is something you and your group can work through as an added challenge to further your knowledge:
 
-* Create a password hashing and login system for users.
+  * Add validations to all of the model data.
+
+  * Create a password hashing and login system for users.
