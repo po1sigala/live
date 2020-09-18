@@ -79,11 +79,11 @@ You will be employer-competitive if you are able to:
 
 * [📖 Moment.js Docs](https://momentjs.com/docs/)
 
-* [📹 Let's Code jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
+* [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
 
-* [📹 Let's Code Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
+* [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
 
-* [📹 Let's Code jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
+* [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
 
 * [📹 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
