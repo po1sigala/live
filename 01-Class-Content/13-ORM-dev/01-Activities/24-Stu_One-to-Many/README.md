@@ -8,13 +8,11 @@ Work with a partner to implement the following user story:
 
 * It's done when the MySQL table for book data has a foreign key referencing the user table.
 
-* It's done when the response of a GET request to `/api/users` includes a user's owned books.
+* It's done when the response of a GET request to `/api/users` includes a user's owned books, like this JSON code shows:
 
-## Assets
-
-The following JSON code block is an example of what should return in Insomnia:
-
-@TODO: Add JSON codeblock of returning data
+```json
+@TODO: JSON Codeblock
+```
 
 ---
 
