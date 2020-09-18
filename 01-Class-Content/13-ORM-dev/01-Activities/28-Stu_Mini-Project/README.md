@@ -91,3 +91,5 @@ Use this sample data as the request body for the POST routes:
 ## 🏆 Bonus
 
 * Add validations to all of the model data.
+
+* Create a password hashing and login system for users.
