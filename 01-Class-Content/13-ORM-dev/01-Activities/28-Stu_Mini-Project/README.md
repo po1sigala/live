@@ -14,13 +14,13 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
 ### Acceptance Criteria
 
-* It's done when the GET route `/api/users` returns all user data without associated trips in Insomnia.
+* It's done when the GET route `/api/travellers` returns all traveller data without associated trips in Insomnia.
 
-* It's done when the POST route `/api/users` successfully creates user data and returns a successful response in Insomnia.
+* It's done when the POST route `/api/travellers` successfully creates traveller data and returns a successful response in Insomnia.
 
-* It's done when the GET route `/api/users/:id` returns a single user's data with their associated trips and a list of locations in Insomnia. 
+* It's done when the GET route `/api/travellers/:id` returns a single traveller's data with their associated trips and a list of locations in Insomnia. 
 
-* It's done when the DELETE route `/api/users/:id` successfully removes a user and returns a successful response in Insomnia.
+* It's done when the DELETE route `/api/travellers/:id` successfully removes a traveller and returns a successful response in Insomnia.
 
 * It's done when the GET route `/api/locations` returns all location data in Insomnia.
 
@@ -30,7 +30,7 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
 * It's done when the DELETE route `/api/locations/:id` successfully removes a location, any trips associated with it, and returns a successful response in Insomnia.
 
-* It's done when the POST route `/api/trips` successfully creates trip data between associated users and locations.
+* It's done when the POST route `/api/trips` successfully creates trip data between associated travellers and locations.
 
 * It's done when the DELETE route `/api/trips/:id` successfully removes a trip and returns a successful response in Insomnia.
 
@@ -40,7 +40,7 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
 * Database models should have these fields and associations:
 
-  * `User`
+  * `Traveller`
     * `id`: primary key
     * `name`
     * `email`
@@ -53,14 +53,14 @@ In this mini project, you will work with a group to build an API using Node, Exp
     * `id`: primary key
     * `trip_date`
     * `traveller_amount`
-    * `user_id`: foreign key that references `User.id`
+    * `traveller_id`: foreign key that references `Traveller.id`
     * `location_id`: foreign key that references `Location.id`
 
-  * Users have many Trips and Trips belong to a User (One-To-Many association)
+  * Travellers have many Trips and Trips belong to a Traveller (One-To-Many association)
 
   * Locations have many Trips and Trips belong to a Location (One-To-Many association)
 
-  * Users have many Locations and Locations have many Users through Trips (Many-To-Many association)
+  * Travellers have many Locations and Locations have many Travellers through Trips (Many-To-Many association)
 
 ## 📝 Notes
 
@@ -92,4 +92,4 @@ If you have fully completed the above tasks, here is something you and your grou
 
   * Add validations to all of the model data.
 
-  * Create a password hashing and login system for users.
+  * Create a password hashing and login system for travellers.
