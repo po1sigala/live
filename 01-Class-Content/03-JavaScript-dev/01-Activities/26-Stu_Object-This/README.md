@@ -1,20 +1,12 @@
-# This Keyword
+# 📐 Add Comments to Implementation of This
 
-In this activity, you will work with a partner to use MDN documentation to learn more about the keyword `this.`
+Work with a partner to add comments describing the functionality of the code found in [20-Stu_Object-This/Unsolved/script.js](./Unsolved/script.js).
 
-## Instructions
+## Note
 
-* Be sure to work with your partner!
+Refer to the documentation:
 
-* Navigate to the [MDN Web Docs: This](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) in your browser.
-
-* Open [26-Stu_Obect-This](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) and examine the code.
-
-* Using documentation as a guide, insert comments to explain what `this` is referring to each time it appears in the code.  
- 
-## 💡 Hints
-
-An object's properties can hold primitive data types, arrays, methods and even other objects. 
+[MDN Web Docs: This](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
 ## 🏆 Bonus
 
