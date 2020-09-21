@@ -13,8 +13,8 @@ Trip.init(
       primaryKey: true,
       autoIncrement: true
     },
-    trip_date: {
-      type: DataTypes.DATE,
+    trip_budget: {
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: true
     },
     traveller_amount: {

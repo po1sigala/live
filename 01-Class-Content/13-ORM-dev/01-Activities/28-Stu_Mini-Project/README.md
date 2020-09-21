@@ -20,7 +20,7 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
 * It's done when the GET route `/api/travellers/:id` returns a single traveller's data with their associated trips and a list of locations in Insomnia. 
 
-* It's done when the DELETE route `/api/travellers/:id` successfully removes a traveller and returns a successful response in Insomnia.
+* It's done when the DELETE route `/api/travellers/:id` successfully removes a traveller, any trips associated with it, and returns a successful response in Insomnia.
 
 * It's done when the GET route `/api/locations` returns all location data in Insomnia.
 
@@ -51,14 +51,18 @@ In this mini project, you will work with a group to build an API using Node, Exp
 
   * `Trips`
     * `id`: primary key
-    * `trip_date`
+    * `trip_budget` 
     * `traveller_amount`
     * `traveller_id`: foreign key that references `Traveller.id`
     * `location_id`: foreign key that references `Location.id`
 
   * Travellers have many Trips and Trips belong to a Traveller (One-To-Many association)
 
+    * If a Traveller is deleted, all associated Trips are also deleted.
+
   * Locations have many Trips and Trips belong to a Location (One-To-Many association)
+
+    * If a Location is deleted, all associated Trips are also deleted.
 
   * Travellers have many Locations and Locations have many Travellers through Trips (Many-To-Many association)
 
@@ -72,19 +76,26 @@ Refer to the documentation:
 
   * [@TODO: Link to soon to exist Heroku JawsDB deploy guide]()
 
-Use this sample data as the request body for the POST routes:
+Use this sample data as the request body POST `/api/trips` route:
 
-  * @TODO: provide sample JSON body data
+  ```json
+  {
+    "trip_budget": 2000.50,
+    "traveller_amount": 6,
+    "traveller_id": 1,
+    "location_id": 2
+  }
+  ```
 
 ---
 
 ## 💡 Hints
 
-* Build the models first and then the functionality that goes into the routes.
+* What model association option can we set to automatically deleted associated data? 
 
-* After creating the models, run the seed file provided to load the database with data.
+* How can we use the data in `Starter/seeds` to provide starter data for Locations and Travellers and not have to create it ourselves? 
 
-* Since you are deploying this to Heroku, build the application in its own personal repository.
+* If we're deploying this to Heroku, can we work on this from within the class repository or should we make a new GitHub repo?
 
 ## 🏆 Bonus
 
