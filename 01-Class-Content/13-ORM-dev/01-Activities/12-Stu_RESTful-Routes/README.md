@@ -8,7 +8,9 @@ Work with a partner to resolve the following issue(s):
 
 * When there is an error with the request, the 500 status code is returned.
 
-* When a user does not exist in the database, the 404 status code is returned along with a message "No user found with this id".
+* When there is an error with the syntax, the 400 status code is returned.
+
+* When a user does not exist in the database, the 404 status code is returned along with a message "No user found with this id!".
 
 ## Actual Behavior
 
