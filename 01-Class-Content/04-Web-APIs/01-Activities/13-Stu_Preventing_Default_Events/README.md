@@ -12,7 +12,7 @@ In this activity, we are going to create a form that calculates a suggested tip 
 
 3. A button to calculate the tip
 
-* In a file called `script.js`, create an event listener that utilizes the values from the input fields to calculate the reccommended tip and the new total of the bill with tip included.
+* In a file called `script.js`, create an event listener that utilizes the values from the input fields to calculate the recommended tip and the new total of the bill with tip included.
 
 * Once these values are calculated, display them on the page.
 
