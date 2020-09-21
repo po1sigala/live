@@ -1,0 +1,39 @@
+# 📖 Implement an Icon for Downloadable Style Sheets
+
+Work with a partner to implement the following user story:
+
+* As a user, I want to see an icon next to every `<a>` element that has a link to a downloadable CSS file in its `href` attribute.
+
+## Acceptance Criteria
+
+* It's done when any link to a CSS file displays a 📝 emoji after the link text.
+
+* It's done when the 📝 emoji is inserted using only CSS.
+
+## 📝 Note(s)
+
+Refer to the documentation: 
+
+[MDN web docs on Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+## Assets
+
+The following image demonstrates the web application's appearance:
+
+![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
+
+---
+
+## 💡 Hint(s)
+
+* How can you target a file type by its file extension (i.e., `.css`, `.html`, `.md`, etc.)?
+
+* How can you use pseudo-elements to accomplish this task?
+
+## 🏆 Bonus
+
+* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+
+  * How do selectors affect CSS performance?
+
+* Use [Google](https://www.google.com) or another search engine to research the above.
