@@ -1,63 +1,40 @@
 const router = require('express').Router();
 const User = require('../../models/User.js');
+const { json } = require('sequelize/types');
 
 
 // GET /api/users/1
-router.get('/:id', (req, res) => {
-    User.findOne({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbUserData => {
-            if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' });
-                return;
-            }
-            res.json(dbUserData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+router.get('/:id', async(req, res) => {
+    try {
+        const userData = await User.findOne(req.params.id);
+        res.status(200).json(userData);
+    } catch(err) {
+        res.status(404).json(err)
+    }
+
 });
 
+
 // POST /api/users
-router.post('/', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-    User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-    })
-        .then(dbUserData => res.json(dbUserData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+router.post('/', async(req, res) => {
+    try {
+        const userData = await User.create(req.body);
+        res.status(200).json(userData)
+    } catch(err) {
+        res.status(400).json(err)
+    }
+
 });
 
 // PUT /api/users/1
-router.put('/:id', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-
-    // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
-    User.update(req.body, {
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbUserData => {
-            if (!dbUserData[0]) {
-                res.status(404).json({ message: 'No user found with this id' });
-                return;
-            }
-            res.json(dbUserData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+router.put('/:id', async(req, res) => {
+    try {
+        const userData = await User.update(req.body, { where: { id: req.params.id} });
+        res.status(200).json(userData)
+    } catch(err) {
+        res.status(404).json(err)
+    }
+    
 });
 
 
