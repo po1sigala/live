@@ -2,7 +2,7 @@
 
 * **INSTRUCTIONS**:
 
-  The goal of this exercise is to create a Post model using Sequelize.
+    The goal of this exercise is to create a Post model using Sequelize.
 
   1) Open the folder slacked out to you, run `npm install`
 
@@ -15,7 +15,7 @@
   5) Create a Sequelize `Post` model here. The model should have a title property of type DataTypes.STRING, a body property of DataTypes.TEXT, and a category property of DataTypes.STRING. 
   (<https://sequelize.org/master/manual/model-basics.html#data-types>)
 
-  6) To check if this worked, run `node server.js` in your terminal. Then open MySQL Workbench to check if a Posts table has been created.
+  6) To check if this worked, run `node server` in your terminal. Then open MySQL Workbench to check if a Posts table has been created.
 
   **Note**: We still have some code to add in the next exercise to get this app fully functioning, just concentrate on creating the Post model and verifying that you were successful for now.
 
