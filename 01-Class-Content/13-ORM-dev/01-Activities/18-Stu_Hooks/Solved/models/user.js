@@ -32,6 +32,11 @@ User.init(
     }
   },
   {
+    hooks: {
+     //Your code here//
+      }
+    },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
