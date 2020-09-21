@@ -24,18 +24,21 @@ Work with a partner to resolve the following issue(s):
 
 3. Notice the 200 status code returned.
 
-@TODO Will include a code block returning the correct 404 status code
 ## Assets
 
 The following code block demonstrates the expected JSON response:
 
-![]()
+```json
+{
+  "message": "No user with this id!"
+}
+```
 
 ---
 
 ## 💡 Hint(s)
 
-* What do the various HTTP status codes means and how can we return it?
+* What do the various HTTP status codes mean and how can we return it?
 
 ## 🏆 Bonus
 

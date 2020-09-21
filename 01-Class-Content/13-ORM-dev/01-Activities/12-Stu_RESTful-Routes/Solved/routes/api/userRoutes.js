@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const User = require('../../models/User.js');
 
-// Get all users
+// GET all users
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Create a new user
+// CREATE a new user
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create({
@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get one user
+// GET one user
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id);
@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a user
+// UPDATE a user
 router.put('/:id', async (req, res) => {
   try {
     const userData = await User.update(req.body, {
@@ -56,7 +56,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a user
+// DELETE a user
 router.delete('/:id', async (req, res) => {
   try {
     const userData = await User.destroy({
