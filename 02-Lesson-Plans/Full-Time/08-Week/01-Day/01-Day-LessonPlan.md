@@ -27,7 +27,7 @@
 
 ## Slide
 
-[8.1: Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing)
+[8.1: Linting and Projects](https://docs.google.com/presentation/d/1QSJWWiSZmx2I5SZncgJ9UKJP8b_6OFytiZRjGPNRSXo/edit?usp=sharing)
 
 ## Time Tracker
 
