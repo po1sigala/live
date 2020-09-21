@@ -93,7 +93,7 @@ Use this sample data as the request body POST `/api/trips` route:
 
 * What model association option can we set to automatically deleted associated data? 
 
-* How can we use the data in `Starter/seeds` to provide starter data for Locations and Travellers and not have to create it ourselves? 
+* How can we use the data in `Develop/seeds` to provide starter data for Locations and Travellers and not have to create it ourselves? 
 
 * If we're deploying this to Heroku, can we work on this from within the class repository or should we make a new GitHub repo?
 
