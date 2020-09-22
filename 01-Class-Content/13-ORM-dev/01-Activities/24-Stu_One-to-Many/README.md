@@ -1,4 +1,4 @@
-# 🏗️ Implement One-to-Many Association Between User and Book Models
+# 🏗️ Implement One-to-Many Association Between Reader and Book Models
 
 Work with a partner to implement the following user story:
 
@@ -6,13 +6,45 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the MySQL table for book data has a foreign key referencing the user table.
+* It's done when the MySQL table for book data has a foreign key referencing the reader table.
 
-* It's done when the response of a GET request to `/api/users` includes a user's owned books, like this JSON code shows:
+* It's done when the response of a GET request to `/api/readers` or `/api/readers/:id` includes a reader's owned books, like this JSON code shows:
 
-```json
-@TODO: JSON Codeblock
-```
+  ```json
+  {
+    "id": 1,
+    "name": "Lernantino",
+    "email": "lernantino@gmail.com",
+    "password": "$2b$10$AcbPGE6mNk3aZAnFCan1XeVVbuDYhQiHxOQ/gIG/PSUj2WoOR2pGC",
+    "library_card": {
+      "id": 2,
+      "card_number": "8342e78a-7265-4060-9834-81a19c76c041",
+      "reader_id": 1
+    },
+    "books": [
+      {
+        "id": 4,
+        "title": "The Pragmatic Programmer: Your Journey To Mastery",
+        "author": "David Thomas",
+        "isbn": "978-0135957059",
+        "pages": 352,
+        "edition": 2,
+        "is_paperback": false,
+        "reader_id": 1
+      },
+      {
+        "id": 6,
+        "title": "Algorithms of Oppression: How Search Engines Reinforce Racism",
+        "author": "Safiya Umoja Noble",
+        "isbn": "978-1479837243",
+        "pages": 256,
+        "edition": 1,
+        "is_paperback": true,
+        "reader_id": 1
+      }
+    ]
+  }
+  ```
 
 ---
 

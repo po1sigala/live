@@ -6,11 +6,11 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When a request is made for user data, the response includes a `shortNovels` property that totals the number of books with a page count between 100 and 200.
+When a request is made for user data, the response includes a `shortBooks` property that totals the number of books with a page count between 100 and 300.
 
 ## Actual Behavior
 
-The user data in the response does not include a `shortNovels` property.
+The user data in the response does not include a `shortBooks` property.
 
 ## Steps to Reproduce the Problem
 
@@ -18,9 +18,9 @@ The user data in the response does not include a `shortNovels` property.
 
 2. Run `npm start` to start the server.
 
-3. In Insomnia Core, make a GET request to `/api/user/1`.
+3. In Insomnia Core, make a GET request to `/api/readers/1`.
 
-4. Note that the response data does not include a `shortNovels` property.
+4. Note that the response data does not include a `shortBooks` property.
 
 ---
 
