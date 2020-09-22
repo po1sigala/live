@@ -17,9 +17,9 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint(s)
 
-* What did you learn about hashing a password and async/await in previous lessons? 
+* What did you learn about hashing a password, async/await, try/catch in previous lessons? 
 
-* What are 3 methods for adding hooks to your code? How is adding a hook vis init() different from the other options?
+* What are 3 methods for adding hooks to your code? How is adding a hook via init() different from the other options?
 
 ## 🏆 Bonus
 

@@ -13,7 +13,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint(s)
 
-* What do object methods and instance methods have in common?
+* How are object methods and instance methods different?
 
 ## 🏆 Bonus
 
