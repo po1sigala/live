@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
       const userData = await User.create({
         username: req.body.username,
         email: req.body.email,
+        password: req.body.password
       });
       res.status(200).json(userData);
     } catch (err) {
