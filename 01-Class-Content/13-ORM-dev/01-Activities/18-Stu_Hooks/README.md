@@ -10,16 +10,16 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the direct method uses a hook to hash the user's password before it is created.
+* It's done when User.int() includes hooks to hash the user's password before it is created.
 
-* It's done when the direct method uses a hook to hash the user's password before it is updated.
+* It's done when User.int() includes hooks to hash the user's password before it is updated.
 
 
 ## 💡 Hint(s)
 
-* What did you learn about hashing a password in the previous lesson?
+* What did you learn about hashing a password and async/await in previous lessons? 
 
-* What are 3 methods for adding hooks to your code? How is adding a hook using a direct method different from the other options?
+* What are 3 methods for adding hooks to your code? How is adding a hook vis init() different from the other options?
 
 ## 🏆 Bonus
 
