@@ -8,7 +8,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When Sequelize syncs the model with the database, the table name should be `book` (singular) and the primary key named `bookId`.
+When Sequelize syncs the model with the database, the table name should be `book` (singular) and the primary key named `book_id`.
 
 ## Actual Behavior
 
@@ -24,7 +24,7 @@ The table name is `books`, and the primary key is `id`.
 
 4. Try to run `DESCRIBE book;`, and it will fail, because the table name is `books`.
 
-5. Run `DESCRIBE books;` and note that the primary key is named `id` and not `bookId`.
+5. Run `DESCRIBE books;` and note that the primary key is named `id` and not `book_id`.
 
 ---
 
