@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of Sequelize Query Methods
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/routes/api/bookRoutes.js](./Unsolved/routes/api/bookRoutes.js).
 
 ## 📝 Note(s)
 
