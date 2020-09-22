@@ -16,6 +16,9 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
+      validate: {
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,
