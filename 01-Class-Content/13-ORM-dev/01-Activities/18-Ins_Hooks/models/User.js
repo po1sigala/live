@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-class Shopper extends Model {}
+class User extends Model {}
 
-Shopper.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -33,19 +33,20 @@ Shopper.init(
   },
   {
     hooks: {
-
+    
       beforeCreate(newShopperData) {
         newShopperData.email = newShopperData.email.toLowerCase();
         return newShopperData;
       }
-    
+      
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'shopper',
+    modelName: 'user',
   }
 );
 
-module.exports = Shopper;
+module.exports = User;
+
