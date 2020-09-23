@@ -22,6 +22,7 @@ router.put('/:isbn', (req, res) => {
       },
     }
   ).then(updatedBook => {
+    // Sends the updated book as a json response
     res.json(updatedBook)
   }).catch((err) => res.status(500).json(err));
 });
