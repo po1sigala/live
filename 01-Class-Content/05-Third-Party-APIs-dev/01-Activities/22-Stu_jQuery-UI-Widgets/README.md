@@ -8,26 +8,26 @@ Work with a partner to implement the following user stories:
 
 ## Acceptance Criteria
 
-* It's done when the form input for entering a skill has an autocomplete feature added to it to pick from a list of skills.
+Aim to meet the following acceptance criteria:
 
-* It's done when the form input for entering a date has a datepicker feature added to it to select by month and year.
+* It's done when the form input for entering a skill has an autocomplete feature added to it, to pick from a list of skills.
 
-## 📝 Note(s)
+* It's done when the form input for entering a date has a datepicker feature added to it, to select by month and year.
 
-Refer to the documentation: 
+## 📝 Notes
 
-[jQuery UI Docs](https://jqueryui.com/demos/)
+Refer to the following documentation: 
 
-## 💡 Hint(s)
+[jQuery UI Demos](https://jqueryui.com/demos/)
 
-* You will need to add an array of skills to use with the `Autocomplete` widget. For example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`. 
+## 💡 Hints
 
-* Look for "Display month & year menus" in the list of examples on the `Datepicker` widget page of the jQuery UI docs.
+* You will need to add an array of skills to use with the autocomplete widget (for example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`). 
+
+* Look for "Display month & year menus" in the list of examples on the datepicker widget page of the jQuery UI docs.
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-  * What build-in HTML feature can also help enforce a date? 
-
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+* What built-in HTML feature can also help enforce a date? Use [Google](https://www.google.com) or another search engine to answer the preceding question.

@@ -1,4 +1,4 @@
-# 📖 Create HTML elements with jQuery
+# 📖 Create HTML Elements with jQuery
 
 Work with a partner to implement the following user story:
 
@@ -6,11 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+Aim to meet the following acceptance criteria:
+
 * It's done when the page dynamically displays a quote by an author and the author's name on load.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
 [jQuery API Docs](https://api.jquery.com/)
 
@@ -18,11 +20,11 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![A quote followed by the author.](./Images/01-quote.png)  
+![A quote appears in blue text on a black background, with the author's name in white text on the next line.](./Images/01-quote.png)  
 
 ---
 
-## 💡 Hint(s) 
+## 💡 Hints
 
 * Don’t forget to add jQuery to `index.html` before you begin.
 
@@ -30,8 +32,6 @@ The following image demonstrates the web application's appearance and functional
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
   
-  * How can we add event listeners using jQuery?
-  
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+* How can we add event listeners using jQuery? Use [Google](https://www.google.com) or another search engine to answer this question.

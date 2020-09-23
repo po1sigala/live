@@ -2,9 +2,11 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to quickly put together a web page without having to write custom CSS.
+* As a developer, I want to be able to quickly put together a webpage without having to write custom CSS.
 
 ## Acceptance Criteria
+
+Aim to meet the following acceptance criteria:
 
 * It's done when the page has a styled navbar.
 
@@ -18,30 +20,28 @@ Work with a partner to implement the following user story:
 
 * It's done when the page has a styled card with a list, header, and footer.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
-[Bootstrap documentation for Components](https://getbootstrap.com/docs/4.5/components/)
+[Bootstrap Documentation for Components](https://getbootstrap.com/docs/4.5/components/)
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The solution shows a handful of Bootstrap components on top of one another to form a web page.](./Images/01-solved-screenshot.png)
+![A webpage features a styled form, list, card and navbar.](./Images/01-solved-screenshot.png)
 
 ---
 
-## 💡Hint(s)
+## 💡Hints
 
-* When in doubt, use the Bootstrap documentation links in the comments and Chrome DevTools to breakdown the classes and styles used!
+* When in doubt, use the Bootstrap documentation links in the comments and Chrome DevTools to break down the classes and styles used!
 
 * Look down the left-hand side of the Bootstrap documentation to see the different types of components.
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * How did Bootstrap come to be and how are CSS frameworks like it useful for developers?
-
-* Use [Google](https://www.google.com) or another search engine to research the above.
+* How did Bootstrap come to be, and how are CSS frameworks like it useful for developers? Use [Google](https://www.google.com) or another search engine to research this question.

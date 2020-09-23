@@ -8,6 +8,8 @@ Work with a partner to implement the following user stories:
 
 ## Acceptance Criteria
 
+Aim to meet the following acceptance criteria:
+
 * It's done when the main content on the page is centered horizontally and vertically on the page.
 
 * It's done when the background color of the page is dark.
@@ -16,28 +18,26 @@ Work with a partner to implement the following user stories:
 
 * It's done when the text color of the header on the page is white.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation (Look for Utilities in the left navigation menu): 
+Refer to the following documentation (look for Utilities in the left navigation menu): 
 
-[Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+[Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The solution shows the form is centered on the page with a dark background.](./Images/01-solved-screenshot.png)
+![A white form is centered on the page with a dark background.](./Images/01-solved-screenshot.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hint
 
 * Don't forget to use the previous examples and activities as a guide to how the classes can be used!
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-  * Using Chrome DevTools, what can you do to make this look more personalized? 
-  
-* Try updating some of the more generic styles to use different colors or font sizes.
+* Using Chrome DevTools, what can you do to make this look more personalized? Try updating some of the more generic styles to use different colors or font sizes.
