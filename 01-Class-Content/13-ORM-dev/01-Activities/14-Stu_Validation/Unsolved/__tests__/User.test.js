@@ -1,14 +1,40 @@
 const sequelize = require('../config/connection');
 const User = require('../models/User.js');
 
-test('Check for user validation', async () => {
-  const user = {
+test('Checks for null values', async () => {
+  const user1 = {};
+
+  const user2 = {
     username: 'test',
-    email: 'test@email.com',
-    password: 'pass',
+    email: 'test@test.com',
+    password: '1111111111111',
   };
-  const newUser = User.build(user);
-  const validatedUser = await newUser.validate();
-  console.log(validatedUser);
-  return expect(validatedUser).toBeDefined();
+
+  const newUser1 = User.build(user1);
+  const newUser2 = User.build(user2);
+
+  await expect(newUser1.validate()).rejects.toThrow('notNull');
+  await expect(newUser2.validate()).resolves.not.toThrow();
+});
+
+test('Checks for short passwords', async () => {
+  const user1 = {
+    username: 'test',
+    email: 'test@test.com',
+    password: '123',
+  };
+
+  const user2 = {
+    username: 'test',
+    email: 'test@test.com',
+    password: 'password123',
+  };
+
+  const newUser1 = User.build(user1);
+  const newUser2 = User.build(user2);
+
+  await expect(newUser1.validate()).rejects.toThrow(
+    'Validation len on password failed'
+  );
+  await expect(newUser2.validate()).resolves.not.toThrow();
 });

@@ -24,6 +24,8 @@ Refer to the documentation:
 
 * What are some built-in validators that we can use to accomplish this?
 
+* Run `npm run test` in your command line to run the unit tests. Use the tests to guide you.
+
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
