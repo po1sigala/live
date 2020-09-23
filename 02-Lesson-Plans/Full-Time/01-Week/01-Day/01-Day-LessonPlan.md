@@ -398,7 +398,7 @@
 
     * `git commit -m "Added a new file"` (This will tell Git to commit the changes and to include the comment "Added a new file.")
 
-    * `git push origin master` (This will tell Git to upload the code to GitHub.)
+    * `git push origin main` (This will tell Git to upload the code to GitHub.)
 
       ![2-GitDemo_8](Images/2-GitDemo_8.png)
 
