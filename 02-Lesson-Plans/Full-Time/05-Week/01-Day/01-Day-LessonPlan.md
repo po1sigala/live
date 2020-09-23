@@ -1,4 +1,4 @@
-# XX.X Full-Time Lesson Plan: Node.js, ES6 (Note: Full-Time Monday LP using PT odd unit's .1/.2 LPs)
+# 05.1 Full-Time Lesson Plan: Node.js, ES6
 
 ## Overview 
 
@@ -6,7 +6,7 @@ This lesson introduces Node.js and the new syntax that comes with ES6. This incl
 
 ## Instructor Notes
 
-* Complete activities `01-Ins_Node-Demo` through `10-Stu_TemplateLiterals`
+* Complete activities `01-Ins_Node-Demo` through `14-Stu_appendFile`
 
 * Students will be expected to have Node installed, but if they don't, be sure to empower them to know that they can install it using the resources found in `04-Important`. Installation steps are available for [Mac](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md).
 
