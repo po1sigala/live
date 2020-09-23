@@ -1,49 +1,49 @@
 const router = require('express').Router();
-const User = require('../../models/User.js');
+const Shopper = require('../../models/Shopper.js');
 
 
-// GET one user
+// GET one Shopper
 router.get('/:id', async (req, res) => {
     try {
-      const userData = await User.findByPk(req.params.id);
-      if (!userData) {
-        res.status(404).json({ message: 'No user with this id!' });
+      const shopperData = await Shopper.findByPk(req.params.id);
+      if (!shopperData) {
+        res.status(404).json({ message: 'No Shopper with this id!' });
         return;
       }
-      res.status(200).json(userData);
+      res.status(200).json(shopperData);
     } catch (err) {
       res.status(500).json(err);
     }
   });
 
 
-// POST create a new user
+// POST create a new Shopper
 router.post('/', async (req, res) => {
     try {
-      const userData = await User.create({
+      const shopperData = await Shopper.create({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
       });
-      res.status(200).json(userData);
+      res.status(200).json(shopperData);
     } catch (err) {
       res.status(400).json(err);
     }
   });
 
-// PUT update a user
+// PUT update a Shopper
 router.put('/:id', async (req, res) => {
     try {
-      const userData = await User.update(req.body, {
+      const shopperData = await Shopper.update(req.body, {
         where: {
           id: req.params.id,
         },
       });
-      if (!userData[0]) {
-        res.status(404).json({ message: 'No user with this id!' });
+      if (!shopperData[0]) {
+        res.status(404).json({ message: 'No Shopper with this id!' });
         return;
       }
-      res.status(200).json(userData);
+      res.status(200).json(shopperData);
     } catch (err) {
       res.status(500).json(err);
     }
