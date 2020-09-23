@@ -5,7 +5,7 @@ test('Check for user validation', async () => {
   const user = {
     username: 'test',
     email: 'test@email.com',
-    password: 'password123',
+    password: 'pass',
   };
   const newUser = User.build(user);
   const validatedUser = await newUser.validate();
