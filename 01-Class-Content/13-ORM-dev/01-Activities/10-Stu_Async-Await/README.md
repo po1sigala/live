@@ -24,4 +24,6 @@ If you have fully completed the above tasks, here is something you and your part
 
   * How could we run this seed file from an NPM script?
 
+  *  How would you work with multiple models in an index.js file?
+
 * Use [Google](https://www.google.com) or another search engine to research the above.
