@@ -1,10 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const { Sequelize } = require('../config/connection');
 
 class User extends Model {
 
-   /////TODO//////
+   canVote(age){
+       if (this.age > 17) {
+           return true
+       } else {
+           return false
+       }
+   }
 
 }
 
@@ -34,6 +41,9 @@ User.init(
         len: [4],
       },
     },
+    age: {
+        type: DataTypes.INTEGER
+    }
   },
   {
     hooks: {

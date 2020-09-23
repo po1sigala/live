@@ -9,7 +9,8 @@ router.post('/', async (req, res) => {
       const userData = await User.create({
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        age: req.body.age
       });
       res.status(200).json(userData);
     } catch (err) {
@@ -17,7 +18,29 @@ router.post('/', async (req, res) => {
     }
   });
 
-////////////////////TODO Add route for custom instance method//////////////
+//Route for instance method canVote
+
+router.post('/:id/canVote', async(req, res) => {
+    try {
+        const userData = await User.findByPk(req.params.id);
+        if (!userData) {
+          res.status(404).json({ message: 'No user with this id!' });
+          return;
+        }
+        
+        const canVote = await userData.canVote(req.body.age);
+            if (!canVote) {
+            res.status(400).json({ message: 'You are not quite old enough to vote yet!' });
+            return;
+            }
+         res.json({ message: 'You are old enough to vote!' });
+        
+      
+    } catch (err) {
+        res.status(400).json(err)
+    }
+  });
+
 
 // GET one user
 router.get('/:id', async (req, res) => {
