@@ -31,3 +31,7 @@ Refer to the following documentation:
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
 * What built-in HTML feature can also help enforce a date? Use [Google](https://www.google.com) or another search engine to answer the preceding question.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

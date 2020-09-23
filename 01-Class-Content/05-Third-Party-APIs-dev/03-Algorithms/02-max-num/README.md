@@ -27,3 +27,7 @@ Open [Unsolved/max-num.js](Unsolved/max-num.js) in your code editor&mdash;this i
   - Functions that PASS the tests will be denoted with a green check mark.
 
   - Functions that FAIL the tests will be denoted with a red X and an error message.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -29,3 +29,7 @@ Refer to the following documentation:
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
   
 * How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

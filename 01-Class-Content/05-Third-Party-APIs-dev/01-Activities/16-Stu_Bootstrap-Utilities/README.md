@@ -41,3 +41,7 @@ The following image demonstrates the web application's appearance and functional
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
 * Using Chrome DevTools, what can you do to make this look more personalized? Try updating some of the more generic styles to use different colors or font sizes.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

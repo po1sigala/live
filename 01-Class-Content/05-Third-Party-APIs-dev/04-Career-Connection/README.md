@@ -63,3 +63,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 ![Career Services online events logo](./assets/online-events.png)
 
 To learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

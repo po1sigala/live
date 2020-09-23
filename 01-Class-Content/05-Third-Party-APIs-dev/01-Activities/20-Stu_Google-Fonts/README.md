@@ -31,3 +31,7 @@ Refer to the following documentation:
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
 * How does Google develop their typography? You can read [Google’s design blog](https://design.google/library/google-fonts/) to learn more.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -45,3 +45,7 @@ The following image demonstrates the web application's appearance and functional
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
 * How did Bootstrap come to be, and how are CSS frameworks like it useful for developers? Use [Google](https://www.google.com) or another search engine to research this question.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -29,3 +29,7 @@ The following image demonstrates the web application's appearance and functional
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
 * What are some other UI frameworks that we could use? To get started, try [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind](https://tailwindcss.com/).
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
