@@ -24,7 +24,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/02-Advanced
 
 ## Heads-Up
 
-* Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during Office Hours. 
+* Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during office hours. 
 
 * Starting with the next unit, students will be solving algorithms that they are likely to see in technical interviews. It is recommended that you familiarize yourself with the weekly algorithm problems, so you can help students with any questions they might have&mdash;they're sure to have some!
 
