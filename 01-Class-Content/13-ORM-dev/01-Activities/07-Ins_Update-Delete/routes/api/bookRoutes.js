@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const Book = require('../../models/Book');
 
-// Updates book based on its book_id
-router.put('/:book_id', (req, res) => {
+// Updates book based on its isbn
+router.put('/:isbn', (req, res) => {
   //Calls the update method on the Book model
   Book.update(
     {
-      // All the fields you can update and the data attached to the req.body.
+      // All the fields you can update and the data attached to the request body.
       title: req.body.title,
       author: req.body.author,
       isbn: req.body.isbn,
@@ -15,31 +15,27 @@ router.put('/:book_id', (req, res) => {
       is_paperback: req.body.is_paperback,
     },
     {
-      // Gets a book based on the book_id given in the request parameters
+      // Gets the books based on the isbn given in the request parameters
       where: {
-        book_id: req.params.book_id,
+        isbn: req.params.isbn,
+        
       },
     }
   ).then(updatedBook => {
     res.json(updatedBook)
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+  }).catch((err) => res.status(500).json(err));
 });
 
-// Delete route for a book with a matching book_id
-router.delete('/:book_id', (req, res) => {
-  // Looks for the books based book_id given in the request parameters
+// Delete route for a book with a matching isbn
+router.delete('/:isbn', (req, res) => {
+  // Looks for the books based on isbn given in the request parameters.
   Book.destroy({
     where: {
-      book_id: req.params.book_id,
+      isbn: req.params.isbn,
     },
-  })
-    .then((deletedBook) => {
-      res.json(deletedBook);
-    })
-    .catch((err) => res.status(500).json(err));
+  }).then(deletedBook => {
+    res.json(deletedBook)
+  }).catch((err) => res.status(500).json(err));
 });
 
 router.post('/seed', (req, res) => {
