@@ -33,3 +33,6 @@ The following image demonstrates the web application's appearance:
   * What is Normalize.css and how does it affect different browsers?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

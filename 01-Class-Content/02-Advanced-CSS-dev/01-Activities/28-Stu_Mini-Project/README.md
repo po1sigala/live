@@ -51,3 +51,6 @@ In this activity, you will work with a group to build a web page to hold a colle
 ## 🏆 Bonus
 
 * Set this project up in your own GitHub repositories so you can deploy and use it for future reference!
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

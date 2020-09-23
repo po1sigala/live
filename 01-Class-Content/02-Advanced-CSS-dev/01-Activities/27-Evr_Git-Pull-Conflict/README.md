@@ -29,9 +29,9 @@ This specific type of conflict is not as common as others you will face througho
 
 ### Update the Local README File
 
-* Let's update our project's `README.md` file. Go ahead and open it in your VSCode editor. You should see something like this image with some slight differences depending on your VSCode configuration:
+* Let's update our project's `README.md` file. Go ahead and open it in your VS Code editor. You should see something like this image with some slight differences depending on your VS Code configuration:
 
-  ![The VSCode editor screen shows our README file open with the title of the repo in header text](./Images/03-vscode-start.png)
+  ![The VS Code editor screen shows our README file open with the title of the repo in header text](./Images/03-vscode-start.png)
 
 * As of right now, there should just be the name of the repository listed using `#`, which is the markdown equivalent of an HTML `<h1>` element. Let's add some more to this file so there's a change to be tracked by Git. Add the following markdown text to the `README.md` file below what's already there:
 
@@ -41,7 +41,7 @@ This specific type of conflict is not as common as others you will face througho
   All of this content added to the README file has been added from my local Git repository.
   ```
 
-* The result should look like this image in VSCode:
+* The result should look like this image in VS Code:
 
   ![Our README file now has more text to help indicate some updates were made locally](./Images/04-vscode-updated.png)
 
@@ -63,7 +63,7 @@ This specific type of conflict is not as common as others you will face througho
   All of this content added to the README file has been added from my remote GitHub repository.
   ```
 
-* Notice how the text content is slightly different from what we added locally through VSCode? This will help us differentiate which content came from where when we see our eventual merge conflict.
+* Notice how the text content is slightly different from what we added locally through VS Code? This will help us differentiate which content came from where when we see our eventual merge conflict.
 
 * Let's commit this change to our GitHub repository, move a bit lower down the page and leave a commit title such as `Updated README.md on GitHub` and press the "Commit Changes" button. The page should look like this image before pressing the button:
 
@@ -75,7 +75,7 @@ This specific type of conflict is not as common as others you will face througho
 
 ### Create Merge Conflict
 
-* Navigate back to your local Git repository in VSCode and make sure the file is saved.
+* Navigate back to your local Git repository in VS Code and make sure the file is saved.
 
 * Once the file is saved, we want to use `git add`  and `git commit` commands from the command line track and save our local work. If we didn't, we wouldn't be allowed to pull the updated content from GitHub into our local repository because we haven't committed our changed files. From your repository's location in the command line, enter the following commands:
 
@@ -103,21 +103,21 @@ This specific type of conflict is not as common as others you will face througho
 
 ### Resolve Merge Conflict
 
-* VSCode makes it easy for us to find and identify where our merge conflicts occur. Let's open it back up to view our `README.md` file again. You should see something like this image:
+* VS Code makes it easy for us to find and identify where our merge conflicts occur. Let's open it back up to view our `README.md` file again. You should see something like this image:
 
-  ![VSCode shows us where a merge conflict occurred in our content in a clean and organized way](./Images/07-vscode-conflict.png)
+  ![VS Code shows us where a merge conflict occurred in our content in a clean and organized way](./Images/07-vscode-conflict.png)
 
 * Notice the interesting syntax added to our file? That's added by Git when there's a conflict, it first lists what code is in the `HEAD`, which is their way of saying the most up-to-date content that's local. Then, after the dividing line of equal signs `=======`, is the `Incoming Change` which came from the GitHub remote when we ran `git pull`. 
 
-  > **Important:** VSCode adds in the extra color block highlighting and options. If you weren't using VSCode, it may be a more manual process to address the conflicting code. 
+  > **Important:** VS Code adds in the extra color block highlighting and options. If you weren't using VS Code, it may be a more manual process to address the conflicting code. 
 
 * Now this is where you, the developer, need to make a decision: **Which block of code is correct?**
 
 * There isn't one clear answer to this, so it's important you critically think about each block and decide which one is to be kept. If you're on a team working on this, it's doubly important you communicate the conflict to them and come to a decision together. You can even choose to keep both blocks of code if you feel it's correct, though that is more unlikely to happen.
 
-* Once you have determined which content should remain, you can use VSCode's options to "Accept Current Change" (which is what you have locally), "Accept Incoming Change" (which is what came from the GitHub repository), or "Accept Both Changes" (which will merge both together). For this case, let's choose the first option to "Accept Current Change". The result should look like this image:
+* Once you have determined which content should remain, you can use VS Code's options to "Accept Current Change" (which is what you have locally), "Accept Incoming Change" (which is what came from the GitHub repository), or "Accept Both Changes" (which will merge both together). For this case, let's choose the first option to "Accept Current Change". The result should look like this image:
 
-  ![VSCode now shows the content of the README file with the chosen content to remain](./Images/08-vscode-conflictresolution.png)
+  ![VS Code now shows the content of the README file with the chosen content to remain](./Images/08-vscode-conflictresolution.png)
 
 * Great, you just handled a merge conflict! All we have to do now is save your file, commit the fixed code, and push it to GitHub, using the following commands:
 
@@ -129,12 +129,15 @@ This specific type of conflict is not as common as others you will face througho
 
 * To recap what happened here, we purposely created a diverging timeline for the content in the `README.md` file. When we attempted to sync the two, Git didn't know which one was correct, so it prompted us that there is a conflict and we must resolve it. Upon resolution, we commit and push our code and can move on with our work.
 
-* As it's been said, merge conflicts come with the territory of using version control and working with others on an application. Despite the negative term "conflict" being used, it's actually a good thing Git warns us and prompts us to do something about it, because it would be a very bad situation if Git decided to just automatically merge everything together or overwrite content we don't want to use anymore.
+* As it's been said, merge conflicts fall with the territory of using version control and working with others on an application. Despite the negative term "conflict," it's actually a good thing that Git warns us and prompts us to do something about it, because it would be a very bad situation if Git decided to just automatically merge everything together or overwrite content we don't want to use anymore.
 
-* The most important thing to take away from handling merge conflicts is that you will get through it with patience. Take a minute to diagnose where things went wrong and come to a decision on how you want to handle it. It will also help identify any problems with your overall workflow if you continuously run into merge conflicts, as it means there is poor communication and organization amongst you and your team.
+* The most important thing to take away from handling merge conflicts is that you will get through it with patience. Take a minute to diagnose where things went wrong and come to a decision on how you want to handle it. It will also help identify any problems with your overall workflow if you continuously run into merge conflicts, as it means there is poor communication and organization among you and your team.
 
 ### Hints
 
 * Ask an instructor or TA if you get stuck or have any questions!
 
-* Check the [Atlassian Guide on Merge Conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) for reference.
+* Check the [Atlassian guide on Git merge conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) for reference.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

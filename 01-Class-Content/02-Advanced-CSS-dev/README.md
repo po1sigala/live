@@ -36,16 +36,6 @@ You will be employer-ready if you are able to:
 
 * Resolve a merge conflict that results from a `git pull`
 
-## Comprehension Check
-
-You will be employer-ready if you can answer the following questions:
-
-1. What is a Git merge conflict and how do you resolve it?
-
-2. What are media queries and how do they work?
-
-3. What CSS techniques can be used to customize form elements?
-
 ## Homework
 
 For your homework this week, you will use HTML and advanced CSS techniques to build a responsive, mobile-friendly portfolio web app.

@@ -32,8 +32,9 @@ The following image demonstrates the web application's appearance:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-  * What are vendor prefixes and how are they useful?
+* What are vendor prefixes and how are they useful? Use [Google](https://www.google.com) or another search engine to research this.
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -25,3 +25,6 @@ Work with a partner to implement the following user story:
   * What does the term DRY mean in web development?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -4,7 +4,7 @@
 
 In this unit, students will implement media queries and flexbox to create a responsive web design. Students will also overwrite browser defaults by using a CSS reset and then rebuild those styles using advanced CSS concepts, such as pseudo-classes and pseudo-elements.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/02-Advanced-CSS/README.md) for detailed information on key topics, learning objectives, and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/02-Advanced-CSS/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 

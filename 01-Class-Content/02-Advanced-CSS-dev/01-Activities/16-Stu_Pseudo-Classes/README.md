@@ -43,3 +43,6 @@ You can use the following resource links for the content:
   * How can you force pseudo-class styles to display using the Chrome DevTools?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
