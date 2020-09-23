@@ -30,7 +30,9 @@ The following image demonstrates the web application's appearance:
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-* What e-commerce websites can you find that are using flexbox properties to help organize their components and layouts? Use [Google](https://www.google.com) or another search engine to research this.
+* What e-commerce websites can you find that are using flexbox properties to help organize their components and layouts? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -34,7 +34,9 @@ The following image demonstrates the web application's appearance:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How do selectors affect CSS performance? Use [Google](https://www.google.com) or another search engine to research this.
+* How do selectors affect CSS performance? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

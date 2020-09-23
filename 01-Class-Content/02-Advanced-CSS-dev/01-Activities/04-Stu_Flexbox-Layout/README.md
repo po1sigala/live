@@ -30,7 +30,9 @@ The following image demonstrates the web application's appearance:
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-* By default, flexbox runs in rows, left to right. In what other directions could it run? Use [Google](https://www.google.com) or another search engine to research this.
+* By default, flexbox runs in rows, left to right. In what other directions could it run? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -50,6 +50,8 @@ In this activity, you will work with a group to build a web page to hold a colle
 
 ## 🏆 Bonus
 
+If you have completed the activity and want to further your knowledge, work through the following challenge: 
+
 * Set this project up in your own GitHub repositories so you can deploy and use it for future reference!
 
 ---

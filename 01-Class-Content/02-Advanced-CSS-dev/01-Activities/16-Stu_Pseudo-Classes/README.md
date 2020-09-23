@@ -38,11 +38,11 @@ You can use the following resource links for the content:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-  * How can you force pseudo-class styles to display using the Chrome DevTools?
+* How can you force pseudo-class styles to display using the Chrome DevTools?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
