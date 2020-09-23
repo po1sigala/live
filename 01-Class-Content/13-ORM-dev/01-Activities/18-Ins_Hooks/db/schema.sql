@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS shopper_db;
+
+CREATE DATABASE shopper_db;
