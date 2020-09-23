@@ -12,7 +12,7 @@ As a developer, I want to link an external JavaScript file to an existing `index
 
 Refer to the documentation: 
 
-[MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+[MDN web docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 [Open Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
 ## 💡 Hint

@@ -6,7 +6,7 @@ In this activity, you will work with a partner to use MDN documentation to resea
 
 * Be sure to work with your partner!
 
-* Navigate to the [MDN Web Docs: Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) in your browser.
+* Navigate to the [MDN web docs on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) in your browser.
 
 * Open [20-Stu_Methods/Unsolved/script.js]() in your IDE and examine the code.
 
