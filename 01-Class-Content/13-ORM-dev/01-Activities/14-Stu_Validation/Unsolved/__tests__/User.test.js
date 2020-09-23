@@ -13,9 +13,7 @@ test('Checks for null values', async () => {
   const newUser1 = User.build(user1);
   const newUser2 = User.build(user2);
 
-  // expects errors
   await expect(newUser1.validate()).rejects.toThrow('notNull');
-  // expects no errors
   await expect(newUser2.validate()).resolves.not.toThrow();
 });
 
@@ -35,10 +33,8 @@ test('Checks for short passwords', async () => {
   const newUser1 = User.build(user1);
   const newUser2 = User.build(user2);
 
-  // expects errors
   await expect(newUser1.validate()).rejects.toThrow(
     'Validation len on password failed'
   );
-  // expects no errors
   await expect(newUser2.validate()).resolves.not.toThrow();
 });
