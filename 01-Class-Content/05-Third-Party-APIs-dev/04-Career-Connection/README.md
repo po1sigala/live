@@ -4,11 +4,11 @@
 
 ![Career Services Logo](./assets/cs_logo.png#right)
 
-Welcome to another Career Connection! And congratulations on completing even more intense material during which jQuery became a new friend. You might come across articles that question whether anyone should still learn jQuery in this day and age. However, while some folks might regard jQuery as a relic of the early 2000s, many websites around the world still use it. In fact, if you search for jQuery on [Indeed.com](https://indeed.com/), you'll find a lot of related jobs! 
+Welcome to another Career Connection! And congratulations on completing even more intense material, during which jQuery became a new friend. 
 
-Why do people still use jQuery even though much newer technologies are available? Companies have invested in jQuery for years, and many still use systems written with it. Refactoring these into newer frameworks would be costly, and often unnecessary because the systems work and developers are comfortable with the codebase.
+You might come across articles that question whether anyone should still learn jQuery in this day and age. Although jQuery was originally developed to do what JavaScript couldn't, by now JavaScript has developed and introduced many of the features that popularized jQuery. 
 
-jQuery was originally developed to do what JavaScript couldn't. Over the years, however, JavaScript has developed and introduced many of the features that popularized jQuery. So a big reason for jQuery's decrease in popularity is simply due to JavaScript's maturity.
+However, while some folks might regard jQuery as a relic of the early 2000s, many websites around the world still use it. Companies have invested in jQuery for years, and many still use systems written with it. Refactoring these into newer frameworks would be costly and often unnecessary, because the systems work and the developers are comfortable with the codebase.
 
 You might ask why, as a new developer, you can't use newer frameworks. You can! But even if your first development job allows you to write programs using newer frameworks, you might find yourself having to maintain or write new features for legacy jQuery applications. Or you might end up working for a company that still actively uses jQuery.
 
@@ -16,7 +16,7 @@ At the end of the day, jQuery can still make a website more dynamic with beautif
 
 ### Becoming Employer-Competitive
 
-Now, take these two steps to make yourself more employer-competitive:
+Now take these two steps to make yourself more employer-competitive:
 
 #### Step #1: Use jQuery in Your Portfolio
 
@@ -34,7 +34,7 @@ As we always do, let's take a minute to prepare for your future as a full-stack 
 
 Head over to [LinkedIn Jobs](https://www.linkedin.com/jobs/). Poke around a bit to get comfortable with the site. Then complete the following tasks:
 
-1. Search `jquery` in your current location.
+1. Search for jQuery jobs in your current location.
 
 2. Note the number of search results returned.
 
@@ -44,22 +44,22 @@ Head over to [LinkedIn Jobs](https://www.linkedin.com/jobs/). Poke around a bit 
 
 Many companies use algorithm questions during the technical interview. We strongly recommend that you practice for these. Doing so will prepare you to handle some of the most common questions in an interview or promotion discussion. 
 
-Please refer to the class repository to find these algorithms:
+Please refer to the class repository to find the following algorithms:
 
-- Coding Algorithm #1: FizzBuzz
+- Coding Algorithm #1: Fizz Buzz
 
 - Coding Algorithm #2: Max Num
 
 - Coding Algorithm #3: Vowel Count
 
-For practice in a live, interview-style IDE complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
-
-Once you start, you'll have 7 days to complete it. After the 7 days has elapsed, the challenge will close.
+For practice in a live, interview-style IDE complete the following algorithm challenge.
 
 - CodeSignal Algorithm: [Reverse Sentence](https://app.codesignal.com/public-test/qL7KK4o6KBSgmdqBw/rDz464zXxdE6dx)
+
+Once you start, you'll have seven days to complete it. After seven days, the challenge will close. The solution will be discussed in the weekly recommended session.
 
 ### Career Services Events
 
 ![Career Services online events logo](./assets/online-events.png)
 
-If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+To learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
