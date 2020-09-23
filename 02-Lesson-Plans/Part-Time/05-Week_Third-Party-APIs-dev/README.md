@@ -2,37 +2,37 @@
 
 ## Overview
 
-In this unit, you will implement CDNs to leverage third-party APIs, such as CSS frameworks, JavaScript libraries, and custom fonts. You will use jQuery to perform DOM manipulation, implement Bootstrap and Google Fonts, and introduce jQuery UI and Moment.js.
+In this unit, you will implement CDNs to leverage third-party APIs, like CSS frameworks, JavaScript libraries, and custom fonts. You will use jQuery to perform DOM manipulation, implement Bootstrap and Google Fonts, and introduce jQuery UI and Moment.js.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/05-Third-Party-APIs/README.md) for detailed information on key topics, learning objectives and homework.
+  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/05-Third-Party-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-* Expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
+* Expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to use the syntax as is.
 
-* Take a few moments before class to get familiar both the [Bootstrap](https://getbootstrap.com) and [Google Fonts](https://fonts.google.com) documentation, as students will rely heavily on them in class and may need a nudge in finding answers.
+* Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
 
-* The 05.3 LP includes an `Everyone Do: Git` activity. If the students struggle with that activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
+* The 05.3 lesson plan includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
+Remind students that they can find related Career Services material in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-Next unit, we will work with Server-Side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects this unit.
+Next unit will cover server-side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects during this unit.
 
 ## Helpful Links
 
 ### Lesson Plans
 
-* [05.1 - Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
+* [05.1 Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
 
-* [05.2 - Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
+* [05.2 Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
 
-* [05.3 - Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
+* [05.3 Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
@@ -44,11 +44,11 @@ Next unit, we will work with Server-Side APIs. It is recommended that you try to
 
 ### Algorithms
 
-* [01-fizz-buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+* [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
 
-* [02-max-num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+* [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
 
-* [03-vowel-count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+* [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
 ### Resources
 
