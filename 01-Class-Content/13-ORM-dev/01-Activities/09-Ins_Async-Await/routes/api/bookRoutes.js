@@ -10,6 +10,12 @@ router.get('/', async (req, res) => {
   return res.json(bookData);
 });
 
+router.post('/', async (req, res) => {
+  const bookData = await Book.create(req.body);
+
+  return res.json(bookData);
+});
+
 router.get('/paperbacks', async (req, res) => {
   const bookData = await Book.findAll({
     order: ['title'],
