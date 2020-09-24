@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 class User extends Model {
 
-  //TODO: ADD YOUR CODE HERE
+  //TODO: Add your instance method here *check the login route in userRoutes for a hint about what you should call this method*
 
 }
 

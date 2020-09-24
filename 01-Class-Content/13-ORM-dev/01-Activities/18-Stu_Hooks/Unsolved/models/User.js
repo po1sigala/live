@@ -34,7 +34,7 @@ User.init(
   },
   {
       
-  ////Your Code Here//////
+  ////TODO: Add hooks here//////
 
     sequelize,
     timestamps: false,
