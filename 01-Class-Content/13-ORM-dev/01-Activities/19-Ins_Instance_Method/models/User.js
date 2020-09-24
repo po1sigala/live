@@ -1,8 +1,19 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const { Sequelize } = require('../config/connection');
 
-class User extends Model {}
+class User extends Model {
+
+  canVote(age) {
+    if (this.age > 17) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+}
 
 User.init(
   {
@@ -30,15 +41,23 @@ User.init(
         len: [4],
       },
     },
+    age: {
+      type: DataTypes.INTEGER
+    }
   },
   {
     hooks: {
-    
-      beforeCreate(newShopperData) {
-        newShopperData.email = newShopperData.email.toLowerCase();
-        return newShopperData;
-      }
-      
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
+      },
     },
     sequelize,
     timestamps: false,
@@ -49,4 +68,3 @@ User.init(
 );
 
 module.exports = User;
-
