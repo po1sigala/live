@@ -33,13 +33,19 @@ User.init(
     },
   },
   {
+    //Add hooks here, in the init() method
     hooks: {
-    
+      //Use the beforeCreate hook to work with data before a new instance is created
       beforeCreate(newUserData) {
+        //In this case, we are taking the user's email address, and making all letters lower case before adding it to the datadase.
         newUserData.email = newUserData.email.toLowerCase();
         return newUserData;
-      }
-      
+      },
+      //Here, we use the beforeUpdate hook to make all of the characters lower case in an updated email address, before updating the database.
+       beforeUpdate(newUserData) {
+        newUserData.email = newUserData.email.toLowerCase();
+        return newUserData;
+       }
     },
     sequelize,
     timestamps: false,
