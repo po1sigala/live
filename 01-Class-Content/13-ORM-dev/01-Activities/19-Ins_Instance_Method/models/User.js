@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt');
 const { Sequelize } = require('../config/connection');
 
 class User extends Model {
-
   canVote(age) {
     if (this.age > 17) {
       return true
@@ -12,7 +11,6 @@ class User extends Model {
       return false
     }
   }
-
 }
 
 User.init(
