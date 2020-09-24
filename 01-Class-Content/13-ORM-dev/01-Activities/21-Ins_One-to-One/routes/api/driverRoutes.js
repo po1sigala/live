@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Driver } = require('../../models');
 
+// GET all drivers
 router.get('/', async (req, res) => {
   try {
     const driverData = await Driver.findAll();
@@ -10,6 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET a single driver
 router.get('/:id', async (req, res) => {
   try {
     const driverData = await Driver.findByPk(req.params.id);

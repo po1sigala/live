@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { License } = require('../../models');
 
+// GET all licenses
 router.get('/', async (req, res) => {
   try {
     const licenseData = await License.findAll();
@@ -10,6 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET a single license
 router.get('/:id', async (req, res) => {
   try {
     const licenseData = await License.findByPk(req.params.id);

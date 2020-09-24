@@ -16,16 +16,6 @@ Work with a partner to add comments describing the functionality of the code fou
 
   * [Sequelize docs on associations](https://sequelize.org/master/manual/assocs.html)
 
-* To see this in action:
-
-  * Create the database using the values in `db/schema.sql`
-
-  * Change `.env.EXAMPLE` to `.env` and fill in needed environment variable values
-
-  * Run `npm install` and then `node seeds/seed.js` to seed data
-
-  * Make a GET request to `localhost:3001/api/readers` or `localhost:3001/api/cards` in Chrome or Insomnia
-
 ---
 
 ## 🏆 Bonus

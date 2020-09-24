@@ -16,11 +16,11 @@ LibraryCard.init(
       type: DataTypes.UUID,
       defaultValue: UUIDV4,
     },
-    // What is this column going to hold information for?
+    // TODO: Add a comment describing what this column holds information for 
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
-        // Where does `reader` come from?
+        // TODO: Add a comment describing where `reader` comes from
         model: 'reader',
         key: 'id',
       },

@@ -2,6 +2,7 @@ const router = require('express').Router();
 // use object destructuring to import our two models by name
 const { LibraryCard, Reader } = require('../../models');
 
+// GET all cards
 router.get('/', async (req, res) => {
   try {
     // find all library cards and perform a JOIN to include all associated Readers
@@ -14,18 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
-  try {
-    // Since the model will create a unique UUID value by default, we just need to provide the `id` of the Reader that will own this card
-    const locationData = await LibraryCard.create({
-      reader_id: req.body.reader_id,
-    });
-    res.status(200).json(locationData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
+// GET a single card
 router.get('/:id', async (req, res) => {
   try {
     const libraryCardData = await LibraryCard.findByPk(req.params.id, {
@@ -43,6 +33,20 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// CREATE a card
+router.post('/', async (req, res) => {
+  try {
+    // Since the model will create a unique UUID value by default, we just need to provide the `id` of the Reader that will own this card
+    const locationData = await LibraryCard.create({
+      reader_id: req.body.reader_id,
+    });
+    res.status(200).json(locationData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// DELETE a card
 router.delete('/:id', async (req, res) => {
   try {
     const libraryCardData = await LibraryCard.destroy({
