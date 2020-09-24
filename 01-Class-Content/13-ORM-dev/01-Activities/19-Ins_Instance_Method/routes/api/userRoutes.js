@@ -2,6 +2,19 @@ const router = require('express').Router();
 const User = require('../../models/User.js');
 
 
+// GET one user
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+    if (!userData) {
+      res.status(404).json({ message: 'No user with this id!' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // POST create a new user
 router.post('/', async (req, res) => {
@@ -40,23 +53,6 @@ router.post('/:id/canVote', async(req, res) => {
         res.status(400).json(err)
     }
   });
-
-
-// GET one user
-router.get('/:id', async (req, res) => {
-    try {
-      const userData = await User.findByPk(req.params.id);
-      if (!userData) {
-        res.status(404).json({ message: 'No user with this id!' });
-        return;
-      }
-      res.status(200).json(userData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
-
 
 // PUT update a user
 router.put('/:id', async (req, res) => {
