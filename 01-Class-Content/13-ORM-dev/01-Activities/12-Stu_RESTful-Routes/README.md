@@ -4,17 +4,21 @@ Work with a partner to resolve the following issue(s):
 
 * As a developer, I want to see proper HTTP status codes returned so I can be aware of any errors.
 
+* As a developer, I want to use `try/catch` to properly catch errors when using `async/await`.
+
 ## Expected Behavior
 
-* When there is an error with the request, the 500 status code is returned.
+* When there is no error with the request, the 200 status code is returned.
 
-* When there is an error with the syntax, the 400 status code is returned.
+* When there is an internal server error, the 500 status code is returned.
+
+* When there is an error with the request, the 400 status code is returned.
 
 * When a user does not exist in the database, the 404 status code is returned along with a message "No user found with this id!".
 
 ## Actual Behavior
 
-* When there is an error with the request or if the user does not exist in the database, the 200 status code is returned.
+* Whether there is an error with the request or if the user does not exist in the database, the 200 status code is returned.
 
 ## Steps to Reproduce the Problem
 
@@ -38,7 +42,7 @@ The following code block demonstrates the expected JSON response:
 
 ## 💡 Hint(s)
 
-* What do the various HTTP status codes mean and how can we return it?
+* How do we return HTTP status codes?
 
 ## 🏆 Bonus
 
