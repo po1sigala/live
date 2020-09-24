@@ -14,6 +14,7 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
+      allowNull:false,
     },
     email: {
       type: DataTypes.STRING,
@@ -33,7 +34,7 @@ User.init(
   },
   {
       
-  ////Your Code Here//////
+  ////TODO: Add hooks here//////
 
     sequelize,
     timestamps: false,
