@@ -1,23 +1,25 @@
 const router = require('express').Router();
 const Book = require('../../models/Book');
 
+// GET all books
 router.get('/', (req, res) => {
-  // What does this method do?
+  // TODO: Add a comment describing the functionality of this method
   Book.findAll().then((bookData) => {
     res.json(bookData);
   });
 });
 
+// GET all paperback books
 router.get('/paperbacks', (req, res) => {
   Book.findAll({
-    // What does this option do?
+    // TODO: Add a comment describing the functionality of this property
     order: ['title'],
+    // TODO: Add a comment describing the functionality of this property
     where: {
-      // What does this option do?
       is_paperback: true
     },
     attributes: {
-      // What does this option do?
+      // TODO: Add a comment describing the functionality of this property
       exclude: ['is_paperback', 'edition']
     }
   }).then((bookData) => {
@@ -25,13 +27,15 @@ router.get('/paperbacks', (req, res) => {
   });
 });
 
+// GET a single book
 router.get('/:id', (req, res) => {
-  // What does this method do?
+  // TODO: Add a comment describing the functionality of this method
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);
   });
 });
 
+// CREATE a book
 router.post('/', (req, res) => {
   Book.create(req.body)
     .then((newBook) => {
@@ -42,6 +46,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// CREATE multiple books
 router.post('/seed', (req, res) => {
   Book.bulkCreate([
     {

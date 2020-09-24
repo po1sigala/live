@@ -3,6 +3,7 @@ const router = require('express').Router();
 // Import the model
 const Book = require('../../models/Book');
 
+// CREATE a book
 router.post('/', (req, res) => {
   // Use Sequelize's `create()` method to add a row to the table
   // Similar to `INSERT INTO` in plain SQL
@@ -20,6 +21,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// CREATE multiple books
 router.post('/seed', (req, res) => {
   // Multiple rows can be created at once with `bulkCreate()` and an array
   Book.bulkCreate([
