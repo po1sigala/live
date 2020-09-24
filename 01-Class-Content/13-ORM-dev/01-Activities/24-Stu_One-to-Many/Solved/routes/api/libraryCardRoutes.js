@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { LibraryCard, Reader } = require('../../models');
 
+// GET all cards
 router.get('/', async (req, res) => {
   try {
     const libraryCardData = await LibraryCard.findAll({
@@ -12,17 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
-  try {
-    const locationData = await LibraryCard.create({
-      reader_id: req.body.reader_id,
-    });
-    res.status(200).json(locationData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
+// GET a single card
 router.get('/:id', async (req, res) => {
   try {
     const libraryCardData = await LibraryCard.findByPk(req.params.id, {
@@ -40,6 +31,19 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// CREATE a card
+router.post('/', async (req, res) => {
+  try {
+    const locationData = await LibraryCard.create({
+      reader_id: req.body.reader_id,
+    });
+    res.status(200).json(locationData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// DELETE a card
 router.delete('/:id', async (req, res) => {
   try {
     const libraryCardData = await LibraryCard.destroy({

@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Driver, Car } = require('../../models');
+const { Driver, License, Car } = require('../../models');
 
 // GET all drivers
 router.get('/', async (req, res) => {
   try {
     const driverData = await Driver.findAll({
-      include: [{ model: Car }],
+      include: [{ model: License }, { model: Car }],
       attributes: {
         include: [
           [
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const driverData = await Driver.findByPk(req.params.id, {
-      include: [{ model: Car }],
+      include: [{ model: License }, { model: Car }],
       attributes: {
         include: [
           [

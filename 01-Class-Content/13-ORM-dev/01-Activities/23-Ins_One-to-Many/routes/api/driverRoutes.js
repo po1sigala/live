@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Driver, Car } = require('../../models');
+const { Driver, License, Car } = require('../../models');
 
 // GET all drivers
 router.get('/', async (req, res) => {
   try {
     const driverData = await Driver.findAll({
-      include: [{ model: Car }],
+      include: [{ model: License }, { model: Car }],
     });
     res.status(200).json(driverData);
   } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const driverData = await Driver.findByPk(req.params.id, {
-      include: [{ model: Car }],
+      include: [{ model: License }, { model: Car }],
     });
 
     if (!driverData) {
