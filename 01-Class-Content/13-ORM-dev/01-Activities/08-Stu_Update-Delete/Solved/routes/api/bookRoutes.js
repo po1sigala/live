@@ -20,12 +20,14 @@ router.put('/:book_id', (req, res) => {
         book_id: req.params.book_id,
       },
     }
-  ).then(updatedBook => {
-    res.json(updatedBook)
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+  )
+    .then((updatedBook) => {
+      res.json(updatedBook);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
 });
 
 // Delete route for a book with a matching book_id
@@ -39,7 +41,7 @@ router.delete('/:book_id', (req, res) => {
     .then((deletedBook) => {
       res.json(deletedBook);
     })
-    .catch((err) => res.status(500).json(err));
+    .catch((err) => res.json(err));
 });
 
 router.post('/seed', (req, res) => {

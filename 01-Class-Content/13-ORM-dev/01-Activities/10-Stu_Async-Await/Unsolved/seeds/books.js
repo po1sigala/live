@@ -6,7 +6,7 @@ const Library = require('../models/Library');
 const bookSeedData = require('./bookSeedData.json');
 const librarySeedData = require('./librarySeedData.json');
 
-// @TODO Use async / await to Refactor the seedDatabase function below
+// TODO Use async / await to Refactor the seedDatabase function below
 const seedDatabase = () => {
   return sequelize.sync({ force: true }).then(() => {
     Book.bulkCreate(bookSeedData).then(() => {

@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const Book = require('../../models/Book');
 
-//@TODO finish the PUT route to UPDATE a book in the database with a matching book_id
+// TODO finish the PUT route to UPDATE a book in the database with a matching book_id
 router.put('/:book_id', (req, res) => {
   
   
 });
 
-//@TODO finish the DELETE route to DELETE a book in the database with a matching book_id
+// TODO finish the DELETE route to DELETE a book in the database with a matching book_id
 router.delete('/:book_id', (req, res) => {
   
 });

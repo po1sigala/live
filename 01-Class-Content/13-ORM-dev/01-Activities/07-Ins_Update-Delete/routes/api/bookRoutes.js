@@ -3,7 +3,7 @@ const Book = require('../../models/Book');
 
 // Updates book based on its isbn
 router.put('/:isbn', (req, res) => {
-  //Calls the update method on the Book model
+  // Calls the update method on the Book model
   Book.update(
     {
       // All the fields you can update and the data attached to the request body.
@@ -18,13 +18,14 @@ router.put('/:isbn', (req, res) => {
       // Gets the books based on the isbn given in the request parameters
       where: {
         isbn: req.params.isbn,
-        
       },
     }
-  ).then(updatedBook => {
-    // Sends the updated book as a json response
-    res.json(updatedBook)
-  }).catch((err) => res.status(500).json(err));
+  )
+    .then((updatedBook) => {
+      // Sends the updated book as a json response
+      res.json(updatedBook);
+    })
+    .catch((err) => res.json(err));
 });
 
 // Delete route for a book with a matching isbn
@@ -34,9 +35,11 @@ router.delete('/:isbn', (req, res) => {
     where: {
       isbn: req.params.isbn,
     },
-  }).then(deletedBook => {
-    res.json(deletedBook)
-  }).catch((err) => res.status(500).json(err));
+  })
+    .then((deletedBook) => {
+      res.json(deletedBook);
+    })
+    .catch((err) => res.json(err));
 });
 
 router.post('/seed', (req, res) => {

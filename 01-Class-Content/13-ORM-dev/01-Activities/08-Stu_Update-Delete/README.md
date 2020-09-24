@@ -6,9 +6,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when a book can be updated based on specific parametors (e.g. 'numberOfPges').
+* It's done when a book can be updated based on specific parameters (e.g. 'numberOfPges').
 
-* It's done when a book can be deleted based on specific parametors (e.g. 'bookid').
+* It's done when a book can be deleted based on specific parameters (e.g. 'bookid').
 
 ---
 
