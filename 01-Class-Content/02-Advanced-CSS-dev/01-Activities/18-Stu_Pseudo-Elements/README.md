@@ -6,23 +6,25 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+Aim to meet the following acceptance criteria:
+
 * It's done when special keywords are underlined and change the cursor to a hand icon when the user hovers over them.
 
-* It's done when the user hovers over a keyword, and a rectangular tooltip appears next to the keyword.
+* It's done when the user hovers over a keyword and a rectangular tooltip appears next to the keyword.
 
-  * For example, if the keyword is "Cascading Style Sheets," the tooltip would say "Commonly known as CSS."
+  * For example, if the keyword is "Cascading Style Sheets," the tooltip would say, "Commonly known as CSS."
 
-* It's done when the tooltip has the same background color and text color as the header and navbar items.
+  * It's done when the tooltip has the same background color and text color as the header and navbar items.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
-[MDN web docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
+[MDN Web Docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
@@ -30,7 +32,7 @@ Refer to the documentation:
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
 * What are some real-life scenarios for using pseudo-elements?
 

@@ -6,25 +6,27 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+Aim to meet the following acceptance criteria:
+
 * It's done when any link to a CSS file displays a 📝 emoji after the link text.
 
 * It's done when the 📝 emoji is inserted using only CSS.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
-[MDN web docs on Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+[MDN Web Docs on attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ## Assets
 
 The following image demonstrates the web application's appearance:
 
-![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
+![The updated page shows an emoji next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How can you target a file type by its file extension (i.e., `.css`, `.html`, `.md`, etc.)?
 
@@ -32,9 +34,9 @@ The following image demonstrates the web application's appearance:
 
 ## 🏆 Bonus
 
-If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* How do selectors affect CSS performance? 
+* How do selectors affect CSS performance?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

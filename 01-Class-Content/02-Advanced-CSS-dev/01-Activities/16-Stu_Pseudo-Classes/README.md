@@ -6,6 +6,8 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+Aim to meet the following acceptance criteria:
+
 * It's done when the resource links are initially hidden on page load.
 
 * It's done when the user moves the mouse over the text "Show Resources," and the resource links display.
@@ -14,23 +16,23 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's default appearance and functionality:
 
-![The text "Show Resources" appears at the bottom of the article](./Images/01-resources-closed.png)
+![The text "Show Resources" appears below an article titled "Building Responsive Layouts."](./Images/01-resources-closed.png)
 
 The following image demonstrates the web application's appearance and functionality when the cursor is over the "Show Resources" text:
 
-![Three links to the MDN web docs appear under the text "Show Resources"](./Images/02-resources-open.png)
+![Three links to the MDN Web Docs appear under the text "Show Resources."](./Images/02-resources-open.png)
 
 You can use the following resource links for the content:
 
-  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+* [MDN Web Docs on responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 
-  * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+* [MDN Web Docs on using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
-  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
-  
+* [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+    
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How would the CSS `display` property help?
 
@@ -38,9 +40,9 @@ You can use the following resource links for the content:
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* How can you force pseudo-class styles to display using the Chrome DevTools?
+* How can you force pseudo-class styles to display using Chrome DevTools?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
