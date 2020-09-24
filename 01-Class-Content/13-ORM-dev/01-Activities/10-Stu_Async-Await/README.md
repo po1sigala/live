@@ -4,13 +4,13 @@ Work with a partner to implement the following user story:
 
 * As a developer, all my CRUD commands should still work when querying the database.
 
-* As a developer, my code should be less cluttered with promises and instead use async / await for easier readability.
+* As a developer, my code should be less cluttered with promises and instead use `async` / `await` for easier readability.
 
 ## Acceptance Criteria
 
 * It's done when a book can still be created, updated, and deleted from the database.
 
-* It's done when my 'seed.js' no longer uses promises and utilizes async / await.
+* It's done when my `seed.js` no longer uses promises and utilizes `async` / `await`.
 
 ---
 
@@ -24,6 +24,6 @@ If you have fully completed the above tasks, here is something you and your part
 
   * How could we run this seed file from an NPM script?
 
-  *  How would you work with multiple models in an index.js file?
+  *  How would you work with multiple models in an `index.js` file?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
