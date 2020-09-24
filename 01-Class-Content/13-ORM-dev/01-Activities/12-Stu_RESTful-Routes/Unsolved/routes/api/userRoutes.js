@@ -15,9 +15,7 @@ router.put('/:id', async (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).catch (err) => {
-    res.json(err);
-  };
+  }).catch((err) => res.json(err));
   res.json(userData);
 });
 
