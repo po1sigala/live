@@ -32,7 +32,7 @@ Book.init(
     // Link to database connection
     sequelize,
     // Set to false to remove `created_at` and `updated_at` fields
-    timestamps: true,
+    timestamps: false,
     underscored: true,
     modelName: 'book'
   }
