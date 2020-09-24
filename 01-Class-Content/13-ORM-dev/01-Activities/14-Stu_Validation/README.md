@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when it prevents the password from being shorter than 8 characters.
 
-* It's done when it prevents duplicate email addresses being entered. 
+* It's done when it prevents the username from having any other characters other than letters and numbers. 
 
 ## 📝 Note(s)
 
