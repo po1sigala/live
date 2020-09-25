@@ -23,7 +23,8 @@ router.post('/', (req, res) => {
 
 // CREATE multiple books
 router.post('/seed', (req, res) => {
-  // Multiple rows can be created at once with `bulkCreate()` and an array
+  // Multiple rows can be created with `bulkCreate()` and an array
+  // This could also be moved to a separate Node.js script to ensure it only happens once
   Book.bulkCreate([
     {
       title: 'Make It Stick: The Science of Successful Learning',

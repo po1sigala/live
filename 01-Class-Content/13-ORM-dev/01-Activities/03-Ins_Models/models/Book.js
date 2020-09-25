@@ -6,7 +6,7 @@ class Book extends Model {}
 
 Book.init(
   // Define fields/columns on model
-  // An `id` field is automatically created by Sequelize
+  // An `id` is automatically created by Sequelize, though best practice would be to define the primary key ourselves
   {
     title: {
       type: DataTypes.STRING
