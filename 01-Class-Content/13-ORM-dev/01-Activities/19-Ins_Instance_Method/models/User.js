@@ -7,9 +7,9 @@ class User extends Model {
   // This instance method uses a conditional statement to check if a user has pets
   hasPets(pets) {
     if (this.numberOfPets > 0) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 }
@@ -24,7 +24,7 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
@@ -38,12 +38,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [4],
+        len: [8],
       },
     },
     numberOfPets: {
-      type: DataTypes.INTEGER
-    }
+      type: DataTypes.INTEGER,
+    },
   },
   {
     hooks: {

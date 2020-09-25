@@ -12,7 +12,6 @@ Work with a partner to implement the following user story:
 
 * It's done when the instance method compares the user's input with the user's hashed password.
 
-
 ## 💡 Hint(s)
 
 * How are object methods and instance methods different?
@@ -24,4 +23,3 @@ Work with a partner to implement the following user story:
   * How can we DRY up our code using Sequelize's static model methods?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
-

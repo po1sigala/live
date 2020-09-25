@@ -28,7 +28,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [4],
+        len: [8],
       },
     },
   },
@@ -37,7 +37,7 @@ User.init(
     hooks: {
       // Use the beforeCreate hook to work with data before a new instance is created
       beforeCreate(newUserData) {
-        // In this case, we are taking the user's email address, and making all letters lower case before adding it to the datadase.
+        // In this case, we are taking the user's email address, and making all letters lower case before adding it to the database.
         newUserData.email = newUserData.email.toLowerCase();
         return newUserData;
       },
