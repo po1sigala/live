@@ -35,3 +35,6 @@ For a closer preview of what we explore in each unit of the boot camp, dive into
 * Activities you’ll complete and what skills they focus on
 * Common interview questions related to that week’s material
 * Helpful resources if you want to get ahead or gain more experience after the unit
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

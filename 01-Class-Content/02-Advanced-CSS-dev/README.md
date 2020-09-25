@@ -6,6 +6,8 @@ More and more users are browsing the web from a mobile device, which has changed
 
 Similarly, website design has evolved to include many niceties that users now take for granted, such as animated hover effects, rounded corners, and shadows. In the old days of the web, these tricks would have required some complex workarounds or even JavaScript, but newer CSS properties have simplified their implementation.
 
+In this unit, you'll learn how to build web apps that incorporate both of these features: responsive web design and advanced CSS. These skills are a must for modern web developers, and learning them will enable you to create attractive, engaging, and adaptive websites. 
+
 ## Key Topics
 
 The following topics will be covered in this unit:
