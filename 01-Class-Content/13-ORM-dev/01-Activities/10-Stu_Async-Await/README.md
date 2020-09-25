@@ -1,4 +1,4 @@
-# 🏗️ Refactor the Code in `seed.js`  to use Async / Await Instead of Promises
+# 🏗️ Refactor the Code in bookSeeds.js  to use Async / Await Instead of Promises
 
 Work with a partner to implement the following user story:
 
@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when a book can still be created, updated, and deleted from the database.
 
-* It's done when my `seed.js` no longer uses promises and utilizes `async` / `await`.
+* It's done when my `bookSeeds.js` no longer uses promises and utilizes `async` / `await`.
 
 ---
 
