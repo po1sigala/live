@@ -3,9 +3,7 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 class User extends Model {
-
   //TODO: Add your instance method here *check the login route in userRoutes for a hint about what you should call this method*
-
 }
 
 User.init(
@@ -18,7 +16,7 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
