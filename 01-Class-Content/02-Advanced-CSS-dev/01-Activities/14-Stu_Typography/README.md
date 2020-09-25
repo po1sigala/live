@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-  
 * It's done when the body font has the standard size of 16px.
 
 * It's done when paragraphs have a line height of 1.5 times the font height.

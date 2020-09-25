@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the user prints the blog post and the form isn't included.
 
 * It's done when the printed blog page displays the links' URLs (but not the header links' URLs).

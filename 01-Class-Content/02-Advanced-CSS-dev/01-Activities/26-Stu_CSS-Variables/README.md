@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-  
 * It's done when any repeated color values are defined once as a CSS variable.
 
 * It's done when any repeated border radius values are defined once as a CSS variable.

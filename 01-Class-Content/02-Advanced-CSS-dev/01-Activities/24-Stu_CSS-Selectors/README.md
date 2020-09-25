@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when any link to a CSS file displays a 📝 emoji after the link text.
 
 * It's done when the 📝 emoji is inserted using only CSS.

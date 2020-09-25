@@ -8,8 +8,6 @@ Work with a partner to implement the following user stories:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the product cards have rounded corners, drop shadows, and a rotated appearance.
 
 * The solution does not have to look exactly like the image provided. Play around with the properties and have fun!

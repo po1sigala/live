@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when special keywords are underlined and change the cursor to a hand icon when the user hovers over them.
 
 * It's done when the user hovers over a keyword and a rectangular tooltip appears next to the keyword.

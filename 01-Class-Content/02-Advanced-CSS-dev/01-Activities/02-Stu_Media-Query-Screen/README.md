@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the screen size is larger than 992px and the product cards on the screen are side by side.
 
 * It's done when I change the screen size to 992px or smaller, and the product cards on the screen split into two columns.
