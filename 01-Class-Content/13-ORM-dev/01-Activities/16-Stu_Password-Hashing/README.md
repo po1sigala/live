@@ -1,4 +1,4 @@
-# 📐 Add Comments to Implementation of the `login` route
+# 📐 Add Comments to Implementation of the login route
 
 Work with a partner to add comments describing the functionality of the code found in [user-routes.js](./Unsolved/routes/api/user-routes.js).
 

@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class User extends Model {}
 
+// TODO: Add validations to the User model
+
 User.init(
   {
     id: {

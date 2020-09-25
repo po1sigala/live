@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User.js');
 
-// TODO: Add comments describing the functionality of this `login` route
+// Added comments describing the functionality of this `login` route
 router.post('/login', async (req, res) => {
   try {
     // we search the DB for a user with the provided email

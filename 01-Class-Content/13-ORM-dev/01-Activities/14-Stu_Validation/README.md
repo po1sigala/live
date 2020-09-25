@@ -22,9 +22,9 @@ Refer to the documentation:
 
 ## 💡 Hint(s)
 
-* What are some built-in validators that we can use to accomplish this?
-
 * Run `npm run test` in your command line to run the unit tests. Use the tests to guide you.
+
+* What are some built-in validators that we can use to accomplish this?
 
 ## 🏆 Bonus
 
