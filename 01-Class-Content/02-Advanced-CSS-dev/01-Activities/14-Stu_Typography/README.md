@@ -10,35 +10,35 @@ Work with a partner to implement the following user story:
 
 * It's done when paragraphs have a line height of 1.5 times the font height.
 
-* It's done when headings are 150-200% of the font size and have a font family of serif.
+* It's done when headings are 150–200% of the font size and have a font family of `serif`.
 
-* It's done when there is a margin of 2-5% on the heading, paragraph, and list.
+* It's done when there is a margin of 2–5% on the heading, paragraph, and list.
 
-* It's done when the list is indented, has square bullet points, and a font family of monospace.
+* It's done when the list is indented, has square bullet points, and has a font family of `monospace`.
 
 * Working with CSS should be a creative experience for you! Your end product should look as close to the solution as possible, but feel free to try out other looks!
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
-[MDN web docs on fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+[MDN Web Docs on fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
 ## Assets
 
 The following image demonstrates the web application's appearance:
 
-![The blog page includes a monospaced list and headings with a serif font](./Images/01-CSS-typography.png)
+![The blog page includes a monospaced list and headings with a serif font.](./Images/01-CSS-typography.png)
 
 --- 
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * What values for `font-weight` and `font-style` can you use to give the page a more personal touch?
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
 * What are some other options for web fonts besides the given basic fonts?
 

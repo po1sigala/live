@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How can we declare CSS variables, also known as CSS custom properties, on the `:root` pseudo-class?
 
@@ -20,7 +20,7 @@ Work with a partner to implement the following user story:
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
 * What does the term DRY mean in web development?
 

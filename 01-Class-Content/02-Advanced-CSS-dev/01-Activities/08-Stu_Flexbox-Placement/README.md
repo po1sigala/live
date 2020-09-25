@@ -1,6 +1,6 @@
 # 🐛 Link and Button Placement is Incorrect
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * As a user, I want the navigation links to be on the right side.
 
@@ -18,19 +18,19 @@ The navigation links are aligned to the left. The slideshow buttons extend to th
 
 The following image demonstrates the web application's appearance:
 
-![The navigation links are aligned to the right, and the slideshow buttons are center aligned](./Images/01-product-page.png)
+![The navigation links are aligned to the right, and the slideshow buttons are center aligned.](./Images/01-product-page.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * What are some of the other possible values for flexbox's alignment and justification properties?
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* What e-commerce websites can you find that are using flexbox properties to help organize their components and layouts? 
+* What e-commerce websites can you find that are using flexbox properties to help organize their components and layouts?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

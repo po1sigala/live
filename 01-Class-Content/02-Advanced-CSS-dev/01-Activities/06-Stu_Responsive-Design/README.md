@@ -6,9 +6,9 @@ Work with a partner to add comments describing the functionality of the code fou
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* What other CSS property can we use to create responsive layouts? 
+* What other CSS property can we use to create responsive layouts?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
