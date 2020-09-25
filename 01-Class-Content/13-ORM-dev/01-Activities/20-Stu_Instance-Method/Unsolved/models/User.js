@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 class User extends Model {
   checkPassword(userPassword){
-  // TODO: Complete theinstance method 
+  // TODO: Complete the instance method 
   }
 }
 
