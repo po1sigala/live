@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Trip } = require('../../models');
 
+// CREATE a trip
 router.post('/', async (req, res) => {
   try {
     const tripData = await Trip.create(req.body);
@@ -10,6 +11,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// DELETE a trip
 router.delete('/:id', async (req, res) => {
   try {
     const tripData = await Trip.destroy({

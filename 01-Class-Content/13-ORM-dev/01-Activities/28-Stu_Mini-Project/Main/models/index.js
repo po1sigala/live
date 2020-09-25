@@ -21,13 +21,17 @@ Trip.belongsTo(Location, {
 });
 
 Traveller.belongsToMany(Location, {
+  // Define the third table needed to store the foreign keys
   through: Trip,
-  as: 'trip_locations',
+  // Define an alias for when data is retrieved
+  as: 'planned_trips',
   foreignKey: 'traveller_id'
 });
 
 Location.belongsToMany(Traveller, {
+  // Define the third table needed to store the foreign keys
   through: Trip,
+  // Define an alias for when data is retrieved
   as: 'location_travellers',
   foreignKey: 'location_id'
 });
