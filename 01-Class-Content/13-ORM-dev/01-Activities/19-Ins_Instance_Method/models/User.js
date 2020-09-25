@@ -5,7 +5,7 @@ const { Sequelize } = require('../config/connection');
 
 class User extends Model {
   hasPets(pets) {
-    if (this.pets > 0) {
+    if (this.numberOfPets > 0) {
       return true
     } else {
       return false
@@ -40,7 +40,7 @@ User.init(
         len: [4],
       },
     },
-    pets: {
+    numberOfPets: {
       type: DataTypes.INTEGER
     }
   },
