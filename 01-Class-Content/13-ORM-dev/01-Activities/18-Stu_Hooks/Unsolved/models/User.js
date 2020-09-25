@@ -34,7 +34,7 @@ User.init(
   },
   {
       
-  ////TODO: Add hooks here//////
+  // TODO: Add hooks here
 
     sequelize,
     timestamps: false,

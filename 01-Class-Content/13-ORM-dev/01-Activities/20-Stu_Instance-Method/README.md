@@ -4,6 +4,8 @@ Work with a partner to implement the following user story:
 
 * As a user, I want to login to my account with my password.
 
+* As a developer, I want to allow a user to login to their account securely so that their password information isn't compromised 
+
 ## Acceptance Criteria
 
 * It's done when the model includes an instance method.
