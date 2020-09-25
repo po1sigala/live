@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Book = require('../../models/Book');
 
-// GET all books
+// TODO: Add a comment describing the purpose of this route
 router.get('/', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
   Book.findAll().then((bookData) => {
@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   });
 });
 
-// GET all paperback books
+// TODO: Add a comment describing the purpose of this route
 router.get('/paperbacks', (req, res) => {
   Book.findAll({
     // TODO: Add a comment describing the functionality of this property
@@ -27,7 +27,7 @@ router.get('/paperbacks', (req, res) => {
   });
 });
 
-// GET a single book
+// TODO: Add a comment describing the purpose of this route
 router.get('/:id', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
   Book.findByPk(req.params.id).then((bookData) => {
