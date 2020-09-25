@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const User = require('../../models/User.js');
 
+
+
+
 // GET one user
 router.get('/:id', async (req, res) => {
   try {

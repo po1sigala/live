@@ -33,7 +33,7 @@ User.init(
     },
   },
   {
-    //Add hooks here, in the init() method
+    //When adding hooks via the init() method, they go below
     hooks: {
       //Use the beforeCreate hook to work with data before a new instance is created
       beforeCreate(newUserData) {
