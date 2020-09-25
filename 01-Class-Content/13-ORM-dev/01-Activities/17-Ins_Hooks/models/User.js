@@ -14,7 +14,7 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
@@ -42,10 +42,10 @@ User.init(
         return newUserData;
       },
       //Here, we use the beforeUpdate hook to make all of the characters lower case in an updated email address, before updating the database.
-       beforeUpdate(newUserData) {
+      beforeUpdate(newUserData) {
         newUserData.email = newUserData.email.toLowerCase();
         return newUserData;
-       }
+      },
     },
     sequelize,
     timestamps: false,
@@ -56,4 +56,3 @@ User.init(
 );
 
 module.exports = User;
-
