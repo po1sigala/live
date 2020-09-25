@@ -8,8 +8,6 @@ Work with a partner to implement the following user stories:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the main content on the page is centered horizontally and vertically on the page.
 
 * It's done when the background color of the page is dark.

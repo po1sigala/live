@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when each item's Remove button can be clicked to remove its respective shopping list item. 
 
 ## 📝 Notes

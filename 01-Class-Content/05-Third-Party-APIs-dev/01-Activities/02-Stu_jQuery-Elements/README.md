@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the page dynamically displays a quote by an author and the author's name on load.
 
 ## 📝 Notes

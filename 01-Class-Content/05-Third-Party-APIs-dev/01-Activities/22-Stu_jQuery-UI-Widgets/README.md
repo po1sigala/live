@@ -8,8 +8,6 @@ Work with a partner to implement the following user stories:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the form input for entering a skill has an autocomplete feature added to it, to pick from a list of skills.
 
 * It's done when the form input for entering a date has a datepicker feature added to it, to select by month and year.

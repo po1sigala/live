@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the page's body text uses fonts loaded from Google Fonts and not the default Bootstrap fonts.
 
 * It's done when the page's headings text uses fonts loaded from Google Fonts and not the default Bootstrap fonts. 

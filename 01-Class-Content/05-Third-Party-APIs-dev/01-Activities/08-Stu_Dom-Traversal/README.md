@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the board's tiles are automatically styled on page load.
 
 * It's done when the X player is blocked from winning.

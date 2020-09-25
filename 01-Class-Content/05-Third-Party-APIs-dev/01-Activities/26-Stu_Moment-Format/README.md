@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
 
 ## 📝 Notes

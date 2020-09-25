@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
 * It's done when the page displays a multicolumn layout on large screens and matches the mock-up provided.
 
 * It's done when the screen displays in a single-column layout on smaller screens and matches how it looks currently.
