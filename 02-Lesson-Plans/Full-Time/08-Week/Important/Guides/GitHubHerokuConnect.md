@@ -1,6 +1,6 @@
 # How to connect a GitHub Repository to Heroku for Automatic Deployments
 
-This short guide will take you through the steps of creating a repository, and then connecting your new repository to a Heroku application. This will allow for continuous deployment everytime you push the `master` branch of your GitHub repository!
+This short guide will take you through the steps of creating a repository, and then connecting your new repository to a Heroku application. This will allow for continuous deployment everytime you push the `main` branch of your GitHub repository!
 
 ## Create your GitHub Repository
 
@@ -52,7 +52,7 @@ Now that we have a GitHub repository, we need to create a new Heroku Application
 
 9. Scroll down to the `Automatic Deployment` section, and click `Enable Automatic Deployments`.
 
-Now you are good to go! Whenever you are working on your project and you push to master via PR (You should never be pushing directly to master!) it will automatically push to Heroku, updating your live application!
+Now you are good to go! Whenever you are working on your project and you push to main via PR (You should never be pushing directly to main!) it will automatically push to Heroku, updating your live application!
 
 * We have also created a video guide for you to follow along with if you need
 

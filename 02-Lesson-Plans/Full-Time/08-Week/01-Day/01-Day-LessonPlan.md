@@ -27,7 +27,7 @@
 
 ## Slide
 
-[8.1: Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing)
+[8.1: Linting and Projects](https://docs.google.com/presentation/d/1QSJWWiSZmx2I5SZncgJ9UKJP8b_6OFytiZRjGPNRSXo/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -74,13 +74,13 @@
 ```
 * One group member should create a new Github repo for the project.
 
-* Protect the repo's master branch as we did during project 1.
+* Protect the repo's main branch as we did during project 1.
 
   * Once at the repo's page, click the "Settings" tab.
 
   * Select "Branches" from the left sidebar.
 
-  * Under "Branch protection rules", choose "master" from the dropdown.
+  * Under "Branch protection rules", choose "main" from the dropdown.
 
   * Check off the following options:
 
@@ -215,9 +215,9 @@
 
 * Explain that in the next activity we're going to set up Travis CI (Continuous Integration).
 
-  * Travis will prevent any code from being merged into master that doesn't pass the linter.
+  * Travis will prevent any code from being merged into main that doesn't pass the linter.
 
-  * Travis will run a check on any new branches PR'd against master. This check may take a minute, but you will only be allowed to merge the code if the lint passes. Otherwise whoever made the PR will have to fix their code and try again.
+  * Travis will run a check on any new branches PR'd against main. This check may take a minute, but you will only be allowed to merge the code if the lint passes. Otherwise whoever made the PR will have to fix their code and try again.
 
 * Take a moment to answer any questions. Students will follow step-by-step instructions to add Travis to their repos in the next activity.
 
@@ -234,15 +234,15 @@
 ```
 * Only the owner of the project repo should complete this activity, other group members should watch.
 
-* **Part 1**: Protecting Master
+* **Part 1**: Protecting main
 
-* Before we can set up Travis, we must configure the project repo to protect the master branch.
+* Before we can set up Travis, we must configure the project repo to protect the main branch.
 
 * Navigate to the repo's page, then click the "Settings" tab.
 
 * Select "Branches" from the left sidebar.
 
-* Under "Branch protection rules", choose "master" from the drop-down.
+* Under "Branch protection rules", choose "main" from the drop-down.
 
 * Check off the following options:
 
