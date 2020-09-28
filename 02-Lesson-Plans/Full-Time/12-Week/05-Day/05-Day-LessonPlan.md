@@ -75,7 +75,7 @@ N/A
 
 Open up the instructions for updating the students portfolio
 
-* [Portfolio Update Instructions](../../../../01-Class-Content/09-portfolio-update/01-Homework/Instructions/README.md)
+* [Portfolio Update Instructions](../../../../01-Class-Content/16-Project-2-Contd/02-Homework#updated-portfolio)
 
 * Explain to students the importance of having an up-to-date portfolio, whether it be for the job search or just networking! Let them know how proud you are of the hard work they have done and to go ahead and update their portfolios to add and show off this finished project.
 
