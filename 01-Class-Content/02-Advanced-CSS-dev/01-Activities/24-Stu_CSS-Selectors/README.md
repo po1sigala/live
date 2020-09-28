@@ -10,21 +10,21 @@ Work with a partner to implement the following user story:
 
 * It's done when the 📝 emoji is inserted using only CSS.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
-[MDN web docs on Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+[MDN Web Docs on attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ## Assets
 
 The following image demonstrates the web application's appearance:
 
-![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
+![The updated page shows an emoji next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How can you target a file type by its file extension (i.e., `.css`, `.html`, `.md`, etc.)?
 
@@ -32,8 +32,11 @@ The following image demonstrates the web application's appearance:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * How do selectors affect CSS performance?
+* How do selectors affect CSS performance?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -14,23 +14,23 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's default appearance and functionality:
 
-![The text "Show Resources" appears at the bottom of the article](./Images/01-resources-closed.png)
+![The text "Show Resources" appears below an article titled "Building Responsive Layouts."](./Images/01-resources-closed.png)
 
 The following image demonstrates the web application's appearance and functionality when the cursor is over the "Show Resources" text:
 
-![Three links to the MDN web docs appear under the text "Show Resources"](./Images/02-resources-open.png)
+![Three links to the MDN Web Docs appear under the text "Show Resources."](./Images/02-resources-open.png)
 
 You can use the following resource links for the content:
 
-  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+* [MDN Web Docs on responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 
-  * https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+* [MDN Web Docs on using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
-  * https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
-  
+* [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+    
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * How would the CSS `display` property help?
 
@@ -38,8 +38,11 @@ You can use the following resource links for the content:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * How can you force pseudo-class styles to display using the Chrome DevTools?
+* How can you force pseudo-class styles to display using Chrome DevTools?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
