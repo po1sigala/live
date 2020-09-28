@@ -1,54 +1,68 @@
-# Unit 05: Third-Party-APIs
+# Unit 05 Instructor Overview: Third-Party-APIs
 
 ## Overview
 
-In this unit we will review the DOM and JavaScript, and introduce the library jQuery as an alternative method to manipulate the DOM.
+In this unit, you will implement CDNs to leverage third-party APIs, like CSS frameworks, JavaScript libraries, and custom fonts. You will use jQuery to perform DOM manipulation, implement Bootstrap and Google Fonts, and introduce jQuery UI and Moment.js.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/05-Third-Party-APIs/README.md) for detailed information on key topics, learning objectives and homework.
+  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/05-Third-Party-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-* In this unit's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
+* Expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to use the syntax as is.
 
-* Starting this unit, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
+* Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
 
-## Heads Up
-
-Next unit we will work with Server-Side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects this unit.
+* The 05.3 lesson plan includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
+
+Remind students that they can find related Career Services material in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+Next unit will cover server-side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects during this unit.
 
 ## Helpful Links
 
 ### Lesson Plans
 
-  * [05.1 - Lesson Plan](01-Day_JS-jQuery-Review/05.1-LESSON-PLAN.md)
+* [05.1 Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
 
-  * [05.2 - Lesson Plan](02-Day_Review-Contd/05.2-LESSON-PLAN.md)
+* [05.2 Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
 
-  * [05.3 - Lesson Plan](03-Day_Interview-Prep/05.3-LESSON-PLAN.md)
+* [05.3 Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
+
+### Unit Homework
+
+* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
 
 ### Slide Decks
 
-  * [05.1: jQuery Begins](https://docs.google.com/presentation/d/1rb9HSOoezZzelSK7HQk-6tVKDBU8VBX3jQGuQpd04CQ/edit?usp=sharing)
+* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
 
-  * [05.2: jQuery Jubilee](https://docs.google.com/presentation/d/1ADUrG6f36_j9B-K4p3OHbrT_BH8X7gGVrHKY25-k4eA/edit?usp=sharing)
+### Algorithms
 
-### Time Tracker(s)
+* [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
 
-  * [Unit 05-Third-Party-APIs Day 1 Time Tracker](https://drive.google.com/open?id=1iei7_OBRKt3S6pqxTWTgCLo9JhlUrxMI)
+* [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
 
-  * [Unit 05-Third-Party-APIs Day 2 Time Tracker](https://drive.google.com/open?id=1zPJ1kckA8CR5vwSH0orofzkBmloTrkeD9DeTfwXFndM)
+* [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
-  * [Unit 05-Third-Party-APIs Day 3 Time Tracker](https://drive.google.com/open?id=192W9stZpLCBdZQARTa5jizw3cyRqMhc0)
+### Resources
 
-## Algorithms
+* [jQuery API Docs](https://api.jquery.com/)
 
-  * [01-fizz-buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+* [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-  * [02-max-num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+* [Bootstrap Docs](https://getbootstrap.com)
 
-  * [03-vowel-count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+* [Google Fonts Docs](https://fonts.google.com)
+
+* [jQuery UI Docs](https://jqueryui.com/demos/)
+
+* [Moment.js Docs](https://momentjs.com/docs/)
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
