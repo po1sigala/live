@@ -398,7 +398,7 @@
 
     * `git commit -m "Added a new file"` (This will tell Git to commit the changes and to include the comment "Added a new file.")
 
-    * `git push origin master` (This will tell Git to upload the code to GitHub.)
+    * `git push origin main` (This will tell Git to upload the code to GitHub.)
 
       ![2-GitDemo_8](Images/2-GitDemo_8.png)
 
@@ -486,7 +486,7 @@
 
 ### 27. Instructor Do: Demo Homework 1 (5 mins)
 
-* Open the [Homework solution index.html](../../../../01-Class-Content/01-HTML-Git-CSS/02-Homework/Master/index.html) from Unit 01. 
+* Open the [Homework solution index.html](../../../../01-Class-Content/01-HTML-Git-CSS/02-Homework/Main/index.html) from Unit 01. 
 
 * Let students know that this will be their first homework assignment. It will be due this week. They will get some in class time to begin homework during class on occasion.
 
