@@ -28,11 +28,11 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Lesson Plans
 
-  * @TODO [06.1 - Lesson Plan]()
+  * [06.1 - Lesson Plan](./01-Day_Fetch-Request/06.1-LESSON-PLAN.md)
 
-  * @TODO [06.2 - Lesson Plan]()
+  * [06.2 - Lesson Plan](./02-Day_Fetch-Location/06.2-LESSON-PLAN.md)
   
-  * @TODO [06.3 - Lesson Plan]()
+  * [06.3 - Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
