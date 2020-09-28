@@ -6,7 +6,7 @@ Welcome to the second week of Project 1! This week, you will continue to work on
 
 ## Heads Up
 
-* In the next unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** starting Unit 09 and attending your classes. You can follow the installation instructions for [Mac](./04-Supplemental/nodejs-install-mac.md) and [Windows](./04-Supplemental/nodejs-install-win.md) computers.  
+* In the next unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** starting Unit 09 and attending your classes. You can follow the installation instructions for [Mac](./04-Important/nodejs-install-mac.md) and [Windows](./04-Important/nodejs-install-win.md) computers.  
 
 ## Helpful Links
 

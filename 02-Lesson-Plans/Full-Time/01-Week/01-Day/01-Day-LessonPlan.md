@@ -398,7 +398,7 @@
 
     * `git commit -m "Added a new file"` (This will tell Git to commit the changes and to include the comment "Added a new file.")
 
-    * `git push origin master` (This will tell Git to upload the code to GitHub.)
+    * `git push origin main` (This will tell Git to upload the code to GitHub.)
 
       ![2-GitDemo_8](Images/2-GitDemo_8.png)
 
@@ -424,7 +424,7 @@
 
 ### 23. Instructor Do: Slack GitHub Guide (2 mins)
 
-* At this point, slack the GitHub guide (found in `Supplemental > GitHub Help > "Steps to Upload GitHub"`). Let them know that this guide will be their best resource on completing their own GitHub pushes.
+* At this point, slack the GitHub guide (found in `Important > GitHub Help > "Steps to Upload GitHub"`). Let them know that this guide will be their best resource on completing their own GitHub pushes.
 
 ### 24. Students Do: Git Add, Commit, Push (15 mins)
 

@@ -76,8 +76,8 @@ submitChirpBtn.addEventListener('click', (e) => {
 
       chirpArea.prepend(row);
       console.log(row);
+
     });
-  // .catch((error) => console.error('Error:', error));
 
   // Empty the input box
   document.getElementById('author').value = '';
