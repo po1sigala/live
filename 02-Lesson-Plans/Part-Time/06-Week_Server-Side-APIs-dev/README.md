@@ -40,7 +40,7 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Slide Decks
 
-  * @TODO [06.1: TITLE]()
+  * [06.1: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
 ### Algorithms
 
