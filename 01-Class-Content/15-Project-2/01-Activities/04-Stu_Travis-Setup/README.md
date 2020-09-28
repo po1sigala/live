@@ -1,20 +1,20 @@
 # Travis Setup
 
-In this activity we will set up the project repo with Travis CI to ensure that linting passes on all changes before they can be merged into master.
+In this activity we will set up the project repo with Travis CI to ensure that linting passes on all changes before they can be merged into main.
 
 ## Instructions
 
 * Only the owner of the project repo should complete this activity, other group members should watch.
 
-### Part 1: Protecting Master
+### Part 1: Protecting main
 
-* Before we can set up Travis, we must configure the project repo to protect the master branch.
+* Before we can set up Travis, we must configure the project repo to protect the main branch.
 
 * Navigate to the repo's page, then click the "Settings" tab.
 
 * Select "Branches" from the left sidebar.
 
-* Under "Branch protection rules", choose "master" from the dropdown.
+* Under "Branch protection rules", choose "main" from the dropdown.
 
 * Check off the following options:
 

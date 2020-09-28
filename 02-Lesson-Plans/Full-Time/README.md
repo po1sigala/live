@@ -10,7 +10,7 @@ _Note: The following are default days of the week that HW is assigned/due in BCS
 
 * Copy the new homework instructions and, if applicable, `Develop` folder into the class repo.
 
-* Copy the homework `Master` folder for the prior homework assignment into the class repo.
+* Copy the homework `main` folder for the prior homework assignment into the class repo.
 
 
 ## Career Connection
