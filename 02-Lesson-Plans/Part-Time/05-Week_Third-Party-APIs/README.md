@@ -28,7 +28,7 @@ Next unit will cover server-side APIs. It is recommended that you try to fill an
 
 ### Lesson Plans
 
-* [05.1 Lesson Plan](01-Day-jQuery/05.1-LESSON-PLAN.md)
+* [05.1 Lesson Plan](01-Day_jQuery/05.1-LESSON-PLAN.md)
 
 * [05.2 Lesson Plan](02-Day_Bootstrap/05.2-LESSON-PLAN.md)
 
