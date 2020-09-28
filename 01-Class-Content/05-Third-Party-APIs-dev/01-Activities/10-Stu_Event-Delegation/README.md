@@ -6,15 +6,15 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when each item's "Remove" button can be clicked to remove its respective shopping list item. 
+* It's done when each item's Remove button can be clicked to remove its respective shopping list item. 
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
 [jQuery Docs on Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-## 💡 Hint(s) 
+## 💡 Hints
 
 * Use your knowledge in DOM traversal to select an element's parent.
   
@@ -22,8 +22,10 @@ Refer to the documentation:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * What are some alternatives to using jQuery? Discuss the merits with your partner. 
- 
-* You can read [You might not need jQuery](http://youmightnotneedjquery.com/) to see some options to jQuery. 
+* What are some alternatives to using jQuery? Discuss the merits with your partner. You can read this [guide to whether you need jQuery](http://youmightnotneedjquery.com/) to see some alternatives. 
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

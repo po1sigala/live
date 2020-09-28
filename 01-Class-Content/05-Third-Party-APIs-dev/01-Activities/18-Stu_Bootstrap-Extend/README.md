@@ -12,11 +12,11 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The solution shows that there are custom colors used instead of the built-in colors provided by Bootstrap.](./Images/01-solved-screenshot.png)
+![A guestbook webpage features custom colors instead of the built-in colors provided by Bootstrap.](./Images/01-solved-screenshot.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * There is a color theme already available to use in `style.css`, but feel free to use [Adobe Color](https://color.adobe.com/).
 
@@ -24,8 +24,10 @@ The following image demonstrates the web application's appearance and functional
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can look into to further your knowledge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-  * What are some other UI frameworks we could use? 
-  
-* Here are some to get you started: [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind.](https://tailwindcss.com/).
+* What are some other UI frameworks that we could use? To get started, try [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind](https://tailwindcss.com/).
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

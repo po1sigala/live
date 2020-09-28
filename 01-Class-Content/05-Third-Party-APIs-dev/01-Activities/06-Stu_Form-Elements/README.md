@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As an online shopper, I want to be able to add a items to my shopping list so I can view them all in one place.
+* As an online shopper, I want to be able to add a items to my shopping list so that I can view them all in one place.
 
 * As an online shopper, I want to be able to quickly add another item to my list. 
 
@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 ## 📝 Note(s)
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
 [jQuery Docs on Forms](https://api.jquery.com/category/forms/)
 
@@ -22,11 +22,11 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![A shopping list with several items.](./Images/01-solution-screenshot.png)
+![A shopping list app shows an input field with a button to Add Item, above a shopping list.](./Images/01-solution-screenshot.png)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
 * Prevent the default behavior of the `submit()` event.
 
@@ -34,8 +34,10 @@ The following image demonstrates the web application's appearance and functional
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
  
-  * How can we reset form elements using plain JavaScript?
+* How can we reset form elements using plain JavaScript? Use [Google](https://www.google.com) or another search engine to research how to do it.
 
-* Use [Google](https://www.google.com) or another search engine to research how to do it.
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

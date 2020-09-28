@@ -8,15 +8,15 @@ Work with a partner to implement the following user story:
 
 * It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
 
-## 📝 Note(s)
+## 📝 Notes
 
-Refer to the documentation: 
+Refer to the following documentation: 
 
 [Moment.js Docs](https://momentjs.com/docs/#/displaying/)
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* Refer to the official docs for [Moment.js parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
+* Refer to the official [Moment.js docs on parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
 
 * Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
 
@@ -24,8 +24,10 @@ Refer to the documentation:
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an bonus exercise: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
   
-  * How can we measure the difference between two time stamps with `Moment.js`?
+* How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
 
-* Read the [Moment.js Docs](https://momentjs.com/docs/) to dig deeper into how this works.
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
