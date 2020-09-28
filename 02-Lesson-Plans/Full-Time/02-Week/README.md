@@ -21,10 +21,10 @@ This unit is filled with a lot of brand new topics. If you fall behind, make sur
 Students are very likely to come across jQuery solutions when searching for DOM/event resources. Make sure to let them know that we will cover jQuery in the next unit, so for now, do not consult resources that include the word `jQuery` or the `$` variable.
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[JavaScript](../../../01-Class-Content/03-JavaScript/04-Supplemental/CAREER-CONNECTION.md).
-[Web APIs](../../../01-Class-Content/04-Web-APIs/04-Supplemental/CAREER-CONNECTION.md).
+[JavaScript](../../../01-Class-Content/03-JavaScript/04-Important/CAREER-CONNECTION.md).
+[Web APIs](../../../01-Class-Content/04-Web-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
