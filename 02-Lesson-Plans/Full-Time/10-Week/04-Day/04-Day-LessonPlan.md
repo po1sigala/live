@@ -6,7 +6,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ## Instructor Notes
 
-- `Summary: Complete activities through`
+- `Summary: Complete activities 7-14 in Unit 20.`
 
 - The demos and activities will only include the `src` folder which you will need to replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
@@ -1118,6 +1118,8 @@ In this activity we will continue to practice using the Context API in React. Th
 ### 17. Students Do: Work on HW (30 mins)
 
 ### 18. End
+
+* Note that there is an extra `15-Bonus_ClassContext` example activity for students who are curious about using the Context API in regular class components.
 
 ### Lesson Plan Feedback
 

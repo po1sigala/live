@@ -17,7 +17,7 @@ In this unit we will review the DOM and JavaScript, and introduce the library jQ
 Next unit we will work with Server-Side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects this unit.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/05-Third-Party-APIs/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

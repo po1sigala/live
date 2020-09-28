@@ -1,7 +1,7 @@
 /* global moment */
 
 // When the page loads, grab and display all of our chirps
-$.get("/api/all", function(data) {
+$.get("", function(data) {
 
   if (data.length !== 0) {
 
@@ -36,7 +36,7 @@ $("#chirp-submit").on("click", function(event) {
   console.log(newChirp);
 
   // Send an AJAX POST-request with jQuery
-  $.post("/api/new", newChirp)
+  $.post("", newChirp)
     // On success, run the following code
     .then(function() {
 

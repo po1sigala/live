@@ -20,20 +20,25 @@ If you are opting out of career services, this is *still a required assignment*.
 
 * Update GitHub profile with pinned repositories featuring those same projects
 
+* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
+
 ## Grading
 
 | Requirement    | Weight |
 | -------------- | ------ |
-| Portoflio      | 90%    |
+| Portfolio      | 90%    |
 | GitHub Profile | 10%    |
 
 
 ## Instructions
 
-  - [Updated Portfolio](#updated-portfolio)
-    - [Design](#design)
-  - [React](#react)
-  - [Updated LinkedIn Profile](#updated-linkedin-profile)
+* [Updated Portfolio](#updated-portfolio)
+
+* [Design](#design)
+
+* [React](#react)
+
+* [Updated LinkedIn Profile](#updated-linkedin-profile)
 
 ### Updated Portfolio
 
