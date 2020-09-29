@@ -6,13 +6,13 @@ In this activity we will create a group project repo and add group members as co
 
 * One group member should create a new Github repo for the project.
 
-* Protect the repo's master branch as we did during project 1.
+* Protect the repo's main branch as we did during project 1.
 
   * Once at the repo's page, click the "Settings" tab.
 
   * Select "Branches" from the left sidebar.
 
-  * Under "Branch protection rules", choose "master" from the dropdown.
+  * Under "Branch protection rules", choose "main" from the dropdown.
 
   * Check off the following options:
 
