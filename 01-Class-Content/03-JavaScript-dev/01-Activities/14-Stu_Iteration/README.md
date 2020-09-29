@@ -6,7 +6,7 @@ In this activity, you will work with a partner to use a loop to iterate over an 
 
 * Be sure to work with your partner!
 
-* Open [14-Stu_Iteration/Unsolved/script.js]() to examine the code and implement the following features:
+* Open [script.js](14-Stu_Iteration/Unsolved/script.js) to examine the code and implement the following features:
 
   * As a student, I want to store the name of five of my classmates in a single variable and log a greeting to each of them.
 
