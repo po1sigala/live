@@ -15,18 +15,10 @@ class FrontEnd extends Developer {}
 // We extend developer into another class called Backend and give it a `code` method;
 class Backend extends Developer {}
 
-// Here we create instances of all three classes we made
-const dev = new Developer('Dave');
-const frontend = new FrontEnd('Kyle', 'Typescript');
-const backend = new Backend('Kelly', 'SELECT * FROM users;');
+// Create three variables that are instances of each class you have made
 
-// All users inherit the sayHi method
-console.log(dev.sayHi());
-console.log(frontend.sayHi());
-console.log(backend.sayHi());
+// Have the three objects you've created `sayHi`
 
-// Users created from subclasses exercise their own methods
-console.log('backend.code() =>', backend.code());
-console.log('frontend.saySkill() =>', frontend.saySkill());
+// Have the two extended classes you've created preform their `saySkill` and `code` methods
 
 // BONUS: Add an additional method using prototype
