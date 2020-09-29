@@ -60,7 +60,7 @@ N/A
 
 * In the next unit, students will start using Node.js. 
 
-* Direct the students to the `04-Supplemental` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers. 
+* Direct the students to the `04-Important` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers. 
 
 * Advise the students to have Node.js installed before the next unit. 
 

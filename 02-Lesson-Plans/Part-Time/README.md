@@ -14,4 +14,4 @@ _Note: The following are default days of the week that HW is assigned/due in BCS
 
 * Last week's homework is due.
 
-* Copy the homework `Master` folder into the class repo. 
+* Copy the homework `main` folder into the class repo. 
