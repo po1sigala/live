@@ -2,37 +2,26 @@
 
 Work with a partner to implement the following user story:
 
-* @TODO WRITE A BRIEF DESCRIPTION OF THE ACTIVITY FRAMED AS A USER STORY OR STORIES; e.g.:
-
-* As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
+* As a developer, I want to use *polymorphism* to create objects that have mostly similar functionality
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY; e.g.:
-
-* It's done when the screen size is larger than 992 px, the product cards on the screen are side-by-side.
-
-* It's done when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
-
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-![]()
-
----
+* It's done when the app creates multiple subclasses that extend "Developer".
+* Each should have that have the ability to inherit a `sayHi` method from the parent
+* It's done when I have creating derivative objects from a parent object that have one unique method of their own
 
 ## 💡 Hints
 
-Hints are guides, not answers, framed as questions. 
+* Look up the `extends` keyword to see how you can inherit methods from a parent class
+  
+* Derivative objects can add additional functionality
+
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* Add another method outside of the class using the prototype
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
