@@ -673,7 +673,7 @@ In this activity, we will be continuing to build on our Todo activity. This time
 
 ### 18. Students Do: Complete Todos (15 mins)
 
-* Direct students towards the next activity located in [27-Stu_Complete-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Complete-Todos/Unsolved).
+* Direct students towards the next activity located in [25-Stu_Complete-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Complete-Todos/Unsolved).
 
 ```md
 # Complete Todos
@@ -697,7 +697,7 @@ In this activity, we will create a "complete" button that successfully removes a
 
 ### 19. Instructor Do: Review Complete Todos (10 mins)
 
-* Open [27-Stu_Complete-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Complete-Todos/Solved) in your IDE and point out the following:
+* Open [25-Stu_Complete-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Complete-Todos/Solved) in your IDE and point out the following:
 
   * First show students the unsolved `renderTodos()` function for context.
 
@@ -760,7 +760,7 @@ In this activity, we will create a "complete" button that successfully removes a
 
 ### 20. Students Do: Local Storage Todos (10 mins)
 
-* Direct students towards their next activity located in [28-Stu_Local-Storage-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/28-Stu_Local-Storage-Todos/Unsolved).
+* Direct students towards their next activity located in [26-Stu_Local-Storage-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Local-Storage-Todos/Unsolved).
 
   ```md
   # Local Storage Todo's
@@ -788,7 +788,7 @@ In this activity, we will create a "complete" button that successfully removes a
 
 ### 21. Instructor Do: Review Local Storage Todos (5 mins)
 
-* Open [28-Stu_Local-Storage-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/28-Stu_Local-Storage-Todos/Solved/script.js) in your IDE and walk students through the solved code.
+* Open [26-Stu_Local-Storage-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Local-Storage-Todos/Solved/script.js) in your IDE and walk students through the solved code.
 
 * Inside the `init()` function we set a variable called `storedTodos` that retrieves the todos from `localStorage` and parses the JSON string to an object.
 
@@ -816,7 +816,7 @@ In this activity, we will create a "complete" button that successfully removes a
 
 ### 22. Students Do: Timer App (60 mins)
 
-* Direct students to their final activity of the day located in [29-Stu_Timer-App/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/29-Stu_Timer-App/Unsolved)
+* Direct students to their final activity of the day located in [27-Stu_Timer-App/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Timer-App/Unsolved)
 
 ```md
 # Tomato Timer
@@ -878,7 +878,7 @@ Prevent the timer from running when the user enters invalid input. (numbers <= 0
 
 ### 23. Instructor Do: Review Timer App (10 mins)
 
-* Open [29-Stu_Timer-App/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/29-Stu_Timer-App/Solved/script.js) in your IDE and point out the following key aspects:
+* Open [27-Stu_Timer-App/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Timer-App/Solved/script.js) in your IDE and point out the following key aspects:
 
   * We create a function called `starTimer`. We will use it to call our `setTime` function.
   
