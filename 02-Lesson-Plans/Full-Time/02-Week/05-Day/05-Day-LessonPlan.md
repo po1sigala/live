@@ -12,7 +12,7 @@ Todays class will be about client side storage APIs and continuing to work on th
 
 * Students will be pseudocoding the ToDo List application at the beginning of class. Familiarize yourself with the code and functionality to more easily help students through this process.
 
-`Complete activities 19-29 in Unit 04`
+`Complete activities 18-27 in Unit 04`
 
 ### Class Objectives
 
@@ -221,7 +221,7 @@ N/A
 
 ### 6. Instructor Do: Demo Local Storage (5 mins)
 
-* Open [20-Ins_Local-Storage-Counter](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Counter/index.html) in your browser and demo the functionality of the application:
+* Open [18-Ins_Local-Storage-Counter](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Counter/index.html) in your browser and demo the functionality of the application:
 
   * When we click either the increment and decrement buttons the number of "hours spent coding" increases or decreases.
 
@@ -247,7 +247,7 @@ N/A
 
   * Sensitive information, such as credit card numbers, social security numbers and passwords.
 
-* Open [20-Ins_Local-Storage-Counter/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Counter/script.js) in your IDE and explain the following: 
+* Open [18-Ins_Local-Storage-Counter/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/18-Ins_Local-Storage-Counter/script.js) in your IDE and explain the following: 
 
   * First we select our counter, add, and subtract buttons and assign them to variables.
 
@@ -301,7 +301,7 @@ N/A
 
 ### 7. Student Do: Local Storage (15 mins)
 
-* Direct students to the next activity, found in [21-Stu_Local-Storage-User/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-User/Unsolved/script.js)
+* Direct students to the next activity, found in [19-Stu_Local-Storage-User/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/19-Stu_Local-Storage-User/Unsolved/script.js)
 
 ```md
 # Local Storage
@@ -329,7 +329,7 @@ N/A
 
 ### 8. Instructor Do: Review Local Storage Activity (5 mins)
 
-* Open [21-Stu_Local-Storage-User/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-User/Solved/script.js) and explain the following: 
+* Open [19-Stu_Local-Storage-User/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/19-Stu_Local-Storage-User/Solved/script.js) and explain the following: 
 
 *  The first thing we need to do is save the form data with:
 
@@ -370,7 +370,7 @@ N/A
 
 ### 9. Instructor Do: Local Storage with Uh-oh (5 min)
 
-* Open [22-Ins_Local-Storage-Uh-oh/index.html](../../../../01-Class-Content/04-Web-APIs/01-Activities/22-Ins_Local-Storage-Uh-oh/index.html) in your browser and explain the following: 
+* Open [20-Ins_Local-Storage-Uh-oh/index.html](../../../../01-Class-Content/04-Web-APIs/01-Activities/20-Ins_Local-Storage-Uh-oh/index.html) in your browser and explain the following: 
 
   * When we submit our form data, we receive a success response.
   
@@ -384,7 +384,7 @@ N/A
 
 * Let's take a look at our code.
 
-* Open [22-Ins_Local-Storage-Uh-oh/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/22-Ins_Local-Storage-Uh-oh/script.js) in your IDE and point out the following: 
+* Open [20-Ins_Local-Storage-Uh-oh/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Uh-oh/script.js) in your IDE and point out the following: 
 
   * We are creating our object with the following code:
 
@@ -416,7 +416,7 @@ N/A
 
 ### 10. Student Do: Local Storage With Objects (10 mins)
 
-* Direct students to [23-Stu_Local-Storage-Objects/Unsolved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Local-Storage-Objects/Unsolved/script.js).
+* Direct students to [21-Stu_Local-Storage-Objects/Unsolved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-Objects/Unsolved/script.js).
 
 ```md
 # Local Storage
@@ -436,7 +436,7 @@ N/A
 
 ### 11. Instructor Do: Review Local Storage With Objects (5 mins)
 
-* Open [23-Stu_Local-Storage-Objects/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Local-Storage-Objects/Solved/script.js) and point out the following: 
+* Open [21-Stu_Local-Storage-Objects/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-Objects/Solved/script.js) and point out the following: 
 
  * We can use `JSON.stringify` to convert an object to a JSON string. We simply pass our object into the `JSON.stringify` method.
 
@@ -469,13 +469,13 @@ N/A
 
 ### 12. Instructor Do: Demo Data-Attributes (5 mins)
 
-* Open [24-Ins_Data-Attributes/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/24-Ins_Data-Attributes/index.html) in your browser and demo the functionality of the application:
+* Open [22-Ins_Data-Attributes/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/22-Ins_Data-Attributes/index.html) in your browser and demo the functionality of the application:
 
   * When we click on a gif, their `state` changes from "animated" to "still".
 
 * Open Chrome developer tools to demonstrate how the URLs are changing when we click.
 
-* Open [24-Ins_Data-Attributes/script.js](../../../../01-Class-Content/04-Web-APIs/01-Activities/24-Ins_Data-Attributes/script.js) in your IDE and point out the followingL:
+* Open [22-Ins_Data-Attributes/script.js](../../../../01-Class-Content/04-Web-APIs/01-Activities/22-Ins_Data-Attributes/script.js) in your IDE and point out the followingL:
 
  * First we select our image container element.
 
@@ -524,7 +524,7 @@ N/A
 
 ### 13. Students Do: Render Todos (10 mins)
 
-* Direct students to the next activity, found in [25-Stu_Render-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Render-Todos/Unsolved).
+* Direct students to the next activity, found in [23-Stu_Render-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Render-Todos/Unsolved).
 
 ```md
 # Render Todos
@@ -552,7 +552,7 @@ In this activity you will be writing code to render an array of todo items to th
 
 ### 14. Instructor Do: Review Render Todos (5 mins)
 
-* Open [25-Stu_Render-Todos/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Render-Todos/Solved) and point out the following: 
+* Open [23-Stu_Render-Todos/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Render-Todos/Solved) and point out the following: 
 
   * First we create our `renderTodos()` function. 
 
@@ -591,7 +591,7 @@ In this activity you will be writing code to render an array of todo items to th
   li.textContent = todo;
   ```
 
-  *Finally, we append our new list item to our existing `todoList` as a child.
+  * Finally, we append our new list item to our existing `todoList` as a child.
 
   ```js
   todoList.appendChild(li);
@@ -614,7 +614,7 @@ In this activity you will be writing code to render an array of todo items to th
 
 ### 16. Students Do: Add Todos (10 mins)
 
-* Direct students to the next activity, found in [26-Stu_Add-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Unsolved)
+* Direct students to the next activity, found in [24-Stu_Add-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/24-Stu_Add-Todos/Unsolved)
 
 ```md
 # Add ToDo's
@@ -632,9 +632,9 @@ In this activity, we will be continuing to build on our Todo activity. This time
 
 ### 17. Instructor Do: Review Add Todos (5 mins)
 
-* Open [26-Stu_Add-Todos/Solved/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Solved/index.html) in your browser and briefly demonstrate the new functionality by adding new items to the todo list.
+* Open [24-Stu_Add-Todos/Solved/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/24-Stu_Add-Todos/Solved/index.html) in your browser and briefly demonstrate the new functionality by adding new items to the todo list.
 
-* Next navigate to [26-Stu_Add-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Solved/script.js) in your IDE and point out the following:
+* Next navigate to [24-Stu_Add-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/24-Stu_Add-Todos/Solved/script.js) in your IDE and point out the following:
 
   * We're listening for the `submit` event. Note that it would also be acceptable to add a keydown listener and check if the key pressed is enter. Mention that instead listening for `submit`, requires less code. Additionally, the callback function doesn't need to be ran needlessly every time the user presses a key.
 
