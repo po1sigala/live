@@ -13,6 +13,8 @@ Work with a partner to implement the following user story:
 ## 💡 Hints
 
 * Look up the `extends` keyword to see how you can inherit methods from a parent class
+
+* The `super` method calls to the parent class's constructor allowing you to access variables and methods
   
 * Derivative objects can add additional functionality
 
