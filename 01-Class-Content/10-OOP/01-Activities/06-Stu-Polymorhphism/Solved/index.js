@@ -46,3 +46,10 @@ console.log(backend.sayHi());
 // Users created from subclasses exercise their own methods
 console.log('backend.code() =>', backend.code());
 console.log('frontend.saySkill() =>', frontend.saySkill());
+
+// BONUS: Add an additional method using prototype
+Developer.prototype.eatLunch = () => {
+  console.log('I am going to eat my lunch now');
+};
+
+backend.eatLunch();
