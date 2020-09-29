@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[NPM Docs on bcrypt](https://www.npmjs.com/package/bcrypt )
+[NPM Docs on bcrypt](https://www.npmjs.com/package/bcrypt)
 
 ---
 
