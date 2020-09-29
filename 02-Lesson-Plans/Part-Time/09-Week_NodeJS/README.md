@@ -19,7 +19,6 @@ Remind students that related Career Services material can be found in their [Car
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
-
 ## Heads-Up
 
 * Next week, we begin OOP, constructors, and classes. Try to spend some time this week to ensure that students get comfortable with ES6 and other Node.js fundamentals so that it's not distracting when we move into more abstract concepts.

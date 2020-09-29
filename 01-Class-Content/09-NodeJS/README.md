@@ -10,37 +10,39 @@ In this unit, you will learn how to initialize a Node.js project, install third-
 
 ## Key Topics
 
+The following topics will be covered in this unit:
+
 * Node.js
 
-    * process.argv
+    * `process.argv`
 
     * fs
 
 * Modularization
 
-    * require
+    * `require()`
 
-    * module.exports
+    * `module.exports`
 
 * npm
 
     * package.json
 
-    * npm init
+    * `npm init`
 
-    * node_modules
+    * `node_modules`
 
 * Inquirer
 
 * ES6
 
-    * let and const
+    * `let` and `const`
 
     * Arrow functions
 
     * Template literals
 
-    * Array methods (map, filter, reduce)
+    * Array methods (`map()`, `filter()`, `reduce()`)
 
     * Spread and rest
 
@@ -58,7 +60,6 @@ In this unit, you will learn how to initialize a Node.js project, install third-
 
     * Axios
  
-
 ## Comprehension Check
 
 You will be employer-ready if you can answer the following questions:
@@ -68,7 +69,6 @@ You will be employer-ready if you can answer the following questions:
 2. What are three of the major changes introduced to JavaScript in ES6?
 
 3. What are three approaches to handling asynchronous JavaScript?
-
 
 ## Learning Objectives
 
@@ -86,17 +86,21 @@ You will be employer-competitive if are able to:
 
 * Make server-side API calls with the Fetch API and Axios.
 
-
 ## Homework
 
-Create a command-line application that uses input from a user to dynamically generates a good README for a GitHub project.
+Create a command-line application that uses input from a user to dynamically generates a good readme for a GitHub project.
 
+## Career Connection
 
-## Heads Up
+Career Services material for this unit is located in the Career Connection folder. For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
-* Starting this unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** attending your classes. You can follow the installation instructions for Mac and Windows on the [Node](https://nodejs.org/en/download/) website
+## Heads-Up
 
-## Helpful Links
+Starting this unit, you'll begin to use Node.js. Be sure to have it installed on your computer _before_ attending your classes. You can follow the installation instructions for Mac and Windows on the [Node website](https://nodejs.org/en/download/).
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit:
 
 * [Wikipedia: Node.js](https://en.wikipedia.org/wiki/Node.js)
 
@@ -109,4 +113,4 @@ Create a command-line application that uses input from a user to dynamically gen
 * [InquirerJS](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
