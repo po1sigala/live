@@ -10,9 +10,11 @@ class Developer {
 }
 
 // We extend Developer into a subclass called Frontend and give it its own `saySkill` method
+// The saySkill method should simply return a statement about what tech stack (ex. React) the developer uses
 class FrontEnd extends Developer {}
 
-// We extend developer into another class called Backend and give it a `code` method;
+// We extend developer into another class called Backend and give it a `code` method
+// The code method should return a line of code that the developer might write (ex. SELECT * FROM users;)
 class Backend extends Developer {}
 
 // Create three variables that are instances of each class you have made
