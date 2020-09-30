@@ -52,19 +52,19 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Resources
 
-* [MDN web docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+  * [MDN web docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-* [MDN web docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  * [MDN web docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 
-* [jQuery docs on .ajax()](https://api.jquery.com/jquery.ajax/)
+  * [jQuery docs on .ajax()](https://api.jquery.com/jquery.ajax/)
 
-* [MDN web docs on the Location interface](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+  * [MDN web docs on the Location interface](https://developer.mozilla.org/en-US/docs/Web/API/Location)
 
-* [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
+  * [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
 
-* [GitHub API documentation](https://docs.github.com/en/rest/reference)
+  * [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
-* [OpenWeather API documentation](https://openweathermap.org/api)
+  * [OpenWeather API documentation](https://openweathermap.org/api)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

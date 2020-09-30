@@ -13,13 +13,13 @@ In this activity you will be writing code to create a function that capitalizes 
     * e.g. given the following string:
 
     ```js
-    var str = "a lannister always pays his debts";
+    var str = "open a new browser tab";
     ```
 
     * The following string should be returned:
 
     ```js
-    "A Lannister Always Pays His Debts";
+    "Open A New Browser Tab";
     ```
 
 * You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
