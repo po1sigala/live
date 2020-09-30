@@ -1,14 +1,14 @@
 # Unit 08 Project 1 Homework: Professional Materials
 
-Now that you've had some practice with APIs and have a project to share, you'll be updating your portfolio page and other materials to build toward being employer competitive.
+Now that you've had some practice with APIs and have a project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
 
-If you are opting out of career services, this is _still a required assignment_. Part of being a web developer means being a part of a community. Having a place to share your projects is _necessary_ if you're applying for jobs, but is still _critical_ on your journey as a developer.
+If you are opting out of career services, this is _still a required assignment_. Part of being a web developer means being a part of a community. Having a place to share your projects is _necessary_ if you're applying for jobs, but it's also _critical_ on your journey as a developer.
 
 ## Requirements
 
-* Submit an updated portfolio featuring project 1 and two exemplary homework assignments.
+* Submit an updated portfolio featuring Project 1 and two exemplary homework assignments.
 
-* Submit an updated GitHub profile with pinned repositories featuring project 1 and two exemplary assignments.
+* Submit an updated GitHub profile with pinned repositories featuring Project 1 and two exemplary assignments.
 
 * Submit an updated resume
 
@@ -18,9 +18,9 @@ If you are opting out of career services, this is _still a required assignment_.
 
 | Requirement      | Weight |
 | ---------------- | ------ |
-| Portoflio        | 30%    |
-| GitHub Profile   | 30%    |
-| Resume           | 30%    |
+| Portoflio        | 40%    |
+| GitHub Profile   | 40%    |
+| Resume           | 10%    |
 | LinkedIn Profile | 10%    |
 
 ## Instructions
@@ -54,7 +54,7 @@ Your updated portfolio should:
 
 5. Have a polished, mobile-responsive user interface.
 
-#### Design
+### Design
 
 Unfortunately, this is where it gets a little bit subjective. Your site should look
 "polished." Here are a few guidelines on what that means:
@@ -110,19 +110,19 @@ Your GitHub profile must contain at least the following items:
 
 💁 Need help building a resume? Check out the [Career Services milestone resources](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume).
 
-Submit a clear, concise and compelling resume, tailored to the type of job you’re looking for.
+Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
 
 Your resume should include:
 
 * a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub
 
-* technical skills section, with all programming languages and technologies listed
+* a technical skills section, with all programming languages and technologies listed
 
 * 3 of your strongest projects/homework assignments with brief description, languages used, and URL
 
 ### 4. Updated LinkedIn
 
-💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](hhttps://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-online-presence).
+💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-online-presence).
 
 Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
 
@@ -130,14 +130,13 @@ Update your LinkedIn Profile with a strong bio statement, a professional photo, 
 
 If you are a job-seeking student, then getting yourself marked as employer-ready is an important step to take because you'll get:
 
-* added to our employer referral list where we'll help match you with employers for int`erviews
+* added to our employer referral list, where we'll help match you with employers for interviews
 
 * exclusive access to workshops for employer-ready students
 
 * a statistically higher success rate in your job search
 
-So if you are going to be looking for a job at the end of bootcamp, go ahead and submit these updated items to your Career Materials Advisor (formerly, Profile Coach) via BootcampSpot.
+So if you're going to be looking for a job at the end of your boot camp, go ahead and submit these updated items to your Career Materials Advisor (formerly Profile Coach) via BootCampSpot.
 
 ---
-
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

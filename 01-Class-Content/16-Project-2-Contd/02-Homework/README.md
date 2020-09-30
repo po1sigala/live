@@ -1,8 +1,8 @@
 # Unit 16 Project 2 Homework: Professional Materials
 
-Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer competitive.
+Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but is still *critical* on your journey as a developer.
+If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but it's also *critical* on your journey as a developer.
 
 
 ## Requirements
@@ -19,8 +19,8 @@ If you are opting out of career services, this is *still a required assignment*.
 ## Grading
 
 | Requirement      | Weight |
-|---               |---     |
-| Portfolio        | 40%    |
+| ---------------- | ------ |
+| Portoflio        | 40%    |
 | GitHub Profile   | 40%    |
 | Resume           | 10%    |
 | LinkedIn Profile | 10%    |
@@ -35,7 +35,7 @@ If you are opting out of career services, this is *still a required assignment*.
 
 ### Updated Portfolio
 
-💁 Need help updating your Portfolio? Check out the [Career Services milestone resources for online presence](hhttps://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-online-presence).
+💁 Need help updating your Portfolio? Check out the [Career Services milestone resources for online presence](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-online-presence).
 
 Your updated portfolio should:
 
@@ -58,7 +58,7 @@ Your updated portfolio should:
 5. Have a polished, mobile-responsive user interface.
 
 
-#### Design
+### Design
 
 Unfortunately, this is where it gets a little bit subjective. Your site should look
 "polished." Here are a few guidelines on what that means:
@@ -116,7 +116,7 @@ Your GitHub profile must contain at least the following items:
 
 💁 Need help building a resume? Check out the [Career Services milestone resources](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume).
 
-Submit a clear, concise and compelling resume, tailored to the type of job you’re looking for.
+Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
 
 
 ### Updated LinkedIn 
@@ -125,6 +125,5 @@ Submit a clear, concise and compelling resume, tailored to the type of job you�
 
 Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
 
-
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
