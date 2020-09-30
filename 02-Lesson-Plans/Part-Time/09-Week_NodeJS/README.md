@@ -56,7 +56,15 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-* @TODO LIST ANY PRIMARY RESOURCES AN INSTRUCTOR MAY WANT TO REFERENCE
+* [Wikipedia page on Node.js](https://en.wikipedia.org/wiki/Node.js)
+
+* [Wikipedia page on V8](https://en.wikipedia.org/wiki/Chrome_V8)
+
+* [Wikipedia page on servers](https://en.wikipedia.org/wiki/Server_(computing))
+
+* [fs documentation](https://node.readthedocs.io/en/latest/api/fs/)
+
+* [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
 ---
 

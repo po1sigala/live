@@ -2,11 +2,11 @@
 
 ## Overview
 
-We now arrive at another important milestone in our journey. The JavaScript you wrote for your first project was executed entirely on the client side, though it used third-party server-side APIs. In this and later units, you will learn how to write your own server-side applications to handle requests and ultimately to build your own APIs.
+You’ve arrived at another important milestone in your journey. The JavaScript you wrote for your first project was executed entirely on the client side, though it used third-party server-side APIs. In this and later units, you’ll learn how to write your own server-side applications to handle requests and ultimately to build your own APIs.
 
-In a previous era, this would be the point in our full-stack journey where we would begin learning a second programming language, such as PHP, to write server-side code. Luckily for us, Node.js—which was released in 2009—makes this unnecessary. Node.js is an implementation of the V8 JavaScript engine without Chrome, and allows us to write server-side code using JavaScript. We no longer need a browser to run JavaScript. We can (and will) do so from the command line.
+In a previous era, this would be the point when you’d begin learning a second programming language, like PHP, to write server-side code. Luckily, Node.js&mdash;released in 2009&mdash;makes this unnecessary. Node.js is an implementation of the V8 JavaScript engine without Chrome. It allows you to write server-side code using JavaScript. This means that you no longer need a browser to run JavaScript. You can (and will) do so from the command line!
 
-In this unit, you will learn how to initialize a Node.js project, install third-party dependencies, and create interactive command-line applications. Node.js ships with what is referred to as a standard library. The standard library contains a number of modules that allow us to extend the functionality of Node.js, such as `fs`, which we will use to read and write files. There is also a large and robust ecosystem of third-party modules that you will learn how to add to applications to extend their functionality.
+In this unit, you’ll learn how to initialize a Node.js project, install third-party dependencies, and create interactive command-line applications. Node.js ships with a **standard library**. The standard library contains a number of modules that allow you to extend the functionality of Node.js, like `fs`, which you’ll use to read and write files. You’ll also learn how to add a large and robust ecosystem of third-party modules to applications to extend their functionality.
 
 ## Key Topics
 
@@ -16,7 +16,7 @@ The following topics will be covered in this unit:
 
     * `process.argv`
 
-    * fs
+    * `fs`
 
 * Modularization
 
@@ -26,13 +26,13 @@ The following topics will be covered in this unit:
 
 * npm
 
-    * package.json
+    * `package.json`
 
     * `npm init`
 
     * `node_modules`
 
-* Inquirer
+* `inquirer`
 
 * ES6
 
@@ -59,20 +59,10 @@ The following topics will be covered in this unit:
     * Fetch API
 
     * Axios
- 
-## Comprehension Check
-
-You will be employer-ready if you can answer the following questions:
-
-1. What is npm?
-
-2. What are three of the major changes introduced to JavaScript in ES6?
-
-3. What are three approaches to handling asynchronous JavaScript?
 
 ## Learning Objectives
 
-You will be employer-competitive if are able to: 
+You will be employer-ready if you are able to: 
 
 * Build interactive command-line applications that process user input.
 
@@ -86,31 +76,56 @@ You will be employer-competitive if are able to:
 
 * Make server-side API calls with the Fetch API and Axios.
 
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` videos for tips and tricks on how to solve the algorithm.
+
+* [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
+
+* [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
+
+* [03: Camel Case](../../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case)
+
+### Assessments
+
+Assess your knowledge by answering the following technical interview questions:
+
+* What is npm?
+
+* What are three of the major changes introduced to JavaScript in ES6?
+
+* What are three approaches to handling asynchronous JavaScript?
+
 ## Homework
 
-Create a command-line application that uses input from a user to dynamically generates a good readme for a GitHub project.
+In the homework for this unit, you’ll create a command-line application that uses input from a user to dynamically generate a quality readme for a GitHub project.
 
 ## Career Connection
 
-Career Services material for this unit is located in the Career Connection folder. For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-Starting this unit, you'll begin to use Node.js. Be sure to have it installed on your computer _before_ attending your classes. You can follow the installation instructions for Mac and Windows on the [Node website](https://nodejs.org/en/download/).
+In this unit, you'll begin to use Node.js. Be sure to have it installed on your computer _before_ attending your classes. You can follow the installation instructions for Mac and Windows on the [Node.js download page](https://nodejs.org/en/download/).
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [Wikipedia: Node.js](https://en.wikipedia.org/wiki/Node.js)
+* [Wikipedia page on Node.js](https://en.wikipedia.org/wiki/Node.js)
 
-* [Wikipedia: V8](https://en.wikipedia.org/wiki/Chrome_V8)
+* [Wikipedia page on V8](https://en.wikipedia.org/wiki/Chrome_V8)
 
-* [Wikipedia: Server](https://en.wikipedia.org/wiki/Server_(computing))
+* [Wikipedia page on servers](https://en.wikipedia.org/wiki/Server_(computing))
 
-* [fs Documentation](https://node.readthedocs.io/en/latest/api/fs/)
+* [fs documentation](https://node.readthedocs.io/en/latest/api/fs/)
 
-* [InquirerJS](https://www.npmjs.com/package/inquirer/v/0.2.3)
+* [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
 - - -
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
