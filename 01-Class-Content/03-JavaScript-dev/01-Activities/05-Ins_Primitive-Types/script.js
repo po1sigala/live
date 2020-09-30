@@ -19,7 +19,7 @@ var isMyBooleanFalse = false;
 console.log(typeof myUndefined);
 
 // Logs number
-console.log(typeof myNumber); 
+console.log(typeof myNumberInt); 
 
 // Logs boolean
 console.log(typeof true);

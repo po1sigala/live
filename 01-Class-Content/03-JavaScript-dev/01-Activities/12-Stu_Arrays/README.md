@@ -1,26 +1,25 @@
-# Hello Array 
+# 🏗 Log Welcome Messages to Console Using an Array
 
-In this activity, you will work with a partner to create an array and console log messages using the array's data. 
+Work with a partner to implement the following user story:
 
-## Instructions
+* As an instructor, I want to create a list of my students' names and use that list
+ to welcome each of my students to class. I also want to remove a student who has left the class and replace the name with a new student's name. 
 
-* Be sure to work with your partner!
+## Acceptance Criteria 
 
-* Open [12-Stu_Arrays/Unsolved/script.js]() to implement the following features:
+* It is done when the total number of elements in the array is logged to the console.  
 
-  * As an instructor, I want to create a group of my students' names and use the data from that group to welcome each of my students to class. I also want to remove a student who has left the class and replace the name with a new student.
+* It is done when "Welcome to the class STUDENT_NAME" is logged using each element in the array. 
 
-  * When I log the length of the `students` array holding the class members' names, then it should log the number `5`.
+* It is done when the first element in the array is removed and that element is replaced with
+ the name of a new student.
 
-  * When I log a welcome message in the console, the data in the array should be used to welcome each student with the message: "Welcome to the class STUDENT_NAME"
+* It is done when "REPLACED_NAME is in class" is logged when an `if statement` is used 
+to test if the first element in the array has been replaced. 
+ 
+## 💡 Hint
 
-  * When the first student in the array is removed from the class, the student name should be replaced with the name `Bob`.
-
-  * If `Bob` has replaced the first student in the array, I want to log "Bob is in class." Else, I want to log "STUDENT_NAME is still in class"
-
-## 💡 Hints
-
-Don't forget that arrays are zero-indexed! That means the first index is 0, not 1. 
+What is the first index in an array? Is is `0` or `1`? 
 
 ## 🏆 Bonus
 

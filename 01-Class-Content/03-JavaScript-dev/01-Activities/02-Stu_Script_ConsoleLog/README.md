@@ -2,7 +2,8 @@
 
 Work with a partner to implement the following user story:
 
-As a developer, I want to link an external JavaScript file to an existing `index.html` file to add JavaScript functionality to my static web page. 
+As a developer, I want to link an external JavaScript file to an existing `index.html` file to add JavaScript functiona
+lity to my static web page. 
 
 ## Acceptance Criteria
 

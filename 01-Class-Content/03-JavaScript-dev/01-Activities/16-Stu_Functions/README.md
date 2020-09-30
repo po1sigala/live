@@ -1,26 +1,25 @@
-# Function Declarations and Expression
+# 🏗️ Write Function to Evaluate Equality of Two Values
 
-In this activity, you will work with a partner to  dissect existing function declarations and function expressions.
+Work with a partner to implement the following user story:
 
-## Instructions
+* In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
-* Be sure to work with your partner!
+* In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
-* Open [script.js](16-Stu_Functions/Unsolved/script.js) to examine the code and implement the following features:
 
-  * As a developer, I want to create a reusable block of code that evaluates if two values are strictly equal, equal or not equal.
+## Acceptance Criteria 
 
-  * When I provide two values in function arguments, then it should evaluate if the two functions are strictly equal.
+* It is done when I provide two values in function arguments and the function evaluates the values' equality. 
 
-  * If the two values are strictly equal, it should log: "They are equal in type and value"
+* It is done if "They are equal in type and value" is logged if the values are strictly equal. 
 
-  * Else if the two values are equal but not strictly equal, it should log: "They are equal in value"
+* It is done if "They are equal in value" is logged if the two values are equal but not strictly equal.
 
-  * Else it should log "The values are not equal"
+* It is done if "The values are not equal" if the values are not equal or strictly equal. 
 
-## 💡 Hint
-
-Look for the keyword `function` to identify function declarations and function expressions.   
+## 💡 Hints
+ 
+How can we use parameters to give a name to the two values that we want to evaluate with our function? 
 
 ## 🏆 Bonus
 

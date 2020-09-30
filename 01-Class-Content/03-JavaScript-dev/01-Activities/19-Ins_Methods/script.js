@@ -16,7 +16,7 @@ arithmaticOperators.push("%");
 //Logs array with element "%" added to end
 console.log(arithmaticOperators);
 
-//Returns a new array. Takes in parameters to define start and end values
+//Returns selected elements as a new array.
 var logicalOperatorsSliced = logicalOperators.slice(0,2);
 
 //Logs new array
@@ -27,8 +27,8 @@ console.log(logicalOperators);
 
 //String Methods
 //Replaces "String" with "World" and returns new string
-var myStringAllCaps = myString.replace("String", "World");
-console.log(myString);
+var myNewString = myString.replace("String", "World");
+console.log(myNewString);
 
 //The orginal string is unchanged
-console.log(myStringAllCaps);
+console.log(myString);

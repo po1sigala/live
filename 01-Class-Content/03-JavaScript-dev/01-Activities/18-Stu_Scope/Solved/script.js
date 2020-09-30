@@ -14,6 +14,7 @@ function shoutItAllOut() {
 justShout();
 shoutItAllOut();
  
+// Lions is declared locally so it is available only to the sayLions function
 function sayLions() {
   var animal = "Lions"; 
   console.log(animal);
@@ -36,6 +37,10 @@ function sayBears() {
   console.log(bears + "! OH  MY!");
   return;
  }
+
+sayLions();
+sayTigers();
+sayBears();
  
 // Declaring sing in the outer function makes it available to the inner and outer function
 function singAlong() {

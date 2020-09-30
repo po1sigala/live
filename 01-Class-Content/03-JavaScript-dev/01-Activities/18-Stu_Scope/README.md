@@ -1,34 +1,20 @@
-# Scope 
+# 🐞 Messages Not Logging to Console Due to Undefined Variables
 
-In this activity, you will work with a partner to debug some broken code to learn more about scope.
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+* As a developer, I want to log messages to the console using variables declared in both global and local scope. 
 
-* Be sure to work with your partner!
+## Expected Behavior
 
-* As a developer, I want to log a series of messages to the console. 
+When the console is opened, a series of messages should log to the console. 
 
-* When I declare the variable `shout` and give it the value `Shout` then it should be available to functions `justShout` and `justShoutItAllOut`
+## Actual Behavior
 
-* When I declare the variable `animal` and give it the value `Tigers`, it should only be available to the `sayTigers` function and should not change the value of the `animal` variable in the `sayLions` function.
-
-* When the function `sayBears` is called, it should log "Bears! OH  MY!". The variable `bears` should only be declared once. 
-
-* When the nested function `singAlong` is called, it should log "Sing, Sing a Song." The variable `sing` should only be declared once and not in the global scope. 
-
-* Open [18-Stu_Method/Unsolved/script.js]() and examine the code.
-
-* Using the following questions, try to debug and fix the code:
-  
-  * What error messages are being logged?
-  
-  * Where in your code is the error happening?
-  
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+When the console is opened, an error message indicates that at least one variable is undefined and messages do not log. 
 
 ## 💡 Hint
 
-If stuck, try to think about how the variable is being used. Is it being made available to all functions? Or is it only being used locally by one function?    
+If stuck, try to think about how the variable is being used. Is it being made available to all functions? Or is it only being used by one function?    
 
 ## 🏆 Bonus
 

@@ -1,22 +1,18 @@
-# Hello Loops
+# 🏗️Iterate Over an Array to Log Messages to Console
 
-In this activity, you will work with a partner to use a loop to iterate over an array.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a member of the class, I want to store a list of my classmates and use that list to create a greeting for each student on the list. 
 
-* Be sure to work with your partner!
+## Acceptance Criteria 
 
-* Open [script.js](14-Stu_Iteration/Unsolved/script.js) to examine the code and implement the following features:
+* It is done when the total number of elements in the `students` array is logged to the console. 
 
-  * As a student, I want to store the name of five of my classmates in a single variable and log a greeting to each of them.
-
-  * When I log the length of the `students` array, then it should be the number `5` and the array should contain five strings with my classmates' names.
-
-   *When I iterate over the array using a for-loop, it should log to the console for each student, "Great to see you STUDENT_NAME." 
+* It is done when using a for loop the greeting "Great to see you, CLASSMATE_NAME!" logs to the console for each classmate's name in the `students` array. 
 
 ## 💡 Hint
 
-Loops are a great way to write DRY (Don't Repeat Yourself) code. 
+How can you use the element's index and the array name to access each element? 
 
 ## 🏆 Bonus
 
