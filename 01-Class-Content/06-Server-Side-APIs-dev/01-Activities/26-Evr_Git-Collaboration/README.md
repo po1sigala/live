@@ -11,7 +11,7 @@ Please refer to `25-Evr_Git-Repo-Setup` for instructions. This is a continuation
 ### Create a New Feature Branch
 Github allows us to create multiple branches off of our `main` branch. This gives us a way to test multiple different features at a time. By doing this we can have multiple people working on a project without breaking our `main` branch.
 
-* Once you have the command line open, make sure you are in the right diretory by using the command:
+* Once you have the command line open, make sure you are in the right directory by using the command:
 
 ```
 cd super-team-project
@@ -69,21 +69,21 @@ git push origin super_feature
 
 * It is time to hit the "create pull request" button so it can be reviewed.
 
-**Important:** Before sumbitting a pull request, make sure you are comparing your branch to `main`.
+**Important:** Before submitting a pull request, make sure you are comparing your branch to `main`.
 
 ### Review Pull Request
 
-* Okay, we now have a pull request but it is important one of your team members carefully reviews your pull request for any mistakes that could potientally break the `main` branch.
+* Okay, we now have a pull request but it is important one of your team members carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
 
 * We have to navigate to our repository on Github and click on the tab named "pull request".
 
 ![PullRequestTab](./Images/05-pull-request-tab.png)
 
-* Once on the pull request page you should see a list of request and the request you made.
+* Once on the pull request page you should see a list of requests and the request you made.
 
 ![SuperFeaturePullRequest](./Images/06-super-feature-pull-request.png)
 
-* Now you are looking at the pull request you submitted. The information on this page gives gives you a detailed look at the changes made. It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
+* Now you are looking at the pull request you submitted. The information on this page gives you a detailed look at the changes made. It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
 
 ### Merge Feature Branch and Close Pull Request
 
@@ -99,7 +99,7 @@ git push origin super_feature
 
 * We are approaching the final step, it's time to merge our branch with the `main` branch. 
 
-* Once the pull request has been reviewed and tested, you are going to naviagate to the appropriate pull request on Github. Locate and click the green button labelled "Merge pull request".
+* Once the pull request has been reviewed and tested, you are going to navigate to the appropriate pull request on Github. Locate and click the green button labelled "Merge pull request".
 
 ![MergePullRequest](./Images/09-merge-pull-request.png)
 
