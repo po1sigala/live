@@ -38,6 +38,16 @@ You will be employer-ready if you are able to:
 
 * Resolve a merge conflict that results from a `git pull`
 
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to successfully complete the assessments.
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 02 Assessment](https://forms.gle/72YzfNppttviTD8a6)
+
 ## Homework
 
 For your homework this week, you will use HTML and advanced CSS techniques to build a responsive, mobile-friendly portfolio web app.
