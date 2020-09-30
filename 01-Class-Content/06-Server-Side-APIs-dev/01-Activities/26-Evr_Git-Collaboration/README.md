@@ -6,35 +6,40 @@ Having multiple developers work with code in a single repository can be hectic. 
 
 ## Instructions
 
+Please refer to `25-Evr_Git-Repo-Setup` for instructions. This is a continuation of that activity.
+
 ### Create a New Feature Branch
 Github allows us to create multiple branches off of our `main` branch. This gives us a way to test multiple different features at a time. By doing this we can have multiple people working on a project without breaking our `main` branch.
 
-* In your command line clone the repository you want to add your feature too using `git clone https://github.com/parkerfoshay/super-team-project.git`.
+* Once you have the command line open, make sure you are in the right diretory by using the command:
 
-* Once you have cloned the repository you want work on it is time to change directories with the command `cd super-team-project`
+```
+cd super-team-project
+```
 
-* You should now be inside your repository's directory. Now we have to create a new branch on this repository in order to work for our changes not to effect the `main` branch. to do this enter the command below:
+* You should now be inside your repository's directory. Now we have to create a new branch on this repository in order to work and for our changes not to effect the `main` branch. To do this enter the command below:
 
-<code>
-git checkout -b test_feature
-</code>
+```
+git checkout -b super_feature
+```
 
 * In the command line you should see:
 
-[testBranchExample]
+![testBranchExample](./Images/01-feature-branch-created.png)
 
 
 ### Commit Changes to Feature Branch and Test Locally
 
-* Once we have made changes to the `test_feature` branch it is time to make sure your project still runs locally.
 
-* If your project and its new feature is running as intended, save those changes to the `test_feature` branch. We do that with the following command:
+* Once we have made changes to the `super_feature` branch it is time to make sure your project still runs locally.
 
-<code>
+* If your project and its new feature is running as intended, save those changes to the `super_feature` branch. We do that with the following command:
+
+```
 git commit -am "This is commiting the changes I made loclly"
-</code>
+```
 
-* We have now commited the changes locally. This will not be shown on Github yet.
+* We have now commited the changes locally but this will not be shown on Github yet.
 
 ### Push Feature Branch and Open Pull Request
 
@@ -42,25 +47,25 @@ git commit -am "This is commiting the changes I made loclly"
 
 * Before we can make a pull request on Github, we first need to push our new feature to Github. The following command allows us to do that:
 
-<code>
+```
 git push origin super_feature
-</code>
+```
 
 * After pushing your branch you should see something similar to this in your command line:
 
-[imageOfSuccessfullPush]
+![imageOfSuccessfullPush](./Images/02-successful-push.png)
 
-* With our `super-feature` branch now on Github, it is time for us to open a pull request. A pull request will let your team members know you are ready to implement the new `super_feature` to the `main` branch.
+* With our `super_feature` branch now on Github, it is time for us to open a pull request. A pull request will let your team members know you are ready to implement the new `super_feature` to the `main` branch.
 
 * Navigate to the `super_feature` branch on Github by going to your repository page. Once on your repository's Github page, look for the dropdown menu called `main`. Click it and you should see the branches off your `main` branch. Click `super_feature`.
 
-[navigateToSuperFeature]
+![navigateToSuperFeature](./Images/03-navigate-to-super-feature.png)
 
 * Once we have chosen the correct branch, a green button should appear with the label "Compare & pull request".
 
-[ComparePullRequest]
+![ComparePullRequest](./Images/04-compare-pull-request.png)
 
-* When creating a pull request it is best practice to be as descriptive as possible. It is important to let you team know exactly what you changed. 
+* When creating a pull request it is best practice to be as descriptive as possible. It is important to let your team know exactly what you changed. 
 
 * It is time to hit the "create pull request" button so it can be reviewed.
 
@@ -68,7 +73,41 @@ git push origin super_feature
 
 ### Review Pull Request
 
+* Okay, we now have a pull request but it is important one of your team members carefully reviews your pull request for any mistakes that could potientally break the `main` branch.
+
+* We have to navigate to our repository on Github and click on the tab named "pull request".
+
+![PullRequestTab](./Images/05-pull-request-tab.png)
+
+* Once on the pull request page you should see a list of request and the request you made.
+
+![SuperFeaturePullRequest](./Images/06-super-feature-pull-request.png)
+
+* Now you are looking at the pull request you submitted. The information on this page gives gives you a detailed look at the changes made. It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
+
 ### Merge Feature Branch and Close Pull Request
+
+* While reviewing the pull request you may run into a bug that you could easily fix. Github makes it easy for us to open the pull request's code on our local computer.
+
+* On the "pull request" tab you should see a button which says "Open With". Chose how you want to clone the pull request. 
+
+![OpenWithPullRequest](./Images/07-clone-pull-request.png)
+
+* You can now edit the pull request's code and when you are finished with the changes you can push them back to Github. Once pushed you will be able to see a timeline of the changes inside the pull request.
+
+![PullRequestTimeline](./Images/08-pull-request-timeline.png)
+
+* We are approaching the final step, it's time to merge our branch with the `main` branch. 
+
+* Once the pull request has been reviewed and tested, you are going to naviagate to the appropriate pull request on Github. Locate and click the green button labelled "Merge pull request".
+
+![MergePullRequest](./Images/09-merge-pull-request.png)
+
+* You have the ability to add a comment with your merge before clicking confirm.
+
+* Now you have merged your `super-feature` branch with the `main` branch. Github gives you the option to delete the branch you merged but that might not always be ideal. I would clarify with your team members before deleting a branch.
+
+![SuccessfuMerge](./Images/10-successful-merge.png)
 
 ### Hints
 
