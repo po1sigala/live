@@ -6,6 +6,7 @@ Work with a partner to implement the following user story:
 
 * In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
 
+
 ## Acceptance Criteria 
 
 * It is done when I provide two values in function arguments and the function evaluates the values' equality. 

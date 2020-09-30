@@ -1,24 +1,20 @@
-# Object Methods 
+# 🐞Messages Not Logging to Console 
 
-In this activity, you will work with a partner to debug some broken code to learn more about objects and object methods. 
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+* Users should see a message log to the console indicating if the shelter dog or cat is available.
 
-* Be sure to work with your partner!
+## Expected Behavior
 
-* Open [24-Stu_Object-Methods/Unsolved/script.js]() to examine the code.
+When a name is stored in the `chosenPet` variable, a message should log to the console indicating if the pet is available and if it is a dog or a cat. If the pet is not available, a message should indicate that and suggest the shelter's featured cat and dog. No errors should be returned. 
 
-* Using the following questions, try to debug and fix the code:
-  
-  * What error messages are being logged?
-  
-  * Where in your code is the error happening?
-  
-  * What is a good key word or phrase you can Google to find resources to help you debug?
+## Actual Behavior
+
+No message is logged to the console and an error message indicating an `Uncaught ReferenceError` is returned. 
 
 ## 💡 Hints
 
-Take a look at each console log and think about the intended output. Then, think about ways you can access the values and methods you need to make the code work. 
+Take a look at each console log. What is the intended input? How can you use the object name and key to access the values and methods you need to make the code work? 
 
 ## 🏆 Bonus
 

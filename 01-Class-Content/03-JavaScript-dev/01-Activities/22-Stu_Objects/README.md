@@ -1,38 +1,22 @@
-# Object Properties
+🏗️ Log Customer's Drink Order Using An Object
 
-In this activity, you will work with a partner to create an object to store related data and access the object's properties using dot notation and bracket notation.  
+Work with a partner to implement the following user story:
 
-## Instructions   
+ * As a coffee shop owner, I want to be able to store data about my customer's drink order in an object and log a message indicating if the drink is ready or still in the queue. 
 
-* Be sure to work with your partner!
+## Assessment Criteria  
 
-* Open [22-Stu_Objects/Unsolved/script.js]() to examine the code and implement the following features:
+  * It is done when the `customerOrder` object has three properties that store the drink's name, number of sugars and a boolean indicating if the order is ready. 
 
-  * As a coffee shop owner, I want to be able to store data about my customer's drink order in an object, log it, and log a message to the console indicating if the drink is ready or if it still in the queue. 
+  * It is done when the drink name and number of sugars is logged to the console. 
 
-  * When I log to the console the customer's drink, it should be an object named customerDrink with three properties. 
+  * It is done when "Ready for pick-up" logs if the order is ready. 
 
-    * The first key-value pair should have the key `name` and the value should be a string with the drink's name.
-
-    * The second key-value pair should have the name `sugars` and the value should be a number.
-
-    * The third key-value pair should have the key `isReady` and the value should be a boolean.
-
- * If the object's `isReady` evaluates to true, then a message should log to the console such as: "Ready for pick-up: coffee with 3 sugars."
-
-    * The name of the drink and number of sugars in the message should represent the values held in the customerDrink object.
-
-    * The values should be accessed using dot notation.
-
-* Else if the object's `isReady` evaluates to false, then a message should log to the console such as: "Still in queue: coffee with 3 sugars."
-
-    * The name of the drink and number of sugars in the message represent the values held in the customerDrink object.
-
-    * The values should be accessed using bracket notation.
+  * It is done when "Still in order queue" logs if order is not ready.  
 
 ## 💡 Hint
 
-Bracket notation should look familiar. Previously, we used bracket notation to access arrays.  
+How can we use dot notation or bracket notation to access an object's values?  
 
 ## 🏆 Bonus
 

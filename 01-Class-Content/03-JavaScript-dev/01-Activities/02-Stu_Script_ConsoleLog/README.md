@@ -13,7 +13,7 @@ lity to my static web page.
 
 Refer to the documentation: 
 
-[MDN Web Docs: The Script Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+[MDN web docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 [Open Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
 ## 💡 Hint
