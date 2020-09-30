@@ -8,7 +8,11 @@ Work with a partner to implement the following user story:
 
 * It's done when the app create a parent class called `Developer`
 * The `Developer` class should have a method called `sayHi` which returns a string saying the developers name, and hello
-  * ex. `Hey! my name is ${this.developerName} 👋`
+
+    ```
+    `Hey! my name is ${this.developerName} 👋`
+    ```
+
 * It's complete when the file contains two classes, `Frontend` and `Backend` that extend from `Developer`
 * It's done when the `Frontend` class has a method called `saySkill` that is unique to that class. It should return something like:
     ```
