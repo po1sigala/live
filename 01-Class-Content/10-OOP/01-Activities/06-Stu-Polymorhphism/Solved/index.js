@@ -47,7 +47,7 @@ console.log(backend.sayHi());
 console.log('backend.code() =>', backend.code());
 console.log('frontend.saySkill() =>', frontend.saySkill());
 
-// Override the sayHi method for both Frontend and Backend
+// Override the sayHi method for both Frontend and Backend (polymorphism)
 FrontEnd.prototype.sayHi = () =>
   console.log('Hello, I am part of the Front End team');
 

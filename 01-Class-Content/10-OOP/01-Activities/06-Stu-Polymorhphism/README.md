@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to use *polymorphism* to create objects that have mostly similar functionality. I want to override the sayHi function using polymorphism.
+* As a developer, I want to create objects that have mostly similar functionality. I want to override the sayHi function using polymorphism.
 
 ## Acceptance Criteria
 
@@ -33,7 +33,7 @@ Work with a partner to implement the following user story:
 
 * How could the `super` give us access variables and methods from the constructor class?
 
-* How can we overwrite methods using the the prototype? 
+* How can we overwrite methods using the `prototype`? 
 
 
 ## 🏆 Bonus
