@@ -23,22 +23,16 @@ const practiceCoding = (cb, errCb) => {
 practiceCoding(callback, errorCallback);
 
 // Rewrite the above function so that it returns a promise instead
-const practiceCodingPromise = () =>
-  new Promise((resolve, reject) =>
-    studentDistracted
-      ? reject(new Error('Coding stopped - Student is distracted'))
-      : resolve('We are coding!')
-  );
 
-// const practiceCodingPromise = () => {
-//   return new Promise((resolve, reject) => {
-//     if (studentDistracted) {
-//       reject(new Error('Coding stopped - Student is distracted'));
-//     } else {
-//       resolve('We are coding!');
-//     }
-//   });
-// };
+const practiceCodingPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (studentDistracted) {
+      reject(new Error('Coding stopped - Student is distracted'));
+    } else {
+      resolve('We are coding!');
+    }
+  });
+};
 
 practiceCodingPromise()
   .then((message) => console.log(message))
