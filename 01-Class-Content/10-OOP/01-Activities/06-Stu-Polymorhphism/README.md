@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to use *polymorphism* to create objects that have mostly similar functionality
+* As a developer, I want to use *polymorphism* to create objects that have mostly similar functionality. I want to override the sayHi function using polymorphism.
 
 ## Acceptance Criteria
 
@@ -25,12 +25,15 @@ Work with a partner to implement the following user story:
 * It's complete when you create three variables that are instances of each class you have made
 * It's done when you have the three objects you've created execute the `sayHi` method
 * It's done when you execute `code` and `saySkill` methods from the instances you have created for `Backend` and `Frontend`
+* It's done when you have overwritten the `sayHi` method for both the `Frontend` and `Backend` prototype.
 
 ## 💡 Hints
 
 * How could we use the `extends` keyword to inherit methods from a parent class?
 
 * How could the `super` give us access variables and methods from the constructor class?
+
+* How can we overwrite methods using the the prototype? 
 
 
 ## 🏆 Bonus

@@ -22,3 +22,5 @@ class Backend extends Developer {}
 // Have the three objects you've created `sayHi`
 
 // Have the two extended classes you've created preform their `saySkill` and `code` methods
+
+// Override the sayHi method for the `Backend` and `Frontend` classes

@@ -47,9 +47,12 @@ console.log(backend.sayHi());
 console.log('backend.code() =>', backend.code());
 console.log('frontend.saySkill() =>', frontend.saySkill());
 
-// BONUS: Add an additional method using prototype
-Developer.prototype.eatLunch = () => {
-  console.log('I am going to eat my lunch now');
-};
+// Override the sayHi method for both Frontend and Backend
+FrontEnd.prototype.sayHi = () =>
+  console.log('Hello, I am part of the Front End team');
 
-backend.eatLunch();
+Backend.prototype.sayHi = () =>
+  console.log('Hello, I am part of the Back End team');
+
+frontend.sayHi();
+backend.sayHi();
