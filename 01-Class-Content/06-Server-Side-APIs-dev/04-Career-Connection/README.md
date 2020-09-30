@@ -12,11 +12,11 @@ You'll use third-party APIs every day on the job. Companies use these technologi
 
 * **Collecting information from third-party services**
 
-    Companies like Lyft, DoorDash, and Airbnb don't create their own proprietary mapping systems. Instead, they use the [Google Maps Platform](https://developers.google.com/maps/documentation), much like you did this week when you made requests to third-party servers. Companies commonly use data and toolsets offered by others&mdash;so everything you learned this week will be incredibly useful moving forward!
+Companies like Lyft, DoorDash, and Airbnb don't create their own proprietary mapping systems. Instead, they use the [Google Maps Platform](https://developers.google.com/maps/documentation), much like you did this week when you made requests to third-party servers. Companies commonly use data and toolsets offered by others&mdash;so everything you learned this week will be incredibly useful moving forward!
 
 * **Collecting information from another server in their own organization**
 
-    Let's say you're working at an insurance company, building an application to track which premiums have been paid and which haven't. Your company has developed a standalone app that handles the customer payment portal. When your own application needs to know whether a premium has been paid or not, it makes an API call to the payment app, which sends its response in JSON format for you to handle how you'd like. You'll find in your career that this sort of internal communication&mdash;between two separate applications housed within one company&mdash;is common.
+Let's say you're working at an insurance company, building an application to track which premiums have been paid and which haven't. Your company has developed a standalone app that handles the customer payment portal. When your own application needs to know whether a premium has been paid or not, it makes an API call to the payment app, which sends its response in JSON format for you to handle how you'd like. You'll find in your career that this sort of internal communication&mdash;between two separate applications housed within one company&mdash;is common.
 
 ### Becoming Employer-Competitive
 
@@ -38,11 +38,11 @@ Take some time now to envision your future as a full-stack web developer. Comple
 
 We don't have time in class to explore every popular API. Review this list of commonly used APIs, and jot down a few ideas for applications that could use them:
 
-- Google's [GeoCoding API](https://developers.google.com/maps/documentation/geocoding/start) converts addresses into geographic coordinates like longitude and latitude.
+* Google's [GeoCoding API](https://developers.google.com/maps/documentation/geocoding/start) converts addresses into geographic coordinates like longitude and latitude.
 
-- The [Email Address Validation API](https://sendgrid.com/solutions/email-validation-api/) handles email infrastructure and mailing transactions.
+* The [Email Address Validation API](https://sendgrid.com/solutions/email-validation-api/) handles email infrastructure and mailing transactions.
 
-- [SkyScanner](https://skyscanner.github.io/slate/) provides access to the latest information and pricing on flights, hotels, or car hire globally.
+* [SkyScanner](https://skyscanner.github.io/slate/) provides access to the latest information and pricing on flights, hotels, or car hire globally.
 
 ### Prepare for the Technical Interview
 
@@ -50,17 +50,17 @@ Many companies use algorithm questions during the technical interview. We strong
 
 Please refer to the class repository to find these algorithms:
 
-- Coding Algorithm #1: Factorial
+* Coding Algorithm #1: Factorial
 
-- Coding Algorithm #2: Is Palindrome
+* Coding Algorithm #2: Is Palindrome
 
-- Coding Algorithm #3: Title Case
+* Coding Algorithm #3: Title Case
 
 For practice in a live, interview-style IDE complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
 
 Once you start, you'll have 7 days to complete it. After the 7 days has elapsed, the challenge will close.
 
-- CodeSignal Algorithm: [Array Median](https://app.codesignal.com/public-test/KXE5b7L3CPKSdYkzh/35X8aLqz9hNStg)
+* CodeSignal Algorithm: [Array Median](https://app.codesignal.com/public-test/KXE5b7L3CPKSdYkzh/35X8aLqz9hNStg)
 
 ### Career Services Events
 

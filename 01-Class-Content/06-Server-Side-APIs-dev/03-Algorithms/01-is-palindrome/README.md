@@ -6,28 +6,28 @@ In this activity you will be writing code to create a function that takes in a s
 
 ## Instructions
 
-- Open [Unsolved/is-palindrome.js](Unsolved/is-palindrome.js) in your code editor -- **this is the only file you will modify in this activity.**
+* Open [Unsolved/is-palindrome.js](Unsolved/is-palindrome.js) in your code editor -- **this is the only file you will modify in this activity.**
 
-  - In this file you will be writing code in the body of the `isPalindrome` function to achieve the following:
+  * In this file you will be writing code in the body of the `isPalindrome` function to achieve the following:
 
-    - Return `true` if the given string is a palindrome.
+    * Return `true` if the given string is a palindrome.
 
-    - Return `false` if the given string is not a palindrome.
+    * Return `false` if the given string is not a palindrome.
 
-      - e.g. given the following string:
+      * e.g. given the following string:
 
       ```js
       var str = "racecar";
       ```
 
-      - The following should be returned:
+      * The following should be returned:
 
       ```js
       true;
       ```
 
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
+* You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
+  * Functions that _pass_ the tests will be denoted with a **green check mark**.
 
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
