@@ -4,7 +4,7 @@ When creating an open source project on GitHub, it is important to provide a qua
 
 A command-line application will allow for quick and easy generation of a project readme. This will enable a project creator to spend more time working on the project itself instead of creating a readme.
 
-Your task is to create a command-line application that dynamically generates a professional README.md from a user's input, using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a quality, professional readme contains. The application will be invoked with the following command:
+Your task is to create a command-line application that dynamically generates a professional README.md from a user's input, using the [inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a quality, professional readme contains. The application will be invoked with the following command:
 
 ```
 node index.js
@@ -108,9 +108,9 @@ Adhere to the following guidelines for committing:
 
 We want you to have more than 200 commits by graduation, so commit early and often!
 
-## Submission on BCS
+## Review
 
-You are required to submit the following:
+You are required to submit the following for review:
 
 * A walkthrough video demonstrating the functionality of the application
 
