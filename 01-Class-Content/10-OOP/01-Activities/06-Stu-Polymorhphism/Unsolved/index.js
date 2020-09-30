@@ -1,4 +1,4 @@
-// We create our parent class, Develop, and the `sayHi` method
+// We create our parent class, Developer, and the `sayHi` method
 class Developer {
   constructor(name) {
     this.developerName = name;
@@ -22,5 +22,3 @@ class Backend extends Developer {}
 // Have the three objects you've created `sayHi`
 
 // Have the two extended classes you've created preform their `saySkill` and `code` methods
-
-// BONUS: Add an additional method using prototype
