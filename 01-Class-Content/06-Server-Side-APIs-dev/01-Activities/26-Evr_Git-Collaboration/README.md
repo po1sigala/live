@@ -29,17 +29,22 @@ git checkout -b super_feature
 
 
 ### Commit Changes to Feature Branch and Test Locally
+* Now that we have a new branch it is time to make some changes. In the `README.md` add a few lines describing your favorite part of JavaScript so far. Don't spend to much time on this but give it quick thought.
 
+```
+I enjoy JavaScript because it utilizes both Functional programming and Object-oriented programming.
+```
 
 * Once we have made changes to the `super_feature` branch it is time to make sure your project still runs locally.
 
 * If your project and its new feature is running as intended, save those changes to the `super_feature` branch. We do that with the following command:
 
 ```
-git commit -am "This is commiting the changes I made loclly"
+git add
+git commit "This is commiting the changes I made loclly"
 ```
 
-* We have now commited the changes locally but this will not be shown on Github yet.
+* With `git add` we move our changes to a staging area which tells git we want to group these changes in git. It is important to know that `add` does not change the repository. The repository will change once you `commit` the changes.
 
 ### Push Feature Branch and Open Pull Request
 
@@ -79,23 +84,19 @@ git push origin super_feature
 
 ![PullRequestTab](./Images/05-pull-request-tab.png)
 
-* Once on the pull request page you should see a list of requests and the request you made.
+* Once on the pull request page you should be able to see a list of files that have been changed. By clicking on them you can see an indepth view of what exactly changed.
 
 ![SuperFeaturePullRequest](./Images/06-super-feature-pull-request.png)
 
-* Now you are looking at the pull request you submitted. The information on this page gives you a detailed look at the changes made. It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
+* Now you are looking at the pull request you submitted. The information on this page gives you a detailed look at the changes made. Github has comment section on the bottom of the "pull request" page which is a great place for you and your team leave their feedback.
+
+* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted.
+
+[adding-reviewer]
+
+* It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
 
 ### Merge Feature Branch and Close Pull Request
-
-* While reviewing the pull request you may run into a bug that you could easily fix. Github makes it easy for us to open the pull request's code on our local computer.
-
-* On the "pull request" tab you should see a button which says "Open With". Chose how you want to clone the pull request. 
-
-![OpenWithPullRequest](./Images/07-clone-pull-request.png)
-
-* You can now edit the pull request's code and when you are finished with the changes you can push them back to Github. Once pushed you will be able to see a timeline of the changes inside the pull request.
-
-![PullRequestTimeline](./Images/08-pull-request-timeline.png)
 
 * We are approaching the final step, it's time to merge our branch with the `main` branch. 
 
