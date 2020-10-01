@@ -16,6 +16,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/02-Advanced
 
 * When learning about typography, students will probably see different fonts on their machines depending on the operating system they're using. Therefore, be prepared to discuss web-safe fonts and font fallbacks.
 
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+
 ## Career Connection
 
 * Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/02-Advanced-CSS/04-Career-Connection/CAREER-CONNECTION.md).
