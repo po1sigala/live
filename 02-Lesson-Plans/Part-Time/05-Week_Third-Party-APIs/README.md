@@ -14,6 +14,8 @@ In this unit, you will implement CDNs to leverage third-party APIs, like CSS fra
 
 * The 05.3 lesson plan includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+
 ## Career Connection
 
 Remind students that they can find related Career Services material in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
@@ -47,6 +49,8 @@ Next unit will cover server-side APIs. It is recommended that you try to fill an
 * [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
 
 * [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+
+  * [📹 Let's Code Max Num!](https://2u-20.wistia.com/medias/f9eao2cvjt)
 
 * [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
