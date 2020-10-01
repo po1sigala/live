@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
-const { Sequelize } = require('../config/connection');
+const sequelize = require('../config/connection');
 
 class User extends Model {
   // This instance method uses a conditional statement to check if a user has pets
