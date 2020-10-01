@@ -1,6 +1,6 @@
 # 📐 Add Comments to "Git It Done" Application - Part One 
 
-Work with a partner to add comments describing the functionality of the code found in all files in [Unsolved](./Unsolved)
+Work with a partner to add comments describing the functionality of the code found in the HTML and JavaScript files in [Unsolved](./Unsolved)
 
 ## 📝 Note(s)
 

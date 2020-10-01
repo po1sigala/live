@@ -3,15 +3,14 @@ var resultContentEl = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
 
 function getParams() {
-  var urlParamsArr = location.search.substring(1).split('&');
-  var urlParamsObj = {};
+  // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
+  var searchParamsArr = document.location.search.split('&');
 
-  for (var i = 0; i < urlParamsArr.length; i++) {
-    var paramEntry = urlParamsArr[i].split('=');
-    urlParamsObj[paramEntry[0]] = paramEntry[1];
-  }
+  // Get the query and format values
+  var query = searchParamsArr[0].split('=').pop();
+  var format = searchParamsArr[1].split('=').pop();
 
-  searchApi(urlParamsObj);
+  searchApi(query, format);
 }
 
 function printResults(resultObj) {
@@ -53,10 +52,7 @@ function printResults(resultObj) {
   resultContentEl.append(resultCard);
 }
 
-function searchApi(paramsObj) {
-  var query = paramsObj.q;
-  var format = paramsObj.format;
-
+function searchApi(query, format) {
   var locQueryUrl = 'https://www.loc.gov/search/?fo=json';
 
   if (format) {

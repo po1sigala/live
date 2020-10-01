@@ -54,8 +54,6 @@ p {
   border: none;
   outline: none;
   background-color: var(--light-dark);
-
-  /* What happens with the following two properties on hover? */
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }

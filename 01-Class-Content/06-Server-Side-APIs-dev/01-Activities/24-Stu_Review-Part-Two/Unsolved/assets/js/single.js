@@ -4,6 +4,7 @@ var limitWarningEl = document.querySelector('#limit-warning');
 
 var getRepoName = function () {
   // Where is this value coming from?
+  // TODO: Write your answer here
   var queryString = document.location.search;
   var repoName = queryString.split('=')[1];
 
@@ -13,6 +14,7 @@ var getRepoName = function () {
     getRepoIssues(repoName);
   } else {
     // Under what condition will this run?
+    // TODO: Write your answer here
     document.location.replace('./index.html');
   }
 };
@@ -26,6 +28,7 @@ var getRepoIssues = function (repo) {
         displayIssues(data);
 
         // What is this checking for? Under what condition will this be `true`?
+        // TODO: Write your answer here
         if (response.headers.get('Link')) {
           displayWarning(repo);
         }
@@ -38,6 +41,7 @@ var getRepoIssues = function (repo) {
 
 var displayIssues = function (issues) {
   // Is there a difference between this and `!issues.length`?
+  // TODO: Write your answer here
   if (issues.length === 0) {
     issueContainerEl.textContent = 'This repo has no open issues!';
     return;
@@ -55,7 +59,6 @@ var displayIssues = function (issues) {
 
     var typeEl = document.createElement('span');
 
-    // For a open source contributor, what is the significance of knowing if an issue has an associated pull request or not?
     if (issues[i].pull_request) {
       typeEl.textContent = '(Pull request)';
     } else {
@@ -69,6 +72,7 @@ var displayIssues = function (issues) {
 };
 
 // What does this function do?
+// TODO: Write your answer here
 var displayWarning = function (repo) {
   limitWarningEl.textContent = 'To see more than 30 issues, visit ';
 
@@ -78,6 +82,7 @@ var displayWarning = function (repo) {
   linkEl.setAttribute('target', '_blank');
 
   // Where does this appear on the page?
+  // TODO: Write your answer here
   limitWarningEl.appendChild(linkEl);
 };
 
