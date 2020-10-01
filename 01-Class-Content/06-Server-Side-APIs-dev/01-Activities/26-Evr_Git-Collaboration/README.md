@@ -73,11 +73,11 @@ To https://github.com/lernantino/super-team-project.git
 
 * Navigate to the `super_feature` branch on Github by going to your repository page. Once on your repository's Github page, look for the dropdown menu called `main`. Click it and you should see the branches off your `main` branch. Click `super_feature`.
 
-![navigateToSuperFeature](./Images/01-navigate-to-branch.png)
+![The repository home page where we can see our main branch](./Images/01-navigate-to-branch.png)
 
 * Once we have chosen the correct branch, a green button should appear with the label "Compare & pull request".
 
-![ComparePullRequest](./Images/02-compare-button.png)
+![Comparing pull request to the main branch's code](./Images/02-compare-button.png)
 
 * When creating a pull request it is best practice to be as descriptive as possible. It is important to let your team know exactly what you changed. 
 
@@ -89,7 +89,11 @@ To https://github.com/lernantino/super-team-project.git
 
 ### Review Pull Request
 
+* Earlier, we created a rule where you have to open a pull request and that pull request must be reviewed before you can merge a branch with `main`.
+
 ![The pull request displays a message that a review is required](./Images/04-pr-created.png)
+
+* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted.
 
 ![The reviewers section includes a dropdown to search for other users](./Images/05-add-reviewer.png)
 
@@ -97,21 +101,19 @@ To https://github.com/lernantino/super-team-project.git
 
 * We have to navigate to our repository on Github and click on the tab named "pull request".
 
-![PullRequestTab](./Images/06-click-pr-tab.png)
+![The pull request tab on the repository page](./Images/06-click-pr-tab.png)
 
 ![The list of open pull requests includes the newly created "Update to the Super Feature"](./Images/07-pr-list.png)
 
-* Once on the pull request page you should be able to see a list of files that have been changed. By clicking on them you can see an indepth view of what exactly changed.
+* Once on the pull request page you should be able to see a tab labeled "Files Changed". In this view you will be able to see a side-by-side comparison of what exactly has changed in your repository. This makes comparing code less painful and increase efficiency.
 
 ![The pull request includes a tab labeled "Files Changed"](./Images/08-click-files-changed.png)
 
 ![The Files Changed tab displays a side-by-side comparison of changes](./Images/09-add-comment.png)
 
+* Towards the bottom of the page you will see the Comment section. This is a great place to leave feedback on the changes made but it also has couple other options. You can send along your approval to merge the branches with feedback or you can request more changes before merging. These tools play a key role in making sure your team stays focus and productive.
+
 ![The Review Changes form has options to Comment, Approve, or Request Changes](./Images/10-approve.png)
-
-* Now you are looking at the pull request you submitted. The information on this page gives you a detailed look at the changes made. Github has comment section on the bottom of the "pull request" page which is a great place for you and your team leave their feedback.
-
-* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted.
 
 * It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
 
@@ -121,13 +123,13 @@ To https://github.com/lernantino/super-team-project.git
 
 * Once the pull request has been reviewed and tested, you are going to navigate to the appropriate pull request on Github. Locate and click the green button labelled "Merge pull request".
 
-![MergePullRequest](./Images/11-merge-request.png)
+![Ready to merge the super feature brach with the main branch](./Images/11-merge-request.png)
 
 * You have the ability to add a comment with your merge before clicking confirm.
 
 * Now you have merged your `super-feature` branch with the `main` branch. Github gives you the option to delete the branch you merged but that might not always be ideal. I would clarify with your team members before deleting a branch.
 
-![SuccessfuMerge](./Images/12-safe-to-delete.png)
+![After merging branches Github ask if we would like to delete the super feature branch](./Images/12-safe-to-delete.png)
 
 ### Hints
 
