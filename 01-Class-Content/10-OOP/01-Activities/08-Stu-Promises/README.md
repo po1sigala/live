@@ -8,9 +8,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY; e.g.:
-
-* It's done when I refactor the function using callbacks, `practiceCoding`, inside of `practiceCodingPromise`
+* It's done when I refactor the function using callbacks, `practiceCoding`, inside of `practiceCodingPromise`.
 
 * It's done when `practiceCodingPromise` returns a promise.
 
