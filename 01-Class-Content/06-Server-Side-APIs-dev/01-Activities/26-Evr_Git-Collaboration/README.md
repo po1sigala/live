@@ -93,25 +93,29 @@ To https://github.com/lernantino/super-team-project.git
 
 ![The pull request displays a message that a review is required](./Images/04-pr-created.png)
 
-* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted.
+* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted. For the sake of this activity you will also be playing the role of reviewer. Normally you will have some type of agreement on how to review pull request amongst your team.
 
 ![The reviewers section includes a dropdown to search for other users](./Images/05-add-reviewer.png)
 
-* Okay, we now have a pull request but it is important one of your team members carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
+* Okay, we now have a pull request but it is important one of your team members (YOU) carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
 
 * We have to navigate to our repository on Github and click on the tab named "pull request".
 
 ![The pull request tab on the repository page](./Images/06-click-pr-tab.png)
 
+* On this tab you will see a list of all the pull request for the specified branch. Right now you should only see the pull request you made but when working on bigger projects this number increases based how often you make changes to your project.
+
 ![The list of open pull requests includes the newly created "Update to the Super Feature"](./Images/07-pr-list.png)
 
-* Once on the pull request page you should be able to see a tab labeled "Files Changed". In this view you will be able to see a side-by-side comparison of what exactly has changed in your repository. This makes comparing code less painful and increase efficiency.
+* Once on the pull request page you should be able to see a tab labeled "Files Changed".
 
 ![The pull request includes a tab labeled "Files Changed"](./Images/08-click-files-changed.png)
 
+* In this view you will be able to see a side-by-side comparison of what exactly has changed in your repository. This makes comparing code less painful and increase efficiency.
+
 ![The Files Changed tab displays a side-by-side comparison of changes](./Images/09-add-comment.png)
 
-* Towards the bottom of the page you will see the Comment section. This is a great place to leave feedback on the changes made but it also has couple other options. You can send along your approval to merge the branches with feedback or you can request more changes before merging. These tools play a key role in making sure your team stays focus and productive.
+*  In the top right corner you should see a green button labeled "Review changes". Once you click on the "Make changes" button a forum will appear, you will have a few options. You can send a comment, send a comment along with approval to merge, or send a comment with changes that need to be made before merging. These tools play a key role in making sure your team stays focus and productive.
 
 ![The Review Changes form has options to Comment, Approve, or Request Changes](./Images/10-approve.png)
 
