@@ -8,6 +8,8 @@ In this unit, we'll use the `fetch()` method to make requests, parse through the
 
 ## Key Topics
 
+We'll cover the following topics in this unit:
+
 * Client-server model
 
 * JSON format
@@ -53,6 +55,18 @@ You will be employer-competitive if you are able to:
 * Explain the benefits and challenges of working with asynchronous JavaScript
 
 * Explain and implement URL query string parameters
+
+## Technical Interview Preparation
+
+### Algorithms
+
+* [01: Is Palindrome](./03-Algorithms/01-is-palindrome)
+
+* [02: Factorial](./03-Algorithms/02-factorial)
+
+  * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+* [03: Title Case](./03-Algorithms/03-title-case)
 
 ## Homework: Weather Dashboard
 
