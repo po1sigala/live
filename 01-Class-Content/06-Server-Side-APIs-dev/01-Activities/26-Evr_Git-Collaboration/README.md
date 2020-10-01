@@ -111,11 +111,11 @@ To https://github.com/lernantino/super-team-project.git
 
 ![The pull request includes a tab labeled "Files Changed"](./Images/08-click-files-changed.png)
 
-* In this view you will be able to see a side-by-side comparison of what exactly has changed in your repository. This makes comparing code less painful and increase efficiency.
+* In this view you will be able to see a side-by-side comparison of what exactly has changed in your repository. This makes comparing code less painful and increases efficiency.
 
 ![The Files Changed tab displays a side-by-side comparison of changes](./Images/09-add-comment.png)
 
-*  In the top right corner you should see a green button labeled "Review changes". Once you click on the "Make changes" button a forum will appear, you will have a few options. You can send a comment, send a comment along with approval to merge, or send a comment with changes that need to be made before merging. These tools play a key role in making sure your team stays focus and productive.
+*  In the top right corner you should see a green button labeled "Review changes". Once you click on the "Review changes" button a forum will appear, you will have a few options. You can send a comment, send a comment along with approval to merge, or send a comment with changes that need to be made before merging. These tools play a key role in making sure your team stays focus and productive.
 
 ![The Review Changes form has options to Comment, Approve, or Request Changes](./Images/10-approve.png)
 
