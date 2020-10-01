@@ -18,7 +18,7 @@ Make a simple website about your favorite type of animal.
 1. Create a new repository on your GitHub account. *You can name this repository whatever you would like.*
 2. Once inside of the repository, create a new file and name it `index.html`
 3. Add your HTML into this file, save it, and then navigate into your repository's `Settings` tab.
-4. Scroll down to the GitHub Pages section and then, in the section labeled `Source`, select that you would like to use the `master` branch as your source.
+4. Scroll down to the GitHub Pages section and then, in the section labeled `Source`, select that you would like to use the `main` branch as your source.
 5. Navigate to `<<YOUR USERNAME>>.github.io/<<REPO NAME YOU CHOSE>>` and you will find that your new web page has gone live! (For example, if your GitHub username is `johndoe` and the project is `cssDemo`, your URL would be `johndoe.github.io/cssDemo`) 
 
 ### Bonuses

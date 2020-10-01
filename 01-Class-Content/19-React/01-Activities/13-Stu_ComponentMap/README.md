@@ -6,11 +6,7 @@ In this activity we will map over a list of data and render components from each
 
 * Replace your React application's `src` folder with [src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
-* This activity uses Bootstrap. Be sure to add the Bootstrap CDN to your React app's `index.html` file:
-
-  ```html
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-  ```
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Open the application in your web browser and study the rendered application. Then take a minute to study the included components:
 

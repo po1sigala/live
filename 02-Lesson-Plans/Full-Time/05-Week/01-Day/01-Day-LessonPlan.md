@@ -2,9 +2,8 @@
 
 ### Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
-Trilogy as a company values transparency and data-driven change quite highly. As we grow, we know there will be areas that need improvement. It’s hard for us to know what these areas are unless we’re asking questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to the individual feedback at the end of lesson plans
-we would appreciate your feedback at the following link:
-[https://docs.google.com/forms/d/e/1FAIpQLSdWXdBydy047_Ys1wm6D5iJY_J-0Mo0BqCjfGc4Er2Bz9jo5g/viewform](https://docs.google.com/forms/d/e/1FAIpQLSdWXdBydy047_Ys1wm6D5iJY_J-0Mo0BqCjfGc4Er2Bz9jo5g/viewform)
+Trilogy as a company values transparency and data-driven change quite highly. As we grow, we know there will be areas that need improvement. It’s hard for us to know what these areas are unless we’re asking questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to the individual feedback at the end of lesson plans, we would appreciate your feedback at the following link:
+[https://forms.gle/yPfrY4CjNeAqbVKD6](https://forms.gle/yPfrY4CjNeAqbVKD6)
 
 ## Overview
 
@@ -14,7 +13,7 @@ This lesson introduces Node.js and the concepts of standard library, modules, np
 
 * Complete activities `01-Ins_Node-Demo` through `22-Stu_FunctionalLoops`
 
-* Ensure that students have [downloaded and installed the LTS version of Node](https://nodejs.org/en/). The version number does not matter, just that it is the LTS version. Direct the students to the `04-Supplemental` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Supplemental/nodejs-install-win.md) computers if they haven't installed it yet.
+* Ensure that students have [downloaded and installed the LTS version of Node](https://nodejs.org/en/). The version number does not matter, just that it is the LTS version. Direct the students to the `04-Important` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers if they haven't installed it yet.
 
 * The transition from client-side development to Node.js can be challenging for students. This lesson plan is a gentle introduction to the fundamentals.
 

@@ -26,7 +26,7 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
 
 ## Slides
 
-[9.1: Intro To MongoDB](https://docs.google.com/presentation/d/1JHT8-zZ-JWHg_zKDXEVy-leNegSipr26HBTNIEl3J3Y/edit?usp=sharing)
+[9.1: Intro To MongoDB](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing)
 
 [9.1: Career Services](https://docs.google.com/presentation/d/18inCMR9TB47q3yEY-YflqA-96cBqXheM9X0BrD0Gk9Y/edit#slide=id.p7)
 
@@ -38,7 +38,7 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing) and follow these prompts with their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing) and follow these prompts with their corresponding slides:
 
   * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
 
@@ -56,7 +56,7 @@ In this class, you will introduce the concept of the NoSQL database with MongoDB
 
 **Part 1: Install Mongo**
 
-* Have students install MongoDB by using the [03-Supplemental/Installing-MongoDB.md](../../../../01-Class-Content/17-NoSQL/03-Supplemental/Installing-MongoDB.md).
+* Guide students to the [MongoDB Community Edition Installation Manual](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials), and have them follow the instructions for their operating system. 
 
 * After 10 minutes ask the class:
 

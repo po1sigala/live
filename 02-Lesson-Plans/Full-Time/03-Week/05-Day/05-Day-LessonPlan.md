@@ -39,7 +39,7 @@ N/A
 
 ### 1. Instructor Do: Congratulatory Monologue on Full-Stack (5 min)
 
-* Take a few moments at the start of class to offer students a few congratulatory words. They've undergone over 6 weeks of grueling (and often frustrating) work -- and are probably feeling a bit burnt out. Re-invigorate them! Let them know that the rate of their progress is astounding! And that they've learned in just a few short weeks what a self-taught developer might have taken months to learn.
+* Take a few moments at the start of class to offer students a few congratulatory words. They've undergone 3 weeks of grueling (and often frustrating) work -- and are probably feeling a bit burnt out. Re-invigorate them! Let them know that the rate of their progress is astounding! And that they've learned in just a few short weeks what a self-taught developer might have taken months to learn.
 
 * Give students a few moments to ask questions. Encourage them to ask questions about anything -- code, career, anxiety. Build a rapport here!
 

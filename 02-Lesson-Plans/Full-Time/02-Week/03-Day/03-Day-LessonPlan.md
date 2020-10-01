@@ -288,7 +288,7 @@ In this class, we will be introducing students to the concept of JavaScript Obje
 
 ### 12. Students Do: Mini-Project (55 mins)
 
-* Explain that, for the remainder of class, we're going to build something from scratch that utilizes a lot of what they've learned.
+* Explain that, until break, we're going to build something from scratch that utilizes a lot of what they've learned.
 
 * Warn students that some of the requirements for this "mini project" we haven't necessarily gone over in class, but with a bit of Googling and asking their peers, you're confident they'll figure it out.
 

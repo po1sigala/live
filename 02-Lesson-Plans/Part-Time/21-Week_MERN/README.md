@@ -11,7 +11,7 @@ In this unit, we will be tying the front end and back end together with a MERN a
 * The activities in this unit will contain significantly more boilerplate than the previous React lessons. Be sure to direct the class's attention to the important aspects of each exercise.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/21-MERN/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/21-MERN/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -33,11 +33,11 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Time Tracker(s)
 
-  * [Unit 21-MERN Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1mZOzw2A6_s5C_u-18Z1hFxNO4m9FqDc_qiq0c_Tis80/edit#gid=1323041200)
+  * [Unit 21-MERN Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1Qm57-Qog5yLsRSi7_9u-DhN3dkbNZiqQDv9f7ga9KcE/edit?usp=sharing)
 
-  * [Unit 21-MERN Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1uEOFspLvfjW6erY3dHVnOx5FXQal0ZUO9XIsYyobfXE/edit#gid=1526123852)
+  * [Unit 21-MERN Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nMYaCRVlwwzrXGESZLnLo5gI9ZmjGF8BUMpLcUeSCC0/edit?usp=sharing)
 
-  * [Unit 21-MERN Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1tCQWgjimAwuPSHc2KSJfYLKA2pEcMfHQf8AZnfWfYKA/edit#gid=1938794889)
+  * [Unit 21-MERN Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1Mbc793dllqCJxl6_lrtIEG0YckCePxwHr-Z3H7n7T7Y/edit?usp=sharing)
 
 ## Algorithms
 

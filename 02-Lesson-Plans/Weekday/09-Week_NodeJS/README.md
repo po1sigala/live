@@ -24,7 +24,7 @@ Next week, we begin OOP, constructors, and classes. Try to spend some time this 
 
   * [09.2 - Lesson Plan](02-Day_ES6/09.2-LESSON-PLAN.md)
 
-  * [09.3 - Lesson Plan](03-Day_Aysnch-JS/09.3-LESSON-PLAN.md)
+  * [09.3 - Lesson Plan](03-Day_Asynch-JS/09.3-LESSON-PLAN.md)
 
 ### Slide Decks
 

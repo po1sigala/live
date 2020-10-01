@@ -177,7 +177,7 @@ Today's class is focused on introducing students to additional CSS styling techn
 
   * Then navigate to the [Google Fonts](https://www.google.com/fonts) web page and find a font-face students like.
 
-  * Then hit the "Quick Use" button.
+  * Then click the font card.
 
     ![2-GoogleFonts_1](Images/2-GoogleFonts_1.png)
 
@@ -396,7 +396,7 @@ Today's class is focused on introducing students to additional CSS styling techn
 
 * TA should come to the front of the class and explain what Homework #2 will look like. This homework will require students to use Bootstrap to build a portfolio site matching the screenshots provided. 
 
-[02-Homework/Master](../../../../01-Class-Content/02-css-bootstrap/02-Homework/Master)
+[02-Homework/Main](../../../../01-Class-Content/02-css-bootstrap/02-Homework/Main)
 
 ### 28. Instructor Do: Questions (12 mins, or remaining time)
 

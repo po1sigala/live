@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this class, we will be introducing students to the concept of React Hooks. We will further expand on their introduction to managing component state and cover side effects, global state, and pure functions. We will introduce three of the most common built-in Hooks: `useState`, `useEffect`, and `useContext`. Once students have experience creating each one, they will create their own Custom Hooks.
+In this class, we will be introducing students to the concept of React Hooks. We will further expand on their introduction to managing component state and cover side effects, global state, and pure functions. We will introduce three of the most common built-in Hooks: `useState`, and `useEffect`. Once students have experience creating each one, they will create their own Custom Hooks.
 
 ## Instructor Notes
 
-* `Summary: Complete activities 20-state/01-Activities/22-Ins_IntroReactRouter/ through 21-react/01-Activities/05-Ins_CustomHook.`
+* `Summary: Complete activities 19-React/01-Activities/22-Ins_IntroReactRouter/ through 20-State/01-Activities/06-Stu_CustomHook.`
 
 * As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
 
@@ -16,7 +16,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 * Articulate the term "effect" in the broader sense of programming.
 
-* Utilize React's most common built-in Hooks: `useState`, `useEffect`, and `useContext`.
+* Utilize React's most common built-in Hooks: `useState`, and `useEffect`.
 
 * Transform a React application that manages state with a class component into an application that uses functional components with React Hooks.
 
@@ -30,7 +30,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 [10.3 Time Tracker](https://docs.google.com/spreadsheets/d/1ASbpL8oT5cczjoafZYe3-aoT4F1aL3c8TClOOUrV-XQ/edit?usp=sharing)
 
-- - -
+---
 
 ### 1. Instructor Do: Introduce React Router (20 mins)
 
@@ -54,12 +54,15 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
   * We won't have enough time to teach _all_ of React Router, nor will students need to know all of the library. Instead we'll be going over the fundamental ~20% of syntax that they're likely going to be using 80% of the time. After that, students should feel more comfortable going through the official documentation for answers.
 
-* Replace your React application's `src` folder with [22-Ins_IntroReactRouter/src](../../../../01-Class-Content/20-state/01-Activities/22-Ins_IntroReactRouter/src).
+* Replace your React application's `src` folder with [22-Ins_IntroReactRouter/src](../../../../01-Class-Content/19-React/01-Activities/22-Ins_IntroReactRouter/src).
 
 * This example uses Bootstrap, so if you haven't already, add the Bootstrap CDN to your `index.html` file.
 
   ```html
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+  />
   ```
 
 * Run the following command in your terminal to install React Router:
@@ -148,11 +151,11 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 * In this activity students will work with partners to create a full React application from scratch complete with routing and AJAX requests to the [Dog Ceo API](https://dog.ceo/dog-api/).
 
-* **Instructions:** [README](../../../../01-Class-Content/20-state/01-Activities/23-Stu_PupsterApp/README.md)
+* **Instructions:** [README](../../../../01-Class-Content/19-React/01-Activities/23-Stu_PupsterApp/README.md)
 
 ### 3. Instructor Do: Review Pupster (15 mins)
 
-* As a class, go over [23-Stu_PupsterApp/Solved](../../../../01-Class-Content/20-state/01-Activities/23-Stu_PupsterApp/Solved) version of the previous activity. The most important points to cover are:
+* As a class, go over [23-Stu_PupsterApp/Solved](../../../../01-Class-Content/19-React/01-Activities/23-Stu_PupsterApp/Solved) version of the previous activity. The most important points to cover are:
 
   * How each route is rendering each component.
 
@@ -176,83 +179,79 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 1. **Discuss Managing State**: Take a moment to talk about managing state.
 
-  * Ask the students to discuss amongst each other how they've managed React state thus far.
+* Ask the students to discuss amongst each other how they've managed React state thus far.
 
-  * After a few minutes, collect some different points from the class and discuss some of the pros and cons of both methods.
+* Ask them what is one of the biggest issues of sharing state between Class and Functional components.
 
-3. **Class Components vs Context API**: Class components paired with the `setState` method is the most common way to manage state.
+2. **React Hooks `useState`**: Today's class will discuss two react hooks, one of them being `useState`, which offers a way for functional components to manage state directly without having to get the data through props drilling.
 
-  * Benefits:
+3.**Class Components vs Functional Components**: Class components paired with the `setState` method is the most common way to manage state.
 
-  * Setting state will force the component to re-render. This ensures that the component and all of its children will be up-to-date with the latest state.
+* Benefits:
 
-  * Drawbacks:
+* Setting state will force the component to re-render. This ensures that the component and all of its children will be up-to-date with the latest state.
 
-  * Since state only flows in one direction, all components that need to use the state must be children of the stateful component.
+* Drawbacks:
 
-  * Updating state from deep within the component hierarchy is often difficult.
+* Since state only flows in one direction, all components that need to use the state must be children of the stateful component.
 
-  * You are forced to use the keyword `this` and use a class component.
+* Updating state from deep within the component hierarchy is often difficult.
 
-  * The Context API is another tool that can be used to manage state.
+* You are forced to use the keyword `this` and use a class component.
 
-  * Benefits:
+* The `useState` hook is another tool that can be used to manage state through Functional Components.
 
-  * Updating state from deep within the component hierarchy is made to be easier since "prop drilling" can be avoided.
+* Benefits:
 
-  * Drawbacks:
+* No need to receive state from props as a Child Component.
 
-  * The most effective way to manage complex states still requires the use of `setState` to ensure that the latest changes are reflected in each component.
+* Easier to read and debug due to less code.
 
-4. **Managing State**: Managing state can be difficult since there is no one-size-fits-all solution.
+* No need to use this
 
-  * If your application is complex, it might warrant the use of a state management library like mobX or Redux.
+* Access to "Hook"
 
-  * If your application only has a few stateful properties, the best solution may be managing state in a single component.
+* Drawbacks:
 
-  * There is no "right" way to manage your state. The more applications that you create, the better you will become at gauging what the right state management tool is for the job.
+* Will need to use other “Hooks” to manage complex levels of state.
 
-  * For all situations that have states that are too complex for a single component, and not complex enough for Redux or MobX, we use Hooks.
+* As of React 16.8, Facebook recommends to use functional components whenever possible.
 
-6. **Hooks**: Hooks are functions that let you "hook into" React state and lifecycle features from function components.
+4. **Hooks**: Hooks are functions that let you "hook into" React state and lifecycle features from function components.
 
-  * For all situations that have states that are too complex for a single component, and not complex enough for Redux or MobX, we use Hooks.
+* React has no plans to deprecate class components, but Hooks can do everything a class component can and more.
 
-  * React has no plans to deprecate class components, but Hooks can do everything a class component can and more.
+5. **The 2 Hooks**: We will be covering two different kind of Hooks.
 
-7. **The 4 Hooks**: We will be covering for different kind of Hooks.
+* `useState` allows you to use state in a functional component.
 
-  * `useState` allows you to use state in a functional component.
+* `useEffect` replaces lifecycle methods like `componentDidMount` and `componentDidUpdate`.
 
-  * `useEffect` replaces lifecycle methods like `componentDidMount` and `componentDidUpdate`.
+* An **effect**, also commonly referred to as a **side effect**, is a term used to describe the result of affecting the “outside world”.
 
-  * An **effect**, also commonly referred to as a **side effect**, is a term used to describe the result of affecting the “outside world”.
+* This includes, but is not limited to: Data fetching, subscribing to events, and changes to the DOM.
 
-  * This includes, but is not limited to: Data fetching, subscribing to events, and changes to the DOM.
+* We will be covering the built-in Hooks `useState` and `useEffect` but emphasize that there are many more Hooks. The strong developer community around React has created a plethera of different Custom Hooks that you can plug into your applications.
 
-  * `useContext` grants read access to a Context Object as long as it is being used within the object's Provider.
+* Custom Hooks can be any reusable function, often built from logic extracted from existing functions.
 
-   * We will be covering the built-in Hooks `useState`, `useEffect`, and `useContext`, but emphasize that there are many more Hooks. The strong developer community around React has created a plethera of different Custom Hooks that you can plug into your applications.
+6. **2 Rules of Hooks**: There are 2 rules of Hooks that must be complied with:
 
-  * Custom Hooks can be any reusable function, often built from logic extracted from existing functions.
+* Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
 
-8. **2 Rules of Hooks**: There are 2 rules of Hooks that must be complied with:
+* It is important that Hooks are always called in the same order, like component lifecycle methods.
 
-  * Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
+* It is also what makes it possible for React to store the state of Hooks when using useState or useEffect.
 
-  * It is important that Hooks are always called in the same order, like component lifecycle methods.
+7. **2 Rules of Hooks**
 
-  * It is also what makes it possible for React to store the state of Hooks when using useState or useEffect.
+* Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
 
-9. **2 Rules of Hooks**
-
-  * Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
-
-  * This makes it so that all stateful logic is easy to find for the developer.
+* This makes it so that all stateful logic is easy to find for the developer.
 
 ### 7. Instructor Do: useState Demo (10 mins)
 
-* Run `08-Ins_useState` by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+* Run `01-Ins_useState` by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   * When the application loads, 'Status' is set to the default string, 'content'.
 
@@ -260,7 +259,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
   * Clicking the 'Fill with Determination' button changes 'Status' to 'determined'.
 
-* Open [08-Ins_useState/src/App.js](../../../../01-Class-Content/21-react/01-Activities/08-Ins_useState/src/App.js) in your IDE and explain the following:
+* Open [01-Ins_useState/src/App.js](../../../../01-Class-Content/20-State/01-Activities/01-Ins_useState/src/App.js) in your IDE and explain the following:
 
   * From React, we import `useState`.
 
@@ -276,8 +275,8 @@ In this class, we will be introducing students to the concept of React Hooks. We
   const [developerState, setDeveloperState] = useState({
     mood: "content",
     lifeLongLearner: true,
-    excitementLevel: 9000
-    })
+    excitementLevel: 9000,
+  });
   ```
 
   * 📝 The function will _not_ merge with the existing state as `setState` does. This means that whatever is passed into useState will _overwrite_ the object that was previously there.
@@ -289,7 +288,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
     setDeveloperState({
       mood: mood,
       lifeLongLearner: developerState.lifeLongLearner,
-      excitementLevel: developerState.excitementLevel
+      excitementLevel: developerState.excitementLevel,
     });
   };
   ```
@@ -311,35 +310,35 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ### 8. Students Do: useState Activity (15 mins)
 
-Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activities/09-Stu_useState/Unsolved)
+Files: [02-Stu_useState/Unsolved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Unsolved)
 
 ```md
-  In this activity we will practice using the useState hook in React.
+In this activity we will practice using the useState hook in React.
 
-  ## Instructions
+## Instructions
 
-  * Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
 
-  * If you created a new React app, you will need to add the Bootstrap link to `index.html`.
+* If you created a new React app, you will need to add the Bootstrap link to `index.html`.
 
-  * Start the application in dev mode by running `npm start` in your terminal.
+* Start the application in dev mode by running `npm start` in your terminal.
 
-  * Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
 
-  * Update this application to accomplish the following:
+* Update this application to accomplish the following:
 
-  * In `pages/Signup/index.js`, replace `NAME_HERE` and `PASSWORD_HERE` with code that will display both the name and password.
+* In `pages/Signup/index.js`, replace `NAME_HERE` and `PASSWORD_HERE` with code that will display both the name and password.
 
-  * The state of the Signup component should be handled by the useState Hook.
+* The state of the Signup component should be handled by the useState Hook.
 
-  * When the value of an input field changes, the state should update, causing the component to render.
+* When the value of an input field changes, the state should update, causing the component to render.
 
-  * Upon form submission, the `handleSubmit` method should `console.log` the username and password.
+* Upon form submission, the `handleSubmit` method should `console.log` the username and password.
 ```
 
 ### 9. Instructor Do: Review useState Activity (10 mins)
 
-* Run [09-Stu_useState/Solved](../../../../01-Class-Content/21-react/01-Activities/09-Stu_useState/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+* Run [02-Stu_useState/Solved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   * Email and password values entered into the input fields are rendered in the DOM.
 
@@ -354,9 +353,9 @@ Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activ
   * Using array destructuring, we initialize `username` and `password` variables for state and `setUsername` and `setPassword` setter methods, by invoking `useState` twice:
 
   ```js
-   const [username, setUsername] = useState();
-   const [password, setPassword] = useState();
-   ```
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
+  ```
 
   * 🔑 Since we're not specifying a default value, we won't pass anything to `useState()`.
 
@@ -393,7 +392,7 @@ Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activ
 
   * **Controlled input** accepts its current value as a prop and has a callback that allows you to change its value. Whenever `onChange` updates its value, it's essentially the input controlling itself.
 
-  * **Uncontrolled input** is an input that gets its value from somewhere else. In our case, if `value={username}`, then the input would be getting its value from the state.  
+  * **Uncontrolled input** is an input that gets its value from somewhere else. In our case, if `value={username}`, then the input would be getting its value from the state.
 
   * The combination of the two would result in the component going from uncontrolled to controlled, which is considered bad practice.
 
@@ -405,7 +404,7 @@ Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activ
 
   * For example, if one were to create a method that is responsible for creating a user, they could separate it into one regular method that creates the object/validates the data and one effect method that saves the user to a database.
 
-* Open up [10-Ins_useEffect/App.js](../../../../01-Class-Content/21-react/01-Activities/10-Ins_useEffect/App.js) in your IDE.
+* Open up [03-Ins_useEffect/App.js](../../../../01-Class-Content/20-State/01-Activities/03-Ins_useEffect/src/App.js) in your IDE.
 
   * Let the students know that `useEffect` is a method that takes two arguments.
 
@@ -438,31 +437,30 @@ Files: [09-Stu_useState/Unsolved](../../../../01-Class-Content/21-react/01-Activ
 Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Unsolved/src/App.js)
 
 ```md
-  In this activity we will practice using the useState and useEffect Hooks in React by transforming a stateful class component into a functional component with React Hooks.
+In this activity we will practice using the useState and useEffect Hooks in React by transforming a stateful class component into a functional component with React Hooks.
 
-  ## Instructions
+## Instructions
 
-  * Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
 
-  * If you created a new React app, you will need to install axios and React Router.
+* If you created a new React app, you will need to install axios and React Router.
 
-  * Start the application in dev mode by running `npm start` in your terminal.
+* Start the application in dev mode by running `npm start` in your terminal.
 
-  * Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
 
-  * Update this application to accomplish the following:
+* Update this application to accomplish the following:
 
-  * Create a functional component in place of the class component.
+* Create a functional component in place of the class component.
 
-  * Replace `this.state` and all instances of `this.setState` using the `useState` Hook.
+* Replace `this.state` and all instances of `this.setState` using the `useState` Hook.
 
-  * Update the component with the `useEffect` Hook to eliminate the need for `componentDidMount`.
-
+* Update the component with the `useEffect` Hook to eliminate the need for `componentDidMount`.
 ```
 
 ### 12. Instructor Do: Review useEffect (10 mins)
 
-* Run [04-Stu_useEffect/Unsolved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+* Run [04-Stu_useEffect/Solved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
 
   * The application immediately queries the Wikipedia API based on input.
 
@@ -486,7 +484,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
     }
 
     API.searchTerms(search)
-      .then(res => {
+      .then((res) => {
         if (res.data.length === 0) {
           throw new Error("No results found.");
         }
@@ -496,7 +494,7 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
         setTitle(res.data[1][0]);
         setUrl(res.data[3][0]);
       })
-      .catch(err => setError(err));
+      .catch((err) => setError(err));
   }, [search]);
   ```
 
@@ -505,9 +503,9 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
   * The `handleInputChange` method now simply uses our `setSearch` hook.
 
   ```js
-  const handleInputChange = event => {
-      setSearch(event.target.value);
-    };
+  const handleInputChange = (event) => {
+    setSearch(event.target.value);
+  };
   ```
 
 * Ask students the following questions:
@@ -522,114 +520,132 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 
   * ☝️ Can you think of a concept that would allow us to share state across components?
 
-  * 🙋 We can add this functionality by using the Context API with the built in `useContext` Hook.
+  * 🙋 For now we can use props, but in the future they will learn a better way.
 
 ### 13. Instructor Do: Custom Hooks Demo (10 mins)
 
 * Take a moment to ask the class to recite the two rules of Hook.
 
-  * Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
+* Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
 
-  * Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
+* Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
 
 * Next, introduce the class to the concept of custom Hooks. Remind the class that the two rules of Hooks still apply to custom Hooks.
 
-  * Custom Hooks can be practically anything! Custom Hooks are best suited to extract logic that may be repeated.
+* Custom Hooks can be practically anything! Custom Hooks are best suited to extract logic that may be repeated.
 
-  * Custom Hooks are a great way to keep your React functions pure.
+* Custom Hooks are a great way to keep your React functions pure.
 
 * In addition to the two rules of Hooks, let students know that custom Hooks must start with the word `use` so that React can ensure that your code is adhering to the two rules of Hooks.
 
-* Let students know that just as with `useState` and `useEffect`, different components that use the same custom Hook do **not** share the same state. If you wish to have two components that use the same state, you should use `useContext` or combine and custom Hook with `useContext`.
+* Let students know that just as with `useState` and `useEffect`, different components that use the same custom Hook do **not** share the same state.
 
-* Open [CustomHook Demo](../../../../01-Class-Content/21-react/01-Activities/05-Ins_CustomHook/) in your browser.
+* Open [05-Ins_CustomHook](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/) in your browser.
 
-  * Show students that when you change the value of the `name` input field, the corresponding section in the card updates.
+* Show students that when you change the value of the `status` input field, the corresponding section in the card updates.
 
-  * Open the console and demonstrate that every change in either field causes an object to be logged.
+* Open the console and demonstrate that every change in the status field causes the state object to be logged.
 
-* Open [useUserModel.js](../../../../01-Class-Content/21-react/01-Activities/05-Ins_CustomHook/src/utils/useUserModel.js) in your IDE.
+* Open [useUserStatus.js](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/src/utils/useUserStatus.js) in your IDE.
 
-  * The purpose of this Hook is to control the user model. Each property of the `userModel` will be an object with the properties `value` and a method for changing the value named `onChange`.
+* The purpose of this Hook is to set the status of the Developer. The property of the `useUserStatus` will be an object with the properties `value` and a method for changing the value named `onChange`.
 
-  * Point out that the Custom Hook is a top level function. Within it we can use Hooks like `useEffect` and `useState`.
+* Point out that the Custom Hook is a top level function. Within it we can use Hooks like `useEffect` and `useState`.
 
-  * Our Hook starts with the word `use` so that we can easily identify it.
+* We set `statusState` to an empty string.
 
-  * We set the `nameState` and `statusState` to have default string values. ImageState is set to a default image from our `assets` folder.
+```js
+import { useState } from "react";
 
-  * The Hook returns an object with an `error` property that will return an error if the `nameState` is ever left empty.
+const useUserStatus = () => {
+  let [statusState, setStatus] = useState("");
 
-  ```js
-  import { useState } from 'react';
-
-  import profileImage from "../assets/images/profile.png";
-
-  const useUserModel = () => {
-    let [nameState, setName] = useState('Bob')
-    let [statusState, setStatus] = useState('Excited');
-    let [imageState, setImage] = useState(profileImage);
-
-    return {
-      error: nameState === '' ? 'Please enter a name' : "",
-      name: {
-        value: nameState,
-        onChange: e => setName(e.target.value),
-      },
-      image: {
-        value: imageState,
-        onChange: e => setImage(e.target.value),
-      },
-      status: {
-        value: statusState,
-        onChange: e => setStatus(e.target.value),
-      }
-    }
-  }
-
-  export default useUserModel;
-
-  ```
-
-* Open [App.js](../../../../01-Class-Content/21-react/01-Activities/05-Ins_CustomHook/src/App.js) and explain the following:
-
-  * Our state is managed with a Context Object called `UserContext`.
-
-  * The `useEffect` hook is **only** being used to show the developer every time that `userModel` changes.
-
-  ```js
-  import React, { useEffect } from 'react';
-  import './App.css';
-
-  import useUserModel from "./utils/useUserModel";
-  import UserContext from "./utils/UserContext";
-  import UserCard from './components/UserCard';
-  import UserForm from './components/UserForm';
-
-  const App = () => {
-
-    const userModel = useUserModel();
-
-    useEffect(() => {
-      console.log(userModel)
-
-    }, [userModel]);
-
-    return (
-      <div className="container text-center">
-        <h1 className="mt-4 mb-4">Welcome to the Person Creator!</h1>
-        <div className="jumbotron">
-          <UserContext.Provider value={ userModel }>
-            <UserForm />
-            <UserCard />
-          </UserContext.Provider>
-        </div>
-      </div>
-    );
+  return {
+    status: {
+      value: statusState,
+      onChange: (e) => setStatus(e.target.value),
+    },
   };
+};
 
-  export default App;
-  ```
+export default useUserStatus;
+```
+
+* Open [App.js](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/src/App.js) and explain the following:
+
+* The `useEffect` hook is **only** being used to show the status every time that `stateStatus` changes.
+
+```js
+import React, { useState, useEffect } from "react";
+
+import "./App.css";
+
+import useUserStatus from "./utils/useUserStatus";
+
+function App() {
+  const [developerState, setDeveloperState] = useState({
+    excitementLevel: 1000,
+
+    lifeLongLearner: true,
+
+    name: "Riley",
+  });
+
+  const { statusState, status } = useUserStatus();
+
+  useEffect(() => {
+    console.log(statusState);
+  }, [statusState]);
+
+  return (
+    <div className="card">
+      <div>Name: {developerState.name}</div>
+
+      <div>Status: {statusState}</div>
+
+      <div>Lifelong learner: {developerState.lifeLongLearner.toString()}</div>
+
+      <div>Excitement Level: {developerState.excitementLevel}</div>
+
+      <div className="btn-group">
+        <form className="form-group">
+          <label htmlFor="status">Enter your Status: </label>
+
+          <input className="form-control mb-4" id="status" {...status} />
+        </form>
+
+        <button
+          onClick={() =>
+            setDeveloperState({
+              ...developerState,
+
+              excitementLevel: developerState.excitementLevel + 1000,
+            })
+          }
+          className="btn btn-success"
+        >
+          Increase Excitement Level
+        </button>
+
+        <button
+          onClick={() =>
+            setDeveloperState({
+              ...developerState,
+
+              excitementLevel: developerState.excitementLevel * 1000,
+            })
+          }
+          className="btn btn-success"
+        >
+          Decrease Excitement Level
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
 
 ### 14. Students Do: Custom Hooks (15 mins)
 
@@ -638,23 +654,21 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 * In this activity we will practice using Custom Hooks by creating a `useDebounce` Hook that will delay the invoking of a function for a given number of milliseconds.
 
 ```md
+* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
 
-  * Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+* Start the application in dev mode by running `npm start` in your terminal.
 
-  * Start the application in dev mode by running `npm start` in your terminal.
+* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
 
-  * Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+* Update this application to accomplish the following:
 
-  * Update this application to accomplish the following:
+* Create a new Custom Hook called `useDebounce` that takes in the two parameters `value` and `delay`.
 
-  * Create a new Custom Hook called `useDebounce` that takes in the two parameters `value` and `delay`.
+* Use `setTimeout` to handle the value of the debouncer.
 
-  * Use `setTimeout` to handle the value of the debouncer.
+* Update the `Search` page so that the useEffect Hook is listening for the value returned from the `useDebounce` Hook. Pass in a `delay` value of 500.
 
-  * Update the `Search` page so that the useEffect Hook is listening for the value returned from the `useDebounce` Hook. Pass in a `delay` value of 500.
-
-  * The finished application should only search for a new article if there has been a period of 500 milliseconds without any user input.
-
+* The finished application should only search for a new article if there has been a period of 500 milliseconds without any user input.
 ```
 
 ### 15. Instructor Do: Review Custom Hooks (10 mins)
@@ -688,25 +702,26 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 
   const useDebounce = (value, delay) => {
     const [debouncedValue, setDebouncedValue] = useState(value);
-    useEffect(() => {
-      const handler = setTimeout(() => {
-        setDebouncedValue(value);
-      }, delay);
-      // Cancel the timeout if value or delay changes
-      return () => {
-        clearTimeout(handler);
-      };
-    },
-    // Only call the effect if value or delay changes.
-    [value, delay]
+    useEffect(
+      () => {
+        const handler = setTimeout(() => {
+          setDebouncedValue(value);
+        }, delay);
+        // Cancel the timeout if value or delay changes
+        return () => {
+          clearTimeout(handler);
+        };
+      },
+      // Only call the effect if value or delay changes.
+      [value, delay]
     );
 
     return debouncedValue;
   };
   export default useDebounce;
   ```
-
-* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
+  
+* Open [06-Stu_CustomHook/Solved/src/pages/Search/index.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/pages/Search/index.js) in your IDE and point out the following:
 
   * The `debouncedSearchTerm` variable is set up **outside** of the `useEffect` Hook. We pass in the existing `search` variable that is tied to our component state and pass in 500 as our second parameter.
 
@@ -720,25 +735,23 @@ Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-St
 const debouncedSearchTerm = useDebounce(search, 500);
 
 useEffect(() => {
-  document.title = "Wikipedia Searcher";
   if (!search) {
     return;
   }
+
   if (debouncedSearchTerm) {
     API.searchTerms(search)
-      .then(res => {
+      .then((res) => {
         if (res.data.length === 0) {
           throw new Error("No results found.");
         }
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        setArticleState({
-          title: res.data[1][0],
-          url: res.data[3][0]
-        });
+        setTitle(res.data[1][0]);
+        setUrl(res.data[3][0]);
       })
-      .catch(err => setError(err));
+      .catch((err) => setError(err));
   }
 }, [debouncedSearchTerm]);
 ```

@@ -6,11 +6,7 @@ In this activity we will add a "Decrement" button and click handler to the Click
 
 * Copy the [src](Unsolved/src) folder into your Create React App boilerplate. Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
 
-* This example uses Bootstrap. Be sure to add the Bootstrap CDN to your `index.html` file.
-
-  ```html
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-  ```
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
 
 * Open [localhost:3000](http://localhost:3000) in your web browser. This application's starter code is identical to the last example.
 
