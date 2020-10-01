@@ -20,7 +20,6 @@ const willGetSwitch = new Promise((resolve, reject) => {
     reject(issue);
   }
 });
-console.log('willGetSwitch', willGetSwitch);
 
 // Another promise to call only if we get the reward
 const playGames = (reward) => {
