@@ -54,13 +54,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-* [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+* [01: Fizz Buzz](./03-Algorithms/01-fizz-buzz)
 
-* [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+* [02: Max Num](./03-Algorithms/02-max-num)
 
   * [📹 Let's Code Max Num!](https://2u-20.wistia.com/medias/f9eao2cvjt)
 
-* [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+* [03: Vowel Count](./03-Algorithms/03-vowel-count)
 
 ### Assessments
 
