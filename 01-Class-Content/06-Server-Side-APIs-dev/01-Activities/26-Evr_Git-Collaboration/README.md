@@ -25,8 +25,9 @@ git checkout -b super_feature
 
 * In the command line you should see:
 
-![testBranchExample](./Images/01-feature-branch-created.png)
-
+```text
+Switched to a new branch 'super_feature'
+```
 
 ### Commit Changes to Feature Branch and Test Locally
 * Now that we have a new branch it is time to make some changes. In the `README.md` add a few lines describing your favorite part of JavaScript so far. Don't spend to much time on this but give it quick thought.
@@ -41,7 +42,7 @@ I enjoy JavaScript because it utilizes both Functional programming and Object-or
 
 ```
 git add
-git commit "This is commiting the changes I made loclly"
+git commit "This is committing the changes I made locally"
 ```
 
 * With `git add` we move our changes to a staging area which tells git we want to group these changes in git. It is important to know that `add` does not change the repository. The repository will change once you `commit` the changes.
@@ -58,41 +59,59 @@ git push origin super_feature
 
 * After pushing your branch you should see something similar to this in your command line:
 
-![imageOfSuccessfullPush](./Images/02-successful-push.png)
+```text
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'super_feature' on GitHub by visiting:
+remote:     https://github.com/lernantino/super-team-project/pull/new/super_feature
+remote:
+To https://github.com/lernantino/super-team-project.git
+* [new branch]     super_feature -> super_feature
+```
 
 * With our `super_feature` branch now on Github, it is time for us to open a pull request. A pull request will let your team members know you are ready to implement the new `super_feature` to the `main` branch.
 
 * Navigate to the `super_feature` branch on Github by going to your repository page. Once on your repository's Github page, look for the dropdown menu called `main`. Click it and you should see the branches off your `main` branch. Click `super_feature`.
 
-![navigateToSuperFeature](./Images/03-navigate-to-super-feature.png)
+![navigateToSuperFeature](./Images/01-navigate-to-branch.png)
 
 * Once we have chosen the correct branch, a green button should appear with the label "Compare & pull request".
 
-![ComparePullRequest](./Images/04-compare-pull-request.png)
+![ComparePullRequest](./Images/02-compare-button.png)
 
 * When creating a pull request it is best practice to be as descriptive as possible. It is important to let your team know exactly what you changed. 
 
 * It is time to hit the "create pull request" button so it can be reviewed.
 
+![The page to create a pull request includes a field for a description](./Images/03-create-pull-request.png)
+
 **Important:** Before submitting a pull request, make sure you are comparing your branch to `main`.
 
 ### Review Pull Request
+
+![The pull request displays a message that a review is required](./Images/04-pr-created.png)
+
+![The reviewers section includes a dropdown to search for other users](./Images/05-add-reviewer.png)
 
 * Okay, we now have a pull request but it is important one of your team members carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
 
 * We have to navigate to our repository on Github and click on the tab named "pull request".
 
-![PullRequestTab](./Images/05-pull-request-tab.png)
+![PullRequestTab](./Images/06-click-pr-tab.png)
+
+![The list of open pull requests includes the newly created "Update to the Super Feature"](./Images/07-pr-list.png)
 
 * Once on the pull request page you should be able to see a list of files that have been changed. By clicking on them you can see an indepth view of what exactly changed.
 
-![SuperFeaturePullRequest](./Images/06-super-feature-pull-request.png)
+![The pull request includes a tab labeled "Files Changed"](./Images/08-click-files-changed.png)
+
+![The Files Changed tab displays a side-by-side comparison of changes](./Images/09-add-comment.png)
+
+![The Review Changes form has options to Comment, Approve, or Request Changes](./Images/10-approve.png)
 
 * Now you are looking at the pull request you submitted. The information on this page gives you a detailed look at the changes made. Github has comment section on the bottom of the "pull request" page which is a great place for you and your team leave their feedback.
 
 * On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted.
-
-[adding-reviewer]
 
 * It is important to carefully review all the changes because you don't want any unwanted bugs breaking your `main` branch.
 
@@ -102,13 +121,13 @@ git push origin super_feature
 
 * Once the pull request has been reviewed and tested, you are going to navigate to the appropriate pull request on Github. Locate and click the green button labelled "Merge pull request".
 
-![MergePullRequest](./Images/09-merge-pull-request.png)
+![MergePullRequest](./Images/11-merge-request.png)
 
 * You have the ability to add a comment with your merge before clicking confirm.
 
 * Now you have merged your `super-feature` branch with the `main` branch. Github gives you the option to delete the branch you merged but that might not always be ideal. I would clarify with your team members before deleting a branch.
 
-![SuccessfuMerge](./Images/10-successful-merge.png)
+![SuccessfuMerge](./Images/12-safe-to-delete.png)
 
 ### Hints
 
