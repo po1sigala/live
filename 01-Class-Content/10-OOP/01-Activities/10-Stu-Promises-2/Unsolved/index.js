@@ -7,14 +7,12 @@ const watchMovie = (movieDuration) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       // Check if the movie is longer than maxDuration, if so call the reject() function with a new error, "Movie too long"
-
       // Otherwise, call resolve() with a message `Watched movie in ${movieDuration}`
-      }
     }, movieDuration);
   });
 
 // Promise.all() takes an array, so here we declare one in memory
-let promises = [];
+const promises = [];
 
 // Map through movie durations and push a watchMovie() call for each movie and push it to the promises array
 

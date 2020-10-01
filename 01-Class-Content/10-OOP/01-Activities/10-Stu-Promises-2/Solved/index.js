@@ -2,6 +2,7 @@
 
 const movieDurations = [3000, 4000, 5000, 6000];
 
+// Here we set up a function called `watchMovie` which will resolve if the movie isn't too long and has been watched
 const watchMovie = (movieDuration) =>
   new Promise((resolve, reject) => {
     const maxDuration = 9999;
@@ -10,7 +11,7 @@ const watchMovie = (movieDuration) =>
       if (movieDuration >= maxDuration) {
         reject(new Error(`One of these movies is too long!`));
       } else {
-        // Here we set up a function called `watchMovie` which will resolve after the movie has finished
+        // If the movie isn't too long then we resolve the promise
         resolve(`Watched movie in ${movieDuration}`);
       }
     }, movieDuration);
