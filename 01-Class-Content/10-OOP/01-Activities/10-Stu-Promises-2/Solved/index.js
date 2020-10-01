@@ -18,7 +18,7 @@ const watchMovie = (movieDuration) =>
   });
 
 // Promise.all() takes an array, so here we declare one in memory
-let promises = [];
+const promises = [];
 
 // Here we create an array of promises for which to run Promise.all with
 movieDurations.map((duration) => promises.push(watchMovie(duration)));
