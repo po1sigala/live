@@ -18,3 +18,7 @@ In this activity, you will write a Node.js command line application that accepts
 ## Bonus
 
 * How many ways can you solve this problem?
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
