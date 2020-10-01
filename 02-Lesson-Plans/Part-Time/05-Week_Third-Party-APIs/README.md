@@ -36,7 +36,7 @@ Next unit will cover server-side APIs. It is recommended that you try to fill an
 
 * [05.3 Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
 
-### Unit Homework
+### Homework
 
 * [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
 
