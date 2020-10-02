@@ -8,7 +8,7 @@ console.log("First child of document body")
 console.log(document.body.children[1]);
 
 console.log("First child node")
-console.log(document.body.children[1].childNodes[1]);
+console.log(document.body.children[1].childNodes[0]);
 
 var childNode1 = document.getElementById("childNode1")
 console.log(childNode1);

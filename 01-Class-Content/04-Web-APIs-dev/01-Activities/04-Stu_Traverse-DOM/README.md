@@ -1,31 +1,38 @@
-# Traverse That DOM
+# 🏗️ Implement Style Changes on HTML Elements
 
-In this activity you are going to use the Chrome Dev Console and `.style.property` to change the styling of elements on our page.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to use JavaScript to dynamically change the style on HTML elements.
 
-* Create an `script.js`
+## Acceptance Criteria
 
-* Using the provided `index.html`, complete the following
+@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY; e.g.:
 
-  * Target the div with the ID of `articles`.
+* It's done when the screen size is larger than 992 px, the product cards on the screen are side-by-side.
 
-    * Change its font size to `50px`.
+* It's done when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
 
-    * Change its first childs, last child to have a font color of `blue`.
+@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 
-    * Change its previous sibling to have a background color of `black`.
+## Assets {TODO ADD IMAGE FOLDER AND IMAGE}
 
-  * Target the div with the ID of `main`.
+The following image demonstrates the web application's appearance and functionality:
 
-    * Change its second child node so the text is `underlined`.
+![]()
 
-    * Change its last child element to have a font size of `50px`.
+---
 
-    * Change its first child element to have a font color of `orange`.
-    
-    * Change its last child elements parent to have a font size of `40px`.
+## 💡 Hints
 
-## Bonus
+Hints are guides, not answers, framed as questions. 
 
-* Change 3 other elements styles that we did not ask for above.
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
