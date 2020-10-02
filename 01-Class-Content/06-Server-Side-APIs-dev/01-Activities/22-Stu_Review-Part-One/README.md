@@ -18,6 +18,6 @@ If you have fully completed the above tasks, here is something you and your part
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
 
-- - -
+---
 
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

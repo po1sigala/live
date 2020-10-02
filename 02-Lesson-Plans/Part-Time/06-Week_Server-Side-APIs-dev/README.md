@@ -44,11 +44,13 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Algorithms
 
-  * [Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
+  * [01 - Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
-  * [Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
+  * [02 -Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
 
-  * [Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
+    * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+  * [03 - Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
 
 ### Resources
 
