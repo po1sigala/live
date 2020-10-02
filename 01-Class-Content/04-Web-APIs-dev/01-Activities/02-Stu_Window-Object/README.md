@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[MDN Web Docs on Window(https://developer.mozilla.org/en-US/docs/Web/API/Window)
+[MDN Web Docs on Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
 [MDN Web Docs on Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
