@@ -1,7 +1,6 @@
-# Inquirer Users
+# inquirer Users
 
-In this activity, you will build a simple command line application that accepts user input and writes it to a `.json` file. 
-
+In this activity, you will build a simple command-line application that accepts user input and writes it to a `.json` file. 
 
 ## Instructions
 
@@ -13,22 +12,26 @@ In this activity, you will build a simple command line application that accepts 
 
     * "What is your name?"
 
-    * "What languages do you know?"
+    * “What languages do you know?”
 
-    * What is your preferred method of communciation?"
+    * “What is your preferred method of communication?”
 
 * Then write the user response to a file. 
 
-
-## Hint(s)
+## Hints
 
 * You will need to use `JSON.stringify()`.
 
 * You will need to consult the `inquirer` documentation on how to prompt users for checkboxes and lists.
 
-
 ## Bonus
 
-* How would you format your JSON?
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Can you generate the name of your user file from their input?
+* How would you format your JSON? Can you generate the name of your user file from the user input?
+
+Use [Google](https://www.google.com/) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

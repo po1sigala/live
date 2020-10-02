@@ -1,6 +1,6 @@
 # Convert Const Let Arrow
 
-In this example we will convert a prebuilt Crystal Guessing Game to use the new ES6 syntax we learn about.
+In this activity, we will convert a prebuilt Crystal Guessing Game to use the new ES6 syntax we are learning about.
 
 ## Instructions
 
@@ -12,16 +12,10 @@ In this example we will convert a prebuilt Crystal Guessing Game to use the new 
 
 * Make sure to do the following:
 
-1. Convert all `var` identifiers to use `const` or `let` &mdash; whichever is more appropriate.
+1. Convert all `var` identifiers to use `const` or `let`; whichever is more appropriate.
 
-2. Convert functions to arrow functions **where suitable** &mdash; remember, arrow functions are not right for every situation.
+2. Convert functions to arrow functions _where suitable_; remember, arrow functions are not right for every situation.
 
-* **IMPORTANT**: After each change, run the the code in your web browser to make sure that everything still works as expected. If completed successfully, there should be no difference in the way the app runs in the browser before and after the changes.
+---
 
-### Hints
-
-* You don't need to understand how all of the code works in order to convert it over to the ES6 syntax we learned about.
-
-* Remember to use `let` where values are expected to be reassigned, use `const` for when they are not.
-
-* Remember that arrow functions can't be used as constructor functions, and they are not suitable for object methods.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
