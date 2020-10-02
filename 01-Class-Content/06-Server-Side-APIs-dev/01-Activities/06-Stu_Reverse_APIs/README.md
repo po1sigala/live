@@ -1,31 +1,16 @@
-# Reverse API calls
+# 📐 Add Comments to Implementation of Different Request Methods
 
-In this activity, you will work with a partner to reverse engineer the code to different technologies to call APIs.
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/assets/js/script.js](./Unsolved/assets/js/script.js).
 
-## Instructions
-
- Be sure to work with your partner!
-
-* Open the [index.html](Unsolved/index.html) file in your browser.
-
-  * Open up Chrome DevTools to the console.
-
-  * Examine the differences between three responses in the console.
-
-* Open [script.js](./assets/js/script.js) to examine the code.
-
-  * Comment on the differences between the 3 methods to return an API call. 
-  
-  * Comment on the differences on the format of the data that was returned.
-
-## 💡 Hint(s)
-
-* Look at how each method is making a request and how they get a response.
+---
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Whenever we do a fetch request, it goes through the DNS system. What is DNS?
+* Whenever we do a fetch request, it goes through the DNS system. What is DNS?
 
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

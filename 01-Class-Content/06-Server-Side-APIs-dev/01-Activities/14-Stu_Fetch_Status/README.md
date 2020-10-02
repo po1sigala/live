@@ -1,27 +1,26 @@
-# Fetch Response Status
+# 🏗️ Implement Status Checking to Display a 404 Message
 
-In this activity, you will work with a partner to display content based on the response status.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a user, I want to know when the webpage has failed to retrieve data.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in your browser and open the console.
+  * It's done when a request is made to an invalid API URL, and the `404` status displays on the page.
 
-* Open [script.js](./Unsolved/assets/js/script.js) to examine the code and implement the following features:
+---
 
-  * As a developer, I want to change the content of the page based on the response status.
+## 💡 Hints
 
-  * When I visit the page, the page should show the response status when it does not equal 200.
-
-## 💡 Hint(s)
-
-* If you aren't sure where to place the response status take a look at line 3.
+* What HTML element can you use to display the response's status code?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * At some point in your coding journey, when working with APIs, you are going to have to deal with CORS. Research what is CORS and how it could interfere with your fetch request.
+  * At some point in your coding journey, when working with APIs, you are going to have to deal with CORS. What is CORS and how could it interfere with your fetch request?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

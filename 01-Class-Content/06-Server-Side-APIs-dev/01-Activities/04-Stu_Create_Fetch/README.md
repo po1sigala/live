@@ -1,27 +1,32 @@
-# Create a fetch request
+# 🏗️ Implement a Fetch Request to Display User Repositories
 
-In this activity, you will work with a partner to request data from GitHub using the Fetch API.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a user, I want to see a list of my GitHub repositories.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open up the script file [script.js](./Unsolved/assets/js/script.js)
+  * It's done when I click the "Fetch Your User Repos" button, and a list of my GitHub repositories displays on the page.
 
-  * As a user, when I click the button, I want a list of repo URLs to appear on the page.
+## 📝 Notes
 
-* Go to [GitHub API Docs](https://docs.github.com/en/rest/reference/repos#list*repositories*for*a*user) and find the endpoint to list the repositories for your GitHub username
+Refer to the documentation: 
 
-* Use this information to create the correct URL for the fetch request and assign it to the requestUrl variable.
+[GitHub API Docs for Repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
 
-## 💡 Hint(s)
+---
 
-* The end points are written after the root URL of the API.
+## 💡 Hints
+
+* Where in the URL string is the repository endpoint added?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * In fetch requests we use the URL, what is the difference between URL and URI?
+* In fetch requests we use the URL. What is the difference between a URL and URI? 
 
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

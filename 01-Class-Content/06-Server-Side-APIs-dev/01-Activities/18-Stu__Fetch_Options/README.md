@@ -1,33 +1,32 @@
-# Fetch Options
+# 📖 Implement Cache Reloading for Fetch Requests
 
-In this activity, you will work with a partner to use MDN documentation to implement fetch options.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want fetch requests to reload the browser's cache.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) in your browser.
+  * It's done when I make a fetch request, and the `cache` option is set to `reload`.
 
-* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
+## 📝 Notes
 
-* Using the documentation, implement the following:
+Refer to the documentation: 
 
-  * We are given a fetch request.
-
-  * When we send the fetch request, the fetch request should have one option.
-  
-    * A cache with a value of reload.
+[MDN Web Docs on Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
     
+---
 
+## 💡 Hints
 
-## 💡 Hint(s)
-
-* Remember to use an object to passthrough the options.
+* How can you use an object to pass through the options?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Research what is OAuth and how does it tie into APIs.
+  * What is OAuth and how does it tie into APIs?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

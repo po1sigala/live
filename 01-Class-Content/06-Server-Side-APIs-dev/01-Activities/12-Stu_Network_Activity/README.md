@@ -1,33 +1,40 @@
-# Network Activity Tab
+# 🐛 Error Appears in the Chrome DevTools Network Activity Tab
 
-In this activity, you will work with a partner to debug some broken code using the Network Activity Tab.
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+  * As a developer, I want all of my scripts to be properly loaded by the browser.
 
-* Be sure to work with your partner!
+## Expected Behavior
 
-* As a developer, I want to load my script file when opening a page.
+A request to `script.js` displays a status of "Finished".
 
-* When I load my page, the script page should load on the Network Tab, but right now it's not!
+## Actual Behavior
 
-* Open [index.html](./Unsolved/index.html) in the browser.
+A request to `script.js` displays a status of "(failed)".
 
-* Using the following questions, try to debug and fix the code:
-  
-  * What status values are show in the network activity tab, which one is red?
-  
-  * What does that status mean, use Google to find out if you are unsure.
-  
-  * Now that you know what the status means, think about the potential implications and start searching your code for that error.
+## Steps to Reproduce the Problem
 
-## 💡 Hint(s)
+1. Open [Unsolved/index.html](./Unsolved/index.html) in the browser
 
-* Examine the folder structure and make sure all the file links are correctly written.
+2. Open the Chrome DevTools and navigate to the Network Activity tab
+
+3. Refresh the page
+
+4. Note that the `script.js` file failed to load
+
+---
+
+## 💡 Hints
+
+* How are JavaScript files usually loaded by an HTML page?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Expand your knowledge of the Chrome DevTools by researching about the other features the Network Activity has to available to use.
+* What other features are available in the Chrome DevTools Network Activity tab?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

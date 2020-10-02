@@ -1,33 +1,34 @@
-# Document Location
+# 📖 Implement the Location Web API to Redirect 404 Errors
 
-In this activity, you will work with a partner to use MDN documentation to implement location replace.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to direct users to a different page if there is an error.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace) in your browser.
+  * It's done when I make a fetch request that results in a 404 status, and the browser redirects to `404.html`.
 
-* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
+## 📝 Notes
 
-* Using the documentation, implement the following:
+Refer to the documentation: 
 
-  * We are given a 404 responses status.
+[MDN Web Docs on Location:replace()](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace)
 
-  * When we receive the 404 status, then our app should use the location.replace method to go to the 404.html page.
+---
 
-  
+## 💡 Hints
 
-## 💡 Hint(s)
+* What object does `location.replace` belong to?
 
-* Make sure you attach location.replace to the document.
-
-* Make sure you use the relative path of the 404.html file.
+* What are relative paths?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Sometimes APIs don’t return JSON, they can return other data formats such as XML. Research how to convert XML to JSON.
+  * Sometimes APIs don't return JSON; they can return other data formats such as XML. How can you convert XML to JSON?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

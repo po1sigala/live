@@ -1,23 +1,16 @@
-# Deconstruct Parameters
+# 📐 Add Comments to Implementation of API Parameters
 
-In this activity, you will work with a partner to reverse engineer API parameters.
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/assets/js/script.js](./Unsolved/assets/js/script.js).
 
-## Instructions
-
-* Be sure to work with your partner!
-
-* Open [script.js](./Unsolved/assets/js/script.js) in your IDE and examine the code.
-
-* Insert comments where specified to explain the parameters used and what each one does for us.
-
-## 💡 Hint(s)
-
-* Pay attention to the URL structure in the fetch request.
+---
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Research query strings and how they are used to create parameters for APIs.
+  * What are query strings and how are they used to create parameters for APIs?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
