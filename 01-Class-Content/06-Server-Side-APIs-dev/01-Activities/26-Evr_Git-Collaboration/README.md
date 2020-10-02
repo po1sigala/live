@@ -1,8 +1,8 @@
 # Git Collaboration Flow
 
-In this activity, we will walk through a situation to learn how to effectively collaborate with other developers on a web application that is hosted on GitHub. When working with a team, it's crucial for all members of the team to agree upon a workflow that ensures both the team's happiness the application's integrity. In web development, this workflow typically revolves around the use of Git and GitHub.
+In this activity, we will walk through a situation to learn how to effectively collaborate with other developers on a web application that is hosted on GitHub. When working with a team, it's crucial for all members of the team to agree upon a workflow that ensures both the team's happiness and the application's integrity. In web development, this workflow typically revolves around the use of Git and GitHub.
 
-Having multiple developers work with code in a single repository can be hectic. To avoid conflict, developers 
+Having multiple developers work with code in a single repository can be hectic. To avoid conflict, developers must record and communicate changes effectively. Having multiple branchs and all the information in a centralized location like Github really provides easy-to-setup workflows that developers can rely on.
 
 ## Instructions
 
@@ -30,7 +30,7 @@ Switched to a new branch 'super_feature'
 ```
 
 ### Commit Changes to Feature Branch and Test Locally
-* Now that we have a new branch it is time to make some changes. In the `README.md` add a few lines describing your favorite part of JavaScript so far. Don't spend to much time on this but give it quick thought.
+* Now that we have a new branch it is time to make some changes. In the `README.md` add a few lines describing your favorite part of JavaScript so far. Don't spend too much time on this, just write a sentence or two.
 
 ```
 I enjoy JavaScript because it utilizes both Functional programming and Object-oriented programming.
@@ -38,18 +38,18 @@ I enjoy JavaScript because it utilizes both Functional programming and Object-or
 
 * Once we have made changes to the `super_feature` branch it is time to make sure your project still runs locally.
 
-* If your project and its new feature is running as intended, save those changes to the `super_feature` branch. We do that with the following command:
+* If your project and its new feature are running as intended, save those changes to the `super_feature` branch. We do that with the following command:
 
 ```
 git add
-git commit "This is committing the changes I made locally"
+git commit -m "This is committing the changes I made locally"
 ```
 
 * With `git add` we move our changes to a staging area which tells git we want to group these changes in git. It is important to know that `add` does not change the repository. The repository will change once you `commit` the changes.
 
 ### Push Feature Branch and Open Pull Request
 
-* When you are happy with your new feature and you have tested it heavily, it is now time to open a pull request.
+* When you are happy with your new feature and you have tested it, it is now time to open a pull request.
 
 * Before we can make a pull request on Github, we first need to push our new feature to Github. The following command allows us to do that:
 
@@ -93,11 +93,11 @@ To https://github.com/lernantino/super-team-project.git
 
 ![The pull request displays a message that a review is required](./Images/04-pr-created.png)
 
-* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted. For the sake of this activity you will also be playing the role of reviewer. Normally you will have some type of agreement on how to review pull request amongst your team.
+* On the right-hand side you should see a label "Reviewers", we use this for when we want a particular team member to review your pull request. The selected reviewer will be notified when the pull request is submitted. For the sake of this activity you will also be playing the role of reviewer. Normally you will have some type of agreement on how to review a pull request amongst your team.
 
 ![The reviewers section includes a dropdown to search for other users](./Images/05-add-reviewer.png)
 
-* Okay, we now have a pull request but it is important one of your team members (YOU) carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
+* Okay, we now have a pull request but it is important one of your team members (in this case, you) carefully reviews your pull request for any mistakes that could potentially break the `main` branch.
 
 * We have to navigate to our repository on Github and click on the tab named "pull request".
 
@@ -131,7 +131,7 @@ To https://github.com/lernantino/super-team-project.git
 
 * You have the ability to add a comment with your merge before clicking confirm.
 
-* Now you have merged your `super-feature` branch with the `main` branch. Github gives you the option to delete the branch you merged but that might not always be ideal. I would clarify with your team members before deleting a branch.
+* Now you have merged your `super-feature` branch with the `main` branch. Github gives you the option to delete the branch you merged but that might not always be ideal. Always check in with your team members before deleting a branch.
 
 ![After merging branches Github ask if we would like to delete the super feature branch](./Images/12-safe-to-delete.png)
 
