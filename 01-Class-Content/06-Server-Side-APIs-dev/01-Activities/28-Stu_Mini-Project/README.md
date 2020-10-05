@@ -74,5 +74,5 @@ In this activity, you will work with a group to build an application that search
 
 * Use your new Git collaboration knowledge to build this project!
 
-- - -
+---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

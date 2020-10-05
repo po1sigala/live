@@ -14,6 +14,8 @@ In this unit, you will use the `fetch()` method to make requests to the GitHub A
 
 * Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
 
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+
 ## Career Connection
 
 Remind students that related Career Services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
@@ -44,11 +46,13 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Algorithms
 
-  * [Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
+  * [01 - Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
-  * [Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
+  * [02 -Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
 
-  * [Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
+    * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+  * [03 - Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
 
 ### Resources
 
