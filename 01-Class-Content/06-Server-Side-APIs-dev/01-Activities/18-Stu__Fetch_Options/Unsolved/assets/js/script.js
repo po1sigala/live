@@ -1,6 +1,4 @@
-fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
-  // Put your fetch option below this line
-})
+fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
   .then(function (response) {
     return response.json();
   })

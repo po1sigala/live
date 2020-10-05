@@ -1,27 +1,28 @@
-# Using fetch data to generate dynamic HTML.
+# 🏗️ Implement a Fetch Request to Display GitHub Data as HTML
 
-In this activity, you will work with a partner to write the code to generate the dynamic HTML from the fetch request.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a user, I want to see a list of GitHub users and links to their profiles.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Open [index.html](./Unsolved/index.html) in the browser to examine the response in the console. 
+  * It's done when I click the "Click Me" button, and a list of five GitHub users appears underneath on the page.
 
-* Open [script.js](./Unsolved/assets/js/script.js) in your IDE to implement the following features:
+  * It's done when each user includes their login name and a URL to their GitHub profile.
 
-  * As a developer, I want to take the response data and generate dynamic HTML.
+---
 
-  * As a developer, the data I want to show in the `usersContainer` is the user login and the URL of their GitHub profile. 
-
-## 💡 Hint(s)
+## 💡 Hints
 
 * Use the previous three exercises as references if needed to put this together.
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Sometimes we need to use data that isn't from third party APIs.  The data maybe stored in json format within a file.  Research how to use fetch to read json from a data file.
+* How could you use `fetch()` to retrieve JSON from a data file instead of a third-party API?
 
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

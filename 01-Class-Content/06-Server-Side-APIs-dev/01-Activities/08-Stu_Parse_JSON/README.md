@@ -1,35 +1,34 @@
-# Parsing JSON
+# 📖 Implement a Fetch Request to Log Repository Issues
 
-* In this activity, you will work with a partner to use the GitHub documentation to add a parameter to a fetch request and display the proper response in the console.
+Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to log issues from Twitter's Chill repository.
 
-* Be sure to work with your partner!
+## Acceptance Criteria
 
-* Navigate to the [GitHub API Docs](https://docs.github.com/en/rest/reference/issues#list-repository-issues).
+  * It's done when I open the Chrome DevTools, and five issues from the Chill repository are logged in the console.
 
-* Open [script.js](./Unsolved/assets/js/script.js) and examine the code.
+  * It's done when the issue's URL and username are logged in the DevTools console.
 
-* Using the documentation, implement the following:
+## 📝 Notes
 
-  * Edit the `requestUrl` to get GitHub issues associated with Twitter's Chill repo.
+Refer to the documentation: 
 
-  * Add a `path` to the end of the `requestUrl` variable such that the response is limited to 5 issues.
+[GitHub API Docs for Issues](https://docs.github.com/en/rest/reference/issues#list-repository-issues)
 
-* Open [index.html](./Unsolved/index.html) in your browser and examine the response in the console.
+---
 
-  * Note the issue URL and the login of the user who wrote the issue.
+## 💡 Hints
 
-  * Back in the `script.js` file, loop through the data and `console.log` the issue URL and the user login.
-
-## 💡 Hint(s)
-
-* Documentation will typically give you a list of parameters you can work with, in most cases these start with a question mark
+* How do you add parameters to an API endpoint URL?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * We connect to these API servers through DNS, but they are attached to an ip address, research how this works
+* We connect to these API servers through DNS, but they are attached to an IP address. How does this work?
 
-* Use [Google](https://www.google.com) or another search engine to answer the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
