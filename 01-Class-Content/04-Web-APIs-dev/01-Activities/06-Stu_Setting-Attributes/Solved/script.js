@@ -35,5 +35,3 @@ for (var i = 0; i < sites.length; i++) {
   site1El.children[1].setAttribute("href", sites[Math.floor(Math.random() * sites.length)]);
 }
 
-
-

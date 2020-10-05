@@ -1,24 +1,28 @@
-# Setting Attributes
+# 🏗️ Use JavaScript to Set Attributes in HTML
 
-In this activity you are going to use JavaScript to add `hrefs` to `a` tags, `src` to `img` tags, along with some styles all while traversing the DOM.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to add attributes to HTML using JavaScript
 
-* Open `index.html` and familiarize yourself with the structure of the HTML.
+## Acceptance Criteria
 
-* Inside of your provided `script.js` complete the following: 
+* It's done when each of the three image `img` tags in the HTML has an `alt` and `src` attribute.
 
-  * Give a `src` and `alt` attribute to the 3 provided `img` tags.
+* It's done when each of the three anchor `a` tags in the HTML has an `href` attribute
 
-  * Give a `href` attribute to the 3 provided `a` tags.`
+---
 
-  * Add styles via `setAttribute` to make the page look decent. Recommended: margins and padding.
+## 💡 Hints
 
-## Hint 
+How can you select all of the elments that match a specific tag or selector? 
 
-* You may need a for loop!
+## 🏆 Bonus
 
-## Bonus
- 
-* Randomly set the `href` for site 1 from an array of sites you create.
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
+How might using the `:scope` pseudo-class be useful when working with `.querySelectorAll()`?.
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
