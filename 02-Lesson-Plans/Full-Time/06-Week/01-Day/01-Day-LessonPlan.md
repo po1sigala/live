@@ -198,7 +198,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
     ![08-StudentsServe](Images/08-StudentsServe.png)
 
-  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.      
+  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
 
 ### 12. Instructor Do: Request Methods (0:10)
 
