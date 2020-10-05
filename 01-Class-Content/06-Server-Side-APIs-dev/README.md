@@ -58,6 +58,8 @@ You will be employer-competitive if you are able to:
 
 ## Technical Interview Preparation
 
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
 ### Algorithms
 
 * [01: Is Palindrome](./03-Algorithms/01-is-palindrome)
@@ -67,6 +69,12 @@ You will be employer-competitive if you are able to:
   * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
 
 * [03: Title Case](./03-Algorithms/03-title-case)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 06 Assessment](https://forms.gle/xcqMRiysBemJpvz78)
 
 ## Homework: Weather Dashboard
 

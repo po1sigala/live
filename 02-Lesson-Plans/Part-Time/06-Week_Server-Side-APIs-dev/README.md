@@ -14,6 +14,8 @@ In this unit, you will use the `fetch()` method to make requests to the GitHub A
 
 * Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
 
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+
 ## Career Connection
 
 Remind students that related Career Services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
