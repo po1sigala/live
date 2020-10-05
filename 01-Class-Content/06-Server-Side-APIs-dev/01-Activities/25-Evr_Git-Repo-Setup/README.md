@@ -64,13 +64,13 @@ When working alone on a project, it's a safe assumption that any code that is pu
 
 ### Add Collaborators to the Repository
 
-GitHub allows developers to work together and contribute to a single repository in a few different ways. The way we are going to do it is to set up the repository to know that certain other GitHub users have access to write data to the repository as well as read it. Let's go add these collaborators with the following steps:
+GitHub allows developers to work together and contribute to a single repository in a few different ways. We are going to set up our repository so that certain other Github users have the ability to write data and read data. Let's go add these collaborators with the following steps:
 
-* In the GitHub repository's "Settings" page, select the menu item on the left side that says "Manage Access" and a page like this image will appear:
+* In the GitHub repository's "Settings" page, select the menu item on the left side that says "Manage Access" and and you should see the following image:
 
   ![The GitHub repository's settings page shows who has access to read or write to the repository and the option to invite collaborators.](./Images/04-manage-access.png)
 
-* Once the modal dialog opens, start typing in the GitHub username of one of your collaborators and the list should automatically populate that user's entry, as this image shows:
+* Once the modal dialog opens, start typing in the GitHub username of one of your collaborators and the list should automatically populate that user's entry. The page should resemble this image:
 
   ![The invite a collaborator modal dialog shows the user that needs to be invited to the repo.](./Images/05-invite-collaborator.png)
 
@@ -78,7 +78,7 @@ GitHub allows developers to work together and contribute to a single repository 
 
   ![The manage access page shows there is a pending invitation for a collaborator.](./Images/06-pending-invite.png)
 
-* Now all that user has to do is check their email or visit the repository to get a notification stating they need to accept the invitation. If they don't receive it, which can be known to happen at times, the repository owner can select the small clipboard icon next to the phrase "Pending Invite" to copy the invite link and send it to the collaborator directly.
+* Now the user will need to accept the invitation to contribute to the repository. The owner of the repository can also select the small clipboard icon next to the phrase "Pending Invite", copy the invite link, and send it to the collaborator directly.
 
 * This will only handle one collaborator, so repeat the above process for every collaborator on the project.
 
