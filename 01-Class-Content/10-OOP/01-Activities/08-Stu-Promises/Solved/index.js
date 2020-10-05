@@ -2,6 +2,14 @@
 const userInput = process.argv[2];
 console.log('Current user activity:', userInput);
 
+// Provide some instructions and stop execution to the user if they forgot to provide input
+if (!userInput) {
+  console.error(
+    '\nPlease pass in the current activity of the student \nUsage: `node index <action>`'
+  );
+  process.exit();
+}
+
 // We then create a boolean `studentDistracted` to help decipher whether or not the student is coding
 const studentDistracted = userInput !== 'coding';
 
@@ -31,5 +39,5 @@ const practiceCodingPromise = () =>
   );
 
 practiceCodingPromise()
-  .then((message) => console.log(message))
-  .catch((err) => console.error(err));
+  .then(() => console.log('We are coding in promises!'))
+  .catch((err) => console.error('Promise rejected:', err));

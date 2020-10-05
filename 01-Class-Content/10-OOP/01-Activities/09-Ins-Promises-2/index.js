@@ -17,5 +17,8 @@ const p3 = new Promise((resolve, reject) => {
 console.log('Status of p3:', p3);
 
 Promise.all([p1, p2, p3])
-  .then((values) => console.log(values))
+  .then((values) => {
+    console.log('\nThe returned array from our Promise.all() call:');
+    console.log(values);
+  })
   .catch((err) => new Error(err));
