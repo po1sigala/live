@@ -22,5 +22,3 @@ In this activity you are going to use JavaScript to add `hrefs` to `a` tags, `sr
  
 * Randomly set the `href` for site 1 from an array of sites you create.
 
-
-
