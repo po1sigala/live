@@ -80,5 +80,4 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [JavaScript and jQuery Review](https://docs.google.com/presentation/d/1IaujFMuxXQ1GG3XV-S7qDnFn70_8FJ7tLMN9mNEvPqg/edit?usp=sharing)
-* [Advanced AJAX](https://docs.google.com/presentation/d/1ykYBmbiVZF2QTsNI_ujE_zSHUELYj9Fm71qwzBaTdkE/edit?usp=sharing)
+* [Advanced AJAX](https://docs.google.com/presentation/d/12gsOr-L8qMjppsT0aFzZvrm8ZwfvGI1w_EuBnqjAjGY/edit?usp=sharing)
