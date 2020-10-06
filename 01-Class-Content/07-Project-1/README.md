@@ -9,8 +9,6 @@ The following topics will be covered in this unit:
 
   * Server-side APIs
 
-  * Git branching workflow
-
   * Agile software development
 
 ## Learning Objectives
@@ -31,7 +29,7 @@ You will be employer-ready if you are able to:
 
 ## Technical Interview Preparation
 
-You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+You will be employer-competitive if you are able to solve the following algorithms.
 
 ### Algorithms
 
@@ -44,10 +42,6 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
   * [03-acronym-builder](./03-Algorithms/03-acronym-builder)
 
   * [04-reverse-words](./03-Algorithms/04-reverse-words)
-
-## Career Connection
-
-Career Services material for this unit is located in the [Career Connection folder](./04-Important/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Resources
 
