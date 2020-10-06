@@ -40,7 +40,7 @@ The following code block demonstrates the expected JSON response:
 
 ## 💡 Hint(s)
 
-* How do we return HTTP status codes?
+* What are some other common HTTP status codes?
 
 ## 🏆 Bonus
 
