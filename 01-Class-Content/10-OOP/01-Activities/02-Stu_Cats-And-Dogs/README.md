@@ -1,4 +1,4 @@
-# 🏗️ Cats and Dogs
+# 🏗️ Create `Cat` and `Dog` Objects
 
 Work with a partner to implement the following user story:
 
@@ -24,13 +24,13 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-What is another name for a function that is defined inside the object?
+Does the syntax for creating a function inside of an object differ from how we define functions in the global scope?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* How could return an array of just the keys associated with an object?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

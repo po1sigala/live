@@ -1,32 +1,41 @@
-# Character Creation with Prototypes
+# 🏗️ Create Characters with Prototypes
 
-In this activity you will generate RPG characters using Objects and prototypes.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a game developer, I want to generate RPG characters using Objects and prototypes.
 
-* Over the course of this activity you are going to be using constructors to create simplistic characters for use within a very basic Roleplaying Game (RPG)
+* As a game developer, I need to create simplistic characters for an RPG using constructor functions.
 
-* Each character created using your constructor should have the following properties...
+## Acceptance Criteria
 
-  * Name: The character's name --> String
+* It's done when each character created using your constructor has the following properties:
+  * Name: The character's name --> `String`
+  * Profession: What the character does for a living --> `String`
+  * Age: The character's age --> `Number`
+  * Strength: Abstraction for how strong the character is --> `Number`
+  * HitPoints (HP): Abstraction for how much health the character has --> `Number`
+  * `PrintStats`: Function which prints all of a character's properties to the screen.
 
-  * Profession: What the character does for a living --> String
+* It's done when I have created the character constructor and two new characters.
+  
+* It's done when I have and printed each character's properties to the screen.
+  
+* It's done when I have added three methods via prototype:
+  * `IsAlive`: Function which prints whether or not this character is alive by looking into their HP and determining whether they are above or below zero.
+  * `Attack`: Function which takes in a second character and subtracts this character's strength from their HP.
+  * `LevelUp`: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
 
-  * Age: The character's age --> Number
+## 💡 Hints
 
-  * Strength: Abstraction for how strong the character is --> Number
+How can we find out how to create additional methods using the prototype chain?
 
-  * HitPoints (HP): Abstraction for how much health the character has --> Number
+## 🏆 Bonus
 
-  * PrintStats: Function which prints all of a character's properties to the screen
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Once you have created your constructor, create two new characters and print their properties to the screen
+* How are methods created in the constructor different than methods created via prototype?
 
-* Now add 3 methods onto it via the prototype.
+Use [Google](https://www.google.com) or another search engine to research this.
 
-  * IsAlive: Function which prints whether or not this character is alive by looking into their hitpoints and determining whether they are above or below zero.
-
-  * Attack: Function which takes in a second character and subtracts this character's strength from their hitpoints.
-
-  * LevelUp: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
-
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
