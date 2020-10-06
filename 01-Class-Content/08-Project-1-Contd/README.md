@@ -24,7 +24,6 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Career Services material for this unit is located in the [Career Connection folder](./04-Important/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
-
 ## Heads Up
 
 * In the next unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** starting Unit 09 and attending your classes. You can follow the installation instructions for [Mac](./04-Important/nodejs-install-mac.md) and [Windows](./04-Important/nodejs-install-win.md) computers.  
