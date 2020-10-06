@@ -1,12 +1,12 @@
-# 📖 Add validations to the User model
+# 📖 Add validations and constraints to the User model
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add validations to the User model in order to prevent bad data from being saved in the database.
+* As a developer, I want to add validations and constraints to the User model in order to prevent bad data from being saved in the database.
 
 ## Acceptance Criteria
 
-* It's done when it prevents NULL values from being entered for the username, email and password fields.
+* It's done when it prevents `null` values from being entered for the username, email and password fields.
 
 * It's done when it prevents the password from being shorter than 8 characters.
 

@@ -32,6 +32,7 @@ router.put('/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
+      individualHooks: true
     });
     if (!userData[0]) {
       res.status(404).json({ message: 'No user with this id!' });

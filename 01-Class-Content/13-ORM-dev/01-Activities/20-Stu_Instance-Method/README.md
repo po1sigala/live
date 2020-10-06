@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hint(s)
 
-* How are object methods and instance methods different?
+* What tools does bcrypt offer to help us compare user input to a hashed password?
 
 ## 🏆 Bonus
 
