@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./images/mockup.png)
+![Mockup](./images/01-screenshot.png)
 
 ---
 
