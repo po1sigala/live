@@ -15,7 +15,7 @@ var li4 = document.createElement("li");
 
 h1El.textContent = "Welcome to my page";
 kittenEl.textContent = "This is my kitten 🐱.";
-nameEl.textContent = "His name is Jax";
+nameEl.textContent = "His name is Jax.";
 favoriteEl.textContent = "My favorite foods are:";
 // Add text for list items
 li1.textContent = "Apples 🍎 ";
@@ -30,9 +30,9 @@ infoEl.appendChild(kittenEl);
 infoEl.appendChild(nameEl);
 body.appendChild(favoriteEl);
 favoriteEl.appendChild(listEl);
-// Append unordered list to Favorite div
+// Append ordered list 
 favoriteEl.appendChild(listEl);
-// Append list items to list element 
+// Append list items to ordered list element 
 listEl.appendChild(li1);
 listEl.appendChild(li2);
 listEl.appendChild(li3);
@@ -41,8 +41,6 @@ listEl.appendChild(li4);
 h1El.setAttribute("style", "margin:auto; width:50%; text-align:center;");
 infoEl.setAttribute("style", "margin:auto; width:50%; text-align:center;");
 imgEl.setAttribute("src", "http://placekitten.com/200/300");
-imgEl.setAttribute("height", 200);
-imgEl.setAttribute("width", 200);
 nameEl.setAttribute("style", "font-size:25px; text-align:center;");
 kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
 favoriteEl.setAttribute("style", "font-size:20px;");
