@@ -28,18 +28,23 @@ function printResults(resultObj) {
   titleEl.textContent = resultObj.title;
 
   var bodyContentEl = document.createElement('p');
-  bodyContentEl.innerHTML = '<strong>Date:</strong> ' + resultObj.date + '<br/>';
+  bodyContentEl.innerHTML =
+    '<strong>Date:</strong> ' + resultObj.date + '<br/>';
 
   if (resultObj.subject) {
-    bodyContentEl.innerHTML += '<strong>Subjects:</strong> ' + resultObj.subject.join(', ') + '<br/>';
+    bodyContentEl.innerHTML +=
+      '<strong>Subjects:</strong> ' + resultObj.subject.join(', ') + '<br/>';
   } else {
-    bodyContentEl.innerHTML += '<strong>Subjects:</strong> No subject for this entry.';
+    bodyContentEl.innerHTML +=
+      '<strong>Subjects:</strong> No subject for this entry.';
   }
 
   if (resultObj.description) {
-    bodyContentEl.innerHTML += '<strong>Description:</strong> ' + resultObj.description[0];
+    bodyContentEl.innerHTML +=
+      '<strong>Description:</strong> ' + resultObj.description[0];
   } else {
-    bodyContentEl.innerHTML += '<strong>Description:</strong>  No description for this entry.';
+    bodyContentEl.innerHTML +=
+      '<strong>Description:</strong>  No description for this entry.';
   }
 
   var linkButtonEl = document.createElement('a');
@@ -101,12 +106,7 @@ function handleSearchFormSubmit(event) {
     return;
   }
 
-  var queryParamsObj = {
-    q: searchInputVal,
-    format: formatInputVal,
-  };
-
-  searchApi(queryParamsObj);
+  searchApi(searchInputVal, formatInputVal);
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
