@@ -1,11 +1,30 @@
-# Pass Tests
+# 🏗️ Implement Code to Make Tests Pass
 
-In this activity you will be writing code to implement functionality for the Algo constructor you wrote tests for in the previous activity.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to write code that will allow my tests to pass
 
-* Open the `Unsolved/algo.js` file in your editor.
+## Acceptance Criteria
 
-* Starting with the `reverse`, method, write code to make the tests in `tests/algo.test.js` pass.
+* It's done when I have written code for function in `algo.js`.
 
-* After completing each method, run `npm run test` in your terminal to verify you correctly implemented the method before moving on to the next one.
+* It's done when I have ran `npm run test` in the terminal to verify that I correctly implemented each method before moving on.
+
+* It's done when the tests in `tests/algo.test.js` pass.
+
+---
+
+## 💡 Hints
+
+How can we use the tests themselves in `tests/algo.test.js` to give us clues on how to write our function?
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* What part of our code in the `/Unsolved` folder is telling node what to do when we run `npm run test`
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
