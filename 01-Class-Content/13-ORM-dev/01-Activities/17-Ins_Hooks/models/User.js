@@ -41,9 +41,9 @@ User.init(
         return newUserData;
       },
       // Here, we use the beforeUpdate hook to make all of the characters lower case in an updated email address, before updating the database.
-      beforeUpdate: async (newUserData) => {
-        newUserData.email = await newUserData.email.toLowerCase();
-        return newUserData;
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.email = await updatedUserData.email.toLowerCase();
+        return updatedUserData;
       },
     },
     sequelize,
