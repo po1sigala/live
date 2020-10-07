@@ -4,9 +4,9 @@
 
 @TODO In this unit, you will { OUTLINE THE GOALS FOR THE INSTRUCTOR }.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
 * @TODO WHAT DOES THE INSTRUCTOR NEED TO DO TO PREPARE FOR THIS UNIT?
 
@@ -26,15 +26,17 @@
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [13.1 - Lesson Plan]()
+  * [13.1 Lesson Plan]()
 
-  * [13.2 - Lesson Plan]()
+  * [13.2 Lesson Plan]()
   
-  * [13.3 - Lesson Plan]()
+  * [13.3 Lesson Plan]()
 
-### Unit Homework
+### Homework
 
   * [Unit 13 Homework](../../../01-Class-Content/13-ORM/02-Homework)
 
@@ -44,7 +46,7 @@
 
 ### Algorithms
 
-  * @TODO LIST THE THREE ALGORITHMS ASSOCIATED WITH THIS MODULE
+  * @TODO LIST THE THREE ALGORITHMS ASSOCIATED WITH THIS UNIT
 
 ### Resources
 
