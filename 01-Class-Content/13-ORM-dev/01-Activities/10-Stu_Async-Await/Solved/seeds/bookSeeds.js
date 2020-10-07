@@ -6,7 +6,7 @@ const Library = require('../models/Library');
 const bookSeedData = require('./bookSeedData.json');
 const librarySeedData = require('./librarySeedData.json');
 
-// Add the `async` keyword to the function `seedDatabase` to make asynchronus.
+// Add the `async` keyword to the function `seedDatabase` to make Asynchronous.
 const seedDatabase = async () => {
 
   // Add the `await` keyword infront of the expressions inside the `async` function.

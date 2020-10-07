@@ -1,4 +1,4 @@
-# 🏗️ Implement the PUT and DELETE Route with Your Own Parametors
+# 🏗️ Implement the PUT and DELETE Route with Your Own Parameters
 
 Work with a partner to implement the following user story:
 
