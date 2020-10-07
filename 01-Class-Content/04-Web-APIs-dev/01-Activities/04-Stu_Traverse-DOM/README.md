@@ -2,11 +2,11 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to use JavaScript to dynamically change the style on HTML elements.
+* As a developer, I want to use JavaScript to change the style on HTML elements.
 
 ## Acceptance Criteria
 
-* It's done when the article title is 50px.
+* It's done when the article title has a font size of 50px.
 
 * It's done when the text in the headline `"Welcome to World News"` is white. 
 
