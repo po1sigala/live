@@ -20,13 +20,13 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-How might you use `.children` and `.childNode` to access the elements you want to style?  
+How would you use parent-child relationships to access the elements you want to style? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Using  `.getElementbyId` is just one way to return an element. How might you access an  element if you did not have an id?  
+* Using `.getElementbyId()` is just one way to return an element. What are some other document methods that allow us to quickly access elements?  
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
