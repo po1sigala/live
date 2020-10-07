@@ -1,4 +1,4 @@
-# 🏗️ Implement a Fetch Request to Display User Repositories
+# 🏗️ Implement a fetch() Request to Display User Repositories
 
 Work with a partner to implement the following user story:
 
@@ -12,19 +12,19 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[GitHub API Docs for Repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
+[GitHub API documentation on repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
 
 ---
 
 ## 💡 Hints
 
-* Where in the URL string is the repository endpoint added?
+Where in the URL string is the repository endpoint added?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* In fetch requests we use the URL. What is the difference between a URL and URI? 
+* In `fetch()` requests we use the URL. What is the difference between a URL and URI? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

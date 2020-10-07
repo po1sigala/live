@@ -1,4 +1,4 @@
-# 🏗️ Implement a Fetch Request to Display GitHub Data as HTML
+# 🏗️ Implement a fetch() Request to Display GitHub Data as HTML
 
 Work with a partner to implement the following user story:
 
@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-  * It's done when I click the "Click Me" button, and a list of five GitHub users appears underneath on the page.
+  * It's done when I press the "Click Me" button, and a list of five GitHub users appears underneath on the page.
 
   * It's done when each user includes their login name and a URL to their GitHub profile.
 
@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-* Use the previous three exercises as references if needed to put this together.
+Use the previous three exercises as references if needed to put this together.
 
 ## 🏆 Bonus
 
