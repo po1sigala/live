@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/READ
 
 ## Heads-Up
 
-@TODO WHAT DOES THE INSTRUCTOR NEED TO DO TO PREPARE FOR THE NEXT UNIT?
+* In Unit 14, students will put everything they've learned together to create their first full-stack application with handlebars, MVC architecture, and front-end authentication.
 
 ## Helpful Links
 
@@ -50,9 +50,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * [Double Triple Map](../../../01-Class-Content/13-ORM/03-Algorithms/01-double-triple-map/)
-  * [Array Intersection](../../../01-Class-Content/13-ORM/03-Algorithms/02-array-intersection/)
-  * [Squares of a Sorted Array](../../../01-Class-Content/13-ORM/03-Algorithms/03-squares-of-a-sorted-array/)
+  * [01: Double Triple Map](../../../01-Class-Content/13-ORM/03-Algorithms/01-double-triple-map/)
+  * [02: Array Intersection](../../../01-Class-Content/13-ORM/03-Algorithms/02-array-intersection/)
+  * [03: Squares of a Sorted Array](../../../01-Class-Content/13-ORM/03-Algorithms/03-squares-of-a-sorted-array/)
 
 
 ### Resources
