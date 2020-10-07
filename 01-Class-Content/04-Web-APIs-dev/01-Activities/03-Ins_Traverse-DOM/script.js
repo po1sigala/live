@@ -4,12 +4,13 @@ console.log(document.body);
 console.log("Children of Document Body: ")
 console.log(document.body.children);
 
-console.log("First child of document body")
+console.log("Second child of body: ")
 console.log(document.body.children[1]);
 
-console.log("First child node")
-console.log(document.body.children[1].childNodes[0]);
+console.log("First child of the ul: ")
+console.log(document.body.children[1].children[0]);
 
+console.log("Using id to target the li: ")
 var childNode1 = document.getElementById("childNode1")
 console.log(childNode1);
 
