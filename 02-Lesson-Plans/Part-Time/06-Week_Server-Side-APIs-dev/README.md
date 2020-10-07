@@ -2,13 +2,13 @@
 
 ## Overview
 
-In this unit, you will use the `fetch()` method to make requests to the GitHub API and convert the returned data into HTML elements. You will also discuss the client-server model and leverage the Chrome DevTools Network tab to verify response statuses.
+In this unit, you will teach students how to use the `fetch()` method to make requests to the GitHub API and convert the returned data into HTML elements. You will also discuss the client-server model and leverage the Chrome DevTools Network tab to verify response statuses.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-Side-APIs/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-Side-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-* The MDN web docs use ES6 in their Fetch API examples, but the activities will continue to use ES5 syntax, since that is what students will be familiar with.
+* The MDN Web Docs use ES6 in their Fetch API examples, but the activities will continue to use ES5 syntax, because that is what students will be familiar with.
 
 * Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
@@ -18,23 +18,25 @@ In this unit, you will use the `fetch()` method to make requests to the GitHub A
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
+* Remind students that related Career Services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-For the next two units, students will work on their first group project. Groups should consist of 3-4 students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [06.1 - Lesson Plan](./01-Day_Fetch-Request/06.1-LESSON-PLAN.md)
+  * [06.1 Lesson Plan](./01-Day_Fetch-Request/06.1-LESSON-PLAN.md)
 
-  * [06.2 - Lesson Plan](./02-Day_Fetch-Location/06.2-LESSON-PLAN.md)
+  * [06.2 Lesson Plan](./02-Day_Fetch-Location/06.2-LESSON-PLAN.md)
   
-  * [06.3 - Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
+  * [06.3 Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
@@ -46,27 +48,27 @@ For the next two units, students will work on their first group project. Groups 
 
 ### Algorithms
 
-  * [01 - Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
+  * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
-  * [02 -Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
+  * [02: Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
 
     * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
 
-  * [03 - Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
+  * [03: Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
 
 ### Resources
 
-  * [MDN web docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+  * [MDN Web Docs on the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-  * [MDN web docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  * [MDN Web Docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 
-  * [jQuery docs on .ajax()](https://api.jquery.com/jquery.ajax/)
+  * [jQuery API Docs on .ajax()](https://api.jquery.com/jquery.ajax/)
 
-  * [MDN web docs on the Location interface](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+  * [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
 
   * [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
 
-  * [GitHub API documentation](https://docs.github.com/en/rest/reference)
+  * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
 
   * [OpenWeather API documentation](https://openweathermap.org/api)
 
