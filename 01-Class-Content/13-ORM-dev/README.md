@@ -12,35 +12,65 @@ Not only can we now use JavaScript to communicate with our database but we can a
 
 The following topics will be covered in this unit:
 
-* Sequelize
-  * Models
-  * Type definition
-  * Seeding
-  * Associations
-  * Querying
-  * Method instances
-* Enviromental variables
-* Async / Await
-* Try / Catch
-* HTTP Status codes
-* Validation
-* REST
-* Password hashing
+* [Sequelize](https://sequelize.org/master/)
+
+  * [Models](https://sequelize.org/master/manual/model-basics.html)
+
+  * [Type definition](https://sequelize.org/master/manual/model-basics.html#data-types)
+
+  * [Seeding](https://sequelize.org/master/manual/migrations.html)
+  
+  * [Associations](https://sequelize.org/master/manual/assocs.html)
+
+  * [Querying](https://sequelize.org/master/manual/model-querying-basics.html)
+
+  * [Method instances](https://sequelize.org/master/manual/model-instances.html)
+
+  * [Validation and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
+
+* [Environmental variables](https://www.npmjs.com/package/dotenv)
+
+* [Async / Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+
+* [Try / Catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+
+* [HTTP Status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+* [Bcrypt](https://www.npmjs.com/package/bcrypt)
 
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
 
-* Protect your enviromental variables.
-* Sync a database with Sequelize.
-* Use all CRUD methods to query a database with Sequelize.
-* To implement a model with fields and the proper type definitions that correspond with the field.
-* Create a function using `async` / `await` with `try` / `catch` for error handling.
-* Use the proper HTTP status codes.
-* Check a password against constraints you put in place using Sequelize.
-* Hash a password with bcrypt.
-* Explain what an ORM does for us.
-* Identify relations in our data and implement Associations with Sequelize.
+* Connect to a database using Sequelize and environment variables
+
+* Create and configure a Sequelize model
+
+* Perform CRUD operations with Sequelize methods
+
+* Write a script to seed a database with initial data
+
+* Convert asynchronous code to synchronous code using `async / await`
+
+* Utilize `try/catch` to catch errors
+
+* Ensure HTTP requests respond with the correct status code
+
+* Utilize validation tools on a Sequelize model
+
+* Utilize `bcrypt` to encrypt a password
+
+* Automate functionality using Sequelize hooks
+
+* Create and run a custom method on a Sequelize instance
+
+* Implement and know when to use different Sequelize associations to relate data for one-to-one, one-to-many, and many-to-many relationships
+
+* Use a combination of Sequelize methods and plain SQL syntax to perform sub-queries
+
+* Enforce code styling for an application using ESLint
+
+* Deploy an application with a MySQL database to Heroku
 
 
 ## Technical Interview Preparation
@@ -67,7 +97,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-In the homework for this unit, you will be creating an e-commerce back end. You will be given a working Express API that you will have to configure using Sequelize. Once finished we should be able to connect to our dataase and have functioning CRUD commands.
+In the homework for this unit, you will be creating an e-commerce back end. You will be given a working Express API that you will have to configure using Sequelize. Once finished we should be able to connect to our database and have functioning CRUD commands.
 
 ## Career Connection
 
@@ -75,17 +105,15 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-You will be creating Express routes and using object oriented programming with sequelize to interact with your database.
+In the next unit, we will be returning to full stack app developement by learning about an architecture called Model, View, Controller (MVC). We will be learning handlebars which is a templating engine. Finally, we will touching on the topic of front end authentication.
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [📖 Sequelize Docs](https://sequelize.org/master/)
+* [📖 Eslint Git Guide](./Activities/27-Evr_Eslint/README.md)
 
-* [📖 Bcrypt Docs](https://www.npmjs.com/package/bcrypt)
-
-* [📹 @TODO!]()
+* [📹 @TODO! Code Review]()
 
 
 ---
