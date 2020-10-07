@@ -12,7 +12,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/READ
 
 * Take some time to read through the Sequelize docs to (re)familiarize yourself with the library. Focus on implementing hooks, validations, and associations.
 
-* You will be using MySQL in all of the activities for this unit. Be sure to have your MySQL server up and running. Go ahead and create the databases listed in each activity ahead of time, or prepare todemonstrate it live in class.
+* You will be using MySQL in all of the activities for this unit. Be sure to have your MySQL server up and running. Go ahead and create the databases listed in each activity ahead of time, or prepare to demonstrate it live in class.
 
 * The first activity in this unit, `01-Ins_Sequelize-Setup`, hardcodes the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/READ
 
 ## Heads-Up
 
-* In Unit 14, students will put everything they've learned together to create their first full-stack application with handlebars, MVC architecture, and front-end authentication.
+In Unit 14, students will put everything they've learned together to create their first full-stack application with handlebars, MVC architecture, and front-end authentication.
 
 ## Helpful Links
 
@@ -51,14 +51,18 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Algorithms
 
   * [01: Double Triple Map](../../../01-Class-Content/13-ORM/03-Algorithms/01-double-triple-map/)
+
   * [02: Array Intersection](../../../01-Class-Content/13-ORM/03-Algorithms/02-array-intersection/)
+
   * [03: Squares of a Sorted Array](../../../01-Class-Content/13-ORM/03-Algorithms/03-squares-of-a-sorted-array/)
 
 
 ### Resources
 
   * [Sequelize Docs](https://sequelize.org/master/)
+
   * [Bcrypt](https://www.npmjs.com/package/bcrypt)
+
   * [dotenv](https://www.npmjs.com/package/dotenv)
 
 ---
