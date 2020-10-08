@@ -38,22 +38,11 @@ const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
 
 // CODE BELOW HERE
 
-<<<<<<< HEAD:01-Class-Content/09-NodeJS/01-Activities/26-Stu_ObjDestructuring/Unsolved/index.js
-console.log(name, alias, allegiance);
-=======
-
-console.log(name, alias, house); 
-
->>>>>>> 1b0a168d2e98a753c1541aac801ea3a601b2eba0:01-Class-Content/09-NodeJS/01-Activities/30-Stu_ObjDestructuring/Unsolved/index.js
+console.log(name, alias, house);
 
 // 4. Strings
 const skills = 'The Usurper, male, Baratheon, Cersei';
 
 // CODE BELOW HERE
 
-<<<<<<< HEAD:01-Class-Content/09-NodeJS/01-Activities/26-Stu_ObjDestructuring/Unsolved/index.js
-console.log(alias, gender, family, spouse); // print them by variable name
-=======
-
 console.log(nickName, gender, family, spouse); // print them by variable name
->>>>>>> 1b0a168d2e98a753c1541aac801ea3a601b2eba0:01-Class-Content/09-NodeJS/01-Activities/30-Stu_ObjDestructuring/Unsolved/index.js
