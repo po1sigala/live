@@ -49,11 +49,9 @@ First, you will use the Bootstrap CSS Framework to create a mobile responsive po
 
 * Must properly utilize Bootstrap components and grid system.
 
-
 ### Bonus
 
 * Using Bootstrap, make a sticky footer and use sub-rows and sub-columns on your portfolio site (**Hint:** Check out the Bootstrap documentation).
-
 
 ## Commit Early and Often
 
@@ -74,7 +72,6 @@ Follow these guidelines for committing:
 * Test your application before you commit to ensure functionality at every step in the development process.
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
-
 
 ## Submission on BCS
 

@@ -70,7 +70,7 @@ First, you'll add the database's connection string to an environment variable in
 
 9. With the connection string copied, navigate back to your Heroku application settings and paste it into the Value form field.
 
-10. We need to update the connection string to include our database name, username, and password. Right now it probably looks like the following code:
+10. We need to update the connection string to include our database name, username, and password. The username and password are not your Mongo Atlas account credentials, but rather the ones you used as a database user/administrator. Right now it probably looks like the following code:
 
     ```http
     mongodb+srv://<username>:<password>@cluster0.5k55w.mongodb.net/<dbname>?retryWrites=true&w=majority
@@ -113,8 +113,8 @@ Next and last, you'll update the application's code to accommodate the MongoDB c
    ```bash
    git add -A
    git commit -m 'deploying'
-   # make sure you're pushing from your local master branch!
-   git push heroku master
+   # make sure you're pushing from your local main branch!
+   git push heroku main
    ```
 
 4. If everything worked correctly, use `heroku open` to open your app in the browser and see your work! If something isn't working, run `heroku logs` from the command line to see where there may be issues.

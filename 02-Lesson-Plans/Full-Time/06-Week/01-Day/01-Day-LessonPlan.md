@@ -198,7 +198,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
     ![08-StudentsServe](Images/08-StudentsServe.png)
 
-  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.      
+  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
 
 ### 12. Instructor Do: Request Methods (0:10)
 
@@ -256,7 +256,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
   ![1-FinalApp](Images/1-FinalApp.png)
 
-* To show the API you can simply go to this link: <http://starwars-express-fsf.herokuapp.com/api>. The api also accepts an additional parameter at the end of the URL in the form of <http://starwars-express-fsf.herokuapp.com/api/charactername>. As an example: <http://starwars-express-fsf.herokuapp.com/api/yoda>.
+* To show the API you can simply go to this link: <http://starwars-express-fsf.herokuapp.com/api/characters>. The api also accepts an additional parameter at the end of the URL in the form of <http://starwars-express-fsf.herokuapp.com/api/characters/:charactername>. As an example: <http://starwars-express-fsf.herokuapp.com/api/characters/yoda>.
 
 * Now open the file `server1.js` (`08-StarWars-1`). Walk students through the general gist of the code. _For now the key focus is to give them an understanding of express(), routing, and the listener_.
 
