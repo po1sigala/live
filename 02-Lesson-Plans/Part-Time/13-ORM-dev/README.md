@@ -14,9 +14,15 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/13-ORM/READ
 
 * You will be using MySQL in all of the activities for this unit. Be sure to have your MySQL server up and running. Go ahead and create the databases listed in each activity ahead of time, or prepare to demonstrate it live in class.
 
-* The first activity in this unit, `01-Ins_Sequelize-Setup`, hardcodes the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
+* Run `npm install` before the Instructor Demo to make sure that you have the full 5 minute window for instuction.
+
+* The first activity in this unit, `01-Ins_Sequelize-Setup`, hardcodes the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity. 
 
 * All of the activities will be using Insomnia Core to test the routes, instead of relying on a front end. Be sure to have it installed and ready for all activities.
+
+* Day 2 begins to cover RESTful routes. Highlight the convention for students and tell them that they will revisit the pattern again.
+
+* The way that this unit introduces seeding to students is different from what they will find in the Sequelize docs. This may be confusing for them if they need help with seeding and go searching for answers in the Sequelize docs.
 
 ## Career Connection
 
