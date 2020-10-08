@@ -12,13 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when each list item has a font color of `white`, padding of `5px` and `margin-left` of `35px`.
 
-* It's done when the first list item has a background color of `#666666`.
-
-* It's done when the second list item has a background color of `#777777`.
-
-* It's done when the third list item has a background color of `#888888`.
-
-* It's done when the fourth list item has a background color of `#999999`.
+* It's done when each list item has a different background color.
 
 ## Assets
 
@@ -30,7 +24,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-The ordered list is the last child of what element? 
+The ordered list is the last child of what element? How does this information help to get your ordered list to appear in the right place on your webpage? 
 
 ## 🏆 Bonus
 

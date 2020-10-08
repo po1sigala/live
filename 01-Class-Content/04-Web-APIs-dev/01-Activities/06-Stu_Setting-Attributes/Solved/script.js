@@ -3,6 +3,7 @@ var sitesEl = document.querySelector(".sites");
 var site1El = document.querySelector(".site1");
 var site2El = document.querySelector(".site2");
 var site3El = document.querySelector(".site3");
+// Store all h4 elements in a variable
 var siteTitles = document.querySelectorAll("h4");
 
 site1El.children[0].textContent = "Site 1";
@@ -23,7 +24,8 @@ site3El.children[1].children[0].setAttribute("src", "images/image_3.jpg");
 site3El.children[1].children[0].setAttribute("alt", "women working");
 site3El.children[1].children[0].setAttribute("style", "padding:10px;");
 
+// Loop through all h4 elements to add styling 
 for (var i = 0; i < siteTitles.length; i++) {
-  siteTitles[i].setAttribute("style", "text-decoration: underline; padding-left:10px; margin: 0");
+  siteTitles[i].setAttribute("style", "color: blue; font-weight: bolder; font-size: 30px; padding-left:10px; margin: 0");
 }
 

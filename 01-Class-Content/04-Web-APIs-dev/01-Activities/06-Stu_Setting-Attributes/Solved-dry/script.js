@@ -43,7 +43,7 @@ function renderSite(siteData) {
   titleElement.textContent = siteData.title;
   titleElement.setAttribute(
     "style",
-    "text-decoration: underline; padding-left:10px; margin: 0"
+    "color: blue; font-weight: bolder; font-size: 30px; padding-left:10px; margin: 0"
   );
   linkElement.setAttribute("href", siteData.url);
   imgElement.setAttribute("src", siteData.imgSrc);
