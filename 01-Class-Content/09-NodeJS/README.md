@@ -82,13 +82,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 ### Algorithms
 
-Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` videos for tips and tricks on how to solve the algorithm.
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews.
 
-* [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
+* [01: Character Count](../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count/README.md)
 
-* [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
+* [02: Product of Largest Two](../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two/README.md)
 
-* [03: Camel Case](../../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case)
+* [03: Camel Case](../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case/README.md)
 
 ### Assessments
 
