@@ -1,25 +1,30 @@
-# Arrow Function Practice
+# 🏗️ Implement Arrow Functions
 
-In this activity, we will convert a file with prewritten code over to use arrow functions where suitable.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to be able to use newer arrow function syntax.
 
-1. Open [Unsolved/index.js](Unsolved/index.js) in your editor and run the code. Take a few minutes to study the values logged to the console, but don't worry about understanding every part of the code. For this activity you only need to remember the rules established about when arrow functions should and shouldn't be used.
+* As a developer, I want be able to create and read code using the most modern syntax rules.
 
-2. Update this example to use arrow functions _where suitable_. If successful, the code should still work the exact same way.
+## Acceptance Criteria
 
-## Hints
+* It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/Unsolved/index.js)
+  
+* It's done when I refactored the code to use arrow functions _where suitable_
 
-* Remember the case from the last example in which we should not be using arrow functions.
+* It's done when I have ran the refactored code with no errors.
 
-## Bonus
+## 💡 Hints
+
+What is an example of when we shouldn't use arrow functions?
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* After you've converted all of the functions to arrow functions where possible, look for opportunities to shorten the arrow function syntax even further by removing parentheses and curly braces where allowed.
-
-Use [Google](https://www.google.com/) or another search engine to research this.
+* How can we shorten the arrow function syntax even further with implicit return statements?
+  
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+2020 © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
