@@ -8,7 +8,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What are query strings and how are they used to create parameters for APIs?
+* What are query strings, and how are they used to create parameters for APIs?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
