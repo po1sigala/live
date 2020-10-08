@@ -17,8 +17,6 @@ The following topics will be covered in this unit:
   * [Models](https://sequelize.org/master/manual/model-basics.html)
 
   * [Type definition](https://sequelize.org/master/manual/model-basics.html#data-types)
-
-  * [Seeding](https://sequelize.org/master/manual/migrations.html)
   
   * [Associations](https://sequelize.org/master/manual/assocs.html)
 
@@ -33,6 +31,8 @@ The following topics will be covered in this unit:
 * [Async / Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 * [Try / Catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+
+* [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services)
 
 * [HTTP Status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
