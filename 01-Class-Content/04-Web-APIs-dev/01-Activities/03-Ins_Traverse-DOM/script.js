@@ -10,12 +10,8 @@ console.log(document.body.children[1]);
 console.log("First child of the ul: ")
 console.log(document.body.children[1].children[0]);
 
-console.log("Using id to target the li: ")
-var childNode1 = document.getElementById("childNode1")
-console.log(childNode1);
-
-console.log("Style object of selected element: ")
-console.log(childNode1.style);
+// Accessing element by id
+var firstChildUl = document.getElementById("first-child-ul")
 
 // Setting style of element
-childNode1.style.color = "green";
+firstChildUl.style.color = "green";
