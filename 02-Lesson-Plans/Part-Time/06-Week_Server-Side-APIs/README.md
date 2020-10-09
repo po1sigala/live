@@ -22,7 +22,7 @@ Make sure that these groups are created prior to class 07.1. Groups are made up 
 
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/06-Server-Side-APIs/04-Supplemental/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -39,7 +39,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1AMZW0G8cYnEdqeIMZMoNUQRsM1PVgykP7afZ_31wJE4/edit?usp=sharing)
+  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1CSJBUAF3UIZp7UxI9z8-4s7qm_uHF4QoZX6Zuko75Jk/edit?usp=sharing)
 
 ### Time Tracker(s)
 
