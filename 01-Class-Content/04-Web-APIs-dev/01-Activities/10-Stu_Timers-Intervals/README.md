@@ -8,8 +8,6 @@ Work with a partner to implement the following user story:
 
 * It's done when after the countdown ends, words to the provided poem appear on the screen one at a time at the interval provided by the user.
 
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
