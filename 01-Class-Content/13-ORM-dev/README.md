@@ -6,7 +6,7 @@ Using a database is an important part of any application that requires us to col
 
 There are many different ORM tools at our disposal but for this unit we will be using Sequelize. Sequelize is a popular JavaScript ORM that utilizes Object oriented programming. With Sequelize we can now communicate with our Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server using Node.js.
 
-Not only can we now use JavaScript to communicate with our database but we can also make relationships between our data easier to recognize and leverage. This allows us to connect our data and see how it interacts with each other much better than we could with plain SQL
+Not only can we now use JavaScript to communicate with our database, but we can also make relationships between our data easier to recognize and leverage. This allows us to connect our data and see how it interacts with each other much better than we could with plain SQL.
 
 ## Key Topics
 
@@ -16,17 +16,17 @@ The following topics will be covered in this unit:
 
   * [Models](https://sequelize.org/master/manual/model-basics.html)
 
-  * [Type definition](https://sequelize.org/master/manual/model-basics.html#data-types)
+  * [Data types](https://sequelize.org/master/manual/model-basics.html#data-types)
   
   * [Associations](https://sequelize.org/master/manual/assocs.html)
 
   * [Querying](https://sequelize.org/master/manual/model-querying-basics.html)
 
-  * [Method instances](https://sequelize.org/master/manual/model-instances.html)
+  * [Method instances](https://sequelize.org/master/manual/model-basics.html#taking-advantage-of-models-being-classes)
 
   * [Validation and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
-* [Environmental variables](https://www.npmjs.com/package/dotenv)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
 * [Async / Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
@@ -52,7 +52,7 @@ You will be employer-ready if you are able to:
 
 * Convert asynchronous code to synchronous code using `async / await`
 
-* Utilize `try/catch` to catch errors
+* Utilize `try / catch` to catch errors
 
 * Ensure HTTP requests respond with the correct status code
 
