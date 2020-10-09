@@ -2,10 +2,10 @@
 console.log("this: ");
 console.log(this);
 
-// Logs window object using document.defaultView
-console.log("document.defaultView: ");
-console.log(document.defaultView);
+// Logs the document object
+console.log("window.document: ");
+console.log(window.document);
 
-// Logs body of HTML using document.body
+// Logs body of document
 console.log("document.body: ");
 console.log( document.body);

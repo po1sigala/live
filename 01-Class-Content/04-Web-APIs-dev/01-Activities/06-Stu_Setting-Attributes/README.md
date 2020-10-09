@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-How can you use a loop to iterate over a group of elements? 
+How can you use a loop to iterate over a list of elements? 
 
 ## 🏆 Bonus
 
