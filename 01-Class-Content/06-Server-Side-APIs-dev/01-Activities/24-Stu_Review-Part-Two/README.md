@@ -1,22 +1,22 @@
-# 📐 Add Comments to "Git It Done" Application - Part Two 
+# 📐 Add Comments to Implementation of Git It Done Application: Part Two
 
 Work with a partner to add comments describing the functionality of the code found in [single.js](./Unsolved/assets/js/single.js).
 
-## 📝 Note(s)
+## 📝 Notes
 
 Refer to the documentation: 
 
-* [GitHub API Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)
+* [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)
 
 ---
 
 ## 🏆 Bonus
 
-If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  *  For an open source contributor, what is the significance of knowing if an issue has an associated pull request or not?
+* For an open source contributor, what is the significance of knowing whether an issue has an associated pull request or not?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
