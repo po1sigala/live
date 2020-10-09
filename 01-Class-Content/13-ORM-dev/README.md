@@ -85,15 +85,13 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02: Array Intersection](./03-Algorithms/02-array-intersection)
 
-  * [📹 @TODO]()
-
 * [03: Squares of a Sorted Array](./03-Algorithms/03-squares-of-a-sorted-array)
 
 ### Assessments
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* @TODO LINK TO ASSESSMENT
+* [Unit 13 technical interview preparation](https://forms.gle/xH18Tn3PwctkCUBi9)
 
 ## Homework
 
@@ -105,15 +103,13 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, we will be returning to full stack app developement by learning about an architecture called Model, View, Controller (MVC). We will be learning handlebars which is a templating engine. Finally, we will touching on the topic of front end authentication.
+In the next unit, we will be returning to full stack app developement by learning about an architecture called Model, View, Controller (MVC). We will be learning handlebars which is a templating engine. Finally, we will be touching on the topic of front end authentication.
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
 * [📖 Eslint Git Guide](./Activities/27-Evr_Eslint/README.md)
-
-* [📹 @TODO! Code Review]()
 
 
 ---
