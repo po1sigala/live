@@ -1,5 +1,7 @@
 # Career Connection
 
+## Career Connection
+
 ![Career Services Logo](./assets/cs_logo.png#right)
 
 Now you've learned some of the fundamental technologies on which all web applications are built. And you added another tool to your skill set: JavaScript! Never underestimate the importance of JavaScript as a web technology. More than 94% of websites use it in some way. To learn more, read this [Medium.com article about JavaScript's importance to modern web developers](https://medium.com/@mindfiresolutions.usa/how-important-is-javascript-for-modern-web-developers-2854309b9f52).
@@ -38,11 +40,11 @@ This section provides two steps that can help you start preparing for that first
 
 Pull up that page from when you searched [Indeed.com](https://indeed.com/) for JavaScript, and record your answers to the following questions:
 
-- What job titles did you find?
+* What job titles did you find?
 
-- Do you notice any differences between them?
+* Do you notice any differences between them?
 
-- Which libraries and frameworks are companies looking for?
+* Which libraries and frameworks are companies looking for?
 
 Some of the most common job titles you'll encounter in programming include Web Application Developer, Back-End Developer, Front-End Developer, Web Developer, and of course, Full-Stack Web Developer.
 
@@ -60,11 +62,11 @@ Here's an plan of approach to help you get started:
 
 4. If you want algorithm practice beyond these Career Connection lessons, try the following resources:
 
-   - [HackerRank Interview Preparation Kit](https://www.hackerrank.com/interview/interview-preparation-kit)
+   * [HackerRank Interview Preparation Kit](https://www.hackerrank.com/interview/interview-preparation-kit)
 
-   - [W3Schools](https://www.w3schools.com/js/)
+   * [W3Schools](https://www.w3schools.com/js/)
 
-   - [CodeWars](https://www.codewars.com/)
+   * [CodeWars](https://www.codewars.com/)
 
 ### Prepare for the Technical Interview
 
@@ -72,17 +74,17 @@ Many companies use algorithm questions during the technical interview. We strong
 
 Please refer to the class repository to find these algorithms:
 
-- Coding Algorithm #1: Arithmetic
+* Coding Algorithm #1: Arithmetic
 
-- Coding Algorithm #2: Odd or Event
+* Coding Algorithm #2: Odd or Event
 
-- Coding Algorithm #3: Log Nums
+* Coding Algorithm #3: Log Nums
 
 For practice in a live, interview-style IDE complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
 
 Once you start, you'll have 7 days to complete it. After the 7 days has elapsed, the challenge will close.
 
-- CodeSignal Algorithm: [Add Two Digits](https://app.codesignal.com/public-test/a2kjXwqf8v7vnGnks/7hyvjF58AaTiQW)
+* CodeSignal Algorithm: [Add Two Digits](https://app.codesignal.com/public-test/a2kjXwqf8v7vnGnks/7hyvjF58AaTiQW)
 
 ### Career Services Events
 

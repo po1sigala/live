@@ -12,7 +12,7 @@ The completed game should meet the following criteria:
 
 2. Your solution should have, at minimum, three files:
 
-* **Letter.js**: Contains a class, `Letter`. This constructor should be able to either display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. That means the constructor should define:
+* **Letter.js**: Contains a class, `Letter`. This class should be able to either display an underlying character or a blank placeholder (such as an underscore), depending on whether or not the user has guessed the letter. That means the constructor should define:
 
   * A string value to store the underlying character for the letter
 

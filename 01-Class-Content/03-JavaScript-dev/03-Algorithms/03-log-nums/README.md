@@ -10,7 +10,7 @@ In this activity you will be writing code to create a function that prints all w
 
 * Print all numbers from `1` up to the given `nums` argument inclusive.
 
-   - e.g. given the number `5` as the `num` argument, the following should be printed to the console, one log at a time:
+   *-* e.g. given the number `5` as the `num` argument, the following should be printed to the console, one log at a time:
 
    ```bash
    1
@@ -22,6 +22,6 @@ In this activity you will be writing code to create a function that prints all w
 
 * You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
+  * Functions that _pass_ the tests will be denoted with a **green check mark**.
 
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.

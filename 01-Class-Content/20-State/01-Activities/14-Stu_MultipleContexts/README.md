@@ -1,4 +1,5 @@
 # Multiple Contexts
+
 In this activity we will continue to practice using the Context API in React. This activity continues where the last activity left off. To help strengthen your Context API skills, you will introduce another Context Object to your application.
 
 ## Instructions
@@ -7,11 +8,15 @@ In this activity we will continue to practice using the Context API in React. Th
 
 * Install axios by running `npm install axios` in your terminal.
 
-* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* This activity uses Bootstrap, so make sure you `import 'bootstrap/dist/css/bootstrap.min.css';` in `index.js`
+
+* **Recommended:** Add the Font Awesome CDNs to your application's `index.html` file:
 
   ```html
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
   ```
 
 * Start the application in dev mode by running `npm start` in your terminal.

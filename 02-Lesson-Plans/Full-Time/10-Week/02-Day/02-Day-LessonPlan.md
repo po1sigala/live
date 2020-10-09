@@ -9,7 +9,7 @@ We will then be deepening students understanding of ReactJS. They further expand
 
 ## Instructor Notes
 
-* `Summary: Complete activities 19-react/01-Activities/13-Stu_ComponentMap through 20-state/01-Activities/21-Stu_ConditionalRender`.
+* `Summary: Complete activities 13-21 in 19-React`.
 
 * It is recommended that you arrange for students to globally install both Create React App before today's class. If students have problems running `create-react-app`, direct them to remove their global install and use `npx` to run `create-react-app` instead: 
 
@@ -216,7 +216,7 @@ We will then be deepening students understanding of ReactJS. They further expand
 
 ### 6. Students Do: Friend Refactor (20 mins) (Critical)
 
-* Slack out `29-Stu_FriendRefactor/Unsolved`
+* Slack out `16-Stu_FriendRefactor/Unsolved`
 
 * In this activity students will further refactor the Friends List application from earlier to use class components, events, and programmatically render the `FriendCard` components.
 
@@ -683,7 +683,7 @@ In this example we will demonstrate AJAX requests with React.
 
 ### 16. Instructor Do: Review Conditional Render (15 mins)
 
-* Once time's up slack out the [04-Stu_ConditionalRender/Solved](../../../../01-Class-Content/20-state/01-Activities/21-Stu_ConditionalRender/Solved) version of the activity and go through it as a class. Be sure to demonstrate the solution in your web browser before going into the JavaScript code in your editor.
+* Once time's up slack out the [21-Stu_ConditionalRender/Solved](../../../../01-Class-Content/19-React/01-Activities/21-Stu_ConditionalRender/Solved) version of the activity and go through it as a class. Be sure to demonstrate the solution in your web browser before going into the JavaScript code in your editor.
 
   ![Conditional Demo](Images/13-Conditional-Demo.png)
 
