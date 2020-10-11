@@ -6,7 +6,6 @@ Third-party APIs allow developers to access their data and functionality by maki
 
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that provides basic setup and usage instructions. You will use `localStorage` to store any persistent data.
 
-
 ## User Story
 
 ```
@@ -14,7 +13,6 @@ AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
-
 
 ## Acceptance Criteria
 
@@ -32,13 +30,11 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 
-
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
-
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
 
 ## Grading Requirements
 
@@ -48,40 +44,39 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-    * Uses the OpenWeather API to retrieve weather data
+    * Uses the OpenWeather API to retrieve weather data.
 
-    * Uses `localStorage` to store persistent data
+    * Uses `localStorage` to store persistent data.
 
 ### Deployment: 32%
 
-* Application deployed at live URL
+* Application deployed at live URL.
 
-* Application loads with no errors
+* Application loads with no errors.
 
-* Application GitHub URL submitted
+* Application GitHub URL submitted.
 
-* GitHub repository that contains application code
+* GitHub repository that contains application code.
 
 ### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+* Application user experience is intuitive and easy to navigate.
 
-* Application user interface style is clean and polished
+* Application user interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the homework instructions
+* Application resembles the mock-up functionality provided in the homework instructions.
 
 ### Repository Quality: 13%
 
-* Repository has a unique name
+* Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions
+* Repository follows best practices for file structure and naming conventions.
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages
+* Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
 
 ## Review
 
@@ -89,7 +84,7 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
 
 - - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
