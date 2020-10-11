@@ -25,9 +25,8 @@ function prepareRead() {
   }, 1000);
 }
 
-
 function speedRead() {
-  mainEl.append(bodyEl);
+  mainEl.appendChild(bodyEl);
 
   var poemInterval = setInterval(function() {
     if (words[i] === undefined) {

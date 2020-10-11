@@ -5,9 +5,9 @@ var imgEl = document.createElement("img");
 var kittenEl = document.createElement("div");
 var nameEl = document.createElement("div");
 var favoriteEl = document.createElement("div");
-// Create unordered list element
+// Create ordered list element
 var listEl = document.createElement("ol");
-// Create unordered list items
+// Create ordered list items
 var li1 = document.createElement("li");
 var li2 = document.createElement("li");
 var li3 = document.createElement("li");

@@ -24,13 +24,13 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-The ordered list is the last child of what element? How does this information help to get your ordered list to appear in the right place on your webpage? 
+After creating an element in JavaScript, what additional step must you take to attach the element to the HTML document?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-What is the difference between append() and appendChild()? 
+What is the difference between `.append()` and `.appendChild()`? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
