@@ -26,6 +26,7 @@ function prepareRead() {
 }
 
 function speedRead() {
+  //Add Your Code Here
 }
 
 prepareRead();
