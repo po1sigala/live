@@ -32,7 +32,7 @@ Make sure that these groups are created prior to class 07.1. Groups are made up 
 
 ### Slide Decks
 
-  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1AMZW0G8cYnEdqeIMZMoNUQRsM1PVgykP7afZ_31wJE4/edit?usp=sharing)
+  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1CSJBUAF3UIZp7UxI9z8-4s7qm_uHF4QoZX6Zuko75Jk/edit?usp=sharing)
 
 ### Time Tracker(s)
 

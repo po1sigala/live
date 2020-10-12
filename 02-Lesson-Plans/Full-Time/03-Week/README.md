@@ -59,10 +59,10 @@ Also this week, we will be introducing students to the concept of APIs and the u
 * [Homework Demo](https://youtu.be/BqreERTLjgQ)
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Supplemental/CAREER-CONNECTION.md).
-[Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Supplemental/CAREER-CONNECTION.md).
+[Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
+[Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -80,5 +80,4 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [JavaScript and jQuery Review](https://docs.google.com/presentation/d/1IaujFMuxXQ1GG3XV-S7qDnFn70_8FJ7tLMN9mNEvPqg/edit?usp=sharing)
-* [Advanced AJAX](https://docs.google.com/presentation/d/1ykYBmbiVZF2QTsNI_ujE_zSHUELYj9Fm71qwzBaTdkE/edit?usp=sharing)
+* [Advanced AJAX](https://docs.google.com/presentation/d/12gsOr-L8qMjppsT0aFzZvrm8ZwfvGI1w_EuBnqjAjGY/edit?usp=sharing)

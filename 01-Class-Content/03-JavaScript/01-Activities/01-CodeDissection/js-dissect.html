@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      Data Types, User Input, Conditional Logic
-    </title>
-  </head>
-  <body>
-    <script type="text/javascript">
 
-      var userName = prompt("What's your name?");
-      var confirmCats = confirm("Do you like cats?");
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Data Types, User Input, Conditional Logic
+  </title>
+</head>
 
-      var petName = "Meeses";
-      var petType = "Tuxedo Cat";
-      var petAge = 5;
-      var petIsCat = true;
+<body>
+  <script type="text/javascript">
 
-      if (confirmCats) {
-        alert(petName + " " + petType + " " + petAge);
-      }
-      else {
-        alert("You don't get my cat's information");
-      }
+    var userName = prompt("What's your name?");
+    var confirmCats = confirm("Do you like cats?");
 
-      if (petIsCat) {
-        alert("My pet is a cat");
-      }
-      else {
-        alert("My pet is not a cat");
-      }
+    var petName = "Meeses";
+    var petType = "Tuxedo Cat";
+    var petAge = 5;
+    var petIsCat = true;
 
-      if (petAge !== 7) {
-        alert("My pet is not 7 years old");
-      }
+    if (confirmCats) {
+      alert(petName + " " + petType + " " + petAge);
+    }
+    else {
+      alert("You don't get my cat's information");
+    }
 
-      if (petAge === 5) {
-        alert("My pet is 5 years old");
-      }
-      else if (petAge < 5) {
-        alert("My pet is less than 5 years old");
-      }
-      else if (petAge > 5) {
-        alert("My pet is older than 5 years old");
-      }
+    if (petIsCat) {
+      alert("My pet is a cat");
+    }
+    else {
+      alert("My pet is not a cat");
+    }
 
-      alert("Welcome to our page " + userName);
+    if (petAge !== 7) {
+      alert("My pet is not 7 years old");
+    }
 
-      var catAge = prompt("How old is your cat?");
+    if (petAge === 5) {
+      alert("My pet is 5 years old");
+    }
+    else if (petAge < 5) {
+      alert("My pet is less than 5 years old");
+    }
+    else if (petAge > 5) {
+      alert("My pet is older than 5 years old");
+    }
 
-      // Won't work as expected
-      alert(catAge + 2);
+    alert("Welcome to our page " + userName);
 
-      // Works as expected
-      alert(parseInt(catAge) + 2);
+    var catAge = prompt("How old is your cat?");
 
-    </script>
-  </body>
+    // Won't work as expected
+    alert(catAge + 2);
+
+    // Works as expected
+    alert(parseInt(catAge) + 2);
+
+  </script>
+</body>
+
 </html>
