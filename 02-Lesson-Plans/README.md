@@ -52,7 +52,7 @@ This section contains steps that instructors and TAs should take at the beginnin
 
 #### Instructors
 
-* Start the Panopto recording. Copy/paste the link into the BCS session and slack out to students. Set "Primary Screen" to "Built-In Display" in order to record your active screen.
+* Start the recording.
 
 * Open the day's `LessonPlan.md` file on a second display for yourself.
 

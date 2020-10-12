@@ -31,7 +31,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ## Slides
 
-[11.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing)
+[6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1tVXZx3l2azL-NsN-sVPlHmYPbkYsKrvLE_mXR6XH96M/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -240,7 +240,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ### 14.	Instructor Do: Quick Recap "Server" Concepts (0:05)
 
-* Begin class by welcoming students. Then, open the slide deck [13-2 Express Yourself](https://docs.google.com/presentation/d/1T9dRhxABZyECQLFhctoAr2yZ4FhJjMD-wPguCgoTMBA/edit?usp=sharing) and walk students through the slides. These are fairly light slides meant merely to offer a visualization of routing. Feel free to cut slides completely if you feel they detract from your teaching style.
+* Open the slide deck [6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing) and walk students through the slides. These are fairly light slides meant merely to offer a visualization of routing. Feel free to cut slides completely if you feel they detract from your teaching style.
 
 * Use the slides to help you guide students through a recap of the concepts behind servers.
 

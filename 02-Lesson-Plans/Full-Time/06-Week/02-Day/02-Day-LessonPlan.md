@@ -30,7 +30,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 ## Slides
 
-[6.2: Express Yourself](https://docs.google.com/presentation/d/1H1xhjeQyMGXW7fufs2GJe4j6twEvYpDNhhuZJNcuHEk/edit?usp=sharing)
+[6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing)
 
 ## Time Tracker
 
