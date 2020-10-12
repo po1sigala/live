@@ -1,28 +1,28 @@
-# appendFile
+# 🏗️ Implement and Use `fs.appendFile()`
 
-In this activity, you will create a commit logger that records commit messages (for poetic purposes) using `fs`.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to be able to add to a file without overwriting the existing content.
 
-* In your working directory, create a Node.js application, `index.js`, that accepts a command-line argument and, each time it is run, will write the argument to file _without_ overwriting the existing text.
+## Acceptance Criteria
 
-## Notes
+* It's done when I have created a `index.js` file that accepts a command line argument.
 
-Refer to the documentation:
-* [Node.js documentation on `fs`](https://nodejs.org/api/fs.html)
+* It's done when the program takes the input from the user and *appends* it to the file.
 
-## Hints
+* It's done after I have ran the program, passed in some text and confirmed that it appended the text to `log.txt`.
 
-* If `fs.readFile` reads a file and `fs.writeFile` writes&emdash;but _overwrites_&mdash;a file, what method do you think will allow you to _append_ text to a file?
+## 💡 Hints
 
-## Bonus
+* Going by naming convention alone, if `fs.readFile` reads a file and `fs.writeFile` writes to a file, what do you think the method for appending is?
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How would you add arguments on new lines? 
+* How can you add text from additional arguments on a new line?
 
-Use [Google](https://www.google.com/) or another search engine to research this.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+2020 YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
