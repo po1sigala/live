@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![Demo](./images/demo1.gif)
 
 ---
 
