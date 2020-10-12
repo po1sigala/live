@@ -54,13 +54,13 @@ You will be employer-competitive if you are able to:
 
 * Write join statements to establish relations between data in one or more tables
 
-## Homework: Bamazon
+## Homework: Employee Tracker
 
-* In this activity, you'll be creating an Amazon-like storefront with the MySQL skills you learned in this unit. The app will take in orders from customers and deplete stock from the store's inventory. As a bonus task, you can program your app to track product sales across your store's departments and then provide a summary of the highest-grossing departments in the store.
+* Developers are often tasked with creating interfaces that make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as **C**ontent **M**anagement **S**ystems. In this homework assignment, your challenge is to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
 ## Heads Up
 
-* Starting this unit, you will use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** attending your classes. You can follow these installation instructions for your [Mac](./04-Supplemental/mysql-mac-guide.md) or [Windows](./04-Supplemental/mysql-windows-guide.md) computers.
+* Starting this unit, you will use MySQL. Be sure to have the MySQL Server and Workbench installed on your computer and be able to initialize the MySQL Shell **before** attending your classes. You can follow these installation instructions for your [Mac](./04-Important/mysql-mac-guide.md) or [Windows](./04-Important/mysql-windows-guide.md) computers.
 
 ## Helpful Links
 

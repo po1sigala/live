@@ -10,8 +10,6 @@ In this class, we will further students' understanding of DOM Manipulation using
 
 * Today's class is focused on providing students with additional exposure to jQuery for DOM manipulation. As an instructor, your primary focus is to ensure students understand the `10-CaptainPlanetGame` and the `11-FridgeGame`. If you are able to cover lexical scope in depth, consider that a significant bonus. Scope is important, but don't leave people in the dust when it comes to DOM manipulation.
 
-* Also, as a heads-up, next week there will be an entire class allotted for reviewing JavaScript. So if you're students seem winded -- give them a heads-up as well.
-
 ## Learning Objectives
 
 * To use jQuery DOM manipulation to create simple games.

@@ -189,7 +189,7 @@ app.use(compression());
 
 * Welcome students to class.
 
-* Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/) in your browser and point out the following: 
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
 
   * It's the Image Gallery application from earlier. But there's something different about it...
  
@@ -227,7 +227,7 @@ app.use(compression());
 
   * iOs:
 
-    * 1. Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/) with Safari.
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
 
     * 2. Tap the Share button in Safari.
 
@@ -239,7 +239,7 @@ app.use(compression());
 
   * Android:
 
-    * 1. Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/) with Chrome.
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
 
     * 2. Tap the menu button in the upper right corner of Chrome.
 
@@ -285,7 +285,7 @@ app.use(compression());
 
   * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
   
-* Navigate to [https://secure-bayou-27137.herokuapp.com/](https://secure-bayou-27137.herokuapp.com/), open DevTools and explain the following: 
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
   
   * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
 

@@ -59,10 +59,10 @@ After working extensively with the React library, we will introduce final projec
 * [20.3 - Mini Project](../../../01-Class-Content/20-State/01-Activities/22-Stu_Mini_Project)
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[React](../../../01-Class-Content/19-React/04-Supplemental/CAREER-CONNECTION.md).
-[State](../../../01-Class-Content/20-State/04-Supplemental/CAREER-CONNECTION.md).
+[React](../../../01-Class-Content/19-React/04-Important/CAREER-CONNECTION.md).
+[State](../../../01-Class-Content/20-State/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

@@ -14,7 +14,7 @@ MySQL, while extremely useful and powerful, is unlike any other programming lang
 
 * Throughout today's class, constantly encourage students to look back at the previous activity from class on the Star Wars Express application. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell, if they haven't installed it yet.
+* Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell, if they haven't installed it yet.
 
 * The lesson after the break is most likely not going to be an easy one. As mentioned in the overview above, there are a lot of hurdles which can both intimidate and block students from wanting to dive into and mess around with MySQL. It does not help that, unlike Visual Studio Code, MySQL Workbench does not have the friendliest of designs and seems somewhat cluttered. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
 
@@ -119,7 +119,7 @@ MySQL, while extremely useful and powerful, is unlike any other programming lang
 
 * Announce to the class that, in order to code in MySQL, they will require a coding environment other than that of Visual Studio Code.
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+* Direct the students to the `04-Important` folder where there are installation instructions for the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
 * Be sure everyone has everything installed and running correctly before continuing the lesson. 
 
