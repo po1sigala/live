@@ -8,17 +8,19 @@ Work with a partner to implement the following user story:
 
   * It's done when I click the "Fetch Your User Repos" button, and a list of my GitHub repositories displays on the page.
 
-## 📝 Notes
+## Assets
 
-Refer to the documentation: 
+The following image demonstrates the web application's appearance and functionality:
 
-[GitHub API documentation on repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
+![The web page shows a user's GitHub repositories when the button is selected.](./Images/01-solution-screenshot.png)
 
 ---
 
 ## 💡 Hints
 
-Where in the URL string is the repository endpoint added?
+* How can we use the [GitHub API documentation on repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user) to support this implementation?
+
+* Where in the URL string is the repository endpoint added?
 
 ## 🏆 Bonus
 

@@ -2,8 +2,8 @@ var repoList = document.querySelector('ul');
 var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
-  // replace {USERNAME} with your github username
-  var requestUrl = 'https://api.github.com/users/{USERNAME}/repos';
+  // replace `octocat` with anyone else's GitHub username
+  var requestUrl = 'https://api.github.com/users/octocat/repos';
 
   fetch(requestUrl)
     .then(function (response) {
