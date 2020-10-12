@@ -4,7 +4,6 @@
 
 // 3. When does the anonymous function get executed?
 
+const boomBtn = document.getElementById('boomButton');
 
-$("#boomButton").on("click", function() {
-  alert("boom");
-});
+boomBtn.addEventListener('click', () => alert('boom!'));
