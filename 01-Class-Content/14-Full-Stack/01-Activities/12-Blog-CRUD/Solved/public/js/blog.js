@@ -1,130 +1,151 @@
-$(document).ready(function() {
-  // blogContainer holds all of our posts
-  var blogContainer = $(".blog-container");
-  var postCategorySelect = $("#category");
-  // Click events for the edit and delete buttons
-  $(document).on("click", "button.delete", handlePostDelete);
-  $(document).on("click", "button.edit", handlePostEdit);
-  postCategorySelect.on("change", handleCategoryChange);
-  var posts;
+// Wait for the DOM to completely load before we run our JS
+document.addEventListener('DOMContentLoaded', (e) => {
+  if (e) {
+    console.log('DOM loaded! 🚀');
+  }
 
-  // This function grabs posts from the database and updates the view
-  function getPosts(category) {
-    var categoryString = category || "";
+  const blogContainer = document.querySelector('.blog-container');
+  const postCategorySelect = document.getElementById('category');
+
+  let posts;
+
+  // Function to grab posts from the database
+  const getPosts = (category) => {
+    let categoryString = category || '';
     if (categoryString) {
-      categoryString = "/category/" + categoryString;
+      categoryString = categoryString.replace(' ', '');
+      categoryString = `category/${categoryString}`;
     }
-    $.get("/api/posts" + categoryString, function(data) {
-      console.log("Posts", data);
-      posts = data;
-      if (!posts || !posts.length) {
-        displayEmpty();
-      }
-      else {
-        initializeRows();
-      }
-    });
-  }
 
-  // This function does an API call to delete posts
-  function deletePost(id) {
-    $.ajax({
-      method: "DELETE",
-      url: "/api/posts/" + id
+    fetch(`/api/posts/${categoryString}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
-      .then(function() {
-        getPosts(postCategorySelect.val());
-      });
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success in getting posts:', data);
+        posts = data;
 
-  // Getting the initial list of posts
+        if (!posts.length) {
+          displayEmpty();
+        } else {
+          initializeRows();
+        }
+      })
+      .catch((error) => console.error('Error:', error));
+  };
+
+  // Function to make DELETE request for a post
+  const deletePost = (id) => {
+    fetch(`/api/posts/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => getPosts(postCategorySelect.value));
+  };
+
+  // Getting inital list of posts
   getPosts();
-  // InitializeRows handles appending all of our constructed post HTML inside
-  // blogContainer
-  function initializeRows() {
-    blogContainer.empty();
-    var postsToAdd = [];
-    for (var i = 0; i < posts.length; i++) {
-      postsToAdd.push(createNewRow(posts[i]));
-    }
-    blogContainer.append(postsToAdd);
-  }
 
-  // This function constructs a post's HTML
-  function createNewRow(post) {
-    var newPostCard = $("<div>");
-    newPostCard.addClass("card");
-    var newPostCardHeading = $("<div>");
-    newPostCardHeading.addClass("card-header");
-    var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-default");
-    var newPostTitle = $("<h2>");
-    var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
-    newPostCategory.text(post.category);
-    newPostCategory.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
-    });
-    var newPostCardBody = $("<div>");
-    newPostCardBody.addClass("card-body");
-    var newPostBody = $("<p>");
-    newPostTitle.text(post.title + " ");
-    newPostBody.text(post.body);
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    newPostDate.text(formattedDate);
-    newPostTitle.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
-    newPostCardHeading.append(newPostTitle);
-    newPostCardHeading.append(newPostCategory);
-    newPostCardBody.append(newPostBody);
-    newPostCard.append(newPostCardHeading);
-    newPostCard.append(newPostCardBody);
-    newPostCard.data("post", post);
+  // Function to help construct the post HTML content inside blogContainer
+  const initializeRows = () => {
+    blogContainer.innerHTML = '';
+    const postsToAdd = [];
+
+    posts.forEach((post) => postsToAdd.push(createNewRow(post)));
+    postsToAdd.forEach((post) => blogContainer.appendChild(post));
+  };
+
+  const createNewRow = (post) => {
+    // Postcard div
+    const newPostCard = document.createElement('div');
+    newPostCard.classList.add('card');
+
+    // Heading
+    const newPostCardHeading = document.createElement('div');
+    newPostCardHeading.classList.add('card-header');
+
+    // Delete button
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'x';
+    deleteBtn.classList.add('delete', 'btn', 'btn-danger');
+    deleteBtn.addEventListener('click', handlePostDelete);
+
+    // Edit button
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'EDIT';
+    editBtn.classList.add('delete', 'btn', 'btn-danger');
+    editBtn.addEventListener('click', handlePostEdit);
+
+    // New post info
+    const newPostTitle = document.createElement('h2');
+    const newPostDate = document.createElement('small');
+
+    // New post category
+    const newPostCategory = document.createElement('h5');
+    newPostCategory.textContent = post.category;
+    newPostCategory.style.float = 'right';
+    newPostCategory.style.fontWeight = '700';
+    newPostCategory.style.marginTop = '-15px';
+
+    // New post card body
+    const newPostCardBody = document.createElement('div');
+    newPostCardBody.classList.add('card-body');
+
+    // New Post
+    const newPostBody = document.createElement('p');
+    newPostTitle.textContent = post.title;
+    newPostBody.textContent = post.body;
+
+    let formattedDate = new Date(post.createdAt);
+    formattedDate = moment(formattedDate).format('MMMM Do YYYY, h:mm:ss a');
+    newPostDate.textContent = ` (${formattedDate})`;
+
+    newPostTitle.appendChild(newPostDate);
+    newPostCardHeading.appendChild(deleteBtn);
+    newPostCardHeading.appendChild(editBtn);
+    newPostCardHeading.appendChild(newPostTitle);
+    newPostCardHeading.appendChild(newPostCategory);
+    newPostCardBody.appendChild(newPostBody);
+    newPostCard.appendChild(newPostCardHeading);
+    newPostCard.appendChild(newPostCardBody);
+    newPostCard.setAttribute('data-post', JSON.stringify(post));
+
     return newPostCard;
-  }
+  };
 
-  // This function figures out which post we want to delete and then calls
-  // deletePost
-  function handlePostDelete() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
+  const handlePostDelete = (e) => {
+    const currentPost = JSON.parse(
+      e.target.parentElement.parentElement.dataset.post
+    );
+    console.log('handlePostDelete -> currentPost', currentPost);
     deletePost(currentPost.id);
-  }
+  };
 
-  // This function figures out which post we want to edit and takes it to the
-  // Appropriate url
-  function handlePostEdit() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
-    window.location.href = "/cms?post_id=" + currentPost.id;
-  }
+  const handlePostEdit = (e) => {
+    const currentPost = JSON.parse(
+      e.target.parentElement.parentElement.dataset.post
+    );
+    console.log('handlePostDelete -> currentPost', currentPost);
+    window.location.href = `/cms?post_id=${currentPost.id}`;
+  };
 
-  // This function displays a message when there are no posts
-  function displayEmpty() {
-    blogContainer.empty();
-    var messageH2 = $("<h2>");
-    messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
-    blogContainer.append(messageH2);
-  }
+  const displayEmpty = () => {
+    blogContainer.innerHTML = '';
+    const messageH2 = document.createElement('h4');
+    messageH2.style.textAlign = 'center';
+    messageH2.style.marginTop = '50px';
+    messageH2.innerHTML = `No posts yet for this category. <br>Click <a href="/cms">here</a> to make a new post.`;
+    blogContainer.appendChild(messageH2);
+  };
 
-  // This function handles reloading new posts when the category changes
-  function handleCategoryChange() {
-    var newPostCategory = $(this).val();
-    getPosts(newPostCategory);
-  }
-
+  const handleCategoryChange = (e) => {
+    const newPostCategory = e.target.value;
+    console.log('handleCategoryChange -> newPostCategory', newPostCategory);
+    getPosts(newPostCategory.toLowerCase());
+  };
+  postCategorySelect.addEventListener('change', handleCategoryChange);
 });
