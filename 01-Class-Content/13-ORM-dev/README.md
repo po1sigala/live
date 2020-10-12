@@ -109,8 +109,6 @@ In the next unit, we will be returning to full stack app developement by learnin
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [📖 Eslint Git Guide](./Activities/27-Evr_Eslint/README.md)
-
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
