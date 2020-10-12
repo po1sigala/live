@@ -1,4 +1,8 @@
-/* global moment */
+// Format the date as a string
+function format_date(date) {
+  var d = new Date(date);
+  return (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
+}
 
 // When the page loads, grab and display all of our chirps
 $.get("/api/all", function(data) {
@@ -12,7 +16,7 @@ $.get("/api/all", function(data) {
 
       row.append("<p>" + data[i].author + " chirped.. </p>");
       row.append("<p>" + data[i].body + "</p>");
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>On " + format_date(data[i].created_at) + "</p>");
 
       $("#chirp-area").prepend(row);
 
@@ -30,7 +34,7 @@ $("#chirp-submit").on("click", function(event) {
   var newChirp = {
     author: $("#author").val().trim(),
     body: $("#chirp-box").val().trim(),
-    created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+    created_at: new Date().toISOString().slice(0, 19).replace('T', ' ')
   };
 
   console.log(newChirp);
@@ -45,7 +49,7 @@ $("#chirp-submit").on("click", function(event) {
 
       row.append("<p>" + newChirp.author + " chirped: </p>");
       row.append("<p>" + newChirp.body + "</p>");
-      row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>On " + format_date(newChirp.created_at) + "</p>");
 
       $("#chirp-area").prepend(row);
 
