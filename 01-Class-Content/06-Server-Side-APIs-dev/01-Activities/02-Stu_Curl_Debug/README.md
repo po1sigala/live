@@ -1,8 +1,8 @@
-# 🐛 cURL Command to GitHub API Doesn't Work
+# 🐛 curl Command to GitHub API Doesn't Work
 
 Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to use cURL to verify a connection to the GitHub API.
+* As a developer, I want to use `curl` to verify a connection to the GitHub API.
 
 ## Expected Behavior
 
@@ -51,23 +51,23 @@ The command `curl http://api.github.com` does not print any data to the command 
 
 ## Steps to Reproduce the Problem
 
-1. Open a command line window
+1. Open a command-line window.
 
-2. Type `curl http://api.github.com`
+2. Type `curl http://api.github.com`.
 
-3. Press the Enter key
+3. Press the Enter key.
 
 ---
 
 ## 💡 Hints
 
-* How might the official GitHub API documentation shed light on what the problem could be?
+How might the official GitHub API documentation shed light on what the problem could be?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * If you wanted to save your cURL response text to a file, how would you do so?
+  * If you wanted to save your `curl` response text to a file, how would you do so?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

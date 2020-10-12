@@ -1,4 +1,4 @@
-# 🏗️ Implement a Fetch Request to Display User Repositories
+# 🏗️ Implement a fetch() Request to Display User Repositories
 
 Work with a partner to implement the following user story:
 
@@ -8,15 +8,17 @@ Work with a partner to implement the following user story:
 
   * It's done when I click the "Fetch Your User Repos" button, and a list of my GitHub repositories displays on the page.
 
-## 📝 Notes
+## Assets
 
-Refer to the documentation: 
+The following image demonstrates the web application's appearance and functionality:
 
-[GitHub API Docs for Repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user)
+![The web page shows a user's GitHub repositories when the button is selected.](./Images/01-solution-screenshot.png)
 
 ---
 
 ## 💡 Hints
+
+* How can we use the [GitHub API documentation on repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user) to support this implementation?
 
 * Where in the URL string is the repository endpoint added?
 
@@ -24,7 +26,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* In fetch requests we use the URL. What is the difference between a URL and URI? 
+* In `fetch()` requests we use the URL. What is the difference between a URL and URI? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

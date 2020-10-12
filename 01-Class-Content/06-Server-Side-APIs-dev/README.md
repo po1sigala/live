@@ -2,9 +2,9 @@
 
 ## Overview:
 
-In a full-stack application, the client (i.e., the front end) would make a request to the server (i.e., the back end) to get data to display to the user. One way the client can request this data is using the Fetch Web API. In fact, the Fetch API can be used to request data from third-party APIs, like the OpenWeather API.
+In a full-stack application, the client (i.e., the front end) makes requests to the server (i.e., the back end) to get data to display to the user. One way the client can request this data is by using the Fetch Web API. The Fetch API can even request data from third-party APIs, like the OpenWeather API.
 
-In this unit, we'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read the documentation when working with server-side APIs.
+In this unit, we'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
 ## Key Topics
 
@@ -22,39 +22,33 @@ We'll cover the following topics in this unit:
 
 * Fetch API
 
-* cURL
+* `curl`
 
 * DevTools Network tab
 
 * `document.location`
 
-## Comprehension Check
-
-You will be employer-ready if you can answer the following questions:
-
-1. How do the client and server communicate?
-
-2. What is JSON?
-
-3. What methods can be used to request data from the server?
-
 ## Learning Objectives
 
-You will be employer-competitive if you are able to:
+You will be employer-ready if you are able to:
 
-* Explain the difference between a client-side and server-side API
+* Explain what JSON is.
 
-* Explain the client-server model and request-response pattern
+* Explain the methods that can be used to request data from the server.
 
-* Implement and explain the differences in making HTTP GET requests with XMLHttpRequest, jQuery AJAX, and the Fetch API
+* Explain the difference between a client-side and server-side API.
 
-* Explain HTTP response codes and handle response metadata with the Fetch API
+* Explain the client-server model and request-response pattern.
 
-* Parse JSON to dynamically generate HTML
+* Implement and explain the differences between making HTTP GET requests with XMLHttpRequest, jQuery AJAX, and the Fetch API.
 
-* Explain the benefits and challenges of working with asynchronous JavaScript
+* Explain HTTP response codes and handle response metadata with the Fetch API.
 
-* Explain and implement URL query string parameters
+* Parse JSON to dynamically generate HTML.
+
+* Explain the benefits and challenges of working with asynchronous JavaScript.
+
+* Explain and implement URL query string parameters.
 
 ## Technical Interview Preparation
 
@@ -76,21 +70,27 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 * [Unit 06 Assessment](https://forms.gle/xcqMRiysBemJpvz78)
 
-## Homework: Weather Dashboard
+## Homework
 
-You will build a weather dashboard using various endpoints from the OpenWeather API.
+For your homework, you'll build a weather dashboard using various endpoints from the OpenWeather API.
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/{06-Server-Side-APIs}/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-In the next unit, you and your teammates will use all of the skills that you've learned so far to build an app of your choosing.
+Get ready for your first group project! In the next unit, you and your teammates will use all of your new skills to build an app of your choosing.
 
 ## Resources
 
-* [MDN web docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+Here are some additional resources to help solidify the topics covered in this unit:
 
-* [MDN web docs on the Location interface](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+* [MDN Web Docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-* [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
+* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+
+* [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
 
 * [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
