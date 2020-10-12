@@ -1,47 +1,100 @@
 # Unit 06: Server-Side APIs
 
-## Overview
-Up to this point, the work we’ve done is entirely *client*-side; that is, our programs only contain code that is executed and data that is generated within the browser (aka, on the client). In this unit, we will use the jQuery AJAX method to make requests to *server*-side APIs. 
+## Overview:
 
-When we manipulate the DOM using JavaScript or jQuery, we are leveraging the DOM API. An API, or application programming interface, is a set of protocols that allows us to hook into the functionality of another application and use it within our own. The DOM API is an example of a **client-side API**. There are numerous client-side web APIs that extend the functionality of the browser. One such API is XMLHttpRequest, which allows us to communicate with server-side APIs. 
+In a full-stack application, the client (i.e., the front end) makes requests to the server (i.e., the back end) to get data to display to the user. One way the client can request this data is by using the Fetch Web API. The Fetch API can even request data from third-party APIs, like the OpenWeather API.
 
-Companies and organizations that collect and store data often make that data available to web developers to use in their applications. A **server-side API** is one or more URLs, or endpoints, where we can make requests for data stored on a third-party server.
-
-When we make a request to a server-side API, we have no control over how long the response will take to resolve. This can create issues when dynamically generating HTML in the DOM because our JavaScript might execute before we receive the data we need to render elements. AJAX (asynchronous JavaScript and XML) is the integration of several technologies to address this asynchronicity of the client-server request-response pattern. 
-
-XML, or extensible markup language, is a specification for encoding documents (similar to HTML). It was the standard format for data exchange for many years but has been largely replaced by JSON, though we still refer to this approach as AJAX. The fetch API was recently introduced to make it easier to use the XMLHttpRequest object without the need for a third-party library such as jQuery.
+In this unit, we'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
 ## Key Topics
-The following topics will be covered in this unit:
-* JSON
-* AJAX
-* HTTP GET requests
-* Server-side APIs
 
-## Comprehension Check
-You will be employer-ready if you can answer the following questions:
-1. What is JSON?
-2. How does the client-server relationship work?
-3. What is an API?
+We'll cover the following topics in this unit:
+
+* Client-server model
+
+* JSON format
+
+* URLs
+
+* HTTP GET requests
+
+* HTTP status codes
+
+* Fetch API
+
+* `curl`
+
+* DevTools Network tab
+
+* `document.location`
 
 ## Learning Objectives
-You will be employer-competitive if you are able to:
-* Explain the difference between a client-side and server-side API
-* Explain the client-server model and request-response pattern
-* Explain and implement HTTP GET requests and handle responses using AJAX
-* Parse JSON to dynamically generate HTML
-* Explain the benefits and challenges of working with asynchronous JavaScript
-* Explain and execute callbacks to handle asynchronous HTTP requests
 
-## Homework: Weather Dashboard
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. In this homework assignment, your challenge is to build a weather dashboard using the OpenWeather API.
+You will be employer-ready if you are able to:
 
-## Helpful Links
-* [MDN AJAX: Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
-* [Wikipedia: Web API](https://en.wikipedia.org/wiki/Web_API)
-* [Wikipedia: AJAX](https://en.wikipedia.org/wiki/Ajax_(programming))
-* [MDN: XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
-* [jQuery](https://api.jquery.com/)
+* Explain what JSON is.
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+* Explain the methods that can be used to request data from the server.
+
+* Explain the difference between a client-side and server-side API.
+
+* Explain the client-server model and request-response pattern.
+
+* Implement and explain the differences between making HTTP GET requests with XMLHttpRequest, jQuery AJAX, and the Fetch API.
+
+* Explain HTTP response codes and handle response metadata with the Fetch API.
+
+* Parse JSON to dynamically generate HTML.
+
+* Explain the benefits and challenges of working with asynchronous JavaScript.
+
+* Explain and implement URL query string parameters.
+
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+* [01: Is Palindrome](./03-Algorithms/01-is-palindrome)
+
+* [02: Factorial](./03-Algorithms/02-factorial)
+
+  * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+* [03: Title Case](./03-Algorithms/03-title-case)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 06 Assessment](https://forms.gle/xcqMRiysBemJpvz78)
+
+## Homework
+
+For your homework, you'll build a weather dashboard using various endpoints from the OpenWeather API.
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/{06-Server-Side-APIs}/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+Get ready for your first group project! In the next unit, you and your teammates will use all of your new skills to build an app of your choosing.
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit:
+
+* [MDN Web Docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+
+* [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
+
+* [GitHub API documentation](https://docs.github.com/en/rest/reference)
+
+* [OpenWeather API documentation](https://openweathermap.org/api)
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
