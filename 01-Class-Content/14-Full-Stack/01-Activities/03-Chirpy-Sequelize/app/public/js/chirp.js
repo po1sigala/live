@@ -1,9 +1,3 @@
-// Format the date as a string
-function format_date(date) {
-  var d = new Date(date);
-  return (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
-}
-
 // When user clicks add-btn
 $("#chirp-submit").on("click", function(event) {
   event.preventDefault();
@@ -27,7 +21,7 @@ $("#chirp-submit").on("click", function(event) {
 
       row.append("<p>" + newChirp.author + " chirped: </p>");
       row.append("<p>" + newChirp.body + "</p>");
-      row.append("<p>On " + format_date(newChirp.created_at) + "</p>");
+      row.append("<p>On " + new Date(newChirp.created_at).toLocaleDateString() + "</p>");
 
       $("#chirp-area").prepend(row);
 
@@ -50,7 +44,7 @@ $.get("/api/all", function(data) {
 
       row.append("<p>" + data[i].author + " chirped.. </p>");
       row.append("<p>" + data[i].body + "</p>");
-      row.append("<p>On " + format_date(data[i].created_at) + "</p>");
+      row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
 
       $("#chirp-area").prepend(row);
 

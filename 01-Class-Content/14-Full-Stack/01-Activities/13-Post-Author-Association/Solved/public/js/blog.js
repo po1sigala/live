@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  /* global moment */
-
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
@@ -22,7 +20,6 @@ $(document).ready(function() {
   else {
     getPosts();
   }
-
 
   // This function grabs posts from the database and updates the view
   function getPosts(author) {
@@ -65,8 +62,7 @@ $(document).ready(function() {
 
   // This function constructs a post's HTML
   function createNewRow(post) {
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    var formattedDate = new Date(post.createdAt).toLocaleDateString();
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
     var newPostCardHeading = $("<div>");
