@@ -16,7 +16,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Be sure to slack out the [video walkthrough](https://youtu.be/ygk-kNstqK0) at the end of the activity! This will help students tremendously in understanding how to approach Express based application builds.
 
-* Make sure students have signed up for a Heroku account by now. Direct the students to the `04-Supplemental` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) if they haven't installed it yet.
+* Make sure students have signed up for a Heroku account by now. Direct the students to the `04-Important` folder where there are installation instructions for the [Heroku CLI](../../../../01-Class-Content/11-express/04-Important/heroku-install.md) if they haven't installed it yet.
 
 * Remind students to have both **MySQL Server and Workbench installed** before coming to the next class!
 
@@ -30,7 +30,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 ## Slides
 
-[6.2: Express Yourself](https://docs.google.com/presentation/d/1H1xhjeQyMGXW7fufs2GJe4j6twEvYpDNhhuZJNcuHEk/edit?usp=sharing)
+[6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -172,11 +172,11 @@ Today's class is focused on creating an Express-based web server. Students will 
 
   * [01-Activities/14-FinalStarWarsApp](../../../../01-Class-Content/11-express/01-Activities/14-FinalStarwarsApp) (solution, zipped)
 
-  * [04-Supplemental/HerokuGuide.md](../../../../01-Class-Content/11-express/04-Supplemental/HerokuGuide.md) (slacked out or link to class repo posted)
+  * [04-Important/HerokuGuide.md](../../../../01-Class-Content/11-express/04-Important/HerokuGuide.md) (slacked out or link to class repo posted)
 
 * **Instructions:**
 
-  * Push the finished Star Wars app to Heroku following the steps from the [Heroku Guide](../../../../01-Class-Content/11-express/04-Supplemental/HerokuGuide.md)
+  * Push the finished Star Wars app to Heroku following the steps from the [Heroku Guide](../../../../01-Class-Content/11-express/04-Important/HerokuGuide.md)
 
   * **BONUS:** Begin making the below additional page for your Star Wars app. Push those changes up as you build the new feature. Specifically, this will require:
 
@@ -369,7 +369,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * In the next class, students will start using MySQL. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+* Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
 * Remind the students to have both MySQL Server and Workbench installed **before** coming to class!
 

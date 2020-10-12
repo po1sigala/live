@@ -30,11 +30,13 @@ Next unit, we begin JavaScript, make sure to review the slide decks in advance.
 
 Next unit we will also provide students with common problems they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
 
-## Career Connection
-Each week students receive Career Connections in the `04-Supplemental` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Homework-Guide/README.md) during the first week of class.
 
-[HTML-CSS](../../../01-Class-Content/01-HTML-CSS/04-Supplemental/CAREER-CONNECTION.md).
-[CSS-Bootstrap](../../../01-Class-Content/02-CSS-Bootstrap/04-Supplemental/CAREER-CONNECTION.md).
+## Career Connection
+Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+
+[HTML-CSS](../../../01-Class-Content/01-HTML-CSS/04-Important/CAREER-CONNECTION.md).
+[CSS-Bootstrap](../../../01-Class-Content/02-CSS-Bootstrap/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -42,15 +44,15 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Lesson Plans
 
-  * [01.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+* [01.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
 
-  * [01.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+* [01.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
 
-  * [01.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+* [01.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
 
-  * [01.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+* [01.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
 
-  * [01.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* [01.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
 ### Slide Decks
 

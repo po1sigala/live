@@ -31,7 +31,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ## Slides
 
-[11.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing)
+[6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1tVXZx3l2azL-NsN-sVPlHmYPbkYsKrvLE_mXR6XH96M/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -198,7 +198,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
     ![08-StudentsServe](Images/08-StudentsServe.png)
 
-  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.      
+  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
 
 ### 12. Instructor Do: Request Methods (0:10)
 
@@ -240,7 +240,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ### 14.	Instructor Do: Quick Recap "Server" Concepts (0:05)
 
-* Begin class by welcoming students. Then, open the slide deck [13-2 Express Yourself](https://docs.google.com/presentation/d/1T9dRhxABZyECQLFhctoAr2yZ4FhJjMD-wPguCgoTMBA/edit?usp=sharing) and walk students through the slides. These are fairly light slides meant merely to offer a visualization of routing. Feel free to cut slides completely if you feel they detract from your teaching style.
+* Open the slide deck [6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing) and walk students through the slides. These are fairly light slides meant merely to offer a visualization of routing. Feel free to cut slides completely if you feel they detract from your teaching style.
 
 * Use the slides to help you guide students through a recap of the concepts behind servers.
 
@@ -256,7 +256,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
   ![1-FinalApp](Images/1-FinalApp.png)
 
-* To show the API you can simply go to this link: <http://starwars-express-fsf.herokuapp.com/api>. The api also accepts an additional parameter at the end of the URL in the form of <http://starwars-express-fsf.herokuapp.com/api/charactername>. As an example: <http://starwars-express-fsf.herokuapp.com/api/yoda>.
+* To show the API you can simply go to this link: <http://starwars-express-fsf.herokuapp.com/api/characters>. The api also accepts an additional parameter at the end of the URL in the form of <http://starwars-express-fsf.herokuapp.com/api/characters/:charactername>. As an example: <http://starwars-express-fsf.herokuapp.com/api/characters/yoda>.
 
 * Now open the file `server1.js` (`08-StarWars-1`). Walk students through the general gist of the code. _For now the key focus is to give them an understanding of express(), routing, and the listener_.
 
@@ -373,13 +373,13 @@ app.get('/obiwankenobi', function(req, res){
 
 * In the next class, students will start using Heroku. 
 
-* Direct the students to the `04-Supplemental` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Supplemental/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
+* Direct the students to the `04-Important` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Important/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
 
 * Remind the students to sign up for a Heroku account and have the Heroku CLI installed **before** coming to class!
 
 * In a few classes, students will start using MySQL. 
 
-* Direct the students to the `04-Supplemental` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Supplemental/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Supplemental/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+* Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
 * Advise the students to have both MySQL Server and Workbench installed **before** the next unit.
 

@@ -20,7 +20,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 * We would like you to have well over 200 commits by graduation, so commit early and often!
 
-* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Supplemental/MERNHerokuDeploy.md) to do so.
+* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Important/MERNHerokuDeploy.md) to do so.
 
 ### Submission on BCS
 
@@ -34,7 +34,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
   * [Saved](Saved.png) - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
 
-1. Start by using the 07-Ins_Mern example as a base for your application.
+1. Start by using the [01-Ins_Mern/create-react-express](../01-Activities/01-Ins_Mern/create-react-express) example as a base for your application.
 
 2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
 

@@ -22,7 +22,7 @@ In this class, we will introduce students to the Sequelize ORM. This tool makes 
 
 * **BE VERY CAREFUL TO NOT GO TOO IN DEPTH.** There are a ton of components that make Sequelize work, but much of it is boilerplate that doesn't need much explanation. Focus on the parts we tell you about in this guide.
 
-* **DO NOT HAVE STUDENTS CONNECT TO A REMOTE DATABASE WHEN DEVELOPING LOCALLY.** The correct process is described in `Supplemental/SequelizeHerokuDeploymentProcess.pdf`, and if you try to skip this, your students may not be able to work on activities or homework on your classroom's internet connection (also, using a remote database for local development is considered bad practice).
+* **DO NOT HAVE STUDENTS CONNECT TO A REMOTE DATABASE WHEN DEVELOPING LOCALLY.** The correct process is described in `04-Important/SequelizeHerokuDeploymentProcess.md`, and if you try to skip this, your students may not be able to work on activities or homework on your classroom's internet connection (also, using a remote database for local development is considered bad practice).
 
 ## Learning Objectives
 
@@ -72,7 +72,7 @@ In this class, we will introduce students to the Sequelize ORM. This tool makes 
 
 * This will allow us to quickly start new projects, take advantage of advanced Sequelize features, as well as work with multiple models more easily at scale an ultimately have to write less code as our project grows.
 
-* Slack out the Sequelize CLI Skeleton `06-SequelizeCLI` as well as the `Supplemental/SequelizeQuickStartGuide.pdf` have the students follow along with you as you initialize a new project using the Sequelize CLI.
+* Slack out the Sequelize CLI Skeleton `06-SequelizeCLI` as well as the `04-Important/SequelizeQuickStartGuide.pdf` have the students follow along with you as you initialize a new project using the Sequelize CLI.
 
 We will be using this method of setting up Sequelize projects going forward, so encourage students to practice with this guide before next class.
 
@@ -94,7 +94,7 @@ We will be using this method of setting up Sequelize projects going forward, so 
 
 * With the Sequelize Quick Start guide and examples we went over in class, students should know enough to at least get started tonight.
 
-* Slack out the `Supplemental/SequelizeHerokuDeploymentProcess.pdf`. This describes the process for deploying a Sequelize application to Heroku and making use of JawsDB.
+* Slack out the `04-Important/SequelizeHerokuDeploymentProcess.pdf`. This describes the process for deploying a Sequelize application to Heroku and making use of JawsDB.
 
 ### 5. Instructor Do: Pulse Check and Sequelize Review (10 min)
 
@@ -163,16 +163,18 @@ Slack out the following folder and instructions:
 
   10) In your terminal, run "node server". Check MYSQL Workbench to see if a Todos table was created. If so, you were successful. If not, check your terminal for any errors.
 
-**Refer to the Sequelize Quick Start Guide in the Supplemental folder if you experience any issues**
+**Refer to the Sequelize Quick Start Guide in the Important folder if you experience any issues**
 
 - - -
 
 ### 8. Instructor Do: Review the ORM-To-Sequelize Activity (10 mins)
 
 * When time's up, load up the `07-ORM-To-Sequelize/Solved` solution on your machine. Be sure to show students your `config.json` file as well as your Todo model.
+
   ![Todo Model](Images/1-Todo-Model.png)
 
 * Then highlight the fact that we sync() our models in the `server.js` file before we start our server. This is what ensures our tables are created and ready when we try and start up our express server.
+
   ![Sync Models](Images/2-Models-Sync.png)
 
 * Show them where our models are required inside of the `api-routes.js` file where will use it in the next exercise.
@@ -293,7 +295,7 @@ Slack out the following folder and instructions:
 
 * Thank students for working to find answers to the past few exercises. Reading documentation is it's own skill they'll become better at with practice. In the meantime, we've created a Sequelize CRUD actions cheat sheet for them that should make basic usage much easier.
 
-* Slack out the Sequelize CRUD actions cheat sheet `Supplemental/SequelizeCRUDActionsCheatSheet.pdf`.
+* Slack out the Sequelize CRUD actions cheat sheet `important/SequelizeCRUDActionsCheatSheet.pdf`.
 
 ### 15. Instructor Do: Validations (5 mins)
 
