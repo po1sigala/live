@@ -18,11 +18,11 @@ On Day 03 of the next unit, students will present their projects. Emphasize that
 
 ### Lesson Plans
 
-  * [15.1 - Lesson Plan](01-Day/15.1-LESSON-PLAN.md)
+  * [15.1 - Lesson Plan](./01-Day_Linting-Travis/15.1-LESSON-PLAN.md)
 
-  * [15.2 - Lesson Plan](02-Day/15.2-LESSON-PLAN.md)
+  * [15.2 - Lesson Plan](./02-Day_Project-Work/15.2-LESSON-PLAN.md)
 
-  * [15.3 - Lesson Plan](03-Day/15.3-LESSON-PLAN.md)
+  * [15.3 - Lesson Plan](./03-Day_Project-Work/15.3-LESSON-PLAN.md)
 
 ### Slide Decks
 

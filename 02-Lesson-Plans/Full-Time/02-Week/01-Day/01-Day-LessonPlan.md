@@ -315,9 +315,7 @@ Starting with Unit 3, students are provided with common problems they will see i
 
 ### 25. Everyone Do: Basics Recap (10 mins)
 
-* Spend a few moments helping students to remember what was covered during the last class. Try to move swiftly through these slides. Ideally this should take you less than 10 minutes.
-
-* Always call on individual students as you go through the slides.
+* Spend a few moments helping students remember what was covered during the last class. Ideally this should take you less than 10 minutes.
 
 ### 26. Everyone Do: Basic JS Dissection (5 mins)
 

@@ -1,67 +1,61 @@
-class Node {
-
-  constructor(data, next) {
-    this._data = data;
-    this._next = next;
+class ListNode {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
   }
-
-  toString() {
-    // Template strings allow multi-line strings.
-    return `Data: ${this._data}
-  Next: ${this._next}`;
-  }
-
-  get data() {
-    return this._data;
-  }
-
-  set data(data) {
-    this._data = data;
-  }
-
-  get next() {
-    return this._next;
-  }
-
-  set next(next) {
-    this._next = next;
-  }
-
 }
 
 class LinkedList {
+  constructor(head) {
+    this.head = head;
+  }
 
-  constructor(dataArray) {
-    this._first = new Node();
+  getCount() {
+    let count = 1;
+    let currentNode = this.head;
 
-    var counter = 0;
-
-    if (dataArray) {
-      var actual = this._first;
-      for (var data of dataArray) {
-        var newNode = new Node(data);
-        actual.next = newNode;
-        actual = newNode;
-        counter++;
-      }
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+      count++;
     }
 
-    this._length = counter;
+    return count;
   }
 
-  get first() {
-    return this._first;
+  getFirst() {
+    return this.head
   }
 
-  get length() {
-    return this._length;
+  getLast() {
+    let lastNode = this.head;
+
+    while (lastNode.next) {
+      lastNode = lastNode.next;
+    }
+
+    return lastNode.data;
+  }
+
+  addNode(node) {
+    let lastNode = this.head;
+
+    while (lastNode.next) {
+      lastNode = lastNode.next;
+    }
+
+    lastNode.next = node;
   }
 }
 
-// Using the Linked List class...
-// ================================
+let node1 = new ListNode(1);
+let node2 = new ListNode(2);
 
+let list = new LinkedList(node1);
+let node3 = new ListNode(3);
 
-var list = new LinkedList([1, 2, 3, 4]);
-// Note the recursive calls to toString().
-console.log(list.first.toString());
+list.addNode(node3);
+list.addNode(new ListNode(4));
+
+console.log("count: ", list.getCount());
+console.log(list.getLast());
+console.log(list.getFirst());
