@@ -1,19 +1,30 @@
-# Functional Loops
+# 🏗️ Implement Functional Loops
 
-In this activity, we will use the `map()` and `filter()` methods to solve problems we previously would have used a `for` loop for.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to implement `map()` and `filter()` to solve problems instead of a `for` loop.
 
-* Open the [Unsolved](Unsolved) folder and examine the `map.js` and `filter.js` files. Study the examples provided and complete the problems outlined in the comments.
+## Acceptance Criteria
 
-### Bonus
+* It's done when I have opened the `filter.js` file and mapped through `originalArray` and created a new array containing only its prime numbers using `.filter`.
+
+* It's done when I have used `.filter` to return an array containing only its numbers larger than 5.
+
+* It's done when I have opened `map.js` and used `map` to map through `originalArray` and set the result equal to a new `tripledArray` array.
+
+* It's done when I have mapped through the `originalArray` and returned a new array with the results `odd` or `even`.
+
+## 💡 Hints
+
+How can you use the term immutable data in a definition of `.map` and `.filter`?
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Use arrow functions as callbacks here.
+* How can we implement arrow functions as callbacks in this activity?
 
-Use [Google](https://www.google.com/) or another search engine to research this.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
