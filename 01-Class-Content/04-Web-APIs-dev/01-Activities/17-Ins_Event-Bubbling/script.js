@@ -1,9 +1,9 @@
+// Event Bubbling
 var outer = document.querySelector(".outer-div");
 var inner = document.querySelector(".inner-div");
 var button = document.querySelector(".button");
 
 function changeBlue(event) {
-  // event.stopPropagation();
   event.currentTarget.setAttribute(
     "style",
     "background-color: blue"
@@ -11,7 +11,6 @@ function changeBlue(event) {
 }
 
 function changePurple(event) {
-  // event.stopPropagation();
   event.currentTarget.setAttribute(
     "style",
     "background-color: purple"
@@ -19,7 +18,6 @@ function changePurple(event) {
 }
 
 function changeOrange(event) {
-  // event.stopPropagation();
   event.currentTarget.setAttribute(
     "style",
     "background-color: orange"
@@ -29,3 +27,4 @@ function changeOrange(event) {
 outer.addEventListener("click", changeOrange);
 inner.addEventListener("click", changePurple);
 button.addEventListener("click", changeBlue);
+

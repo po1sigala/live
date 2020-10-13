@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+h2 {
+  color: black;
+}
+
 .outer-div {
   background-color: #78A1BB;
   cursor: pointer;
@@ -31,3 +35,4 @@ body {
   padding: 20px;
   margin: 100px;
 }
+

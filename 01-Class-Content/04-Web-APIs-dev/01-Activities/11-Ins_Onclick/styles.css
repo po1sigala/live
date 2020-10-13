@@ -21,6 +21,10 @@ li a {
   text-decoration: none;
 }
 
+p {
+  font-size: 20px;
+}
+
 .menu {
   width: 100%;
 }
@@ -34,8 +38,8 @@ li a {
 
 /* Dark Mode */
 .dark {
-  background-color: #333;
-  color: white;
+  background-color: #6c7575;
+  color: black;
   height: 100vh;
 }
 

@@ -14,8 +14,9 @@ addButton.addEventListener("click", function() {
 });
 
 subtractButton.addEventListener("click", function() {
+  if (count > 0)  {
   count--;
   counter.textContent = count;
-
+  }
   localStorage.setItem("count", count);
 });
