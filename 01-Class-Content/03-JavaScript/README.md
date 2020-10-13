@@ -82,7 +82,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02-odd-or-even](03-Algorithms/02-odd-or-even)
 
-  * 📹 Let's Code {@TODO Add Algo video link}
+  * [📹 Let's Code Odd or Even!](https://2u-20.wistia.com/medias/bnqjr1owj7)
 
 * [03-log-nums](03-Algorithms/03-log-nums)
 

@@ -50,6 +50,8 @@ Next unit, we will work with Web APIs. To preview the material, point out the st
 
 * [02-odd-or-even](../../../01-Class-Content/03-JavaScript/03-Algorithms/02-odd-or-even)
 
+  * [📹 Let's Code Odd or Even!](https://2u-20.wistia.com/medias/bnqjr1owj7)
+
 * [03-log-nums](../../../01-Class-Content/03-JavaScript/03-Algorithms/03-log-nums)
 
 ### Resources
