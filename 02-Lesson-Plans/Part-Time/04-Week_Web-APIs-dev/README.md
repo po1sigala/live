@@ -1,3 +1,82 @@
+# Unit 04 Instructor Overview: Web APIs 
+
+## Overview
+
+In this unit, students will be introduced to the Document Object Model and gain experience using Web APIs to manipulate the DOM. Students will also handle click events using `.addEventListener()`, work with keyboard events such as `keyup` and `keydown` and gain experience using local and session storage.
+
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/04-Web-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
+
+## Instructor/TA Notes
+
+* Remind students to do a git pull of the class repo before every class and to have that day's activities ready and open in VS Code.
+
+* Be ready to view and edit local storage and session storage key-value pairs in Chrome DevTools. If you need a quick refresher, refer to [View And Edit Local Storage With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) and [View And Edit Local Storage With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage)
+
+* This week's coursework is challenging! To help students see the connection between the JavaScript  
+
+## Career Connection
+
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
+
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+Students may come across jQuery solutions when searching for DOM/event resources. Make sure to let them know that we will cover jQuery in the next unit, so for now, do not consult resources that include the word `jQuery` or the `$` variable.
+
+## Helpful Links
+
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
+### Lesson Plans
+
+  * [XX.1 Lesson Plan]()
+
+  * [XX.2 Lesson Plan]()
+  
+  * [XX.3 Lesson Plan]()
+
+### Homework
+
+  * [Unit XX Homework](../../../01-Class-Content/{XX-TITLE}/02-Homework)
+
+### Slide Decks
+
+  * [Unit XX: TITLE]()
+
+### Algorithms
+
+  * @TODO LIST THE THREE ALGORITHMS ASSOCIATED WITH THIS UNIT
+
+### Resources
+
+  * @TODO LIST ANY PRIMARY RESOURCES AN INSTRUCTOR MAY WANT TO REFERENCE
+
+---
+@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Unit 04: Web-APIs
 
 ## Overview
