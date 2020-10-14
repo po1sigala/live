@@ -20,7 +20,6 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
     ```sh
     node -v
-    v12.16.3
     ```
 ## Career Connection
 
