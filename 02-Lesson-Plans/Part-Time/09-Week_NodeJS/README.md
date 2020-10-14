@@ -14,13 +14,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 * Ensure that students have already installed Node.js on their computers before coming to class.
 
-  * Direct students to the [Node Installation Page](https://nodejs.org/en/download/). Please recommend that they install the `LTS` version for their current operating system.
+  * Direct students to the [Node Installation Blog](TODO).
 
-  * To ensure all students have Node installed, they should see a version number after running the following in the terminal:
-
-    ```sh
-    node -v
-    ```
 ## Career Connection
 
 * Remind students that related Career Services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/CAREER-CONNECTION.md).
