@@ -1,5 +1,3 @@
-/* global moment */
-
 // When user clicks add-btn
 $("#chirp-submit").on("click", function(event) {
   event.preventDefault();
@@ -8,7 +6,7 @@ $("#chirp-submit").on("click", function(event) {
   var newChirp = {
     author: $("#author").val().trim(),
     body: $("#chirp-box").val().trim(),
-    created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+    created_at: new Date()
   };
 
   console.log(newChirp);
@@ -23,7 +21,7 @@ $("#chirp-submit").on("click", function(event) {
 
       row.append("<p>" + newChirp.author + " chirped: </p>");
       row.append("<p>" + newChirp.body + "</p>");
-      row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>On " + new Date(newChirp.created_at).toLocaleDateString() + "</p>");
 
       $("#chirp-area").prepend(row);
 
@@ -46,7 +44,7 @@ $.get("/api/all", function(data) {
 
       row.append("<p>" + data[i].author + " chirped.. </p>");
       row.append("<p>" + data[i].body + "</p>");
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
 
       $("#chirp-area").prepend(row);
 
