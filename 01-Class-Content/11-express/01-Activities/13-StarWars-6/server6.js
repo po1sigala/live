@@ -40,7 +40,6 @@ const characters = [
 
 // Routes
 
-// Basic route that sends the user first to the AJAX Page
 // res.send("Welcome to the Star Wars Page!")
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'view.html')));
 
