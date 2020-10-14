@@ -383,7 +383,6 @@ module.exports = (sequelize, DataTypes) => {
 
   return Author;
 };
-
 ```
 
 * There are other types of associations we can do with Sequelize, but belongsTo and hasMany are some of the most common and what we'll be using here.
