@@ -27,7 +27,7 @@ In this activity, we will use git commands to create a new branch, complete a fe
   
 * Open the `git_branch_demo` directory in your IDE. You should see the empty `git_branch_demo` directory on the left. Next, we will add a README.md 'feature' on a new branch.
 
-![New Repo](images/New-Repo.png)
+![](./images/New_Repo.png)
 
 ### Create a new branch
 
@@ -47,7 +47,8 @@ git branch
 
 * You should see the `create_readme` branch and a `*` next to `main`. That tells us that we are still on the main branch.
 
-<git branch>
+![](./images/git_branch.png)
+
 
 * In order to switch branches, we type `git checkout create_readme` followed by the `git branch` command to confirm that we've switched branches. 
 
@@ -58,7 +59,8 @@ git branch
 
 * You should now see a `*` by `create_readme`.
 
-<switch branch>
+![](./images/switch_branch.png)
+
 
 * You can also create a branch and switch over to it at the same time with the following command:
 
@@ -70,11 +72,13 @@ git branch
 
 * Now that we are on the correct feature branch, we need to work on the feature. Create a README.md file in the `git_branch_demo` directory.
 
-<README>
+![](./images/README.png)
+
 
 * Add some text to the README.md file.
 
-<text>
+![](./images/Text.png)
+
 
 * Finally, add and commit the changes that you made.
 
@@ -99,17 +103,18 @@ git merge create_readme
 
 * If the merge is successful, you should see something similar to the following in your terminal.
 
-<merge>
+![](./images/merge.png)
+
 
 * Now, your directory should include the README.md file that we created along with whatever text you added to the file.
 
-<merge success>
+![](./images/merge_success.png)
 
 ### Delete the branch
 
 * We are all done with our feature, but if you type the `git branch` command into your terminal, you'll see that `create_readme` still exists.
 
-<still exists>
+![](./images/Still_exists.png)
 
 * Since we are finished with this feature, we can delete the branch by typing the following:
 
@@ -119,7 +124,7 @@ git branch -d create_readme
 
 * Run `git branch` again and you should see something similar to the following:
 
-<branch deleted>
+![](./images/branch_deleted.png)
 
 ### Hints
 
