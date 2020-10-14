@@ -10,7 +10,6 @@ var elements = [
   h1El, h2El, h3El, pEl
 ];
 
-
 var typeface;
 
 typefaceEl.addEventListener("change", function(event) {
@@ -19,7 +18,7 @@ typefaceEl.addEventListener("change", function(event) {
   document.querySelector(".container").style.fontFamily = typeface;
 });
 
-textAreaEl.addEventListener("keydown", function(event) {
+textAreaEl.addEventListener("keyup", function(event) {
   var key = event.key.toLowerCase();
   var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
   if (alphabetNumericCharacters.includes(key)) {
