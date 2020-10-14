@@ -10,12 +10,18 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 * The transition from client-side development to Node.js can be challenging for students. This lesson plan is a gentle introduction to the fundamentals.
 
-* If students question why they are learning Node.js, emphasize the client-server model.
+* If students question why they are learning Node.js, emphasize the client-server model. The client server model is something one must be able to explain and build as a full stack developer. Knowing the difference between the client and the server and how they relate to each other is a common interview question.
 
 * Ensure that students have already installed Node.js on their computers before coming to class.
 
-  * Direct students to the [Mac installation instructions](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) or the [Windows installation instructions](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) for help.
+  * Direct students to the [Node Installation Page](https://nodejs.org/en/download/). Please recommend that they install the `LTS` version for their current operating system.
 
+  * To ensure all students have Node installed, they should see a version number after running the following in the terminal:
+
+    ```sh
+    node -v
+    v12.16.3
+    ```
 ## Career Connection
 
 * Remind students that related Career Services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
