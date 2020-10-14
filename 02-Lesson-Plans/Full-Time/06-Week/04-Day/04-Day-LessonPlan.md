@@ -177,11 +177,11 @@ connection.connect((err) => {
 });
 ```
 
-* Through calling `connection.query(<STRING>,function(err, res) {})`, we are telling Node to send an SQL query to our database and return the data collected through the "res" variable
+* Through calling `connection.query('SELECT * FROM products', (err, res) =>`, we are telling Node to send an SQL query to our database and return the data collected through the "res" variable
 
-* The \<STRING> portion uses SQL syntax and should be contained within a pair of quotes. Because of this, you should tell your students to be very careful with their syntax since even small differences could lead to an error being returned.
+* The string portion uses SQL syntax and should be contained within a pair of quotes. Because of this, you should tell your students to be very careful with their syntax since even small differences could lead to an error being returned.
 
-  * The query contained within the \<STRING> can be switched out with any other kind of SQL query which will allow you to collect specific types of data as well.
+  * The query contained within the string can be switched out with any other kind of SQL query which will allow you to collect specific types of data as well.
 
   * Point out that we run the query inside of the body of the `connect` method's callback function. Since the `connection.connect` and `connection.query` methods both run asynchronously, there's no guarantee that the `connection.query` method will run after `connect` if it's run from outside. If we didn't want to put the entire query method inside of the callback, we could also wrap the query method inside of a function. Example:
 
