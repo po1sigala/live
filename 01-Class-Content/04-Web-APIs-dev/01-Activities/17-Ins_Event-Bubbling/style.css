@@ -6,6 +6,7 @@ html, body, .outer-div {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 body {
@@ -17,20 +18,21 @@ h2 {
 }
 
 .outer-div {
-  background-color: #78A1BB;
+  background-color: #6c7575;
   cursor: pointer;
   padding: 100px;
 }
 
 .inner-div {
   height: 60%;
-  background-color: rgb(61, 70, 63);
+  background-color: #e1f5f4 ;
   padding: 100px;
   margin: 20px;
+  color: #6c7575;
 }
 
 .button {
-  background-color: #283044;
+  background-color:#6c7575;
   color: white;
   padding: 20px;
   margin: 100px;
