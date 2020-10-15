@@ -1,3 +1,5 @@
+/* global moment */
+
 // When user clicks add-btn
 const submitChirpBtn = document.getElementById('chirp-submit');
 submitChirpBtn.addEventListener('click', (e) => {

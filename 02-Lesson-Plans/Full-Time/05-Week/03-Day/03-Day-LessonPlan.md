@@ -486,34 +486,34 @@ Update the `MiniBank` constructor function with methods and properties as follow
   * We use `this.` notation to declare functions on our constructor so all objects created from this constructor have access to those methods.
 
   ```js
-  this.getBalance = () => {
+  this.getBalance = function() {
     return this.balance;
-  };
+  },
   ```
 
   * 🔑 In our `deposit` function we first check to make sure the provided argument is a number, and the number is greater than 0. We then set our `newBalance` to be equal to our current balance plus the current given value of the deposit.
 
   ```js
-  this.deposit = value => {
-    if (typeof value !== "number" || value <= 0) {
-      throw new Error("'value' must be a positive number!");
-    }
-    const newBalance = this.getBalance() + value;
+  this.deposit = function(value) {
+  if (typeof value !== "number" || value <= 0) {
+    throw new Error("'value' must be a positive number!");
+  }
+  var newBalance = this.getBalance() + value;
   ```
 
   * After we have gotten our `newBalance` we invoke the `setBalance` function and `updateStatement()` function. Finally we console log the deposited value.
 
   ```js
-    this.setBalance(newBalance);
-    this.updateStatement(newBalance);
-    console.log(`Deposited ${value}!`);
-  };
+  this.setBalance(newBalance);
+  this.updateStatement(newBalance);
+  console.log(`Deposited ${value}!`);
+  },
   ```
 
   * To create our new mini bank via our constructor we invoke the constructor using the `new` keyword.
 
   ```js
-  const bank = new MiniBank(0);
+  var bank = new MiniBank(0);
   ```
 
   * Now we can call any of the functions we coded into the constructor earlier.
