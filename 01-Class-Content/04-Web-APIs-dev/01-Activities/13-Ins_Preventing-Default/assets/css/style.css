@@ -21,9 +21,9 @@ button {
     padding: 5px 5px 30px 5px;
   }
 
-  #name,
-  #email,
-  #submit {
+#name,
+#email,
+#submit {
     width: 80%;
     padding: 12px 20px;
     margin: 8px 20px;
@@ -31,7 +31,7 @@ button {
     font-size: 18px;
   }
 
-  #response {
+#response {
       padding-bottom: 30px;
   }
 

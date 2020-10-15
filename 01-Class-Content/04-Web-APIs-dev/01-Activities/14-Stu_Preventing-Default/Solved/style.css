@@ -1,18 +1,19 @@
 .container {
-  margin: 0 auto;
-  width: 70%;
+  display: block;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60vw;
+  background-color: #f0ead6;
 }
 
 input {
-  background: none;
-  color: rgb(140, 140, 140);
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 20px;
+  box-sizing: border-box;
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 50%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid lightgrey;  
 }
 
 input:focus {
@@ -20,13 +21,14 @@ input:focus {
 }
 
 button {
-  background-color: #D6EEFF;
-  border-radius: 5px;
   padding: 10px;
-  margin: 20px 40px 20px 0;
-  font-size: 20px;
+  margin: 24px;
   cursor: pointer;
+  font-size: 24px;
+  background-color: #247BA0;
+  color: white;
 }
+
 
 .lucky-btn {
   background-color: #A491D3;
