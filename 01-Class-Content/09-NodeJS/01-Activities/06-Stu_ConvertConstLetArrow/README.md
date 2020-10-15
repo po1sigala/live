@@ -1,20 +1,30 @@
-# Convert Const Let Arrow
+# 🏗️ Convert to ES6 Syntax
 
-In this activity, we will convert a prebuilt Crystal Guessing Game to use the new ES6 syntax we are learning about.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to be able to recognize and implement newer ES6 syntax.
 
-* Open [Unsolved/index.html](Unsolved/index.html) in your web browser and take a moment to understand the application's functionality.
+## Acceptance Criteria
 
-  * This example is similar to the Crystal Guessing Game we worked on many weeks ago.
+* It's done when I have taken a moment to open `index.html` and `index.js` to understand the application's functionality. 
 
-* Now open [Unsolved/index.js](Unsolved/index.js) in your code editor and convert the existing code over to use the ES6 syntax we've learned about in the previous examples.
+* It's done when I have changed existing code to use ES6 syntax.
 
-* Make sure to do the following:
+* It's done when I have converted `var` to `const` or `let` based on the use case.
 
-1. Convert all `var` identifiers to use `const` or `let`; whichever is more appropriate.
+* It's done when I have converted all functional expressions to arrow functions.
 
-2. Convert functions to arrow functions _where suitable_; remember, arrow functions are not right for every situation.
+## 💡 Hints
+
+When is it not suitable to use arrow functions?
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
+
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 

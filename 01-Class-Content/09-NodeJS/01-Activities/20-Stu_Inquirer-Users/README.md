@@ -1,36 +1,34 @@
-# inquirer Users
+# 🏗️ Build CLI App with Inquirer
 
-In this activity, you will build a simple command-line application that accepts user input and writes it to a `.json` file. 
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to create a command-line application that takes in input from the user and does something with it.
 
-* Initialize your repository and install the `inquirer` dependency.
+## Acceptance Criteria
 
-    * Is there another dependency you will need? 
+* It's done when I have initialized my repository with a `package.json` file by running `npm init -y`.
 
-* Prompt your user with the following questions:
+* It's done when I have installed inquirer and added it to my list of dependencies by running `npm i inquirer --save`.
 
-    * "What is your name?"
+* It's done when the application asks the user, "What is your name?"
+  
+* It's done when the application asks the user, "What languages do you know?"
 
-    * “What languages do you know?”
+* It's done when the application asks the user, “What is your preferred method of communication?"
 
-    * “What is your preferred method of communication?”
+* It's done after I have written those responses to a file.
 
-* Then write the user response to a file. 
+## 💡 Hints
 
-## Hints
+Why do we need to use `JSON.stringify`? How can we use the npm page for `inquirer` to see how to use checkboxes and lists? 
 
-* You will need to use `JSON.stringify()`.
-
-* You will need to consult the `inquirer` documentation on how to prompt users for checkboxes and lists.
-
-## Bonus
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
 * How would you format your JSON? Can you generate the name of your user file from the user input?
 
-Use [Google](https://www.google.com/) or another search engine to research this.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 

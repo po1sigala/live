@@ -1,29 +1,32 @@
-# Hello Node.js
+# 🏗️ Create Node.js Application
 
-In this activity, you will write and run your first Node.js application.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to be able to write programs for use with Node.
 
-1. Create a file, `index.js`, in your working directory.
+* As a developer, I want to make a program that accepts a string as an input and logs it to the terminal. 
 
-2. Write JavaScript to log the string "Hellooo, Node!"
+## Acceptance Criteria
 
-3. Then run the program using Node.js from the command line.
+* It's done when I have created a file, `index.js`, in my working directory.
+  
+* It's done when I have written JavaScript to log the string "Hellooo, Node!"
 
-4. Confirm that it logged the text as you would expect.
+* It's done when I have run the program from the command line using `node index`.
 
-## Hints
+* It's done when I have confirmed the expected output.
 
-* It's just JavaScript.
+## 💡 Hints
 
-## Bonus
+Is there a difference in the way we code for the browser's developer console?
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
 * What happens when you log `window`? What happens when you try to use `prompt`, `alert`, or `confirm`?
-
-Use [Google](https://www.google.com/) or another search engine to research this, or try it yourself.
+  
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

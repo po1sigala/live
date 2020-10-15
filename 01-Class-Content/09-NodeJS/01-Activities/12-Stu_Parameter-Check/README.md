@@ -1,26 +1,30 @@
-# Parameter Check
+# 🏗️ Implement `process.argv`
 
-In this activity, you will write a Node.js command-line application that accepts two arguments and returns true if the two values are equal and false if they are not.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to use command-line arguments as input when writing Node.js applications.
 
-* Create a file, `index.js`, in your working directory.
+## Acceptance Criteria
 
-* Write a script using `process.argv` to accept two command-line arguments and compare their values.
+* It's done when I have created a file, `index.js`, in the working directory.
 
-## Hints
+* It's done when I use `process.argv` to assign two arguments to variables.
 
-* Start by simply logging the value of each argument to console.
+* It's done when I compare those two variables to see whether they are the same or not.
 
-* There's more than one way to solve this problem!
+* It's done if the program returns `true` when the values are the same and `false` if they are not. 
 
-## Bonus
+## 💡 Hints
+
+How many different ways can you solve this problem? Remember that there is not just one correct solution.
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How many ways can you solve this problem?
+* What is the difference between `===` and `==` when comparing two values in JavaScript?
 
-Use [Google](https://www.google.com/) or another search engine to research this.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 

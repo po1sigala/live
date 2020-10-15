@@ -1,32 +1,36 @@
-# Maths Module
+# 🏗️ Implement and Use Modules
 
-The JavaScript `Math` library contains many useful properties and methods. But it's missing a few of the basics. In this activity, you will create your own `maths` module, then import it into a Node.js application to access its properties and methods.
+Work with a partner to implement the following user story:
 
-For example, running `node index.js sum 3 4` will return `7`.
+* As a developer, I want to write and implement my own modules that have their own properties and methods.
 
-## Instructions
+* As a developer, I want to learn how to import those modules using Node.js.
 
-* Create two files, `index.js` and `maths.js`, then import `maths.js` into `index.js`.
+## Acceptance Criteria
 
-* Write four methods for the results of the four basic mathematical operations in `maths.js` (`sum()`, `difference()`, `product()`, and `quotient()`), then export them.
+* It's done when I have created two files, `index.js` and `maths.js`.
 
-* In `index.js`, create variables to capture the values passed from the command line in `process.argv`: `operation`, `numOne` and `numTwo`.
+* It's done when I have imported `maths.js` into `index.js`.
 
-* Next, write a `switch` statement that accepts an `operation` parameter.
+* It's done when I have written four methods for the results of the four basic mathematical operations in `maths.js` (`sum()`, `difference()`, `product()`, and `quotient()`).
 
-* Within each `case` of the `switch`, use the corresponding `maths` methods to perform the operation on the numbers taken from the command line using `process.argv`.
+* It's done when I have created variables to capture the values passed from the command line: `operation`, `numOne` and `numTwo`.
 
-## Hints
+* It's done when I have written a `switch` statement that accepts an `operation` parameter.
 
-* You will need to use `parseInt()`.
+* It'd done when each `case` of the `switch` statement uses the corresponding `maths` methods to perform each math operation on the numbers.
 
-## Bonus
+## 💡 Hints
+
+What will the `parseInt()` method allow us to do?
+
+## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you export your functions directly?
+* How can you export functions and objects directly?
 
-Use [Google](https://www.google.com/) or another search engine to research this.
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 

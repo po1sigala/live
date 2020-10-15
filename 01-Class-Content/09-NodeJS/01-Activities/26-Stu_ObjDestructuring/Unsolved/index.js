@@ -38,14 +38,11 @@ const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
 
 // CODE BELOW HERE
 
-
-console.log(name, alias, house); 
-
+console.log(name, alias, house);
 
 // 4. Strings
 const skills = 'The Usurper, male, Baratheon, Cersei';
 
 // CODE BELOW HERE
-
 
 console.log(nickName, gender, family, spouse); // print them by variable name
