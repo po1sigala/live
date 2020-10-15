@@ -38,9 +38,10 @@ p {
 
 /* Dark Mode */
 .dark {
-  background-color: #6c7575;
-  color: black;
+  background-color: #301934;
+  color: white;
   height: 100vh;
+ 
 }
 
 .dark li a {
