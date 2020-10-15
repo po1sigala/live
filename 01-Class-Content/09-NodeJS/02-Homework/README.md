@@ -1,23 +1,28 @@
-# 09 Node.js and ES6+: Readme Generator
+# 09 Node.js Homework: Professional README Generator
 
-When creating an open source project on GitHub, it is important to provide a quality readme with information about the app&mdash;what the app does, how to use it, how to install it, how to report issues, and how to make contributions&mdash;so that other developers are more likely to use it and contribute to the success of the project. 
+## Your Task
 
-A command-line application will allow for quick and easy generation of a project readme. This will enable a project creator to spend more time working on the project itself instead of creating a readme.
+When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
 
-Your task is to create a command-line application that dynamically generates a professional README.md from a user's input, using the [inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a quality, professional readme contains. The application will be invoked with the following command:
+You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+
+Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain. 
+
+The application will be invoked by using the following command:
 
 ```
 node index.js
 ```
 
-Because this is a command-line application that won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates the functionality of your application. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer.
+Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the **prework** as a refresher on how to record video from your computer. You’ll need to submit a link to the video **and** add it to the README of your project.
+
 
 ## User Story
 
 ```
 AS A developer
-I WANT a readme generator
-SO THAT I can quickly create a professional readme for a new project
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
 ```
 
 ## Acceptance Criteria
@@ -25,13 +30,13 @@ SO THAT I can quickly create a professional readme for a new project
 ```md
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of the project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 WHEN I enter my project title
 THEN this is displayed as the title of the readme
 WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 THEN this information is added to the sections of the readme entitled Description, Installation, Usage, Contributing, and Tests
 WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the readme and a notice is added to the section of the readme entitled License that explains which license the application is covered under
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 WHEN I enter my GitHub username
 THEN this is added to the section of the readme entitled Questions, with a link to my GitHub profile
 WHEN I enter my email address
@@ -40,83 +45,67 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the readme
 ```
 
-## Minimum Application Requirements
+## Getting Started
 
-* Application adheres to the [Submission Requirements](#submission-requirements) in the next section.
+Here are some guidelines to help you get started:
 
-* Application is functional.
+* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
 
-* Application includes a GitHub repository with a unique name and a readme describing the project.
+* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
 
-* The generated readme includes the following sections: 
+* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
 
-  * Title
+* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
 
-  * Description
 
-  * Table of Contents
+## Grading Requirements
 
-  * Installation
+This homework is graded based on the following criteria: 
 
-  * Usage
-  
-  * License
+### Deliverables: 20%
 
-  * Contributing
-  
-  * Tests
-  
-  * Questions
+* A sample README generated using the application must be submitted.
 
-* The generated readme includes one badge that's specific to the repository.
+* Your GitHub repository containing your application code.
 
-## Submission Requirements
+### Walkthrough Video: 27%
 
-Because this is a CLI app, you won't need to deploy it to Heroku. This time, though, you'll need to include a video showing us that you got the app working with no bugs. You should include a link to the video in your application's README.md file.
+* A walkthrough video that demonstrates the functionality of the README generator must be submitted and a link to the video should be included in your README file.
 
-You'll also need to meet the following submission requirements:
+* The walkthrough video must demonstrate how a user would invoke the application from the command line.
 
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/`.
+* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
 
-* `node_modules` isn't tracked and uploaded to GitHub. (Hint: This is easy if you create your `.gitignore` file before installing dependencies with npm.)
+* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
 
-* Repo _must_ include `package.json` with required dependencies. (Hint: Run `npm init` when you first set up the project before installing any dependencies.)
+### Technical Acceptance Criteria: 40%
 
-* Provide a video of the typical user flow through your application, including views of the prompts and the responses after their selection.
+* Satisfies all of the above acceptance criteria plus the following:
 
-* Provide any other screenshots you deem necessary to help someone new to your application understand the purpose and function of it. In the future, this is how you'll communicate to potential employers and other developers what you built and why&mdash;and how it works.
+	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
-  * Because screenshots (and well-written readmes) are extremely important in the context of GitHub, this will be part of the grading.
+### Repository Quality: 13%
 
-## Commit Early and Often
+* Repository has a unique name.
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+* Repository follows best practices for file structure and naming conventions.
 
-* Your commit history is a signal to employers that you're actively working on projects and learning new skills.
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Your commit history allows you to revert your codebase if you need to return to a previous state.
+* Repository contains multiple descriptive commit messages.
 
-Adhere to the following guidelines for committing:
+* Repository contains a high-quality README with description and a link to walkthrough video.
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you're fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have more than 200 commits by graduation, so commit early and often!
 
 ## Review
 
 You are required to submit the following for review:
 
-* A walkthrough video demonstrating the functionality of the application
+* A walkthrough video demonstrating the functionality of the application.
 
 * A sample README.md file for a project repository generated using your application
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project
 
----
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+- - -
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

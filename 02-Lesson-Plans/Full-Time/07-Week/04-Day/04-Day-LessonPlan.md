@@ -170,9 +170,11 @@ Slack out the following folder and instructions:
 ### 8. Instructor Do: Review the ORM-To-Sequelize Activity (10 mins)
 
 * When time's up, load up the `07-ORM-To-Sequelize/Solved` solution on your machine. Be sure to show students your `config.json` file as well as your Todo model.
+
   ![Todo Model](Images/1-Todo-Model.png)
 
 * Then highlight the fact that we sync() our models in the `server.js` file before we start our server. This is what ensures our tables are created and ready when we try and start up our express server.
+
   ![Sync Models](Images/2-Models-Sync.png)
 
 * Show them where our models are required inside of the `api-routes.js` file where will use it in the next exercise.

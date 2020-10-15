@@ -34,11 +34,11 @@ console.log(brother2); // <= Rickon Stark
 // 3. Arrays
 const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
 
-const [name, alias, allegiance] = characters;
-console.log(name, alias, allegiance); // <= Ned Stark The Quiet Wolf House Stark
+const [name, alias, house] = characters;
+console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
 
 // 4. Strings
 const skills = "The Usurper, male, Baratheon, Cersei"; // string of data
 
-const [alias, gender, family, spouse] = skills.split(","); // set variables and split
-console.log(alias, gender, family, spouse); // print them by variable name
+const [nickName, gender, family, spouse] = skills.split(","); // set variables and split
+console.log(nickName, gender, family, spouse); // print them by variable name
