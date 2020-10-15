@@ -10,7 +10,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/04-Web-APIs
 
 * Remind students to do a git pull of the class repo before every class and to have that day's activities ready and open in VS Code.
 
-* This week's homework will bring together the key concepts convered in the activities and require students to use both intervals and local storage. The students will also need to research and use Web APIs not explicitly introduced in the activities. To set the students up for success, explain that the methods used in class are just a sampling of a few of the many methods available to manipulate the DOM.
+* This week's homework will bring together the key concepts covered in the activities and require students to use both intervals and local storage. The students will also need to research and use Web APIs not explicitly introduced in the activities. To set the students up for success, explain that the methods used in class are just a sampling of a few of the many available to manipulate the DOM.
 
 * Be ready to view and edit local storage and session storage key-value pairs in Chrome DevTools. If you need a quick refresher, refer to [View And Edit Local Storage With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) and [View And Edit Local Storage With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage)
 
