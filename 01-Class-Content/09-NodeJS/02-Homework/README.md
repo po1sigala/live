@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 09 Node.js Homework: Professional Readme Generator
+=======
+# 09 Node.js Homework: Professional README Generator
+>>>>>>> 99b1b584c6c3b7167de40829d88c8f07b98c0a74
 
 ## Your Task
 
@@ -21,8 +25,8 @@ Because this application won’t be deployed, you’ll also need to provide a li
 
 ```
 AS A developer
-I WANT a readme generator
-SO THAT I can quickly create a professional readme for a new project
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
 ```
 
 ## Acceptance Criteria
@@ -36,7 +40,7 @@ THEN this is displayed as the title of the readme
 WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 THEN this information is added to the sections of the readme entitled Description, Installation, Usage, Contributing, and Tests
 WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the readme and a notice is added to the section of the readme entitled License that explains which license the application is covered under
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 WHEN I enter my GitHub username
 THEN this is added to the section of the readme entitled Questions, with a link to my GitHub profile
 WHEN I enter my email address
@@ -63,7 +67,7 @@ This homework is graded based on the following criteria:
 
 ### Deliverables: 20%
 
-* A sample readme generated using the application must be submitted.
+* A sample README generated using the application must be submitted.
 
 * Your GitHub repository containing your application code.
 
@@ -75,11 +79,11 @@ This homework is graded based on the following criteria:
 
 * The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
 
-* The walkthrough video must demonstrate a generated readme that matches the user input and has a functioning table of contents.
+* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+* Satisfies all of the above acceptance criteria plus the following:
 
 	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
 
@@ -93,17 +97,18 @@ This homework is graded based on the following criteria:
 
 * Repository contains multiple descriptive commit messages.
 
-* Repository contains a high-quality readme with description and a link to walkthrough video.
+* Repository contains a high-quality README with description and a link to walkthrough video.
+
 
 ## Review
 
 You are required to submit the following for review:
 
-* A walkthrough video demonstrating the functionality of the application
+* A walkthrough video demonstrating the functionality of the application.
 
 * A sample README.md file for a project repository generated using your application
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project
 
 - - -
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
