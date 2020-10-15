@@ -8,30 +8,30 @@ In this activity, we will use git commands to create a new branch, complete a fe
 
 ## Instructions
 
-### Create a new directory and repo
+### Create a new directory and repository
 
 * Navigate to a directory where you usually store your coding files using your command line.
 
-* Create a new directory called `git_branch_demo`, as follows:
+* Create a new directory called `git_branch_demo`:
 
   ```bash
   mkdir git_branch_demo
   ```
 
-* `cd` into that newly created directory and initialize an empty git repo in the directory, as shown in the following example:
+* `cd` into the newly created directory and initialize an empty git repo in the directory:
 
   ```bash
   cd git_branch_demo
   git init .
   ```
   
-* Open the `git_branch_demo` directory in your IDE. You should see the empty `git_branch_demo` directory on the left. Next, we will add a README.md 'feature' on a new branch.
+* Open the `git_branch_demo` directory in your IDE. You should see the empty `git_branch_demo` directory on the left. Next, we will create a new branch to add a new feature.
 
 ![](./images/New_Repo.png)
 
 ### Create a new branch
 
-* The git command for creating a new branch in your repo is `git branch <branch name>`. It is helpful to pick a name that is associated with the feature that you will be working on. In our case, we will be working on the README.md, so enter the following into your terminal:
+* The git command for creating a new branch in your repo is `git branch <branch name>`. It is helpful to pick a name that is associated with the feature that you will be working on. In our case, we will be creating a README.md file, so we will call it `create_readme`:
 
 ```bash
 git branch create_readme
