@@ -38,7 +38,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Unit Homework
 
-  * [Unit 04 Homework](../../../01-Class-Content/04-Web-APIs/04-Homework)
+  * [Unit 04 Homework](../../../01-Class-Content/04-Web-APIs/02-Homework)
 
 ### Slide Decks
 
