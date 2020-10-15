@@ -11,6 +11,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 Some students may complain about group configurations, be sure to remind them of the following:
 
   * In the real-world, you don't get to choose your co-workers.
+  
   * Working collaboratively is an important skill to acquire as a developer.
 
 Make sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
@@ -35,10 +36,6 @@ Project presentations are on the third day of next unit. Remember, students must
 
   * [07.1: Project unit](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
 
-### Time Tracker(s)
-
-* [07.1 Time Tracker](https://drive.google.com/open?id=1i6RK5P8ZPQEwF8rcis89Er9LF61jPUTy)
-
 ## Algorithms
 
   * [01-swap-case](../../../01-Class-Content/07-Project-1/03-Algorithms/01-swap-case)
@@ -48,3 +45,6 @@ Project presentations are on the third day of next unit. Remember, students must
   * [03-acronym-builder](../../../01-Class-Content/07-Project-1/03-Algorithms/03-acronym-builder)
 
   * [04-reverse-words](../../../01-Class-Content/07-Project-1/03-Algorithms/04-reverse-words)
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,29 +1,34 @@
-// The code in add.js handles what happens when the user clicks the "Add a book" button.
+// This code relates to the "add book" event listener
 
-// When user clicks add-btn
-$("#add-btn").on("click", function(event) {
-  event.preventDefault();
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
 
-  // Make a newBook object
-  var newBook = {
-    title: $("#title").val().trim(),
-    author: $("#author").val().trim(),
-    genre: $("#genre").val().trim(),
-    pages: $("#pages").val().trim()
+  const newBook = {
+    title: document.getElementById('title').value.trim(),
+    author: document.getElementById('author').value.trim(),
+    genre: document.getElementById('genre').value.trim(),
+    pages: document.getElementById('pages').value.trim(),
   };
 
-  // Send an AJAX POST-request with jQuery
-  $.post("/api/new", newBook)
-    // On success, run the following code
-    .then(function(data) {
-      // Log the data we found
-      console.log(data);
+  fetch('/api/new', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newBook),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success in adding book:', data);
+      alert(`Book added: ${newBook.title}`);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
     });
-
-  // Empty each input box by replacing the value with an empty string
-  $("#title").val("");
-  $("#author").val("");
-  $("#genre").val("");
-  $("#pages").val("");
-
+  // Empty the form
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
+  document.getElementById('genre').value = '';
+  document.getElementById('pages').value = '';
 });
