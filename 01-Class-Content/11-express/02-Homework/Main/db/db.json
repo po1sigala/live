@@ -1,1 +1,7 @@
-[{"title":"Test note","text":"Test note","id":"b39f7c50-0f0c-11eb-8753-c1cb3d3fdf1c"},{"title":"Test","text":"Test","id":"e1356850-0f0c-11eb-86a6-0b297e79cf71"},{"title":"Test note","text":"Test note","id":"ec01feb0-0f0c-11eb-9e95-0dcfafb33858"},{"title":"asdfasdf","text":"asdfasdf","id":"80f2f650-0f0d-11eb-98fa-6113c843777c"}]
+[
+  {
+    "title": "Test",
+    "text": "Test",
+    "id": "e1356850-0f0c-11eb-86a6-0b297e79cf71"
+  }
+]
