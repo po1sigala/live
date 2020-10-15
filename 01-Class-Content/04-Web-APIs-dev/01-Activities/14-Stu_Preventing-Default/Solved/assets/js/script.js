@@ -22,4 +22,3 @@ function addTip(event) {
 }
 
 submitEl.addEventListener("click", addTip);
-

@@ -1,7 +1,14 @@
-h4 {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
+
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
 }
 
 button {
@@ -24,5 +31,9 @@ button {
 }
 
 .card-contents {
-  padding: 5px 5px 10px 5px;
+  padding: 5px 5px 30px 5px;
+}
+
+.tip-area {
+  padding-bottom: 20px;
 }
