@@ -8,11 +8,11 @@ Work with a partner to implement the following user story:
 
 * It's done when I have taken a moment to open `index.html` and `index.js` to understand the application's functionality. 
 
-* It's done when I change existing code to use ES6 syntax.
+* It's done when I have changed existing code to use ES6 syntax.
 
-* It's done when I convert `var` to `const` or `let` based on the use case.
+* It's done when I have converted `var` to `const` or `let` based on the use case.
 
-* It's done when I convert all functional expressions to arrow functions.
+* It's done when I have converted all functional expressions to arrow functions.
 
 ## 💡 Hints
 
@@ -22,9 +22,10 @@ When is it not suitable to use arrow functions?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Take one our previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
+* Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

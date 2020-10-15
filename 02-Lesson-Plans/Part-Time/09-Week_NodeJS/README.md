@@ -10,11 +10,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 * The transition from client-side development to Node.js can be challenging for students. This lesson plan is a gentle introduction to the fundamentals.
 
-* If students question why they are learning Node.js, emphasize the client-server model. The client server model is something one must be able to explain and build as a full stack developer. Knowing the difference between the client and the server and how they relate to each other is a common interview question.
+* If students question why they are learning Node.js, emphasize its role in the client-server model. Full-stack developers must be able to build applications using the client-server model, and they will likely face interview questions about the difference between the client and the server and how they relate to each other.
 
 * Ensure that students have already installed Node.js on their computers before coming to class.
 
-  * Direct students to the [Node Installation Blog](TODO).
+  * Direct students to the [Node.js installation guide on The Full-Stack Blog](TODO).
 
 ## Career Connection
 

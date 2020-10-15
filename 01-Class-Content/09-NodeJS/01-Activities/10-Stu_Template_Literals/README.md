@@ -8,9 +8,9 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a `music` object in `Unsolved/index.js`.
 
-* It's done when I have added title, artist, and album properties to the `music` object.
+* It's done when I have added `title`, `artist`, and `album` properties to the `music` object.
 
-* It's done when I have used template strings in the `div` tags to output data from the music object.
+* It's done when I have used template strings in the `div` tags to output data from the `music` object.
 
 * It's done when I open `index.html` and see the results.
 
@@ -22,9 +22,10 @@ Work with a partner to implement the following user story:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* The dollar sign is used a lot in javascript and it's easy to get confused with what syntax belongs to what piece of technology. What are some other places you have seen the dollar sign used?
+* It's easy to get confused about which syntax belongs to which technology. The dollar sign (`$`) is used a lot in JavaScript&mdash;what are some other places you have seen the dollar sign used?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

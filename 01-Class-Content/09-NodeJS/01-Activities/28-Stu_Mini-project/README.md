@@ -6,7 +6,7 @@ In this activity, you will build a command-line tool that generates an HTML port
 
 * Your application should prompt the user for information like their name, location, bio, LinkedIn URL, and GitHub URL. Feel free to add any additional prompts you think of.
 
-* Using the data collected from the prompts, an HTML document should be constructed containing this information and written to the file system. Be sure to add some CSS styling to the document.
+* An HTML document containing the information collected from the prompts should be constructed and written to the file system. Be sure to add some CSS styling to the document.
 
 * You’ll need the following tools and technologies to accomplish this:
 
@@ -20,7 +20,7 @@ In this activity, you will build a command-line tool that generates an HTML port
 
 ## Hints
 
-* It might be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy/paste its contents into a string template literal and write a function to insert the user input into the appropriate places in the HTML string before writing it to the file system.
+It might be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy and paste its contents into a string template literal. Then you can write a function to insert the user input into the appropriate places in the HTML string before writing it to the file system.
 
 ---
 
