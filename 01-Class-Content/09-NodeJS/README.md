@@ -84,11 +84,11 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews.
 
-* [01: Character Count](../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count/README.md)
+* [01: Character Count](./03-Algorithms/01-character-count/README.md)
 
-* [02: Product of Largest Two](../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two/README.md)
+* [02: Product of Largest Two](./03-Algorithms/02-product-of-largest-two/README.md)
 
-* [03: Camel Case](../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case/README.md)
+* [03: Camel Case](./03-Algorithms/03-camel-case/README.md)
 
 ### Assessments
 

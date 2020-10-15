@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# 09 Node.js Homework: Professional Readme Generator
-=======
 # 09 Node.js Homework: Professional README Generator
->>>>>>> 99b1b584c6c3b7167de40829d88c8f07b98c0a74
 
 ## Your Task
 

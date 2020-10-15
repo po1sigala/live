@@ -773,11 +773,11 @@ In this activity, you will build a simple command line application that accepts 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.MD).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.md).
 
 ### 17. Student Do: Rest and Spread Operators (15 min) 
 
-* Direct students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.MD).
+* Direct students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.md).
 
 * Break your students into pairs that will work together on this activity.
 

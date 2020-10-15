@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have responded to all the prompts regarding my project.
 
-* It's done when I have confirmed that I have a `package.json` in the `/init/` folder.
+* It's done when I have confirmed that I have a `package.json` in the `/init` folder.
 
 * It's done after I have installed `inquirer` in the `/init` folder by running `npm i inquirer --save`.
 

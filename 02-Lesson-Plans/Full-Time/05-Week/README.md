@@ -31,7 +31,7 @@ In this unit, we will be introducing students to application building with Node 
 ## Career Connection
 Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[NodeJS](../../../01-Class-Content/09-NodeJS/04-Important/CAREER-CONNECTION.md).
+[NodeJS](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
 [Object-oriented Programming](../../../01-Class-Content/10-OOP/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
