@@ -86,12 +86,11 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [03-log-nums](03-Algorithms/03-log-nums)
 
-
 ### Assessments
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* @TODO LINK TO ASSESSMENT
+* [Unit 03 Assessment](https://forms.gle/WQNAEujgFBVm6kc79)
 
 ## Homework: Password Generator
 
