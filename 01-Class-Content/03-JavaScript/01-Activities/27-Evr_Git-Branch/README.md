@@ -87,7 +87,7 @@ git branch
   git commit -m "Created README.md and added text to the file"
   ```
 
-### Merge the branch
+### Merge feature branch to main branch
 
 * Now that the feature is complete, we can merge the feature branch with `main`. First, we need to switch back to `main` from `create_readme`. Remember, it's always a good idea to confirm that you are on the correct branch using the `git branch` command.
 
