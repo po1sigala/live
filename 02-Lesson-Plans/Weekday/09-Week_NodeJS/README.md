@@ -1,4 +1,4 @@
-# Unit 09 Instructor Overview: NodeJS
+# Unit 09 Instructor Overview: Node.js
 
 ## Overview
 
@@ -49,6 +49,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Algorithms
 
 * [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
+
+  * [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
 
 * [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
 

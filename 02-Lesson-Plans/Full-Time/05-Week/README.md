@@ -1,4 +1,4 @@
-# Week 05 Instructor Overview: NodeJS and OOP
+# Week 05 Instructor Overview: Node.js and OOP
 
 ## Overview
 
@@ -16,7 +16,7 @@ Refer to the [Class Content Unit 09 Overview](../../../01-Class-Content/09-NodeJ
 
   * Direct students to the [Node.js installation guide on The Full-Stack Blog](TODO).
 
-* We will also spend a day this unit practicing TDD. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
+* We will also spend a day this week practicing TDD. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
 
 ## Career Connection
 
@@ -28,7 +28,7 @@ Refer to the [Class Content Unit 09 Overview](../../../01-Class-Content/09-NodeJ
 
 Next unit, we will be diving into servers and Express. Spend as much time as you can making sure that students understand Node.js fundamentals. 
 
-In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [Heroku CLI installation guide on the Full-Stack Blog](TODO) and remind students to sign up for a Heroku account before starting the next unit. 
+In the next unit, students will start using Heroku to host their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Important/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit. 
 
 ## Helpful Links
 
@@ -61,6 +61,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Algorithms
 
 * [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
+
+  * [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
 
 * [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
 
