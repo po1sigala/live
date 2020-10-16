@@ -1,6 +1,6 @@
 # 05.1 Full-Time Lesson Plan: Node.js, ES6
 
-## Overview 
+## Overview
 
 This lesson introduces Node.js and the new syntax that comes with ES6. This includes arrow functions and new variables `let` and `const`. We will also cover template literals and how they can be helpful in the development process.
 
@@ -36,7 +36,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+* [Unit 09 Slide Deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
 
 | Start   | #   | Activity Name                           | Duration |
 | ------  | --- | ----------------------------------------| -------- |

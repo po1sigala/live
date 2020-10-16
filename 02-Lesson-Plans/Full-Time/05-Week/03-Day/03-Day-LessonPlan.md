@@ -1,4 +1,4 @@
-# 5.3 Full-Time Lesson Plan- Constructors (10:00 AM)
+# 5.3 Full-Time Lesson Plan: Constructors (10:00 AM)
 
 ## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
