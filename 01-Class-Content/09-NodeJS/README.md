@@ -15,50 +15,34 @@ The following topics will be covered in this unit:
 * Node.js
 
     * `process.argv`
-
     * `fs`
 
 * Modularization
 
     * `require()`
-
     * `module.exports`
 
 * npm
 
     * `package.json`
-
     * `npm init`
-
     * `node_modules`
 
-* `inquirer`
+* Inquirer
 
 * ES6
 
     * `let` and `const`
-
     * Arrow functions
-
     * Template literals
-
     * Array methods (`map()`, `filter()`, `reduce()`)
-
     * Spread and rest
-
     * Destructuring arrays and objects
 
 * Asynchronous JavaScript
 
     * Callbacks
-
     * Promises
-
-    * Async/await
-
-    * Fetch API
-
-    * Axios
 
 ## Learning Objectives
 
@@ -72,9 +56,7 @@ You will be employer-ready if you are able to:
 
 * Explain the importance and usefulness of ES6+ concepts such as `let`, `const`, and arrow functions.
 
-* Handle asynchrony with callbacks, Promises, and async/await.
-
-* Make server-side API calls with the Fetch API and Axios.
+* Handle asynchronicity with callbacks, and Promises.
 
 ## Technical Interview Preparation
 
@@ -86,19 +68,17 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Character Count](./03-Algorithms/01-character-count/README.md)
 
+    * [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
+
 * [02: Product of Largest Two](./03-Algorithms/02-product-of-largest-two/README.md)
 
 * [03: Camel Case](./03-Algorithms/03-camel-case/README.md)
 
 ### Assessments
 
-Assess your knowledge by answering the following technical interview questions:
+Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* What is npm?
-
-* What are three of the major changes introduced to JavaScript in ES6?
-
-* What are three approaches to handling asynchronous JavaScript?
+* [Unit 09 Assessment](https://forms.gle/VKfsdSySYgc4Hrih7) 
 
 ## Homework
 
@@ -106,7 +86,7 @@ In the homework for this unit, you’ll create a command-line application that u
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
@@ -127,5 +107,4 @@ Here are some additional resources to help solidify the topics covered in this u
 * [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
 - - -
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
