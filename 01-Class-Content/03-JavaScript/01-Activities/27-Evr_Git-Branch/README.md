@@ -128,7 +128,7 @@ git branch -d feature/create-readme
 
 ![](./Images/08-branch-deleted.png)
 
-* Congratulations, we have now completed our first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
+* Congratulations, you have now completed our first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
 
 ### Hints
 
