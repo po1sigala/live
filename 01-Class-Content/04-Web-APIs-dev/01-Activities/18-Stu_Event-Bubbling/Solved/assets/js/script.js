@@ -14,9 +14,9 @@ carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
 
 function navigate(direction) {
   index = index + direction;
-  if (index < 0) { 
-    index = images.length - 1; 
-  } else if (index > images.length - 1) { 
+  if (index < 0) {
+    index = images.length - 1;
+  } else if (index > images.length - 1) {
     index = 0;
   }
   currentImage = images[index];
@@ -29,7 +29,7 @@ carousel.addEventListener("click", function() {
 
 next.addEventListener("click", function(event) {
   event.stopPropagation();
-  navigate(-1);
+  navigate(1);
 });
 
 prev.addEventListener("click", function(event) {
