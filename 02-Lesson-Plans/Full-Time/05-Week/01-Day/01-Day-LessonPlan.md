@@ -2,211 +2,248 @@
 
 ## Overview 
 
-This lesson introduces Node.js and the new syntax that comes with ES6. This includes arrow functions also new variables `let` and `const`. Finally we will cover template literals and how they can be helpful in our development process.
+This lesson introduces Node.js and the new syntax that comes with ES6. This includes arrow functions and new variables `let` and `const`. We will also cover template literals and how they can be helpful in the development process.
 
 ## Instructor Notes
 
-* Complete activities `01-Ins_Node-Demo` through `14-Stu_appendFile`
+* In this lesson, students will complete activities `01-Ins_Node-Demo` through `10-Stu_TemplateLiterals`.
 
-* Students will be expected to have Node installed, but if they don't, be sure to empower them to know that they can install it using the resources found in `04-Important`. Installation steps are available on the [Node](https://nodejs.org/en/download/) website.
+* Students will be expected to have Node.js installed, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](TODO).
 
-    * A helpful link to direct students to is https://nodejs.org/en/
-    * Remind students that they will want the LTS (long term support) version.
-    * `node -v` in the terminal will output a version number if installed correctly.
+* Transitioning from client-side to back-end development can be a little confusing at first. Remind students that Node.js is Chrome's V8 engine running on the machine rather than in the browser, giving us access to things like the file system.
 
-* Transitioning from client-side to backend development can be a little confusing at first. This is a good opportunity to remind students that Node is Chrome's V8 engine running on your machine rather than in the browser. This gives us the ability to have access to things like the filesystem.
-
-* Students may ask why they are learning Node.JS. This is a great opportunity to explain that this allows to create our own APIs and build our own applications using the client-server model.
+* If students ask why they are learning Node.js, explain that Node.js allows us to create APIs and build applications using the client-server model.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* If you are comfortable doing so, live code the solutions to the activities. If not, no worries. Use the solutions provided and follow the prompts and talking points for review. 
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus for each activity is meant to give them "food for thought". Rather than extra coding practice, it is a self-study on related topics that are beyond the scope of this unit for those who want to dig deeper and further their knowledge on this topic.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
 By the end of class, students will be able to:
 
-* Explain the client-server model
-* Run simple very simple javascript files from the command line using Node
-* Understand arrow functions and how they impact the `this` context
-* Use template strings, also how to use `const` and `let` in place of `var`
-* Use functional loops like `.map` and `.filter`
+* Explain the client-server model.
 
-## Time Tracker
-| Start  | #   | Activity Name                              | Duration |
-|---     |---  |---                                         |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity             | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Node Demo                 | 0:05     |
-| 10:15AM| 3   | Student Do: Node Demo                      | 0:15     |
-| 10:30AM| 4   | Instructor Review: Node Demo               | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Arrow Functions           | 0:05     |
-| 10:45AM| 6   | Student Do: Arrow Functions                | 0:15     |
-| 11:00AM| 7   | Instructor Review: Arrow Functions         | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Let and Const             | 0:05     |
-| 11:15AM| 9   | Student Do: Convert to ES6                 | 0:15     |
-| 11:30AM| 10  | Instructor Review: Convert to ES6          | 0:10     |
-| 11:40AM| 11  | Instructor Demo: Functional Loops          | 0:05     |
-| 11:45AM| 12  | Student Do: Functional Loops               | 0:15     |
-| 12:00PM| 13  | BREAK                                      | 0:30     |
-| 12:30PM| 14  | Instructor Review: Functional Loops        | 0:10     |
-| 12:40PM| 15  | Instructor Demo: Template Literals         | 0:05     |
-| 12:45AM| 16  | Student Do: Template Literals              | 0:15     |
-| 1:00PM | 17  | Instructor Review: Template Literals       | 0:15     |
-| 1:15PM | 18  | Instructor Do: Stoke Curiosity             | 0:10     |
-| 1:25PM | 19  | Instructor Demo: `process.argv`            | 0:05     |
-| 1:30PM | 20  | Student Do: `process.argv`                 | 0:15     |
-| 1:45PM | 21  | Instructor Review: `process.argv`          | 0:10     |
-| 1:55PM | 22  | Instructor Demo: Read/Write File           | 0:05     |
-| 2:00PM | 23  | Student Do: Append File                    | 0:15     |
-| 2:15PM | 24  | Instructor Review: Append File             | 0:15     |
-| 2:30PM | 25  | END                                        | 0:00     |
+* Run very simple JavaScript files from the command line using Node.js.
+
+* Explain arrow functions and how they impact the `this` context.
+
+* Use template strings and use `const` and `let` in place of `var`.
+
+* Use functional loops like `map()` and `filter()`.
+
+## Slide Deck
+
+* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+
+| Start   | #   | Activity Name                           | Duration |
+| ------  | --- | ----------------------------------------| -------- |
+| 10:00AM | 1   | Instructor Do: Stoke Curiosity          | 0:10     |
+| 10:10AM | 2   | Instructor Demo: Node.js Demo           | 0:05     |
+| 10:15AM | 3   | Student Do: Node.js Demo                | 0:15     |
+| 10:30AM | 4   | Instructor Review: Node.js Demo         | 0:10     |
+| 10:40AM | 5   | Instructor Demo: Arrow Functions        | 0:05     |
+| 10:55AM | 6   | Student Do: Arrow Functions             | 0:15     |
+| 11:05AM | 7   | Instructor Review: Arrow Functions      | 0:10     |
+| 11:10AM | 8   | Instructor Demo: Let and Const          | 0:05     |
+| 11:15AM | 9   | Student Do: Convert to ES6 Syntax       | 0:15     |
+| 11:30AM | 11  | Instructor Review: Convert to ES6 Syntax| 0:10     |
+| 11:40AM | 12  | Instructor Demo: Functional Loops       | 0:05     |
+| 11:45AM | 13  | Student Do: Functional Loops            | 0:15     |
+| 12:00PM | 13  | BREAK                                   | 0:30     |
+| 12:30PM | 14  | Instructor Review: Functional Loops     | 0:10     |
+| 12:40PM | 15  | Instructor Demo: Template Literals      | 0:05     |
+| 12:45PM | 16  | Student Do: Template Literals           | 0:15     |
+| 1:00PM  | 17  | Instructor Review: Template Literals    | 0:15     |
+| 1:15PM  | 1   | Instructor Do: Stoke Curiosity          | 0:10     |
+| 1:25PM  | 2   | Instructor Demo: process.argv           | 0:05     |
+| 1:30PM  | 3   | Student Do: process.argv                | 0:15     |
+| 1:45PM  | 4   | Instructor Review: process.argv         | 0:10     |
+| 1:55PM  | 5   | Instructor Demo: Read/Write File        | 0:05     |
+| 2:00PM  | 6   | Student Do: Append File                 | 0:15     |
+| 2:15PM  | 7   | Instructor Review: Append File          | 0:15     |
+| 2:30PM  | 25  | END                                     | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Do: Stoke Curiosity (10 mins)
+### 1. Instructor Do: Stoke Curiosity (10 min)
+
+* Welcome students to class.
 
 * Open the [slide deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Introduction to Node.js (Title)**: Today's class is a milestone as we make the transition from writing client-side code to server-side code using Node.js. 
+  * **Introduction to Node.js**: Today's class is a milestone as we make the transition from writing client-side code to server-side code using Node.js. 
 
-  * **What is Full Stack Web Development?**: What does it mean to be a full stack web developer?  
+  * **What is full-stack web development?**
   
-  * **Full Stack Web Development**: Full stack web development is understanding the suite of tools required to build both the front _and_ back ends of a web application. 
+    * Full-stack web development encompasses the suite of tools required to build both the front and back ends of a web application. 
 
-  * **How much of the stack do we know?**: What have we learned up to this point? 
+  * **How much of the stack do we know?**
   
-  * **Client-side**: The three primary components of client-side code are HTML, CSS & JavaScript. 
+    * So far, we have learned about client-side development. The three primary components of client-side code are HTML, CSS, and JavaScript. We can also fetch data from an API for use in the client.
 
-  * **What is a client?**: Where do HTML, CSS and JavaScript come together?
+  * **What is a client?**
 
-  * **Definition of Web Client**: A client is both computer hardware and software that makes requests to a server. 
+    * A **client** is a piece of computer hardware or software that makes requests to a server. It can be a desktop computer, laptop, mobile device, and beyond!
 
-  * **What is GitHub Pages doing?**: What happens when we _deploy_ our projects to GitHub Pages?'
+  * **What is GitHub Pages doing?**
 
-  * **Awesome Project Deployed to GitHub Pages**: GitHub Pages is _serving_ content to clients.
+    * GitHub Pages is serving content to clients.
 
-  * **What is a server?**: What does it mean to "server" content? 
+  * **What is a server?**
 
-  * **Server Definition**: Depending on the context, a server is both the physical hardware _and_ software that hears requests from users and returns something, such as an HTML or image file, or completes a process. 
+    * Depending on the context, a server is both the physical hardware and the software that hears requests from users and returns something, like an HTML or image file, or completes a process. 
 
-  * **What is the Client-Server Model?**: How do clients and servers interact?
+  * **What is the client-server model?**
 
-  * **The Client-Server Model**: In modern web applications, there is constant back-and-forth communication between the visuals displayed on the user’s browser (the front-end) and the data and logic stored on the server (the back-end). Clients make requests, servers respond.
+    * In modern web applications, there is constant back-and-forth communication between the visuals displayed on the user’s browser (the front end) and the data and logic stored on the server (the back end). Clients make requests, and servers respond.
 
-  * **What is Node.js?**: How do we program a server?
+  * **What is Node.js?**
 
-  * **Node.js**: Node allows us to run JavaScript _outside_ the browser as well as on a server. Since Node is purely JavaScript, a front-end JavaScript developer can also work on server side code without having to learn a new programming language.
+    * Node.js allows us to run JavaScript outside the browser as well as on a server. Because Node.js is purely JavaScript, a front-end JavaScript developer can also work on server side code without having to learn a new programming language.
 
+      Node.js is an open source, cross-platform JavaScript runtime environment designed to be run outside of the browser. 
 
-### 2. Instructor Demo: Node Demo (5 mins)
+      It is a general utility that can be used for a variety of purposes including asset compilation, scripting, monitoring, and **most notably as the basis for web servers**.
 
-* Open [01-Ins_Node-Demo](../../../../01-Class-Content/09-NodeJS/01-Activities/01-Ins_Node-Demo/index.js) in your terminal and demonstrate the following:
+* Navigate to [28-Stu_Mini-project](../../../../01-Class-Content/09-NodeJS/01-Activities/28-Stu_Mini-project/Solved/Basic/index.js) in your command line and demonstrate the following:
+   
+   * 🔑 We are viewing the mini-project that we will be able to build by the end of this unit. 
 
-* Run `node index.js` from the command line and demonstrate the following: 
-
-  * 🔑  When we run the index.js file, we notice that the value of `this` has changed significantly
-
-  * 🔑  When we examine the output of the console log, we notice some recognizable methods that are available in Node
+   * 🔑 It is a command-line tool that generates an HTML portfolio page from user input.
+   
+   * First run `npm i` to get the install `inquirer`.
+   
+   * Make sure to point out that we will be using Node's native `fs` module for this project. 
+   
+   * Run `node index` to start the app and enter in the prompts when asked. 
+  
+   * Notice how the provided inputs are now visible in the resulting `index.html` by opening it in the browser.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why is it necessary to wrap the `console.log` in an invoked function
+    * ☝️ What are we learning?
 
-  * 🙋 Simply console logging the `this` keyword will return an empty object. This is because context only makes sense inside of functions. Without one, we won't have anything to return
+    * 🙋 We are learning more about Node.js, third-party modules, and Node's native `fs` module.
 
-### 3. Student Do: Node Demo (15 mins)
+    * ☝️ How does this project build off or extend previously learned material?
 
-* Direct students to the activity instructions found in [02-Stu-Hello-Demo](../../../../01-Class-Content/09-NodeJS/01-Activities/02-Stu_Hello-Node/README.md).
+    * 🙋 We are continuing to expand our knowledge of using Javascript to build programs, but this time we are working outside the browser.
 
-* Break your students into pairs that will work together on this activity.
+    * ☝️ How does this project relate to your career goals?
 
-```md
-  # Hello Node.js
-
-In this activity, you will write and run your first Node.js application.
-
-## Instructions
-
-* Create a file, `index.js`, in your working directory.
-
-* Write JavaScript to log the string, "Hellooo, Node!".
-
-* Then run the program using Node from the command line.
-
-* Confirm that it logged the text as you would expect.
-
-## Hint(s)
-
-* It's just JavaScript.
-
-## Bonus
-
-* What happens when you log `window`? What happens when you try to use `prompt`, `alert`, or `confirm`?
-
-```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
-
-### 4. Instructor Review: Node Demo (10 mins)
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with the `this` keyword in Node as well as `console.log`? (Poll via Fist to Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
-
-* Use the prompts and talking points below to review the following key (🔑) points:
-
-  * When we examine the output of the console log, we notice some recognizable methods that are available in Node: `setInterval`, `setTimeout`
-
-  * Only in the browser does, the `this` context refers to the `Window` object by default
-  
-  * In Node, `this` refers to the outermost global object
-
-* Open [01-Ins_Node-Demo](../../../../01-Class-Content/09-NodeJS/01-Activities/01-Ins_Node-Demo/index.js) in your IDE and explain the following: 
-
-  * When we run our finished Javascript we should have something like this:
-
-  ```js
-    (function () {
-      console.log(this);
-    })();
-  ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ Why is it necessary to wrap the `console.log(this)` in a function?
-
-  * 🙋 Simply console logging the `this` keyword will return an empty object. This is because context only makes sense inside of functions. Without one, we won't have anything to return
-
-  * What happens when we log `window` to the console?
-
-  * 🙋 We get an error, `window` is not defined in node.
-
-  * ☝️ What kinds of things do we think are possible in the browser, but not possible in node?
-
-  * 🙋 We can't use prompts, confirms or alerts because of the of the Window object
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 We can refer to supplemental material, read the [Node docs](https://nodejs.org/en/docs/), and stick around for Office Hours to ask for help.
+    * 🙋 Part of being a full-stack web developer is being as comfortable working on back-end technologies as you are with front-end technologies. By working on this project, you are adding another tool to your full-stack arsenal, which will ultimately make you a better developer.
 
 * Answer any questions before proceeding to the next activity.
 
+### 2. Instructor Demo: Node.js Demo (5 min)
 
-### 5. Instructor Demo: Arrow functions (5 mins) 
+* Open `01-Ins_Node-Demo/index.js` in your terminal.
 
-* Open [03-Ins_ArrowFunction/01-syntax](../../../../01-Class-Content/09-NodeJS/01-Activities/03-Ins_ArrowFunction/01-syntax.js) in your browser and demonstrate the following:
+* Run `node index.js` from the command line and demonstrate the following:
 
-* In this demonstration you will give students and overview of arrow functions, including syntax differences, when to use them, and when to avoid them.
+  * 🔑  When we run the `index.js` file, we notice that the value of `this` has changed significantly.
 
-* Explain to the class that ES6 introduces a newer shorter syntax for writing functions. Consider the following example found in [01-syntax.js](/Users/johnmccambridge/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/03-Ins_ArrowFunction/01-syntax.js).
+  * 🔑  When we examine the output of the console log, we notice some recognizable methods that are available in Node.js.
 
-* 🔑 Walk the students through each function below. See if they can point out the differences in syntax.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it necessary to wrap the `console.log` in an invoked function?
+
+  * 🙋 Simply console logging the `this` keyword will return an empty object, because context only makes sense inside of functions. Without one, we won't have anything to return.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Hello-Node/README.md`.
+
+### 3. Student Do: Node.js Demo (15 min)
+
+* Direct students to the activity instructions found in `02-Stu_Hello-Node/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create Node.js Application
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to be able to write programs for use with Node.
+
+  * As a developer, I want to make a program that logs something to the terminal. 
+
+  ## Acceptance Criteria
+
+  * It's done when I have created a file, `index.js`, in my working directory.
+    
+  * It's done when I have written JavaScript to log the string "Hellooo, Node!"
+
+  * It's done when I have run the program from the command line using `node index`.
+
+  * It's done when I have confirmed the expected output.
+
+  ## 💡 Hints
+
+  Is there a difference in the way we code for the browser's developer console?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What happens when you log `window`? What happens when you try to use `prompt`, `alert`, or `confirm`?
+    
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 4. Instructor Review: Node.js Demo (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with the Node.js thus far? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Open `01-Ins_Node-Demo/index.js` in your IDE and explain the following: 
+
+  * When we run the finished JavaScript, we should have something like the following example:
+
+  ```js
+  console.log("Hellooo, Node!");
+  ```
+
+  * 🔑 When we examine the output of the console log, we notice that it logs our string properly.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens if we were to log `window` to the console?
+
+  * 🙋 We get an error&mdash;`window` is not defined in Node.js.
+
+  * ☝️ What kinds of things do we think are possible in the browser, but not possible in Node.js?
+
+  * 🙋 We can't use prompts, confirms, or alerts because of the `window` object.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Node.js documentation](https://nodejs.org/en/docs/), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: Arrow Functions (5 min) 
+
+* Open `03-Ins_ArrowFunction/01-syntax.js` in your browser and demonstrate the following:
+
+  * In this demonstration, you will give students an overview of arrow functions, including syntax differences, when to use them, and when to avoid them.
+
+  * Explain to the class that ES6 introduces a newer, shorter syntax for writing functions. Consider the following example found in `03-Ins_ArrowFunction/01-syntax.js`.
+
+  * 🔑 As you walk students through each of the following functions, see if they can point out the differences in syntax:
 
   ```js
   // ES5 function
@@ -221,9 +258,9 @@ In this activity, you will write and run your first Node.js application.
 
   ```
 
-* Answer any questions about arrow functions before moving on to some differences between arrow functions and regular functions.
+  * Answer any questions about arrow functions before moving on to some differences between arrow functions and regular functions.
 
-* In preparation for the activity, ask TAs to start directing students to the code found in [02-context](../../../../01-Class-Content/09-NodeJS/01-Activities/03-Ins_ArrowFunction/02-context.js)
+  * In preparation for the activity, ask TAs to start directing students to the following code found in `03-Ins_ArrowFunction/02-context.js`:
 
   ```js
   // Depending on the environment `setTimeout` is called in, it may refer to one of two objects
@@ -244,11 +281,11 @@ In this activity, you will write and run your first Node.js application.
   // prints "undefined!" 100ms later
   ```
 
-  * Students may still not feel completely comfortable with the `this` keyword in JavaScript yet, inform them that many experienced developers still aren't as it's a tricky topic.
+  * Students might still not feel completely comfortable with the `this` keyword in JavaScript yet; reassure them that many experienced developers also have trouble with it.
 
-  * Point out how this code works as intended. Explain that this is because an arrow function automatically binds to the context or object it's created inside of, even if it is not a direct property of that object. The arrow function is created when `saySomething` is run, inside of `person` right before the `setTimeout` is run.
+  * Point out how this code works as intended: an arrow function automatically binds to the context or object it's created inside of, even if it is not a direct property of that object. The arrow function is created when `saySomething` is run, inside of `person`, right before the `setTimeout` is run.
 
-  * In preparation for the discussion, ask TAs to start directing students to the code found in [03-property-methods](../../../../01-Class-Content/09-NodeJS/01-Activities/03-Ins_ArrowFunction/03-property-methods.js)
+  * In preparation for the discussion, ask TAs to start directing students to the following code found in `03-Ins_ArrowFunction/03-property-methods.js`:
 
   ```js
   // Avoid using arrow functions for object methods
@@ -270,55 +307,72 @@ In this activity, you will write and run your first Node.js application.
   // If this code was run in the browser, `this` would refer to the window
   ```
 
-  * Explain that when working with objects, we typically want to avoid using arrow functions for its methods. In these cases, the arrow function will bind to the context it's created inside of (probably the `window` or `module.exports` object).
+  * Explain that when working with objects, we typically want to avoid using arrow functions for the methods. In these cases, the arrow function will bind to the context it's created inside of (probably the `window` or `module.exports` object).
 
-  * We can replace regular functions most of the time, except when it comes to using the this keyword.
+  * We can replace regular functions most of the time, except when it comes to using the `this` keyword.
   
-  * Students will become more comfortable with when to use and not use arrow functions as they practice using them. For now, they should understand that they can use them most of the time, but they should avoid using them as object methods.
+  * With practice, students will grow more comfortable knowing when to use and not use arrow functions. For now, they can use them most of the time, except as object methods.
 
-  * Take a moment to answer any lingering questions.
+* Answer any questions before proceeding to the next activity.
 
+### 6. Student Do: Arrow Function Practice (15 min) 
 
-### 6. Student Do: Arrow Function Practice (15 mins) 
-
-* Direct students to the activity instructions found in [04-ArrowFunctionPractice](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/README.md)
+* Direct students to the activity instructions found in `04-Stu_ArrowFunctionPractice/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Arrow Function Practice
+  ```md
+  # 🏗️ Implement Arrow Functions
 
-In this activity we will convert a file with pre-written code over to use arrow functions where suitable.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to be able to use newer arrow function syntax.
 
-* Open [Unsolved/index.js](Unsolved/index.js) in your editor and run the code. Take a few moments to study the values logged to the console, but don't worry about understanding every part of the code. For this activity you only need to remember the rules established about when arrow functions should and shouldn't be used.
+  * As a developer, I want be able to create and read code using the most modern syntax rules.
 
-* Update this example to use arrow functions **where suitable**. If successful, the code should still work the exact same way.
+  ## Acceptance Criteria
 
-## Hints
+  * It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/Unsolved/index.js).
+    
+  * It's done when I have refactored the code to use arrow functions _where suitable_.
 
-* Remember the case from the last example in which we should _not_ be using arrow functions.
+  * It's done when I have ran the refactored code with no errors.
 
-## Bonus
+  ## 💡 Hints
 
-* After you've converted all of the functions to arrow functions where possible, look for opportunities to shorten the arrow function syntax even further by removing parentheses and curly braces where allowed.
+  What is an example of when we shouldn't use arrow functions?
 
-```
+  ## 🏆 Bonus
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-### 7. Instructor Review: Arrow Function practice (10 mins) 
+  * How can you shorten the arrow function syntax even further with implicit return statements?
+    
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Arrow Function Practice (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with Arrow Functions? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with arrow functions? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Open [04-Stu-ArrowFunctionPractice](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/Solved/index.js) in your IDE and explain the following: 
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * Even though we have converted a few examples over to use arrow functions, the code works exactly as it did before
+  * ✔️ Arrow functions
+
+  * ✔️ `this` binding
+
+  * ✔️ Implicit return statements
+
+* Open `04-Stu_ArrowFunctionPractice/Solved/index.js` in your IDE and explain the following: 
+
+  * Even though we have converted a few examples to use arrow functions, the code works exactly as it did before&mdash;as shown in the following example:
 
   ```js
   var funnyCase = string => {
@@ -331,9 +385,11 @@ In this activity we will convert a file with pre-written code over to use arrow 
   };
   ```
 
-  * 🔑  We can omit parenthesis around arrow functions if there is only one parameter.
-    * NOTE: This does not work if the arrow function has multiple parameters
-    * Please remind students that all of this is optional. The old syntax is not only valid, but accepted.
+  * 🔑  We can omit parentheses around arrow functions if there is only one parameter.
+
+    * **NOTE:** This does not work if the arrow function has multiple parameters.
+
+  * Please remind students that all of this is optional. The old syntax is not only valid but accepted, as shown in the following example:
   
   ```js
   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -343,7 +399,7 @@ In this activity we will convert a file with pre-written code over to use arrow 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why didn't we convert the functions in the `netflixQueue` object to arrow functions
+  * ☝️ In the following example, why didn't we convert the functions in the `netflixQueue` object to arrow functions?
 
   ```js
     watchMovie: function() {
@@ -351,113 +407,131 @@ In this activity we will convert a file with pre-written code over to use arrow 
     },
   ```
 
-  * 🙋 Whenever working with objects and creating methods, we don't want to use arrow functions because the `this` context will change, and therefore break our implementation.
+  * 🙋 When working with objects and creating methods, we don't want to use arrow functions, because the `this` context will change and therefore break the implementation.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Let and Const (5 mins) 
+### 8. Instructor Demo: let and const (5 min) 
 
-* Open [05-Ins-Let-Const](../../../../01-Class-Content/09-NodeJS/01-Activities/05-Ins_Let-Const/let.js) in your IDE and demonstrate the following:
+* Open `05-Ins_Let-Const/let.js` in your IDE and demonstrate the following:
 
-  * 🔑  In this activity we will demonstrate the usage of `let` and `const` in addition
-
-  * 🔑  We will discuss function scope. This means that variables and functions that are defined inside the scope of the function can't escape said function.
+  * 🔑  In JavaScript, `var` is **function scoped**. This means that variables and functions defined inside the scope of the function can't escape the function.
   
-  * 🔑  ES6 offers us a new way to define variables using `let`. Unlike `var`, `let` is block scoped.
+  * 🔑  ES6 offers us a new way to define variables using `let`. Unlike `var`, `let` is **block scoped**.
   
-  * 🔑  Inform the class that a "block" is created whenever we have a pair of curly braces. This includes loops and conditional statements as well as function bodies. Since `let` is block scoped, any variables we define using `let` inside of a block are only available inside of that block.
+  * 🔑  Inform the class that a **block** is created by a pair of curly braces. This includes loops and conditional statements as well as function bodies. Because `let` is block scoped, any variables we define using `let` inside of a block are only available inside of that block.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋) given the following code snippet:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```js
-  // 1. When using var, our counter exists after a for-loop is done
+  * ☝️ In the following code snippet, why does the variable `i` exist outside of the function scope in the first `for` loop, while `j` in the second `for` loop is `undefined`?
 
-  for (var i = 0; i < 5; i++) {
-    console.log(i);
-  }
+  ```js
+    // 1. When using var, our counter exists after a for-loop is done
 
-  console.log(i); // Prints 5
+    for (var i = 0; i < 5; i++) {
+      console.log(i);
+    }
+
+    console.log(i); // Prints 5
 
 
-  // When using let, our counter is not defined outside of the for-loop block
+    // When using let, our counter is not defined outside of the for-loop block
 
-  let x = 42;
+    let x = 42;
 
-  for (let j = 0; j < 5; j++) {
-    console.log(j);
-    console.log(x);
-  }
+    for (let j = 0; j < 5; j++) {
+      console.log(j);
+      console.log(x);
+    }
 
-  console.log(j); // ReferenceError: j is not defined
+    console.log(j); // ReferenceError: j is not defined
 
-  let j = 42;
-  console.log(j); // prints 42
-  ```
+    let j = 42;
+    console.log(j); // prints 42
+    ```
 
-  * ☝️ Why does the variable `i` exist outside of the function scope in the first for loop, while `j` in the second for loop is `undefined`?
+  * 🙋 We used the `var` keyword to assign the variable in the first `for` loop, allowing it to be accessed outside the function scope. The second `for` loop has `j` limited to the function scope because we defined it using the `let` keyword.
 
-  * 🙋 We used the `var` keyword to assign the variable in the first for loop allowing it to be accessed outside the function scope. The second example has `j` limited to the function scope because we defined it using the `let` keyword
+* Open `05-Ins_Let-Const/const.js` in your IDE and demonstrate the following:
 
-* Open [05-Ins-Let-Const](../../../../01-Class-Content/09-NodeJS/01-Activities/05-Ins_Let-Const/const.js) in your IDE and demonstrate the following:
+  * Part of the ES6 syntax is a new keyword called `const`, found in many other programming languages and generally used whenever we know a variable should not be changed.
 
-* Part of the ES6 syntax is a new keyword called `const`. This is found in many other programming languages and is generally used in all cases where we know a variable shouldn't be changed.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):  
 
-* ☝️ After reviewing this code, can anyone explain a situation where using `const` might not be ideal?
+  * ☝️ After reviewing this code, can anyone explain a situation when using `const` might not be ideal?
 
-* `const` has the same rules as `let` for block scoping. There is, however, one one key difference between `const` and `let`: a variable declared with `const` cannot be _reassigned_. This would be bad for any data that needs to be mutated.
+  * 🙋 Because a variable declared with `const` cannot be reassigned, it might be a bad idea to use it for any data that needs to be mutated.
 
-### 9. Student Do: Convert to ES6 Syntax (15 mins) 
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the activity instructions found in [06-Stu_ConvertConstLetArrow](../../../../01-Class-Content/09-NodeJS/01-Activities/06-Stu_ConvertConstLetArrow/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_ConvertConstLetArrow/README.md`.
 
-* Stress that students don't need to completely understand all of the code in the activity. They just need to remember what we just overed about `const`, `let`, and arrow functions.
+### 9. Student Do: Convert to ES6 Syntax (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu_ConvertConstLetArrow/README.md`.
+
+* Stress that students don't need to completely understand all of the code in the activity. They just need to remember what we have covered about `const`, `let`, and arrow functions.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Convert Const Let Arrow
+  ```md
+  # 🏗️ Convert to ES6 Syntax
 
-In this example we will convert a prebuilt Crystal Guessing Game to use the new ES6 syntax we learn about.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to be able to recognize and implement newer ES6 syntax.
 
-* Open [Unsolved/index.html](Unsolved/index.html) in your web browser and take a moment to understand the application's functionality.
+  ## Acceptance Criteria
 
-  * This example is similar to the Crystal Guessing Game we worked on many weeks ago.
+  * It's done when I have taken a moment to open `index.html` and `index.js` to understand the application's functionality. 
 
-* Now open [Unsolved/index.js](Unsolved/index.js) in your code editor and convert the existing code over to use the ES6 syntax we've learned about in the previous examples.
+  * It's done when I have changed existing code to use ES6 syntax.
 
-* Make sure to do the following:
+  * It's done when I have converted `var` to `const` or `let` based on the use case.
 
-1. Convert all `var` identifiers to use `const` or `let`; whichever is more appropriate.
+  * It's done when I have converted all functional expressions to arrow functions.
 
-2. Convert functions to arrow functions **where suitable**; remember, arrow functions are not right for every situation.
-```
+  ## 💡 Hints
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  When is it not suitable to use arrow functions?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
 ### 10. Instructor Review: Convert to ES6 Syntax (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with the use of `let`, `const` and arrow functions? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `let`, `const`, and arrow functions? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ A good way to think about these variable names is to ask yourself "does this need to be changed in future?" If the answer is no, you should use `const`
+  * ✔️ `let`
+  
+  * ✔️ `const`
 
-  * ✔️ Ask yourself if you need to take advantage of the `this` context inside your function. If not, convert it to an  arrow function
+* Open `06-Stu_ConvertConstLetArrow/Solved/index.js` in your IDE and explain the following: 
 
-  * ✔️ Remember that arrow functions can't be used as constructor functions
+  * 🔑 A good way to think about these variable names is to ask yourself "does this need to be changed in future?" If the answer is no, you should use `const`.
 
+  * 🔑 Ask yourself if you need to take advantage of the `this` context inside your function. If not, convert it to an arrow function.
 
-* Open [Solved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/06-Stu_ConvertConstLetArrow/Solved/index.js) in your code editor and walk through the code with the class. in your IDE and explain the following: 
+  * 🔑 Remember that arrow functions can't be used as constructor functions.
 
   * Go through each example in the solved code and show the newer syntax.
 
@@ -465,73 +539,82 @@ In this example we will convert a prebuilt Crystal Guessing Game to use the new 
 
   * ☝️ What is a good use for `let`?
 
-  * 🙋 When we need to reassign a value. An example of this would be a counter variable like `i`
+  * 🙋 When we need to reassign a value. An example of this would be a counter variable like `i`.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 Remember to rely on your classmates, TAs and instructor for assistance. Generally you should try to use `const` and `let` as well as arrow functions and seek assistance if you are confused about usage. It may seem weird at first but you this will come second nature to you sooner than you think.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) and the [MDN Web Docs on const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
-
 
 ### 11. Instructor Demo: Functional Loops (5 min) 
 
-* Open [07-FunctionalLoops](../../../../01-Class-Content/09-NodeJS/01-Activities/07-Ins_FunctionalLoops/index.js) in your browser and demonstrate the following:
+* Open `07-Ins_FunctionalLoops/index.js` in your browser and demonstrate the following:
 
-  * 🔑 In this demonstration students will be introduced to new Array methods `forEach`, `filter`, and `map`.
-    * `forEach` preforms a callback on each item in the array, mutating it in place
-    * `filter` returns a new array of items that result in a truthy value after being passed into the callback
-    * `map` is very similar to `forEach` with the exception that it returns a new array. We can use it to create an array of modified elements if we so choose
+  * `forEach()` performs a callback on each item in the array, mutating it in place.
 
-  * 🔑  Explain that `filter` and `map` are used heavily in React when rendering elements from array data. Students have probably seen `forEach` already, but it's a good stepping stone for understanding `filter` and `map`.
+  * `filter()` returns a new array of items that result in a truthy value after being passed into the callback.
 
-  *  Go through each example in [index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/21-Ins_FunctionalLoops/index.js) one at a time to demonstrate the utility of `forEach`, `filter`, and `map`. 
+  * `map()` is very similar to `forEach()` with the exception that it returns a new array. We can use it to create an array of modified elements if we so choose.
 
+  * 🔑  Explain that `filter()` and `map()` are used heavily in React when rendering elements from array data. Students have probably seen `forEach()` already, but it's a good stepping stone for understanding `filter()` and `map()`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the difference between `filter` and `forEach`?
+  * ☝️ What is the difference between `filter()` and `forEach()`?
 
-  * 🙋 Filter returns a brand new array while a `forEach` mutates the existing array
+  * 🙋 `filter()` returns a brand-new array, while `forEach()` mutates the existing array.
   
-  * ☝️ How is `.map` different than `.filter`?
+  * ☝️ How is `map()` different than `filter()`?
   
-  * 🙋 `map` will return a brand new array like `filter` does, however the length of the array that `map` returns will be the exact same as the input array. This isn't always the case for the `filter` method.
-
+  * 🙋 `map()` will return a brand-new array like `filter()` does; however, the length of the array that `map()` returns will be the exact same as the input array. This isn't always the case for the `filter()` method.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [08-Stu-FunctionalLoops](../../../../01-Class-Content/09-NodeJS/01-Activities/08-Stu_FunctionalLoops/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_FunctionalLoops/README.md`.
 
+### 12. Student Do: Functional Loops (15 min)
 
-### 12. Student Do: Functional Loops (15 mins)
-
-* Direct students to the activity instructions found in [08-Stu-FunctionalLoops](../../../../01-Class-Content/09-NodeJS/01-Activities/08-Stu_FunctionalLoops/README.md).
+* Direct students to the activity instructions found in `08-Stu_FunctionalLoops/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Functional Loops
+  ```md
+  # 🏗️ Implement Functional Loops
 
-In this activity we will use the `map` and `filter` methods to solve problems we previously would have used a for loop for.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to implement `map()` and `filter()` to solve problems instead of using a `for` loop.
 
-* Open the [Unsolved](Unsolved) folder and examine the `map.js` and `filter.js` files. Study the examples provided and Complete the problems outlined in the comments.
+  ## Acceptance Criteria
 
-### Bonus
+  * It's done when I have opened the `filter.js` file and mapped through `originalArray` and created a new array containing only its prime numbers using `filter()`.
 
-* Use arrow functions as callbacks here.
-```
+  * It's done when I have used `filter()` to return an array containing only its numbers larger than 5.
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  * It's done when I have opened `map.js` and used `map()` to map through `originalArray` and set the result equal to a new `tripledArray` array.
 
+  * It's done when I have mapped through the `originalArray` and returned a new array with the results `odd` or `even`.
 
-### 13. BREAK (30 mins)
+  ## 💡 Hints
 
+  How can you use the term immutable data in a definition of `map()` and `filter()`?
 
+  ## 🏆 Bonus
 
-### 14. Instructor Review: Functional Loops (10 mins) 
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can we implement arrow functions as callbacks in this activity?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+### 13. BREAK (30 min)
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 14. Instructor Review: Functional Loops (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -539,15 +622,19 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Remember that each of these array methods is just another type of for loop.
+  * ✔️ `map()`
 
-  * ✔️ We take each item in an array, manipulate it in some way and return the original mutated array or a modified version of the original array.
+  * ✔️ `filter()`
 
-* Open [08-Solved](../../../../01-Class-Content/09-NodeJS/01-Activities/08-Stu_FunctionalLoops/Solved) in your IDE and explain the following: 
+* Open `08-Stu_FunctionalLoops/Solved` in your IDE and explain the following: 
 
-  * With the `map` method, a callback is run once for every element in the array. The value that is returned gets addded to the corresponding index of the new array.
+  * 🔑  Remember that each of these array methods is just another type of `for` loop.
+
+  * 🔑  We manipulate each item in an array in some way and return the original mutated array or a modified version of the original array.
+
+  * With the `map()` method, a callback is run once for every element in the array. The value that is returned gets added to the corresponding index of the new array, as shown in the following example:
 
   ```js
   const originalArray = [1, 3, 2, 5, 10];
@@ -562,9 +649,10 @@ In this activity we will use the `map` and `filter` methods to solve problems we
   const tripledArray = originalArray.map(data => data * 3);
   const oddOrEven = originalArray.map(num => (num % 2 === 0 ? "even" : "odd"));
   ```
-  * With the `filter` method, if the callback function returns something truthy, the array element is copied to the new array, otherwise it is skipped.
+
+  * With the `filter()` method, if the callback function returns something truthy, the array element is copied to the new array. Otherwise it is skipped.
   
-    * The example below should contain an array of only prime numbers, the second should only contain numbers larger than `5`.
+  * In the following example, the first array should contain only prime numbers, and the second should contain only numbers larger than `5`:
 
   ```js
   const originalArray = [1, 3, 2, 5, 10];
@@ -596,24 +684,21 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are some real life use cases for the `filter` method 
+  * ☝️ What are some real-life use cases for the `filter()` method?
 
-  * 🙋 When filtering out a list of images that contain the word `large` in the filename.
-  * 🙋 When returning an array of all user accounts that use `@gmail.com`
-  * 🙋 When grabbing a list of github issues that have a status of 'closed'
+  * 🙋 When filtering out a list of images that contain the word `large` in the file name; when returning an array of all user accounts that use `@gmail.com`; or when grabbing a list of GitHub issues that have a status of `closed`.
 
   * ☝️ What is an example of when you might want to map over something?
 
-  * 🙋 When returning an HTML line item element for every item in a list while building a todo list.
+  * 🙋 When returning an HTML line-item element for every item in a list while building a to-do list.
 
 * Answer any questions before proceeding to the next activity.
 
+### 15. Instructor Demo: Template Literals (5 min) 
 
-### 15. Instructor Demo: Template Literals (5 mins) 
+* Open `09-Ins_Template_Literals/index.js` in your browser and demonstrate the following:
 
-* Open [09-Ins-Template_Literals](../../../../01-Class-Content/09-NodeJS/01-Activities/09-Ins_Template_Literals/index.js) in your browser and demonstrate the following:
-
-  * 🔑  Using String interpolation, or template strings, we have a new way of concatenating variables to the rest of strings. This is a new feature included in ES6.
+  * 🔑  Using string interpolation, or template strings, we have a new way of concatenating variables to the rest of strings. This is a new feature included in ES6.
 
   * 🔑 Template strings are much more readable and easier to manage. Consider the following example:
 
@@ -633,33 +718,52 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
   * ☝️ What are the main differences that you notice in syntax between regular string concatenation and template literals?
 
-  * 🙋 Immediately we notice that template strings use backticks instead of quotes. Additionally, instead of using plus signs we can now reference variables explicitly using the `${}` syntax.
+  * 🙋 Immediately we notice that template strings use backticks instead of quotes. Additionally, instead of using plus signs, we can now reference variables explicitly using the `${}` syntax.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [10-Stu-Template-Literals](../../../../01-Class-Content/09-NodeJS/01-Activities/10-Stu_Template_Literals/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Template_Literals/README.md`.
 
-### 16. Student Do: Template Literals (15 mins) 
+### 16. Student Do: Template Literals (15 min) 
 
-* Direct students to the activity instructions found in [10-Stu-Template-Literals](../../../../01-Class-Content/09-NodeJS/01-Activities/10-Stu_Template_Literals/README.md).
+* Direct students to the activity instructions found in `10-Stu_Template_Literals/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Template Literals
+  ```md
+  # 🏗️ Implement Template Literals
 
-* In this activity we will use ES6 template literals to render html.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to know how to use template strings to render HTML.
 
-* First create a music object following the comments in `Unsolved/index.js`.
+  ## Acceptance Criteria
 
-* Then use template literal syntax to display your objects data. When you open `index.html` you should see the results if completed successfully.
-```
+  * It's done when I have created a `music` object in `Unsolved/index.js`.
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  * It's done when I have added `title`, `artist`, and `album` properties to the `music` object.
 
-### 17. Instructor Review: Template Literals (15 mins)
+  * It's done when I have used template strings in the `div` tags to output data from the `music` object.
+
+  * It's done when I open `index.html` and see the results.
+
+  ## 💡 Hints
+
+  * Can we use template strings in place of string concatenation?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * It's easy to get confused about which syntax belongs to which technology. The dollar sign (`$`) is used a lot in JavaScript&mdash;what are some other places you have seen the dollar sign used?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 17. Instructor Review: Template Literals (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -667,17 +771,23 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Template strings are much easier to read than traditional string concatenation
+  * ✔️ Backticks vs. quotation marks
 
-  * ✔️ Dealing with spacing is a lot easier using template literals
+  * ✔️ `${}` syntax
 
-  * ✔️ Don't forget to use backticks instead of quotes. This is a very easy mistake to make.
+  * ✔️ Template literals vs. string concatenation
 
-* Open [Stu-Template-Literals/Solved](../../../../01-Class-Content/09-NodeJS/01-Activities/10-Stu_Template_Literals/Solved/index.js) in your IDE and explain the following: 
+* Open `10-Stu_Template_Literals/Solved/index.js` in your IDE and explain the following: 
 
-  * Here we create a template string that will eventually be injected into the DOM
+  * 🔑  Template strings are much easier to read than traditional string concatenation.
+
+  * 🔑  Dealing with spacing is a lot easier using template literals.
+
+  * 🔑  Don't forget to use backticks instead of quotes. This is a very easy mistake to make.
+
+  * In the following example, we create a template string that will eventually be injected into the DOM:
 
   ```js
     const music = {
@@ -698,7 +808,7 @@ In this activity we will use the `map` and `filter` methods to solve problems we
   element.innerHTML = songSnippet;
   ```
 
-  * 🔑  We use the `${}` syntax to reference the music object and the variables within it in our template string. That template string eventually gets added to the DOM as pure HTML
+  * 🔑  We use the `${}` syntax to reference the music object and the variables within it in the template string. That template string eventually gets added to the DOM as pure HTML.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -708,64 +818,60 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN Template Literal documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), and stick around for Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), and stick around for office hours to ask for help.
 
 * Answer any questions before ending the class.
 
-
-
 ### 18. Instructor Do: Stoke Curiosity (10 min)
-
-* Welcome students to class.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* ☝️ What are some of the new syntax rules you guys have learned this week?
+  * ☝️ What are some of the new syntax rules you have learned today?
 
-* 🙋 This week we learned about arrow functions, `let`, `const`, and template strings.
-  
-* ☝️ What are some of the differences between `this` in Node compared to `this` in the browser?
+  * 🙋 This week we learned about arrow functions, `let`, `const`, and template strings.
+    
+  * ☝️ What are some of the differences between `this` in Node.js and `this` in the browser?
 
-* 🙋 In the browser `this` refers to the window object, while in node, the `this` keyword refers to the global object. The `this` keyword is all about context, and therefore it changes based on where you run it. 
+  * 🙋 In the browser, `this` refers to the `window` object, while in Node.js, `this` refers to the `global` object. The `this` keyword is all about context, so it changes based on where you run it. 
 
-* ☝️ Take moment to think about some things that are now possible because javascript runs outside the browser. Can you name a few examples? 
+  * ☝️ What are some examples of things that are now possible with JavaScript running outside the browser?
 
-* 🙋 The ability to run javascript outside of the browser now allows us to create web servers, our own APIs, command line applications and have manipulate the file system. A lot of applications that we use every day like Slack, Discord, and even VSCode are written in javascript and packaged in a binary using something called [Electron](https://www.electronjs.org/).
-  * Please note that while we won't cover electron in this course, it is important to understand the options developers have because javascript can be run outside of the browser.
+  * 🙋 Running JavaScript outside the browser now allows us to create web servers, APIs, and command-line applications and manipulate the file system. A lot of applications that we use every day like Slack, Discord, and even VS Code are written in JavaScript and packaged in a binary using a framework called [Electron](https://www.electronjs.org/).
 
-### 19. Instructor Demo: `process.argv` (5 min) 
+  * While we won't cover Electron in this course, it is important for students to understand the options that developers have now that they can run JavaScript outside of the browser.
 
-* Open [11-Ins_process.argv](../../../../01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js) in your terminal and demonstrate the following:
+### 19. Instructor Demo: process.argv (5 min) 
+
+* Open `11-Ins_process.argv/index.js` in your terminal.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
-  * 🔑  When we run this code in the terminal we see that the output is an array that contains three items
+  * 🔑  When we run the following code at the command prompt, we see that the output is an array that contains three items:
 
-    ```sh
-    [
-    '/usr/local/bin/node',
-    '/Users/johnmccambridge/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js'
-    ]
-    ```
+  ```sh
+  [
+  '/usr/local/bin/node',
+  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js'
+  ]
+  ```
 
-  * 🔑  When we add additional arguments to the command, `node index.js Hello World!` we get this following result:
+  * 🔑  When we add additional arguments to the command `node index.js Hello World!`, we get the following result:
 
-    ```sh
-    [
-    '/usr/local/bin/node',
-    '/Users/johnmccambridge/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js',
-    'hello',
-    'world!'
-    ]
-    ```
-    * 🔑 We store command line arguments in an object property, `process.argv`. These can be thought of as *argument values* passed to execution *process* at runtime. This will return an array, and therefore we can isolate just the additional arguments by accessing the correct index position.
+  ```sh
+  [
+  '/usr/local/bin/node',
+  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js',
+  'hello',
+  'world!'
+  ]
+  ```
 
-    ```js
-    console.log(process.argv);
-    console.log(process.argv[2])
-    ```
+  * 🔑 We store command-line arguments in an object property, `process.argv`. These argument values (or `argv`) are passed to execution (or `process`) at runtime. This will return an array, and therefore we can isolate just the additional arguments by accessing the correct index position, as follows:
 
-
+  ```js
+  console.log(process.argv);
+  console.log(process.argv[2])
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -773,55 +879,61 @@ In this activity we will use the `map` and `filter` methods to solve problems we
 
   * 🙋 Running the application returns an array.
 
-  * ☝️ What are the items in the array?'
+  * ☝️ What are the items in the array?
 
-  * 🙋 The first item in the array is the installation location of Node itself. The second item in the array is the **absolute path** to the application. The third and fourth arguments are what we pass into the command line split on a space.
+  * 🙋 The first item in the array is the installation location of Node.js itself. The second item in the array is the **absolute path** to the application. The third and fourth arguments are what we pass into the command line, split on a space.
   
-  * ☝️ What do you think would happen if we wrapped "Hello Word!" in quotes? `node index.js "Hello World!"` 
+  * ☝️ What do you think would happen if we wrapped "Hello World!" in quotes (e.g., `node index.js "Hello World!"`)?
   
-  * 🙋 As you would expect, the entire string is passed as one argument rather than two different arguments split on the space.
+  * 🙋The entire string is passed as one argument, rather than two different arguments split on the space.
 
-  * ☝️ What does it mean for us if we can pass arguments to our Node application?
+  * ☝️ What does it mean for us if we can pass arguments to Node.js applications?
   
   * 🙋 We can work with those values to create dynamic, interactive applications.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [12-Stu_Parameter-Check](../../../../01-Class-Content/09-NodeJS/01-Activities/12-Stu_Parameter-Check/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Parameter-Check/README.md`.
 
-### 20. Student Do: `process.argv` (15 min) 
+### 20. Student Do: process.argv (15 min) 
 
-* Direct students to the activity instructions found in [12-Stu_Parameter-Check](../../../../01-Class-Content/09-NodeJS/01-Activities/12-Stu_Parameter-Check/README.md).
+* Direct students to the activity instructions found in `12-Stu_Parameter-Check/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Parameter Check
+  ```md
+  # 🏗️ Implement `process.argv`
 
-In this activity, you will write a Node.js command line application that accepts two arguments and returns true if the two values are equal and false if they are not.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to use command-line arguments as input when writing Node.js applications.
 
-* Create a file, `index.js`, in your working directory.
+  ## Acceptance Criteria
 
-* Write a script using `process.argv` to accept two command line arguments and compare their values.
+  * It's done when I have created a file, `index.js`, in the working directory.
 
+  * It's done when I use `process.argv` to assign two arguments to variables.
 
-## Hint(s)
+  * It's done when I compare those two variables to see whether they are the same or not.
 
-* Start by simply logging the value of each argument to console.
+  * It's done if the program returns `true` when the values are the same and `false` if they are not. 
 
-* There's more than one way to solve this problem!
+  ## 💡 Hints
 
-## Bonus
+  How many different ways can you solve this problem? Remember that there is not just one correct solution.
 
-* How many ways can you solve this problem?
+  ## 🏆 Bonus
 
-```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  * What is the difference between `===` and `==` when comparing two values in JavaScript?
 
-### 21. Instructor Review: `process.argv` (10 min) 
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: process.argv (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -829,180 +941,192 @@ In this activity, you will write a Node.js command line application that accepts
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Value stored in `process.argv` are access by an array index
+  * ✔️ `process.argv`
 
-  * ✔️ This is one of those concepts where you have to remember that there is no one correct way to solve the problem.
+* Open `12-Stu_Parameter-Check/Solved/index.js` in your IDE and explain the following: 
 
-* Open [12-Solved](../../../../01-Class-Content/09-NodeJS/01-Activities/12-Stu_Parameter-Check/Solved/index.js) in your IDE and explain the following: 
+  * 🔑 Values stored in `process.argv` are accessed by an array index.
 
-  * When we run our app we see a list of boolean values. All of them are checking for the same condition, but each uses a different method
+  * 🔑 This is one of those concepts where you have to remember that there is no one correct way to solve the problem.
 
-    ```sh
-    node index.js 3 4
-    node index.js 7 7
-    ```
+  * When we run the app, we see a list of Boolean values. All of them are checking for the same condition, but each uses a different method, as shown in the following example:
 
-  * 🔑  We store the second and third elements in the array to variables
+  ```sh
+  node index.js 3 4
+  node index.js 7 7
+  ```
 
-    ```js
-    var a = process.argv[2];
-    var b = process.argv[3];
-    ```
+  * 🔑 We store the second and third elements in the array to variables, as follows:
 
-  * 🔑 Here we can see that there is more than one way to check if our statement is true
+  ```js
+  var a = process.argv[2];
+  var b = process.argv[3];
+  ```
 
-    ```js
-    // using a conditional statement
-    if (a === b) {
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+  * 🔑 In the following example, we can see that there is more than one way to check if the statement is true:
 
-    //using a ternary operator
-    console.log(a === b ? true : false)
+  ```js
+  // using a conditional statement
+  if (a === b) {
+      console.log(true);
+  } else {
+      console.log(false);
+  }
 
-    // comparing variables
-    console.log(a === b);
+  //using a ternary operator
+  console.log(a === b ? true : false)
 
-    // comparing argument values directly
-    console.log(process.argv[2] === process.argv[3]);
-    ```
+  // comparing variables
+  console.log(a === b);
+
+  // comparing argument values directly
+  console.log(process.argv[2] === process.argv[3]);
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How could we improve our code for when a user fails to enter two arguments
+  * ☝️ How could we improve the code for when a user fails to enter two arguments?
 
-  * 🙋 We could check if `a` or `b` is falsy, and instead console log a message with directions
+  * 🙋 We could check if `a` or `b` is falsy and instead console log a message with directions.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 Be sure to meet with your TAs during office hours or consult with the [node documentation](https://nodejs.org/api/process.html#process_process_argv).
+  * 🙋 We can refer to supplemental material, read the [Node.js documentation on process.argv](https://nodejs.org/api/process.html#process_process_argv), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 22. Instructor Demo: Read/Write File (5 min) 
 
-* Open [13-Ins-Read-WriteFile](../../../../01-Class-Content/09-NodeJS/01-Activities/13-Ins-Read-WriteFile/index.js) in your browser and demonstrate the following:
+* Open `13-Ins-Read-WriteFile/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
-  * 🔑 When we run this application we can see the output is the content of the companion `.csv` file in the project folder:
+  * 🔑 When we run this application, we can see that the output is the content of the companion `.csv` file in the project folder, as shown in the following example:
 
-    ```sh
-    10,123,76,5003,9,0.127,40,-1,2^4
-    ```
+  ```sh
+  10,123,76,5003,9,0.127,40,-1,2^4
+  ```
 
-  * 🔑 This is made possible though the use of Node's native `fs` module. The `fs` module is part of the **standard library** that includes dozens of **modules** that extend the basic functionality of Node.
+  * 🔑 This is made possible through the use of Node.js's native `fs` module. The `fs` module is part of the **standard library** that includes dozens of modules that extend the basic functionality of Node.js.
 
-  * 🔑 In order to use these modules, we need to *import* them into our app using `require` statements. Here we are importing `fs` and assigning it to variable of the same name.
+  * 🔑 To use these modules, we need to import them into the app using `require` statements. In the following example, we are importing `fs` and assigning it to a variable of the same name:
 
-    ```js
-    var fs = require("fs");
-    ```
+  ```js
+  var fs = require("fs");
+  ```
 
-  * 🔑 The `fs` method `readFile` accepts three arguments: 1. the file we want to read, the encoding format we want to use to read the file, and a callback.
+  * 🔑 The `fs` method `readFile` accepts three arguments&mdash;the file we want to read, the encoding format we want to use to read the file, and a callback, as shown in the following example:
 
-    ```js
-    fs.readFile("data.csv", "utf8", function(error, data) {
+  ```js
+  fs.readFile("data.csv", "utf8", function(error, data) {
 
-    if (error) {
-        return console.log(error);
-    }
+  if (error) {
+      return console.log(error);
+  }
 
-    console.log(data);
-    });
-    ```
-* Comment out the `readFile` function and comment in the `writeFile` function in [13-Ins-Read-WriteFile](../../../../01-Class-Content/09-NodeJS/01-Activities/13-Ins-Read-WriteFile/index.js).
+  console.log(data);
+  });
+  ```
+
+* Comment out the `readFile` function and comment in the `writeFile` function in `13-Ins-Read-WriteFile/index.js`.
   
-  * 🔑 `fs.writeFile` will not only generate non-existent files but will also overwrite them if they already exist
+  * 🔑 `fs.writeFile` will not only generate nonexistent files but will also overwrite them if they already exist.
   
-  * 🔑 Our code is similar, but different from the previous demo in a few key ways. Take note of the fact that we don't start out with a `.txt` file in our working directory.
+  * 🔑 This code is similar, but different from the previous demo in a few key ways. Note in the following example that we don't start out with a `.txt` file in the working directory:
 
-    ```js
-    fs.writeFile("log.txt", process.argv[2], function(err) {
+  ```js
+  fs.writeFile("log.txt", process.argv[2], function(err) {
 
-    if (err) {
-        return console.log(err);
-    }
+  if (err) {
+      return console.log(err);
+  }
 
-    console.log("Success!");
-    ```
+  console.log("Success!");
+  ```
 
- * 🔑  When we run the the above code using `node index.js Hello` we will get a newly created `log.txt` file with the text 'Hello' in it.
+ * 🔑  When we run the preceding code using `node index.js Hello`, we will get a newly created `log.txt` file with the text “Hello” in it.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What do you think this application does?
 
-  * 🙋 This application will _read a file_, `data.csv`, and will log the results stored in a variable, `data`.
+  * 🙋 This application will read a file (`data.csv`) and will log the results stored in a variable (`data`).
 
-  * ☝️ Why do you think we need to import modules if they are built-in to Node to begin with?
+  * ☝️ Why do you think we need to import modules if they are built into Node.js to begin with?
 
-  * 🙋 We import modules into our application so that we are only loading exactly what we need. This will speed up the performance of our applications. 
+  * 🙋 We import modules into the application to load only exactly what we need, speeding up application performance. 
   
   * ☝️ What is different about the code in the `writeFile` example?
   
-  * 🙋 Rather than `readFile`, we are using the `fs` method `writeFile`. Rather than specifying an encoding format, our second argument is `process.argv[2]`.
+  * 🙋 Rather than `readFile`, we are using the `fs` method `writeFile`. Rather than specifying an encoding format, the second argument is `process.argv[2]`.
 
-  * ☝️ What happens when we run our application multiple times?
+  * ☝️ What happens when we run the application multiple times?
 
   * 🙋 `writeFile` overwrites existing files.
 
-  * ☝️ How do we think we can resolve this issue?
+  * ☝️ How can we resolve this issue?
 
-  * 🙋 We need a method that can _append_ text to files.
+  * 🙋 We need a method that can append text to files.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [14-Stu-appendFile](../../../../01-Class-Content/09-NodeJS/01-Activities/14-Stu_appendFile/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_appendFile/README.md`.
 
 ### 23. Student Do: Append File (15 min) 
 
-* Direct students to the activity instructions found in [14-Stu-appendFile](../../../../01-Class-Content/09-NodeJS/01-Activities/14-Stu_appendFile/README.md).
+* Direct students to the activity instructions found in `14-Stu_appendFile/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# appendFile
+  ```md
+  # 🏗️ Implement and Use `fs.appendFile()`
 
-In this activity, you will create a "commit logger" that records commit messages (for poetic purposes) using `fs`.
+  Work with a partner to implement the following user story:
 
-## Instructions
+  * As a developer, I want to be able to add to a file without overwriting the existing content.
 
-* In your working directory, create a Node application, `index.js`, that accepts a command line argument, and, each time it is run, will write the argument to file _without_ overwriting the existing text.
+  ## Acceptance Criteria
 
-* You may need to consult the Node.js `fs` documentation for the appropriate method and its usage.
+  * It's done when I have created a `index.js` file that accepts a command-line argument.
 
-## Hint(s)
+  * It's done when the program takes the input from the user and *appends* it to the file.
 
-* If `fs.readFile` reads a file and `fs.writeFile` writes, but _overwrites_, a file, what method do you think will allow you to _append_ text to a file?
+  * It's done after I have run the program, passed in some text, and confirmed that it appended the text to `log.txt`.
 
-## Bonus
+  ## 💡 Hints
 
-* How would you add arguments on new lines? 
+  Going by naming convention alone, if `fs.readFile` reads a file and `fs.writeFile` writes to a file, what do you think the method for appending is?
 
-```
+  ## 🏆 Bonus
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can you add text from additional arguments on a new line?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
 ### 24. Instructor Review: Append File (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with appending to files? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel appending to files? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `appendFile` appends text to file rather than overwriting the file
+  * ✔️ `fs.appendFile`
 
-* Open [Stu-appendFile/Solved](../../../../01-Class-Content/09-NodeJS/01-Activities/14-Stu_appendFile/Solved/index.js) in your IDE and explain the following: 
+* Open `14-Stu_appendFile/Solved/index.js` in your IDE and explain the following: 
 
-  * When we run our command line application with the following we should see this text appended to the file in [14-Stu-appendFile](../../../../01-Class-Content/09-NodeJS/01-Activities/14-Stu_appendFile/Solved/log.txt).
+* 🔑 `appendFile` appends text to file rather than overwriting the file.
+ 
+ * When we run the command-line application with the following code, we should see this text appended to the file in `14-Stu_appendFile/Solved/log.txt`:
 
   ```sh
     node index.js "first"
@@ -1010,32 +1134,31 @@ In this activity, you will create a "commit logger" that records commit messages
     node index.js "everyone wants a log"
   ```
 
-  * The application now is adding text to our file rather than overwriting it
+  * Now the application is adding text to the file rather than overwriting it.
 
-  * 🔑  Our application is very similar to the previous demo, but here we have refactored it to use `appendFile` rather than `writeFile`:
+  * 🔑  This application is very similar to the previous demo, but here we have refactored it to use `appendFile` rather than `writeFile`, as shown in the following code:
 
-    ```js
-    fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
-        if (err) {
-        console.log(err);
-        } else {
-        console.log("Commit logged!");
-        }
-    });
-    ```
+  ```js
+  fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
+    if (err) {
+    console.log(err);
+    } else {
+    console.log("Commit logged!");
+    }
+  });
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What does the `\n` do when we concatenate it with the value store in `process.argv[2]`?
   
-  * 🙋 This creates a new line character
+  * 🙋 This creates a new line character.
   
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 The solution can be easily found by searching for, and reading, the [Node.js documentation for the File System module](https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback).
+  * 🙋 We can refer to supplemental material, read the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback), and stick around for office hours to ask for help.
 
-
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before ending class for the day.
 
 ### 25. END (0 min)
 

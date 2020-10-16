@@ -1,34 +1,44 @@
-# 05.2 Full-Time Lesson Plan: Node 
+# 05.2 Full-Time Lesson Plan: Node.js
 
 ## Overview 
 
-In this lesson we will be taking a deeper dive into the world that is Node. We will be learning how to take advantage of native modules that come baked into Node itself. We will access the file system, pass command line arguments into our applications, get acquainted with Node Package Manager and finally build our own CLI apps using a package called inquirer.
+In this lesson, we will take a deeper dive into the world that is Node.js. We will explore how to take advantage of native modules that come built into Node.js itself. We will access the file system, pass command-line arguments into applications, get acquainted with Node Package Manager, and finally build CLI apps using a package called `inquirer`.
 
 ## Instructor Notes
 
-* Complete activities `15-Ins-Modularization` through `20-Stu_Inquirer`
+* In this lesson, students will complete activities `11-Ins_process.argv` through `20-Stu_Inquirer`.
 
-* We can explain to students that npm is much like linking a CDN link for a framework directly in our HTML, only we will download it into our project and store it in a folder called "node_modules"
+* Explain to students that npm works much like embedding a CDN link for a framework directly in the HTML, only we will download it into the project and store it in a folder called `node_modules`.
 
-* At this point students should have both Node and NPM installed, as they are packaged together when installed. To ensure that npm is installed properly please have the students run `npm --version` in the terminal. Anything other than a version number should be indicate to the the TAs that student needs assistance.
+* At this point students should have both Node.js and npm installed. To ensure that npm is installed properly, instruct students to visit the [Node.js installation guide on The Full-Stack Blog](TODO).
+
+* This lesson covers some concepts that you might want to review to prepare for student questions:
+
+  * [MDN Web Docs on for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+
+  * [MDN Web Docs on spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+  * [MDN Web Docs on destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* If you are comfortable doing so, live code the solutions to the activities. If not, no worries. Use the solutions provided and follow the prompts and talking points for review. 
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus for each activity is meant to give them "food for thought". Rather than extra coding practice, it is a self-study on related topics that are beyond the scope of this unit for those who want to dig deeper and further their knowledge on this topic.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Learning Objectives
 
 By the end of class, students will be able to:
 
-* Run Node.js applications from the command line with arguments
+* Run Node.js applications from the command line with arguments.
 
-* Import and use the native `fs` module to read and write to the file system
+* Import and use the native `fs` module to read and write to the file system.
 
-* Initialize projects and install third-party modules like Inquirer using npm
+* Initialize projects and install third-party modules like `inquirer` using npm.
 
-* Use "dependencies" and investigate the content of `package.json`
+* Use dependencies and investigate the content of `package.json`.
 
 ## Time Tracker
 
@@ -38,7 +48,7 @@ By the end of class, students will be able to:
 | 10:05AM| 2   | Student Do: Modularization                 | 0:15     |
 | 10:20AM| 3   | Instructor Review: Modularization          | 0:10     |
 | 10:30AM| 4   | Instructor Demo: `npm`                     | 0:05     |
-| 10:35AM| 5   | Student Do: `npm`                          | 0:15     |
+| 10:35AM| 5   | Student Do: Package.json and npm           | 0:15     |
 | 10:50AM| 6   | Instructor Review: `npm`                   | 0:10     |
 | 11:00AM| 7   | Instructor Demo: Inquirer                  | 0:05     |
 | 11:05AM| 8   | Student Do: Inquirer users                 | 0:15     |
@@ -62,30 +72,30 @@ By the end of class, students will be able to:
 
 ### 1. Instructor Demo: Modularization (5 min) 
 
-* Open the [15-Ins-Modularization](../../../../01-Class-Content/09-NodeJS/01-Activities/15-Ins_Modularization) directory in your IDE and demonstrate the following:
+* Open the `15-Ins_Modularization` directory in your IDE.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
-  * 🔑 We notice that the output of this file is: 
+  * 🔑 We see the following output of this file: 
 
-    ```sh
-    apple
-    1
-    ```
+  ```sh
+  apple
+  1
+  ```
 
-  * 🔑  We are importing a dependency, `badmath`, and logging the results of `badmath.pie` and `badmath.predictable`. 
+* 🔑  We are importing a dependency, `badmath`, and logging the results of `badmath.pie` and `badmath.predictable`, as follows: 
 
-    ```js
-    var badmath = require("./badmath.js");
+  ```js
+  var badmath = require("./badmath.js");
 
-    console.log(badmath.pie);
+  console.log(badmath.pie);
 
-    console.log(badmath.predictable());
-    ```
+  console.log(badmath.predictable());
+  ```
 
-* Open the [badmath.js](01-Class-Content/09-NodeJS/01-Activities/15-Ins_Modularization/badmath.js) file and explain the following:
+* Open the `15-Ins_Modularization/badmath.js` file and explain the following:
 
-  * We declare a `pie` and `predictable` variables:
+  * We declare a `pie` and `predictable` variables, as follows:
 
   ```js
   var pie = "apple";
@@ -95,7 +105,7 @@ By the end of class, students will be able to:
   }
   ```
 
-  * 🔑 We _export_ our `pie` and `predictable` variables as an object stored in `module.exports`:
+  * 🔑 We export the `pie` and `predictable` variables as an object stored in `module.exports`, as shown in the following example:
 
   ```js
   module.exports = {
@@ -106,54 +116,61 @@ By the end of class, students will be able to:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is referenced by the keyword **module**?'
+  * ☝️ What is referenced by the keyword `module`?
 
-  * 🙋 Our file, `badmath.js`.
+  * 🙋 The file `badmath.js`.
 
-  * ☝️ Where can we look if we want to learn more about `module.exports`?
+  * ☝️ Where can we look t o learn more about `module.exports`?
 
-  * 🙋 If we want to learn more, we can read about it in the [module.exports documentation](https://nodejs.org/api/modules.html#modules_module_exports)
+  * 🙋 To learn more, we can read the [Node.js documentation on module.exports](https://nodejs.org/api/modules.html#modules_module_exports).
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [16-Stu-maths](../../../../01-Class-Content/09-NodeJS/01-Activities/16-Stu_maths/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_maths/README.md`.
 
 ### 2. Student Do: Modularization (15 min) 
 
-* Direct students to the activity instructions found in [16-Stu-maths](../../../../01-Class-Content/09-NodeJS/01-Activities/16-Stu_maths/README.md).
+* Direct students to the activity instructions found in `16-Stu_maths/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-    ```md
-    # Maths Module
+  ```md
+  # 🏗️ Implement and Use Modules
 
-    The JavaScript `Math` library contains many useful properties and methods. But it's missing a few of the basics. In this activity, you will create your own `maths` module then import it into a Node application to access its properties and methods.
+  Work with a partner to implement the following user story:
 
-    Running `node index.js sum 3 4` will return 7.
+  * As a developer, I want to write and implement my own modules that have their own properties and methods.
+  
+  * As a developer, I want to learn how to import those modules using Node.js.
 
-    ## Instructions
+  ## Acceptance Criteria
 
-    * Create two files, `index.js` and `maths.js`, then import `maths.js` into `index.js`.
+  * It's done when I have created two files, `index.js` and `maths.js`.
 
-    * Write four methods for the results of the four basic mathematical operations in `maths.js`: `sum`, `difference`, `product`, and `quotient`; and then export them.
+  * It's done when I have imported `maths.js` into `index.js`.
 
-    * In `index.js`, create variables to capture the values passed from the command line in `process.argv`: `operation`, `numOne` and `numTwo`.
+  * It's done when I have written four methods for the results of the four basic mathematical operations in `maths.js` (`sum()`, `difference()`, `product()`, and `quotient()`).
 
-    * Next, write a `switch` statement that accepts an `operation` parameter.
+  * It's done when I have created variables to capture the values passed from the command line: `operation`, `numOne` and `numTwo`.
 
-    * Within each `case` of the `switch`, use the corresponding `maths` methods to perform the operation on the numbers taken from the command line using `process.argv`.
+  * It's done when I have written a `switch` statement that accepts an `operation` parameter.
 
-    ## Hint(s)
+  * It'd done when each `case` of the `switch` statement uses the corresponding `maths` methods to perform each math operation on the numbers.
 
-    * You will need to use `parseInt()`. But why?
+  ## 💡 Hints
 
-    ## Bonus
+  What will the `parseInt()` method allow us to do?
 
-    * You can also export your functions directly. How? 
+  ## 🏆 Bonus
 
-    ```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  * How can you export functions and objects directly?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
 ### 3. Instructor Review: Modularization (10 min) 
 
@@ -163,111 +180,118 @@ By the end of class, students will be able to:
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ This exercise combines the concepts of `process.argv` with the idea of `module.exports`.
+  * ✔️ `module.exports`
 
-  * ✔️ We exported an object containing all our math methods like sum, difference, product and quotient
+  * ✔️ `require(...)`
 
-  * We capture the exported object on the other side by using a require statement at the top of the file
+  * ✔️ `process.argv`
 
-* Open [index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/16-Stu_maths/Solved/index.js) in your IDE and explain the following: 
+* Open `16-Stu_maths/Solved/index.js` in your IDE and explain the following: 
 
-  * When we run the commands below, we can see the output of each math operation in the terminal.
+  * 🔑 This exercise combines the concepts of `process.argv` with the idea of `module.exports`.
 
-    ```sh
-    node index.js sum 3 4
-    node index.js difference 3 4
-    node index.js product 3 4
-    node index.js quotient 3 4
-    ```
+  * 🔑 We exported an object containing all the math methods like `sum()`, `difference()`, `product()`, and `quotient()`.
 
-  * We import our `maths` module and declare three variables, `operation`, `numOne` and `numTwo` to store the values passed to `process.argv` from the command line:
+  * We capture the exported object on the other side by using a `require` statement at the top of the file.
 
-    ```js
-    const maths = require('./maths');
+  * When we run the following commands, we can see the output of each math operation at the command prompt:
 
-    const operation = process.argv[2];
+  ```sh
+  node index.js sum 3 4
+  node index.js difference 3 4
+  node index.js product 3 4
+  node index.js quotient 3 4
+  ```
 
-    const numOne = parseInt(process.argv[3]);
-    const numTwo = parseInt(process.argv[4]);
-    ```
+  * We import the `maths` module and declare three variables (`operation`, `numOne`, and `numTwo`) to store the values passed to `process.argv` from the command line, as follows:
 
-  * We use a `switch` statement to evaluate the `operation` case and call the corresponding method from our `maths` module:
+  ```js
+  const maths = require('./maths');
 
-    ```js
-    switch (operation) {
-        case 'sum':
-            console.log(maths.sum(numOne, numTwo));
-            break;
-        case 'difference':
-            console.log(maths.difference(numOne, numTwo));
-            break;
-        case 'product':
-            console.log(maths.product(numOne, numTwo));
-            break;
-        case 'quotient':
-            console.log(maths.quotient(numOne, numTwo));
-            break;
-        default:
-            console.log('Check your maths!');
-    }
-    ```
+  const operation = process.argv[2];
 
-  * 🔑  Open [maths.js](../../../../01-Class-Content/09-NodeJS/01-Activities/16-Stu_maths/Solved/maths.js) show that we export our methods directly by declaring them inside of the `exports` object:
+  const numOne = parseInt(process.argv[3]);
+  const numTwo = parseInt(process.argv[4]);
+  ```
 
-    ```js
-    module.exports = {
-        sum: (a, b) => a + b,
-        difference: (a, b) => a - b,
-        product: (a, b) => a * b,
-        quotient: (a, b) => a / b,
-    };
-    ```
+  * We use a `switch` statement to evaluate the `operation` case and call the corresponding method from the `maths` module, as shown in the following code:
+
+  ```js
+  switch (operation) {
+    case 'sum':
+      console.log(maths.sum(numOne, numTwo));
+      break;
+    case 'difference':
+      console.log(maths.difference(numOne, numTwo));
+      break;
+    case 'product':
+      console.log(maths.product(numOne, numTwo));
+      break;
+    case 'quotient':
+      console.log(maths.quotient(numOne, numTwo));
+      break;
+    default:
+      console.log('Check your maths!');
+  }
+  ```
+
+  * 🔑  Open `16-Stu_maths/Solved/maths.js` and show that we export the methods directly by declaring them inside of the `exports` object, as follows:
+
+  ```js
+  module.exports = {
+    sum: (a, b) => a + b,
+    difference: (a, b) => a - b,
+    product: (a, b) => a * b,
+    quotient: (a, b) => a / b,
+  };
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Why do we need to use `parseInt` when getting the numbers from the command line?
 
-  * 🙋 In order to preform math operations in code, the data type for those numbers has to "number".
+  * 🙋 To perform math operations in code, the data type for those numbers has to be a number.
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Node Package Manager (NPM) (5 min) 
+### 4. Instructor Demo: Node Package Manager (npm) (5 min) 
 
-* Run [npm/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/17-Ins-npm/npm/index.js) from the command line and demonstrate the following: 
+* Run `17-Ins-npm/npm/index.js` from the command line and demonstrate the following: 
 
-  * 🔑  When we run this javascript file with node, we will see an error message with a code of `MODULE_NOT_FOUND`
+  * 🔑  When we run this JavaScript file with Node.js, we will see an error message of `MODULE_NOT_FOUND`.
 
-  * 🔑  We will also see the error `Error: Cannot find module 'badmath'`. This refers to the module we are attempting to import on line one of `index.js`
+  * 🔑  We will also see the error message `Error: Cannot find module 'badmath'`, referring to the module we are attempting to import on line one of `index.js`, shown in the following example:
 
     ```js
     const badmath = require('badmath');
     ```
 
-  * To resolve this issue we would need to run the following commands to initialize npm inside this repository. This will a `package.json` file which will keep track of what packages are needed to use the project properly.
+  * To resolve this issue, we would need to initialize npm inside this repository. This will create a `package.json` file that will keep track of which packages are needed to use the project properly. We can do this by running the following commands :
 
     ```sh
     npm init -y
     npm i badmath
     ```
 
-  * 🔑 The `-y` flag tells npm to answer "yes" to each question it normally asks during the init process. This is to save us some time. 
+  * 🔑 The `-y` flag tells npm to answer "yes" to each question it normally asks during the init process, to save us some time. 
 
-  * The second command `npm i` is shorthand for `npm install`. These two commands can be used interchangeably. `npm i badmath` will reach out to npm's registry and install the latest version of the package you named after the command. In our case, we are installing `badmath`. 
+  * The second command, `npm i`, is shorthand for `npm install`. These two commands can be used interchangeably. `npm i badmath` will reach out to npm's registry and install the latest version of the package you named after the command. In this case, you are installing `badmath`. 
  
-* Open the [init](../../../../01-Class-Content/09-NodeJS/01-Activities/17-Ins-npm/init) folder to examine the additional file. 
+* Open the `17-Ins-npm/init` folder to examine the additional file. 
 
   * 🔑  You will notice a difference immediately. This folder comes with a `package.json` file. This describes the repository itself as well as any scripts, dependencies, and licenses associated with the project.
 
-  * 🔑  We can also see when we examine the content of the `package.json` file that one of our required dependencies is `badmath`.
+  * 🔑  We can also see when we examine the content of the `package.json` file that one of the required dependencies is `badmath`, as shown in the following example:
 
     ```json
     "dependencies": {
         "badmath": "^1.0.1"
     },
     ```
-  * Running `npm install` inside the [init directory](../../../../01-Class-Content/09-NodeJS/01-Activities/17-Ins-npm/init) will instruct npm to examine the content of the `package.json` and install anything listed in the dependencies section.
+
+  * Running `npm install` inside `17-Ins-npm/init` will instruct npm to examine the content of the `package.json` and install anything listed in the dependencies section.
   
   * 🔑 You will also notice a `package-lock.json` file that gets created. This keeps track of specific version numbers, but for the most part we don't need to interact with this file in any way.
 
@@ -275,40 +299,63 @@ By the end of class, students will be able to:
 
   * ☝️ How would we make our own `package.json` file?
 
-  * 🙋 We would run `npm init`
+  * 🙋 We would run `npm init`.
   
-  * ☝️ What should we do if there is already a `package.json` in a project we cloned?
+  * ☝️ What can we do if there is already a `package.json` in a project we have cloned?
 
-  * 🙋 We would run `npm install` to get all the needed dependencies.
+  * 🙋 We can run `npm install` to get all the needed dependencies.
   
   * ☝️ Where can we find out what other npm commands are available?
 
-  * 🙋 We can check out the [npm docs](https://docs.npmjs.com/cli-documentation/).
+  * 🙋 We can review the [npm documentation on CLI commands](https://docs.npmjs.com/cli-documentation/).
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [18-Stu-Package-npm](../../../../01-Class-Content/09-NodeJS/01-Activities/18-Stu-Package-npm/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu-Package-npm/README.md`.
 
-### 5. Student Do: Package.json and NPM (15 min)
+### 5. Student Do: package.json and npm (15 min)
 
-* Direct students to the activity instructions found in [18-Stu-Package-npm](../../../../01-Class-Content/09-NodeJS/01-Activities/18-Stu-Package-npm/README.md).
+* Direct students to the activity instructions found in `18-Stu-Package-npm/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-## NPM
+  ```md
+  # 🏗️ Initialize Projects using Node Package Manager (npm)
 
-This activity contains two parts where you will be creating a `package.json` and also installing dependencies from an existing `package.json`. 
+  Work with a partner to implement the following user story:
 
-1. npm initialization
-2. npm install
+  * As a developer, I want to be able to keep track of dependencies using `npm`.
 
-Please refer to the `/init` and `/package` folders and their respective `README.md` files.
-```
+  * As a developer, I want to be able to save packages to my project using `npm install`.
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  ## Acceptance Criteria
 
-### 6. Instructor Review: Node Package Manager (NPM) (10 min) 
+  * It's done when I have navigated to `/init` in the terminal and ran `npm init`.
+
+  * It's done when I have responded to all the prompts regarding my project.
+
+  * It's done when I have confirmed that I have a `package.json` in the `/init` folder.
+
+  * It's done after I have installed `inquirer` in the `/init` folder by running `npm i inquirer --save`.
+
+  * It's done when I have navigated to `/package` in the terminal and ran `npm i`.
+
+  ## 💡 Hints
+
+  How does the `-y` save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How would we create our own `package.json` files? How did `npm` know to install `inquirer` when we ran `npm i` in the `/package/` folder?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 6. Instructor Review: Node Package Manager (npm) (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -316,26 +363,28 @@ Please refer to the `/init` and `/package` folders and their respective `README.
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ In one activity we started from scratch by creating a `package.json` file using `npm init`
+  * ✔️ `npm init`
 
-  * ✔️ In the other activity we used the existing `package.json` to install the dependencies already outlined in the file.
+  * ✔️ `package.json`
 
-* Open the [init](../../../../01-Class-Content/09-NodeJS/01-Activities/18-Stu-Package-npm/init/README.md) readme in your IDE and explain the following: 
+  * ✔️ `npm install --save-dev`
 
-  * We start out here by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses.
+* Open `18-Stu-Package-npm/init/README.md` in your IDE and explain the following: 
+
+  * 🔑We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses, as shown in the following example:
 
     ```sh
     npm init -y
     npm install inquirer --save
     ```
 
-  * 🔑  The second command will install inquirer and also add the package, inquirer, to our dependency list in `package.json`
+  * 🔑  The second command will install `inquirer` and also add the package, `inquirer`, to the dependency list in `package.json`.
   
-* Open [package](../../../../01-Class-Content/09-NodeJS/01-Activities/18-Stu-Package-npm/package/README.md) in your IDE and explain the following: 
+* Open `18-Stu-Package-npm/package/README.md` in your IDE and explain the following: 
 
-  * This exercise has us simply run the install command, because as you can see the `package.json` already exists for this project. Furthermore, this file contains "inquirer" as a dependency.
+  * This exercise has us simply run the `install` command, because as you can see, the `package.json` already exists for this project. Furthermore, this file contains `inquirer` as a dependency. See the following example:
 
     ```sh
     npm install
@@ -349,230 +398,223 @@ Please refer to the `/init` and `/package` folders and their respective `README.
 
   * ☝️ What does the `--save` flag do, and is it always necessary?
 
-  * 🙋 The save flag ensures that we add our dependency to the list outlined inside the package.json. Newer versions of `npm` will do this automatically so it isn't always required.
+  * 🙋 The `--save` flag ensures that we add the dependency to the list outlined inside the `package.json`. Newer versions of npm will do this automatically, so it isn't always required.
 
   * ☝️ How do we install a specific package?
 
-  * 🙋 We can run `npm install <package name>`
+  * 🙋 We can run `npm install <package name>`.
   
-  * ☝️ How do we create a package.json file and skip the questions?
+  * ☝️ How do we create a `package.json` file and skip the questions?
 
-  * 🙋 We can run `npm init -y`
+  * 🙋 We can run `npm init -y`.
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Inquirer (5 min) 
+### 7. Instructor Demo: inquirer (5 min) 
 
-* Open [19-Ins_Inquirer-Demo](../../../../01-Class-Content/09-NodeJS/01-Activities/19-Ins_Inquirer-Demo/) in your browser and demonstrate the following:
+* Run `19-Ins_Inquirer-Demo/index.js` from the command line and demonstrate the following: 
 
-* Run [19-Ins_Inquirer-Demo](../../../../01-Class-Content/09-NodeJS/01-Activities/19-Ins_Inquirer-Demo/index.js) from the command line and demonstrate the following: 
+  * 🔑 We can see a `package.json` that exists already, indicating that we should run the following command:
 
-  * 🔑 This is a folder for a new activity, and we can a `package.json` that exists already. This is an indicator that we should run the following command:
-
-    ```sh
-    npm install
-    ```
+  ```sh
+  npm install
+  ```
   
-  * 🔑 When we run `node index.js` we notice that unlike previous node applications we have built, this one is not only outputting text to the terminal, it is also asking us for some input.
+  * 🔑 When we run `node index.js`, unlike previous Node.js applications that we have built, this one is not only outputting text to the terminal but is also asking us for some input, as shown in the following example:
 
-    ```sh
-    ? What is your user name?
-    ? What is your password?
-    ? Re-enter password to confirm:
-    ```
+  ```sh
+  ? What is your user name?
+  ? What is your password?
+  ? Re-enter password to confirm:
+  ```
 
-  * 🔑 The application asks for our username, a password and then a confirmation. If the passwords match, the application then logs "Success!
+  * 🔑 The application asks for a username, a password, and then a confirmation. If the passwords match, the application logs "Success!”
 
-* Open [index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/19-Ins_Inquirer-Demo/index.js) and examine the code:
+* Open `19-Ins_Inquirer-Demo/index.js` and examine the code:
   
-  * At the top of the file, we import `inquirer`
+  * At the top of the file, we import `inquirer`, as follows:
 
-    ```js
-    var inquirer = require("inquirer");
-    ```
+  ```js
+  var inquirer = require("inquirer");
+  ```
 
-  * 🔑  We use the `prompt` method to ask the user for input
+  * 🔑  We use the `prompt` method to ask the user for input, as shown in the following example:
 
-    ```js
-    inquirer
-        .prompt([
-        {
-            type: "input",
-            message: "What is your user name?",
-            name: "username"
-        },
-        {
-            type: "password",
-            message: "What is your password?",
-            name: "password"
-        },
-        {
-            type: "password",
-            message: "Re-enter password to confirm:",
-            name: "confirm"
-        }
-        ])
-    ```
+  ```js
+  inquirer
+    .prompt([
+    {
+      type: "input",
+      message: "What is your user name?",
+      name: "username"
+    },
+    {
+      type: "password",
+      message: "What is your password?",
+      name: "password"
+    },
+    {
+      type: "password",
+      message: "Re-enter password to confirm:",
+      name: "confirm"
+    }
+    ])
+  ```
 
-  * The prompts are an array of objects have a `name`, `type`, and `message` property.
+  * The prompts are an array of objects that have a `name`, `type`, and `message` property.
   
-  * The input of each prompt will be stored in an object property that corresponds to the `name` value. The `type` values are built in to `inquirer` and what allows us to enter _secure_ passwords.
+  * The input of each prompt will be stored in an `object` property that corresponds to the `name` value. The `type` values are built into `inquirer` and allow us to enter secure passwords.
   
   * The `message` property is the prompt that the user ends up seeing. 
 
-  * Once all of the prompts are answered, we can _then_ work with the user `response`. Here, the `response` parameter in the `.then` callback corresponds with the user input, which `inquirer` store in an object. 
+  * Once all of the prompts are answered, we can then work with the user `response`. Here, the `response` parameter in the `.then` callback corresponds with the user input, which `inquirer` stores in an object, as follows:
 
-    ```js
-    .then((response) =>
-        response.confirm === response.password
-            ? console.log('Success!')
-            : console.log('You forgot your password already?!'));
-    ```
+  ```js
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot your password already?!'));
+  ```
 
-  * Here we are checking to see if the confirmed password input is strictly equal to the password the user provided in the previous response. We then use a conditional (ternary) operator to check if the passwords match. If so, we log "success!", otherwise let the user know they forgot their password.
+  * Here we are checking whether the confirmed password input is strictly equal to the password provided in the previous response. We then use a conditional (ternary) operator to check if the passwords match. If so, we log "success!"; otherwise, we let the user know they forgot their password.
  
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Based on the name alone, what do you think the `inquirer` package allows us to do?
 
-  * 🙋 Based on the dictionary definition of _inquire_, it might be used to ask for information from someone, that someone being the user of our application. 
+  * 🙋 It might be used to inquire, or ask for, information from someone&mdash;the user of the application. 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Inquirer-Users/README.md`.
 
-### 8. Student Do: Inquirer Users (15 min) 
+### 8. Student Do: inquirer Users (15 min) 
 
-* Direct students to the activity instructions found in [20-Stu-Inquirer-Users](../../../../01-Class-Content/09-NodeJS/01-Activities/20-Stu_Inquirer-Users/README.md).
+* Direct students to the activity instructions found in `20-Stu_Inquirer-Users/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# Inquirer Users
+  ```md
+  # 🏗️ Build CLI App with Inquirer
 
-In this activity, you will build a simple command line application that accepts user input and writes it to a `.json` file. 
+  Work with a partner to implement the following user story:
 
+  * As a developer, I want to create a command-line application that takes in input from the user and does something with it.
 
-## Instructions
+  ## Acceptance Criteria
 
-* Initialize your repository and install the `inquirer` dependency.
+  * It's done when I have initialized my repository with a `package.json` file by running `npm init -y`.
 
-    * Is there another dependency you will need? 
+  * It's done when I have installed inquirer and added it to my list of dependencies by running `npm i inquirer --save`.
 
-* Prompt your user with the following questions:
+  * It's done when the application asks the user, "What is your name?"
+    
+  * It's done when the application asks the user, "What languages do you know?"
 
-    * "What is your name?"
+  * It's done when the application asks the user, “What is your preferred method of communication?"
 
-    * "What languages do you know?"
+  * It's done after I have written those responses to a file.
 
-    * What is your preferred method of communication?"
+  ## 💡 Hints
 
-* Then write the user response to a file. 
+  Why do we need to use `JSON.stringify`? How can we use the npm page for `inquirer` to see how to use checkboxes and lists? 
 
+  ## 🏆 Bonus
 
-## Hint(s)
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* You will need to use `JSON.stringify()`.
+  * How would you format your JSON? Can you generate the name of your user file from the user input?
 
-* You will need to consult the `inquirer` documentation on how to prompt users for checkboxes and lists.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-## Bonus
-
-* How would you format your JSON?
-
-* Can you generate the name of your user file from their input?
-```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
-
-### 9. Instructor Review: Inquirer Users (15 min)
+### 9. Instructor Review: inquirer Users (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with inquirer? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `inquirer`? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Our application requires two dependencies, one third-party (`inquirer`) the other standard library (`fs`).
+  * ✔️ `inquirer.prompt()`
 
-  * ✔️ We use two new `type` properties to prompt our user for a `"checkbox"` and a `"list"`, both of which require a `choices` property and a corresponding array of options.
+  * ✔️ `JSON.stringify()`
 
-  * ✔️ We use the `JSON.stringify` optional `replacer` (`null`) and `space` (`\t`) parameters to format our `data` object with pretty-print appearance. 
+  * ✔️ `.then(answers => `
 
-* Open [20-Stu-Inquirer-Users](../../../../01-Class-Content/09-NodeJS/01-Activities/20-Stu_Inquirer-Users/Solved/index.js) in your IDE and explain the following: 
+* Open `20-Stu_Inquirer-Users/Solved/index.js` in your IDE and explain the following: 
 
-  * 🔑 Our application requires two dependencies, one third-party (`inquirer`) the other standard library (`fs`).
+  * 🔑 The application requires two dependencies, one third-party (`inquirer`) and the other standard library (`fs`), as shown in the following example:
 
-    ```js
-    const inquirer = require('inquirer');
-    const fs = require('fs');
-    ```
+  ```js
+  const inquirer = require('inquirer');
+  const fs = require('fs');
+  ```
 
-  * 🔑 We use two new `type` properties to prompt our user for a `"checkbox"` and a `"list"`, both of which require a `choices` property and a corresponding array of options.
+  * 🔑 We use two new `type` properties to prompt the user for a `"checkbox"` and a `"list"`, both of which require a `choices` property and a corresponding array of options, as shown in the following example:
 
-    ```js
-      inquirer.prompt([
-        {
-            type: "input",
-            name: "name",
-            message: "What is your name?"
-        },
-        {
-            type: "checkbox",
-            message: "What languages do you know?",
-            name: "stack",
-            choices: [
-                "HTML", 
-                "CSS", 
-                "JavaScript", 
-                "MySQL"
-            ]
-        },
-        {
-            type: "list",
-            message: "What is your preferred method of communication?",
-            name: "contact",
-            choices: [
-                "email",
-                "phone",
-                "telekinesis"
-            ]
-        }
-    ])
-    ```
+  ```js
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "What is your name?"
+    },
+    {
+      type: "checkbox",
+      message: "What languages do you know?",
+      name: "stack",
+      choices: [
+        "HTML", 
+        "CSS", 
+        "JavaScript", 
+        "MySQL"
+      ]
+    },
+    {
+      type: "list",
+      message: "What is your preferred method of communication?",
+      name: "contact",
+      choices: [
+        "email",
+        "phone",
+        "telekinesis"
+      ]
+    }
+  ])
+  ```
   
-  * We pass the output of the `prompt` method to our Promise callback as `data`.
+  * We pass the output of the `prompt` method to the Promise callback as `data`, as follows:
 
-    ```js
-      .then((data) => {
-        const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+  ```js
+  .then((data) => {
+    const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
 
-        fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
-        );
-    });
-    ```
-  * We are creating a filename by removing the spaces and setting all letters to lowercase. We then concat the filename using the `.join` method. Finally, we add `.json` to the filename.
+    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+  });
+  ```
+
+  * We are creating a file name by removing the spaces and setting all letters to lowercase. We then concat the file name using the `.join` method. Finally, we add `.json` to the file name.
   
-  * 🔑 We use the `fs.writeFile` method to create a new file using our `filename` variable. We use the `JSON.stringify` optional `replacer` (`null`) and `space` (`\t`) parameters to format our `data` object with pretty-print appearance.
-
+  * 🔑 We use the `fs.writeFile` method to create a new file using the `filename` variable. We use the `JSON.stringify` optional `replacer` (`null`) and `space` (`\t`) parameters to format the `data` object with pretty-print appearance.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Why do we need to use `JSON.stringify` when passing in the data?
 
-  * 🙋 The data needs to be converted to a string, because as is, `data` is not of type `string`. We can learn more about this method at [MDN's documentation for JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+  * 🙋 The data needs to be converted to a string because, as is, `data` is not of type `string`. To learn more, read the [MDN Web Docs on JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
   
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 The inquirer documentation has some examples of how to use their package on their [github page](https://github.com/SBoudrias/Inquirer.js#readme)
+  * 🙋 We can refer to supplemental material, read the [inquirer documentation](https://github.com/SBoudrias/Inquirer.js#readme), and stick around for office hours to ask for help.
   
-
-* Answer any questions before ending the class.
-
+* Answer any questions before moving to flex time.
 
 ### 10. FLEX (30 min)
 
@@ -580,24 +622,23 @@ In this activity, you will build a simple command line application that accepts 
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class and congratulate them on learning some of the most used ES6 syntax rules
+* Welcome students to class and congratulate them on learning some of the most used ES6 syntax rules.
 
-* Reassure students that learning new syntax can be time consuming and difficult, but it won't always feel like that. Using these rules more will allow you to commit them to memory and use less mental bandwidth going forward.
+* Reassure students that learning new syntax can be time-consuming and difficult, but it won't always feel like that. Using these rules more will allow you to commit them to memory and use less mental bandwidth going forward.
 
-* Explain that one of the best ways to learn these new rules is to try and use the newer syntax whenever possible. The old syntax is still perfectly valid, and if you have any doubts, it is always there to fall back on.
+* Explain that one of the best ways to learn these new rules is to use the newer syntax whenever possible. The old syntax is still perfectly valid, and students can always fall back on it.
 
-* These newer syntax rules are not born in a vacuum. They are the result of years of revision by a standards organization called ECMA. The ES in ES6 stands for ECMAScript. It is important to have standards in web development to ensure maximum compatibility across a wide spectrum of web browsers.
+* These newer syntax rules are not born in a vacuum. They are the result of years of revision by a standards organization called ECMA. It is important to have standards in web development to ensure maximum compatibility across a wide spectrum of web browsers.
 
-* ECMAScript itself is a programming language, but as far as we are concerned it is just a language from which our syntax rules are inherited. A more detailed history of ECMAScript can be found [here](https://en.wikipedia.org/wiki/ECMAScript).
-
+* The ES in ES6 stands for **ECMAScript**. ECMAScript itself is a programming language, but as far as we are concerned, it is just a language from which syntax rules are inherited. We can find a more detailed history in the [Wikipedia article on ECMAScript](https://en.wikipedia.org/wiki/ECMAScript).
 
 ### 13. Instructor Demo: for...of (5 min) 
 
-* Open [21-Ins-For_Of](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/02-IntroToConsoleBash/README.md01-Class-Content/09-NodeJS/01-Activities/21-Ins_For_Of/index.js) in your browser and demonstrate the following:
+* Open `21-Ins_For_Of/index.js` in your browser and demonstrate the following:
 
 * Run `node index.js` after commenting out the `.map` example. 
 
-  * 🔑 Notice that when we run our code we see each value in our songs array.
+  * 🔑 Notice when we run the code that we see each value in the songs array, as follows:
 
     ```js
     const songs = ['Bad Guy', 'Old Town Road', '7 Rings'];
@@ -607,7 +648,7 @@ In this activity, you will build a simple command line application that accepts 
     }
     ```
 
-  * 🔑 After we comment in the second example, we can also see that the we use a "for of" loop to iterate over an object or map
+  * 🔑 After we comment in the second example, we use a `for...of` loop to iterate over an object or map, as shown in the following code:
 
     ```js
     const songs = new Map([['Bad Guy', 1], ['Old Town Road', 2]]);
@@ -617,57 +658,75 @@ In this activity, you will build a simple command line application that accepts 
     }
     ```
 
-  * 🔑 Explain that the for...of statement creates a loop iterating over objects, including Array, Map, Set, String, TypedArray.
+  * 🔑 Explain that the `for...of` statement creates a loop iterating over objects, including `Array`, `Map`, `Set`, `String`, `TypedArray`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How does the "for ... of" seem to differ from a `forEach`?
+  * ☝️ How does the `for...of` seem to differ from a `forEach`?
 
-  * 🙋 The `forEach` method only applies to arrays, while the "for ... of" is much more flexible.
+  * 🙋 The `forEach` method only applies to arrays, while the `for...of` is much more flexible.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [22-Stu_For_Of - Readme](../../../../01-Class-Content/09-NodeJS/01-Activities/22-Stu_For_Of/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_For_Of/README.md`.
 
 ### 14. Student Do: for...of (15 min) 
 
-* Direct students to the activity instructions found in [22-Stu_For_Of](../../../../01-Class-Content/09-NodeJS/01-Activities/22-Stu_For_Of/README.md).
+* Direct students to the activity instructions found in `22-Stu_For_Of/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-    ## For...of
+  # 🏗️ Implement and Use for...of Loops
 
-    ### Instructions
+  Work with a partner to implement the following user story:
 
-    * Select all of the songs in `index.html` and store them in a variable using JavaScript.
+  * As a developer, I want to be able to use `for...of` loops to iterate through data inside objects.
 
-    * Iterate through your collection with a for...of and:
+  ## Acceptance Criteria
 
-    * Add a `class` that changes the color to red (you have to create this class in your CSS file)
+  * It's done when I have selected all the inside `#songs` elements in the `html`.
+
+  * It's done when I have iterated through the song collection with a `for...of` loop and added a `class` of `red` to each element.
+
+  ## 💡 Hints
+
+  What part of the object is essential in setting up the iteration of a `for...of` loop?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could you iterate through deeply nested objects?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
 ### 15. Instructor Review: for...of (10 min)  
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with the "for ... of" loop? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with the `for...of` loop? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ The syntax for the "for ... of" loop reads very similar to plain english which helps us conceptualize what is happening in our program.
-
-  * ✔️ The syntax is relatively straightforward, the key takeaway is knowing when to use and and what to use it for.
-
-* Open [index.html](../../../../01-Class-Content/09-NodeJS/01-Activities/22-Stu_For_Of/Solved/index.html) in your browser and explain the following: 
-
-  * When we open the `index.html` file, we notice that each line item in our unordered list has green color
+  * ✔️ `for...of`
   
-  * This is the result of using the `for ... of` loop to iterate over each line item and add the class of `green` to the class list for the given element. 
+  * ✔️ Iterator
+
+* Open `22-Stu_For_Of/Solved/index.html` in your browser and explain the following: 
+
+    * 🔑 The syntax for the `for...of` loop reads very similar to plain English, which helps conceptualize what is happening in the program.
+
+  * 🔑 The syntax is relatively straightforward. The key takeaway is knowing when to use and what to use it for.
+
+  * When we open the `index.html` file, we notice that each line item in the unordered list has a green color.
+  
+  * This is the result of using the `for...of` loop to iterate over each line item and add the class of `green` to the class list for the given element, as follows:
 
     ```js
         const songs = document.querySelectorAll("ul > li");
@@ -677,7 +736,7 @@ In this activity, you will build a simple command line application that accepts 
         }
     ```
 
-  * 🔑 If you forget the syntax, VSCode can help you create these types of loops by offering a snippet to work from. You can try it yourself by typing `forof` and simply hitting enter.
+  * 🔑 If you forget the syntax, VS Code can help you create these types of loops by offering a snippet to work from. You can try it yourself by typing `forof` and simply pressing Enter, which will result in the following code:
     
     ```js
         for (const iterator of object) {
@@ -687,25 +746,23 @@ In this activity, you will build a simple command line application that accepts 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do you know when to use a "for ... of" loop
+  * ☝️ How do you know when to use a `for...of` loop?
 
-  * 🙋 While it generally depends on the situation, "for ... of" loops help most when you need to iterate through key/value pairs in an object
+  * 🙋 While it generally depends on the situation, `for...of` loops help most when you need to iterate through key-value pairs in an object.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and stick around for Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 16. Instructor Demo: Rest and Spread Operators (5 min) 
 
-* Open [Ins_Rest_and_Spread](../../../../01-Class-Content/09-NodeJS/01-Activities/23-Ins_Rest_and_Spread/index.js) in your browser and demonstrate the following:
+* Open `23-Ins_Rest_and_Spread/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
-#### Rest Parameters
-
-  * 🔑 When we run the file we notice that we get output for a few different operations: without the rest operator, with the rest operator, without spread, and with spread.
+  * 🔑 When we run the file, we get output for a few different operations: without the rest operator, with the rest operator, without spread, and with spread, as shown in the following example:
 
     ```js
     function add(x, y) {
@@ -714,9 +771,10 @@ In this activity, you will build a simple command line application that accepts 
 
     console.log(add(1, 2, 3, 4, 5)) // => 3
     ```
+
   * Explain to the class that it is possible to call a function with any number of arguments, but only the first two will be counted.
   
-  * Let's examine this function using the `rest` operator:
+  * Let's examine this function using the `rest` operator, as follows:
 
     ```js
     function add(...nums) {
@@ -729,9 +787,10 @@ In this activity, you will build a simple command line application that accepts 
     add(3,3) // => 6
     add(1, 1, 4, 5) // => 11
     ```
-  * In this example, we use a rest operator to collect all of the arguments into a `nums` array, giving us the ability to pass in as many arguments as we want.
 
-  * Let's examine another example:
+  * In this example, we use a rest operator to collect all of the arguments into a `nums` array, enabling us to pass in as many arguments as we want.
+
+  * Now let's review the following example:
 
     ```js
     function howManyArgs(...args) {
@@ -741,13 +800,14 @@ In this activity, you will build a simple command line application that accepts 
     console.log(howManyArgs(0, 1)); // You have passed 2 arguments.
     console.log(howManyArgs("argument!", null, ["one", 2, "three"], 4)); // You have passed 4 arguments.
     ```
-  * 🔑  The takeaway here is that variables are now available inside the array of our function. We can also pass as many in as we want.
 
-#### Spread Operator
+  * 🔑  The takeaway here is that variables are now available inside the array of the function. We can also pass as many in as we want.
 
-  * 🔑  The spread operator allows iterables like arrays, objects and strings to be expanded into single arguments or elements. 
+  * 🔑  The spread operator allows iterables like arrays, objects, and strings to be expanded into single arguments or elements. 
   
-  * One way to think of this is like pouring out items from a cup. The only difference is that our items are variables and the cup is an iterable.
+  * You can compare this to pouring items out of a cup. The only difference is that the items are variables and the cup is an iterable.
+
+  * In the following example, we have expanded both arrays into a new array with all of the elements:
 
     ```js
     // Spread Operator
@@ -759,39 +819,55 @@ In this activity, you will build a simple command line application that accepts 
 
     ```
 
-  * Here you can see that we have expanded both arrays into a new array with all of the elements. 
-
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why does the first example of our `add` function only output `3`?
+  * ☝️ Why does the first example of the `add()` function only output `3`?
 
-  * 🙋 This is due to the fact that only the first and second parameter get counted without the use of the rest operator
+  * 🙋 Because only the first and second parameter get counted without the use of the rest operator.
   
   * ☝️ The syntax for spread and rest are similar, but what is the difference between the two?
 
-  * 🙋 The rest operator allows us to pass in any number of arguments while the spread operator allows us to spread out an iterable into unique variables.
+  * 🙋 The rest operator allows us to pass in any number of arguments, while the spread operator allows us to spread out an iterable into unique variables.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Rest_and_Spread/README.md`.
 
 ### 17. Student Do: Rest and Spread Operators (15 min) 
 
-* Direct students to the activity instructions found in [24-Stu_Rest_and_Spread - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/README.md).
+* Direct students to the activity instructions found in `24-Stu_Rest_and_Spread/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-## Spread and Rest
+  ```md
+  # 🏗️ Implement and Use Spread and Rest Operators
 
-**Follow the comments in `index.js`.
+  Work with a partner to implement the following user story:
 
-1. Copy the `songs` array into another array using spread and console.log what it returns.
+  * As a developer, I want to be able to use the spread and rest operators to make my code easier to read.
 
-2.  Modify the `addition` function so that is uses the rest operator and maintains the same functionality. You should still be able to pass in any number of arguments. Run the code first in your console to see the functionality.
-```
+  ## Acceptance Criteria
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+  * It's done when I have copied the `songs` array using spread `...`.
+
+  * It's done when I have console logged the new array.
+
+  * It's done wheen I have modified the `addition` function so that it retains functionality but also allows one to pass in any number of arguments.
+
+  ## 💡 Hints
+
+  Can you think of some real-life analogies for the spread and rest operator?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other data types can you use the spread or rest operator on?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
 ### 18. Instructor Review: Spread and Rest Operators (10 min)  
 
@@ -801,15 +877,19 @@ In this activity, you will build a simple command line application that accepts 
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ The spread and rest operators might look very similar to you at this point, so don't be intimidated if you get them confused at first. We will have plenty of examples to help solidify your understanding moving forward.
+  * ✔️ Spread syntax (`...`)
 
-  * ✔️ During this exercise we also used something called `reduce` which is used in our case to calculate the sum of an array. Lets look at the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) briefly before we review.
+  * ✔️ Rest operator
 
-* Open [Solved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/24-Stu_Rest_and_Spread/Solved/index.js) in your IDE and explain the following: 
+  * ✔️ Multiple arguments
 
-  * The first example we are using the spread operator copy the items in `songs` to `new_songs`. Much like we would be dumping out the contents of a cup, we are populating the `new_songs` array with the items in `songs`.
+* Open `24-Stu_Rest_and_Spread/Solved/index.js` in your IDE and explain the following: 
+
+  * 🔑 During this exercise we also used something called `reduce`, which is used in this case to calculate the sum of an array. Let's look at the [MDN Web Docs on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) briefly before we review.
+
+  * In the first example, we are using the spread operator to copy the items in `songs` to `new_songs`. Much like we would be dumping out the contents of a cup, we are populating the `new_songs` array with the items in `songs`, as shown in the following code:
 
     ```js
     const songs = ["Creep", "Everlong", "Bulls On Parade", "Song 2", "What I Got"];
@@ -818,10 +898,9 @@ In this activity, you will build a simple command line application that accepts 
     console.log(new_songs); // => ["Creep", "Everlong", "Bulls On Parade", "Song 2", "What I Got"];
     ```
 
-* In the next example we modify our addition function to make use of the rest operator. This allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary.
+* Next we modify the addition function to make use of the rest operator. This allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary. The code should resemble the following example:
 
     ```js
-
     // unsolved version
     function addition(x, y, z) {
         const array = [x, y, z];
@@ -837,7 +916,7 @@ In this activity, you will build a simple command line application that accepts 
     console.log(addition(1, 2, 3, 4, 100)); // 110
     ```
 
-  * 🔑  There is a good chance that you may be confused on where spread and operators go, since they are very similar and can be used in similar situations. This is just an introduction and they will begin to pick up fluency as they get more practice.
+  * 🔑  There is a good chance that students might be confused on where spread and operators go, because they are very similar and can be used in similar situations. This is just an introduction; assure students that they will begin to pick up fluency as they get more practice.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -847,37 +926,37 @@ In this activity, you will build a simple command line application that accepts 
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN spread docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), the [MDN rest docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), and stick around for Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and the [MDN Web Docs on rest](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 19. Instructor Demo: Object Destructuring (5 min) 
 
-* Open [25-Ins-ObjDestructuring](../../../../01-Class-Content/09-NodeJS/01-Activities/25-Ins_ObjDestructuring/index.js) in your browser and demonstrate the following:
+* Open `25-Ins_ObjDestructuring/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
   * 🔑 Notice that when we run the `index.js` file we see several variables logged to the terminal. Each of these are different ways of accessing variables inside an object.
 
-  * 🔑 We also notice that in the file, we are using dot notation to access variables inside an object, as we have in the past. We are also plucking off certain variables and setting them equal to the value of the object. This is done with syntax that uses curly braces on the left side of the equals sign:
+  * 🔑 Also, in the file, we are using dot notation to access variables inside an object, as we have in the past. We are plucking off certain variables and setting them equal to the value of the object. This is done with curly braces on the left side of the equals sign, as shown in the following example:
 
-  ```js
-  const arya = {
-    name: 'Arya Stark',
-    parents: ['Eddard Stark', 'Catelyn Stark'],
-  };
+    ```js
+    const arya = {
+      name: 'Arya Stark',
+      parents: ['Eddard Stark', 'Catelyn Stark'],
+    };
 
-  const { name, parents } = arya;
-  ```
+    const { name, parents } = arya;
+    ```
 
-  * You can now also use object destructuring as a way to pluck of certain variables from a object. Consider this example:
+  * You can now also use object destructuring as a way to pluck off certain variables from an object. Consider the following example:
 
-  ```js
-  const betterLogCharacter = ({ name, parents }) =>
-  console.log(`${name}'s parents are: ${parents[0]} and ${parents[1]}.`);
+    ```js
+    const betterLogCharacter = ({ name, parents }) =>
+    console.log(`${name}'s parents are: ${parents[0]} and ${parents[1]}.`);
 
-  betterLogCharacter(jaime);
-  ```
+    betterLogCharacter(jaime);
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -887,25 +966,41 @@ In this activity, you will build a simple command line application that accepts 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [26-Stu-ObjDestructuring - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/26-Stu_ObjDestructuring/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_ObjDestructuring/README.md`.
 
 ### 20. Student Do: Object Destructuring (15 min) 
 
-* Direct students to the activity instructions found in [26-Stu-ObjDestructuring - readme](../../../../01-Class-Content/09-NodeJS/01-Activities/26-Stu_ObjDestructuring/README.md).
+* Direct students to the activity instructions found in `26-Stu_ObjDestructuring/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Object Destructuring
+  # 🏗️ Implement and Recognize Object Destructuring
 
-  In this activity we will use ES6 object destructuring to pull out object data into variables.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to know how to use destructuring assignment syntax to pluck out data from arrays or objects.
 
-  * Open the [Unsolved](Unsolved) folder and write ES6 destructuring code to make all of the console.log's print successfully.
+  ## Acceptance Criteria
+
+  * It's done when I have opened `index.js` and reviewed the existing code.
+
+  * It's done when I have used destructuring assignment syntax so that each `console.log` statement logs out the value properly.
+
+  ## 💡 Hints
+
+  You have likely seen destructuring more than you think in your everyday life as a developer. Is there an import statement that you can remember from a previous exercise that uses this syntax?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Write an object of your own and then log each key-value pair using object destructuring.
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
 ### 21. Instructor Review: Object Destructuring (10 min)  
 
@@ -915,91 +1010,94 @@ In this activity, you will build a simple command line application that accepts 
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the prompts and talking points below to review the following key (🔑) points:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ This exercise helps us highlight how we can pluck off multiple properties at once, saving us a few lines of code.
+  * ✔️ Object destructuring syntax
 
-  * ✔️ We also are able to destructure function parameters. This allows us to name them directly and again save a few steps.  
+  * ✔️ Destructuring nested objects
 
-  * ✔️ Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or write extra code to destructure them the old way.
+* Open `26-Stu_ObjDestructuring/Solved/index.js` in your IDE and explain the following: 
 
-* Open [26-Stu-ObjDestructuring](../../../../01-Class-Content/09-NodeJS/01-Activities/26-Stu_ObjDestructuring/Solved/index.js) in your IDE and explain the following: 
+  * 🔑 This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
 
-  * In the past, if we wanted to cherry pick an object's properties, we'd have to do something like the following:
+  * 🔑 We can also destructure function parameters. This allows us to name them directly and again save a few steps.  
 
-  ```js
-  const arya = {
-    name: "Arya Stark",
-    parents: ["Eddard Stark", "Catelyn Stark"]
-  };
+  * 🔑 Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
 
-  const aryaName = arya.name; // "Arya Stark"
-  const aryaParents = arya.parents; // ["Eddard Stark", "Catelyn Stark"]`
-  ```
+  * In the past, if we wanted to cherry-pick an object's properties, we'd have to do something like the following example:
 
-  * 🔑  Now with ES6 object destructuring syntax, we can do this:
+    ```js
+    const arya = {
+      name: "Arya Stark",
+      parents: ["Eddard Stark", "Catelyn Stark"]
+    };
 
-  ```js
-  const { name, parents } = arya;
+    const aryaName = arya.name; // "Arya Stark"
+    const aryaParents = arya.parents; // ["Eddard Stark", "Catelyn Stark"]`
+    ```
 
-  console.log(name); // prints `"Jaime Lannister"`
-  console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
-  ```
+  * 🔑  With ES6 object destructuring syntax, the code will now resemble the following example:
 
-  * We can also rename our destructured properties like so:
+    ```js
+    const { name, parents } = arya;
 
-  ```js
-  const jaime = {
-    name: "Jaime Lannister",
-    parents: ["Tywin Lannister", "Joanna Lannister"]
-  };
+    console.log(name); // prints `"Jaime Lannister"`
+    console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
+    ```
 
-  const { name: jaimeName } = jaime;
-  console.log(jaimeName); // prints `"Jaime Lannister"`
-  ```
+  * We can also rename the destructured properties as follows:
 
-  * We are also able to handle nested objects in a much more elegant way:
+    ```js
+    const jaime = {
+      name: "Jaime Lannister",
+      parents: ["Tywin Lannister", "Joanna Lannister"]
+    };
 
-  ```js
-    const john = {
-    first: "John",
-    last: "Snow",
-    title: "Prince",
-    family: {
-      brothers: {
-        brother1: "Rob Stark",
-        brother2: "Rickon Stark"
-      },
-      sisters: {
-        sister1: "Arya Stark",
-        sister2: "Sansa Stark"
+    const { name: jaimeName } = jaime;
+    console.log(jaimeName); // prints `"Jaime Lannister"`
+    ```
+
+  * We can also handle nested objects in a much more elegant way, as shown in the following example:
+
+    ```js
+      const john = {
+      first: "John",
+      last: "Snow",
+      title: "Prince",
+      family: {
+        brothers: {
+          brother1: "Rob Stark",
+          brother2: "Rickon Stark"
+        },
+        sisters: {
+          sister1: "Arya Stark",
+          sister2: "Sansa Stark"
+        }
       }
-    }
-  };
+    };
 
-  const { brother1, brother2 } = john.family.brothers;
-  console.log(brother1); // <= Rob Stark
-  console.log(brother2); // <= Rickon Stark
-  ```
+    const { brother1, brother2 } = john.family.brothers;
+    console.log(brother1); // <= Rob Stark
+    console.log(brother2); // <= Rickon Stark
+    ```
 
-  * 🔑  This also works with arrays:
+  * 🔑  This also works with arrays, as shown in the following example:
 
-  ```js
-  const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
+    ```js
+    const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
 
-  const [name, alias, allegiance] = characters;
-  console.log(name, alias, allegiance); // <= Ned Stark The Quiet Wolf House Stark
-  ```
+    const [name, alias, allegiance] = characters;
+    console.log(name, alias, allegiance); // <= Ned Stark The Quiet Wolf House Stark
+    ```
 
-  * You can also use destructuring with strings:
+  * You can also use destructuring with strings, like in the following code:
 
-  ```js
-  const skills = "The Usurper, male, Baratheon, Cersei"; // string of data
+    ```js
+    const skills = "The Usurper, male, Baratheon, Cersei"; // string of data
 
-  const [alias, gender, family, spouse] = skills.split(","); // set variables and split
-  console.log(alias, gender, family, spouse); // print them by variable name
-  ```
-
+    const [alias, gender, family, spouse] = skills.split(","); // set variables and split
+    console.log(alias, gender, family, spouse); // print them by variable name
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1009,41 +1107,41 @@ In this activity, you will build a simple command line application that accepts 
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋  We can refer to supplemental material, look up some examples on google, and stick around for Office Hours to ask for help.
+  * 🙋  We can refer to supplemental material, read the [MDN Web Docs on object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), and stick around for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in [27-Evt_Git_Fork](../../../../01-Class-Content/09-NodeJS/01-Activities/27-Evr_Git_Fork/README.md).
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git_Fork/README.md`.
 
 ### 22. Everyone Do: Git Fork (20 min)
 
 *  Open [Git docs](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
 
-  * Fork allows you to contribute to a repository that you don't have 'push' access to. When you fork a project, Github will make an exact copy of the project that will live on your account that you can push to.
+  * Fork allows you to contribute to a repository that you don't have push access to. When you fork a project, GitHub will make an exact copy of the project that will live on your account that you can push to.
   
   * This workflow then allows you to create a pull request to the parent repository when you have finished your contributions. This is a very common workflow in many open source projects. 
 
-* Direct students to the activity instructions found in [27-Evt_Git_Fork](../../../../01-Class-Content/09-NodeJS/01-Activities/27-Evr_Git_Fork/README.md).
+* Direct students to the activity instructions found in `27-Evr_Git_Fork/README.md`.
 
-* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help while circulating through room.
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Open your browser and choose a repository to fork. Click the green "fork" button. 
+* Open your browser and choose a repository to fork. Click the green fork button. 
 
 * Open your command line and demonstrate the following:
 
-  * After we clone the repository, we will want to visit our own fork and copy the git url to clone it our local machine
+  * After we clone the repository, we will want to visit our own fork and copy the Git URL to clone it the local machine, as follows:
 
-  ```sh
-  git clone git@github.com:microsoft/vscode.git
-  ```
+    ```sh
+    git clone git@github.com:microsoft/vscode.git
+    ```
 
-  * 🔑 After you clone the local repository, run the following command to demonstrate that the remote is pointed to your namespace rather than the parent repository
+  * 🔑 After you clone the local repository, run the following command to demonstrate that the remote is pointed to your namespace rather than the parent repository:
 
-  ```sh
-  git remote -v
-  ```
+    ```sh
+    git remote -v
+    ```
 
-* Answer any questions before students go on break.
+* Answer any questions before ending class for the day
 
 ### 23. END (0 min)
 
