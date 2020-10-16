@@ -27,4 +27,3 @@ function changeOrange(event) {
 outer.addEventListener("click", changePurple);
 inner.addEventListener("click", changeOrange);
 button.addEventListener("click", changeBlue);
-
