@@ -51,7 +51,7 @@ git branch
 
 * You should see the `feature/create-readme` branch and a `*` next to `main`. That tells us that we are still on the main branch. If our repo includes a long list of branches, we may need to press the `q` key in order to exit the list.
 
-![](./images/git_branch.png)
+![](./Images/01-git-branch.png)
 
 
 * We've created a branch, but we are still in `main`. How do we get into to the branch we just created? We can type `git checkout feature/create-readme` to switch from `main` to the new branch, followed by the `git branch` command to confirm that we've switched branches. 
@@ -63,7 +63,7 @@ git branch
 
 * We should now see a `*` by `feature/create-readme`.
 
-![](./images/switch_branch.png)
+![](./Images/02-switch-branch.png)
 
 > Important: We also have the option to create a branch and switch over to it at the same time by entering `git checkout -b <branch-name>` into the terminal.
 
@@ -71,12 +71,12 @@ git branch
 
 * Now that we are on the correct feature branch, we need to work on the feature. Create a README.md file in the `git_branch_demo` directory.
 
-![](./images/README.png)
+![](./Images/03-readme.png)
 
 
 * Add some text to the README.md file.
 
-![](./images/Text.png)
+![](./Images/04-text.png)
 
 
 * Finally, add and commit the changes that you made.
@@ -105,18 +105,18 @@ git merge feature/create-readme
 
 * If the merge is successful, we should see something similar to the following in the terminal.
 
-![](./images/merge.png)
+![](./Images/05-merge.png)
 
 
 * Now, the directory should include the README.md file that we created along with whatever text we added to the file. We asked git to merge the code that we wrote in the feature branch with the code that already existed in `main`. Now, our new feature is a part of the main code base.
 
-![](./images/merge_success.png)
+![](./Images/06-merge-success.png)
 
 ### Delete the branch
 
 * We are all done with our feature and the code that we wrote safely exists in `main`. But, if you type the `git branch` command into your terminal, you'll see that `feature/create-readme` still exists. Why might this be a problem?
 
-![](./images/Still_exists.png)
+![](./Images/07-still-exists.png)
 
 * You can imagine that we could potentially generate a huge list of feature branches while working on a large project. While we don't have to delete a branch, it is good practice to close a branch once a feature is completed and merged to avoid confusion and to stay organized. Since we are finished with this feature and our code is now included in `main`, we no longer need the isolated environment that the feature branch made available to us. If we do discover a problem with our feature in the future, we can always open another branch to fix the problem. For now, we can safely close the feature branch by issuing the following command in the terminal:
 
@@ -124,9 +124,9 @@ git merge feature/create-readme
 git branch -d feature/create-readme
 ```
 
-* When we run `git branch`, we should see something similar to the following:
+* When we run `git branch` in the terminal, we should see something similar to the following:
 
-![](./images/branch_deleted.png)
+![](./Images/08-branch-deleted.png)
 
 * Congratulations, we have now completed our first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
 
