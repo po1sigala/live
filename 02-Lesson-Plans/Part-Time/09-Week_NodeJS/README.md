@@ -1,8 +1,8 @@
-# Unit 09: NodeJS
+# Unit 09 Instructor Overview: Node.js
 
 ## Overview
 
-In this unit, you'll introduce students to Node.js and the concepts of standard library, modules, npm, and package.json.
+In this unit, you'll introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -24,7 +24,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 ## Heads-Up
 
-* Next week, we begin OOP, constructors, and classes. With that in mind, it’s important to get students comfortable with ES6 and other Node.js fundamentals this week to prepare them for more abstract concepts.
+Next week, we begin OOP, constructors, and classes. With that in mind, it's important to get students comfortable with ES6 and other Node.js fundamentals this week to prepare them for more abstract concepts.
 
 ## Helpful Links
 
@@ -38,9 +38,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [09.3 Lesson Plan](03-Day_Asynch-JS/09.3-LESSON-PLAN.md)
 
-### Unit Homework
+### Homework
 
-* [Unit 09 Homework](01-Class-Content/09-NodeJS/02-Homework/README.md)
+* [Unit 09 Homework](../../../01-Class-Content/09-NodeJS/02-Homework/README.md)
 
 ### Slide Decks
 
@@ -49,6 +49,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Algorithms
 
 * [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
+
+  * [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
 
 * [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
 
