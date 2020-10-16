@@ -1,6 +1,6 @@
 # Git Branch
 
-How many times have we been writing code, only to discover that we made a mistake earlier and we wish we could just go back to where we were earlier? But maybe we or one of our colleagues wrote some really great along the way code that we don't want to lose. Luckily, git branching allows us to avoid scenarios like this and offers an easier way to fix problems when they do arise.
+How many times have you been writing code, only to discover that you made a mistake earlier and you wish we could just go back to where you were earlier? But maybe you or one of your colleagues wrote some really great along the way code that we don't want to lose. Luckily, git branching allows us to avoid scenarios like this and offers an easier way to fix problems when they do arise.
 
 Branching is one of the most powerful and useful tools that git has to offer and will likely be a part of the everyday development process in your career as a developer. Whenever you need to fix a bug or build a new feature, you will create a new branch to make your changes.
 
@@ -128,7 +128,7 @@ git branch -d feature/create-readme
 
 ![](./Images/08-branch-deleted.png)
 
-* Congratulations, you have now completed our first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
+* Congratulations, you have now completed your first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
 
 ### Hints
 
