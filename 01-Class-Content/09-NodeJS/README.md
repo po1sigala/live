@@ -56,7 +56,7 @@ You will be employer-ready if you are able to:
 
 * Explain the importance and usefulness of ES6+ concepts such as `let`, `const`, and arrow functions.
 
-* Handle asynchronicity with callbacks, and Promises.
+* Handle asynchronicity with callbacks and Promises.
 
 ## Technical Interview Preparation
 
