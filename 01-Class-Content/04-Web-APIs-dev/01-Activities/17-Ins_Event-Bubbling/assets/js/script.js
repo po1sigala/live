@@ -6,7 +6,7 @@ var button = document.querySelector(".button");
 function changeBlue(event) {
   event.currentTarget.setAttribute(
     "style",
-    "background-color: #63ACBE"
+    "background-color: blue"
   );
 }
 
@@ -20,7 +20,7 @@ function changePurple(event) {
 function changeOrange(event) {
   event.currentTarget.setAttribute(
     "style",
-    "background-color: #EE442F"
+    "background-color: #EE442F; color: white;"
   );
 }
 

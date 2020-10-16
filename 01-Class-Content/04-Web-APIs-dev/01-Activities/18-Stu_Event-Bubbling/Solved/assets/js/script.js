@@ -1,7 +1,6 @@
 var carousel = document.querySelector(".carouselbox");
-var next = carousel.querySelector(".next");
-var prev = carousel.querySelector(".prev");
-carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
+var next = document.querySelector(".next");
+var prev = document.querySelector(".prev");
 var index = 0;
 var images = [
   "https://picsum.photos/300/200",
@@ -10,6 +9,9 @@ var images = [
   "https://picsum.photos/300/203"
 ];
 var currentImage;
+
+carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
+
 function navigate(direction) {
   index = index + direction;
   if (index < 0) { 
@@ -25,15 +27,13 @@ carousel.addEventListener("click", function() {
   window.location.href = images[index];
 });
 
-next.onclick= function(event) {
+next.addEventListener("click", function(event) {
   event.stopPropagation();
-
-  navigate(1);
-};
+  navigate(-1);
+});
 
 prev.addEventListener("click", function(event) {
   event.stopPropagation();
-
   navigate(-1);
 });
 
