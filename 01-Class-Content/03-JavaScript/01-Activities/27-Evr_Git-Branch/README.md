@@ -18,7 +18,7 @@ In this activity, we will use git commands to create a new branch, complete a fe
   mkdir git_branch_demo
   ```
 
-* `cd` into the newly created directory and initialize an empty git repo in the directory:
+* Now use the `cd` command to navigate into the newly created directory and initialize an empty git repo in the directory with this command:
 
   ```bash
   cd git_branch_demo
