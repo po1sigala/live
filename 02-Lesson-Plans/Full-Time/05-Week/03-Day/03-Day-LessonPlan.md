@@ -1,4 +1,4 @@
-## 5.3 - Constructors (10:00 AM)
+# 5.3 Full-Time Lesson Plan- Constructors (10:00 AM)
 
 ## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
@@ -31,33 +31,32 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project      | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project           | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project    | 0:10     |
-| 11:15AM| 4   | Introduce Homework                 | 0:05     |
-| 11:20AM| 5   | FLEX                               | 0:30     |
-| 11:50PM| 6   | Instructor Do: Stoke Curiosity     | 0:10     |
-| 12:00PM| 7   | BREAK                              | 0:30     |
-| 12:35PM| 8   | Student Do:                        | 0:15     |
-| 12:50PM| 9  | Instructor Review:                 | 0:10     |
-| 1:00PM | 10  | Instructor Demo:                   | 0:05     |
-| 1:05PM | 11  | Student Do:                        | 0:15     |
-| 1:20PM | 12  | Instructor Review:                 | 0:10     |
-| 1:30PM | 13  | Instructor Demo:                   | 0:05     |
-| 1:35PM | 14  | Student Do:                        | 0:15     |
-| 1:50PM | 15  | Instructor Review:                 | 0:10     |
-| 2:00PM | 16  | Instructor Demo:                   | 0:05     |
-| 2:05PM | 17  | Student Do:                        | 0:15     |
-| 2:20PM | 18  | Instructor Review:                 | 0:10     |
-| 2:30PM | 19  | END                                | 0:00     |
+| Start   |  #  | Activity Name                                   | Duration |
+|---------|-----|-------------------------------------------------|----------|
+| 10:00AM | 1   | Instructor Demo: Mini Project                   | 0:05     |
+| 10:05AM | 2   | Student Do: Mini Project                        | 0:60     |
+| 11:05AM | 3   | Instructor Review: Mini Project                 | 0:10     |
+| 11:15AM | 4   | Introduce Homework                              | 0:05     |
+| 11:20AM | 5   | FLEX                                            | 0:20     |
+| 11:40PM | 6   | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 11:50PM | 7   | BREAK                                           | 0:30     |
+| 12:20PM | 8   | Student Do: Raining Cats and Dogs               | 0:15     |
+| 12:35PM | 9   | Instructor Review: Raining Cats and Dogs        | 0:10     |
+| 12:45PM | 10  | Instructor Demo: Cats and Dogs w/ Constructors! | 0:05     |
+| 12:50PM | 11  | Student Do: MiniBank                            | 0:20     |
+| 1:10PM  | 12  | Instructor Review: MiniBank                     | 0:10     |
+| 1:20PM  | 13  | Student Do: Weather Admin                       | 0:15     |
+| 1:35PM  | 14  | Instructor Review: Weather Admin                | 0:10     |
+| 1:45PM  | 15  | Instructor Do: Introduce Prototypes             | 0:15     |
+| 2:00PM  | 16  | Student Do: RPG Prototype                       | 0:15     |
+| 2:15PM  | 17  | Instructor Review: RPG Prototypes               | 0:15     |
+| 2:30PM  | 18  | END                                             | 0:00     |
 
 - - -
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini-Project (5 min) 
+### 1. Instructor Demo: Mini-Project (5 min)
 
 * Open `28-Stu_Mini-project/README.md` in your browser and demonstrate the following:
 
@@ -293,10 +292,9 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 * Answer any questions before ending the class.
 
+### 5. FLEX (20 mins)
 
-### 5. FLEX (30 mins)
-
-### 6. Instructor Do: Stoke Curiousity (10 mins)
+### 6. Instructor Do: Stoke Curiosity (10 mins)
 
 * Welcome students to class.
 
@@ -374,7 +372,7 @@ In this activity you will make a cat object and dog object each with three keys.
 * See if there is anyway to further optimize your code.
 ```
 
-### 9. Instructor Do: Review Raining Cats and Dogs (5 min)
+### 9. Instructor Review: Review Raining Cats and Dogs (10 min)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -431,7 +429,7 @@ In this activity you will make a cat object and dog object each with three keys.
 
 * Use the discussion to transition to the next topic.
 
-### 9. Instructor Do: Cats and Dogs with Constructors! (10 min)
+### 10. Instructor Demo: Cats and Dogs with Constructors! (5 min)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -491,7 +489,7 @@ In this activity you will make a cat object and dog object each with three keys.
 
 * Use the discussion to transition to the next activity.
 
-### 10. Student Do: MiniBank (20 mins)
+### 11. Student Do: MiniBank (20 mins)
 
 * Direct students to the next activity, found in [03-Stu_Mini-Bank](../../../../01-Class-Content/10-OOP/01-Activities/03-Stu_Mini-Bank/Unsolved).
 
@@ -547,7 +545,7 @@ Update the `MiniBank` constructor function with methods and properties as follow
 - Add code to return a copy of the `statement` array when `getStatement` is called, rather than returning the original array.
 ```
 
-### 11. Instructor Do: Review Mini-Bank (10 mins)
+### 12. Instructor Review: Mini-Bank (10 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -613,7 +611,7 @@ Update the `MiniBank` constructor function with methods and properties as follow
 
   * 🙋 The use of objects and constructors allows us to create a single blueprint, that we can then use to create as many instances of our `MiniBank` as we like.
 
-### 12. Student Do: Weather Admin (15 mins)
+### 13. Student Do: Weather Admin (15 mins)
 
 * Direct students to the next activity located in [04-Stu_Weather-Admin/Unsolved](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Unsolved).
 
@@ -631,7 +629,7 @@ In this activity you will create a CLI based weather application that will give 
 * Unfortunately, this app is also broken. Try to run it as either a user or admin and fix the actual errors that appear in the console and then any "logic" errors that prevent the expected behavior.
 ```
 
-### 13. Instructor Do: Review Weather Admin (10 mins)
+### 14. Instructor Review: Review Weather Admin (10 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -766,7 +764,7 @@ In this activity you will create a CLI based weather application that will give 
   }
   ```
 
-### 14. Instructor Do: Introduce Prototypes (15 mins)
+### 15. Instructor Demo: Prototypes (15 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -854,7 +852,7 @@ In this activity you will create a CLI based weather application that will give 
 
 * Use the discussion to transition to the next topic.
 
-### 15. Student Do: RPG Prototype (20 mins)
+### 16. Student Do: RPG Prototype (15 mins)
 
 * Direct students to the next activity, located in [06-Stu_RPG-Prototypes](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes).
 
@@ -892,7 +890,7 @@ In this activity you will generate RPG characters using Objects and prototypes.
   * LevelUp: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
 ```
 
-### 16. Instructor Do: Review RPG (10 mins)
+### 17. Instructor Review: RPG Prototypes (15 mins)
 
 * Open [06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js) in your IDE and explain  the following to students:
 
@@ -964,7 +962,9 @@ In this activity you will generate RPG characters using Objects and prototypes.
 
   * 🙋 The prototype allows us to declare methods that will be attached to all instances of an object of that prototype. Because the method is applied to the prototype, it is only stored in memory once for all instances.
 
-* Use the discussion to transition to the final activity of the day.
+* After all questions have been answered you can end class for the day.
+
+### 18. END (0 min)
 
 ### Lesson Plan Feedback
 
