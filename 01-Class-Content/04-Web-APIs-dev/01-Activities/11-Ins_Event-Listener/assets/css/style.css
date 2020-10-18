@@ -36,6 +36,12 @@ p {
   bottom: 0px;
 }
 
+.toggle {
+  border-style: outset;
+  width: 400px;
+  background-color: rgba(76, 175, 80, 0.15)
+}
+
 /* Dark Mode */
 .dark {
   background-color: #301934;
