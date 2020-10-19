@@ -7,4 +7,6 @@ function setCounterText() {
   countEl.textContent = count;
 }
 
-// TODO
+// TODO: Add event listener to increment button
+
+// TODO: Add event listener to decrement button 
