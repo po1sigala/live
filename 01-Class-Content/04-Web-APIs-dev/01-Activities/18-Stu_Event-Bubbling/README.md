@@ -1,13 +1,24 @@
-# Event Bubbling
+# 📐 Add Comments to Implementation of .stopPropagation() Method
 
-In this activity, we are going to create an image carousel that allows us to cycle through images. 
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/assets/js/script.js).
 
-## Instructions
+## 📝 Notes
 
-* In the provided `index.html`, a div contains two buttons: `previous` and `next`. The carousel should support the following features: 
+Refer to the documentation: 
 
-  1. When the `next` button is clicked, the image should change to the next image in the array. If the image has reached the end of the array, the image should start over at the start of the array.
+[MDN Web Docs on Event.stopPropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
 
-  2. When the `previous` button is clicked, the image should change to the previous image in the array. If the image has reached the start of the array, the image should start over at the end of the array.
+[MDN Web Docs on Creating and Triggering Events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events)
 
-  3. When the user clicks on an image, they will be navigated to the url that hosts that image.
+---
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* What is event delegation? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

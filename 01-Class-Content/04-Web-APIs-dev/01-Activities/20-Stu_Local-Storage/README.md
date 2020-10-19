@@ -1,21 +1,34 @@
-# Local Storage
+# 🏗️ Implement Local Storage for Sign-Up Form
 
-* You have been provided with a signup form that successfully submits an email and password. You're job is to write code that saves the email and password to localStorage and renders the last submission to the page.
+Work with a partner to implement the following user story:
 
-## Instructions
+* As a developer, I want to save the email and password to localStorage and render the last submission to the page.
 
-* In your `signUpButton` event listener you will need to:
+## Acceptance Criteria
 
-  * Save the user to localStorage.
+* It's done when `Last Registered User: ` displays the last email and password saved to local storage, if it exists.
 
-* In the `renderLastRegistered()` function you will need to:
+* It's done when the `signUpButton` is clicked, the email and password entered into the text boxes is saved to local storage and the information under `Last Registered User: ` is updated. 
 
-  * Fill in code here to retrieve the last registered credentials from local storage.
-  
-  * If the last registered is null, return early from this function.
-  
-  * Else set the text of the `userEmailSpan`, `userPasswordSpan` to their corresponding values from local storage.
-  
-## Hints
+## Assets
 
-* Make sure you call `renderLastRegistered()` after you set your `localStorage`.
+The following image demonstrates the web application's appearance and functionality:
+
+![Mockup](./images/01-screenshot.png)
+
+---
+
+## 💡 Hints
+
+What methods do we use to set and get items to local storage? 
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* Does local storage have an expiration date? What happens when the browser is closed?
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

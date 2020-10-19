@@ -7,4 +7,4 @@ function setCounterText() {
   countEl.textContent = count;
 }
 
-// Write Your Code Below
+// TODO

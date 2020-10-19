@@ -1,4 +1,4 @@
-# 🐛 Submit Button on Form Returns 404: ENOENT Error
+# 🐛 Submit Button on Form Returns 404 Error
 
 Work with a partner to resolve the following issue(s):
 
