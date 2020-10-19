@@ -4,7 +4,7 @@
 
 In this unit, we will be welcoming our students to their first unit of our Full-Stack Web Development Boot Camp. We'll be walking them through the very basics of HTML/CSS, Git Version Control, and Terminal/Console commands.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-CSS/README.md) for detailed information on key topics, learning objectives and homework.
+  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git-CSS/README.md) for detailed information on key topics, learning objectives and homework.
 
 ## Instructor / TA Notes
 
