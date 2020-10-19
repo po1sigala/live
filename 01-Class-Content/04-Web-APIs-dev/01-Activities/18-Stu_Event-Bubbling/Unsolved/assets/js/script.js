@@ -1,3 +1,5 @@
+var carousel = document.querySelector(".carouselbox");
+var next = document.querySelector(".next");
 var prev = document.querySelector(".prev");
 var index = 0;
 var images = [
@@ -12,15 +14,27 @@ carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
 
 function navigate(direction) {
   index = index + direction;
-  if (index < 0) { 
-    index = images.length - 1; 
-  } else if (index > images.length - 1) { 
+  if (index < 0) {
+    index = images.length - 1;
+  } else if (index > images.length - 1) {
     index = 0;
   }
   currentImage = images[index];
   carousel.style.backgroundImage = "url('" + currentImage + "')";
 }
 
-// Add Your Code Here
+carousel.addEventListener("click", function() {
+  window.location.href = images[index];
+});
+
+next.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navigate(1);
+});
+
+prev.addEventListener("click", function(event) {
+  event.stopPropagation();
+  navigate(-1);
+});
 
 navigate(0);

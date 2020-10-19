@@ -1,25 +1,35 @@
-# Preventing Default Events
+# 🐛 Submit Button on Form Returns 404: ENOENT Error
 
-In this activity, we are going to create a form that calculates a suggested tip amount based off of the total of the bill.
+Work with a partner to resolve the following issue(s):
 
-## Instructions
+* Users should be able to see the calculated tip amount and total on the screen after clicking on the submit button. 
 
-* In the provided `index.html`, update the form with the following elements:
+## Expected Behavior
 
-1. An input for the total price of the meal
+When a user enters numbers in the text fields and clicks on the `Calculate Tip` button, calculated totals for both the tip amount and total should appear on screen.  
 
-2. An input for the tip percentage
+## Actual Behavior
 
-3. A button to calculate the tip
+When a user clicks on the `Calculate Tip` button, a 404: ENOENT error appears. 
 
-* Create a file called `script.js` and add an event listener that utilizes the values from the input fields to calculate the recommended tip and the new total of the bill with tip included.
+## Assets
 
-* Once these values are calculated, display them on the page.
+The following image demonstrates the web application's appearance and functionality:
 
-## Bonus 
+![Mockup](./images/01-screenshot.png)
 
-* Add a feature that gives users the option to evenly `split the total between any number of people. Make sure to add code to ensure that the split total will be rounded to two decimal places. 
+---
+## 💡 Hints
 
-## Hint
+What action may be preventing the calculated totals from being rendered correctly on the page? How can we cancel that action?
 
-* In JavaScript, we have a function that rounds a number to a given point called `toFixed()`. For more information, visit the docs at [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* Even when an event is canceled, it continues to propogate. What does that mean? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
