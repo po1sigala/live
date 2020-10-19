@@ -1060,8 +1060,8 @@ By the end of class, students will be able to:
   * We can also handle nested objects in a much more elegant way, as shown in the following example:
 
     ```js
-      const john = {
-      first: "John",
+      const jon = {
+      first: "Jon",
       last: "Snow",
       title: "Prince",
       family: {
@@ -1076,7 +1076,7 @@ By the end of class, students will be able to:
       }
     };
 
-    const { brother1, brother2 } = john.family.brothers;
+    const { brother1, brother2 } = jon.family.brothers;
     console.log(brother1); // <= Rob Stark
     console.log(brother2); // <= Rickon Stark
     ```
@@ -1093,10 +1093,10 @@ By the end of class, students will be able to:
   * You can also use destructuring with strings, like in the following code:
 
     ```js
-    const skills = "The Usurper, male, Baratheon, Cersei"; // string of data
+    const skills = "The Usurper, Baratheon, Cersei"; // string of data
 
-    const [alias, gender, family, spouse] = skills.split(","); // set variables and split
-    console.log(alias, gender, family, spouse); // print them by variable name
+    const [alias, family, spouse] = skills.split(","); // set variables and split
+    console.log(alias, family, spouse); // print them by variable name
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
