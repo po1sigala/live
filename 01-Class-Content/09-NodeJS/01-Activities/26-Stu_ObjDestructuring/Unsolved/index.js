@@ -12,8 +12,8 @@ console.log(first); // <= Arya
 console.log(last); // <= Stark
 
 // 2. Nested Object
-const john = {
-  first: 'John',
+const jon = {
+  first: 'Jon',
   last: 'Snow',
   title: 'Prince',
   family: {
@@ -41,8 +41,8 @@ const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
 console.log(name, alias, house);
 
 // 4. Strings
-const skills = 'The Usurper, male, Baratheon, Cersei';
+const skills = 'The Usurper, Baratheon, Cersei';
 
 // CODE BELOW HERE
 
-console.log(nickName, gender, family, spouse); // print them by variable name
+console.log(nickName, family, spouse); // print them by variable name
