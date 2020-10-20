@@ -12,13 +12,16 @@ var elements = [
 
 var typeface;
 
+// Change event
 typefaceEl.addEventListener("change", function(event) {
   event.preventDefault();
   typeface = typefaceEl.value;
   document.querySelector(".container").style.fontFamily = typeface;
 });
 
-textAreaEl.addEventListener("keyup", function(event) {
+// Keydown event
+textAreaEl.addEventListener("keydown", function(event) {
+  // Access value of pressed key with key property
   var key = event.key.toLowerCase();
   var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
   if (alphabetNumericCharacters.includes(key)) {

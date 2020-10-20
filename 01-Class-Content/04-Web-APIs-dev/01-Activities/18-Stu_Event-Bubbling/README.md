@@ -16,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is event delegation? 
+* What is event delegation? How is it different from event bubbling?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
