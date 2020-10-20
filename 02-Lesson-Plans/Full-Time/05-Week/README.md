@@ -46,4 +46,6 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [New to Node](https://docs.google.com/presentation/d/1_thzaJ4qUb-gis58By-5t0yjdK533MmADdJrURBU7wI/edit?usp=sharing)
+* [05.1: New to Node](https://docs.google.com/presentation/d/1Abg7niwSWZpFJkjr3XarytPJO9zl4yEFDsOowNoy8LM/edit?usp=sharing)
+
+* [05.3: Constructors](https://docs.google.com/presentation/d/1UrpscJQMOSvspa0Tw6mtYkG95mSjIaUwLmeJhDYo9T8/edit?usp=sharing)
