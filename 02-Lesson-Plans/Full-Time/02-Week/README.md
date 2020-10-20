@@ -48,7 +48,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 * [02.2 Jumping for JavaScript](https://docs.google.com/presentation/d/1H8ZjXAP9jCK5b7cS_90eWyCnqNT64zuBeWIgTuThOVg/edit?usp=sharing)
 
-* [2.3 JavaScript & Introduction to the DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing)
+* [02.3 JavaScript & Introduction to the DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing)
 
 ### Time Tracker(s)
 

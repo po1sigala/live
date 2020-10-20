@@ -27,7 +27,7 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 ## Slides
 
-[5.3 Intro to OOP Slide Deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+[5.3: Constructors](https://docs.google.com/presentation/d/1UrpscJQMOSvspa0Tw6mtYkG95mSjIaUwLmeJhDYo9T8/edit?usp=sharing)
 
 ## Time Tracker
 

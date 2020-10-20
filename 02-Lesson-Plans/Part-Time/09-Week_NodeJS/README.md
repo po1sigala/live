@@ -35,7 +35,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-* [09.1: Introduction to Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+* [09.1: Introduction to Node.js](https://docs.google.com/presentation/d/1w3T2j5INu7QG2KKyA-Zr9viyWamGUntBjthHfmsKy84/edit?usp=sharing)
 
 ### Time Tracker(s)
 

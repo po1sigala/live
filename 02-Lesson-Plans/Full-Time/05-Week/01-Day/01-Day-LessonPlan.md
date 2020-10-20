@@ -34,7 +34,7 @@ This lesson introduces Node.js and the concepts of standard library, modules, np
 
 ## Slides
 
-[05.1: Introduction to Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+[05.1: Introduction to Node.js](https://docs.google.com/presentation/d/1Abg7niwSWZpFJkjr3XarytPJO9zl4yEFDsOowNoy8LM/edit?usp=sharing)
 
 
 ## Time Tracker
@@ -49,7 +49,7 @@ This lesson introduces Node.js and the concepts of standard library, modules, np
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing) and follow these prompts with their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1Abg7niwSWZpFJkjr3XarytPJO9zl4yEFDsOowNoy8LM/edit?usp=sharing) and follow these prompts with their corresponding slides:
 
   * **Introduction to Node.js (Title)**: Today's class is a miletsone as we make the transition from writing client-side code to server-side code using Node.js. 
 
