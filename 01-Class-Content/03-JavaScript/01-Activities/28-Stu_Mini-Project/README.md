@@ -26,18 +26,22 @@ In this activity, you will work with a group to build a game using only JavaScri
 
 * Refer to the following documentation for help:
 
-  * [MDN web docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+  * [MDN Web Docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
-  * [MDN web docs on window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+  * [MDN Web Docs on window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
 
-  * [MDN web docs on window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+  * [MDN Web Docs on window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
 
-  * [MDN web docs on Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+  * [MDN Web Docs on Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your group can work through as an added challenge to further your knowledge:
+If you have fully completed the above tasks, here is something you and your group can work through as an added challenge to further your knowledge:
 
-  * How can you customize the appearance of the `alert()`, `confirm()`, and `prompt()` dialog boxes?
+* How can you customize the appearance of the `alert()`, `confirm()`, and `prompt()` dialog boxes?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research the above.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -2,28 +2,32 @@
 
 Work with a partner to implement the following user story:
 
-As a developer, I want to link an external JavaScript file to an existing `index.html` file to add JavaScript functiona
-lity to my static web page. 
+* As a developer, I want to link an external JavaScript file to an existing `index.html` file to add JavaScript functionality to my static webpage. 
 
 ## Acceptance Criteria
 
-* It is done when I open the `index.html`, navigate to the console, and see the message contained in the `script.js` file logged to the console. 
+* It's done when I open the `index.html` file, navigate to the console, and see the message contained in the `script.js` file logged to the console. 
 
-## Notes
+## 📝 Notes
 
 Refer to the documentation: 
 
-[MDN web docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
-[Open Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
+[MDN Web Docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
-## 💡 Hint
+[Google documentation on opening Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
+
+## 💡 Hints
 
 It is best practice to add a link to an external JavaScript file above what closing HTML tag? 
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Comments are a key part of a developer's toolbox.  Why do you think it is so important to include comments in your code? How do you write single-line and multi-line comments in Javascript?
+* Comments are a key part of a developer's toolbox. Why do you think it is so important to include comments in your code? How do you write single-line and multiline comments in Javascript?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

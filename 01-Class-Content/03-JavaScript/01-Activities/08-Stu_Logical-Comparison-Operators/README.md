@@ -1,6 +1,6 @@
-# 🐞 Logs Using Logical and Conditional Operators Return False
+# 🐛 Logs Using Logical and Conditional Operators Return False
 
-Work with a partner to resolve the following issue:
+Work with a partner to resolve the following issue(s):
 
 * When I open the console, all the logs should read `true`, but right now they do not!
 
@@ -10,16 +10,20 @@ When an expression is logged to the console, it should return `true`.
 
 ## Actual Behavior
 
-When an expression is logged to the console, it is returning `false`.
+When an expression is logged to the console, it returns `false`.
 
-## 💡 Hint
+## 💡 Hints
 
-* What is the difference between `=`, `==`, and `===`? 
+What is the difference between `=`, `==`, and `===`? 
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is NaN? What happens when you use `typeof` to evaluate NaN? Is the answer what you expected? Why or why not?
+* What is `NaN`? What happens when you use `typeof` to evaluate `NaN`? Is the answer what you expected? Why or why not?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
