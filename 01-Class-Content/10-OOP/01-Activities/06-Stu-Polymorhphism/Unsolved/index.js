@@ -1,26 +1,33 @@
-// We create our parent class, Developer, and the `sayHi` method
-class Developer {
-  constructor(name) {
-    this.developerName = name;
-  }
+// Helper function to evaluate if a number is within a given range
+const inRange = (x, min, max) => (x - min) * (x - max) <= 0;
 
-  sayHi() {
-    return `Hey! my name is ${this.developerName} 👋`;
-  }
+function Student(first, last, age, grade) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.grade = grade;
+
+  // Method that will simulate method overloading in javascript
+  this.displayGrade = function () {
+    const input = this.grade;
+    let response;
+    if (!input) {
+      throw new Error('no grade provided');
+    }
+    // Return a letter grade if a number grade was passed
+    // Ex. 95 => 'A'
+    if (typeof input === 'number') {
+      // Logic here
+      return response;
+    }
+    // Return a range if a letter grade was passed
+    // Ex. 'A' => '90 - 100'
+    if (typeof input === 'string') {
+      // Logic here
+      return response;
+    }
+  };
 }
 
-// We extend Developer into a subclass called Frontend and give it its own `saySkill` method
-// The saySkill method should simply return a statement about what tech stack (ex. React) the developer uses
-class FrontEnd extends Developer {}
-
-// We extend developer into another class called Backend and give it a `code` method
-// The code method should return a line of code that the developer might write (ex. SELECT * FROM users;)
-class Backend extends Developer {}
-
-// Create three variables that are instances of each class you have made
-
-// Have the three objects you've created `sayHi`
-
-// Have the two extended classes you've created preform their `saySkill` and `code` methods
-
-// Override the sayHi method for the `Backend` and `Frontend` classes
+const John = new Student('John', 'Appleseed', '30', 'A');
+console.log('John.displayGrade();', John.displayGrade());
