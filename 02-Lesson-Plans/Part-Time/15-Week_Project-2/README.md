@@ -26,9 +26,7 @@ On Day 03 of the next unit, students will present their projects. Emphasize that
 
 ### Slide Decks
 
-  * [15.1: Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing)
-
-  * [15.2: Agile & Projects](https://docs.google.com/presentation/d/1T7rSHI5Jpg6aE0OR7HhiJy4VEKcO8lm2eSwTUj5Wml8/edit?usp=sharing)
+  * [15.1: Linting and Projects](https://docs.google.com/presentation/d/1T7rSHI5Jpg6aE0OR7HhiJy4VEKcO8lm2eSwTUj5Wml8/edit?usp=sharing)
 
 ### Time Tracker(s)
 
