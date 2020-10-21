@@ -6,7 +6,7 @@ This week, you'll learn about application programming interfaces, or APIs, which
 
 Some APIs are even built directly in the browser. When a web page is loaded in the browser an object representation of the web page called the Document Object Model is created. As a programming interface, the DOM allows us to use JavaScript to interact with HTML elements.
 
-During class this week, you will practice navigating the DOM and learn to create and manipulate HTML elements, add event listeners, create timers and store data in the browser, all using the power of the DOM and Web APIs. 
+During class and in the homework, you will practice navigating the DOM and learn to create and manipulate HTML elements, add event listeners, create timers and store data in the browser -- all using the power of the DOM and Web APIs. 
 
 ## Key Topics
 
