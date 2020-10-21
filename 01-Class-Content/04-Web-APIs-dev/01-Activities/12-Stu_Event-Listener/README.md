@@ -1,4 +1,4 @@
-# 🏗️ Implement Event Handler When User Clicks on Button
+# 🏗️ Implement Event Handler on Mouse Click
 
 Work with a partner to implement the following user story:
 
@@ -20,7 +20,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-What two parameters does the document method `.addEventListener()` take? 
+What method can we use to listen for an mouse click? 
 
 ## 🏆 Bonus
 
