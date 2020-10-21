@@ -2,11 +2,11 @@
 
 ## Overview:
 
-This week, you'll learn about application programming interfaces, or APIs, which allow web developers to create dynamic, interactive web applications. APIs can help add a wide range of functionality to your code and are an essential part of a developer's toolbox.   
+This week, you'll learn about application programming interfaces, or APIs, which allow web developers to create dynamic, interactive web applications. APIs can help add a wide range of functionality to your code and are an essential part of a developer's toolbox.
 
-Some APIs are even built directly in the browser. When a web page is loaded in the browser an object representation of the web page called the Document Object Model is created. As a programming interface, the DOM allows us to use JavaScript to interact with HTML elements.
+APIs are even built directly in the browser. When a web page is loaded in the browser an object representation of the web page called the Document Object Model or DOM is created. As a programming interface, the DOM allows us to use JavaScript to interact with HTML elements.
 
-During class and in the homework, you will practice navigating the DOM and learn to create and manipulate HTML elements, add event listeners, create timers and store data in the browser -- all using the power of the DOM and Web APIs. 
+During class and in the homework, you will practice navigating the DOM and learn to create and manipulate HTML elements, add event listeners, create timers and store data -- all using the power of JavaScript and an API built in the browser itself.
 
 ## Key Topics
 
@@ -52,8 +52,6 @@ You will be employer-ready if you are able to:
 
 * Store and retrieve data using the browser's local and session storage.
 
-* Research Web API documentation to implement new and unfamiliar interfaces.
-
 ## Technical Interview Preparation
 
 You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
@@ -80,7 +78,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework focuses on the skills you need to succeed in this assignment.
+In this week's homework, you will build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework focuses on the skills you need to succeed in this assignment.
 
 ## Career Connection
 
@@ -94,7 +92,7 @@ When you are are researching DOM and event resources, you may come across jQuery
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* 📹 Code Review: @TODO LINK TO VIDEOS FOR THIS UNIT
+* 📹 Code Review: @TODO LINK TO VIDEOS FOR THIS UNIT {Link not yet available}
 
 * 📖 Git Guide: @TODO LINK TO OUR BLOG POSTS {TO BE DONE NEXT SPRINT}
 
