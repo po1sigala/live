@@ -8,7 +8,7 @@ This lesson introduces Node.js and the new syntax that comes with ES6. This incl
 
 * In this lesson, students will complete activities `01-Ins_Node-Demo` through `10-Stu_TemplateLiterals`.
 
-* Students will be expected to have Node.js installed, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](TODO).
+* Students will be expected to have Node.js installed, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 * Transitioning from client-side to back-end development can be a little confusing at first. Remind students that Node.js is Chrome's V8 engine running on the machine rather than in the browser, giving us access to things like the file system.
 
