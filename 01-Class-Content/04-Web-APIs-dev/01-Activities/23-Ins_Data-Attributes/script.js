@@ -7,11 +7,12 @@ imageContainer.addEventListener("click", function(event) {
     var state = element.getAttribute("data-state");
 
     if (state === "still") {
+      element.dataset.state = "animate";
       element.setAttribute("data-state", "animate");
-      element.setAttribute("src", element.getAttribute("data-animate"));
-    } else if (state === "animate") {
-      element.setAttribute("data-state", "still");
-      element.setAttribute("src", element.getAttribute("data-still"));
+      element.setAttribute("src", element.dataset.animate);
+    } else {
+      element.dataset.state = "still";
+      element.setAttribute("src", element.dataset.still);
     }
   }
 });
