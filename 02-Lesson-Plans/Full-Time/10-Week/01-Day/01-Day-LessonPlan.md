@@ -30,19 +30,14 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 ## Slides
 
-[React Gently](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing)
+[10.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1a1qwF0MIf2D1FtnfuJvqQ2wWYxnUz71DSVlesxqYWzs/edit?usp=sharing)
 
-[ReactJS Recap slides](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing)
 
 ## Time Tracker
 
 [10.1 Time Tracker](https://docs.google.com/spreadsheets/d/1NjFssI5jL39mLWGlG2LV6qvwezyOaNrjTP3q3QTyrz4/edit?usp=sharing)
 
 ### 1. Instructor Do: Go Through Slides (15 mins)
-
-* This unit uses a web-based slideshow found here: [React Gently](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing).
-
-  * Use the left and right arrow keys to cycle through the slides. It is advisable to view the slideshow in fullscreen Chrome.
 
 * The most important part to get across today is the concept of components &mdash; self-contained modules that are responsible for producing part of an application's UI and functionality (i.e. all of the layout and functionality code for a "chat box" or "like button" might be in the same file or folder). This is radically different from the concept of separating the view and logic layers. When we split up our application into components, we're still separating its concerns, but we aren't necessarily separating its technologies.
 
@@ -366,9 +361,7 @@ In this class, we will be introducing students to the basic concepts of ReactJS,
 
 ### 18. Instructor Do: Go through Slides (10 mins) (High)
 
-* This unit uses a web-based slideshow found here: [ReactJS Recap slides](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing). Be sure to give students enough time to answer each question and discuss before going over the answers.
-
-  * Use the left and right arrow keys to cycle through the slides. It is advisable to view the slideshow in fullscreen Chrome.
+* Go through the remainder of the slides.
 
 ### 19. Instructor Do: Props Demo (15 mins) (High)
 

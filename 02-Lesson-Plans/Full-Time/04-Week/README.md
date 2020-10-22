@@ -57,8 +57,4 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [04.1: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
-
-* [GitHub Collaboration and Project Week](https://docs.google.com/presentation/d/1gm9S6hZhJNv6bnyzsgpa1OuLixVLsipLjmhV7CUILqc/edit?usp=sharing)
-
-* [Git Visualized](https://docs.google.com/presentation/d/1K1ceGxPy2riRg9lP3_S_tYjbKaxsS84QZfCt4481QqQ/edit?usp=sharing)
+* [04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
