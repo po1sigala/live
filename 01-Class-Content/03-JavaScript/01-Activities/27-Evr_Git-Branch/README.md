@@ -1,28 +1,24 @@
 # Git Branch
 
-How many times have you been writing code, only to discover that you made a mistake earlier and you wish we could just go back to where you were earlier? But maybe you or one of your colleagues wrote some really great along the way code that we don't want to lose. Luckily, git branching allows us to avoid scenarios like this and offers an easier way to fix problems when they do arise.
+Every developer has done it&mdash;you make a mistake but fail to notice it until you've already written a lot of great code in the meantime. If you want to revert your changes to fix the error, you risk losing all that work!
 
-Branching is one of the most powerful and useful tools that git has to offer and will likely be a part of the everyday development process in your career as a developer. Whenever you need to fix a bug or build a new feature, you will create a new branch to make your changes.
+Luckily, a powerful tool called **Git branching** helps prevent scenarios like this and makes it easier to fix problems when they do arise. Branching allows team members to work on separate features at the same time while minimizing conflicts. For instance, you can easily switch to a colleague's branch to help them with their code or ask colleagues to review your own code before merging it with the main codebase.
 
-When we create a new branch to work on, we are creating an isolated environment to write and test code for a specific feature. We are free to make mistakes while working on the feature without messing up the hard work that we've put into our main code base. This way, we always have the option to return to an earlier version of our work without losing everything. Once our work is complete, we can merge the branch with the main code base and move on! 
+You'll likely use branching every day in your development career. Whenever you need to fix a bug or build a new feature, you'll create a new branch&mdash;an isolated environment where you can write and test code without messing up the main codebase. This way, you always have the option to return to an earlier version without losing everything. Once the work is complete, you can merge the branch with the main codebase and move on! 
 
-Branching is also a powerful tool for collaboration. It allows a team of developers to work on separate features at the same time while minimizing conflicts. If a colleague asks for your help with a feature that they are working on, you can easily switch to their branch to check out their code. In addition, we can have colleagues review our code to make sure that it works before merging it with the main code base.
-
-In this activity, we will introduce the concept of branching by using git commands to create a new branch, complete a feature in the new branch, merge the branch with main, and close the branch when we are all done. 
+In this activity, we'll learn the concept of branching by using Git commands to create a new branch, complete a feature in the new branch, merge the branch with `main`, and close the branch when finished. 
 
 ## Instructions
 
-### Create a new directory and repository
-
 * Navigate to a directory where you usually store your coding files using your command line.
 
-* Create a new directory called `git_branch_demo`. We could create a new repo in Github as well, but since we are working locally for this activity, we can skip that step and instead issue the following command in the terminal:
+* Create a new directory called `git_branch_demo`. We could create a new repo in Github as well, but because we're working locally for this activity, we can skip that step and instead issue the following command:
 
   ```bash
   mkdir git_branch_demo
   ```
 
-* Now use the `cd` command to navigate into the newly created directory and initialize an empty git repo in the directory with this command:
+* Now use the `cd` command to navigate into the newly created directory. Initialize an empty Git repo in the directory with the following command:
 
   ```bash
   cd git_branch_demo
@@ -31,117 +27,103 @@ In this activity, we will introduce the concept of branching by using git comman
   
 * Open the `git_branch_demo` directory in VS Code.
 
-### Create a new branch
+* Now that we're ready to create the first feature, we need to create a new branch. Remember, the goal is to avoid working in the `main` branch, so that we can make mistakes on the new feature without damaging code that already works.
 
-* Now that we are ready to create our first feature, we need to create a new branch. Remember, our goal is to avoid working in the main branch, so that we are free to make mistakes on our new feature without damaging code that is already working.
+* The Git command for creating a new branch in your repo is `git branch feature/<feature-name>`. Pick a name that is associated with the feature that you will be working on. `feature/` reminds us that each branch is dedicated to a specific feature, while `<feature-name>` is the name of the feature. In this case, we'll be creating a README.md file, so let's call it `create-readme`, as follows:
 
-* The git command for creating a new branch in your repo is `git branch feature/<feature-name>`. It is helpful to pick a name that is associated with the feature that you will be working on. `feature/` reminds us that each branch is dedicated to a specific feature. `<feature-name>` is the name of the feature that we will be working on. In our case, we will be creating a README.md file, so we will call it `create-readme`:
-
-```bash
-git branch feature/create-readme
-```
-
-### Switch to the new branch
-
-* The git command `git branch` allows us to see a list of existing branches. Run the following in your terminal so that we can confirm that the `feature/create-readme` branch was created.
-
-```bash
-git branch
-```
-
-* You should see the `feature/create-readme` branch and a `*` next to `main`. That tells us that we are still on the main branch. If our repo includes a long list of branches, we may need to press the `q` key in order to exit the list.
-
-![The command line displays a list of branches after we run the git branch command.](./Images/01-git-branch.png)
-
-
-* We've created a branch, but we are still in `main`. How do we get into to the branch we just created? We can type `git checkout feature/create-readme` to switch from `main` to the new branch, followed by the `git branch` command to confirm that we've switched branches. 
-
-```bash
-git checkout feature/create-readme
-git branch
-```
-
-* We should now see a `*` by `feature/create-readme`.
-
-![The command line shows a * next to the feature/create-readme branch, this tells us that we have successfully switched to the new branch from main.](./Images/02-switch-branch.png)
-
-> Important: We also have the option to create a branch and switch over to it at the same time by entering `git checkout -b <branch-name>` into the terminal.
-
-### Complete feature while on branch
-
-* Now that we are on the correct feature branch, we need to work on the feature. Create a README.md file in the `git_branch_demo` directory.
-
-![After we create a README.md file, we see it in the file tree under the git_branch_demo directory.](./Images/03-readme.png)
-
-
-* Add some text to the README.md file.
-
-![We build our new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
-
-
-* Finally, add and commit the changes that you made.
-
- ```bash
-  git add .
-  git commit -m "Created README.md and added text to the file"
+  ```bash
+  git branch feature/create-readme
   ```
 
-### Merge feature branch to main branch
+* The Git command `git branch` allows us to see a list of existing branches. Run the following command so that we can confirm that the `feature/create-readme` branch was created:
 
-* Now that the feature is complete, we can merge the feature branch with `main`. First, we need to switch back to `main` from `feature/create-readme`. Remember, it's always a good idea to confirm that you are on the correct branch using the `git branch` command.
+  ```bash
+  git branch
+  ```
 
-```bash
-git checkout main
-git branch
-```
+* You should see the `feature/create-readme` branch and a `*` next to `main`, as shown in the following image:
 
->Important: Git won't let you switch to a different branch until you have added, committed, and pushed any changes that you made to your feature branch. If you try to switch without pushing your code, git will send you a reminder to push the changes that you made before switching branches.
+  ![The command line displays a list of branches, including * main and feature/create-readme.](./Images/01-git-branch.png)
 
-* Once we are in `main`, notice that we no longer have a README.md file in the directory. What happened? `main` is currently behind `feature/create-readme` and we still need to merge the feature branch with the main code base. To merge, add the following code to your terminal:
+  That `*` tells us that we are still on the main branch. If the repo includes a long list of branches, we might need to press the `q` key to exit the list.
 
-```bash
-git merge feature/create-readme
-```
+* We've created a branch, but we're still in `main`. How do we get into the branch we just created? We can type `git checkout feature/create-readme` to switch from `main` to the new branch, then type the `git branch` command to confirm that we've switched branches. See the following code for an example:
 
-* If the merge is successful, we should see something similar to the following in the terminal.
+  ```bash
+  git checkout feature/create-readme
+  git branch
+  ```
 
-![The command line shows that we successfully merged the README.md file that we created in the feature/create-readme branch into main.](./Images/05-merge.png)
+* We should now see a `*` by `feature/create-readme`, as shown in the following image:
 
+  ![The command line shows a * next to the feature/create-readme branch.](./Images/02-switch-branch.png)
 
-* Now, the directory should include the README.md file that we created along with whatever text we added to the file. We asked git to merge the code that we wrote in the feature branch with the code that already existed in `main`. Now, our new feature is a part of the main code base.
+  > **Important:** We also have the option to create a branch and switch over to it at the same time by entering `git checkout -b <branch-name>`.
 
-![](./Images/06-merge-success.png)
+* Now that we're on the correct feature branch, we need to work on the feature. Create a README.md file in the `git_branch_demo` directory, as shown in the following image:
 
-### Delete the branch
+  ![In VS Code, the README.md file is listed in the file tree under the git_branch_demo directory.](./Images/03-readme.png)
 
-* We are all done with our feature and the code that we wrote safely exists in `main`. But, if you type the `git branch` command into your terminal, you'll see that `feature/create-readme` still exists. Why might this be a problem?
+* Add some text to the README.md file, so that it looks something like the following image:
 
-![When we open the README.md file while on the main branch, the text that we wrote on the feature branch now appears, confirming that we merged the feature branch successfully with the code in the main branch.](./Images/07-still-exists.png)
+  [We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
+  <!-- Missing image here -->
 
-* You can imagine that we could potentially generate a huge list of feature branches while working on a large project. While we don't have to delete a branch, it is good practice to close a branch once a feature is completed and merged to avoid confusion and to stay organized. Since we are finished with this feature and our code is now included in `main`, we no longer need the isolated environment that the feature branch made available to us. If we do discover a problem with our feature in the future, we can always open another branch to fix the problem. For now, we can safely close the feature branch by issuing the following command in the terminal:
+* Finally, add and commit the changes that you made, as follows:
 
-```bash
-git branch -d feature/create-readme
-```
+  ```bash
+    git add .
+    git commit -m "Created README.md and added text to the file"
+    ```
 
-* When we run `git branch` in the terminal, we should see something similar to the following:
+* Now that the feature is complete, you can merge the feature branch with `main`. First you need to switch back to `main` from `feature/create-readme`. Remember, it's always a good idea to confirm that you're on the correct branch using the `git branch` command. See the following example:
 
-![The command line only displays the main branch with a * next to it after we run the git branch command, because we successfully deleted the feature/create-readme branch by using the git branch -d feature/create-readme command.](./Images/08-branch-deleted.png)
+  ```bash
+  git checkout main
+  git branch
+  ```
 
-* Congratulations, you have now completed your first branch lifecycle! We successfuly created an isolated environment on a new branch so that we could write and test code for a new feature, a README.md file. Once we were finished adding text to README.md, we merged the feature branch with our main code base on `main`. Once our feature was successfully merged, we then closed the feature branch, since we no longer needed to do work on the README.md file. 
+  > **Important:** Git won't let you switch to a different branch until you have added, committed, and pushed any changes that you made to your feature branch. If you try to switch without pushing your code, Git will send you a reminder to push the changes that you made before switching branches.
+
+* Once we're in `main`, notice that we no longer have a README.md file in the directory. What happened? `main` is currently behind `feature/create-readme` and we still need to merge the feature branch with the main codebase. To merge, add the following code to the command line:
+
+  ```bash
+  git merge feature/create-readme
+  ```
+
+* If the merge is successful, we should see something similar to the following image:
+
+  ![The command line shows lists the number of files changed and the number of insertions to indicate a successful merge.](./Images/05-merge.png)
+
+* Now the directory should include the README.md file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
+
+  ![In the README.md file on the main branch, the text that we wrote on the feature branch now appears.](./Images/06-merge-success.png)
+
+* We're all done with the feature, and the code that we wrote safely exists in `main`. But if you enter the `git branch` command, you'll see that `feature/create-readme` still exists, as shown in the following image:
+
+  ![The feature/create-readme branch is still listed.](./Images/07-still-exists.png)
+
+* We could potentially generate a huge list of feature branches while working on a large project. So to avoid confusion and stay organized, it is good practice to close a branch once a feature is completed and merged. Because we're finished with this feature and the code is now included in `main`, we no longer need the isolated environment of that branch. We can always open another branch to fix future problems. But for now, we can safely close the feature branch by issuing the following command:
+
+  ```bash
+  git branch -d feature/create-readme
+  ```
+
+* When we run `git branch`, we should see something similar to the following image:
+
+  ![The command line only displays the main branch.](./Images/08-branch-deleted.png)
+
+* Congratulations, you've now completed your first branch lifecycle! You created an isolated environment on a new branch so that you could write and test code for a new feature, a README.md file. Once you finished adding text to README.md, you merged the feature branch with the main codebase on `main`. You then closed the feature branch, because you no longer needed to work on the README.md file. 
 
 ### Hints
 
-* You will come up with your own naming conventions for branches when you're working on your own project. It's helpful to include a reference to the feature that you will be working on in the branch. Try to be descriptive but concise to help other developers (or your fututre self) understand what is happening in each branch. 
+* You'll come up with your own naming conventions for branches when you're working on your own project. Try to be descriptive but concise to help other developers (or your future self) understand what is happening in each branch. 
 
-* Popular tactics in the field include `feature/<feature-name>`, `issue/<issue-reference>`, etc. So it is a good diea to practice these conventions while you're learning. 
+* Popular naming conventions in the field include `feature/<feature-name>`, `issue/<issue-reference>`, etc. So it is a good idea to practice these conventions while you're learning. 
 
-* Whichever convention you choose, do stay away from including your own name in the branch name because multiple developers might end up working in the same branch.
-    * Do:   `git branch user-login-page`
-    * Don't:   `git branch rachels-feature`
+* Avoid including your own name in the branch name, because multiple developers might end up working in the same branch. So, for example, instead of `git branch rachels-feature`, try using `git branch user-login-page`.
 
-* More information can be found in [these tutorials on branching.](https://www.atlassian.com/git/tutorials/using-branches)
-
+* More information can be found in these [Atlassian tutorials on branching](https://www.atlassian.com/git/tutorials/using-branches).
 
 ---
 
