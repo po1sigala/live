@@ -14,7 +14,7 @@ Refer to the [Class Content Unit 09 Overview](../../../01-Class-Content/09-NodeJ
 
 * Ensure that students have already installed Node.js on their computers before coming to class.
 
-  * Direct students to the [Node.js installation guide on The Full-Stack Blog](TODO).
+  * Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 * We will also spend a day this week practicing TDD. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
 

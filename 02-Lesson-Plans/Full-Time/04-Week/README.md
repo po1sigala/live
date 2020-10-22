@@ -26,7 +26,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 ## Heads Up
 
-* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting the next unit! There are separate installation instructions for [Mac](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers.
+* In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting the next unit!
 
 ### Lesson Plans
 

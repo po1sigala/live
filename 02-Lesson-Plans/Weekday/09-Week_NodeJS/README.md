@@ -14,7 +14,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 * Ensure that students have already installed Node.js on their computers before coming to class.
 
-  * Direct students to the [Node.js installation guide on The Full-Stack Blog](TODO).
+  * Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 ## Career Connection
 
