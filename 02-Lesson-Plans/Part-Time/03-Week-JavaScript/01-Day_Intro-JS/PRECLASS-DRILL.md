@@ -1,44 +1,49 @@
-### Pre-class Drill
+### Preclass Drill
 
-* Let students know that it's time for the preclass drill of the day. Remind them that interviewing is a skill that is in some ways separate from practical coding, and that they need to work hard to hone this skillset during this course. The class is designed to make them great developers, and these pre-class questions are designed to make them awesome interviewers.
+* Let students know that it's time for the preclass drill of the day. Remind them that interviewing is a skill that is in some ways separate from practical coding, and that they need to work hard to hone this skillset during this course. The class is designed to make them great developers, and these preclass questions are designed to make them awesome interviewers.
 
-* Encourage students to begin by pseudo-coding. Remind them that many companies are judging more on problem solving skills than coding chops, so having strong pseudo-coding skills to fall back on may just land them their dream job one day. You should encourage some white boarding from students (when relevant) and explain why it's beneficial for them to do it in the classroom rather than wait for their first time to be during interviews, but move on if there are no volunteers. Discourage heavy pressure for students.
+* Encourage students to begin by pseudocoding. Remind them that many companies will judge them more on problem-solving skills than coding chops, so strong pseudocoding skills might just land them their dream job one day. Encourage some whiteboarding from students (when relevant) and explain why it's beneficial for them to practice it in the classroom rather than wait for interviews to be their first experience—but move on if there are no volunteers. Do not pressure students.
 
-* 20 min before class starts write the following problem on the board or Slack it out:
+* 20 minutes before class starts, write the following problem on the board or send it out on Slack, and explain each part of the code:
 
-Explain each part of the code below:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+  </html>
+  ```
   
-  <script type="text/javascript" src="app.js"></script>
-</body>
-</html>
-```
- 
-* After 15 minutes take 5 minutes to go over the solution. You should start recording when going over the answer and Slack out the answer at the end of office hours before class starts.
+<!-- Is this really a drill? What problem are we asking students to solve? --> 
+* After 15 minutes, take 5 minutes to review the solution.
 
 * Ask students if they have an answer. 
 
-* Make sure you touch on each of the following:
+* Start recording when you review the answer, and send it out on Slack at the end of office hours, before class starts.
 
-  * DOCTYPE: instructions to the browser about what version of HTML is being used.
+* Make sure you touch on each of the following points:
 
-  * head: a container for elements about that give information about the website like the title, scripts, styles, and meta information. 
+  * `DOCTYPE`: instructions to the browser about what version of HTML is being used.
 
-  * meta: data about the data on the page (think of things like language or keywords)
+  * `head`: a container for elements about that give information about the website like the title, scripts, styles, and meta information. 
 
-  * title: the title of the page (appears in tab)
+  * `meta`: data about the data on the page (think of things like language or keywords)
 
-  * link: links to stylesheets
+  * `title`: the title of the page (appears in tab)
+
+  * `link`: links to stylesheets
   
-  * script: links to JavaScript files
+  * `script`: links to JavaScript files
 
-  * body: where the actual content that appears on the page goes
+  * `body`: where the actual content that appears on the page goes
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
