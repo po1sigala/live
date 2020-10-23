@@ -11,19 +11,19 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 40px auto;
   letter-spacing: 0.25em;
   color: #001b44;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 25px auto;;
+  width: 80vw;
+  margin: 25px auto;
 }
 .box {
   display: block;
   float: left;
-  width: 30%;
+  width: 31%;
   height: 200px;
   margin: 1%;
   cursor: pointer;
@@ -31,8 +31,9 @@ h1 {
   border-radius: 8px;
   background-color: #093145;
   text-align: center;
+  line-height: 200px;
   font-size: 150px;
-  color: whitesmoke
+  color: whitesmoke;
 }
 
 @media (max-width: 740px) {

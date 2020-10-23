@@ -6,19 +6,19 @@
 
 body {
   font-family: sans-serif;
-  background-color: #c2ced1;
+  background-color: #093145;
 }
 
 h1 {
   text-align: center;
-  margin: auto;
+  margin: 40px auto;
   letter-spacing: 0.25em;
-  color: #001b44;
+  color: whitesmoke;
 }
 
 .img-container {
-  width: 70vw;
-  margin: 30px auto;
+  max-width: 680px;
+  margin: 20px auto;
 }
 
 .img-container::after {
@@ -30,16 +30,12 @@ h1 {
 img {
   display: block;
   float: left;
-  width: 44%;
+  width: 48%;
   height: 270px;
   margin: 1%;
   cursor: pointer;
   object-fit: cover;
   border-radius: 8px;
-}
-
-@media (max-width: 740px) {
-  img {
-    width: 48%;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0,0,0, 1);
+  transition: 0.3s;
 }
