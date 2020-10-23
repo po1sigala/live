@@ -11,13 +11,17 @@ In this activity we will be using a test repository to help you grasp the fork a
 ## Fork and Clone
 
 1. To fork this project, click the "fork" button at the top of the repository
+
 2. Choose your personal account when asked `Where should we fork?"
+
 3. After a few seconds you will be taken to *your* copy of the repository
+
 4. Clone the repository to your local machine and move into that directory
 
     ```sh
     git@github.com:coding-boot-camp/forking-tutorial.git && cd forking-tutorial
     ```
+
 5. Run the following command to see that the remote URL for the repository is set to your own personal Github
 
     ```sh
@@ -31,6 +35,7 @@ In this activity we will be using a test repository to help you grasp the fork a
     ```sh
     git checkout -b <branch name>
     ```
+
 2. Make some additions or changes to the readme file and stage and commit your work.
 
     ```sh
@@ -55,5 +60,5 @@ In this activity we will be using a test repository to help you grasp the fork a
    * The owner can approve or reject the pull request and optionally add some additional comments for your review. While this is a simple edit we are making to the `readme.md` file, you can imagine a situation where your code would require some additional review.
 
 ## Review
-You have successfully created your own fork, cloned it to your local machine, made some changes and created a pull request to the owner's repository. This is a workflow that you will become familiar with as you get deeper into your experience as a software engineer. It may seem a little confusing at first, but now you can move forward with confidence knowing that you have forked and contributed to a repository yourself. 
 
+You have successfully created your own fork, cloned it to your local machine, made some changes and created a pull request to the owner's repository. This is a workflow that you will become familiar with as you get deeper into your experience as a software engineer. It may seem a little confusing at first, but now you can move forward with confidence knowing that you have forked and contributed to a repository yourself. 

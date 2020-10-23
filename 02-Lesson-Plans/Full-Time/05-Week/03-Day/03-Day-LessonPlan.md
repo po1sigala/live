@@ -9,9 +9,9 @@ Trilogy as a company values transparency and data-driven change quite highly. As
 
 In this class we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas.
 
-## Instructor's Notes
+## Instructor Notes
 
-* `Summary: Complete activity 40 in Unit 9 and 1-6 in Unit 10`
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `06-Stu_RPG-Prototypes` in Unit 10.
 
 * Constructors are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Make sure your students have a firm understanding of how objects function.
 
@@ -58,7 +58,11 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 ### 1. Instructor Demo: Mini-Project (5 min)
 
-* Open `28-Stu_Mini-project/README.md` in your browser and demonstrate the following:
+* Welcome students to class.
+
+* Ask if anyone has questions before starting the mini-project.
+
+* Open `28-Stu_Mini-Project/README.md` in your browser and demonstrate the following:
 
 * Run `node index.js` from the command line and demonstrate the following:
 
@@ -76,7 +80,7 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 ### 2. Student Do: Mini-Project (60 min)
 
-* Direct students to the activity instructions found in `28-Stu_Mini-project`.
+* Direct students to the activity instructions found in `28-Stu_Mini-Project`.
 
 * Break your students into groups that will work together on this activity.
 
@@ -266,7 +270,7 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 * Open `02-Homework/README.md` in your browser and demonstrate the following:
 
-* Navigate to the `Master` folder and run `npm i`. 
+* Navigate to the `Main` folder and run `npm i`. 
 
 * Run `node index.js` from the command line and demonstrate the following:
 
@@ -971,3 +975,7 @@ In this activity you will generate RPG characters using Objects and prototypes.
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
 
 [Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+
+- - -
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

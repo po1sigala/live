@@ -6,9 +6,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have opened the `filter.js` file and mapped through `originalArray` and created a new array containing only its prime numbers using `filter()`.
+* It's done when I have opened the `filter.js` file, mapped through `originalArray`, and created a new array containing only its prime numbers using `filter()`.
 
-* It's done when I have used `filter()` to return an array containing only its numbers larger than 5.
+* It's done when I have used `filter()` to return an array containing only its numbers larger than five.
 
 * It's done when I have opened `map.js` and used `map()` to map through `originalArray` and set the result equal to a new `tripledArray` array.
 

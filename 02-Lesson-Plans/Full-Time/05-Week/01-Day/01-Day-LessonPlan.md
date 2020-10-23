@@ -6,7 +6,7 @@ This lesson introduces Node.js and the new syntax that comes with ES6. This incl
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `01-Ins_Node-Demo` through `10-Stu_TemplateLiterals`.
+* In this lesson, students will complete activities `01-Ins_Node-Demo` through `14-Stu_appendFile`.
 
 * Students will be expected to have Node.js installed, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
@@ -110,13 +110,13 @@ By the end of class, students will be able to:
 
       It is a general utility that can be used for a variety of purposes including asset compilation, scripting, monitoring, and **most notably as the basis for web servers**.
 
-* Navigate to [28-Stu_Mini-project](../../../../01-Class-Content/09-NodeJS/01-Activities/28-Stu_Mini-project/Solved/Basic/index.js) in your command line and demonstrate the following:
-   
+* Navigate to `28-Stu_Mini-Project/Solved/Basic/index.js` and demonstrate the following:
+
    * 🔑 We are viewing the mini-project that we will be able to build by the end of this unit. 
 
    * 🔑 It is a command-line tool that generates an HTML portfolio page from user input.
    
-   * First run `npm i` to get the install `inquirer`.
+   * First run `npm i` to install inquirer.
    
    * Make sure to point out that we will be using Node's native `fs` module for this project. 
    
@@ -181,7 +181,7 @@ By the end of class, students will be able to:
     
   * It's done when I have written JavaScript to log the string "Hellooo, Node!"
 
-  * It's done when I have run the program from the command line using `node index`.
+  * It's done when I have run the program from the command line using `node index.js`.
 
   * It's done when I have confirmed the expected output.
 
@@ -237,11 +237,11 @@ By the end of class, students will be able to:
 
 ### 5. Instructor Demo: Arrow Functions (5 min) 
 
-* Open `03-Ins_ArrowFunction/01-syntax.js` in your browser and demonstrate the following:
+* Open `03-Ins_Arrow-Function/01-syntax.js` in your browser and demonstrate the following:
 
   * In this demonstration, you will give students an overview of arrow functions, including syntax differences, when to use them, and when to avoid them.
 
-  * Explain to the class that ES6 introduces a newer, shorter syntax for writing functions. Consider the following example found in `03-Ins_ArrowFunction/01-syntax.js`.
+  * Explain to the class that ES6 introduces a newer, shorter syntax for writing functions. Consider the following example found in `03-Ins_Arrow-Function/01-syntax.js`.
 
   * 🔑 As you walk students through each of the following functions, see if they can point out the differences in syntax:
 
@@ -260,7 +260,7 @@ By the end of class, students will be able to:
 
   * Answer any questions about arrow functions before moving on to some differences between arrow functions and regular functions.
 
-  * In preparation for the activity, ask TAs to start directing students to the following code found in `03-Ins_ArrowFunction/02-context.js`:
+  * In preparation for the activity, ask TAs to start directing students to the following code found in `03-Ins_Arrow-Function/02-context.js`:
 
   ```js
   // Depending on the environment `setTimeout` is called in, it may refer to one of two objects
@@ -285,7 +285,7 @@ By the end of class, students will be able to:
 
   * Point out how this code works as intended: an arrow function automatically binds to the context or object it's created inside of, even if it is not a direct property of that object. The arrow function is created when `saySomething` is run, inside of `person`, right before the `setTimeout` is run.
 
-  * In preparation for the discussion, ask TAs to start directing students to the following code found in `03-Ins_ArrowFunction/03-property-methods.js`:
+  * In preparation for the discussion, ask TAs to start directing students to the following code found in `03-Ins_Arrow-Function/03-property-methods.js`:
 
   ```js
   // Avoid using arrow functions for object methods
@@ -317,7 +317,7 @@ By the end of class, students will be able to:
 
 ### 6. Student Do: Arrow Function Practice (15 min) 
 
-* Direct students to the activity instructions found in `04-Stu_ArrowFunctionPractice/README.md`.
+* Direct students to the activity instructions found in `04-Stu_Arrow-Function-Practice/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -332,7 +332,7 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/Unsolved/index.js).
+  * It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_Arrow-Function-Practice/Unsolved/index.js).
     
   * It's done when I have refactored the code to use arrow functions _where suitable_.
 
@@ -370,7 +370,7 @@ By the end of class, students will be able to:
 
   * ✔️ Implicit return statements
 
-* Open `04-Stu_ArrowFunctionPractice/Solved/index.js` in your IDE and explain the following: 
+* Open `04-Stu_Arrow-Function-Practice/Solved/index.js` in your IDE and explain the following: 
 
   * Even though we have converted a few examples to use arrow functions, the code works exactly as it did before&mdash;as shown in the following example:
 
@@ -468,11 +468,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_ConvertConstLetArrow/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Convert-Const-Let-Arrow/README.md`.
 
 ### 9. Student Do: Convert to ES6 Syntax (15 min) 
 
-* Direct students to the activity instructions found in `06-Stu_ConvertConstLetArrow/README.md`.
+* Direct students to the activity instructions found in `06-Stu_Convert-Const-Let-Arrow/README.md`.
 
 * Stress that students don't need to completely understand all of the code in the activity. They just need to remember what we have covered about `const`, `let`, and arrow functions.
 
@@ -525,7 +525,7 @@ By the end of class, students will be able to:
   
   * ✔️ `const`
 
-* Open `06-Stu_ConvertConstLetArrow/Solved/index.js` in your IDE and explain the following: 
+* Open `06-Stu_Convert-Const-Let-Arrow/Solved/index.js` in your IDE and explain the following: 
 
   * 🔑 A good way to think about these variable names is to ask yourself "does this need to be changed in future?" If the answer is no, you should use `const`.
 
@@ -549,7 +549,7 @@ By the end of class, students will be able to:
 
 ### 11. Instructor Demo: Functional Loops (5 min) 
 
-* Open `07-Ins_FunctionalLoops/index.js` in your browser and demonstrate the following:
+* Open `07-Ins_Functional-Loops/index.js` in your browser and demonstrate the following:
 
   * `forEach()` performs a callback on each item in the array, mutating it in place.
 
@@ -571,11 +571,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_FunctionalLoops/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Functional-Loops/README.md`.
 
 ### 12. Student Do: Functional Loops (15 min)
 
-* Direct students to the activity instructions found in `08-Stu_FunctionalLoops/README.md`.
+* Direct students to the activity instructions found in `08-Stu_Functional-Loops/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -588,9 +588,9 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when I have opened the `filter.js` file and mapped through `originalArray` and created a new array containing only its prime numbers using `filter()`.
+  * It's done when I have opened the `filter.js` file, mapped through `originalArray`, and created a new array containing only its prime numbers using `filter()`.
 
-  * It's done when I have used `filter()` to return an array containing only its numbers larger than 5.
+  * It's done when I have used `filter()` to return an array containing only its numbers larger than five.
 
   * It's done when I have opened `map.js` and used `map()` to map through `originalArray` and set the result equal to a new `tripledArray` array.
 
@@ -628,13 +628,13 @@ By the end of class, students will be able to:
 
   * ✔️ `filter()`
 
-* Open `08-Stu_FunctionalLoops/Solved` in your IDE and explain the following: 
+* Open `08-Stu_Functional-Loops/Solved` in your IDE and explain the following: 
 
   * 🔑  Remember that each of these array methods is just another type of `for` loop.
 
   * 🔑  We manipulate each item in an array in some way and return the original mutated array or a modified version of the original array.
 
-  * With the `map()` method, a callback is run once for every element in the array. The value that is returned gets added to the corresponding index of the new array, as shown in the following example:
+  * 🔑 With the `map()` method, a callback is run once for every element in the array. The value that is returned gets added to the corresponding index of the new array, as shown in the following example:
 
   ```js
   const originalArray = [1, 3, 2, 5, 10];
@@ -650,7 +650,7 @@ By the end of class, students will be able to:
   const oddOrEven = originalArray.map(num => (num % 2 === 0 ? "even" : "odd"));
   ```
 
-  * With the `filter()` method, if the callback function returns something truthy, the array element is copied to the new array. Otherwise it is skipped.
+  * 🔑 With the `filter()` method, if the callback function returns something truthy, the array element is copied to the new array. Otherwise it is skipped.
   
   * In the following example, the first array should contain only prime numbers, and the second should contain only numbers larger than `5`:
 
@@ -696,7 +696,7 @@ By the end of class, students will be able to:
 
 ### 15. Instructor Demo: Template Literals (5 min) 
 
-* Open `09-Ins_Template_Literals/index.js` in your browser and demonstrate the following:
+* Open `09-Ins_Template-Literals/index.js` in your browser and demonstrate the following:
 
   * 🔑  Using string interpolation, or template strings, we have a new way of concatenating variables to the rest of strings. This is a new feature included in ES6.
 
@@ -722,11 +722,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Template_Literals/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Template-Literals/README.md`.
 
 ### 16. Student Do: Template Literals (15 min) 
 
-* Direct students to the activity instructions found in `10-Stu_Template_Literals/README.md`.
+* Direct students to the activity instructions found in `10-Stu_Template-Literals/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -779,7 +779,7 @@ By the end of class, students will be able to:
 
   * ✔️ Template literals vs. string concatenation
 
-* Open `10-Stu_Template_Literals/Solved/index.js` in your IDE and explain the following: 
+* Open `10-Stu_Template-Literals/Solved/index.js` in your IDE and explain the following: 
 
   * 🔑  Template strings are much easier to read than traditional string concatenation.
 
@@ -842,7 +842,7 @@ By the end of class, students will be able to:
 
 ### 19. Instructor Demo: process.argv (5 min) 
 
-* Open `11-Ins_process.argv/index.js` in your terminal.
+* Open `11-Ins_process-argv/index.js` in your terminal.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
@@ -851,7 +851,7 @@ By the end of class, students will be able to:
   ```sh
   [
   '/usr/local/bin/node',
-  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js'
+  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process-argv/index.js'
   ]
   ```
 
@@ -860,7 +860,7 @@ By the end of class, students will be able to:
   ```sh
   [
   '/usr/local/bin/node',
-  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process.argv/index.js',
+  '/Users/<username>/coding/fullstack-ground/01-Class-Content/09-NodeJS/01-Activities/11-Ins_process-argv/index.js',
   'hello',
   'world!'
   ]
@@ -999,7 +999,7 @@ By the end of class, students will be able to:
 
 ### 22. Instructor Demo: Read/Write File (5 min) 
 
-* Open `13-Ins-Read-WriteFile/index.js` in your browser.
+* Open `13-Ins_Read-WriteFile/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
@@ -1030,7 +1030,7 @@ By the end of class, students will be able to:
   });
   ```
 
-* Comment out the `readFile` function and comment in the `writeFile` function in `13-Ins-Read-WriteFile/index.js`.
+* Comment out the `readFile` function and comment in the `writeFile` function in `13-Ins_Read-Write-File/index.js`.
   
   * 🔑 `fs.writeFile` will not only generate nonexistent files but will also overwrite them if they already exist.
   
@@ -1165,4 +1165,5 @@ By the end of class, students will be able to:
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete [this anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 - - -
-@TODO © <year> Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

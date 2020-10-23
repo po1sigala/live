@@ -6,7 +6,7 @@ In this lesson, we will take a deeper dive into the world that is Node.js. We wi
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `11-Ins_process.argv` through `20-Stu_Inquirer`.
+* In this lesson, students will complete activities `15-Ins_Modularization` through `27-Evr_Git-Fork`.
 
 * Explain to students that npm works much like embedding a CDN link for a framework directly in the HTML, only we will download it into the project and store it in a folder called `node_modules`.
 
@@ -126,11 +126,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_maths/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Maths/README.md`.
 
 ### 2. Student Do: Modularization (15 min) 
 
-* Direct students to the activity instructions found in `16-Stu_maths/README.md`.
+* Direct students to the activity instructions found in `16-Stu_Maths/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -188,7 +188,7 @@ By the end of class, students will be able to:
 
   * ✔️ `process.argv`
 
-* Open `16-Stu_maths/Solved/index.js` in your IDE and explain the following: 
+* Open `16-Stu_Maths/Solved/index.js` in your IDE and explain the following: 
 
   * 🔑 This exercise combines the concepts of `process.argv` with the idea of `module.exports`.
 
@@ -237,7 +237,7 @@ By the end of class, students will be able to:
   }
   ```
 
-  * 🔑  Open `16-Stu_maths/Solved/maths.js` and show that we export the methods directly by declaring them inside of the `exports` object, as follows:
+  * 🔑  Open `16-Stu_Maths/Solved/maths.js` and show that we export the methods directly by declaring them inside of the `exports` object, as follows:
 
   ```js
   module.exports = {
@@ -373,7 +373,7 @@ By the end of class, students will be able to:
 
 * Open `18-Stu-Package-npm/init/README.md` in your IDE and explain the following: 
 
-  * 🔑We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses, as shown in the following example:
+  * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses, as shown in the following example:
 
     ```sh
     npm init -y
@@ -634,7 +634,7 @@ By the end of class, students will be able to:
 
 ### 13. Instructor Demo: for...of (5 min) 
 
-* Open `21-Ins_For_Of/index.js` in your browser and demonstrate the following:
+* Open `21-Ins_for-of/index.js` in your browser and demonstrate the following:
 
 * Run `node index.js` after commenting out the `.map` example. 
 
@@ -668,11 +668,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_For_Of/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_for-of/README.md`.
 
 ### 14. Student Do: for...of (15 min) 
 
-* Direct students to the activity instructions found in `22-Stu_For_Of/README.md`.
+* Direct students to the activity instructions found in `22-Stu_for-of/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -718,7 +718,7 @@ By the end of class, students will be able to:
   
   * ✔️ Iterator
 
-* Open `22-Stu_For_Of/Solved/index.html` in your browser and explain the following: 
+* Open `22-Stu_for-of/Solved/index.html` in your browser and explain the following: 
 
     * 🔑 The syntax for the `for...of` loop reads very similar to plain English, which helps conceptualize what is happening in the program.
 
@@ -758,7 +758,7 @@ By the end of class, students will be able to:
 
 ### 16. Instructor Demo: Rest and Spread Operators (5 min) 
 
-* Open `23-Ins_Rest_and_Spread/index.js` in your browser.
+* Open `23-Ins_Rest-and-Spread/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
@@ -831,11 +831,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Rest_and_Spread/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Rest-and-Spread/README.md`.
 
 ### 17. Student Do: Rest and Spread Operators (15 min) 
 
-* Direct students to the activity instructions found in `24-Stu_Rest_and_Spread/README.md`.
+* Direct students to the activity instructions found in `24-Stu_Rest-and-Spread/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -885,7 +885,7 @@ By the end of class, students will be able to:
 
   * ✔️ Multiple arguments
 
-* Open `24-Stu_Rest_and_Spread/Solved/index.js` in your IDE and explain the following: 
+* Open `24-Stu_Rest-and-Spread/Solved/index.js` in your IDE and explain the following: 
 
   * 🔑 During this exercise we also used something called `reduce`, which is used in this case to calculate the sum of an array. Let's look at the [MDN Web Docs on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) briefly before we review.
 
@@ -932,7 +932,7 @@ By the end of class, students will be able to:
 
 ### 19. Instructor Demo: Object Destructuring (5 min) 
 
-* Open `25-Ins_ObjDestructuring/index.js` in your browser.
+* Open `25-Ins_Obj-Destructuring/index.js` in your browser.
 
 * Run `node index.js` from the command line and demonstrate the following: 
 
@@ -966,11 +966,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_ObjDestructuring/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Obj-Destructuring/README.md`.
 
 ### 20. Student Do: Object Destructuring (15 min) 
 
-* Direct students to the activity instructions found in `26-Stu_ObjDestructuring/README.md`.
+* Direct students to the activity instructions found in `26-Stu_Obj-Destructuring/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -1016,7 +1016,7 @@ By the end of class, students will be able to:
 
   * ✔️ Destructuring nested objects
 
-* Open `26-Stu_ObjDestructuring/Solved/index.js` in your IDE and explain the following: 
+* Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following: 
 
   * 🔑 This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
 
@@ -1111,17 +1111,17 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git_Fork/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Fork/README.md`.
 
 ### 22. Everyone Do: Git Fork (20 min)
 
 *  Open [Git docs](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
 
-  * Fork allows you to contribute to a repository that you don't have push access to. When you fork a project, GitHub will make an exact copy of the project that will live on your account that you can push to.
+  * Forking allows you to contribute to a repository that you don't have push access to. When you fork a project, GitHub will make an exact copy of the project that will live on your account that you can push to.
   
   * This workflow then allows you to create a pull request to the parent repository when you have finished your contributions. This is a very common workflow in many open source projects. 
 
-* Direct students to the activity instructions found in `27-Evr_Git_Fork/README.md`.
+* Direct students to the activity instructions found in `27-Evr_Git-Fork/README.md`.
 
 * While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -1149,4 +1149,4 @@ How did today’s lesson go? Your feedback is important. Please take 5 minutes t
 
 - - -
 
-@TODO © <year> Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

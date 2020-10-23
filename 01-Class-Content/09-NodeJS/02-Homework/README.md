@@ -10,7 +10,7 @@ Your task is to create a command-line application that dynamically generates a p
 
 The application will be invoked by using the following command:
 
-```
+```bash
 node index.js
 ```
 
@@ -19,7 +19,7 @@ Because this application won’t be deployed, you’ll also need to provide a li
 
 ## User Story
 
-```
+```md
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
@@ -106,5 +106,6 @@ You are required to submit the following for review:
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

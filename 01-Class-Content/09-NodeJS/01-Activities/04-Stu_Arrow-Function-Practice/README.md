@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_ArrowFunctionPractice/Unsolved/index.js).
+* It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_Arrow-Function-Practice/Unsolved/index.js).
   
 * It's done when I have refactored the code to use arrow functions _where suitable_.
 

@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
   
 * It's done when I have written JavaScript to log the string "Hellooo, Node!"
 
-* It's done when I have run the program from the command line using `node index`.
+* It's done when I have run the program from the command line using `node index.js`.
 
 * It's done when I have confirmed the expected output.
 
