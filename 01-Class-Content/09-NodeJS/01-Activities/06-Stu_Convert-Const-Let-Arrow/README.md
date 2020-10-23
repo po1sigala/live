@@ -6,9 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have taken a moment to open `index.html` and `index.js` to understand the application's functionality. 
-
-* It's done when I have changed existing code to use ES6 syntax.
+* It's done when I understand the application's functionality in `index.html` and `index.js`. 
 
 * It's done when I have converted `var` to `const` or `let` based on the use case.
 

@@ -34,6 +34,10 @@ By the end of class, students will be able to:
 
 * Use functional loops like `map()` and `filter()`.
 
+* Run Node.js applications from the command line with arguments.
+
+* Import and use the native `fs` module to read and write to the file system.
+
 ## Slide Deck
 
 * [Unit 09 Slide Deck](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
@@ -41,9 +45,9 @@ By the end of class, students will be able to:
 | Start   | #   | Activity Name                           | Duration |
 | ------  | --- | ----------------------------------------| -------- |
 | 10:00AM | 1   | Instructor Do: Stoke Curiosity          | 0:10     |
-| 10:10AM | 2   | Instructor Demo: Node.js Demo           | 0:05     |
-| 10:15AM | 3   | Student Do: Node.js Demo                | 0:15     |
-| 10:30AM | 4   | Instructor Review: Node.js Demo         | 0:10     |
+| 10:10AM | 2   | Instructor Demo: Node.js                | 0:05     |
+| 10:15AM | 3   | Student Do: Node.js                     | 0:15     |
+| 10:30AM | 4   | Instructor Review: Node.js              | 0:10     |
 | 10:40AM | 5   | Instructor Demo: Arrow Functions        | 0:05     |
 | 10:55AM | 6   | Student Do: Arrow Functions             | 0:15     |
 | 11:05AM | 7   | Instructor Review: Arrow Functions      | 0:10     |
@@ -140,7 +144,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: Node.js Demo (5 min)
+### 2. Instructor Demo: Node.js (5 min)
 
 * Open `01-Ins_Node-Demo/index.js` in your terminal.
 
@@ -160,7 +164,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Hello-Node/README.md`.
 
-### 3. Student Do: Node.js Demo (15 min)
+### 3. Student Do: Node.js (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Hello-Node/README.md`.
 
@@ -201,7 +205,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Node.js Demo (10 min)
+### 4. Instructor Review: Node.js (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -209,7 +213,7 @@ By the end of class, students will be able to:
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Open `01-Ins_Node-Demo/index.js` in your IDE and explain the following: 
+* Open `02-Stu_Hello-Node/Solved/index.js` in your IDE and explain the following: 
 
   * When we run the finished JavaScript, we should have something like the following example:
 
@@ -423,7 +427,7 @@ By the end of class, students will be able to:
   
   * 🔑  ES6 offers us a new way to define variables using `let`. Unlike `var`, `let` is **block scoped**.
   
-  * 🔑  Inform the class that a **block** is created by a pair of curly braces. This includes loops and conditional statements as well as function bodies. Because `let` is block scoped, any variables we define using `let` inside of a block are only available inside of that block.
+  * 🔑  A **block** is created by a pair of curly braces. This includes loops and conditional statements as well as function bodies. Because `let` is block scoped, any variables we define using `let` inside of a block are only available inside of that block.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -478,36 +482,33 @@ By the end of class, students will be able to:
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Convert to ES6 Syntax
+```md
+# 🏗️ Convert to ES6 Syntax
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to recognize and implement newer ES6 syntax.
+* As a developer, I want to be able to recognize and implement newer ES6 syntax.
 
-  ## Acceptance Criteria
+## Acceptance Criteria
 
-  * It's done when I have taken a moment to open `index.html` and `index.js` to understand the application's functionality. 
+* It's done when I understand the application's functionality in `index.html` and `index.js`. 
 
-  * It's done when I have changed existing code to use ES6 syntax.
+* It's done when I have converted `var` to `const` or `let` based on the use case.
 
-  * It's done when I have converted `var` to `const` or `let` based on the use case.
+* It's done when I have converted all functional expressions to arrow functions.
 
-  * It's done when I have converted all functional expressions to arrow functions.
+## 💡 Hints
 
-  ## 💡 Hints
+When is it not suitable to use arrow functions?
 
-  When is it not suitable to use arrow functions?
+## 🏆 Bonus
 
-  ## 🏆 Bonus
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+* Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
 
-  * Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
-
-  Use [Google](https://www.google.com) or another search engine to research this.
-
-  ```
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
@@ -529,11 +530,47 @@ By the end of class, students will be able to:
 
   * 🔑 A good way to think about these variable names is to ask yourself "does this need to be changed in future?" If the answer is no, you should use `const`.
 
+  ```js
+  const $root = document.querySelector("#root");
+  ```
+
   * 🔑 Ask yourself if you need to take advantage of the `this` context inside your function. If not, convert it to an arrow function.
+
+  ```js
+  const makeGuess = () => {
+    const $score = document.querySelector("#root p");
+    $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
+
+    if (score > targetScore) {
+      alert("You lost this round!");
+      playRound();
+    } else if (score === targetScore) {
+      alert("You won this round!");
+      playRound();
+    }
+  };
+  ```
 
   * 🔑 Remember that arrow functions can't be used as constructor functions.
 
-  * Go through each example in the solved code and show the newer syntax.
+  ```js
+  const Crystal = function(color) {
+    this.element = document.createElement("div");
+    this.element.className = "crystal " + color;
+    this.value = 0;
+
+    this.element.addEventListener(
+      "click",
+      () => {
+        score += this.value;
+        makeGuess();
+      },
+      false
+    );
+  };
+  ```
+
+* Continue to go through each example in the solved code and show the newer syntax.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 

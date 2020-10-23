@@ -12,37 +12,47 @@ In this unit, you’ll learn how to initialize a Node.js project, install third-
 
 The following topics will be covered in this unit:
 
-* Node.js
+* [Node.js](https://en.wikipedia.org/wiki/Node.js)
 
-    * `process.argv`
-    * `fs`
+	* [process.argv](https://nodejs.org/docs/latest/api/process.html#process_process_argv)
+
+	* [fs](https://node.readthedocs.io/en/latest/api/fs/)
 
 * Modularization
 
-    * `require()`
-    * `module.exports`
+	* [require()](https://nodejs.org/api/modules.html#modules_require_id)
 
-* npm
+	* [module.exports](https://nodejs.org/api/modules.html#modules_module_exports)
 
-    * `package.json`
-    * `npm init`
-    * `node_modules`
+* [npm](https://docs.npmjs.com/about-npm/)
 
-* Inquirer
+	* [package.json](https://docs.npmjs.com/creating-a-package-json-file)
 
-* ES6
+	* [npm init](https://docs.npmjs.com/cli/init)
 
-    * `let` and `const`
-    * Arrow functions
-    * Template literals
-    * Array methods (`map()`, `filter()`, `reduce()`)
-    * Spread and rest
-    * Destructuring arrays and objects
+	* [node_modules](https://nodejs.org/api/modules.html#modules_loading_from_node_modules_folders)
 
-* Asynchronous JavaScript
+* [inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
-    * Callbacks
-    * Promises
+* [ES6](https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_%E2%80%93_ECMAScript_2015)
+
+	* [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) and [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
+	* [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+	* [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
+	* Array methods ([map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce))
+
+	* [Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and rest
+
+	* [Destructuring arrays and objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+* [Asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
+
+	* [Callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
+	* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ## Learning Objectives
 
@@ -68,7 +78,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Character Count](./03-Algorithms/01-character-count/README.md)
 
-    * [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
+	* [📹 Let's Code Character Count!](https://2u-20.wistia.com/medias/6ka87l3z21)
 
 * [02: Product of Largest Two](./03-Algorithms/02-product-of-largest-two/README.md)
 
@@ -96,15 +106,7 @@ In this unit, you'll begin to use Node.js. Be sure to have it installed on your 
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [Wikipedia page on Node.js](https://en.wikipedia.org/wiki/Node.js)
-
-* [Wikipedia page on V8](https://en.wikipedia.org/wiki/Chrome_V8)
-
-* [Wikipedia page on servers](https://en.wikipedia.org/wiki/Server_(computing))
-
-* [fs documentation](https://node.readthedocs.io/en/latest/api/fs/)
-
-* [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
+* 📖 [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
 
 - - -
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

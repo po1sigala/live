@@ -32,13 +32,17 @@ In this lesson, we will take a deeper dive into the world that is Node.js. We wi
 
 By the end of class, students will be able to:
 
-* Run Node.js applications from the command line with arguments.
-
-* Import and use the native `fs` module to read and write to the file system.
-
 * Initialize projects and install third-party modules like `inquirer` using npm.
 
 * Use dependencies and investigate the content of `package.json`.
+
+* Identify and implement how and when to use `for...of` loops.
+
+* Identify and implement how and when to use the spread and rest operators.
+
+* Use destructuring assignment syntax to unpack values from arrays, or properties from objects, into unique variables.
+
+* Identify and implement how and when to fork a Git repository.
 
 ## Time Tracker
 
@@ -71,6 +75,8 @@ By the end of class, students will be able to:
 ---
 
 ### 1. Instructor Demo: Modularization (5 min) 
+
+* Welcome students to class. Ask if anyone has any questions before starting the first activity.
 
 * Open the `15-Ins_Modularization` directory in your IDE.
 

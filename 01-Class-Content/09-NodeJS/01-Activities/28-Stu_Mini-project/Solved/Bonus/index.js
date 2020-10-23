@@ -63,6 +63,7 @@ const generateHTML = (answers) =>
 </body>
 </html>`;
 
+// Bonus using async/await and try/catch
 const init = async () => {
   console.log('hi');
   try {
