@@ -16,17 +16,10 @@ h1 {
   color: #001b44;
 }
 
-.img-container {
+.container {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 25px auto;;
 }
-
-.img-container::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 .box {
   display: block;
   float: left;

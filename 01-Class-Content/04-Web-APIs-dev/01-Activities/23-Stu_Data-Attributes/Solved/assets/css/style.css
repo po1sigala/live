@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: #FFFFE0
 }
 
 h1 {
@@ -15,30 +16,27 @@ h1 {
   color: #001b44;
 }
 
-.img-container {
+.container {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 25px auto;;
 }
-
-.img-container::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-img {
+.box {
   display: block;
   float: left;
-  width: 23%;
+  width: 30%;
   height: 200px;
   margin: 1%;
   cursor: pointer;
   object-fit: cover;
   border-radius: 8px;
+  background-color: #093145;
+  text-align: center;
+  font-size: 150px;
+  color: whitesmoke
 }
 
 @media (max-width: 740px) {
-  img {
+  .box {
     width: 48%;
   }
 }

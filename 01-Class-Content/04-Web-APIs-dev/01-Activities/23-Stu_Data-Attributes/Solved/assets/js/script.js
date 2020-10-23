@@ -1,4 +1,4 @@
-var container = document.querySelector(".img-container");
+var container = document.querySelector(".container");
 
 container.addEventListener("click", function(event) {
   var element = event.target;
@@ -6,13 +6,16 @@ container.addEventListener("click", function(event) {
   if (element.matches(".box")) {
     var state = element.getAttribute("data-state");
 
+    
     if (state === "hidden") {
       element.textContent = element.dataset.number;
+      // Using dataset property
       element.dataset.state = "visible";
    
     } else {
       element.textContent= "";
-      element.dataset.state = "hidden"
+      // Using .setAttribute() method
+      element.setAttribute("data-state", "hidden")
      
     }  
   }
