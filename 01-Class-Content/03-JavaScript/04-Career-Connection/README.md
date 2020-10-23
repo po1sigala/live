@@ -2,11 +2,11 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
+![The text "Career Services" is overlaid on a blue circle.](./assets/cs_logo.png#right)
 
-Now you've learned some of the fundamental technologies on which all web applications are built. And you added another tool to your skill set: JavaScript! Never underestimate the importance of JavaScript as a web technology. More than 94% of websites use it in some way. To learn more, read this [Medium.com article about JavaScript's importance to modern web developers](https://medium.com/@mindfiresolutions.usa/how-important-is-javascript-for-modern-web-developers-2854309b9f52).
+Now you've learned some of the fundamental technologies on which all web applications are built. And you've added another tool to your skill set: JavaScript! Never underestimate the importance of JavaScript as a web technology. More than 94% of websites use it in some way. To learn more, read this Medium article [How Important is JavaScript for Modern Web Developers?](https://medium.com/@mindfiresolutions.usa/how-important-is-javascript-for-modern-web-developers-2854309b9f52)
 
-If you search for JavaScript on [Indeed.com](https://indeed.com/), you'll find hundreds, if not thousands, of search results. However, a search for JavaScript alone won't paint an accurate picture of job availability.  JavaScript development is continuous, with numerous other technologies evolving and deriving from it, so companies might instead list frameworks or libraries that use JavaScript.
+If you search for JavaScript on [Indeed.com](https://indeed.com/), you'll find hundreds, if not thousands, of search results. However, a search for JavaScript alone won't paint an accurate picture of job availability. JavaScript development is continuous, with numerous other technologies evolving and deriving from it, so companies might instead list frameworks or libraries that use JavaScript.
 
 You don't need to understand what a framework or library is right now. Just know that you can also search any of the following terms for valid JavaScript job postings:
 
@@ -30,15 +30,15 @@ Here's what you can do right now to become employer-competitive:
 
 #### Add JavaScript as a Skill on Your Resume
 
-The Technical Skills section of your resume should now proudly display JavaScript next to HTML and CSS. Most well-designed webpages use JavaScript, so make sure prospective employers know you can work with it.
+The Technical Skills section of your resume should now proudly display JavaScript next to HTML and CSS. Most well-designed webpages use JavaScript, so make sure that prospective employers know you can work with it.
 
 ### Look to the Future
 
-This section provides two steps that can help you start preparing for that first developer job or the promotion you've been eyeing.
+This section provides two steps that can help you start preparing for that first developer job or the promotion that you've been eyeing.
 
 #### Step #1: Understand a JavaScript Job Post
 
-Pull up that page from when you searched [Indeed.com](https://indeed.com/) for JavaScript, and record your answers to the following questions:
+Pull up that page from when you searched for JavaScript on [Indeed.com](https://indeed.com/), and record your answers to the following questions:
 
 * What job titles did you find?
 
@@ -50,9 +50,9 @@ Some of the most common job titles you'll encounter in programming include Web A
 
 #### Step #2: Develop Your JavaScript Skills
 
-You want to get better at JavaScript, but how do you know where to start? to As a beginner, you might find it difficult to filter through the vast amount of JavaScript resources on the internet. 
+You want to get better at JavaScript, but how do you know where to start? As a beginner, you might find it difficult to filter through the vast amount of JavaScript resources on the internet. 
 
-Here's an plan of approach to help you get started:
+Try the following approach to get started:
 
 1. Review the module projects that you've completed.
 
@@ -76,20 +76,22 @@ Please refer to the class repository to find these algorithms:
 
 * Coding Algorithm #1: Arithmetic
 
-* Coding Algorithm #2: Odd or Event
+* Coding Algorithm #2: Odd or Even
 
 * Coding Algorithm #3: Log Nums
 
-For practice in a live, interview-style IDE complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
+For practice in a live, interview-style IDE, complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
 
-Once you start, you'll have 7 days to complete it. After the 7 days has elapsed, the challenge will close.
+Once you start, you'll have seven days to complete it. After seven days, the challenge will close.
 
 * CodeSignal Algorithm: [Add Two Digits](https://app.codesignal.com/public-test/a2kjXwqf8v7vnGnks/7hyvjF58AaTiQW)
 
 ### Career Services Events
 
-![Career Services online events logo](./assets/online-events.png)
+![The text "Career Services Online Events" is overlaid on a photo of various people looking out a window.](./assets/online-events.png)
 
 If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 
+---
 
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
