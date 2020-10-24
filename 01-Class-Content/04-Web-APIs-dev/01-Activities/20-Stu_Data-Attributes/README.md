@@ -1,0 +1,34 @@
+# 🏗️ Use Data Attributes to Display Hidden Number
+
+Work with a partner to implement the following user story:
+
+* As a player, I want to click on a card and view the hidden number.
+
+## Acceptance Criteria
+
+* It's done when I click on a card and the hidden number is revealed.
+
+* It's done when if the number is visible and the card is clicked, the number is hidden. 
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![Mockup](./images/01-screenshot.png)
+
+---
+
+## 💡 Hints
+
+How can we use the dataset object to access an element's data attributes? 
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* We have learned `.getAttribute()` and `.setAttribute()`. What other methods can you use to access an element's attributes? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
