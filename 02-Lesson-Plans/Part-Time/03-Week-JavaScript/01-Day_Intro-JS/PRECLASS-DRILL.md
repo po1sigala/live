@@ -4,7 +4,7 @@
 
 * Encourage students to begin by pseudocoding. Remind them that many companies will judge them more on problem-solving skills than coding chops, so strong pseudocoding skills might just land them their dream job one day. Encourage some whiteboarding from students (when relevant) and explain why it's beneficial for them to practice it in the classroom rather than wait for interviews to be their first experience—but move on if there are no volunteers. Do not pressure students.
 
-* 20 minutes before class starts, write the following problem on the board or send it out on Slack, and explain each part of the code:
+* 20 minutes before class starts, write the following on the board or send it out on Slack, and explain each part of the code:
 
   ```html
   <!DOCTYPE html>
@@ -21,12 +21,7 @@
   </html>
   ```
   
-<!-- Is this really a drill? What problem are we asking students to solve? --> 
-* After 15 minutes, take 5 minutes to review the solution.
-
-* Ask students if they have an answer. 
-
-* Start recording when you review the answer, and send it out on Slack at the end of office hours, before class starts.
+* Start recording when you review the code, and send it out on Slack at the end of office hours, before class starts.
 
 * Make sure you touch on each of the following points:
 
