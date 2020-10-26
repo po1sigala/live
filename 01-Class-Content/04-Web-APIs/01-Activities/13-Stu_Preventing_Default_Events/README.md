@@ -4,7 +4,7 @@ In this activity, we are going to create a form that calculates a suggested tip 
 
 ## Instructions
 
-* In a file called `index.html`, create a form with the following elements:
+* In the provided `index.html`, update the form with the following elements:
 
 1. An input for the total price of the meal
 
@@ -12,13 +12,13 @@ In this activity, we are going to create a form that calculates a suggested tip 
 
 3. A button to calculate the tip
 
-* In a file called `script.js`, create an event listener that utilizes the values from the input fields to calculate the recommended tip and the new total of the bill with tip included.
+* Create a file called `script.js` and add an event listener that utilizes the values from the input fields to calculate the recommended tip and the new total of the bill with tip included.
 
 * Once these values are calculated, display them on the page.
 
 ## Bonus 
 
-* Add a feature that gives users the option to evenly split the total between any number of people. Make sure to add code to ensure that the split total will be rounded to two decimal places. 
+* Add a feature that gives users the option to evenly `split the total between any number of people. Make sure to add code to ensure that the split total will be rounded to two decimal places. 
 
 ## Hint
 

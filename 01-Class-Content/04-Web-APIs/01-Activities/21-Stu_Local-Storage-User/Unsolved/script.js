@@ -16,7 +16,7 @@ function renderLastRegistered() {
   // Fill in code here to retrieve the last email and password.
   // If they are null, return early from this function
   // Else set the text of the userEmailSpan and userPasswordSpan 
-  // to the corresponding values form local storgage
+  // to the corresponding values form local storage
   
 }
 

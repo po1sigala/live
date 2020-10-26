@@ -26,7 +26,7 @@ This class introduces students to the React Context API, an easier and lighter w
 
 ## Slides
 
-[The Context API](https://docs.google.com/presentation/d/1OQQGzZCevIaoeCDnVikP_sKR6dtxGqcwj4PB4tbWk0A/edit?usp=sharing)
+[10.4: The React Context API](https://docs.google.com/presentation/d/1rHP32SL8aAlHn_0FE-EeD_e6lvERTBwtEpC4UvARdq0/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -446,7 +446,7 @@ function CardBtn(props) {
 
 ### 6. Instructor Do: Giving Context Slides (10 mins)
 
-- Open the slide deck [React Context API](https://docs.google.com/presentation/d/1OQQGzZCevIaoeCDnVikP_sKR6dtxGqcwj4PB4tbWk0A/edit?usp=sharing).
+- Open the slide deck [10.4: The React Context API](https://docs.google.com/presentation/d/1rHP32SL8aAlHn_0FE-EeD_e6lvERTBwtEpC4UvARdq0/edit?usp=sharing).
 
 - Using the slides as guide and reference, explain the following:
 
