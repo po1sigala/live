@@ -1,27 +1,31 @@
-🏗️ Log Customer's Drink Order Using An Object
+# 🏗️ Log Customer's Drink Order Using an Object
 
 Work with a partner to implement the following user story:
 
- * As a coffee shop owner, I want to be able to store data about my customer's drink order in an object and log a message indicating if the drink is ready or still in the queue. 
+* As a coffee shop owner, I want to store data about my customer's drink order in an object and log a message indicating whether the drink is ready or still in the queue. 
 
-## Assessment Criteria  
+## Acceptance Criteria 
 
-  * It is done when the `customerOrder` object has three properties that store the drink's name, number of sugars and a boolean indicating if the order is ready. 
+* It's done when the `customerOrder` object has three properties that store the drink's name, the number of sugars, and a Boolean indicating whether the order is ready. 
 
-  * It is done when the drink name and number of sugars is logged to the console. 
+* It's done when the drink name and the number of sugars is logged to the console. 
 
-  * It is done when "Ready for pick-up" logs if the order is ready. 
+* It's done when, if the order is ready, the message `"Ready for pick-up"` logs. 
 
-  * It is done when "Still in order queue" logs if order is not ready.  
+* It's done when, if the order is not ready, the message `"Still in order queue"` logs. 
 
-## 💡 Hint
+## 💡 Hints
 
-How can we use dot notation or bracket notation to access an object's values?  
+How can we use dot notation or bracket notation to access an object's values? 
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is a for/in statement? How can you use it to iterate over an object’s properties?
+* What is a `for...in` statement? How can you use it to iterate over an object’s properties?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

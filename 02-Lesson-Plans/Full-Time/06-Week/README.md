@@ -52,9 +52,9 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-  * [6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing)
+  * [6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1tVXZx3l2azL-NsN-sVPlHmYPbkYsKrvLE_mXR6XH96M/edit?usp=sharing)
 
-  * [6.2: Express Yourself](https://docs.google.com/presentation/d/1H1xhjeQyMGXW7fufs2GJe4j6twEvYpDNhhuZJNcuHEk/edit?usp=sharing)
+  * [6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing)
 
 ### Time Tracker(s)
 

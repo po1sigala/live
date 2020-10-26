@@ -2,13 +2,11 @@
 
 ## Overview
 
-In the first two weeks of class, we learned how to use HTML to structure our webpages and CSS to style them. This week, we will be learning to make the pages we created with HTML and CSS dynamic using JavaScript.
+We've already explored how to structure webpages with HTML and style them with CSS. This week, with the help of JavaScript, we will learn how to make webpages dynamic.
 
-JavaScript is a widely used scripting language that adds functionality and interactivity to your webpage. Building on a static HTML framework and CSS styling, with JavaScript you can store information in variables, manipulate your HTML, respond to an event, play audio and video, add decision-making in your code, and much, much more. 
+**JavaScript** is a widely used scripting language that adds functionality and interactivity to a webpage. Building on a static HTML framework and CSS styling, with JavaScript you can store information in variables, manipulate your HTML, respond to an event, play audio and video, add decision-making to your code, and do much more. 
 
-JavaScript is also a popular programming language because, as the only language native to web browsers, it is widely used all over the web. 
-
-In addition, the skills learned by a JavaScript developer are versatile. Once you have mastered JavaScript, it is much easier to pick up the fundamentals of other programming languages. 
+As the only programming language native to web browsers, JavaScript is used all over the web&mdash;making it a crucial skill in your toolbox. But Javascript development skills are also versatile. Once you have mastered JavaScript, it is much easier to pick up the fundamentals of other programming languages. 
 
 ## Key Topics
 
@@ -18,19 +16,19 @@ The following topics will be covered in this unit:
 
  * Variables
 
- * Primitive Types
+ * Primitive types
  
- * Logical and Comparison Operators
+ * Logical and comparison operators
  
- * Conditional Statements
+ * Conditional statements
  
  * Arrays
  
- * Array and String Methods
+ * Array and string methods
  
  * Objects
  
- * Object Methods
+ * Object methods
  
  * Iteration
  
@@ -38,37 +36,27 @@ The following topics will be covered in this unit:
  
  * Scoping 
  
- * `This` keyword
-   
-## Comprehension Check
-
-You will be employer-ready if you can answer the following questions: 
-
-1. What is a function and how is it used in JavaScript? 
-
-2. How can you use the keyword `var` to declare a variable? 
-
-3. How can you add decision-making to your code with conditional statements? 
-
-4. What is an array and how can it be used to store groups of data?
-
-5. What is an object? How are objects used? 
+ * `this` keyword
 
 ## Learning Objectives
 
-You will be employer-competitive if you are able to: 
+You will be employer-ready if you are able to: 
 
-* Implement complex decision-making to your code using `if` and `if/else` statements. 
+* Implement complex decision-making in your code using `if` and `if-else` statements. 
 
-* Explain the difference between equality(`==`) and strict equality (`===`). 
+* Explain the difference between equality (`==`) and strict equality (`===`). 
 
-* Store related data in an array and utilize array methods to mutate and perform operations on the array. 
+* Store related data in an array and use array methods to mutate and perform operations on the array. 
+
+* Explain functions and how they are used in JavaScript.
 
 * Explain the difference between function declarations and function expressions. 
 
-* Recognize if a variable is locally or globally scoped and explain the difference.
+* Recognize whether a variable is locally or globally scoped and explain the difference.
 
-* Create objects and utilize object methods 
+* Create objects and use object methods. 
+
+* Use the keyword `var` to declare a variable. 
 
 ## Technical Interview Preparation
 
@@ -76,15 +64,15 @@ You will be employer-competitive if you are able to solve the following algorith
 
 ### Algorithms
 
-Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the 📹 Let's Code video(s) for tips and tricks on how to solve the algorithms.
 
-* [01-arithmetic](03-Algorithms/01-arithmetic)
+* [01: Arithmetic](03-Algorithms/01-arithmetic)
 
-* [02-odd-or-even](03-Algorithms/02-odd-or-even)
+* [02: Odd or Even](03-Algorithms/02-odd-or-even)
 
   * [📹 Let's Code Odd or Even!](https://2u-20.wistia.com/medias/bnqjr1owj7)
 
-* [03-log-nums](03-Algorithms/03-log-nums)
+* [03: Log Nums](03-Algorithms/03-log-nums)
 
 ### Assessments
 
@@ -92,9 +80,9 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 * [Unit 03 Assessment](https://forms.gle/WQNAEujgFBVm6kc79)
 
-## Homework: Password Generator
+## Homework 
 
-* Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+You'll create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
 ## Career Connection
 
@@ -102,23 +90,26 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-* In the next unit, you will learn to harness the power Web APIs to add complex functionality to your JavaScript with just a few lines of code. 
+In the next unit, you will learn to harness the power of Web APIs to add complex functionality to your JavaScript with just a few lines of code. 
 
 ### Resources
 
+Here are some additional resources to help solidify the topics covered in this unit:
+
 * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
-* [Variable: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Glossary/Variable)
+* [MDN Web Docs on variables](https://developer.mozilla.org/en-US/docs/Glossary/Variable)
 
-* [JavaScript data types and data structures: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+* [MDN Web Docs on JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
-* [Array: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
+* [MDN Web Docs on array instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
 
-* [String: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
+* [MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
 
-* [Expression and Operators: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+* [MDN Web Docs on expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-* [If...Else: MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+* [MDN Web Docs on if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

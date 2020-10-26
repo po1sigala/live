@@ -1,4 +1,4 @@
-# 🐞 Messages Not Logging to Console Due to Undefined Variables
+# 🐛 Messages Not Logging to Console Due to Undefined Variables
 
 Work with a partner to resolve the following issue(s):
 
@@ -10,16 +10,20 @@ When the console is opened, a series of messages should log to the console.
 
 ## Actual Behavior
 
-When the console is opened, an error message indicates that at least one variable is undefined and messages do not log. 
+When the console is opened, an error message indicates that at least one variable is undefined, and messages do not log.
 
-## 💡 Hint
+## 💡 Hints
 
-If stuck, try to think about how the variable is being used. Is it being made available to all functions? Or is it only being used by one function?    
+Think about how the variable is being used. Is it being made available to all functions, or is it only being used by one function? 
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is lexical scope?
+* What is lexical scope?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
