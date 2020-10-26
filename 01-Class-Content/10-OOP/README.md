@@ -1,8 +1,7 @@
-# Unit 10: Object Oriented Programming and TDD
+# Unit 10: Object Oriented Programming
 
 ## Overview
-
-In this unit, we will discuss JavaScript's brand of OOP by introducing constructors and the prototype chain. Constructors are special functions that are extremely useful in creating objects of similar types. Prototypes are JavaScript’s built in system, allowing objects to inherit features from other objects. Prototypes are considered by many to be an advanced JavaScript topic and mastering it will be sure to give you an extra edge as a JavaScript developer.
+In this unit, we will discuss JavaScript's brand of OOP by introducing constructors and the prototype chain. Constructors are special functions that are extremely useful in creating objects of similar types. Prototypes are JavaScript’s built in system, allowing objects to inherit features from other objects. Prototypes are considered by many to be an advanced JavaScript topic and mastering it will be sure to give you an extra edge as a JavaScript developer. Additionally, we will be discussing promises and how to take full advantage of them.
 
 We will cover test driven-development (TDD). When practicing TDD, we first write tests for application features before writing any code. Then, we write only the minimum amount of code needed to make the tests pass and repeat this process until the application is complete. Test-driven development has numerous benefits but ultimately helps us write more understandable and maintainable code.
 
@@ -10,37 +9,39 @@ We will conclude this unit with an introduction to modern class syntax and inher
 
 ## Key Topics
 
-* Objects
+The following topics will be covered in this unit:
 
-* this
+* [Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) 
 
-* Callbacks
-
-* Constructors
-
-* Prototypes
-
-* TDD
-
-* Unit Tests
-
-* Classes
+* [Prototypes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 * Inheritance
 
-## Comprehension Check
+* [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
-You will be employer-ready if you can answer the following questions:
+* [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science))
+  * [Method Overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) 
 
-1. What is a constructor function and how would you use one?
+* [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  * [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 
 
-2. What is the difference between classical inheritance and prototypal inheritance?
+* [Callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
 
-3. What are some benefits of test-driven development?
+* Constructors
+  * [In functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+  * [In classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+
+* [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
+  * [Jest](https://jestjs.io/docs/en/getting-started)
+  * [Mocks](https://jestjs.io/docs/en/mock-functions)
+  * [Mocking Modules](https://jestjs.io/docs/en/mock-functions#mocking-modules)
+
+* [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+  * [Subclasses](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Sub_classing_with_extends)
+  
+* [Git Stash](https://www.git-scm.com/docs/git-stash) 
 
 ## Learning Objectives
-
-You will be employer-competitive if you are able to:
 
 * Integrate constructor functions into your applications, adding structure to your code and reducing the amount of code you have to write.
 
@@ -54,15 +55,49 @@ You will be employer-competitive if you are able to:
 
 * Create more scalable applications that follow the OOP paradigm.
 
-## Homework: Template Engine - Employee Summary
+## Technical Interview Preparation
 
-* In this unit's assignment, you will create an application which generates html files using input from a command line interface.
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
 
-## Heads Up
+### Algorithms
 
-* In the next unit, you will use Heroku to host your web applications! Be sure to sign up for a [Heroku account](https://signup.heroku.com/) and have the Heroku CLI installed on your computer **before** starting Unit 11 and attending your classes. You can follow these [installation instructions](./04-Important/heroku-install.md). 
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews.
 
-## Helpful Links
+  * [01-linear-search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
+
+  * [02-is-unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
+
+  * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram) -->
+
+    * 📹 Let's Code [isAnagram](https://2u-20.wistia.com/medias/8hnpk2wu29)
+
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 10 Assessment](https://forms.gle/rDcYU44xb23s5jm59) 
+
+## Homework
+
+In this unit's assignment, you will create an application which generates an html files using input from a command line interface. The application will gather information about your team or organization. You will be able to add as many team members as you want.
+
+* [Unit 10 Assignment](../../../01-Class-Content/10-OOP/02-Homework/README.md)
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+In this unit, you'll begin to use Heroku CLI. Be sure to have it installed on your computer **before** attending your classes. You can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-herokucli) to install Heroku CLI on your computer.
+<!-- TODO CHECK WHAT THE PROPER LINK IS -->
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit:
+
+* 📖 [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-herokucli)
 
 * [Constructor Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 
@@ -71,3 +106,6 @@ You will be employer-competitive if you are able to:
 * [Class Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 * [Jest Docs](https://jestjs.io/)
+
+- - -
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
