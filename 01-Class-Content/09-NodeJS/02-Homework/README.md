@@ -4,22 +4,22 @@
 
 When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
 
-You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
 Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain. 
 
 The application will be invoked by using the following command:
 
-```
+```bash
 node index.js
 ```
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the **prework** as a refresher on how to record video from your computer. You’ll need to submit a link to the video **and** add it to the README of your project.
+Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
 
 
 ## User Story
 
-```
+```md
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
@@ -57,7 +57,6 @@ Here are some guidelines to help you get started:
 
 * Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
 
-
 ## Grading Requirements
 
 This homework is graded based on the following criteria: 
@@ -70,7 +69,7 @@ This homework is graded based on the following criteria:
 
 ### Walkthrough Video: 27%
 
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted and a link to the video should be included in your README file.
+* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
 
 * The walkthrough video must demonstrate how a user would invoke the application from the command line.
 
@@ -103,9 +102,10 @@ You are required to submit the following for review:
 
 * A walkthrough video demonstrating the functionality of the application.
 
-* A sample README.md file for a project repository generated using your application.
+* A sample README.md file for a project repository generated using your application
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository, with a unique name and a README describing the project
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

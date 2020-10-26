@@ -24,7 +24,7 @@ In this class, we will be introducing students to the concept of React Hooks. We
 
 ## Slides
 
-[Introduction to React Hooks](https://docs.google.com/presentation/d/1mnPdZODvhGs0j6s4EEuATbmQjFM7XpzFxrUnsOzNsGE/edit?usp=sharing)
+[10.3: Introduction to React Hooks](https://docs.google.com/presentation/d/1AAbszdLHhXDJvpvdp96dccanx6X2nQlmdNZS43Ptl8A/edit?usp=sharing)
 
 ## Time Tracker
 

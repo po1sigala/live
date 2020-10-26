@@ -37,7 +37,7 @@ Today's class introduces Project 1 and Agile software development.
 
 ## Slides
 
-[04.1: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
+[04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
 
 ## Time Tracker
 
