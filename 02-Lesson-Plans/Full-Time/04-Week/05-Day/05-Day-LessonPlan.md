@@ -51,7 +51,7 @@ N/A
 
 * In the next class, students will start using Node.js. 
 
-* Direct the students to the `04-Important` folder where there are separate installation instructions for [Mac](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers. 
+* Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs). 
 
 * Remind the students to have Node.js installed **before** coming to class!
 

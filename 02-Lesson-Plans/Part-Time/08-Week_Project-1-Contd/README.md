@@ -24,9 +24,10 @@ Make sure to remind students that they should try dealing with merge conflicts a
 
 ## Heads Up
 
-* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting Unit 09. There are separate installation instructions for [Mac](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers.
+* In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting Unit 09.
 
 ## Career Connection
+
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/08-Project-1-Contd/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).

@@ -24,7 +24,7 @@ In this class, students will learn the benefits of declarative Redux-style code 
 
 ## Slides
 
-[20.3: State Management with the Store](https://docs.google.com/presentation/d/1rRxhoiKoa6op_sE3Z0koGxq6SSy97UQHe-SrnLmvnL8/edit?usp=sharing)
+[10.5: State Management with the Store](https://docs.google.com/presentation/d/104SKRoUtY9whNLEVqH_8_6MX_OHmbXQfO9qpwypi9s8/edit?usp=sharing)
 
 ## Time Tracker
 

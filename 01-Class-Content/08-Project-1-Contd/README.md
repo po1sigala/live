@@ -26,7 +26,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads Up
 
-* In the next unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** starting Unit 09 and attending your classes. You can follow the installation instructions for [Mac](./04-Important/nodejs-install-mac.md) and [Windows](./04-Important/nodejs-install-win.md) computers.  
+* In the next unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** starting Unit 09 and attending your classes. Follow the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) to install Node.js on your computer.
 
 ## Resources
 

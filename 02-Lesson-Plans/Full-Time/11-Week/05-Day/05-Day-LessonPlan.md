@@ -2,7 +2,7 @@
 
 ### Slideshow
 
-* This lesson's slides are available on Google Drive here: [11-5 Big O and Data Structures](https://docs.google.com/presentation/d/1ci-fxZUlPWnFWKZ6oJAli8DWuvJQkZhJfnwGh-2Ws9I/edit?usp=sharing)
+* This lesson's slides are available on Google Drive here: [11.5: Big O and Data Structures](https://docs.google.com/presentation/d/1alkjckqCrnLMfk6DraQVMbmWqiu4GKPM-hZtVQ0Dy0o/edit?usp=sharing)
 
 * To add slides to the student-facing repository, download the slides as a PDF by navigating to File > "Download as" and choose "PDF document." Add the slide PDF file to your class repository along with other necessary files.
 

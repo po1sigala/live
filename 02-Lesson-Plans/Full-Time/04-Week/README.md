@@ -26,7 +26,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 ## Heads Up
 
-* In the next unit, students will start using Node.js. Be sure to send out the instructions for installing Node.js before starting the next unit! There are separate installation instructions for [Mac](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-mac.md) and [Windows](../../../01-Class-Content/09-NodeJS/04-Important/nodejs-install-win.md) computers.
+* In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting the next unit!
 
 ### Lesson Plans
 
@@ -57,8 +57,4 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [04.1: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
-
-* [GitHub Collaboration and Project Week](https://docs.google.com/presentation/d/1gm9S6hZhJNv6bnyzsgpa1OuLixVLsipLjmhV7CUILqc/edit?usp=sharing)
-
-* [Git Visualized](https://docs.google.com/presentation/d/1K1ceGxPy2riRg9lP3_S_tYjbKaxsS84QZfCt4481QqQ/edit?usp=sharing)
+* [04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
