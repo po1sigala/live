@@ -4,6 +4,18 @@ var comment = document.getElementById("msg");
 var saveButton = document.getElementById("save");
 var savedName = document.getElementById("saved-name");
 
+init();
+
+function saveLastGrade() {
+  var studentGrade = {
+    student: student.value,
+    grade: grade.value,
+    comment: comment.value.trim()
+  };
+  
+  localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+}
+
 function renderLastGrade() {
   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
 
@@ -18,15 +30,7 @@ function renderLastGrade() {
 
 saveButton.addEventListener("click", function(event) {
 event.preventDefault();
-
-var studentGrade = {
-  student: student.value,
-  grade: grade.value,
-  comment: comment.value.trim()
-};
-
-localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
-
+saveLastGrade();
 renderLastGrade();
 });
 
