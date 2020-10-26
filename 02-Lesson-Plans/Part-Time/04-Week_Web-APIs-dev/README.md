@@ -50,7 +50,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [02-countdown](../../../01-Class-Content/04-Web-APIs/03-Algorithms/02-countdown)
 
-  * [03-sum-array](../../../01-Class-Content/04-Web-APIs/03-Algorithms/03-sum-array)
+ * [03-sum-array](./03-Algorithms/03-sum-array)
+
+    * 📹 Let's Code [Sum of Array](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
 ### Resources
 
