@@ -46,7 +46,6 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Unit XX Homework](../../../01-Class-Content/10-OOP/02-Homework)
 
 ### Slide Decks
-<!-- TODO NEEDS TO BE UPDATED -->
   * [10.1 Intro to OOP Slide Deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
 
 ### Algorithms
@@ -57,7 +56,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram) -->
 
-    * 📹 Let's Code {@TODO Add Algo video link}
+    * 📹 Let's Code [isAnagram](https://2u-20.wistia.com/medias/8hnpk2wu29)
 
 ### Resources
 
