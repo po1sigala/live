@@ -79,9 +79,14 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1h8JiIv92PQukSjoBCQkVuvLZD0VlxnTTxbxli3Uh_lM/edit?usp=sharing)
-* [MERN](https://docs.google.com/presentation/d/1z4s5m5rZt_xVjiRm8qyL_y3UpdFSLGxMbFODvD_J-Xw/edit?usp=sharing)
-* [Final Projects](https://docs.google.com/presentation/d/1xMJoFP13BNEQc1UYDCv03BKLW6TJMxOty98RpljoHmI/edit?usp=sharing)
+* [10.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1a1qwF0MIf2D1FtnfuJvqQ2wWYxnUz71DSVlesxqYWzs/edit?usp=sharing)
+
+* [10.3: Introduction to React Hooks](https://docs.google.com/presentation/d/1AAbszdLHhXDJvpvdp96dccanx6X2nQlmdNZS43Ptl8A/edit?usp=sharing)
+
+* [10.4: The React Context API](https://docs.google.com/presentation/d/1rHP32SL8aAlHn_0FE-EeD_e6lvERTBwtEpC4UvARdq0/edit?usp=sharing)
+
+* [10.5: State Management with the Store](https://docs.google.com/presentation/d/104SKRoUtY9whNLEVqH_8_6MX_OHmbXQfO9qpwypi9s8/edit?usp=sharing)
+
 
 ### Additional Course Resources
 
