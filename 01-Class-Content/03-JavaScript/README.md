@@ -12,31 +12,33 @@ As the only programming language native to web browsers, JavaScript is used all 
 
 The following topics will be covered in this unit:
 
- * `<script>` tags
+ * [`<script>` tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
- * Variables
+ * [Variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
- * Primitive types
+ * [Primitive types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
  
- * Logical and comparison operators
+ * [Logical and comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
  
- * Conditional statements
+ * [Conditional statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
  
- * Arrays
+ * [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
  
- * Array and string methods
+ * [Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
+
+ * [String methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
  
- * Objects
+ * [Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
  
- * Object methods
+ * [Object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods)
  
- * Iteration
+ * [Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
  
- * Functions
+ * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
  
- * Scoping 
+ * [Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope) 
  
- * `this` keyword
+ * [`this` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
 ## Learning Objectives
 
@@ -98,17 +100,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 * [📖 Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
-* [📖 MDN Web Docs on variables](https://developer.mozilla.org/en-US/docs/Glossary/Variable)
-
 * [📖 MDN Web Docs on JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
-
-* [📖 MDN Web Docs on array instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
-
-* [📖 MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
-
-* [📖 MDN Web Docs on expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
-
-* [📖 MDN Web Docs on if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 
 ---
 
