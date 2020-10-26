@@ -21,7 +21,7 @@ function renderTodos() {
     li.setAttribute("data-index", i);
 
     var button = document.createElement("button");
-    button.textContent = "Complete";
+    button.textContent = "Complete ✔️";
 
     li.appendChild(button);
     todoList.appendChild(li);
@@ -30,7 +30,6 @@ function renderTodos() {
 
 function init() {
   // Get stored todos from localStorage
-  // Parsing the JSON string to an object
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
 
   // If todos were retrieved from localStorage, update the todos array to it

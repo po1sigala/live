@@ -18,7 +18,7 @@ h2 {
 }
 
 button {
-  background-color: #039be5;
+  background-color: #001b44;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
@@ -35,10 +35,6 @@ button {
   float: right;
 }
 
-button:hover {
-  background-color: #0288d1;
-}
-
 .input-group {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -49,11 +45,11 @@ label {
 }
 
 input {
-  background-color: #eff5f8;
-  border-radius: 2px;
-  border-width: 0;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  border-width: 1px;
   color: #5f6368;
-  font-size: 1em;
+  font-size: 1.1em;
   height: 45px;
   line-height: 20px;
   margin: 0;
@@ -68,13 +64,9 @@ input {
   width: 100%;
 }
 
-input:hover {
-  background-color: #e8eaed;
-}
-
 .card {
   display: block;
-  background-color: #fff;
+  background-color:#FFFFE0;;
   border: 1px solid #eceff1;
   border-radius: 8px;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,

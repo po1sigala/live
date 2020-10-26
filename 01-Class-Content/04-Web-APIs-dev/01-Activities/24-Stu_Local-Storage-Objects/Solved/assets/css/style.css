@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 30px;
+  font-size: 16px;
   font-family: "Roboto", sans-serif;
   background-color: #eff5f8;
 }
@@ -17,14 +17,8 @@ h2 {
   margin-bottom: 0.45em;
 }
 
-li {
-  list-style: none;
-  margin-top: 30px;
-  display: block;
-}
-
 button {
-  background-color: #039be5;
+  background-color: #001b44;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
@@ -37,34 +31,47 @@ button {
   transition-duration: 0.15s;
   transition-property: background-color;
   transition-timing-function: linear;
-  margin: 0.6em auto;
-  display: block;
+  margin-top: 0.6em;
+  float: right;
 }
 
-button:hover {
-  background-color: #0288d1;
+.input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
 
 label {
   color: #212121;
 }
 
-select {
-  font-size: 30px;
-  width: 100%;
+input {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  border-width: 1px;
+  color: #5f6368;
+  font-size: 1.1em;
+  height: 45px;
+  line-height: 20px;
+  margin: 0;
   margin-top: 10px;
-  background-color: #eff5f8;
+  max-width: 100%;
+  padding: 8px 8px 8px 8px;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.2s, 0.2s;
+  transition-property: background-color, color;
+  transition-timing-function: ease, ease;
+  vertical-align: middle;
+  width: 100%;
 }
 
 .card {
   display: block;
-  background-color:	#FFFFE0;
+  background-color:#FFFFE0;;
   border: 1px solid #eceff1;
   border-radius: 8px;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 20px;
   width: 60vw;
 }
@@ -75,10 +82,8 @@ select {
   clear: both;
 }
 
-#msg {
+.clearfix::after {
+  content: " ";
   display: block;
-  min-height: 100px;
-  width: 100%;
-  margin-top: 10px;
-  background-color: #eff5f8;
+  clear: both;
 }

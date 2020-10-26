@@ -44,14 +44,14 @@ p {
 
 /* Dark Mode */
 .dark {
-  background-color: #301934;
-  color: white;
+  background-color:#243447;
   height: 100vh;
+  color: #bebebe
  
 }
 
 .dark li a {
-  color: white;
+  color: #bebebe;
 }
 
 .dark li a:hover {
@@ -60,13 +60,13 @@ p {
 
 /* Light Mode */
 .light {
-  background-color: #2196F3;
-  color: white;
+  background-color: #f0ead6;
+  color: black;
   height: 100vh;
 }
 
 .light li a {
-  color: white;
+  color: black;
 }
 
 .light li a:hover {
@@ -143,3 +143,4 @@ input:checked + .slider:before {
 .col {
   margin: 20px;
 }
+

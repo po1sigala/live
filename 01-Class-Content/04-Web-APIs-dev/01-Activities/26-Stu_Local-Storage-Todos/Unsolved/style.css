@@ -5,8 +5,13 @@
 }
 
 body {
-  font-family: "Concert One", cursive;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: #eff5f8;
+  color: #001b44;
+}
+
+label, p {
+  font-size: 30px;
 }
 
 input {
@@ -14,8 +19,12 @@ input {
   width: 100%;
   padding: 6px;
   margin-top: 10px;
-  font-size: 2.4em;
-  border: none;
+  font-size: 2em;
+  border: 1px solid #001b44;
+}
+
+h1 {
+  text-align: center;
 }
 
 ul {
@@ -29,7 +38,7 @@ li {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
-  background-color: #ff5d88;
+  background-color:  #001b44;
   color: white;
   font-size: 1.5em;
   line-height: 1.5;
@@ -51,17 +60,19 @@ li button {
   border: none;
   height: 40px;
   cursor: pointer;
-  background-color: #ff9500;
+  background-color: #ff7034;
   color: white;
   font-size: 1em;
 }
 
-li button:hover {
-  background-color: #febc5d;
-}
-
-.todos {
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 40px;
+.card {
+  display: block;
+  background-color:	#FFFFE0;
+  border: 1px solid #eceff1;
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+  margin: 60px auto;
+  padding: 20px;
+  width: 80vw;
 }

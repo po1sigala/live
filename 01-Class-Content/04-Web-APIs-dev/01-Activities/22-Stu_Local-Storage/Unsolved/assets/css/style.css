@@ -18,7 +18,7 @@ h2 {
 }
 
 button {
-  background-color: #247BA0;
+  background-color:#001b44;;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
@@ -33,10 +33,6 @@ button {
   transition-timing-function: linear;
   margin-top: 0.6em;
   float: right;
-}
-
-button:hover {
-  background-color: #0288d1;
 }
 
 .input-group {
@@ -113,7 +109,7 @@ input:hover {
 }
 
 #msg.success {
-  color: #52b155;
+  color: #001b44;;
 }
 
 #msg.error {
