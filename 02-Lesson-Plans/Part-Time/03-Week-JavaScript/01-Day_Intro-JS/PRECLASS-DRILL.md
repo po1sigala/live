@@ -21,7 +21,6 @@
   </html>
   ```
   
-<!-- Is this really a drill? What problem are we asking students to solve? --> 
 * After 15 minutes, take 5 minutes to review the solution.
 
 * Ask students if they have an answer. 
