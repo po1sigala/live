@@ -28,9 +28,9 @@ Next week we will learn more complex techniques for managing state in React. Avo
 
 ### Slide Decks
 
-  * [19.1: React Gently](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing)
+  * [19.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing)
 
-  * [19.2: ReactJS Recap slides](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing)
+  * [19.2: Props, Lists, and Stateful Components](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing)
 
 
 ### Time Tracker(s)

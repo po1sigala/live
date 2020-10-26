@@ -1,14 +1,24 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Your Task
 
-You'll need to use the [Moment.js library](https://momentjs.com/) to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
+You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
+
+  * [Luxon](https://moment.github.io/luxon/)
+
+  * [Day.js](https://day.js.org/)
+
+  * [date-fns](https://date-fns.org/)
+
+  * [js-Joda](https://js-joda.github.io/js-joda/)
+
+Whichever library you choose, be sure to read the documentation carefully!
 
 ## User Story
 
-Implement the following user story:
-
-```
+```md
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
@@ -16,9 +26,7 @@ SO THAT I can manage my time effectively
 
 ## Acceptance Criteria
 
-Aim to meet the following acceptance criteria:
-
-```
+```md
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -37,6 +45,47 @@ THEN the saved events persist
 The following animation demonstrates the application functionality:
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+
+
+## Grading Requirements
+
+This homework is graded based on the following criteria: 
+
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the above acceptance criteria plus the following:
+
+  * Uses a date utility library to work with date and time
+
+### Deployment: 32%
+
+* Application deployed at live URL
+
+* Application loads with no errors
+
+* Application GitHub URL submitted
+
+* GitHub repo contains application code
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate
+
+* Application user interface style is clean and polished
+
+* Application resembles the mock-up functionality provided in the homework instructions
+
+### Repository Quality: 13%
+
+* Repository has a unique name
+
+* Repository follows best practices for file structure and naming conventions
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages
+
+* Repository contains quality README file with description, screenshot, and link to deployed application
 
 ## Review
 

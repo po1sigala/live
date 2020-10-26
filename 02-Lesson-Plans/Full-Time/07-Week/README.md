@@ -36,7 +36,3 @@ If you'd like more information on Career Services, visit the [Career Services re
 * [Heroku Deployment Guide for MySQL Projects](../../../01-Class-Content/13-MVC/04-Important/MySQLHerokuDeploymentProcess.pdf)
 * [Understand JavaScript Callbacks](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
 * [Handlebars Website](http://handlebarsjs.com/)
-
-### Slide Shows
-
-* [Intro to Node Servers](https://docs.google.com/presentation/d/1CJUPH3RoIpslezi7JtorJjmoCrUUVG-ZQoBp0sJGygE/edit?usp=sharing)

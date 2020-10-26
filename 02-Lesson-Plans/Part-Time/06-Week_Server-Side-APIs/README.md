@@ -39,7 +39,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1AMZW0G8cYnEdqeIMZMoNUQRsM1PVgykP7afZ_31wJE4/edit?usp=sharing)
+  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1CSJBUAF3UIZp7UxI9z8-4s7qm_uHF4QoZX6Zuko75Jk/edit?usp=sharing)
 
 ### Time Tracker(s)
 

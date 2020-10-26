@@ -12,4 +12,4 @@
 
 ## 💡 Hint(s)
 
-* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+* Use the [Mongoose docs on schema instance methods](https://mongoosejs.com/docs/guide.html#methods) if you are stuck.
