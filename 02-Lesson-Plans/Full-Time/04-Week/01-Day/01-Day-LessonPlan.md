@@ -36,8 +36,8 @@ Today's class introduces Project 1 and Agile software development.
 * Branching & pull requests
 
 ## Slides
-@TODO
-[04.1: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
+
+[04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -205,7 +205,7 @@ Today's class introduces Project 1 and Agile software development.
 
   * **Presentation Requirements**:
 
-  * **Project Metrics**: Your project will be evaluated on its concept, design, functionality, collaboration, and presentation.
+  * **Project Metrics**: Your project will be evaluated on fulfilling technical criteria, as well as its concept, deployment, repository quality, application quality, presentation, and collaboration.
 
   * **API Suggestions**: It is recommended that you use an API that: Allows CORS, requires simple or no authentication, uses JSON, is well documented.
 

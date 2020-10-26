@@ -21,7 +21,3 @@ In this activity you will build the backend for a note-taking app.
 ## 💡 Hint(s)
 
 * You can see a list of methods available to you here. [https:github.com/mafintosh/mongojs#api](https://github.com/mafintosh/mongojs#api).
-
-## 🏆 Bonus
-
-* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
