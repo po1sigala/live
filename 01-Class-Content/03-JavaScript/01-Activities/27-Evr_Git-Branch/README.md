@@ -66,7 +66,7 @@ In this activity, we'll learn the concept of branching by using Git commands to 
 
 * Add some text to the README.md file, so that it looks something like the following image:
 
-  [We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
+  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
   <!-- Missing image here -->
 
 * Finally, add and commit the changes that you made, as follows:
