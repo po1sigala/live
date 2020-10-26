@@ -2,8 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* In this activity, you will work with a partner to write a function that takes in two values and evaluates equality.
-<!-- Rewrite as a user story. -->
+* As a developer, I want to know when two values are equal to one another.
 
 ## Acceptance Criteria
 
