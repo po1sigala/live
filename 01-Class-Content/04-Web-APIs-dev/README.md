@@ -92,6 +92,7 @@ When you are are researching DOM and event resources, you may come across jQuery
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
+
 * 📹 Code Review: N/A
 
 * 📖 Git Guide: N/A
