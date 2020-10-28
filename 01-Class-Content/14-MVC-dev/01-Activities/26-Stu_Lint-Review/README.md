@@ -1,45 +1,44 @@
-# 🐛 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; SHORT & DESCRIPTIVE (e.g., Submit button on landing page returns 404)
+# 🐛 Fix Project's Eslint Rules
 
 Work with a partner to resolve the following issue(s):
 
-* @TODO USER STORY (e.g., Users should be able to see items added to their lists update in real-time.)
+* As a developer, I don't want to see warnings when I use the `**` exponentiation operator.
+
+* As a developer, I want to discourage other team members from explicitly assigning variables to `undefined`.
 
 ## Expected Behavior
 
-@TODO (e.g., When a user adds an item to their list it renders immediately.) 
+The project's Eslint rules allow the use of `**` operators. 
+
+Eslint displays an error when variables are assigned to `undefined`. For example: `let x = undefined;` is unnecessary, because `let x;` on its own is sufficient.
 
 ## Actual Behavior
 
-@TODO (e.g., When a user adds an item to their list they must refresh the page to see it render.)
+Eslint displays an error when developers use `**` operators. For example: `let x = 5 ** 2;`.
 
-@TODO IF APPLICABLE: 
+Developers are able to assign variables to `undefined` without any warning from Eslint.
+
 ## Steps to Reproduce the Problem
 
-1. @TODO (e.g., Enter an item name in the form field and click Add.) 
+1. Run `npm install` to install the Eslint dependencies.
 
-2. @TODO (e.g., Item does not render in list.)
+2. Open `index.js` in VS Code.
 
-3. @TODO (e.g., Refresh the page to see item rendered in list.)
-
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-![]()
+3. Note the underlined error on line 8.
 
 ---
 
 ## 💡 Hints
 
-Hints are guides, not answers, framed as questions. 
+* How do you adjust the rules for an Eslint configuration?
+
+* In which version of JavaScript were `**` exponentiation operators introduced?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* What are some other options you can add to your Eslint config file?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

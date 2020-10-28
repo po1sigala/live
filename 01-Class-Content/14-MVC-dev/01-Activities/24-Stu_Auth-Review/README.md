@@ -1,13 +1,14 @@
-# 📐 Add Comments to Implementation of { @TODO LEARNING OBJECTIVE }
+# 📐 Add Comments to Implementation of a Login Route
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in the following files:
 
-@TODO IF APPLICABLE, INCLUDE HINTS AS NOTES
-## 📝 Notes
+* [Unsolved/server.js](./Unsolved/server.js)
 
-Refer to the documentation: 
+* [Unsolved/controllers/api/user-routes.js](./Unsolved/controllers/api/user-routes.js)
 
-[@TODO INSERT DOCUMENTATION HERE](@TODO URL)
+* [Unsolved/utils/auth.js](./Unsolved/utils/auth.js)
+
+* [Unsolved/controllers/api/post-routes.js](./Unsolved/controllers/api/post-routes.js)
 
 ---
 
@@ -15,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* How can we make user authentication more secure? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
