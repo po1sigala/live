@@ -74,7 +74,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* @TODO LINK TO ASSESSMENT {ASSESSMENT PENDING}
+* [Unit 3 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
 
 ## Homework
 
@@ -92,9 +92,10 @@ When you are are researching DOM and event resources, you may come across jQuery
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* 📹 Code Review: @TODO LINK TO VIDEOS FOR THIS UNIT {Link not yet available}
 
-* 📖 Git Guide: @TODO LINK TO OUR BLOG POSTS {TO BE DONE NEXT SPRINT}
+* 📹 Code Review: N/A
+
+* 📖 Git Guide: N/A
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
