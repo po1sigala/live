@@ -1,13 +1,14 @@
-# 📐 Add Comments to Implementation of { @TODO LEARNING OBJECTIVE }
+# 📐 Add Comments to Implementation of MVC and Handlebars
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in @TODO *comment on code in models, controller, view/handlebars* [Unsolved](./Unsolved).
 
-@TODO IF APPLICABLE, INCLUDE HINTS AS NOTES
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[@TODO INSERT DOCUMENTATION HERE](@TODO URL)
+* [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+* [MDN Docs: MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
+
 
 ---
 
@@ -15,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* What are some other template engines? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
