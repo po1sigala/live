@@ -4,8 +4,6 @@ var comment = document.getElementById("msg");
 var saveButton = document.getElementById("save");
 var savedName = document.getElementById("saved-name");
 
-init();
-
 function saveLastGrade() {
   var studentGrade = {
     student: student.value,

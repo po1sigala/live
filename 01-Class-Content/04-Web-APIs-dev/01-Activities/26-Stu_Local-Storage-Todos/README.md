@@ -14,7 +14,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is session storage? How is it different from local storage?  
+* What is `sessionStorage`? How is it different from `localStorage`?  
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
