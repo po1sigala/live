@@ -1,5 +1,4 @@
-// Promise example using a real life promise
-
+// Promise example using a real-life promise
 // The real-life promise in this scenario is a kid asking his parents for a Nintendo Switch
 
 const goodGrades = false;

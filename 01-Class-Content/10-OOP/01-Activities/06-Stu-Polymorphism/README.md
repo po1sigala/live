@@ -20,9 +20,9 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-Our method is going to be returning a string, so how can we get that show up in the terminal when we call the method?
+* Our method is going to be returning a string, so how can we get that to show up in the terminal when we call the method?
 
-How can we use switch statements to help code out the solution? We also have a `inRange` helper function that is provided to us. How might that come in handy?
+* How can we use switch statements to help code out the solution? We also have a `inRange` helper function that is provided to us. How might that come in handy?
 
 ## 🏆 Bonus
 

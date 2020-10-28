@@ -2,32 +2,33 @@
 
 ## Overview
 
-In this unit we will be introducing students to the usage of JavaScript constructors, classes, promises and the concept of TDD.
-
+In this unit, we will be introducing students to the usage of JavaScript constructors, classes, promises and the concept of TDD.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* Constructors and classes are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Try to 
+* Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
 
-* We will also spend a day this unit practicing TDD. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
+* Polymorphism is covered in this unit, but focuses mainly on **method overloading**. Please research this topic before the lesson to familiarize yourself with what exactly method overloading is. 
+
+* Let your students know that this module is very concept-heavy! Object-oriented programming can be very difficult to understand at first, but it is crucial in making them employer-competitive. So reassure them that they are not alone in struggling with this topic and that it is perfectly normal to feel a little lost at first. 
+
+* At the same time, do not feel discouraged if your students aren't understanding the concept after you've tried explaining it to them. It takes time to fully grasp object-oriented programming, so keep encouraging your students and reassuring them that with time and practice, they will understand this! If you are comfortable doing so, share your own struggle and/or personal experiences learning and working with OOP.
+
+* We will also spend a day this unit practicing TDD. Familiarize yourself with `jest` if you've never used it before. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/10-oop/04-Career-Connection/README.md).
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
 
 * If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-* Next unit, we will be diving into servers and Express. Spend as much time as you can making sure that students understand Node.js fundamentals. 
+* Next unit, we will be diving into servers and Express.js to use in the back-end of an application.
 
-* In the next unit, students will start using Heroku to host their web applications. Students can follow the Heroku deployment installation guide on The Full-Stack Blog to install Node.js on your computer.
-
-* Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
-
-* Polymorphism is covered in this unit, but focuses mainly on **method overloading**. Please research this topic before the lesson to familiarize yourself with what exactly method overloading is. 
+* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. 
 
 ## Helpful Links
 
@@ -43,10 +44,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Homework
 
-  * [Unit XX Homework](../../../01-Class-Content/10-OOP/02-Homework)
+  * [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework)
 
 ### Slide Decks
-  * [10.1 Intro to OOP Slide Deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+
+  * [Unit 10: Intro to OOP](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
 
 ### Algorithms
 
@@ -54,7 +56,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [02-is-unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
 
-  * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram) -->
+  * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram)
 
     * 📹 Let's Code [isAnagram](https://2u-20.wistia.com/medias/8hnpk2wu29)
 

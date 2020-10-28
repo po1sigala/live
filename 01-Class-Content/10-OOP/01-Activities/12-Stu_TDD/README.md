@@ -15,7 +15,7 @@ Work with a partner to implement the following user story:
 * It's done when I have written a test for the `capitalize` method.
   * The `capitalize` method should take a string as an argument and return a new string with the first letter of each word capitalized. e.g. "hello world!" should return "Hello World!".
 
-* **Important**: Write code for the tests only, the only file you will be modifying is `tests/algo.test.js`. Initially all of your tests will fail since these methods are empty, but using the tests you can define how each method _should_ work.
+* **Important**: Write code for the tests only; the only file you will be modifying is `Unsolved/test/algo.test.js`. Initially all of your tests will fail since these methods are empty, but using the tests you can define how each method _should_ work.
 
 ## 💡 Hints
 
