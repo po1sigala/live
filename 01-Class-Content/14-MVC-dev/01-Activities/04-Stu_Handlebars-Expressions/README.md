@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the route is properly configured to retreive and return food item descriptions.
 
-* It's done when the view displays descriptions for the cooresponding food item.
+* It's done when the view displays descriptions for the corresponding food item.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 
