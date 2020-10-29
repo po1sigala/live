@@ -11,13 +11,19 @@ Work with a partner to implement the following user story:
 ## Acceptance Criteria
 
 * It's done when my code contains a object `dogs` that contains three keys:
+
   * First key called "raining" with a value of true.
+
   * Second key called "noise" with a value of "Woof!"
+
   * Third key called "makeNoise" which contains a function which logs the noise to the screen if it is raining dogs.
   
 * It's done when my code contains a object `cats` that contains three keys:
+
   * First key called "raining" with a value of false.
+
   * Second key called "noise" with a value of "Meow!"
+  
   * Third key called "makeNoise" which contains a function which console.logs the noise to the screen if it is raining cats.
 
 * It's done when I make the dog bark.
