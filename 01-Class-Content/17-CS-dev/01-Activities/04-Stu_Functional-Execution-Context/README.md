@@ -1,28 +1,30 @@
-# 🐛 Fix the SyntaxError that Makes the Variable Undefined
+# 🐛 Syntax Error states Variable is Undefined
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue:
 
-* As a developer, I want to pass all the tests in jest.
+* The unit tests for the function does not pass.
 
-* As a developer, I want the function to return the correct values.
+## Expected Behavior
 
-## Acceptance Criteria
+* When we run our unit tests to test our function, the defined tests should pass.
 
-* It's done when the jest tests are successful.
+## Actual Behavior
 
-* It's done when the function returns the correct values.
+* When we run our unit tests, the defined tests don't pass.
 
-## 📝 Note(s)
+## Steps to Reproduce the Problem
 
-Refer to the documentation: 
+1. From the [Unsolved](./Unsolved) directory, run `npm install` in the command line.
 
-* [The scope.](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+2. Run `npm run test` from the command line to run the unit test.
+
+3. The test defined in the `__tests__` directory does not pass.
 
 ---
 
 ## 💡 Hint(s)
 
-* Is the accessibility of the variables determined by context?
+* How can the unit test descriptions help us determine what the function is or isn't doing?
 
 ## 🏆 Bonus
 
@@ -31,3 +33,6 @@ Refer to the documentation:
   * What happens to the keyword `this` in the functional execution context?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+  
+---
+2020 © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

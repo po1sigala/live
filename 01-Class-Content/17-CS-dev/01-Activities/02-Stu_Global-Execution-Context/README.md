@@ -2,13 +2,15 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to explain each step of the code execution process to my partner.
+* As a developer, I want to explain keys steps in the code execution process to my partner.
 
 ## Acceptance Criteria
 
-* It's done when each step in the code execution process has been identified and explained in the code's comments.
+* It's done when keys steps in the code execution process have been identified and explained in the code's comments.
 
-* It's done when the steps have been clearly articulated to your partner.
+* It's done when the steps have been labeled with their order of operation.
+
+* It's done when the steps have been clearly explained to your partner.
 
 ## 📝 Note(s)
 
@@ -20,12 +22,15 @@ Refer to the documentation:
 
 ## 💡 Hint(s)
 
-* What happens in setTimeout()?
+* What happens to the callback function in a setTimeout()?
 
 ## 🏆 Bonus
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * What is the Scope Chain? 
+  * What is the scope chain? 
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
+  
+---
+2020 © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
