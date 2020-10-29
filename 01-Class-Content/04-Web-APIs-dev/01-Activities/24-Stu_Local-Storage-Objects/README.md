@@ -8,7 +8,7 @@
 
   * It's done when I click on the `save` button and the form's current values are stored in a object.
 
-  * It's done when the object is saved as a single key-value pair using `localStorage`. 
+  * It's done when the object is saved as a string using `localStorage`.
 
   ## 💡 Hints
 

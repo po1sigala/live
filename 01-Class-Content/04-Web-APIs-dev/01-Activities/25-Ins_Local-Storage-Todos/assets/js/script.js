@@ -5,18 +5,18 @@ var saveButton = document.getElementById("save");
 var savedName = document.getElementById("saved-name");
 
 function saveLastGrade() {
+  // Save related form data as an object
   var studentGrade = {
     student: student.value,
     grade: grade.value,
     comment: comment.value.trim()
   };
-  
+  // Use .setItem() to store object in storage and JSON.stringify to convet it as a string
   localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
 }
 
 function renderLastGrade() {
   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
-
   if (lastGrade !== null) {
   document.getElementById("saved-name").innerHTML = lastGrade.student;
   document.getElementById("saved-grade").innerHTML = lastGrade.grade;
@@ -32,6 +32,7 @@ saveLastGrade();
 renderLastGrade();
 });
 
+// The init() function fires when the page is loaded 
 function init() {
   renderLastGrade();
 }
