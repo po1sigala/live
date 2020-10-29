@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[Handlebars: Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html#if)
+[Handlebars.js: Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html#if)
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP 
 

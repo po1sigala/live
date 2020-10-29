@@ -22,13 +22,13 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* How can you make sure that the correct template is rendered?
+* How can you make sure that the correct Handlebars.js template is rendered?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we render an array of objects using Handlebars?
+* How can we render an array of objects using Handlebars.js?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

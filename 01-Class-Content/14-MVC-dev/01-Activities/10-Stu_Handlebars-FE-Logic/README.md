@@ -7,7 +7,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[Handlebars Docs](https://handlebarsjs.com/guide/#what-is-handlebars)
+[Handlebars.js Docs](https://handlebarsjs.com/guide/#what-is-handlebars)
 
 ---
 
@@ -15,7 +15,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are the pros and cons of using a template engine?
+* What are the pros and cons of using a template engine like Handlebars.js?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

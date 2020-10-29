@@ -1,4 +1,4 @@
-# 📐 Add Comments to Implementation of MVC and Handlebars
+# 📐 Add Comments to Implementation of MVC and Handlebars.js
 
 Work with a partner to add comments describing the functionality of the code found in @TODO [Model](./Unsolved), [View](./Unsolved), and [Controller](./Unsolved).
 
@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-* [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+* [Express Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 * [MDN Docs: MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 
 
