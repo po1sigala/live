@@ -1,5 +1,4 @@
-// constructor function which can take in a series of values and create objects
-// with the properties contained inside
+// Constructor function which can take in a series of values and create objects
 function Character(name, profession, age, strength, hitpoints) {
   this.name = name;
   this.profession = profession;
@@ -7,7 +6,8 @@ function Character(name, profession, age, strength, hitpoints) {
   this.strength = strength;
   this.hitpoints = hitpoints;
 }
-// method which prints all of the stats for a character
+
+// Method which prints all of the stats for a character
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.profession}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -30,7 +30,7 @@ Character.prototype.levelUp = function () {
   // TODO: Your code here
 };
 
-// creates two unique characters using the "character" constructor
+// Creates two unique characters using the "character" constructor
 const warrior = new Character('Crusher', 'Warrior', 25, 10, 75);
 const rogue = new Character('Dodger', 'Rogue', 23, 20, 50);
 
