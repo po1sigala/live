@@ -16,7 +16,7 @@ Work with a partner to resolve the following issue(s):
 
 1. Run `npm install` and `npm start`
 
-2. Visit http://localhost:3001 in your browser.
+2. Navigate to http://localhost:3001/ in your browser.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 

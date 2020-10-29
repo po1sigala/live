@@ -1,13 +1,13 @@
-# 📐 Add Comments to Implementation of { @TODO LEARNING OBJECTIVE }
+# 📐 Add Comments to Implementation of a Form to Update a Food Item
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in @TODO [Unsolved](./Unsolved).
 
 @TODO IF APPLICABLE, INCLUDE HINTS AS NOTES
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[@TODO INSERT DOCUMENTATION HERE](@TODO URL)
+[Handlebars Docs](https://handlebarsjs.com/guide/#what-is-handlebars)
 
 ---
 
@@ -15,9 +15,9 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* What are the pros and cons of using a template engine?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
