@@ -1,47 +1,28 @@
-# 🐛 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; SHORT & DESCRIPTIVE (e.g., Submit button on landing page returns 404)
+# 🏗️ Refactor the `Lesson` class to a factory function
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to implement the following user story:
 
-* @TODO USER STORY (e.g., Users should be able to see items added to their lists update in real-time.)
+* As a developer, I want to move away from a class based approach and start to utilize factory functions in my lesson tracking application.
 
-## Expected Behavior
+* As a teacher, I want to be able to add a new lesson with a description to my collection of lessons I can teach.
 
-@TODO (e.g., When a user adds an item to their list it renders immediately.) 
+## Acceptance Criteria
 
-## Actual Behavior
+* It's done when the `Lesson` class is a factory function.
 
-@TODO (e.g., When a user adds an item to their list they must refresh the page to see it render.)
-
-@TODO IF APPLICABLE: 
-## Steps to Reproduce the Problem
-
-1. @TODO (e.g., Enter an item name in the form field and click Add.) 
-
-2. @TODO (e.g., Item does not render in list.)
-
-3. @TODO (e.g., Refresh the page to see item rendered in list.)
-
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-![]()
-
----
+* It's done when I can call the `description` method on the `Lesson` function and it correctly logs the private variable.
 
 ## 💡 Hints
 
-Hints are guides, not answers, framed as questions. 
+What scope does your inner function have access too? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* What are the two paradigms of JavaScript? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

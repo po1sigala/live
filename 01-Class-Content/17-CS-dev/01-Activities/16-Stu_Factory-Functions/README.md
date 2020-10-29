@@ -6,18 +6,17 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When a user calls the `greet` method on the `User` function, the values should be correctly displayed in the console.
+When a user calls the `greet` method on the `Student` function, the values should be correctly displayed in the console.
 
 ## Actual Behavior
 
-When a user calls the `greet` method on the `User` function, they see undefined values instead of the `name` and `age`.
-
-@TODO IF APPLICABLE: 
+When a user calls the `greet` method on the `Student` function, they see undefined values instead of the `name` and `gradeYear`.
+ 
 ## Steps to Reproduce the Problem
 
-1. Create a new user variable and assign it to the `User` function. 
+1. Create a new student variable and assign it to the `Student` function. 
 
-2. Call the `greet` method on the newly created user variable.
+2. Call the `greet` method on the newly created student variable.
 
 3. Check console to see undefined values.
 
@@ -29,9 +28,9 @@ What is the context of `this` when inside of a factory function?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Where is 'this' bound to in a factory function? 
+* Is the `new` keyword required when using a factory function? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

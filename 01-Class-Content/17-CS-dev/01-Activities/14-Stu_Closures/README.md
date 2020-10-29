@@ -2,13 +2,11 @@
 
 Work with a partner to implement the following user story:
 
-* As a receptionist at a hotel, I need a way to keep track of how many guests enter the building.
+* As a teacher, I need a way to keep track of the number of students I see every day.
 
 * As a developer, I need to use closures to have access to a private `count` variable.
 
 ## Acceptance Criteria
-
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY; e.g.:
 
 * It's done when the `Counter` function correctly increments by one.
 
@@ -27,4 +25,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
