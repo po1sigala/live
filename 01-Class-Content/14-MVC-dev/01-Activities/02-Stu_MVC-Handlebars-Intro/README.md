@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of MVC and Handlebars
 
-Work with a partner to add comments describing the functionality of the code found in @TODO *comment on code in models, controller, view/handlebars* [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in @TODO [Model](./Unsolved), [View](./Unsolved), and [Controller](./Unsolved).
 
 ## 📝 Notes
 
@@ -21,4 +21,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

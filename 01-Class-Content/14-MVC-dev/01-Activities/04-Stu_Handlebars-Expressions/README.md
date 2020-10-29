@@ -1,18 +1,14 @@
-# 🏗️ TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; START WITH A VERB! (e.g., Implement Media Queries for Screens)
+# 🏗️ Implement a GET Route for Food Item Descriptions 
 
 Work with a partner to implement the following user story:
 
-* @TODO WRITE A BRIEF DESCRIPTION OF THE ACTIVITY FRAMED AS A USER STORY OR STORIES; e.g.:
-
-* As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
+* As a party guest, I want to see descriptions of each food item that will be at the potluck.
 
 ## Acceptance Criteria
 
-@TODO WRITE ACCEPTANCE CRITERIA FOR THE USER STORY; e.g.:
+* It's done when the route is properly configured to retreive and return food item descriptions.
 
-* It's done when the screen size is larger than 992 px, the product cards on the screen are side-by-side.
-
-* It's done when I change the screen size to 992 px or smaller, the product cards on the screen should split into two columns.
+* It's done when the view displays descriptions for the cooresponding food item.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 
@@ -26,15 +22,15 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-Hints are guides, not answers, framed as questions. 
+* How can you make sure that the correct template is rendered?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* How can we render an array of objects using Handlebars?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
