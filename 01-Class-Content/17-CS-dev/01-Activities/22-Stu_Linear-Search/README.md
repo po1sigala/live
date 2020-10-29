@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-What built-in JavaScript functions allow us to search through sets of data one at a time? 
+How can we run the unit tests to test our algorithm?
 
 ## 🏆 Bonus
 
