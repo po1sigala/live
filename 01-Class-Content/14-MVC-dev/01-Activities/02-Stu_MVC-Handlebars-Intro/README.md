@@ -7,6 +7,7 @@ Work with a partner to add comments describing the functionality of the code fou
 Refer to the documentation: 
 
 * [Express Handlebars.js](https://www.npmjs.com/package/express-handlebars)
+
 * [MDN Docs: MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 
 
