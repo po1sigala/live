@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the promise is resolved if the API request is responded to within 10 seconds
 
-* It's complete when we map through each movie duration and push a `callAPI()` promise to the promises array
+* It's done when we map through each movie duration and push a `callAPI()` promise to the promises array
   
 * It's done when we call `Promise.all()` by passing our array `promises`
   
