@@ -1,4 +1,4 @@
-// Constructor function which can take in a series of values and create objects
+// TODO: Add a comment describing what kind of function this is
 function Character(name, profession, age, strength, hitpoints) {
   this.name = name;
   this.profession = profession;
@@ -7,7 +7,7 @@ function Character(name, profession, age, strength, hitpoints) {
   this.hitpoints = hitpoints;
 }
 
-// Method which prints all of the stats for a character
+// TODO: Add a comment describing the purpose of .prototype in this method declaration
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.profession}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -15,22 +15,30 @@ Character.prototype.printStats = function () {
   console.log('\n-------------\n');
 };
 
-// Method which determines if "hitpoints" are less than zero and returns a boolean depending on the outcome
+// TODO: Add a comment describing the functionality of this method
 Character.prototype.isAlive = function () {
-  // TODO: Your code here
+  if (this.hitpoints > 0) {
+    console.log(`${this.name} is still alive!`);
+    console.log('\n-------------\n');
+    return true;
+  }
+  console.log(`${this.name} has died!`);
+  return false;
 };
 
-// Method which takes in a second object and decreases their "hitpoints" by this character's strength
+// TODO: Add a comment describing the functionality of this method
 Character.prototype.attack = function (character2) {
-  // TODO: Your code here
+  character2.hitpoints -= this.strength;
 };
 
-// Method which increases this character's stats when called
+// TODO: Add a comment describing the functionality of this method
 Character.prototype.levelUp = function () {
-  // TODO: Your code here
+  this.age += 1;
+  this.strength += 5;
+  this.hitpoints += 25;
 };
 
-// Creates two unique characters using the "character" constructor
+// TODO: Add a comment here which describes what is happening with the following two variables
 const warrior = new Character('Crusher', 'Warrior', 25, 10, 75);
 const rogue = new Character('Dodger', 'Rogue', 23, 20, 50);
 

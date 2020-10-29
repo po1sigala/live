@@ -1,30 +1,20 @@
-# 🏗️ Create Characters with Prototypes
+# 📐 Add Comments to Implementation of Prototypes
 
-Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/rpg-prototypes.js).
 
-* As a game developer, I want to generate RPG characters using Objects and prototypes.
+## 📝 Notes
 
-* As a game developer, I need to create simplistic characters for an RPG using constructor functions.
+Refer to the documentation: 
 
-## Acceptance Criteria
-  
-* It's done when I have added three methods via prototype:
+[MDN Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
-  * `IsAlive`: Function which prints whether or not this character is alive by looking into their HP and determining whether they are above or below zero.
-
-  * `Attack`: Function which takes in a second character and subtracts this character's strength from their HP.
-
-  * `LevelUp`: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
-
-## 💡 Hints
-
-How can we find out how to create additional methods using the prototype chain?
+---
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How are methods created in the constructor different than methods created via prototype?
+* What is the difference between adding a method inside the constructor versus adding it to the prototype?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
