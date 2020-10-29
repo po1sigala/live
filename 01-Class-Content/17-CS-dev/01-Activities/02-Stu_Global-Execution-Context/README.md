@@ -1,8 +1,6 @@
 # 📐 Add Comments to the Code Execution Process
 
-Work with a partner to implement the following user story:
-
-* As a developer, I want to explain keys steps in the code execution process to my partner.
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
 
 ## Acceptance Criteria
 

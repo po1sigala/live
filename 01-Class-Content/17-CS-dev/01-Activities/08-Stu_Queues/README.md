@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a class that implements a queue data structure.
+* As a developer, I want to create a class that implements a queue data structure so that I am able to generate queues.
 
 ## Acceptance Criteria
 
