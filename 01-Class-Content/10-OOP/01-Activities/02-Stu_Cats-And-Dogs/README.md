@@ -36,7 +36,7 @@ Does the syntax for creating a function inside of an object differ from how we d
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How could return an array of just the keys associated with an object?
+* Create a method called "massHysteria" on the prototype chain which takes in both objects and prints a message to the screen if ".raining" is true for both objects.
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have examined the code in [index.js](./Unsolved/index.js).
-
 * It's done when I create logic to return a letter grade if a number grade was passed into the `displayGrade` method.
 
     * For example, if the user passes in `95` the method should return a string, "A", indicating the letter grade.
