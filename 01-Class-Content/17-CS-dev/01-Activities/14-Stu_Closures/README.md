@@ -1,10 +1,10 @@
-# 🏗️ Create a couter function that uses a private variable
+# 🏗️ Create a counter function that uses a private variable
 
 Work with a partner to implement the following user story:
 
-* As a teacher, I need a way to keep track of the number of students I see every day.
+* As a teacher, I want a way to keep track of the number of students I see every day.
 
-* As a developer, I need to use closures to have access to a private `count` variable.
+* As a developer, I want to use closures to keep my  `count` variable data private.
 
 ## Acceptance Criteria
 

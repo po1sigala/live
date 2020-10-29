@@ -16,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Why is keeping the global namespace clean from to many variables important? 
+* Why is keeping the global namespace clean from too many variables important? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
