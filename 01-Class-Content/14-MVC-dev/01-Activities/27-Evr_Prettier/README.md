@@ -19,7 +19,20 @@ This will install ESLint from the `package.json` file and add Prettier and the E
 
 To see Prettier in action, first open the `example.js` file and note how the `if` statements are structured, as the following example shows:
 
-@TODO copy over code snippet
+```js
+if (!isNaN(num)) {
+  console.log("Not a number!");
+}
+else if (num < 0) {
+  console.log("Please provide a positive number.");
+}
+else if (num >= 1000) {
+  console.log("This number is too big.");
+}
+else {
+  console.log("Thank you!");
+}
+```
 
 Next, run the following command from the `Unsolved` directory:
 
@@ -45,7 +58,7 @@ Once installed, the extension will look for any `.prettierrc.json` file and use 
 
 You can also configure VS Code to do this each time you save a file. Select the File menu, then select Preferences > Settings. In the Settings tab, search for "format" and check the option to "Format on Save". The following image demonstrates this process:
 
-@TODO image
+![The VS Code settings tab displays an option to Format on Save.](./Images/01-format-on-save.png)
 
 Revisit the `example2.js` file and add the following code somewhere inside:
 
@@ -58,13 +71,11 @@ const obj = {
 
 Save the file, and you'll see Prettier take over by changing the double quotes and adding a trailing comma to `occupation`.
 
-Now open the `Unsolved/README.md` file and add the following code example somewhere inside:
+Now open the `Unsolved/README.md` file and add the following code example as a `js` snippet somewhere inside:
 
-```md
-    ```js
-    // a bad example of declaring a string
-    const hello = "hello"
-    ```
+```js
+// a bad example of declaring a string
+const hello = "hello"
 ```
 
 If you save the file, Prettier will correct our intentionally "bad" example code! We most likely don't need Prettier formatting markdown files, so we can tell Prettier to ignore them.
