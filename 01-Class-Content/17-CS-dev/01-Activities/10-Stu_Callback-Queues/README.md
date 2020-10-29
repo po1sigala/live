@@ -20,7 +20,7 @@ Work with a partner to resolve the following issue:
 
 ## 💡 Hint(s)
 
-* What happens when the timer in `setTimeout` is set to zero?
+* Does the callback function in a `setTimeout` go straight to the call stack when the timer is set to zero?
 
 ## 🏆 Bonus
 
