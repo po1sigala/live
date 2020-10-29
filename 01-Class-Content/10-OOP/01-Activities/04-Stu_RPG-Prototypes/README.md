@@ -8,7 +8,6 @@ Refer to the documentation:
 
 [MDN Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
----
 
 ## 🏆 Bonus
 
