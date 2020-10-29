@@ -1,25 +1,22 @@
-# 🐛 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; SHORT & DESCRIPTIVE (e.g., Submit button on landing page returns 404)
+# 🐛 Main View is not Displaying Food Items 
 
 Work with a partner to resolve the following issue(s):
 
-* @TODO USER STORY (e.g., Users should be able to see items added to their lists update in real-time.)
+* As a party guest, I would like to view a full menu of food items that other guests will bring to the party.
 
 ## Expected Behavior
 
-@TODO (e.g., When a user adds an item to their list it renders immediately.) 
+* When a party guest views the page, they see a menu of food items.
 
 ## Actual Behavior
 
-@TODO (e.g., When a user adds an item to their list they must refresh the page to see it render.)
+* When a party guest views the page, no food items appear on the menu.
 
-@TODO IF APPLICABLE: 
 ## Steps to Reproduce the Problem
 
-1. @TODO (e.g., Enter an item name in the form field and click Add.) 
+1. Run `npm install` and `npm start`
 
-2. @TODO (e.g., Item does not render in list.)
-
-3. @TODO (e.g., Refresh the page to see item rendered in list.)
+2. Visit http://localhost:3001 in your browser.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 
@@ -33,15 +30,15 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-Hints are guides, not answers, framed as questions. 
+* How can you change your route so that the view is able to display the menu of food items?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* What are other options that you have to serialize data down to the properties that you need? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
