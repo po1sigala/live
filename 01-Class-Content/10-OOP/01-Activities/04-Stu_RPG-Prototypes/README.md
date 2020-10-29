@@ -7,22 +7,13 @@ Work with a partner to implement the following user story:
 * As a game developer, I need to create simplistic characters for an RPG using constructor functions.
 
 ## Acceptance Criteria
-
-* It's done when each character created using your constructor has the following properties:
-  * Name: The character's name --> `String`
-  * Profession: What the character does for a living --> `String`
-  * Age: The character's age --> `Number`
-  * Strength: Abstraction for how strong the character is --> `Number`
-  * HitPoints (HP): Abstraction for how much health the character has --> `Number`
-  * `PrintStats`: Function which prints all of a character's properties to the screen.
-
-* It's done when I have created the character constructor and two new characters.
-  
-* It's done when I have and printed each character's properties to the screen.
   
 * It's done when I have added three methods via prototype:
+
   * `IsAlive`: Function which prints whether or not this character is alive by looking into their HP and determining whether they are above or below zero.
+
   * `Attack`: Function which takes in a second character and subtracts this character's strength from their HP.
+
   * `LevelUp`: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
 
 ## 💡 Hints
