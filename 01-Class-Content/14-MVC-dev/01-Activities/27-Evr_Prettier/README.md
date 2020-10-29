@@ -2,9 +2,9 @@
 
 Developers tend to have a lot of opinions on how to format code. Do you use single quotes or double quotes for strings? Is it okay to have trailing commas on object properties? How often should you add spaces in between keywords? When should chained methods be moved to a new line?
 
-As a team, you can agree on certain standards and use a tool like Eslint to highlight when your code doesn't meet these standards. However, it's still on the developer to actually make those formatting changes. Fortunately, there are additional tools like **Prettier** that can handle the formatting for you.
+As a team, you can agree on certain standards and use a tool like ESLint to highlight when your code doesn't meet these standards. However, it's still on the developer to actually make those formatting changes. Fortunately, there are additional tools like **Prettier** that can handle the formatting for you.
 
-In this activity, we'll add Prettier to an existing codebase, link it with an Eslint configuration, and set up VS Code to run Prettier automatically.
+In this activity, we'll add Prettier to an existing codebase, link it with an ESLint configuration, and set up VS Code to run Prettier automatically.
 
 ## Instructions
 
@@ -15,9 +15,13 @@ npm install
 npm install prettier eslint-config-prettier --save-dev
 ```
 
-This will install Eslint from the `package.json` file and add Prettier and the Eslint plugin as extra dependencies.
+This will install ESLint from the `package.json` file and add Prettier and the ESLint plugin as extra dependencies.
 
-To see Prettier in action, first open the `example.js` file and note how the `if` statements are structured. Next, run the following command from the `Unsolved` directory:
+To see Prettier in action, first open the `example.js` file and note how the `if` statements are structured, as the following example shows:
+
+@TODO copy over code snippet
+
+Next, run the following command from the `Unsolved` directory:
 
 ```bash
 npx prettier --write example.js
@@ -25,7 +29,7 @@ npx prettier --write example.js
 
 Revisit the `example.js` file and notice how the `if` statements have been re-formatted. One of Prettier's built-in rules is to keep the closing bracket and the next `else if` on the same line.
 
-You can specify additional Prettier rules with a config file. In the `Unsolved` directory, create a new file called `.prettierrc.json` and add the following code to this file:
+You can specify additional Prettier rules with a configuration or config file. In the `Unsolved` directory, create a new file called `.prettierrc.json` and add the following code to this file:
 
 ```json
 {
@@ -73,7 +77,7 @@ In the `Unsolved` directory, create a new file called `.prettierignore` and add 
 
 This will disable Prettier on any file with a `.md` extension.
 
-Lastly, we should inform Eslint that we are using Prettier. Because we are relying on Prettier for our formatting rules, we don't need Eslint causing any confusion by highlighting things Prettier doesn't care about.
+Lastly, we should inform ESLint that we are using Prettier. Because we are relying on Prettier for our formatting rules, we don't need ESLint causing any confusion by highlighting things Prettier doesn't care about.
 
 Open the `.eslintrc.json` file and add the following property to the config object:
 
@@ -81,7 +85,7 @@ Open the `.eslintrc.json` file and add the following property to the config obje
 "extends": ["prettier"]
 ```
 
-This will turn off a handful of rules that typically conflict between the two libraries. Don't worry, Eslint will still provide warnings for other logic-related issues!
+This will turn off a handful of rules that typically conflict between the two libraries. Don't worry, ESLint will still provide warnings for other logic-related issues!
 
 ## Hints
 
