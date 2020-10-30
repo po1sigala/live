@@ -1,0 +1,45 @@
+/* Note: We are not actually using Sequelize in this activity 
+because data is hardcoded in the templates. This file is set up as a preview for when
+you will be including Sequelize in your application*/
+
+//TODO: Add a comment indicating how this file fits into the MVC framework (is it a Model, a View, or a Controller?) and what it is responsible for handling.  
+// This file is a Model. It is responsible for handling data and business logic.
+
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Dish extends Model {}
+
+Dish.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    dish_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    has_nuts: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'post',
+        key: 'id'
+      }
+    }
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'dish'
+  }
+);
+
+module.exports = Dish;
