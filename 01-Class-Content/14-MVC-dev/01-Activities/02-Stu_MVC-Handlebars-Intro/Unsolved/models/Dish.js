@@ -25,12 +25,12 @@ Dish.init(
       type: DataTypes.TEXT,
       allowNull: true
     },
+    guest_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     has_nuts: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'post',
-        key: 'id'
-      }
+      type: DataTypes.BOOLEAN,
     }
   },
   {
