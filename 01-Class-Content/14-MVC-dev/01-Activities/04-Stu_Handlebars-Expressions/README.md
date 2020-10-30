@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a party guest, I want to see descriptions of one food item that will be at the potluck when I visit `http://localhost:3001/:num`.
+* As a party guest, I want to see description of one food item that will be at the potluck when I visit `http://localhost:3001/:num`.
 
 ## Acceptance Criteria
 
