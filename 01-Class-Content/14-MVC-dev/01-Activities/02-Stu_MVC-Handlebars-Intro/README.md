@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of MVC and Handlebars.js
 
-Work with a partner to add comments describing the functionality of the code found in @TODO [Model](./Unsolved), [View](./Unsolved), and [Controller](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in [Dish.js](./Unsolved/models/Dish), [main.handlebars](./Unsolved/views/layouts/main), and [dish-routes.js](./Unsolved/controllers/api/dish-routes).
 
 ## 📝 Notes
 
