@@ -4,7 +4,7 @@ Work with a partner to implement the following user story:
 
 * As a teacher, I want to be able to find the average grade of my entire class.
 
-* As a developer, I want to be able to reuse my `findAverage` function in multiple filter method calls throughout my application so that my code is more abstract.
+* As a developer, I want to be able to reuse my `findAverage` function in multiple filter method calls throughout my application so that my code is not being duplicated unnecessarily.
 
 ## Acceptance Criteria
 

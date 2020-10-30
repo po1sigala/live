@@ -4,7 +4,7 @@ Work with a partner to implement the following user story:
 
 * As a teacher, I want a way to keep track of the number of students I see every day.
 
-* As a developer, I want to use closures to keep my  `count` variable data private.
+* As a developer, I want to keep my  `count` variable data private.
 
 ## Acceptance Criteria
 
