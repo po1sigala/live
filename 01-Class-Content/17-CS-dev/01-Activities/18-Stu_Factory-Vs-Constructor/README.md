@@ -4,13 +4,13 @@ Work with a partner to implement the following user story:
 
 * As a developer, I want to move away from a inheritance based approach and start to use a composition based approach so that my application's tree hierarchy is less rigid.
 
-* As a teacher, I want to be able to add a new lesson with a description to my collection of lessons I can teach.
+* As a teacher, I want to be able to add a new lesson with a title and description to my collection of lessons I can teach.
 
 ## Acceptance Criteria
 
 * It's done when the `Lesson` class is a factory function in order to make my application less rigid in case we decide to add new features.
 
-* It's done when I can call the `description` method on the `Lesson` function and it correctly logs the private variable.
+* It's done when I can call the `information` method on the `Lesson` function and it correctly logs the private variable.
 
 ## 💡 Hints
 
