@@ -22,9 +22,11 @@ const sortedArr = [2, 23, 34, 42, 100, 500];
 
 The bubble sort algorithm is a more common sorting algorithm one may receive in a technical interview. It is easier to grasp than some other algorithms and allows the interviewee to not only implement a solution, but also consider ways to optimize the solution.
 
-Take a moment to assess the question being asked and restate it to the interviewer to ensure that you understand the expectations.
+Take a moment to assess the question being asked and restate it to the interviewer to ensure that you understand the expectations. It's okay to ask questions for clarification during an interview, as long as the question isn't seeking for the direct answer to the question. Some interview questions are purposely stated in a vague fashion to force a job candidate to ask follow-up questions for clarification, it shows that the candidate is thinking critically about the problem.
 
-## Solutions
+Take a few moments to gather your thoughts and take the interviewer's questions as guides to help you come to a solution. Don't forget to pseudocode! 
+
+## Resources
 
 Use the comments in the solution code to help guide with the following prompts:
 

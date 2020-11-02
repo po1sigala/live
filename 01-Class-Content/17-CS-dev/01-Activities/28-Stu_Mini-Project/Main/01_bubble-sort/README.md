@@ -34,7 +34,7 @@ Use the comments in the following solution code to help guide with the prompts:
 
 ## Prompts from the Interviewer
 
-Use these prompts to help guide a candidate to a solution without giving away the answer:
+Use these prompts to help guide a candidate to a solution without giving away the answer as they work through the question:
 
 * **Prompt**: Can you think of a way to solve this problem with brute force?
 
