@@ -6,7 +6,7 @@ function Student(first, last, age) {
   this.lastName = last;
   this.age = age;
 
-  // Method that will simulate method overloading in javascript
+  // Method that will simulate method overloading in JavaScript
   this.displayGrade = function (grade) {
     const input = grade;
     let response;
@@ -29,4 +29,5 @@ function Student(first, last, age) {
 }
 
 const John = new Student('John', 'Appleseed', '30');
-console.log('John.displayGrade();', John.displayGrade('A'));
+console.log('John.displayGrade():', John.displayGrade(95));
+console.log('John.displayGrade():', John.displayGrade('B'));

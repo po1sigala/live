@@ -1,26 +1,30 @@
-# 🏗️ Implement Polymorphism Using Method Overloading
+# 🐛 Implement Polymorphism Using Method Overloading
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
 * As a developer, I want to understand the concept of polymorphism by writing code that utilizes method overloading.
 
-## Acceptance Criteria
+## Expected Behavior
 
-* It's done when I create logic to return a letter grade if a number grade was passed into the `displayGrade` method.
+* When the user passes in a number grade, like `95`, into the `displayGrade` method, the method should return a string indicating the letter grade, like `A`.
 
-    * For example, if the user passes in `95` the method should return a string, "A", indicating the letter grade.
-  
-* It's done when I create logic to return a range of possible percentages if a letter grade was passed into the `displayGrade` method.
+* When the user passes in a letter grade, like `B`, into the `displayGrade` method, the method should return a string indicating the range of the grade percentage, like `80-89`. 
 
-    * For example, if the user passes in `B` the method should return a string, "80 - 89", indicating the range of the grade percentage.
-    
-* It's done when I have created a new instance of `Student` and tested both outcomes.
+## Actual Behavior
+
+When the user passes in a number grade or letter grade, the method returns `undefined`
+
+## Steps to Reproduce the Problem
+
+1. Run `node index.js` from the command line.
+
+---
 
 ## 💡 Hints
 
-* Our method is going to be returning a string, so how can we get that to show up in the terminal when we call the method?
+* We are given an `inRange` helper function. How might that come in handy?
 
-* How can we use switch statements to help code out the solution? We also have a `inRange` helper function that is provided to us. How might that come in handy?
+* How can we use switch statements to help code out the solution? 
 
 ## 🏆 Bonus
 
@@ -31,4 +35,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
