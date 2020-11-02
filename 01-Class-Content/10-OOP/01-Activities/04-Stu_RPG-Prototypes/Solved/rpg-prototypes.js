@@ -7,7 +7,7 @@ function Character(name, profession, age, strength, hitpoints) {
   this.hitpoints = hitpoints;
 }
 
-// Method which prints all of the stats for a character
+// Associates the method printStats() to the Character constructor, which prints all of the stats for a character
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.profession}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
