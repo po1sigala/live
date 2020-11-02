@@ -1,6 +1,6 @@
 # Bubble Sort - The Interviewee
 
-As the interviewer, it is your job to properly restate the problem to the interviewer and expected output to ensure you understand what you have been asked. If the interviewer prompts you with a question, it is not in bad faith, but rather a nudge in the right direction. 
+As the interviewer, it is your job to properly restate the problem and expected output to ensure you understand what you have been asked to accomplish. If the interviewer prompts you with questions throughout each question, it is not in bad faith, but rather a nudge in the right direction to help your thought process. 
 
 ## Problem
 
@@ -20,7 +20,9 @@ const sortedArr = [2, 23, 34, 42, 100, 500];
 
 ## Notes to the Interviewee
 
-The bubble sort algorithm is a more common sorting algorithm one may receive in a technical interview. It is easier to grasp than some other algorithms and allows the interviewee to not only implement a solution, but a
+The bubble sort algorithm is a more common sorting algorithm one may receive in a technical interview. It is easier to grasp than some other algorithms and allows the interviewee to not only implement a solution, but also consider ways to optimize the solution.
+
+Take a moment to assess the question being asked and restate it to the interviewer to ensure that you understand the expectations.
 
 ## Solutions
 
