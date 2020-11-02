@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when after I am logged in, I am able to view the exhibition page, which is not accessible if not logged in.
 
-* It's done when I can go from the exhibition page to a painting's detail page without losing my logged in status.
+* It's done when I can navigate from the exhibition page to a painting's detail page without losing my logged in status.
 
 ## Assets
 
