@@ -17,4 +17,13 @@
   <button type="submit" class="btn">Create</button>
 </form>
 
+<ul class="project-list">
+  {{#each projects as |project|}}
+  <li>
+    <a href="/project/{{project.id}}">{{project.name}}</a>
+    <button class="btn" data-id="{{project.id}}">DELETE</button>
+  </li>
+  {{/each}}
+</ul>
+
 <script src="./js/profile.js"></script>
