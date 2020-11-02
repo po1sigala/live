@@ -83,7 +83,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Double Triple Map](./03-Algorithms/01-double-triple-map)
 
-  * [@TODO: 📹 Let's Code Double Triple Map!]()
+  * [📹 Let's Code Double Triple Map!](https://2u-20.wistia.com/medias/pz1ugrv0yu)
 
 * [02: Array Intersection](./03-Algorithms/02-array-intersection)
 
