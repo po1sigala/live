@@ -6,7 +6,7 @@ for (let i = 0; i < 2000; i++) {
   unsortedInputArray.push(Math.round(Math.random() * 2000));
 }
 
-// This version looks simpler, but has a worse Big O complexity of O(n^2) since it's going to force its way through the entire array, even if it's already sorted
+// This version looks simpler, but isn't as efficient since it's going to force its way through the entire array, even if it's already sorted
 const bubbleSort = (array) => {
   // for each index in the array...
   for (let i = 0; i < array.length; i++) {
