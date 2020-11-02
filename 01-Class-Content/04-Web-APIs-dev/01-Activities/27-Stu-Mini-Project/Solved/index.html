@@ -1,48 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Word Guess Game</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
+    <title>CSS Box Styling</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
-  <body>    
-    <div id="wrapper">
-      <h1 class="chrome">WORD GUESS</h1>
-      <h3 class="dreams">80s style</h3>
-    </div>
+  <body>
+    <header>
+      <div class= "large-font">Word Guess Game</div>
+      <h2>Press Any Key to Start </h2>
+    </header>
 
-    <div id="container">
-      <h2 id="music"></h2>
-      <!-- The div where our band image will be shown. -->
-      <div id="band-div"><img src="assets/images/hangman-boardgame.jpg" alt="hangman board game from 80s"></div>
-      <div id="game-section">
-        <p>Press any key to get started!</p>
-        <div>
-          <h3 class="section-title">Wins</h3>
-          <!-- The div where our wins will be shown. -->
-          <div id="wins"></div>
+    <main>
+      <section>
+        <div class="card word-guess">
+          <div class="large-font word-blanks">J _ v _ S c r_ _t</div>
+        
         </div>
-        <div id="current-word-section">
-          <h3 class="section-title">Current Word</h3>
-          <!-- The div where our current word (and guessing progress) will be shown. -->
-          <div id="current-word"></div>
-        </div>
-        <div id="guesses-remaining-section">
-          <h3 class="section-title">Number of Guesses Remaining</h3>
-          <!-- The div where our remaining guesses will be shown. -->
-          <div id="guesses-remaining"></div>
-        </div>
-        <div id="guessed-letters-section">
-          <h3 class="section-title">Letters Already Guessed</h3>
-          <!-- The div where our guesses letters will be shown. -->
-          <div id="guessed-letters"></div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Linking to our JavaScript file. -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+      <section>
+        <div class="card results">
+         
+          <h2>Wins: 5 </h2>
+          <h2>Losses: 5 </h2>
+    
+          <div class= "card timer">
+            <div class = "timer-text">
+            <div class="large-font">10</div>
+            <h3>seconds remaining</h3>
+          </div>
+        
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
