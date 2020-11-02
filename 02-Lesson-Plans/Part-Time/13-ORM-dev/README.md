@@ -58,12 +58,16 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [01: Double Triple Map](../../../01-Class-Content/13-ORM/03-Algorithms/01-double-triple-map/)
 
+      * [@TODO: 📹 Let's Code Double Triple Map!]()
+
   * [02: Array Intersection](../../../01-Class-Content/13-ORM/03-Algorithms/02-array-intersection/)
 
   * [03: Squares of a Sorted Array](../../../01-Class-Content/13-ORM/03-Algorithms/03-squares-of-a-sorted-array/)
 
 
 ### Resources
+
+  * [@TODO: Deploy to Heroku with a MySQL Database Guide]()
 
   * [Sequelize Docs](https://sequelize.org/master/)
 

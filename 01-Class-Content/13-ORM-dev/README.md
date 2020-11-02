@@ -83,6 +83,8 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Double Triple Map](./03-Algorithms/01-double-triple-map)
 
+  * [@TODO: 📹 Let's Code Double Triple Map!]()
+
 * [02: Array Intersection](./03-Algorithms/02-array-intersection)
 
 * [03: Squares of a Sorted Array](./03-Algorithms/03-squares-of-a-sorted-array)
@@ -109,6 +111,13 @@ In the next unit, we will be returning to full stack app developement by learnin
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
+  * [@TODO: Deploy to Heroku with a MySQL Database Guide]()
+
+  * [Sequelize Docs](https://sequelize.org/master/)
+
+  * [Bcrypt](https://www.npmjs.com/package/bcrypt)
+
+  * [dotenv](https://www.npmjs.com/package/dotenv)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
