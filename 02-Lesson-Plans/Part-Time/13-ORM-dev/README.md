@@ -67,7 +67,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * [@TODO: Deploy to Heroku with a MySQL Database Guide]()
+  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
   * [Sequelize Docs](https://sequelize.org/master/)
 

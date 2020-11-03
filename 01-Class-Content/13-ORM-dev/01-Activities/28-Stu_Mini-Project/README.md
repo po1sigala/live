@@ -74,7 +74,7 @@ Refer to the documentation:
 
   * [Sequelize docs on Many-To-Many relationships](https://sequelize.org/master/manual/assocs.html#many-to-many-relationships)
 
-  * [@TODO: Link to soon to exist Heroku JawsDB deploy guide]()
+  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
 Use this sample data as the request body POST `/api/trips` route:
 

@@ -111,7 +111,7 @@ In the next unit, we will be returning to full stack app developement by learnin
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-  * [@TODO: Deploy to Heroku with a MySQL Database Guide]()
+  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
   * [Sequelize Docs](https://sequelize.org/master/)
 
