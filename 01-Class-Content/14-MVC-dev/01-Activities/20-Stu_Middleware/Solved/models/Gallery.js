@@ -15,11 +15,11 @@ Gallery.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    opening_hour: {
+    starting_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    closing_hour: {
+    ending_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },

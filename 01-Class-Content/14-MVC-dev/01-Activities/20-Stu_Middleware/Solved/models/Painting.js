@@ -19,11 +19,11 @@ Painting.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    completed_year: {
-      type: DataTypes.INTEGER,
+    date: {
+      type: DataTypes.DATE,
       allowNull: false,
     },
-    art_url: {
+    filename: {
       type: DataTypes.STRING,
       allowNull: false,
     },
