@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('dish_db', 'root', '1234', {
   host: 'localhost',
   dialect: 'mysql',
-  port: 3306
+  port: 3306,
 });
 
 module.exports = sequelize;

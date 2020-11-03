@@ -6,8 +6,6 @@ const seedAll = async () => {
   console.log('--------------');
   await seedDishes();
   console.log('--------------');
-
-
   process.exit(0);
 };
 
