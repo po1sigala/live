@@ -46,6 +46,6 @@
 
 ![MongoDB_URI](images/MONGODB_URI.png)
 
-5. Now lets `git add`, `git commit` and `git push origin master`. After we complete our push to GitHub, lets push to Heroku! In our terminal/gitbash, enter `git push heroku master`.
+5. Now lets `git add`, `git commit` and `git push origin main`. After we complete our push to GitHub, lets push to Heroku! In our terminal/gitbash, enter `git push heroku main`.
 
 6. Once complete, running `heroku open --app YOURAPPNAME` in your terminal/gitbash will open your Heroku app in browser.

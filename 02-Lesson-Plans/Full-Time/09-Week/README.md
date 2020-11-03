@@ -40,4 +40,4 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Shows
 
-* [Masters of MongoDB](https://docs.google.com/presentation/d/1iLeQv0Q6OF81PJc0NMFqCgfRFfYvP0eArvZBPXY6ago/edit?usp=sharing)
+* [09.1: Intro to MongoDB](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing)

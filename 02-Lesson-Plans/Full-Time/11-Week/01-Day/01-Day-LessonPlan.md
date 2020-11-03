@@ -50,9 +50,7 @@ At the end of class, we will introduce the final project's requirements and help
 
 ### 2. Instructor Do: Slides (15 mins)
 
-* This unit uses a web-based slideshow found here: [ReactJS Review slides](https://react-review.netlify.com/). Be sure to give students enough time to answer each question and discuss before going over the answers.
-
-  * Use the left and right arrow keys to cycle through the slides. It is advisable to view the slideshow in fullscreen Chrome.
+* Open the [11.1: MERN](https://docs.google.com/presentation/d/1pO7pPyaCtPqP-d7fwkqORi9Mcx8wcZXlXLAUvJPyOEA/edit?usp=sharing) slide deck. Be sure to give students enough time to answer each question and discuss before going over the answers.
 
 ### 3. Instructor Do: Mern Demo (15 mins)
 

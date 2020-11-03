@@ -225,7 +225,9 @@ Slack out the following folder and instructions:
 
 Slack out the following image and instructions and have students discuss with their partners.
 
-**Image**: [`3-Relationship-Exercise`](Images/3-Relationship-Exercise.png) 
+**Image**: 
+
+![3-Relationship-Exercise](Images/3-Relationship-Exercise.png) 
 
 **Post**
 
@@ -306,12 +308,12 @@ Show students the image below or slack it out to illustrate what this might look
   4) Navigate to the `post.js` file.
 
   5) You will need to set an `associate` property to the `Post` model after it's defined. There's an example of this type of association being done here: 
-  <https://github.com/sequelize/express-example/blob/legacy/models/task.js>
+  <https://github.com/sequelize/express-example/blob/3fca27909b3ec9d72874ebe3317ffd8e5842b17e/models/task.js>
 
   * This may take a few tries to implement correctly in your own Post model (There's a lot of curly braces there!). You can verify your code works by starting your node server and then checking MySQL Workbench. If the Posts table now has a foreign key of AuthorId, you were successful.
 
   **Bonus**: If you complete the exercise before time's up, navigate to the author.js file and add a **hasMany** association from the Author model to the Post Model. An example of this type of association can be found here: 
-  <https://github.com/sequelize/express-example/blob/legacy/models/user.js>
+  <https://github.com/sequelize/express-example/blob/3fca27909b3ec9d72874ebe3317ffd8e5842b17e/models/user.js>
 
   **Note** After this activity we have just one more step to complete the app and get it fully functioning.
 
@@ -334,7 +336,9 @@ Show students the image below or slack it out to illustrate what this might look
 * We're adding a flag to our foreign key (AuthorId) saying this cannot be null. In other words, it won't let us create a Post without an Author.
 * **Explain that for the most part they can create an association just by copying and pasting this code. There's no need to worry about memorizing it.**
 * Briefly go over the **hasMany** association in the Author model. This was part of the bonus and isn't actually required to put a foreign key on the Post model, but it's VERY helpful as it helps us easily perform joins whether we're doing a find on Posts, or a find on Authors. This will be more clear in the next exercise!
+
   ![Author Associate](Images/8-Author-Associate.png)
+
 * There are other types of associations we can do with Sequelize, but belongsTo and hasMany are some of the most common and what we'll be using here.
 
   * <https://sequelize.org/master/manual/assocs.html> Sequelize's docs are very thorough when it comes to the different types of relations that are available.

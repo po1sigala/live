@@ -84,17 +84,9 @@ We will be using this method of setting up Sequelize projects going forward, so 
 
 * Send your students the instructions for this topic's `02-Homework/Instructions`.
 
-* Stress that students should deploy their assignments as early as possible, refer to the deployment guide provided, and ask for help if they're unable to sooner rather than later. Explain that not deployed assignments will take a grade hit.
+* Essentially they'll be reverse engineering a working full stack application.
 
-* Emphasize as much as possible how important it is to have deployed projects on their portfolio when it comes to the job search. It cannot be overstated.
-
-* Essentially they'll be taking last assignment and converting it from a pure MySQL project to one incorporating Sequelize. This will mean connecting their MySQL database to Sequelize, creating a Burger Model, and updating their current queries to use Sequelize queries.
-
-* With what they've learned yesterday and today, this will be a perfect way for them to work through Sequelize's intricacies.
-
-* With the Sequelize Quick Start guide and examples we went over in class, students should know enough to at least get started tonight.
-
-* Slack out the `04-Important/SequelizeHerokuDeploymentProcess.pdf`. This describes the process for deploying a Sequelize application to Heroku and making use of JawsDB.
+* Slack out the `04-Important/SequelizeHerokuDeploymentProcess.pdf`. This describes the process for deploying a Sequelize application to Heroku and making use of JawsDB. They will need this for Project 2.
 
 ### 5. Instructor Do: Pulse Check and Sequelize Review (10 min)
 
@@ -170,9 +162,11 @@ Slack out the following folder and instructions:
 ### 8. Instructor Do: Review the ORM-To-Sequelize Activity (10 mins)
 
 * When time's up, load up the `07-ORM-To-Sequelize/Solved` solution on your machine. Be sure to show students your `config.json` file as well as your Todo model.
+
   ![Todo Model](Images/1-Todo-Model.png)
 
 * Then highlight the fact that we sync() our models in the `server.js` file before we start our server. This is what ensures our tables are created and ready when we try and start up our express server.
+
   ![Sync Models](Images/2-Models-Sync.png)
 
 * Show them where our models are required inside of the `api-routes.js` file where will use it in the next exercise.

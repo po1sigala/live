@@ -18,17 +18,15 @@ On Day 03 of the next unit, students will present their projects. Emphasize that
 
 ### Lesson Plans
 
-  * [15.1 - Lesson Plan](01-Day/15.1-LESSON-PLAN.md)
+  * [15.1 - Lesson Plan](./01-Day_Linting-Travis/15.1-LESSON-PLAN.md)
 
-  * [15.2 - Lesson Plan](02-Day/15.2-LESSON-PLAN.md)
+  * [15.2 - Lesson Plan](./02-Day_Project-Work/15.2-LESSON-PLAN.md)
 
-  * [15.3 - Lesson Plan](03-Day/15.3-LESSON-PLAN.md)
+  * [15.3 - Lesson Plan](./03-Day_Project-Work/15.3-LESSON-PLAN.md)
 
 ### Slide Decks
 
-  * [15.1: Linting and Projects](https://docs.google.com/presentation/d/1DldswLqfUbnvidzyMLhmZUwYpwy_CXI0WPx5pMUuDZo/edit?usp=sharing)
-
-  * [15.2: Agile & Projects](https://docs.google.com/presentation/d/1T7rSHI5Jpg6aE0OR7HhiJy4VEKcO8lm2eSwTUj5Wml8/edit?usp=sharing)
+  * [15.1: Linting and Projects](https://docs.google.com/presentation/d/1T7rSHI5Jpg6aE0OR7HhiJy4VEKcO8lm2eSwTUj5Wml8/edit?usp=sharing)
 
 ### Time Tracker(s)
 

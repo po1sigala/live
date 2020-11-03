@@ -152,7 +152,7 @@ In this class, we will be introducing students to the concept of DOM Manipulatio
 
 * **File:**
 
-  * `jquery-drink-list-unsolved.html` in `05-jQueryDrinkList/Unsolved`
+  * `jquery-drink-list-unsolved.html` in `04-jQueryDrinkList/Unsolved`
 
 * **Instructions:**
 
