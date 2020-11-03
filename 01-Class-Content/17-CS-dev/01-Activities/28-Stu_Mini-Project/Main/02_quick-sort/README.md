@@ -1,8 +1,10 @@
 # Quick Sort - The Interviewer
 
-### Problem
+As the interviewer, it is your job to properly state the problem to the interviewee and the output a solution will provide. If an interviewee asks a question, try and answer in a way that encourages them to come to an answer themselves.
 
-Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Quick Sort" algorithm. For example, for the following array:
+## Problem
+
+Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Quick Sort" algorithm with a Big O complexity of `O(n log(n))`. For example, for the following array:
 
 ```js
 const unsortedArr = [2, 42, 100, 23, 500, 34];
@@ -14,66 +16,55 @@ We would receive an array like this in return:
 const sortedArr = [2, 23, 34, 42, 100, 500];
 ```
 
-### Notes to the Interviewer
+- - - 
 
-This is a good question to pose to candidates who have demonstrated proficiency in recursion in JavaScript. 
+## Notes to the Interviewer
 
-### Prompts from the Interviewer
+This is a good question to ask candidates to test their understanding of recursion. It is a more difficult sorting algorithm than a bubble sort, so make sure the candidate can visualize how it works prior to coding a solution.
 
-* **Prompt**: Can you think of a way to solve this problem with brute force?
+The key to understanding this algorithm is that we randomly select a value in the array to serve as the "pivot" value. This value will be used to sort the rest of the array's elements by pushing them into new arrays to hold elements lesser than or equal the pivot value (to the left) and elements greater than the pivot value (to the right). We then run those left and right arrays through the same sorting functionality over and over again until the left and right arrays are sorted and then concatenate them together and return the full sorted array. 
 
-  * **Ask During**: Solution Sketch
+Allow the candidate a few moments to gather their thoughts around a solution or quickly research a potential solution, answering any questions as they arise. Spend this time reviewing the solution to help support your prompts to the candidate. 
 
-  * **Ask If**: Ask this question to candidates who have trouble getting started on the question on their own.
+## Solutions
 
-  * **Look For**
+Use the comments in the following solution code to help guide with the prompts:
 
-    * **Candidate Explains Solution**. The brute force solution is to take every possible product, and then pick the biggest of them.
+* [quick-sort.js](./quick-sort.js)
 
-      * This is very slow for large input arrays, so it's not the _best_ answer, but it's a good start.
+## Prompts from the Interviewer
 
-      * Don't let candidates begin implementing this solution unless it's clear they won't be able to uncover the greedy solution.
+Use these prompts to help guide a candidate to a solution without giving away the answer as they work through the question:
 
-* **Prompt**: Let's solve a similar problem. Can you think of a way to find the biggest element in an array?
+* **Prompt**: Why is it okay to select a pivot value at random and not simply taking the value at the middle of the array?
 
-  * **Ask During**: Solution Sketch
+* **Ask If**: Ask this question to candidates that are having a hard time understanding the use of a pivot value.
 
-  * **Ask If**: Ask this question to candidates who are having trouble moving past the brute force solution.
-
-  * **Candidate Explains Solution**. You want the candidate to explain that they can keep track of the biggest element they've seen _so far_, and return this as the maximum in the array.
-
-    * If your candidate correctly they could sort the array and return the last element, simply explain the answer you were looking for, to save time.
-
-  * **Follow-Up**: Can we do the same thing with this problem?
-
-    * This is purposefully vague. The hint is that we can find the highest product of two numbers by keeping track of the highest product we've seen _so far_.
-
-* **Prompt**: If we're going to solve this by keeping track of the highest product of two numbers we've seen so far, what information do we need to keep track of?
-
-  * **Ask During**: Solution Sketch
-
-  * **Ask If**: Ask this question to candidates who are having trouble imagining how they might implement the greedy solution, or to those who think it's enough to _only_ keep track of the highest product we've seen so far.
-
-  * **Candidate Explains Solution**. Strong candidates will explain that they need to keep track of the highest product of two numbers _and_ the highest number they've seen so far.
-
-    * Particularly strong candidates will also realize they should keep track of the _lowest_ number they've seen so far, but it's okay if they don't.
-
-* **Prompt**. Does your solution work for negative numbers? For example, imagine the input `[-10, -10, 30, 1]`.
-
-  * **Ask During**: Implementation Discussion
-
-  * **Candidate Explains Shortcomings**. Strong candidates will realize they need to account for cases where the product of two negative numbers produces the highest product of two.
-
-    * This is the case that necessitates our keeping track of the lowest number we've seen so far.
-
-### Notes
-
-This is a more complicated example to **greedy algorithms** than the [maximin](../maximin) problem, and should be considered "a level above" that one. A more difficult example of this approach is [buy low, sell high](../buy_low_sell_high), or the challenge of finding the highest product of _three_ numbers (or four; five; etc.).
-
-### Solution
-
-#### Greedy Solution | O(n)
-
-We can keep track of the "best minimum and maximum so far" to implement a linear-time [greedy solution](../maximin/Solved/maximin.js).
+* **Candidate Explains Solution**: The array is likely unsorted, so picking a pivot value at random is just as efficient&mdash;if not more efficient&mdash;than using the value at the middle of the array.
 
 - - -
+
+* **Prompt**: How can we go about selecting a pivot value out of an array?
+
+* **Ask If**: Ask this question to candidates who have trouble with the functionality for removing an element from the array.
+
+* **Candidate Explains Solution**: We can use the JavaScript array `.splice()` method to remove an element from the array and use it as a pivot value.
+
+- - -
+
+* **Prompt**: Once we get our initial left and right arrays populated, are all of the values sorted?
+
+* **Ask If**: Ask this question to candidates that don't fully grasp the need for recursion here.
+
+* **Candidate Explains Solution**: They likely won't be sorted just yet, but we now have two halves that are closer to being sorted amongst themselves. We can run each of them through the same functionality until they're sorted.
+
+- - -
+
+* **Prompt**: Since we pulled the pivot value out of the array, how do we reinsert it into the array and have it be sorted?
+
+* **Ask If**: Ask this question if the candidate is having difficulty visualizing how to return the sorted array.
+
+* **Candidate Explains Solution**: Because the array was sorted to the left and right of the pivot value, we can insert it between the two using array concatenation and assume it'll be greater than (or equal to) anything in the left array and less than anything in the right array.
+
+- - -
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,10 +1,10 @@
 # Bubble Sort - The Interviewer
 
-As the interviewer, it is your job to properly state the problem to the interviewee the output a solution will provide. If an interviewee asks a question, try and answer in a way that helps them get to an answer themselves.
+As the interviewer, it is your job to properly state the problem to the interviewee and the output a solution will provide. If an interviewee asks a question, try and answer in a way that encourages them to come to an answer themselves.
 
 ## Problem
 
-Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Bubble Sort" algorithm. For example, for the following array:
+Write a function that accepts an unsorted array of integers, sorts it, and returns the sorted array using the "Bubble Sort" algorithm with a Big O complexity of `O(n^2)`. For example, for the following array:
 
 ```js
 const unsortedArr = [2, 42, 100, 23, 500, 34];
@@ -20,9 +20,9 @@ const sortedArr = [2, 23, 34, 42, 100, 500];
 
 ## Notes to the Interviewer
 
-This is a good mid-level interview question that will test if the candidate can visualize a problem and step through the steps to a solution. There are multiple ways to get to this solution, so don't immediately course correct if the candidate is going in one direction over another. If it's the less efficient solution and time remains, prompt candidate to see if they can think of another way of solving it.
+This is a good mid-level interview question that will test if the candidate can visualize a problem and walk through the steps to a solution. There are multiple ways to get to this solution, so don't immediately course correct if the candidate is going in one direction over another. If it's a less efficient solution and time remains, prompt candidate to see if they can think of another way of solving it.
 
-Allow the candidate a few moments to gather their thoughts around a solution or quickly research a potential solution (if allowed), answering any questions as they arise. Spend this time reviewing the solution to help support your prompts to the candidate. 
+Allow the candidate a few moments to gather their thoughts around a solution or quickly research a potential solution, answering any questions as they arise. Spend this time reviewing the solution to help support your prompts to the candidate. 
 
 ## Solutions
 
@@ -40,7 +40,7 @@ Use these prompts to help guide a candidate to a solution without giving away th
 
 * **Ask If**: Ask this question to candidates who have trouble getting started on the question on their own.
 
-* **Candidate Explains Solution**: The forced solution is to take a look through the array one index at a time and loop through the rest of the array to compare and swap values when needed.
+* **Candidate Explains Solution**: The forced solution is to take a select an element in the array one index at a time and loop through the rest of the array to compare and swap values when needed.
 
 * **Note**: This is very slow for large input arrays, so it's not the _best_ answer, but it's a good start.
 
@@ -60,7 +60,7 @@ Use these prompts to help guide a candidate to a solution without giving away th
 
 * **Prompt**: If we don't want to use the force method and implement one that's a bit more efficient, how can we know if the array is sorted early?
 
-* **Ask If**: Ask this if students opted to not go with the force route and wanted to optimize.
+* **Ask If**: Ask this if candidate opted to not go with the force route and wanted to optimize.
 
 * **Candidate Explains Solution**: Strong candidates will be able to explain that there is a need for a flag variable that let's a loop know if it's done or not. 
 
