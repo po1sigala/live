@@ -1,0 +1,11 @@
+<b>{{gallery.name}}</b>
+<p>{{gallery.starting_date}}</p>
+<p>{{gallery.ending_date}}</p>
+
+<ol>
+  {{#each gallery.paintings as |painting|}}
+  <li>
+    <b>{{painting.title}}</b>
+  </li>
+  {{/each}}
+</ol>
