@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const Student = require('./Factory-Functions');
 
 test('Student is a defined function', () => {

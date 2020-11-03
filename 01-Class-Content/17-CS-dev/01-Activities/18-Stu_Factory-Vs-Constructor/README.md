@@ -20,7 +20,7 @@ What scope does your inner function have access too?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are the two paradigms of JavaScript? 
+* What are the three paradigms of JavaScript? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

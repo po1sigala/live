@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const counter = require('./Closures');
 
 test('counter is a defined function', () => {

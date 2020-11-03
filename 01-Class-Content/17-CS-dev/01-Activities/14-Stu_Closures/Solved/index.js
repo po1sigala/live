@@ -1,16 +1,14 @@
 function counter() {
-  // Create a 'count' variable inside of the outer function.  
+  // Create a 'count' variable inside of the outer function.
   let count = 0;
 
   // Return an inner function creating a closure.
   return {
     increment: function () {
-      // Increment the outer function's 'count' variable by one.  
+      // Increment the outer function's 'count' variable by one.
       return count++;
     },
   };
 }
 
-// Create a new counter variable.
-const studentCouter = counter();
 module.exports = counter;

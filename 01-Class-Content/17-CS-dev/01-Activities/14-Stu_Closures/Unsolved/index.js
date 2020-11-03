@@ -3,6 +3,5 @@ function counter() {
     
   }
   
-  const studentCouter = counter();
   module.exports = counter;
   

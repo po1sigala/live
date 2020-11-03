@@ -5,4 +5,7 @@ function findAverage(accumalator, currentValue, index, array) {
     
 }
 
-console.log(grades.reduce(findAverage));
+// TODO: Pass the 'findAverage' into the reduce method.
+let gradeAverage = grades.reduce();
+
+console.log(gradeAverage);
