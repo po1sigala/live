@@ -7,11 +7,19 @@ const withAuth = require('../utils/auth');
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findAll({});
+    const dbGalleryData = await Gallery.findAll({
+      include: [
+        {
+          model: Painting,
+          attributes: ['filename'],
+        },
+      ],
+    });
 
     const galleries = dbGalleryData.map((gallery) =>
       gallery.get({ plain: true })
     );
+
     res.render('homepage', {
       galleries,
     });
@@ -28,7 +36,7 @@ router.get('/gallery/:id', async (req, res) => {
       include: [
         {
           model: Painting,
-          attributes: ['title'],
+          attributes: ['id', 'title', 'artist', 'date', 'filename'],
         },
       ],
     });

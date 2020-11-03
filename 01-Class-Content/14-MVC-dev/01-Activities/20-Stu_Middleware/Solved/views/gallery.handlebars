@@ -1,11 +1,9 @@
-<b>{{gallery.name}}</b>
-<p>{{gallery.starting_date}}</p>
-<p>{{gallery.ending_date}}</p>
+<section class="container-fluid">
+  <h1 class="page-title">{{gallery.name}}</h1>
+  <h2>Opening Date: {{gallery.starting_date}}</h2>
+  <h2>Closing Date: {{gallery.ending_date}}</h2>
 
-<ol>
   {{#each gallery.paintings as |painting|}}
-  <li>
-    <b>{{painting.title}}</b>
-  </li>
+  {{> painting-details}}
   {{/each}}
-</ol>
+</section>

@@ -1,7 +1,8 @@
-<ol>
-  {{#each galleries as |gallery|}}
-  <li>
-    <b>{{name}}</b>
-  </li>
-  {{/each}}
-</ol>
+{{#each galleries as |gallery|}}
+<section class="card">
+  <a href="/gallery/{{gallery.id}}">
+    <header>{{name}}</header>
+    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].filename}}">
+  </a>
+</section>
+{{/each}}
