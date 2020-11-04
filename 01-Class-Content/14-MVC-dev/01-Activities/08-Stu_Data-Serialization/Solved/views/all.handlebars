@@ -1,7 +1,12 @@
+
+
 <h2>Menu</h2>
+<div>
 <ol class="dishes_list">
   {{#each dishes}}
+  <div class="box">
   <li>{{this.dish_name}}</li>
-  <h6>{{this.description}}</h6>
+  </div>
   {{/each}}
 </ol>
+</div>

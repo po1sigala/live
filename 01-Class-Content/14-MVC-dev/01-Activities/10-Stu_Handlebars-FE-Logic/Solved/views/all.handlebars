@@ -1,0 +1,28 @@
+<div class="container">
+<h2>Current Menu</h2>
+<ol class="dishes_list">
+  {{#each dishes}}
+  <div class="box">
+  <li>{{this.dish_name}}</li>
+  </div>
+  {{/each}}
+</ol>
+</div>
+
+<div class="container">
+    <h2>Add a Dish</h2>
+<form class="new-dish-form" action="/" method="post">
+  <label for="dish_name">Dish Name:</label><br>
+  <textarea id="dish_name" name="dish_name" rows="2" cols="30"> {{dish_name}} </textarea><br>
+  <label for="description">Description:</label><br>
+  <textarea id="description" name="description" rows="5" cols="30">{{description}}</textarea><br>
+   <label for="guest_name">Guest Name:</label><br>
+  <textarea id="guest_name" name="guest_name" rows="2" cols="30"> {{guest_name}} </textarea><br><br>
+   <input type="checkbox" id="has_nuts" name="has_nuts" value="true">
+  <label for="has_nuts"> Check box if this dish contains nuts</label><br>
+
+  <input type="submit" value="Submit">
+</form> 
+</div>
+
+<script src="/javascript/add-dish.js"></script>
