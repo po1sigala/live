@@ -1,4 +1,3 @@
-/* eslint-disable no-case-declarations */
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Gallery, Painting, User } = require('../models');
@@ -22,6 +21,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       galleries,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET one gallery
-router.get('/gallery/:id', async (req, res) => {
+router.get('/gallery/:id', withAuth, async (req, res) => {
   try {
     const dbGalleryData = await Gallery.findByPk(req.params.id, {
       include: [
@@ -42,7 +42,7 @@ router.get('/gallery/:id', async (req, res) => {
     });
 
     const gallery = dbGalleryData.get({ plain: true });
-    res.render('gallery', { gallery });
+    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -50,17 +50,26 @@ router.get('/gallery/:id', async (req, res) => {
 });
 
 // GET one painting
-router.get('/painting/:id', async (req, res) => {
+router.get('/painting/:id', withAuth, async (req, res) => {
   try {
     const dbPaintingData = await Painting.findByPk(req.params.id);
 
     const painting = dbPaintingData.get({ plain: true });
 
-    res.render('painting', { painting });
+    res.render('painting', { painting, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+});
+
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;

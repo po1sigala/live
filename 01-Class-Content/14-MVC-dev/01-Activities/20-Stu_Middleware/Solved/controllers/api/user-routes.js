@@ -1,26 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// GET one user
-router.get('/:id', async (req, res) => {
-  try {
-    const dbUserData = await User.findOne({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.params.id,
-      },
-    });
-
-    if (!dbUserData) {
-      res.status(404).json({ message: 'No user found with this id' });
-      return;
-    }
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 // CREATE new user
 router.post('/', async (req, res) => {
   try {

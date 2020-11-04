@@ -83,28 +83,15 @@ nav a:hover {
   font-size: 2.5rem;
 }
 
-.btn,
-.pill {
-  font-size: 1.3rem;
-  text-decoration: none;
-  padding: 0.5rem 1.2rem;
-  margin: 5px 0;
-  border-radius: var(--border-radius);
+.btn-no-style {
+  background: none;
   border: none;
-  color: var(--dark);
-  outline: none;
-  background-color: var(--secondary);
-  transition: all 0.5s;
-}
-
-.btn:hover,
-.pill:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
-}
-
-.btn-inline {
-  display: inline;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 100%;
+  transition: color 0.1s;
+  margin-left: 16px;
 }
 
 img {
@@ -135,6 +122,19 @@ img {
   border-width: thick;
   background-color: var(--light);
   color: var(--dark);
+}
+
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
 }
 
 .card header {
