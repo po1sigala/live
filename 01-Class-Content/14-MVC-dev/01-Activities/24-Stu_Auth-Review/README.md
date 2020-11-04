@@ -4,11 +4,15 @@ Work with a partner to add comments describing the functionality of the code fou
 
 * [Unsolved/server.js](./Unsolved/server.js)
 
-* [Unsolved/controllers/api/user-routes.js](./Unsolved/controllers/api/user-routes.js)
+* [Unsolved/controllers/api/userRoutes.js](./Unsolved/controllers/api/userRoutes.js)
 
 * [Unsolved/utils/auth.js](./Unsolved/utils/auth.js)
 
-* [Unsolved/controllers/api/post-routes.js](./Unsolved/controllers/api/post-routes.js)
+* [Unsolved/controllers/homeRoutes.js](./Unsolved/controllers/homeRoutes.js)
+
+* [Unsolved/views/layouts/main.handlebars](./Unsolved/views/layouts/main.handlebars)
+
+* [Unsolved/public/js/logout.js](./Unsolved/public/js/logout.js)
 
 ---
 

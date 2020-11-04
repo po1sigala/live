@@ -1,24 +1,26 @@
-# 🏗️ Populate Menu View with Database Data
+# 🏗️ Populate User Registry with Database Data
 
 Work with a partner to implement the following user story:
 
-* As a user, I want to see the latest menu items every time I visit the page.
+* As a user, I want to see a list of other users who are registered with the app.
 
 ## Acceptance Criteria
 
-* It's done when the menu page displays the food items from the database instead of the hardcoded values.
+* It's done when the homepage displays the user data from the database instead of the hardcoded values.
+
+* It's done when the users are sorted alphabetically by name.
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-@TODO image
+![The homepage displays a list of users and their e-mail addresses](./Images/01-user-registry.png)
 
 ---
 
 ## 💡 Hints
 
-What needs to happen with the Sequelize data before it can be passed into the Handlebars template?
+What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
 
 ## 🏆 Bonus
 
