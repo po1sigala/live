@@ -1,0 +1,7 @@
+<section class="container-fluid">
+  <h1 class="page-title">{{gallery.name}}</h1>
+  {{!-- For each painting that belongs to this gallery, the painting-details partial is used to render each painting's data --}}
+  {{#each gallery.paintings as |painting|}}
+  {{> painting-details}}
+  {{/each}}
+</section>
