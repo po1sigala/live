@@ -8,7 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/htmlRenderer");
+const render = require("./src/page-template.js");
 
 const teamMembers = [];
 const idArray = [];
@@ -21,7 +21,7 @@ function appMenu() {
       {
         type: "input",
         name: "managerName",
-        message: "What is your manager's name?",
+        message: "What is the team manager's name?",
         validate: answer => {
           if (answer !== "") {
             return true;
@@ -32,7 +32,7 @@ function appMenu() {
       {
         type: "input",
         name: "managerId",
-        message: "What is your manager's id?",
+        message: "What is the team manager's id?",
         validate: answer => {
           const pass = answer.match(
             /^[1-9]\d*$/
@@ -46,7 +46,7 @@ function appMenu() {
       {
         type: "input",
         name: "managerEmail",
-        message: "What is your manager's email?",
+        message: "What is the team manager's email?",
         validate: answer => {
           const pass = answer.match(
             /\S+@\S+\.\S+/
@@ -60,7 +60,7 @@ function appMenu() {
       {
         type: "input",
         name: "managerOfficeNumber",
-        message: "What is your manager's office number?",
+        message: "What is the team manager's office number?",
         validate: answer => {
           const pass = answer.match(
             /^[1-9]\d*$/
@@ -93,15 +93,15 @@ function appMenu() {
         ]
       }
     ]).then(userChoice => {
-      switch(userChoice.memberChoice) {
-      case "Engineer":
-        addEngineer();
-        break;
-      case "Intern":
-        addIntern();
-        break;
-      default:
-        buildTeam();
+      switch (userChoice.memberChoice) {
+        case "Engineer":
+          addEngineer();
+          break;
+        case "Intern":
+          addIntern();
+          break;
+        default:
+          buildTeam();
       }
     });
   }
@@ -133,7 +133,7 @@ function appMenu() {
             } else {
               return true;
             }
-                        
+
           }
           return "Please enter a positive number greater than zero.";
         }
@@ -198,7 +198,7 @@ function appMenu() {
             } else {
               return true;
             }
-                        
+
           }
           return "Please enter a positive number greater than zero.";
         }
@@ -247,6 +247,5 @@ function appMenu() {
   createManager();
 
 }
-
 
 appMenu();
