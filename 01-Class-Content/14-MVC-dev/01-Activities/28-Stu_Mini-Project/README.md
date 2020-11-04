@@ -66,6 +66,8 @@ In this mini project, you will work with a group to build a full-stack crowdfund
 
 ## 💡 Hints
 
+* What tools can you use to test the existing API routes if you don't yet have a front end?
+
 * Where would you place the client-side JavaScript for capturing form data?
 
 * How can middleware help protect routes from non logged in users?
