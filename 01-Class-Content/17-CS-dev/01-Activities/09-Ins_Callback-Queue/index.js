@@ -1,11 +1,11 @@
 // Follow the thread of execution
-function answer() {
-  // 
+function outer() {
+  // timer is set to 10 milliseconds, this resolves first then stores in the callback queue
   setTimeout(() => {
     console.log("Hello world")
   }, 10);
 
-  function response() {
+  function inner() {
     // Although the timer is zero, this log occurs after the statement below due to the event loop
     setTimeout(() => {
       console.log("Are you listening?")
@@ -13,8 +13,16 @@ function answer() {
     console.log("Yes, I'm listening");
   }
 
-  response();
+  // inner function is called
+  inner();
   console.log("I like turtles")
 }
 
-answer();
+// outer function is called
+outer();
+
+// console
+// Yes, I'm listening
+// I like turtles
+// Are you listening?
+// Hello world
