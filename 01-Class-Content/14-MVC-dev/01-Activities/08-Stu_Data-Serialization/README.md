@@ -14,7 +14,11 @@ Work with a partner to resolve the following issue(s):
 
 ## Steps to Reproduce the Problem
 
-1. Run `npm install` and `npm start`
+1. Run `npm install`. 
+
+2. Make sure that mysql is turned on and run `node seeds/index.js` to seed the database.
+
+3. Run `npm start`.
 
 2. Navigate to http://localhost:3001/ in your browser.
 
