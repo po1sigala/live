@@ -2,15 +2,15 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to write my own middleware to check for user authentication
+* As a developer, I want to write my own middleware to check for user authentication.
 
 ## Acceptance Criteria
 
 * It's done when the middleware checks if the user is logged in.
 
-* It's done when the middleware directs the logged in user to the exhibition page.
+* It's done when the middleware allows access to the gallery and painting pages if the user is logged in.
 
-* It's done when the middleware directs the unauthorized user to the login page if they are not logged in yet.
+* It's done when the middleware directs an unauthorized user to the login page if they are not logged in yet.
 
 ## 📝 Notes
 
