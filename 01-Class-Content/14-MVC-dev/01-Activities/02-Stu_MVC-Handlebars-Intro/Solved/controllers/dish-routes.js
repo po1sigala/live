@@ -6,8 +6,7 @@ const router = require('express').Router();
 // Add a comment describing the purpose of this route
 // GET route for getting all of the dishes that are on the menu
 router.get('/', (req, res) => {
-    res.render('all');
-  });
-  
+  res.render('all');
+});
 
 module.exports = router;
