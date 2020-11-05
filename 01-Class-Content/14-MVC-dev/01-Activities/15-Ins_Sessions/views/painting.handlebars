@@ -1,0 +1,11 @@
+{{!-- We are not counting the number of times we visit this page --}}
+{{!-- But we are showing the number of times we visited the homepage --}}
+<h1>Number of times you've visited the homepage: {{countVisit}}</h1>
+<section class="painting">
+  <img src="/images/{{painting.filename}}" alt="{{painting.filename}}">
+  <div class="painting-details">
+    <h1>{{painting.title}}</h1>
+    <p class="text-center">Artist: {{painting.artist}}</p>
+    <p>Exhibition open until: {{ format_date painting.date}}</p>
+  </div>
+</section>
