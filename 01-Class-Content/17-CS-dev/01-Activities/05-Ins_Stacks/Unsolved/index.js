@@ -1,13 +1,13 @@
-class Queue {
+class Stack {
   constructor(container = []) {
     this.container = container;
   }
-  addToQueue(el) {
+  addToStack(el) {
     return this.container.push(el);
   }
-  removeFromQueue() {
+  removeFromStack() {
     return this.container.pop();
   }
 }
 
-module.exports = Queue;
+module.exports = Stack;
