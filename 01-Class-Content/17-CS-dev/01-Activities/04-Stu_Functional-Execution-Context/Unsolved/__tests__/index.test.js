@@ -10,8 +10,4 @@ describe("The indexOfNum function", () => {
   test("can find the index of 40", () => {
     expect(indexOfNum(inputArray, 40)).toEqual(3);
   });
-
-  test("returns undefined if the target is not in the array", () => {
-    expect(indexOfNum(inputArray, 140)).toEqual(undefined);
-  });
 });

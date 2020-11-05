@@ -4,8 +4,9 @@ const globalThis = this;
 function myFunc() {
   console.log('globalThis', globalThis);
   console.log('myFuncThis', this);
-  // In a FEC, a new reference to this is created
+  // In the FEC, a new reference to this is created
   console.log(globalThis === this);
 }
 
+// function call goes on the call stack
 myFunc();

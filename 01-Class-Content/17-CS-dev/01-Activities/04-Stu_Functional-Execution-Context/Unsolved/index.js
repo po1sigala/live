@@ -1,13 +1,12 @@
-// what is the index for the target number?
-function indexOfNum(arr = [1,2], target = 1) {
+// Function returns the index of the target if found
+function indexOfNum(arr, target) {
   for (let i = 0; i < arr.length; i++) {
-    let foundIndex;
     if( arr[i] === target) {
-      foundIndex = i;
+      break;
     }
   }
 
-  return foundIndex;
+  return i;
 }
 
 module.exports = indexOfNum;

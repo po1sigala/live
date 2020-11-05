@@ -1,4 +1,4 @@
-# 🐛 Syntax Error states Variable is Undefined
+# 🐛 Three tests fail due to ReferenceError
 
 Work with a partner to resolve the following issue:
 
@@ -30,7 +30,7 @@ Work with a partner to resolve the following issue:
 
 * If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * What happens to the keyword `this` in the functional execution context?
+  * What happens to the keyword `this` in Node.js in the global context?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
   
