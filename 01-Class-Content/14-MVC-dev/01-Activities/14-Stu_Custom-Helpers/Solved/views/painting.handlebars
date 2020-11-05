@@ -1,0 +1,9 @@
+<section class="painting">
+  <img src="/images/{{painting.filename}}" alt="{{painting.filename}}">
+  <div class="painting-details">
+    <h1>{{painting.title}}</h1>
+    <p class="text-center">Artist: {{painting.artist}}</p>
+    {{!-- The custom method 'format_date' is used to calculate the end date and format it correctly --}}
+    <p>Exhibition open until: {{ format_date painting.date}}</p>
+  </div>
+</section>
