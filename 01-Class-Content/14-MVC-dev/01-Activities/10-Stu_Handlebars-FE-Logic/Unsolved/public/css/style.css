@@ -1,0 +1,24 @@
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    min-height: 100%;
+    margin: 0px auto;
+    border-style: solid;
+    border: 5px black;
+    padding: 50px;
+    background-color: #BDBDBD;
+}
+
+.add-dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    min-height: 100%;
+    margin: 5px auto;
+    border: 3px black;
+    border-radius: 1em;
+    padding: 50px;
+    text-align: center;
+    background-color: #BDBDBD;
+}

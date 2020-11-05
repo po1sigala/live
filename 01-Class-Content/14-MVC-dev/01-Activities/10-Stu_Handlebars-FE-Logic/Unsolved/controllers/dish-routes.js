@@ -51,12 +51,12 @@ router.post('/', (req, res) => {
 });
 
 //TODO: When updating a dish, how does the controller know to direct the request to this route?
-//The 'put' method was included in the fetch request.
+
 //TODO: According to MVC, what is the role of this action method?
-//This action method is the Controller. It accepts input and sends data to the Model and the View.
+
 router.put('/:id', (req, res) => {
   //TODO: Where is this action method sending the data from the body of the fetch request? Why?
-  //It is sendthing the data to the Model so that one dish can be updated with new datat in the database.
+
   Dish.update(
     {
       dish_name: req.body.dish_name,
@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
     }
   )
     //TODO: If the database is updated successfully, what happens to the updated data below?
-    //The updated data (dbDishData) is then sent back to handler that dispatched the fetch request.
+   
     .then((dbDishData) => {
       if (!dbDishData) {
         res.status(404).json({ message: 'No post found with this id' });
