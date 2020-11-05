@@ -12,6 +12,8 @@ Work with a partner to implement the following user story:
 
 * It's done when I can only access the `count` variable from within the `Counter` function.
 
+* It's done when all of the unit tests pass with `npm run test`.
+
 ## 💡 Hints
 
 When is a closure created? 

@@ -20,6 +20,8 @@ When a user calls the `greet` method on the `Student` function, they see undefin
 
 3. Check console to see undefined values.
 
+4. Run `npm run test` to check if all unit test pass.
+
 ## 💡 Hints
 
 What is the context of `this` when inside of a factory function? 

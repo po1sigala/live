@@ -17,7 +17,7 @@ const drying = (state) => ({
 // Create the `Phone` factory function which accepts two arguments `name` and `ringTone`.
 const Phone = (name, ringTone) => {
   // Store the arguments in an object so that we can pass them to the correct functions we return.
-  let state = {
+  const state = {
     name,
     ringTone,
   };
@@ -33,7 +33,7 @@ const Nokia = Phone('Nokia', 'ring');
 Nokia.call();
 
 const Dryer = (noise, timer) => {
-  let state = {
+  const state = {
     noise,
     timer,
   };
@@ -47,7 +47,7 @@ Decker.dry();
 
 // Now that we have taken a composition based approach we can now create a `Washer` function which utilizes making a phone call.
 const Washer = (name, noise, ringTone) => {
-  let state = {
+  const state = {
     name,
     noise,
     ringTone,
