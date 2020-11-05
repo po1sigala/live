@@ -1,25 +1,26 @@
 const Stack = require("../index");
 
 describe("Stack class", () => {
+  // Variables for testing
   const inputArray = [1, 2, 3, 4];
   const stack = new Stack(inputArray);
   const newItem = 5;
   
-  test("is able to instantiate a new stack", () => {
+  test("can instantiate a new stack with an empty array", () => {
     const stack = new Stack();
     expect(stack).toEqual({ container: [] });
   });
 
-  test("is able to instantiate a new stack with an array", () => {
+  test("can instantiate a new stack with an array", () => {
     expect(stack).toEqual({ container: [1, 2, 3, 4] });
   });
 
-  test("is able to add a new element at the end of the stack", () => {
+  test("can add a new element to the back of the stack", () => {
     stack.addToStack(newItem);
     expect(stack).toEqual({ container: [1, 2, 3, 4, 5] });
   });
 
-  test("is able to return the removed element", () => {
+  test("can remove items from the back of the stack", () => {
     const val = stack.removeFromStack();
     expect(val).toEqual(5);
     expect(stack).toEqual({ container: [1, 2, 3, 4] });

@@ -14,7 +14,7 @@ Work with a partner to resolve the following issue:
 
 ## Steps to Reproduce the Problem
 
-1. Once the page has loaded, the button on the page is unresponsive.
+1. The page does not render for a long time, so the user is unable to interact with the page. Page appears broken to the user.
 
 ---
 
