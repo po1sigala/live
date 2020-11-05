@@ -1,6 +1,4 @@
 const router = require('express').Router();
-
-//We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
 const dishes = [
   {
     dish_name: 'French Bread with Brie Cheese',
@@ -40,6 +38,8 @@ router.get('/', (req, res) => {
   res.render('all');
 });
 
-//TODO: Add a route called `/:num` below
+router.get('/:num', (req, res) => {
+  return res.render('dish', dishes[req.params.num - 1]);
+});
 
 module.exports = router;

@@ -6,9 +6,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the route called `/:num`  is properly configured to retreive and return food item descriptions.
+* It's done when the route called `/:num`  is properly configured to retreive and return a food item and its description.
 
-* It's done when the view displays descriptions for the food item, where the list number matches the the route `/:num`.
+* It's done when the view displays a description for the food item, where the list number matches the the route `/:num`.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 
