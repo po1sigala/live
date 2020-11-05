@@ -1,27 +1,19 @@
-// Follow the thread of execution ordered by number and answer the following questions.
-
-// 1) Where is the variable, greeting, stored?
-// 
+// Follow the thread of execution 
+// 1) greeting is stored in the global execution context
 const greeting = 'Hello';
 
-// 2) Where is sayHello stored?
-// 
-function sayHello() {
-  // 5) Where is the variable, body, stored?
-  // 
-  const body = 'World';
+// 2) sayHello is stored in the global execution context
+function sayHello(name) {
+  // 5) Once the sayHello execution context is created, "Gabby" is assigned to name
+  // 6) body is stored in the function execution context of sayHello
+  const salutation = 'how are you?';
 
-  // 6) Explain what happens in this statement.
-  // Hint: Name the data structures in the correct order.
-  // 
-  console.log(`${greeting} ${body}`);
+  // 7) The global execution context is accessible as well as the local function execution context
+  console.log(`${greeting} ${name}, ${salutation}`);
 }
 
-// 3) Explain what happens in this statement.
-// Hint: Name the data structures in the correct order.
-// 
+// 3) The alert is a Web API, once resolved, is stored in the callback queue then the call stack
 alert("What's up doc?");
 
-// 4) What happens with this statement?
-// 
-sayHello();
+// By calling sayHello, it is placed on the call stack which creates a new execution context
+sayHello("Gabby");
