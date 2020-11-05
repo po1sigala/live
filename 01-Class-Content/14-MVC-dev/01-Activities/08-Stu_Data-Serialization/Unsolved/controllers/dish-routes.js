@@ -3,8 +3,7 @@ const sequelize = require('../config/connection');
 const Dish = require('../models/Dish');
 
 router.get('/', (req, res) => {
- //TODO: You code goes below this line.  
-        
+  //TODO: You code goes below this line.
 });
 
 router.get('/:id', (req, res) => {
