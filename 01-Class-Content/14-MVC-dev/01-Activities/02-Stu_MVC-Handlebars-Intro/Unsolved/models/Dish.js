@@ -2,7 +2,7 @@
 because data is hardcoded in the templates. This file is set up as a preview for when
 you will be including Sequelize in your application*/
 
-//TODO: Add a comment indicating how this file fits into the MVC framework (is it a Model, a View, or a Controller?) and what it is responsible for handling.  
+//TODO: Add a comment indicating how this file fits into the MVC framework (is it a Model, a View, or a Controller?) and what it is responsible for handling.
 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
@@ -15,7 +15,7 @@ Dish.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     dish_name: {
       type: DataTypes.STRING,
@@ -23,21 +23,21 @@ Dish.init(
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: true
+      allowNull: true,
     },
     guest_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     has_nuts: {
       type: DataTypes.BOOLEAN,
-    }
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dish'
+    modelName: 'dish',
   }
 );
 

@@ -4,8 +4,7 @@ const router = require('express').Router();
 
 // Add a comment describing the purpose of this route
 router.get('/', (req, res) => {
-    res.render('all');
-  });
-  
+  res.render('all');
+});
 
-module.exports = router
+module.exports = router;

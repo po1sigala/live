@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3001;
 // Set Handlebars as the default template engine.
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-app.use(express.static(__dirname + 'public/'));
-app.use(require('./controllers/api/dish-routes'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('./controllers/dish-routes'));
 
   
 
