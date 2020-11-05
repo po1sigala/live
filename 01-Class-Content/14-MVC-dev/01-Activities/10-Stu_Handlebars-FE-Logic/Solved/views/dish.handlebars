@@ -1,16 +1,16 @@
-<div class="container">
-    <h2>Dish: {{dish_name}}</h2>
+<div class="dish-card">
+    <h2>{{dish_name}}</h2>
     <p>Description: {{description}}</p>
     <p>Guest: {{guest_name}}</p>
-
     {{#if has_nuts}}
     <p>Contains Nuts</p>
     {{/if}}
-
 </div>
+
 {{!-- TODO: This is the form for updating a dish. According to MVC framework, what is this form responsible for? What isn't it responsible for? --}}
 {{!-- This form is responsible for the UI logic, or the components in the View that the user will intercat with. It is not responsible for data-related logic, requests, or business-logic. --}}
-<div class="container">
+
+<div class="edit-dish-container">
     <h2>Update this Dish</h2>
     {{!-- TODO: Describe what the action and method attributes are doing below.   --}}
     {{!-- The action attribute specifies where the form-data will be sent once the form is submitted. 

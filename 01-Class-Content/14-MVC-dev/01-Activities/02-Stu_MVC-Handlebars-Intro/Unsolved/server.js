@@ -1,6 +1,8 @@
 // =============================================================
 const express = require('express');
 const exphbs = require('express-handlebars');
+const path = require('path');
+
 
 // Sets up the Express App
 // =============================================================
@@ -11,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/api/dish-routes'));
+app.use(require('./controllers/dish-routes'));
 
 // Starts the server to begin listening
 // =============================================================

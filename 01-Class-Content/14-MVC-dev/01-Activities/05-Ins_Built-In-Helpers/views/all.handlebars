@@ -1,8 +1,16 @@
-<h1>Potluck Party</h1>
-<h2>Menu</h2>
-<ol class="dishes_list">
-    {{#each dishes}}
-    <li>{{this.dish_name}}</li>
-    <h6>{{this.description}}</h6>
+<div>
+  <div class="menu-container">
+    <div class="card header col-md-10">
+      <h2>Current Menu</h2>
+    </div>
+    {{#each dishes as |dish|}}
+    <div class="dish col-md-5">
+      <p> {{dish.id}}. {{dish.dish_name}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>
+      </p>
+    </div>
     {{/each}}
-</ol>
+  </div>
+</div>

@@ -1,19 +1,20 @@
-<div >
-    <h2>Current Menu</h2>
-    <br><br>
-    {{!-- Using the built-in helper, #each to render dish data --}}
-    {{#each dishes as |dish|}}
-    <div class="row mb-4 project menu-container">
-        <div class="col-md-5">
+<div>
+    <div class="menu-container">
+        <div class="card header col-md-10">
+            <h2>Current Menu</h2>
+        </div>
+        {{#each dishes as |dish|}}
+
+        <div class="dish col-md-5">
             <p> {{dish.id}}. {{dish.dish_name}}</p>
         </div>
         <div class="col-md-7">
             <p>
-                {{dish.guest_name}}
+                Guest: {{dish.guest_name}}
             </p>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 
 </div>
 {{!-- This is the form for adding a new dish --}}
