@@ -1,13 +1,14 @@
 # 📐 Add Comments to Implementation of a Form to Update a Food Item
 
-Work with a partner to add comments describing the functionality of the code found in @TODO [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in [dish.handlebars](./Unsolved/views/dish.handlebars) [edit-dish](./Unsolved/public/javascript/edit-dish.js), and [dish-routes](./Unsolved/controllers/dish-routes.js).
 
-@TODO IF APPLICABLE, INCLUDE HINTS AS NOTES
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[Handlebars.js Docs](https://handlebarsjs.com/guide/#what-is-handlebars)
+* [Handlebars.js Docs](https://handlebarsjs.com/guide/#what-is-handlebars)
+
+* [MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 
 ---
 
