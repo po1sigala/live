@@ -1,27 +1,26 @@
-// Follow the thread of execution ordered by number and answer the following questions.
-
-// 1) Where is the variable, greeting, stored?
+// 1) Where is carNoise stored?
+//
+const carNoise = 'Honk';
+// 2) Where is goFast stored?
 // 
-const greeting = 'Hello';
-
-// 2) Where is sayHello stored?
+// 5) When is speed assigned a value? Where is this value stored?
 // 
-function sayHello() {
-  // 5) Where is the variable, body, stored?
-  // 
-  const body = 'World';
+function goFast(speed) {
+  // 6) Where is makeNoise stored?
+  //
+  function makeNoise(sound) {
+    console.log(`My speed is at ${speed}, time to ${sound}`);
+  }
 
-  // 6) Explain what happens in this statement.
-  // Hint: Name the data structures in the correct order.
+  // 7) What happens in the following statement?
   // 
-  console.log(`${greeting} ${body}`);
+  makeNoise(carNoise);
 }
 
-// 3) Explain what happens in this statement.
-// Hint: Name the data structures in the correct order.
+// 3) What happens in the following statement?
 // 
-alert("What's up doc?");
-
-// 4) What happens with this statement?
-// 
-sayHello();
+if(confirm("Do you want to go fast?")) {
+  // 4) What happens in the following statement?
+  // 
+  goFast(80);
+}

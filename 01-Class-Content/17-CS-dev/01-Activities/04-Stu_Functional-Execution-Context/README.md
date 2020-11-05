@@ -18,7 +18,7 @@ Work with a partner to resolve the following issue:
 
 2. Run `npm run test` from the command line to run the unit test.
 
-3. The test defined in the `__tests__` directory does not pass.
+3. The tests defined in the `__tests__` directory does not pass.
 
 ---
 
