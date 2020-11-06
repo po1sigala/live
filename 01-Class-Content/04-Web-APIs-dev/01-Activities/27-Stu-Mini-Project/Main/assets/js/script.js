@@ -105,7 +105,7 @@ function setLosses() {
 function getWins() {
   // Get stored value from client storage, if it exists
   var storedWins = localStorage.getItem("winCount");
-  // If it doesn't exist, set counter to 0
+  // If stored value doesn't exist, set counter to 0
   if (storedWins === null) {
     winCounter = 0;
   } else {
@@ -152,8 +152,12 @@ function checkLetters(letter) {
   }
 }
 
-// Attach event listener to document  to listen for key event
+// Attach event listener to document to listen for key event
 document.addEventListener("keydown", function(event) {
+  // If the count is zero, exit function
+  if (timerCount === 0) {
+    return;
+  }
   // Convert all keys to lower case
   var key = event.key.toLowerCase();
   var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
