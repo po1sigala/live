@@ -1,4 +1,4 @@
-const binarySearch = require('./index');
+const binarySearch = require('../index');
 
 test('binarySearch is a defined function', () => {
   expect(typeof binarySearch).toEqual('function');

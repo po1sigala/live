@@ -1,4 +1,4 @@
-const { linearSearch, linearSearchMultipleElements } = require('./index');
+const { linearSearch, linearSearchMultipleElements } = require('../index');
 
 test('linearSearch is a defined function', () => {
   expect(typeof linearSearch).toEqual('function');
