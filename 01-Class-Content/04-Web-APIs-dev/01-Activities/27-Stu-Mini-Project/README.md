@@ -8,34 +8,43 @@ The completed application should meet the following criteria:
 
 * As a user, I want to start the game by clicking on a button. 
 
-* As a user, I want blanks to appear on the screen when the game starts to indicate how many letters are in the word to be guessed.
-
-* As a user, I want to press a key on my keyboard to guess a letter. 
+* As a user, I want to try and guess a word by filling in blanks that match the number of letters in that word.
 
 * As a user, I want the game to be timed. 
+
+* As a user, I want to win the game when I have guessed all the letters in the word.
+
+* As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
 
 * As a user, I want to see my total wins and losses on the screen. 
 
 ### Specifications
 
-Maybe more like this? How can this be the hard part????
+* When a user presses down on a letter key, the user's guess should be captured as a key event.
 
-* When a user correctly guesses a letter, the corresponding blank `_` should be replaced by the letter. For example, if the user correctly selects `a`, then `a _ _ a _ ` should appear. (Here maybe? )
+* When a user correctly guesses a letter, the corresponding blank `_` should be replaced by the letter. For example, if the user correctly selects `a`, then `a _ _ a _ ` should appear. 
 
-* The 
+* When a user wins or loses a game, a message should appear and the timer should stop. 
+
+* When a user clicks the start button, the timer should reset. 
+
+* When a user refreshes or returns to the page, the win and loss counts should persist.
 
 ## 💡 Notes
 
 Refer to the documentation:
 
-* [MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* [MDN Web Docs on KeyboardEvents](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
 
 * [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
-* [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
-
 * [MDN Web Docs on Loops and Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
+* [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+* [MDN Web Docs on WindowOrWorkerGlobalScope.clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+
+* [MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## 🏆 Bonus
 
