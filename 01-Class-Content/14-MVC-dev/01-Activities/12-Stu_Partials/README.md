@@ -2,11 +2,11 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to render details of a painting by reusing the same Handlebars template.
+* As a developer, I want to be able to render details of a painting by reusing the same Handlebars.js template.
 
 ## Acceptance Criteria
 
-* It's done when the details for the paintings that are associated with the gallery are rendered using a Handlebars partial in the [gallery.handlebars](./Unsolved/views/gallery.handlebars) file.
+* It's done when the details for the paintings that are associated with the gallery are rendered using a Handlebars.js partial in the [gallery.handlebars](./Unsolved/views/gallery.handlebars) file.
 
 * It's done when the `painting-details.handlebars` partial renders a card that links to that painting's page.
 

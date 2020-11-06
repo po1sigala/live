@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { Gallery, Painting } = require('../models');
 
 // GET all galleries for homepage
@@ -9,7 +8,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Painting,
-          attributes: ['filename'],
+          attributes: ['filename', 'description'],
         },
       ],
     });
@@ -35,7 +34,14 @@ router.get('/gallery/:id', async (req, res) => {
       include: [
         {
           model: Painting,
-          attributes: ['id', 'title', 'artist', 'date', 'filename'],
+          attributes: [
+            'id',
+            'title',
+            'artist',
+            'date',
+            'filename',
+            'description',
+          ],
         },
       ],
     });

@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Painting,
-          attributes: ['filename'],
+          attributes: ['filename', 'description'],
         },
       ],
     });
@@ -34,7 +34,14 @@ router.get('/gallery/:id', async (req, res) => {
       include: [
         {
           model: Painting,
-          attributes: ['id', 'title', 'artist', 'date', 'filename'],
+          attributes: [
+            'id',
+            'title',
+            'artist',
+            'date',
+            'filename',
+            'description',
+          ],
         },
       ],
     });
