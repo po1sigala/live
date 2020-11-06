@@ -1,75 +1,92 @@
 var chosenWord = "";
 var lettersInChosenWord = [];
-
 var numBlanks = 0;
 var blanksLetters = [];
 var winCounter = 0;
-var lossCounter = 0;
-var words = [];
+var loseCounter = 0;
+var isWin = false;
+var timer;
+var timerCount;
 
-var button = document.querySelector(".button");
+var wordBlank = document.querySelector(".word-blanks");
+var win = document.querySelector(".win");
+var lose = document.querySelector(".lose");
+var timerElement = document.querySelector(".timer-count");
+
+var startButton = document.querySelector(".start-button");
+var resetButton = document.querySelector(".reset-button");
+
+var words = ["variable","array", "modulus", "object", "function", "string", "boolean"];
+
+function init() {
+  getWins();
+  getlosses();
+}
 
 function startGame() {
-   getWords()
+  isWin = false;
+  timerCount = 10;
+  startButton.disabled = true;
   renderBlanks()
-  storeWords();
+  startTimer()
 }
 
 function winGame() {
-  document.querySelector(".word-blanks").innerHTML = "YOU WON!!!🏆 ";
+  wordBlank.textContent = "YOU WON!!!🏆 ";
   winCounter++
-  updateWins()
+  startButton.disabled = false;
+  setWins()
 }
 
 function loseGame() {
-  document.querySelector(".word-blanks").innerHTML = "GAME OVER ";
-  lossCounter++
-  updateLosses()
+  wordBlank.textContent = "GAME OVER";
+  loseCounter++
+  startButton.disabled = false;
+  setLosses()
 }
 
 function resetGame() {
-  document.querySelector(".word-blanks").innerHTML = "J _ v _ S c r_ _t";
   winCounter = 0;
- lossCounter = 0;
-
+  loseCounter = 0;
+  setWins()
+  setLosses()
 }
 
-function updateWins() {
-  return document.querySelector(".win").innerHTML = winCounter
-}
-
-function updateLosses() {
-  return document.querySelector(".losses").innerHTML = winCounter
-}
-
-function getWords() {
-  var storedWords = JSON.parse(localStorage.getItem("storedWords"));
-
-  if (storedWords === null) {
-    words = ["variable","array","object","string","boolean","function","modulus"];
-  } else {
-    words = storedWords;
-  }
-}
-
-function storeWords() {
-  return localStorage.setItem("storedWords", JSON.stringify(words));
+function startTimer() {
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+    if (timerCount >= 0) {
+      if (isWin && timerCount > 0) {
+        clearInterval(timer);
+        winGame();
+      }
+    }
+    if (timerCount === 0) {
+      clearInterval(timer);
+      loseGame();
+    }
+  }, 1000);
 }
 
 function renderBlanks() {
-  console.log(words)
   chosenWord = words[Math.floor(Math.random() * words.length)];
   lettersInChosenWord = chosenWord.split("");
   numBlanks = lettersInChosenWord.length;
-  blanksLetters = [];
-  console.log(words)
+  blanksLetters = []
 
   for (var i = 0; i < numBlanks; i++) {
     blanksLetters.push("_");
   }
-  document.querySelector(".word-blanks").innerHTML = blanksLetters.join(" ")
+  wordBlank.textContent = blanksLetters.join(" ")
 }
 
+function checkWin() {
+  if (chosenWord === blanksLetters.join("")) {
+    isWin = true;
+  }
+  
+}
 function checkLetters(letter) {
   var letterInWord = false;
   for (var i = 0; i < numBlanks; i++) {
@@ -81,24 +98,53 @@ function checkLetters(letter) {
     for (var j = 0; j < numBlanks; j++) {
       if (chosenWord[j] === letter) {
         blanksLetters[j] = letter;
-      } 
+      }
     }
-   document.querySelector(".word-blanks").innerHTML = blanksLetters.join(" ")
+    wordBlank.textContent = blanksLetters.join(" ");
   }
+}
+
+function setWins() {
+  win.textContent = winCounter;
+  localStorage.setItem("winCount", winCounter);
+}
+
+function setLosses() {
+  lose.textContent = loseCounter;
+  localStorage.setItem("loseCount", loseCounter);
+
+}
+function getWins() {
+  var storedWins = localStorage.getItem("winCount");
+  if (storedWins === null) {
+    winCounter = 0;
+  } else {
+    winCounter = storedWins;
+  }
+  win.textContent = winCounter;
+}
+
+function getlosses() {
+  var storedLosses = localStorage.getItem("loseCount");
+  if (storedLosses === null) {
+    loseCounter = 0;
+  } else {
+    loseCounter = storedLosses;
+  }
+  lose.textContent = loseCounter;
 }
 
 document.addEventListener("keydown", function(event) {
   var key = event.key.toLowerCase();
   var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
-  
   if (alphabetNumericCharacters.includes(key)) {
-    
     var letterGuessed = event.key.toLowerCase();
     checkLetters(letterGuessed)
-  } 
-
-
+    checkWin();
+  }
 });
 
-button.addEventListener("click", startGame);
+startButton.addEventListener("click", startGame);
+resetButton.addEventListener("click", resetGame);
 
+init();
