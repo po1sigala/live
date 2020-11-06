@@ -8,13 +8,13 @@ Work with a partner to resolve the following issue(s):
 
 When a museum visitor visits the painting page, it should clearly and accurately show the date of when the exhibition will end:
 
-* The end date is calculated by adding two years to the painting's date.
+* The end date is calculated by adding five years to the painting's `exhibition_date`.
 
 * The end date should be formatted as `M/D/YYYY`.
 
 ## Actual Behavior
 
-When a museum visitor visits the exhibition page, it shows the painting's original date in the long timestamp format.
+When a museum visitor visits the exhibition page, it shows the painting's original `exhibition_date` in the long timestamp format.
 
 ## Assets
 

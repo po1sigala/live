@@ -19,7 +19,7 @@ Painting.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    date: {
+    exhibition_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },

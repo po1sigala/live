@@ -38,7 +38,7 @@ router.get('/gallery/:id', async (req, res) => {
             'id',
             'title',
             'artist',
-            'date',
+            'exhibition_date',
             'filename',
             'description',
           ],
