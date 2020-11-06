@@ -28,7 +28,7 @@ The completed application should meet the following criteria:
 
 * When a user clicks the start button, the timer should reset. 
 
-* When a user refreshes or returns to the page, the win and loss counts should persist.
+* When a user refreshes or returns to the brower page, the win and loss counts should persist.
 
 ## 💡 Notes
 
