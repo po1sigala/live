@@ -8,7 +8,7 @@ The completed application should meet the following criteria:
 
 * As a user, I want to start the game by clicking on a button. 
 
-* As a user, I want to try and guess a word by filling in blanks that match the number of letters in that word.
+* As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
 
 * As a user, I want the game to be timed. 
 
