@@ -6,7 +6,7 @@ function fibonacci(number) {
     return number;
   }
 
-  // Returns the sum of two previous numbers until we reach the base case.
+  // Returns the sum of the two previous numbers until we reach the base case.
   // The fibonacci function recursively calls itself untill it can no longer go down. In other words, it has reached its base case.
   return fibonacci(number - 1) + fibonacci(number - 2);
 }
