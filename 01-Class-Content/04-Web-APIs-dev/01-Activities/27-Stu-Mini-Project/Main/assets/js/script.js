@@ -132,7 +132,6 @@ function checkWin() {
     // This value is used in the timer function to test if win condition is met
     isWin = true;
   }
-  
 }
 
 // Tests if guessed letter is in word and renders it to the screen.

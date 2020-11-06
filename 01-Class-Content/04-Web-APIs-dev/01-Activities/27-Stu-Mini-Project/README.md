@@ -8,21 +8,19 @@ The completed application should meet the following criteria:
 
 * As a user, I want to start the game by clicking on a button. 
 
-* As a user, I want blanks to appear on the screen when the game starts. For example, if the word to be guessed is `array`, then ` - - - - - ` should appear on the screen. 
+* As a user, I want blanks to appear on the screen when the game starts to indicate how many letters are in the word to be guessed.
 
-* As a user, I want to press a key on my keyboard to guess a letter. If my guess is correct, that letter should appear on the screen. For example, if I guess `a` and the word is `array`, then `a _ _ a _` should appear. 
+* As a user, I want to press a key on my keyboard to guess a letter. 
 
 * As a user, I want the game to be timed. 
-
-* As a user, I expect that if the time expires before the word is guessed correctly, I will lose. A message indicating the game is over should appear. 
-
-* As a user, I expect that if I guess all the letters in the word before the time expires, I will win. A message indicating that I have won should appear.
 
 * As a user, I want to see my total wins and losses on the screen. 
 
 ### Specifications
 
-* Must use 
+Maybe more like this? How can this be the hard part????
+
+* When a user correctly guesses a letter, the corresponding blank `_` should be replaced by the letter. For example, if the user correctly selects `a`, then `a _ _ a _ ` should appear. (Here maybe? )
 
 * The 
 
@@ -30,7 +28,13 @@ The completed application should meet the following criteria:
 
 Refer to the documentation:
 
-* [MDN Web Docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+* [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+* [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+* [MDN Web Docs on Loops and Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 
 ## 🏆 Bonus
