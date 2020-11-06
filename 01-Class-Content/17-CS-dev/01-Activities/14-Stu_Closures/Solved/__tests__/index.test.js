@@ -1,4 +1,4 @@
-const counter = require('./Closures');
+const counter = require('../index');
 
 test('counter is a defined function', () => {
   expect(typeof counter).toEqual('function');

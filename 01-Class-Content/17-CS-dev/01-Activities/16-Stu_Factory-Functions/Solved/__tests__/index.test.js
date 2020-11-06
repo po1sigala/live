@@ -1,4 +1,4 @@
-const Student = require('./Factory-Functions');
+const Student = require('../index');
 
 test('Student is a defined function', () => {
   expect(typeof Student).toEqual('function');

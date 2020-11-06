@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of using closures for event delegation
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in [Unsolved JavaScript file](./Unsolved/assets/js/script.js).
 
 ## 📝 Notes
 

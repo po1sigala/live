@@ -1,4 +1,4 @@
-const buttonEl = document.getElementById('my-button');
+const buttons = document.getElementsByTagName('button');
 
 const clickHandler = function () {
 // TODO: Add a comment describing the purpose of this variable.
@@ -14,4 +14,7 @@ const clickHandler = function () {
   };
 };
 
-buttonEl.addEventListener('click', clickHandler());
+// TODO: Add a comment describing the purpose of this loop.
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', clickHandler());
+}
