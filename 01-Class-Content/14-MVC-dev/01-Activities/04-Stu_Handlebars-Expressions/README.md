@@ -2,13 +2,13 @@
 
 Work with a partner to implement the following user story:
 
-* As a party guest, I want to see description of one food item that will be at the potluck when I visit `http://localhost:3001/:num`.
+* As a party guest, I want to see description of one food item that will be at the potluck when I visit `http://localhost:3001/dish/:num`.
 
 ## Acceptance Criteria
 
-* It's done when the route called `/:num`  is properly configured to retreive and return a food item and its description.
+* It's done when the route called `/dish/:num`  is properly configured to retreive and return a food item and its description.
 
-* It's done when the view displays a description for the food item, where the list number matches the the route `/:num`.
+* It's done when the view displays a description for the food item, where the list number matches the the route `/dish/:num`.
 
 @TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
 

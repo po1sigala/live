@@ -1,6 +1,4 @@
-/* Note: We are not actually using Sequelize in this activity 
-because data is hardcoded in the templates. This file is set up as a preview for when
-you will be including Sequelize in your application*/
+// Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
 
 //TODO: Add a comment indicating how this file fits into the MVC framework (is it a Model, a View, or a Controller?) and what it is responsible for handling.  
 // This file is a Model. It is responsible for handling data and business logic.

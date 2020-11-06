@@ -36,10 +36,11 @@ const dishes = [
   },
 ];
 
+//get one dish
 router.get('/', (req, res) => {
   res.render('all');
 });
 
-//TODO: Add a route called `/:num` below
+//TODO: Add a route called `/dish/:num` below
 
 module.exports = router;

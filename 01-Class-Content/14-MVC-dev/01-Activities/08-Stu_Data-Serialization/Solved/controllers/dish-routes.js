@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/dish/:id', (req, res) => {
   Dish.findOne({
     where: {
       id: req.params.id,

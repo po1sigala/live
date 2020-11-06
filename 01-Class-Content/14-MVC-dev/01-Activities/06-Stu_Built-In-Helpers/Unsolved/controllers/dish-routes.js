@@ -52,11 +52,13 @@ const dishList = {
   ],
 };
 
+//get all dishes
 router.get('/', (req, res) => {
   res.render('all', dishList);
 });
 
-router.get('/:num', (req, res) => {
+//get one dish
+router.get('/dish/:num', (req, res) => {
   return res.render('dish', dishList.dishes[req.params.num - 1]);
 });
 

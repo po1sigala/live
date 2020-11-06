@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 //route to get one dish
-router.get('/:id', (req, res) => {
+router.get('/dish/:id', (req, res) => {
   Dish.findOne({
     where: {
       id: req.params.id,
@@ -50,11 +50,9 @@ router.post('/', (req, res) => {
     });
 });
 
-//TODO: When updating a dish, how does the controller know to direct the request to this route?
-
 //TODO: According to MVC, what is the role of this action method?
 
-router.put('/:id', (req, res) => {
+router.put('/dish/:id', (req, res) => {
   //TODO: Where is this action method sending the data from the body of the fetch request? Why?
 
   Dish.update(

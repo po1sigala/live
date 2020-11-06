@@ -13,7 +13,7 @@ async function editFormHandler(event) {
   //TODO: What part of our application will handle this 'put' request?
  
 
-  const response = await fetch(`/${id}`, {
+  const response = await fetch(`/dish/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
       dish_name,
@@ -29,9 +29,9 @@ async function editFormHandler(event) {
   //TODO: What happens if the response is ok?
 
   if (response.ok) {
-    document.location.replace(`/${id}`);
+    document.location.replace(`/dish/${id}`);
   } else {
-    alert(response.statusText);
+    alert('Failed to edit dish');
   }
 }
 

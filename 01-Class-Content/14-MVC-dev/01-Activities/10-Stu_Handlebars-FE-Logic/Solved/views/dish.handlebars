@@ -12,21 +12,18 @@
 
 <div class="edit-dish-container">
     <h2>Update this Dish</h2>
-    {{!-- TODO: Describe what the action and method attributes are doing below.   --}}
-    {{!-- The action attribute specifies where the form-data will be sent once the form is submitted. 
-  The method attribute specifies how the form-data will be sent using URL variables, like "get", "post", etc. --}}
-    <form class="edit-dish-form" action="/:id" method="post">
+    <form class="edit-dish-form">
         <label for="dish_name">Dish Name:</label><br>
         <textarea id="dish_name" name="dish_name" rows="2" cols="30"> {{dish_name}} </textarea><br>
         <label for="description">Description:</label><br>
         <textarea id="description" name="description" rows="5" cols="30">{{description}}</textarea><br>
         <label for="guest_name">Guest Name:</label><br>
         <textarea id="guest_name" name="guest_name" rows="2" cols="30"> {{guest_name}} </textarea><br><br>
-        <input type="checkbox" id="has_nuts" name="has_nuts" value="true">
+        <button type="checkbox" id="has_nuts" name="has_nuts" value="true">
         <label for="has_nuts"> Check box if this dish contains nuts</label><br>
 
         <input type="submit" value="Submit">
     </form>
 </div>
 
-<script src="/javascript/edit-dish.js"></script>
+<script src="/js/edit-dish.js"></script>

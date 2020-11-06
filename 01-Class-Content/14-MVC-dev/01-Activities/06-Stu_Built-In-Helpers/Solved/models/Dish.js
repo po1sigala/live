@@ -1,5 +1,4 @@
-/* Note: We are not actually using Sequelize in this activity for simplicity's sake. This file is set up as a preview for when
-you will be including Sequelize in your application*/
+// Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');

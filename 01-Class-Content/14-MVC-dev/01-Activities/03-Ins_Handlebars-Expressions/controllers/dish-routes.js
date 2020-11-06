@@ -34,11 +34,14 @@ const dishes = [
   },
 ];
 
+//get all dishes
 router.get('/', (req, res) => {
   res.render('all');
 });
 
-router.get('/:num', (req, res) => {
+//get one dish
+router.get('/dish/:num', (req, res) => {
+  //This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
   return res.render('dish', dishes[req.params.num - 1]);
 });
 
