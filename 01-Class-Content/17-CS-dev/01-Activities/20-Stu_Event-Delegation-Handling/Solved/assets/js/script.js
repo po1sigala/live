@@ -15,9 +15,9 @@ const clickHandler = function () {
   };
 };
 
-// Loop through the buttons array and for each button attach the `clickHandler` to it.
-// Now each button has a backpack with its own reference to `count` instead of a reference to a global variable.
-// Instead of doing a costly read and/or write on the DOM, we now only mutate the private `count`
+// Instead of attaching the event listener to the container holding our buttons, we loop through our buttons and attach an event listener to each one.
+// Now each button has a backpack with its own reference to `count` instead of a reference to a global variable or attribute.
+// Instead of doing a costly reads on the DOM, we now only mutate the private `count` variable.
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', clickHandler());
 }
