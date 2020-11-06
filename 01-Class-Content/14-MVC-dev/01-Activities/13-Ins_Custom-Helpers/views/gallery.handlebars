@@ -1,8 +1,8 @@
 <section class="container">
   <h3>{{gallery.name}}</h3>
-  {{!-- Without the custom helper, the entire timestamp is printed --}}
+  <!-- Without the custom helper, the entire timestamp is printed -->
   <h2>Opening Hour: {{gallery.starting_date}}</h2>
-  {{!-- Using a custom helper 'format_time', the time has been formatted --}}
+  <!-- Using a custom helper 'format_time', the time has been formatted -->
   <h2>Closing Hour: {{format_time gallery.ending_date}}</h2>
   <section class="flex-row justify-center">
     {{#each gallery.paintings as |painting|}}
