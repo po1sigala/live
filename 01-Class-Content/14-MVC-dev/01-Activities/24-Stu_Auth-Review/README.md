@@ -12,6 +12,8 @@ Work with a partner to add comments describing the functionality of the code fou
 
 * [Unsolved/views/layouts/main.handlebars](./Unsolved/views/layouts/main.handlebars)
 
+* [Unsolved/public/js/login.js](./Unsolved/public/js/login.js)
+
 * [Unsolved/public/js/logout.js](./Unsolved/public/js/logout.js)
 
 ---
