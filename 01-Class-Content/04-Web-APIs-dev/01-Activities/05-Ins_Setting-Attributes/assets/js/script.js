@@ -13,7 +13,7 @@
  changeP.setAttribute("style", "font-size: 25px; font-weight: bold; text-decoration:underline; ");
 
  // Sets image source of the first image
- imgEl[0].setAttribute("src", "images/image_1.png");
+ imgEl[0].setAttribute("src", "./assets/images/image_1.png");
 
 // Adds size and width styling to image
  imgEl[0].setAttribute("style", "width:500px; height:200px;");
