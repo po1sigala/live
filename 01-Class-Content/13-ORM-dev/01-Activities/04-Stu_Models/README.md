@@ -1,6 +1,6 @@
-# 🐛 MySQL Table isn't Being Created to Specifications
+# 🐛 MySQL Table Isn't Being Created to Specifications
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * As a developer, I want a MySQL table with the same name as the Sequelize model.
 
@@ -8,7 +8,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When Sequelize syncs the model with the database, the table name should be `book` (singular) and the primary key named `book_id`.
+When Sequelize syncs the model with the database, the table name should be `book` (singular) and the primary key name should be `book_id`.
 
 ## Actual Behavior
 
@@ -22,20 +22,24 @@ The table name is `books`, and the primary key is `id`.
 
 3. In the MySQL shell, run `USE library_db;` to switch to the library database.
 
-4. Try to run `DESCRIBE book;`, and it will fail, because the table name is `books`.
+4. Try to run `DESCRIBE book;`. It will fail because the table name is `books`.
 
-5. Run `DESCRIBE books;` and note that the primary key is named `id` and not `book_id`.
+5. Run `DESCRIBE books;`. Note that the primary key is named `id` and not `book_id`.
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* What options does Sequelize provide when it comes to naming tables and fields?
+What options does Sequelize provide when it comes to naming tables and fields?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How can we apply model-based rules to all models in the Sequelize connection logic?
+* How can we apply model-based rules to all models in the Sequelize connection logic?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

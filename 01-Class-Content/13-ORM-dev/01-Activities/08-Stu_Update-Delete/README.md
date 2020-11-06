@@ -1,25 +1,29 @@
-# 🏗️ Implement the PUT and DELETE Route with Your Own Parameters
+## 🏗️ Implement the PUT and DELETE Route with Your Own Parameters
 
 Work with a partner to implement the following user story:
 
-* As a book store owner, I want to be able to update and remove certain books of my choice from our inventory.
+* As a bookstore owner, I want to be able to update and remove certain books of my choice from the inventory.
 
 ## Acceptance Criteria
 
-* It's done when a book can be updated based on specific parameters (e.g. 'numberOfPges').
+* It's done when a book can be updated based on specific parameters (like 'numberOfPages').
 
-* It's done when a book can be deleted based on specific parameters (e.g. 'bookid').
+* It's done when a book can be deleted based on specific parameters (like 'book_id').
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* Which option do you need to use on the method call?
+Which option do you need to use on the method call?
 
 ## 🏆 Bonus
 
-If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What SQL operators does Sequelize support?
+* What SQL operators does Sequelize support?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
