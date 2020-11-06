@@ -5,10 +5,10 @@ function avg(array) {
     for(let i = 0; i < array.length; i++) {
       total += array[i];
     }
-    // returns the sum of the array to the function invocation
+    // returns the total when the sum function is called
     return total;
   }
-  
+
   return sum()/array.length;
 }
 
