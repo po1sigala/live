@@ -5,7 +5,7 @@ const block = milliSeconds => {
   // get the current time
   var startTime = new Date().getTime(); 
   // block stack until time's up
-  while (new Date().getTime() < startTime + milliSeconds); 
+  while (startTime < startTime + milliSeconds); 
 }
 
 counter.addEventListener('click', event => {
@@ -13,7 +13,7 @@ counter.addEventListener('click', event => {
 });
 
 sleep.addEventListener('click', event => {
-  block(80);
+  block(8000);
 });
 
 block(18000);

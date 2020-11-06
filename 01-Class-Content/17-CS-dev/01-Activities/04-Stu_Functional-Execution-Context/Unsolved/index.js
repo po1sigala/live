@@ -1,12 +1,14 @@
-// Function returns the index of the target if found
-function indexOfNum(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    if( arr[i] === target) {
-      break;
+// returns the average value of an array of numbers
+function avg(array) {
+  function sum() {
+    let total = 0;
+    for(let i = 0; i < array.length; i++) {
+      total += array[i];
     }
+    // returns the sum of the array to the function invocation
   }
-
-  return i;
+  
+  return total/array.length;
 }
 
-module.exports = indexOfNum;
+module.exports = avg;

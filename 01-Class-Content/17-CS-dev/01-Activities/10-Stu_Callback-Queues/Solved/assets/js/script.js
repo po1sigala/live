@@ -14,9 +14,7 @@ counter.addEventListener('click', event => {
 });
 
 sleep.addEventListener('click', event => {
-  setTimeout(() => {
-    block(18000);
-  }, 0);
+  block(18000);
 });
 
 setTimeout(() => {

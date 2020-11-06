@@ -1,12 +1,12 @@
-# 🐛 Three tests fail due to ReferenceError
+# 🐛 The tests fail due to ReferenceError
 
 Work with a partner to resolve the following issue:
 
-* The unit tests for the function does not pass.
+* The unit tests for the function do not pass.
 
 ## Expected Behavior
 
-* When we run our unit tests to test our function, the defined tests should pass.
+* When we run the unit test, the defined test should pass.
 
 ## Actual Behavior
 

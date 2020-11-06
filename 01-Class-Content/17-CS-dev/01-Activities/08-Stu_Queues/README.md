@@ -14,6 +14,8 @@ Work with a partner to implement the following user story:
 
 * What array methods can be used to implement a queue?
 
+* What do the unit test descriptions tell us about what methods we need?
+
 ## 🏆 Bonus
 
 If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
