@@ -1,12 +1,34 @@
-# Bash / Terminal Commands
+# 📖 Use Terminal Commands to Create Folder and File
 
-## Instructions
+Work with a partner to implement the following user story:
 
-* From the Terminal/Console and using only the command line, create the following:
-  * A new folder with the name of first_day_stuff
-  * A new HTML file with the name of first-day.html
-  * Open the current folder containing the new HTML file.
+* As a developer, I want to use the command line to create a folder and file on my computer. 
 
-## BONUS
-* Create multiple directories/folders with the names `one_folder` and `second_folder` in one command.
-* Create multiple files with the names `one.html` and `two.html` in one command in the first_day_stuff directory.
+## Acceptance Criteria
+
+* It's done when a new folder named `first-day` has been created using terminal commands.
+
+* It's done when the folder contains a file named `first-day.html`. The file should be created using terminal commands.
+
+## 📝 Notes
+
+Refer to the documentation: 
+
+[MDN Web Docs on Basic Built-in Terminal Commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+
+---
+
+## 💡 Hints
+
+* What terminal command is used to move around your directory structure? How can you use this command to add a file to an existing folder? 
+
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* What does the terminal command do you use to copy or move files?
+
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+ © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
