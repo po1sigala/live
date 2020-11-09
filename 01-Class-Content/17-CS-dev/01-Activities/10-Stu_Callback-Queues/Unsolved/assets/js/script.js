@@ -18,5 +18,5 @@ sleep.addEventListener('click', () => {
   block(8000);
 });
 
-// Initial UI blocker on load
+// Initial UI blocker on page load
 block(8000);
