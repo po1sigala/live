@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when a new folder named `first-day` has been created using terminal commands.
 
-* It's done when the folder contains a file named `first-day.html`. The file should be created using terminal commands.
+* It's done when the `first-day` folder contains a file named `first-day.html`. The file should also be created using terminal commands.
 
 ## 📝 Notes
 
