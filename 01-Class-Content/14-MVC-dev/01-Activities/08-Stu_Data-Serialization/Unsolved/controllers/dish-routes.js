@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const Dish = require('../models/Dish');
 
 router.get('/', (req, res) => {
-  //TODO: You code goes below this line.
+  //TODO: Build out this route so that it serializes all of the dish objects that it receives. See the 'get' route below for a hint.
 });
 
 router.get('/dish/:id', (req, res) => {
