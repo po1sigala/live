@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to write programs with Node.js.
+* As a developer, I want to be able to execute JavaScript programs with Node.js.
 
 * As a developer, I want to make a program that accepts a string as an input and logs it to the terminal. 
 
