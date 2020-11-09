@@ -1,20 +1,12 @@
-# 🏗️ Implement and Use `fs.appendFile()`
+# 📐 Add Comments to Implementation of `fs.appendFile()`
 
-Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/index.js).
 
-* As a developer, I want to be able to add to a file without overwriting the existing content.
+## 📝 Notes
 
-## Acceptance Criteria
+Refer to the documentation: 
 
-* It's done when I have created a `index.js` file that accepts a command-line argument.
-
-* It's done when the program takes the input from the user and *appends* it to the file.
-
-* It's done after I have run the program, passed in some text, and confirmed that it appended the text to `log.txt`.
-
-## 💡 Hints
-
-Going by naming convention alone, if `fs.readFile` reads a file and `fs.writeFile` writes to a file, what do you think the method for appending is?
+[Node.js documentation on the fs module](https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback)
 
 ## 🏆 Bonus
 
@@ -25,5 +17,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
