@@ -16,7 +16,7 @@
  imgEl[0].setAttribute("src", "./assets/images/image_1.png");
 
 // Adds size and width styling to image
- imgEl[0].setAttribute("style", "width:500px; height:200px;");
+ imgEl[0].setAttribute("style", "width:50%");
 
 // Loops through divTags to set each one to have the color blue and the font size of 30px
 for (var i = 0; i < divTags.length; i++) {
