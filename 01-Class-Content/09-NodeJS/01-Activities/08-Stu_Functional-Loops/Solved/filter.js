@@ -29,7 +29,7 @@ const isPrime = num => {
 const primeArray = originalArray.filter(isPrime);
 
 
-//Describe how filter is working in theis example. What will the value of moreThan5Array be? 
+//Describe how filter is working in this example. What will the value of moreThan5Array be? 
 //A filter runs through originalArray and creates a new array containing only the numbers larger than 5.
 //[10]
 const moreThan5Array = originalArray.filter(num => num > 5);
