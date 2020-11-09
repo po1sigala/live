@@ -13,8 +13,10 @@ counter.addEventListener('click', event => {
   counter.innerHTML = `Click count: ${event.detail}`;
 });
 
+// blocks the stack for 8 seconds
 sleep.addEventListener('click', () => {
   block(8000);
 });
 
+// Initial UI blocker on load
 block(8000);

@@ -17,6 +17,7 @@ sleep.addEventListener('click', () => {
   block(8000);
 });
 
+// Sends the blocker to the callback queue with a delay to free up UI on page load
 setTimeout(() => {
   block(8000);
 }, 8000);
