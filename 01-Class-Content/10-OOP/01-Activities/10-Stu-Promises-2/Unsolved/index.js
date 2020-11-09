@@ -7,18 +7,13 @@ const maxDuration = 9999;
 const callAPI = (duration) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      // Check if the request duration is longer than maxDuration, if so call the reject() function with a new error, "Request timed out"
-      // Otherwise, call resolve() with a message `Response received: ${duration}ms`
+      // TODO: Check if the duration is longer than maxDuration and reject() or resolve() the promise
     }, duration);
   });
 
 // Promise.all() takes an array, so here we declare one in memory
 const promises = [];
 
-// Map through API call durations and push a callAPI() promise for each request and push it to the promises array
+// TODO: Iterate over the apiCallDurations and push a callAPI() promise for each one onto the promises array
 
-// Call Promise.all() by passing in the array of promises
-
-// Add a `.then` statement that will console log the response when all the promises resolve
-
-// Add a `.catch` statement that will catch any rejects if any of the requests fail
+// TODO: Use Promise.all() to capture when the array of promises has been resolved or if any of them were rejected
