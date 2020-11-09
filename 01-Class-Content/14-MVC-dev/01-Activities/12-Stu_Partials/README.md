@@ -24,7 +24,11 @@ The following image demonstrates how the painting's details should be rendered o
 
 ## 💡 Hints
 
-What is the syntax for Handlebars.js partials?
+* How do we set up the database?
+
+* What command do we use to seed the database?
+
+* What is the syntax for Handlebars.js partials?
 
 ## 🏆 Bonus
 

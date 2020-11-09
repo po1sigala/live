@@ -24,6 +24,10 @@ The following image demonstrates what the museum visitor sees if they try to acc
 
 ## 💡 Hints
 
+* You will need to create a user to test out the routes. Feel free to create your own user, or use these credentials to sign up: 
+
+  * `username`: "Sam", `email`: "sam@email.com", `password`: "password1234"
+
 * If the session variables are set up when the user is created or logged in, which file would hold that info?
 
 * How can the templates know if the user is logged in or not?
