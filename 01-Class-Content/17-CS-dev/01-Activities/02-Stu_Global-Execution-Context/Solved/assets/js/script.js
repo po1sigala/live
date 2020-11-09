@@ -22,7 +22,7 @@ function goFast(speed) {
 }
 
 // 3) What happens in the following statement?
-// Since confirm is a Web API, once resolved it's stored in the callback queue, then in the call stack
+// Since confirm is a Web API, once resolved, goes to the callback queue, then in the call stack
 if(confirm("Do you want to go fast?")) {
   // 4) What happens in the following statement?
   // goFast is placed on the call stack which creates a new FEC
