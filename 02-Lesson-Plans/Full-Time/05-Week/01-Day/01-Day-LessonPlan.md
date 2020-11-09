@@ -1132,7 +1132,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you add text from additional arguments on a new line?
+* What is a ternary operator?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 ```
@@ -1172,7 +1172,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   ```js
   fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
-  err ? console.error(err) : console.log('Commit logged!')
+    err ? console.error(err) : console.log('Commit logged!')
   );
   ```
 
@@ -1181,6 +1181,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
   ```js
   err ? console.error(err) : console.log('Commit logged!')
   ```
+
+  * It isn't crucial that we understand and use this now. Think of it as a sneak peak into another way we can write `if` statements.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 

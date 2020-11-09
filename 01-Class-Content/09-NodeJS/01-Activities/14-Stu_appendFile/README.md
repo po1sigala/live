@@ -12,7 +12,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you add text from additional arguments on a new line?
+* What is a ternary operator?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
