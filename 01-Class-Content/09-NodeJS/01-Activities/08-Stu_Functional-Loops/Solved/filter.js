@@ -23,7 +23,7 @@ const isPrime = num => {
 };
 
 
-//Describe how filter is working in theis example. What will the value of primeArray be? 
+//Describe how filter is working in this example. What will the value of primeArray be? 
 // A filter runs through originalArray and uses the isPrime function to check if each number is prime. It creates and returns a new array that includes all prime numbers.
 //[3,2,5]
 const primeArray = originalArray.filter(isPrime);
