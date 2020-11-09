@@ -638,10 +638,6 @@ If you have completed this activity, work through the following challenge with y
 * How can we implement arrow functions as callbacks in this activity?
 
 Use [Google](https://www.google.com) or another search engine to research this.
-
----
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
   ```
 
 ### 13. BREAK (30 min)
