@@ -13,10 +13,10 @@ counter.addEventListener('click', event => {
   counter.innerHTML = `Click count: ${event.detail}`;
 });
 
-sleep.addEventListener('click', event => {
-  block(18000);
+sleep.addEventListener('click', () => {
+  block(8000);
 });
 
 setTimeout(() => {
-  block(18000);
-}, 10000);
+  block(8000);
+}, 8000);
