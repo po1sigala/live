@@ -13,23 +13,23 @@ console.log(evenNumbers);
 console.log(originalArray);
 
 const isPrime = num => {
-  //Set up a loop the starts with 2 and continues to increment i as long as i is less than 2
+  // Set up a loop the starts with 2 and continues to increment i as long as i is less than 2
   for (let i = 2; i < num; i++) {
-    //isPrime will return false if num is divisible by any number other than 1 or num.
+    // isPrime will return false if num is divisible by any number other than 1 or num.
     if (num % i === 0) return false;
   }
-  //Otherwise, isPrime will return num, unless num == 1.
+  // Otherwise, isPrime will return num, unless num == 1.
   return num !== 1;
 };
 
 
-//Describe how filter is working in this example. What will the value of primeArray be? 
+// Describe how filter is working in this example. What will the value of primeArray be? 
 // A filter runs through originalArray and uses the isPrime function to check if each number is prime. It creates and returns a new array that includes all prime numbers.
-//[3,2,5]
+// [3,2,5]
 const primeArray = originalArray.filter(isPrime);
 
 
-//Describe how filter is working in this example. What will the value of moreThan5Array be? 
-//A filter runs through originalArray and creates a new array containing only the numbers larger than 5.
-//[10]
+// Describe how filter is working in this example. What will the value of moreThan5Array be? 
+// A filter runs through originalArray and creates a new array containing only the numbers larger than 5.
+// [10]
 const moreThan5Array = originalArray.filter(num => num > 5);
