@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const Dish = require('../models/Dish');
+const sequelize = require('../../config/connection');
+const Dish = require('../../models/Dish');
 
 // route to get all dishes
 router.get('/', (req, res) => {
@@ -44,6 +44,39 @@ router.post('/', (req, res) => {
     has_nuts: req.body.has_nuts,
   })
     .then((dbDishData) => res.json(dbDishData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+//TODO: According to MVC, what is the role of this action method?
+
+router.put('/dish/:id', (req, res) => {
+  //TODO: Where is this action method sending the data from the body of the fetch request? Why?
+
+  Dish.update(
+    {
+      dish_name: req.body.dish_name,
+      description: req.body.description,
+      guest_name: req.body.guest_name,
+      has_nuts: req.body.has_nuts,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    //TODO: If the database is updated successfully, what happens to the updated data below?
+   
+    .then((dbDishData) => {
+      if (!dbDishData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(dbDishData);
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
