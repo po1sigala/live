@@ -4,7 +4,7 @@ async function editFormHandler(event) {
   const description = document.querySelector('#description').value;
   const guest_name = document.querySelector('#guest_name').value;
   
-  //   TODO: What will the value of has_nuts be if the box in the form is checked? What do we call this kind of operator?
+  // What will the value of has_nuts be if the box in the form is checked? What do we call this kind of operator?
   /* The value of has_nuts will be true of the box is checked. We call this a ternary operator. It begins with a condition followed by a question mark.
 If the condition is truthy, the expression before the : will be executed. If it is falsy, the experession following the : will be executed. */
   const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
@@ -14,7 +14,7 @@ If the condition is truthy, the expression before the : will be executed. If it 
     window.location.toString().split('/').length - 1
   ];
 
-  //TODO: What part of our application will handle this 'put' request?
+  //What part of our application will handle this 'put' request?
   //The Controller will handle this 'put' request.
 
   const response = await fetch(`/dish/${id}`, {
@@ -30,7 +30,7 @@ If the condition is truthy, the expression before the : will be executed. If it 
     },
   });
 
-  //TODO: What happens if the response is ok?
+  //What happens if the response is ok?
   //If the response is ok, that means that the dish was updated successfully. 
   if (response.ok) {
     document.location.replace(`/dish/${id}`);

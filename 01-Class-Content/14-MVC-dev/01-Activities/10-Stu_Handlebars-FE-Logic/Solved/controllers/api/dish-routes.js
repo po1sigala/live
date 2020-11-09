@@ -36,7 +36,7 @@ router.get('/dish/:id', (req, res) => {
 });
 
 //route to create/add a dish
-router.post('/', (req, res) => {
+router.post('/dish', (req, res) => {
   Dish.create({
     dish_name: req.body.dish_name,
     description: req.body.description,
@@ -68,7 +68,7 @@ router.put('/dish/:id', (req, res) => {
       },
     }
   )
-    //TODO: If the database is updated successfully, what happens to the updated data below?
+    //If the database is updated successfully, what happens to the updated data below?
     //The updated data (dbDishData) is then sent back to handler that dispatched the fetch request.
     .then((dbDishData) => {
       if (!dbDishData) {

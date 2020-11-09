@@ -8,7 +8,7 @@ async function newFormHandler(event) {
   const guest_name = document.querySelector('#guest_name').value;
   const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
 
-  const response = await fetch(`/`, {
+  const response = await fetch(`/dish`, {
     method: 'POST',
     body: JSON.stringify({
       dish_name,
