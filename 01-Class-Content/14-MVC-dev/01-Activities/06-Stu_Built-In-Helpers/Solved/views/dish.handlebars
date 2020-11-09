@@ -1,10 +1,10 @@
 <div class="dish-card">
     <h2>{{dish_name}}</h2>
     <p>Description: {{description}}</p>
-    {{!-- This is where we initiate the #if helper with has_nuts set as the condition --}}
+    <!-- This is where we initiate the #if helper with has_nuts set as the condition -->
     {{#if has_nuts}}
-    {{!-- This code will be rendered if the condition (has_nuts) is truthy --}}
+    <!-- This code will be rendered if the condition (has_nuts) is truthy -->
     <p>Contains Nuts</p>
-    {{!-- Below, we end the #if helper --}}
+    <!-- Below, we end the #if helper -->
     {{/if}}
 </div>
