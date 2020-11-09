@@ -8,5 +8,5 @@ function myFunc() {
   console.log(globalThis === this);
 }
 
-// function call goes on the call stack
+// function call goes on the call stack, creating a new execution context
 myFunc();
