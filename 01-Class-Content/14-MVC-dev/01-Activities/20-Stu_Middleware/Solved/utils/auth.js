@@ -3,7 +3,7 @@ const withAuth = (req, res, next) => {
   if (!req.session.user_id) {
     res.redirect('/login');
   } else {
-    // If the user is logged in, allow them to view the gallery
+    // If the user is logged in, execute the route function that will allow them to view the gallery
     next();
   }
 };
