@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/dish-routes'));
+app.use(require('./controllers/api/dish-routes'));
 
 // Starts the server to begin listening
 // =============================================================
