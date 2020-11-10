@@ -1,6 +1,5 @@
 async function newFormHandler(event) {
   event.preventDefault();
-
   const dish_name = document.querySelector('#dish_name').value;
   const description = document.querySelector('#description').value;
   const guest_name = document.querySelector('#guest_name').value;

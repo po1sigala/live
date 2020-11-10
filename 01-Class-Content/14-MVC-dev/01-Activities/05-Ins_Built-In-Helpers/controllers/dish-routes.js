@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-//We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
+// We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
 const dishList = {
   dishes: [
     {
@@ -52,13 +52,13 @@ const dishList = {
   ],
 };
 
-//get all dishes
-router.get('/', (req, res) => {
+// get all dishes
+router.get('/', async (req, res) => {
   res.render('all', dishList);
 });
 
-//get one dish
-router.get('/dish/:num', (req, res) => {
+// get one dish
+router.get('/dish/:num', async (req, res) => {
   return res.render('dish', dishList.dishes[req.params.num - 1]);
 });
 

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-//We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
+// We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
 const dishes = [
   {
     dish_name: 'French Bread with Brie Cheese',
@@ -36,15 +36,15 @@ const dishes = [
   },
 ];
 
-//get all dishes
-router.get('/', (req, res) => {
+// get all dishes
+router.get('/', async (req, res) => {
   res.render('all');
 });
 
-//get one dish
-router.get('/dish/:num', (req, res) => {
-//This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
-//Now, we have access to a dish description in the 'dish' template.
+// get one dish
+router.get('/dish/:num', async (req, res) => {
+// This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
+// Now, we have access to a dish description in the 'dish' template.
   return res.render('dish', dishes[req.params.num - 1]);
 });
 

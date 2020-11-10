@@ -1,6 +1,5 @@
 // Here is where we set up our Dish model, for when we are ready to connect to a database in future activities.
 
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

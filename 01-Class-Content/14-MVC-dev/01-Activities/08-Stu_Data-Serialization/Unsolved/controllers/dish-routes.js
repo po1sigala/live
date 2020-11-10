@@ -2,25 +2,23 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const Dish = require('../models/Dish');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   // TODO: Build out this route so that it serializes all of the dish objects that it receives. See the 'get' route below for a hint.
 });
 
-router.get('/dish/:id', (req, res) => {
-  Dish.findOne({
-    where: {
-      id: req.params.id,
-    },
-    attributes: ['id', 'dish_name', 'description', 'guest_name', 'has_nuts'],
-  })
-    .then((dbDishData) => {
-      const dish = dbDishData.get({ plain: true });
+// route to get one dish
+router.get('/dish/:id', async (req, res) => {
+  try{ 
+      const dishData = await Dish.findByPk(req.params.id);
+      if(!dishData) {
+          res.status(404).json({message: 'No dish with this id!'});
+          return;
+      }
+      const dish = dishData.get({ plain: true });
       res.render('dish', dish);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    } catch (err) {
+        res.status(500).json(err);
+    };     
 });
 
 module.exports = router;

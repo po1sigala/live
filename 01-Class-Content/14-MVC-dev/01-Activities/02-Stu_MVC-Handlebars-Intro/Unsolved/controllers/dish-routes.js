@@ -3,7 +3,7 @@
 const router = require('express').Router();
 
 // TODO: Add a comment describing the purpose of this route
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 //TODO: Add a comment describing the purpose of this method
   res.render('all');
 });
