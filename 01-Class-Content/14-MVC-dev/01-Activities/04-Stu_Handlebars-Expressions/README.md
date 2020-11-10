@@ -10,13 +10,11 @@ Work with a partner to implement the following user story:
 
 * It's done when the view displays a description for the food item, where the list number matches the the route `/dish/:num`.
 
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![The view displays the name and description for one dish](images/Dish_Description.png)
 
 ---
 

@@ -14,13 +14,11 @@ Refer to the documentation:
 
 [Handlebars.js: Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html#if)
 
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP 
-
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![The view for one dish displays the dish name, the dish description, and "Contains Nuts" because this dish contains nuts.](images/has_nuts.png)
 
 ---
 

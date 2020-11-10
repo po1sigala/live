@@ -22,13 +22,11 @@ Work with a partner to resolve the following issue(s):
 
 2. Navigate to http://localhost:3001/ in your browser.
 
-@TODO IF APPLICABLE, INCLUDE A DESIGN MOCKUP
-
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![The View displays a full menu of dishes and the name of the guest who will bring each dish.](images/full_menu.png)
 
 ---
 
