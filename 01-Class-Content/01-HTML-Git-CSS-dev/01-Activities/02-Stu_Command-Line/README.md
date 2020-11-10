@@ -10,6 +10,8 @@ Work with a partner to implement the following user story:
 
 * It's done when the `first-day` folder contains a file named `index.html`. The file should also be created using terminal commands.
 
+* It's done when the file and folder have been removed using terminal commands.
+
 ## 📝 Notes
 
 Refer to the documentation: 
