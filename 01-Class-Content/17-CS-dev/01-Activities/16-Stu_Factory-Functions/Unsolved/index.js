@@ -1,4 +1,4 @@
-// TODO: Why is the 'greet' function giving undefined values?
+// TODO: Fix the `greet` function so that it returns the correct values.
 function Student(name, gradeYear) {
   let student = {
     name: name,

@@ -52,6 +52,6 @@ class Dryer extends Appliance {
 }
 
 // This should all look familar because this is a part of object-oriented programming.
-// We are using class inheritance to use method's from parent classes.
-// This is not an incorrect way to design a system but lets ask ourselves:
+// We are using class inheritance to use methods from parent classes.
+// This is not an incorrect way to design a system but let's ask ourselves:
 // What happens if we want to make an appliance that can make a phone call?

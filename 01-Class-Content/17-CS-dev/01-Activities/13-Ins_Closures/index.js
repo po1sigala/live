@@ -1,6 +1,6 @@
 // Create a function which will hold another function.
 function bankAccount() {
-  // Create two variables inside of the first function.
+  // Create two variables inside of the outer function.
   // We will be accessing the two variables inside of our inner function.
   const checking = 400;
   const savings = 1000;

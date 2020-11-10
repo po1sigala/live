@@ -1,4 +1,4 @@
-# 🐛 My factory function is giving me undefined values when I call the inner function
+# 🐛 Factory function is returning undefined values when the inner function is called
 
 Work with a partner to resolve the following issue(s):
 

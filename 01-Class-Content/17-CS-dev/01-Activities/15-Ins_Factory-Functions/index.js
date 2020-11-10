@@ -1,4 +1,4 @@
-// Create a function which accepts three argument name, age, and city.
+// Create a function which accepts three arguments name, age, and city.
 // We will be creating an object with a function instead of a class.
 function createUser(name, age, city) {
     // Create an user object and map the function arguements to a key in the object.

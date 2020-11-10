@@ -2,7 +2,7 @@
 const containerEl = document.getElementById('container');
 
 const clickHandler = function(event) {
-  // Convert the `data-count` attribute from a sting to a integer.
+  // Convert the `data-count` attribute from a string to an integer.
   let count = parseInt(event.target.getAttribute('data-count'));
 
   // Check to see if the element is a button.
