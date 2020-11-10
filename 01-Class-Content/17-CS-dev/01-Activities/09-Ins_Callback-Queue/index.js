@@ -16,13 +16,11 @@ function outer() {
     console.log("Yes, I'm listening");
   }
 
-  // inner function is called
   inner();
   // 2) goes to the call stack then resolves
   console.log("I like turtles")
 }
 
-// outer function is called
 outer();
 
 // console
