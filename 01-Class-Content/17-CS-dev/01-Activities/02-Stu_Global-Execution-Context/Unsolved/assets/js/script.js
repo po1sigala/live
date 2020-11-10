@@ -3,9 +3,10 @@
 const carNoise = 'Honk';
 // 2) Where is goFast stored?
 // 
-// 5) When is speed assigned a value? Where is this value stored?
-// 
 function goFast(speed) {
+  // 5) When is speed assigned a value? Where is this value stored?
+  // 
+  
   // 6) Where is makeNoise stored?
   //
   function makeNoise(sound) {
