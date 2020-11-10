@@ -40,7 +40,9 @@ Next, run the following command from the `Unsolved` directory:
 npx prettier --write example.js
 ```
 
-Revisit the `example.js` file and notice how the `if` statements have been re-formatted. One of Prettier's built-in rules is to keep the closing bracket and the next `else if` on the same line.
+Recall that `npx` is a command to run Node.js packages, where `npm` is mainly used to install packages.
+
+Now revisit the `example.js` file and notice how the `if` statements have been re-formatted. One of Prettier's built-in rules is to keep the closing bracket and the next `else if` on the same line.
 
 You can specify additional Prettier rules with a configuration or config file. In the `Unsolved` directory, create a new file called `.prettierrc.json` and add the following code to this file:
 

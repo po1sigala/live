@@ -22,7 +22,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we make user authentication more secure? 
+* What other tools can be used to handle user authentication in a Node.js application?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

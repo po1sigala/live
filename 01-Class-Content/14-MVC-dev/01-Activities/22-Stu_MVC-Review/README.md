@@ -8,6 +8,8 @@ Work with a partner to implement the following user story:
 
 * It's done when the homepage displays the user data from the database instead of the hardcoded values.
 
+* It's done when the user data is rendered as part of a Handlebars.js template.
+
 * It's done when the users are sorted alphabetically by name.
 
 ## Assets
@@ -20,7 +22,9 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
+* Without a signup form, how can you quickly add new users to the database?
+
+* What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
 
 ## 🏆 Bonus
 
