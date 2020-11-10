@@ -14,7 +14,9 @@ Work with a partner to resolve the following issue:
 
 ## Steps to Reproduce the Problem
 
-1. The page does not render for a long time, so the user is unable to interact with the page. Page appears broken to the user.
+1. Open the `index.html` file in the browser.
+
+2. An extended length of time in needed to load the page.
 
 ---
 

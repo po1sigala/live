@@ -2,23 +2,15 @@
 
 Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
 
-## Acceptance Criteria
-
-* It's done when keys steps in the code execution process have been identified and explained in the code's comments.
-
-* It's done when the steps have been clearly explained to your partner.
-
 ## 📝 Note(s)
 
 Refer to the documentation: 
 
 * [The event loop.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 
----
-
-## 💡 Hint(s)
-
 * Due to the visual quality of this exercise, it may be helpful to sketch the execution context and the allocation of variables.
+
+---
 
 ## 🏆 Bonus
 
