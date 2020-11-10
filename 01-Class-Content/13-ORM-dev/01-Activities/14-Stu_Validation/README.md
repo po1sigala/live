@@ -1,35 +1,39 @@
-# 📖 Add validations and constraints to the User model
+# 📖 Add Validations and Constraints to the User Model
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add validations and constraints to the User model in order to prevent bad data from being saved in the database.
+* As a developer, I want to add validations and constraints to the `User` model to prevent bad data from being saved in the database.
 
 ## Acceptance Criteria
 
-* It's done when it prevents `null` values from being entered for the username, email and password fields.
+* It's done when it prevents `null` values from being entered for the username, email, and password fields.
 
-* It's done when it prevents the password from being shorter than 8 characters.
+* It's done when it prevents the password from being shorter than eight characters.
 
-* It's done when it prevents the username from having any other characters other than letters and numbers. 
+* It's done when it prevents the username from having any characters other than letters and numbers. 
 
-## 📝 Note(s)
+## 📝 Notes
 
 Refer to the documentation: 
 
-* [Sequelize Manual on Validations and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
+[Sequelize documentation on validations and constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* Run `npm run test` in your command line to run the unit tests. Use the tests to guide you.
+* Can you use the `npm run test` script in your command line for guidance?
 
-* What are some built-in validators that we can use to accomplish this?
+* What built-in validators can you use?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What are regular expressions?
+* What are **regular expressions**?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
