@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Use this to check and remove any untracked files in your Git repo
 
@@ -12,7 +12,7 @@ TO_REMOVE=`git clean -f -d -n`;
 # if the command isn't null
 if [[ -n "$TO_REMOVE" ]]; then
   echo "Cleaning...";
-  # use printf to print the expression that `TO_REMOVE` variable holds
+  # use printf to execute the expression that `TO_REMOVE` variable holds
   printf "\n$TO_REMOVE\n\n";
   
   echo "Proceed?";

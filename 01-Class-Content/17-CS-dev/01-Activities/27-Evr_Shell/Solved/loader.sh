@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # create array called `arr` with values '-', '\', '|', and '/'
 arr=('-' '\' '|' '/')

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # create a variable to keep track if we want to keep using the calculator
 runCalculator="y"
@@ -29,7 +29,7 @@ while [ $runCalculator = "y" ]; do
   # prompt for operation input
 	read operation
 
-  # use switch case to check operation value
+  # use `case` to check operation value
 	case $operation in
     # if we selected `1`, set result equal to $num1 + $num2
 	  1) result=$(($num1 + $num2));;
