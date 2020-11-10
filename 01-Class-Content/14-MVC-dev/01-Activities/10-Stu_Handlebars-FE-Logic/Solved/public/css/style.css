@@ -66,6 +66,7 @@ nav {
   flex-wrap: wrap;
   width: 35%;
   min-height: 100%;
+  min-width: 35%;
   margin: 5px auto;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
@@ -83,6 +84,7 @@ nav {
   flex-wrap: wrap;
   width: 35%;
   min-height: 100%;
+  min-width: 35%;
   margin: 5px auto;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
@@ -100,6 +102,8 @@ nav {
   margin: 20px;
   flex: 0 1 300px;
   padding: 5px;
+  min-width: 50%;
+  min-height: 100%;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;

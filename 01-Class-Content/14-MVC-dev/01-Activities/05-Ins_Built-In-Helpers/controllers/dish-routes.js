@@ -25,7 +25,7 @@ const dishList = {
     },
     {
       id: 4,
-      dish_name: 'Tripical Fruit Salad',
+      dish_name: 'Tropical Fruit Salad',
       description: 'Guava, papaya, pineapple, mango, and star fruit',
       has_nuts: false,
     },

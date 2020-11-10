@@ -17,7 +17,7 @@ const dishes = [
       'Battered/fried fish, corn tortillas, fresh slaw with jalepenos and cilantro, pickled red onion',
   },
   {
-    dish_name: 'Tripical Fruit Salad',
+    dish_name: 'Tropical Fruit Salad',
     description: 'Guava, papaya, pineapple, mango, and star fruit',
   },
   {

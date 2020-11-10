@@ -2,9 +2,9 @@
 
 const router = require('express').Router();
 
-// TODO: Add a comment describing the purpose of this route
+// TODO: Add a comment describing the purpose of the get route
 router.get('/', async (req, res) => {
-//TODO: Add a comment describing the purpose of this method
+//TODO: Add a comment describing the purpose of the render method
   res.render('all');
 });
 
