@@ -4,7 +4,7 @@ const Dish = require('../models/Dish');
 
 
 router.get('/dish/:id', (req, res) => {
-  //Search the database for a dish with an id that matches params
+  // Search the database for a dish with an id that matches params
   Dish.findByPk({
     where: {
       id: req.params.id,
@@ -14,7 +14,7 @@ router.get('/dish/:id', (req, res) => {
     .then((dbDishData) => {
       // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
       const dish = dbDishData.get({ plain: true });
-      //Then, the 'dish' template is rendered and dish is passed into the template.
+      // Then, the 'dish' template is rendered and dish is passed into the template.
       res.render('dish', dish);
     })
     .catch((err) => {
