@@ -1,12 +1,10 @@
-# Unit 13: Object Relational Mapping (ORM)
+# Unit 13: Object-Relational Mapping (ORM)
 
 ## Overview:
 
-Using a database is an important part of any application that requires us to collect data. When our application grows in size and we start to collect large amounts of data, as a developer we may have to migrate our database or use multiple different types of databases. It is not an easy task to compare data across databases or migrate from one database to another. Object-relational mapping makes this task much more manageable by giving us away to interact with our database using JavaScript.
+A database is essential to any application that collects data. Larger applications typically collect more data&mdash;making data management more complex. For example, we might have to compare data across databases, migrate an app's existing database, or even use various types of databases. **Object-relational mapping (ORM)** makes these tasks more manageable by helping us to interact with databases using JavaScript.
 
-There are many different ORM tools at our disposal but for this unit we will be using Sequelize. Sequelize is a popular JavaScript ORM that utilizes Object oriented programming. With Sequelize we can now communicate with our Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server using Node.js.
-
-Not only can we now use JavaScript to communicate with our database, but we can also make relationships between our data easier to recognize and leverage. This allows us to connect our data and see how it interacts with each other much better than we could with plain SQL.
+We can choose from many ORM tools, but for this unit we will use Sequelize. A popular JavaScript ORM that uses object-oriented programming, Sequelize enables us to communicate with Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server using Node.js. It also helps make relationships between the data easier to recognize and leverage. Thus, we can see how the data interacts much better than we could with plain SQL.
 
 ## Key Topics
 
@@ -20,58 +18,57 @@ The following topics will be covered in this unit:
   
   * [Associations](https://sequelize.org/master/manual/assocs.html)
 
-  * [Querying](https://sequelize.org/master/manual/model-querying-basics.html)
+  * [Model querying](https://sequelize.org/master/manual/model-querying-basics.html)
 
   * [Method instances](https://sequelize.org/master/manual/model-basics.html#taking-advantage-of-models-being-classes)
 
-  * [Validation and Constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
+  * [Validation and constraints](https://sequelize.org/master/manual/validations-and-constraints.html)
 
 * [dotenv](https://www.npmjs.com/package/dotenv)
 
-* [Async / Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+* [async and await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
-* [Try / Catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+* [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 
-* [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services)
+* [RESTful routes](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services)
 
-* [HTTP Status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+* [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-* [Bcrypt](https://www.npmjs.com/package/bcrypt)
+* [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
 
-* Connect to a database using Sequelize and environment variables
+* Connect to a database using Sequelize and environment variables.
 
-* Create and configure a Sequelize model
+* Create and configure a Sequelize model.
 
-* Perform CRUD operations with Sequelize methods
+* Perform CRUD operations with Sequelize methods.
 
-* Write a script to seed a database with initial data
+* Write a script to seed a database with initial data.
 
-* Convert asynchronous code to synchronous code using `async / await`
+* Convert asynchronous code to synchronous code using `async` and `await`.
 
-* Utilize `try / catch` to catch errors
+* Catch errors using `try...catch`.
 
-* Ensure HTTP requests respond with the correct status code
+* Ensure that HTTP requests respond with the correct status code.
 
-* Utilize validation tools on a Sequelize model
+* Use validation tools on a Sequelize model.
 
-* Utilize `bcrypt` to encrypt a password
+* Encrypt a password using `bcrypt`.
 
-* Automate functionality using Sequelize hooks
+* Automate functionality using Sequelize Hooks.
 
-* Create and run a custom method on a Sequelize instance
+* Create and run a custom method on a Sequelize instance.
 
-* Implement and know when to use different Sequelize associations to relate data for one-to-one, one-to-many, and many-to-many relationships
+* Implement and know when to use different Sequelize associations for one-to-one, one-to-many, and many-to-many relationships.
 
-* Use a combination of Sequelize methods and plain SQL syntax to perform sub-queries
+* Perform subqueries using a combination of Sequelize methods and plain SQL syntax.
 
-* Enforce code styling for an application using ESLint
+* Enforce code styling for an application using ESLint.
 
-* Deploy an application with a MySQL database to Heroku
-
+* Deploy an application with a MySQL database to Heroku.
 
 ## Technical Interview Preparation
 
@@ -93,11 +90,11 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* [Unit 13 technical interview preparation](https://forms.gle/xH18Tn3PwctkCUBi9)
+* [Unit 13 Technical Interview Preparation](https://forms.gle/xH18Tn3PwctkCUBi9)
 
 ## Homework
 
-In the homework for this unit, you will be creating an e-commerce back end. You will be given a working Express API that you will have to configure using Sequelize. Once finished we should be able to connect to our database and have functioning CRUD commands.
+In the homework for this unit, you will create an e-commerce back end. You will be given a working Express.js API that you will have to configure using Sequelize. Once finished, you should be able to connect to the database, and you should have functioning CRUD commands.
 
 ## Career Connection
 
@@ -105,19 +102,20 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, we will be returning to full stack app developement by learning about an architecture called Model, View, Controller (MVC). We will be learning handlebars which is a templating engine. Finally, we will be touching on the topic of front end authentication.
+In the next unit, we will return to full-stack development and explore an architecture called Model-View-Controller (MVC). We will also cover a templating engine called Handlebars.js. Finally, we will touch on front-end authentication.
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) @TODO Check link
 
-  * [Sequelize Docs](https://sequelize.org/master/)
+  * [Sequelize documentation](https://sequelize.org/master/)
 
-  * [Bcrypt](https://www.npmjs.com/package/bcrypt)
+  * [npm documentation on bcrypt](https://www.npmjs.com/package/bcrypt)
 
-  * [dotenv](https://www.npmjs.com/package/dotenv)
+  * [npm documentation on dotenv](https://www.npmjs.com/package/dotenv)
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,4 +1,4 @@
-# Unit 13 Instructor Overview: Object Relational Mapping (ORM)
+# Unit 13 Instructor Overview: Object-Relational Mapping (ORM)
 
 ## Overview
 
