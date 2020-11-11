@@ -1,16 +1,14 @@
-# 📖 Use Terminal Commands to Create Folder and File
+# 📖 Use Terminal Commands to Create Directory and File
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to use the command line to create a folder and file on my computer. 
+* As a developer, I want to use the command line to create a directory and file on my computer. 
 
 ## Acceptance Criteria
 
-* It's done when a new folder named `first-day` has been created using terminal commands.
+* It's done when a new directory named `first-day` has been created using terminal commands.
 
-* It's done when the `first-day` folder contains a file named `index.html`. The file should also be created using terminal commands.
-
-* It's done when the file and folder have been removed using terminal commands.
+* It's done when the `first-day` directory contains a file named `index.html`. The file should also be created using terminal commands.
 
 ## 📝 Notes
 
@@ -18,11 +16,13 @@ Refer to the documentation:
 
 [MDN Web Docs on Basic Built-in Terminal Commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
+[Bash/Terminal Commands](bash-terminal-commands-cheatsheet.md)
+
 ---
 
 ## 💡 Hints
 
-* What terminal command is used to move around your directory structure? How can you use this command to add a file to an existing folder? 
+* What terminal command can you use to list the contents of a directory? How can you use this command to check your work?
 
 ## 🏆 Bonus
 
@@ -34,3 +34,4 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
  © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+ 
