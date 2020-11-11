@@ -2,7 +2,7 @@
 
 Work with a partner to resolve the following issue:
 
-* The unit tests that check for correct and incorrect algorithm output don't pass.
+* As a developer, I want to be able to find the position of a value in a set of data using a binary search function.
 
 ## Expected Behavior
 

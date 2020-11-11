@@ -1,11 +1,13 @@
-// In the fibonacci sequence the current term is the sum of its two previous terms
-// 1 1 2 3 5 8 13 21 34 55 89 
-function fibonacci(number) {
+// TODO: Add a comment describing what the `position` parameter means for this function.
+const fibonacci = (position) => {
   // TODO: Add a comment describing the purpose of this conditional statement.
-  if (number <= 1) {
-    return 1;
+  if (position < 2) {
+    return position;
   }
 
   // TODO: Add a comment describing the purpose of this return statement.
-  return fibonacci(number - 1) + fibonacci(number - 2);
-}
+  return fibonacci(position - 1) + fibonacci(position - 2);
+};
+
+// TODO: What will this return?
+console.log(fibonacci(9));
