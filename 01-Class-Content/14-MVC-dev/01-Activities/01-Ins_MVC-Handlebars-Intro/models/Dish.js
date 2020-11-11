@@ -3,7 +3,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Dish extends Model {}
+class Dish extends Model { }
 
 Dish.init(
   {
@@ -20,7 +20,7 @@ Dish.init(
     description: {
       type: DataTypes.TEXT,
       allowNull: true,
-    }, 
+    },
     guest_name: {
       type: DataTypes.STRING,
       allowNull: false,

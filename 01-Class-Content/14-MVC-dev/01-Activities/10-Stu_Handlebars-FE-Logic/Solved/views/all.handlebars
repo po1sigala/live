@@ -1,22 +1,20 @@
-<div>
-    <div class="menu-container">
-        <div class="card header col-md-10">
-            <h2>Current Menu</h2>
-        </div>
-        {{#each dishes as |dish|}}
+<div class="menu-container">
+    <div class="card header col-md-10">
+         <h2>Current Menu</h2>
+     </div>
+     {{#each dishes as |dish|}}
 
-        <div class="dish col-md-5">
-            <p> {{dish.id}}. {{dish.dish_name}}</p>
-        </div>
-        <div class="col-md-7">
-            <p>
-                Guest: {{dish.guest_name}}
-            </p>
-        </div>
-        {{/each}}
-    </div>
-
+     <div class="dish col-md-5">
+           <p> {{dish.id}}. {{dish.dish_name}}</p>
+     </div>
+      <div class="col-md-7">
+        <p>
+          Guest: {{dish.guest_name}}
+        </p>
+     </div>
+    {{/each}}
 </div>
+
 <!-- This is the form for adding a new dish -->
 <div class="add-dish-container">
     <h2>RSVP with the dish you plan to bring!</h2>
@@ -30,7 +28,7 @@
         <input type="checkbox" id="has_nuts" name="has_nuts" value="true">
         <label for="has_nuts"> Check box if this dish contains nuts</label><br>
 
-        <input type="submit" value="Submit">
+        <button type="submit" value="Submit">Submit</button>
     </form>
 </div>
 
