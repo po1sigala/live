@@ -82,19 +82,19 @@ git push origin main
 
 * Stress that as developers it is important to regularly commit their work using the commands we just learned.
 
-* Explain that in addition to using Github to share projects, we will also be using a shared class repo. This repo will contain the class activities. A URL of that repo should have been provided in welcome materials.
-
-* Note that the students can use `git clone` to clone that repo, just as practiced above.
-
-* Also, stress that they will not be adding or commiting changes to the group repo! However, they will be using another git command.
-
-* Using the repo just made above, demonstrate how to `git pull` to fetch and merge changes found in the remote repo.
+* We can also pull down changes using `git pull`.
 
 ```
 git pull
 ```
 
-* The `git pull` command will pull down the activities we will use each class. Always remember to `git pull` before class! 
+* Explain that in addition to using Github to share projects, we will also be using a shared class repo. This repo will contain the class activities. A URL of that repo should have been provided in welcome materials.
+
+* Note that the students can use `git clone` to clone that repo, just as practiced above.
+
+* Also, stress that they students not be adding or commiting changes to the group repo! 
+
+* Instead, before each class, we will use `git pull` to pull down our activities for the class. 
 
 ## 📝 Notes
 
