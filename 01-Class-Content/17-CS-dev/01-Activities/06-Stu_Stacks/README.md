@@ -20,7 +20,7 @@ Work with a partner to implement the following user story:
 
 If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * What are good use cases for a stack?
+  * What are the features and uses cases for other data structures?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
 

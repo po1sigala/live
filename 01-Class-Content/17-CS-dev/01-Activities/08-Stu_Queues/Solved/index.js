@@ -9,7 +9,7 @@ class Queue {
     return this.container.push(el);
   }
 
-  // removes an element from the back of the queue
+  // removes an element from the front of the queue
   removeFromQueue() {
     return this.container.shift();
   }

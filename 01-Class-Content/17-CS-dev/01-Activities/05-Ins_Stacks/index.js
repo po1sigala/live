@@ -4,12 +4,12 @@ class Stack {
     this.container = container;
   }
 
-  // adds an element to the stack
+  // adds an element to the back of the stack
   addToStack(el) {
     return this.container.push(el);
   }
 
-  // removes an element from the stack
+  // removes an element from the back of the stack
   removeFromStack() {
     return this.container.pop();
   }

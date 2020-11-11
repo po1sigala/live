@@ -1,4 +1,4 @@
-// create the Stack class with methods
+// create the Stack class with two methods to remove and add an element
 class Stack {
   
 }
