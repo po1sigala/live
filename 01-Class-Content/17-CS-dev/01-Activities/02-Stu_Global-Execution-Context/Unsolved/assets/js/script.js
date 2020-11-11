@@ -4,16 +4,16 @@ const carNoise = 'Honk';
 // 2) Where is goFast stored?
 // 
 function goFast(speed) {
-  // 5) When is speed assigned a value? Where is this value stored?
+  // 4) When is speed assigned a value? Where is this value stored?
   // 
   
-  // 6) Where is makeNoise stored?
+  // 5) Where is makeNoise stored?
   //
   function makeNoise(sound) {
     console.log(`My speed is at ${speed}, time to ${sound}`);
   }
 
-  // 7) What happens in the following statement?
+  // 6) What happens in the following statement?
   // 
   makeNoise(carNoise);
 }
@@ -21,7 +21,5 @@ function goFast(speed) {
 // 3) What happens in the following statement?
 // 
 if(confirm("Do you want to go fast?")) {
-  // 4) What happens in the following statement?
-  // 
   goFast(80);
 }
