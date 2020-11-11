@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/coding-boot-camp/FullStack-Ground#readme",
   "devDependencies": {
-    "eslint": "^7.7.0",
+    "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
@@ -26,6 +26,6 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "markdown-link-reporter": "^1.1.1",
-    "prettier": "^2.0.5"
+    "prettier": "2.0.5"
   }
 }
