@@ -135,7 +135,9 @@ else
 fi;
 ```
 
-With this `if` statement, we use an outer set of square brackets `[]` to check a condition but need a second pair to execute the value stored in the `TO_REMOVE` variable (variables are accessed with the dollar sign `$`). If the executed Git command returns and it's not null, as checked by the `-n` flag, we will then move into our functionality. If it is null, we'll print a message indicating everything is clean and finish the `if` statement with `fi` (a lot of shell commands end with the opening command reversed). Notice the semi-colon `;` after the `if` statement? That's so we can start a new statement `then` on the same line.
+With this `if` statement, we use an a set of double square brackets `[[ <condition> ]]` to ensure that any white spaces in the string output by the execution of `TO_REMOVE` aren't read as separate arguments. To access a variable, we use the dollar sign `$`. 
+
+If the executed Git command returns and it's not null, as checked by the `-n` flag, we will then move into our functionality. If it is null, we'll print a message indicating everything is clean and finish the `if` statement with `fi` (a lot of shell commands end with the opening command reversed). Notice the semi-colon `;` after the `if` statement? That's so we can start a new statement `then` on the same line.
 
 If there is something to clean, let's move into the `then` statement and use the `printf` command to actually execute the command held in the `TO_REMOVE` variable and print the output of it to the command line application, just as if you were to run that command yourself. Once that's printed, we can now prompt the user to confirm if they want to move forward with the cleaning.
 
