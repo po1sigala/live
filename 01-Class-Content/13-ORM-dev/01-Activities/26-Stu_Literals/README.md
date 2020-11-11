@@ -1,12 +1,12 @@
-# 🐛 Users Route is Missing Data
+# 🐛 Users Route Is Missing Data
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
-* As a user, I want to see the books I own and a total count of how many books are short novels.
+* As a user, I want to see the books I own and a count of how many of those are short novels.
 
 ## Expected Behavior
 
-When a request is made for user data, the response includes a `shortBooks` property that totals the number of books with a page count between 100 and 300.
+When a request is made for user data, the response includes a `shortBooks` property that counts the books with between 100 and 300 pages.
 
 ## Actual Behavior
 
@@ -24,14 +24,18 @@ The user data in the response does not include a `shortBooks` property.
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* How could you obtain this short novel count using a regular SQL query?
+How could you obtain this short novel count using a regular SQL query?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How would you build a many-to-many relationship using Sequelize?
+* How would you build a many-to-many relationship using Sequelize?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
