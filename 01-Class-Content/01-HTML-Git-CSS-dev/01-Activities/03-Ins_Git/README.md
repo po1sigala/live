@@ -92,6 +92,8 @@ git push origin main
 git pull
 ```
 
+* Always remember to `git pull` before class!
+
 ## 📝 Notes
 
 Refer to the documentation: 
