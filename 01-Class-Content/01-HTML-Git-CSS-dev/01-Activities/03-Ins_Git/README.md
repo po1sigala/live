@@ -90,6 +90,10 @@ git push origin main
 
 * Using the repo just made above, demonstrate how to `git pull` to fetch and merge changes found in the remote repo.
 
+```
+git pull
+```
+
 * The `git pull` command will pull down the activities we will use each class. Always remember to `git pull` before class! 
 
 ## 📝 Notes
