@@ -1,5 +1,5 @@
 <section class="container">
-  <h3>{{gallery.name}}</h3>
+  <h3 class="gallery-name">{{gallery.name}}</h3>
   <section class="flex-row justify-center">
     {{#each gallery.paintings as |painting|}}
     <section class="card">
@@ -8,7 +8,7 @@
 
         <div class="card-body">
           <img src="/images/{{filename}}" alt="{{description}}">
-          <p>Artist: {{artist}}</p>
+          <p>By: {{artist}}</p>
         </div>
       </a>
     </section>
