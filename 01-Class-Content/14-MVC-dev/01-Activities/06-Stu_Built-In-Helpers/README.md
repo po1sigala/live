@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the view displays the message "Contains Nuts" next to food items that contain nuts.
+* It's done when the view displays the message "Contains Nuts" under the food items that contain nuts.
 
 ## 📝 Notes
 
@@ -18,7 +18,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The view for one dish displays the dish name, the dish description, and "Contains Nuts" because this dish contains nuts.](images/has_nuts.png)
+![The view for one dish displays the dish name, the dish description, and "Contains Nuts" because this dish contains nuts.](images/Contains-Nuts.png)
 
 ---
 

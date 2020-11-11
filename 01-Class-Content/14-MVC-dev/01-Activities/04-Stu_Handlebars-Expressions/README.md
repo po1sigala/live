@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The view displays the name and description for one dish](images/Dish_Description.png)
+![The view displays the name and description for one dish](images/dish-description.png)
 
 ---
 

@@ -26,7 +26,7 @@ Work with a partner to resolve the following issue(s):
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The View displays a full menu of dishes and the name of the guest who will bring each dish.](images/full_menu.png)
+![The View displays a full menu of dishes and the name of the guest who will bring each dish.](images/Full-Menu.png)
 
 ---
 
