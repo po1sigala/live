@@ -329,39 +329,45 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Initialize Projects using Node Package Manager (npm)
+```md
+# 📖 Initialize Projects using Node Package Manager (npm)
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to keep track of dependencies using `npm`.
+* As a developer, I want to be able to keep track of dependencies using `npm`. 
 
-  * As a developer, I want to be able to save packages to my project using `npm install`.
+* As a developer, I want to initialize my project using `npm init`.
 
-  ## Acceptance Criteria
+* As a developer, I want to be able to save packages to my project using `npm install`.
 
-  * It's done when I have navigated to `/init` in the terminal and ran `npm init`.
+## Acceptance Criteria
 
-  * It's done when I have responded to all the prompts regarding my project.
+* It's done when I see the `package.json` file created in the [Unsolved](./Unsolved/) folder.
 
-  * It's done when I have confirmed that I have a `package.json` in the `/init` folder.
+* It's done when I see the `node_modules` folder and `package-lock.json` file in the [Unsolved](./Unsolved/) folder.
 
-  * It's done after I have installed `inquirer` in the `/init` folder by running `npm i inquirer --save`.
+* It's done when I have installed the `inquirer` package successfully and see it listed in the `package.json` file.
 
-  * It's done when I have navigated to `/package` in the terminal and ran `npm i`.
+## 📝 Notes
 
-  ## 💡 Hints
+Refer to the documentation: 
 
-  How does the `-y` save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+* [npm-init](https://docs.npmjs.com/cli/v6/commands/npm-init)
 
-  ## 🏆 Bonus
+* [npm-install](https://docs.npmjs.com/cli/v6/commands/npm-install)
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+## 💡 Hints
 
-  * How would we create our own `package.json` files? How did `npm` know to install `inquirer` when we ran `npm i` in the `/package/` folder?
+* If we are provided a `package.json` file, what is the only command we would need to run in order to install those packages?
 
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* How does the `-y` save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -377,32 +383,42 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `npm init`
 
-  * ✔️ `package.json`
+  * ✔️ `npm install`
 
-  * ✔️ `npm install --save-dev`
+* Open `18-Stu-Package-npm/Solved/package.json` in your IDE and explain the following: 
 
-* Open `18-Stu-Package-npm/init/README.md` in your IDE and explain the following: 
+  * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses.
 
-  * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses, as shown in the following example:
+  ```sh
+  npm init -y
+  npm init
+  ```
 
-    ```sh
-    npm init -y
-    npm install inquirer --save
-    ```
+  * Notice this creates the `package.json` file as well as the `node_modules` folder and `package-lock.json` file.
 
-  * 🔑  The second command will install `inquirer` and also add the package, `inquirer`, to the dependency list in `package.json`.
-  
-* Open `18-Stu-Package-npm/package/README.md` in your IDE and explain the following: 
+  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer --save`, or just `npm i inquirer --save`. 
 
-  * This exercise has us simply run the `install` command, because as you can see, the `package.json` already exists for this project. Furthermore, this file contains `inquirer` as a dependency. See the following example:
+  ```sh
+  npm install inquirer --save
+  ```
 
-    ```sh
-    npm install
-    ```
+  * If we check our `package.json` file again, we will see `inquirer` listed under `dependencies`.
 
-  * 🔑  Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
+  ```json
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+  ```
 
-  * 🔑  Sometimes you want to install a package, but not as part of your production app. In this case, you can use `npm install jest --save-dev`.
+  * Sometimes, the `package.json` file will be provided for us and we'll just need to install it by running `npm install` in the same directory as the `package.json` file.
+
+  ```sh
+  npm install
+  ```
+
+  * Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
+
+  * Lastly, sometimes we want to install a package, but not as part of our production app. In this case, we can use `npm install jest --save-dev`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
