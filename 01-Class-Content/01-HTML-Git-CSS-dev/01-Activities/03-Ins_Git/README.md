@@ -84,9 +84,9 @@ git push origin main
 
 * Note that the students can use `git clone` to clone that repo, just as practiced above.
 
-* Also, stress that they students not be adding or commiting changes to the group repo! 
+* Also, stress that students will not be adding or commiting changes to the group repo! 
 
-* Instead, before each class, we will use `git pull` to pull down any changes and make sure we have the activities needed for class. 
+* Instead, before each class, we will use `git pull` to pull down any changes made by the Instructional team and make sure we have the activities needed for class. 
 
 * Use the repo created above to demonstrate how to use `git pull`.
 
