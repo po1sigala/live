@@ -47,14 +47,14 @@ That's all we need to do for this simple first application, so let's test it. Go
 ./hello.sh
 ```
 
-You likely ran into a permissions error that looks something like the following codeblock: 
+Depending on your operating system, you may have run into a permissions error that looks something like the following codeblock: 
 
 ```sh
 # it may say something other than `zsh`
 zsh: permission denied: ./hello.sh
 ```
 
-That's okay! By default, new files we create on our computers don't grant permission to be executed, so we need to change that. Run the following command from the command line:
+That's okay! With some operating systems, new files we create on our computers don't grant permission to be executed by default, so we need to change that. Run the following command from the command line:
 
 ```sh
 # use `chmod` to enter "change mode"
@@ -95,111 +95,124 @@ Great! Now we can run this command from anywhere on our machines. This is a very
 
 Let's move onto another example and learn how to make a slightly more useful script.
 
-## Build a Script That Accepts User Input
+## Build a Script to Automate Git Tasks
 
-Another good way to pick up a new programming language is to create an application that accepts predictable input to provide an output, so let's build a shell script calculator application to learn how to perform these more complex operations.
+Now that we've learned how to write a shell script, let's create one that will make our lives easier by automating a Git command to clean our repositories. 
 
-Create a file on your computer called `calculator.sh` and open it in Visual Studio Code. Since this is a shell script, we need to add the shebang `#!` interpreter directive to the top of the file with this code:
+Go ahead and create a file called `git-file-cleanup.sh` and open it in Visual Studio Code. Then make sure you add the shebang `#!` interpreter directive at the top of the file with the following code:
 
 ```sh
 #!/bin/bash
 ```
 
-Once that's in place, let's get the base functionality set up. We're going to use a `while` loop to continuously run this program until we say otherwise, let's add the following code:
+With that in place, we can now start our script's functionality. We're going to write a script that when executed in a Git repository, it will check for untracked files and ask if we want to clean them up. This is useful when we have files we don't want to track or commit to our repo and don't want to remove them one-by-one.
+
+Let's add the following code to our `git-file-cleanup.sh` file:
 
 ```sh
-# create a variable to keep track if we want to keep using the calculator
-runCalculator="y"
-
-# while the value of `runCalculator` is 'y' for 'yes', run the calculator functionality
-# use `;` between statements to terminate one and begin the other, or simply move the second statement to the following line
-while [ $runCalculator = "y" ]; do
-
-  # our functionality will run in here
-
-done
+# set git clean command with necessary flags
+# -f to force delete files (git won't remove them by default)
+# -d to recursively check directories in repo and not just the level the command was run
+# -n to perform a dry-run first, meaning it will identify files but not remove them
+TO_REMOVE=`git clean -f -d -n`;
 ```
 
-First we set up a variable called `runCalculator` and set it to "y". We then use the `while` loop to continuously do the code between the `do` and `done` commands until `runCalculator` is not "y" anymore. We access variables using a dollar sign `$` and use semi-colons `;` to separate multiple commands that appear on a single line.
+Here, we create a variable called `TO_REMOVE` and set it to a value of the `git clean` command. This command allows us to remove any untracked files from a project. We use the `-f` flag to force delete them from the computer, the `-d` flag to recursively check every directory in the repo, and finally the `-n` flag to make the command's execution a "dry run". 
 
-Now let's fill out our actual functionality. In between the `do` and `done`, enter the following code:
+The dry run means that it'll go through all the steps it normally goes through, but it'll just report back what will be removed without actually removing them. This is good because it'll give us a chance to check what will be removed before we remove them so we can confirm whether or not we want to proceed.
+
+Before adding that user input for confirmation, let's run a check to see if there's anything even there for us to clean by adding the following code: 
 
 ```sh
-# clear the command line for a cleaner experience
-clear
-
-# create a variable called `result` and set it to 0
-result=0
-
-# print prompt to the command line
-echo "Enter first number:"
-# use `read` command to capture command line input and store it in `num1` variable
-read num1
-echo "Enter second number:"
-read num2
-
-# print possible operations
-echo "What operation would you like to perform? (Select number of one of the following)"
-echo "Press '1' for addition"
-echo "Press '2' for subtraction"
-echo "Press '3' for multiplication"
-echo "Press '4' for division"
-# prompt for operation input
-read operation
+# if the command's execution doesn't return `null`
+if [[ -n "$TO_REMOVE" ]]; then
+  echo "Cleaning...";
+  # use printf to execute the expression that `TO_REMOVE` variable holds
+  printf "\n$TO_REMOVE\n\n";
+  
+else
+  echo "Everything is clean";
+fi;
 ```
 
-Every time the `do` command runs, we use the `clear` command to clear the command line of it's previous content. We then create a variable `result` to hold the eventual output of our calculator.
+With this `if` statement, we use an outer set of square brackets `[]` to check a condition but need a second pair to execute the value stored in the `TO_REMOVE` variable (variables are accessed with the dollar sign `$`). If the executed Git command returns and it's not null, as checked by the `-n` flag, we will then move into our functionality. If it is null, we'll print a message indicating everything is clean and finish the `if` statement with `fi` (a lot of shell commands end with the opening command reversed). Notice the semi-colon `;` after the `if` statement? That's so we can start a new statement `then` on the same line.
 
-Next we need to somehow get input from our users and store them in variables, so we use the `read` command to capture that input and store it in variables for `num1`, `num2`, and `operation`. We can test this if we want to now by saving the file, giving it permission to be executed, and running it, but we'll need to use `Ctrl+C` to quit the application since the loop will always run for the time being.
+If there is something to clean, let's move into the `then` statement and use the `printf` command to actually execute the command held in the `TO_REMOVE` variable and print the output of it to the command line application, just as if you were to run that command yourself. Once that's printed, we can now prompt the user to confirm if they want to move forward with the cleaning.
 
-Next, we check what the value of our `operation` variable is and perform that operation on `num1` and `num2`. Let's add the following code below what we previously added:
+Add the following to the file after the `printf` and before the `else`:
 
 ```sh
-# use `case` to check operation value
-case $operation in
-  # if we selected `1`, set result equal to $num1 + $num2
-  1) result=$(($num1 + $num2));;
-
-  # use $() to interpolate values, much like a template literal in JavaScript (e.g. `${num1 + num2}`)
-  2) result=$(($num1 - $num2));;
-
-  # use `;;` to terminate case, like `break;` in JavaScript `switch`
-  3) result=$(($num1 * $num2));;
-
-  4) result=$(($num1 / $num2));;
-
-  *) result="Invalid choice";;
-
-# end switch case with `esac` (which is "case" backwards)
-esac
+# use `select` command to prompt a list of options to be displayed for picking and store in `result` 
+select result in Yes No; do
+  # if we say "yes" in the prompt...
+  if [[ "$result" == "Yes" ]]; then
+    echo "Cleaning in progress...";
+    echo "";
+    # execute `git clean -f -d`
+    git clean -f -d;
+    echo "";
+    echo "All files and directories removed!";
+  fi
+  break;
+done;
 ```
 
-Here we use the shell version of a `switch case` operation in JavaScript. We check to see if the value of `operation` is one of the cases listed between the `case` and `esac` commands, each case is defined by going to the left of a right parenthesis `)`. 
+Here is where we add a bit of interactivity to our script. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line and once they answer, the response will be stored in a variable called `result`.
 
-Depending on the case, we set the value of `result` to the resulting value of the operation performed on `num1` and `num2`. We use `$()` to interpolate a value, much like a template literal in JavaScript. The inner parentheses are to first get a result of the operation and then interpolate the finished result to be saved to the `result` variable. If no predefined choice is selected, we use the wildcard case `*` as the default and save an error message.
+Once we answer the prompt, we use the `do` command to continue the functionality. We check to see if we said "Yes" to cleaning our repo and if so, we actually execute the command as if we were typing out ourselves on the command line. If we don't say yes, or the command finishes, we use the `break` command to exit our `do` loop and then use `done` to signify the end of the that set of functionality.
 
-Now that we have this finished, let's print the result and ask the user if they'd like to perform another calculation. Add the following code into the `while` loop under what we just added:
+That's all there is to this script, so let's give it a test. Since this one needs to be executed within the context of a Git repository, it'll be easier if we set up the alias first. If you need to adjust the permissions on your file, do so now with this command on the command line:
 
 ```sh
-# print result
-echo "Result: $result"
-
-# ask if we want to run calculator again
-echo "Do u want to continue (y/n)) ?"
-# overwrite 
-read runCalculator
-# if we said 'no' and `runCalculator` is now "n", exit program
-if [ $runCalculator != "y" ]
-then
-  exit
-fi
+chmod +x ./git-file-cleanup.sh
 ```
 
-Here we print the result to finish the calculation and then prompt the user to go again. We then check if `runCalculator` is not "y" anymore and exit the application if true. Otherwise, the `while` loop continues and we can run through the calculator again.
+Once that's done, add an alias to your `.bashrc` or `.zshrc` file with the following code:
 
-Give this a test, don't forget to set the file's permissions! Afterwards, feel free to alias this script and run it anywhere you need to.
+```sh
+# set the path to where your `git-file-clean.sh` file is
+alias gfc="~/<path>/<to>/git-file-cleanup.sh"
+```
 
-Congratulations on getting quickly acclimated to a new programming language! While these scripts we created aren't the most useful, they allowed us to learn how some more advanced scripts may work. We can write scripts to perform a number of tasks and automate a lot of things such as cleaning up Git repositories, finding where something exists in a project, and even scaffolding a project's file structure itself!
+Save your run command file that you just updated and restart your command line application for the alias to be loaded into the environment. Once that's done, let's test it out by creating a local Git repo on our machines. You can do so with these commands:
+
+```sh
+# make directory
+mkdir demo-git-repo
+# step into directory
+cd demo-git-repo
+# initialize a new git repo
+git init
+```
+
+Now if you execute the command `gfc` from the command line, you'll notice a message return stating the repo is clean already, as this image shows:
+
+![The command line shows that our repository is clean after running the "gfc" command.](./Images/01-gfc-clean.png)
+
+That's because we haven't made any untracked files just yet. Let's add a few files, add one to be tracked, and then run the command again. Use the following commands to do so:
+
+```sh
+# create a couple files
+touch index.html about.html README.md
+
+# only set up the README to be tracked
+git add README.md
+
+# run `gfc` command
+gfc
+```
+
+After running the above commands, the result of the `gfc` command should look something like this image:
+
+![The command line shows that our repository has two files that can be cleaned and prompts us to continue with the removal.](./Images/03-gfc-prompt.png)
+
+Now we have identified what could be removed if we were to execute this command, thanks to the dry run (`-d`) flag, and can now decided if we want to move forward. If we select `1` for yes, then we will go through with the cleaning, as this image shows:
+
+![The command line shows the result of choosing to clean the repo and lets us know what files have been removed.](./Images/04-gfc-complete.png)
+
+Now our Git repository is clean of all untracked files! This may not be a command you need to run all the time, it is a good way to see how we can optimize our workflows by writing scripts like this. 
+
+Congratulations on getting quickly acclimated to a new programming language! While the scripts we created aren't very complex, they allowed us to learn how some more advanced scripts may work. We can write scripts to perform a number of tasks and automate a lot of things such as monitoring your computer's performance, finding where something exists in a project, and even scaffolding a project's file structure itself!
 
 In your spare time, look in the `Solved` directory for a couple of more scripts to try and use yourself to see what else can be done.
 
