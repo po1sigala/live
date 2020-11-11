@@ -28,7 +28,7 @@ This demo introduces the students to creating a new Github repo and the followin
 
 * Click on `create repository`.
 
-* Explain that while the repo is now created, we need to pull down the repository to our machine to make changes to it. 
+* Explain that while the remote repo is now created, we need to pull down the repository to our machine to make changes to it. 
 
 * Click on the `code` button and grab the HTTPS option under clone. 
 
@@ -46,9 +46,7 @@ cd Desktop
 git clone <url>
 ```
 
-* Explain that `git clone` creates a new directory with the name of your repo.  
-
-* We navigate into our new directory using `cd`.
+* The `git clone` command creates a new directory. We navigate into our new directory using `cd`.
 
 ```
 cd first-day-demo
@@ -78,23 +76,11 @@ git commit -m "First commit"
 git push origin main
 ```
 
-* Stress that as developers it is important to regularly commit their work using the commands we just learned.
-
-* Explain that in addition to using Github to share projects, we will also be using a shared class repo. This repo will contain the class activities. A URL of that repo should have been provided in welcome materials.
-
-* Note that the students can use `git clone` to clone that repo, just as practiced above.
-
-* Also, stress that students will not be adding or commiting changes to the group repo! 
-
-* Instead, before each class, we will use `git pull` to pull down any changes made by the Instructional team and make sure we have the activities needed for class. 
-
-* Use the repo created above to demonstrate how to use `git pull`.
+* It is important that we keep our local repo up-to-date. To pull down any changes from the repo we created on Github and update the repo on our local machine, we use `git pull`.
 
 ```
 git pull
 ```
-
-* Always remember to `git pull` before class!
 
 ## 📝 Notes
 
