@@ -78,15 +78,7 @@ git commit -m "First commit"
 git push origin main
 ```
 
-* Show the students that the remote repo has been updated with the new `index.html` file.
-
 * Stress that as developers it is important to regularly commit their work using the commands we just learned.
-
-* We can also pull down changes using `git pull`.
-
-```
-git pull
-```
 
 * Explain that in addition to using Github to share projects, we will also be using a shared class repo. This repo will contain the class activities. A URL of that repo should have been provided in welcome materials.
 
@@ -94,7 +86,11 @@ git pull
 
 * Also, stress that they students not be adding or commiting changes to the group repo! 
 
-* Instead, before each class, we will use `git pull` to pull down our activities for the class. 
+* Instead, before each class, we will use `git pull` to pull down any changes and make sure we have the activities needed for class. 
+
+```
+git pull
+```
 
 ## 📝 Notes
 
