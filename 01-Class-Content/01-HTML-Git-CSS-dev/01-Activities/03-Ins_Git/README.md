@@ -1,89 +1,98 @@
-# Instructor Guide - Use Terminal Commands to Create Folder and File
+# Instructor Guide - Create a New Github Repository
 
-This demo introduces the students to the following terminal commands:
+This demo introduces the students to creating a new Github repo and the following git commands:
 
-* `ls`
+* `git clone` 
 
-* `cd` 
+* `git add .`
 
-* `pwd`
+* `git commit -m` 
 
-* `mkdir` 
+* `git push`
 
-* `touch`
-
-* `rm`
+* `git pull`
 
 ## Directions
 
-* Explain that terminal commands are useful ways to navigate between folders, also called directories, quickly and easily. The commands are entered into the terminal or bash. 
+* Explain that as developers, it is important to be able to store and manage code as well as share it with others. In this class, we will be using a tool called Github. 
 
-* Open the terminal on your computer.
+* Open [Github](https://github.com/) in your browser. 
 
-* When we open a fresh terminal window, the working directory is typically the home directory. 
+* Note that in this class, we will share code in repositories using Github.
 
-* We use `ls` to list the contents of the home directory, including `Desktop`. 
+* Click on the `new` button to demonstrate how to create a new repository.
 
-* We use `cd` to change into the `Desktop` directory. 
+* Give the new repository a name `first-day-demo`.
+
+* Click on `add README` to add a README.md file. 
+
+* Click on `create repository`.
+
+* Explain that while the repo is now created, we need to pull down the repository to our machine to make changes to it. 
+
+* Click on the `code` button and grab the HTTPS option under clone. 
+
+* Open up a terminal on your machine. 
+
+* We use the terminal command `cd` to navigate to the directory where we want the repository located. 
 
 ```
 cd Desktop
 ```
 
-* To move back up to our previous directory, the home directory, we use `cd ..`. 
-
-* Explain that in addition to navigating between files and directories, we use terminal commands to create and remove directories and files. 
-
-* We start by checking our working directory with `pwd`. We are currently back at home.  
-
-* Since we want to create our new folder inside the `Desktop` directory, we navigate down one layer using `cd`.
+* We use the git command `git clone` followed by the URL we grabbed from Github to clone the repo to our machine. 
 
 ```
-cd Desktop
+git clone <url>
 ```
 
-* Then, we use the `mkdir` command to create a new directory named `demo-folder`.
+* Explain that `git clone` creates a new directory with the name of your repo.  
+
+* We navigate into our new directory using `cd`.
 
 ```
-mkdir demo-folder
+cd first-day-demo
 ```
 
-* To add a file to our new directory, we use `cd` to navigate into `demo-folder`.
-
-```
-cd demo-folder
-```
-
-* We use `pwd` to print the working directory. This will show us our current path. 
-
-* We use `touch` to create a new file inside of `demo-folder`.
+* We add an HTML file to our repo using `touch`.
 
 ```
 touch index.html
 ```
 
-* We use `ls` to check that our new file has been succcessfully added to the directory.
+* We use `git add .` to add our changes.
 
-* To remove the file, we use `rm`.
-
-```
-rm index.html
-```
-
-* To remove the `demo-folder` we just created, we have to use `cd..` to navigate back up to Desktop. Then, we use `rm -r` to remove the `demo-folder`. 
+* To commit our changes, we use `git commit -m` and add a message. 
 
 ```
-cd ..
-rm -r demo-folder
+git commit -m "First commit"
 ```
+
+* To push our changes back up to the repo we created on Github, we use `git push`.
+
+```
+git push origin main
+```
+
+* Show the students that the remote repo has been updated with the new `index.html` file and stress that when working on projects on their own it is important to commit your changes regularly to Github using these git commands.
+
+* Explain that in addition to using Github to share projects, we will also be using a shared class repo. This repo will contain the class activities. A URL of that repo should have been provided in welcome materials.
+
+* Note that the students can use `git clone` to clone that repo, just as practiced above.
+
+* Also, stress that they will not be adding or commiting changes to the group repo! However, they will be using another git command.
+
+* Using the repo just made above, demonstrate how to `git pull` to fetch and merge changes found in the remote repo.
+
+* The `git pull` command will pull down the activites we will use each class. Always remember to `git pull` before class! 
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[MDN Web Docs on Basic Built-in Terminal Commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+[Create a Repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 
-[Bash/Terminal Commands](bash-terminal-commands-cheatsheet.md)
+[Cloning a Repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 ---
  © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

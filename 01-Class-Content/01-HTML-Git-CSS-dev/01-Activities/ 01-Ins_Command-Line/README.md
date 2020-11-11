@@ -30,11 +30,11 @@ This demo introduces the students to the following terminal commands:
 cd Desktop
 ```
 
-* To move back up to our previous directory, the home directory, we use `cd ..`. 
+* To move back up to our previous directory, we use `cd ..`. 
 
 * Explain that in addition to navigating between files and directories, we use terminal commands to create and remove directories and files. 
 
-* We start by checking our working directory with `pwd`. We are currently back at home.  
+* We start by checking our working directory with `pwd`. When we print the working directory, it shows us the path.
 
 * Since we want to create our new folder inside the `Desktop` directory, we navigate down one layer using `cd`.
 
@@ -70,7 +70,7 @@ touch index.html
 rm index.html
 ```
 
-* To remove the `demo-folder` we just created, we have to use `cd..` to navigate back up to Desktop. Then, we use `rm -r` to remove the `demo-folder`. 
+* To remove the `demo-folder` we just created, we have to use `cd..` to navigate back up to `Desktop`. Then, we use `rm -r` to remove the `demo-folder`. 
 
 ```
 cd ..
