@@ -2,7 +2,7 @@
 
 Work with a partner to resolve the following issue(s):
 
-* Museum visitors should be able to see the end date of each painting in the gallery.
+* Museum visitors should be able to see the end date of each painting on the painting page.
 
 ## Expected Behavior
 
@@ -14,13 +14,13 @@ When a museum visitor visits the painting page, it should clearly and accurately
 
 ## Actual Behavior
 
-When a museum visitor visits the exhibition page, it shows the painting's original `exhibition_date` in the long timestamp format.
+When a museum visitor visits the exhibition page, it shows the painting's `exhibition_date` in the original long timestamp format.
 
 ## Assets
 
 The following image demonstrates the correct formatting of the end date for each painting:
 
-@TODO ![]()
+![On a museum page, one card has an image of a blossoming apricot with the title, artist name, and end date underneath it](./Images/01-painting-end-date.jpg)
 
 ---
 
