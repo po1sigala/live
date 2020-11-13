@@ -16,7 +16,7 @@ Work with a partner to resolve the following issue(s):
 
 1. Run `npm install`. 
 
-2. Make sure that mysql is turned on and run `node seeds/index.js` to seed the database.
+2. Make sure that MYSQL is turned on and run `node seeds/index.js` to seed the database.
 
 3. Run `npm start`.
 
@@ -32,7 +32,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* How can you change your route so that the view is able to display the menu of food items?
+* How can you change your route so that the View is able to display the menu of food items?
 
 ## 🏆 Bonus
 
