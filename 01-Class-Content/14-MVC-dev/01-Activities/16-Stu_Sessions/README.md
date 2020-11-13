@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates what the museum visitor sees if they try to access the gallery page without logging in:
 
-@TODO ![]()
+![On a museum page, under the gallery name and operating hours, there is a message to login.](./Images/01-Unauthorized-Gallery.jpg)
 
 ---
 
