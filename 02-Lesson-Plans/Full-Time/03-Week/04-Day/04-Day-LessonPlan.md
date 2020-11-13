@@ -85,13 +85,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 * Let students know that their homework will use the OpenWeatherMap API Documentation
 
-### 4. Instructor Do: OpenWeatherMap API Demo (10 mins)
-
-* Finally, go over `openweathermap-api.html` in `04-OpenWeatherMap_API`. 
-
-* Point out the API key that needed to be appended to the end of your query URL.
-
-### 5. Instructor Do: API and AJAX Slide Show (12 min)
+### 4. Instructor Do: API and AJAX Slide Show (12 min)
 
 * Begin class by welcoming students and asking if there are any lingering questions.
 
@@ -99,7 +93,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 * Just be sure to keep focused and stay on track of time!
 
-### 6. Students Do: The Weather in Bujumbura (15 min)
+### 5. Students Do: The Weather in Bujumbura (15 min)
 
 * Then open the file [05-Bujumbura/Solved/bujumbura-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/05-Bujumbura/Solved/bujumbura-solved.html) in your Browser. Explain to them them that this application uses the [OpenWeatherMap API](http://openweathermap.org/api) to retrieve live snippets of weather information about Bujumbura (the capital of Burundi (which is a city in Africa)).
 
@@ -131,7 +125,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * Walk around and help students accomplish this task as necessary.
 
-### 7. Instructor Do: Review Activity (5 min)
+### 6. Instructor Do: Review Activity (5 min)
 
 * Open the file [05-Bujumbura/Solved/bujumbura-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/05-Bujumbura/Solved/bujumbura-solved.html) in your editor and walk students through the code.
 
@@ -160,7 +154,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 * Check if there are any other questions about this application before moving on.
 
-### 8. Instructor Do: Working Movie App Demo (3 min)
+### 7. Instructor Do: Working Movie App Demo (3 min)
 
 * Next open the file [10-WorkingMovieApp/Solved/working-movie-app-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved/working-movie-app-solved.html) in your browser. Let students know that in today's class we will be working towards building this.
 
@@ -170,7 +164,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * Create a new movie to the listing, point out that a button was generated dynamically, and that this button becomes a clickable AJAX caller of its own.
 
-### 9. Students Do: Movie App JSON Dump (10 min)
+### 8. Students Do: Movie App JSON Dump (10 min)
 
 * Then open the file [06-MovieJSONDump/Solved/movie-json-dump-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/06-MovieJSONDump/Solved/movie-json-dump-solution.html) in your browser. Demonstrate that this application takes in a user input then uses the [OMDb API](http://www.omdbapi.com/) to retrieve movie in the form of a JSON. This movie is then appended directly into the HTML as is.
 
@@ -188,7 +182,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * If you finish early, begin reading about the [Bands In Town API](https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0). Try to understand how to search for a specific artist.
 
-### 10. Instructor Do: Review Activity (5 min)
+### 9. Instructor Do: Review Activity (5 min)
 
 * Review the JSON Dump activity. In your discussion be sure to point out:
 
@@ -198,7 +192,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
     ![2-JSONDump_1](Images/2-JSONDump_1.png)
 
-### 11. Students Do: Dynamic Movie Button Layout (25 min)
+### 10. Students Do: Dynamic Movie Button Layout (25 min)
 
 * Next demonstrate the file `movie-button-layout-solved.html` in `07-MovieButtonLayout` in your browser. Point out that this application allows users to create new buttons dynamically when a user clicks `Add a Movie Yo`.
 
@@ -222,11 +216,11 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 - - -
 
-### 12. BREAK (30 min)
+### 11. BREAK (30 min)
 
 - - -
 
-### 13. Instructor Do: Review Activity (10 min)
+### 12. Instructor Do: Review Activity (10 min)
 
 * Next, review the solution provided in [07-MovieButtonLayout/Solved/movie-button-layout-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/07-MovieButtonLayout/Solved/movie-button-layout-solved.html). In discussing the solution be sure to point out:
 
@@ -238,7 +232,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * Ask students why the `#buttons-view` needed to be emptied in the `renderButtons` function(Answer: otherwise content will get replicated each time you click a button).
 
-### 14. Students Do: Log Movie JSON & Click JSON Data Attribute  (20 min)
+### 13. Students Do: Log Movie JSON & Click JSON Data Attribute  (20 min)
 
 * Demonstrate [08-LogMovieName/Solved/log-movie-name-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/08-LogMovieName/Solved/log-movie-name-solved.html) in the browser. 
 
@@ -264,7 +258,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * HINT: You should use HTML `data-` attributes.
 
-### 15. Instructor Do: Review Activity (10 min)
+### 14. Instructor Do: Review Activity (10 min)
 
 * Review the solution provided in [08-LogMovieName/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/08-LogMovieName/Solved/log-movie-name-solved.html).
 
@@ -284,7 +278,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
     ![4-ConsoleLog_2](Images/4-ConsoleLog_2.png)
 
-### 16. Students Do: Complete Working Movie App (25 min)
+### 15. Students Do: Complete Working Movie App (25 min)
 
 * Finally, open the working file: [10-WorkingMovieApp/Solved/working-movie-app-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved/working-movie-app-solved.html) in your browser and demonstrate what the final application will look like.
 
@@ -306,7 +300,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
     * Plot
 
-### 17. Instructor Do: Review Activity (5 min)
+### 16. Instructor Do: Review Activity (5 min)
 
 * Review the final application's code as shown in [10-WorkingMovieApp/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved).
 
@@ -316,7 +310,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 ![5-WorkingApp_2](Images/5-WorkingApp_2.png)
 
-### 18. Students Do: Bands In Town App (20 min)
+### 17. Students Do: Bands In Town App (20 min)
 
 * If you have any extra time, then proceed with the Bands In Town application.
 
@@ -340,7 +334,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
   * **HINT:** The `app_id` parameter described in the docs is required, but can be set to anything you wish.
 
-### 19. Instructor Do: Review Bands In Town App (5 min)
+### 18. Instructor Do: Review Bands In Town App (5 min)
 
 * Review the Bands In Town code. Be sure to point out how the `app_id` is required but can be anything, and point out how the logged JSON response relates to the new HTML on the page.
 
@@ -348,11 +342,11 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 ![6-BandsInTown_2](Images/6-BandsInTown-2.png)
 
-### 20. Students Do: Work on HW (25 min)
+### 19. Students Do: Work on HW (25 min)
 
 * Spend the remaining time left working on the homework.
 
-### 21. END (0 mins)
+### 20. END (0 mins)
 
 - - -
 
