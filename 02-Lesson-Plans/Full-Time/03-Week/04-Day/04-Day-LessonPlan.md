@@ -68,7 +68,7 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 * Take any questions that may still exist on this activity.
 
-### 3. Partners Do: Giphy Documentation (10 mins)
+### 3. Partners Do: OpenWeather API Documentation (10 mins)
 
 * Next point students to the [Giphy API Documentation](https://developers.giphy.com/docs/).
 
