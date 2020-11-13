@@ -22,7 +22,7 @@
   cd ..
   ```
 
-  * Explain that in addition to navigating between files and directories, we use terminal commands to create and remove directories and files. 
+* Explain that in addition to navigating between files and directories, we use terminal commands to create and remove directories and files. 
 
   * 🔑 We start by checking our working directory with `pwd`. When we print the working directory, it shows us the path.
 
