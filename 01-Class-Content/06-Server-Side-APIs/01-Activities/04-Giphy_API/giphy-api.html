@@ -3,16 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>OpenWeatherMap API</title>
+  <title>Giphy API</title>
 </head>
 
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    // Example queryURL for OpenWeatherMap API
-    var APIKey = "166a433c57516f51dfab1f7edaed8413";
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      "q=Paris,France&appid=" + APIKey;
+    // Example queryURL for Giphy API
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
+
     $.ajax({
       url: queryURL,
       method: "GET"
