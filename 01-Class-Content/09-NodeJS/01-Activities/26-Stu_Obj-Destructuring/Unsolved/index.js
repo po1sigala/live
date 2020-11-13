@@ -6,7 +6,7 @@ const arya = {
   allegiance: 'House Stark',
 };
 
-// CODE BELOW HERE
+// TODO: Destructure the object 'arya'
 
 console.log(first); // <= Arya
 console.log(last); // <= Stark
@@ -28,7 +28,7 @@ const jon = {
   },
 };
 
-// CODE BELOW HERE
+// TODO: Destructure the nested object 'jon'
 
 console.log(brother1); // <= Rob Stark
 console.log(brother2); // <= Rickon Stark
@@ -36,13 +36,17 @@ console.log(brother2); // <= Rickon Stark
 // 3. Arrays
 const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
 
-// CODE BELOW HERE
+// TODO: Destructure the array 'characters'
 
-console.log(name, alias, house);
+console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
+console.log(house); // <= House Stark
 
 // 4. Strings
 const skills = 'The Usurper, Baratheon, Cersei';
 
-// CODE BELOW HERE
+// TODO: Destructure the string 'skills'
 
-console.log(nickName, family, spouse); // print them by variable name
+console.log(nickname, family, spouse); // <= The Usurper Baratheon Cersei
+console.log(family); // <= Baratheon
+
+// Run 'node index.js' after destructuring to confirm the values logged in the console

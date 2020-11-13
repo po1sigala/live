@@ -1,27 +1,36 @@
-# 🏗️ Implement and Recognize Object Destructuring
+# 📖 Implement and Recognize Object Destructuring
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to know how to use destructuring assignment syntax to pluck out data from arrays or objects.
+* As a developer, I want to be able to pull out data from objects, arrays, and strings into variables.
 
 ## Acceptance Criteria
 
-* It's done when I have opened `index.js` and reviewed the existing code.
+* It's done when I have destructured the objects to pull out the data that is logged in the console.
 
-* It's done when I have used destructuring assignment syntax so that each `console.log` statement logs out the value properly.
+* It's done when I have destructured the array to pull out the data that is logged in the console.
+
+* It's done when I have destructured the string to pull out the data that is logged in the console.
+
+## 📝 Notes
+
+Refer to the documentation: 
+
+[MDN Web Docs on object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+---
 
 ## 💡 Hints
 
-You have likely seen destructuring more than you think in your everyday life as a developer. Is there an import statement that you can remember from a previous exercise that uses this syntax?
+What method can we use to split the string into variables?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Write an object of your own and then log each key-value pair using object destructuring.
+* How is destructuring helpful when using it with other web frameworks, like React?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

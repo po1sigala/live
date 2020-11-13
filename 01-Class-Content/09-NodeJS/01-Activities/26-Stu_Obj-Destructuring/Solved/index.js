@@ -36,9 +36,12 @@ const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
 
 const [name, alias, house] = characters;
 console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
+console.log(house); // <= House Stark
 
 // 4. Strings
-const skills = 'The Usurper, Baratheon, Cersei'; // string of data
+const skills = 'The Usurper, Baratheon, Cersei';
 
-const [nickName, family, spouse] = skills.split(','); // set variables and split
-console.log(nickName, family, spouse); // print them by variable name
+// set variables and split
+const [nickname, family, spouse] = skills.split(', ');
+console.log(nickname, family, spouse); // <= The Usurper Baratheon Cersei
+console.log(family); // <= Baratheon
