@@ -27,7 +27,7 @@ class Phone extends Device {
 const Nokia = new Phone('Nokia', 'ring')
 Nokia.call()
 Nokia.takePicture()
-console.log(nokia)
+console.log(Nokia)
 
 // Create a new class for appliances.
 class Appliance {

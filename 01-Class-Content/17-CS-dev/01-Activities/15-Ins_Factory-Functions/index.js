@@ -3,9 +3,9 @@
 function createUser(name, age, city) {
     // Create an user object and map the function arguements to a key in the object.
     const user = {
-        name,
-        age,
-        city
+        name: name,
+        age: age,
+        city: city
     }
 
     // Return two inner functions.
