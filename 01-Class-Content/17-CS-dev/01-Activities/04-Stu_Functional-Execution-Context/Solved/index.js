@@ -6,10 +6,9 @@ function avg(array) {
       total += array[i];
     }
     // total is accessible in the sum's execution context
-    // value of total is returned to where sum() is invoked
     return total;
   }
-
+  // value of total is returned to where sum() is invoked
   return sum()/array.length;
 }
 

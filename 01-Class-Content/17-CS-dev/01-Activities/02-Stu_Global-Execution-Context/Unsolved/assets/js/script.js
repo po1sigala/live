@@ -3,13 +3,13 @@
 const carNoise = 'Honk';
 // 2) Where is goFast stored?
 // 
-function goFast(speed) {
+const goFast = speed => {
   // 4) When is speed assigned a value? Where is this value stored?
   // 
   
   // 5) Where is makeNoise stored?
   //
-  function makeNoise(sound) {
+  const makeNoise = sound => {
     console.log(`My speed is at ${speed}, time to ${sound}`);
   }
 

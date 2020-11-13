@@ -3,13 +3,13 @@
 const carNoise = 'Honk';
 // 2) Where is goFast stored?
 // Global execution context (GEC)
-function goFast(speed) {
+const goFast = speed => {
   // 4) When is speed assigned a value? Where is this value stored?
   // When goFast is invoked, the argument of the function is assigned to the parameter, speed, 
   // in the functional execution context of goFast
   // 5) Where is makeNoise stored?
   // makeNoise is stored in the function execution context of goFast
-  function makeNoise(sound) {
+  const makeNoise = sound => {
     // carNoise is then assigned to sound in the function execution context of makeNoise
     // console.log is then placed on the call stack which then logs the statement
     console.log(`My speed is at ${speed}, time to ${sound}`);
