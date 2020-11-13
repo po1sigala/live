@@ -20,7 +20,7 @@ Work with a partner to implement the following user story:
 
 If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
 
-  * What are good uses cases for a queue?
+  * What are good uses cases for a queue in programming?
 
 * Use [Google](https://www.google.com) or another search engine to research the above.
 
