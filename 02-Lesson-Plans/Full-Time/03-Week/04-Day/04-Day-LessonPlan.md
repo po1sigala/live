@@ -87,7 +87,9 @@ In this class, students will be building upon their knowledge of AJAX to retriev
 
 ### 4. Instructor Do: OpenWeatherMap API Demo (10 mins)
 
-* Finally, go over `19-giphy-api.html` in `04-Giphy_API`. Point out the API key that needed to be appended to the end of your query URL.
+* Finally, go over `openweathermap-api.html` in `04-OpenWeatherMap_API`. 
+
+* Point out the API key that needed to be appended to the end of your query URL.
 
 ### 5. Instructor Do: API and AJAX Slide Show (12 min)
 
