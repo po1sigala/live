@@ -1,10 +1,8 @@
 #  Instructor Demo: Command Line (5 min) 
 
-* Open your terminal and demonstrate the following:
-
 * Explain that terminal commands are useful ways to navigate between folders, also called directories, quickly and easily. The commands are entered into the terminal or bash. 
 
-* When we open a fresh terminal window, the working directory is typically the home directory. 
+* Open your terminal and demonstrate the following:
 
 * 🔑 We use `ls` to list the contents of the home directory, including `Desktop`. 
 
