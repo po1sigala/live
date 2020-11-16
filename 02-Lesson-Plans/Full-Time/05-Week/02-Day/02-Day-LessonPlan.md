@@ -999,7 +999,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to pull out data from objects, arrays, and strings into variables.
+* As a developer, I want to be able to pull out data from objects and arrays into variables.
 
 ## Acceptance Criteria
 
@@ -1007,7 +1007,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have destructured the array to pull out the data that is logged in the console.
 
-* It's done when I have destructured the string to pull out the data that is logged in the console.
+* It's done when I have run `node index.js` after destructuring to confirm the values logged in the console.
 
 ## 📝 Notes
 
@@ -1017,15 +1017,11 @@ Refer to the documentation:
 
 ---
 
-## 💡 Hints
-
-What method can we use to split the string into variables?
-
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How is destructuring helpful when using it with other web frameworks, like React?
+* How is destructuring helpful when using it with other web frameworks?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 ```
@@ -1046,8 +1042,6 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ Destructuring arrays
 
-  * ✔️ Destructuring strings
-
 * Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following: 
 
   * This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
@@ -1057,57 +1051,48 @@ Use [Google](https://www.google.com) or another search engine to research this.
   * Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
 
   * In the past, if we wanted to cherry-pick an object's properties, we'd have to do something like the following example:
-
+  
     ```js
-    const arya = {
-      first: 'Arya',
-      last: 'Stark',
-      origin: 'Winterfell',
-      allegiance: 'House Stark',
+    const nodejs = {
+      name: 'Node.js',
+      type: 'JavaScript runtime environment',
+      version: '14.15.0',
     };
 
-    const aryaFirst = arya.first;
-    const aryaLast = arya.last;
+    const nodejsName = nodejs.name;
+    const nodejsType = nodejs.type;
 
-    console.log(aryaFirst); // "Arya"
-    console.log(aryaLast); // "Stark"
+    console.log(nodejsName); // <= Node.js
+    console.log(nodejsType); // <= JavaScript runtime environment
     ```
 
   * 🔑  With ES6 object destructuring syntax, we can destructure data based on their property key names:
 
     ```js
-    const { first, last, origin, allegiance } = arya;
+    const { name, type, version } = nodejs;
 
-    console.log(first); // <= Arya
-    console.log(last); // <= Stark
+    console.log(name); // <= Node.js
+    console.log(version); // <= 14.15.0
     ```
 
   * 🔑 For a nested object, we need to be more specific:
 
     ```js
-    const { brother1, brother2 } = jon.family.brothers;
-    console.log(brother1); // <= Rob Stark
-    console.log(brother2); // <= Rickon Stark
+    const { framework1, framework2 } = js.tools.frameworks;
+
+    console.log(framework1); // <= AngularJS
+    console.log(framework2); // <= Vue.js
     ```
 
   * 🔑 For arrays, we can destructure data by the index:
 
     ```js
-    const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
+    const languages = ['HTML', 'CSS', 'JavaScript'];
 
-    const [name, alias, house] = characters;
-    console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
-    console.log(house); // <= House Stark
-    ```
+    const [markup, style, scripting] = languages;
 
-  * 🔑 For strings, we can destructure data by using the `.split()` method to split the string at the comma:
-
-    ```js
-    const skills = 'The Usurper, Baratheon, Cersei';
-
-    const [nickname, family, spouse] = skills.split(', ');
-    console.log(nickname, family, spouse); // <= The Usurper Baratheon Cersei
-    console.log(family); // <= Baratheon
+    console.log(markup, style, scripting); // <= HTML CSS JavaScript
+    console.log(markup); // <= HTML
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

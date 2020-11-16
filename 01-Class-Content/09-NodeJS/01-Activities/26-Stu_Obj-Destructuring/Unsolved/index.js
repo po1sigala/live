@@ -1,52 +1,41 @@
 // 1. Object
-const arya = {
-  first: 'Arya',
-  last: 'Stark',
-  origin: 'Winterfell',
-  allegiance: 'House Stark',
+const nodejs = {
+  name: 'Node.js',
+  type: 'JavaScript runtime environment',
+  version: '14.15.0',
 };
 
-// TODO: Destructure the object 'arya'
+// TODO: Destructure the object 'nodejs'
 
-console.log(first); // <= Arya
-console.log(last); // <= Stark
+console.log(name); // <= Node.js
+console.log(version); // <= 14.15.0
 
 // 2. Nested Object
-const jon = {
-  first: 'Jon',
-  last: 'Snow',
-  title: 'Prince',
-  family: {
-    brothers: {
-      brother1: 'Rob Stark',
-      brother2: 'Rickon Stark',
+const js = {
+  name: 'JavaScript',
+  type: 'programming language',
+  version: 'ES6',
+  tools: {
+    frameworks: {
+      framework1: 'AngularJS',
+      framework2: 'Vue.js',
     },
-    sisters: {
-      sister1: 'Arya Stark',
-      sister2: 'Sansa Stark',
+    libraries: {
+      library1: 'jQuery',
+      library2: 'React',
     },
   },
 };
 
-// TODO: Destructure the nested object 'jon'
+// TODO: Destructure the nested object 'js'
 
-console.log(brother1); // <= Rob Stark
-console.log(brother2); // <= Rickon Stark
+console.log(framework1); // <= AngularJS
+console.log(framework2); // <= Vue.js
 
 // 3. Arrays
-const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
+const languages = ['HTML', 'CSS', 'JavaScript'];
 
-// TODO: Destructure the array 'characters'
+// TODO: Destructure the array 'languages'
 
-console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
-console.log(house); // <= House Stark
-
-// 4. Strings
-const skills = 'The Usurper, Baratheon, Cersei';
-
-// TODO: Destructure the string 'skills'
-
-console.log(nickname, family, spouse); // <= The Usurper Baratheon Cersei
-console.log(family); // <= Baratheon
-
-// Run 'node index.js' after destructuring to confirm the values logged in the console
+console.log(markup, style, scripting); // <= HTML CSS JavaScript
+console.log(markup); // <= HTML

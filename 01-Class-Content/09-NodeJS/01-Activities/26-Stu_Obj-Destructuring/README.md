@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to pull out data from objects, arrays, and strings into variables.
+* As a developer, I want to be able to pull out data from objects and arrays into variables.
 
 ## Acceptance Criteria
 
@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have destructured the array to pull out the data that is logged in the console.
 
-* It's done when I have destructured the string to pull out the data that is logged in the console.
+* It's done when I have run `node index.js` after destructuring to confirm the values logged in the console.
 
 ## 📝 Notes
 
@@ -20,15 +20,11 @@ Refer to the documentation:
 
 ---
 
-## 💡 Hints
-
-What method can we use to split the string into variables?
-
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How is destructuring helpful when using it with other web frameworks, like React?
+* How is destructuring helpful when using it with other web frameworks?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
