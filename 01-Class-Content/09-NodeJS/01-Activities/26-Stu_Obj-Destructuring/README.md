@@ -24,7 +24,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How is destructuring helpful when using it with other web frameworks?
+* How can we take a property from an object and assign it to a variable with a different name when we are destructuring it?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
