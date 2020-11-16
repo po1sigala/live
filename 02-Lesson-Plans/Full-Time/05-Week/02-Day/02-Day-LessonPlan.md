@@ -995,31 +995,37 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Implement and Recognize Object Destructuring
+```md
+# 📖 Implement and Recognize Object Destructuring
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to know how to use destructuring assignment syntax to pluck out data from arrays or objects.
+* As a developer, I want to be able to pull out data from objects and arrays into variables.
 
-  ## Acceptance Criteria
+## Acceptance Criteria
 
-  * It's done when I have opened `index.js` and reviewed the existing code.
+* It's done when I have destructured the objects to pull out the data that is logged in the console.
 
-  * It's done when I have used destructuring assignment syntax so that each `console.log` statement logs out the value properly.
+* It's done when I have destructured the array to pull out the data that is logged in the console.
 
-  ## 💡 Hints
+* It's done when I have run `node index.js` after destructuring to confirm the values logged in the console.
 
-  You have likely seen destructuring more than you think in your everyday life as a developer. Is there an import statement that you can remember from a previous exercise that uses this syntax?
+## 📝 Notes
 
-  ## 🏆 Bonus
+Refer to the documentation: 
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+[MDN Web Docs on object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-  * Write an object of your own and then log each key-value pair using object destructuring.
+---
 
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* How can we take a property from an object and assign it to a variable with a different name when we are destructuring it?
+
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -1033,91 +1039,60 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Object destructuring syntax
+  * ✔️ Destructuring objects
 
-  * ✔️ Destructuring nested objects
+  * ✔️ Destructuring arrays
 
 * Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following: 
 
-  * 🔑 This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
+  * This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
 
-  * 🔑 We can also destructure function parameters. This allows us to name them directly and again save a few steps.  
+  * We can also destructure function parameters. This allows us to name them directly and again save a few steps.  
 
-  * 🔑 Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
+  * Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
 
   * In the past, if we wanted to cherry-pick an object's properties, we'd have to do something like the following example:
 
     ```js
-    const arya = {
-      name: "Arya Stark",
-      parents: ["Eddard Stark", "Catelyn Stark"]
+    const nodejs = {
+      name: 'Node.js',
+      type: 'JavaScript runtime environment',
     };
 
-    const aryaName = arya.name; // "Arya Stark"
-    const aryaParents = arya.parents; // ["Eddard Stark", "Catelyn Stark"]`
+    const nodejsName = nodejs.name;
+    const nodejsType = nodejs.type;
+
+    console.log(nodejsName); // <= Node.js
+    console.log(nodejsType); // <= JavaScript runtime environment
     ```
 
-  * 🔑  With ES6 object destructuring syntax, the code will now resemble the following example:
+  * 🔑  With ES6 object destructuring syntax, we can destructure data based on their property key names:
 
     ```js
-    const { name, parents } = arya;
+    const { name, type } = nodejs;
 
-    console.log(name); // prints `"Jaime Lannister"`
-    console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
+    console.log(name); // <= Node.js
+    console.log(type); // <= JavaScript runtime environment
     ```
 
-  * We can also rename the destructured properties as follows:
+  * 🔑 For a nested object, we need to be more specific:
 
     ```js
-    const jaime = {
-      name: "Jaime Lannister",
-      parents: ["Tywin Lannister", "Joanna Lannister"]
-    };
+    const { framework1, framework2 } = js.tools.frameworks;
 
-    const { name: jaimeName } = jaime;
-    console.log(jaimeName); // prints `"Jaime Lannister"`
+    console.log(framework1); // <= AngularJS
+    console.log(framework2); // <= Vue.js
     ```
 
-  * We can also handle nested objects in a much more elegant way, as shown in the following example:
+  * 🔑 For arrays, we can destructure data by the index:
 
     ```js
-      const jon = {
-      first: "Jon",
-      last: "Snow",
-      title: "Prince",
-      family: {
-        brothers: {
-          brother1: "Rob Stark",
-          brother2: "Rickon Stark"
-        },
-        sisters: {
-          sister1: "Arya Stark",
-          sister2: "Sansa Stark"
-        }
-      }
-    };
+    const languages = ['HTML', 'CSS', 'JavaScript'];
 
-    const { brother1, brother2 } = jon.family.brothers;
-    console.log(brother1); // <= Rob Stark
-    console.log(brother2); // <= Rickon Stark
-    ```
+    const [markup, style, scripting] = languages;
 
-  * 🔑  This also works with arrays, as shown in the following example:
-
-    ```js
-    const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
-
-    const [name, alias, allegiance] = characters;
-    console.log(name, alias, allegiance); // <= Ned Stark The Quiet Wolf House Stark
-    ```
-
-  * You can also use destructuring with strings, like in the following code:
-
-    ```js
-    const skills = "The Usurper, Baratheon, Cersei"; // string of data
-
-    const [alias, family, spouse] = skills.split(","); // set variables and split
-    console.log(alias, family, spouse); // print them by variable name
+    console.log(markup, style, scripting); // <= HTML CSS JavaScript
+    console.log(markup); // <= HTML
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

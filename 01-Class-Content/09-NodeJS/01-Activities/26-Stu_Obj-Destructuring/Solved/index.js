@@ -1,44 +1,40 @@
 // 1. Object
-const arya = {
-  first: 'Arya',
-  last: 'Stark',
-  origin: 'Winterfell',
-  allegiance: 'House Stark',
+const nodejs = {
+  name: 'Node.js',
+  type: 'JavaScript runtime environment',
 };
 
-const { first, last, origin, allegiance } = arya;
-console.log(first); // <= Arya
-console.log(last); // <= Stark
+const { name, type } = nodejs;
+
+console.log(name); // <= Node.js
+console.log(type); // <= JavaScript runtime environment
 
 // 2. Nested Object
-const jon = {
-  first: 'Jon',
-  last: 'Snow',
-  title: 'Prince',
-  family: {
-    brothers: {
-      brother1: 'Rob Stark',
-      brother2: 'Rickon Stark',
+const js = {
+  name: 'JavaScript',
+  type: 'programming language',
+  version: 'ES6',
+  tools: {
+    frameworks: {
+      framework1: 'AngularJS',
+      framework2: 'Vue.js',
     },
-    sisters: {
-      sister1: 'Arya Stark',
-      sister2: 'Sansa Stark',
+    libraries: {
+      library1: 'jQuery',
+      library2: 'React',
     },
   },
 };
 
-const { brother1, brother2 } = jon.family.brothers;
-console.log(brother1); // <= Rob Stark
-console.log(brother2); // <= Rickon Stark
+const { framework1, framework2 } = js.tools.frameworks;
+
+console.log(framework1); // <= AngularJS
+console.log(framework2); // <= Vue.js
 
 // 3. Arrays
-const characters = ['Ned Stark', 'The Quiet Wolf', 'House Stark'];
+const languages = ['HTML', 'CSS', 'JavaScript'];
 
-const [name, alias, house] = characters;
-console.log(name, alias, house); // <= Ned Stark The Quiet Wolf House Stark
+const [markup, style, scripting] = languages;
 
-// 4. Strings
-const skills = 'The Usurper, Baratheon, Cersei'; // string of data
-
-const [nickName, family, spouse] = skills.split(','); // set variables and split
-console.log(nickName, family, spouse); // print them by variable name
+console.log(markup, style, scripting); // <= HTML CSS JavaScript
+console.log(markup); // <= HTML
