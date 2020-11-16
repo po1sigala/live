@@ -2,13 +2,12 @@
 const nodejs = {
   name: 'Node.js',
   type: 'JavaScript runtime environment',
-  version: '14.15.0',
 };
 
-const { name, type, version } = nodejs;
+const { name, type } = nodejs;
 
 console.log(name); // <= Node.js
-console.log(version); // <= 14.15.0
+console.log(type); // <= JavaScript runtime environment
 
 // 2. Nested Object
 const js = {
