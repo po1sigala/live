@@ -24,15 +24,26 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
+      // TODO: Describe the purpose of the following line of code.
+      const mock = jest.spyOn(console, "log");
+      // TODO: How does the following line of code affect console.log?
+      mock.mockImplementation(() => { });
 
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(0);
+      expect(mock).toBeCalledWith(
+        "Unable to add child, they are over the age limit"
+      );
+      mock.mockRestore();
     });
 
     it("should not add a child if already at capacity", () => {
       const dayCare = new DayCare();
       const child = new Child("Alice", 4);
+      const mock = jest.spyOn(console, "log");
+      // TODO: What is the purpose of the following function?
+      mock.mockImplementation(() => { });
       dayCare.children = [
         new Child("Tammy", 1),
         new Child("Mark", 2),
@@ -42,6 +53,10 @@ describe("DayCare", () => {
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(3);
+      // TODO: When we run the tests, will the following message be logged in the console? Why or why not?
+      expect(mock).toBeCalledWith("At capacity, unable to add more children");
+
+      mock.mockRestore();
     });
 
     it("should throw an error if not provided a Child object as an argument", () => {
@@ -63,8 +78,9 @@ describe("DayCare", () => {
       const child1 = new Child("Tammy", 1);
       const child2 = new Child("Mark", 2);
       const child3 = new Child("Alvin", 1);
+      const mock = jest.spyOn(console, "log");
       dayCare.children = [child1, child2, child3];
-
+      mock.mockImplementation(() => { });
       const removed = dayCare.pickupChild(child2.name);
 
       expect(removed).toBe(child2);
@@ -72,6 +88,9 @@ describe("DayCare", () => {
       expect(
         dayCare.children.some(child => child.name === child2.name)
       ).toEqual(false);
+      expect(mock).toBeCalledWith(`Picked up ${child2.name} from day care`);
+      // TODO: What is the purpose of the following line of code?
+      mock.mockRestore();
     });
 
     it("should return undefined and remove no children if child is not in 'children'", () => {
@@ -79,12 +98,16 @@ describe("DayCare", () => {
       const child1 = new Child("Tammy", 1);
       const child2 = new Child("Mark", 2);
       const child3 = new Child("Alvin", 1);
+      const mock = jest.spyOn(console, "log");
       dayCare.children = [child1, child2, child3];
-
+      mock.mockImplementation(() => { });
       const removed = dayCare.pickupChild("Fred");
 
       expect(typeof removed).toEqual("undefined");
       expect(dayCare.children).toEqual([child1, child2, child3]);
+      expect(mock).toBeCalledWith("Child not found");
+
+      mock.mockRestore();
     });
   });
 });

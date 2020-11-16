@@ -1,16 +1,14 @@
-# 🏗️ Implement our First Mock
+# 📐 Add Comments to Implementation of Our First Mock
 
-* As a developer, I want to be able to spy on the output of the `console.log` method.
+Work with a partner to add comments describing the functionality of the code found in [dayCare.test](./Unsolved/test/dayCare.test.js).
 
-## Acceptance Criteria
+## 📝 Notes
 
-* It's done when I have taken a moment to examine the code in `Unsolved/child.js` and `Unsolved/dayCare.js`.
+Refer to the documentation: 
 
-* It's done when I add code to spy on the `console.log` method to ensure that it is called when expected with the correct arguments.
+[Jest Docs](https://jestjs.io/docs/en/mock-functions)
 
-## 💡 Hints
-
-How can we use the previous example to guide us in this activity?
+---
 
 ## 🏆 Bonus
 
@@ -21,4 +19,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
