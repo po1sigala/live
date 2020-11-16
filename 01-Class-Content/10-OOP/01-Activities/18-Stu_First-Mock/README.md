@@ -1,14 +1,44 @@
-# 📐 Add Comments to Implementation of Our First Mock
+# 🐛 Running `npm run test` Results in Errors.
 
-Work with a partner to add comments describing the functionality of the code found in [dayCare.test](./Unsolved/test/dayCare.test.js).
+Work with a partner to resolve the following issue(s):
 
-## 📝 Notes
+* We are not successfully spying on the output of the `console.log` method in `dayCare.test.js`.
 
-Refer to the documentation: 
+## Expected Behavior
 
-[Jest Docs](https://jestjs.io/docs/en/mock-functions)
+* When we run `npm run test` in the console, we should not recieve an error
+
+* When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` should be passing
+
+* When we run `npm run test` in the console, there should be no messages logged in the console
+
+## Actual Behavior
+
+* When we run `npm run test` in the console, we recieve errors
+
+* When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` are not passing
+
+## Steps to Reproduce the Problem
+
+1. Navigate to the `Unsolved` folder in this activity.
+
+2. Run `npm install` in your console.
+
+3. Run `npm run test` in your console.
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![Tests and Test Suites are passing, no messages are logged in the console, and there are no errors](./images/pass-test.png)
 
 ---
+
+## 💡 Hints
+
+* What does the error tell you about what is missing?
+
+* How do we capture the value of `console.log`?
 
 ## 🏆 Bonus
 

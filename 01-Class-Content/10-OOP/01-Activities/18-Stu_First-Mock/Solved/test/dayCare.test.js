@@ -26,12 +26,13 @@ describe("DayCare", () => {
       const dayCare = new DayCare();
       // The following line of code uses the jest.spyOn method to mock and spy on the console.log method.
       const mock = jest.spyOn(console, "log");
-      // The following line of code replaces console.log with an empty function.
+      // Replacing console.log with an empty function allows us to spy on the values provided to console.log when the test is run.
       mock.mockImplementation(() => { });
 
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(0);
+      // The following message will NOT be logged in the console. jest.spyOn is instead 'spying on' the value pased into console.log and verifying that the expected message is being run.
       expect(mock).toBeCalledWith(
         "Unable to add child, they are over the age limit"
       );
@@ -42,7 +43,6 @@ describe("DayCare", () => {
       const dayCare = new DayCare();
       const child = new Child("Alice", 4);
       const mock = jest.spyOn(console, "log");
-      // Replacing console.log with an empty function allows us to spy on the values provided to console.log when the test is run.
       mock.mockImplementation(() => { });
       dayCare.children = [
         new Child("Tammy", 1),
@@ -53,7 +53,6 @@ describe("DayCare", () => {
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(3);
-      // The following message will NOT be logged in the console. jest.spyOn is instead 'spying on' the value pased into console.log and verifying that the expected message is being run.
       expect(mock).toBeCalledWith("At capacity, unable to add more children");
 
       mock.mockRestore();
@@ -88,7 +87,6 @@ describe("DayCare", () => {
         dayCare.children.some(child => child.name === child2.name)
       ).toEqual(false);
       expect(mock).toBeCalledWith(`Picked up ${child2.name} from day care`);
-      // mock.mockRestore() "unmocks" console.log, or cleans up the mocks that we just implemented so that our next test isn't affected.
       mock.mockRestore();
     });
 
