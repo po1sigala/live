@@ -1,29 +1,46 @@
-# 🏗️ Write and Implement Subclasses
+# 📖 Implement Subclasses
 
 Work with a partner to implement the following user story:
 
-* As a developer I want to extend basic vehicle classes with additional functionality. 
+* As a developer, I want to extend basic vehicle classes with additional functionality. 
 
 ## Acceptance Criteria
 
-* It's done when I have opened [vehicle.js](Unsolved/vehicle.js) and familiarized myself with the Vehicle class.
+* It's done when I have created a `Car` class that extends the `Vehicle` class with these features:
 
-* It's done when I understand that all vehicles have `id`, `numberOfWheels`, and `sound` properties. 
-  
-* It's done when I understand that `printInfo` prints the id and number of wheels on the vehicle.
+  * An `id`, `4` wheels, and `beep` as its sound
 
-* It's done when I have created a `Car` class that extends the `Vehicle` class.
-
-* It's done when I have added the following features to the `Car` class:
   * A `color` property
-  * A passengers property
-  * A `checkPassengers()` method that checks to see if there are 4 or less passengers. If not, `console.log` that there are too many passengers.
-  * A `useHorn` method that prints the car's sound to the console.
 
-* It's done when I have added the following features to the `Boat` class:
-  * A crew property
-  * A `crewSoundOff()` method that prints each member of the crew to the console.
-  * A `useHorn` method that prints the boat's sound to the console.
+  * A `passengers` property
+
+  * A `useHorn()` method that prints the car's sound to the console.
+
+  * A `checkPassengers()` method that checks to see if there are less than 4 passengers. 
+  
+    * If there are, print a message of how much room you have left in the car in the console.
+    
+    * Otherwise, print "This car only seats 4 people. You have too many passengers!" in the console.
+
+* It's done when I have created a `Boat` class that extends the `Vehicle` class with these features:
+
+  * An `id`, `0` wheels, and `bwom` as its sound
+
+  * A `type` property
+
+  * A `crew` property
+
+  * A `useHorn()` method that prints the boat's sound to the console.
+
+  * A `crewSoundOff()` method that prints each member of the crew "reporting for duty!" to the console.
+  
+## 📝 Notes
+
+Refer to the documentation: 
+
+[MDN Web Docs on extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+
+---
 
 ## 🏆 Bonus
 
