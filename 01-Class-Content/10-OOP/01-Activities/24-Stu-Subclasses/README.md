@@ -28,7 +28,7 @@ Work with a partner to implement the following user story:
 
   * A `type` property
 
-  * A `crew` property
+  * A `crew` property, which will hold an array of strings
 
   * A `useHorn()` method that prints the boat's sound to the console.
 
