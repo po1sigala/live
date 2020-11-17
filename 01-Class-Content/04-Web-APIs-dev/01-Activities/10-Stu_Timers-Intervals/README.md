@@ -24,7 +24,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-What property can be used add text to an HTML element with JavaScript?
+What property can be used to add text to an HTML element with JavaScript?
 
 ## 🏆 Bonus
 
