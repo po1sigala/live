@@ -1,7 +1,7 @@
 // Is this a Model, a View, or a Controller? 
 // This file is a Controller. 
-// What it is responsible for handling?
-//It routes commands to the Model and View parts.
+// What is it responsible for handling?
+// It routes commands to the Model and View parts.
 
 const router = require('express').Router();
 
