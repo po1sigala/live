@@ -16,7 +16,7 @@
 
   * Explain that while the remote repo is now created, we need to pull down the repository to our machine to make changes to it. 
 
-  * Click on the `code` button and grab the HTTPS option under clone. 
+  * Click on the `code` button and select the HTTPS option under clone to copy the URL.
 
 * Open up a terminal on your machine. 
 
