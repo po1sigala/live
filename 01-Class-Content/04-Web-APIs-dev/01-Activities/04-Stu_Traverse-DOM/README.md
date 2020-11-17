@@ -1,14 +1,20 @@
-# 🏗️ Implement Style Changes on HTML Elements Using JavaScript
+# 🐛 Style Changes on HTML Elements Not Rendering on Page
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to use JavaScript to change the style on HTML elements.
+* Users should be able to see style changes implemented with JavaScript when the browser page loads.
 
-## Acceptance Criteria
+## Expected Behavior
 
-* It's done when the article title has a font size of 50px.
+* The article title has a font size of 50px.
 
-* It's done when the text in the headline `"Welcome to World News"` is white. 
+* The text in the headline `"Welcome to World News"` is white. 
+
+## Actual Behavior
+
+* The article title is smaller than 50px.
+
+* The text in the headline `"Welcome to World News"` is blue. 
 
 ## Assets 
 

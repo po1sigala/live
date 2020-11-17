@@ -1,4 +1,4 @@
-# 🏗️ Implement Keyboard Events to Display Value and Code of Pressed Key
+# 📖 Implement Keyboard Events to Display Value and Code of Pressed Key
 
 Work with a partner to implement the following user story:
 
@@ -10,7 +10,15 @@ Work with a partner to implement the following user story:
 
 * It's done the key is released, `KEYUP Event` is displayed
 
-## Assets
+## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on Document: keyup event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event)
+
+  [MDN Web Docs on Document: keydown event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event)
+
+  ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
@@ -32,4 +40,3 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
