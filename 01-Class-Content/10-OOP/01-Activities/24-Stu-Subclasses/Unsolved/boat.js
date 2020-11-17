@@ -1,8 +1,6 @@
 // TODO: Import the parent class
 
 // TODO: Create a `Boat` class that extends the `Vehicle` class
-// including the properties of the `Vehicle` class, as well as
-// a `type` property, `crew` property, `useHorn()` method, `crewSoundOff()` method
 
 const boatPassengers = [
   'Blackbeard',

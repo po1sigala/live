@@ -8,11 +8,11 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a `Car` class that extends the `Vehicle` class with these features:
 
-  * An `id`, `4` wheels, and `beep` as its sound
+  * Inherits `id`, `numberOfWheels`, and `sound` from the `Vehicle` class. Set the `numberOfWheels` as `4` and the `sound` as `beep`.
 
   * A `color` property
 
-  * A `passengers` property
+  * A `passengers` property, which will hold an array of strings
 
   * A `useHorn()` method that prints the car's sound to the console.
 
@@ -24,7 +24,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a `Boat` class that extends the `Vehicle` class with these features:
 
-  * An `id`, `0` wheels, and `bwom` as its sound
+  * Inherits `id`, `numberOfWheels`, and `sound` from the `Vehicle` class. Set the `numberOfWheels` as `0` and the `sound` as `bwom`.
 
   * A `type` property
 
