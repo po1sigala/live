@@ -27,7 +27,7 @@ const Phone = (name, ringTone) => {
 };
 
 // No need to add the `new` keyword because we are using a factory function.
-const Nokia = Phone('Nokia', 'ring');
+const nokia = Phone('Nokia', 'ring');
 
 // Test if our action functions work correctly with our newly created phone.
 Nokia.call();
@@ -41,9 +41,9 @@ const Dryer = (noise, timer) => {
   return { ...makeNoise(state), ...drying(state) };
 };
 
-const Decker = Dryer('brshhuhsh', 35);
-Decker.noise();
-Decker.dry();
+const decker = Dryer('brshhuhsh', 35);
+decker.noise();
+decker.dry();
 
 // Now that we have taken a composition based approach we can now create a `Washer` function which utilizes making a phone call.
 const Washer = (name, noise, ringTone) => {
@@ -59,6 +59,6 @@ const Washer = (name, noise, ringTone) => {
   return { ...makeNoise(state), ...phoneCall(state) };
 };
 
-const WPool = Washer('Whirlpool', 'brshhh', 'ring ring from the washer');
-WPool.call();
-WPool.noise();
+const wPool = Washer('Whirlpool', 'brshhh', 'ring ring from the washer');
+wPool.call();
+wPool.noise();
