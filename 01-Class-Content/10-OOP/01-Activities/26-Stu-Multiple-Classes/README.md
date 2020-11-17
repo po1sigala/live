@@ -1,50 +1,66 @@
-# 🏗️ Write and Implement Multiple Classes
+# 🐛 Store class not functioning correctly
 
-* As a developer, I want to practice the OOP paradigm by using multiple classes and differing purposes.
+Work with a partner to resolve the following issue(s):
 
-* As a developer I want to create a store class that handles different interactions within the store. 
+* The `Store` class should have the functionality to process sales and replenish their stock.
 
-## Acceptance Criteria
+## Expected Behavior
 
-* It's done when I have ran `npm install` inside the project directory.
+* When a user buys an item, the `processProductSale()` method should decrement the store's stock of that item and increase the store's revenue by that item's price. 
 
-* It's done when I have confirmed everything installed properly by running `npm test`.
+* When the store replenishes its stock of an item, the `replenishStock()` method should increase the store's stock of that item.
 
-* It's done when I have opened [test/store.test.js](Unsolved/test/store.test.js) and taken a moment to familiarize myself with the `Store` class tests.
+* When I run `npm test`, all of the tests should pass.
 
-* It's done when I have created a `Store` class with the following properties inside `store.js`:
-  * Name
-  * Stock
-  * Revenue
-  
-* It's done when I have added the following properties inside `toy.js`:
-  * Name
-  * Stock
-  * Revenue
+* When I run `npm start`, I should see messages logged in the console stating that the "Rare Toy" went out of stock but was replenished.
 
-* It's done when I have created a method called `processProductSale` that takes in the product's name as a parameter.
-  
-* It's done when the `processProductSale` method should increases the store's revenue by the price of the toy and decreases the toy's count by one.
+* When I run `npm start`, I should see the store revenue at `80.95` at the end of all the transactions.
 
-* It's done when I `console.log` a message if there's **no more stock** of a given toy while refraining from decreasing the toy's `count` property. 
+## Actual Behavior
 
-* It's done when I have added a method called `replenishStock(name, count)` that increases the stock on a toy by the provided `count` parameter inside `Store`.
+* When I run `npm test`, all of the tests fail.
 
-* It's done when I have uncommented lines in index.js to add functionality. 
+* When I run `npm start`, I see that the "Rare Toy" never goes out of stock.
+
+* When I run `npm start`, I see the store revenue at `0` at the end of all the transactions.
+
+## Steps to Reproduce the Problem
+
+1. Run `npm install` from the command line.
+
+2. Run `npm test` from the command line to see the tests run.
+
+3. Run `npm start` from the command line to see transactions logged in the console.
+
+## Assets
+
+The following demonstrates the expected transactions of the store logged in the console:
+
+```sh
+Welcome to Big Als Toy Barn!
+Purchased Action Figure for 14.99
+Purchased Action Figure for 14.99
+Purchased Rare Toy for 17.99
+Purchased Action Figure for 14.99
+Sorry, Rare Toy is out of stock!
+Replenished Rare Toy by 2
+Purchased Rare Toy for 17.99
+The revenue so far is 80.95
+```
+---
 
 ## 💡 Hints
 
-How can you use these tests as guidance for this activity? Try working on each bit of functionality in conjuncture with its unit test, only moving on when the test passes.
+* What do the tests in [store.test.js](./Unsolved/test/store.test.js) tell you about the expected functionality of the `Store` class?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* In `toy.js` add a method called `calculateTax` that returns the price times a sales tax of 8.875. Don't forget to round to two decimal places.
-
-* Add this number to the total that's printed out in `processProductSale` but do **not** add it to the revenue.
+* What is the `static` keyword and when would we use static methods?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
