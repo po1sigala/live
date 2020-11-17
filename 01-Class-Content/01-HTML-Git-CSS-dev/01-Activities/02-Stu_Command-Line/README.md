@@ -28,7 +28,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What does the terminal command do you use to copy or move files?
+* Which terminal command do you use to copy or move files?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
