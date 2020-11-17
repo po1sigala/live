@@ -1,4 +1,4 @@
- # 🏗️ Save Object Using localStorage
+ # 📖 Save Object Using localStorage
 
   Work with a partner to implement the following user story:
 
@@ -9,6 +9,14 @@
   * It's done when I click on the `save` button and the form's current values are stored in a object.
 
   * It's done when the object is saved as a string using `localStorage`.
+
+  ## 📝 Notes
+
+Refer to the documentation: 
+
+[MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+[MDN Web Docs on JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
   ## 💡 Hints
 
