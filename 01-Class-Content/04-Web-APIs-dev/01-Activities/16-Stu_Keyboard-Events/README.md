@@ -12,11 +12,13 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the documentation: 
+  Refer to the documentation: 
 
-[MDN Web Docs on Element: keyup event](https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event)
+  [MDN Web Docs on Document: keyup event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event)
 
-## Assets
+  [MDN Web Docs on Document: keydown event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event)
+
+  ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
