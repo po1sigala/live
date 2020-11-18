@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, you will use the separation of concerns principle and the MVC framework to build out fullstack web apps. You will use Handlebars.js features including, expressions, built-in helpers, cutsom helpers, and partials to build static templates that can render dynamic data. You will use front end logic to make requests and pass data to the back end. You will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. You will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create your own custom middleware for user authentication. You will also incorporate sessions and cookies using the Sequelize store. 
+In this unit, you will use the separation of concerns principle and the MVC framework to build out fullstack web apps. You will use Handlebars.js features including, expressions, built-in helpers, cutsom helpers, and partials to build static templates that can render dynamic data. You will use front end logic to make requests and pass data to the back end. You will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. You will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create your own custom middleware for user authentication. You will also incorporate sessions and cookies using the Sequelize store. Prettier will be introduced prior to starting on the mini project.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -16,7 +16,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
-* Be prepared to remind students how to start their MySQL server, starting with `08-Stu_Data-Serialization`.
+* Be prepared to remind students how to start their MySQL server on Day 1. They will need to use it starting with `08-Stu_Data-Serialization`.
+
+* You'll need to install the ESLint and Prettier VS Code extensions to properly demonstrate both libraries for Day 3.
+
+* If the students struggle with the `Everyone Do: Prettier` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
 ## Career Connection
 
