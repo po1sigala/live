@@ -2,7 +2,7 @@
 
 Work with a partner to resolve the following issue(s):
 
-* We are not successfully spying on the output of the `console.log` method in `dayCare.test.js`.
+* As a developer, I would like to spy on the output of the `console.log` method in `dayCare.test.js`.
 
 ## Expected Behavior
 
@@ -10,11 +10,9 @@ Work with a partner to resolve the following issue(s):
 
 * When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` should be passing
 
-* When we run `npm run test` in the console, there should be no messages logged in the console
-
 ## Actual Behavior
 
-* When we run `npm run test` in the console, we recieve errors
+* When we run `npm run test` in the console, we recieve the following error: "Cannot spyOn on a primitive value; undefined given"
 
 * When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` are not passing
 
