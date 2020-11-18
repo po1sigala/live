@@ -10,10 +10,8 @@ router.post('/', async (req, res) => {
       password: req.body.password,
     });
 
-    // TODO: Set up sessions with 'user_id', 'username', and 'loggedIn' variables
+    // TODO: Set up sessions with the 'loggedIn' variable
     req.session.save(() => {
-      // TODO: Set the 'user_id' session variable to the newly created user's id
-      // TODO: Set the 'username' session variable to the newly created user's username
       // TODO: Set the 'loggedIn' session variable to 'true'
 
       res.status(200).json(dbUserData);
@@ -50,7 +48,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      // TODO: Once the user successfully logs in, set up sessions with 'user_id', 'username', and 'loggedIn' variables
+      // TODO: Once the user successfully logs in, set up sessions with the 'loggedIn' variable
 
       res
         .status(200)

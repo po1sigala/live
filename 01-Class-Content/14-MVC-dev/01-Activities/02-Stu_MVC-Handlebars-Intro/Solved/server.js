@@ -1,8 +1,9 @@
 // Dependencies
 const express = require('express');
+// Import express-handlebars
 const exphbs = require('express-handlebars');
-const path = require('path');
 const hbs = exphbs.create({});
+const path = require('path');
 
 
 // Sets up the Express App

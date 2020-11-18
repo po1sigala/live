@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates how the painting's details should be rendered onto the page:
 
-@TODO ![]()
+![On a museum page, one card has an image of a sandy beach with the title and artist name underneath it](./Images/01-painting-details.jpg)
 
 ---
 

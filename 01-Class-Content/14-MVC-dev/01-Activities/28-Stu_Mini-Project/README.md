@@ -81,3 +81,6 @@ If you have fully completed the above tasks, here is something you and your grou
   * Add an `/edit/:id` route for logged in users to update their projects' details.
 
   * Deploy the app to Heroku!
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
