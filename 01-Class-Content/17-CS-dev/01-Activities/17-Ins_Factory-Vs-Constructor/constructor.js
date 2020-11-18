@@ -24,9 +24,9 @@ class Phone extends Device {
 }
 
 // We have to use the `new` keyword.
-const Nokia = new Phone('Nokia', 'ring')
-Nokia.call()
-Nokia.takePicture()
+const nokia = new Phone('Nokia', 'ring')
+nokia.call()
+nokia.takePicture()
 console.log(nokia)
 
 // Create a new class for appliances.
