@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 ## Heads-Up
 
-@TODO WHAT DOES THE INSTRUCTOR NEED TO DO TO PREPARE FOR THE NEXT UNIT?
+* Next unit, students will work on their group project. Start thinking about possible project groups and preparing for information to go out to students.
 
 ## Helpful Links
 
@@ -66,7 +66,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
 
-  * [dotenv](https://www.npmjs.com/package/dotenv)
+  * [express-session](https://www.npmjs.com/package/express-session)
+
+  * [Express.js Session Cookie Docs](https://github.com/expressjs/session#cookie)
+
+  * [Express.js Docs on Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
