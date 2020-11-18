@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-// Initializes sequelize with session store
+// Initializes Sequelize with session store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3001;
 
 // Sets up session and connect to our Sequelize db
 const sess = {
-  // Technically should be stored in `.env` file as a real secret
   secret: 'Super secret secret',
   // Tells our session to use cookies
   cookie: {},
