@@ -16,7 +16,7 @@ Work with a partner to resolve the following issue:
 
 1. From the [Unsolved](./Unsolved) directory, run `npm install` in the command line.
 
-2. Run `npm run test` from the command line to run the unit test.
+2. Run `npm test` from the command line to run the unit test.
 
 3. The tests defined in the `__tests__` directory does not pass.
 
