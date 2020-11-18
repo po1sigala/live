@@ -30,7 +30,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 ## Heads-Up
 
-* Next unit, students will work on their group project. Start thinking about possible project groups and preparing for information to go out to students.
+* Next unit, students will work on their group project. Everything related to Project #2 will be done on Day 1 of Project week. In the meantime, start thinking about possible project groups and preparing for information to go out to students.
 
 ## Helpful Links
 
@@ -76,7 +76,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Express.js Docs on Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
 
-  
+  * [ESLint](https://eslint.org/docs/user-guide/configuring)
+
+  * [Prettier](https://prettier.io/docs/en/index.html)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
