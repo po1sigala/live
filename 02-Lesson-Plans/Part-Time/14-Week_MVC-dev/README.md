@@ -8,11 +8,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 ## Instructor/TA Notes
 
-* Take some time to read through the Handlebars.js docs to (re)familiarize yourself with the template engine. Focus on expressions, built-in helpers, custom helpers, and partials.
+* Take some time to read through the Handlebars.js docs and the express-handlebars docs to (re)familiarize yourself with the template engine. This unit uses express-handlebars, so the Handlebars.js docs may not have all of the answers. Focus on expressions, built-in helpers, custom helpers, and partials.
 
 * This unit introduces students to the template engine, Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their career, but instead, it is an introduction to template engines, preparation for React.js, and a way to emphasize the MVC framework.
 
-* You will be using MySQL for a few of today's activities. Be sure to have your MySQL server up and running. Go ahead and create the `dish_db` database ahead of time, or demonstrate it live in class.
+* You will be using MySQL for the majority of this unit's activities. Be sure to have your MySQL server up and running. Go ahead and create the `dish_db` database ahead of time, or demonstrate it live in class.
 
 * Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
@@ -34,7 +34,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [14.1 Lesson Plan](01-Handlebars/14.1-LESSON-PLAN.md)
+  * [14.1 Lesson Plan](01-Day_Handlebars/14.1-LESSON-PLAN.md)
 
   * [14.2 Lesson Plan](02-Day_Authentication/14.2-LESSON-PLAN.md)
   
@@ -66,11 +66,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
 
-  * [express-session](https://www.npmjs.com/package/express-session)
+  * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 
   * [Express.js Session Cookie Docs](https://github.com/expressjs/session#cookie)
 
   * [Express.js Docs on Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
+
+  
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
