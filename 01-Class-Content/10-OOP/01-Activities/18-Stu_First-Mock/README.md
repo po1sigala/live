@@ -1,16 +1,42 @@
-# 🏗️ Implement our First Mock
+# 🐛 Running `npm run test` Results in Errors.
 
-* As a developer, I want to be able to spy on the output of the `console.log` method.
+Work with a partner to resolve the following issue(s):
 
-## Acceptance Criteria
+* As a developer, I would like to spy on the output of the `console.log` method in `dayCare.test.js`.
 
-* It's done when I have taken a moment to examine the code in `Unsolved/child.js` and `Unsolved/dayCare.js`.
+## Expected Behavior
 
-* It's done when I add code to spy on the `console.log` method to ensure that it is called when expected with the correct arguments.
+* When we run `npm run test` in the console, we should not recieve an error
+
+* When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` should be passing
+
+## Actual Behavior
+
+* When we run `npm run test` in the console, we recieve the following error: "Cannot spyOn on a primitive value; undefined given"
+
+* When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` are not passing
+
+## Steps to Reproduce the Problem
+
+1. Navigate to the `Unsolved` folder in this activity.
+
+2. Run `npm install` in your console.
+
+3. Run `npm run test` in your console.
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![Tests and Test Suites are passing, no messages are logged in the console, and there are no errors](./images/pass-test.png)
+
+---
 
 ## 💡 Hints
 
-How can we use the previous example to guide us in this activity?
+* What does the error tell you about what is missing?
+
+* How do we capture the value of `console.log`?
 
 ## 🏆 Bonus
 
@@ -21,4 +47,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -24,16 +24,18 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
+      // The following line of code uses the jest.spyOn method to mock and spy on the console.log method.
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      // Replacing console.log with an empty function allows us to spy on the values provided to console.log when the test is run.
+      mock.mockImplementation(() => { });
 
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(0);
+      // The following message will NOT be logged in the console. jest.spyOn is instead 'spying on' the value pased into console.log and verifying that the expected message is being run.
       expect(mock).toBeCalledWith(
         "Unable to add child, they are over the age limit"
       );
-
       mock.mockRestore();
     });
 
@@ -41,7 +43,7 @@ describe("DayCare", () => {
       const dayCare = new DayCare();
       const child = new Child("Alice", 4);
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
       dayCare.children = [
         new Child("Tammy", 1),
         new Child("Mark", 2),
@@ -64,7 +66,6 @@ describe("DayCare", () => {
         const dayCare = new DayCare();
         dayCare.addChild();
       };
-
       expect(cb).toThrowError(err);
     });
   });
@@ -77,8 +78,7 @@ describe("DayCare", () => {
       const child3 = new Child("Alvin", 1);
       const mock = jest.spyOn(console, "log");
       dayCare.children = [child1, child2, child3];
-
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
       const removed = dayCare.pickupChild(child2.name);
 
       expect(removed).toBe(child2);
@@ -87,7 +87,6 @@ describe("DayCare", () => {
         dayCare.children.some(child => child.name === child2.name)
       ).toEqual(false);
       expect(mock).toBeCalledWith(`Picked up ${child2.name} from day care`);
-
       mock.mockRestore();
     });
 
@@ -98,8 +97,7 @@ describe("DayCare", () => {
       const child3 = new Child("Alvin", 1);
       const mock = jest.spyOn(console, "log");
       dayCare.children = [child1, child2, child3];
-
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
       const removed = dayCare.pickupChild("Fred");
 
       expect(typeof removed).toEqual("undefined");
