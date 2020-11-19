@@ -92,7 +92,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
-  * 📹 Let's Code {@TODO Add Algo video link}
+* 📹 Let's Code {@TODO Add Algo video link}
 
 * [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
 
@@ -108,7 +108,7 @@ In the homework you’ll create a technical tutorial explaining how a particular
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/{XX-TITLE}/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/17-CS/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
