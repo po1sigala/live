@@ -1,14 +1,5 @@
 class Character {
   constructor(name, strength, hitPoints) {
-    if (!name) {
-      throw new Error("You are missing the name.");
-    }
-    if (!strength) {
-      throw new Error("You are missing the strength.");
-    }
-    if (!hitPoints) {
-      throw new Error("You are missing the hitPoints.");
-    }
     this.name = name;
     this.strength = strength;
     this.hitPoints = hitPoints;
@@ -50,8 +41,6 @@ dijkstra.printStats();
 
 const turnInterval = setInterval(() => {
   // If either character is not alive, end the game
-  graceTurn = !graceTurn;
-
   if (!grace.isAlive() || !dijkstra.isAlive()) {
     clearInterval(turnInterval);
     console.log("Game over!");
@@ -62,4 +51,7 @@ const turnInterval = setInterval(() => {
     dijkstra.attack(grace);
     grace.printStats();
   }
+  
+  // Switch turns
+  graceTurn = !graceTurn;
 }, 2000);
