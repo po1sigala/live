@@ -12,7 +12,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * This unit introduces students to the template engine, Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their career, but instead, it is an introduction to template engines, preparation for React.js, and a way to emphasize the MVC framework.
 
-* You will be using MySQL for the majority of this unit's activities. Be sure to have your MySQL server up and running. Go ahead and create the `dish_db` database ahead of time, or demonstrate it live in class.
+* You will be using MySQL for the majority of this unit's activities. Be sure to have your MySQL server up and running. You can create the databases ahead of time, or demonstrate it live in class.
 
 * Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
