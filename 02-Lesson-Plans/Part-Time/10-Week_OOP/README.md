@@ -1,4 +1,4 @@
-# Unit 10 Instructor Overview: Object Oriented Programming (OOP)  
+# Unit 10 Instructor Overview: Object-Oriented Programming (OOP)
 
 ## Overview
 

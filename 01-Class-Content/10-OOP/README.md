@@ -1,4 +1,4 @@
-# Unit 10: Object Oriented Programming
+# Unit 10: Object-Oriented Programming (OOP)
 
 ## Overview
 
