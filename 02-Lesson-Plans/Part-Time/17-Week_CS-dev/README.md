@@ -62,6 +62,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
+* 📹 Let's Code {@TODO Add Algo video link}
+
 * [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
 
 ### Resources

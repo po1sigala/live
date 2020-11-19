@@ -92,6 +92,8 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
+* 📹 Let's Code {@TODO Add Algo video link}
+
 * [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
 
 ### Assessments
