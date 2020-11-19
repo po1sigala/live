@@ -51,7 +51,7 @@ router.get('/gallery/:id', async (req, res) => {
         ],
       });
       const gallery = dbGalleryData.get({ plain: true });
-      res.render('gallery', { gallery });
+      res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -71,7 +71,7 @@ router.get('/painting/:id', async (req, res) => {
 
       const painting = dbPaintingData.get({ plain: true });
 
-      res.render('painting', { painting });
+      res.render('painting', { painting, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
