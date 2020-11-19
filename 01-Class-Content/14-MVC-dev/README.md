@@ -60,9 +60,9 @@ You will be employer-ready if you are able to:
 
 * Use data serialization to simplify objects in order to work with necessary properties only
 
-* Implement Handlebars.js partials to reuse a Handlebars.js template.
+* Implement template partials to reuse across multiple templates
 
-* Utilize custom helper functions to format data in a Handlebars.js template.
+* Utilize custom helper functions to format data in a template.
 
 * Create and read a session on a server using `express-sessions`. 
 
