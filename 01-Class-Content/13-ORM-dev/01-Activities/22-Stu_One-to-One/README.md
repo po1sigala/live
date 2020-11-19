@@ -10,18 +10,22 @@ Work with a partner to add comments describing the functionality of the code fou
 
 * [Unsolved/routes/api/libraryCardRoutes.js](./Unsolved/routes/api/libraryCardRoutes.js)
 
-## 📝 Note(s)
+## 📝 Notes
 
-* Refer to the documentation: 
+Refer to the documentation: 
 
-  * [Sequelize docs on associations](https://sequelize.org/master/manual/assocs.html)
+[Sequelize documentation on associations](https://sequelize.org/master/manual/assocs.html)
 
 ---
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is an Entity Relationship Diagram (ERD)?
+* What is an entity-relationship diagram (ERD)?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,31 +1,35 @@
-# 📖 Replace Hard-Coded Credentials With Environment Variables
+# 📖 Replace Hardcoded Credentials With Environment Variables
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to protect my database credentials by not hard-coding them in the project files.
+* As a developer, I want to protect my database credentials by not hardcoding them in the project files.
 
 ## Acceptance Criteria
 
 * It's done when the database name, user, and password are moved to environment variables.
 
-* It's done when Sequelize is able to connect to the database using the `dotenv` npm package.
+* It's done when Sequelize can connect to the database using the `dotenv` npm package.
 
-## 📝 Note(s)
+## 📝 Notes
 
 Refer to the documentation: 
 
-* [dotenv npm package](https://www.npmjs.com/package/dotenv)
+* [npm documentation on dotenv](https://www.npmjs.com/package/dotenv)
 
 ---
 
-## 💡 Hint(s)
+## 💡 Hints
 
-* How does the `dotenv` npm package use `.env` files?
+How does the `dotenv` npm package use `.env` files?
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How can you set environment variables from the command line? 
+* How can you set environment variables from the command line? 
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

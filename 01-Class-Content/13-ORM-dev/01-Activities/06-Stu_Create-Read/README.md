@@ -1,19 +1,23 @@
 # 📐 Add Comments to Implementation of Sequelize Query Methods
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved/routes/api/bookRoutes.js](./Unsolved/routes/api/bookRoutes.js).
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/routes/api/bookRoutes.js).
 
-## 📝 Note(s)
+## 📝 Notes
 
 Refer to the documentation: 
 
-* [Sequelize docs on model querying](https://sequelize.org/master/manual/model-querying-basics.html)
+[Sequelize documentation on model querying basics](https://sequelize.org/master/manual/model-querying-basics.html)
 
 ---
 
 ## 🏆 Bonus
 
-* If you have fully completed the above tasks, here is something you and your partner can work through as an added challenge to further your knowledge:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is the difference between Sequelize's `create()` and `build()` methods?
+* What is the difference between Sequelize's `create()` and `build()` methods?
 
-* Use [Google](https://www.google.com) or another search engine to research the above.
+Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
