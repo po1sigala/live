@@ -2,23 +2,21 @@
 
 ## Overview
 
-In this unit we are going to take a look at how computer science relates to JavaScript in order to prepare students for the technical interview. This will be a departure from the normal curriculum because this unit will be so concept heavy. 
+In this unit we will take a look at how computer science relates to JavaScript in order to prepare students for the technical interview. This will be a departure from the normal curriculum in that it will be concept heavy.
 
 On days one and two, we will pick apart JavaScript and learn how our code executes at a granular level. We'll also learn about the fascinating behavior of closures and how we can leverage them in our own code. Finally, we will compare inheritance vs composition when we design our applications. 
 
-On the final day, we will take a look at search algorithms and how recursion works in JavaScript. For the mini project, you will have the opportunity to practice a mock interview with your peers. This is to get you familiar with how the technical interview process works when applying for web developer job. These topics are commonly found on a technical interview since they are foundational to improving code performance.
+On the final day, we will take a look at search algorithms and how recursion works in JavaScript. For the mini project, students will have the opportunity to practice a mock interview with their peers. This is to get students familiar with how the technical interview process works when applying for web developer job. These topics are commonly found on technical interviews since they are foundational to improving code performance.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* This unit is a departure from the type of course work students have been accustomed to. You may receive questions that may question why this material is important. Explain that computer science and advanced JavaScript are important concepts employers often ask candidates in interviews. Knowing these topics will also benefit application performance.
-
 * On Day 1, we'll explain the JavaScript execution and data structures. Review concepts related to [execution context vs scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain the JavaScript execution you will need to be familiar with terminology such as the thread of execution, execution context, scope chain, event loop, callback queue, and the call stack.
 
 * There are a few activities that use a testing library to debug or build code. The first day moves fluidly between the browser and Node.js so remind yourself when to `npm install` to run the test suites. 
 
-* On Day 2, the advanced JavaScript concepts include closures, classes, and function factories. Due to the nature of this topic, students may have some difficulty understanding these concepts. Try to review these subjects so you are prepared for questions and encourage students to have patience. Let students know the best way to understand these topics is coding practice. Be able to explain terms such as lexical environment, composition, and inheritance.
+* On Day 2, the advanced JavaScript concepts include closures, classes, and function factories. Due to the nature of this topic, students may have some difficulty understanding these concepts. Try to review these subjects so you are prepared for questions regarding terms such as lexical environment, composition, and inheritance. Always encourage students to have patience and let them know the best way to understand these topics is coding practice. 
 
 * On Day 3, we will learn about algorithms. Review the common algorithms located in the [Resources](###Resources) section. Students may struggle to understand some of the algorithms but encourage patience, practice, asking questions, and seeking resources.
 
