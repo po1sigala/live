@@ -1,0 +1,47 @@
+# Concert Flyer
+
+In this activity you will be writing code to create a function that takes in two strings: a concert flyer and a magazine. You will be checking if the words in the concert flyer could have been clipped from the magazine, e.g. if every instance of each word in the second string is found in the first string, return `true`, else return `false`.
+
+## Instructions
+
+- Open [Unsolved/concert-flyer.js](Unsolved/concert-flyer.js) in your code editor -- **this is the only file you will modify in this activity.**
+
+  - In this file you will be writing code in the body of the `concertFlyer` function to achieve the following:
+
+    - If every instance of each word in the second string is found in the first string, return `true`, else return `false`.
+
+    - For example, given the following strings:
+
+    ```js
+    var magazine = 'hello world';
+    var flyer = 'hello';
+    ```
+
+    - The following should be returned:
+
+    ```js
+    true;
+    ```
+
+    - If given the following strings:
+
+    ```js
+    var magazine = 'Whats so amazing that keeps us stargazing';
+    var flyer = 'stargazing whats keeps us so amazing';
+    ```
+
+    - The following should be returned:
+
+    ```js
+    false;
+    ```
+
+    - Since the word "Whats" has a different case in each string.
+
+    - Assume neither string will be empty and that you won't need to deal with punctuation, but you will need to worry about casing.
+
+- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
+
+  - Functions that _pass_ the tests will be denoted with a **green check mark**.
+
+  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
