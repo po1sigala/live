@@ -170,38 +170,35 @@ By the end of class, students will be able to:
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Create Node.js Application
+```md
+# 📖 Create a Node.js Application
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to write programs for use with Node.
+* As a developer, I want to be able to execute JavaScript programs with Node.js.
 
-  * As a developer, I want to make a program that logs something to the terminal. 
+* As a developer, I want to make a program that accepts a string as an input and logs it to the terminal. 
 
-  ## Acceptance Criteria
+## Acceptance Criteria
 
-  * It's done when I have created a file, `index.js`, in my working directory.
-    
-  * It's done when I have written JavaScript to log the string "Hellooo, Node!"
+* It's done when I have created a file, `index.js`, in my working directory.
+  
+* It's done when I have written JavaScript to log the string "Hellooo, Node!"
 
-  * It's done when I have run the program from the command line using `node index.js`.
+## 📝 Notes
 
-  * It's done when I have confirmed the expected output.
+Refer to the documentation:
 
-  ## 💡 Hints
+[Node.js documentation](https://nodejs.org/en/docs/)
 
-  Is there a difference in the way we code for the browser's developer console?
+## 🏆 Bonus
 
-  ## 🏆 Bonus
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-  * What happens when you log `window`? What happens when you try to use `prompt`, `alert`, or `confirm`?
-    
-  Use [Google](https://www.google.com) or another search engine to research this.
-
-  ```
+* What happens when you log `window`? What happens when you try to use `prompt`, `alert`, or `confirm`?
+  
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
@@ -215,13 +212,13 @@ By the end of class, students will be able to:
 
 * Open `02-Stu_Hello-Node/Solved/index.js` in your IDE and explain the following: 
 
-  * When we run the finished JavaScript, we should have something like the following example:
+  * We use `console.log()` to print out the string "Hellooo, Node!" in our terminal.
 
-  ```js
-  console.log("Hellooo, Node!");
-  ```
+    ```js
+    console.log("Hellooo, Node!");
+    ```
 
-  * 🔑 When we examine the output of the console log, we notice that it logs our string properly.
+  * 🔑 When we run `node index.js` and examine the output of the console log, we notice that it logs our string properly.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -326,21 +323,27 @@ By the end of class, students will be able to:
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 🏗️ Implement Arrow Functions
+  # 🐛 Fix Implementation of Arrow Functions
 
-  Work with a partner to implement the following user story:
+  Work with a partner to resolve the following issue(s):
 
-  * As a developer, I want to be able to use newer arrow function syntax.
+  * As a user, I want to run a script that will update a movie queue.
 
-  * As a developer, I want be able to create and read code using the most modern syntax rules.
+  ## Expected Behavior
 
-  ## Acceptance Criteria
+  When a user runs the script, it will add and remove movies from the queue and display the movies currently in the queue.
 
-  * It's done when I have reviewed the content of [Unsolved/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/04-Stu_Arrow-Function-Practice/Unsolved/index.js).
-    
-  * It's done when I have refactored the code to use arrow functions _where suitable_.
+  ## Actual Behavior
 
-  * It's done when I have ran the refactored code with no errors.
+  The script exits out with an error message.
+
+  ## Steps to Reproduce the Problem
+
+  1. Navigate to the `Unsolved` folder from the command line.
+
+  2. Run `node index.js`.
+
+  3. Note the error that is printed.
 
   ## 💡 Hints
 
@@ -353,7 +356,6 @@ By the end of class, students will be able to:
   * How can you shorten the arrow function syntax even further with implicit return statements?
     
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -376,42 +378,48 @@ By the end of class, students will be able to:
 
 * Open `04-Stu_Arrow-Function-Practice/Solved/index.js` in your IDE and explain the following: 
 
-  * Even though we have converted a few examples to use arrow functions, the code works exactly as it did before&mdash;as shown in the following example:
+  * The following `funnyCase()` function is able to use arrow syntax, because there is no `this` context that needs to be preserved:
 
-  ```js
-  var funnyCase = string => {
-    var newString = "";
-    for (var i = 0; i < string.length; i++) {
-      if (i % 2 === 0) newString += string[i].toLowerCase();
-      else newString += string[i].toUpperCase();
-    }
-    return newString;
-  };
-  ```
+    ```js
+    var funnyCase = string => {
+      var newString = "";
+      for (var i = 0; i < string.length; i++) {
+        if (i % 2 === 0) newString += string[i].toLowerCase();
+        else newString += string[i].toUpperCase();
+      }
+      return newString;
+    };
+    ```
 
-  * 🔑  We can omit parentheses around arrow functions if there is only one parameter.
-
-    * **NOTE:** This does not work if the arrow function has multiple parameters.
-
-  * Please remind students that all of this is optional. The old syntax is not only valid but accepted, as shown in the following example:
+  * 🔑 When using arrow functions, we can use an implied return to reduce the code even further, as shown in the following example:
   
-  ```js
-  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      ```js
+      var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  var doubled = map(numbers, element => element * 2);
-  ``` 
+      var doubled = map(numbers, element => element * 2);
+      ``` 
+
+  * 🔑 In the following example, we had to convert the arrow functions back to regular functions to preserve the context of `this` in the object:
+  
+      ```js
+      var netflixQueue = {
+        queue: [
+          "Mr. Nobody",
+          "The Matrix",
+          "Eternal Sunshine of the Spotless Mind",
+          "Fight Club"
+        ],
+        watchMovie: function() {
+          this.queue.pop();
+        },
+      };
+      ``` 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ In the following example, why didn't we convert the functions in the `netflixQueue` object to arrow functions?
+  * ☝️ Why would you use arrow functions?
 
-  ```js
-    watchMovie: function() {
-      this.queue.pop();
-    },
-  ```
-
-  * 🙋 When working with objects and creating methods, we don't want to use arrow functions, because the `this` context will change and therefore break the implementation.
+  * 🙋 The syntax is easier to write and makes for cleaner-looking code.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -616,35 +624,28 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Implement Functional Loops
+```md
+# 📐 Add Comments to Implementation of Functional Loops
 
-  Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [filter.js](./Unsolved/filter.js) and [map.js](./Unsolved/map.js).
 
-  * As a developer, I want to implement `map()` and `filter()` to solve problems instead of using a `for` loop.
+## 📝 Notes
 
-  ## Acceptance Criteria
+Refer to the documentation: 
 
-  * It's done when I have opened the `filter.js` file, mapped through `originalArray`, and created a new array containing only its prime numbers using `filter()`.
+* [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-  * It's done when I have used `filter()` to return an array containing only its numbers larger than five.
+* [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-  * It's done when I have opened `map.js` and used `map()` to map through `originalArray` and set the result equal to a new `tripledArray` array.
+---
 
-  * It's done when I have mapped through the `originalArray` and returned a new array with the results `odd` or `even`.
+## 🏆 Bonus
 
-  ## 💡 Hints
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  How can you use the term immutable data in a definition of `map()` and `filter()`?
+* How can we implement arrow functions as callbacks in this activity?
 
-  ## 🏆 Bonus
-
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-  * How can we implement arrow functions as callbacks in this activity?
-
-  Use [Google](https://www.google.com) or another search engine to research this.
-
+Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 ### 13. BREAK (30 min)
@@ -1117,33 +1118,25 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Implement and Use `fs.appendFile()`
+```md
+# 📐 Add Comments to Implementation of `fs.appendFile()`
 
-  Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/index.js).
 
-  * As a developer, I want to be able to add to a file without overwriting the existing content.
+## 📝 Notes
 
-  ## Acceptance Criteria
+Refer to the documentation: 
 
-  * It's done when I have created a `index.js` file that accepts a command-line argument.
+[Node.js documentation on the fs module](https://nodejs.org/api/fs.html#fs_fs_appendfile_path_data_options_callback)
 
-  * It's done when the program takes the input from the user and *appends* it to the file.
+## 🏆 Bonus
 
-  * It's done after I have run the program, passed in some text, and confirmed that it appended the text to `log.txt`.
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  ## 💡 Hints
+* What is a ternary operator?
 
-  Going by naming convention alone, if `fs.readFile` reads a file and `fs.writeFile` writes to a file, what do you think the method for appending is?
-
-  ## 🏆 Bonus
-
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-  * How can you add text from additional arguments on a new line?
-
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
@@ -1159,31 +1152,38 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `fs.appendFile`
 
+  * ✔️ ternary operator
+
 * Open `14-Stu_appendFile/Solved/index.js` in your IDE and explain the following: 
 
-* 🔑 `appendFile` appends text to file rather than overwriting the file.
- 
- * When we run the command-line application with the following code, we should see this text appended to the file in `14-Stu_appendFile/Solved/log.txt`:
+  * In our command line, if we run `node index.js "First"`, we see the message "Commit logged!".
+
+  * When we check the newly created `log.txt` file, we see the word "First" on line 1.
+
+  * If we run the following commands in our command line, we should see each message appended to the `log.txt` file
 
   ```sh
-    node index.js "first"
-    node index.js "commit early and often"
-    node index.js "everyone wants a log"
+  node index.js "commit early and often"
+  node index.js "everyone wants a log"
   ```
 
-  * Now the application is adding text to the file rather than overwriting it.
+  * `fs.appendFile` appends text to file rather than overwriting the file.
 
-  * 🔑  This application is very similar to the previous demo, but here we have refactored it to use `appendFile` rather than `writeFile`, as shown in the following code:
+  * 🔑 The first argument is the path; the filename of where to append the text. If the file doesn't exist yet, it will create it. The second argument is the data which is the string of text to append to the file. Here we used `${process.argv[2]}`. And finally the callback function.
 
   ```js
-  fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
-    if (err) {
-    console.log(err);
-    } else {
-    console.log("Commit logged!");
-    }
-  });
+  fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
+    err ? console.error(err) : console.log('Commit logged!')
+  );
   ```
+
+  * 🔑 Notice we used a ternary operator instead of an `if` statement. A ternary operator takes in a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.
+  
+  ```js
+  err ? console.error(err) : console.log('Commit logged!')
+  ```
+
+  * It isn't crucial that we understand and use this now. Think of it as a sneak peak into another way we can write `if` statements.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
