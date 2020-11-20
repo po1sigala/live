@@ -88,7 +88,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [03: Concert Flyer](../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer)
 
-  * 📹 Let's Code {@TODO Add Algo video link}
+  * 📹 [Let's Code Concert Flyer!](https://2u-20.wistia.com/medias/42ac9axtbq)
 
 ### Assessments
 
