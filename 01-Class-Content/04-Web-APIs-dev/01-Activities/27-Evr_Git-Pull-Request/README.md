@@ -1,10 +1,8 @@
 # Git Pull Requests
 
-In this activity, we will walk through a situation to learn about merge conflicts and how to handle them using Git and GitHub. Merge conflicts arise when one version of your project looks one way and another version looks slightly different, causing Git to prompt you to address and confirm which version is correct so that you can move on.
+A pull request is a tool that allows us to collaborate on features after they are finished and before they are merged into a development branch or main code base. Once a feature branch is finished and ready for review, we can open a pull request and invite team members to review the code, comment on it, and even push their own commits. Pull requests not only provide a chance to catch bugs before merging, but they are also an important opportunity for developers to talk about features and decide if any modifications need to be made before moving forward.
 
-To learn how to identify and fix merge conflicts, we'll first create a repository on GitHub and clone it to our machines, then we'll force the local and remote (GitHub) repositories to diverge by making changes to the same file in each location. When we try to get them back in sync, we'll be confronted with a merge conflict.
-
-This specific type of conflict is not as common as others you will face throughout your career as a developer. These types of conflicts typically arise when we collaborate with others and the projects become more complex, so this is a good opportunity to learn how conflicts may come about and how we can address them without the increased pressure of a larger application.
+In this activity, we will practice opening a pull request for a feature branch. For now, you will only leave comments and a review on your own code. In future activities, you will learn more about collaboration on github and have the chance to work with a team on a repo. Finally, we will merge the pull request and delete the feature branch.
 
 ## Instructions
 
@@ -116,7 +114,7 @@ This specific type of conflict is not as common as others you will face througho
 
 * Ask an instructor or TA if you get stuck or have any questions!
 
-* Check the [Atlassian guide on Git merge conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) for reference.
+* Check the [Atlassian guide on Git Pull Requests](https://www.atlassian.com/git/tutorials/making-a-pull-request) for reference.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
