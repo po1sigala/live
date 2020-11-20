@@ -62,9 +62,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [02: Permutation SubString](../../../01-Class-Content/14-MVC/03-Algorithms/02-permutation-substring/)
 
-  * [03: Concert Flyer](@TODO: ADD LINK)
+  * [03: Concert Flyer](../../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer/)
 
-    * [📹 Concert Flyer](@TODO: ADD LINK)
+    * [📹 Let's Code Concert Flyer](https://2u-20.wistia.com/medias/42ac9axtbq)
 
 ### Resources
 
