@@ -31,9 +31,6 @@ class Word {
       }
     });
 
-    // Print the word guessed so far--because we set the method for toString,
-    //  JavaScript will automatically concatenate this even if we don't call toString
-    console.log("\n" + this + "\n");
     // return whether we found a letter
     return foundLetter;
   }

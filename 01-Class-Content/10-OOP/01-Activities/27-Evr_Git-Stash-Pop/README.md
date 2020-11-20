@@ -71,7 +71,7 @@ Please move or remove them before you switch branches.
 Aborting
 ```
 
-This happens because we have a conflicting file (`newFile.js`) that would be overwritten by the checkout. Git will only try to merge files that are being tracked.
+This happens because we have a conflicting file (`newFile.js`) that would be overwritten by the checkout. If we were to commit `newFile.js`, then Git would know to swap them out, but we're not ready to commit yet.
 
 This is when we can use `git stash` to put away our changes so that we can checkout the `dev` branch. Run the following commands to see what happens:
 
