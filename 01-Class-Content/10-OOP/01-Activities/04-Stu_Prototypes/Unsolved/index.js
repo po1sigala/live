@@ -1,16 +1,16 @@
 // TODO: Add a comment describing what kind of function this is
-function Character(name, profession, age, strength, hitpoints) {
+function Character(name, type, age, strength, hitpoints) {
   this.name = name;
-  this.profession = profession;
+  this.type = type;
   this.age = age;
   this.strength = strength;
   this.hitpoints = hitpoints;
 }
 
-// TODO: Add a comment describing the purpose of .prototype in this method declaration
+// TODO: Add a comment describing the purpose of `.prototype` in this method declaration
 Character.prototype.printStats = function () {
   console.log(
-    `Name: ${this.name}\nProfession: ${this.profession}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
+    `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
   );
   console.log('\n-------------\n');
 };
@@ -38,7 +38,6 @@ Character.prototype.levelUp = function () {
   this.hitpoints += 25;
 };
 
-// TODO: Add a comment here which describes what is happening with the following two variables
 const warrior = new Character('Crusher', 'Warrior', 25, 10, 75);
 const rogue = new Character('Dodger', 'Rogue', 23, 20, 50);
 
@@ -46,8 +45,14 @@ warrior.printStats();
 rogue.printStats();
 
 rogue.attack(warrior);
+
+// TODO: Add a comment describing what you expect to see printed in the console
 warrior.printStats();
+
+// TODO: Add a comment describing what you expect to see printed in the console
 warrior.isAlive();
 
 rogue.levelUp();
+
+// TODO: Add a comment describing what you expect to see printed in the console
 rogue.printStats();

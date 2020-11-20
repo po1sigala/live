@@ -1,7 +1,7 @@
 // Constructor function which can take in a series of values and create objects
-function Character(name, profession, age, strength, hitpoints) {
+function Character(name, type, age, strength, hitpoints) {
   this.name = name;
-  this.profession = profession;
+  this.type = type;
   this.age = age;
   this.strength = strength;
   this.hitpoints = hitpoints;
@@ -10,12 +10,12 @@ function Character(name, profession, age, strength, hitpoints) {
 // Associates the method printStats() to the Character constructor, which prints all of the stats for a character
 Character.prototype.printStats = function () {
   console.log(
-    `Name: ${this.name}\nProfession: ${this.profession}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
+    `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
   );
   console.log('\n-------------\n');
 };
 
-// Method which determines if "hitpoints" are less than zero and returns a boolean depending on the outcome
+// Method which determines if "hitpoints" are greater than zero and returns a boolean depending on the outcome
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
@@ -38,7 +38,6 @@ Character.prototype.levelUp = function () {
   this.hitpoints += 25;
 };
 
-// Creates two unique characters using the "character" constructor
 const warrior = new Character('Crusher', 'Warrior', 25, 10, 75);
 const rogue = new Character('Dodger', 'Rogue', 23, 20, 50);
 
@@ -46,8 +45,9 @@ warrior.printStats();
 rogue.printStats();
 
 rogue.attack(warrior);
-warrior.printStats();
-warrior.isAlive();
+
+warrior.printStats(); // => Crusher HitPoints: 55
+warrior.isAlive(); // => Crusher is still alive!
 
 rogue.levelUp();
-rogue.printStats();
+rogue.printStats(); // => Dodger HitPoints: 75
