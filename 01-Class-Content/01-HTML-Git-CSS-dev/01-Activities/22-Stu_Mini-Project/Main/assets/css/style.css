@@ -8,6 +8,7 @@ body {
     background-color: #FDF8F5;
     font-family: "Goudy Bookletter 1911", sans-serif;
     color: #4F4846;
+    position: relative
 }
 
 li {
@@ -16,6 +17,9 @@ li {
     text-decoration: none;
     font-size: 20px;
     
+}
+main {
+    padding-bottom: 60px;
 }
 
 h1,
@@ -54,6 +58,11 @@ footer {
     text-align: center;
     color: #FDF8F5;
     font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 10px solid #4F4846;
+    
 }
 
 img {
@@ -65,6 +74,7 @@ section {
     border-top: 3px solid #DDAF94;
     background-color:  #E8CEBF;
     margin-bottom: 0;
+    padding: 20px 10px 40px 10px;
 }
 form {
     /* Center the form on the page */
@@ -72,7 +82,7 @@ form {
     width: 500px;
     /* Form outline */
     padding: 10px;
-    border: 1px solid #CCC;
+    border: 5px solid #DDAF94;
     border-radius: 1em;
   }
 
@@ -87,14 +97,14 @@ form {
   textarea {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
-    font: 1em sans-serif;
+    font: 16px;
   
     /* Uniform text field size */
     width: 300px;
     box-sizing: border-box;
   
     /* Match form field borders */
-    border: 1px solid #999;
+    border: 1px solid #4F4846;
   }
 
   textarea {
