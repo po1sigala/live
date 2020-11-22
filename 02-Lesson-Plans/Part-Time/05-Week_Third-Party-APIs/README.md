@@ -28,6 +28,8 @@ Next unit will cover server-side APIs. It is recommended that you try to fill an
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
 * [05.1 Lesson Plan](01-Day_jQuery/05.1-LESSON-PLAN.md)
