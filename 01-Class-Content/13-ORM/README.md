@@ -98,7 +98,7 @@ In the homework for this unit, you will create an e-commerce back end. You will 
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/13-ORM/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
@@ -108,7 +108,7 @@ In the next unit, we will return to full-stack development and explore an archit
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) @TODO Check link
+  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
   * [Sequelize documentation](https://sequelize.org/master/)
 
