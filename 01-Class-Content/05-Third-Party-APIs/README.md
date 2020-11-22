@@ -68,9 +68,13 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 * [Unit 05 Assessment](https://forms.gle/c4pv2qUatMXs5rzZA)
 
-## Homework: Day Planner
+## Homework
 
 In the homework for this unit, you'll create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS, powered by jQuery.
+
+## Career Connection
+
+This week's Career Services material can be found in this unit's [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
