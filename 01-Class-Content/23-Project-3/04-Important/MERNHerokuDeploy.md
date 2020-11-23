@@ -4,16 +4,11 @@ This guide will take you through the process of deploying a full MERN Stack appl
 
 > **Note**: Please ensure your app functions properly locally with no errors. Fix any errors that are occurring or you can expect your application to not deploy.
 
-We have also created a video guide that you can use along with this guide to help you through the process.
-[MERN to Heroku.](https://www.youtube.com/watch?v=qXIG8iKO7Fo&feature=youtu.be&list=PLOFmg4xbN_TPrB6w4rThsFanVxJI_SfER)
-
-> **Note:** The above guide uses mLab through Heroku to provision a MongoDB database. As of November 2020, this will no longer be an option, so please refer to our [Mongo Atlas deployment guide](./MongoAtlas-Deploy.md) for updated instructions on how to deploy to Heroku with MongoDB. 
-
 * Many of the steps associated with this guide are similar to other deployment guides you were previously provided, so those steps will not be covered. If you need these again, check your class repository!
 
 1. The first thing you will need is a GitHub Repository. When creating this repository be sure to create it with a Node `.gitignore` file. This is so we can ignore our `node_modules` folder since we don't want that being tracked by git.
 
-2. Now that we have created a repository, go to [Heroku](https://www.heroku.com) and login to your account. Create a new app and follow the steps from our GitHub Heroku Connect guide to link your GitHub Repo to your Heroku app.
+2. Now that we have created a repository, go to [Heroku](https://www.heroku.com) and login to your account. Create a new app and follow the steps from our [GitHub Heroku Connect guide](https://github.com/coding-boot-camp/fullstack-ground/blob/master/01-Class-Content/15-Project-2/04-Important/GitHubHerokuConnect.md) to link your GitHub Repo to your Heroku app.
 
   > **Note:** Be sure to `Enable Automatic Deployments` after linking your Repo with your Heroku App.
 
