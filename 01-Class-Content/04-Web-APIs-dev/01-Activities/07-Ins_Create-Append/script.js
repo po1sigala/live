@@ -22,7 +22,7 @@ if (nextTag === true) {
     alert("please enter a valid tag");
   } else {
     var secondTag = document.createElement(secondTagName);
-    secondTag.textContent = "This is our second tag via prompts, it's a " + secondTagName;
+    secondTag.textContent = "This is our second tag via prompts, it's a " + secondTagName + ".";
     document.body.appendChild(secondTag);
   }
 }
