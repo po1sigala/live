@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As an developer, I want to be able to write code to mock and spy on the `fs` module to ensure its called when expected with the correct arguments.
+* As a developer, I want to be able to write code to mock and spy on the `fs` module to ensure it's called when expected with the correct arguments.
 
 ## Acceptance Criteria
 

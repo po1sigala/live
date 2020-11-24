@@ -1,6 +1,5 @@
 function Logger() {
-  // This is just a way of adding methods to the prototype once in a loop
-  // Rather than writing them all out for each color
+  // Here we add methods to the prototype once in a loop rather than writing them all out for each color
   if (!this.init) {
     Logger.prototype.init = true;
 
@@ -16,8 +15,7 @@ function Logger() {
     };
 
     for (const key in colors) {
-      // Each color method calls console.log with the color as the first argument,
-      // followed by any additional arguments
+      // Each color method calls console.log with the color as the first argument,followed by any additional arguments.
       Logger.prototype[key] = function(...args) {
         console.log(colors[key], ...args);
       };
