@@ -9,7 +9,7 @@ Algo.prototype.isPalindrome = function(str) {
 };
 
 Algo.prototype.capitalize = function(str) {
-  // TODO: Your code here
+  // TODO: Your code here 
 };
 
 module.exports = Algo;
