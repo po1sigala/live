@@ -1,40 +1,46 @@
-# 🏗️ Write and Implement Classes
+  # 🏗️ Write and Implement Classes
 
-Work with a partner to implement the following user story:
+  Work with a partner to implement the following user story:
 
-* As a user, I want a command line RPG that allows two characters to battle each other.
+  * As a user, I want a command line RPG that allows two characters to battle each other.
 
-## Acceptance Criteria
+  ## Acceptance Criteria
 
-* It's done when a new `Character` can be created with the following properties:
+  * It's done when a new `Character` can be created with the following properties:
 
-  * `name`
+    * `name` - a string containing the character's name
 
-  * `strength`
+    * `strength` - a number indicating how much damage the character's attacks will inflict
 
-  * `hitPoints`
+    * `hitPoints` - a number that indicates how many hit points the character has
 
-* It's done when each `Character` has the following methods:
+  * It's done when each `Character` has the following methods:
 
-  * `printStats()` that logs the character's information
+    * `printStats()` that logs the character's name, strength and hitpoints
 
-  * `isAlive()` that returns `true` or `false` depending on the character's `hitPoints`
+    ```js
+    console.log(`Stats for ${this.name} are:\n`)
+    console.log(`Each attack will do ${this.strength} damage`)
+    console.log(`${this.name} has ${this.hitPoints} hit points remaining`)
+    ```
 
-  * `attack()` that accepts an opposing `Character` object and subtracts the current character's `strength` from the opponent's `hitPoints`
+    * `isAlive()` that returns a boolean based on whether or not a character's "hitpoints" are <= 0
 
-* It's done when I can run `node character.js` and see two instances of `Character` battle until one of them is defeated.
+    * `attack()` that accepts an opposing `Character` object and subtracts the current character's `strength` from the opponent's `hitPoints`
 
-## 💡 Hints
+  * It's done when I can run `node character.js` and see two instances of `Character` battle until one of them is defeated.
 
-* How can we start small? Can we benefit from first trying to make one character attack another until the game is over?
+  ## 💡 Hints
 
-## 🏆 Bonus
+  * How can we start small? Can we benefit from first trying to make one character attack another until the game is over?
 
-If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  ## 🏆 Bonus
 
-  * How can we add validation to ensure that each character is provided the proper 3 arguments when created?
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-Use [Google](https://www.google.com) or another search engine to research this.
+    * How can we add validation to ensure that each character is provided the proper 3 arguments when created?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
