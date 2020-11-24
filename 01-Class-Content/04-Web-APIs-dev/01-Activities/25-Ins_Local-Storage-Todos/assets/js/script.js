@@ -16,7 +16,7 @@ function saveLastGrade() {
 }
 
 function renderLastGrade() {
-  // Use JSON.parse() to covert text to JavaScript object
+  // Use JSON.parse() to convert text to JavaScript object
   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
   // Check if data is returned, if not exit out of the function
   if (lastGrade !== null) {
