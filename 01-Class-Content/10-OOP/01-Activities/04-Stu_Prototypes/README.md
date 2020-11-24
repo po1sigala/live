@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[MDN Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+[MDN Web Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
 ## 🏆 Bonus
 
