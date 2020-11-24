@@ -6,7 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when after the countdown ends, words to the provided poem appear on the screen one at a time at the interval provided by the user.
+* It's done when the countdown appears on the screen that indicates the number of seconds remaining before the speed reader begins.
+
+* It's done when after the countdown ends, words to the provided poem appear on the screen.
+
+* It's done when the words appear one at a time at the interval provided by the user.
 
 ## 📝 Notes
 
