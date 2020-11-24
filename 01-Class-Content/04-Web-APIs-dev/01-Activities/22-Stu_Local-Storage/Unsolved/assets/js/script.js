@@ -13,11 +13,7 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
-  // Fill in code here to retrieve the last email and password.
-  // If they are null, return early from this function
-  // Else set the text of the userEmailSpan and userPasswordSpan 
-  // to the corresponding values form local storage
-  
+  // TODO: Retrieve the last email and password and render it to the page
 }
 
 signUpButton.addEventListener("click", function(event) {
@@ -33,6 +29,6 @@ signUpButton.addEventListener("click", function(event) {
   } else {
     displayMessage("success", "Registered successfully");
 
-  // Save email and password to localStorage and render the last registered.
+  // TODO: Save email and password to localStorage and render the last registered user
   }
 });

@@ -1,4 +1,4 @@
-# 🏗️ Create a Speed Reader
+# 📖 Create a Speed Reader
 
 Work with a partner to implement the following user story:
 
@@ -6,7 +6,19 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when after the countdown ends, words to the provided poem appear on the screen one at a time at the interval provided by the user.
+* It's done when the countdown appears on the screen that indicates the number of seconds remaining before the speed reader begins.
+
+* It's done when after the countdown ends, words to the provided poem appear on the screen.
+
+* It's done when the words appear one at a time at the interval provided by the user.
+
+## 📝 Notes
+
+Refer to the documentation: 
+
+[MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+[MDN Web Docs on WindowOrWorkerGlobalScope.clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
 
 ## Assets
 
@@ -14,11 +26,9 @@ The following image demonstrates the web application's appearance and functional
 
 ![Demo](./images/demo1.gif)
 
----
-
 ## 💡 Hints
 
-What property can be used add text to an HTML element with JavaScript?
+What property can be used to add text to an HTML element with JavaScript?
 
 ## 🏆 Bonus
 

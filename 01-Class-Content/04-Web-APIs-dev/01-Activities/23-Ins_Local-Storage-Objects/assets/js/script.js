@@ -14,5 +14,14 @@ var studentGrade = {
 };
 
 localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+renderMessage();
 
 });
+
+function renderMessage() {
+  var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
+  if (lastGrade !== null) {
+    document.querySelector(".message").textContent = lastGrade.student + 
+    " received a/an " + lastGrade.grade
+  }
+}

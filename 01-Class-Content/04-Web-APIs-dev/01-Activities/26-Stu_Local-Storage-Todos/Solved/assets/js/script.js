@@ -5,8 +5,6 @@ var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = [];
 
-init();
-
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
   todoList.innerHTML = "";
@@ -42,11 +40,11 @@ function init() {
 }
 
 function storeTodos() {
-  // Stringify and set "todos" key in localStorage to todos array
+  // Stringify and set key in localStorage to todos array
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// When form is submitted...
+// Add submit event to form
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -66,11 +64,11 @@ todoForm.addEventListener("submit", function(event) {
   renderTodos();
 });
 
-// When a element inside of the todoList is clicked...
+// Add click event to todoList element
 todoList.addEventListener("click", function(event) {
   var element = event.target;
 
-  // If that element is a button...
+  // Checks if element is a button
   if (element.matches("button") === true) {
     // Get its data-index value and remove the todo element from the list
     var index = element.parentElement.getAttribute("data-index");
@@ -81,3 +79,7 @@ todoList.addEventListener("click", function(event) {
     renderTodos();
   }
 });
+
+// Calls init to retrieve data and render it to the page on load
+init()
+
