@@ -1,12 +1,12 @@
 // Promise example using a real-life promise
-// The real-life promise in this scenario is a kid asking his parents for a Nintendo Switch
+// The real-life promise in this scenario is a child asking his parents for a Nintendo Switch
 
-const goodGrades = false;
+const choresDone = true;
 
 // Promise
 const willGetSwitch = new Promise((resolve, reject) => {
   // Check for a desireable outcome, if so resolve the promise
-  if (goodGrades) {
+  if (choresDone) {
     const reward = {
       name: 'Nintendo Switch',
       desired: true,
@@ -15,7 +15,7 @@ const willGetSwitch = new Promise((resolve, reject) => {
 
     // Otherwise reject the promise
   } else {
-    const issue = new Error('Child has bad grades');
+    const issue = new Error('Child did not finish chores as promised');
     reject(issue);
   }
 });

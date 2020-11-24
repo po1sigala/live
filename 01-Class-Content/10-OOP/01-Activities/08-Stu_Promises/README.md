@@ -1,25 +1,54 @@
-# 🏗️ Refactor Function to use Promises
+# 🐛 Refactor Function to use Promises
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to be able to write asynchronous functions in a cleaner and easier to read fashion using promises.
+* Refactor the `practiceCoding()` function to use promises instead of callbacks.
 
-* As a developer, I want to have the ability to refactor functions that use callbacks to instead return a promise. 
+## Expected Behavior
 
-## Acceptance Criteria
+* When the user enters `node index.js coding`, the following should be logged in the console:
 
-* It's done when I refactor the function using callbacks, `practiceCoding`, inside of `practiceCodingPromise`.
+  ```
+  Current user activity: coding
+  We are coding in promises!
+  ```
 
-* It's done when `practiceCodingPromise` returns a promise.
+* When the user enters `node index.js nothing`, the following should be logged in the console:
 
-* It is complete when the function `practiceCodingPromise` is called using the `.then()` and `.catch()` methods. 
+  ```
+  Current user activity: nothing
+  Promise rejected: Error: Coding stopped - Student is distracted
+  ```
 
+## Actual Behavior
+
+* When the user enters `node index.js coding`, the following is logged in the console:
+
+  ```
+  Current user activity: coding
+  We are coding!
+  ```
+
+* When the user enters `node index.js nothing`, the following is logged in the console.
+
+  ```
+  Current user activity: nothing
+  { issue: 'Distracted', message: 'Coding stopped' }
+  ```
+
+## Steps to Reproduce the Problem
+
+1. Run `node index.js coding` to see the message logged in the console.
+
+2. Run `node index.js nothing` to see the error message logged in the console.
+
+---
 
 ## 💡 Hints
 
-* How can we use the resolve method to handle a fulfillment of the promise?
+* How can we use the resolve method to handle the fulfillment of a promise?
+
 * How can we use the reject method to handle the failure of a promise?
-* How do promises in real life relate to promises in javascript?
 
 ## 🏆 Bonus
 
