@@ -38,13 +38,3 @@ Project presentations are on the third day of next unit. Remember, students must
 ### Time Tracker(s)
 
 * [07.1 Time Tracker](https://drive.google.com/open?id=1i6RK5P8ZPQEwF8rcis89Er9LF61jPUTy)
-
-## Algorithms
-
-  * [01-swap-case](../../../01-Class-Content/07-Project-1/03-Algorithms/01-swap-case)
-
-  * [02-longest-word](../../../01-Class-Content/07-Project-1/03-Algorithms/02-longest-word)
-
-  * [03-acronym-builder](../../../01-Class-Content/07-Project-1/03-Algorithms/03-acronym-builder)
-
-  * [04-reverse-words](../../../01-Class-Content/07-Project-1/03-Algorithms/04-reverse-words)
