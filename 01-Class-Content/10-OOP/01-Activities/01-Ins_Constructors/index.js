@@ -17,7 +17,7 @@ const cats = new Animal(false, 'Meow!');
 dogs.makeNoise();
 cats.makeNoise();
 
-// If we want, we can change an objects properties after they're created
+// If we want, we can change an object's properties after they're created
 // cats.raining = true;
 // cats.makeNoise();
 
