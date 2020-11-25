@@ -35,16 +35,3 @@ Project presentations are on the third day of next unit. Remember, students must
 ### Slide Decks
 
   * [07.1: Project unit](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
-
-## Algorithms
-
-  * [01-swap-case](../../../01-Class-Content/07-Project-1/03-Algorithms/01-swap-case)
-
-  * [02-longest-word](../../../01-Class-Content/07-Project-1/03-Algorithms/02-longest-word)
-
-  * [03-acronym-builder](../../../01-Class-Content/07-Project-1/03-Algorithms/03-acronym-builder)
-
-  * [04-reverse-words](../../../01-Class-Content/07-Project-1/03-Algorithms/04-reverse-words)
-
----
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
