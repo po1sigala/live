@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create new objects quickly using a constructor function.
+* As a developer, I want to create new objects using a constructor function.
 
 ## Acceptance Criteria
 

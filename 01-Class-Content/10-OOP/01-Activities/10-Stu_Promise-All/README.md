@@ -51,7 +51,7 @@ Response from Promise.all(): [
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is the state of each promise after the `setTimeout()` has begun but before it has ended?
+* What are the three different states that a promise can be in at any given time?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
