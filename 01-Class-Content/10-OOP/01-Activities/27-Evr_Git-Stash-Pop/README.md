@@ -44,20 +44,20 @@ git add newFile.js
 git commit -m "newFile is tracked in dev"
 ```
 
-Now that we have a `newFile.js` file that is being tracked in the `dev` branch, let's checkout to master and verify the files with the following commands:
+Now that we have a `newFile.js` file that is being tracked in the `dev` branch, let's checkout to main and verify the files with the following commands:
 
 ```sh
-git checkout master
+git checkout main
 ls
 ```
 
-Notice that we don't have a `newFile.js` file in `master`, so let's create one with the following command:
+Notice that we don't have a `newFile.js` file in `main`, so let's create one with the following command:
 
 ```sh
 touch newFile.js
 ```
 
-Let's say we're not ready to commit this file to `master` yet, but we need to switch to the `dev` branch again. Try to do so with the following command:
+Let's say we're not ready to commit this file to `main` yet, but we need to switch to the `dev` branch again. Try to do so with the following command:
 
 ```sh
 git checkout dev
@@ -89,7 +89,7 @@ git checkout dev
 Don't worry, the stash isn't lost. We can use additional commands to bring those changes back. Run the following commands to see this in action:
 
 ```sh
-git checkout master
+git checkout main
 git stash pop
 ```
 
