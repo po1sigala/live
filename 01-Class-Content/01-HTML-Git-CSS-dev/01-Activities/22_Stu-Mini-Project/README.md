@@ -1,59 +1,68 @@
-# Unit 04 Mini-Project: Word Guess
+# Unit 02 Mini-Project: Landing Page
 
-In this activity, you will work with a group to build a game using JavaScript and Web APIs.
+In this activity, you will work with a group to build a landing page using HTML and CSS.
 
 ## Instructions
 
 The completed application should meet the following criteria:
 
-* As a user, I want to start the game by clicking on a button. 
+* As a client, I want to view a single web page to collect visitor's contact information.
 
-* As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
+* As a client, I want the landing page to have a header and footer.
 
-* As a user, I want the game to be timed. 
+* As a client, I want the landing page to have an image with a caption.
 
-* As a user, I want to win the game when I have guessed all the letters in the word.
+* As a client, I want the landing page to have a contact form.
 
-* As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
-
-* As a user, I want to see my total wins and losses on the screen. 
+* As a client, I want the landing page to have a polished and accessible UI.
 
 ### Specifications
 
-* When a user presses down on a letter key, the user's guess should be captured as a key event.
+* Uses semantic HTML elements.
 
-* When a user correctly guesses a letter, the corresponding blank `_` should be replaced by the letter. For example, if the user correctly selects `a`, then `a _ _ a _ ` should appear. 
+* Uses universal, element and class selectors in CSS.
 
-* When a user wins or loses a game, a message should appear and the timer should stop. 
+* Uses at least three different, contrasting colors in design.
 
-* When a user clicks the start button, the timer should reset. 
+* Uses a single font and font family for all text on page.
 
-* When a user refreshes or returns to the brower page, the win and loss counts should persist.
+* Uses at least two heading `<h1>...<h6>` tags.
+
+* The header should be fixed to the top of the page on scroll.
+
+* The header should contain a navigation bar with three links that display inline including a `contact` link.
+
+* When the `contact` link is clicked, the page should jump directly to the contact form.
+
+* The contact form should include `input` elements for name and email.
+
+* The contact form should include `textarea` elements for message.
+
+* The contact form should include a submit `button`.
+
+* The image should include a descriptive `alt` attribute.
 
 ## 💡 Notes
 
 Refer to the documentation:
 
-* [MDN Web Docs on KeyboardEvents](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+* [MDN Web Docs on HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-* [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+* [MDN Web Docs on Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-* [MDN Web Docs on Loops and Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+* [MDN Web Docs on Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-* [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+* [MDN Web Docs on <h1>–<h6>: The HTML Section Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
-* [MDN Web Docs on WindowOrWorkerGlobalScope.clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+* [MDN Web Docs on How to Structure a Web Form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-* [MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+* [MDN Web Docs on <button>: The Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+
+* [MDN Web Docs on <figure>: The Figure with Optional Caption Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
 ## 🏆 Bonus
 
-If you have completed this activity, work through the following challenge with your group to further your knowledge:
-
-* How can you add a reset button to set the win and loss counts back to zero? 
-
-Use [Google](https://www.google.com) or another search engine to research this.
+* How can CSS be used to apply a different style to an <a> element when a mouse hovers over it?
 
 ---
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
