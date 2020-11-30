@@ -16,7 +16,7 @@
 
   * It's done when each `Character` has the following methods:
 
-    * `printStats()` that logs the character's name, strength and hitpoints
+    * `printStats()` that logs the character's name, strength and hitpoints.
 
     ```js
     console.log(`Stats for ${this.name} are:\n`)
@@ -24,9 +24,9 @@
     console.log(`${this.name} has ${this.hitPoints} hit points remaining`)
     ```
 
-    * `isAlive()` that returns a boolean based on whether or not a character's "hitpoints" are <= 0
+    * `isAlive()` that returns a boolean based on whether or not a character's `hitpoints` are less than or equal to zero.
 
-    * `attack()` that accepts an opposing `Character` object and subtracts the current character's `strength` from the opponent's `hitPoints`
+    * `attack()` that accepts an opposing `Character` object and subtracts the current character's `strength` from the opponent's `hitPoints`.
 
   * It's done when I can run `node character.js` and see two instances of `Character` battle until one of them is defeated.
 

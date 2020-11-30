@@ -14,6 +14,12 @@ This means your uncommitted changes will get added to a stack which you can then
 
 ## Git Stash Example
 
+**Important**: In order to change the default branch name for any repository you make to "main" instead of "master", please run the following command first:
+
+```sh
+git config --global init.defaultBranch main
+```
+
 Create a new repository called `stashPop` using the following commands:
 
 ```sh
@@ -44,7 +50,7 @@ git add newFile.js
 git commit -m "newFile is tracked in dev"
 ```
 
-Now that we have a `newFile.js` file that is being tracked in the `dev` branch, let's checkout to main and verify the files with the following commands:
+Now that we have a `newFile.js` file that is being tracked in the `dev` branch, let's checkout to `main` and verify the files with the following commands:
 
 ```sh
 git checkout main
