@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the email list item is given a unique attribute named `email`.
 
-* It's done when the Github list item is given a unique attribute named `github`.
+* It's done when the GitHub list item is given a unique attribute named `github`.
 
 * It's done when the portfolio list item is given a unique attribute named `portfolio`.
 
