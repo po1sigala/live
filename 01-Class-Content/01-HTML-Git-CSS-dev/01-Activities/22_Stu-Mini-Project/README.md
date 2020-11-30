@@ -22,7 +22,7 @@ The completed application should meet the following criteria:
 
 * Uses universal, element and class selectors in CSS.
 
-* Uses at least three different, contrasting colors in design.
+* Uses at least three colors in design.
 
 * Uses a single font and font family for all text on page.
 
