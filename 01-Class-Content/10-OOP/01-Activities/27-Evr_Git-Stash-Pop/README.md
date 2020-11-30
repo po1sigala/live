@@ -14,7 +14,7 @@ This means your uncommitted changes will get added to a stack which you can then
 
 ## Git Stash Example
 
-**Important**: In order to change the default branch name for any repository you make to "main" instead of "master", please run the following command first:
+**Reminder**: If you haven't already, please change your default branch name to "main" with the following command before beginning this activity:
 
 ```sh
 git config --global init.defaultBranch main
