@@ -12,19 +12,19 @@ Some developers might point out that jQuery is slowly being phased out and repla
 
 We'll cover the following topics in this unit:
 
-* jQuery
+* [jQuery](https://api.jquery.com/)
 
-  * DOM traversal and manipulation
+  * [DOM traversal and manipulation](https://api.jquery.com/category/traversing/)
 
-  * Event handling
+  * [Event handling](https://api.jquery.com/category/events/)
 
-* Bootstrap
+* [Bootstrap](https://getbootstrap.com)
 
-* Google Fonts
+* [Google Fonts](https://fonts.google.com)
 
-* jQuery UI 
+* [jQuery UI](https://jqueryui.com/demos/)
 
-* Moment.js
+* [Moment.js](https://momentjs.com/docs/)
 
 ## Learning Objectives
 
@@ -82,25 +82,25 @@ In the next unit, you'll use the jQuery AJAX method to make requests to server-s
 
 ## Resources
 
-You might find the following resources helpful in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-* [📖 jQuery API Docs](https://api.jquery.com/)
+### Code Review Videos
 
-* [📖 Bootstrap Docs](https://getbootstrap.com)
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
 
-* [📖 Google Fonts Docs](https://fonts.google.com)
+  * [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
 
-* [📖 jQuery UI Docs](https://jqueryui.com/demos/)
+  * [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
 
-* [📖 Moment.js Docs](https://momentjs.com/docs/)
+  * [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
 
-* [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
+### Git Guide
 
-* [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-* [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
+  * 📖 [Git Guide: Git Revert](./01-Activities/27-Evr_Git-Revert)
 
-* [📹 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
+  * 📹 [Git Guide Video: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
