@@ -12,17 +12,27 @@ In this unit, you'll learn how to build web apps that incorporate both of these 
 
 The following topics will be covered in this unit:
 
-* Media queries
-* Flexbox
-* Responsive design
-* CSS resets
-* Pseudo-classes
-* Pseudo-elements
-* Transitions
-* Typography
-* CSS variables
-* Advanced box styling
-* Advanced CSS selectors
+* [Media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+* [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+* [Responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+
+* [CSS resets](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+* [Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+* [Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+* [Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+
+* [Typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+
+* [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+* [Advanced box styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/create_fancy_boxes)
+
+* [Advanced CSS selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 ## Learning Objectives
 
@@ -64,19 +74,9 @@ In the next unit, you will learn JavaScript fundamentals such as variables, func
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [MDN Web Docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+* 📹 Code Review: N/A
 
-* [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-
-* [MDN Web Docs on text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-
-* [MDN Web Docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
-
-* [MDN Web Docs on pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
-
-* [MDN Web Docs on combinator selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-* [MDN Web Docs on CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+* [📖 Git Guide: Git Pull and Merge Conflicts](./01-Class-Content/02-Advanced-CSS/01-Activities/27-Evr_Git-Pull-Conflict)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

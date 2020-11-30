@@ -12,19 +12,19 @@ Some developers might point out that jQuery is slowly being phased out and repla
 
 We'll cover the following topics in this unit:
 
-* jQuery
+* [jQuery](https://api.jquery.com/)
 
-  * DOM traversal and manipulation
+  * [DOM traversal and manipulation](https://api.jquery.com/category/traversing/)
 
-  * Event handling
+  * [Event handling](https://api.jquery.com/category/events/)
 
-* Bootstrap
+* [Bootstrap](https://getbootstrap.com)
 
-* Google Fonts
+* [Google Fonts](https://fonts.google.com)
 
-* jQuery UI 
+* [jQuery UI](https://jqueryui.com/demos/)
 
-* Moment.js
+* [Moment.js](https://momentjs.com/docs/)
 
 ## Learning Objectives
 
@@ -84,23 +84,13 @@ In the next unit, you'll use the jQuery AJAX method to make requests to server-s
 
 You might find the following resources helpful in this unit:
 
-* [📖 jQuery API Docs](https://api.jquery.com/)
-
-* [📖 Bootstrap Docs](https://getbootstrap.com)
-
-* [📖 Google Fonts Docs](https://fonts.google.com)
-
-* [📖 jQuery UI Docs](https://jqueryui.com/demos/)
-
-* [📖 Moment.js Docs](https://momentjs.com/docs/)
-
 * [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
 
 * [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
 
 * [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
 
-* [📹 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
+* [📖 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
