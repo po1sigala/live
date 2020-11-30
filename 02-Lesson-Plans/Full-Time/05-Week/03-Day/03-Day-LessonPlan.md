@@ -1,4 +1,4 @@
-## 5.3 - Constructors (10:00 AM)
+# 5.3 Full-Time Lesson Plan: Constructors (10:00 AM)
 
 ## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
@@ -7,11 +7,11 @@ Trilogy as a company values transparency and data-driven change quite highly. As
 
 ## Overview
 
-In this class we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas.
+In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas.
 
-## Instructor's Notes
+## Instructor Notes
 
-* `Summary: Complete activity 40 in Unit 9 and 1-6 in Unit 10`
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `06-Stu_RPG-Prototypes` in Unit 10.
 
 * Constructors are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Make sure your students have a firm understanding of how objects function.
 
@@ -27,60 +27,120 @@ In this class we will be introducing students to the usage of JavaScript constru
 
 ## Slides
 
-[5.3 Intro to OOP Slide Deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+[5.3: Constructors](https://docs.google.com/presentation/d/1UrpscJQMOSvspa0Tw6mtYkG95mSjIaUwLmeJhDYo9T8/edit?usp=sharing)
 
 ## Time Tracker
 
-[5.3 Time Tracker](https://docs.google.com/spreadsheets/d/1f1TNdbe2vCC49YpQJ5l1r8O-6Vg3KCPh90WLM8yNNIs/edit?usp=sharing)
+| Start   |  #  | Activity Name                                   | Duration |
+|---------|-----|-------------------------------------------------|----------|
+| 10:00AM | 1   | Instructor Demo: Mini Project                   | 0:05     |
+| 10:05AM | 2   | Student Do: Mini Project                        | 0:60     |
+| 11:05AM | 3   | Instructor Review: Mini Project                 | 0:10     |
+| 11:15AM | 4   | Introduce Homework                              | 0:05     |
+| 11:20AM | 5   | FLEX                                            | 0:20     |
+| 11:40PM | 6   | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 11:50PM | 7   | BREAK                                           | 0:30     |
+| 12:20PM | 8   | Student Do: Raining Cats and Dogs               | 0:15     |
+| 12:35PM | 9   | Instructor Review: Raining Cats and Dogs        | 0:10     |
+| 12:45PM | 10  | Instructor Demo: Cats and Dogs w/ Constructors! | 0:05     |
+| 12:50PM | 11  | Student Do: MiniBank                            | 0:20     |
+| 1:10PM  | 12  | Instructor Review: MiniBank                     | 0:10     |
+| 1:20PM  | 13  | Student Do: Weather Admin                       | 0:15     |
+| 1:35PM  | 14  | Instructor Review: Weather Admin                | 0:10     |
+| 1:45PM  | 15  | Instructor Do: Introduce Prototypes             | 0:15     |
+| 2:00PM  | 16  | Student Do: RPG Prototype                       | 0:15     |
+| 2:15PM  | 17  | Instructor Review: RPG Prototypes               | 0:15     |
+| 2:30PM  | 18  | END                                             | 0:00     |
 
 - - -
 
 ## Class Instruction
 
-### 1. Instructor Do: Introduce Mini Project (5 mins)
+### 1. Instructor Demo: Mini-Project (5 min)
 
-* Run the mini-project solution found in [40-Stu_Mini-Project/Solved/Bonus/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/40-Stu_Mini-Project/Solved/Bonus/index.js) without demonstrating any of the code.
+* Welcome students to class.
 
-* Answer any questions students may have about the intended functionality of this completed activity.
+* Ask if anyone has questions before starting the mini-project.
 
-### 2. Students Do: Mini Project (60 mins)
+* Open `28-Stu_Mini-Project/README.md` in your browser and demonstrate the following:
 
-* Direct students to the instructions found in [40-Stu_Mini-Project](../../../../01-Class-Content/09-NodeJS/01-Activities/40-Stu_Mini-Project/README.md):
+* Run `node index.js` from the command line and demonstrate the following:
+
+  * 🔑 Notice that when we run the application, we are presented with a series of prompts by `inquirer`.
+
+  * 🔑 After the inputs are entered, we are presented with a message that `index.html` has been written to.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We would import `inquirer`, gather the required responses from the user and use those responses in conjunction with the `fs` module to write some html to a file. It will also require some creative string concatenation.
+
+* Answer any questions before allowing students to start the mini-project.
+
+### 2. Student Do: Mini-Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project`.
+
+* Break your students into groups that will work together on this activity.
 
 ```md
-# Mini Project
+# Mini-Project
 
-In this activity, you will build a command-line tool that generates and HTML portfolio page from user input.
+In this activity, you will build a command-line tool that generates an HTML portfolio page from user input.
 
 ## Instructions
 
-* Your application should prompt the user for information such as their name, location, bio, LinkedIn URL, and GitHub URL. Feel free to add any additional prompts you think of.
+* Your application should prompt the user for information like their name, location, bio, LinkedIn URL, and GitHub URL. Feel free to add any additional prompts you think of.
 
-* Using the data collected from the prompts, an HTML document should be constructed containing this information and written to the filesystem. Be sure to add some CSS styling to the document.
+* An HTML document containing the information collected from the prompts should be constructed and written to the file system. Be sure to add some CSS styling to the document.
 
-* Some tools and technologies you'll need to accomplish this:
+* You’ll need the following tools and technologies to accomplish this:
 
-  * FS: For writing to the filesystem
-  * Inquirer: For collecting user input
-  * String template literals: For generating a string version of the HTML document before it is written to the filesystem
-  * Promises: For handling asynchronous behavior
+  * `fs` for writing to the file system
 
-## Hint(s)
+  * `inquirer` for collecting user input
 
-* It may be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy/paste its contents into a string template literal and write a function to insert the user input into the appropriate places in the HTML string before writing it to the filesystem.
+  * String template literals for generating a string version of the HTML document before it is written to the file system
+
+  * Promises for handling asynchronous behavior
+
+## 💡 Hints
+
+It might be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy and paste its contents into a string template literal. Then you can write a function to insert the user input into the appropriate places in the HTML string before writing it to the file system.
+
+## 🏆 Bonus
+
+* Instead of using promises, how can we use `async/await` and `try/catch` to control the flow of our asynchronous code?
 ```
 
-### 3. Instructor Do: Review Mini Project (10 mins)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+### 3. Instructor Review: Mini-Project (10 min)  
 
-  * ✔️ We can construct an HTML string using string template literals
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔️ We can use Promises or the async/await syntax to control the flow of asynchronous code
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-* Open [40-Stu_Mini-Project/Solved/Basic/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/40-Stu_Mini-Project/Solved/Basic/index.js) in your IDE and point out the following:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * First we require the necessary packages.
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `inquirer.prompt()`
+
+  * ✔️ `util.promisify()`
+
+  * ✔️ Template literal syntax
+
+* Open `28-Stu_Mini-project/Solved/Basic/index.js` in your IDE and explain the following: 
+
+  * 🔑 We can construct an HTML string using string template literals.
+
+  * 🔑 We can use Promises or the async/await syntax to control the flow of asynchronous code.
+
+  * 🔑 We can use the `fs.writeFile` method to create and write to the needed `index.html` file.
+
+  * We import the required packages first, as follows:
 
   ```js
   const inquirer = require("inquirer");
@@ -88,13 +148,13 @@ In this activity, you will build a command-line tool that generates and HTML por
   const util = require("util");
   ```
 
-  * 📝 We use the `util.promisify` method to take a function that uses Node style callbacks to create a new version of the function that now uses Promises.
+  * 🔑  We use the `util.promisify` method to take a function that uses Node style callbacks to create a new version of the function that now uses Promises. As shown in the following example, it does exactly what it sounds like:
 
   ```js
   const writeFileAsync = util.promisify(fs.writeFile);
   ```
-  
-  * We prompt the user for their basic information using `inquirer.prompt`.
+
+  * 🔑  `inquirer.prompt({})` will collect the needed responses from the user and assign them to an object for us. We called the object `answers`, as shown in the following example:
 
   ```js
   function promptUser() {
@@ -133,37 +193,37 @@ In this activity, you will build a command-line tool that generates and HTML por
   }
   ```
 
-  * We create a function named `generateHTML` that returns a `template literal` which in this case is just an HTML document. Within this template literal we can insert the responses we gathered from our user via inquirer.
+  * You might be wondering what is the best way to actually make the HTML for this project? Here we use a helper function, `generateHTML` that will return a template string. We then inject the responses directly into that template string using the `${}` syntax, like in the following code:
 
-  ```js
-  function generateHTML(answers) {
-    return `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-      <p class="lead">I am from ${answers.location}.</p>
-      <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-      <ul class="list-group">
-        <li class="list-group-item">My GitHub username is ${answers.github}</li>
-        <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-      </ul>
+    ```js
+    function generateHTML(answers) {
+      return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+        <p class="lead">I am from ${answers.location}.</p>
+        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+        <ul class="list-group">
+          <li class="list-group-item">My GitHub username is ${answers.github}</li>
+          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  </body>
-  </html>`;
-  }
-  ```
+    </body>
+    </html>`;
+    }
+    ```
 
-  * Finally we call our `promptUser` function and on success we generate our HTML file with this customized responses. We then create the file, appending the contents of the HTML template literal we created.
+  * Finally, we call the `promptUser` function, and on success we generate the HTML file with these customized responses. We then create the file, appending the contents of the HTML template literal we created, like in the following example:
 
   ```js
   promptUser()
@@ -180,11 +240,7 @@ In this activity, you will build a command-line tool that generates and HTML por
     });
   ```
 
-* Answer any high-level questions before demonstrating the bonus solution using async/await.
-
-* Open [40-Stu_Mini-Project/Solved/Bonus/index.js](../../../../01-Class-Content/09-NodeJS/01-Activities/40-Stu_Mini-Project/Solved/Bonus/index.js) in your IDE and point out the following differences:
-
-  * Code using the `await` syntax must be inside of a function declared with the `async` identifier. We're also using a `try/catch` block to handle any errors that may occur when using async/await.
+  * Let's take a quick look at the Bonus. Code using the `await` syntax must be inside of a function declared with the `async` identifier. We're also using a `try/catch` block to handle any errors that might occur when using async/await. You can see this in the following example:
 
   ```js
   async function init() {
@@ -202,23 +258,51 @@ In this activity, you will build a command-line tool that generates and HTML por
   }
   ```
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ So, how can asynchronous code help developers write better code.
+  * ☝️ How can asynchronous code help developers write better code?
 
-  * 🙋 Asynchronous programming allows our code to execute logic without blocking the rest of the applications functionality.
+  * 🙋 Asynchronous programming allows the code to execute logic without blocking the rest of the application’s functionality.
 
-- - -
+  * ☝️ What can we do if we don't completely understand this?
 
-### 4. Review Mini Project and Unit 09 (30 mins)
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous), and stick around for office hours to ask for help.
 
-* Continue to answer students lingering questions about the Mini Project. If no questions arise, lead a review session on unit 09 until the break.
+* Answer any questions before proceeding to the next activity.
 
-### 5. BREAK (30 mins)
+### 4. Instructor Demo: Introduce Homework (5 min)
 
-- - -
+* Open `02-Homework/README.md` in your browser and demonstrate the following:
 
-### 6. Instructor Do: Welcome Class (5 mins)
+* Navigate to the `Main` folder and run `npm i`. 
+
+* Run `node index.js` from the command line and demonstrate the following:
+
+  * We will build a command-line application that will generate readmes for us. 
+
+  * You might actually want to use this application for all your homework in the future. It will also help keep each of your projects looking professional when you are applying for jobs.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to use `inquirer` to gather responses from the user, how to use `fs` to write the content to a markdown file, and also how to use the responses to inject data into the template strings.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 Much like the mini-project, we will be using the `inquirer` responses to write to a file.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 It will help us learn how to use Node's `fs` module. It also carries an added benefit of helping keep readme files looking fresh. Employers often view job seekers' pinned projects on GitHub, and a sleek readme can be the difference between piquing their interest or seeing them move on to the next candidate.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before ending the class.
+
+### 5. FLEX (20 mins)
+
+### 6. Instructor Do: Stoke Curiosity (10 mins)
 
 * Welcome students to class.
 
@@ -256,7 +340,9 @@ In this activity, you will build a command-line tool that generates and HTML por
 
   * 🙋 Program some objects!
 
-### 7. Students Do: Raining Cats and Dogs (15 mins)
+### 7. BREAK (30 min)
+
+### 8. Students Do: Raining Cats and Dogs (15 mins)
 
 * Direct students to the activity found in [01-Stu_Cats-And-Dogs](../../../../01-Class-Content/10-OOP/01-Activities/01-Stu_Cats-And-Dogs)
 
@@ -294,7 +380,7 @@ In this activity you will make a cat object and dog object each with three keys.
 * See if there is anyway to further optimize your code.
 ```
 
-### 8. Instructor Do: Review Raining Cats and Dogs (5 mins)
+### 9. Instructor Review: Review Raining Cats and Dogs (10 min)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -351,7 +437,7 @@ In this activity you will make a cat object and dog object each with three keys.
 
 * Use the discussion to transition to the next topic.
 
-### 9. Instructor Do: Cats and Dogs with Constructors! (10 min)
+### 10. Instructor Demo: Cats and Dogs with Constructors! (5 min)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -411,7 +497,7 @@ In this activity you will make a cat object and dog object each with three keys.
 
 * Use the discussion to transition to the next activity.
 
-### 10. Student Do: MiniBank (20 mins)
+### 11. Student Do: MiniBank (20 mins)
 
 * Direct students to the next activity, found in [03-Stu_Mini-Bank](../../../../01-Class-Content/10-OOP/01-Activities/03-Stu_Mini-Bank/Unsolved).
 
@@ -467,7 +553,7 @@ Update the `MiniBank` constructor function with methods and properties as follow
 - Add code to return a copy of the `statement` array when `getStatement` is called, rather than returning the original array.
 ```
 
-### 11. Instructor Do: Review Mini-Bank (10 mins)
+### 12. Instructor Review: Mini-Bank (10 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -533,7 +619,7 @@ Update the `MiniBank` constructor function with methods and properties as follow
 
   * 🙋 The use of objects and constructors allows us to create a single blueprint, that we can then use to create as many instances of our `MiniBank` as we like.
 
-### 12. Student Do: Weather Admin (15 mins)
+### 13. Student Do: Weather Admin (15 mins)
 
 * Direct students to the next activity located in [04-Stu_Weather-Admin/Unsolved](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Unsolved).
 
@@ -551,7 +637,7 @@ In this activity you will create a CLI based weather application that will give 
 * Unfortunately, this app is also broken. Try to run it as either a user or admin and fix the actual errors that appear in the console and then any "logic" errors that prevent the expected behavior.
 ```
 
-### 13. Instructor Do: Review Weather Admin (10 mins)
+### 14. Instructor Review: Review Weather Admin (10 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -686,7 +772,7 @@ In this activity you will create a CLI based weather application that will give 
   }
   ```
 
-### 14. Instructor Do: Introduce Prototypes (15 mins)
+### 15. Instructor Demo: Prototypes (15 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -774,7 +860,7 @@ In this activity you will create a CLI based weather application that will give 
 
 * Use the discussion to transition to the next topic.
 
-### 15. Student Do: RPG Prototype (20 mins)
+### 16. Student Do: RPG Prototype (15 mins)
 
 * Direct students to the next activity, located in [06-Stu_RPG-Prototypes](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes).
 
@@ -812,7 +898,7 @@ In this activity you will generate RPG characters using Objects and prototypes.
   * LevelUp: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
 ```
 
-### 16. Instructor Do: Review RPG (10 mins)
+### 17. Instructor Review: RPG Prototypes (15 mins)
 
 * Open [06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js) in your IDE and explain  the following to students:
 
@@ -884,10 +970,16 @@ In this activity you will generate RPG characters using Objects and prototypes.
 
   * 🙋 The prototype allows us to declare methods that will be attached to all instances of an object of that prototype. Because the method is applied to the prototype, it is only stored in memory once for all instances.
 
-* Use the discussion to transition to the final activity of the day.
+* After all questions have been answered you can end class for the day.
+
+### 18. END (0 min)
 
 ### Lesson Plan Feedback
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
 
 [Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+
+- - -
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

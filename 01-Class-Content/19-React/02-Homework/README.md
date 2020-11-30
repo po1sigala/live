@@ -14,7 +14,7 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Acceptance Criteria
 
-Given a table of random users, when the user loads the page, a table of employees should render. 
+Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
 
 The user should be able to:
 
