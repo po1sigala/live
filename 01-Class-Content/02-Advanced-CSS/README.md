@@ -78,7 +78,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit.
 
-  * 📖 [Git Guide: Git Pull and Merge Conflicts](./01-Class-Content/02-Advanced-CSS/01-Activities/27-Evr_Git-Pull-Conflict)
+  * 📖 [Git Guide: Git Pull and Merge Conflicts](./01-Activities/27-Evr_Git-Pull-Conflict)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
