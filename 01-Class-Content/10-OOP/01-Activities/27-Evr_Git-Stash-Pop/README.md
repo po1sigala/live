@@ -71,8 +71,11 @@ git checkout dev
 
 ## Additional Actions
 * `git stash pop` - Pull your stashed changes off the stack and apply them
+
 * `git stash drop` - Delete the latest stash from the stack
+
 * `git stash apply` - Apply your stashed changes, but also keep a copy in the stack
+
 * `git stash clear` - Clear all stashed entries from the stack
 
 ## Review
