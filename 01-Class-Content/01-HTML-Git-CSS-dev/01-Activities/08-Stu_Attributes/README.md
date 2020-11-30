@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add global attributes to my HTML elements for use with CSS.
+* As a developer, I want to add global attributes to my HTML elements so that I can add styling with CSS.
 
 ## Acceptance Criteria
 
