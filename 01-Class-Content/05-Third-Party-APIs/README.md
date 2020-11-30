@@ -98,7 +98,7 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: Git Revert](.01-Class-Content/05-Third-Party-APIs/01-Activities/27-Evr_Git-Revert)
+  * 📖 [Git Guide: Git Revert](./01-Class-Content/05-Third-Party-APIs/01-Activities/27-Evr_Git-Revert)
 
   * 📹 [Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
 
