@@ -1,22 +1,19 @@
-// First we start with grabbing the response from the user and store it in a variable
+// Prompt the user to enter what they are currently doing
 const userInput = process.argv[2];
 console.log('Current user activity:', userInput);
 
-// Provide some instructions and stop execution to the user if they forgot to provide input
+// If the user does not enter anything, return an error message
 if (!userInput) {
   console.error(
-    '\nPlease pass in the current activity of the student \nUsage: `node index <action>`'
+    '\nPlease enter your current activity\nUsage: `node index.js <activity>`'
   );
   process.exit();
 }
 
-// We then create a boolean `studentDistracted` to help decipher whether or not the student is coding
+// If the user enters anything other than the word 'coding', set 'studentDistracted' to 'true'
 const studentDistracted = userInput !== 'coding';
 
-// NOTE: The code below is an example function that uses callbacks
-const callback = (message) => console.log(message);
-const errorCallback = (message) => console.log(message);
-
+// TODO: Refactor the following to use promises
 const practiceCoding = (cb, errCb) => {
   if (studentDistracted) {
     errCb({
@@ -28,11 +25,9 @@ const practiceCoding = (cb, errCb) => {
   }
 };
 
+const callback = (message) => console.log(message);
+const errorCallback = (message) => console.log(message);
+
+// TODO: Refactor to call 'practiceCoding()' and chain a 'then()' to log "We are coding in promises!" in the console
+// TODO: Chain a 'catch()' to log "Promise rejected: " and the error
 practiceCoding(callback, errorCallback);
-
-// NOTE: Rewrite the above function so that it returns a promise instead
-const practiceCodingPromise = () => {
-  // Your code here
-};
-
-// Finally, call the function practiceCodingPromise() and make sure you include a `.then`, and `.catch`

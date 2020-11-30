@@ -9,10 +9,10 @@ function Student(first, last, age) {
   // Method that will simulate method overloading in JavaScript
   this.displayGrade = function (grade) {
     const input = grade;
-    let response;
     if (!input) {
       throw new Error('no grade provided');
     }
+    let response;
     // Return a letter grade if a number grade was passed
     // Ex. 95 => 'A'
     if (typeof input === 'number') {

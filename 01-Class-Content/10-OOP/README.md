@@ -52,17 +52,27 @@ The following topics will be covered in this unit:
 
 ## Learning Objectives
 
-* Integrate constructor functions into your applications, adding structure to your code and reducing the amount of code you have to write.
+You will be employer-ready if you are able to:
 
-* Build entire applications using OOP, separating data and functionality into different constructor functions that can be composed together.
+* Create more scalable applications that follow the OOP paradigm.
+
+* Use constructor functions to create new objects.
+
+* Use prototypical inheritance to add methods to objects.
+
+* Explain polymorphism through method overloading.
+
+* Implement Promise.all() to wait for multiple API calls.
 
 * Verify your code works as intended through the use of automated tests.
 
 * Build applications using test-driven-development, writing tests before implementing functionality.
 
-* Utilize modern ES6 class syntax to implement more advanced OOP patterns such as inheritance.
+* Implement ES6 classes to create new instances of objects.
 
-* Create more scalable applications that follow the OOP paradigm.
+* Extend basic classes with additional functionality
+
+* Implement multiple classes with differing purposes to practice the OOP paradigm.
 
 ## Technical Interview Preparation
 
@@ -88,7 +98,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-In this unit's homework, you will create an application which generates an html files using input from a command line interface. The application will gather information about your team or organization. You will be able to add as many team members as you want.
+In this unit's homework, you will create an application which generates HTML files using input from a command line interface. The application will gather information about your team or organization. You will be able to add as many team members as you want.
 
 ## Career Connection
 
@@ -96,15 +106,15 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you'll begin to use Heroku CLI. Be sure to have it installed on your computer **before** attending your classes. You can follow the [Heroku CLI installation guide on The Full-Stack Blog](@TODO Add URL to blog post) to install Heroku CLI on your computer.
+In the next unit, you will begin to use Heroku CLI. Be sure to have it installed on your computer **before** attending your classes. You can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) to install Heroku CLI on your computer.
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* 📖 [Heroku CLI installation guide on The Full-Stack Blog](@TODO Add URL to blog post)
+* 📖 [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
-* 📹 Code Review: @TODO LINK TO VIDEOS FOR THIS UNIT
+* 📹 Code Review: N/A
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

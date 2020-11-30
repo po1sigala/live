@@ -1,13 +1,12 @@
 # 📐 Add Comments to Implementation of Prototypes
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/rpg-prototypes.js).
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/index.js).
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[MDN Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-
+[MDN Web Docs on prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
 ## 🏆 Bonus
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, we will be introducing students to the usage of JavaScript constructors, classes, promises and the concept of TDD.
+In this unit, we will be covering some very important topics regarding object-oriented programming, including constructors, prototypes, polymorphism, and promises. We will also introduce the students to Test-Driven Development and unit tests. Lastly, we will go over the basics of ES6 classes and how they can help organize our code.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -28,7 +28,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/READ
 
 * Next unit, we will be diving into servers and Express.js to use in the back-end of an application.
 
-* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. 
+* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. If needed, you can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) to install Heroku CLI on your computer.
 
 ## Helpful Links
 
@@ -48,7 +48,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * [Unit 10: Intro to OOP](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+  * [Unit 10: Object-Oriented Programming](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
 ### Algorithms
 
@@ -65,4 +65,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * Here is an example of method overloading implemented in Java. This may help solidify your understanding of [method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/)
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
