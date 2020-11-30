@@ -6,13 +6,13 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-* When we run `npm run test` in the console, we should not recieve an error
+* When we run `npm run test` in the console, we should not receive an error
 
 * When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` should be passing
 
 ## Actual Behavior
 
-* When we run `npm run test` in the console, we recieve the following error: "Cannot spyOn on a primitive value; undefined given"
+* When we run `npm run test` in the console, we receive the following error: "Cannot spyOn on a primitive value; undefined given"
 
 * When we run `npm run test` in the console, the Tests and Test Suites for `dayCare.test.js` are not passing
 
