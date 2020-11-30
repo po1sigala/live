@@ -82,15 +82,27 @@ In the next unit, you'll use the jQuery AJAX method to make requests to server-s
 
 ## Resources
 
-You might find the following resources helpful in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-* [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
+### Code Review Videos
 
-* [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
 
-* [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
+  * [📹 Code Review: jQuery!](https://2u-20.wistia.com/medias/g63k1z1sb3)
 
-* [📖 Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
+  * [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
+
+  * [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

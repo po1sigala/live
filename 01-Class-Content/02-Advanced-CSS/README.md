@@ -72,11 +72,21 @@ In the next unit, you will learn JavaScript fundamentals such as variables, func
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-* 📹 Code Review: N/A
+### Code Review Videos
 
-* [📖 Git Guide: Git Pull and Merge Conflicts](./01-Class-Content/02-Advanced-CSS/01-Activities/27-Evr_Git-Pull-Conflict)
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Git Pull and Merge Conflicts](./01-Class-Content/02-Advanced-CSS/01-Activities/27-Evr_Git-Pull-Conflict)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
