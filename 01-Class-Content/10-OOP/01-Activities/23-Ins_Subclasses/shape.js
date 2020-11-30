@@ -5,9 +5,8 @@ class Shape {
   }
 
   printInfo() {
-    for (const key in this) {
-      console.log(`${key}: ${this[key]}`);
-    }
+    console.log(`Area: ${this.area}`);
+    console.log(`Perimeter: ${this.perimeter}`);
   }
 }
 

@@ -1,43 +1,46 @@
-# 🏗️ Write and Implement Classes
+  # 🏗️ Write and Implement Classes
 
-Work with a partner to implement the following user story:
+  Work with a partner to implement the following user story:
 
-* As a developer, I want to make two RPG characters match against each other using ES6 classes.
+  * As a user, I want a command line RPG that allows two characters to battle each other.
 
-## Acceptance Criteria
+  ## Acceptance Criteria
 
-* It's done when I have opened [character.js](Unsolved/character.js) and updated the `Character` class so that it instantiates objects with the following properties:
+  * It's done when a new `Character` can be created with the following properties:
 
-  * Name
-  * Strength
-  * HitPoints
+    * `name` - a string containing the character's name
 
-* It's done when I create a `printStats()` class method that prints the name, strength, and hitPoints for a character.
+    * `strength` - a number indicating how much damage the character's attacks will inflict
 
-* It's done when I create a `attack(opponent)` method that a character can use to deal damage (equal to their strength) to their opponents hitPoints.  
+    * `hitPoints` - a number that indicates how many hit points the character has
 
-* It's done when I create two instances of a character, giving them different names, strength, and hitPoints. 
+  * It's done when each `Character` has the following methods:
 
-* It's done when I make each character take turns attacking each other using `setInterval`. 
+    * `printStats()` that logs the character's name, strength and hitpoints.
 
-* It's done when I have invoke `printStats()` after each attack to visualize the battle.
+    ```js
+    console.log(`Stats for ${this.name} are:\n`)
+    console.log(`Each attack will do ${this.strength} damage`)
+    console.log(`${this.name} has ${this.hitPoints} hit points remaining`)
+    ```
 
-* It's done when I create a `isAlive` method to check if each character has more than 0 hitPoints every turn.
-  
-* It'd done when I check if either character has been defeated and stop the interval and end the game.
+    * `isAlive()` that returns a boolean based on whether or not a character's `hitpoints` are less than or equal to zero.
 
-## 💡 Hints
+    * `attack()` that accepts an opposing `Character` object and subtracts the current character's `strength` from the opponent's `hitPoints`.
 
-* How can we start small? Can we benefit from first trying to make one character attack another until the game is over?
+  * It's done when I can run `node character.js` and see two instances of `Character` battle until one of them is defeated.
 
-## 🏆 Bonus
+  ## 💡 Hints
 
-If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  * How can we start small? Can we benefit from first trying to make one character attack another until the game is over?
 
-* * How can we add validation to ensure that each character is provided the proper 3 arguments when created. If any of the arguments are not present, `throw` an error.
+  ## 🏆 Bonus
 
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-Use [Google](https://www.google.com) or another search engine to research this.
+    * How can we add validation to ensure that each character is provided the proper 3 arguments when created?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
