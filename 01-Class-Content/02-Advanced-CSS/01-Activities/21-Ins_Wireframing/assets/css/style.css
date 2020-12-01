@@ -9,27 +9,38 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #13293d;
+  border: 5px solid red;
+  background-color: gray;
   color: #fff;
 }
 
 h1 {
+  border: 5px solid goldenrod;
   font-size: 200%;
 }
 
 h2 {
   margin: 2% 0;
+  border: 2px solid orangered;
   font-size: 250%;
+}
+
+span {
+  border: 2px solid orangered;
 }
 
 nav ul {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  border: 5px solid goldenrod;
   min-width: 300px;
 }
 
 nav a {
-  color: #b9c6ae;
+  color: #fff;
+  border: 2px solid orangered;
+  padding: 1px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -43,11 +54,15 @@ main {
   flex: 1 1 0;
   max-width: 1200px;
   margin: 2% auto;
+  padding: 1%;
+  border: 5px solid red;
 }
 
 section {
   flex: 1 1 0;
+  padding: 1.5%;
   padding-right: 5%;
+  border: 5px solid goldenrod;
 }
 
 article {
@@ -56,17 +71,24 @@ article {
 
 article p {
   margin: 2% 0;
+  border: 2px solid orangered;
+  padding: 1%;
   font-size: 110%;
+  
 }
 
 article ul {
   margin-left: 5%;
   font-size: 110%;
+  border: 2px solid orangered;
+  padding: 1%;
   list-style: circle;
 }
 
 aside {
   width: 25%;
+  padding: 1%;
+  border: 5px solid goldenrod;
 }
 
 aside h2 {
@@ -78,12 +100,12 @@ button {
   width: 100%;
   margin: 2% 0;
   padding: 1%;
+  border: 2px solid orangered;
 }
 
 button {
-  background-color: #13293d;
+  background-color: gray;
   color: #fff;
-  border: none;
   padding: 10px;
   cursor: pointer;
 }
@@ -92,12 +114,15 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #13293d;
+  background-color: gray;
   color: #fff;
+  border: 5px solid red;
 }
 
+.resources {
+  border: 5px solid goldenrod;
+}
 .resources .links {
-  display: none;
   padding: 1% 0;
 }
 

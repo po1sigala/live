@@ -9,7 +9,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: #13293d;
+  background-color: gray;
   color: #fff;
 }
 
@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9c6ae;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -46,7 +46,7 @@ main {
 }
 
 article {
-  border-bottom: 1px solid #d8a47f;
+  border-bottom: 1px solid black;
 }
 
 article p {
@@ -62,24 +62,30 @@ article ul {
 
 form {
   max-width: 400px;
+  border: 5px solid red;
+  padding: 2%;
 }
 
 form h3 {
+  border: 2px solid goldenrod;
   font-size: 150%;
 }
 
 form p {
   margin: 3% 0;
+  padding: 3%;
+  border: 2px solid goldenrod;
 }
 
 label {
   display: block;
+  border: 2px solid orangered;
 }
 
 button {
   color: #fff;
-  background-color: #13293d;
-  border: none;
+  background-color: gray;
+  border: 2px solid goldenrod;
   padding: 10px;
   cursor: pointer;
 }
@@ -87,7 +93,6 @@ button {
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
   background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: right;
@@ -98,7 +103,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #13293d;
+  background-color: gray;
   color: #fff;
 }
 
@@ -112,13 +117,13 @@ select,
 button {
   padding: 1%;
   outline: none;
-  border: 1px solid #13293d;
+  border: 2px solid orangered;
 }
 
 .text-input:hover,
 select:hover,
 button:hover {
-  box-shadow: 0 0 5px #13293d;
+  box-shadow: 0 0 5px gray;
 }
 
 .text-input:focus {
@@ -144,7 +149,7 @@ button:hover {
 }
 
 .checkbox:checked + label {
-  color: #13293d;
+  color: gray;
   font-style: italic;
 }
 
@@ -158,7 +163,6 @@ button:hover {
   }
 }
 
-/* Media Query for Print */
 @media print {
   form {
     display: none;
