@@ -22,7 +22,7 @@ The following topics will be covered in this unit:
 
 * [Setting Element's Attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 
-* [Creating DOM Elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+* [Creating DOM Elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 
 * [Intervals and Timers](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 

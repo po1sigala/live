@@ -70,7 +70,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [MDN Web Docs on Element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 
-  * [MDN Web Docs on Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+  * [MDN Web Docs on Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 
   * [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
