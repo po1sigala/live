@@ -1,5 +1,5 @@
 const fizzBuzz = require('../fizz');
-
+ 
 describe('fizzBuzz', () => {
   it('should return the number if not a multiple of three or five', () => {
     expect(fizzBuzz([1])).toBe('1');
@@ -21,11 +21,4 @@ describe('fizzBuzz', () => {
     expect(fizzBuzz([15, 30, 45])).toBe('FizzBuzz, FizzBuzz, FizzBuzz');
   });
 
-  it('should return a mixture of numbers and strings if passed multiples and non-multiples of three or five', () => {
-    expect(fizzBuzz([1, 2, 3, 5])).toBe('1, 2, Fizz, Buzz');
-    expect(fizzBuzz([1, 2, 3, 5, 6, 10])).toBe('1, 2, Fizz, Buzz, Fizz, Buzz');
-    expect(fizzBuzz([1, 2, 3, 5, 6, 10, 15])).toBe(
-      '1, 2, Fizz, Buzz, Fizz, Buzz, FizzBuzz'
-    );
-  });
 });

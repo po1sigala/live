@@ -1,9 +1,15 @@
 function Algo() {}
 
-Algo.prototype.reverse = function(str) {};
+Algo.prototype.reverse = function(str) {
+  // TODO: Your code here
+};
 
-Algo.prototype.isPalindrome = function(str) {};
+Algo.prototype.isPalindrome = function(str) {
+  // TODO: Your code here
+};
 
-Algo.prototype.capitalize = function(str) {};
+Algo.prototype.capitalize = function(str) {
+  // TODO: Your code here 
+};
 
 module.exports = Algo;
