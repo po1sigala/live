@@ -42,7 +42,7 @@ next.addEventListener("click", function(event) {
 
 // Clicking previous displays previous image in carousel
 prev.addEventListener("click", function(event) {
-  // Stops event from bubbling up and new window opening
+  // Event bubbling would occur and a new window would open if we did not include the following line of code.
   event.stopPropagation();
 
   navigate(-1);
