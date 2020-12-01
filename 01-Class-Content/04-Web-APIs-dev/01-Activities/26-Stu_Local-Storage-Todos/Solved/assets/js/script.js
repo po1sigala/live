@@ -27,7 +27,7 @@ function renderTodos() {
   }
 }
 
-// This function is being called bellow and will run when the page loads.
+// This function is being called below and will run when the page loads.
 function init() {
   // Get stored todos from localStorage
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -84,4 +84,3 @@ todoList.addEventListener("click", function(event) {
 
 // Calls init to retrieve data and render it to the page on load
 init()
-
