@@ -66,7 +66,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
   * [03-sum-array](./03-Algorithms/03-sum-array)
 
-    * 📹 Let's Code [Sum of Array](https://2u-20.wistia.com/medias/iz6bzizsnj)
+    * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
 ### Assessments
 
