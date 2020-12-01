@@ -1,6 +1,6 @@
-# 🐛 Main View is not Displaying Food Items 
+# 🐛 Main View Is Not Displaying Food Items 
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * As a party guest, I would like to view a full menu of food items that other guests will bring to the party.
 
@@ -16,7 +16,7 @@ Work with a partner to resolve the following issue(s):
 
 1. Run `npm install`. 
 
-2. Make sure that the MySQL server is turned on.
+2. Confirm that the MySQL server is turned on.
 
 3. Run `CREATE DATABASE dish_db;` to create a new database.
 
@@ -30,21 +30,22 @@ Work with a partner to resolve the following issue(s):
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The View displays a full menu of dishes and the name of the guest who will bring each dish.](images/Full-Menu.png)
+![The "Potluck Party!" webpage displays a list of dishes and the name of the guest who will bring each one.](images/Full-Menu.png)
 
 ---
 
 ## 💡 Hints
 
-* How can you change your route so that the View is able to display the menu of food items?
+How can you change your route so that the View will display the menu?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are other options that you have to serialize data down to the properties that you need? 
+* How else could you serialize data down to the properties that you need? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
