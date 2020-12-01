@@ -28,7 +28,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/READ
 
 * Next unit, we will be diving into servers and Express.js to use in the back-end of an application.
 
-* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. If needed, you can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) to install Heroku CLI on your computer.
+* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. If needed, you can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) to install Heroku CLI on your computer. 
 
 ## Helpful Links
 
@@ -36,11 +36,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [10.1 - Lesson Plan](01-Day_Intro-OOP/10.1-LESSON-PLAN.md)
+  * [10.1 Lesson Plan](./01-Day_Intro-OOP/10.1-LESSON-PLAN.md)
 
-  * [10.2 - Lesson Plan](02-Test_Driven_Development/10.2-LESSON-PLAN.md)
+  * [10.2 Lesson Plan](./02-Test_Driven_Development/10.2-LESSON-PLAN.md)
 
-  * [10.3 - Lesson Plan](03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
+  * [10.3 Lesson Plan](./03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
 
 ### Homework
 
@@ -52,13 +52,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * [01-linear-search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
+  * [01: Linear Search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
 
-  * [02-is-unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
+  * [02: Is Unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
 
-  * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram)
+  * [03: Is Anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram)
 
-    * 📹 Let's Code [isAnagram](https://2u-20.wistia.com/medias/8hnpk2wu29)
+    * 📹 [Let's Code Is Anagram!](https://2u-20.wistia.com/medias/8hnpk2wu29)
 
 ### Resources
 

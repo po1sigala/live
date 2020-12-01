@@ -82,13 +82,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video for tips and tricks on how to solve the algorithm.
 
-* [01-linear-search](03-Algorithms/01-linear-search)
+* [01: Linear Search](./03-Algorithms/01-linear-search)
 
-* [02-is-unique](03-Algorithms/02-is-unique)
+* [02: Is Unique](./03-Algorithms/02-is-unique)
 
-* [03-is-anagram](03-Algorithms/03-is-anagram)
+* [03: Is Anagram](./03-Algorithms/03-is-anagram)
 
-  * 📹 Let's Code [isAnagram](https://2u-20.wistia.com/medias/8hnpk2wu29)
+  * 📹 [Let's Code Is Anagram!](https://2u-20.wistia.com/medias/8hnpk2wu29)
 
 ### Assessments
 
@@ -110,11 +110,19 @@ In the next unit, you will begin to use Heroku CLI. Be sure to have it installed
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-* 📖 [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
+### Git Guide
 
-* 📹 Code Review: N/A
+Refer to the Git Guide to review the git concept for this unit.
+
+  * 📖 [Git Guide: Git Stash](../../01-Class-Content/10-OOP/01-Activities/27-Evr_Git-Stash-Pop/README.md)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [Heroku CLI installation guide](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
