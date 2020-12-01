@@ -60,11 +60,11 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-  * [01-log-even-nums](./03-Algorithms/01-log-even-nums)
+  * [01: Log Even Nums](./03-Algorithms/01-log-even-nums)
 
-  * [02-countdown](./03-Algorithms/02-countdown)
+  * [02: Countdown](./03-Algorithms/02-countdown)
 
-  * [03-sum-array](./03-Algorithms/03-sum-array)
+  * [03: Sum of Array](./03-Algorithms/03-sum-array)
 
     * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
