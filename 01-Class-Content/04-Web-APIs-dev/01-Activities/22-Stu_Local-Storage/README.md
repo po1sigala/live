@@ -10,7 +10,7 @@
 
   * It's done when the `signUpButton` is clicked, the email and password entered into the text boxes is saved using `localStorage`.
 
-  * It's done when the email and password is saved, the  information under `Last Registered User: ` is updated to reflect the data stored using `localStorage`.
+  * It's done when the information under `Last Registered User: ` is updated to reflect the data stored using `localStorage`.
   
   ## Assets
 

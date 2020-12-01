@@ -5,7 +5,7 @@ var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = [];
 
-// The following function renders items on a todo list as <li> elements
+// The following function renders items in a todo list as <li> elements
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
   todoList.innerHTML = "";

@@ -11,7 +11,7 @@ function renderTodos() {
   todoList.innerHTML = "";
   todoCountSpan.textContent = todos.length;
   
-  // TODO: Describe the functionality of the following `for loop`.
+  // TODO: Describe the functionality of the following `for` loop.
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
