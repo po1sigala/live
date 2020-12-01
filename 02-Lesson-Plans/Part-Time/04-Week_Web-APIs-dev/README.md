@@ -30,11 +30,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [04.1 Lesson Plan](01-Day_Intro-Web-APIs/04.1-LESSON-PLAN.md)
+  * [04.1 Lesson Plan](./01-Day_Intro-Web-APIs/04.1-LESSON-PLAN.md)
 
-  * [04.2 Lesson Plan](02-Day_JS-Events/04.2-LESSON-PLAN.md)
+  * [04.2 Lesson Plan](./02-Day_JS-Events/04.2-LESSON-PLAN.md)
   
-  * [04.3 Lesson Plan](03-Day_Client-Side-Storage/04.3-LESSON-PLAN.md)
+  * [04.3 Lesson Plan](./03-Day_Client-Side-Storage/04.3-LESSON-PLAN.md)
 
 ### Unit Homework
 

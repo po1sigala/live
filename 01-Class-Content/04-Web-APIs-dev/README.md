@@ -60,8 +60,6 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-### Algorithms
-
   * [01-log-even-nums](./03-Algorithms/01-log-even-nums)
 
   * [02-countdown](./03-Algorithms/02-countdown)
@@ -74,7 +72,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* [Unit 3 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
+* [Unit 4 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
 
 ## Homework
 
@@ -90,12 +88,13 @@ When you are are researching DOM and event resources, you may come across jQuery
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
+### Git Guide
 
-* 📹 Code Review: N/A
+Refer to the Git Guide to review the git concept for this unit.
 
-* 📖 Git Guide: N/A
+  * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
