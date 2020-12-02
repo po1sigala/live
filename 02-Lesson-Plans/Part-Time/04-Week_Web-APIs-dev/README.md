@@ -30,11 +30,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [04.1 Lesson Plan](01-Day_Intro-Web-APIs/04.1-LESSON-PLAN.md)
+  * [04.1 Lesson Plan](./01-Day_Intro-Web-APIs/04.1-LESSON-PLAN.md)
 
-  * [04.2 Lesson Plan](02-Day_JS-Events/04.2-LESSON-PLAN.md)
+  * [04.2 Lesson Plan](./02-Day_JS-Events/04.2-LESSON-PLAN.md)
   
-  * [04.3 Lesson Plan](03-Day_Client-Side-Storage/04.3-LESSON-PLAN.md)
+  * [04.3 Lesson Plan](./03-Day_Client-Side-Storage/04.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
@@ -46,13 +46,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * [01-log-even-nums](../../../01-Class-Content/04-Web-APIs/03-Algorithms/01-log-even-nums)
+  * [01: Log Even Nums](../../../01-Class-Content/04-Web-APIs/03-Algorithms/01-log-even-nums)
 
-  * [02-countdown](../../../01-Class-Content/04-Web-APIs/03-Algorithms/02-countdown)
+  * [02: Countdown](../../../01-Class-Content/04-Web-APIs/03-Algorithms/02-countdown)
 
-  * [03-sum-array](../../../01-Class-Content/04-Web-APIs/03-Algorithms/03-sum-array)
+  * [03: Sum of Array](../../../01-Class-Content/04-Web-APIs/03-Algorithms/03-sum-array)
 
-    * 📹 Let's Code [Sum of Array](https://2u-20.wistia.com/medias/iz6bzizsnj)
+    * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
 ### Resources
 
@@ -70,7 +70,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [MDN Web Docs on Element.setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 
-  * [MDN Web Docs on Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+  * [MDN Web Docs on Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+
+  * [MDN Web Docs on Appending Elements to a Parent Node](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
   * [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 

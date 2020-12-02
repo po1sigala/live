@@ -22,7 +22,9 @@ The following topics will be covered in this unit:
 
 * [Setting Element's Attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 
-* [Creating DOM Elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+* [Creating DOM Elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+
+* [Appending Elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
 * [Intervals and Timers](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
@@ -60,21 +62,19 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-### Algorithms
+  * [01: Log Even Nums](./03-Algorithms/01-log-even-nums)
 
-  * [01-log-even-nums](./03-Algorithms/01-log-even-nums)
+  * [02: Countdown](./03-Algorithms/02-countdown)
 
-  * [02-countdown](./03-Algorithms/02-countdown)
+  * [03: Sum of Array](./03-Algorithms/03-sum-array)
 
-  * [03-sum-array](./03-Algorithms/03-sum-array)
-
-    * 📹 Let's Code [Sum of Array](https://2u-20.wistia.com/medias/iz6bzizsnj)
+    * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
 ### Assessments
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* [Unit 3 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
+* [Unit 4 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
 
 ## Homework
 
@@ -90,12 +90,13 @@ When you are are researching DOM and event resources, you may come across jQuery
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
+### Git Guide
 
-* 📹 Code Review: N/A
+Refer to the Git Guide to review the git concept for this unit.
 
-* 📖 Git Guide: N/A
+  * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
 
 ---
 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
