@@ -24,6 +24,8 @@ The following topics will be covered in this unit:
 
 * [Creating DOM Elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 
+* [Appending Elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
 * [Intervals and Timers](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 * [Event Listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
