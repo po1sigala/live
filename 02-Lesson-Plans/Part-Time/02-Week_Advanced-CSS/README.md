@@ -76,5 +76,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [MDN Web Docs on CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
+  * [Wikipedia page on website wireframe](https://en.wikipedia.org/wiki/Website_wireframe)
+
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

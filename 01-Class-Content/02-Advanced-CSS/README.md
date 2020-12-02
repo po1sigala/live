@@ -34,6 +34,8 @@ The following topics will be covered in this unit:
 
 * [Advanced CSS selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
+* [Wireframes](https://en.wikipedia.org/wiki/Website_wireframe)
+
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
@@ -45,6 +47,8 @@ You will be employer-ready if you are able to:
 * Explain and implement CSS custom properties (variables)
 
 * Explain and implement CSS selectors beyond single classes or elements
+
+* Create and explain the purpose of a wireframe.
 
 * Resolve a merge conflict that results from a `git pull`
 
