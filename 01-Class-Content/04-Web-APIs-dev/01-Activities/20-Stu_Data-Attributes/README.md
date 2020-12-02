@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I click on a card and the hidden number is revealed.
 
-* It's done when if the number is visible and the card is clicked, the number is hidden. 
+* It's done when the number is visible if the card is clicked. 
 
 ## Assets
 

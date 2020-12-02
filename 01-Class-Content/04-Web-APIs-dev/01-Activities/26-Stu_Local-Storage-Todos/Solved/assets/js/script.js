@@ -5,6 +5,7 @@ var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = [];
 
+// The following function renders items in a todo list as <li> elements
 function renderTodos() {
   // Clear todoList element and update todoCountSpan
   todoList.innerHTML = "";
@@ -26,6 +27,7 @@ function renderTodos() {
   }
 }
 
+// This function is being called below and will run when the page loads.
 function init() {
   // Get stored todos from localStorage
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -35,7 +37,7 @@ function init() {
     todos = storedTodos;
   }
 
-  // Render todos to the DOM
+  // This is a helper function that will render todos to the DOM
   renderTodos();
 }
 
@@ -82,4 +84,3 @@ todoList.addEventListener("click", function(event) {
 
 // Calls init to retrieve data and render it to the page on load
 init()
-
