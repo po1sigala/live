@@ -1,115 +1,112 @@
 /* Universal Selector */
 * {
-    margin:0;
-    padding:0;  
+  margin:0;
+  padding:0;  
 }
 
 /* Element Selectors */
 body {
-    background-color: #FDF8F5;
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    color: #4F4846;
-    position: relative;
-    font-size: 20px;
+  position: relative;
+  background-color: #FDF8F5;
+  color: #4F4846;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 20px;
 }
 
 h1,
 h2{
-    margin: 20px;
+  margin: 20px;
 }
 
 main {
-    padding: 60px 0;
-    
+  padding: 60px 0;
 }
 
 li {
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 a {
-    color: #FDF8F5;
-    text-decoration: none;
+  color: #FDF8F5;
+  text-decoration: none;
 }
 
 header,
 footer {
-    background-color: #266150;
-    line-height: 60px;
-    height: 60px;
-    width: 100%;
+  background-color: #266150;
+  line-height: 60px;
+  height: 60px;
+  width: 100%;
 }
 
 header {
-    position: fixed;
-    border-bottom: 10px solid #DDAF94;
-    
+  position: fixed;
+  border-bottom: 10px solid #DDAF94;
 }
 
 footer {
-    position: absolute;
-    margin-top: 0;
-    color: #FDF8F5;
-    bottom: 0;
-    border-bottom: 10px solid #4F4846;
-    
+  position: absolute;
+  margin-top: 0;
+  bottom: 0;
+  border-bottom: 10px solid #4F4846;
+  color: #FDF8F5;    
 }
 
 figure {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 img {
-    display: block;
-    margin: 20px auto;
+  display: block;
+  margin: 20px auto;
 }
 
 section {
-    border-top: 3px solid #DDAF94;
-    background-color:  #E8CEBF;
-    margin-bottom: 0;
-    padding: 20px 10px 40px 10px;
+  border-top: 3px solid #DDAF94;
+  background-color:  #E8CEBF;
+  margin-bottom: 0;
+  padding: 20px 10px 40px 10px;
 }
 form {
-    /* Center the form on the page */
-    margin: 0 auto;
-    width: 500px;
-    padding: 10px;
-    border: 5px solid #DDAF94;
-    border-radius: 20px;
-  }
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  border: 5px solid #DDAF94;
+  border-radius: 20px;
+}
 
-  label {
-    display: inline-block;
-    width: 100px;
-  }
+label {
+  display: inline-block;
+  width: 100px;
+}
   
-  input, 
-  textarea {
-    width: 300px;
-    box-sizing: border-box;
-    border: 1px solid #4F4846;
-  }
+input, 
+textarea {
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #4F4846;
+}
 
-  textarea {
-    vertical-align: top;
-    height: 60px;
-  }
+textarea {
+  vertical-align: top;
+  height: 60px;
+}
   
-  button {
-    background-color: #4F4846;
-    color: #FDF8F5;
-    height: 40px;
-    width: 120px;
-  }
+button {
+  background-color: #4F4846;
+  color: #FDF8F5;
+  height: 40px;
+  width: 120px;
+}
  
 /* Class Selectors */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
