@@ -62,6 +62,7 @@ article ul {
 
 form {
   max-width: 400px;
+  padding: 2%;
 }
 
 form h3 {
@@ -70,6 +71,7 @@ form h3 {
 
 form p {
   margin: 3% 0;
+  padding: 3%;
 }
 
 label {
@@ -79,14 +81,14 @@ label {
 button {
   color: #fff;
   background-color: gray;
-  border: none;
+  width: 25%;
+  padding: 10px;
   cursor: pointer;
 }
 
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
   background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: right;
@@ -111,7 +113,6 @@ select,
 button {
   padding: 1%;
   outline: none;
-  border: 1px solid gray;
 }
 
 .text-input:hover,
@@ -125,7 +126,7 @@ button:hover {
 }
 
 .text-input:placeholder-shown {
-  border-style: dashed;
+  border-style: solid;
 }
 
 .flex-row {
@@ -157,3 +158,11 @@ button:hover {
   }
 }
 
+@media print {
+  form {
+    display: none;
+  }
+  p a::after {
+    content: '(' attr(href) ')';
+  }
+}

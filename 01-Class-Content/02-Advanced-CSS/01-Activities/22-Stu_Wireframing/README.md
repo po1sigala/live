@@ -2,23 +2,27 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to have a visual mockup of my form before I start coding so I can better organize my elements.
+* As a developer, I want to be able to see how my elements are going to be grouped together so that I can better design my website.
 
 ## Acceptance Criteria
 
-* It's done when I have drawn a mockup form with text inputs labeled Name, Email, and Comment.
+* It is done when my form elements are outlined and grouped together.
 
-* It's done when I have drawn a mockup form with a drop down menu labeled "CSS Level of Expertise.
+* It is done when my elements have a clear distinction between parent and child elements.
 
-* It's done when I have drawn a mockup form with one check box that has a blurb next to it.
+## Assets
 
-* It's done when I have drawn a mockup form with a submit button.
+The following image demonstrates the web application's appearance and functionality:
 
-* It's done when the form is broken up into groups of elements that relate to each other.
+![Example of a finished wireframe for a form](./Images/01-wireframe-form.png)
+
+---
 
 ## 💡 Hints
 
 * How do elements interact with each other when using flexbox?
+
+* How do we create borders using CSS?
 
 ## 🏆 Bonus
 
