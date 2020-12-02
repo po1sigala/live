@@ -121,6 +121,19 @@ button:hover {
   box-shadow: 0 0 5px gray;
 }
 
+/* The classes which represents our borders in the wireframe. */
+.parent {
+  border: 5px solid red;
+}
+
+.child {
+  border: 2px solid goldenrod;
+}
+
+.inner-child {
+  border: 2px solid orangered;
+}
+
 .text-input:focus {
   border-right-width: 5px;
 }

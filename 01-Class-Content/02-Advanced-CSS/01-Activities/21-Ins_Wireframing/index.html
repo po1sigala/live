@@ -10,35 +10,39 @@
 </head>
 
 <body>
-  <header>
-    <h1>The CSS Blog</h1>
+  <!-- Add the class `parent` to the  outer most element. -->
+  <header class="parent">
+    <!-- Add the class `child` to the h1 element because it lives inside of the `header` container. -->
+    <h1 class="child">The CSS Blog</h1>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Resources</a></li>
+      <ul class="child">
+        <!-- Add the class `inner-child` to the anchor element because it is the inner most child element of the `header` container. -->
+        <li><a class="inner-child" href="#">Home</a></li>
+        <li><a class="inner-child" href="#">About</a></li>
+        <li><a class="inner-child" href="#">Contact</a></li>
+        <li><a class="inner-child" href="#">Resources</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
+  <!-- Continue the steps above until you have something which roughly resembles a wireframe -->
+  <main class="parent">
+    <section class="child">
       <article>
-        <h2>Prepare the webpage for printing!</h2>
+        <h2 class="inner-child">Prepare the webpage for printing!</h2>
         <div>
-          <p>
+          <p class="inner-child">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             natus recusandae amet nostrum odit, ut unde non sint, quia sed
             inventore odio, delectus iure! Eligendi vitae fuga blanditiis
             accusamus tempore!
           </p>
-          <ul>
+          <ul class="inner-child">
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Nihil natus recusandae amet nostrum odit</li>
             <li>Eligendi vitae fuga blanditiis accusamus tempore</li>
           </ul>
-          <p>
+          <p class="inner-child">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             natus recusandae amet nostrum odit, ut unde non sint, quia sed
             inventore odio, delectus iure! Eligendi vitae fuga blanditiis
@@ -48,18 +52,18 @@
             dolorem repudiandae. Dignissimos eveniet sequi corporis tempore
             ullam!
           </p>
-          <p>
+          <p class="inner-child">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             natus recusandae amet nostrum odit, ut unde non sint, quia sed
             inventore odio, delectus iure! Eligendi vitae fuga blanditiis
             accusamus tempore!
           </p>
         </div>
-        <div class="resources">
-          <h3>
+        <div class="resources child">
+          <h3 class="inner-child">
             Show Resources
           </h3>
-          <ul class="links">
+          <ul class="links inner-child">
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">MDN web docs on
                 responsive design</a>
@@ -76,17 +80,17 @@
         </div>
       </article>
     </section>
-    <aside>
-      <h2>Sign up to Learn More!</h2>
+    <aside class="child">
+      <h2 class="inner-child">Sign up to Learn More!</h2>
       <form>
-        <input type="text" placeholder="E-mail address" />
-        <button>Submit</button>
+        <input class="inner-child" type="text" placeholder="E-mail address" />
+        <button class="inner-child">Submit</button>
       </form>
     </aside>
   </main>
 
-  <footer>
-    <span>Go to File &rarr; Print to see how the page looks.</span>
+  <footer class="parent">
+    <span class="child">Go to File &rarr; Print to see how the page looks.</span>
   </footer>
 </body>
 

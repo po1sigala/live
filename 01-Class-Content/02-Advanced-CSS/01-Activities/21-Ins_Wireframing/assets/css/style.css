@@ -9,37 +9,28 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  border: 5px solid red;
   background-color: gray;
   color: #fff;
 }
 
 h1 {
-  border: 5px solid goldenrod;
   font-size: 200%;
 }
 
 h2 {
   margin: 2% 0;
-  border: 2px solid orangered;
   font-size: 250%;
-}
-
-span {
-  border: 2px solid orangered;
 }
 
 nav ul {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  border: 5px solid goldenrod;
   min-width: 300px;
 }
 
 nav a {
   color: #fff;
-  border: 2px solid orangered;
   padding: 1px;
   font-weight: bold;
   text-decoration: none;
@@ -55,14 +46,12 @@ main {
   max-width: 1200px;
   margin: 2% auto;
   padding: 1%;
-  border: 5px solid red;
 }
 
 section {
   flex: 1 1 0;
   padding: 1.5%;
   padding-right: 5%;
-  border: 5px solid goldenrod;
 }
 
 article {
@@ -71,16 +60,13 @@ article {
 
 article p {
   margin: 2% 0;
-  border: 2px solid orangered;
   padding: 1%;
   font-size: 110%;
-  
 }
 
 article ul {
   margin-left: 5%;
   font-size: 110%;
-  border: 2px solid orangered;
   padding: 1%;
   list-style: circle;
 }
@@ -88,7 +74,6 @@ article ul {
 aside {
   width: 25%;
   padding: 1%;
-  border: 5px solid goldenrod;
 }
 
 aside h2 {
@@ -100,7 +85,6 @@ button {
   width: 100%;
   margin: 2% 0;
   padding: 1%;
-  border: 2px solid orangered;
 }
 
 button {
@@ -116,12 +100,21 @@ footer {
   padding: 2%;
   background-color: gray;
   color: #fff;
+}
+
+/* The classes which represents our borders in the wireframe. */
+.parent {
   border: 5px solid red;
 }
 
-.resources {
+.child {
   border: 5px solid goldenrod;
 }
+
+.inner-child {
+  border: 2px solid orangered;
+}
+
 .resources .links {
   padding: 1% 0;
 }

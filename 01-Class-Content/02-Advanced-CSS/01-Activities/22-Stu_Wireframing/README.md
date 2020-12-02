@@ -6,9 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It is done when my form elements are outlined and grouped together.
+* It is done when my form and all of the elements inside have the correct class assigned according to the surrounding elements.
 
 * It is done when my elements have a clear distinction between parent and child elements.
+
+* It is done when my form resembles a wireframe.
 
 ## Assets
 
@@ -22,7 +24,7 @@ The following image demonstrates the web application's appearance and functional
 
 * How do elements interact with each other when using flexbox?
 
-* How do we create borders using CSS?
+* How do we add CSS styles to classes?
 
 ## 🏆 Bonus
 

@@ -61,50 +61,53 @@
               >
             </p>
           </div>
-          <form>
-            <h3>Add a Comment:</h3>
-            <p>
-              <label for="username">Name:</label>
+          <!-- Since our form is the outer most element we want to use in our wireframe `parent` class -->
+          <form class="parent">
+            <!-- Inside of our form we have `child` elments who's position depends on its `parent` element. -->
+            <h3 class="child">Add a Comment:</h3>
+            <p class="child">
+              <!-- Inside of our `parent` and `child` elements, we have our inner most element with the class `inner-child`. -->
+              <label class="inner-child" for="username">Name:</label>
               <input
-                class="text-input"
+                class="text-input inner-child"
                 id="username"
                 type="text"
                 placeholder="First Last"
               />
             </p>
-            <p>
-              <label for="email">E-mail:</label>
+            <p class="child">
+              <label class="inner-child" for="email">E-mail:</label>
               <input
-                class="text-input"
+                class="text-input inner-child"
                 id="email"
                 type="text"
                 placeholder="me@example.com"
               />
             </p>
             <p class="flex-row">
-              <label for="expertise">CSS level of expertise:</label>
-              <select id="expertise">
+              <label class="inner-child" for="expertise">CSS level of expertise:</label>
+              <select class="inner-child" id="expertise">
                 <option>Beginner</option>
                 <option selected>Intermediate</option>
                 <option>Advanced</option>
               </select>
             </p>
-            <p>
-              <label for="comment">Comment:</label>
+            <p class="child">
+              <label class="inner-child" for="comment">Comment:</label>
               <textarea
-                class="text-input"
+                class="text-input inner-child"
                 id="comment"
                 placeholder="Great article!"
               ></textarea>
             </p>
             <p class="flex-row">
               <input class="checkbox" id="agreement" type="checkbox" />
-              <label for="agreement"
+              <label class="inner-child" for="agreement"
                 >I agree to share my e-mail address with The CSS Blog</label
               >
             </p>
-            <p>
-              <button>Submit</button>
+            <p class="child">
+              <button class="inner-child">Submit</button>
             </p>
           </form>
         </article>

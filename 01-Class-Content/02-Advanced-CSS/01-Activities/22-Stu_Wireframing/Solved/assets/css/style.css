@@ -62,30 +62,25 @@ article ul {
 
 form {
   max-width: 400px;
-  border: 5px solid red;
   padding: 2%;
 }
 
 form h3 {
-  border: 2px solid goldenrod;
   font-size: 150%;
 }
 
 form p {
   margin: 3% 0;
   padding: 3%;
-  border: 2px solid goldenrod;
 }
 
 label {
   display: block;
-  border: 2px solid orangered;
 }
 
 button {
   color: #fff;
   background-color: gray;
-  border: 2px solid goldenrod;
   width: 25%;
   padding: 10px;
   cursor: pointer;
@@ -108,6 +103,19 @@ footer {
   color: #fff;
 }
 
+/* The classes which represents our borders in the wireframe. */
+.parent {
+  border: 5px solid red;
+}
+
+.child {
+  border: 2px solid goldenrod;
+}
+
+.inner-child {
+  border: 2px solid orangered;
+}
+
 .text-input {
   width: 100%;
   max-width: 100%;
@@ -118,7 +126,6 @@ select,
 button {
   padding: 1%;
   outline: none;
-  border: 2px solid orangered;
 }
 
 .text-input:hover,
