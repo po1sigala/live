@@ -1,21 +1,22 @@
-# Local Storage Todo's
+# 📐 Add Comments to Implementation of Local Storage
 
-In this activity, we will working on storing our todos in `localStorage`. 
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/assets/js/script.js).
 
-## Instructions
+## 📝 Notes
 
-* Inside the `init()` function:
+Refer to the documentation: 
 
-  * Set a variable called `storedTodos` that retrieves the todos from `localStorage` and parses the JSON string to an object.
+[MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-  * Check if the todos were retrieved from `localStorage` and if so, set a `todos` variable with the `storedTodos`.
+---
 
-  * Lastly, render the todos to the DOM.
+## 🏆 Bonus
 
-* Inside the `storeTodos()` function:
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Stringify and set the "todos" key in `localStorage` to the `todos` array.
+* What is `sessionStorage`? How is it different from `localStorage`?  
 
-## Hint
+Use [Google](https://www.google.com) or another search engine to research this.
 
-* You will need to use `JSON.stringify` and `JSON.parse`.
+---
+2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
