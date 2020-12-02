@@ -72,6 +72,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [MDN Web Docs on Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 
+  * [MDN Web Docs on Appending Elements to a Parent Node](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
   * [MDN Web Docs on WindowOrWorkerGlobalScope.setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
   * [MDN Web Docs on EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
