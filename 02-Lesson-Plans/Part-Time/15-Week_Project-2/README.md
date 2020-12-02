@@ -36,10 +36,3 @@ On Day 03 of the next unit, students will present their projects. Emphasize that
 
   * [Unit 15-Project-2 Day 3 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1wtudESHJJegwHM01rCUe25iLxEflW2Zs/view?usp=sharing)
 
-## Algorithms
-
-  * [01-square-root](../../../01-Class-Content/15-Project-2/03-Algorithms/01-square-root)
-
-  * [02-needle-in-the-haystack](../../../01-Class-Content/15-Project-2/03-Algorithms/02-needle-in-the-haystack)
-
-  * [03-remove-duplicates](../../../01-Class-Content/15-Project-2/03-Algorithms/03-remove-duplicates)
