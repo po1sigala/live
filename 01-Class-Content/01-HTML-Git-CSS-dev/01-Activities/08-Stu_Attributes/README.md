@@ -20,7 +20,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image_1.png)
+![Mockup](./assets/image-1.png)
 
 ---
 
