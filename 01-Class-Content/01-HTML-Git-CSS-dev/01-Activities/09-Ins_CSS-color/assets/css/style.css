@@ -1,24 +1,24 @@
 .section {
-    /*Sets the height and width of the section */
-    width: 200px;
-    height: 200px
+  /*Sets the height and width of the section */
+  width: 200px;
+  height: 200px
 }
 
 .blue {
-    /* Sets background color */
-    background-color: #0000ff;
-    /* Sets font color */
-    color: white;
+  /* Sets font color */
+  color: white;
+  /* Sets background color */
+  background-color: #0000ff;
 }
 
 .orange {
-    /* Uses hex codes to define color */
-    background-color: #ffa500;
-    color: #0000ff;
+  /* Uses hex codes to define color */
+  color: #0000ff;
+  background-color: #ffa500;
 }
 
 #yellow {
-    /* Uses predefined colors to define color */
-    background-color: yellow;
-    color: purple;
+  /* Uses predefined colors to define color */
+  color: purple;
+  background-color: yellow;
 }
