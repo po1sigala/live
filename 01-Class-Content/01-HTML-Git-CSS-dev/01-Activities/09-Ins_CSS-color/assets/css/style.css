@@ -1,0 +1,24 @@
+.section {
+    /*Sets the height and width of the section */
+    width: 200px;
+    height: 200px
+}
+
+.blue {
+    /* Sets background color */
+    background-color: #0000ff;
+    /* Sets font color */
+    color: white;
+}
+
+.orange {
+    /* Uses hex codes to define color */
+    background-color: #ffa500;
+    color: #0000ff;
+}
+
+#yellow {
+    /* Uses predefined colors to define color */
+    background-color: yellow;
+    color: purple;
+}
