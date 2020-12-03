@@ -4,44 +4,47 @@ In this activity you will be writing code to create a function that takes in two
 
 ## Instructions
 
-- Open [Unsolved/concert-flyer.js](Unsolved/concert-flyer.js) in your code editor -- **this is the only file you will modify in this activity.**
+* Open [Unsolved/concert-flyer.js](Unsolved/concert-flyer.js) in your code editor&mdash;this is the only file you will modify in this activity.
 
-  - In this file you will be writing code in the body of the `concertFlyer` function to achieve the following:
+  * In this file you will be writing code in the body of the `concertFlyer` function to achieve the following:
 
-    - If every instance of each word in the second string is found in the first string, return `true`, else return `false`.
+    * If every instance of each word in the second string is found in the first string, return `true`, else return `false`.
 
-    - For example, given the following strings:
+    * See the following strings for an example:
 
-    ```js
-    var magazine = 'hello world';
-    var flyer = 'hello';
-    ```
+      ```js
+      var magazine = 'hello world';
+      var flyer = 'hello';
+      ```
 
-    - The following should be returned:
+    * Given the preceding strings, the following should be returned:
 
-    ```js
-    true;
-    ```
+      ```js
+      true;
+      ```
 
-    - If given the following strings:
+    * For another example, see the following strings:
 
-    ```js
-    var magazine = 'Whats so amazing that keeps us stargazing';
-    var flyer = 'stargazing whats keeps us so amazing';
-    ```
+      ```js
+      var magazine = 'Whats so amazing that keeps us stargazing';
+      var flyer = 'stargazing whats keeps us so amazing';
+      ```
 
-    - The following should be returned:
+    * Given the preceding strings, and because the word "Whats" is capitalized differently in each string, the following should be returned:
 
-    ```js
-    false;
-    ```
+      ```js
+      false;
+      ```
 
-    - Since the word "Whats" has a different case in each string.
+    * Assume that neither string will be empty and that you won't need to deal with punctuation, but you will need to worry about capitalization.
 
-    - Assume neither string will be empty and that you won't need to deal with punctuation, but you will need to worry about casing.
+* You can check whether your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
+  * Functions that pass the tests will be denoted with a green check mark.
 
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
+  * Functions that fail the tests will be denoted with a red X and an error message.
 
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+
+---
+
+ © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

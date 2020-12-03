@@ -2,25 +2,25 @@
 
 ## Overview
 
-In this unit, you will use the separation of concerns principle and the MVC framework to build out fullstack web apps. You will use Handlebars.js features including, expressions, built-in helpers, cutsom helpers, and partials to build static templates that can render dynamic data. You will use front end logic to make requests and pass data to the back end. You will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. You will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create your own custom middleware for user authentication. You will also incorporate sessions and cookies using the Sequelize store. Prettier will be introduced prior to starting on the mini project.
+In this unit, students will use the separation of concerns principle and the MVC framework to build full-stack web apps. They will use Handlebars.js features including expressions, built-in helpers, custom helpers, and partials to build static templates that can render dynamic data. Students will use front-end logic to make requests and pass data to the back end. They will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. They will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create their own custom middleware for user authentication. Students will also incorporate sessions and cookies using the Sequelize store. They will be introduced to Prettier before starting on the mini-project.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* Take some time to read through the Handlebars.js docs and the express-handlebars docs to (re)familiarize yourself with the template engine. This unit uses express-handlebars, so the Handlebars.js docs may not have all of the answers. Focus on expressions, built-in helpers, custom helpers, and partials.
+* Take some time to read through the Handlebars.js documentation and the Express Handlebars documentation to refamiliarize yourself with the template engine. This unit uses Express Handlebars, so the Handlebars.js documentation alone might not provide all of the answers. Focus on expressions, built-in helpers, custom helpers, and partials.
 
-* This unit introduces students to the template engine, Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their career, but instead, it is an introduction to template engines, preparation for React.js, and a way to emphasize the MVC framework.
+* This unit introduces students to the template engine Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their careers but more to treat the experience as an introduction to template engines, preparation for React.js, and a way to solidify their understanding of the MVC framework.
 
-* You will be using MySQL for the majority of this unit's activities. Be sure to have your MySQL server up and running. You can create the databases ahead of time, or demonstrate it live in class.
+* You will be using MySQL for the majority of this unit's activities. Be sure to have your MySQL server up and running. You can create the databases ahead of time or demonstrate it live in class.
 
-* Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Make sure you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
+* Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Be sure to create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
 * Be prepared to remind students how to start their MySQL server on Day 1. They will need to use it starting with `08-Stu_Data-Serialization`.
 
-* You'll need to install the ESLint and Prettier VS Code extensions to properly demonstrate both libraries for Day 3.
+* You'll need to install the VS Code extensions ESLint and Prettier to properly demonstrate both libraries for Day 3.
 
-* If the students struggle with the `Everyone Do: Prettier` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
 ## Career Connection
 
@@ -32,7 +32,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15). 
 
-* In the meantime, start thinking about possible project groups. This time, assign 3 students per group, all around the **same** skill level. Be ready to assign students to groups in the next class. 
+* In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class. 
 
 * Let students know that they will be allowed to create their own groups for the final project.
 
@@ -60,7 +60,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [01: Common Element](../../../01-Class-Content/14-MVC/03-Algorithms/01-common-element/)
 
-  * [02: Permutation SubString](../../../01-Class-Content/14-MVC/03-Algorithms/02-permutation-substring/)
+  * [02: Permutation Substring](../../../01-Class-Content/14-MVC/03-Algorithms/02-permutation-substring/)
 
   * [03: Concert Flyer](../../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer/)
 
@@ -68,21 +68,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * [Sequelize Docs](https://sequelize.org/master/)
+  * [Sequelize documentation](https://sequelize.org/master/)
 
   * [Handlebars.js](https://handlebarsjs.com/)
 
-  * [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+  * [npm documentation on Express Handlebars](https://www.npmjs.com/package/express-handlebars)
 
-  * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+  * [npm documentation on connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
 
-  * [Express.js Session Cookie Docs](https://github.com/expressjs/session#cookie)
+  * [GitHub documentation on Express.js session cookies](https://github.com/expressjs/session#cookie)
 
-  * [Express.js Docs on Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
+  * [Express.js documentation on using middleware](https://expressjs.com/en/guide/using-middleware.html)
 
-  * [ESLint](https://eslint.org/docs/user-guide/configuring)
+  * [ESLint configuration user guide](https://eslint.org/docs/user-guide/configuring)
 
-  * [Prettier](https://prettier.io/docs/en/index.html)
+  * [Prettier documentation](https://prettier.io/docs/en/index.html)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

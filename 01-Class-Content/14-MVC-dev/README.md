@@ -1,16 +1,16 @@
 # Unit 14: Model-View-Controller (MVC)
 
-## Overview:
+## Overview
 
-In this unit we will modularize our applications following the MVC paradigm. Short for Model View Controller, MVC is an architectural pattern that structures our codebase in three distinct sections according to a software design philosophy known as the _separation of concerns_.  
+In this unit we'll modularize applications following the **Model-View-Controller (MVC)** paradigm. MVC is an architectural pattern that structures a codebase in three distinct sections, according to a software design philosophy known as the **separation of concerns**.  
 
-Rather than hard code the HTML for many, many pages, we can dynamically generate the HTML using a template engine. In implementing a template engine, we are separating the concern of client-side rendering from other aspects of the application. This is the View layer in the MVC framework. The template engine we will learn and implement in this unit is Handlebars.js.
+Rather than hardcode the HTML for many, many pages, we can dynamically generate the HTML using a template engine. In implementing a template engine, we are separating the concern of client-side rendering from other aspects of the application. This is the **View** layer in the MVC framework. The template engine we will learn and implement in this unit is Handlebars.js.
 
-The Model is the data layer of our application. It is concerned with the structure of our database and the logic used to retrieve that data. We will implement Sequelize as our ORM for querying our database. 
+The **Model** is the data layer of the application. It is concerned with the structure of the database and the logic used to retrieve that data. We'll implement Sequelize as the ORM for querying the database. 
 
-Last, but not least, is the Controller. We can think of it as the intermediary between the View and the Model. The Controller handles input from the user, interacts with the Model to create, read, update or delete data, and then returns the results of that query to the user via the View layer. We are already familiar with these operations in our Express.js apps, but we will now separate our client-side and server-side routes from one another.
+Last but not least is the **Controller**. Think of it as the intermediary between the View and the Model. The Controller handles input from the user, interacts with the Model to create, read, update, or delete data, and then returns the results of that query to the user via the View layer. We are already familiar with these operations in Express.js apps, but now we'll separate the client-side and server-side routes from each other.
 
-Also in this unit, we will cover user authentication. We will build on the password hashing we learned in the previous module and learn to authenticate our application users by verifying their credentials. We will then utilize sessions and cookies to keep our users logged in and authorized to view the content of our app.
+Also in this unit, we'll cover user authentication. We'll build on the password hashing we learned in the previous module and learn to authenticate application users by verifying their credentials. We'll then use sessions and cookies to keep users logged in and authorized to view the content of the app.
 
 ## Key Topics
 
@@ -18,27 +18,27 @@ The following topics will be covered in this unit:
 
 * [Model-View-Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 
-* [Sequelize Model](https://sequelize.org/master/class/lib/model.js~Model.html)
+* [Sequelize model](https://sequelize.org/master/class/lib/model.js~Model.html)
 
 * [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 
   * [Expressions](https://handlebarsjs.com/guide/expressions.html)
 
-  * [Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
+  * [Built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
 
   * [Partials](https://handlebarsjs.com/guide/partials.html#basic-partials)
 
-  * [Custom Helpers](https://www.npmjs.com/package/express-handlebars#helpers)
+  * [Custom helpers](https://www.npmjs.com/package/express-handlebars#helpers)
 
 * Sessions and Cookies
 
   * [express-session](https://www.npmjs.com/package/express-session)
 
-  * [Connect Session Store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
+  * [connect-session-store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
 
-  * [Express.js Session Cookie](https://github.com/expressjs/session#cookie)
+  * [Express.js session cookie](https://github.com/expressjs/session#cookie)
 
-* [Express.js Middleware](https://expressjs.com/en/guide/using-middleware.html)
+* [Express.js middleware](https://expressjs.com/en/guide/using-middleware.html)
 
 * [ESLint](https://eslint.org/docs/user-guide/configuring)
 
@@ -48,21 +48,21 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
-* Explain and implement MVC modularization in a full-stack web application
+* Explain and implement MVC modularization in a full-stack web application.
 
-* Explain the interactions between the Model, View, and Controller
+* Explain the interactions between the Model, View, and Controller.
 
-* Explain separation of concerns and its benefits
+* Explain separation of concerns and its benefits.
 
-* Render dynamic HTML using a template engine, like Handlebars.js
+* Render dynamic HTML using a template engine, like Handlebars.js.
 
-* Dynamically pass data to other helpers or components using built-in helpers
+* Dynamically pass data to other helpers or components using built-in helpers.
 
-* Use data serialization to simplify objects in order to work with necessary properties only
+* Simplify objects by using data serialization, to work with necessary properties only.
 
-* Implement template partials to reuse across multiple templates
+* Implement template partials to reuse across multiple templates.
 
-* Utilize custom helper functions to format data in a template.
+* Format data in a template by using custom helper functions.
 
 * Create and read a session on a server using `express-sessions`. 
 
@@ -70,9 +70,9 @@ You will be employer-ready if you are able to:
 
 * Implement middleware function in Express.js for user authentication. 
 
-* Explain the purpose of ESLint
+* Explain the purpose of ESLint.
 
-* Explain and add Prettier to an existing project
+* Explain and add Prettier to an existing project.
 
 ## Technical Interview Preparation
 
@@ -98,7 +98,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-For this unit's homework, you will be building a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the `express-session` npm package for authentication.
+For this unit's homework, you'll be building a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the `express-session` npm package for authentication.
 
 ## Career Connection
 
@@ -106,15 +106,17 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-Next week, you will start working on your second group project! In the next class, you will be assigned to your project groups and receive the project requirements. Be sure to look over the project requirements carefully and be ready to brainstorm project ideas with your group.
+Next week, you'll start working on your second group project! In the next class, you'll be assigned to your project groups and receive the project requirements. Be sure to look over the project requirements carefully, and be ready to brainstorm project ideas with your group.
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
+### Git Guide
 
-* 📹 Code Review: N/A
+Refer to the Git Guide to review the git concept for this unit.
 
-* 📖 Git Guide: N/A
+  * 📖 [Git Guide: Prettier](./01-Activities/27-Evr_Prettier)
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
