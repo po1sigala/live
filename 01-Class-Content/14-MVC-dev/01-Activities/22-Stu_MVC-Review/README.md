@@ -22,9 +22,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* Without a signup form, how can you quickly add new users to the database?
-
-* What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
+Without a signup form, how can you quickly add new users to the database? What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
 
 ## 🏆 Bonus
 
