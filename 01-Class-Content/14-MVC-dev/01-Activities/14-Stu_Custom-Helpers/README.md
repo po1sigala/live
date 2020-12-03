@@ -1,12 +1,12 @@
-# 🐛 Date is not formatted correctly
+# 🐛 Date Is Not Formatted Correctly
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * Museum visitors should be able to see the end date of each painting on the painting page.
 
 ## Expected Behavior
 
-When a museum visitor visits the painting page, it should clearly and accurately show the date of when the exhibition will end:
+* When a museum visitor visits the painting page, it should clearly and accurately show the date that the exhibition will end.
 
 * The end date is calculated by adding five years to the painting's `exhibition_date`.
 
@@ -20,15 +20,13 @@ When a museum visitor visits the exhibition page, it shows the painting's `exhib
 
 The following image demonstrates the correct formatting of the end date for each painting:
 
-![On a museum page, one card has an image of a blossoming apricot with the title, artist name, and end date underneath it](./Images/01-painting-end-date.jpg)
+![On the museum webpage, one card displays an image of a blossoming tree with the title, artist name, and end date underneath the image.](./Images/01-painting-end-date.jpg)
 
 ---
 
 ## 💡 Hints
 
-* Which JavaScript Date methods allow you to return the month, date, and year of a specified date?
-
-* How do you correctly render the month, since it is returned as a zero-based value?
+Which JavaScript Date methods allow you to return the month, date, and year of a specified date? How do you correctly render the month, considering that it is returned as a zero-based value?
 
 ## 🏆 Bonus
 
@@ -39,4 +37,5 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
