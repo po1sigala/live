@@ -7,10 +7,10 @@
 /* Element Selectors */
 body {
   position: relative;
-  background-color: #FDF8F5;
-  color: #4F4846;
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 20px;
+  background-color: #FDF8F5;
+  color: #4F4846;
 }
 
 h1,
@@ -23,22 +23,22 @@ main {
 }
 
 li {
-  padding: 20px;
   display: inline-block;
+  padding: 20px;
   text-decoration: none;
 }
 
 a {
-  color: #FDF8F5;
   text-decoration: none;
+  color: #FDF8F5;
 }
 
 header,
 footer {
-  background-color: #266150;
-  line-height: 60px;
   height: 60px;
   width: 100%;
+  line-height: 60px;
+  background-color: #266150;
 }
 
 header {
@@ -64,10 +64,10 @@ img {
 }
 
 section {
-  border-top: 3px solid #DDAF94;
-  background-color:  #E8CEBF;
   margin-bottom: 0;
   padding: 20px 10px 40px 10px;
+  border-top: 3px solid #DDAF94;
+  background-color:  #E8CEBF;
 }
 
 form {
@@ -86,8 +86,8 @@ label {
   
 input, 
 textarea {
-  width: 300px;
   box-sizing: border-box;
+  width: 300px;
   border: 1px solid #4F4846;
 }
 
@@ -97,10 +97,10 @@ textarea {
 }
   
 button {
-  background-color: #4F4846;
-  color: #FDF8F5;
   height: 40px;
   width: 120px;
+  background-color: #4F4846;
+  color: #FDF8F5;
 }
  
 /* Class Selectors */
