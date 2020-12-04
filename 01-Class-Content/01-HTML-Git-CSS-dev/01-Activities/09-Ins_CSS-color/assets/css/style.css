@@ -4,21 +4,21 @@
   height: 200px
 }
 
-.blue {
+.box-1 {
   /* Sets font color */
   color: white;
   /* Sets background color */
   background-color: #0000ff;
 }
 
-.orange {
+.box-2 {
   /* Uses hex codes to define color */
   color: #0000ff;
   background-color: #ffa500;
 }
 
-#yellow {
+#box-3 {
   /* Uses predefined colors to define color */
   color: purple;
   background-color: yellow;
-}
+};
