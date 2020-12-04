@@ -8,11 +8,11 @@ Work with a partner to resolve the following issue(s):
 
 * Each section should have a background color of with the hex `#fffacd` and the font family `"Lucida Sans Unicode", "Lucida Grande", sans-serif` should be specified.
 
-* The `fact1` paragraph should be bold.
+* The `fact-1` paragraph should be bold.
 
-* The `fact2` paragraph should have a font size of 24px.
+* The `fact-2` paragraph should have a font size of 24px.
 
-* The `fact3` paragraph should have a line height of 50px.
+* The `fact-3` paragraph should have a line height of 50px.
 
 * The finished page should match the mockup below.
 
