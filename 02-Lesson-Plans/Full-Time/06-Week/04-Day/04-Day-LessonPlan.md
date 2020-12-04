@@ -100,7 +100,7 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
   const mysql = require('mysql');
   ```
   
-  * The following line creates a connection to the "ice_creamDB" database using a localhost connection.
+  * The following code block creates a connection to the "ice_creamDB" database using a localhost connection.
 
   ```js
   const connection = mysql.createConnection({
@@ -120,7 +120,7 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
   });
   ```
 
-  * After explaining all of this, add in the following lines of code to have Node connect to the MySQL server and inform the user that they have connected properly.
+  * The following lines of code are used to have Node connect to the MySQL server. Then it will inform the user that they have connected properly.
 
   ```js
   connection.connect((err) => {
