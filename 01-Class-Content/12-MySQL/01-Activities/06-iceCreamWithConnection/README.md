@@ -2,7 +2,7 @@
 
 * Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists. 
 
-* Create your "playlistDB" database in MySQL.
+* Create your `playlistDB` database in MySQL.
 
 **Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.**
 
