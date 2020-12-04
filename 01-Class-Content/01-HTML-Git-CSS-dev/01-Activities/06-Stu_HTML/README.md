@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when there is a section that includes a name, an image, and a paragraph.
 
-* It's done when there is a second section that includes a sub-header reading `"Contact Info"` and a list that includes links to my email, Github and portfolio. 
+* It's done when there is a second section that includes a sub-header reading `"Contact Info"` and a list that includes links to my email, GitHub and portfolio. 
 
 * It's done when the finished page matches the mockup below. 
 
@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image_1.png)
+![Mockup](./assets/image-1.png)
 
 ---
 
