@@ -1,29 +1,26 @@
-# 🏗️ Implement and Use Spread and Rest Operators
+# 📐 Add Comments to Implementation and Use of Rest and Spread Operators
 
-Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/index.js).
 
-* As a developer, I want to be able to use the spread and rest operators to make my code easier to read.
+## 📝 Notes
 
-## Acceptance Criteria
+Refer to the documentation: 
 
-* It's done when I have copied the `songs` array using spread `...`.
+* [MDN Web Docs on spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-* It's done when I have console logged the new array.
+* [MDN Web Docs on rest](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
-* It's done when I have modified the `addition` function so that it retains functionality but also allows one to pass in any number of arguments.
+* [MDN Web Docs on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-## 💡 Hints
-
-Can you think of some real-life analogies for the spread and rest operator?
+---
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What other data types can you use the spread or rest operator on?
+* What other data types can you use the spread operator or rest parameters on?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -48,31 +48,17 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
+* Render dynamic HTML using a template engine, like Handlebars.js.
+
 * Explain and implement MVC modularization in a full-stack web application.
+
+* Configure Heroku for deployment of an application using MySQL.
 
 * Explain the interactions between the Model, View, and Controller.
 
 * Explain separation of concerns and its benefits.
 
-* Render dynamic HTML using a template engine, like Handlebars.js.
-
-* Dynamically pass data to other helpers or components using built-in helpers.
-
-* Simplify objects by using data serialization, to work with necessary properties only.
-
-* Implement template partials to reuse across multiple templates.
-
-* Format data in a template by using custom helper functions.
-
-* Create and read a session on a server using `express-sessions`. 
-
-* Explain how cookies and sessions work together.
-
-* Implement middleware function in Express.js for user authentication. 
-
-* Explain the purpose of ESLint.
-
-* Explain and add Prettier to an existing project.
+* Implement user authentication.
 
 ## Technical Interview Preparation
 
