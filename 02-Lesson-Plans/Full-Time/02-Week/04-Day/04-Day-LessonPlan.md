@@ -190,76 +190,106 @@ In this activity you are going to use DOM methods to create an entire HTML page.
 
 ### 5. Student Do: Speed Reader (30 mins)
 
-* Direct students to the final activity of class, in [09-Stu_SpeedReader](../../../../01-Class-Content/04-web-apis/01-Activities/09-Stu_SpeedReader/Unsolved).
+* Direct students to the Speed Reader activity instructions in [09-Stu_SpeedReader](../../../../01-Class-Content/04-web-apis/01-Activities/09-Stu_SpeedReader/README.md).
 
 ```md
 # Speed Reader 
 
-In this activity you are going to create a speed reading application. It will input a single word on the screen at a time, changing to the next word after 1 second. This equates to reading at 60 Words Per Minute (WPM).
+In this activity, you are going to create a speed reading application. It will render a single word on the screen one at a time every second. This equates to reading at 60 Words Per Minute (WPM).
 
 ## Instructions
 
-* The app should countdown from 5, and when the countdown is finished it should print one word to the screen every second. Each word replaces the other.
+* The app should countdown from 5, and when the countdown is finished, it should print one word to the screen every second. Each word replaces the other.
 
-* Open `index.html` and create the necessary HTML. You will need at least 3 elements.
+* Open [index.html](Unsolved/index.html) and examine the HTML code in the `<body>`.
 
-* Open `script`.
+* Open [script.js](Unsolved/assets/js/script.js) and complete the `countdown()` function that will count down from 5.
 
-  * The two function names have been created for you, as well as a poem to speed read.
+  * Complete the `setInterval()` method to call a function to be executed every 1000 milliseconds.
 
-* Fill out the necessary code that would create a countdown timer. When that timer completes, it should dissapear and speed reading should begin.
+  * As long as the `timeLeft` is greater than 1, set the `textContent` of `timerEl` to show the remaining seconds (i.e. 5 seconds left), and decrement `timeLeft` by 1.
+
+  * Once the `timeLeft` gets to 0, set the `textContent` of `timerEl` to an empty string, use `clearInterval()` to stop the timer, and call the `displayMessage()` function.
+
+## Hint(s)
+
+* Look at the `displayMessage()` function to see an example of how to use `setInterval()` and `clearInterval()`.
+
+## Bonus
+
+* When `timeLeft` is equal to `1`, render "1 second left" instead of "1 seconds left".
 ```
 
 ### 6. Instructor Do: Review Speed Reader (10 mins)
 
 * Navigate to [09-Stu_SpeedReader/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/09-Stu_SpeedReader/Solved)
 
-* Open the solved `script` file and show students the completed solution.
+* Open the solved `script.js` file and show students the completed solution.
 
 * Point out these main points to students:
 
-  * In our `prepareRead` function we store our interval in a variable so we can clear it later.
+  * We first use `getElementById()` to select the HTML elements with "countdown" and "main" IDs.
+
+  ```js
+  var timerEl = document.getElementById('countdown');
+  var mainEl = document.getElementById('main');
+  ```
+
+  * We then declare a `message` variable with a string of text. We then use the `.split()` method to _split_ the string into individual elements in an array, `words`. 
+
+  ```js
+  var message =
+    'Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.';
+  var words = message.split(' ');
+  ```
+
+  * We declare a `countdown()` function. Within our `countdown()` function, we declare a `timeLeft` variable and set it to 5.
+
+  ```js
+  function countdown() {
+    var timeLeft = 5;
+  ```
+
+  * 🔑 We then declare `timeInterval` and assign it the value of `setInterval()`. Here, we will update the text in `timerEl` at an interval of 1000 ms, or 1 second. With each interval, we _decrement_ the value of `timeLeft`. If `timeLeft` is equal to 0, we use `clearInterval()` to stop `timeInterval()`. 
 
   ```js
   var timeInterval = setInterval(function() {
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + ' seconds remaining';
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + ' second remaining';
+      timeLeft--;
+    } else {
+      timerEl.textContent = '';
+      clearInterval(timeInterval);
+      displayMessage();
+    }
+  }, 1000);
   ```
 
-  * When the timer has run out, we empty the `textContent` of the `timerEl` and then execute our `speedRead` function.
+  * To briefly explain the `displayMessage()` function, we declare a variable called `wordCount`
+
+  * We then declare a `msgInterval` variable and, as above, assign it the value of `setInterval()`. Within our callback, we check if our `words` array contains anything. If not, we clear the interval. 
+  
+  * Otherwise, we update the `textContent` of `mainEl` with the string at `words[wordCount]`. With each interval, we increment `wordCount`. Each interval is set to the length of 1000 milliseconds. 
 
   ```js
-  if (timeLeft === 0) {
-    timerEl.textContent = " ";
-    speedRead();
-    clearInterval(timeInterval);
-  }
-  ```
+  function displayMessage() {
+    var wordCount = 0;
 
-  * We used a prompt to ask the user to enter the speed at which they would like to read, we passed that response in as the second argument of our `speedRead` setInterval.
-
-  ```js
-  }, speed);
-  ```
-
-   * As opposed to a fixed value, i.e.,
-
-   ```js
-   }, 1000);
-   ```
-
-  * In the beginning of our `speedRead` function we append our `bodyEl`, generated via `createElement`, to the `mainEl` of our HTML page.
-
-  ```js
-  mainEl.append(bodyEl);
-  ```
-
-  * We use an `if` statement to check whether the piece we are reading is over. When `words[i]` begins to evaluate to undefined and not a word, we terminate the interval via `clearInterval`. As long as `words[i]` evaluates to a word from our array, we make the content of our `mainEl` reflect that.
-
-  ```js
-  if (words[i] === undefined) {
-    clearInterval(poemInterval);
-  } else {
-    mainEl.textContent = words[i];
-    i++;
+    // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var msgInterval = setInterval(function () {
+      // If there are no more words left in the message
+      if (words[wordCount] === undefined) {
+        // Use `clearInterval()` to stop the timer
+        clearInterval(msgInterval);
+      } else {
+        // Display one word of the message
+        mainEl.textContent = words[wordCount];
+        wordCount++;
+      }
+    }, 1000);
   }
   ```
 
