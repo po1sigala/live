@@ -504,7 +504,7 @@ In this activity you will `console.log(this)` and dig around inside the returned
 
 * For the final slide and demo, return to the slide deck [2.3 The DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-* 19. **Our Goal Today**: The goal of the day is to build a speed reading application. We will receive an input of how many words per millisecond a user would like to read at, and then display one word at a time to our user at the specified speed.
+* 19. **Our Goal for Tomorrow**: The goal for tomorrow is to build a speed reading application. We will receive an input of how many words per millisecond a user would like to read at, and then display one word at a time to our user at the specified speed.
 
 * Ask the class the following question(s):
 
