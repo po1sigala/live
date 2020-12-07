@@ -40,7 +40,7 @@ What display property is used to hide an element?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is the CSS visibility property? How is it different from display?
+* What is the CSS visibility property? How is it different from the display property?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
