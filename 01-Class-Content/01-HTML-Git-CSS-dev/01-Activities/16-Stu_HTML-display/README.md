@@ -12,7 +12,7 @@ Work with a partner to resolve the following issue(s):
 
 * All list items in the navigation bar should display inline.
 
-* All images should be displayed. 
+* All images should be visible. 
 
 * Each image should appear centered and on its own line.
 
@@ -22,7 +22,7 @@ Work with a partner to resolve the following issue(s):
 
 * Two images are visible and one is not displayed.
 
-* All images appear on a single line.
+* The two visible images display inline. 
 
 ## Assets
 
