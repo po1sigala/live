@@ -4,7 +4,7 @@
 
 In this class, we will further students' understanding of DOM Manipulation using jQuery. Towards the end of class, we will also introduce them to the concept of lexical scope.
 
-`Summary: Complete activities 10-15 in Unit 05`
+`Summary: Complete activities 11-20 in Unit 05`
 
 ## Instructor Notes
 
