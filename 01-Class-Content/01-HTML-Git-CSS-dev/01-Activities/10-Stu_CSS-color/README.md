@@ -32,13 +32,13 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image_1.png)
+![Mockup](./assets/image-1.png)
 
 ---
 
 ## 💡 Hints
 
-* How can we use `<link>` element inside the `<head>` of the HTML page to connect our HTML to our CSS?
+* How can we use the `<link>` element inside the `<head>` of the HTML page to connect our HTML to our CSS?
 
 ## 🏆 Bonus
 
