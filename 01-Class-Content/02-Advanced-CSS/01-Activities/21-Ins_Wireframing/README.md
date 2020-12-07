@@ -6,8 +6,8 @@
 
     * This is the starting of a wireframe for the mini-project for this unit.
 
-    * The area highlighted in red represent the rows and the blue represents the columns..
+    * The area's highlighted in red represent the rows and the blue represents the columns.
 
-![Example of an unfiished wireframe with its row and columns highlighted](./assets/Images/01-unfished-wireframe.png)
+![Example of an unfinished wireframe with its row and columns highlighted](./assets/Images/01-unfinished-wireframe.png)
 
 TODO: 2u copyright?

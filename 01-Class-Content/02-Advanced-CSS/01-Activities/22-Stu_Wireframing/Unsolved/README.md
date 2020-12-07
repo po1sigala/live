@@ -10,6 +10,6 @@ Open [Google Slides Wireframe Starter Kit](https://docs.google.com/presentation/
 
 * The rows are highlighted in red and the columns are highlighted in blue.
 
-![Example of an unfiished wireframe with its row and columns highlighted](./assets/Images/02-unfished-wireframe.png)
+![Example of an unfinished wireframe with its row and columns highlighted](./assets/Images/02-unfinished-wireframe.png)
 
 TODO: 2u copyright?

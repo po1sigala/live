@@ -6,7 +6,7 @@
 
 * We move down our page to create three elements on the same row.
 
-* When we move onto the coding phase of this mini-project you will note that we will be placing these three elements into a container. This container will determine how our elements sit on this row of our web page.
+* When we move onto the coding phase of this mini-project you will note that we will be placing these three elements into a container. This container will determine how our elements sit on the row of our web page.
 
 * Inside of our row that is highlighted in red, we see a blue highlighted box which determines how elements sit on the column.
 
@@ -16,6 +16,6 @@
 
 * Finally, we reached the footer of our website which is simply a blocked off area at the bottom of the page.
 
-![Google slide tools highlighted with an orange box](./assets/Images/01-wireframe-form-completed.png)
+![Finished wireframe of the unit 02 mini-project](./assets/Images/01-wireframe-form-completed.png)
 
 TODO: 2u copyright?
