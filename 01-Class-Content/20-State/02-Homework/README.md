@@ -70,8 +70,7 @@ As with the previous portfolio homework, "good" design is subjective. Your site 
 
 * Mobile-first design
 
-* Choose a color palette for your site so it doesn't just look like
-the default bootstrap theme or an unstyled HTML site. You may we
+* Choose a color palette for your site so it doesn't just look like the default bootstrap theme or an unstyled HTML site.
 
 * Make sure the font size is large enough to read, and that the colors don't cause eye strain.
 
@@ -91,6 +90,8 @@ At a minimum, your portfolio should include the following:
 * Navigation with React Router, dynamic rendering, or another third part router
 
 * A `Footer` component that appears on multiple pages
+
+* **Important**: If you use React Router, you will **NOT** be able to use the `<BrowserRouter>` component on GitHub Pages. Read the [GitHub note on client-side routing](https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing) and the [React Router documentation on HashRouter](https://reactrouter.com/web/api/HashRouter) for more information.
 
 
 ### Updated LinkedIn Profile 
