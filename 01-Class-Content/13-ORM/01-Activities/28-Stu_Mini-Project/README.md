@@ -62,29 +62,21 @@ In this mini-project, you will work with a group to build an API using Node.js, 
       
     * `traveller_amount`
       
-    * `traveller_id`: foreign key that references `Traveller.id`
+    * `traveller_id`: foreign key that references `Traveller.id` that is not unique
       
-    * `location_id`: foreign key that references `Location.id`
-
-  * Travellers have many trips, and trips belong to a traveller (one-to-many association).
-
-    * If a traveller is deleted, all associated trips are also deleted.
-
-  * Locations have many trips, and trips belong to a location (one-to-many association).
-
-    * If a location is deleted, all associated trips are also deleted.
+    * `location_id`: foreign key that references `Location.id` that is not unique
 
   * Travellers have many locations, and locations have many travellers through trips (many-to-many association).
+
+  * Since Travellers can take multiple trips, set the `unique` flag to `false` when creating the many-to-many relationship to avoid a SQL error.
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-* [Sequelize documentation on one-to-many relationships](https://sequelize.org/master/manual/assocs.html#one-to-many-relationships)
-
 * [Sequelize documentation on many-to-many relationships](https://sequelize.org/master/manual/assocs.html#many-to-many-relationships)
 
-* [@TODO: Link to soon to exist Heroku JawsDB deploy guide]()
+* [Deploy with Heroku and MySQL Guide](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
 Use the following sample data as the request body POST `/api/trips` route:
 
@@ -114,6 +106,8 @@ If you have completed this activity, work through the following challenge with y
 * Add validations to all of the model data.
 
 * Create a password hashing and login system for travellers.
+
+* Set up a "super many-to-many relationship" between travellers, locations, and trips to provide more querying options. Check out the [Sequelize docs](https://sequelize.org/master/manual/advanced-many-to-many.html) to learn more.
 
 ---
 
