@@ -16,7 +16,9 @@ The following image demonstrates the web application's appearance and functional
 
 ![Example of a finished wireframe for a form](./Images/01-wireframe-form-completed.png)
 
-Open [Google Slides](https://docs.google.com/presentation/u/0/?tgif=d) and create elements using the tools highlighted in the image below:
+* Navigate to [Google Slides](https://docs.google.com/presentation/u/0/?tgif=d) and create a new presentation using the blank template.
+
+* Using the tools highlighted in the image below, create a wireframe that includes all the elements we need for our project.
 
 ![Google slide tools highlighted with an orange box](./Images/02-google-slides-tool-highlight.png)
 

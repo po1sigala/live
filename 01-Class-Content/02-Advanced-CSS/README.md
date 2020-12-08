@@ -40,17 +40,33 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
-* Implement a flexbox layout for a responsive design
+* Implement basic media queries for screens.
 
-* Explain and implement basic media queries
+* Implement a CSS grid to accomplish a complex layout.
 
-* Explain and implement CSS custom properties (variables)
+* Implement a flexbox layout for a responsive web design.
 
-* Explain and implement CSS selectors beyond single classes or elements
+* Use flexbox justification and alignment properties for spacing.
+
+* Enhance the UI of a webpage using box styling.
+
+* Explain why you would use a CSS reset.
+
+* Use typographical CSS properties, like `font-family` and `line-height`.
+
+* Add pseudo-classes and pseudo-elements to HTML elements.
+
+* Explain the default styles that browsers apply to form elements.
 
 * Create and explain the purpose of a wireframe.
 
-* Resolve a merge conflict that results from a `git pull`
+* Use CSS selectors to reference HTML elements in different ways.
+
+* Use CSS variables to keep their code clean.
+
+* Use advanced CSS styling for an enhanced UI.
+
+* Resolve a merge conflict that results from a `git pull`.
 
 ## Technical Interview Preparation
 
@@ -85,4 +101,5 @@ Refer to the Git Guide to review the git concept for this unit.
   * 📖 [Git Guide: Git Pull and Merge Conflicts](./01-Activities/27-Evr_Git-Pull-Conflict)
 
 ---
+
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
