@@ -1,0 +1,14 @@
+section {
+    /* Centers element */
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    border: 15px solid black;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    /*Add your code here*/
+    background-color: lightblue;
+}
