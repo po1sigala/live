@@ -18,4 +18,4 @@
 
 ![Finished wireframe of the unit 02 mini-project](./assets/Images/01-wireframe-form-completed.png)
 
-TODO: 2u copyright?
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
