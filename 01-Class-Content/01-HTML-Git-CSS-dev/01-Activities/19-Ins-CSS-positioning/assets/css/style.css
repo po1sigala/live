@@ -5,32 +5,36 @@ h3 {
 }
 
 header {
-    width: 100%;
-    border: 10px solid darkblue;
-    background-color: lightblue;
+  width: 100%;
+  border: 10px solid darkblue;
+  background-color: lightblue;
 }
+
 section {
-    height: 400px;
-    width: 80%;
-    margin: 30px auto;
-    border: 10px solid black;
+  height: 400px;
+  width: 80%;
+  margin: 30px auto;
+  border: 10px solid black;
 }
 
+/*Relative positioning*/
 #relative-box {
-    position: relative;
-    left: 200px;
+  position: relative;
+  left: 200px;
 }
 
+/*Absolute positioning*/
 #absolute-section {
-    position: relative;
+  position: relative;
 }
 
 #absolute-box {
-    position: absolute;
-    top: 50px;
-    right: 100px;
+  position: absolute;
+  top: 50px;
+  right: 100px;
 }
 
+/*Fixed positioning*/
 #fixed-box{
     position: fixed;
     bottom: 0;

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The href attribute points to the relative path of the stylesheet-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>CSS Positioning</title>
   </head>
@@ -12,33 +11,34 @@
     <header>
         <h1>CSS Positioning</h1>
     </header>
+
     <section>
-      <h2>position:static;</h2>
+      <h2 id="static-header">Static Position</h2>
       <img src="./assets/images//image-1.png" alt="box with number 1"/>
       <h3>Element is in normal flow. This is the default value.</h3>
-    </figure>
     </section>
 
     <section>
-      <h2>position:relative;</h2>
+      <h2 id="relative-header">Relative Position</h2>
       <img id="relative-box" src="./assets/images//image-2.png" alt="box with number 2"/>
       <h3>Element is in normal flow but offset based on provided value.</h3>
       <h3>The values top, right, left and bottom can be used to offset element.</h3>
     </section>
 
     <section id="absolute-section">
-      <h2>position:absolute;</h2>
+      <h2 id="absolute-header">Absolute Position</h2>
       <img id="absolute-box" src="./assets/images//image-3.png" alt="box with number 3"/>
       <h3>The element is removed from the normal flow.</h3>
-      <h3>Its final position is determined by the values of top, right, bottom, and left.</h3>
+      <h3>Its final position is relative to the positioned parent or ancestor</h3>
+      <h3>and is determined by the values of top, right, bottom, and left.</h3>
     </section>
    
     <section>
-      <h2>position:fixed;</h2>
+      <h2 id="fixed-header">Fixed Position</h2>
       <img id="fixed-box" src="./assets/images//image-4.png" alt="box with number 4">
       <h3>The element is removed from the normal document flow.</h3>
       <h3>The final position is relative to the viewport and determined by the values of top, right, bottom, and left. </h3>
-
     </section>
+  </body>
 
 </html>
