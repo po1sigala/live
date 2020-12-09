@@ -35,6 +35,7 @@ section {
 .second-element {
   background-color: goldenrod;
 }
+
 /* Sets display of all elements with class selector to block*/
 .display-block {
   display: block;
