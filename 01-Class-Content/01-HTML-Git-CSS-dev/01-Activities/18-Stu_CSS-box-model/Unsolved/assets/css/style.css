@@ -1,0 +1,15 @@
+section {
+    width: 600px;
+    height: 600px;
+    /* Centers element */
+    margin: 0 auto;
+    border: 15px solid black;
+}
+
+img {
+    /*Height and width of content*/
+    width: 200px;
+    height: 200px;
+    /*Add your code here*/
+    background-color: lightblue;
+}
