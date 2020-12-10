@@ -3,37 +3,42 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>HTML Box Model</title>
+    <title>CSS Positioning</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
 
   <body>
+    <!--This header uses fixed position. It remains in place on scroll-->
     <header>
       <h1>CSS Positioning</h1>
-     </header>
+    </header>
 
-     <main>
-       <section>
-         <img src="./assets/images/image-1.png" alt="box with number 1"/>
-         <img src="./assets/images/image-2.png" alt="box with number 2"/>
-         <img src="./assets/images/image-3.png" alt="box with number 3"/>
-         <img src="./assets/images/image-4.png" alt="box with number 4"/>
-       </section>
+    <main>
+      <!--This section uses static positioning. All images in normal flow-->
+      <section>
+        <img src="./assets/images/image-1.png" alt="box with number 1"/>
+        <img src="./assets/images/image-2.png" alt="box with number 2"/>
+        <img src="./assets/images/image-3.png" alt="box with number 3"/>
+        <img src="./assets/images/image-4.png" alt="box with number 4"/>
+      </section>
 
-       <section>
-         <img src="./assets/images/image-1.png" alt="box with number 1"/>
-         <img id="relative-2" src="./assets/images/image-2.png" alt="box with number 2"/>
-         <img id="relative-3" src="./assets/images/image-3.png" alt="box with number 3"/>
-         <img id="relative-4" src="./assets/images/image-4.png" alt="box with number 4"/>
-       </section>
+      <!--This section uses relative position. Images in normal flow and offset by provided values-->
+      <section>
+        <img src="./assets/images/image-1.png" alt="box with number 1"/>
+        <img id="relative-2" src="./assets/images/image-2.png" alt="box with number 2"/>
+        <img id="relative-3" src="./assets/images/image-3.png" alt="box with number 3"/>
+        <img id="relative-4" src="./assets/images/image-4.png" alt="box with number 4"/>
+      </section>
 
-       <section id="absolute-section">
-         <img id="absolute-1" src="./assets/images/image-1.png" alt="box with number 1"/>
-         <img id="absolute-2" src="./assets/images/image-2.png" alt="box with number 2"/>
-         <img id="absolute-3" src="./assets/images/image-3.png" alt="box with number 3"/>
-         <img id="absolute-4" src="./assets/images/image-4.png" alt="box with number 4"/>
-       </section>
+      <!--This section uses absolute position. Images not in normal flow and positioned based on parent section-->
+      <section id="absolute-section">
+        <img id="absolute-1" src="./assets/images/image-1.png" alt="box with number 1"/>
+        <img id="absolute-2" src="./assets/images/image-2.png" alt="box with number 2"/>
+        <img id="absolute-3" src="./assets/images/image-3.png" alt="box with number 3"/>
+        <img id="absolute-4" src="./assets/images/image-4.png" alt="box with number 4"/>
+      </section>
     </main>
   </body>
 
 </html>
+

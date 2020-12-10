@@ -1,79 +1,102 @@
 body {
-    position: relative;
-    margin: 0;
-    padding: 0;
+  /*Sets the position of the body to relative*/
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    padding-top: 100px;
+  /*Adds padding to the top of the main element equal to height of fixed header*/
+  padding-top: 100px;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    border-bottom: 10px solid darkblue;
-    background-color: lightblue;
+  /*Sets header position to fixed*/
+  position: fixed;
+  /*Positions header 0 length from top of page*/
+  top: 0;
+  width: 100%;
+  height: 100px;
+  border-bottom: 10px solid darkblue;
+  background-color: lightblue;
 }
 
 section {
-    width: 600px;
-    height: 600px;
-    margin: 40px auto;
-    border: 15px solid black;
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+  border: 15px solid black;
 }
 
 img {
-    z-index: -1;
+   /*Specifies the stack order of the images*/
+   z-index: -1;
 }
 
 #relative-2 {
-    position: relative;
-    left: 200px;
+  /*Sets position to relative*/
+  position: relative;
+  /*Offsets from normal flow by 200px from the left*/
+  left: 200px;
 }
 
 #relative-3 {
-    position: relative;
-    top: 200px;
-   
+  /*Sets position to relative*/
+  position: relative;
+  /*Offsets from normal flow by 200px from the right*/
+  top: 200px;
 }
 
 #relative-4 {
-    position: relative;
-    left: 200px;
-    top: 200px;
-    
+  /*Sets position to relative*/
+  position: relative;
+  /*Offsets from normal flow by 200px from the left*/
+  left: 200px;
+  /*Offsets from normal flow by 200px from the top*/
+  top: 200px;
 }
 
 #absolute-section {
-    position: relative;
+  /*Sets parent element to relative*/
+  position: relative;
 }
 
 #absolute-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
+  /*Sets position to absolute*/
+  position: absolute;
+  /*Positions image zero length from top of parent container*/
+  top: 0;
+  /*Positions image zero length from left of parent container*/
+  left: 0;
 }
 
 #absolute-2 {
-    position: absolute;
-    top: 0;
-    right: 0;
+  /*Sets position to absolute*/
+  position: absolute;
+  /*Positions image zero length from top of parent container*/
+  top: 0; 
+  /*Positions image zero length from right of parent container*/
+  right: 0;
 }
 
 #absolute-3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  /*Sets position to absolute*/
+  position: absolute;
+  /*Positions image zero length from bottom of parent container*/
+  bottom: 0;
+  /*Positions image zero length from left of parent container*/
+  left: 0;
 }
 
 #absolute-4 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  /*Sets position to absolute*/
+  position: absolute;
+  /*Positions image zero length from bottom of parent container*/
+  bottom: 0;
+  /*Positions image zero length from right of parent container*/
+  right: 0;
 }
