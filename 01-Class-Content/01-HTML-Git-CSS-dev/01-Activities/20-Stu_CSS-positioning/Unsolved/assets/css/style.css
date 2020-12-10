@@ -32,46 +32,9 @@ img {
   z-index: -1;
 }
   
-#relative-2 {
-  position: relative;
-  left: 200px;
-}
-  
-#relative-3 {
-  position: relative;
-  top: 200px;
-}
-  
-#relative-4 {
-  position: relative;
-  left: 200px;
-  top: 200px;
-}
   
 #absolute-section {
   position: relative;
 }
   
-#absolute-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-  
-#absolute-2 {
-  position: absolute;
-  top: 0; 
-  right: 0;
-}
-  
-#absolute-3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-  
-#absolute-4 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+

@@ -15,6 +15,10 @@ h2,
 h3 {
   text-align: center;
 }
+img {
+  display: block;
+  outline: none;
+}
 
 header {
   /*Sets header position to fixed*/
@@ -35,26 +39,13 @@ section {
   border: 15px solid black;
 }
 
+#relative-1 {
+  position: relative;
+  left: 400px;
+}
+
 #relative-2 {
-  /*Sets position to relative*/
   position: relative;
-  /*Offsets from normal flow by 200px from the left*/
-  left: 200px;
-}
-
-#relative-3 {
-  /*Sets position to relative*/
-  position: relative;
-  /*Offsets from normal flow by 200px from the right*/
-  top: 200px;
-}
-
-#relative-4 {
-  /*Sets position to relative*/
-  position: relative;
-  /*Offsets from normal flow by 200px from the left*/
-  left: 200px;
-  /*Offsets from normal flow by 200px from the top*/
   top: 200px;
 }
 
