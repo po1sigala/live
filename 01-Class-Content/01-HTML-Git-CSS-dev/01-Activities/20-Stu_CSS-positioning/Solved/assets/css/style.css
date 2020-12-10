@@ -10,7 +10,9 @@ main {
   padding-top: 100px;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -19,6 +21,7 @@ header {
   position: fixed;
   /*Positions header 0 length from top of page*/
   top: 0;
+  z-index: 2;
   width: 100%;
   height: 100px;
   border-bottom: 10px solid darkblue;
@@ -28,13 +31,8 @@ header {
 section {
   width: 600px;
   height: 600px;
-  margin: 40px auto;
+  margin: 20px auto;
   border: 15px solid black;
-}
-
-img {
- /*Specifies the stack order of the images*/
- z-index: -1;
 }
 
 #relative-2 {
