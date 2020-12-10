@@ -6,23 +6,23 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when a key is pressed down, and the value of the key and the key's code is displayed. `KEYDOWN Event` should also be displayed to indicate the type of event. 
+* It's done when, if a key is pressed down, the value of the key and the key's code is displayed. `KEYDOWN Event` should also be displayed to indicate the type of event. 
 
-* It's done the key is released, `KEYUP Event` is displayed
+* It's done when, if the key is released, `KEYUP Event` is displayed.
 
 ## 📝 Notes
 
-  Refer to the documentation: 
+Refer to the documentation: 
 
-  [MDN Web Docs on Document: keyup event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event)
+[MDN Web Docs on keyup](https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event)
 
-  [MDN Web Docs on Document: keydown event](https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event)
+[MDN Web Docs on keydown](https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event)
 
-  ## Assets
+## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./images/01-screenshot.png)
+![The web app includes lines to display "Key Pressed", "Key Code", and "Event status".](./images/01-screenshot.png)
 
 ---
 
@@ -34,9 +34,9 @@ What properties can we use to access the value of the pressed key and the key's 
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What other properties can you access using the KeyboardEvent Object? 
+* What other properties can you access using the `KeyboardEvent` object? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
