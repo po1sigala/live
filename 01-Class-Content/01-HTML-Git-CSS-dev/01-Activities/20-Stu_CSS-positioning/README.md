@@ -1,4 +1,4 @@
-# 🏗️ Implement Absolute and Relative Positioning
+# 🏗️ Implement Absolute and Relative Positioning to Change Layout
 
 Work with a partner to implement the following user story:
 
@@ -22,7 +22,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-What happens when an element is removed from the normal flow? 
+How does the CSS position property change the document's normal flow? 
 
 ## 🏆 Bonus
 
