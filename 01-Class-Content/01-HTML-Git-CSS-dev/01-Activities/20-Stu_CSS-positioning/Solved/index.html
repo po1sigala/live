@@ -8,31 +8,32 @@
   </head>
 
   <body>
-    <!--This header uses fixed position. It remains in place on scroll-->
     <header>
       <h1>CSS Positioning</h1>
     </header>
 
     <main>
-     
-      <!--This section uses relative position. Images in normal flow and offset by provided values-->
-      <h2>Relative Position</h2>
-      <h3>Element is in normal flow but is offset based on provided value.</h3>
       <section>
-        <img id="relative-1" src="./assets/images/image-1.png" alt="box with number 1"/>
-        <img id="relative-2" src="./assets/images/image-2.png" alt="box with number 2"/>
+        <h2>Relative Position</h2>
+        <h3>Element is in normal flow but is offset based on provided value.</h3>
+        <div class="container">
+          <img src="./assets/images/image-1.png" alt="box with number 1"/>
+          <img id="relative-box-2" src="./assets/images/image-2.png" alt="box with number 2"/>
+          <img src="./assets/images/image-3.png" alt="box with number 3"/>
+        </div>
       </section>
 
-      <!--This section uses absolute position. Images not in normal flow and positioned based on parent section-->
-      <h2>Absolute Position</h2>
-      <h3>The element is removed from the normal flow.</h3>
-      <h3>Its final position is relative to the positioned parent or ancestor</h3>
-      <section id="absolute-section">
-        <img id="absolute-1" src="./assets/images/image-3.png" alt="box with number 3"/>
-        <img id="absolute-4" src="./assets/images/image-4.png" alt="box with number 4"/>
+      <section>
+        <h2>Absolute Position</h2>
+        <h3>The element is removed from the normal flow.</h3>
+        <h3>Its final position is relative to the positioned parent or ancestor</h3>
+        <div class="container absolute-container">
+          <img src="./assets/images/image-1.png" alt="box with number 1"/>
+          <img id="absolute-box-2"src="./assets/images/image-2.png" alt="box with number 2"/>
+          <img src="./assets/images/image-3.png" alt="box with number 3"/>
+        </div>
       </section>
     </main>
   </body>
 
 </html>
-
