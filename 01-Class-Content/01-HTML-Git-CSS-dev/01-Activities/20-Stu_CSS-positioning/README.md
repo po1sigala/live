@@ -1,16 +1,28 @@
-# 📐 Add Comments to Implementation of CSS Positioning
+# 🏗️ Implement Absolute and Relative Positioning
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to implement the following user story:
 
-## 📝 Notes
+* As a developer, I want to use the CSS position property to change the layout of my page.
 
-Refer to the documentation: 
+## Acceptance Criteria
 
-[MDN Web Docs on Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+* It's done when `box 2` is positioned in middle of `square 1` using relative positioning.
 
-[MDN Web Docs on Positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+* It's done when `box 2` is positioned outside of the upper-right corner of `square 2` using absolute positioning.
+
+* It's done when the finished page matches the mockup below.  
+
+## Assets
+
+The following image demonstrates the web application's appearance and functionality:
+
+![Mockup](./assets/image-1.png)
 
 ---
+
+## 💡 Hints
+
+What happens when an element is removed from the normal flow? 
 
 ## 🏆 Bonus
 
