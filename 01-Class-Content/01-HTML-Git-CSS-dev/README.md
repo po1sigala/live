@@ -1,14 +1,38 @@
-# Unit 01: { Title }
+# Unit 01: HTML, CSS and Git
 
 ## Overview:
 
-@TODO PROVIDE OVERVIEW OF UNIT: A friendly introduction to the unit material that provides context and describes how it relates to students' professional goals (i.e., answer the question, what are they learning and why?).
+At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage is the standard language used to define the structure of a web page. As developers, we use HTML to define the elements on a webpage including paragraphs, images, links, forms, and many more.
+
+CSS is used to add styling to the elements created with HTML. **C**ascading **S**tyle **S**heets determines how elements are presented on the page. This includes altering the font, color, size, the positioning of an element, or even adding animation. 
+
+In this unit, you'll learn how to build web pages that use HTML and CSS to define the structure of a page and give it style. You will also be introduced to Git, a version control system that stores your code and its history and allows you to share your code with others. These skills form the building blocks for web development and are essential tools you will use throughout your career. 
 
 ## Key Topics
 
 The following topics will be covered in this unit:
 
-* @TODO LIST THE 13-15 KEY TOPICS OF UNIT & LINK TO PRIMARY SOURCES
+* [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+
+* [Git](https://git-scm.com/)
+
+* [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+* [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+
+* [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color)
+
+* [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+
+* [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+
+* [Display](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display)
+
+* [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+
+* [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ## Learning Objectives
 
