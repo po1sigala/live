@@ -104,11 +104,9 @@ $(document).ready(function() {
         // change color depending on uv value
         if (data.value < 3) {
           btn.addClass("btn-success");
-        } 
-        else if (data.value < 7) {
+        } else if (data.value < 7) {
           btn.addClass("btn-warning");
-        } 
-        else {
+        } else {
           btn.addClass("btn-danger");
         }
         
