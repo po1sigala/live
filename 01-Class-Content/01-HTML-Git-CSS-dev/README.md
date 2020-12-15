@@ -14,7 +14,7 @@ The following topics will be covered in this unit:
 
 * [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-* [Git](https://git-scm.com/)
+* [GitHub](https://guides.github.com/activities/hello-world/)
 
 * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
@@ -38,7 +38,19 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
-* @TODO LIST LEARNING OBJECTIVES
+* Use Command Line tools to navigate your computer’s file system and create directories and files.
+
+* Employ git commands to create and clone a repo, add and commit changes, and push and pull code.
+
+* Use HTML elements to build the structure of a web page.
+
+* Add attributes to HTML elements to configure the elements or adjust their behavior in various ways.
+
+* Style webpages using CSS's color and font properties.
+
+* Adjust the layout of webpages using CSS's display and font properties.
+
+* Identify the box model and how it relates to an element's layout and design. 
 
 ## Technical Interview Preparation
 
@@ -60,7 +72,9 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-@TODO WHAT WILL THE STUDENTS BUILD FOR THEIR HOMEWORK?
+Accessibility is an increasingly important consideration in web design. Inclusive design aims to make sure all users -- including those with disabilities -- are able to interact and understand a web page's content.
+
+During this week's homework, you will take an existing website and use the HTML and CSS skills practiced during this week to make sure the site is accessible using the provided guidelines. 
 
 ## Career Connection
 
@@ -68,31 +82,19 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-@TODO WHAT DOES THE STUDENT NEED TO DO TO PREPARE FOR THE NEXT UNIT?
+In the next unit, you will take CSS skills to the next level and responsive web layouts and advanced CSS.
 
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit.
 
-### Code Review Videos
-
-Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
-
-  * 📹 Code Review: @TODO ADD LINK TO CODE REVIEW VIDEOS
-
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+Refer to the Git Guide to review the git concept for this unit.
 
-  * 📖 [Git Guide](./01-Activities/{27-Evr_GIT-ACTIVITY-NAME}) @TODO ADD LINK TO GIT ACTIVITY README
+  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-ACTIVITY-NAME) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
-### Full-Stack Blog Posts
-
-Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
-
-  * 📖 Blog Post: @TODO LINK TO BLOG POST
-
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
