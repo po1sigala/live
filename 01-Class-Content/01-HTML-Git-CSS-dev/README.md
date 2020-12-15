@@ -2,7 +2,7 @@
 
 ## Overview:
 
-At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage is the standard language used to define the structure of a web page. As developers, we use HTML to define the elements on a webpage including paragraphs, images, links, forms, and many more.
+At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage is the standard language used to define the structure of a web page. As developers, we use HTML to define the elements on a webpage including paragraphs, images, links, forms, and more.
 
 CSS is used to add styling to the elements created with HTML. **C**ascading **S**tyle **S**heets determines how elements are presented on the page. This includes altering the font, color, size, the positioning of an element, or even adding animation. 
 
@@ -38,9 +38,9 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
-* Use Command Line tools to navigate your computer’s file system and create directories and files.
+* Use Command line tools to navigate your computer’s file system and create directories and files.
 
-* Employ git commands to create and clone a repo, add and commit changes, and push and pull code.
+* Employ Git commands to create and clone a repo, add and commit changes, and push and pull code.
 
 * Use HTML elements to build the structure of a web page.
 
@@ -48,9 +48,9 @@ You will be employer-ready if you are able to:
 
 * Style webpages using CSS's color and font properties.
 
-* Adjust the layout of webpages using CSS's display and font properties.
-
 * Identify the box model and how it relates to an element's layout and design. 
+
+* Alter the layout of webpages using CSS's display and font properties.
 
 ## Technical Interview Preparation
 
@@ -82,7 +82,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you will take CSS skills to the next level and responsive web layouts and advanced CSS.
+In the next unit, you will build on the CSS and HTML fundamentals covered this unit and learn responsive web layouts and advanced CSS.
 
 ## Resources
 
@@ -92,9 +92,14 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit.
 
-  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-ACTIVITY-NAME) 
+  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 Blog Post: @TODO LINK TO BLOG POST
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
