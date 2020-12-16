@@ -1,438 +1,1651 @@
-# 02.1 Lesson Plan - Joys of JavaScript (10:00 AM)
+# 02.1 Full-Time Lesson Plan: JavaScript
 
-## Overview
+## Overview 
 
-Today's class is focused on providing students with the very basics of JavaScript. For many, this will be their first foray into JavaScript as a programming language.
+This class introduces the fundamentals of JavaScript, including variables, primitive types, comparison operators, conditional statements, arrays, and iteration. Students will also gain experience writing console logs and using the developer console in Google Chrome. 
 
 ## Instructor Notes
 
-* `Summary: Complete Activities 1-18 in Unit 03`
+* In this lesson, students will complete activities `01-Ins_Script-ConsoleLog` through `14-Stu_Iteration`.
 
-* Welcome to Week 3! In this class you will be giving students their first primer on JavaScript as a programming language. Many of your students will have little clue what JavaScript is, let alone how to use it. Be prepared for the simplest bugs, from missing quotation marks to utter confusion in setting a variable. Today will be all about the fundamentals.
+* Take a few minutes before class to review the activities of the day and anticipate questions that a student new to JavaScript might ask.
 
-* Today's class also aims to cover a lot of ground very quickly. For perspective, today's class will cover the following: Variables, Conditionals, Console Logging / Alerts, and Arrays. The homework activity is also fairly challenging, and it will really require students to keep up. Try to move through the material as quickly as you can without sacrificing comprehension from the baseline student.
+* Today's lesson contains a lot of new information for students. If the students seem overwhelmed, point out that these topics are the building blocks of JavaScript and that each activity builds on the ones preceding it. They can look back at previous activities for guidance or reach out during office hours for help.
 
-* In every case for today, pre-coded instructor demos are provided for you. However, because of the simplicity of today's class, feel free to code your own examples on the fly. Part of the reason we have pre-coded versions is for when we share the directory with students since it becomes easy to copy over into the in-class repo. Don't let that limit your imagination though! 
+* At the beginning of today's class, students will learn how to link an external JavaScript file and use the developer console in Google Chrome. Remind yourself of the various ways to open [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open) on both Mac and Windows so that you can help students navigate the process on their own computers. 
 
-* After each activity, be sure to add the complete solution to the student repo so students can use them during the next activity.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
-* You may want to Slack a PDF of the slide deck out to students in advance as well. Your choice!
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-![1-SlackDownload](Images/1-SlackDownload.png)
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-### Algorithms
+## Learning Objectives
 
-Starting with Unit 3, students are provided with common problems they will see in interviews. They can find these problems in each unit's folder. Recommend that students try to solve one or two before class during office hours. Help students with any questions they might have about these problems and work through the solutions.
+By the end of class, students will be able to:
 
-## Class Objectives
+* Identify and declare variables containing primitive data types. 
 
-* To gain a preliminary grasp of JavaScript definitions and of basic syntax.
+* Explain and implement comparison and logical operators. 
 
-* To utilize variables, logging, arrays, and if/else statements to create simple JavaScript applications.
+* Write conditional statements using `if...else`.
 
-## Slides
+* Create an array and access elements using the index.
 
-* [02.1 The Joys of JavaScript](https://docs.google.com/presentation/d/1ccabN1AZ3SmYtLSo7HeadSrvfRK-5ty_X8p4ovCXVlE/edit?usp=sharing)
+* Iterate over an array using a `for` loop.
+
+## Slide Deck
+
+* [Unit 03 Slide Deck](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing)
 
 ## Time Tracker
 
-* [2.1 Time Tracker](https://drive.google.com/open?id=1TXphd6IzAbm8pISaGQZOkbvyAL0D9LvCkC5DhKzwFeQ)
+| Start  | #   | Activity Name                             | Duration |
+|---     |---  |---                                        |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Script & Console.log     | 0:05     |
+| 10:15AM| 3   | Student Do: Script & Console.log          | 0:15     |
+| 10:30AM| 4   | Instructor Review: Script & Console.log   | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Hello Variable           | 0:05     |
+| 10:45AM| 6   | Student Do: Hello Variable                | 0:15     |
+| 11:00AM| 7   | Instructor Review: Hello Variable         | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Primitive Type           | 0:05     |
+| 11:15AM| 9   | Student Do: Primitive Type                | 0:15     |
+| 11:30AM| 10  | Instructor Review: Primitive Type         | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Operators                | 0:05     |
+| 11:45AM| 12  | Student Do: Operators                     | 0:15     |
+| 12:00PM| 13  | BREAK                                     | 0:30     |
+| 12:30PM| 14  | Instructor Review: Operators              | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Conditional Statements   | 0:05     |
+| 12:45AM| 16  | Student Do: Conditional Statements        | 0:15     |
+| 1:00PM | 17  | Instructor Review: Conditional Statements | 0:15     |
+| 1:15PM | 18  | Instructor Do: Stoke Curiosity            | 0:10     |
+| 1:25PM | 19  | Instructor Demo: Arrays                   | 0:05     |
+| 1:30PM | 20  | Student Do: Arrays                        | 0:15     |
+| 1:45PM | 21  | Instructor Review: Arrays                 | 0:10     |
+| 1:55PM | 22  | Instructor Demo: Iteration                | 0:05     |
+| 2:00PM | 23  | Student Do: Iteration                     | 0:15     |
+| 2:15PM | 24  | Instructor Review: Iteration              | 0:15     |
+| 2:30PM | 25  | END                                       | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: How to Learn JavaScript (5 mins)
+## Class Instruction
 
-* Open the slide deck [2-1 The Joys of JavaScript](https://docs.google.com/presentation/d/1ccabN1AZ3SmYtLSo7HeadSrvfRK-5ty_X8p4ovCXVlE/edit?usp=sharing) and begin going through the slides.
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-* Take a moment to let students know the agenda for today.
+* Welcome students to class.
 
-* Students may be unnerved by the fact that they are learning JavaScript. Help them know how to learn it correctly.
+* Open the [slide deck](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-* You can use the following verbiage as a guide to how to talk about each slide:
-  * **Your Brain on JavaScript:** Learning JavaScript will require having a lot of "little pieces" of code in your mind floating around. The key is in knowing how these pieces fit together to build useful things.
-  * **Take Notes:** Self-explanatory, but basically students should likely be taking a few notes here and there; primarily on your explanations of why some JavaScript piece matters and/or of how to use it.
-  * **Keep Organized:** Many students around this time start to have files in literally every location possible. It gets incredibly confusing trying to help them when everything is so scattered. Let them know that a little folder organization can go a long way in creating easy-to-read applications.
-  * **Overall Tips:** Just read these. Self-explanatory. Key point&mdash;encourage students to REDO coding exercises on their own. Many students just go home and re-flip through slides or read through code without actually trying to do it themselves. Hands on experience is a lot better than looking code over secondhand.
+  * **JavaScript** 
+  
+    * This unit is all about learning how to use JavaScript to apply logic and make applications feel more dynamic.
 
-### 2. Partners Do: Code Dissection (5 mins)
+  * **What do we use HTML and CSS for?**
 
-* Let students know that a big part of JavaScript learning requires you to "learn on the fly".
+    * We use HTML to create and organize content on a page and CSS to apply styles, layout, and even animation to that content.
 
-* Then Slack out the following file and instructions to students:
+  * **What are some examples of how users interact with a webpage?**
 
-  * **File**
+    * We use HTML to create and organize content on a page and CSS to apply styles, layout, and even animation to that content.
 
-    * `js-dissect.html` (01-CodeDissection)
+  * **Can we achieve these types of interactions using only HTML and CSS?**
 
-  * **Instructions**
+    * We interact with webpages in many ways on a daily basis. Typically the webpage will respond or react to these interactions, making the page feel more dynamic and alive.
 
-    * Download the file sent to you via Slack.
+    * These interactions include the following examples:
+      
+      * Submitting an HTML form to comment on an article.
+      
+      * Playing audio or video at the press of a button on the page.
+      
+      * Using the device’s camera or microphone to enable a conversation.
+      
+      * And so much more!
 
-    * IMPORTANT: When downloading any code going forward, be sure to hit "Download". **If you copy and paste directly from Slack, your code will not work!**
+  * **Can we achieve these types of interactions using only HTML and CSS?**
 
-    * Open the file in Chrome, and observe what happens.
+    * While HTML and CSS offer some great built-in features that give users a sense of interaction or functionality on a site, they cannot handle the complex tasks that occur in response to these interactions. 
 
-    * With a partner, try to explain how the code connects to the events that happen on the page.
+    * For that reason, web developers use another programming language specifically designed for these tasks.
 
-    * Note: We haven't covered JavaScript before, but a big part of being a developer is learning on the fly!
+  * **So what is this language that works with HTML and CSS?**
 
-* **Instructor / TA Note:** Do not go over this activity after the time is done. Just move onto the next activity. Students will come back to this later after they've learned more.  
+    * JavaScript is a programming language originally created to be run in the browser with the intention of enhancing a webpage’s capabilities. Today, nearly every page we visit on the internet depends heavily on JavaScript to work.
 
-### 3. Instructor Do: Variables Slides + Demo (5 mins)
+    * While HTML and CSS handle content and design, JavaScript handles the overall functionality of the application to make it feel more alive and dynamic. 
 
-* Go through the preliminary slides on Variables. Wait for the "Instructor Demo" slide before live-coding.
+  * **In what ways do we use JavaScript?**
 
-* At this point students should just understand that variables can be strings, numbers, and booleans (leave out the bit about functions, objects, etc. for the time being since this could confuse them).
+    * Front-end developers use JavaScript primarily to dynamically affect a web page to enhance the user’s experience. No other programming language can run in the browser, so JavaScript is a must-have skill for web developers.
 
-* When doing the demo, feel free to create your own example on the fly. Otherwise, there is an example inside `02-BasicVariablesDemo`.
+    * JavaScript can be used for the following purposes:
 
-* Make sure students know that strings require quotation marks but that numbers and booleans do not.
+      * Showing a user personal data only after they log into the application.
 
-### 4. Students Do: Variable Activity (10 mins)
+      * Fetching weather data to display and update on the page.
 
-* Slack out the following files and instructions to students.
+      * Informing users that they are missing information on a form.
+      
+      * Remembering a user’s preference between light and dark mode themes.
 
-  * **Files**
+  * **How can we learn to use JavaScript?**
 
-    * `pizza-variables.html` in `03-PizzaVariables/Unsolved`
+    * Unlike some other programming languages, JavaScript doesn’t force developers to write code in a specific way. As a result, JavaScript might seem a bit complicated at first, but it can make development work feel incredibly fun and creative as you get to use it more and more. 
 
-  * **Instructions**
+    * Try some of the following techniques to learn JavaScript:
 
-    * Using the instructions in the file sent to you, fill in the missing JavaScript code to create variables.
+      * Read the docs and practice with the provided examples.
 
-    * When you are done, open the file in Chrome and check the output.
+      * Reverse-engineer finished code to see how it was created.
 
-    * If you successfully completed the activity, you should see a series of pop-up windows with text inside.
+      * Build something from scratch.
+      
+      * Debug a broken app using Chrome DevTools.
 
-    * Finally, look at the rest of the code and try to figure out why the text displayed the way it did.
+      * And most importantly, ask questions!
 
-### 5. Instructor Do: Review Variable Activity (5 mins)
+* Inform students that during today's class, they will take the first steps to build interactive websites with JavaScript. 
 
-* Spend a few moments reviewing the activity `03-PizzaVariables/Solved`. In discussing the solution, explain both the variable assignment and the way strings are combined in the alerts.
+* Stress that JavaScript builds on the structure provided by HTML and the styling provided by CSS&mdash;both of which they have already learned about&mdash;to make webpages dynamic.
 
-    ![3-Variable_1](Images/3-Variable_1.png)
+* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
 
-    ![3-Variable_2](Images/3-Variable_2.png)
+  * Follow the prompts to press the R, P, or S key to demonstrate the functionality of the game. Explain that this is the game Rock, Paper, Scissors, in which a player can play against a computer.
 
-### 6. Instructor Demo: Console Log (5 mins)
+  * Remind students of what this game is, how to play it, and what conditions are met to win, lose, or tie. 
 
-* Proceed with the slides and the console log demo. You can either open the solution found in `04-ConsoleLogDemo` or create your own example to show what console log does.
+  * 🔑 Point out how none of this in the game is happening through the HTML content but rather through a JavaScript file attached to `index.html`.
 
-* Be sure to point out how you can console.log either strings or variable values.
+  * 🔑 Explain that JavaScript code is handling the following:
 
-    ![4-ConsoleLog_1](Images/4-ConsoleLog_1.png)
+    * Prompting the browser dialog boxes that appear with various messages and prompts.
 
-* Also show students where in Google Inspector the line `console.log` outputs to.
+    * Reading the user-provided input from the prompt and comparing it to a randomly picked computer choice.
 
-    ![4-ConsoleLog_2](Images/4-ConsoleLog_2.png)
+    * Determining who wins the round based on conditions defined by the developer.
 
-* Briefly explain the concept of a function as "code that does a thing and lives somewhere else."
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Explain that `console.log` is a function that prints a message and that "lives" in the JavaScript engine.
+  * ☝️ What are we learning?
 
-  * Explain that we can often give functions "things to work with." In this case, we give `console.log` a _message_ to print.
+  * 🙋 We are learning how to add interactivity and logic to JavaScript applications.
 
-  * Explain that later on, student will write their own functions, which they'll use the same way.
+  * ☝️ How does this project build off or extend previously learned material?
 
-  * Refrain from a more detailed discussion of arguments, etc. This explanation is simply to provide context for entities such as `alert`, `console.log`, etc.
+  * 🙋 We've learned HTML and CSS to create and present content; now we'll make it interactive and dynamic.
 
-### 7. Instructor Do: Console Log Slides (5 mins)
+  * ☝️ How does this project relate to your career goals?
 
-* Start to go through the slides on console log.
+  * 🙋 JavaScript is a crucial tool for developers to know and use because it powers most modern web applications. This project will help teach us how to use JavaScript to apply logic, rules, and interactivity to applications&mdash;without worrying about HTML and CSS, which we are already somewhat familiar with.
 
-* Make certain to show students how the `console.log` statement can be used to display text, variables, or a combination of the two.
+* Answer any questions before proceeding to the next activity.
 
-### 8. Students Do: Console Log Activity (10 mins)
+### 2. Instructor Demo: Script & Console.log (5 min) 
 
-* Slack out the following files and instructions:
+* Open `01-Ins_Script-ConsoleLog\index.html` in your IDE and demonstrate the following: 
 
-  * **Files**
+  * 🔑 In this HTML file, HTML and CSS are working together to provide style and structure to the page, as you can see in the following code:
 
-    * `pizza-variables-2.html` in `05-PizzaConsole/Unsolved`
+    ```html
+    <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+    ```
+    
+  * 🔑 There is also something new: `<script>` tags for JavaScript.
 
-  * **Instructions**
+  * 🔑 We use inline `<script>` tags to write scripts directly in an HTML file, as shown in the following example:
 
-    * Using the file sent to you as a guide, modify the code so that it uses `console.log` instead of alerts to display messages.
-
-    * With a partner, discuss the difference between using `console.log` and `alert`.
-
-### 9. Instructor Do: Review Console.log Activity (10 mins)
-
-* Have students offer their answers to the assignment, and have them explain their changes.
-
-* Also ask students why they might use one form of output versus another.
-
-### 10. Instructor Demo: Alerts, Prompts, Confirms (5 mins)
-
-* Use the file inside `06-PromptDemo`, and walk students through the code.
-
-* Be sure to point out the differences between `confirm`, `alert`, and `prompt`.
-
-* **Important:** Be sure to point out how `prompt` and `confirm` create data that can be stored in a variable directly.
-
-  * Remind students that `alert`, `prompt`, and `confirm` are _functions_.
-
-  * Explain that functions that "give you something back" are said to _return_ something.
-
-  * Explain that `prompt` and `confirm` _return_ whatever the user enters in the text prompt.
-
-      ![5-PromptDemo](Images/5-PromptDemo.png)
-
-### 11. Instructor Do: Alerts, Prompts, Confirms Slides (5 mins)
-
-* Go over the remaining slides on this section. Create engagement by having students remind you of the differences between the three functions.
-
-### 12. Students Do: Alert Activity (15 min)
-
-* At this point, Slack out the following files and instructions.
-
-  * **Files**
-    * `prompt-sushi.html` in `07-PromptSushi/Unsolved`
-
-  * **Instructions**
-    * Write JavaScript code that does the following:
-      * Using a confirm, ask the user, "Do you like \_?" Store their response in a variable.
-      * Using a prompt, ask the user, "What kind of \_ do you like?" Store their response in a variable.
-      * Alert both variables to the screen.
-
-### 13. Instructor Do: Review Alert Activity (5 mins)
-
-* Go over the previous activity using `prompt-sushi.html` in `07-PromptSushi/Solved`.
-
-### 14. Instructor Note: Document.write (5 min)
-
-* We have saved all DOM-related tasks for the next unit, so don't mention `document.write` at this point. If students ask how to print information on the screen instead of in alerts, let them know that we'll be going over that soon (but not today!).
-
-### 15. Instructor Demo: If/Else Statement (10 mins)
-
-* Proceed with the slides to the demo of conditionals. Use the file inside `08-ConditionalDemo` as a starting point. Walk students through the fact that the confirm prompt is used to grab a boolean.
-
-    ```js
-      // Here we create our prompt and confirm variables which will store user input.
-      var confirmSushi = confirm("Do you like sushi?");
-      var confirmGingerTea = confirm("Do you like Ginger Tea?");
-      var sushiType = prompt("What kind of sushi do you like?");
-
-      // If the user likes sushi (confirmSushi === true), we run the following block of code.
-      if (confirmSushi) {
-        alert("You like " + sushiType + "!");
-      }
-      // If the user likes ginger tea (confirmGingerTea === true), we run the following block of code.
-      else if (confirmGingerTea) {
-        alert("You like ginger tea!!");
-      }
-      // If neither of the previous condition were true, we run the following block of code.
-      else {
-        alert("You don't like sushi or ginger tea.");
-      }
+    ```html
+    <script>
+    console.log("This is the log for the 🔥INLINE🔥 JavasScript");
+    </script> 
     ```
 
-### 16. Instructor Slides: If/Else Statement (5 mins)
+  * 🔑 We add an `src` attribute to the opening `<script>` tag to link to an external JavaScript file, as follows:
 
-* Proceed through the instructor slides on conditionals.
+    ```html
+    <script src="script.js"></script>
+    ```
 
-### 17. Partners Do: If/Else Activity #1 (10 mins)
+  * 🔑 We write `<script>` tags above the closing `</body>` tag to ensure that the HTML and CSS load first, as follows:
+  
+    ```html
+    <body>
+      <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
+      <script>
+      console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+      </script>
+      <script src="script.js"></script>
+    </body>    
+    ```
 
-* Slack out the instructions below.
+  * We use the `console.log()` method to log, or display, messages or data to the console. We place the message inside a string between the parentheses of the function call, as shown in the following example:
 
-  * **Files**
+    ```js
+    console.log("This is the log for the 🔥INLINE🔥 JavasScript");
+    ```
 
-    * None
+* Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
 
-  * **Instructions**
+  * JavaScript looks and performs the same whether it is written inline or in an external file. For example, the following snippet will log the message "This is the log for the 🔥EXTERNAL🔥JavaScript":
 
-    * Create a website (from scratch) that asks users if they eat steak.
+      ```js
+      console.log("This is the log for the 🔥EXTERNAL🔥JavaScript");
+      ```
 
-    * If they respond with "yes", alert the following to the page: "Here’s a Steak Sandwich!"
+* Open `01-Ins_Script-ConsoleLog\index.html` in the browser and demonstrate how to navigate to the console in Chrome DevTools. 
 
-    * If they respond with "no", alert the following to the page: "Here’s a Tofu Stir-Fry!"
+* Point out that both the console log from the inline JavaScript and the external file appear as messages in the console.
 
-    * Bonus: Ask what the user’s birth year is. If they are under 21, alert the following: "No Sake for you!"
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 18. Instructor Do: Review If/Else Activity #1 (10 mins)
+  * ☝️ How do you link an HTML file to an external JavaScript file?
+  
+  *  🙋 Use `<script>` tags and set the `src` attribute to the path of the external JavaScript file.
+  
+  * ☝️ What does the `console.log()` function do?
+ 
+  *  🙋 It logs a message to the console. 
 
-* Review the solution found in `09-ConditionalActivity`. Point out the uses of conditionals. For the bonus, run the program with various ages, and show students how each elicits a different output.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Script-ConsoleLog\README.md`.
 
-    ![7-Sake](Images/7-Sake.png)
+### 3. Student Do: Script & Console.log (15 min) 
 
-* Slack out the video review for this activity which can be found [here](https://www.youtube.com/watch?v=rlhhRVO5EOg).
+* Direct students to the activity instructions found in `02-Stu_Script-ConsoleLog\README.md`.
 
-### 19. Everyone Do: If/Else Activity #2 (10 mins)
+* Break your students into pairs that will work together on this activity.
+ 
+  ```md
+  # 📖 Link External JavaScript File to Existing HTML File
 
-* Show the following file on screen: `conditional-demo-2.html` in `10-ConditionalActivity2`.
+  Work with a partner to implement the following user story:
 
-* Then, as a class, go through `if` statements and try to predict which of the alerts will get triggered.
+  * As a developer, I want to link an external JavaScript file to an existing `index.html` file to add JavaScript functionality to my static webpage. 
 
-* Then run the program to see if your expectation matched how it functioned.
+  ## Acceptance Criteria
 
-    ![8-Conditionals](Images/8-Conditionals.png)
+  * It's done when I open the `index.html` file, navigate to the console, and see the message contained in the `script.js` file logged to the console. 
 
-- - -
+  ## 📝 Notes
 
-### 20. BREAK (30 mins)
+  Refer to the documentation: 
 
-* Check in with TAs regarding time.
+  [MDN Web Docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
-- - -
+  [Google documentation on opening Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
-### 21. Instructor Do: Arrays Slides (5 mins)
+  ## 💡 Hints
 
-* Run through the Array example in the slides. Describe arrays as being like "lists" or "collections" of variables. Each variable has its own index ID (sort of like the "pen" number for our Zoo example).
+  It is best practice to add a link to an external JavaScript file above what closing HTML tag? 
 
-* We can retrieve any value in the array by referencing its index.
+  ## 🏆 Bonus
 
-* Indexes start at 0.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-### 22. Instructor Do: Array Demo (5 mins)
+  * Comments are a key part of a developer's toolbox. Why do you think it is so important to include comments in your code? How do you write single-line and multiline comments in Javascript?
 
-* Open the file `arrays-demo.html` in `11-ArraysDemo`. Show students how this example matches the one in the slides.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-* Point out how the index system works (i.e. starts at 0 and ends one before the length).
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 23. Everyone Do: Class Code Dissection (10 mins)
+### 4. Instructor Review: Script & Console.log (10 min) 
 
-* Slack out the following file and instructions to students.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * **File:**
+  * ☝️ How comfortable do you feel linking an external JavaScript file to your HTML? (Poll via Fist to Five, Slack, or Zoom)
 
-    * `arrays-activity.html` in `12-ArraysActivity/Unsolved`
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * **Instructions:**
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-    * With a partner, take a few moments to look over the following code.
+  * ✔️ `<script>` tags 
 
-    * Above each `console.log()` write a comment "predicting" what you think the output will be.
+  * ✔️ `console.log()` 
 
-    * HINT: Comments are the grayed lines that begin with `//`. These lines are ignored by JavaScript, and they allow you to explain your code. Commenting your code is an extremely useful habit to get into as it allows other developers to more easily read your code. It will also help you better understand your own applications when you look back at them.
+* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your IDE and explain the following:
 
-* **Instructor / TAs:** Review with the class when complete.
+  * 🔑 We use inline `<script>` tags to add JavaScript directly into the HTML file, as shown in the following example:
 
-### 24. Instructor Do: Questions (5 mins)
+    ```html
+    <script>
+    console.log("This is inline JavaScript");
+    </script>
+    ```
+  
+  * 🔑 When we add an `src` attribute to a `<script>` tag, it links to an external JavaScript file, as shown in the following example:
+  
+    ```html
+    <script src="script.js"></script>
+    ```
 
-* If time remains and there isn't sufficient time for the challenges, spend the remainder of the class answering questions.
+  * 🔑 A console log is a JavaScript function. We write the message to the console between the parentheses`()`, as follows:
 
-* If no time remains for the challenges, then encourage students to work on them at home.
+    ```js
+    console.log("This is inline JavaScript");
+    ```
 
-### 25. Everyone Do: Basics Recap (10 mins)
+* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and explain the following:
 
-* Spend a few moments helping students remember what was covered during the last class. Ideally this should take you less than 10 minutes.
+  * Navigate to the console and show students that the message written between the `()`is the same as what appears in the console.
+  
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 26. Everyone Do: Basic JS Dissection (5 mins)
+  * ☝️ What are two ways that the `<script>` tag is used to add JavaScript to HTML files?
 
-* Slack out the following file from yesterday and have students re-examine it.
+  * 🙋 You can use the `<script>` tag to create inline JavaScript by writing code between the opening and closing tags. When given an `src` attribute that equals the path to an external JavaScript file, the`<script>`tag links the HTML file to the external JavaScript page.
 
-* Give them a few minutes to examine it, and immediately have a few students explain it to the class.
+  * ☝️ What can we do if we don't completely understand this?
 
-  * **File**
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), and stick around for office hours to ask for help.
 
-    * `js-dissect-unsolved.html`in `14-JSDissect/Unsolved/`
+* Answer any questions before proceeding to the next activity.
 
-  * **Instructions**
+### 5. Instructor Demo: Hello Variable (5 min) 
 
-    * Take a few minutes to quickly look through the attached file. With a partner, discuss what you expect to happen when the code is run.
+* Open `O3-Ins_Hello-Variable/script.js` in your IDE and demonstrate the following:
 
-    * Prepare to share your thoughts with the class.
+  * 🔑 We use the `var` keyword to declare a variable. After the `var`, the variable is given a unique name, or identifier, as shown in the following example:
 
-* After you go over the activity, if there are still questions, Slack out the fully commented file `js-dissect-solved.html` in `14-JSDissect/Solved`.
+    ```js
+    var studentName;
+    ```
 
-### 27. Everyone Do: Array Logging (5 mins)
+  * 🔑 Declaring a variable only gives it a name. To assign a value, we use the assignment operator `=` preceding the value we want the variable to hold, as shown in the following example: 
 
-* Slack out the file and the instructions below.
+    ```js
+    var studentName = "Abdul";
+    var studentAge = 32;
+    ```
 
-* Read the instructions aloud, and call on students to help you live-code the activity.
+  * 🔑 We also use the `=` assignment operator to reassign a new value to a variable. To reassign a value, we use the variable's name followed by `=` and the new value we want the variable to hold. Because the variable has already been declared, there is no need to use `var` again, as shown in the following example:
 
-  * **File**
+    ```js
+    studentName = "Tonya";
+    studentAge = 52;
+    ``` 
 
-    * `array-logs-unsolved.html` in `15-CoolPeopleArray/Unsolved`
+  * 🔑 Using the variable name is also useful in code when we want to access the value held in the variable and do something with it, like log it to the console. 
 
-  * **Instructions**
+  * 🔑 In the previous activity, we put a value directly inside the `()` in a console log function to log a message. When the value was entered directly, that value appeared as the message in the console, as shown in the following code:
 
-    * Follow the instructions provided in the file to `console.log` each of the names in the `coolPeople` variable.
+    ```js
+    console.log("My name is ");
+    ```
 
-    * Hint: You should be repeating the same line 6 times.
+  * 🔑 When we want to access a value stored in a variable, we don't directly enter the value. Instead, we use the variable name&mdash;without quotes&mdash;to access the value stored in the variable. Because the value of `studentName` is currently `Tonya`, the following console log will log `Tonya`:
 
-* Slack out `array-logs-solved.html` in `15-CoolPeopleArray/Solved`	 when finished.
+    ```js
+    console.log(studentName);
+    ```
+ 
+  * 🔑 Sometimes we want to use a variable as part of a longer message logged to the console. To do that, we use the concatenation operator (`+`). In the following example, `"My name is "` is concatenated, or combined, with the value stored in the variable `studentName`, forming the longer message `"My name is Tonya"`:
 
-### 28. Everyone Do: Array Setting (10 mins)
+    ```js
+    console.log("My name is " + studentName);
+    ```
+  
+* Open `O3-Ins_Hello-Variable/index.html` in your browser and navigate to the console to demonstrate the following:
 
-* Slack out the file and the instructions below.
+  * When we combine the value `"My name is "` and the value stored in the `studentName` variable with a `+`, it logs a single message: `"My name is Tonya"`. Using the concatenation operator to combine variable values into more complex messages will be useful in creating the introductions in the next activity. 
+  
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Read the instructions aloud, and call on students to help you live-code the activity.
+  * ☝️ Which keyword declares a variable? 
 
-  * **File**
+  * 🙋 The `var` keyword declares a variable. 
 
-    * `array-setting-unsolved.html` in `16-ArraySetting/Unsolved`
+  * ☝️ Which operator assigns a value to a declared variable?  
 
-  * **Instructions**
+  * 🙋 The `=` assignment operator assigns and reassigns a value to a variable that has already been declared. 
 
-    * Follow the instructions in the file provided to convert each item in the array to lower case.
+  * ☝️ How do you access the value assigned to a variable?  
 
-    * Make sure to only add in lines of code where instructed.
+  * 🙋 Use the variable's name. 
 
-    * Hint: You will need to use the `.toLowerCase()` method. Research if you don’t remember how to use it.
+* Answer any questions before proceeding to the next activity.
 
-    * Be prepared to share when time is up.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Hello-Variable/README.md`.
 
-* Slack out [`array-setting-solved.html`in `16-ArraySetting/Solved` when finished.
+### 6. Student Do: Hello Variable (15 min) 
 
-### 29. Instructor Do: For Loops (10 mins)
+* Direct students to the activity instructions found in `04-Stu_Hello-Variable/README.md`.
 
-* Go through the slides introducing the concept of `for` loops. Re-use the example of the Zoo Array as shown on the slides.
+* Break your students into pairs that will work together on this activity.
 
-### 30. Students Do: For Loop Dissection (5 mins)
+  ```md
+  # 🏗️ Log Introduction Messages to Console Using Values Stored in Variables 
 
-* Slack out the file and the instructions below.
+  Work with a partner to implement the following user story:
 
-  * **File**
+  * As a class member, I want to input data about my name, the number of pets I own, and a fun fact about myself and log that introduction to the console. Then I want to log a message to introduce my partner by reassigning the variables.
 
-    * `my-first-loop.html` in `17-MyFirstLoop/`
+  ## Acceptance Criteria
 
-  * **Instructions**
+  * It's done when I store a name in a variable called `name` and this line is logged to the console: "My name is `VALUE_STORED_IN_VARIABLE_NAME`."
 
-    * With a partner, spend a few moments trying to dissect the code sent to you.
+  * It's done when I store a number in a variable called `pets` and this line is logged to the console: "I have `VALUE_STORED_IN_VARIABLE_PETS` pet(s)."
 
-    * Try to explain to one another what is happening with each line of code.
+  * It's done when I store a fun fact in a variable called `funFact` and this line is logged to the console: "Fun fact: `VALUE_STORED_IN_VARIABLE_FUNFACT`."
 
-    * Feel free to do research if you are stumped. As a hint, look into the phrase “for loop.”
+  * It's done when I reassign the values of `name`, `pets`, and `funFact` with my new partner's information and the logs in the console reflect the new values.
 
-### 31. Instructor Do: For Loops Cont. (10 mins)
+  ## 💡 Hints
 
-* Continue through the slides and demonstrate how the previous example worked.
+  How can we combine values using the concatenation operator (`+`) to log a single message to the console?
 
-* Point out that the iteration index, `i`, continually increments to it until it reaches the value `array.length - 1`.
+  ## 🏆 Bonus
 
-  * Point out how the selected vegetable changes on each loop iteration.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-### 32. Students Do: For Loop Zoo (15 mins)
+  * What happens when you concatenate two variables in a single console log using `+`? Is the result what you expected? Why or why not? 
 
-* Slack out the file and the instructions below.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  * **File**
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-    * `zoo-loop-unsolved.html` in `18-ZooLoop/Unsolved`
+### 7. Instructor Review: Hello Variable (10 min) 
 
-  * **Instructions**
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Use `for` loops  to rewrite the file sent to you via Slack.
+  * ☝️ How comfortable do you feel with JavaScript variables? (Poll via Fist to Five, Slack, or Zoom)
 
-    * If you need help, use the code from the previous example as a guide.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-    * Once you think your code is functioning properly, share it with the person sitting next to you.  
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-### 33. Instructor Do: Review Activity (5 mins)
+  * ✔️ Variable declaration
 
-* Review `zoo-loop-solved.html` in `18-ZooLoop/Solved`.
+  * ✔️ Value assignment
 
-    ![Images/5-ZooLoop.png](Images/5-ZooLoop.png)
+  * ✔️ Accessing stored values
 
-* Then Slack the solution out to students.
+  * ✔️ Value reassignment
 
-* Slack out the [video review for this activity](https://www.youtube.com/watch?v=zJO9g7S2_Xo) as well.
+* Open `04-Stu_Hello-Variable/Solved/script.js` in your IDE and explain the following: 
 
-### 34. END (0 mins)
+  * 🔑 We declare variables using `var` and assign a value using `=`. The variable `name` is declared using `var` and assigned the value `"Sakura"`, as follows:
 
-### Lesson Plan Feedback
+    ```js
+    var name = "Sakura";
+    ```
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * 🔑 The variable's values are accessed using the variables' names. Because we have assigned the variables the values `"Sakura"`, `3` , and `"I like pineapple on my pizza."`, those values are used in the following console logs: 
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+    ```js
+    console.log("My name is " + name + ".");
+    console.log("I have " + pets + " pet(s).");
+    console.log("Fun fact: " + funFact);
+    ```
+
+  * 🔑 We reassign a variable's values using `=`. As shown in the following example, the `var` keyword is not used during reassignment because the variable has already been declared:
+
+    ```js
+    name = "Mateo";
+    pets = 5;
+    funFact = "I was a yo-yo champ in third grade."
+    ```
+
+  * After the variables are reassigned, the variable names will access the new values `"Mateo"`, `5`, and `"I was a yo-yo champ in third grade."`. The console logs will use the new values, as shown in the following example:
+
+    ```js
+    console.log("My name is " + name + ".");
+    console.log("I have " + pets + " pet(s).");
+    console.log("Fun fact: " + funFact);
+    ```
+
+* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and demonstrate the following:
+
+    * Navigate to the console. Note that the logs created by using `+` appear as a single message in the console. 
+
+    * In the first introduction, the console logs use the values stored in variables as originally assigned (`"Sakura"`, `3`, and `"I like pineapple on my pizza."`). 
+
+    * Point out that in the second introduction, the console logs use the reassigned values (`"Mateo"`, `5`, and `"I was a yo-yo champ in third grade."`). 
+    
+    * Point out that the only difference in the two introductions is the values accessed by variables, because the code for the console logs has not changed. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+    * ☝️ How do we reassign a new value to a variable?  
+
+    * 🙋 We can reassign a variable's value by using the assignment operator `=`. We do not need to use `var`, because the variable is already declared.
+
+    * ☝️ How do you think the ability to reassign values to a variable might be useful in your code? 
+
+    * 🙋 Reassigning values to variables makes code more flexible and reusable. In the activity we just completed, we were able to log new messages to the console simply by reassigning the values stored in the variables. 
+
+    * ☝️ What can we do if we don't completely understand this?
+
+    * 🙋 We can refer to supplemental material, read the [MDN Web Docs on variables and storing the information you need](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Primitive Types (5 min) 
+
+* In the previous activity, we learned to store values in variables. In this activity, we will dive deeper into the types of values that are stored in variables&mdash;namely, the primitive types (undefined, string, number, and Boolean).
+
+* Open `05-Ins_Primitive-Types/script.js` in your IDE and point out the following: 
+
+  * 🔑 A variable that has been declared using `var` but has not yet been assigned a value has the type of **undefined**. Undefined, as shown in the following snippet, simply means that no value has been assigned yet:
+
+    ```js
+    var myUndefined;
+    ```
+
+  * 🔑 **Strings** should already look familiar because we have already been using them in code. Values with the type of string are series of characters. They are commonly words but can also include other characters. Strings are always surrounded by quotes, like in the following example:
+
+    ```js
+    var myStringWelcome = "Hello World"; 
+    var myStringPassword = "865Password!2020";
+    ```
+
+  * 🔑 **Numbers** should look familiar too! In JavaScript, a number can be either an integer (a whole number) or a decimal, as follows:
+
+    ```js
+    var myNumberInt = 100;
+    var myNumberDecimal = 100.100;
+    ```
+
+  * 🔑 **Booleans** are unique because they hold only one of two values (`true` or `false`), as shown in the following example:
+
+    ```js
+    var isMyBooleanTrue = true;
+    var isMyBooleanFalse = false;
+    ```
+
+  * 🔑 Sometimes we want to check what type of value is stored in a variable. To evaluate type, use the `typeof` operator preceding the variable name or value, as follows:
+
+    ```js
+    console.log(typeof myUndefined);
+
+    console.log(typeof myNumber); 
+
+    console.log(typeof true);
+
+    console.log(typeof "Howdy");
+    ```
+
+  * 🔑 When a variable is reassigned, its type can change too. For example, `myVariable` originally has the value of `33`, making it a number. Then, when we use `=` to reassign it, as shown in the following example, it has the value of `false`, making it a Boolean:
+
+    ```js
+    var myVariable = 33;
+    console.log(typeof myVariable);
+
+    myVariable = false;
+    console.log(typeof myVariable); 
+    ```
+
+* Open `05-Ins_Primitive-Types/index.html` in your browser, navigate to the console, and explain the following:
+
+  * The `typeof` operator returns a string indicating the type: `undefined`, `number`, `boolean`, or `string`.
+
+  * When we reassign a variable, the type can change as well. In this case, `myVariable` was first assigned as a number with a value of `33`. As a result, it logged `number`. Then, when `myVariable` is reassigned as a Boolean with a value of `false`, `boolean` is logged, indicating that the type has changed. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What primitive type has only two values? 
+
+  * 🙋 A Boolean has only two values: `true` or `false`. 
+
+  * ☝️ What is the only primitive type that must be surrounded by quotes?
+
+  * 🙋 Strings.
+
+  * ☝️ Which primitive type would we use if we wanted to store a decimal or an integer?
+
+  * 🙋 Numbers.
+
+  * ☝️ If we reassign a variable with a new value, does the type have to stay the same?
+
+  * 🙋 No! JavaScript is loosely typed, meaning that when we declare a variable we don't have to specify a type that the variable will hold. It also means that when a variable is reassigned, the type can change too. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Primitive-Types/README.md`.
+
+### 9. Student Do: Primitive Types (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu_Primitive-Types/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of typeof to Evaluate Primitive Types
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](06-Stu_Primitive-Types/Unsolved/script.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+
+  [MDN Web Docs on JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * There are two more primitive value types in JavaScript. Can you explain what `BigInt` and `Symbol` are?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 10. Instructor Review: Primitive Types (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with primitive types? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Numbers
+
+  * ✔️ Strings
+
+  * ✔️ Booleans
+
+  * ✔️ `typeof` operator
+
+  * ✔️ Type reassignment
+
+  * ✔️ Undefined
+
+* Open `06-Stu_Primitive-Types/script.js` in your IDE and explain the following:
+
+  * 🔑 The variable `one` has the whole number value of `64`, making it a number, as follows:
+
+    ```js
+    var one = 64;
+    ```
+
+  * 🔑 Using the `typeof` operator, as follows, `number` is logged:
+
+    ```js
+    console.log(typeof one);
+    ```
+
+  * 🔑 The variable `two` has the value of `"656302"`. Because the value is surrounded by quotes, it is a string&mdash;even if the characters inside the strings are numbers! See the following example:
+
+    ```
+    var two = "656302";
+    ```
+
+  * When we use the `typeof` operator, `string` is logged, as shown in the following example:
+
+    ```js
+    console.log(typeof two);
+    ```
+
+  * 🔑 `True` and `false` values are Booleans, so the variable `three` with a value of `false` is a Boolean in the following example:
+
+    ```js
+    var three = false;
+    ```
+
+  * When we use the `typeof` operator, as follows, `boolean` is logged:
+
+    ```js
+    console.log(typeof three);
+    ```
+
+  * The variable `four` has a decimal value of `64.55`. Because both integers and decimals are considered numbers in JavaScript, the variable in the following example is a number:
+
+    ```js
+    var four = 64.55;
+    ```
+
+  * When we use the `typeof` operator, as follows, `number` is logged:
+
+    ```js
+    console.log(typeof four);
+    ```
+
+  * In the following code, the variable `five` has a value of `"Howdy"`, which is a string:
+
+    ```js
+    var five = "Howdy!";
+    ```
+
+  * When we use the `typeof` operator, as follows, `string` is logged:
+
+    ```js
+    console.log(typeof five);
+    ```
+
+  * 🔑 The variable `six` is declared but has not yet been assigned a value. So the type returns `undefined` in the following example:
+
+    ```js
+    var six;
+    ```
+
+  * When we use the `typeof` operator in the following example, `string` is logged:
+
+    ```js
+    console.log(typeof six);
+    ```
+
+  * 🔑 Reassigning a value, as follows, can change both value and type:
+
+    ```js
+    four = "Hello!";
+    five = false;
+    six = 23;
+    ```
+
+  * The variable `four` is now a string. So when we use `typeof` in the following example, `string` is logged:
+
+    ```js
+    console.log(typeof four);
+    ```
+
+  * Variable `five` is now a Boolean. So when we use `typeof`, as follows, `boolean` is logged:
+
+    ```js
+    console.log(typeof five);
+    ```
+
+  * 🔑 Because variable `six` now has been assigned a value using the `=` assignment operator, it is no longer undefined. Instead, when we use `typeof`, as follows, `number` is logged:
+
+    ```js
+    console.log(typeof four);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are four primitive types of values? 
+
+  * 🙋 Undefined, strings, Booleans, and numbers.
+
+  * ☝️ How can we test the type of a value? 
+
+  * 🙋 Use the `typeof` operator.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on JavaScript data types and data structure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Logical and Comparison Operators (5 min) 
+
+* Open `07-Ins_Logical-Comparison-Operators/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We can use arithmetic operators to create simple math equations. We set the variable `a` to have a value of `100` and variable `b` to `10` . Both of these are numbers. When we run `a + b`, as follows, it will evaluate to `110`:
+
+    ```js
+    var a = 100;
+    var b = 10;
+
+    console.log(a + b);
+    ```
+
+  * 🔑 Arithmetic operators include addition (`+`), subtraction (`-`), division (`\`), and multiplication (`*`), as shown in the following example:
+
+    ```js
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a / b);
+    console.log(a * b);
+      ```
+
+  * 🔑 The modulus `%` arithmetic operator returns the **remainder**, or what is left over after dividing one number by another. When we divide `100` by `10`, the remainder is `0` because `10` divides into `100` evenly. So `a % b` returns `0`, as shown in the following example:
+
+    ```js
+    var a = 100;
+    var b = 10;
+
+    console.log(a % b);
+    ```
+
+  * In addition to performing math equations, we can also use comparison operators to determine the equality or difference of values. 
+
+  * 🔑 We can determine whether two values are equal using the equality operator (`==`). The values of `b` and `c` are both `10`. So `b == c`, in the following example, returns `true`:
+
+    ```js
+    var b = 10;
+    var c = "10";
+
+    console.log(b == c);
+    ```
+
+  * 🔑 We can also test for inequality using the inequality operator (`!=`). Because the values of `b` and `c` are both `10`, `b != c` returns `false` in the following example: 
+
+    ```js
+    console.log(b != c);
+    ```
+
+  * 🔑 When we use `==`, it only tests for equality of value. To test **strict equality**, we use `===`. The values of `b` and `c` are both `10`, but one is a string and the other is a number. Because they are not equal in both value and type, `b === c` returns `false` in the following example:
+
+    ```js
+    console.log(b === c);
+    ```
+
+  * 🔑 We can also test for inequality of value or type using `!==`. The variables `b` and `c` do not have the same type (one is a string, and the other is a number). So if either value or type is inequal, `b !== c` returns `true` in the following example:
+
+    ```js
+    console.log(b !== c);
+    ```
+
+  * 🔑 To evaluate greater than or less than, we use the greater than (`>`) or less than (`<`) operators. If `a` is greater than `b`, the first expression returns `true`. If `a` is less than `b`, the second expression returns `true` in the following example:
+
+    ```js
+    console.log(a > b);
+    console.log(a < b);
+    ```
+
+  * 🔑 To evaluate greater than or equal to and less than or equal to, we use `>=` or `<=`. In this case, if `a` is greater than or equal to `b`, the first expression returns `true`. If `a` is less than or equal to `b`, the second expression returns `true` in the following example:
+
+    ```js
+    console.log(a <= b);
+    console.log(a >= b);
+    ```
+
+  * It is also possible to determine logic between expressions using logical operators **and** (`&&`), **or** (`||`), and **not** (`!`).
+
+  * 🔑 We use the logical operator `&&` to check whether both expressions evaluate to `true`. If both expressions evaluate to `true`, then `true` is returned. Otherwise, `false` is returned. See the following code snippet for an example:
+
+    ```js
+    console.log(expression1 && expression2);
+    ``` 
+
+  * 🔑 We use the logical operator `||` to check whether one expression OR the other evaluates to `true`. If one expression evaluates to `true`, then `true` is returned. Otherwise, `false` is returned. See the following code snippet for an example:
+
+    ```js
+    console.log(expression1 || expression2);
+    ```
+
+  * 🔑 The logical operator `!` adds `not` to an expression, negating it. If the expression evaluates to `true`, then we can add `!` to it, making it `not true`, or `false` (or vice-versa), as shown in the following example:
+
+    ```js
+    console.log(expression2);
+
+    console.log(!expression2);
+    ```
+  
+* Open `07-Ins_Logical-Comparison-Operators/index.html` in your browser and open the console to explain the following:
+
+  * We can use arithmetic operators with numbers to create math equations. When we log these equations, they return a single number, as shown in the first five logs of the activity. 
+
+  * Expressions using logical and comparison operators evaluate to `true` or `false`. As a result, we can see that the remainder of the logs are `true` or `false`.
+
+  * As demonstrated in the final two console logs, when we use the `!` operator, it negates the expression, turning `true` to `false`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What can arithmetic operators do? 
+
+  * 🙋 An arithmetic operator can perform simple math problems like adding, subtracting, multiplying, dividing, or even finding the remainder. 
+
+  * ☝️ Which type of operators evaluate equality and difference? 
+
+  * 🙋 Comparison operators.
+
+  * ☝️ Which operators determine logic between expressions?  
+
+  * 🙋 Logical operators.
+
+  * ☝️ What does an expression using a logical or comparison operator evaluate to? 
+
+  * 🙋 `true` or `false`.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
+
+### 12. Student Do: Logical and Comparison Operators (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Logs Using Logical and Conditional Operators Return False
+
+  Work with a partner to resolve the following issue(s):
+
+  * When I open the console, all the logs should read `true`, but right now they do not!
+
+  ## Expected Behavior
+
+  When an expression is logged to the console, it should return `true`.
+
+  ## Actual Behavior
+
+  When an expression is logged to the console, it returns `false`.
+
+  ## 💡 Hints
+
+  What is the difference between `=`, `==`, and `===`? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is `NaN`? What happens when you use `typeof` to evaluate `NaN`? Is the answer what you expected? Why or why not?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 13. BREAK (30 min)
+
+### 14. Instructor Review: Logical and Comparison Operators (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with logical and comparison operators? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Arithmetic operators
+
+  * ✔️ Comparison operators
+
+  * ✔️ Logical operators
+
+* Open `09-Stu-Logical-Comparison-Operators/Solved/script.js` in your IDE and explain the following: 
+
+  * Variables `d` and `e` use arithmetic operators to perform simple math. Because `c` has a value of `100` and `b` has a value of `50`, when we calcuate the remainder of `100` divided by `50` it is `0`. So the value of `d` is `0`. Likewise, the value of `e` is `100` divided by `2` or `50`. Both variables `d` and `e` have the type of `number` in the following example:
+
+    ```js
+    var b = 50;
+    var c = 100;
+    var d = c % b;
+    var e = c / 2;
+    ```
+
+  * Both `b` and `e` have the value of `50`, making them both numbers. So `expression1` evaluates to `true` in the following example:
+
+    ```js
+    var expression1 = (b === e);
+    ```
+
+  * The variable `e` has a value of `50` and variable `d` has a value of `0`. Because `50` is not less than `0`, `expression2` evaluates to `false` in the following example:
+
+    ```js
+    var expression2 = (e < d);
+    ```
+
+  * Because `a` holds the value `50`, as a string, and `b` holds the value `50`, as a number, `===` returns `false`&mdash;because while the values are equal, the type is not. However, in the following example, when we use `==`, it returns `true` because `==` evaluates only value (not type!):
+
+    ```js
+    console.log(a == b);
+    ```
+
+  * The variables `b` and `e` both hold the value `50`, making them both numbers. Because they are equal in value and type, when we use `===` in the following example, it returns `true`:
+
+    ```js
+    console.log(b === e);
+    ```
+
+  * Because `c` is greater than `b`, when we use the comparison operator `>` in the following example, it returns true:
+
+    ```js
+    console.log(c > b);
+    ```
+
+  * Because `d` evaluates to `0`, it is less than `1`. So when we use the comparison operator `<`, as follows, it returns `true`:
+
+    ```js
+    console.log(d < 1);
+    ```
+
+  * Because the `||` operator requires only one expression or the other to evaluate to `true`, when we use `||` in the following example, it returns `true`:
+
+    ```js
+    console.log(expression1 || expression2);
+    ```
+  
+  * Alternately, it is possible to negate `expression2` so that it returns `true`. Because both expressions now evaluate to `true` when we use the `!` operator, the following example returns `true`:
+
+    ```js
+    console.log(expression1 && !expression2);
+    ```
+
+  * When we remove `!` negation from the first expression, it returns `true`. Because one of the expressions now evaluates to `true`, the following example returns `true`: 
+
+    ```js
+    console.log( expression1 || expression2);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between `==` and `===`? 
+
+  * 🙋 The comparison `==` evaluates equality of value, while `===` evaluates whether value and type are equal. 
+
+  * ☝️ What is the difference between `&&` and `||`? 
+
+  * 🙋 The logical operator `&&` returns `true` if both expressions are `true`, while the logical operator `||` returns `true` if just one expression or the other returns `true`.
+
+  * ☝️ How can we use a logical operator to negate an expression? 
+
+  * 🙋 Using the `!` operator adds a `not`. So adding it causes an expression that returns `true` to return `not true`, or `false`, and vice-versa.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 15. Instructor Demo: Conditional Statements (5 min) 
+
+* Open `09-Ins_Conditional-Statements\script.js` in your IDE and demonstrate the following:
+
+  * 🔑 Earlier we talked about how JavaScript can add decision-making to your code. That decision-making can be achieved using conditional statements. 
+
+  * Let's start by declaring variables with `var` and assigning them values with the assignment operator `=`, as shown in the following example:
+
+      ```js
+      var hungerLevel = 50;
+      var isLunchTime = true;
+      var lunchBill = 11;
+      ```
+
+  * 🔑 For the first `if` statement, we will also need an expression to evaluate. Using the value stored in the variable `hungerLevel` and the conditional operator `>=`, we can create the expression `hungerLevel >= 50`. This expression, shown in the following snippet, will return `true` because the value of `hungerLevel` is currently `50`:
+
+    ```js
+    hungerLevel >= 50
+    ```
+
+  * 🔑 Now we are ready to write the `if` statement. We start by writing `if` in lowercase letters. (This part is important; using `IF` can result in an error!) Then in parentheses `()`, we put the expression that we want evaluated. We are evaluating `hungerLevel >= 50` in the following example:
+
+    ```js
+    if (hungerLevel >= 50)
+    ```
+
+  * 🔑 Next, we want something to happen if the condition is met, or `hungerLevel >=50` evaluates to `true`. To do this, we add curly brackets `{}`, and inside the curly brackets, we add the desired action. In the following example, if the expression `hungerLevel >=50` evaluates to `true`, then we want the message `"Hungry`" logged to the console:
+
+    ```js
+    if (hungerLevel >= 50) {
+    console.log("Hungry!");
+    }
+    ```
+
+  * 🔑 The action will only be executed if the expression evaluates to `true`. Because `hungerLevel >= 50` evaluates to `true`, the message `"Hungry!"` will log to the console. However, if we change the expression to one that evaluates to `false`&mdash;like `hungerLevel < 50`, as follows&mdash;then nothing will log:
+
+    ```js
+    if (hungerLevel < 50) {
+    console.log("Hungry!");
+    }
+    ```
+
+  * 🔑 If we want one action to be performed if an expression evaluates to `true` and another action to be performed if the expression evaluates to `false`, then we can use an `else` statement. If `isLunchTime === true` evaluates to `true`, then `"Lunchtime"` will log. Else, `"Not Lunchtime"` will log, as follows:
+
+    ```js
+    if (isLunchTime === true) {
+    console.log("Lunchtime");
+    } else {
+    console.log("Not Lunchtime");
+    }
+    ```
+
+  * Or, instead of writing `isLunchTime === true`, we can simply write `isLunchTime`. Because `isLunchTime` has the value of `true`, in the following example, `"Lunchtime!!"` will log to the console:
+
+      ```js
+      if (isLunchTime) {
+      console.log("Lunchtime!!");
+      } else {
+      console.log("Not Lunchtime!!");
+      }
+      ```
+
+  * 🔑 The `!` logical operator can also negate the expression. Because `!Lunchtime` evaluates to `false` when we add`!`, in the following example `"It's Lunchtime Already !!` is logged:
+
+    ```js
+    if (!isLunchTime) {
+    console.log("Not Lunchtime Already!!");
+    } else {
+    console.log("It's Lunchtime Already !!");
+    }
+    ```
+
+  * 🔑 We can also use `else if` to test more than one condition. If the first condition evaluates to `true`, then the first action is executed. Otherwise, the second condition is tested, and so on. This process continues until a condition evaluates to `true` and the associated action is executed, as follows:
+
+    ```js 
+    if (lunchBill < 10) {
+    console.log("Cost Rating: $");
+    } else if (lunchBill >= 10 && lunchBill < 15) {
+    console.log("Cost Rating: $$");
+    ```
+
+  * If none of the conditions evaluate to `true`, then the action after `else` is executed, as follows:
+
+    ```js 
+    } else {
+    console.log("Cost Rating: $$$");
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens if an `if` statement evaluates to `true`?
+
+  * 🙋 The action contained in the curly brackets is performed.
+
+  * ☝️ What happens if an `if` statement evaluates to `false`?
+
+  * 🙋 Nothing. The action in the curly brackets is not performed.
+
+  * ☝️ What is the difference between an `if` statement and an `else` statement? 
+
+  * 🙋 An `if` statement executes an action only if the expression evaluates to `true`. An `else` statement executes an action only if the condition evaluates to `false`. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Conditional-Statements/README.md`. 
+
+### 16. Student Do: Conditional Statements (15 min) 
+
+* Direct students to the activity instructions found in `10-Stu_Conditional-Statements/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create an Algorithm Using Conditional Statements
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to write an algorithm that will take in two expressions and evaluate whether both expressions evaluate to `true`, only one expression evaluates to `true`, or both expressions evaluate to `false`.
+
+  ## Acceptance Criteria
+
+  * It's done when the message "True ✅ True ✅" is logged when both `expression1` and `expression2` are true.
+
+  * It's done when the message "True ✅ False ❌" is logged when `expression1` is true. 
+
+  * It's done when the message "False ❌ True ✅" is logged when `expression2` is true. 
+
+  * It's done when the message "False ❌ False ❌" is logged when both `expression1` and `expression2` are false. 
+
+  ## 💡 Hints
+
+  Before you start writing your algorithm, do you have a plan documented in plain language that describes how you will use JavaScript to get it done?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is a switch case? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 17. Instructor Review: Conditional Statements (15 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with conditional statements? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `if` statement
+
+  * ✔️ `else if` statement
+
+  * ✔️ `else` statement
+
+* Open `10-Stu_Conditional-Statements/Solved/script.js` in your IDE and explain the following: 
+
+  * We can evaluate whether both expressions are `true` using the logical `&&` operator, as follows:
+
+    ```js
+    expression1 && expression2
+    ```
+  
+  * 🔑 To create the conditional statement, we start with `if` and place `expression1 && expression2` in parentheses `()`. The action we want to be performed if the condition evaluates to `true` is written inside curly brackets `{}`. In this case we want to log `True ✅ True ✅` to the console, as follows:
+
+    ```js
+    if(expression1 && expression2) {
+    console.log("True ✅ True ✅");
+    ```
+
+  * 🔑 If `expression1 && expression2` evaluates to `true`, then `True ✅ True ✅` is logged and no other conditions are evaluated. If not, then the second condition is tested.
+
+  * 🔑 The second condition tests whether `expression1` is true. So we place `expression1` in the parentheses, as follows: 
+
+    ```js
+    } else if (expression1) {
+    ```
+
+  * If `expression1` evaluates to `true`, then `True ✅ False ❌` is logged and no other conditions are evaluated. If `expression1` does not evaluate to `true`, the next condition is tested, as shown in the following example:
+
+    ```js
+    } else if (expression1) {
+      console.log("True ✅ False ❌");
+    ```
+
+  * The process repeats again for the remaining `else if` condition. If `expression2` evaluates to `true`, then `False ❌ True ✅` is logged, as follows:
+
+    ```js
+    } else if (expression2) {
+      console.log("False ❌ True ✅");
+    ```
+
+  * 🔑 At this point, all the conditions have been tested. If none of the conditions evaluate to `true` after all have been tested, then the action following `else` will execute. In this case, `False ❌ False ❌` will log to the console, as follows: 
+
+    ```js
+    } else {
+      console.log("False ❌ False ❌");
+    ```
+
+  * 🔑 The action performed depends on the values inputted for the variables `x`, `expression1`, and `expression2`. Because `x` has a value of `50`, both `expression1` and`expression2` currently evaluate to `false`. So because none of the conditions are `true`, in the following example, the expected action is that `False ❌ False ❌` is logged: 
+
+    ```js
+    var x = 50;
+    var expression1 = (x < 25);
+    var expression2 = (x > 50);
+    ```
+
+* Open `10-Stu_Conditional-Statements/Solved/index.html` in your browser and navigate to the console to explain the following: 
+
+  * Because both `expression1` and `expression2` evaluate to `false`, `False ❌ False ❌` logs to the console. However, if the inputs change, the action performed might change.
+
+* Encourage students to experiment with changing the values of `x`, `expression1`, and `expression2` on their own to learn more about how changing the input will change the action performed. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do you think conditional statements might allow decision-making in code? 
+
+  * 🙋Conditional statements allow you to carry out different actions based on conditions. Only if the condition evaluates to `true` is the action performed.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 18. Instructor Do: Stoke Curiosity (10 min)
+
+* Welcome students to class.
+
+* Display the number 4,294,967,295. Do not provide further context at this point&mdash;the goal is to pique students' curiosity. 
+
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What do you think the number 4,294,967,295 represents in JavaScript? 
+
+  * 🙋 4,294,967,295 is the maximum number of values that can be stored in a single variable in JavaScript. 
+
+* Explain that so far, we have been using variables to store a single value&mdash;like `"Hello, World"`, `5`, or `true`&mdash;and writing blocks of code that execute once. But that is not very efficient, especially when working with big data. 
+
+* Stress that during today's class, we will think bigger! JavaScript can handle billions of values. So, building on the JavaScript skills we've acquired so far, we will learn how to store multiple values in a single array, perform an action on all the values stored in a variable with just a few lines of code, and even write code blocks that we can reuse again and again. 
+
+### 19. Instructor Demo: Arrays (5 min) 
+
+* Open `11-Ins_Array/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 Previously, we learned how to use `var` and the assignment operator `=` to store a single value in a variable, as follows:
+
+    ```js
+    var name = "Andre";
+    var pets = 3; 
+    var isStudent = true;
+    ```
+
+  * 🔑 We also use `var` and `=` to store multiple values in a variable. To do this, we put the values in brackets `[]`, separated by commas, like in the following example: 
+
+    ```js
+    var names = ["Andre", "Karl", "Rashida", "Olivia"];
+    ```
+
+  * 🔑 To access the entire array, we use the array's name, as shown in the following example:
+
+    ```js
+    console.log(names);
+    ```
+
+  * 🔑 To access a single element in an array, we use the array's name plus the item's **index** (or place in the array) in brackets `[]`. Arrays are **zero-indexed**. So the first element in an array has an index of `0`, not `1`. Thus, the element with the index of `1` in the following example is `"Karl"`:
+
+    ```js
+    console.log(names[1]);
+    ```
+
+  * 🔑 And using `0` in the following example will log `Andre`:
+
+    ```js
+    console.log(names[0]); 
+    ```
+
+  * 🔑 We can also use an element's index to replace a value in the array.
+
+  * 🔑 In the `names` array, in the following example, the string `"Olivia"` has an index of `3`:
+
+    ```js
+    console.log(names[3]);
+    ```
+
+  * 🔑 We reassign `names[3]` to a new string `"Carter"` using the assignment operator `=`. In the following example, after reassignment, the new value `"Carter"` is logged: 
+
+    ```js
+    names[3] = "Carter"; 
+
+    console.log(names[3])
+    ```
+
+  * 🔑 Arrays also have properties. We find the total number of elements in the array using the `length` property. Because the `names` array has four elements, the following statement will return `4`:
+
+    ```js
+    console.log(names.length)
+    ```
+
+* Open `11-Ins_Array/index.html` in your browser and navigate to the console to demonstrate the following:
+
+  * When we log an array to the console using its name, the entire array is returned.
+
+  * When we click on the arrow to the left of the data, the indexes of each element in the array are shown. This is a handy way to inspect an array and find the index of an element that we want to work with.
+
+  * When we log an array's length, a number is returned. That number equals the total number of elements in the array.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we store multiple values in a variable?
+
+  * 🙋 We would use an array. 
+
+  * ☝️ How can we access an element in the array? 
+
+  * 🙋 We use the array name and the index. 
+
+* Answer any questions before proceeding to the next activity.
+
+### 20. Student Do: Arrays (15 min) 
+
+* Direct students to the activity instructions found in `12-Stu_Arrays/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗 Log Welcome Messages to Console Using an Array
+
+  Work with a partner to implement the following user story:
+
+  * As an instructor, I want to create a list of student names and be able to add and remove names.
+
+  ## Acceptance Criteria 
+
+  * It's done when the total number of elements in the array is logged to the console. 
+
+  * It's done when the message "Welcome to the class STUDENT_NAME" is logged using each element in the array. 
+
+  * It's done when the first element in the array is removed and replaced with the name of a new student.
+
+  * It's done when, after an `if` statement confirms that the first element in the array has been replaced, the message "REPLACED_NAME is in class" is logged.
+
+  ## 💡 Hints
+
+  What is the first index in an array: `0` or `1`? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could you use the array's `length` property to access the last element in an array of any length?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 21. Instructor Review: Arrays (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with arrays? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `var students = ["name1"]`
+
+  * ✔️ `students.length`
+
+  * ✔️ `students[0]`
+
+  * ✔️ `students[0] = "newName"`
+
+* Open `12-Stu_Arrays/Solved/script.js` in your IDE and explain the following: 
+
+  * 🔑 When we create an array, the elements are placed in brackets `[]`. Each element is separated by a comma, as follows:
+
+    ```js
+    var students = ["Sarah", "Orlando", "Heather", "Ismael", "Hung"];
+    ```
+
+  * 🔑 We use the array name `students`, followed by `length`, to return a count of the total number of elements in the array. See the following example:
+
+    ```js
+    console.log(students.length);
+    ```
+
+  * 🔑 We access an element in the array using the element's index. The first element's index is `0`&mdash;as in the following example&mdash;the second element's index is `1`, and so on. 
+
+    ```js
+    console.log("Welcome to the class " + students[0]);
+    ```
+
+  * 🔑 We replace an element in the array by using the element's index and the assignment operator `=` followed by the new value. The following code replaces the first element in the `student` array with the string `"Bob"`:
+
+    ```js
+    students[0] = "Bob";
+    ```
+
+  * We check that the first value has been replaced using an `if` statement that evaluates whether `students[0]` equals `"Bob"`. If the condition evaluates to `true`, then in the following example, `"Bob is in class!"` logs to the console: 
+
+    ```js
+    if (students[0] === "Bob") {
+      console.log(students[0] + " is in class!");
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What does it mean that arrays are zero-indexed? 
+
+  * 🙋 The first element of the array has an index of `0`, not `1`.
+
+  * ☝️ What property can we use to determine the total number of elements in an array? 
+
+  * 🙋 The array's `length` property.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 22. Instructor Demo: Iteration (5 min) 
+
+* Open `13-Ins_Iteration/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We use `for` loops to execute a block of code more than once. The complete `for` loop expression dictates how many times the code will be executed, as shown in the following example:
+
+    ```js
+    for (var i = 0; i < 5; i++) {
+    
+    }
+    * The first expression declares a variable. We will use this variable as the counter for the loop. We give `i` the value of `0`.
+
+    ```js
+    var i = 0;
+    ```
+
+  * The second expression is a condition that determines whether the loop will execute. If the following expression evaluates to `true`, we execute the code, and if it's false, the loop is complete:
+
+    ```js
+    i < 5;
+    ```
+
+  * After the loop executes the code block, we increment the counter, as follows:
+
+    ```js
+    i++
+    ```
+
+  * 🔑 Next, in curly brackets, we place the block of code that we want to execute each time the loop runs, as follows:
+
+    ```js
+    {
+      console.log("This is the current value of i: " + i + ".");
+    }
+    ```
+
+  * 🔑 When iterating over an array, we use the array's `length` property to determine when the loop should stop. In the following example, as long as `i` is less than the length of `zooAnimals`, the loop will execute the code:
+  
+    ```js
+    for (var i = 0; i < zooAnimals.length; i++) 
+    ```
+
+  * 🔑 We can also use `i` to access the elements of the array. We can do this using something called **bracket notation**. By placing the counter inside square brackets `[]`, as follows, we can access the elements:
+
+    ```js
+    {
+      console.log("I am going to zoo to see " + zooAnimals[i] + ".");
+    }
+    ```
+
+* Open `13-Ins_Iteration/index.html` in your browser and navigate to the console to demonstrate the following:
+
+  * In the first loop, the counter variable `i` is initially assigned the value `0`. So the first log shows that the value of `i` is `0`. Then, after the code is executed, `i` is incremented. Thus, when it runs again, `i` is `1`, and so on until the condition `i < 5` is no longer `true`. 
+
+  * In the next loop, instead of just console logging `i`, the variable `i` is used to determine the index of the element. So the first time it is run, `zooAnimals[i]` is read as `zooAnimals[0]`, and `"Bears"` is logged. When the loop runs again, `i` is equal to `1`, so `"Giraffes"` is logged. In this way, we can use a `for` loop to quickly iterate over an entire array&mdash;even a huge one&mdash;with just a few lines of code. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we want to use a loop in the code? 
+
+  * 🙋 We can execute a block of code over and over again. 
+
+  * ☝️ How do we stop a loop from executing? 
+
+  * 🙋 A loop will stop executing when the condition is `false`. 
+
+* Answer any questions before proceeding to the next activity.
+
+### 23. Student Do: Iteration (15 min) 
+
+* Direct students to the activity instructions found in `14-Stu_Iteration/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Iterate Over an Array to Log Messages to Console
+
+  Work with a partner to implement the following user story:
+
+  * As a member of the class, I want to store a list of my classmates and use that list to create a greeting for each student on the list. 
+
+  ## Acceptance Criteria
+
+  * It's done when the names of five classmates are stored in a single variable named `students`.
+
+  * It's done when the total number of elements in the `students` array is logged to the console. 
+
+  * It's done when, using a `for` loop, the greeting "Great to see you, CLASSMATE_NAME!" logs to the console for each classmate's name in the `students` array. 
+
+  ## 💡 Hints
+
+  How can you access each element using the element's index and the array name? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What’s a `while` loop?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 24. Instructor Review: Iteration (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel creating a `for` loop and iterating over an array? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `for` statement 
+
+  * ✔️ Array iteration
+
+* Open `14-Stu_Iteration/Solved/script.js` in your IDE and explain the following: 
+
+  * We start by creating a `students` array that holds five names, as follows:
+
+    ```js
+    var students = ["Sarah", "Orlando", "Heather", "Ismael", "Hung"];
+    ```
+
+  * We then use the `length` property to find the total number of elements in the `students` array. This `length` property will come in handy when we set the condition for the loop. See the following code for an example: 
+
+    ```js
+    var students = ["Sarah", "Orlando", "Heather", "Ismael", "Hung"];
+    ```
+
+  * 🔑 We write the `for` loop. We set the counter to `0` and dictate that the loop will run till the counter equals the length of the array, as shown in the following example:
+  
+    ```js
+    for(var i=0; i < students.length; i++)
+    ```
+  
+  * We set the counter `i` to `0`, as follows:
+
+    ```js
+    var i = 0;
+    ```
+
+  * 🔑 We set the conditions under which the loop will run. Because we want to loop over the entire array, we set the condition such that the loop will stop when the counter equals the length of the array, as follows:
+
+    ```js
+    i < students.length;
+    ```
+
+  * Finally, after the block of code is executed, we increment the counter by `1`, as shown in the following example:
+
+      ```js
+      i++
+      ```
+
+  * 🔑 Finally, we console log each statement in the array using bracket notation, as follows:
+
+    ```js
+    console.log("Great to see you, " + students[i]);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would iterating over an array be useful?
+
+  * 🙋 By iterating over an array, you can perform an action on each element of the array quickly and with just a few lines of code. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋We can refer to supplemental material, read the [MDN Web Docs on for statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for), and stick around for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 25. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
