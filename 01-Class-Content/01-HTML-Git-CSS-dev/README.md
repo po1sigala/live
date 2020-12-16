@@ -44,7 +44,7 @@ You will be employer-ready if you are able to:
 
 * Use HTML elements to build the structure of a web page.
 
-* Add attributes to HTML elements to configure the elements or adjust their behavior in various ways.
+* Add attributes to HTML elements to style the elements or adjust their behavior in various ways.
 
 * Style webpages using CSS's color and font properties.
 
