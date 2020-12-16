@@ -2,24 +2,44 @@
 
 In this activity, we will walk through setting up a repository using terminal commands and Git version control.
 
+Git allows developers to track and store content as well as share content with others. During this course, we will use a class repository to share the activity code for each day. In addition, for each homework assignment, you will be required to share a repository with your code. 
 
- a situation to learn about merge conflicts and how to handle them using Git and GitHub. Merge conflicts arise when one version of your project looks one way and another version looks slightly different, causing Git to prompt you to address and confirm which version is correct so that you can move on.
-
-To learn how to identify and fix merge conflicts, we'll first create a repository on GitHub and clone it to our machines, then we'll force the local and remote (GitHub) repositories to diverge by making changes to the same file in each location. When we try to get them back in sync, we'll be confronted with a merge conflict.
-
-This specific type of conflict is not as common as others you will face throughout your career as a developer. These types of conflicts typically arise when we collaborate with others and the projects become more complex, so this is a good opportunity to learn how conflicts may come about and how we can address them without the increased pressure of a larger application.
+To practice the skills needed to pull the repo and blah, blah blah. 
 
 ## Instructions
 
-### Git Configuration
+### Configure Local Git Default Branch to Main
 
-Important: By default, our local Git configuration has the default branch set to master. To stay in sync with GitHub, which now sets the default branch to main, we need to change our local Git configuration to use main as the default branch. We'll touch upon this a bit more later in the lesson.
-If you're using macOS, before you set the default branch to main, you must confirm that you're using Git version 2.28 or later. To do so, run the following command from the command line to install the latest version of Git:
-# only macOS users need to run this command; Windows users do not need to do this
-brew install git
-For both macOS and Windows users, to set the default branch to main, run the following command:
-git config --global init.defaultBranch main
-If the command executes successfully, no confirmation message will appear; it will simply return back to the command-line prompt.
+If you have previously configured Git, you do not need to repeat this step!
+
+* GitHub changed the default branch from `master` to `main`. To stay in sync with GitHub, which now sets the default branch to `main`, you need to change our local Git configuration to use `main` as the default branch.
+
+* If you are using macOS, you must have Git version 2.28 or later installed.
+
+* To check the version you have installed, enter this command in the terminal:
+
+  ```bash
+  git --version
+  ```
+
+* To update, Mac users can use Homebrew to update Git. (Note: Window users do not need to do this!)
+
+  ```bash
+  brew install git
+  ```
+
+* For both Windows and Mac users, set the default branch to `main`, by running the following command in the terminal:
+
+  ```bash
+  git config --global init.defaultBranch main
+  ```
+
+* You will not get a confirmation message. If the configuration is successful, it will simply return back to the command-line prompt.
+
+### Configure User Name and Password 
+
+* To get the most out of Git, you can use `git config` to set your user name and password. 
+
 
 ### Create and Clone the Repository
 
