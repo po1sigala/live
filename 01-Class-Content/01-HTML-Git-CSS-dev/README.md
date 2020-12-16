@@ -1,80 +1,105 @@
-# Unit 01: Introduction to Web Development, HTML, CSS, and Git
+# Unit 01: HTML, CSS and Git
 
-## Overview
+## Overview:
 
-Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases. 
+At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage is the standard language used to define the structure of a web page. As developers, we use HTML to define the elements on a webpage including paragraphs, images, links, forms, and more.
 
-You have several choices for the programming language that you use for building and deploying full-stack web applications, including JavaScript, PHP, and Python. This course focuses on JavaScript. We’ll use it to program both the browser (aka the client) and the server.
+CSS is used to add styling to the elements created with HTML. **C**ascading **S**tyle **S**heets determines how elements are presented on the page. This includes altering the font, color, size, the positioning of an element, or even adding animation. 
 
-Regardless of the programming language you use, two tools that every developer uses on a daily basis are the **command line** and **version control**. The command line allows developers to quickly and efficiently interface with their operating system and software. To begin, we'll use the command line to navigate the file tree and create directories and files. Later, we'll use it to install software dependencies and run servers, among other tasks. Version control is an approach to managing changes in files without the need to make multiple copies of those files. We'll learn **Git**, which is the most popular version control system. Git integrates with **GitHub.com**, a site for developers to host and share their code. We will deploy our first website using **GitHub Pages**.
-
-The first, and perhaps most important, file we'll create is `index.html`, which is the default entry point for any web application. All of our subsequent work will build on this initial starting point. The file suffix `.html` refers to **HTML**, or **Hypertext Markup Language**. HTML allows us to format webpages and text in a similar way to how a word processor formats documents and the text inside them. However, the biggest difference between HTML and a word processor is the ability to link between any document that's on the web, anywhere in the world. This is the "hypertext" in HTML.
-
-Though HTML is enough to create a simple website, it falls a bit short in the design department. So we'll  add color, fonts, and element positioning by adding **CSS** (**Cascading Style Sheets**) to our HTML files to make them visually dynamic. In the next unit, we'll learn CSS frameworks that can expedite our development process.
-
-Subsequent units will build on this foundation of HTML, CSS, and version control as we add JavaScript, servers, and databases to our stack to build interactive web applications.
+In this unit, you'll learn how to build web pages that use HTML and CSS to define the structure of a page and give it style. You will also be introduced to Git, a version control system that stores your code and its history as well as separate versions of the code. These skills form the building blocks for web development and are essential tools you will use throughout your career. 
 
 ## Key Topics
 
 The following topics will be covered in this unit:
-* Command-line basics
-  * Navigating the file tree
-  * Creating, copying, and removing files and directories
-* HTML
-  * Semantic elements, tags
-  * Attributes
-  * Best practices: indentation, file naming conventions and directory structure
-* CSS
-  * Order of importance
-  * Class vs. id
-  * Selectors
-  * Typography
-  * Box model
-  * Positioning and floats
-  * Color: hexadecimal, rgb and named
-* Git & Git workflow
-  * git clone
-  * git add
-  * git commit
-  * git push
-  * git pull
-* GitHub
-  * Create a repository
-  * Deploy to personal pages
 
-## Comprehension Check
+* [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-You will be employer-ready if you can answer the following questions:
+* [GitHub](https://guides.github.com/activities/hello-world/)
 
-1. What does it mean to be a full-stack web developer?
-2. What is the relationship between HTML and CSS?
-3. What is Git workflow?
+* [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+* [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+
+* [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color)
+
+* [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+
+* [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+
+* [Display](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display)
+
+* [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+
+* [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ## Learning Objectives
 
-You will be employer-competitive if you are able to:
+You will be employer-ready if you are able to:
 
-* Build and style static webpages with semantic HTML and CSS
-* Implement best practices and standards when structuring HTML files using nested elements, indentation, comments, and line breaks
-* Implement CSS styling via class, id and element selectors using external stylesheets, inline styles and embedded style tags
-* Explain the "cascading" in Cascading Style Sheets and implement the box model for HTML elements
-* Explain the value of version control and use Git workflow to initialize projects, track changes, and host via remote server
-* Perform common commands via the command line to interface with the operating system, such as navigating the file tree and creating and deleting files and directories
-* Execute live deployment using GitHub Pages
+* Use Command line tools to navigate your computer’s file system and create directories and files.
 
-## Homework: Code Refactor
+* Employ Git commands to create and clone a repo, add and commit changes, and push and pull code.
 
-Take the provided codebase and refactor it to make it accessible. Don't forget the cardinal rule when working with someone elses code:
-"Always leave the code you are editing a little cleaner than you found it"
+* Use HTML elements to build the structure of a web page.
 
-## Helpful Links
+* Add attributes to HTML elements to style the elements or adjust their behavior in various ways.
 
-* [Version Control](https://en.wikipedia.org/wiki/Version_control)
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Pro Git](https://git-scm.com/book/en/v2)
-* [Dev Docs](https://devdocs.io/)
+* Style webpages using CSS's color and font properties.
 
+* Identify the box model and how it relates to an element's layout and design. 
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+* Alter the layout of webpages using CSS's display and font properties.
+
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
+
+* @TODO LIST & LINK TO ALGORITHMS
+
+  * 📹 Let's Code { @TODO ADD LINK TO ALGO VIDEO }
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* @TODO LINK TO ASSESSMENT
+
+## Homework
+
+Accessibility is an increasingly important consideration in web design. Inclusive design aims to make sure all users -- including those with disabilities -- are able to interact and understand a web page's content.
+
+During this week's homework, you will take an existing website and use the HTML and CSS skills practiced during this week to make sure the site is accessible using the provided guidelines. 
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+In the next unit, you will build on the CSS and HTML fundamentals covered this unit and learn responsive web layouts and advanced CSS.
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit.
+
+  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide) 
+
+  * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 Blog Post: @TODO LINK TO BLOG POST
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
