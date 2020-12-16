@@ -58,7 +58,7 @@ You will be employer-competitive if you are able to solve the following algorith
 
 ### Algorithms
 
-Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
 
 * @TODO LIST & LINK TO ALGORITHMS
 
