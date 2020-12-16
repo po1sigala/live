@@ -6,7 +6,7 @@ At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage
 
 CSS is used to add styling to the elements created with HTML. **C**ascading **S**tyle **S**heets determines how elements are presented on the page. This includes altering the font, color, size, the positioning of an element, or even adding animation. 
 
-In this unit, you'll learn how to build web pages that use HTML and CSS to define the structure of a page and give it style. You will also be introduced to Git, a version control system that stores your code and its history and allows you to share your code with others. These skills form the building blocks for web development and are essential tools you will use throughout your career. 
+In this unit, you'll learn how to build web pages that use HTML and CSS to define the structure of a page and give it style. You will also be introduced to Git, a version control system that stores your code and its history as well as separate versions of the code. These skills form the building blocks for web development and are essential tools you will use throughout your career. 
 
 ## Key Topics
 
