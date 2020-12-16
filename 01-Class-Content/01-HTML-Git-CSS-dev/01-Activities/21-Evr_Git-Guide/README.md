@@ -2,19 +2,23 @@
 
 In this activity, we will walk through setting up a repository using terminal commands and Git version control.
 
-Git allows developers to track and store content as well as share content with others. During this course, we will use a class repository to share the activity code for each day. In addition, for each homework assignment, you will be required to share a repository with your code. 
+Git allows developers to track and store versions of content as well as collaborate with others. For each class, we use Git to share code using a class repository. In addition, for each homework assignment, you will be required to provide a URL link to your GitHub repository containing your code.
 
-To practice the skills needed to pull the repo and blah, blah blah. 
+This activity will review the terminal commands of `mkdir`, `touch`, `cd`, `ls`, `pwd`.
+
+You will also gain familiarity in the use of the Git commands `config`, `clone`, `add`, `commit`, `push`, `pull`, and `status`.
+
+These commands are essential tools that you will use to down the activities prior to each class, clone an existing repo, and create a new repo to store your code and share with others, including your homework. 
 
 ## Instructions
 
 ### Configure Local Git Default Branch to Main
 
-If you have previously configured Git, you do not need to repeat this step!
+**If you have previously configured Git, you do not need to repeat this step!**
 
-* GitHub changed the default branch from `master` to `main`. To stay in sync with GitHub, which now sets the default branch to `main`, you need to change our local Git configuration to use `main` as the default branch.
+* GitHub changed the default branch from `master` to `main`. To stay in sync with GitHub, you need to change our local Git configuration to use `main` as the default branch.
 
-* If you are using macOS, you must have Git version 2.28 or later installed.
+* If you are using **macOS**, you must have Git version 2.28 or later installed.
 
 * To check the version you have installed, enter this command in the terminal:
 
@@ -22,13 +26,13 @@ If you have previously configured Git, you do not need to repeat this step!
   git --version
   ```
 
-* To update, Mac users can use Homebrew to update Git. (Note: Window users do not need to do this!)
+* To update Git, **Mac users** can enter the following Homebrew command: (Note: Window users do not need to do this!)
 
   ```bash
   brew install git
   ```
 
-* For both Windows and Mac users, set the default branch to `main`, by running the following command in the terminal:
+* To set the default branch to `main`, both **Windows and Mac users** run the following command in the terminal:
 
   ```bash
   git config --global init.defaultBranch main
@@ -38,12 +42,31 @@ If you have previously configured Git, you do not need to repeat this step!
 
 ### Configure User Name and Password 
 
-* To get the most out of Git, you can use `git config` to set your user name and password. 
+* To get the most out of Git, you can use `git config` to set your user name and password locally.
 
+* You can use `git config` to set your user name globally with the following command:
+
+  ```bash
+  git config --global user.name "<Your-Full-Name>"
+  ```
+
+* You can use `git config` to set your email globally with the following command:
+
+  ```bash
+  git config --global user.email "<your-email-address>"
+  ```
+
+* You can check your current Git configurations using `--list`:
+
+  ```bash
+  git config --list
+  ```
 
 ### Create and Clone the Repository
 
-* Navigate to your GitHub account and create a new repository on GitHub called `conflict-resolution`. Make sure it's created with a `README.md` file by selecting the "Add a README file" checkbox. The page should look something like the following image:
+* Navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-guide-sample` in the `Repository Name` box.  
+
+* Select the "Add a README file" checkbox. The page should look something like the following image:
 
   ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./Images/01-github-repo-create.png)
 
