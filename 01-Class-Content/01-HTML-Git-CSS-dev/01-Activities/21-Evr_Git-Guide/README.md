@@ -68,11 +68,11 @@ These commands are essential tools that you will use to down the activities prio
 
 * Select the "Add a README file" checkbox. The page should look something like the following image:
 
-  ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./Images/01-github-repo-create.png)
+  ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./assets/image-1.png)
 
-* Now let's clone the newly created repository to the local machine. We can start to do so by clicking the green Code button, selecting the SSH option, and copying the value provided, as the following image shows:
+* Clone the newly created repository to the local machine by clicking the green `Code` button, selecting the HTTPS option, and copying the value provided, as the following image shows:
 
-  ![The GitHub repository shows the SSH connection string for the repo you just created.](./Images/02-repo-home.png)
+  ![The GitHub repository shows the HTTPS connection for the repo you just created.](./assets.image-2.png)
 
 * To perform the clone operation, you'll need to use the `git clone` command from your command line. Make sure that you've navigated to the location you want your repository to be cloned to using the `cd` command, and then clone the repo with the following command:
 
