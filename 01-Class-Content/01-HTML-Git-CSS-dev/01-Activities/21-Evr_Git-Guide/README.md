@@ -181,6 +181,10 @@ Let's push the changes to the remote repository on GitHub.
 
   ![The message will indicate the number of files changed.](./assets.image-4.png)
 
+* The remote repo on GitHub should also be updated.
+
+  ![The remote repository will update with the committed changes](./assets.image-5.png)
+  
 ### Update the Local Readme File
 
 * Let's update the project's `README.md` file. Go ahead and open it in your VS Code editor. You should see something like this image with some slight differences depending on your VS Code configuration:
@@ -247,39 +251,7 @@ Let's push the changes to the remote repository on GitHub.
   git pull origin main
   ```
 
-* Oh no, it seems that we have a merge conflict! The command line should have a message stating that it could not automatically resolve differences between the content in `README.md` and that they will need to be resolved manually.
 
-* What has happened here is that when we run the `git pull` command, we are instructing Git to look at the GitHub remote's content and detect any changes. If it finds any changes, it automatically pulls those changes down to the machine and merges them with the local content. In this case, however, it noticed that the content of `README.md` has changed twice, and it doesn't know which one is correct. 
-
-* This may seem like a problem, but keep in mind that merge conflicts are created by developers. Git is simply pointing out a flaw in the workflow, which is actually useful in terms of helping us figure out what went wrong and how to address it. It's now on us to determine how to proceed.
-
-  > **Important:** Merge conflicts will happen&mdash;it's a fact of life in development. Keep in mind that it's typically an easily fixed issue, as long as no one panics and does something hasty. In these situations, take a step back and address the files that have conflicts, address them, and then use your Git commands to save and commit the updated changes. Never commit code with a merge conflict if possible; it will make it difficult to address at a later date.
-
-### Resolve Merge Conflict
-
-* VS Code makes it easy for us to find and identify where merge conflicts occur. Let's open it back up to view the `README.md` file again. We should see something like the following image:
-
-  ![VS Code shows us where a merge conflict occurred in the content in a clean and organized way](./Images/07-vscode-conflict.png)
-
-* Notice the interesting syntax added to the file? That's added by Git when there's a conflict. It first lists what code is in the `HEAD`, which is their way of saying the most up-to-date content that's local. Then, after the dividing line of equal signs (`=======`) is the `Incoming Change`, which came from the GitHub remote when we ran `git pull`. 
-
-  > **Important:** VS Code adds in the extra color block highlighting and options. If you weren't using VS Code, it might be a more manual process to address the conflicting code. 
-
-* Now this is where you, the developer, need to make a decision: which block of code is correct?
-
-* There isn't one clear answer to this, so it's important that you critically think about each block and decide which one is to be kept. If you're on a team working on this, it's doubly important that you communicate the conflict to them and come to a decision together. You can even choose to keep both blocks of code if you feel it's correct, though that is unlikely to happen.
-
-* Once you have determined which content should remain, you can use VS Code's options to Accept Current Change (which is what you have locally), Accept Incoming Change (which is what came from the GitHub repository), or Accept Both Changes (which will merge both together). For this case, let's choose the first option, to Accept Current Change. The result should look like the following image:
-
-  ![VS Code now shows the content of the README file with the chosen content to remain](./Images/08-vscode-conflictresolution.png)
-
-* Great, you just handled a merge conflict! All you have to do now is save your file, commit the fixed code, and push it to GitHub, using the following commands:
-
-  ```bash
-  git add -A
-  git commit -m "fix conflict in README"
-  git push origin main
-  ```
 
 * To recap what happened here, we purposely created a diverging timeline for the content in the `README.md` file. When we attempted to sync the two, Git didn't know which one was correct, so it prompted us that there was a conflict and we must resolve it. Upon resolution, we committed and pushed the code and could move on with our work.
 
