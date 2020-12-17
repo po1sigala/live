@@ -16,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How would you log the length property of the Window Object?  
+* How would you log the `length` property of the `window` object?  
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
