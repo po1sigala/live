@@ -4,7 +4,7 @@ In this activity, we will walk through setting up a repository using terminal co
 
 Git allows developers to track and store versions of content as well as collaborate with others. For each class, we use Git to share code using a class repository. In addition, for each homework assignment, you will be required to provide a URL link to your GitHub repository containing your code.
 
-This activity will review the terminal commands of `mkdir`, `touch`, `cd`, `ls`, `pwd`.
+This activity will review the terminal commands `mkdir`, `touch`, `cd`, `ls`, `pwd`.
 
 You will also gain familiarity in the use of the Git commands `config`, `clone`, `add`, `commit`, `push`, `pull`, and `status`.
 
@@ -62,7 +62,7 @@ These commands are essential tools that you will use to down the activities prio
   git config --list
   ```
 
-### Create and Clone the Repository
+### Create and Clone a Repository
 
 * Navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-guide-sample` in the `Repository Name` box.  
 
@@ -70,18 +70,116 @@ These commands are essential tools that you will use to down the activities prio
 
   ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./assets/image-1.png)
 
-* Clone the newly created repository to the local machine by clicking the green `Code` button, selecting the HTTPS option, and copying the value provided, as the following image shows:
+* To prepare to clone the newly created repository to the local machine by clicking the green `Code` button and selecting the HTTPS option. Then, copy the value provided, as the following image shows:
 
   ![The GitHub repository shows the HTTPS connection for the repo you just created.](./assets.image-2.png)
 
-* To perform the clone operation, you'll need to use the `git clone` command from your command line. Make sure that you've navigated to the location you want your repository to be cloned to using the `cd` command, and then clone the repo with the following command:
+* Navigate to the Desktop directory in your terminal using the `cd` terminal command. 
 
   ```bash
-  # replace the last value with the one you copied from your GitHub repository
-  git clone git@github.com:lernantino/conflict-resolution.git
+  cd Desktop
+  ```
+* To clone the repo, use the `git clone` command followed by the value copied from Github. 
+
+  ```bash
+  git clone <url>
   ```
 
 * Once it's done cloning to your machine, navigate to the cloned repository's directory using the `cd` command.
+
+  ```bash
+  cd git-guide-sample
+  ```
+
+### Add a New File to the Project 
+
+* Let's add an `index.html` file to our project.
+
+* To check the working directory, use `pwd` to print the working directory. 
+
+  ```bash
+  pwd
+  ```
+
+* If you are not already in the `git-guide-sample` directory, use `cd` to navigate to the project folder.
+
+* Inside the project directory, use `touch` to create a new file.
+
+  ```bash
+  touch index.html
+  ```
+
+* To list the contents of the project directory, use `ls`. A `README.md` and the newly created `index.html` should appear. 
+
+  ```bash
+  ls
+  ```
+
+### Add a New Directory to the Project
+
+*  Let's add an `assets` directory to our project. Inside that directory, we will put our `style.css` file.
+
+* Inside the `git-guide-sample` directory, use `mkdir` to create a new directory named `assets`
+
+  ```bash
+  mkdir assets
+  ```
+
+*  Use `cd` to navigate to the newly created `assets` directory.
+
+  ```bash
+  cd assets
+  ```
+
+* Use `touch` to create a `style.css` file.
+
+  ```bash
+  touch style.css
+  ```
+
+* Navigate back to the project folder using `cd ..`
+
+  ```bash
+  cd ..
+  ```
+* Use `ls` to list the contents of the project directory. The assets directory should appear on the list.
+
+### Commit Changes in Git
+
+* Let's commit the changes made to the `git-guide-sample` directory to Git.
+
+* To commit a change, we first have to stage it. The `git add` command adds changes to the staging area so they can be committed. We use `git add .` to stage all the changes we made since the last commit.
+
+  ```bash
+  git add .
+  ```
+* To see the changes to be committed, we use `git status`
+
+  ```bash
+  git status
+  ```
+* To commit the changes, we use `git commit` and add a commit message. A good commit message should describe the changes made.
+
+  ```bash
+  git commit -m "Add index.html and style.css files"
+  ```
+* You will receive a message indicating the number of files changed similar to the message below indicating that the changes have been committed locally.
+
+  ![The message will indicate the number of files changed.](./assets.image-3.png)
+
+### Pushing Changes to the Remote Repo
+
+Let's push the changes to the remote repository on GitHub.
+
+* Use `git push` to upload the changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. We use `main` because we are working on the `main` branch.
+
+  ```bash
+  git push origin main
+  ```
+
+* If successful, you will receive a message similar to the message below:
+
+  ![The message will indicate the number of files changed.](./assets.image-4.png)
 
 ### Update the Local Readme File
 
