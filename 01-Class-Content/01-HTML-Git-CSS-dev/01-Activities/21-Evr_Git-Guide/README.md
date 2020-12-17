@@ -2,17 +2,21 @@
 
 In this activity, we will walk through setting up a repository using terminal commands and Git version control.
 
-Git allows developers to track and store versions of content as well as collaborate with others. For each class, we use Git to share code using a class repository. In addition, for each homework assignment, you will be required to provide a URL link to your GitHub repository containing your code.
+Git is an important tool that allows developers to track and store versions of content.
+
+Git is also an important way to collaborate and share code with others. For the duration of this Bootcamp, we will use Git to share code using a class repository which you will be required to download prior to each class. In addition, for each homework assignment, you will provide a URL link to your GitHub repository containing your code for the grading team. 
 
 This activity will review the terminal commands `mkdir`, `touch`, `cd`, `ls`, `pwd`.
 
 You will also gain familiarity in the use of the Git commands `config`, `clone`, `add`, `commit`, `push`, `pull`, and `status`.
 
-These commands are essential tools that you will use to down the activities prior to each class, clone an existing repo, and create a new repo to store your code and share with others, including your homework. 
+These commands are essential tools that you will use to create a repository, initialize version control on your projects, commit changes to a repository, and pull from a remote repo. 
 
 ## Instructions
 
 ### Configure Local Git Default Branch to Main
+
+* Let's set the local Git default branch to `main`.
 
 **If you have previously configured Git, you do not need to repeat this step!**
 
@@ -42,27 +46,31 @@ These commands are essential tools that you will use to down the activities prio
 
 ### Configure User Name and Password 
 
-* To get the most out of Git, you can use `git config` to set your user name and password locally.
+* Let's use `git config` to configure your user name and password. 
 
-* You can use `git config` to set your user name globally with the following command:
+* To get the most out of Git, we can use `git config` to set our user name and password locally. **Important:** You only need to do this once! 
+
+* We use `git config` to set your user name globally with the following command:
 
   ```bash
   git config --global user.name "<Your-Full-Name>"
   ```
 
-* You can use `git config` to set your email globally with the following command:
+* We use `git config` to set your email globally with the following command:
 
   ```bash
   git config --global user.email "<your-email-address>"
   ```
 
-* You can check your current Git configurations using `--list`:
+* We check your current Git configurations using `--list`:
 
   ```bash
   git config --list
   ```
 
 ### Create and Clone a Repository
+
+* Let's use `git clone` to create a clone a remote repository.
 
 * Navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-guide-sample` in the `Repository Name` box.  
 
@@ -93,7 +101,7 @@ These commands are essential tools that you will use to down the activities prio
 
 ### Add a New File to the Project 
 
-* Let's add an `index.html` file to our project.
+* Let's add an `index.html` file to our newly cloned project.
 
 * To check the working directory, use `pwd` to print the working directory. 
 
@@ -117,9 +125,9 @@ These commands are essential tools that you will use to down the activities prio
 
 ### Add a New Directory to the Project
 
-*  Let's add an `assets` directory to our project. Inside that directory, we will put our `style.css` file.
+*  Let's add an `assets` directory to our project. 
 
-* Inside the `git-guide-sample` directory, use `mkdir` to create a new directory named `assets`
+* Navigate to the `git-guide-sample` directory, then use `mkdir` to create a new directory named `assets`
 
   ```bash
   mkdir assets
@@ -142,7 +150,8 @@ These commands are essential tools that you will use to down the activities prio
   ```bash
   cd ..
   ```
-* Use `ls` to list the contents of the project directory. The `assets` directory should appear on the list.
+
+* Use `ls` to list the contents of the project directory. The `assets` directory should now appear on the list.
 
 ### Commit Changes in Git
 
@@ -153,7 +162,7 @@ These commands are essential tools that you will use to down the activities prio
   ```bash
   git add .
   ```
-* To see the project changes to be committed, we use `git status`
+* To see the project changes to be committed, we use `git status`. This will show a list of the files that have been staged.
 
   ```bash
   git status
@@ -163,7 +172,7 @@ These commands are essential tools that you will use to down the activities prio
   ```bash
   git commit -m "Add index.html and style.css files"
   ```
-* If successful, you will receive a message indicating the number of files changed similar to the message below indicating that the changes have been committed locally.
+* If successful, you will receive a message indicating the number of files changed similar to the message below.
 
   ![The message will indicate the number of files changed.](./assets/image-3.png)
 
@@ -171,7 +180,7 @@ These commands are essential tools that you will use to down the activities prio
 
 Let's push the changes to the remote repository on GitHub.
 
-* Use `git push` to upload the changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
+* We use `git push` to upload changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
 
   ```bash
   git push origin main
@@ -181,17 +190,18 @@ Let's push the changes to the remote repository on GitHub.
 
   ![The message will indicate the number of files changed.](./assets/image-4.png)
 
-* The remote repo on GitHub should also be updated.
+* The remote repo on GitHub should also be updated to reflect the changes we made.
 
   ![The remote repository will update with the committed changes](./assets/image-5.png)
+
   
-### Create a New Version-Controlled Project Using Git Init
+### Initialize a New Version-Controlled Project
 
 * Let's initialize a new version-controlled project locally using `git init`.
 
 * Using `git init` allows us to turn a new or existing project into a Git repository easily.
 
-* We start by creating a new project directory.
+* We start by creating a new project directory named `git-init-sample`.
 
 * We use `cd` to navigate to the Desktop directory and `mkdir` to create a new directory called `git-init-sample`.
 
@@ -207,96 +217,77 @@ Let's push the changes to the remote repository on GitHub.
   touch index.html
   ```
 
-* To initialize version control, we use `git init`
+* To initialize version control, we use `git init`.
 
 ```bash
 git init
 ```
 
-* If successful, a message reading `Initialized empty Git repository in /Users/{your user name}/Desktop/git-init-sample/.git/` should appear.
+* If successful, a message reading `Initialized empty Git repository in /Users/<your-user-name>/Desktop/git-init-sample/.git/` should appear.
 
-* Using `git init` adds version control locally to your project. To create a remote repository to store your code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-init-sample` in the `Repository Name` box. 
+* Using `git init` adds version control locally to a project, allowing us to track and save changes. It doesn't not create a remote repository.
 
+* To create a remote repository to store your code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-init-sample` in the `Repository Name` box. This is the same as we did above!
 
-### Update the Local Readme File
+* **Important** Since we are importing an existing repository, do not click any of the checkboxes. The page should look something like the following image:
 
-* Let's update the project's `README.md` file. Go ahead and open it in your VS Code editor. You should see something like this image with some slight differences depending on your VS Code configuration:
+ ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./assets/image-6.png)
 
-  ![The VS Code editor screen shows thr README file open with the title of the repo in header text.](./Images/03-vscode-start.png)
+* Click on `Create Repository`. Then copy the code under the header `"…or push an existing repository from the command line"` using the copy icon. The page should look something like this:
 
-* As of right now, there should just be the name of the repository listed using `#`, which is the markdown equivalent of an HTML `<h1>` element. Let's add some more to this file so there's a change to be tracked by Git. Add the following markdown text to the `README.md` file below what's already there:
+  ![The GitHub repository set-up page provides the code to import an existing repository](./assets/image-7.png)
 
-  ```md
-  ## This is a subheading created locally
+* If successful, you should see a message similar to the one below:
 
-  All of this content added to the readme file has been added from my local Git repository.
-  ```
+  ![A message indicating that the project directory has been successfully imported](./assets/image-8.png)
 
-* The result should look like the following image in VS Code:
+### Pull Changes from the Remote Repository
 
-  ![Our README file now has more text to help indicate some updates were made locally.](./Images/04-vscode-updated.png)
+* Let's pull changes from a remote repository using `git pull`.
 
-* Great! Now let's save this work and make a similar update to the readme file through the browser using GitHub.
+* Prior to each class, it is important that you do a `git pull` to download any changes and activity files  from the student repo to your local machine.
 
-### Update the Remote Readme File on GitHub
-
-* Now that we've updated the codebase locally by adding to our `README.md` file, let's update that file in a different on GitHub as well. This will force the local repository and the GitHub remote of the repository to have conflicting file histories that we'll have to address soon.
-
-* Navigate to the GitHub repository in your browser, and you'll notice that in the section that displays your `README.md` content, there's a little pencil icon in the upper right corner that will allow you to edit the file directly from GitHub upon click. If you're having trouble locating it, compare your screen to the following image:
-
-  ![The GitHub repository allows us to select a pencil icon to edit the readme file directly through the site](./Images/05-github-editbtn.png)
-
-* Once we enter this edit mode, we can add whatever we need to the `README.md` file, so let's add the following below the content that's already there:
-
-  ```md
-  ## This is a subheading created on GitHub
-
-  All of this content added to the readme file has been added from my remote GitHub repository.
-  ```
-
-* Notice how the text content is slightly different from what we added locally through VS Code? This will help us differentiate which content came from where when we see our eventual merge conflict.
-
-* Let's commit this change to the GitHub repository, move a bit lower down the page and leave a commit title such as `Updated README.md on GitHub`, and press the Commit Changes button. The page should look like the following image before we press the button:
-
-  ![The GitHub editor page shows the options for committing changes to the repository](./Images/06-github-edit.png)
-
-* Upon completion, you'll be brought back to the `README.md` file's view in GitHub so that you can see your updated file.
-
-* Now that we've successfully created two different Git timelines for the `README.md` file, let's try and get them back in sync with on another.
-
-### Create Merge Conflict
-
-* Navigate back to your local Git repository in VS Code and check that the file is saved.
-
-* Once the file is saved, we want to use `git add`  and `git commit` commands from the command-line track and save the local work. If we didn't, we wouldn't be allowed to pull the updated content from GitHub into the local repository, because we haven't committed the changed files. From the repository's location in the command line, enter the following commands:
+* To perform a git pull, we first navigate to the project directory using `cd`.
 
   ```bash
-  # instruct all changed files in this repo to be tracked by git
-  git add -A
-  # commit our changed files with a message of what has been done
-  git commit -m "Updated README.md locally"
+  cd cd git-init-sample
   ```
 
-* Once the local work is saved and committed, we now want to attempt to resync the local repo and GitHub repo using the `git pull` command. Remember, the `git pull` command is the command we use when we want to take any updated content from the GitHub repository (known as the remote) and have it applied to the local code. Run the following command from the command line:
+* Next, we use `git pull` to pull down the changes from the remote.
 
   ```bash
-  # retrieve all changed content from the `main` branch in our GitHub remote
   git pull origin main
   ```
 
+* Right now, our local is up-to-date with the remote. If that is the case, you will get a message reading `"Already up to date."`. This means no changes were made to your local.
 
+* If the remote has changes that you do not have locally, you will get a message that lists the changes made similar to the one below:
 
-* To recap what happened here, we purposely created a diverging timeline for the content in the `README.md` file. When we attempted to sync the two, Git didn't know which one was correct, so it prompted us that there was a conflict and we must resolve it. Upon resolution, we committed and pushed the code and could move on with our work.
+  ![A message indicating that changes have been made from the remote repository](./assets/image-9.png)
 
-* As it's been said, merge conflicts come with the territory of using version control and working with others on an application. Despite the negative term "conflict," it's actually a good thing that Git warns us and prompts us to do something about it, because it would be a bad situation if Git just automatically merged everything together or overwrote content we didn't want to use anymore.
+* Both messages indicate that the `git pull` command has been successfully performed.
 
-* The most important thing to take away from handling merge conflicts is that you will get through it with patience. Take a minute to diagnose where things went wrong and decide how you want to handle it. It will also help to identify any problems with your overall workflow if you continuously run into merge conflicts, as it means there is poor communication and organization among you and your team.
+* The changes made, if any, can be viewed by opening the project directory in VSCode.
+
+### Share Remote Repo URL 
+
+* Let's share the URL for the remote repository.
+
+* For each homework, you will be required to share the URL of your repository. To share the URL, navigate to the repository on GitHub. The page should look something like the following image:
+
+  ![A GitHub repository showing URL used to share work with others](./assets/image-10.png)
+  
+* Copy the URL and share it with your partner in Slack. To view your partner's repo, simply click on the shared link. 
 
 ### Hints
 
 * Ask an instructor or TA if you get stuck or have any questions!
 
-* Check the [Atlassian guide on setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository) for reference.
+* Check the [Atlassian guide on setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository) for additional information about setting up a repository using `git clone` or `git init`.
+
+* Check the [Atlassian guide on git config](https://www.atlassian.com/git/tutorials/syncing/git-pull) for a more in-depth discussion on using `git config`.
+
+* Check the [Atlassian guide on git pull](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) for additional information about syncing your repos and using `git pull`.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
