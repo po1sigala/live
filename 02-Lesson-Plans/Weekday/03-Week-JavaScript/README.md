@@ -32,11 +32,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-* [03.1: Lesson Plan](01-Day_Intro-JS/03.1-LESSON-PLAN.md)
+* [03.1 Lesson Plan](01-Day_Intro-JS/03.1-LESSON-PLAN.md)
 
-* [03.2: Lesson Plan](02-Day_Loops-and-More/03.2-LESSON-PLAN.md)
+* [03.2 Lesson Plan](02-Day_Loops-and-More/03.2-LESSON-PLAN.md)
 
-* [03.3: Lesson Plan](03-Day_Objects/03.3-LESSON-PLAN.md)
+* [03.3 Lesson Plan](03-Day_Objects/03.3-LESSON-PLAN.md)
 
 ### Homework
 
