@@ -14,7 +14,7 @@ Just like other projects, we'll start by creating a new GitHub repository.
 
 Navigate to your GitHub account and create a new repository called `pull-request-demo`. Make sure to select the "Add a README file" checkbox. You should see something like the following image:
 
-![Creating a new repo with a title and add README selected](images/01-create-repo.png)
+![On the "Create a new repository" page, the user has named the repo "pull-request-demo" and selected the "Add a README file" option.](images/01-create-repo.png)
 
 ### Clone the New Repository
 
@@ -35,13 +35,13 @@ In the directory of this repo, create and switch to a new branch by running the 
 
 Time to update the project's README.md file. Go ahead and open it in your VS Code editor. 
 
-As of right now, you should see just be the name of the repository listed, along with `#`, which is the markdown equivalent of an HTML `<h1>` element. Add more to this file to create some changes for Git to track! You can enter a message of your choice or copy the following markdown text to the README.md file&mdash;below what's already there:
+For now, you should see just the name of the repository listed, along with `#`, which is the Markdown equivalent of an HTML `<h1>` element. Add more to this file to create some changes for Git to track&mdash;you can enter a message of your choice or copy the following markdown text to the bottom of the README.md file:
 
 ```md
 Now, I am a demo for a Pull Request!
 ```
 
-Great! Now let's run the following commands to add, commit, and push the work:
+Great! Now let's run the following commands to add, commit, and push the changes:
 
 ```bash
   git add -A
@@ -57,59 +57,59 @@ You've made changes, committed, and pushed your new feature. Now it's time to op
 
 After making these changes to the new feature, you'll need to open a pull request. Navigate to the repo page in your browser. You might see a message like the one shown in the following image: 
 
-![A green button that is labeled, "Compare & pull request"](images/07-create-new-pr.png)
+![Near the top of the pull-request-demo repo page, a pink arrow points to the green "Compare & pull request" button.](images/07-create-new-pr.png)
 
 If you see this message, select the "Compare & pull request" button. If you don't see this message, don't worry! You can click on the "Pull requests" tab at the top of the screen. This will take you to the pull request hub. On this page, you can open a pull request by clicking on the green "New pull request" button, like in the following image:
 
-![A green button that is labeled, "New pull request"](images/08-new-pr.png)
+![Near the top-right corner of the pull request hub page, a pink circle highlights the green "New pull request" button.](images/08-new-pr.png)
 
-Now you should see a form for opening a pull request. First, make sure that you are comparing the feature branch that you've been working on to the correct base. In a larger dev environment, it is likely that you will base your feature branch off of a `dev` branch to avoid corrupting the core code base. In this case, because the project is so tiny, you will compare `01-my-new-feature` to the base branch, `main`. 
+Now you should see a form for opening a pull request. First, make sure that you are comparing the feature branch that you've been working on to the correct base. In a larger dev environment, you'll likely base your feature branch off of a `dev` branch to avoid corrupting the core codebase. In this case, because the project is so tiny, you'll compare `01-my-new-feature` to the base branch, `main`. 
 
 > **Deep Dive:** For more information, read this [Atlassian article on comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows).
 
-Practice giving your pull request a descriptive title and leaving comments for teammates and/or reviews. A comment should include details about the changes in your feature branch that you would like to merge.
+Give your pull request a descriptive title, and leave comments or reviews for teammates. A comment should include details about the changes in your feature branch that you want to merge.
 
-The side panel offers other optional settings for your pull request. You can assign a reviewer (in this case, you will be reviewing your own work), add assignees, or labels to help you organize your pull requests. These options are important to be aware of and useful when you are working on bigger projects, but we will leave them blank for now.
+The side panel offers other optional settings for your pull request. You can assign a reviewer (in this case, you'll review your own work), add assignees, or add labels to help organize your pull requests. These options are especially useful when working on bigger projects, but you can leave them blank for now.
 
-Once you are finished filling out the form, click on the green button at the bottom labeled, "Create pull request", as shown in the following image:
+Once you've filled out the form, click on the green "Create pull request" button at the bottom, as shown in the following image:
 
-![Open pull request form, compare branches, pr title, comments, add reviewers, add assignees, add labels](images/09-fill-out-pr.png)
+![At the top of the form to open a pull request, you can select base and comparison branches; to the right, you can assign and request reviews.](images/09-fill-out-pr.png)
 
 Now you're ready to review your pull request!
 
 ### Review Pull Request
 
-Once you have successfully opened your pull request, look for and click on the "Files changed" tab, and it should take you to a page that is similar to the following image. Once you are on this page, you can view all of the changes that have been made. You can make comments on these changes by clicking on the `+` sign that appears when the cursor points at the code.
+Once you've successfully opened your pull request, select the "Files changed" tab, which should take you to a page where you can view all of the changes that have been made. You can comment on these changes by clicking the plus sign (+) that appears when the cursor points at the code.
 
-This page is also where you can begin a review of the changes. Click on the green button, labeled, "Review changes" on the right, as shown in the following image:
+You can also begin a review of the changes on this page. Click on the green "Review changes" button on the right, as shown in the following image:
 
-![Files changed tab shows the changes that have been made to the files on this branch and the "Review changes" button.](images/10-files-changed-review-button.png)
+![On the "Files changed" tab, changes in the code appear in green and red, and a green "Review changes" button appears in the top right.](images/10-files-changed-review-button.png)
 
-Once you click on the "Review changes" button, a box will appear. Enter a comment of your choice, (i.e. `LGTM!`) in the comment box. You have the option of providing feedback without approval, approving the merge, or requesting changes to be completed before merging. Select the first option, "Comment", and then click the `Submit review` button, as shown in the following image:
+Once you click on the "Review changes" button, a box will appear. Enter a comment in the comment box (maybe something like, "Looks good to me!"). You can choose to provide feedback without approval, approve the merge, or request changes to be completed before merging. Select the first option, "Comment", and then click the green "Submit review" button, as shown in the following image:
 
-![A box appears under the "Review Changes" button, with a box to enter comments and a submit review button"](images/11-review-box.png)
+![A comment box provides space to leave comments, with the "Comment" option selected over the "Submit review" button.](images/11-review-box.png)
 
-On clicking Submit, you will be redirected to the "Conversation" tab, where you will see the comment that you just left in your review, a histoy of commits, and a button to merge the pull request. It will look something like the following image:
+On submitting, you'll be redirected to the "Conversation" tab, where you'll see the comment that you just left in your review, a histoy of commits, and a button to merge the pull request. It will look something like the following image:
 
-![The conversation tab contains the commit history, the comment from the review, and a merge pull request button at the bottom.](images/12-conversation-tab.png)
+![The Conversation tab displays the commit history, the comment from the review, and a green "Merge pull request" button at the bottom.](images/12-conversation-tab.png)
 
 ### Merge and Close Pull Request
 
 Now that you've left a review and you don't need to make any more changes to your feature branch, you can merge and close your pull request!
 
-Click on the green button, "Merge pull request". Then you should get a request asking you to confirm the merge. Click the button that says, "Confirm merge", as shown in the following image:
+Select the green "Merge pull request" button. Then you should get a request asking you to confirm the merge. Select the green "Confirm merge" button, as shown in the following image:
 
-![Green button that says confirm merge](images/13-confirm-merge.png)
+![A pink circle highlights the green "Confirm merge" button.](images/13-confirm-merge.png)
 
-Success! Git offers the option to delete the remote feature branch. We are finished with the feature, so go ahead and click on, "Delete branch", as shown in the following image:
+Success! At this point, Git offers the option to delete the remote feature branch. We're finished with the feature, so go ahead and select "Delete branch", as shown in the following image:
 
-![Pull request merged successfully, white delete branch button](images/14-merge-success.png)
+![A purple "Merged" label under the name of the pull request indicates success, with a "Delete branch" button at the bottom of the page.](images/14-merge-success.png)
 
-Great! Now, let's delete the feature branch locally.
+Great! Now let's delete the feature branch locally.
 
 ### Delete Local Branch
 
-You deleted the remote feature branch in the browser, now let's delete the feature branch locally too! It's goog practice to delete a local branch once you have merged your feature to stay organized. We can imagine how many branches that we might open working on a larger project with many features.
+Imagine how many branches you might open when working on a larger project with many features. To stay organized, it's good practice to delete a local branch once you've merged your feature. You've already deleted the remote feature branch in the browser, so now you'll delete the local feature branch. 
 
 Navigate to the repo directory in your CLI, if you aren't there already. Run the following commands to switch to `main`, pull changes, and begin your next feature:
 
@@ -124,7 +124,21 @@ That's it!
 
 ### Recap
 
-Let's recap what you just accomplished: You created a new repo and a new feature branch. You made changes to the repo on your feature branch, then you added your changes, committed changes with a message, and pushed those changes to the remote branch. Once you were finished, you opened a pull request, comparing your feature branch with the base, `main`. You left a review of your changes, you successfully merged the feature branch with `main` and deleted the feature branch remotely. Finally, you pulled the changes to you local `main` branch and deleted the local feature branch. Wow!
+Think about everything you just accomplished. You've completed the following tasks:
+
+* Created a new repo and a new feature branch. 
+
+* Made changes to the repo on your feature branch.
+
+* Added your changes, committed changes with a message, and pushed those changes to the remote branch. 
+
+* Opened a pull request, comparing your feature branch with the base, `main`. 
+
+* Left a review of your changes, merged the feature branch with `main`, and deleted the feature branch remotely. 
+
+* Pulled the changes to your local `main` branch and deleted the local feature branch.
+
+In the process, you gained valuable experience with some key Git workflows.
 
 ### Hints
 
