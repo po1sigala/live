@@ -50,19 +50,19 @@ These commands are essential tools that you will use to create a repository, ini
 
 * To get the most out of Git, we can use `git config` to set our user name and password locally. **Important:** You only need to do this once! 
 
-* We use `git config` to set your user name globally with the following command:
+* Use `git config` to set your user name globally with the following command:
 
   ```bash
   git config --global user.name "<Your-Full-Name>"
   ```
 
-* We use `git config` to set your email globally with the following command:
+* Use `git config` to set your email globally with the following command:
 
   ```bash
   git config --global user.email "<your-email-address>"
   ```
 
-* We check your current Git configurations using `--list`:
+* Check your current Git configurations using `--list`:
 
   ```bash
   git config --list
@@ -162,12 +162,12 @@ These commands are essential tools that you will use to create a repository, ini
   ```bash
   git add .
   ```
-* To see the project changes to be committed, we use `git status`. This will show a list of the files that have been staged.
+* To see the project changes to be committed, use `git status`. This will show a list of the files that have been staged.
 
   ```bash
   git status
   ```
-* To commit the changes, we use `git commit` and add a commit message. A good commit message should describe the changes made.
+* To commit the changes, use `git commit` and add a commit message. A good commit message should describe the changes made.
 
   ```bash
   git commit -m "Add index.html and style.css files"
@@ -180,7 +180,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 Let's push the changes to the remote repository on GitHub.
 
-* We use `git push` to upload changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
+* Use `git push` to upload changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
 
   ```bash
   git push origin main
@@ -201,23 +201,23 @@ Let's push the changes to the remote repository on GitHub.
 
 * Using `git init` allows us to turn a new or existing project into a Git repository easily.
 
-* We start by creating a new project directory named `git-init-sample`.
+* Start by creating a new project directory named `git-init-sample`.
 
-* We use `cd` to navigate to the Desktop directory and `mkdir` to create a new directory called `git-init-sample`.
+* Use `cd` to navigate to the Desktop directory and `mkdir` to create a new directory called `git-init-sample`.
 
   ```bash
   cd Desktop
   mkdir git-init-sample
   ```
 
-* Next, we use `cd` to navigate into our new directory and add an `index.html` file using `touch`.
+* Next, use `cd` to navigate into our new directory and add an `index.html` file using `touch`.
 
   ```bash
   cd git-init-sample
   touch index.html
   ```
 
-* To initialize version control, we use `git init`.
+* To initialize version control, use `git init`.
 
 ```bash
 git init
@@ -247,13 +247,13 @@ git init
 
 * Prior to each class, it is important that you do a `git pull` to download any changes and activity files  from the student repo to your local machine.
 
-* To perform a git pull, we first navigate to the project directory using `cd`.
+* To perform a git pull, first navigate to the project directory using `cd`.
 
   ```bash
   cd cd git-init-sample
   ```
 
-* Next, we use `git pull` to pull down the changes from the remote.
+* Next, use `git pull` to pull down the changes from the remote.
 
   ```bash
   git pull origin main
