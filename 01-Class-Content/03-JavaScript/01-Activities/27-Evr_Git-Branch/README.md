@@ -61,11 +61,11 @@ git commit -m "creating a top level readme"
 
 * Now that we're on the correct feature branch, we need to work on the feature. Create an `index.js` file in the `git_branch_demo` directory, as shown in the following image:
 
-  ![In VS Code, the README.md file is listed in the file tree under the git_branch_demo directory.](./Images/03-readme.png)
+  ![In VS Code, the README.md file is listed in the file tree under the git_branch_demo directory.](./Images/03-index-js.png)
 
 * Add some a few random variables to the `index.js` file, so that it looks something like the following image:
 
-  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
+  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-variables.png)
 
 * Finally, add and commit the changes that you made, as follows:
 
@@ -93,7 +93,7 @@ git commit -m "creating a top level readme"
 
   ![The command line shows lists the number of files changed and the number of insertions to indicate a successful merge.](./Images/05-merge.png)
 
-* Now the directory should include the README.md file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
+* Now the directory should include the `index.js` file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
 
   ![In the README.md file on the main branch, the text that we wrote on the feature branch now appears.](./Images/06-merge-success.png)
 
