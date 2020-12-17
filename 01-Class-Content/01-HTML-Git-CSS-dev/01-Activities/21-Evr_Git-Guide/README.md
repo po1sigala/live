@@ -72,7 +72,7 @@ These commands are essential tools that you will use to down the activities prio
 
 * To prepare to clone the newly created repository to the local machine by clicking the green `Code` button and selecting the HTTPS option. Then, copy the value provided, as the following image shows:
 
-  ![The GitHub repository shows the HTTPS connection for the repo you just created.](./assets.image-2.png)
+  ![The GitHub repository shows the HTTPS connection for the repo you just created.](./assets/image-2.png)
 
 * Navigate to the Desktop directory in your terminal using the `cd` terminal command. 
 
@@ -101,9 +101,9 @@ These commands are essential tools that you will use to down the activities prio
   pwd
   ```
 
-* If you are not already in the `git-guide-sample` directory, use `cd` to navigate to the project folder.
+* If you are not already in the `git-guide-sample` directory, use `cd` to navigate to the right project folder.
 
-* Inside the project directory, use `touch` to create a new file.
+* Inside the `git-guide-sample` project directory, use `touch` to create a new file.
 
   ```bash
   touch index.html
@@ -137,12 +137,12 @@ These commands are essential tools that you will use to down the activities prio
   touch style.css
   ```
 
-* Navigate back to the project folder using `cd ..`
+* Navigate back to the main project directory using `cd ..`
 
   ```bash
   cd ..
   ```
-* Use `ls` to list the contents of the project directory. The assets directory should appear on the list.
+* Use `ls` to list the contents of the project directory. The `assets` directory should appear on the list.
 
 ### Commit Changes in Git
 
@@ -153,7 +153,7 @@ These commands are essential tools that you will use to down the activities prio
   ```bash
   git add .
   ```
-* To see the changes to be committed, we use `git status`
+* To see the project changes to be committed, we use `git status`
 
   ```bash
   git status
@@ -163,15 +163,15 @@ These commands are essential tools that you will use to down the activities prio
   ```bash
   git commit -m "Add index.html and style.css files"
   ```
-* You will receive a message indicating the number of files changed similar to the message below indicating that the changes have been committed locally.
+* If successful, you will receive a message indicating the number of files changed similar to the message below indicating that the changes have been committed locally.
 
-  ![The message will indicate the number of files changed.](./assets.image-3.png)
+  ![The message will indicate the number of files changed.](./assets/image-3.png)
 
 ### Pushing Changes to the Remote Repo
 
 Let's push the changes to the remote repository on GitHub.
 
-* Use `git push` to upload the changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. We use `main` because we are working on the `main` branch.
+* Use `git push` to upload the changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
 
   ```bash
   git push origin main
@@ -179,12 +179,45 @@ Let's push the changes to the remote repository on GitHub.
 
 * If successful, you will receive a message similar to the message below:
 
-  ![The message will indicate the number of files changed.](./assets.image-4.png)
+  ![The message will indicate the number of files changed.](./assets/image-4.png)
 
 * The remote repo on GitHub should also be updated.
 
-  ![The remote repository will update with the committed changes](./assets.image-5.png)
+  ![The remote repository will update with the committed changes](./assets/image-5.png)
   
+### Create a New Version-Controlled Project Using Git Init
+
+* Let's initialize a new version-controlled project locally using `git init`.
+
+* Using `git init` allows us to turn a new or existing project into a Git repository easily.
+
+* We start by creating a new project directory.
+
+* We use `cd` to navigate to the Desktop directory and `mkdir` to create a new directory called `git-init-sample`.
+
+  ```bash
+  cd Desktop
+  mkdir git-init-sample
+  ```
+
+* Next, we use `cd` to navigate into our new directory and add an `index.html` file using `touch`.
+
+  ```bash
+  cd git-init-sample
+  touch index.html
+  ```
+
+* To initialize version control, we use `git init`
+
+```bash
+git init
+```
+
+* If successful, a message reading `Initialized empty Git repository in /Users/{your user name}/Desktop/git-init-sample/.git/` should appear.
+
+* Using `git init` adds version control locally to your project. To create a remote repository to store your code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-init-sample` in the `Repository Name` box. 
+
+
 ### Update the Local Readme File
 
 * Let's update the project's `README.md` file. Go ahead and open it in your VS Code editor. You should see something like this image with some slight differences depending on your VS Code configuration:
