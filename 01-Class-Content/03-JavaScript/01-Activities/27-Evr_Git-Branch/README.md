@@ -29,53 +29,52 @@ In this activity, we'll learn the concept of branching by using Git commands to 
 
 * Now that we're ready to create the first feature, we need to create a new branch. Remember, the goal is to avoid working in the `main` branch, so that we can make mistakes on the new feature without damaging code that already works.
 
-* The Git command for creating a new branch in your repo is `git branch feature/<feature-name>`. Pick a name that is associated with the feature that you will be working on. `feature/` reminds us that each branch is dedicated to a specific feature, while `<feature-name>` is the name of the feature. In this case, we'll be creating a README.md file, so let's call it `create-readme`, as follows:
+* Now before we can create a new branch, we first need to actually commit something to our newly initiated `main` branch. Let's go ahead and create a top-level README. Top-level here means its at the root of the directory.
+
+```bash
+touch README.md
+git add .
+git commit -m "creating a top level readme"
+```
+
+* The Git command for creating a new named branch in your repo is `git checkout -b feature/<feature-name>`. Pick a name that is associated with the feature that you will be working on. `feature/` reminds us that each branch is dedicated to a specific feature, while `<feature-name>` is the name of the feature. In this case, we'll be creating a JS file, so let's call it `create-js-file`, as follows:
 
   ```bash
-  git branch feature/create-readme
+  git checkout -b feature/create-js-file
   ```
 
-* The Git command `git branch` allows us to see a list of existing branches. Run the following command so that we can confirm that the `feature/create-readme` branch was created:
+* This command will create the new branch, and then `checkout` to it. So you should now be on the `feature/create-js-file` branch.
+
+* The Git command `git branch` allows us to see a list of existing branches. Run the following command so that we can confirm that the `feature/create-js-file` branch was created:
 
   ```bash
   git branch
   ```
 
-* You should see the `feature/create-readme` branch and a `*` next to `main`, as shown in the following image:
+* You should see the `feature/create-js-file` branch and a `*` next to `main`, as shown in the following image:
 
-  ![The command line displays a list of branches, including * main and feature/create-readme.](./Images/01-git-branch.png)
+* We should now see a `*` by `feature/create-js-file`, letting us know this is the branch we are on, as shown in the following image:
 
-  That `*` tells us that we are still on the main branch. If the repo includes a long list of branches, we might need to press the `q` key to exit the list.
-
-* We've created a branch, but we're still in `main`. How do we get into the branch we just created? We can type `git checkout feature/create-readme` to switch from `main` to the new branch, then type the `git branch` command to confirm that we've switched branches. See the following code for an example:
-
-  ```bash
-  git checkout feature/create-readme
-  git branch
-  ```
-
-* We should now see a `*` by `feature/create-readme`, as shown in the following image:
-
-  ![The command line shows a * next to the feature/create-readme branch.](./Images/02-switch-branch.png)
+  ![The command line shows a * next to the feature/create-js-file branch.](./Images/02-switch-branch.png)
 
   > **Important:** We also have the option to create a branch and switch over to it at the same time by entering `git checkout -b <branch-name>`.
 
-* Now that we're on the correct feature branch, we need to work on the feature. Create a README.md file in the `git_branch_demo` directory, as shown in the following image:
+* Now that we're on the correct feature branch, we need to work on the feature. Create an `index.js` file in the `git_branch_demo` directory, as shown in the following image:
 
-  ![In VS Code, the README.md file is listed in the file tree under the git_branch_demo directory.](./Images/03-readme.png)
+  ![In VS Code, the README.md file is listed in the file tree under the git_branch_demo directory.](./Images/03-index-js.png)
 
-* Add some text to the README.md file, so that it looks something like the following image:
+* Add some a few random variables to the `index.js` file, so that it looks something like the following image:
 
-  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-text.png)
+  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-variables.png)
 
 * Finally, add and commit the changes that you made, as follows:
 
   ```bash
     git add .
-    git commit -m "Created README.md and added text to the file"
+    git commit -m "Created index.js and added text to the file"
     ```
 
-* Now that the feature is complete, you can merge the feature branch with `main`. First you need to switch back to `main` from `feature/create-readme`. Remember, it's always a good idea to confirm that you're on the correct branch using the `git branch` command. See the following example:
+* Now that the feature is complete, you can merge the feature branch with `main`. First you need to switch back to `main` from `feature/create-js-file`. Remember, it's always a good idea to confirm that you're on the correct branch using the `git branch` command. See the following example:
 
   ```bash
   git checkout main
@@ -84,28 +83,28 @@ In this activity, we'll learn the concept of branching by using Git commands to 
 
   > **Important:** Git won't let you switch to a different branch until you have added, committed, and pushed any changes that you made to your feature branch. If you try to switch without pushing your code, Git will send you a reminder to push the changes that you made before switching branches.
 
-* Once we're in `main`, notice that we no longer have a README.md file in the directory. What happened? `main` is currently behind `feature/create-readme` and we still need to merge the feature branch with the main codebase. To merge, add the following code to the command line:
+* Once we're in `main`, notice that we no longer have a index.js file in the directory. What happened? `main` is currently behind `feature/create-js-file` and we still need to merge the feature branch with the main codebase. To merge, add the following code to the command line:
 
   ```bash
-  git merge feature/create-readme
+  git merge feature/create-js-file
   ```
 
 * If the merge is successful, we should see something similar to the following image:
 
   ![The command line shows lists the number of files changed and the number of insertions to indicate a successful merge.](./Images/05-merge.png)
 
-* Now the directory should include the README.md file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
+* Now the directory should include the `index.js` file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
 
   ![In the README.md file on the main branch, the text that we wrote on the feature branch now appears.](./Images/06-merge-success.png)
 
-* We're all done with the feature, and the code that we wrote safely exists in `main`. But if you enter the `git branch` command, you'll see that `feature/create-readme` still exists, as shown in the following image:
+* We're all done with the feature, and the code that we wrote safely exists in `main`. But if you enter the `git branch` command, you'll see that `feature/create-js-file` still exists, as shown in the following image:
 
-  ![The feature/create-readme branch is still listed.](./Images/07-still-exists.png)
+  ![The feature/create-js-file branch is still listed.](./Images/07-still-exists.png)
 
 * We could potentially generate a huge list of feature branches while working on a large project. So to avoid confusion and stay organized, it is good practice to close a branch once a feature is completed and merged. Because we're finished with this feature and the code is now included in `main`, we no longer need the isolated environment of that branch. We can always open another branch to fix future problems. But for now, we can safely close the feature branch by issuing the following command:
 
   ```bash
-  git branch -d feature/create-readme
+  git branch -d feature/create-js-file
   ```
 
 * When we run `git branch`, we should see something similar to the following image:
