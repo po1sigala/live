@@ -18,7 +18,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 * Let's set the local Git default branch to `main`.
 
-**If you have previously configured Git, you do not need to repeat this step!**
+* **Important:** If you have previously configured Git, you do not need to repeat this step!
 
 * GitHub changed the default branch from `master` to `main`. To stay in sync with GitHub, you need to change our local Git configuration to use `main` as the default branch.
 
