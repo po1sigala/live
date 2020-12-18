@@ -219,9 +219,8 @@ Let's push the changes to the remote repository on GitHub.
 
 * To initialize version control, use `git init`.
 
-```bash
-git init
-```
+  ```bash
+  git init
 
 * If successful, a message reading `Initialized empty Git repository in /Users/<your-user-name>/Desktop/git-init-sample/.git/` should appear.
 
