@@ -154,7 +154,7 @@ By the end of class students will be able to:
 
 * Break your students into pairs that will work together on this activity.
 
-   ```md
+  ```md
   # 📖 Create a Speed-Reader
 
   Work with a partner to implement the following user story:
@@ -244,7 +244,7 @@ By the end of class students will be able to:
         i++;
       }
     ```
- * We set the interval to equal the value stored in the variable `millisecondsPerWord`, the number entered by the user at the prompt, as shown in the following example:
+  * We set the interval to equal the value stored in the variable `millisecondsPerWord`, the number entered by the user at the prompt, as shown in the following example:
 
     ```js
     }, millisecondsPerWord);
@@ -294,13 +294,13 @@ By the end of class students will be able to:
 
 ### 5. Instructor Demo: Event Listener (5 min) 
 
-* Open `Ins_Event-Listener/index.html` in your browser and demonstrate the following:
+* Open `11-Ins_Event-Listener/index.html` in your browser and demonstrate the following:
 
   * When we open the browser window, the background is in dark mode.
 
   * When we click on the toggle switch, the background switches to light mode.
 
-* Open `Ins_Event-Listener/assets/js/script.js` in your IDE and demonstrate the following:
+* Open `11-Ins_Event-Listener/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 We add the `addEventListener()` method to listen for an event on the `themeSwitcher` element, as follows:
 
@@ -457,13 +457,13 @@ By the end of class students will be able to:
 
 ### 8. Instructor Demo: Preventing Default (5 min) 
 
-* Open `13-Ins/Preventing-Default/index.html` in your browser and demonstrate the following:
+* Open `13-Ins_Preventing-Default/index.html` in your browser and demonstrate the following:
 
   * When we enter information and click the submit button on this form, a message appears.
 
   * 🔑 The message includes the information that we entered in the text fields, and the text fields are not cleared. This works because we canceled the form's default action. 
 
-* Open `13-Ins/Preventing-Default/assets/js/script.js` in your IDE and demonstrate the following:
+* Open `13-Ins_Preventing-Default/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 Sometimes we want to prevent a default action from occurring in response to an event.
 
@@ -480,7 +480,7 @@ By the end of class students will be able to:
     }
     ```
 
-  * 🔑 The action that we want peformed when a user clicks on an element can also be separated into its own named function. We add it as a parameter of the `addEventListener()` method by using the name of function. This is useful when we want to separate the logic or use the same action in multiple places. See the following code for an example:
+  * 🔑 The action that we want performed when a user clicks on an element can also be separated into its own named function. We add it as a parameter of the `addEventListener()` method by using the name of function. This is useful when we want to separate the logic or use the same action in multiple places. See the following code for an example:
 
     ```js
     submitEl.addEventListener("click", showResponse);
@@ -494,11 +494,11 @@ By the end of class students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Prevent-Default/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Preventing-Default/README.md`.
 
 ### 9. Student Do: Preventing Default (15 min) 
 
-* Direct students to the activity instructions found in `14-Stu_Prevent-Default/README.md`.
+* Direct students to the activity instructions found in `14-Stu_Preventing-Default/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -553,7 +553,7 @@ By the end of class students will be able to:
 
   * ✔️ `event.preventDefault()`
 
-* Open `14-Stu_Prevent-Default/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `14-Stu_Preventing-Default/Solved/assets/js/script.js` in your IDE and explain the following: 
 
   * Some actions are performed by the browser by default when we click the submit button. This can cause unwanted behavior or errors.
 
@@ -577,7 +577,7 @@ By the end of class students will be able to:
     }
     ```
 
-* Open `14-Stu_Prevent-Default/Solved/index.html` in your browser and explain the following:
+* Open `14-Stu_Preventing-Default/Solved/index.html` in your browser and explain the following:
 
   * When we test the app, we see that we stopped the browser from executing the default behavior using `event.preventDefault()`. The app now executes as expected, and the error is gone!
 
@@ -899,7 +899,7 @@ By the end of class students will be able to:
 
   * ✔️ `event.stopPropagation()`
 
-* Open `19-Stu_Event-Bubbling/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `18-Stu_Event-Bubbling/Solved/assets/js/script.js` in your IDE and explain the following: 
 
   * 🔑 We select the carousel element and set it as the value of the variable `carousel`, as follows:
 

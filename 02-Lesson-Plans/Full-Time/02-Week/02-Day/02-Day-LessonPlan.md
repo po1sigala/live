@@ -10,7 +10,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Be sure to review the activities and try to anticipate questions that students might ask. 
 
-* In `19-Stu_Scope`, students will work with a partner to debug some broken code and learn more about scope and shadowing. This is a challenging activity, especially for learners new to programming languages. Review the solution code before class and try to anticipate questions that might arise. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) so that you can confidently answer students' questions. 
+* In `18-Stu_Scope`, students will work with a partner to debug some broken code and learn more about scope and shadowing. This is a challenging activity, especially for learners new to programming languages. Review the solution code before class and try to anticipate questions that might arise. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) so that you can confidently answer students' questions. 
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
@@ -297,43 +297,43 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     };
     ```
 
-* 🔑 Declaring a variable inside a function changes the scope of the variable. The variable can only be accessed inside that function. This is called **local scope**. See the following code for an example:
+  * 🔑 Declaring a variable inside a function changes the scope of the variable. The variable can only be accessed inside that function. This is called **local scope**. See the following code for an example:
 
-  ```js
-  function sayGoodbye() {
-    var goodbye = "Goodbye";
-    console.log(goodbye);
-    return;
-  }
-  ```
+    ```js
+    function sayGoodbye() {
+      var goodbye = "Goodbye";
+      console.log(goodbye);
+      return;
+    }
+    ```
 
-* If we try to use a locally scoped variable in another function, like in the following example, we will get an error:
+  * If we try to use a locally scoped variable in another function, like in the following example, we will get an error:
 
-  ```js
-  var sayGoodbyeAgain = function () {
-    console.log(goodbye);
-    return;
-  };
-  ```
+    ```js
+    var sayGoodbyeAgain = function () {
+      console.log(goodbye);
+      return;
+    };
+    ```
 
-* 🔑 **Shadowing** happens when we use the same variable name in both the local and global scope, as shown in the following example:
+  * 🔑 **Shadowing** happens when we use the same variable name in both the local and global scope, as shown in the following example:
 
-  ```js
-  var shadow = "Hello";
-  console.log(shadow);
-
-  function sayWhat() {
+    ```js
+    var shadow = "Hello";
     console.log(shadow);
-    return;
-  }
 
-  var sayWhatAgain = function () {
-    var shadow = "Goodbye";
-    console.log(shadow);
-  };
-  ```
+    function sayWhat() {
+      console.log(shadow);
+      return;
+    }
 
-   We should avoid shadowing by giving the local and global variables unique names. Keeping the scope clean and organized makes it easier to develop and work in the codebase.
+    var sayWhatAgain = function () {
+      var shadow = "Goodbye";
+      console.log(shadow);
+    };
+    ```
+
+  * We should avoid shadowing by giving the local and global variables unique names. Keeping the scope clean and organized makes it easier to develop and work in the codebase.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -549,10 +549,6 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   [MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
 
-  ## 💡 Hints
-
-  @TODO Add a hint here in the form of a question.
-
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
@@ -626,7 +622,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the students if there is anything they would like to review.
 
-* Since the `19-Stu_Scope` activity was challenging, utilize this time to review the solution code more in detail. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) together.
+* Since the `18-Stu_Scope` activity was challenging, utilize this time to review the solution code more in detail. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) together.
 
 ### 11. BREAK (30 min)
 

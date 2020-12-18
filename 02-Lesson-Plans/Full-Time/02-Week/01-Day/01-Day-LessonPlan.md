@@ -304,7 +304,7 @@ By the end of class, students will be able to:
 
   * ✔️ `console.log()` 
 
-* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your IDE and explain the following:
+* Open`02-Stu_Script-ConsoleLog\Solved\index.html` in your IDE and explain the following:
 
   * 🔑 We use inline `<script>` tags to add JavaScript directly into the HTML file, as shown in the following example:
 
@@ -326,7 +326,7 @@ By the end of class, students will be able to:
     console.log("This is inline JavaScript");
     ```
 
-* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and explain the following:
+* Open`02-Stu_Script-ConsoleLog\Solved\index.html` in your browser and explain the following:
 
   * Navigate to the console and show students that the message written between the `()`is the same as what appears in the console.
   
@@ -496,7 +496,7 @@ By the end of class, students will be able to:
     console.log("Fun fact: " + funFact);
     ```
 
-* Open`01-Ins_Script-ConsoleLog\Solved\index.html` in your browser and demonstrate the following:
+* Open`04-Stu_Hello-Variable\Solved\index.html` in your browser and demonstrate the following:
 
     * Navigate to the console. Note that the logs created by using `+` appear as a single message in the console. 
 
@@ -897,11 +897,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README.md`.
 
 ### 12. Student Do: Logical and Comparison Operators (15 min) 
 
-* Direct students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README>md`.
+* Direct students to the activity instructions found in `08-Stu_Logical-Comparison-Operators/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -953,7 +953,7 @@ By the end of class, students will be able to:
 
   * ✔️ Logical operators
 
-* Open `09-Stu-Logical-Comparison-Operators/Solved/script.js` in your IDE and explain the following: 
+* Open `08-Stu-Logical-Comparison-Operators/Solved/script.js` in your IDE and explain the following: 
 
   * Variables `d` and `e` use arithmetic operators to perform simple math. Because `c` has a value of `100` and `b` has a value of `50`, when we calcuate the remainder of `100` divided by `50` it is `0`. So the value of `d` is `0`. Likewise, the value of `e` is `100` divided by `2` or `50`. Both variables `d` and `e` have the type of `number` in the following example:
 
@@ -1261,7 +1261,7 @@ By the end of class, students will be able to:
 
   * ☝️ How do you think conditional statements might allow decision-making in code? 
 
-  * 🙋Conditional statements allow you to carry out different actions based on conditions. Only if the condition evaluates to `true` is the action performed.
+  * 🙋 Conditional statements allow you to carry out different actions based on conditions. Only if the condition evaluates to `true` is the action performed.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -1270,8 +1270,6 @@ By the end of class, students will be able to:
 * Answer any questions before proceeding to the next activity.
 
 ### 18. Instructor Do: Stoke Curiosity (10 min)
-
-* Welcome students to class.
 
 * Display the number 4,294,967,295. Do not provide further context at this point&mdash;the goal is to pique students' curiosity. 
 
@@ -1283,7 +1281,7 @@ By the end of class, students will be able to:
 
 * Explain that so far, we have been using variables to store a single value&mdash;like `"Hello, World"`, `5`, or `true`&mdash;and writing blocks of code that execute once. But that is not very efficient, especially when working with big data. 
 
-* Stress that during today's class, we will think bigger! JavaScript can handle billions of values. So, building on the JavaScript skills we've acquired so far, we will learn how to store multiple values in a single array, perform an action on all the values stored in a variable with just a few lines of code, and even write code blocks that we can reuse again and again. 
+* Stress that during this unit, we will think bigger! JavaScript can handle billions of values. So, building on the JavaScript skills we've acquired so far, we will learn how to store multiple values in a single array, perform an action on all the values stored in a variable with just a few lines of code, and even write code blocks that we can reuse again and again. 
 
 ### 19. Instructor Demo: Arrays (5 min) 
 

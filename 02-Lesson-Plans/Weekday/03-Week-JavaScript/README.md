@@ -1,4 +1,4 @@
-# Unit 03 Instructor Overview: Intro to JavaScript
+# Unit 03 Instructor Overview: JavaScript
 
 ## Overview
 
@@ -18,7 +18,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/03-JavaScri
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md).
+Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 

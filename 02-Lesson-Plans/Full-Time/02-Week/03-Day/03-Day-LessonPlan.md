@@ -10,7 +10,7 @@ In this class, we will work on the Unit 03 Mini-Project and then move onto Unit 
 
 * Be sure to review the activities and try to anticipate questions that students might ask. 
 
-* This unit introduces DOM traversal and manipulation. This is a difficult topic for learners new to programming. If students feel overwhelmed, encourage them to talk through the challenge&mdash;in plain language&mdash;with their partner before they begin to write their solutions. You could also encourage them to reference a [visual of the DOM tree](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit#slide=id.g61fae5cd04_0_31) like the one found in the slide deck. 
+* Unit 04 introduces DOM traversal and manipulation. This is a difficult topic for learners new to programming. If students feel overwhelmed, encourage them to talk through the challenge&mdash;in plain language&mdash;with their partner before they begin to write their solutions. You could also encourage them to reference a [visual of the DOM tree](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit#slide=id.g61fae5cd04_0_31) like the one found in the slide deck. 
 
 * Be prepared to switch between your browser, IDE, and console when demonstrating the activities in this lesson. It is important for students to see how manipulating the DOM with Web APIs affects what is displayed in the browser.
 
@@ -40,38 +40,38 @@ By the end of class students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                        | Duration |
-|---     |---  |---                                   |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project        | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project             | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project      | 0:10     |
-| 11:15AM| 4   | Introduce Homework                   | 0:05     |
-| 11:20AM| 5   | FLEX                                 | 0:30     |
-| 11:50PM| 6  | Instructor Do: Stoke Curiosity        | 0:10     |
-| 12:00PM| 7  | BREAK                                 | 0:30     |
-| 12:30PM| 8  | Instructor Demo: Window Object        | 0:05     |
-| 12:35PM| 9  | Student Do: Window Object             | 0:15     |
-| 12:50PM| 10 | Instructor Review: Window Object      | 0:10     |
-| 1:00PM | 11 | Instructor Demo: Traverse DOM         | 0:05     |
-| 1:05PM | 12 | Student Do: Traverse DOM              | 0:15     |
-| 1:20PM | 13 | Instructor Review: Traverse DOM       | 0:10     |
-| 1:30PM | 14 | Instructor Demo: Setting Attributes   | 0:05     |
-| 1:35PM | 15 | Student Do: Setting Attributes        | 0:15     |
-| 1:50PM | 16 | Instructor Review: Setting Attributes | 0:10     |
-| 2:00PM | 17 | Instructor Demo: Create Append        | 0:05     |
-| 2:05PM | 18 | Student Do: Create Append             | 0:15     |
-| 2:20PM | 19 | Instructor Review: Create Append      | 0:10     |
-| 2:30PM | 20 | END                                   | 0:00     |
+| Start  | #   | Activity Name                         | Duration |
+|---     |---  |---                                    |---       |
+| 10:00AM| 1   | Instructor Demo: Mini-Project         | 0:05     |
+| 10:05AM| 2   | Student Do: Mini-Project              | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini-Project       | 0:10     |
+| 11:15AM| 4   | Introduce Homework                    | 0:05     |
+| 11:20AM| 5   | FLEX                                  | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity        | 0:10     |
+| 12:00PM| 7   | BREAK                                 | 0:30     |
+| 12:30PM| 8   | Instructor Demo: Window Object        | 0:05     |
+| 12:35PM| 9   | Student Do: Window Object             | 0:15     |
+| 12:50PM| 10  | Instructor Review: Window Object      | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Traverse DOM         | 0:05     |
+| 1:05PM | 12  | Student Do: Traverse DOM              | 0:15     |
+| 1:20PM | 13  | Instructor Review: Traverse DOM       | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Setting Attributes   | 0:05     |
+| 1:35PM | 15  | Student Do: Setting Attributes        | 0:15     |
+| 1:50PM | 16  | Instructor Review: Setting Attributes | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Create Append        | 0:05     |
+| 2:05PM | 18  | Student Do: Create Append             | 0:15     |
+| 2:20PM | 19  | Instructor Review: Create Append      | 0:10     |
+| 2:30PM | 20  | END                                   | 0:00     |
 
 - - -
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini-Project (5 min) 
 
 * Welcome students to class.
 
-* Open `26-Stu_Mini-Project/index.html` in your browser and demonstrate the following:
+* Open `28-Stu_Mini-Project/index.html` in your browser and demonstrate the following:
 
   * 🔑 We will create a Rock, Paper, Scissors game that allows a user to play against the computer. 
 
@@ -95,7 +95,7 @@ By the end of class students will be able to:
 
 * Answer any questions before allowing students to start the mini-project.
 
-### 2. Student Do: Mini Project (60 min)
+### 2. Student Do: Mini-Project (60 min)
 
 * Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
@@ -149,7 +149,7 @@ By the end of class students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini-Project (10 min)  
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -169,7 +169,7 @@ By the end of class students will be able to:
 
   * ✔️ `window.confirm()`
 
-* Open `26-Stu_Mini-Project/Main/script.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/script.js` in your IDE and explain the following: 
 
   * We declare variables that will be used to count the wins, losses, and ties, as follows:
 
@@ -256,11 +256,11 @@ By the end of class students will be able to:
     );
     ```
 
-* We use `window.confirm()` to determine whether the user wants to play again, as follows:
+  * We use `window.confirm()` to determine whether the user wants to play again, as follows:
 
-  ```js
-  var playAgain = window.confirm("Play again?");
-  ```
+    ```js
+    var playAgain = window.confirm("Play again?");
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -342,7 +342,7 @@ By the end of class students will be able to:
   
   * Let's take a quick look at the mini-project that we will do at the end of this unit.
 
-* Navigate to `27-Stu_Timer-App/Solved/index.html` in your browser and demonstrate the following:
+* Navigate to `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
 
   * The Tomato Timer has a number of features that use Web APIs to make the app interactive.
 
@@ -368,7 +368,7 @@ By the end of class students will be able to:
 
   * 🙋 Web APIs are key to fully functional, interactive apps for the web. In addition, understanding the DOM is a key tool in any developer's toolbox, because it allows you to access and manipulate the content stored on a webpage.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before proceeding.
 
 ### 7. BREAK (30 min)
 
@@ -815,11 +815,11 @@ By the end of class students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Append-Create/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Create-Append/README.md`.
 
 ### 18. Student Do: Create Append (15 min) 
 
-* Direct students to the activity instructions found in `08-Stu_Append-Create/README.md`.
+* Direct students to the activity instructions found in `08-Stu_Create-Append/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -879,7 +879,7 @@ By the end of class students will be able to:
 
   * ✔️ `appendChild()`
 
-* Open `08-Stu_Append-Create/Solved/script.js` in your IDE and explain the following: 
+* Open `08-Stu_Create-Append/Solved/script.js` in your IDE and explain the following: 
 
   * 🔑 We create the ordered list element using `createElement()`, as follows:
 

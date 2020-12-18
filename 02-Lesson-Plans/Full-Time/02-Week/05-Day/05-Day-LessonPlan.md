@@ -44,7 +44,7 @@ By the end of class, students will be able to:
 | 11:10AM| 8   | Instructor Demo: Local Storage Todo      | 0:05     |
 | 11:15AM| 9   | Student Do: Local Storage Todo           | 0:15     |
 | 11:30AM| 10  | Instructor Review: Local Storage Todo    | 0:10     |
-| 11:40AM| 11  | Everyone Do: Git                         | 0:20     |
+| 11:40AM| 11  | Everyone Do: Git Pull Request            | 0:20     |
 | 12:00PM| 12  | BREAK                                    | 0:30     |
 | 12:30PM| 13  | Instructor Demo: Mini-Project            | 0:05     |
 | 12:35PM| 14  | Student Do: Mini-Project                 | 0:60     |
@@ -75,15 +75,15 @@ By the end of class, students will be able to:
 
   * When we close the browser tab and reopen it, the added to-do is still there.
 
-* Note that previously, when we closed a browser window, the data did not persist. That is because the data is not automatically saved between page loads.
+  * Note that previously, when we closed a browser window, the data did not persist. That is because the data is not automatically saved between page loads.
 
-* To store data so that it persists, we use use client-side storage. 
- 
-* **Client-side storage** is a Web API that allows us to store information directly on the client (the user's browser).
+  * To store data so that it persists, we use client-side storage. 
+  
+  * **Client-side storage** is a Web API that allows us to store information directly on the client (the user's browser).
 
-* Client-side storage enables us to recall bits of information, like a user's login information and preferences, to help make pages more personalized and interactive. 
+  * Client-side storage enables us to recall bits of information, like a user's login information and preferences, to help make pages more personalized and interactive. 
 
-* The syntax to store data right in the user's browser is also simple to use. 
+  * The syntax to store data right in the user's browser is also simple to use. 
 
 ### 2. Instructor Demo: Local Storage (5 min) 
 
@@ -97,7 +97,7 @@ By the end of class, students will be able to:
 
   * 🔑 Using `localStorage`, the count is stored as a key-value pair in the browser. When we increase or decrease the count by clicking the button, the stored value changes too.
 
-* Open `19-Ins_Local-Storage/assets/js/script.js` in your IDE and demonstrate the following:
+* Open `21-Ins_Local-Storage/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 When we click on a button, we add the number of clicks to storage using the window's `localStorage` property and add a key-value pair to storage using the method `setItem()`, as follows: 
 
@@ -632,7 +632,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Pull-Request/README.md`. 
 
-### 11. Everyone Do: Git (20 min)
+### 11. Everyone Do: Git Pull Request (20 min)
 
 * Open the [GitHub documentation on contributing to a project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
 
@@ -845,198 +845,198 @@ By the end of class, students will be able to:
     }
     ```
 
-* The `getlosses()` function also retrieves the loss count from storage and renders it to the page. If no data is returned, the lose counter is set to `0`. See the following code for an example:
+  * The `getlosses()` function also retrieves the loss count from storage and renders it to the page. If no data is returned, the lose counter is set to `0`. See the following code for an example:
 
-  ```js
-  function getlosses() {
-    var storedLosses = localStorage.getItem("loseCount");
-    if (storedLosses === null) {
-      loseCounter = 0;
-    } else {
-      loseCounter = storedLosses;
+    ```js
+    function getlosses() {
+      var storedLosses = localStorage.getItem("loseCount");
+      if (storedLosses === null) {
+        loseCounter = 0;
+      } else {
+        loseCounter = storedLosses;
+      }
+      lose.textContent = loseCounter;
     }
-    lose.textContent = loseCounter;
-  }
-  ```
+    ```
 
-* 🔑 To set the data to storage, we use `setItem()`. We put the code in the functions `setWins()` and `setLosses()`. These functions will be called inside the `winGame()` and `loseGame()` functions, as shown in the following example:
+  * 🔑 To set the data to storage, we use `setItem()`. We put the code in the functions `setWins()` and `setLosses()`. These functions will be called inside the `winGame()` and `loseGame()` functions, as shown in the following example:
 
-  ```js
-  function setWins() {
-    win.textContent = winCounter;
-    localStorage.setItem("winCount", winCounter);
-  }
-
-  function setLosses() {
-    lose.textContent = loseCounter;
-    localStorage.setItem("loseCount", loseCounter);
-  }
-  ```
-
-* 🔑 To start the game when the button is clicked, we add an event listener to the start button, as follows:
-
-  ```js
-  startButton.addEventListener("click", startGame);
-  ```
-
-* The `startGame()` function executes when the button is clicked. `renderBlanks()` and `startTimer()` will also be executed, as shown in the following example:
-
-  ```js
-  function startGame() {
-    isWin = false;
-    timerCount = 10;
-    startButton.disabled = true;
-    renderBlanks()
-    startTimer()
-  }
-  ```
-
-* The `renderBlanks()` function uses `Math.random()` to randomly pick a word from an array and a loop to push blanks to the `blankLetters` array, as follows:
-
-  ```js
-  function renderBlanks() {
-    chosenWord = words[Math.floor(Math.random() * words.length)];
-    lettersInChosenWord = chosenWord.split("");
-    numBlanks = lettersInChosenWord.length;
-    blanksLetters = []
-    for (var i = 0; i < numBlanks; i++) {
-      blanksLetters.push("_");
+    ```js
+    function setWins() {
+      win.textContent = winCounter;
+      localStorage.setItem("winCount", winCounter);
     }
-    wordBlank.textContent = blanksLetters.join(" ")
-  }
 
-  ```
+    function setLosses() {
+      lose.textContent = loseCounter;
+      localStorage.setItem("loseCount", loseCounter);
+    }
+    ```
 
-* 🔑 The `startTimer()` function starts the countdown. We use `setInterval()` to set the count to decrease each second and `clearInterval()` to stop the countdown. The `startTimer()` function also uses conditionals to determine whether the user won or lost, as shown in the following example:
+  * 🔑 To start the game when the button is clicked, we add an event listener to the start button, as follows:
 
-  ```js
-  function startTimer() {
-    timer = setInterval(function() {
-      timerCount--;
-      timerElement.textContent = timerCount;
-      if (timerCount >= 0) {
-        if (isWin && timerCount > 0) {
+    ```js
+    startButton.addEventListener("click", startGame);
+    ```
+
+  * The `startGame()` function executes when the button is clicked. `renderBlanks()` and `startTimer()` will also be executed, as shown in the following example:
+
+    ```js
+    function startGame() {
+      isWin = false;
+      timerCount = 10;
+      startButton.disabled = true;
+      renderBlanks()
+      startTimer()
+    }
+    ```
+
+  * The `renderBlanks()` function uses `Math.random()` to randomly pick a word from an array and a loop to push blanks to the `blankLetters` array, as follows:
+
+    ```js
+    function renderBlanks() {
+      chosenWord = words[Math.floor(Math.random() * words.length)];
+      lettersInChosenWord = chosenWord.split("");
+      numBlanks = lettersInChosenWord.length;
+      blanksLetters = []
+      for (var i = 0; i < numBlanks; i++) {
+        blanksLetters.push("_");
+      }
+      wordBlank.textContent = blanksLetters.join(" ")
+    }
+
+    ```
+
+  * 🔑 The `startTimer()` function starts the countdown. We use `setInterval()` to set the count to decrease each second and `clearInterval()` to stop the countdown. The `startTimer()` function also uses conditionals to determine whether the user won or lost, as shown in the following example:
+
+    ```js
+    function startTimer() {
+      timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        if (timerCount >= 0) {
+          if (isWin && timerCount > 0) {
+            clearInterval(timer);
+            winGame();
+          }
+        }
+        if (timerCount === 0) {
           clearInterval(timer);
-          winGame();
+          loseGame();
         }
-      }
+      }, 1000);
+    }
+
+    ```
+
+  * The `winGame()` and `loseGame()` functions are executed if the win and loss conditions are met. Note that the `setWins()` and `setLosses()` functions are called inside the function. This will set the data to storage. See the following code for an example:
+
+    ```js
+    function winGame() {
+      wordBlank.textContent = "YOU WON!!!🏆 ";
+      winCounter++
+      startButton.disabled = false;
+      setWins()
+    }
+
+    function loseGame() {
+      wordBlank.textContent = "GAME OVER";
+      loseCounter++
+      startButton.disabled = false;
+      setLosses()
+    }
+
+    ```
+
+  * 🔑 To capture the user's input, we attach an event listener to the document and use a `keydown` event. If the timer count is zero, then the function returns and nothing happens. Else, we check that the inputted key is a letter. If it is, the `checkLetters()` and `checkWins()` functions are executed. See the following code for an example:
+
+    ```js
+    document.addEventListener("keydown", function(event) {
       if (timerCount === 0) {
-        clearInterval(timer);
-        loseGame();
+        return;
       }
-    }, 1000);
-  }
-
-  ```
-
-* The `winGame()` and `loseGame()` functions are executed if the win and loss conditions are met. Note that the `setWins()` and `setLosses()` functions are called inside the function. This will set the data to storage. See the following code for an example:
-
-  ```js
-  function winGame() {
-    wordBlank.textContent = "YOU WON!!!🏆 ";
-    winCounter++
-    startButton.disabled = false;
-    setWins()
-  }
-
-  function loseGame() {
-    wordBlank.textContent = "GAME OVER";
-    loseCounter++
-    startButton.disabled = false;
-    setLosses()
-  }
-
-  ```
-
-* 🔑 To capture the user's input, we attach an event listener to the document and use a `keydown` event. If the timer count is zero, then the function returns and nothing happens. Else, we check that the inputted key is a letter. If it is, the `checkLetters()` and `checkWins()` functions are executed. See the following code for an example:
-
-  ```js
-  document.addEventListener("keydown", function(event) {
-    if (timerCount === 0) {
-      return;
-    }
-    var key = event.key.toLowerCase();
-    var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
-    if (alphabetNumericCharacters.includes(key)) {
-      var letterGuessed = event.key;
-      checkLetters(letterGuessed)
-      checkWin();
-    }
-  });
-  ```
-
-* In the `checkLetters()` function, we use conditional statements to test whether the letter is a match, as follows:
-
-  ```js
-  function checkLetters(letter) {
-    var letterInWord = false;
-    for (var i = 0; i < numBlanks; i++) {
-      if (chosenWord[i] === letter) {
-        letterInWord = true;
+      var key = event.key.toLowerCase();
+      var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
+      if (alphabetNumericCharacters.includes(key)) {
+        var letterGuessed = event.key;
+        checkLetters(letterGuessed)
+        checkWin();
       }
-    }
-    if (letterInWord) {
-      for (var j = 0; j < numBlanks; j++) {
-        if (chosenWord[j] === letter) {
-          blanksLetters[j] = letter;
+    });
+    ```
+
+  * In the `checkLetters()` function, we use conditional statements to test whether the letter is a match, as follows:
+
+    ```js
+    function checkLetters(letter) {
+      var letterInWord = false;
+      for (var i = 0; i < numBlanks; i++) {
+        if (chosenWord[i] === letter) {
+          letterInWord = true;
         }
       }
-      wordBlank.textContent = blanksLetters.join(" ");
+      if (letterInWord) {
+        for (var j = 0; j < numBlanks; j++) {
+          if (chosenWord[j] === letter) {
+            blanksLetters[j] = letter;
+          }
+        }
+        wordBlank.textContent = blanksLetters.join(" ");
+      }
     }
-  }
 
-  ```
+    ```
 
-* We also use conditional statements to check whether there is a win, as follows:
+  * We also use conditional statements to check whether there is a win, as follows:
 
-  ```js
-  function checkWin() {
-    if (chosenWord === blanksLetters.join("")) {
-      isWin = true;
+    ```js
+    function checkWin() {
+      if (chosenWord === blanksLetters.join("")) {
+        isWin = true;
+      }
     }
-  }
-  ```
+    ```
 
-* For the bonus, we use `querySelector()` to select the reset button element, as follows:
+  * For the bonus, we use `querySelector()` to select the reset button element, as follows:
 
-  ```js
-  var resetButton = document.querySelector(".reset-button");
-  ```
+    ```js
+    var resetButton = document.querySelector(".reset-button");
+    ```
 
-* We create a function called `resetGame()`, like in the following example:
+  * We create a function called `resetGame()`, like in the following example:
 
-  ```js
-  function resetGame() {}
-  ```
+    ```js
+    function resetGame() {}
+    ```
 
-* Inside the function, we reset the values of the win and lose counters to `0`, as shown in the following example:
+  * Inside the function, we reset the values of the win and lose counters to `0`, as shown in the following example:
 
-  ```js
-  winCounter = 0;
-  loseCounter = 0;
-  ```
-
-* We call the `setWin()` and `setLosses()` function inside `resetGame()`. When the `resetGame()` function is called, the values will be reset to `0`, then saved to storage. The order is important here. See the following code for an example:
-
-  ```js
-  function resetGame() {
+    ```js
     winCounter = 0;
     loseCounter = 0;
-    setWins()
-    setLosses()
-  }
-  ```
+    ```
 
-* We use an event listener to execute the `resetGame()` function when the button is clicked, as follows:
+  * We call the `setWin()` and `setLosses()` function inside `resetGame()`. When the `resetGame()` function is called, the values will be reset to `0`, then saved to storage. The order is important here. See the following code for an example:
 
-  ```js
-  function resetGame() {
-    winCounter = 0;
-    loseCounter = 0;
-    setWins()
-    setLosses()
-  }
-  ```
+    ```js
+    function resetGame() {
+      winCounter = 0;
+      loseCounter = 0;
+      setWins()
+      setLosses()
+    }
+    ```
+
+  * We use an event listener to execute the `resetGame()` function when the button is clicked, as follows:
+
+    ```js
+    function resetGame() {
+      winCounter = 0;
+      loseCounter = 0;
+      setWins()
+      setLosses()
+    }
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1046,7 +1046,7 @@ By the end of class, students will be able to:
 
   * ☝️ How can we use event listeners to capture user input and perform a task? 
 
-  * 🙋 We attach an event listener to the HTML element, like a button, or even the entire document. When the event occurs, a function will be executed. For example, we attach an event listener to a button to listen for a click. When a click happens, the actions decribed in the function will occur. 
+  * 🙋 We attach an event listener to the HTML element, like a button, or even the entire document. When the event occurs, a function will be executed. For example, we attach an event listener to a button to listen for a click. When a click happens, the actions described in the function will occur. 
 
   * ☝️ What can we do if we don't completely understand this?
 
