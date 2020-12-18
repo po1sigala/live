@@ -249,7 +249,7 @@ Let's push the changes to the remote repository on GitHub.
 * To perform a git pull, first navigate to the project directory using `cd`.
 
   ```bash
-  cd cd git-init-sample
+  cd git-init-sample
   ```
 
 * Next, use `git pull` to pull down the changes from the remote.
