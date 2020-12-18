@@ -244,7 +244,7 @@ Let's push the changes to the remote repository on GitHub.
 
 * Let's download changes from a remote repository using `git pull`.
 
-* Prior to each class, it is important that you do a `git pull` to download any changes and activity files  from the student repo to your local machine.
+* Prior to each class, it is important that you do a `git pull` to download any changes and activity files from the student repo to your local machine.
 
 * To perform a git pull, first navigate to the project directory using `cd`.
 
