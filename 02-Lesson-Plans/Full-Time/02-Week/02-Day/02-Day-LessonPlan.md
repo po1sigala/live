@@ -1145,7 +1145,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
     ```bash
     git add .
-    git commit -m 'add new feature'
+    git commit -m 'commit message'
 
     git checkout main
     git merge <name-of-branch>
