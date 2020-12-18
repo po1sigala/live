@@ -180,7 +180,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 Let's push the changes to the remote repository on GitHub.
 
-* Use `git push` to upload changes to our remote repository. The `origin` means that we want the changes pushed to the repo we cloned above. Since we are working on the `main` branch, we use `main.`
+* Use `git push` to upload changes to our remote repository.  The keyword `origin` refers to the remote repo we created in GitHub and is shorthand for the URL.  The keyword `main` refers to the name of the branch we are uploading to in the remote repo. ```
 
   ```bash
   git push origin main
