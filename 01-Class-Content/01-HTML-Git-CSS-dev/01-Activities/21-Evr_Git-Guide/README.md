@@ -70,7 +70,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 ### Create and Clone a Repository
 
-* Let's use `git clone` to create a clone a remote repository.
+* Let's use `git clone` to create a clone of a remote repository.
 
 * Navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-guide-sample` in the `Repository Name` box.  
 
