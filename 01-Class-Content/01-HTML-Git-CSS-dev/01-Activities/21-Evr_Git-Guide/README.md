@@ -87,7 +87,7 @@ These commands are essential tools that you will use to create a repository, ini
   ```bash
   cd Desktop
   ```
-* To clone the repo, use the `git clone` command followed by the value copied from Github. 
+* To clone the repo, use the `git clone` command followed by the value copied from GitHub. 
 
   ```bash
   git clone <url>
