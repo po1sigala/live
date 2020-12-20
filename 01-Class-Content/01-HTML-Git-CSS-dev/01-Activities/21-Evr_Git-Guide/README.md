@@ -237,6 +237,8 @@ Let's push the changes to the remote repository on GitHub.
 * Click on `Create Repository`. Then copy the code under the header `"…or push an existing repository from the command line"` using the copy icon. The page should look something like this:
 
   ![The GitHub repository set-up page provides the code to import an existing repository](./assets/image-7.png)
+  
+* Paste the commands into the terminal and click `enter`.
 
 * If successful, you should see a message similar to the one below:
 
