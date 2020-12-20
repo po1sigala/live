@@ -254,7 +254,7 @@ Let's push the changes to the remote repository on GitHub.
   cd git-init-sample
   ```
 
-* Next, use `git pull` to pull down the changes from the remote.
+* Next, use `git pull` to pull down the changes from the remote. Just like when we did a `git push`, we use `origin` to represent the original directory -- or more precisely the original repository's URL -- followed by the name of the branch. The name of our branch is `main.`
 
   ```bash
   git pull origin main
