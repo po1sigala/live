@@ -199,7 +199,9 @@ Let's push the changes to the remote repository on GitHub.
 
 * Let's initialize a new version-controlled project locally using `git init`.
 
-* Using `git init` allows us to turn a new or existing project into a Git repository easily.
+* Using `git init`is an alternative way to create a repo. However, unlike `git clone`, we start by creating a repo locally via the command line first. 
+
+* Using `git init`also allows us to turn an existing project into a Git repository easily.
 
 * Start by creating a new project directory named `git-init-sample`.
 
