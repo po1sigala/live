@@ -8,7 +8,7 @@
 
 ## Instructor Notes
 
-* Use the [ZenOfCoding Slide Deck](https://docs.google.com/presentation/d/1GDnp_iOyLS4PfZKapMaXeqkQakY8iHiAEIqv3Hz5_aE/edit?usp=sharing) provided as an initial guide for today's class. During the first few units of the class, we'll be using slide decks more extensively to give students a sense of structure. As we move further into the course, slide decks will be used less frequently as we dive into a more code-centric approach. Feel free to modify the slides to your own style, but be sure to cover the same activities.
+* Use the [Zen Of Coding Slide Deck](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing) provided as an initial guide for today's class. During the first few units of the class, we'll be using slide decks more extensively to give students a sense of structure. As we move further into the course, slide decks will be used less frequently as we dive into a more code-centric approach. Feel free to modify the slides to your own style, but be sure to cover the same activities.
 
 * To add slides to the student-facing repository, download the slides as a PDF by navigating to File > "Download as" and choose "PDF document." Add the slide PDF file to your class repository along with other necessary files.
 
@@ -73,7 +73,7 @@
 
 ### 2. Instructor Do: Begin Slide Deck (15 mins)
 
-* Open the slide deck [1.1 The Zen of Coding](https://docs.google.com/presentation/d/1GDnp_iOyLS4PfZKapMaXeqkQakY8iHiAEIqv3Hz5_aE/edit?usp=sharing). Use it as a guide for the remaining sections, but keeping a close eye on your TAs to make sure you are keeping track of time. Be concise when you can!
+* Open the slide deck [1.1 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing). Use it as a guide for the remaining sections, but keeping a close eye on your TAs to make sure you are keeping track of time. Be concise when you can!
 
 ### 3. Instructor Do: The Path of Learning (15 mins)
 
