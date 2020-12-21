@@ -66,7 +66,8 @@ You can also refer to this [YouTube video](https://youtu.be/P4Mu1t5rIXg) to walk
 
 **Important**: It may take a few moments for GitHub pages to display your site correctly. If your project doesn't deploy or show up, make sure that all file paths in your application are relative and using the right casing. GitHub is case-sensitive, so there is a difference between a capitalized and uncapitalized letter to them.
 
-Make sure you add, commit, and push your work to see the most up-to-date version of your app! 
+Make sure you add, commit, and push your work to see the most up-to-date version of your app!
+
 ## Grading Requirements
 
 This homework is graded based on the following criteria: 
