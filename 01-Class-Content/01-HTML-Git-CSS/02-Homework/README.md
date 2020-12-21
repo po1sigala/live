@@ -48,7 +48,25 @@ The following image shows the web application's appearance and functionality:
 
 ![code refactor demo](./Assets/01-html-css-git-homework-demo.png)
 
+## Getting Started
 
+Follow these instructions to create your project and deploy it to GitHub Pages:
+
+1. Create a new repository on your GitHub account and clone it to your computer.
+
+2. When you're ready to deploy, use `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
+
+3. Navigate in your browser to your GitHub repository and then navigate into your repository's `Settings` tab on the right side of the repository's page.
+
+4. From the settings page, scroll down to the GitHub Pages section and then, in the section labeled `Source`, select that you would like to use the `main` branch as your source.
+
+5. Navigate to `<your-github-username>.github.io/<your-repo-name>` and you will find that your new web page has gone live! (For example, if your GitHub username is `lernantino` and the project is `css-demo-site`, your URL would be `lernantino.github.io/css-demo-site`)
+
+You can also refer to this [YouTube video](https://youtu.be/P4Mu1t5rIXg) to walk through the steps needed to deploy.
+
+**Important**: It may take a few moments for GitHub pages to display your site correctly. If your project doesn't deploy or show up, make sure that all file paths in your application are relative and using the right casing. GitHub is case-sensitive, so there is a difference between a capitalized and uncapitalized letter to them.
+
+Make sure you add, commit, and push your work to see the most up-to-date version of your app! 
 ## Grading Requirements
 
 This homework is graded based on the following criteria: 
@@ -96,26 +114,6 @@ You are required to submit the following for review:
 * The URL of the deployed application.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-## Guide to Deploying with GitHub Pages
-
-Follow these instructions to create your project and deploy it to GitHub Pages:
-
-1. Create a new repository on your GitHub account and clone it to your computer.
-
-2. When you're ready to deploy, use `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
-
-3. Navigate in your browser to your GitHub repository and then navigate into your repository's `Settings` tab on the right side of the repository's page.
-
-4. From the settings page, scroll down to the GitHub Pages section and then, in the section labeled `Source`, select that you would like to use the `main` branch as your source.
-
-5. Navigate to `<your-github-username>.github.io/<your-repo-name>` and you will find that your new web page has gone live! (For example, if your GitHub username is `lernantino` and the project is `css-demo-site`, your URL would be `lernantino.github.io/css-demo-site`)
-
-You can also refer to [this YouTube video](https://youtu.be/P4Mu1t5rIXg) to walk through the steps needed to deploy.
-
-> **Important:** It may take a few moments for GitHub pages to display your site correctly. If your project doesn't deploy or show up, make sure that all file paths in your application are relative and using the right casing. GitHub is case-sensitive, so there is a difference between a capitalized and uncapitalized letter to them.
->
-> Make sure you add, commit, and push your work to see the most up-to-date version of your app! 
 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
