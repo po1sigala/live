@@ -22,50 +22,50 @@
 
   * 🔑 We use the terminal command `cd` to navigate to the directory where we want the repository located. 
 
-  ```
+  ```bash
   cd Desktop
   ```
 
   * 🔑 We use the git command `git clone` followed by the URL copied from Github to clone the repo to our machine. 
 
-  ```
+  ```bash
   git clone <url>
   ```
 
   * 🔑 The `git clone` command creates a new directory. We navigate into our new directory using `cd`.
 
-  ```
+  ```bash
   cd first-day-demo
   ```
 
   * 🔑 We add an HTML file to our repo using `touch`.
 
-  ```
+  ```bash
   touch index.html
   ```
 
   * 🔑 We use `git add` to add our changes.
 
-  ```
+  ```bash
   git add .
   ```
 
   * 🔑 To commit our changes, we use `git commit -m` and add a message. 
 
-  ```
+  ```bash
   git commit -m "First commit"
   ```
 
   * 🔑 To push our changes back up to the repo we created on Github, we use `git push`.
 
-  ```
+  ```bash
   git push origin main
   ```
 
-  * 🔑 It is important that we keep our local repo up-to-date. To pull down any changes from the repo we created on Github and update the repo on our local machine, we use `git pull`.
+  * 🔑 It is important that we keep our local repo up-to-date. To pull down any changes from the repo we created on Github and update the repo on our local machine, we use git pull. The origin refers to the repo that we cloned and main is the branch. The default branch is main.
 
-  ```
-  git pull
+  ```bash
+  git pull origin main
   ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
