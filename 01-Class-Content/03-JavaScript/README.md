@@ -1,4 +1,4 @@
-# Unit 03: Intro to JavaScript
+# Unit 03: JavaScript
 
 ## Overview
 
@@ -96,7 +96,19 @@ In the next unit, you will learn to harness the power of Web APIs to add complex
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Git Branch](./01-Activities/27-Evr_Git-Branch)
+
+  * 📹 [Git Guide Video: Git Branch](https://2u-20.wistia.com/medias/73tr86ngck)
+
+### General
+
+Refer to these resources for additional information about topics covered in this unit.
 
 * [📖 Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
