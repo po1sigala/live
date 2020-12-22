@@ -1,58 +1,102 @@
 # Unit 04: Web APIs
 
-## Overview
-Built in to every browser are methods and properties that allow us to extend its basic functionality using JavaScript. This is an example of an application programming interface, or API. APIs are central to creating dynamic, interactive web applications. The first, and perhaps most important, API we will work with is the Web API, which interfaces with the browser. 
+## Overview:
 
-In the previous unit, you worked with the `Window` object to generate alerts and prompts in the browser. If you inspect the `Window` object in your developer tools, you'll see that it contains many properties and methods in addition to the ones you’re familiar with. The `Window` object is only one of dozens of interfaces we can access in the Web API, so you can probably imagine the functionality available to us if we've only seen the tip of the iceberg so far!  
+This week, you'll learn about **application programming interfaces**, or **APIs**, which allow web developers to create dynamic, interactive web applications. An essential part of a developer's toolbox, APIs can help add a wide range of functionality to your code.
 
-We will look at a few of the most important Web APIs in this unit, beginning with the Document Object Model (DOM). The DOM is an in-memory object-oriented representation of an HTML document, which allows us to interact with HTML using JavaScript. When we interface with the DOM, we are not making any changes to the HTML document itself—only to its representation as an object in the browser. DOM methods allow us to select elements to get content from them or insert content into them, generate new elements, and listen for and respond to events such as key presses and mouse clicks.
+APIs are even built directly into the browser. When a webpage is loaded in the browser, an object representation of the webpage (the **Document Object Model**, or **DOM**) is created. As a programming interface, the DOM allows us to use JavaScript to interact with HTML elements.
 
+During class and in this week's homework, you'll practice navigating the DOM. You'll also learn how to create and manipulate HTML elements, add event listeners, create timers, and store data&mdash;all using the power of JavaScript and an API built into the browser itself.
 
 ## Key Topics
+
 The following topics will be covered in this unit:
-* Web APIs and interfaces
-* Timers
-* Document Object Model (DOM)
-* Getting, selecting, traversing, and manipulating elements
-* Form events
-* Keyboard and mouse events
-* Bubbling and propagation
-* Event delegation
 
+* [Window object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
-## Comprehension Check
-You will be employer-ready if you can answer the following questions:
-1. What is the DOM API?
-2. What is event delegation?
-3. What is the purpose of client-side storage?
+* [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 
+* [Querying the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) 
+
+* [Style property](https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style)
+
+* [Setting element attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+
+* [Creating DOM elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+
+* [Appending elements](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
+* [Intervals and timers](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+* [Event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+* [Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+
+* [Preventing default browser behavior](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+
+* [Stopping propogation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+
+* [Local and session storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+
+* [Data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
 ## Learning Objectives
-You will be employer-competitive if you are able to:
-* Explain and identify the document object and its relationship to HTML.
-* Use the `Window` object for local and session storage.
+
+You will be employer-ready if you are able to:
+
+* Identify the DOM and its relationship to HTML.
+
+* Select and dynamically generate HTML elements and content using Web API methods.
+
+* Implement DOM API methods to handle events like key presses and mouse clicks.
+
 * Explain event propagation and implement handling functions.
-* Use DOM API methods to select and dynamically generate HTML elements and content.
-* Use DOM API methods to handle events such as key presses and mouse clicks.
-* Research Web API documentation to implement new and unfamiliar interfaces.
 
-## Algorithms
+* Store and retrieve data using the browser's local and session storage.
 
-* 01-log-even-nums - Create a function that prints even numbers from 0 to a given number.
+## Technical Interview Preparation
 
-* 02-countdown - Create a function that prints all whole numbers from a given positive number to 1.
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
 
-* 03-sum-array - Create a function that adds up all the numbers in a given array and returns the total.
+### Algorithms
 
-## Homework: Code Quiz
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment. These assessments are typically a combination of multiple-choice questions and interactive coding challenges. In this homework assignment, your challenge is to build a code quiz of multiple-choice questions.
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
+  * [01: Log Even Nums](./03-Algorithms/01-log-even-nums)
 
-## Helpful Links
-* [Wikipedia: DOM](https://en.wikipedia.org/wiki/Document_Object_Model)
-* [MDN: DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-* [MDN: Client-side storage](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+  * [02: Countdown](./03-Algorithms/02-countdown)
 
+  * [03: Sum of Array](./03-Algorithms/03-sum-array)
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+    * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 04 Assessment](https://forms.gle/jYRX4XMiVDo2UpxS9)
+
+## Homework
+
+In this week's homework, you'll build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework focuses on the skills you need to succeed in this assignment.
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+When you are are researching DOM and event resources, you might find jQuery solutions. jQuery is a lightweight JavaScript library that allows you execute JavaScript functionality with just a few lines of code. We'll cover jQuery in the next unit, but for now stick to resources that don't rely on jQuery or the `$` variable.
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the Git concept for this unit.
+
+  * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,4 +1,4 @@
-# Unit 03 Instructor Overview: Intro to JavaScript
+# Unit 03 Instructor Overview: JavaScript
 
 ## Overview
 
@@ -18,9 +18,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/03-JavaScri
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [supplemental folder](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md).
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
@@ -32,11 +32,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-* [03.1: Lesson Plan](01-Day_Intro-JS/03.1-LESSON-PLAN.md)
+* [03.1 Lesson Plan](01-Day_Intro-JS/03.1-LESSON-PLAN.md)
 
-* [03.2: Lesson Plan](02-Day_Loops-and-More/03.2-LESSON-PLAN.md)
+* [03.2 Lesson Plan](02-Day_Loops-and-More/03.2-LESSON-PLAN.md)
 
-* [03.3: Lesson Plan](03-Day_Objects/03.3-LESSON-PLAN.md)
+* [03.3 Lesson Plan](03-Day_Objects/03.3-LESSON-PLAN.md)
 
 ### Homework
 

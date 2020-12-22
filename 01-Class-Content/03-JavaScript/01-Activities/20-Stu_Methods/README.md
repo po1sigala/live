@@ -24,10 +24,6 @@ Refer to the documentation:
 
 [MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
 
-## 💡 Hints
-
-@TODO Add a hint here in the form of a question.
-
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
