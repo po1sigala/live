@@ -65,7 +65,7 @@ git commit -m "creating a top level readme"
 
 * Add some a few random variables to the `index.js` file, so that it looks something like the following image:
 
-  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-variables.png)
+  ![We build the new feature by adding the text, "I made this in a new branch!!!!" to the README.md file.](./Images/04-new-variables.png)
 
 * Finally, add and commit the changes that you made, as follows:
 
@@ -95,7 +95,7 @@ git commit -m "creating a top level readme"
 
 * Now the directory should include the `index.js` file that we created, along with whatever text we added to the file. We asked Git to merge the code that we wrote in the feature branch with the code that already existed in `main`. At this point, the new feature is a part of the main codebase, as you can see in the following image:
 
-  ![In the README.md file on the main branch, the text that we wrote on the feature branch now appears.](./Images/06-merge-success.png)
+  ![In the README.md file on the main branch, the text that we wrote on the feature branch now appears.](./Images/06-success-merge.png)
 
 * We're all done with the feature, and the code that we wrote safely exists in `main`. But if you enter the `git branch` command, you'll see that `feature/create-js-file` still exists, as shown in the following image:
 
