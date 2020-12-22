@@ -109,9 +109,9 @@ git commit -m "creating a top level readme"
 
 * When we run `git branch`, we should see something similar to the following image:
 
-  ![The command line only displays the main branch.](./Images/08-branch-deleted.png)
+  ![The command line only displays the main branch.](./Images/08-deleted-branch.png)
 
-* Congratulations, you've now completed your first branch lifecycle! You created an isolated environment on a new branch so that you could write and test code for a new feature, a README.md file. Once you finished adding text to README.md, you merged the feature branch with the main codebase on `main`. You then closed the feature branch, because you no longer needed to work on the README.md file. 
+* Congratulations, you've now completed your first branch lifecycle! You created an isolated environment on a new branch so that you could write and test code for a new feature, the `index.js` file. Once you finished adding text to `index.js`, you merged the feature branch with the main codebase on `main`. You then closed the feature branch, because you no longer needed to work on the `index.js` file. 
 
 ### Hints
 
