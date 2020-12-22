@@ -6,19 +6,19 @@
 
   * 🔑 We use `ls` to list the contents of the home directory, including `Desktop`. 
 
-  ```
+  ```bash
   ls
   ```
 
   * 🔑 We use `cd` to go down and change into the `Desktop` directory. 
 
-  ```
+  ```bash
   cd Desktop
   ```
 
   * 🔑 To move back up to our previous directory, we use `cd ..`. 
 
-  ```
+  ```bash
   cd ..
   ```
 
@@ -26,7 +26,7 @@
 
   * 🔑 We start by checking our working directory with `pwd`. When we print the working directory, it shows us the path.
 
-  ```
+  ```bash
   pwd
   ```
 
@@ -38,25 +38,25 @@
 
   * 🔑 Then, we use the `mkdir` command to create a new directory named `demo-folder`.
  
-  ```
+  ```bash
   mkdir demo-folder
   ```
 
   * 🔑 To add a file to our new directory, we use `cd` to navigate into `demo-folder`.
 
-  ```
+  ```bash
   cd demo-folder
   ```
 
   * 🔑 We use `touch` to create a new file inside of `demo-folder`.
 
-  ```
+  ```bash
   touch index.html
   ```
 
   * 🔑 We use `ls` to check that our new file has been succcessfully added to the directory.
 
-  ```
+  ```bash
   ls
   ```
 
