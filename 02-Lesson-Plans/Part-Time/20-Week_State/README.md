@@ -41,11 +41,11 @@ Next unit we will start project 3. In the following unit we will cover Computer 
 
 ### Time Tracker(s)
 
-  * [Unit 20-State Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1x48PZdW5LcbW6zhbt1rR7EyB3mXwDGuu/edit#gid=2065026216)
+  * [Unit 20-State Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1nZSih9SNwar4ri-xot1ks4eIMQz7XNOtFFRYzk6In-Q/edit?usp=sharing)
 
-  * [Unit 20-State Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1kPyiZ1NE0jWtqyP3c43eynx2KP0yu8WU/edit#gid=1301242405)
+  * [Unit 20-State Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1gsszC0FtqRpNjMCwVyNZuJoMXmaiexNDPcxuub8cU8Y/edit?usp=sharing)
 
-  * [Unit 20-State Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1leakcpggPx4VrMbcjiyqDcneB8YpdGrv/edit#gid=1139601353)
+  * [Unit 20-State Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1VicZ0AXE8KBeZboMde30-MRc2KyIMlxkNTXhenQePho/edit?usp=sharing)
 
 ## Algorithms
 
