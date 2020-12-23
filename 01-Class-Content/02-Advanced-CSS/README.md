@@ -96,9 +96,11 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
   * 📖 [Git Guide: Git Pull and Merge Conflicts](./01-Activities/27-Evr_Git-Pull-Conflict)
+
+  * 📹 [Git Guide Video: Git Pull and Merge Conflicts](https://2u-20.wistia.com/medias/tpw4g61asr)
 
 ---
 
