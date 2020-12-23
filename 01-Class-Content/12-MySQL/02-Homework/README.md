@@ -134,4 +134,4 @@ You are required to submit the following:
 * A video demonstrating the entirety of the app's functionality 
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

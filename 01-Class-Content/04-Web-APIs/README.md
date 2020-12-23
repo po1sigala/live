@@ -99,4 +99,4 @@ Refer to the Git Guide to review the Git concept for this unit.
   * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
