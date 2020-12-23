@@ -44,8 +44,7 @@ In this class, we will be introducing students to the concept of DOM Manipulatio
 
 * With regards to the slide, we can use JavaScript and jQuery to modify the DOM to dynamically change the HTML that gets displayed.
 
-* Visit the to-do list site on the slide [http://todomvc.com/examples/jquery/#/all
-  ](http://todomvc.com/examples/jquery/#/all) to provide a simple example that the addition of to-dos is effectively adding HTML in real-time.
+* Visit the to-do list site on the slide [http://todomvc.com/examples/jquery/#/all](http://todomvc.com/examples/jquery/#/all) to provide a simple example that the addition of to-dos is effectively adding HTML in real-time.
 
 * You can even go into the Chrome Developer tools to show this more clearly.
 

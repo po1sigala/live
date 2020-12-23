@@ -1,81 +1,138 @@
-# Unit 02: JavaScript & Web APIs
+# Unit 03 & 04 Instructor Overview: JavaScript and Web APIs
 
 ## Overview
 
-In this unit we will be introducing students to their first taste of JavaScript. They will then use their newfound understanding of variables, arrays, loops, and conditionals to create a simple Password Generator.
+In Unit 03, you will introduce students to the fundamentals of JavaScript, including variables, primitive types, arrays, and objects. You will also use logical and comparison operators to construct conditional statements and guide students as they write their first functions and algorithms. 
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
+In Unit 04, students will be introduced to the Document Object Model (DOM) and gain experience using Web APIs to manipulate the DOM. Students will also handle click events using `addEventListener()`, work with keyboard events like `keyup` and `keydown`, and use local and session storage.
 
-  * [03-JavaScript Unit Overview](../../../01-Class-Content/03-JavaScript/README.md)
+Refer to the Class Content Unit Overview for [Unit 03](../../../01-Class-Content/03-JavaScript/README.md) and [Unit 04](../../../01-Class-Content/04-Web-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
 
-  * [04-Web-APIs Unit Overview](../../../01-Class-Content/04-Web-APIs/README.md)
+## Instructor/TA Notes
 
-## Instructor / TA Notes
+* Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code.
 
-In every activity moving forward, pre-coded instructor demos are provided for you. However, because of the simplicity of many of the demos, you are encouraged to code your own examples on the fly. Part of the reason we have pre-coded versions is for when we share the directory with students since it becomes easy to copy over into the in-class repo. Don't let that limit your imagination though!
+* This will be some students' first introduction to programming fundamentals and the JavaScript language. Assure students that they will use the skills they learn this week again and again, and the syntax will become more familiar with practice. 
 
-This unit is filled with a lot of brand new topics. If you fall behind, make sure to adjust your plan accordingly.
+* This is also a good opportunity for students to practice pseudocoding. Encourage students to talk through difficult activities in plain language with their partner. This will help them to not only reinforce their fundamental understanding of JavaScript but also build the problem-solving skills that JavaScript demands. 
 
-## Heads Up
+* Take a few minutes before class to familiarize yourself with the various ways to access [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open) on different machines, so that you can talk students through opening up the console on Mac and Windows operating systems.
 
-Students are very likely to come across jQuery solutions when searching for DOM/event resources. Make sure to let them know that we will cover jQuery in the next unit, so for now, do not consult resources that include the word `jQuery` or the `$` variable.
+* The lessons this week cover a lot of new material. But each activity builds on the previous ones, so remind students that if they feel overwhelmed, they can look back at past activities for guidance. 
+
+* Unit 04 Homework will bring together the key concepts covered in the activities and require students to use both intervals and local storage. However, the students will also need to research and use Web APIs not explicitly introduced in the activities. Explain to students that the methods from class represent just a few of the many options for manipulating the DOM.
+
+* Be ready to view and edit local storage and session storage key-value pairs in Chrome DevTools. If you need a quick refresher, refer to the [Google documentation on viewing and editing local storage with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) and the [Google documentation on viewing and editing session storage with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage).
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[JavaScript](../../../01-Class-Content/03-JavaScript/04-Important/CAREER-CONNECTION.md).
-[Web APIs](../../../01-Class-Content/04-Web-APIs/04-Important/CAREER-CONNECTION.md).
+* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 03](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md) and [Unit 04](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+* Students may come across jQuery solutions when searching for DOM and event resources. Let them know that we will cover jQuery in Unit 05. For now, advise them not to consult resources that mention jQuery or the `$` variable.
+
+* In Unit 06, we will work with Server-Side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects this unit.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [02.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+* [02.1 Lesson Plan](01-Day/01-Day-LessonPlan.md)
 
-  * [02.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+* [02.2 Lesson Plan](02-Day/02-Day-LessonPlan.md)
 
-  * [02.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+* [02.3 Lesson Plan](03-Day/03-Day-LessonPlan.md)
 
-  * [02.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+* [02.4 Lesson Plan](04-Day/04-Day-LessonPlan.md)
 
-  * [02.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* [02.5 Lesson Plan](05-Day/05-Day-LessonPlan.md)
+
+### Homework
+
+* [Unit 03 Homework](../../../01-Class-Content/03-JavaScript/02-Homework)
+
+* [Unit 04 Homework](../../../01-Class-Content/04-Web-APIs/02-Homework)
 
 ### Slide Decks
 
-* [02.1 The Joys of JavaScript](https://docs.google.com/presentation/d/1ccabN1AZ3SmYtLSo7HeadSrvfRK-5ty_X8p4ovCXVlE/edit?usp=sharing)
+* [Unit 03: JavaScript](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing)
 
-* [02.2 Jumping for JavaScript](https://docs.google.com/presentation/d/1H8ZjXAP9jCK5b7cS_90eWyCnqNT64zuBeWIgTuThOVg/edit?usp=sharing)
+* [Unit 04: Web APIs](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing)
 
-* [02.3 JavaScript & Introduction to the DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing)
+### Algorithms
 
-### Time Tracker(s)
+Unit 03:
 
-  * [Unit 02-CSS-Bootstrap & JavaScript Day 1 Time Tracker](https://drive.google.com/open?id=1TXphd6IzAbm8pISaGQZOkbvyAL0D9LvCkC5DhKzwFeQ)
+* [01: Arithmetic](../../../01-Class-Content/03-JavaScript/03-Algorithms/01-arithmetic)
 
-  * [Unit 02-CSS-Bootstrap & JavaScript Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1tomx7GIzFECE_P7dwcWzijJm7rBsWE2AsJtvIBbhnwo/edit?usp=sharing)
+* [02: Odd or Even](../../../01-Class-Content/03-JavaScript/03-Algorithms/02-odd-or-even)
 
-  * [Unit 02-CSS-Bootstrap & JavaScript Day 3 Time Tracker](https://drive.google.com/open?id=1Y3Fa1NTc3oTe1C6bRXDeTYTJZPfV4e_eN8_WyGT0mRM)
+  * [📹 Let's Code Odd or Even!](https://2u-20.wistia.com/medias/bnqjr1owj7)
 
-  * [Unit 02-CSS-Bootstrap & JavaScript Day 4 Time Tracker](https://drive.google.com/open?id=150xWlv1jCL2KGjajT-tUBiH5VnOQp6Vp2-0kAlxUhEE)
+* [03: Log Nums](../../../01-Class-Content/03-JavaScript/03-Algorithms/03-log-nums)
 
-  * [Unit 02-CSS-Bootstrap & JavaScript Day 5 Time Tracker](https://drive.google.com/open?id=12Lrx9Wl-DbPaY9m83dvaBBsWIErYDRHRWWgRIbU9WhQ)
+Unit 04:
 
-## Algorithms
+* [01: Log Even Nums](../../../01-Class-Content/04-Web-APIs/03-Algorithms/01-log-even-nums)
 
-### JavaScript
+* [02: Countdown](../../../01-Class-Content/04-Web-APIs/03-Algorithms/02-countdown)
 
-* [01-arithmetic](../../../01-Class-Content/03-JavaScript/03-Algorithms/01-arithmetic)
+* [03: Sum of Array](../../../01-Class-Content/04-Web-APIs/03-Algorithms/03-sum-array)
 
-* [02-odd-or-even](../../../01-Class-Content/03-JavaScript/03-Algorithms/02-odd-or-even)
+  * 📹 [Let's Code Sum of Array!](https://2u-20.wistia.com/medias/iz6bzizsnj)
 
-* [03-log-nums](../../../01-Class-Content/03-JavaScript/03-Algorithms/03-log-nums)
+### Resources
 
-### Web APIs
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
 
-* [01-log-even-nums](../../../01-Class-Content/04-Web-APIs/03-Algorithms/01-log-even-nums)
+* [MDN Web Docs on variables](https://developer.mozilla.org/en-US/docs/Glossary/Variable)
 
-* [02-countdown](../../../01-Class-Content/04-Web-APIs/03-Algorithms/02-countdown)
+* [MDN Web Docs on JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
-* [03-sum-array](../../../01-Class-Content/04-Web-APIs/03-Algorithms/03-sum-array)
+* [MDN Web Docs on array instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
+
+* [MDN Web Docs on string instance methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
+
+* [MDN Web Docs on expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+* [MDN Web Docs on if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+
+* [MDN Web Docs on the Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+
+* [MDN Web Docs on Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+
+* [MDN Web Docs on Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+
+* [MDN Web Docs on Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+
+* [MDN Web Docs on ElementCSSInlineStyle.style ](https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style)
+
+* [MDN Web Docs on querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) 
+
+* [MDN Web Docs on setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+
+* [MDN Web Docs on createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+
+* [MDN Web Docs on appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
+* [MDN Web Docs on setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+* [MDN Web Docs on addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+* [MDN Web Docs on preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+
+* [MDN Web Docs on KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+
+* [MDN Web Docs on stopPropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+
+* [MDN Web Docs on Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+
+* [MDN Web Docs on using data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

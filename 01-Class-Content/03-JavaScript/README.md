@@ -1,85 +1,119 @@
 # Unit 03: JavaScript
 
 ## Overview
-We’ve reached an important milestone in our journey: learning to code. This unit will introduce you to the fundamental programming concepts that are required to solve any computational problem. Though the focus of this course is JavaScript, the programming concepts you learn can be applied to any programming language. After you master JavaScript, it will be relatively easy to learn a second (or third or fourth) language.
 
-In order for our web applications to be interactive, we need a way to respond to user actions in the browser. That's where JavaScript comes in. JavaScript is _the_ programming language of the web. It allows us to dynamically generate HTML and CSS based on predetermined conditions or user input. And every major browser, such as Firefox or Chrome, ships with a built-in JavaScript engine that runs our code for us. 
+We've already explored how to structure webpages with HTML and style them with CSS. This week, with the help of JavaScript, we will learn how to make webpages dynamic.
 
-For the time being, we'll use JavaScript to write client-side code; that is, programs that only run in the browser. In later units, we'll use JavaScript to write applications to be run and deployed on servers.
+**JavaScript** is a widely used scripting language that adds functionality and interactivity to a webpage. Building on a static HTML framework and CSS styling, with JavaScript you can store information in variables, manipulate your HTML, respond to an event, play audio and video, add decision-making to your code, and do much more. 
 
-Starting this week, we are going to begin providing weekly algorithm problems for you to work on. Go through each problem according to the schedule outlined below. Spend up to a few hours trying to solve each problem without looking at the solution. If you're unable to solve a problem, study the solution to understand why it works then come back and try again later. Ask your instructional staff for help during office hours if you're having trouble understanding anything.
-
-### Part Time Schedule
-
-* **Week 3** - Problems 1 - 5
-
-* **Week 4** - Problems 6 - 9
-
-* **Week 5** - Problems 10 - 13
-
-* **Week 6** - Problems 14 - 17
-
-* **Week 7** - Problems 18 - 21
-
-### Full Time Schedule
-
-* **Week 2** - Problems 1 - 9
-
-* **Week 3** - Problems 10 - 17
-
-* **Week 4** - Problems 18 - 21
+As the only programming language native to web browsers, JavaScript is used all over the web&mdash;making it a crucial skill in your toolbox. But Javascript development skills are also versatile. Once you have mastered JavaScript, it is much easier to pick up the fundamentals of other programming languages. 
 
 ## Key Topics
-The following topics are covered in this unit:
-* Code comments
-* Console
-* Variables
-* Data types
-* Booleans
-* Numbers
-* Strings
-* Arrays
-* Conditional statements
-* Equality
-* Logical, comparison, and ternary operators
-* for and while loops
-* Functions
-* Alerts, prompts, and confirms
-* Global vs. local scope
-* Objects
 
-## Comprehension Check
-You will be employer-ready if you can answer the following questions:
-1. What are five fundamental concepts of programming?
-2. What are objects in JavaScript and why are they important?
-3. What is a function?
+The following topics will be covered in this unit:
 
+ * [`<script>` tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+
+ * [Variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+
+ * [Primitive types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+ 
+ * [Logical and comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+ 
+ * [Conditional statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+ 
+ * [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+ 
+ * [Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods)
+
+ * [String methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods)
+ 
+ * [Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+ 
+ * [Object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods)
+ 
+ * [Iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+ 
+ * [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+ 
+ * [Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope) 
+ 
+ * [`this` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
 ## Learning Objectives
-You will be employer-competitive if you are able to:
-* Identify and declare variables containing primitive and object data types in JavaScript
-* Write for loops to iterate over strings and arrays
-* Write conditional statements using if/else and switch
-* Explain the importance of objects in JavaScript and create objects containing both properties and methods
-* Explain and implement the difference between function declarations and expressions
-* Explain and implement comparison and logical operators
 
-## Algorithms
+You will be employer-ready if you are able to: 
 
-* 01-arithmetic - Create functions capable of different arithmetic operations.
+* Implement complex decision-making in your code using `if` and `if-else` statements. 
 
-* 02-odd-or-even - Create a function that determines whether a number is odd or even.
+* Explain the difference between equality (`==`) and strict equality (`===`). 
 
-* 03-log-nums - Create a function that prints all whole numbers from 1 to a given number.
+* Store related data in an array and use array methods to mutate and perform operations on the array. 
 
-## Homework: Password Generator
+* Explain functions and how they are used in JavaScript.
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code.
+* Explain the difference between function declarations and function expressions. 
 
-## Helpful Links
-* [MDN: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [MDN: JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-* [MDN: JavaScript Object Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+* Recognize whether a variable is locally or globally scoped and explain the difference.
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+* Create objects and use object methods. 
+
+* Use the keyword `var` to declare a variable. 
+
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the 📹 Let's Code video(s) for tips and tricks on how to solve the algorithms.
+
+* [01: Arithmetic](03-Algorithms/01-arithmetic)
+
+* [02: Odd or Even](03-Algorithms/02-odd-or-even)
+
+  * [📹 Let's Code Odd or Even!](https://2u-20.wistia.com/medias/bnqjr1owj7)
+
+* [03: Log Nums](03-Algorithms/03-log-nums)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 03 Assessment](https://forms.gle/WQNAEujgFBVm6kc79)
+
+## Homework 
+
+You'll create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+In the next unit, you will learn to harness the power of Web APIs to add complex functionality to your JavaScript with just a few lines of code. 
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Git Branch](./01-Activities/27-Evr_Git-Branch)
+
+  * 📹 [Git Guide Video: Git Branch](https://2u-20.wistia.com/medias/73tr86ngck)
+
+### General
+
+Refer to these resources for additional information about topics covered in this unit.
+
+* [📖 Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/open)
+
+* [📖 MDN Web Docs on JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+
+---
+
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

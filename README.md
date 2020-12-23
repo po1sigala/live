@@ -19,7 +19,7 @@ Use these materials to build your class repository.
 
 ### Lesson Plans
 
-You will find grading rubrics, links to slide decks and time trackers, and lesson plans organized by program in [02-lesson-plans](02-lesson-plans). 
+You will find grading rubrics, links to slide decks and time trackers, and lesson plans organized by program in [02-Lesson-Plans](02-Lesson-Plans). 
 
 📝 These materials are _not_ to be shared with students. 
 

@@ -1,971 +1,1102 @@
-# 02.5 Lesson Plan: Client-side Storage (10:00 AM) <!--links--> &nbsp; [⬅️](../04-Day/04-Day-LessonPlan.md) &nbsp; [➡️](../../03-Week/01-Day/01-Day-LessonPlan.md)
+# 02.5 Full-Time Lesson Plan: Web APIs
 
 ## Overview
 
-Todays class will be about client side storage APIs and continuing to work on the skills learned prior in the unit.
+Today's lesson will delve further into storing data locally within the user's browser, using client-side storage. Students will also work together for the mini-project to build a timer that reinforces their new DOM manipulation and Web API skills. 
 
 ## Instructor Notes
 
-* This is students first exposure to persistence in their web applications. Its going to be very exciting so use that energy to your advantage. Get students interested in the fact that they can now take their applications to the next level with persistent data.
+* In this lesson, students will complete activities `21-Ins_Local-Storage` through `28-Stu_Mini-Project`.
 
-* The code associated with local and session storage may seem simple, but the concepts and their use cases may be confusing for students seeing these things for the first time. 
+* In the activities and the mini-project, students will be required to apply the DOM manipulation skills that they acquired this week. Encourage the students to look back on previous activities as needed, to refresh their memory and for help with syntax. 
 
-* Students will be pseudocoding the ToDo List application at the beginning of class. Familiarize yourself with the code and functionality to more easily help students through this process.
+* Be ready to view and edit `localStorage` key-value pairs in Chrome DevTools. If you need a quick refresher, refer to the [Google documentation on viewing and editing local storage with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage).
 
-`Complete activities 19-29 in Unit 04`
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-### Class Objectives
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Use local storage and session storage.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-* Describe the differences between the two.
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
-* Identify when client side storage is the right solution.
+## Learning Objectives
 
-* Use all of the units concepts to build a persistent ToDo list as well as a Work Timer.
+By the end of class, students will be able to:
 
-## Slides
+* Store data in the user's browser using `localStorage`.
 
-N/A
+* Convert an object to and from a JSON string by implementing JSON methods.
+
+* Persist data using client-side storage. 
 
 ## Time Tracker
 
-* [2.5 Time Tracker](https://drive.google.com/open?id=12Lrx9Wl-DbPaY9m83dvaBBsWIErYDRHRWWgRIbU9WhQ)
+| Start  | #   | Activity Name                            | Duration |
+|---     |---  |---                                       |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity           | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Local Storage           | 0:05     |
+| 10:15AM| 3   | Student Do: Local Storage                | 0:15     |
+| 10:30AM| 4   | Instructor Review: Local Storage         | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Local Storage Objects   | 0:05     |
+| 10:45AM| 6   | Student Do: Local Storage Objects        | 0:15     |
+| 11:00AM| 7   | Instructor Review: Local Storage Objects | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Local Storage Todo      | 0:05     |
+| 11:15AM| 9   | Student Do: Local Storage Todo           | 0:15     |
+| 11:30AM| 10  | Instructor Review: Local Storage Todo    | 0:10     |
+| 11:40AM| 11  | Everyone Do: Git Pull Request            | 0:20     |
+| 12:00PM| 12  | BREAK                                    | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini-Project            | 0:05     |
+| 12:35PM| 14  | Student Do: Mini-Project                 | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini-Project          | 0:10     |
+| 1:45PM | 16  | Introduce Homework                       | 0:05     |
+| 1:50PM | 17  | FLEX                                     | 0:40     |
+| 2:30PM | 18  | END                                      | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: Event Delegation Demo (10 min)
+## Class Instruction
 
-* So far we've been manually assigning click listeners to each individual element. Prompt the students with the following question: 
-
-  * What if we need to assign event listeners to several objects on the page? Is there a way that we can easily handle all of these events without duplicating code?
-
-  * Students may reply with a `for` loop. This would work, but it still requires us to create several event listeners.
-
-* Show the students the code in `index.html` but do not open `script.js` yet.
-
-* Then, open `index.html` in the browser and add a couple of items to the shopping cart.
-
-  * Ask the students what JavaScript code they think is necessary for this behavior. Specifically, ask them where they would set up the event listeners.
-
-  * Students may suggest that the event listener is added to each button. 
-
-* Open `script.js` and direct students to the `addEventListener` line. 
-
-  * Note that the event listener was added to the entire list. Then, within the callback, we determine whether or not the clicked item was a button or not by using `event.target.nodeName`. This technique is known as **event delegation**. 
-
-  * Instead of writing a for loop and adding event listeners to every button element, we added an event listener to its parent element. Not only does this simplify our code, but in some cases, it reduces the need for `event.stopPropagation`. Ex: If click events from a child element is triggering the event on its parent, we can set up a conditional that identifies the `target`, then executes a callback accordingly.
-
-  * 🗒 Be sure to mention that event delegation is the technique of listening for events on a parent element, then **delegating** those events differently, depending on the target.
-
-  ```js
-  var listEl = document.querySelector("#grocery-list");
-  var shoppingCartEl = document.querySelector("#shopping-cart");
-  var groceries = ["Bananas", "Apples", "Oranges", "Grapes", "Blueberries"];
-
-  listEl.addEventListener("click", function(event) {
-    event.preventDefault();
-    if(event.target.matches("button")) {
-      var item = document.createElement("div");
-      item.textContent = groceries[parseFloat(event.target.parentElement.id)];
-      shoppingCartEl.append(item);
-    }
-  });
-  ```
-
-### 2. Student Do: Event Delegation (15 min)
-
-* Direct students to the next activity, found in [19-Stu_Event_Delegation/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/19-Stu_Event_Delegation/Unsolved)
-
-```md
-# Event Delegation
-
-## Instructions
-
-* In this activity, we are going to create a friends list that allows us to edit information about that friend in a modal.
-
-* Take a moment to study the code in `index.html`. You will not need to add any additional code to this file. Additionally, all of the CSS has been provided.
-
-* In `script.js`, add support the following features: 
-
-  1. When the `Add Person` button is clicked, the person should be added to both the people array and the list elements.
-
-  2. If `edit` is clicked, event delegation should be used to handle the click event.
-
-  3. When the user clicks on edit, the modal should appear with the modal header property already populated with the person's name. If a description exists, the textarea should be populated with the person's description. If not, the description should be left blank.
-
-  4. When the `save` button is clicked, the description of the current person should be updated in the people array.
-
-## Bonus
-
-* Use event delegation to make the modal close if the user clicks away from the modal.
-```
-
-### 3. Instructor Do: Review Event Delegation (10 min)
-
-* Take a moment to demonstrate the app, just as you did in the beginning of class.
-
-  * Open [19-Stu_Event_Delegation/Solved/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/19-Stu_Event_Delegation/Solved/index.html) in your browser.
-
-  * Add a person to the list, this time note that doing so adds a person to an array in our JavaScript file, then appends a new HTML element, `li`, to the page.
-
-  * Save the data, then edit a different person. 
-
-  * Return to the person you first editted, and mention that the data is still there.
-
-* Open [19-Stu_Event_Delegation/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/19-Stu_Event_Delegation/Solved/script.js) and explain the following functions:
-
-  * In `handleClick`, we check to see if the element clicked is a `span`. This is sufficient because this is the only span element on the page at this time.
-
-  * Then we set up variables for the name and description of the person that we clicked on.
-
-  * The `textContent` of the modal header is set to the name and the value of the description textarea is set to any existing description. The logical OR operator ensures that the description is set to an empty string if the value in our array is undefined. 
-
-  ```js
-  function handleClick(event) {
-    if (event.target.matches("span")) {
-      modalEl.style.display = "block";
-      currentId = parseInt(event.target.parentElement.id);
-      var name = people[currentId].name;
-      var description = people[currentId].description;
-      modalNameEl.textContent = name;
-      descriptionEl.value = description || "";
-    }
-  }
-  ```
-
-  * Remind students that `save` isn't actually persisting the data in a database. We are simply updating the description property of the current person in our people array. This data will remain until we close the browser or reload the page.
-
-  ```js
-  saveBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    people[currentId].description = descriptionEl.value;
-    close();
-  });
-  ```
-
-  * To setup the behavior to close when the modal is clicked away from, we add an event listener to the document object. We use event delegation to check if the element clicked is the modal container. If so, we close the modal.
-
-  ```js
-  document.addEventListener("click", function(event) {
-    if (event.target === modalEl) {
-      close();
-    }
-  });
-  ```
-### 4. Instructor Do: Preview Client Side Storage (5 mins)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Open the deployed [ToDo list](https://coding-boot-camp.github.io/fs-ground-04-web-APIs-todo-demo/index.html) in your browser and point out the following to students:
+* Remind the students that DOM manipulation and Web API skills are powerful tools for developers to build fully interactive web apps, but they can also be tricky for anyone new to programming.
 
-  * We can add items to our todo list.
+* Reassure students that during today's class there will be plenty of time to develop and further hone their DOM manipulation skills.
 
-  * We can complete items on our todo list.
+* Inform the students that today they will also learn a useful DOM tool that will allow them to implement client-side storage for their webpages.
 
-  * When we close the browser tab and reopen the application, we see that our todos are still there. Magic!
+* Open `26-Stu_Local-Storage-Todos/Solved/index.html` in your browser and demonstrate the following:
 
-* Ask the class the following question(s):
+  * When we enter a to-do into the text box, a new HTML element is created.
 
-  * When we submit an item to our todo list, where does it go?
+  * When we click on the button, the to-do disappears. 
 
-  * Our items are stored in the browser. So far none of the applications we've worked on have had any kind of persistent data. When an application was refreshed in the browser, all of its state was reset. 
+  * When we close the browser tab and reopen it, the added to-do is still there.
 
- * How would we build this application?
+  * Note that previously, when we closed a browser window, the data did not persist. That is because the data is not automatically saved between page loads.
 
-  * We would need some kind of storage to hold our data and be able to manipulate that storage via JavaScript.
-
-  * What would allow that?
-
- * A web API. Specifically client side storage.
- 
-* Use student answers to transition to the first activity of the day.
-
-### 5. Instructor Do: Todo Local Storage Pseudocode (10 mins)
-
-* Open a new (blank) file in your IDE and lead students in outlining the steps to build the ToDo List application in pseudocode.
-
-* Ask the class the following question(s): 
-
-  * What is the first thing our app needs so a user can submit a new todo?
-
-  * A form and an event listener that listens for new todo submissions when enter is pressed.
-
-  * When a user adds a todo to the HTML form and hits enter, what happens next?
-    
-  * We dynamically create a new list item, append a "complete" button and append that new list item to the main todo list. Our app also adds the new todo to local storage.
-
-  * What needs to happen when a user clicks the "complete" button?
-
-  * We listen for clicks on the complete button, remove the todo from the page and local storage, then reload the page with the current data.
-
-* Now walk students through the complete pseudocode plan step by step. We need to:
-
-  1. Create an HTML page with a form and an unordered list that holds our list items.
-
-  2. Create an event listener on our form that listens for new submissions.
-
-  3. On submit create a new list item, append a "complete" button and append that new list item to the main todo list.
-
-  4. Save the data to local storage.
-
-  5. Render the current data to the page.
-
-  6. Listen for clicks on the complete button, remove the todo from the page and local storage, then reload the page with the current data.
-
-* Ask the class, "What is the concept we need to learn to build this application?"
-
-  * We do not currently know how to store our data so that it stays in our applications even on close.
-
-* Use students answers regarding storage to transition to the next demo.
-
-### 6. Instructor Do: Demo Local Storage (5 mins)
-
-* Open [20-Ins_Local-Storage-Counter](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Counter/index.html) in your browser and demo the functionality of the application:
-
-  * When we click either the increment and decrement buttons the number of "hours spent coding" increases or decreases.
-
-* Open your Chrome developer tools, navigate to `Application`, then `Local Storage`, and point out the following: 
-
-  * We are storing our "clicks" with Key/Value pairs.
-
-* Ask the class the following question(s):
-
-  * Is this a database?
-
-  * No, this is **client-side storage**. Data is stored in the client or browser, while a database would require a server.
-
-  * What kind of information would you expect to see stored on the client as opposed to the server?
-
-  * Personal preferences. 
+  * To store data so that it persists, we use client-side storage. 
   
-  * Shopping cart data. 
-  
-  * Login session data. Even though user account credentials and information are stored on a server, the client needs to keep track of the fact that the user is still logged in across page refreshes and browser sessions.
+  * **Client-side storage** is a Web API that allows us to store information directly on the client (the user's browser).
 
-  * What would you **not** want to store in the client?
+  * Client-side storage enables us to recall bits of information, like a user's login information and preferences, to help make pages more personalized and interactive. 
 
-  * Sensitive information, such as credit card numbers, social security numbers and passwords.
+  * The syntax to store data right in the user's browser is also simple to use. 
 
-* Open [20-Ins_Local-Storage-Counter/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/20-Ins_Local-Storage-Counter/script.js) in your IDE and explain the following: 
+### 2. Instructor Demo: Local Storage (5 min) 
 
-  * First we select our counter, add, and subtract buttons and assign them to variables.
+* Open `21-Ins_Local-Storage/index.html` in your browser and demonstrate the following:
+
+  * We click the buttons to increase and decrease the number of hours coded.
+
+  * 🔑 When we refresh the page, the number of hours does not reset. Instead, the data persists. This is client-side storage at work. 
+
+* Open Chrome DevTools and open the Application tab to view local storage, then explain the following:
+
+  * 🔑 Using `localStorage`, the count is stored as a key-value pair in the browser. When we increase or decrease the count by clicking the button, the stored value changes too.
+
+* Open `21-Ins_Local-Storage/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 When we click on a button, we add the number of clicks to storage using the window's `localStorage` property and add a key-value pair to storage using the method `setItem()`, as follows: 
 
     ```js
-    var counter = document.querySelector("#counter");
-    var addButton = document.querySelector("#add");
-    var subtractButton = document.querySelector("#subtract");
+    localStorage.setItem("count", count);
     ```
-  
-  * 🔑 Next set a `count` variable to the current count with the built in local storage method `getItem`. 
+
+  * 🔑 To retrieve the count, we use the `getItem()` method. This will get the value saved in storage and save it to the variable `count`. See the following code for an example:
 
     ```js
-    var count = localStorage.getItem("count");
+    var  count = localStorage.getItem("count");
     ```
 
-  * The following line of code is what renders the actual count to our webpage. We call `textContent` on our `counter` element and set it equal to `count` from above.
+  * 🔑 We render the retrieved count in HTML using the `textContent` property, as follows: 
 
     ```js
     counter.textContent = count;
     ```
 
-  * 🔑 The last piece is to create two event listeners on our `addButton` and `subtractButton` elements. Here we are listening for a click event and calling `count++` or `count--`, which in turn calls our `count` function. We then use the built in local storage `setItem` method to reset our storage with the current data.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    ```js
-    addButton.addEventListener("click", function() {
-      count++;
-      counter.textContent = count;
-      
-      localStorage.setItem("count", count);
-    });
+  * ☝️ How can we save key-value pairs in the browser and retrieve them to use in code?
 
-    subtractButton.addEventListener("click", function() {
-      count--;
-      counter.textContent = count;
-
-      localStorage.setItem("count", count);
-    });
-    ```
-
-* Ask the class the following question(s): 
-  
-  * How do we retrieve an item from localStorage?
-  
-  * `localStorage.getItem()`
-
-  * How do we add an item to localStorage?
-  
-  * `localStorage.setItem()`
-  
-* Answer any questions before proceeding to the next activity. 
-
-### 7. Student Do: Local Storage (15 mins)
-
-* Direct students to the next activity, found in [21-Stu_Local-Storage-User/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-User/Unsolved/script.js)
-
-```md
-# Local Storage
-
-* You have been provided with a sign up form that successfully submits an email and password. You're job is to write code that saves the email and password to local storage and renders the last submission to the page.
-
-## Instructions
-
-* In your `signUpButton` event listener you will need to:
-
-  * Save the user to localStorage.
-
-* In the `renderLastRegistered()` function you will need to:
-
-  * Fill in code here to retrieve the last registered credentials from local storage.
-  
-  * If the last registered is null, return early from this function.
-  
-  * Else set the text of the `userEmailSpan`, `userPasswordSpan` to their corresponding values from local storage.
-  
-## Hints
-
-* Make sure you call `renderLastRegistered()` after you set your `localStorage`.
-```
-
-### 8. Instructor Do: Review Local Storage Activity (5 mins)
-
-* Open [21-Stu_Local-Storage-User/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/21-Stu_Local-Storage-User/Solved/script.js) and explain the following: 
-
-*  The first thing we need to do is save the form data with:
-
-  ```js
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
-  ```
-
-  * Now that we are persisting data to `localStorage`, let's set and return our last user's data inside our `renderLastRegistered()` function.
-
-  * We access our local storage data and set the email and password to a variable. We then check if the email and password is null and if so, return early.
-
-    ```js
-    var email = localStorage.getItem("email");
-    var password = localStorage.getItem("password");
-
-    if (!email || !password) {
-      return;
-    }
-    ```
-
-  * If our data is not null, we set the text of the `userEmailSpan` and`userPasswordSpan` to their corresponding values from local storage.
-
-  ```js
-  userEmailSpan.textContent = email;
-  userPasswordSpan.textContent = password;
-  ```
-
-  * With our `renderLastRegistered()` function complete, we can now call it inside our `signUpButton` event listener after we set our `localStorage` when a form is submitted.
-
-  ```js
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
-  renderLastRegistered();
-  ```
+  * 🙋 We use the `localStorage` property. The method `setItem()` sets a key-value pair in storage, and `getItem()` retrieves it.
 
 * Answer any questions before proceeding to the next activity.
 
-### 9. Instructor Do: Local Storage with Uh-oh (5 min)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Local-Storage/README.md`.
 
-* Open [22-Ins_Local-Storage-Uh-oh/index.html](../../../../01-Class-Content/04-Web-APIs/01-Activities/22-Ins_Local-Storage-Uh-oh/index.html) in your browser and explain the following: 
+### 3. Student Do: Local Storage (15 min) 
 
-  * When we submit our form data, we receive a success response.
+* Direct students to the activity instructions found in `22-Stu_Local-Storage/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement Client-Side Storage for Sign-Up Form Using localStorage
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to save the user's email and password to client-side storage and render the last submission to the page.
+
+  ## Acceptance Criteria
+
+  * It's done when Last Registered User displays the last email and password saved using `localStorage`, if it exists.
+
+  * It's done when, once the `signUpButton` is clicked, the email and password entered into the text boxes is saved using `localStorage`.
+
+  * It's done when the information under Last Registered User is updated to reflect the data stored using `localStorage`.
   
-  * But! When we inspect Local Storage, we see that the value of `user` is `[Object object]`.
- 
-* Ask the class the following question(s): 
+  ## Assets
 
-  * What do we think is causing this error? 
-  
-  * 🔑 We are attempting to store an object in Local Storage. Local storage can only store strings.
+  The following image demonstrates the web application's appearance and functionality:
 
-* Let's take a look at our code.
+  ![On the left side of the webpage, a Sign Up form allows users to register, while a card on the right shows the last registered user.](./images/01-screenshot.png) 
 
-* Open [22-Ins_Local-Storage-Uh-oh/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/22-Ins_Local-Storage-Uh-oh/script.js) in your IDE and point out the following: 
+  ---
 
-  * We are creating our object with the following code:
+  ## 💡 Hints
 
-  ```js
-  var user = {
-    firstName: firstNameInput.value.trim(),
-    lastName: lastNameInput.value.trim(),
-    email: emailInput.value.trim(),
-    password: passwordInput.value.trim()
-  };
-  ```
-  * We are then setting this object into local storage.
+  What methods do we use with `localStorage` to get and set items?
 
-  ```js
-  localStorage.setItem("user", user);
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Does data stored using `localStorage` have an expiration date? What happens when the browser is closed?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Ask the class the following question(s):
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * In what format does `localStorage` store data?
- 
-  * LocalStorage only stores string values.
- 
-  * What do you think we need to do to solve this problem? 
+### 4. Instructor Review: Local Storage (10 min) 
 
-  * We need to convert our object to a string.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Use student answers to transition to the next activity. 
+  * ☝️ How comfortable do you feel using `localStorage`? (Poll via Fist to Five, Slack, or Zoom)
 
-### 10. Student Do: Local Storage With Objects (10 mins)
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help! 
 
-* Direct students to [23-Stu_Local-Storage-Objects/Unsolved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Local-Storage-Objects/Unsolved/script.js).
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-```md
-# Local Storage
+  * ✔️ `localStorage.getItem()`
 
-* You have been provided with a sign up form that successfully submits user data and creates an object containing the data. Your job is to save this data to local storage and render the last submission to the page.
+  * ✔️ `localStorage.setItem()`
 
-## Instructions
+* Open `22-Stu_Local-Storage/Solved/assets/js/script.js` in your IDE and explain the following:
 
-* Navigate to the MDN Docs on [JSON Stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). 
+  * We use `querySelector()` to select the DOM elements and assign them to variables, as shown in the following example:
 
-* Use the information there to convert your object to a string format.
-
-* You will be working only inside of your `script.js` file.
-
-* Inside your event listener modify `localStorage.setItem("user", user);` and `localStorage.getItem("user");` so they save and render the data.
-```
-
-### 11. Instructor Do: Review Local Storage With Objects (5 mins)
-
-* Open [23-Stu_Local-Storage-Objects/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/23-Stu_Local-Storage-Objects/Solved/script.js) and point out the following: 
-
- * We can use `JSON.stringify` to convert an object to a JSON string. We simply pass our object into the `JSON.stringify` method.
-
-  ```js
-  localStorage.setItem("user", JSON.stringify(user));
-  ```
-
- * When we retrieve our data from `localStorage`, we use `JSON.parse`. This method parses our JSON string and converts it into an object.
-
- * We pass our call to `localStorage.getItem` into the `JSON.Parse` method, storing the value as a variable.
-
-  ```js
-  var lastUser = JSON.parse(localStorage.getItem("user"));
-  ```
-
-  * Now that the string has been converted back into an object, we can use simple dot notation to access the key/value pairs.
-
-  ```js
-  userFirstNameSpan.textContent = lastUser.firstName;
-  userLastNameSpan.textContent = lastUser.lastName;
-  userEmailSpan.textContent = lastUser.email;
-  userPasswordSpan.textContent = lastUser.password;
-  ```
-
-* Ask the class, "What is JSON?"
-
-  * JSON is JavaScript Object Notation. JSON is text, and any JavaScript object can be converted to JSON.
-
-  * Because its text, we are able to store it into `localstorage` as the string that is required.
-
-### 12. Instructor Do: Demo Data-Attributes (5 mins)
-
-* Open [24-Ins_Data-Attributes/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/24-Ins_Data-Attributes/index.html) in your browser and demo the functionality of the application:
-
-  * When we click on a gif, their `state` changes from "animated" to "still".
-
-* Open Chrome developer tools to demonstrate how the URLs are changing when we click.
-
-* Open [24-Ins_Data-Attributes/script.js](../../../../01-Class-Content/04-Web-APIs/01-Activities/24-Ins_Data-Attributes/script.js) in your IDE and point out the followingL:
-
- * First we select our image container element.
-
-  ```js
-  var imageContainer = document.querySelector(".img-container");
-  ```
-
- * We then listen for click on the container. 
- 
-  ```js
-  imageContainer.addEventListener("click", function(event) {
-    var element = event.target;
-  ```
-
- * If an image is clicked, we get the `data-state` attribute value. 
- 
     ```js
-    if (element.matches("img")) {
-      var state = element.getAttribute("data-state");
+    var  emailInput = document.querySelector("#email");
+    var  passwordInput = document.querySelector("#password");
+    var  signUpButton = document.querySelector("#sign-up");
+    var  msgDiv = document.querySelector("#msg");
+    var  userEmailSpan = document.querySelector("#user-email");
+    var  userPasswordSpan = document.querySelector("#user-password");
     ```
 
- * If the state is `still`, we then change it to `animate` and update the src url to an animated gif. 
- 
-  ```js
-  if (state === "still") {
-    element.setAttribute("data-state", "animate");
-    element.setAttribute("src", element.getAttribute("data-animate"));
-  ```
+  * 🔑 In the `renderLastRegistered()` function, we query `localStorage` using the `getItem()` method for both `email` and `password` strings, as shown in the following example:
 
- * If the state is `animated`, we then change it to `still` and update the src attribute to a still image.
+    ```js
+    function  renderLastRegistered() {
+    var  email = localStorage.getItem('email');
+    var  password = localStorage.getItem('password');
+    ```
 
-  ```js
-      } else if (state === "animate") {
-        element.setAttribute("data-state", "still");
-        element.setAttribute("src", element.getAttribute("data-still"));
+  * If either `email` or `password` is null, we exit the function with `return`. Otherwise, we render the values using the `textContent` property in the `userEmailSpan` and `userPasswordSpan` elements, respectively&mdash;as shown in the following example:
+
+    ```js
+    if (email === null || password === null) {
+    return;
+    }
+
+    userEmailSpan.textContent = email;
+    userPasswordSpan.textContent = password;
+    ```
+
+  * We use `addEventListener()` on the `signUpButton` and listen for a click event. We prevent the browser's default action using `event.preventDefault()`, as shown in the following example:
+
+    ```js
+    signUpButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    ```
+
+  * We use `querySelector()` and the `value` property to assign the values in the form fields to `email` and `password` variables, as shown in the following example:
+
+    ```js
+    var email = document.querySelector('#email').value;
+    var password = document.querySelector('#password').value;
+    ```
+
+  * 🔑 We store the values in `localStorage` using the `setItem()` method and call the `renderLastRegistered()` method. If the `email` or `password` strings are empty, we display an error message. Otherwise, we display a message indicating that the registration is successful. See the following code for an example:
+
+    ```js
+    if (email === "") {
+      displayMessage("error", "Email cannot be blank");
+      } else  if (password === "") {
+        displayMessage("error", "Password cannot be blank");
+      } else {
+        displayMessage("success", "Registered successfully");
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        renderLastRegistered();
+      };
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where is the data in `localStorage` stored?
+
+  * 🙋 Values in `localStorage` are stored locally in the user's browser as key-value pairs.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: Local Storage Objects (5 min) 
+
+* Open `23-Ins_Local-Storage-Objects/index.html` in your browser and demonstrate the following:
+
+  * 🔑 We often want to store related data together. 
+
+  * When we select a student's name and grade and make a comment, the information is saved.
+
+  * 🔑 To preserve the relationship between related data, we can use an object. 
+
+* Open Chrome DevTools and select the Application panel to view local storage.
+
+  * 🔑 When we open Chrome DevTools, we can see that the student's name, grade, and comment are stored together in a single key-value pair. 
+
+* Open `23-Ins_Local-Storage-Objects/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 When the button is clicked, we store the current values together as an object, like in the following example:
+
+    ```js
+    var studentGrade = {
+      student: student.value,
+      grade: grade.value,
+      comment: comment.value.trim()
+    };
+    ```
+
+  * 🔑 We cannot store an object directly using `localStorage`. So we use the `JSON.stringify()` method to convert the object into a string, as shown in the following example:
+
+    ```js
+    JSON.stringify(studentGrade)
+    ```
+
+  * 🔑 The string can then be stored as a key-value pair in local storage using the `setItem()` method, as follows:
+
+      ```js
+      localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+      ```
+
+  * Finally, we call a helper function, `renderMessage()`, as follows:
+
+    ```js
+    function renderMessage() {...}
+    ```
+
+  * 🔑 Inside the helper function, we retrieve the string and convert it back into an object with `JSON.parse()`. If `lastGrade` is not null, we display a message for the user. See the following code for an example:
+
+    ```js
+    function renderMessage() {
+      var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
+      if (lastGrade !== null) {
+        document.querySelector(".message").textContent = lastGrade.student + 
+        " received a/an " + lastGrade.grade
       }
     }
-  });
-  ```
+    ```
 
-* Ask the class, 'How can we access and update the different attributes of our application?'
- 
-  * With `getAttribute` and `setAttribute`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we store a group of related data using `localStorage`?
+
+  * 🙋 We can use an object and then convert it to a string using `JSON.stringify()`.
 
 * Answer any questions before proceeding to the next activity.
 
-### 13. Students Do: Render Todos (10 mins)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Local-Storage-Objects/README.md`.
 
-* Direct students to the next activity, found in [25-Stu_Render-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Render-Todos/Unsolved).
+### 6. Student Do: Local Storage Objects (15 min) 
 
-```md
-# Render Todos
+* Direct students to the activity instructions found in `24-Stu_Local-Storage-Objects/README.md`.
 
-In this activity you will be writing code to render an array of todo items to the list.
+* Break your students into pairs that will work together on this activity.
 
-## Instructions
+  ```md
+  # 📖 Save Object Using localStorage
 
-* Open the `script.js` file provided to you. You have been provided the necessary variable declarations as well as an array of todo items.
+  Work with a partner to implement the following user story:
 
-* Your goal is to create a function that will render our todos into a list in the browser.
+  * As a developer, I want to save the information from a form as an object using `localStorage`.
 
-  * Initially set the text content of the todoList to an empty string.
+  ## Acceptance Criteria
+
+  * It's done when I click the Save button and the form's current values are stored in a object.
+
+  * It's done when the object is saved as a string using `localStorage`.
+
+  ## 📝 Notes
   
-  * todoCountSpan should show the total count of todos on the page.
-  
-* Inside of your render function you will also need a for loop.
+  Refer to the documentation: 
 
-  * It should loop over the `todos` array creating an `li` element for each index of the array.
-  
-  * It should set the content of the created `li` element to the value of the current array index.
-  
-  * Finally the new `li` should be appended to the `ul` provided.
-```
+  [MDN Web Docs on Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-### 14. Instructor Do: Review Render Todos (5 mins)
+  [MDN Web Docs on JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-* Open [25-Stu_Render-Todos/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/25-Stu_Render-Todos/Solved) and point out the following: 
+  ## 💡 Hints
 
-  * First we create our `renderTodos()` function. 
+  What JSON method can you use to return a string? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is JSON? How is it useful for sending and storing data?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Local Storage Objects (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with storing objects using `localStorage`? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `JSON.stringify()`
+
+  * ✔️ `setItem()`
+
+* Open `24-Stu_Local-Storage-Objects/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * We add a click event to the `signUpButton` element and use `event.preventDefault()` to cancel the browser's default form action, as shown in the following example:
 
     ```js
-    function renderTodos() {
+    signUpButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    ```
 
-      // ...
+  * When the button is clicked, we store the current values of the form in an object. We use the string method `trim()` to eliminate any whitespace and leave only the text, as shown in the following example:
+
+    ```js
+    var user = {
+      firstName: firstNameInput.value.trim(),
+      lastName: lastNameInput.value.trim(),
+      email: emailInput.value.trim(),
+      password: passwordInput.value.trim()
+    };
+    ```
+
+  * 🔑 We use the JSON method `JSON.stringify()` to turn the object into a string, as follows:
+
+    ```js
+    JSON.stringify(user)
+    ```
+
+  * 🔑 We use `setItem()` to store the stringified object with `localStorage`, like in the following example:
+
+    ```js
+    localStorage.setItem("user", JSON.stringify(user));
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ When we want to store an object using `localStorage`, what extra step do we have to take? 
+
+  * 🙋 We stringify the object using `JSON.stringify()`, because the value we store in `localStorage` needs to be a string.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Local Storage To-Dos (5 min) 
+
+* Open `25-Ins_Local-Storage-Todos/index.html` in your browser and demonstrate the following:
+
+  * 🔑 When we reopen a browser, the data that was last stored using `localStorage` appears on the page.
+
+  * 🔑 This data appears because data has been saved to `localStorage`, the existing data has been retrieved, and the data has been rendered to the page when the page loads. 
+
+* Open `25-Ins_Local-Storage-Todos/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We use a function to hold the code to retrieve and render the data&mdash;making the code easily reuseable&mdash;as shown in the following example:
+
+    ```js
+    function renderLastGrade() {
     }
     ```
 
-  * Next inside our function we set the `innerHTML` of our `todoList` element to be a blank string. 
+  * 🔑 Inside the `renderLastGrade()` function, we use the method `getItem()` to retrieve the data from storage, as a string. See the following code for an example:
+
+    ```js
+    localStorage.getItem("studentGrade")
+    ```
+
+  * 🔑 Because the return data is stringified, we use the JSON method `JSON.parse()` to convert it back into an object. We then store the object in a variable so that we can use it in the code, as shown in the following example:
+
+    ```js
+    var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
+    ```
+
+  * 🔑 If data is returned from storage, we use `innerHTML` to render the data to the page. 
+
+  * 🔑 Else, if `null` is returned, we use `return` to exit out of the function, like in the following example:
+
+    ```js
+    if (lastGrade !== null) {
+      document.getElementById("saved-name").innerHTML = lastGrade.student;
+      document.getElementById("saved-grade").innerHTML = lastGrade.grade;
+      document.getElementById("saved-comment").innerHTML = lastGrade.comment;
+    } else {
+      return
+    }
+    ```
+
+  * 🔑 We want the data retrieved and rendered when we load the page. So we put it in a function called `init()`, which holds the code that we want executed when the page first loads and then calls the function. If data has previously been saved using `localStorage`, the data will appear on the page. See the following code for an example:
+
+    ```js
+    function init() {
+      renderLastGrade();
+    }
+
+    init();
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we get stored data to appear on the page when we open a browser window? 
+
+  * 🙋 We retrieve the data using `getItem()` and then render it to the page using DOM manipulation. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Local-Storage-Todos/README.md`.
+
+### 9. Student Do: Local Storage To-Dos (15 min) 
+
+* Direct students to the activity instructions found in `26-Stu_Local-Storage-Todos/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Local Storage
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/assets/js/script.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is `sessionStorage`? How is it different from `localStorage`? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Local Storage To-Dos (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel implementing `localStorage` in an app? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `JSON.stringify()`
+
+  * ✔️ `JSON.parse()`
+
+  * ✔️ `init()`
+
+* Open `26-Stu_Local-Storage-Todos/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * We add an event listener to the to-do form so that when a user enters a to-do item, the data is stored on submit. The to-dos are stored and rendered using two helper functions, `storeTodos()` and `renderTodos()`, as shown in the following example:
+
+      ```js
+      todoForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var todoText = todoInput.value.trim();
+          if (todoText === "") {
+            return;
+          }
+        todos.push(todoText);
+        todoInput.value = "";
+        storeTodos();
+        renderTodos();
+      });
+      ```
+
+  * 🔑 The `storeTodos` function stores an array using `localStorage`. First we stringify it using `JSON.stringify()`, then we set it to storage using `setItem()`. 
+  
+  * We need to save to-do items to `localStorage` in a few places, so storing this action in the function `storeTodos` cleans up the code! See the following code for an example:
+
+    ```js
+    function storeTodos() {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+    ```
+
+  * 🔑 We've stored the to-do items, but we also need to be able to retrieve the data from storage. We will do this inside the `init()` function.
+
+  * 🔑 `init()` is being invoked in `script.js`, so it will run every time the page loads.
+  
+  * 🔑 Inside of `init()`, we use `getItem()` and convert the data from a string to an array using `JSON.parse()`. To use the array in the code, we store it in a variable, as follows:
+
+    ```js
+    function init() {
+      var storedTodos = JSON.parse(localStorage.getItem("todos"));
+      if (storedTodos !== null) {
+        todos = storedTodos;
+      }
+      renderTodos();
+    }
+    ```
+
+  * We have stored to-do items in local storage and parsed them using JSON methods. Now we need to render each item. We will do this with the `renderTodos()` function.
+
+  * We use `createElement()` and `appendChild()` to render the to-do list. Because we will reuse this code, we store it in a function, just like we did with `storeTodos()`&mdash;as shown in the following example:
 
     ```js
     function renderTodos() {
-      todoList.innerHTML = "";
-    ```
-
-  * We then set the `todoCountSpan` text content to the length of our `todos` array.
-  
-  ```js
-    todoCountSpan.textContent = todos.length;
-  }
-  ```
-
-  * Next we create a for loop that sets the value of the todos array at each index to a variable todo. 
-  
-  ```js
-  for (var i = 0; i < todos.length; i++) {
-    var todo = todos[i];
-  ```
-  
-  * We then creates a new `li` element and set the `textContent` of the newly created `li` to the variable we created at the beginning of our loop. 
-          
-  ```js
-  var li = document.createElement("li");
-  li.textContent = todo;
-  ```
-
-  *Finally, we append our new list item to our existing `todoList` as a child.
-
-  ```js
-  todoList.appendChild(li);
-  ```
-
-  * Now that we have created a function that will render our todos, we can invoke it after our array variable declaration.
-
-  ```js
-  var todos = ["Learn HTML", "Learn CSS", "Learn JavaScript"];
-  renderTodos();
-  ```
-
-* Answer any questions before proceeding to the next activity. 
-
-- - -
-
-### 15. Everyone Do: BREAK (30 mins)
-
-- - - 
-
-### 16. Students Do: Add Todos (10 mins)
-
-* Direct students to the next activity, found in [26-Stu_Add-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Unsolved)
-
-```md
-# Add ToDo's
-
-In this activity, we will be continuing to build on our Todo activity. This time, we'll be adding the `add` functionality.
-
-## Instructions
-
-* Add an event listener so that when a user hits enter, the value from the todo input field is pushed to our todo array.
-
-* Make sure that empty values are not pushed to the array.
-
-* Once the value has been added to the array, clear the input field and re-render the todo list.
-```
-
-### 17. Instructor Do: Review Add Todos (5 mins)
-
-* Open [26-Stu_Add-Todos/Solved/index.html](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Solved/index.html) in your browser and briefly demonstrate the new functionality by adding new items to the todo list.
-
-* Next navigate to [26-Stu_Add-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/26-Stu_Add-Todos/Solved/script.js) in your IDE and point out the following:
-
-  * We're listening for the `submit` event. Note that it would also be acceptable to add a keydown listener and check if the key pressed is enter. Mention that instead listening for `submit`, requires less code. Additionally, the callback function doesn't need to be ran needlessly every time the user presses a key.
-
-  ```js
-  todoForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  ```
-
-  * 🗒 It's worth noting that there are two form behaviors that most commonly cause the `submit` event. The `return` key is pressed within a text input field or a submit button is clicked. This could be desired behavior, but remind students that there are situations where this behavior is not desired.
-
-  * The `.trim()` method removes whitespace from before and after the input.
-
-  ```js
-  var todoText = todoInput.value.trim();
-  ```
-
-  * If the todoText is empty, return. This will prevent us from pushing empty strings to the todos array.
-
-  ```js
-  if (todoText === "") {
-    return;
-  }
-  ```
-
-  * Lastly, we push the `todoText` to the todos array, reset its value, and render the todos again.
-
-  ```js
-  todos.push(todoText);
-  todoInput.value = "";
-
-  renderTodos();
-  });
-  ```
-
-* Answer any questions before moving to the next activity.
-
-### 18. Students Do: Complete Todos (15 mins)
-
-* Direct students towards the next activity located in [27-Stu_Complete-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Complete-Todos/Unsolved).
-
-```md
-# Complete Todos
-
-In this activity, we will create a "complete" button that successfully removes a todo item from the list when clicked.
-
-## Instructions
-
-* Modify your `renderTodos()` function:
-
-  * When a new todo is created, add a `data-index` for each `li`.
-
-  * Generate a button that says "complete" and append it to your `li`.
-
-* Add an event listener so that when a user clicks the complete button, it accesses the `data-index` value and removes that todo element from the list.
-
-## Hint
-
-* You can use `setAttribute` for `data-index` and `splice` to remove your todo from the list.
-```
-
-### 19. Instructor Do: Review Complete Todos (10 mins)
-
-* Open [27-Stu_Complete-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/27-Stu_Complete-Todos/Solved) in your IDE and point out the following:
-
-  * First show students the unsolved `renderTodos()` function for context.
-
-  ```js
-  function renderTodos() {
-
     todoList.innerHTML = "";
     todoCountSpan.textContent = todos.length;
 
-    for (var i = 0; i < todos.length; i++) {
-      var todo = todos[i];
+      for (var i = 0; i < todos.length; i++) {
+        var todo = todos[i];
 
-      var li = document.createElement("li");
-      li.textContent = todo;
-      todoList.appendChild(li);
+        var li = document.createElement("li");
+        li.textContent = todo;
+        li.setAttribute("data-index", i);
+
+        var button = document.createElement("button");
+        button.textContent = "Complete ✔️";
+
+        li.appendChild(button);
+        todoList.appendChild(li);
+      }
     }
-  }
-  ```
+    ```
 
-  * In order to track which todo we are going to mark as complete, we need set a `data-index` that points to each todo's index, `i` from our for loop.
+  * Finally, we need to add an event listener to the `completed` button so that a user can remove to-do items. We do this by using the `"data-index"` of the `button`'s parent element to remove the correct to-do item from the `todos` array.
+  
+  * We call the `storeTodos()` and `renderTodos()` functions when the `complete` button is clicked, to store and render the updated list as follows:
 
-  ```js
-  li.setAttribute("data-index", i);
-  ```
+    ```js
+    todoList.addEventListener("click", function(event) {
+      var element = event.target;
+      if (element.matches("button") === true) {
+        var index = element.parentElement.getAttribute("data-index");
+        todos.splice(index, 1);
+        storeTodos();
+        renderTodos();
+      }
+    });
+    ```
 
-  * Next we can create a "Complete" button for each item and set it's text to "Complete".
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  var button = document.createElement("button");
-      button.textContent = "Complete";
-  ```
+  * ☝️ How can we use `localStorage` to store information in apps?
 
-  * Finally we append our newly updated button to our `li`.
+  * 🙋 We set the information as a key-pair using `setItem()` and retrieve it using `getItem()`. To show the stored information on the page when a browser page is refreshed, we use a function that retrieves the stored data if it exists and use DOM manipulation to render it to the page. 
 
-  ```js
-  li.appendChild(button);
-  ```
+  * ☝️ What can we do if we don't completely understand this?
 
-  * Now that our todo can be marked as complete, we have to create an event listener for our button that removes it from the list when clicked.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), and stick around for office hours to ask for help.
 
-  ```js
-  todoList.addEventListener("click", function(event) {
-  ```
-  * Next we set a variable for `event.target`. When an element is clicked, we check if it was a button and if so, grab the `data-index` of that element.
+* Answer any questions before proceeding to the next activity.
 
-  ```js
-  var element = event.target;
-  ```
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Pull-Request/README.md`. 
 
-  * We then use `.splice` to remove the element with that index and rerender or todos by calling `renderTodos()`. The `.splice` method allows us to change the contents of an array. We can use it to remove, replace, or add new elements. 
+### 11. Everyone Do: Git Pull Request (20 min)
 
-  ```js
-  if (element.matches("button") === true) {
-    var index = element.parentElement.getAttribute("data-index");
-    todos.splice(index, 1);
-    renderTodos();
-  ```
+* Open the [GitHub documentation on contributing to a project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
 
-* Check for understanding and answer any lingering questions before moving on.
+  * A **pull request** is a tool that allows us to collaborate and comment on code before it is merged to the main branch. 
 
-### 20. Students Do: Local Storage Todos (10 mins)
+  * In this activity, we'll practice creating a new repository on GitHub, pulling down the repo to the local machine using `git clone`, and pushing up changes using `git push`. We will also explore pull requests by opening a pull request, reviewing the request, and merging the changes into the main branch.
 
-* Direct students towards their next activity located in [28-Stu_Local-Storage-Todos/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/28-Stu_Local-Storage-Todos/Unsolved).
+* Direct students to the activity instructions found in `27-Evr_Git-Pull-Request/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Open your browser, navigate to [GitHub](https://github.com/), and demonstrate the following:
+
+  * We create a new repository by clicking on the green New button and initializing the repo with a `README.md`. 
+
+* Open your CLI and demonstrate the following:
+
+  * 🔑 We use `git clone` to copy the repo to the local machine, as follows:
+
+    ```
+    git clone https://github.com/{user-name}/(your-repo-name).git
+    ```
+
+  * 🔑 We create a new branch, where we will make the changes for the pull request, as shown in the following example:
+
+    ```
+    git checkout -b 01-my-new-feature
+    ```
+
+* Open your IDE and demonstrate the following:
+
+  * We open VS Code and navigate to the README.md to make a change. We mig:ht add something like the following text:
+
+    ```
+    Now, I am a demo for a Pull Request!
+    ```
+
+* Open your CLI and demonstrate the following:
+
+  * 🔑 In the command line, we add and commit the change made to the README.md. Then we push it up to the remote branch, making sure to use the name of the branch that we just created, as shown in the following example:
+
+    ```
+    git add -A
+    git commit -m "My first commit"
+    git push origin 01-my-new-feature
+    ```
+
+* Open your browser, navigate to [GitHub](https://github.com/), and demonstrate the following:
+
+  * 🔑 We navigate to see the changes. We click on Compare & Pull Request to open a pull request.
+
+  * 🔑 We pick the branch that we want to compare the changes against as the **base** branch. We use `main` because we want to merge the changes into `main`. 
+
+  * 🔑 We pick the branch that we want to compare (the **comparison** branch). That is the new branch that we just created, or `01-my-new-feature`.
+
+  * 🔑 We fill in the form and click Create Pull Request to create the request.
+
+  * 🔑 We review the changes by clicking the Review Changes button.
+
+  * 🔑 We want to keep the changes and merge them into the `main` branch, so we select Merge Pull Request and then confirm it. 
+
+  * 🔑 We open the `main` branch in the repo. The changes made in the branch have been merged.
+
+* Answer any questions before proceeding.
+
+### 12. BREAK (30 min)
+
+### 13. Instructor Demo: Mini-Project (5 min) 
+
+* Open `28-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
+
+  * 🔑 When we open the browser, the user's previous win-loss history is displayed.
+
+  * 🔑 When we click the start button, blanks appear on the screen. Each blank represents a letter in the word to be guessed.
+
+  * 🔑 When we click the start button, the timer starts.
+
+  * 🔑 When the user guesses the word, the timer stops and a win message is displayed.
+
+  * 🔑 When time runs out and the user has not guessed the word, a lose message appears.
+
+  * 🔑 The user's wins and losses appear on the screen. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We use `localStorage` to save the user's wins and losses. We use the `setInterval()` and `clearInterval()` methods to create a timer. We use DOM manipulation methods to update the screen. To add words to the screen, we can use an array and array methods. 
+
+* Answer any questions before allowing students to start the mini-project.
+
+### 14. Student Do: Mini-Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
+
+* Break your students into groups that will work together on this activity.
 
   ```md
-  # Local Storage Todo's
+  # Unit 04 Mini-Project: Word Guess
 
-  In this activity, we will work on storing our todos in `localStorage`. 
+  In this activity, you will work with a group to build a game using JavaScript and Web APIs.
 
   ## Instructions
 
-  * Inside the `init()` function:
+  The completed application should meet the following criteria:
 
-    * Set a variable called `storedTodos` that retrieves the todos from `localStorage` and parses the JSON string to an object.
+  * As a user, I want to start the game by clicking on a button. 
 
-    * Check if the todos were retrieved from `localStorage` and if so, set a `todos` variable with the `storedTodos`.
+  * As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
 
-    * Lastly, render the todos to the DOM.
+  * As a user, I want the game to be timed. 
 
-  * Inside the `storeTodos()` function:
+  * As a user, I want to win the game when I have guessed all the letters in the word.
 
-    * Stringify and set the "todos" key in `localStorage` to the `todos` array.
+  * As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
 
-  ## Hint
+  * As a user, I want to see my total wins and losses on the screen. 
 
-  * You will need to use `JSON.stringify` and `JSON.parse`.
+  ### Specifications
+
+  * When a user presses a letter key, the user's guess should be captured as a key event.
+
+  * When a user correctly guesses a letter, the corresponding blank "_" should be replaced by the letter. For example, if the user correctly selects "a", then "a _ _ a _" should appear. 
+
+  * When a user wins or loses a game, a message should appear and the timer should stop. 
+
+  * When a user clicks the start button, the timer should reset. 
+
+  * When a user refreshes or returns to the browser page, the win and loss counts should persist.
+
+  ## 💡 Notes
+
+  Refer to the documentation:
+
+  * [MDN Web Docs on KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+
+  * [MDN Web Docs on Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+  * [MDN Web Docs on loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+  * [MDN Web Docs on setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+  * [MDN Web Docs on clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+
+  * [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your group to further your knowledge:
+
+  * How can you add a reset button to set the win and loss counts back to zero? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-### 21. Instructor Do: Review Local Storage Todos (5 mins)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Open [28-Stu_Local-Storage-Todos/Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/28-Stu_Local-Storage-Todos/Solved/script.js) in your IDE and walk students through the solved code.
+### 15. Instructor Review: Mini-Project (10 min)  
 
-* Inside the `init()` function we set a variable called `storedTodos` that retrieves the todos from `localStorage` and parses the JSON string to an object.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  var storedTodos = JSON.parse(localStorage.getItem("todos"));
-  ```
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-* We then check if the todos were retrieved from `localStorage` and if so, set a `todos` variable with the `storedTodos` and the render the todos to the DOM.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  ```js
-  if (storedTodos !== null) {
-      todos = storedTodos;
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `getItem()`
+
+  * ✔️ `setItem()`
+
+  * ✔️ `addEventListener()`
+
+  * ✔️ `setInterval()`
+
+  * ✔️ `clearInterval()`
+
+   * ✔️ `keydown`
+
+* Open `28-Stu_Mini-Project/Main/assets/js/script.js` in your IDE and explain the following: 
+ 
+  * We store the words that the user will guess in an array, as follows:
+
+    ```js
+    var words = ["variable","array", "modulus", "object", "function", "string", "boolean"];
+    ```
+
+  * The actions that will be performed are organized into a series of functions. Each function holds a block of code that performs a task and is called when needed, often inside another function. This allows us to write DRY code and make code blocks more reusable.
+
+  * We use an `init()` function to hold the code that we want to execute when the page loads. When the `init()` function executes, the functions called inside it will also execute. See the following code for an example: 
+
+    ```js
+    function init() {
+      getWins();
+      getlosses();
+    }
+    ```
+
+  * 🔑 The `getWins()` function retrieves the win count from storage, using `getItem()`, and renders it to the page&mdash;as shown in the following example:
+
+    ```js
+      function getWins() {
+        var storedWins = localStorage.getItem("winCount");
+        if (storedWins === null) {
+          winCounter = 0;
+        } else {
+          winCounter = storedWins;
+      }
+      win.textContent = winCounter;
+    }
+    ```
+
+  * The `getlosses()` function also retrieves the loss count from storage and renders it to the page. If no data is returned, the lose counter is set to `0`. See the following code for an example:
+
+    ```js
+    function getlosses() {
+      var storedLosses = localStorage.getItem("loseCount");
+      if (storedLosses === null) {
+        loseCounter = 0;
+      } else {
+        loseCounter = storedLosses;
+      }
+      lose.textContent = loseCounter;
+    }
+    ```
+
+  * 🔑 To set the data to storage, we use `setItem()`. We put the code in the functions `setWins()` and `setLosses()`. These functions will be called inside the `winGame()` and `loseGame()` functions, as shown in the following example:
+
+    ```js
+    function setWins() {
+      win.textContent = winCounter;
+      localStorage.setItem("winCount", winCounter);
     }
 
-  renderTodos();
-  ```
-
-* Inside our `storeTodos()` function we stringify and set the "todos" key in `localStorage` to the `todos` array.
-
-  ```js
-  localStorage.setItem("todos", JSON.stringify(todos));
-  ```
-
-* Answer any questions before letting students out for break.
-
-### 22. Students Do: Timer App (60 mins)
-
-* Direct students to their final activity of the day located in [29-Stu_Timer-App/Unsolved](../../../../01-Class-Content/04-web-apis/01-Activities/29-Stu_Timer-App/Unsolved)
-
-```md
-# Tomato Timer
-
-## Instructions
-
-* In this activity, we will be creating a "tomato" timer that allows the user to set a timer with working and resting periods. We will also store the length of each period in local storage so that the user's preferences persist, even if the browser is closed.
-
-* You have been provided with all of the HTML and CSS that you'll need. 
-
-* Begin by opening `index.html` in your browser. Take a moment to identify different elements on the page that will need functionality:
-
-  * Time left display
-
-  * Start button
-
-  * Pause button
-
-  * Stop button
-
-  * Status toggle
-
-* **Part One** Create functions in `script.js` to add support for the following features:
-
-  1. Create a function that initializes the timer by taking the minutes input from the user and setting the `tototalSeconds` variable. Since we'll be using this function to reset as well, clear any existing intervals.
-
-  2. When the timer starts, update the DOM every second to reflect the time left. It is recommended that you create separate functions to properly format the minutes and seconds.
-
-  3. When the timer is finished, alert the user that it is time to take a break.
-
-* **Part Two**: Add functionality to the pause and stop buttons.
-
-  1. The pause button should temporarily stop the timer. This means that if play is pressed again, the timer will continue where it left off.
-
-  2. The stop button should reset the timer. If play is pressed again, the timer should start over.
-
-* **Part Three**: Add the ability to switch back and forth between working time and resting time.
-
-  1. Set up a variable to keep track of which mode the timer is in.
-
-  2. If the timer is in working mode, then it should alert the user "Time for a break!" upon completion.
-
-  3. If the timer is in resting mode, it should alert the user "Time to get back to work!" upon completion.
-
-  4. Whenever the switch is clicked, the DOM should update with the current status, and the timer should reset.
-
-  5. Make sure that the timer is using minutes of work in work mode and minutes of rest, respectively. 
-
-* **Part Four**: Add localStorage to the application
-
-  1. Every time the user starts a timer, the minutes of work and minutes of rest should be saved to localStorage.
-
-  2. Upon page load, the minutes of work and minutes of rest input fields should be initialized to their previously stored values.
-
-## Bonus
-
-Prevent the timer from running when the user enters invalid input. (numbers <= 0)
-```
-
-### 23. Instructor Do: Review Timer App (10 mins)
-
-* Open [29-Stu_Timer-App/Solved](../../../../01-Class-Content/04-web-apis/01-Activities/29-Stu_Timer-App/Solved/script.js) in your IDE and point out the following key aspects:
-
-  * We create a function called `starTimer`. We will use it to call our `setTime` function.
-  
-  ```js
-  function startTimer() {
-    setTime();
-  ```
-  
-  * We create a `setInterval` function and store it inside a variable called interval.
-
-  ```js
-    interval = setInterval(function() {
-      secondsElapsed++;
-      renderTime();
-    }, 1000);
-  }
-  ```
-
-  * Ask the class, "Why do we store our setInterval into a variable?"
-
-  * So we can clear it later.
-
-  * We create a function call `pauseTimer` which will clear our interval and call our `renderTime` function.
-
-  ```js
-  function pauseTimer() {
-    clearInterval(interval);
-    renderTime();
-  }
-  ```
-
-  * We create a function called `stopTimer`. When this function is invoked we set our secondsElapsed to `0`, and call our `setTime` and `renderTime` functions.
-
-  ```js
-  function stopTimer() {
-    secondsElapsed = 0;
-    setTime();
-    renderTime();
-  }
-  ```
-
-  * We create a `setTimePreferences` function. We use `localStorage.setItem`, naming the key `preferences` and stringifying our work minutes and rest minutes so they can be added into localstorage.
-
-  ```js
-  function setTimePreferences() {
-    localStorage.setItem(
-      "preferences",
-      JSON.stringify({
-        workMinutes: workMinutesInput.value.trim(),
-        restMinutes: restMinutesInput.value.trim()
-      })
-    );
-   ```
-
-  * We create a `getTimePreferences` function. Next we `JSON.Parse` the getting of our `preferences` localstorage item to turn our stringified object back into an object
-
-  ```js
-  function getTimePreferences() {
-    var preferences = JSON.parse(localStorage.getItem("preferences"));
-  ```
-
-* If preferences exists in localstorage and has a key/value pair of `workMinutes` we set our `workMinutesInput.value` to be equal to our preference objects `workMinutes` value.
-
-  ```js
-  if (preferences) {
-    if (preferences.workMinutes) {
-      workMinutesInput.value = preferences.workMinutes;
+    function setLosses() {
+      lose.textContent = loseCounter;
+      localStorage.setItem("loseCount", loseCounter);
     }
-  ```
-  
-  * If preferences instead has no `workMinutes` but has `restMinutes` then we set our `restMinutesInput.value` to be equal to our preference objects `restMinutes` value.
+    ```
 
-  ```js
-    if (preferences.restMinutes) {
-      restMinutesInput.value = preferences.restMinutes;
+  * 🔑 To start the game when the button is clicked, we add an event listener to the start button, as follows:
+
+    ```js
+    startButton.addEventListener("click", startGame);
+    ```
+
+  * The `startGame()` function executes when the button is clicked. `renderBlanks()` and `startTimer()` will also be executed, as shown in the following example:
+
+    ```js
+    function startGame() {
+      isWin = false;
+      timerCount = 10;
+      startButton.disabled = true;
+      renderBlanks()
+      startTimer()
     }
-  }
-  ```
+    ```
 
-* Answer any remaining questions students may have and end class for the day.
+  * The `renderBlanks()` function uses `Math.random()` to randomly pick a word from an array and a loop to push blanks to the `blankLetters` array, as follows:
 
-### 24. END (0 mins)
+    ```js
+    function renderBlanks() {
+      chosenWord = words[Math.floor(Math.random() * words.length)];
+      lettersInChosenWord = chosenWord.split("");
+      numBlanks = lettersInChosenWord.length;
+      blanksLetters = []
+      for (var i = 0; i < numBlanks; i++) {
+        blanksLetters.push("_");
+      }
+      wordBlank.textContent = blanksLetters.join(" ")
+    }
 
-- - -
+    ```
 
-## Lesson Plan Feedback
+  * 🔑 The `startTimer()` function starts the countdown. We use `setInterval()` to set the count to decrease each second and `clearInterval()` to stop the countdown. The `startTimer()` function also uses conditionals to determine whether the user won or lost, as shown in the following example:
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+    ```js
+    function startTimer() {
+      timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        if (timerCount >= 0) {
+          if (isWin && timerCount > 0) {
+            clearInterval(timer);
+            winGame();
+          }
+        }
+        if (timerCount === 0) {
+          clearInterval(timer);
+          loseGame();
+        }
+      }, 1000);
+    }
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+    ```
+
+  * The `winGame()` and `loseGame()` functions are executed if the win and loss conditions are met. Note that the `setWins()` and `setLosses()` functions are called inside the function. This will set the data to storage. See the following code for an example:
+
+    ```js
+    function winGame() {
+      wordBlank.textContent = "YOU WON!!!🏆 ";
+      winCounter++
+      startButton.disabled = false;
+      setWins()
+    }
+
+    function loseGame() {
+      wordBlank.textContent = "GAME OVER";
+      loseCounter++
+      startButton.disabled = false;
+      setLosses()
+    }
+
+    ```
+
+  * 🔑 To capture the user's input, we attach an event listener to the document and use a `keydown` event. If the timer count is zero, then the function returns and nothing happens. Else, we check that the inputted key is a letter. If it is, the `checkLetters()` and `checkWins()` functions are executed. See the following code for an example:
+
+    ```js
+    document.addEventListener("keydown", function(event) {
+      if (timerCount === 0) {
+        return;
+      }
+      var key = event.key.toLowerCase();
+      var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
+      if (alphabetNumericCharacters.includes(key)) {
+        var letterGuessed = event.key;
+        checkLetters(letterGuessed)
+        checkWin();
+      }
+    });
+    ```
+
+  * In the `checkLetters()` function, we use conditional statements to test whether the letter is a match, as follows:
+
+    ```js
+    function checkLetters(letter) {
+      var letterInWord = false;
+      for (var i = 0; i < numBlanks; i++) {
+        if (chosenWord[i] === letter) {
+          letterInWord = true;
+        }
+      }
+      if (letterInWord) {
+        for (var j = 0; j < numBlanks; j++) {
+          if (chosenWord[j] === letter) {
+            blanksLetters[j] = letter;
+          }
+        }
+        wordBlank.textContent = blanksLetters.join(" ");
+      }
+    }
+
+    ```
+
+  * We also use conditional statements to check whether there is a win, as follows:
+
+    ```js
+    function checkWin() {
+      if (chosenWord === blanksLetters.join("")) {
+        isWin = true;
+      }
+    }
+    ```
+
+  * For the bonus, we use `querySelector()` to select the reset button element, as follows:
+
+    ```js
+    var resetButton = document.querySelector(".reset-button");
+    ```
+
+  * We create a function called `resetGame()`, like in the following example:
+
+    ```js
+    function resetGame() {}
+    ```
+
+  * Inside the function, we reset the values of the win and lose counters to `0`, as shown in the following example:
+
+    ```js
+    winCounter = 0;
+    loseCounter = 0;
+    ```
+
+  * We call the `setWin()` and `setLosses()` function inside `resetGame()`. When the `resetGame()` function is called, the values will be reset to `0`, then saved to storage. The order is important here. See the following code for an example:
+
+    ```js
+    function resetGame() {
+      winCounter = 0;
+      loseCounter = 0;
+      setWins()
+      setLosses()
+    }
+    ```
+
+  * We use an event listener to execute the `resetGame()` function when the button is clicked, as follows:
+
+    ```js
+    function resetGame() {
+      winCounter = 0;
+      loseCounter = 0;
+      setWins()
+      setLosses()
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ When working to solve a complex coding problem like the mini-project, it is important to have a plan. How can you use functions to break down your complex projects into manageable chunks of code? 
+
+  * 🙋 Functions are reusable blocks of code that perform a task. We can write a function to perform a simple task needed in the code. Then we can call it when we need it, even inside another function. 
+
+  * ☝️ How can we use event listeners to capture user input and perform a task? 
+
+  * 🙋 We attach an event listener to the HTML element, like a button, or even the entire document. When the event occurs, a function will be executed. For example, we attach an event listener to a button to listen for a click. When a click happens, the actions described in the function will occur. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on EventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventListener), the [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), and the [MDN Web Docs on setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * In this week's homework, you will build an interactive quiz app. 
+
+  * When we click on a button, the game starts.
+
+  * When the game starts, the user is given choices and the timer starts.
+
+  * When a wrong answer is clicked, a message is displayed.
+
+  * When a right answer is clicked, the next question is displayed. 
+
+  * The app is a great chance to practice all the DOM manipulation and Web API skills that you have been learning this week. It also allows you to challenge yourself to use HTML, CSS, and JavaScript to build a fully interactive game that you can showcase in your portfolio.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to use DOM manipulation and Web APIs to build a fully functioning and interactive app.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will use HTML to provide the structure for the project and CSS for the styling. To make the app interactive, we will use JavaScript, DOM manipulation, and Web APIs. 
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 This quiz app provides you with a fun outlet for showcasing your evolving JavaScript knowledge in your portfolio. Furthermore, manipulating the DOM and building interactive apps are essential skills for any professional web developer.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+### 17. FLEX (40 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Ask the students if there is anything they would like to review from Unit 03 and 04.
+
+* Answer any questions before ending the class.
+
+### 18. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
