@@ -44,4 +44,4 @@ Developers are often tasked with retrieving data from another application's API 
 * [jQuery](https://api.jquery.com/)
 
 - - -
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

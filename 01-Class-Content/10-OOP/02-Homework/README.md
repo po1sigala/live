@@ -172,4 +172,4 @@ You are required to submit the following:
 * A video demonstrating the entirety of the app's functionality 
 
 - - -
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

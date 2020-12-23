@@ -48,4 +48,4 @@ For a closer preview of what we explore in each unit of the boot camp, dive into
 
 * Helpful resources if you want to get ahead or gain more experience after the unit
 
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

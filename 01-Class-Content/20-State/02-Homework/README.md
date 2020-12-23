@@ -99,4 +99,4 @@ At a minimum, your portfolio should include the following:
 Make sure to update your LinkedIn Profile with the new skills you've acquired since the last time it was updated.
 
 - - -
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
