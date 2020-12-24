@@ -92,7 +92,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
-* 📹 Let's Code {@TODO Add Algo video link}
+    * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
 * [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
 
@@ -108,7 +108,7 @@ In the homework you’ll create a technical tutorial explaining how a particular
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](../../../01-Class-Content/17-CS/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
@@ -118,10 +118,12 @@ Next unit we will be returning to databases, learning about `NoSQL`. We will hav
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* 📹 Code Review: @TODO LINK TO VIDEOS FOR THIS UNIT
+### Git Guide
 
-* 📖 Git Guide: [Shell Scripts](./01-Activities/27-Evr_Shell)
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Shell Scripts](./01-Activities/27-Evr_Shell)
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

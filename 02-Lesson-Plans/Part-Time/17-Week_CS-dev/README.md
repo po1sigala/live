@@ -1,4 +1,4 @@
-# Unit 17 Instructor Overview: CS for JS  
+# Unit 17 Instructor Overview: Computer Science For JavaScript  
 
 ## Overview
 
@@ -52,7 +52,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * [Unit 17: CS for JS](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit#slide=id.g9aa02552a2_0_6)
+  * [Unit 17: Computer Science For JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
 
 ### Algorithms
 
@@ -62,7 +62,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
-* 📹 Let's Code {@TODO Add Algo video link}
+    * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
 * [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
 
@@ -107,4 +107,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Quick Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
