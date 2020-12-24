@@ -1,4 +1,4 @@
-# Unit 02 Mini-Project: Landing Page
+# Unit 01 Mini-Project: Landing Page
 
 In this activity, you will work with a group to build a landing page using HTML and CSS.
 
@@ -56,9 +56,9 @@ Refer to the documentation:
 
 * [MDN Web Docs on How to Structure a Web Form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-* [MDN Web Docs on <button>: The Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+* [MDN Web Docs on `<button>`: The Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-* [MDN Web Docs on <figure>: The Figure with Optional Caption Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+* [MDN Web Docs on `<figure>`: The Figure with Optional Caption Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
 ## 🏆 Bonus
 
