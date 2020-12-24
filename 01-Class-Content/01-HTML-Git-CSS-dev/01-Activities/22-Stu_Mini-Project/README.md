@@ -52,7 +52,7 @@ Refer to the documentation:
 
 * [MDN Web Docs on Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-* [MDN Web Docs on <h1>–<h6>: The HTML Section Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+* [MDN Web Docs on `<h1>–<h6>`: The HTML Section Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
 * [MDN Web Docs on How to Structure a Web Form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
