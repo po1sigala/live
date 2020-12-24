@@ -70,4 +70,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
