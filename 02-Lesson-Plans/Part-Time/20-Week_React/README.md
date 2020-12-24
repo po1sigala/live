@@ -1,10 +1,10 @@
-# Unit 19: React
+# Unit 20: React
 
 ## Overview
 
 This unit, we will introduce students to React, a declarative, efficient, and flexible JavaScript library for building user interfaces. We'll go over key features of the framework: JSX, components, states, props, lifecycle events and so on.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-React/README.md) for detailed information on key topics, learning objectives and homework.
+  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/README.md) for detailed information on key topics, learning objectives and homework.
 
 ## Instructor / TA Notes
 
@@ -17,7 +17,7 @@ This unit, we will introduce students to React, a declarative, efficient, and fl
 Next week we will learn more complex techniques for managing state in React. Avoid spending too much time on Class Components, since we will be focusing primarily on using React Hooks, which can only be used at the top level of functional components.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/19-React/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/20-React/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -25,31 +25,31 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Lesson Plans
 
-  * [19.1 - Lesson Plan](01-Day_Intro-React/19.1-LESSON-PLAN.md)
+  * [20.1 - Lesson Plan](01-Day_Intro-React/20.1-LESSON-PLAN.md)
 
-  * [19.2 - Lesson Plan](02-Day_Props-Lists-Stateful/19.2-LESSON-PLAN.md)
+  * [20.2 - Lesson Plan](02-Day_Props-Lists-Stateful/20.2-LESSON-PLAN.md)
 
-  * [19.3 - Lesson Plan](03-Day_React-Router/19.3-LESSON-PLAN.md)
+  * [20.3 - Lesson Plan](03-Day_React-Router/20.3-LESSON-PLAN.md)
 
 ### Slide Decks
 
-  * [19.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing)
+  * [20.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1M35LtiiJlAmDK27cjyifhbhvcTAoYaUF7-9s6k6ZIP8/edit?usp=sharing)
 
-  * [19.2: Props, Lists, and Stateful Components](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing)
+  * [20.2: Props, Lists, and Stateful Components](https://docs.google.com/presentation/d/18Q6g_4tMD01MyMUw8euaoldLHdJgJodbbd5XSzXV8UQ/edit?usp=sharing)
 
 
 ### Time Tracker(s)
 
-  * [Unit 19-React Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1FW-TdKwx-Kxrj8FgsBC1WwaX_U2z8mGikRnT8oUYU6U/edit#gid=1012596571)
+  * [Unit 20-React Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1FW-TdKwx-Kxrj8FgsBC1WwaX_U2z8mGikRnT8oUYU6U/edit#gid=1012596571)
 
-  * [Unit 19-React Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nK5WnZMudSzo7mAkiDdfCEEb2ihM9ooU/edit#gid=1423861022)
+  * [Unit 20-React Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nK5WnZMudSzo7mAkiDdfCEEb2ihM9ooU/edit#gid=1423861022)
 
-  * [Unit 19-React Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1agZoqXM_xk9RjwW2W2Zcgep8L-i6s9zseHok_Q6ULeM/edit?usp=sharing)
+  * [Unit 20-React Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1agZoqXM_xk9RjwW2W2Zcgep8L-i6s9zseHok_Q6ULeM/edit?usp=sharing)
 
 ## Algorithms
 
-  * [01-maximum-continuous-subarray](../../../01-Class-Content/19-React/03-Algorithms/01-maximum-continuous-subarray)
+  * [01-maximum-continuous-subarray](../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray)
 
-  * [02-merge-meeting-times](../../../01-Class-Content/19-React/03-Algorithms/02-merge-meeting-times)
+  * [02-merge-meeting-times](../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times)
 
-  * [03-int-to-roman](../../../01-Class-Content/19-React/03-Algorithms/03-int-to-roman)
+  * [03-int-to-roman](../../../01-Class-Content/20-React/03-Algorithms/03-int-to-roman)
