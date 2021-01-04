@@ -64,8 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const createNewRow = (post) => {
     console.log('createNewRow -> post', post);
 
-    let formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format('MMMM Do YYYY, h:mm:ss a');
+    const formattedDate = new Date(post.createdAt).toLocaleDateString();
 
     const newPostCard = document.createElement('div');
     newPostCard.classList.add('card');
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newPostBody = document.createElement('p');
     newPostTitle.textContent = `${post.title} `;
     newPostBody.textContent = post.body;
-    newPostDate.textContent = formattedDate;
+    newPostDate.textContent = ` (${formattedDate})`;
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editButton);
