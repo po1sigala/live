@@ -1,8 +1,8 @@
 #  Instructor Demo: Command Line (5 min) 
 
-* Explain that terminal commands are useful ways to navigate between folders, also called directories, quickly and easily. The commands are entered into the terminal or bash. 
+* Terminal commands are useful ways to navigate between folders, also called directories, quickly and easily. The commands are entered into the terminal or bash.
 
-* Open your terminal and demonstrate the following:
+* Open your terminal and do the following:
 
   * 🔑 We use `ls` to list the contents of the home directory, including `Desktop`. 
 
@@ -21,8 +21,6 @@
   ```bash
   cd ..
   ```
-
-* Explain that in addition to navigating between files and directories, we use terminal commands to create and remove directories and files. 
 
   * 🔑 We start by checking our working directory with `pwd`. When we print the working directory, it shows us the path.
 
@@ -54,29 +52,11 @@
   touch index.html
   ```
 
-  * 🔑 We use `ls` to check that our new file has been succcessfully added to the directory.
+  * 🔑 We use `ls` to check that our new file has been successfully added to the directory.
 
   ```bash
   ls
   ```
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How would we use terminal commands to change directories?
-
-  * 🙋 We use `cd` to go down and change to a new directory. To go back up to the previous directory, we use `cd..`.
-
-  * ☝️ How would we use terminal commands to create a new file?
-
-  * 🙋 We use `touch` and the name of the new file we want to create.  
-
-   * ☝️ How would we use terminal commands to create a new director?
-
-  * 🙋 We use `mkdir` and the name of the new directory we want to create.  
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Command-Line/README.md`.
-
 ---
- © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+ © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
