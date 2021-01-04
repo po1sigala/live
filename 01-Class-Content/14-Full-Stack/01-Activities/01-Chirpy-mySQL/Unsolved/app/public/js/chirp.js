@@ -1,6 +1,5 @@
 // When the page loads, grab and display all "chirps"
 // Send the GET request with the fetch API (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-
 fetch('/api/all', {
   method: 'GET',
   headers: {
@@ -20,9 +19,7 @@ fetch('/api/all', {
       const chirpDate = document.createElement('p');
       chirpAuthor.textContent = `${author} chirped: `;
       chirpBody.textContent = `${body}`;
-      chirpDate.textContent = `At ${moment(created_at).format(
-        'h:mma on dddd'
-      )}`;
+      chirpDate.textContent = `At ${new Date(created_at).toLocaleDateString()}`;
 
       row.appendChild(chirpAuthor);
       row.appendChild(chirpBody);
@@ -42,7 +39,7 @@ submitChirpBtn.addEventListener('click', (e) => {
   const newChirp = {
     author: document.getElementById('author').value.trim(),
     body: document.getElementById('chirp-box').value.trim(),
-    created_at: moment().format('YYYY-MM-DD HH:mm:ss'),
+    created_at: new Date().toISOString().slice(0, 19).replace('T', ' '),
   };
 
   // Send the POST request with the fetch API (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
@@ -66,9 +63,9 @@ submitChirpBtn.addEventListener('click', (e) => {
 
       chirpAuthor.textContent = `${data.author} chirped: `;
       chirpBody.textContent = `${data.body}`;
-      chirpDate.textContent = `At ${moment(data.created_at).format(
-        'h:mma on dddd'
-      )}`;
+      chirpDate.textContent = `At ${new Date(
+        data.created_at
+      ).toLocaleDateString()}`;
 
       row.appendChild(chirpAuthor);
       row.appendChild(chirpBody);
@@ -76,7 +73,6 @@ submitChirpBtn.addEventListener('click', (e) => {
 
       chirpArea.prepend(row);
       console.log(row);
-
     });
 
   // Empty the input box

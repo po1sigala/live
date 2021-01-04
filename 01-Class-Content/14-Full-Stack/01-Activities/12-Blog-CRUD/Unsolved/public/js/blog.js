@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }).then(() => getPosts(postCategorySelect.value));
   };
 
-  // Getting inital list of posts
+  // Getting initial list of posts
   getPosts();
 
   // Function to help construct the post HTML content inside blogContainer
@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     newPostTitle.textContent = post.title;
     newPostBody.textContent = post.body;
 
-    let formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format('MMMM Do YYYY, h:mm:ss a');
+    const formattedDate = new Date(post.createdAt).toLocaleDateString();
     newPostDate.textContent = ` (${formattedDate})`;
 
     newPostTitle.appendChild(newPostDate);

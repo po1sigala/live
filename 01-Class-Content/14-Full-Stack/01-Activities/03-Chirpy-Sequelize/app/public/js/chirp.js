@@ -1,5 +1,3 @@
-/* global moment */
-
 // When user clicks add-btn
 const submitChirpBtn = document.getElementById('chirp-submit');
 submitChirpBtn.addEventListener('click', (e) => {
@@ -9,7 +7,7 @@ submitChirpBtn.addEventListener('click', (e) => {
   const newChirp = {
     author: document.getElementById('author').value.trim(),
     body: document.getElementById('chirp-box').value.trim(),
-    created_at: moment().format('YYYY-MM-DD HH:mm:ss'),
+    created_at: new Date(),
   };
 
   // Send the POST request with the fetch API (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
@@ -33,9 +31,9 @@ submitChirpBtn.addEventListener('click', (e) => {
 
       chirpAuthor.textContent = `${data.author} chirped: `;
       chirpBody.textContent = `${data.body}`;
-      chirpDate.textContent = `At ${moment(data.created_at).format(
-        'h:mma on dddd'
-      )}`;
+      chirpDate.textContent = `At ${new Date(
+        data.created_at
+      ).toLocaleDateString()}`;
 
       row.appendChild(chirpAuthor);
       row.appendChild(chirpBody);
@@ -72,9 +70,7 @@ fetch('/api/all', {
       const chirpDate = document.createElement('p');
       chirpAuthor.textContent = `${author} chirped: `;
       chirpBody.textContent = `${body}`;
-      chirpDate.textContent = `At ${moment(created_at).format(
-        'h:mma on dddd'
-      )}`;
+      chirpDate.textContent = `At ${new Date(created_at).toLocaleDateString()}`;
 
       row.appendChild(chirpAuthor);
       row.appendChild(chirpBody);
