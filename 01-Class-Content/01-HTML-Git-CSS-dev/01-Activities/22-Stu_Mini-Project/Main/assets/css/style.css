@@ -23,7 +23,7 @@ main {
 }
 
 li {
-  display: inline-block;
+  display: inline;
   padding: 20px;
   text-decoration: none;
 }
