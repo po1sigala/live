@@ -16,8 +16,6 @@ Refer to the documentation:
 
 [MDN Web Docs on Basic Built-in Terminal Commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-[Bash/Terminal Commands](bash-terminal-commands-cheatsheet.md)
-
 ---
 
 ## 💡 Hints
