@@ -32,6 +32,6 @@ console.log(typeof "Howdy");
 var myVariable = 33;
 console.log(typeof myVariable);
 
-// myVariable is reassigned; Logs false
+// myVariable is reassigned; Logs boolean
 myVariable = false;
 console.log(typeof myVariable);
