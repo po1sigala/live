@@ -8,7 +8,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-S
 
 ## Instructor/TA Notes
 
-* The MDN Web Docs use ES6 in their Fetch API examples, but the activities will continue to use ES5 syntax, because that is what students will be familiar with.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
 
 * Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
