@@ -65,4 +65,4 @@ Refer to the documentation:
 * How can CSS be used to apply a different style to an <a> element when a mouse hovers over it?
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

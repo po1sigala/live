@@ -14,6 +14,8 @@ Work with a partner to implement the following user story:
 
 * It's done when the portfolio list item is given a unique attribute named `portfolio`.
 
+* It's done when the existing image's `src` attribute specifies the relative path to the `image-1.jpg` file found in the `assets` directory and the `alt` attribute describes the image.  
+
 * It's done when the finished page matches the mockup below. 
 
 ## Assets
@@ -37,4 +39,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
