@@ -1,29 +1,36 @@
-# 03.5 Lesson Plan - Real-World API Application Development (10:00 AM) <!--links--> &nbsp; [⬅️](../04-Day/04-Day-LessonPlan.md) &nbsp; [➡️](../../04-Week/01-Day/01-Day-LessonPlan.md)
+# 03.5 Lesson Plan - Fetch API Review and Git Collaboration (10:00 AM) <!--links--> &nbsp; [⬅️](../04-Day/04-Day-LessonPlan.md) &nbsp; [➡️](../../04-Week/01-Day/01-Day-LessonPlan.md)
 
-## Overview
+## Overview 
 
-In this class, we will be culminating our introduction of APIs with a team-based "real-world" activity in which students create a New York Times Archive Search Application.
+In this lesson, students will review topics they've learned throughout the course so far to help prepare them for the mini-project and homework. They'll also learn how to set up a GitHub repository for collaboration and how to actually collaborate with others on an application. The purpose of this lesson is to show students how everything they've learned is used in a slightly bigger application.
 
-`Overview: Complete activities 12-16 in Unit 06`
+`Overview: Complete activities 21-27 in Unit 06`
 
 ## Instructor Notes
 
-* Today's class is composed of two parts:
+* Because today is more about review than introducing new material, the first two instructor demos and student activities will demonstrate the same application at different complexity levels. Please take a minute or two to review each variation and identify talking points of your own if you find something worth mentioning.
 
-  1. Prior to the break -- students will be completing an assortment of AJAX activities that directly lends itself to the homework.
-  2. After the break -- students will be completing a more extensive New York Times API application.
+* The two Git activities are intended to train students on collaborating with others in a single repository. If time allows, walk students through all the steps and demonstrate how it works.
 
-* Between these two priorities, the second half is the more important one as it will expose students to the process of building large-scale applications in a collaborative way. During this activity, continually walk around and help each group at whatever level they are at. The focus here is in both to help students catch up and to challenge students looking to further grow.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* Encourage paired coding. During the group activity, groups will be made up of four students -- with two students serving as the UI team and two students serving as the data team. In each of these pairs, only one member should be typing, while the other helps catch bugs and offers advice. This works well as students can help one another catch simple errors in real-time.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Note to Instructors: The API for the New York Times has been going through a series of revamps since this lesson plan was created. The concepts and routes are the same, but the the documentation interface has changed. Be prepared to be flexible.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
 ## Learning Objectives
 
-* To further build mastery of dynamic element generation and AJAX calls
+By the end of class, students will be able to:
 
-* To provide "real-world" application development scenario that requires collaborative coding
+* Reverse-engineer and learn from reviewing larger applications.
+
+* Set up their GitHub repositories for a collaborative environment.
+
+* Successfully collaborate with others in a single GitHub repository.
+
+* Build a larger-scale application that uses all their previously learned skills.
 
 ## Slides
 
@@ -31,362 +38,645 @@ N/A
 
 ## Time Tracker
 
-[3.5 Time Tracker](https://drive.google.com/open?id=1ALlADJZDEeiubfb3l-Lspa3T_XavDk3h) to help keep track of time during class.
+| Start   | #  | Activity Name                      | Duration |
+|---      |--- |---                                 |---       |
+| 10:00AM | 1  | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:10AM | 2  | Instructor Demo: Review Part One   | 0:05     |
+| 10:15AM | 3  | Student Do: Review Part One        | 0:15     |
+| 10:30AM | 4  | Instructor Review: Review Part One | 0:10     |
+| 10:40AM | 5  | Instructor Demo: Review Part Two   | 0:05     |
+| 10:45AM | 6  | Student Do: Review Part Two        | 0:15     |
+| 11:00AM | 7  | Instructor Review: Review Part Two | 0:10     |
+| 11:10AM | 8  | Instructor Demo: Git Repo Setup    | 0:05     |
+| 11:15AM | 9  | Student Do: Git Repo Setup         | 0:15     |
+| 11:30AM | 10 | Instructor Review: Git Repo Setup  | 0:10     |
+| 11:40AM | 11 | Everyone Do: Git Collaboration     | 0:20     |
+| 12:00PM | 12 | BREAK                              | 0:30     |
+| 12:30PM | 13 | Instructor Demo: Mini-Project      | 0:05     |
+| 12:35PM | 14 | Student Do: Mini-Project           | 0:60     |
+| 1:35PM  | 15 | Instructor Review: Mini-Project    | 0:10     |
+| 1:45PM  | 16 | Introduce Homework                 | 0:05     |
+| 1:50PM  | 17 | FLEX                               | 0:40     |
+| 2:00PM  | 18 | END                                | 0:00     |
 
 - - -
 
 ## Class Instruction
 
-### 1. Instructor Do: Congratulatory Monologue on Full-Stack (5 min)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-* Take a few moments at the start of class to offer students a few congratulatory words. They've undergone 3 weeks of grueling (and often frustrating) work -- and are probably feeling a bit burnt out. Re-invigorate them! Let them know that the rate of their progress is astounding! And that they've learned in just a few short weeks what a self-taught developer might have taken months to learn.
+* Welcome students to class.
 
-* Give students a few moments to ask questions. Encourage them to ask questions about anything -- code, career, anxiety. Build a rapport here!
+* Congratulate the class on how much they've learned up to this point, as their new skills in working with server-side APIs have prepared them to build more complex applications.
 
-* Once you've taken a few minutes, open up [nytarticle-search-fsf.herokuapp.com](https://nytarticle-search-fsf.herokuapp.com/) in the browser and show them what they'll be building later today.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Ask if any students are history buffs -- then ask them to give you a historic figure and the year in which they were around. Type in their name and a year-range to then pull up New York Times articles about the figure.
+  * 🙋 How have we used HTML, CSS, and JavaScript together?
 
-![NYT Application](Images/1-NYTApp.png)
+  * ☝️ We use HTML to put the page together, CSS to style the page, and JavaScript to handle any updates or changes that occur on the page.
 
-### 2. Partners Do: Random Cat Activity (10 min)
+  * 🙋 What name do we use to classify tools like Fetch, Document, Console, or even jQuery?
 
-* ...But first, we have an activity on cats.
+  * ☝️ They are all **APIs**, or **application programming interfaces**.
 
-* Slack out the following folder and instructions to students
+  * 🙋 Are these built into the JavaScript language?
 
-* **Folder:**
+  * ☝️ No, they are collections of custom JavaScript functionality designed to extend development capabilities.
 
-  * [12-CatButton/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/12-CatButton/Unsolved)
+  * 🙋 What about data? How can we use data that we don't explicitly create within an application?
 
-* **Instructions:**
+  * ☝️ We can request that data using the Fetch API and print response data to the page.
 
-  * Open the file `01-cat-button-students.html` in your browser. Then take a few moments to see what the application does.
+  * 🙋 Do we know how to do all of these things?
 
-  * Then fill in the missing comments for each line to describe what each section does.
+  * ☝️ Yes, we do!
 
-### 3. Instructor Do: Review Cat Activity (10 min)
+* Explain that we will spend today synthesizing everything we've learned up to this point so that we can see how it works in a larger application. Larger applications require more developers on a single project, so we'll also learn how to collaborate using Git and GitHub.
 
-* Take a few moments to review the Activity.
+### 2. Instructor Demo: Review Part One (5 min) 
 
-* As a suggestion: call on students to explain each line of the code back to you.
+* Open `21-Ins_Review-Part-One/index.html` in your browser and demonstrate the following:
 
-* Then comment the code in real-time.
+  * 🔑 When we search for a GitHub user, a list of their repositories and the number of repository issues appear.
 
-* Key points to discuss:
+  * 🔑 We can also filter by a specific coding language to find the most popular repos in that language.
 
-  * We're triggering an AJAX call upon button click.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * We use a hard-coded API to generate a random URL to a cat.
+  * ☝️ How would we build this?
 
-    ![2-Cats_1](Images/2-Cats_1.png)
+  * 🙋 We'll use HTML, CSS, JavaScript, and Fetch to query GitHub's API. In other words, we'll use everything we've learned so far!
 
-  * We then pass this queryURL into our AJAX call to retrieve and generate Cat images dynamically.
+* Answer any questions before proceeding to the next activity.
 
-  * You may want to point out how the `catImage` variable is being set to a generic `$("<img>")` and that jQuery will self-close this tag upon creation.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Review-Part-One/README.md`.
 
-    ![2-Cats_2](Images/2-Cats_2.png)
+### 3. Student Do: Review Part One (15 min) 
 
-  * Point out that each imageURL being generated is completely unique. This is because the API is giving us a random URL each time.
+* Direct students to the activity instructions found in `22-Stu_Review-Part-One/README.md`.
 
-  * Point out that if you enter our queryURL <http://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=cats> directly into our browser, we'll get a different JSON
-    each time.
+* Break your students into pairs that will work together on this activity.
 
-      ![2-Cats_3](Images/2-Cats_3.png)
+  ```md
+  # 📐 Add Comments to Implementation of Git It Done Application: Part One 
 
-* Slack out the solution when done reviewing.
+  Work with a partner to add comments describing the functionality of the code found in the HTML and JavaScript files in [Unsolved](./Unsolved)
 
-* Ask students if there are any remaining questions before moving onto the next activity.
+  ## 📝 Notes
 
-### 4. Partners Do: Ajax Triggered by Buttons (15 min)
+  Refer to the documentation: 
 
-* Open the file [13-ButtonTriggeredAJAX/Solved/button-triggered-ajax-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/13-ButtonTriggeredAJAX/Solved/button-triggered-ajax-solution.html) in your browser. Show students that clicking any one of the buttons triggers a series of gifs by its author to emerge.
+  [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)
 
-* Next slack out the following folder and instructions to students
+  ---
 
-* **Folder:**
+  ## 🏆 Bonus
 
-  * [13-ButtonTriggeredAJAX/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/13-ButtonTriggeredAJAX/Unsolved)
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* **Instructions:**
+  * What are some examples of open source software that we can contribute to on GitHub?
 
-  * Using the sample code you've just been given and the code comments as a guide, re-create the functionality you just observed.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  * Your final application should trigger Gifs about your celebrity/author to appear.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 5. Instructor Do: Ajax Triggered by Buttons Review (5 min)
+### 4. Instructor Review: Review Part One (10 min)  
 
-* Take a few moments to review the Activity.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* As a suggestion: call on students to explain each line of the code back to you.
+  * ☝️ How comfortable do you feel with how this application works? (Poll via Fist to Five, Slack, or Zoom)
 
-* Key points to discuss:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * Point out that the solution was much simpler than some may have thought. We basically created buttons with text inside. The key distinction here is that we used a data-attribute with the author's name. Point out that we later used the JavaScript method `$(this).attr('data-person')` to retrieve the data inside the data-attribute. Confirm that students understand this!
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-    ![3-Celebrity_1](Images/3-Celebrity_1.png)
+  * ✔️ Font Awesome icons
 
-  * Have a student remind you what `this` refers to in the code snippet below.
+  * ✔️ HTML data attributes and `.getAttribute()`
 
-    ![3-Celebrity_2](Images/3-Celebrity_2.png)
+  * ✔️ Query URL with params
 
-* Slack out the solution and the [video review](https://www.youtube.com/watch?v=K1JDUkF94cs) when done reviewing.
+* Open `22-Stu_Review-Part-One/Solved/index.html` in your IDE and explain the following: 
 
-### 6. Partners Do: Creating Elements Dynamically (15 min)
+  * 🔑 We use the library called Font Awesome to include SVG-based icons in the HTML, as shown in the following code:
 
-* Next open [14-DynamicElements/Solved/dynamic-elements-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/14-DynamicElements/Solved/dynamic-elements-solution.html)  and demonstrate the application in the browser.
+    ```html
+    <!-- In the <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-* Point out the application (similarly to the last exercise) allows you to trigger gifs about animals.
+    <!-- In the <body> -->
+    <h1 class="app-title">
+      <!-- The `<i>` element is for icons. These classes come from the Font Awesome font icon library. -->
+      <i class="fab fa-github"></i> Git it Done!
+    </h1>
+    ```
 
-* Then slack out the following folder and instructions
+  * 🔑 We use HTML data attributes on the language buttons so that we can read the value when the button is clicked to form a request in `homepage.js`, as follows:
 
-* **Folder:**
+    ```html
+    <!-- These data-attribute values will be used to search for repositories when a button is clicked. -->
+    <button data-language="javascript" class="btn">JavaScript</button>
+    <button data-language="html" class="btn">HTML</button>
+    <button data-language="css" class="btn">CSS</button>
+    ```
 
-  * [14-DynamicElements/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/14-DynamicElements/Unsolved)
+  * We create an empty HTML element to be a container to hold response data from the GitHub API, as shown in the following example:
 
+    ```html
+    <div class="col-12 col-md-8">
+      <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+      <!-- There needs to be an empty HTML element for us to write repository data to. -->
+      <div id="repos-container" class="list-group"></div>
+    </div>
+    ```
 
-* **Instructions:**
+* Open `22-Stu_Review-Part-One/Solved/assets/js/homepage.js` in your IDE and explain the following: 
 
-  * Using the comments in the code as a guide -- replicate the functionality shown to you.
+  * 🔑 We read the HTML data attributes from the buttons when we click them, as follows:
 
-  * Your completed application should trigger gifs to appear related to the animal making the sound listed in the button.
+    ```js
+    // In `homepage.js`
+    var buttonClickHandler = function (event) {
+      // `event.target` is a reference to the DOM element of what programming language button was clicked on the page
+      var language = event.target.getAttribute('data-language');
 
-### 7. Instructor Do: Creating Elements Dynamically Review (5 min)
+      // If there is no language read from the button, don't attempt to fetch repos
+      if (language) {
+        getFeaturedRepos(language);
 
-* Take a few moments to review the Activity.
+        repoContainerEl.textContent = '';
+      }
+    };
+    ```
 
-* As a suggestion: call on students to explain each line of the code back to you.
+  * 🔑 We piece together the query URL before making the API request to GitHub and add parameters as needed, as shown in the following example:
 
-* Key points to discuss:
+    ```js
+    var apiUrl = 'https://api.github.com/search/repositories?q=' + language + '+is:featured&sort=help-wanted-issues';
+    ```
 
-  * Solution required creating a for-loop that looped through the JSON objects that Giphy returned.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Then we created a `div`, text, and `img` element for each of the returned JSON objects.
+  * ☝️ What can we do if we don't completely understand this?
 
-  * These images were then appended to the HTML.
+  * 🙋 We can refer to supplemental material, read the [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api), and stick around for office hours to ask for help.
 
-    ![4-Dynamic](Images/4-Dynamic.png)
+* Answer any questions before proceeding to the next activity.
 
-* Slack out the [video review](https://www.youtube.com/watch?v=UVBmX4cZkHY) for the activity.
+### 5. Instructor Demo: Review Part Two (5 min) 
 
-### 8. Everyone Do: Reiterate Concepts (15 min)
+* Open `23-Ins_Review-Part-Two/index.html` in your browser, search for a GitHub user or select a button to display repos, and demonstrate the following:
 
-* Spend a few moments re-iterating the high-level concepts we've been discussing in class.
+  * 🔑 Now when we select one of the repositories, we're taken to a second page, where we get the list of issues for the repository.
 
-* Have students answer the following questions back to you.
+  * 🔑 We get that information by including the repository name in the URL as a parameter (i.e., `single-repo.html?repo=angular-ui/ui-grid`) and searching for that repo.
 
-* Be encouraging throughout and clarify any answers for which students may be hazy.
+* Open `23-Ins_Review-Part-Two/assets/js/homepage.js` in your IDE and explain the following:
 
-  * What is an API?
+  * We create those URLs when we write the repos to the page in the `displayRepos()` function, as shown in the following code:
+  
+    ```js
+    var repoEl = document.createElement('a');
+    repoEl.classList = 'list-item flex-row justify-space-between align-center';
+    repoEl.setAttribute('href', './single-repo.html?repo=' + repoName);
+    ```
 
-  * What does API stand for? (// Application Programming Interface )
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * What are three use-cases for APIs? (// Retrieve Data. Utilize external snippets of code. Work with hardware / physical sensors)
+  * ☝️ How would we get that information from the URL on the second page?
 
-  * What is a JSON?
+  * 🙋 We could use the browser's `location` object!
 
-  * What does JSON stand for? (// JavaScript Object Notation)
+* Answer any questions before proceeding to the next activity.
 
-  * What is the jQuery method we've been using to retrieve data from online sources? (// AJAX)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Review-Part-Two/README.md`.
 
-  * Are AJAX requests synchronous or asynchronous? Why?
+### 6. Student Do: Review Part Two (15 min) 
 
-### 9. Partners Do: Pausing Gifs (15 min)
+* Direct students to the activity instructions found in `24-Stu_Review-Part-Two/README.md`.
 
-* Open the file [15-PausingGifs/Solved/pausing-gifs-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/15-PausingGifs/Solved/pausing-gifs-solution.html) in your browser. Demonstrate that in this application you can start and pause the animation of each gif you click.
+* Break your students into pairs that will work together on this activity.
 
-* Then slack out the following folder and instructions to students.
+  ```md
+  # 📐 Add Comments to Implementation of Git It Done Application: Part Two 
 
-* **Folder:**
+  Work with a partner to add comments describing the functionality of the code found in [single.js](./Unsolved/assets/js/single.js).
 
-  * [15-PausingGifs/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/15-PausingGifs/Unsolved)
+  ## 📝 Notes
 
-* **Instructions:**
+  Refer to the documentation: 
 
-  * Using the comments provided in the code, add in the code necessary to provide stop/start animation to your application.
+  [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)
 
-### 10. Instructor Do: Review Pausing Gifs (10 min)
+  ---
 
-* Open the [15-PausingGifs/Solved/pausing-gifs-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/15-PausingGifs/Solved/pausing-gifs-solution.html) file in your editor and walk students through the solution.
+  ## 🏆 Bonus
 
-* During your discussion, be sure to point out the following:
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * That we are flipping `data-state` as though it were a toggle -- switching it on and off between `animate` and `still` whenever a click occurs.
+  * For an open source contributor, what is the significance of knowing whether an issue has an associated pull request or not?
 
-    ![5-Pause](Images/5-Pause.png)
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-### 11. Instructor Do: NYT Group Formation (10 min)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Finally, break students into groups of four (with two students from each section). Before going on break, have students sign up for a New York Times API key via the following url: <https://developer.nytimes.com/signup>. It only takes a minute to sign up, but can take up to 10 minutes for a registered API key to be emailed, so it's best to take care of this before going on break.
+### 7. Instructor Review: Review Part Two (10 min)  
 
-- - -
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 12. BREAK (30 min)
+  * ☝️ How comfortable do you feel with an application scaled out like this? (Poll via Fist to Five, Slack, or Zoom)
 
-- - -
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 13. Students Do: NYT Example Intro (15 min)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Re-introduce the NYT Article Search Application by visiting this link [nytarticle-search-fsf.herokuapp.com](https://nytarticle-search-fsf.herokuapp.com/).
+  * ✔️ URL search params
 
-* Re-walk students through the high points of the application -- namely that it allows you to search the [New York Times Article API](http://developer.nytimes.com/article_search_v2.json).
+  * ✔️ API response pagination
 
-* Then offer students the following commentary:
+  * ✔️ Nothing to display
 
-  * This is a **hard** activity to do completely right.
+* Open `24-Stu_Review-Part-Two/Solved/assets/js/single.js` in your IDE and explain the following: 
 
-  * It will require you to code quickly, efficiently divide tasks, and deal with bugs in retrospect.
+  * 🔑 We retrieve the repository name from the URL in `getRepoName()` so that we can use it in a `fetch()` request, as shown in the following code:
 
-  * It's also a really great activity for gaining mastery.
+    ```js
+    // This is coming from the URL search bar in the browser. It is what comes after the `?`.
+    var queryString = document.location.search;
+    var repoName = queryString.split('=')[1];
+    ```
 
-  * Let them know that they should be partnering in sub-pairs. With one pair working on the user interface and the second pair working on API calls.
+  * If there is no repo name in the URL, then let's send the user back to the homepage, as follows:
 
-  * Let them know that they should take honest stock of their abilities and focus on what they feel comfortable doing.
+    ```js
+    document.location.replace('./index.html');
+    ```
 
-  * Explain to students that a specific developer (or team of developers) is often designated to work on a specific feature. When working as separate teams they need to learn to communicate needs and expectations with other developers working on related features (i.e. data teams should expect text inputs from the UI team)
+  * 🔑 Because GitHub only returns 30 issues at a time, we should check whether there are more than 30 and let users know about it. As shown in the following example, GitHub alerts us with a `Link` property in the response header that gives us the next query URL, in case we want to display the next 30 issues:
 
-### 14. Students Do: NYT Example - Design and API (30 min)
+    ```js
+    // See this value in the Chrome DevTools network tab
+    if (response.headers.get('Link')) {
+      displayWarning(repo);
+    }
+    ``` 
 
-* Then slack out the first set of instructions:
+  * 🔑 If we search a repository that has no issues, instead of displaying a blank screen, we should let users know with the following code in `displayIssues()`:
 
-* **Instructions - Phase 1:**
+    ```js
+    if (issues.length === 0) {
+      issueContainerEl.textContent = 'This repo has no open issues!';
+      return;
+    }
+    ``` 
 
-  * UI Team:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Create the layout for the design above. Feel free to use Bootstrap or to do something more customized of your own.
+  * ☝️ Why would GitHub limit its API response size to 30 issues?
 
-    * Make sure to organize your code so as to have the necessary IDs.
+  * 🙋 If a server were to respond with all possible data, it could impact the performance of the request and slow down the application. 
 
-    * Incorporate text boxes for capturing User Input. Then research how to retrieve the input values in JavaScript
+  * ☝️ What can we do if we don't completely understand this?
 
-  * Data Team:
+  * 🙋 We can refer to supplemental material and stick around for office hours to ask for help.
 
-    * Do preliminary research on the [API](http://developer.nytimes.com/article_search_v2.json).
+* Answer any questions before proceeding to the next activity.
 
-    ![NYT-API](Images/NYT-API.png)
+### 8. Instructor Demo: Git Repo Setup (5 min) 
 
-    * Register for an API Key if you have not already done so.
+* Open the [React GitHub repo](https://github.com/facebook/react)&mdash;or any other repository that you don't have write access to&mdash;in your browser, and demonstrate the following:
 
-    * Understand what format the URL should look like to make an Article Call. (Hint: Use the API Console!!)
+  * 🔑 By default, we can clone anyone's repository to the machines and make as many commits as we want to the codebase.
 
-    * Experiment with console logging various fields.
+  * 🔑 However, we can't push any code back up to the repository if we don't have permission to do so.
 
-* Throughout this activity, be walking around the classroom assisting students throughout.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* From time to time, offer the below helpful HINTs to students who may be stuck.
+  * ☝️ How can we set up the repository to allow other users to contribute directly?
 
-  * All of you should be using the [API Console](http://developer.nytimes.com/article_search_v2.json#/Console/GET/articlesearch.json). The console allows you to create "test URLs". This way you can confirm that you are pinging the right URL.
+  * 🙋 GitHub has settings for that!
 
-      ![6-NYT_1](Images/6-NYT_1.png)
+* Answer any questions before proceeding to the next activity.
 
-  * For the data team, use hard-coded values whenever you can first. Then switch into "dynamic" URL construction.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `25-Stu_Git-Repo-Setup/README.md`.
 
-  * Notice that you can't actually specify the Number of Records to Retrieve on the API side -- this means that instead you will need to filter records on the JavaScript side (using For-Loops)
+### 9. Student Do: Git Repo Setup (15 min) 
 
-     ![6-NYT_2](Images/6-NYT_2.png)
+* Direct students to the activity instructions found in `25-Stu_Git-Repo-Setup/README.md`.
 
-  * Notice that the the NYT API responds with a sub-object called `response`. This means if you are using the traditional variable `response` to hold your data, you will need to reference individual entries as `response.response...`. You can avoid this if you store the object in something other than a variable called `response`.
+* Break your students into pairs that will work together on this activity. 
 
-     ![6-NYT_3](Images/6-NYT_3.png)
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Students Do: NYT Example - Coding the Logic (30 min)
+### 10. Instructor Review: Git Repo Setup (10 min)  
 
-* After time, let students know that they should be entering the second phase (Code Logic).
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Let them know that during this phase, they will likely need to work more closely together across teams.
+  * ☝️ How comfortable do you feel setting up repositories? (Poll via Fist to Five, Slack, or Zoom)
 
-* Then slack out the following instructions.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* **Instructions:**
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * UI Team:
+  * ✔️ `.gitignore` file
 
-    * Begin creating basic click events. Register the submit button
+  * ✔️ Branch protection
 
-    * Get the data from the text-boxes and store as variables.
+  * ✔️ Adding collaborators
 
-    * Experiment with creating content regions for where the article will go.
+* Open a repository that you own or create a new one on [GitHub](https://github.com) in your browser and demonstrate the following: 
 
-  * Data Team:
+  * 🔑 After creating the repository, it's best that the repository owner creates some of the boilerplate files such as the `.gitignore` file.
 
-    * Create the AJAX call needed to retrieve data then console.log all of the relevant fields.
+  * 🔑 In the repository settings, we make it so that no new code can be merged into the `main` branch without at least one other reviewer. This way, no one on a team can autonomously merge code into production.
 
-    * Incorporate various “optional parameters” (hard code these in initially).
+  * 🔑 We can also add collaborators directly by looking them up and inviting them.
 
-    * Take note of various “bugs” that appear with certain searches.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * All-Together:
-    * Display the HTML content!!
+  * ☝️ Why would we want to enforce code review?
 
-* Continue helping students throughout this process. Be prepared to help students at very different levels in the process. Look back at the solution throughout the process as needed.
+  * 🙋 All developers, no matter their intentions, are prone to errors. It's best to have at least one person look at the code before merging.
 
-### 16. Students Do: NYT Example - Bug Cases (30 min)
+  * ☝️ What can we do if we don't completely understand this?
 
-* After time, let students know that they should ideally be working on bug handling.
+  * 🙋 We can refer to supplemental material, see the [GitHub documentation on collaboration with issues and pull requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests), and stick around for office hours to ask for help.
 
-* Slack out the instructions for this section.
+* Answer any questions before proceeding to the next activity.
 
-* **Instructions:**
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Evr_Git-Collaboration/README.md`.
 
-  * UI Team:
+### 11. Everyone Do: Git Collaboration (20 min)
 
-    * Continue polishing the display of content in the HTML.
+* Open the [GitHub guide on collaboration flow](https://guides.github.com/introduction/flow/) in your browser and explain the following:
 
-    * Consider adding styling or other jQuery tricks.
+  * When multiple developers collaborate on a single project, establishing a workflow that everyone agrees on is crucial to success.
 
-    * Consider using Bootswatch and/or Font Awesome to add more visual appeal
+  * The typical workflow consists of each developer creating their own branches to work on separate parts of the application, pushing that branch up and opening a pull request, reviewing that pull request, and ultimately merging the updated code into `main`.
 
-  * Data Team:
+  * Communication around a project is as important as the actual code being written. No developer should autonomously make decisions that affect the product without the input and review of the other developers. 
 
-    * Put in a hard-effort to deal with bugs. How can you handle missing fields?
+* Direct students to the activity instructions found in `26-Evr_Git-Collaboration/README.md`.
 
-### 17. Students Do: NYT Example - Refinement and Deploy (10 min)
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* After the last phase is complete, let students know that its time to clean-up their apps and deploy them.
+* If time allows, set up this demonstration yourself, with other instructional staff or students as collaborators, and walk through the guide to demonstrate the following: 
 
-* Slack out the instructions for this section.
+  * When we want to start work on a new feature, we create a new branch, as follows:
 
-* **Instructions:**
+    ```bash
+    git checkout -b feature/awesome-feature
 
-  * All-Together:
+    # or like this...
+    git branch feature/awesome-feature
+    git checkout feature/awesome-feature
+    ```
 
-    * Deploy your app to GitHub and Github Pages!
+  * We do the work, commit and push the branch, and then open a pull request and add the collaborators as reviewers. Because we protected the `main` branch, we need someone else to review and merge for us.
 
-    * Then slack your links to your instructors + TAs
+  * The reviewers now have to look at this pull request, review the updates to the project, and either request changes or approve the pull request.
 
-* As a hint suggest students consider trying the following test-cases:
+  * When the pull request is merged to `main`, everyone should get their local branches in sync so that all updated code is in place.
 
-  * Complete Dataset: "Obama"
+* Explain that the Git and GitHub workflow is not an exact science. It's okay if merge conflicts or errors happen every once in a while. The key to smooth development processes is communication and cooperation amongst collaborators.
 
-  * Incomplete Dataset: "Bush" (missing various author and byline fields)
+* Answer any questions before students go on break.
 
-### 18. Students Do: NYT Recap / Review (10 min)
+### 12. BREAK (40 min)
 
-* Spend a few moments going around the room and having each group share at least ONE lesson they learned doing today's exercise.
+### 13. Instructor Demo: Mini-Project (5 min) 
 
-* Recap the event by explaining that today's activity should have showed you that:
+* Open `27-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-  * APIs are harder to use than you might expect;
+  * 🔑 When we search for information from the Library of Congress API, we see the results on another page.
 
-  * Working in separate teams requires careful coordination; and
+  * 🔑 We can fine-tune the search by adding a format that the Library of Congress API understands.
 
-  * Working in teams can allow you to create cleaner code (as more eyes are fixing the same bugs).
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Finally, slack students the following YouTube URL so they can watch a [video solution for the NYT App](https://www.youtube.com/watch?v=QiIlhmeGYuk).
+  * ☝️ How would we build this?
 
-### 19. END (0 mins)
+  * 🙋 By using HTML, CSS, JavaScript, and server-side APIs!
 
-### Instructor Do: Private Self-Reflection (0 min)
+* Answer any questions before allowing students to start the mini-project.
 
-Take some time on your own after class to think about the following questions. If there's anything that you're not sure how to answer, feel free to reach out to the curriculum team!
+### 14. Student Do: Mini-Project (60 min)
 
-1. How did today's class go?
-2. How did you teach it?
-3. How well do you feel you did teaching it?
-4. Why are you teaching it?
-5. Why did you teach it that way?
-6. What evidence can I collect to show my students are understanding?
-7. How will my students know they are getting it?
+* Direct students to the activity instructions found in `27-Stu_Mini-Project/README.md`.
+
+* Break your students into groups that will work together on this activity.
+
+  ```md
+  # Unit 06 Mini-Project: Library of Congress Search Tool
+
+  In this activity, you will work with a group to build an application that searches and displays results from the Library of Congress API.
+
+  ## Instructions
+
+  The completed application should meet the following criteria:
+
+  * As a user, I can submit a search query from the application to request data and receive a response from the Library of Congress.
+
+  * As a user, I can either perform a generic search for data in all formats or I can select a format in the form to help filter results.
+
+  * As a user, I can see all of the results of my search displayed on a separate page.
+
+  * As a user, I can conduct additional searches from the results page as well.
+
+  To learn about how to use this API, see the Requests section of the [Library of Congress API documentation.](https://libraryofcongress.github.io/data-exploration/)
+
+  ### The Homepage
+
+  The homepage (`index.html`) should have the following:
+
+  * A simple, well thought-out UI.
+
+  * A form with a text input field to capture a search query and an option select dropdown to capture the format of the search query. The options in the dropdown should be a list of the possible format values listed in the [Library of Congress API documentation on requests](https://libraryofcongress.github.io/data-exploration/requests.html#format).
+
+  * A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.replace()` method.
+
+  * If there is no format selected from the dropdown, the URL should look something like the following example:
+
+      ```http
+      /search-results.html?q=dogs&format=
+      ```
+
+  * If there is a format selected from the dropdown, the URL should look something like the following example:
+
+      ```http
+      /search-results.html?q=dogs&format=photos
+      ```
+
+  ### The Search Results Page
+
+  The search results page (`search-results.html`) should have and do the following:
+
+  * On page load, if there are query parameters, immediately parse them and use them in a request URL to fetch data from the Library of Congress API.
+
+  * If there is a value for the format query parameter, use the format endpoint to search for something based on the chosen format. For more information, see the [Library of Congress API documentation on the format endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#format).
+
+  * If there is no value for the format query parameter, use the search endpoint to search for all types of data. For more information, see the [Library of Congress API documentation on the search endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#search).
+
+  * The response from the API request will then be displayed on the page. It is up to you and your team to determine which data should be displayed from the overall `response` object, but you must use data from the `results` property in the `response` object. For more information, see the [Library of Congress API documentation on responses](https://libraryofcongress.github.io/data-exploration/responses.html).
+
+  * The same form from the homepage should be here as well. Instead of redirecting a user to another page, however, it will perform a search right on the page and display the new results.
+
+  ## Assets
+
+  The following image demonstrates the homepage's appearance and functionality:
+
+  ![The homepage shows a search bar that can select a format from a dropdown menu.](./Images/01-homepage.png)
+
+  The following image demonstrates the search results page's appearance and functionality:
+
+  ![The search results page displays results from a search conducted in the form on the left side of the page.](./Images/02-search-results-page.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Will every result have the same data? If not, how will we handle printing it to the page? Can the form design and functionality from the homepage be reused for the search results page?
+
+  ## 🏆 Bonus
+
+  * How can we build this application using our knowledge in Git collaboration? 
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Mini-Project  (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ The Library of Congress API documentation
+
+  * ✔️ Passing params from page to page
+
+  * ✔️ Reusing search functionality
+
+* Open `https://libraryofcongress.github.io/data-exploration/requests.html` in your browser and explain the following: 
+
+  * 🔑 We can see exactly how to use this API through their documentation. This way we can study how to create a request to multiple endpoints depending on whether there's a format or not.
+
+* Open `https://libraryofcongress.github.io/data-exploration/responses.html` in your browser and explain the following: 
+
+  * 🔑 We also must study which data returns from the API so that we can determine what should or shouldn't be displayed on the page.
+
+* Open `27-Stu_Mini-Project/Main/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 On form submission, we gather the form inputs and use them as search parameters on the search results page, as follows:
+
+    ```js
+    var searchInputVal = document.querySelector('#search-input').value;
+    var formatInputVal = document.querySelector('#format-input').value;
+
+    if (!searchInputVal) {
+      console.error('You need a search input value!');
+      return;
+    }
+
+    var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
+    ```
+
+  * As shown in the following example, we use `location.assign()` to maintain correct functionality of the Back button in the browser&mdash;which wouldn't be the case if we were to use `location.replace()`:
+
+    ```js
+    var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
+
+    location.assign(queryString);
+    ```
+
+* Open `27-Stu_Mini-Project/Main/assets/js/display-search.js` in your IDE and explain the following: 
+
+  * 🔑 On page load, we execute the `getParams()` function to retrieve the search params from the URL and use them for a `fetch()` request, as follows:
+
+    ```js
+    function getParams() {
+      var searchParamsArr = document.location.search.split('&');
+
+      var query = searchParamsArr[0].split('=').pop();
+      var format = searchParamsArr[1].split('=').pop();
+
+      searchApi(query, format);
+    }
+    ```
+
+  * 🔑 We want search functionality to occur on this page as well, so we reuse the functionality from `script.js` in `display-search.js` and modify it to make an API request, as shown in the following example:
+
+    ```js
+    function handleSearchFormSubmit(event) {
+      event.preventDefault();
+
+      var searchInputVal = document.querySelector('#search-input').value;
+      var formatInputVal = document.querySelector('#format-input').value;
+
+      if (!searchInputVal) {
+        console.error('You need a search input value!');
+        return;
+      }
+
+      searchApi(searchInputVal, formatInputVal);
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens if a search returns with no entries?
+
+  * 🙋 We print a message to the screen informing the user so that they don't think something's wrong.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Library of Congress API documentation](https://libraryofcongress.github.io/data-exploration/), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * We will build a weather application that gives us a five-day forecast.
+
+  * The previous searches also get added to the left column so that we can quickly search again.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 How to build applications that use external data.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We'll have to use HTML, CSS, JavaScript, and server-side APIs to build this. In other words, we'll bring together all of the skills we've picked up so far!
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Most applications on the web today rely on making requests to an API for data. You will be hard-pressed to find a development job that doesn't involve server-side APIs in some way.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before ending the class.
+
+### 17. FLEX (40 min)
+
+This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+Answer any questions before ending the class.
+
+### 18. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
 ### Lesson Plan Feedback
 
