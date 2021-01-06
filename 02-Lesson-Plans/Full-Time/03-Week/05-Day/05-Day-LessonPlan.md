@@ -1,4 +1,4 @@
-# 03.5 Lesson Plan - Fetch API Review and Git Collaboration (10:00 AM) <!--links--> &nbsp; [⬅️](../04-Day/04-Day-LessonPlan.md) &nbsp; [➡️](../../04-Week/01-Day/01-Day-LessonPlan.md)
+# 03.5 Full-Time Lesson Plan: Server-side APIs
 
 ## Overview 
 
@@ -7,6 +7,8 @@ In this lesson, students will review topics they've learned throughout the cours
 `Overview: Complete activities 21-27 in Unit 06`
 
 ## Instructor Notes
+
+* In this lesson, students will complete activities `21-Ins_Review-Part-One` through `27-Stu_Mini-Project`.
 
 * Because today is more about review than introducing new material, the first two instructor demos and student activities will demonstrate the same application at different complexity levels. Please take a minute or two to review each variation and identify talking points of your own if you find something worth mentioning.
 
@@ -32,10 +34,6 @@ By the end of class, students will be able to:
 
 * Build a larger-scale application that uses all their previously learned skills.
 
-## Slides
-
-N/A
-
 ## Time Tracker
 
 | Start   | #  | Activity Name                      | Duration |
@@ -57,9 +55,9 @@ N/A
 | 1:35PM  | 15 | Instructor Review: Mini-Project    | 0:10     |
 | 1:45PM  | 16 | Introduce Homework                 | 0:05     |
 | 1:50PM  | 17 | FLEX                               | 0:40     |
-| 2:00PM  | 18 | END                                | 0:00     |
+| 2:30PM  | 18 | END                                | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
@@ -444,7 +442,7 @@ N/A
 
 * Answer any questions before students go on break.
 
-### 12. BREAK (40 min)
+### 12. BREAK (30 min)
 
 ### 13. Instructor Demo: Mini-Project (5 min) 
 
@@ -663,23 +661,17 @@ N/A
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
-* Answer any questions before ending the class.
-
 ### 17. FLEX (40 min)
 
-This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
-Answer any questions before ending the class.
+* Ask the students if there is anything they would like to review from Unit 05 and 06.
+
+* Answer any questions before ending the class.
 
 ### 18. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,10 +1,12 @@
-# 03.4 Lesson Plan - fetch() continued (10:00 AM) <!--links--> &nbsp; [⬅️](../03-Day/03-Day-LessonPlan.md) &nbsp; [➡️](../05-Day/05-Day-LessonPlan.md)
+# 03.4 Full-Time Lesson Plan: Server-side APIs
 
 ## Overview
 
 * Most of today's activities pick up where you left off last time, using `fetch()` with the GitHub API. You will also introduce students to the Chrome DevTools Network tab, the `response` object, and the `document.location` Web API method.
 
 ## Instructor Notes
+
+* In this lesson, students will complete activities `09-Ins_Demo_Dynamic` through `20-Stu_Documentation_Location`.
 
 * Before class, be sure to read over the activities and try to anticipate any questions that students might have. Take a few minutes to familiarize yourself with the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) and the [Google documentation on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network).
 
@@ -16,7 +18,7 @@
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-## Class Objectives
+## Learning Objectives
 
 By the end of class, students will be able to:
 
@@ -30,9 +32,6 @@ By the end of class, students will be able to:
 
 * Use `document.location` to replace the URL in the browser.
 
-## Slides
-
-N/A
 ## Time Tracker
 
 | Start  | #   | Activity Name                                | Duration |
@@ -61,9 +60,13 @@ N/A
 | 2:00PM | 22  | FLEX                                         | 0:30     |
 | 2:30PM | 23  | END                                          | 0:00     |
   
-- - -
+---
 
-### 1. Instructor Demo: Generate Dynamic Elements. (5 min)
+## Class Instruction
+
+### 1. Instructor Demo: Generate Dynamic Elements (5 min)
+
+* Welcome students to class.
 
 * Open `09-Ins_Demo_Dynamic/index.html` in your browser and demonstrate the following:
 
@@ -224,11 +227,11 @@ N/A
 
   * 🙋 We can refer to supplemental material, read the [GitHub documentation on REST](https://docs.github.com/en/rest), and stick around for office hours to ask for help.
 
+* Answer any questions before proceeding to the next activity.
+
 ### 4. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class.
-
-* Explain that we will be building on the previous day's activities and will continue to use the Fetch API by learning how to create complex `fetch()` requests. We will also learn about some options available to help us debug fetch requests.
+* Explain that we will continue to use the Fetch API by learning how to create complex `fetch()` requests. We will also learn about some options available to help us debug fetch requests.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -292,7 +295,7 @@ N/A
 
   * 🙋 The Chrome DevTools documentation.
 
-* Reiterate that whenever students use a new library, framework, or technology, it's best to familiarize themnselves with the documentation as much as possible.
+* Reiterate that whenever students use a new library, framework, or technology, it's best to familiarize themselves with the documentation as much as possible.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Network_Activity/index.html`.
 
@@ -348,7 +351,7 @@ N/A
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel using the Network  tab? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel using the Network tab? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
@@ -368,7 +371,7 @@ N/A
 
   * 🔑 Red status codes indicate errors.
 
-    * Mention that after debugging, the `script.js` file now has a status code of 200.
+  * Mention that after debugging, the `script.js` file now has a status code of 200.
 
 * Open `12-Stu_Network_Activity/Solved/index.html` in your IDE and explain the following:
 
@@ -526,16 +529,14 @@ N/A
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response), and stick around for office hours to ask for help.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before proceeding.
 
-### #11. FLEX (20 mins)
+### 11. FLEX (20 mins)
 
-This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this unit.
 
-- - - 
 ### 12. BREAK (30 mins)
 
-- - -
 ### 13. Instructor Demo: Deconstruct Parameters (5 min) 
 
 * Open `15-Ins_Deconstruct_Parameters/index.html` in the browser and navigate to the console, demonstrating the following:
@@ -946,7 +947,7 @@ This time can be utilized for reviewing key topics learned so far in this unit.
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location), and stick around for office hours to ask for help.
 
-* Answer any questions before ending the class.
+* Answer any questions before proceeding.
 
 ### 22. FLEX (30 mins)
 
@@ -954,11 +955,9 @@ This time can be utilized for reviewing key topics learned so far in this unit.
 
 * Answer any questions before ending the class.
 
+### 23. END (0 mins)
 
-- - -
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

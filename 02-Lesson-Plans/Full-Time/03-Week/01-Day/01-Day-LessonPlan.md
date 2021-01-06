@@ -4,7 +4,7 @@
 
 In this class, we will be introducing students to the concept of DOM Manipulation using both JavaScript and jQuery.
 
-`Summary: Complete activities 01-09 in Unit 05`
+`Summary: Complete activities 01-10 in Unit 05`
 
 ## Instructor Notes
 
@@ -22,7 +22,7 @@ In this class, we will be introducing students to the concept of DOM Manipulatio
 
 ## Slides
 
-[3.1 JQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
+[3.1 jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -344,14 +344,17 @@ In this class, we will be introducing students to the concept of DOM Manipulatio
 
 * Finally, point out that students shouldn't be expecting to memorize all of the jQuery library. Point out that coding is all about understanding a general concept, and then "looking up" the exact code when needed.
 
+### 24. FLEX (15 mins)
+
 * Field any questions that remain before ending for the day
 
-### 24. END (0 mins)
+### 25. END (0 mins)
 
 - - -
 
 ### Lesson Plan Feedback
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,6 +1,8 @@
-# 03.3 Lesson Plan - Introduction to Fetch (10:00 AM) <!--links--> &nbsp; [⬅️](../02-Day/02-Day-LessonPlan.md) &nbsp; [➡️](../04-Day/04-Day-LessonPlan.md)
+# 03.3 Full-Time Lesson Plan: Server-side APIs
 
 ## Instructor Notes
+
+* In this lesson, students will complete activities `20-jQueryCalculator` in Unit 5 through `08-Stu_Parse_JSON` in Unit 6.
 
 * Students will be using Fetch today to make requests to APIs. Take a few minutes before class to get familiar with the [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
@@ -11,7 +13,8 @@
 * Students will need to refer frequently to the GitHub documentation, so be sure to have the link on hand just in case.
 
 * This is students' first exposure to server-side APIs.
-### Class Objectives
+
+### Learning Objectives
 
   * Answer conceptual problems with visualization.
 
@@ -29,11 +32,15 @@
 
   * Explain the structure of an API parameter.
   
+## Slide Deck
+
+* [Unit 06 Slide Deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+
 ## Time Tracker
 
 | Start  | #   | Activity Name                       | Duration |
 |---     |---  |---                                  |---       |
-| 10:00AM| 1   | Everyone Do: Continue Logic Building| 0:30     |
+| 10:00AM| 1   | Everyone Do: Continue Logic Building| 0:40     |
 | 10:40AM| 2   | Everyone Do: Refinement             | 0:25     |
 | 11:05AM| 3   | Instructor Do: Review Calculator    | 0:10     |
 | 11:15AM| 4   | Introduce Homework                  | 0:05     |
@@ -47,24 +54,20 @@
 | 1:05PM | 12  | Student Do: Create Fetch            | 0:15     |
 | 1:20PM | 13  | Instructor Review: Create Fetch     | 0:10     |
 | 1:30PM | 14  | Instructor Demo: Different APIs     | 0:05     |
-| 1:35PM | 15  | Student Do: Different APIs          | 0:15     |
-| 1:50PM | 16  | Instructor Review: Different APIs   | 0:10     |
-| 2:00PM | 17  | Instructor Demo: Dynamic HTML       | 0:05     |
-| 2:05PM | 18  | Student Do: Dynamic HTML            | 0:15     |
-| 2:20PM | 19  | Instructor Review: Dynamic HTML     | 0:10     |
+| 1:35PM | 15  | Student Do: Reverse APIs            | 0:15     |
+| 1:50PM | 16  | Instructor Review: Reverse APIs     | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Parse JSON         | 0:05     |
+| 2:05PM | 18  | Student Do: Parse JSON              | 0:15     |
+| 2:20PM | 19  | Instructor Review: Parse JSON       | 0:10     |
 | 2:30PM | 20  | END                                 | 0:00     |
 
 - - -
 
-### Class Objectives
+### 1. Everyone Do: Continue Logic Building (40 mins)
 
-* To introduce the concept and utility of APIs and JSON in web applications
-* To be exposed to a variety of APIs and the process for building endpoint URLs to utilize them
-* To work with the OMDb to build data-rich applications.
-* To complete the More JavaScript and jQuery Checkpoint
+* Welcome students to class.
 
-- - -
-### 1. Everyone Do: Continue Logic Building (35 mins)
+* Remind them that we will be continuing the jQuery calculator that we started in the last class.
 
 * Slack out the below objectives:
 
@@ -114,45 +117,41 @@
 
 ### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `05-Third-Party-APIs/02-Homework/Main/index.html` in your browser and demonstrate the following:
 
-  * We will build a weather application that gives us a five-day forecast.
+  * This unit's challenge is a "Work Day Scheduler". It allows us to enter tasks in hour-long increments over a 9AM to 5PM day. It also presents the user with the date and highlights the hour based on the users location.
 
-  * The previous searches also get added to the left column so that we can quickly search again.
+  * If we enter a task in one of the hour rows, we can edit it later.
+
+  * If we click the corresponding "save" button, the task will be stored in `localStorage`. 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are we learning?
+  * ☝️ What recently acquired skills will help us build this challenge?
 
-  * 🙋 How to build applications that use external data.
+  * 🙋 We can use Bootstrap for the layout and style; jQuery for the functionality; and Moment.js for the time stamp and highlights.
 
-  * ☝️ How does this project build off or extend previously learned material?
+  * ☝️ How are these skills relevant to a career in web development?
 
-  * 🙋 We'll have to use HTML, CSS, JavaScript, and server-side APIs to build this. In other words, we'll bring together all of the skills we've picked up so far!
+  * 🙋 Libraries and frameworks are widely used in both legacy and greenfield projects to leverage the work of others to quickly build, deploy and maintain our applications. 
 
-  * ☝️ How does this project relate to your career goals?
+  * ☝️ How will this challenge improve your portfolio?
 
-  * 🙋 Most applications on the web today rely on making requests to an API for data. You will be hard-pressed to find a development job that doesn't involve server-side APIs in some way.
+  * 🙋 This challenge will demonstrate knowledge of Bootstrap, jQuery, and Moment.js, three commonly used third-party APIs.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Answer any questions before proceeding to the next activity.
 
-* Answer any questions before ending the class.
+### 5. Review Unit 05 (30 mins)
 
-### 5. Review Unit 05 (40 mins)
+* This time can be utilized for reviewing key topics learned so far in this unit.
 
-* Take a moment to answer lingering questions about the mini project. Once you have answered all questions, proceed to do a review on jQuery.
+* If there were any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
 
-* If there are any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
-
-* Ask the class the following question(s) and use their answers to drive the review:
-
-  * ☝️ Are there any activities you thought were challenging and would like to spend more time going over?
+* Ask the class if there is anything they would like to review before moving on to Unit 6.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class.
-  
-* Open the [slide deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the Unit 6 [slide deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **Server-Side APIs**
 
@@ -258,7 +257,7 @@
 
   * 🙋 Most large applications rely on data coming from a server, whether from a third-party service or from another server within the organization. There's no running from server-side APIs once you enter the professional development world!
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before proceeding.
 
 ### 7. BREAK (30 mins)
 
@@ -296,80 +295,80 @@
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🐛 curl Command to GitHub API Doesn't Work
+    ```md
+    # 🐛 curl Command to GitHub API Doesn't Work
 
-  Work with a partner to resolve the following issue(s):
+    Work with a partner to resolve the following issue(s):
 
-  * As a developer, I want to use `curl` to verify a connection to the GitHub API.
+    * As a developer, I want to use `curl` to verify a connection to the GitHub API.
 
-  ## Expected Behavior
+    ## Expected Behavior
 
-  When the command `curl http://api.github.com` is run from the command line, the output includes the following data:
+    When the command `curl http://api.github.com` is run from the command line, the output includes the following data:
 
-  ```json
-  {
-    "current_user_url": "https://api.github.com/user",
-    "current_user_authorizations_html_url": "https://github.com/settings/connections/applications{/client_id}",
-    "authorizations_url": "https://api.github.com/authorizations",
-    "code_search_url": "https://api.github.com/search/code?q={query}{&page,per_page,sort,order}",
-    "commit_search_url": "https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}",
-    "emails_url": "https://api.github.com/user/emails",
-    "emojis_url": "https://api.github.com/emojis",
-    "events_url": "https://api.github.com/events",
-    "feeds_url": "https://api.github.com/feeds",
-    "followers_url": "https://api.github.com/user/followers",
-    "following_url": "https://api.github.com/user/following{/target}",
-    "gists_url": "https://api.github.com/gists{/gist_id}",
-    "hub_url": "https://api.github.com/hub",
-    "issue_search_url": "https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}",
-    "issues_url": "https://api.github.com/issues",
-    "keys_url": "https://api.github.com/user/keys",
-    "label_search_url": "https://api.github.com/search/labels?q={query}&repository_id={repository_id}{&page,per_page}",
-    "notifications_url": "https://api.github.com/notifications",
-    "organization_url": "https://api.github.com/orgs/{org}",
-    "organization_repositories_url": "https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}",
-    "organization_teams_url": "https://api.github.com/orgs/{org}/teams",
-    "public_gists_url": "https://api.github.com/gists/public",
-    "rate_limit_url": "https://api.github.com/rate_limit",
-    "repository_url": "https://api.github.com/repos/{owner}/{repo}",
-    "repository_search_url": "https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}",
-    "current_user_repositories_url": "https://api.github.com/user/repos{?type,page,per_page,sort}",
-    "starred_url": "https://api.github.com/user/starred{/owner}{/repo}",
-    "starred_gists_url": "https://api.github.com/gists/starred",
-    "user_url": "https://api.github.com/users/{user}",
-    "user_organizations_url": "https://api.github.com/user/orgs",
-    "user_repositories_url": "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}",
-    "user_search_url": "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
-  }
-  ```
+      ```json
+      {
+        "current_user_url": "https://api.github.com/user",
+        "current_user_authorizations_html_url": "https://github.com/settings/connections/applications{/client_id}",
+        "authorizations_url": "https://api.github.com/authorizations",
+        "code_search_url": "https://api.github.com/search/code?q={query}{&page,per_page,sort,order}",
+        "commit_search_url": "https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}",
+        "emails_url": "https://api.github.com/user/emails",
+        "emojis_url": "https://api.github.com/emojis",
+        "events_url": "https://api.github.com/events",
+        "feeds_url": "https://api.github.com/feeds",
+        "followers_url": "https://api.github.com/user/followers",
+        "following_url": "https://api.github.com/user/following{/target}",
+        "gists_url": "https://api.github.com/gists{/gist_id}",
+        "hub_url": "https://api.github.com/hub",
+        "issue_search_url": "https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}",
+        "issues_url": "https://api.github.com/issues",
+        "keys_url": "https://api.github.com/user/keys",
+        "label_search_url": "https://api.github.com/search/labels?q={query}&repository_id={repository_id}{&page,per_page}",
+        "notifications_url": "https://api.github.com/notifications",
+        "organization_url": "https://api.github.com/orgs/{org}",
+        "organization_repositories_url": "https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}",
+        "organization_teams_url": "https://api.github.com/orgs/{org}/teams",
+        "public_gists_url": "https://api.github.com/gists/public",
+        "rate_limit_url": "https://api.github.com/rate_limit",
+        "repository_url": "https://api.github.com/repos/{owner}/{repo}",
+        "repository_search_url": "https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}",
+        "current_user_repositories_url": "https://api.github.com/user/repos{?type,page,per_page,sort}",
+        "starred_url": "https://api.github.com/user/starred{/owner}{/repo}",
+        "starred_gists_url": "https://api.github.com/gists/starred",
+        "user_url": "https://api.github.com/users/{user}",
+        "user_organizations_url": "https://api.github.com/user/orgs",
+        "user_repositories_url": "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}",
+        "user_search_url": "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
+      }
+      ```
 
-  ## Actual Behavior
+    ## Actual Behavior
 
-  The command `curl http://api.github.com` does not print any data to the command line.
+    The command `curl http://api.github.com` does not print any data to the command line.
 
-  ## Steps to Reproduce the Problem
+    ## Steps to Reproduce the Problem
 
-  1. Open a command-line window.
+    1. Open a command-line window.
 
-  2. Type `curl http://api.github.com`.
+    2. Type `curl http://api.github.com`.
 
-  3. Press the Enter key.
+    3. Press the Enter key.
 
-  ---
+    ---
 
-  ## 💡 Hints
+    ## 💡 Hints
 
-  How might the official GitHub API documentation shed light on what the problem could be?
+    How might the official GitHub API documentation shed light on what the problem could be?
 
-  ## 🏆 Bonus
+    ## 🏆 Bonus
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+    If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    * If you wanted to save your `curl` response text to a file, how would you do so?
+      * If you wanted to save your `curl` response text to a file, how would you do so?
 
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+    Use [Google](https://www.google.com) or another search engine to research this.
+    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -563,31 +562,31 @@
 
   * There is more than one way to request data from a server-side API.
     
-    * 🔑 An `XMLHttpRequest`, or XHR for short, was the predecessor to `fetch()`. XHR requests involve much more code than a simple `fetch()`, as shown in the following code: 
+  * 🔑 An `XMLHttpRequest`, or XHR for short, was the predecessor to `fetch()`. XHR requests involve much more code than a simple `fetch()`, as shown in the following code: 
 
-      ```js
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-          console.log('XMLHttpRequest Response \n-------------');
-          console.log(xhr.response);
-        }
-      };
-      xhr.open('GET', requestUrl);
-      xhr.send();
-      ```
+    ```js
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        console.log('XMLHttpRequest Response \n-------------');
+        console.log(xhr.response);
+      }
+    };
+    xhr.open('GET', requestUrl);
+    xhr.send();
+    ```
 
-    * 🔑 AJAX is another alternative to the Fetch API. AJAX requests require the use of the third-party library jQuery to work, as shown in the following example:
-    
-      ```js
-      $.ajax({
-        url: requestUrl,
-        method: 'GET',
-      }).then(function (response) {
-        console.log('Ajax Reponse \n-------------');
-        console.log(response);
-      });
-      ```
+  * 🔑 AJAX is another alternative to the Fetch API. AJAX requests require the use of the third-party library jQuery to work, as shown in the following example:
+  
+    ```js
+    $.ajax({
+      url: requestUrl,
+      method: 'GET',
+    }).then(function (response) {
+      console.log('Ajax Reponse \n-------------');
+      console.log(response);
+    });
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -846,4 +845,11 @@
 
   * 🙋 We can refer to supplemental material, read the [GitHub documentation on the REST API](https://docs.github.com/en/rest), and stick around for office hours to ask for help.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
