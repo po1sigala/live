@@ -10,15 +10,12 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
+- [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Character Classes](#character-classes)
+- [The OR Operator](#the-or-operator)
+- [Flags](#flags)
+- [Character Escapes](#character-escapes)
 
 ## Regex Components
 
@@ -26,23 +23,17 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Quantifiers
 
-### OR Operator
-
-### Character Classes
-
-### Flags
-
-### Grouping and Capturing
+### Grouping Constructs
 
 ### Bracket Expressions
 
-### Greedy and Lazy Match
+### Character Classes
 
-### Boundaries
+### The OR Operator
 
-### Back-references
+### Flags
 
-### Look-ahead and Look-behind
+### Character Escapes
 
 ## Author
 

@@ -124,6 +124,12 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📖 [Git Guide: Shell Scripts](./01-Activities/27-Evr_Shell)
 
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial)
+
 ---
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

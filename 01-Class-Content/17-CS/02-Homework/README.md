@@ -38,7 +38,7 @@ For example, the following regular expression can be used to verify that user in
 
 Each component of this regex has a unique responsibility to make sure that a user enters an email address that begins with an unspecified number of characters preceding the `@` symbol, followed by a domain.
 
-Before you get started, watch this [introduction to regular expressions video](https://youtu.be/7DG3kCDx53c) and read this [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/javascript/regex-for-js) to learn how to identify the different components that make up a regex. If you need any additional help, there are many resources on the web. Feel free to do your own research to find one that can help you complete this assignment.
+Before you get started, watch this [introduction to regular expressions video](https://youtu.be/7DG3kCDx53c) and read this [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial) to learn how to identify the different components that make up a regex. If you need any additional help, there are many resources on the web. Feel free to do your own research to find one that can help you complete this assignment.
 
 Once you have a better understanding of what these different parts of a regular expression do, you’ll need to explain what they do for a specific regex.
 
