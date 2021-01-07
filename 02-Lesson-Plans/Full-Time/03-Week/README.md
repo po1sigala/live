@@ -31,18 +31,18 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
+## Heads Up
+
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
+
 ## Career Connection
 
 Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
-[Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
+* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
+* [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
-
-## Heads Up
-
-For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
 ## Helpful Links
 ### Lesson Plans
