@@ -12,57 +12,24 @@ Also this week we will learn the Fetch web API which can data from server-side A
 
 We'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
-### Learning Objectives
+Refer to the following links for detailed information on key topics, learning objectives and homework:
 
-* By the end of this unit, students will be able to:
+* [05-Third-Party-APIs](../../../01-Class-Content/05-Third-Party-APIs/README.md)
+* [06-Server-Side-APIs](../../../01-Class-Content/06-Server-Side-APIs/README.md)
 
-  * Explain the difference between a JavaScript library and a framework
-  * Incorporate jQuery into HTML documents via CDN and using its associated selector
-  * Perform DOM traversals to get and select elements by tag, class, and id as well as node relationship
-  * Perform DOM manipulations to add, remove, and modify elements and attributes
-  * Implement interactivity using event handlers
-  * Explain the importance of `document.ready()` and how to resolve issues related to dynamically generated HTML
-  * Explain what JSON is.
-  * Explain the methods that can be used to request data from the server.
-  * Explain the difference between a client-side and server-side API.
-  * Explain the client-server model and request-response pattern.
-  * Implement and explain the differences between making HTTP GET requests with XMLHttpRequest, jQuery AJAX, and the Fetch API.
-  * Explain HTTP response codes and handle response metadata with the Fetch API.
-  * Parse JSON to dynamically generate HTML.
-  * Explain the benefits and challenges of working with asynchronous JavaScript.
-  * Explain and implement URL query string parameters.
+## Instructor/TA Notes
 
-### Key Topics
+* In this unit's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
 
-We'll cover the following topics in this unit:
+* Starting this unit, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
 
-* jQuery
-* DOM traversal and manipulation
-* Event handling
-* this
-* data-* attributes
-* Client-server model
-* JSON format
-* URLs
-* HTTP GET requests
-* HTTP status codes
-* Fetch API
-* `curl`
-* DevTools Network tab
-* `document.location`
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
 
-### Lesson Plans
+* Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
-* [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
-* [3.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
-* [3.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
-* [3.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
-* [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
 
-### Homework Activities
-
-* [Day Planner](../../../01-Class-Content/05-Third-Party-APIs/02-Homework/README.md)
-* [Weather Dashboard](../../../01-Class-Content/06-Server-Side-APIs/02-Homework/README.MD)
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
 ## Career Connection
 
@@ -73,7 +40,41 @@ Each week students receive Career Connections in the `04-Important` folders that
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
-### Helpful Links
+## Heads Up
+
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
+
+## Helpful Links
+### Lesson Plans
+
+* [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+* [3.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+* [3.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+* [3.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+* [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+
+### Homework 
+
+* [Day Planner](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
+* [Weather Dashboard](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
+
+### Slide Decks
+
+* [03.1: jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
+* [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
+* [03.3: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+
+### Algorithms
+
+* [01: Is Palindrome](./03-Algorithms/01-is-palindrome)
+
+* [02: Factorial](./03-Algorithms/02-factorial)
+
+  * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+* [03: Title Case](./03-Algorithms/03-title-case)
+
+### Resources
 
 * [MDN: jQuery](https://developer.mozilla.org/en-US/docs/Glossary/jQuery)
 * [Wikipedia: jQuery](https://en.wikipedia.org/wiki/JQuery)
@@ -89,10 +90,3 @@ If you'd like more information on Career Services, visit the [Career Services re
 * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
 * [OpenWeather API documentation](https://openweathermap.org/api)
 
-### Slide Shows
-
-* [03.1: jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
-
-* [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
-
-* [03.3: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
