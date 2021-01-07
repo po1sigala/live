@@ -8,7 +8,7 @@ jQuery is a JavaScript library that simplifies DOM manipulation and event handli
 
 Some argue that jQuery is slowly being phased out and replaced with front-end frameworks such as React. You might not see as many job listings for jQuery developers, but it’s an important skill to master as the library is still widely used in both new and legacy code. 
 
-Also this week we will learn the Fetch web API which can data from third-party APIs, like the OpenWeather API.
+Also this week we will learn the Fetch web API which can data from server-side APIs, like the OpenWeather API.
 
 We'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
