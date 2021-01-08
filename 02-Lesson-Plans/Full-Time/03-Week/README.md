@@ -33,8 +33,6 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Career Connection
 
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
-
 * [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/Career-Connection.md).
 * [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
