@@ -74,7 +74,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
 
-* [03: Title Case](./03-Algorithms/03-title-case)
+* [03: Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
 
 ### Resources
 
