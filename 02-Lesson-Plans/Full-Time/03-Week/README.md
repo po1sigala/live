@@ -31,18 +31,18 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
-## Heads-Up
-
-For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
-
 ## Career Connection
 
 Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
+* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/Career-Connection.md).
 * [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
 ## Helpful Links
 
@@ -55,7 +55,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [3.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
 * [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-### Homework 
+### Homework
 
 * [Day Planner](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
 * [Weather Dashboard](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
@@ -77,7 +77,6 @@ Unit 05:
 * [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
 Unit 06:
-
 
 * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
