@@ -68,6 +68,17 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
+Unit 05:
+
+* [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+
+* [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+
+* [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+
+Unit 06:
+
+
 * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
 * [02: Factorial](./03-Algorithms/02-factorial)
