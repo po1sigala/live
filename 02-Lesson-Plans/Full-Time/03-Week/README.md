@@ -55,8 +55,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Homework
 
-* [Day Planner](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
-* [Weather Dashboard](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
+* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
+* [Unit 06 Homework](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
 
 ### Slide Decks
 
