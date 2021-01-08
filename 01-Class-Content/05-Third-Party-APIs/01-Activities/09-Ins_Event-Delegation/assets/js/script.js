@@ -64,7 +64,7 @@ buttonListEl.on('click', '.letter-button', function (event) {
   displayEl.append(displayLetterEl);
 });
 
-// Renders the letters on the Display button
+// Renders the letter buttons on click
 showLettersBtnEl.on('click', function () {
   // render letters
   renderLetters();
@@ -74,7 +74,7 @@ showLettersBtnEl.on('click', function () {
   clearEl.show();
 });
 
-// Clears the refrigerator of letter on click
+// Clears the message board of letters on click
 clearEl.on('click', function () {
   displayEl.empty();
 });
