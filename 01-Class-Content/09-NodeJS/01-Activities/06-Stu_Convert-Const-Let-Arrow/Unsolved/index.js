@@ -1,59 +1,49 @@
-var $root = document.querySelector("#root");
 
-var score;
-var targetScore;
+//TODO: Fix the declarations so that the function works properly.
+const addGreetingMessage = (name) => {
+  var message = "How are you?"
 
-var makeGuess = function() {
-  var $score = document.querySelector("#root p");
-  $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
-
-  if (score > targetScore) {
-    alert("You lost this round!");
-    playRound();
-  } else if (score === targetScore) {
-    alert("You won this round!");
-    playRound();
+  if(name.length > 0){
+      var message = "Hello " + name
+      console.log(message)
   }
-};
 
-var Crystal = function(color) {
-  this.element = document.createElement("div");
-  this.element.className = "crystal " + color;
-  this.value = 0;
+  console.log(message)
+}
 
-  this.element.addEventListener(
-    "click",
-    function() {
-      score += this.value;
-      makeGuess();
-    }.bind(this),
-    false
-  );
-};
+addGreetingMessage('Tammy')
 
-Crystal.prototype.render = function(target) {
-  this.value = Math.floor(Math.random() * 15) + 1;
-  target.appendChild(this.element);
-};
+//TODO: Fix the declarations so that the function works properly.
+const calloutCounter = () => {
+  const callout = 'Outside of the loop'
+  var counter = 5
 
-var crystals = [new Crystal("red"), new Crystal("blue"), new Crystal("green")];
+  while( counter > 0) {
+      var callout = 'Inside the loop';
+      console.log(counter, callout)
+      counter--
+  }
 
-var playRound = function() {
-  var fragment = document.createDocumentFragment();
-  var $score = document.createElement("p");
-  targetScore = Math.floor(Math.random() * 50) + 25;
-  score = 0;
-  $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
-  crystals
-    .sort(function() {
-      return 0.5 - Math.random();
-    })
-    .forEach(function(crystal) {
-      crystal.render(fragment);
-    });
-  fragment.appendChild($score);
-  $root.innerHTML = "";
-  $root.appendChild(fragment);
-};
+  console.log(callout);
+}
 
-playRound();
+calloutCounter()
+
+//TODO: Fix the declarations so that the function works properly.
+const countMatrix = (matrix) => {
+  for (var index = 0; index < matrix.length; index++) {
+    var line = matrix[index];
+    for (var index = 0; index < line.length; index++) {
+      var element = line[index];
+      console.log(element);
+    }
+  }
+}
+
+var matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+countMatrix(matrix);

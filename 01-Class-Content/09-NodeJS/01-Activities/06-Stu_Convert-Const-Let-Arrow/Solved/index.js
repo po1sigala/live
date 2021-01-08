@@ -1,59 +1,49 @@
-const $root = document.querySelector("#root");
 
-let score;
-let targetScore;
+//TODO: add comments
+const addGreetingMessage = (name) => {
+  let message = "How are you?"
 
-const makeGuess = () => {
-  const $score = document.querySelector("#root p");
-  $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
-
-  if (score > targetScore) {
-    alert("You lost this round!");
-    playRound();
-  } else if (score === targetScore) {
-    alert("You won this round!");
-    playRound();
+  if(name.length > 0){
+      let message = "Hello " + name
+      console.log(message)
   }
-};
 
-const Crystal = function(color) {
-  this.element = document.createElement("div");
-  this.element.className = "crystal " + color;
-  this.value = 0;
+  console.log(message)
+}
 
-  this.element.addEventListener(
-    "click",
-    () => {
-      score += this.value;
-      makeGuess();
-    },
-    false
-  );
-};
+addGreetingMessage('Tammy')
 
-Crystal.prototype.render = function(target) {
-  this.value = Math.floor(Math.random() * 15) + 1;
-  target.appendChild(this.element);
-};
+//TODO: add comments
+const calloutCounter = () => {
+  let callout = 'Outside of the loop'
+  let counter = 5
 
-const crystals = [
-  new Crystal("red"),
-  new Crystal("blue"),
-  new Crystal("green")
+  while( counter > 0) {
+      let callout = 'Inside the loop';
+      console.log(counter, callout)
+      counter--
+  }
+
+  console.log(callout);
+}
+
+calloutCounter()
+
+//TODO: add comments
+const countMatrix = (matrix) => {
+  for (let index = 0; index < matrix.length; index++) {
+    const line = matrix[index];
+    for (let index = 0; index < line.length; index++) {
+      const element = line[index];
+      console.log(element);
+    }
+  }
+}
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ];
 
-const playRound = () => {
-  const fragment = document.createDocumentFragment();
-  const $score = document.createElement("p");
-  targetScore = Math.floor(Math.random() * 50) + 25;
-  score = 0;
-  $score.textContent = "Score: " + score + " | " + "Target: " + targetScore;
-  crystals
-    .sort(() => 0.5 - Math.random())
-    .forEach(crystal => crystal.render(fragment));
-  fragment.appendChild($score);
-  $root.innerHTML = "";
-  $root.appendChild(fragment);
-};
-
-playRound();
+countMatrix(matrix);

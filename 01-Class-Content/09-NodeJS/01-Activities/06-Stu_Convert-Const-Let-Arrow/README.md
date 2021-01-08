@@ -1,27 +1,79 @@
-# 🏗️ Convert to ES6 Syntax
+# 🐛 Fix Issue With Scoped Variable
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to be able to recognize and implement newer ES6 syntax.
+* As a developer, I want my variables to be correctly scoped so that my functions work correctly.
 
-## Acceptance Criteria
+## Expected Behavior
 
-* It's done when I understand the application's functionality in `index.html` and `index.js`. 
+When a user runs the `addGreetingMessage` function, it should log the messages in the correct order inside the console.
 
-* It's done when I have converted `var` to `const` or `let` based on the use case.
+```sh
+Hello Tammy
+How are you?
+```
+When a user runs the `calloutCounter` function, it should log the messages in the correct order inside the console.
 
-* It's done when I have converted all functional expressions to arrow functions.
+```sh
+5 Inside the loop
+4 Inside the loop
+3 Inside the loop
+2 Inside the loop
+1 Inside the loop
+Outside of the loop
+```
+
+When a user runs the `countMatrix` function, it should log the entire matrix in the correct order inside the console.
+
+```sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+## Actual Behavior
+
+The current `addGreetingMessage` function logs:
+
+```sh
+Hello Tammy
+Hello Tammy
+```
+
+The current `calloutCounter` function gives us an error when it is called.
+
+The current `countMatrix` function logs:
+
+```sh
+1
+2
+3
+```
+
+## Steps to Reproduce the Problem
+
+1. Navigate to the `Unsolved` folder from the command line.
+
+2. Run `node index.js`.
+
+3. Note the error that is printed.
 
 ## 💡 Hints
 
-When is it not suitable to use arrow functions?
+What does it mean when a variable is block scope?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Take one of the previous exercises and convert it to ES6 syntax. How can you shorten arrow functions even further?
-
+* What is the difference between function scope and block scope?
+  
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
