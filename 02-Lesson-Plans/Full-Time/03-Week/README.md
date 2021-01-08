@@ -31,7 +31,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
-## Heads Up
+## Heads-Up
 
 For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
@@ -89,4 +89,3 @@ If you'd like more information on Career Services, visit the [Career Services re
 * [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
 * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
 * [OpenWeather API documentation](https://openweathermap.org/api)
-
