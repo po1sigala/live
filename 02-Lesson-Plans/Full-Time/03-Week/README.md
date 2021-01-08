@@ -45,6 +45,8 @@ Each week students receive Career Connections in the `04-Important` folders that
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Helpful Links
+
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
 ### Lesson Plans
 
 * [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
