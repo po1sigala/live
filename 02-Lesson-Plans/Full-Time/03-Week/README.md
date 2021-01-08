@@ -81,7 +81,7 @@ Unit 06:
 
 * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
-* [02: Factorial](./03-Algorithms/02-factorial)
+* [02: Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
 
   * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
 
