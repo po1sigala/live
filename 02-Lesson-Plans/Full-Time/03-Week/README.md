@@ -40,7 +40,7 @@ For the next two units, students will work on their first group project. Groups 
 Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
 * [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
-* [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
+* [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
