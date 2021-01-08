@@ -68,7 +68,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-* [01: Is Palindrome](./03-Algorithms/01-is-palindrome)
+* [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
 * [02: Factorial](./03-Algorithms/02-factorial)
 
