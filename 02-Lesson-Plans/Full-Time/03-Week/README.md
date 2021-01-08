@@ -33,7 +33,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Career Connection
 
-* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/Career-Connection.md).
+* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
 * [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
