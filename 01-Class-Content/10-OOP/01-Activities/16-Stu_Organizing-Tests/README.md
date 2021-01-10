@@ -1,6 +1,12 @@
-# 📐 Add Comments to Implementation of an Arrange Act Assert Pattern
+# 📐 Add Comments to Implementation of an Arrange, Act, Assert Pattern
 
 Work with a partner to add comments describing the functionality of the code found in [Unsolved/test](./Unsolved/test).
+
+## 📝 Notes
+
+Refer to the documentation:
+
+@TODO Add documentation?
 
 ---
 
