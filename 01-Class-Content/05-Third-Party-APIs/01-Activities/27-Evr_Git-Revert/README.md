@@ -104,7 +104,7 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
   git commit -m 'added Sortable interaction'
   ```
 
-* In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image
+* In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image:
 
   ![The log shows all 4 commits.](Images/01-git-log.png)
 
@@ -112,7 +112,7 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 
 * `git revert` requires a commit reference and will not execute without one. We can choose which commit to revert to by using the commit hash. A commit hash is the unique string of letters and numbers assigned to each commit. We can find the commit hash associated with the `Sortable` interaction in the `git log`.
 
-* Once we find the correct commit hash, we can use the git command, `git revert <commit hash>`. It should look something like this:
+* Once we find the correct commit hash, we can copy the commit hash and use it in the git command, `git revert <commit hash>`. It should look something like this:
 
 ```bash
 git revert 601e2affb5fca3addd898cb09ef950c562338823
@@ -138,7 +138,7 @@ git revert 601e2affb5fca3addd898cb09ef950c562338823
 
 * When we run `git log`, we can see the automatically generated commit messages for both of our revert commands.
 
-![Git log after reverting sortable interaction commit](Images/03-git-revert-both-commits.png)
+![Git log after reverting to HEAD](Images/03-git-revert-both-commits.png)
 
 * Check the `script.js` file to see if the `Sortable` interaction has been added back into our code.
 
