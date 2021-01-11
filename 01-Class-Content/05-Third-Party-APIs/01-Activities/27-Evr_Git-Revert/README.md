@@ -104,37 +104,43 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
   git commit -m 'added Sortable interaction'
   ```
 
-* In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image
+* In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image:
 
-  ![The log shows all 4 commits.](Images/01-Git-log-4-commits.png)
+  ![The log shows all 4 commits.](Images/01-git-log.png)
 
 * Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can use the git command `git revert`.
 
-* `git revert` requires a commit reference and will not execute without one. Pass in the `HEAD` which will revert the latest commit, as follows:
+* `git revert` requires a commit reference and will not execute without one. We can choose which commit to revert to by using the commit hash. A commit hash is the unique string of letters and numbers assigned to each commit. We can find the commit hash associated with the `Sortable` interaction in the `git log`.
+
+* Once we find the correct commit hash, we can copy the commit hash and use it in the git command, `git revert <commit hash>`. It should look something like this:
+
+```bash
+git revert 601e2affb5fca3addd898cb09ef950c562338823
+```
+
+* This will create a new commit, which will open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
+
+* We can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
+
+  ![Git log after reverting sortable interaction commit](Images/02-git-revert-log.png)
+
+* Check the `script.js` file to see if the `Sortable` interaction is no longer there.
+
+* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful option is to pass in the `HEAD` which will revert the latest commit, as follows:
 
   ```bash
   git revert HEAD
   ```
 
-* This will create a new commit, which will open the commit message editor prompting for a new commit message. When Git is finished, we can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
+* To test it, let's say that we changed our minds again and want to add the `Sortable` interaction back into our code. 
 
-  ![Git log after reverting sortable interaction commit](Images/02-Git-log-revert-sortable-interaction.png)
+* In your terminal, run `git revert HEAD`. This action creates another new commit, which will again open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
-* Check the `script.js` file to see if the `Sortable` interaction is no longer there.
+* When we run `git log`, we can see the automatically generated commit messages for both of our revert commands.
 
-* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful one is the `--no-edit` option. This will not open the commit message editor and will automatically write a commit message for you.
+![Git log after reverting to HEAD](Images/03-git-revert-both-commits.png)
 
-* To test it, let's say that we want to revert the `added Autocomplete widget` commit. 
-
-* In your terminal, run `git log` and make note of the commit number for the `added Autocomplete widget` commit.
-
-* Use the `--no-edit` option in the `git revert` command, as follows:
-
-  ```bash
-  git revert --no-edit <add commit number>
-  ```
-
-* When we run `git log`, we can see the automatically generated commit message `Revert "added Autocomplete widget"` and when we check the `script.js` file, the widget is no longer there.
+* Check the `script.js` file to see if the `Sortable` interaction has been added back into our code.
 
 ### Hints
 
