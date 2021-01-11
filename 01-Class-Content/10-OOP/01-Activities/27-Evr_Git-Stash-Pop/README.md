@@ -1,20 +1,14 @@
 # Git Stash
 
-As a developer you have been using Git for some time. We have been adding tools to our belt every week, and this week is no different. In this unit, we will be discussing the very useful `git stash` feature.
+You've been using Git for some time now, adding new tools to your Git skills each week. Now you'll learn how to take advantage of the useful `git stash` feature.
 
-Imagine you are working on a project implementing a sign up component for your web app. Your manager interrupts you and asks you to stop what you are doing and add a notification to the home page. This requires checking out a different feature branch. You are now presented with a problem where you don't want to commit your half-completed work on the sign up page, but you also want to avoid any errors by trying to check out a different branch with unsaved changes. This is where `git stash` comes in handy.
+Imagine that you're busy implementing a sign-up component on your team's web application when your manager asks you to stop what you're doing and add a notification to the homepage. You'll need to checkout to a different feature branch to change tasks, but you don't want to commit your half-completed work on the sign-up page. You also don't want to cause any errors by trying to checkout to a different branch with unsaved changes. 
 
-You might be wondering what `git stash` is, or maybe you have used it already. Either way, let's take a look at the official definition:
+That's where `git stash` comes in! As the name suggests, this command adds your uncommited changes to a stash that you can access later. This stash is stored locally on your machine and doesn't get pushed up to Github or any other version control system.
 
-```text
-git-stash - Stash the changes in a dirty working directory away
-```
+## Use git stash in a Demo
 
-This means your uncommitted changes will get added to a stack which you can then apply later. The stack that it gets applied to is stored locally on your machine and doesn't get pushed up to Github or any other version control system.
-
-## Git Stash Example
-
-**Reminder**: If you haven't already, please change your default branch name to "main" with the following command before beginning this activity:
+**Important:** If you haven't done so already, change your default branch name to `main` with the following command:
 
 ```sh
 git config --global init.defaultBranch main
@@ -63,7 +57,7 @@ Notice that we don't have a `newFile.js` file in `main`, so let's create one wit
 touch newFile.js
 ```
 
-Let's say we're not ready to commit this file to `main` yet, but we need to switch to the `dev` branch again. Try to do so with the following command:
+Let's say that we're not ready to commit this file to `main` yet, but we need to switch to the `dev` branch again. Try to do so with the following command:
 
 ```sh
 git checkout dev
@@ -79,14 +73,14 @@ Aborting
 
 This happens because we have a conflicting file (`newFile.js`) that would be overwritten by the checkout. If we were to commit `newFile.js`, then Git would know to swap them out, but we're not ready to commit yet.
 
-This is when we can use `git stash` to put away our changes so that we can checkout the `dev` branch. Run the following commands to see what happens:
+We will use `git stash` to put away our changes so that we can checkout the `dev` branch. Run the following commands to discover what happens:
 
 ```sh
 git stash -u
 ls
 ```
 
-The `-u` flag tells Git to include untracked files in our stash. `newFile.js` has now been put away. This means we can safely checkout to `dev` with the following command:
+The `-u` flag tells Git to include untracked files in our stash. `newFile.js` has now been put away, so we can safely checkout to `dev` with the following command:
 
 ```sh
 git checkout dev
@@ -101,12 +95,16 @@ git stash pop
 
 The command `git stash pop` will pull the latest stash off the stack and reapply its changes. Other useful `stash` commands include the following:
 
-  * `git stash drop` - Delete the latest stash from the stack
+  * `git stash drop`&mdash;Delete the latest stash from the stack.
 
-  * `git stash apply` - Apply your stashed changes, but also keep a copy in the stack
+  * `git stash apply`&mdash;Apply your stashed changes, but also keep a copy in the stack.
 
-  * `git stash clear` - Clear all stashed entries from the stack
+  * `git stash clear`&mdash;Clear all stashed entries from the stack.
 
 ## Review
 
-You have used the `git stash` command to set aside some untracked files so that you could checkout a different branch. The most common use case for the `stash` command will likely be when you are working with a group and performing a `git pull`. Armed with some additional knowledge you should be ready to use this powerful command.
+Nice work! You've used the `git stash` command to set aside some untracked files so that you could checkout to a different branch. The most common use case for the `stash` command will likely be when you're working with a group and performing a `git pull`. Now you're ready to use this powerful command.
+
+---
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

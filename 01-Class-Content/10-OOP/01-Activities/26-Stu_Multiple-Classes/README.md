@@ -1,6 +1,6 @@
-# 🐛 Store class not functioning correctly
+# 🐛 Store Class Not Functioning Correctly
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * The `Store` class should have the functionality to process sales and replenish their stock.
 
@@ -12,7 +12,7 @@ Work with a partner to resolve the following issue(s):
 
 * When I run `npm test`, all of the tests should pass.
 
-* When I run `npm start`, I should see messages logged in the console stating that the "Rare Toy" went out of stock but was replenished.
+* When I run `npm start`, I should see messages logged in the console stating that the rare toy went out of stock but was replenished.
 
 * When I run `npm start`, I should see the store revenue at `80.95` at the end of all the transactions.
 
@@ -20,7 +20,7 @@ Work with a partner to resolve the following issue(s):
 
 * When I run `npm test`, all of the tests fail.
 
-* When I run `npm start`, I see that the "Rare Toy" never goes out of stock.
+* When I run `npm start`, I see that the rare toy never goes out of stock.
 
 * When I run `npm start`, I see the store revenue at `0` at the end of all the transactions.
 
@@ -34,33 +34,32 @@ Work with a partner to resolve the following issue(s):
 
 ## Assets
 
-The following demonstrates the expected transactions of the store logged in the console:
+The following example demonstrates the expected transactions of the store logged in the console:
 
-```sh
-Welcome to Big Als Toy Barn!
-Purchased Action Figure for 14.99
-Purchased Action Figure for 14.99
-Purchased Rare Toy for 17.99
-Purchased Action Figure for 14.99
-Sorry, Rare Toy is out of stock!
-Replenished Rare Toy by 2
-Purchased Rare Toy for 17.99
-The revenue so far is 80.95
-```
+  Welcome to Big Als Toy Barn!
+  Purchased Action Figure for 14.99
+  Purchased Action Figure for 14.99
+  Purchased Rare Toy for 17.99
+  Purchased Action Figure for 14.99
+  Sorry, Rare Toy is out of stock!
+  Replenished Rare Toy by 2
+  Purchased Rare Toy for 17.99
+  The revenue so far is 80.95
+
 ---
 
 ## 💡 Hints
 
-* What do the tests in [store.test.js](./Unsolved/test/store.test.js) tell you about the expected functionality of the `Store` class?
+What do the tests in [store.test.js](./Unsolved/test/store.test.js) tell you about the expected functionality of the `Store` class?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is the `static` keyword and when would we use static methods?
+* What is the `static` keyword, and when would we use static methods?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
