@@ -1,24 +1,26 @@
-# 🐛 Password generator returns a single character only on double-click
+# 🐛 Password generator doesn't work on single-click
 
 Work with a partner to resolve the following issues:
 
-* As a user, I should be able to click the Generate Password button only once to retrieve the password, not twice.
+* As a user, I should be able to click the "Generate Password" button.
+
+* As a user, I should be able to single-click the "Generate Password" button to generate a new password.
 
 * As a user, I should be able to generate a 15-character password upon click. 
 
 ## Expected Behavior
 
-When a user clicks the Generate Password button once, a 15-character password is printed to the page.
+When a user single-clicks the "Generate Password" button, a 15-character password is printed to the page.
 
 ## Actual Behavior
 
-When a user double-clicks the Generate Password button, a two-character password is printed to the page.
+When a user clicks the "Generate Password" button, nothing happens.
 
 ## Steps to Reproduce the Problem
 
-1. Click on the Generate Password button once to see that nothing happens.
+1. Open `index.html` in the browser.
 
-2. Double-click on the Generate Password button, and a single character password is printed on the page.
+2. Click on the "Generate Password" button to see that nothing happens.
 
 ## Assets
 
@@ -30,7 +32,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hint 
 
-* Research the [jQuery docs on events listeners](https://api.jquery.com/category/events/) to find the method that will provide the operation we require.
+* How can we ensure that our HTML elements have the correct event listeners attached to them?
   
 ## 🏆 Bonus 
 
