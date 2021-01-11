@@ -14,7 +14,7 @@ When a user single-clicks the "Generate Password" button, a 15-character passwor
 
 ## Actual Behavior
 
-When a user clicks the "Generate Password" button, nothing happens.
+When a user single-clicks the "Generate Password" button, nothing happens.
 
 ## Steps to Reproduce the Problem
 
