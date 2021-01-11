@@ -108,13 +108,15 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 
   ![The log shows all 4 commits.](Images/01-git-log.png)
 
-* Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can choose which commit to revert to with the git command `git revert <command hash>`. A git command hash is the long string of letters and numbers assigned to each commit and we can find it in the `git log`.
+* Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can use the git command `git revert`.
 
-* `git revert` requires a commit reference and will not execute without one. Pass in the `HEAD` which will revert the latest commit, as follows:
+* `git revert` requires a commit reference and will not execute without one. We can choose which commit to revert to by using the commit hash. A commit hash is the unique string of letters and numbers assigned to each commit. We can find the commit hash associated with the `Sortable` interaction in the `git log`.
 
-  ```bash
-  git revert HEAD
-  ```
+* Once we find the correct commit hash, we can use the git command, `git revert <commit hash>`. It should look something like this:
+
+```bash
+git revert 601e2affb5fca3addd898cb09ef950c562338823
+```
 
 * This will create a new commit, which will open the commit message editor prompting for a new commit message. When Git is finished, we can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
 
@@ -122,9 +124,13 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 
 * Check the `script.js` file to see if the `Sortable` interaction is no longer there.
 
-* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful one is the `--no-edit` option. This will not open the commit message editor and will automatically write a commit message for you.
+* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful option is to pass in the `HEAD` which will revert the latest commit, as follows:
 
-* To test it, let's say that we want to revert the `added Autocomplete widget` commit. 
+  ```bash
+  git revert HEAD
+  ```
+
+* To test it, let's say that we changed our minds again and want to add the `Sortable` interaction back into our code. 
 
 * In your terminal, run `git log` and make note of the commit number for the `added Autocomplete widget` commit.
 
