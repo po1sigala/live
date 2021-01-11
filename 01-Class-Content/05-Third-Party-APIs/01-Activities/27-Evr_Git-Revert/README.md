@@ -118,9 +118,11 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 git revert 601e2affb5fca3addd898cb09ef950c562338823
 ```
 
-* This will create a new commit, which will open the commit message editor prompting for a new commit message. When Git is finished, we can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
+* This will create a new commit, which will open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
-  ![Git log after reverting sortable interaction commit](Images/02-Git-log-revert-sortable-interaction.png)
+* We can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
+
+  ![Git log after reverting sortable interaction commit](Images/02-git-revert-log.png)
 
 * Check the `script.js` file to see if the `Sortable` interaction is no longer there.
 
@@ -132,13 +134,7 @@ git revert 601e2affb5fca3addd898cb09ef950c562338823
 
 * To test it, let's say that we changed our minds again and want to add the `Sortable` interaction back into our code. 
 
-* In your terminal, run `git log` and make note of the commit number for the `added Autocomplete widget` commit.
-
-* Use the `--no-edit` option in the `git revert` command, as follows:
-
-  ```bash
-  git revert --no-edit <add commit number>
-  ```
+* In your terminal, run `git revert HEAD`. This action creates another new commit, which will again open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
 * When we run `git log`, we can see the automatically generated commit message `Revert "added Autocomplete widget"` and when we check the `script.js` file, the widget is no longer there.
 
