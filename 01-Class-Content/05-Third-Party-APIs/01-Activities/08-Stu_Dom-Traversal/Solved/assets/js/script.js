@@ -18,6 +18,6 @@ rowThree.first().text('O');
 // Alternatively: rowThree.eq(0).text("O");
 
 // Starting from the bottom row, middle square or `.item-c2`, what is the statement that will win the game using "O"
-$('.item-c2').closest('main').children().children().eq(0).text('O');
+$('.item-b3').closest('main').children().children().eq(0).text('O');
 // Alternatively go up each parent, one level at a time
-// $(".item-c2").parent().parent().children().children().first().text("O");
+// $(".item-b3").parent().parent().children().children().first().text("O");

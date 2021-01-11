@@ -7,11 +7,11 @@ var authorEl = $('<p>');
 // Add text to the author element
 authorEl.text('~ Carol Dweck');
 
-// Create a `<h1>` element and assign to new variable
-var quoteEl = $('<h1>');
-
 // Add the class `plain` to the author element
 authorEl.addClass('plain');
+
+// Create a `<h1>` element and assign to new variable
+var quoteEl = $('<h1>');
 
 // Add a meaningful quote to the quote element
 quoteEl.text(
@@ -21,8 +21,8 @@ quoteEl.text(
 // Apply the class `fancy` to the quote element
 quoteEl.attr('class', 'fancy');
 
-// Append the quote element to the page
-rootEl.append(quoteEl);
-
 // Attach the author element to the quote element
 quoteEl.append(authorEl);
+
+// Append the quote element to the page
+rootEl.append(quoteEl);
