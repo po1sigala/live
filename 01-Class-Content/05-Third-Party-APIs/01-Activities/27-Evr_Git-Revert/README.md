@@ -106,9 +106,9 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 
 * In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image
 
-  ![The log shows all 4 commits.](Images/01-Git-log-4-commits.png)
+  ![The log shows all 4 commits.](Images/01-git-log.png)
 
-* Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can use the git command `git revert`.
+* Let's say the `Sortable` interaction was a mistake and we want to revert back to before we made that commit. We can choose which commit to revert to with the git command `git revert <command hash>`. A git command hash is the long string of letters and numbers assigned to each commit and we can find it in the `git log`.
 
 * `git revert` requires a commit reference and will not execute without one. Pass in the `HEAD` which will revert the latest commit, as follows:
 
