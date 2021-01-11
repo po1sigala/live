@@ -1,4 +1,4 @@
-#  Instructor Demo: Git (5 min) 
+#  Instructor Demo: Git
 
 * It is important to be able to store and manage code as well as share it with others. In this class, we will be using a tool called Github. 
 
@@ -32,13 +32,13 @@
   git clone <url>
   ```
 
-  * 🔑 The `git clone` command creates a new directory. We navigate into our new directory using `cd`.
+  * 🔑 The `git clone` command creates a new directory with the same name as the repository. We navigate into our new directory using `cd`.
 
   ```bash
   cd first-day-demo
   ```
 
-  * 🔑 We add an HTML file to our repo using `touch`.
+  * 🔑 We add an HTML file to our local repo using `touch`.
 
   ```bash
   touch index.html
@@ -50,7 +50,7 @@
   git add .
   ```
 
-  * 🔑 To commit our changes, we use `git commit -m` and add a message. 
+  * 🔑 To commit our changes, we use `git commit -m` with a commit message. 
 
   ```bash
   git commit -m "First commit"
@@ -68,6 +68,5 @@
   git pull origin main
   ```
 
-
 ---
- © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
