@@ -136,7 +136,11 @@ git revert 601e2affb5fca3addd898cb09ef950c562338823
 
 * In your terminal, run `git revert HEAD`. This action creates another new commit, which will again open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
-* When we run `git log`, we can see the automatically generated commit message `Revert "added Autocomplete widget"` and when we check the `script.js` file, the widget is no longer there.
+* When we run `git log`, we can see the automatically generated commit messages for both of our revert commands.
+
+![Git log after reverting sortable interaction commit](Images/03-git-revert-both-commits.png)
+
+* Check the `script.js` file to see if the `Sortable` interaction has been added back into our code.
 
 ### Hints
 
