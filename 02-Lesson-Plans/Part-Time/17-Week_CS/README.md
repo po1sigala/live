@@ -2,27 +2,27 @@
 
 ## Overview
 
-In this unit we will take a look at how computer science relates to JavaScript in order to prepare students for the technical interview. This will be a departure from the normal curriculum in that it will be concept heavy.
+In this unit, we will explore how computer science relates to JavaScript in order to prepare students for technical interviews. This will be a more concept-dense unit than students are used to.
 
-On days one and two, we will pick apart JavaScript and learn how our code executes at a granular level. We'll also learn about the fascinating behavior of closures and how we can leverage them in our own code. Finally, we will compare inheritance vs composition when we design our applications. 
+In the first two lessons, we will dissect JavaScript and review how code executes at a granular level. We'll also learn about closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design. 
 
-On the final day, we will take a look at search algorithms and how recursion works in JavaScript. For the mini project, students will have the opportunity to practice a mock interview with their peers. This is to get students familiar with how the technical interview process works when applying for web developer job. These topics are commonly found on technical interviews since they are foundational to improving code performance.
+In the final lesson, we will review search algorithms and recursion in JavaScript. For the mini-project, students will practice a mock interview for a web developer job with their peers in order to become familiar with the technical interview process. They'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* On Day 1, we'll explain the JavaScript execution and data structures. Review concepts related to [execution context vs scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain the JavaScript execution you will need to be familiar with terminology such as the thread of execution, execution context, scope chain, event loop, callback queue, and the call stack.
+* On Day 1, we will explain JavaScript execution and data structures. To prepare, review concepts related to [execution context vss scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
 
-* There are a few activities that use a testing library to debug or build code. The first day moves fluidly between the browser and Node.js so remind yourself when to `npm install` to run the test suites. 
+* A few activities use a testing library to debug or build code. Day 1 moves fluidly between the browser and Node.js, so remind yourself when to use `npm install` to run the test suites. 
 
-* On Day 2, the advanced JavaScript concepts include closures, classes, and function factories. Due to the nature of this topic, students may have some difficulty understanding these concepts. Try to review these subjects so you are prepared for questions regarding terms such as lexical environment, composition, and inheritance. Always encourage students to have patience and let them know the best way to understand these topics is coding practice. 
+* On Day 2, the advanced JavaScript concepts include closures, classes, and function factories. Due to the conceptual nature of this topic, students may have some difficulty understanding these concepts. Take some time to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Always encourage students to be patient, and let them know that the best way to understand these topics is through coding practice. 
 
-* On Day 3, we will learn about algorithms. Review the common algorithms located in the [Resources](###Resources) section. Students may struggle to understand some of the algorithms but encourage patience, practice, asking questions, and seeking resources.
+* On Day 3, we will learn about algorithms. Review the common algorithms located in the [Resources](###Resources) section. Students may struggle to understand some of the algorithms, so encourage patience, practice, asking questions, and seeking resources.
 
-* For the mini-project, this is a departure from past projects since it will be an interactive mock interview. Encourage students to take the interview seriously. The main objective is for students to practice technical communication. Be sure to check on students frequently to motivate them. Try to add a personal story about the technical interview process if possible.
+* The mini-project is a departure from past projects, because it is an interactive mock interview. Encourage students to take the interview seriously. The main objective is for students to practice technical communication. Be sure to check on students frequently to motivate them. Try to add a personal story about the technical interview process if possible.
 
-* If the students struggle with the `bash shell` activity, `27-Evr_Shell`, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If students struggle with the `bash shell` activity, `27-Evr_Shell`, walk through it with them using the talking points provided. Otherwise, support the students as they work on the activity and do a brief review at the end. 
 
 ## Career Connection
 
@@ -32,7 +32,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Heads-Up
 
-Next unit, we will be return to the back-end and learn about `NoSQL` databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will touch on why we might use `NoSQL` for our application.
+In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will touch on why we might use NoSQL for our application.
 
 ## Helpful Links
 
@@ -50,9 +50,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Unit 17 Homework](../../../01-Class-Content/17-CS/02-Homework)
 
-### Slide Decks
+### Slide Deck
 
-  * [Unit 17: Computer Science For JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
+  * [Unit 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
 
 ### Algorithms
 
@@ -64,7 +64,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
     * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
-* [03: Reverse In Place](./03-Algorithms/03-reverse-in-place)
+* [03: Reverse in Place](./03-Algorithms/03-reverse-in-place)
 
 ### Resources
 

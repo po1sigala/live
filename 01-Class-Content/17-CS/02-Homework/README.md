@@ -28,7 +28,7 @@ WHEN I reach the end of the tutorial
 THEN I find a section about the author and a link to the author’s GitHub profile
 ```
 
-## What is a Regex?
+## What Is a Regex?
 
 A **regex**, which is short for **regular expression**, is a sequence of characters that defines a specific search pattern. When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input. 
 
@@ -42,33 +42,31 @@ Before you get started, watch this [introduction to regular expressions video](h
 
 Once you have a better understanding of what these different parts of a regular expression do, you’ll need to explain what they do for a specific regex.
 
-You can choose one of the following regular expressions or you can choose one that you found on your own (with the exception of the one that is covered in the Regex Tutorial blog post linked above, Matching a Username):
+You can choose one of the following regular expressions or you can choose one that you found on your own (with the exception of the one that is covered in the [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial):
 
-* Matching a Hex Value &ndash; `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+* Matching a Hex Value: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-* Matching an Email &ndash; `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+* Matching an Email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
-* Matching a URL &ndash; `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
+* Matching a URL: `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
 
-* Matching an HTML Tag &ndash; `/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/`
-
+* Matching an HTML Tag: `/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/`
 
 ## Getting Started
 
-Instead of creating a repository, you’ll publish a GitHub **gist**. GitHub describes a gist as a simple way to share code snippets with others. It’s also an ideal way to demonstrate a technique, teach a principle, or show off a solution. It functions just like a repository, and you’ll use Markdown to create it, just as you do with your READMEs. Gists can include code, images, links, and anything else you can include in a README.
+Instead of creating a repository, you’ll publish a GitHub gist. GitHub describes a **gist** as a simple way to share code snippets with others. It’s also an ideal way to demonstrate a technique, teach a principle, or show off a solution. It functions just like a repository, and you’ll use Markdown to create it, just as you do with your READMEs. Gists can include code, images, links, and anything else you can include in a README.
 
-After you’ve downloaded the starter code, learn [how to create a gist](https://help.github.com/en/github/writing-on-github/creating-gists). You can also watch this video on [how to use gists](https://www.youtube.com/watch?v=wc2NlcWjQHw).
+After you’ve downloaded the starter code, learn [how to create a gist](https://help.github.com/en/github/writing-on-github/creating-gists). You can also watch this [video on how to use gists](https://www.youtube.com/watch?v=wc2NlcWjQHw).
 
-**Note**: Make sure to create a **public** gist.
+> **Note**: Make sure to create a **public** gist.
 
 The starter code is a template with a title, introductory paragraph, summary, and table of contents. The table of contents should link to sections of the tutorial that describe the functionality of each component in the regex. Be sure to rename the template to a unique name that describes your tutorial.
 
-**Note**: The regular expression that you choose may not include all of the components outlined in the starter code. After you’ve finished your walkthrough, you can remove any sections that you didn’t use.
+> **Note**: The regular expression that you choose might not include all of the components outlined in the starter code. After you’ve finished your walkthrough, you can remove any sections that you didn’t use.
 
 Each section that describes a component should include more than just one sentence explaining what it does. It should also include a code snippet of that particular component and some examples that meet the requirements of that component.
 
-**Important**: Make revisions to your gist in the GitHub gist UI. This will create a revision history that graders can use to verify that the tutorial content is yours.
-
+> **Important**: Make revisions to your gist in the GitHub gist UI. This will create a revision history that graders can use to verify that the tutorial content is yours.
 
 ## Grading Requirements
 
@@ -86,7 +84,7 @@ This homework is graded based on the following criteria:
 
     * Revisions to the tutorial must be made in the GitHub gist UI so that graders have access to your revision history.
 
-    * The tutorial must cover either one of the regex examples listed above or another of your choice. You may NOT use the regex covered in the Regex Tutorial blog post (Matching a Username).
+    * The tutorial must cover either one of the regex examples listed above or another of your choice. You may NOT use the regex covered in the [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial).
 
     * The tutorial must include sections that correspond to each of the components that make up the regex. You may not need to use all of the sections included in the starter code, but you should include all of the sections that correspond to the different components of the regex you chose.
 
@@ -100,8 +98,7 @@ This homework is graded based on the following criteria:
 
 * Tutorial provides a clear explanation of how the regex works. Be as concise as possible.
 
-* Tutorial describes each component of the regex in a separate section.
-
+* Tutorial describes each regex component in a separate section.
 
 ## Review
 
@@ -109,7 +106,6 @@ You are required to submit the following for review:
 
 * The URL of the GitHub gist. Give the gist a unique name.
 
-
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
