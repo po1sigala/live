@@ -6,14 +6,13 @@ section {
 }
 
 img {
-   /*Height and weight of content*/
-    width: 200px;
-    height: 200px;
-    /*Margin property*/
-    margin: 20px;
-    /*Padding property*/
-    padding: 20px;
-    /*Border property*/
-    border: 9px solid darkblue;
-    background-color: lightblue;
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  /* Margin property */
+  margin: 20px;
+  /* Padding property */
+  padding: 20px;
+  /* Border property */
+  border: 9px solid darkblue;
 }

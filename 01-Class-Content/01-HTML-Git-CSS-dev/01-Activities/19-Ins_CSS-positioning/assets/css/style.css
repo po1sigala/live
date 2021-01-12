@@ -17,13 +17,13 @@ section {
   border: 10px solid black;
 }
 
-/*Relative positioning*/
+/* Relative positioning */
 #relative-box {
   position: relative;
   left: 200px;
 }
 
-/*Absolute positioning*/
+/* Absolute positioning */
 #absolute-section {
   position: relative;
 }
@@ -34,7 +34,7 @@ section {
   right: 100px;
 }
 
-/*Fixed positioning*/
+/* Fixed positioning */
 #fixed-box {
   position: fixed;
   bottom: 0;

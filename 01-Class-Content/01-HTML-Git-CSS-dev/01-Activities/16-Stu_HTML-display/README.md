@@ -1,28 +1,28 @@
-# 🐛 Images and Navigation Bar Items are Not Displaying Correctly
+# 🐛 List Items and Boxes are Not Displaying Correctly
 
 Work with a partner to resolve the following issue(s):
 
-* Users should be able to see a horizontal navigation bar.
+* Users should be able to see a horizontal navigation bar with three list items side-by-side.
 
-* Users should be able to see three images.
+* Users should be able to see three boxes.
 
-* Users should be able to see one image on each line.
+* Users should be able to see the boxes centered and stacked on top of each other.
 
 ## Expected Behavior
 
-* All list items in the navigation bar should display inline.
+* All three list items in the navigation bar should display inline.
 
-* All images should be visible. 
+* All three boxes should be visible. 
 
-* Each image should appear centered and on its own line.
+* Each box should appear centered and on its own line.
 
 ## Actual Behavior
 
 * Each list item in the navigation bar displays on its own line.
 
-* Two images are visible and one is not displayed.
+* Two boxes are visible and one is not displayed.
 
-* The two visible images display inline. 
+* The two visible boxes display inline and aligned to the left. 
 
 ## Assets
 
