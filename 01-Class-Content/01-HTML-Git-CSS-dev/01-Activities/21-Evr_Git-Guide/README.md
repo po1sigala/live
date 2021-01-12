@@ -78,7 +78,7 @@ These commands are essential tools that you will use to create a repository, ini
 
   ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./assets/image-1.png)
 
-* To prepare to clone the newly created repository to the local machine by clicking the green `Code` button and selecting the HTTPS option. Then, copy the value provided, as the following image shows:
+* Prepare to clone the newly created repository to the local machine by clicking the green `Code` button and selecting the HTTPS option. Then, copy the value provided, as the following image shows:
 
   ![The GitHub repository shows the HTTPS connection for the repo you just created.](./assets/image-2.png)
 
@@ -87,6 +87,7 @@ These commands are essential tools that you will use to create a repository, ini
   ```bash
   cd Desktop
   ```
+
 * To clone the repo, use the `git clone` command followed by the value copied from GitHub. 
 
   ```bash
@@ -125,7 +126,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 ### Add a New Directory to the Project
 
-*  Let's add an `assets` directory to our project. 
+* Let's add an `assets` directory to our project. 
 
 * Navigate to the `git-guide-sample` directory, then use `mkdir` to create a new directory named `assets`
 
@@ -133,7 +134,7 @@ These commands are essential tools that you will use to create a repository, ini
   mkdir assets
   ```
 
-*  Use `cd` to navigate to the newly created `assets` directory.
+* Use `cd` to navigate to the newly created `assets` directory.
 
   ```bash
   cd assets
@@ -162,16 +163,19 @@ These commands are essential tools that you will use to create a repository, ini
   ```bash
   git add .
   ```
+
 * To see the project changes to be committed, use `git status`. This will show a list of the files that have been staged.
 
   ```bash
   git status
   ```
-* To commit the changes, use `git commit` and add a commit message. A good commit message should describe the changes made.
+
+* To commit the changes, use `git commit -m` and add a commit message. A good commit message should describe the changes made.
 
   ```bash
   git commit -m "Add index.html and style.css files"
   ```
+
 * If successful, you will receive a message indicating the number of files changed similar to the message below.
 
   ![The message will indicate the number of files changed.](./assets/image-3.png)
@@ -180,7 +184,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 Let's push the changes to the remote repository on GitHub.
 
-* Use `git push` to upload changes to our remote repository.  The keyword `origin` refers to the remote repo we created in GitHub and is shorthand for the URL.  The keyword `main` refers to the name of the branch we are uploading to in the remote repo. ```
+* Use `git push` to upload changes to our remote repository.  The keyword `origin` refers to the remote repo we created in GitHub and is shorthand for the URL.  The keyword `main` refers to the name of the branch we are uploading to in the remote repo.
 
   ```bash
   git push origin main
@@ -194,7 +198,6 @@ Let's push the changes to the remote repository on GitHub.
 
   ![The remote repository will update with the committed changes](./assets/image-5.png)
 
-  
 ### Initialize a New Version-Controlled Project
 
 * Let's initialize a new version-controlled project locally using `git init`.
@@ -223,6 +226,7 @@ Let's push the changes to the remote repository on GitHub.
 
   ```bash
   git init
+  ```
 
 * If successful, a message reading `Initialized empty Git repository in /Users/<your-user-name>/Desktop/git-init-sample/.git/` should appear.
 
@@ -270,7 +274,7 @@ Let's push the changes to the remote repository on GitHub.
 
 * Both messages indicate that the `git pull` command has been successfully performed.
 
-* The changes made, if any, can be viewed by opening the project directory in VSCode.
+* The changes made, if any, can be viewed by opening the project directory in VS Code.
 
 ### Share Remote Repo URL 
 
