@@ -2,21 +2,21 @@
 
 ## Overview
 
-In this unit, we will be covering some very important topics regarding object-oriented programming, including constructors, prototypes, polymorphism, and promises. We will also introduce the students to Test-Driven Development and unit tests. Lastly, we will go over the basics of ES6 classes and how they can help organize our code.
+In this unit, we will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
+* Many students will benefit from more information about prototypal inheritance. Try to provide them with helpful supplementary resources, but avoid spending too much in-class time on the subject if some students seem to be struggling.
 
-* Polymorphism is covered in this unit, but focuses mainly on **method overloading**. Please research this topic before the lesson to familiarize yourself with what exactly method overloading is. 
+* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class. 
 
-* Let your students know that this module is very concept-heavy! Object-oriented programming can be very difficult to understand at first, but it is crucial in making them employer-competitive. So reassure them that they are not alone in struggling with this topic and that it is perfectly normal to feel a little lost at first. 
+* Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first. 
 
-* At the same time, do not feel discouraged if your students aren't understanding the concept after you've tried explaining it to them. It takes time to fully grasp object-oriented programming, so keep encouraging your students and reassuring them that with time and practice, they will understand this! If you are comfortable doing so, share your own struggle and/or personal experiences learning and working with OOP.
+* Similarly, do not feel discouraged if your students still do not understand the concept after you have explained it to them. Keep encouraging your students and reassuring them that they will understand it with time and practice. If you are comfortable doing so, you can share your own personal experiences learning and working with OOP.
 
-* We will also spend a day this unit practicing TDD. Familiarize yourself with `jest` if you've never used it before. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
+* You will also spend a day practicing TDD. Familiarize yourself with Jest if you've never used it before. Students have limited exposure to testing, so emphasize the importance of it and the benefits. Remind students that they will eventually grasp the syntax, just like with other libraries.
 
 ## Career Connection
 
@@ -26,9 +26,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/READ
 
 ## Heads-Up
 
-* Next unit, we will be diving into servers and Express.js to use in the back-end of an application.
+* In the next unit, we will explore the use of servers and Express.js on the back end of an application.
 
-* Also, students will start using Heroku to host their web applications. Be sure to install the Heroku CLI on your computer. If needed, you can follow the [Heroku CLI installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) to install Heroku CLI on your computer. 
+* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
 
 ## Helpful Links
 
@@ -62,7 +62,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * Here is an example of method overloading implemented in Java. This may help solidify your understanding of [method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/)
+  * This [example of method overloading implemented in Java](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) might help solidify your understanding of method overloading.
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

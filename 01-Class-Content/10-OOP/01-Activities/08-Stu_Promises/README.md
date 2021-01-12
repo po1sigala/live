@@ -1,6 +1,6 @@
 # 🐛 Refactor Function to use Promises
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * Refactor the `practiceCoding()` function to use promises instead of callbacks.
 
@@ -46,15 +46,13 @@ Work with a partner to resolve the following issue(s):
 
 ## 💡 Hints
 
-* How can we use the resolve method to handle the fulfillment of a promise?
-
-* How can we use the reject method to handle the failure of a promise?
+How can we use the `resolve()` method to handle the fulfillment of a Promise and the `reject()` method to handle the failure of a Promise?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How could we resolve multiple promises at once?
+* How could we resolve multiple Promises at once?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

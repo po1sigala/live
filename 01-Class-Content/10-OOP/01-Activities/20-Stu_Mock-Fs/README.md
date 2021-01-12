@@ -1,18 +1,20 @@
-# 🏗️ Mock and Spy on `fs` Module
+# 🏗️ Mock and Spy on fs Module
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to spy on the `fs` module methods and ensure they are called with the correct arguments.
+* As a developer, I want to be able to spy on the `fs` module methods and ensure that they are called with the correct arguments.
 
 ## Acceptance Criteria
 
-* It's done when I have added code to mock the `fs.readFileSync` method in `Unsolved/tests/fileIO/test.js` to emulate reading the filesystem.
+* It's done when I have added code to mock the `fs.readFileSync()` method in `Unsolved/tests/fileIO/test.js` to emulate reading the file system.
 
-* It's done when I have added code to mock the `fs.writeFileSync` method in `Unsolved/tests/fileIO/test.js` to emulate writing to the filesystem.
+* It's done when I have added code to mock the `fs.writeFileSync()` method in `Unsolved/tests/fileIO/test.js` to emulate writing to the file system.
+
+---
 
 ## 💡 Hints
 
-How can we use the previous demonstration to aid in mocking node modules?
+How can we use the previous demonstration to aid in mocking Node.js modules?
 
 ## 🏆 Bonus
 
