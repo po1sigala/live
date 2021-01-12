@@ -1,4 +1,4 @@
-# 🐛 Grading app returns undefined
+# 🐛 Grading App Returns Undefined
 
 Work with a partner to resolve the following issues:
 
