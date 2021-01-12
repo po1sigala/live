@@ -62,7 +62,19 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
+  * [MDN Web Docs on Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) 
+
+  * [MDN Web Docs on Prototypes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
+
+  * [MDN Web Docs on Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+  * [MDN Web Docs on Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+  * [Jest documentation](https://jestjs.io/docs/en/getting-started)
+
   * This [example of method overloading implemented in Java](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) might help solidify your understanding of method overloading.
 
+  * [git stash](https://www.git-scm.com/docs/git-stash) 
+
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

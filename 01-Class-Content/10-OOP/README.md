@@ -106,7 +106,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you'll begin to use Heroku CLI. Be sure to have it installed on your computer BEFORE class. You can refer to the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) for extra guidance.
+In the next unit, you'll start using Heroku to host your web applications. Be sure to have the Heroku CLI installed on your computer BEFORE class. You can refer to the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) for extra guidance.
 
 ## Resources
 
@@ -125,5 +125,4 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
   * 📖 [Heroku CLI installation guide](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
