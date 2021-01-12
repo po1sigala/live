@@ -46,4 +46,4 @@ There are a variety of ways to solve this problem, but try the same technique th
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
