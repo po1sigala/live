@@ -1,4 +1,4 @@
-# 5.3 Full-Time Lesson Plan: Constructors (10:00 AM)
+# 5.3 Full-Time Lesson Plan: Object-Oriented Programming (OOP) (10:00 AM)
 
 ## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
@@ -11,19 +11,25 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `06-Stu_RPG-Prototypes` in Unit 10.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `08-Stu_Promises` in Unit 10.
 
 * Constructors are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Make sure your students have a firm understanding of how objects function.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
 * By the end of class students will be able to...
 
-  * Use OOP to create a banking application.
+* Create new objects using constructor functions.
 
-  * Use constructor functions to create new objects.
+* Add methods to objects using prototypical inheritance.
 
-  * Use object prototypes to add methods to objects.
+* Explain polymorphism through method overloading.
+
+* Implement `Promise.all()` to wait for multiple API calls.
 
 ## Slides
 
@@ -37,20 +43,22 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 | 10:05AM | 2   | Student Do: Mini Project                        | 0:60     |
 | 11:05AM | 3   | Instructor Review: Mini Project                 | 0:10     |
 | 11:15AM | 4   | Introduce Homework                              | 0:05     |
-| 11:20AM | 5   | FLEX                                            | 0:20     |
-| 11:40PM | 6   | Instructor Do: Stoke Curiosity                  | 0:10     |
-| 11:50PM | 7   | BREAK                                           | 0:30     |
-| 12:20PM | 8   | Student Do: Raining Cats and Dogs               | 0:15     |
-| 12:35PM | 9   | Instructor Review: Raining Cats and Dogs        | 0:10     |
-| 12:45PM | 10  | Instructor Demo: Cats and Dogs w/ Constructors! | 0:05     |
-| 12:50PM | 11  | Student Do: MiniBank                            | 0:20     |
-| 1:10PM  | 12  | Instructor Review: MiniBank                     | 0:10     |
-| 1:20PM  | 13  | Student Do: Weather Admin                       | 0:15     |
-| 1:35PM  | 14  | Instructor Review: Weather Admin                | 0:10     |
-| 1:45PM  | 15  | Instructor Do: Introduce Prototypes             | 0:15     |
-| 2:00PM  | 16  | Student Do: RPG Prototype                       | 0:15     |
-| 2:15PM  | 17  | Instructor Review: RPG Prototypes               | 0:15     |
-| 2:30PM  | 18  | END                                             | 0:00     |
+| 11:20AM | 5   | FLEX                                            | 0:30     |
+| 11:50PM | 6   | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 12:00PM | 7   | BREAK                                           | 0:30     |
+| 12:30PM | 8   | Instructor Demo: Constructors                   | 0:05     |
+| 12:35PM | 9   | Student Do: Constructors                        | 0:15     |
+| 12:50PM | 10  | Instructor Review: Constructors                 | 0:10     |
+| 1:00PM  | 11  | Instructor Demo: Prototypes                     | 0:05     |
+| 1:05PM  | 12  | Student Do: Prototypes                          | 0:15     |
+| 1:20PM  | 13  | Instructor Review: Prototypes                   | 0:10     |
+| 1:30PM  | 14  | Instructor Demo: Polymorphism                   | 0:05     |
+| 1:35PM  | 15  | Student Do: Polymorphism                        | 0:15     |
+| 1:50PM  | 16  | Instructor Review:Polymorphism                  | 0:10     |
+| 2:00PM  | 17  | Instructor Demo: Promises                       | 0:05     |
+| 2:05PM  | 18  | Student Do: Promises                            | 0:15     |
+| 2:20PM  | 19  | Instructor Review: Promises                     | 0:10     |
+| 2:30PM  | 20  | END                                             | 0:00     |
 
 - - -
 
@@ -300,679 +308,972 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 * Answer any questions before ending the class.
 
-### 5. FLEX (20 mins)
+### 5. FLEX (30 mins)
 
-### 6. Instructor Do: Stoke Curiosity (10 mins)
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+### 6. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Constructors (Title)**: Today will be an introduction to OOP, more specifically objects and constructors.
+  * **Object-Oriented Programming**
+  
+    * This unit will be an introduction to object-oriented programming (OOP). In today's class, we will cover objects and constructors.
 
-  *  **What is programming?**: So what exactly is programming?
+  * **What is programming?** 
+  
+    * **Programming** refers to designing and building an executable program that will accomplish a specific computing task. Essentially, programming is problem-solving.
 
-  *  **Programming**: The designing and building of an executable program that will accomplish a specific computing task. Essentially, programming is problem solving.
+  * **What problems do we solve?**
 
-  *  **What problems do we solve?**: What problems do programmers solve?
+    * Programming enables us to solve almost any task or problem on a computer, usually in one of two primary categories: algorithms or automation.
 
-  * **Algorithms and Automation**: Programming allows for us to solve almost any task or problem on a computer. There are two primary categories: Algorithms and Automation.
+  * **What is DRY?**
+  
+    * **DRY**, or **Don’t Repeat Yourself**, is a fundamental programming principle.  Duplicate code wastes time and memory and can confuse readers or contributors to your project.
 
-  * **What is DRY?**: What does DRY mean?
+  * **What is an object?**
+  
+    * **Objects** in JavaScript are unordered collections of related data built on a key-value structure in which values can be any data type, including functions. 
 
-  * **DRY**: Dry means “Don’t Repeat Yourself!”. Rewriting code wastes time, memory, and can confuse later readers and/or contributors to your code.
+  * **Why are objects important in Javascript?**
 
-  * **What is an object?**: What is an object?
+    * Because everything in JavaScript is an object! Well, except for primitive data types. Everything else is an object&mdash;essentially a list of key-value pairs.
 
-  * **Objects**: Objects in JavaScript are unordered collections of related data built on a key:value structure where values can be any data-type, including functions. 
+    * Data types that are objects:
+    
+      * Arrays
 
-  * **Why are Objects important in Javascript**: What makes objects so important?
+      * Dates
 
-  * **Everything is an object!**: Well, almost everything. Arrays, Date, Math, even functions are objects! Primitive types are NOT objects.
+      * Math
 
-  * **What is object-oriented programming?**: What is OOP?
+      * Functions
 
-  * **OOP**: OOP is a programming paradigm or pattern of programming centered around objects. Problems are thought of in a way in which a collection of objects work together to solve a problem.
+      * And more!
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+    * Primitive data types (NOT objects):
 
-  * ☝️ So, what do you think we are going to do today?
+      * `null`
 
-  * 🙋 Program some objects!
+      * `undefined`
+
+      * Strings
+
+      * Numbers
+
+      * Symbols
+
+      * Booleans
+  
+  * **How do we create objects?**
+  
+    * We can use **object** literals, which define and create an object in one statement.
+
+    * We can use the `new` keyword, which defines and creates a single object.
+
+    * Or we can use **constructors**, which create objects from a blueprint.
+
+  * **What is object-oriented programming?**
+    
+    * **OOP** is a programming paradigm, or pattern, centered around objects. In object-oriented programming, we solve problems by employing collections of objects that work together. Their ability to communicate with each other makes objects particularly well-suited to address large, complex problems. 
+    
+    * OOP offers the following benefits:
+
+      * **Encapsulation**&mdash;object data (and often functions) can be neatly stored (i.e., encapsulated). 
+
+      * **Inheritance**&mdash;new classes can be created based on other classes (i.e., the `Person` class is parent to the `Student` and `Teacher` classes).
+
+      * **Abstraction**&mdash;creating a simple model of something complex.
+
+      * **Polymorphism**&mdash;multiple object types can implement the same functionality. 
+
+  * **How can we learn to use OOP?**
+  
+    * OOP is a broad concept that is best learned through real-life examples. We begin to see the value of OOP when we use objects to model real-world things in code and provide functionality that would otherwise be hard or impossible to achieve.
+
+    * Try some of the following techniques to learn OOP:
+
+      * Read the docs and practice with the provided examples.
+    
+      * Reverse-engineer finished code to see how it was created.
+    
+      * Build something from scratch.
+    
+      * Debug a broken app using Chrome DevTools.
+    
+      * And most importantly, ask questions!
+
+  * **Mini-Project**
+
+    * For this unit's mini-project, you will build a word-guessing CLI game!
+
+* Navigate to `01-Class-Content/10-OOP/01-Activities/28-Stu_Mini-Project/Main` and run `npm install` in your command line.
+
+* Run `npm start` to start the word-guessing CLI game and demonstrate the following:
+
+  * In this assignment, we will use object-oriented programming to build a word-guessing command-line game.
+
+  * This will be a fun chance to use classes in conjunction with Inquirer and Node.js.
+
+  * We are given 10 chances to guess letters to complete a word.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to implement object-oriented programming, ES6 classes, and constructor functions to build a command-line application.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 This project will build on your knowledge of Node.js and newer ES6 syntax.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Building an app like this is an exercise in using JavaScript outside of the browser&mdash;a fundamental characteristic of back-end development. We are just starting to scratch the surface!
+
+* Answer any questions before proceeding to the next activity.
 
 ### 7. BREAK (30 min)
 
-### 8. Students Do: Raining Cats and Dogs (15 mins)
+### 8. Instructor Demo: Constructors (5 min) 
 
-* Direct students to the activity found in [01-Stu_Cats-And-Dogs](../../../../01-Class-Content/10-OOP/01-Activities/01-Stu_Cats-And-Dogs)
+* Navigate to `01-Ins_Constructors` and run `node index.js` from the command line to demonstrate the following: 
 
-```md
-# Cats and Dogs
+  * 🔑 When we run the program, we see the following output in the console:
 
-In this activity you will make a cat object and dog object each with three keys.
+    ```
+    Woof!
+    ```
 
-## Instructions
+* Open `01-Ins_Constructors/index.js` in your IDE and explain the following:
 
-* Make a dogs object with three keys:
+  * 🔑 We create a constructor function called `Animal()` that takes in two parameters, `raining` and `noise`, as follows:
 
-  * First key called "raining" with a value of true
+    ```js
+    function Animal(raining, noise) {
+    ```
 
-  * Second key called "noise" with a value of "Woof!"
+  * 🔑 We pass the `raining` and `noise` parameters into the object's keys as their value, as shown in the following example:
 
-  * Third key called "makeNoise" which contains a function which console.logs the noise to the screen if it is raining dogs
-
-* Next make a cats object with three keys:
-
-  * First key called "raining" with a value of false
-
-  * Second key called "noise" with a value of "Meow!"
-
-  * Third key called "makeNoise" which contains a function which console.logs the noise to the screen if it is raining cats
-
-* Make the dog bark
-
-* Make the cat meow
-
-## 🏆BONUS
-
-* Create a function called "massHysteria" which takes in both the cats and the dogs object and prints "DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!" if both of the `raining` keys are equal to true.
-
-* See if there is anyway to further optimize your code.
-```
-
-### 9. Instructor Review: Review Raining Cats and Dogs (10 min)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ Keys can have the value of a function
-
-  * ✔️ Dot notation can be used to modify objects and call methods.
-
-* Open [01-Stu_Cats-And-Dogs Solved/script.js](../../../../01-Class-Content/10-OOP/01-Activities/01-Stu_Cats-And-Dogs/Solved) in your IDE and explain the following points to students:
-
-  * 🔑 We create a `makeNoise` key and give it the value of a function.
-
-  ```js
-  makeNoise: function() {
-    if (this.raining === true) {
-      console.log(this.noise);
-      }
-    }
-  };
-  ```
-
-  * 🔑 We use dot notation to call methods contained in our object.
-
-  ```js
-  dogs.makeNoise();
-  ```
-
-  * 🔑 We can change the value of a key using dot notation as well.
-
-  ```js
-  cats.raining = true;
-  ```
-  
-  * We create a function `massHysteria` which will take in a dogs object and cats object and check that BOTH have a key:value of `raining: true`. 
-
-  ```js
-  const massHysteria = function(dogs, cats) {
-  if (dogs.raining === true && cats.raining === true) {
-    console.log("DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!");
-    }
-  };
-  ```
-
-  * Finally we invoke our function passing in our two objects.
-
-  ```js
-  massHysteria(dogs, cats);
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What if we wanted to create multiple different animal objects from a blueprint?
-
-  * 🙋 We can use a constructor function to create objects based on a structure we specify.
-
-* Use the discussion to transition to the next topic.
-
-### 10. Instructor Demo: Cats and Dogs with Constructors! (5 min)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️Constructor functions are capitalized and can take in parameters.
-
-  * ✔️The `new` keyword invokes is used to create new objects.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What difference do you from the previous activity we worked on?
-
-  * 🙋 We create a constructor function called `Animals`, instead of individual cat and dog objects.
-
-  * ☝️ Why is `Animal` upper-cased. ️
-
-  * 🙋 It is a common naming convention to upper-case the names of constructor functions, as well as classes.
-
-* Open [02-Ins_Cats-And-Dogs-Constructors](../../../../01-Class-Content/10-OOP/01-Activities/02-Ins_Cats-And-Dogs-Constructors/rainingCatsAndDogs-con.js) in your IDE and explain the following points:
-
-  * 🔑 We first declare a constructor function named `Animal`. It will take 2 parameters which will be passed into our keys as their value.
-
-  ```js
-  function Animal(raining, noise) {
+    ```js
     this.raining = raining;
     this.noise = noise;
-  ```
+    ```
 
-  * We give our object a key of `makeNoise` thats value is a function. The function checks if the `raining` key's value is `true`. If it is `console.log` the value of the key `noise`.
+  * 🔑 The third key is a function called `makeNoise()` that checks if the value of `raining` is `true`. If it is, it will log the value of `noise` in the console. See the following code for an example:
 
-  ```js
-  this.makeNoise = function() {
-    if (this.raining === true) {
-      console.log(this.noise);
-    }
-  };
-  ```
-
-  * 🔑 We create a new object via our constructor function using the `new` keyword. We pass in the values we want our keys to have as arguments to the constructor.
-
-  ```js
-  var dogs = new Animal(true, "Woof!");
-  var cats = new Animal(false, "Meow!");
-  ```
-
-  * We can now invoke the `makeNoise` method on our created objects.
-
-  ```js
-  dogs.makeNoise();
-  cats.makeNoise();
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ How are constructors useful?
-
-  * 🙋 They allow us to create as many objects as we want, all from a single blueprint. This lessens redundant code.
-
-* Use the discussion to transition to the next activity.
-
-### 11. Student Do: MiniBank (20 mins)
-
-* Direct students to the next activity, found in [03-Stu_Mini-Bank](../../../../01-Class-Content/10-OOP/01-Activities/03-Stu_Mini-Bank/Unsolved).
-
-```md
-# MiniBank
-
-In this activity you will use objects to create a mini banking application.
-
-## Instructions
-
-### Part 1 - Add methods and properties to `MiniBank`
-
-Update the `MiniBank` constructor function with methods and properties as follows:
-
-1. Define a property named `statement`. Assign an initial value of an array containing the `balance` parameter passed to the constructor.
-
-2. Add a `setBalance` function. This function should receive a `value` parameter and assign it to the `balance` property of `MiniBank`.
-
-3. Write an `updateStatement` function that takes in a number and pushes it to the `statement` array.
-
-4. Write a `getStatement` function that returns the `statement` property.
-
-5. Write a `printStatement` function that prints each element in the `statement` array on its own line.
-
-6. Write a `deposit` function that takes a value and performs the following:
-
-   - Calls `updateStatement` to record the deposit transaction.
-   - Calls `setBalance` to update the `balance` property.
-
-7. Write a `withdraw` function that takes a value and performs the following:
-
-   - Calls `updateStatement` to record the withdrawal transaction. (Be sure to use a negative number here.)
-   - Calls `setBalance` to update the `balance` property.
-
-### Part 2 - Create and use a `MiniBank` instance
-
-1. Create a new `bank` object using the `MiniBank` constructor function.
-
-2. Print the `bank` balance.
-
-3. Deposit some money into the `bank` object.
-
-4. Print the `bank` balance.
-
-5. Withdraw some money from the `bank` object.
-
-6. Print the `bank` balance.
-
-## Bonus 🏆
-
-- Add code to throw an error if the user tries to withdraw more money than they have, or try to deposit or withdraw values that aren't positive numbers.
-
-- Add code to return a copy of the `statement` array when `getStatement` is called, rather than returning the original array.
-```
-
-### 12. Instructor Review: Mini-Bank (10 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ `MiniBank` is made via creating a constructor function.
-
-  * ✔️ We use `typeof` to make sure we get the inputs we want.
-
-* Open [03-Stu_Mini-Bank/Solved](../../../../01-Class-Content/10-OOP/01-Activities/03-Stu_Mini-Bank/Solved/minibank.js) in your IDE and explain the following points to students:
-
-  * 🔑 We create a constructor function called `MiniBank` that will take in one argument, the starting balance.
-
-  ```js
-  function MiniBank(balance) {
-  ```
-
-  * We use `this.` notation to declare functions on our constructor so all objects created from this constructor have access to those methods.
-
-  ```js
-  this.getBalance = () => {
-    return this.balance;
-  };
-  ```
-
-  * 🔑 In our `deposit` function we first check to make sure the provided argument is a number, and the number is greater than 0. We then set our `newBalance` to be equal to our current balance plus the current given value of the deposit.
-
-  ```js
-  this.deposit = value => {
-    if (typeof value !== "number" || value <= 0) {
-      throw new Error("'value' must be a positive number!");
-    }
-    const newBalance = this.getBalance() + value;
-  ```
-
-  * After we have gotten our `newBalance` we invoke the `setBalance` function and `updateStatement()` function. Finally we console log the deposited value.
-
-  ```js
-    this.setBalance(newBalance);
-    this.updateStatement(newBalance);
-    console.log(`Deposited ${value}!`);
-  };
-  ```
-
-  * To create our new mini bank via our constructor we invoke the constructor using the `new` keyword.
-
-  ```js
-  const bank = new MiniBank(0);
-  ```
-
-  * Now we can call any of the functions we coded into the constructor earlier.
-
-  ```js
-  bank.printBalance();
-  bank.deposit(85);
-  bank.printBalance();
-  bank.withdraw(20);
-  bank.printBalance();
-  bank.printStatement();
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ How does OOP make solving this activity easier?
-
-  * 🙋 The use of objects and constructors allows us to create a single blueprint, that we can then use to create as many instances of our `MiniBank` as we like.
-
-### 13. Student Do: Weather Admin (15 mins)
-
-* Direct students to the next activity located in [04-Stu_Weather-Admin/Unsolved](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Unsolved).
-
-```md
-# Weather Admin
-
-In this activity you will create a CLI based weather application that will give updates about the weather at the searched location.
-
-## Instructions
-
-* There are two ways to run this app: as a user or as an administrator. To run as admin, type `node CLI.js admin` To run as a user, type `node CLI.js user bob "los angeles, ca"`, where the user mode must provide a name and a location as additional arguments.
-
-* Ideally, users can search for weather data about a location. Every time they search, the place and time get saved to a text file. So when the app is run as admin, the admin user can see a history of all searches.
-
-* Unfortunately, this app is also broken. Try to run it as either a user or admin and fix the actual errors that appear in the console and then any "logic" errors that prevent the expected behavior.
-```
-
-### 14. Instructor Review: Review Weather Admin (10 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ NPM packages are brought in with `require`.
-
-  * ✔️ `process.argv` allows us to grab CLI arguments.
-
-* Open [04-Stu_Weather-Admin/Solved](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Solved) in your IDE and explain the following to students:
-
-  * 🔑 First we require the npm package `weather-js`.
-
-  ```js
-  const weather = require("weather-js");
-  ```
-
-  * We create a constructor function called UserSearch that will take a `name` and `location` as arguments. It will also use `Date.now();` to get the current date.
-
-  ```js
-  const UserSearch = function(name, location) {
-  this.name = name;
-  this.location = location;
-  this.date = Date.now();
-  ```
-
-  * Our constructor also has a method of `getWeather`.  It will make use of the `weather-js` search function to search for weather of a given location. Lastly, we export our `UserSearch` constructor.
-
-  ```js
-  this.getWeather = function() {
-    weather.find({ search: this.location, degreeType: "F" }, function(err, result) {
-      if (err) {
-        console.log(err);
+    ```js
+    this.makeNoise = function() {
+      if (this.raining === true) {
+        console.log(this.noise);
       }
-      console.log(JSON.stringify(result, null, 2));
-      });
     };
-  };
+    ```
 
-  module.exports = UserSearch;
+  * When we run `node catsDogs.js` in the console, the `dog` and `cat` objects are created and the `makeNoise()` method is called on them, as shown in the following example:
+
+    ```js
+    let dog = new Animal(true, "Woof!");
+    let cat = new Animal(false, "Meow!");
+
+    dog.makeNoise();
+    cat.makeNoise();
+    ```
+
+  * Only the `dog` object's `"Woof!"` will be logged in the console, because its `raining` value is set to `true`.
+
+  * However, if we set the `raining` value of `cat` to `true` and call the `makeNoise()` method, as follows, then `"Meow!"` will be logged in the console:
+
+    ```js
+    cat.raining = true;
+    cat.makeNoise();
+    ```
+
+  * Because both `dogs.raining` and `cats.raining` are now set to `true`, the `massHysteria()` method will also print out its message in the console. 
+
+* Run `node index.js` from the command line again to demonstrate the following:
+
+  * Now we see `"Meow!"` as well as `"DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!"` in the console, as follows:
+
+    ```
+    Woof!
+    Meow!
+    DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the purpose of the constructor function?
+
+  * 🙋 **Constructor functions** act as a kind of blueprint for creating many objects of the same type. They indicate the necessary criteria for creating an object and allow instances of that object to be **instantiated** (or created) by using the `new` keyword.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Constructors/README.md`.
+
+### 9. Student Do: Constructors (15 min) 
+
+* Direct students to the activity instructions found in `02-Stu_Constructors/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create Objects Using a Constructor Function
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to create new objects using a constructor function.
+
+  ## Acceptance Criteria
+
+  * It's done when the constructor function is named `Developer()` and it takes in two parameters, `name` and `tech`.
+
+  * It's done when the parameters are passed into the object's keys as their values.
+
+  * It's done when the object's third key is a method called `introduction()` that prints a message in the console, introducing a developer's `name` and what `tech` they like.
+
+  * It's done when I create a new object using the `Developer()` constructor with a `name` and `tech` of my choice.
+
+  * It's done when the introduction of my new object is printed in the console.
+
+  ---
+
+  ## 💡 Hints
+
+  How can we use template literals to print an introduction like "Hi, my name is Rita and I love JavaScript"?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are some built-in JavaScript constructors for native objects?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Open [04-Stu_Weather-Admin/Solved/WeatherAdmin.js](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Solved/WeatherAdmin.js) in your IDE and explain the following points:
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-  * First we require all the pieces necessary. `fs` is the File System, allowing us to create, delete, or update files on a users local machine. `UserSearch` is our constructor function we exported from `UserSearch.js`. Finally, we import `moment`, an NPM package for dates and times.
+### 10. Instructor Review: Constructors (10 min) 
 
-  ```js
-  var fs = require("fs");
-  var UserSearch = require("./UserSearch");
-  var moment = require("moment");
-  ```
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * We create a constructor function called `WeatherAdmin`. It is given a method of `getData` which will use the file system to read a `log.txt` file if it exists, and log that data to the console.
+  * ☝️ How comfortable do you feel with constructors? (Poll via Fist to Five, Slack, or Zoom)
 
-  ```js
-  var WeatherAdmin = function() {
-  this.getData = function() {
-    fs.readFile("log.txt", "utf8", function(error, data) {
-      console.log(data);
-    });
-  };
-  ```
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * `WeatherAdmin` also gets a method of `newUserSearch`. This method takes in two arguments, name and location, much like our `UserSearch` constructor. This is so we can pass those two arguments along into the `UserSearch` constructor, as this method will instantiate a new `UserSearch` object and save it to a variable of `newUserSearch`.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  ```js
-  this.newUserSearch = function(name, location) {
-    var newUserSearch = new UserSearch(name, location);
-  ```
+  * ✔️ `Developer()` constructor function
 
-  * We set our `logTxt` variable to equal a string we build that will display the name, location, and date of the search. We then call `moment` to get the date, and format it to `MM-DD-YYYY`.
+  * ✔️ `introduction()` method
 
-  ```js
-  var logTxt =
-  "\nName: " +
-  newUserSearch.name +
-  " Location: " +
-  newUserSearch.location +
-  " Date: " +
-  moment(newUserSearch.date).format("MM-DD-YYYY");
-  ```
+* Open `02-Stu_Constructors/Solved/index.js` in your IDE and explain the following: 
 
-  * We use the `fs.appendFile` method to append the current value of `logTxt` to our `log.txt` file.
+  * 🔑 We create a constructor function named `Developer()` that takes in two parameters, `name` and `tech`, as shown in the following example:
 
-  ```js
-  fs.appendFile("log.txt", logTxt, function(err) {
-    if (err) throw err;
-  });
-  ```
+    ```js
+    function Developer(name, tech) {
 
-  * Next we call the `getWeather` method on our `newUserSearch` object.
-
-  ```js
-  newUserSearch.getWeather();
-  ```
-
-  * Finally we export our `WeatherAdmin` constructor.
-
-  ```js
-  module.exports = WeatherAdmin;
-  ```
-
-* Open [04-Stu_Weather-Admin/Solved/CLI.js](../../../../01-Class-Content/10-OOP/01-Activities/04-Stu_Weather-Admin/Solved/CLI.js) in your IDE and explain the following points:
-
-  * 🔑First we require our WeatherAdmin export from `WeatherAdmin.js`
-
-  ```js
-  const WeatherAdmin = require("./WeatherAdmin");
-  ```
-
-  * 🔑 We use `process.argv`, taking the 3rd argument to find out if the value is `admin` or `user`.
-
-  ```js
-  const loginType = process.argv[2];
-  ```
-
-  * ✔️ We also need `Users` to provide a name and location.
-
-  ```js
-  const userName = process.argv[3];
-  const userLocation = process.argv[4];
-  ```
-
-  * We create an instance of the `WeatherAdmin`. If they are running it as an `admin`, run the `getData` method. If they are not an `admin`, we will run `newUserSearch` passing the arguments from the command line.
-
-  ```js
-  const myAdmin = new WeatherAdmin();
-
-  if (loginType === "admin") {
-    myAdmin.getData();
-  }
-  else {
-    myAdmin.newUserSearch(userName, userLocation);
-  }
-  ```
-
-### 15. Instructor Demo: Prototypes (15 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ Objects, arrays, and primitives all have a `.prototype.`
-
-  * ✔️ The `.prototype.` has methods and properties attached to it.
-
-  * ✔️ Methods declared on the prototype are declared once and memory is allocated for them once, but all objects made from it have access.
-
-  * ✔️ Instance methods only exist on a particular instance of an object, prototype methods are on all instances.
-
-* Open [05-Ins_Prototypes/prototype-demo.js](../../../../01-Class-Content/10-OOP/01-Activities/05-Ins_Prototypes/prototype-demo.js) in your IDE, and then open your browser and the Chrome Dev Tools. Copy and paste each code block into your dev tools and explain the following.
-
-  * We create an array, and console log it. Next, we call the `.forEach` and `.map` methods on it.
-
-  ```js
-  myArray = [2, 4, 6, 8];
-  console.log(myArray);
-
-  myArray.forEach((num) => console.log(num));
-
-  myArray.map((x) => console.log(x * 2));
-  ```
-
-  * 🔑 Next we console log the string `Hello`. We then call `"Hello.toLowerCase"`
-
-  ```js
-
-  console.log("Hello");
-  console.log("Hello".toLowerCase());
-
-  console.log(1337);
-  console.log((1337).toString());
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ Where did the `.toLowerCase` come from?
-
-  * 🙋 While those two methods did not show up when we console logged our string, the prototype has these methods built in. Arrays, Objects, even primitives all have a prototype which they take their structure and methods from. Any of of these that you create will have the prototype methods available to it via the `.prototype.`. i.e., `Array.prototype.forEach()`
-
-  * We created a constructor function named `Movie`, which will take in two arguments, `title` and `releaseYear`.
-
-  ```js
-  function Movie(title, releaseYear) {
-    this.title = title;
-    this.releaseYear = releaseYear;
-  }
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What if we wanted to add a method to our constructor later on in our code?
-
-  * 🙋 We would add that method to the `Movie.prototype`.
-
-  * 🔑 We declare the title of our method, which will be `logInfo`. We do so by typing `Movie.prototype.logInfo = function(){}`. We can only add to our constructor via the object prototype. When we add a method to an object's prototype, all the objects made from it will get it. If there is something that’s going to be the same between objects, and isn’t going to change, it should be on the prototype. If it is defined on the prototype it is only defined once, and memory for it is only allocated once.
-
-  ```js
-  Movie.prototype.logInfo = function() {
-    console.log(`${this.title} was released in ${this.releaseYear}`);
-  };
-  ```
-
-  * 🔑 When we create a new object via our `Movie` constructor, it will have access to all the methods defined in the constructor, and those that have been added to its prototype.
-
-  ```js
-  const theShining = new Movie("The Shining", 1980)
-  theShining.logInfo();
-  ```
-
-  * Objects also have their own prototype methods built in. Even though our object was created via a constructor function, it still has access to all the built in object prototype methods.
-
-  ```js
-  console.log(theShining.hasOwnProperty('title'));
-  console.log(theShining.hasOwnProperty('logInfo'));
-  console.log(Movie.prototype.hasOwnProperty('logInfo'));
-  ```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What does the Object Prototype allow us to do?
-
-  * 🙋 It allows us to reuse properties and methods between objects that need to share them. i.e., all movies can share the same `logInfo` methods, but get their own unique name and release year.
-
-* Use the discussion to transition to the next topic.
-
-### 16. Student Do: RPG Prototype (15 mins)
-
-* Direct students to the next activity, located in [06-Stu_RPG-Prototypes](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes).
-
-```md
-# Character Creation with Prototypes
-
-In this activity you will generate RPG characters using Objects and prototypes.
-
-## Instructions
-
-* Over the course of this activity you are going to be using constructors to create simplistic characters for use within a very basic Roleplaying Game (RPG)
-
-* Each character created using your constructor should have the following properties:
-
-  * Name: The character's name --> String
-
-  * Profession: What the character does for a living --> String
-
-  * Age: The character's age --> Number
-
-  * Strength: Abstraction for how strong the character is --> Number
-
-  * HitPoints (HP): Abstraction for how much health the character has --> Number
-
-  * PrintStats: Function which prints all of a character's properties to the screen
-
-  * Once you have created your constructor, create two new characters and print their properties to the screen
-
-* Now add 3 methods onto it via the prototype.
-
-  * IsAlive: Function which prints whether or not this character is alive by looking into their hitpoints and determining whether they are above or below zero.
-
-  * Attack: Function which takes in a second character and subtracts this character's strength from their hitpoints.
-
-  * LevelUp: Function which increases this character's Age by 1, their Strength by 5, and their HitPoints by 25.
-```
-
-### 17. Instructor Review: RPG Prototypes (15 mins)
-
-* Open [06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js](../../../../01-Class-Content/10-OOP/01-Activities/06-Stu_RPG-Prototypes/Solved/rpg-prototypes.js) in your IDE and explain  the following to students:
-
-  * ✔️ We create a `Character` constructor that will take in 6 arguments. We assign those arguments to keys in our constructor.
-
-  ```js
-  function Character(name, profession, gender, age, strength, hitpoints) {
-    this.name = name;
-    this.profession = profession;
-    this.gender = gender;
-    this.age = age;
-    this.strength = strength;
-    this.hitpoints = hitpoints;
-  }
-  ```
-
-  * ✔️ We add an `isAlive` function to our object prototype.
-
-  ```js
-  Character.prototype.isAlive = function() {
-    if (this.hitpoints > 0) {
-        console.log(this.name + " is still alive!");
-        console.log("\n-------------\n");
-        return true;
     }
-    console.log(this.name + " has died!");
-    return false;
-  };
+    ```
+
+  * We pass the `name` and `tech` parameters into the object's keys as their values, as shown in the following example:
+
+    ```js
+    this.name = name;
+    this.tech = tech;
+    ```
+
+  * 🔑 The third key is a method called `introduction()`. We use template literals to print the message in the console, as shown in the following example:
+
+    ```js
+    this.introduction = () => {
+      console.log(`Hi, my name is ${this.name} and I love ${this.tech}!`);
+    };
+    ```
+
+  * We create a new object to test the `Developer` constructor. We can use any name and technology, but in the following example, we will use `Rita`:
+
+    ```js
+    const rita = new Developer('Rita', 'JavaScript');
+    ```
+
+  * We call the `introduction()` method on `Rita` to print the message in the console, as follows:
+
+    ```js
+    rita.introduction()
+    ```
+
+* Run `node index.js` from your command line and demonstrate the following:
+
+  * We see Rita's introduction in the console, as follows:
+
+    ```
+    Hi, my name is Rita and I love JavaScript!
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we add a method to a constructor?
+
+  * 🙋 We can add methods to an object constructor inside the constructor function, or we can use the `prototype` property to add methods to existing constructors.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Prototypes (5 min) 
+
+* Open Chrome DevTools and demonstrate the following:
+
+  * 🔑 Nearly everything in JavaScript is an object! Strings, dates, numbers, and arrays&mdash;they are all standard built-in objects in JavaScript. 
+  
+  * 🔑 Objects in JavaScript have prototype objects. A link is made between the object instance and its prototype (its `__proto__` property, which is derived from the `prototype` property on the constructor). Properties and methods are found by walking up the chain of prototypes.
+
+  * 🔑 For example, in DevTools, let's create a new array, as follows:
+
+    ```js
+    myArray = [2, 4, 6, 8];
+    ```
+
+  * Next, type `myArray.`&mdash;once we type the period, we see a list of properties and methods defined on `myArray`'s prototype object, which is `Array.prototype`. If we click on `__proto__`, we can see the full list of inherited methods. Among them is the `forEach()` method.
+
+  * Let's apply that method to `myArray`, as shown in the following example:
+
+    ```js
+    myArray.forEach((num) => console.log(num));
+    ```
+
+  * As a result, every number in the array will log in the console. We were able to use the `Array.prototype.forEach()` method because `myArray` was derived from the built-in `Array` object.
+  
+  * 🔑 Additionally, we can access methods and properties further up the prototype chain. In DevTools, let's create a `person` object with the occupation of `Full-Stack Web Developer`, which is a string. See the following code for an example:
+
+    ```js
+    const person = {
+      name: 'Eric',
+      age: 28,
+      occupation: 'Full-Stack Web Developer',
+    };
+    ```
+  
+  * `person` is an object, but when we type `person.occupation.__proto__` in the console, it returns `String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}`, which we can expand. Because `occupation` is a string, it has access to the `String` prototype. Of the many methods available, let's try `toLowerCase()` to convert the `occupation` into all lowercase.
+
+  * Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
+
+    ```js
+    person.occupation.toLowerCase();
+    ```
+
+  * But these are all built-in methods of JavaScript. What if you wanted to make your own prototype methods?
+
+  * In DevTools, let's create a constructor function named `Movie()`, which will take in two arguments, `title` and `releaseYear`, as shown in the following example:
+
+    ```js
+    function Movie(title, releaseYear) {
+      this.title = title;
+      this.releaseYear = releaseYear;
+    }
+    ```
+
+  * Create a movie using the constructor function, as follows:
+
+    ```js
+    const superman = new Movie('Superman', 1978);
+    ```
+
+  * Let's say that we want to modify the `prototype` property of this constructor function by adding a method that will then be available on all object instances created from the constructor. This method, `logInfo()`, will log information about the movies in the console, as shown in the following example:
+
+    ```js
+    Movie.prototype.logInfo = function () {
+      console.log(`${this.title} was released in ${this.releaseYear}`);
+    };
+    ```
+
+  * To test it, call the method on the `superman` object, as shown in the following example:
+
+    ```js
+    superman.logInfo(); // => Superman was released in 1978
+    ```
+
+  * This new method is now available on all object instances derived from the `Movie()` constructor!
+  
+  * We can check whether or not a property was inherited by using the `hasOwnProperty()` method. This will return `true` if it does have the specified property. See the following code for an example:
+
+      ```js
+      superman.hasOwnProperty('logInfo')
+      ```
+  
+  * And although we added this new method to the constructor's prototype AFTER we created the `superman` object instance from the constructor, the method was still available on the `superman` object instance!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use the `hasOwnProperty()` method to check whether an object's property is its own or was inherited?
+
+  * 🙋 The `hasOwnProperty()` method will return `false` if it is not a direct method.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Prototypes/README.md`.
+
+### 12. Student Do: Prototypes (15 min)
+
+* Direct students to the activity instructions found in `04-Stu_Prototypes/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Prototypes
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/index.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the difference between adding a method inside the constructor and adding it to the prototype?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * ✔️ We also add two other functions to our `prototype`. The `attack` method takes in a second object and decreases their "hitpoints" by this character's strength. The `levelUp` method increases `this` character's stats when called.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  Character.prototype.attack = function(character2) {
-    character2.hitpoints -= this.strength;
-  };
+### 13. Instructor Review: Prototypes (10 min) 
 
-  Character.prototype.levelUp = function() {
-    this.age += 1;
-    this.strength += 5;
-    this.hitpoints += 25;
-  };
-  ```
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔️ Finally we can use our constructor to create two characters, calling their methods from the prototype that we added.
+  * ☝️ How comfortable do you feel with prototypes? (Poll via Fist to Five, Slack, or Zoom)
 
-  ```js
-  var warrior = new Character("Crusher", "Warrior", "Male", 25, 10, 75);
-  var rogue = new Character("Dodger", "Rogue", "Female", 23, 20, 50);
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  warrior.printStats();
-  rogue.printStats();
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  rogue.attack(warrior);
-  warrior.printStats();
-  warrior.isAlive();
+  * ✔️ `prototype`
 
-  rogue.levelUp();
-  rogue.printStats();
-  ```
+* Open `04-Stu_Prototypes/Solved/index.js` in your IDE and explain the following: 
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * This function is a constructor called `Character()` that will take in five arguments. We assign those arguments to keys in the `constructor`, as follows:
 
-  * ☝️  Why don't we just declare the methods in the constructor?
+    ```js
+    function Character(name, type, age, strength, hitpoints) {
+      this.name = name;
+      this.type = type;
+      this.age = age;
+      this.strength = strength;
+      this.hitpoints = hitpoints;
+    }
+    ```
 
-  * 🙋 When we bind a function using the `this` keyword, the method only exists on that instance of the object. For any method bound to `this`, it will be re declared with each new instance of an object.
+  * 🔑 We add an method called `printStats()` to the prototype of `Character()`, to avoid redeclaring the method in memory each time we create an instance of `Character()`. We can define the method once on the prototype and simply point each instance to it, as follows:
 
-  * ☝️  How does the prototype help us solve this problem?
+    ```js
+    Character.prototype.printStats = function () {
+      console.log(
+        `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
+      );
+      console.log('\n-------------\n');
+    };
+    ```
+
+  * We add an `isAlive()` prototype method that determines whether the value of `hitpoints` is greater than zero and returns a Boolean that informs us whether the character is alive, as shown in the following example:
+
+    ```js
+    Character.prototype.isAlive = function () {
+      if (this.hitpoints > 0) {
+        console.log(`${this.name} is still alive!`);
+        console.log('\n-------------\n');
+        return true;
+      }
+      console.log(`${this.name} has died!`);
+      return false;
+    };
+    ```
+
+  * We also add two other functions to the prototype. The `attack()` method takes in a second object (another character) and decreases the `hitpoints` by that character's `strength`. The `levelUp()` method increases `this` character's stats when called. See the following code for an example:
+
+    ```js
+    Character.prototype.attack = function(character2) {
+      character2.hitpoints -= this.strength;
+    };
+
+    Character.prototype.levelUp = function() {
+      this.age += 1;
+      this.strength += 5;
+      this.hitpoints += 25;
+    };
+    ```
+
+  * Finally we can create two characters by using the constructor function and make them fight in the console by calling their prototype methods, as shown in the following example:
+
+    ```js
+    const warrior = new Character('Crusher', 'Warrior', 25, 10, 75);
+    const rogue = new Character('Dodger', 'Rogue', 23, 20, 50);
+
+    warrior.printStats();
+    rogue.printStats();
+
+    rogue.attack(warrior);
+
+    warrior.printStats(); // => Crusher HitPoints: 55
+    warrior.isAlive(); // => Crusher is still alive!
+
+    rogue.levelUp();
+    rogue.printStats(); // => Dodger HitPoints: 75
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why don't we just declare the methods in the constructor?
+
+  * 🙋 When we bind a function using the `this` keyword, the method only exists on that instance of the object. For any method bound to `this`, it will be redeclared with each new instance of an object.
+
+  * ☝️ How does the prototype help us solve this problem?
 
   * 🙋 The prototype allows us to declare methods that will be attached to all instances of an object of that prototype. Because the method is applied to the prototype, it is only stored in memory once for all instances.
 
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 14. Instructor Demo: Polymorphism (5 min)
+
+* Open `05-Ins_Polymorphism/index.js` in your IDE and explain the following:
+
+  * In OOP, **polymorphism** refers to the ability to create a variable, a function, or an object that has more than one form. 
+  
+  * 🔑 One example of polymorphism is **method overloading**, which allows a constructor to have a single method that behaves differently based on the kind of data provided to that method as an argument.
+
+  * In the following example, the `area()` method will return the area of a rectangle based on how many arguments are passed into it:
+
+    ```js
+    const OverloadDemo = function () {
+      this.area = function (x, y) {
+        console.log('x = ', x);
+      }
+    ```
+
+  * We use a conditional statement to check whether `y` is passed in. If there is no `y` argument, then we log `y is not provided`&mdash;along with the area of the square&mdash;into the console, as shown in the following example:
+
+    ```js
+    if (!y) {
+      console.log('y is not provided');
+      return `\nThe area of the square is ${Math.pow(x, 2)} sq units`;
+    }
+    ```
+
+  * Otherwise, we log the value of `y` along with the area of the rectangle, as follows:
+
+    ```js
+    console.log('y = ', y);
+    return `\nThe area of the rectangle is ${x * y} sq units`;
+    ```
+  
+  * Note that the data in this example is being passed directly to the method instead of relying on data inside the constructor.
+
+* Navigate to `05-Ins_Polymorphism/` and run `node index.js` from the command line to demonstrate the following: 
+
+  * 🔑 We see that `x = 5` and `y = 7`, so the area of the rectangle is calculated to be 35 sq units.
+
+  * 🔑 But then we see that `x = 5` and `y is not provided`. That implies that this is a square, so the area of the square is 25 sq units.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we implement method overloading in the application?
+
+  * 🙋 We will need to use either an `if` statement or a `switch` statement to determine what is returned by the method.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Polymorphism/README.md`.
+
+### 15. Student Do: Polymorphism (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Polymorphism/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Grading App Returns Undefined
+
+  Work with a partner to resolve the following issues:
+
+  * As a developer, I want to understand the concept of polymorphism by writing code that uses method overloading.
+
+  ## Expected Behavior
+
+  * When the user passes a number grade, like `95`, into the `displayGrade()` method, the method should return a string indicating the letter grade, like `A`.
+
+  * When the user passes a letter grade, like `B`, into the `displayGrade()` method, the method should return a string indicating the range of the grade percentage, like `80-89`. 
+
+  ## Actual Behavior
+
+  When the user passes in a number grade or letter grade, the method returns `undefined`.
+
+  ## Steps to Reproduce the Problem
+
+  1. Run `node index.js` from the command line.
+
+  ---
+
+  ## 💡 Hints
+
+  How might the `inRange()` helper function and `switch` statements come in handy?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Think of another method you could implement that would use the parameters of the method to behave a certain way. How could you check the number of arguments that were passed to a method?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 16. Instructor Review: Polymorphism (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with polymorphism and method overloading? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Method overloading
+
+* Open `06-Stu-Polymorphism/Solved/index.js` in your IDE and explain the following: 
+
+  * At the top of the file, we see the `inRange()` helper function and a constructor called `Student()`, as follows:
+
+    ```js
+    const inRange = (x, min, max) => (x - min) * (x - max) <= 0;
+
+    function Student(first, last, age) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+    ```
+
+  * We also see a method on the `Student()` constructor called `displayGrade()`. We have been tasked with building out this method by checking the data type for the value of `grade`. 
+  
+  * We check that there is no `input` for `grade`, and if so, we immediately throw an error, as follows:
+
+    ```js
+    this.displayGrade = function (grade) {
+      const input = grade;
+      if (!input) {
+        throw new Error('no grade provided');
+      }
+    ```
+
+  * Then we declare the variable `response` to be used in the conditional statements, as shown in the following example:
+
+    ```js
+    let response;
+    ```
+  
+  * 🔑 We respond differently depending on whether or not `input` is a string or a number. So first we will check whether `input` is a number. If it is, then we will use a series of `if` statements and the helper function `inRange()` to set the `response` variable to the letter grade and return it. See the following code for an example:
+
+    ```js
+    if (typeof input === 'number') {
+      if (inRange(input, 90, 100)) {
+        response = 'A';
+      }
+      if (inRange(input, 80, 89)) {
+        response = 'B';
+      }
+      if (inRange(input, 70, 79)) {
+        response = 'C';
+      }
+      if (inRange(input, 60, 69)) {
+        response = 'D';
+      }
+      if (input < 60) {
+        response = 'F';
+      }
+      return response;
+    }
+    ```
+  
+  * 🔑 If `input` is a string, we set up a `switch` statement to handle different cases of letter grades, set the `response` variable to the range of grades, and return it&mdash;as shown in the following example:
+
+    ```js
+    if (typeof input === 'string') {
+      switch (input) {
+        case 'A':
+          response = '90 - 100';
+          break;
+        case 'B':
+          response = '80 - 89';
+          break;
+        case 'C':
+          response = '70 - 79';
+          break;
+        case 'D':
+          response = '60 - 69';
+          break;
+        case 'F':
+          response = '0 - 59';
+          break;
+        default:
+          response = '0';
+          break;
+      }
+      return response;
+    }
+    ```
+
+  * Finally, we create an instance of the `Student` and test the `displayGrade()` method by passing it a grade of first `95` and then `'B'`. When we run `node index.js`, we see the grades logged in the console, as shown in the following example:
+
+    ```sh
+    John.displayGrade(): A
+    John.displayGrade(): 80 - 89
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the core concept behind method overloading?
+
+  * 🙋 Method overloading allows a method to behave differently depending on the parameters that are passed to it.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Instructor Demo: Promises (5 min)
+
+* Open `07-Ins-Promises/index.js` in your IDE and explain the following:
+
+  * The `Promise` object represents the completion or failure of an asynchronous operation and its result. 
+
+  * 🔑 Let's say that parents promised their child a Nintendo Switch if the child finished all their chores. If `choresDone` is `true`, the Promise will be resolved. But if not, there will be an error and the Promise will be rejected. See the following code for an example:
+
+    ```js
+    const choresDone = false;
+
+    // Promise
+    const willGetSwitch = new Promise((resolve, reject) => {
+      // Check for a desireable outcome, if so resolve the promise
+      if (choresDone) {
+        const reward = {
+          name: 'Nintendo Switch',
+          desired: true,
+        };
+        resolve(reward);
+
+        // Otherwise reject the promise
+      } else {
+        const issue = new Error('Child did not finish chores as promised');
+        reject(issue);
+      }
+    });
+    ```
+
+  * A **Promise** is a returned object to which you attach callbacks, instead of passing callbacks into a function. Callbacks added using `then()` will be called AFTER the success or failure of the asynchronous operation. 
+
+  * In this case, we have a callback `playGames` that will be called only if the first Promise is resolved, as shown in the following example:
+
+    ```js
+    const playGames = (reward) => {
+      const message = `I am playing games on my new ${reward.name}`;
+      return Promise.resolve(message);
+    };
+    ```
+
+  * We can add multiple callbacks by calling `then()` several times. The callbacks are exectured one by one in the order in which they were inserted, as follows:
+
+    ```js
+    willGetSwitch
+      .then(playGames)
+      .then((resolved) => console.log(resolved))
+      .catch((err) => console.error(err));
+    ```
+
+  * The `catch()` is short for `then(null, failureCallback)` and will catch any errors that happened.
+
+* Run `node index.js` in the command line to demonstrate the following:
+
+  * If we try to run `index.js` with `choresDone` set to `false`, we get an error in the console, as follows:
+
+    ```
+    Error: Child did not finish chores as promised
+    ```
+
+  * If we change `choresDone` to `true` and run `node index.js` again, we see that the Promise resolved successfully and the child is playing games on his new Nintendo Switch&mdash;as shown in the following example:
+
+    ```
+    I am playing games on my new Nintendo Switch
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we write asynchronous functions in a clean, readable way?
+
+  * 🙋 We can use Promises to avoid chaining multiple callbacks together. Chaining callbacks can cause confusion and make the code difficult to read.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Promises/README.md`.
+
+### 18. Student Do: Promises (15 min)
+
+* Direct students to the activity instructions found in `08-Stu_Promises/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Refactor Function to use Promises
+
+  Work with a partner to resolve the following issues:
+
+  * Refactor the `practiceCoding()` function to use promises instead of callbacks.
+
+  ## Expected Behavior
+
+  * When the user enters `node index.js coding`, the following should be logged in the console:
+
+    Current user activity: coding
+    We are coding in promises!
+
+  * When the user enters `node index.js nothing`, the following should be logged in the console:
+
+    Current user activity: nothing
+    Promise rejected: Error: Coding stopped - Student is distracted
+
+  ## Actual Behavior
+
+  * When the user enters `node index.js coding`, the following is logged in the console:
+
+    Current user activity: coding
+    We are coding!
+
+  * When the user enters `node index.js nothing`, the following is logged in the console.
+
+    Current user activity: nothing
+    { issue: 'Distracted', message: 'Coding stopped' }
+
+  ## Steps to Reproduce the Problem
+
+  1. Run `node index.js coding` to see the message logged in the console.
+
+  2. Run `node index.js nothing` to see the error message logged in the console.
+
+  ---
+
+  ## 💡 Hints
+
+  How can we use the `resolve()` method to handle the fulfillment of a Promise and the `reject()` method to handle the failure of a Promise?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could we resolve multiple Promises at once?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 19. Instructor Review: Promises (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with Promises? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `reject()`
+
+  * ✔️ `resolve()`
+
+  * ✔️ `then()`
+
+  * ✔️ `catch()`
+
+* Open `08-Stu_Promises/Solved/index.js` in your IDE and explain the following: 
+
+  * We capture the user's input by setting it to a variable at the top of the application, as shown in the following example:
+
+    ```js
+    const userInput = process.argv[2];
+    console.log('Current user activity:', userInput);
+    ```
+
+  * If the user doesn't enter anything, we return an error message and include instruction on how to use the application. `process.exit()` will end execution of the program when called, as shown in the following example:
+
+    ```js
+    if (!userInput) {
+      console.error(
+        '\nPlease enter your current activity\nUsage: `node index.js <activity>`'
+      );
+      process.exit();
+    }
+    ```
+
+  * The application relies on checking whether the student is coding. We check whether the current student action is anything other than `coding` and store the Boolean result in a variable called `studentDistracted`, as shown in the following example:
+
+    ```js
+    const studentDistracted = userInput !== 'coding';
+    ```
+
+  * We refactor the `practiceCoding()` function from using callbacks to using Promises, as follows:
+
+    ```js
+    const practiceCoding = () =>
+      new Promise((resolve, reject) => {
+
+      }
+    ```
+
+  * 🔑 By the same logic as the original `practiceCoding()` function, the Promise calls the `reject()` method if `studentDistracted` is set to `true`, as shown in the following example:
+
+    ```js
+    if (studentDistracted) {
+      reject(new Error('Coding stopped - Student is distracted'));
+    }
+    ```
+  
+  * 🔑 Otherwise, we resolve the Promise&mdash;as shown in the following example&mdash;because the student is coding, which is the desired outcome:
+
+    ```js
+    resolve('We are coding!');
+    ```
+
+  * 🔑 We call the `practiceCoding()` function and chain a `then()` to define the code that ought to run after the Promise has been resolved. Lastly, we chain a `catch()` to log any errors in the console, as shown in the following example:
+
+    ```js
+    practiceCoding()
+      .then(() => console.log('We are coding in Promises!'))
+      .catch((err) => console.error('Promise rejected:', err));
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why might we want to use Promises over callbacks?
+
+  * 🙋 Promises offer many advantages. For one thing, they allow you to avoid excessive indentation in your code&mdash;sometimes referred to as "callback hell." Promises are easier to read and manage.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), and stick around for office hours to ask for help.
+
 * After all questions have been answered you can end class for the day.
 
-### 18. END (0 min)
+### 20. END (0 min)
 
 ### Lesson Plan Feedback
 
