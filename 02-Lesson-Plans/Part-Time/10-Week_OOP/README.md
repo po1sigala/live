@@ -72,7 +72,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Jest documentation](https://jestjs.io/docs/en/getting-started)
 
-  * This [example of method overloading implemented in Java](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) might help solidify your understanding of method overloading.
+  * [Method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) 
 
   * [git stash](https://www.git-scm.com/docs/git-stash) 
 
