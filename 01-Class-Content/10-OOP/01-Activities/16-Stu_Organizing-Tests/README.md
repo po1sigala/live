@@ -6,7 +6,8 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation:
 
-@TODO Add documentation?
+[Jest Docs](https://jestjs.io/docs/en/getting-started)
+
 
 ---
 

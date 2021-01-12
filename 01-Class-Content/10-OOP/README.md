@@ -36,8 +36,6 @@ The following topics will be covered in this unit:
 
   * [function() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
 
-  * [In classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-
 * [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)
 
   * [Jest](https://jestjs.io/docs/en/getting-started)
