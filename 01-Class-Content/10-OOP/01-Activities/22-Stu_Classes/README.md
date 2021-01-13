@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
   * `printStats()` logs the character's name, strength, and hit points, as follows:
 
-    ```
+    ```js
     console.log(`Stats for ${this.name} are:\n`)
     console.log(`Each attack will do ${this.strength} damage`)
     console.log(`${this.name} has ${this.hitPoints} hit points remaining`)

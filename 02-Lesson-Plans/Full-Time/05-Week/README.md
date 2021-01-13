@@ -7,6 +7,7 @@ In the first half of this week, you'll introduce students to Node.js and the con
 Refer to the following links for detailed information on key topics, learning objectives and homework:
 
 * [09-NodeJS](../../../01-Class-Content/09-NodeJS/README.md)
+
 * [10-OOP](../../../01-Class-Content/10-OOP/README.md)
 
 ## Instructor/TA Notes
@@ -31,13 +32,13 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Career Connection
 
-[NodeJS](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
+Remind students that related Career Services material can be found in their Career Connection folder for [Unit 09](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
 
-[Object Oriented Programming (OOP)](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
-Next unit, we will be diving into servers and Express. Spend as much time as you can making sure that students understand Node.js fundamentals. Students will also start using Heroku to deploy their web applications. Be sure to send out the [instructions for installing the Heroku CLI](../../../01-Class-Content/10-OOP/04-Important/heroku-install.md) and remind students to sign up for a Heroku account before starting the next unit.
+* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
 **Note**: While Heroku may require students to enter a credit or debit card, but they will absolutely NOT be charged unless they decide to purchase additional services.
 
@@ -59,17 +60,19 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Homework
 
-* [Unit 09 Homework](../../../01-Class-Content/09-NodeJS/02-Homework/README.md)
+* [Unit 09 Homework](../../../01-Class-Content/09-NodeJS/02-Homework)
 
-* [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework/README.md)
+* [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework)
 
 ### Slide Decks
 
 * [Unit 09: Introduction to Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
 
-* [Unit 10: Introduction to OOP](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+* [Unit 10: Introduction to OOP](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
 ### Algorithms
+
+Unit 09:
 
 * [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
 
@@ -78,6 +81,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [02: Product of Largest Two](../../../01-Class-Content/09-NodeJS/03-Algorithms/02-product-of-largest-two)
 
 * [03: Camel Case](../../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case)
+
+Unit 10:
 
 * [01: Linear Search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
 

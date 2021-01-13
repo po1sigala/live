@@ -7,7 +7,7 @@ Trilogy as a company values transparency and data-driven change quite highly. As
 
 ## Overview
 
-In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas.
+In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas. Students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
 
 ## Instructor Notes
 
@@ -29,36 +29,34 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 * Explain polymorphism through method overloading.
 
-* Implement `Promise.all()` to wait for multiple API calls.
+## Slide Deck
 
-## Slides
-
-[5.3: Constructors](https://docs.google.com/presentation/d/1UrpscJQMOSvspa0Tw6mtYkG95mSjIaUwLmeJhDYo9T8/edit?usp=sharing)
+[Unit 10 Slide Deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
 ## Time Tracker
 
-| Start   |  #  | Activity Name                                   | Duration |
-|---------|-----|-------------------------------------------------|----------|
-| 10:00AM | 1   | Instructor Demo: Mini Project                   | 0:05     |
-| 10:05AM | 2   | Student Do: Mini Project                        | 0:60     |
-| 11:05AM | 3   | Instructor Review: Mini Project                 | 0:10     |
-| 11:15AM | 4   | Introduce Homework                              | 0:05     |
-| 11:20AM | 5   | FLEX                                            | 0:30     |
-| 11:50PM | 6   | Instructor Do: Stoke Curiosity                  | 0:10     |
-| 12:00PM | 7   | BREAK                                           | 0:30     |
-| 12:30PM | 8   | Instructor Demo: Constructors                   | 0:05     |
-| 12:35PM | 9   | Student Do: Constructors                        | 0:15     |
-| 12:50PM | 10  | Instructor Review: Constructors                 | 0:10     |
-| 1:00PM  | 11  | Instructor Demo: Prototypes                     | 0:05     |
-| 1:05PM  | 12  | Student Do: Prototypes                          | 0:15     |
-| 1:20PM  | 13  | Instructor Review: Prototypes                   | 0:10     |
-| 1:30PM  | 14  | Instructor Demo: Polymorphism                   | 0:05     |
-| 1:35PM  | 15  | Student Do: Polymorphism                        | 0:15     |
-| 1:50PM  | 16  | Instructor Review:Polymorphism                  | 0:10     |
-| 2:00PM  | 17  | Instructor Demo: Promises                       | 0:05     |
-| 2:05PM  | 18  | Student Do: Promises                            | 0:15     |
-| 2:20PM  | 19  | Instructor Review: Promises                     | 0:10     |
-| 2:30PM  | 20  | END                                             | 0:00     |
+| Start   |  #  | Activity Name                   | Duration |
+|---------|-----|---------------------------------|----------|
+| 10:00AM | 1   | Instructor Demo: Mini Project   | 0:05     |
+| 10:05AM | 2   | Student Do: Mini Project        | 0:60     |
+| 11:05AM | 3   | Instructor Review: Mini Project | 0:10     |
+| 11:15AM | 4   | Introduce Homework              | 0:05     |
+| 11:20AM | 5   | FLEX                            | 0:30     |
+| 11:50PM | 6   | Instructor Do: Stoke Curiosity  | 0:10     |
+| 12:00PM | 7   | BREAK                           | 0:30     |
+| 12:30PM | 8   | Instructor Demo: Constructors   | 0:05     |
+| 12:35PM | 9   | Student Do: Constructors        | 0:15     |
+| 12:50PM | 10  | Instructor Review: Constructors | 0:10     |
+| 1:00PM  | 11  | Instructor Demo: Prototypes     | 0:05     |
+| 1:05PM  | 12  | Student Do: Prototypes          | 0:15     |
+| 1:20PM  | 13  | Instructor Review: Prototypes   | 0:10     |
+| 1:30PM  | 14  | Instructor Demo: Polymorphism   | 0:05     |
+| 1:35PM  | 15  | Student Do: Polymorphism        | 0:15     |
+| 1:50PM  | 16  | Instructor Review:Polymorphism  | 0:10     |
+| 2:00PM  | 17  | Instructor Demo: Promises       | 0:05     |
+| 2:05PM  | 18  | Student Do: Promises            | 0:15     |
+| 2:20PM  | 19  | Instructor Review: Promises     | 0:10     |
+| 2:30PM  | 20  | END                             | 0:00     |
 
 - - -
 
@@ -286,7 +284,7 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 * Run `node index.js` from the command line and demonstrate the following:
 
-  * We will build a command-line application that will generate readmes for us. 
+  * We will build a command-line application that will generate REAMDEs for us. 
 
   * You might actually want to use this application for all your homework in the future. It will also help keep each of your projects looking professional when you are applying for jobs.
 
@@ -313,8 +311,6 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 * This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
-
-* Welcome students to class.
 
 * Open the [slide deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
@@ -1275,12 +1271,8 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 ### 20. END (0 min)
 
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 - - -
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

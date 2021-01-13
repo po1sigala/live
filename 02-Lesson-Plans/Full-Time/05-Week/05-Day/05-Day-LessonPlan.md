@@ -1,4 +1,4 @@
-# 5.5 Full-Time Lesson Plan: Object-Oriented Programming (OOP)
+# 05.5 Full-Time Lesson Plan: ES6 Classes
 
 ## Overview
 
@@ -53,7 +53,7 @@ By the end of class, students will be able to:
 | 1:35PM  | 15  | Instructor Review: Mini Project     | 0:10     |
 | 1:45PM  | 16  | Introduce Homework                  | 0:05     |
 | 1:50PM  | 17  | FLEX                                | 0:40     |
-| 2:00PM  | 18  | END                                 | 0:00     |
+| 2:30PM  | 18  | END                                 | 0:00     |
 
 ---
 
@@ -173,7 +173,7 @@ By the end of class, students will be able to:
 
     * `printStats()` logs the character's name, strength, and hit points, as follows:
 
-      ```
+      ```js
       console.log(`Stats for ${this.name} are:\n`)
       console.log(`Each attack will do ${this.strength} damage`)
       console.log(`${this.name} has ${this.hitPoints} hit points remaining`)
@@ -1130,7 +1130,7 @@ By the end of class, students will be able to:
 
 * This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
-### 18. END (0 min)
+### 28. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 

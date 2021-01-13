@@ -1,10 +1,12 @@
-# 5.4 Full-Time Lesson Plan: Object-Oriented Programming (OOP) (10:00 AM)
+# 05.4 Full-Time Lesson Plan: Test-Driven Development
 
 ## Overview
 
 Today's class introduces students to test-driven-development and unit testing JavaScript applications.
 
 ## Instructor Notes
+
+* In this lesson, students will complete activities `09-Ins_Promise-All` through `20-Stu_Mock-Fs`.
 
 * To refresh your memory of some of the specific methods often used by testing frameworks, consider creating a few failing tests before class&mdash;then write the code to make them pass. You might also benefit from installing the [Jest Snippets](https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets) plugin for VS Code.
 
@@ -16,6 +18,8 @@ Today's class introduces students to test-driven-development and unit testing Ja
 
 ## Learning Objectives
 
+* Implement `Promise.all()` to wait for multiple API calls.
+
 * Explain the benefits of test-driven development (TDD).
 
 * Define code requirements for code that hasn't been written yet by using unit tests.
@@ -25,10 +29,6 @@ Today's class introduces students to test-driven-development and unit testing Ja
 * Test side effects like reading or writing to the file system, printing to the console, and AJAX requests by using mocks.
 
 * Structure test code using the Arrange, Act, Assert pattern.
-
-## Slides
-
-N/A
 
 ## Time Tracker
 
@@ -63,6 +63,8 @@ N/A
 ## Class Instruction
 
 ### 1. Instructor Demo: Promise.all() (5 min)
+
+* Welcome students to class.
 
 * Navigate to `09-Ins_Promise-All` and run `node index.js` in your command line to demonstrate the following:
 
@@ -308,14 +310,12 @@ N/A
 
 ### 4. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class.
-
 * Explain to students that **test-driven development (TDD)** is a process and a methodology. Review the following TDD terms:
 
   * **Unit tests** ensure reliability and validate the expected behavior of things like functions or classes. Unit tests verify that the unit being tested returns the expected output.
-    
+
   * **Integration tests** ensure the cooperation of units in your application. Integration tests might focus on an API, user input, or a user interface, which could involve subsequent actions like writing to a database or logging output.
-    
+
   * **End-to-end tests** verify that the application will function as expected from the perspective of a user. These tests usually focus almost entirely on an application's user interface.
 
 * Explain that in this class, we will create tests before we write code, because that is the core tenet of TDD. How we write the code is dictated by the need to make each test pass, setting up a contract-like expectation for ourselves and other developers and keeping the development process focused.
@@ -334,15 +334,15 @@ N/A
 
   * We have included `jest` as a dependency in `package.json` and have also included a special test script defined with a value of `jest`, as shown in the following example:
 
-    ```json
-    "scripts": {
-      "test": "jest"
-    },
-    ...
-      "devDependencies": {
-      "jest": "^26.5.2"
-    }
-    ```
+  ```json
+  "scripts": {
+    "test": "jest"
+  },
+  ...
+    "devDependencies": {
+    "jest": "^26.5.2"
+  }
+  ```
 
 * Run `npm install` and  `npm run test` from the command line to demonstrate the following: 
 
@@ -360,28 +360,28 @@ N/A
 
   * At the top of the file, we are importing an object called `Arithmetic` that connects the tests to `arithmetic.js`, as follows:
 
-    ```js
-    const Arithmetic = require('./arithmetic');
-    ```
+  ```js
+  const Arithmetic = require('./arithmetic');
+  ```
   
   * In the first test, we start with a `describe` statement that contains several other `describe` statements. The parent `describe` statement groups together the related tests for different methods, which also improves readability. See the following code for an example:
 
-    ```js
-    describe("Arithmetic", () => {
-      describe("Initialization", () => {
-      ...
-      });
-      describe("plus", () => {
-      ...
-      });
-      describe("minus", () => {
-      ...
-      });
-      describe("value", () => {
-        ...
-      });
+  ```js
+  describe("Arithmetic", () => {
+    describe("Initialization", () => {
+    ...
     });
-    ```
+    describe("plus", () => {
+    ...
+    });
+    describe("minus", () => {
+    ...
+    });
+    describe("value", () => {
+      ...
+    });
+  });
+  ```
 
   * The `it` portion of this test describes how the function should behave in a successful test case. For example, the first `it` statement indicates that initialization `"should return an object containing a 'number' property when called with the 'new' keyword"`.
 
@@ -845,7 +845,7 @@ N/A
       reverse
         ✓ should reverse a given string (2ms)
     ```
-    
+
 * Open `14-Stu_Pass-Tests/Solved/test/algo.test.js` in your IDE and explain the following: 
 
   * 🔑  Let's repeat the TDD cycle with the second test. `isPalindrome()` includes two tests that we need to pass. The first verifies that it `"should return true if a string is a palindrome"` and the second verifies that it `"should return false if a string is not a palindrome"`. See the following code for an example:
@@ -880,26 +880,26 @@ N/A
 
   * 🔑 When we run `npm run test`, `isPalindrome()` passes both tests, as follows:
 
-    ```
-    isPalindrome
-      ✓ should return true if a string is a palindrome
-      ✓ should return false if a string is not a palindrome
-    ```
+  ```bash
+  isPalindrome
+    ✓ should return true if a string is a palindrome
+    ✓ should return false if a string is not a palindrome
+  ```
     
 * Open `14-Stu_Pass-Tests/Solved/test/algo.test.js` in your IDE and explain the following: 
 
   * 🔑 Let's repeat the TDD cycle one last time, with the third and final test. `capitalize()` includes one test that we need to pass, verifying that it `"should take a string and return a new string with the first letter of each word capitalized"`, as follows:
 
-    ```js
-    describe("capitalize", () => {
-      it("should take a string and return a new string with the first letter of each word capitalized", () => {
-        const str = "capitalize every first word of the string.";
-        const capitalized = "Capitalize Every First Word Of The String.";
-        const result = new Algo().capitalize(str);
-      expect(result).toEqual(capitalized);
-      });
+  ```js
+  describe("capitalize", () => {
+    it("should take a string and return a new string with the first letter of each word capitalized", () => {
+      const str = "capitalize every first word of the string.";
+      const capitalized = "Capitalize Every First Word Of The String.";
+      const result = new Algo().capitalize(str);
+    expect(result).toEqual(capitalized);
     });
-    ```
+  });
+  ```
 
 * Open `14-Stu_Pass-Tests/Solved/algo.js` in your IDE and explain the following:
 
@@ -917,7 +917,7 @@ N/A
 
   * 🔑 All of the tests now pass when we run `npm run test`, including `capitalize()`, as shown in the following example:
 
-  ```
+  ```bash
   PASS  test/algo.test.js
     Algo
       reverse
@@ -961,7 +961,7 @@ This time can be utilized for reviewing key topics learned so far in this unit o
 
   * 🔑 The Arrange, Act, Assert pattern shown in the following example provides a guide for organizing test code in a way that makes sense to us and others:
 
-      ```js
+    ```js
     it("should create an object with a 'text' property set to the 'text' argument provided when called with the 'new' keyword", () => {
       // Arrange
       const text = "Pick up milk";
@@ -987,7 +987,7 @@ This time can be utilized for reviewing key topics learned so far in this unit o
   * 🔑 Consider the following kinds of tests as you decide what to test for:
   
     * **Positive tests** check whether an application behaves as expected with correct inputs.
-    
+
     * **Negative tests** check whether an application behaves as expected, with invalid or improper inputs, to ensure that the application can handle invalid data gracefully.
 
     * **Exception tests** check that the application behaves as expected when provided abnormal input.
@@ -1524,16 +1524,18 @@ This time can be utilized for reviewing key topics learned so far in this unit o
 
   * 🙋 We can refer to supplemental material, read the [Jest API documentation on spyOn()](https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname), and stick around for office hours to ask for help.
 
-* Answer any questions before ending the class.
+* Answer any questions before proceeding.
 
 ### 22. FLEX (30 min)
 
 * This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
-### 23. END (0 min)
+* Answer any questions before ending the class.
 
-### Lesson Plan Feedback
+### 23. END (0 mins)
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+- - -
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
