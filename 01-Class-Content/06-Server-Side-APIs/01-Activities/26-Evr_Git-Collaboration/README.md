@@ -6,7 +6,7 @@ Having multiple developers work with code in a single repository can be hectic. 
 
 ## Instructions
 
-Please refer to `25-Evr_Git-Repo-Setup` for instructions. This is a continuation of that activity.
+Please refer to `25-Stu_Git-Repo-Setup` for instructions. This is a continuation of that activity.
 
 ### Create a New Feature Branch
 
