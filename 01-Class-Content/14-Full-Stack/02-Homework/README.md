@@ -38,4 +38,4 @@ You are required to submit the following:
 _Note: Don't forget to change the sharing settings on your Google Doc._
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

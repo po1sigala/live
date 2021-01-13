@@ -44,6 +44,8 @@ THEN I find a concise, descriptive title
 
 ## Mock-Up
 
+**Note**: This layout is designed for "desktop", so you may notice that some of the elements don't look like the Mock-Up when viewed at a resolution smaller than 768px. In future lessons, you will learn how to make elements "responsive" so that your web application is optimized for any screen size.
+
 The following image shows the web application's appearance and functionality:
 
 ![code refactor demo](./Assets/01-html-css-git-homework-demo.png)
@@ -98,5 +100,4 @@ You are required to submit the following for review:
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -120,4 +120,4 @@ Finally, Handlebars is currently used in only two units and one project. We're i
 
 Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. Nonetheless, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses, and AWS will be the focus of at least one of these courses (and potentially more!).
 
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

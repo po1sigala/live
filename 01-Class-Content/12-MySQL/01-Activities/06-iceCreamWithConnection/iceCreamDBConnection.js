@@ -1,21 +1,25 @@
-var mysql = require("mysql");
+// Import the mysql package
+const mysql = require('mysql');
 
-var connection = mysql.createConnection({
-  host: "localhost",
+// Connect to the ice_creamDB database using a localhost connection
+const connection = mysql.createConnection({
+  host: 'localhost',
 
-  // Your port; if not 3306
+  // Your port, if not 3306
   port: 3306,
 
-  // Your username
-  user: "root",
+  // Your MySQL username
+  user: 'root',
 
-  // Your password
-  password: "",
-  database: "ice_creamDB"
+  // Your MySQL password (leave blank for class demonstration purposes; fill in later)
+  password: '',
+
+  // Name of database
+  database: 'ice_creamDB',
 });
 
-connection.connect(function(err) {
+connection.connect((err) => {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId);
+  console.log('connected as id ' + connection.threadId);
   connection.end();
 });
