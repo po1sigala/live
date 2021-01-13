@@ -1,8 +1,8 @@
-# 🏗️ Create Node.js Application
+# 📖 Create a Node.js Application
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to write programs for use with Node.
+* As a developer, I want to be able to execute JavaScript programs with Node.js.
 
 * As a developer, I want to make a program that accepts a string as an input and logs it to the terminal. 
 
@@ -12,13 +12,11 @@ Work with a partner to implement the following user story:
   
 * It's done when I have written JavaScript to log the string "Hellooo, Node!"
 
-* It's done when I have run the program from the command line using `node index.js`.
+## 📝 Notes
 
-* It's done when I have confirmed the expected output.
+Refer to the documentation:
 
-## 💡 Hints
-
-Is there a difference in the way we code for the browser's developer console?
+[Node.js documentation](https://nodejs.org/en/docs/)
 
 ## 🏆 Bonus
 
@@ -29,4 +27,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
