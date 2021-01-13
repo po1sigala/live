@@ -49,11 +49,3 @@ N/A
 ### Time Tracker(s)
 
 N/A
-
-## Algorithms
-
-  * [01-reverse-no-build-in](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/01-reverse-no-build-in)
-
-  * [02-reverse-in-place](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/02-reverse-in-place)
-
-  * [03-look-say-sequence](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/03-look-say-sequence)

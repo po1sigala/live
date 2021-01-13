@@ -1,680 +1,954 @@
-# 02.3 Lesson Plan - Introduction to Web APIs (10:00 AM) 
+# 02.3 Full-Time Lesson Plan: JavaScript and Web APIs
 
 ## Overview
 
-In this class, we will be introducing students to the concept of JavaScript Objects.
-
-`Summary: Complete activities 28-35 in Unit 03 and activities 1-5 in Unit 04`
+In this class, we will work on the Unit 03 Mini-Project and then move onto Unit 04 on Web APIs. This will be the students' first introduction to the DOM. Students will gain experience using Web APIs to create, get, and append elements.
 
 ## Instructor Notes 
 
-* This is a critical unit as it introduces real-world use cases for the programming concepts students learned in the previous unit (JavaScript) and will set them up for success when transitioning to front-end frameworks (React) at the end of the course.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 03 through `08-Stu_Create-Append` in Unit 04.
 
-* JavaScript is what ties together HTML and CSS and brings the user experience to life. Let students know that the work they are doing with JavaScript now will pay off heavily as the course proceeds.
+* Be sure to review the activities and try to anticipate questions that students might ask. 
 
-* Students will be working with JavaScript throughout the whole course, be sure to remind them often that these are the building blocks for success.
+* Unit 04 introduces DOM traversal and manipulation. This is a difficult topic for learners new to programming. If students feel overwhelmed, encourage them to talk through the challenge&mdash;in plain language&mdash;with their partner before they begin to write their solutions. You could also encourage them to reference a [visual of the DOM tree](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit#slide=id.g61fae5cd04_0_31) like the one found in the slide deck. 
 
-* That said, the activities are designed to encourage independent exploration and experimentation as there are dozens of DOM methods available to developers and we will only scratch the surface here with those most commonly used. So have fun!
+* Be prepared to switch between your browser, IDE, and console when demonstrating the activities in this lesson. It is important for students to see how manipulating the DOM with Web APIs affects what is displayed in the browser.
 
-## Class Objectives
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
-* By the end of class students will be able to....
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-  * Understand the use of JavaScript Functions and Objects.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-  * To begin utilizing the basic JavaScript learned so far to build simple JavaScript games.
+## Learning Objectives
 
-  * Use the console to inspect the `window` object via `this`.
+By the end of class students will be able to:
 
-  * Use various web APIs to traverse the DOM.
+  * Inspect the `Window` object.
+
+  * Traverse the DOM using various Web APIs.
 
   * Query the DOM for elements by their selector.
 
-  * Use `setAttribute()` to add styles to specific elements.
+  * Add styles to specific elements using `setAttribute()`.
 
-  * Create an entire HTML page using only JavaScript.
+  * Create and append elements to the document.
 
-## Slides
+## Slide Deck
 
-* [2.3 JavaScript & Introduction to the DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing)
+* [Unit 04 Slide Deck](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing)
 
 ## Time Tracker
 
-* [2.3 Time Tracker](https://drive.google.com/open?id=1Y3Fa1NTc3oTe1C6bRXDeTYTJZPfV4e_eN8_WyGT0mRM)
+| Start  | #   | Activity Name                         | Duration |
+|---     |---  |---                                    |---       |
+| 10:00AM| 1   | Instructor Demo: Mini-Project         | 0:05     |
+| 10:05AM| 2   | Student Do: Mini-Project              | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini-Project       | 0:10     |
+| 11:15AM| 4   | Introduce Homework                    | 0:05     |
+| 11:20AM| 5   | FLEX                                  | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity        | 0:10     |
+| 12:00PM| 7   | BREAK                                 | 0:30     |
+| 12:30PM| 8   | Instructor Demo: Window Object        | 0:05     |
+| 12:35PM| 9   | Student Do: Window Object             | 0:15     |
+| 12:50PM| 10  | Instructor Review: Window Object      | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Traverse DOM         | 0:05     |
+| 1:05PM | 12  | Student Do: Traverse DOM              | 0:15     |
+| 1:20PM | 13  | Instructor Review: Traverse DOM       | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Setting Attributes   | 0:05     |
+| 1:35PM | 15  | Student Do: Setting Attributes        | 0:15     |
+| 1:50PM | 16  | Instructor Review: Setting Attributes | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Create Append        | 0:05     |
+| 2:05PM | 18  | Student Do: Create Append             | 0:15     |
+| 2:20PM | 19  | Instructor Review: Create Append      | 0:10     |
+| 2:30PM | 20  | END                                   | 0:00     |
 
 - - -
 
-### 1. Instructor Do: Good Array (5 mins)
+## Class Instruction
 
-* Open the slide deck [2.3 JavaScript & Introduction to the DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing) and start on the Web APIs slide. Follow these prompts on their corresponding slides:
+### 1. Instructor Demo: Mini-Project (5 min) 
 
-* Open `good-array.html` in `28-GoodArray`.
+* Welcome students to class.
 
-* The purpose of this activity is to show students that arrays are useful for looping through lists of numbers.
+* Open `28-Stu_Mini-Project/index.html` in your browser and demonstrate the following:
 
-* This example will then be contrasted by the next example, in which we have two arrays that are related to one another, thus requiring the use of an object pattern instead.
+  * 🔑 We will create a Rock, Paper, Scissors game that allows a user to play against the computer. 
 
-### 2. Instructor Do: Joan of Arc (Bad Arrays) (10 mins)
+  * 🔑 When we open the browser, we are prompted to enter a choice: R, P, or S.
 
-* Open `joan-of-arc-arrays-unsolved.js` in `29-JoanOfArcArrays/Unsolved` in your editor.
+  * 🔑 When we have entered the letter and pressed OK, we are alerted to the computer's choice. 
 
-* Take a moment to explain this pattern. The first array has various labels and the second array has the descriptions associated with these labels for our Joan of Arc character.
+  * 🔑 After we press OK, we are alerted whether we won, tied, or lost. 
 
-* This is a perfect example of the limitations of arrays—namely, that they are not useful for describing associations across arrays.
+  * 🔑 When we press OK again, we are alerted to the stats.
 
-* Have students think for a few moments about how they would link these two arrays so that they could easily determine what Joan of Arc's "Real Name" is or what "Scars" she has.
+  * 🔑 When we press OK a final time, we are presented with the prompt "Play Again?"
+  
+  * 🔑 If we press OK, the game starts again. If not, we exit the game. 
 
-* Point out that any array combination strategy is going to be overly complex and that there is a much simpler solution to this problem.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Show how the relationship would be with `joan-of-arc-arrays-solved.js` in `29-JoanOfArcArrays/Solved`.
+  * ☝️ How would we build this?
 
-### 3. Instructor Do: Gandalf The Grey Objects (10 mins)
+  * 🙋 Start with a plan! Pseudocoding will help us figure out what the code will need to look like. Then, using the JavaScript skills learned in class and a bit of research, we will write the actual code. 
 
-* Now open `gandalf-the-grey-objects.html` in `30-GandalfTheGreyObjects`.
+* Answer any questions before allowing students to start the mini-project.
 
-  * Point out how the `gandalf` object takes on a different form where each property matches up with its value.
+### 2. Student Do: Mini-Project (60 min)
 
-  * Also, point out how we can access the values for each property using either square bracket notation (`object["property"]`) or dot notation (`object.property`).
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
-  * Based on the current code, ask students: Why would we need to use bracket notation over dot notation?
+* Break your students into groups that will work together on this activity.
 
-    * Bracket notation is required when the property we want to access is a string with spaces. e.g. the code `object["multi-word property"]` would work, but `object.multi-word property` or `object."multi-word property"` would not.
+  ```md
+  # Unit 03 Mini-Project: Rock, Paper, Scissors
 
-    * We also need to use bracket notation whenever we want to pass a variable to be interpreted as an object property. The gandalf-the-grey-objects example demonstrates this:
+  In this activity, you will work with a group to build a game using only JavaScript.
 
-      ```js
-      var ageProperty = "age (est)";
-      var years = gandalf[ageProperty];
-      alert("My 401k has been gathering interest for " + years + " years!")
-      ```
+  ## Instructions
 
-    * Had we just written `gandalf.ageProperty`, it would have returned `undefined`, since the `gandalf` object has no property literally named `ageProperty`.
+  The completed application should meet the following criteria:
 
-  * Also point out how these objects are very useful for storing related data and how we will be using them more often later when it comes to APIs and to data recall.
+  * As a user, I want to play Rock, Paper, Scissors against an automated opponent.
 
-  * Let them know that objects are EXTREMELY important.
+  * As a user, I can enter R, P, or S to signify my choice of rock, paper, or scissors.
 
-### 4. Instructor Do: Gandalf The Grey (Slides) (5 mins)
+  * As a user, I expect the computer to choose R, P, or S in return.
 
-* Proceed with the slides that visually lay out the structure of JavaScript objects.
+  * As a user, I want the option to play again whether I win or lose.
 
-* Talk through them as you go, and encourage questions frequently. The more readily students understand objects the better.
+  * As a user, I want to see my total wins, ties, and losses after each round.
 
-### 5. Instructor Do: Gandalf The Grey Objects (Repeat) (5 mins)
+  ### Specifications
 
-* Once again go over the same Gandalf The Grey Objects example. Explain the concepts once more. This time, highlight how object properties can also be _other_ objects. We can access those sub-objects simply by chaining dot or bracket notation: `gandalf.favoriteSong.artist`.
+  * Must use the `alert()`, `confirm()`, and `prompt()` methods to collect user input and display information to the user.
 
-* Feel free to create add-on examples of your own:
+  * The computer's selection must be random to ensure a fair game.
 
-  * Consider adding new properties.
+  ## 💡 Notes
 
-  * Ask students how they would retrieve specific properties.
+  Refer to the documentation:
 
-  * Go over how you could utilize properties in combination with one another.
+  * [MDN Web Docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
-* Make sure students understand the gist, and then Slack out the file to them.
+  * [MDN Web Docs on window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
 
-### 6. Partners Do: Basic Objects (10 mins)
+  * [MDN Web Docs on window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
 
-* Slack out the following file and instructions:
+  * [MDN Web Docs on Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
-  * **File**
+  ## 🏆 Bonus
 
-    * `car-object-unsolved.html` in `31-MyFirstObject/Unsolved`
+  If you have completed this activity, work through the following challenge with your group to further your knowledge:
 
-  * **Instructions**
+  * How can you customize the appearance of the `alert()`, `confirm()`, and `prompt()` dialog boxes?
 
-    * With a partner, spend the next few moments studying the code just Slacked to you.
-
-    * Then write code below each comment to log the relevant information about the provided `car` object.
-
-    * Bonus: If you finish early, create a brand new object of your own. Slack out a snippet of the code to the class when you are done. Be creative!
-
-### 7. Instructor Do: Review Activity (10 mins)
-
-* Walk students through `car-object-solved.html` in `31-MyFirstObject/Solved`. In essence, you just need to show students how to retrieve various properties from the car object and how to execute various methods associated with the car object. In your discussion of the previous activity be sure to mention the following:
-
-  * Objects like the `car` object can have properties as strings, numbers, and booleans as well as **methods** that are functions associated with the object.
-
-  * Be sure to explain briefly that a method is simply a function associated with a specific object.
-
-  * Point out the use of the word `this`. In your discussion of the keyword `this` explain that it is simply a way to reference the object itself.
-
-  * You can explain that in later portions of the class we will effectively be creating many instances of the same object, in which case the `this` keyword let's us know which instance of the object we are referencing.
-
-* See if there are any questions before proceeding to Slack out the solution.
-
-### 8. Instructor Do: Car Game Solved (5 mins)
-
-* Open up [car-game-solved.html](../../../../01-Class-Content/03-javascript/01-Activities/32-CarGame/Solved/car-game-solved.html) in `32-CarGame/Solution` in your browser, and demo how the game works for the class. Make sure to go over how the page is taking in user inputs from the `prompt` to run methods stored within the `car` object.
-
-* Point out that the game can be played indefinitely until the user clicks the Cancel button.
-
-### 9. Students Do: Run that Car (15 mins)
-
-* Slack out the following files and instructions. It's up to you whether students work individually or whether they work in pairs.
-
-  * **File**
-
-     * `car-game-unsolved.html` in `32-CarGame/Unsolved`
-
-  * **Instructions**
-
-    * Using the unsolved code as a starting point, create a complete application that meets the following specifications:
-
-      * Users can enter keyboard input (letters).
-
-      * Each of the car's methods are assigned to a key.
-
-      * When the user presses a key, it calls the appropriate function.
-
-      * These letters also trigger a global function called `reWriteStats()` that logs the car's make, model, color, mileage, and `isWorking` status to the console.
-
-    * **HINT:** A "while loop" is already set up for you that will continue to ask the user for input as long as they don't press Cancel. Your logic will go inside this loop.
-
-    * **BONUS:** Prevent the user from being able to drive the car if it needs a tune-up.
-
-### 10. Instructor Do: Review Activity (10 mins)
-
-* Open [car-game-solved.html](../../../../01-Class-Content/03-javascript/01-Activities/32-CarGame/Solved/car-game-solved.html) in `32-CarGame/Solution` in both the browser and in your editor.
-
-* First, show students how the application works once more.
-
-* Then walk students through the solution.
-
-  * In demonstrating the solution, first point out how the code is organized.
-
-  * Talk about how the code is effectively organized into a section for variables, a section for functions, and a section for function calls. Let them know that this is a helpful organization pattern for their upcoming homework assignment.
-
-  * Walk students through how the `while loop` works. Unlike a `for loop`, which has a pre-defined end, this will continue to run until the condition (`letter !== null`) is no longer true.
-
-  * This is how we can let the user play the game for as long as they want. As soon as they click Cancel, however, the `letter` variable will be set to `null`. Thus, our condition is no longer true.
-
-  * If the user presses OK, however, the selected letter is stored into a variable and is then checked using `if` statements against the letters `h, d, w, t`.
-
-  * If any of these letters are pressed, then the appropriate methods on the car are triggered.
-
-  * Then proceed to explain how these key presses also trigger the `reWriteStats()` function to run as well.
-
-  * Scroll up to the function's definition, and then point out how the function effectively just prints all of the updated car object data into the console.
-
-* Ask if there are any questions, answer them, and then proceed to Slack out the solution.
-
-  ```js
-    while (letter !== null) {
-      // Prompt user to input a letter
-      letter = prompt('Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.');
-
-      // If the letter is h, run the following functions/methods.
-      if (letter === "h") {
-        car.honk();
-        reWriteStats();
-      }
-      // If the letter is d, run the following functions/methods.
-      else if (letter === "d" && car.isWorking) {
-        car.driveToWork();
-        reWriteStats();
-      }
-      // If the letter is w, run the following functions/methods.
-      else if (letter === "w" && car.isWorking) {
-        car.driveAroundWorld();
-        reWriteStats();
-      }
-      // If the letter is t, run the following functions/methods.
-      else if (letter === "t") {
-        car.getTuneUp();
-        reWriteStats();
-      }
-    }
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-### 11. Everyone Do: Window Object & Scope (15 mins)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Open and Slack out [window-object.html](../../../../01-Class-Content/03-javascript/01-Activities/34-WindowObject/window-object.html) in `34-WindowObject`.
+### 3. Instructor Review: Mini-Project (10 min)  
 
-* Recap that objects are useful for storing related data and methods (or functions). We can make our own objects in JavaScript and access built-in objects. One such built-in object is the `window` object.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* In `window-object.html`, show that we are console.logging `window`. Inspect it in the browser and see if students recognize anything. Hopefully someone points out the `alert` method. Explain that `alert` actually belongs to the window object, we just don't have to write `window.alert()` (even though that still works).
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-* The window object contains a lot of other helpful information and methods for us to use, including the user's screen width and the URL they are currently visiting:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  ```js
-    console.log(window.screen.width);
-    console.log(window.location.href);
-  ```
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-* Explain that the `window` object is a **global variable**. A global variable is a variable that can be seen _everywhere_. Scroll down to the first function and point out that `window` is still available inside this function:
+  * ✔️ `window.prompt()`
 
-  ```js
-    function firstFunction() {
-      console.log(window.screen.width);
-    }
+  * ✔️ `Math.floor()` and `Math.random()`
 
-    firstFunction();
-  ```
+  * ✔️ `window.alert()`
 
-* In the next example, though, we added a parameter to the function, which we named "window." So what will be console.logged here?
+  * ✔️ Conditional statements
 
-  ```js
-    function secondFunction(window) {
-      console.log(window);
-    }
+  * ✔️ `window.confirm()`
 
-    secondFunction("Hello");
-  ```
+* Open `28-Stu_Mini-Project/Main/script.js` in your IDE and explain the following: 
 
-* Explain that variables we create in a function take priority over global variables, if they have the same name. This is one rule of **scope** we should be aware of.
+  * We declare variables that will be used to count the wins, losses, and ties, as follows:
 
-* Explain that **scope** is an important concept in JavaScript and something we will continue to practice throughout the course. High-level, it has to do with where variables are created and which functions have access to those variables.
-
-* Scroll down to the third example:
-
-  ```js
-    var food = "Pizza";
-    var drink = "Water";
-
-    function thirdFunction(drink) {
-      console.log(food);
-
-      console.log(drink);
-    }
-
-    thirdFunction("Orange Juice");
-  ```
-
-* Explain that variables `food` and `drink` are global variables, because we defined them outside of any functions. That means `thirdFunction` can access and console.log them. Ask students what the line `console.log(drink)` will print, though.
-
-* Because we named our parameter the same name as a global variable, the parameter takes priority. Suggest that maybe we should use unique names to avoid this problem in the future.
-
-### 12. Students Do: Mini-Project (55 mins)
-
-* Explain that, until break, we're going to build something from scratch that utilizes a lot of what they've learned.
-
-* Warn students that some of the requirements for this "mini project" we haven't necessarily gone over in class, but with a bit of Googling and asking their peers, you're confident they'll figure it out.
-
-* Slack out the following instructions:
-
-  * **Instructions**
-
-    * From scratch, create a small application that will do two things:
-
-      1. Check which OS the user is on and alert a message that says, _"Welcome, Windows user!"_ or, _"Welcome, Mac user!"_
-
-      2. Then check their **geolocation** and redirect them to a new page depending on if they are located on the east coast or west coast.
-
-    * You'll need to do some research on how to gather some of this information, but here's a hint: it's going to be part of the `window` object we just looked at.
-
-### 13. Instructor Do: Review Project (10 mins)
-
-* Time permitting (or if you want to cut the project short), review the solution with the students.
-
-* If possible, live-code the solution yourself. Otherwise, open the [index.html](../../../../01-Class-Content/03-javascript/01-Activities/35-LocationRedirect/Solved/index.html) in `35-LocationRedirect`.
-
-* Start at the bottom, highlighting how we're using `navigator.userAgent` (or `window.navigator.userAgent`) to gather information about the user's machine and `indexOf` to check for OS-specific words.
-
-  ```js
-    // See if user is on Windows
-    if (navigator.userAgent.indexOf("Windows") !== -1) {
-      alert ("Welcome, Windows user!");
-      getLocation();
-    } 
-    // Then check for macOS
-    else if (navigator.userAgent.indexOf("Mac") !== -1) {
-      alert("Welcome, Mac user!");
-      getLocation();
-    }
-    // I give up
-    else {
-      alert("I don't know what you're using...");
-    }
-  ```
-
-* If the user is on Windows or Mac, we'll call our `getLocation()` function:
-
-  ```js
-    function getLocation() {
-      // Make sure browser supports this feature
-      if (navigator.geolocation) {
-        // Provide our showPosition() function to getCurrentPosition
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } 
-      else {
-        alert("Geolocation is not supported by this browser.");
-      }
-    }
-  ```
-
-* Explain that not every browser supports geolocation, so we first need to check if that property exists on `navigator`. If it does, then we can call the `getCurrentPosition` method. This is an interesting method, though, because the thing we're supposed to pass it is _another_ function, which we've called `showPosition`.
-
-* Don't go too deep into callbacks yet. Just explain that `getCurrentPosition` will call our `showPosition` function once it has data for us.
-
-* Finally, go over the `showPosition` function:
-
-  ```js
-    function showPosition(position) {
-      // Grab coordinates from the given object
-      var lat = position.coords.latitude;
-      var lon = position.coords.longitude;
-      console.log("Your coordinates are Latitude: " + lat + " Longitude " + lon);
-
-      // Call our next function, passing on the coordinates
-      redirect(lat, lon);
-    }
-
-    function redirect(lat, lon) {
-      // Compare latitude and longitude values
-      if (lat >= 30 && lon >= 90) {
-        // Redirect to a new page
-        window.location.href = "westcoast.html";
-      } 
-      else {
-        window.location.href = "eastcoast.html";
-      }
-    }
-  ```
-
-* Mention that we looked at `window.location.href` before when we wanted to _get_ the current URL. But we can also use the same property to _change_ the URL and take the user to another page or HTML document.
-
-- - - 
-
-### 14. BREAK (30 mins)
-
-- - -
-
-### 15. Instructor Do: Intro Web APIs (10 mins)
-
-
-  * **Web APIs (Title)**: Today will be an introduction to the DOM.
-
-  *  **What are the three building blocks of the web?**: What are the 3 main components of the web?
-
-  *  **Building Blocks of the Web**: The building blocks of the web are HTML, CSS, and JS.
-
-  *  **How (or where) do we connect all three?**: How do all three of these building blocks come together?
-
-  * **They are connected in the web browser**: The browser brings together HTML, CSS and JavaScript to create interactive webpages and applications.
-
-  * **What is a web browser?**: What exactly is a web browser?
-
-  * **Web Browser**: A web browser, or browser, is a program used to access information on the World Wide Web. Each individual webpage, image, or video can be accessed via a specific Unified Resource Link(URL)
-
-  * **What is an AP?**: What is an API?
-
-  * **Application Programming Interface (API)**: An API (Application Programming Interface) is a set of features and rules that exist inside an application enabling interaction with the it through software. This is opposed to having interaction happen solely through user interaction. 
-
-  * **What are web APIs?**: What are web APIs?
-
-  * **Web APIs**: Web APIs are built into your web browser and contains methods that allow us to manipulate a web page via JavaScript.
-
-* Call on one or two students to provide an answer, then proceed to the first activity of the day.
-
-### 16. Student Do: this Window (10 mins)
-
-* Direct students to the first activity, found in [01-Stu_This-Window](../../../../01-Class-Content/04-web-apis/01-Activities/01-Stu_This-Window)
-
-```md
-# This, The Window, and the DOM
-
-In this activity you will `console.log(this)` and dig around inside the returned object, answering some questions along the way.
-
-## Instructions
-
-* First open the provided `index.html` in the browser and navigate to the console.
-
-* What is logged?
-
-  * The `window` object. In this use case, `this` refers to the window. The `window` is an object representation of an open window in a browser.
-
-* Click into the `window` object and begin looking at the numerous properties and methods that it contains.
-
-* Make your way down to `document` and click into it.
-
-* Spend some time looking through the properties and methods contained within `window.document`.
-```
-
-### 17. Instructor Do: Review this Window and introduce the DOM (10 mins)
-
-* Return to [slide deck](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing) and follow the remaining prompts corresponding to the slides.
-
-  * **What is window.document?**: What is `window.document`?
-
-  * **The Document Object Model (DOM)**: The DOM is an Object-oriented representation of HTML. It allows us to use JavaScript to interact with the document.  
-
-  * **What is the node tree of this HTML?**: What would the node tree of this HTML look like?
-
-  * **What are the parent, child, and sibling nodes?**: What are the parent, child, and sibling nodes of this node tree?
-
-  * **Node Relationships: Parent, Child, Sibling**: Cover the solution with students and explain the relationships and node tree as a whole.
-
-  * **What is traversing the DOM?**: What is traversing the dom?
-
-* Call on one or two students to provide an answer, then proceed to demoing DOM Traversal.
-
-### 19. Instructor Do: Traverse The DOM (5 mins)
-
-* Navigate to the MDN Docs on [The DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) and and ask the class the following question(s):
-
-* What is our root element?
-
-  * The document (#document) 
-
-* Where is the HTML node?
-
-  * document.documentElement (html)
-
-* Where is the head of an HTML page?
-
-  * document.head (head)
-
-* Where is the body of an HTML page?
-
-  * document.body (body)
-
-* We can use these as starting points to begin moving our way down the DOM tree.
-
-* Open the Chrome Dev Tools and enter the following commands one by one.
-
-  ```js
-  console.log(document.body);
-
-  console.log(document.body.children);
-
-  console.log(document.body.children[3]);
-
-  console.log(document.body.children[3].childNodes[7]);
-
-  console.log(document.body.children[3].childNodes[7].style.fontSize = "20px");
-  ```
-
-  * When using the style method, properties with two words such as font-size become a single word and camelCased. Font-size becomes fontSize.
-
-* Point out the following:
-
-  * `.children` is returned as an Array and to move forward with it, we must specify the index. It returns all children *elements*.
-
-  * `.childNodes` is also returned as an Array and to move forward also requires an index to be given. It returns all children *nodes*.
-
-  * When using the `style` method, properties with two words such as `font-size` become a single word and camelCased. `font-size` becomes `fontSize`.
-
-  * Here is one more example of `.style`.
-
-  ```js
-  console.log(document.body.children[3].childNodes[7].parentElement.style.color = "red");
-  ```
-
-* For the final slide and demo, return to the slide deck [2.3 The DOM](https://docs.google.com/presentation/d/10VJ5KHiEK_G4P2-av7h2zNhDDlTRm20kztov2fAT-0s/edit?usp=sharing) and follow these prompts on their corresponding slides:
-
-* 19. **Our Goal Today**: The goal of the day is to build a speed reading application. We will receive an input of how many words per millisecond a user would like to read at, and then display one word at a time to our user at the specified speed.
-
-* Ask the class the following question(s):
-
-  * What do we not (yet) know to build this application?
-
-  * What do we think the steps are to build this application?
-
-* Use student answers to transition to the next activity.
-
-### 18. Student Do: Traverse That DOM (10 mins)
-
-* Direct students to the next activity, found in [03-Stu_Traverse-That-DOM](../../../../01-Class-Content/04-web-apis/01-Activities/03-Stu_Traverse-That-DOM/Unsolved)
-
-```md
-# Traverse That DOM
-
-In this activity you are going to use the Chrome Dev Console and `.style.property` to change the styling of elements on our page.
-
-## Instructions
-
-* Create an `script`
-
-* Using the provided `index.html`, complete the following
-
-  * Target the div with the ID of `articles`.
-
-    * Change its font size to `50px`.
-
-    * Change its first childs, last child to have a font color of `blue`.
-
-    * Change its previous sibling to have a background color of `black`.
-
-  * Target the div with the ID of `main`.
-
-    * Change its second child node so the text is `underlined`.
-
-    * Change its last child element to have a font size of `50px`.
-
-    * Change its first child element to have a font color of `orange`.
+    ```js
+    var wins = 0;
+    var ties = 0;
+    var losses = 0;
+    ```
     
-    * Change its last child elements parent to have a font size of `40px`.
+  * We also create an array to hold all the possible choices the computer can make, as shown in the following example:
 
-## Bonus
+    ```js
+    var options = ["R", "P", "S"];
+    ```
 
-* Change 3 other elements styles that we did not ask for above.
-```
+  * 🔑 To play the game, the user has to enter a choice. We use `window.prompt()` to grab the choice and store it in a variable, as follows:
 
-### 19. Instructor Do: Review Traverse That DOM (5 mins)
+    ```js
+    var userChoice = window.prompt("Enter R, P, or S:");
+    ```
 
-* Open [03-Stu_Traverse-That-DOM Solved/script.js](../../../../01-Class-Content/04-web-apis/01-Activities/03-Stu_Traverse-That-DOM/Solved) in your IDE and point out the following points to students:
+  * To compare with the computer's pick, the `userChoice` must be capital letters. So we use a string method, shown in the following example, to ensure that all choices are uppercase:
 
-  * We first gather our two main divs into variables for easy access.
+    ```js
+    userChoice = userChoice.toUpperCase();
+    ```
 
-  ```js
-  var artDiv = document.getElementById("articles");
-  var mainDiv = document.getElementById("main");
+  * 🔑 We use `Math.floor()` combined with `Math.Random()` to select a random index from the `options` array, as follows:
+
+    ```js
+    var index = Math.floor(Math.random() * options.length);
+    ```
+
+  * 🔑 The `index` is then used to assign the computer a choice, as follows:
+
+    ```js
+    var computerChoice = options[index];
+    ```
+
+  * 🔑 We use `window.alert()` to alert the user of the computer's pick in the browser, as shown in the following example:
+
+    ```js
+    window.alert("The computer chose " + computerChoice);
+    ```
+
+  * 🔑 We use conditional statements to determine whether the game is a tie, win, or loss.
+
+  * If the `userChoice` and `computerChoice` are equal, then it is a tie. We increment `tie` and alert the user that `"It's a tie!"`, as follows:
+
+    ```js
+    if (userChoice === computerChoice) {
+      ties++;
+      window.alert("It's a tie!");
+    }
+    ```
+
+  * If it is not a tie, we check whether the user has won, with the following code:
+
+    ```js
+    else if (
+      (userChoice === "R" && computerChoice === "S") || 
+      (userChoice === "P" && computerChoice === "R") || 
+      (userChoice === "S" && computerChoice === "P")
+    ) {
+      wins++;
+      window.alert("You win!");
+    }
+    ```
+
+  * If it is not a tie or a win, then we alert the user that it is a loss and increment `losses`, as follows:
+
+    ```js
+    else {
+      losses++;
+      window.alert("You lost!");
+    }
+    ```
+
+  * We use an alert to show the user the stats. In the following example, `\n` creates line breaks:
+
+    ```js
+    window.alert(
+      "Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
+    );
+    ```
+
+  * We use `window.confirm()` to determine whether the user wants to play again, as follows:
+
+    ```js
+    var playAgain = window.confirm("Play again?");
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can users interact with the Rock, Paper, Scissors game? 
+
+  * 🙋 Users interact through a series of pop-up boxes that prompt them to provide a choice, share a message, or confirm whether they want to play again. The `window` methods used to create these pop-up boxes are `window.alert()`, `window.confirm()`, and `window.prompt()`. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋We can refer to supplemental material, read the [MDN Web Docs on window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt), the [MDN Web Docs on window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm), and the [MDN Web Docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 4. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * This password generator takes criteria selected by the user and uses it to generate a random string. 
+
+  * This is a fully functioning app that integrates HTML, CSS, and JavaScript to create an interactive user experience. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to create an interactive user experience using HTML, CSS, and JavaScript. 
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will use the HTML and CSS we learned for structure and style but use JavaScript to add interactivity. 
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Creating interactive pages and apps is an essential skill in modern web development. This project will be a fantastic addition to your portfolio, to help you demonstrate your JavaScript skills to a future employer. 
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+### 5. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Ask if students have any questions about the homework.
+
+* Ask the students if there is anything they would like to review from Unit 03 before moving on to Unit 04.
+
+### 6. Instructor Do: Stoke Curiosity (10 min)
+
+* Open the [slide deck](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing) and follow these prompts on their corresponding slides:
+
+  * **Web APIs**: In this unit, we will learn how to use JavaScript to manipulate HTML with the help of Web APIs. 
+
+  * **What is the web browser?**: 
+
+    * A **web browser**, or **browser**, is a program used to access information on the World Wide Web.
+
+    * Every webpage, image, and video on the web can be accessed via a specific **Uniform Resource Locator (URL)**.
+
+    * Browsers use the URL to retrieve resources from a web server and display them on a user's device.
+  
+  * **What is an API?**
+
+    * An **API (Application Programming Interface)** is a set of methods, properties, events, and URLs that developers use to interact with components of a user's web browser.
+
+    * APIs can also interact with data sets, hardware or software on a user’s computer, and third-party software and services.
+    
+  * **What is a Web API?**
+
+    * **Web APIs** are built into the web browser and contain methods that allow us to manipulate a webpage using JavaScript.
+
+    * We use Web APIs to create elements and add them to the browser or to add and remove styles and attributes&mdash;all via JavaScript.
+    
+  * **What is the DOM?**
+
+    * When we open a webpage, the browser creates a tree of objects that represent the opened page. That tree of objects is the **DOM**, or **Document Object Model**.
+
+    * Using the DOM, we can manipulate the HTML elements on the page via JavaScript. 
+    
+  * In this unit, we will take the next step in building interactive webpages by learning how to harness the power of the DOM and Web APIs to access, create, and change HTML using JavaScript.
+  
+  * Let's take a quick look at the mini-project that we will do at the end of this unit.
+
+* Navigate to `28-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
+
+  * When we open the browser, the user's previous win-loss history is displayed.
+
+  * When we click the start button, blanks appear on the screen. Each blank represents a letter in the word to be guessed.
+
+  * When we click the start button, the timer starts.
+
+  * When the user guesses the word, the timer stops and a win message is displayed.
+
+  * When time runs out and the user has not guessed the word, a lose message appears.
+
+  * The user's wins and losses appear on the screen. 
+
+  * While the app might look a bit daunting right now, it builds on web fundamentals that we already know: HTML, CSS, and JavaScript. The complex functionality is handled by Web APIs and can be implemented with just a few lines of code. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to create and manipulate HTML elements using Web APIs. This new skill will enable us to easily add complex functionality to projects and make apps more interactive. 
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will create the project's framework with HTML, style with CSS, and functionality with JavaScript.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Web APIs are key to fully functional, interactive apps for the web. In addition, understanding the DOM is a key tool in any developer's toolbox, because it allows you to access and manipulate the content stored on a webpage.
+
+* Answer any questions before proceeding.
+
+### 7. BREAK (30 min)
+
+### 8. Instructor Demo: Window Object (5 min) 
+
+* Open `01-Ins_Window-Object/index.html` in your browser and navigate to the console to demonstrate the following:
+
+  * 🔑 The `window` object represents an open window in a browser. When we log `this`, the `window` object is returned.
+
+  * 🔑 When we open the `window` object, we can see the properties and methods that belong to the window. 
+
+  * 🔑 The document is a property of the `window` object. We log `document.window` to return the document interface.
+
+  * 🔑 The document is the entry point for the webpage's content. We log `document.body` to access the `<body>` element. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the `window` object?
+
+  * 🙋 An open window in the browser. The `window` object also has a property called `document`, which represents an open webpage. 
+
+  * ☝️ How do we access a webpage's content?
+
+  * 🙋 We access a webpage's content through the document. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Window-Object/README.md`.
+
+### 9. Student Do: Window Object (15 min) 
+
+* Direct students to the activity instructions found in `02-Stu_Window-Object\README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Window Object
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](./02-Stu_Window-Object/Unsolved/script.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+
+  [MDN Web Docs on Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How would you log the `length` property of the `window` object?  
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * For each of the following lines, ask a student to explain what the line of code achieves.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  artDiv.children[0].lastElementChild.style.color = "white";
-  artDiv.children[0].style.fontSize = "50px";
-  artDiv.previousElementSibling.style.background = "black";
+### 10. Instructor Review: Window Object (10 min) 
 
-  mainDiv.childNodes[1].style.textDecoration = "underline";
-  mainDiv.lastElementChild.style.fontSize = "50px";
-  mainDiv.firstElementChild.style.color = "white";
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with the `window` object? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `window`
+
+  * ✔️ `window.document`
+
+  * ✔️ `document.documentElement`
+
+  * ✔️ `document.head`
+
+* Open `02-Stu_Window-Object/script.js` in your IDE and explain the following: 
+
+  * 🔑 We log `window` to return the `window` object (the browser window), as shown in the following example:
+
+    ```js
+    console.log(window);
+    ```
+
+  * 🔑 Because the `document` is a property of the `window` object, we log `window.document` to return a reference to the entire document&mdash;like in the following example:
+
+    ```js
+    console.log(window.document);
+    ```
+
+  * 🔑 Because `document` serves as the entry point to a webpage's content, we use `document.documentElement` to log the document's root element or the `<HTML>`&mdash;as shown in the following example:
+
+    ```js
+    console.log(document.documentElement);
+    ```
+
+  * 🔑 We use `document.head` to log the document's `<head>` element, as follows: 
+
+    ```js
+    console.log(document.head);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use the window's `document` property to access a webpage's content? 
+
+  * 🙋 We start by accessing the document and then work down the DOM tree to access an HTML element on a webpage.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) and the [MDN Web Docs on Document](https://developer.mozilla.org/en-US/docs/Web/API/Document), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Traverse DOM (5 min) 
+
+* Open `03-Ins_Traverse-DOM/script.js` in your browser and navigate to the console to demonstrate the following:
+
+  * 🔑 Working your way down the DOM tree is called **DOM traversal**. First, we log `document.body` to access the `<body>` contained in the document.
+
+  * 🔑 We can view all the elements nested inside the `<body>` by logging `document.body.children`.
+
+  * 🔑 To access the first element in the body, we log `document.body.children[0]`.
+
+  * 🔑 We use the terms **parent** and **child** to explain how elements in the DOM are related. A parent element is an element that holds one or more children. But child elements can also have children! To access an element nested in a child element, we log `document.body.children[1].children[0]`.
+
+* Open `03-Ins_Traverse-DOM/index.html` in your IDE to demonstrate the following:
+
+  * 🔑 DOM traversal allows us to access the DOM using parent-child relationships, as shown in the following example:
+
+    ```js
+    console.log(document.body.children[1].children[0]);
+    ```
+  
+  * 🔑 We can also access an element directly by targeting the id of the element using the method `getElementbyId()`, like in the following example:
+
+    ```js
+    var firstChildUl = document.getElementById("first-child-ul")
+    console.log(firstChildUl);
+    ```
+
+  * 🔑 We can set and change a selected element's style by accessing an element's `style` object and its properties and assigning a value, like in the following example:
+
+    ```js
+    firstChildUl.style.color = "green";
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can you use parent-child relationships to access a child element?
+
+  * 🙋 First you access the parent and then pass through to reach the child element that you want to select. Working your way down the DOM tree is called DOM traversal. 
+
+  * ☝️ How can we use an element's id to access that element?
+
+  * 🙋 We can access elements directly by their id using the method `getElementbyId()`. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Traverse-DOM/Unsolved/README.md`.
+
+### 12. Student Do: Traverse DOM (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Traverse-DOM/Unsolved/README.md`.
+
+  ```md
+  # 🐛 Style Changes on HTML Elements Not Rendering on Page
+
+  Work with a partner to resolve the following issues:
+
+  * Users should be able to see style changes implemented with JavaScript when the browser page loads.
+
+  ## Expected Behavior
+
+  * The article title has a font size of 50px.
+
+  * The text in the headline "Welcome to World News" is white. 
+
+  ## Actual Behavior
+
+  * The article title is smaller than 50px.
+
+  * The text in the headline "Welcome to World News" is blue. 
+
+  ## Assets 
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![On the World News webpage, "Welcome to World News" appears in white text, and the article title is larger than the webpage title.](./images/01-screenshot.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How would you use parent-child relationships to access the elements you want to style? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Using `getElementbyId()` is just one way to return an element. What are some other document methods that allow us to quickly access elements?  
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Ask the class, "What other properties or attributes can be set using JS?". 
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * We can change any attribute or property using only JavaScript.
+### 13. Instructor Review: Traverse DOM (10 min) 
 
-* Ask the class, "How would we do that?". Call on one or two students and then proceed to the next demo.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 20. Instructor Do: Setting Attributes (10 mins)
+  * ☝️ How comfortable do you feel with DOM traversal? (Poll via Fist to Five, Slack, or Zoom)
 
-* Navigate to [04-Ins_Setting-Attributes index.html](../../../../01-Class-Content/04-web-apis/01-Activities/04-Ins_Setting-Attributes/index.html) and open it in your browser.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Ask the class, "How do we feel about this style?"
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* We can traverse the DOM and set styles via the `.style` method, now we are going to learn about `.setAttribute`.
+  * ✔️ `getElementById()`
 
-* `setAttribute` is a DOM method that allows us to add any attribute to an element. We can use it to add styles, hrefs, img srcs, and any other attribute you would like to add.
+  * ✔️ `children[0]`
 
-* If the attribute already exists, the value will be updated. If there is no attribute, a new attribute is added with the specified name and value.
+  * ✔️ `style.property`
 
-* Navigate to [03-Ins_Setting-Attribute script.js](../../../../01-Class-Content/04-web-apis/01-Activities/03-Ins_Setting-Attributes/script.js) in your IDE.
+* Open `04-Stu_Traverse-DOM/Solved/script.js` in your IDE and explain the following: 
 
-  * When we uncomment this code and navigate back to the page styles will have been changed and an image added, all via JavaScript.
+  * 🔑 We use the method `getElementById()` to select the elements with an id of `main` and `articles`, and we store them in variables. See the following code for an example:
 
-* Here we used `querySelector` and `querySelectorAll` to gather our elements into variables rather than using the more specific document methods. 
+    ```js
+    var articlesDiv = document.getElementById("articles");
+    var mainDiv = document.getElementById("main");
+    ```
 
-  * We used `querySelector` because it allows us to select an element by tag, class name, or ID. This makes it more flexible than using `getElementById` or `getElementByClassName`.
+  * 🔑 To access elements nested inside the `div`, we use `children[]`, which will return a list of all the child elements. To select the first child element of the article `<div>`, we use `children[0]`. This selects the article title and sets the font size. See the following code for an example:
 
-  * We used `querySelectorAll` because it allows us to select all elements of the same tag, class name, or ID. This is much more useful than `getElementsByTagName` or other group selectors.
+    ```js
+    articlesDiv.children[0].style.fontSize = "50px";
+    ```
 
-  * These two methods are the most useful and versatile because they can be used to target any element we would ever like to target.
+  * 🔑 The headline "Welcome to World News" is the second child of the main `<div>`. We access the element's `style` object to set the `color` of font to `white`, as follows: 
 
-* Ask the class, "How was all of the styling done if there is no CSS?"
+    ```js
+    mainDiv.children[1].style.color = "white";
+    ```
+  
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * All the styling done to the page uses the method, `.setAttribute`.
+  * ☝️ How can we set an inline style for an element using the DOM? 
 
-  * The `setAttribute` method takes in two arguments, first is the name of the attribute, and the second is its value. i.e., `setAttribute("style", "color:white;");
+  * 🙋 We access the element's `style` object and change or set a style property using the `=` assignment operator.
 
-  * The major difference between setting styles with `.setAttribute` vs the `.style` methods is that when using `setAttribute` we enter the CSS properties and values like we would in a normal external stylesheet or inline styling.
+  * ☝️ What can we do if we don't completely understand this?
 
-* Answer any questions students may have and let them know its their turn to work with `setAttribute()`.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the style property](https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style), and stick around for office hours to ask for help.
 
-### 21. Student Do: Setting Attributes (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the next activity, found in [05-Stu_Setting-Attributes](../../../../01-Class-Content/04-web-apis/01-Activities/05-Stu_Setting-Attributes/Unsolved).
+### 14. Instructor Demo: Setting Attributes (5 min) 
 
-```md
-# Setting Attributes
+* Open `05-Ins_Setting-Attributes/index.html` in your browser and demonstrate the following:
 
-In this activity you are going to use JavaScript to add `hrefs` to `a` tags, `src` to `img` tags, along with some styles all while traversing the DOM.
+  * All of the elements on this page have been styled in JavaScript using Web API methods.
 
-## Instructions
+  * 🔑 We select multiple elements to style using the document method `querySelectorAll()`.
 
-* Open `index.html` and familiarize yourself with the structure of the HTML.
+  * 🔑 We style those elements using the element method `setAttribute()`.
 
-* Inside of your provided `script` complete the following: 
+  * We can also use `setAttribute()` to set an image's source directly.
 
-  * Give a `src` and `alt` attribute to the 3 provided `img` tags.
+* Open `05-Ins_Setting-Attributes/assets/js/script.js` in your IDE and demonstrate the following:
 
-  * Give a `href` attribute to the 3 provided `a` tags.`
+  * 🔑 We select all the `<p>` and `<div>` elements using the `querySelectorAll()` method and store the lists in variables, as follows:
 
-  * Add styles via `setAttribute` to make the page look decent. Recommended: margins and padding.
+    ```js
+    var divTags = document.querySelectorAll("div");
+    var pTags = document.querySelectorAll("p");
+    ```
+  
+  * 🔑 We access the first element of a selector using `querySelector()`. This method returns a single element. See the following code for an example:
 
-* **Hint**: You may need a for loop!
-```
+    ```js
+    var changeP = document.querySelector("#change2");
+    ```
 
-### 22. Instructor Do: Review Setting Attributes (5 mins)
+  * 🔑 We use `setAttribute()` to set an image's source. The method takes two parameters. The first parameter names the attribute we want to change, and the second is the value we want to assign to the attribute, as shown in the following example:
 
-* Navigate to [05-Stu_Setting-Attributes script.js](../../../../01-Class-Content/04-web-apis/01-Activities/05-Stu_Setting-Attributes/Solved/script.js) and open it in your IDE, point out the following to students:
+    ```js
+    imgEl[0].setAttribute("src", "images/image_1.png");
+    ```
 
-  * We first gather all of our elements we would like to target.
+  * 🔑 We can also use `setAttribute()` to set the style of the image, as follows:
 
-  ```js
-  var main = document.getElementById("main");
-  var sitesEl = document.querySelectorAll("sites");
-  var site1El = document.querySelector(".site1");
-  var site2El = document.querySelector(".site2");
-  var site3El = document.querySelector(".site3");
-  var siteTitles = document.querySelectorAll("h4");
+    ```js
+    imgEl[0].setAttribute("style", "width:500px; height:200px;");
+    ```
+
+  * 🔑 We iterate over a list of elements to apply the styling changes to all the elements in the list, as shown in the following example:
+
+    ```js
+    for (var i = 0; i < divTags.length; i++) {
+      divTags[i].setAttribute("style", "color:blue; font-size: 30px");
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between the document methods `querySelector()` and `querySelectorAll()`?
+
+  * 🙋 The method `querySelectorAll()` returns a list of all of the elements that match the selector. The method `querySelector()` returns only the first match of the selector, even if there are multiple matches.
+
+  * ☝️ What two parameters does the method `setAttribute()` take? 
+
+  * 🙋 The method `setAttribute()` takes two parameters: first, the name of the attribute that we want to set or change (like `src` or `style`), and second, the value you want to set. 
+
+* Answer any questions before proceeding to the next activity.
+
+### 15. Student Do: Setting Attributes (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu_Setting-Attributes/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Use JavaScript to Set Attributes of HTML Element
+
+  Work with a partner to implement the following user story:
+
+  * As a web developer, I want all of my titles on a webpage to have the same styling. 
+
+  ## Acceptance Criteria
+
+  * It's done when all the `<h4>` elements are selected and stored in a single variable.
+
+  * It's done when the text of each `<h4>` is set to `blue`, the font size is `30px`, and the text is `bold`.
+
+  * It's done when the padding to the left of the title is set to `10px` and the margin is set to `0`.
+
+  ---
+
+  ## 💡 Hints
+
+  How can you use a loop to iterate over a list of elements? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How would using the `:scope` pseudo-class be useful when working with`querySelectorAll()`?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * We can then use the array returned by `.children` to navigate and setAttributes to elements.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  site1El.children[1].setAttribute("href", "https://google.com");
+### 16. Instructor Review: Setting Attributes (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with setting attributes? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `querySelectorAll()`
+
+  * ✔️ `setAttribute()`
+
+* Open `06-Stu_Setting-Attributes/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 We use `querySelectorAll()` to select all the `<h4>` elements in the document. We store the list in a variable, as shown in the following example:
+
+    ```js
+    var siteTitles = document.querySelectorAll("h4");
+    ```
+
+  * 🔑  We use `setAttribute()` to set the styles for the elements. We can set multiple styles at the same time, as shown in the following example:
+
+    ```js
+    siteTitles[i].setAttribute("style", "color: blue; font-weight: bolder; font-size: 30px; padding-left:10px; margin: 0");
+    ```
+
+  * 🔑 We use a loop to iterate over all the `<h4>` elements in the list and apply the styles, as shown in the following example:
+
+    ```js
+    for (var i = 0; i < siteTitles.length; i++) {
+      siteTitles[i].setAttribute("style", "color: blue; font-weight: bolder; font-size: 30px; padding-left:10px; margin: 0");
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where have we seen loops before? 
+
+  * 🙋 We previously used loops to iterate over a list of students' names. Now we are using a loop to iterate over a list of HTML elements. Loops are widely used in JavaScript when we want to perform the same task over and over again. Loops help us write DRY code!
+
+  * ☝️ How can we set an element's attribute? 
+  
+  * 🙋 We use `setAttribute()` methods to set or change attributes, like `style` and `src`, all using JavaScript. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) and the [MDN Web Docs on setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Instructor Demo: Create Append (5 min) 
+
+* Open `07-Ins_Create-Append/index.html` in your browser and demonstrate the following:
+
+  * When we open the browser window, a prompt appears, asking the user to enter an HTML element. We can enter one or more elements, following the prompts. 
+
+  * If valid elements are selected, a message indicates that a new element was created based on the user input.
+
+  * 🔑 The element and the message it contains were all created dynamically using JavaScript.
+
+* Open `07-Ins_Create-Append/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We use the method `createElement()` to create new elements, as follows:
+
+    ```js
+    var tag = document.createElement(tagName);
+    ```
+
+  * We use the `textContent` property to add content to the element, as follows:
+
+    ```js
+    tag.textContent = "This was made via prompts. It's a " + tagName + ".";
+    ```
+
+  * When we create an element, it will not appear unless it is appended to another element in the HTML. We use `appendChild()` to attach the new element as a child of the `<body>`, as shown in the following example:
+
+    ```js
+    document.body.appendChild(tag);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ After an element is created, what additional step must we take to get the element to appear in the HTML?
+
+  * 🙋 After we create an element, we must append or attach it to an existing HTML element so that the element shows up in the HTML.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Create-Append/README.md`.
+
+### 18. Student Do: Create Append (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Create-Append/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create an Ordered List Using JavaScript
+
+  Work with a partner to implement the following user story:
+
+  * As a blogger, I want to use JavaScript to create an ordered list of my favorite foods on my webpage.
+
+  ## Acceptance Criteria
+
+  * It's done when an ordered list containing four favorite foods is visible in the HTML below the text "My favorite foods are:"
+
+  * It's done when the ordered list has a background color of `#333333` and padding of `20px`.
+
+  * It's done when each list item has a font color of `white`, padding of `5px`, and `margin-left` of `35px`.
+
+  * It's done when each list item has a different background color.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The text "Welcome to my page," appears above a centered kitten photo, above the text "My favorite foods are:" and a list of four foods.](./images/01-screenshot.png)
+
+  ---
+
+  ## 💡 Hints
+
+  After creating an element in JavaScript, what additional step must you take to attach the element to the HTML document?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the difference between `append()` and `appendChild()`? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * Whenever we use `setAttribute` it takes two arguments. The first being the name of the attribute and the second its value.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  site1El.children[1].children[0].setAttribute("src", "http://placekitten.com/200/200");
-  site1El.children[1].children[0].setAttribute("style", "padding:10px;");
-  ```
+### 19. Instructor Review: Create Append (10 min) 
 
-* Answer any questions that remain and then dismiss the class for their break.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
+  * ☝️ How comfortable do you feel with creating and appending elements? (Poll via Fist to Five, Slack, or Zoom)
 
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 23. END (0 mins)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-### Lesson Plan Feedback
+  * ✔️ `createElement()`
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * ✔️ `textContent`
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * ✔️ `appendChild()`
+
+* Open `08-Stu_Create-Append/Solved/script.js` in your IDE and explain the following: 
+
+  * 🔑 We create the ordered list element using `createElement()`, as follows:
+
+    ```js
+    var listEl = document.createElement("ol");
+    ```
+
+  * The ordered list has four child list elements. We use `createElement()` to create each list item and store the elements in a variable, as shown in the following example:
+
+    ```js
+    var li1 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li4 = document.createElement("li");
+    ```
+
+  * 🔑 We add text to the list elements using the `textContent` property, like in the following example:
+
+    ```js
+    li1.textContent = "Apples 🍎 ";
+    li2.textContent = "Pizza 🍕 ";
+    li3.textContent = "Dumplings 🥟 ";
+    li4.textContent = "Cupcakes 🧁 ";
+    ```
+
+  * 🔑 We append the ordered list element as a child of the `<div>` that contains the text "My favorite foods are:" using `appendChild()`, as follows:
+
+    ```js
+    favoriteEl.appendChild(listEl);
+    ```
+
+  * 🔑 We then append the list items as a child of the ordered list element. This attaches the elements to the HTML document, as shown in the following example:
+
+    ```js
+    listEl.appendChild(li1);
+    listEl.appendChild(li2);
+    listEl.appendChild(li3);
+    listEl.appendChild(li4);
+    ```
+
+  * We add styling to the ordered list element and child list items using `setAttribute()`, like in the following example:
+
+    ```js
+    listEl.setAttribute("style", "background:#333333; padding:20px;");
+    li1.setAttribute("style", " color:white; background: #666666; padding: 5px; margin-left: 35px;");
+    li2.setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
+    li3.setAttribute("style", " color:white; background: #888888; padding: 5px; margin-left: 35px;");
+    li4.setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we append the list items to the ordered list element `<ol>` and not just the `<body>`?
+
+  * 🙋 It is important to think about the parent-child relationships when appending elements to the DOM. An ordered list is made up of the ordered list element and its child list items. We maintain that relationship by attaching the list items as children of the ordered list. If we attached the list items to the `<body>`, the list items' parent would be the `<body>`, which is not what we want! 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) and the [MDN Web Docs on appendChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild), and stick around for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

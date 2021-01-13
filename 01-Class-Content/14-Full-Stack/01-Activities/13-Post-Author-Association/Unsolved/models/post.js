@@ -15,6 +15,6 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   // Add a belongsTo association to Authors here
-  // Example: https://github.com/sequelize/express-example/blob/master/models/task.js
+  // Example: https://github.com/sequelize/express-example/blob/3fca27909b3ec9d72874ebe3317ffd8e5842b17e/models/task.js
   return Post;
 };
