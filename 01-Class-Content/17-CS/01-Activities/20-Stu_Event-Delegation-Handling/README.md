@@ -1,6 +1,6 @@
-# 📐 Add Comments to Implementation of using closures for event delegation
+# 📐 Add Comments to Implementation of Using Closures for Event Delegation
 
-Work with a partner to add comments describing the functionality of the code found in [script.js](./Unsolved/assets/js/script.js).
+Work with a partner to add comments that describe the functionality of the code found in [script.js](./Unsolved/assets/js/script.js).
 
 ## 📝 Notes
 
@@ -16,9 +16,9 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Why is keeping the global namespace clean from too many variables important? 
+* Why is it important to minimize the number of variables in the global namespace? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

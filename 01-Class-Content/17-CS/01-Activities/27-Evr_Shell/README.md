@@ -227,4 +227,4 @@ In your spare time, look in the `Solved` directory for a couple of more scripts 
 * https://devhints.io/bash
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

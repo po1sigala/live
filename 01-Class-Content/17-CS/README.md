@@ -82,7 +82,7 @@ You will be employer-ready if you are able to:
 
 ## Technical Interview Preparation
 
-You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+You will be employer-competitive if you can solve the following algorithms and successfully complete the assessments.
 
 ### Algorithms
 
@@ -131,5 +131,4 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
   * 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial)
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
