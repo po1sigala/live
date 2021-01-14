@@ -638,6 +638,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ### 10. FLEX (30 min)
 
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
 ### 11. BREAK (30 min)
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
