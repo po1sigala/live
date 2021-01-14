@@ -278,11 +278,9 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 ### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Open `02-Homework/README.md` in your browser and demonstrate the following:
+* Navigate to `02-Homework/Main` and run `npm i` in your command line.
 
-* Navigate to the `Main` folder and run `npm i`. 
-
-* Run `node index.js` from the command line and demonstrate the following:
+* Run `node index.js` from your command line and demonstrate the following:
 
   * We will build a command-line application that will generate REAMDEs for us. 
 
