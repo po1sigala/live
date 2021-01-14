@@ -1,4 +1,4 @@
-# 5.3 Full-Time Lesson Plan: Object-Oriented Programming (OOP) (10:00 AM)
+# 5.3 Full-Time Lesson Plan: Object-Oriented Programming (OOP)
 
 ## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
 
