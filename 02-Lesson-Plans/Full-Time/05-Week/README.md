@@ -1,14 +1,12 @@
-# Week 05 Instructor Overview: Node.js and OOP
+# Unit 09 & 10 Instructor Overview: Node.js and Object-Oriented Programming (OOP)
 
 ## Overview
 
-In the first half of this week, you'll introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files. In the second half of this week, we will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
+In Unit 09, you will introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files. 
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
+In Unit 10, you will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
-* [09-NodeJS](../../../01-Class-Content/09-NodeJS/README.md)
-
-* [10-OOP](../../../01-Class-Content/10-OOP/README.md)
+Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content/09-NodeJS/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives and homework.
 
 ## Instructor/TA Notes
 
@@ -32,7 +30,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their Career Connection folder for [Unit 09](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
+* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 09](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
 
 * If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
@@ -48,15 +46,15 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-* [5.1 Lesson Plan](01-Day/01-Day-LessonPlan.md)
+* [05.1 Lesson Plan](01-Day/01-Day-LessonPlan.md)
 
-* [5.2 Lesson Plan](02-Day/02-Day-LessonPlan.md)
+* [05.2 Lesson Plan](02-Day/02-Day-LessonPlan.md)
 
-* [5.3 Lesson Plan](03-Day/03-Day-LessonPlan.md)
+* [05.3 Lesson Plan](03-Day/03-Day-LessonPlan.md)
 
-* [5.4 Lesson Plan](04-Day/04-Day-LessonPlan.md)
+* [05.4 Lesson Plan](04-Day/04-Day-LessonPlan.md)
 
-* [5.5 Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* [05.5 Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
 ### Homework
 
@@ -66,9 +64,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-* [Unit 09: Introduction to Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+* [Unit 09: Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
 
-* [Unit 10: Introduction to OOP](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
+* [Unit 10: Object-Oriented Programming (OOP)](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
 ### Algorithms
 
@@ -117,5 +115,4 @@ Unit 10:
 * [git stash](https://www.git-scm.com/docs/git-stash)
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

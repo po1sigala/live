@@ -1,17 +1,16 @@
-# 5.3 Full-Time Lesson Plan: Object-Oriented Programming (OOP)
-
-## Instructors and TAs: Please take the Mid-Course Instructional Staff Survey
-
-Trilogy as a company values transparency and data-driven change quite highly. As we grow, we know there will be areas that need improvement. It’s hard for us to know what these areas are unless we’re asking questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to the individual feedback at the end of lesson plans, we would appreciate your feedback at the following link:
-[https://forms.gle/yPfrY4CjNeAqbVKD6](https://forms.gle/yPfrY4CjNeAqbVKD6)
+# 5.3 Full-Time Lesson Plan: Node.js and Object-Oriented Programming (OOP)
 
 ## Overview
 
-In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then we will be introducing students to the usage of JavaScript constructors and how they can be used to dynamically create objects with similar schemas. Students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
+In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
 
 ## Instructor Notes
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `08-Stu_Promises` in Unit 10.
+
+* **Important**: Trilogy as a company values transparency and data-driven change quite highly. We know that some areas will need improvement as we grow. It’s hard for us to know what these areas are unless we ask questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to individual feedback at the end of each lesson plan, we would appreciate the feedback of all instructors and TAs in the [mid-course instructional staff survey](https://forms.gle/yPfrY4CjNeAqbVKD6).
+
+* Be sure to review the activities before class. Try to anticipate any questions that students might have, especially on these core OOP topics!
 
 * Constructors are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Make sure your students have a firm understanding of how objects function.
 
@@ -21,7 +20,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 ## Learning Objectives
 
-* By the end of class students will be able to...
+* By the end of class students will be able to:
 
 * Create new objects using constructor functions.
 
@@ -31,7 +30,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 ## Slide Deck
 
-[Unit 10 Slide Deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
+* [Unit 10 Slide Deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -58,7 +57,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 | 2:20PM  | 19  | Instructor Review: Promises     | 0:10     |
 | 2:30PM  | 20  | END                             | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
@@ -1271,6 +1270,5 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-- - -
-
+---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
