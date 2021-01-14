@@ -6,8 +6,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when all four boxes fit completely inside the black frame.
-
 * It's done when each box has a defined padding property.
 
 * It's done when each box has a defined margin property.
