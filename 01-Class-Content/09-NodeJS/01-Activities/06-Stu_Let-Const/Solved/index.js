@@ -1,5 +1,5 @@
 
-//TODO: add comments
+// We change the `message` variables scope by using `let` instead of `var`.
 const addGreetingMessage = (name) => {
   let message = "How are you?"
 
@@ -13,7 +13,7 @@ const addGreetingMessage = (name) => {
 
 addGreetingMessage('Tammy')
 
-//TODO: add comments
+// We use `let` instad of `const` so we can use the `callout` variable name twice without the worrying about hoisting.
 const calloutCounter = () => {
   let callout = 'Outside of the loop'
   let counter = 5
@@ -29,7 +29,8 @@ const calloutCounter = () => {
 
 calloutCounter()
 
-//TODO: add comments
+// We use `let` to make sure our `index` variables can only be accessed within their scope.
+// By using `const` we can insure that `line` and `element` will not be renamed.
 const countMatrix = (matrix) => {
   for (let index = 0; index < matrix.length; index++) {
     const line = matrix[index];

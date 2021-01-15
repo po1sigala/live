@@ -1,5 +1,5 @@
 
-//TODO: Fix the declarations so that the function works properly.
+// TODO: Fix the declarations so that the function works properly.
 const addGreetingMessage = (name) => {
   var message = "How are you?"
 
@@ -13,7 +13,7 @@ const addGreetingMessage = (name) => {
 
 addGreetingMessage('Tammy')
 
-//TODO: Fix the declarations so that the function works properly.
+// TODO: Fix the declarations so that the function works properly.
 const calloutCounter = () => {
   const callout = 'Outside of the loop'
   var counter = 5
@@ -29,7 +29,7 @@ const calloutCounter = () => {
 
 calloutCounter()
 
-//TODO: Fix the declarations so that the function works properly.
+// TODO: Fix the declarations so that the function works properly.
 const countMatrix = (matrix) => {
   for (var index = 0; index < matrix.length; index++) {
     var line = matrix[index];
