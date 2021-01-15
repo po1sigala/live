@@ -6,7 +6,7 @@
 
 Computer science fundamentals, eh? That's tough stuff, and you have to try and get your head around it pretty quickly. If you're walking away from the material a little confused about it's relevance or why you should care&mdash;that's okay! 
 
-Here's the deal: we've taught you how to build web applications from scratch since day one. Now you can do that with MongoDB or MySQL, Node.js, Express.js, and React. You can build essentially anything you'd like with a little creativity and hard work. And that's largely what you'll be doing day-to-day as a web developer when you land that job you've been working very hard for!
+Here's the deal: we've taught you how to build web applications from scratch since day one. And you can now do that using MongoDB or MySQL, Node.js, Express.js, and React. You can build essentially anything you want with a little creativity and hard work. And that's largely what you'll be doing day-to-day as a web developer when you land that job you've been working very hard for!
 
 But you _do_ have to get through the interview first. And unfortunately, many companies still follow the old adage that you need to know computer science and be able to solve algorithms in order to get through that interview&mdash;even if you won't be applying the bulk of those concepts moving forward. So that's what this week was about, and it's also why you've had weekly algorithm practice since we introduced JavaScript.
 
