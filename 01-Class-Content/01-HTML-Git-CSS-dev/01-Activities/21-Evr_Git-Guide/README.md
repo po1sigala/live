@@ -61,7 +61,7 @@ For more information on setting up your Git environment and using Git commands, 
   touch index.html
   ```
 
-* To initialize version control in this project, use `git init`. It is important that we are in our project folder when we run this command!
+* To initialize this folder as a Git repository, use `git init`. It is important that we are in our project folder when we run this command!
 
   ```bash
   git init
@@ -71,8 +71,21 @@ For more information on setting up your Git environment and using Git commands, 
 
 * To start version-controlling the existing files in your project, we need to start tracking those files and do an initial commit.
 
+* First let's run `git status` to check the status of our files.
+
+  ```bash
+  git status
+  ```
+
+* We should see that our `index.html` is currently untracked. Let's add that file to be tracked.
+
   ```bash
   git add .
+  ```
+
+* Now if we run `git status` again, we should see that the file is being tracked and is ready to be committed.
+
+  ```bash
   git commit -m "initial commit"
   ```
 
@@ -80,7 +93,7 @@ For more information on setting up your Git environment and using Git commands, 
 
 * To create a remote repository to store our code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green New button at the top left and entering our project name, `git-init-sample`, in the "Repository Name" box. 
 
-* **Important**: Since we are importing an existing repository, do not click any of the checkboxes! 
+* **Important**: Since we are importing an existing repository, make sure all the checkboxes are NOT checked!
 
 * Click the "Create Repository" button. 
 
@@ -100,9 +113,9 @@ For more information on setting up your Git environment and using Git commands, 
 
 ## Pull Changes from the Remote Repository
 
-* Prior to each class, it is important that you do a `git pull` to download any changes and activity files from the student repository to your local machine. 
+* Prior to each class, it is important that you do a `git pull` to pull down any changes and activity files from the student repository to your local machine. 
 
-* So let's review how to download changes from a remote repository using `git pull`.
+* So let's review how to pull the changes from a remote repository using `git pull`.
 
 * To perform a `git pull`, first navigate to the corresponding project directory, which in our case will be `git-init-sample`.
 
@@ -116,7 +129,7 @@ For more information on setting up your Git environment and using Git commands, 
   git pull origin main
   ```
 
-* Right now, our local repository is up-to-date with the remote repository, so you will get a message reading "Already up to date.". This means there were no changes made.
+* Right now, our local repository is up-to-date with the remote repository, so you will get a message reading "Already up to date.". This means that the local version of your repository is up to date with the remote version being hosted on GitHub.
 
 * If the remote repository has changes that you do not have locally, you will get a message that lists the changes made, similar to the one below:
 
