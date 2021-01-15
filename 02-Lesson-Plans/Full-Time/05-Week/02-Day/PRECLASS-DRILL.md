@@ -29,7 +29,6 @@
 * Start recording when you review the following answer, and send it out on Slack at the end of office hours, before class starts:
 
   ```js
-
   var deduper = function (numArr){
     var newArr = [];
     for (var i = 0; i < numArr.length; i++){
@@ -38,7 +37,6 @@
       }
     }
   }
-
   ```
 
 * Review the code carefully, reminding students how helpful array methods like `.includes()` can be. 
