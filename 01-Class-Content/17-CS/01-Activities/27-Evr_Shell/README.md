@@ -8,9 +8,9 @@ The **Unix shell environment** serves as a layer between ourselves and our compu
 
 A Unix shell script uses its own syntax, which might feel familiar to commands we've written using JavaScript. While Node.js has many modules that allow us to execute similar commands, shell scripts allow us to write more universal and lightweight functionality to perform and automate tasks that JavaScript may not be as well-suited for. 
 
-> **Important**: Windows computers using Git Bash and older macOS versions use what's known as a **Bash shell environment**. Apple computers running newer versions of macOS have switched to use the **Z shell environment** (known as **ZSH**), which is backwards-compatible with the Bash shell environment. These two environments are nearly identical for our needs, so all of the commands we introduce today will be the same for both operating systems or shell environments, with a few differences which we'll address as we go.
+> **Important**: Windows computers (using Git Bash) and Apple computers running older macOS versions use the **Bash shell environment**. Apple computers with newer versions of macOS use the **Z shell environment** (known as **ZSH**), which is backwards-compatible with the Bash shell environment. All the commands that we introduce today work in both environments, with only a few differences which we'll address as we go.
 
-## Our First Script
+## Build a Simple Shell Script
 
 Like with learning any other programming language, it's best to get an understanding of how we write and execute shell scripts by building a simple "Hello World" application, so let's start there. 
 
@@ -187,7 +187,7 @@ git init
 
 Now if you execute the command `gfc` from the command line, you'll notice a message return stating that the repo is clean already, as the following image shows:
 
-![The command line shows that our repository is clean after running the "gfc" command.](./Images/01-gfc-clean.png)
+![The command line shows that our repository is clean after running the "gfc" command.](./Images/02-gfc-clean.png)
 
 That's because we haven't made any untracked files just yet. Let's add a few files, add one to be tracked, and then run the command again. Use the following commands to do so:
 
@@ -210,13 +210,17 @@ Now we have identified what could be removed if we were to execute this command,
 
 ![The command line shows the result of choosing to clean the repo, and lets us know what files have been removed.](./Images/04-gfc-complete.png)
 
-Now our Git repository is clean of all untracked files! This may not be a command you need to run all the time, it is a good way to see how we can optimize our workflows by writing scripts like this. 
+Now our Git repository is clean of all untracked files! This may not be a command you need to run all the time, but it clearly demonstrates how we can use shell scripts to optimize workflows. 
+
+## Reflection
 
 Congratulations on getting quickly acclimated to a new programming language! While the scripts we created aren't very complex, they allowed us to learn how some more advanced scripts may work. We can write scripts to perform a number of tasks and automate a lot of things, such as monitoring your computer's performance, finding where something exists in a project, and even scaffolding a project's file structure itself!
 
-In your spare time, look in the `Solved` directory for a couple more scripts to try and use yourself to see what else can be done.
+In your spare time, explore the scripts in the `Solved` directory to see what else can be done with shell scripts!
 
 ## Resources
+
+If you want to learn more about shell scripts, explore the following resources:
 
 * [The Bash Hackers Wiki](https://wiki.bash-hackers.org/)
 
