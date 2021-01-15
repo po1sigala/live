@@ -1,16 +1,12 @@
 # Setting Up a Repository with Git 
 
-In this activity, we will walk through setting up a repository using terminal commands and Git version control.
+In this activity, we will walk through configuring your local git default branch to `main`. We will also go over another way to create a repository using `git init`. And finally we will review the `git pull` command.
 
 Git is an important tool that allows developers to track and store versions of content.
 
-Git is also an important way to collaborate and share code with others. For the duration of this Bootcamp, we will use Git to share code using a class repository which you will be required to download prior to each class. In addition, for each homework assignment, you will provide a URL link to your GitHub repository containing your code for the grading team. 
+Git is also an important way to collaborate and share code with others. For the duration of this Bootcamp, we will use Git to share code using a class repository which you will be required to pull down prior to each class. In addition, for each homework assignment, you will provide a URL link to your GitHub repository containing your code for the grading team. 
 
-This activity will review the terminal commands `mkdir`, `touch`, `cd`, `ls`, `pwd`.
-
-You will also gain familiarity in the use of the Git commands `config`, `clone`, `add`, `commit`, `push`, `pull`, and `status`.
-
-These commands are essential tools that you will use to create a repository, initialize version control on your projects, commit changes to a repository, and pull from a remote repo. 
+For more information on setting up your git environment and using git commands, check out the [Getting Started with Git blog post](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git) on The Full-Stack Blog.
 
 ## Instructions
 
@@ -18,11 +14,15 @@ These commands are essential tools that you will use to create a repository, ini
 
 * Let's set the local Git default branch to `main`.
 
+* Historically, the most common name for the main body of a codebase has been `master`. However, `main` has been gaining in popularity. In fact, GitHub now uses `main` as the default name for its repositories&mdash;as do the projects in this course. 
+
+* To stay in sync with GitHub, we need to change our local Git configuration to use `main` as the default branch.
+
 * **Important:** If you have previously configured Git, you do not need to repeat this step!
 
-* GitHub changed the default branch from `master` to `main`. To stay in sync with GitHub, you need to change our local Git configuration to use `main` as the default branch.
+* If you have a version of git 2.28 or older, you need to upgrade.
 
-* If you are using **macOS**, you must have Git version 2.28 or later installed.
+#### For Windows
 
 * To check the version you have installed, enter this command in the terminal:
 
@@ -46,22 +46,19 @@ These commands are essential tools that you will use to create a repository, ini
 
 ### Initialize a New Version-Controlled Project
 
-* We already learned how to create a remote repository on GitHub in our first class. So now, let's initialize a new version-controlled project locally using `git init`.
+* We already learned how to create a remote repository on GitHub in our first class. Now, let's initialize a new repository locally using the `git init` command.
 
 * Using `git init`is an alternative way to create a repo and the results are similar to using `git clone`. However, unlike `git clone`, we start by creating a repo locally via the command line first. 
 
-* Using `git init`also allows us to turn an existing project into a Git repository easily.
+* Using `git init` also allows us to turn an existing project into a Git repository easily.
 
-* Start by creating a new project directory named `git-init-sample`.
-
-* Use `cd` to navigate to the Desktop directory and `mkdir` to create a new directory called `git-init-sample`.
+* Start by creating a new project directory named `git-init-sample` on your local machine.
 
   ```bash
-  cd Desktop
   mkdir git-init-sample
   ```
 
-* Next, use `cd` to navigate into our new directory and add an `index.html` file using `touch`.
+* Next, use `cd` to navigate into our new directory and add an `index.html` file using the `touch` command.
 
   ```bash
   cd git-init-sample
@@ -74,19 +71,13 @@ These commands are essential tools that you will use to create a repository, ini
   git init
   ```
 
-* If successful, a message reading `Initialized empty Git repository in /Users/<your-user-name>/Desktop/git-init-sample/.git/` should appear.
+* Using `git init` adds version control locally to a project, allowing us to track and save changes. But it doesn't not create a remote repository.
 
-* Using `git init` adds version control locally to a project, allowing us to track and save changes. It doesn't not create a remote repository.
+* To create a remote repository to store your code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-init-sample` in the `Repository Name` box. 
 
-* To create a remote repository to store your code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green `new` button at the top left and entering `git-init-sample` in the `Repository Name` box. This is the same as we did above!
+* **Important**: Since we are importing an existing repository, do not click any of the checkboxes! 
 
-* **Important** Since we are importing an existing repository, do not click any of the checkboxes. The page should look something like the following image:
-
- ![The GitHub repository creation page allows a user to name, describe, and add a README file.](./assets/image-6.png)
-
-* Click on `Create Repository`. Then copy the code under the header `"…or push an existing repository from the command line"` using the copy icon. The page should look something like this:
-
-  ![The GitHub repository set-up page provides the code to import an existing repository](./assets/image-7.png)
+* Click on `Create Repository`. Then copy the code under the header `"…or push an existing repository from the command line"` using the copy icon. 
   
 * Paste the commands into the terminal and click `enter`.
 
@@ -100,7 +91,7 @@ These commands are essential tools that you will use to create a repository, ini
 
 * Prior to each class, it is important that you do a `git pull` to download any changes and activity files from the student repo to your local machine.
 
-* To perform a git pull, first navigate to the project directory using `cd`.
+* To perform a git pull, first navigate to the project directory `git-init-sample` using `cd`.
 
   ```bash
   cd git-init-sample
