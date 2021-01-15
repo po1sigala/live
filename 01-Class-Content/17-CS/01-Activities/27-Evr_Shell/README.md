@@ -2,19 +2,19 @@
 
 ## Introduction
 
-Throughout our work, we've used the command line to perform important tasks, including actions built into our computers, performing Git commands and interacting with GitHub and Heroku, and running Node.js applications and installing modules using `npm`. Luckily for us, most of the commands that we use on a daily basis serve their purpose well enough. But we still haven't learned exactly _how_ they work. In this activity, we'll get a formal introduction to what's known as the Unix shell environment, and write a few small programs that we can execute from the command line.
+Throughout our work, we've used the command line to perform important tasks. These tasks include actions built into our computers, performing Git commands and interacting with GitHub and Heroku, and running Node.js applications and installing modules using `npm`. Luckily for us, most of the commands that we use on a daily basis serve their purpose well enough. But we still haven't learned exactly _how_ they work. In this activity, we'll get a formal introduction to what's known as the Unix shell environment, and write a few small programs that we can execute from the command line.
 
-The **Unix shell environment** serves as a layer between ourselves and our computers, and gives us access to commands that are built into our systems. We actually know this already because we've been using some of these all along&mdash;commands such as `touch`, `mkdir`, and `cd` are all Unix shell commands that allow us to communicate with our computers. However, interactivity like this is just one part of the shell environment. We can also use the shell environment to run programs, much like Node.js, in the form of shell scripts.
+The **Unix shell environment** serves as a layer between ourselves and our computers and gives us access to commands that are built into our systems. We actually know this already because we've been using some of these all along; commands such as `touch`, `mkdir`, and `cd` are all Unix shell commands that allow us to communicate with our computers. However, interactivity like this is just one part of the shell environment. We can also use the shell environment to run programs, much like Node.js, in the form of shell scripts.
 
-A Unix shell script uses its own syntax, which might feel familiar to commands we've written using JavaScript. While Node.js has many modules that allow us to execute similar commands, shell scripts allow us to write more universal and lightweight functionality to perform and automate tasks that JavaScript may not be as well-suited for. 
+A Unix shell script has its own syntax, which might feel familiar to commands we've written using JavaScript. While Node.js has many modules that allow us to execute similar commands, shell scripts allow us to write more universal and lightweight functionality to perform and automate tasks that JavaScript may not be as well-suited for. 
 
-> **Important**: Windows computers (using Git Bash) and Apple computers running older macOS versions use the **Bash shell environment**. Apple computers with newer versions of macOS use the **Z shell environment** (known as **ZSH**), which is backwards-compatible with the Bash shell environment. All the commands that we introduce today work in both environments, with only a few differences which we'll address as we go.
+> **Important**: Windows computers and Apple computers running older macOS versions use the **Bash shell environment**. Apple computers with newer versions of macOS use the **Z shell environment** (known as **ZSH**), which is backwards-compatible with Bash. All the commands that we introduce today work in both environments, with only a few differences which we'll address as we go.
 
 ## Build a Simple Shell Script
 
-Like with learning any other programming language, it's best to get an understanding of how we write and execute shell scripts by building a simple "Hello World" application, so let's start there. 
+Like with learning any other programming language, a great first shell-script project is to build a simple "Hello World" application. 
 
-Shell scripts can be stored in files, much like a Node.js application's JavaScript code, so go ahead and navigate to a location on your computer where you want to keep this script and create a `hello.sh` file by using the following command:
+The first step is to create a file that holds the shell script. Navigate to the location on your computer where you want to keep this script and create a `hello.sh` file by using the following command:
 
 ```sh
 touch hello.sh
@@ -26,9 +26,9 @@ Once that file is created, open it in VS Code and add the following line to the 
 #!/bin/bash
 ```
 
-This line of code is crucial for this file to be executed correctly on the command line. It is what's known as a [shebang interpreter directive](https://en.wikipedia.org/wiki/Shebang_(Unix)). It instructs the machine running the file how the following syntax in the file should be interpreted and executed. In this case, we're instructing the machine that the file's contents should be interpreted and executed using the bash program that's installed on the machine.
+This line of code&mdash;known as the [shebang interpreter directive](https://en.wikipedia.org/wiki/Shebang_(Unix))&mdash;is crucial. Without it, the file will not execute correctly on the command line. The **shebang interpreter directive** instructs the machine that's running the file how the following syntax in the file should be interpreted and executed. In this case, we're telling the machine that the file's contents should be interpreted and executed using the `bash` program.
 
-While the shebang interpreter directive is important, it actually has nothing to do with the actual functionality of our script, so let's add that now by using the following code:
+While the shebang interpreter directive is important, it has nothing to do with the actual functionality of our script, so let's add that now with the following code:
 
 ```sh
 # print "Hello World!" to the command line 
@@ -39,13 +39,15 @@ echo "============"
 
 The hashtag symbol `#` is used for comments, but what do you think the `echo` command does? The `echo` command is used to print data. In this case, we want to print the phrase "Hello World!" on one line with dividing lines above and below it, so we use three different `echo` statements.
 
-That's all we need to do for this simple first application, so let's test it. Save the file, navigate to where this file is from your command line, and run the file by using the following command:
+### Test the Script
+
+That's all we need to do for this simple first application, so let's test it. Save the file, navigate to its location in the command line, and then run the file by using the following command:
 
 ```sh
 ./hello.sh
 ```
 
-Depending on your operating system, you may run into a permissions error that looks something like the following codeblock: 
+Depending on your operating system, you may run into a permissions error that looks something like the following: 
 
 ```sh
 # it may say something other than `zsh`
@@ -59,17 +61,19 @@ That's okay! With some operating systems, newly created files don't get permissi
 chmod +x ./hello.sh
 ```
 
-With the `chmod` command, we can adjust a file or directory's permissions and control whether it can be read from, written to, or executed by different types of users on the machine (including the machine itself). Since we only need to execute this file, we use the `+x` modifier to allow the file to be executed. Learn more about the chmod command and how it's used by reading this [Wikipedia article on chmod](https://en.wikipedia.org/wiki/Chmod).
+We use the `chmod` command to adjust a file or directory's permissions and control whether it can be read from, written to, or executed by different types of users on the machine (including the machine itself). Because we only need to execute this file, we use the `+x` modifier. For more information, review this [Wikipedia article on chmod](https://en.wikipedia.org/wiki/Chmod).
 
-Now try to run the file again. Your command line should look something like the following image after it runs:
+Now run the file again. Your command line should resemble the following image:
 
 ![The command line application displays the output printed by the "hello.sh" file.](./Images/01-hello.png)
 
-Great, congratulations on writing and running your first script! Event though this is sufficient, we can also set up our scripts to be executed from anywhere on our machines, allowing us to contextualize our scripts to whatever directory we are running the script from. To accomplish this, we need to create what's known as an "alias" in our shell environment that executes the file for us.
+### Add an Alias
 
-Aliases need to be created in a specific file that is automatically interpreted and executed every time we start up our command-line applications. This file might differ depending on your operating system, but it's either `.bashrc` or `.zshrc` and they both will be located at the root path of our computers, so let's go look for them now. The "rc" in these files stands for "run commands", and helps contextualize some settings in our shell environment to our needs when it starts up.
+Congratulations on writing and running your first script! This was sufficient, but we can also set up our scripts to be executed from anywhere on our machines. This allows us to contextualize our scripts to the directory from which we are running them. To do this, we need to create an **alias** in our shell environment that will execute the file for us.
 
-From the command line, use `cd ~` to get to the root of our computers and then use `ls -a` to see if the file exists. If it doesn't exist, we'll have to create it with the `touch` command. If you're on a Windows or older version of macOS, you'll need to create a `.bashrc` file. If you're on a newer version of macOS, you'll need to create a `.zshrc` file instead.
+Aliases need to be created in a specific file that is automatically interpreted and executed every time we start up our command-line applications. Depending on your operating system, this file is either `.bashrc` or `.zshrc`; both are located at the root path of the computer. The `rc` in these file names stands for "run commands."
+
+From the command line, use `cd ~` to navigate to the root of path, and then use `ls -a` to see if the file exists. If it doesn't exist, we'll create it using the `touch` command. If you're on a Windows or older version of macOS, create a `.bashrc` file. If you're on a newer version of macOS, create a `.zshrc` file instead.
 
 Once those files are created or located, open them in VS Code and add the following line to the file:
 
@@ -79,9 +83,11 @@ Once those files are created or located, open them in VS Code and add the follow
 alias hello="~/<path>/<to>/hello.sh"
 ```
 
-Using the `alias` command, we instruct our shell to define the command `hello` and give it a value of the path to our `hello.sh` file. Think of it as creating a shortcut or bookmark so we can save time by not typing out its path every time. It's very important that there is no space between the command definition and value assignment, so make sure there is no space around the equal sign `=`.
+Using the `alias` command, we instruct our shell to define the command `hello` and give it a value of the path to our `hello.sh` file. Think of it as creating a shortcut or bookmark so we can save time by not typing out its path every time. 
 
-Once that's done, save your file. This `hello` command won't be available just yet; we need to restart our command-line applications so our updated run command's file will be read and the `hello` command will become defined. 
+>**Note**: It's very important that there is no space between the command definition and value assignment, so make sure there is no space around the equal sign `=`.
+
+Once that's done, save your file. This `hello` command won't be available just yet; we need to restart the command-line application so our updated run command's file will be read and the `hello` command will become defined. 
 
 After restarting your command-line application, simply type the following command from anywhere on your command line:
 
@@ -89,23 +95,23 @@ After restarting your command-line application, simply type the following comman
 hello
 ```
 
-Great! Now we can run this command from anywhere on our machines. This is a very small example of the functionality implemented by programs we've installed on our machines such as `git`, `node`, and `npm`. While we just created a simple script to be executed, those other programs are filled with entire libraries of functionality that are made executable on our machines.
+Great! Now we can run this command from anywhere on our machines. This is a very small example of the type of functionality that's implemented by programs such as `git`, `node`, and `npm`. Whereas we just created a simple script to be executed, those other programs have entire libraries of functionality that are made executable on our machines.
 
 Let's move on to another example and learn how to make a slightly more useful script.
 
-## Build a Script to Automate Git Tasks
+## Build a Script to Automate a Git Task
 
-Now that we've learned how to write a shell script, let's create one that will make our lives easier by automating a Git command to clean our repositories. 
+Now that we've learned how to write a shell script, let's create one that will actually make our lives easier by automating a Git command to clean up our repositories. 
 
-Go ahead and create a file called `git-file-cleanup.sh` and open it in Visual Studio Code. Then make sure you add the shebang `#!` interpreter directive at the top of the file with the following code:
+Create a file called `git-file-cleanup.sh` and open it in VS Code. Then add the shebang (`#!`) interpreter directive at the top of the file with the following code:
 
 ```sh
 #!/bin/bash
 ```
 
-With that in place, we can now start our script's functionality. We're going to write a script that, when executed in a Git repository, will check for untracked files and ask if we want to clean them up. This is useful when we have files that we don't want to track or commit to our repo and don't want to remove them one by one.
+With that in place, we can now add our script's functionality. When executed from within a Git repository, our script will check for untracked files and ask if we want to clean them up. This handy script will allow us to avoid having to manually remove files that we don't want to track or commit one by one!
 
-Let's add the following code to our `git-file-cleanup.sh` file:
+Add the following code to the `git-file-cleanup.sh` file:
 
 ```sh
 # set git clean command with necessary flags
@@ -115,11 +121,11 @@ Let's add the following code to our `git-file-cleanup.sh` file:
 TO_REMOVE=`git clean -f -d -n`;
 ```
 
-Here, we create a variable called `TO_REMOVE` and set it to a value of the `git clean` command. This command allows us to remove any untracked files from a project. We use the `-f` flag to force-delete them from the computer, the `-d` flag to recursively check every directory in the repo, and finally the `-n` flag to make the command's execution a "dry run." 
+Here, we create a variable called `TO_REMOVE` and set it to a value of the `git clean` command. This command allows us to remove any untracked files from a project. We use the `-f` flag to force-delete them from the computer, the `-d` flag to recursively check every directory in the repo, and the `-n` flag to make the command's execution a "dry run." 
 
-The dry run means that it'll go through all the steps it normally goes through, but it'll just report back what will be removed without actually removing them. This is good because it'll give us a chance to check what will be removed before we remove them so we can confirm whether or not we want to proceed.
+The dry run means that it'll go through all the steps it typically goes through and report back what will be removed, without actually removing it. This gives us a chance to confirm whether or not we want to proceed.
 
-Before adding that user input for confirmation, let's run a check to see if there's anything even there for us to clean, by adding the following code: 
+Before adding that user input for confirmation, let's check to see if there's anything even there for us to clean, by adding the following code: 
 
 ```sh
 # if the command's execution doesn't return `null`
@@ -137,7 +143,7 @@ With this `if` statement, we use a set of double square brackets `[[ <condition>
 
 If the executed Git command returns and it's not null, as checked by the `-n` flag, we will then move into our functionality. If it is null, we'll print a message indicating that everything is clean and finish the `if` statement with `fi` (many shell commands end with the opening command reversed). Did you notice the semicolon `;` after the `if` statement? That's so we can start a new statement `then` on the same line.
 
-If there is something to clean, let's move into the `then` statement and use the `printf` command to actually execute the command held in the `TO_REMOVE` variable and print the output of it to the command-line application, just as if you were to run that command yourself. Once that's printed, we can now prompt the user to confirm if they want to move forward with the cleaning.
+If there is something to clean, let's move into the `then` statement and use the `printf` command to actually execute the command held in the `TO_REMOVE` variable and print the output of it to the command-line application, just as if you were to run that command yourself. Once that's printed, we can now prompt the user to confirm if they want to move forward with the cleanup.
 
 Add the following code to the file after the `printf` and before the `else`:
 
@@ -159,9 +165,11 @@ done;
 
 Here is where we add a bit of interactivity to our script. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line; when they answer, the response will be stored in a variable called `result`.
 
-Once we answer the prompt, we use the `do` command to continue the functionality. We check to see if we said "Yes" to cleaning our repo and if so, we actually execute the command as if we were typing it out ourselves on the command line. If we don't say "Yes," or the command finishes, we use the `break` command to exit our `do` loop and then use `done` to signify the end of that set of functionality.
+Once we answer the prompt, we use the `do` command to continue the functionality. We check to see if we said "Yes" to cleaning our repo and if so, we execute the command as if we were typing it out on the command line. If we don't say "Yes," or the command finishes, we use the `break` command to exit our `do` loop and then use `done` to signify the end of that set of functionality.
 
-That's all there is to this script, so let's give it a test. Since this one needs to be executed within the context of a Git repository, it'll be easier if we set up the alias first. If you need to adjust the permissions on your file, do so now by running the following command on the command line:
+### Add an Alias and Test the Script
+
+That's all there is to this script, so let's test it! This script needs to be executed within the context of a Git repository, so it'll be easier if we set up an alias first. If you need to adjust the permissions on your file, do so now by running the following command on the command line:
 
 ```sh
 chmod +x ./git-file-cleanup.sh
@@ -174,7 +182,7 @@ Once that's done, add an alias to your `.bashrc` or `.zshrc` file with the follo
 alias gfc="~/<path>/<to>/git-file-cleanup.sh"
 ```
 
-Save the run command file that you just updated and restart your command-line application for the alias to be loaded into the environment. Once that's done, let's test it out by creating a local Git repo on our machines. You can do so by using the following commands:
+Save the run command file that you just updated and restart your command-line application to load the alias into the environment. Once that's done, let's test it out by creating a local Git repo on our machines. You can do so by using the following commands:
 
 ```sh
 # make directory
@@ -206,7 +214,7 @@ After running the preceding commands, the result of the `gfc` command should loo
 
 ![The command line shows that our repository has two files that can be cleaned and prompts us to continue with the removal.](./Images/03-gfc-prompt.png)
 
-Now we have identified what could be removed if we were to execute this command, thanks to the dry run (`-d`) flag, and can now decided if we want to move forward. If we select `1` for yes, then we will go through with the cleaning, as the following image shows:
+As you can see in the preceding image, we've identified what could be removed if we were to execute this command, thanks to the dry run (`-d`) flag. We can now decided if we want to move forward. If we select `1` for yes, then the cleanup will proceed, as the following image shows:
 
 ![The command line shows the result of choosing to clean the repo, and lets us know what files have been removed.](./Images/04-gfc-complete.png)
 
@@ -214,13 +222,13 @@ Now our Git repository is clean of all untracked files! This may not be a comman
 
 ## Reflection
 
-Congratulations on getting quickly acclimated to a new programming language! While the scripts we created aren't very complex, they allowed us to learn how some more advanced scripts may work. We can write scripts to perform a number of tasks and automate a lot of things, such as monitoring your computer's performance, finding where something exists in a project, and even scaffolding a project's file structure itself!
+Congratulations on becoming quickly acclimated to a new programming language! While the scripts we created aren't very complex, they allowed us to learn how some more advanced scripts may work. We can write scripts to perform a number of tasks and automate a lot of things, such as monitoring your computer's performance, finding where something exists in a project, and even scaffolding a project's file structure itself!
 
 In your spare time, explore the scripts in the `Solved` directory to see what else can be done with shell scripts!
 
 ## Resources
 
-If you want to learn more about shell scripts, explore the following resources:
+To learn more about shell scripts, explore the following resources:
 
 * [The Bash Hackers Wiki](https://wiki.bash-hackers.org/)
 
