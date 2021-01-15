@@ -42,7 +42,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * [Unit XX: TITLE]() {TODO}
+  * [Unit 01: Computational Thinking](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing) 
 
 ### Algorithms
 
@@ -52,7 +52,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+* [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+
+* [Version Control](https://www.atlassian.com/git)
 
 * [GitHub](https://guides.github.com/activities/hello-world/)
 
