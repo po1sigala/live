@@ -84,7 +84,7 @@ This homework is graded based on the following criteria:
 
     * Revisions to the tutorial must be made in the GitHub gist UI so that graders have access to your revision history.
 
-    * The tutorial must cover one of the regex examples listed above or another of your choice. You may NOT use the regex covered in the [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial).
+    * The tutorial must cover one of the regex examples listed above or another of your choice. You may NOT use the regex covered in the [Regex Tutorial: Matching a Username](http://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial).
 
     * The tutorial must include sections that correspond to each of the components that make up the regex. You may not need to use all of the sections included in the starter code, but you should include all of the sections that correspond to the different components of the regex you chose.
 
