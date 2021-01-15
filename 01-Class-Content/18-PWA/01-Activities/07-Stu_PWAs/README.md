@@ -27,7 +27,7 @@ In this activity, you will install a progressive web application (PWA) using you
 
   * 3. Tap the icon labeled Add to Home Screen.
 
-  * 4. Name your PWA, then tap Add below the prompt.
+  * 4. Name your PWA, then tap Add below the promp.
 
 * Be prepared to answer the following question(s): 
 
