@@ -12,11 +12,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Instructor/TA Notes
 
-* On Day 1, we will explain JavaScript execution and data structures. To prepare, review concepts related to [execution context vss scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
+* On Day 1, we will explain JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
 
 * A few activities use a testing library to debug or build code. Day 1 moves fluidly between the browser and Node.js, so remind yourself when to use `npm install` to run the test suites. 
 
-* On Day 2, the advanced JavaScript concepts include closures, classes, and function factories. Due to the conceptual nature of this topic, students may have some difficulty understanding these concepts. Take some time to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Always encourage students to be patient, and let them know that the best way to understand these topics is through coding practice. 
+* On Day 2, advanced JavaScript concepts include closures, classes, and function factories. Due to the conceptual nature of this topic, students may have some difficulty understanding these concepts. Take some time to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Always encourage students to be patient, and let them know that the best way to understand these topics is through coding practice. 
 
 * On Day 3, we will learn about algorithms. Review the common algorithms located in the [Resources](###Resources) section. Students may struggle to understand some of the algorithms, so encourage patience, practice, asking questions, and seeking resources.
 
@@ -68,43 +68,39 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * [Global Execution Context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+* [Global Execution Context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context)
 
-  * [Functional Execution Context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#Function_context)
-  
-  * [What is the event loop?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-  
-  * [Scope vs Context](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/)] 
+* [Functional Execution Context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#Function_context)
 
-  * [Stacks](https://en.wikipedia.org/wiki/Data_structure)
+* [What Is the Event Loop?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-  * [Queues](https://en.wikipedia.org/wiki/Data_structure)
+* [Scope vs. Context](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/)
 
-  * [Callback Queues](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Event_loop)
+* [Data Structures](https://en.wikipedia.org/wiki/Data_structure)
 
-  * [Higher Order Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+* [Event Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Event_loop)
 
-  * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+* [Higher Order Functions](https://eloquentjavascript.net/05_higher_order.html#h_xxCc98lOBK)
 
-  * [Factory Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+* [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
-  * [Constructor vs Factory Functions](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+* [Composition Over Inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance)
 
-  * [Event Delegation / Handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures/#Practical_closures)
+* [Practical Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures/#Practical_closures)
 
-  * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
+* [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
 
-  * [Recursion](https://en.wikipedia.org/wiki/Linear_search)
+* [Recursion](https://en.wikipedia.org/wiki/Recursion)
 
-  * [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+* [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-  * [Big O Notation](https://en.wikipedia.org/wiki/Big_O_notation)
+* [Big O Notation](https://en.wikipedia.org/wiki/Big_O_notation)
 
-  * [Merge Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Merge_sort)
+* [Merge Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Merge_sort)
 
-  * [Bubble Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Bubble_sort)
+* [Bubble Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Bubble_sort)
 
-  * [Quick Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
+* [Quick Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
