@@ -124,7 +124,7 @@ The Git Guide for this unit reviews shell scripts:
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides. The following blog post is relevant to this unit:
 
-* 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/javascript/regex-tutorial)
+* 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
