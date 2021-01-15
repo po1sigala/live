@@ -14,6 +14,8 @@ The following topics will be covered in this unit:
 
 * [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
+* [Version Control](https://www.atlassian.com/git)
+
 * [GitHub](https://guides.github.com/activities/hello-world/)
 
 * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -90,7 +92,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the Git concepts for this unit.
 
   * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide) 
 
@@ -102,4 +104,4 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
   * 📖 Blog Post: @TODO LINK TO BLOG POST
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
