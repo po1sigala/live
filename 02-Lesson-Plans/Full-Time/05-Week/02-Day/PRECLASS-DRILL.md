@@ -6,7 +6,7 @@
 
 * 20 minutes before class starts, write the following problem on the board or send it out on Slack:
 
-  ```js
+  ```md
   Write a function that takes in an array of integers and the array with duplicates removed
 
   Ex:
