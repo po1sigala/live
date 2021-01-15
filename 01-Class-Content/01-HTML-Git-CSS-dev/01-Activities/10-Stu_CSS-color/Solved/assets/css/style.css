@@ -1,4 +1,4 @@
-.section {
+ .section {
   width: 200px;
   height: 100px;
 }
@@ -8,13 +8,13 @@
   background-color: #0000FF;
 }
  
-/*Uses predefined colors*/
+/* Uses predefined colors */
 .container {
   color: white;
   background-color: black;
 }
 
-/*Purple and yellow are example of high contrast colors*/
+/* Purple and yellow are example of high contrast colors */
 #section-1 {
   color: #ffff00;
   background-color: #800080;
