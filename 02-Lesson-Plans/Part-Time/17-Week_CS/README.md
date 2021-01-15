@@ -18,7 +18,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 * In the second lesson, we teach advanced JavaScript concepts including closures, classes, and factory functions. Take some time before class to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Some students might have a hard time understanding these concepts. Encourage them to be patient with themselves, and remind them that the best way to understand these topics is through coding practice. 
 
-* In the third lesson, we will focus primarily on algorithms. To prepare, review the algorithms in the [Resources](###Resources) section. Students might struggle to understand some of the algorithms, so encourage patience, practice, asking questions, and seeking resources.
+* In the third lesson, we will focus primarily on algorithms. To prepare, review the algorithms in the [Resources](#resources) section. Students might struggle to understand some of the algorithms, so encourage patience, practice, asking questions, and seeking resources.
 
 * The mini-project is a departure from past projects in that it is an interactive mock interview with a small group of peers. Encourage students to take the mini-project seriously. The main objective is to practice technical communication in preparation for the real-life interview process. Be sure to check on students frequently to motivate them. Add a personal story about any technical interviews you've done if possible.
 
@@ -58,13 +58,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video for tips and tricks on how to solve the corresponding algorithm.
 
-* [01: Reverse Words](./03-Algorithms/01-reverse-no-built-in)
+* [01: Reverse Words](../../../01-Class-Content/17-CS/03-Algorithms/01-reverse-no-built-in)
 
-* [02: Left Rotation](./03-Algorithms/02-left-rotation)
+* [02: Left Rotation](../../../01-Class-Content/17-CS/03-Algorithms/02-left-rotation)
 
     * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
-* [03: Reverse in Place](./03-Algorithms/03-reverse-in-place)
+* [03: Reverse in Place](../../../01-Class-Content/17-CS/03-Algorithms/03-reverse-in-place)
 
 ### Resources
 
