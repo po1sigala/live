@@ -1,29 +1,30 @@
 # Reverse Words
 
-In this activity you will be writing code to create a function that takes a string and returns a new string with all of the characters in reverse order. You are not allowed to use the built-in `reverse` method.
+In this activity, you will write code to create a function that takes a given string and returns a new string with all of the characters in reverse order. You are not permitted to use the built-in `reverse` method.
 
 ## Instructions
 
-- Open [Unsolved/reverse-no-built-in.js](Unsolved/reverse-no-built-in.js) in your code editor -- **this is the only file you will modify in this activity.**
+1. Open [Unsolved/reverse-no-built-in.js](Unsolved/reverse-no-built-in.js) in your code editor **This is the only file you will modify in this activity.**
 
-  - In this file you will be writing code in the body of the `reverse` function to achieve the following:
+2. In this file, write code in the body of the `reverse` function that returns a new string that has all of the characters in the given string in reversed order.
 
-    - Return a new string that has all the characters in the given string in reversed order.
+   For example, given the following string:
 
-    - e.g. given the following string:
+   ```js
+   const str = "just keep swimming";
+   ```
 
-    ```js
-    const str = "just keep swimming";
-    ```
+   The following string should be returned:
 
-    - The following string should be returned:
+   ```js
+   "gnimmiws peek tsuj";
+   ```
 
-    ```js
-    "gnimmiws peek tsuj";
-    ```
+3. To check if your function works properly, open [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
+   * Functions that pass the tests are denoted with a green checkmark.
 
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
+   * Functions that fail the tests are denoted with a red x and an error message.
 
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

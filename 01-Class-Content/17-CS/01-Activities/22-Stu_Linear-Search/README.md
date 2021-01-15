@@ -1,4 +1,4 @@
-# 🏗️ Implement Linear Search Algorithm
+# 🏗️ Implement a Linear Search Algorithm
 
 Work with a partner to implement the following user story:
 
@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the search algorithm returns the position of the value we are searching for.
 
-* It's done when the search algorithm returns `-1` to indicate the value is not in the set of data.
+* It's done when the search algorithm returns `-1` to indicate that the value is not in the data set.
 
 ---
 
@@ -27,4 +27,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

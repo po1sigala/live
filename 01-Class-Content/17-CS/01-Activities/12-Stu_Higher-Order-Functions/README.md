@@ -1,4 +1,4 @@
-# 🏗️ Create a function to pass into the reducer method that finds the average of an array of numbers
+# 🏗️ Create a Function to Pass into the Reducer Method That Finds the Average of an Array of Numbers
 
 Work with a partner to implement the following user story:
 
@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the `findAverage` function correctly calculates the average of an array of numbers.
 
-* It's done when the `findAverage` function is being correctly passed through the reduce method.
+* It's done when the `findAverage` function is being correctly passed through the `.reduce()` method.
 
 ## 💡 Hints
 
@@ -20,9 +20,9 @@ How do you find out how many elements are in an array?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What other built-in functions are also higher order functions? 
+* What other built-in functions are also higher-order functions? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

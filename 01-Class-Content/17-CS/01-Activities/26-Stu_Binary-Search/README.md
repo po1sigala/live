@@ -2,21 +2,21 @@
 
 Work with a partner to resolve the following issue:
 
-* As a developer, I want to be able to find the position of a value in a set of data using a binary search function.
+* As a developer, I want to be able to find the position of a value in a data set by using a binary search function.
 
 ## Expected Behavior
 
-When we run our unit tests to test our binary search function, the defined tests should pass.
+When we run unit tests to test the binary search function, the defined tests pass.
 
 ## Actual Behavior
 
-When we run our unit tests, the defined tests don't pass.
+When we run unit tests to test the binary search function, the defined tests do not pass.
 
 ## Steps to Reproduce the Problem
 
-1. From the [Unsolved](./Unsolved) directory, run `npm install` in the command line.
+1. In the command line, from the [Unsolved](./Unsolved) directory, run `npm install`.
 
-2. Run `npm run test` from the command line to run unit tests.
+2. Run `npm run test` to run the unit tests.
 
 3. The tests defined in the `__tests__` directory do not pass.
 
@@ -24,15 +24,15 @@ When we run our unit tests, the defined tests don't pass.
 
 ## 💡 Hints
 
-How can the unit test descriptions help us determine what the function is or isn't doing?
+How can the unit test descriptions help us determine what the function is or is not doing?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is worst possible Big-O complexity an algorithm can have? What is the best?
+* What is worst possible Big-O complexity that an algorithm can have? What is the best?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
