@@ -1,12 +1,12 @@
-# Unit 17: Computer Science For JavaScript
+# Unit 17: Computer Science for JavaScript
 
 ## Overview:
 
-In this unit, we will look at how computer science relates to JavaScript in order to prepare you for the technical interview process that every developer will eventually face. Some of these topics may feel abstract and confusing at times, but remember&mdash;you have been using JavaScript for several months. Now we are just taking a closer look at how JavaScript executes so we can better understand how our code interacts with its environment.
+In this unit, we will look at how computer science relates to JavaScript in order to prepare you for the technical interview portion of the job interview, which every developer eventually faces. Some of these topics may feel abstract and confusing at times, but remember&mdash;you've been using JavaScript for several months. Now we are simply taking a closer look at how JavaScript executes so we can better understand how our code interacts with its environment.
 
 In the first two lessons, we will dissect JavaScript in order to learn how our code executes at a granular level. We will also explore the fascinating behavior of closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design. 
 
-In the final lesson, we will review search algorithms and how recursion works in JavaScript. For the mini-project, you will practice a mock interview with your peers. This will give you an opportunity to learn about the technical interview portion of the web-developer job interview process. You'll address topics that are foundational to improving code performance and which are commonly found in technical interviews.
+In the final lesson, we will review search algorithms and how recursion works in JavaScript. For the mini-project, you will practice a mock interview with your peers. This will give you an opportunity to learn about the technical interview portion of the web-developer job interview process. You'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
 ## Key Topics
 
@@ -20,7 +20,7 @@ The following topics will be covered in this unit:
 
 * [Event Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Event_loop)
 
-* [Higher Order Functions](https://eloquentjavascript.net/05_higher_order.html#h_xxCc98lOBK)
+* [Higher-Order Functions](https://eloquentjavascript.net/05_higher_order.html#h_xxCc98lOBK)
 
 * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
@@ -88,7 +88,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [02: Left Rotation](./03-Algorithms/02-left-rotation)
 
-    * 📹 [Let's Code: Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
+    * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
 * [03: Reverse in Place](./03-Algorithms/03-reverse-in-place)
 
@@ -100,7 +100,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-In the homework, you’ll create a technical tutorial that explains how a particular regular expression functions. A regular expression, or regex, is a search pattern used by developers. In your tutorial, you’ll break down each part of the expression and describe what it does.
+In the homework, you’ll create a technical tutorial that explains how a particular regular expression functions. A regular expression, or regex, is a search pattern used by developers. In the tutorial, you’ll break down each part of the expression and describe what it does.
 
 ## Career Connection
 
@@ -108,7 +108,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, we will return to databases&mdash;in particular, NoSQL databases. We will learn about how non-relational databases work and compare them to SQL databases. Finally, we will explore why we might use NoSQL for our application.
+In the next unit, we will return to databases&mdash;in particular, NoSQL databases. We will learn about how non-relational databases work and compare them to SQL databases. Finally, we will explore why we might use NoSQL for an application.
 
 ## Resources
 
