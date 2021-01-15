@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the main header reads `"Student Bio."` 
+* It's done when the main header reads `"Student Bio"`. 
 
 * It's done when there is a section that includes a name, an image, and a paragraph.
 
