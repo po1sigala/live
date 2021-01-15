@@ -116,9 +116,9 @@ This section contains some additional resources to help solidify the topics cove
 
 ### Git Guide
 
-The Git Guide for this unit reviews shell scripts: to review the git concept for this unit. Watch the following `📹 Git Guide` video for an additional walkthrough of the git concept:
+The Git Guide for this unit reviews shell scripts:
 
-* 📖 [Git Guide: Shell Scripts](./01-Activities/27-Evr_Shell)
+* 📖 [Git Guide: Using Shell Scripts](./01-Activities/27-Evr_Shell)
 
 ### Full-Stack Blog
 
