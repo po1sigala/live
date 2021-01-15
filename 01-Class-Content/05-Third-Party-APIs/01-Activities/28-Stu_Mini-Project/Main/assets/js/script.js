@@ -26,7 +26,7 @@ function printProjectData(name, type, hourlyRate, dueDate) {
 
   var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
 
-  var daysToDate = moment(dueDate, 'MM/DD').diff(moment(), 'days');
+  var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
   var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
 
   var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
