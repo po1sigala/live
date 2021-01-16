@@ -12,7 +12,7 @@ const addGreetingMessage = (name) => {
 
 addGreetingMessage('Tammy');
 
-// We use `let` instad of `const` so we can use the `callout` variable name twice without the worrying about hoisting.
+// We use `let` instead of `const` so we can use the `callout` variable name twice without the worrying about hoisting.
 const calloutCounter = () => {
   let callout = 'Outside of the loop';
   let counter = 5;
