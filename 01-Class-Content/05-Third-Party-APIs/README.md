@@ -26,6 +26,8 @@ We'll cover the following topics in this unit:
 
 * [Moment.js](https://momentjs.com/docs/)
 
+  * **Note**: `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. We will still cover it in this unit, but look under the "Resources" section below for other alternatives.
+
 ## Learning Objectives
 
 You'll be employer-competitive if you can do the following: 
@@ -101,6 +103,18 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
   * 📖 [Git Guide: Git Revert](./01-Activities/27-Evr_Git-Revert)
 
   * 📹 [Git Guide Video: Git Revert](https://2u-20.wistia.com/medias/r60i2dwhrw)
+
+### General
+
+Here are some alternative date/time libraries you can look into:
+
+  * [Luxon](https://moment.github.io/luxon/)
+
+  * [Day.js](https://day.js.org/)
+
+  * [date-fns](https://date-fns.org/)
+
+  * [js-Joda](https://js-joda.github.io/js-joda/)
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

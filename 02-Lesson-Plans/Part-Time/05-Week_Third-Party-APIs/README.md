@@ -12,7 +12,17 @@ In this unit, you will implement CDNs to leverage third-party APIs, like CSS fra
 
 * Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
 
-* The 05.3 lesson plan includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
+* 05.3 lesson plan includes an activity that involves the `Moment.js` library. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. We will still use it in this unit, but feel free to refer the students to other libraries, such as:
+
+  * [Luxon](https://moment.github.io/luxon/)
+
+  * [Day.js](https://day.js.org/)
+
+  * [date-fns](https://date-fns.org/)
+
+  * [js-Joda](https://js-joda.github.io/js-joda/)
+
+* The 05.3 lesson plan also includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 * Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
