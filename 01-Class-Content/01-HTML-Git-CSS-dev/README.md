@@ -24,13 +24,13 @@ The following topics will be covered in this unit:
 
 * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color)
+* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
 * [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
 * [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
 
-* [Display](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display)
+* [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
 * [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
@@ -42,7 +42,7 @@ You will be employer-ready if you are able to:
 
 * Use Command line tools to navigate your computer’s file system and create directories and files.
 
-* Employ Git commands to create and clone a repo, add and commit changes, and push and pull code.
+* Employ Git commands to create and clone a repository, add and commit changes, and push and pull code.
 
 * Use HTML elements to build the structure of a web page.
 
@@ -92,9 +92,9 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the Git concepts for this unit.
+Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide) 
+  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide/README.md) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
@@ -102,6 +102,7 @@ Refer to the Git Guide to review the Git concepts for this unit.
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Getting Started with Git blog post](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git) on The Full-Stack Blog
+  * 📖 Blog Post: [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
+
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
