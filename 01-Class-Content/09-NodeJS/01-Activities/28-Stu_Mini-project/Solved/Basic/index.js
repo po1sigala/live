@@ -1,8 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-
-const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () =>
   inquirer.prompt([
@@ -39,7 +36,7 @@ const promptUser = () =>
   ]);
 
 const generateHTML = (answers) =>
-`<!DOCTYPE html>
+  `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -62,7 +59,16 @@ const generateHTML = (answers) =>
 </body>
 </html>`;
 
-promptUser()
-  .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-  .then(() => console.log('Successfully wrote to index.html'))
-  .catch((err) => console.error(err));
+const init = () => {
+  promptUser().then((answers) => {
+    try {
+      const html = generateHTML(answers);
+      fs.writeFileSync('index.html', html);
+      console.log('Successfully wrote to index.html');
+    } catch (error) {
+      console.log(error);
+    }
+  });
+};
+
+init();
