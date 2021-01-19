@@ -1,6 +1,3 @@
-var eventType = document.querySelector("#event-type"); 
-var keyEventsEl = document.querySelector("#key-events");
-
 function keydownAction(event) {
   // The key property holds the value of the key press
   var keyPress = event.key;
