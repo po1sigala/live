@@ -32,22 +32,22 @@ function countdown() {
   }, 1000);
 }
 
-function speedRead() {
-  // Append mainEl div
-  mainEl.appendChild(bodyEl);
-  // Set interval in a variable
-  var poemInterval = setInterval(function() {
-    if (words[i] === undefined) {
-      // Clear interval if no more words remain
-      clearInterval(poemInterval);
+// Displays the message one word at a time
+function displayMessage() {
+  var wordCount = 0;
+
+  // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  var msgInterval = setInterval(function () {
+    // If there are no more words left in the message
+    if (words[wordCount] === undefined) {
+      // Use `clearInterval()` to stop the timer
+      clearInterval(msgInterval);
     } else {
-      // Add current word as text content of mainEl div
-      mainEl.textContent = words[i];
-      // Increment i
-      i++;
+      // Display one word of the message
+      mainEl.textContent = words[wordCount];
+      wordCount++;
     }
-  // Set interval to number entered by user
-  }, millisecondsPerWord);
+  }, 1000);
 }
 
-prepareRead();
+countdown();

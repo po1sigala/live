@@ -2,15 +2,13 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a speed-reading application that prints a single word of a poem at a time. The word should change at the interval provided by the user.
+* As a developer, I want to create a speed-reading application that prints a single word of a message at a time.
 
 ## Acceptance Criteria
 
-* It's done when the countdown appears on the screen that indicates the number of seconds remaining before the speed reader begins.
+* It's done when the number of seconds left on the countdown is printed on the screen.
 
-* It's done when, after the countdown ends, the words to the provided poem appear on the screen.
-
-* It's done when the words appear one at a time at the interval provided by the user.
+* It's done when, after the countdown of 5 seconds ends, the words of the message appear on the screen, one word at a time.
 
 ## 📝 Notes
 
@@ -24,11 +22,11 @@ Refer to the documentation:
 
 The following animation demonstrates the web application's appearance and functionality:
 
-![The user enters 100 milliseconds, then a countdown begins and the words to the poem cycle through one at a time.](./images/demo1.gif)
+![A countdown of 5 seconds begins and then single words appear on the screen.](./images/demo1.gif)
 
 ## 💡 Hints
 
-What property can be used to add text to an HTML element with JavaScript?
+How is `displayMessage()` utilizing the `setInterval()` and `clearInterval()` methods to display the words at an interval of 1000 milliseconds?
 
 ## 🏆 Bonus
 
