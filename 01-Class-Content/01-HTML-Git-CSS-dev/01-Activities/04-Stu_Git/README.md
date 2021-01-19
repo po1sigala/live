@@ -22,7 +22,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[GitHub Docs on Create a Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
+[GitHub Docs on Creating a Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 
 [GitHub Docs on Cloning a Repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
