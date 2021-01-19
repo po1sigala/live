@@ -1,8 +1,8 @@
-# 📖 Create a New Github Repository
+# 📖 Create a New GitHub Repository
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a new Github repository and add an HTML file to it.  
+* As a developer, I want to create a new GitHub repository and add an HTML file to it.  
 
 ## Acceptance Criteria
 
