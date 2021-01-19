@@ -484,7 +484,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Let-Const/README.md`.
 
-### 9. Student Do: Convert to ES6 Syntax (15 min) 
+### 9. Student Do: let and const (15 min) 
 
 * Direct students to the activity instructions found in `06-Stu_Let-Const/README.md`.
 
