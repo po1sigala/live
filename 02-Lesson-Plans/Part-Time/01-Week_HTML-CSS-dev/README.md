@@ -8,11 +8,17 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git
 
 ## Instructor/TA Notes
 
-* During the first class, you will introduce the tools required for the students to be successful in the course including Slack, VSCode, and GitHub. Please refer to Slack workspace [Set-up Guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), [VSCode Installation](https://code.visualstudio.com/download) instructions, and [Guide to Setting Up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines, as needed.
+* During the first 70 minutes of the first class, the University will lead introductory activities and provide important, course-specific information to the students. 
 
-* The students have been provided installation instructions in the pre-work. However, if a student is struggling to get the required tools installed and working, please encourage them to stay for Office Hours for additional help.
+* Also during the first class, you will review the tools required for the students to be successful in the course, including Slack, VS Code, and GitHub. Please refer to the [Slack workspace Set-up Guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), [VS Code Installation](https://code.visualstudio.com/download) instructions, and [Guide to Setting Up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines, as needed.
+
+* Remind students that they can always refer to their prework for more detailed instructions on how to install the tools they will need for this course. However, if a student is struggling to get the required tools installed and working, encourage them to stay for Office Hours for additional help.
 
 * In addition to learning HTML, CSS and Git fundamentals, this week's activities also aim to help students gain familiarity with classroom expectations. Please make sure to reinforce the importance of each student doing a `git pull` of the class repo prior to each class. 
+
+* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local git default branch to `main` as well as creating a Git repository using `git init`. If needed, please review [Git Basics - Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) prior to class, so you feel prepared to handle any student questions as they arise. 
+
+* This week's mini-project builds on the fundamental concepts of HTML and CSS learned this week. While students will be put into groups for the mini-project, they will each work on their own projects. But encourage them to brainstorm together and share their learnings. This will be the first of many opportunities for students to collaborate and work together in groups. 
 
 ## Career Connection
 
@@ -52,29 +58,33 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-* [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
+* [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
-* [Version Control](https://www.atlassian.com/git)
+* [MDN Web Docs on Basic Built-in Terminal Commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-* [GitHub](https://guides.github.com/activities/hello-world/)
+* [Git Basics](https://www.atlassian.com/git)
+
+* [GitHub Docs on Create a Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
+
+* [GitHub Docs on Cloning a Repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-* [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+* [MDN Web Docs on HTML Attribute Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
 * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color)
+* [MDN Web Docs on Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-* [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+* [MDN Web Docs on Styling Text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text)
 
-* [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+* [MDN Web Docs on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
-* [Display](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display)
+* [MDN Web Docs on Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
-* [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+* [MDN Web Docs on CSS Basic Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
 
-* [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+* [MDN Web Docs on Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
