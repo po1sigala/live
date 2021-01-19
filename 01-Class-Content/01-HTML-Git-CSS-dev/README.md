@@ -102,4 +102,4 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
   * 📖 Blog Post: @TODO LINK TO BLOG POST
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
