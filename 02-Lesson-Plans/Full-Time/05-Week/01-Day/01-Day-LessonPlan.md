@@ -593,8 +593,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
     let message = "How are you?";
 
     if(name.length > 0){
-        let message = "Hello " + name;
-        console.log(message);
+      let message = "Hello " + name;
+      console.log(message);
     }
 
     console.log(message);
@@ -613,9 +613,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
     let counter = 5;
 
     while( counter > 0) {
-        let callout = 'Inside the loop';
-        console.log(counter, callout);
-        counter--;
+      let callout = 'Inside the loop';
+      console.log(counter, callout);
+      counter--;
     }
 
     console.log(callout);
