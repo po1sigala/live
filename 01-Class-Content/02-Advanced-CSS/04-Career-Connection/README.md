@@ -90,4 +90,4 @@ For each of the following questions, write down your answer before looking at th
 To learn more about the technical interviewing process and to practice algorithms in a mock interview, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
