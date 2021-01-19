@@ -1,6 +1,3 @@
-var eventType = document.querySelector("#event-type"); 
-var keyEventsEl = document.querySelector("#key-events");
-
 function keydownAction(event) {
   // TODO: Complete keydown function
 }
