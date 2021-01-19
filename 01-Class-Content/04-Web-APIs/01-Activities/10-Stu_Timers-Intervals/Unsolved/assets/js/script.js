@@ -1,32 +1,37 @@
-var poem = "Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.";
-var words = poem.split(" ");
+var timerEl = document.getElementById('countdown');
+var mainEl = document.getElementById('main');
 
-var mainEl = document.getElementById("main");
-var timerEl = document.getElementById("countdown");
-var bodyEl = document.createElement("div");
+var message =
+  'Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.';
+var words = message.split(' ');
 
-var i = 0;
-
-var millisecondsPerWord = prompt("How many milliseconds between words would you like?");
-
-function prepareRead() {
+function countdown() {
   var timeLeft = 5;
 
-  var timeInterval = setInterval(function() {
-    timerEl.textContent = timeLeft + " seconds remaining";
-    timeLeft--;
+  // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  var timeInterval = setInterval(function () {
+    //
+    // YOUR CODE HERE
+    //
+  });
+}
 
-    if (timeLeft === 0) {
-      timerEl.textContent = "";
-      speedRead();
-      clearInterval(timeInterval);
+// Displays the message one word at a time
+function displayMessage() {
+  var wordCount = 0;
+
+  // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  var msgInterval = setInterval(function () {
+    // If there are no more words left in the message
+    if (words[wordCount] === undefined) {
+      // Use `clearInterval()` to stop the timer
+      clearInterval(msgInterval);
+    } else {
+      // Display one word of the message
+      mainEl.textContent = words[wordCount];
+      wordCount++;
     }
-
   }, 1000);
 }
 
-function speedRead() {
-  //Add Your Code Here
-}
-
-prepareRead();
+countdown();
