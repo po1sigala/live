@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#009578" />
     <title>Map PWA</title>
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="apple-touch-icon" href="./assets/images/logo128.png" />
   </head>
   <body>
-    <h2>Trip Scheduler</h2>
-    <img class="map" src="./assets/images/map.jpg" alt="map of Berlin">
+    <section class="container">
+      <h2>Trip Scheduler</h2>
+      <div class="agenda">
+        <h4>Places to See</h4>
+        <table class="sites">
+          <td>Brandenburg Gate</td>
+          <td>Museum Island</td>
+          <td>Berlin Wall Memorial</td>
+        </table>
+      </div> 
+
+      </div>
+      <img class="map" src="./assets/images/map.jpg" alt="map of Berlin" />
+    </section>
     <!-- <script src="./assets/js/app.js"></script> -->
     <script src="./service-worker.js"></script>
     <script>
