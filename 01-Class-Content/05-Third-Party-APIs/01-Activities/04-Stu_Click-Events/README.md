@@ -20,7 +20,7 @@ When a user single-clicks the "Generate Password" button, nothing happens.
 
 1. Open `index.html` in the browser.
 
-2. Click on the "Generate Password" button to see that nothing happens.
+2. Click the "Generate Password" button to see that nothing happens.
 
 ## Assets
 
@@ -38,7 +38,7 @@ The following image demonstrates the web application's appearance and functional
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* What are alternative methods to add event listeners? Use [Google](https://www.google.com) or another search engine to answer this question.
+* What are alternate methods to add event listeners? Use [Google](https://www.google.com) or another search engine to answer this question.
 
 ---
 
