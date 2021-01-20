@@ -105,6 +105,9 @@ For more information on setting up your Git environment and using Git commands, 
   git push -u origin main
   ```
   
+
+* **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
+
 * Paste the commands into the terminal and press Enter.
 
 * If successful, you should see a message similar to the one below:
@@ -123,13 +126,13 @@ For more information on setting up your Git environment and using Git commands, 
   cd git-init-sample
   ```
 
-* Next, use `git pull` to pull down the changes from the remote `git-init-sample` repository. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely the original repository's URL&mdash;followed by the name of the branch, which in `main`.
+* Next, use `git pull` to pull down any changes from the remote `git-init-sample` repository. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely the original repository's URL&mdash;followed by the name of the branch, which in `main`.
 
   ```bash
   git pull origin main
   ```
 
-* Right now, our local repository is up-to-date with the remote repository, so you will get a message reading "Already up to date.". This means that the local version of your repository is up to date with the remote version being hosted on GitHub.
+* Right now, our local repository is up-to-date with the remote repository, so you will get a message stating "Already up to date". This means that the local version of your repository is up to date with the remote version being hosted on GitHub.
 
 * If the remote repository has changes that you do not have locally, you will get a message that lists the changes made, similar to the one below:
 
