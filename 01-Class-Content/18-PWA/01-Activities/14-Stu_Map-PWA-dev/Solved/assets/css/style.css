@@ -20,9 +20,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 180px auto;
+  margin: 30px auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
   transition: 0.3s;
   width: 650px;
@@ -34,7 +34,7 @@ h1 {
   font-size: 2em;
 }
 
-.map {
+.image {
   max-width: 600px;
   max-height: 600px;
 }
@@ -51,4 +51,8 @@ td, th {
   border: 1px solid #dddddd;
   text-align: center;
   padding: 8px;
+}
+
+a:link {
+  text-decoration: none;
 }

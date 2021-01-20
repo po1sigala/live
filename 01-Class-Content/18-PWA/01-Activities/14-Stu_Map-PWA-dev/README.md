@@ -10,7 +10,7 @@ For this activity you are going to convert the Trip Scheduler website into a PWA
 
   * Install the service worker.
 
-  * Cache your files and deliver and offline experience.
+  * Cache files and deliver an offline experience.
 
   * Download the PWA.
 
@@ -18,4 +18,4 @@ For this activity you are going to convert the Trip Scheduler website into a PWA
 
 * Can we use the Cache Storage in the browser to store dynamic requests from the user, such as a web form?
 
-*
+Use Google or another search engine to research the preceding topic. 

@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#009578" />
     <title>Map PWA</title>
-    <!-- Add link for manifest -->
+
+     <!-- TODO: Add link for manifest -->
+     
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="apple-touch-icon" href="./assets/images/logo128.png" />
   </head>
+  
   <body>
     <section class="container">
-      <h2>Trip Scheduler</h2>
+      <h2>Trip Planner</h2>
+      <div class="agenda">
+        <h4>Getting Situated</h4>
+        <table class="sites">
+          <td>Where am I</td>
+          <td>Emergency Services</td>
+          <td>Airport</td>
+        </table>
+      </div>
+      <img class="image" src="./assets/images/map.jpg" alt="map of Berlin" />
+    </section>
+  
+    <section class="container">
       <div class="agenda">
         <h4>Places to See</h4>
         <table class="sites">
-          <td>Brandenburg Gate</td>
-          <td>Museum Island</td>
-          <td>Berlin Wall Memorial</td>
+          <td><a href="https://en.wikipedia.org/wiki/Brandenburg">Brandenburg Gate</a></td>
         </table>
       </div> 
-
-      </div>
-      <img class="map" src="./assets/images/map.jpg" alt="map of Berlin" />
+      <img class="image" src="./assets/images/brandenburg.jpg" alt="The Brandenburg Gate in Berlin, GE" />
     </section>
-    <!-- <script src="./assets/js/app.js"></script> -->
-    <script src="./service-worker.js"></script>
+
+    <section class="container">
+      <div class="agenda">
+        <h4>Places to See</h4>
+        <table class="sites">
+          <td>Reichstag</td>
+        </table>
+      </div> 
+      <img class="image" src="./assets/images/reichstag.jpg" alt="The front of the Reichstag building viewed from outside." />
+    </section>
+
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker

@@ -9,7 +9,9 @@ self.addEventListener('install', (event) => {
         './assets/images/logo48.png',
         './assets/images/logo128.png',
         './assets/images/logo512.png',
-        './assets/images/map.jpg',
+        './assets/images/brandenburg.jpg',
+        './assets/images/reichstag.jpg',
+        './assets/images/map.jpg'
       ]);
     })
   );
