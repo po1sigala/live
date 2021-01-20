@@ -2,9 +2,7 @@
 
 ## Overview:
 
-More and more users are browsing the web from a mobile device, which has changed how developers think about layout and design. Advanced CSS features like media queries and flexbox make it easier to accommodate multiple screen sizes and to build apps with a mobile-first mindset.
-
-Similarly, website design has evolved to include many niceties that users now take for granted, such as animated hover effects, rounded corners, and shadows. In the old days of the web, these tricks would have required some complex workarounds or even JavaScript, but newer CSS properties have simplified their implementation.
+More and more users are browsing the web from a mobile device, which has changed how developers think about layout and design. Advanced CSS features like media queries and flexbox make it easier to accommodate multiple screen sizes and to build apps with a mobile-first mindset. Similarly, website design has evolved to include many niceties that users now take for granted, such as animated hover effects, rounded corners, and shadows. In the old days of the web, these tricks would have required some complex workarounds or even JavaScript, but newer CSS properties have simplified their implementation.
 
 In this unit, you'll learn how to build web apps that incorporate both of these features: responsive web design and advanced CSS. These skills are a must for modern web developers, and learning them will enable you to create attractive, engaging, and adaptive websites. 
 
@@ -52,7 +50,7 @@ You will be employer-ready if you are able to:
 
 * Explain why you would use a CSS reset.
 
-* Use typographical CSS properties, like `font-family` and `line-height`.
+* Use typographical CSS properties, such as `font-family` and `line-height`.
 
 * Add pseudo-classes and pseudo-elements to HTML elements.
 
@@ -74,7 +72,7 @@ You will be employer-competitive if you are able to successfully complete the as
 
 ### Assessments
 
-Assess your knowledge by answering technical interview questions and solving coding challenges.
+Assess your knowledge by answering technical-interview questions and solving coding challenges in the following assessment:
 
 * [Unit 02 Assessment](https://forms.gle/72YzfNppttviTD8a6)
 

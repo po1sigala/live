@@ -1,4 +1,4 @@
-# 🐛 Password generator doesn't work on single-click
+# 🐛 Password Generator Doesn't Work on Single Click
 
 Work with a partner to resolve the following issues:
 

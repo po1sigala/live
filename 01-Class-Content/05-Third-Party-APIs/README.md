@@ -20,7 +20,7 @@ We'll cover the following topics in this unit:
 
 * [Bootstrap](https://getbootstrap.com)
 
-* [Google Fonts](https://fonts.google.com)
+* [Google fonts](https://fonts.google.com)
 
 * [jQuery UI](https://jqueryui.com/demos/)
 

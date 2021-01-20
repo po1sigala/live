@@ -19,7 +19,7 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
   git init .
   ```
   
-* Open the `git_revert_demo` directory in your IDE and copy the [script.js](./script.js) file into it. You'll notice it is the code from our previous activity on jQuery UI Interactions.
+* Open the `git_revert_demo` directory in your IDE and copy the [script.js](./script.js) file into it. You'll notice that it is the code from our previous activity on jQuery UI Interactions.
 
 * Make the initial commit, as follows:
 
@@ -104,7 +104,7 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
   git commit -m 'added Sortable interaction'
   ```
 
-* In your terminal, run `git log` to see the commit history. You should see all 4 commits, like in the following image:
+* In your terminal, run `git log` to see the commit history. You should see all four commits, like in the following image:
 
   ![The log shows all 4 commits.](Images/01-git-log.png)
 
@@ -114,11 +114,11 @@ In this activity, we will use `git revert` to undo a commit made earlier while k
 
 * Once we find the correct commit hash, we can copy the commit hash and use it in the git command, `git revert <commit hash>`. It should look something like this:
 
-```bash
-git revert 601e2affb5fca3addd898cb09ef950c562338823
-```
+  ```bash
+  git revert 601e2affb5fca3addd898cb09ef950c562338823
+  ```
 
-* This will create a new commit, which will open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
+* This will create a new commit, which will open the commit message editor and prompt for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
 * We can use `git log` to see that there is a new commit added, which reverted the `added Sortable interaction` commit. See the following image for reference:
 
@@ -126,7 +126,7 @@ git revert 601e2affb5fca3addd898cb09ef950c562338823
 
 * Check the `script.js` file to see if the `Sortable` interaction is no longer there.
 
-* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options we can also use. One useful option is to pass in the `HEAD` which will revert the latest commit, as follows:
+* If we look at the [Git Revert Docs](https://git-scm.com/docs/git-revert#_options), we see various options that we can also use. One useful option is to pass in the `HEAD`, which will revert the latest commit, as follows:
 
   ```bash
   git revert HEAD
@@ -138,7 +138,7 @@ git revert 601e2affb5fca3addd898cb09ef950c562338823
 
 * When we run `git log`, we can see the automatically generated commit messages for both of our revert commands.
 
-![Git log after reverting to HEAD](Images/03-git-revert-both-commits.png)
+  ![Git log after reverting to HEAD](Images/03-git-revert-both-commits.png)
 
 * Check the `script.js` file to see if the `Sortable` interaction has been added back into our code.
 
