@@ -16,11 +16,13 @@ The following image shows a wireframe that depicts the web application's appeara
 
 ![Example of a finished wireframe for a form.](./Images/01-wireframe-form-completed.png)
 
-1. Navigate to [Google Slides](https://docs.google.com/presentation/u/0/?tgif=d) and use the blank template to create a new presentation.
+### Instructions
 
-2. Using the tools outlined in the following image, create a wireframe that includes all the elements that you need for the project.
+1. Navigate to [Google Slides](https://docs.google.com/presentation/u/0/?tgif=d) and create a new presentation using the blank template.
 
-![Google Slide tools outlined in red.](./Images/02-google-slides-tool-highlight.png)
+2. Using the tools highlighted in the following image, create a wireframe that includes all the elements that you need for the project:
+
+   ![Google Slide tools outlined in red.](./Images/02-google-slides-tool-highlight.png)
 
 ---
 
