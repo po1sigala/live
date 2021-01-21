@@ -12,23 +12,6 @@ The following topics will be covered in this unit:
   * Agile software development
 
 ## Learning Objectives
-<<<<<<< HEAD
-You will be employer-competitive if you are able to:
-* Speak technically about a feature you implemented in your project
-* Explain and execute git branching workflow in a collaborative project
-* Resolve merge conflicts
-* Explain agile software development
-* Design, build, and deploy a client-side web application using GitHub Pages
-* Prepare a professional presentation and repository README for your project
-
-## Helpful Links
-* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
-* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
-* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-=======
 
 You will be employer-ready if you are able to:
   
@@ -72,4 +55,3 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ---
 © 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7

@@ -35,10 +35,3 @@ Project presentations are on the third day of next unit. Remember, students must
 ### Slide Decks
 
   * [07.1: Project unit](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
-<<<<<<< HEAD
-
-### Time Tracker(s)
-
-* [07.1 Time Tracker](https://drive.google.com/open?id=1i6RK5P8ZPQEwF8rcis89Er9LF61jPUTy)
-=======
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7

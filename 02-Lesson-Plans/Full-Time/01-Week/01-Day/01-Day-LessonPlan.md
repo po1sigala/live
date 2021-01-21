@@ -1,5 +1,4 @@
-# 01.1 Lesson Plan - The Zen of Coding (10:00 AM) <!--links--> &nbsp;  &nbsp; [➡️](../02-Day/02-Day-LessonPlan.md)
-
+# 01.1 Lesson Plan - The Zen of Coding
 ## Overview
 
 * First off, welcome and thank you so much for being a part of our program! Thanks to instructors/TAs like yourself, we're helping hundreds of students across the world achieve their career goals and their creative dreams. You have plenty of time to work with these students, and their progress will astound you. Buckle in! You're in for a fun ride!

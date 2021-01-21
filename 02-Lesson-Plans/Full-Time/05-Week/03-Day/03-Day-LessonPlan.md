@@ -654,30 +654,14 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
   * Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
 
-<<<<<<< HEAD
-    ```js
-    person.occupation.toLowerCase();
-    ```
-=======
   ```js
   this.getBalance = function() {
     return this.balance;
   },
   ```
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * But these are all built-in methods of JavaScript. What if you wanted to make your own prototype methods?
 
-<<<<<<< HEAD
-  * In DevTools, let's create a constructor function named `Movie()`, which will take in two arguments, `title` and `releaseYear`, as shown in the following example:
-
-    ```js
-    function Movie(title, releaseYear) {
-      this.title = title;
-      this.releaseYear = releaseYear;
-    }
-    ```
-=======
   ```js
   this.deposit = function(value) {
   if (typeof value !== "number" || value <= 0) {
@@ -685,36 +669,21 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
   }
   var newBalance = this.getBalance() + value;
   ```
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * Create a movie using the constructor function, as follows:
 
-<<<<<<< HEAD
-    ```js
-    const superman = new Movie('Superman', 1978);
-    ```
-=======
   ```js
   this.setBalance(newBalance);
   this.updateStatement(newBalance);
   console.log(`Deposited ${value}!`);
   },
   ```
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * Let's say that we want to modify the `prototype` property of this constructor function by adding a method that will then be available on all object instances created from the constructor. This method, `logInfo()`, will log information about the movies in the console, as shown in the following example:
 
-<<<<<<< HEAD
-    ```js
-    Movie.prototype.logInfo = function () {
-      console.log(`${this.title} was released in ${this.releaseYear}`);
-    };
-    ```
-=======
   ```js
   var bank = new MiniBank(0);
   ```
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * To test it, call the method on the `superman` object, as shown in the following example:
 

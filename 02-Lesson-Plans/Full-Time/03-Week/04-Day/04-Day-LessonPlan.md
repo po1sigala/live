@@ -606,33 +606,15 @@ By the end of class, students will be able to:
 
   ## 🏆 Bonus
 
-<<<<<<< HEAD
-### 3. Partners Do: OpenWeather API Documentation (10 mins)
-
-* Next point students to the [OpenWeatherMap API Documentation](https://openweathermap.org/api).
-=======
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
   * What are query strings, and how are they used to create parameters for APIs?
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-<<<<<<< HEAD
-  * As partners, using the [OpenWeatherMap API Documentation](https://openweathermap.org/api), try to research answers to the following questions:
-    * How would you request the current weather for a city?
-
-    * How would you request the current weather for multiple cities?
-
-    * How would you request an hourly forecast from a city?
-
-* Let students know that their homework will use the OpenWeatherMap API Documentation
-
-### 4. Instructor Do: API and AJAX Slide Show (12 min)
-=======
 ### 15. Instructor Review: Deconstruct Parameters (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -654,7 +636,6 @@ By the end of class, students will be able to:
   * ✔️ `direction=desc`
 
 * Open `16-Stu_Deconstruct_Parameters/Solved/assets/js/script.js` in your IDE and explain the following: 
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * 🔑 We attached multiple parameters after `?` in the URL, as follows:
 
@@ -668,11 +649,7 @@ By the end of class, students will be able to:
     per_page=10
     ```
 
-<<<<<<< HEAD
-### 5. Students Do: The Weather in Bujumbura (15 min)
-=======
   * 🔑 We chain multiple parameters using the `&` symbol. The first chained parameter is `state`, setting the value to `open`&mdash;which will show us only `open` issues&mdash;as follows:
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
     ```js
     per_page=10&state=open
@@ -712,11 +689,7 @@ By the end of class, students will be able to:
 
 * Open `17-Ins_Fetch_Options/assets/js/script.js` in your IDE and demonstrate the following:
 
-<<<<<<< HEAD
-### 6. Instructor Do: Review Activity (5 min)
-=======
   * 🔑 We write the `fetch()` request, as follows:
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
     ```js
     fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
@@ -755,11 +728,7 @@ By the end of class, students will be able to:
 
   Work with a partner to implement the following user story:
 
-<<<<<<< HEAD
-### 7. Instructor Do: Working Movie App Demo (3 min)
-=======
   * As a developer, I want `fetch()` requests to reload the browser's cache.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   ## Acceptance Criteria
 
@@ -769,13 +738,9 @@ By the end of class, students will be able to:
 
   Refer to the documentation: 
 
-<<<<<<< HEAD
-### 8. Students Do: Movie App JSON Dump (10 min)
-=======
   [MDN Web Docs on using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
       
   ---
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   ## 💡 Hints
 
@@ -794,11 +759,7 @@ By the end of class, students will be able to:
 
 ### 18. Instructor Review: fetch() Options (10 min) 
 
-<<<<<<< HEAD
-### 9. Instructor Do: Review Activity (5 min)
-=======
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * ☝️ How comfortable do you feel with using `fetch()` options? (Poll via Fist to Five, Slack, or Zoom)
 
@@ -808,11 +769,7 @@ By the end of class, students will be able to:
 
   * ✔️ `fetch()` request
 
-<<<<<<< HEAD
-### 10. Students Do: Dynamic Movie Button Layout (25 min)
-=======
   * ✔️ `fetch()` option(s)
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * ✔️ `cache: reload`
 
@@ -846,19 +803,11 @@ By the end of class, students will be able to:
 
   * ☝️ How do we write `fetch()` options?
 
-<<<<<<< HEAD
-### 11. BREAK (30 min)
-=======
   * 🙋 With an `init` object that is passed as an additional argument in the `fetch()` request.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * ☝️ How do we know which `fetch()` options to use with the API?
 
-<<<<<<< HEAD
-### 12. Instructor Do: Review Activity (10 min)
-=======
   * 🙋 By reading the API's documentation.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -870,11 +819,7 @@ By the end of class, students will be able to:
 
 * Navigate to the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location), scroll down to Syntax, and explain the following:
 
-<<<<<<< HEAD
-### 13. Students Do: Log Movie JSON & Click JSON Data Attribute  (20 min)
-=======
   * 🔑 The `document.location` is a read-only property that returns a `Location` object.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * 🔑 This provides information on the URL of the document.
 
@@ -900,11 +845,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu__Document_Location/README.md`.
 
-<<<<<<< HEAD
-### 14. Instructor Do: Review Activity (10 min)
-=======
 ### 20. Student Do: Document Location (15 min) 
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
 * Direct students to the activity instructions found in `20-Stu__Document_Location/README.md`.
 
@@ -925,11 +866,7 @@ By the end of class, students will be able to:
 
   Refer to the documentation: 
 
-<<<<<<< HEAD
-### 15. Students Do: Complete Working Movie App (25 min)
-=======
   [MDN Web Docs on location.replace](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace)
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   ---
 
@@ -952,11 +889,7 @@ By the end of class, students will be able to:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-<<<<<<< HEAD
-### 16. Instructor Do: Review Activity (5 min)
-=======
   * ☝️ How comfortable do you feel with using the `Location` object? (Poll via Fist to Five, Slack, or Zoom)
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
@@ -966,11 +899,7 @@ By the end of class, students will be able to:
 
   * ✔️ Replacing `document.location`
 
-<<<<<<< HEAD
-### 17. Students Do: Bands In Town App (20 min)
-=======
   * ✔️ New `document.location`
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
 * Open `20-Stu__Document_Location/Solved/assets/js/script.js` in your IDE and explain the following: 
 
@@ -1010,11 +939,7 @@ By the end of class, students will be able to:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-<<<<<<< HEAD
-### 18. Instructor Do: Review Bands In Town App (5 min)
-=======
   * ☝️ What does the `document.replace` method do? 
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   * 🙋 The `document.replace` method replaces the current document with the URL that is passed as an argument.  
 
@@ -1022,19 +947,11 @@ By the end of class, students will be able to:
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location), and stick around for office hours to ask for help.
 
-<<<<<<< HEAD
-### 19. Students Do: Work on HW (25 min)
-=======
 * Answer any questions before proceeding.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
 ### 22. FLEX (30 mins)
 
-<<<<<<< HEAD
-### 20. END (0 mins)
-=======
 * This time can be utilized for reviewing key topics learned so far in this unit.
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
 * Answer any questions before ending the class.
 

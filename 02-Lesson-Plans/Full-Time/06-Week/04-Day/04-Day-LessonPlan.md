@@ -94,15 +94,11 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
 
 * With the MySQL package now installed, open up `iceCreamDBConnection.js` and explain each line of code:
 
-<<<<<<< HEAD
-  * The first line tells the application that the "mysql" package must be installed in order to run. 
-=======
 ```js
 const mysql = require("mysql");
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
   ```js
   const mysql = require('mysql');
@@ -120,17 +116,12 @@ const connection = mysql.createConnection({
     // Your MySQL username
     user: 'root',
 
-<<<<<<< HEAD
-    // Your MySQL password (leave blank for class demonstration purposes; fill in later)
-    password: '',
-=======
 ```js
 connection.connect((err) => {
   if(err) throw err;
   console.log(`connected as id ${connection.threadId}`);
 });
 ```
->>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 
     // Name of database
     database: 'ice_creamDB',

@@ -2,7 +2,7 @@
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `20-jQueryCalculator` in Unit 5 through `08-Stu_Parse_JSON` in Unit 6.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 5 through `08-Stu_Parse_JSON` in Unit 6.
 
 * Students will be using Fetch today to make requests to APIs. Take a few minutes before class to get familiar with the [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
@@ -16,22 +16,20 @@
 
 ### Learning Objectives
 
-  * Answer conceptual problems with visualization.
+By the end of class students will be able to
 
-  * Visualize and pseudocode problems and solutions
+* Explain the client-server model.
 
-  * Explain the client-server model.
+* Use `curl` to make a simple request to an API.
 
-  * Use `curl` to make a simple request to an API.
+* Explain the Fetch API and why we use it.
 
-  * Explain the Fetch API and why we use it.
+* Use JavaScript to render data obtained with `fetch()` on the page.
 
-  * Use JavaScript to render data obtained with `fetch()` on the page.
+* Explain the differences between Fetch, AJAX, and XHR. 
 
-  * Explain the differences between Fetch, AJAX, and XHR. 
+* Explain the structure of an API parameter.
 
-  * Explain the structure of an API parameter.
-  
 ## Slide Deck
 
 * [Unit 06 Slide Deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
@@ -40,11 +38,11 @@
 
 | Start  | #   | Activity Name                       | Duration |
 |---     |---  |---                                  |---       |
-| 10:00AM| 1   | Everyone Do: Continue Logic Building| 0:40     |
-| 10:40AM| 2   | Everyone Do: Refinement             | 0:25     |
-| 11:05AM| 3   | Instructor Do: Review Calculator    | 0:10     |
+| 10:00AM| 1   | Instructor Demo: Mini Project       | 0:05     |
+| 10:40AM| 2   | Student Do: Mini Project            | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini Project     | 0:10     |
 | 11:15AM| 4   | Introduce Homework                  | 0:05     |
-| 11:20AM| 5   | Review Unit 5                       | 0:30     |
+| 11:20AM| 5   | Flex                                | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity      | 0:10     |
 | 12:00PM| 7   | BREAK                               | 0:30     |
 | 12:30PM| 8   | Instructor Demo: curl Demo          | 0:05     |
@@ -63,85 +61,267 @@
 
 - - -
 
-### 1. Everyone Do: Continue Logic Building (40 mins)
+### 1. Instructor Demo: Mini Project (5 mins)
 
-* Welcome students to class.
+* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
 
-* Remind them that we will be continuing the jQuery calculator that we started in the last class.
+  * 🔑 We see a header with the title "Project Tracker" with the current time and date. On the left, we see instructions for adding a project to the project tracker.
 
-* Slack out the below objectives:
+  * 🔑 When we click Add Project, a modal pops up and we can add the information requested.
 
-* **Phase III Objectives**
+  * 🔑 Once we submit that form, we see the project listed in the table.
 
-  * For the next 40 minutes, your goals should be to:
+  * 🔑 When we click the "x", that project is deleted from the list. 
 
-    * Complete the functionality you are missing in your code.
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
 
-    * Spend a few moments really assessing what you still have to do.
+  * ☝️ How would we build this, working in groups of three to four?
 
-    * Get a TA/Instructor to help you set priorities if you are unsure as to how to proceed.
+  * 🙋 We will break up the different tasks amongst the group members and try to finish at least the first three tasks. We need to create an `index.html` file for the HTML and a `script.js` file for the JavaScript and jQuery. When in doubt, we can refer to the official documentation for Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts.
 
-### 2. Everyone Do: Refinement (25 mins)
+* Answer any questions before allowing students to start the mini-project.
 
-* Slack out the below objectives:
+### 2. Student Do: Mini Project (60 mins)
 
-* **Phase IV Objectives**
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
-  * For the last 25 minutes, your goals should be to:
+* Break your students into groups that will work together on this activity.
 
-    * Complete any remaining functionality in your calculator
+```md
 
-    * Handle bugs and edge cases (Example: What if a user tries to type in more numbers after getting the result? Will that mess up the screen?)
+# Mini-Project: Project Tracker
 
-    * Create code to "restart" the calculator after a user clicks "clear".
+In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts. Break up these phases amongst members of your team.
 
-### 3. Instructor Do: Review Calculator (10 mins)
+## Instructions
 
-* Because this application is pretty massive, the main focus during review is to help students understand **how** they should be re-examining the code on their own. Starting with the code blocks collapsed may help with clarity (as in the below image with the `.on` methods).
+This mini-project is divided into four tasks. The first three tasks will get you to MVP, so focus on those first!
 
-* Give students the high points. Emphasize the following:
+### Task 1: HTML Build
 
-  * We set a number of variables in the `initializeCalculator` function.
+1. Create a header/hero area that welcomes users to the application and displays the current time and date using Moment.js with `setInterval()`.
 
-  * We used JQuery to create separate on click listeners for numbers, operators, and equals.
+2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
 
-  * We used `this.value` in the callback function to determine what the value was for a given number or operator.
+3. The modal should contain a form asking users to fill in the following data:
 
-  * We created code that would change the HTML content using `.html`
+  * The name of the project
 
-  * We took numeric inputs for `firstNumber` **until** a user clicks an operator. Once a user clicks an operator, we changed the value of a boolean, called `isOperatorChosen`, and immediately began recording the `secondNumber`.
+  * The type of project (use a `<select>` drop-down)
 
-  * Once a user clicks the "equal" button, we used conditionals to check which operation they had clicked, then ran that operation on the two numbers.
+  * The hourly wage for the project
 
-* Encourage students to spend some time re-examining this code. Even if they don't yet feel comfortable creating it from scratch, let them know that it has a number of key code snippets that they may find useful at various points in the class.
+  * The due date for the project (use jQuery UI's datepicker with a minimum date setting in place)
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+4. Include a Bootstrap table that the project's information can be printed to with columns for the following data:
 
-* Open `05-Third-Party-APIs/02-Homework/Main/index.html` in your browser and demonstrate the following:
+  * Project name
 
-  * This unit's challenge is a "Work Day Scheduler". It allows us to enter tasks in hour-long increments over a 9AM to 5PM day. It also presents the user with the date and highlights the hour based on the users location.
+  * Project type
 
-  * If we enter a task in one of the hour rows, we can edit it later.
+  * Hourly wage
 
-  * If we click the corresponding "save" button, the task will be stored in `localStorage`. 
+  * Due date
+
+  * Days until the due date (use Moment.js to calculate)
+
+  * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
+
+While you build, remember the following guidelines:
+
+  * Ensure that any elements you need to interact with using JavaScript/jQuery are properly identified (e.g., form elements, the table body, etc.).
+
+  * Use different `<input>` element attributes to help enforce rules, like different `type` attribute values, minimum values, and required! See the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more guidance.
+
+  * When in doubt, read the Bootstrap documentation.
+
+---
+
+### Task 2: Capture Form Data
+
+1. Using jQuery, set up functionality to capture the form's input elements on submit and use that data to create a new table row on the page.
+
+2. Select and save references to every DOM element we will interact with to a variable (i.e., `var projectFormEl = $("#project-form");`) so that we can use these elements later.
+
+3. Attach a submit event listener to the `<form>` element using jQuery.
+
+4. On submission, capture the four input values from the form and pass them to another function to handle printing project data. Having one function that captures the data and another that prints the data to the page's `<table>` element will improve code readability.
+
+---
+
+### Task 3: Print Project Data to Page
+
+1. Create a function that will accept the four input fields' data as arguments.
+
+2. Create a table row (`<tr>`) element and save it to a variable.
+
+3. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
+
+4. For printing the days to the due date, use Moment.js to calculate the difference between the due date and the current time in days. 
+
+5. For printing the estimated total earned amount, assume that you work an eight-hour day. So multiply the hourly rate by 8 to get the daily rate, then multiply that value by how many days until the project is due to get the estimated total earned. 
+
+6. Append all `<td>` elements to the table row created, then append the entire row to the `<tbody>` element on the page.
+
+7. Don't forget to close the modal when done!
+
+---
+
+### Task 4: Delete a Project From the Table
+
+1. Update the table to accommodate one more column without a name.
+
+2. When generating a new `<tr>` for a project, add one more `<td>` that holds a button for deleting a project from the list.
+
+3. Use jQuery event delegation to attach an event listener to each of those buttons so that when clicked, the parent `<tr>` element will be removed from the page.
+```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 3. Instructor Review: Mini Project (10 mins)
+
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ Bootstrap modal
+
+  * ✔️ Capture form content
+
+  * ✔️ Moment.js time differences
+
+  * ✔️ jQuery event delegation
+
+* Open `28-Stu_Mini-Project/Solved/index.html` in your IDE and explain the following: 
+
+  * We don't have time to review every part of this mini-project; however, we will review the key points.
+
+  * 🔑 We can find the general code for the modal in the official documentation for Bootstrap modals. In the modal, we will put in a form. Notice the id for the input fields, shown in the following example:
+
+    ```js
+    <div class="form-group">
+      <label for="project-name-input">Project Name</label>
+      <input type="text" id="project-name-input" class="form-control" placeholder="Enter the project's name"
+        required />
+    </div>
+
+    <div class="form-group">
+      <label for="project-type-input">Project Type</label>
+      <select class="form-control" id="project-type-input">
+        <option selected disabled>Pick one...</option>
+        <option value="Web Application (Front End)">Web Application (Front End)</option>
+        <option value="Web Application (Back End)">Web Application (Back End)</option>
+        <option value="Web Application (Full Stack)">Web Application (Full Stack)</option>
+        <option value="Mobile Application">Mobile Application</option>
+        <option value="Print Campaign">Print Campaign</option>
+        <option value="Digital Marketing Campaign">Digital Marketing Campaign</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="hourly-rate-input">Hourly Rate ($)</label>
+      <input type="number" id="hourly-rate-input" class="form-control" placeholder="$" min="0" required />
+    </div>
+
+    <div class="form-group">
+      <label for="due-date-input">Due Date</label>
+      <input type="text" min='1' id="due-date-input" class="form-control" placeholder="When is the project due?"
+        required />
+    </div>
+    ```
+
+  * 🔑 We can see how we capture the form content by looking at the function for handling the form submit in `script.js`:
+
+    ```js
+    var projectNameInputEl = $('#project-name-input');
+    var projectTypeInputEl = $('#project-type-input');
+    var hourlyRateInputEl = $('#hourly-rate-input');
+    var dueDateInputEl = $('#due-date-input');
+
+    function handleProjectFormSubmit(event) {
+      event.preventDefault();
+
+      var projectName = projectNameInputEl.val().trim();
+      var projectType = projectTypeInputEl.val().trim();
+      var hourlyRate = hourlyRateInputEl.val().trim();
+      var dueDate = dueDateInputEl.val().trim();
+
+      printProjectData(projectName, projectType, hourlyRate, dueDate);
+
+      projectFormEl[0].reset();
+    }
+    ```
+
+  * 🔑 We use Moment.js to format the time and calculate the difference between now and the due date:
+
+    ```js
+    function displayTime() {
+      var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+      timeDisplayEl.text(rightNow);
+    }
+
+    var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
+    ```
+
+  * 🔑 And finally, in Task 4, when we delete a project from the table, we are attaching an event listener to a button for each `<tr>`. When it is clicked, that `<tr>` element will be removed from the page:
+
+    ```js
+    // In printProjectData()
+    var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
+
+    // Remove <tr> when button is clicked
+    function handleDeleteProject(event) {
+      console.log(event.target);
+      var btnClicked = $(event.target);
+      btnClicked.parent('tr').remove();
+    }
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What recently acquired skills will help us build this challenge?
+  * ☝️ How are we printing the time to the page every second in the header?
 
-  * 🙋 We can use Bootstrap for the layout and style; jQuery for the functionality; and Moment.js for the time stamp and highlights.
+  * 🙋 We are using `setInterval()` to call the function `displayTime()`, which uses Moment.js to format the current time and appends it to the page, every second. 
 
-  * ☝️ How are these skills relevant to a career in web development?
+  * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 Libraries and frameworks are widely used in both legacy and greenfield projects to leverage the work of others to quickly build, deploy and maintain our applications. 
-
-  * ☝️ How will this challenge improve your portfolio?
-
-  * 🙋 This challenge will demonstrate knowledge of Bootstrap, jQuery, and Moment.js, three commonly used third-party APIs.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) or the [Bootstrap documentation on components](https://getbootstrap.com/docs/4.5/components/modal/), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Review Unit 05 (30 mins)
+### 4. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * We see a daily planner with the current day displayed on top and a calendar with timeblocks.
+
+  * Each timeblock is color coded to indicate whether that hour is in the past, present, or future, according to the current time.
+
+  * When we click on a timeblock, we can add an event and press Save.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to use HTML and CSS powered by jQuery. We are also using Moment.js to work with the date and time.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 It is using HTML, CSS, and JavaScript skills, as well as the newly learned Moment.js library and Bootstrap.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 We are creating interactive webpages that are dynamically updated using JavaScript. We are also learning to use different libraries that enhance the quality of our web apps.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before ending the class.
+
+### 5. FLEX (30 mins)
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
