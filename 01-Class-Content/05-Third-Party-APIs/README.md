@@ -116,9 +116,5 @@ Here are some alternative date/time libraries you can look into:
 
   * [js-Joda](https://js-joda.github.io/js-joda/)
 
-<<<<<<< HEAD
----
-=======
 - - -
->>>>>>> a4526088dfba3d994ffda839717509ad1606506d
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

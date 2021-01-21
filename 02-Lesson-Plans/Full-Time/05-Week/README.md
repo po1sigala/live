@@ -110,12 +110,9 @@ Unit 10:
 
 * [Jest documentation](https://jestjs.io/docs/en/getting-started)
 
-<<<<<<< HEAD
-=======
 * [Method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/)
 
 * [git stash](https://www.git-scm.com/docs/git-stash)
 
 ---
->>>>>>> a4526088dfba3d994ffda839717509ad1606506d
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

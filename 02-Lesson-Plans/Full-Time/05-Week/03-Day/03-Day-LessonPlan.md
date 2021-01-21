@@ -1270,8 +1270,5 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-<<<<<<< HEAD
-=======
 ---
->>>>>>> a4526088dfba3d994ffda839717509ad1606506d
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
