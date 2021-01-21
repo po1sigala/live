@@ -8,6 +8,6 @@ As explained by [choosealicense.com](https://choosealicense.com/no-permission/),
 
 ---
 
-© 2019 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
 
 

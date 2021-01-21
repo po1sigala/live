@@ -2,10 +2,11 @@
 
 ## Your Task
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
+This week’s coursework will equip you with all the skills you need to succeed in this assignment.
 
 ## User Story
 
@@ -14,7 +15,6 @@ AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
-
 
 ## Acceptance Criteria
 
@@ -29,16 +29,14 @@ THEN time is subtracted from the clock
 WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
-THEN I can save my initials and score
+THEN I can save my initials and my score
 ```
-
 
 ## Mock-Up
 
 The following animation demonstrates the application functionality:
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
-
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
 ## Grading Requirements
 
@@ -46,7 +44,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria.
+* Satisfies all of the preceding acceptance criteria.
 
 ### Deployment: 32%
 
@@ -56,7 +54,7 @@ This homework is graded based on the following criteria:
 
 * Application GitHub URL submitted.
 
-* GitHub repository that contains application code.
+* GitHub repository contains application code.
 
 ### Application Quality: 15%
 
@@ -76,8 +74,7 @@ This homework is graded based on the following criteria:
 
 * Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
 
 ## Review
 
@@ -85,7 +82,12 @@ You are required to submit BOTH of the following for review:
 
 * The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
+---
+
+<<<<<<< HEAD
 - - -
+=======
+>>>>>>> a4526088dfba3d994ffda839717509ad1606506d
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

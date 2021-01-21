@@ -1,49 +1,80 @@
-# Unit 10: OOP
+# Unit 10 Instructor Overview: Object-Oriented Programming (OOP)
 
 ## Overview
 
-In this class we will be introducing students to the usage of JavaScript constructors, classes and the concept of TDD.
+In this unit, we will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-* Constructors and classes are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Try to 
+* Many students will benefit from more information about prototypal inheritance. Try to provide them with helpful supplementary resources, but avoid spending too much in-class time on the subject if some students seem to be struggling.
 
-* We will also spend a day this unit practicing TDD. Since students have limited exposure to testing, emphasize the importance and benefits of testing. Remind students that just like with other libraries syntax will fall into place over time.
+* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class. 
 
-## Heads Up
+* Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first. 
 
-Next unit, we will be diving into servers and Express. Spend as much time as you can making sure that students understand Node.js fundamentals. 
+* Similarly, do not feel discouraged if your students still do not understand the concept after you have explained it to them. Keep encouraging your students and reassuring them that they will understand it with time and practice. If you are comfortable doing so, you can share your own personal experiences learning and working with OOP.
 
-Many students will benefit from more information about prototypal inheritance. Try to provide these students with the resources they need to succeed, but avoid spending too much in-class time if you notice that it's discouraging to struggling students.
+* You will also spend a day practicing TDD. Familiarize yourself with Jest if you've never used it before. Students have limited exposure to testing, so emphasize the importance of it and the benefits. Remind students that they will eventually grasp the syntax, just like with other libraries.
+
+## Career Connection
+
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
+
+* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+
+## Heads-Up
+
+* In the next unit, we will explore the use of servers and Express.js on the back end of an application.
+
+* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [10.1 - Lesson Plan](01-Day_Intro-OOP/10.1-LESSON-PLAN.md)
+  * [10.1 Lesson Plan](./01-Day_Intro-OOP/10.1-LESSON-PLAN.md)
 
-  * [10.2 - Lesson Plan](02-Day_Constructors/10.2-LESSON-PLAN.md)
+  * [10.2 Lesson Plan](./02-Test_Driven_Development/10.2-LESSON-PLAN.md)
 
-  * [10.3 - Lesson Plan](03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
+  * [10.3 Lesson Plan](./03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
+
+### Homework
+
+  * [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework)
 
 ### Slide Decks
 
-  * [10.1 Intro to OOP Slide Deck](https://docs.google.com/presentation/d/1k9lO6jSIGGYNRDKULu6O1glKQzyvaPTIkRSRnIWbbqg/edit?usp=sharing)
+  * [Unit 10: Object-Oriented Programming](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
 
-### Time Tracker(s)
+### Algorithms
 
-  * [Unit 10-OOP Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1CNxSteNsyZNA2sdBtMe_skC5Ilaew-KHB8K4F8XysV0/edit?usp=sharing)
+  * [01: Linear Search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
 
-  * [Unit 10-OOP Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1JjwCYWyW_cclj4VaWPol4IVudyp4jNGR057ugv_0znQ/edit?usp=sharing)
+  * [02: Is Unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
 
-  * [Unit 10-OOP Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1YYa3rL0qrOfCHIho7RVov6xCN6p84Xl5Aos9TS8WRCE/edit?usp=sharing)
+  * [03: Is Anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram)
 
-## Algorithms
+    * 📹 [Let's Code Is Anagram!](https://2u-20.wistia.com/medias/8hnpk2wu29)
 
-  * [01-linear-search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
+### Resources
 
-  * [02-is-unique](../../../01-Class-Content/10-OOP/03-Algorithms/02-is-unique)
+  * [MDN Web Docs on Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) 
 
-  * [03-is-anagram](../../../01-Class-Content/10-OOP/03-Algorithms/03-is-anagram)
+  * [MDN Web Docs on Prototypes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
+
+  * [MDN Web Docs on Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+  * [MDN Web Docs on Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+  * [Jest documentation](https://jestjs.io/docs/en/getting-started)
+
+  * [Method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) 
+
+  * [git stash](https://www.git-scm.com/docs/git-stash) 
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
