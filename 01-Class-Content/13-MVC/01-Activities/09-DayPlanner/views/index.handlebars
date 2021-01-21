@@ -21,75 +21,107 @@
 <h2>Update a Plan</h2>
 <form id="updateplan" class="button-size">
   <select name="id">
-		{{#each plans}}
-			<option value="{{this.id}}">{{this.plan}}</option>
-		{{/each}}
-	</select>
+    {{#each plans}}
+    <option value="{{this.id}}">{{this.plan}}</option>
+    {{/each}}
+  </select>
   <textarea type="text" name="plan" placeholder="plan"></textarea>
   <button type="submit">Update Plan!</button>
 </form>
 
 <script type="text/javascript">
-  $(".delplan").on("click", function(event) {
-    // Get the ID from the button.
-    // This is shorthand for $(this).attr("data-planid")
-    var id = $(this).data("planid");
 
-    // Send the DELETE request.
-    $.ajax("/api/plans/" + id, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("deleted id ", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+  // DELETE
+  // Get the button
+  const deletePlanBtns = document.querySelectorAll('.delplan')
 
-  $("#createplan").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+  // Set up the event listeners for each delete button
+  deletePlanBtns.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.getAttribute('data-planid')
+      console.log("delete plan id", id)
 
-    // [name=plan] will find an element with a "name" attribute equal to the string "plan"
-    var newPlan = {
-      plan: $("#createplan [name=plan]").val().trim()
-    };
+      // Send the delete request
+      fetch(`/api/plans/${id}`, {
+        method: 'DELETE',
+      }).then(() => {
+        console.log(`Deleted ID: ${id}`)
 
-    // Send the POST request.
-    $.ajax("/api/plans", {
-      type: "POST",
-      data: newPlan
-    }).then(
-      function() {
-        console.log("created new plan");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+        // Reload the page
+        location.reload()
+      })
+    })
+  })
 
-  $("#updateplan").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+  // CREATE
+  const createPlanBtn = document.getElementById('createplan')
 
-    // Get the ID by finding an element with a "name" attribute equal to the string "id"
-    var id = $("[name=id]").val().trim();
+  // Set up the event listener for the create button
+  createPlanBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    var updatedPlan = {
-      plan: $("#updateplan [name=plan]").val().trim()
-    };
+    // Grabs the value of the textarea that goes by the name, "plan"
+    const newPlan = {
+      plan: document.getElementsByName('plan')[0].value.trim()
+    }
+    console.log(newPlan);
 
-    // Send the PUT request.
-    $.ajax("/api/plans/" + id, {
-      type: "PUT",
-      data: updatedPlan
-    }).then(
-      function() {
-        console.log("updated id ", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+    // Send POST request to create a new plan
+    fetch("/api/plans", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+
+      //make sure to serialize the JSON body
+      body: JSON.stringify(newPlan)
+    })
+      .then((response) => {
+        // Empty the form
+        document.getElementsByName('plan')[0].value = ''
+
+        // Reload the page so the user can see the new plan
+        console.log("Created a new plan!")
+        location.reload()
+      });
+  })
+
+  // UPDATE
+  const updatePlanBtn = document.getElementById('updateplan')
+
+  // Set up the event listener for the create button
+  updatePlanBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Grabs the id of the element that goes by the name, "id"
+    const id = document.getElementsByName('id')[0].value
+    const updatedPlan = {
+      plan: document.getElementsByName('plan')[1].value
+    }
+    console.log("updatedPlan", updatedPlan)
+
+    // Send POST request to create a new plan
+    fetch(`/api/plans/${id}`, {
+      method: "PUT",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+
+      //make sure to serialize the JSON body
+      body: JSON.stringify(updatedPlan)
+    })
+      .then((response) => {
+        // Check that the response is all good
+        // Reload the page so the user can see the new plan
+        if (response.ok) {
+          console.log(`Updated the plan with id: ${id}`)
+          location.reload()
+        } else {
+          alert('something went wrong!')
+        }
+      });
+  })
+
 </script>

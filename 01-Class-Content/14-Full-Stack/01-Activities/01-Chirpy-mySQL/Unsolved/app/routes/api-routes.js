@@ -4,17 +4,12 @@
 
 // Dependencies
 // =============================================================
-var connection = require("../config/connection.js");
-
+const connection = require('../config/connection.js');
 
 // Routes
 // =============================================================
-module.exports = function(app) {
-
+module.exports = (app) => {
   // Get all chirps
 
-
   // Add a chirp
-
-
 };

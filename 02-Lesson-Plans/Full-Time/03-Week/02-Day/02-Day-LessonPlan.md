@@ -1,4 +1,4 @@
-# 03.2 Lesson Plan - jQuery Jubilee (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
+# 03.2 Full-Time Lesson Plan - jQuery Jubilee (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
 
 ## Overview
 
@@ -8,13 +8,35 @@ In this class, we will further students' understanding of DOM Manipulation using
 
 ## Instructor Notes
 
-* Today's class is focused on providing students with additional exposure to jQuery for DOM manipulation. As an instructor, your primary focus is to ensure students understand the `10-CaptainPlanetGame` and the `11-FridgeGame`. If you are able to cover lexical scope in depth, consider that a significant bonus. Scope is important, but don't leave people in the dust when it comes to DOM manipulation.
+* Today's class is focused on providing students with additional exposure to jQuery for DOM manipulation. As an instructor, your primary focus is to ensure students understand the `11-FridgeGame`. If you are able to cover lexical scope in depth, consider that a significant bonus. Scope is important, but don't leave people in the dust when it comes to DOM manipulation.
+
+* Note we will skip `12-CrystalExample` in today's class.
+
+* Students will also have the opportunity to create a semi-complex jQuery applications in class. Students will work in teams of four using a paired-programming approach—i.e. one person types, the other two "bug check". This will force students to actively "bug-check" as their partners type out code. Every so often, you will ask teams to rotate the typist.
+
+* Because today is all about creating a large-scale application in class, use this opportunity to help small groups improve their JavaScript. Often in large-classes, it's hard to offer students the individual support they need to become fearless developers. Use this class day to help get them there.
+
+* Because the calculator build is more of a "challenge" activity, consider using the time to also help struggling students "catch-up" in class. As has been tested in other sites, a good way to accomplish this is to ask students at the start of the activity to message TAs if they are in need of 1:1 crash courses. These crash courses are each 20 minute sessions, in which 1 or 2 TAs work closely with the student _outside_ of the classroom on basic code tasks. It is up to the TAs + Instructors to create an outline of topics. These sessions might cover:
+
+  * Basic Variable assignment
+  * Creation of an Array
+  * Creation of a For Loop
+  * Creation of a For Loop that loops through an array
+  * Creation of a Function that prints a statement
+  * Creation of an Object
+  * Creation of an Object with a function associated
+  * jQuery on-click events associated with buttons
+  * Overall skeleton of an application (i.e. Variables, Functions, Function Calls)
+
+* The last activity of the day `20-jQueryCalculator` will continue into the next class.
 
 ## Learning Objectives
 
 * To use jQuery DOM manipulation to create simple games.
 
 * To gain an initial understanding of lexical scope in JavaScript.
+
+* Build a semi-complex jQuery calculator application in teams.
 
 ## Slides
 
@@ -27,6 +49,12 @@ In this class, we will further students' understanding of DOM Manipulation using
 - - -
 
 ### 1. Students Do: Fridge Game (30 min)
+
+* Welcome students to class and take the first few moments to offer students a few encouraging words. Word Guess was hard. HTML/CSS was hard. jQuery seems hard. Let them know that they've just completed the most challenging aspect of the course (Weeks 1-3 truly were)
+
+* Let them know that the first weeks are challenging because everything is so new. Also, let them know that they've reached a point where they've learned far more than they may be giving themselves credit for.
+
+* Remind them that one-on-ones during office hours are a great way to get caught up in the class.
 
 * Open the solution file `11-FridgeGame` in `11-FridgeGame/Solved`, and show students how the application works. In short, the application allows users to click on letters from a menu and have those letters appear on the fridge.
 
@@ -48,7 +76,7 @@ In this class, we will further students' understanding of DOM Manipulation using
 
   * Note: This is a challenging exercise. You may want one person to type, while the other two watch over to catch bugs and/or research necessary snippets.
 
-### 2. Instructor Do: Review Fridge Game (15 min)
+### 2. Instructor Do: Review Fridge Game (10 min)
 
 * Spend the time necessary to ensure that the majority of students have a conceptual understanding of how the Fridge Game's code works. In explaining the solution, point out the following:
 
@@ -96,7 +124,7 @@ In this class, we will further students' understanding of DOM Manipulation using
 
 * If students have further questions, refer them to the [MDN docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).  
 
-### 6. Students Do: Lexical Scope 2 (5 min)
+### 6. Students Do: Lexical Scope 2 (10 min)
 
 * Proceed with the next activity.
 
@@ -122,7 +150,7 @@ In this class, we will further students' understanding of DOM Manipulation using
 
   ![image-5](Images/3-scope-2.png)
 
-### 8. Students Do: Lexical Scope 3 (10 min)
+### 8. Students Do: Lexical Scope 3 (5 min)
 
 * Proceed with the next activity.
 
@@ -150,7 +178,7 @@ In this class, we will further students' understanding of DOM Manipulation using
 
 * Make sure they realize that studying these examples **is not** overly necessary.
 
-### 10. Everyone Do: Brain Teaser (15 min)
+### 10. Everyone Do: Brain Teaser (20 min)
 
 * If you have additional time available in class, proceed with this activity [16-ColorCorrector](../../../../01-Class-Content/05-Third-Party-APIs/01-Activities/16-ColorCorrector).
 
@@ -164,15 +192,19 @@ In this class, we will further students' understanding of DOM Manipulation using
 
 - - -
 
-
 ### 12. Instructor Do: Motivation + Pulse Check (10 mins) (High)
 
-* Then, get a gauge of students current understanding by doing a Fist to Five.
+* Get a gauge of students current understanding by doing a Fist to Five.
 
   * Students will raise their hands and show either a fist (don't understand at all) or five fingers (fully understand).
 
 * Then, take a few moments to either respond to the pulse-check -- or simply giving your students a pep talk. It may be a good time to offer students perspective on how quickly they are progressing or the fact that as first-time developers -- they don't need to know "everything". Be creative here. But don't skip this pep talk. Many of your students are likely still feeling pretty defeated because of JavaScript.
 
+<<<<<<< HEAD
+=======
+* **Important Note:** This would also be a good time to let students know that an entire class day will be devoted to reviewing old JavaScript activities thoroughly at the end of the week.
+
+>>>>>>> c49247dba96cf559abec5076064d89253a25b3d7
 * Let students know that the first half of the class will be a series of activities that build on their working knowledge of JavaScript scope. The second half (the more important one) will be focused on building a calculator using jQuery.
 
 ### 13. Partners Do: Scope Quiz (10 mins)
@@ -333,10 +365,13 @@ In this class, we will further students' understanding of DOM Manipulation using
 
     * Create code that checks which operator the user has clicked, then saves this operator for later use in a conditional statement. (Example: If a user clicks the "plus" button, you know you will need to be adding two numbers. If a user clicks the "minus" button, you will need to be subtracting two numbers. Think: if-else statements!)
 
+* Let students know we will finish this activity in the next class.
+
 ### 22. End
 
 ### Lesson Plan Feedback
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

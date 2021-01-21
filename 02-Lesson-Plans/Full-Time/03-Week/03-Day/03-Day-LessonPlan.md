@@ -1,52 +1,73 @@
-# 03.3 Lesson Plan - Intro to APIs and AJAX (10:00 AM) <!--links--> &nbsp; [⬅️](../02-Day/02-Day-LessonPlan.md) &nbsp; [➡️](../04-Day/04-Day-LessonPlan.md)
+# 03.3 Full-Time Lesson Plan: Server-side APIs
 
 ## Instructor Notes
 
-* Before this class starts, tell your students to bring a pen and a notebook--they'll need it to pseudocode their work. Sure, they can do so on their computers, but having a separate medium to record their thought process will amplify the importance of high-level thinking.
+* In this lesson, students will complete activities `20-jQueryCalculator` in Unit 5 through `08-Stu_Parse_JSON` in Unit 6.
 
-* **Absolutely** go over the interview questions listed in this lesson plan. You need to be an expert on these exercises since they're going to stump a lot of your class. Make sure they don’t stump you, too!
+* Students will be using Fetch today to make requests to APIs. Take a few minutes before class to get familiar with the [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-* Expect that students will not be able to solve every problem. This is fine: it’s much more important that they at least attempt to solve it with visualization and pseudocode: how they would program a solution to the exercise if they had the time and know-how.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
 
-* Students will begin using AJAX to pull data from popular data sources. However, expect students to still only have a weak handle on JavaScript objects. Use the beginning of class to fill in any conceptual holes they may have. Spend the time necessary to get them feeling more confident breaking into a JavaScript object and retrieving specific fields.
+* GitHub's API is the only one we will make requests to, so familiarize yourself with the [GitHub documentation on the REST API](https://docs.github.com/en/rest). Students will rely heavily on it in class and might need help finding answers.
 
-* Before class, create an account at [RapidAPI](https://rapidapi.com/).
+* Students will need to refer frequently to the GitHub documentation, so be sure to have the link on hand just in case.
 
-* This week's Giphy activities will require students to use an API key from [Giphy API](https://developers.giphy.com/). Please have them create an account and apply for a key before class starts in order to have it approved and activated in time for the activity.
+* This is students' first exposure to server-side APIs.
 
-* **Extra Resources:** Send out the following link during class and encourage students to practice with the [Whiteboarding Overview and Questions](https://coding-bootcamp-whiteboarding-algorithms.readthedocs-hosted.com/en/latest/). This was given with the course pre-work but now is the time where a lot of it will start clicking for students since learning JavaScript.
-
-### Class Objectives
+### Learning Objectives
 
   * Answer conceptual problems with visualization.
 
   * Visualize and pseudocode problems and solutions
 
-  * Introduce the concept and utility of APIs and JSON in web applications
+  * Explain the client-server model.
 
-  * Use a variety of APIs and the process for building endpoint URLs to utilize them
+  * Use `curl` to make a simple request to an API.
 
-## Slides
+  * Explain the Fetch API and why we use it.
 
-N/A
+  * Use JavaScript to render data obtained with `fetch()` on the page.
+
+  * Explain the differences between Fetch, AJAX, and XHR. 
+
+  * Explain the structure of an API parameter.
+  
+## Slide Deck
+
+* [Unit 06 Slide Deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
 ## Time Tracker
 
-[3.3 Time Tracker](https://drive.google.com/open?id=1OlaJokSTSUfgy84NSb6JW2rGCvZT9Lyj)
+| Start  | #   | Activity Name                       | Duration |
+|---     |---  |---                                  |---       |
+| 10:00AM| 1   | Everyone Do: Continue Logic Building| 0:40     |
+| 10:40AM| 2   | Everyone Do: Refinement             | 0:25     |
+| 11:05AM| 3   | Instructor Do: Review Calculator    | 0:10     |
+| 11:15AM| 4   | Introduce Homework                  | 0:05     |
+| 11:20AM| 5   | Review Unit 5                       | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity      | 0:10     |
+| 12:00PM| 7   | BREAK                               | 0:30     |
+| 12:30PM| 8   | Instructor Demo: curl Demo          | 0:05     |
+| 12:35PM| 9   | Student Do: curl Debug              | 0:15     |
+| 12:50PM| 10  | Instructor Review: curl Debug       | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Create Fetch       | 0:05     |
+| 1:05PM | 12  | Student Do: Create Fetch            | 0:15     |
+| 1:20PM | 13  | Instructor Review: Create Fetch     | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Different APIs     | 0:05     |
+| 1:35PM | 15  | Student Do: Reverse APIs            | 0:15     |
+| 1:50PM | 16  | Instructor Review: Reverse APIs     | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Parse JSON         | 0:05     |
+| 2:05PM | 18  | Student Do: Parse JSON              | 0:15     |
+| 2:20PM | 19  | Instructor Review: Parse JSON       | 0:10     |
+| 2:30PM | 20  | END                                 | 0:00     |
 
 - - -
 
-### Class Objectives
+### 1. Everyone Do: Continue Logic Building (40 mins)
 
-* To introduce the concept and utility of APIs and JSON in web applications
-* To be exposed to a variety of APIs and the process for building endpoint URLs to utilize them
-* To work with the OMDb to build data-rich applications.
-* To complete the More JavaScript and jQuery Checkpoint
+* Welcome students to class.
 
-- - -
-
-
-### 12. Everyone Do: Continue Logic Building (45 mins)
+* Remind them that we will be continuing the jQuery calculator that we started in the last class.
 
 * Slack out the below objectives:
 
@@ -60,7 +81,7 @@ N/A
 
     * Get a TA/Instructor to help you set priorities if you are unsure as to how to proceed.
 
-### 13. Everyone Do: Refinement (25 mins)
+### 2. Everyone Do: Refinement (25 mins)
 
 * Slack out the below objectives:
 
@@ -74,7 +95,7 @@ N/A
 
     * Create code to "restart" the calculator after a user clicks "clear".
 
-### 14. Instructor Do: Review Calculator (10 mins)
+### 3. Instructor Do: Review Calculator (10 mins)
 
 * Because this application is pretty massive, the main focus during review is to help students understand **how** they should be re-examining the code on their own. Starting with the code blocks collapsed may help with clarity (as in the below image with the `.on` methods).
 
@@ -94,235 +115,741 @@ N/A
 
 * Encourage students to spend some time re-examining this code. Even if they don't yet feel comfortable creating it from scratch, let them know that it has a number of key code snippets that they may find useful at various points in the class.
 
-### Review Unit 05 (40 mins)
+### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Take a moment to answer lingering questions about the mini project. Once you have answered all questions, proceed to do a review on jQuery.
+* Open `05-Third-Party-APIs/02-Homework/Main/index.html` in your browser and demonstrate the following:
 
-* If there are any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
+  * This unit's challenge is a "Work Day Scheduler". It allows us to enter tasks in hour-long increments over a 9AM to 5PM day. It also presents the user with the date and highlights the hour based on the users location.
 
-* Ask the class the following question(s) and use their answers to drive the review:
+  * If we enter a task in one of the hour rows, we can edit it later.
 
-  * ☝️ Are there any activities you thought were challenging and would like to spend more time going over?
+  * If we click the corresponding "save" button, the task will be stored in `localStorage`. 
 
-- - -
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 5. BREAK (30 mins)
+  * ☝️ What recently acquired skills will help us build this challenge?
 
-- - -
+  * 🙋 We can use Bootstrap for the layout and style; jQuery for the functionality; and Moment.js for the time stamp and highlights.
 
-### 6. Students Do: CustomerObject Parsing (5 mins)
+  * ☝️ How are these skills relevant to a career in web development?
 
-* Welcome Students to class and let students know that we will begin with a warm-up activity.
+  * 🙋 Libraries and frameworks are widely used in both legacy and greenfield projects to leverage the work of others to quickly build, deploy and maintain our applications. 
 
-* Slack out the following files and instructions.
+  * ☝️ How will this challenge improve your portfolio?
 
-* **Folder**
+  * 🙋 This challenge will demonstrate knowledge of Bootstrap, jQuery, and Moment.js, three commonly used third-party APIs.
 
-  * [01-CustomerObject/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/01-CustomerObject/Unsolved)
+* Answer any questions before proceeding to the next activity.
 
-* **Instructions**
+### 5. Review Unit 05 (30 mins)
 
-  * Using the instructions shown in the comments, create `console.log` statements that parse out the requested information.
+* This time can be utilized for reviewing key topics learned so far in this unit.
 
-  * Help those around you if you finish early.
+* If there were any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
 
-### 7. Instructor Do: Review CustomerObject Parsing (5 mins)
+* Ask the class if there is anything they would like to review before moving on to Unit 6.
 
-* Either live-code the solution yourself or open and demonstrate[01-CustomerObject/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/01-CustomerObject/Solved/customer-object-solution.html).
+### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* While going over the solution, ask students why phoneNumber required an index parameter but first and last name did not.
+* Open the Unit 6 [slide deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-![1-CustomerObject](Images/1-CustomerObject.png)
+  * **Server-Side APIs**
 
-* Continue to ask questions to students to confirm their comfort with the material.
+    * This unit is all about server-side APIs, which are APIs that help us more on the data side of applications than the functional side.
 
-* Then let students know that working with JavaScript Objects like this is incredibly important in web development as we will use them to transmit data repeatedly.
+  * **The Big Picture**
 
-### 8. Students Do: Install JSON Formatter (5 mins)
+    * Take a moment to have your class pause and reflect on where they are in the course as a whole. We are nearing the end of Phase 1, where they’ve learned many different foundational topics. 
 
-* Next point students to the following link: [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa/related?hl=en) and have them install the Chrome extension.
+  * **Boot Camp Pointers**
 
-* Let them know that this will format JSON in the browser.
+    * Students are routinely challenged during class and homework assignments. Remind them that they’re not alone through the grind! Ask them to rely on their support systems more readily as they start reaching the second phase of the program. 
 
-![2-JSONFormatter](Images/2-JSONFormatter.png)
+  * **This Week: Server-Side APIs**
 
-### 9. Instructor Do: New York Times Scraper Demo (10 mins)
+    * Walk through the learning objectives for the week with your class. These are the things they should expect to know by the end of the unit. 
 
-* Next, go to the following link: [NYT Scraper](http://nyt-mongo-scraper.herokuapp.com/).
+  * **This Week's Assignment**
 
-* Briefly explain that the application's `Scrape New Articles!` button retrieves new articles from the New York Times and loads them onto the page. Every article loaded onto the page has a "Save" button. 
+    * Use the assignment description from the unit overview to talk through the different requirements and how they align with the concepts learned throughout the module.
 
-![3-NYTScraper](Images/3-NYTScraper.png)
+  * **Career Connection**
 
-* Next, visit the following link: [NYT Scraper API](http://nyt-mongo-scraper.herokuapp.com/api/headlines) to show students that "beneath the hood" the application is storing each headline as an entry in a JavaScript Object. Just like with the CustomerObject example, this JavaScript is holding a mix of various data types to store information such as the article's id, headline, summary, date, and whether it is saved or not.
+    * Use this slide to speak to you students will use the unit’s content in their careers going forward. It will help provide much-needed context. For many developers, server-side APIs are an integral piece of their day-to-day functions. Take a moment to talk about how you may have used them at work. 
 
-![4-NYTScraperHeadlines](Images/4-NYTScraperHeadlines.png)
+    * Remember that students will also be using dynamically created HTML and CSS in their homework assignment this week, so you can feel free to talk about that as well. 
 
-* Let them know that this approach of using JavaScript Objects as a data transmission method is a very common one.
+  * **Where do web applications live?**
 
-* Then share both links to students.
+    * Web applications live on servers.
 
-### 10. Everyone Do: NYT Scraper Review (5 mins)
+    * Web servers are typically nothing more than specialized computers running software with the specific task of waiting for an internet request to come in and ask for data in return. 
 
-* Give students a few moments to look at the NYT Scraper Application and the headlines API endpoint.
+  * **How are these requests made?**
 
-* Encourage them to ask questions about this. If none are offered, have one or two students explain conceptually how the application works.
+    * On the web, data is transferred over **HTTP**, or **Hypertext Transfer Protocol**. HTTP is a set of rules and regulations for how data can be requested by a client and how a server can respond to that request.
 
-### 11. Students Do: API Research Questions (10 mins)
+    * Across all internet-connected devices, we constantly make HTTP requests to web servers for different types of data, like the following:
+    
+      * Visiting deployed applications at `<username>.github.io`.
 
-* Next slack out the following instructions to students:
+      * A phone or watch automatically updating the weather forecast.
 
-* **Instructions:**
+      * Using a media-streaming service.
 
-  * For the next few moments, research amongst yourselves the answers to the following questions:
+      * Using HTML `<link>` and `<script>` tags to incorporate Bootstrap, jQuery, or any other third-party API into an application. 
 
-    1. What is an API?
-    2. What does API stand for?
-    3. What are some examples of APIs? (Find links to specific APIs)
-    4. What do these specific APIs allow you as a developer to do?
+  * **Can we use data from other servers in an application?**
 
-### 12. Everyone Do: Review API Research Questions (5 mins)
+    * Yes, we can! Just as we’ve used third-party APIs to make an application's functionality and design easier to maintain, we can use specific functionality to request data over HTTP and use that data in an application. This data usually comes in the form of a special type of JavaScript object known as **JSON** (JavaScript Object Notation).
 
-* Have students share their answers to these questions.
+    * With this data, we can do any of the following in an application:  
+    
+      * Retrieve weather data to display in an application.
+      
+      * Use Google Maps to help create a trip itinerary.
+      
+      * Manage Spotify or YouTube playlists.
+      
+      * Control lights, alarms, and other devices.
+      
+      * And much, much more!
 
-### 13. Instructor Do: API Definitions (5 mins)
+  * **How can we learn to use and implement these types of APIs?**
 
-* Then offer your definition of an API. You can use the following if you like:
+    * Like other APIs we’ve used in the past, the implementation of server-side APIs depends on what solution that API provides. Some are very simple, while others are complex and powerful, so it’s up to us to determine which parts to use, if any.
 
-  > APIs stand for Application Programming Interfaces. They provide a way for creating user code that utilizes other pre-built code to do various tasks. It can be used to quickly retrieve data from another person's database, to utilize someone elses more complex functionality (like maps), or to control other hardware and software.
+    * You can try the following strategies to learn more about specific APIs:
 
-* Briefly talk about why APIs are created. Talk about how you save time not having to create your code. Give a few examples of websites that use other companies' APIs.
+      * Read the official documentation and practice with the provided examples.
+      
+      * Reverse-engineer finished code to see how something was accomplished.
+      
+      * Build something from scratch and debug it using the Chrome DevTools.
+      
+      * Ask questions!
 
-  * AirBNB uses Google's API for maps [AirBNB](https://www.airbnb.com/s?s_tag=_s84SXqA)
-  * Google Searches for Weather uses the Weather API [Weather Search](https://www.google.com/?gws_rd=ssl#q=weather+new+brunswick)
-  * Even jQuery is an API [jQuery](https://jquery.com/)
+* Navigate to `27-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-* Point out that there are millions of APIs in existence.
+  * The mini-project for this unit will use everything we've learned so far to build a search application that retrieves data from the Library of Congress.
 
-* Point out that JSON (JavaScript Object Notation) is a common format for sending data between APIs. Use the word JSON, so students hear/understand it.
+  * We can search for something by filling out the form and selecting the form's submit button.
 
-* Encourage questions at this point!
+  * On form submission, we are directed to a second page, where search results appear.
 
-* Don't worry if your explanations are pretty high-level at this point, in the next class you will re-explain the concepts in more detail.
+  * We can also conduct more detailed searches by submitting the form again with a format selected.
 
-### 14. Instructor Do: API Experimenting (10 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Navigate to this URL: [Numbers](https://rapidapi.com/divad12/api/numbers-1). Explain to students that the Numbers API will take a string of numbers in various formats and return a fact regarding the input.
+  * ☝️ Where does this data come from?
 
-* Then navigate to this URL: [Face++](https://www.faceplusplus.com/face-detection/). Grab a photo of a student in your class who wears glasses via LinkedIn or something and paste the image URL into the application. Explain that the response JSON is intended to analyze "sentiment" based on the image. Values closer to 100 indicate greater likelihood. Have fun with this!
+  * 🙋 It comes from a network request for data from the Library of Congress API.
 
-![5-FaceFace](Images/5-Face.png)
+  * ☝️ What are we learning?
 
-* If you'd like, you can also show off [PokeAPI](https://pokeapi.co/). This API takes parameters and can return almost any data you would want about Pokemon. Explain this is just a fun and
- quick showing of API consumption, and there are far more practical APIs out there for what they may want to create.
+  * 🙋 How to request data from server-side APIs to build data-driven applications.
 
-### 15. Students Do: API Experimenting (10 mins)
+  * ☝️ How does this project build off or extend previously learned material?
 
-* Next, have students experiment on their own with new APIs. Slack out the following instructions:
+  * 🙋 We will need to put all of our knowledge in HTML, CSS, JavaScript, and APIs to use!
 
-* **Instructions:**
+  * ☝️ How does this project relate to your career goals?
 
-  * Using the [RapidAPI library](https://rapidapi.com/) as a starting point experiment with a few APIs of your own.
+  * 🙋 Most large applications rely on data coming from a server, whether from a third-party service or from another server within the organization. There's no running from server-side APIs once you enter the professional development world!
 
-  * Note: You will need to create an account on RapidAPI first.
+* Answer any questions before proceeding.
 
-  * Note: Use the "free" filter, as some APIs require an subscription.
+### 7. BREAK (30 mins)
 
-  * Note: Not all of the APIs are easy to use, just keep experimenting!  
+### 8. Instructor Demo: curl Demo (5 min)
+  
+* Open your command line, type `curl https://api.github.com/users`, and demonstrate the following:
 
-### 16. Instructor Do: OMDb API Demo (10 mins)
+  * GitHub returned a list of the last 30 users who made a profile!
 
-* Present the following question. So if all this data exists in the world and we have JSON being created, how do we access the data?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋).
 
-* Navigate to the [OMDb API](http://www.omdbapi.com/) and explain that this API provides a database of information on nearly every movie in existence.
+  * ☝️ What happened when I entered the `curl` command to GitHub?
 
-* Scroll through the basic documentation and point out that in this API, we "build" URLs that point to JSONs associated with various movies. Point out that the parameters allow us to filter results. Inform students that the OMDb API is no longer a free API and requires an API key which we will provide for them to use.
+  * 🙋 We asked GitHub for user information via the command line.
 
-![6-OMDbAPI](Images/6-OMDbAPI.png)
+  * ☝️ What is the **root endpoint** in the preceding URL?
 
-* Then use Example GUI to generate a URL for a movie of your choice.
+  * 🙋 `https://api.github.com`
 
-![7-OMDbAPIResopnse](Images/7-OMDbAPIResopnse.png)
+  * ☝ What is the **path** that gives us `users`?
 
-* Then visit the link that gets generated, and show students the JSON that was generated. Be sure to add the following `apikey` parameter to the generated URL: `trilogy`. Example: <http://www.omdbapi.com/?t=Space+Jam&apikey=trilogy>
+  * 🙋 `/users`
 
-![8-OMDbJSON](Images/8-OMDbJSON.png)
+  * ☝️ What is a good use case for `curl`?
 
-* Ask students if they have any questions.
+  * 🙋 We can use it to quickly confirm that an API URL is correct or working, without the need for JavaScript.
 
-### 17. Partners Do: OMDb API Exploration (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Have students explore the OMDb API themselves.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Curl_Debug/README.md`.
 
-* Slack out the following instructions to students:
+### 9. Student Do: curl Debug (15 min)
 
-* **Instructions:**
+* Direct students to the activity instructions found in `02-Stu_Curl_Debug/README.md`.
 
-  * Go to the [OMDb API](http://www.omdbapi.com/) then use the documentation to try to answer the following:
+* Break your students into pairs that will work together on this activity.
 
-    * Without using the user interface, how would I query the OMDB API to get all of the information related to the movie: Frozen?
+    ```md
+    # 🐛 curl Command to GitHub API Doesn't Work
 
-    * Hint: you will have to build a URL of your own with the search parameters listed.
+    Work with a partner to resolve the following issue(s):
 
-    * Note: The OMDb API now requires an API key. Here is your key: `trilogy`
+    * As a developer, I want to use `curl` to verify a connection to the GitHub API.
 
-### 18. Everyone Do: OMDb API URLs (10 mins)
+    ## Expected Behavior
 
-* Using this <http://www.omdbapi.com/?t=Forrest+Gump&y=&plot=short&apikey=trilogy> as an example, have students break down the URL.
+    When the command `curl http://api.github.com` is run from the command line, the output includes the following data:
 
-* Be sure to have them explain each parameter listed (i.e. the `?t`, the `+`, the `&`, `apikey=`, etc).
+      ```json
+      {
+        "current_user_url": "https://api.github.com/user",
+        "current_user_authorizations_html_url": "https://github.com/settings/connections/applications{/client_id}",
+        "authorizations_url": "https://api.github.com/authorizations",
+        "code_search_url": "https://api.github.com/search/code?q={query}{&page,per_page,sort,order}",
+        "commit_search_url": "https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}",
+        "emails_url": "https://api.github.com/user/emails",
+        "emojis_url": "https://api.github.com/emojis",
+        "events_url": "https://api.github.com/events",
+        "feeds_url": "https://api.github.com/feeds",
+        "followers_url": "https://api.github.com/user/followers",
+        "following_url": "https://api.github.com/user/following{/target}",
+        "gists_url": "https://api.github.com/gists{/gist_id}",
+        "hub_url": "https://api.github.com/hub",
+        "issue_search_url": "https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}",
+        "issues_url": "https://api.github.com/issues",
+        "keys_url": "https://api.github.com/user/keys",
+        "label_search_url": "https://api.github.com/search/labels?q={query}&repository_id={repository_id}{&page,per_page}",
+        "notifications_url": "https://api.github.com/notifications",
+        "organization_url": "https://api.github.com/orgs/{org}",
+        "organization_repositories_url": "https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}",
+        "organization_teams_url": "https://api.github.com/orgs/{org}/teams",
+        "public_gists_url": "https://api.github.com/gists/public",
+        "rate_limit_url": "https://api.github.com/rate_limit",
+        "repository_url": "https://api.github.com/repos/{owner}/{repo}",
+        "repository_search_url": "https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}",
+        "current_user_repositories_url": "https://api.github.com/user/repos{?type,page,per_page,sort}",
+        "starred_url": "https://api.github.com/user/starred{/owner}{/repo}",
+        "starred_gists_url": "https://api.github.com/gists/starred",
+        "user_url": "https://api.github.com/users/{user}",
+        "user_organizations_url": "https://api.github.com/user/orgs",
+        "user_repositories_url": "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}",
+        "user_search_url": "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
+      }
+      ```
 
-* Then ask students how they would show multiple movies that meet a condition? (i.e. how would you get all movies with the word `Matrix` in it). SOLUTION: Use the `/s` format: <http://www.omdbapi.com/?s=Matrix&y=&plot=short&apikey=trilogy>
+    ## Actual Behavior
 
-### 19. Instructor Do: AJAX Query Demo (10 mins)
+    The command `curl http://api.github.com` does not print any data to the command line.
 
-* Now open up your editor and create an AJAX call to OMDb using the below code as an example. (Alternatively, you can use [02-Ajax_OMDB/single-ajax.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/02-Ajax_OMDB/single-ajax.html). If making your own AJAX call, however, be sure to include a few console logs after the AJAX call to demonstrate asynchronicity. See `single-ajax.html` for details.
+    ## Steps to Reproduce the Problem
 
-![9-AJAX](Images/9-AJAX.png)
+    1. Open a command-line window.
 
-* Be sure to point out the various parts of the AJAX call:
-  * The `queryURL` which points to the JSON
-  * The `GET` method which tells JavaScript to download the JSON
-  * The `then` function which tells JavaScript to run the code inside ONLY when done with the download
-  * Most importantly that all of the data is being stored in the `response` object-2.9
-  * Lastly, in your Chrome inspector, point out how all the code past line 26 happens before the results of our API call are logged. Even though that happens first lexically.
+    2. Type `curl http://api.github.com`.
 
-* Ask students why they think the `.then` function is necessary? Why does the code after the AJAX request happen before the API results are logged?
+    3. Press the Enter key.
 
-* After a minute or two of discussion, explain to students that JavaScript is synchronous in nature. The code is executed one line at a time.
-  * This makes the language easier to pick up initially, as code executes in the order one might expect.
+    ---
 
-  * But what if our API call takes a few seconds to come back? What if it takes a minute? Ten minutes? An hour?
-    * While we won't be waiting on a request for TOO long, it does pose a problem when we have other code that needs to run no matter what the API response is. Just waiting for the API call to complete to execute other unrelated code isn't very efficient and doesn't provide a good user experience. So JavaScript can BEHAVE asynchronously through the use of callback functions and promises.
+    ## 💡 Hints
 
-  * We have already seen asynchronous behavior through callbacks with setTimeout and setInterval. We pass setTimeout and setInterval callback functions to execute whenever they're ready, WHENEVER that may be.
+    How might the official GitHub API documentation shed light on what the problem could be?
 
-  * Promises are similar. The .then function is an example of a promise. This is essentially a function that "promises" to be executed at some point. In this case, whenever our data comes back from the API. We describe what we want to happen by passing a callback function as a parameter into our promise.
+    ## 🏆 Bonus
 
-  * In short, because the AJAX request takes a certain amount of time, our code after AJAX call executes in the meantime. Remember, AJAX stands for ASYNCHRONOUS JavaScript and XML.
+    If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Run the code and show the results in the console.
+      * If you wanted to save your `curl` response text to a file, how would you do so?
 
-![10-SpaceJamJson](Images/10-SpaceJamJson.png)
+    Use [Google](https://www.google.com) or another search engine to research this.
+    ```
 
-* Add a second AJAX call to another movie. (Alternatively you can use [02-Ajax_OMDB/multiple-ajax.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/02-Ajax_OMDB/multiple-ajax.html).
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Open the floor to questions.
+### 9. Instructor Review: curl Debug (10 min)
 
-* Slack out the code you just created.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 20. Everyone Do: Logging JSON (10 mins)
+  * ☝️ How comfortable do you feel with `curl`? (Poll via Fist to Five, Slack, or Zoom)
 
-* Ask students how they might parse out and retrieve the movie's runtime or actors list in response? (Show the JSON on the side).
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-![11-SpaceJamRuntime](Images/11-SpaceJamRuntime.png)
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-* After you complete this, end class for the day.
+  * ✔️ Typos preventing responses
 
-### 21. END (0 mins)
+* Open the [GitHub documentation on REST endpoints](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint) and explain the following:
 
-### Lesson Plan Feedback
+  * 🔑  Simple typos will prevent requests from hitting the proper endpoint, yielding no results. In the following example, when we examine the URL, we can see that it is using `http` instead of `https`:
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+    ```bash
+    curl http://api.github.com
+    ```
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What would we reference to know whether the API URL is correct?
+
+  * 🙋 The API documentation.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [GitHub documentation on REST endpoints](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#root-endpoint), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 10. Instructor Demo: Create Fetch (5 min)
+
+* Open `03-Ins_Demo-Fetch/index.html` in your browser and demonstrate the following:
+
+  * 🔑 When we press the Click Me button, a list of Node.js GitHub repositories appears.
+  
+* Open `03-Ins_Demo-Fetch/assets/js/script.js` in your IDE and demonstrate the following:
+  
+  * We set the request URL to a variable. This is the URL that the `fetch()` method will use to request data. The path we are making a request to here is `/orgs/nodejs/repos`, as shown in the following code:
+
+    ```js
+    var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+    ```
+
+  * 🔑 We pass the `requestUrl` variable as an argument to the `fetch()` method, as shown in the following example:
+
+    ```js
+    fetch(requestUrl)
+    ```
+
+  * 🔑 We then convert the response into JSON and return the formatted response, as follows:
+
+    ```js
+    .then(function (response) {
+      return response.json();
+    })
+    ```
+
+    * **JSON** stands for **JavaScript Object Notation**. It is nothing more than the use of simple JavaScript objects to exchange data between the client and server. This makes the data easier to read and understand.
+
+  * The preceding code should return the following response:
+
+      ```json
+      {
+        "firstName": "Lashawn",
+        "lastName": "Williams",
+        "age": 40,
+        "email":"lashawnwilliams@example.com"
+      }
+      ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What do we need to pass through `fetch()` to get an API to send back data?
+
+  * 🙋 We need a proper endpoint, as provided by the documentation.
+
+  * ☝️ How is a request like this useful?
+
+  * 🙋 It allows developers to quickly access all the data of a particular GitHub organization or consume all the data from any available endpoint.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Create-Fetch/README.md`.
+
+### 11. Student Do: Create Fetch (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Create-Fetch/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement a fetch() Request to Display User Repositories
+
+  Work with a partner to implement the following user story:
+
+    * As a user, I want to see a list of my GitHub repositories.
+
+  ## Acceptance Criteria
+
+    * It's done when I click the "Fetch Your User Repos" button, and a list of my GitHub repositories displays on the page.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The web page shows a user's GitHub repositories when the button is selected.](./Images/01-solution-screenshot.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * How can we use the [GitHub API documentation on repositories](https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user) to support this implementation?
+
+  * Where in the URL string is the repository endpoint added?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * In `fetch()` requests we use the URL. What is the difference between a URL and URI? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 12. Instructor Review: Create Fetch (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel creating a Fetch request? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Root endpoint + path  = endpoint
+
+  * ✔️ `/users/octocat/repos`
+
+* Open `04-Stu_Create-Fetch/Solved/assets/js/script.js` in your IDE and explain the following:
+
+  * We create a function called `getApi`, as follows:
+
+    ```js
+    function getApi() {
+    ```
+
+  * 🔑 We save the full endpoint we would like to make a request to in a variable called `requestUrl`, replacing `octocat` with the username we want to search, as shown in the following example:
+
+    ```js
+    var requestUrl = 'https://api.github.com/users/octocat/repos';
+    ```
+
+  * We then pass the `requestUrl` variable as an argument to the `fetch()` method, like in the following code:
+
+    ```js
+    fetch(requestUrl)
+    ```
+
+  * We convert the response into JSON. Lastly, we `return` the JSON-formatted response, as follows:
+
+    ```js
+    .then(function (response) {
+      return response.json();
+    })
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we build the `requestURL`?
+
+  * 🙋 We attach the desired endpoint to the root endpoint.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [GitHub documentation on REST](https://docs.github.com/en/rest), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 13. Instructor Demo: Different APIs (5 min)
+
+* Open `05-Ins_Different_APIs/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * There is more than one way to request data from a server-side API.
+    
+  * 🔑 An `XMLHttpRequest`, or XHR for short, was the predecessor to `fetch()`. XHR requests involve much more code than a simple `fetch()`, as shown in the following code: 
+
+    ```js
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        console.log('XMLHttpRequest Response \n-------------');
+        console.log(xhr.response);
+      }
+    };
+    xhr.open('GET', requestUrl);
+    xhr.send();
+    ```
+
+  * 🔑 AJAX is another alternative to the Fetch API. AJAX requests require the use of the third-party library jQuery to work, as shown in the following example:
+  
+    ```js
+    $.ajax({
+      url: requestUrl,
+      method: 'GET',
+    }).then(function (response) {
+      console.log('Ajax Reponse \n-------------');
+      console.log(response);
+    });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why are we only using `fetch()` if there are all these other options?
+
+  * 🙋 `fetch()` is simple and fast, and it requires no third-party libraries&mdash;enabling us to get up and running quickly!
+
+  * ☝️ How do we learn about these different methods of making API requests?
+
+  * 🙋 We can read their documentation.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Reverse_APIs/README.md`.
+
+### 14. Student Do: Reverse API Calls (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Reverse_APIs/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Different Request Methods
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved/assets/js/script.js](./Unsolved/assets/js/script.js).
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Whenever we do a `fetch()` request, it goes through the DNS system. What is DNS?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 15. Instructor Review: Reverse API Calls (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with API calls? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Different API calls
+
+  * ✔️ XHR
+
+  * ✔️ AJAX
+
+* Open `06-Stu_Reverse_APIs/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 With XHR, we first check whether `xhr.readyState` equals `XMLHttpRequest.DONE`, as follows:
+
+    ```js
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+    ```
+
+  * 🔑 When the preceding condition is met, we log the XHR response, as shown in the following example:
+
+    ```js
+      console.log('XMLHttpRequest Response \n-------------');
+      .log(xhr.response);
+    }
+    ```
+
+  * 🔑 XHR initializes the API call with `.open` and sends the request with `.send`, like in the following code:
+
+    ```js
+    xhr.open('GET', requestUrl);
+    xhr.send();
+    ```
+
+  * 🔑 jQuery uses `.ajax` to send the request to the API. On completion, the response is returned, as shown in the following example:
+
+    ```js
+    $.ajax({
+      url: requestUrl,
+      method: 'GET',
+    }).then(function (response) {
+      console.log('Ajax Response \n-------------');
+      console.log(response);
+    });
+    ```
+
+  * 🔑 AJAX and `fetch()` are structured similarly but do not function exactly the same. `fetch()` would try to resolve the response with a 404 or 500 error, while AJAX would not, as shown in the following example:
+
+    ```js
+    fetch(requestUrl)
+        .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log('Fetch Response \n-------------');
+        console.log(data);
+    });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between AJAX and `fetch()`?
+
+  * 🙋 `fetch()` will try to resolve the data even if there is a 404 or 500 error, and it is built into the browser.
+
+  * ☝️ What can we do if we are working with an API method we aren't familiar with?
+
+  * 🙋 Look up that method's documentation.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [jQuery documentation on AJAX](https://api.jquery.com/category/ajax/) or the [MDN Web Docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Parse JSON (5 min)
+
+* Open `07-Ins_Demo_Parse/index.html` in your browser to the console. Expand the array under GitHub Organization Users, and demonstrate the following:
+
+  * 🔑 We need to examine the API response to know how to access the data we want to extract.
+
+  * 🔑 The response we receive is an array, meaning that we can loop through the data, accessing whatever specific data we want, as shown in the following code:
+
+    ```js
+    fetch('https://api.github.com/orgs/nodejs/repos')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        console.log(data[i].name);
+      }
+    });
+    ```
+  
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we iterate over an array of data?
+
+  * 🙋 We can use a `for` loop, just like always!
+
+  * ☝️ What should we do before we use the data from an API response?
+
+  * 🙋 We should examine the data so that we know which values we want from it.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Parse_JSON/README.md`.
+
+### 17. Student Do: Parse JSON (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Parse_JSON/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Implement a `fetch()` Request to Log Repository Issues
+
+  Work with a partner to implement the following user story:
+
+    * As a developer, I want to log issues from Twitter's Chill repository.
+
+  ## Acceptance Criteria
+
+    * It's done when I open Chrome DevTools, and five issues from the Chill repository are logged in the console.
+
+    * It's done when the issue's URL and username are logged in the DevTools console.
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [GitHub API documentation on listing repository issues](https://docs.github.com/en/rest/reference/issues#list-repository-issues)
+
+  ---
+
+  ## 💡 Hints
+
+  How do you add parameters to an API endpoint URL?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * We connect to these API servers through DNS, but they are attached to an IP address. How does this work?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 18. Instructor Review: Parse JSON (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with reading documentation? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Response limits
+
+  * ✔️ Parameters dictate responses
+
+  * ✔️ Documentation for parameters
+
+* Navigate to the [GitHub documentation on listing repository issues](https://docs.github.com/en/rest/reference/issues#list-repository-issues), and explain the following:
+
+  * Scroll to the parameters list. We can use the `per_page` parameter to limit the amount of data that comes back in the response.
+
+* Open [script.js](./Solved/assets/js/script.js) in your IDE and explain the following: 
+
+  * 🔑 We add the `per_page` parameter to the end of the `requestUrl` variable and set the parameter to `5`, as follows:
+
+    ```js
+    var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
+    ```
+
+  * 🔑 We pass the completed `requestUrl` variable as an argument to the `fetch()`. On completion of the request, we convert the response to JSON in the return, like in the following code:
+
+    ```js
+    fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    ```
+
+  * 🔑 We loop through the data and console log the properties from the API response. We use dot notation on the `data` iterator, logging the `.url` and `.user.login` properties, as follows:
+
+    ```js
+    .then(function (data) {
+        for (var i = 0; i < data.length; i++) {
+            .log('Github Repo Issues \n----------');
+            console.log(data[i].url);
+            console.log(data[i].user.login);
+        }
+    });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where are parameters added to an endpoint?
+
+  * 🙋 They are normally chained on the end of the endpoint URL.
+
+  * ☝️ Where do we find a list of parameters for a given endpoint?
+
+  * 🙋 It can almost always be found on the documentation page.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [GitHub documentation on the REST API](https://docs.github.com/en/rest), and stick around for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

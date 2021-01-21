@@ -41,6 +41,7 @@ If you'd like more information on Career Services, visit the [Career Services re
   * [08.2 - Lesson Plan](02-Day/08.2-LESSON-PLAN.md)
 
   * [08.3 - Lesson Plan](03-Day/08.3-LESSON-PLAN.md)
+<<<<<<< HEAD
 
 ### Slide Decks
 
@@ -49,3 +50,5 @@ N/A
 ### Time Tracker(s)
 
 N/A
+=======
+>>>>>>> c49247dba96cf559abec5076064d89253a25b3d7

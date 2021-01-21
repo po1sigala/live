@@ -142,13 +142,27 @@ Students will be diving into the basics of Handlebars today, a semantic templati
 
 * Open up the `04-HandlebarsLunch` folder once more in order to show your class how this folder system is constructed.
 
-![Handlebars expects to find views and layouts directories in specific locations.](Images/8-handlebars-folder-structure.png)
+```sh
+.
+├── package-lock.json
+├── package.json
+├── server.js
+└── views
+    ├── all-lunches.handlebars
+    ├── index.handlebars
+    └── layouts
+        └── main.handlebars
+```
 
 _Handlebars expects to find the views and layouts directories in specific locations._
 
 * Open up `04-HandlebarsLunch/server.js` and direct them to `app.engine`.
 
-  ![app.engine](Images/appEngine.png)
+```js
+// Set Handlebars as the default templating engine.
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+```
 
   * Our first argument tells Express that our templating engine is going to be responsible for all files with the `handlebars` extension.
 
@@ -156,7 +170,9 @@ _Handlebars expects to find the views and layouts directories in specific locati
 
 * Move onto the next line, `app.set`.
 
-  ![app.set](Images/appSet.png)
+  ```js
+  app.set('view engine', 'handlebars');
+  ```
 
   * The first argument here lets express know we are setting our view engine. The next argument sets that view engine as `handlebars`.
 
@@ -164,7 +180,17 @@ _Handlebars expects to find the views and layouts directories in specific locati
 
 * Start by showing your class how `04-HandlebarsLunch/views/layouts/main.handlebars` contains the declaration of our HTML and only seems to contain one Handlebars element in the form of `{{{ body }}}`. Explain how the usage of triple curly-brackets tells your program to read and render HTML elements while double curly-brackets will not.
 
-![Our main layout contains a single Handlebars variable to interpolate.](Images/8-layout-main.png)
+```hbs
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lunches</title>
+	</head>
+	<body>
+		{{{ body }}}
+	</body>
+</html>
+```
 
 _Our main layout contains a single Handlebars variable to interpolate._
 
@@ -190,7 +216,15 @@ _Our main layout contains a single Handlebars variable to interpolate._
 
 * The `{{#each}}` helper within Handlebars is essentially a for-loop which loops through an array and inserts the values of said array into your HTML code. It will do this for however many variables are contained within your array and will append your HTML instead of replacing it.
 
-![Handlebars each blocks are analogous to for loops.](Images/10-handlebars-each.png)
+```hbs
+<h1>Lunches for {{eater}}</h1>
+
+<ul>
+  {{#each foods }}
+    <li>{{lunch}}</li>
+  {{/each}}
+</ul>
+```
 
 _Handlebars each blocks are analogous to for loops._
 
@@ -203,16 +237,22 @@ _Handlebars each blocks are analogous to for loops._
 * **Instructions**
 
   * In this activity, you are going to be creating your own Ben and Jerry's App where users can see all of the different flavors Ben and Jerry's have to offer while also getting specific information on a flavor by searching for it within the URL.
-    ```
-    var icecreams = [
-      {name: 'vanilla', price: 10, awesomeness: 3},
-      {name: 'chocolate', price: 4, awesomeness: 8},
-      {name: 'banana', price: 1, awesomeness: 1},
-      {name: 'greentea', price: 5, awesomeness: 7},
-      {name: 'jawbreakers', price: 6, awesomeness: 2},
+
+
+    ```js
+    // Data
+    const icecreams = [
+      { name: 'vanilla', price: 10, awesomeness: 3 },
+      { name: 'chocolate', price: 4, awesomeness: 8 },
+      { name: 'banana', price: 1, awesomeness: 1 },
+      { name: 'greentea', price: 5, awesomeness: 7 },
+      { name: 'jawbreakers', price: 6, awesomeness: 2 },
+      { name: 'pistachio', price: 11, awesomeness: 15 },
     ];
+
+    exports.icecreams = icecreams;
     ```
-  * Do not use MySQL for this assignment! Use the `icecreams` variable above as your data. Add the variable to your `server.js` file.
+  * Do not use MySQL for this assignment! Use the `icecreams.js` exported object above as your data. Import the variable to your `server.js` file.
 
   * Using handlebars and express, create a route called `/icecreams/:name`. When the route is hit, it will display the name, price and awesomeness for that specific ice cream.
 
