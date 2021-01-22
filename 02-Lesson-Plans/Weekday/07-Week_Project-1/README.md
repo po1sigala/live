@@ -16,7 +16,7 @@ Some students may complain about group configurations, be sure to remind them of
 
 Make sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
 
-## Heads Up
+## Heads-Up
 
 Next unit, in addition to project work, we will spend a day practicing whiteboard interview questions. Even though the lesson plans are lighter, be sure to review them and spend some time familiarizing yourself with the algorithms. 
 
