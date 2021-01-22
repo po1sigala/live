@@ -41,3 +41,6 @@ This section contains links to the unit's lesson plans, homework, slide decks, a
 * [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
 * [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
