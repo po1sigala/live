@@ -1,4 +1,4 @@
-# Unit 01-02: HTML-Git-Advanced-CSS
+# Unit 01-02: HTML-Git and Advanced-CSS
 
 ## Overview
 
