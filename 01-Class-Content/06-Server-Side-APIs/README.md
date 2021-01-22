@@ -20,7 +20,7 @@ We'll cover the following topics in this unit:
 
 * [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-* [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 * [cURL](https://curl.se/docs/httpscripting.html)
 
