@@ -34,4 +34,4 @@ Project presentations are on the third day of next unit. Remember, students must
 
 ### Slide Decks
 
-  * [07.1: Project unit](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
+  * [Unit 07: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
