@@ -20,21 +20,21 @@ The following topics will be covered in this unit:
 
 * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-* [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+  * [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
 
 * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+  * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-* [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+  * [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-* [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+  * [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
 
-* [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+  * [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
-* [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  * [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
-* [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+  * [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ## Learning Objectives
 
@@ -70,7 +70,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* [Technical Assessment](https://docs.google.com/forms/d/e/1FAIpQLSc7uLZOO2tysVZT6OBM9nJrbxR0qs2ZDAPrathAw3SkYgNhmA/viewform)
+* [Unit 01 Technical Interview Questions](https://docs.google.com/forms/d/e/1FAIpQLSc7uLZOO2tysVZT6OBM9nJrbxR0qs2ZDAPrathAw3SkYgNhmA/viewform)
 
 ## Homework
 
@@ -102,7 +102,7 @@ Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
+  * 📖 Blog Post: [Getting Started with Git](@TODO Add link when blog post is published)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
