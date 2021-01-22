@@ -1,4 +1,4 @@
-## 04.3 - Project 1 (10:00 AM) 
+# 04.3 Full-Time Lesson Plan: Project 1 
 
 ## Overview
 
@@ -10,33 +10,33 @@ Students work in groups on their first project.
 
 * You will assume the role of 'scrum master' and hold standing meetings with each group. The purpose of these scrums is to: 
 
-    1. Gauge progress on projects
-    
-    2. Course correct if scope creeps or focus shifts
-    
-    3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
+  1. Gauge progress on projects
 
-* To keep the standing meetings short, require that students physically stand up. Ask each student the following questions: 
+  2. Course correct if scope creeps or focus shifts
 
-  * What did you accomplish? 
+  3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade.
 
-  * What are your goals? 
+* To keep the standing meetings short, require that students physically stand up. Ask each student the following questions:
 
-  * Are there any obstacles? 
+  * What did you accomplish?
 
-* Prioritize meeting with any groups that have not yet identified a project idea, drafted a user story, or created a wireframe. These are your at-risk groups. 
+  * What are your goals?
+
+  * Are there any obstacles?
 
 ## Learning Objectives
 
-* Design and build projects.
-
-## Slides
-
-N/A
+* Design, execute and deploy a collaborative project. 
 
 ## Time Tracker
 
-N/A
+| Start   | #   | Activity Name                       |Duration|
+|---      |---  |---                                  |---     |
+| 10:00AM | 1   | Instructor Do: Welcome              |  0:05  |
+| 10:05AM | 2   | Student Do: Project Work            |  1:55  |
+| 12:00PM | 3   | BREAK                               |  0:30  |
+| 12:30PM | 4   | Student Do: Continue Project Work   |  2:30  |
+| 2:30PM  | 5   | END                                 |  0:00  |
 
 ---
 
@@ -44,12 +44,21 @@ N/A
 
 ### 1. Instructor Do: Welcome (5 min)
 
-* Welcome students to class. 
+* Welcome students to class.
 
 ### 2. Student Do: Project Work
 
-### Lesson Plan Feedback
+* Direct students to continue to work with their groups on their projects.
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+### 3. BREAK (30 min)
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+### 4. Student Do: Continue Project Work
+
+* Direct students to continue to work with their groups on their projects.
+
+### 5. END
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

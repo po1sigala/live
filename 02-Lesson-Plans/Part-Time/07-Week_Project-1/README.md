@@ -11,7 +11,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 Some students may complain about group configurations, be sure to remind them of the following:
 
   * In the real-world, you don't get to choose your co-workers.
-  
+
   * Working collaboratively is an important skill to acquire as a developer.
 
 Make sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
