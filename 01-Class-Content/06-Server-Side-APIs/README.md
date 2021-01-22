@@ -10,23 +10,21 @@ In this unit, we'll use the `fetch()` method to make requests, parse through the
 
 We'll cover the following topics in this unit:
 
-* [MDN Web Docs on Client-Server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
+* [Client-Server model](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
 
-* [MDN Web Docs on JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+* [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-* [MDN Web Docs on URLs](https://developer.mozilla.org/en-US/docs/Web/API/URL)
+* [URLs](https://developer.mozilla.org/en-US/docs/Web/API/URL)
 
-* [MDN Web Docs on HTTP Get](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
+* [HTTP GET method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
 
-* [MDN Web Docs on HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+* [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-* [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-* [Docs on cURL](https://curl.se/docs/httpscripting.html)
+* [cURL](https://curl.se/docs/httpscripting.html)
 
-* [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
-
-* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+* [Location API](https://developer.mozilla.org/en-US/docs/Web/API/Location)
 
 ## Learning Objectives
 
