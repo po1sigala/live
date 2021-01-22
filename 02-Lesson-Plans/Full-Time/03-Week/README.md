@@ -66,7 +66,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-* [03.1: jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
+* [Unit 05: Third-Party APIsk](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
 
 * [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
 
