@@ -1,4 +1,4 @@
-# 04.4 - Project 1 (10:00 AM)
+# 04.4 Full-Time Lesson Plan: Project 1 
 
 ## Overview
 
@@ -8,21 +8,21 @@ Students work in groups on their first project.
 
 * No classroom instruction today. 
 
-* You will assume the role of 'scrum master' and hold standing meetings with each group. The purpose of these scrums is to: 
+* You will assume the role of 'scrum master' and hold standing meetings with each group. The purpose of these scrums is to:
 
-    1. Gauge progress on projects
-    
-    2. Course correct if scope creeps or focus shifts
-    
-    3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
-    
-* To keep the standing meetings short, require that students physically stand up. Ask each student the following questions: 
+  1. Gauge progress on projects
+  
+  2. Course correct if scope creeps or focus shifts
+  
+  3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade.
 
-    * What did you accomplish? 
+* To keep the standing meetings short, require that students physically stand up. Ask each student the following questions:
 
-    * What are your goals? 
+  * What did you accomplish?
 
-    * Are there any obstacles? 
+  * What are your goals?
+
+  * Are there any obstacles?
 
 * Prioritize working with groups that may be at risk of failure, i.e: unable to deploy a functional application. 
 
@@ -32,18 +32,17 @@ Students work in groups on their first project.
 
 ## Learning Objectives
 
-* Design, build, and deploy a client-side web application using GitHub Pages
-
-
-## Slides
-
-N/A
-
+* Design, execute and deploy a collaborative project. 
 
 ## Time Tracker
 
-N/A
-
+| Start   | #   | Activity Name                       |Duration|
+|---      |---  |---                                  |---     |
+| 10:00AM | 1   | Instructor Do: Welcome              |  0:05  |
+| 10:05AM | 2   | Student Do: Project Work            |  1:55  |
+| 12:00PM | 3   | BREAK                               |  0:30  |
+| 12:30PM | 4   | Student Do: Continue Project Work   |  2:30  |
+| 2:30PM  | 5   | END                                 |  0:00  |
 
 ---
 
@@ -51,21 +50,21 @@ N/A
 
 ### 1. Instructor Do: Welcome (5 min)
 
-* Welcome students to class. 
+* Welcome students to class.
 
 ### 2. Student Do: Project Work
 
+* Direct students to continue to work with their groups on their projects.
 
-### 3. Heads Up
+### 3. BREAK (30 min)
 
-* In the next unit, students will start using Node.js. 
+### 4. Student Do: Continue Project Work
 
-* Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs). 
+* Direct students to continue to work with their groups on their projects.
 
-* Advise the students to have Node.js installed before the next unit. 
+### 5. END
 
-### Lesson Plan Feedback
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
