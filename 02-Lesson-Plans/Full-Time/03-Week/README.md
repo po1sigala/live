@@ -1,4 +1,4 @@
-# Week 03: Third-Party-APIs & Server-side APIs
+# Week 03: Third-Party-APIs and Server-side APIs
 
 ## Overview
 
@@ -66,11 +66,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-* [03.1: jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
-
-* [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
-
-* [03.3: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+* [Unit 05: Third-Party APIsk](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
+* [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
 ### Algorithms
 
@@ -121,3 +118,6 @@ Unit 06:
 * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
 
 * [OpenWeather API documentation](https://openweathermap.org/api)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

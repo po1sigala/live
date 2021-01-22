@@ -44,7 +44,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * [06.1: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+  * [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
 ### Algorithms
 
@@ -73,4 +73,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [OpenWeather API documentation](https://openweathermap.org/api)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
