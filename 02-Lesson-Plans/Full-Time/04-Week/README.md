@@ -50,7 +50,7 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ### Slide Decks
 
-* Unit 07: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
+* [Unit 07: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
 
 ### Resources
 
@@ -59,4 +59,3 @@ If you'd like more information on Career Services, visit the [Career Services re
 * [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
 * [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
-
