@@ -94,7 +94,9 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
 * [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
-* [OpenWeather API documentation](https://openweathermap.org/api)
+* 📖 [OpenWeather API documentation](https://openweathermap.org/api)
+
+* 📖 [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
