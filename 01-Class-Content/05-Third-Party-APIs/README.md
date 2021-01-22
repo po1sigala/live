@@ -108,13 +108,13 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
 Here are some alternative date/time libraries you can look into:
 
-  * [Luxon](https://moment.github.io/luxon/)
+  * 📖 [Luxon](https://moment.github.io/luxon/)
 
-  * [Day.js](https://day.js.org/)
+  * 📖 [Day.js](https://day.js.org/)
 
-  * [date-fns](https://date-fns.org/)
+  * 📖 [date-fns](https://date-fns.org/)
 
-  * [js-Joda](https://js-joda.github.io/js-joda/)
+  * 📖 [js-Joda](https://js-joda.github.io/js-joda/)
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
