@@ -92,7 +92,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
 
   * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide/README.md) 
 
