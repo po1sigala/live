@@ -1,4 +1,4 @@
-# Week 03: Third-Party-APIs & Server-side APIs
+# Week 03: Third-Party-APIs and Server-side APIs
 
 ## Overview
 
