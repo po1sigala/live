@@ -18,7 +18,7 @@ The code in [Unsolved/example.js](Unsolved/example.js) does not pass most rules 
 
 2. From the command line, run `npm install` in the [Unsolved](./Unsolved) folder.
 
-3. Open [Unsolved/example.js](Unsolved/example.js) in your code editor. If you completed the previous steps correctly, you should see red annotations under different parts of the code. Hovering over each one displays a popover that lists an ESLint rule being broken.
+3. Open [Unsolved/example.js](Unsolved/example.js) in your code editor. On the status bar that is on the bottom of the code editor, towards the right, find ESLINT in red.  Click on ESLINT, and a popup should appear.  Click on allow anwhere.  If you completed the previous steps correctly, you should see red annotations under different parts of the code. Hovering over each one displays a popover that lists an ESLint rule being broken.
 
     * Alternatively, you can run `npm run test` to get a list of code styling errors and where they occur.
 
