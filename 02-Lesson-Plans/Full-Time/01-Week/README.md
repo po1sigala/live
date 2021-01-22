@@ -74,7 +74,7 @@ Next unit we will also provide students with common problems they will see in in
 
 * [Unit 01-HTML-Git-CSS Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/17iJQJG14grX0Mj9RAvdFQR5sBv5PgHMhe0VdwNyEF0E/edit?usp=sharing)
 
-* Remaining Time Trackers are at top of Lesson Plans.
+* The remaining Time Trackers are at the top of Lesson Plans.
 
 ### Resources
 
