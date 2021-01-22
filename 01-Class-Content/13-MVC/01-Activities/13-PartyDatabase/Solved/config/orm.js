@@ -1,38 +1,42 @@
-var connection = require("./connection.js");
+const connection = require('./connection.js');
 
-var orm = {
-  select: function(whatToSelect, tableInput) {
-    var queryString = "SELECT ?? FROM ??";
-    connection.query(queryString, [whatToSelect, tableInput], function(err, result) {
+const orm = {
+  select(whatToSelect, tableInput) {
+    const queryString = 'SELECT ?? FROM ??';
+    connection.query(queryString, [whatToSelect, tableInput], (err, result) => {
       if (err) throw err;
       console.log(result);
     });
   },
-  selectWhere: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-
+  selectWhere(tableInput, colToSearch, valOfCol) {
+    const queryString = 'SELECT * FROM ?? WHERE ?? = ?';
     console.log(queryString);
 
-    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
-      if (err) throw err;
-      console.log(result);
-    });
+    connection.query(
+      queryString,
+      [tableInput, colToSearch, valOfCol],
+      (err, result) => {
+        if (err) throw err;
+        console.log(result);
+      }
+    );
   },
-  leftJoin: function(whatToSelect, tableOne, tableTwo, onTableOneCol, onTableTwoCol) {
-    var queryString = "SELECT ?? FROM ?? AS tOne";
-    queryString += " LEFT JOIN ?? AS tTwo";
-    queryString += " ON tOne.?? = tTwo.??";
+  leftJoin(whatToSelect, tableOne, tableTwo, onTableOneCol, onTableTwoCol) {
+    let queryString = 'SELECT ?? FROM ?? AS tOne';
+    queryString += ' LEFT JOIN ?? AS tTwo';
+    queryString += ' ON tOne.?? = tTwo.??';
 
     console.log(queryString);
 
-    connection.query(queryString, [whatToSelect, tableOne, tableTwo, onTableOneCol, onTableTwoCol], function(
-      err,
-      result
-    ) {
-      if (err) throw err;
-      console.log(result);
-    });
-  }
+    connection.query(
+      queryString,
+      [whatToSelect, tableOne, tableTwo, onTableOneCol, onTableTwoCol],
+      (err, result) => {
+        if (err) throw err;
+        console.log(result);
+      }
+    );
+  },
 };
 
 module.exports = orm;

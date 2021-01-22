@@ -9,8 +9,6 @@
   <!-- Bootstrap CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
@@ -45,7 +43,7 @@
           <div class="card-body">
             <input type="text" id="book-search" class="form-control">
             <br>
-            <div class="text-center">
+            <div class="text-right">
               <button class="btn btn-primary btn-md" id="search-btn">
                 <span class="fa fa-search"></span> Search</button>
             </div>
@@ -59,7 +57,7 @@
           <div class="card-body">
             <input type="text" id="author-search" class="form-control">
             <br>
-            <div class="text-center">
+            <div class="text-right">
               <button class="btn btn-primary btn-md" id="author-search-btn">
                 <span class="fa fa-search"></span> Search</button>
             </div>
@@ -73,7 +71,7 @@
           <div class="card-body">
             <input type="text" id="genre-search" class="form-control">
             <br>
-            <div class="text-center">
+            <div class="text-right">
               <button class="btn btn-primary btn-md" id="genre-search-btn">
                 <span class="fa fa-search"></span> Search</button>
             </div>
@@ -85,11 +83,11 @@
             Book Search Results
           </div>
           <div class="card-body">
-            <div class="well" id="stats">
-              <h2 id="title"></h2>
+            <div class="well" id="stats" style="display: none">
+              <h2 id="title">Books:</h2>
               <div>
                 <h6>
-                  <strong>Author:</strong>
+                  <strong>Written by </strong>
                   <span id="author"></span>
                 </h6>
                 <h6>

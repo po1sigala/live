@@ -1,98 +1,109 @@
 // Dependencies
-var express = require("express");
-var mysql = require("mysql");
+const express = require('express');
+const mysql = require('mysql');
 
 // Create instance of express app.
-var app = express();
+const app = express();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // MySQL DB Connection Information (remember to change this with our specific credentials)
-var connection = mysql.createConnection({
-  host: "localhost",
+const connection = mysql.createConnection({
+  host: 'localhost',
   port: 3306,
-  user: "root",
-  password: "",
-  database: "seinfeld"
+  user: 'root',
+  // Be sure to update with your own MySQL password!
+  password: '',
+  database: 'seinfeld',
 });
 
 // Initiate MySQL Connection.
-connection.connect(function(err) {
+connection.connect((err) => {
   if (err) {
-    console.error("error connecting: " + err.stack);
+    console.error(`error connecting: ${err.stack}`);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+  console.log(`connected as id ${connection.threadId}`);
 });
 
 // Routes
-app.get("/cast", function(req, res) {
-  connection.query("SELECT * FROM actors ORDER BY id", function(err, result) {
+app.get('/cast', (req, res) => {
+  connection.query('SELECT * FROM actors ORDER BY id', (err, result) => {
     if (err) throw err;
-    
-    var html = "<h1>Actors Ordered BY ID</h1>";
 
-    html += "<ul>";
+    let html = '<h1>Actors Ordered BY ID</h1>';
 
-    for (var i = 0; i < result.length; i++) {
-      html += "<li><p> ID: " + result[i].id + "</p>";
-      html += "<p> Name: " + result[i].name + "</p>";
-      html += "<p> Coolness Points: " + result[i].coolness_points + "</p>";
-      html += "<p>Attitude: " + result[i].attitude + "</p></li>";
-    }
+    html += '<ul>';
 
-    html += "</ul>";
+    result.map(({ id, name, coolness_points, attitude }) => {
+      html += `<li><p> ID: ${id}</p>`;
+      html += `<p> Name: ${name}</p>`;
+      html += `<p> Coolness Points: ${coolness_points}</p>`;
+      html += `<p>Attitude: ${attitude}</p></li>`;
+      return html;
+    });
+
+    html += '</ul>';
 
     res.send(html);
   });
 });
 
-app.get("/coolness-chart", function(req, res) {
-  connection.query("SELECT * FROM actors ORDER BY coolness_points DESC", function(err, result) {
-    if (err) throw err;
+app.get('/coolness-chart', (req, res) => {
+  connection.query(
+    'SELECT * FROM actors ORDER BY coolness_points DESC',
+    (err, result) => {
+      if (err) throw err;
 
-    var html = "<h1>Actors by Coolness</h1>";
+      let html = '<h1>Actors by Coolness</h1>';
 
-    html += "<ul>";
+      html += '<ul>';
 
-    for (var i = 0; i < result.length; i++) {
-      html += "<li><p> ID: " + result[i].id + "</p>";
-      html += "<p> Name: " + result[i].name + "</p>";
-      html += "<p> Coolness Points: " + result[i].coolness_points + "</p>";
-      html += "<p>Attitude: " + result[i].attitude + "</p></li>";
+      result.map(({ id, name, coolness_points, attitude }) => {
+        html += `<li><p> ID: ${id}</p>`;
+        html += `<p> Name: ${name}</p>`;
+        html += `<p> Coolness Points: ${coolness_points}</p>`;
+        html += `<p>Attitude: ${attitude}</p></li>`;
+        return html;
+      });
+
+      html += '</ul>';
+
+      res.send(html);
     }
-
-    html += "</ul>";
-
-    res.send(html);
-  });
+  );
 });
 
-app.get("/attitude-chart/:att", function(req, res) {
-  connection.query("SELECT * FROM actors WHERE attitude = ?", [req.params.att], function(err, result) {
-    if (err) throw err;
+app.get('/attitude-chart/:att', (req, res) => {
+  connection.query(
+    'SELECT * FROM actors WHERE attitude = ?',
+    [req.params.att],
+    (err, result) => {
+      if (err) throw err;
 
-    var html = "<h1>Actors With an Attitude of " + req.params.att + "</h1>";
+      let html = `<h1>Actors With an Attitude of ${req.params.att}</h1>`;
 
-    html += "<ul>";
+      html += '<ul>';
 
-    for (var i = 0; i < result.length; i++) {
-      html += "<li><p> ID: " + result[i].id + "</p>";
-      html += "<p> Name: " + result[i].name + "</p>";
-      html += "<p> Coolness Points: " + result[i].coolness_points + "</p>";
-      html += "<p>Attitude: " + result[i].attitude + "</p></li>";
+      result.map(({ id, name, coolness_points, attitude }) => {
+        html += `<li><p> ID: ${id}</p>`;
+        html += `<p> Name: ${name}</p>`;
+        html += `<p> Coolness Points: ${coolness_points}</p>`;
+        html += `<p>Attitude: ${attitude}</p></li>`;
+        return html;
+      });
+
+      html += '</ul>';
+
+      res.send(html);
     }
-
-    html += "</ul>";
-
-    res.send(html);
-  });
+  );
 });
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+// Log (server-side) when our server has started
+app.listen(PORT, () =>
+  console.log(`Server listening on: http://localhost:${PORT}`)
+);
