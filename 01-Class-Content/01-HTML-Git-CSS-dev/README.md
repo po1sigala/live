@@ -14,25 +14,27 @@ The following topics will be covered in this unit:
 
 * [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
+* [Version Control](https://www.atlassian.com/git)
+
 * [GitHub](https://guides.github.com/activities/hello-world/)
 
 * [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-* [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+  * [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
 
 * [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-* [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color)
+  * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-* [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+  * [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-* [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+  * [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
 
-* [Display](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display)
+  * [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
-* [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  * [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
-* [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+  * [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ## Learning Objectives
 
@@ -40,7 +42,7 @@ You will be employer-ready if you are able to:
 
 * Use Command line tools to navigate your computer’s file system and create directories and files.
 
-* Employ Git commands to create and clone a repo, add and commit changes, and push and pull code.
+* Employ Git commands to create and clone a repository, add and commit changes, and push and pull code.
 
 * Use HTML elements to build the structure of a web page.
 
@@ -68,7 +70,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* @TODO LINK TO ASSESSMENT
+* [Unit 01 Technical Interview Questions](https://docs.google.com/forms/d/e/1FAIpQLSc7uLZOO2tysVZT6OBM9nJrbxR0qs2ZDAPrathAw3SkYgNhmA/viewform)
 
 ## Homework
 
@@ -90,9 +92,9 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
 
-  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide) 
+  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide/README.md) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
@@ -100,6 +102,7 @@ Refer to the Git Guide to review the git concept for this unit.
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: @TODO LINK TO BLOG POST
+  * 📖 Blog Post: [Getting Started with Git](@TODO Add link when blog post is published)
+
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
