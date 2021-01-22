@@ -10,6 +10,7 @@ self.addEventListener('install', (event) => {
         './assets/images/logo128.png',
         './assets/images/logo512.png',
         './assets/images/brandenburg.jpg',
+        './assets/images/berlin-cathedral.jpg',
         './assets/images/reichstag.jpg',
         './assets/images/map.jpg'
       ]);
