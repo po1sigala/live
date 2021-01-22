@@ -64,15 +64,15 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [Git Basics](https://www.atlassian.com/git)
 
-* [GitHub Docs on Create a Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
+* [GitHub Docs on Creating a Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 
 * [GitHub Docs on Cloning a Repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-* [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [MDN Web Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-* [MDN Web Docs on HTML Attribute Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
+* [MDN Web Docs on HTML Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
-* [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 * [MDN Web Docs on Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
