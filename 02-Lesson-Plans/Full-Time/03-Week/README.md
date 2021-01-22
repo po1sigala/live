@@ -120,3 +120,6 @@ Unit 06:
 * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
 
 * [OpenWeather API documentation](https://openweathermap.org/api)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
