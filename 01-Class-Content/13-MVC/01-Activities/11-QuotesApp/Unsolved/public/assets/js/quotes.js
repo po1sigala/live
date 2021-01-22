@@ -1,63 +1,106 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
-  $(".delquote").on("click", function(event) {
-    var id = $(this).data("id");
+document.addEventListener('DOMContentLoaded', (event) => {
+  if (event) {
+    console.info('DOM loaded');
+  }
 
-    // Send the DELETE request.
-    $.ajax("/api/quotes/" + id, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("deleted id ", id);
-        // Reload the page to get the updated list
+  // DELETE
+  // Get the button
+  const deleteQuoteBtns = document.querySelectorAll('.delquote');
+
+  // Set up the event listeners for each delete button
+  deleteQuoteBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.getAttribute('data-id');
+      console.log('delete quote id', id);
+
+      // Send the delete request
+      fetch(`/api/quotes/${id}`, {
+        method: 'DELETE',
+      }).then((res) => {
+        console.log(res);
+        console.log(`Deleted ID: ${id}`);
+
+        // Reload the page
         location.reload();
-      }
-    );
+      });
+    });
   });
 
-  $(".create-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+  // CREATE
+  const createQuoteBtn = document.getElementById('create-form');
 
-    var newQuote = {
-      author: $("#auth").val().trim(),
-      quote: $("#quo").val().trim()
-    };
+  if (createQuoteBtn) {
+    createQuoteBtn.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    // Send the POST request.
-    $.ajax("/api/quotes", {
-      type: "POST",
-      data: newQuote
-    }).then(
-      function() {
-        console.log("created new quote");
-        // Reload the page to get the updated list
+      // Grabs the value of the textarea that goes by the name, "quote"
+      const newQuote = {
+        author: document.getElementById('auth').value.trim(),
+        quote: document.getElementById('quo').value.trim(),
+      };
+      console.log(newQuote);
+
+      // Send POST request to create a new quote
+      fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+
+        // make sure to serialize the JSON body
+        body: JSON.stringify(newQuote),
+      }).then((response) => {
+        // Empty the form
+        document.getElementsByName('quote')[0].value = '';
+
+        // Reload the page so the user can see the new quote
+        console.log('Created a new quote!');
         location.reload();
-      }
-    );
-  });
+      });
+    });
+  }
 
-  $(".update-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+  // Set up the event listener for the create button
 
-    var updatedQuote = {
-      author: $("#auth").val().trim(),
-      quote: $("#quo").val().trim()
-    };
+  // UPDATE
+  const updateQuoteBtn = document.getElementById('update-form');
 
-    var id = $(this).data("id");
+  // Set up the event listener for the create button
+  if (updateQuoteBtn) {
+    updateQuoteBtn.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    // Send the POST request.
-    $.ajax("/api/quotes/" + id, {
-      type: "PUT",
-      data: updatedQuote
-    }).then(
-      function() {
-        console.log("updated quote");
-        // Reload the page to get the updated list
-        location.assign("/");
-      }
-    );
-  });
+      // Grabs the id of the element that goes by the name, "id"
+      const id = e.target.getAttribute('data-id');
+
+      const updatedQuote = {
+        author: document.getElementById('auth').value.trim(),
+        quote: document.getElementById('quo').value.trim(),
+      };
+      console.log('updatedQuote', updatedQuote);
+
+      // Send POST request to create a new quote
+      fetch(`/api/quotes/${id}`, {
+        method: 'PUT',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+
+        // Make sure to serialize the JSON body
+        body: JSON.stringify(updatedQuote),
+      }).then((response) => {
+        // Check that the response is all good
+        // Reload the page so the user can see the new quote
+        if (response.ok) {
+          console.log(`Updated the quote with id: ${id}`);
+          location.assign('/');
+        } else {
+          alert('something went wrong!');
+        }
+      });
+    });
+  }
 });

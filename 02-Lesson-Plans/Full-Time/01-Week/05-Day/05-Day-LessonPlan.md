@@ -1,420 +1,679 @@
-# 01.5 Lesson Plan - Bootstrap Layouts and Responsive Designs <!--links--> &nbsp; [⬅️](../04-Day/04-Day-LessonPlan.md) &nbsp; [➡️](../../02-Week/01-Day/01-Day-LessonPlan.md)
+# 01.5 Full-Time Lesson Plan: CodePen Mini-Project
 
 ## Overview
 
-Today's class is focused on introducing students to the concept of grid-based web design and the utilization of Bootstrap for grid-layouts. Towards the end of the class, we will also be covering mobile-responsive web design using media queries and viewports.
+This lesson is all about exposing students to what's possible with CSS for both the end user and the developer who's writing it. Whereas the previous two lessons primarily focused on essential CSS knowledge, this lesson introduces some other tools and skills that will increase the students' efficacy in building webpages.
 
 ## Instructor Notes
 
-* `Summary: Complete Activities 12-18 in Unit 02`
+* In this lesson, students will complete activities `21-Ins_Wireframing` through `28-Stu_Mini-Project`.
 
-* Today's class has historically been one of our most fun classes. It's fun because we go through the process of showing students both how to visualize websites as grids as well as how to create their own grid-based layouts. Many students have an "Aha!" moment as they realize just how CSS frameworks like Bootstrap can dramatically save time when it comes to layout building.
+* This day is about exposing students to other tools and features available in CSS. They've learned a lot of foundational knowledge that's required in the field, but CSS can also be a lot of fun once they get the hang of it.
 
-* Much of today's slideshow is intended to be a series of in-class engagement exercises. Spend ample time in class asking students pointed questions, when appropriate, to make sure they're following.
+* To emphasize that CSS can be fun and interesting, class will begin with a quick introduction to CodePen. Before class, take a few minutes to acclimate yourself to it and perhaps find a few cool examples of work displayed on there.
 
-* Also, today's class is an opportunity for Instructors/TAs to share a few of their own experiences learning web development. Some students may be feeling a bit rushed by the pace, so it's important for them to hear firsthand that the rate of their learning is "incredible." They aren't "behind" just because they haven't learned everything. That will come with years of experience. But the reality is, they don't need to learn "everything" to get a job as a web developer.
+* Students may become overwhelmed by how many CSS tools and options there are, so offer support and reiterate often that CSS gets easier through practice and a lot of trial and error. This is what platforms like CodePen are for!
 
-* The latter portion of today's class (media queries and viewports) is a bit less important in the grand scheme. However, these elements are very relevant to the homework, so make a strong effort to get to them as well.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* Depending on how well you are doing on time, feel free to create mini-exercises on the fly to ensure students understand the grid.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-## Sample Class Video (Highly Recommended)
-* To view an example class lecture visit (Note video may not reflect latest lesson plan): [Class Video](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27b66830-c7ee-4c52-8183-4f550da580e0)
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+
+* If the students struggle with the `Everyone Do: Git` activity, walk through it using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Learning Objectives
 
-* Gain a conceptual understanding of the role of grid-based web design in modern web development
-* Utilize the Bootstrap grid system to create complete web layouts
-* Understand the concept of mobile responsive web design and the use of media queries to achieve it
+By the end of class, students will be able to do the following:
 
-## Slides
+* Create and explain the purpose of a wireframe.
 
-[1.5 Bootstrap Layouts and Responsive Designs](https://docs.google.com/presentation/d/1D0UN5gkoBznFUz5RdtTz-PkMuCxaJPqE963ybguOPEc/edit?usp=sharing)
+* Use CSS selectors to reference HTML elements in different ways.
+
+* Use CSS variables to keep their code clean.
+
+* Use advanced CSS styling for an enhanced UI.
 
 ## Time Tracker
 
-* [1.5 Time Tracker](https://docs.google.com/spreadsheets/d/1JMOlRLktISQF8jSzqkiUwRXOnoNUDcauwiOtsCH7ufg/edit?usp=sharing)
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Wireframing       | 0:05     |
+| 10:15AM| 3   | Student Do: Wireframing            | 0:15     |
+| 10:30AM| 4   | Instructor Review: Wireframing     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: CSS Selectors     | 0:05     |
+| 10:45AM| 6   | Student Do: CSS Selectors          | 0:15     |
+| 11:00AM| 7   | Instructor Review: CSS Selectors   | 0:10     |
+| 11:10AM| 8   | Instructor Demo: CSS Variables     | 0:05     |
+| 11:15AM| 9   | Student Do: CSS Variables          | 0:15     |
+| 11:30AM| 10  | Instructor Review: CSS Variables   | 0:10     |
+| 11:40AM| 11  | Everyone Do: Git Merge Conflicts   | 0:20     |
+| 12:00PM| 12  | BREAK                              | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini Project      | 0:05     |
+| 12:35PM| 14  | Student Do: Mini Project           | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini Project    | 0:10     |
+| 1:45PM | 16  | Introduce Homework                 | 0:05     |
+| 1:50PM | 17  | FLEX                               | 0:40     |
+| 2:30PM | 18  | End                                | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: Welcome Students (1 min)
+## Class Instruction
 
-* Welcome students back to class. Then open the slide deck [1.5 Bootstrap Layouts and Responsive Designs](https://docs.google.com/presentation/d/1D0UN5gkoBznFUz5RdtTz-PkMuCxaJPqE963ybguOPEc/edit?usp=sharing).
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-### 2. Instructor / TA Do: Emotional Monologue (10 min)
+* Welcome students to class and congratulate them on learning two of the most foundational parts of web development: HTML and CSS.
 
-* Begin class by going through the slides for building a positive vibe in the class. Use the following points as suggestions for what to say.
+* Reassure students that learning CSS is not an easy task and that even the world's best developers struggle with it at times. It requires a lot of patience and practice, but it is worth it when you see something come together.
 
-  * **Help ME Slide:**
+* Open [Wireframe example from Wikipedia](https://en.wikipedia.org/wiki/Website_wireframe#/media/File:Profilewireframe.png) in your browser and explain the following:
 
-    * Have students raise their hands as you ask each of the following questions.
+  * Explain that the image they are looking at is called a **wireframe** and it is a tool developers use to create robust UI/UXs.
 
-    * Ask students how many of them come to class feeling anxious?
+  * Wireframes allow us to visualize how our webpages will act and feel before we do any actual coding.
 
-    * Ask students how many students have felt confused in class?
+  * Explain that wireframes can be hand-sketched or you can use digital tools like Figma or Framebox.
 
-    * **Most Importantly** Ask students how many of them feel like they're 'behind'?
+  * Let students know that it is important to pay particular attention to the location of navigation bars, titles, headers, content, images, buttons, and footers.
 
-      * Then rhetorically ask students, "What does it mean to feel behind?"
+  * Explain that there are three main elements to an effective wireframe: information design, navigation design, and interface design.
+    
+    * Information design: How we place and present information to our users.
 
-      * **Also Important** Have students raise their hand if "feeling behind means..."
+    * Navigation design: How the user moves throughout the site and how pages relate to each other.
 
-      * ...Feeling like you are behind other students in class.
+    * Interface design: How the user interacts with the elements on the page, with a focus on functionality.
 
-      * ...Feeling like you aren't learning the material fast enough to get a job.
+  * Let students know that they will get hands-on experience by creating a wireframe for this unit's mini-project.
 
-      * ...Feeling like you aren't learning the material as quickly as you expected.
+### 2. Instructor Demo: Wireframing (5 min) 
 
-  * **Deep Breath:**
+* Open `21-Ins_Wireframing/assets/Images/01-unfinished-wireframe.png` in your IDE and explain the following:
 
-    * Have students take 5 deep breaths.
+  * This image shows the start of a wireframe for the unit's mini-project, with the rows and columns highlighted.
 
-  * **It's all going to be okay:**
+  * 🔑 When creating a wireframe, we want a way to visually represent our page layout. Using rows and columns is an effective way to guide our decision-making when placing elements on the page.
 
-    * Then let students know it's going to be okay.
+  * 🔑 These rows and columns directly translate to containers that we can use when we begin coding the mini-project.
 
-  * **You are awesome:**
+* Open `28-Stu_Mini-Project/Main/index.html` in your browser and explain the following:
 
-    * Let students know that they are learning material at a breakneck speed. And that other self-taught developers take months to learn the same amount of material they've learned in weeks.  
+  * Here is the final product that we will create today, which you can keep in mind as you work on your wireframe.
 
-    * Then **very importantly**  take a few moments to have yourself and your TAs share their own experience struggling through coding. If your TAs went through Boot Camps, have them share their own advice and emotional perspectives. How hard was it? When did it finally click? Etc.
+  * 🔑 Pay attention to how elements are placed in relation to each other and try to convey that in the wireframe you create.
 
-    * And let them know it's going to be okay. And that you and the TAs are available to help.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Let them know that, if they are ever staring at a blank screen for more than 2 hours, they should reach out for help.
+  * ☝️ Why would we want to create a wireframe?
 
-    * Then **importantly** open it up for questions or comments from the class.
+  * 🙋 A wireframe gives us a blueprint for our UI/UX.
 
-### 3. Instructor Do: Today's Class (1 min)
+* Answer any questions before proceeding to the next activity.
 
-* Briefly discuss the topics to be treated today. (You can have students read these out loud if you like.)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Wireframing`.
 
-* Let students know that today's class really matters, because we will be building layouts with Bootstrap all throughout.
+### 3. Student Do: Wireframing (15 min) 
 
-### 4. Instructor Do: Recap Bootstrap (5 min)
+* Direct students to the activity instructions found in `22-Stu_Wireframing/README.md`.
 
-* Take a few brief moments to recap the context of Bootstrap.
+* Break your students into pairs that will work together on this activity.
 
-* Point out that the HTML + CSS of creating the last homework assignment was incredibly challenging, and that finagling with CSS is taxing.
+```md
+# 🏗️ Create a Wireframe
 
-* Point out that Bootstrap lets you take advantage of pre-built CSS, in which you utilize pre-assigned classes that get styled using Bootstrap's library.
+Work with a partner to implement the following user story:
 
-* Point out that using Bootstrap requires two steps:
+* As a developer, I want to be able to see how my elements will be grouped together so that I can better design my website.
 
-  1. Including the CSS link
+## Acceptance Criteria
 
-  2. Including the specific classes associated with bootstrap styles (found on the website's documentation).
+* It is done when I have created a wireframe using Google Slides that has the correct elements grouped together based on the web app's columns and rows.
 
-* Point out that this is a big deal because it lets us use predefined CSS Styles, a concept we will be revisiting repeatedly.
+* It is done when I have completed the wireframe of the CSS snippet cheat sheet mini-project.
 
-* Then either ask students what the two advantages to using Bootstrap are, or just show them the slides.
+## Assets
 
-  * UI Kit
+The following image shows a wireframe that depicts the web application's appearance and functionality:
 
-  * Mobile responsiveness
+![Example of a finished wireframe for a form.](./Images/01-wireframe-form-completed.png)
 
-### 5. Students Do: Warmup Bootstrap Component Activity (5 min)
+1. Navigate to [Google Slides](https://docs.google.com/presentation/u/0/?tgif=d) and use the blank template to create a new presentation.
 
-* Slack out the following instruction to students (or show them the slide).
+2. Using the tools outlined in the following image, create a wireframe that includes all the elements that you need for the project.
 
-* Don't spend too much time on this activity. It's just a warm-up!
+![Google Slide tools outlined in red.](./Images/02-google-slides-tool-highlight.png)
 
-* **Instructions:**
+---
 
-  * As a repeat of last class, quickly create an HTML web page.
+## 💡 Hints
 
-  * Then add in a Bootstrap component of your choosing.
+* How do elements interact with each other when using flexbox?
 
-  * Hint: Copy the Bootstrap CSS link. Then copy the code from any Bootstrap element or CSS.
+## 🏆 Bonus
 
-### 6. Instructor Do: Review Warmup Bootstrap Component Activity (1 min)
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-** Open the file
-[12-WarmupBootstrap/index.html](../../../../01-Class-Content/02-css-bootstrap/01-Activities/12-WarmupBootstrap/Solved)
-and walk students through the solution.
+* How might our wireframe look on a mobile device?
 
-* Point out that you've added the CSS reference link and the specific jumbotron class.
+Use [Google](https://www.google.com) or another search engine to research this.
 
-### 7. Instructor Do: Sketching / Grid Layouts (7 min)
+```
 
-* First have students take another huge breath. Because this is one of the most important concepts in the course.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Let them know that many of them will be targeting Junior Front-end developer jobs. Having a strong grasp of grid layouts is incredibly important in UI/UX design.
+### 4. Instructor Review: Wireframing (10 min) 
 
-* Then let them know it won't be hard.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Let students know that every good web design begins with a sketch. As they've discovered, everything in CSS has to be mathematically laid out. You need to have dimensions for your margins, padding, etc. This requires that these sketches are built with a "grid" in mind to help with alignments.
+  * ☝️ How comfortable do you feel with wireframes? (Poll via Fist to Five, Slack, or Zoom)
 
-* Walk through the wireframes and website examples and show students how the grid looks when overlaid.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* If you'd like, open a random website of your choosing and show how a grid principle applies. It may not be obvious, but the key point is that elements line up/are ordered in a grid.
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-### 8. Instructor Do: Rows and Columns Workshop (25 min)
+  * ✔️ Wireframes
 
-* This section is the crown jewel of today's class. Essentially, it is a series of "wireframes" in which you will ask the class to "count" the number of rows and columns they see. These observations will directly dovetail into the next discussion of Bootstrap's grid system. Take the time needed in this section to make sure your students understand this stuff.  In each example, have students talk to the person next to them to come up with the number of rows and columns.
+  * ✔️ page layout
 
-* Let students know that every website effectively started as a wireframe. The wireframe places text, titles, images, etc., all in their respective general positions.
+  * ✔️ Containers
 
-* Point out how it's important to break down websites into rows and columns.
+* Open `22-Stu_Wireframing/Solved/assets/Images/01-wireframe-form-completed.png` and explain the following image: 
 
-* Then show the following slide:
+  * We started with our header and sub-heading already defined which leaves us with the body and footer to complete.
 
-![1-RowsColumns_1](Images/1-RowsColumns_1.png)
+  * 🔑 The next section is the row which will hold three card elements that will have their own container.
 
-* Ask students how many rows and columns they see. If they seem stumped go ahead and help them with this first example by flipping to the next slide.
+  * Inside of our row we have columns which hold the data being displayed on the cards.
 
-* In each example, I include the footer as a row, but exclude the header. This is a rather arbitrary choice, but partially based on the fact that navbars aren't a part of the bootstrap grid system. Let students know this and tell them to use this approach for each of the exercises.
+  * 🔑 The container which holds our column acts similar to our row container but on the opposite axis.
 
-* After showing students the solution to this example, the slideshow immediately returns to a "You Try" example. Cue them to talk with their partners about the number of rows and columns.
+  * Our wireframe may not look pretty but it gives us some great insight on how our website may look and feel.
 
-* Then call on a student randomly and ask them to count the number of rows and columns for you.
+  * 🔑 Say we noticed one section of our website is not what we thought or wanted, a wireframe gives us the opportunity to catch this before we begin coding.
 
-* Proceed through the more challenging examples using the same approach. In each example, have students talk to the person next to them about the number of rows and columns. As you point out the various layouts, note how each wireframe represents a different kind of website (one is a blog, one is a corporate site, one is an image gallery, etc.).
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* In a few examples I've lumped together the images and the text into a single row. Again this is a style choice on my end, however, it makes sense to do this when the images and text are essentially "tied" to one another.
+  * ☝️ Are wireframes supposed to be functional?
 
-![1-RowsColumns_2](Images/1-RowsColumns_2.png)
+  * 🙋 No, it is a rough draft of the UI/UX.
 
-* Once you get to the "tricky" example, be prepared to talk about sub-rows and sub-columns. Essentially, the way to access sub-elements is to put rows inside columns that are inside of larger rows.
+  * ☝️ What can we do if we don't completely understand this?
 
-![1-RowsColumns_3](Images/1-RowsColumns_3.png)
+  * 🙋 We can refer to supplemental material, read the [Wikipedia Page on Website Wireframe](https://en.wikipedia.org/wiki/Website_wireframe), and stay for office hours to ask for help.
 
-* Once done with all the activities, take a celebratory moment with students.
+* Answer any questions before proceeding to the next activity.
 
-* Then ask if there are any questions before proceeding to the next section.
+### 5. Instructor Demo: CSS Selectors (5 min) 
 
-### 9. Instructor Do: Grid Design with Bootstrap (10 min)
+* Open `23-Ins_CSS-Selectors` in your browser and demonstrate the following:
 
-* Flip through the slides explaining how Bootstrap grids work in relation to the abstract workshop they've just concluded.
+  * 🔑 We can be very specific in how we select certain HTML elements using CSS.
 
-* Be sure to mention that:
+  * 🔑 There's no difference to the user in how we achieved this result.
 
-  * In Bootstrap all content is organized in rows and columns.
+* Open `23-Ins_CSS-Selectors/assets/css/style.css` in your IDE and demonstrate the following:
 
-  * Columns fit inside of rows. Rows fit inside containers.
+  * 🔑 We can use the `:nth-child()` selector to apply styles to elements based on their order.
 
-  * Columns are defined by the number of "spans" they take up, with a total of 12 spans.
+  * 🔑 We can use the adjacent sibling `+` selector to apply styles to elements that come after another specific element.
 
-* Slides on the coded portion of the grid will show up in the next section. Wait until then to talk about syntax.
+  * 🔑 We can use the direct child `>` selector to apply styles to elements that are direct children of an HTML element.
 
-* Be sure to explain the syntax for containers; rows; and columns **prior** to the next activity.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Be sure students understand the "formula" for column classes is `col-size-span`, and that `span` is any integer between 1 and 12.
+  * ☝️ When would we use these selectors over what we've been using?
 
-    * They don't need to understand the various choices for `size` at this stage.
+  * 🙋 The answer is that's it's up to you! CSS provides numerous ways to achieve a goal, so it's a matter of knowing what's available to use in certain situations.
 
-### 10. Students Do: Containers, Rows, Columns Discussion (5 min)
+* If time permits, visit the [MDN Web Docs on CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) and walk through how students can find more information on them.
 
-* Use the slide as a cue to have students explain to one another the relationship between rows, columns, and containers.
+* Answer any questions before proceeding to the next activity.
 
-* Then call a random student to explain it back to you.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_CSS-Selectors`.
 
-### 11. Instructor Demo: Coding Grids (10 min)
+### 6. Student Do: CSS Selectors (15 min) 
 
-* Using the file
-[13-InstructorGrids](../../../../01-Class-Content/02-css-bootstrap/01-Activities/13-InstructorGrids/quick-grid.html)
-as a starting point, walk students through the syntax of creating grids in Bootstrap. Feel free to create new rows and columns on the fly.
+* Direct students to the activity instructions found in `24-Stu_CSS-Selectors/README.md`.
 
-![2-QuickGrid_1](Images/2-QuickGrid_1.png)
+* Break your students into pairs that will work together on this activity.
 
-* In discussing the code, be sure to point out:
+  ```md
+  # 📖 Implement an Icon for Downloadable Style Sheets
 
-  * How the column widths work and that they all add to 12.
+  Work with a partner to implement the following user story:
 
-    ![2-QuickGrid_2](Images/2-QuickGrid_2.png)
+  * As a user, I want to see an icon next to every `<a>` element that has a link to a downloadable CSS file in its `href` attribute.
 
-  * How rows always go inside of the larger container. And that columns ALWAYS go inside the rows.
+  ## Acceptance Criteria
 
-* Slack out the file when done.
+  * It's done when any link to a CSS file displays a 📝 emoji after the link text.
 
-### 12. Instructor Do: Coding Grids (10 min)
+  * It's done when the 📝 emoji is inserted using only CSS.
 
-* Once again, talk students through the slides that reexamine the syntax.
+  ## 📝 Notes
 
-* **IMPORTANT** TAs should slack out screenshots of each of these slides, so students can reference them. Alternatively, TAs can slack out a PDF of the slides at this point to help students in the next set of activities.
+  Refer to the following documentation: 
 
-### 13. Students Do: Text Layout Activity (20 min)
+  [MDN Web Docs on attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
-* Then open the file
-[14-TextLayout](../../../../01-Class-Content/02-css-bootstrap/01-Activities/14-TextLayout/Solved/lorem.html)
-and show students what they will be building for the next activity.
+  ## Assets
 
-* TAs should then slack out a screenshot of the final product as well as the following instructions:
+  The following image demonstrates the web application's appearance:
 
-  * **Instructions:**
+  ![The updated page shows an emoji icon next to each link that takes you to a CSS file.](./Images/01-selector-complete.png)
 
-    * Using Bootstrap CSS, create a layout that looks like the one shown on the next screen.
 
-    * Hint: Spend some time prior to coding on drawing out the grid layout.
+  ## 💡 Hints
 
-    * Hint: Count the number of rows and columns.
+  * How can you target a file type by its file extension (i.e., `.css`, `.html`, `.md`, etc.)?
 
-    * Hint: Then use the bootstrap grid syntax to code it out.
+  * How can you use pseudo-elements to accomplish this task?
 
-### 14. Instructor Do: Review Text Layout Activity (5 min)
+  ## 🏆 Bonus
 
-* Review with students the solution to the last activity.
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* Have students tell you the number of rows and columns prior to talking about the code.
+  * How do selectors affect CSS performance?
 
-* Then point out how the layout begins with a container and then has individual rows inside, and that the column widths always add up to 12.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  ![3-Lorem](Images/3-Lorem.png)
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Slack out the video guide for the activity which can be found [here](https://www.youtube.com/watch?v=wQovwgW020g)
+### 7. Instructor Review: CSS Selectors (10 min) 
 
-- - -
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 15. LUNCH BREAK (30 min)
+  * ☝️ How comfortable do you feel with CSS selectors? (Poll via Fist to Five, Slack, or Zoom)
 
-* Regroup with TAs to ensure you're keeping on schedule. If not, skip low-priority activities.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-- - -
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-### 16. Instructor Demo: Bootstrap Wireframe Layout (15 min)
+  * ✔️ We can select HTML elements by their attributes.
 
-* Depending on the amount of time you have left in class and/or your speed at building layouts, create a quick bootstrap layout OR open the file [15-InstructorLayout.html](../../../../01-Class-Content/02-css-bootstrap/01-Activities/15-InstructorLayout/in-class-demo-layout.html)
-and walk students through the process of building a layout.
+  * ✔️ We can use partial string matching to get results
 
-* In your demonstration, at the very least, do the following:
+  * ✔️ Use the examples provided in the documentation to learn whenever possible!
 
-  * The Bootstrap file required the Bootstrap CSS link
+* Open `24-Stu_CSS-Selectors/Solved/assets/css/style.css` in your IDE and explain the following: 
 
-  * Then show students how you can easily copy and paste code to create a Navbar. (You can copy and paste this from the Bootstrap Website:  <https://getbootstrap.com/docs/4.3/components/navbar/>).
+  * 🔑 We select specific `<a>` elements based on their `href` attribute value with square bracket notation `[]`:
 
-  * Show students how the main body goes into a container and that individual rows hold the various components
+    ```css
+    a[href$='.css']::after {
+      content: '📝';
+      display: inline-block;
+      margin-left: 3px;
+    }
+    ```
 
-  * Point students to the use of _cards_ on the Bootstrap website. <https://getbootstrap.com/docs/4.0/components/card/>
+  * 🔑 We use `$=` syntax to match any `href` value that ends with `.css`.
 
-### 17. Students Do: Bootstrap Wireframe Activity (30 min)
+  * We use the `::after` pseudo-element to add an icon to the right of the selected `<a>` element.
 
-* Then open the file
-[16-CardLayout/layout.html](../../../../01-Class-Content/02-css-bootstrap/01-Activities/16-CardLayout/Solved/layout.html)
-in your browser. Show students what they will be building for the next activity.
+  * 🔑 Understanding the use case for a lot of CSS features usually requires using the examples provided by documentation and making it work for your needs. 
 
-* Then slack out a screenshot of the final design as well as the following instructions.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* **Instructions:**
+  * ☝️ Why did we have to set a margin to the left side of the icon?
 
-  * Working in pairs and using Bootstrap CSS make the following design.
+  * 🙋 The icon would have been too close to the link text content without it.
 
-  * Be sure to note the:
+  * ☝️ What can we do if we don't completely understand this?
 
-    * Grid Layout
-    * Navbar
-    * Sidebar card
-    * Thumbnail
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs for attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors), and stay for office hours to ask for help.
 
-### 18. Instructor Do: Review Bootstrap Wireframe Activity (7 min)
+* Answer any questions before proceeding to the next activity.
 
-* Spend a few moments reviewing the code for the previous activity with students.
+### 8. Instructor Demo: CSS Variables (5 min) 
 
-* Point out the:
+* Open `25-Ins_CSS-Variables` in your browser and demonstrate the following:
 
-  * Simplified navbar (where elements were removed)
+  * 🔑 There's no difference on the page&mdash;everything looks the same!
 
-    ![4-BootstrapLayout_1](Images/4-BootstrapLayout_1.png)
+  * 🔑 Not every enhancement to your site will be noticeable by your users.
 
-  * The sidebar cards
+* Open `25-Ins_CSS-Variables/assets/css/style.css` in your browser and demonstrate the following:
 
-    ![4-BootstrapLayout_2](Images/4-BootstrapLayout_2.png)
+  * 🔑 We can create CSS variables to hold repeated values and reference them instead.
 
-  * The dummy image
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    ![4-BootstrapLayout_3](Images/4-BootstrapLayout_3.png)
+  * ☝️ Why would creating CSS variables help developers?
 
-  * And anything else students were confused by.
+  * 🙋 It's easier to refer to one variable than a repeated value. It also makes it easier to change a color theme!
 
-### 19. Instructor Do: Common Questions (5 min)
+* Answer any questions before proceeding to the next activity.
 
-* Flip to the slide on common questions. Address them as necessary.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_CSS-Variables`.
 
-### 20. Instructor Do: Mobile Responsiveness (5 min)
+### 9. Student Do: CSS Variables (15 min) 
 
-* Talk about the basics of mobile responsiveness and that media queries effectively create "conditional css". If a particular width of the screen is met, then the CSS within that media query will be triggered. Otherwise it will be ignored.
+* Direct students to the activity instructions found in `26-Stu_CSS-Variables/README.md`.
 
-* Let students know that media queries are what allow Bootstrap CSS to have a fully mobile responsive website. But its important to be familiar with media queries so you can roll out your own custom mobile responsive designs in the future.
+* Break your students into pairs that will work together on this activity.
 
-### 21. Instructor Demo: Media Queries (10 min)
+  ```md
+  # 🏗️ Implement CSS Variables in Style Sheet
 
-* Open the file [17-InstructorMedia/media_basic.html](../../../../01-Class-Content/02-css-bootstrap/01-Activities/17-InstructorMedia/media-basic.html) in your browser. Show how the page changes colors when you shrink or increase the width of the page.
+  Work with a partner to implement the following user story:
 
-* Then open the code. But don't explain it yet. Instead, go back to the slideshow to the following activity.
+  * As a developer, I want to manage CSS values that are used in multiple CSS rules in a more efficient manner.
 
-### 22. Students Do: Explain Media Queries (02 min)
+  ## Acceptance Criteria
 
-* Have students explain the media query code to one another for a few moments.
+  * It's done when any repeated color values are defined once as a CSS variable.
 
-* Then hear their answers, before explaining that the `@media screen` section has particular styling that kicks in when the page is less then 768px wide.
+  * It's done when any repeated border radius values are defined once as a CSS variable.
 
-* Then slack out all the files associated with this demo (HTML and CSS). Students will be using this for the next activity.
+  ## 💡 Hints
 
-### 23. Students Do: Build Media Query (15 min)
+  * How can we declare CSS variables, also known as CSS custom properties, on the `:root` pseudo-class?
 
-* Open the file
-[18-StudentMedia/media_solved.html](../../../../01-Class-Content/02-css-bootstrap/01-Activities/18-StudentMedia/Solved/media-solved.html)
-in chrome. Widen and shrink the page and point out that whereas your previous version of the code stacked the two boxes on top of each other, this version creates a nice degree of padding for separation.
+  * How can we use those custom property values instead of using values that are repeated throughout the style sheet such as `#fff`?
 
-![5-StackedBoxes_2](Images/5-StackedBoxes_2.png)
+  ## 🏆 Bonus
 
-![5-StackedBoxes_1](Images/5-StackedBoxes_1.png)
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* Then slack out the following instructions:
+  * What does the term DRY mean in web development?
 
-* **Instructions:**
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  * Add more styling to the CSS file such that the `@media screen` code creates padding and margins for the two boxes when the page is below 768px.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * Note: This isn't easy. Just give it your best shot. Even if you don't get the exact solution, but are able to better understand how media queries work, that's a solid takeaway.
+### 10. Instructor Review: CSS Variables (10 min) 
 
-### 24. Instructor Do: Review Build Media Query (5 min)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Quickly go over the solution for the previous activity, letting them know that it wasn't intuitive.
+  * ☝️ How comfortable do you feel with CSS variables? (Poll via Fist to Five, Slack, or Zoom)
 
-* Use the below details as a guide.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  ![6-StackedBoxesSolved](Images/6-StackedBoxesSolved.png)
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-* Slack out the video for this activity. [Media Queries](https://www.youtube.com/watch?v=x_wlcp-W27c)
+  * ✔️ Adding variables to the global style sheet with the `:root` element
 
-### 25. Instructor Do: Questions (5 mins)
+  * ✔️ Reducing the risk of a typo with variables
 
-* Take a few moments to celebrate.
+  * ✔️ Not limited to colors
 
-* Then open the floor for questions.
+* Open `26-Stu_CSS-Variables/Solved/assets/css/style.css` in your IDE and explain the following: 
 
-### 26. Group Do: Homework #2 (25 mins, or remaining time)
+  * We identify where values are repeated throughout the style sheet.
 
-* Give students the remaining time to continue to work on homework that is due next week.
+  * 🔑 Repeating values throughout a style sheet can introduce a lot of errors, so we store them under a named variable:
 
-* Be sure to walk around and check if anyone is having troubles.
+    ```css
+    :root {
+      --white: #fff;
+      --dark-blue: #13293d;
+      --tan: #d8a47f;
+      --border-radius: 50px;
+    }
+    ```
 
-* If students seemed to struggle today, you can use this time to review difficult topics or spend more time on one of the class activities rather than on homework.
+  * 🔑 By selecting the root HTML element `:root`, we can make these custom CSS properties (variables) available throughout our style sheet.
 
-### 27. Pre-class Drill Announcement (0 mins)
+  * 🔑 This is great for colors because hex codes are hard to remember, but you can also use it with other values like border radius.
 
-* Let the class know that from now until we start the first project, we'll be having structured pre-class office hours.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* In pre-class office hours, we'll give them an opportunity to do practice problems that will help them solidify the skills they just learned, but also mimic interview questions and begin to prepare them for interviews.
+  * ☝️ Do we have to use specific names for the variables?
 
-* Strongly encourage students to attend the pre-class office hours. Remind them that the instructional staff has outside commitments as well, and that you understand the pressures of making this kind of time commitment, but that they owe it to themselves to invest fully in this experience. Interview prep will go a long way towards helping them understand JavaScript better and making them more competitive in their career search after graduation.
+  * 🙋 No, we don't. As long as we use the `--` syntax, we can call them whatever we need to.
 
-* State clearly in the beginning that the Pre-class Drill will be going on, but students can still meet 1:1 with staff for help with other things, as long as one staff member is available to go over the question and answer before class starts.
+  * ☝️ What can we do if we don't completely understand this?
 
-# Instructor Do: Private Self-Reflection (0 min)
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on using CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), and stay for office hours to ask for help.
 
-Take some time on your own after class to think about the following questions. If there's anything that you're not sure how to answer, feel free to reach out to the curriculum team!
+* Answer any questions before proceeding to the next activity.
 
-1. How did today's class go?
-2. How did you teach it?
-3. How well do you feel you did teaching it?
-4. Why are you teaching it?
-5. Why did you teach it that way?
-6. What evidence can I collect to show my students are understanding?
-7. How will my students know they are getting it?
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr-Git-Pull-Conflict`.
 
-### Lesson Plan Feedback
+### 11. Everyone Do: Git Pull and Merge Conflicts (20 min)
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+* Open the [Git docs on git pull](https://git-scm.com/docs/git-pull) in your browser and explain the following:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * Whenever we want to retrieve updated code from the repository in GitHub, we use `git pull` to integrate it into the local codebase.
+
+  * Sometimes, however, the changes we have made and tracked with Git locally and the changed code we're pulling from GitHub don't match up. Because of this, Git doesn't know how to resolve the issue, and it creates what's known as a **merge conflict**.
+
+  * This activity will serve as a guide to help understand merge conflicts and how to fix them. 
+
+* Direct students to the activity instructions found in `27-Evr-Git-Pull-Conflict`.
+
+* While everyone is working on the activity, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Near the end of this activity, make sure students know the following key point:
+
+  * 🔑 Merge conflicts will happen, especially in a collaborative setting, so there's no need to panic when they arise.
+
+* Answer any questions before students go on break.
+
+### 12. BREAK (30 min)
+
+### 13. Instructor Demo: Mini Project (5 min) 
+
+* Open `28-Stu_Mini-Project/Solved` in your browser and demonstrate the following:
+
+  * 🔑 The page adjusts its layout on different screen sizes.
+
+  * 🔑 When we hover over a CSS snippet card, it glows.
+
+  * 🔑 When we click on a CSS snippet, the entire block of code is highlighted.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 With all of our new knowledge in CSS!
+
+* Ensure that students know that their result just needs to match in layout and responsiveness, and encourage them to have fun with their design choices. Their design doesn't need to match the solution's design.
+
+* Answer any questions before allowing students to start the mini-project.
+
+### 14. Student Do: Mini Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
+
+* Break your students into groups that will work together on this activity.
+
+  ```md
+  # Unit 02 Mini-Project: CSS Snippet Cheat Sheet
+
+  In this activity, you will work with a group to build a webpage that will hold a collection of CSS snippets. What better way to learn CSS than to build a knowledge base of CSS?
+
+  ## Instructions
+
+  The completed application should meet the following criteria:
+
+  * As a user, I can view a collection of labeled CSS snippets in a responsive grid.
+
+  * As a user, I can easily identify these CSS snippets by their headings.
+
+  * As a user, I can highlight a code snippet by clicking on it.
+
+  * As a user, I can view my application on a mobile device as well as a desktop.
+
+  ### Specifications
+
+  * Must use semantic HTML elements and proper indentation.
+
+  * Use CSS variables to maintain clean and reusable values for a color scheme.
+
+  * Use flexbox and media queries to create a responsive grid layout.
+
+  * Each CSS snippet should have a card-like layout with the CSS syntax wrapped in an HTML pre element. For more information, see the [MDN Web Docs on the HTML pre element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre).
+
+  * Each CSS snippet can easily be highlighted for copying on click using the CSS user-select property]. For more information, see the [MDN Web Docs on the CSS user-select property](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select).
+
+  * Must incorporate a background color using a CSS gradient function. For more information, see the [MDN Web Docs on the CSS linear-gradient function](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient).
+
+  * Must incorporate a bit of animation using the CSS transition property. For more information see the [MDN Web Docs on the CSS transition property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition).
+
+  * You and your group can decide which CSS styles and colors you will use to design the application, but the app needs to be a responsive. Use the following images to gain an understanding of how the app should look at different screen sizes, from a layout perspective:
+
+    * At size 992px and above, the app should resemble the following image:
+
+      ![On a desktop, the application displays three CSS code snippets per row.](./Images/01-app-desktop.png)
+
+    * At size 768px and above, the app should resemble the following image:
+
+      ![On a tablet, the application displays two CSS code snippets per row.](./Images/02-app-tablet.png)
+
+    * On mobile devices, anything under 768px, the app should resemble the following image:
+
+      ![On a mobile device, the application displays one CSS code snippet per row.](./Images/03-app-mobile.png)
+
+  ## 💡 Hints
+
+  * The HTML `<pre>` element is very literal about spaces and indentation. To gain a better understanding of how to work with it, check out this [article on considerations for styling the <pre> tag](https://css-tricks.com/considerations-styling-pre-tag/).
+
+  ## 🏆 Bonus
+
+  * Set this project up in your own GitHub repositories so that you can deploy and use it for future reference!
+
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Mini Project (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel tackling this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Use of the `<pre>` tag and monospace font
+
+  * ✔️ Mobile-first responsive layout with flexbox
+
+  * ✔️ Transition and linear-gradient use
+
+* Open `28-Stu_Mini-Project/Solved` in your IDE and explain the following: 
+
+  * 🔑 The HTML `<pre>` element interprets spaces and returns literally, so the HTML code needs to look a little disjointed.
+
+  * 🔑 We build a mobile-first style sheet, where the media queries apply to larger screens, not smaller:
+
+    ```css
+    /* media query for larger screens */
+    @media screen and (min-width: 992px) {
+      header {
+        width: 75%;
+      }
+
+      .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+    }
+    ```
+
+  * 🔑 We can create a gradient effect for the backgrounds using the `linear-gradient()` function:
+
+    ```css
+    .code-card pre {
+      /* set styles to make it so code wraps in <pre> instead of overflowing */
+      white-space: pre-wrap;
+      overflow: auto;
+      tab-size: 4;
+      padding: 1.2rem 1rem;
+      color: var(--gin);
+      border-radius: 8px;
+      /* use linear-gradient() function to create a fading background  */
+      background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+      );
+      display: flex;
+      align-items: center;
+    }
+    ```
+
+  * 🔑 We can animate HTML elements on a pseudo-class state using the `transition` property:
+
+    ```css
+    .code-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 100%;
+      padding: 2rem;
+      color: var(--heliotrope);
+
+      /* outline is like border, but on the outside of the box instead of inside */
+      outline: 2px dashed var(--gin);
+      outline-offset: -2px;
+      transition: all 0.5s ease-in-out;
+    }
+    ```
+
+  * We create the glowing effect with an inner and outer box shadow:
+
+    ```css
+    .code-card:hover,
+    .code-card:hover .card-header {
+      box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+    }
+    ```
+
+  * We can change the selection color by updating the `::selection` pseudo-element.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What did we use to create the responsive layout?
+
+  * 🙋 flexbox and media queries.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material and stay for office hours to ask for help, but CSS is best learned through a lot of repeated practice.
+
+* Reassure students that CSS is incredibly difficult for even the best web developers and is not something they should feel discouraged by. It requires a ton of patience and trial and error to become proficient in CSS.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * A portfolio is a great way for developers to put themselves out there and demonstrate their skills while having fun. 
+
+  * Your portfolio doesn't need to be fancy, but it should be informative about who you are, what you've done, and how to contact you.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to use HTML and CSS to create a portfolio site.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will use all of our knowledge to date. HTML, CSS, responsive layouts, and Git!
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 As a developer, you need a place to showcase your work to potential employers. Let your work do the talking for you!
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before ending the class.
+
+### 17. FLEX (40 min)
+
+* Feel free to use this time to review any topics covered so far or work on homework.
+
+### 18. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -114,17 +114,10 @@ $(document).ready(function() {
         
         $("#today .card-body").append(uv.append(btn));
       }
+
+      bodyEl.appendChild(uvEl);
+      uvEl.appendChild(buttonEl);
     });
-  }
+}
 
-  // get current history, if any
-  var history = JSON.parse(window.localStorage.getItem("history")) || [];
-
-  if (history.length > 0) {
-    searchWeather(history[history.length-1]);
-  }
-
-  for (var i = 0; i < history.length; i++) {
-    makeRow(history[i]);
-  }
-});
+document.querySelector("#search-button").addEventListener("click", getSearchVal);

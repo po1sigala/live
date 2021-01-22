@@ -1,4 +1,4 @@
-# 01.2 Lesson Plan - Going Pro with HTML/CSS (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
+# 01.2 Lesson Plan - Going Pro with HTML/CSS
 
 ## Overview
 
@@ -383,8 +383,7 @@ Explain that the syntax for the `.clearfix` class may appear strange now, but it
 
 * Complete the last slide of the slide show.
 
-* Make sure all students feel encouraged and that they're motivated to keep going.
-
+* Make sure all students feel encouraged and that they're motivated to keep going. 
 
 ### 22. Group Do: Homework (20 min, or remaining time)
 
