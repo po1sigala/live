@@ -92,7 +92,7 @@ Refer to the Git Guide to review the git concept for this unit.
 
 ### General
 
-* [GitHub API documentation](https://docs.github.com/en/rest/reference)
+* 📖 [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
 * 📖 [OpenWeather API documentation](https://openweathermap.org/api)
 
