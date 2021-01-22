@@ -26,7 +26,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [Career Connection Folder](../../../01-Class-Content/08-Project-1-Contd/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [Career Connection Folder](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
