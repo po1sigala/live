@@ -10,23 +10,23 @@ In this unit, we'll use the `fetch()` method to make requests, parse through the
 
 We'll cover the following topics in this unit:
 
-* Client-server model
+* [MDN Web Docs on Client-Server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
 
-* JSON format
+* [MDN Web Docs on JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-* URLs
+* [MDN Web Docs on URLs](https://developer.mozilla.org/en-US/docs/Web/API/URL)
 
-* HTTP GET requests
+* [MDN Web Docs on HTTP Get](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
 
-* HTTP status codes
+* [MDN Web Docs on HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-* Fetch API
+* [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-* `curl`
+* [Docs on cURL](https://curl.se/docs/httpscripting.html)
 
-* DevTools Network tab
+* [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
 
-* `document.location`
+* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
 
 ## Learning Objectives
 
@@ -86,15 +86,17 @@ Get ready for your first group project! In the next unit, you and your teammates
 
 Here are some additional resources to help solidify the topics covered in this unit:
 
-* [MDN Web Docs on using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+### Git Guide
 
-* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-* [Chrome DevTools tutorial on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network)
+  * 📖 [Git Guide: Git Collaboration](./01-Activities/26-Evr_Git-Collaboration)
+
+### General
 
 * [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
 * [OpenWeather API documentation](https://openweathermap.org/api)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

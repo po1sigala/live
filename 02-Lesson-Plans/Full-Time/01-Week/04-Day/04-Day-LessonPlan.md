@@ -1,4 +1,4 @@
-# XX.X Full-Time Lesson Plan: { @TODO Descriptive and Professional Title of This Day's Topics } (Note: Full-Time Thursday LP using PT even unit's .1/.2 LPs)
+# 01.4 Full-Time Lesson Plan: Pseudo-Resets
 
 ## Overview
 

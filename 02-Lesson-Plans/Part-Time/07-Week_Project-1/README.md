@@ -6,7 +6,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
   * Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-1/README.md) for detailed information on key topics, learning objectives and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
 Some students may complain about group configurations, be sure to remind them of the following:
 
@@ -35,3 +35,6 @@ Project presentations are on the third day of next unit. Remember, students must
 ### Slide Decks
 
   * [07.1: Project unit](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
