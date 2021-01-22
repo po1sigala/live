@@ -68,7 +68,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [Unit 05: Third-Party APIsk](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
 
-* [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
+* [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
 ### Algorithms
 
