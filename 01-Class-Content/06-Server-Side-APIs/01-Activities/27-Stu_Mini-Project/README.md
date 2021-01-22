@@ -73,4 +73,4 @@ Will every result have the same data? If not, how will we handle printing it to 
 * How can we build this application using our knowledge in Git collaboration?
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
