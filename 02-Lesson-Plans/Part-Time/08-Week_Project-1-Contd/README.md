@@ -6,33 +6,23 @@ In this unit students will continue working with their project groups. They will
 
   * Refer to the [Class Content Unit Overview](../../../01-Class-Content/08-Project-1-Contd/README.md) for detailed information on key topics, learning objectives and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-### Algorithms
-
-Throughout the unit, bring each student to the whiteboard one at a time. If there's no whiteboard available, bring the student to a part of the class separate from other students and have them work on the problem on their laptop in front of you -- preferably on a piece of paper or on a computer using notepad or a program without any kind of intellisense.
-
-Explain the problem to the student, show them one or more of the example inputs/outputs provided with the problem. Inform the student that they'll have 10 minutes to complete as much of the problem as possible.
-
-If the student says they're stuck, or goes quiet for up to a minute, offer up a hint. Some are found at the bottom of the Instructions.md file for the problem.
-
-Focus on giving students positive feedback on what they did well. Explain that part of whiteboarding interviews is to see how well they can communicate with the interviewer and that it's possible to do well even without arriving at a correct answer.
-
-### Projects
-
-Make sure to remind students that they should try dealing with merge conflicts and deployment issues as early as possible to avoid broken projects.
-
-## Heads Up
-
-* In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting Unit 09.
+Students will get this time to work on their projects. Be prepared to help students troubleshoot and push their projects over the finish line.
 
 ## Career Connection
 
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/08-Project-1-Contd/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career Services material can be found in their [Career Connection Folder](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
+## Heads-Up
+
+* In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting Unit 09.
+
 ## Helpful Links
+
+This section contains links to the unit's lesson plans, homework, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -42,18 +32,12 @@ If you'd like more information on Career Services, visit the [Career Services re
 
   * [08.3 - Lesson Plan](03-Day/08.3-LESSON-PLAN.md)
 
-### Slide Decks
+## Resources
 
-N/A
+* [Node.js](https://nodejs.org/en/)
 
-### Time Tracker(s)
+* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
-N/A
+* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-## Algorithms
-
-  * [01-reverse-no-build-in](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/01-reverse-no-build-in)
-
-  * [02-reverse-in-place](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/02-reverse-in-place)
-
-  * [03-look-say-sequence](../../../01-Class-Content/08-Project-1-Contd/03-Algorithms/03-look-say-sequence)
+* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)

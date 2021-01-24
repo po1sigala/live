@@ -1,87 +1,123 @@
-# Week 03: jQuery & Server-side APIs
+# Week 03: Third-Party-APIs and Server-side APIs
 
-### Overview
+## Overview
 
-This week we will review JavaScript & jQuery fundamentals, as well as touch on timing events, debugger, and sample interview questions.
+When developers find themselves repeating a task, they tend to look for a way to simplify their workflow. We saw earlier how CSS frameworks were developed to ensure consistency across applications and to expedite developer workflows. Tools with similar goals have emerged in the JavaScript ecosystem. 
 
-Also this week, we will be introducing students to the concept of APIs and the use of AJAX queries to retrieve and parse data in JSON formats. Throughout the week we'll be specifically working with the Giphy, OMDb, and New York Times APIs.
+jQuery is a JavaScript library that simplifies DOM manipulation and event handling. It allows us to write fewer lines of code than we'd need to if we were using plain ol' JavaScript to accomplish the same end. jQuery also provides a number of methods for animations and working with APIs.
 
-### Learning Objectives
+Some argue that jQuery is slowly being phased out and replaced with front-end frameworks such as React. You might not see as many job listings for jQuery developers, but it’s an important skill to master as the library is still widely used in both new and legacy code. 
 
-* By the end of this unit, students will be able to:
-  * Utilize timers to build JavaScript programs that execute functionality at various times.
-  * Utilize web inspector to debug JavaScript and jQuery scripts.
-  * Conceptualize problems and pseudocode a plan to break down and approach complex problems.
-  * Explain how APIs work.
-  * Parse JSON data from remote APIs.
-  * Use AJAX to update web apps with remote content.
-  * Delegate tasks in collaborative settings—data, layout, styling and so on.
+Also this week we will learn the Fetch web API which can data from server-side APIs, like the OpenWeather API.
 
-### Key Topics
+We'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
-* JavaScript / jQuery Review
-  * Looping over array.
-  * Conditional logic.
-  * Querying the DOM.
-  * Modifying the DOM.
-  * Listening to and responding to user events.
+Refer to the following links for detailed information on key topics, learning objectives and homework:
 
-* Timers
-  * Using setInterval to run a function repeatedly at a given interval and setTimeout to delay a function execution by a given time period.
+* [05-Third-Party-APIs](../../../01-Class-Content/05-Third-Party-APIs/README.md)
+* [06-Server-Side-APIs](../../../01-Class-Content/06-Server-Side-APIs/README.md)
 
-* Debuggers
-  * Using chrome debugging tools to pause and step through execution of a program, inspect values, uncover and resolve bugs.
+## Instructor/TA Notes
 
-* Interview Questions
-  * Introduction to common beginner JavaScript algorithm problems.
-  * Pseudo coding to think through problems before implementing solutions.
-  * Whiteboard interviewing practice.
+* In this unit's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
 
-* APIs
-* JSON
-* AJAX
+* Student's will also gain their first exposure to Bootstrap, so be prepared for numerous questions surrounding that. Head over to the [Docs on Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to familiarize yourself.
 
+* Starting this unit, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
 
-### Lesson Plans
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
 
-* [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
-* [3.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
-* [3.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
-* [3.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
-* [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+* Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
-### Homework Activities
+* Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
 
-* [Choose Your Own Trivia Assignment](../../../01-Class-Content/05-timers/02-Homework/Instructions)
-* [Basic Trivia (Demo) {Movie}](https://youtu.be/fBIj8YsA9dk)
-* [Advanced Trivia (Demo) {Movie}](https://youtu.be/xhmmiRmxQ8Q)
-* [Giphy Viewer](../../../01-Class-Content/06-ajax/02-Homework/Instructions/)
-* [Homework Demo](https://youtu.be/BqreERTLjgQ)
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Important/CAREER-CONNECTION.md).
-[Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
+* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
+* [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
 If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
 
-### Helpful Links
+## Heads-Up
 
-* [Eloquent JavaScript](http://eloquentjavascript.net/)
-* [JavaScript Timing Events](http://www.w3schools.com/js/js_timing.asp)
-* [Debug With Breakpoints](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/?hl=en)
-* [AJAX Documentation](http://api.jquery.com/jquery.ajax/)
-* [Giphy API](https://developers.giphy.com/docs/)
-* [OMDb API](http://www.omdbapi.com/)
-* [Open Weather Map API](http://openweathermap.org/api)
-* [New York Times Article API](http://developer.nytimes.com/docs/read/article_search_api_v2)
-* [NYT Activity Video Walkthrough (Highly Recommended)](https://youtu.be/RQTVw6XJAac?list=PLgJ8UgkiorCnCFzNp0dP0zJyeFAgstYTj)
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
-### Slide Shows
+## Helpful Links
 
-* [03.1: jQuery Begins](https://docs.google.com/presentation/d/1NBt77MEEZDhJS9_mYzqgaSLQs8eQNHnd1ay38bKlnHI/edit?usp=sharing)
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+### Lesson Plans
 
-* [03.2: jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
+* [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
 
-* [03.4: Advanced AJAX](https://docs.google.com/presentation/d/12gsOr-L8qMjppsT0aFzZvrm8ZwfvGI1w_EuBnqjAjGY/edit?usp=sharing)
+* [3.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+
+* [3.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+
+* [3.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+
+* [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+
+### Homework
+
+* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
+* [Unit 06 Homework](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
+
+### Slide Decks
+
+* [Unit 05: Third-Party APIs](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
+* [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+
+### Algorithms
+
+Unit 05:
+
+* [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
+
+* [02: Max Num](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/02-max-num)
+
+  * [📹 Let's Code Max Num!](https://2u-20.wistia.com/medias/f9eao2cvjt)
+
+* [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
+
+Unit 06:
+
+* [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
+
+* [02: Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
+
+  * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
+
+* [03: Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
+
+### Resources
+
+* [jQuery API Docs](https://api.jquery.com/)
+
+* [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
+
+* [Bootstrap Docs](https://getbootstrap.com)
+
+* [Google Fonts Docs](https://fonts.google.com)
+
+* [jQuery UI Docs](https://jqueryui.com/demos/)
+
+* [Moment.js Docs](https://momentjs.com/docs/)
+
+* [MDN Web Docs on the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+* [MDN Web Docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+
+* [jQuery API Docs on .ajax()](https://api.jquery.com/jquery.ajax/)
+
+* [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+
+* [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
+
+* [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
+
+* [OpenWeather API documentation](https://openweathermap.org/api)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

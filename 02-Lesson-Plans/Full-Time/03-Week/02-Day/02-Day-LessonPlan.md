@@ -1,342 +1,1180 @@
-# 03.2 Lesson Plan - jQuery Jubilee (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
+# 03.2 Full-Time Lesson Plan: Bootstrap
 
 ## Overview
 
-In this class, we will further students' understanding of DOM Manipulation using jQuery. Towards the end of class, we will also introduce them to the concept of lexical scope.
-
-`Summary: Complete activities 10-15 in Unit 05`
+This class introduces Bootstrap utilities and how to extend Bootstrap. Student's will also learn about Google Fonts. Students will rely heavily on documentation to make use of utility classes and they will customize those pages with Google Fonts and CSS. Students will also implement jQuery UI&mdash;specifically widgets and interactions&mdash;to make a webpage more user-friendly. Students will also learn about formatting dates using Moment.js. Also, `git revert` will be covered today as a part of the continuing education on Git.
 
 ## Instructor Notes
 
-* Today's class is focused on providing students with additional exposure to jQuery for DOM manipulation. As an instructor, your primary focus is to ensure students understand the `10-CaptainPlanetGame` and the `11-FridgeGame`. If you are able to cover lexical scope in depth, consider that a significant bonus. Scope is important, but don't leave people in the dust when it comes to DOM manipulation.
+* In this lesson, students will complete activities `15-Ins_Bootstrap Utilities` through `27-Evr_Git-Revert`.
+
+* The `26-Stu_Moment-Format` activity uses the `Moment.js` library to format dates and time. Let the students know that `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional, which is why we are covering it in class. Feel free to encourage students to explore other options such as [Luxon](https://moment.github.io/luxon/), [Day.js](https://day.js.org/), [date-fns](https://date-fns.org/), and [js-Joda](https://js-joda.github.io/js-joda/).
+
+* Take a few minutes before class to get familiar with both the [Bootstrap](https://getbootstrap.com/) and [Google Fonts](https://fonts.google.com/) documentation, as students will rely heavily on these resources in class and might need a nudge in finding answers.
+
+* Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students might have.
+
+* It's important that students understand that Bootstrap is simply a large stylesheet and that it uses a lot of skills they already have. If students are struggling with certain concepts, try and jog their memory of learning CSS and emphasize the use of DevTools to break down styles being used.
+
+* Reiterate often that, like CSS, using Bootstrap classes and Google Fonts requires a bit of trial and error to achieve the intended design and layout. Encourage students to try using different variations of classes and fonts to become more comfortable with the process and learn more about their personal tastes.
+
+* Emphasize that whenever we use a new library, framework, or technology, it's best that we familiarize ourselves with the documentation as much as possible.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To use jQuery DOM manipulation to create simple games.
+By the end of class students will be able to:
 
-* To gain an initial understanding of lexical scope in JavaScript.
+* Optimize page layouts using Bootstrap's utility classes.
 
-## Slides
+* Customize pages built with Bootstrap to use custom color themes and Google Fonts.
 
-[3.2 jQuery Jubilee](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing)
+* Use jQuery UI widgets to make the webpage more user-friendly.
+
+* Implement jQuery UI interactions to create sortable lists.
+
+* Use Moment.js to calculate time differences.
+
+* Apply the inverse of a commit by using `git revert`.
 
 ## Time Tracker
 
-[3.2 Time Tracker](https://drive.google.com/open?id=1z5r_tPe7Vpszs15neF8i6FJhUR5b70LT)
+| Start  | #   | Activity Name                              | Duration |
+|---     |---  |---                                         |---       |
+| 10:00AM| 1   | Instructor Demo: Bootstrap Utilities       | 0:05     |
+| 10:05AM| 2   | Student Do: Bootstrap Utilities            | 0:15     |
+| 10:20AM| 3   | Instructor Review: Bootstrap Utilities     | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Extend Bootstrap          | 0:05     |
+| 10:35AM| 5   | Student Do: Extend Bootstrap               | 0:15     |
+| 10:50AM| 6   | Instructor Review: Extend Bootstrap        | 0:10     |
+| 11:00AM| 7   | Instructor Demo: Google Fonts              | 0:05     |
+| 11:05AM| 8   | Student Do: Google Fonts                   | 0:15     |
+| 11:20AM| 9   | Instructor Review: Google Fonts            | 0:10     |
+| 11:30AM| 10  | FLEX                                       | 0:30     |
+| 12:00PM| 11  | BREAK                                      | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity             | 0:10     |
+| 12:40PM| 13  | Instructor Demo: jQuery UI Widgets         | 0:05     |
+| 12:45PM| 14  | Student Do: jQuery UI Widgets              | 0:15     |
+| 1:00PM | 15  | Instructor Review: jQuery UI Widgets       | 0:10     |
+| 1:10PM | 16  | Instructor Demo: jQuery UI Interactions    | 0:05     |
+| 1:15PM | 17  | Student Do: jQuery UI Interactions         | 0:15     |
+| 1:30PM | 18  | Instructor Review: jQuery UI Interactions  | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Moment.js Format          | 0:05     |
+| 1:45PM | 20  | Student Do: Moment.js Format               | 0:15     |
+| 2:00PM | 21  | Instructor Review: Moment.js Format        | 0:10     |
+| 2:10PM | 22  | Everyone Do: Git                           | 0:20     |
+| 2:30PM | 23  | END                                        | 0:00     |
 
-- - -
+---
 
-### 1. Students Do: Fridge Game (30 min)
+## Class Instruction
 
-* Open the solution file `11-FridgeGame` in `11-FridgeGame/Solved`, and show students how the application works. In short, the application allows users to click on letters from a menu and have those letters appear on the fridge.
+### 1. Instructor Demo: Bootstrap Utilities (5 min) 
 
-* Then, slack out the below folder and instructions.
+* Welcome students to class.
 
-* **Folder:**
+* Open `15-Ins_Bootstrap-Utilities/index.html` in your browser and demonstrate the following:
 
-  * `Unsolved` in `11-FridgeGame/Unsolved`
+  * 🔑 This is the same page as before, but we use Bootstrap utility classes to add some different colors.
 
-* **Instructions:**
+* Open `15-Ins_Bootstrap-Utilities/index.html` in your IDE and explain the following:
 
-  * Working in groups of 3, complete the code for the fridge activity such that:
+  * 🔑 To achieve this updated design, we simply add in Bootstrap utility classes.
 
-    1. JavaScript dynamically generates buttons for each of the letters on the screen.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    2. Clicking any of the buttons leads the SAME letter to be displayed on the screen.
+  * ☝️ How can we change the color of an HTML element without changing its existing style definition? 
 
-    3. Hitting the clear button erases all of the letters from the fridge.
+  * 🙋 Add another class to it that defines that color style.
 
-  * Note: This is a challenging exercise. You may want one person to type, while the other two watch over to catch bugs and/or research necessary snippets.
+* Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Do: Review Fridge Game (15 min)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Bootstrap-Utilities/README.md`.
 
-* Spend the time necessary to ensure that the majority of students have a conceptual understanding of how the Fridge Game's code works. In explaining the solution, point out the following:
+### 2. Student Do: Bootstrap Utilities (15 min) 
 
-  * The creation of an array that holds all of the letters;
+* Direct students to the activity instructions found in `16-Stu_Bootstrap-Utilities/README.md`.
 
-  * The for loop used to take letters from the array, associate each with a data-attribute and text, and then append them onto the page. Students will be confused about the concepts of `.addClass`, `.attr`, and `.text`. Spend the time necessary to explain each.
+* Break your students into pairs that will work together on this activity.
 
-    ![image-2](Images/2-fridge-1.png)
+  ```md
+  # 📖 Adjust Positioning and Styling on the Page
 
-  * The on-click event needed to capture button clicks. Be sure to point out how we use the data-attribute (via the `.attr` method) to know which letter was clicked. This is a **KEY POINT**.
+  Work with a partner to implement the following user stories:
 
-    ![image-3](Images/2-fridge-2.png)
+  * As a developer, I want to be able to center the form on the page horizontally and vertically using no custom CSS.
 
-* Slack out the solution and the [video review](https://www.youtube.com/watch?v=gC529k3KzmE) for the activity.
+  * As a developer, I want to be able to adjust and add style to the page without writing any custom CSS.
 
-### 3. Instructor Do: Intro Lexical Scope (10 min)
+  ## Acceptance Criteria
 
-* Proceed to the [Lexical Scope slide deck](https://docs.google.com/presentation/d/1OLol2xQemLl4uhvtKg7J3qx6hL4v59UTT9uRxlvfHNs/edit?usp=sharing). Warn students that this section is pretty heavy on theory.
+  * It's done when the main content on the page is centered horizontally and vertically on the page.
 
-* Proceed with basic definitions of scope, using analogies to boxes or other simple concepts when possible. Mention the concept of nested functions -- before moving to the first code dissection. (Students will be dissecting the code example shown in the slides).
+  * It's done when the background color of the page is dark.
 
-### 4. Students Do: Lexical Scope 1 (10 min)
+  * It's done when the background color of the form is white.
 
-* File(s): `13-ScopeOne/Unsolved/index.html`
+  * It's done when the text color of the header on the page is white.
 
-* Instructions
+  ## 📝 Notes
 
-  * Open `Unsolved/index.html` in a browser and then open the console.
+  Refer to the following documentation (look for Utilities in the left navigation menu): 
 
-  * With your neighbor, compare the results in the console to the JavaScript in `index.html` and answer the questions in the comments.
+  [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-  * **HINT**: Read the [MDN docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+  ## Assets
 
-### 5. Instructor Do: Review Lexical Scope 1 (5 min)
+  The following image demonstrates the web application's appearance and functionality:
 
-* Open `13-ScopeOne/Unsolved/index.html` and ask students to answer the questions posed in the comments. The key concept to address is *closures*. Explain the following points:
+  ![A white form is centered on the page with a dark background.](./Images/01-solved-screenshot.png)
 
-  * When the return value of `outside()` is assigned to `insideOut`, a closure is created.
+  ---
 
-  * A closure is an object that contains both a returned function and the environment in which that function was created.
+  ## 💡 Hint
 
-  * The environment consists of any local variables that were available to that function when and where it was declared.
+  * Don't forget to use the previous examples and activities as a guide to how the classes can be used!
 
-  * When we call `insideOut()`, it returns the values stored in `x` and `y` even though those were declared outside `inside()`.
+  ## 🏆 Bonus
 
-* If students have further questions, refer them to the [MDN docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures).  
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-### 6. Students Do: Lexical Scope 2 (5 min)
+  * Using Chrome DevTools, what can you do to make this look more personalized? Try updating some of the more generic styles to use different colors or font sizes.
+  ```
 
-* Proceed with the next activity.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* **File:**
+### 3. Instructor Review: Bootstrap Utilities (10 min) 
 
-  * `lexical-scope-2-unsolved.html` in `14-ScopeTwo`
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* **Instructions:**
+  * ☝️ How comfortable do you feel using Bootstrap utility classes? (Poll via Fist to Five, Slack, or Zoom)
 
-* Take a few moments to dissect the code just sent to you.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Try to predict what will be printed in each of the examples.
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-* Be prepared to share!
+  * ✔️ More single-purpose classes to achieve a result.
 
-* Note: Pay attention to the unusual use of the keyword: ‘this”
+  * ✔️ Change colors to create contrast.
 
-### 7. Instructor Do: Review Lexical Scope 2 (5 min)
+  * ✔️ Proper sizing and spacing goes a long way.
 
-* Proceed with the review. This example may have been more challenging to students, as we introduced the concept of `this` without explanation.
+* Open `16-Stu_Bootstrap-Utilities/Solved/index.html` in your IDE and explain the following: 
 
-* The key takeaway here is that using the keyword `this` will only print content related to the object directly above it, **not** from the grandparent.
+  * 🔑 We can center a page's content vertically and horizontally by making the page have a minimum height set to the height of the page and making it a flexbox:
 
-  ![image-5](Images/3-scope-2.png)
+    ```html
+    <div class="min-vh-100 d-flex align-items-center bg-dark">
+    ```
 
-### 8. Students Do: Lexical Scope 3 (10 min)
+  * 🔑 Bootstrap has a list of preset color classes for backgrounds and text, which can be helpful when we need some contrast on a page.
 
-* Proceed with the next activity.
+  * 🔑 The spacing properties for margin and padding can be extremely useful to create or remove space in areas instead of needing to use custom CSS.
 
-* **Files:**
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * `lexical-scope-3-unsolved.html` in `15-ScopeThree/Unsolved`
+  * ☝️ Which class was used to center the content vertically on the page, `justify-content-center` or `align-items-center`?
 
-* **Instructions:**
+  * 🙋 `align-items-center`, because the term "align" is used when adjusting flexbox elements vertically in a row.
 
-* Take a few moments to dissect the code just sent to you.
+  * ☝️ Where do we think Bootstrap falls a bit short and requires us to build custom styles?
 
-* Try to predict what will be printed in each of the examples.
+  * 🙋 The colors are preset, so we would need to use our own if we wanted to change them.
 
-* Be prepared to share!
+  * ☝️ What can we do if we don't completely understand this?
 
-* Note: Pay attention to the unusual use of the keyword: ‘this”
+  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/), and stay for office hours to ask for help.
 
-### 9. Instructor Do: Review Lexical Scope 3 (5 min)
+* Answer any questions before proceeding to the next activity.
 
-* Try to have students explain the solutions to the last activity back to you.
+### 4. Instructor Demo: Extending Bootstrap (5 min) 
 
-* If no student can, try to explain it yourself using the solution provided. It's okay if you stumble as you explain -- that shows students that this stuff isn't obvious, and that you can be a great developer, even if these nested functions confuse you.
+* Open `17-Ins_Bootstrap-Extend/index.html` in your browser and demonstrate the following:
 
-* Remind students that these are not easy activities. The key is simply for them to become familiar with the fact that JavaScript's handling of parent and nested functions isn't always intuitive, and that errors can arise if you aren't careful.
+  * 🔑 This page is using all Bootstrap components, but with custom colors instead of the default Bootstrap colors.
 
-* Make sure they realize that studying these examples **is not** overly necessary.
+  * 🔑 This is great for when we want to use Bootstrap for handling layout and certain design aspects but still need to provide a custom theme or branding.
 
-### 10. Everyone Do: Brain Teaser (15 min)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* If you have additional time available in class, proceed with this activity [16-ColorCorrector](../../../../01-Class-Content/05-Third-Party-APIs/01-Activities/16-ColorCorrector).
+  * ☝️ How can we add custom CSS styles?
 
-* It's challenging, and will likely take over 40 minutes to complete.  It is not necessary that students finish it.  At best, they may be able to get *started* in class, but will likely need to spend additional time at home if they are interested in completing it.
+  * 🙋 Apply custom classes to the HTML elements and create our own style rules.
 
-* Play it by ear if you'd like to walk through the solution.
+* Answer any questions before proceeding to the next activity.
 
-- - -
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Bootstrap-Extend/README.md`.
+
+### 5. Student Do: Extending Bootstrap (15 min)
+
+* Direct students to the activity instructions found in `18-Stu_Bootstrap-Extend/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗 Add Custom Styles to the Page 
+
+  Work with a partner to implement the following user story:
+
+  * As a user, I want to visit a site that uses a custom color theme and branding.
+
+  ## Acceptance Criteria
+
+  * It's done when the page is not utilizing the generic colors provided by Bootstrap.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![A guestbook webpage features custom colors instead of the built-in colors provided by Bootstrap.](./Images/01-solved-screenshot.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * There is a color theme already available to use in `style.css`, but feel free to use [Adobe Color](https://color.adobe.com/).
+
+  * Don't forget to use the previous example as a guide to how custom styles can be applied with CSS.
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+
+  * What are some other UI frameworks that we could use? 
+
+  To get started, try [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind](https://tailwindcss.com/).
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 6. Instructor Review: Extending Bootstrap (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel customizing Bootstrap with CSS? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ Add our own stylesheet.
+
+  * ✔️ Just add another class to the HTML element.
+
+  * ✔️ Use Bootstrap for layout and spacing but custom CSS for colors and fonts.
+
+* Open `18-Stu_Bootstrap-Extend/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 It's important that the stylesheet's `<link>` comes last in the HTML file, so that the styles aren't overridden.
+
+  * 🔑 We can add our own classes to elements with Bootstrap classes to add custom CSS rules to them.
+
+* Open `18-Stu_Bootstrap-Extend/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 We were able to add custom classes to both existing HTML and any HTML created as a result of the form being submitted:
+
+    ```js
+    var cardName = $('<h5>').addClass('card-header custom-card-header').text(name);
+    ```
+
+* Remind students that Bootstrap is simply a framework with a lot of popular style needs handled for us, but not all. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ If we needed to, could we use our own custom CSS for sizing and layout purposes alongside Bootstrap?
+
+  * 🙋 Yes! But we need to be careful not to use the same class names.
+
+  * ☝️ Do we think it's a good idea to mix Bootstrap and custom CSS?
+
+  * 🙋 Yes, Bootstrap is great for handling a lot of layout needs but looks generic on its own. We can, and should, add as much extra styling as we need to in order to achieve the desired result. If you find yourself making too many overriding styles, though, you might want to consider a different or custom solution.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, check DevTools to determine what styles are needed, and stay for office hours to ask for help. 
+
+* Answer any questions before proceeding to the next demo.
+
+### 7. Instructor Demo: Google Fonts (5 min) 
+
+* Remind students how each computer has a default set of fonts that we can pick from, but over the years some services have emerged to help with providing more options.
+
+* Open `19-Ins_Google-Fonts/index.html` in your browser and demonstrate the following:
+
+  * 🔑 This page uses fonts that aren't native to our computers; they actually come from Google Fonts.
+
+  * 🔑 With the use of web fonts like this, we can add even more customization and branding to an application!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we learn how to use Google Fonts?
+
+  * 🙋 By reading their documentation.
+
+* Navigate to [Google Fonts](https://fonts.google.com) in your browser and walk through the interface.
+
+* Be sure to demonstrate how to select fonts and use the embed code.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Google-Fonts/README.md`.
+
+### 8. Student Do: Google Fonts (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu_Google-Fonts/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+* Let them know this is a bit more open-ended of an activity, and students should feel encouraged to find and implement fonts of their choosing. This is all about learning how to implement web fonts, not necessarily which ones are right. 
+
+  ```md
+  # 📖 Add Custom Font to Page with Google Fonts
+
+  Work with a partner to implement the following user story:
+
+  * As a user, I want to view a customized and well-designed page that uses custom colors and fonts.
+
+  ## Acceptance Criteria
+
+  * It's done when the page's body text uses fonts loaded from Google Fonts and not the default Bootstrap fonts.
+
+  * It's done when the page's headings text uses fonts loaded from Google Fonts and not the default Bootstrap fonts. 
+
+  ## 📝 Notes
+
+  Refer to the following documentation: 
+
+  [Google Fonts](https://fonts.google.com)
+
+  ## 💡 Hints
+
+  * Remember, this is an open-ended activity! Work with your partner to find interesting fonts of your choosing. There is no right or wrong answer to this activity.
+
+  * There are websites that can help you pick fonts if you are overwhelmed by the options. Visit [Typewolf](https://www.typewolf.com/google-fonts) and [FontPair](https://fontpair.co/) for inspiration!
+
+  * Don't forget to use typographic CSS properties to adjust font weights and italics if you need to!
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+
+  * How does Google develop their typography? 
+
+  You can read [Google’s design blog](https://design.google/library/google-fonts/) to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 9. Instructor Review: Google Fonts (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel using Google Fonts? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ We need to start by finding a font or fonts that we want to use.
+
+  * ✔️ Use the `<link>` provided.
+
+  * ✔️ Don't pick too many fonts or , for performance reasons.
+
+* Open `20-Stu_Google-Fonts/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 It's important that we start by finding a font or fonts that we want to use, but not too many variations.
+
+  * 🔑 We need to ensure that the Google Font `<link>` comes before our own custom stylesheet so that the fonts are loaded before we put them to use:
+
+    ```html
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    ```
+
+  * We'll learn more about what the URL in the `href` value means in future lessons. All we need to know for now is that the URL holds the data needed for us to use those fonts in the stylesheet.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Did anyone pick a font that used italics or thin/thick variations? If yes, what CSS properties did you have to use?
+
+  * 🙋 `font-style` for italic, `font-weight` for thin/thick variations.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Google Fonts documentation](https://developers.google.com/fonts/), and stay for office hours to ask for help. Like all things CSS, it's just about putting it to practice. There are also a few links included in the activity's readme to help with picking the right font.
+
+* Answer any questions before proceeding to the end of class.
+
+* Offer encouragement that most of what we learned today builds on things we've learned in the past. The most important thing to remember with third-party libraries is reading the documentation!
+
+### 10. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Ask if students have any questions about the homework.
+
+* Ask the students if there is anything they would like to review from Unit 03 before moving on to Unit 04.
 
 ### 11. BREAK (30 min)
 
-- - -
+### 12. Instructor Do: Stoke Curiosity (10 min)
 
+* Welcome students to class.
 
-### 12. Instructor Do: Motivation + Pulse Check (10 mins) (High)
+* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
 
-* Then, get a gauge of students current understanding by doing a Fist to Five.
+  * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here! 
 
-  * Students will raise their hands and show either a fist (don't understand at all) or five fingers (fully understand).
+  * When we click on Add Project, a modal opens up. When we get to the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
 
-* Then, take a few moments to either respond to the pulse-check -- or simply giving your students a pep talk. It may be a good time to offer students perspective on how quickly they are progressing or the fact that as first-time developers -- they don't need to know "everything". Be creative here. But don't skip this pep talk. Many of your students are likely still feeling pretty defeated because of JavaScript.
+  * After we add a project, we can see how many days are left until the due date.
 
-* Let students know that the first half of the class will be a series of activities that build on their working knowledge of JavaScript scope. The second half (the more important one) will be focused on building a calculator using jQuery.
+  * Datepicker is a jQuery UI widget, and Moment.js calculates the days until the due date. We will learn more about both of these tools today!
 
-### 13. Partners Do: Scope Quiz (10 mins)
+## 13. Instructor Demo: jQuery UI Widgets (5 min) 
 
-* The first activity is intended to point out a common error students make in working with variables. Often, during the first few weeks of class, students instantiate multiple instances of the same variable. This creates unexpected behaviors as JavaScript handles each variable declaration as its own "local instance".
+* Open the [jQuery UI documentation on dialog](https://jqueryui.com/dialog/) in your browser and demonstrate the following:
 
-* Slack out the following file and instructions:
+  * 🔑 jQuery UI offers a combination of interactions, effects, widgets, utilities, and themes designed to work well together or on their own. 
 
-* **File:**
+  * 🔑 The dialog widget is a basic dialog window that opens on top of a page and can be moved, resized, and closed. We can use it to display instructions or announcements on a page.
 
-  * `17-ScopeQuiz` in `17-ScopeQuiz/Unsolved`
+  * 🔑 We can click "view source" to see the code for the widget.
 
-* **Instructions:**
+* Open `21-Ins_jQuery-UI-Widgets/dialog-docs.html` in your IDE and demonstrate the following:
 
-  * Spend a few moments studying the codefile with the person sitting next to you.
+  * Here we see the code for the dialog widget directly copied from the jQuery UI documentation. Let's go through the code and tweak it a bit.
+  
+  * We see the jQuery UI `<link>` tag in the `<head>` section:
 
-  * Then run the program in the browser.
+    ```html
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    ```
 
-  * Once you run the program, you'll find that Code Block 1 leads to different alerts than Code Block 2.
+  * Next there's an imported stylesheet, but let's replace that with our own stylesheet:
 
-  * Ask your partner which Code Block is behaving the way you would expect.
+    ```html
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    ```
 
-  * Then work with your partner to try and identify the specific difference that is causing the issue with the faulty block.
+  * Let's also bring in Bootstrap:
 
-  * Once you spot the issue, try to explain to your partner why JavaScript is handling these Code Blocks differently.
+    ```html
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    ```
 
-### 14. Instructor Do: Review Scope Quiz (5 mins)
+  * We can change the title and add custom content to the `<body>`.
 
-* After giving students a few moments to dissect the code, point out the issue at hand. Specifically, Code Block 2 re-declares the `myVar2` variable inside of the function `a2`.
+  * We see the jQuery UI `<script>` tags at the end of the `<head>` section. But let's move those to the bottom, after the `</body>` tag:
 
-* This creates an issue where JavaScript creates a "local instance" of the variable `myVar2`. This local instance is only observable by the function `a2`. This means the function `b2` does not see the changes being made to the variable. Instead, `b2` refers back to the first declaration of `myVar2` and still thinks the value is equal to 1.
+    ```html
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $('#dialog').dialog();
+      });
+    </script>
+    ```
 
-* Let students know that these scope issues are common sources of bugs for new developers.
+* Open `21-Ins_jQuery-UI-Widgets/index.html` in your IDE and explain the following:
 
-### 15. Partners Do: This Example (10 mins) (High)
+  * After we customize the dialog widget code, the resulting code can be seen in `index.html`.
 
-* Then proceed to the next example. Slack out the following file and example
+  * Notice what the dialog function is doing&mdash;it is looking for an element with an id of `dialog` and applying the `.dialog()` to it. 
+  
+  * We can leave this in the `index.html` file, or we can move it to a `script.js` file.
 
-* **File:**
+* Open `21-Ins_jQuery-UI-Widgets/index.html` in your browser and demonstrate the following:
 
-  * `18-ThisExample` in `18-ThisExample`
+  * After we tweak the code and customize it, here is what it looks like&mdash;we can see the Bootstrap design along with the dialog box on top.
 
-* **Instructions:**
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Using the comments in the guide answer each of the questions asked in the file.
+  * ☝️ How would we build this?
 
-  * Focus your attention on trying to wrap your mind around the concept of "this" and the unique role it can play in code.
+  * 🙋 We would need to read the jQuery UI documentation to figure out how to apply the widgets to the existing page.
 
-  * Then try to explain to your partner how "this" works, focus on the first three examples.
+* Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Do: Review This Example (10 mins) (low)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_jQuery-UI-Widgets/README.md`.
 
-* Go over the solution to this example by explaining the answers to each of the questions `this-solved.html`.
+### 14. Student Do: jQuery UI Widgets (15 min)
 
-* Don't worry about the bonuses. These may confuse the bulk of your students. The key thing to explain is that the keyword `this` refers to the object it falls inside of. Most of the time, `this` is a good way to be self-referencing. (You can leave it at that. Your more advanced students will dig deeper, but don't overwhelm your average student).
+* Direct students to the activity instructions found in `22-Stu_jQuery-UI-Widgets/README.md`.
 
-### 17. Students Do: Cobwebs (10 mins) (low)
+* Break your students into pairs that will work together on this activity.
 
-* Proceed with the next example.
+```md
+# 📖 Enhance UI with jQuery UI Widgets
 
-* This example, simply asks students to become more familiar with deeply nested JavaScript Objects, which they will be immersed in during Week 6.
+Work with a partner to implement the following user stories:
 
-* For some of your students, this will be an enlightening exercise. For others, this will be very basic.
+* As a user, I want to easily choose a skill from a list to use in the form.
 
-* For the students in need of an extra challenge, a very difficult bonus is included. The solution is included; students will likely need to continue working on this bonus for days after class.
+* As a user, I want to easily select a date from a datepicker instead of writing it out manually.
 
-* Slack out the following file and instructions.
+## Acceptance Criteria
 
-* **File:**
+* It's done when the form input for entering a skill has an autocomplete feature added to it, to pick from a list of skills.
 
-  * `cobweb-starter.html` in `19-Cobweb`
+* It's done when the form input for entering a date has a datepicker feature added to it, to select by month and year.
 
-* **Instructions:**
+## 📝 Notes
 
-* Create the missing the code such that you can retrieve the requested item from the `theCobWeb` object.
+Refer to the following documentation: 
 
-* Note: This exercise is actually very relevant to work as a web developer, as data is often relayed across websites in the form of deeply nested JavaScript objects like this one.
+[jQuery UI demos](https://jqueryui.com/demos/)
 
-* Bonus: If you finish early, begin pondering the bonus item. This is a **very** challenging exercise. It's impossible to complete in the allotted time. If you're feeling valiant - complete it outside of class and come back to instructors/TAs to go over it. This will arm you for difficult interview questions in the future.
+## 💡 Hints
 
-### 18. Instructor Do: Review Cobwebs (10 mins)
+* You will need to add an array of skills to use with the autocomplete widget (for example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`). 
 
-* Go over the solution. In this case, feel encouraged to have students come up to the front and type out the code themselves.
+* Look for "Display month & year menus" in the list of examples on the datepicker widget page of the jQuery UI documentation.
 
-* The solution involves referencing each parent object.
+## 🏆 Bonus
 
-* Don't go over the bonus! It's too much. Do it after class during office hours.
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
 
-### 19. Instructor Do: Intro Calculator + Group Formation (10 mins) (High)
+* What built-in HTML feature can also help enforce a date? 
 
-* At this point, proceed to form groups for the calculator activity.
+Use [Google](https://www.google.com) or another search engine to answer this.
+```
 
-* In this case, have students form groups of 3-4 of their own choosing, but ensure that each group includes at least one member from the other section.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Once students are in their groups, open the file: `jQueryCalculator.html` in the browser. Show students how the application works by pressing various buttons and computing the results.
+### 15. Instructor Review: jQuery UI Widgets (10 min) 
 
-* Point out that this is a challenging exercise that will require the entire group to work together.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Encourage students to work in pairs
+  * ☝️ How comfortable do you feel with jQuery UI widgets? (Poll via Fist to Five, Slack, or Zoom)
 
-* Once all students are situated, slack out the following file and instructions.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* **File:**
-  * `jquery-calculator.html` in `20-jQueryCalculator/Unsolved`
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-* **Instructions:**
-  * Create the JavaScript logic necessary to add functionality to the jQuery Calculator.
+  * ✔️ jQuery UI `<link>` and `<script>` tags
 
-  * Your calculator should be able to handle basic mathematical operations like addition, subtraction, multiplication, etc.
+  * ✔️ Autocomplete widget
 
-  * You should be making use of the existing buttons.
+  * ✔️ Datepicker widget
 
-  * You should be making use of the existing placeholders for entering content (i.e. "firstNumber", "operator", "secondNumber", "result").
+* Open `22-Stu_jQuery-UI-Widgets/Solved/index.html` in your IDE and explain the following: 
 
-  * You should have fun and push yourselves! This is a challenge activity—which means, if you get it done, you are a King of jQuery. If you don't, no sweat. The important thing is that you learned at least a FEW things along the way.
+  * 🔑 First, we bring in the jQuery UI `<link>` tag and put it in the `<head>`:
 
-* **Instructor/TAs:** At this time, you may want to let students know about the 1:1 option available during the exercise. Describe these "catch-up" sessions as being "crash-courses" intended to help students go over the basics. Alternatively, if you already have a good idea of which students need the catch-up sessions, avoid making the announcement completely, and simply invite those students to take advantage of the time.
+    ```html
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />    
+    ```
 
-### 20. Everyone Do: Phase 1: Getting Situated + Pseudocoding Stage (20 mins)
+  * 🔑 We also bring in the jQuery UI `<script>` tag and put it below the `</body>`:
 
-* Throughout the activity, you will be offering minimal suggestions about how students should be proceeding and focusing their time.
+    ```html
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+    ```
 
-* Slack the below objectives:
+  * Notice that we are using a separate file for the JavaScript. Let's open that now.
 
-* **Phase I Objectives**
+* Open `22-Stu_jQuery-UI-Widgets/Solved/assets/js/script.js` in your IDE and explain the following: 
 
-  * For this first 20 minutes, your goals should be to:
+  * We see functions for printing the skills onto the page and handling the form submit. 
 
-    * Become familiar with the various elements of the HTML page as it is written now. (Identify the classes and IDs that matter!)
+  * 🔑 If we look at the [jQuery UI documentation on autocomplete](https://jqueryui.com/autocomplete/), we see that we need to create an array for the `.autocomplete()` function to find and select from. Everyone's array of skills will be different but will look something like the following example:
 
-    * Create a general strategy for how you will accomplish the task:
+    ```js
+    // Autocomplete widget
+    $(function () {
+      var skillNames = [
+        'Bootstrap',
+        'C',
+        'C++',
+        'CSS',
+        'Express.js',
+        'Git',
+        'HTML',
+        'Java',
+        'JavaScript',
+        'jQuery',
+        'JSON',
+        'MySQL',
+        'Node.js',
+        'NoSQL',
+        'PHP',
+        'Python',
+        'React',
+        'Ruby',
+      ];
+    ```
 
-      * How will you capture button clicks?
-      * What will you do with the numbers clicked?
-      * What will you do when the operator is clicked?
-      * How will you differentiate numbers from operators?
-      * How will you know the "value" of a number clicked?
-      * How will you know when a user is done entering the first number?
-      * Etc.
+  * Then we look for the element that has an id of `skill-name` (which in this case is the `<input>` element) and apply the `.autocomplete()` function to it. It will check if what is being typed is one of the values of the `skillNames` array that we just created:
 
-    * Create a few test "on-click" events. These could just trigger Alert messages for now. If you get further along, then have these buttons alert their "value".
+    ```js
+    $('#skill-name').autocomplete({
+      source: skillNames,
+    });
+    ```
 
-### 21. Everyone Do: Phase 2: Begin Logic (35 mins)
+  * 🔑 If we look at the [jQuery UI documentation on datepicker](https://jqueryui.com/datepicker/), we see that we have a lot of choices in terms of customizing it. For the purposes of this activity, we want to show the month and year in drop-downs in place of the static month/year header. 
+  
+  * So we look for the ["Display month & year menus" option](https://jqueryui.com/datepicker/#dropdown-month-year) and apply the additional Boolean options:
 
-* Slack the below objectives:
+    ```js
+    // Datepicker widget
+    $(function () {
+      $('#datepicker').datepicker({
+        changeMonth: true,
+        changeYear: true,
+      });
+    });
+    ```
 
-* **Phase II Objectives**
+* Open `22-Stu_jQuery-UI-Widgets/Solved/index.html` in your browser and demonstrate the following:
 
-  * For the next 30 minutes, your goals should be to:
+  * We see a Skills Form; when we start typing a skill name, we can see it will autocomplete it for us.
 
-    * Begin creating sets of variables that you think you will need. As a few suggestions:
+  * Then when we are choosing the date, we can see that the calendar allows us to choose the month and year as a drop-down.
 
-      * firstNumber, secondNumber, operator, result
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Create code that captures the numbers from button clicks, and then displays them on the HTML.
+  * ☝️ Can you think of other uses for the autocomplete or datepicker widgets?
 
-    * Create code that captures an operator click, then immediately tells your code to begin recording the second number. (Example: If a user clicks the "plus" button, you know they are done typing the first number).
+  * 🙋 We could use the autocomplete widget for entering the state field for an address. Or we could use the datepicker widget when making an appointment.
 
-    * Create code that checks which operator the user has clicked, then saves this operator for later use in a conditional statement. (Example: If a user clicks the "plus" button, you know you will need to be adding two numbers. If a user clicks the "minus" button, you will need to be subtracting two numbers. Think: if-else statements!)
+  * ☝️ What can we do if we don't completely understand this?
 
-### 22. End
+  * 🙋 We can refer to supplemental material, review the [jQuery UI demos](https:\//jqueryui.com/demos/), and stay for office hours to ask for help.
 
-### Lesson Plan Feedback
+* Answer any questions before proceeding to the next activity.
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+## 16. Instructor Demo: jQuery UI Interactions (5 min) 
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+* Open the [jQuery UI documentation on sortable](https://jqueryui.com/sortable/) in your browser and demonstrate the following:
+
+  * 🔑 Interactions add basic mouse-based behaviors to any element. We can drag and drop items or sort items in a list. 
+
+  * 🔑 The sortable interaction allows the user to reorder elements in a list or grid using the cursor. Let's try that now!
+
+* Open `23-Ins_jQuery_UI_Interactions/sortable-docs.html` in your IDE and demonstrate the following:
+
+  * Here we see the code for the sortable interaction taken straight from the jQuery documentation. Let's go through the code and customize it.
+
+  * Again, let's clean up the `<head>` section by changing the `<title>`, importing our own custom stylesheet, moving the `<style>` code to that stylesheet, and moving the `<script>` tags down to the bottom of the page:
+
+    ```html
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Changed title -->
+      <title>jQuery UI Sortable</title>
+      <link
+        rel="stylesheet"
+        href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      />
+      <!-- Imported our own custom stylesheet -->
+      <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    ```
+
+  * In the `<body>` let's make a list of skills that we will learn through this course. Can you name some skills that you look forward to learning? 
+  
+    * Take answers from the students and use them in the following example:
+
+      ```html
+      <body>
+        <h1>jQuery UI Interactions - Sortable</h1>
+        <h2>What are you most excited to learn more about?</h2>
+        <div>
+          <ul id="sortable">
+            <li class="ui-state-default">
+              Node.js
+            </li>
+            <li class="ui-state-default">
+              HTML
+            </li>
+            <li class="ui-state-default">
+              MySQL
+            </li>
+            <li class="ui-state-default">
+              Express.js
+            </li>
+            <li class="ui-state-default">
+              NoSQL
+            </li>
+            <li class="ui-state-default">
+              React
+            </li>
+            <li class="ui-state-default">
+              JavaScript
+            </li>
+          </ul>
+        </div>
+      </body>
+      ``` 
+
+* Open `23-Ins_jQuery_UI_Interactions/index.html` in your IDE and explain the following:
+
+  * After we customize the sortable interaction code, the resulting code can be seen in `index.html`.
+
+  * Notice what the sortable function is doing&mdash;it is looking for an element with an id of `sortable` and applying the `.sortable()` function to it. Right afterwards, it will `.disableSelect()`:
+  
+    ```html
+    <script>
+      $(function () {
+        $('#sortable').sortable();
+        $('#sortable').disableSelection();
+      });
+    </script>
+    ```
+
+  * Again, we can leave this in the `index.html` file, or we can move it to a `script.js` file.
+
+* Open `23-Ins_jQuery_UI_Interactions/index.html` in your browser and demonstrate the following:
+
+  * Here we see the list of skills that we are most excited to learn more about. 
+  
+  * We can order them any way we want, by dragging them up and down the list.
+
+* Ask the class the following question (☝️) and call on students for the answer (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We will need to read the jQuery UI documentation to figure out how to apply the interaction we want to the existing page.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_jQuery-UI-Interactions/README.md`.
+
+### 17. Student Do: jQuery UI Interactions (15 min) 
+
+* Direct students to the activity instructions found in `24-Stu_jQuery-UI-Interactions/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+```md
+# 📖 Implement a Sortable List with Drag and Drop
+
+Work with a partner to implement the following user story:
+
+* As a user, I want to be able to sort my list of skills using the cursor to drag and drop them.
+
+## Acceptance Criteria
+
+* It's done when the list of skills can be reorganized and sorted using drag-and-drop functionality.
+
+* It's done when a placeholder is filling empty space.
+
+## 📝 Notes
+
+Refer to the following documentation: 
+
+[jQuery UI demos](https://jqueryui.com/demos/)
+
+## 💡 Hint
+
+* Think about which interaction will allow a user to drag an element to a new spot on the list.
+
+## 🏆 Bonus
+
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+* Can we implement drag-and-drop functionality without jQuery? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 18. Instructor Review: jQuery UI Interactions (10 min) 
+
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with jQuery UI interactions? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ Sortable interaction
+
+  * ✔️ `placeholder` option
+
+* Open `24-Stu_jQuery-UI-Interactions/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * According to the [jQuery UI documentation on sortable](https://jqueryui.com/sortable), to allow the user to drag and reorder the skills listed under List of Skills, we need to use the sortable interaction.
+
+  * 🔑 We look for the element that has an id of `skills-list`, which is the List of Skills that will get populated by the user, and apply the `.sortable()` function to it:
+
+    ```js
+    $(function () {
+      $('#skills-list').sortable();
+      $('#skills-list').disableSelection();
+    });
+    ```
+
+  * 🔑 However, we also want to add the option of seeing the whitespace between the items shifting. According to the ["Drop placeholder" option](https://jqueryui.com/sortable/#placeholder), we can do just that:
+
+    ```js
+    $(function () {
+      $('#skills-list').sortable({
+        placeholder: 'ui-state-highlight',
+      });
+        $('#skills-list').disableSelection();
+    });
+    ```
+
+* Open `24-Stu_jQuery-UI-Interactions/Solved/index.html` in your browser and demonstrate the following:
+
+  * We see the same Skills Form as the previous activity. Let's go ahead and add some skills to the List of Skills.
+
+  * Now when we want to order the list, we can drag and drop the skills, and we see a yellow placeholder box underneath.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between the sortable interaction and the draggable and droppable interactions?
+
+  * 🙋 The draggable interaction allows you to move an item anywhere on the screen. The droppable interaction is similar, but you need to drag the item and drop it on a target.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, review the [jQuery UI demos](https://jqueryui.com/demos/), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 19. Instructor Demo: Moment.js Format (5 min) 
+
+* Open the [Moment.js documentation on format](https://momentjs.com/docs/#/displaying/) in your browser and explain the following:
+
+  * `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional and widely used, which is why we are covering it in this activity. But feel free to explore other options!
+
+  * 🔑 We use `moment().format()` to format dates and times. We can format the date and time in many ways.
+
+* Open `25-Ins_Moment-Format/index.html` in your browser and demonstrate the following:
+
+  * 🔑 We see questions about the date and time, and they are answered according to the current date and time.
+
+* Open `25-Ins_Moment-Format/index.html` in your IDE and observe the following:
+
+  * Here we only see the questions printed to the screen. The answers were calculated in `script.js`.
+
+* Open `25-Ins_Moment-Format/assets/js/script.js` in your IDE and explain the following:
+
+  * First we need to create a Moment object for today. We will use this in all of the answers. We can do so with the following code:
+
+    ```js
+    var today = moment();
+    ```
+
+  * For the answer to the first question, we format the moment object `today` to use `MM Do, YYYY` format: 
+
+  ```js
+    $("#1a").text(today.format("MMM Do, YYYY"));
+    ```
+
+  * For the second question, we format `today` to say which day of the week it is using `dddd`:
+
+    ```js
+    var dayWeek = today.format("[Today is] dddd")
+    $("#2a").text(dayWeek);
+    ```
+
+  * For the third question, we parse the 11/3/2020 and reformat it into `dddd, MMMM Do YYYY, h:mm:ss a` format:
+
+    ```js
+    var reformatDate = moment("11/3/20", "MM-DD-YY").format("dddd, MMMM Do YYYY, h:mm:ss a");
+    $("#3a").text(reformatDate);
+    ```
+
+  * Lastly, we determine what week of the year we fall on right now, and use a `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
+
+    ```js
+    var weekNum = today.format("w");
+    var takeOut;
+    // Check odd, then assign boolean
+    if(weekNum % 2) {
+      takeOut = true;
+    } else {
+      takeOut = false;
+    }
+
+    $("#4a").text(takeOut + ", because it's currently week " + weekNum);
+    ```
+  
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We will need to read the Moment.js documentation to figure out how to use Moment.js to format the date and time. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
+
+### 20. Student Do: Moment.js Format (15 min) 
+
+* Direct students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+```md
+# 📖 Create Solutions to the Date Quiz
+
+Work with a partner to implement the following user story:
+
+* As a user, I want to be able to view the correct answers to multiple questions about dates and time.
+
+## Acceptance Criteria
+
+* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
+
+## 📝 Notes
+
+Refer to the following documentation: 
+
+[Moment.js Docs](https://momentjs.com/docs/#/displaying/)
+
+**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this unit.
+
+## 💡 Hints
+
+* Refer to the official [Moment.js docs on parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
+
+* Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
+
+* Save often and check [index.html](Unsolved/index.html) in your browser to see your progress.
+
+## 🏆 Bonus
+
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+  
+* How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
+```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 21. Instructor Review: Moment.js Format (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with Moment.js? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ Formatting given date
+
+  * ✔️ Formatting current date
+
+  * ✔️ Formatting Unix timestamp
+
+* Open `26-Stu_Moment-Format/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 The first two questions require us to format a given date. We parse the date that needs to be reformatted and then specify how we want to display the date. We could've used any date for the graduation date. The code will look something like the following example:
+
+    ```js
+    var gradDate = moment("2021-06-15").format("MMM Do, YYYY");
+
+    var weekDay = moment("1-1-2022", "M-D-YYYY").format("ddd MMM Do, YYYY");
+    ```
+
+  * 🔑 The next questions require us to format the current date and time. We use `moment()` for the current date and time, then specify how we want to display it:
+
+    ```js
+    var dayYear = moment().format("DDD");
+
+    var time = moment().format("hh:mm:ss");
+
+    var unix = moment().format("X");
+    ```
+
+  * For the last question, we had to parse the Unix timestamp and convert it to date and time:
+
+    ```js
+    var unixFormat = moment.unix(1318781876).format("MMM Do, YYYY, hh:mm:ss");
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we add words other than the formatted date to be displayed on the screen?
+
+  * 🙋 We can use `[]` brackets. For example, if today is Saturday, then `moment().format("[Today is] dddd")` will display the full string "Today is Saturday".
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Moment.js Documentation](https://momentjs.com/docs/), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Revert/README.md`.
+
+## 22. Everyone Do: Git (20 min)
+
+* Open the [Git documentation on git revert](https://git-scm.com/docs/git-revert) in your browser and explain the following:
+
+  * As you work with your teammates on projects and other collaborative assignments, there will be times when you might wish that you could undo a commit. 	  
+  
+  * `git revert` isn't exactly an undo operation, but it will figure out how to invert the changes introduced by the commit and then append a new commit with the resulting inverse content. This way you are not losing any history, which is very important for the integrity of your revision history and for reliable collaboration with others.
+  
+  * Let's say that you are working with your classmates on a project and you are trying to fix a bug. You find out that the bug was caused by a single commit. You can use `git revert` to go fix it and commit a new snapshot. 
+
+* Direct students to the activity instructions found in `27-Evr_Git-Revert/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. This is a good way for your team to prioritize students that need extra help.
+
+* If necessary, you can review the activity with students. 
+
+* Open your command line, create a new directory, `cd` into it, and initialize a Git repo there:
+
+  ```bash
+  mkdir git_revert_demo
+  cd git_revert_demo
+  git init .
+  ```
+
+* Open the `git_revert_demo` directory in your IDE and copy the `27-Evr_Git-Revert/script.js` file into it.
+
+* Let students know that we are taking the `script.js` file from the jQuery UI activity. 
+
+  * Before we test out the `git revert` command, we will need to make a few commits. Let's make the initial commit as follows:
+
+    ```bash
+    git add .
+    git commit -m 'initial commit'
+    ```
+
+  * Then we'll add the autocomplete widget to `script.js`:
+
+    ```js
+    // Autocomplete widget
+    $(function () {
+      var skillNames = [
+        'Bootstrap',
+        'C',
+        'C++',
+        'CSS',
+        'Express.js',
+        'Git',
+        'HTML',
+        'Java',
+        'JavaScript',
+        'jQuery',
+        'JSON',
+        'MySQL',
+        'Node.js',
+        'NoSQL',
+        'PHP',
+        'Python',
+        'React',
+        'Ruby',
+      ];
+      $('#skill-name').autocomplete({
+        source: skillNames,
+      });
+    });
+    ```
+
+  * Then we commit the new code:
+
+    ```bash
+    git add .
+    git commit -m 'added Autocomplete widget'
+    ```
+
+  * We'll add the datepicker widget:
+
+    ```js
+    // Datepicker widget
+    $(function () {
+      $('#datepicker').datepicker({
+        changeMonth: true,
+        changeYear: true,
+      });
+    });
+    ```
+
+  * We commit the new code:
+
+    ```bash
+    git add .
+    git commit -m 'added Datepicker widget'
+    ```
+
+  * Lastly, we'll add the sortable interaction:
+
+    ```js
+    // Sortable interaction
+    $(function () {
+      $('#skills-list').sortable({
+        placeholder: 'ui-state-highlight',
+      });
+      $('#skills-list').disableSelection();
+    });
+    ```
+
+  * We commit again:
+
+      ```bash
+      git add .
+      git commit -m 'added Sortable interaction'
+      ```
+
+* Enter `git log` into your terminal to display the commit history for students.
+
+  * 🔑 We see all four commits when we invoke `git log`. We can use `git revert <commit hash>` to revert back to before we made the commit that matches the commit hash.
+
+* Copy the most recent commit hash from the log of commits in your terminal.
+
+  * 🔑 Once we find the correct commit hash, we can copy the commit hash and use it in the git command, `git revert <commit hash>`. It should look something like this:
+
+    ```bash
+    git revert 601e2affb5fca3addd898cb09ef950c562338823
+    ```
+
+  * This will create a new commit, which will open the commit message editor prompting for a new commit message. 
+  
+* Demonstrate to students how to `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
+
+* Open `script.js` in your IDE:
+
+  * When we check the `script.js` file, we see that the sortable interaction is indeed gone. 
+
+* Run `git log` in your terminal and demonstrate the following:
+
+  * We see that have a record of all the commits in the project history.
+
+  * 🔑 We can also pass in `HEAD` instead of the commit hash, which will instead revert the latest commit:
+
+    ```bash
+    git revert HEAD
+    ```
+
+  * This action creates another new commit, which will again open the commit message editor prompting for a new commit message. We can press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
+
+* Run `git log` in your terminal and demonstrate the following:
+
+  * When we run `git log`, we can see the automatically generated commit messages for both of our revert commands.
+
+* Answer any questions before ending the class.
+
+### 23. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

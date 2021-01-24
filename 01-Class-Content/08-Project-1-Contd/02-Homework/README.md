@@ -18,7 +18,7 @@ If you are opting out of career services, this is _still a required assignment_.
 
 | Requirement      | Weight |
 | ---------------- | ------ |
-| Portoflio        | 40%    |
+| Portfolio        | 40%    |
 | GitHub Profile   | 40%    |
 | Resume           | 10%    |
 | LinkedIn Profile | 10%    |
@@ -139,4 +139,4 @@ If you are a job-seeking student, then getting yourself marked as employer-ready
 So if you're going to be looking for a job at the end of your boot camp, go ahead and submit these updated items to your Career Materials Advisor (formerly Profile Coach) via BootCampSpot.
 
 ---
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

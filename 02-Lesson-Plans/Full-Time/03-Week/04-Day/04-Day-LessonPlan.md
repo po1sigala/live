@@ -1,367 +1,963 @@
-# 03.4 Lesson Plan - APIs and Advanced AJAX (10:00 AM) <!--links--> &nbsp; [⬅️](../03-Day/03-Day-LessonPlan.md) &nbsp; [➡️](../05-Day/05-Day-LessonPlan.md)
+# 03.4 Full-Time Lesson Plan: Server-side APIs
 
 ## Overview
 
-In this class, students will be building upon their knowledge of AJAX to retrieve data via the OMDb api and display data onto an HTML page.
-
-`Summary: Complete activities 5-11 in Unit 6`
+* Most of today's activities pick up where you left off last time, using `fetch()` with the GitHub API. You will also introduce students to the Chrome DevTools Network tab, the `response` object, and the `document.location` Web API method.
 
 ## Instructor Notes
 
-* Use the slideshow as an initial starting point for your conversation on APIs. Make sure that students see the power of APIs and understand how APIs provide a link between front-end (what they've learned so far) and backend (what they will soon be learning).
+* In this lesson, students will complete activities `09-Ins_Demo_Dynamic` through `20-Stu_Documentation_Location`.
 
-* Today's activities will feel pretty challenging and confusing to the majority of your students. Use your best judgment and adjust as necessary. If you need to cut the Bands In Town exercise by all means do so. Offer ample support and let students know that things will "click" eventually -- even if it doesn't quite click just yet.
+* Before class, be sure to read over the activities and try to anticipate any questions that students might have. Take a few minutes to familiarize yourself with the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) and the [Google documentation on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network).
 
-* Today's Weather in Bujumbura Activity will require students to use an API key from [OpenWeatherMap API](http://openweathermap.org/api). Please have them apply for one before class starts in order to have it approved and activated in time for the activity. 
+* Remind students throughout class that all of this will get easier as they gain familiarity with the GitHub API documentation and using `fetch()`.
 
-## Class Objectives
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* To solidify understanding of APIs, JSONs, and their roles in full-stack web development
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* To increase comfort working with APIs and AJAX calls in data-rich applications  
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-## Slides
+## Learning Objectives
 
-[3.4 Advanced AJAX](https://docs.google.com/presentation/d/12gsOr-L8qMjppsT0aFzZvrm8ZwfvGI1w_EuBnqjAjGY/edit?usp=sharing)
+By the end of class, students will be able to:
+
+* Use the Chrome DevTools Network tab.
+
+* Implement and use the `Response` object from a `fetch()` request.
+
+* Implement deconstructed parameters in an API request URL.
+
+* Implement `fetch()` options for a `fetch()` request.
+
+* Use `document.location` to replace the URL in the browser.
 
 ## Time Tracker
 
-[3.4 Time Tracker](https://drive.google.com/open?id=15HUVqK-u2qIJT7hXgAIJKNScNyipzlzY)
+| Start  | #   | Activity Name                                | Duration |
+|---     |---  |---                                           |---       |
+| 10:00AM| 1   | Instructor Demo: Generate Dynamic Elements   | 0:05     |
+| 10:05AM| 2   | Student Do: Generate Dynamic Elements        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Generate Dynamic Elements | 0:10     |
+| 10:30AM| 4   | Instructor Do: Stoke Curiosity               | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Network Activity Tab        | 0:05     |
+| 10:45AM| 6   | Student Do: Network Activity Tab             | 0:15     |
+| 11:00AM| 7   | Instructor Review: Network Activity Tab      | 0:10     |
+| 11:10AM| 8   | Instructor Demo: fetch() Status              | 0:05     |
+| 11:15AM| 9   | Student Do: fetch() Status                   | 0:15     |
+| 11:30AM| 10  | Instructor Review: fetch() Status            | 0:10     |
+| 11:40AM| 11  | FLEX                                         | 0:20     |
+| 12:00PM| 12  | BREAK                                        | 0:30     |
+| 12:30PM| 13  | Instructor Demo:Deconstruct Parameters       | 0:05     |
+| 12:35PM| 14  | Student Do:Deconstruct Parameters            | 0:15     |
+| 12:50PM| 15  | Instructor Review: Deconstruct Parameters    | 0:10     |
+| 1:00PM | 16  | Instructor Demo: fetch() Options             | 0:05     |
+| 1:05PM | 17  | Student Do: fetch() Options                  | 0:15     |
+| 1:20PM | 18  | Instructor Review: fetch() Options           | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Document Location           | 0:05     |
+| 1:35PM | 20  | Student Do: Document Location                | 0:15     |
+| 1:50PM | 21  | Instructor Review: Document Location         | 0:10     |
+| 2:00PM | 22  | FLEX                                         | 0:30     |
+| 2:30PM | 23  | END                                          | 0:00     |
+  
+---
 
-- - -
+## Class Instruction
 
-### 1. Students Do: AJAX to HTML Activity (15 mins)
+### 1. Instructor Demo: Generate Dynamic Elements (5 min)
 
-* Confirm that students were able to successfully log the JSON.
+* Welcome students to class.
 
-* Then open the file [03-AJAX_to_HTML/Solved/ajax-to-html.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/03-AJAX_to_HTML/Solved/ajax-to-html.html) in your browser. Show students that, in this application, the web page has rendered the contents of the API into the HTML.
+* Open `09-Ins_Demo_Dynamic/index.html` in your browser and demonstrate the following:
 
-![12-HTMLTable](Images/12-HTMLTable.png)
+  * 🔑 When we press the Click Me button, the page is populated with dynamically generated HTML.
 
-* Then slack out the following files and instructions to students.
+  * 🔑 We see a list of the last five issues from the Node.js repo, along with the users who posted them.
 
-* **Folder:**
+* Open `09-Ins_Demo_Dynamic/assets/js/script.js` in your IDE and explain the following.
 
-  * [03-AJAX_to_HTML/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/03-AJAX_to_HTML/Unsolved)
+  * We first grab the root elements we will append to later, shown in the following code:
 
-* **Instructions:**
+    ```js
+    var issueContainer = document.getElementById('issues');
+    var fetchButton = document.getElementById('fetch-button');
+    ```
 
-  * Using `3-ajax-to-html.html` as a starting point, fill up the HTML table with information about your own favorite movies.
+  * We make the `fetch()` request and then loop through the data. When we loop, we create new HTML elements, give them the content of the response, and append them to the page, as follows:
 
-  * HINT: You will need multiple AJAX Calls
+    ```js
+    var userName = document.createElement('h3');
+    var issueBody = document.createElement('p');
+    userName.textContent = data[i].user.login;
+    issueBody.textContent = data[i].body;
+    issueContainer.append(userName);
+    issueContainer.append(issueBody);  
+    ```
 
-  * BONUS: Once you've completed the basic activity, refactor your solution to be more DRY by placing repetitive logic inside of functions to be called when needed.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 2. Instructor Do: Review AJAX to HTML Activity (5 mins)
+  * ☝️ Can this all be done without a third-party library?
 
-* Review the solution to the previous activity [03-AJAX_to_HTML/Solved/ajax-to-html.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/03-AJAX_to_HTML/Solved/ajax-to-html.html).
+  * 🙋 Yes! `fetch()` and other features of vanilla JavaScript will allow us to achieve this.
 
-* Point out that we can use jQuery to paste the specific properties retrieved in the JSON directly into our HTML.
+  * ☝️ How is this useful?
 
-* Ask students why we put the code we want to execute after the AJAX call is complete inside the .then promise function?   
+  * 🙋 It allows us to display the API responses on a webpage&mdash;dynamically!
 
-* Be sure to mention that because AJAX is asynchronous, this guarantees response is ready when we try and use it.
+  * ☝️ How would we build this?
 
-![13-HTMLTableCode](Images/13-HTMLTableCode.png)
+  * 🙋 We would loop over the data provided by the `fetch()` response. On each loop, we create an HTML element, give it the content of the response, and append it to the page.
 
-* Take a moment to go over the bonus solution and demonstrate how we can place repetitive logic inside of functions. This helps make our code easier to understand and reduces the number of lines of code we need to maintain and debug.
+* Let students know that they only need to generate the dynamic elements; the `fetch()` request has been provided for them in this upcoming activity.
 
-* Take any questions that may still exist on this activity.
+* Answer any questions before proceeding to the next activity.
 
-### 3. Partners Do: Giphy Documentation (10 mins)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Demo_Dynamic/README.md`.
 
-* Next point students to the [Giphy API Documentation](https://developers.giphy.com/docs/).
+### 2. Student Do: Generate Dynamic Elements (15 min)
 
-* Then slack out the following instructions:
+* Direct students to the activity instructions found in `10-Stu_Demo_Dynamic/README.md`.
 
-* **Instructions:**
+* Break your students into pairs that will work together on this activity.
 
-  * As partners, using the [Giphy API Documentation](https://developers.giphy.com/docs/), try to research answers to the following questions:
-    * How would you return back a single gif tied to a search term?
+  ```md
+  # 🏗️ Implement a fetch() Request to Display GitHub Data as HTML
 
-    * How would you return five gifs tied to a search term?
+  Work with a partner to implement the following user story:
 
-    * How would you return the trending gifs back from this API?
+    * As a user, I want to see a list of GitHub users and links to their profiles.
 
-* Let students know that their homework will use the Giphy API Documentation
+  ## Acceptance Criteria
 
-### 4. Instructor Do: Giphy API Demo (10 mins)
+    * It's done when I press the "Click Me" button, and a list of five GitHub users appears underneath on the page.
 
-* Finally, go over `19-giphy-api.html` in `04-Giphy_API`. Point out the API key that needed to be appended to the end of your query URL.
+    * It's done when each user includes their login name and a URL to their GitHub profile.
 
-* Slack out the [video review](https://www.youtube.com/watch?v=Kp7Xy2LScLM) for this activity.
+  ---
 
-### 5. Instructor Do: Homework Intro (5 mins)
+  ## 💡 Hints
 
-* Go over the upcoming homework assignment. You can play the [homework demo](https://youtu.be/BqreERTLjgQ) file or showcase the final solution file in the browser.
+  Use the previous three exercises as references if needed to put this together.
 
-### 6. Instructor Do: API and AJAX Slide Show (12 min)
+  ## 🏆 Bonus
 
-* Begin class by welcoming students and asking if there are any lingering questions.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Then open up the slide deck [3.4 Advanced AJAX](https://docs.google.com/presentation/d/12gsOr-L8qMjppsT0aFzZvrm8ZwfvGI1w_EuBnqjAjGY/edit?usp=sharing) and begin presenting the slides. Encourage students to answer questions and ask questions. Draw upon your own insight regarding APIs to try and further solidify their understanding of the role APIs play in web development. Show the videos included in the slide deck when appropriate.
+  * How could you use `fetch()` to retrieve JSON from a data file instead of a third-party API?
 
-* Just be sure to keep focused and stay on track of time!
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-### 9. Students Do: The Weather in Bujumbura (15 min)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Then open the file [05-Bujumbura/Solved/bujumbura-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/05-Bujumbura/Solved/bujumbura-solved.html) in your Browser. Explain to them them that this application uses the [OpenWeatherMap API](http://openweathermap.org/api) to retrieve live snippets of weather information about Bujumbura (the capital of Burundi (which is a city in Africa)).
+### 3. Instructor Review: Generate Dynamic Elements (15 min)
 
-![1-Bujumbura_1](Images/1-Bujumbura_1.png)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Then slack out the following folder and instructions to students.
+  * ☝️ How comfortable do you feel with generating HTML from Fetch data? (Poll via Fist to Five, Slack, or Zoom)
 
-* **Folder:**
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * [05-Bujumbura/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/05-Bujumbura/Unsolved)
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-* **Instructions:**
+  * ✔️ `document.getElementById`
 
-  * Using either `bujumbura-easier.html` or `bujumbura-harder.html` as a starting point, add in the missing code necessary to accomplish the following:
+  * ✔️ `for` loop
 
-    * Query the [OpenWeatherMap API](http://openweathermap.org/api) for the current weather data on Bujumbura, Burundi.
+  * ✔️ dot notation
 
-    * Log the retrieved data from this query to console.
+  * ✔️ `document.createElement`
 
-    * Parse the retrieved data to display wind speed, humidity, and temperature information into the HTML.
+  * ✔️ `.append`
 
-    * HINT: You will need to request an API key from the website.
+* Open [script.js](./Solved/assets/js/script.js) in your IDE and explain the following:
 
-    * BONUS: Figure out how to convert the Kelvin temperature provided into Fahrenheit.
+  * 🔑 We use `document.getElementById` to target the `users` `<div>`and the `fetch-button` `<div>`. We save them to the variables `usersContainer` and `fetchButton` respectively, as follows:
 
-    * NOTE: Don't worry if this feels hard. Push yourself!
+    ```js
+    var usersContainer = document.getElementById('users');
+    var fetchButton = document.getElementById('fetch-button');
+    ```
 
-* **Instructor / TAs:**
+  * We use `fetch()` to make a request to receive some data. We are sure to convert it to JSON so that it can be more easily consumed, as shown in the following example:
 
-  * Walk around and help students accomplish this task as necessary.
+    ```js
+    fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    ```
 
-### 8. Instructor Do: Review Activity (5 min)
+  * 🔑 We use a `for` loop to iterate through the response data, like in the following example:
 
-* Open the file [05-Bujumbura/Solved/bujumbura-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/05-Bujumbura/Solved/bujumbura-solved.html) in your editor and walk students through the code.
+    ```js
+    for (var i = 0; i < data.length; i++) 
+    ```
 
-* During your explanation, be sure to point out each of the following:
+  * 🔑 On each iteration, we create an `H3` and `p` tag, like in the following code:
 
-  * That we retrieved an API key from the [OpenWeatherMap API](http://openweathermap.org/api) site.
+    ```js
+    var userName = document.createElement('h3');
+    var userUrl = document.createElement('p');
+    ```
 
-  * That we then used this APIKey as part of our `queryURL` along with the city parameter (in this case Bujumbura)
+  * 🔑 We take the `.login` and `.url` properties off of the current iteration of the `data` array, making those the `textContent` of the `userName` and `userUrl` tags we created, as follows:
 
-    ![2-Bujumbura_2](Images/1-Bujumbura_2.png)
+    ```js
+    userName.textContent = data[i].login;
+    userUrl.textContent = data[i].url;
+    ```
 
-  * That we then passed this `queryURL` into our AJAX call.
+  * 🔑 We finally append the created elements with their newly added text content to the `<div>`, as follows:
 
-  * Then inside the `.then` method of the AJAX call, we are capturing data inside of a variable called `response`.
+    ```js
+    usersContainer.append(userName);
+    usersContainer.append(userUrl);
+    ```
 
-  * And that we parse this `response` JSON to retrieve individual properties like `wind.speed`, `main.humidity`, and `main.temp`. This was then dumped using jQuery into the HTML.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Finally, point out that when it came to the bonus we converted the temperature value by incorporating the Kelvin data into a formulaic conversion.
+  * ☝️ Why do we look at the response data properties?
 
-    ![3-Bujumbura_3](Images/1-Bujumbura_3.png)
+  * 🙋 So that we know which data we need to use.
 
+  * ☝️ What can we do if we don't completely understand this?
 
-* Ask students how you would recycle the code shown to instead find the weather in `London`. (Answer: Just change the `queryURL`)
+  * 🙋 We can refer to supplemental material, read the [GitHub documentation on REST](https://docs.github.com/en/rest), and stick around for office hours to ask for help.
 
-* Ask students why all of the code needed be inside the `.then` function. (Answer: Otherwise, we might not have data yet.)
+* Answer any questions before proceeding to the next activity.
 
-* Check if there are any other questions about this application before moving on.
+### 4. Instructor Do: Stoke Curiosity (10 min)
 
-### 9. Instructor Do: Working Movie App Demo (3 min)
+* Explain that we will continue to use the Fetch API by learning how to create complex `fetch()` requests. We will also learn about some options available to help us debug fetch requests.
 
-* Next open the file [10-WorkingMovieApp/Solved/working-movie-app-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved/working-movie-app-solved.html) in your browser. Let students know that in today's class we will be working towards building this.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* In demonstrating this application:
+  * ☝️ When something goes wrong with a `fetch()` request, how do we find out what the issue was?
 
-  * Click on the existing buttons to show that movies are displayed.
+  * 🙋 We can use the `Response` object and the Chrome DevTools Network tab to help us find out what went wrong.
 
-  * Create a new movie to the listing, point out that a button was generated dynamically, and that this button becomes a clickable AJAX caller of its own.
+  * ☝️ When trying to debug a problem, what would be a good first step towards solving it?
 
-### 10. Students Do: Movie App JSON Dump (10 min)
+  * 🙋 We could use search engines like Google, tech forums like Stack Overflow, or even do some **rubber duck debugging**. (This method involves stating the problem out loud, to oneself or to an inanimate object like a rubber duck. Sometimes vocalizing the issue brings about an aha moment!)
 
-* Then open the file [06-MovieJSONDump/Solved/movie-json-dump-solution.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/06-MovieJSONDump/Solved/movie-json-dump-solution.html) in your browser. Demonstrate that this application takes in a user input then uses the [OMDb API](http://www.omdbapi.com/) to retrieve movie in the form of a JSON. This movie is then appended directly into the HTML as is.
+* Open the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) in your browser and scroll to Properties, then explain the following:
 
-![2-JSONDump_2](Images/2-JSONDump_2.png)
+  * When we make a `fetch()` request, we receive a `Response` object back. That object contains methods that allow us to parse out particular pieces of data.
+  
+* Select the `Response.status` property, and scroll down to the following coded example:
 
-* Then slack out the following folder and instructions.
+  ```js
+  var myImage = document.querySelector('img');
 
-* **Folder:**
+  var myRequest = new Request('flowers.jpg');
 
-  * [06-MovieJSONDump/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/06-MovieJSONDump/Solved)
+  fetch(myRequest).then(function(response) {
+    console.log(response.status); // returns 200
+    response.blob().then(function(myBlob) {
+        var objectURL = URL.createObjectURL(myBlob);
+        myImage.src = objectURL;
+    });
+  });
+  ```
 
-* **Instructions:**
+  * We can use the `response.status` method to receive a **status code**.
 
-  * Using `movie-json-dump.html` in `06-MovieJSONDump` as starter code, add functionality such that clicking `Movie Search` triggers an AJAX call to the OMDb database and the JSON response to be appended onto the page.
+  * HTTP response status codes can tell us whether a request was a success or failure.
 
-  * If you finish early, begin reading about the [Bands In Town API](https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0). Try to understand how to search for a specific artist.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 11. Instructor Do: Review Activity (5 min)
+  * ☝️ How can we learn more about the `Response` object and status codes?
 
-* Review the JSON Dump activity. In your discussion be sure to point out:
+  * 🙋 We can visit the [MDN Web Docs on HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) or the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)!
+  
+### 5. Instructor Demo: Network Activity Tab (5 min) 
 
-  * The standard `AJAX` syntax of capturing both `queryURL` and `GET` method.
+* Open `11-Ins_Network_Activity/index.html` in your browser to the Network tab and demonstrate the following:
 
-  * Point out the use of `JSON.stringify(response)` for converting the retrieved JSON into a string that can be put placed into text.
+  * 🔑 Press Command+R (Mac) or Ctrl+R (Widows) to record the reload.
 
-    ![2-JSONDump_1](Images/2-JSONDump_1.png)
+  * 🔑 The Network tab records the loading of local and remote resources.
 
-### 12. Students Do: Dynamic Movie Button Layout (25 min)
+  * 🔑 The status codes indicate whether these resources came through successfully or not.
 
-* Next demonstrate the file `movie-button-layout-solved.html` in `07-MovieButtonLayout` in your browser. Point out that this application allows users to create new buttons dynamically when a user clicks `Add a Movie Yo`.
+  * 🔑 Status codes will quickly let us know what happened with a particular request.
 
-* Then slack out the following files and instructions.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* **Folder:**
+  * ☝️ What is the Network tab useful for?
 
-  * [07-MovieButtonLayout/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/07-MovieButtonLayout/Unsolved)
+  * 🙋 It allows us to track requests and resources to and from applications.
 
-* **Instructions:**
+  * ☝️ How do we learn about using the Network tab?
 
-  * Using either `movie-button-layout-easier.html` or `movie-button-layout-harder.html` as a starting-point, replicate the functionality of the application just demonstrated to you.
+  * 🙋 The Chrome DevTools documentation.
 
-  * Your final code should:
+* Reiterate that whenever students use a new library, framework, or technology, it's best to familiarize themselves with the documentation as much as possible.
 
-    * Dynamically generate the initial buttons using jQuery
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Network_Activity/index.html`.
 
-    * Allow users to create new buttons upon entering text in the textbox and clicking `Add a Movie Yo`.
+### 6. Student Do: Network Activity Tab (15 min) 
 
-    * If you finish early, begin reading about the [Bands In Town API](https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0). Try to understand how to search for a specific artist.
+* Direct students to the activity instructions found in `12-Stu_Network_Activity/index.html`.
 
-- - -
+* Break your students into pairs that will work together on this activity.
 
-### 13. BREAK (30 min)
+  ```md
+  # 🐛 Error Appears in the Chrome DevTools Network Tab
 
-- - -
+  Work with a partner to resolve the following issue(s):
 
-### 14. Instructor Do: Review Activity (10 min)
+  * As a developer, I want all of my scripts to be properly loaded by the browser.
 
-* Next, review the solution provided in [07-MovieButtonLayout/Solved/movie-button-layout-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/07-MovieButtonLayout/Solved/movie-button-layout-solved.html). In discussing the solution be sure to point out:
+  ## Expected Behavior
 
-  * That the `renderButtons` function is looping through the `movies` array and creating a jQuery element for each.
+  A request to `script.js` displays a status of "Finished".
 
-  * Pay special attention to the syntax for jQuery's creation of dynamic elements. 
+  ## Actual Behavior
 
-  * Point out that the `.on("click")` event tied to the button is what triggers re-rendering of the movies array
+  A request to `script.js` displays a status of "(failed)".
 
-  * Ask students why the `#buttons-view` needed to be emptied in the `renderButtons` function(Answer: otherwise content will get replicated each time you click a button).
+  ## Steps to Reproduce the Problem
 
-### 15. Students Do: Log Movie JSON & Click JSON Data Attribute  (20 min)
+  1. Open [Unsolved/index.html](./Unsolved/index.html) in the browser.
 
-* Demonstrate [08-LogMovieName/Solved/log-movie-name-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/08-LogMovieName/Solved/log-movie-name-solved.html) in the browser. 
+  2. Open Chrome DevTools and navigate to the Network Activity tab.
 
-  * Point out that, with this app, clicking any of the buttons &mdash; either new or old &mdash; will trigger an alert message listing out the movie name.
+  3. Refresh the page.
 
-* Demonstrate [09-ClickJSON/Solved/click-json-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/09-ClickJSON/Solved/click-json-solved.html) in the browser. 
+  4. Note that the `script.js` file failed to load.
 
-  * Point out that, with this app, clicking any of the buttons &mdash; either new or old &mdash; will cause a JSON dump of the movie to appear. Be sure to point out that the code works for both the original buttons _and_ the newly created buttons.
+  ---
 
-* Slack out the following files and instructions.
+  ## 💡 Hints
 
-* **File:**
+  How are JavaScript files usually loaded by an HTML page?
 
-  * [08-LogMovieName/Unsolved/log-movie-name.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/08-LogMovieName/Unsolved/log-movie-name.html)
+  ## 🏆 Bonus
 
-  * [09-ClickJSON/Unsolved/click-json.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/09-ClickJSON/Unsolved/click-json.html)
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* **Instructions:**
+  * What other features are available in the Chrome DevTools Network tab?
 
-  * Using the starter code provided, create the missing code snippets inside the `alertMovieName` function necessary to capture the movie name for both the original and new buttons.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  * Using the Starter code provided, create the missing code snippets inside the `displayMovieInfo()` function necessary to display JSON data about each movie.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra.
 
-  * HINT: You should use HTML `data-` attributes.
+### 7. Instructor Review: Network Tab (10 min)
 
-### 16. Instructor Do: Review Activity (10 min)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Review the solution provided in [08-LogMovieName/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/08-LogMovieName/Solved/log-movie-name-solved.html).
+  * ☝️ How comfortable do you feel using the Network tab? (Poll via Fist to Five, Slack, or Zoom)
 
-* Review the solution to the last activity provided in [09-ClickJSON/Solved/click-json-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/09-ClickJSON/Solved/click-json-solved.html).
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * Be sure to emphasize how we used the same `stringify` method in both solutions.
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-* In your discussion, be sure to point out
+  * ✔️ Network tab
 
-  * How we used data attributes to retrieve the "name" of each movie;
+  * ✔️ Status codes
 
-    ![4-ConsoleLog_1](Images/4-ConsoleLog_1.png)
+  * ✔️ Debugging
 
-* Also point out how we used an alternative `.on("click")` event. Instead of using an `.on("click")` event associated with our buttons, we created one that was associated with the `document`. This was necessary to ensure that the dynamically created elements were bound to jQuery. 
+* Open the browser to the Network tab and demonstrate the following:
 
-  * Demonstrate how the app would function with both sets of event syntax.
+  * Refresh the page with Command+R (Mac) or Ctrl+R (Windows) to record the reload.
+  
+  * 🔑 We examine the status codes of the resources in the Network tab.
 
-    ![4-ConsoleLog_2](Images/4-ConsoleLog_2.png)
+  * 🔑 Red status codes indicate errors.
 
-### 17. Students Do: Complete Working Movie App (25 min)
+  * Mention that after debugging, the `script.js` file now has a status code of 200.
 
-* Finally, open the working file: [10-WorkingMovieApp/Solved/working-movie-app-solved.html](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved/working-movie-app-solved.html) in your browser and demonstrate what the final application will look like.
+* Open `12-Stu_Network_Activity/Solved/index.html` in your IDE and explain the following:
 
-* Then slack out the following folder and instructions.
+  * We can see that the `src` URL was originally incorrect, as shown in the following example:
 
-* **Folder:**
+    ```html
+    <script src="./script.js"></script>
+    ```
 
-  * [10-WorkingMovieApp/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Unsolved)
+  * If we change the `src` to the correct relative path, it works&mdash;as shown in the following example:
 
-* **Instructions:**
+    ```html
+    <script src="./assets/js/script.js"></script>
+    ```
 
-  * Using either version of the starter code provided to you, complete the application so that various snippets of information about your movie are displayed underneath. As a suggestion, display at least each of the following:
+  * 🔑 After correcting the error we can go back to the Network tab to check whether the corrections work.
 
-    * Movie Poster
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Rating
+  * ☝️ How can we find out if something went wrong with the resources in the Network tab?
 
-    * Release Date
+  * 🙋 By checking the status code for each resource.
 
-    * Plot
+  * ☝️ What can we do if we don't completely understand this?
 
-### 18. Instructor Do: Review Activity (5 min)
+  * 🙋 We can refer to supplemental material, read the [Google documentation on inspecting network activity](https://developers.google.com/web/tools/chrome-devtools/network), and stick around for office hours to ask for help.
 
-* Review the final application's code as shown in [10-WorkingMovieApp/Solved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/10-WorkingMovieApp/Solved).
+* Answer any questions before proceeding to the next activity.
 
-* Point out how this application's code basically consists of an AJAX call which retrieves data from the OMDb API, parses it, then displays it inside of an HTML element.
+### 8. Instructor Demo: fetch() Status (5 min)
 
-![5-WorkingApp_1](Images/5-WorkingApp_1.png)
+* Open `13-Ins_Fetch_Status/index.html` in the browser to the Network tab and demonstrate the following:
 
-![5-WorkingApp_2](Images/5-WorkingApp_2.png)
+  * Press Command+R (Mac) or Ctrl+R (Windows) to record the reload.
 
-### 19. Students Do: Bands In Town App (20 min)
+  * 🔑 The status for the `fetch()` request is listed with the value of 200.
 
-* If you have any extra time, then proceed with the Bands In Town application.
+  * 🔑 This confirms that the `fetch()` request is successful.
 
-* Slack out the following folder and instructions to students.
+* Open `13-Ins_Fetch_Status/asset/js/script.js` in your IDE and demonstrate the following:
 
-* **Folder:**
+  * 🔑 We check whether the `response.status` equals 200, as follows:
+  
+    ```js
+      .then(function (response) {
+      if (response.status === 200){
+    ```
 
-  * [11-BandsInTownApp/Unsolved](../../../../01-Class-Content/06-Server-Side-APIs/01-Activities/11-BandsInTownApp/Unsolved)
+  * 🔑 If it does, we assign the status code from `response.status` to the `textContent`, like in the following example:
 
-* **Instructions:**
+    ```js
+    responseText.textContent = response.status;
+    ```
 
-  * Using the starter code provided to you, complete the application such that your code will search the Bands In Town API for the artist specified in the search box.
+  * 🔑 Finally, we return `response.json()`, as follows:
 
-  * Bands in Town is a service for finding out when and where bands and artists are scheduled to tour.
+    ```js
+    return response.json();
+    ```
 
-  * Information on how to use query the Bands In Town API can be found [here](https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Note: This is a free public API and you will not need to sign up for anything.
+  * ☝️ How can we learn more about using the `Response` object?
 
-  * **HINT:** Scroll down the API docs and study the examples. See if you can figure out how to query for an artist's information. You will need to use the `/artists/{artistname} endpoint`.
+  * 🙋 We can read the documentation.
 
-  * **HINT:** The `app_id` parameter described in the docs is required, but can be set to anything you wish.
+* Answer any questions before proceeding to the next activity.
 
-### 20. Instructor Do: Review Bands In Town App (5 min)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Fetch_Status/README.md`.
 
-* Review the Bands In Town code. Be sure to point out how the `app_id` is required but can be anything, and point out how the logged JSON response relates to the new HTML on the page.
+### 9. Student Do: fetch() Status (15 min) 
 
-![6-BandsInTown_1](Images/6-BandsInTown-1.png)
+* Direct students to the activity instructions found in `14-Stu_Fetch_Status/README.me`.
 
-![6-BandsInTown_2](Images/6-BandsInTown-2.png)
+* Break your students into pairs that will work together on this activity.
 
-### 21. Students Do: Work on HW (25 min)
+  ```md
+  # 🏗️ Implement Status Checking to Display a 404 Message
 
-* Spend the remaining time left working on the homework.
+  Work with a partner to implement the following user story:
 
-### 22. END (0 mins)
+  * As a user, I want to know when the webpage has failed to retrieve data.
 
-- - -
+  ## Acceptance Criteria
 
-### Lesson Plan Feedback
+  * It's done when a request is made to an invalid API URL, and the 404 status displays on the page.
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  ---
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  ## 💡 Hints
+
+  What HTML element can you use to display the response's status code?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * At some point in your coding journey, when working with APIs, you will have to deal with CORS. What is CORS, and how could it interfere with your `fetch()` request?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 10. Instructor Review: fetch() Status (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel using `response.status`? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points: 
+
+  * ✔️ `response.status`
+
+  * ✔️ `text.Content`
+
+* Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following:
+
+  * 🔑 We check whether the `response.status` does not equal 200, as follows:
+
+    ```js
+    .then(function (response) {
+      if (response.status !== 200) {
+    ```
+
+  * 🔑 We assign the `textContext` to be equal to the `response.status`, as shown in the following example:
+
+    ```js
+    responseText.textContent = response.status;
+    ```
+
+  * 🔑 We still return `response.json()` as `fetch()` will try to resolve the response most of the time, like in the following example:
+
+    ```js
+    return response.json();
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why are status codes useful?
+
+  * 🙋 Status codes allow us to quickly identify what is causing issues.
+
+  * ☝️ How does this help us as developers?
+
+  * 🙋 By identifying errors quickly, we can debug more efficiently and improve the user experience.
+
+  * ☝️ How do we check whether the `fetch()` request is working properly?
+
+  * 🙋 We check the `response.status`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 11. FLEX (20 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+### 12. BREAK (30 mins)
+
+### 13. Instructor Demo: Deconstruct Parameters (5 min) 
+
+* Open `15-Ins_Deconstruct_Parameters/index.html` in the browser and navigate to the console, demonstrating the following:
+
+  * 🔑 Sometimes we need to make a specific request to be sure we receive only the information we want.
+
+  * 🔑 We can change requests by chaining parameters onto the endpoints.
+
+  * 🔑 We can find these parameters in the APIs documentation.
+
+* Open `15-Ins_Deconstruct_Parameters/assets/script/js` in your IDE and demonstrate the following:
+
+  * 🔑 We attached multiple parameters after `?` in the URL, as shown in the following example:
+
+    ```js
+    fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
+    ```
+
+  * 🔑 Each parameter offers a specific filter. In the following example, `since` filters for a start-from date:
+
+    ```js
+    ?since=2020-06-01
+    ```
+
+  * 🔑 We use the `&` symbol to chain the parameters together, like in the following example:
+
+    ```js
+    ?since=2020-06-01&per_page=100
+    ```
+
+  * 🔑 While 30 is the default number of results returned, here we user the `per_page` filter to specify 100, as shown in the following code:
+
+    ```js
+    &per_page=100
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is chaining parameters useful?
+
+  * 🙋 It allows us to send a request that will only come back with relevant data, reducing the information that we will have to sort through.
+
+  * ☝️ What are request parameters useful for?
+
+  * 🙋 They enable us to make more specific requests.
+
+  * ☝️ How would we know which parameters we can use in the `fetch()` request?
+
+  * 🙋 By reading the documentation for the API being accessed.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Deconstruct_Parameters/README.md`.
+
+### 14. Student Do: Deconstruct Parameters (15 min) 
+
+* Direct students to the activity instructions found in `16-Stu_Deconstruct_Parameters/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of API Parameters
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved/assets/js/script.js](./Unsolved/assets/js/script.js).
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are query strings, and how are they used to create parameters for APIs?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 15. Instructor Review: Deconstruct Parameters (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel using parameters? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+  
+  * ✔️ `?`
+
+  * ✔️ `&`
+
+  * ✔️ `state=open`
+
+  * ✔️ `sort=created`
+
+  * ✔️ `direction=desc`
+
+* Open `16-Stu_Deconstruct_Parameters/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 We attached multiple parameters after `?` in the URL, as follows:
+
+    ```js
+    fetch('.......?per_page=10&state=open&sort=created&direction=desc')
+    ```
+
+  * 🔑 We limit the results to 10 per page, as shown in the following code:
+  
+    ```js
+    per_page=10
+    ```
+
+  * 🔑 We chain multiple parameters using the `&` symbol. The first chained parameter is `state`, setting the value to `open`&mdash;which will show us only `open` issues&mdash;as follows:
+
+    ```js
+    per_page=10&state=open
+    ```
+
+  * 🔑 We `sort` them by their creation date, as shown in the following code:
+
+      ```js
+      sort=created
+      ```
+
+  * 🔑 We then pass a parameter to display them in descending order, as follows:
+
+    ```js
+    direction=desc
+    ```
+  
+  * Ensure that you review what each parameter filters in the comments section.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where do we write the parameters?
+
+  * 🙋 After `?` in the URL.
+
+  * ☝️ How do we chain multiple parameters?
+
+  * 🙋 With the `&` symbol.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the documentation for the API that we're accessing, and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: fetch() Options (5 min)
+
+* Open `17-Ins_Fetch_Options/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 We write the `fetch()` request, as follows:
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5')
+    ```
+
+  * 🔑 `fetch()` options are passed through as an additional `init` object argument, like in the following example:
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+        method: 'GET',
+        credentials: 'same-origin',
+        redirect: 'follow',
+    })
+    ```
+
+  * 🔑 `fetch()` options are optional. Their usage is dependent on the API's documentation or the application's requirements.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we learn about `fetch()` options?
+
+  * 🙋 We read the [MDN Web Docs on using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu__Fetch_Options/README.md`.
+
+### 17. Student Do: fetch() Options (15 min)
+
+* Direct students to the activity instructions found in `18-Stu__Fetch_Options/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Implement Cache Reloading for fetch() Requests
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want `fetch()` requests to reload the browser's cache.
+
+  ## Acceptance Criteria
+
+  * It's done when I make a `fetch()` request, and the `cache` option is set to `reload`.
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+      
+  ---
+
+  ## 💡 Hints
+
+  How can you use an object to pass through the options?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is OAuth, and how does it tie into APIs?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 18. Instructor Review: fetch() Options (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with using `fetch()` options? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points: 
+
+  * ✔️ `fetch()` request
+
+  * ✔️ `fetch()` option(s)
+
+  * ✔️ `cache: reload`
+
+* Open `18-Stu__Fetch_Options/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 We write the `fetch()` request, as follows:
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5',
+    ```
+
+  * 🔑 We pass through the `cache: reload` option using the `init` object.
+
+  * 🔑 The browser fetches the resource from the remote server without first looking in the cache, but then it will update the cache with the downloaded resource&mdash;as shown in the following example:
+
+    ```js
+    fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
+        cache: 'reload',
+    })
+    ```
+
+  * We write the remainder of the `fetch()` request, as follows:
+
+    ```js
+    .then(function (response) {
+        return response.json();
+    })
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we write `fetch()` options?
+
+  * 🙋 With an `init` object that is passed as an additional argument in the `fetch()` request.
+
+  * ☝️ How do we know which `fetch()` options to use with the API?
+
+  * 🙋 By reading the API's documentation.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 19. Instructor Demo: Document Location (5 min) 
+
+* Navigate to the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location), scroll down to Syntax, and explain the following:
+
+  * 🔑 The `document.location` is a read-only property that returns a `Location` object.
+
+  * 🔑 This provides information on the URL of the document.
+
+* Open your browser and enter the console. Then type `document.location` and press Enter. Expand the `Location` object and demonstrate the following: 
+
+  * 🔑 This is the `Location` object, which contains the browser's current location.
+
+  * 🔑 We can use the `location.href` property to set or get the URL.
+
+* Now type `document.location.href = 'https://www.google.com'` into the console, press Enter, and explain the following:
+
+  * 🔑 The browser URL changed to the value assigned to `document.location.href`.
+
+  * 🔑 The `Location` object has other methods that can change the URL for specific purposes.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we learn to use the `Location` object?
+
+  * 🙋 We could read the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location). 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu__Document_Location/README.md`.
+
+### 20. Student Do: Document Location (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu__Document_Location/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Implement the Location Web API to Redirect 404 Errors
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to direct users to a different page if there is an error.
+
+  ## Acceptance Criteria
+
+  * It's done when I make a `fetch()` request that results in a 404 status, and the browser redirects to `404.html`.
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on location.replace](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace)
+
+  ---
+
+  ## 💡 Hints
+
+  What object does `location.replace` belong to? What are relative paths?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Sometimes APIs don't return JSON; they can return other data formats like XML. How can you convert XML to JSON?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 21. Instructor Review: Document Location (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with using the `Location` object? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Checking `response.status`
+
+  * ✔️ Replacing `document.location`
+
+  * ✔️ New `document.location`
+
+* Open `20-Stu__Document_Location/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * We set the redirect URL to a variable. This is the URL that the `replace()` method will use, as shown in the following example:
+
+    ```js
+    var redirectUrl = './404.html';
+    ```
+
+  * We send the `fetch()` request, as follows:
+
+    ```js
+    fetch(badRequestUrl)
+    ```
+
+  * 🔑 We check the `response.status` to see whether it equals 404, like in the following example:
+  
+    ```js
+    if (response.status === 404)
+    ```
+  
+  * 🔑 If the `response.status` equals 404, we pass the `redirectURL` variable as an argument into the `document.location.replace` method, as shown in the following example:
+
+    ```js
+    document.location.replace(redirectUrl);
+    ```
+
+  * If the `response.status` does not equal 404, we return `response.json()`, as follows:
+
+    ```js
+    else {
+        return response.json();
+    }
+    ```
+
+  * This time we did not return `response.json()` after the `if` statement, because we are changing the `document.location` based on the `response.status`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What does the `document.replace` method do? 
+
+  * 🙋 The `document.replace` method replaces the current document with the URL that is passed as an argument.  
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on document.location](https://developer.mozilla.org/en-US/docs/Web/API/Document/location), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 22. FLEX (30 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Answer any questions before ending the class.
+
+### 23. END (0 mins)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

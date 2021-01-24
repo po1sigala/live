@@ -1,42 +1,40 @@
-var express = require("express");
-var exphbs = require("express-handlebars");
-var mysql = require("mysql");
+const express = require('express');
+const exphbs = require('express-handlebars');
+const mysql = require('mysql');
 
-var app = express();
+const app = express();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-
-var connection = mysql.createConnection({
-  host: "localhost",
+const connection = mysql.createConnection({
+  host: 'localhost',
   port: 3306,
-  user: "root",
-  password: "",
-  database: "wishes_db"
+  user: 'root',
+  password: '',
+  database: 'wishes_db',
 });
 
-connection.connect(function(err) {
+connection.connect((err) => {
   if (err) {
-    console.error("error connecting: " + err.stack);
+    console.error(`error connecting: ${err.stack}`);
     return;
   }
 
-  console.log("connected as id " + connection.threadId);
+  console.log(`connected as id ${connection.threadId}`);
 });
 
 // Root get route.
-app.get("/", function(req, res) {
-  connection.query("SELECT * FROM wishes;", function(err, data) {
+app.get('/', (req, res) => {
+  connection.query('SELECT * FROM wishes;', (err, data) => {
     if (err) {
       throw err;
     }
@@ -47,29 +45,33 @@ app.get("/", function(req, res) {
     // Test it.
     // res.send(data);
 
-    res.render("index", { wishes: data });
+    res.render('index', { wishes: data });
   });
 });
 
 // Post route -> back to home
-app.post("/", function(req, res) {
+app.post('/', (req, res) => {
   // Test it.
-  // console.log('You sent, ' + req.body.wish);
+  // console.log(`You sent, ${req.body.wish}`);
 
   // Test it.
-  // res.send('You sent, ' + req.body.wish)
+  // res.send(`You sent, ${req.body.wish}`);
 
-  connection.query("INSERT INTO wishes (wish) VALUES (?)", [req.body.wish], function(err, result) {
-    if (err) {
-      throw err;
+  connection.query(
+    'INSERT INTO wishes (wish) VALUES (?)',
+    [req.body.wish],
+    (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      res.redirect('/');
     }
-
-    res.redirect("/");
-  });
+  );
 });
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+// Log (server-side) when our server has started
+app.listen(PORT, () =>
+  console.log(`Server listening on: http://localhost:${PORT}`)
+);

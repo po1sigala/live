@@ -329,39 +329,45 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Initialize Projects using Node Package Manager (npm)
+```md
+# 📖 Initialize Projects using Node Package Manager (npm)
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to keep track of dependencies using `npm`.
+* As a developer, I want to be able to keep track of dependencies using `npm`. 
 
-  * As a developer, I want to be able to save packages to my project using `npm install`.
+* As a developer, I want to initialize my project and create a `package.json` file.
 
-  ## Acceptance Criteria
+* As a developer, I want to be able to save packages to my project.
 
-  * It's done when I have navigated to `/init` in the terminal and ran `npm init`.
+## Acceptance Criteria
 
-  * It's done when I have responded to all the prompts regarding my project.
+* It's done when I see the `package.json` file created in the [Unsolved](./Unsolved/) folder.
 
-  * It's done when I have confirmed that I have a `package.json` in the `/init` folder.
+* It's done when I have installed the `inquirer` package successfully and see it listed in the `package.json` file.
 
-  * It's done after I have installed `inquirer` in the `/init` folder by running `npm i inquirer --save`.
+* It's done when I see the `node_modules` folder and `package-lock.json` file in the [Unsolved](./Unsolved/) folder.
 
-  * It's done when I have navigated to `/package` in the terminal and ran `npm i`.
+## 📝 Notes
 
-  ## 💡 Hints
+Refer to the documentation: 
 
-  How does the `-y` save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+* [npm-init](https://docs.npmjs.com/cli/v6/commands/npm-init)
 
-  ## 🏆 Bonus
+* [npm-install](https://docs.npmjs.com/cli/v6/commands/npm-install)
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+## 💡 Hints
 
-  * How would we create our own `package.json` files? How did `npm` know to install `inquirer` when we ran `npm i` in the `/package/` folder?
+It's possible that the `node_modules` folder is hidden in the `files.exclude` setting in VS Code, so don't let that throw you off if you don't see it.
 
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -377,38 +383,42 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `npm init`
 
-  * ✔️ `package.json`
+  * ✔️ `npm install`
 
-  * ✔️ `npm install --save-dev`
+* Open `18-Stu-Package-npm/Solved/package.json` in your IDE and explain the following: 
 
-* Open `18-Stu-Package-npm/init/README.md` in your IDE and explain the following: 
+  * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses.
 
-  * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses, as shown in the following example:
+  ```sh
+  npm init -y
+  npm init
+  ```
 
-    ```sh
-    npm init -y
-    npm install inquirer --save
-    ```
+  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer`, or just `npm i inquirer`. 
 
-  * 🔑  The second command will install `inquirer` and also add the package, `inquirer`, to the dependency list in `package.json`.
-  
-* Open `18-Stu-Package-npm/package/README.md` in your IDE and explain the following: 
+  ```sh
+  npm install inquirer
+  ```
 
-  * This exercise has us simply run the `install` command, because as you can see, the `package.json` already exists for this project. Furthermore, this file contains `inquirer` as a dependency. See the following example:
+  * If we check our `package.json` file again, we will see `inquirer` listed under `dependencies`. 
 
-    ```sh
-    npm install
-    ```
+  ```json
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+  ```
 
-  * 🔑  Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
+  * We will also see a `node_modules` folder and `package-lock.json` file. For some of us, it's possible that the `node_modules` folder is hidden in the `files.exclude` setting in VS Code.
 
-  * 🔑  Sometimes you want to install a package, but not as part of your production app. In this case, you can use `npm install jest --save-dev`.
+  * Sometimes, the `package.json` file will be provided for us and we'll just need to install it by running `npm install` in the same directory as the `package.json` file.
+
+  ```sh
+  npm install
+  ```
+
+  * Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What does the `--save` flag do, and is it always necessary?
-
-  * 🙋 The `--save` flag ensures that we add the dependency to the list outlined inside the `package.json`. Newer versions of npm will do this automatically, so it isn't always required.
 
   * ☝️ How do we install a specific package?
 
@@ -628,6 +638,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ### 10. FLEX (30 min)
 
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
 ### 11. BREAK (30 min)
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
@@ -768,29 +780,27 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ### 16. Instructor Demo: Rest and Spread Operators (5 min) 
 
-* Open `23-Ins_Rest-and-Spread/index.js` in your browser.
+* Navigate to `23-Ins_Rest-and-Spread/index.js` in your IDE and run `node index.js` from the command line to demonstrate the following: 
 
-* Run `node index.js` from the command line and demonstrate the following: 
-
-  * 🔑 When we run the file, we get output for a few different operations: without the rest operator, with the rest operator, without spread, and with spread, as shown in the following example:
+  * 🔑 When we run the file, we get output for a few different operations: without the rest parameter, with the rest parameter, without spread operator, and with spread operator, as shown in the following example:
 
     ```js
     function add(x, y) {
-        return x + y;
+      return x + y;
     }
 
     console.log(add(1, 2, 3, 4, 5)) // => 3
     ```
 
-  * Explain to the class that it is possible to call a function with any number of arguments, but only the first two will be counted.
+  * It is possible to call a function with any number of arguments, but only the first two will be counted.
   
-  * Let's examine this function using the `rest` operator, as follows:
+  * Let's examine this function using rest parameters, as follows:
 
     ```js
     function add(...nums) {
-        let sum = 0;
-        for (let num of nums) sum += num;
-        return sum
+      let sum = 0;
+      for (let num of nums) sum += num;
+      return sum;
     }
 
     add(1) // => 1
@@ -798,13 +808,13 @@ Use [Google](https://www.google.com) or another search engine to research this.
     add(1, 1, 4, 5) // => 11
     ```
 
-  * In this example, we use a rest operator to collect all of the arguments into a `nums` array, enabling us to pass in as many arguments as we want.
+  * In this example, we use rest parameters `(...nums)` to collect all of the arguments into a `nums` array, enabling us to pass in as many arguments as we want.
 
   * Now let's review the following example:
 
     ```js
     function howManyArgs(...args) {
-        return `You passed ${args.length} arguments.`; // point out the template literal
+      return `You passed ${args.length} arguments.`; // point out the template literal
     }
 
     console.log(howManyArgs(0, 1)); // You have passed 2 arguments.
@@ -813,7 +823,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * 🔑  The takeaway here is that variables are now available inside the array of the function. We can also pass as many in as we want.
 
-  * 🔑  The spread operator allows iterables like arrays, objects, and strings to be expanded into single arguments or elements. 
+  * 🔑  The spread operator `...` allows iterables like arrays, objects, and strings to be expanded into single arguments or elements. 
   
   * You can compare this to pouring items out of a cup. The only difference is that the items are variables and the cup is an iterable.
 
@@ -837,7 +847,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
   
   * ☝️ The syntax for spread and rest are similar, but what is the difference between the two?
 
-  * 🙋 The rest operator allows us to pass in any number of arguments, while the spread operator allows us to spread out an iterable into unique variables.
+  * 🙋 The rest parameter allows us to pass in any number of arguments, while the spread operator allows us to spread out an iterable into unique variables.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -849,57 +859,53 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Implement and Use Spread and Rest Operators
+```md
+# 📐 Add Comments to Implementation and Use of Rest and Spread Operators
 
-  Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/index.js).
 
-  * As a developer, I want to be able to use the spread and rest operators to make my code easier to read.
+## 📝 Notes
 
-  ## Acceptance Criteria
+Refer to the documentation: 
 
-  * It's done when I have copied the `songs` array using spread `...`.
+* [MDN Web Docs on spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-  * It's done when I have console logged the new array.
+* [MDN Web Docs on rest](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
-  * It's done wheen I have modified the `addition` function so that it retains functionality but also allows one to pass in any number of arguments.
+* [MDN Web Docs on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-  ## 💡 Hints
+---
 
-  Can you think of some real-life analogies for the spread and rest operator?
+## 🏆 Bonus
 
-  ## 🏆 Bonus
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+* What other data types can you use the spread operator or rest parameters on?
 
-  * What other data types can you use the spread or rest operator on?
-
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 18. Instructor Review: Spread and Rest Operators (10 min)  
+### 18. Instructor Review: Rest and Spread Operators (10 min)  
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with spread and rest operators? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `rest parameters` and `spread operators`? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Spread syntax (`...`)
+  * ✔️ Spread operator syntax (`...`)
 
-  * ✔️ Rest operator
+  * ✔️ `reduce()` method
 
-  * ✔️ Multiple arguments
+  * ✔️ Rest parameter syntax (`...`)
 
 * Open `24-Stu_Rest-and-Spread/Solved/index.js` in your IDE and explain the following: 
 
-  * 🔑 During this exercise we also used something called `reduce`, which is used in this case to calculate the sum of an array. Let's look at the [MDN Web Docs on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) briefly before we review.
-
-  * In the first example, we are using the spread operator to copy the items in `songs` to `new_songs`. Much like we would be dumping out the contents of a cup, we are populating the `new_songs` array with the items in `songs`, as shown in the following code:
+  * 🔑 In the first exercise, we are using the spread operator to copy the items in the `songs` array to the `new_songs` array. Much like we would be dumping out the contents of a cup, we are populating the `new_songs` array with the items in `songs`, as shown in the following code:
 
     ```js
     const songs = ["Creep", "Everlong", "Bulls On Parade", "Song 2", "What I Got"];
@@ -908,31 +914,38 @@ Use [Google](https://www.google.com) or another search engine to research this.
     console.log(new_songs); // => ["Creep", "Everlong", "Bulls On Parade", "Song 2", "What I Got"];
     ```
 
-* Next we modify the addition function to make use of the rest operator. This allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary. The code should resemble the following example:
+  * 🔑 In the second exercise, we use the `reduce()` method to execute a reducer function on each element of the array. In our case, the reducer function was adding all the numbers up.
 
     ```js
-    // unsolved version
-    function addition(x, y, z) {
-        const array = [x, y, z];
-        return array.reduce((a, b) => a + b, 0);
-    }
-    console.log(addition(1, 2, 3)); // 6
+    const addition = (x, y, z) => {
+      const array = [x, y, z];
+      return array.reduce((a, b) => a + b, 0);
+    };
+    ```
+  
+  * 🔑 Then we modified the `addition()` function to make use of the rest parameters. The `additionSpread()` function allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary. 
 
-    // solved using rest
-    function addition(...array) {
-        return array.reduce((a, b) => a + b, 0); // you don't have to change this line of code but look up reduce if you're not sure what it does here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-    }
-    console.log(addition(1, 2, 3)); // 6
-    console.log(addition(1, 2, 3, 4, 100)); // 110
+    ```js
+    const additionSpread = (...array) => {
+      return array.reduce((a, b) => a + b, 0);
+    };
     ```
 
-  * 🔑  There is a good chance that students might be confused on where spread and operators go, because they are very similar and can be used in similar situations. This is just an introduction; assure students that they will begin to pick up fluency as they get more practice.
+  * If we run `node index.js` in our command line, we will see the results of the console.logs.
+
+    ```js
+    console.log(addition(1, 2, 3)); // => 6
+    console.log(additionSpread(1, 2, 3)); // => 6
+    console.log(additionSpread(1, 2, 3, 4, 100)); // => 110
+    ```
+
+  * There is a good chance that students might be confused on where spread operators and rest parameters go, because they are very similar and can be used in similar situations. This is just an introduction; assure students that they will begin to pick up fluency as they get more practice.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What does the reduce method help us with in this exercise?
+  * ☝️ What does the `reduce()` method help us with in this exercise?
 
-  * 🙋 The reduce method reduces an array to a single value. It takes a callback function and runs that function for each value in the array starting from the left to the right.
+  * 🙋 The `reduce()` method reduces an array to a single value. It takes a callback function and runs that function for each value in the array starting from the left to the right.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -984,31 +997,37 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  # 🏗️ Implement and Recognize Object Destructuring
+```md
+# 📖 Implement and Recognize Object Destructuring
 
-  Work with a partner to implement the following user story:
+Work with a partner to implement the following user story:
 
-  * As a developer, I want to know how to use destructuring assignment syntax to pluck out data from arrays or objects.
+* As a developer, I want to be able to pull out data from objects and arrays into variables.
 
-  ## Acceptance Criteria
+## Acceptance Criteria
 
-  * It's done when I have opened `index.js` and reviewed the existing code.
+* It's done when I have destructured the objects to pull out the data that is logged in the console.
 
-  * It's done when I have used destructuring assignment syntax so that each `console.log` statement logs out the value properly.
+* It's done when I have destructured the array to pull out the data that is logged in the console.
 
-  ## 💡 Hints
+* It's done when I have run `node index.js` after destructuring to confirm the values logged in the console.
 
-  You have likely seen destructuring more than you think in your everyday life as a developer. Is there an import statement that you can remember from a previous exercise that uses this syntax?
+## 📝 Notes
 
-  ## 🏆 Bonus
+Refer to the documentation: 
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+[MDN Web Docs on object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-  * Write an object of your own and then log each key-value pair using object destructuring.
+---
 
-  Use [Google](https://www.google.com) or another search engine to research this.
-  ```
+## 🏆 Bonus
+
+If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+* How can we take a property from an object and assign it to a variable with a different name when we are destructuring it?
+
+Use [Google](https://www.google.com) or another search engine to research this.
+```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -1022,91 +1041,60 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Object destructuring syntax
+  * ✔️ Destructuring objects
 
-  * ✔️ Destructuring nested objects
+  * ✔️ Destructuring arrays
 
 * Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following: 
 
-  * 🔑 This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
+  * This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
 
-  * 🔑 We can also destructure function parameters. This allows us to name them directly and again save a few steps.  
+  * We can also destructure function parameters. This allows us to name them directly and again save a few steps.  
 
-  * 🔑 Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
+  * Now we can simply expect an object and pull the properties off without worrying about the order they're passed in or writing extra code to destructure them the old way.
 
   * In the past, if we wanted to cherry-pick an object's properties, we'd have to do something like the following example:
 
     ```js
-    const arya = {
-      name: "Arya Stark",
-      parents: ["Eddard Stark", "Catelyn Stark"]
+    const nodejs = {
+      name: 'Node.js',
+      type: 'JavaScript runtime environment',
     };
 
-    const aryaName = arya.name; // "Arya Stark"
-    const aryaParents = arya.parents; // ["Eddard Stark", "Catelyn Stark"]`
+    const nodejsName = nodejs.name;
+    const nodejsType = nodejs.type;
+
+    console.log(nodejsName); // <= Node.js
+    console.log(nodejsType); // <= JavaScript runtime environment
     ```
 
-  * 🔑  With ES6 object destructuring syntax, the code will now resemble the following example:
+  * 🔑  With ES6 object destructuring syntax, we can destructure data based on their property key names:
 
     ```js
-    const { name, parents } = arya;
+    const { name, type } = nodejs;
 
-    console.log(name); // prints `"Jaime Lannister"`
-    console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
+    console.log(name); // <= Node.js
+    console.log(type); // <= JavaScript runtime environment
     ```
 
-  * We can also rename the destructured properties as follows:
+  * 🔑 For a nested object, we need to be more specific:
 
     ```js
-    const jaime = {
-      name: "Jaime Lannister",
-      parents: ["Tywin Lannister", "Joanna Lannister"]
-    };
+    const { framework1, framework2 } = js.tools.frameworks;
 
-    const { name: jaimeName } = jaime;
-    console.log(jaimeName); // prints `"Jaime Lannister"`
+    console.log(framework1); // <= AngularJS
+    console.log(framework2); // <= Vue.js
     ```
 
-  * We can also handle nested objects in a much more elegant way, as shown in the following example:
+  * 🔑 For arrays, we can destructure data by the index:
 
     ```js
-      const jon = {
-      first: "Jon",
-      last: "Snow",
-      title: "Prince",
-      family: {
-        brothers: {
-          brother1: "Rob Stark",
-          brother2: "Rickon Stark"
-        },
-        sisters: {
-          sister1: "Arya Stark",
-          sister2: "Sansa Stark"
-        }
-      }
-    };
+    const languages = ['HTML', 'CSS', 'JavaScript'];
 
-    const { brother1, brother2 } = jon.family.brothers;
-    console.log(brother1); // <= Rob Stark
-    console.log(brother2); // <= Rickon Stark
-    ```
+    const [markup, style, scripting] = languages;
 
-  * 🔑  This also works with arrays, as shown in the following example:
-
-    ```js
-    const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
-
-    const [name, alias, allegiance] = characters;
-    console.log(name, alias, allegiance); // <= Ned Stark The Quiet Wolf House Stark
-    ```
-
-  * You can also use destructuring with strings, like in the following code:
-
-    ```js
-    const skills = "The Usurper, Baratheon, Cersei"; // string of data
-
-    const [alias, family, spouse] = skills.split(","); // set variables and split
-    console.log(alias, family, spouse); // print them by variable name
+    console.log(markup, style, scripting); // <= HTML CSS JavaScript
+    console.log(markup); // <= HTML
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1159,4 +1147,4 @@ How did today’s lesson go? Your feedback is important. Please take 5 minutes t
 
 - - -
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

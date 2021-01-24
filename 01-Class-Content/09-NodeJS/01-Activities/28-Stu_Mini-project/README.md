@@ -16,7 +16,7 @@ In this activity, you will build a command-line tool that generates an HTML port
 
   * String template literals for generating a string version of the HTML document before it is written to the file system
 
-  * Promises for handling asynchronous behavior
+  * Use `writeFileSync` to synchronously create the html file.
 
 ## 💡 Hints
 
@@ -24,8 +24,8 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 ## 🏆 Bonus
 
-* Instead of using promises, how can we use `async/await` and `try/catch` to control the flow of our asynchronous code?
+* Instead of using `writeFileSync`, how can we use `writeFile` and `promisify` to control the flow of our asynchronous code?
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

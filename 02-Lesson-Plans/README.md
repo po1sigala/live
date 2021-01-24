@@ -94,13 +94,13 @@ Instructors and TAs (and students, sometimes) ask why we teach certain technolog
 
 There are as many opinions about web development as there are developers. Everything in the curriculum is there for a specific reason. Here are some the most common questions about some of the technologies you'll teach in this course:
 
-### Why do we still teach `float`? Why don't we cover modern CSS layout, such as flexbox or CSS Grid?
+### Why do we still introduce `float`?
 
-A large part of our teaching philosophy is the idea that we should teach our students the problem before providing the solution. Sometimes that means that we include topics that are outmoded. Flexbox and CSS Grid emerged to solve specific design challenges. So while we believe that it's important that students know what the historical context of a `float` is, we also know that students need more practice with modern CSS layout techniques. To this end, we are in the process of updating Unit 02: Advanced CSS to focus on flexbox. We may also include CSS Grid as a bonus for students to explore.
+A large part of our teaching philosophy rests on the belief that we should give our students a thorough understanding of any problem before we teach the solution. Sometimes that means including topics that are outmoded. Flexbox and CSS Grid emerged to solve specific design challenges. So while it's important that we teach students about flexbox (and encourage them to explore CSS Grid on their own), we also believe it's important that students understand the historical context of a `float`.
 
 ### Why do we still teach jQuery?
 
-Although jQuery is on the decline as a front-end framework as the dominance of React, Vue, and Angular continues, it remains a part of several legacy codebases. It's important that our students have some familiarity with it as they begin their careers in web development. However, we are in the process of isolating jQuery entirely to Unit 05: Third-Party APIs in favor of vanilla JavaScript. Isolating jQuery to one unit will allow us to replace it with a different technology as the web development landscape continues to change.
+Although jQuery is on the decline as a popular front-end framework while React, Vue, and Angular continue to dominate, it persists in many legacy codebases. Thus it's important that our students begin their careers in web development having some familiarity with it. jQuery is now isolated to a single unit&mdash;Unit 05: Third-Party APIs. This will make it easier for us to replace it with a different technology as the web development landscape continues to evolve.
 
 ### Why do we teach Sequelize?
 
@@ -120,4 +120,4 @@ Finally, Handlebars is currently used in only two units and one project. We're i
 
 Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. Nonetheless, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses, and AWS will be the focus of at least one of these courses (and potentially more!).
 
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -88,59 +88,79 @@ Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protoc
 
 * First thing is first, we cannot manipulate the data within a MySQL database without first creating a connection to that specific database. This is actually a lot easier than it sounds thanks to the "MySQL" package for Node.
 
-* Open up your terminal and navigate to the folder containing `iceCreamDBConnection.js` in `06-iceCreamWithConnection` but do not yet open up the file containing your code.
+* Open up your terminal and navigate to the folder `06-iceCreamWithConnection` but do not yet open up the file containing your code.
 
 * Within your terminal, type `npm install mysql` and then hit enter to download the package.
 
-* With the MySQL package now installed, open up a new file in your editor and type in the following code while explaining what the code does.
+* With the MySQL package now installed, open up `iceCreamDBConnection.js` and explain each line of code:
 
 ```js
-var mysql = require("mysql");
-var connection = mysql.createConnection({
+const mysql = require("mysql");
+const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
 
-  // Your username
-  user: '',
+  ```js
+  const mysql = require('mysql');
+  ```
+  
+  * The following code block creates a connection to the "ice_creamDB" database using a localhost connection.
 
-  // Your password
-  password: '',
-  database: 'ice_creamDB'
-});
-```
+  ```js
+  const connection = mysql.createConnection({
+    host: 'localhost',
 
-* The first line tells the application that the "mysql" package must be installed in order to run. The following line creates a connection to the "ice_creamDB" database using a localhost connection.
+    // Your port, if not 3306
+    port: 3306,
 
-* After explaining all of this, add in the following lines of code to have Node connect to the MySQL server and inform the user that they have connected properly.
+    // Your MySQL username
+    user: 'root',
 
 ```js
-connection.connect(function(err){
+connection.connect((err) => {
   if(err) throw err;
-  console.log("connected as id "+ connection.threadId);
+  console.log(`connected as id ${connection.threadId}`);
 });
 ```
 
-* Run the code in your terminal and show the result to the class, asking for any questions regarding this process before slacking out the following assignment.
+    // Name of database
+    database: 'ice_creamDB',
+  });
+  ```
 
-    ![SQL Connection](Images/SQL_Connection.png)
+  * The following lines of code are used to have Node connect to the MySQL server. Then it will inform the user that they have connected properly.
 
-### 5. Students Do: Creating a Database Connection (10 mins)
+  ```js
+  connection.connect((err) => {
+    if (err) throw err;
+    console.log('connected as id ' + connection.threadId);
+    connection.end();
+  });
+  ```
 
-* More time than necessary has been provided to this particular assignment to ensure that everyone creates a connection to MySQL through Node and is given ample time to create and populate a table.
+* Run the code in your terminal (after filling in your MySQL password correctly) and show the result to the class, asking for any questions regarding this process before slacking out the following assignment.
 
-* While they are working on this assignment, create a table called "products" within your database and populate it with the data located within `iceCreamSeeds.sql` in `07-iceCreamReadData`
+![SQL Connection](Images/SQL_Connection.png)
 
-* Students will be creating their own database of playlists. You will be working with a database that is different but with the same number of rows in each table to help mirror as students create  and work with their own data.
+### 3. Students Do: Creating a Database Connection (10 mins)
+
+* More time than necessary has been provided to this particular assignment to ensure that everyone creates a connection to MySQL through Node.
+
+* Throughout this class the students are going to be working on creating an application that takes in music data to create personalized playlists. 
 
 * **Instructions**
 
-  * Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists
+  * Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists. 
 
-    * Make sure to get as far as you can over the course of these assignments as the coding you do here will be extremely useful to you when you begin working on the homework
+  * Create your `playlistDB` database in MySQL.
 
-  * For now we will simply be creating your database in MySQL and then creating a connection to said database using Node. **Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.**
+  **Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.**
 
-  * BONUS: Using MySQL Workbench, create a table in your database with four columns...
+  * Create a new file and name it `playlistConnection.js`.
+
+  * Create a connection to the database using Node.js.
+
+  * BONUS: Using MySQL Workbench, create a table in your database with four columns.
 
     * Primary Key of "ID" which auto-increments
     * A column called "title"
@@ -149,7 +169,9 @@ connection.connect(function(err){
 
   * BONUS: Using MySQL Workbench, populate your table with a few rows of dummy data
 
-  * BONUS: Start looking into how you can use the MySQL package to read data from a MySQL database
+* While they are working on this assignment, create a table called "products" within your `ice_creamDB` database and populate it with the data located within `iceCreamSeeds.sql` in `07-iceCreamReadData`
+
+* Students will be creating their own database of playlists. You will be working with a database that is different but with the same number of rows in each table to help mirror as students create  and work with their own data.
 
 ### 6. Instructor Do: Reading Data From a Database (10 mins)
 
@@ -162,34 +184,38 @@ connection.connect(function(err){
 * To emphasize this, update the following code to the end of `iceCreamDBConnection.js` in `06-iceCreamWithConnection` so that it matches the code found within `iceCreamReadData.js`in `07-iceCreamReadData` and then discuss it with the class before running it in your terminal
 
 ```js
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log("connected as id " + connection.threadId);
-
-  connection.query("SELECT * FROM products", function(err, res) {
+const afterConnection = () => {
+  connection.query('SELECT * FROM products', (err, res) => {
     if (err) throw err;
     console.log(res);
+    connection.end();
   });
+};
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log(`connected as id ${connection.threadId}`);
+  afterConnection();
 });
 ```
 
-* Through calling `connection.query(<STRING>,function(err, res) {})`, we are telling Node to send an SQL query to our database and return the data collected through the "res" variable
+* Through calling `connection.query('SELECT * FROM products', (err, res) =>`, we are telling Node to send an SQL query to our database and return the data collected through the "res" variable
 
-* The \<STRING> portion uses SQL syntax and should be contained within a pair of quotes. Because of this, you should tell your students to be very careful with their syntax since even small differences could lead to an error being returned.
+* The string portion uses SQL syntax and should be contained within a pair of quotes. Because of this, you should tell your students to be very careful with their syntax since even small differences could lead to an error being returned.
 
-  * The query contained within the \<STRING> can be switched out with any other kind of SQL query which will allow you to collect specific types of data as well.
+  * The query contained within the string can be switched out with any other kind of SQL query which will allow you to collect specific types of data as well.
 
   * Point out that we run the query inside of the body of the `connect` method's callback function. Since the `connection.connect` and `connection.query` methods both run asynchronously, there's no guarantee that the `connection.query` method will run after `connect` if it's run from outside. If we didn't want to put the entire query method inside of the callback, we could also wrap the query method inside of a function. Example:
 
   ```js
-  connection.connect(function(err) {
+  connection.connect((err) => {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
+    console.log(`connected as id ${connection.threadId}`);
     selectAll();
   });
 
-  function selectAll() {
-    connection.query("SELECT * FROM products", function(err, res) {
+  const selectAll = () => {
+    connection.query("SELECT * FROM products", (err, res) => {
       if (err) throw err;
       console.log(res);
     });
@@ -257,17 +283,18 @@ D - DELETE - DELETE FROM pets WHERE type = "mouse";
 * Go over each of the following examples one at a time, adding them into your ice-cream application from earlier in the class and running them in your terminal. You may use use `09-iceCreamCRUD` as a guide.
 
 ```js
-function createProduct() {
-  console.log("Inserting a new product...\n");
-  var query = connection.query(
-    "INSERT INTO products SET ?",
+const createProduct = () => {
+  console.log('Inserting a new product...\n');
+  const query = connection.query(
+    'INSERT INTO products SET ?',
     {
-      flavor: "Rocky Road",
+      flavor: 'Rocky Road',
       price: 3.0,
-      quantity: 50
+      quantity: 50,
     },
-    function(err, res) {
-      console.log(res.affectedRows + " product inserted!\n");
+    (err, res) => {
+      if (err) throw err;
+      console.log(`${res.affectedRows} product inserted!\n`);
       // Call updateProduct AFTER the INSERT completes
       updateProduct();
     }
@@ -275,7 +302,7 @@ function createProduct() {
 
   // logs the actual query being run
   console.log(query.sql);
-}
+};
 ```
 
 * Point out to students how similar this looks to the code which reads data, with the only major differences being the query made and the data entered.
@@ -287,20 +314,21 @@ function createProduct() {
 * Point out how you can assign the query to a variable and use `query.sql` to determine what the query being run against the database is.
 
 ```js
-function updateProduct() {
-  console.log("Updating all Rocky Road quantities...\n");
-  var query = connection.query(
-    "UPDATE products SET ? WHERE ?",
+const updateProduct = () => {
+  console.log('Updating all Rocky Road quantities...\n');
+  const query = connection.query(
+    'UPDATE products SET ? WHERE ?',
     [
       {
-        quantity: 100
+        quantity: 100,
       },
       {
-        flavor: "Rocky Road"
-      }
+        flavor: 'Rocky Road',
+      },
     ],
-    function(err, res) {
-      console.log(res.affectedRows + " products updated!\n");
+    (err, res) => {
+      if (err) throw err;
+      console.log(`${res.affectedRows} products updated!\n`);
       // Call deleteProduct AFTER the UPDATE completes
       deleteProduct();
     }
@@ -308,7 +336,7 @@ function updateProduct() {
 
   // logs the actual query being run
   console.log(query.sql);
-}
+};
 ```
 
 * Updating data is VERY similar to creating data, the only significant difference being the addition of the WHERE statement which allows you to interact with specific rows of data
@@ -318,34 +346,35 @@ function updateProduct() {
   * First question mark is replaced with the first object in the array while the second question mark is replaced with the second object in the array.
 
 ```js
-function deleteProduct() {
-  console.log("Deleting all strawberry icecream...\n");
+const deleteProduct = () => {
+  console.log('Deleting all strawberry icecream...\n');
   connection.query(
-    "DELETE FROM products WHERE ?",
+    'DELETE FROM products WHERE ?',
     {
-      flavor: "strawberry"
+      flavor: 'strawberry',
     },
-    function(err, res) {
-      console.log(res.affectedRows + " products deleted!\n");
+    (err, res) => {
+      if (err) throw err;
+      console.log(`${res.affectedRows} products deleted!\n`);
       // Call readProducts AFTER the DELETE completes
       readProducts();
     }
   );
-}
+};
 ```
 
 * Deleting MySQL data through Node is almost entirely identical to a READ query that includes a WHERE statement within it. Not much else to it other than that.
 
 ```js
-function readProducts() {
-  console.log("Selecting all products...\n");
-  connection.query("SELECT * FROM products", function(err, res) {
+const readProducts = () => {
+  console.log('Selecting all products...\n');
+  connection.query('SELECT * FROM products', (err, res) => {
     if (err) throw err;
     // Log all results of the SELECT statement
     console.log(res);
     connection.end();
   });
-}
+};
 ```
 
 * Students should already be familiar with reading data at this point but ask your class if they have any questions and answer them as best you can before moving onto the next activity.
