@@ -1318,17 +1318,18 @@ table {
 }
 
 td, th {
-  margin: 24px;
-  background-color: var(--quatrinary);
   color: black;
-  border-radius: 0.3em;
+  border: solid grey 2px;
 }
 
 a:link {
-  text-decoration: none;
+  color: var(--primary);
 }
 
-a:hover,
+a:hover {
+  color: var(--quatrinary)
+}
+
 a:active {
   color: white;
 }
