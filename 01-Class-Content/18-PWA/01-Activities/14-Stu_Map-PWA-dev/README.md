@@ -1,4 +1,4 @@
-# Installing a PWA
+# Create a PWA
 
 For this activity you are going to convert the Trip Planner website into a PWA.
 
