@@ -104,5 +104,7 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
   * 📖 Blog Post: [Getting Started with Git](@TODO Add link when blog post is published)
 
+  * 📖 Blog Post: [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
