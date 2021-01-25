@@ -6,7 +6,7 @@ Today's class will continue our journey into web performance by learning about p
 
 ## Instructor Notes
 
-* Complete activities `05-Stu_Gallery-Lazy-Load` through `16-Stu_Map-PWA`.
+* Complete activities `05-Stu_Gallery-Lazy-Load` through `14-Stu_Map-PWA`.
 
 * You may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
 
