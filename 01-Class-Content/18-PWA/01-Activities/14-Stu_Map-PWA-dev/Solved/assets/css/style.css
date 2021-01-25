@@ -1335,5 +1335,5 @@ a:active {
 }
 
 a:visited {
-  color: var(--primary)
+  color: var(--tertiary)
 }
