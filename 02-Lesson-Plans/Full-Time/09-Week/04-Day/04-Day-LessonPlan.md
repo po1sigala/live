@@ -6,7 +6,7 @@ Today's class will continue our journey into web performance by learning about p
 
 ## Instructor Notes
 
-* Complete activities `05-Stu_Gallery-Lazy-Load` through `16-Stu_Notetaker-PWA`.
+* Complete activities `05-Stu_Gallery-Lazy-Load` through `16-Stu_Map-PWA`.
 
 * You may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
 
@@ -931,7 +931,7 @@ Use Google or another search engine to research the preceding topic.
 
 ### 21. Instructor Do: Review Trip Planner PWA (15 mins)
 
-* Open [14-Stu_MAP-PWA/Solved/index.html](../../../../01-Class-Content/18-PWA/01-Activities/14-Stu_Notetaker_PWA/Solved/index.html) in your IDE and explain the following: 
+* Open [14-Stu_MAP-PWA/Solved/index.html](../../../../01-Class-Content/18-PWA/01-Activities/14-Stu_Map-PWA/Solved/index.html) in your IDE and explain the following: 
 
   * We add the link to the `webmanifest.manifest` file in the `<head>`.
 
