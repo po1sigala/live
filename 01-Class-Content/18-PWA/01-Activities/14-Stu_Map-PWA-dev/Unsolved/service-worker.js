@@ -1,6 +1,6 @@
-// TODO: add listener and handler for install event
+// TODO: add listener and handler to cache static assets
 
 
 
-// TODO: add listener and handler for the fetch event
+// TODO: add listener and handler to retrieve static assets from the Cache Storage in the browser 
 
