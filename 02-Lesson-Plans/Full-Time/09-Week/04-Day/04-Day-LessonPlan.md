@@ -984,6 +984,6 @@ Use Google or another search engine to research the preceding topic.
 
 ### Lesson Plan Feedback
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.	
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
 
 [Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
