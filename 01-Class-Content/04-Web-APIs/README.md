@@ -94,9 +94,11 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the Git concept for this unit.
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
   * 📖 [Git Guide: Git Pull Requests](./01-Activities/27-Evr_Git-Pull-Request)
+
+  * 📹 [Git Guide Video: Git Pull Requests](https://2u-20.wistia.com/medias/nddwentncb)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
