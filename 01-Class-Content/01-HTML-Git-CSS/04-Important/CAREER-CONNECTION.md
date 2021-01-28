@@ -16,7 +16,7 @@ Here at Career Services, we've come up with two job-preparedness levels: **emplo
 
 * **Employer-competitive** means that you've given yourself the best chance to secure your desired job. You've put together excellent job search materials, you know how to prepare for interviews, and you use multiple networking strategies to proactively seek and pursue the jobs you want. 
 
-    > **Deep Dive:** To learn more about becoming employer-competitive, see [Intro to Career Services](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/intro-to-career-services). 
+    > **Deep Dive:** To learn more about becoming employer-competitive, see [Intro to Career Services](https://mycareerspot.org/intro). 
 
 Most of the students who work with Career Services to reach the employer-competitive level find employment within six months after graduation! 
 
@@ -86,7 +86,7 @@ Look through the search results for each category. Then write your answers to th
 
 Before you move on to the next module, make sure to add HTML, CSS, and Git to the Technical Skills list on your resume. This will help you pass those pesky automated resume scanners and will indicate to potential employers that you have the skills they need.
 
-> **Deep Dive:** To learn more about developing your resume, see the resources at [Milestone: Develop Your Resume](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume).
+> **Deep Dive:** To learn more about developing your resume, see the resources at [Milestone: Develop Your Resume](https://mycareerspot.org/resume).
 
 ### Prepare for the Technical Interview
 

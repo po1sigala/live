@@ -28,7 +28,7 @@ Each week students receive Career Connections in the `04-Important` folders that
 [NoSQL](../../../01-Class-Content/17-NoSQL/04-Important/CAREER-CONNECTION.md).
 [PWA](../../../01-Class-Content/18-PWA/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ### Helpful Links
 
