@@ -4,10 +4,10 @@ var responseText = document.getElementById('response-text');
 
 function getApi(requestUrl) {
   fetch(requestUrl)
-    .then(function (response) {})
-    .then(function (data) {
-      console.log(data);
-    });
+    .then(function (response) {
+      console.log(response)
+        responseText.textContent = "This confirms that the fetch request is successful."
+    })
 }
 
 getApi(requestUrl);
