@@ -6,7 +6,10 @@ function getApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
       console.log(response)
-        responseText.textContent = "This confirms that the fetch request is successful."
+        if(response.status === 200){
+          responseText.textContent = response.status
+        }
+        return response.json()
     })
 }
 
