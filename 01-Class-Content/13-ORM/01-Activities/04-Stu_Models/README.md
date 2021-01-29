@@ -36,7 +36,7 @@ What options does Sequelize provide when it comes to naming tables and fields?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we apply model-based rules to all models in the Sequelize connection logic?
+* How can table naming rules be defined globally for your Sequelize connection?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
