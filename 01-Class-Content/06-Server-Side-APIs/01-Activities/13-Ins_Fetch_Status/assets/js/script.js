@@ -5,12 +5,12 @@ var responseText = document.getElementById('response-text');
 function getApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
-      console.log(response)
-        if(response.status === 200){
-          responseText.textContent = response.status
-        }
-        return response.json()
-    })
+      console.log(response);
+      if (response.status === 200) {
+        responseText.textContent = response.status;
+      }
+      return response.json();
+  });
 }
 
 getApi(requestUrl);
