@@ -62,9 +62,7 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
 
-* @TODO LIST & LINK TO ALGORITHMS
-
-  * 📹 Let's Code { @TODO ADD LINK TO ALGO VIDEO }
+* 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
 
 ### Assessments
 
@@ -94,7 +92,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
 
-  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide/README.md) 
+  * 📖 [Git Guide](./01-Activities/21-Evr_Git-Guide/README.md) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
@@ -102,7 +100,7 @@ Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Getting Started with Git](@TODO Add link when blog post is published)
+  * 📖 Blog Post: [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
 
   * 📖 Blog Post: [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 

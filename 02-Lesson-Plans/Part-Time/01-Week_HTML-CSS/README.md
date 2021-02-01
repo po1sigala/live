@@ -52,9 +52,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * @TODO LIST THE THREE ALGORITHMS ASSOCIATED WITH THIS UNIT
-
-    * 📹 Let's Code {@TODO Add Algo video link}
+  * 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
 
 ### Resources
 
