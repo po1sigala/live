@@ -106,7 +106,7 @@ This homework is graded based on the following criteria:
 
 * Repository contains multiple descriptive commit messages.
 
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
+* Repository contains quality README file with description, screenshot, and link to deployed application.
 
 ## Review
 
@@ -114,7 +114,7 @@ You are required to submit the following for review:
 
 * The URL of the deployed application.
 
-* The URL of the GitHub repository, with a unique name and a readme that describes the project.
+* The URL of the GitHub repository, with a unique name and a README that describes the project.
 
 - - -
 
