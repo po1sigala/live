@@ -40,7 +40,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [02.2 Lesson Plan](02-Day_Pseudo-Resets/02.2-LESSON-PLAN.md)
 
-* [02.3 Lesson Plan](03-Day_CodePen-Mini-Project/02.3-LESSON-PLAN.md)
+* [02.3 Lesson Plan](03-Day_Selectors-Variables/02.3-LESSON-PLAN.md)
 
 ### Unit Homework
 
