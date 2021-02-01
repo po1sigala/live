@@ -16,15 +16,13 @@ In this activity, you will build a command-line tool that generates an HTML port
 
   * String template literals for generating a string version of the HTML document before it is written to the file system
 
-  * Use `writeFileSync` to synchronously create the html file.
-
 ## 💡 Hints
 
 It might be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy and paste its contents into a string template literal. Then you can write a function to insert the user input into the appropriate places in the HTML string before writing it to the file system.
 
 ## 🏆 Bonus
 
-* Instead of using `writeFileSync`, how can we use `writeFile` and `promisify` to control the flow of our asynchronous code?
+* Instead of using callback functions, what are some other tools in JavaScript we can use to handle asynchronous functionality?
 
 ---
 

@@ -22,7 +22,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/02-Advanced
 
 * Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/02-Advanced-CSS/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads-Up
 
@@ -40,7 +40,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [02.2 Lesson Plan](02-Day_Pseudo-Resets/02.2-LESSON-PLAN.md)
   
-  * [02.3 Lesson Plan](03-Day_CodePen-Mini-Project/02.3-LESSON-PLAN.md)
+  * [02.3 Lesson Plan](03-Day_Selectors-Variables/02.3-LESSON-PLAN.md)
 
 ### Unit Homework
 

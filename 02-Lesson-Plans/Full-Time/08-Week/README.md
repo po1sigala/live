@@ -38,7 +38,7 @@ Each week students receive Career Connections in the `04-Important` folders that
 
 [Project 2](../../../01-Class-Content/16-Project-2-Contd/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 
