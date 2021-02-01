@@ -2,6 +2,10 @@ button.submit {
   float: right;
 }
 
+#submit-author{
+  margin: 5px;
+}
+
 form#cms {
   margin-top: 50px;
 }

@@ -19,7 +19,7 @@ Next week we will learn more complex techniques for managing state in React. Avo
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/19-React/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

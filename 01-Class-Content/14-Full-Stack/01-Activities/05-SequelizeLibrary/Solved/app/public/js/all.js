@@ -1,21 +1,43 @@
+// Get all the books
 
-// Make a get request to our api route that will return every book
-$.get("/api/all", function(data) {
-  // For each book that our server sends us back
-  for (var i = 0; i < data.length; i++) {
-    // Create a parent div to hold book data
-    var wellSection = $("<div>");
-    // Add a class to this div: 'well'
-    wellSection.addClass("well");
-    // Add an id to the well to mark which well it is
-    wellSection.attr("id", "book-well-" + i);
-    // Append the well to the well section
-    $("#well-section").append(wellSection);
+fetch('/api/all', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success in getting all books:', data);
+    data.forEach(({ title, author, genre, pages }, i) => {
+      const wellContainer = document.getElementById('well-section');
+      const sectionBreak = document.createElement('hr');
 
-    // Now  we add our book data to the well we just placed on the page
-    $("#book-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].title + "</h2>");
-    $("#book-well-" + i).append("<h3>Author: " + data[i].author + "</h4>");
-    $("#book-well-" + i).append("<h3>Genre: " + data[i].genre + "</h4>");
-    $("#book-well-" + i).append("<h3>Pages: " + data[i].pages + "</h4>");
-  }
-});
+      const wellSection = document.createElement('div');
+      wellSection.classList.add('well');
+      wellSection.setAttribute('id', `book-well-${i}`);
+      wellContainer.appendChild(wellSection);
+
+      // Create the elements to show book data
+      const titleEl = document.createElement('h2');
+      const authorEl = document.createElement('h6');
+      const genreEl = document.createElement('h6');
+      const pagesEl = document.createElement('h6');
+
+      // Add text to the elements we just created
+      titleEl.textContent = `${i + 1} ${title}`;
+      authorEl.textContent = `Author: ${author}`;
+      genreEl.textContent = `Genre: ${genre}`;
+      pagesEl.textContent = `Pages: ${pages}`;
+
+      // Append the elements with textContent to the well
+      wellSection.appendChild(titleEl);
+      wellSection.appendChild(authorEl);
+      wellSection.appendChild(genreEl);
+      wellSection.appendChild(pagesEl);
+      wellSection.appendChild(sectionBreak);
+    });
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });

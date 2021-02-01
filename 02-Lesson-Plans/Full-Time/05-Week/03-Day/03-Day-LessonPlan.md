@@ -606,9 +606,7 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
     };
     ```
   
-  * `person` is an object, but when we type `person.occupation.__proto__` in the console, it returns `String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}`, which we can expand. Because `occupation` is a string, it has access to the `String` prototype. Of the many methods available, let's try `toLowerCase()` to convert the `occupation` into all lowercase.
-
-  * Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
+  * `person` is an object, but when we type `person.occupation.__proto__` in the console, it returns `String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}`, which we can expand. Because `occupation` is a string, it has access to the `String` prototype. Of the many methods available, let's try `toLowerCase()` to convert the `occupation` into all lowercase. Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
 
     ```js
     person.occupation.toLowerCase();
