@@ -1,6 +1,6 @@
-# 🐛 List Items and Boxes are Not Displaying Correctly
+# 🐛 List Items and Boxes Are Not Displaying Correctly
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issues:
 
 * Users should be able to see a horizontal navigation bar with three list items side-by-side.
 
@@ -20,7 +20,7 @@ Work with a partner to resolve the following issue(s):
 
 * Each list item in the navigation bar displays on its own line.
 
-* Two boxes are visible and one is not displayed.
+* Two boxes are visible, and one is not displayed.
 
 * The two visible boxes display inline and aligned to the left. 
 
@@ -28,21 +28,21 @@ Work with a partner to resolve the following issue(s):
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image-1.png)
+![Three list items are displayed on the right side of the navigation bar, corresponding with three boxes centered on the page.](./assets/image-1.png)
 
 ---
 
 ## 💡 Hints
 
-What display property is used to hide an element? 
+Which `display` value hides an element? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is the CSS visibility property? How is it different from the display property?
+* What is the CSS `visibility` property? How is it different from the `display` property?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@ 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

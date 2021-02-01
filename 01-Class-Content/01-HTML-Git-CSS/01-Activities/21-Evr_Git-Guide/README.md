@@ -8,7 +8,7 @@ Git is also an important way to collaborate and share code with others. For the 
 
 For more information on setting up your Git environment and using Git commands, check out the [Getting Started with Git blog post](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git) on The Full-Stack Blog.
 
-## Configure Local Git Default Branch to Main
+## Configure Local Git Default Branch to main
 
 * First, we need to set our local Git default branch to `main`.
 

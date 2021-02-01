@@ -1,4 +1,4 @@
-# 🏗️ Create a Web Page Using HTML 
+# 🏗️ Create a Webpage Using HTML 
 
 Work with a partner to implement the following user story:
 
@@ -6,27 +6,27 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the main header reads `"Student Bio"`. 
+* It's done when the main header reads "Student Bio". 
 
 * It's done when there is a section that includes a name, an image, and a paragraph.
 
-* It's done when there is a second section that includes a sub-header reading `"Contact Info"` and a list that includes links to my email, GitHub and portfolio. 
+* It's done when there is a second section that includes a subheader labeled "Contact Info" and a list that includes links to my email, GitHub, and portfolio.
 
-* It's done when the finished page matches the mockup below. 
+* It's done when the finished page matches the mockup. 
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image-1.png)
+![Webpage titled "Student Bio" features "Your Name" heading, a spot for an image and bio, and a "Contact Info" section.](./assets/image-1.png)
+
+You can use this [placeholder image](https://placehold.it/200x200).
 
 ---
 
 ## 💡 Hints
 
-How can you use header tags to define the most important heading and the sub-headers? How will using different header tags impact the size of the text?
-
-You can use a placeholder image from here: [Image](https://placehold.it/200x200)
+How can you use header elements to define the most important heading and the subheaders? How will using different header elements impact the size of the text?
 
 ## 🏆 Bonus
 
@@ -37,4 +37,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

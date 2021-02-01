@@ -1,12 +1,12 @@
 # Unit 01 Mini-Project: Landing Page
 
-In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work together in groups to brainstorm and share ideas.
+In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
 
 ## Instructions
 
 Work in your group to implement the following user stories:
 
-* As a client, I want to view a single web page that collects a visitor's contact information.
+* As a client, I want to view a single webpage that collects a visitor's contact information.
 
 * As a client, I want the landing page to have a header and footer.
 
@@ -16,33 +16,31 @@ Work in your group to implement the following user stories:
 
 * As a client, I want the landing page to have a polished and accessible UI.
 
-### Specifications
+## Acceptance Criteria
 
-The completed application should meet the following acceptance criteria:
+* It's done when the page uses semantic HTML elements.
 
-* Uses semantic HTML elements.
+* It's done when the page uses universal, element, and class selectors in CSS.
 
-* Uses universal, element and class selectors in CSS.
+* It's done when the page features at least three colors in the design.
 
-* Uses at least three colors in design.
+* It's done when the page uses a single font and font family for all text.
 
-* Uses a single font and font family for all text on page.
+* It's done when the page uses at least two heading elements (`<h1>` through `<h6>`).
 
-* Uses at least two heading `<h1>...<h6>` tags.
+* It's done when the header is fixed to the top of the page on scroll.
 
-* The header should be fixed to the top of the page on scroll.
+* It's done when the header contains a navigation bar with three links that display inline, including a contact link.
 
-* The header should contain a navigation bar with three links that display inline including a `contact` link.
+* It's done when, if the contact link is clicked, the page jumps directly to the contact form.
 
-* When the `contact` link is clicked, the page should jump directly to the contact form.
+* It's done when the contact form includes `input` elements for name and email.
 
-* The contact form should include `input` elements for name and email.
+* It's done when the contact form includes a Send button.
 
-* The contact form should include a Send `button`.
+* It's done when the image includes a descriptive `alt` attribute.
 
-* The image should include a descriptive `alt` attribute.
-
-* The mini-project should be deployed to GitHub Pages.
+* It's done when the page is deployed to GitHub Pages.
 
 ## 💡 Notes
 
@@ -50,39 +48,44 @@ Follow these instructions to deploy your project to GitHub Pages:
 
 1. Create a new repository on your GitHub account and clone it to your computer.
 
-2. When you're ready to deploy, use `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
+2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
 
-3. Navigate to your GitHub repository in your browser and then navigate into your repository's `Settings` tab on the right side of the repository's page.
+3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-4. From the settings page, scroll down to the GitHub Pages section and then, in the section labeled `Source`, select that you would like to use the `main` branch as your source.
+4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
 
-5. Navigate to `<your-github-username>.github.io/<your-repo-name>` and you will find that your new web page has gone live! (For example, if your GitHub username is `lernantino` and the project is `css-demo-site`, your URL would be `lernantino.github.io/css-demo-site`)
+5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
-You can also refer to this [YouTube video](https://youtu.be/P4Mu1t5rIXg) to walk through the steps needed to deploy.
+You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
 
-**Important**: It may take a few moments for GitHub pages to display your site correctly. If your project doesn't deploy or show up, make sure that all file paths in your application are relative and using the right casing. GitHub is case-sensitive, so there is a difference between a capitalized and uncapitalized letter to them.
+> **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an inccorect capital or lowercase letter could cause problems in deployment.
 
 ## 💡 Hints
 
 Refer to the documentation:
 
-* [MDN Web Docs on HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+* [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-* [MDN Web Docs on Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+* [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-* [MDN Web Docs on Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+* [MDN Web Docs on font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-* [MDN Web Docs on `<h1>–<h6>`: The HTML Section Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+* [MDN Web Docs on HTML section heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
-* [MDN Web Docs on How to Structure a Web Form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+* [MDN Web Docs on how to structure a web form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-* [MDN Web Docs on `<button>`: The Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+* [MDN Web Docs on the button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-* [MDN Web Docs on `<figure>`: The Figure with Optional Caption Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+* [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
 ## 🏆 Bonus
 
-* How can CSS be used to apply a different style to an <a> element when a mouse hovers over it?
+If you have completed this activity, work through the following challenge with your group to further your knowledge:
+
+* How can CSS be used to apply a different style to an `<a>` element when a cursor points at it?
+
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

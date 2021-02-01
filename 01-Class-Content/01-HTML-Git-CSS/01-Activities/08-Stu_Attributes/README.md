@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when an single attribute named `section` is added to all semantic section HTML elements.
+* It's done when a single attribute named `section` is added to all semantic `<section>` HTML elements.
 
 * It's done when the email list item is given a unique attribute named `email`.
 
@@ -16,13 +16,13 @@ Work with a partner to implement the following user story:
 
 * It's done when the existing image's `src` attribute specifies the relative path to the `image-1.jpg` file found in the `assets` directory and the `alt` attribute describes the image.  
 
-* It's done when the finished page matches the mockup below. 
+* It's done when the finished page matches the mockup. 
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image-1.png)
+![The portfolio page features headings in blue text, rounded corners on the image placeholder, and various background colors.](./assets/image-1.png)
 
 ---
 
@@ -34,9 +34,10 @@ Why is it important that each global attribute is given a unique name?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-*  What other attributes can be used with HTML elements?
+* What other attributes can be used with HTML elements?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
