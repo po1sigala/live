@@ -10,35 +10,35 @@ Work with a partner to implement the following user story:
 
 * It's done when `Section 1` has a background color of purple and the text is yellow.
 
-* It's done when `Section 2 and 3` have a background color of blue and the text is orange.
+* It's done when `Section 2` and `Section 3` have a background color of blue and the text is orange.
 
 * It's done when the `container` has a background color of black.
 
-* It's done when `Section 4 and 5` have a text color of white.
+* It's done when `Section 4` and `Section 5` have a text color of white..
 
 * It's done when `Section 6` has a text color of yellow.
 
-* It's done when the finished page matches the mockup below. 
+* It's done when the finished page matches the mockup. 
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[MDN Web Docs on Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+[MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-[MDN Web Docs on Getting Started With CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
+[MDN Web Docs on getting started With CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Mockup](./assets/image-1.png)
+![A webpage features colored blocks that represent six sections, each displaying different background and text colors.](./assets/image-1.png)
 
 ---
 
 ## 💡 Hints
 
-* How can we use the `<link>` element inside the `<head>` of the HTML page to connect our HTML to our CSS?
+How can we use the `<link>` element inside the `<head>` to connect the HTML to the CSS?
 
 ## 🏆 Bonus
 

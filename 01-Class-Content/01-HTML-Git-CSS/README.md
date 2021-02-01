@@ -1,12 +1,12 @@
-# Unit 01: HTML, CSS and Git
+# Unit 01: HTML, CSS, and Git
 
-## Overview:
+## Overview
 
-At the heart of every website is HTML. **H**yper**T**ext **M**arkup **L**anguage is the standard language used to define the structure of a web page. As developers, we use HTML to define the elements on a webpage including paragraphs, images, links, forms, and more.
+At the heart of every website is **HTML**, or **Hypertext Markup Language**. As the standard language used to build the structure of a webpage, HTML allows us to define elements like paragraphs, images, links, forms, and more.
 
-CSS is used to add styling to the elements created with HTML. **C**ascading **S**tyle **S**heets determines how elements are presented on the page. This includes altering the font, color, size, the positioning of an element, or even adding animation. 
+**Cascading Style Sheets**, or **CSS**, is used to add styling to the elements created with HTML. CSS determines how elements are presented on the page, including font, color, size, positioning of elements, and even animation. 
 
-In this unit, you'll learn how to build web pages that use HTML and CSS to define the structure of a page and give it style. You will also be introduced to Git, a version control system that stores your code and its history as well as separate versions of the code. These skills form the building blocks for web development and are essential tools you will use throughout your career. 
+In this unit, you'll learn how to build webpages that use HTML and CSS to define the structure and style. You'll also be introduced to Git, a version control system that stores your code and its history, as well as separate versions of the code. As the building blocks of web development, these are essential skills and tools that you'll use throughout your career. 
 
 ## Key Topics
 
@@ -14,7 +14,7 @@ The following topics will be covered in this unit:
 
 * [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-* [Version Control](https://www.atlassian.com/git)
+* [Version control](https://www.atlassian.com/git)
 
 * [GitHub](https://guides.github.com/activities/hello-world/)
 
@@ -28,11 +28,11 @@ The following topics will be covered in this unit:
 
   * [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-  * [CSS Selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+  * [CSS selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
 
   * [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
-  * [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  * [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
   * [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
@@ -40,19 +40,19 @@ The following topics will be covered in this unit:
 
 You will be employer-ready if you are able to:
 
-* Use Command line tools to navigate your computer’s file system and create directories and files.
+* Navigate your computer’s file system and create directories and files using command-line tools.
 
-* Employ Git commands to create and clone a repository, add and commit changes, and push and pull code.
+* Create and clone a repository, add and commit changes, and push and pull code using Git commands.
 
-* Use HTML elements to build the structure of a web page.
+* Build the structure of a webpage using HTML elements.
 
 * Add attributes to HTML elements to style the elements or adjust their behavior in various ways.
 
-* Style webpages using CSS's color and font properties.
+* Style webpages using CSS's `color` and `font` properties.
 
 * Identify the box model and how it relates to an element's layout and design. 
 
-* Alter the layout of webpages using CSS's display and font properties.
+* Alter the layout of webpages using CSS's `display` and `font` properties.
 
 ## Technical Interview Preparation
 
@@ -62,9 +62,7 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
 
-* @TODO LIST & LINK TO ALGORITHMS
-
-  * 📹 Let's Code { @TODO ADD LINK TO ALGO VIDEO }
+* 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
 
 ### Assessments
 
@@ -74,17 +72,17 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-Accessibility is an increasingly important consideration in web design. Inclusive design aims to make sure all users -- including those with disabilities -- are able to interact and understand a web page's content.
+Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand the content of a webpage.
 
-During this week's homework, you will take an existing website and use the HTML and CSS skills practiced during this week to make sure the site is accessible using the provided guidelines. 
+For this week's homework, you will use your new HTML and CSS skills to ensure that an existing site is accessible, according to the provided guidelines. 
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
 
 ## Heads-Up
 
-In the next unit, you will build on the CSS and HTML fundamentals covered this unit and learn responsive web layouts and advanced CSS.
+In the next unit, you'll build on the CSS and HTML fundamentals covered in this unit as you learn about responsive web layouts and advanced CSS.
 
 ## Resources
 
@@ -94,7 +92,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
 
-  * 📖 [Git Guide](./01-Activities/21-Evr_GIT-Guide/README.md) 
+  * 📖 [Git Guide](./01-Activities/21-Evr_Git-Guide/README.md) 
 
   * 📹 Git Guide Video: @TODO ADD LINK TO GIT VIDEO
 
@@ -102,7 +100,7 @@ Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Getting Started with Git](@TODO Add link when blog post is published)
+  * 📖 Blog Post: [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
 
   * 📖 Blog Post: [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
