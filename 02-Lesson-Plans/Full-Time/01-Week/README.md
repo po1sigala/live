@@ -26,7 +26,7 @@ Also, Make sure to remind students that although CSS is a broad language with ma
 
 * Remind students that related Career Services material can be found in their Career Connection folder for [Unit 01](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/CAREER-CONNECTION.md) and [Unit 02](../../../01-Class-Content/02-Advanced-CSS/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads Up
 

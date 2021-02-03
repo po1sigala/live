@@ -13,7 +13,7 @@ In this unit, we will be tying the front end and back end together with a MERN a
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/21-MERN/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

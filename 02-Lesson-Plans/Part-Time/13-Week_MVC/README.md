@@ -19,7 +19,7 @@ Next unit we will be spending some more time working with full stack application
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/13-MVC/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

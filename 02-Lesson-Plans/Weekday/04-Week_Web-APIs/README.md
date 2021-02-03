@@ -18,7 +18,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/04-Web-APIs
 
 * Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads-Up
 

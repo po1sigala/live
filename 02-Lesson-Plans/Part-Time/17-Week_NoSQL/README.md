@@ -21,7 +21,7 @@ In this unit, we will be introducing students to the NoSQL database with MongoDB
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/17-NoSQL/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

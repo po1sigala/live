@@ -76,7 +76,7 @@ In the homework for this unit, you'll create a simple calendar application that 
 
 ## Career Connection
 
-This week's Career Services material can be found in this unit's [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+This week's Career Services material can be found in this unit's [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
 
 ## Heads-Up
 
