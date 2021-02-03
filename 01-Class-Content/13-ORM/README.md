@@ -106,16 +106,21 @@ In the next unit, we will return to full-stack development and explore an archit
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-  * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+### Git Guide
 
-  * [Sequelize documentation](https://sequelize.org/master/)
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * [npm documentation on bcrypt](https://www.npmjs.com/package/bcrypt)
+  * 📖 [Git Guide: ESLint](./01-Activities/27-Evr_Eslint)
 
-  * [npm documentation on dotenv](https://www.npmjs.com/package/dotenv)
+  * 📹 [Git Guide Video: ESLint](https://2u-20.wistia.com/medias/8enml3wuio)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
 ---
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
