@@ -114,9 +114,11 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: Git Stash](../../01-Class-Content/10-OOP/01-Activities/27-Evr_Git-Stash-Pop/README.md)
+  * 📖 [Git Guide: Git Stash](./01-Activities/27-Evr_Git-Stash-Pop/)
+
+  * 📹 [Git Guide Video: Git Stash](https://2u-20.wistia.com/medias/co9en17nc3) 
 
 ### Full-Stack Blog Posts
 
