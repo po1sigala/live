@@ -6,7 +6,7 @@ In today's class, students will implement media queries and flexbox to create a 
 
 ## Instructor Notes
 
-* In this lesson, students will complete activity `11-CSS_Positioned_Activity` in unit 1 and `01-Ins_Media-Query-Screen` through `10-Stu_Box-Styling` in unit 2.
+* In this lesson, students will complete activity `22-Stu_Mini-Project` in unit 1 and `01-Ins_Media-Query-Screen` through `10-Stu_Box-Styling` in unit 2.
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
@@ -26,10 +26,6 @@ In today's class, students will implement media queries and flexbox to create a 
 
 By the end of class, students will be able to do the following:
 
-* Use HTML/CSS for layout design and element positioning
-
-* Implement basic media queries for screens.
-
 * Implement a CSS grid to accomplish a complex layout.
 
 * Implement a flexbox layout for a responsive web design.
@@ -38,141 +34,327 @@ By the end of class, students will be able to do the following:
 
 ## Time Tracker
 
-| Start  | #  | Activity Name                             | Duration |
-|---     |--- |---                                        |---       |
-| 10:00AM| 1  | Instructor Do: CSS Recap                  | 0:10     |
-| 10:10AM| 2  | Instructor Demo: CSS Positioning Slides   | 0:15     |
-| 10:25AM| 3  | Partners Do: CSS Positioning              | 0:30     |
-| 10:55AM| 4  | Instructor Review: CSS Positioning        | 0:10     |
-| 11:05AM| 5  | FLEX                                      | 0:45     |
-| 11:50PM| 6  | Instructor Do: Stoke Curiosity            | 0:10     |
-| 12:00PM| 7  | BREAK                                     | 0:30     |
-| 12:30PM| 8  | Instructor Demo: Media Query Screen       | 0:05     |
-| 12:35PM| 9  | Student Do: Media Query Screen            | 0:15     |
-| 12:50PM| 10 | Instructor Review: Media Query Screen     | 0:10     |
-| 1:00PM | 11 | Instructor Demo: Flexbox Layout           | 0:05     |
-| 1:05PM | 12 | Student Do: Flexbox Layout                | 0:15     |
-| 1:20PM | 13 | Instructor Review: Flexbox Layout         | 0:10     |
-| 1:30PM | 14 | Instructor Demo: Responsive Design        | 0:05     |
-| 1:35PM | 15 | Student Do: Responsive Design             | 0:15     |
-| 1:50PM | 16 | Instructor Review: Responsive Design      | 0:10     |
-| 2:00PM | 17 | Instructor Demo: Flexbox Placement        | 0:05     |
-| 2:05PM | 18 | Student Do: Flexbox Placement             | 0:15     |
-| 2:20PM | 19 | Instructor Review: Flexbox Placement      | 0:10     |
-| 2:30PM | 20 | END                                       | 0:00     |
+| Start  | #  | Activity Name                         | Duration |
+|---     |--- |---                                    |---       |
+| 10:00AM| 1  | Instructor Demo: Mini Project         | 0:05     |
+| 10:05AM| 2  | Student Do: Mini Project              | 0:60     |
+| 11:05AM| 3  | Instructor Review: Mini Project       | 0:10     |
+| 11:15AM| 4  | Introduce Homework                    | 0:05     |
+| 11:20AM| 5  | FLEX                                  | 0:30     |
+| 11:50PM| 6  | Instructor Do: Stoke Curiosity        | 0:10     |
+| 12:00PM| 7  | BREAK                                 | 0:30     |
+| 12:30PM| 8  | Instructor Demo: Media Query Screen   | 0:05     |
+| 12:35PM| 9  | Student Do: Media Query Screen        | 0:15     |
+| 12:50PM| 10 | Instructor Review: Media Query Screen | 0:10     |
+| 1:00PM | 11 | Instructor Demo: Flexbox Layout       | 0:05     |
+| 1:05PM | 12 | Student Do: Flexbox Layout            | 0:15     |
+| 1:20PM | 13 | Instructor Review: Flexbox Layout     | 0:10     |
+| 1:30PM | 14 | Instructor Demo: Responsive Design    | 0:05     |
+| 1:35PM | 15 | Student Do: Responsive Design         | 0:15     |
+| 1:50PM | 16 | Instructor Review: Responsive Design  | 0:10     |
+| 2:00PM | 17 | Instructor Demo: Flexbox Placement    | 0:05     |
+| 2:05PM | 18 | Student Do: Flexbox Placement         | 0:15     |
+| 2:20PM | 19 | Instructor Review: Flexbox Placement  | 0:10     |
+| 2:30PM | 20 | END                                   | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Do: CSS Recap (10 min)
+### 1. Instructor Demo: Mini Project (5 min) 
 
-* Quickly recap the concepts behind CSS.
+* Open `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-* Have students answer any questions on screen to those closest to them. (Get them comfortable with helping one another.)
+  * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class. 
 
-* The point here is to just give students a refresher. Let them know we will be building our CSS skills for the next few weeks so there is plenty of time to get good at it.
+  * 🔑 For the first mini-project, you will be creating a landing page using HTML and CSS. Each of you will work on your own landing page. However, you will still be put into groups so that you can brainstorm and work together through the specifications of the mini-project.
 
-### 2. Instructor Demo: CSS Positioning Slides and Demo (15 min)
+  * 🔑 The landing page will have a contact form.
 
-* Go through the slides on CSS Positioning one by one.
+  * 🔑 The landing page will have a header, footer, and an image.
 
-* Point out the differences between the various position types:
+  * 🔑 The landing page should also use semantic HTML and be accessible. 
 
-  * `relative`: Positions elements relative to their static location in the document. These elements behave with and interact with other elements the same way they would as if they were positioned statically, except that you can use the `top`/`right`/`bottom`/`left` properties to move the elements _after_ they have been placed into the document flow.
+  * Be creative! You can choose your own colors, text, and image.
 
-  * `absolute`: Positions elements relative to the nearest positioned ancestor (non-`static`). They are taken out of the flow of the document, taking up no space when placing other elements. These elements will move in the viewport as you scroll (unlike fixed).
+  * 🔑 You might need to do a bit of research on your own! As in real life, you will not always be given everything you need to complete a task. Developers have to be able to research and find their own answers.
 
-  * `fixed`: Positions elements relative to the top left of the browser window. Similar to `absolute`, except the containing block is the whole viewport. These elements will remain in the same place in the viewport as you scroll.
+  * When you approach a complex coding problem like this, break down the challenge into manageable chunks. Work with your group to figure out the steps to complete this mini-project. 
 
-  * `z-index`: Allows us to position elements on top of one another.
+  * 🔑 You should also refer frequently to the user story and acceptance criteria. Checking your work against the goal stated in the user story and the conditions established in the acceptance criteria is a great way to stay on track. 
 
-  * `display: none`: Allows us to hide specific elements from the view. Useful because it can activate and deactivate elements. (Compare with `visibility: hidden;`, which also hides elements but not the space they take up.)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* When prompted for the `Demo Time`, open [10-CSS_PositionedLayout/main.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/10-CSS_PositionedLayout/main.html) in both the browser and in your editor.
+  * ☝️ How would we build this?
 
-* Point out that this currently uses static (default) positioning.
+  * 🙋 We will use HTML to build the structure and use CSS to style the page. 
 
-    ![3-Positioning_1](Images/3-Positioning_1.png)
+* Answer any questions before allowing students to start the mini-project.
 
-* Then go through the process of changing the active stylesheet so that each of the other forms of positioning are used.
+### 2. Student Do: Mini Project (60 min)
 
-* If asked about the `reset.css`, feel free to say something along the lines of
+* Direct students to the activity instructions found in `22-Stu_Mini-Project/README.md`.
 
-  > We'll talk about the reset more in the next class, but for now just know it makes it so that the default browser `padding`s and `margin`s don't exist (that way we can more easily see the effects of positioning).
+* Break your students into groups that will work together on this activity.
 
-* Show students both the CSS used and the impact on the HTML.
+  ```md
+  # Unit 01 Mini-Project: Landing Page
 
-  ![3-Positioning_2](Images/3-Positioning_2.png)
+  In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
 
-  * Demo that `top`, `left`, `bottom`, and `right` only work on positioned elements, not static ones. You can demonstrate this by using chrome dev tools to set `position: static;` on one of the boxes.
-  * Point out also that the elements following the relatively positioned elements (boxes 2-4) behave as if box 1 were in its static position. Explain that this is because `top`/`right`/`bottom`/`left` properties are applied only _after_ the element has been placed in the document flow.
+  ## User Story
 
-  ![3-Positioning_3](Images/3-Positioning_3.png)
+  Work in your group to implement the following user stories:
 
-  * When discussing absolute positioning, demo removing the `position: relative;` in-browser with the developer tools. Show them that it will absolutely position based on the nearest positioned ancestor, using the viewport as the basis if none of the ancestors are positioned (demo this by removing the positioning on `.box-set`).
-  * Depending on time, You may also want to show how the elements pile on top of each other if you remove the `top`/`left`/`bottom`/`right` properties - this demonstrates that the elements are removed from the flow of the document.
-  * `absolute` is worth spending a little bit more time on, as it arguably the most complex (and sets the tone for `fixed` positioning)
+  * As a client, I want to view a single webpage that collects a visitor's contact information.
 
-  ![3-Positioning_4](Images/3-Positioning_4.png)
+  * As a client, I want the landing page to have a header and footer.
 
-* Slack students the entire folder (zipped) when done with this activity.
+  * As a client, I want the landing page to have an image with a caption.
 
-### 3. Partners Do: CSS Positioning Activity (30 min)  
+  * As a client, I want the landing page to have a contact form.
 
-* Introduce the next activity. Either by using the slide or by opening the file 
-[11-CSS_Positioned_Activity/positioning.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/11-CSS_Positioned_Activity/Solved/positioning.html) 
-in the browser, show students what they will be building in the next activity.
+  * As a client, I want the landing page to have a polished and accessible UI.
 
-![4-PositioningActivity](Images/4-PositioningActivity.png)
+  ## Acceptance Criteria
 
-* Then Slack out the following instructions.
+  * It's done when the page uses semantic HTML elements.
 
-  * **Instructions:**
+  * It's done when the page uses universal, element, and class selectors in CSS.
 
-    * Work with the same or different partners on this activity, but make sure each member of the group is typing out their own code!
+  * It's done when the page features at least three colors in the design.
 
-    * Create a file called `positioning.html` and a file called `positioning.css`.
+  * It's done when the page uses a single font and font family for all text.
 
-    * Using HTML/CSS, create the layout shown on the screen.
+  * It's done when the page uses at least two heading elements (`<h1>` through `<h6>`).
 
-    * For reference, the colors used on the screen are `#eee` and `#999`.
+  * It's done when the header is fixed to the top of the page on scroll.
 
-    * For further reference, you can generate paragraphs of lorem ipsum text using <http://www.lipsum.com/feed/html>. You need to make this page scroll to see how the fixed position element behaves.
+  * It's done when the header contains a navigation bar with three links that display inline, including a contact link.
 
-    * HINT: Use the code from the last few activities to help get you started.
+  * It's done when, if the contact link is clicked, the page jumps directly to the contact form.
 
-### 4. Instructor Review: CSS Positioning (10 min)
+  * It's done when the contact form includes `input` elements for name and email.
 
-* Discuss the solution from the previous activity. When appropriate, have students help explain code back to you. (Example: You may ask students to help you comment various pieces of the code.)
+  * It's done when the contact form includes a Send button.
 
-* Key points in describing the HTML:
+  * It's done when the image includes a descriptive `alt` attribute.
 
-  * How we created a `div` to hold our content.
+  * It's done when the page is deployed to GitHub Pages.
 
-  * How we created `divs` to hold the `fixed`, `relative`, and `absolute` content.
+  ## 💡 Notes
 
-  * How we used specific `id` tags to attach the CSS to.
+  Follow these instructions to deploy your project to GitHub Pages:
 
-     ![4-PositioningActivity_2](Images/4-PositioningActivity_2.png)
+  1. Create a new repository on your GitHub account and clone it to your computer.
 
-* Key points to explain in describing the CSS Solution:
+  2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
 
-  * How we once again used **border-box** (this just means that the width and height won't include the margin. Not a big deal).
+  3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-  * `#fixed` element has a position of `fixed`.
+  4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
 
-  * Wrapper has a set `width`.
+  5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
-  * `#relative` and `#absolute` have the relative position values.
+  You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
 
-     ![4-PositioningActivity_3](Images/4-PositioningActivity_3.png)
+  > **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an inccorect capital or lowercase letter could cause problems in deployment.
 
-* See if there are any lingering questions. Then Slack out this solution. Let students know to try and re-practice this activity at home. It's a good one.
+  ---
 
-### 5. FLEX (45 min)
+  ## 💡 Hints
 
-* This time can be utilized for reviewing key topics learned so far in this unit or working on homework.
+  Refer to the documentation:
+
+  * [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+  * [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+
+  * [MDN Web Docs on font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+
+  * [MDN Web Docs on HTML section heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+
+  * [MDN Web Docs on how to structure a web form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+
+  * [MDN Web Docs on the button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+
+  * [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your group to further your knowledge:
+
+  * How can CSS be used to apply a different style to an `<a>` element when a cursor points at it?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 3. Instructor Review: Mini Project (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Semantic HTML
+
+  * ✔️ `alt` attribute
+
+  * ✔️ `display: inline`
+
+  * ✔️ `position: fixed`
+
+* Open `22-Stu_Mini-Project/Main/index.html` in your IDE and explain the following: 
+
+  * Everyone's landing pages will look different, so don't worry if yours doesn't look exactly like what we are about to review. As long as your landing page fulfills all of the specifications of the project, you did great!
+
+  * We use `<link>` to link the HTML page to the CSS. The `<link>` is placed in the `<head>` and uses an `href` attribute to set the relative path to the CSS style sheet:
+
+    ```html
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css/">
+    ```
+
+  * 🔑 We use semantic HTML to define the header and an unordered list to create a list of links: 
+
+    ```html
+    <header>
+      <nav class="text-right">
+        <ul>
+          <li> <a href="https://github.com/">Github</a></li>
+          <li> <a href="#">Portfolio</a></li>
+          <li> <a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    ```
+
+  * We use a `<h1>` section heading for the title: 
+
+    ```html
+    <h1 class="text-center">My New Website</h1>
+    ```
+
+  * 🔑 We use a `<figure>` element to add an image and a caption. We use an `alt` attribute to describe the image:
+
+    ```html
+    <figure>
+        <img src="./assets/images/image-1.png" alt="Graphic with Coming Soon text">
+        <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
+    </figure>
+    ```
+
+  * We use semantic HTML to define a section for the contact form. Inside the `<section>`, we add a sub-header. For accessibility, it is important that the section headings are organized in descending order. So because we used `<h1>` previously, we use `<h2>` now:
+
+    ```html
+    <section id="contact">
+        <h2 class="text-center">Contact Me</h2>
+    ```
+
+  * You probably had to research how to create a form. A Google search can help you quickly learn how to use an unfamiliar element in your webpage:
+
+    ```html
+    <form>
+      <ul>
+        <li>
+          <label class="text-right" for="name">Name:</label>
+          <input type="text" id="name" name="user-name">
+        </li>
+        <li>
+          <label class="text-right" for="email">Email:</label>
+          <input type="text" id="email" name="user-email">
+        </li>
+      </ul>
+      <div class="text-center">
+        <button type="submit">SEND</button>
+      </div>
+    </form>
+    ```
+
+  * Finally, we added a footer with a `class` attribute used for styling: 
+
+    ```html
+    <footer class="text-center">
+      © 2021 My New Website Productions 
+    </footer>
+    ```
+
+* Open `22-Stu_Mini-Project/Main/assets/css/style.css` in your IDE and explain the following: 
+
+  * We use a universal selector to set the margin and padding of all elements to 0:
+
+    ```css
+    * {
+      margin:0;
+      padding:0;  
+    }
+    ```
+
+  * 🔑 We use an element selector to select all the list items and set the display property to `inline`. This will create a horizontal set of links in the navbar:
+
+    ```css
+    li {
+      display: inline;
+      padding: 20px;
+      text-decoration: none;
+    }
+    ``` 
+
+  * 🔑 To keep the header fixed to the top of the viewport, we set the position to `fixed`:
+
+    ```css
+    header {
+      position: fixed;
+      border-bottom: 10px solid #DDAF94;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it important to design webpages with accessibility in mind? 
+
+  * 🙋 Making your website accessible to more people can result in more users!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on structuring the web with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML) and the [MDN Web Docs on learning to style HTML using CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to introduce the homework
+
+### 4. Instructor Demo: Introduce Homework (5 min)
+
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+
+  * During this week's homework, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
+
+  * Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand a webpage's content.
+
+  * During this week's activities, we had a brief introduction to the use of semantic HTML and accessibility concerns. This project will require you to do some research to ensure that the goal stated in the user story and each part of the acceptance criteria is fully addressed. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to use HTML and CSS to build a website that is accessible to all users. 
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will use new skills in HTML and CSS to refactor an existing webpage and build off of the accessibility concepts covered in class.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Developers need to be able to design websites with all users in mind so that they can create inclusive user experiences and attract more users to various projects.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before proceeding to flex time
+### 5. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
