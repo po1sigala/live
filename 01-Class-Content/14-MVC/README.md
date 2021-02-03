@@ -97,12 +97,14 @@ Next week, you'll start working on your second group project! In the next class,
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit.
+
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
   * 📖 [Git Guide: Prettier](./01-Activities/27-Evr_Prettier)
 
----
+  * 📹 [Git Guide Video: Prettier](https://2u-20.wistia.com/medias/296lisxgqx) 
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
