@@ -16,9 +16,13 @@ Refer to the following links for detailed information on key topics, learning ob
 
 First off, welcome and thank you so much for being a part of our program! Thanks to instructors/TAs like yourself, we're helping hundreds of students across the world achieve their career goals and their creative dreams. You have plenty of time to work with these students, and their progress will astound you. Buckle in! You're in for a fun ride!
 
-The main goal of this unit is to help students get adjusted to an "average day" of our bootcamp. Be sure to encourage students plenty and focus heavily on keeping students engaged. This unit is crucial in setting the tone for units to come.
+* Also during the first class, you will review the tools that students will need in this course, including Slack, VS Code, and GitHub. Refer to the [Slack workspace set-up guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), the [VS Code download page](https://code.visualstudio.com/download), and the [GitHub Docs on setting up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines.
 
-In this unit, students will learn how to build web apps that incorporate both of these features: responsive web design and advanced CSS. These skills are a must for modern web developers, and learning them will enable you to create attractive, engaging, and adaptive websites. 
+* Remind students that they can always refer to their prework for more detailed installation instructions. However, if a student is struggling to install or use the required tools, encourage them to stay for office hours for additional help.
+
+* In addition to HTML, CSS, and Git fundamentals, the activities for this week also aim to familiarize students with classroom expectations. Make sure to emphasize the importance of doing a `git pull` of the class repo before each class. 
+
+* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise. 
 
 Also, Make sure to remind students that although CSS is a broad language with many tricks to learn, they will continue to build their CSS knowledge throughout the entire course.
 
@@ -42,6 +46,8 @@ Next unit we will also provide students with common problems they will see in in
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
 * [01.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
@@ -62,20 +68,13 @@ Next unit we will also provide students with common problems they will see in in
 
 ### Slide Decks
 
-* [01.1 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing)
-
-* [01.2 Git-HTML-CSS](https://docs.google.com/presentation/d/1-503hnlqNaj-cPjVjq4KA2VyfbDlvcErquBc73qh_ug/edit?usp=sharing)
+* [Unit 01 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing)
 
 * [Unit 02: Advanced CSS](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
 
-### Time Tracker(s)
+### Algorithms
 
-* [Unit 01-HTML-Git-CSS Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1q6IWOA9IWVEAVZDgITp6uDk0wMDm_yVSHqM6CtPEvSk/edit?usp=sharing)
-
-* [Unit 01-HTML-Git-CSS Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/17iJQJG14grX0Mj9RAvdFQR5sBv5PgHMhe0VdwNyEF0E/edit?usp=sharing)
-
-* The remaining Time Trackers are at the top of Lesson Plans.
-
+  * 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
 ### Resources
 
   * [MDN Web Docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
