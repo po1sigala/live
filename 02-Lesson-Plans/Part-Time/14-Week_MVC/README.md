@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/14-MVC/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads-Up
 
@@ -42,11 +42,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [14.1 Lesson Plan](01-Day_Handlebars/14.1-LESSON-PLAN.md)
+  * [14.1 Lesson Plan](./01-Day_Handlebars/14.1-LESSON-PLAN.md)
 
-  * [14.2 Lesson Plan](02-Day_Authentication/14.2-LESSON-PLAN.md)
+  * [14.2 Lesson Plan](./02-Day_Authentication/14.2-LESSON-PLAN.md)
   
-  * [14.3 Lesson Plan](03-Day_Review/14.3-LESSON-PLAN.md)
+  * [14.3 Lesson Plan](./03-Day_Review/14.3-LESSON-PLAN.md)
 
 ### Homework
 
@@ -64,7 +64,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [03: Concert Flyer](../../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer/)
 
-    * [📹 Let's Code Concert Flyer](https://2u-20.wistia.com/medias/42ac9axtbq)
+    * 📹 [Let's Code Concert Flyer](https://2u-20.wistia.com/medias/42ac9axtbq)
 
 ### Resources
 
@@ -85,4 +85,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Prettier documentation](https://prettier.io/docs/en/index.html)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
