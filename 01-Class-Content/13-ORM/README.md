@@ -80,7 +80,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Double Triple Map](./03-Algorithms/01-double-triple-map)
 
-  * [📹 Let's Code Double Triple Map!](https://2u-20.wistia.com/medias/pz1ugrv0yu)
+  * 📹 [Let's Code Double Triple Map!](https://2u-20.wistia.com/medias/pz1ugrv0yu)
 
 * [02: Array Intersection](./03-Algorithms/02-array-intersection)
 
@@ -98,7 +98,7 @@ In the homework for this unit, you will create an e-commerce back end. You will 
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
 
 ## Heads-Up
 
