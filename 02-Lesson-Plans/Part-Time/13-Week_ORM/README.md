@@ -75,5 +75,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [ESLint configuration user guide](https://eslint.org/docs/user-guide/configuring)
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

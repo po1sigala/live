@@ -45,5 +45,4 @@ Open [Unsolved/array-intersection.js](Unsolved/array-intersection.js) in your co
   * Functions that FAIL the tests will be denoted with a red X and an error message.
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
