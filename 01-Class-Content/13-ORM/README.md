@@ -36,6 +36,8 @@ The following topics will be covered in this unit:
 
 * [bcrypt](https://www.npmjs.com/package/bcrypt)
 
+* [ESLint](https://eslint.org/docs/user-guide/configuring)
+
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
