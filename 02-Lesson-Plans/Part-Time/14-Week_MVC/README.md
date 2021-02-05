@@ -64,7 +64,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [03: Concert Flyer](../../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer/)
 
-    * 📹 [Let's Code Concert Flyer](https://2u-20.wistia.com/medias/42ac9axtbq)
+    * 📹 [Let's Code Concert Flyer!](https://2u-20.wistia.com/medias/42ac9axtbq)
 
 ### Resources
 
