@@ -68,11 +68,11 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-* [01: Common Element](../../01-Class-Content/14-MVC/03-Algorithms/01-common-element)
+* [01: Common Element](./03-Algorithms/01-common-element)
 
-* [02: Permutation Substring](../../01-Class-Content/14-MVC/03-Algorithms/02-permutation-substring)
+* [02: Permutation Substring](./03-Algorithms/02-permutation-substring)
 
-* [03: Concert Flyer](../../01-Class-Content/14-MVC/03-Algorithms/03-concert-flyer)
+* [03: Concert Flyer](./03-Algorithms/03-concert-flyer)
 
   * 📹 [Let's Code Concert Flyer!](https://2u-20.wistia.com/medias/42ac9axtbq)
 
@@ -88,7 +88,7 @@ For this unit's homework, you'll be building a CMS-style blog site similar to a 
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](../../01-Class-Content/14-MVC/04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
 
 ## Heads-Up
 

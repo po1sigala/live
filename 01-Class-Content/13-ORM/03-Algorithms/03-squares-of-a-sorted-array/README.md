@@ -44,4 +44,4 @@ Open [Unsolved/squares-of-a-sorted-array.js](Unsolved/squares-of-a-sorted-array.
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
