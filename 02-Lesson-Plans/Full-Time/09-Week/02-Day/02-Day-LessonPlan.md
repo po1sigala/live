@@ -503,6 +503,8 @@ In this activity, you will create an object store for your IndexedDB database.
   };
   ```
 
+* Before moving on to the next activity, be sure to delete the "todoList" database from the list of IndexedDB in your browser!
+
 * Ask the class the following question(s):
 
   * ☝️ What do we use object stores for? 
@@ -524,6 +526,8 @@ In this activity, you will create an object store for your IndexedDB database.
   * ✔ The `indexName` is what you use to access the index when querying.
 
   * ✔ The `keyPath` is the actual name of the "column."
+
+* Be sure to have deleted the "todoList" database from your list of IndexedDB in the browser before starting this activity!
 
 * Open [20-Ins_Creating_Indexes](../../../../01-Class-Content/17-nosql/01-Activities/20-Ins_Creating_Indexes/index.html) in your IDE and review the code snippet.
 
@@ -564,6 +568,8 @@ In this activity, you will create an index on your object store that can be used
 
 ## Instructions
 
+* In your browser, be sure to have deleted the "todoList" database from the list of IndexedDB before starting this activity!
+
 * Write code to request an IndexedDB database instance.
 
 * On success, log the result to your console.
@@ -600,6 +606,8 @@ In this activity, you will create an index on your object store that can be used
   * 🔑 Recall that the `indexName` is what you use to access the index and the `keyPath` is the actual name of the "column."
 
 * Answer any questions before proceeding to the next demo.
+
+* Before moving on to the next activity, be sure to delete the "todoList" database from the list of IndexedDB in your browser!
 
 ### 19. Instructor Do: Adding and Getting Object Store Data (5 mins)
   
@@ -659,6 +667,8 @@ In this activity, you will create an index on your object store that can be used
 In this activity, you will create add and retrieve data from an objectStore using a keyPath and index.
 
 ## Instructions
+
+* In your browser, be sure to have deleted the "todoList" database from the list of IndexedDB before starting this activity!
 
 * In the `onupgradeneeded` method: 
 
@@ -741,6 +751,8 @@ In this activity, you will create add and retrieve data from an objectStore usin
 
 * Answer any questions before proceeding to the next demo.
 
+* Before moving on to the next activity, be sure to delete the "todoList" database from the list of IndexedDB in your browser!
+
 ### 22. Instructor Do: Updating Data With Cursors (5 mins)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
@@ -788,6 +800,8 @@ In this activity, you will create add and retrieve data from an objectStore usin
 In this activity, you will be updating records in your object store using a Cursor.
 
 ## Instructions
+
+* In your browser, be sure to have deleted the "todoList" database from the list of IndexedDB before starting this activity!
 
 * Inside ` getCursorRequest.onsuccess`
 
