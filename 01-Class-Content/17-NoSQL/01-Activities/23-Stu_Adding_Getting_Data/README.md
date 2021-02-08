@@ -4,6 +4,8 @@ In this activity, you will create add and retrieve data from an objectStore usin
 
 ## Instructions
 
+* In your browser, be sure to have deleted the "todoList" database from the list of IndexedDB before starting this activity!
+
 * In the `onupgradeneeded` method:
 
   * Create a `toDoList` object store with a `listID` keyPath that can be used to query on.
