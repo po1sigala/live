@@ -1,6 +1,6 @@
 # GitHub Packages
 
-Now that you have some serious web developer skills under your belt, you might find yourself wanting to publish your own `npm` packages. GitHub has a great way to publish your own packages with relative ease.
+Now that you have some serious web development skills under your belt, you might find yourself wanting to publish your own packages. GitHub has a great way to publish your own packages with relative ease.
 
 Many times in this course you have installed packages using `npm install`, but now we will explore the other side of that equation. Today we will be writing and publishing an small package to GitHub's Package registry. This is a great way to share your code with other developers and also learn how a package registry works.
 
@@ -12,11 +12,11 @@ We will go through these steps together, but to be sure we have the right resour
 
 In order to publish packages to GitHub Packages, we will first need to authenticate ourselves by generating a personal access token on GitGub.
 
-1. Navigate to GitHub Settings - Developer settings - [Personal access tokens](https://github.com/settings/tokens)
+1. Navigate to GitHub Settings - Developer settings - [Personal access tokens](https://github.com/settings/tokens).
 
 2. Click "Generate new token" and give it a name of something like "GitHub Packages Demo".
 
-3. Select the following scopes for this token: `repo`, `write:packages`. You will notice that after you check those two boxes, it will auto-select some nested options like . This is expected.
+3. Select the following scopes for this token: `repo` and `write:packages`. You will notice that after you check those two boxes, it will auto-select some nested options. This is to be expected.
 
 4. Generate the token and copy it to your clipboard. **Important**: This token will not be visible once we leave this page, so be sure to leave the tab open or ensure it has been copied to your clipboard.
 
@@ -91,5 +91,11 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 Congratulations on publishing your first package to GitHub! Using the screenshots below you can double check that your package was published successfully. Start by visiting your GitHub repository and clicking on "Packages" on the right:
 
 ![packages](01-packages.png)
+
+If you want to share this package with someone, they can follow the instructions on the package page:
+
+```sh
+npm install @TestUser22/github-pkg-demo@1.0.0
+```
 
 ![packages-page](02-packages-page.png)
