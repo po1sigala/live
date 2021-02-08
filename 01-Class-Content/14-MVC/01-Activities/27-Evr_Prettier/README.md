@@ -58,7 +58,7 @@ Continually executing this command isn't a great workflow, though. A better expe
 
 Once installed, the extension will look for any `.prettierrc.json` file and use those settings for formatting. Open the `example2.js` file and press Ctrl+Shift+P on Windows or Command+Shift+P on macOS, then select "Format Document with" from the dropdown or begin to type it into the search bar if it doesn't appear. Then, select the "Prettier - Code formatter" option. This will auto-format the currently opened document.
 
-You can also configure VS Code to do this each time you save a file. Select the File menu, then select Preferences > Settings. In the Settings tab, search for "format" and check the option to "Format on Save". You will see something like the following image:
+You can also configure VS Code to do this each time you save a file. Navigate to Preferences > Settings. This will be under the Code menu on macOS or under the File menu on Windows. In the Settings tab, search for "format" and check the option to "Format on Save". You will see something like the following image:
 
 ![In the VS Code Settings tab, the Format on Save option is selected.](./Images/01-format-on-save.png)
 
