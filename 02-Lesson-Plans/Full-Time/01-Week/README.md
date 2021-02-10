@@ -1,20 +1,16 @@
-# Unit 01-02: HTML-Git and Advanced-CSS
+# Unit 01 & 02 Instructor Overview: HTML, CSS, and Git and Advanced CSS
 
 ## Overview
 
-In this unit, we will be welcoming our students to their first unit of our Full-Stack Web Development Boot Camp. We'll be walking them through the very basics of HTML/CSS, Git Version Control, and Terminal/Console commands.
+In Unit 01, you will introduce students to HTML, CSS, and version control with Git.
 
-We'll also continue diving into CSS and providing students with a thorough series on Bootstrap. Additionally, we'll cover deployments with GitHub Pages.
+In Unit 02, students will implement media queries and flexbox to create a responsive web design. Students will also overwrite browser defaults by using a CSS reset and then rebuild those styles using advanced CSS concepts, such as pseudo-classes and pseudo-elements.
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
-
-* [HTML-Git-CSS Unit Overview](../../../01-Class-Content/01-HTML-Git-CSS/README.md)
-
-* [Advanced-CSS Unit Overview](../../../01-Class-Content/02-Advanced-CSS/README.md)
+Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content/01-HTML-Git-CSS/README.md) and [Unit 02](../../../01-Class-Content/02-Advanced-CSS/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor / TA Notes
 
-First off, welcome and thank you so much for being a part of our program! Thanks to instructors/TAs like yourself, we're helping hundreds of students across the world achieve their career goals and their creative dreams. You have plenty of time to work with these students, and their progress will astound you. Buckle in! You're in for a fun ride!
+* During the first 70 minutes of the first class, the university will lead introductory activities and provide important course-specific information to the students. 
 
 * Also during the first class, you will review the tools that students will need in this course, including Slack, VS Code, and GitHub. Refer to the [Slack workspace set-up guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), the [VS Code download page](https://code.visualstudio.com/download), and the [GitHub Docs on setting up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines.
 
@@ -24,7 +20,17 @@ First off, welcome and thank you so much for being a part of our program! Thanks
 
 * For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise. 
 
-Also, Make sure to remind students that although CSS is a broad language with many tricks to learn, they will continue to build their CSS knowledge throughout the entire course.
+* The mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
+
+* Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code. 
+
+* Be ready to use Chrome DevTools and the device emulator to quickly demonstrate various CSS concepts on different screen sizes.
+
+* Make sure to remind students that CSS is a broad language with many tricks to learn. They shouldn't expect to learn it all in one week. In fact, they will continue to build their CSS knowledge throughout the entire course.
+
+* When learning about typography, students will probably see different fonts on their machines depending on the operating system they're using. Therefore, be prepared to discuss web-safe fonts and font fallbacks.
+
+* Remind students to complete the assessments for both units near the end of the week. Students can find them in their Unit Overviews under Technical Interview Preparation.
 
 ## Career Connection
 
@@ -34,15 +40,9 @@ If you'd like more information on Career Services, visit the [Career Services re
 
 ## Heads Up
 
-A lot of time will be spent ensuring that students have properly installed all of the tools and programs from the prework.
+* Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during office hours. 
 
-Be ready to have your troubleshooting hat on for helping students debug GitHub Pages deploys, as the surface area for problems is somewhat large.
-
-Next unit, we begin JavaScript, make sure to review the slide decks in advance.
-
-Next unit we will also provide students with common problems they will see in interviews. It is recommended that you familiarize yourself with these problems so that you can help students with any questions they might have.
-
-> **IMPORTANT** Be sure to give your students both the [Good README Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) and the [Homework Guide](../../../01-Class-Content/01-HTML-Git-CSS/04-Important/Homework-Guide/README.md) during the first week of class.
+* Starting with the next unit, students will be solving algorithms that they are likely to see in technical interviews. It is recommended that you familiarize yourself with the weekly algorithm problems, so you can help students with any questions they might have&mdash;they're sure to have some!
 
 ## Helpful Links
 
@@ -68,36 +68,71 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-* [Unit 01 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing)
+* [Unit 01: Computational Thinking](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing)
 
 * [Unit 02: Advanced CSS](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
 
 ### Algorithms
 
+Unit 01:
+
   * 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
+
 ### Resources
 
-  * [MDN Web Docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+* [GitLab Docs on adding an SSH key to a GitLab account](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account)
 
-  * [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+* [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
 
-  * [MDN Web Docs on the Flexible Box Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+* [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
-  * [MDN Web Docs on cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+* [MDN Web Docs on basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-  * [MDN Web Docs on text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+* [Atlassian guide to Git basics](https://www.atlassian.com/git)
 
-  * [MDN Web Docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) and [MDN Web Docs on display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+* [GitHub Docs on creating a repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 
-  * [MDN Web Docs on pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+* [GitHub Docs on cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-  * [MDN Web Docs on appearance](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) and [MDN Web Docs on combinators](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+* [MDN Web Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-  * [MDN Web Docs on attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+* [MDN Web Docs on HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
-  * [MDN Web Docs on CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+* [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-  * [Wikipedia page on website wireframe](https://en.wikipedia.org/wiki/Website_wireframe)
+* [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+
+* [MDN Web Docs on styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text)
+
+* [MDN Web Docs on CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+
+* [MDN Web Docs on display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+* [MDN Web Docs on CSS basic box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
+
+* [MDN Web Docs on position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+* [MDN Web Docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+* [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+* [MDN Web Docs on the Flexible Box Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+
+* [MDN Web Docs on cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+* [MDN Web Docs on text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+
+* [MDN Web Docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) and [MDN Web Docs on display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+* [MDN Web Docs on pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+* [MDN Web Docs on appearance](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) and [MDN Web Docs on combinators](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+* [MDN Web Docs on attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+* [MDN Web Docs on CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
+* [Wikipedia page on website wireframe](https://en.wikipedia.org/wiki/Website_wireframe)
 
   ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

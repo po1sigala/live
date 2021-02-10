@@ -56,6 +56,10 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
+* [GitLab Docs on adding an SSH key to a GitLab account](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account)
+
+* [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
+
 * [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 * [MDN Web Docs on basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
