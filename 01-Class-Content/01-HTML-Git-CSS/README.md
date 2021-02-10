@@ -92,9 +92,9 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
 
-  * 📖 [Git Guide: Set Up a Local Repository with Git](./01-Activities/21-Evr_Git-Guide/README.md) 
+  * 📖 [Git Guide: Set Up a Local Repository](./01-Activities/21-Evr_Git-Guide/README.md) 
 
-  * 📹 [Git Guide Video: Set Up a Local Repository with Git](https://2u-20.wistia.com/medias/gwjkxxacax)
+  * 📹 [Git Guide Video: Set Up a Local Repository](https://2u-20.wistia.com/medias/gwjkxxacax)
 
 ### Full-Stack Blog Posts
 
