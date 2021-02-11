@@ -17,7 +17,7 @@ Project presentations will take place on the last day of class. You may want to 
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/22-Computer-Science/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

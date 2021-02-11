@@ -1,4 +1,4 @@
-# Unit 09: Node.js and ES6+
+# Unit 09: Node.js
 
 ## Overview
 
@@ -96,7 +96,7 @@ In the homework for this unit, you’ll create a command-line application that u
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
 
 ## Heads-Up
 
@@ -104,9 +104,21 @@ In this unit, you'll begin to use Node.js. Be sure to have it installed on your 
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
 
-* 📖 [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
+### Git Guide
 
-- - -
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: Git Fork](./01-Activities/27-Evr_Git-Fork)
+
+  * 📹 [Git Guide Video: Git Fork](https://2u-20.wistia.com/medias/tyiqf0rns2)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
+
+---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

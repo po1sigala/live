@@ -6,7 +6,7 @@
 
 Hello again! Time for another dose of career content, helping you to understand how what you learned this week relates to your future development career&mdash;and of course keeping you on track to reach that employer-ready status!
 
-On that note, last week we mentioned the [Career Services Milestone: Develop Your Resume.](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume) If you didn't complete that yet, we encourage you to get that resume over to a Profile Coach as soon as possible! This is an important step toward unlocking employer-ready status and accessing a wide range of materials.
+On that note, last week we mentioned the [Career Services Milestone: Develop Your Resume.](https://mycareerspot.org/resume) If you didn't complete that yet, we encourage you to get that resume over to a Profile Coach as soon as possible! This is an important step toward unlocking employer-ready status and accessing a wide range of materials.
 
 ### Object-Relational Mapping (ORM)
 

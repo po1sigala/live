@@ -1,405 +1,1146 @@
-# 01.3 Lesson Plan - Heroes of CSS (10:00 AM) <!--links--> &nbsp; [⬅️](../02-Day/02-Day-LessonPlan.md) &nbsp; [➡️](../04-Day/04-Day-LessonPlan.md)
+# 01.3 Full-Time Lesson Plan: Responsive Design
 
 ## Overview
 
-In today's class, we'll be covering the bulk of CSS layout and positioning techniques. We'll also be touching on relative file paths.
-
-We're also focused on empowering students with GitHub Pages for live deployments.
+In today's class, students will implement media queries and flexbox to create a responsive web design.
 
 ## Instructor Notes
 
-* `Summary: Complete Activities 10 & 11 in Unit 01 and Activities 1-6 in Unit 02`
+* In this lesson, students will complete activity `22-Stu_Mini-Project` in unit 1 and `01-Ins_Media-Query-Screen` through `10-Stu_Box-Styling` in unit 2.
 
-* Way to go, you made it -- Hump day! Not to unnerve you, but today is one of the most challenging class sessions you'll have in the entire program. There's a lot to cover, it's easy to get side-tracked, and students' nerves are running high.
+* Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
-* In this class session we'll be providing students with a deep dive into CSS positioning and layouts. Many of the concepts and exercises will be frustrating to students, and it will be your responsibility to continually remind them that these concepts will start sticking over time.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
-* In order to keep motivation high, we're suggesting you use the following approach for the more challenging exercises. As students complete the exercises, they should message the TA. The TA will then call on the class and ask, "Who needs help?" The TA will then send the student who is done to the student in need. As an instructor, let all students know that being able to help fix others' bugs is a big part of being a good developer.
+* When reviewing activities, ask for volunteers to share their solutions or to walk through the solution line by line.
 
-* If there is time and you see a need, you may even want your TAs to share their own experiences learning HTML/CSS for the first time. Have them offer context on how long it's taken to feel competent.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* **Important to note**: At this point in the program, students can still drop at no cost to themselves, making this period an ultra-critical one. Make sure students feel motivated. If you or a TA see any student getting visibly frustrated, walk over and try to offer extra support.
-
-* **Also Important**: Feel free to add in slides to the slide deck with any due dates for your class.
-
-* Also, later in this class, your focus as instructors/TAs is to ensure students are able to utilize Github Pages to deploy their websites. Going forward from today, students will be expected to submit Homework with links to both their GitHub repository and a live deployed website. Be ready to have your troubleshooting hat on for helping them debug deploys, as the surface area for problems is somewhat large.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
 
 ## Sample Class Video (Highly Recommended)
+
 * To view an example class lecture visit (Note video may not reflect latest lesson plan): [Class Video](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2e0037f-9a39-4942-83bb-3b555d224a64)
 
 ## Learning Objectives
 
-* Recap the basic topics covered to date
-* Engage in a deep dive of HTML/CSS for layout design and element positioning
-* Offer a conceptual introduction to CSS reset and downloadable style sheets
-* Work with Google Developer tools for site inspection
-* Utilize Github Pages for website deployment
+By the end of class, students will be able to do the following:
 
-## Slides
+* Implement a CSS grid to accomplish a complex layout.
 
-* [1.3 Heroes of CSS](https://docs.google.com/presentation/d/1KZAUUZv3TfMkQ0WvN3kJejCbm5EZcr9vqVWGM7x_WUA/edit?usp=sharing)
+* Implement a flexbox layout for a responsive web design.
+
+* Use flexbox justification and alignment properties for spacing.
 
 ## Time Tracker
 
-* [1.3 Time Tracker](https://docs.google.com/spreadsheets/d/10aVn2TGj08ji_fJ0G2sKhfS7EprRXF2Frvs-9punxN8/edit?usp=sharing)
+| Start  | #  | Activity Name                         | Duration |
+|---     |--- |---                                    |---       |
+| 10:00AM| 1  | Instructor Demo: Mini Project         | 0:05     |
+| 10:05AM| 2  | Student Do: Mini Project              | 0:60     |
+| 11:05AM| 3  | Instructor Review: Mini Project       | 0:10     |
+| 11:15AM| 4  | Introduce Homework                    | 0:05     |
+| 11:20AM| 5  | FLEX                                  | 0:30     |
+| 11:50PM| 6  | Instructor Do: Stoke Curiosity        | 0:10     |
+| 12:00PM| 7  | BREAK                                 | 0:30     |
+| 12:30PM| 8  | Instructor Demo: Media Query Screen   | 0:05     |
+| 12:35PM| 9  | Student Do: Media Query Screen        | 0:15     |
+| 12:50PM| 10 | Instructor Review: Media Query Screen | 0:10     |
+| 1:00PM | 11 | Instructor Demo: Flexbox Layout       | 0:05     |
+| 1:05PM | 12 | Student Do: Flexbox Layout            | 0:15     |
+| 1:20PM | 13 | Instructor Review: Flexbox Layout     | 0:10     |
+| 1:30PM | 14 | Instructor Demo: Responsive Design    | 0:05     |
+| 1:35PM | 15 | Student Do: Responsive Design         | 0:15     |
+| 1:50PM | 16 | Instructor Review: Responsive Design  | 0:10     |
+| 2:00PM | 17 | Instructor Demo: Flexbox Placement    | 0:05     |
+| 2:05PM | 18 | Student Do: Flexbox Placement         | 0:15     |
+| 2:20PM | 19 | Instructor Review: Flexbox Placement  | 0:10     |
+| 2:30PM | 20 | END                                   | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: Welcome + Admin Tasks (Slides) (5 mins)
+## Class Instruction
 
-* Open the Slide Deck [01-3 Heroes of CSS](https://docs.google.com/presentation/d/1KZAUUZv3TfMkQ0WvN3kJejCbm5EZcr9vqVWGM7x_WUA/edit?usp=sharing).
+### 1. Instructor Demo: Mini Project (5 min) 
 
-* Welcome students back to class and flip through the Admin slides.
+* Open `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-* Be sure to encourage students to submit something for the homework assignment, even if it's not great. The point is to get in the habit of submitting. Also... it's mandatory to receive career services that they miss no more than two.
+  * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class. 
 
-### 2. Instructor Do: Warning Monologue + Reassurance (Slides) (5 mins)
+  * 🔑 For the first mini-project, you will be creating a landing page using HTML and CSS. Each of you will work on your own landing page. However, you will still be put into groups so that you can brainstorm and work together through the specifications of the mini-project.
 
-* Start today's class by first warning them in advance that today's class is going to be **hard**. Let them know that what makes today's class hard isn't anything deeply confusing conceptually but that it will be hard because it's so unfamiliar.
+  * 🔑 The landing page will have a contact form.
 
-* Offer something like the below monologue (or your own variant):
+  * 🔑 The landing page will have a header, footer, and an image.
 
-  > Remember, learning is "FRUSTRATING." You're not behind if you don't get all of this today. The point is to take in as much as you can now. Get immersed, and then push yourself on the homework assignment. It may not click for many weeks. But trust us. Looking back, it WILL CLICK far more quickly than you'll believe.
+  * 🔑 The landing page should also use semantic HTML and be accessible. 
 
-### 3. Instructor Do: CSS Recap (Slides) (10 mins)
+  * Be creative! You can choose your own colors, text, and image.
 
-* Quickly recap the concepts behind CSS.
+  * 🔑 You might need to do a bit of research on your own! As in real life, you will not always be given everything you need to complete a task. Developers have to be able to research and find their own answers.
 
-* Have students answer any questions on screen to those closest to them. (Get them comfortable with helping one another.)
+  * When you approach a complex coding problem like this, break down the challenge into manageable chunks. Work with your group to figure out the steps to complete this mini-project. 
 
-* The point here is to just give students a refresher. Let them know we will be building our CSS skills for the next few weeks so there is plenty of time to get good at it.
+  * 🔑 You should also refer frequently to the user story and acceptance criteria. Checking your work against the goal stated in the user story and the conditions established in the acceptance criteria is a great way to stay on track. 
 
-### 4. Instructor Do: CSS Positioning (Slides + Demo) (15 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Go through the slides on CSS Positioning one by one.
+  * ☝️ How would we build this?
 
-* Point out the differences between the various position types:
+  * 🙋 We will use HTML to build the structure and use CSS to style the page. 
 
-  * `relative`: Positions elements relative to their static location in the document. These elements behave with and interact with other elements the same way they would as if they were positioned statically, except that you can use the `top`/`right`/`bottom`/`left` properties to move the elements _after_ they have been placed into the document flow.
+* Answer any questions before allowing students to start the mini-project.
 
-  * `absolute`: Positions elements relative to the nearest positioned ancestor (non-`static`). They are taken out of the flow of the document, taking up no space when placing other elements. These elements will move in the viewport as you scroll (unlike fixed).
+### 2. Student Do: Mini Project (60 min)
 
-  * `fixed`: Positions elements relative to the top left of the browser window. Similar to `absolute`, except the containing block is the whole viewport. These elements will remain in the same place in the viewport as you scroll.
+* Direct students to the activity instructions found in `22-Stu_Mini-Project/README.md`.
 
-  * `z-index`: Allows us to position elements on top of one another.
+* Break your students into groups that will work together on this activity.
 
-  * `display: none`: Allows us to hide specific elements from the view. Useful because it can activate and deactivate elements. (Compare with `visibility: hidden;`, which also hides elements but not the space they take up.)
+  ```md
+  # Unit 01 Mini-Project: Landing Page
 
-* When prompted for the `Demo Time`, open [10-CSS_PositionedLayout/main.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/10-CSS_PositionedLayout/main.html) in both the browser and in your editor.
+  In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
 
-* Point out that this currently uses static (default) positioning.
+  ## User Story
 
-    ![3-Positioning_1](Images/3-Positioning_1.png)
+  Work in your group to implement the following user stories:
 
-* Then go through the process of changing the active stylesheet so that each of the other forms of positioning are used.
+  * As a client, I want to view a single webpage that collects a visitor's contact information.
 
-* If asked about the `reset.css`, feel free to say something along the lines of
+  * As a client, I want the landing page to have a header and footer.
 
-  > We'll talk about the reset more in the next class, but for now just know it makes it so that the default browser `padding`s and `margin`s don't exist (that way we can more easily see the effects of positioning).
+  * As a client, I want the landing page to have an image with a caption.
 
-* Show students both the CSS used and the impact on the HTML.
+  * As a client, I want the landing page to have a contact form.
 
-  ![3-Positioning_2](Images/3-Positioning_2.png)
+  * As a client, I want the landing page to have a polished and accessible UI.
 
-  * Demo that `top`, `left`, `bottom`, and `right` only work on positioned elements, not static ones. You can demonstrate this by using chrome dev tools to set `position: static;` on one of the boxes.
-  * Point out also that the elements following the relatively positioned elements (boxes 2-4) behave as if box 1 were in its static position. Explain that this is because `top`/`right`/`bottom`/`left` properties are applied only _after_ the element has been placed in the document flow.
+  ## Acceptance Criteria
 
-  ![3-Positioning_3](Images/3-Positioning_3.png)
+  * It's done when the page uses semantic HTML elements.
 
-  * When discussing absolute positioning, demo removing the `position: relative;` in-browser with the developer tools. Show them that it will absolutely position based on the nearest positioned ancestor, using the viewport as the basis if none of the ancestors are positioned (demo this by removing the positioning on `.box-set`).
-  * Depending on time, You may also want to show how the elements pile on top of each other if you remove the `top`/`left`/`bottom`/`right` properties - this demonstrates that the elements are removed from the flow of the document.
-  * `absolute` is worth spending a little bit more time on, as it arguably the most complex (and sets the tone for `fixed` positioning)
+  * It's done when the page uses universal, element, and class selectors in CSS.
 
-  ![3-Positioning_4](Images/3-Positioning_4.png)
+  * It's done when the page features at least three colors in the design.
 
-* Slack students the entire folder (zipped) when done with this activity.
+  * It's done when the page uses a single font and font family for all text.
 
-### 5. Partners Do: CSS Positioning Activity (30 mins) (Critical)
+  * It's done when the page uses at least two heading elements (`<h1>` through `<h6>`).
 
-* Introduce the next activity. Either by using the slide or by opening the file 
-[11-CSS_Positioned_Activity/positioning.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/11-CSS_Positioned_Activity/Solved/positioning.html) 
-in the browser, show students what they will be building in the next activity.
+  * It's done when the header is fixed to the top of the page on scroll.
 
-![4-PositioningActivity](Images/4-PositioningActivity.png)
+  * It's done when the header contains a navigation bar with three links that display inline, including a contact link.
 
-* Then Slack out the following instructions.
+  * It's done when, if the contact link is clicked, the page jumps directly to the contact form.
 
-  * **Instructions:**
+  * It's done when the contact form includes `input` elements for name and email.
 
-    * Work with the same or different partners on this activity, but make sure each member of the group is typing out their own code!
+  * It's done when the contact form includes a Send button.
 
-    * Create a file called `positioning.html` and a file called `positioning.css`.
+  * It's done when the image includes a descriptive `alt` attribute.
 
-    * Using HTML/CSS, create the layout shown on the screen.
+  * It's done when the page is deployed to GitHub Pages.
 
-    * For reference, the colors used on the screen are `#eee` and `#999`.
+  ## 💡 Notes
 
-    * For further reference, you can generate paragraphs of lorem ipsum text using <http://www.lipsum.com/feed/html>. You need to make this page scroll to see how the fixed position element behaves.
+  Follow these instructions to deploy your project to GitHub Pages:
 
-    * HINT: Use the code from the last few activities to help get you started.
+  1. Create a new repository on your GitHub account and clone it to your computer.
 
-### 6. Instructor Do: Review CSS Positioning (10 mins)
+  2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
 
-* Discuss the solution from the previous activity. When appropriate, have students help explain code back to you. (Example: You may ask students to help you comment various pieces of the code.)
+  3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-* Key points in describing the HTML:
+  4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
 
-  * How we created a `div` to hold our content.
+  5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
-  * How we created `divs` to hold the `fixed`, `relative`, and `absolute` content.
+  You can also refer to this [YouTube video on enabling GitHub Pages](https://youtu.be/P4Mu1t5rIXg) for more guidance.
 
-  * How we used specific `id` tags to attach the CSS to.
+  > **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an inccorect capital or lowercase letter could cause problems in deployment.
 
-     ![4-PositioningActivity_2](Images/4-PositioningActivity_2.png)
+  ---
 
-* Key points to explain in describing the CSS Solution:
+  ## 💡 Hints
 
-  * How we once again used **border-box** (this just means that the width and height won't include the margin. Not a big deal).
+  Refer to the documentation:
 
-  * `#fixed` element has a position of `fixed`.
+  * [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-  * Wrapper has a set `width`.
+  * [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-  * `#relative` and `#absolute` have the relative position values.
+  * [MDN Web Docs on font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-     ![4-PositioningActivity_3](Images/4-PositioningActivity_3.png)
+  * [MDN Web Docs on HTML section heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
-* See if there are any lingering questions. Then Slack out this solution. Let students know to try and re-practice this activity at home. It's a good one.
+  * [MDN Web Docs on how to structure a web form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-### 7. Instructor Do: Video Guide Emphasis (1 min)
+  * [MDN Web Docs on the button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-* Re-emphasize all of the reasons why the video guides could be of use for the students, and also let them know that you will be Slacking out a complete "Video Guide" after today's lessons. That way they have an easy way to access the videos.
+  * [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
-* Slack out videos [Positioning in CSS](https://www.youtube.com/watch?v=sHfJn0jqBro) and [CSS Positioning Layout](https://www.youtube.com/watch?v=yWXgnQaWSW0).
+  ## 🏆 Bonus
 
-### 8. Instructor Do: Intro to Chrome Inspector (10 mins)
+  If you have completed this activity, work through the following challenge with your group to further your knowledge:
 
-* Finally go through the process of explaining to students how to use the Chrome Inspector. Encourage them to follow along.
+  * How can CSS be used to apply a different style to an `<a>` element when a cursor points at it?
 
-* Visit www.google.com. Then right click on the screen and hit "Inspect."
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-* Then click the Element Selector and begin clicking on elements on the page. Show students how this then highlights the relevant HTML/CSS.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Then show them that you can change any element on the page. As an example, try to change the HTML text inside of the `Google Search` button to something else.
+### 3. Instructor Review: Mini Project (10 min)  
 
-    ![5-ChromeInspector_1](Images/5-ChromeInspector_1.png)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Then show them that you can also change the CSS as well using the style pane.
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-    ![5-ChromeInspector_2](Images/5-ChromeInspector_2.png)
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Let them know that this is a powerful tool for developing your own websites and for understanding how other websites work.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Let them know that we will be using Chrome Inspector much more in the classes to come.
+  * ✔️ Semantic HTML
 
-* Ask if there any questions.
+  * ✔️ `alt` attribute
 
-- - -
+  * ✔️ `display: inline`
 
-### 9. LUNCH BREAK (30 mins)
+  * ✔️ `position: fixed`
 
-- - -
+* Open `22-Stu_Mini-Project/Main/index.html` in your IDE and explain the following: 
 
-### 10. Instructor Demo: Google Developer Tool (10 mins) (High)
+  * Everyone's landing pages will look different, so don't worry if yours doesn't look exactly like what we are about to review. As long as your landing page fulfills all of the specifications of the project, you did great!
 
-* Talk about Google Developer Tools again. Mention that it is incredibly important for developers. Then walk students through a demo of its use when prompted. Be sure to point out how Google Developer Tools can be used to change both:
+  * We use `<link>` to link the HTML page to the CSS. The `<link>` is placed in the `<head>` and uses an `href` attribute to set the relative path to the CSS style sheet:
 
-* HTML Elements
+    ```html
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css/">
+    ```
 
-* CSS Elements (show them how to change the box model in particular)
+  * 🔑 We use semantic HTML to define the header and an unordered list to create a list of links: 
 
-  ![1-ChromeDeveloperTools](Images/1-ChromeDeveloperTools.png)
+    ```html
+    <header>
+      <nav class="text-right">
+        <ul>
+          <li> <a href="https://github.com/">Github</a></li>
+          <li> <a href="#">Portfolio</a></li>
+          <li> <a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    ```
 
-### 11. Students Do: Modify Websites (10 min) (Critical)
+  * We use a `<h1>` section heading for the title: 
 
-* Then Slack out the following activity:
+    ```html
+    <h1 class="text-center">My New Website</h1>
+    ```
 
-* **Instructions:**
+  * 🔑 We use a `<figure>` element to add an image and a caption. We use an `alt` attribute to describe the image:
 
-  * For the next 15 minutes, take a website that you commonly use (Amazon, Google, Huff Po, etc.) and heavily modify it using the Chrome Developer Tools.
+    ```html
+    <figure>
+        <img src="./assets/images/image-1.png" alt="Graphic with Coming Soon text">
+        <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
+    </figure>
+    ```
 
-  * Be sure to at least modify:
+  * We use semantic HTML to define a section for the contact form. Inside the `<section>`, we add a sub-header. For accessibility, it is important that the section headings are organized in descending order. So because we used `<h1>` previously, we use `<h2>` now:
 
-    * Content (Change words)
-    * Colors
-    * Spacing
-    * Etc.
+    ```html
+    <section id="contact">
+        <h2 class="text-center">Contact Me</h2>
+    ```
 
-  * Slack out a screenshot to the class when you’re done.
+  * You probably had to research how to create a form. A Google search can help you quickly learn how to use an unfamiliar element in your webpage:
 
-* **Instructor/TAs:**
+    ```html
+    <form>
+      <ul>
+        <li>
+          <label class="text-right" for="name">Name:</label>
+          <input type="text" id="name" name="user-name">
+        </li>
+        <li>
+          <label class="text-right" for="email">Email:</label>
+          <input type="text" id="email" name="user-email">
+        </li>
+      </ul>
+      <div class="text-center">
+        <button type="submit">SEND</button>
+      </div>
+    </form>
+    ```
 
-  * Walk around during this time and ensure that students are making progress.
+  * Finally, we added a footer with a `class` attribute used for styling: 
 
-  * Remember students can still drop-out! Help them to enjoy fun activities like this.
+    ```html
+    <footer class="text-center">
+      © 2021 My New Website Productions 
+    </footer>
+    ```
 
-  * Once the activity is complete showcase a few of the students' creations on the screen for everyone to see.
+* Open `22-Stu_Mini-Project/Main/assets/css/style.css` in your IDE and explain the following: 
 
-### 12. Students Do: Modify Own Websites (10 mins) (High)
+  * We use a universal selector to set the margin and padding of all elements to 0:
 
-** Then Slack out the following activity:
+    ```css
+    * {
+      margin:0;
+      padding:0;  
+    }
+    ```
 
-* **Instructions:**
+  * 🔑 We use an element selector to select all the list items and set the display property to `inline`. This will create a horizontal set of links in the navbar:
 
-  * For the next 10 minutes, take a website that you yourself worked on (ex: In-Class activities, homework assignments, etc.), and utilize the Chrome Developer Tools to help you test changes in real-time.
+    ```css
+    li {
+      display: inline;
+      padding: 20px;
+      text-decoration: none;
+    }
+    ``` 
 
-  * Note: Focus on getting more comfortable using the Developer Tools. Trust us. You will WANT to use these Developer Tools as you proceed in this course.
+  * 🔑 To keep the header fixed to the top of the viewport, we set the position to `fixed`:
 
-### 13. Instructor Do: Multiple CSS/CSS Resets (10 min)
+    ```css
+    header {
+      position: fixed;
+      border-bottom: 10px solid #DDAF94;
+    }
+    ```
 
-* Take a few moments to explain that CSS can be loaded in multiple files, each of which is additive on the last. To assist you in this regard, see the examples in [03-MultipleCSS](../../../../01-Class-Content/02-css-bootstrap/01-Activities/03-MultipleCSS)In each example, the CSS file is split between 1, 2, or 3 files. In each instance the end result is the same.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```html
-<!-- This critical line points your HTML to the CSS file. Notice the "relative" pathway -->
-<link  rel="stylesheet" type="text/css" href="style.css">
-<link  rel="stylesheet" type="text/css" href="style2.css">
-<link  rel="stylesheet" type="text/css" href="style3.css">
-```
+  * ☝️ Why is it important to design webpages with accessibility in mind? 
 
-* Point out to students that the order matters, and that later CSS files will "overwrite" previous ones if there is a repeat. Feel encouraged to demonstrate this by modifying the examples in `03-MultipleCSS`.
+  * 🙋 Making your website accessible to more people can result in more users!
 
-* Have students first show by hands the browsers they use.
+  * ☝️ What can we do if we don't completely understand this?
 
-* Then proceed to the series of slides on reset.css and browser differences. Point out that as of now, each browser determines for itself how things like headers, paragraphs, and tables should look. The font and thickness is all pre-set by the browser. This can create situations where your website will look one way in one browser and another way in another browser.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on structuring the web with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML) and the [MDN Web Docs on learning to style HTML using CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS), and stay for office hours to ask for help.
 
-* After pointing out that browsers work differently in how they render pages, emphasize that cross-browser compatibility is critical in web development. This is particularly important when you are creating an app with millions of users.
+* Answer any questions before proceeding to introduce the homework
 
-* Point out that you can incorporate a `reset.css` file, made available online, that ensures your site will look the very same in different browsers. (It resets any default styling that the browser adds.)
+### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Then demonstrate the use of a CSS reset. To do this:
+* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
 
-  * Open the file `example.html`
+  * During this week's homework, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
 
-  * Then Google Search "CSS reset". The first link will be one found on the meyerweb website. <http://meyerweb.com/eric/tools/css/reset/>.
+  * Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand a webpage's content.
 
-  * Copy the CSS made available on that site and paste it into your editor. Save that file somewhere locally on your computer.
+  * During this week's activities, we had a brief introduction to the use of semantic HTML and accessibility concerns. This project will require you to do some research to ensure that the goal stated in the user story and each part of the acceptance criteria is fully addressed. 
 
-  * Then link the CSS file into the HTML.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Run the HTML file again in browser and point out how it has been stripped of any pre-built browser styling, thereby allowing you to style everything from scratch.
+  * ☝️ What are we learning?
 
-    ![3-ResetCSS](Images/3-ResetCSS.png)
+  * 🙋 We are learning to use HTML and CSS to build a website that is accessible to all users. 
 
-  * Then point out that `reset.css` is important because of:
+  * ☝️ How does this project build off or extend previously learned material?
 
-    * Cross Browser Compatibility
+  * 🙋 We will use new skills in HTML and CSS to refactor an existing webpage and build off of the accessibility concepts covered in class.
 
-    * Ability to use pre-made CSS from someone else (an idea we will exploit repeatedly)
+  * ☝️ How does this project relate to your career goals?
 
-    * It's a common front-end question
+  * 🙋 Developers need to be able to design websites with all users in mind so that they can create inclusive user experiences and attract more users to various projects.
 
-### 14. Students Do: CSS Resets (10 min)
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
-* Slack out the following instructions to students.
+* Answer any questions before proceeding to flex time
+### 5. FLEX (30 min)
 
-  * Slack out the files inside [04-ResetCSS](../../../../01-Class-Content/02-css-bootstrap/01-Activities/04-ResetCSS)
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
-* **Instructions:**
+### 6. Instructor Do: Stoke Curiosity (10 min)
 
-  * Follow the instructions in the HTML document to incorporate a reset.css file into a basic HTML file.
+* Open the [slide deck](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * Note the impact the reset file makes after its inclusion.
+  * **Advanced CSS**: This unit is all about deepening our knowledge of CSS in order to build attractive, responsive UIs for our applications.
 
-  * Hint: You should be using the CSS made available on this link: <http://meyerweb.com/eric/tools/css/reset/>
+  * **Why do we use CSS?** CSS allows us to make plain HTML content in our applications look clean and presentable to users.
 
-  * Bonus: Incorporate a CSS reset into any page you've worked on to date.
+  * **What are some features of a well-designed app?**
+  
+    * Well-designed apps should have a mobile-responsive layout, good use of color contrast and space, readable font sizes, accessible design, and features that enhance the user's experience.
 
-### 15. Instructor Do: Deploying to GitHub Pages - Personal (10 mins)
+  * **What is our role in implementing these features?**
+  
+    * We are not graphic designers, but as web developers, it is our job to build a user interface that is usable and visually appealing to the app's target audience. 
+  
+    * We need to make sure that our app follows accessibility standards, performs well on both mobile and desktop devices, and is easy to maintain.
 
-* Now that our class has created a few basic webpages locally, it's about time we started putting these pages online for the world to see. In order to do this, we are going to be hosting our websites on GitHub Pages.
+  * **Can we build well-designed apps with CSS?** 
+  
+    * Yes, we can! Browsers are constantly adding support for more CSS-based tools that we can use. 
 
-* Spend a few moments explaining the concept of "deployment", namely the idea that as of yet, students' websites have only been accessible on their own computers. In order for their websites to be accessible by the public, it needs to be deployed on a server.
-  * Explain to the class what the concept of a "host" is.
-  * A web host is the activity or business of providing storage space and access for websites. You cannot put a website online without it being hosted on a server somewhere.
+    * Those tools include flexbox and grid for responsive layouts, transitions for animating the user interface, new units of size for developers to use, image color filtering, and more!
 
-* Open up the [GitHub Pages website](https://pages.github.com/) and explain how it essentially allows us to turn GitHub repositories into live webpages without having to worry about pushing our code to another web host provider.
+  * **How can we learn to build these features?** 
+  
+  * CSS is a unique language, as it gives the developer many options for how to accomplish a goal. The best way to build CSS knowledge is to build apps and experiment with what does or doesn't work! 
+  
+  * Try some of the following techniques to learn CSS:
+  
+    * Read the official documentation and practice with the provided examples.
 
-* GitHub Pages allows you to create two different types of sites (we will be going over both methods):
-  1. Personal/organization sites for your account
-  2. Sites that are specific to a project/repository
+    * Reverse-engineer finished code to see how it was created.
 
-* Start out with a walk through of the first method: creating a personal website using GitHub Pages.
-  1. Create a new repository on GitHub called `_username_.github.io` where `_username_` is your account name on GitHub.
-  2. Next, open up Git Bash or Terminal on your computer. Navigate into the folder that you would like to store your project in and then clone the repository you just created.
-  3. Within this new folder, add an HTML file called `index.html` which contains the code for the website you would like to publish.
-  4. Add, commit, and push your changes to the repository and... That's it! Whenever anyone navigates to `_username_.github.io` they will now land on your webpage!
-  5. Navigate to the website on your browser to show your class that the webpage is now fully online.
+    * Build something from scratch.
 
-* Recap the steps for deploying to GitHub Pages one more time before continuing onto the next activity.
-  1. Create a new repo that is named `_username_.github.io`
-  2. Navigate into a folder and clone the repo into it
-  3. Add an HTML file named `index.html` and code out your webpage
-  4. Add, commit, and push your changes into the repository
+    * Debug a broken app using Chrome DevTools.
+  
+    * And most importantly, ask questions!
 
-### 16. Students Do: Deploying Personal Bios to GitHub Pages (15 mins) (Critical)
+  * In this unit, we will learn how to build responsive web designs, perform a CSS reset, and implement CSS custom properties and selectors.
 
-* For this activity, students will be deploying the bio pages they made in the last activity to Github Pages.
+  * Let's take a quick look at the mini-project that we will complete at the end of this unit.
 
-* **Instructions:** [05-GithubPagesPersonal/README.md](../../../../01-Class-Content/02-css-bootstrap/01-Activities/05-GithubPagesPersonal/README.md)
+* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and open Chrome DevTools to demonstrate simulating a mobile viewport.
 
-### 17. Instructor Do: Deploying to GitHub Pages - Projects (15 mins)
+  * To access the Chrome DevTools, we can press Cmd+Opt+I on macOS or Ctrl+Shift+I on Windows.
 
-Not every website can be a personal website, however, as there are many times in which we will want to create websites that are customized for specific projects. Luckily for us, GitHub Pages includes a VERY simple way to deploy webpages for individual projects as well!
+  * We can enable the device emulator by clicking the "Toggle device toolbar" icon in the top-left.
 
-* Walk through the steps required to create a website for a specific repository...
+  * We can select Responsive and drag the edges of the screen to any size we want. Or we can choose from the drop-down list of popular devices.
 
-  1. Create a new repository on your GitHub account. You can name this repository whatever you would like.
-  2. Once inside of the repository, create a new file and name it `index.html`
-  3. Add some very basic HTML into this file, save it, and then navigate into your repository's Settings tab.
-  4. Scroll down to the GitHub Pages section and then, in the section labeled "Source", select that you would like to use the main branch as your source.
-  5. Navigate to `_username_.github.io/_repositoryname_` and you will find that your new web page has gone live!
+  * 🔑 We are viewing the mini-project that we will be able to build by the end of this unit.
 
-* It is very likely that your students will be wondering how to get a custom domain for their projects as opposed to a site that is clearly linked to their GitHub account...
+  * 🔑 The mini-project is a webpage that holds a collection of CSS snippets that we learned throughout this unit. It's like a CSS cheat sheet!
 
-  * Mention that custom domains are more heavily coveted since they are more easily searchable online. This means that custom domains have to be purchased from companies known as "DNS Providers". These companies allow users to buy and register unique domain names and connect that name to an IP address. **GitHub Pages does not sell domain names.**
+  * 🔑 Notice what happens to the layout when we change the screen size. The columns shift and stack as the screen gets smaller. This is called **responsive web design**. This is accomplished by using media queries and flexbox, which we will cover today.
 
-  * Tell your students not to worry about custom domains at this time since it is not necessary for the web work that we will be doing. If they really wish to link a webpage of theirs to a custom domain, however, GitHub Pages has great documentation on how to go about doing this.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 18. Students Do: Creating a Project Site (15 mins) (Critical)
+  * ☝️ What are we learning?
 
-* For this activity students will be creating a web page to display and explain a data science project they've already completed. Students will deploy the HTML to a github pages project page.
-* **Instructions:** [06-GithubPagesProject/README.md](../../../../01-Class-Content/02-css-bootstrap/01-Activities/06-GithubPagesProject/README.md)
+  * 🙋 We are deepening our knowledge of CSS and learning about responsive web design.
 
-### 19. Group Do: Homework 1 (30 mins) (High)
+  * ☝️ How does this project build on or extend previously learned material?
 
-* Allow the next 50 minutes to be used for the first homework assignment.
+  * 🙋 We are continuing to build on our knowledge of HTML and CSS.
 
-* Students may want to partner up to work through things together.
+  * ☝️ How does this project relate to your career goals?
 
-* If students seemed to struggle today, you can use this time to review difficult topics or spend more time on one of the class activities rather than on homework. 
+  * 🙋 Learning more advanced CSS with attractive layouts creates webpages that stand out. Responsive web design is crucial because users increasingly access webpages from devices with varying screen sizes, resolutions, and orientations. To maintain a good user experience, developers must be able to design webpages that are attractive and accessible from any platform.
 
-### 20. Instructor Do: Recap (5 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Instructor should offer an overarching perspective on what was covered. As a bullet list you could use the following:
+### 7. BREAK (30 min)
 
-  * Today we covered the basic gist of how to use CSS to create position + layouts.
+### 8. Instructor Demo: Media Query for Screen (5 min) 
 
-  * If you're feeling lost, don't worry. It's normal. At the very least, you should feel more comfortable attaching CSS to specific elements. Don't worry if you can't create CSS layouts off the top of your head just yet. It comes with time.
+* Open `01-Ins_Media-Query-Screen/index.html` in your browser and demonstrate the following:
 
-  * But if you know how to attach CSS to a class, id, or header, you should feel pretty proud of yourself.
+  * 🔑 We see a dark-blue header, a dark-tan navbar, a green sidebar, and a white body section. We also see white image placeholders. 
 
-  * Trust us in saying that you will surprise yourself by how much you know.
+  * 🔑 When we open Chrome DevTools and start shrinking the screen size, these components change colors! 
 
-### 21. End (0 mins)
+  * 🔑 First, the header will change to a deep-red color when the screen size gets to 992px. Then, the navbar will change to a dark-pink color when the screen size gets to 768px. Finally, the image placeholders will change to a blue color when the screen size gets to 576px or smaller.
 
-### Troubleshooting Guide
+  * This is all made possible by using media queries.
 
-* Below is a list of the most common issues that students present when trying to do Github Pages deployments.
+* Open `01-Ins_Media-Query-Screen/assets/css/style.css` in your IDE and explain the following:
 
-* **Forgetting to git "add -A, git commit -m":** Often students will completely skip the step where they save and commit their changes prior to pushing to GitHub. This will mean their web page is essentially blank. As a starting point, ensure their code is present in GitHub.
+  * When we use `max-width` as the breakpoint, we need to go from widest to narrowest to avoid any conflicts.
 
-* **Didn't name the repo correctly:** Students will likely not name the repository for their custom site correctly - ensure it follows the pattern `_username_.github.io`.
+  * We use `@media screen` and then set the breakpoint using `max-width`:
 
-* **Images and/or CSS not appearing:** All filenames and paths are case sensitive. Ensure that all links in HTML are using case-sensitive paths that match the folder directories casing.
+    ```css
+    @media screen and (max-width: 992px) 
+    ```
 
-* **Not using relative paths:** Many students are still using absolute paths to reference their CSS or image files. Help them to convert these to relative paths.
+  * Then we set the styles that will change at that breakpoint. For us, it was changing the header color:
 
-* **Not knowing where their site deployed:** Show students that they need to login to the site and they will see the new app deployed on their menu. Give them guidance as to what the URL for their repo will be.
+    ```css
+    @media screen and (max-width: 992px) {
+      header {
+        background: #772014;
+      }
+    }
+    ```
 
-* Beyond that... Good luck!
+  * For the breakpoint of 768px, we changed the navbar color:
 
-### Lesson Plan Feedback
+    ```css
+    @media screen and (max-width: 768px) {
+      nav {
+        background-color: #bb8588;
+      }
+    }
+    ```
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * For the breakpoint of 576px, we changed the image placeholders' colors:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+    ```cs
+    @media screen and (max-width: 576px) {
+      .sample-img {
+        background-color: #8ac4ff;
+      }
+    }
+    ```
+
+  * Of course, we can change more than just the background colors when the screen size gets smaller. Do you remember what the layout of the page looked like when we shrank that screen size earlier?
+
+* Go back to the `index.html` in the browser and demonstrate how squished the layout looks.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build the next activity?
+
+  * 🙋 We would need to use media queries to change the width of the components so that they stack on top of each other when the screen size gets smaller.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Media-Query-Screen/README.md`.
+
+### 9. Student Do: Media Query for Screen (15 min) 
+
+* Direct students to the activity instructions found in `02-Stu_Media-Query-Screen/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement Media Queries for Screens
+
+  Work with a partner to implement the following user story:
+
+  * As an online shopper, I want to view products clearly on my mobile phone as well as my computer.
+
+  ## Acceptance Criteria
+
+  * It's done when the screen size is larger than 992px and the product cards on the screen are side by side.
+
+  * It's done when I change the screen size to 992px or smaller, and the product cards on the screen split into two columns.
+
+  * It's done when I change the screen size to 768px or smaller, and the product cards on the screen become stacked on top of each other.
+
+  * Optional: Just for fun, change the background color of the header each time the product cards change layout. 
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance at 992px or smaller:
+
+  ![On an online store's webpage, four cards are split into two rows and two columns.](./Images/01-product-columns.png)
+
+  The following image demonstrates the web application's appearance at 768px or smaller:
+
+  ![On an online store's webpage, two cards are stacked on top of each other.](./Images/02-products-stacked.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * What is the media feature we use to check for the maximum width of the display area?
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+  * What is mobile-first design?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* When breaking everyone into groups, remind students and TAs that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to encourage and prioritize students who need extra help.
+
+### 10. Instructor Review: Media Query for Screen (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with media queries for screen? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ `@media screen`
+
+  * ✔️ `width` of cards
+
+* Open `02-Stu_Media-Query-Screen/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * We are given an online store webpage with product cards. When the screen size gets smaller, the product cards shift so that they are clearly viewable on a smaller screen.
+
+  * The cards lie side by side in a row. If we look at the following code, for when the screen size is larger than 992px wide, we see that the cards have a width of 25%, because there are four cards:
+
+    ```css
+    .card {
+      width: 25%;
+    }
+    ```
+
+  * 🔑 But as the screen gets smaller, we need to have the cards stacked. So first, we use a media query with a breakpoint of 992px:
+
+    ```css
+    @media screen and (max-width: 992px)
+    ```
+
+  * 🔑 Then we give the cards a `width` of 50%, shown in the following example, which will cause half of the cards to stack beneath the other half:
+
+    ```css
+    @media screen and (max-width: 992px) {
+      .card {
+        width: 50%;
+      }
+    }
+    ```
+
+  * For the breakpoint of 768px, we go back to allowing the card width to be 100%:
+
+    ```css
+    @media screen and (max-width: 768px) {
+      .card {
+        width: 100%;
+      }
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is a more efficient way to control the layout of a webpage?
+
+  * 🙋 We can use flexbox, which we'll cover in the next activity!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Flexbox Layout (5 min) 
+
+* Open `03-Ins_Flexbox-Layout/index.html` in your browser and demonstrate the following:
+
+  * 🔑 We see a simple header on top with four cards in the body section. The cards consist of just a header. But we see that the Camera card is larger than the rest.
+
+* Open `03-Ins_Flexbox-Layout/assets/css/style.css` in your IDE and explain the following:
+
+  * 🔑 To create a flex container, we set the value of the `display` property to `flex`:
+
+    ```css
+    main {
+      display: flex;
+    }
+    ```
+
+  * 🔑 To align the items and distribute the empty space between the child elements of the flex container, we use `justify-content`. There are different values we can assign, like `flex-start`, `flex-end`, `center`, `space-around`, `space-evenly`, and `space-between` which is what we've used in the following example:
+
+    ```css
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    ```
+
+  * 🔑 When we want to control how the items will grow or shrink according to the available space, we can use the `flex` properties: `flex-grow`, `flex-shrink`, and `flex-basis`. Usually we just use the `flex` shorthand to set the three values of those properties in that order:
+
+    ```css
+    .card {
+      /* A flex-basis of 200px sets the starting width */
+      /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+      flex: 1 0 200px;
+    }
+
+    .card.camera {
+      /* With a flex-grow value of 2, this element grows twice as wide as others */
+      /* The second value, flex-shrink, defines how the element will shrink if it can't fit */
+      flex: 2 1 200px;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build the next activity?
+
+  * 🙋 We will need to use flexbox to implement a grid layout and ensure that all of the items are clearly shown on the page.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Flexbox-Layout/README.md`.
+
+### 12. Student Do: Flexbox Layout (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Flexbox-Layout/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Product Cards Run Off the Page
+
+  Work with a partner to resolve the following issues:
+
+  * As a user, I want to view all products in two or more rows.
+
+  * As a user, I don't want to scroll horizontally to see additional products.
+
+  ## Expected Behavior
+
+  Product cards that don't fit within the first row should display on the next row.
+
+  ## Actual Behavior
+
+  Product cards run off the page in a single row.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance:
+
+  ![On an online store's webpage, products are spread over two stacked rows of three cards each.](./Images/01-product-grid.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * What additional flexbox properties could help direct the behavior of child elements?
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+  * By default, flexbox runs in rows, left to right. In what other directions could it run?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 13. Instructor Review: Flexbox Layout (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with flexbox layouts? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ `display: flex`
+
+  * ✔️ `flex-wrap: wrap`
+
+* Open `04-Stu_Flexbox-Layout/Unsolved/index.html` in your browser and explain the following: 
+
+  * Let's open Chrome DevTools and toggle the device toolbar. When we make the screen smaller, notice what happens to the header and the product cards. The text in the header is squished, and the product cards run off the page! 
+  
+  * So we know that the broken code that we need to debug and fix is the `.main-header` and the product cards in the `main` container.
+
+* Open `04-Stu_Flexbox-Layout/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * 🔑 The `main` container and the `.main-header` already have the `display` property set to `flex`:
+
+    ```css
+    main {
+      display: flex;
+    }
+
+    .main-header {
+      display: flex;
+    }
+    ```
+
+  * 🔑 We just need to set the `flex-wrap` property to `wrap` so that the elements are forced to wrap over to the next line if they don't fit:
+
+    ```css
+    main {
+      display: flex;
+      /* Forces elements to the next line if they don't fit */
+      flex-wrap: wrap;
+    }
+
+    .main-header {
+      display: flex;
+      /* Forces elements to the next line if they don't fit */
+      flex-wrap: wrap;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ By default, flexbox runs in rows, left to right. Which other directions could it run in?
+
+  * 🙋 Flexbox can also run from top to bottom in columns!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 14. Instructor Demo: Responsive Design (5 min)
+
+* Open `05-Ins_Responsive-Design/index.html` in your browser and demonstrate the following:
+
+  * 🔑 The core concept of responsive design is that a webpage should adjust to all devices. In other words, a web app that is created with responsive design in mind will look good and function well no matter what device a user is on.
+
+  * 🔑  Not only is responsive design better for the user, but the tools made available to us by CSS can also make development faster. This is because we don't have to write lines and lines of HTML in order to accommodate multiple devices. 
+
+  * Let's open Chrome DevTools and shrink the screen size to see what happens to the page elements.
+
+  * 🔑 When we get to 780px or smaller, we see that the navbar links stack on top of each other.
+
+  * 🔑 We have also forced the sidebar to stack below the body instead of on top of it.
+
+* Open `05-Ins_Responsive-Design/assets/css/style.css` in your IDE and explain the following:
+
+  * We accomplished this by using media queries and flexbox properties! 
+  
+  * 🔑 We gave the `flex-direction` property of both `main` and `nav` a value of `column` so that the elements stack on top of each other:
+
+    ```css
+    @media screen and (max-width: 768px) {
+      main,
+      nav {
+        flex-direction: column;
+      }
+    ```
+
+  * 🔑 We forced the sidebar `aside` to stack below the body by assigning the `order` property a value of `2`:
+
+    ```css
+    aside {
+      order: 2;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build the next activity?
+
+  * 🙋 We need to figure out which flexbox properties are being used at each breakpoint so that the layout changes at different screen sizes.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Responsive-Design/README.md`.
+
+### 15. Student Do: Responsive Design (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Responsive-Design/README.md`.
+
+* This activity won't require any coding, but instead students will need to reverse-engineer code and figure out what is allowing the layout to change at certain breakpoints. Guiding questions have been provided; students will need to write their answers as comments.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of a Responsive Design
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved/assets/css/style.css](./Unsolved/assets/css/style.css).
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+    * What other CSS property can we use to create responsive layouts?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 16. Instructor Review: Responsive Design (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with responsive web design using media queries and flexbox? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ `display: flex`
+
+  * ✔️ `flex-wrap`
+
+  * ✔️ `flex-shrink`
+
+  * ✔️ `justify-content`
+
+  * ✔️ `flex` shorthand
+
+  * ✔️ `flex-direction`
+
+* Open `06-Stu_Responsive-Design/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * This activity didn't require any coding on our part. Instead we were given a fully functioning webpage, and we had to explain how it works! Through this kind of activity, we can improve our computational thinking skills. 
+
+* Go through each question (🔑) in the `style.css` and call on students for the answers (🙋):
+
+  * 🔑 What happens when we set the `display` property to `flex`, as shown in the following example?
+
+      ```css
+    nav {
+      display: flex;
+    }
+    ```
+
+  * 🙋 The `flex` container becomes flexible! The child items of the container all move into a row and take only as much space as they need to display their contents.
+
+  * 🔑 What is the `flex-wrap` property?
+
+  * 🙋 It specifies whether the flex items should wrap or not. The value can be set to `nowrap`, `wrap-reverse`, or `wrap`, like in the following example:
+
+    ```css
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ```
+
+  * 🔑 What does the `flex-shrink` property specify?
+
+  * 🙋 It specifies how much a flex item will shrink relative to the rest of the flex items. In this activity, we are telling the `footer` not to shrink as much as the other items by setting `flex-shrink` to `0`:
+
+    ```css
+    footer {
+      flex-shrink: 0;
+    }
+    ```
+
+  * 🔑 What does the `justify-content` property do?
+
+  * 🙋 It aligns the flex items and distributes the empty space between them. In this activity, we are telling the product cards to be centered:
+
+    ```css
+    .products {
+      flex: 4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    ```
+
+  * 🔑 What is the `flex` property a shorthand property for?
+
+  * 🙋 It is a shorthand property for the `flex-grow`, `flex-shrink`, and `flex-basis` properties&mdash;in that order. In this activity, we are making the product cards not growable and not shrinkable, with an initial length of 400px:
+
+    ```css
+    .card {
+      flex: 0 0 400px;
+    }
+    ```
+
+  * 🔑 What does the `flex-direction` property define?
+
+  * 🙋 It defines in which direction the container wants to stack its flex items. In this activity, we are telling the main body element and the navbar to stack vertically in a column:
+
+    ```css
+    @media screen and (max-width: 768px) {
+      main,
+      nav {
+        flex-direction: column;
+      }
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What other CSS property can we use to create responsive layouts?
+
+  * 🙋 We can use the CSS grid layout.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the CSS Flexible Box Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Instructor Demo: Flexbox Placement (5 min) 
+
+* Open `07-Ins_Flexbox-Placement/index.html` in your browser and demonstrate the following: 
+
+  * 🔑 When we change the screen size, the two product cards remain centered at all times.
+
+* Open `07-Ins_Flexbox-Placement/assets/css/style.css` in your IDE and explain the following:
+
+  * 🔑 We have already set the `display` to `flex` and the `flex-direction` to `row`:
+
+    ```css
+    .products {
+      display: flex;
+      flex-direction: row;
+    }
+    ```
+
+  * 🔑 Since we set the `flex-direction` to `row`, that becomes our main axis. We use `justify-content: center` to center the items along the main axis, like in the following example:
+
+    ```css
+    .products {
+      display: flex;
+      flex-direction: row;
+      /* Centers along the main axis determined by flex-direction */
+      justify-content: center;
+    }
+    ```
+
+  * 🔑 Then we can use `align-items` to center them along the opposite axis (vertically):
+
+    ```css
+    .products {
+      display: flex;
+      flex-direction: row;
+      /* Centers along the main axis determined by flex-direction */
+      justify-content: center;
+      /* Centers along the opposite axis */
+      align-items: center;
+    }
+    ```
+  
+  * 🔑 Finally, we set the height according to the height of the viewport:
+
+    ```css
+    .products {
+      display: flex;
+      flex-direction: row;
+      /* Centers along the main axis determined by flex-direction */
+      justify-content: center;
+      /* Centers along the opposite axis */
+      align-items: center;
+      /* Uses the height of the viewport */
+      height: 100vh;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build the next activity?
+
+  * 🙋 We will need to use `justify-content` and `align-items` accordingly, to align the child elements correctly.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Flexbox-Placement/README.md`.
+
+### 18. Student Do: Flexbox Placement (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Flexbox-Placement/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Link and Button Placement is Incorrect
+
+  Work with a partner to resolve the following issues:
+
+  * As a user, I want the navigation links to be on the right side.
+
+  * As a user, I want the slideshow buttons to be sized as smaller icons and centered alongside the image.
+
+  ## Expected Behavior
+
+  The navigation links are aligned to the right. The slideshow buttons are smaller than the image and are centered alongside the image.
+
+  ## Actual Behavior
+
+  The navigation links are aligned to the left. The slideshow buttons extend to the same height as the image.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance:
+
+  ![The navigation links are aligned to the right, and the slideshow buttons are center aligned.](./Images/01-product-page.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * What are some of the other possible values for flexbox's alignment and justification properties?
+
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+  * What e-commerce websites can you find that are using flexbox properties to help organize their components and layouts?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 19. Instructor Review: Flexbox Placement (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with flexbox justification and alignment? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points (✔️):
+
+  * ✔️ `justify-content: flex-end`
+
+  * ✔️ `align-items: center`
+
+  * ✔️ `align-items: flex-start`
+
+* Open `08-Stu-Flexbox-Placement/Unsolved/index.html` in your browser and demonstrate the following: 
+
+  * We see that the navbar links are on the left, but we need them on the right side.
+
+  * We also see the long slideshow buttons on both sides of the image. We need to make them smaller and centered.
+
+* Open `08-Stu_Flexbox-Placement/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * 🔑 First we need to align the navbar links to the far right, or on the end of the navbar. We do that by giving the `justify-content` property a value of `flex-end`:
+
+    ```css
+    nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+    ```
+
+  * 🔑 Next we need to fix the slideshow buttons. The buttons are child items of `.product-slideshow` so we set that to `align-items: center` to have the buttons centered alongside the image:
+
+    ```css
+    .product-slideshow {
+      display: flex;
+      /* Align the child elements to the center of the parent */
+      align-items: center;
+    }
+    ```
+
+  * 🔑 Once we do that and compare to the screenshot, we notice that the image is also centered. But we want it to be aligned to the top, so we set the `align-items` property of `.product` to `flex-start` to match the image:
+
+    ```css
+    .product {
+      display: flex;
+      align-items: flex-start;
+      width: 90%;
+      margin: 1% auto;
+    }
+    ```
+
+  * Lastly, this isn't something we had to do, but in the media query, notice how the buttons are removed when the screen size gets too small:
+
+    ```css
+    @media screen and (max-width: 768px) {
+      .product-slideshow button {
+        /* Removes the slideshow buttons from the document flow */
+        display: none;
+      }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What was the main axis of this page?
+
+  * 🙋 The main axis ran top to bottom, which was defined by `flex-direction: column`. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on flexbox alignment and justification](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#Alignment_justification_and_distribution_of_free_space_between_items), and stay for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

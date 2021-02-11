@@ -108,15 +108,13 @@ In this activity, you will build a command-line tool that generates an HTML port
 
   * String template literals for generating a string version of the HTML document before it is written to the file system
 
-  * Promises for handling asynchronous behavior
-
 ## 💡 Hints
 
 It might be a good idea to start building out the HTML skeleton in a real HTML file. Once you're happy with the HTML file's appearance in the browser, you can copy and paste its contents into a string template literal. Then you can write a function to insert the user input into the appropriate places in the HTML string before writing it to the file system.
 
 ## 🏆 Bonus
 
-* Instead of using promises, how can we use `async/await` and `try/catch` to control the flow of our asynchronous code?
+* Instead of using callback functions, what are some other tools in JavaScript we can use to handle asynchronous functionality?
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
@@ -131,39 +129,55 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `inquirer.prompt()`
-
-  * ✔️ `util.promisify()`
-
   * ✔️ Template literal syntax
 
-* Open `28-Stu_Mini-project/Solved/Basic/index.js` in your IDE and explain the following: 
+  * ✔️ `inquirer.prompt()`
 
-  * 🔑 We can construct an HTML string using string template literals.
+  * ✔️ `fs.writeFile()`
 
-  * 🔑 We can use Promises or the async/await syntax to control the flow of asynchronous code.
-
-  * 🔑 We can use the `fs.writeFile` method to create and write to the needed `index.html` file.
+* Open `28-Stu_Mini-Project/Main/index.js` in your IDE and explain the following: 
 
   * We import the required packages first, as follows:
 
-  ```js
-  const inquirer = require("inquirer");
-  const fs = require("fs");
-  const util = require("util");
-  ```
+    ```js
+    const inquirer = require("inquirer");
+    const fs = require("fs");
+    ```
 
-  * 🔑  We use the `util.promisify` method to take a function that uses Node style callbacks to create a new version of the function that now uses Promises. As shown in the following example, it does exactly what it sounds like:
+  * 🔑 We can construct an HTML string using string template literals in the function `generateHTML()`:
 
-  ```js
-  const writeFileAsync = util.promisify(fs.writeFile);
-  ```
+    ```js
+    function generateHTML(answers) {
+      return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+        <p class="lead">I am from ${answers.location}.</p>
+        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+        <ul class="list-group">
+          <li class="list-group-item">My GitHub username is ${answers.github}</li>
+          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+        </ul>
+      </div>
+    </div>
+    </body>
+    </html>`;
+    }
+    ```
 
   * 🔑  `inquirer.prompt({})` will collect the needed responses from the user and assign them to an object for us. We called the object `answers`, as shown in the following example:
 
-  ```js
-  function promptUser() {
-    return inquirer.prompt([
+    ```js
+    inquirer.prompt([
       {
         type: "input",
         name: "name",
@@ -195,73 +209,15 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
         message: "Enter your LinkedIn URL."
       }
     ]);
-  }
-  ```
-
-  * You might be wondering what is the best way to actually make the HTML for this project? Here we use a helper function, `generateHTML` that will return a template string. We then inject the responses directly into that template string using the `${}` syntax, like in the following code:
-
-    ```js
-    function generateHTML(answers) {
-      return `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <title>Document</title>
-    </head>
-    <body>
-      <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-        <p class="lead">I am from ${answers.location}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-        <ul class="list-group">
-          <li class="list-group-item">My GitHub username is ${answers.github}</li>
-          <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-        </ul>
-      </div>
-    </div>
-    </body>
-    </html>`;
-    }
     ```
 
-  * Finally, we call the `promptUser` function, and on success we generate the HTML file with these customized responses. We then create the file, appending the contents of the HTML template literal we created, like in the following example:
+  * 🔑  We then use `fs.writeFile()` inside of the Promise returned by `inquirer.prompt()` to generate the HTML file with our answers:
 
-  ```js
-  promptUser()
-    .then(function(answers) {
-      const html = generateHTML(answers);
-
-      return writeFileAsync("index.html", html);
-    })
-    .then(function() {
-      console.log("Successfully wrote to index.html");
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
-  ```
-
-  * Let's take a quick look at the Bonus. Code using the `await` syntax must be inside of a function declared with the `async` identifier. We're also using a `try/catch` block to handle any errors that might occur when using async/await. You can see this in the following example:
-
-  ```js
-  async function init() {
-  console.log("hi")
-  try {
-    const answers = await promptUser();
-
-    const html = generateHTML(answers);
-
-    await writeFileAsync("index.html", html);
-
-    console.log("Successfully wrote to index.html");
-  } catch(err) {
-    console.log(err);
-  }
-  ```
+    ```js
+    fs.writeFile('index.html', htmlPageContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!')
+    );
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -650,9 +606,7 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
     };
     ```
   
-  * `person` is an object, but when we type `person.occupation.__proto__` in the console, it returns `String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}`, which we can expand. Because `occupation` is a string, it has access to the `String` prototype. Of the many methods available, let's try `toLowerCase()` to convert the `occupation` into all lowercase.
-
-  * Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
+  * `person` is an object, but when we type `person.occupation.__proto__` in the console, it returns `String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}`, which we can expand. Because `occupation` is a string, it has access to the `String` prototype. Of the many methods available, let's try `toLowerCase()` to convert the `occupation` into all lowercase. Referencing methods via the prototype chain is also an efficient use of memory. Rather than creating multiple copies of the same method in memory, we can create one and point to it, as shown in the following example:
 
     ```js
     person.occupation.toLowerCase();

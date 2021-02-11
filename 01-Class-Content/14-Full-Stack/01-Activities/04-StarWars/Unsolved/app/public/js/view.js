@@ -1,39 +1,51 @@
-// Code here handles queries for specific characters in the database
-// In this case, the user submits a character's name... we then pass that character's name as a
-// URL parameter. Our server then performs the search to grab that character from the Database.
+// Code to view a specific character in the database
+// We use a query parameter to specify which character we need information for
 
-// when user hits the search-btn
-$("#search-btn").on("click", function() {
-  // save the character they typed into the character-search input
-  var searchedCharacter = $("#character-search")
-    .val()
-    .trim();
+const searchBtn = document.getElementById('search-btn');
+if (searchBtn) {
+  searchBtn.addEventListener('click', () => {
+    let searchedCharacter = document
+      .getElementById('character-search')
+      .value.trim();
 
-  // Using a RegEx Pattern to remove spaces from searchedCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+    // Using a RegEx Pattern to remove spaces from searchedCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    searchedCharacter = searchedCharacter.replace(/\s+/g, '').toLowerCase();
 
-  // run an AJAX GET-request for our servers api,
-  // including the user's character in the url
-  $.get("/api/" + searchedCharacter, function(data) {
-    // log the data to our console
-    console.log(data);
-    // empty to well-section before adding new content
-    $("#well-section").empty();
-    // if the data is not there, then return an error message
-    if (!data) {
-      $("#well-section").append("<h2> The force is not strong with this one. Your character was not found. </h2>");
-    }
-    else {
-      // otherwise
-      // append the character name
-      $("#well-section").append("<h2>" + data.name + "</h2>");
-      // the role
-      $("#well-section").append("<h3>Role: " + data.role + "</h3>");
-      // the age
-      $("#well-section").append("<h3>Age: " + data.age + "</h3>");
-      // and the force points
-      $("#well-section").append("<h3>Force Points: " + data.forcePoints + "</h3>");
-    }
+    fetch(`/api/${searchedCharacter}`, {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Search character data', data);
+        const { name, role, age, forcePoints } = data;
+
+        const wellSection = document.getElementById('well-section');
+        wellSection.innerHTML = '';
+
+        if (!data) {
+          wellSection.innerHTML = `${searchedCharacter} wasn't found!`;
+        } else {
+          const nameEl = document.createElement('h2');
+          nameEl.textContent = name;
+
+          const roleEl = document.createElement('h6');
+          roleEl.textContent = `Role: ${role}`;
+
+          const ageEl = document.createElement('h6');
+          ageEl.textContent = `Age: ${age}`;
+
+          const fpEl = document.createElement('h6');
+          fpEl.textContent = `Force Points: ${forcePoints}`;
+
+          wellSection.appendChild(nameEl);
+          wellSection.appendChild(roleEl);
+          wellSection.appendChild(ageEl);
+          wellSection.appendChild(fpEl);
+        }
+      });
   });
-});
+}

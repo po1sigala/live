@@ -1,58 +1,76 @@
-# Unit 06: Server-Side-APIs
+# Unit 06 Instructor Overview: Server-Side APIs
 
 ## Overview
 
-In this unit we will be introducing students to the concept of server-side APIs and the use of AJAX queries to retrieve and parse data in JSON formats. Throughout the unit we'll be specifically working with the Giphy, OMDb, and New York Times APIs.
+In this unit, you will teach students how to use the `fetch()` method to make requests to the GitHub API and convert the returned data into HTML elements. You will also discuss the client-server model and leverage the Chrome DevTools Network tab to verify response statuses.
 
-  * Refer to the the [Class Content Unit Overview](../../../01-Class-Content/06-Server-Side-APIs/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-Side-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-In this unit we will be introducing students to the concept of APIs and the use of AJAX queries to retrieve and parse data in JSON formats. Throughout the unit we'll be specifically working with the Giphy, OMDb, and New York Times APIs.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
 
-Make sure students sign up and obtain THEIR OWN PERSONAL API KEY for any APIs we might use, as the publics keys that we provide could be deactivated at any time.
+* Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
-Be sure to slack out this [tutorial on the OpenWeatherMap API](http://osp123.github.io/tutorials/html/weatherAPI.html) as pre-reading for this unit's content.
+* Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
 
-## Heads Up
-
-Next unit we start to work on projects. It is recommended that you use some of the group assignments this unit to gauge which students will work well together on projects.
-
-Make sure that these groups are created prior to class 07.1. Groups are made up of 3 or 4 students. Three is ideal, but not always possible. In groups of four (or more), it is easy for weaker students to be cut out of the workflow or hide behind their stronger teammates. **DO NOT allow students to work alone or in pairs.** Group projects are one of the few opportunities for students to work collaboratively. 
-
+* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/06-Server-Side-APIs/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* Remind students that related Career Services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+
+## Heads-Up
+
+For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [06.1 - Lesson Plan](01-Day_APIs-and-AJAX/06.1-LESSON-PLAN.md)
+  * [06.1 Lesson Plan](./01-Day_Fetch-Request/06.1-LESSON-PLAN.md)
 
-  * [06.2 - Lesson Plan](02-Day_Advanced-AJAX/06.2-LESSON-PLAN.md)
+  * [06.2 Lesson Plan](./02-Day_Fetch-Location/06.2-LESSON-PLAN.md)
+  
+  * [06.3 Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
 
-  * [06.3 - Lesson Plan](03-Day_APIs-Continued/06.3-LESSON-PLAN.md)
+### Unit Homework
+
+  * [Unit 06 Homework](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
 
 ### Slide Decks
 
-  * [06.2: Advanced AJAX](https://docs.google.com/presentation/d/1CSJBUAF3UIZp7UxI9z8-4s7qm_uHF4QoZX6Zuko75Jk/edit?usp=sharing)
+  * [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
 
-### Time Tracker(s)
+### Algorithms
 
-  * [Unit 06-Server-Side-APIs Day 1 Time Tracker](https://drive.google.com/open?id=11CiggEoIl3yBXPuXxmg4nduILI1gt1SO)
+  * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 
-  * [Unit 06-Server-Side-APIs Day 2 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1Qm5-P-WZLiQVf_FKK_wanOgzIQgpVR9_/view?usp=sharing)
+  * [02: Factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-factorial)
 
-  * [Unit 06-Server-Side-APIs Day 3 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1cKEvNJfuPjDYE7kIgcGN1Znt8GvxCftS/view?usp=sharing)
+    * [📹 Let's Code Factorial!](https://2u-20.wistia.com/medias/gnyfobes5c)
 
-## Algorithms
+  * [03: Title Case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
 
-  * [01-factorial](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-factorial)
+### Resources
 
-  * [02-is-palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/02-is-palindrome)
+  * [MDN Web Docs on the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-  * [03-title-case](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/03-title-case)
+  * [MDN Web Docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+
+  * [jQuery API Docs on .ajax()](https://api.jquery.com/jquery.ajax/)
+
+  * [MDN Web Docs on Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+
+  * [Chrome DevTools tutorial on the Network tab](https://developers.google.com/web/tools/chrome-devtools/network)
+
+  * [GitHub documentation on the REST API](https://docs.github.com/en/rest/reference)
+
+  * [OpenWeather API documentation](https://openweathermap.org/api)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

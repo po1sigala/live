@@ -55,9 +55,9 @@ Today's class is focused on creating an Express-based web server. Students will 
 
   * Middleware can transform the request from the browser before we work with it. In the case of `express.json` and `express.urlEncoded`, it takes the unreadable request and turns it into a readable object and attaches it to `req.body`. By the time the request gets to our routes, our body parsing middleware has already formatted it for us.
 
-* Then explain to them that in future applications we'll eventually be using jQuery's AJAX methods for sending such post requests to our server.
+* Then explain to them that in future applications we'll eventually be using the fetch API methods for sending such post requests to our server.
 
-* Then have them install the program [Postman](https://www.getpostman.com/). We'll be using Postman so both windows users and mac users can be taught how to send POST requests using the same program. (Note: Students may ask questions like: "Do you always have to use postman to send post requests?" Use this as an opportunity to explain that Postman is simply a GUI for development, and that in future opportunities we'll be using jQuery or other front-end code approaches for sending the same post requests.)
+* Then have them install the program [Postman](https://www.getpostman.com/). We'll be using Postman so both windows users and mac users can be taught how to send POST requests using the same program. (Note: Students may ask questions like: "Do you always have to use postman to send post requests?" Use this as an opportunity to explain that Postman is simply a GUI for development, and that in future opportunities we'll be using `fetch` or other front-end code approaches for sending the same post requests.)
 
 * Walk students through the process of sending POST requests in Postman. If you are unfamiliar use the following points as a guide:
 
@@ -98,7 +98,10 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Open the file `server6.js` (`13-StarWars-6`). Look at the line under the `app.get('/')` route. Point out to students the use of the `res.sendFile` code. This code is used to send users a specific HTML file in response to their visiting a route.
 
-  ![5-SendFile](Images/5-SendFile.png)
+```js
+app.get('/', (req, res) => 
+  res.sendFile(path.join(__dirname, 'view.html')));
+```
 
 * Be sure to point out how we make use of the built in `path` library to join relative and absolute file paths. In this case, we **could** just omit `path.join` pass `sendFile` relatives paths to the HTML files instead, but it's safer to provide absolute paths in case our Express app is ever started from a different directory. Normally this would be an issue, since absolute paths will almost always be different on different computers, as well as on Heroku. Thankfully we can make use of Node's built in `path` library. `path.join` is a function which accepts any number of String arguments, which are also expected to be file paths or partial file paths. `path.join` takes the passed in file paths, combines them into a new path, and returns it.
 
@@ -134,7 +137,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 ### 8.	Instructor Do: Review Activity (add.html)	(0:05)
 
-* Walk students through the meaning of the JavaScript in `add.html`. Go line by line and explain how jQuery is used to grab the values in the form -- then immediately POSTs these values to the API. The API then saves the records into the database.
+* Walk students through the meaning of the JavaScript in `add.html`. Go line by line and explain how `document.getElementById` is used to grab the values in the form -- then immediately POSTs these values to the API. The API then saves the records into the database.
 
 * Answer any questions that remain. Then encourage students to look back at their class repository when completing the homework as there will be additional examples on folder structure relevant to their homework assignment.
 
@@ -254,7 +257,7 @@ Today's class is focused on creating an Express-based web server. Students will 
     * Servers
     * Routing
     * APIs
-    * AJAX (GET and POST Requests)
+    * `fetch` (GET and POST Requests)
 
   * You should be referencing the code from the previous Star Wars application.
 
@@ -296,7 +299,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
   * Create a set of routes for displaying the HTML pages
 
-  * Use jQuery to run AJAX calls to GET and POST data from users to the Express server
+  * Use `fetch` to run http request calls to GET and POST data from users to the Express server
 
 ### 17. Partners Do: Phase II - Frontend + Server Creation (20 mins) (Critical)
 
@@ -341,7 +344,7 @@ Today's class is focused on creating an Express-based web server. Students will 
       * If you finish early begin creating the code necessary to convert your form data into JSON objects. 
 
 
-### 19. Partners Do: Begin Phase IV - Backend Logic + AJAX (15 mins)
+### 19. Partners Do: Begin Phase IV - Backend Logic + Fetch (15 mins)
 
 * Proceed with the next phase. Slack out the following instructions to help guide them:
 
@@ -355,11 +358,11 @@ Today's class is focused on creating an Express-based web server. Students will 
 
     * Frontend Team:
 
-      * Begin to do serious research on AJAX. Specifically, focus your attention on how AJAX can be used to do both GET and POST requests. 
+      * Begin to do serious research on `fetch`. Specifically, focus your attention on how `fetch` can be used to do both GET and POST requests. 
 
-      * Then create the necessary code on your `tables.html` page such that it can retrieve data from the Backend Team's API. In essence you will be creating an AJAX GET request to retrieve the data.
+      * Then create the necessary code on your `tables.html` page such that it can retrieve data from the Backend Team's API. In essence you will be creating an `fetch` GET request to retrieve the data.
 
-      * Then create the necessary code on your `reserve.html` page such that it can send data to the Backend Team's API. In essence you will be creating an AJAX POST request to send the data. 
+      * Then create the necessary code on your `reserve.html` page such that it can send data to the Backend Team's API. In essence you will be creating an `fetch` POST request to send the data. 
 
     * All: This is the most challenging part of today's activity. Be persistent! You can do this!
 

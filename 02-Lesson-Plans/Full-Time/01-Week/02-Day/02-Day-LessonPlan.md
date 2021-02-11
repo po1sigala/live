@@ -1,399 +1,925 @@
-# 01.2 Lesson Plan - Going Pro with HTML/CSS (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
+# 01.2 Full-Time Lesson Plan: Introduction to HTML and CSS
 
 ## Overview
 
-In this class we will be introducing students to the basics of HTML/CSS and then some more advanced CSS.
+In today's class, students will be continue working with HTML and be introduced to CSS, the fundamental technologies used to structure and style a webpage. Students will also learn about web accessibility and semantic HTML tags.
 
 ## Instructor Notes
 
-* `Summary: Complete Activities 4-9 in Unit 01`
+* In this lesson, students will complete activities `09-Ins_CSS-color` through `21-Evr_Git-Guide`.
 
-* There's a ton of material to cover here, but adjust it as necessary. Just make sure you leave enough time for the critical activities as this is essential for keeping classes in sync across sections.
+* During activities, encourage students to refer to the provided user stories and acceptance criteria&mdash;as introduced in the previous class&mdash;to identify the user's goal and the conditions that must be met for the solution to be accepted. Doing so will help reinforce their computational thinking skills and set them up for success in future coding challenges. 
 
-* Have your TAs reference [02-Day-TimeTracker](https://drive.google.com/a/trilogyed.com/file/d/10vHQZl8JSk5bNJYMlgC6Jc15ivMM6ujR/view?usp=sharing) to help keep track of time during class.
+* If students do not have the required tools set up on their local machines, refer them to office hours for assistance. A list of required tools and resources can be found in the [01.1 Lesson Plan](../01-Day/01-Day-LessonPlan.md). 
 
-## Sample Class Video (Highly Recommended)
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* To view an example class lecture visit (Note video may not reflect latest lesson plan): [Class Video](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f2d65f7f-799e-4d4d-a712-15ffcef6e2a1)
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To gain initial exposure to HTML/CSS and how the two are linked using element selectors
-* To become comfortable working with HTML relative paths
+* Add custom color and fonts to a webpage using CSS properties.
 
-## Slides
+* Select an HTML element to style using CSS selectors. 
 
-* [1.2 Git-HTML-CSS](https://docs.google.com/presentation/d/1-503hnlqNaj-cPjVjq4KA2VyfbDlvcErquBc73qh_ug/edit?usp=sharing)
+* Link a CSS style sheet to an HTML file.
 
 ## Time Tracker
 
-* [1.2 Time Tracker](https://docs.google.com/spreadsheets/d/17iJQJG14grX0Mj9RAvdFQR5sBv5PgHMhe0VdwNyEF0E/edit?usp=sharing)
-
-### 1. Instructor Do: Open Slide Deck + Welcome Students (1 min)
-
-* Take the first minute of class to welcome students back and to open up your slide deck, [01-2 Git-HTML-CSS](https://docs.google.com/presentation/d/1-503hnlqNaj-cPjVjq4KA2VyfbDlvcErquBc73qh_ug/edit?usp=sharing).
-
-### 2. Instructor Do: Admin Items (Slides) (1 min)
-
-* Reassure students that it's okay if things start to feel like they're moving quickly. Throughout their experience as developers they will constantly need to refer back to old materials. The rush and looking back is part of the programming trade.
-
-* Flip through the slides on "Where to get Help." Specifically when it comes to In-Class Material, point students (in browser) to where they can access help resources. Emphasize the importance of practicing code vs. simply reading or watching videos.
-
-### 3. Instructor Do: Today's Class - Objectives + Focus Items (Slides) (2 mins)
-
-* Have students read the objectives of the day.
-
-* Then offer end-of-day targets for students depending on where they fall. If a student is completely new they should feel like the main target is to simply understand HTML/CSS at a conceptual level + understand Git. For students who have a bit of HTML/CSS they should aim to know how to apply the HTML/CSS a bit more comfortably after today.
-
-
-### 4. Instructor Do: HTML Round 2 (Slides) (15 mins)
-
-* Walk students through the HTML Round 2 slides.
-
-* Be concise, when you can, to save time. You don't need to explain every single thing that is on the slides—they will be made available to students after class to go back to. Just hit the high points!
-
-### 5. Students Do: Basic Student Bio Activity (20 mins)
-
-* Open the file `basic-html-bio.html` inside [04-HTML_Git/Basic-HTML-Bio](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/04-HTML_Git/Solved/Basic-HTML-Bio.html) in your browser.
-
-* Then slack out the following instructions and show students the slide:
-
-  * **Instructions:**
-
-    * Create a basic HTML page with your own information that looks similar to the design shown on screen.
-
-### 6. Instructor Do: Recap Basic Student Bio Activity (5 mins)
-
-* Either live-code or open the solution [Basic-HTML-Bio.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/04-HTML_Git/Solved/Basic-HTML-Bio.html) to the previous activity in Visual Studio Code. Then, walk students through the solution line-by-line.
-
-* Explain the `div` and `section` tags that appear in the solution.
-
-  * Explain that `div` tags are used to group elements into _visually_ related segments and that they are primarily used as "hooks" for CSS styling.
-
-  * Explain that `section` tags are used to group elements into _thematically_ related segments.
-
-  * Explain that `div` and `section` tags behave identically, in that both are block-level tags used to demarcate _sections_ of a site.
-
-  * Explain that the difference between `div` and `section` tags is dependent on what we want our source code to communicate to other developers.
-
-  * Encourage students to use a `div` when they're not sure which tag to choose. You can also direct them to the [HTML5 Doctor Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf).
-
-* Once you are done reviewing, slack out the code to them to see for themselves. (When slacking out the code, use the solution provided in the Lesson-Plan repo as it is extensively commented.)
-
-* After you have slacked out the code, once again remind your students that we also have online videos for them with which to review key activities.
-
-* These videos are a great way to catch up on material if you ever need to review them or if you feel like you are falling behind.
-
-* Slack out [Student Bio Layout](https://www.youtube.com/watch?v=kMBinXTCrXI).
-
-- - -
-
-### 7. Instructor Do: CSS Stylin' - Basics of CSS (Slides) (15 mins)
-
-* Using the CSS Stylin' slides as a guide, provide students with perspective on what CSS is and how it works.
-
-* Explain to them how CSS can be used by tying itself to HTML elements, classes, or IDs. Don't get too bogged down trying to explain things. You will be demonstrating this through examples shortly.
-
-### 8. Instructor Do: CSS Show! Demo (15 mins)
-
-* Take about 15 minutes to quickly demonstrate a few examples of CSS styling. As a starting point you can use the files inside `05-BasicCSS` to showcase the pieces necessary to link an HTML page to CSS.
-
-* Point out the following:
-
-  * That CSS can be linked to tags like `h1`, `h2`, `p`, `img`, and also specific classes (specified by .syntax) and id's (specified by #syntax).
-
-  * Just show enough to give them an idea of what's possible.
-
-* Slack out the `quick-example-internal-css.html` file to them.
-
-### 9. Students Do: CSS Styled Bio Page (20 mins)
-
-* Open the file [06-HTML_CSS_Layout/html-bio-with-css](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/06-HTML_CSS_Layout/Unsolved/html-bio-with-css.html)in your browser. Warn students that this might be a tough activity for some of them.
-
-    ![3-CSS_Layout_1](Images/3-CSS_Layout_1.png)
-
-* Slack out `06-HTML_CSS_Layout/html-bio-with-css.html` as a starter file.
-
-  * This is important as the **Instructions** given below assume a particular markup structure.
-
-* Then, slack out the following instructions to students:
-
-  * **Instructions**:
-
-    * Put all of this code inside a folder named `unit1-day2-html-css`, and put the folder in a place where you normally code.
-    * Use the command line to make a folder called `css`.
-    * Use the command line to make a file called `style.css` inside of thee `css` folder.
-    * Reference the `style.css` in your `student-bio.html` file. You do this by placing `<link rel="stylesheet" type="text/css" href="css/style.css">` inside the `<head>` tag.
-    * Style the example on the projector.
-      * Add a `class` called "container" on the `div` tag.
-      * Add an `id` called "main-bio" for the first `section` tag.
-      * Add an `id` called "contact-info" for the second `section` tag.
-      * Add an `id` called "bio-image" for the bio image.
-    * Style specs:
-
-      * `body`
-        * The background color is `#efeee7`.
-        * The font used `"Georgia",Times New Roman,Times,serif;`.
-        * The font color is `#333333`.
-        * Be sure to zero out the body margins and padding so the page is flush to the top of the page:
-          ```css
-          body {
-            margin: 0;
-            padding: 0;
-          }
-          ```
-      * `header`
-        * The background color is `#333333`.
-      * `h1`
-        * The font color is `#eee`.
-        * The font size is `28px`.
-        * Look at the example on the screen, and eyeball the padding and/or margins and positioning of the text.
-      * `h2`
-        * The font size is `24px`
-      * Make the container have a width of 1024 pixels, and center it. You do this using `margin: 0 auto;`.
-      * Make `#main-bio`, `#contact-info`, `#bio-image` all `float: left`.
-      * Make the `#bio-image` have a width of 200 pixels.
-      * Be sure to include `alt` text in all images
-      * `#main-bio` should have a width of `70%`.
-        * Add margins to the image so there is distance between it and the bio text.
-      * `#content-info` should have a width of `30%`.
-      * Adjust the line height so it is 1.5 times the size of the font.
-      * Make the link color `#d21034`.
-
-    * If you forgot how to write the CSS properties, you can reference all CSS properties here <https://developer.mozilla.org/en-US/docs/Web/CSS/Reference>
-
-    * Bonus:
-
-      * Stage, commit, and push this new file to Github.
-
-### 10. Everyone Do: Recap Activity (5 mins)
-
-* Have students recap the solution back to you.
-
-    ![3-CSS_Layout_2](Images/3-CSS_Layout_2.png)
-
-* Fill in concepts where students are unable to provide a clear answer.
-
-* Emphasize the use of `div` and `section` in the solution.
-
-
-### 11. Instructor Do: Relative File Paths (Slides + Demo) (10 mins)
-
-* Flip to the slide on Relative File Paths and point out to students how we've been referencing external CSS stylesheets.
-
-* Have students remind you what an external CSS stylesheet is before proceeding.
-
-* First open the HTML file `html-bio-with-css.html` that is inside of the folder [07-RelativePath](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/07-RelativePaths-Activity/Demo/html-bio-with-css.html) in your browser. Show students what the styled site looks like.
-
-* Then open the same file in your editor.
-
-* Point out to students again that the href needs to be able to "see" the CSS file and that href is like our "map" to where the file is.
-
-    ![0-RelativePaths](Images/0-RelativePaths.png)
-
-* Then move the CSS file into a folder called `assets`. Refresh the page in the browser and point out that the HTML page no longer knows where the CSS file is.
-
-* Fix the href link in the HTML to include the new assets directory. Refresh the page again and show students that this time it worked.
-
-* Also explain that there are other instances in which we'll need to use relative paths to direct ourselves to resources—it may be images, PDFs, javascript files, etc. So it's important to get a handle on how relative paths work.
-
-* Then flip to the next slide that talks about absolute file paths and explain that they are BAD because no other viewer of your HTML/CSS will be able to access those files. (The paths won't make any sense on the web.)
-
-### 12. Students Do: Relative File Paths Activity (12 mins)
-
-Answer any questions students have.
-
-* Zip and Slack out the following folder to students:
-
-* **Folder:**
-
-  * [07-RelativePaths-Activity/RelativePaths_UNSOLVED](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/07-RelativePaths-Activity/Unsolved)
-
-* **Instructions:**
-
-  * Unzip the folder provided to you (or copy and paste the contents outside).
-
-  * Then modify each of the four `html-bio.html` pages such that they can access the CSS inside their folder. Don't move the CSS file, and don't move the HTML file.
-
-  * Use relative linking to make it work!
-
-  * Hint: If you need some reading material on relative linking you can use <https://css-tricks.com/quick-reminder-about-file-paths/>.
-
-  * If you finish early, help out those around you, or begin reading through the Learn CSS Layout Guide found here: <http://learnlayout.com/no-layout.html>
-
-### 13. Instructor Do: Review Relative File Paths Activity (10 mins)
-
-* Review each of the Relative File Path examples. You can use the [RelativePaths_SOLVED](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/07-RelativePaths-Activity/Solved) folder to quickly show solutions if you prefer.
-
-- - -
-
-### 14. LUNCH BREAK (30 mins)
-
-- - -
-
-### 15. Instructor Do: Box Model (Slides) (10 mins)
-
-* Using the slides shown as a guide, introduce students to the concept of the box model. In explaining the box model you can just read the text on the slide.
-
-  > In CSS, every element can be considered to fit within a series of boxes. Each box can be individually adjusted to provide spacing between elements or to fill in elements with colors.
-
-* Point out that the box model applies to all elements whether they are text, images, div sections, etc.
-
-* Let them know that this concept is important.
-
-### 16. Partners Do: Box Model Activity (10 mins)
-
-* Then show them the Activity slide, and have them work in groups to tally up the total height and width of the boxes as described on the screen.
-
-* Let them know to calculate it both ways, including margins and not including margins.
-
-* After a few minutes show the slide with the answers.
-
-### 17. Instructor Do: We Be Floatin (Slides + Demo) (20 mins)
-
-* Next, return to the slides and proceed to walk through the slides on floats. Warn them that floats are the stuff of demons.
-
-* Begin by describing to students the concept of "flow." If you need help articulating the concept you can use the below:
-
-  > Flow is the idea that every single element—text, images, links, sections, etc.—all take up a set amount of space on the screen. These elements, by default, won't stack on top of one another so instead they have to find ways to "flow" around one another. A big part of CSS is in managing how elements will fit into this flow.
-  >
-  > Unfortunately there is no "drag-and-drop" in web development just yet, and the tools that exist to do so often produce terrible code. So, as developers, we do NEED to learn this stuff at least at a basic level.
-
-* You can analogize flow to Microsoft Word's word-wrap.
-
-* Flip through the slides on Block Elements vs. Inline Elements, Floating, and the ClearFix Hack. In your explanations, do the following:
-
-  * Mention that **block level** elements take up entire lines, whereas inline can fit adjacently.
-
-  * **Float** "forces" elements to the side you specify.
-
-  * **Clearfix hack** creates alignment between two sections (a bit more advanced).
-
-* Then when you see the slide that says Quick Demo, talk about how all web layouts effectively begin as wireframes like this one.
-
-    ![SiteDesignGoal](Images/SiteDesignGoal.png)
-
-* Point out how, in the next slide, we have a very simple version of the layout using image blocks.
-
-* Then proceed to open up the HTML file `layout-no-float.html` in your editor. Point out how the site is just a header, an aside, a main, a div and a footer.
-
-* Then open the file in your browser to showcase that, by default, each of the elements stacks on top of the other.
-
-    ![1-Float_3](Images/1-Float_3.png)
-
-* Talk about how we need to use `floats` to force our main and aside elements next to one another.
-
-* Next, open the file `float-style.css`. Make sure to have this file side by side with the HTML file you just showed. Point out how the elements are applying specific css styling to the `main` and `aside`.
-
-Explain that the syntax for the `.clearfix` class may appear strange now, but it's one method that can be used to contain the floats.
-
-* Then either edit `layout-no-float.html` so it uses the new `float-style.css` file or just open `layout-with-float.html` in your browser. Point out how the site now displays the layout correctly.
-
-    ![1-Float_2](Images/1-Float_2.png)
-
-* Slack out all of these files when done.
-
-* Then point students to the reference for learning more about floats in layouts.
-
-### 18. Partners Do: Float Activity (30 mins)
-
-* Next, present the layout students will be building in the next activity (on slide).
-
-  ![2-FloatActivity_1](Images/2-FloatActivity_1.png)
-
-* Then Slack out the below files and instructions:
-
-* **Files:**
-
-  * `floats.html` inside [09-FloatLayout-Activity/Unsolved](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/09-FloatLayout-Activity/Unsolved/floats.html)
-
-  * `floats.css`  inside [09-FloatLayout-Activity/Unsolved](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/09-FloatLayout-Activity/Unsolved/floats.css)
+| Start  | #   | Activity Name                       | Duration |
+|---     |---  |---                                  |---       |
+| 10:00AM| 1   | Instructor Demo: Color              | 0:05     |
+| 10:05AM| 2   | Student Do: Color                   | 0:15     |
+| 10:20AM| 3   | Instructor Review: Color            | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Units and Font     | 0:05     |
+| 10:35AM| 5   | Student Do:  Units and Font         | 0:15     |
+| 10:50AM| 6   | Instructor Review: Units and Font   | 0:10     |
+| 11:00AM| 7   | Instructor Demo: Selectors          | 0:05     |
+| 11:05AM| 8   | Student Do:  Selectors              | 0:15     |
+| 11:20AM| 9   | Instructor Review: Selectors        | 0:10     |
+| 11:30AM| 10  | FLEX                                | 0:30     |
+| 12:00PM| 11  | BREAK                               | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity      | 0:10     |
+| 12:40PM| 13  | Instructor Demo: HTML Display       | 0:05     |
+| 12:45PM| 14  | Student Do: HTML Display            | 0:15     |
+| 1:00PM | 15  | Instructor Review: HTML Display     | 0:10     |
+| 1:10PM | 16  | Instructor Demo: CSS Box Model      | 0:05     |
+| 1:15PM | 17  | Student Do: CSS Box Model           | 0:15     |
+| 1:30PM | 18  | Instructor Review: CSS Box Model    | 0:10     |
+| 1:40PM | 19  | Instructor Demo: CSS Positioning    | 0:05     |
+| 1:45PM | 20  | Student Do: CSS Positioning         | 0:15     |
+| 2:00PM | 21  | Instructor Review: CSS Positioning  | 0:10     |
+| 2:10PM | 22  | Everyone Do: Git                    | 0:20     |
+| 2:30PM | 23  | END                                 | 0:00     |
+
+---
+
+## Class Instruction
+
+### 1. Instructor Demo: Color (5 min) 
+
+* Welcome students to class.
+
+* Open `09-Ins-CSS-Color/index.html` in your browser and demonstrate the following:
+
+  * Color is one key way that web developers can add style and personality to a webpage. We can add color to HTML elements using CSS.
+
+* Open `09-Ins-CSS-Color/index.html` in your IDE and demonstrate the following:
   
-  * Screenshot of the desired layout (from slide)
+  * We have to set up the HTML before we can write the CSS to add color to the page.
 
-* **Instructions:**
+  * 🔑 Like before, we use a `<link>` element inside the `<head>` to link the CSS style sheet to the HTML. Remember, `href` specifies the relative path to the CSS file, and the `rel` attribute defines the relationship:
 
-  * Introduce yourself to 1–2 people next to you.
+    ```html
+    <link rel="stylesheet" href="./assets/css/style.css">
+    ```
 
-  * Then using `floats.html` and `floats.css` as a starting point, work together to create the missing CSS necessary to form the layout shown to you on screen.
+  * As previously explained, we use `class` attributes to identify multiple elements for CSS styling:
+  
+      ```html     
+      <section class="section box-orange">
+      ``` 
 
-  * This will not be easy so work at it as best you can. This is a challenging activity. At the very least, try to increase your understanding of CSS properties.
+  * And we use `id` to select a unique element for styling&mdash;which can be useful if we want to apply certain styling to only one specific element on the page: 
 
-  * Hint: Concentrate on first figuring out how to create the boxes. Think about using background colors (CSS property: `background`).
+    ```html
+    <section class="section" id="box-yellow">
+    ```
 
-  * Hint: We've provided the styling you need for the header element. Use this as a starting point to style the others.
+* Open `09-Ins-CSS-Color/assets/style.css` in your browser and demonstrate the following:
 
-  * Hint: You will need to apply each of the following CSS properties at least once:
+  * 🔑 Again, a style sheet is a list of CSS properties that defines how HTML elements will be displayed.
 
-    * padding
+  * 🔑 Each rule block comprises a selector that indicates the element or elements you want to style and the CSS properties to be applied. The name of the selector will match the name of the `class` or `id` attribute in your HTML. A `.` precedes the name of a class. A `#` precedes the id: 
 
-    * margin
+    ```css
+    .section {
+      width: 200px;
+      height: 200px;
+    }
+    ```
 
-    * background
+  * 🔑 We use the `color` CSS property to change the color of the text on a page. We use the `background-color` CSS property to add color to the entire width and height of the element:
 
-    * float
+    ```css
+    .box-blue {
+      color: white; 
+      background-color: #0000ff;
+    }
+    ```
 
-    * width (read up on width by percents)
+  * There are numerous ways to specify the colors that we want.
 
-    * color
+  * 🔑 We can specify a predefined color:
 
-    * clear
+    ```css
+    #box-yellow {
+      color: purple;
+      background-color: yellow;
+    };
+    ```
+  
+  * 🔑 Or we can use a hexadecimal code for a more specific color choice:
 
-    * overflow
+    ```css
+    .box-orange {
+      color: #0000ff;
+      background-color: #ffa500;
+    }
+    ```
 
-    * height
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * font-size
+  * ☝️ How do we use CSS to add color to webpages?
 
-    * line-height
+  * 🙋 We use the CSS properties `color` and `background-color` to apply colors to the HTML elements. We can specify predefined colors or use hex codes. 
 
-  * If you finish early Slack the TAs or raise your hand to call their attention. TAs will reassign you to help others in the class.
+* Answer any questions before proceeding to the next activity.
 
-* **Instructors/TAs:**
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_CSS-Color/README.md`.
 
-* This activity is purposefully challenging. Make sure students are working in groups.
+### 2. Student Do: Color (15 min) 
 
-* Pay attention to groups that are further behind and have groups that finish early attempt to help them. Folks should feel comfortable getting out of their seats to help one another.
+* Direct students to the activity instructions found in `10-Stu_CSS-Color/README.md`.
 
-### 19. Instructor Do: Review Float Activity (15 mins)
+* Break your students into pairs that will work together on this activity.
 
-* Review the activity. In reviewing the activity, you can use the image below as a guide.
+  ```md
+  # 📖 Add Color to HTML Page Using CSS
 
-  ![2-FloatActivity_2](Images/2-FloatActivity_2.png)
+  Work with a partner to implement the following user story:
 
-* Key things to point out:
+  * As a developer, I want to use CSS to style my HTML page. 
 
-  * The use of `background` color with `padding` creates "filled boxes."
+  ## Acceptance Criteria
 
-  * The use of `margin-top` creates spaces between elements.
+  * It's done when the HTML page has been linked with the external CSS style sheet. 
 
-  * The use of `float` specifies which side the element should move towards.
+  * It's done when `Section 1` has a background color of purple and the text is yellow.
 
-  * The use of `width` specifies how much of the screen an element should take up.
+  * It's done when `Section 2` and `Section 3` have a background color of blue and the text is orange.
 
-### 20. Instructor Do: Slack out the Video (2 min)
+  * It's done when the `container` has a background color of black.
 
-* Today we are going to really be pounding in the existence of the video walkthroughs as there are three key assignments and thus three videos for those assignments.
+  * It's done when `Section 4` and `Section 5` have a text color of white.
 
-* Once again emphasize to your class just how important/helpful these videos can be for reviewing old material and catching up with new material. They will be a HUGE tool in their arsenal for understanding the course's content.
+  * It's done when `Section 6` has a text color of yellow.
 
-* Slack out [Lesson 1.3 - Floats in CSS](https://www.youtube.com/watch?v=0lpxKw6E90Y).
+  * It's done when the finished page matches the mockup. 
 
-### 21. Instructor Do: Recap + Questions (Slides) (5 mins)
+  ## 📝 Notes
 
-* Complete the last slide of the slide show.
+  Refer to the documentation: 
 
-* Make sure all students feel encouraged and that they're motivated to keep going.
+  [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
+  [MDN Web Docs on getting started With CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)
 
-### 22. Group Do: Homework (20 min, or remaining time)
+  ## Assets
 
-* The remaining time can be used to finish up the first homework assignment.
+  The following image demonstrates the web application's appearance and functionality:
 
-* If students seemed to struggle today, you can use this time to review difficult topics or spend more time on one of the class activities rather than on homework. 
+  ![A webpage features colored blocks that represent six sections, each displaying different background and text colors.](./assets/image-1.png)
 
-### Lesson Plan Feedback
+  ---
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  ## 💡 Hints
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  How can we use the `<link>` element inside the `<head>` to connect the HTML to the CSS?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can we use color to help make your website accessible to users? What color combinations should be avoided? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 3. Instructor Review: Color (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with using CSS to add color to your webpage? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `<link>`
+
+  * ✔️ `color`
+
+  * ✔️ `background-color`
+
+* Open `10-Stu_CSS-Color/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 We use a `<link>` element with an `href` attribute that indicates the relative path to connect the CSS to the HTML: 
+
+    ```html
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    ```
+
+  * We use `class` attributes to identify groups of elements that we want to style. To apply the style to just one unique element, we can use an `id` attribute: 
+
+    ```html
+    <section class="section" id="section-1">
+    ```
+
+* Open `10-Stu_CSS-Color/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * 🔑 We add the CSS property `color` to change the font color of `section-1` to yellow, and we add the `background-color` proprty to change the background to purple. We can either specify predefined colors or use hex codes: 
+
+    ```css
+    #section-1 {
+      color: #ffff00;
+      background-color: #800080;
+    }
+    ```
+
+  * 🔑 We want to apply the same styling to `Section 2` and `Section 3`. Using a `class` allows us to write a single rule block and apply it to multiple elements: 
+
+    ```css
+    .section-blue {
+      color: #ffa500;
+      background-color: #0000FF;
+    }
+    ```
+
+  * We use the `color` property to set the text color of the `container` to white. This will set the font color for `Section 4`, `Section 5`, and `Section 6` to white as well because they are nested inside the container. We also set the background color to black:
+
+    ```css
+    .container {
+      color: white;
+      background-color: black;
+    }
+    ```
+
+* 🔑 By using a unique `id`, we can set the font of `Section 6` to yellow without changing any other elements: 
+
+  ```css
+  #section-6 {
+    color: #ffff00;
+  }
+  ```
+
+* We also use an `id` attribute to apply styling only to `Section 1`. This will make the background color purple and the text yellow. No other elements will be changed: 
+
+  ```css
+  #section-1 {
+    color: #ffff00;
+    background-color: #800080;
+  }
+  ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between `background-color` and `color`?
+
+  * 🙋 We use `background-color` to set the background color of the element. We use `color` to set the font color. 
+
+  * ☝️ Why would we want to use a hex code instead of a predefined color?
+
+  * 🙋 Both hex codes and predefined colors will add styling to your elements, but hex codes offer a wider selection of colors&mdash;which can come in handy when you want to customize your design. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 4. Instructor Demo: Units and Fonts (5 min)
+
+* Open `11-Ins_CSS-units-font/index.html` in your browser and explain the following:
+
+  * We can use CSS to do much more than add color to elements. We can also use it to change the font to help create a custom style. 
+
+* Open `11-Ins_CSS-units-font/assets/css/style.css` in your IDE and demonstrate the following:
+
+  * Adding a font style to your webpage can be as simple as adding another CSS property to an existing rule block:
+
+    ```css
+    .container {
+      font-family: "Lucida Console", Monaco, monospace;
+      color: white;
+      background-color: black;
+    }
+    ```
+
+  * You can use the `font-family` CSS property to specify the font style for an element. The first font listed should always be your first choice. If that font is not available, the browser will display the next font listed. Finally, you should always end the `font-family` declaration with a more generic family, like `monospace`, so that the browser can pick a similar font if your choices cannot be rendered:
+
+      ```css
+      font-family: "Lucida Console", Monaco, monospace;
+      ```
+
+  * The `line-height` property takes a length value, to set the distance between lines of text. We use `px` to represent roughly the width and height of a single dot, or pixel, that can easily be seen by the human eye. One inch equates to roughly 96px:  
+
+    ```css
+    .section-blue {
+      line-height: 100px;
+      color: #ffa500;
+      background-color: #0000FF;
+    }
+    ```
+
+  * We can also use `px` to set a font size for the text: 
+
+    ```css
+    #section-1 {
+      font-size: 26px;
+      color: #ffff00;
+      background-color: #800080;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we add custom font styles to the webpage?
+
+  * 🙋 We can use `font-family` to set a custom font type and `line-height` to change the amount of space between the text. We can also use `font-size` to make the fonts bigger or smaller. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_CSS-units-font/README.md`.
+
+### 5. Student Do: Units and Fonts (15 min) 
+
+* Direct students to the activity instructions found in `12-Stu_CSS-units-font/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 CSS Styling Not Applied to HTML Elements
+
+  Work with a partner to resolve the following issues:
+
+  * Users should be able to see styling applied to HTML elements when the page is opened.
+
+  ## Expected Behavior
+
+  * Each section should have a background color of `#fffacd`, and the font family `"Lucida Sans Unicode", "Lucida Grande", sans-serif` should be specified.
+
+  * The `fact-1` paragraph should be bold.
+
+  * The `fact-2` paragraph should have a font size of 24px.
+
+  * The `fact-3` paragraph should have a line height of 50px.
+
+  * The finished page should match the mockup.
+
+  ## Actual Behavior
+
+  When a user opens the page, no styling is visible. 
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Beneath a heading labeled "Fun Facts," subheadings list  topics above paragraphs of different font sizes, all on yellow backgrounds.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How can you use the global attributes `id` and `class` with CSS to style elements?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are some other ways that you can use CSS properties to style text? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 6. Instructor Review: Units and Fonts (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with units and fonts? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `<link>`
+
+  * ✔️ `font-family`
+
+  * ✔️ `line-height`
+
+  * ✔️ `font-size`
+
+* Open `12-Stu_CSS-units-font/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 For this activity, you were asked to debug a broken webpage where no styles were being displayed&mdash;a common development problem. When this happens, first check that your HTML and CSS are actually linked.
+
+  * Adding a `<link>` element will connect the HTML and CSS and allow the styles to display:
+
+    ```html
+    <link rel="stylesheet" href="./assets/css/style.css">
+    ```
+
+  * 🔑 It is also important to check that the styles that you want to use have matching `class` and `id` attributes applied to the HTML elements.
+
+  * We add the missing `id` and `class` attributes on the HTML elements so that the styles can display:
+
+    ```html
+    <section class="section">
+      <h2>Baby Spiders</h2>
+      <p id="fact-1">A baby spider is called a spiderling 🕷️.</p>
+    </section>
+
+    <section class="section">
+      <h2>Beds</h2>
+      <p id="fact-2">The word "bed" looks like a bed 🛏️.</p>
+    </section>
+
+    <section class="section">
+      <h2>Powerful Squirrels</h2>
+      <p id="fact-3">Approximately 10-20% of US power outages 🔌 are caused by squirrels 🐿️.</p>
+    </section>
+    ```
+
+* Open `12-Stu_CSS-units-font/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * Now that the HTML is properly set up, we can add the styles needed so the font styles are displayed.
+
+  * 🔑 We add a `font-family` property to the `section` rule block, applying this font family to all sections that have the `section` class: 
+  
+    ```css
+    .section {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      background-color: #fffacd;
+    }
+    ```
+
+  * 🔑 We add a `font-size` property to `fact-2` and set the size to `24px`:
+
+    ```css
+    #fact-2 {
+      font-size: 24px;
+    }
+    ```
+
+  * 🔑 Finally, we add a `line-height` property to `fact-3` and set the line height to `50px`. That is roughly half an inch: 
+  
+    ```css
+    #fact-3 {
+      line-height: 50px;
+    }
+    ```
+
+* Open `12-Stu_CSS-units-font/Solved/index.html` in the browser and demonstrate the following: 
+  
+  * To test that the page is now displaying properly and all the styles are allowed, we can open the webpage in the browser.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What should we do first if no styles are displaying on the page?
+
+  * 🙋 We should check that the HTML file and CSS style sheet are properly linked.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 7. Instructor Demo: Selectors (5 min) 
+
+* Open `13-Ins_CSS-selectors/index.html` in your browser and demonstrate the following:
+
+  * So far, we have focused on using `class` and `id` to select and style HTML elements. Alternatively, we can use a range of selectors to style the webpage&mdash;for an identical result in the browser. 
+
+* Open `13-Ins_CSS-selectors/assets/css/style.css` in your IDE and demonstrate the following:
+
+  * We use a **universal selector** to apply a style to all the elements on a page: 
+
+    ```css
+    * {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+    ```
+
+  * We can also select by the element's tag name, which will apply the styles to all the elements with that name and any elements nested in that element. This approach allows us to apply the same font size to all the paragraphs or determine a uniform height and width for all sections: 
+
+    ```css
+    section {
+      height: 200px;
+      width: 300px;
+    }
+
+    p {
+      font-size: 60px;
+      line-height: 200px;
+    }
+    ```
+
+  * We have already been using **class selectors**! Class selectors select all the elements that have that class attribute attached:
+
+    ```css
+    .box-blue {
+      color: white;
+      background-color: blue;
+    }
+    ```
+
+  * We have also been using **id selectors**. Id selectors apply a style to a single element:
+
+    ```css
+    #box-orange {
+      color: blue;
+      background-color: orange;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some ways that we can select and style elements with CSS?
+
+  * 🙋 We can use universal, element, class, and id selectors to select and style elements. 
+
+  * ☝️ Why would you pick one selector over another? 
+
+  * 🙋 Although selectors do not change how the styles display on the page, we can choose selectors with a purpose in mind. If we want to style all the elements, we can use a universal selector. If we want to style only one specific element, we might choose an id selector. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_CSS-Selectors/README.md`
+
+### 8. Student Do: Selectors (15 min) 
+
+* Direct students to the activity instructions found in `14-Stu_CSS-Selectors/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of CSS Selectors
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/assets/css/style.css).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+  [MDN Web Docs on attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+
+  [MDN Web Docs on CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are pseudo-class selectors? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 9. Instructor Review: Selectors (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with selectors? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Universal selectors
+
+  * ✔️ Element selectors
+
+  * ✔️ Class selectors
+
+  * ✔️ Id selectors
+
+* Open `14-Ins_CSS-selectors/Solved/assets/css/style.css` in your IDE and explain the following: 
+
+  * For this activity, you were asked to provide comments on existing code, allowing you to solidify your understanding and practice explaining code in plain language. 
+
+  * 🔑 For this code snippet, you might write a comment that explains that because this is a universal selector, the font family will be applied to all the elements on the page:
+
+    ```css
+    * {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+    ```
+
+  * 🔑 This element selector applies a background color to the body element:
+
+    ```css
+    body {
+      background-color: lemonchiffon;
+    }
+    ```
+
+  * This rule block looks different because there are two selectors. When rule blocks have more than one selector, the styling will apply to all the elements of both selectors. (If code looks unfamiliar, it is a good opportunity to check the documentation.) 
+
+    ```css
+    header,
+    footer {
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      color: #f0ead6;
+      background-color: #191970;
+    }
+    ```
+
+  * 🔑 We use a class selector to select all the HTML elements with that class attribute. To specify that the selector is a class selector, we place a `.` in front of the name in the CSS:
+
+    ```css
+    .highlighted-text {
+      font-weight: bolder;
+    }
+    ```
+
+  * 🔑 We use an id selector to select a single element. The style will be applied to that element alone:
+
+    ```css
+    #contact-section {
+      background-color: #f0ead6;
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do selectors help us style code?
+
+  * 🙋 Selectors define the elements to which a set of CSS rules apply. Universal selectors will apply styles to all the elements on the page, while id selectors will style on a single element. We pick the selectors based on the specificity required. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to flex time.
+
+### 10. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+### 11. BREAK (30 min)
+
+### 12. Instructor Do: Stoke Curiosity (10 min)
+
+* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
+
+## 13. Instructor Demo: { ACTIVITY NAME } (5 min) 
+
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
+
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+### 14. Student Do: { ACTIVITY NAME } (15 min)
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: { ACTIVITY NAME } (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ @TODO { THIS }
+
+  * ✔️ @TODO { THAT }
+
+  * ✔️ @TODO { THE OTHER }
+
+* Open `@TODO/folder/file` in your IDE and explain the following: 
+
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
+
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+
+  * 🙋 @TODO { YES, WE DO! }
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 16. Instructor Demo: { ACTIVITY NAME } (5 min) 
+
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
+
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+### 17. Student Do: { ACTIVITY NAME } (15 min) 
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: { ACTIVITY NAME } (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ @TODO { THIS }
+
+  * ✔️ @TODO { THAT }
+
+  * ✔️ @TODO { THE OTHER }
+
+* Open `@TODO/folder/file` in your IDE and explain the following: 
+
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
+
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+
+  * 🙋 @TODO { YES, WE DO! }
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 19. Instructor Demo: { ACTIVITY NAME } (5 min) 
+
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
+
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+### 20. Student Do: { ACTIVITY NAME } (15 min) 
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: { ACTIVITY NAME } (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ @TODO { THIS }
+
+  * ✔️ @TODO { THAT }
+
+  * ✔️ @TODO { THE OTHER }
+
+* Open `@TODO/folder/file` in your IDE and explain the following: 
+
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
+
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+
+  * 🙋 @TODO { YES, WE DO! }
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+## 22. Everyone Do: Git (20 min)
+
+* @TODO Open [Git docs](https://git-scm.com/docs/{TITLE}) in your browser and explain the following:
+
+  * @TODO GIVE A SHORT EXPLANATION OF THIS GIT CONCEPT/COMMAND.
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Open your command line and demonstrate the following:
+
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
+
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+
+* Answer any questions before ending the class.
+
+### 23. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
