@@ -1,496 +1,1185 @@
-# 01.1 Lesson Plan - The Zen of Coding
-## Overview
+# 01.1 Part-Time Lesson Plan: Introduction to Command Line and Git
 
-* First off, welcome and thank you so much for being a part of our program! Thanks to instructors/TAs like yourself, we're helping hundreds of students across the world achieve their career goals and their creative dreams. You have plenty of time to work with these students, and their progress will astound you. Buckle in! You're in for a fun ride!
+## Overview 
 
-* Today's class is all about making students feel comfortable. Today is just the first of many days where some of your students will seem "lost". Make sure they know that you are there for them from Day 1 and that they can succeed if they persist through the challenges.
+Today's lesson introduces students to the tools they need to succeed in the course and provides introductory activities to help familiarize students with the classroom environment. Students will also be introduced to HTML elements and attributes
 
 ## Instructor Notes
 
-* Use the [Zen Of Coding Slide Deck](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing) provided as an initial guide for today's class. During the first few units of the class, we'll be using slide decks more extensively to give students a sense of structure. As we move further into the course, slide decks will be used less frequently as we dive into a more code-centric approach. Feel free to modify the slides to your own style, but be sure to cover the same activities.
+* In this lesson, students will complete activities `01-Ins_Command-Line` through `08-Stu_Attributes`.
 
-* To add slides to the student-facing repository, download the slides as a PDF by navigating to File > "Download as" and choose "PDF document." Add the slide PDF file to your class repository along with other necessary files.
+* In addition, during the first 70 minutes of class, the university will lead introductory activities and provide important course-specific information to the students. 
 
-* **Note:** Editing access is not available for this document. If you wish to modify the slides, please create a copy by navigating to File > "Make a copy...".
+* Depending on the class size and information provided by the university, the `Everyone Do: Welcome` activity might run long or short of the expected time. 
 
-* Feel free to add in your own slides to include your bio and any projects or applications you've worked on.
+* For that reason, the `Setup and Installation` activity is designed to be flexible. Feel free to use any extra time to help students install the needed tools on their computers. If time is short, invite students with additional questions to attend office hours. 
 
-* Introductions often take a long time. Feel free to adjust today's lesson plan by pushing the HTML/CSS demonstration to Day 2 if necessary. This allows students to ease into our activity-based approach via the Terminal exercises and allows them to then focus on HTML/CSS on Day 2.
+* Remind students that they can always refer to their prework for more detailed instructions on how to install the tools they need for this course. Most of the setup and command-line/Git commands have already been covered in their prework.
 
-* When talking about repository creation, make sure to remind students they should be creating **public** repositories. This is necessary for the use of GitHub Pages in the future.
+* Normally, each student will be expected to do a `git pull` of the class repository to have the day's activities ready and open in VS Code. However, for this first class, some students might not have access to the repository yet or know how to use `git pull`, which is introduced during today's activities. For that reason, instruct a TA to post the activity instructions on Slack, and if possible, share the instructions on the screen during the `Student Do` section of each activity.  
 
-* If you choose not to cover HTML/CSS on Day 1, use `03-MyFirstHTML.html` to demonstrate the basics of HTML in an **Everyone Do** exercise, and then assign the Student Bio HTML activity as normal.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-    ![2-InstructorIntro](Images/2-InstructorIntro.png)
-
-* In addition to introductions, today's main focus is in making sure all students have all their prework (software / tools prerequisites) installed and ready to go. Many of your students will be coming to class with "partially" installed tools but will have gotten lost along the installation process. By the end of class, make sure EVERY one of your students has Git (with SSH Authentication), Visual Studio Code, and Slack installed. NOTE: You may need to run through this lesson plan to confirm you have all the necessary tools installed yourself!
-
-* When you get to the section on Git in the slide deck, the slides include an extended "Group Project" analogy to explain the utility of Git. Familiarize yourself with the example in advance of the class.
-
-    ![1-GitExample](Images/1-GitExample.png)
-
-* Much of your class's struggle today will be in getting Git to work. When cued via the slideshow, send out the supplemental GitHub Help Guide (`Steps to Upload to GitHub`). Encourage students to go home and practice using this guide at home. (This guide alone will dramatically reduce the number of Git issues students experience. Make sure they use it!)
-
-* There may still be confusion among students about GitLab, Bootcampspot, GitHub, and their respective roles in homework submission. It is advised that you clarify the purpose of each tool before the first lesson.
-
-* **Before class starts**, open up a tab for Bootcampspot in your browser. Make sure you know how to navigate to the sections where students can view their homework due dates, as well as where they go to turn their homework in.
-
-* **Before class starts**, open up a tab for GitLab in your browser. Be prepared to demonstrate how to navigate to the class repo and pull from it.
-
-* **Before class starts**, open up a tab for GitHub in your browser. Be sure to clarify where students can locate a link to their repo.
-
-* There's a ton of material to cover here, but adjust it as necessary. Just make sure you leave enough time for the critical activities as this is essential for keeping classes in sync across sections.
-
-## Sample Class Video (Highly Recommended)
-
-* To view an example class lecture visit (Note video may not reflect latest lesson plan): [Class Video](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de3c75c1-3446-47a5-9546-8e05cbdee2a7)
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* Give students time to introduce themselves to one another and the instructional team
-* Confirm that students have completed all required pre-work (software + tools installation)
-* Practice basic terminal/bash commands
-* Create a basic HTML page
-* Articulate the value of Git version control
-* Gain initial exposure to the concept of "adding, committing, and pushing" code to GitHub
+By the end of class, students will be able to:
 
-## Slides
+* Understand classroom expectations and processes and how to seek out help. 
 
-* [1.1 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing)
+* Apply computational thinking to coding challenges.
+
+* Install the tools needed for classroom success, including VS Code and Slack.
+
+* Implement basic terminal commands, including `cd`, `mkdir`, `touch`, and `ls`.
+
+* Create and clone a remote repository using `git clone`.
+
+* Perform a `git pull` to pull down the day's activities from the class repository prior to each class.
+
+* Add structure and content to a webpage using HTML elements.
+
+* Add attributes to configure or adjust behavior of specific elements.
+
+## Slide Deck
+
+* [Unit 01 Slide Deck](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing)
 
 ## Time Tracker
 
-[1.1 Time Tracker](https://docs.google.com/spreadsheets/d/1q6IWOA9IWVEAVZDgITp6uDk0wMDm_yVSHqM6CtPEvSk/edit?usp=sharing)
+| Start   | #   | Activity Name                    | Duration |
+|---      |---  |---                               |---       |
+| 10:00AM | 1   | Everyone Do: Welcome             | 0:70     |
+| 11:10AM | 2   | Instructor Do: Stoke Curiosity   | 0:10     |
+| 11:20AM | 3   | Instructor Demo: Setup           | 0:05     |
+| 11:25AM | 4   | Student Do: Setup Check          | 0:15     |
+| 11:40PM | 5   | BREAK                            | 0:30     |
+| 12:10PM | 6   | Instructor Demo: Command Line    | 0:10     |
+| 12:20AM | 8   | Student Do: Command Line         | 0:15     |
+| 12:35AM | 8   | Instructor Review: Command Line  | 0:10     |
+| 12:45PM | 9   | Instructor Demo: Git             | 0:05     |
+| 12:50PM | 10  | Student Do: Git                  | 0:15     |
+| 1:05PM  | 11  | Instructor Review: Git           | 0:10     |
+| 1:15PM  | 12  | Instructor Do: Stoke Curiosity   | 0:10     |
+| 1:25PM  | 13  | Instructor Demo: HTML            | 0:05     |
+| 1:30PM  | 14  | Student Do: HTML                 | 0:15     |
+| 1:45PM  | 15  | Instructor Review: HTML          | 0:10     |
+| 1:55PM  | 16  | Instructor Demo: Attributes      | 0:05     |
+| 2:00PM  | 17  | Student Do: Attributes           | 0:15     |
+| 2:15PM  | 18  | Instructor Review: Attributes    | 0:15     |
+| 2:30PM  | 19  | END                              | 0:00     |
 
-- - -
+---
 
-### 1. University Do: Introductions (39 mins)
+### 1. Everyone Do: Welcome (70 min)
 
-* The first 39 minutes of class will consist of introductions by the university, program director, student services director, and/or career director.
+* This first section will be led by the university team. 
 
-* Instructor/TAs just hang tight and calm your nerves!
+  * **Welcome and Attendance** (5 min): Welcome students to class and introduce attendance-taking procedure.
 
-### 2. Instructor Do: Begin Slide Deck (15 mins)
+  * **Objectives** (3 min): University will present session objectives to class.
+  
+  * **Intros** (35 min): University, students, and instructional team intros. Instructor and TAs might be asked to provide a brief statement of coding background and a fun fact about themselves.
 
-* Open the slide deck [1.1 The Zen of Coding](https://docs.google.com/presentation/d/16w9IckM1lvu3L6qATB1XnkJU1bwNnVtQjXJNPfj9lDc/edit?usp=sharing). Use it as a guide for the remaining sections, but keeping a close eye on your TAs to make sure you are keeping track of time. Be concise when you can!
+  * **Support Strategies** (5 min): Intro to support services, including tutoring and financial concerns.
 
-### 3. Instructor Do: The Path of Learning (15 mins)
+  * **Landing Zones Activity** (10 min): Students will break up into groups for short activity.
 
-* The next series of slides is really meant to give students the "right" perspective coming in. This means letting them know that this program will not be a traditional college class. We're here to support them 100% of the way to really help them achieve their goals.
+  * **Classroom Requirements and Recap** (12 min): Recap of requirements and session objectives.
 
-* To begin, take a few moments to assuage student fears of being a "beginner." Instead, let them know that having a humble attitude is the first requirement of being successful in this program. In a way, students should channel their inner toddler and recognize that "knowing nothing" and admitting such will allow them to dig their heels in and invest the time necessary to succeed. In a way, coding is like nothing else these students have attempted to do. Their mastery of other subjects, their educational backgrounds, and their professional successes do not guarantee that they will do well here. The only thing that will guarantee success is hard work, humility, and a relentless desire to be better. Recognizing how little you know is a first step towards creating that urgency.
+## Class Instruction
 
-* From here, give students perspective on the "Path of Learning"—specifically warning them about three major obstacles:
+### 2. Instructor Do: Stoke Curiosity (10 min)
 
-  * First, learning to code is tough, intimidating, and frustrating at times. They should immediately forget about their uncle/brother-in-law/friend/step-sister who told them about so-and-so learning to build apps in 1 week. Coding is hard. It will take time. There is no way around that.
+* Open the [Unit 01 Slide Deck](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-      ![3-PathofLearning_1](Images/3-PathofLearning_1.png)
+  * **What is computational thinking?** 
+  
+    * **Computational thinking** is a way of logically breaking down a problem so that we can develop a step-by-step solution. 
+    
+    * Key principles of computational thinking include the following:
+    
+      * Decomposition
+      
+      * Pattern recognition
+      
+      * Abstraction
+      
+      * Algorithms
 
-  * Second, because of how hard this can be, there will be many moments where students will doubt themselves. Take this chance to help them overcome this obstacle ahead of time by building up their confidence. Tell them that you started just like they did, that it takes time but that they have what it takes, that they were selected for this program because we know they have what it takes.
+  * **What is decomposition?** 
+  
+    * We use **decomposition** to break down a problem down into smaller, more manageable parts.
+  
+  * **What is pattern recognition?**
+  
+    * Once a problem is broken down, we use **pattern recognition** to find similarities and patterns among the smaller parts. This helps us solve the problem more efficiently.
 
-      ![3-PathofLearning_2](Images/3-PathofLearning_2.png)
+  * **What is abstraction?** 
+  
+    * Once patterns are recognized, we use **abstraction** to focus on important and relevant information and filter out what is not needed to solve the problem.
 
-  * Lastly, because of the length of the program, personal issues WILL come up during the course of the program. The idealism and "can-do" attitude students enter with on day 1 will be challenged by the length of the course. Let students know that they should see each other as a family embarking on a long journey. They will become far closer to their peers than they realize. Intensity is no substitute for endurance.
+  * **What is an algorithm?** 
+  
+    * After the other steps are complete, it is time for a plan. An **algorithm** is a set of step-by-step instructions that provide a solution to the problem.
 
-* Then proceed to tell them that learning is supposed to be frustrating. It's a process, but they should stick with it.
+  * **How do we apply computational thinking to solve coding challenges?** 
+  
+    * User stories and acceptance criteria help us clarify the scope of the problem and break it down into manageable parts.
 
-* Then walk them through the advice on succeeding in the program.
+  * A **user story** helps us identify the end goal and communicate how the solution will meet that goal. A user story follows a specific format: “As a **[user]**, I want to **[do something]**, so that I can **[realize a reward]**.” 
 
-### 4. Instructor Do: Course Structure (5 mins)
+  * The **[user]** is the end user or customer. The **[do something]** identifies the goal the solution must address. The **[realize a reward]** describes when the goal is met.
 
-* Spend a few moments to walk students through the course structure.
 
-* Point out that learning to code requires coding (not just sitting through lectures) so this program will very quickly become "code-centric." Let them know that there will be a mix of individual and group activities / projects.
+  * **Acceptance criteria** provide the conditions that must be met for the goal to be accomplished and the solution accepted by the user. Acceptance criteria define what specific tasks or functions must be done to solve the problem presented in the user story and have a clear pass or fail result. All criteria must pass for the solution to be accepted.
 
-* Then walk students through today's objectives.
+    * **For example:** It's done when there is a contact form that includes a text box for a visitor’s name and email.
 
-### 5. Instructor Do: Pre-Work (5 mins)
 
-* Then walk through the slides on "Pre-work." Let students know that they should have all of the tools, the software applications, and the accounts shown on their machines but that if they ran into any snags, we will work with them to confirm everything is set up over the next 35 minutes.
+  * The solution is a set of step-by-step instructions that address each of the acceptance criteria and clearly meet the user’s goal and reward as described in the user story. 
 
-### 6. Instructor Do: Confirm Pre-Work Installed (30 mins)
+* Navigate to `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following: 
 
-* TAs get ready to make your rounds!
+  * This week, we will work in groups to build a landing page using HTML and CSS. 
 
-* Instructor: Walk through each of the following "test" processes to confirm whether students have successfully installed the right software. Have them follow along with you in class, and have them raise their hands for a TA if they are missing something.
+  * This is an opportunity to apply computational thinking skills, practice breaking down a coding challenge into more manageable parts, and build the solution step-by-step.
 
-  * **Slack:**
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Easy to show. Just open Slack. But make sure students have it installed locally and are not using the web client.
+  * ☝️ What are we building?
 
-  * **Visual Studio Code:**
+  * 🙋 We are building a landing page that allows visitors to enter their contact information.
 
-    * Easy to show. Just open VS Code. Make sure they can do so as well.
+  * ☝️ What tools can we use to apply computational thinking to this coding challenge? 
 
-  * **Terminal / Bash:**
+  * 🙋 A user story will enable us to identify the user's goal, and acceptance criteria will help us define the criteria that we must meet to reach this goal. Then we can formulate a step-by-step solution that meets the goal. 
 
-    * For Mac users. Have them open their Launcher and search for `Terminal`.
+  * ☝️ How does this project relate to your career goals?
 
-    * For Windows users. Have them open the program called `Git Bash`.
+  * 🙋 This project uses the fundamentals of web design&mdash;HTML and CSS&mdash;as well as the computational thinking skills that we will need to tackle complex coding problems in future development roles.
 
-  * **GitHub:**
+* Answer any questions before proceeding to the next activity.
 
-    * Confirm that students all have an account on GitHub through a show of hands.
+### 3. Instructor Demo: Setup and Installation (5 min) 
 
-    * Those that do not have an account should immediately create one.
+* This section is designed to be flexible. Feel free to use any extra time to help students install the needed tools on their computers. If time is short, invite students with additional questions to attend office hours.   
 
-  * **Git:**
+* Explain the following:
 
-    * Now we're getting to the harder stuff.
+  * For this class, we will use a number of tools to write and store code and communicate effectively as a group. To be successful in this course, it is important that we have all these tools installed and know how to effectively use them. 
+  
+  * You can always refer to your prework for detailed instructions on how to install all the tools and programs you will need for this course.
 
-    * While still in terminal or bash, type `git`, and hit enter. If Git is installed it should trigger a series of lines about Git.
+* Open VS Code and demonstrate the following:
 
-        ![4-Prework_2](Images/4-Prework_2.png)
+  * 🔑 We use a code editor to write the code locally. 
 
-    * Now, to confirm that students have their GitHub accounts tied to their local Git using SSH authentication, have them type the following: `ssh -T git@github.com`. It should then ask for a passphrase (tied to your local account). Provide it (letters will not appear), and hit enter. If you are authenticated, it should provide a welcome message.
+  * VS Code runs on your desktop and comes with built-in support and extensions that allow you to create complex projects in the editor. 
 
-        ![4-Prework_3](Images/4-Prework_3.png)
+  * VS Code can be downloaded free and works on both Windows and macOS.
 
-    * Ask, via a show of hands, how many students did / did not get the welcome message (be expecting a lot of students who did not). If it seems that many students are missing this step, point them to the following link: [Generating an SSH Key - GitHub](https://help.github.com/articles/generating-an-ssh-key/).
+* Open Slack and demonstrate the following:
 
-        ![4-Prework_4](Images/4-Prework_4.png)
+  * 🔑 We use Slack to communicate as a class. Look at Slack for important course announcements and information, and use it to communicate with the instructional team and fellow classmates. 
 
-    * Walk around and help students as necessary, but keep track of time!
+   * To use the shared Slack workspace, you must accept the invitation sent to you via email by the university.
 
-  * **All others:**
+  * 🔑 We also use a Slack app called AskBCS to conect with the Learning Assistant team. To install AskBCS, open the Slack window and click on the plus sign (`+`) next to Apps, near the bottom of the lefthand navigation. Then search for and add AskBCS.  
 
-    * There are a few other items in the prework like Stack Overflow that are less critical at this juncture. Students will also install some of their tools right before they reach that topic in the class.
+* Open [GitHub](https://github.com/) in your browser and demonstrate the following:
 
-- - -
+  * 🔑 We use GitHub to store versions of the code and collaborate with others. In GitHub, projects are stored in repositories. 
+  
+  * To use GitHub, you will need to set up a free account.
 
-### 7. Instructor Do: On the Modern Web (10 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Stay concise in this section! Don't overwhelm students. We're just giving them a taste.
+  * ☝️ What tools do we use in the classroom to write code and communicate and collaborate with others?
 
-* Ask students what they think "Full-Stack Development" is. Simply stated, Full-Stack development pertains to working with both the front and back ends of an application.
+  * 🙋 We use VS Code, Slack, and GitHub.
 
-* Proceed to walk them through a basic Youtube search. Point out how the process of retrieving a video from Youtube requires two things, the Graphical User Interface (GUI) responding to what I type and also code on the server side that is able to search through its databases and find the right video.
+* If time allows, break the students into small groups and proceed to `Student Do: Setup and Installation Check`.
 
-* Point out how websites today are all about creating code for both this "frontend" and "backend".
+* Otherwise, inform the students that if they need help installing any of the tools discussed, they can reach out to a TA or stay for office hours. Then proceed directly to the break.
 
-* In this course, we'll be teaching them everything they need to be able to do this, meaning they will be able to build complex web applications as a single developer.
+* Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Do: Let's Get Crackin'—Intro to Console / Bash (10 mins)
+### 4. Student Do: Setup and Installation Check (15 min) 
 
-* Open terminal / console. Then walk and explain to students what each of the following commands does.
+* During this time, the students will break into small groups to troubleshoot any installation issues and ensure that they have VS Code, Slack, and GitHub running on their machines. 
 
-  * `cd` (changes directory)
+* The instructional team should actively engage with each group and address any issues. If an individual's concerns can't be resolved during the time allotted, recommend that they stay for office hours.
 
-  * `cd ~` (changes to home directory)
+* Resources:
 
-  * `cd ..` (moves up one directory)
+  * [Download Visual Studio Code](https://code.visualstudio.com/download)
 
-  * `ls` (lists files in folder)
+  * [Join a Slack Workspace](https://slack.com/help/articles/212675257-Join-a-Slack-workspace)
 
-  * `pwd` (shows current directory)
+  * [Signing Up for GitHub](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/signing-up-for-github)
 
-  * `mkdir <FOLDERNAME>` (creates new directory)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * `touch <FILENAME>` (creates a file)
+### 5. BREAK (30 min)
 
-  * `rm <FILENAME>` (deletes file)
+### 6. Instructor Demo: Command Line (10 min) 
 
-  * `rm -r <FOLDERNAME>` (deletes a folder, note the -r)
+* Explain that commands are useful ways to navigate quickly and easily between folders, also called **directories**, in the CLI. The commands are entered into the CLI. 
 
-  * `open .` (opens the current folder. MAC SPECIFIC)
+* Open your CLI and demonstrate the following:
 
-  * `open <FILENAME>` (opens a specific file. MAC SPECIFIC)
+  * 🔑 We use `ls` to list the contents of the current directory. In the home directory, we see a list of directories, including the `Desktop` directory: 
 
-  * `explorer <FILENAME>` (opens the specific file. BASH SPECIFIC)
+    ```bash
+    ls
+    ```
 
-  * `explorer .` (opens the current folder. BASH SPECIFIC)
+  * 🔑 We use `cd` to change directories. We can change into the `Desktop` directory with the following command: 
 
-* Tabbing
+    ```bash
+    cd Desktop
+    ```
 
-  * Pressing the `tab` key after typing "cd fol" will autocomplete to "cd foldername", assuming foldername is unique. (Folder/Filename Autocomplete - Show students what happens when there are unique and multiple options based on what they typed.)
+  * 🔑 To move back up to the previous directory, we use `cd ..`: 
 
-### 9. Students Do: Console Commands (12 mins)
+    ```bash
+    cd ..
+    ```
 
-* [Intro To Console Bash](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/02-IntroToConsoleBash)
+* Explain that in addition to navigating between files and directories, we can use commands to create and remove directories and files. 
 
-* Then slack out the following instructions to students (or show them the instructions via the slide):
+  * Let's create a new directory in `Desktop` with a new file.
 
-* **Instructions:**
+  * 🔑 We start by checking the working directory with `pwd` (in other words, "print working directory"). When we use this command to print the working directory, it shows us the path:
 
-1. Create a new folder with the name of `self-destructing-folder`
+    ```bash
+    pwd
+    ```
 
-2. Create a new txt file with the name `secret-message.txt`
+  * 🔑 Because we want to create the new folder inside the `Desktop` directory, we navigate down one layer into the `Desktop` directory, using `cd`:
 
-3. Copy `secret-message.txt` to the inside of `self-destructing-folder`.
+    ```bash
+    cd Desktop
+    ```
 
-4. Delete the original `secret-message.txt` file.
+  * 🔑 Then we use the `mkdir` command to create a new directory named `demo-folder`:
+ 
+    ```bash
+    mkdir demo-folder
+    ```
 
-5. Delete the `self-destructing-folder`.
+  * 🔑 To add a file to the new directory, first we use `cd` to navigate into `demo-folder`:
 
-### 10. Students Do: Discuss with Neighbors (5 mins)
+    ```bash
+    cd demo-folder
+    ```
 
-* Have students discuss with their neighbors the process of creating files, removing files, etc.
+  * 🔑 Then we use `touch` to create a new file called `index.html` inside of `demo-folder`:
 
-* Also have students explain to one another a high-level definition of Full-Stack development.
+    ```bash
+    touch index.html
+    ```
 
-* Briefly have students explain the answers back to you.
+  * 🔑 We can use `ls` to check that the new file has been successfully added to the directory:
 
+    ```bash
+    ls
+    ```
 
-### 11. Instructor Do: Hello, HTML (5 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Create a new HTML file in your editor. Have students follow along if they can, but tell them not to get bogged down if they are having trouble keeping up. They will have a chance to work on an example of their own later.
+  * ☝️ How would we use command-line commands to change directories?
 
-* Use the code in [03-my-first-html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/03-MyFirstHTML/Solved/my-first-html.html) as a guide. Be careful not to open the bonus file yet, that's for the next activity.
+  * 🙋 We use `cd` to go down and change to a new directory. We use `cd ..` to go back up to the previous directory.
 
-  * **Don't just display this file or copy and paste the code onto your screen.** Type it out, and let your students follow along.
+  * ☝️ How would we use command-line commands to create a new file?
 
-* As you code, be sure to point out the prominent elements like `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`, `<h1>`, the links, etc.  
+  * 🙋 We use `touch` and the name of the new file that we want to create.  
 
-* Then run the page and point out to students how the elements in the program compare to those on the web page.
+   * ☝️ How would we use command-line commands to create a new directory?
 
-    ![6-HTML_2](Images/6-HTML_2.png)
+  * 🙋 We use `mkdir` and the name of the new directory that we want to create.  
 
-* Ask if there are any questions before proceeding to the student exercise.
+* Answer any questions before proceeding to the next activity.
 
-### 12. Students Do: Intro to HTML (5 mins)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Command-Line/README.md`.
 
-* [03-MyFirstHTML](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/03-MyFirstHTML)
+### 7. Student Do: Command Line (15 min)
 
-* Keep your HTML code from the previous exercise available for them to see while they work, but don't send them the code just yet.
+* Direct students to the activity instructions found in `02-Stu_Command-Line/README.md`.
 
-* Then slack out the instructions to the second student exercise.
+* Break your students into pairs that will work together on this activity.
 
-* **Instructions:**
+  ```md
+  # 📖 Use Command-Line Commands to Create Directory and File
 
-* In a new HTML file, create the basic structure of an HTML document and include the following in it:
+  Work with a partner to implement the following user story:
 
-  * DOCTYPE declaration
+  * As a developer, I want to use the command line to create a directory and file on my computer. 
 
-  * Head tag with a title tag
+  ## Acceptance Criteria
 
-  * H1 tag with a title of your choice
+  * It's done when a new directory named `first-day` has been created using command-line commands.
 
-  * Embed an image
+  * It's done when the `first-day` directory contains a file named `index.html`. The file should also be created using command-line commands.
 
-  * Create the following three links on your page:
+  ## 📝 Notes
 
-    * One link that is `target="_blank"` so that it opens a new tab when clicked on.
+  Refer to the documentation: 
 
-    * Make the second link bold.
+  [MDN Web Docs on basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-    * Make the third link a placeholder so it goes nowhere.
+  ---
 
-  * HINT: You should be looking up at the screen pretty often...
+  ## 💡 Hints
 
-* Bonus:
+  What command can you use to list the contents of a directory? How can you use this command to check your work?
 
-  * Create an ordered list of steps to make a sandwich.
+  ## 🏆 Bonus
 
-  * Create an unordered list of 5 bands/musicians you like.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Create a table with 2 columns (animal class and animal name) and 4 rows of animals.
+  * Which command do you use to copy or move files?
 
-  * Use an alternate way of separating links without line breaks.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  * Embed a Youtube video of your favorite band/musician.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Do: Review HTML Solution (10 mins)
+### 8. Instructor Review: Command Line (10 min) 
 
-* Open the file [my-first-html-with-bonus.html](../../../../01-Class-Content/01-HTML-Git-CSS/01-Activities/03-MyFirstHTML/Solved/my-first-html-with-bonus.html) and walk students through the solution. As you discuss the solution, be sure to point out the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Key elements like `<!DOCTYPE html>`, `<html>`, `<head>`, `<h1>`, the links.
+  * ☝️ How comfortable do you feel with the command line? (Poll via Fist to Five, Slack, or Zoom)
 
-  * Good indentation practices. In fact, if you have time, unindent everything by highlighting everything and hitting `ctrl-j` and then re-running the code. Explain that the code will still work but that it's awful to read and maintain. Build good practices now!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Give students a few moments to ask questions.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-- - -
+  * ✔️ `cd`
 
-### 14. LUNCH BREAK (30 mins)
+  * ✔️ `mkdir`
 
-- - -
+  * ✔️ `touch`
 
-### 15. Instructor Do: Welcome Students Back (1 min)
+  * ✔️ `ls`
 
-* Take the first minute of class to welcome students back from lunch.
+* Open `02-Stu_Command-Line/README.md` in your IDE and explain the following: 
 
-* Reassure students that it's okay if things start to feel like they're moving quickly. Throughout their experience as developers they will constantly need to refer back to old materials. The rush and looking back is part of the programming trade.
+  *  The user story helps us to identify the goal and reward. The user, a developer, wants to use only the command line to make a new directory and file:
 
-### 16. Instructor Do: What/Why Git - "The Group Project" (Slides) (5 mins)
+      ```md
+      As a developer, I want to use the command line to create a directory and file on my computer.
+      ```
 
-* Walk students through the use-cases of Git.
+  *  We use the acceptance criteria to identify when the user's goal has been met. To meet the stated user goal, we need to create a new directory named `first-day`. Inside that directory, we need to create an `index.html` file:
 
-* The basic premise of these slides is that in group collaboration, situations arise where code conflicts occur or where damaging code is pushed up. With version control you have a way of preventing both from becoming issues.
+      ```md
+      * It's done when a new directory named `first-day` has been created using command-line commands.
 
-* Don't get into the specifics of merging, branches, or Pull Requests yet. The important takeaway is that the students will understand that Git makes it much easier to collaborate with a group.
+      * It's done when the `first-day` directory contains a file named `index.html`. The file should also be created using command-line commands.
+      ```
 
-### 17. Students Do: Quick Activity - Explain Git (3 mins)
+* Open your CLI and demonstrate the following:
 
-* Give students a few minutes to explain to one another what Git version control is for.
+  * The solution breaks down the steps to meet the goal. 
 
-### 18. Instructor Do: Recap Answers (3 mins)
+  * 🔑 We use `cd` to navigate to `Desktop`:
 
-* Have students explain their answers back to you. Correct any mistaken answers you hear. Encourage students when they get the right answer.
+    ```bash
+    cd Desktop
+    ```
 
-### 19. Instructor Do: Explain GitHub (Slides) (5 mins)
+  * 🔑 We use the `mkdir` command to create a new directory inside `Desktop` named `first-day`:
+  
+    ```bash
+    mkdir first-day
+    ```
+  
+  * 🔑 We use `cd` to navigate inside the `first-day` directory that we just created:
 
-* Spend just a few brief minutes explaining the relationship between Git and GitHub. Keep it concise. You may just want to say the following:
+    ```bash
+    cd first-day
+    ```
 
-  > GitHub offers a centralized location where all developers can push and pull (upload and download) their code. This means that GitHub always holds the most up-to-date code, handling everyone's updates appropriately.
-  > GitHub also serves as a social network for developers and their code. Developers can find each other, discuss project features and issues, and contribute to open source projects for free.
-  > GitHub is also a great way to showcase your work. Employers can view a prospective team member's code and previous projects to see if they would be a good fit for the team. 
+  * 🔑 We use `touch` to create a new file named `index.html` inside `first-day`:
+  
+    ```bash
+    touch index.html
+    ```
 
-### 20. Instructor Do: GitHub Examples (5 mins)
+  * 🔑 To test that the user's goal has been met, we use `cd ..` to navigate back to the `Desktop` and `ls` to list the contents of `Desktop`:
 
-* Take a few minutes to show the class some of your favorite GitHub repositories.
+    ```bash
+    cd ..
 
-* If you need some ideas, here are some popular ones:
+    ls
+    ```
 
-  * [https://github.com/freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
+  * The `first-day` directory is listed among the contents of the `Desktop`.
 
-  * [https://github.com/getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
+  * To test that a file has been created in the folder, we use `cd` to navigate into the`first-day` directory:
 
-  * [https://github.com/twbs/bootstrap](https://github.com/twbs/bootstrap)
+    ```bash
+    cd first-day
+    ```
 
-  * [https://github.com/nodejs/node](https://github.com/nodejs/node)
+  * Then we use `ls` to list the contents of the directory:
 
-* Every library and framework used in this course has an open source repository on GitHub.
+    ```bash
+    ls
+    ```
 
-### 21. Instructor Do: Get Started with Git - Demo Git add, commit, push (10 mins)
+  * We see that an `index.html` file is located inside the `first-day` directory.
 
-* As an Instructor, create your own GitHub repo. Be sure to stress the importance of the repository being public. Without a public repository, students will not be able to use GitHub Pages in the future. Then walk students through the process of adding a file to GitHub.
+  * The solution addresses all the conditions of the acceptance criteria and clearly meets the user's goal. Good work! 
 
-* Have students try to follow along on their own accounts if they can.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Important Note: We teach the process of cloning existing repos for consistency with students. So use the below steps as a guide.
+  * ☝️ What command can we use to create a directory in the command line? 
 
-  * Navigate to GitHub in your browser, and click to create a new repository.
+  * 🙋 We use `mkdir` to create a directory.
 
-      ![2-GitDemo_1](Images/2-GitDemo_1.png)
+  * ☝️ What command can we use to create a file in the command line? 
 
-  * Call your repository whatever you like, but make sure to set it as public. Initialize it with a README. Stress that although we’re breezing through this README for the sake of time, your READMEs are really important to users and recruiters, because it helps them see why your project is helpful, how it works, and the process you took to get it working.
+  * 🙋 We use `touch` to create a file.
 
-      ![2-GitDemo_2](Images/2-GitDemo_2.png)
+  * ☝️ What can we do if we don't completely understand this?
 
-  * Then copy the `ssh` or `https` link associated with this GitHub repo. (The difference has to do with whether you need to authenticate each time. SSH is preferred, but if it's not working for you, switch to `https`.)
+  * 🙋 We can refer to supplemental material, read the MDN Web Docs on [basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands), and stay for office hours to ask for help.
 
-      ![2-GitDemo_3](Images/2-GitDemo_3.png)
+* Answer any questions before proceeding to the next activity.
 
-  * Then open up Terminal or Bash and navigate to a folder where you would like to clone the repo. Then type the command `git clone <PASTE THE REPO>`.
+### 9. Instructor Demo: Git (5 min) 
 
-    * Git Bash uses SHIFT+INSERT as the shortcut to paste.
+* Explain that developers need to be able to store and manage code as well as share it with others. In this class, we will be using a tool called GitHub for that purpose.
 
-    * Terminal uses COMMAND+OPTION+SHIFT+V as the shortcut to paste.
+* Open [GitHub](https://github.com/) in your browser and demonstrate the following. 
 
-        ![2-GitDemo_4](Images/2-GitDemo_4.png)
+  * In this class, we will share code in repositories using GitHub.
 
-  * Point out to the students using Explorer or Finder that this action created a new folder on your machine with the same name as the repository on GitHub. Also point out that this file is directly attached to GitHub and that it includes the README found in GitHub.
+  * Click on the green New button on the top left, or the plus sign `+` on the top right, to create a new repository.
 
-      ![2-GitDemo_5](Images/2-GitDemo_5.png)
+  * 🔑 Type the name of the repository, `first-day-demo`, in the "Repository Name" box.
 
-  * Next, if you haven't already, navigate into this folder in Terminal or Bash.
+  * 🔑 We select Public because all of the repositories we create in this course will need to be public to deploy to GitHub Pages and get homework support from TAs. It is possible to host private repositories with GitHub Pro, but a paid account is not necessary for this course.
 
-  * Now add a new file into the folder in Finder or Explorer. This can be any file you want, but in my case, I will add an HTML file.
+  * 🔑 Select the "Add a README file" option to have GitHub create a new `README.md` file when creating the repository.
 
-      ![2-GitDemo_6](Images/2-GitDemo_6.png)
+  * Finally, we click on the "Create repository" button.
 
-      ![2-GitDemo_7](Images/2-GitDemo_7.png)
+  * 🔑 The remote repository has now been created, but we need to pull down the repository to the local machine.
 
-  * Now go back to Terminal / Bash, and type each of the following commands:
+* Navigate in the browser to the `first-day-demo` repository that we just created, and demonstrate the following:
 
-    * `git add -A` (This will tell Git to track any changes in the current repo.)
+  * To copy the URL, we click on the Code button and select the HTTPS option (or the SSH option if students have completed their prework and have set it up).
 
-    * `git commit -m "Added a new file"` (This will tell Git to commit the changes and to include the comment "Added a new file.")
+* Open your CLI and demonstrate the following:
 
-    * `git push origin main` (This will tell Git to upload the code to GitHub.)
+  * 🔑 Use the command `cd` to navigate to the directory where we want the repository located. Ideally, you should have a parent directory to store all of your coding projects for this course. For an example, call the parent directory `Bootcamp`:
 
-      ![2-GitDemo_8](Images/2-GitDemo_8.png)
+    ```bash
+    cd Bootcamp
+    ```
 
-  * Navigate back to GitHub in the browser, and show students that the file you uploaded now exists in GitHub.
+  * 🔑 We use the Git command `git clone`, followed by the URL copied from GitHub, to clone the repository to the local machine: 
 
-      ![2-GitDemo_9](Images/2-GitDemo_9.png)
+    ```bash
+    git clone <the HTTPS or SSH URL ending in .git>
+    ```
 
-* At this point, students will be completely confused. Take a moment to calm their nerves and to let them know that this will become second nature to them with a little time.
+  * 🔑 The `git clone` command creates a new directory with the same name as the repository. We navigate into the new directory using `cd`:
 
-### 22. Instructor Do: Recap Student Resources and Accounts (5 mins)
+    ```bash
+    cd first-day-demo
+    ```
 
-* It's very likely that there's still confusion among students about the purpose of GitLab, Bootcampspot, GitHub, and their respective roles in homework submission.
+  * 🔑 Let's create an HTML file in the local repository using the `touch` command:
 
-* Take a moment to reiterate that GitLab is their *class repo*, the spot that they will pull from every day to get class activities and homework instructions.
+    ```bash
+    touch index.html
+    ```
 
-* GitHub will be the place that all of their HW code will get uploaded.
+  * 🔑 Before we add the changes to commit them, let's run `git status` to check the status of the repository:
 
-* Bootcampspot is the spot that students actually turn in their homework. They will submit two links: One to their repo, one to their live (hosted) version of the web application.
+    ```bash
+    git status
+    ```
 
-* Take a moment to log in to BCS to show students where they will link to their homework.
+  * That will show us which files are being tracked and which are untracked.
 
-* Before slacking out the next activity, have students log into each of these accounts. Tell the students who are having difficulties logging in to either raise their hand or slack a TA.
+  * 🔑 We use the command `git add` to add the changes. `git add .` adds any untracked or modified files in the current directory and all subdirectories (the current directory is represented by `.`): 
 
-### 23. Instructor Do: Slack GitHub Guide (2 mins)
+    ```bash
+    git add .
+    ```
 
-* At this point, slack the GitHub guide (found in `Important > GitHub Help > "Steps to Upload GitHub"`). Let them know that this guide will be their best resource on completing their own GitHub pushes.
+  * 🔑 If we run `git status` again, we will see that all of the files are being tracked and are ready to be committed.
 
-### 24. Students Do: Git Add, Commit, Push (15 mins)
+  * 🔑 To commit the changes, we use the command `git commit -m` with a commit message, like "First commit": 
 
-* Then slack out the following activity (or show them the instructions on the slide):
+    ```bash
+    git commit -m "First commit"
+    ```
 
-  * **Instructions:**
+  * 🔑 To push the changes back up to the repository that we created on GitHub, we use the command `git push`. The `git push` command sends any local commits to a remote location. In this case, the location is `origin` (GitHub), and we want to update the origin's `main` branch. For now, we only have one version of the codebase, called `main` by default:
 
-    * Using GitHub and the Command Line, do the following:
+    ```bash
+    git push origin main
+    ```
 
-      * Create a new public GitHub repository, and name it whatever you like. Be sure to check the box for “initialize this repository with a README.”
+  * Historically, the most common name for the main body of a codebase has been `master`. However, recently `main` has been gaining in popularity. In fact, GitHub now uses `main` as the default name for its repositories&mdash;as do the projects in this course. Be aware that you might see instances of both throughout your development career, or you might hear experienced coders use the term "master branch" out of habit. You'll learn more during the `21-Evr_Git-Guide` activity.
 
-      * Next, clone the repo to your local directory.
+  * 🔑 It is important that you keep the local repository up to date, especially when collaborating with others. Other collaborators might make changes to the repository that you don't have on your local repository yet.
+  
+  * 🔑 To pull down any changes from the remote repository on GitHub and update the local repository on the local machine, we use the command `git pull`. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely, the original repository's URL&mdash;followed by the name of the branch, which is `main`:
 
-      * Then create an HTML file inside the local directory.
+    ```bash
+    git pull origin main
+    ```
 
-      * Add, Commit, and Push the code to GitHub.
+  * You will be using this `git pull` command before every class to pull down that day's activities from the class repository.
 
-    * Bonus:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-      * Create a new public GitHub repository, and name it `zen-garden`. Be sure to check the box for “initialize this repository with a README.”
+  * ☝️ How would we create a new repository on GitHub and clone it to the local machine?
 
-      * Clone the repo to your local directory.
+  * 🙋 We go to [GitHub](www.github.com) and create a new repository. Then we use `git clone` to clone it to the local machine. 
 
-      * Go to [CSS Zen Garden](http://www.mezzoblue.com/zengarden/alldesigns/). Navigate to a few of the examples and choose a page that you like.
+  * ☝️ How would we push changes to a remote repository so that we can see the changes on GitHub?
 
-      * Download the HTML and CSS. Each page has a link to download the code, normally near the top of the page.
+  * 🙋 We use `git add .` to add all the changes. We use `git commit -m` to commit the changes and add a message that explains the changes made. Then, to push the changes, we use `git push origin main`. 
 
-      * Move the HTML and CSS into your newly cloned repo and open the HTML in Chrome. 
+* Answer any questions before proceeding to the next activity.
 
-      * Use inspect element to identify a page element you would like to change in some way.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Git/README.md`.
 
-      * Change the CSS in any way you'd like.
+### 10. Student Do: Git (15 min) 
 
-      * Add, Commit, and Push the code to GitHub.
+* Direct students to the activity instructions found in `04-Stu_Git/README.md`.
 
-* **Instructor:**
+* Break your students into pairs that will work together on this activity.
 
-  * Once the time is complete, recap the activity with everyone. Have them explain it back to you. Some students will be confused or will struggle with this activity (especially the bonus) so once again reassure the class that this process will become second nature over time.
+  ```md
+  # 📖 Create a New GitHub Repository
 
-### 25. Instructor Do: Git Workflow (Slides) (10 mins)
+  Work with a partner to implement the following user story:
 
-* Walk students through the Git Workflow slides.
+  * As a developer, I want to create a new GitHub repository and add an HTML file to it.  
 
-* The main objective of these slides is to start getting students familiar with the process of data flow with Git. Don't worry if some students aren't fully grasping the purpose of each conceptual area. 
+  ## Acceptance Criteria
 
-* The important takeaway is that `git clone`, `git add`, `git commit`, and `git push` all bring your files into the next stage in Git Workflow.
+  * It's done when I have created a new repository named `first-day-repo` using the GitHub user interface.
 
-### 26. Instructor Do: Introduce Supplemental Videos (5 mins)
+  * It's done when I have cloned the `first-day-repo` to my local machine.
 
-* Introduce your class to the `Supplemental Video Guides` which we have crafted for them to use in order to review important coding activities (like the one they have just completed) and future homework assignments.
+  * It's done when I have used command-line commands to navigate into the `first-day-repo` directory.
 
-* Let them know that these videos will be slacked out to everyone after the class has reviewed the activity but that they should save watching the videos for when they get back home and have some free time.
+  * It's done when I have used command-line commands to create an `index.html` file.
 
-* Homework videos will be slacked out after the deadline for the assignment has passed.
+  * It's done when I add and commit my changes using Git commands.
 
-* Each video also has a form within the description for feedback which we would appreciate that they fill out if they think anything in the video needs improvement.
+  * It's done when I push the changes to the remote repository. 
 
-* Slack out [My First HTML](https://www.youtube.com/watch?v=ieb6Svbc10E).
+  ## 📝 Notes
 
-### 27. Instructor Do: Demo Homework 1 (5 mins)
+  Refer to the documentation: 
 
-* Open the [Homework solution index.html](../../../../01-Class-Content/01-HTML-Git-CSS/02-Homework/Main/index.html) from Unit 01. 
+  [GitHub Docs on creating a repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 
-* Let students know that this will be their first homework assignment. It will be due this week. They will get some in class time to begin homework during class on occasion.
+  [GitHub Docs on cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-### Lesson Plan Feedback
+  ---
+
+  ## 💡 Hints
+
+  What command can you use to list the contents of a directory? How can you use this command to check your work?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the `git fetch` and `git merge` commands? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 11. Instructor Review: Git (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with Git? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `git clone`
+
+  * ✔️ `git add`
+
+  * ✔️ `git commit`
+
+  * ✔️ `git push`
+
+* Open `04-Stu_Git/README.md` in your IDE and explain the following: 
+
+  * We read the user story to identify the user goal. The user, a developer, wants to create a new GitHub repository and add an HTML file to it:
+
+    ```md
+    As a developer, I want to create a new GitHub repository and add an HTML file to it.
+    ```
+
+  * We read the acceptance criteria to determine the conditions that must be met for the user's goal to be satisfied and the solution accepted:
+
+    ```md
+    * It's done when I have created a new repository named `first-day-repo` using the GitHub user interface.
+
+    * It's done when I have cloned the `first-day-repo` to my local machine.
+
+    * It's done when I have used command-line commands to navigate into the `first-day-repo` directory.
+
+    * It's done when I have used command-line commands to create an `index.html` file.
+
+    * It's done when I add and commit my changes using Git commands.
+
+    * It's done when I push the changes to the remote repository. 
+    ```
+  
+  * The solution is a step-by-step plan that satisfies the user's goal and ensures that the conditions set out in the acceptance criteria are met.
+
+* Open [GitHub](https://github.com/) in your browser and demonstrate the following: 
+
+  * Click the New button to create a new repository.
+
+  * Name the new repository `first-day-repo`.
+
+  * Select the "Add a README file" option to add a `README.md` file to the new repository that we are creating. 
+
+  * Click the Create Repository button.
+
+  * Click the Code button and select the HTTPS or SSH option to copy the URL.
+
+* Open the CLI and demonstrate the following:
+
+  *  We use the terminal command `cd` to navigate to the directory where we want the repository located: 
+
+      ```bash
+      cd Bootcamp
+      ```
+
+  * 🔑 We use the Git command `git clone`, followed by the URL copied from GitHub, to clone the repository to the machine: 
+
+    ```bash
+    git clone <the HTTPS or SSH URL ending in .git>
+    ```
+
+  * We navigate into the new directory using `cd`:
+
+    ```bash
+    cd first-day-repo
+    ```
+
+  *  We add an HTML file to the repository using `touch`:
+
+      ```bash
+      touch index.html
+      ```
+
+  * We use `git status` to check the status of the files:
+
+    ```bash
+    git status
+    ```
+
+  * 🔑 We use `git add` to add the changes:
+
+    ```bash
+    git add .
+    ```
+
+  * We use `git status` again to check that the files are being tracked.
+
+  * 🔑 To commit the changes, we use `git commit -m` and add a commit message: 
+
+    ```bash
+    git commit -m "First commit"
+    ```
+
+  * 🔑 To push the changes back up to the repository that we created on GitHub, we use `git push`:
+
+    ```bash
+    git push origin main
+    ```
+
+  * To confirm that we are done, we check that each part of the acceptance criteria is satisfied and that the user's goal is clearly met. When we open [GitHub](https://github.com/), we see a repository called `first-day-repository`. In that repository is a new file called `index.html`. Success!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are the steps to create a repository using GitHub and then create a local copy?
+
+  * 🙋 We create the repository in GitHub and then clone it to the local machine using `git clone` so thatt we get not only the files but also a copy of the history. This will ensure that this local copy is a functional Git repository.
+
+  * ☝️ Why is it a good habit to use `git status` frequently?
+
+  * 🙋 When you are dealing with large numbers of file, it is easy to lose track of which files are ready to be committed and which are not. Using `git status` will not only show you which files are being tracked but also which branch you're on. You can then choose which files to stage for commit.
+
+  * ☝️ How do we update the repository in GitHub with the local version?
+
+  * 🙋 We use `git add` to stage the changes and `git commit` to commit the changes. To push the changes to the remote repository, we use `git push`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [GitHub Docs on creating a repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) and the [GitHub Docs on cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 12. Instructor Do: Stoke Curiosity (10 min)
+
+* Welcome students to class.
+
+* Inform the students that today they will take their first steps in web development by learning to use HTML and CSS to structure and style a webpage&mdash;but first, they will learn about an important tool of communication: a readme file. 
+
+* Explain that developers must be able to clearly communicate information in a readable format. One tool that we can use for this purpose is a **readme** file.
+
+* Note that each activity in this course provides a readme file that includes a user story, acceptance criteria, and information about the task. The readme file is the first place students should look when starting an activity. 
+
+* In addition, we can use a readme file to provide other developers with information about the completed solution and the problem that it solves.
+
+* Emphasize that for each project in this course, students will be required to write a readme that describes why they built the project, what problem it solves, and what they learned in developing a solution.
+
+* A readme file can also help convey how the user goal identified in the user story and the acceptance criteria are clearly met by your solution.
+
+* Open the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) in your browser and demonstrate the following:
+
+  * While there is not a single right approach, this template provides an excellent guide to the information typically conveyed in a project readme. 
+
+  * Note that this resource is available in this week's Homework folder. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use a readme file to communicate with other developers? 
+
+  * 🙋 A readme file conveys key information to other developers. For example, for each activity in this course, a readme file provides the information needed to complete the task. Project readme files explain why the project was built, the problem that was solved, and what was learned in the process.
+
+* Transition to the next activity by reminding the students that each day's activities&mdash;including the readme file with information on how to complete the task&mdash;are found in the class repository and should be downloaded by performing a `git pull` before class.  
+
+### 13. Instructor Demo: HTML (5 min) 
+
+* Open `05-Ins_HTML/index.html` in your browser and demonstrate the following:
+
+  * 🔑 HTML is a markup language that tells web browsers how to structure your page.
+
+  * 🔑 HTML comprises various elements that provide structure and content. 
+
+  * Some common HTML elements include section headings, images, paragraphs, unordered lists, and links.
+
+* Open `05-Ins_HTML/index.html` in your IDE and demonstrate the following:
+
+  * We start every HTML document with a **document declaration**, which tells the browser that the content should be read as HTML:
+
+    ```html
+    <!DOCTYPE html>
+    ```
+
+  * 🔑 We begin and end an HTML document with an `<HTML>` element. 
+
+  * 🔑 The `<head>` element contains metadata. The content inside the `<head>` element is not displayed on the page:
+
+    ```html
+    <head>
+      <meta charset="UTF-8">
+      <title>Hello HTML!</title>
+    </head>
+    ```
+
+  * 🔑 The `<body>` element contains all the content visible on the page.
+
+  * Inside the `<body>` element, we define the different parts of a webpage using semantic elements like `<header>` and `<section>`. Semantic elements help make the code more readable and accessible. 
+
+  * HTML also includes a number of elements to display content like text and images on the page. 
+
+  * Section heading elements are used for headings or subheadings on your page. The `<h1>` element is reserved for the main title or heading, and the `<h6>` is used for the lowest-level subheading: 
+
+    ```html
+    <h1>Hello World!</h1>
+    <h2>Hello World!</h2>
+    <h3>Hello World!</h3>
+    <h4>Hello World!</h4>
+    <h5>Hello World!</h5>
+    <h6>Hello World!</h6>
+    ```
+
+  * We use an `<img>` element for images. Inside the `<img>` element, we specify a path to the image:
+
+    ```html
+    <img src="https://placehold.it/200x200" alt="placeholder image"/>
+    ```
+
+  * We use a paragraph element (`<p>`) to contain text:
+
+    ```html
+    <p>This is a paragraph.</p>
+    ```
+
+  * A `<strong>` element marks important content. Text inside the `<strong>` element will be bolded:
+
+    ```html
+    <strong>BOLDED TEXT</strong>.
+    ```
+
+  * The `<ul>` element represents an unordered list of items:
+
+    ```html
+    <ul>
+        <li>This is list item one</li>
+        <li>This is list item two</li>
+        <li>This is list item three</li>
+    </ul>
+    ```
+
+  * The `<a>` element defines a link. Inside the `<a>` element, we specify the link's destination:
+
+    ```html
+    <a href="https://www.google.com">This is a link to Google.com</a>
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we build a webpage using HTML elements?
+
+  * 🙋 HTML elements are the building blocks of a webpage. They define the different parts of the page and provide structure as well as visible content. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_HTML/README.md`.
+
+### 14. Student Do: HTML (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu_HTML/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create a Webpage Using HTML 
+
+  Work with a partner to implement the following user story:
+
+  * As a student, I want to create a biography page that includes an image, a paragraph about me, and my contact information.
+
+  ## Acceptance Criteria
+
+  * It's done when the main header reads "Student Bio". 
+
+  * It's done when there is a section that includes a name, an image, and a paragraph.
+
+  * It's done when there is a second section that includes a subheader labeled "Contact Info" and a list that includes links to my email, GitHub, and portfolio. 
+
+  * It's done when the finished page matches the mockup. 
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Webpage titled "Student Bio" features "Your Name" heading, a spot for an image and bio, and a "Contact Info" section.](./assets/image-1.png)
+
+  You can use this [placeholder image](https://placehold.it/200x200).
+
+  ---
+
+  ## 💡 Hints
+
+  How can you use header elements to define the most important heading and the subheaders? How will using different header elements impact the size of the text?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the advantages of using semantic elements in your HTML? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: HTML (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with HTML? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `<body>`
+
+  * ✔️ `<header>`
+
+  * ✔️ `<h1>` through `<h6>`
+
+  * ✔️ `<img>`
+
+  * ✔️ `<ul>`
+
+  * ✔️ `<a>`
+
+* Open `06-Stu_HTML/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 We place all the visible content inside the `<body>` element. 
+
+  * 🔑 We use a semantic `<header>` element to define the area of the website that is used as the header. While not visible on their own, **semantic** elements make the structure of your webpage easily readable by the browser, as well as accessible. 
+
+  * 🔑 We add the content of the main heading in an `<h1>` element:
+
+    ```html
+    <header>
+      <h1>Student Bio</h1>
+    </header> 
+    ```
+
+  * We use the semantic element `<section>` to define the two sections of the webpage.
+
+  * Within each section, we will add heading elements. For the purpose of accessibility, it is important not to skip heading levels&mdash;so we will use `<h2>` for the section headings because we used `<h1>` for the main heading:
+
+    ```html
+    <h2>Your Name</h2>
+    ```
+
+  * 🔑 To add an image to the bio section, we will include an `<img>` element, using `src` to specify the path to the image:
+
+    ```html
+    <img src="https://placehold.it/200x200" alt="Your Name">
+    ```
+
+  * We can use a `<p>` element to add a paragraph of text to the webpage:
+
+    ```html
+    <p>Write a short paragraph or two about yourself</p>
+    ```
+
+  * 🔑 The `<ul>` element allows us to create an unordered list: 
+  
+    ```html
+    <ul>
+      <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
+      <li><strong>Github:</strong> <a href="#">sampleName</a></li>
+      <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+    </ul>
+    ```
+
+  * 🔑 We can use the `<a>` element to add a link to the list items in the preceding example. Inside this element, we specify the link's destination:
+
+    ```html
+    <a href="#">someplace@gmail.com</a>
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we add structure to a webpage?
+
+  * 🙋 We use semantic elements to define different areas of the webpage.
+
+  * ☝️ How do we add content to a webpage?
+
+  * 🙋 We use HTML elements to add content like images, headings, and lists to the page. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) and the [MDN Web Docs on HTML as a good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Attributes (5 min) 
+
+* Open `07-Ins_Attributes/index.html` in your browser and demonstrate the following:
+
+  * We use **attributes** to configure or adjust the behavior of specific elements.
+
+  * Attributes are commonly used with link and image elements to provide important information.
+
+  * We also use **global attributes** to identify elements for styling.
+
+* Open `07-Ins_Attributes/index.html` in your IDE and demonstrate the following:
+
+  * We include the `src` attribute with an image element to specify the image's absolute or relative path:
+
+    ```html
+    <img src="https://placehold.it/200x200" alt="placeholder image"/>
+    <img src="./assets/images/sample.jpg" alt="placeholder image"/>
+    ```
+
+  * Each image should also include an `alt` attribute. An `alt` attribute provides text that describes the image. This attribute makes your image accessible to users who cannot see it or use assistive technologies to browse the web:
+
+    ```html
+    <img src="https://placehold.it/200x200" alt="placeholder image"/>
+    ```
+
+  * Within an `<a>` element, we use an `href` attribute to specify the URL of the page we want to link to:
+
+    ```html
+    <a href="https://www.google.com">This is a link to Google.com</a>
+    ```
+ 
+  * Now let's set up the HTML document to use CSS so that we can apply the rules written in the style sheet to the webpage. A **style sheet** is a list of CSS properties that defines how HTML elements will be displayed. 
+
+  * We will add a `<link>` element to connect the HTML page to an external CSS style sheet. Within that element, the `href` attribute specifies the relative path, and the `rel` attribute describes the relationship: 
+
+    ```html
+    <link rel="stylesheet" href="./assets/css/style.css">
+    ```
+
+  * Global attributes can be used on any element. They are often used to identify elements and set up the HTML elements for styling.
+
+  * A `class` attribute can be used to select and style one or more elements:
+
+    ```html
+    <section class="section">
+    ```
+
+  * The `id` attribute is used to select a single element for styling: 
+
+    ```html
+    <p id="paragraph-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we add attributes to HTML elements?
+
+  * 🙋 We add attributes to elements to provide additional information, identify the elements, and configure or adjust the behavior of specific elements.
+  
+  * ☝️ How do we use attributes to set up the HTML page so that we can apply CSS styling?
+
+  * 🙋 We use the `<link>` element with an `href` attribute to connect the CSS to the HTML page. We use the `id` and `class` attributes to identify elements for styling.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Attributes/README.md`.
+
+### 17. Student Do: Attributes (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Attributes/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Add Global Attributes to HTML Elements for Use With CSS
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to add global attributes to my HTML elements so that I can add styling with CSS.
+
+  ## Acceptance Criteria
+
+  * It's done when a single attribute named `section` is added to all semantic `<section>` HTML elements.
+
+  * It's done when the email list item is given a unique attribute named `email`.
+
+  * It's done when the GitHub list item is given a unique attribute named `github`.
+
+  * It's done when the portfolio list item is given a unique attribute named `portfolio`.
+
+  * It's done when the finished page matches the mockup. 
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The portfolio page features headings in blue text, rounded corners on the image placeholder, and various background colors.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Why is it important that each global attribute is given a unique name? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other attributes can be used with HTML elements?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: Attributes (15 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with attributes? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `class`
+
+  * ✔️  `id` 
+
+  * ✔️  `href` 
+  
+* Open `08-Stu_Attributes/Solved/index.html` in your browser and explain the following: 
+
+  * We add global attributes to the HTML elements to allow them to be styled with CSS.
+
+* Open `08-Stu_Attributes/Solved/index.html` in your IDE and explain the following: 
+
+  * 🔑 We use a global `class` attribute to add a `section` identifier to all sections:
+
+    ```html
+    <section class="section">
+    ```
+
+  * 🔑 We use a global `id` attribute to add a unique identifier to the email list item:
+
+    ```html
+    <li id="email"><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
+    ```
+
+  * We use a global `id` attribute to add a unique identifier to the GitHub list item:
+
+    ```html
+    <li id="github"><strong>GitHub:</strong> <a href="#">sampleName</a></li>
+    ```
+
+  * We use a global `id` attribute to add a unique identifier to the portfolio list item:
+
+    ```html
+    <li id="portfolio"><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+    ```
+
+  * 🔑 We can link to the external style sheet using a `<link>` element in the `<head>`. The `href` attribute specifies the relative path. Without this link and the `href` attribute pointing to the right path, the styles will not be displayed! 
+
+    ```html
+    <link rel="stylesheet" href="./assets/css/style.css">
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use global attributes to set up the HTML elements to connect with CSS?
+
+  * 🙋 We use `class` and `id` attributes to identify elements that we want to style.
+
+  * ☝️ How do we use the `href` attribute with a `<link>` element to connect the CSS style sheet?
+
+  * 🙋 We use the `href` attribute to specify the relative path to the style sheet. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes), and stay for office hours to ask for help.
+
+Answer any questions before ending the class.
+
+### 19. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,80 +1,114 @@
-# Unit 01: Introduction to Web Development, HTML, CSS, and Git
+# Unit 01: HTML, CSS, and Git
 
 ## Overview
 
-Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases. 
+At the heart of every website is **HTML**, or **Hypertext Markup Language**. As the standard language used to build the structure of a webpage, HTML allows us to define elements like paragraphs, images, links, forms, and more.
 
-You have several choices for the programming language that you use for building and deploying full-stack web applications, including JavaScript, PHP, and Python. This course focuses on JavaScript. We’ll use it to program both the browser (aka the client) and the server.
+**Cascading Style Sheets**, or **CSS**, is used to add styling to the elements created with HTML. CSS determines how elements are presented on the page, including font, color, size, positioning of elements, and even animation. 
 
-Regardless of the programming language you use, two tools that every developer uses on a daily basis are the **command line** and **version control**. The command line allows developers to quickly and efficiently interface with their operating system and software. To begin, we'll use the command line to navigate the file tree and create directories and files. Later, we'll use it to install software dependencies and run servers, among other tasks. Version control is an approach to managing changes in files without the need to make multiple copies of those files. We'll learn **Git**, which is the most popular version control system. Git integrates with **GitHub.com**, a site for developers to host and share their code. We will deploy our first website using **GitHub Pages**.
-
-The first, and perhaps most important, file we'll create is `index.html`, which is the default entry point for any web application. All of our subsequent work will build on this initial starting point. The file suffix `.html` refers to **HTML**, or **Hypertext Markup Language**. HTML allows us to format webpages and text in a similar way to how a word processor formats documents and the text inside them. However, the biggest difference between HTML and a word processor is the ability to link between any document that's on the web, anywhere in the world. This is the "hypertext" in HTML.
-
-Though HTML is enough to create a simple website, it falls a bit short in the design department. So we'll  add color, fonts, and element positioning by adding **CSS** (**Cascading Style Sheets**) to our HTML files to make them visually dynamic. In the next unit, we'll learn CSS frameworks that can expedite our development process.
-
-Subsequent units will build on this foundation of HTML, CSS, and version control as we add JavaScript, servers, and databases to our stack to build interactive web applications.
+In this unit, you'll learn how to build webpages that use HTML and CSS to define the structure and style. You'll also be introduced to Git, a version control system that stores your code and its history, as well as separate versions of the code. As the building blocks of web development, these are essential skills and tools that you'll use throughout your career. 
 
 ## Key Topics
 
 The following topics will be covered in this unit:
-* Command-line basics
-  * Navigating the file tree
-  * Creating, copying, and removing files and directories
-* HTML
-  * Semantic elements, tags
-  * Attributes
-  * Best practices: indentation, file naming conventions and directory structure
-* CSS
-  * Order of importance
-  * Class vs. id
-  * Selectors
-  * Typography
-  * Box model
-  * Positioning and floats
-  * Color: hexadecimal, rgb and named
-* Git & Git workflow
-  * git clone
-  * git add
-  * git commit
-  * git push
-  * git pull
-* GitHub
-  * Create a repository
-  * Deploy to personal pages
 
-## Comprehension Check
+* [Basic built-in terminal commands](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Basic_built-in_terminal_commands)
 
-You will be employer-ready if you can answer the following questions:
+* [Version control](https://www.atlassian.com/git)
 
-1. What does it mean to be a full-stack web developer?
-2. What is the relationship between HTML and CSS?
-3. What is Git workflow?
+* [GitHub](https://guides.github.com/activities/hello-world/)
+
+* [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+  * [Attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute)
+
+* [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+  * [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+
+  * [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+
+  * [CSS selector](https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector)
+
+  * [Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+  * [The box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+
+  * [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ## Learning Objectives
 
-You will be employer-competitive if you are able to:
+You will be employer-ready if you are able to:
 
-* Build and style static webpages with semantic HTML and CSS
-* Implement best practices and standards when structuring HTML files using nested elements, indentation, comments, and line breaks
-* Implement CSS styling via class, id and element selectors using external stylesheets, inline styles and embedded style tags
-* Explain the "cascading" in Cascading Style Sheets and implement the box model for HTML elements
-* Explain the value of version control and use Git workflow to initialize projects, track changes, and host via remote server
-* Perform common commands via the command line to interface with the operating system, such as navigating the file tree and creating and deleting files and directories
-* Execute live deployment using GitHub Pages
+* Navigate your computer’s file system and create directories and files using command-line tools.
 
-## Homework: Code Refactor
+* Create and clone a repository, add and commit changes, and push and pull code using Git commands.
 
-Take the provided codebase and refactor it to make it accessible. Don't forget the cardinal rule when working with someone elses code:
-"Always leave the code you are editing a little cleaner than you found it"
+* Build the structure of a webpage using HTML elements.
 
-## Helpful Links
+* Add attributes to HTML elements to style the elements or adjust their behavior in various ways.
 
-* [Version Control](https://en.wikipedia.org/wiki/Version_control)
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Pro Git](https://git-scm.com/book/en/v2)
-* [Dev Docs](https://devdocs.io/)
+* Style webpages using CSS's `color` and `font` properties.
 
+* Identify the box model and how it relates to an element's layout and design. 
 
-- - -
+* Alter the layout of webpages using CSS's `display` and `font` properties.
+
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
+
+* 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 01 Technical Interview Questions](https://docs.google.com/forms/d/e/1FAIpQLSc7uLZOO2tysVZT6OBM9nJrbxR0qs2ZDAPrathAw3SkYgNhmA/viewform)
+
+## Homework
+
+Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand the content of a webpage.
+
+For this week's homework, you will use your new HTML and CSS skills to ensure that an existing site is accessible, according to the provided guidelines. 
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
+
+## Heads-Up
+
+In the next unit, you'll build on the CSS and HTML fundamentals covered in this unit as you learn about responsive web layouts and advanced CSS.
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
+
+  * 📖 [Git Guide: Set Up a Local Repository](./01-Activities/21-Evr_Git-Guide/README.md) 
+
+  * 📹 [Git Guide Video: Set Up a Local Repository](https://2u-20.wistia.com/medias/gwjkxxacax)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
+
+  * 📖 [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+### General
+
+Refer to these resources for additional information about topics covered in this unit.
+
+  * For instructions on how to add an SSH key to GitLab, refer to the 📖 [GitLab Docs on "Add an SSH key to your GitLab account"](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account). **Important**: The SSH key you added for **GitHub** uses RSA. As you follow these instructions, in Step 1, it's very important to replace `ED25519` with `rsa`.
+
+---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
