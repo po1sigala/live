@@ -100,9 +100,9 @@ Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
+  * 📖 [Getting Started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
 
-  * 📖 Blog Post: [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+  * 📖 [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 ### General
 
