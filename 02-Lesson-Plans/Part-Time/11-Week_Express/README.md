@@ -14,6 +14,8 @@ This unit, there is a larger focus on the concept of server-side code. Make sure
 
 * In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Important/heroku-install.md) on their computers.
 
+* Also in this unit, students are going to use [Insomnia Core](https://insomnia.rest/), which is a powerful REST API client that allows us to test APIs and make client-side server requests without having to use a browser. Please have it installed before class and be prepared to help students with the download.
+
 * In the next unit, students will start using MySQL. Be sure to send out the instructions for installing both the MySQL Server and Workbench on [Mac](../../../01-Class-Content/11-express/04-Important/mysql-mac-guide.md) and [Windows](../../../01-Class-Content/11-express/04-Important/mysql-windows-guide.md) computers by the end of this unit to minimize install time next unit.
 
 ## Career Connection
