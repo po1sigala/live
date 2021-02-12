@@ -16,7 +16,7 @@ We will also learn the HTTP POST request method to submit data to our server.
 
 * Routing
 
-* Postman
+* Insomnia Core
 
 * HTTP POST requests
 
@@ -62,4 +62,4 @@ You will be employer-competitive if you are able to:
 
 * [Express.js](https://expressjs.com/)
 
-* [Postman](https://www.getpostman.com/)
+* [Insomnia Core](https://insomnia.rest/)
