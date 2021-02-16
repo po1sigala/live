@@ -79,9 +79,9 @@
 
 1. Run the following commands in terminal:
 
-2. `brew tap mongodb/brew`
+   1. `brew tap mongodb/brew`
 
-3. `brew install mongodb-community`
+   2. `brew install mongodb-community`
 
 - - -
 
