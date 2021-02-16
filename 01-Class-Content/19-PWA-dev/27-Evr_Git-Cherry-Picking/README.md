@@ -92,7 +92,7 @@ git add .
 git commit -m "Remove random message feature"
 ```
 
-9. Let's take note of our commit that added the feature so that we can reference it later. To do this run:
+9. Let's take note of our commit that added the feature so that we can reference it later. To do this, run the following command:
 
 ```sh
 git log
