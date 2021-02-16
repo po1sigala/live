@@ -111,8 +111,7 @@
 
 _The commands in #2 create a directory with administrative privileges, make your account the owner of that directory (instead of the "root" account owning it), and add write permissions to that directory so the apps you write are able to update your database_
 
-
-**Instructions for macOS Catalina or later:**
+### Instructions for macOS Catalina or Later
 
 1. **IMPORTANT**: You need to create a data directory for your MongoDB installation, or it will not work. 
 
@@ -133,4 +132,3 @@ _The commands in #2 create a directory with administrative privileges, make your
 5. If you’re encountering issues starting MongoDB, please ask for assistance from one of the TAs or the instructor.
 
 _If you do not want to use homebrew, you can alternatively follow these instructions: <https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-os-x/>. However, installing MongoDB without homebrew can be a bit of a headache. Installing homebrew on your mac will make your life as a web developer a ton easier._
-
