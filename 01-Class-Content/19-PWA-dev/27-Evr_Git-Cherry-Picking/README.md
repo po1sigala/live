@@ -102,7 +102,7 @@ You will see a list of recent commits. We want the one where the feature was add
 
 ![Git Log](./Images/01-log.png)
 
-To exit the git log, press and hold shift and `ZZ`. You can also exit `vim` by typing `:q`.
+To exit the git log, press and hold shift and `ZZ` or by typing `:q`.
 
 * To review, we create a repository and a feature branch, `feature/notifications`, that we imagined could be one of our co-workers or teammates. We added a feature to `app.js` and committed that change to the `feature/notifications` branch and then later removed that feature and committed to `feature/notifications`.
 
