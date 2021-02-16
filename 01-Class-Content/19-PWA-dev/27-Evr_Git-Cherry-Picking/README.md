@@ -16,7 +16,7 @@ cd git-cherry-pick
 git init
 ```
 
-2. After we have created our repo, lets add some files to it. Create an `app.js`, `index.html` and also a `README.md` file. After that let's commit everything as our initial commit.
+2. After we have created our repo, let's add some files to it. Create `app.js`, `index.html` and `README.md` files. After that, let's commit everything as our initial commit.
 
 ```
 touch app.js index.html README.md
@@ -136,4 +136,3 @@ git cherry-pick f18756a -n
 ## Conclusion
 
 Today we created a small repo and pretended that we were collaborating with a coworker or teammate. We used git `cherry-pick` to bring in a single commit to our branch without needing to pull in the entire branch. This is a super useful feature of git and it just one more tool to add to your git toolbox!
-
