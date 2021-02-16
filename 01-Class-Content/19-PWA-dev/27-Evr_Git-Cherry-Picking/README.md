@@ -47,7 +47,7 @@ git checkout -b feature/notifications
 </html>
 ```
 
-5. Inside our `app.js` file, lets add some changes to turn our alert into something a little more complex. Copy and paste the code into your `app.js` file. Every time the `index.html` page has been visited, we should be greeted with a random message in an alert window.
+5. Inside our `app.js` file, lets add some changes to turn our alert into something a little more complex. Copy and paste the following code into your `app.js` file. Every time the `index.html` page has been visited, we should be greeted with a random message in an alert window.
 
 ```js
 const randomMessage = (notifications) =>
