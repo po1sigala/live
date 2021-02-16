@@ -111,7 +111,7 @@
 
 _The commands in #2 create a directory with administrative privileges, make your account the owner of that directory (instead of the "root" account owning it), and add write permissions to that directory so the apps you write are able to update your database_
 
-### Instructions for macOS Catalina or Later
+### Instructions for macOS Catalina(10.5) or Later
 
 1. **IMPORTANT**: You need to create a data directory for your MongoDB installation, or it will not work. 
 
