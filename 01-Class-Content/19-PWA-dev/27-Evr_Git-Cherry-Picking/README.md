@@ -1,14 +1,14 @@
 ## Git Cherry-Pick
 
-As developers, you will find that some of the code that you are working on may have already been fixed or completed in another commit by another developer. However, if that code hasn't been merged yet, it can put you as the developer in a tricky situation. How does one get the code that another developer made into their branch without first having that code merged into the main branch. Enter, git cherry-pick.
+As developers, you will find that some of the code that you are working on may have already been fixed or completed in another commit by another developer. However, if that code hasn't been merged yet, it can put you as the developer in a tricky situation. How does one get the code that another developer made into their own branch without merging their entire branch. Enter, git cherry-pick.
 
-This feature is especially useful when you want to bring in a specific commit but not their whole branch. Git cherry-pick allows you to pull in one or multiple commits into your branch if you desire. It might be kind of hard to imagine a situation that this would be useful off the top of your head, so we are going to walk through one example together!
+Git cherry-pick allows you to pull in one or multiple commits into your branch if you desire. It might be kind of hard to imagine a situation that this would be useful so we are going to walk through one example together!
 
 * For reference, check out the [Documentation on Git cherry-pick](https://git-scm.com/docs/git-cherry-pick)
 
 ## Create an Example Repo
 
-1. Inside this directory, or another directory of your choosing create a new folder called `git-cherry-pick`. Change into that directory and initialize it as a git repository.
+1. Inside this directory, or another directory of your choosing, create a new folder called `git-cherry-pick`. Change into that directory and initialize it as a git repository.
 
 ```sh
 mkdir git-cherry-pick
@@ -16,7 +16,7 @@ cd git-cherry-pick
 git init
 ```
 
-2. After we have created our repo, lets add some files to it. Create an `app.js`, `index.html` and also a `README.md` file. After that let's commit everything as our initial commit
+2. After we have created our repo, lets add some files to it. Create an `app.js`, `index.html` and also a `README.md` file. After that let's commit everything as our initial commit.
 
 ```
 touch app.js index.html README.md
@@ -79,7 +79,7 @@ git add .
 git commit -m "Adds random message feature"
 ```
 
-7. Let's say that our co-worker decided to scrap that feature entirely and change it to a simple hello world message instead. Let's make a commit that would emulate that change. Highlight everything inside `app.js` and delete it. Change it to simply say `console.log('hello world')`
+7. Let's say that our co-worker decided to scrap that feature entirely and change it to a simple hello world message instead. Let's make a commit that would emulate that change. Highlight everything inside `app.js` and delete it. Change it to simply say `console.log('hello world')`.
 
 ```js
 console.log('hello world!')
@@ -98,13 +98,13 @@ git commit -m "Remove random message feature"
 git log
 ```
 
-You will see a list of recent commits. We want the one where the feature was added. Highlight the hash for that commit and paste it somewhere for later
+You will see a list of recent commits. We want the one where the feature was added. Highlight the hash for that commit and paste it somewhere for later.
 
 ![Git Log](./Images/01-log.png)
 
 To exit the git log, press `ZZ`
 
-* To review, we create a repository and a feature branch that we imagined could be one of our co-workers or teammates. We added a feature to `app.js` and committed that change to the `feat/b` branch and then later removed that feature and committed to `feat/b`.
+* To review, we create a repository and a feature branch, `feat/b`, that we imagined could be one of our co-workers or teammates. We added a feature to `app.js` and committed that change to the `feat/b` branch and then later removed that feature and committed to `feat/b`.
 
 * Now, let's imagine that we want to use that feature in our own branch, but in such a way that doesn't bring in all the changes from that `feat/b` branch. Now we get to use the wonderful `git cherry-pick` command!
 
@@ -128,6 +128,10 @@ git cherry-pick <hash>
 Thats about it! If you run `git --log` again you can see that the commit has been applied to your `feat/a` branch with a new hash.
 
 It is possible to stage the changes and not commit right away if you so choose. This can be accomplished with the `-n` flag. An example use case for this would be when you want to edit something before committing the cherry pick.
+
+```sh
+git cherry-pick f18756a -n
+```
 
 ## Conclusion
 
