@@ -18,7 +18,7 @@ git init
 
 2. After we have created our repo, let's add some files to it. Create `app.js`, `index.html` and `README.md` files. After that, let's commit everything as our initial commit.
 
-```
+```sh
 touch app.js index.html README.md
 git add .
 git commit -m "Initial commit"
