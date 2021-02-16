@@ -127,10 +127,11 @@ _The commands in #2 create a directory with administrative privileges, make your
 
    ```bash
    brew services start mongodb-community
+
    brew services list
    ```
 
-4. The first command started MongoDB as a background service. The second command checks to see if MongoDB is running. If MongoDB is running, the status should appear as `started` in the log.
+4. The first command started MongoDB as a background service. It will start MongoDB automatically when you start your computer. The second command checks to see if MongoDB is running. If MongoDB is running, the status should appear as `started` in the log.
 
 5. If you’re encountering issues starting MongoDB, please ask for assistance from one of the TAs or the instructor.
 
