@@ -24,13 +24,13 @@ git add .
 git commit -m "Initial commit"
 ```
 
-3. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if the our teammate is working on a new feature. Give it a name of `feat/b`.
+3. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if the our teammate is working on a new feature. Give it a name of `feature/notifications`.
 
 ```
-git checkout -b feat/b
+git checkout -b feature/notifications
 ```
 
-4. Now that our co-worker has a branch of their own, lets add some code to make our app functional. Inside the `index.html`, type the word "doc" and choose the emmet snippet to create a new HTML document. Make sure you wire up the `app.js` inside the document as well.
+4. Now that our co-worker has a branch of their own, lets add some code to make our app functional. Inside the `index.html`, copy and paste the snippet below and save the `index.html`. Make sure you link your app.js file inside of your HTML file as well.
 
 ```html
 <html lang="en">
@@ -102,30 +102,30 @@ You will see a list of recent commits. We want the one where the feature was add
 
 ![Git Log](./Images/01-log.png)
 
-To exit the git log, press `ZZ`
+To exit the git log, press and hold shift and `ZZ`. You can also exit `vim` by typing `:q`.
 
-* To review, we create a repository and a feature branch, `feat/b`, that we imagined could be one of our co-workers or teammates. We added a feature to `app.js` and committed that change to the `feat/b` branch and then later removed that feature and committed to `feat/b`.
+* To review, we create a repository and a feature branch, `feature/notifications`, that we imagined could be one of our co-workers or teammates. We added a feature to `app.js` and committed that change to the `feature/notifications` branch and then later removed that feature and committed to `feature/notifications`.
 
-* Now, let's imagine that we want to use that feature in our own branch, but in such a way that doesn't bring in all the changes from that `feat/b` branch. Now we get to use the wonderful `git cherry-pick` command!
+* Now, let's imagine that we want to use that feature in our own branch, but in such a way that doesn't bring in all the changes from that `feature/notifications` branch. Now we get to use the wonderful `git cherry-pick` command!
 
 ## Using Git Cherry Pick
 
 Let's bring in a specific commit to our own feature branch!
 
-1. Check out the previous branch and create your own `feat/a` branch. *Tip*: You can checkout the previous branch by simply putting a dash in place of the branch name
+1. Check out the previous branch and create your own `feature/mybranch` branch. *Tip*: You can checkout the previous branch by simply putting a dash in place of the branch name
 
 ```sh
 git checkout -
-git checkout -b feat/a
+git checkout -b feature/mybranch
 ```
 
-2. Now that we are checked out to our own feature branch, let's cherry pick the commit from branch `feat/b` and pull it into our branch. To do this we are finally going to make use of the `git cherry-pick` command.
+2. Now that we are checked out to our own feature branch, let's cherry pick the commit from branch `feature/notifications` and pull it into our branch. To do this we are finally going to make use of the `git cherry-pick` command. **Note**: You can paste the whole hash string, or provide just the first seven characters. (For example: `f18756ac7418fe09f75f4d02ab42af76c4c0f7af` or `f18756a`)
 
 ```sh
 git cherry-pick <hash>
 ```
 
-Thats about it! If you run `git --log` again you can see that the commit has been applied to your `feat/a` branch with a new hash.
+Thats about it! If you run `git --log` again you can see that the commit has been applied to your `feature/mybranch` branch with a new hash.
 
 It is possible to stage the changes and not commit right away if you so choose. This can be accomplished with the `-n` flag. An example use case for this would be when you want to edit something before committing the cherry pick.
 
