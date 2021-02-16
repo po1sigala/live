@@ -117,9 +117,9 @@ _The commands in #2 create a directory with administrative privileges, make your
 
 2. Use the following exact commands to create a data directory and set permissions:
 
-   1. `sudo mkdir -p /System/Volumes/Data/data/db`
-
-   2. ``sudo chown -R `id -un` /System/Volumes/Data/data/db``
+   ```sh
+   sudo mkdir -p /System/Volumes/Data/data/db
+   sudo chown -R id -un /System/Volumes/Data/data/db
 
 3. With the new directory made, and permissions granted, you're ready to run MongoDB. Enter the following commands into your terminal window:
 
