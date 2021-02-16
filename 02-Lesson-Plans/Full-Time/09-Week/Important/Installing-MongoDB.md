@@ -123,9 +123,8 @@ _The commands in #2 create a directory with administrative privileges, make your
 
 3. With the new directory made, and permissions granted, you're ready to run MongoDB. Enter the following commands into your terminal window:
 
-   1. `brew services start mongodb-community`
-
-   2. `brew services list` 
+   brew services start mongodb-community
+   brew services list
 
 4. The first command started MongoDB as a background service. The second command checks to see if MongoDB is running. If MongoDB is running, the status should appear as `started` in the log.
 
