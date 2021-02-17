@@ -77,7 +77,15 @@
 
 ## 3. Installing MongoDB on MacOS
 
-1. Run the following commands in the terminal:
+1. The following steps require Homebrew to be installed on your machine. Run `brew --version`  in your terminal window to check if Homebrew is installed. 
+
+2. If you see a version of Homebrew in your terminal, you can go on to the next steps. If the command is not found, run the following command in your terminal to install Homebrew: 
+
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. Once you have installed Homebrew on your machine, run the following commands in the terminal:
 
    1. `brew tap mongodb/brew`
 
