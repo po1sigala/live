@@ -24,7 +24,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-3. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if the our teammate is working on a new feature. Give it a name of `feature/notifications`.
+1. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if our teammate is working on a new feature. Give it a name of `feature/notifications`.
 
 ```
 git checkout -b feature/notifications
@@ -56,7 +56,7 @@ const randomMessage = (notifications) =>
 const notifications = [
   {
     person: 'Mac',
-    message: 'Hello! This is git-cherry pick!',
+    message: 'Hello! This is git-cherry-pick!',
   },
   {
     person: 'Deandre',
@@ -108,18 +108,18 @@ To exit the git log, press `q`.
 
 * Now, let's imagine that we want to use that feature in our own branch, but in such a way that doesn't bring in all the changes from that `feature/notifications` branch. Now we get to use the wonderful `git cherry-pick` command!
 
-## Using Git Cherry Pick
+## Using Git cherry-pick
 
 Let's bring in a specific commit to our own feature branch!
 
-1. Check out the previous branch and create your own `feature/mybranch` branch. *Tip*: You can checkout the previous branch by simply putting a dash in place of the branch name
+1. Check out the previous branch, `feature/notifications`, and create your own `feature/mybranch` branch. *Tip*: You can checkout the previous branch by simply putting a dash in place of the branch name
 
 ```sh
 git checkout -
 git checkout -b feature/mybranch
 ```
 
-2. Now that we are checked out to our own feature branch, let's cherry pick the commit from branch `feature/notifications` and pull it into our branch. To do this we are finally going to make use of the `git cherry-pick` command. **Note**: You can paste the whole hash string, or provide just the first seven characters. (For example: `f18756ac7418fe09f75f4d02ab42af76c4c0f7af` or `f18756a`)
+2. Now that we are checked out to our own feature branch, let's cherry-pick the commit from branch `feature/notifications` and pull it into our branch. To do this we are finally going to make use of the `git cherry-pick` command. **Note**: You can paste the whole hash string, or provide just the first seven characters. (For example: `42e6ce587933317cc3b9c4f465bc620547d65a32` or `42e6ce5`)
 
 ```sh
 git cherry-pick <hash>
@@ -127,7 +127,7 @@ git cherry-pick <hash>
 
 Thats about it! If you run `git --log` again you can see that the commit has been applied to your `feature/mybranch` branch with a new hash.
 
-It is possible to stage the changes and not commit right away if you so choose. This can be accomplished with the `-n` flag. An example use case for this would be when you want to edit something before committing the cherry pick.
+It is possible to stage the changes and not commit right away if you so choose. This can be accomplished with the `-n` flag. An example use case for this would be when you want to edit something before committing the cherry-pick.
 
 ```sh
 git cherry-pick f18756a -n
