@@ -112,10 +112,10 @@ To exit the git log, press `q`.
 
 Let's bring in a specific commit to our own feature branch!
 
-1. Check out the previous branch, `feature/notifications`, and create your own `feature/mybranch` branch. *Tip*: You can checkout the previous branch by simply putting a dash in place of the branch name
+1. While you are checked out to `feature/notifications`, create a new branch called `feature/mybranch`.
 
 ```sh
-git checkout -
+git checkout main
 git checkout -b feature/mybranch
 ```
 
