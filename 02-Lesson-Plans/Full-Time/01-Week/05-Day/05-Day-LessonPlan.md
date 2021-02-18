@@ -665,15 +665,15 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
-* Answer any questions before ending the class.
-
 ### 17. FLEX (40 min)
 
-* Feel free to use this time to review any topics covered so far or work on homework.
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Answer any questions before ending the class.
 
 ### 18. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -2,11 +2,17 @@
 
 ## Overview
 
-In today's class, students will implement media queries and flexbox to create a responsive web design.
+In today's class, students will wrap up Unit 01 by collaborating on a mini-project that reinforces HTML and CSS fundamentals. Then students will start Unit 02 by implementing media queries and flexbox to create a responsive web design.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activity `22-Stu_Mini-Project` in unit 1 and `01-Ins_Media-Query-Screen` through `10-Stu_Box-Styling` in unit 2.
+* In this lesson, students will complete the `22-Stu_Mini-Project` in Unit 01 and activities `01-Ins_Media-Query-Screen` through `08-Stu_Flexbox-Placement` in Unit 02.
+
+* Unit 01 mini-project builds on the fundamental HTML and CSS concepts that students learned this week. Encourage students to review previous activities for help with syntax and for further study.
+
+* Although students will work on individual projects for the mini-project, they will be put into groups. Encourage them to brainstorm together and share their learnings. This will be the first of many opportunities for students to collaborate and work in groups. 
+
+* This mini-project might also be some students' first experience building a development project from scratch. Remind them to break down the project into small, manageable steps and to let both the user story and acceptance criteria guide them to a step-by-step solution. 
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
@@ -18,19 +24,21 @@ In today's class, students will implement media queries and flexbox to create a 
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
 
-## Sample Class Video (Highly Recommended)
-
-* To view an example class lecture visit (Note video may not reflect latest lesson plan): [Class Video](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2e0037f-9a39-4942-83bb-3b555d224a64)
-
 ## Learning Objectives
 
 By the end of class, students will be able to do the following:
+
+* Implement basic media queries for screens.
 
 * Implement a CSS grid to accomplish a complex layout.
 
 * Implement a flexbox layout for a responsive web design.
 
 * Use flexbox justification and alignment properties for spacing.
+
+## Slide Deck
+
+* [Unit 2 Slide Deck](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -62,6 +70,8 @@ By the end of class, students will be able to do the following:
 ## Class Instruction
 
 ### 1. Instructor Demo: Mini Project (5 min) 
+
+* Welcome students to class.
 
 * Open `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
@@ -323,13 +333,13 @@ By the end of class, students will be able to do the following:
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on structuring the web with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML) and the [MDN Web Docs on learning to style HTML using CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS), and stay for office hours to ask for help.
 
-* Answer any questions before proceeding to introduce the homework
+* Answer any questions before proceeding to introduce the homework.
 
 ### 4. Instructor Demo: Introduce Homework (5 min)
 
 * Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
 
-  * During this week's homework, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
+  * For Unit 01's homework, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
 
   * Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand a webpage's content.
 
@@ -351,7 +361,7 @@ By the end of class, students will be able to do the following:
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
-* Answer any questions before proceeding to flex time
+* Answer any questions before proceeding to flex time.
 ### 5. FLEX (30 min)
 
 * This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
@@ -428,7 +438,7 @@ By the end of class, students will be able to do the following:
 
   * 🙋 Learning more advanced CSS with attractive layouts creates webpages that stand out. Responsive web design is crucial because users increasingly access webpages from devices with varying screen sizes, resolutions, and orientations. To maintain a good user experience, developers must be able to design webpages that are attractive and accessible from any platform.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before proceeding.
 
 ### 7. BREAK (30 min)
 
@@ -1143,4 +1153,4 @@ By the end of class, students will be able to do the following:
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

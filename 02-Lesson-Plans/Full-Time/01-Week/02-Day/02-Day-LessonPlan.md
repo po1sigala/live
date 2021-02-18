@@ -2,17 +2,22 @@
 
 ## Overview
 
-In today's class, students will be continue working with HTML and be introduced to CSS, the fundamental technologies used to structure and style a webpage. Students will also learn about web accessibility and semantic HTML tags.
+In today's class, students will be continue working with HTML and be introduced to CSS, the fundamental technologies used to structure and style a webpage. Students will also learn about web accessibility and semantic HTML tags. Towards the end of the lesson, students will delve further into CSS. Students will be introduced to the box model and learn how to customize layout using the `display` and `position` properties. 
 
 ## Instructor Notes
 
 * In this lesson, students will complete activities `09-Ins_CSS-color` through `21-Evr_Git-Guide`.
 
+* Be ready to view and edit CSS in Chrome DevTools. If you need a quick refresher, refer to the [Google documentation on viewing and changing CSS](https://developers.google.com/web/tools/chrome-devtools/css).
+
+
 * During activities, encourage students to refer to the provided user stories and acceptance criteria&mdash;as introduced in the previous class&mdash;to identify the user's goal and the conditions that must be met for the solution to be accepted. Doing so will help reinforce their computational thinking skills and set them up for success in future coding challenges. 
 
 * If students do not have the required tools set up on their local machines, refer them to office hours for assistance. A list of required tools and resources can be found in the [01.1 Lesson Plan](../01-Day/01-Day-LessonPlan.md). 
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) prior to class, so that you can handle student questions as they arise. 
+
+* Help students do a `git pull` of the class repository to have today's activities ready and open in VS Code. 
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -25,6 +30,16 @@ In today's class, students will be continue working with HTML and be introduced 
 * Select an HTML element to style using CSS selectors. 
 
 * Link a CSS style sheet to an HTML file.
+
+* Set an element as an inline or block element using the CSS `display` property.
+
+* Determine how an element is positioned in an HTML document using the CSS `position` property.
+
+* Identify the box model and its role in web design and layout.
+
+* Configure a local Git default branch.
+
+* Initialize a local repository using `git init`.
 
 ## Time Tracker
 
@@ -671,249 +686,685 @@ In today's class, students will be continue working with HTML and be introduced 
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
+* Ask the students if they have any questions about what we've learned so far.
+
 ### 11. BREAK (30 min)
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
 
-* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
+* Explain that web developers often rely on tools to help troubleshoot issues and build pages faster.
 
-## 13. Instructor Demo: { ACTIVITY NAME } (5 min) 
+* One of the most powerful development tools is available right in your web browser!
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Open `22-Stu_Mini-Project/Main/index.html` in your browser to demonstrate the following.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Open Chrome DevTools by pressing Command+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS).
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+* Tell the students that Chrome DevTools has many useful features for debugging and even experimenting with the code in the browser.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+* Navigate to the Styles tab on the Elements panel and note the CSS listed in the panel.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+* Point the cursor at a CSS property and click to uncheck the box. Note the style change on the webpage.
+
+* Change the `background-color` property in the body to `purple` to further demonstrate how you can manually change a value.
+
+* Explain that changing CSS in the browser is a great way to experiment with style properties.
+
+* You can also check an element's accessibility by simply pointing the cursor at the image.
+
+* Select the pointer icon and then point at an element on the page. A box should indicate details about the element's accessibility, including the role that it should fulfill (like link, header, or image) to be properly read by an accessibility device. If applicable, a contrast score will also be indicated.
+
+* Note that having enough contrast between colors helps ensure that your page is viewable to a range of users. Chrome DevTools is an easy way to check whether your page is readable. 
+  
+* Encourage students to experiment with Chrome DevTools as they build their own projects later in the class.
+
+## 13. Instructor Demo: Display (5 min) 
+
+* Open `15-Ins_HTML-display/index.html` in your browser and demonstrate the following:
+
+  * We use the `display` property to set whether an element behaves as an inline or a block element. 
+
+  * 🔑 **Inline elements** only occupy as much width as needed and do not automatically start a new line.
+
+  * Images and `<a>` elements are examples of inline elements.
+  
+  * 🔑 **Block elements** always start on a new line and occupy as much width as there is available.
+
+  * Paragraph and unordered lists are examples of block elements.
+
+  * We can also use `display` to hide an element.
+
+* Open `15-Ins_HTML-display/assets/css/style.css` in your IDE and demonstrate the following:
+
+  * We use `display: block` to indicate a block element, which will occupy the whole width available:
+
+    ```css
+    .display-block {
+      display: block;
+    }
+    ```
+
+  * We use `display: inline` to indicate an inline element, which will only occupy the necessary width: 
+
+    ```css
+    .display-inline {
+      display: inline;
+    }
+    ```
+
+  * We use `display: none` to completely remove an image so that it does not appear on the page and no longer occupies space in the layout: 
+
+    ```css
+    .display-none {
+      display: none;
+    }
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What is the difference between an inline and a block element?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 An inline element will only occupy as much width as necessary. In contrast, a block element will occupy as much width as there is available. 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_HTML-display/README.md`.
+### 14. Student Do: Display (15 min)
 
-### 14. Student Do: { ACTIVITY NAME } (15 min)
-
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `16-Stu_HTML-display/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 🐛 List Items and Boxes Are Not Displaying Correctly
+
+  Work with a partner to resolve the following issues:
+
+  * Users should be able to see a horizontal navigation bar with three list items side-by-side.
+
+  * Users should be able to see three boxes.
+
+  * Users should be able to see the boxes centered and stacked on top of each other.
+
+  ## Expected Behavior
+
+  * All three list items in the navigation bar should display inline.
+
+  * All three boxes should be visible. 
+
+  * Each box should appear centered and on its own line.
+
+  ## Actual Behavior
+
+  * Each list item in the navigation bar displays on its own line.
+
+  * Two boxes are visible, and one is not displayed.
+
+  * The two visible boxes display inline and aligned to the left. 
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Three list items are displayed on the right side of the navigation bar, corresponding with three boxes centered on the page.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Which `display` value hides an element? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the CSS `visibility` property? How is it different from the `display` property?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 15. Instructor Review: Display (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with using display? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `display: inline`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `display: block`
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `display: none`
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `16-Stu_HTML-Display/Solved/assets/css/style.css` in your IDE and explain the following: 
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * In this activity, we are asked to debug broken code to meet the user's goals&mdash;as stated in the user story&mdash;and ensure that the app behaves as expected.
 
+  * 🔑 Currently, each list item in the navigation bar displays on its own line. To meet the expected behavior, we set the `display` property to `inline`:
+
+    ```css
+    li {
+      display: inline;
+      ...
+    }
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * The boxes are images that currently display inline. To set them as block elements, we use `display: block`:
+
+    ```css
+    img {
+      display: block;
+      margin: 0 auto;
+    }
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 The third box, `image-3`, is set to `display: none`. This means that the box is not visible and is not taking up space. To make the box visible and match the expected behavior, we use `display: block`:
+
+    ```css
+    #image-3 {
+      display: block;
+    }
+    ```
+
+* Open `16-Stu_HTML-Display/index.html` in your browser and explain the following: 
+
+  * We open the webpage in the browser to confirm that it now meets the expected behavior!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ How can we use the `display` property to change how an element appears on the page?
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 We can set an element to `display: inline` so that it only occupies as much width as necessary. We can set an element to `display: block` so that it occupies the entire width available. Finally, we can use `display: none` to completely remove an item.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on display](https://developer.mozilla.org/en-US/docs/Web/CSS/display), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
+## 16. Instructor Demo: Box Model (5 min) 
 
-## 16. Instructor Demo: { ACTIVITY NAME } (5 min) 
+* Open `17-Ins_CSS-box-model/index.html` in your browser and demonstrate the following:
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+  * In HTML, all elements are boxes. We use the **box model** to describe the amount of space that each element will occupy.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * The innermost layer of the box is the content itself. The content has height and width.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * The next layer is the **padding** that surrounds the content. We use CSS to set the width of the padding. 
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * The **border** surrounds the padding. Like the padding, the width of the border is set by CSS.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * Finally, the **margin** is the area outside the border. 
+
+* Open `17-Ins_CSS-box-model/assets/css/style.css` in your browser and demonstrate the following:
+
+  * We use CSS to set the width of the padding, border, and margins.
+
+  * The CSS `padding` property sets the width of the padding. In this case, all sides will have a width of 20px:
+
+    ```css
+    padding: 20px;
+    ```
+
+  * The CSS `border` property sets the width of the border, the type of the border, and the color:
+
+    ```css
+    border: 10px solid darkblue;
+    ```
+
+  * The CSS `margin` property sets the width of the margin. The margin on each side is 20px here:
+
+    ```css
+    margin: 20px;
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What are the four components of the box model?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 The content, padding, border, and margin.
+
+  * ☝️ How can the box model help us understand layout and design?
+
+  * 🙋 The box model explains how much space an element will occupy on a page, which can inform the overall layout and design.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_CSS-box-model/README.md`.
 
-### 17. Student Do: { ACTIVITY NAME } (15 min) 
+### 17. Student Do: Box Model (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `18-Stu_CSS-box-model/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 📖 Implement CSS Box Model Properties to Design Layout
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to use the CSS box model properties to position four boxes inside a frame.
+
+  ## Acceptance Criteria
+
+  * It's done when each box has a defined `padding` property.
+
+  * It's done when each box has a defined `margin` property.
+
+  * It's done when each box has a defined `border` property.
+
+  * It's done when the finished page matches the mockup. 
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [MDN Web Docs on CSS basic box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
+
+  [MDN Web Docs on padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+
+  [MDN Web Docs on margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+
+  [MDN Web Docs on border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Four numbered, differently colored boxes appear evenly spaced inside a larger box.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How can we use the `margin` property to define space between elements?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the CSS `float` property?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 18. Instructor Review: Box Model (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with the box model? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `margin`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `padding`
+  
+  * ✔️ `border`
 
-  * ✔️ @TODO { THE OTHER }
+* Open `18-Stu_CSS-box-model/Solved/assets/css/style.css` in your IDE and explain the following: 
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * To meet the acceptance criteria, we must center all four images inside the box. 
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * The box has a width of 600px and a height of 600px. For the images to fit inside the box, the total combined space they occupy&mdash;including the content, padding, border, and margin&mdash;will have to be less than that:
 
+    ```css
+    section {
+      width: 600px;
+      height: 600px;
+      text-align: center;
+      border: 15px solid black;
+    }
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * The width and height of the content is 200px:
+
+    ```css
+    width: 200px;
+    height: 200px;
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 First we set the margin on every side to 20px: 
+
+    ```css
+    margin: 20px;
+    ```
+
+  * 🔑 We set the padding to 20px as well:
+
+    ```css
+    padding: 20px;
+    ```
+
+  * 🔑 Finally, we set the width of the border to 9px, make it a solid border, and give it a color of dark blue:
+
+    ```css
+    border: 9px solid darkblue;
+    ```
+
+* Open `18-Stu_CSS-box-model/Solved/index.html` in your browser and explain the following: 
+
+  * The total width of the image is now 20px (left margin) + 9px (border) + 20px (left padding) + 200px (image) + 20px (right padding) + 9px (border) + 20px (right margin)&mdash;for a total of 298px.
+
+  * The total height of the image is also 298px.
+
+  * Because the width of the containing box is 600px and the height is 600px, the boxes fit evenly.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ What is the difference between the padding and margin? 
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 The padding is the space between the content and the border. Padding surrounds the content. Margins determine the space surrounding an element. Both are often adjusted to make an element fit in a space.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: { ACTIVITY NAME } (5 min) 
+## 19. Instructor Demo: Positioning (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Open `19-Ins_CSS-positioning/index.html` in your browser and demonstrate the following:
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * We use the CSS `position` property to set how the element is positioned in a document.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * The default position is `static`, meaning that the element is positioned based on the normal flow.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * When an element's position is `relative`, it stays in the normal flow but can be offset by a value provided in the CSS.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * When an element's position is `absolute`, it is no longer in the normal flow but instead is positioned relative to its ancestor element and is determined by values provided for top, bottom, left, and right.
+
+  * An element in the `fixed` position is also not in the normal flow. However, unlike `absolute`, the position is determined in relation to the viewport.
+
+* Open `19-Ins_CSS-positioning/assets/css/style.css` in your IDE and demonstrate the following:
+
+  * 🔑 We use `position: relative` to set an element to `relative`, and we use the values of `top`, `right`, `bottom`, and `left` to offset the element. Here, we position the element to be 200px from the left:
+
+    ```css
+    #relative-box {
+      position: relative;
+      left: 200px;
+    }
+    ```
+
+  * 🔑 To set an element to `absolute`, we first set the parent element to `relative`:
+
+    ```css
+    #absolute-section {
+      position: relative;
+    }
+    ```
+
+  * 🔑 We then use `position: absolute` and use the values of `top`, `right`, `bottom`, and `left` to position the item relative to the parent container. Here, we position the element 50px from the top and 100px from the right inside the container:
+
+    ```css
+    #absolute-box {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+    }
+    ```
+
+  * 🔑 To set the element to `fixed`, we use `position: fixed`.  Then we use the values of `top`, `right`, `bottom`, and `left` to position the element relative to the viewport. Here, we position the element to be fixed in the bottom-right corner of the screen:
+
+    ```css
+    #fixed-box {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ How can we use the CSS `position` property to change the layout of the webpage?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 We use the `position` property to set how an element is positioned in the document, allowing us to move and rearrange elements or even fix them in a certain position relative to the viewport. 
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_CSS-positioning/README.md`.
 
-### 20. Student Do: { ACTIVITY NAME } (15 min) 
+### 20. Student Do: Positioning (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `20-Stu_CSS-positioning/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 🏗️ Implement Absolute and Relative Positioning to Change Layout
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to use the CSS position property to change the layout of my page.
+
+  ## Acceptance Criteria
+
+  * It's done when `box 2` is positioned in the middle of `square 1` using relative positioning.
+
+  * It's done when `box 2` is positioned outside of the upper-right corner of `square 2` using absolute positioning.
+
+  * It's done when the finished page matches the mockup.  
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Box 2 is positioned in the center of Square 1, while in Square 2, Box 2 is positioned outside the square.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How does the CSS `position` property change the document's normal flow? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the `z-index` property? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 21. Instructor Review: Positioning (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with positioning? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `position: relative`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `position: absolute`
 
-  * ✔️ @TODO { THE OTHER }
+* Open `20-Stu_CSS-Positioning/Solved/assets/css/style.css` in your IDE and explain the following: 
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * In this activity, we need to use absolute and relative positioning to reposition `box 2` in each of the squares.
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * To start, we look at the dimensions of `square 1` and `square 2`, which have a class of `container`. The height is 600px, and the width is 600px: 
 
+    ```css
+    .container {
+      width: 600px;
+      height: 600px;
+      margin: 20px auto;
+      border: 15px solid black;
+    }
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * We can fit three boxes vertically in the square, so we can deduce that the dimensions of the boxes are 200px. This information will be useful in deciding how much to offset the box so that it is positioned in the middle.
+
+  * 🔑  To position `box 2` in the middle of `square 1`, we will need to set the position of `relative-box-2` to `relative`. Then we offset it from its original position, 200px to the left&mdash;moving the box to the center of the square: 
+
+    ```css
+    #relative-box-2 {
+      position: relative;
+      left: 200px;
+    }
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * To use absolute positioning, we first need to set the parent element to `relative`. Therefore, `square 2` has an additional class of `absolute-container`:
+
+    ```css
+    .absolute-container {
+      position: relative;
+    }
+    ```
+
+  * 🔑  Then, to move `box 2` outside of `square 2`, we set the position of `absolute-box-2` to `absolute`, and we set the top to 0 and the left to 700px:
+
+    ```css
+    #absolute-box-2 {
+      position: absolute;
+      top: 0;
+      left: 700px;
+    }
+    ```
+
+* If time allows, explain the other CSS using the comments provided.
+
+* Open `20-Stu_CSS-Positioning/Solved/index.html` in your browser and explain the following: 
+
+  * When we open the webpage, we see that the acceptance criteria has been met and the webpage matches the mockup. 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ What is the difference between absolute and relative positioning?
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 Relative positioning offsets an image relative to its original position but does not change the layout of the other elements around it. Absolute positioning positions the image relative to its parent container and removes it from the flow, changing the layout of other elements around it. 
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on position](https://developer.mozilla.org/en-US/docs/Web/CSS/position), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `21-Evr_Git-Guide/README.md`.
 
 ## 22. Everyone Do: Git (20 min)
 
-* @TODO Open [Git docs](https://git-scm.com/docs/{TITLE}) in your browser and explain the following:
+* Students have already reviewed the basics of creating a remote repository on GitHub as well as commonly used Git commands. This Git activity will focus on configuring the local Git default branch to `main`, using `git init` to create a local repository, and reviewing the `git pull` command (because they will use it frequently to pull down the class repository before every class).
 
-  * @TODO GIVE A SHORT EXPLANATION OF THIS GIT CONCEPT/COMMAND.
+* Open [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) in your browser and explain the following: 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+  * Git is an important tool that allows developers to track and store versions of content. Using a Git repository, we can save different versions of a project's code. 
 
-* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  * Creating a repository is an important part of the development process and should be done each time you start a new project.
+
+  * We can create a repository and use it on a local machine in two ways&mdash;we can create the remote repository on GitHub first and then use `git clone` to clone it onto the local machine, or we can turn a local directory or project and into a Git repository using `git init`.
+
+  * We already covered how to clone a remote repository, so today we will learn how to turn an existing local project into a Git repository.
+
+  * But first we will need to configure the local Git default branch to `main`.
+  
+* Direct students to the activity instructions found in `21-Evr_Git-Guide/README.md`.
 
 * Open your command line and demonstrate the following:
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * 🔑 Before you begin, you need to ensure that the default branch is `main`. If you have not done so yet, follow the instructions in the Git Guide and use `git config` to make that switch. If you have any issues, ask a TA for help or stay for office hours: 
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```bash
+    git config --global init.defaultBranch main
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+* Open your command line and demonstrate the following:
+
+  * Alternatively, we can use `git init` to create a repository. The results will be similar to if we used `git clone`, except that we start by creating a repository locally via the command line. 
+
+  * 🔑 Start by creating a new project directory named `git-init-sample` on your local machine. Ideally, you should store all of your coding projects for this course in a parent directory. Create this project directory inside that parent directory:
+
+    ```bash
+    mkdir git-init-sample
+    ```
+
+  * We use `cd` to navigate into new project directory and `touch` to add an `index.html` file:
+
+    ```bash
+    cd git-init-sample
+    touch index.html
+    ```
+
+  * To initialize this folder as a Git repository, we will use `git init`&mdash;we need to be in the project folder when we run this command!
+
+    ```bash
+    git init
+    ```
+
+  * This creates a new subdirectory named `.git` that contains all of the necessary repository files&mdash;a Git repository skeleton. 
+
+  * To start version-controlling the existing files in the project, we need to start tracking those files and do an initial commit.
+
+  * First let's run `git status` to check the status of the files:
+
+    ```bash
+    git status
+    ```
+
+  * We should see that `index.html` is currently untracked. Let's stage that file for commit: 
+
+    ```bash
+    git add .
+    ```
+
+  * Now if we run `git status` again, we should see that the file is being tracked and is ready to be committed:
+
+    ```bash
+    git commit -m "initial commit"
+    ```
+
+  * 🔑 Using `git init` adds version control locally to a project, but it doesn't create a remote repository. Let's do that now.
+
+* Open [GitHub](https://github.com/) in your browser and demonstrate the following:
+
+  * Click on the New button to create a new repository.
+
+  * Enter the same name as the local repository, `git-init-sample`.
+
+  * 🔑 Do not check any of the boxes, because we are importing an existing repository!
+
+  * Click the Create Repository button.
+
+  * Copy the code under the header "…or push an existing repository from the command line".
+
+* Open your command line and demonstrate the following:
+
+  * Back in your project directory, paste the commands copied from GitHub. This will sync your local repository with the repository that you just created on GitHub.
+
+* Open the `git-init-sample` repository on GitHub in your browser and demonstrate the following:
+
+  * The repository has been updated on GitHub!
+
+* Open your command line and demonstrate the following:
+
+  * You will need to pull down the class repository before each class in this course to have that day's activities ready.
+
+  * To perform a `git pull`, first navigate to the project directory using `cd`:
+
+    ```bash
+    cd git-init-sample
+    ```
+
+  * Next, use `git pull` to pull down the changes from the remote. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely, the original repository's URL&mdash;followed by the name of the branch, which is `main`:
+
+    ```bash
+    git pull origin main
+    ```
+
+  * You can view any changes by opening the project directory in VS Code.
 
 * Answer any questions before ending the class.
 
@@ -922,4 +1373,4 @@ In today's class, students will be continue working with HTML and be introduced 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

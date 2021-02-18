@@ -1,4 +1,4 @@
-# 01.1 Part-Time Lesson Plan: Introduction to Command Line and Git
+# 01.1 Full-Time Lesson Plan: Introduction to Command Line and Git
 
 ## Overview 
 
@@ -740,9 +740,7 @@ By the end of class, students will be able to:
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class.
-
-* Inform the students that today they will take their first steps in web development by learning to use HTML and CSS to structure and style a webpage&mdash;but first, they will learn about an important tool of communication: a readme file. 
+* Inform the students that as they take their first steps in web development by learning to use HTML and CSS to structure and style a webpage, they will also need to learn about an important tool of communication: a readme file. 
 
 * Explain that developers must be able to clearly communicate information in a readable format. One tool that we can use for this purpose is a **readme** file.
 
@@ -1175,11 +1173,11 @@ By the end of class, students will be able to:
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes), and stay for office hours to ask for help.
 
-Answer any questions before ending the class.
+* Answer any questions before ending the class.
 
 ### 19. END (0 min)
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
