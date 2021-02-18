@@ -2,11 +2,11 @@
 
 ## Overview
 
-In todays class students will begin by working with styling CSS boxes, and then learn about CSS Resets and overriding default browser styling.
+In today's class, students will begin by working with styling CSS boxes. The theme of today's class is overwriting browser defaults. Students will implement a CSS reset to zero-out certain styles and then rebuild those styles using advanced CSS concepts like pseudo-classes and pseudo-elements.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `11-Ins_CSS-Resets` through `20-Stu_Custom-Forms`.
+* In this lesson, students will complete activities `09-Ins_Box-Styling` through `20-Stu_Custom-Forms`.
 
 * Skim over the following documentation to get familiar with some of the advanced CSS selectors that students will be using:
 
@@ -28,6 +28,8 @@ In todays class students will begin by working with styling CSS boxes, and then 
 
 By the end of class, students will be able to do the following:
 
+* Enhance the UI of a webpage using box styling.
+
 * Explain why you would use a CSS reset.
 
 * Use typographical CSS properties, like `font-family` and `line-height`.
@@ -35,8 +37,6 @@ By the end of class, students will be able to do the following:
 * Add pseudo-classes and pseudo-elements to HTML elements.
 
 * Explain the default styles that browsers apply to form elements.
-
-* Enhance the UI of a webpage using box styling.
 
 ## Time Tracker
 
@@ -54,15 +54,15 @@ By the end of class, students will be able to do the following:
 | 11:30AM| 10  | Instructor Review: Typography      | 0:10     |
 | 11:40AM| 11  | FLEX                               | 0:20     |
 | 12:00PM| 12  | BREAK                              | 0:30     |
-| 12:30PM| 13  | Instructor Demo:                   | 0:05     |
-| 12:35PM| 14  | Student Do:                        | 0:15     |
-| 12:50PM| 15  | Instructor Review:                 | 0:10     |
-| 1:00PM | 16  | Instructor Demo:                   | 0:05     |
-| 1:05PM | 17  | Student Do:                        | 0:15     |
-| 1:20PM | 18  | Instructor Review:                 | 0:10     |
-| 1:30PM | 19  | Instructor Demo:                   | 0:05     |
-| 1:35PM | 20  | Student Do:                        | 0:15     |
-| 1:50PM | 21  | Instructor Review:                 | 0:10     |
+| 12:30PM| 13  | Instructor Demo: Pseudo-Classes    | 0:05     |
+| 12:35PM| 14  | Student Do: Pseudo-Classes         | 0:15     |
+| 12:50PM| 15  | Instructor Review: Pseudo-Classes  | 0:10     |
+| 1:00PM | 16  | Instructor Demo: Pseudo-Elements   | 0:05     |
+| 1:05PM | 17  | Student Do: Pseudo-Elements        | 0:15     |
+| 1:20PM | 18  | Instructor Review: Pseudo-Elements | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Custom Forms      | 0:05     |
+| 1:35PM | 20  | Student Do: Custom Forms           | 0:15     |
+| 1:50PM | 21  | Instructor Review: Custom Forms    | 0:10     |
 | 2:00PM | 22  | FLEX                               | 0:30     |
 | 2:30PM | 23  | END                                | 0:00     |
 
@@ -637,7 +637,7 @@ By the end of class, students will be able to do the following:
 
 ### 11. FLEX (20 mins)
 
-* Feel free to use this time to review any topics covered so far or work on homework.
+* This time can be utilized for reviewing key topics learned so far in this unit.
 
 ### 12. BREAK (30 mins)
 
@@ -1110,11 +1110,13 @@ By the end of class, students will be able to do the following:
 
 ### 22. FLEX (30 mins)
 
-* Feel free to use this time to review any topics covered so far or work on homework.
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Answer any questions before ending the class.
 
 ### 23. END (0 mins)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-©2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
