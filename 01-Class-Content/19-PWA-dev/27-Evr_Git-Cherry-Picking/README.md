@@ -24,7 +24,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-1. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if our teammate is working on a new feature. Give it a name of `feature/notifications`.
+3. Create a new branch that will be a placeholder for a branch that your coworker or teammate made. Let's name this branch as if our teammate is working on a new feature. Give it a name of `feature/notifications`.
 
 ```
 git checkout -b feature/notifications
