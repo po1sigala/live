@@ -41,7 +41,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 ## Class Instruction
 
 
-### 1.	Instructor Do: Postman Demo (0:05)
+### 1.	Instructor Do: Insomnia Core Demo (0:05)
 
 * Have students articulate their answers before explaining to them that `express.json` and `express.urlEncoded` are modules built-in to express that allow Express to receive user posts (JSON, text, etc).
 
@@ -55,31 +55,34 @@ Today's class is focused on creating an Express-based web server. Students will 
 
   * Middleware can transform the request from the browser before we work with it. In the case of `express.json` and `express.urlEncoded`, it takes the unreadable request and turns it into a readable object and attaches it to `req.body`. By the time the request gets to our routes, our body parsing middleware has already formatted it for us.
 
-* Then explain to them that in future applications we'll eventually be using the fetch API methods for sending such post requests to our server.
+* Then explain to them that in future applications we'll eventually be using `fetch` API methods for sending such post requests to our server.
 
-* Then have them install the program [Postman](https://www.getpostman.com/). We'll be using Postman so both windows users and mac users can be taught how to send POST requests using the same program. (Note: Students may ask questions like: "Do you always have to use postman to send post requests?" Use this as an opportunity to explain that Postman is simply a GUI for development, and that in future opportunities we'll be using `fetch` or other front-end code approaches for sending the same post requests.)
+* Then have them install the program [Insomnia Core](https://insomnia.rest/) if they haven't already. (Note: Students may ask questions like: "Do you always have to use Insomnia Core to send post requests?" Use this as an opportunity to explain that Insomnia Core is simply a GUI for development, and that in future opportunities we'll be using jQuery or other front-end code approaches for sending the same post requests.)
 
-* Walk students through the process of sending POST requests in Postman. If you are unfamiliar use the following points as a guide:
+* Walk students through the process of sending POST requests in Insomnia Core. If you are unfamiliar with Insomnia Core use the following points as a guide:
 
   1. Run your server instance.
-  2. Open Postman.
-  3. Select POST in the drop-down next to the link. Then enter the URL of your server's POST route.
-  4. Click the button: "Body". Click the setting "Raw". Then hit the dropdown that says "Text" and click JSON.
-  5. Enter in a complete JSON. You can use:
-     ```json
-     {
-       "routeName": "darthvader",
-       "name": "Darth Vader",
-       "role": "Sith Lord",
-       "age": 42,
-       "forcePoints": 1900
-     }
-     ```
-  6. Hit "Send"
-  7. Now check back to your Star Wars API to confirm that Postman received the request body.
-     ![Images/01-POSTMAN](Images/01-POSTMAN.png)
+  2. Open Insomnia Core.
+  3. Select the New Request button.
+  4. Select the drop-down next to the name field and change the value to POST.
+  5. Select the drop-down that says No Body and change the value to JSON.
+  6. Select Create.
+  7. Enter the URL of your server's POST route.
+  8. In the JSON tab, enter the complete JSON as follows:
+  
+      ```json
+      {
+        "routeName": "darthvader",
+        "name": "Darth Vader",
+        "role": "Sith Lord",
+        "age": 42,
+        "forcePoints": 1900
+      }
+      ```
 
-### 2.	Students Do: Postman Exercise (0:10)
+  9. Select Send.
+  10. The response from your server will appear in the panel on the right.
+### 2.	Students Do: Insomnia Core Exercise (0:10)
 
 * Now have students perform the same exercise with their own servers.
 
@@ -91,7 +94,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * **Instructions:**
 
-  * Use Postman to send a POST request to the server you've been provided. Confirm that your character has been added to the database correctly.
+  * Use Insomnia Core to send a POST request to the server you've been provided. Confirm that your character has been added to the database correctly.
 
 
 ### 3.	Instructor Do: Demo sendFile (server6.js + view.html)		(0:05)
@@ -354,7 +357,7 @@ app.get('/', (req, res) =>
 
       * Create the logic that handles reservation requests. Your code should work such that POST requests take in JSON objects, checks if there is any space left, then adds the JSON object to either the reservation array or the waitlist array. Your POST route should also respond to requests with a confirmation (true or false) of whether or not the requestor has a reservation (or is on the waiting list).
 
-      * You should be using Postman to do all your testing at this point.
+      * You should be using Insomnia Core to do all your testing at this point.
 
     * Frontend Team:
 
