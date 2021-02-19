@@ -1,38 +1,52 @@
-# Unit 15: Project-2
+# Unit 15 Instructor Overview: Project 2  
 
 ## Overview
 
-In this unit, we will work with eslint and begin project 2 work.
+In this unit, students will begin work on their second Project of the Boot Camp--a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/15-Project-2/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/15-Project-2/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-Encourage students to spend time pseudocoding their project and researching APIs before writing any code.
+Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
 
-## Heads Up
+## Career Connection
 
-On Day 03 of the next unit, students will present their projects. Emphasize that students should focus on deploying a lean MVP, then add features with any time they have left.
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+
+## Heads-Up
+
+Students will present their projects at the end of the next unit. Emphasize that students should focus on deploying a lean MVP, and then add features with any time they have left.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [15.1 - Lesson Plan](./01-Day_Linting-Travis/15.1-LESSON-PLAN.md)
+  * [15.1 Lesson Plan](./01-Day/15.1-LESSON-PLAN.md)
 
-  * [15.2 - Lesson Plan](./02-Day_Project-Work/15.2-LESSON-PLAN.md)
+  * [15.2 Lesson Plan](./02-Day/15.2-LESSON-PLAN.md)
+  
+  * [15.3 Lesson Plan](./03-Day/15.3-LESSON-PLAN.md)
 
-  * [15.3 - Lesson Plan](./03-Day_Project-Work/15.3-LESSON-PLAN.md)
+### Homework
+
+  * [Unit 15 Homework](../../../01-Class-Content/15-Project-2/02-Homework)
 
 ### Slide Decks
 
-  * [15.1: Linting and Projects](https://docs.google.com/presentation/d/1T7rSHI5Jpg6aE0OR7HhiJy4VEKcO8lm2eSwTUj5Wml8/edit?usp=sharing)
+  * [Unit 15: Project 2](https://docs.google.com/presentation/d/1_Ap23wFlGvGS4HfMVgBWPNlFo8IkHV0bTO6QvYs9XT0/edit?usp=sharing)
 
-### Time Tracker(s)
+### Resources
 
-  * [Unit 15-Project-2 Day 1 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1WzJH4hM68jEdvVVLdHY9USvWf_qQ7cJn/view?usp=sharing)
+* [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
-  * [Unit 15-Project-2 Day 2 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1h9TaBtJmCnxEV7Iprd-UUu0fRw1KbztS/view?usp=sharing)
+* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
-  * [Unit 15-Project-2 Day 3 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1wtudESHJJegwHM01rCUe25iLxEflW2Zs/view?usp=sharing)
+* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
+* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

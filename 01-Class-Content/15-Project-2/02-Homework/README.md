@@ -1,27 +1,40 @@
-# Project 2
+# 15 Project 2
 
-## Application Requirements
+Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
-* Must use a Node and Express server
+As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
 
-* Must use Handlebars.js as the template engine
+## Project Requirements
 
-* Must be backed by a MySQL database with a Sequelize ORM
+You and your group will use everything you’ve learned over the past six weeks to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
-* Must utilize both GET and POST routes for retrieving and adding new data
+* Use Node.js and Express.js to create a RESTful API.
 
-* Must be deployed using Heroku (with data)
+* Use Handlebars.js as the template engine.
 
-* Must utilize at least one new library, package, or technology that we haven’t discussed
+* Use MySQL and the Sequelize ORM for the database.
 
-* Must have a polished front end/UI
+* Have both GET and POST routes for retrieving and adding new data.
 
-* Must have a folder structure that meets the MVC paradigm
+* Use at least one new library, package, or technology that we haven’t discussed.
 
-* Must meet good quality coding standards (indentation, scoping, naming)
+* Have a folder structure that meets the MVC paradigm.
 
-* Must protect API keys in Node with environment variables
+* Include authentication (express-session and cookies).
 
+* Protect API keys and sensitive information with environment variables.
+
+* Be deployed using Heroku (with data).
+
+* Have a polished UI.
+
+* Be responsive.
+
+* Be interactive (i.e., accept and respond to user input).
+
+* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+
+* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Presentation Requirements
 
@@ -37,24 +50,78 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Directions for Future Development
 
-* Links to to the deployed application and the GitHub repository. Use this guide for [deploying your application to Heroku](../04-Important/GitHubHerokuConnect.md) if you need a reminder on how to deploy!
+* Links to to the deployed application and the GitHub repository. Use this guide to [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) if you need a reminder on how to deploy.
+
+## Grading Requirements
+
+This project is graded based on the following criteria:
+
+### Technical Acceptance Criteria: 25%
+
+* Satisfies the following code requirements:
+
+    * Application uses a Node and Express back end and uses both GET and POST routes for retrieving and adding new data.
+
+    * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
+
+    * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
+
+    * Application includes user authentication (express-session and cookies).
+
+    * Application uses at least one new library, package, or technology not covered in class.
+
+### Concept 10%
+
+* Application should be a unique and novel idea.
+
+* Your group should clearly and concisely articulate your project idea.
+
+### Deployment: 20%
+
+* Application deployed at live URL on Heroku and loads with no errors.
+
+* Application GitHub URL submitted.
+
+### Repository Quality: 10%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using Powerpoint or a similar presentation software.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit).
+
+### Collaboration 10%
+
+* There are no major disparities in the number of GitHub contributions between group members.
 
 
-## Grading Metrics 
+## How to Submit Your Interactive Full-Stack Project
 
-| Metric        | Weight | 
-| ---           | ---    |
-| Concept       | 10%    |
-| Design        | 20%    |
-| Functionality | 30%    |
-| Collaboration | 30%    |
-| Presentation  | 10%    |
+**Each member of your group** is required to submit the following for review:
 
+* The URL of the deployed application.
 
-## Submission on BCS
+* The URL of the GitHub repository, with a unique name and a README describing the project.
 
-You are required to submit the following:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
