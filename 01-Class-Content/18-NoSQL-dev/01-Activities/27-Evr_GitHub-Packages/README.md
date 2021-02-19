@@ -90,7 +90,7 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 
 Congratulations on publishing your first package to GitHub! Using the screenshots below you can double check that your package was published successfully. Start by visiting your GitHub repository and clicking on "Packages" on the right:
 
-![packages](01-packages.png)
+![packages](./Images/01-packages.png)
 
 If you want to share this package with someone, they can follow the instructions on the package page:
 
@@ -98,4 +98,4 @@ If you want to share this package with someone, they can follow the instructions
 npm install @TestUser22/github-pkg-demo@1.0.0
 ```
 
-![packages-page](02-packages-page.png)
+![packages-page](/Images/02-packages-page.png)
