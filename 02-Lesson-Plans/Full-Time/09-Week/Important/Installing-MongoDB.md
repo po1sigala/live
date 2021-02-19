@@ -95,7 +95,7 @@
 
 ## 4. Configuring MongoDB on MacOS
 
-### Instructions for Versions before macOS Catalina
+### Instructions for Versions before macOS Catalina(10.5)
 
 1. **IMPORTANT**: You need to create a data directory for your MongoDB installation, or it will not work. 
 
