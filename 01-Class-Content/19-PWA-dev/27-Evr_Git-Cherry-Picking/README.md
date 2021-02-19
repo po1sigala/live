@@ -1,4 +1,4 @@
-## Git Cherry-Pick
+# Git Cherry-Pick
 
 As developers, you will find that some of the code that you are working on may have already been fixed or completed in another commit by another developer. However, if that code hasn't been merged yet, it can put you as the developer in a tricky situation. How does one get the code that another developer made into their own branch without merging their entire branch. Enter, git cherry-pick.
 
