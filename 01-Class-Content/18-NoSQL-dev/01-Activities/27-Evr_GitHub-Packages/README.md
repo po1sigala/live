@@ -98,4 +98,4 @@ If you want to share this package with someone, they can follow the instructions
 npm install @TestUser22/github-pkg-demo@1.0.0
 ```
 
-![packages-page](/Images/02-packages-page.png)
+![packages-page](./Images/02-packages-page.png)
