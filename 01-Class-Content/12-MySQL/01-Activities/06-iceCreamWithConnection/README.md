@@ -2,15 +2,13 @@
 
 * Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists. 
 
-* Create your `playlistDB` database in MySQL.
+* Create a new `playlistDB` database in MySQL.
 
 **Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.**
 
-* Create a new file and name it `playlistConnection.js`.
+* Update the connection logic in `iceCreamDBConnection.js` to connect to the new `playlistDB` instead of `ice_creamDB`.
 
-* Create a connection to the database using Node.js.
-
-* BONUS: Using MySQL Workbench, create a table in your database with four columns.
+* BONUS: Using MySQL Workbench, create a `songs` table in your database with four columns.
 
   * Primary Key of "ID" which auto-increments
   * A column called "title"
