@@ -116,7 +116,9 @@ window.addEventListener('load', function () {
       .then((res) => res.json())
       .then((data) => {
         // Invoke our history method
-        handleHistory(searchValue);
+        if (!existingHistory.includes(searchValue)) {
+          handleHistory(searchValue);
+        }
         // Clear any old content
         todayEl = document.querySelector('#today');
         todayEl.textContent = ' ';
