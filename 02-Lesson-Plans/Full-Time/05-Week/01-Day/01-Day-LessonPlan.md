@@ -701,7 +701,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we implement arrow functions as callbacks in this activity?
+* What is the `reduce()` array method?
 
 Use [Google](https://www.google.com) or another search engine to research this.
   ```
