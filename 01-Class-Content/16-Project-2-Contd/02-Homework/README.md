@@ -1,11 +1,10 @@
-# Unit 16 Project 2 Homework: Professional Materials
+# 16 Project 2: Full-Stack Application
 
 Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
 
 If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but it's also *critical* on your journey as a developer.
 
-
-## Requirements
+## Homework Requirements
 
 * Updated portfolio featuring at least 3 examples of student work from either deployed projects of homeworks
 
@@ -29,8 +28,11 @@ If you are opting out of career services, this is *still a required assignment*.
 ## Instructions
 
 1. [Updated Portfolio](#updated-portfolio)
+
 2. [GitHub Profile](#updated-github-profile)
+
 3. [Updated Resume](#updated-resume)
+
 4. [Updated LinkedIn](#updated-linkedin)
 
 ### Updated Portfolio

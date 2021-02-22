@@ -2,7 +2,7 @@
 
 Welcome, instructors and TAs! This directory contains the lessons plans and grading rubrics for the Full-Stack Boot Camp. 
 
-In addition, this README contains guidelines for [how to approach each class week](##how-to-approach-each-week), as well as background information about [why we teach what we teach](##why-we-teach-what-we-teach). We hope this information supports you as you take on the challenge of changing students' lives! 
+In addition, this README contains guidelines for [how to approach each class week](#how-to-approach-each-week), as well as background information about [why we teach what we teach](#why-we-teach-what-we-teach). We hope this information supports you as you take on the challenge of changing students' lives! 
 
 
 ## How to Approach Each Week
@@ -114,10 +114,10 @@ Template engines are common in Java and Python frameworks, such as Django, Flask
 
 It's also important that you emphasize the concepts introduced while using Handlebars so that your students are set up to understand the MVC folder structure as they begin to learn React. Templating engines serve as an important step towards learning React, because the abstractions of a framework are challenging for beginners to understand.
 
-Finally, Handlebars is currently used in only two units and one project. We're in the process of isolating it to a single unit and project, which will make it easier to remove or replace when that time comes in the future.
+Finally, Handlebars is currently used in only one unit and one project. Isolating Handlebars to a single unit will make it much easier to replace if we move to a different template engine in the future.
 
 ### Why do we teach Heroku? Why don't we teach cloud deployment through AWS instead?
 
-Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. Nonetheless, we are in the process of rebranding our asynchronous Power Packs of additional content as Continuation Courses, and AWS will be the focus of at least one of these courses (and potentially more!).
+Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. To this end, we now offer asynchronous modules of additional content known as Continuation Courses to all of our boot camp graduates, including a module focusing exclusively on AWS.
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
