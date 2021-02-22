@@ -457,7 +457,7 @@ By the end of class students will be able to:
     ```html
     <link
       rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     ```
 
@@ -579,7 +579,7 @@ Use [Google](https://www.google.com) or another search engine to answer this.
     ```html
     <link
       rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />    
     ```
 
@@ -684,7 +684,7 @@ Use [Google](https://www.google.com) or another search engine to answer this.
       <title>jQuery UI Sortable</title>
       <link
         rel="stylesheet"
-        href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
       />
       <!-- Imported our own custom stylesheet -->
       <link rel="stylesheet" href="./assets/css/style.css" />
