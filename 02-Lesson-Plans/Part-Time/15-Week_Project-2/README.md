@@ -8,6 +8,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/15-Project-
 
 ## Instructor/TA Notes
 
+* Prepare a list of project group members prior to the first class for this unit. This time, assign three students per group, all around the same skill level. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
+
 * Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
 
 ## Career Connection

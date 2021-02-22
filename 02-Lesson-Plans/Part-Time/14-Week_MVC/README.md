@@ -32,7 +32,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15). 
 
-* In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class. 
+* In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class.
 
 * Let students know that they will be allowed to create their own groups for the final project.
 
