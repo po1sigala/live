@@ -8,7 +8,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-
 
 ## Instructor/TA Notes
 
-Encourage students to spend time deciding how they want to present their project before presentation day.
+* Encourage students to spend time deciding how they want to present their project before presentation day.
+
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit) with students early in the week to give them ample time to prepare for their presentations.
+
+* Prepare a slide deck of superlative awards to give to each group. Use [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing), and feel free to customize it as you see fit for your cohort.
 
 ## Career Connection
 
@@ -18,7 +22,7 @@ Encourage students to spend time deciding how they want to present their project
 
 ## Heads-Up
 
-Before next unit, make sure you install both MongoDB and Robo 3T on your machine. Although there is time set aside in class for students to install MongoDB, encourage them to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
+Before the next unit, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
 If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
 
@@ -40,11 +44,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * N/A
+  * [Superlative Awards](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing)
 
 ### Resources
 
 * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+
+* [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
 
 * [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 

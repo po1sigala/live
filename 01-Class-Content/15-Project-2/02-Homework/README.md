@@ -1,4 +1,4 @@
-# 15 Project 2
+# 15 Project 2: Full-Stack Application
 
 Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
@@ -50,7 +50,7 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Directions for Future Development
 
-* Links to to the deployed application and the GitHub repository. Use this guide to [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) if you need a reminder on how to deploy.
+* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 
 ## Grading Requirements
 
@@ -60,7 +60,7 @@ This project is graded based on the following criteria:
 
 * Satisfies the following code requirements:
 
-    * Application uses a Node and Express back end and uses both GET and POST routes for retrieving and adding new data.
+    * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
 
     * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
 

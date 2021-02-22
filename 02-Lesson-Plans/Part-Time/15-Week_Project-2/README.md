@@ -2,13 +2,13 @@
 
 ## Overview
 
-In this unit, students will begin work on their second Project of the Boot Camp--a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
+In this unit, students will begin work on their second project of the Boot Camp--a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/15-Project-2/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
+* Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
 
 ## Career Connection
 
@@ -16,7 +16,9 @@ Encourage students to spend time pseudocoding their projects and researching API
 
 ## Heads-Up
 
-Students will present their projects at the end of the next unit. Emphasize that students should focus on deploying a lean MVP, and then add features with any time they have left.
+* Students will present their projects at the end of the next unit. Emphasize that students should focus on deploying a lean MVP, and then add features with any time they have left.
+
+* Prepare a slide deck of superlative awards to give to each group next week. Use [this example](https://docs.google.com/presentation/d/1QlPJhHnHvLLtKheKl4opm7tibkjjALZeAzwVvZdJDO0/edit?usp=sharing), and feel free to customize it as you see fit for your cohort.
 
 ## Helpful Links
 

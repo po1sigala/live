@@ -62,6 +62,8 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
   * 📖 [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
+  * 📖 [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) 
+
 ### General
 
 Refer to these resources for additional information about topics covered in this unit.
