@@ -72,13 +72,15 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 
 6. Navigate to your personal GitHub profile and create a new repository called "github-pkg-demo". Make sure to not initialize with a `README.md` or `.gitignore`.
 
-7. Add the remote URL given from your newly created repository on github to your local repository:
+7. Add the remote URL given from your newly created repository on github to your local repository.
 
     ```sh
     git remote add origin git@github.com:GITHUB_USERNAME/github-pkg-demo.git
     git branch -M main
     git push -u origin main
     ```
+
+> **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
 
 8. Now that we have everything ready to go, let's publish!
 
