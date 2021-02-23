@@ -33,7 +33,7 @@ Now that we have our personal access token, lets add it to our user-specific `np
 2. To ensure it was created properly run the following command. The content of the `.npmrc` file should be output to the terminal.
 
     ```sh
-    cat ~./npmrc
+    cat ~/.npmrc
     ```
 
 ## Create a Package
