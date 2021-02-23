@@ -55,13 +55,11 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     }
     ```
 
-
 4. Next, create a local `.npmrc` file at the root of your project directory. Inside the local `.npmrc` file, add the following. Be sure to replace OWNER with your own GitHub username.
 
     ```sh
     registry=https://npm.pkg.github.com/OWNER
     ```
-
 
 5. Create a `index.js` file at the root of your repository that contains the following content:
 
@@ -70,9 +68,16 @@ Now it's time to actually create a simple package that we can upload to GitHub P
         console.log('Hello world! I am living inside the GitHub Package Registry');
     ```
 
-6. Navigate to your personal GitHub profile and create a new repository called "github-pkg-demo". Make sure to not initialize with a `README.md` or `.gitignore`.
+6. Be sure to add and commit these files before moving on to the next step using the following commands:
 
-7. Add the remote URL given from your newly created repository on github to your local repository.
+    ```sh
+    git add -A
+    git commit -m "Add package files"
+    ```
+
+7. Navigate to your personal GitHub profile and create a new repository called "github-pkg-demo". Make sure to not initialize with a `README.md` or `.gitignore`.
+
+8. Add the remote URL given from your newly created repository on github to your local repository.
 
     ```sh
     git remote add origin git@github.com:GITHUB_USERNAME/github-pkg-demo.git
@@ -82,7 +87,7 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 
 > **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
 
-8. Now that we have everything ready to go, let's publish!
+9. Now that we have everything ready to go, let's publish!
 
     ```sh
     npm publish
