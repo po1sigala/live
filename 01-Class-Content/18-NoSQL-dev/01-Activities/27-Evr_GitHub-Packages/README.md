@@ -61,6 +61,8 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     registry=https://npm.pkg.github.com/OWNER
     ```
 
+    * ⚠️ Remember, while this file is titled `.npmrc`, we are pointing to GitHub's package registry and not the default `npm` registry. As a result, our package will get published to GitHub.
+
 5. Create a `index.js` file at the root of your repository that contains the following content:
 
     ```js
@@ -92,17 +94,38 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     ```sh
     npm publish
     ```
+* Note: Packages will be published to GitHub packages despite the fact that we use `npm` to publish. 
+
+## Installing GitHub Packages
+
+If you want to share this package with someone, they can follow these instructions to install:
+
+1. In the project directory that the package will be installed in, create a local `.npmrc` file and add the following:
+
+```sh
+@OWNER:registry=https://npm.pkg.github.com
+```
+
+* Be sure to replace OWNER with your personal GitHub username.
+
+2. Add the package name to the list of dependencies located in `package.json`
+
+```json
+"dependencies": {
+    "@nol166/github-pkg-demo": "1.0.0"
+},
+```
+
+3. Then simply run `npm install` as your normally would.
+
+```sh
+npm install
+```
+
+![packages-page](./Images/02-packages-page.png)
 
 ## Conclusion
 
 Congratulations on publishing your first package to GitHub! Using the screenshots below you can double check that your package was published successfully. Start by visiting your GitHub repository and clicking on "Packages" on the right:
 
 ![packages](./Images/01-packages.png)
-
-If you want to share this package with someone, they can follow the instructions on the package page:
-
-```sh
-npm install @TestUser22/github-pkg-demo@1.0.0
-```
-
-![packages-page](./Images/02-packages-page.png)
