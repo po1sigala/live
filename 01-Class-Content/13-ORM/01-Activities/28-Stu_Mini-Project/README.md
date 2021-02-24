@@ -68,7 +68,7 @@ In this mini-project, you will work with a group to build an API using Node.js, 
 
   * Travellers have many locations, and locations have many travellers through trips (many-to-many association).
 
-  * Since Travellers can take multiple trips, set the `unique` flag to `false` when creating the many-to-many relationship to avoid a SQL error.
+  * Set the `unique` flag to `false` to avoid a SQL error when creating the many-to-many relationship, because travellers can take multiple trips, .
 
 ## 📝 Notes
 
@@ -76,7 +76,7 @@ Refer to the documentation:
 
 * [Sequelize documentation on many-to-many relationships](https://sequelize.org/master/manual/assocs.html#many-to-many-relationships)
 
-* [Deploy with Heroku and MySQL Guide](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+* [The Full-Stack Blog guide to deploying with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
 Use the following sample data as the request body POST `/api/trips` route:
 
@@ -107,7 +107,7 @@ If you have completed this activity, work through the following challenge with y
 
 * Create a password hashing and login system for travellers.
 
-* Set up a "super many-to-many relationship" between travellers, locations, and trips to provide more querying options. Check out the [Sequelize docs](https://sequelize.org/master/manual/advanced-many-to-many.html) to learn more.
+* Set up a **super many-to-many relationship** between travellers, locations, and trips to provide more querying options. To learn more, see the [Sequelize documentation on advanced many-to-many relationships](https://sequelize.org/master/manual/advanced-many-to-many.html).
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
