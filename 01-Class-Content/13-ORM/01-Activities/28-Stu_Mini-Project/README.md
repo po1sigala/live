@@ -68,7 +68,7 @@ In this mini-project, you will work with a group to build an API using Node.js, 
 
   * Travellers have many locations, and locations have many travellers through trips (many-to-many association).
 
-  * Set the `unique` flag to `false` to avoid a SQL error when creating the many-to-many relationship, because travellers can take multiple trips, .
+  * Set the `unique` flag to `false` to avoid a SQL error when creating the many-to-many relationship, because travellers can take multiple trips.
 
 ## 📝 Notes
 
