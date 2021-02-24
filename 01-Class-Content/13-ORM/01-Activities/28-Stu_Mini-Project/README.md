@@ -62,9 +62,9 @@ In this mini-project, you will work with a group to build an API using Node.js, 
       
     * `traveller_amount`
       
-    * `traveller_id`: foreign key that references `Traveller.id` that is not unique
-      
-    * `location_id`: foreign key that references `Location.id` that is not unique
+    * `traveller_id`: non-unique foreign key that references the `Traveller` model's `id` field (`Traveller.id`)
+
+    * `location_id`: non-unique foreign key that references the `Location` model's `id` field (`Location.id`)
 
   * Travellers have many locations, and locations have many travellers through trips (many-to-many association).
 
