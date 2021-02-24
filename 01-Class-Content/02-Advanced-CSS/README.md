@@ -68,7 +68,13 @@ You will be employer-ready if you are able to:
 
 ## Technical Interview Preparation
 
-You will be employer-competitive if you are able to successfully complete the assessments.
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
+
+* 📹 [Let's Code Computational Thinking!](https://2u-20.wistia.com/medias/dus2zex4d7)
 
 ### Assessments
 
