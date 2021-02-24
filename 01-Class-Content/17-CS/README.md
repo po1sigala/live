@@ -118,7 +118,9 @@ This section contains some additional resources to help solidify the topics cove
 
 The Git Guide for this unit reviews shell scripts:
 
-* 📖 [Git Guide: Using Shell Scripts](./01-Activities/27-Evr_Shell)
+* 📖 [Git Guide: Shell Scripts](./01-Activities/27-Evr_Shell)
+
+* 📹 [Git Guide Video: Shell Scripts](https://2u-20.wistia.com/medias/1vox01752z)
 
 ### Full-Stack Blog
 
