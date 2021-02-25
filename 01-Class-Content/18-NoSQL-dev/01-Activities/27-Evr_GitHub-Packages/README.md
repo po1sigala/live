@@ -61,7 +61,7 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     registry=https://npm.pkg.github.com/OWNER
     ```
 
-    * ⚠️ Remember, while this file is titled `.npmrc`, we are pointing to GitHub's package registry and not the default `npm` registry. As a result, our package will get published to GitHub.
+    * ⚠️ Remember, while this file is titled `.npmrc`, we are pointing to GitHub's package registry and not the default `npm` registry. As a result, our package will get published to GitHub, and not to `npm`.
 
 5. Create a `index.js` file at the root of your repository that contains the following content:
 
