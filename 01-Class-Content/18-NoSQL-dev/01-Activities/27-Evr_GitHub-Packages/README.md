@@ -126,6 +126,6 @@ npm install
 
 ## Conclusion
 
-Congratulations on publishing your first package to GitHub! Using the screenshots below you can double check that your package was published successfully. Start by visiting your GitHub repository and clicking on "Packages" on the right:
+Congratulations on publishing your first package to GitHub! Using the screenshots below, you can verify that your package was published successfully. Start by visiting your GitHub profile, and then click on "Packages" in the right-hand navigation, as shown in the following image:
 
 ![packages](./Images/01-packages.png)
