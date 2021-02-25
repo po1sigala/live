@@ -94,7 +94,7 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     ```sh
     npm publish
     ```
-* Note: Packages will be published to GitHub packages despite the fact that we use `npm` to publish. 
+* **Note**: Remember that the `npm publish` command will publish our package to GitHub packages and not the `npm` registry because of the way we've configured our `.npmrc`.
 
 ## Installing GitHub Packages
 
