@@ -98,7 +98,7 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 
 ## Installing GitHub Packages
 
-If you want to share this package with someone, they can follow these instructions to install:
+If you want to share this package with someone, they can follow these instructions to install it:
 
 1. In the project directory that the package will be installed in, create a local `.npmrc` file and add the following:
 
