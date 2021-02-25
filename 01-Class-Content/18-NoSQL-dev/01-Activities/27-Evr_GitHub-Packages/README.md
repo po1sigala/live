@@ -112,7 +112,7 @@ If you want to share this package with someone, they can follow these instructio
 
 ```json
 "dependencies": {
-    "@USERNAME/github-pkg-demo": "1.0.0"
+    "@<YOUR_GITHUB_USERNAME>/github-pkg-demo": "1.0.0"
 },
 ```
 
