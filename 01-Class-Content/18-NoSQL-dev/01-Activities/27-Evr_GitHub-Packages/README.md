@@ -116,7 +116,7 @@ If you want to share this package with someone, they can follow these instructio
 },
 ```
 
-3. Then simply run `npm install` as your normally would.
+3. Then, simply run `npm install` as you normally would.
 
 ```sh
 npm install
