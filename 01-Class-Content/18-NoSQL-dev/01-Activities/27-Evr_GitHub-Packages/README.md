@@ -61,6 +61,8 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     registry=https://npm.pkg.github.com/OWNER
     ```
 
+    * ⚠️ Remember, while this file is titled `.npmrc`, we are pointing to GitHub's package registry and not the default `npm` registry. As a result, our package will get published to GitHub, and not to `npm`.
+
 5. Create a `index.js` file at the root of your repository that contains the following content:
 
     ```js
@@ -92,17 +94,38 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     ```sh
     npm publish
     ```
+* **Note**: Remember that the `npm publish` command will publish our package to GitHub packages and not the `npm` registry because of the way we've configured our `.npmrc`.
 
-## Conclusion
+## Installing GitHub Packages
 
-Congratulations on publishing your first package to GitHub! Using the screenshots below you can double check that your package was published successfully. Start by visiting your GitHub repository and clicking on "Packages" on the right:
+If you want to share this package with someone, they can follow these instructions to install it:
 
-![packages](./Images/01-packages.png)
-
-If you want to share this package with someone, they can follow the instructions on the package page:
+1. Create a local `.npmrc` file in the project directory where the package will be installed and add the following code:
 
 ```sh
-npm install @TestUser22/github-pkg-demo@1.0.0
+@OWNER:registry=https://npm.pkg.github.com
+```
+
+**Note**: Be sure to replace OWNER with your personal GitHub username.
+
+2. Add the package name to the list of dependencies located in your `package.json` file.
+
+```json
+"dependencies": {
+    "@<YOUR_GITHUB_USERNAME>/github-pkg-demo": "1.0.0"
+},
+```
+
+3. Then, simply run `npm install` as you normally would.
+
+```sh
+npm install
 ```
 
 ![packages-page](./Images/02-packages-page.png)
+
+## Conclusion
+
+Congratulations on publishing your first package to GitHub! Using the screenshots below, you can verify that your package was published successfully. Start by visiting your GitHub profile, and then click on "Packages" in the right-hand navigation, as shown in the following image:
+
+![packages](./Images/01-packages.png)
