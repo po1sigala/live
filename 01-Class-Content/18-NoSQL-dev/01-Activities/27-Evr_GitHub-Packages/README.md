@@ -106,7 +106,7 @@ If you want to share this package with someone, they can follow these instructio
 @OWNER:registry=https://npm.pkg.github.com
 ```
 
-* Be sure to replace OWNER with your personal GitHub username.
+**Note**: Be sure to replace OWNER with your personal GitHub username.
 
 2. Add the package name to the list of dependencies located in `package.json`
 
