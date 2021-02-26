@@ -50,7 +50,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-* [Unit 13 Slide Deck](https://docs.google.com/presentation/d/1_0n8JjM6cgmDyUfqGC6crF47JItD0mn9vzvQeYqZ5OE/edit?usp=sharing)
+* [Unit 13: ORM](https://docs.google.com/presentation/d/1_0n8JjM6cgmDyUfqGC6crF47JItD0mn9vzvQeYqZ5OE/edit?usp=sharing)
 
 ### Algorithms
 
