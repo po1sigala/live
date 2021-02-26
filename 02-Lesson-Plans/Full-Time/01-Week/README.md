@@ -1,4 +1,4 @@
-# Unit 01 & 02 Instructor Overview: HTML, CSS, and Git and Advanced CSS
+# Unit 01 & 02 Instructor Overview: HTML, CSS, Git and Advanced CSS
 
 ## Overview
 
@@ -20,7 +20,7 @@ Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content
 
 * For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise. 
 
-* The mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
+* The Unit 01 mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
 
 * Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code. 
 

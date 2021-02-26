@@ -198,7 +198,7 @@ By the end of class, students will be able to:
 
     ```html
     <script>
-    console.log("This is the log for the 🔥INLINE🔥 JavasScript");
+    console.log("This is the log for the 🔥INLINE🔥 JavaScript");
     </script> 
     ```
 
@@ -214,7 +214,7 @@ By the end of class, students will be able to:
     <body>
       <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
       <script>
-      console.log("This is the log for the 🔥INLINE🔥 JavasSript");
+      console.log("This is the log for the 🔥INLINE🔥 JavaScript");
       </script>
       <script src="script.js"></script>
     </body>    
@@ -223,7 +223,7 @@ By the end of class, students will be able to:
   * We use the `console.log()` method to log, or display, messages or data to the console. We place the message inside a string between the parentheses of the function call, as shown in the following example:
 
     ```js
-    console.log("This is the log for the 🔥INLINE🔥 JavasScript");
+    console.log("This is the log for the 🔥INLINE🔥 JavaScript");
     ```
 
 * Open `01-Ins_Script-ConsoleLog\script.js` in your IDE and note the following: 
