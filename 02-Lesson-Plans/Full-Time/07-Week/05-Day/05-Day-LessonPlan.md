@@ -1,462 +1,1095 @@
-# 7.5 Lesson Plan - Getting Associated with Relations (10:00 AM)
+# 07.5 Full-Time Lesson Plan: Model-View-Controller (MVC)
 
 ## Overview
 
-In today's class we'll reinforce the concepts we went over in the last class including CRUD actions, and passing in options into our queries, such as the "where" query attribute. We will also introduce the concept of relations in Sequelize.
-
-`Summary: Complete activities 11-14 in Unit 14`
-
-* When using any of the `Important PDFs`, please download and open. Do NOT preview on GitHub as they may not display properly in the browser.
-
+In today's class, students will have a chance to review MVC architecture, Handlebars.js, user authentication, and ESLint. Students will also be introduced to Prettier before starting on the mini-project.
 ## Instructor Notes
 
-* `12-Blog-CRUD/Solved` and `14-Post-Author-Joins/Solved` are the solution files it would be most beneficial to become familiar with before class. These are what students will be building the back-end for throughout class.
+* In this lesson, students will complete activities `21-Ins_MVC-Review` through `28-Stu_Mini-Project`.
 
-* Today students will see some unfamiliar syntax and there will be a good amount of going through the Sequelize docs, though we'll save them some time and trouble by pointing them in the right direction.
+* Be sure to have your MySQL server up and running. You can create the `user_db`, `crowdfund_db`, and `tech_blog_db` databases ahead of time, or you can demonstrate it live in class.
 
-* Make sure you have a MySQL database named "blogger" created on your machine before class starts.
+* The first two activities, the mini-project, and the homework each use a `.env` file. Be sure to create one or rename the existing `.env.EXAMPLE` file before demonstrating these activities.
 
-* Odds are some students will finish activities very early, while others will struggle with some of the new syntax introduced. Try and have these students work together if possible.
+* The activities (but not the homework) each also include a seeds script that can be executed with `npm run seed`.
 
-* Throughout class, stress to students that today will be all back-end coding. The exercises are all built in a way where they don't need to modify any client side code in order to better focus on Sequelize.
+* You will need to install the ESLint and Prettier VS Code extensions to properly demonstrate both libraries.
 
-* **Important**: Like last class, today's activities will be based around a series of iterative builds. As we're going along, there will be parts of the application that won't be 100% function at the end of some activities.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-  * The instructions for each activity will explain how to verify that it was completed correctly, i.e. "sequelize should have created a table with these values" or "if done correctly the blog table should have an authors column".
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-  * Make sure students are starting with the unsolved version for each activity, instead of just continuing to build on the previous activity. This will help ensure they're getting started on the right foot.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-  * We have created a sequelize deployment guide, video deployment guide, quick start guide, and CRUD action cheat sheet. These resources will be incredibly helpful to students so please be sure to zip up the Important Folder and provide it to your students.
-
-  * [Important Materials](../../../../01-Class-Content/14-Full-Stack/04-Important)
+* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
 ## Learning Objectives
 
-* To reinforce the concepts covered in the first 2 days, primarily CRUD and model creation with Sequelize.
+By the end of class, students will be able to:
 
-* To introduce the concept of relations using Sequelize.
+* Explain the interactions between the Model, View, and Controller.
 
-* To introduce the "include" option for performing joins with our queries.
+* Implement user authentication in a Node.js app.
 
-* To get students used to looking through Sequelize's documentation for answers to specific questions.
+* Explain the purpose of ESLint.
 
-* Students will create a blog app with a content management system that can be used to update it's data.
-
-## Slides
+* Explain and add Prettier to an existing project.
 
 ## Time Tracker
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:10AM| 2   | Instructor Demo: MVC Review        | 0:05     |
+| 10:15AM| 3   | Student Do: MVC Review             | 0:15     |
+| 10:30AM| 4   | Instructor Review: MVC Review      | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Auth Review       | 0:05     |
+| 10:45AM| 6   | Student Do: Auth Review            | 0:15     |
+| 11:00AM| 7   | Instructor Review: Auth Review     | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Lint Review       | 0:05     |
+| 11:15AM| 9   | Student Do: Lint Review            | 0:15     |
+| 11:30AM| 10  | Instructor Review: Lint Review     | 0:10     |
+| 11:40AM| 11  | Everyone Do: Prettier              | 0:20     |
+| 12:00PM| 12  | BREAK                              | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini-Project      | 0:05     |
+| 12:35PM| 14  | Student Do: Mini-Project           | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini-Project    | 0:10     |
+| 1:45PM | 16  | Introduce Homework                 | 0:05     |
+| 1:50PM | 17  | FLEX                               | 0:40     |
+| 2:30PM | 18  | End                                | 0:00     |
 
-[7.5 Time Tracker](https://docs.google.com/spreadsheets/d/1Is75JSnNnV4nQe-sKwHIB_Ite_paVc4IRaUT5WxlXA8/edit?usp=sharing)
-
-- - -
+---
 
 ## Class Instruction
 
-### 1. Instructor Do: Welcome Students and Sequelize Review (15 min)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class and explain todays focus.
+* Welcome students to class.
 
-* Ask students what we went over in the last class.
+* Congratulate the class on learning new back-end skills to complement their front-end skills. They now have everything they need to build full-stack applications!
 
-  * What CRUD methods did we learn? Ask students to briefly try and name as many as they can.
+* Remind students that the upcoming group project will involve combining all of these skills to make something of their own choosing.
 
-    * `findOne`: finds a single record from a table
-    * `findAll`: finds all records from a table
-    * `create`: creates a new record in a table
-    * `update`: updates a record or records in a table
-    * `destroy`: deletes a record or records from a table
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * What does "where" do? What might we use it for?
+  * ☝️ What kinds of apps would require a database?
 
-    * It's an object we can pass in to a Sequelize query. It lets us be more specific about which records we want to target.
+  * 🙋 Any app that requires users to create an account&mdash;for instance, scheduling appointments, tracking fitness or financial progress, or shopping.
 
-  * What are validations and/or flags?
-    * Optional built in Sequelize helpers that let us do things like set up default values for columns, or make sure text is within a certain length before inserting it.
+  * ☝️ What's the benefit of letting users create accounts?
 
-- - -
+  * 🙋 Their information is saved indefinitely and can be accessed across multiple devices (as opposed to using `localStorage`).
 
-### 2. Instructor Do: Demo App (10 mins)
+  * ☝️ Which content or features would you want to restrict to only logged-in users?
 
-* **Before demonstrating the app, make sure you update the `config.json` file in the `config` folder to match your own MySQL database.**
-* Open and run the `12-Blog-CRUD/Solved` folder. Navigate to `localhost:8080` and explain to your students that they will be setting up much of the back-end for this blogging Content Management System app. Show students how we can create posts, delete posts, and edit posts. Additionally we can select which categories of posts we want to see by using the drop down on the blog page.
-* Answer any questions about the desired functionality of this app before the exercise begins, but try not to get too off topic. We just want them to understand what the app does right now. There's no need to worry about the front end code today, and we'll just be creating the post model in this first activity.
+  * 🙋 A user's personal dashboard or profile page, the ability to create public posts, the ability to interact with other users, and so on.
 
-- - -
+  * ☝️ What kind of account-based app would aid your own personal interests?
 
-### 3. Warm Up: Create a Post Model (15 mins)
+  * 🙋 Answers might include apps that let you share or save recipes, schedule meetups, discuss and review movies, trade collectibles, plan a trip, or anything along those lines.
 
-Slack out the following folder and instructions:
+* Answer any questions before proceeding to the next activity.
 
-* **Folder**: `11-Post-Model/Unsolved`
+### 2. Instructor Demo: { ACTIVITY NAME } (5 min) 
 
-* **INSTRUCTIONS**:
+Instructor Demo: MVC Review (5 min) 
 
-  The goal of this exercise is to create a Post model using Sequelize.
+* Navigate to `21-Ins_MVC-Review` and explain the following:
 
-  1) Open the folder slacked out to you, run `npm install`
+  * This is a full-stack application that follows MVC architecture.
 
-  2) Create a new MySQL database and name it `blogger`. Don't create any tables.
+  * The folders labeled `models`, `views`, and `controllers` contain the three main pieces of the application.
 
-  3) Open the `config` folder and update the `config.json` file's `development` object to match your own local MySQL database.
+* Open `21-Ins_MVC-Review/models/User.js` in your IDE and explain the following:
 
-  4) Go to the `models` folder and open the `post.js` file.
+  * The Model is in charge of data-related logic. This particular Model maps to a `user` table in the database, as shown in the following example:
 
-  5) Create a Sequelize `Post` model here. The model should have a title property of type DataTypes.STRING, a body property of DataTypes.TEXT, and a category property of DataTypes.STRING. 
-  (<https://sequelize.org/master/manual/model-basics.html#data-types>)
-
-  6) To check if this worked, run `node server` in your terminal. Then open MySQL Workbench to check if a Posts table has been created.
-
-  **Note**: We still have some code to add in the next exercise to get this app fully functioning, just concentrate on creating the Post model and verifying that you were successful for now.
-
-  **BONUS**
-
-  If you complete the activity before time's up, try adding the following:
-
-  1) Flags to the title and body to prevent NULL values from being entered.
-
-  2) A validation to the title so that it must be between 1 and 160 characters.
-
-  3) A validation to the body so that it must be at least 1 character long.
-
-  4) A flag to the category so that it has a default value of "Personal" if a value is not supplied.
-
-- - -
-
-### 4. Instructor Do: Review the Post Model Activity (15 mins)
-
-* When time's up, load up the solved version of the activity on your machine `11-Post-Model/Solved`.
-
-  * Be sure to show students the `config.json` file and how you updated it to match you local MySQL database.
-
-  * Show students the `post.js` file and walk through each part of the code, have students try and explain what each piece is doing.
-
-    * Go over the validations and flags, but inform students not to worry if they didn't have time for the bonus. It's more important to understand creating models first.
-
-* Start the server and show the class how a Posts table was created for us in MySQL Workbench.
-
-* Answer any remaining questions, if there are none, ask the class:
-
-  * What is the difference between DataTypes.STRING and DataTypes.TEXT? We haven't used this until just now.
-
-    * STRING is the equivalent of varchar (255) in MySQL. Useful for storing relatively small values.
-
-    * TEXT is a virtually unlimited amount of storage for characters. We might use this if we needed to store something larger or of unknown size.
-
-    * This isn't something they need to memorize, a quick search of `Sequelize Data Types` will bring this right up.
-
-* Navigate to the `server.js` file and point out the section of code where we sync our database.
-
-  * Point out the `{ force: true }` object inside of the sync method. What is this doing?
-
-    * This means that whenever we sync our database (whenever we start our app), we want to drop our tables and recreate them with any updated schemas. This is useful during the development process when we're experimenting with our database structure. During today's activities we'll be changing our models quite a bit, so this is useful to have. We'd want to remove this before deploying to a production environment. (otherwise we'd lose all of our data whenever our app starts)
-
-- - -
-
-### 5. Instructor Do: Introduce CRUD Activity (10 mins)
-
-* Open the `12-Blog-CRUD/Solved` folder inside and start the server.
-
-* Demonstrate to students again how in the solved copy we're able to retrieve all posts, retrieve posts of a certain category, create new posts, update posts, and delete posts.
-
-* Inform students that now they'll be setting up the additional back-end functionality for this code inside of the `api-routes.js` file.
-
-* Again, stress that they won't need to (and shouldn't) modify any of the client side code to make this work.
-
-- - -
-
-### 6. Partners Do: CRUD Activity (20 mins)
-
-Slack out the following folder and instructions:
-
-* **Folder**: `12-Blog-CRUD/Unsolved`
-
-* **INSTRUCTIONS**:
-
-  The goal of this exercise is to add Sequelize CRUD methods inside each route specified in the comments in the api-routes.js file.
-
-  1) Open the folder slacked out to you, run `npm install`
-
-  2) Open the `config` folder and update the `config.json` file's `development` object to match your own local MySQL database.
-
-  3) Navigate to the `api-routes.js` file inside of the `routes` folder.
-
-  4) Fill in each route with the code described in the comments to add each CRUD action.
-
-* We can test our code works by checking to see if we have the following functionality (recommended order):
-
-  * Create a new post
-  * Get a list of all posts
-    * Get a list of all posts of a category
-    * Edit a post
-    * Delete a post
-
-* **If things aren't working as expected, check to see if any errors logged to the terminal.**
-
-- - -
-
-### 7. Everyone Do: Review the CRUD activity (15 mins)
-
-* Go through the solution in `12-Blog-CRUD/Solved` together. Have students explain to you what each method does, what the "where" attribute is doing in the methods using it.
-
-* Answer any remaining questions about the solution. Feel free to spend a bit more time reviewing this activity if necessary. 
-
-- - -
-
-### 8. Instructor Do: Demo Post Author Relationships (15 mins)
-
-* Open the `14-Post-Author-Joins/Solved` application in Chrome and demonstrate how the app's functionality has changed some.
-
-  * We've gotten rid of categories, but now we have a second model, Authors. In this example, Authors have Posts, and Posts belong to Authors. 
-
-  * Demonstrate how when we first start the app and try and create a new post, we're directed to the `author-manager.html` page, where we must first create an Author.
-
-  * Demonstrate how after creating an Author, we now have the option to create a new Post for that Author.
-
-  * After creating a new Post, we are redirected to the blog page where we see the Author's name by that Post.
-
-  * After creating a few Authors with Posts, navigate to `localhost:8080/api/posts` to show students what the data returned fro the API looks like now. Each Post has a nested Author object. This lets us easily grab information about the Author who wrote the Post with very little work on the client side.
-
-* Answer any questions about the app's functionality here, or why we might want to include the Author with a Post object when doing a GET request.
-* Concentrate on making sure students understand what the app is supposed to do, but try not to go into too much detail about the implementation here. We're going to talk about how we can restructure our models and queries to make this happen over the next few exercises.
-
-- - -
-
-### 9. Partners Do: Discuss Relations (10 mins)
-
-Slack out the following image and instructions and have students discuss with their partners.
-
-**Image**: 
-
-![3-Relationship-Exercise](Images/3-Relationship-Exercise.png) 
-
-**Post**
-
-![Post Model](Images/1-Post-Model.png)
-
-**Author**
-
-![Post Model](Images/2-Author-Model.png)
-
-* **Instructions:** 
-
-  * How can we restructure our database tables if we wanted the ability to form a relationship between a Post and an Author?
-
-  * What would we have to change with these tables to make that possible?
-
-    * Which table would have a foreign key and why?
-    * What would that look like?
-
-  * Remember, an Author can and will have multiple Posts, but a Post will only have a single Author.
-
-  * Assume we won't be making a third table.
-
-- - -
-
-### 10. Everyone Do: Discuss Relations (10 mins)
-
-* As a class discuss together the previous activity.
-
-* Have any volunteers explain their solutions to the class.
-
-* We're not so much looking for "the right" answer here, since there are multiple ways to create relations between tables, but we do want them to understand the solution we're going to be going with.
-
-* We're going to have a foreign key for the Author ID on the Posts table because:
-
-  * It would allow us to have multiple Posts all pointing to the same Author.
-
-  * We could make the foreign key a NOT NULL column. This way we could restrict a Post's creation if there is no Author.
-
-Show students the image below or slack it out to illustrate what this might look like:
-
-**Posts Table**
-
-![Post Author Relation](Images/4-Post-Author-Relation.png)
-
-- - -
-
-## 11. BREAK (30 mins)
-
-- - -
-
-### 12. Instructor Do: Introduce Sequelize Associations (10 mins)
-
-* Explain to the class that what we went over in the last activity is considered a `belongsTo` association, as well as a `hasMany` association in Sequelize. These are some of the most common types of associations.
-
-  * A Post **belongsTo** an Author.
-  * An Author **hasMany** posts.
-
-* This may be confusing at first, so we're going to do an exercise to hopefully help make this more clear. This exercise will have some unfamiliar syntax, so instructors and TA's should be walking around offering assistance.
-
-- - -
-
-### 13. Groups Do: Sequelize Associations (20 mins)
-
-* Slack out the following folder and instructions:
-
-  * **Folder:** `13-Post-Author-Association/Unsolved`
-
-* **INSTRUCTIONS:**
-
-  The goal of this exercise is to modify the Post and Author models so that they are associated with eachother.
-
-  1) Open the folder slacked out to you.
-
-  2) Run `npm install`
-
-  3) Open the `config` folder and update the `config.json` file's `development` object to match your own local MySQL database.
-
-  4) Navigate to the `post.js` file.
-
-  5) You will need to set an `associate` property to the `Post` model after it's defined. There's an example of this type of association being done here: 
-  <https://github.com/sequelize/express-example/blob/3fca27909b3ec9d72874ebe3317ffd8e5842b17e/models/task.js>
-
-  * This may take a few tries to implement correctly in your own Post model (There's a lot of curly braces there!). You can verify your code works by starting your node server and then checking MySQL Workbench. If the Posts table now has a foreign key of AuthorId, you were successful.
-
-  **Bonus**: If you complete the exercise before time's up, navigate to the author.js file and add a **hasMany** association from the Author model to the Post Model. An example of this type of association can be found here: 
-  <https://github.com/sequelize/express-example/blob/3fca27909b3ec9d72874ebe3317ffd8e5842b17e/models/user.js>
-
-  **Note** After this activity we have just one more step to complete the app and get it fully functioning.
-
-- - -
-
-### 14. Instructor Do: Review Sequelize Associations (20 mins)
-
-* Open the solved version of the previous exercise `13-Post-Author-Association/Solved` in your editor and navigate to the posts.js file.
-
-* Explain to the class that this while this may be some unfamiliar syntax, we don't need to perfectly understand how it all works to use it. A lot of Sequelize code is boilerplate we need not concern ourselves too much with. Nonetheless, it can be helpful to have some understanding:
-
-```js
-module.exports = (sequelize, DataTypes) => {
-  const Post = sequelize.define('Post', {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1],
+    ```js
+    User.init(
+      {
+        id: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          primaryKey: true,
+          autoIncrement: true,
+        },
+        name: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+        email: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          unique: true,
+          validate: {
+            isEmail: true,
+          },
+        },
+        password: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          validate: {
+            len: [8],
+          },
+        },
       },
-    },
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1],
-    },
-  });
+    );
+    ```
 
-  Post.associate = (models) => {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    Post.belongsTo(models.Author, {
-      foreignKey: {
-        allowNull: false,
-      },
+* Open `21-Ins_MVC-Review/controllers/homeRoutes.js` in your IDE and explain the following:
+
+  * The Controller processes requests. In the following example, the Controller is an Express.js route that renders a Handlebars.js template:
+
+    ```js
+    router.get('/', async (req, res) => {
+      res.render('homepage');
     });
-  };
+    ```
 
-  return Post;
-};
-```
+* Open `21-Ins_MVC-Review/views/homepage.handlebars` in your IDE and explain the following:
 
-* We set the `associate` property of the `Task` model equal to a function which has a `models` parameter.
-* Inside of this function we run the `Post.belongsTo` method and pass in some configuration.
-* The object's only key is `classMethods` and it's value is another object. 
-* This inner object has a key of `associate`.
-* We specify that we want to associate our `Post` model with `models.Author`.
-* We run the **belongsTo** method on Posts and take in models.Author as an argument.
-* We're adding a flag to our foreign key (AuthorId) saying this cannot be null. In other words, it won't let us create a Post without an Author.
-* **Explain that for the most part they can create an association just by copying and pasting this code. There's no need to worry about memorizing it.**
-* Briefly go over the **hasMany** association in the Author model. This was part of the bonus and isn't actually required to put a foreign key on the Post model, but it's VERY helpful as it helps us easily perform joins whether we're doing a find on Posts, or a find on Authors. This will be more clear in the next exercise!
+  * The View represents what the user sees in the browser. The View is built with Handlebars.js. However, currently the templates render hardcoded test data, as shown in the following example:
 
-```js
-module.exports = (sequelize, DataTypes) => {
-  const Author = sequelize.define('Author', {
-    // Giving the Author model a name of type STRING
-    name: DataTypes.STRING,
-  });
+    ```hbs
+    <div class="row align-center mb-5">
+      <div class="col-md-6">
+        <h2>{{{get_emoji}}} Test User</h2>
+      </div>
+      <div class="col-md-6">
+        <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+      </div>
+    </div>
+    ```
 
-  Author.associate = (models) => {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Author.hasMany(models.Post, {
-      onDelete: 'cascade',
+* From the `21-Ins_MVC-Review` directory in the command line, run `npm install`, `npm run seed`, and `npm start`. Open <http://localhost:3001/> in the browser to show the hardcoded data.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this with real data?
+
+  * 🙋 Run a Sequelize `findAll()` method in the Controller and send the serialized data to the Handlebars.js template.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_MVC-Review/README.md`.
+
+### 3. Student Do: MVC Review (15 min) 
+
+* Direct students to the activity instructions found in `22-Stu_MVC-Review/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Populate User Registry with Database Data
+
+  Work with a partner to implement the following user story:
+
+  * As a user, I want to see a list of other users who are registered with the app.
+
+  ## Acceptance Criteria
+
+  * It's done when the homepage displays the user data from the database instead of the hardcoded values.
+
+  * It's done when the user data is rendered as part of a Handlebars.js template.
+
+  * It's done when the users are sorted alphabetically by name.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The homepage displays a list of users and their email addresses.](./Images/01-user-registry.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Without a signup form, how can you quickly add new users to the database? What needs to happen with the Sequelize data before it can be passed into the Handlebars.js template?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are some other paradigms besides MVC?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 4. Instructor Review: MVC Review (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with MVC and Handlebars.js? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Sequelize serialization
+
+  * ✔️ Handlebar.js expressions
+
+* Open `22-Stu_MVC-Review/Solved/controllers/homeRoutes.js` in your IDE and explain the following: 
+
+  * We perform a Sequelize `findAll()` to get the user data, excluding the users' passwords but ordering them by name, as follows:
+
+    ```js
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
     });
-  };
+    ```
 
-  return Author;
-};
-```
+  * 🔑 We serialize the data to remove extraneous properties that Handlebars.js doesn't need, as shown in the following example:
 
-* There are other types of associations we can do with Sequelize, but belongsTo and hasMany are some of the most common and what we'll be using here.
+    ```js
+    const users = userData.map((project) => project.get({ plain: true }));
+    ```
 
-  * <https://sequelize.org/master/manual/assocs.html> Sequelize's docs are very thorough when it comes to the different types of relations that are available.
+  * 🔑 We pass the serialized array of users into the `homepage.handlebars` template, as follows:
 
-* We're almost done! While we've set up our relations, we haven't actually specified that we want to return joined data to the user inside of our queries, therefore our app won't work as expected quite yet. 
-* Inform students that in the next activity we're going to direct them to a section of Sequelize's documentation to see if they might be able to figure out how we need to change our queries to make this work.
+    ```js
+    res.render('homepage', { users });
+    ```
 
-- - -
+* Open `22-Stu_MVC-Review/Solved/views/homepage.handlebars` in your IDE and explain the following:
 
-### 15. Groups Do: Joins (25 mins)
+  * 🔑 We use a Handlebars.js `#each` helper to loop over the users and render a `<div>` element for each one, like in the following example:
 
-* Slack out the following folder and instructions:
+    ```hbs
+    {{#each users as |user| }}
+    <div class="row align-center mb-5">
+      <div class="col-md-6">
+        <h2>{{{get_emoji}}} {{user.name}}</h2>
+      </div>
+      <div class="col-md-6">
+        <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+      </div>
+    </div>
+    {{/each}}
+    ```
 
-  * **Folder:** `14-Post-Author-Joins/Unsolved`
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* **INSTRUCTIONS:**
+  * ☝️ What is another built-in helper that you can use with Handlebars.js?
 
-  The goal of this exercise is to modify our find queries in both post-api-routes.js and author-api-routes.js to use Sequelize's "include" option. We can use "include" to say that we want to return associated data.
+  * 🙋 The `#if` helper.
 
-  1) Open the folder slacked out to you
+  * ☝️ What is the difference between double- and triple-bracket expressions in Handlebars.js?
 
-  2) Run `npm install`
+  * 🙋 Double brackets render text; triple brackets render HTML.
 
-  3) Open the `config` folder and update the `config.json` file's `development` object to match your own local MySQL database.
+  * ☝️ What can we do if we don't completely understand this?
 
-  4) Navigate to the `post-api-routes.js` file.
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on models](https://sequelize.org/master/class/lib/model.js~Model.html) and the [npm documentation on Express Handlebars](https://www.npmjs.com/package/express-handlebars), and stick around for office hours to ask for help.
 
-  5) Add the "include" option to the queries specified in the comments. This is a feature called "eager loading". We want to "include" the Author model. Examples can be found here:
-  <https://sequelize.org/master/manual/eager-loading.html>
+* Answer any questions before proceeding to the next activity.
 
-  6) Navigate to the `author-api-routes.js` file and add the "include" option to the queries specified in the comments. Here we want to "include" the Post model.
+### 5. Instructor Demo: Auth Review (5 min) 
 
-  7) If successful the application should now be fully functional. After you create a few Authors with a few posts, try navigating to either `localhost:8080/api/posts` or `localhost:8080/api/authors` to make sure the JSON returned for both routes includes all of the data.
+* Navigate to `23-Ins_Auth-Review` from the command line and run `npm install`, `npm run seed`, and `npm start`.
 
-  **Hint**: The "include" key goes on the same options object as the "where" attribute we've been using. Examples can be found at the link supplied.
+* Open <http://localhost:3001/> in your browser and demonstrate the following:
 
-- - -
+  * 🔑 A non logged-in user is immediately redirected from `/` to `/login`.
 
-### 16. Instructor: Review and Dismiss Class (15 mins)
+  * 🔑 Logging in with the credentials "sal@hotmail.com" and "password12345" immediately redirects to the homepage.
 
-* Slack out the solution to the previous exercise  `14-Post-Author-Joins/Solved`
+  * The homepage displays a list of all registered users with the app.
 
-* Show students how by just adding `include: [<models>]` as an option in our query we can easily get the associated data.
+  * 🔑 Refreshing the page or closing and reopening the tab does not log the user out.
 
-* Create a few quick posts and demonstrate how when we navigate to `localhost:8080/api/authors` we get all of the author data with their Posts attached. Demonstrate the same for `localhost:808/api/posts` and note how the same is true in the reverse.
+  * 🔑 Selecting the "logout" button redirects to the `/login` page.
 
-* In MySQL, this is what's known as a "left outer join". We can do others with Sequelize, but this gives us very convenient access to both pieces of associated data.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-![Post Eager Loading](Images/6-Post-Eager-Loading.png)
+  * ☝️ What keeps the user logged in?
 
-### 17. Instructor Do: Questions and Review (15 mins)
+  * 🙋 Sessions and cookies.
 
-* Take this remaining time to ask students if they have any questions from today's material or anything covered this week.
+  * ☝️ How would we build this from scratch?
 
-* Answer any questions you can and encourage students to bring further questions to you or a TA during post class office hours.
+  * 🙋 We would need to install and configure `express-session` and `connect-session-sequelize`. We would need to create and destroy the session in the correct routes.
 
-### 18. END (0 mins)
+* Answer any questions before proceeding to the next activity.
 
-# Instructor Do: Private Self-Reflection (0 min)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Auth-Review/README.md`.
 
-Take some time on your own after class to think about the following questions. If there's anything that you're not sure how to answer, feel free to reach out to the curriculum team!
+### 6. Student Do: Auth Review (15 min) 
 
-1. How did today's class go?
-2. How did you teach it?
-3. How well do you feel you did teaching it?
-4. Why are you teaching it?
-5. Why did you teach it that way?
-6. What evidence can I collect to show my students are understanding?
-7. How will my students know they are getting it?
+* Direct students to the activity instructions found in `24-Stu_Auth-Review/README.md`.
 
-### Lesson Plan Feedback
+* Break your students into pairs that will work together on this activity.
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  ```md
+  # 📐 Add Comments to Implementation of a Login Route
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  Work with a partner to add comments describing the functionality of the code found in the following files:
+
+  * [Unsolved/server.js](./Unsolved/server.js)
+
+  * [Unsolved/controllers/api/userRoutes.js](./Unsolved/controllers/api/userRoutes.js)
+
+  * [Unsolved/utils/auth.js](./Unsolved/utils/auth.js)
+
+  * [Unsolved/controllers/homeRoutes.js](./Unsolved/controllers/homeRoutes.js)
+
+  * [Unsolved/views/layouts/main.handlebars](./Unsolved/views/layouts/main.handlebars)
+
+  * [Unsolved/public/js/login.js](./Unsolved/public/js/login.js)
+
+  * [Unsolved/public/js/logout.js](./Unsolved/public/js/logout.js)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other tools can be used to handle user authentication in a Node.js application?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Auth Review (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with user authentication? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Redirects
+
+  * ✔️ Sessions
+
+  * ✔️ Sequelize store
+
+* Open `24-Stu_Auth-Review/Solved/server.js` in your IDE and explain the following: 
+
+  * 🔑 We create a new Sequelize store using the `express-session` package, as follows:
+
+    ```js
+    const SequelizeStore = require('connect-session-sequelize')(session.Store);
+    ```
+
+  * 🔑 We configure the session object with the Sequelize store and add it as middleware to Express.js, as shown in the following example:
+
+    ```js
+    const sess = {
+      secret: 'Super secret secret',
+      cookie: {},
+      resave: false,
+      saveUninitialized: true,
+      store: new SequelizeStore({
+        db: sequelize
+      })
+    };
+
+    app.use(session(sess));
+    ```
+
+* Open `24-Stu_Auth-Review/Solved/controllers/api/userRoutes.js` in your IDE and explain the following: 
+
+  * In the `/login` route, we find the user whose email matches the posted data, like in the following example:
+
+    ```js
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    ```
+
+  * We compare the encrypted version of the posted password against what's saved in the database, as follows:
+
+    ```js
+    const validPassword = await userData.checkPassword(req.body.password);
+    ```
+
+  * 🔑 If the email and password validate, we create new session variables before sending a response back, as follows:
+
+    ```js
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+    ```
+
+  * 🔑 In the `/logout` route, we destroy the session, if one exists, as shown in the following example:
+
+    ```js
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    }
+    ```
+
+* Open `24-Stu_Auth-Review/Solved/utils/auth.js` in your IDE and explain the following:
+
+  * 🔑 We have a middleware function, shown in the following example, that will redirect the request if there is no session:
+
+    ```js
+    if (!req.session.logged_in) {
+      res.redirect('/login');
+    } else {
+      next();
+    }
+    ```
+
+* Open `24-Stu_Auth-Review/Solved/controllers/homeRoutes.js` in your IDE and explain the following:
+
+  * 🔑 We add the `withAuth()` middleware to protect routes from non logged-in users, as follows:
+
+    ```js
+    router.get('/', withAuth, async (req, res) => {
+
+    });
+    ```
+
+  * We pass the session variable into the Handlebars.js template to conditionally render elements later on, as follows:
+
+    ```js
+    res.render('homepage', {
+      users,
+      logged_in: req.session.logged_in,
+    });
+    ```
+
+  * 🔑 In the `/login` route, we redirect the request if the user has already logged in, as follows:
+
+    ```js
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+    ```
+
+* Open `24-Stu_Auth-Review/Solved/views/layouts/main.handlebars` in your IDE and explain the following:
+
+  * We use the `#if` helper to conditionally render elements for logged-in users, as shown in the following example:
+
+    ```hbs
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout">logout</button>
+    </nav>
+    {{/if}}
+    ```
+
+  * We also conditionally render the `logout.js` script to avoid unnecessary errors and network requests, as shown in the following example:
+
+    ```hbs
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    ```
+
+* Open `24-Stu_Auth-Review/public/js/login.js` in your IDE and explain the following:
+
+  * We stop the browser from submitting the form so that we can handle the POST request ourselves, as follows:
+
+    ```js
+    event.preventDefault();
+    ```
+
+  * We capture the user's credentials from the form elements, as shown in the following example:
+
+    ```js
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
+    ```
+
+  * We make a POST request with `fetch()` to send the user's credentials to the server, as follows:
+
+    ```js
+    const response = await fetch('/api/users/login', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    ```
+
+* Open `24-Stu_Auth-Review/public/js/logout.js` in your IDE and explain the following:
+
+  * To log a user out, we make a POST request to the `/logout` endpoint, as shown in the following example:
+
+    ```js
+    const response = await fetch('/api/users/logout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    ```
+
+  * 🔑 After receiving a successful response, we redirect on the front end, as follows:
+
+    ```js
+    if (response.ok) {
+      document.location.replace('/login');
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What keeps a user logged in?
+
+  * 🙋 The session and (on a long-term basis) the cookie.
+
+  * ☝️ What creates the cookie?
+
+  * 🙋 The Sequelize store.
+
+  * ☝️ In the client-server model, who has access to the session and cookie?
+
+  * 🙋 The server has access to both; the client can only access the cookie.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [npm documentation on express-session](https://www.npmjs.com/package/express-session) and the [npm documentation on connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Lint Review (5 min) 
+
+* Open `25-Ins_Lint-Review/package.json` in your IDE and explain the following:
+
+  * 🔑 We add `eslint` as a dependency to this project, as shown in the following example:
+
+    ```json
+    "devDependencies": {
+      "eslint": "^7.12.1"
+    }
+    ```
+
+* Open `25-Ins_Lint-Review/.eslintrc.json` in your IDE and explain the following:
+
+  * In the config file, we specify that ESLint shouldn't look at parent folders for other configurations&mdash;as shown in the following example:
+
+    ```json
+    "root": true
+    ```
+
+  * 🔑 We add an `env` property to specify the different environments and features we want ESLint to support&mdash;including ES6 syntax&mdash;as follows:
+
+    ```json
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "node": true,
+      "es6": true
+    }
+    ```
+
+* Open `25-Ins_Lint-Review/index.js` in your IDE and explain the following:
+
+  * Based on the ESLint rules, unused variables should be highlighted as an error, as shown in the following example:
+
+    ```js
+    const example = true;
+    ```
+
+  * Empty functions are not allowed, as shown in the following example:
+
+    ```js
+    const sayHello = () => {
+
+    };
+    ```
+
+  * Strings should use single quotes instead of double quotes, outlined as follows:
+
+    ```js
+    sayHello("hello");
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is ESLint useful?
+
+  * 🙋 It enforces best practices and consistent code across the team.
+
+  * ☝️ How do we know what other rules ESLint supports?
+
+  * 🙋 Read the documentation!
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Lint-Review`.
+
+### 9. Student Do: Lint Review (15 min) 
+
+* Direct students to the activity instructions found in `26-Stu_Lint-Review`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Fix Project's ESLint Rules
+
+  Work with a partner to resolve the following issues:
+
+  * As a developer, I don't want to see warnings when I use the `**` exponentiation operator.
+
+  * As a developer, I want to discourage other team members from explicitly assigning variables to `undefined`.
+
+  ## Expected Behavior
+
+  * The project's ESLint rules allow the use of `**` operators. 
+
+  * ESLint displays an error when variables are assigned to `undefined`. For example, `let x = undefined;` is unnecessary, because `let x;` on its own is sufficient.
+
+  ## Actual Behavior
+
+  * ESLint displays an error when developers use `**` operators. For example, `let x = 5 ** 2;`.
+
+  * Developers can assign variables to `undefined` without any warning from ESLint.
+
+  ## Steps to Reproduce the Problem
+
+  1. Run `npm install` to install the ESLint dependencies.
+
+  2. Open `index.js` in VS Code.
+
+  3. Note the underlined error on line 6.
+
+  ---
+
+  ## 💡 Hints
+
+  How do you adjust the rules for an ESLint configuration? And in which version of JavaScript were `**` exponentiation operators introduced?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other options can you add to your ESLint config file?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Lint Review (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with ESLint configurations? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ ES7
+
+  * ✔️ ESLint rules
+
+* Open `26-Stu_Lint-Review/Solved/.eslintrc.json` in your IDE and explain the following: 
+
+  * 🔑 The exponentiation operator is an ES7 feature, so we add `es2017` as an environment that we want ESLint to support, as follows:
+
+    ```json
+    "es2017": true
+    ```
+
+  * 🔑 We add `no-undef-init` to the list of rules to disallow assigning variables to `undefined`, as shown in the following example:
+
+    ```json
+    "no-undef-init": "error"
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we want to discourage `undefined` variable assignments?
+
+  * 🙋 Variables are already `undefined` as soon as they are declared.
+
+  * ☝️ How could we find out what other features come with ES7?
+
+  * 🙋 Google it!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [ESLint documentation on configuring](https://eslint.org/docs/user-guide/configuring), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Prettier/README.md`.
+
+### 11. Everyone Do: Prettier (20 min)
+
+* Open the [Prettier website](https://prettier.io/) in your browser and explain the following:
+
+  * ESLint will highlight code that doesn't meet certain standards, but it's still up to the developer to make those changes.
+
+  * Prettier is a library that will automatically format your code, using either its own rules or rules that you and your team configure.
+
+  * Prettier includes rules like adding spaces between certain keywords, moving chained methods to a new line, adding trailing commas after object properties, and keeping quotes consistent.
+
+  * Prettier and ESLint work hand in hand, because Prettier is more concerned with visual formatting whereas ESLint focuses on the code itself.
+
+* Direct students to the activity instructions found in `27-Evr_Prettier/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Open `27-Evr_Prettier/Solved/package.json` in your IDE and explain the following:
+
+  * 🔑 We add `prettier` and the `eslint-config-prettier` plugin to the project's dependencies, as follows:
+
+    ```json
+    "devDependencies": {
+      "eslint": "^7.12.1",
+      "eslint-config-prettier": "^6.15.0",
+      "prettier": "^2.1.2"
+    }
+    ```
+
+* Open `27-Evr_Prettier/Solved/.prettierrc.json` in your IDE and explain the following:
+
+  * 🔑 We create a Prettier config file to specify an additional rule for single quotes, as shown in the following example:
+
+    ```json
+    {
+      "singleQuote": true
+    }
+    ```
+
+* Open `27-Evr_Prettier/Solved/.prettierignore` in your IDE and explain the following:
+
+  * We create a `.prettierignore` file to exclude markdown files, as follows:
+
+    ```text
+    *.md
+    ```
+
+* Open `27-Evr_Prettier/Solved/.eslintrc.json` in your IDE and explain the following:
+
+  * We update the ESLint config file to make ESLint aware of Prettier, like in the following example:
+
+    ```json
+    "extends": ["prettier"]
+    ```
+
+* 🔑 We can run Prettier once, with the command `npx prettier`, or install the VS Code extension to automatically format files when saving.
+
+* Answer any questions before students go on break.
+
+### 12. BREAK (30 min)
+
+### 13. Instructor Demo: Mini-Project (5 min) 
+
+* Navigate to `28-Stu_Mini-Project/Main` from the command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open <http://localhost:3001/> in your browser and demonstrate the following:
+
+  * The homepage template renders a list of projects that are saved in the database.
+
+  * Each project links to a separate route (for example, `/project/2`) that renders a different View.
+
+* Navigate to <http://localhost:3001/login> in your browser and demonstrate the following:
+
+  * Users can create a new account or log in with an existing account.
+
+* Log in with the credentials "sal@hotmail.com" and "password12345" to demonstrate the following:
+
+  * After logging in, a user is redirected to the `/profile` route.
+
+  * In their profile, a user can create a new project listing or delete a project from the database.
+
+* Explain that the Sequelize models and API routes are already built.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build the remaining functionality?
+
+  * 🙋 With Sequelize queries, Handlebars.js templates, sessions, and client-side JavaScript.
+
+* Answer any questions before allowing students to start the mini-project.
+
+### 14. Student Do: Mini-Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
+
+* Break your students into groups that will work together on this activity.
+
+  ```md
+  # Unit 14 Mini-Project: Crowdfunding App
+
+  In this mini-project, you will work with a group to build a full-stack crowdfunding app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
+
+  ## User Stories
+
+  * As a user, I want to see a list of current projects seeking funding.
+
+  * As a user, I want to be able to create an account.
+
+  * As a registered user, I want to post my own projects to ask for funding.
+
+  ### Acceptance Criteria
+
+  * It's done when the `/` homepage route renders a list of all projects from the database.
+
+  * It's done when the `/project/:id` route renders an individual project's details based on the route parameter id.
+
+  * It's done when the `/login` route renders a form to log in and a form to create a new account.
+
+  * It's done when an existing user can enter their credentials on the login page to create a session on the server.
+
+  * It's done when a new user can create an account on the login page and then be immediately logged in with a session.
+
+  * It's done when the `/profile` route renders the logged-in user's projects and a form to create a new project.
+
+  * It's done when only a logged-in user can visit the `/profile` route.
+
+  * It's done when a logged-in user is redirected to `/profile` when they try to visit `/login` again.
+
+  * It's done when a user on the profile page can use the form to create a new project in the database.
+
+  * It's done when a user on the profile page can select a "Delete" button to remove their project from the database.
+
+  * It's done when a logged-in user can select a "Logout" button to remove their session.
+
+  * It's done when the API routes to create and delete posts are protected from non logged-in users.
+
+  * It's done when the code is organized using MVC architecture.
+
+  * It's done when the views are rendered with Handlebars.js templates.
+
+  ## Specifications 
+
+  * The database models have the following fields and associations:
+
+    * `User`
+
+      * `id`: primary key
+
+      * `name`
+
+      * `email`
+
+      * `password`
+
+    * `Project`
+
+      * `id`: primary key
+
+      * `name`
+
+      * `description`
+
+      * `date_created`
+
+      * `needed_funding`
+
+      * `user_id`: foreign key that references `User.id`
+
+    * Users have many projects, and projects belong to a user.
+
+      * If a user is deleted, all associated projects are also deleted.
+
+  ---
+
+  ## 💡 Hints
+
+  * What tools can you use to test the existing API routes if you don't yet have a front end?
+
+  * Where would you place the client-side JavaScript for capturing form data?
+
+  * How can middleware help protect routes from non logged-in users?
+
+  * How can Handlebars.js helpers (both built-in and custom) be used to render the desired results?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Add an `/edit/:id` route for logged-in users to update their projects' details. Then deploy the app to Heroku!
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Mini-Project (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Sessions
+
+  * ✔️ Handlebars.js
+
+  * ✔️ Sequelize queries
+
+* Open `28-Stu_Mini-Project/Main/controllers/homeRoutes.js` in your IDE and explain the following: 
+
+  * 🔑 In the `/` route, we find all projects, joining with the `user` table to get the user's name, like in the following example:
+
+    ```js
+    const projectData = await Project.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    ```
+
+  * We serialize the data and pass the array and the session variable into the template, as follows:
+
+    ```js
+    const projects = projectData.map((project) => project.get({ plain: true }));
+
+    res.render('homepage', { 
+      projects, 
+      logged_in: req.session.logged_in 
+    });
+    ```
+
+  * 🔑 In the `/profile` route, we use a custom `withAuth()` middleware function to protect the route against non logged-in users, as shown in the following example:
+
+    ```js
+    router.get('/profile', withAuth, async (req, res) => {
+
+    });
+    ```
+
+  * 🔑 In the `/profile` route, we find the user in the database using the session id and `JOIN` with their projects. The data is then serialized and passed into the template, as shown in the following example:
+
+    ```js
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Project }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+    ```
+
+* Open `28-Stu_Mini-Project/Main/views/profile.handlebars` in your IDE and explain the following:
+
+  * We use Handlebars.js expressions to render the data from Sequelize, as follows:
+
+    ```hbs
+    <h2>Welcome, {{name}}!</h2>
+    ```
+
+  * 🔑 We use the `#if` helper to only render the project list if this user has projects, as follows:
+
+    ```hbs
+    {{#if projects.length}}
+    <div class="col-md-6 project-list">
+
+    </div>
+    {{/if}}
+    ```
+
+  * 🔑 We use the `#each` helper to iterate over the projects and render a button with a `data-id` attribute, as follows:
+
+    ```hbs
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+    ```
+
+* Open `28-Stu_Mini-Project/Main/public/js/profile.js` in your IDE and explain the following:
+
+  * We include client-side JavaScript to capture a "delete" button click, read the `data-id` attribute, and send a DELETE request to the server with the id. See the following code for an example:
+
+    ```js
+    const delButtonHandler = async (event) => {
+      if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+
+        const response = await fetch(`/api/projects/${id}`, {
+          method: 'DELETE',
+        });
+      }
+    };
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are the benefits of using a template engine like Handlebars.js instead of rendering the data with client-side JavaScript?
+
+  * 🙋 This results in cleaner HTML and JS code, fewer network requests to the server, template reusability, improved SEO, and more.
+
+  * ☝️ Why is client-side JavaScript still needed when rendering data with Handlebars.js?
+
+  * 🙋 There are still user interactions (like button clicks) that we need to capture.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [npm documentation on Express Handlebars](https://www.npmjs.com/package/express-handlebars) and the [npm documentation on express-session](https://www.npmjs.com/package/express-session), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Introduce Homework (5 min)
+
+* Navigate to `02-Homework/Main` from the command line and run `npm install` and `npm start`.
+
+* Open <http://localhost:3001/signup> in your browser and demonstrate the following:
+
+  * We are building a community tech blog where anyone can create an account to contribute.
+
+* Create a new account on the signup page to demonstrate the following:
+
+  * Creating a new account redirects you to the dashboard page.
+
+  * On the dashboard page, users can select the "New Post" button to create a new blog post.
+
+* Navigate to <http://localhost:3001/dashboard/new> in your browser and demonstrate the following:
+
+  * Creating a new post will add it to the user's dashboard.
+
+  * If the user clicks on the post, they have the option to update its content or delete it.
+
+* Navigate to <http://localhost:3001/post/1> in your browser and demonstrate the following:
+
+  * Logged-in users can leave a comment on their own or others' blog posts.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning true full-stack development!
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 The Model is more complex than what we have seen before, with additional CRUD operations.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 It combines everything you have learned previously into a single app that serves a real-world purpose, which will be useful to include in your portfolio for potential employers.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+### 17. FLEX (40 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Answer any questions before ending the class.
+
+### 18. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
