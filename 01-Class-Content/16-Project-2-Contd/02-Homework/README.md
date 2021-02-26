@@ -1,4 +1,4 @@
-# 16 Project 2: Full-Stack Application
+# 16 Project 2: Professional Materials
 
 Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
 
@@ -19,7 +19,7 @@ If you are opting out of career services, this is *still a required assignment*.
 
 | Requirement      | Weight |
 | ---------------- | ------ |
-| Portoflio        | 40%    |
+| Portfolio        | 40%    |
 | GitHub Profile   | 40%    |
 | Resume           | 10%    |
 | LinkedIn Profile | 10%    |
