@@ -166,57 +166,49 @@ In today's class, students will start by doing the mini-project for Unit 13. The
       * `id`: primary key
 
       * `name`
-      
+        
       * `email`
 
     * `Location`
 
       * `id`: primary key
-    
+      
       * `name`
 
     * `Trips`
-      
+        
       * `id`: primary key
 
       * `trip_budget` 
-      
+        
       * `traveller_amount`
-      
-      * `traveller_id`: foreign key that references `Traveller.id`
-      
-      * `location_id`: foreign key that references `Location.id`
+        
+      * `traveller_id`: non-unique foreign key that references the `Traveller` model's `id` field (`Traveller.id`)
 
-    * Travellers have many trips, and trips belong to a traveller (one-to-many association).
-
-      * If a traveller is deleted, all associated trips are also deleted.
-
-    * Locations have many trips, and trips belong to a location (one-to-many association).
-
-      * If a location is deleted, all associated trips are also deleted.
+      * `location_id`: non-unique foreign key that references the `Location` model's `id` field (`Location.id`)
 
     * Travellers have many locations, and locations have many travellers through trips (many-to-many association).
+
+    * Set the `unique` flag to `false` to avoid a SQL error when creating the many-to-many relationship, because travellers can take multiple trips.
 
   ## 📝 Notes
 
   Refer to the documentation: 
 
-  * [Sequelize documentation on one-to-many relationships](https://sequelize.org/master/manual/assocs.html#one-to-many-relationships)
-
   * [Sequelize documentation on many-to-many relationships](https://sequelize.org/master/manual/assocs.html#many-to-many-relationships)
 
-  * [@TODO: Link to soon to exist Heroku JawsDB deploy guide]()
+  * [The Full-Stack Blog guide to deploying with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
   Use the following sample data as the request body POST `/api/trips` route:
 
-      ```json
-      {
-        "trip_budget": 2000.50,
-        "traveller_amount": 6,
-        "traveller_id": 1,
-        "location_id": 2
-      }
-      ```
+    ```json
+    {
+      "trip_budget": 2000.50,
+      "traveller_amount": 6,
+      "traveller_id": 1,
+      "location_id": 2
+    }
+    ```
 
   ---
 
@@ -235,6 +227,8 @@ In today's class, students will start by doing the mini-project for Unit 13. The
   * Add validations to all of the model data.
 
   * Create a password hashing and login system for travellers.
+
+  * Set up a **super many-to-many relationship** between travellers, locations, and trips to provide more querying options. To learn more, see the [Sequelize documentation on advanced many-to-many relationships](https://sequelize.org/master/manual/advanced-many-to-many.html).
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
