@@ -16,13 +16,13 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
   cd git_revert_demo
   git init .
   ```
-  
+
 * Open the `git_revert_demo` directory in your IDE and copy the [script.js](./script.js) file into it. You'll notice that it is the code from our previous activity on jQuery UI Interactions.
 
 * Make the initial commit:
 
   ```bash
-  git add .
+  git add -A
   git commit -m 'initial commit'
   ```
 
@@ -60,7 +60,7 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
 * In your terminal, add and commit the changes:
 
   ```bash
-  git add .
+  git add -A
   git commit -m 'added Autocomplete widget'
   ```
 
@@ -79,7 +79,7 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
 * Add and commit the changes:
 
   ```bash
-  git add .
+  git add -A
   git commit -m 'added Datepicker widget'
   ```
 
@@ -98,7 +98,7 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
 * Add and commit the changes:
 
   ```bash
-  git add .
+  git add -A
   git commit -m 'added Sortable interaction'
   ```
 
@@ -130,7 +130,7 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
   git revert HEAD
   ```
 
-* To test this, imagine that you changed your mind again and want to add the `Sortable` interaction back into your code. 
+* To test this, imagine that you changed your mind again and want to add the `Sortable` interaction back into your code.
 
 * In your terminal, run `git revert HEAD`. This action creates another new commit, which will again open the commit message editor prompting for a new commit message. Press `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
