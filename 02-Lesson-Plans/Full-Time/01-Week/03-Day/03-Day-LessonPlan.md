@@ -647,7 +647,7 @@ By the end of class, students will be able to do the following:
     }
     ```
 
-  * 🔑 When we want to control how the items will grow or shrink according to the available space, we can use the `flex` properties: `flex-grow`, `flex-shrink`, and `flex-basis`. Usually we just use the `flex` shorthand to set the three values of those properties in that order:
+  * 🔑 When we want to control how the items will grow or shrink according to the available space, we can use the `flex` properties: `flex-grow` and `flex-basis`. Usually we just use the `flex` shorthand to set the three values of those properties in that order:
 
     ```css
     .card {
@@ -915,7 +915,7 @@ By the end of class, students will be able to do the following:
 
   * 🔑 What is the `flex` property a shorthand property for?
 
-  * 🙋 It is a shorthand property for the `flex-grow`, `flex-shrink`, and `flex-basis` properties&mdash;in that order. In this activity, we are making the product cards not growable and not shrinkable, with an initial length of 400px:
+  * 🙋 It is a shorthand property for the `flex-grow` and `flex-basis` properties&mdash;in that order. In this activity, we are making the product cards not growable and not shrinkable, with an initial length of 400px:
 
     ```css
     .card {
