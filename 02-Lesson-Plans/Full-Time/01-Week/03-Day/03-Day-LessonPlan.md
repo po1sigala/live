@@ -867,8 +867,6 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `flex-wrap`
 
-  * ✔️ `flex-shrink`
-
   * ✔️ `justify-content`
 
   * ✔️ `flex` shorthand
@@ -899,16 +897,6 @@ By the end of class, students will be able to do the following:
     main {
       display: flex;
       flex-wrap: wrap;
-    }
-    ```
-
-  * 🔑 What does the `flex-shrink` property specify?
-
-  * 🙋 It specifies how much a flex item will shrink relative to the rest of the flex items. In this activity, we are telling the `footer` not to shrink as much as the other items by setting `flex-shrink` to `0`:
-
-    ```css
-    footer {
-      flex-shrink: 0;
     }
     ```
 
