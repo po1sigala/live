@@ -46,13 +46,8 @@ aside {
   text-align: center;
 }
 
-/* 
-What does the flex-shrink property specify?
-What is doing here? 
-TODO: Write your answer here 
-*/
+
 footer {
-  flex-shrink: 0;
   padding: 20px;
   text-align: center;
   background: #13293d;

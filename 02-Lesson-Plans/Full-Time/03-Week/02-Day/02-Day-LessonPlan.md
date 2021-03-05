@@ -20,9 +20,9 @@ This class introduces Bootstrap utilities and how to extend Bootstrap. Student's
 
 * Emphasize that whenever we use a new library, framework, or technology, it's best that we familiarize ourselves with the documentation as much as possible.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
-* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -76,7 +76,7 @@ By the end of class students will be able to:
 
 ## Class Instruction
 
-### 1. Instructor Demo: Bootstrap Utilities (5 min) 
+### 1. Instructor Demo: Bootstrap Utilities (5 min)
 
 * Welcome students to class.
 
@@ -90,7 +90,7 @@ By the end of class students will be able to:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How can we change the color of an HTML element without changing its existing style definition? 
+  * ☝️ How can we change the color of an HTML element without changing its existing style definition?
 
   * 🙋 Add another class to it that defines that color style.
 
@@ -98,7 +98,7 @@ By the end of class students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Bootstrap-Utilities/README.md`.
 
-### 2. Student Do: Bootstrap Utilities (15 min) 
+### 2. Student Do: Bootstrap Utilities (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Bootstrap-Utilities/README.md`.
 
@@ -125,7 +125,7 @@ By the end of class students will be able to:
 
   ## 📝 Notes
 
-  Refer to the following documentation (look for Utilities in the left navigation menu): 
+  Refer to the following documentation (look for Utilities in the left navigation menu):
 
   [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
@@ -143,14 +143,14 @@ By the end of class students will be able to:
 
   ## 🏆 Bonus
 
-  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
   * Using Chrome DevTools, what can you do to make this look more personalized? Try updating some of the more generic styles to use different colors or font sizes.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 3. Instructor Review: Bootstrap Utilities (10 min) 
+### 3. Instructor Review: Bootstrap Utilities (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -166,7 +166,7 @@ By the end of class students will be able to:
 
   * ✔️ Proper sizing and spacing goes a long way.
 
-* Open `16-Stu_Bootstrap-Utilities/Solved/index.html` in your IDE and explain the following: 
+* Open `16-Stu_Bootstrap-Utilities/Solved/index.html` in your IDE and explain the following:
 
   * 🔑 We can center a page's content vertically and horizontally by making the page have a minimum height set to the height of the page and making it a flexbox:
 
@@ -194,7 +194,7 @@ By the end of class students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Extending Bootstrap (5 min) 
+### 4. Instructor Demo: Extending Bootstrap (5 min)
 
 * Open `17-Ins_Bootstrap-Extend/index.html` in your browser and demonstrate the following:
 
@@ -219,7 +219,7 @@ By the end of class students will be able to:
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 🏗 Add Custom Styles to the Page 
+  # 🏗 Add Custom Styles to the Page
 
   Work with a partner to implement the following user story:
 
@@ -245,16 +245,16 @@ By the end of class students will be able to:
 
   ## 🏆 Bonus
 
-  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * What are some other UI frameworks that we could use? 
+  * What are some other UI frameworks that we could use?
 
   To get started, try [Bulma](https://bulma.io/), [Materialize](https://materializecss.com/), and a very customizable one called [Tailwind](https://tailwindcss.com/).
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 6. Instructor Review: Extending Bootstrap (10 min) 
+### 6. Instructor Review: Extending Bootstrap (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -270,13 +270,13 @@ By the end of class students will be able to:
 
   * ✔️ Use Bootstrap for layout and spacing but custom CSS for colors and fonts.
 
-* Open `18-Stu_Bootstrap-Extend/Solved/index.html` in your IDE and explain the following: 
+* Open `18-Stu_Bootstrap-Extend/Solved/index.html` in your IDE and explain the following:
 
   * 🔑 It's important that the stylesheet's `<link>` comes last in the HTML file, so that the styles aren't overridden.
 
   * 🔑 We can add our own classes to elements with Bootstrap classes to add custom CSS rules to them.
 
-* Open `18-Stu_Bootstrap-Extend/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `18-Stu_Bootstrap-Extend/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 We were able to add custom classes to both existing HTML and any HTML created as a result of the form being submitted:
 
@@ -284,7 +284,7 @@ By the end of class students will be able to:
     var cardName = $('<h5>').addClass('card-header custom-card-header').text(name);
     ```
 
-* Remind students that Bootstrap is simply a framework with a lot of popular style needs handled for us, but not all. 
+* Remind students that Bootstrap is simply a framework with a lot of popular style needs handled for us, but not all.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -298,11 +298,11 @@ By the end of class students will be able to:
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, check DevTools to determine what styles are needed, and stay for office hours to ask for help. 
+  * 🙋 We can refer to supplemental material, check DevTools to determine what styles are needed, and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next demo.
 
-### 7. Instructor Demo: Google Fonts (5 min) 
+### 7. Instructor Demo: Google Fonts (5 min)
 
 * Remind students how each computer has a default set of fonts that we can pick from, but over the years some services have emerged to help with providing more options.
 
@@ -326,13 +326,13 @@ By the end of class students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Google-Fonts/README.md`.
 
-### 8. Student Do: Google Fonts (15 min) 
+### 8. Student Do: Google Fonts (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Google-Fonts/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-* Let them know this is a bit more open-ended of an activity, and students should feel encouraged to find and implement fonts of their choosing. This is all about learning how to implement web fonts, not necessarily which ones are right. 
+* Let them know this is a bit more open-ended of an activity, and students should feel encouraged to find and implement fonts of their choosing. This is all about learning how to implement web fonts, not necessarily which ones are right.
 
   ```md
   # 📖 Add Custom Font to Page with Google Fonts
@@ -345,11 +345,11 @@ By the end of class students will be able to:
 
   * It's done when the page's body text uses fonts loaded from Google Fonts and not the default Bootstrap fonts.
 
-  * It's done when the page's headings text uses fonts loaded from Google Fonts and not the default Bootstrap fonts. 
+  * It's done when the page's headings text uses fonts loaded from Google Fonts and not the default Bootstrap fonts.
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [Google Fonts](https://fonts.google.com)
 
@@ -363,16 +363,16 @@ By the end of class students will be able to:
 
   ## 🏆 Bonus
 
-  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * How does Google develop their typography? 
+  * How does Google develop their typography?
 
   You can read [Google’s design blog](https://design.google/library/google-fonts/) to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 9. Instructor Review: Google Fonts (10 min) 
+### 9. Instructor Review: Google Fonts (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -388,7 +388,7 @@ By the end of class students will be able to:
 
   * ✔️ Don't pick too many fonts or , for performance reasons.
 
-* Open `20-Stu_Google-Fonts/Solved/index.html` in your IDE and explain the following: 
+* Open `20-Stu_Google-Fonts/Solved/index.html` in your IDE and explain the following:
 
   * 🔑 It's important that we start by finding a font or fonts that we want to use, but not too many variations.
 
@@ -430,7 +430,7 @@ By the end of class students will be able to:
 
 * Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
 
-  * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here! 
+  * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here!
 
   * When we click on Add Project, a modal opens up. When we get to the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
 
@@ -438,11 +438,11 @@ By the end of class students will be able to:
 
   * Datepicker is a jQuery UI widget, and Moment.js calculates the days until the due date. We will learn more about both of these tools today!
 
-## 13. Instructor Demo: jQuery UI Widgets (5 min) 
+## 13. Instructor Demo: jQuery UI Widgets (5 min)
 
 * Open the [jQuery UI documentation on dialog](https://jqueryui.com/dialog/) in your browser and demonstrate the following:
 
-  * 🔑 jQuery UI offers a combination of interactions, effects, widgets, utilities, and themes designed to work well together or on their own. 
+  * 🔑 jQuery UI offers a combination of interactions, effects, widgets, utilities, and themes designed to work well together or on their own.
 
   * 🔑 The dialog widget is a basic dialog window that opens on top of a page and can be moved, resized, and closed. We can use it to display instructions or announcements on a page.
 
@@ -451,7 +451,7 @@ By the end of class students will be able to:
 * Open `21-Ins_jQuery-UI-Widgets/dialog-docs.html` in your IDE and demonstrate the following:
 
   * Here we see the code for the dialog widget directly copied from the jQuery UI documentation. Let's go through the code and tweak it a bit.
-  
+
   * We see the jQuery UI `<link>` tag in the `<head>` section:
 
     ```html
@@ -494,8 +494,8 @@ By the end of class students will be able to:
 
   * After we customize the dialog widget code, the resulting code can be seen in `index.html`.
 
-  * Notice what the dialog function is doing&mdash;it is looking for an element with an id of `dialog` and applying the `.dialog()` to it. 
-  
+  * Notice what the dialog function is doing&mdash;it is looking for an element with an id of `dialog` and applying the `.dialog()` to it.
+
   * We can leave this in the `index.html` file, or we can move it to a `script.js` file.
 
 * Open `21-Ins_jQuery-UI-Widgets/index.html` in your browser and demonstrate the following:
@@ -535,28 +535,28 @@ Work with a partner to implement the following user stories:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [jQuery UI demos](https://jqueryui.com/demos/)
 
 ## 💡 Hints
 
-* You will need to add an array of skills to use with the autocomplete widget (for example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`). 
+* You will need to add an array of skills to use with the autocomplete widget (for example, `JavaScript`, `Node.js`, `Bootstrap`, `React`, and `CSS`).
 
 * Look for "Display month & year menus" in the list of examples on the datepicker widget page of the jQuery UI documentation.
 
 ## 🏆 Bonus
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner: 
+If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* What built-in HTML feature can also help enforce a date? 
+* What built-in HTML feature can also help enforce a date?
 
 Use [Google](https://www.google.com) or another search engine to answer this.
 ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 15. Instructor Review: jQuery UI Widgets (10 min) 
+### 15. Instructor Review: jQuery UI Widgets (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -572,7 +572,7 @@ Use [Google](https://www.google.com) or another search engine to answer this.
 
   * ✔️ Datepicker widget
 
-* Open `22-Stu_jQuery-UI-Widgets/Solved/index.html` in your IDE and explain the following: 
+* Open `22-Stu_jQuery-UI-Widgets/Solved/index.html` in your IDE and explain the following:
 
   * 🔑 First, we bring in the jQuery UI `<link>` tag and put it in the `<head>`:
 
@@ -580,20 +580,20 @@ Use [Google](https://www.google.com) or another search engine to answer this.
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />    
+    />
     ```
 
   * 🔑 We also bring in the jQuery UI `<script>` tag and put it below the `</body>`:
 
     ```html
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     ```
 
   * Notice that we are using a separate file for the JavaScript. Let's open that now.
 
-* Open `22-Stu_jQuery-UI-Widgets/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `22-Stu_jQuery-UI-Widgets/Solved/assets/js/script.js` in your IDE and explain the following:
 
-  * We see functions for printing the skills onto the page and handling the form submit. 
+  * We see functions for printing the skills onto the page and handling the form submit.
 
   * 🔑 If we look at the [jQuery UI documentation on autocomplete](https://jqueryui.com/autocomplete/), we see that we need to create an array for the `.autocomplete()` function to find and select from. Everyone's array of skills will be different but will look something like the following example:
 
@@ -630,8 +630,8 @@ Use [Google](https://www.google.com) or another search engine to answer this.
     });
     ```
 
-  * 🔑 If we look at the [jQuery UI documentation on datepicker](https://jqueryui.com/datepicker/), we see that we have a lot of choices in terms of customizing it. For the purposes of this activity, we want to show the month and year in drop-downs in place of the static month/year header. 
-  
+  * 🔑 If we look at the [jQuery UI documentation on datepicker](https://jqueryui.com/datepicker/), we see that we have a lot of choices in terms of customizing it. For the purposes of this activity, we want to show the month and year in drop-downs in place of the static month/year header.
+
   * So we look for the ["Display month & year menus" option](https://jqueryui.com/datepicker/#dropdown-month-year) and apply the additional Boolean options:
 
     ```js
@@ -662,11 +662,11 @@ Use [Google](https://www.google.com) or another search engine to answer this.
 
 * Answer any questions before proceeding to the next activity.
 
-## 16. Instructor Demo: jQuery UI Interactions (5 min) 
+## 16. Instructor Demo: jQuery UI Interactions (5 min)
 
 * Open the [jQuery UI documentation on sortable](https://jqueryui.com/sortable/) in your browser and demonstrate the following:
 
-  * 🔑 Interactions add basic mouse-based behaviors to any element. We can drag and drop items or sort items in a list. 
+  * 🔑 Interactions add basic mouse-based behaviors to any element. We can drag and drop items or sort items in a list.
 
   * 🔑 The sortable interaction allows the user to reorder elements in a list or grid using the cursor. Let's try that now!
 
@@ -691,8 +691,8 @@ Use [Google](https://www.google.com) or another search engine to answer this.
     </head>
     ```
 
-  * In the `<body>` let's make a list of skills that we will learn through this course. Can you name some skills that you look forward to learning? 
-  
+  * In the `<body>` let's make a list of skills that we will learn through this course. Can you name some skills that you look forward to learning?
+
     * Take answers from the students and use them in the following example:
 
       ```html
@@ -725,14 +725,14 @@ Use [Google](https://www.google.com) or another search engine to answer this.
           </ul>
         </div>
       </body>
-      ``` 
+      ```
 
 * Open `23-Ins_jQuery_UI_Interactions/index.html` in your IDE and explain the following:
 
   * After we customize the sortable interaction code, the resulting code can be seen in `index.html`.
 
   * Notice what the sortable function is doing&mdash;it is looking for an element with an id of `sortable` and applying the `.sortable()` function to it. Right afterwards, it will `.disableSelect()`:
-  
+
     ```html
     <script>
       $(function () {
@@ -746,8 +746,8 @@ Use [Google](https://www.google.com) or another search engine to answer this.
 
 * Open `23-Ins_jQuery_UI_Interactions/index.html` in your browser and demonstrate the following:
 
-  * Here we see the list of skills that we are most excited to learn more about. 
-  
+  * Here we see the list of skills that we are most excited to learn more about.
+
   * We can order them any way we want, by dragging them up and down the list.
 
 * Ask the class the following question (☝️) and call on students for the answer (🙋):
@@ -760,7 +760,7 @@ Use [Google](https://www.google.com) or another search engine to answer this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_jQuery-UI-Interactions/README.md`.
 
-### 17. Student Do: jQuery UI Interactions (15 min) 
+### 17. Student Do: jQuery UI Interactions (15 min)
 
 * Direct students to the activity instructions found in `24-Stu_jQuery-UI-Interactions/README.md`.
 
@@ -781,7 +781,7 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [jQuery UI demos](https://jqueryui.com/demos/)
 
@@ -793,14 +793,14 @@ Refer to the following documentation:
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* Can we implement drag-and-drop functionality without jQuery? 
+* Can we implement drag-and-drop functionality without jQuery?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 18. Instructor Review: jQuery UI Interactions (10 min) 
+### 18. Instructor Review: jQuery UI Interactions (10 min)
 
 * Ask the class the following question (☝️) and call on students for the answers (🙋):
 
@@ -814,7 +814,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `placeholder` option
 
-* Open `24-Stu_jQuery-UI-Interactions/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `24-Stu_jQuery-UI-Interactions/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * According to the [jQuery UI documentation on sortable](https://jqueryui.com/sortable), to allow the user to drag and reorder the skills listed under List of Skills, we need to use the sortable interaction.
 
@@ -856,7 +856,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: Moment.js Format (5 min) 
+## 19. Instructor Demo: Moment.js Format (5 min)
 
 * Open the [Moment.js documentation on format](https://momentjs.com/docs/#/displaying/) in your browser and explain the following:
 
@@ -880,7 +880,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     var today = moment();
     ```
 
-  * For the answer to the first question, we format the moment object `today` to use `MM Do, YYYY` format: 
+  * For the answer to the first question, we format the moment object `today` to use `MM Do, YYYY` format:
 
   ```js
     $("#1a").text(today.format("MMM Do, YYYY"));
@@ -914,18 +914,18 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
     $("#4a").text(takeOut + ", because it's currently week " + weekNum);
     ```
-  
+
 * Ask the class the following question (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 We will need to read the Moment.js documentation to figure out how to use Moment.js to format the date and time. 
+  * 🙋 We will need to read the Moment.js documentation to figure out how to use Moment.js to format the date and time.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
 
-### 20. Student Do: Moment.js Format (15 min) 
+### 20. Student Do: Moment.js Format (15 min)
 
 * Direct students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
 
@@ -944,7 +944,7 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [Moment.js Docs](https://momentjs.com/docs/#/displaying/)
 
@@ -961,13 +961,13 @@ Refer to the following documentation:
 ## 🏆 Bonus
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
-  
+
 * How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
 ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 21. Instructor Review: Moment.js Format (10 min) 
+### 21. Instructor Review: Moment.js Format (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -983,7 +983,7 @@ If you have completed the activity and want to further your knowledge, work thro
 
   * ✔️ Formatting Unix timestamp
 
-* Open `26-Stu_Moment-Format/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `26-Stu_Moment-Format/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 The first two questions require us to format a given date. We parse the date that needs to be reformatted and then specify how we want to display the date. We could've used any date for the graduation date. The code will look something like the following example:
 
@@ -1027,17 +1027,17 @@ If you have completed the activity and want to further your knowledge, work thro
 
 * Open the [Git documentation on git revert](https://git-scm.com/docs/git-revert) in your browser and explain the following:
 
-  * As you work with your teammates on projects and other collaborative assignments, there will be times when you might wish that you could undo a commit. 	  
-  
+  * As you work with your teammates on projects and other collaborative assignments, there will be times when you might wish that you could undo a commit.
+
   * `git revert` isn't exactly an undo operation, but it will figure out how to invert the changes introduced by the commit and then append a new commit with the resulting inverse content. This way you are not losing any history, which is very important for the integrity of your revision history and for reliable collaboration with others.
-  
-  * Let's say that you are working with your classmates on a project and you are trying to fix a bug. You find out that the bug was caused by a single commit. You can use `git revert` to go fix it and commit a new snapshot. 
+
+  * Let's say that you are working with your classmates on a project and you are trying to fix a bug. You find out that the bug was caused by a single commit. You can use `git revert` to go fix it and commit a new snapshot.
 
 * Direct students to the activity instructions found in `27-Evr_Git-Revert/README.md`.
 
 * While everyone is working on the activity, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. This is a good way for your team to prioritize students that need extra help.
 
-* If necessary, you can review the activity with students. 
+* If necessary, you can review the activity with students.
 
 * Open your command line, create a new directory, `cd` into it, and initialize a Git repo there:
 
@@ -1049,12 +1049,12 @@ If you have completed the activity and want to further your knowledge, work thro
 
 * Open the `git_revert_demo` directory in your IDE and copy the `27-Evr_Git-Revert/script.js` file into it.
 
-* Let students know that we are taking the `script.js` file from the jQuery UI activity. 
+* Let students know that we are taking the `script.js` file from the jQuery UI activity.
 
   * Before we test out the `git revert` command, we will need to make a few commits. Let's make the initial commit as follows:
 
     ```bash
-    git add .
+    git add -A
     git commit -m 'initial commit'
     ```
 
@@ -1092,7 +1092,7 @@ If you have completed the activity and want to further your knowledge, work thro
   * Then we commit the new code:
 
     ```bash
-    git add .
+    git add -A
     git commit -m 'added Autocomplete widget'
     ```
 
@@ -1111,7 +1111,7 @@ If you have completed the activity and want to further your knowledge, work thro
   * We commit the new code:
 
     ```bash
-    git add .
+    git add -A
     git commit -m 'added Datepicker widget'
     ```
 
@@ -1130,7 +1130,7 @@ If you have completed the activity and want to further your knowledge, work thro
   * We commit again:
 
       ```bash
-      git add .
+      git add -A
       git commit -m 'added Sortable interaction'
       ```
 
@@ -1146,13 +1146,13 @@ If you have completed the activity and want to further your knowledge, work thro
     git revert 601e2affb5fca3addd898cb09ef950c562338823
     ```
 
-  * This will create a new commit, which will open the commit message editor prompting for a new commit message. 
-  
+  * This will create a new commit, which will open the commit message editor prompting for a new commit message.
+
 * Demonstrate to students how to `esc`, `Shift + Z`, and `Shift + Z` to exit out of the message editor.
 
 * Open `script.js` in your IDE:
 
-  * When we check the `script.js` file, we see that the sortable interaction is indeed gone. 
+  * When we check the `script.js` file, we see that the sortable interaction is indeed gone.
 
 * Run `git log` in your terminal and demonstrate the following:
 

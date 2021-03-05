@@ -20,7 +20,7 @@ Use the previous three exercises as references if needed to put this together.
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How could you use `fetch()` to retrieve JSON from a data file instead of a third-party API?
+* What are some other third-party APIs you could make `fetch()` requests to?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

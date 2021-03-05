@@ -4,9 +4,9 @@ Every developer has done it&mdash;you make a mistake but fail to notice it until
 
 Luckily, a powerful tool called **Git branching** helps prevent scenarios like this and makes it easier to fix problems when they do arise. Branching allows team members to work on separate features at the same time while minimizing conflicts. For instance, you can easily switch to a colleague's branch to help them with their code or ask colleagues to review your own code before merging it with the main codebase.
 
-You'll likely use branching every day in your development career. Whenever you need to fix a bug or build a new feature, you'll create a new branch&mdash;an isolated environment where you can write and test code without messing up the main codebase. This way, you always have the option to return to an earlier version without losing everything. Once the work is complete, you can merge the branch with the main codebase and move on! 
+You'll likely use branching every day in your development career. Whenever you need to fix a bug or build a new feature, you'll create a new branch&mdash;an isolated environment where you can write and test code without messing up the main codebase. This way, you always have the option to return to an earlier version without losing everything. Once the work is complete, you can merge the branch with the main codebase and move on!
 
-In this activity, we'll learn the concept of branching by using Git commands to create a new branch, complete a feature in the new branch, merge the branch with `main`, and close the branch when finished. 
+In this activity, we'll learn the concept of branching by using Git commands to create a new branch, complete a feature in the new branch, merge the branch with `main`, and close the branch when finished.
 
 ## Instructions
 
@@ -24,7 +24,7 @@ In this activity, we'll learn the concept of branching by using Git commands to 
   cd git_branch_demo
   git init .
   ```
-  
+
 * Open the `git_branch_demo` directory in VS Code.
 
 * Now that we're ready to create the first feature, we need to create a new branch. Remember, the goal is to avoid working in the `main` branch, so that we can make mistakes on the new feature without damaging code that already works.
@@ -33,7 +33,7 @@ In this activity, we'll learn the concept of branching by using Git commands to 
 
 ```bash
 touch README.md
-git add .
+git add -A
 git commit -m "creating a top level readme"
 ```
 
@@ -70,7 +70,7 @@ git commit -m "creating a top level readme"
 * Finally, add and commit the changes that you made, as follows:
 
   ```bash
-    git add .
+    git add -A
     git commit -m "Created index.js and added text to the file"
     ```
 
@@ -111,13 +111,13 @@ git commit -m "creating a top level readme"
 
   ![The command line only displays the main branch.](./Images/08-deleted-branch.png)
 
-* Congratulations, you've now completed your first branch lifecycle! You created an isolated environment on a new branch so that you could write and test code for a new feature, the `index.js` file. Once you finished adding text to `index.js`, you merged the feature branch with the main codebase on `main`. You then closed the feature branch, because you no longer needed to work on the `index.js` file. 
+* Congratulations, you've now completed your first branch lifecycle! You created an isolated environment on a new branch so that you could write and test code for a new feature, the `index.js` file. Once you finished adding text to `index.js`, you merged the feature branch with the main codebase on `main`. You then closed the feature branch, because you no longer needed to work on the `index.js` file.
 
 ### Hints
 
-* You'll come up with your own naming conventions for branches when you're working on your own project. Try to be descriptive but concise to help other developers (or your future self) understand what is happening in each branch. 
+* You'll come up with your own naming conventions for branches when you're working on your own project. Try to be descriptive but concise to help other developers (or your future self) understand what is happening in each branch.
 
-* Popular naming conventions in the field include `feature/<feature-name>`, `issue/<issue-reference>`, etc. So it is a good idea to practice these conventions while you're learning. 
+* Popular naming conventions in the field include `feature/<feature-name>`, `issue/<issue-reference>`, etc. So it is a good idea to practice these conventions while you're learning.
 
 * Avoid including your own name in the branch name, because multiple developers might end up working in the same branch. So, for example, instead of `git branch rachels-feature`, try using `git branch user-login-page`.
 
