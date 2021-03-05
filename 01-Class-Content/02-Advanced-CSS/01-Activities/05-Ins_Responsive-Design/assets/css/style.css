@@ -52,7 +52,6 @@ section {
 }
 
 footer {
-  flex-shrink: 0;
   padding: 20px;
   text-align: center;
   background: #13293d;

@@ -1,6 +1,6 @@
 # **Instructions**
 
-* Create a database called `playlist_db`, then create a table inside of this database called `songs`. The songs table should have four columns:
+* If you haven't already, create a database called `playlistDB`, then create a table inside of this database called `songs`. The songs table should have four columns:
 
   1. id
   2. title
@@ -11,7 +11,9 @@
 
 * We are going to print playlists to the console based upon the genre or artist.
 
-* First create code that prints all songs within your database to the terminal.
+* First, establish a connection to the database in a Node.js script.
+
+* Then create code that prints all songs within your database to the terminal.
 
 * Now create code that prints songs of a specific genre/artist to the terminal.
 

@@ -86,11 +86,15 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit.
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: Git Collaboration](./01-Activities/26-Evr_Git-Collaboration)
+  * 📖 [Git Guide: Project Collaboration](./01-Activities/26-Evr_Git-Collaboration)
+
+  * 📹 [Git Guide Video: Project Collaboration](https://2u-20.wistia.com/medias/60x5om18ac)
 
 ### General
+
+Refer to these resources for additional information about topics covered in this unit.
 
 * 📖 [GitHub API documentation](https://docs.github.com/en/rest/reference)
 
