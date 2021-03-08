@@ -1,7 +1,18 @@
+// Helper function to generate unique IDs
+const uuid = () => {
+  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+    (
+      c ^
+      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+    ).toString(16)
+  );
+};
+
+// Function to initialize our IndexDB connection
 const IDB = function init() {
   let db = null;
   let objectStore = null;
-  const DBOpenReq = indexedDB.open('BudgetDB', 9);
+  const DBOpenReq = indexedDB.open('BudgetDB', 10);
 
   // An error occurred while trying to open the DB
   DBOpenReq.addEventListener('error', (err) => {
@@ -22,7 +33,8 @@ const IDB = function init() {
     console.log('upgrade', db);
     if (!db.objectStoreNames.contains('BudgetStoreDB')) {
       objectStore = db.createObjectStore('BudgetStoreDB', {
-        autoIncrement: true,
+        // autoIncrement: true,
+        keyPath: 'id',
       });
     }
 
@@ -30,6 +42,40 @@ const IDB = function init() {
     if (db.objectStoreNames.contains('deleteMe')) {
       db.deleteObjectStore('deleteMe');
     }
+  });
+
+  // Select our budget form
+  const addButton = document.getElementById('add-btn');
+  const subButton = document.getElementById('sub-btn');
+
+  // Event listener for submit buttons
+  addButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('inside event listener for the form');
+
+    let name = document.getElementById('t-name').value.trim();
+    let value = parseInt(document.getElementById('t-amount').value);
+
+    let transaction = {
+      id: uuid(),
+      name,
+      value,
+    };
+
+    // Transaction
+    let tx = db.transaction('BudgetStoreDB', 'readwrite');
+    tx.oncomplete = (e) => {
+      console.log(e);
+    };
+    tx.onerror = (e) => {
+      console.warn(err);
+    };
+
+    let store = tx.objectStore('BudgetStoreDB');
+    let request = store.add(transaction);
+
+    request.onsuccess = (e) => console.log('Successfully added an object 🚀 ');
+    request.onerror = (err) => console.log('Error in request to add', err);
   });
 };
 window.addEventListener('online', IDB());
