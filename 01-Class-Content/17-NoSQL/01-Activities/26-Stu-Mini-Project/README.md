@@ -4,31 +4,31 @@ In this activity, you will implement IndexedDB so the budget tracker persists da
 
 ## Instructions
 
-* Create a new db request for a `budget` database.
+* Create a new db request for a `BudgetDB` database.
 
-* Inside `onupgradeneeded`, create an object store called `pending` and set `autoIncrement` to `true`.
+* Inside `onupgradeneeded`, create an object store called `BudgetStore` and set `autoIncrement` to `true`.
 
 * Inside your `saveRecord()` function:
 
-  * Create a transaction on the `pending` object store with `readwrite` access.
+  * Create a transaction on the `BudgetStore` object with `readwrite` access.
 
-  * Access your pending object store.
+  * Access your `BudgetStore`.
 
   * Add a record to your store with the `add` method.
 
 * Inside the `checkDatabase` function:
 
-  * Open a transaction on your `pending` object store.
+  * Open a transaction on your `BudgetStore` object.
   
-  * Access your `pending` object store.
+  * Access your `BudgetStore` object store.
 
   * Get all records from store and set to a variable.
 
 * Inside `getAll.onsuccess`:
 
-  * If successful, open a transaction on your `pending` object store.
+  * If successful, open a transaction on your `BudgetStore` object.
 
-  * Access your `pending` object store.
+  * Access your `BudgetStore` object.
 
   * Clear all items in your store.
 
