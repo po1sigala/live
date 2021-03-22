@@ -423,13 +423,13 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when I store a name in a variable called `name` and this line is logged to the console: "My name is `VALUE_STORED_IN_VARIABLE_NAME`."
+  * It's done when I store a name in a variable called `personName` and this line is logged to the console: "My name is `VALUE_STORED_IN_VARIABLE_NAME`."
 
   * It's done when I store a number in a variable called `pets` and this line is logged to the console: "I have `VALUE_STORED_IN_VARIABLE_PETS` pet(s)."
 
   * It's done when I store a fun fact in a variable called `funFact` and this line is logged to the console: "Fun fact: `VALUE_STORED_IN_VARIABLE_FUNFACT`."
 
-  * It's done when I reassign the values of `name`, `pets`, and `funFact` with my new partner's information and the logs in the console reflect the new values.
+  * It's done when I reassign the values of `personName`, `pets`, and `funFact` with my new partner's information and the logs in the console reflect the new values.
 
   ## 💡 Hints
 
@@ -466,16 +466,16 @@ By the end of class, students will be able to:
 
 * Open `04-Stu_Hello-Variable/Solved/script.js` in your IDE and explain the following: 
 
-  * 🔑 We declare variables using `var` and assign a value using `=`. The variable `name` is declared using `var` and assigned the value `"Sakura"`, as follows:
+  * 🔑 We declare variables using `var` and assign a value using `=`. The variable `personName` is declared using `var` and assigned the value `"Sakura"`, as follows:
 
     ```js
-    var name = "Sakura";
+    var personName = "Sakura";
     ```
 
   * 🔑 The variable's values are accessed using the variables' names. Because we have assigned the variables the values `"Sakura"`, `3` , and `"I like pineapple on my pizza."`, those values are used in the following console logs: 
 
     ```js
-    console.log("My name is " + name + ".");
+    console.log("My name is " + personName + ".");
     console.log("I have " + pets + " pet(s).");
     console.log("Fun fact: " + funFact);
     ```
@@ -483,7 +483,7 @@ By the end of class, students will be able to:
   * 🔑 We reassign a variable's values using `=`. As shown in the following example, the `var` keyword is not used during reassignment because the variable has already been declared:
 
     ```js
-    name = "Mateo";
+    personName = "Mateo";
     pets = 5;
     funFact = "I was a yo-yo champ in third grade."
     ```
@@ -491,7 +491,7 @@ By the end of class, students will be able to:
   * After the variables are reassigned, the variable names will access the new values `"Mateo"`, `5`, and `"I was a yo-yo champ in third grade."`. The console logs will use the new values, as shown in the following example:
 
     ```js
-    console.log("My name is " + name + ".");
+    console.log("My name is " + personName + ".");
     console.log("I have " + pets + " pet(s).");
     console.log("Fun fact: " + funFact);
     ```
