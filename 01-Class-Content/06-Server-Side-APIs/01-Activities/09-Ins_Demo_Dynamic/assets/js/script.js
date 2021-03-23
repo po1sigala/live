@@ -14,9 +14,9 @@ function getApi() {
         var userName = document.createElement('h3');
         var issueTitle = document.createElement('h4');
         var issueBody = document.createElement('p');
-        userName.textContent = data[i].user.login;
-        issueTitle.textContent = data[i].title;
-        issueBody.textContent = data[i].body;
+        userName.innerHTML = data[i].user.login;
+        issueTitle.innerHTML = data[i].title;
+        issueBody.innerHTML = data[i].body;
         issueContainer.append(userName);
         issueContainer.append(issueTitle);
         issueContainer.append(issueBody);
