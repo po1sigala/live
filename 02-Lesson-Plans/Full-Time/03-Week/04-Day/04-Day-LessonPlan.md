@@ -87,11 +87,8 @@ By the end of class, students will be able to:
 
     ```js
     var userName = document.createElement('h3');
-    var issueBody = document.createElement('p');
-    userName.innerHTML = data[i].user.login;
-    issueBody.innerHTML = data[i].body;
+    userName.textContent = data[i].user.login;
     issueContainer.append(userName);
-    issueContainer.append(issueBody);  
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

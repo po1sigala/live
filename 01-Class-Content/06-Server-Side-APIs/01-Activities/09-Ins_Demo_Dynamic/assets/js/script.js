@@ -12,14 +12,11 @@ function getApi() {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
         var userName = document.createElement('h3');
-        var issueTitle = document.createElement('h4');
-        var issueBody = document.createElement('p');
-        userName.innerHTML = data[i].user.login;
-        issueTitle.innerHTML = data[i].title;
-        issueBody.innerHTML = data[i].body;
+        var issueTitle = document.createElement('p');
+        userName.textContent = data[i].user.login;
+        issueTitle.textContent = data[i].title;
         issueContainer.append(userName);
         issueContainer.append(issueTitle);
-        issueContainer.append(issueBody);
       }
     });
 }
