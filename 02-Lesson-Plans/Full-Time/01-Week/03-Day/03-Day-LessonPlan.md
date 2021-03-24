@@ -14,7 +14,7 @@ In today's class, students will wrap up Unit 01 by collaborating on a mini-proje
 
 * This mini-project might also be some students' first experience building a development project from scratch. Remind them to break down the project into small, manageable steps and to let both the user story and acceptance criteria guide them to a step-by-step solution. 
 
-* The activities of Unit 02 use `max-width` over `min-width` for media query breakpoints. This is because it's a bit simpler to introduce responsive breakpoints with a "desktop-first" approach. 
+* The activities of Unit 02 use `max-width` over `min-width` for media query breakpoints. This is because it's simpler to introduce responsive breakpoints with a "desktop-first" approach. 
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
@@ -504,7 +504,7 @@ By the end of class, students will be able to do the following:
 
   * ☝️ If there's a `max-width`, is there also a `min-width`?
 
-  * 🙋 Yes! Ultimately, you'd want to use `min-width` and design for a "mobile-first" approach, but it's a bit easier to learn media queries taking a "desktop-first" approach and using `max-width` instead.
+  * 🙋 Yes! Ultimately, you'd want to use `min-width` and design for a "mobile-first" approach, but it's easier to learn media queries taking a "desktop-first" approach and using `max-width` instead. Although we use `max-width` here, you'll likely see `min-width` used in some future activities as well.
 
   * ☝️ How would we build the next activity?
 
