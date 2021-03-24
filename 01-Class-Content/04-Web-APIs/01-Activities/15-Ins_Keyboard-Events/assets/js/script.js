@@ -26,7 +26,6 @@ textAreaEl.addEventListener('keydown', function (event) {
   );
   if (alphabetNumericCharacters.includes(key)) {
     for (var i = 0; i < elements.length; i++) {
-      console.log(elements[i]);
       elements[i].textContent += event.key;
     }
   }
