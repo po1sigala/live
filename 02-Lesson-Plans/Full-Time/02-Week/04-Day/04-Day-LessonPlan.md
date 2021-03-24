@@ -640,7 +640,7 @@ By the end of class students will be able to:
 
   * When we input a letter in the text box, the letter that is pressed on the keyboard is displayed.
 
-* Open `15-Ins_Keyboard-Events/assets/js/script.js` in your browser and demonstrate the following:
+* Open `15-Ins_Keyboard-Events/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 We attach a `change` event to the `<select>` element using `addEventListener()`. When the user selects a value from the dropdown, the function will execute. Note that the first parameter is the event, so we use `change`, as shown in the following example:
 
