@@ -36,6 +36,8 @@ In this activity, you will implement IndexedDB so the budget tracker persists da
 
 * You can use the the comments in `public/db.js` as a guide.
 
+* If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode. 
+
 ## 🏆 Bonus
 
 * Create a button that resets all funds to zero in your indexedDB.
