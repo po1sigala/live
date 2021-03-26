@@ -635,6 +635,8 @@ By the end of class, students will be able to do the following:
     ```css
     main {
       display: flex;
+      flex-wrap: wrap;
+      margin-top: 2%;
     }
     ```
 
@@ -644,7 +646,8 @@ By the end of class, students will be able to do the following:
     main {
       display: flex;
       flex-wrap: wrap;
-     }
+      margin-top: 2%;
+    }
     ```
 
   * 🔑 To align the items and distribute the empty space between the child elements of the flex container, we use `justify-content`. There are different values we can assign, like `flex-start`, `flex-end`, `center`, `space-around`, `space-evenly`, and `space-between` which is what we've used in the following example:
