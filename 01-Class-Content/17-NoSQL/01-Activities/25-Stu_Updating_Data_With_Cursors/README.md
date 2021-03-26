@@ -4,6 +4,8 @@ In this activity, you will be updating records in your object store using a Curs
 
 ## Instructions
 
+* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+
 * Inside ` getCursorRequest.onsuccess`
 
   * Set the `result` to a variable named `cursor`.
