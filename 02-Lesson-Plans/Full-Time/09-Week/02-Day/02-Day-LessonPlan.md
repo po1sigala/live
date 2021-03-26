@@ -503,7 +503,7 @@ In this activity, you will create an object store for your IndexedDB database.
   };
   ```
 
-* Before moving on to the next activity, be sure to delete the "todoList" database from the list of IndexedDB in your browser!
+* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
 
 * Ask the class the following question(s):
 
