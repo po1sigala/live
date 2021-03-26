@@ -751,7 +751,7 @@ In this activity, you will create add and retrieve data from an objectStore usin
 
 * Answer any questions before proceeding to the next demo.
 
-* Before moving on to the next activity, be sure to delete the "todoList" database from the list of IndexedDB in your browser!
+* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
 
 ### 22. Instructor Do: Updating Data With Cursors (5 mins)
 
