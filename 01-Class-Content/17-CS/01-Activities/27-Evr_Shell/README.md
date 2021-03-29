@@ -184,7 +184,7 @@ Once that's done, add an alias to your `.bashrc` or `.zshrc` file with the follo
 
 ```sh
 # set the path to where your `git-file-clean.sh` file is
-alias gfc="~/<path>/<to>/git-file-cleanup.sh"
+alias gfc="~/git-file-cleanup.sh"
 ```
 
 Save the run command file that you just updated and restart your command-line application to load the alias into the environment. Once that's done, let's test it out by creating a local Git repo on our machines. You can do so by using the following commands:
