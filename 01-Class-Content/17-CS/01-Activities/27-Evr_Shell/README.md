@@ -105,7 +105,7 @@ Let's move on to another example and learn how to make a slightly more useful sc
 
 Now that we've learned how to write a shell script, let's create one that will actually make our lives easier by automating a Git command to clean up our repositories. 
 
-Create a file called `git-file-cleanup.sh` and open it in VS Code. Then add the shebang (`#!`) interpreter directive at the top of the file with the following code:
+Create a file called `git-file-cleanup.sh` in the root directory and open it in VS Code. Then add the shebang (`#!`) interpreter directive at the top of the file with the following code:
 
 ```sh
 #!/bin/bash
@@ -150,6 +150,9 @@ If there is something to clean, let's move into the `then` statement and use the
 Add the following code to the file after the `printf` and before the `else`:
 
 ```sh
+echo "Proceed?"
+
+
 # use `select` command to prompt a list of options to be displayed for picking and store in `result` 
 select result in Yes No; do
   # if we say "yes" in the prompt...
@@ -165,7 +168,7 @@ select result in Yes No; do
 done;
 ```
 
-Here is where we add a bit of interactivity to our script. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line; when they answer, the response will be stored in a variable called `result`.
+Here is where we add a bit of interactivity to our script. The `echo` command will display a prompt asking the user if they would like to proceed. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line; when they answer, the response will be stored in a variable called `result`.
 
 Once we answer the prompt, we use the `do` command to continue the functionality. We check to see if we said "Yes" to cleaning our repo and if so, we execute the command as if we were typing it out on the command line. If we don't say "Yes," or the command finishes, we use the `break` command to exit our `do` loop and then use `done` to signify the end of that set of functionality.
 
