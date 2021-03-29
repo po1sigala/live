@@ -14,7 +14,7 @@ A Unix shell script has its own syntax, which might feel familiar to commands we
 
 Like with learning any other programming language, a great first shell-script project is to build a simple "Hello World" application. 
 
-The first step is to create a file that holds the shell script. Navigate to the root directory on your computer and create a `hello.sh` file by using the following command:
+The first step is to create a file that holds the shell script. From the command line, use `cd ~` to navigate to the root directory on your computer. Create a `hello.sh` file in the root directory by using the following command:
 
 ```sh
 touch hello.sh
