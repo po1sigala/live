@@ -1,365 +1,1330 @@
-# 7.4 - Intro to Handlebars & Bringing it from the Front to the Back (10:00 AM)
+# 07.4 Full-Time Lesson Plan: Model-View-Controller (MVC)
 
 ## Overview
 
-In this class, we will introduce students to the Sequelize ORM. This tool makes coding with MySQL databases a smoother experience--once you get past the learning curve.
-
-`Summary: Complete activities 5-10 in Unit 14`
+In today's class, students will continue to practice using Handlebars.js, including using partials and custom helpers. Students will also incorporate sessions and cookies using the Sequelize store. Lastly, students will create their own custom middleware for user authentication. 
 
 ## Instructor Notes
 
-* Make sure you change all of the connection information so the examples have your MySQL username/password!
+* In this lesson, students will complete activities `09-Ins_Handlebars-FE-Logic` through `20-Stu_Middleware`.
 
-* If you don't want to have to do it live, create the databases required to show off today's exercises before class!
+* Be sure to prepare and read over the activities before class. Try to anticipate any questions that students might have.
 
-* THIS IS TOUGH STUFF! This week, tell your class to not feel discouraged if there are concepts that they can't nail down completely. Tell them to try their best, but to speak with you or a TA if they're unsure of anything.
+* You will be using MySQL for today's activities. Be sure to have your MySQL server up and running. Demonstrate creating the `museum_db` database live during the first Instructor Demo section of this class.
 
-* Let students know Sequelize is a popular and powerful Node ORM. However, it may be important to note that this week is largely an exercise in learning a new library. Students will have to read documentation, go through tutorials, search and post on StackOverflow in order to find specific answers once they've identified specific problems as they're working through projects.
+* Be sure to modify the `.env.EXAMPLE` file to include your MySQL user and password information before demonstrating each activity.
 
-* You should check out the solutions to this week's homework before starting this class, especially if you haven't used Sequelize before. This will give you a brief rundown of how the ORM works.
+* Students will need to create the `museum_db` database and seed it during their first activity. They will need to run `npm install`, modify the `.env.EXAMPLE` file, and run `npm start` before every activity.
 
-  * Be sure to check the answers to the quiz in `02-SequelizeQuestions/solution` before starting the class. You should be an expert on these concepts, so that if students ask you about the answers after the quiz, you can give them a thorough explanation.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* **BE VERY CAREFUL TO NOT GO TOO IN DEPTH.** There are a ton of components that make Sequelize work, but much of it is boilerplate that doesn't need much explanation. Focus on the parts we tell you about in this guide.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* **DO NOT HAVE STUDENTS CONNECT TO A REMOTE DATABASE WHEN DEVELOPING LOCALLY.** The correct process is described in `04-Important/SequelizeHerokuDeploymentProcess.md`, and if you try to skip this, your students may not be able to work on activities or homework on your classroom's internet connection (also, using a remote database for local development is considered bad practice).
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To introduce Sequelize as a complex tool that simplifies MySQL.
+* Explain the separation of concerns and its benefits.
 
-* To demonstrate the makeup of a Sequelize directory, how to make one, and how to make queries using Sequelize.
+* Implement Handlebars.js partials to reuse a Handlebars.js template.
 
-## Slides
+* Use custom helper functions to format data in a Handlebars.js template.
 
-* N/A
+* Create and read a session on a server using `express-sessions`. 
+
+* Explain how cookies and sessions work together.
+
+* Implement middleware function in Express.js for user authentication. 
 
 ## Time Tracker
 
-[7.4 Time Tracker](https://docs.google.com/spreadsheets/d/1rPeGkGA46_D9zdANiFy0lDZ42eXrefIDdDUL7NTSE1A/edit?usp=sharing)
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Demo: Front-End Logic   | 0:05     |
+| 10:05AM| 2   | Student Do: Front-End Logic        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Front-End Logic | 0:10     |
+| 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Partials          | 0:05     |
+| 10:45AM| 6   | Student Do: Partials               | 0:15     |
+| 11:00AM| 7   | Instructor Review: Partials        | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Custom Helpers    | 0:05     |
+| 11:15AM| 9   | Student Do: Custom Helpers         | 0:15     |
+| 11:30AM| 10  | Instructor Review: Custom Helpers  | 0:10     |
+| 11:40AM| 11  | FLEX                               | 0:20     |
+| 12:00PM| 12  | BREAK                              | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Sessions          | 0:05     |
+| 12:35PM| 14  | Student Do: Sessions               | 0:15     |
+| 12:50PM| 15  | Instructor Review: Sessions        | 0:10     |
+| 1:00PM | 16  | Instructor Demo: Cookies           | 0:05     |
+| 1:05PM | 17  | Student Do: Cookies                | 0:15     |
+| 1:20PM | 18  | Instructor Review: Cookies         | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Middleware        | 0:05     |
+| 1:35PM | 20  | Student Do: Middleware             | 0:15     |
+| 1:50PM | 21  | Instructor Review: Middleware      | 0:10     |
+| 2:00PM | 22  | FLEX                               | 0:30     |
+| 2:30PM | 23  | END                                | 0:00     |
 
-- - -
+---
 
-### 1. Students Do: Sequelize Library (25 min)
+## Class Instruction
 
-* Welcome students to class and let them know we will start by getting right to work!
+### 1. Instructor Demo: Handlebars.js Front-End Logic (5 min) 
 
-* In this activity, students will be building the backend of a Sequelize application.
+* Welcome students to class.
 
-* Open the Sequelize-Library solution `05-SequelizeLibrary` and demonstrate its functionality. Add a few books to the library then show students how we can search for books by title/author/genre, choose to view all books, or view short/long books.
+* Rename the `09-Ins_Handlebars-FE-Logic/.env.EXAMPLE` file to `.env` and input your credentials.
 
-* This app will require students to research more advanced sequelize querying. Urge students to use the Sequelize documentation to find these answers.
+  * 🔑 The MVC framework follows the **separation of concerns principle**. This means keeping content separate from presentation and keeping data processing separate from content. This principle helps us write clear and maintainable code.
 
-* Slack them the Sequelize Library skeleton folder `05-SequelizeLibrary` along with the following instructions:
-  * Instructions
-    * Create a `'sequelize_library'` DB.
-    * Modify `'connection.js'` to include your MySQL user/database information.
-    * In the `'models'` folder, modify the `book.js` file to create a book model. Further details can be found inside this file.
-      * Your book model must include a title, author, genre, page numbers.
-    * Modify `'api-routes.js'` using sequelize query methods to create the required routes.
+  * 🔑 To explore MVC and the separation of concerns principle further, now let's examine a form that allows users to add a dish to the database.
 
-- - -
+* Open `09-Ins_Handlebars-FE-Logic/views/all.handlebars` in your IDE and demonstrate the following:
 
-### 2. Instructor Do: Go over Sequelize Library (10 min)
+  * This RSVP form to the `'all'` template allows guests to provide information about the dish they plan to bring to the party. 
 
-* Go over Sequelize implementation. Focus on aspects of this activity that were new such as the advanced querying techniques as well as the CRUD operations. Inform students that this was a difficult activity and that we will spend more time with CRUD operations next class.
+  * 🔑 To add an event listener, we need to connect the template in `'all'` to the JS in `add-dish.js` by adding a `<script>` tag, as follows:
 
-- - -
+    ```html
+      <script src="/js/add-dish.js"></script>
+    ```
 
-### 3. Instructor Do: Intro to Sequelize CLI (20 min)
+* Open `09-Ins_Handlebars-FE-Logic/public/js/add-dish.js` in your IDE and demonstrate the following:
 
-* Explain to students that we can also initialize Sequelize projects using the Sequelize Command Line Interface.
+  * 🔑 Because the template is connected to the JS in the `public` folder, we can add an event listener for the form in `add-dish.js`.
 
-* This will allow us to quickly start new projects, take advantage of advanced Sequelize features, as well as work with multiple models more easily at scale an ultimately have to write less code as our project grows.
+  * On submit, the form handler will capture user input from the form fields in the View, as shown in the following example: 
 
-* Slack out the Sequelize CLI Skeleton `06-SequelizeCLI` as well as the `04-Important/SequelizeQuickStartGuide.pdf` have the students follow along with you as you initialize a new project using the Sequelize CLI.
+    ```js
+      document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
+    ```
 
-We will be using this method of setting up Sequelize projects going forward, so encourage students to practice with this guide before next class.
+  * Notice the syntax where `has_nuts` is declared, shown in the following example: 
 
-**NOTE**: The Sequelize CLI has a lot of functionality, including creating models via the CLI. **We will only be using be using the CLI to initialize an index.js file, and a config.json file**. Discourage model creation with the CLI (if it comes up at any point), as while this is fine for simple models, it will create far more trouble than it's worth later in the week when our models become more complex if students have never written them by hand before.
+    ```js
+    const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
+    ```
 
-- - -
+    This is a **ternary operator**, or another type of conditional operator. `'#has_nuts:checked'` is the condition, followed by a `?`. If it is truthy, `has-nuts` will be true. Otherwise, it will be false. 
 
-### 4. Instructor Do: Homework and Sequelize Guide (5 mins)
+  * 🔑 Using the POST method, `fetch()` passes the form input to the Controller in the body of the request, as follows:
 
-* Send your students the instructions for this topic's `02-Homework/Instructions`.
+    ```js
+     const response = await fetch(`/api/dish`, {
+       method: 'POST',
+       body: JSON.stringify({
+        dish_name,
+        description,
+        guest_name,
+        has_nuts,
+       }),
+       headers: {
+        'Content-Type': 'application/json',
+      },
+     });
+    ```
 
-* Essentially they'll be reverse engineering a working full stack application.
+* Open `09-Ins_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following: 
 
-* Slack out the `04-Important/SequelizeHerokuDeploymentProcess.pdf`. This describes the process for deploying a Sequelize application to Heroku and making use of JawsDB. They will need this for Project 2.
+  * 🔑 The POST route in the Controller accepts the input, uses the Model to create a dish object in the database, and then returns the data. See the following code for an example:
 
-### 5. Instructor Do: Pulse Check and Sequelize Review (10 min)
+    ```js
+     router.post('/', async (req, res) => {
+       try { 
+         const dishData = await Dish.create({
+           dish_name: req.body.dish_name,
+           description: req.body.description,
+           guest_name: req.body.guest_name,
+           has_nuts: req.body.has_nuts,
+         });
+        res.status(200).json(dishData)
+        } catch (err) {
+          res.status(400).json(err);
+        }
+      });
+    ```
 
-* Ask students how the week is going so far, and what they think of Sequelize.
+  * 🔑 When the dish is added and a successful response is sent to `add-dish.js`, the `all` template is re-rendered by the View.
 
-  * Answer any questions students might have about using the package
+* Run `npm install` and `npm start` from the command line. 
 
-* Give them a quick back and forth on some of the basics of Sequelize.
-  * What is Sequelize?
-    * An ORM designed for Node that lets users handle complex SQL database queries with JavaScript methods, rather than typing out SQL code.
+* Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
-  * What is a Sequelize model?
+  * Now when we add information into the form and click Submit, we can see that the dish has been added to the menu.
 
-    * A representation of a table as a JavaScript object that Sequelize uses to help expedite the coding of data queries.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * What Sequelize CRUD methods did we already go over?
-    * findOne
-    * findAll
-    * create
+  * ☝️ How do we process user input and send it to the Controller?
 
-- - -
+  * 🙋 We can use a form handler to collect form input and send it to the Controller, where the business logic will be performed. 
 
-### 6. Instructor Do: TodoList Demo (10 mins)
+  * ☝️ How do we connect the form handlers in the `js` folder to the templates in the View?
 
-* Praise your students for picking up the concepts you just discussed, but just to be sure you're on the same plane, you have an exercise for them to do.
+  * 🙋 We can add a `<script>` tag with `src="<our-file-name>"` at the bottom of the template.
 
-* Inform students that today they are going to play the role of a backend developer. We have a todo list app that previously was using a simple ORM to communicate with a database, but now we're coming in to perform a few upgrades.
+* Answer any questions before proceeding to the next activity.
 
-* Open the `10-Sequelize-Validations/Solved`  folder. In terminal run `npm install` and then `node server`. Navigate to `localhost:8080` and explain to your students that by the end of class they will have fully converted this todo list app to use sequelize instead of the ORM its currently using.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Handlebars-FE-Logic/README.md`.
 
-* Let students know that this application makes use of each CRUD action. It allows the user to CREATE new todo items, it READS todos from the database, it allows the user to UPDATE current todo items, and allows a user to DELETE todos.
+### 2. 16. Student Do: Handlebars.js Front-End Logic (15 min) 
 
-* Be sure to demonstrate each piece of functionality to the class. You can toggle a todo's edit mode by clicking it. Inform them that they will be converting one piece of functionality at a time per activity, and **things will inevitably break temporarily while we're doing that**. This is important to keep in mind as we'll be working with the same application throughout this lesson.
+* Direct students to the activity instructions found in `10-Stu_Handlebars-FE-Logic/README.md`.
 
-* Inform students they won't need to (and shouldn't) touch any front end JavaScript or HTML.
+* Break your students into pairs that will work together on this activity.
 
-* Answer any questions before the exercise begins.
+  ```md
+  # 📐 Add Comments to the Implementation of a Form to Update a Food Item
 
-- - -
+  Work with a partner to add comments describing the functionality of the code found in [dish.handlebars](./Unsolved/views/dish.handlebars), [edit-dish](./Unsolved/public/js/edit-dish.js), and [dish-routes](./Unsolved/controllers/api/dish-routes.js).
 
-### 7. Student Do: Connect to Sequelize and Create a Todo Model (25 mins)
+  ## 📝 Notes
 
-Slack out the following folder and instructions:
+  Refer to the documentation: 
 
-* Folder: `07-ORM-To-Sequelize/Unsolved`
+  [Handlebars.js documentation](https://handlebarsjs.com/guide/#what-is-handlebars)
 
-* INSTRUCTIONS:
+  [MDN Web Docs on MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 
-  1) Create a new local MYSQL database called 'todolist', but don't create any tables.
+  ---
 
-  2) Delete any references to the orm.js file inside the `api-routes.js` file.
+  ## 🏆 Bonus
 
-  3) Delete the config folder.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  4) While inside the activity folder, run npm install in terminal.
+  * What are the pros and cons of using a template engine like Handlebars.js?
 
-  5) In terminal, type in the following command: "sequelize init:models & sequelize init:config". If this produces an error, then you may not have the sequelize and the sequelize-cli installed globally. Fix this by running `npm install -g sequelize sequelize-cli` in your terminal and trying again.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-  6) Step 5 should have created a config and a models folder for us. Navigate to the config folder, open `config.json`, and modify the development object's "database","username" and "password" values to match your MYSQL database on your machine.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  7) Navigate to the models folder and create a new file called `todo.js`. Create a Todo model with columns for "text" (DataTypes.STRING), and "complete" (DataTypes.BOOLEAN).
+### 3. Instructor Review: Handlebars.js Front-End Logic (15 min)
 
-  8) Navigate to the server.js file and require all of our models by requiring the models folder. Save this to a variable and name it "db".
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  9) Sync the models by running db.sequelize.sync() before we start the express server.
+  * ☝️ How comfortable do you feel with MVC and front-end logic? (Poll via Fist to Five, Slack, or Zoom)
 
-  10) In your terminal, run "node server". Check MYSQL Workbench to see if a Todos table was created. If so, you were successful. If not, check your terminal for any errors.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-**Refer to the Sequelize Quick Start Guide in the Important folder if you experience any issues**
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-- - -
+  * ✔️ View
 
-### 8. Instructor Do: Review the ORM-To-Sequelize Activity (10 mins)
+  * ✔️ Model
 
-* When time's up, load up the `07-ORM-To-Sequelize/Solved` solution on your machine. Be sure to show students your `config.json` file as well as your Todo model.
+  * ✔️ Controller
 
-  ![Todo Model](Images/1-Todo-Model.png)
+  * ✔️ Front-end logic
 
-* Then highlight the fact that we sync() our models in the `server.js` file before we start our server. This is what ensures our tables are created and ready when we try and start up our express server.
+  * ✔️ Ternary operator
 
-  ![Sync Models](Images/2-Models-Sync.png)
+* Open `10-Stu_Handlebars-FE-Logic/Solved/views/dish.handlebars` in your IDE and explain the following: 
 
-* Show them where our models are required inside of the `api-routes.js` file where will use it in the next exercise.
+  * We now have an edit form in the `'dish'` template that allows users to update a dish. 
 
-* Show students how the Todos table its made for us when we run `node server` and our database syncs.
+  * 🔑 As a part of the View, this form is responsible for the UI/UX logic. It is not responsible for business or data-related logic.
 
-* Inform the class that they will be implementing functionality to retrieve Todos from the database using the Sequelize "findAll" and "create" methods.
+* Open `10-Stu_Handlebars-FE-Logic/Solved/public/js/edit-dish.js` in your IDE and explain the following: 
 
-- - -
+  * We've added an event listener to the form in `edit-dish.js`.
 
-### 9. Partners Do: findAll and create (20 mins)
+  * 🔑 On submit, the form handler will capture user input from the form fields in the View and process the data using front-end logic to pass to the Controller, as follows:
 
-Slack out the following folder and instructions:
+    ```js
+      document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
+    ```
 
-* Folder: `08-Sequelize-Create-Read/Unsolved`
+  * 🔑 We've included a ternary operator again, shown in the following example, to indicate whether the checkbox for "Contains Nuts" has been checked or not:
 
-* INSTRUCTIONS:
+    ```js
+    const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
+    ```
 
-  1) Open the folder and run `npm install`.
+  * We are using the URL to access the dish's id, as follows, to ensure that we send the fetch request to the correct endpoint:
 
-  2) Update the `config.json` file's development object with your own local MYSQL database settings.
+    ```js
+    const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+     ];
+    ```
 
-  3) Navigate to the `api-routes.js` folder.
+  * 🔑 `fetch()` passes the edit form input to the Controller in the body of the request with the PUT method, like in the following example:
 
-  4) Add a Sequelize findAll method inside the GET route which finds all of the todos and returns them to the user as JSON.
+    ```js
+     const response = await fetch(`/api/dish/${id}`, {
+       method: 'PUT',
+       body: JSON.stringify({
+        dish_name,
+        description,
+        guest_name,
+        has_nuts,
+       }),
+       headers: {
+        'Content-Type': 'application/json',
+      },
+     });
+    ```
 
-  5) Add a Sequelize create method to the POST route to save a new todo to the database using the data sent to the server in req.body.
+* Open `10-Stu_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following: 
 
-  6) To test if this worked, open your terminal and run `node server` and navigate to localhost:8080. If you are able to save new todos, you were successful.
+  * 🔑 The PUT route in the Controller accepts the input, uses the Model to edit a dish object in the database, and then returns a response to `edit-dish.js`. If the response to the following code is OK, `dish` will be rendered by the View:
 
-  7) Hint: We can access the Todo model here with "db.Todo"
+    ```js
+      router.put('/:id', async (req, res) => {
+      try {
+        const dish = await Dish.update(
+          {
+            dish_name: req.body.dish_name,
+            description: req.body.description,
+            guest_name: req.body.guest_name,
+            has_nuts: req.body.has_nuts,
+          },
+          {
+            where: {
+            id: req.params.id,
+          },
+          });
+          res.status(200).json(dish);
+        } catch (err) {
+          res.status(500).json(err);
+        };
+      });
+    ```
+  
+* Run `npm install` and `npm start` from the command line. 
 
-  If you get stuck or finish early, check out the Sequelize Star Wars solution from last class, or try and see if you and your partner can make sense of Sequelize's docs for the findAll and create methods
+* Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
-  <http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-findAll>
+  * Now when we add information into the form to edit a dish and click Submit, we can see that the dish info has been edited.
 
-  <http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-create>
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-- - -
+  * ☝️ What is the separation of concerns principle, and why is it important?
 
-### 10. Everyone Do: Review findAll and create (10 mins)
+  * 🙋 The separation of concerns principle calls for content to be kept separate from presentation and for data processing to be kept separate from content. This helps us write conventional, clear, and maintainable code.
 
-* Go through the `08-Sequelize-Create-Read/Solved` as a class.
+  * ☝️ What can we do if we don't completely understand this?
 
-* Point out how in the `api-routes.js` file, the db.Todo.create method takes in an object with the values we want our new Todo to have as an argument.
-  ![Todo Create Find](Images/3-Todo-Create-Find.png)
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC), and stick around for office hours to ask for help.
 
-* Run the app, create a new todo and open your terminal. There will be a console log of the data being passed to the db.Todo.create method, as well as the MySQL code this executes.
+* Answer any questions before proceeding to the next activity.
 
-* **Note**: If we were to `console.log` the `dbTodo` object returned from a sequelize query, we'd see that it is a large object with many nested keys and methods. It contains a `dataValues` property that contains the record data we're looking for.
+### 4. Instructor Do: Stoke Curiosity (10 mins)
 
-  * When we send the large `dbTodo` object back to the client using `res.json`, only the `dataValues` property is sent back.
+* Explain to students that today they will learn about cookies&mdash;not cookies that we eat, but the HTTP cookies that are saved whenever we visit a website. 
 
-  * This is worth knowing since it may come up when debugging students code.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Answer any remaining questions about this exercise.
+  * ☝️ You've probably noticed messages like the following example whenever you visit a website:
 
-- - -
+    > This website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy. If you decline, your information won’t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.
 
-### 11. BREAK (30 mins)
+    What do you think this message means? What is your understanding of cookies? 
 
-- - -
+  * 🙋 Cookies are small text files that get stored on users' computers to help websites remember their visitors.
 
-### 12. Instructor Demo: Update and Delete (5 mins)
+  * ☝️ Can you think of examples of when cookies might be useful?
 
-* Inform students that now they will be working on functionality to delete todos and to update todos.
+  * 🙋 The most common example is an online shopping cart. When you visit an online store and select items to add to the shopping cart, the cookie will remember those items. When you are ready to check out, the items will still be in your shopping cart.
 
-* Open the solved file `09-Sequelize-Update-Delete/Solved` and run the program. Show students how they can delete todo items by clicking the `x` button on the todo. Refresh the page to prove that todo is gone.
+  * ☝️ If cookies are so useful&mdash;and even crucial to a good user experience&mdash;why do websites ask for permission to store cookies?
 
-* Demonstrate how when clicking a todo item, you can update the todos text. After editing, hit "Enter" to finish editing, or click anywhere else on the page to cancel editing. Also demonstrate how clicking the check mark toggles a todo's complete property. Refresh the page again to prove this works.
+  * 🙋 Cookies are pieces of information saved about you when you’re online. Most cookies identify you through your device, and they track you as you browse. So for privacy reasons, companies need your explicit consent to collect your data. Implementing cookies involves many security considerations, but arguably the most important is that vulnerabilities can allow third parties to access them. Thus, we do NOT store sensitive information like passwords in cookies.
 
-- - -
+  * ☝️ We have also used `localStorage` to store data. How are cookies different from `localStorage`?
 
-### 13. Partners Do: Update and Delete (20 mins)
+  * 🙋 Cookies can be read by the client but are mainly for reading on the server side, whereas local storage can only be read by the client side. Basically, cookies allow the server to deliver a page tailored to the user; local storage allows a much larger amount of data to be stored on the user's computer and reduces the amount of traffic between the client and server. When deciding which one to use, think about whether it is the client or the server that needs the data.
 
-* Slack out the following folder and instructions.
+  * ☝️ How will we use cookies in the applications we work on today?
 
-  * Folder: `09-Sequelize-Update-Delete/Unsolved`.
+  * 🙋 We will use cookies to remember our logged-in status so that we can navigate from page to page and access all content.
 
-* INSTRUCTIONS:
+* Answer any questions before proceeding to the next activity. 
 
-   1) Open the folder slacked out to you
+### 5. Instructor Demo: Partials (5 min) 
 
-   2) Run `npm install`
+* Remind students to start their MySQL Server.
 
-   3) Update the `config.json` file's development object with your own local MYSQL database settings.
+* Demonstrate how to create the `museum_db` database, run `npm install`, and modify the `.env.EXAMPLE` file to include their MySQL user and password information.
 
-   4) Inside the `api-routes.js` file, look for the DELETE route and add a Sequelize method to delete the todo with the id available to us in `req.params.id`.
+* Demonstrate how to seed the database by running `npm run seed` in your command line.
 
-   5) Inside of the same file, look for the PUT route and add a Sequelize method to update a todo with the new todo data available to us inside req.body.
+* Navigate to `11-Ins_Partials` and run `npm start` from the command line. 
 
-   6) Again, you won't need to touch the front end HTML or JavaScript to make any of this work.
+* Open http://localhost:3001/ in your browser and demonstrate the following:
 
-   7) **HINT**: you will need to pass in an options object with a "where" attribute into both methods in order to filter these queries to target the Todos we want to update or delete.
-   <http://docs.sequelizejs.com/en/latest/docs/querying/#where>
+  * Today all of the activities will use this museum application. 
 
-   8) Navigate to localhost:8080. If you can update and delete todos without errors, you were successful.
+  * We see four galleries named after the four seasons in different languages.
 
-   9) If you get stuck or finish early, discuss the documentation for the `update` and `destroy` methods with your partner here:
+  * 🔑 When we select a gallery, we see the images that belong in that gallery.
 
-   <http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-update>
+  * 🔑 When we select a painting, we see it in a larger format with the title and artist name.
 
-   <http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-destroy>
+* Open `11-Ins_Partials/views/homepage.handlebars` in your IDE and explain the following:
 
-**Instructors and TA's should be walking around offering support during this exercise**
+  * 🔑 Here is the homepage. Instead of rendering the four galleries here, we use a partial `gallery-details` instead.
 
-### 14. Everyone Do: Review Update and Delete (15 mins)
+  * We are using the built-in helper method `{{#each}}` to iterate through the galleries. Then for each gallery we are rendering the `gallery-details` partial, as follows:
 
-* Slack out the `09-Sequelize-Update-Delete/Solved` folder and have students explain to you how the "where" query attribute works when it comes to filtering the records you want to query.
-  ![Todo Update](Images/4-Todo-Update.png)
-  ![Todo Destroy](Images/5-Todo-Destroy.png)
+    ```handlebars
+    {{#each galleries as |gallery|}}
+    {{> gallery-details}}
+    {{/each}}
+    ```
 
-* Inform students that now that they have a good grasp on CRUD actions with Sequelize, as well as how to filter queries with "where", they already know how to do what they'll be doing 80% of the time with an ORM.
+* Open `11-Ins_Partials/views/partials/gallery-details.handlebars` in your IDE and explain the following:
 
-* Answer any remaining questions about this exercise.
+  * 🔑 We create a new folder called `partials` in the `views` directory and put the partials there.
 
-* Explain to students that at first the Sequelize documentation can be a little difficult to navigate, but after understanding the basics they're much more useful.
+  * In the `gallery-details` partial, we see a card that links to the specific gallery using its `id`, as shown in the following example:
 
-* Thank students for working to find answers to the past few exercises. Reading documentation is it's own skill they'll become better at with practice. In the meantime, we've created a Sequelize CRUD actions cheat sheet for them that should make basic usage much easier.
+    ```handlebars
+    <section class="card">
+      <a href="/gallery/{{id}}">
+      ...
+      </a>
+    </section>
+    ```
 
-* Slack out the Sequelize CRUD actions cheat sheet `important/SequelizeCRUDActionsCheatSheet.pdf`.
+  * The card consists of a header with the name of the gallery and the first painting of the gallery. Notice in the following example how we are accessing the first painting of the gallery, as well as its file name and description:
 
-### 15. Instructor Do: Validations (5 mins)
+    ```handlebars
+    <header>{{name}}</header>
+    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
+    ```
 
-* Explain to the class that as some of them may have already noticed, there's a small flaw with our todolist application. And that is that while our Todos table's text column won't save any data type other than a Sequelize.STRING, it is possible to save a todo with empty text or even one with a null text value.
+  * ☝️ How are the Handlebars.js templates getting all this data about the galleries and their paintings?
 
-* While it is possible to restrict this functionality client side (and we definitely should at some point), if someone knew how to use Chrome Developer Tools, they could circumvent any restrictions we put in our front-end JavaScript.
+  * 🙋 They're getting it from the Controllers!
 
-* Knowing that any code we write on the client is potentially available for the user to tamper with. Ask the class what steps we might be able to take on the back end to validate what we're receiving to put into our database.
+* Open `11-Ins_Partials/controllers/home-routes.js` in your IDE and explain the following:
 
-- - -
+  * If we look at the routes, we see that we are getting all of the galleries as well as the paintings in each gallery, as follows:
 
-### 16. Everyone Do: Discuss With Partners (10 mins)
+    ```js
+    const dbGalleryData = await Gallery.findAll({
+      include: [
+        {
+          model: Painting,
+          attributes: ['filename', 'description'],
+        },
+      ],
+    });
+    ```
 
-* Have the class discuss with their partners for a few minutes about what options we may have to further restrict what kinds of data can be saved into our Todos table.
+  * Then we map through the data and serialize it, as shown in the following example:
 
-* After a few minutes have any volunteers suggest their solutions. Most likely suggestions will be to have a conditional that checks the value before trying to insert it. Some may suggest that Sequelize may have something built in for this.
+    ```js
+    const galleries = dbGalleryData.map((gallery) =>
+      gallery.get({ plain: true })
+    );
+    ```
 
-* Inform students that Sequelize does indeed have built in validations and flags we can include with our models.
+  * When we render the `homepage` template, we pass in the `galleries` data for the templates to use, as follows:
 
-* An example of a validation might include making sure that text is a URL or email, or that a credit card number is formatted correctly.
+    ```js
+    res.render('homepage', {
+      galleries,
+    });
+    ```
 
-* A flag might include making sure a value is not null before entering it into the database or having a default value for a field if one is not supplied.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Partials/README.md`.
 
-* The difference is that flags are ways for us to implement MYSQL constraints we're already familiar with such as "NOT NULL" or "DEFAULT" and validations are additional built in or custom methods we can run before Sequelize inserts a record.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-- - -
+  * ☝️ How else could we use partials in the museum application?
 
-### 17. Partners Do: Sequelize Validations (15 mins)
+  * 🙋 We will use partials to reuse a template that renders details about the painting.
 
-* Slack out the following folder in `Activities/10-Sequelize-Validations`
+* Answer any questions before proceeding to the next activity.
 
-  * Folder: `10-Sequelize-Validations/Unsolved`
+### 6. Student Do: Partials (15 min) 
 
-* INSTRUCTIONS:
+* Direct students to the activity instructions found in `12-Stu_Partials/README.md`.
 
-  1) Open the folder slacked out to you.
+* Break your students into pairs that will work together on this activity.
 
-  2) Run `npm install`.
+* Remind students to set up their `museum_db` database and seed it before starting the activity. 
 
-  3) Update the `config.json` file's development object with your own local MYSQL database settings.
+  > **Important:** Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every activity. 
 
-  4) Modify the `todo.js` file so that the Todo model has a flag to prevent the text field from being null. Also add a validation to make sure the text field is at least one character, but no more than 140 characters.
+  ```md
+  # 🏗️ Use Handlebars.js Partials to Reuse a Template
 
-  5) Modify the complete field in our Todo model so that it supplies a default value of false if one is not supplied during Todo creation.
+  Work with a partner to implement the following user story:
 
-  6) Once a Sequelize model has been created and synced for the first time, any changes we make to our Todo model won't be picked up by our database. The easiest way to get around this during the development process is to pass "{ force: true }" as an argument into our sync method inside `server.js` file. This will make it so that every time we run our app, our Todos table will be dropped and recreated with the new configuration. More info here under: <http://docs.sequelizejs.com/class/lib/sequelize.js~Sequelize.html#instance-method-sync>
+  * As a developer, I want to be able to render details of a painting by reusing the same Handlebars.js template.
 
-  7) Navigate to localhost:8080 to test that this worked. Try to save a Todo without any text in it, and then try and save a Todo with over 140 characters. If these didn't save and you see errors in your console that have to do with validation, you were successful.
+  ## Acceptance Criteria
 
-  8) **Big Hint**: Sequelize documentation on validations with examples can be found here: <http://docs.sequelizejs.com/en/latest/docs/models-definition/#validations>
+  * It's done when the details for the paintings associated with the gallery are rendered using a Handlebars.js partial in the [gallery.handlebars](./Unsolved/views/gallery.handlebars) file.
 
-- - -
+  * It's done when the `painting-details.handlebars` partial renders a card that links to that painting's page.
 
-### 18. Instructor: Review Validations and Dismiss Class (10 mins)
+  * It's done when the card includes a header with the painting's title.
 
-* Slack out `10-Sequelize-Validations/Solved` and show students how we added validations and flags to the Todo model. Go through each new item and have students try and explain to you what they believe each piece of new code does.
-  ![Validations](Images/6-Validations.png)
+  * It's done when the card includes a body with the painting and the artist's name.
 
-* Assure students there's no need to memorize these. Validations are some of the easier things to look up in the Sequelize documentation. Or even easier, refer back to this project.
+  ## Assets
 
-* Inform the class that we've just covered a lot of ground today. We've learned everything and more needed to complete this week's homework assignment. If they feel they haven't caught onto everything, encourage them to continue practicing, check out the solution files, and browse through the Sequelize documentation. Of course, they can also talk to you or a TA between classes for one-on-one advice.
+  The following image demonstrates how the painting's details should be rendered on the page:
 
-### 19. Instructor Do: Questions and Review (15 mins)
+  ![On a museum webpage, one card displays a photo of a sandy beach with the title and artist name underneath it.](./Images/01-painting-details.jpg)
 
-* Take this remaining time to ask students if they have any questions from today's material or anything covered this week.
+  ---
 
-* Answer any questions you can and encourage students to bring further questions to you or a TA during post class office hours.
+  ## 💡 Hints
 
-### 20. END (0 mins)
+  How do we set up the database? What command do we use to seed it? And what is the syntax for Handlebars.js partials?
 
-### Lesson Plan Feedback
+  ## 🏆 Bonus
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * What are some other ways that we can use Handlebars.js partials? How else can partials be useful?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Partials (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with Handlebars.js partials? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `painting-details`
+
+  * ✔️ Link to painting's page
+
+  * ✔️ Painting's title
+
+  * ✔️ Painting's image and artist name
+
+* Open `12-Stu_Partials/Solved/views/gallery.handlebars` in your IDE and explain the following: 
+
+  * This is the gallery page, which displays the paintings that belong to this gallery. There are two to three paintings for each gallery, so we use the built-in helper function `{{#each}}` to iterate through each painting, as shown in the following example:
+
+    ```handlebars
+    {{#each gallery.paintings as |painting|}}
+
+    {{/each}}
+    ```
+
+  * 🔑 The details for each painting will be rendered by using the partial `painting-details`, as follows:
+
+    ```handlebars
+    {{> painting-details}}
+    ```
+
+* Open `12-Stu_Partials/Solved/views/partials/painting-details.handlebars` in your IDE and explain the following: 
+
+  * We are given a card for each painting. We need to include a link to the painting's page, the title, the image, and the artist name.
+
+  * 🔑 We use the entire contents of the card as a link to the painting's page, so we encapsulate everything in a `<a>` tag. We are using the `id` of the painting with the `{{ }}` handlebars syntax, as shown in the following example:
+
+    ```handlebars
+    <a href="/painting/{{id}}">
+
+    </a>
+    ```
+
+  * 🔑 We create the card header by using the `<header>` tag with the painting's `title` as a Handlebars.js expression, like in the following example:
+
+    ```handlebars
+    <header>{{title}}</header>
+    ```
+
+  * 🔑 In the body of the card, we render the actual image of the painting. We use the painting's `filename` in the `<img src>` tag and the painting's `description` as the alt text, as follows:
+
+    ```handlebars
+    <img src="/images/{{filename}}" alt="{{description}}">
+    ```
+
+  * 🔑 Also in the card body, we include the artist's name, as shown in the following example:
+
+    ```handlebars
+    <p>By: {{artist}}</p>
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where can we specify which data gets sent over to the partials to be rendered?
+
+  * 🙋 That will be handled by the Controller! As part of the MVC framework, the templates (View) only focus on the rendering of content. The routes (Controller) are responsible for getting the data from the database (Model) and handle all the logic behind which data needs to be rendered.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Handlebars.js documentation on basic partials](https://handlebarsjs.com/guide/partials.html#basic-partials), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Custom Helpers (5 min) 
+
+* Navigate to `13-Ins_Custom-Helpers` and run `npm install` and `npm start` in your command line to demonstrate the following:
+
+  * 🔑 When we navigate to <localhost:3001/> in the browser and click on one of the galleries, we see the Opening Hour and Closing Hour.
+
+  * 🔑 But the Opening Hour is formatted as the original timestamp from the database, whereas the Closing Hour has been formatted to a clean `H:M:S` format.
+
+* Open `13-Ins_Custom-Helpers/views/gallery.handlebars` in your IDE and explain the following:
+
+  * The Opening Hour uses the gallery's `starting_date` as is, as shown in the following example:
+
+    ```handlebars
+    <h4>Opening Hour: {{gallery.starting_date}}</h4>
+    ```
+
+  * 🔑 But the Closing Hour uses a custom helper function called `format_time` to display only the time of `gallery.ending_date` in a specific format, as follows:
+
+    ```handlebars
+    <h4>Closing Hour: {{format_time gallery.ending_date}}</h4>
+    ```
+
+* Open `13-Ins_Custom-Helpers/utils/helpers.js` in your IDE and explain the following:
+
+  * 🔑 To create custom helper functions, we create a folder called `utils` and a new file named `helpers.js`.
+
+  * 🔑 For the `format_time` custom helper, we will take in a `date` timestamp and use the `toLocaleTimeString()` method to format the time as `H:MM:SS AM/PM`, like in the following example:
+
+    ```js
+    module.exports = {
+      format_time: (date) => {
+        return date.toLocaleTimeString();
+      },
+    };
+    ```
+
+* Open `13-Ins_Custom-Helpers/server.js` in your IDE and explain the following:
+
+  * To use custom helper methods, we need to import them into the `server.js` file, as follows:
+
+    ```js
+    const helpers = require('./utils/helpers');
+    ``` 
+
+  * We instruct Handlebars.js to incorporate the custom helper methods when rendering the templates, as follows:
+
+    ```js
+    const hbs = exphbs.create({ helpers });
+    ```
+
+* In preparation for the next activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Custom-Helpers/README.md`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use custom helpers to format the painting's end date in the museum application?
+
+  * 🙋 We will need to create a helper function and use JavaScript Date methods that allow us to get the month, date, and year of a timestamp.
+
+* Answer any questions before proceeding to the next activity.
+
+### 9. Student Do: Custom Helpers (15 min) 
+
+* Direct students to the activity instructions found in `14-Stu_Custom-Helpers/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Date Is Not Formatted Correctly
+
+  Work with a partner to resolve the following issues:
+
+  * Museum visitors should be able to see the end date of each painting on the painting page.
+
+  ## Expected Behavior
+
+  * When a museum visitor visits the painting page, it should clearly and accurately show the date that the exhibition will end.
+
+  * The end date is calculated by adding five years to the painting's `exhibition_date`.
+
+  * The end date should be formatted as `M/D/YYYY`.
+
+  ## Actual Behavior
+
+  When a museum visitor visits the exhibition page, it shows the painting's `exhibition_date` in the original long timestamp format.
+
+  ## Assets
+
+  The following image demonstrates the correct formatting of the end date for each painting:
+
+  ![On the museum webpage, one card displays an image of a blossoming tree with the title, artist name, and end date underneath the image.](./Images/01-painting-end-date.jpg)
+
+  ---
+
+  ## 💡 Hints
+
+  Which JavaScript Date methods allow you to return the month, date, and year of a specified date? How do you correctly render the month, considering that it is returned as a zero-based value?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other data can be formatted by custom helpers?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Custom Helpers (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with custom helpers? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `.getMonth()`
+
+  * ✔️ `.getFullYear()`
+
+  * ✔️ `format_date()` 
+
+* Open `14-Stu_Custom-Helpers/Solved/utils/helpers.js` in your IDE and explain the following: 
+
+  * Under the `format_time` helper function, we create another custom helper, named `format_date`, that takes in a date as follows:
+
+    ```js
+    format_date: (date) =>  {
+
+    }
+    ```
+
+  * 🔑 To format the date, we use template literals! First we need to get the month, but `.getMonth()` will return the month as a zero-based value. For example, January will return `0`. To format it correctly, we need to add `1` to the value returned, as follows:
+
+    ```js
+    return `${new Date(date).getMonth() +1}
+    ```
+
+  * Then we add the `/` slash and the date value, like in the following example:
+
+    ```js
+    /${new Date(date).getDate()}
+    ```
+
+  * 🔑 Lastly, we add the `/` slash and get the year, but we need to add five years to it to calculate the end date, as shown in the following example:
+
+    ```js
+    /${new Date(date).getFullYear() + 5}`;
+    ```
+
+* Open `14-Stu_Custom-Helpers/Solved/views/painting.handlebars` in your IDE and explain the following: 
+
+  * 🔑 On the `painting.handlebars` template, we need to include the helper function `format_date` along with the `painting.exhibition_date` for the end date to be rendered correctly&mdash;as shown in the following example:
+
+    ```handlebars
+    <p>Exhibition open until: {{ format_date painting.exhibition_date}}</p>
+    ```
+
+* Run `npm start` and navigate to <http://localhost:3001/> in your browser to demonstrate the following:
+
+  * When we select a gallery and then a painting, we see that the exhibition end date is formatted correctly.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How are custom helper functions helpful when using Handlebars.js?
+
+  * 🙋 To keep the templates logicless and only concerned with rendering data, we can place that logic in helper functions instead.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [npm documentation on Express Handlebars helpers](https://www.npmjs.com/package/express-handlebars#helpers), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 11. FLEX (20 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+### 12. BREAK (30 mins)
+
+### 13. Instructor Demo: Sessions (5 min) 
+
+* Navigate to `15-Ins_Sessions` in your command line and run `npm install` to demonstrate the following:
+
+  * Sessions allow the Express.js server to track which user is making a request and to store useful data about them in memory.
+
+  * 🔑 To incorporate sessions into the application, we need to install `express-session`.
+
+  * The `express-session` library allows us to leverage sessions in the Express.js routes.
+
+* Open `15-Ins_Sessions/server.js` in your IDE and demonstrate the following:
+
+  * 🔑 We need to import `express-session` into the application, as follows:
+
+    ```js
+    const session = require('express-session');
+    ```
+
+  * 🔑 We set up an Express.js session with the following options: `secret`, `resave`, and `saveUninitialized`. The `secret` option is required and can be either a string for a single secret or an array of multiple secrets. This is used to sign the session id cookie. Technically this should be stored in a `.env` file as a real secret.
+
+  * The `resave` option forces the session to be saved back to the session store. In most cases, we will want to use `false`.
+
+  * The `saveUninitialized` option forces a session that is **uninitialized** (new but not modified) to be saved to the store. Choosing `false`, as shown in the following example, is useful for implementing login sessions: 
+
+    ```js
+    const sess = {
+      secret: 'Super secret secret',
+      resave: false,
+      saveUninitialized: false,
+    };
+    ```
+
+* Open `15-Ins_Sessions/controllers/home-routes.js` in your IDE and explain the following:
+
+  * We will set up a session variable to count how many times we visit the homepage&mdash;and only the homepage. We can visit the gallery and painting pages, but those visits will not get counted.
+
+  * 🔑 In the `/` route, which is the homepage, we set up a session variable called `countVisit`. If that session variable already exists, we increment it by one. But if this is the first time visiting the homepage&mdash;meaning that there is not a session variable yet&mdash;then we create it and set it to `1`, as follows:
+
+    ```js
+    if (req.session.countVisit) {
+      req.session.countVisit++;
+    } else {
+      req.session.countVisit = 1;
+    }
+    ```
+
+  * Then we will render the `homepage` template and send over the `galleries` data and the `countVisit` session variable, as shown in the following example:
+
+    ```js
+    res.render('homepage', {
+      galleries,
+      countVisit: req.session.countVisit,
+    });
+    ```
+
+  * We want to ensure that the session is created before we send the response back, so we're wrapping the variables in a callback. The `req.session.save()` method, shown in the following example, will initiate the creation of the session and then run the callback function once complete: 
+
+    ```js
+    req.session.save(() => {
+      if (req.session.countVisit) {
+        req.session.countVisit++;
+      } else {
+        req.session.countVisit = 1;
+      }
+
+      res.render('homepage', {
+        galleries,
+        countVisit: req.session.countVisit,
+      });
+    });
+    ```
+
+* Run `npm start`, open <http://localhost:3001/> in your browser, and demonstrate the following:
+
+  * On the first visit to the homepage, we see the text "Number of times you've visited this homepage: 1."
+
+  * If we click on a gallery, it still lists just one visit, because we are only counting how many times we visit the main homepage.
+
+  * If we return to the homepage, it will say "Number of times you've visited this homepage: 2."
+
+  * If we refresh the homepage, the number will increment.
+
+  * If we restart the server, the count will reset! That's because the session is lost once the connection to the server is lost or restarted.
+
+  * This was a simple demo of how to create session variables. In most cases, session variables will be used to check logged-in statuses. 
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Sessions/README.me`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we use sessions to allow or restrict access to content?
+
+  * 🙋 We could use sessions to check whether a user is logged in or not, then allow logged-in users to access the gallery's paintings. Otherwise we could redirect users to the login page.
+
+* Answer any questions before proceeding to the next activity.
+
+### 14. Student Do: Sessions (15 min) 
+
+* Direct students to the activity instructions found in `16-Stu_Sessions/README.me`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Add Sessions to the Login Route
+
+  Work with a partner to implement the following user story:
+
+  * As a museum director, I want to allow visitors to view the gallery's paintings only after logging in.
+
+  * As a museum visitor, I want to be able to visit multiple pages while maintaining my logged-in status.
+
+  ## Acceptance Criteria
+
+  * It's done when I can view the gallery's paintings only after I am logged in. Otherwise I am directed to log in.
+
+  * It's done when I can view the individual painting page only after I am logged in. Otherwise I am directed to log in.
+
+  * It's done when I can navigate from the gallery page to a painting's detail page without losing my logged-in status.
+
+  ## Assets
+
+  The following image demonstrates what the museum visitor sees if they try to access the gallery page without logging in:
+
+  ![On the museum webpage, under the gallery name and operating hours, a message prompts users to log in.](./Images/01-Unauthorized-Gallery.jpg)
+
+  ---
+
+  ## 💡 Hints
+
+  * To test the routes, feel free to either create your own user or use the following credentials: 
+
+    * `username`: "Sam"
+  
+    * `email`: "sam@email.com"
+  
+    * `password`: "password1234"
+
+  * If the session variables are set up when the user is created or logged in, which file would hold that info?
+
+  * How can the templates know if the user is logged in or not?
+
+  * What built-in helper method will help us render specific content depending on whether the user is logged in or not?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the lifecycle of a session?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Sessions (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with sessions? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `loggedIn` session variable
+
+  * ✔️ `{{#if loggedIn}}`
+
+  * ✔️ `{{else}}`
+
+* Open `16-Stu_Sessions/Solved/controllers/api/user-routes.js` in your IDE and explain the following: 
+
+  * We have been provided with `user-routes` to handle functionality for creating a new user, logging in, and logging out.
+
+  * 🔑 We want new users to be logged in right away. So we set up a session variable `loggedIn` and set it to `true` as soon a user is created, as shown in the following example:
+
+    ```js
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      res.status(200).json(dbUserData);
+    });
+    ```
+
+  * 🔑 For the `/login` route, after we find the user in the database, using their email address, and check their password against the hashed password, we set up the session, like in the following example:
+
+    ```js
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      res
+        .status(200)
+        .json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+    ```
+
+  * Notice how we destroy the session once the user logs out, as follows:
+
+    ```js
+    router.post('/logout', (req, res) => {
+      if (req.session.loggedIn) {
+        req.session.destroy(() => {
+          res.status(204).end();
+        });
+      } else {
+        res.status(404).end();
+      }
+    });
+    ```
+
+* Open `16-Stu_Sessions/Solved/views/gallery.handlebars` in your IDE and explain the following: 
+
+  * 🔑 We want to prevent unauthorized access to the paintings in the gallery page. So on the `gallery.handlebars` template, we use the built-in helper method `{{#if}}` to determine whether the session variable `loggedIn` is set to `true`. Only then can they access the `painting-details`. See the following code for an example:
+
+    ```handlebars
+    {{#if loggedIn}}
+      <section class="flex-row justify-center">
+        {{#each gallery.paintings as |painting|}}
+        {{> painting-details}}
+        {{/each}}
+      </section>
+    </section>
+    ```
+
+  * 🔑 Else, if the session variable `loggedIn` does not exist or is set to `false`, then we provide a link for them to log in, as shown in the following example:
+
+    ```handlebars
+    {{else}}
+    <a href="/login">You must log in first to view the paintings</a>
+    {{/if}}
+    ```
+
+* Open `16-Stu_Sessions/Solved/views/painting.handlebars` in your IDE and explain the following: 
+
+  * We need to do the same thing to the `painting.handlebars` template to restrict access.
+
+  * Here we wrap the entire contents of the template in the `{{#if}}` helper method, as follows:
+
+    ```handlebars
+    {{#if loggedIn}}
+    <section class="painting">
+      ...
+    </section>
+    {{else}}
+    <a href="/login">You must log in first to view this painting</a>
+    {{/if}}
+    ```
+
+* Run `npm start` and navigate to <http://localhost:3001/> in your browser to demonstrate the following:
+
+  * If we try to access the paintings without logging in, we are directed to log in first. 
+
+  * Let's create a user using the provided credentials:
+
+    * `username`: "Sam"
+  
+    * `email`: "sam@email.com"
+  
+    * `password`: "password1234"
+
+  * After we are logged in, we can access everything on the museum website.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Did you notice where else we used the `loggedIn` session variable to change the view?
+
+  * 🙋 On the `main.handlebars` template, once the user logged in, the login link was replaced by a logout button in the navbar!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [npm documentation on express-session](https://www.npmjs.com/package/express-session), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Cookies (5 min) 
+
+* Navigate to `17-Ins_Cookies` and run `npm install` and `npm start` from your command line.
+
+* Open <http://localhost:3001/> in your browser to demonstrate the following:
+
+  * 🔑 Create a new user for this application, if you haven't already done so, with the following credentials:
+  
+    * `username`: "Sam"
+  
+    * `email`: "sam@email.com"
+  
+    * `password`: "password1234" 
+
+  * 🔑 Now let's try closing the browser, then opening a new tab or window and navigating to <http://localhost:3001/> without logging out first.
+
+  * We are still logged in! This is possible through HTTP cookies. Cookies allow us to store information about the session on the user's client. We store a reference to the cookie in the database.
+
+  * 🔑 Let's open the Application tab in Chrome DevTools to inspect the cookie. If we select the Cookies dropdown on the left-hand menu, we can see the Value of the cookie, as shown in the following image:
+
+    ![The name and value of the cookie are listed in the Application tab in DevTools.](./Images/01-Cookies-Browser.jpg)
+
+  * Let's also check the database. We initialize the MySQL command-line prompt by running `mysql -u root -p` and then entering the MySQL password. Then we run `use museum_db` to change into the `museum_db` database and run `SELECT sid FROM Session;` to view the `sid` of the cookie, as shown in the following example:
+
+    ```sql
+    mysql> SELECT sid FROM Session;
+    +----------------------------------+
+    | sid                              |
+    +----------------------------------+
+    | jmIObjIijpBKfOv4MkVPh_Ri5G_SI7_o |
+    +----------------------------------+
+    1 row in set (0.00 sec)
+    ```
+
+  * Lastly, if the server is still running, we can also see it printed in the CLI as we move from route to route, like in the following example:
+
+    ```sh
+    Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Session` AS `Session` WHERE `Session`.`sid` = 'jmIObjIijpBKfOv4MkVPh_Ri5G_SI7_o';
+    ```
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Cookies/README.md`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use cookies in the museum application?
+
+  * 🙋 We will need to set up sessions with cookies and the Sequelize store.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Student Do: Cookies (15 min)
+
+* Direct students to the activity instructions found in `18-Stu_Cookies/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of the Sequelize Store and Cookies
+
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved/server.js](./Unsolved/server.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [npm documentation on connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the difference between sessions and cookies?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: Cookies (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with cookies? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `connect-session-sequelize`
+
+  * ✔️ `cookie: {}`
+
+  * ✔️ `SequelizeStore()`
+
+* Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following: 
+
+  * 🔑 To set up cookies, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
+
+    ```js
+    const SequelizeStore = require('connect-session-sequelize')(session.Store);
+    ```
+
+  * 🔑 Then we set up an Express.js session like before, but this time we connect to the Sequelize database. We include the `secret`, `resave`, and `saveUninitialized` options as before. All we need to do to tell the session to use cookies is to set `cookie` to be `{}`. If we wanted to set additional options on the cookie, like a maximum age, we would add the options to that object, shown in the following example:
+
+    ```js
+    cookie: {}
+    ```
+
+  * 🔑 Lastly, we set `store` to a new Sequelize store and connect it to the database, as follows:
+
+    ```js
+    store: new SequelizeStore({
+      db: sequelize,
+    }),
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ In what ways are cookies useful?
+
+  * 🙋 Cookies are useful for customer logins, persistent shopping carts, and helpful product recommendations. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Express.js documentation on session cookies](https://github.com/expressjs/session#cookie), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 19. Instructor Demo: Middleware (5 min) 
+
+* Open `19-Ins_Middleware/controllers/home-routes.js` in your IDE and explain the following:
+
+  * 🔑 **Conditional access** refers to only allowing authorized users to see certain content. We did something like this already, when we checked whether the user was logged in before allowing them to see the paintings. But we checked that in the templates.
+
+  * 🔑 In line with the separation of concerns principle and the MVC framework, the correct way to accomplish this is directly in the routes. If we look at the route for a gallery, we use the same logic, where if they are not logged in (meaning that the `loggedIn` session variable does not exist), then the user is redirected to the login page&mdash;as shown in the following example:
+
+    ```js
+    router.get('/gallery/:id', async (req, res) => {
+      if (!req.session.loggedIn) {
+        res.redirect('/login');
+      } 
+    ```
+
+  * 🔑 Else, we allow them to view the gallery's paintings, as follows:
+
+    ```js
+    else {
+      try {
+        const dbGalleryData = await Gallery.findByPk(req.params.id, {
+          include: [
+            {
+              model: Painting,
+              attributes: [
+                'id',
+                'title',
+                'artist',
+                'exhibition_date',
+                'filename',
+                'description',
+              ],
+            },
+          ],
+        });
+        const gallery = dbGalleryData.get({ plain: true });
+        res.render('gallery', { gallery });
+      }
+    ```
+
+  * The same logic is used for the painting page. This is more appropriate than doing it in the templates (because we want to keep that kind of logic out of the Views), but there is an even better solution to this!
+
+  * We can create custom middleware to check whether the user is authenticated before allowing them to access the route. That's what the next activity is all about!
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Middleware/README.md`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we use custom middleware for the museum application?
+
+  * 🙋 We will need to create custom middleware to check for user authentication. 
+
+* Answer any questions before proceeding to the next activity.
+
+### 20. Student Do: Middleware (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu_Middleware/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Implement Middleware Function for User Authentication
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to write my own middleware to check for user authentication.
+
+  ## Acceptance Criteria
+
+  * It's done when the middleware checks whether the user is logged in.
+
+  * It's done when the middleware allows access to the gallery and painting pages if the user is logged in.
+
+  * It's done when the middleware directs an unauthorized user to the login page if they are not logged in yet.
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [Express.js documentation on using middleware](https://expressjs.com/en/guide/using-middleware.html)
+
+  ---
+
+  ## 💡 Hints
+
+  How can you keep the current logic being used in the routes to check whether a user is logged in or not and rewrite it as a middleware function? Where can you write the code for the custom middleware so that it is separate but accessible from the routes? (Where did you put the custom helper functions?)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other middleware do developers use with Express.js?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Middleware (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with custom middleware? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `withAuth` 
+
+* Open `20-Stu_Middleware/Solved/utils/auth.js` in your IDE and explain the following: 
+
+  * According to the Express.js documentation, middleware functions are functions that have access to the request object `req`, the response object `res`, and the next middleware function `next`. If the current middleware function does not end the request-response cycle, it must call `next()` to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+  * To create the custom middleware, we put it in the same folder as the custom helper functions: the `/utils` folder. We create a new file called `auth.js` to hold the custom middleware.
+
+  * 🔑 So to create this custom middleware, `withAuth`, we take the same logic that was in the routes and put it in the function, as follows:
+
+    ```js
+    const withAuth = (req, res, next) => {
+      // This is directly from the `/gallery/:id` and `/painting/:id` routes
+      if (!req.session.loggedIn) {
+        res.redirect('/login');
+      } else {
+        // We call next() if the user is authenticated
+        next();
+      }
+    };
+
+    module.exports = withAuth;
+    ```
+
+* Open `20-Stu_Middleware/Solved/controllers/home-routes.js` in your IDE and explain the following: 
+
+  * Now we need to refactor the routes to use the middleware functions.
+
+  * First we need to import the custom middleware at the top of the file, as shown in the following example:
+
+    ```js
+    const withAuth = require('../utils/auth');
+    ```
+
+  * 🔑 Then we replace the logic that is in the `/gallery/:id` and `/painting/:id` routes with the middleware, as follows:
+
+    ```js
+    router.get('/gallery/:id', withAuth, async (req, res) => { 
+
+    }
+
+    router.get('/painting/:id', withAuth, async (req, res) => {
+
+    }
+    ```
+
+  * Notice how clean the code looks&mdash;and it functions perfectly!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can custom middleware be useful when building applications?
+
+  * 🙋 Custom middleware can help handle common functionality in applications. For example, it keeps us from repeating the same code at the beginning of a route handler.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Express.js documentation on using middleware](https://expressjs.com/en/guide/using-middleware.html), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 22. FLEX (30 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Answer any questions before ending the class.
+
+### 23. END (0 mins)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,4 +1,4 @@
-## 04.1 - Project 1 (10:00 AM)
+# 04.1 Full-Time Lesson Plan: Project 1
 
 ## Overview
 
@@ -14,12 +14,11 @@ Today's class introduces Project 1 and Agile software development.
 
   * Working collaboratively is an important skill to acquire as a developer
 
-* 📝 Students will be allowed to form their own groups for the final project. 
+* Students will be allowed to form their own groups for the final project. 
 
 * The first 50 minutes of class are lecture on agile software development. Students then break into groups to brainstorm ideas and prepare user stories and wireframes. Use the time after break to meet with each team to discuss their idea and course correct as you see fit. 
 
 * ❗ Two in-class demonstrations ask you to use an existing GitHub repository. You can create one on-the-fly or you may want to create on in advance.
-
 
 ## Learning Objectives
 
@@ -33,15 +32,26 @@ Today's class introduces Project 1 and Agile software development.
 
 * Explain scrum and standing meetings 
 
-* Branching & pull requests
+## Slide Deck
 
-## Slides
-
-[04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
+[Unit 07: Project Week](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
 
 ## Time Tracker
 
-[04.1 Time Tracker](https://drive.google.com/a/2tor.com/file/d/1E4VajsfdWWTV4LYpNIfgd6SQ7Dc45kTy/view?usp=sharing)
+| Start   | #  | Activity Name                      | Duration |
+|---      |--- |---                                 |---       |
+| 10:00AM | 1  | Instructor Do: Agile               | 0:10     |
+| 10:10AM | 2  | Instructor Demo: GitHub Issues     | 0:05     |
+| 10:15AM | 3  | Student Do: User Stories and Issues| 0:05     |
+| 10:20AM | 4  | Instructor Do: Agile, Continued    | 0:05     |
+| 10:25AM | 5  | Instructor Demo: GitHub Projects   | 0:05     |
+| 10:30AM | 6  | Student Do: GitHub Projects        | 0:10     |
+| 10:40AM | 7  | Instructor Do: Agile, Continued    | 0:10     |
+| 10:50AM | 8  | Student Do: Break into Teams       | 0:40     |
+| 11:30AM | 9  | Student Do: Project 1              | 0:30     |
+| 12:00PM | 10 | BREAK                              | 0:30     |
+| 12:30PM | 11 | Student Do: Continue Project 1     | 2:00     |
+| 2:30PM  | 12 | END                                | 0:00     |
 
 - - -
 
@@ -238,8 +248,9 @@ Today's class introduces Project 1 and Agile software development.
 
 * As students begin to complete the three activities, direct them to begin working on their projects for the rest of class.
 
-### Lesson Plan Feedback
+### 12. END
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

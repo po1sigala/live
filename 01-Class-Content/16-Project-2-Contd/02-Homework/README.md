@@ -1,11 +1,10 @@
-# Unit 16 Project 2 Homework: Professional Materials
+# 16 Project 2: Professional Materials
 
 Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
 
 If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but it's also *critical* on your journey as a developer.
 
-
-## Requirements
+## Homework Requirements
 
 * Updated portfolio featuring at least 3 examples of student work from either deployed projects of homeworks
 
@@ -20,7 +19,7 @@ If you are opting out of career services, this is *still a required assignment*.
 
 | Requirement      | Weight |
 | ---------------- | ------ |
-| Portoflio        | 40%    |
+| Portfolio        | 40%    |
 | GitHub Profile   | 40%    |
 | Resume           | 10%    |
 | LinkedIn Profile | 10%    |
@@ -29,13 +28,16 @@ If you are opting out of career services, this is *still a required assignment*.
 ## Instructions
 
 1. [Updated Portfolio](#updated-portfolio)
+
 2. [GitHub Profile](#updated-github-profile)
+
 3. [Updated Resume](#updated-resume)
+
 4. [Updated LinkedIn](#updated-linkedin)
 
 ### Updated Portfolio
 
-💁 Need help updating your Portfolio? Check out the [Career Services milestone resources for online presence](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-your-online-presence).
+💁 Need help updating your Portfolio? Check out the [Career Services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
 Your updated portfolio should:
 
@@ -114,16 +116,16 @@ Your GitHub profile must contain at least the following items:
 
 ### Updated Resume 
 
-💁 Need help building a resume? Check out the [Career Services milestone resources](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume).
+💁 Need help building a resume? Check out the [Career Services milestone resources](https://mycareerspot.org/resume).
 
 Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
 
 
 ### Updated LinkedIn 
 
-💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-polish-your-online-presence).
+💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
 Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
 
 - - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

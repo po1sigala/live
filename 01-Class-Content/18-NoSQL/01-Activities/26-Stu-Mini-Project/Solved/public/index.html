@@ -19,7 +19,7 @@
         <div>Your total is: $<span id="total">0</span></div>
       </div>
 
-      <form>
+      <form id="budget-form">
         <label for="t-name">Transaction Name:</label>
         <input type="text" id="t-name" placeholder="Name" />
 
@@ -27,8 +27,8 @@
         <input type="number" min="0" id="t-amount" placeholder="Amount" />
 
         <div class="transaction-buttons">
-          <button id="add-btn"><i class="fa fa-plus"></i> Add Funds</button>
-          <button id="sub-btn">
+          <button id="add-btn" type="submit"><i class="fa fa-plus"></i> Add Funds</button>
+          <button id="sub-btn" type='submit'>
             <i class="fa fa-minus"></i> Subtract Funds
           </button>
         </div>

@@ -1,10 +1,5 @@
 ## 6.1 Lesson Plan - Intro to Node Servers (10:00 AM) 
 
-### Instructors and TAs: Please take the Mid-Course Instructional Staff Survey if You Haven't Yet
-
-Trilogy as a company values transparency and data-driven change quite highly. As we grow, we know there will be areas that need improvement. It’s hard for us to know what these areas are unless we’re asking questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to the individual feedback at the end of lesson plans we would appreciate your feedback at the following link if you have not already taken the mid-course survey:
-[https://forms.gle/yPfrY4CjNeAqbVKD6](https://forms.gle/yPfrY4CjNeAqbVKD6)
-
 ## Overview
 
 In this class, we will provide students with a deep conceptual understanding of server-side code and use vanilla Node.js to create basic servers.
@@ -79,7 +74,30 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * In this exercise, go through the process of re-creating the server.js file found in `01-FirstServer`. If at all possible, create this server "live" and comment on it as you go.
 
-  ![/Images/001-ServerBasic.png](Images/001-ServerBasic.png)
+  ```js
+  // Require/import the HTTP module
+  const http = require('http');
+
+  // Define a port to listen for incoming requests
+  const PORT = 8080;
+
+  // Create a generic function to handle requests and responses
+  const handleRequest = (request, response) => {
+    // Send the below string to the client when the user visits the PORT URL
+    response.end(`It Works!! Path Hit: ${request.url}`);
+  };
+
+  // Use the Node HTTP package to create our server.
+  // Pass the handleRequest function to empower it with functionality.
+  const server = http.createServer(handleRequest);
+
+  // Start our server so that it can begin listening to client requests.
+  server.listen(PORT, () => {
+    // Log (server-side) when our server has started
+    console.log(`Server listening on: http://localhost:${PORT}`);
+  });
+
+  ```
 
 * During your commentary be sure to point out how:
 
@@ -93,7 +111,9 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Once you have completed the code write-up, run the application by typing `node server.js` from the command line. Then visit the URL `localhost:PORT`, where `PORT` is the port you specified in the server file. Point out how this emulates our browser (client) making a request of our localhost (server), and in turn receiving a single string response.
 
-  ![/Images/001-ServerBasic2.png](Images/001-ServerBasic2.png)
+  ```sh
+  Server listening on: http://localhost:8080
+  ```
 
   ![/Images/001-ServerBasic3.png](Images/001-ServerBasic3.png)
 
@@ -121,7 +141,40 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Then open the code and explain to students the solution. In offering your solution, be sure to mention that in this example, we effectively created two servers. Each server used a different port, a different listener, and a different function for handling requests.
 
-![Two Servers](Images/02-Two-Servers.png)
+```js
+// We require/import the HTTP module
+const http = require('http');
+
+// Then define the ports we want to listen to
+const PORTONE = 7000;
+const PORTTWO = 7500;
+
+// We need two different functions to handle requests, one for each server.
+const handleRequestOne = (request, response) => {
+  response.end(
+    'To err is human, but to really foul things up you need a computer.'
+  );
+};
+
+const handleRequestTwo = (request, response) => {
+  response.end("Never trust a computer you can't throw out a window.");
+};
+
+// Create our servers
+const serverOne = http.createServer(handleRequestOne);
+const serverTwo = http.createServer(handleRequestTwo);
+
+// Starting our servers
+serverOne.listen(PORTONE, () => {
+  // Callback triggered when server is successfully listening. Hurray!
+  console.log(`Server listening on: http://localhost:${PORTONE}`);
+});
+
+serverTwo.listen(PORTTWO, () => {
+  // Callback triggered when server is successfully listening. Hurray!
+  console.log(`Server listening on: http://localhost:${PORTTWO}`);
+});
+```
 
 * Slack a copy of the completed app to the class: `02-Two-Servers/Solved/server.js`.
 
@@ -133,7 +186,90 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Open the file `server.js` inside of `03-Portfolio`. Run the application using Node.js.
 
-![actiity3.png](Images/activity3.png)
+```js
+const http = require('http');
+
+const PORT = 8080;
+
+// When someone visits the "http://localhost:8080/portfolio" path, this function is run.
+const displayPortfolio = (res) => {
+  const myHTML = `
+  <html>
+    <body>
+      <h1>My Portfolio</h1>
+      <a href='/'>Go Home</a>
+    </body>
+  </html>`;
+
+  // Configure the response to return a status code of 200 (meaning everything went OK), and to be an HTML document
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+
+  // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
+  res.end(myHTML);
+};
+
+// When someone visits the "http://localhost:8080/" path, this function is run.
+const displayRoot = (res) => {
+  const myHTML = `
+  <html>
+    <body>
+      <h1>Home Page</h1>
+      <a href='/portfolio'>Portfolio</a>
+    </body>
+  </html>`;
+
+  // Configure the response to return a status code of 200 (meaning everything went OK), and to be an HTML document
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+
+  // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
+  res.end(myHTML);
+};
+
+// When someone visits any path that is not specifically defined, this function is run.
+const display404 = (url, res) => {
+  const myHTML = `
+  <html>
+    <body>
+      <h1>404 Not Found </h1>
+      <p>The page you were looking for: ${url} can not be found</p>
+    </body>
+  </html>`;
+
+  // Configure the response to return a status code of 404 (meaning the page/resource asked for couldn't be found), and to be an HTML document
+  res.writeHead(404, { 'Content-Type': 'text/html' });
+
+  // End the response by sending the client the myHTML string (which gets rendered as an HTML document thanks to the code above)
+  res.end(myHTML);
+};
+
+// Create a function which handles incoming requests and sends responses
+
+const handleRequest = (req, res) => {
+  // Capture the url the request is made to
+  const path = req.url;
+
+  // Depending on the URL, display a different HTML file.
+  switch (path) {
+    case '/':
+      return displayRoot(res);
+
+    case '/portfolio':
+      return displayPortfolio(res);
+
+    default:
+      return display404(path, res);
+  }
+};
+
+// Assign our createServer method to a variable called "server"
+const server = http.createServer(handleRequest);
+
+// Start our server
+server.listen(PORT, () => {
+  // Callback triggered when server is successfully listening. Hurray!
+  console.log(`Server listening on: http://localhost:${PORT}`);
+});
+```
 
 * In discussing the code, point out the following discussion items:
   * The use of the abbreviated terms `req` and `res`, which are short for request and response.
@@ -153,7 +289,34 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Open the code for `04-Serving-HTML/server.js` and give students a minute to look it over. Ask them what they think is going to happen when you visit `localhost:80`?
 
-![Serving HTML](Images/03-Serving-HTML.png)
+```js
+// Dependencies
+const http = require('http');
+const fs = require('fs');
+
+// Set our port to 8080
+const PORT = 8080;
+
+// Create a function for handling the requests and responses coming into our server
+const handleRequest = (req, res) => {
+  // Here we use the fs package to read our index.html file
+  fs.readFile(`${__dirname}/index.html`, (err, data) => {
+    if (err) throw err;
+    // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+    // an html file.
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(data);
+  });
+};
+
+// Create our server
+const server = http.createServer(handleRequest);
+
+// Starts our server
+server.listen(PORT, () => {
+  console.log(`Server is listening on PORT: ${PORT}`);
+});
+```
 
 * Run `04-Serving-HTML/server.js` and open `localhost:80` in your browser. It's a website!
 
@@ -196,8 +359,59 @@ In this class, we will provide students with a deep conceptual understanding of 
 
   * Created a function `handleRequest` which takes in a request URL, parses it, then relays the user to the correct page.
 
-    ![08-StudentsServe](Images/08-StudentsServe.png)
+```js
+// Require dependencies
+const http = require('http');
+const fs = require('fs');
 
+// Set our port to 8080
+const PORT = 8080;
+
+const handleRequest = (req, res) => {
+  // Capture the url the request is made to
+  const path = req.url;
+
+  // When we visit different urls, read and respond with different files
+  switch (path) {
+    case '/food':
+      return fs.readFile(`${__dirname}/food.html`, (err, data) => {
+        if (err) throw err;
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(data);
+      });
+
+    case '/movies':
+      return fs.readFile(`${__dirname}/movies.html`, (err, data) => {
+        if (err) throw err;
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(data);
+      });
+
+    case '/frameworks':
+      return fs.readFile(`${__dirname}/frameworks.html`, (err, data) => {
+        if (err) throw err;
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(data);
+      });
+
+    // default to rendering index.html, if none of above cases are hit
+    default:
+      return fs.readFile(`${__dirname}/index.html`, (err, data) => {
+        if (err) throw err;
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(data);
+      });
+  }
+};
+
+// Create the server, assign it to a variable called "server"
+const server = http.createServer(handleRequest);
+
+// Starts our server.
+server.listen(PORT, () => {
+  console.log(`Server is listening on PORT: ${PORT}`);
+});
+```
   * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
 
 ### 12. Instructor Do: Request Methods (0:10)
@@ -206,19 +420,102 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Open `06-Request-Methods/server.js` in your editor.
 
-![Request Methods](Images/04-Request-Methods.png)
+* Briefly run through the code and explain that this app is going to log the type of request it receives, along with any information that was sent with the request in the console. We will test it out using a new application called Insomnia Core.
 
-* Briefly run through the code and explain that this app is going to log the type of request it receives, along with any information that was sent with the request.
+  ```js
+  // Dependencies
+  const http = require('http');
 
-* Have students download the application [Postman](https://www.getpostman.com/). If you've never worked with Postman before, it's a simple application interface for performing HTTP request (GET, POST, PUT, DELETE, and more).
+  const PORT = 8080;
 
-![Postman](Images/10-Methods.png)
+  const handleRequest = (req, res) => {
+    // Saving the request data as a variable
+    let requestData = '';
 
-* Run the server and use Postman to make different types of requests. Show the students how every time a request is made, it is logged in the server's console.
+    // When the server receives data...
+    req.on('data', (data) => {
+      // Add it to requestData.
+      requestData += data;
+    });
 
-* Let the students know that the body of Postman requests must be sent in `raw`, and GET requests cannot have a body in Postman
+    // When the request has ended...
+    req.on('end', () => {
+      // Log (server-side) the request method, as well as the data received!
+      console.log(`You did a ${req.method}, with the data:\n, ${requestData}`);
+      res.end();
+    });
+  };
 
-![Posted](Images/06-Posted.png)
+  // Create the server, assign it to a variable called "server"
+  const server = http.createServer(handleRequest);
+
+  // Start our server
+  server.listen(PORT, () => {
+    console.log(`Server listening on: http://localhost:${PORT}`);
+  });
+  ```
+
+* Have students download the application Insomnia Core. Direct the students to the [Insomnia Core website](https://insomnia.rest/) and follow the instructions for downloading the application for your operating system. The site mentions pricing, but we're going to use the free tier of the application, as those features will really cover all of our needs!
+
+* **Important**: It's important you install the Insomnia Core application and not Insomnia Designer. Insomnia Designer is an application for helping teams design APIs, but we need the Insomnia Core application in order to test our API, not design it. 
+
+* If you've never worked with Insomnia Core before, it's a simple application interface for performing HTTP requests (GET, POST, PUT, DELETE, and more).
+
+* Once it's downloaded, open the application and you should see a screen like the following image:
+
+![The Insomnia Core opening page has three columns for managing requests, making requests, and viewing response data.](./Images/400-insomnia-main.jpg)
+
+* Walk through how to use Insomnia Core by testing a GET route. 
+
+* **Important**: You can refer the students to the [Getting Started with Insomnia page](https://support.insomnia.rest/article/11-getting-started). Don't forget to bookmark the [Insomnia Core documentation](https://support.insomnia.rest/) as well!
+
+* Let's start by clicking the New Request button. You can also click the plus sign (+) in the left column and select New Request.
+
+* After clicking, a modal window should appear asking you to name your request and pick what type of method it is. The default is GET. You can also name your request to help you identify it. Click Create.
+
+* So now there are three columns that seem to be active. The left column will maintain the list of requests we make, just in case we ever want to get back to them and run it again. This is extremely useful, so don't forget that it does that!
+
+* The middle one is where we actually form the request. The URL bar at the top lets you pick what type of request method you'll use and enter the address of the API endpoint you want to test. Let's enter our endpoint, which is `localhost:8080`.
+
+* **Important**: Make sure you turn on your server using `npm start` before testing.
+
+* When we click Send, we should get a `200 OK` status returned. If we check our console, we see the message below:
+
+```bash
+You did a GET with the data:
+
+```
+
+* Great! We successfully made a GET request. Let's try some others.
+
+* Below the URL bar is a subnavigation that allows us to enter more information about the request, as shown below:
+
+  ![Insomnia Core with dropdown menu showing subnavigation.](./Images/04-Insomnia-request.png)
+
+* In the Body dropdown menu, choose Other. Let's send a POST request with the body text "Hello World".
+
+* We should get a `200 OK` status returned and if you check the console, you will see the following message:
+
+```bash
+You did a POST with the data:
+ Hello World
+```
+
+* Let's do a PUT request. Change the type of request method to PUT and replace the body text with "Hi World". Click Send and you should see the following message in your console:
+
+```bash
+You did a PUT with the data:
+ Hi World
+```
+
+* Lastly, let's do a DELETE request. Change the type of request method to DELETE and remove the body text. Click Send and you should wee the following message in your console:
+
+```bash
+You did a DELETE with the data:
+
+```
+
+* Perfect! We are able to test our routes!
 
 * Alternatively you can use CURL
 
@@ -231,9 +528,9 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Let students know that we will be fleshing out this concept over the course of the week.
 
-### 13. Instructor Do: Introduce Friend Finder Homework (0:05)
+### 13. Instructor Do: Introduce Note Taker Homework (0:05)
 
-* Finally, end the class by opening the solution to the Homework (FriendFinder). Run the application using `node server.js` then visit `localhost`. Walk students through the basic gist of the application, describing it as a type of dating application or compatibility test. In essence, the application saves each user's survey responses in the database, then compares the responses against everyone in the database to identify the best match.
+* Finally, end the class by opening the solution to the Homework (Note Taker). Run the application using `node server.js` then visit `localhost`. Walk students through the basic gist of the application, describing it as an application that uses a server to allow us to view and create notes that can be stored server-side using the `fs` module.
 
 * Stress that students should deploy their assignment as early as possible and ask for help if they run into issues. Explain that a non-deployed assignment will take a grade hit and won't help students professionally.
 
@@ -248,7 +545,7 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 * Use the slides to introduce the concept of the Express framework and routing.
 
-* At one point in the slideshow you will be pointed to the NYT Scraper App website. Remind students how the webpage works (namely that the site lets users retrieve articles from the New York Times and store them in a "saved" list). Then use the proceeding slides to discuss the concept of GET and POST routes. Give them a heads-up that we'll be able to use AJAX and jQuery to make both these types of communications.
+* At one point in the slideshow you will be pointed to the NYT Scraper App website. Remind students how the webpage works (namely that the site lets users retrieve articles from the New York Times and store them in a "saved" list). Then use the proceeding slides to discuss the concept of GET and POST routes. Give them a heads-up that we'll be able to use `fetch` to make both these types of communications.
 
 ### 16.	Instructor Do: Demo basic routing with server1.js (0:05)
 
@@ -285,15 +582,15 @@ In this class, we will provide students with a deep conceptual understanding of 
 * Review the previous activity by coding it out yourself. Your solution should look like something of the below:
 
 ```js
-var obiwankenobi = {
+const obiwankenobi = {
   name: "Obi Wan Kenobi",
   role: "Jedi Knight",
   age: 42,
   forcePoints: 1350
 }
 
-app.get('/obiwankenobi', function(req, res){
-  res.json(obiwankenobi);
+app.get('/obiwankenobi', (req, res) =>
+  res.json(obiwankenobi));
 })
 ```
 
@@ -319,7 +616,16 @@ app.get('/obiwankenobi', function(req, res){
 
 * If no one offers the correct answer, explain that the `/:character` syntax is a way of saying we have a "variable" parameter in the URL route. Show them via the browser that this means they can search for a given character using the URL and it will display in the console.
 
-  ![2-reqParams](Images/2-reqParams.png)
+```js
+app.get('/:character', (req, res) => {
+  const chosen = req.params.character;
+
+  // What does this log?
+  console.log(chosen);
+
+  res.end();
+});
+```
 
 ### 21.	Partners Do: Dissect Parameter Match (0:05)
 
@@ -339,7 +645,24 @@ app.get('/obiwankenobi', function(req, res){
 
 * If no one offers the correct answer, explain that this for-loop "checks" which character is being sought after in the URL -- then finds that character's information and re-displays it back to the user in the form of a JSON.
 
-  ![3-searchParam](Images/3-searchParam.png)
+```js
+app.get('/api/characters/:character', (req, res) => {
+  // What does this code do?
+  const chosen = req.params.character;
+  console.log(chosen);
+
+  // What does this code do?
+  for (let i = 0; i < characters.length; i++) {
+    const currentChar = characters[i];
+    if (chosen === currentChar.routeName) {
+      return res.json(currentChar);
+    }
+  }
+
+  // What does this code do?
+  return res.send('No character found');
+});
+```
 
 * Show them how this works by searching for the character `yoda`. Then try searching for a non-existent character like `hansolo`.
 
@@ -353,7 +676,17 @@ app.get('/obiwankenobi', function(req, res){
 
 * Now open the file `server5.js` (`12-StarWars-5`). In this example, simply point students through the fact that we've created a new POST route. Explain that this route will take in JSON inputs then DO work with them. In this case it will save the JSON to the database and return a JSON of the new character.
 
-  ![4-PostReq](Images/4-PostReq.png)
+```js
+app.post('/api/characters', (req, res) => {
+  const newCharacter = req.body;
+
+  console.log(newCharacter);
+
+  characters.push(newCharacter);
+
+  res.json(newCharacter);
+});
+```
 
 ### 25.	Students Do: req.body dissection (0:10)
 

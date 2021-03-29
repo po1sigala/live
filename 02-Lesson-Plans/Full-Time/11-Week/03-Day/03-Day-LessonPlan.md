@@ -1,10 +1,5 @@
 ## 11.3 Lesson Plan - Basics of Algorithms (10:00 AM) <!--links--> &nbsp;  &nbsp; [➡️](../04-Day/04-Day-LessonPlan.md)
 
-### Instructors and TAs: Please take the End-Course Instructional Staff Survey
-
-Trilogy as a company values transparency and data-driven change quite highly. As we grow, we know there will be areas that need improvement. It’s hard for us to know what these areas are unless we’re asking questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to the individual feedback at the end of lesson plans, we would appreciate your feedback at the following link:
-[https://forms.gle/yPfrY4CjNeAqbVKD6](https://forms.gle/yPfrY4CjNeAqbVKD6)
-
 ### Overview
 
 Today, you'll prime your students to conceptualize their final projects. You'll run down the list of expectations and requirements for each of their weekly deliverables. Aside from that, you and the TAs will stick around to make sure each team has a solid idea for their project--they should have one by the end of the class.

@@ -22,6 +22,8 @@ If you are opting out of career services, this is *still a required assignment*.
 
 * Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
 
+* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
+
 ## Grading
 
 | Requirement    | Weight |
@@ -68,8 +70,7 @@ As with the previous portfolio homework, "good" design is subjective. Your site 
 
 * Mobile-first design
 
-* Choose a color palette for your site so it doesn't just look like
-the default bootstrap theme or an unstyled HTML site. You may we
+* Choose a color palette for your site so it doesn't just look like the default bootstrap theme or an unstyled HTML site.
 
 * Make sure the font size is large enough to read, and that the colors don't cause eye strain.
 
@@ -90,10 +91,12 @@ At a minimum, your portfolio should include the following:
 
 * A `Footer` component that appears on multiple pages
 
+* **Important**: If you use React Router, you will **NOT** be able to use the `<BrowserRouter>` component on GitHub Pages. Read the [GitHub note on client-side routing](https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing) and the [React Router documentation on HashRouter](https://reactrouter.com/web/api/HashRouter) for more information.
+
 
 ### Updated LinkedIn Profile 
 
 Make sure to update your LinkedIn Profile with the new skills you've acquired since the last time it was updated.
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

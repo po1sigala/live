@@ -24,9 +24,17 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
   * Also collaborate with your TAs to prepare a slide deck of superlative "awards" for groups. Refer to [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing).
 
-## Heads Up
+## Career Connection
+
+Remind students that related Career Services material can be found in their [Career Connection Folder](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
+
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+
+## Heads-Up
 
 * In the next unit, students will start using Node.js. Be sure to direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs) before starting the next unit!
+
+## Helpful Links
 
 ### Lesson Plans
 
@@ -40,21 +48,14 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 * [4.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-## Career Connection
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+### Slide Decks
 
-[Project #1](../../../01-Class-Content/08-Project-1-Contd/04-Important/CAREER-CONNECTION.md).
+* [Unit 07: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
-
-### Helpful Links
+### Resources
 
 * [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
 * [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
 * [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
-
-### Slide Shows
-
-* [04.1: Project Week](https://docs.google.com/presentation/d/1iqPNJbFpIse1Fm-10eoAQUXnhwzFyleKdOdpsMEofqs/edit?usp=sharing)
