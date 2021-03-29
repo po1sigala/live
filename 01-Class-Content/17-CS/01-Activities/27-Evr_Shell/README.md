@@ -87,7 +87,9 @@ Using the `alias` command, we instruct our shell to define the command `hello` a
 
 >**Note**: It's very important that there is no space between the command definition and value assignment, so make sure there is no space around the equal sign `=`.
 
-Once that's done, save your file. This `hello` command won't be available just yet; we need to restart the command-line application so our updated run command's file will be read and the `hello` command will become defined. 
+Once that's done, save your file. This `hello` command won't be available just yet; we need to restart the command-line application so our updated run command's file will be read and the `hello` command will become defined.
+
+>**Note**: If you are using macOS 10.15 or later and using a `.zshrc` file, you may need to run the command, `source ~/.zshrc`, in order for the new `alias` command to work.
 
 After restarting your command-line application, simply type the following command from anywhere on your command line:
 
