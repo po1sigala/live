@@ -80,7 +80,7 @@ Once those files are created or located, open them in VS Code and add the follow
 ```sh
 # fill in the path to your `hello.sh` file, starting at the root of your machine
 # there should be no space between the command definition and value
-alias hello="~/<path>/<to>/hello.sh"
+alias hello="~/hello.sh"
 ```
 
 Using the `alias` command, we instruct our shell to define the command `hello` and give it a value of the path to our `hello.sh` file. Think of it as creating a shortcut or bookmark so we can save time by not typing out its path every time. 
