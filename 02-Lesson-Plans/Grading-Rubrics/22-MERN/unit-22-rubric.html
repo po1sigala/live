@@ -454,14 +454,27 @@
               subtitle: null,
               questions: [
                 {
+                  title: "Student submitted deployed live application URL",
+                  score: 10,
+                  message: "Application isn't deployed",
+                  status: false
+                },
+                {
+                  title:
+                    "Application loads at deployed URL (no 404, or Heroku/GH Pages error)",
+                  score: 9,
+                  message: "Application isn't deployed",
+                  status: false
+                },
+                {
                   title: "Student submitted application GitHub URL",
-                  score: 19,
+                  score: 8,
                   message: "Missing GitHub submission URL",
                   status: false
                 },
                 {
                   title: "GitHub Repo contains application code",
-                  score: 16,
+                  score: 8,
                   message: "GitHub repo is empty",
                   status: false
                 }
@@ -475,14 +488,14 @@
                 {
                   title:
                     "Application utilizes React.js for its front-end",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not use React.js for its front-end",
                 },
                 {
                   title:
                     "Application routes are handled by Express",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show user the link field of a searched book",
                   status: false
@@ -490,7 +503,7 @@
                 {
                   title:
                     "Application shows user the title field of a searched book",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show title field",
                   status: false
@@ -498,7 +511,7 @@
                 {
                   title:
                     "Application shows user the author field of a searched book",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show user the author field of a searched book",
                   status: false
@@ -506,7 +519,7 @@
                 {
                   title:
                     "Application shows user the description field of a searched book",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show user the description field of a searched book",
                   status: false
@@ -514,7 +527,7 @@
                 {
                   title:
                     "Application shows user the image field of a searched book",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show user the image field of a searched book",
                   status: false
@@ -522,9 +535,17 @@
                 {
                   title:
                     "Application shows user the link field of a searched book",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message:
                     "Application does not show user the link field of a searched book",
+                  status: false
+                },
+                {
+                  title:
+                    "Application saves and removes books from the database?",
+                  score: 40 / 8,
+                  message:
+                    "Application does not save or remove books from the database.",
                   status: false
                 }
               ]
@@ -534,7 +555,7 @@
               subtitle: null,
               questions: [{
                   title: "Application uses React Routing and Socket.io",
-                  score: 40 / 7,
+                  score: 40 / 8,
                   message: "**Bonus**: Application doesn't use React Routing and Socket.io",
                   status: false
                 } 

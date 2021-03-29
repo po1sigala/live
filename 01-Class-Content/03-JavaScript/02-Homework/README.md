@@ -2,9 +2,9 @@
 
 ## Your Task
 
-This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
 
 ## User Story
 
@@ -38,7 +38,7 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
 ## Grading Requirements
 
@@ -46,7 +46,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+* Satisfies all of the preceding acceptance criteria plus the following:
 
   * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
 
@@ -78,8 +78,7 @@ This homework is graded based on the following criteria:
 
 * Repository contains multiple descriptive commit messages.
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
 
 ## Review
 
@@ -87,7 +86,7 @@ You are required to submit the following for review:
 
 * The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
 - - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to know how to use template strings render HTML.
+* As a developer, I want to know how to use template literals inside of a string.
 
 ## Acceptance Criteria
 
@@ -10,13 +10,13 @@ Work with a partner to implement the following user story:
 
 * It's done when I have added `title`, `artist`, and `album` properties to the `music` object.
 
-* It's done when I have used template strings in the `div` tags to output data from the `music` object.
+* It's done when I have used template literals inside the `songSnippet` variable to output data from the `music` object.
 
-* It's done when I open `index.html` and see the results.
+* It's done when I see the results in my command line after I run the `index.js` file.
 
 ## 💡 Hints
 
-* Can we use template strings in place of string concatenation?
+* Can we use template literals in place of string concatenation?
 
 ## 🏆 Bonus
 
@@ -28,4 +28,4 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

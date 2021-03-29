@@ -1,8 +1,8 @@
 let db;
-// create a new db request for a "budget" database.
+// create a new db request for a "BudgetDB" database.
 
 request.onupgradeneeded = function (event) {
-  // create object store called "pending" and set autoIncrement to true
+  // create object store called "BudgetStore" and set autoIncrement to true
 };
 
 request.onsuccess = function (event) {

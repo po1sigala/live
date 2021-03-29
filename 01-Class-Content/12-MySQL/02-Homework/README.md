@@ -124,6 +124,8 @@ Follow these guidelines for committing:
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
 
+**Important**: You will be committing a file that contains your database credentials. Make sure your MySQL password is not used for any other personal accounts, because it will be visible on GitHub. In upcoming lessons, you will learn how to better secure this password, or you can start researching npm packages now that could help you.
+
 
 ## Submission on BCS
 
@@ -134,4 +136,4 @@ You are required to submit the following:
 * A video demonstrating the entirety of the app's functionality 
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

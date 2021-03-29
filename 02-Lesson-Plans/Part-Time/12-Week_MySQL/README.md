@@ -21,7 +21,7 @@ In this week, we are starting working with databases by introducing MySQL and SQ
 ## Career Connection
 Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Helpful Links
 

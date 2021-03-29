@@ -32,7 +32,7 @@ If asked in an interview why you might want to write Node.js code for an enterpr
 
 Now that you’ve picked up more technologies beyond the basics&mdash;including frameworks like Express and Node&mdash;you should be sure to add them to your resume. Your resume is usually your first chance to impress a potential employer with your skills and accomplishments. An employer-competitive resume focuses on results and uses dynamic language. It should be organized, visually clean, and mistake free.
 
-For this section, head on over to [Career Services Milestone: Develop Your Resume](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume) and get working on that Employer Competitive resume!
+For this section, head on over to [Career Services Milestone: Develop Your Resume](https://mycareerspot.org/resume) and get working on that Employer Competitive resume!
 
 ### Technical Interview Preparation
 

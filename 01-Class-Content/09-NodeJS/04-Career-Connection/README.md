@@ -87,4 +87,4 @@ Please refer to the class repository to find the following algorithms:
 If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, check out our [upcoming workshops!](https://careerservicesonlineevents.splashthat.com/)
 
 ---
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

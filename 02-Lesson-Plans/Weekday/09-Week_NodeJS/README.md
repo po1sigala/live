@@ -20,7 +20,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 * Remind students that related Career Services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads-Up
 
@@ -70,4 +70,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ---
 
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
