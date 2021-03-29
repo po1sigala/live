@@ -183,7 +183,6 @@ chmod +x ./git-file-cleanup.sh
 Once that's done, add an alias to your `.bashrc` or `.zshrc` file with the following code:
 
 ```sh
-# set the path to where your `git-file-clean.sh` file is
 alias gfc="~/git-file-cleanup.sh"
 ```
 
