@@ -1761,3 +1761,10 @@ label form [type='radio'] {
   margin-left: 0.5rem;
   width: 100%;
 }
+
+.weather-header {
+  background: #4a02c8;
+  background: -webkit-linear-gradient(right, #4a02c8, #3463bc);
+  background: -moz-linear-gradient(right, #4a02c8, #3463bc);
+  background: linear-gradient(to left, #4a02c8, #3463bc);
+}
