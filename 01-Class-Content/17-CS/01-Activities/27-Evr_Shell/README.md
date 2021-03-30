@@ -14,7 +14,7 @@ A Unix shell script has its own syntax, which might feel familiar to commands we
 
 Like with learning any other programming language, a great first shell-script project is to build a simple "Hello World" application. 
 
-The first step is to create a file that holds the shell script. Navigate to the location on your computer where you want to keep this script and create a `hello.sh` file by using the following command:
+The first step is to create a file that holds the shell script. From the command line, use `cd ~` to navigate to the root directory on your computer. Create a `hello.sh` file in the root directory by using the following command:
 
 ```sh
 touch hello.sh
@@ -80,14 +80,16 @@ Once those files are created or located, open them in VS Code and add the follow
 ```sh
 # fill in the path to your `hello.sh` file, starting at the root of your machine
 # there should be no space between the command definition and value
-alias hello="~/<path>/<to>/hello.sh"
+alias hello="~/hello.sh"
 ```
 
 Using the `alias` command, we instruct our shell to define the command `hello` and give it a value of the path to our `hello.sh` file. Think of it as creating a shortcut or bookmark so we can save time by not typing out its path every time. 
 
 >**Note**: It's very important that there is no space between the command definition and value assignment, so make sure there is no space around the equal sign `=`.
 
-Once that's done, save your file. This `hello` command won't be available just yet; we need to restart the command-line application so our updated run command's file will be read and the `hello` command will become defined. 
+Once that's done, save your file. This `hello` command won't be available just yet; we need to restart the command-line application so our updated run command's file will be read and the `hello` command will become defined.
+
+**Note**: If you are using macOS 10.15 or later and using a `.zshrc` file, you may need to run the command `source ~/.zshrc` for the new `alias` command to work.
 
 After restarting your command-line application, simply type the following command from anywhere on your command line:
 
@@ -103,7 +105,7 @@ Let's move on to another example and learn how to make a slightly more useful sc
 
 Now that we've learned how to write a shell script, let's create one that will actually make our lives easier by automating a Git command to clean up our repositories. 
 
-Create a file called `git-file-cleanup.sh` and open it in VS Code. Then add the shebang (`#!`) interpreter directive at the top of the file with the following code:
+Create a file called `git-file-cleanup.sh` in the root directory and open it in VS Code. Then add the shebang (`#!`) interpreter directive at the top of the file with the following code:
 
 ```sh
 #!/bin/bash
@@ -148,6 +150,9 @@ If there is something to clean, let's move into the `then` statement and use the
 Add the following code to the file after the `printf` and before the `else`:
 
 ```sh
+echo "Proceed?"
+
+
 # use `select` command to prompt a list of options to be displayed for picking and store in `result` 
 select result in Yes No; do
   # if we say "yes" in the prompt...
@@ -163,7 +168,7 @@ select result in Yes No; do
 done;
 ```
 
-Here is where we add a bit of interactivity to our script. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line; when they answer, the response will be stored in a variable called `result`.
+Here is where we add a bit of interactivity to our script. The `echo` command will display a prompt asking the user if they would like to proceed. With the use of the `select` command, we prompt the user for "Yes" or "No" input on the command line; when they answer, the response will be stored in a variable called `result`.
 
 Once we answer the prompt, we use the `do` command to continue the functionality. We check to see if we said "Yes" to cleaning our repo and if so, we execute the command as if we were typing it out on the command line. If we don't say "Yes," or the command finishes, we use the `break` command to exit our `do` loop and then use `done` to signify the end of that set of functionality.
 
@@ -178,8 +183,7 @@ chmod +x ./git-file-cleanup.sh
 Once that's done, add an alias to your `.bashrc` or `.zshrc` file with the following code:
 
 ```sh
-# set the path to where your `git-file-clean.sh` file is
-alias gfc="~/<path>/<to>/git-file-cleanup.sh"
+alias gfc="~/git-file-cleanup.sh"
 ```
 
 Save the run command file that you just updated and restart your command-line application to load the alias into the environment. Once that's done, let's test it out by creating a local Git repo on our machines. You can do so by using the following commands:
