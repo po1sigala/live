@@ -78,7 +78,7 @@ function renderCurrentWeather(city, weather) {
   windEl.setAttribute('class', 'card-text');
   humidityEl.setAttribute('class', 'card-text');
 
-  heading.textContent = `${city}(${date})`;
+  heading.textContent = `${city} (${date})`;
   weatherIcon.setAttribute('src', iconUrl);
   weatherIcon.setAttribute('alt', iconDescription);
   weatherIcon.setAttribute('class', 'weather-img');
