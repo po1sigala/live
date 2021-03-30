@@ -205,8 +205,19 @@ function fetchCoords(search) {
   var apiUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
-    .then((res) => res.json())
-    .then((data) => (!data ? alert('not found') : fetchWeather(data[0])));
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      if (!data[0]) {
+        alert('Location not found');
+      } else {
+        fetchWeather(data[0]);
+      }
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
 }
 
 function handleSearchFormSubmit(e) {
