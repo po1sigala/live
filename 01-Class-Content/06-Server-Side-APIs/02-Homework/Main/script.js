@@ -214,7 +214,7 @@ function fetchCoords(search) {
 
 function handleSearchFormSubmit(e) {
   // Don't continue if there is nothing in the search form
-  if (!searchInput) {
+  if (!searchInput.value) {
     return;
   }
 
