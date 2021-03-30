@@ -1,4 +1,4 @@
-// globals
+// Globals
 var searchHistory = [];
 var weatherApiRootUrl = 'https://api.openweathermap.org';
 var weatherApiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
@@ -14,8 +14,7 @@ var searchHistoryContainer = document.querySelector('#history');
 function renderSearchHistory() {
   searchHistoryContainer.innerHTML = '';
 
-  // Start at end of history array and count down to show the most recent search
-  // at the top of the list.
+  // Start at end of history array and count down to show the most recent at the top.
   for (var i = searchHistory.length - 1; i >= 0; i--) {
     var btn = document.createElement('button');
     btn.setAttribute(
@@ -25,8 +24,7 @@ function renderSearchHistory() {
     btn.setAttribute('type', 'button');
     btn.setAttribute('aria-controls', 'today forecast');
 
-    // data-search is used to get the city to search for when the user clicks
-    // the button
+    // `data-search` allows access to city name when click handler is invoked
     btn.setAttribute('data-search', searchHistory[i]);
     btn.textContent = searchHistory[i];
     searchHistoryContainer.append(btn);
@@ -36,14 +34,14 @@ function renderSearchHistory() {
 // Function to update history in local storage then updates displayed history.
 function appendToHistory(search) {
   searchHistory.push(search);
-  // limit history to last 5 searches
+
+  // Limit history to last 5 searches
   searchHistory.splice(0, searchHistory.length - 5);
   localStorage.setItem('search-history', JSON.stringify(searchHistory));
   renderSearchHistory();
 }
 
-// Function to get search history from local storage, initialize the search
-// history global variable, and display the history list.
+// Function to get search history from local storage
 function initSearchHistory() {
   var storedHistory = localStorage.getItem('search-history');
   if (storedHistory) {
@@ -56,13 +54,12 @@ function initSearchHistory() {
 function renderCurrentWeather(city, weather) {
   var date = dayjs().format('M/D/YYYY');
 
-  // variables for data from api
+  // Store response data from our fetch request in variables
   var tempF = weather.temp;
   var windMph = weather.wind_speed;
-  var humidity = weather.humidity;
-  var uvi = weather.uvi;
-  var iconUrl =
-    'https://openweathermap.org/img/w/' + weather.weather[0].icon + '.png';
+  var { humidity } = weather;
+  var { uvi } = weather;
+  var iconUrl = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
   var iconDescription = weather.weather[0].description || weather[0].main;
 
   var card = document.createElement('div');
@@ -84,13 +81,13 @@ function renderCurrentWeather(city, weather) {
   windEl.setAttribute('class', 'card-text');
   humidityEl.setAttribute('class', 'card-text');
 
-  heading.textContent = city + '(' + date + ')';
+  heading.textContent = `${city}(${date})`;
   weatherIcon.setAttribute('src', iconUrl);
   weatherIcon.setAttribute('alt', iconDescription);
   heading.append(weatherIcon);
-  tempEl.textContent = 'Temp: ' + tempF + '°F';
-  windEl.textContent = 'Wind: ' + windMph + ' MPH';
-  humidityEl.textContent = 'Humidity: ' + humidity + ' %';
+  tempEl.textContent = `Temp: ${tempF}°F`;
+  windEl.textContent = `Wind: ${windMph} MPH`;
+  humidityEl.textContent = `Humidity: ${humidity} %`;
   cardBody.append(heading, tempEl, windEl, humidityEl);
 
   uvEl.textContent = 'UV Index: ';
@@ -115,14 +112,13 @@ function renderCurrentWeather(city, weather) {
 function renderForecastCard(forecast) {
   // variables for data from api
   var unixTs = forecast.dt;
-  var iconUrl =
-    'https://openweathermap.org/img/w/' + forecast.weather[0].icon + '.png';
+  var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
   var iconDescription = forecast.weather[0].description;
   var tempF = forecast.temp.day;
-  var humidity = forecast.humidity;
+  var { humidity } = forecast;
   var windMph = forecast.wind_speed;
 
-  // create elements for a card
+  // Create elements for a card
   var col = document.createElement('div');
   var card = document.createElement('div');
   var cardBody = document.createElement('div');
@@ -144,20 +140,20 @@ function renderForecastCard(forecast) {
   windEl.setAttribute('class', 'card-text');
   humidityEl.setAttribute('class', 'card-text');
 
-  // add content to elements
+  // Add content to elements
   cardTitle.textContent = dayjs.unix(unixTs).format('M/D/YYYY');
   weatherIcon.setAttribute('src', iconUrl);
   weatherIcon.setAttribute('alt', iconDescription);
-  tempEl.textContent = 'Temp: ' + tempF + ' °F';
-  windEl.textContent = 'Wind: ' + windMph + ' MPH';
-  humidityEl.textContent = 'Humidity: ' + humidity + ' %';
+  tempEl.textContent = `Temp: ${tempF} °F`;
+  windEl.textContent = `Wind: ${windMph} MPH`;
+  humidityEl.textContent = `Humidity: ${humidity} %`;
 
   forecastContainer.append(col);
 }
 
 // Function to display 5 day forecast.
 function renderForecast(dailyForecast) {
-  // create unix timestamps for start and end of 5 day forecast
+  // Create unix timestamps for start and end of 5 day forecast
   var startDt = dayjs().add(1, 'day').startOf('day').unix();
   var endDt = dayjs().add(6, 'day').startOf('day').unix();
 
@@ -181,83 +177,59 @@ function renderForecast(dailyForecast) {
   }
 }
 
+function renderItems(city, data) {
+  renderCurrentWeather(city, data.current);
+  renderForecast(data.daily);
+}
+
 // Fetches weather data for given location from the Weather Geolocation
 // endpoint; then, calls functions to display current and forecast weather data.
 function fetchWeather(location) {
-  var lat = location.lat;
-  var lon = location.lon;
+  var { lat } = location;
+  var { lon } = location;
   var city = location.name;
-  var apiUrl =
-    weatherApiRootUrl +
-    '/data/2.5/onecall?lat=' +
-    lat +
-    '&lon=' +
-    lon +
-    '&units=imperial&exclude=minutely,hourly&appid=' +
-    weatherApiKey;
+  var apiUrl = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      console.log('Request Error:', response.statusText);
+    .then(function (res) {
+      return res.json();
     })
-    .then((data) => {
-      renderCurrentWeather(city, data.current);
-      renderForecast(data.daily);
+    .then(function (data) {
+      renderItems(city, data);
     })
-    .catch(function (error) {
-      console.log('Unable to connect to Weather API', error);
+    .catch(function (err) {
+      console.error(err);
     });
 }
 
-// Function to fetch lat/lon of the city for which the user is searching.
 function fetchCoords(search) {
-  var apiUrl =
-    weatherApiRootUrl +
-    '/geo/1.0/direct?q=' +
-    search +
-    '&limit=5&appid=' +
-    weatherApiKey;
+  var apiUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      }
-      console.log('Request Error:', response.statusText);
-    })
-    .then((data) => {
-      // abort if no matching location was found for the user search
-      if (data.length === 0) {
-        alert("Couldn't find that. Please try something else.");
-      } else {
-        fetchWeather(data[0]);
-      }
-    })
-    .catch(function (error) {
-      console.log('Unable to connect to Weather API', error);
-    });
+    .then((res) => res.json())
+    .then((data) => (!data ? alert('not found') : fetchWeather(data[0])));
 }
 
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
-  var search = searchInput.value.trim();
-  if (!search) {
+function handleSearchFormSubmit(e) {
+  // Don't continue if there is nothing in the search form
+  if (!searchInput) {
     return;
   }
+
+  e.preventDefault();
+  var search = searchInput.value.trim();
   fetchCoords(search);
   appendToHistory(search);
   searchInput.value = '';
 }
 
-function handleSearchHistoryClick(event) {
-  var btn = event.target;
-  // don't do search if current elements is not a search history button
-  if (!btn.matches('.btn-history')) {
+function handleSearchHistoryClick(e) {
+  // Don't do search if current elements is not a search history button
+  if (!e.target.matches('.btn-history')) {
     return;
   }
+
+  var btn = e.target;
   var search = btn.getAttribute('data-search');
   fetchCoords(search);
 }
