@@ -1756,3 +1756,8 @@ label form [type='radio'] {
 #form-heading {
   margin: 0.5rem;
 }
+
+.weather-hr {
+  margin-left: 0.5rem;
+  width: 100%;
+}
