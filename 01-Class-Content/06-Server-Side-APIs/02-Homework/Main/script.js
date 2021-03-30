@@ -30,10 +30,12 @@ function renderSearchHistory() {
 
 // Function to update history in local storage then updates displayed history.
 function appendToHistory(search) {
+  // If there is no search term return the function
+  if (searchHistory.indexOf(search) !== -1) {
+    return;
+  }
   searchHistory.push(search);
 
-  // Limit history to last 5 searches
-  searchHistory.splice(0, searchHistory.length - 5);
   localStorage.setItem('search-history', JSON.stringify(searchHistory));
   renderSearchHistory();
 }
@@ -54,8 +56,8 @@ function renderCurrentWeather(city, weather) {
   // Store response data from our fetch request in variables
   var tempF = weather.temp;
   var windMph = weather.wind_speed;
-  var { humidity } = weather;
-  var { uvi } = weather;
+  var humidity = weather.humidity;
+  var uvi = weather.uvi;
   var iconUrl = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
   var iconDescription = weather.weather[0].description || weather[0].main;
 
@@ -67,7 +69,7 @@ function renderCurrentWeather(city, weather) {
   var windEl = document.createElement('p');
   var humidityEl = document.createElement('p');
   var uvEl = document.createElement('p');
-  var uviBadge = document.createElement('span');
+  var uviBadge = document.createElement('button');
 
   card.setAttribute('class', 'card');
   cardBody.setAttribute('class', 'card-body');
@@ -90,6 +92,7 @@ function renderCurrentWeather(city, weather) {
 
   uvEl.textContent = 'UV Index: ';
   uviBadge.classList.add('btn', 'btn-sm');
+
   if (uvi < 3) {
     uviBadge.classList.add('btn-success');
   } else if (uvi < 7) {
@@ -97,6 +100,7 @@ function renderCurrentWeather(city, weather) {
   } else {
     uviBadge.classList.add('btn-danger');
   }
+
   uviBadge.textContent = uvi;
   uvEl.append(uviBadge);
   cardBody.append(uvEl);
@@ -212,6 +216,7 @@ function fetchCoords(search) {
       if (!data[0]) {
         alert('Location not found');
       } else {
+        appendToHistory(search);
         fetchWeather(data[0]);
       }
     })
@@ -229,7 +234,6 @@ function handleSearchFormSubmit(e) {
   e.preventDefault();
   var search = searchInput.value.trim();
   fetchCoords(search);
-  appendToHistory(search);
   searchInput.value = '';
 }
 
