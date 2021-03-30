@@ -1752,3 +1752,7 @@ label form [type='radio'] {
   border: 1px solid #484848;
   border-radius: 0.3rem;
 }
+
+#form-heading {
+  margin: 0.5rem;
+}
