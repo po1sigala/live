@@ -84,6 +84,7 @@ function renderCurrentWeather(city, weather) {
   heading.textContent = `${city}(${date})`;
   weatherIcon.setAttribute('src', iconUrl);
   weatherIcon.setAttribute('alt', iconDescription);
+  weatherIcon.setAttribute('class', 'weather-img');
   heading.append(weatherIcon);
   tempEl.textContent = `Temp: ${tempF}°F`;
   windEl.textContent = `Wind: ${windMph} MPH`;
@@ -133,6 +134,7 @@ function renderForecastCard(forecast) {
   cardBody.append(cardTitle, weatherIcon, tempEl, windEl, humidityEl);
 
   col.setAttribute('class', 'col-md');
+  col.classList.add('five-day-card');
   card.setAttribute('class', 'card bg-primary h-100 text-white');
   cardBody.setAttribute('class', 'card-body p-2');
   cardTitle.setAttribute('class', 'card-title');

@@ -1704,3 +1704,15 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
+.five-day-card {
+  position: relative;
+  width: 20%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.weather-img {
+  border-style: none;
+  vertical-align: middle;
+}
