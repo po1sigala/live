@@ -15,12 +15,12 @@ describe("Stack class", () => {
     expect(stack).toEqual({ container: [1, 2, 3, 4] });
   });
 
-  test("Can add a new element to the back of the stack", () => {
+  test("Can add a new element to the top of the stack", () => {
     stack.addToStack(newItem);
     expect(stack).toEqual({ container: [1, 2, 3, 4, 5] });
   });
 
-  test("Can remove items from the back of the stack", () => {
+  test("Can remove items from the top of the stack", () => {
     const val = stack.removeFromStack();
     expect(val).toEqual(5);
     expect(stack).toEqual({ container: [1, 2, 3, 4] });

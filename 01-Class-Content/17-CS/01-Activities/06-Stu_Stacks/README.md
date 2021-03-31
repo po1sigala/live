@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a class that implements a stack data structure so that I can effectively communicate LIFO to a potential interviewer.
+* As a developer, I want to create a class that implements a stack data structure so that I can better understand how a JavaScript call stack works.
 
 ## Acceptance Criteria
 
