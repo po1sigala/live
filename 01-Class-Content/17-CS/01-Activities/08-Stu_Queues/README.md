@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a class that implements a queue data structure so that I can effectively communicate FIFO to a potential interviewer.
+* As a developer, I want to create a class that implements a queue data structure so that I can better understand how a JavaScript callback queue works.
 
 ## Acceptance Criteria
 
