@@ -1,7 +1,7 @@
 // Access element using id
-var articlesDiv = document.getElementById("articles");
-var mainDiv = document.getElementById("main");
+var articlesDiv = document.getElementById('articles');
+var headerDiv = document.getElementById('header');
 
 // Change style by accessing style object's properties
-articlesDiv.children[0].style.fontSize = "50px";
-mainDiv.children[1].style.color = "white";
+articlesDiv.children[0].style.fontSize = '50px';
+headerDiv.children[1].style.color = 'white';
