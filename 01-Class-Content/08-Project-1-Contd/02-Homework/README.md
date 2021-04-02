@@ -36,7 +36,7 @@ If you are opting out of career services, this is _still a required assignment_.
 
 Your updated portfolio should:
 
-1. Display your full name, email, and phone number
+1. Display your contact information. If you don't want to share your personal email or phone number, use a separate email that you will only use for coding, also known as a developer email, and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
 
 2. Have links to your GitHub profile and LinkedIn profile
 
@@ -72,19 +72,17 @@ Employers (and potential collaborators) _will_ look at your GitHub profile, so p
 
 Your GitHub profile must contain at least the following items:
 
-1. Professional profile picture
+1. Profile picture or avatar
 
-   * A photo or an image other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
+   * A photo or an avatar other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
 
 2. Biography
 
-3. Your current location
+3. Email address. If you don't want to share your personal email or phone number, use a developer email.
 
-4. Email address
+4. Link to your deployed portfolio
 
-5. Link to your deployed portfolio
-
-6. At least 2 pinned repositories:
+5. At least 2 pinned repositories:
 
    * Navigate to [GitHub](https://github.com/) and go to your profile.
 
@@ -92,9 +90,9 @@ Your GitHub profile must contain at least the following items:
 
    * Click the checkboxes for your project and 2-3 homework assignments that you would like to share
 
-7. Follow a few of your classmates. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code.
+6. Follow a few of your classmates and/or other developers. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code.
 
-8. README files. Every pinned project should contain a README file with:
+7. README files. Every pinned project should contain a README file with:
 
    * Title of app
    * Live link to deployed app
@@ -104,7 +102,7 @@ Your GitHub profile must contain at least the following items:
    * License (usually MIT)
    * Contact information for you and any collaborators
 
-9. Commit history. Every pinned repository should have at least 20 commits.
+8. Commit history. Every pinned repository should have at least 20 commits.
 
 ### 3. Updated Resume
 
@@ -114,7 +112,7 @@ Submit a clear, concise, and compelling resume, tailored to the type of job youâ
 
 Your resume should include:
 
-* a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub
+* a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub. If you don't want to share your personal email or phone number, use a developer email and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
 
 * a technical skills section, with all programming languages and technologies listed
 
