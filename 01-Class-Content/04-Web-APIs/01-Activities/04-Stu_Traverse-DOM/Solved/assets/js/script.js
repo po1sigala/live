@@ -4,4 +4,4 @@ var headerDiv = document.getElementById('header');
 
 // Change style by accessing style object's properties
 articlesDiv.children[0].style.fontSize = '50px';
-headerDiv.children[1].style.color = 'white';
+headerDiv.children[0].style.color = 'white';
