@@ -108,7 +108,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, we will return to databases&mdash;in particular, NoSQL databases. We will learn about how non-relational databases work and compare them to SQL databases. Finally, we will explore why we might use NoSQL for an application.
+In the next unit, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer **before** starting attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
 
 ## Resources
 
@@ -127,6 +127,8 @@ The Git Guide for this unit reviews shell scripts:
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides. The following blog post is relevant to this unit:
 
 * 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
+
+* 📖 [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

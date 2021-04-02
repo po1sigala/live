@@ -102,5 +102,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [Quick Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
 
+* [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
+
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
