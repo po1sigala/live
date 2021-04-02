@@ -605,19 +605,19 @@ By the end of class students will be able to:
 
     ```js
     var articlesDiv = document.getElementById("articles");
-    var mainDiv = document.getElementById("main");
+    var headerDiv = document.getElementById("header");
     ```
 
-  * 🔑 To access elements nested inside the `div`, we use `children[]`, which will return a list of all the child elements. To select the first child element of the article `<div>`, we use `children[0]`. This selects the article title and sets the font size. See the following code for an example:
+  * 🔑 To access elements nested inside the `div` or `header` elements, we use `children[]`, which will return a list of all the child elements. To select the first child element of the article `<div>`, we use `children[0]`. This selects the article title and sets the font size. See the following code for an example:
 
     ```js
     articlesDiv.children[0].style.fontSize = "50px";
     ```
 
-  * 🔑 The headline "Welcome to World News" is the second child of the main `<div>`. We access the element's `style` object to set the `color` of font to `white`, as follows: 
+  * 🔑 The headline "Welcome to World News" is the first child of the `<header>` element. We access the element's `style` object to set the `color` of font to `white`, as follows: 
 
     ```js
-    mainDiv.children[1].style.color = "white";
+    headerDiv.children[0].style.color = "white";
     ```
   
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
