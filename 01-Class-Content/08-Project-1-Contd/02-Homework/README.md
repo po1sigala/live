@@ -36,7 +36,7 @@ If you are opting out of career services, this is _still a required assignment_.
 
 Your updated portfolio should:
 
-1. Display your contact information. If you don't want to share your personal email or phone number, use a developer email and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
+1. Display your contact information. If you don't want to share your personal email or phone number, use a separate email that you will only use for coding, also known as a developer email, and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
 
 2. Have links to your GitHub profile and LinkedIn profile
 
