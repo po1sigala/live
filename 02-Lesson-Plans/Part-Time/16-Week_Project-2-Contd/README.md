@@ -22,9 +22,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-
 
 ## Heads-Up
 
-Before the next unit, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
-
-If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
+In the next unit, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
 
 ## Helpful Links
 
@@ -49,8 +47,6 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Resources
 
 * [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
-
-* [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
 
 * [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
