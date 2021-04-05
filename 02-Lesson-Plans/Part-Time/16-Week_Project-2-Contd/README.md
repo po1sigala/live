@@ -22,7 +22,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-
 
 ## Heads-Up
 
-In the next unit, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp but it is important to learn because the students will be faced with it during the interview phase of any software job.
+In the next unit, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp but it is important to learn because the students will be faced with these topics during the interview phase of any software job.
 
 ## Helpful Links
 
