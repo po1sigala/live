@@ -39,7 +39,7 @@ function CreatePostForm() {
       </div>
       <h1>Create a blog post</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-        <label for="title">Title:</label>
+        <label htmlFor="title">Title:</label>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
         <label for="body">Body:</label>
         <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
