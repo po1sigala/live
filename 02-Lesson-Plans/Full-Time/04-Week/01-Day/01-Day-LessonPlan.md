@@ -103,7 +103,7 @@ Today's class introduces Project 1 and Agile software development.
 
   * **Issues**: Use issues to track ideas, enhancements, tasks, or bugs for work on GitHub.
 
-### 2. Instructor Do: Demo GitHub Issues (5 min)
+### 2. Instructor Demo: GitHub Issues (5 min)
 
 * Use the prompts and talking points below to demonstrate the following key point(s):
 
@@ -234,19 +234,13 @@ Today's class introduces Project 1 and Agile software development.
 
 ### 9. Student Do: Project 1 (30 mins)
 
-* Direct students to the following activities to work through as groups: 
-
-  * [01-Stu_Create-Repository/](../../../../01-Class-Content/07-Project-1/01-Activities/01-Stu_Create-Repository/).
-
-  * [02-Stu_Protect-Main](../../../../01-Class-Content/07-Project-1/01-Activities/02-Stu_Protect-Main/).
-
-  * [03-Stu_Branching-Pushing/Unsolved](../../../../01-Class-Content/07-Project-1/01-Activities/03-Stu_Branching-Pushing/Unsolved/).
+* Direct students to continue to work with their groups to identify ideas, research APIs, and create project designs. 
 
 ### 10. Break (30 mins)
 
 ### 11. Continue Work on Project 1 (120 mins)
 
-* As students begin to complete the three activities, direct them to begin working on their projects for the rest of class.
+* Direct students to continue to work on their projects for the rest of class.
 
 ### 12. END
 
