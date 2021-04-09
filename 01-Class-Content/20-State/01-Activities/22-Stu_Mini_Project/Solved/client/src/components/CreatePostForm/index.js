@@ -39,8 +39,11 @@ function CreatePostForm() {
       </div>
       <h1>Create a blog post</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
+        <label for="title">Title:</label>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
+        <label for="body">Body:</label>
         <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
+        <label for="screen name">Screen Name:</label>
         <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" />
         <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
           Save Post
