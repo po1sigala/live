@@ -18,7 +18,7 @@ In this unit, students will begin work on their first Project of the Boot Camp, 
 
 * Project presentations are on the last day of this unit. Remember, students must have deployed projects by presentation day, so encourage students to work on deploying their projects by Day 4 at the latest. Since you can always update deployed projects, it is recommended that students deploy early on and update their live version with every new feature.
 
-  * Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) with students to prepare for their presentations on Day 4. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
+  * Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students to prepare for their presentations on Day 4. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
 
   * Prior to the last class, prepare a list of questions to ask each group to encourage discussion.
 
