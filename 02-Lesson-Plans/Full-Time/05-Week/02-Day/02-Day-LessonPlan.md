@@ -658,25 +658,27 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Open `21-Ins_for-of/index.js` in your browser and demonstrate the following:
 
-* Run `node index.js` after commenting out the `.map` example. 
+* Run `node index.js` after commenting out the 2D array example.
 
   * 🔑 Notice when we run the code that we see each value in the songs array, as follows:
 
     ```js
-    const songs = ['Bad Guy', 'Old Town Road', '7 Rings'];
+    const songs = ['Bad Guy', 'The Wheels on the Bus', 'Friday'];
 
-    for (const value of songs) {
-        console.log(value);
-    }
+    for (const value of songs) console.log(value);
     ```
 
-  * 🔑 After we comment in the second example, we use a `for...of` loop to iterate over an object or map, as shown in the following code:
+  * 🔑 We see in the second example, we use a `for...of` loop to iterate over a 2D array, as shown in the following code:
 
     ```js
-    const songs = new Map([['Bad Guy', 1], ['Old Town Road', 2]]);
+    const moreSongs = [
+      ['Bad Guy', 1],
+      ['The Wheels on the Bus', 2],
+      ['Friday', 3],
+    ];
 
-    for (const [key, value] of songs) {
-        console.log(`${key}'s chart position is ${value}`);
+    for (const [key, value] of moreSongs) {
+      console.log(`${key}'s chart position is ${value}`);
     }
     ```
 
@@ -692,7 +694,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_for-of/README.md`.
 
-### 14. Student Do: for...of (15 min) 
+### 14. Student Do: for...of (15 min)
 
 * Direct students to the activity instructions found in `22-Stu_for-of/README.md`.
 
