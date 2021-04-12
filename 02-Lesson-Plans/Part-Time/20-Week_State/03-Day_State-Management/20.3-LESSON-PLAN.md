@@ -929,17 +929,17 @@ In this activity we will create a CMS (Content Management System) that allows us
   * The button has a `disabled` attribute that activates if `state.loading` is true.
 
   ```js
-      <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-        <label for="title">Title:</label>
-        <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
-        <label for="body">Body:</label>
-        <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-        <label for="screen name">Screen Name:</label>
-        <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" />
-        <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
-          Save Post
-        </button>
-      </form>
+  <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
+    <label for="title">Title:</label>
+    <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
+    <label for="body">Body:</label>
+    <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
+    <label for="screen name">Screen Name:</label>
+    <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" />
+    <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
+       Save Post
+    </button>
+  </form>
   ```
 
 * Open [PostsList.js](../../../../01-Class-Content/20-state/01-Activities/22-Stu_Mini_Project/Solved/client/src/components/PostsList.js) and explain the following:
