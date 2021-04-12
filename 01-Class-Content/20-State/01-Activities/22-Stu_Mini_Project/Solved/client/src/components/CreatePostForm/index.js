@@ -9,7 +9,7 @@ function CreatePostForm() {
   const authorRef = useRef();
   const [state, dispatch] = useStoreContext();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     dispatch({ type: LOADING });
     API.savePost({
@@ -17,13 +17,13 @@ function CreatePostForm() {
       body: bodyRef.current.value,
       author: authorRef.current.value,
     })
-      .then((result) => {
+      .then(result => {
         dispatch({
           type: ADD_POST,
           post: result.data,
         });
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
 
     titleRef.current.value = '';
     bodyRef.current.value = '';
