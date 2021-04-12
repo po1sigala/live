@@ -1,4 +1,4 @@
-## 6.1 Lesson Plan - Intro to Node Servers (10:00 AM) 
+# 6.1 Lesson Plan - Intro to Node Servers (10:00 AM)
 
 ## Overview
 
@@ -38,19 +38,19 @@ In this class, we will provide students with a deep conceptual understanding of 
 
 ### 1. Instructor Do: Server-Side Slide Show (0:25)
 
-* Welcome students to class and then dive into the slide deck [11.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing). Be sure to spend the appropriate amount of time with this presentation. It offers students important warnings about the challenge of this week's class as well as advice on succeeding in the week ahead.
+* Welcome students to class and then dive into the slide deck [6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing). Be sure to spend the appropriate amount of time with this presentation. It offers students important warnings about the challenge of this week's class as well as advice on succeeding in the week ahead.
 
 * Use the presentation as cues to ask your students basic review questions on servers and clients. Try to call on individual students as you proceed through these slides.
 
 * Spend the appropriate amount of time discussing the physical (hardware) nature of servers. Ensure that students understand that servers are little more than central computers that respond to requests from users accessing the machine.
 
-![Central Server](Images/00-Server.png)
+![Central Server](./Images/00-Server.png)
 
 * Use this time to also preface the fact that during development, we use our machines to both emulate the client-side (browser) and the central server (`localhost`). Warn students that this is a concept that will seem tricky, but is fundamentally important to keep straight. You can specifically use the line: "In a way, our computer will be modeling two different computers at once."
 
 * Then proceed through the slides on "Building a Server". Offer the students the perspective that when they purchase a server or a server instance from a cloud provider, they are only getting an empty box. It is up to them as developers to create the code that powers this box, such that it can respond to requests in the ways we've talked about thus far.
 
-![LocalHost](Images/00-Server3.png)
+![LocalHost](./Images/00-Server3.png)
 
 * Use the slides provided to walk students through the core functions common to most servers:
 
@@ -115,7 +115,7 @@ In this class, we will provide students with a deep conceptual understanding of 
   Server listening on: http://localhost:8080
   ```
 
-  ![/Images/001-ServerBasic3.png](Images/001-ServerBasic3.png)
+  ![/Images/001-ServerBasic3.png](./Images/001-ServerBasic3.png)
 
 * Answer any questions that remain for this example before proceeding to the next activity.
 
@@ -412,7 +412,8 @@ server.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
 });
 ```
-  * This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
+
+* This solution contains a lot of repeated code.  Ask your students if they have any suggestions how we might refactor this.  Then open `server-bonus.js` and point out how we implement just one `fs.readFile()` command by passing in a filePath into a `renderHTML` function.
 
 ### 12. Instructor Do: Request Methods (0:10)
 
@@ -457,7 +458,7 @@ server.listen(PORT, () => {
 
 * Have students download the application Insomnia Core. Direct the students to the [Insomnia Core website](https://insomnia.rest/) and follow the instructions for downloading the application for your operating system. The site mentions pricing, but we're going to use the free tier of the application, as those features will really cover all of our needs!
 
-* **Important**: It's important you install the Insomnia Core application and not Insomnia Designer. Insomnia Designer is an application for helping teams design APIs, but we need the Insomnia Core application in order to test our API, not design it. 
+* **Important**: It's important you install the Insomnia Core application and not Insomnia Designer. Insomnia Designer is an application for helping teams design APIs, but we need the Insomnia Core application in order to test our API, not design it.
 
 * If you've never worked with Insomnia Core before, it's a simple application interface for performing HTTP requests (GET, POST, PUT, DELETE, and more).
 
@@ -465,7 +466,7 @@ server.listen(PORT, () => {
 
 ![The Insomnia Core opening page has three columns for managing requests, making requests, and viewing response data.](./Images/400-insomnia-main.jpg)
 
-* Walk through how to use Insomnia Core by testing a GET route. 
+* Walk through how to use Insomnia Core by testing a GET route.
 
 * **Important**: You can refer the students to the [Getting Started with Insomnia page](https://support.insomnia.rest/article/11-getting-started). Don't forget to bookmark the [Insomnia Core documentation](https://support.insomnia.rest/) as well!
 
@@ -534,24 +535,23 @@ You did a DELETE with the data:
 
 * Stress that students should deploy their assignment as early as possible and ask for help if they run into issues. Explain that a non-deployed assignment will take a grade hit and won't help students professionally.
 
-
-### 14.	Instructor Do: Quick Recap "Server" Concepts (0:05)
+### 14. Instructor Do: Quick Recap "Server" Concepts (0:05)
 
 * Open the slide deck [6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing) and walk students through the slides. These are fairly light slides meant merely to offer a visualization of routing. Feel free to cut slides completely if you feel they detract from your teaching style.
 
 * Use the slides to help you guide students through a recap of the concepts behind servers.
 
-### 15.	Everyone Do: Introduce Express (0:05)
+### 15. Everyone Do: Introduce Express (0:05)
 
 * Use the slides to introduce the concept of the Express framework and routing.
 
 * At one point in the slideshow you will be pointed to the NYT Scraper App website. Remind students how the webpage works (namely that the site lets users retrieve articles from the New York Times and store them in a "saved" list). Then use the proceeding slides to discuss the concept of GET and POST routes. Give them a heads-up that we'll be able to use `fetch` to make both these types of communications.
 
-### 16.	Instructor Do: Demo basic routing with server1.js (0:05)
+### 16. Instructor Do: Demo basic routing with server1.js (0:05)
 
 * Before you start working with the code go to the link: [starwars-express-fsf.herokuapp.com/](https://starwars-express-fsf.herokuapp.com/) and show students how the page works. Essentially, you can type in a Star Wars Character's name and search the "database" to see his/her properties. You can also add characters to the database using the simple form. Add a character and show how it gets displayed on both the page and the API. (Note: When searching do not enter spaces between character names).
 
-  ![1-FinalApp](Images/1-FinalApp.png)
+  ![1-FinalApp](./Images/1-FinalApp.png)
 
 * To show the API you can simply go to this link: <http://starwars-express-fsf.herokuapp.com/api/characters>. The api also accepts an additional parameter at the end of the URL in the form of <http://starwars-express-fsf.herokuapp.com/api/characters/:charactername>. As an example: <http://starwars-express-fsf.herokuapp.com/api/characters/yoda>.
 
@@ -561,7 +561,7 @@ You did a DELETE with the data:
 
 * Once you've discussed the key pieces proceed to the first activity.
 
-### 17.	Students Do: Add Route to server1.js (0:10)
+### 17. Students Do: Add Route to server1.js (0:10)
 
 * Slack out the following file and instructions:
 
@@ -577,7 +577,7 @@ You did a DELETE with the data:
 
   * Help those around you when done.
 
-### 18.	Instructor Do: Review Previous Activity (0:05)
+### 18. Instructor Do: Review Previous Activity (0:05)
 
 * Review the previous activity by coding it out yourself. Your solution should look like something of the below:
 
@@ -594,7 +594,7 @@ app.get('/obiwankenobi', (req, res) =>
 })
 ```
 
-### 19.	Partners Do: Dissect req.params (0:05)
+### 19. Partners Do: Dissect req.params (0:05)
 
 * Next slack out the following file and instructions.
 
@@ -627,7 +627,7 @@ app.get('/:character', (req, res) => {
 });
 ```
 
-### 21.	Partners Do: Dissect Parameter Match (0:05)
+### 21. Partners Do: Dissect Parameter Match (0:05)
 
 * Now slack out the next file:
 
@@ -639,7 +639,7 @@ app.get('/:character', (req, res) => {
 
   * Examine the code flagged in the comments. Explain to those around you what it does and how it works. Be sure to create test cases that confirm your hypothesis.
 
-### 22.	Instructor Do: Review Previous Activity (0:05)
+### 22. Instructor Do: Review Previous Activity (0:05)
 
 * Use the same process as before to ask students to explain the for-loop concept to you.
 
@@ -668,11 +668,11 @@ app.get('/api/characters/:character', (req, res) => {
 
 * Ask students of an example where this concept of routing where the URL is changing might be found. (suggested answer: Newspapers. Every newspaper has a url like `/2016/01/01/Great-story-of-the-day` )
 
-### 23.	Instructor Do: Re-demonstrate Previous Solved Activity (0:10)
+### 23. Instructor Do: Re-demonstrate Previous Solved Activity (0:10)
 
 * If needed, open the file `server4.js` (`11-StarWars-4`). This file simply includes a line-by-line commenting of the previous example. Slack out this file to students so they can look over it during the next few exercises.
 
-### 24.	Instructor Do: Show code for Post Route (0:05)
+### 24. Instructor Do: Show code for Post Route (0:05)
 
 * Now open the file `server5.js` (`12-StarWars-5`). In this example, simply point students through the fact that we've created a new POST route. Explain that this route will take in JSON inputs then DO work with them. In this case it will save the JSON to the database and return a JSON of the new character.
 
@@ -688,7 +688,7 @@ app.post('/api/characters', (req, res) => {
 });
 ```
 
-### 25.	Students Do: req.body dissection (0:10)
+### 25. Students Do: req.body dissection (0:10)
 
 * Now slack out the following file and instructions.
 
@@ -704,13 +704,13 @@ app.post('/api/characters', (req, res) => {
 
 ## Heads Up
 
-* In the next class, students will start using Heroku. 
+* In the next class, students will start using Heroku.
 
 * Direct the students to the `04-Important` folder where there are [instructions](../../../../01-Class-Content/11-express/04-Important/heroku-install.md) for signing up for a Heroku account and installing the Heroku CLI.
 
 * Remind the students to sign up for a Heroku account and have the Heroku CLI installed **before** coming to class!
 
-* In a few classes, students will start using MySQL. 
+* In a few classes, students will start using MySQL.
 
 * Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/11-express/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/11-express/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
 
