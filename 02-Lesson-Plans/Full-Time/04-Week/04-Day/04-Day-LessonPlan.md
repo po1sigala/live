@@ -26,7 +26,7 @@ Students work in groups on their first project.
 
 * Prioritize working with groups that may be at risk of failure, i.e: unable to deploy a functional application. 
 
-* Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) with students to prepare for their presentations in the next session. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students to prepare for their presentations in the next session. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
 
 * In the next unit, students will start using Node.js. Advise the students to have Node.js installed before the next unit. 
 
