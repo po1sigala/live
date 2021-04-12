@@ -11,7 +11,7 @@ for (const value of songs) console.log(value);
 
 console.log('\n================================================\n');
 
-// 2. Using 2D arrays
+// 2. Using multidimensional arrays
 const moreSongs = [
   ['Bad Guy', 1],
   ['The Wheels on the Bus', 2],

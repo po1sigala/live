@@ -658,7 +658,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Open `21-Ins_for-of/index.js` in your browser and demonstrate the following:
 
-* Run `node index.js` after commenting out the 2D array example.
+* Run `node index.js` after commenting out the multidimensional array example.
 
   * 🔑 Notice when we run the code that we see each value in the songs array, as follows:
 
@@ -668,7 +668,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
     for (const value of songs) console.log(value);
     ```
 
-  * 🔑 We see in the second example, we use a `for...of` loop to iterate over a 2D array, as shown in the following code:
+  * 🔑 We see in the second example, we use a `for...of` loop to iterate over a multidimensional array.
+  
+  * 🔑 A multidimensional array is an array of elements where each element is another array. In other words, a multidimensional array is an array of arrays.
 
     ```js
     const moreSongs = [
