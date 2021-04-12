@@ -16,7 +16,7 @@ In today's class, students will have time both to outline their presentations, a
 
 * Prioritize working with groups that may be at risk of failure or unable to deploy a functional application. 
 
-* Remind students to use the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to prepare for their presentations in the next session. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
+* Remind students to use the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to prepare for their presentations in the next session. Inform students that they will have 10 minutes to present and must be prepared to answer questions.
 
 * You will assume the role of "scrummaster" and hold daily scrum meetings with each group. The purpose of these scrums is to: 
 
