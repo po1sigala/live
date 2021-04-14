@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 // GET a book
 router.get('/:isbn', (req, res) => {
-  // Get all books from the book table
+  // Get one book from the book table
   Book.findOne({ isbn: req.body.isbn }).then((bookData) => {
     res.json(bookData);
   });
