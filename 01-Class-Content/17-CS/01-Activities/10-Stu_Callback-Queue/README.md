@@ -6,11 +6,13 @@ Work with a partner to resolve the following issue:
 
 ## Expected Behavior
 
-* When the page loads, a user can interact with the page.
+* When the page loads, a user can interact with the form elements.
+
+* A user must still wait 8 seconds before they can submit the form, though.
 
 ## Actual Behavior
 
-* When the page loads, a user is blocked from interacting with the page.
+* When the page loads, a user is temporarily blocked from interacting with any elements on the page.
 
 ## Steps to Reproduce the Problem
 
@@ -22,13 +24,13 @@ Work with a partner to resolve the following issue:
 
 ## 💡 Hints
 
-* Does the callback function in `setTimeout` go straight to the call stack when the timer is set to zero?
+* What is a better user experience for delaying functionality?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How is async behavior in Node.js beneficial?
+* What are common blocking and non-blocking functions in JavaScript?
 
 Use [Google](https://www.google.com) or another search engine to research the above.
 
