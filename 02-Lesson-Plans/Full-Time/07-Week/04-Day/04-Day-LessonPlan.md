@@ -2,7 +2,7 @@
 
 ## Overview
 
-In today's class, students will continue to practice using Handlebars.js, including using partials and custom helpers. Students will also incorporate sessions and cookies using the Sequelize store. Lastly, students will create their own custom middleware for user authentication. 
+In today's class, students will continue to practice using Handlebars.js, including using partials and custom helpers. Students will also incorporate sessions and cookies using the Sequelize store. Lastly, students will create their own custom middleware for user authentication.
 
 ## Instructor Notes
 
@@ -16,7 +16,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Students will need to create the `museum_db` database and seed it during their first activity. They will need to run `npm install`, modify the `.env.EXAMPLE` file, and run `npm start` before every activity.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -30,45 +30,45 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Use custom helper functions to format data in a Handlebars.js template.
 
-* Create and read a session on a server using `express-sessions`. 
+* Create and read a session on a server using `express-sessions`.
 
 * Explain how cookies and sessions work together.
 
-* Implement middleware function in Express.js for user authentication. 
+* Implement middleware function in Express.js for user authentication.
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo: Front-End Logic   | 0:05     |
-| 10:05AM| 2   | Student Do: Front-End Logic        | 0:15     |
-| 10:20AM| 3   | Instructor Review: Front-End Logic | 0:10     |
-| 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Partials          | 0:05     |
-| 10:45AM| 6   | Student Do: Partials               | 0:15     |
-| 11:00AM| 7   | Instructor Review: Partials        | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Custom Helpers    | 0:05     |
-| 11:15AM| 9   | Student Do: Custom Helpers         | 0:15     |
-| 11:30AM| 10  | Instructor Review: Custom Helpers  | 0:10     |
-| 11:40AM| 11  | FLEX                               | 0:20     |
-| 12:00PM| 12  | BREAK                              | 0:30     |
-| 12:30PM| 13  | Instructor Demo: Sessions          | 0:05     |
-| 12:35PM| 14  | Student Do: Sessions               | 0:15     |
-| 12:50PM| 15  | Instructor Review: Sessions        | 0:10     |
-| 1:00PM | 16  | Instructor Demo: Cookies           | 0:05     |
-| 1:05PM | 17  | Student Do: Cookies                | 0:15     |
-| 1:20PM | 18  | Instructor Review: Cookies         | 0:10     |
-| 1:30PM | 19  | Instructor Demo: Middleware        | 0:05     |
-| 1:35PM | 20  | Student Do: Middleware             | 0:15     |
-| 1:50PM | 21  | Instructor Review: Middleware      | 0:10     |
-| 2:00PM | 22  | FLEX                               | 0:30     |
-| 2:30PM | 23  | END                                | 0:00     |
+| Start   | #   | Activity Name                      | Duration |
+| ------- | --- | ---------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Demo: Front-End Logic   | 0:05     |
+| 10:05AM | 2   | Student Do: Front-End Logic        | 0:15     |
+| 10:20AM | 3   | Instructor Review: Front-End Logic | 0:10     |
+| 10:30AM | 4   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:40AM | 5   | Instructor Demo: Partials          | 0:05     |
+| 10:45AM | 6   | Student Do: Partials               | 0:15     |
+| 11:00AM | 7   | Instructor Review: Partials        | 0:10     |
+| 11:10AM | 8   | Instructor Demo: Custom Helpers    | 0:05     |
+| 11:15AM | 9   | Student Do: Custom Helpers         | 0:15     |
+| 11:30AM | 10  | Instructor Review: Custom Helpers  | 0:10     |
+| 11:40AM | 11  | FLEX                               | 0:20     |
+| 12:00PM | 12  | BREAK                              | 0:30     |
+| 12:30PM | 13  | Instructor Demo: Sessions          | 0:05     |
+| 12:35PM | 14  | Student Do: Sessions               | 0:15     |
+| 12:50PM | 15  | Instructor Review: Sessions        | 0:10     |
+| 1:00PM  | 16  | Instructor Demo: Cookies           | 0:05     |
+| 1:05PM  | 17  | Student Do: Cookies                | 0:15     |
+| 1:20PM  | 18  | Instructor Review: Cookies         | 0:10     |
+| 1:30PM  | 19  | Instructor Demo: Middleware        | 0:05     |
+| 1:35PM  | 20  | Student Do: Middleware             | 0:15     |
+| 1:50PM  | 21  | Instructor Review: Middleware      | 0:10     |
+| 2:00PM  | 22  | FLEX                               | 0:30     |
+| 2:30PM  | 23  | END                                | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: Handlebars.js Front-End Logic (5 min) 
+### 1. Instructor Demo: Handlebars.js Front-End Logic (5 min)
 
 * Welcome students to class.
 
@@ -80,7 +80,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Open `09-Ins_Handlebars-FE-Logic/views/all.handlebars` in your IDE and demonstrate the following:
 
-  * This RSVP form to the `'all'` template allows guests to provide information about the dish they plan to bring to the party. 
+  * This RSVP form to the `'all'` template allows guests to provide information about the dish they plan to bring to the party.
 
   * 🔑 To add an event listener, we need to connect the template in `'all'` to the JS in `add-dish.js` by adding a `<script>` tag, as follows:
 
@@ -92,19 +92,19 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * 🔑 Because the template is connected to the JS in the `public` folder, we can add an event listener for the form in `add-dish.js`.
 
-  * On submit, the form handler will capture user input from the form fields in the View, as shown in the following example: 
+  * On submit, the form handler will capture user input from the form fields in the View, as shown in the following example:
 
     ```js
       document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
     ```
 
-  * Notice the syntax where `has_nuts` is declared, shown in the following example: 
+  * Notice the syntax where `has_nuts` is declared, shown in the following example:
 
     ```js
     const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
     ```
 
-    This is a **ternary operator**, or another type of conditional operator. `'#has_nuts:checked'` is the condition, followed by a `?`. If it is truthy, `has-nuts` will be true. Otherwise, it will be false. 
+    This is a **ternary operator**, or another type of conditional operator. `'#has_nuts:checked'` is the condition, followed by a `?`. If it is truthy, `has-nuts` will be true. Otherwise, it will be false.
 
   * 🔑 Using the POST method, `fetch()` passes the form input to the Controller in the body of the request, as follows:
 
@@ -123,7 +123,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
      });
     ```
 
-* Open `09-Ins_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following: 
+* Open `09-Ins_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following:
 
   * 🔑 The POST route in the Controller accepts the input, uses the Model to create a dish object in the database, and then returns the data. See the following code for an example:
 
@@ -145,7 +145,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * 🔑 When the dish is added and a successful response is sent to `add-dish.js`, the `all` template is re-rendered by the View.
 
-* Run `npm install` and `npm start` from the command line. 
+* Run `npm install` and `npm start` from the command line.
 
 * Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
@@ -155,7 +155,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ☝️ How do we process user input and send it to the Controller?
 
-  * 🙋 We can use a form handler to collect form input and send it to the Controller, where the business logic will be performed. 
+  * 🙋 We can use a form handler to collect form input and send it to the Controller, where the business logic will be performed.
 
   * ☝️ How do we connect the form handlers in the `js` folder to the templates in the View?
 
@@ -165,7 +165,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Handlebars-FE-Logic/README.md`.
 
-### 2. 16. Student Do: Handlebars.js Front-End Logic (15 min) 
+### 2. 16. Student Do: Handlebars.js Front-End Logic (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Handlebars-FE-Logic/README.md`.
 
@@ -217,13 +217,13 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ Ternary operator
 
-* Open `10-Stu_Handlebars-FE-Logic/Solved/views/dish.handlebars` in your IDE and explain the following: 
+* Open `10-Stu_Handlebars-FE-Logic/Solved/views/dish.handlebars` in your IDE and explain the following:
 
-  * We now have an edit form in the `'dish'` template that allows users to update a dish. 
+  * We now have an edit form in the `'dish'` template that allows users to update a dish.
 
   * 🔑 As a part of the View, this form is responsible for the UI/UX logic. It is not responsible for business or data-related logic.
 
-* Open `10-Stu_Handlebars-FE-Logic/Solved/public/js/edit-dish.js` in your IDE and explain the following: 
+* Open `10-Stu_Handlebars-FE-Logic/Solved/public/js/edit-dish.js` in your IDE and explain the following:
 
   * We've added an event listener to the form in `edit-dish.js`.
 
@@ -264,7 +264,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
      });
     ```
 
-* Open `10-Stu_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following: 
+* Open `10-Stu_Handlebars-FE-Logic/controllers/api/dish-routes.js` in your IDE and demonstrate the following:
 
   * 🔑 The PUT route in the Controller accepts the input, uses the Model to edit a dish object in the database, and then returns a response to `edit-dish.js`. If the response to the following code is OK, `dish` will be rendered by the View:
 
@@ -290,7 +290,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
       });
     ```
   
-* Run `npm install` and `npm start` from the command line. 
+* Run `npm install` and `npm start` from the command line.
 
 * Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
@@ -310,7 +310,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 ### 4. Instructor Do: Stoke Curiosity (10 mins)
 
-* Explain to students that today they will learn about cookies&mdash;not cookies that we eat, but the HTTP cookies that are saved whenever we visit a website. 
+* Explain to students that today they will learn about cookies&mdash;not cookies that we eat, but the HTTP cookies that are saved whenever we visit a website.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -318,7 +318,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
     > This website stores cookies on your computer. These cookies are used to collect information about how you interact with our website and allow us to remember you. We use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media. To find out more about the cookies we use, see our Privacy Policy. If you decline, your information won’t be tracked when you visit this website. A single cookie will be used in your browser to remember your preference not to be tracked.
 
-    What do you think this message means? What is your understanding of cookies? 
+    What do you think this message means? What is your understanding of cookies?
 
   * 🙋 Cookies are small text files that get stored on users' computers to help websites remember their visitors.
 
@@ -338,9 +338,9 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * 🙋 We will use cookies to remember our logged-in status so that we can navigate from page to page and access all content.
 
-* Answer any questions before proceeding to the next activity. 
+* Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Partials (5 min) 
+### 5. Instructor Demo: Partials (5 min)
 
 * Remind students to start their MySQL Server.
 
@@ -348,11 +348,11 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Demonstrate how to seed the database by running `npm run seed` in your command line.
 
-* Navigate to `11-Ins_Partials` and run `npm start` from the command line. 
+* Navigate to `11-Ins_Partials` and run `npm start` from the command line.
 
-* Open http://localhost:3001/ in your browser and demonstrate the following:
+* Open <http://localhost:3001/> in your browser and demonstrate the following:
 
-  * Today all of the activities will use this museum application. 
+  * Today all of the activities will use this museum application.
 
   * We see four galleries named after the four seasons in different languages.
 
@@ -438,15 +438,15 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 6. Student Do: Partials (15 min) 
+### 6. Student Do: Partials (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_Partials/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-* Remind students to set up their `museum_db` database and seed it before starting the activity. 
+* Remind students to set up their `museum_db` database and seed it before starting the activity.
 
-  > **Important:** Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every activity. 
+  > **Important**: Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every activity.
 
   ```md
   # 🏗️ Use Handlebars.js Partials to Reuse a Template
@@ -488,7 +488,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Partials (10 min) 
+### 7. Instructor Review: Partials (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -506,7 +506,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ Painting's image and artist name
 
-* Open `12-Stu_Partials/Solved/views/gallery.handlebars` in your IDE and explain the following: 
+* Open `12-Stu_Partials/Solved/views/gallery.handlebars` in your IDE and explain the following:
 
   * This is the gallery page, which displays the paintings that belong to this gallery. There are two to three paintings for each gallery, so we use the built-in helper function `{{#each}}` to iterate through each painting, as shown in the following example:
 
@@ -522,7 +522,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     {{> painting-details}}
     ```
 
-* Open `12-Stu_Partials/Solved/views/partials/painting-details.handlebars` in your IDE and explain the following: 
+* Open `12-Stu_Partials/Solved/views/partials/painting-details.handlebars` in your IDE and explain the following:
 
   * We are given a card for each painting. We need to include a link to the painting's page, the title, the image, and the artist name.
 
@@ -564,7 +564,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Custom Helpers (5 min) 
+### 8. Instructor Demo: Custom Helpers (5 min)
 
 * Navigate to `13-Ins_Custom-Helpers` and run `npm install` and `npm start` in your command line to demonstrate the following:
 
@@ -606,7 +606,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
     ```js
     const helpers = require('./utils/helpers');
-    ``` 
+    ```
 
   * We instruct Handlebars.js to incorporate the custom helper methods when rendering the templates, as follows:
 
@@ -624,7 +624,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 9. Student Do: Custom Helpers (15 min) 
+### 9. Student Do: Custom Helpers (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_Custom-Helpers/README.md`.
 
@@ -672,7 +672,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Custom Helpers (10 min) 
+### 10. Instructor Review: Custom Helpers (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -686,9 +686,9 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ `.getFullYear()`
 
-  * ✔️ `format_date()` 
+  * ✔️ `format_date()`
 
-* Open `14-Stu_Custom-Helpers/Solved/utils/helpers.js` in your IDE and explain the following: 
+* Open `14-Stu_Custom-Helpers/Solved/utils/helpers.js` in your IDE and explain the following:
 
   * Under the `format_time` helper function, we create another custom helper, named `format_date`, that takes in a date as follows:
 
@@ -716,7 +716,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     /${new Date(date).getFullYear() + 5}`;
     ```
 
-* Open `14-Stu_Custom-Helpers/Solved/views/painting.handlebars` in your IDE and explain the following: 
+* Open `14-Stu_Custom-Helpers/Solved/views/painting.handlebars` in your IDE and explain the following:
 
   * 🔑 On the `painting.handlebars` template, we need to include the helper function `format_date` along with the `painting.exhibition_date` for the end date to be rendered correctly&mdash;as shown in the following example:
 
@@ -746,7 +746,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: Sessions (5 min) 
+### 13. Instructor Demo: Sessions (5 min)
 
 * Navigate to `15-Ins_Sessions` in your command line and run `npm install` to demonstrate the following:
 
@@ -768,7 +768,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * The `resave` option forces the session to be saved back to the session store. In most cases, we will want to use `false`.
 
-  * The `saveUninitialized` option forces a session that is **uninitialized** (new but not modified) to be saved to the store. Choosing `false`, as shown in the following example, is useful for implementing login sessions: 
+  * The `saveUninitialized` option forces a session that is **uninitialized** (new but not modified) to be saved to the store. Choosing `false`, as shown in the following example, is useful for implementing login sessions:
 
     ```js
     const sess = {
@@ -801,7 +801,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     });
     ```
 
-  * We want to ensure that the session is created before we send the response back, so we're wrapping the variables in a callback. The `req.session.save()` method, shown in the following example, will initiate the creation of the session and then run the callback function once complete: 
+  * We want to ensure that the session is created before we send the response back, so we're wrapping the variables in a callback. The `req.session.save()` method, shown in the following example, will initiate the creation of the session and then run the callback function once complete:
 
     ```js
     req.session.save(() => {
@@ -830,7 +830,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * If we restart the server, the count will reset! That's because the session is lost once the connection to the server is lost or restarted.
 
-  * This was a simple demo of how to create session variables. In most cases, session variables will be used to check logged-in statuses. 
+  * This was a simple demo of how to create session variables. In most cases, session variables will be used to check logged-in statuses.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Sessions/README.me`.
 
@@ -842,7 +842,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 14. Student Do: Sessions (15 min) 
+### 14. Student Do: Sessions (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Sessions/README.me`.
 
@@ -900,7 +900,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Sessions (10 min) 
+### 15. Instructor Review: Sessions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -916,7 +916,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ `{{else}}`
 
-* Open `16-Stu_Sessions/Solved/controllers/api/user-routes.js` in your IDE and explain the following: 
+* Open `16-Stu_Sessions/Solved/controllers/api/user-routes.js` in your IDE and explain the following:
 
   * We have been provided with `user-routes` to handle functionality for creating a new user, logging in, and logging out.
 
@@ -954,7 +954,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     });
     ```
 
-* Open `16-Stu_Sessions/Solved/views/gallery.handlebars` in your IDE and explain the following: 
+* Open `16-Stu_Sessions/Solved/views/gallery.handlebars` in your IDE and explain the following:
 
   * 🔑 We want to prevent unauthorized access to the paintings in the gallery page. So on the `gallery.handlebars` template, we use the built-in helper method `{{#if}}` to determine whether the session variable `loggedIn` is set to `true`. Only then can they access the `painting-details`. See the following code for an example:
 
@@ -976,7 +976,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     {{/if}}
     ```
 
-* Open `16-Stu_Sessions/Solved/views/painting.handlebars` in your IDE and explain the following: 
+* Open `16-Stu_Sessions/Solved/views/painting.handlebars` in your IDE and explain the following:
 
   * We need to do the same thing to the `painting.handlebars` template to restrict access.
 
@@ -994,7 +994,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Run `npm start` and navigate to <http://localhost:3001/> in your browser to demonstrate the following:
 
-  * If we try to access the paintings without logging in, we are directed to log in first. 
+  * If we try to access the paintings without logging in, we are directed to log in first.
 
   * Let's create a user using the provided credentials:
 
@@ -1018,7 +1018,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Cookies (5 min) 
+### 16. Instructor Demo: Cookies (5 min)
 
 * Navigate to `17-Ins_Cookies` and run `npm install` and `npm start` from your command line.
 
@@ -1030,7 +1030,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
   
     * `email`: "sam@email.com"
   
-    * `password`: "password1234" 
+    * `password`: "password1234"
 
   * 🔑 Now let's try closing the browser, then opening a new tab or window and navigating to <http://localhost:3001/> without logging out first.
 
@@ -1098,7 +1098,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Cookies (10 min) 
+### 18. Instructor Review: Cookies (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1114,7 +1114,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ `SequelizeStore()`
 
-* Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following: 
+* Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following:
 
   * 🔑 To set up cookies, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
 
@@ -1140,7 +1140,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ☝️ In what ways are cookies useful?
 
-  * 🙋 Cookies are useful for customer logins, persistent shopping carts, and helpful product recommendations. 
+  * 🙋 Cookies are useful for customer logins, persistent shopping carts, and helpful product recommendations.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -1148,7 +1148,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 19. Instructor Demo: Middleware (5 min) 
+### 19. Instructor Demo: Middleware (5 min)
 
 * Open `19-Ins_Middleware/controllers/home-routes.js` in your IDE and explain the following:
 
@@ -1198,11 +1198,11 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ☝️ How could we use custom middleware for the museum application?
 
-  * 🙋 We will need to create custom middleware to check for user authentication. 
+  * 🙋 We will need to create custom middleware to check for user authentication.
 
 * Answer any questions before proceeding to the next activity.
 
-### 20. Student Do: Middleware (15 min) 
+### 20. Student Do: Middleware (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Middleware/README.md`.
 
@@ -1246,7 +1246,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Middleware (10 min) 
+### 21. Instructor Review: Middleware (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1256,9 +1256,9 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `withAuth` 
+  * ✔️ `withAuth`
 
-* Open `20-Stu_Middleware/Solved/utils/auth.js` in your IDE and explain the following: 
+* Open `20-Stu_Middleware/Solved/utils/auth.js` in your IDE and explain the following:
 
   * According to the Express.js documentation, middleware functions are functions that have access to the request object `req`, the response object `res`, and the next middleware function `next`. If the current middleware function does not end the request-response cycle, it must call `next()` to pass control to the next middleware function. Otherwise, the request will be left hanging.
 
@@ -1280,7 +1280,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     module.exports = withAuth;
     ```
 
-* Open `20-Stu_Middleware/Solved/controllers/home-routes.js` in your IDE and explain the following: 
+* Open `20-Stu_Middleware/Solved/controllers/home-routes.js` in your IDE and explain the following:
 
   * Now we need to refactor the routes to use the middleware functions.
 
