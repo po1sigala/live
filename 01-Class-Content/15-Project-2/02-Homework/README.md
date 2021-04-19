@@ -1,4 +1,4 @@
-# 15 Project 2: Full-Stack Application
+# 15 Project 2: Interactive Full-Stack Application
 
 Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
@@ -6,7 +6,7 @@ As your first opportunity to show employers your collaborative skills and coding
 
 ## Project Requirements
 
-You and your group will use everything you’ve learned over the past six weeks to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+You and your group will use everything you’ve learned over the past six units to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
 * Use Node.js and Express.js to create a RESTful API.
 
@@ -113,7 +113,6 @@ This project is graded based on the following criteria:
 ### Collaboration 10%
 
 * There are no major disparities in the number of GitHub contributions between group members.
-
 
 ## How to Submit Your Interactive Full-Stack Project
 
