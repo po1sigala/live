@@ -2,7 +2,7 @@
 
 ## Overview
 
-In today's class, students will start by doing the mini-project for Unit 13. Then they will learn about the MVC framework and the separation of concerns. Starting with hardcoded data, they will practice using template engines on the front end by implementing Handlebars.js expressions and built-in helpers. Then they will use Sequelize and MySQL to handle data logic on the back end. In the process, they will learn how the Controller mediates between the View and the Model by processing requests for data, using routes to manipulate the database, and passing serialized data to the View. 
+In today's class, students will start by doing the mini-project for Unit 13. Then they will learn about the MVC framework and the separation of concerns. Starting with hardcoded data, they will practice using template engines on the front end by implementing Handlebars.js expressions and built-in helpers. Then they will use Sequelize and MySQL to handle data logic on the back end. In the process, they will learn how the Controller mediates between the View and the Model by processing requests for data, using routes to manipulate the database, and passing serialized data to the View.
 
 ## Instructor Notes
 
@@ -10,15 +10,15 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Unit 14 introduces students to the template engine **Handlebars.js**. Students might not use Handlebars.js in their careers, but learning this tool will help introduce them to template engines, prepare them to work with React.js, and demonstrate the MVC framework.
 
-* You will use MySQL for a few of today's activities, so be sure to have your MySQL server up and running. You can create the `dish_db` database ahead of time, or you can demonstrate it live in class. 
+* You will use MySQL for a few of today's activities, so be sure to have your MySQL server up and running. You can create the `dish_db` database ahead of time, or you can demonstrate it live in class.
 
-* The first several activities, `01-Ins_MVC-Handlebars-Intro` through `06-Stu_Built-In-Helpers`, include hardcoded data in Handlebars.js templates, in `index.html`, or in the `dish-routes.js` file. Every subsequent activity (starting with `07-Ins_Data-Serialization`) includes a seeds folder. Run `node seeds/index.js` before class, or demonstrate seeding the database live in class. 
+* The first several activities, `01-Ins_MVC-Handlebars-Intro` through `06-Stu_Built-In-Helpers`, include hardcoded data in Handlebars.js templates, in `index.html`, or in the `dish-routes.js` file. Every subsequent activity (starting with `07-Ins_Data-Serialization`) includes a seeds folder. Run `node seeds/index.js` before class, or demonstrate seeding the database live in class.
 
 * Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Be sure to create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
 * Be prepared to remind students how to start their MySQL server and create the `dish_db` database in `08-Stu_Data-Serialization`.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -42,40 +42,40 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                               | Duration |
-|---     |---  |---                                          |---       |
-| 10:00AM| 1   | Instructor Demo: Mini-Project               | 0:05     |
-| 10:05AM| 2   | Student Do: Mini-Project                    | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini-Project             | 0:10     |
-| 11:15AM| 4   | Introduce Homework                          | 0:05     |
-| 11:20AM| 5   | FLEX                                        | 0:30     |
-| 11:50PM| 6  | Instructor Do: Stoke Curiosity               | 0:10     |
-| 12:00PM| 7  | BREAK                                        | 0:30     |
-| 12:30PM| 8  | Instructor Demo: MVC Handlebars.js Intro     | 0:05     |
-| 12:35PM| 9  | Student Do: MVC Handlebars.js Intro          | 0:15     |
-| 12:50PM| 10 | Instructor Review: MVC Handlebars.js Intro   | 0:10     |
-| 1:00PM | 11 | Instructor Demo: Handlebars.js Expressions   | 0:05     |
-| 1:05PM | 12 | Student Do: Handlebars.js Expressions        | 0:15     |
-| 1:20PM | 13 | Instructor Review: Handlebars.js Expressions | 0:10     |
-| 1:30PM | 14 | Instructor Demo: Built-In Helpers            | 0:05     |
-| 1:35PM | 15 | Student Do: Built-In Helpers                 | 0:15     |
-| 1:50PM | 16 | Instructor Review: Built-In Helpers          | 0:10     |
-| 2:00PM | 17 | Instructor Demo: Data Serialization          | 0:05     |
-| 2:05PM | 18 | Student Do: Data Serialization               | 0:15     |
-| 2:20PM | 19 | Instructor Review: Data Serialization        | 0:10     |
-| 2:30PM | 20 | END                                          | 0:00     |
+| Start   | #   | Activity Name                                | Duration |
+| ------- | --- | -------------------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Demo: Mini-Project                | 0:05     |
+| 10:05AM | 2   | Student Do: Mini-Project                     | 0:60     |
+| 11:05AM | 3   | Instructor Review: Mini-Project              | 0:10     |
+| 11:15AM | 4   | Introduce Homework                           | 0:05     |
+| 11:20AM | 5   | FLEX                                         | 0:30     |
+| 11:50PM | 6   | Instructor Do: Stoke Curiosity               | 0:10     |
+| 12:00PM | 7   | BREAK                                        | 0:30     |
+| 12:30PM | 8   | Instructor Demo: MVC Handlebars.js Intro     | 0:05     |
+| 12:35PM | 9   | Student Do: MVC Handlebars.js Intro          | 0:15     |
+| 12:50PM | 10  | Instructor Review: MVC Handlebars.js Intro   | 0:10     |
+| 1:00PM  | 11  | Instructor Demo: Handlebars.js Expressions   | 0:05     |
+| 1:05PM  | 12  | Student Do: Handlebars.js Expressions        | 0:15     |
+| 1:20PM  | 13  | Instructor Review: Handlebars.js Expressions | 0:10     |
+| 1:30PM  | 14  | Instructor Demo: Built-In Helpers            | 0:05     |
+| 1:35PM  | 15  | Student Do: Built-In Helpers                 | 0:15     |
+| 1:50PM  | 16  | Instructor Review: Built-In Helpers          | 0:10     |
+| 2:00PM  | 17  | Instructor Demo: Data Serialization          | 0:05     |
+| 2:05PM  | 18  | Student Do: Data Serialization               | 0:15     |
+| 2:20PM  | 19  | Instructor Review: Data Serialization        | 0:10     |
+| 2:30PM  | 20  | END                                          | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
 * Navigate to `28-Stu_Mini-Project/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+* Run `npm start` from the command line and use Insomnia Core to demonstrate the following:
 
   * 🔑 When we perform a GET request to `/api/travellers/:id` (pick an `id`), we receive data for a traveller, along with the locations they plan on visiting and more information for that trip, as shown in the following example:
 
@@ -118,7 +118,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Break your students into groups that will work together on this activity.
 
-  ```md
+  ````md
   # Unit 13 Mini-Project: Travel Planner
 
   In this mini-project, you will work with a group to build an API using Node.js, Express.js, MySQL, and Sequelize, and you will deploy it to Heroku.
@@ -214,22 +214,22 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   ## 💡 Hints
 
-  * What model association option can we set to automatically delete associated data? 
+    * What model association option can we set to automatically delete associated data?
 
-  * How can we use the data in `Develop/seeds` to provide starter data for locations and travellers and not have to create it ourselves? 
+    * How can we use the data in `Develop/seeds` to provide starter data for locations and travellers and not have to create it ourselves?
 
-  * If we're deploying this to Heroku, can we work on this from within the class repository, or should we make a new GitHub repo?
+    * If we're deploying this to Heroku, can we work on this from within the class repository, or should we make a new GitHub repo?
 
   ## 🏆 Bonus
 
-  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+    If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Add validations to all of the model data.
+    * Add validations to all of the model data.
 
-  * Create a password hashing and login system for travellers.
+    * Create a password hashing and login system for travellers.
 
-  * Set up a **super many-to-many relationship** between travellers, locations, and trips to provide more querying options. To learn more, see the [Sequelize documentation on advanced many-to-many relationships](https://sequelize.org/master/manual/advanced-many-to-many.html).
-  ```
+    * Set up a **super many-to-many relationship** between travellers, locations, and trips to provide more querying options. To learn more, see the [Sequelize documentation on advanced many-to-many relationships](https://sequelize.org/master/manual/advanced-many-to-many.html).
+  ````
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
@@ -251,7 +251,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * ✔️ JawsDB environment variable for production
 
-* Open `28-Stu_Mini-Project/Solved/models/Trip.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Solved/models/Trip.js` in your IDE and explain the following:
 
   * 🔑 We want a `Trip` model to be the joining table (or **through table**, in Sequelize terms) between locations and travellers, so we create foreign key columns for both. See the following code for an example:
 
@@ -272,7 +272,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     }
     ```
 
-* Open `28-Stu_Mini-Project/Solved/models/index.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Solved/models/index.js` in your IDE and explain the following:
 
   * 🔑 We associate locations and travellers to one another through trips, as follows:
 
@@ -290,9 +290,9 @@ In today's class, students will start by doing the mini-project for Unit 13. The
       as: 'location_travellers',
       foreignKey: 'location_id'
     });
-    ``` 
+    ```
 
-* Open `28-Stu_Mini-Project/Solved/routes/api/travellerRoutes.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Solved/routes/api/travellerRoutes.js` in your IDE and explain the following:
 
   * 🔑 In the GET routes, we use `include` with the `through` option, to perform a many-to-many JOIN like in the following example:
 
@@ -306,7 +306,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * We do not use the `include` option in the routes that retrieve all data, because typically we would not need that data until we are viewing a single item's detailed data.
 
-* Open `28-Stu_Mini-Project/Solved/config/connection.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Solved/config/connection.js` in your IDE and explain the following:
 
   * 🔑 We use `process.env.JAWSDB_URL` as a placeholder value that will be used in production by Heroku, as follows:
 
@@ -347,7 +347,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Navigate to `02-Homework/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+* Run `npm start` from the command line and use Insomnia Core to demonstrate the following:
 
   * We will build an e-commerce application back end that works with products, categories, and tags.
 
@@ -357,7 +357,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * The structure for this application is already in place; we just need to create the models and finish the routes.
 
-  * Students can use the comments in the files to help provide context as to what's needed. 
+  * Students can use the comments in the files to help provide context as to what's needed.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -410,7 +410,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     * A **template engine** is software that allows us to combine data with a static template to generate dynamic HTML. Most template engines offer the following features:
 
       * Placeholders for data that we wish to include
-      
+
       * Functions
 
       * Conditional rendering and looping
@@ -422,18 +422,17 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     * They help us follow the separation of concerns principle and MVC by providing an easy, clean way to separate HTML and JavaScript.
 
     * They offer tools that reduce repetition in code.
-    
-    * Templates are easy to create, use, and maintain.
-    
-    * They improve SEO and make fewer client-to-server requests.
 
+    * Templates are easy to create, use, and maintain.
+
+    * They improve SEO and make fewer client-to-server requests.
 
   * **What is Handlebars.js?**
   
-    * **Handlebars.js** is an extension of the templating language Mustache. 
+    * **Handlebars.js** is an extension of the templating language Mustache.
 
     * It is a logicless templating language that separates code from the View.
-    
+
     * It compiles templates into a single resource and then returns the HTML after replacing variables with data.
 
     * It is a pure rendering engine&mdash;meaning that it has no built-in support for event handling, accessing back-end services, or making incremental DOM updates.
@@ -450,39 +449,39 @@ In today's class, students will start by doing the mini-project for Unit 13. The
   
   * **How can we learn to use and implement MVC and Handlebars.js?**
 
-    * Handlebars.js and other template engines are designed to make implementing the MVC pattern easier. 
+    * Handlebars.js and other template engines are designed to make implementing the MVC pattern easier.
 
     * You can try the following strategies to learn MVC and Handlebars.js:
 
       * Read the official documentation and practice with the provided examples.
-    
+
       * Reverse-engineer finished code to see how something was accomplished.
-    
+
       * Build something from scratch.
-    
+
       * Debug a broken app.
-    
+
       * And most importantly, ask questions!
 
 * Navigate to `28-Stu_Mini-Project/Main` in your command line.
 
-* If you haven't already, rename the `.env.EXAMPLE` file and fill in your credentials. Run `seeds/seed.js` to data. 
+* If you haven't already, rename the `.env.EXAMPLE` file and fill in your credentials. Run `seeds/seed.js` to data.
 
 * Run `npm install` and `npm start` in the command line.
 
-* Navigate to http://localhost:3001/ in your browser and demonstrate the following: 
+* Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
   * The mini-project for this unit uses Handlebars.js to build the View for a crowdfunding app.
 
   * The homepage for the crowdfunding app is rendered using Handlebars.js templates and displays all projects from the database.
 
-* Navigate to http://localhost:3001/login in your browser and demonstrate the following: 
+* Navigate to <http://localhost:3001/login> in your browser and demonstrate the following:
 
   * A user can create an account if they don't have one.
 
   * Log into an account using the credentials `sal@hotmail.com` and `password12345`.
   
-* Once logged in, navigate to http://localhost:3001/profile in your browser and demonstrate the following:
+* Once logged in, navigate to <http://localhost:3001/profile> in your browser and demonstrate the following:
 
   * Logged-in users can view their projects when they visit `/profile`.
 
@@ -508,9 +507,9 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: MVC Handlebars.js Intro (5 min) 
+### 8. Instructor Demo: MVC Handlebars.js Intro (5 min)
 
-* Run `npm install` and `npm start` from the command line. 
+* Run `npm install` and `npm start` from the command line.
 
 * Open `01-Ins_MVC-Handlebars-Intro/controllers/dish-routes.js` in your IDE and demonstrate the following:
 
@@ -532,13 +531,13 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * For now the dishes are hardcoded in `views/index.html`. But today you will learn how to render data dynamically using Handlebars.js, Sequelize, and MYSQL.
 
-* Navigate to <http://localhost:3001/> in your browser and demonstrate the following: 
+* Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
   * The View in this application shows a menu of dishes that guests plan to bring to a potluck party.
 
-* Open `01-Ins_MVC-Handlebars-Intro/models/Dish.js` in your IDE and demonstrate the following: 
+* Open `01-Ins_MVC-Handlebars-Intro/models/Dish.js` in your IDE and demonstrate the following:
 
-  * 🔑 `Dish.js` is a Model. Models are in charge of data-related logic, like creating a new dish object. 
+  * 🔑 `Dish.js` is a Model. Models are in charge of data-related logic, like creating a new dish object.
 
   * We learned how to set up models previously, when we worked with ORMs. Remember, the data is hardcoded in `index.js`, so `Dish.js` is set up, but isn't actually doing anything at the moment.
 
@@ -552,7 +551,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_MVC-Handlebars-Intro/README.md`.
 
-### 9. Student Do: MVC Handlebars.js Intro (15 min) 
+### 9. Student Do: MVC Handlebars.js Intro (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_MVC-Handlebars-Intro/README.md`.
 
@@ -584,7 +583,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: MVC Handlebars.js Intro (10 min) 
+### 10. Instructor Review: MVC Handlebars.js Intro (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -602,7 +601,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * ✔️ Handlebars.js static templates
 
-* Open `02-Stu_MVC-Handlebars-Intro/Solved/package.json` in your IDE and explain the following: 
+* Open `02-Stu_MVC-Handlebars-Intro/Solved/package.json` in your IDE and explain the following:
 
   * We've added `express-handlebars` as a dependency in `package.json`, so we need to run `npm install`&mdash;as shown in the following example&mdash;to ensure that all the packages are installed before working on the code:
 
@@ -613,7 +612,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
       }
     ```
 
-* Open `02-Stu_MVC-Handlebars-Intro/Solved/server.js` in your IDE and explain the following:   
+* Open `02-Stu_MVC-Handlebars-Intro/Solved/server.js` in your IDE and explain the following:
 
   * We import the `express-handlebars` library in `server.js`, as follows:
 
@@ -629,23 +628,23 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     app.set('view engine', 'handlebars');  
     ```
 
-* Open `02-Stu_MVC-Handlebars-Intro/Solved/controllers/dish-routes.js` in your IDE and explain the following: 
+* Open `02-Stu_MVC-Handlebars-Intro/Solved/controllers/dish-routes.js` in your IDE and explain the following:
 
   * 🔑 `dish-routes.js` is the Controller.
 
-  * As the Controller, `dish-routes.js` interfaces between the View and the Model. 
+  * As the Controller, `dish-routes.js` interfaces between the View and the Model.
 
   * Now that we are using Handlebars.js, the GET route directs the View to render `all.handlebars`.
 
-   * The contents of `all.handlebars` will now become `{{{ body }}}` in the main layout, as follows:
+  * The contents of `all.handlebars` will now become `{{{ body }}}` in the main layout, as follows:
 
       ```js
       router.get('/', async (req, res) => {
         res.render('all');
       });
-      ``` 
+      ```
 
-* Open `02-Stu_MVC-Handlebars-Intro/Solved/views/layouts/main.handlebars` in your IDE and explain the following: 
+* Open `02-Stu_MVC-Handlebars-Intro/Solved/views/layouts/main.handlebars` in your IDE and explain the following:
 
   * 🔑 `main.handlebars` is part of the View.
   
@@ -655,7 +654,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
         <main class="container container-fluid mt-5">
           {{{ body }}}
         </main>
-    ``` 
+    ```
 
 * Open `02-Stu_MVC-Handlebars-Intro/Solved/views/all.handlebars` in your IDE and explain the following:
 
@@ -685,7 +684,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Handlebars.js Expressions (5 min) 
+### 11. Instructor Demo: Handlebars.js Expressions (5 min)
 
 * Open `03-Ins_Handlebars-Expressions/controllers/dish-routes.js` in your IDE and demonstrate the following:
 
@@ -722,13 +721,13 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Run `npm install` and `npm start` from the command line.
 
-* Navigate to <http://local:host3001/dish/1> and demonstrate the following: 
+* Navigate to <http://local:host3001/dish/1> and demonstrate the following:
 
-  * 🔑 When we view the page for one dish now, we see the name of that dish. 
+  * 🔑 When we view the page for one dish now, we see the name of that dish.
 
-* Navigate to <http://local:host3001/dish/2> and demonstrate the following: 
+* Navigate to <http://local:host3001/dish/2> and demonstrate the following:
 
-  * 🔑 And when we view the page for another dish, we see that the template is the same, but the data has changed. 
+  * 🔑 And when we view the page for another dish, we see that the template is the same, but the data has changed.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -740,7 +739,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Handlebars-Expressions/README.md`.
 
-### 12. Student Do: Handlebars.js Expressions (15 min) 
+### 12. Student Do: Handlebars.js Expressions (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Handlebars-Expressions/README.md`.
 
@@ -782,7 +781,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Handlebars.js Expressions (10 min) 
+### 13. Instructor Review: Handlebars.js Expressions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -796,7 +795,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * ✔️ Handlebars.js expressions
 
-* Open `04-Stu_Handlebars-Expressions/Solved/controllers/dish-routes.js` in your IDE and explain the following: 
+* Open `04-Stu_Handlebars-Expressions/Solved/controllers/dish-routes.js` in your IDE and explain the following:
 
   * 🔑 To render a description for a dish, we first need to build a route for `/dish/:num`.
   
@@ -808,7 +807,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     });
     ```
 
-* Open `04-Stu_Handlebars-Expressions/Solved/views/dish.handlebars` in your IDE and explain the following: 
+* Open `04-Stu_Handlebars-Expressions/Solved/views/dish.handlebars` in your IDE and explain the following:
 
   * 🔑 We create a Handlebars.js expression, `{{ description }}`, passing in the `description` key name like in the following example:
 
@@ -819,13 +818,13 @@ In today's class, students will start by doing the mini-project for Unit 13. The
           {{description}}
         </p>
       </div>
-    ``` 
+    ```
 
 * Run `npm install` and `npm start` from the command line.
 
-* Navigate to <http://local:host3001/dish/1> and demonstrate the following: 
+* Navigate to <http://local:host3001/dish/1> and demonstrate the following:
 
-  * Now, when we view the page for one dish, we see the name of that dish and the dish description. 
+  * Now, when we view the page for one dish, we see the name of that dish and the dish description.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -833,7 +832,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * 🙋 `{{ data }}`
 
-  * ☝️ How do we render data using a Handlebars.js expression? 
+  * ☝️ How do we render data using a Handlebars.js expression?
 
   * 🙋 Inside the curly brackets, we insert the key name of the value we wish to render.
 
@@ -847,9 +846,9 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Answer any questions before proceeding to the next activity.
 
-### 14. Instructor Demo: Built-In Helpers (5 min) 
+### 14. Instructor Demo: Built-In Helpers (5 min)
 
-* Open `05-Ins_Built-In-Helpers/controllers/dish-routes.js` in your IDE and explain the following: 
+* Open `05-Ins_Built-In-Helpers/controllers/dish-routes.js` in your IDE and explain the following:
 
   * Now that `dishes` is hardcoded into `dish-routes.js`, we pass it in as an argument to `render()`, like in the following example:
 
@@ -857,7 +856,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     router.get('/', async (req, res) => {
       res.render('all', { dishes });
     });
-    ``` 
+    ```
 
   * 🔑 We can use built-in Handlebars.js helpers to conditionally render blocks of code, iterate over lists, and more. Because the Controller is passing `dishes` to the View through `render()`, we can use a built-in helper to iterate over it in the template.
 
@@ -907,7 +906,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Built-In-Helpers/README.md`.
 
-### 15. Student Do: Built-In Helpers (15 min) 
+### 15. Student Do: Built-In Helpers (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Built-In-Helpers/README.md`.
 
@@ -945,7 +944,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 16. Instructor Review: Built-In Helpers (10 min) 
+### 16. Instructor Review: Built-In Helpers (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -957,7 +956,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * ✔️ `#if`
 
-* Open `06_Stu-Built-in-Helpers/Solved/controllers/dish-routes.js` in your IDE and explain the following: 
+* Open `06_Stu-Built-in-Helpers/Solved/controllers/dish-routes.js` in your IDE and explain the following:
 
   * The dish data includes a Boolean (`has_nuts`) that is set to `true` for the dishes that contain nuts, as shown in the following example:
 
@@ -970,11 +969,11 @@ In today's class, students will start by doing the mini-project for Unit 13. The
         },
     ```
 
-* Open `06-Stu_Built-In-Helpers/Solved/views/dish.handlebars` in your IDE and explain the following: 
+* Open `06-Stu_Built-In-Helpers/Solved/views/dish.handlebars` in your IDE and explain the following:
 
   * 🔑 We want to make sure that the message "Contains Nuts" is only rendered for dish objects that actually contain nuts. To do this, we need to conditionally render a block of code with the built-in `#if` helper.
 
-  * 🔑 We provide `has_nuts` as the condition when we open the `#if` helper. Then we include the block of code that we want to conditionally render. Finally, we close `#if`, as follows: 
+  * 🔑 We provide `has_nuts` as the condition when we open the `#if` helper. Then we include the block of code that we want to conditionally render. Finally, we close `#if`, as follows:
 
     ```html
       {{#if has_nuts}}
@@ -988,7 +987,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Navigate to <http://local:host3001/dish/2> in your browser and demonstrate the following:
 
-  *  The message "Contains Nuts" shows up when a dish contains nuts!
+  * The message "Contains Nuts" shows up when a dish contains nuts!
 
 * Navigate to <http://local:host3001/dish/1> in your browser and demonstrate the following:
 
@@ -1010,15 +1009,15 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Answer any questions before proceeding to the next activity.
 
-### 17. Instructor Demo: Data Serialization (5 min) 
+### 17. Instructor Demo: Data Serialization (5 min)
 
 * Rename the `07-Ins_Data-Serialization/.env.EXAMPLE` file to `.env` and input your credentials.
 
-* Run `node seeds/index.js` from the command line and explain the following: 
+* Run `node seeds/index.js` from the command line and explain the following:
 
   * 🔑 Now we will move on to using Sequelize and MySQL. So far, we've focused on the Controller and the View. Now that we have a seeded database, we can look at how the Model fits into the MVC framework.
 
-* Open `07-Ins_Data-Serialization/views/dish.handlebars` in your IDE and demonstrate the following: 
+* Open `07-Ins_Data-Serialization/views/dish.handlebars` in your IDE and demonstrate the following:
 
   * Nothing has changed in the View. We are still using Handlebars.js expressions and built-in helpers to render data that is passed in.
 
@@ -1039,13 +1038,13 @@ In today's class, students will start by doing the mini-project for Unit 13. The
         res.status(500).json(err);
       }
     });
-    ``` 
+    ```
 
-* Run `npm install` and `npm start`, navigate to <http://local:host3001/dish/1> in your browser, and demonstrate the following: 
+* Run `npm install` and `npm start`, navigate to <http://local:host3001/dish/1> in your browser, and demonstrate the following:
 
-  * 🔑 The object will be returned as a Sequelize object, which can be difficult to parse through on the template side. 
- 
-  * 🔑 When we check the browser, the template is there, but the data is missing. 
+  * 🔑 The object will be returned as a Sequelize object, which can be difficult to parse through on the template side.
+
+  * 🔑 When we check the browser, the template is there, but the data is missing.
 
   * 🔑 When we check the command prompt, we see that we are logging the Sequelize object. Look at all of the extra data in the following code:
 
@@ -1116,7 +1115,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
     }
     ```
 
-  * 🔑 So the Controller must **serialize** the data in the route to get rid of all of that extra information, before passing it to the templates in the View. 
+  * 🔑 So the Controller must **serialize** the data in the route to get rid of all of that extra information, before passing it to the templates in the View.
 
 * In `07-Ins_Data-Serialization/controllers/dish-routes.js`, comment out the first GET route and uncomment the second GET route to demonstrate the following:
 
@@ -1139,7 +1138,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Restart your server, navigate to <http://local:host3001/dish/1> in your browser, and demonstrate the following:.
 
-  * The View for one dish is now rendering both the template and the data. 
+  * The View for one dish is now rendering both the template and the data.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1157,9 +1156,9 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Break your students into pairs that will work together on this activity.
 
-* Remind students to set up their `dish_db` database and seed it before starting on the activity. 
+* Remind students to set up their `dish_db` database and seed it before starting on the activity.
 
-  >**Important:** Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every subsequent activity. 
+  >**Important** Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every subsequent activity.
 
   ```md
   # 🐛 Main View Is Not Displaying Food Items 
@@ -1213,7 +1212,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 19. Instructor Review: Data Serialization (10 min) 
+### 19. Instructor Review: Data Serialization (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1227,7 +1226,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * ✔️ Data serialization
 
-* Open `08-Stu_Data-Serialization/Solved/controllers/dish-routes.js` in your IDE and explain the following: 
+* Open `08-Stu_Data-Serialization/Solved/controllers/dish-routes.js` in your IDE and explain the following:
 
   * To render a full menu for party guests, using a GET route, we must first query the database for all dish objects by using the Sequelize method `findAll()`.
 
@@ -1247,13 +1246,13 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * Run `npm install` and `npm start` from the command line, then navigate to <http://localhost:3001/> in your browser.
 
-  * The View is rendering a full menu of dishes, as expected. 
+  * The View is rendering a full menu of dishes, as expected.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Why do we need to serialize data in the Controller?
 
-  * 🙋 Sequelize objects include extra data that the View does not need. We serialize data in the Controller so that the templates in the View can parse and render the data from the Model. 
+  * 🙋 Sequelize objects include extra data that the View does not need. We serialize data in the Controller so that the templates in the View can parse and render the data from the Model.
 
   * ☝️ What can we do if we don't completely understand this?
 
