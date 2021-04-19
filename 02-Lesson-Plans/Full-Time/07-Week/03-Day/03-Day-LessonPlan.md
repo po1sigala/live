@@ -1158,7 +1158,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Remind students to set up their `dish_db` database and seed it before starting on the activity.
 
-  >**Important** Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every subsequent activity.
+  > **Important**: Students should also modify the `.env.EXAMPLE` file to include their MySQL user and password information and run `npm install` before every subsequent activity.
 
   ```md
   # 🐛 Main View Is Not Displaying Food Items 
