@@ -64,7 +64,7 @@ Your application’s folder structure must follow the Model-View-Controller para
 
 You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables, the [bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords, and the [express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication.
 
-The [express-session](https://www.npmjs.com/package/express-session) stores the session data on the client in a cookie. After a p
+The [express-session](https://www.npmjs.com/package/express-session) stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required log-in again to start a new session. This is the default behavior and you do not have to do anything to other than implement the NPM package. 
 
 ## Grading Requirements
 
