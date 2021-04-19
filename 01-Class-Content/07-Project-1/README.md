@@ -54,7 +54,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
+  * 📖 [API Resources](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
 
 ### General
 

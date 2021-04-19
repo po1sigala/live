@@ -34,7 +34,9 @@ You will be employer-ready if you are able to:
 
 ## Homework
 
-For this week's homework, you'll finish your project and give a presentation on it in class. Then you will add it to your portfolio. Part of being a web developer means being a part of a community. Having a place to share your projects is necessary if you're applying for jobs, but it’s also critical on your journey as a developer. In addition to your portfolio, be sure to update your professional materials, including your GitHub profile, resume, and LinkedIn profile. 
+For this week's homework, you'll finish your project and give a presentation on it in class. Then you'll update your portfolio page and other professional materials to build towards being employer-competitive.
+
+If you are opting out of career services, this is **still a required assignment**. Part of being a web developer means being a part of a community. Having a place to share your projects is necessary if you're applying for jobs, but it's also critical on your journey as a developer.
 
 ## Career Connection
 
@@ -46,17 +48,19 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Resources
 
+Here are some additional resources to help solidify the topics covered in this unit.
+
 ### Full-Stack Blog Posts
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
+  * 📖 [API Resources](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
     
-  * 📖 [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
+  * 📖 [Node.js Installation Guide](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
 
 ### General
 
-Refer to these resources for additional information about topics that could help you with your project work and preparation for the upcoming unit.
+Refer to these resources for additional information about topics covered in this unit.
 
   * 📖 [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) 
 
