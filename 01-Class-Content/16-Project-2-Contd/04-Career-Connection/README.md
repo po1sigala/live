@@ -55,13 +55,13 @@ Make sure that your portfolio includes the following:
 
 * A list of projects, including the following details for each one:
 
-    * Project title
+	* Project title
 
-    * Link to the deployed version
+	* Link to the deployed version
 
-    * Link to the GitHub repository
+	* Link to the GitHub repository
 
-    * Screenshot of the deployed application
+	* Screenshot of the deployed application
 
 Your site should look polished. Refer to the following guidelines in particular:
 
