@@ -18,7 +18,7 @@ You and your group will use everything you’ve learned over the past six units 
 
 * Be interactive (i.e., accept and respond to user input).
 
-* Use at least two server-side APIs.
+* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
 
 * Does not use alerts, confirms, or prompts (use modals).
 
@@ -54,17 +54,17 @@ This project is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 25%
 
-* Satisfies the following code requirements:
+Satisfies the following code requirements:
 
-	* Application uses at least two server-side APIs.
+* Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
 
-    * Application uses client-side storage to store persistent data.
+* Application uses client-side storage to store persistent data.
 
-    * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
+* Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
 
-    * Application uses a CSS framework other than Bootstrap.
+* Application uses a CSS framework other than Bootstrap.
 
-    * Application is interactive (accepts and responds to user input)
+* Application is interactive (accepts and responds to user input)
 
 ### Concept 10%
 
