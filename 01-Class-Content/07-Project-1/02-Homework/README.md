@@ -1,8 +1,16 @@
-# Project 1
+# 07 Project 1: Interactive Front-End Application
 
-## Application Requirements
+At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
 
-Your project should fulfill the following requirements:
+A project is a bit different from the Homework assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
+
+Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
+
+Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
+
+## Project Requirements
+
+You and your group will use everything you’ve learned over the past six units to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
 * Use a CSS framework other than Bootstrap.
 
@@ -15,6 +23,7 @@ Your project should fulfill the following requirements:
 * Does not use alerts, confirms, or prompts (use modals).
 
 * Use client-side storage to store persistent data.
+
 * Be responsive.
 
 * Have a polished UI.
@@ -39,19 +48,6 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 * Directions for Future Development
 
 * Links to the deployed application and the GitHub repository
-
-
-## Grading Metrics 
-
-| Metric                | Weight | 
-| ---                   | ---    |
-| Technical Criteria    | 25%    |
-| Concept               | 10%    |
-| Deployment            | 20%    |
-| Repository Quality    | 10%    |
-| Application Quality   | 15%    |
-| Presentation          | 10%    |
-| Collaboration         | 10%    |
 
 
 ## Grading Requirements
@@ -117,10 +113,13 @@ This project is graded based on the following criteria:
 * There are no major disparities in the number of GitHub contributions between group members.
 
 
-## Submission on BCS
+## How to Submit Your Interactive Front-End Project
 
-Each member is required to submit the following:
+**Each member of your group** is required to submit the following for review:
 
 * The URL of the deployed application.
 
-* The URL of the GitHub repository.
+* The URL of the GitHub repository, with a unique name and a README describing the project.
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
