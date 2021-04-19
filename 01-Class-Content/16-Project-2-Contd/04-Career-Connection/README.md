@@ -111,18 +111,6 @@ Update your resume with the skills you’ve learned since the first group projec
 
 Update your LinkedIn profile with your new skills and technologies and make sure that you include a strong bio statement, a professional photo, and links to your Github profile and portfolio.
 
-### Prepare for the Technical Interview
-
-Many companies use algorithm questions during the technical interview. We strongly recommend that you practice these. Doing so will prepare you to handle some of the most common questions in an interview or promotion discussion.
-
-Please refer to the class repository to find these algorithms:
-
-- Coding Algorithm #1: Missing Number
-
-- Coding Algorithm #2: Left Rotation
-
-- Coding Algorithm #3: Ransom Note
-
 ### Career Services Events
 
 ![Career Services Online Events graphic](./assets/online-events.png)

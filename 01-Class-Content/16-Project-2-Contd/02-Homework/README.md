@@ -29,13 +29,13 @@ If you are opting out of career services, this is *still a required assignment*.
 
 1. [Updated Portfolio](#updated-portfolio)
 
-2. [GitHub Profile](#updated-github-profile)
+2. [Updated GitHub Profile](#updated-github-profile)
 
 3. [Updated Resume](#updated-resume)
 
 4. [Updated LinkedIn](#updated-linkedin)
 
-### Updated Portfolio
+## Updated Portfolio
 
 💁 Need help updating your Portfolio? Check out the [Career Services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
@@ -73,7 +73,7 @@ Unfortunately, this is where it gets a little bit subjective. Your site should l
 * Make sure the font size is large enough to read, and that the colors don't cause eye strain.
 
 
-### Updated GitHub Profile 
+## Updated GitHub Profile 
 
 Employers (and potential collaborators) _will_ look at your GitHub profile, so put your best face forward. 
 
@@ -111,15 +111,13 @@ Your GitHub profile must contain at least the following items:
 
 8. Commit history. Every pinned repository should have at least 20 commits.
 
-
-### Updated Resume 
+## Updated Resume 
 
 💁 Need help building a resume? Check out the [Career Services milestone resources](https://mycareerspot.org/resume).
 
 Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
 
-
-### Updated LinkedIn 
+## Updated LinkedIn 
 
 💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
