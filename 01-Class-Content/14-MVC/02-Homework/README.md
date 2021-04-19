@@ -50,7 +50,6 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the page for more than than the cookie’s default expiration time
 THEN I am automatically logged out of the session
-
 ```
 
 ## Mock-Up
