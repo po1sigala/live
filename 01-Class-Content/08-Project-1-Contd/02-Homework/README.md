@@ -121,7 +121,7 @@ Your resume should include:
 
 * 3 of your strongest projects/homework assignments with brief description, languages used, and URL
 
-## 4. Updated LinkedIn
+## Updated LinkedIn
 
 💁 Need help updating your LinkedIn? Check out the [Career Services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 

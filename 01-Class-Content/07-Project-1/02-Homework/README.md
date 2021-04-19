@@ -32,7 +32,6 @@ You and your group will use everything you’ve learned over the past six units 
 
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-
 ## Presentation Requirements
 
 Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
@@ -48,7 +47,6 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 * Directions for Future Development
 
 * Links to the deployed application and the GitHub repository
-
 
 ## Grading Requirements
 
@@ -111,7 +109,6 @@ This project is graded based on the following criteria:
 ### Collaboration 10%
 
 * There are no major disparities in the number of GitHub contributions between group members.
-
 
 ## How to Submit Your Interactive Front-End Project
 
