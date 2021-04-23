@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, students will continue to work on their project and will present their projects to the class at the end of the unit. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
+In this unit, students will continue to work on their projects and will present them to the class at the end of the unit. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/08-Project-1-Contd/README.md) for detailed information on key topics, learning objectives and homework.
 
@@ -34,11 +34,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [08.1 Lesson Plan](01-Day/08.1-LESSON-PLAN.md)
+  * [08.1 Lesson Plan](./01-Day/08.1-LESSON-PLAN.md)
 
-  * [08.2 Lesson Plan](02-Day/08.2-LESSON-PLAN.md)
+  * [08.2 Lesson Plan](./02-Day/08.2-LESSON-PLAN.md)
 
-  * [08.3 Lesson Plan](03-Day/08.3-LESSON-PLAN.md)
+  * [08.3 Lesson Plan](./03-Day/08.3-LESSON-PLAN.md)
 
 ### Homework
 

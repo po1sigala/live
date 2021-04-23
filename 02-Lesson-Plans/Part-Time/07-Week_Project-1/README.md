@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group. 
+In this unit, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-1/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -42,11 +42,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [07.1 Lesson Plan](01-Day/07.1-LESSON-PLAN.md)
+  * [07.1 Lesson Plan](./01-Day/07.1-LESSON-PLAN.md)
 
-  * [07.2 Lesson Plan](02-Day/07.2-LESSON-PLAN.md)
+  * [07.2 Lesson Plan](./02-Day/07.2-LESSON-PLAN.md)
 
-  * [07.3 Lesson Plan](03-Day/07.3-LESSON-PLAN.md)
+  * [07.3 Lesson Plan](./03-Day/07.3-LESSON-PLAN.md)
 
 ### Homework
 
@@ -58,7 +58,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * 📖 [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources) from the Full-Stack Blog
+  * [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources) from the Full-Stack Blog
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
