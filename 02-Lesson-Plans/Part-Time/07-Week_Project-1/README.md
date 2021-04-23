@@ -8,7 +8,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-
 
 ## Instructor/TA Notes
 
-* Prepare a list of project group members prior to the first class for this unit. Assign 3 students per group: one advanced, one average, one struggling. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
+* Prepare a list of project group members prior to the first class for this unit. Assign three students per group: one advanced, one average, one struggling. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
 
 * If students complain about group configurations, remind them of the following:
 
@@ -20,7 +20,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-
 
 * Be sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
 
-* Students can use the [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources) for ideas on free APIs that don't require CORS to use in their projects.
+* Students can use the [API Resources blog post on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/apis/api-resources) for ideas on free APIs that don't require CORS to use in their projects.
 
 ## Career Connection
 
@@ -58,7 +58,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-  * [API Resources Blog Post](https://coding-boot-camp.github.io/full-stack/apis/api-resources) from the Full-Stack Blog
+  * [API Resources blog post on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
