@@ -8,7 +8,7 @@ In this class, students will outline their project presentations and complete wo
 
 * No classroom instruction today.
 
-* This is the last day students have to work on their projects in class. 
+* This is the last day students have to work on their projects in class.
 
 * Once again, your students' success after the boot camp depends on the quality of their projects. Their presentations compose much of this quality and students need to think about how to communicate the development process of their apps if they hope to impress interviewers with their experience.
 

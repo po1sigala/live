@@ -247,7 +247,7 @@ By the end of class, students will be able to:
 
 ### 10. Student Do: Project 1
 
-* Direct students to continue working in their groups to identify ideas, research APIs, and create project designs. 
+* Direct students to continue working in their groups to identify ideas, research APIs, and create project designs.
 
 * Be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 

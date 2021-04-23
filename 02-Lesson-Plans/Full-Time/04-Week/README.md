@@ -26,7 +26,7 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
 * Encourage students to spend time deciding how they want to present their project before presentation day.
 
-* Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit) with students early in the week to give them ample time to prepare for their presentations.
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students early in the week to give them ample time to prepare for their presentations.
 
 * Students must have a deployed project by presentation day, so encourage students to work on deploying their projects by the class prior to presentation day at the latest. Since you can always update deployed projects, it is recommended that students deploy early on and update their live version with every new feature.
 
@@ -76,7 +76,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Superlative Awards](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing)
 
-  * [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit)
+  * [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing)
 
 ### Resources
 
