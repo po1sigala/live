@@ -9,9 +9,7 @@ const callAPI = (duration) =>
     }, duration);
   });
 
-const promises = [];
-
-apiCallDurations.map((duration) => promises.push(callAPI(duration)));
+const promises = apiCallDurations.map((duration) => callAPI(duration));
 
 console.log('Promises array before the timeouts have finished: ', promises);
 

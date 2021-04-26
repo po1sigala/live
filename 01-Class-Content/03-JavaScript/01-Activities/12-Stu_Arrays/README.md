@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As an instructor, I want to create a list of student names and be able to add and remove names.
+* As an instructor, I want to create a list of student names and be able to add and rename names.
 
 ## Acceptance Criteria 
 
@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the message "Welcome to the class STUDENT_NAME" is logged using each element in the array. 
 
-* It's done when the first element in the array is removed and replaced with the name of a new student.
+* It's done when the first element in the array is replaced with the name of a new student.
 
 * It's done when, after an `if` statement confirms that the first element in the array has been replaced, the message "REPLACED_NAME is in class" is logged.
 

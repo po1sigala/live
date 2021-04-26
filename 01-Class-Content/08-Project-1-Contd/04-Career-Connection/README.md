@@ -1,5 +1,7 @@
 # Career Connection
 
+## Career Connection
+
 ![Career Services Logo](./assets/cs_logo.png#right)
 
 Now that you've had some practice with APIs and have a project to share, you should update your portfolio page and other materials to build toward being employer-competitive.
@@ -79,20 +81,6 @@ Submit a clear, concise, and compelling resume, tailored to the type of job youâ
 ### Update Your LinkedIn Profile
 
 Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github profile and portfolio.
-
-### Prepare for the Technical Interview
-
-Many companies use algorithm questions during the technical interview. We strongly recommend that you practice these. Doing so will prepare you to handle some of the most common questions in an interview or promotion discussion.
-
-Please refer to the class repository to find these algorithms:
-
-* Coding Algorithm #1: Reverse No Built In
-
-* Coding Algorithm #2: Reverse In Place
-
-* Coding Algorithm #3: Look Say Sequence
-
-* Coding Algorithm #4: Is Numeric
 
 ### Career Services Events
 
