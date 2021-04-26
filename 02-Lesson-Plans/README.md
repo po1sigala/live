@@ -15,7 +15,7 @@ If you have any questions, please check with your SSM.
 
 At the beginning of the class week, complete the following tasks to prepare for class:  
 
-* Review both the instrucor-facing and student-facing Unit Overviews.
+* Review both the instructor-facing and student-facing Unit Overviews.
 
 * Review the homework assignment(s) for the week.
 
