@@ -26,8 +26,8 @@ You will be employer-competitive if you are able to:
 * Identify the appropriate time to make a React app use Redux or follow a similar design pattern.
 * Implement a Redux-like store in a React app.
 
-## Homework: 🏬 Online Marketplace
-* In this assignment, you will be creating a marketplace that allows users to view products from Best Buy. The user will be able to view details about the product, and if they decide, add the product to a shopping cart.
+## Homework: React Portfolio
+* In this assignment, you'll be updating your portfolio and other materials to build toward being employer competitive. Creating a portfolio using React will help set you apart from other developers whose portfolios do not use some of the latest technologies.
 
 ## Helpful Links
 * [Presentational vs. Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)

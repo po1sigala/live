@@ -10,7 +10,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-
 
 * Encourage students to spend time deciding how they want to present their project before presentation day.
 
-* Share the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit) with students early in the week to give them ample time to prepare for their presentations.
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students early in the week to give them ample time to prepare for their presentations.
 
 * Prepare a slide deck of superlative awards to give to each group. Use [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing), and feel free to customize it as you see fit for your cohort.
 
