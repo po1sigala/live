@@ -92,7 +92,7 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
   * [📹 Code Review: Network, Status, Location!](https://2u-20.wistia.com/medias/smcipszslc)
 
-  @TODO* [📹 Code Review: !]()
+  * [📹 Launch Ready: MVP and GitHub Project!](https://2u-20.wistia.com/medias/9p2hr71gaw)
 
 ### Git Guide
 
