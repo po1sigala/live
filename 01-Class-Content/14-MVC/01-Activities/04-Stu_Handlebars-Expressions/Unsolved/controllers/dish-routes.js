@@ -36,7 +36,7 @@ const dishes = [
   },
 ];
 
-// get one dish
+// Get all dishes
 router.get('/', async (req, res) => {
   res.render('all');
 });
