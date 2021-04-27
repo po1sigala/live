@@ -48,27 +48,27 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start   | #   | Activity Name                    | Duration |
-|---      |---  |---                               |---       |
-| 10:00AM | 1   | Everyone Do: Welcome             | 0:70     |
-| 11:10AM | 2   | Instructor Do: Stoke Curiosity   | 0:10     |
-| 11:20AM | 3   | Instructor Demo: Setup           | 0:05     |
-| 11:25AM | 4   | Student Do: Setup Check          | 0:15     |
-| 11:40PM | 5   | BREAK                            | 0:30     |
-| 12:10PM | 6   | Instructor Demo: Command Line    | 0:10     |
-| 12:20AM | 8   | Student Do: Command Line         | 0:15     |
-| 12:35AM | 8   | Instructor Review: Command Line  | 0:10     |
-| 12:45PM | 9   | Instructor Demo: Git             | 0:05     |
-| 12:50PM | 10  | Student Do: Git                  | 0:15     |
-| 1:05PM  | 11  | Instructor Review: Git           | 0:10     |
-| 1:15PM  | 12  | Instructor Do: Stoke Curiosity   | 0:10     |
-| 1:25PM  | 13  | Instructor Demo: HTML            | 0:05     |
-| 1:30PM  | 14  | Student Do: HTML                 | 0:15     |
-| 1:45PM  | 15  | Instructor Review: HTML          | 0:10     |
-| 1:55PM  | 16  | Instructor Demo: Attributes      | 0:05     |
-| 2:00PM  | 17  | Student Do: Attributes           | 0:15     |
-| 2:15PM  | 18  | Instructor Review: Attributes    | 0:15     |
-| 2:30PM  | 19  | END                              | 0:00     |
+| Start   | #   | Activity Name                   | Duration |
+| ------- | --- | ------------------------------- | -------- |
+| 10:00AM | 1   | Everyone Do: Welcome            | 0:70     |
+| 11:10AM | 2   | Instructor Do: Stoke Curiosity  | 0:10     |
+| 11:20AM | 3   | Instructor Demo: Setup          | 0:05     |
+| 11:25AM | 4   | Student Do: Setup Check         | 0:15     |
+| 11:40PM | 5   | BREAK                           | 0:30     |
+| 12:10PM | 6   | Instructor Demo: Command Line   | 0:10     |
+| 12:20AM | 8   | Student Do: Command Line        | 0:15     |
+| 12:35AM | 8   | Instructor Review: Command Line | 0:10     |
+| 12:45PM | 9   | Instructor Demo: Git            | 0:05     |
+| 12:50PM | 10  | Student Do: Git                 | 0:15     |
+| 1:05PM  | 11  | Instructor Review: Git          | 0:10     |
+| 1:15PM  | 12  | Instructor Do: Stoke Curiosity  | 0:10     |
+| 1:25PM  | 13  | Instructor Demo: HTML           | 0:05     |
+| 1:30PM  | 14  | Student Do: HTML                | 0:15     |
+| 1:45PM  | 15  | Instructor Review: HTML         | 0:10     |
+| 1:55PM  | 16  | Instructor Demo: Attributes     | 0:05     |
+| 2:00PM  | 17  | Student Do: Attributes          | 0:15     |
+| 2:15PM  | 18  | Instructor Review: Attributes   | 0:15     |
+| 2:30PM  | 19  | END                             | 0:00     |
 
 ---
 
@@ -132,11 +132,9 @@ By the end of class, students will be able to:
 
   * The **[user]** is the end user or customer. The **[do something]** identifies the goal the solution must address. The **[realize a reward]** describes when the goal is met.
 
-
   * **Acceptance criteria** provide the conditions that must be met for the goal to be accomplished and the solution accepted by the user. Acceptance criteria define what specific tasks or functions must be done to solve the problem presented in the user story and have a clear pass or fail result. All criteria must pass for the solution to be accepted.
 
     * **For example:** It's done when there is a contact form that includes a text box for a visitor’s name and email.
-
 
   * The solution is a set of step-by-step instructions that address each of the acceptance criteria and clearly meet the user’s goal and reward as described in the user story.
 
@@ -184,9 +182,9 @@ By the end of class, students will be able to:
 
   * 🔑 We use Slack to communicate as a class. Look at Slack for important course announcements and information, and use it to communicate with the instructional team and fellow classmates.
 
-   * To use the shared Slack workspace, you must accept the invitation sent to you via email by the university.
+  * To use the shared Slack workspace, you must accept the invitation sent to you via email by the university.
 
-  * 🔑 We also use a Slack app called AskBCS to conect with the Learning Assistant team. To install AskBCS, open the Slack window and click on the plus sign (`+`) next to Apps, near the bottom of the lefthand navigation. Then search for and add AskBCS.
+  * 🔑 We also use a Slack app called AskBCS to connect with the Learning Assistant team. To install AskBCS, open the Slack window and click on the plus sign (`+`) next to Apps, near the bottom of the lefthand navigation. Then search for and add AskBCS.
 
 * Open [GitHub](https://github.com/) in your browser and demonstrate the following:
 
@@ -298,7 +296,7 @@ By the end of class, students will be able to:
 
   * 🙋 We use `touch` and the name of the new file that we want to create.
 
-   * ☝️ How would we use command-line commands to create a new directory?
+  * ☝️ How would we use command-line commands to create a new directory?
 
   * 🙋 We use `mkdir` and the name of the new directory that we want to create.
 
@@ -368,13 +366,13 @@ By the end of class, students will be able to:
 
 * Open `02-Stu_Command-Line/README.md` in your IDE and explain the following:
 
-  *  The user story helps us to identify the goal and reward. The user, a developer, wants to use only the command line to make a new directory and file:
+  * The user story helps us to identify the goal and reward. The user, a developer, wants to use only the command line to make a new directory and file:
 
       ```md
       As a developer, I want to use the command line to create a directory and file on my computer.
       ```
 
-  *  We use the acceptance criteria to identify when the user's goal has been met. To meet the stated user goal, we need to create a new directory named `first-day`. Inside that directory, we need to create an `index.html` file:
+  * We use the acceptance criteria to identify when the user's goal has been met. To meet the stated user goal, we need to create a new directory named `first-day`. Inside that directory, we need to create an `index.html` file:
 
       ```md
       * It's done when a new directory named `first-day` has been created using command-line commands.
@@ -666,7 +664,7 @@ By the end of class, students will be able to:
 
 * Open the CLI and demonstrate the following:
 
-  *  We use the terminal command `cd` to navigate to the directory where we want the repository located:
+  * We use the terminal command `cd` to navigate to the directory where we want the repository located:
 
       ```bash
       cd Bootcamp
@@ -684,7 +682,7 @@ By the end of class, students will be able to:
     cd first-day-repo
     ```
 
-  *  We add an HTML file to the repository using `touch`:
+  * We add an HTML file to the repository using `touch`:
 
       ```bash
       touch index.html

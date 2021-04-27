@@ -55,13 +55,13 @@ Make sure that your portfolio includes the following:
 
 * A list of projects, including the following details for each one:
 
-    * Project title
+	* Project title
 
-    * Link to the deployed version
+	* Link to the deployed version
 
-    * Link to the GitHub repository
+	* Link to the GitHub repository
 
-    * Screenshot of the deployed application
+	* Screenshot of the deployed application
 
 Your site should look polished. Refer to the following guidelines in particular:
 
@@ -110,18 +110,6 @@ Update your resume with the skills you’ve learned since the first group projec
 #### Update Your LinkedIn Profile
 
 Update your LinkedIn profile with your new skills and technologies and make sure that you include a strong bio statement, a professional photo, and links to your Github profile and portfolio.
-
-### Prepare for the Technical Interview
-
-Many companies use algorithm questions during the technical interview. We strongly recommend that you practice these. Doing so will prepare you to handle some of the most common questions in an interview or promotion discussion.
-
-Please refer to the class repository to find these algorithms:
-
-- Coding Algorithm #1: Missing Number
-
-- Coding Algorithm #2: Left Rotation
-
-- Coding Algorithm #3: Ransom Note
 
 ### Career Services Events
 

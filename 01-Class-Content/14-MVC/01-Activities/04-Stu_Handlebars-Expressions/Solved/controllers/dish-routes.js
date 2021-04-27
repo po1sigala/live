@@ -36,15 +36,15 @@ const dishes = [
   },
 ];
 
-// get all dishes
+// Get all dishes
 router.get('/', async (req, res) => {
   res.render('all');
 });
 
-// get one dish
+// Get a dish
 router.get('/dish/:num', async (req, res) => {
-// This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
-// Now, we have access to a dish description in the 'dish' template.
+  // This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
+  // Now, we have access to a dish description in the 'dish' template.
   return res.render('dish', dishes[req.params.num - 1]);
 });
 
