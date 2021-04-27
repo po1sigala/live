@@ -1,22 +1,28 @@
 <div class="menu-container">
-  <div class="card-header col-md-10">
+  <div class="card-header col-md-12 text-center">
     <h2>
       &#127869 Current Menu
     </h2>
   </div>
   {{#each dishes as |dish|}}
-    <div class="dish col-md-5">
-      <p>
-        {{dish.id}}.
-        {{dish.dish_name}}
-      </p>
-    </div>
-    <div class="col-md-7">
-      <p>
-        Guest:
-        {{dish.guest_name}}
-      </p>
-    </div>
+  <div class="dish col-md-5">
+    <p>
+      {{dish.id}}.
+      {{dish.dish_name}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Guest:
+      {{dish.guest_name}}
+    </p>
+  </div>
+  <div class="col-md-2">
+    <p>
+      🥜:
+      {{dish.has_nuts}}
+    </p>
+  </div>
   {{/each}}
 </div>
 <!-- This is the form for adding a new dish -->
