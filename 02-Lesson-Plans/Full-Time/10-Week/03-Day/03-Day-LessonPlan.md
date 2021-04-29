@@ -1,776 +1,973 @@
-## 10.3 - Continuing React State (10:00 AM) <!--links--> &nbsp; [⬅️](../02-Day/02-Day-LessonPlan.md) &nbsp; [➡️](../04-Day/04-Day-LessonPlan.md)
+# 10.3 Lesson Plan - Intro to Webpack (10:00 AM)
 
 ## Overview
 
-In this class, we will be introducing students to the concept of React Hooks. We will further expand on their introduction to managing component state and cover side effects, global state, and pure functions. We will introduce three of the most common built-in Hooks: `useState`, and `useEffect`. Once students have experience creating each one, they will create their own Custom Hooks.
-
-## Instructor Notes
-
-* `Summary: Complete activities 19-React/01-Activities/22-Ins_IntroReactRouter/ through 20-State/01-Activities/06-Stu_CustomHook.`
-
-* As in previous lessons, you will want to scaffold out a React application with Create React App at the beginning of class and suggest students do the same. The activities we go over today will only include the applications `src` folder which you will replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
-
-* Today's lesson will feature more instructor led demonstrations than the previous class, be sure to spend some time before class reviewing the examples.
+In today's class students will be continuing their journey into web performance. Today we will be learning about Webpack. Webpack is a module bundler, with its main purpose being bundling JavaScript files for use in a browser. Webpack provides a lot of functionality that developers can take advantage of to make their programs more performant.
 
 ## Learning Objectives
 
-* Articulate the term "effect" in the broader sense of programming.
+* Create a basic Webpack configuration file.
 
-* Utilize React's most common built-in Hooks: `useState`, and `useEffect`.
+* Bundle their JavaScript code into a single file.
 
-* Transform a React application that manages state with a class component into an application that uses functional components with React Hooks.
+* Add Webpack plugins to their Webpack configs.
 
-* Create a custom reusable Hook that follows the 2 rules of Hooks.
+* Convert web applications to PWA using Webpack 
+
+* Perform code splitting using webpack.
+
+## Instructor Notes
+
+* Complete activities `15-Ins-Webpack-Intro` through `23-Stu-Mini-Project`
+
+* Webpack can be a difficult tool to get your head around, so be as clear as possible in your explanations and be ready to answer plenty of student questions. It is recommended that you review the webpack [docs](https://webpack.js.org/concepts). You may want to read [Why Webpack](https://webpack.js.org/concepts/why-webpack) so that you are prepared to answer student questions like "Why are we learning this?".
 
 ## Slides
 
-[10.3: Introduction to React Hooks](https://docs.google.com/presentation/d/1AAbszdLHhXDJvpvdp96dccanx6X2nQlmdNZS43Ptl8A/edit?usp=sharing)
+* N/A
 
 ## Time Tracker
 
-[10.3 Time Tracker](https://docs.google.com/spreadsheets/d/1ASbpL8oT5cczjoafZYe3-aoT4F1aL3c8TClOOUrV-XQ/edit?usp=sharing)
+[10.3 Time Tracker](https://docs.google.com/spreadsheets/d/1ZJwRAu9cPWuUZmjoZ2diRv-3tBUn0ywbI7nzOhi1PZQ/edit#gid=0)
+
+- - -
+
+## Class Instruction
+
+### 1. Instructor Do: Welcome/Intro Webpack (10 mins)
+
+* Welcome students to the class.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ In terms of performance, what are the skills we have learned so far?
+
+  * 🙋 Compression, minification, lazy-loading, and caching.
+
+  * ☝️ What if our application has dependencies? Do we minify those by-hand?
+
+  * 🙋 No, that would be inefficient and take a long time.
+
+  * ☝️ Today we're learning webpack. What do you think webpack does?
+
+  * 🙋 Webpack is a module bundler. What this means is that Webpack takes our JavaScript and all of its dependencies and bundles it into a single file.
+
+* There are two main phases to a module bundler.
+
+  * Dependency Resolution
+
+  * Packing
+
+### 2. Instructor Do: Intro to Webpack (5 mins)
+
+* Navigate to [15-Ins-Webpack-Intro/](../../../../01-Class-Content/19-PWA/01-Activities/15-Ins-Webpack-Intro/) from the command line and run:
+
+  * `npm install webpack webpack-cli -D`
+
+* Open `webpack.config.js` in your IDE and point out the following:
+
+  * In order to use Webpack, we need to provide a configuration file that Webpack will use to build off of.
+
+  * Entry is the main JavaScript file that our application uses.
+
+  * Output is an object describing the bundle that Webpack will build. The path property is the folder that the file will be created in. In this configuration, we are telling Webpack that the output file should be in a folder named `dist` and the file itself should be named `bundle.js`.
+
+  * In the dependency resolution phase, Webpack looks for an entry point. When the entry point is identified the main purpose of dependency resolution is to scan and gather all of the pieces of code and dependencies required to make the code function. The map of required code and dependencies is referred to as a _dependency graph_. Once this graph as been made, we continue to the packing phase.
+
+  * Setting the mode property allows us to create custom configurations for different environments. In this configuration, we are specifying that this build should be used for development.
+
+```js
+const config = {
+  entry: "./src/app.js",
+  output: {
+    path: __dirname + "/dist",
+    filename: "bundle.js"
+  },
+  mode: "development"
+};
+module.exports = config;
+```
+
+* Open `package.json` in your IDE and point out the following:
+
+  * 📝 Adding `-D` to the npm install command causes the packages to be saved as "devDependencies" in the `package.json`. While "dependencies" are dependencies that are used at runtime, "devDependencies" are meant to be packages that are only needed in development.
+
+  * The JavaScript bundle that Webpack creates does **not** need Webpack to run.
+
+  * We have added the script "build" so that when `npm run build` is ran, it executes `webpack --watch`. This command will watch over your entry point(s) for changes and build again if any files are changed.
+
+```json
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
+```
+
+* Run `webpack` from the command line and explain the following:
+
+  * Running `webpack` created a new folder named `dist` with the new bundle inside a file named `bundle.js`.
+
+  * Webpack takes the dependency graph that was created and then packs all of the code and dependencies necessary into an output file specified within the configuration file.
+
+* Open the file `dist/app.js` in your IDE.
+
+  * Show that the JavaScript is a minified bundle of `src/app.js` and any dependencies it has. 
+
+  * Use `Find` with your IDE to point out that the minified bundle contains `console.log` from `src/app.js`.
+
+* Open `index.html` in your IDE.
+
+  * Point out that we have to update the script tag so that it uses our new webpack build.
+
+  ```html
+  <script type="text/javascript" src="./dist/bundle.js"></script>
+  ```
+
+* Now open `index.html` in your browser and point out the following:
+
+  * `Hello webpack` appears in the console, coming from the file `bundle.js`.
+
+* Lastly run `npm run build` from the command line and explain the following:
+
+  * The build script set up in `package.json` runs and watches for any changes in our files, similar to how `nodemon` watches for changes. In order to kill the process, type `Ctrl + C` in your terminal.
+
+### 3. Student Do: Budget Tracker (10 mins)
+
+```md
+# Budget Tracker
+
+In this activity we will create a bundle.js file with Webpack.
+
+## Instructions
+
+* Run the following command: `npm install webpack webpack-cli -D`
+
+* Create a file called `webpack.config.js`.
+
+* Using the entry point of `src/app.js`, make Webpack output a bundle file in a folder called `dist/`.
+
+* In `index.html`, change the JavaScript file src to be your new bundle file.
+
+* Add the necessary scripts to `package.json`, then run Webpack with the `--watch` option.
+
+* Update this application to accomplish the following:
+
+  * When the user types in a value to the price field and clicks submit, the remaining balance should be updated.
+
+  * Using the `require` module and `module.exports`, move the code that calculates the new budget to a file named `calculations.js`.
+
+  * Update the `reset` function so that when clicked, it sets the current balance back to its original balance and clears the list of expenses.
+
+### Hints
+
+* Make sure that Webpack is working properly before attempting to make adjustments to the app.
+```
+
+# 4. Instructor Do: Review Budget Tracker (5 mins)
+
+* Open `16-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
+
+  * When we add multiple expenses, we see that our balance adjusts for each submission.
+
+  * When we click the reset button, the expenses list gets cleared and the balance is reset to its original value.
+
+* Open `16-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
+
+  * At the top of the file, we bring in `module.exports` from the calculations file.
+
+  * Webpack allows us to use modules, including the `require` module just like we can in Node.js apps.
+
+  * 📝 If we were not using Webpack, we wouldn't be able to use `require` in client-side JavaScript.
+
+  ```js
+  const calculations = require("./calculations");
+  ```
+
+  * Our subtract function needs to parse `balanceEl.innerText` from a String to a Number before perfoming the `-` operation.
+
+```js
+function submit() {
+    const total = calculations.subtract(Number(balanceEl.innerText), priceEl.value);
+    balanceEl.innerText = total;
+    addToList(expenseEl.value, priceEl.value);
+}
+
+function reset() {
+    const total = 2000;
+    balanceEl.innerText = total;
+    expensesListEl.innerHTML = '';
+}
+```
+
+* Open `webpack.config.js` in your IDE and point out the following:
+
+  * We use the same configuration as the previous demo.
+
+* Open `package.json` in your IDE and point out the following:
+
+  * We use the same configuration as the previous demo.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ Which JavaScript file do we link to index.html? 
+
+  * 🙋 Our JavaScript bundle, `./dist/bundle.js`
+
+### 5. Instructor Do: Demo Bundle Analyzer Plugin (5 mins)
+
+* Open [17-Ins-First-Plugin/package.json](../../../../01-Class-Content/19-PWA/01-Activities/17-Ins-First-Plugin/package.json) in your IDE and explain the following: 
+
+  * We've added webpack-bundle-analyzer to our devDependencies and the chart.js library to our dependencies.
+
+  * The `webpack-bundle-analyzer` is a plugin that will build an interactive visualization of all of the dependencies in our project.
+
+* Open [17-Ins-First-Plugin/webpack.config.js](../../../../01-Class-Content/19-PWA/01-Activities/17-Ins-First-Plugin/webpack.config.js) in your IDE and point out the following:
+
+  * Webpack plugins can be used to perform tasks that Webpack can't perform by default. Some of these tasks include asset management, additional bundle optimization, and adding PWA capabilities.
+
+  * Plugins could be used multiple times in the same configuration file, so it is important that you create an instance of one by using the keyword `new`.
+
+  * Emphasize that we've simply added a library so that we can analyze its impact on the total bundle size.
+
+* Run `npm run build` from the command line, navigate to [http://127.0.0.1:8888](http://127.0.0.1:8888) in your browser if the tab does not automatically open and explain the following:
+
+![Bundle Analyzer](Images/bundleAnalyzer.png)
+
+  * This plugin helps us analyze the different impacts that libraries have on the bundle size of our application.
+
+  * When we mouse over the `bundle.js` section, then the `chart.js` section we can see that the chart.js library makes up a significant portion of our total bundle size.
+
+  * ☝️ Why is `moment.js` included here, even though we didn't install it?
+
+  * 🙋 Even though we didn't explicitly install `moment.js`, it is a dependency of `chart.js`, and adds to the total bundle size of our application.
+
+### 6. Student Do: Gallery App with Webpack (10 mins)
+
+* **Instructor Note:** Keep in mind that lazily loaded resources will probably not be cached the first time the page is loaded because they will often be fetched _before_ the service worker has finished installing.
+
+* Direct students to the instructions found in [18-Stu-Webpack-Plugin](../../../../01-Class-Content/19-PWA/01-Activities/18-Stu-Webpack-Plugin/README.md):
+
+```md
+# PWAs with Webpack
+
+* In this activity we will adjust our Gallery app so that Webpack minifies and bundles our code.
+
+## Instructions
+
+* Before you begin, make sure to install all of the necessary dependencies with `npm install`.
+
+* Run the following command: `npm install webpack-pwa-manifest -D`. (https://github.com/arthurbergmz/webpack-pwa-manifest)
+
+* In a separate tab in your terminal, start a mongodb server with `mongod`.
+
+* Run `npm start` to make sure that the application works as expected.
+
+* Using the entry point of `public/assets/js/app.js`, make Webpack output a bundle file in a folder called `/public/dist/`.
+
+* Update `webpack.config.js` to use the `WebpackPwaManifest` plugin. This will generate a `manifest.json` file to replace the one we manually created. Use the values from `manifest.webmanifest` in activity `13-Stu_Caching_Fetching_Files` to provide the configuration values passed to `WebpackPwaManifest`. Use the plugin to create icons following the example in the [webpack-pwa-manifest documentation](https://github.com/arthurbergmz/webpack-pwa-manifest).
+
+* Add the script `"prestart": "npm run webpack"` to the scripts in `package.json` so that Webpack will build every time the application is started.
+
+* In `index.html`, change the JavaScript file src to be your new bundle file and the link to the manifest to be the one generated by the `WebpackPwaManifest` plugin.
+
+* In `service-worker.js`, update the `FILES_TO_CACHE` array with files generated from Webpack.
+
+* Change the mode to `"production"` in `webpack.config.js` so that the generated bundle will be minified.
+
+### Bonus
+
+* Install the bundle analyzer plugin and identify which modules contribute the most to the total bundle size.
+
+### Hints
+
+* Try clearing application storage and disabling cache after making changes to your application. If it appears to be working, use Chrome DevTools to toggle `offline mode` and ensure that the application uses the service worker.
+
+* You may find it easier to override the default behavior of `webpack-pwa-manifest` by setting the `fingerprints` and `inject` options to `false`, since you are manually providing the links to `manifest.json` and the names of the icon images to cache. 
+```
+
+### 7. Instructor Do: Review Gallery App with Webpack (5 mins)
+
+* Open [18-Stu-Webpack-Plugin](../../../../01-Class-Content/19-PWA/01-Activities/18-Stu-Webpack-Plugin/Solved) in your terminal.
+
+* Run the following commands to start the application:
+
+```bash
+npm install
+node seeders/seed.js
+npm start
+```
+
+* Navigate to [http://localhost:3000](http://localhost:3000) in your browser and point out the following: 
+
+  * If we inspect our Service Worker with DevTools, we see that `dist/bundle.js` is cached.
+
+  * Additionally, "Service Worker registered successfully" was logged to the console.
+
+
+  * The plugin, `WebpackPwaManifest`, generates a manifest.json file to be included in our build directory. While most of the properties are the same as a regular manifest.json, this plugin also automatically resizes all of our icons to the appropriate sizes and allows for the use of ES6 features and JavaScript comments. Setting `fingerprints` and `inject` to `false` makes the names of the output files predictable so that we can manually add code to `service-worker.js` to cache the generated manifest and image files. _Point out that there are webpack plugins available that can generate our html using the "fingerprinted" names generated by webpack._
+
+```js
+plugins: [
+  new WebpackPwaManifest({
+    filename: "manifest.json",
+    inject: false,
+    fingerprints: false,
+    name: "Images App",
+    short_name: "Images App",
+    theme_color: "#ffffff",
+    background_color: "#ffffff",
+    start_url: "/",
+    display: "standalone",
+    icons: [
+      {
+        src: path.resolve(
+          __dirname,
+          "public/assets/images/icons/icon-512x512.png"
+        ),
+        size: [72, 96, 128, 144, 152, 192, 384, 512]
+      }
+    ]
+  })
+]
+```
+
+* Open `package.json` in your IDE and point out the following:
+
+  * Our plugin must be installed as a devDependency. 
+
+  * We've also added the script "prestart", which is a built in npm script that will automatically run before each time `npm start` is run.
+
+### 8. Instructor Do: Demo Pure Functions (10 mins)
+
+* The next demo is going to use a couple of ES6 features that aren't supported in all browsers.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What tool do you think we will need to use to allow us to use ES6 in all browsers?
+
+  * 🙋 Babel. This is true, but in order to use Babel with our Webpack build we will need to utilize a Babel feature known as a **loader**.
+
+  * Normally, Webpack only knows how to process regular JavaScript. Loaders allow Webpack to compile and bundle non-JavaScript resources like CSS, HTML, TypeScript, and more. Specifically, the Babel loader goes through all of our JavaScript files and transpiles ES6 into ES5.
+
+* Open `19-Ins-Pure-Functions/webpack.config.js` in your IDE and point out the following:
+
+  * We've created a new object called module and within it define an array of rules. 
+
+  * `test` is a regular expression that describes the files that you want to match.
+
+  * Since Babel loader is pretty slow, it is especially important that you define an `exclude` property that contains a regular expression that matches all files in your `node_modules` folder.
+
+  * The `use` property is where we define which loader we are going to use, along with any presets or configurations to pass to the loader. Here, we are telling Webpack to use the babel-loader for all JavaScript files that are not in `node_modules`, and to use a preset called `@babel/preset-env`.
+
+```js
+ module: {
+    rules: [{
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }]
+}
+```
+
+  * Now that we've added our loader, we need to install Babel itself, the loader, and any presets that we want to use. 
+
+* Run `npm install @babel/core babel-loader @babel/preset-env -D` from the command line.
+
+* Open up `src/app.js` and point out the reorganization of the files. 
+
+* We have added the `Chart.js` library so that we can see a bar chart of our expenses. 
+
+  * Remember, Webpack allows us to import other npm modules into our application. 
+  
+  * We've separated the files into files like `elements.js` and `expenses.js` to help further modularize our code. There is no definitively "right" way to split up your code. The main goal when refactoring code to be split between files is to create functions that are reusable and relatively "pure", when possible.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What does it mean for a function to be pure?
+
+  * 🙋 Pure functions are straightforward with singular purposes. They do not have any "side effects" within them. **Side effects** are bits of code that interact with the outside world like database calls or changes to the DOM.
+  
+  * 🙋 In pure functions, whenever data needs to be modified, it is not mutated. Instead, we create a new variable that describes the new mutation. Pure functions have the advantage of being easily testable and reusable. It is considered best practice to use pure functions whenever possible.
+  
+  * ☝️ What does it mean for a function to be impure?
+
+  * 🙋 Impure functions tend to have multiple purposes. The might contain database or network calls. Even though it is preferred to keep your functions simple, impure functions are often unavoidable. 
+
+* Open `src/calculations.js` in your IDE and point out the following:
+
+  * The `subtract` function is a pure function. It creates a new variable for the result, instead of modifying the input and contains no side effects.
+
+  ```js
+  export function subtract(a, b) {
+    const result = a - b
+    return result;
+  }
+  ```
+
+* Open `src/app.js` in your IDE and point out the following:
+
+  * The `submit` function is an impure function. It modifies existing values and has multiple side effects.
+
+  ```js
+  function submit() {
+    const total = subtract(Number(balanceEl.innerText), priceEl.value);
+    balanceEl.innerText = total;
+    addToList(expenseEl.value, priceEl.value);
+    updateChart(expensesChart, expenseEl.value, priceEl.value);
+  }
+  ```
+  
+* Run `npm install` in your terminal and open `index.html` file in your browser and demonstrate the following functionality:
+
+  * The submit button adds new expenses to the list.
+
+  * The chart is updated with the new expenses.
+
+### 9. Student Do: Gallery Pure Functions (15 mins)
+
+* Direct students to the instructions of their next activity in [20-Stu-PWA-refactor/README.md](../../../../01-Class-Content/19-PWA/01-Activities/20-Stu-PWA-refactor/README.md).
+
+```md
+# PWA Refactor
+
+In this activity we will adjust our Gallery app so that Webpack minifies and bundles our code.
+
+## Instructions
+
+* Run `npm install`.
+
+* Run `npm install -D babel-loader @babel/core @babel/preset-env`.
+
+* Using `19-Ins-Pure-Functions/webpack.config.js` as a reference, update `Unsolved/webpack.config.js` to use babel-loader.
+
+* Using the ES6 import/export syntax, separate functions out into separate JavaScript files to make your application more modular.
+
+* While there are many ways that you can separate your JavaScript files, it is recommended that you create somethings similar to the following file structure:
+
+  * `app.js` Loads images and calls the `createCards` function.
+
+  * `cardCreation.js` Responsible for all functions related to the creation of cards.
+
+  * `domMethods.js` Responsible for all functions related to manipulating the DOM.
+
+  * `rating.js` Handles the creation of the ratings form and the update method.
+
+* Adjust the files in the `FILES_TO_CACHE` array within `public/service-worker.js` so that the Webpack bundle is cached instead.
+
+* Run `npm start` and make sure that the application still works as expected.
+
+### Hints
+
+* Try testing out functionality of the application on [localhost](<http://localhost:3000>) every time you make changes. This will help you identify the code that does not work as expected.
+
+* You can use the [Babel Loader Docs](https://github.com/babel/babel-loader) as an additional reference.
+```
+
+### 10. Instructor Do: Review Gallery Pure Functions (10 mins)
+
+* Open [20-Stu-PWA-refactor/Solved/webpack.config.js](../../../../01-Class-Content/19-PWA/01-Activities/20-Stu-PWA-refactor/Solved/webpack.config.js) in your IDE and explain the following:
+
+  * The configuration object is updated to use `babel-loader` to transpile only files ending in ".js".
+
+  * Code in "node_modules" is not transpiled by the `babel-loader` so that our code will run on a wider range of browsers and browser versions. It allows us to write code that uses more modern syntax and still have the code work on browsers that do not support some features.
+
+  ```js
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // files must end in ".js" to be transpiled
+        exclude: /node_modules/, // don't transpile code from "node_modules"
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      }
+    ]
+  }
+  ```
+
+* Next, open [Solved/public/assets/js/](../../../../01-Class-Content/19-PWA/01-Activities/20-Stu-PWA-refactor/Solved/public/assets/js/) and demonstrate how the code was split up into separate modules.
+
+  * Remind students that there is no definitively "right" way to split up your code. The main goal when refactoring code to split between files is to create functions that are reusable and relatively "pure", when possible.
+
+  * Open the terminal, cd to `.../20-Stu-PWA-refactor/Solved`, and run `npm run build` to run Webpack. (Run `npm install` first if you haven't done so already.)
+
+  * Show students how Webpack created `bundle.js` which includes the code from all the modules from `public/assets/js`.
+
+* If time permits, answer lingering questions on the topics of Webpack, modularizing code, and pure functions.
+
+### 11. Instructor Do: Demo Lazy Loading JavaScript (10 mins)
+
+* Tell the class that just like the lazy loading they worked with using Images, JavaScript can also be loaded as needed.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is lazy loading?
+
+  * 🙋 Lazy loading allows us to load resources on an as-needed basis, instead of on page load.
+
+  * ☝️ If there is JavaScript specific to a part of the page a user is using, when do you think it should be downloaded?
+
+  * 🙋 We should only download the JavaScript specific to a part of the page when the user navigates to that page.
+
+  * ☝️ Could deferring the downloading save us time on page load?
+
+  * 🙋 Absolutely. Longer bundle sizes result in longer load times.
+
+* Open `21-Ins-Chunking/webpack.config.js` in your IDE and point out the following:
+
+  * We have added a second entry point to our bundle. This entry point is `chart`.
+
+  * `chart` points to `./src/expenseChart.js`.
+
+  * `filename: "[name].bundle.js"` dynamically names our bundle after the name of the entry point. For instance, the entry point `chart` will create a bundle named `chart.bundle.js`.
+
+  * By creating multiple entry points, we can defer the loading of a particular bundle until the code required is needed.
+
+* Open `chart.html` and point out the following:
+
+  * We've added a `<script>` tag to our html that loads our `chart.js` JavaScript bundle.
+
+```html
+<script type="text/javascript" src="./dist/chart.bundle.js"></script>
+```
+
+* Open `21-Ins-Chunking` in your IDE and run the following commands from your command line:
+
+  * `npm install`
+
+  * `npm run build`
+
+* Open the `index.html` in your browser and point out the following:
+
+  * If we inspect out Network in DevTools, we can see that the chart.js has not been loaded yet.
+
+  * Only once we click the `chart` link in the navbar of the page does the `chart.js` bundle load.
+
+![Network JS](Images/networkJS.png)
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What are the possible setbacks of this method?
+
+  * 🙋 If both of our bundles require some of the same dependencies, those will be included and both bundles and thus we will end up with duplicated code between bundles. 
+
+### 12. Student Do: Gallery Lazy Loading JavaScript (15 mins)
+
+* Direct students to the activity instructions found in [22-Stu-Chunking/README.md](../../../../01-Class-Content/19-PWA/01-Activities/22-Stu-Chunking/README.md)
+
+```md
+# Chunking
+
+In this activity, we will practice using multiple entry points to split up our JavaScript code.
+
+## Instructions
+
+* Run `npm install`.
+
+* In `webpack.config.js`, add entry points for JavaScript files for the three pages, home, detail, and favorites.
+
+* Update `service-worker.js` file so that it caches the new bundles.
+
+* Make sure to update each html file so that it also uses the appropriate bundle.
+
+* Note that the gallery application has been upgraded with the ability to save your favorite images to IndexedDb. 
+
+* Once again, there are many ways that you can separate your JavaScript files. It is recommended that you create somethings similar to the following file structure to avoid chunking unused code:
+
+  * `api.js` Loads images from the api.
+
+  * `cardCreation.js` Responsible for all functions related to the creation of cards.
+
+  * `domMethods.js` Responsible for all functions related to manipulating the DOM.
+
+  * `detail.js` Responsible for the Detail page of the application.
+
+  * `favorites.js` Responsible for the Favorites page of the application.
+
+  * `home.js` Responsible for the Home page of the application.
+
+  * `indexedDb.js` Contains a helper method to interact with IndexedDb.
+
+  * `rating.js` Handles the creation of the ratings form and the update method.
+
+* Run `npm start` and make sure that the application still works as expected.
+
+* Navigate to each page and make sure that the bundle files are all being cached by the service worker.
+
+### Hints
+
+* Try testing out functionality of the application at [http://localhost:3000](http://localhost:3000) every time you make changes. This will help you identify the code that does not work as expected.
+
+* If extracting functionality from a JavaScript file causes any of the pages to stop working, do **not** continue until you understand why it's not working as expected.
+
+* Ask the instructor or a TA for help if you get stuck or are unsure why a function isn't working.
+```
+
+### 13. Instructor Do: Review Gallery Lazy Loading JavaScript (10 mins)
+
+* Open `22-Stu-Chunking/Solved/webpack.config.js` in your IDE and explain the following:
+
+  * There are now three entry points designated.
+
+  ```js
+  entry: {
+          app: './public/assets/js/home.js',
+          detail: './public/assets/js/detail.js',
+          favorites: './public/assets/js/favorites.js'
+      },
+  ```
+
+  * We also used the `[name].bundle.js` syntax in our output to dynamically name our bundle after the entry point it was built from.
+
+  ```js
+  output: {
+          path: __dirname + '/public/dist',
+          filename: '[name].bundle.js',
+      },
+  ```
+
+* Now run the following commands from the command line:
+
+  * `npm install`
+
+  * `npm start`
+
+  * In the console, we have 3 `bundle.js` files and the bundle naming aligns with the entry points provided in the `webpack.config.js`
+
+![3 Bundles](Images/multipleBundles.png)
+
+* Run the following command from the command line: `npm run webpack`
+
+* In your browser, navigate to [localhost](<https://localhost:3000>) and explain the following:
+
+  * If we open up our `Network` tab and toggle JS, we can click a picture's name and see that `detail.bundle.js` is loaded when we bring the details of an image.
+
+![Network JS](Images/networkJS.png)
+
+* In your browser, click on the link to the favorites page and point out the following:
+
+  *  `favorites.bundle.js` loads.
+
+  * Lazy loading is a great way to defer loading of resources that are not necessary, but there are possible problems it can raise.
+
+  * Most notably, if multiple entry points have some of the same dependencies, those dependencies will be duplicated across bundles.
+
+### 14. BREAK (30 mins)
+
+### 15. Instructor Do: Introduce Mini-Project (5 mins)
+
+* Run the following commands from the command line: 
+
+  * `npm install`
+
+  * `npm start`
+
+* Navigate to [localhost:3000](http://localhost:3000) in your browser and point out the following:
+
+  * Newsy is a news aggregator app that allows us to search for articles classified by topic, then save our favorites.
+
+  * The home page of the application has some default topics, but we can create your own or remove the default topics.
+
+  * Clicking on one of the topics causes the page to display a list and allows us to save each article to our favorites.
+
+  * Saving a couple of articles to our favorites causes the button to update to a _remove_ button.
+
+  * Navigate to the favorites page in your browser and point out the following:
+
+    * The favorites we selected are listed.
+
+    * The favorites data was stored in IndexedDb, since we are not using a local database for this application.
+
+# 16. Student Do: Work on Mini-Project (60 mins)
+
+* Spend a few minutes getting students acclimated to this application setup in terms of the npm scripts used. They will not have seen this yet, but it's a good preview for the upcoming MERN-related weeks.
+
+```md
+# PWA Mini-Project
+
+In this activity we will take an existing news aggregator application and transform it into a PWA that can be installed on a user's device. We will also utilize webpack's minify and chunking features to help reduce the total size of the application.
+
+## Instructions
+
+* Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application. 
+
+* We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
+
+* We use another library called `concurrently` in development so we can run two processes at once. One for our Express server and one for Webpack. This way we don't have to start and stop the server every time something changes.
+
+* Install dependencies by running `npm install` at the project root. This will also install the once in the `client` directory.
+
+* Start the app by running `npm start` from the project root.
+
+* Once the app starts open your browser to [localhost:3000](http://localhost:3000).
+
+* Open [index.js](Unsolved/assets/js/index.js).
+
+* There are 3 main sections in this application:
+
+  * A section that allows you to manage a list of topics.
+
+  * A section that displays different articles of a given topic. This page will also allow you to save articles to your favorites.
+
+  * A favorites page to view a list of the user's favorite articles. This page also allows the user to remove articles from their favorites.
+
+### Part 1
+
+* Using the `webpack.config.js` from the previous activities, update the `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
+
+* Create an entry point for each file in `assets/js`.
+
+* Create a `service-worker.js` and make sure to cache all of the bundle files.
+
+### Part 2
+
+* Take a moment to study the contents of `index.js`:
+
+  1. `renderTopics()` renders all of the topics to the page using `createTopics`.
+
+  2. `topicData` is an array of predefined topics to populate the page with.
+
+  3. `createElement()` allows you to create a document element using the a string of its type, and object containing its attributes, and children elements.
+
+* Since `createElement` is a general purpose function that we can use throughout our application, we are going to create a separate file to keep it in named `domMethods`. By doing this, we will be able to import `createElement` into any component we would like without duplicating code.
+
+* Take a moment to study the contents of `topic.js`:
+
+  1. Remove the `createElement` function and modify the file to use the `createElement` from `domMethods.js`.
+
+  2. Extract the code necessary for indexedDb into its own file and be sure to import it into `topic.js`.
+
+  3. Extract the `loadArticles` function to a new file called API and be sure to import any of its dependencies.
+
+* Take a moment to study the contents of `favorites.js`:
+
+  1. Remove the all function declarations for utilities, indexedDb, API, and domMethods.
+
+  2. Using ES6 syntax, import all necessary functions.
+
+### Hints
+
+* You will **not** have to modify any files that are not in the `client` folder.
+
+* Ask the instructor or a TA if you're having difficulty understanding any of the activity requirements.
+```
+
+# 17. Instructor Do: Review Mini-Project (15 mins)
+
+* Open `index.js` in your IDE and point out the following:
+
+  * All of the functions pertaining to the `home` page are in `index.js`.
+
+  * `createElement` is brought in from the `domMethods.js` file.
+
+* Open `domMethod.js` in your IDE and point out the following:
+
+  * It is not entirely necessary for us to understand exactly how every line in `createElement` works. 
+  
+  * It is valuable to get practice working with code we do not fully understand because new developers almost always start their careers working with an unfamiliar codebase.
+
+  * The `createElement` function returns a DOM element and has the following parameters:
+
+  1. A string that represents the type of element.
+
+  2. An object containing all of the attributes to add to the element.
+
+  3. 1 or more children elements to be appended to the element.
+
+  * The `createArticle` function uses a ternary expression to render a `Save to Favorites` button or a `Remove from Favorites` button depending on whether the article is already part of the user's favorites.
+
+  * `loadPage` is a callback passed to the `createElement`. The actual function will either use the results from an AJAX request or the results from IndexedDb to render the page, depending on which function was passed through as a callback.
+
+  ```js
+  !favorite
+    ? createElement(
+      "button",
+      {
+        class: "button button--primary",
+        onclick: () => {
+          useIndexedDb("articles", "ArticleStore", "put", {
+            source,
+            author,
+            title,
+            description,
+            url,
+            urlToImage,
+            publishedAt,
+            _id
+          });
+          loadPage();
+        }
+      },
+      "Save to Favorites"
+    )
+  ```
+
+  * `createPlaceholders()` displays placeholders so that content is rendered on the page while the user waits for results from the AJAX request. Although they will only display on the page for a few seconds, they play a significant role in increasing the user's experience on the site.
+
+  ```js
+  // Create and return 4 placeholder articles
+  function createPlaceholders() {
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < 4; i++) {
+      const placeholder = createPlaceholder();
+      fragment.appendChild(placeholder);
+    }
+
+    return fragment;
+  }
+
+  // Returns markup for a placeholder article
+  function createPlaceholder() {
+    return createElement(
+      "div",
+      { class: "article-skeleton" },
+      createElement(
+        "div",
+        { class: "article-skeleton__header" },
+        createElement("div", { class: "article-skeleton__title" }),
+        createElement("div", { class: "article-skeleton__published" })
+      ),
+      createElement(
+        "div",
+        { class: "article-skeleton__content" },
+        createElement("div", { class: "article-skeleton__image" }),
+        createElement("div", { class: "article-skeleton__text" }),
+        createElement("div", { class: "article-skeleton__text" }),
+        createElement("div", { class: "article-skeleton__text" }),
+        createElement("div", { class: "article-skeleton__text" }),
+        createElement("div", { class: "article-skeleton__text" })
+      )
+    );
+  }
+  ```
+
+* Open `topic.js` in your IDE and explain the following:
+
+  * When the `Topic` page is opened, `useIndexedDb` is called to check if any of the articles have been favorited. This is necessary so that articles that have already been saved to the user's favorites can display a `Remove from Favorites` button.
+
+```js
+import { useIndexedDb } from "./indexedDb";
+import { loadArticles } from "./API";
+import { renderArticles } from "./domMethods";
+// Call renderArticles on page load
+function loadPage() {
+  useIndexedDb("articles", "ArticleStore", "get").then(results => {
+    const favorites = results;
+    loadArticles().then(data => {
+      const mappedData = data.map(article => {
+        article.favorite = false;
+        favorites.forEach(fav => {
+          if (article._id === fav._id) {
+            article.favorite = true;
+          }
+        });
+        return article;
+      });
+      renderArticles(mappedData, loadPage);
+    });
+  });
+}
+
+loadPage();
+
+```
+
+* Open `service-worker.js` in your IDE and point out the following:
+
+  * Each html file should be cached with its respective bundle.
+
+```js
+const FILES_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/favorites.html',
+  '/topic.html',
+  '/assets/css/style.css',
+  '/dist/app.bundle.js',
+  '/dist/favorites.bundle.js',
+  '/dist/topic.bundle.js',
+  'https://fonts.googleapis.com/css?family=Istok+Web|Montserrat:800&display=swap',
+  'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
+];
+```
+
+* Open `webpack.config.js` in your IDE and point out the following:
+
+  * There are 3 different entry points created for each app. 
+
+  * Each bundle will include all dependencies brought into each entry file with ES6 `import`.
+
+```js
+entry: {
+    app: "./assets/js/index.js",
+    favorites: "./assets/js/favorites.js",
+    topic: "./assets/js/topic.js"
+  },
+  output: {
+    path: __dirname + "/dist",
+    filename: "[name].bundle.js"
+  },
+```
+
+  * Although most of the configuration can vary, depending on the app, it's important that the icon `src` points to a valid path to an icon for the application.
+
+  ```js
+  plugins: [
+    new WebpackPwaManifest({
+      fingerprint: false,
+      name: "Newsy app",
+      short_name: "Newsy",
+      description: "An application that allows you to view different news articles and save your favorites.",
+      background_color: "#01579b",
+      theme_color: "#ffffff",
+      "theme-color": "#ffffff",
+      start_url: "/",
+      icons: [{
+        src: path.resolve("assets/images/icons/android-chrome-192x192.png"),
+        sizes: [96, 128, 192, 256, 384, 512],
+        destination: path.join("assets", "icons")
+      }]
+    })
+  ]
+  ```
+
+* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over. 
+
+  * Some students may be frustrated with the amount of time they needed to spend refactoring code so that it could be easily chunked by webpack.
+
+  * If this is the case, remind students that one of the main motivations behind chunking is reducing the bundle size of your code. While there are many strategies one can take to split up their code, it is important that it's split in a way that makes the code reusable and clear in purpose. Sometimes this means large amounts of refactoring functions. This is time well spent since they are making their code easier to test and easier for other developers to work with.
 
 ---
 
-### 1. Instructor Do: Introduce React Router (20 mins)
+### 18. Review Unit 18 (40 mins)
 
-* Explain that so far we've just been working with React applications with only one page of content, but in the real world, web applications have multiple &mdash; often complex &mdash; pages and routes.
+* Spend the rest of class answering lingering questions about the Mini Project, then proceed to lead a review on units 17 and 18.
 
-* For example, what if we deployed the previous activity's portfolio website and we wanted to share a URL with someone that they could use to visit the `About` "page"? Currently we don't have a way to do that. The user would still have to navigate to the `About` "page" on their own from scratch every time since the URL in our address bar doesn't actually change as we click through the tabs.
-
-* This may seem trivial now, but what if our application was as large as Amazon.com? What if we wanted to share the URL to a page containing one of millions of different products with someone? How would we get users to where we intend for them to go?
-
-* Explain that thankfully we don't have to code out our own solution to this problem. One of the most popular React companion libraries out today is [React Router](https://reacttraining.com/react-router/).
-
-* Slack out the [link](https://reacttraining.com/react-router/) to the React Router home page and give the class the following overview:
-
-  * React Router is a library made up of special components for conditionally rendering other components based on the current URL path.
-
-  * How React Router works under the hood isn't fundamentally different from the previous example we coded out where we conditionally rendered certain components based on our component state using if/else statements.
-
-  * React Router has modules for routing React applications on the web, in native applications, and on the server. In our case, we're going to be working with React Router on the web.
-
-  * While a little intimidating at first, the [React Router Documentation](https://reacttraining.com/react-router/web/guides/philosophy) is some of the best for any library we've covered so far, full of concise and helpful examples.
-
-  * We won't have enough time to teach _all_ of React Router, nor will students need to know all of the library. Instead we'll be going over the fundamental ~20% of syntax that they're likely going to be using 80% of the time. After that, students should feel more comfortable going through the official documentation for answers.
-
-* Replace your React application's `src` folder with [22-Ins_IntroReactRouter/src](../../../../01-Class-Content/19-React/01-Activities/22-Ins_IntroReactRouter/src).
-
-* This example uses Bootstrap, so if you haven't already, add the Bootstrap CDN to your `index.html` file.
-
-  ```html
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-  />
-  ```
-
-* Run the following command in your terminal to install React Router:
-
-  ```
-  npm install react-router-dom
-  ```
-
-  * Point out that as mentioned earlier, React Router can be used in a variety of different environments. Since we're going to be routing our application on the web, more specifically, to the HTML DOM, we need to install the `react-router-dom` library.
-
-* Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and demonstrate the rendered application.
-
-  * At first it may not seem different from the previous example, but point out how the URL in the address bar changes as we click through the navigation items.
-
-  * Also point out how we have a `/contact` and `/contact/learn` page. Point out how `/contact/learn` displays all of the same content as the `/contact` route, but also displays another nested component.
-
-    ![React Router View](Images/16-React-Router-View.png)
-
-  * To demonstrate that we can get back to a particular page via a specific url, navigate to the `/contact/learn` route and copy the entire URL in your address bar. Close this application's tab and paste the URL in a brand new tab; you should be taken back to the expected page.
-
-* Now open up `src/App.js` and begin walking the class through the new code.
-
-  ![React Router Code](Images/17-React-Router-Code.png)
-
-  * Point out how we're importing two components from the `react-router-dom` library: `BrowserRouter` and `Route`. Explain that by importing `BrowserRouter` _as_ `Router`, we're renaming this component to be `Router` inside of this file. Renaming this component is totally optional but a convention used in the React Router documentation.
-
-  * Explain that the `BrowserRouter` (`Router`) component is like the brain of our application's router. We wrap our entire application with this component &mdash; without it, none of the routes we define will work. On its own `Router` doesn't do anything to our application's styles or functionality. It's primarily for setting up any additional configuration we want to give our React Router via props we attach. The default configuration it provides is fine for our purposes, so we don't need to do anything other than include it.
-
-  * Inside of `Router` component, we have a `div` element wrapping our other components. Explain that the `Router` component can only have a single child element, so we wrap the rest of our application's code inside of a `div`.
-
-    * Feel free to demonstrate the code breaking if you were to remove this `div`. Let students know that if they forget this rule, they'll receive a helpful error message reminding them that `Router` can only have one child element.
-
-  * Point out the following:
-
-    * We no longer need a `PortfolioContainer` component. In the previous example, the `PortfolioContainer` component was responsible for keeping track of our application's `currentPage` state. Now that we have React router handling this, we no longer need to do so ourselves.
-
-    * We're importing the `Route` component from `react-router-dom`. Explain that at a minimum, this component expects a `path` prop and a `component` prop. When the pathname in the browsers address bar matches the `Route` component's `path` prop, the specified component will be rendered.
-
-    * We're specifying that the `NavTabs` component should always be rendered regardless of the application's current route.
-
-    * Below the `NavTabs` we render a `Route` component. When the `path` is set to "/", render the `Home` component.
-
-      * Point out the `exact` prop present on this `Route` component. Explain that this means this `Route` will _only_ render the `Home` component when the path is _exactly_ "/".
-
-        * Demonstrate what happens if we were to remove this `exact` prop and navigate to any of the other pages.
-
-        * Both `Route` components would render. Explain the `path` prop means "render if the route _starts_ with this path". By adding the additional `exact` prop, we're saying that we only want this `Route` to render if the path is an _exact_ match.
-
-        * Explain that unlike routes in express, React Router will, by default, render routes inclusively rather than exclusively. This means if two or more routes match the same path, both will render.
-
-    * Go into the `NavTabs.js` file and walk through this component's new code.
-
-      ![NavTabs](Images/18-NavTabs.png)
-
-      * We're importing a `Link` component from the `react-router-dom` library and using that in place of regular anchor tag elements.
-
-      * Explain that the `Link` component navigates our application to another route when clicked, just like an anchor tag. But the `Link` component prevents our entire React application from reloading when we go to different URLs. Instead, only the components that need to change will change.
-
-      * The `Link` component also has some additional functionality, such as allowing us to pass props into the component rendered at the specified route if we wanted to.
-
-      * We can treat this component exactly the same as we would a regular anchor tag, except we'd use the `to` prop rather than `href` to specify the path we want to navigate to.
-
-      * Explain that we can utilize `useLocation` and `location.pathname` in order to get the path we're currently on if we need it. In our case we're using it to determine which `a` element should have the "active" class and be highlighted. (Explain that `useLocation` is a utility from React Router which allows our component to update if the location changes. We'll be digging more into the _Hooks API_ in the next unit.)
-
-  * Go back to the `App` component and once more explain how each `Route` component is rendering its component. Inform students that the major takeaway here is that when the path in the address bar matches the path specified on a `Route` component's `path` prop, the component passed in is rendered.
-
-  * Explain that now we're going to go over the code that renders the nested `/contact/learn` route.
-
-  * Open up the `src/components/pages/Contact.js` and go through the code.
-
-    ![Contact Learn](Images/19-Contact-Learn.png)
-
-    * Point out that the start of the component is nothing out of the ordinary &mdash; we're just rendering some lorem ipsum.
-
-    * Further down below, we're utilizing another `Route` component which only renders the `Learn` component if the route matches `${props.match.url}/learn`.
-
-    * Explain that any component we render using the `Route` component (such as this `Contact` component) is automatically passed a `match` prop object containing information about the `Route` component that rendered it. We can access `props.match.url` to get the path which rendered this route.
-
-      * Using `props.match.url` might be a good idea as opposed to just hard coding `/contact/learn` into the `path` prop (which would also work). This way if we update a route higher up in our application, we don't need to update all of the other nested route `path` props.
-
-### 2. Partners Do: Pupster App (45 mins)
-
-* Slack out `06-Stu_PupsterApp/Solved`
-
-* In this activity students will work with partners to create a full React application from scratch complete with routing and AJAX requests to the [Dog Ceo API](https://dog.ceo/dog-api/).
-
-* **Instructions:** [README](../../../../01-Class-Content/19-React/01-Activities/23-Stu_PupsterApp/README.md)
-
-### 3. Instructor Do: Review Pupster (15 mins)
-
-* As a class, go over [23-Stu_PupsterApp/Solved](../../../../01-Class-Content/19-React/01-Activities/23-Stu_PupsterApp/Solved) version of the previous activity. The most important points to cover are:
-
-  * How each route is rendering each component.
-
-  * How we used axios to create an API helper file.
-
-  * Our use of `componentDidMount` to make the initial call to the dog.ceo API for the `Discover` component.
-
-* Take a few moments to answer any lingering questions.
-
-* Congratulate the class on making it halfway through React! Remind them that this is a difficult subject but they've already come a long way.
-
-### 4. Review Unit 19 (30 mins)
-
-### 5. Break (30 mins)
-
-### 6. Instructor Do: Hooks Slide and Discussion (20 mins)
-
-* Welcome the students to the second main focus of this unit: React Hooks.
-
-* Open the [slide deck](https://docs.google.com/presentation/d/1mnPdZODvhGs0j6s4EEuATbmQjFM7XpzFxrUnsOzNsGE/edit?usp=sharing)
-
-1. **Discuss Managing State**: Take a moment to talk about managing state.
-
-* Ask the students to discuss amongst each other how they've managed React state thus far.
-
-* Ask them what is one of the biggest issues of sharing state between Class and Functional components.
-
-2. **React Hooks `useState`**: Today's class will discuss two react hooks, one of them being `useState`, which offers a way for functional components to manage state directly without having to get the data through props drilling.
-
-3.**Class Components vs Functional Components**: Class components paired with the `setState` method is the most common way to manage state.
-
-* Benefits:
-
-* Setting state will force the component to re-render. This ensures that the component and all of its children will be up-to-date with the latest state.
-
-* Drawbacks:
-
-* Since state only flows in one direction, all components that need to use the state must be children of the stateful component.
-
-* Updating state from deep within the component hierarchy is often difficult.
-
-* You are forced to use the keyword `this` and use a class component.
-
-* The `useState` hook is another tool that can be used to manage state through Functional Components.
-
-* Benefits:
-
-* No need to receive state from props as a Child Component.
-
-* Easier to read and debug due to less code.
-
-* No need to use this
-
-* Access to "Hook"
-
-* Drawbacks:
-
-* Will need to use other “Hooks” to manage complex levels of state.
-
-* As of React 16.8, Facebook recommends to use functional components whenever possible.
-
-4. **Hooks**: Hooks are functions that let you "hook into" React state and lifecycle features from function components.
-
-* React has no plans to deprecate class components, but Hooks can do everything a class component can and more.
-
-5. **The 2 Hooks**: We will be covering two different kind of Hooks.
-
-* `useState` allows you to use state in a functional component.
-
-* `useEffect` replaces lifecycle methods like `componentDidMount` and `componentDidUpdate`.
-
-* An **effect**, also commonly referred to as a **side effect**, is a term used to describe the result of affecting the “outside world”.
-
-* This includes, but is not limited to: Data fetching, subscribing to events, and changes to the DOM.
-
-* We will be covering the built-in Hooks `useState` and `useEffect` but emphasize that there are many more Hooks. The strong developer community around React has created a plethera of different Custom Hooks that you can plug into your applications.
-
-* Custom Hooks can be any reusable function, often built from logic extracted from existing functions.
-
-6. **2 Rules of Hooks**: There are 2 rules of Hooks that must be complied with:
-
-* Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
-
-* It is important that Hooks are always called in the same order, like component lifecycle methods.
-
-* It is also what makes it possible for React to store the state of Hooks when using useState or useEffect.
-
-7. **2 Rules of Hooks**
-
-* Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
-
-* This makes it so that all stateful logic is easy to find for the developer.
-
-### 7. Instructor Do: useState Demo (10 mins)
-
-* Run `01-Ins_useState` by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
-
-  * When the application loads, 'Status' is set to the default string, 'content'.
-
-  * Clicking the 'Encourage Laziness' button changes 'Status' to 'lazy'.
-
-  * Clicking the 'Fill with Determination' button changes 'Status' to 'determined'.
-
-* Open [01-Ins_useState/src/App.js](../../../../01-Class-Content/20-State/01-Activities/01-Ins_useState/src/App.js) in your IDE and explain the following:
-
-  * From React, we import `useState`.
-
-  ```js
-  import React, { useState } from "react";
-  ```
-
-  * `useState` is a built-in Hook that will _always_ return an array of two elements. The first returned element is a snapshot of the current state. The second returned element is a function that allows us to _overwrite_ the current state.
-
-  * We destructure the array returned from `useState` into two variables: `developerState` and `setDeveloperState`, and initialize state with an object containing `mood`, `lifeLongLearner` and `excitementLevel` properties.
-
-  ```js
-  const [developerState, setDeveloperState] = useState({
-    mood: "content",
-    lifeLongLearner: true,
-    excitementLevel: 9000,
-  });
-  ```
-
-  * 📝 The function will _not_ merge with the existing state as `setState` does. This means that whatever is passed into useState will _overwrite_ the object that was previously there.
-
-  * The `changeMood` function accepts a parameter, `mood`, and calls the `setDeveloperState` method:
-
-  ```js
-  const changeMood = (mood) => {
-    setDeveloperState({
-      mood: mood,
-      lifeLongLearner: developerState.lifeLongLearner,
-      excitementLevel: developerState.excitementLevel,
-    });
-  };
-  ```
-
-  * 📝 If we want to change _just one_ property, such as `mood`, with `setDeveloperState`, we need to update the entire object, not just the property in question. This is because `setDeveloperState` _overwrites_ the previous state, instead of merging it with the existing state, as `this.setState` does.
-
-  * 💡To avoid repeating yourself, you can shorten this code by using the spread notation `...`. Like `setDeveloperState({...developerState, mood})`.
-
-  * Setting the `onClick` attribute to an arrow function that _returns_ the function that we want to call when the button is clicked.
-
-  ```js
-  <button onClick={()=>changeMood("lazy")}>Encourage Laziness</button>
-  <button onClick={()=>changeMood("determined")}>Fill with Determination</button>
-  ```
-
-  * If we were to pass it the function by itself, then the `changeMood` function would be _called_ directly, resulting in an infinite loop.
-
-* Answer any questions before beginning the activity.
-
-### 8. Students Do: useState Activity (15 mins)
-
-Files: [02-Stu_useState/Unsolved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Unsolved)
-
-```md
-In this activity we will practice using the useState hook in React.
-
-## Instructions
-
-* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
-
-* If you created a new React app, you will need to add the Bootstrap link to `index.html`.
-
-* Start the application in dev mode by running `npm start` in your terminal.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
-
-* Update this application to accomplish the following:
-
-* In `pages/Signup/index.js`, replace `NAME_HERE` and `PASSWORD_HERE` with code that will display both the name and password.
-
-* The state of the Signup component should be handled by the useState Hook.
-
-* When the value of an input field changes, the state should update, causing the component to render.
-
-* Upon form submission, the `handleSubmit` method should `console.log` the username and password.
-```
-
-### 9. Instructor Do: Review useState Activity (10 mins)
-
-* Run [02-Stu_useState/Solved](../../../../01-Class-Content/20-State/01-Activities/02-Stu_useState/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
-
-  * Email and password values entered into the input fields are rendered in the DOM.
-
-* Open `src/pages/Signup/index.js` and explain the following:
-
-  * We import `useState` from `react`:
-
-  ```js
-  import React, { useState } from "react";
-  ```
-
-  * Using array destructuring, we initialize `username` and `password` variables for state and `setUsername` and `setPassword` setter methods, by invoking `useState` twice:
-
-  ```js
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
-  ```
-
-  * 🔑 Since we're not specifying a default value, we won't pass anything to `useState()`.
-
-  * 🎗️ `useState` overwrites the current state instead of merging state like `this.setState` does.
-
-  * In the `<input>` components in the `return` block, we use the `onChange` method to call our setter methods for username and password and pass each the value of the target that triggered the event:
-
-  ```js
-    <Col size="12">
-      <input
-        className="form-control"
-        type="text"
-        placeholder="Username"
-        name="username"
-        onChange={e => setUsername(e.target.value)}
-      />
-    </Col>
-  </Row>
-  <Row className="form-group">
-    <Col size="12">
-      <input
-        className="form-control"
-        type="password"
-        placeholder="Password"
-        name="password"
-        onChange={e => setPassword(e.target.value)}
-      />
-    </Col>
-  ```
-
-* Some students may have tried to use the `value` attribute. Ask them why using `value` with `onChange` might be a bad idea.
-
-* It all comes down to controlled input vs uncontrolled input.
-
-  * **Controlled input** accepts its current value as a prop and has a callback that allows you to change its value. Whenever `onChange` updates its value, it's essentially the input controlling itself.
-
-  * **Uncontrolled input** is an input that gets its value from somewhere else. In our case, if `value={username}`, then the input would be getting its value from the state.
-
-  * The combination of the two would result in the component going from uncontrolled to controlled, which is considered bad practice.
-
-### 10. Instructor Do: useEffect Demo (10 mins)
-
-* Next, we will introduce students to the `useEffect` Hook.
-
-  * Let the students know that effects, often referred to as side effects, are bits of code responsible for the modification of state, often in the "outside world". In React, effects are most commonly used for data fetching and manually changing the DOM.
-
-  * For example, if one were to create a method that is responsible for creating a user, they could separate it into one regular method that creates the object/validates the data and one effect method that saves the user to a database.
-
-* Open up [03-Ins_useEffect/App.js](../../../../01-Class-Content/20-State/01-Activities/03-Ins_useEffect/src/App.js) in your IDE.
-
-  * Let the students know that `useEffect` is a method that takes two arguments.
-
-  * The first argument is a function that you want to run after the component mounts.
-
-  * The second argument is an array of dependencies, commonly referred to as "deps". Every time the component re-renders, the `useEffect` Hook will check to see if any of the values in its dependency array have changed. If they have, then the function that you supplied as the first argument of `useEffect` will run again. If not, React will skip the effect for that particular render.
-
-  * Ex: If `[props.name]` is provided, then `useEffect` will run once upon initial page render, then once every subsequent render that is caused by a change in `props.name`.
-
-  * When an empty array is provided, `useEffect` will only run when the component renders the first time.
-
-  * Explain that if we supplied `developerState` as a dependency, it would cause an infinite loop. This is because every single time `developerState` would change, it would call `useEffect`, forcing `developerState` to change again.
-
-  ```js
-  useEffect(() => {
-    // For demonstration purposes, we mock an API call.
-    const developer = getDeveloper();
-    setDeveloperState(developer);
-    console.log("Developer State:");
-    console.log(developerState);
-  }, []);
-  ```
-
-* Open your browser again and demonstrate that the state appears in the console once upon page render, then after every time a button is pressed.
-
-  * Recall that the button click still uses the `useState` hook, which causes the component to re-render.
-
-### 11. Students Do: useEffect Activity (20 mins)
-
-Files: [04-Stu_useEffect/Unsolved/src/App.js](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Unsolved/src/App.js)
-
-```md
-In this activity we will practice using the useState and useEffect Hooks in React by transforming a stateful class component into a functional component with React Hooks.
-
-## Instructions
-
-* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
-
-* If you created a new React app, you will need to install axios and React Router.
-
-* Start the application in dev mode by running `npm start` in your terminal.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
-
-* Update this application to accomplish the following:
-
-* Create a functional component in place of the class component.
-
-* Replace `this.state` and all instances of `this.setState` using the `useState` Hook.
-
-* Update the component with the `useEffect` Hook to eliminate the need for `componentDidMount`.
-```
-
-### 12. Instructor Do: Review useEffect (10 mins)
-
-* Run [04-Stu_useEffect/Solved](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
-
-  * The application immediately queries the Wikipedia API based on input.
-
-* Open [04-Stu-useEffect/Solved/src/pages/Search/index.js](../../../../01-Class-Content/20-State/01-Activities/04-Stu_useEffect/Solved/src/pages/Search/index.js) and explain the following:
-
-  * All of the states have been set up at the top of the file.
-
-  ```js
-  const [search, setSearch] = useState("Wikipedia");
-  const [title, setTitle] = useState("");
-  const [url, setUrl] = useState("");
-  const [error, setError] = useState("");
-  ```
-
-  * 📝 `search` is the only term provided with a default value. We could also create a single object to hold the values, but in using separate Hooks our code is more readable and manages state better. We pass `search` to the `useEffect` hook in the 'deps' array. `useEffect` will run when the component mounts, then after each time the value in the search input field changes.
-
-  ```js
-  useEffect(() => {
-    if (!search) {
-      return;
-    }
-
-    API.searchTerms(search)
-      .then((res) => {
-        if (res.data.length === 0) {
-          throw new Error("No results found.");
-        }
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
-        setTitle(res.data[1][0]);
-        setUrl(res.data[3][0]);
-      })
-      .catch((err) => setError(err));
-  }, [search]);
-  ```
-
-  * The `if(!search)` conditional ensures that we do not run a query if the input field is empty.
-
-  * The `handleInputChange` method now simply uses our `setSearch` hook.
-
-  ```js
-  const handleInputChange = (event) => {
-    setSearch(event.target.value);
-  };
-  ```
-
-* Ask students the following questions:
-
-  * ☝️ What was the point of this? (Feel free to make a bad pun here).
-
-  * 🙋 Writing functional components is much cleaner. Using Hooks allows you to write fewer lines of code and manage your state in a less complex way. (No `this` keyword required!)
-
-  * ☝️ If we use Hooks, can state be used by other components?
-
-  * 🙋 No. The state used within a single component cannot be used by different components.
-
-  * ☝️ Can you think of a concept that would allow us to share state across components?
-
-  * 🙋 For now we can use props, but in the future they will learn a better way.
-
-### 13. Instructor Do: Custom Hooks Demo (10 mins)
-
-* Take a moment to ask the class to recite the two rules of Hook.
-
-* Only call Hooks from top-level components. This means **never** call Hooks from within loops, conditionals, or nested functions.
-
-* Hooks may only be called from React components. **Never** call a Hook from a regular JavaScript function.
-
-* Next, introduce the class to the concept of custom Hooks. Remind the class that the two rules of Hooks still apply to custom Hooks.
-
-* Custom Hooks can be practically anything! Custom Hooks are best suited to extract logic that may be repeated.
-
-* Custom Hooks are a great way to keep your React functions pure.
-
-* In addition to the two rules of Hooks, let students know that custom Hooks must start with the word `use` so that React can ensure that your code is adhering to the two rules of Hooks.
-
-* Let students know that just as with `useState` and `useEffect`, different components that use the same custom Hook do **not** share the same state.
-
-* Open [05-Ins_CustomHook](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/) in your browser.
-
-* Show students that when you change the value of the `status` input field, the corresponding section in the card updates.
-
-* Open the console and demonstrate that every change in the status field causes the state object to be logged.
-
-* Open [useUserStatus.js](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/src/utils/useUserStatus.js) in your IDE.
-
-* The purpose of this Hook is to set the status of the Developer. The property of the `useUserStatus` will be an object with the properties `value` and a method for changing the value named `onChange`.
-
-* Point out that the Custom Hook is a top level function. Within it we can use Hooks like `useEffect` and `useState`.
-
-* We set `statusState` to an empty string.
-
-```js
-import { useState } from "react";
-
-const useUserStatus = () => {
-  let [statusState, setStatus] = useState("");
-
-  return {
-    status: {
-      value: statusState,
-      onChange: (e) => setStatus(e.target.value),
-    },
-  };
-};
-
-export default useUserStatus;
-```
-
-* Open [App.js](../../../../01-Class-Content/20-state/01-Activities/05-Ins_CustomHook/src/App.js) and explain the following:
-
-* The `useEffect` hook is **only** being used to show the status every time that `stateStatus` changes.
-
-```js
-import React, { useState, useEffect } from "react";
-
-import "./App.css";
-
-import useUserStatus from "./utils/useUserStatus";
-
-function App() {
-  const [developerState, setDeveloperState] = useState({
-    excitementLevel: 1000,
-
-    lifeLongLearner: true,
-
-    name: "Riley",
-  });
-
-  const { statusState, status } = useUserStatus();
-
-  useEffect(() => {
-    console.log(statusState);
-  }, [statusState]);
-
-  return (
-    <div className="card">
-      <div>Name: {developerState.name}</div>
-
-      <div>Status: {statusState}</div>
-
-      <div>Lifelong learner: {developerState.lifeLongLearner.toString()}</div>
-
-      <div>Excitement Level: {developerState.excitementLevel}</div>
-
-      <div className="btn-group">
-        <form className="form-group">
-          <label htmlFor="status">Enter your Status: </label>
-
-          <input className="form-control mb-4" id="status" {...status} />
-        </form>
-
-        <button
-          onClick={() =>
-            setDeveloperState({
-              ...developerState,
-
-              excitementLevel: developerState.excitementLevel + 1000,
-            })
-          }
-          className="btn btn-success"
-        >
-          Increase Excitement Level
-        </button>
-
-        <button
-          onClick={() =>
-            setDeveloperState({
-              ...developerState,
-
-              excitementLevel: developerState.excitementLevel * 1000,
-            })
-          }
-          className="btn btn-success"
-        >
-          Decrease Excitement Level
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export default App;
-```
-
-### 14. Students Do: Custom Hooks (15 mins)
-
-* Introduce [06-Stu_CustomHook/Unsolved](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Unsolved)
-
-* In this activity we will practice using Custom Hooks by creating a `useDebounce` Hook that will delay the invoking of a function for a given number of milliseconds.
-
-```md
-* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
-
-* Start the application in dev mode by running `npm start` in your terminal.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
-
-* Update this application to accomplish the following:
-
-* Create a new Custom Hook called `useDebounce` that takes in the two parameters `value` and `delay`.
-
-* Use `setTimeout` to handle the value of the debouncer.
-
-* Update the `Search` page so that the useEffect Hook is listening for the value returned from the `useDebounce` Hook. Pass in a `delay` value of 500.
-
-* The finished application should only search for a new article if there has been a period of 500 milliseconds without any user input.
-```
-
-### 15. Instructor Do: Review Custom Hooks (10 mins)
-
-* Open [06-Stu_CustomHook/](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/) in your browser.
-
-  * Type `software developer` into the Article Search Bar.
-
-  * Point out that the article below the search bar only updated once you finished typing.
-
-  * Slowly type out each letter of `software developer` and demonstrate that the API call occurs if there has been a period of over 500 milliseconds without any input changing.
-
-* Open [06-Stu_CustomHook/Solved/src/utils/debounceHook.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/utils/debounceHook.js) in your IDE and point out the following:
-
-  * We will use the `useEffect` and `useState` Hooks in our custom Hook.
-
-  * Our Custom Hook starts with the word `use`.
-
-  * `useDebounce` takes in two parameters: `value` and `delay`.
-
-  * The state is controlled with a Hook at the top level of our `useDebounce` Hook.
-
-  * We create a `setTimeout` method and set it to a variable called `handler` so that we may later `clearTimeout`.
-
-  * We `return` a function that clears the timeout.
-
-  * Inside the `useEffect` Hook, if a `return` statement is provided, then the function that is returned gets run every time the component unmounts **or** right before the next `useEffect` is called. This is known as a "cleanup" function because it is designed to tie up the loose ends in effects that are dependant on outside effects. In our case, the outside effect is the `handler` timeout we created.
-
-  ```js
-  import { useEffect, useState } from "react";
-
-  const useDebounce = (value, delay) => {
-    const [debouncedValue, setDebouncedValue] = useState(value);
-    useEffect(
-      () => {
-        const handler = setTimeout(() => {
-          setDebouncedValue(value);
-        }, delay);
-        // Cancel the timeout if value or delay changes
-        return () => {
-          clearTimeout(handler);
-        };
-      },
-      // Only call the effect if value or delay changes.
-      [value, delay]
-    );
-
-    return debouncedValue;
-  };
-  export default useDebounce;
-  ```
-  
-* Open [06-Stu_CustomHook/Solved/src/pages/Search/index.js](../../../../01-Class-Content/20-State/01-Activities/06-Stu_CustomHook/Solved/src/pages/Search/index.js) in your IDE and point out the following:
-
-  * The `debouncedSearchTerm` variable is set up **outside** of the `useEffect` Hook. We pass in the existing `search` variable that is tied to our component state and pass in 500 as our second parameter.
-
-  * First, we will check to make sure that the input text is not empty.
-
-  * Then we ensure that `debouncedSearchTerm` is not `undefined` or `null`.
-
-  * `useEffect` receives `debouncedSearchTerm` so that it will only run when the debounced term changes instead of running whenever `search` changes.
-
-```js
-const debouncedSearchTerm = useDebounce(search, 500);
-
-useEffect(() => {
-  if (!search) {
-    return;
-  }
-
-  if (debouncedSearchTerm) {
-    API.searchTerms(search)
-      .then((res) => {
-        if (res.data.length === 0) {
-          throw new Error("No results found.");
-        }
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
-        setTitle(res.data[1][0]);
-        setUrl(res.data[3][0]);
-      })
-      .catch((err) => setError(err));
-  }
-}, [debouncedSearchTerm]);
-```
-
-### 16. Instructor Do: Recommend Material (0 mins)
+### 19. END (0 mins)
 
 * Recommend students go through the following material at home before next class if possible. These articles will help them better understand the material covered today in class.
-
-* [Lifting State Up](https://facebook.github.io/react/docs/lifting-state-up.html)
-
-* [Uncontrolled Components](https://facebook.github.io/react/docs/uncontrolled-components.html)
-
-* [Smart and Dumb Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
-
-* [React Lifecycle Methods and When to Use Them](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1)
-
-* Congratulate the class on making it halfway through React! Remind them that this is a difficult subject but they've already come a long way.
-
-### 17. End (0 mins)
 
 ### Lesson Plan Feedback
 

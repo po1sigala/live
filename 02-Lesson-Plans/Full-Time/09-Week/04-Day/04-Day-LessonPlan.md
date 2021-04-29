@@ -1,986 +1,1102 @@
-# 9.4 Lesson Plan - PWAs (10:00 AM)
+# 9.4 - Masters of MongoDB (10:00 AM)
 
 ## Overview
 
-Today's class will continue our journey into web performance by learning about progressive web apps. We will start with our basic Gallery App and step by step, implement a web app manifest as well as a service worker. This new functionality will provide us with a fully functioning progressive web app that delivers an offline experience to our users.
+In this class, you will introduce the concept of the NoSQL database with MongoDB, go over its pros and cons compared with MySQL, and ultimately detail all of the required steps to employ MongoDB in future projects.
 
 ## Instructor Notes
 
-* Complete activities `05-Stu_Gallery-Lazy-Load` through `14-Stu_Map-PWA`.
+* Complete activities `1-11` in `18-NoSQL`
 
-* You may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
+* Before class, make sure you install MongoDB and Robo 3T on your machine--you'll need both.
 
-* Some of today's activities use mongoDB to store data. It is recommended that you open a separate tab in your terminal and run `mongod`. Don't forget to kill the process at the end of class.
-
-* It is recommended that you take some time to familiarize yourself with service workers before class begins. Specifically, look over the service worker lifecycle and caching and returning requests at https://developers.google.com/web/fundamentals/primers/service-workers/.
-
+* If you haven't used MongoDB much in the past, take a look at this week's queries and solutions. This should prime you for the lecture.
 
 ## Learning Objectives
 
-* Explain the benefits a progressive web app offers a user over a traditional app.
+* Identify and explain the differences between SQL and NoSQL databases.
 
-* Implement and explain the role of a web app manifest.
+* Install MongoDB and Robo 3T.
 
-* Implement and explain the role of a service worker.
+* Create a Mongo database.
+  
+* Perform basic CRUD actions on their Mongo database.
 
-* Successfully cache and fetch files to deliver them in an offline experience.
-
-* Install a PWA on both desktop and mobile devices
+* Create a Mongoose schema to dictate rules for their MongoDB data.
 
 ## Slides
 
-N/A
+[9.4: Intro To MongoDB](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing)
+
+[9.4: Career Services](https://docs.google.com/presentation/d/18inCMR9TB47q3yEY-YflqA-96cBqXheM9X0BrD0Gk9Y/edit#slide=id.p7)
 
 ## Time Tracker
 
-[9.4 Time Tracker](https://docs.google.com/spreadsheets/d/1yFXTsN96pl6jbyMS2fhDWsNKppWdzxZt9DQs6uVUcwQ/edit#gid=0)
+[9.4: Intro To MongoDB Time Tracker](https://docs.google.com/spreadsheets/d/1C-zfaTXOhNrgey7S0YsHv_vlX2YogdaGv5Jm_Vi5qBM/edit#gid=0)
 
----
-
-## Class Instruction
-
-### 1. Student Do: Lazy Loading (15 mins)
-
-* Direct students to the activity instructions located in [05-Stu_Gallery-Lazy-Load](../../../../01-Class-Content/18-web-performance/01-Activities/05-Stu_Gallery-Lazy-Load/README.md)
-
-```md
-# Lazy Loading Images
-
-In this activity you are going to work with the Intersection Observer API to implement lazy loading functionality for our Gallery App.
-
-## Instructions
-
-* In this activity you are going to take the Gallery App and implement Lazy Loading functionality.
-
-  * This will allow for us to load images only as they are needed, saving loading times.
-
-* You will primarily be working within `loadImages.js`
-
-* Inside of `public/assets/images` is a `.zip` file containing all the images needed for the app. Unzip this file and make sure the contents end up in your images folder.
-
-* After you have completed implementing lazy loading, open your Dev Tools and run another Lighthouse Audit.
-```
-
-### 2. Instructor Do: Review Lazy Loading (5 mins)
-
-* Open the [solved Gallery Lazy Loading app](../../../../01-Class-Content/18-web-performance/01-Activities/05-Stu_Gallery-Lazy-Load/Solved/).
-
-* Walk students through the code that enables lazy loading in our application.
-
-```js
-function initLazyImages() {
-  const lazyImages = document.querySelectorAll(".lazy-image");
-```
-
-  * First we create a `const` called `lazyImages`. We save all elements with the class `lazy-image` to this constant variable
-
-```js
-  function onIntersection(imageEntities) {
-    imageEntities.forEach(image => {
-      if (image.isIntersecting) {
-        observer.unobserve(image.target);
-        image.target.src = image.target.dataset.src;
-      }
-    });
-  }
-```
-  * Next, we create an `onIntersection` function. In this function we state that for each mage, if the image is intersecting the viewport we load our image and stop observing it as it is now on screen.
-
-```js
-  const observer = new IntersectionObserver(onIntersection);
-```
-
-  * We used a constructor function to create a new instance of IntersectionObserver, saving it to a constant variable `observer`. This allowed us to use it in our `onIntersection` function.
-
-```js
-  lazyImages.forEach(image => observer.observe(image));
-}
-```
-  * The final line subscribes all images to be observed by IntersectionObserver to it can download the proper image when the placeholder is scrolled into view.
-
-* Answer any questions before introducing the final activity.
-
-### 3. Instructor Do: Intro Gallery App Full Optimization (5 mins)
-
-* Let students know they are doing well! Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
-
-### 4. Student Do: Optimize Gallery App (20 mins)
-
-* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved)
-
-```md
-# Optimize Gallery App
-
-In this activity you will use the Lazy Loading, GZip Compression, Image Compression, and Lighthouse to improve the performance of the Gallery App.
-
-## Instructions
-
-* First, unzip the uncompressed images zip file found in `public/assets/images`.
-
-* Run the following commands:
-
-  * Start MongoDB (run `mongod` in your terminal)
-  * In a new terminal window run `npm install`
-  * `npm run seed`
-  * `node server.js`
-
-* Now that the application is running, navigate to the [localhost](https://localhost:3000)
-
-* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
-
-* Now, using the compression npm package, enable gzip compression in the application.
-
-* Restart your server and run a new audit.
-
-* Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
-
-* Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
-
-* Restart your server and run a new audit.
-
-* Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
-
-* Create a `dist` folder in `/public`.
-
-  * Inside of `public/dist` create a file called `index.js`
-
-  * Link this `index.js` to your application in `public/index.html`.
-
-* Head to [JSCompress](https://jscompress.com/).
-
-* Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
-
-  * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
-
-* Finally, restart your server and run a new audit.
-```
-
-### 5. Instructor Do: Review Final Gallery App (5 mins)
-
-* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
-
-  * npm install
-
-  * npm install compression
-
-* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/18-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
-  
-```js
-const compression = require("compression");
-
-app.use(compression());  
-```
-
-  * With these two lines of code we can easily enable GZip compression in our application for our served files.
-
-* Ask the class, "Is Tiny PNG our only option for Image Compression?"
-
-  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
-
-  * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
-
-* Ask the class, "Can you see the ways you can use these performance enhancements in your existing applications?"
-
-  * Optimizing our applications to be performant on all devices and connection speeds will make us better developers. We need to consider those with smaller devices or slower speeds at all times as to not alienate any user base.
-
-* Answer any remaining questions.
-
-### 6. Instructor Do: Progressive Web Apps (10 mins)
+### 1. Instructor Do: What is MongoDB (10 min)
 
 * Welcome students to class.
 
-* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
+* Open the [slide deck](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing) and follow these prompts with their corresponding slides:
 
-  * It's the Image Gallery application from earlier. But there's something different about it...
- 
-  * If we open the Settings in Chrome, we will see an option to `Install Images App...`
- 
-  * When we select `Install Images App...` we are presented with an option to "Install app?"
- 
-  * When we click `Install`, a new Chrome window opens with our application running in it. 
- 
-  * It is now installed as a desktop app! If we search our applications, we will find "Images App" listed among them.
+  * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * **What's MongoDB?**: MongoDB is a very popular NoSQL database that uses a document-oriented model as opposed to a table-based relational model (SQL). MongoDB stores data in BSON format (effectively, compressed JSONs).
 
-  * ☝️ What is different about our Image Gallery application? 
+  * **Relational Databases**: Relational databases rely heavily on joins to combine relevant data.
+
+  * **Document Database (NoSQL)**: NoSQL databases on the other hand are effectively JSON objects and are very flexible. 
   
-  * 🙋 There is added functionality to install it as a desktop application.
+  * **MongoDB Storage**: Mongo databases contain collections which contain documents. 
 
-  * ☝️ If we can install the Images App application on our laptops, where else might we install it? 
- 
-* Use student answers to transition to the next activity.
+  * **Mongo Terms**: Use this slide to cover the relevant Mongo terms.
 
-### 7. Student Do: Progressive Web Applications (15 mins)
+### 2. Students Do: Installing MongoDB / Robo 3T (20 min)
 
-* Direct students to the activity instructions found in [07-Stu_PWAs](../../../../01-Class-Content/18-PWA/01-Activities/07-Stu_PWAs).
+**Part 1: Install Mongo**
 
-```md
+* Guide students to the [MongoDB Community Edition Installation Manual](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials), and have them follow the instructions for their operating system. 
 
-  # Progressive Web Applications
+* After 10 minutes ask the class:
 
-  In this activity, you will install a progressive web application (PWA) using your smart phone. You will also research the definition and production of a PWA. If you are unable to find the icons mentioned in this activity, try them in Chrome on your computer.
+  * Can everyone start up MongoDB by typing `mongod` into your terminal/bash window?
 
-  ## Instructions
+  * If mongo is successfully installed, their terminal/bash screens will look like this:
 
-  * Follow these instructions to install a PWA for your specific smartphone OS:
-
-  * iOs:
-
-    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
-
-    * 2. Tap the Share button in Safari.
-
-    * 3. Tap the icon labeled Add to Home Screen.
-
-    * 4. Tap Add in the upper-right corner.
-
-    * 5. Name your PWA, then tap Add in the upper-right corner.
-
-  * Android:
-
-    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
-
-    * 2. Tap the menu button in the upper right corner of Chrome.
-
-    * 3. Tap the icon labeled Add to Home Screen.
-
-    * 4. Name your PWA, then tap Add below the promp.
-
-  * Be prepared to answer the following question(s): 
-
-      * What is a progressive web application? 
-
-      * How do we create progressive web applications?
-
-
-  ## 🏆 Bonus
-
-  * What are examples of popular PWAs?
-```
-
-### 8. Instructor Do: Progressive Web Apps Review (5 min)
-
-* Use the prompts and talking points below to review the following key point(s):
-  
-  * ✔️ Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript, that allow users to work offline
-  
-  * ✔️ PWAs require a manifest, a service worker and the Cache API
-  
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What is a progressive web application?
-  
-  * 🙋 Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript
-  
-  * ☝️ What is meant by the term 'native' app?
-  
-  * 🙋 The term "native app" refers to applications written for specific platforms. For example, native iPhone apps are written in iOs and Android apps are primarily written in Java. Apple apps will not run on Android devices and vice versa. 
-
-  * ☝️ How are PWAs different from native apps?
-
-  * 🙋 Traditional Mobile Apps require multiple builds across platforms, are less discoverable by search engines and have high abandonment rates.They also offer less usability and don’t leverage mobile device capabilities and are often slow and bloated. PWAs provide advantages of both web and mobile apps such as push notifications, offline experiences,speed and stability. Plus, you can convert a web app into a PWA quickly without the build time of a mobile app.
-  
-  * ☝️ What do we need to learn to convert an application into a progressive web application?
-
-  * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
-  
-* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
-  
-  * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
-
-    ![Application Sidebar](Images/application-sidebar.png)
-
-  * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
-
-  ![Offline](Images/offline-mode.png)
-
-* Answer any lingering questions before proceeding to the next demo. 
-
-### 9. Instructor Do: Web App Manifest Demo (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ `manifest.webmanifest` is JSON file providing information for mobile and desktop installation
-  
-  * ✔️ Manifest properties are referred to as members
-  
-* Open [08-Ins_Manifest/manifest.webmanifest](../../../../01-Class-Content/18-PWA/01-Activities/08-Ins_Manifest/manifest.webmanifest) in your IDE and explain the following: 
-
-  * 🔑 A web app manifest is a simple JSON file containing some metadata about a web application. 
-  
- ```js
-  {
-    "short_name": "Demo",
-    "name": "Web App Manifest Demo",
-    "icons": [
-      {
-        "src": "/assets/images/icons-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/images/icons-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "start_url": "/",
-    "background_color": "#808080",
-    "display": "standalone",
-    "theme_color": "#808080"
-  } 
+  ```bash
+  ➜  ~ mongod
+  2019-05-03T11:00:35.067-0400 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] MongoDB starting : pid=785 port=27017 dbpath=/data/db 64-bit host=Daniels-MBP-2
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] db version v4.0.3
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] allocator: system
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] modules: none
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] build environment:
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     distarch: x86_64
+  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     target_arch: x86_64
   ```
-  * 🔑 Each of the properties in our manifest file is referred to as a **member**.
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * _Note: Many students will have installed `mongod` as a service. Running `mongod` will produce an error in this case. Another way to verify that `mongod` is running is to have the student open a new terminal window and run `mongo`. Then, verify that the `mongo` cli connected to the `mongod` service successfully._
 
-  * ☝️ What do we think the difference is between `name` and `short_name`?
+* If there are any remaining students who do not have it installed and configured, ask them to raise their hand so a TA can help debug the issue.
 
-  * 🙋 `short_name` is used on the home screen and in the application menu
+**Part 2: Install Robo 3T**
+
+* Tell the class that they are now going to install Robo 3T, a native cross-platform MongoDB management tool that will make working with MongoDB easier and more intuitive.
+
+* Direct the students to the Mongo 3T install page [https://robomongo.org/download](https://robomongo.org/download) and have them click the green download button.
+
+  ![Download Robo 3T](Images/install-robo-3t.png)
+
+* Next have them choose their OS and download the application.
+
+  ![Download Robo 3T](Images/choose-os.png)
+
+* After installing students should be able to successfully open Robo 3T on their machine.
+
+* Ask the students the following question(s):
+
+  * ☝️ Did anyone have trouble installing Mongo or Robot 3T
+
+  * 🙋 If yes, have a TA come around and help those students.
+
+* Take any questions before moving on.
+
+### 3. Instructor Do: Create, Insert and Find (10 min) 
+
+* In order to get set up for the activity, direct the students to:
   
-  * ☝️ What are "icons"?
-
-  * 🙋 The `icons` array contains information about the thumbnail images used when installing the PWA on mobile or desktop
-
-  * ☝️ What is the `start_url` member?
-
-  * 🙋 Defines what page is opened when the app is first launched (start_url).
+  * Run `mongod` in one tab, if they haven't already. Explain that `mongod` is the primary daemon process for the MongoDB system that handles data access and requests and background management operations. Tell them that when you start `mongod` you're telling your machine to start the MongoDB process and run it in the background.
   
-  * ☝️ What does the `display` member do?
+  * Run `mongo` to start up the mongo shell in another tab. Explain that `mongo` is the command-line shell that connects to the specific instance of `mongod` that they just started.
 
-  * 🙋 By using a web app manifest, our app can tell the browser you want your app to open in a standalone window
+* Next explain that you'll be going over how to create a database, insert data into a collection and find stored data using MongoDB.
 
+* Following the comments and queries located in [01-Ins-Create-Insert-and-Find/queries.md](../../../..01-Class-Content/18-NoSQL/01-Activities/01-Ins-Create-Insert-and-Find/README.md), demonstrate to the class how to create a new database, insert and find new records.
 
-### 10. Student Do: Web App Manifest (15 mins)
+* Switch to a new database:
 
-* Direct students to the activity instructions found in [09-Stu_Manifest](../../../../01-Class-Content/18-PWA/01-Activities/09-Stu_Manifest)
+  ```
+  use lessondb
+  ```
+
+* Show the current db:
+
+  ```
+  db
+  ```
+
+* Insert data:
+
+  ```js
+  db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+  ```
+
+* As a class, come up with five more countries and insert them into the db using the same syntax as above.
+
+  * Observe where the data was entered in the MongoDB instance (in mongod).
+
+* Find all data in the collection:
+
+  ```js
+  db.places.find()
+  ```
+
+  * NOTE: the MongoDB `_id` was created automatically.
+
+  * This id is specific for each doc in the collection:
+
+* Add `.pretty()` to make your data more readable:
+
+  ```
+  db.places.find().pretty()
+  ```
+
+* Find specific data by matching a field:
+
+  ```js
+  db.places.find({"continent": "Africa"})
+  db.places.find({"country": "Morocco"})
+  ```
+
+* Find specific data by matching an _id:
+
+  ```js
+  db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})`
+  ```
+
+* When you are done tell the class that this is just the beginning as they will be sharpening their mongo skills in the coming days and weeks.
+
+* Ask the students the following question(s):
+
+  * ☝️ What keyword do we use to switch to a new database?
+
+  * 🙋 The `use` keyword.
+
+  * ☝️ What keyword do we use to find data?
+
+  * 🙋 The `find` keyword.
+
+* Take any questions before moving on.
+
+### 4. Students Do: Create, Insert and Find data in MongoDB (10 min)
+
+* Direct students to the instructions of their next activity in [02-Create-Insert-and-Find/Unsolved/README.md](../../../../01-Class-Content/18-NoSQL/01-Activities/02-Create-Insert-and-Find/Unsolved/README.md).
 
 ```md
-# Web App Manifest
-
-In this activity, you will write your first progressive web application manifest.
+# Creating, Inserting and Finding in MongoDB
 
 ## Instructions
 
-* Using the instructor demo as a guide, create a manifest for the Image Gallery app.
+* Use the command line to create a classroom database. 
 
-  * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
+* Insert entries for yourself and the people in your row in a `students` collection.
 
-  * 🤔 How do you deploy a manifest? Hint: You will need to somehow link it with the web page. (See [Web App Manifest - Deploying a manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Deploying_a_manifest_with_the_link_tag).)
+* Each document should have:
 
-* When finished, run the commands:
+  * A field of `name` with the person's name.
 
-  * `npm install`
+  * A field of `rownumber` which will contain the row number that they are in.
 
-  * `npm run seed`
+  * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
 
-  * `npm start`
+  * A field of `hobbies` with an array of the hobbies the person likes to do.
 
-* Navigate to [localhost:3000](localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
+* Use find commands to get:
+
+  * A list of everyone in your row.
+
+  * An entry for a single person.
+
+  * The entries for all the Mac users in your row.
 
 ## 💡 Hint(s)
 
-Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
+* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
 
 ## 🏆 Bonus
 
-* Add additional members to your manifest.
+* If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
+
 ```
 
-### 11. Instructor Do: Review Web App Manifest (10 mins)
+### 5. Instructor Do: Review Create, Insert and Find data in MongoDB (5 min)
+
+* Open [02-Stu-Create-Insert-and-Find/Solved/README.md](../../../../01-Class-Content/18-NoSQL/01-Activities/02-Stu-Create-Insert-and-Find/Solved/README.md) in your IDE and run the following commands.
+
+* Create a classroom db and insert a classmate**
+
+  ```sql
+  use classroom
+  db.students.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
+  ```
+
+* Find all students in row 3**
+
+  ```sql
+  db.students.find({row:3})
+  ```
+
+* Find students named Steve**
+
+  ```sql
+  db.students.find({name:'Steve'})
+  ```
+
+* Find students in row 3 that use Mac's**
+
+  ```sql
+  db.students.find({row:3, os:'Mac'})
+  ```
+
+* BONUS: Find by entry in an array**
+
+  ```sql
+  db.students.find({"hobbies": {$in: ["Coding"]}})
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ How do we find a record inside an array?
+
+  * 🙋 Review the syntax using `db.students.find({"hobbies": {$in: ["Coding"]}})` as an example.
+
+* Take any questions before moving on.
+
+### 6. Instructor Do: Updating, Deleting and Dropping in MongoDB (10 mins)
 
 * Use the prompts and talking points below to review the following key point(s):
 
-  * The web app manifest tells the browser about your web application and how it should behave once installed. 
+  * ✔ We use `update` to update a value.
 
-* Open [09-Stu_Manifest/Solved/public/manifest.webmanifest](../../../../01-Class-Content/18-PWA/01-Activities/09-Stu_Manifest/Solved/public/manifest.webmanifest) in your IDE and explain the following:
+  * ✔ We use `$set` to replace the value of a field with the specified value.
 
-  * We give our PWA a name and short name. These can have different values, but for the sake of simplicity, we give them the same value.
+  * ✔ We use `push` to update values in an array.
 
-  * There are numerous icons for our app, starting at the size of `72x72` through `512x512`.
+  * ✔ We use `remove` to delete items.
 
-  * We set both the theme color and the background color to be white.
+  * ✔ We use `drop` to drop a collection.
 
-  * We tell the app to run in standalone mode, which means the web app will look and feel like a standalone native app. The app runs in its own window, separate from the browser, and hides standard browser UI elements like the URL bar.
+* Open [03-Ins-Update-Delete-and-Drop/queries.md](../../../../01-Class-Content/18-NoSQL/01-Activities/03-Ins-Update-Delete-and-Drop/README.md) in your IDE and lead students the following commands.
 
-  * 📝 The other display modes we could specify are `fullscreen`, `minimal-ui`, and `browser`.
+* Make sure you are using the database, `lessondb`,  that we created earlier.
 
-  ```json
-    {
-    "name": "Images App",
-    "short_name": "Images App",
-    "icons": [
-      {
-        "src": "assets/images/icons/icon-72x72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-      },
-      ...
-      {
-        "src": "assets/images/icons/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "start_url": "/",
-    "display": "standalone"
-  }  
+  ```sql
+  db
+  use lessondb
   ```
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+**Update**
 
-  * ☝️ Which file do we include the `manifest.webmanifest` in?
+* Tell the class that we update data using `db.[COLLECTION_NAME].update()`
 
-  * 🙋 `index.html` 
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}})
+  ```
 
-  * ☝️ What's next on our list of things to do?
+* Note that the above will only update the first entry it matches.
   
-  * 🙋 Add a service worker!
+* Explain that to update multiple entries we add `{multi: true}`.
 
-### 12. Instructor Do: Intro To Service Workers (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ A service worker is a script that your browser runs in the background on a separate thread from your webpage.
-
-  * ✔️ Certain functionality can _only_ be implemented from within a service worker, such as caching assets in order to make the application useable without an internet connection or notifying the browser that the application should be installable.
-
-  * ✔️ **Cache API** Similar to localstorage and indexedDB in that this browser API is used for storing data. However Cache API can be used to store entire all front end assets such as images, javascript, HTML, CSS, etc. along with API responses.
-
-  * ✔️ **Thread** A thread is an independent set of values for the processor that controls what executes in what order. Think of this as another JavaScript application running at the same time as our main application, with the ability to communicate and pass data between threads.
-
-  * ✔️ Service workers have a lifecycle that consists of 3 main parts.
-
-  * ✔️ **Installation**: The service worker creates a version-specific cache.
-
-  * ✔️ **Waiting**: The updated service worker waits until the existing service worker is no longer controlling clients. This step is often skipped with a function, since service workers rarely exist past a new service workers installation.
-
-  * ✔️ **Activation**: This event fires after the service worker has been installed and the previous one has been removed.
-
-* Navigate to [10-Ins_Service_Workers](../../../../01-Class-Content/18-PWA/01-Activities/10-Ins_Service_Workers) and run the following commands in your terminal:
-
-  ```
-  npm install
-  npm run seed
-  node server.js
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
   ```
 
-* In a separate tab, run `mongod`.
+* Recall from the earlier demo the structure of our document:
 
-* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered and installed.
-
-  * When our app launches, it registers and installs the service worker.
-
-  * Using the Chrome Dev Tools, we can unregister the service worker.
-
-  * Now, if we refresh the page, we can see that the service worker was installed and registered again.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What are the 2 main steps in service worker lifecycle?
-
-  * 🙋 Installation and activation. There is also a waiting step that is often skipped.
-
----
-
-### 13. Break (30 mins)
-
----
-
-### 14. Student Do: Register Service Worker (15 mins)
-
-* Direct students to the next activity located in [11-Stu_Service_Workers](../../../../01-Class-Content/18-PWA/01-Activities/11-Stu_Service_Workers/Unsolved).
-
-* **Instructions**
-
-* Add the following script just above the closing `</body>` tag in `index.html`
-
-```html
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(reg => {
-          console.log("We found your service worker file!", reg);
-        });
-    });
-  }
-</script>
-```
-
-* Create a `service-worker.js` file in the `public` directory and add the following line of code.
-
-```js
-console.log("Hello from your service worker file!");
-```
-
-* Refresh your Gallery App or launch it with `npm start` if it is not running.
-
-* Open your Chrome Dev Tools and navigate to Application then your Service Worker tab. Check to see if your service worker file was successfully found. You should see two messages, one from the `service-worker.js` file and one from the script tag that you put in your `index.html` file.
-
-  ![Service Worker Console](Images/sw-console.png)
-
-### 15. Instructor Do: Review Register Service Worker (15 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔️ We are adding an event listener to our window element, listening for the `load` event.
-
-  * ✔️ We register our service worker using the `navigator` object.
-
-  * ✔️ We console.log a message letting us know that the service worker registration was successful.
-
-* Open [11-Stu_Service_Workers/Solved/public/index.html](../../../../01-Class-Content/18-PWA/01-Activities/11-Stu_Service_Workers/Solved/public/index.html) and explain the following points:
-
-  * We tell the browser to register our service worker file.
-
-```html
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(reg => {
-          console.log("We found your service worker file!", reg);
-        });
-    });
-  }
-</script>
-```
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What step of the service worker lifecycle have we just completed? 
-
-  * 🙋 The registration step. 
-
-### 16. Instructor Do: Creating An Offline Experience (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔️ All files that need to be cached are stored as strings in an array.
-
-  * ✔️ All files that need to be cached are precached in the `install` step.
-
-  * ✔️ The `activate` step clears out the all outdated caches.
-
-  * ✔️ The `fetch` listener intercepts all fetch requests and uses data from the cache to return a response.
-
-* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/) in your IDE and run the following commands:
-
-  * `npm install`
-
-  * `npm start`
-
-* Navigate to [localhost:3000](http://localhost:3000) in your browser and explain the following points:
-
-  * If we inspect our Sources with DevTools, we can see that our service worker is running on a separate thread.
-
-  ![Threads](Images/sw-threads.png)
-
-* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/service-worker.js) in your IDE and explain the following:
-
-  * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
-
-  * Our `FILES_TO_CACHE` variable keeps track of each file that we want to store in our cache. 
-
-  * This is an array of _files_ only, attempting to include entire folders won't work.
-
-  📝 The `ALL_CAPS_SEPARATED_BY_UNDERSCORES` style is just standard convention for the global variables in our service worker. 
-
-  ```js
-  const FILES_TO_CACHE = [
-    "/",
-    "/index.html",
-    "/assets/css/style.css",
-    "/assets/js/loadPosts.js",
-    "/assets/images/Angular-icon.png",
-    "/assets/images/React-icon.png",
-    "/assets/images/Vue.js-icon.png",
-    "/manifest.webmanifest",
-    ...
-    ...
-  ];
-
-  // set cache variable names
-  const CACHE_NAME = 'static-cache-v2';
-  const DATA_CACHE_NAME = 'data-cache-v1';
+  ```sql
+  db.places.insert({"continent": "Africa", "country": "Morocco", "majorCities": ["Casablanca", "Fez", "Marrakech"]})
   ```
 
-  * Inside our install event listener callback we open our cache and call `addAll`, passing in `FILES_TO_CACHE`.
+* Ask the students the following question(s):
 
-  ```js
-  // install
-  self.addEventListener('install', function(evt) {
-    evt.waitUntil(
-      caches.open(CACHE_NAME).then(cache => {
-        console.log('Your files were pre-cached successfully!');
-        return cache.addAll(FILES_TO_CACHE);
-      })
-    );
+  * ☝️ What do you think will happen when I run the following command, even though there is not a `capital` field in the document?
 
-  // skipWaiting() ensures that any new versions of our service worker will take over the page and become activated immediately
-    self.skipWaiting();
-  });
+    ```sql
+    db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+    ```
+
+  * 🙋 `$set` will create the field `capital`.
+
+* Tell the class that the newly created field can now be updated with the same command:
+
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
   ```
 
-  * Inside the activate event listener callback, we activate our service worker, cleaning up outdated caches.
+* We can update the values in an array with `$push`:
 
-  ```js
-  // activate
-  self.addEventListener('activate', function(evt) {
-    evt.waitUntil(
-      caches.keys().then(keyList => {
-        return Promise.all(
-          keyList.map(key => {
-            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-              console.log('Removing old cache data', key);
-              return caches.delete(key);
-            }
-          })
-        );
-      })
-    );
-
-  // Tells our new service worker to take over.
-    self.clients.claim();
-  });
+  ```sql
+  db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})
   ```
 
-  * Here we modify the service worker to handle requests to `/api` and store the responses in our cache, so we can easily access them later.
+**Delete**
 
-  ```js
-  // fetch
-  self.addEventListener('fetch', function(evt) {
-    if (evt.request.url.includes('/api/')) {
-      console.log('[Service Worker] Fetch (data)', evt.request.url);
+* We delete an entry with `db.[COLLECTION_NAME].remove()`
 
-      evt.respondWith(
-        caches.open(DATA_CACHE_NAME).then(cache => {
-          return fetch(evt.request)
-            .then(response => {
-              // If the response was good, clone it and store it in the cache.
-              if (response.status === 200) {
-                cache.put(evt.request.url, response.clone());
-              }
-
-              return response;
-            })
+  ```sql
+  db.places.remove({"country": "Morocco"})
   ```
 
-  * If the network request fails, we try to get the response from our cache.
+* We can also empty a collection with `db.[COLLECTION_NAME].remove()`
 
-  ```js
-    .catch(err => {
-      return cache.match(evt.request);
-    });
-  ```
-  
-  * _**Note for instructor:** You will notice that the api requests are not cached on the first visit, when the service worker is installed for the first time. Solutions to deal with this case are most likely too complicated to introduce at this point in the class. Simply refresh the page to allow the service worker to cache the api request making the posts from the database available when the page is viewed offline._
-
-  * If the request path does not include `/api`, then we will assume the requests is for a static file. The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
-
-  ```js
-  evt.respondWith(
-    caches.match(evt.request).then(function(response) {
-      return response || fetch(evt.request);
-    })
-  );
+  ```sql
+  db.places.remove({})
   ```
 
-* Open [12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/18-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following:
+**Drop**
 
-  * We are going to skip past the DOM element creation and focus on the handling of our "like" POST request. 
+* We drop a collection with `db.[COLLECTION_NAME].drop()`
 
-  * When a user likes a post, we increment it's `data-likes` attribute by 1.
-
-  ```js
-  function incrementLikes(event) {
-    const statusEl = document.querySelector("#status")
-
-    const id = event.currentTarget.getAttribute("id");
-    const oldLikes = parseFloat(event.currentTarget.getAttribute("data-likes"));
-    const likes = oldLikes + 1;
-
-    event.currentTarget.setAttribute("data-likes", likes);
-
-    statusEl.innerText = "";
+  ```sql
+  db.places.drop()
   ```
 
-  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether or not their save was successful. 
+* To drop a database:
 
-  ```js
-  incrementLikesRequest(id, likes)
-    .then(() => {
-      statusEl.innerText = "Save successful!"
-      updateLikesDisplay(id, likes, true)
-    })
-    .catch(() => {
-      statusEl.innerText = "Sorry, your 'like' cannot be recorded while you are offline."
-      updateLikesDisplay(id, likes, false)
-    });
+  ```sql
+  db.dropDatabase()
   ```
 
-  * In `updateLikesDisplay` we indicate to the user whether or not their likes count is up to date by appending `(not saved)` to the like count for each post.
+* Ask the students the following question(s):
 
-  ```js
-  function updateLikesDisplay(id, likes, saved) {
-    const likesCount = document.querySelector(`#likes-count-${id}`);
-    likesCount.innerText = `Likes: ${likes}`;
-    if(!saved) {
-      likesCount.innerText += " (not saved)";
-    }
-  }
-  ```
+  * ☝️ What does the `$push` method do?
 
-* There is quite a bit of code here so take the time to step through it, clarifying any questions as you go.
+  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
 
-  * Our service worker is caching all of the files we tell it to so when a user doesn't have a connection, it can deliver them an offline browsing experience. If a user is offline, we must make sure that they can still use the application as much as possible, even if this means letting them know their data won't be saved until later.
+  * ☝️ Which method deletes an entry from a collection?
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
 
-  * ☝️ What kind of events do we have to listen for in our service worker file?
+* Take any clarifying questions before moving on.
 
-  * 🙋 Install and activate. We also listen for `fetch` if our application interacts with an API.
+### 7. Students Do: Update, Delete and Drop in MongoDB (15 min)
 
-### 17. Student Do: Caching Files (10 mins)
-
-* Direct students to the next activity located in [13-Stu_Caching_Fetching_Files](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Unsolved/).
-
-* Instructions are here: [13-Stu_Caching_Fetching_Files/README.md](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/README.md/)
-
-### 18. Instructor Do: Review Caching Files (5 mins)
-
-* Open [13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/18-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following: 
-
-  * First we set up the files that we need to cache.
-
-  ```js
-  const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/favicon.ico',
-    '/manifest.webmanifest',
-    '/assets/css/style.css',
-    '/assets/js/loadImages.js',
-    '/assets/images/icons/icon-72x72.png',
-    '/assets/images/icons/icon-96x96.png',
-    '/assets/images/icons/icon-128x128.png',
-    '/assets/images/icons/icon-144x144.png',
-    '/assets/images/icons/icon-152x152.png',
-    '/assets/images/icons/icon-192x192.png',
-    '/assets/images/icons/icon-384x384.png',
-    '/assets/images/icons/icon-512x512.png',
-    '/assets/images/1.jpg',
-    '/assets/images/2.jpg',
-    '/assets/images/3.jpg',
-    '/assets/images/4.jpg',
-    '/assets/images/5.jpg',
-    // ...
-  ];
-
-  const CACHE_NAME = 'static-cache-v2';
-  const DATA_CACHE_NAME = 'data-cache-v1';
-  ```
-
-* Then, we install and register our service worker.
-
-  ```js
-  self.addEventListener('install', function(evt) {
-    evt.waitUntil(
-      caches.open(CACHE_NAME).then(cache => {
-        console.log('Your files were pre-cached successfully!');
-        return cache.addAll(FILES_TO_CACHE);
-      })
-    );
-
-    self.skipWaiting();
-  });
-  ```
-
-  * If done successfully, we should see our static cache in our Application tab.
-
-  ![Static Cache](Images/static-cache.png)
-
-  * Next we activate our service worker.
-
-  ```js
-  self.addEventListener('activate', function(evt) {
-    evt.waitUntil(
-      caches.keys().then(keyList => {
-        return Promise.all(
-          keyList.map(key => {
-            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-              console.log('Removing old cache data', key);
-              return caches.delete(key);
-            }
-          })
-        );
-      })
-    );
-
-    self.clients.claim();
-  });
-  ```
-
-  * Lastly, we handle all fetching for any request with a url that includes `/api/`.
-
-  * If the response is successful, we clone it and store it in our cache.
-
-  * If the network request fails, we grab it from our cache.
-
-  ```js
-  self.addEventListener('fetch', function(evt) {
-    if (evt.request.url.includes('/api/')) {
-      evt.respondWith(
-        caches.open(DATA_CACHE_NAME).then(cache => {
-          return fetch(evt.request)
-            .then(response => {
-              if (response.status === 200) {
-                cache.put(evt.request.url, response.clone());
-              }
-
-              return response;
-            })
-            .catch(err => {
-              return cache.match(evt.request);
-            });
-        })
-      );
-
-      return;
-    }
-
-    evt.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(evt.request).then(response => {
-          return response || fetch(evt.request);
-        });
-      })
-    );
-  });
-  ```
-
-  * If done successfully we will see your data cache in your Application tab. At this point we should be able to put our application in offline mode for an offline experience.
-
-  ![Data Cache](Images/data-cache.png)
-
-  ![Offline](Images/offline.png)
-  
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What does a service worker do?
-
-  * 🙋 A service worker acts as an intermediate step in between an API call and the browser. It can cache files and help provide an offline experience.
-
-  * ☝️ When using a service worker, can we send POST requests to an API while offline?
-
-  * 🙋 No, POST/PUT requests must be handled separately. If we wish to "cache" the POST data, we can store it in IndexedDb.
-
-  * ☝️ How many times does the install event run for each service worker? 
-
-  * 🙋 Once.
-
-  * ☝️ What does `self.skipWaiting()` do? 
-
-  * 🙋 `self.skipWaiting()` forces the service worker to activate as soon as it's finished installing.
-
-### 19. Instructor Do: Demo Trip Planner PWA (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-* Navigate to [14-Stu_Map-PWA](../../../../01-Class-Content/18-PWA/01-Activities/14-Stu_Map-PWA/Solved) and demonstrate the following functionality: 
-
-  * Open up the Chrome Developer Tools and navigate to the `Service Worker` tab. Here, let's toggle the offline version and refresh the app.
-
-  ![offline mode](./Images/offline-mode.png)
-
-  * Just like our other two apps, all of our resources have been cached and do not require a connection to access.
-
-  * Also demonstrate the PWA install icon in the browser address bar with the PWA logo prompt.
-  
-### 20. Student Do: Trip Planner PWA (30 mins)
-
-* Direct students to the activity instructions found in [14-Stu_Map-PWA](../../../../01-Class-Content/18-PWA/01-Activities/14-Stu_Map-PWA)
+* Direct students towards the next activity in [04-Student-Update-Delete-and-Drop/Unsolved/README.md](../../../../01-Class-Content/18-NoSQL/01-Activities/04-Stu-Update-Delete-and-Drop/Unsolved/README.md)
 
 ```md
-# Create a PWA
+# Update, Delete and Drop in MongoDB
 
-For this activity you are going to convert the Trip Planner website into a PWA.
+* Go back to your classroom database. You've decided to take on a new hobby, extreme basket weaving. While practicing for your Extreme Basket Weaving Competition, you broke the computer of the person next to you. They're now using a new operating system now. Another student in your row saw you break that computer and wisely decided to move. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn’t leave with candy. All this work made you hungry, so you bought yourself some candy. 
+  
+## Instructions
+
+* Add Extreme Basket Weaving to your array of hobbies.
+
+* Change the operating system of the student next to you.
+
+* Remove the student to the other side of you from your database.
+
+* Add a field of `gavecandy` with a value of `false` to everyone in the array.
+
+* Change the value of `gavecandy` to true for yourself.
+
+## 💡 Hint(s)
+
+* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+
+## 🏆 Bonus 
+
+* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
+
+```
+
+### 8. Instructor Do: Review Update, Delete and Drop in MongoDB (5 min)
+
+* Open [04-Stu-Update-Delete-and-Drop/Solved/README.md](../../../../01-Class-Content/18-NoSQL/01-Activities/04-Stu-Update-Delete-and-Drop/Solved/README.md) in your IDE and walk students through the queries.
+
+* Go back to your classroom database.
+
+  ```sql
+  db
+  use classroom
+  ```
+
+* You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
+
+  ```sql
+  db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basket weaving"}})
+  ```
+
+* While practicing for your Extreme Basket weaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
+
+  ```sql
+  db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})
+  ```
+
+* Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
+
+  ```sql
+  db.students.remove({name: [name of another neighbor]})
+  ```
+
+* You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
+
+  ```sql
+  db.students.update({}, {$set: {gavecandy:false}}, {multi:true})
+  ```
+
+* All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
+
+  ```sql
+  db.students.update({name:'Steve'}, {$set: {gavecandy:true}})
+  ```
+
+## Bonus
+
+* Insert five more documents with one command.
+
+  ```sql
+  db.students.insertMany([
+    {name: 'Jane', row:1, os:'Mac', hobbies:['Coding', 'Sleeping', 'Karate'] },
+    {name: 'Mary', row:2, os:'Mac', hobbies:['Baseball', 'Basketball', 'Tai Chi'] },
+    {name: 'Alexis', row:3, os:'Lin', hobbies:['Gaming', 'Reading', 'Gardening'] },
+    {name: 'Gary', row:4, os:'Mac', hobbies:['Walking', 'Reading', 'Mountain Climbing'] },
+    {name: 'Ed', row:5, os:'Win', hobbies:['Coding', 'Karate', 'Scuba Diving'] }
+  ]);
+  ```
+
+* Return all documents of students who have reading as a hobby or a mac operating system.
+
+  ```sql
+  db.students.find(
+      {$or:[
+          {"hobbies":{"$in":["Reading"]}},
+          {"os":{"$in":["mac"]}}
+      ]}
+  )
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What does the `$push` method do?
+
+  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
+
+  * ☝️ Which method deletes an entry from a collection?
+
+  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
+
+* When you are done take any clarifying questions before moving on.
+
+### 9. Instructor Do: Sorting in MongoDB (10 mins)
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔ MongoDB has a way to sort results just like MySQL.
+
+  * ✔ We can sort by `integer`, `_id` and `class`.
+
+* Tell the students to create a new db named `zoo` and insert 5 animals with the following attributes:
+
+  * `numLegs` an integer that points to the number of legs.
+
+  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
+
+  * `weight` an integer that points to the animals weight.
+
+  * `name` a string that points to the animal's name.
+
+* Example:
+
+  ```js
+  {
+    "name": "Panda",
+    "numLegs": 4,
+    "class": "mammal",
+    "weight": 254
+  }
+
+  db.animals.insert({"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"});
+  db.animals.insert({"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"});
+  db.animals.insert({"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"});
+  db.animals.insert({"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"});
+  db.animals.insert({"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"});
+  ```
+
+* Open [05-Ins-Sorting-In-Mongo/README.md](../../../../01-Class-Content/18-NoSQL/01-Activities/05-Ins-Sorting-In-Mongo/README.md) in your IDE and demonstrate some of the most common ways we sort using MongoDB.
+
+* In the mongo shell, run the following commands one at a time having students follow along.
+
+* **Sort by id:**
+
+* The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
+
+  * Explain that a value of `1` is for ascending order and `-1` is for descending order.
+
+```sql
+db.animals.find().sort({ _id:1 });
+db.animals.find().sort({ _id:-1 });
+```
+
+* **Sort by an integer - numLegs:**
+
+```sql
+db.animals.find().sort({ numLegs:1 });
+db.animals.find().sort({ numLegs:-1 });
+```
+
+* **Sort by a string - class:**
+
+```sql
+db.animals.find().sort({ class:1 });
+db.animals.find().sort({ class:-1 });
+```
+
+* When you are done, check for understanding and take any further questions before moving on.
+
+### 10. Instructor Do: Introduction to MongoJS (10 mins)
+
+* Tell the class that now that they have an understanding of how MongoDB works we are going to dive into MongoJS.
+
+* MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
+
+  * We are going to use this to interact with our Node.JS applications.
+  
+* Ask the students the following question(s):
+
+  * ☝️ What does the `sort` method use to determine what order to put records in?
+
+  * 🙋 The `timestamp`.
+
+* When you are done take any clarifying questions before moving on.
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔ MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
+
+* Have the students visit [MongoJS](https://www.npmjs.com/package/mongojs) in their browser.
+
+* Ask for a volunteer to guess how you might use `MongoJS`: `find`, `insert`, `remove` and `sort`.
+
+* These methods are nearly identical to running them in the `mongo` shell so they will feel comfortable with MongoJS.
+
+* Tell the class not to worry if they are confused, they will get plenty of practice moving forward.
+
+### 11. Student Do: MongoJS Sorting (15 mins)
+
+* Open [06-Stu-MongoJS-Sorting/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/06-Stu-MongoJS-Sorting/Solved/server.js) solution on your machine, and run `server.js` with Node.
+
+* Visit the different routes in your web browser to show students the results:
+
+  * `/` will display a simple hello world message.
+  * `/all` will display JSON with every animal in your zoo collection.
+  * `/name` will display JSON with every animal, sorted by name.
+  * `/weight` will display JSON with every animal, sorted by weight.
+
+* Next direct students towards the unsolved version located in [06-Stu-MongoJS-Sorting/Unsolved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/06-Stu-MongoJS-Sorting/Unsolved/server.js) and have them complete the activity.
+
+* **Instructions:**
+
+* Create four routes that display results from your zoo collection
+
+  * 0: Root: Displays a simple "Hello World" message (no mongo required).
+  * 1: All: Send JSON response with all animals
+  * 2: Name: Send JSON response sorted by name in ascending order
+  * 3: Weight: Send JSON response sorted by weight in descending order
+
+* Tell your students to ask you or a TA for help if they have any questions while working on the assignment.
+
+### 12. Break (30 mins)
+
+### 13. Instructor Do: Review Mongo JS Sorting (5 mins)
+
+* Ask the students how the activity went, and encourage anyone who had trouble using it. 
+
+* Remember, even if it is similar to using the `mongo` shell, this is still the first time they've used this node package.
+
+* Open [06-Stu-MongoJS-Sorting/Unsolved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/06-Stu-MongoJS-Sorting/Unsolved/server.js) on your machine and ask for volunteers to help guide you through the activity.
+
+* After each route, start the `server.js` file and use your web browser to check the route. 
+
+* If it works, great! If not, ask the student who gave the answer if you had mistyped something (since they gave the answer they'll probably be able to point out the error better than anyone).
+
+* Answer any clarifying questions before moving on.
+
+### 14. Student Do: MongoJS CRUD (20 mins)
+
+* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) on your machine and demonstrate the solved version of the app by creating, updating and deleting a few notes.
+
+  * Note that to update a note you have to click on it's title, then update the form and submit.
+
+* After demoing, direct students to the unsolved activity located in [07-Stu-Mongo-CRUD/Unsolved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/07-Stu-Mongo-CRUD/Unsolved/server.js)
+
+* **Instructions:**
+
+  * Update the [server.js](Unsolved/server.js) file to include the following six routes.
+
+  * You can see a list of methods available to you here. [https: github.com/mafintosh/mongojs#api](https://github.com/mafintosh/mongojs#api).
+
+  * Save a note to the database's collection `POST: /submit`
+
+  * Retrieve all notes from the database's collection `GET: /all`
+  
+  * Retrieve one note in the database's collection by it's ObjectId `GET: /find/:id`
+    
+  * Update one note in the database's collection by it's ObjectId `POST: /update/:id`
+
+  * Delete one note from the database's collection by it's ObjectId `DELETE: /delete/:id`
+
+  * Clear the entire note collection `DELETE: /clearall`
+
+### 15. Instructor Do: Review MongoJS CRUD (10 mins)
+
+* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) and walk students through the code.
+
+* Take any clarifying questions before moving on.
+
+### 16. Instructor Do: Demonstrate Robo 3T (5 mins)
+
+* Instruct your students to open the application. They should see a window like this:
+
+  ![6-roboConnect](Images/6-roboConnect.jpg)
+
+* They should hit the connect button. Do the same to show students what comes next.
+
+  * `/all` will display JSON with every animal in your zoo collection.
+
+  * `/name` will display JSON with every animal, sorted by name.
+
+  * `/weight` will display JSON with every animal, sorted by weight.
+
+* When you are done take any clarifying questions before moving on.
+
+### 17. Student Do: Robot 3T Practice (5 mins)
+
+* Instruct students to drop their classroom collection and create a new one.
+
+* **Instructions:**
+
+  * ONLY USE ROBO 3T FOR THIS ASSIGNMENT
+
+  * In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
+  
+    * This should be entered using the `right-click -> Insert Object` method. 
+
+  * Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
+
+  * As students enter their BSON info into slack, insert it into your database.
+
+  * By the end of the exercise, you should have every student's information in your classroom collection.
+
+* Direct students to the next activity located in [08-Stu-Robo-3T](../../../../01-Class-Content/18-NoSQL/01-Activities/08-Stu-Robo-3T/README.md).
+
+```md
+# Robot 3T
+
+* In this activity, you will practice using Robo 3T.
 
 ## Instructions
 
-* Refer back to the activities we previously worked through to help you accomplish the following steps.
+* Drop your classroom collection and create a new one.
 
-  * Link the app manifest to the website - the `manifest.webamanifest` file has been created for you.
+* In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
 
-  * Install the service worker to cache static assets - the service worker has been registered for you.
+  * This should be entered using the `right-click -> Insert Object` method. 
 
-  * Retrieve cached files for an offline experience.
+* Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
 
-  * Download the PWA.
+* As students enter their BSON info into slack, insert it into your database.
 
-## BONUS
-
-* Can we use the Cache Storage in the browser to store dynamic requests from the user, for example from a web form? If not, then what can we use?
-
-Use Google or another search engine to research the preceding topic. 
+* By the end of the exercise, you should have every student's information in your classroom collection.
 ```
 
-### 21. Instructor Do: Review Trip Planner PWA (15 mins)
+## 18. Instructor Do: Reintroduce Career Services (10 mins)
 
-* Open [14-Stu_MAP-PWA/Solved/index.html](../../../../01-Class-Content/18-PWA/01-Activities/14-Stu_Map-PWA/Solved/index.html) in your IDE and explain the following: 
+* Ask the students to raise their hand if they are actively engaged in or intend to engage in a job search at the end of the program.
 
-  * We add the link to the `webmanifest.manifest` file in the `<head>`.
+* Remind the class that, now that they are over two-thirds of the way through the program, this is a great time to start thinking about their job search and engaging with the many Career Services options provided as part of the program.
 
-  ```html
-  <link rel="manifest" href="./manifest.webmanifest" />
-  ```
+* Go through the [slides on Career Services](https://docs.google.com/presentation/d/18inCMR9TB47q3yEY-YflqA-96cBqXheM9X0BrD0Gk9Y/edit#slide=id.p7).
 
-* Open [14-Stu_Map-PWA/Solved/service-worker.js](../../../../01-Class-Content/18-pwa/01-Activities/14-Stu_Map-PWA/Solved/service-worker.js) in your IDE and explain the following: 
+* If there are any questions, advise students to reach out to their Student Success Manager.
 
-  * The files we need to cache are `index.html`, `style.css`, and the image files; `brandenburg.jpg`, `reichstag.jpg`, and `map.jpg`
+### 19. Instructor Do: Demo MongoJS Warmup (5 mins)
 
-  * Our cache will be named `static`.
+* Open [09-Stu-Mongojs-Review/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/09-Stu-Mongojs-Review/Solved/server.js) on your machine. Run `npm install` then `node server.js` to launch the application.
 
-  * When the install event is emitted, we will add all of our specified files to the `static` cache.
+* Demonstrate to the students how the app lets you add books as well as mark books read or unread.
+
+  * Note the fact that an explicit route for the root, `http://localhost:3000` does not exist. However, the page still loads `index.html` from the `/public` folder. 
+
+* Explain to the students that this is a convention from the static middleware that we are using. 
+
+  * Point to this line: `app.use(express.static("public"));`
+
+* Tell the class that in the next activity they will complete the routes in the server file so the site can display and edit the book data.
+
+### 20. Student Do: MongoJS Warm Up (15 mins)
+
+* Direct the students towards the activity located in [09-Stu-Mongojs-Review/Unsolved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/09-Stu-Mongojs-Review/Unsolved/server.js)
+
+```md
+# MongoJS Review
+
+## Instructions
+
+* Complete the routes in the server file so the site can display and edit the book data. 
+
+## 💡 Hint(s)
+
+* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+
+## 🏆 Bonus 
+
+* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
+
+```
+
+### 21. Instructor Do: Review MongoJS Warmup (5 mins)
+  
+* Open [09-Stu-Mongojs-Review/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/09-Stu-Mongojs-Review/Solved/server.js) and scroll down to the routes.
+
+* Use the prompts and talking points below to review each route.
+
+* Our `/submit` route uses `save` to create a new record.
+
+```js
+app.post("/submit", ({ body }, res) => {
+  const book = body;
+
+  book.read = false;
+
+  db.books.save(book, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.send(data);
+    }
+  });
+});
+```
+
+* Our `/read` route uses `find` to return books that have `read: true`.
+
+```js
+app.get("/read", (req, res) => {
+  db.books.find({ read: true }, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
+```
+
+* Our `/unread` route uses `find` to return books that have `read: false`.
+
+```js
+app.get("/unread", (req, res) => {
+  db.books.find({ read: false }, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
+```
+
+* Our `/markread/:id` route finds a book by `ObjectID` and uses `update` to set `read: true`.
+
+```js
+app.put("/markread/:id", ({ params }, res) => {
+  db.books.update(
+    {
+      _id: mongojs.ObjectId(params.id)
+    },
+    {
+      $set: {
+        read: true
+      }
+    },
+
+    (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    }
+  );
+});
+```
+
+* Our `/markunread/:id` route finds a book by `ObjectID` and uses `update` to set `read: false`.
+
+```js
+app.put("/markunread/:id", ({ params }, res) => {
+  db.books.update(
+    {
+      _id: mongojs.ObjectId(params.id)
+    },
+    {
+      $set: {
+        read: false
+      }
+    },
+
+    (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    }
+  );
+});
+```
+
+* When you are done, take any clarifying questions and move on to the next demonstration.
+
+### 22. Instructor Do: Introduce Mongoose (10 mins)
+
+* Tell the class that they are now going to be introduced to Mongoose, an Object Data Modeling (ODM) library for Mongo and Node. 
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔ Mongoose lets you define schemas for your collections.
+
+  * ✔ It also helps manage data relationships and enforce validations.
+
+* Next open [10-Ins-Mongoose-Schema](../../../../01-Class-Content/18-NoSQL/01-Activities/10-Ins-Mongoose-Schema) in your IDE and run `npm install` followed by `node server.js`.
+
+* In your terminal you should see the following if the connection was successful.
+
+```js
+{ array: [ 'item1', 'item2', 'item3' ],
+  _id: 5d445e4e98a11a33f37d6010,
+  boolean: false,
+  string:
+   '"Don\'t worry if it doesn\'t work right. If everything did, you\'d be out of a job" - Mosher\'s Law of Software Engineering',
+  number: 42,
+  date: 2019-08-02T16:01:18.500Z,
+  __v: 0 }
+```
+
+* Step through the code that we used to make our db connection and schema.
+
+* We first require the Mongoose package and our `exampleModel` file, which contains our schema.
 
   ```js
-  // install event handler
-  self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('static').then((cache) => {
-        return cache.addAll([
-          './',
-          './index.html',
-          './assets/css/style.css',
-          './assets/images/brandenburg.jpg',
-          './assets/images/reichstag.jpg',
-          './assets/images/map.jpg'
-        ]);
-      })
-    );
-    console.log('Install');
-    self.skipWaiting();
-  });
+  const mongoose = require("mongoose");
+  const Example = require("./exampleModel.js"); // we will go over this file next as it contains our schema
   ```
 
-  * 📝 The `fetch` call will retrieve the assets from the cache when the network call isn't possible.
+* We then open a connection `mongodb://localhost/dbExample` on our locally running instance of MongoDB.
 
   ```js
-  // retrieve assets from cache
-  self.addEventListener('fetch', event => {
-    event.respondWith(
-      caches.match(event.request).then( response => {
-        return response || fetch(event.request);
-      })
-    );
-  });
+  mongoose.connect("mongodb://localhost/dbExample", { useNewUrlParser: true });
   ```
 
-### 22. END (0 mins)
+* Then we create some data to insert into our database.
+
+  ```js
+  const data = {
+    array: ["item1", "item2", "item3"],
+    boolean: false,
+    string:
+      "We are learning mongoose!",
+    number: 42
+  };
+  ```
+
+* Next we call `create` on our `Example` schema and pass in our data.
+
+  ```js
+  Example.create(data)
+    .then(dbExample => {
+      console.log(dbExample);
+    })
+    .catch(({ message }) => {
+      console.log(message);
+    });
+  ```
+
+* Now open [10-Ins-Mongoose-Schema](../../../../01-Class-Content/18-NoSQL/01-Activities/10-Ins-Mongoose-Schema/exampleModel.js) in your editor.
+
+* Tell the class that Mongoose models are similar to those in sequelize. 
+
+* We define a schema for the model and then use the model to query our database. 
+
+* Next, step through each section of the code.
+
+* First we import mongoose and create a `Schema` reference.
+
+  ```js
+  const mongoose = require("mongoose");
+  const Schema = mongoose.Schema;
+  ```
+
+* Next we create a new schema called `ExampleSchema`.
+
+  ```js
+  const ExampleSchema = new Schema({
+    string: {
+      type: String,
+      trim: true,
+      required: "String is Required" // validator
+    },
+
+    number: {
+      type: Number,
+      unique: true, // this is not a validator, but a built in helper
+      required: true // validator
+    },
+
+    email: {
+      type: String,
+      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+
+    boolean: Boolean,
+
+    array: Array,
+
+    date: {
+      type: Date,
+      default: Date.now
+    },
+
+    longstring: {
+      type: String,
+      validate: [({ length }) => length >= 6, "Longstring should be longer."]
+    }
+  });
+  ```
+  
+* We then compile our schema into a Model.
+
+  ```js
+  const Example = mongoose.model("Example", ExampleSchema);
+  export default Example;
+  ```
+
+* Tell the class that all schema types have the built-in `required` validator. 
+
+* Point out that numbers have `min` and `max` validators while strings have `enum`, `match`, `minlength`, and `maxlength` validators.
+
+* Ask the students the following question(s):
+
+  * ☝️ What are the benefits of using Mongoose?
+
+  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
+
+* Take any clarifying questions before moving on to the students activity.
+
+### 23. Instructor Do: Demo Solved Mongoose Schema (5 mins)
+
+* Open [11-Stu-Mongoose-Schema/Solved](../../../../01-Class-Content/18-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Solved) on your machine and run `npm install` then `node server.js` to launch the app. 
+
+* Create a new user and demonstrate the response.
+
+  ```js
+  {
+    "_id": "5cfab6403da88328fcc7ac39",
+    "username": "demo",
+    "password": "demo",
+    "email": "demo@gmail.com",
+    "userCreated": "2019-06-07T19:08:48.294Z",
+    "__v": 0
+  }
+  ```
+
+* Try to create another user with the same email to demonstrate the validations.
+
+  ```js
+  {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "errmsg": "E11000 duplicate key error collection: userdb.users index: email_1 dup key:  {: \"demo@gmail.com\" }"
+  }
+  ```
+
+* Tell the students that in the next activity they will implement the schema validations that they see here.
+
+### 24. Student Do: Mongoose Schema (15 mins)
+
+* Direct students towards the next activity located in [11-Stu-Mongoose-Schema/Unsolved](../../../../01-Class-Content/18-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Unsolved).
+
+```md
+# User Schema
+
+In this activity you will create a user schema with mongoose.
+
+## Instructions
+
+* In `userModel.js` add four attributes to your schema.
+
+  * username: A string that will be be required, and also trimmed.
+
+  * password: A string that will be required, trimmed, and at least 6 characters.
+
+  * email: A string that must be a valid email address and unique in our collection.
+
+  * userCreated: A date that will default to the current date.
+
+## 💡 Hint(s)
+
+* The regex for checking if a string is an email is: /.+\@.+\..+/
+
+```
+
+### 25. Instructor Do: Review Mongoose Schema (10 mins)
+
+* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
+
+  * ✔ We can use `required` to check for the presence of an attribute.
+
+  * ✔ We can use `validate` to enforce a validation.
+
+* Open [11-Stu-Mongoose-Schema/Solved](../../../../01-Class-Content/18-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Solved) in your IDE and step through each attribute, checking for understanding.
+
+```js
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const UserSchema = new Schema({
+  username: {
+    type: String,
+    trim: true,
+    required: "Username is Required"
+  },
+
+  password: {
+    type: String,
+    trim: true,
+    required: "Password is Required",
+    validate: [({ length }) => length >= 6, "Password should be longer."]
+  },
+
+  email: {
+    type: String,
+    unique: true,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+  },
+
+  userCreated: {
+    type: Date,
+    default: Date.now
+  }
+});
+```
+
+* Students may be confused with `match`, explain that it uses a regular expression to check for a valid email address.
+
+* Ask the students the following question(s):
+
+  * ☝️ What is the `match` method checking for in our `email` attribute?
+
+  * 🙋 It is checking the regular expression against the user's email input.
+
+* Take any clarifying questions before moving on to the students activity.
+
+
+### 26. END (0 mins)
 
 ### Lesson Plan Feedback
 

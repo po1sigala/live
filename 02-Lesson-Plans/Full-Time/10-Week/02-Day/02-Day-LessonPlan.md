@@ -1,729 +1,986 @@
-## 10.2 - Intro to React, Components and JSX (10:00 AM) <!--links--> &nbsp; [⬅️](../01-Day/01-Day-LessonPlan.md) &nbsp; [➡️](../03-Day/03-Day-LessonPlan.md)
+# 10.2 Lesson Plan - PWAs (10:00 AM)
 
 ## Overview
 
-In this class, we will be introducing students to the basic concepts of ReactJS, JSX, and building layouts through a component-based mindset.
-
-We will then be deepening students understanding of ReactJS. They further expand upon their understanding of props, learn how to programmatically render components from a list of data, and introduce the concept of class components and component state.
-
+Today's class will continue our journey into web performance by learning about progressive web apps. We will start with our basic Gallery App and step by step, implement a web app manifest as well as a service worker. This new functionality will provide us with a fully functioning progressive web app that delivers an offline experience to our users.
 
 ## Instructor Notes
 
-* `Summary: Complete activities 13-21 in 19-React`.
+* Complete activities `05-Stu_Gallery-Lazy-Load` through `14-Stu_Map-PWA`.
 
-* It is recommended that you arrange for students to globally install both Create React App before today's class. If students have problems running `create-react-app`, direct them to remove their global install and use `npx` to run `create-react-app` instead: 
+* You may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
 
-  * `npm uninstall -g create-react-app npx create-react-app <appname>`
+* Some of today's activities use mongoDB to store data. It is recommended that you open a separate tab in your terminal and run `mongod`. Don't forget to kill the process at the end of class.
 
-* **Important:** In order to avoid continuous NPM installs, all of today's activity Solved and Unsolved versions include only a `src` folder. Students and yourself should scaffold out a React app once with Create React App, and then swap out the `src` folder for each activity.
+* It is recommended that you take some time to familiarize yourself with service workers before class begins. Specifically, look over the service worker lifecycle and caching and returning requests at https://developers.google.com/web/fundamentals/primers/service-workers/.
 
-* Today's class will be more challenging than the last class for many students. Syntax errors will abound as students confusedly mix states and props, and forget to pass attributes to their child components. Explain that memorizing syntax will come with time and practice, it's far more important to understand the concepts covered as exact syntax can always be looked up.
 
 ## Learning Objectives
 
-* Build forms with React.
+* Explain the benefits a progressive web app offers a user over a traditional app.
 
-* Pass props between React components.
+* Implement and explain the role of a web app manifest.
 
-* Programmatically render components from an array of data.
+* Implement and explain the role of a service worker.
 
-* Differentiate between class components and functional components.
+* Successfully cache and fetch files to deliver them in an offline experience.
 
-* Conditionally render components.
+* Install a PWA on both desktop and mobile devices
+
+## Slides
+
+N/A
 
 ## Time Tracker
 
-[10.2 Time Tracker](https://docs.google.com/spreadsheets/d/1NpQ3y8IoBqP3Uuq9Wv2RwxK3HXdx8tp8TudcoJLBDh4/edit?usp=sharing)
+[10.2 Time Tracker](https://docs.google.com/spreadsheets/d/1yFXTsN96pl6jbyMS2fhDWsNKppWdzxZt9DQs6uVUcwQ/edit#gid=0)
 
-- - -
+---
 
-### 1. Students Do: Component Map (10 mins) (Critical)
+## Class Instruction
 
-* In this activity, students will utilize the map method in order to render JSX from an array of objects.
+### 1. Student Do: Lazy Loading (15 mins)
 
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/13-Stu_ComponentMap)
+* Direct students to the activity instructions located in [05-Stu_Gallery-Lazy-Load](../../../../01-Class-Content/19-PWA/01-Activities/05-Stu_Gallery-Lazy-Load/README.md)
 
-* Instructional staff should be walking around the room making themselves available for assistance.
+```md
+# Lazy Loading Images
 
-### 2. Instructor Do: Review Component Map (10 mins)
+In this activity you are going to work with the Intersection Observer API to implement lazy loading functionality for our Gallery App.
 
-* Slack out the [solutions](../../../../01-Class-Content/19-react/01-Activities/13-Stu_ComponentMap/Solved) to the previous activity and go over the code as a class.
+## Instructions
 
-* For the basic solution:
+* In this activity you are going to take the Gallery App and implement Lazy Loading functionality.
 
-  ![Component Map](Images/12-ComponentMap.png)
+  * This will allow for us to load images only as they are needed, saving loading times.
 
-  * Point out how the array of grocery objects is passed into the `List` component from inside of `App`, making it available inside of the `List` component as `props.groceries`.
+* You will primarily be working within `loadImages.js`
 
-  * Inside of the `List` component, we insert JSX curly braces inside of the `ul` element. We map over `props.groceries` and return one `li` tag for every element in `props.groceries`.
+* Inside of `public/assets/images` is a `.zip` file containing all the images needed for the app. Unzip this file and make sure the contents end up in your images folder.
 
-  * Ask the class: What type of value is returned by the map method here?
+* After you have completed implementing lazy loading, open your Dev Tools and run another Lighthouse Audit.
+```
 
-    * Explain that the map method will always return an array &mdash; in this example it's returning an array of JSX elements.
+### 2. Instructor Do: Review Lazy Loading (5 mins)
 
-    * React is smart enough to know what whenever we're rendering an array containing JSX, it should deconstruct the array and render each element inside of their parent.
+* Open the [solved Gallery Lazy Loading app](../../../../01-Class-Content/19-PWA/01-Activities/05-Stu_Gallery-Lazy-Load/Solved/).
 
-  * Point out the `key` property attached to the `li` tag inside of the map. Ask the class: Was anyone able to read about what this is for?
+* Walk students through the code that enables lazy loading in our application.
 
-    * The application will still run if we were to remove the `key` prop, but we'd get a very specific warning telling us we should include it.
+```js
+function initLazyImages() {
+  const lazyImages = document.querySelectorAll(".lazy-image");
+```
 
-    * Whenever an array of JSX is being rendered, React expects each rendered parent JSX tag to have a unique `key` prop. This is a special type of prop that helps React efficiently re-render the list of JSX if it should ever need to change.
+  * First we create a `const` called `lazyImages`. We save all elements with the class `lazy-image` to this constant variable
 
-      * The `key` prop should be unique and specific to the data being rendered. Often this comes in the form of an `id` from a database. But it can be anything we can guarantee to be unique.
+```js
+  function onIntersection(imageEntities) {
+    imageEntities.forEach(image => {
+      if (image.isIntersecting) {
+        observer.unobserve(image.target);
+        image.target.src = image.target.dataset.src;
+      }
+    });
+  }
+```
+  * Next, we create an `onIntersection` function. In this function we state that for each mage, if the image is intersecting the viewport we load our image and stop observing it as it is now on screen.
 
-      * Using the index of the element in the array is not a good idea, since an element's index could change if the data we modified. This could potentially cause strange bugs.
+```js
+  const observer = new IntersectionObserver(onIntersection);
+```
 
-  * Assure the class they don't need to stress out too much about the `key` prop since they'll get a very specific warning about it should they forget to include it and their code will still work.
+  * We used a constructor function to create a new instance of IntersectionObserver, saving it to a constant variable `observer`. This allowed us to use it in our `onIntersection` function.
 
-  * The most important takeaway from this activity is that we can use the map method to loop over an array and return a new array of elements inside of JSX curly braces. React will then render each element in the resulting array.
+```js
+  lazyImages.forEach(image => observer.observe(image));
+}
+```
+  * The final line subscribes all images to be observed by IntersectionObserver to it can download the proper image when the placeholder is scrolled into view.
 
-  * Take a moment to answer any additional questions.
+* Answer any questions before introducing the final activity.
 
-* For the bonus solution:
+### 3. Instructor Do: Intro Gallery App Full Optimization (5 mins)
 
-  ![Component Map Filter](Images/13-ComponentMapFilter.png)
+* Let students know they are doing well! Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
 
-  * Demonstrate how we can create a `notPurchased` array by filtering `props.groceries` for groceries which have a `purchased` property set to false.
+### 4. Student Do: Optimize Gallery App (20 mins)
 
-  * Remind everyone that while the map method returns a new array the same length as the original, the filter method returns a new array containing only the elements whose callback functions return truthy values.
+* Direct students to the activity instructions found in [Solved Lazy Loading Gallery](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved)
 
-  * Explain that we still need to use the map method to actually render the `li` elements. But we first filter for groceries which haven't been purchased, and then map over the new array, rather than `props.groceries`.
+```md
+# Optimize Gallery App
 
-* Answer any questions before the break.
+In this activity you will use the Lazy Loading, GZip Compression, Image Compression, and Lighthouse to improve the performance of the Gallery App.
 
-### 3. Instructor Do: Introduce Stateful Components (20 mins)
+## Instructions
 
-* Explain to the class that what we've been working with so far are known as stateless, functional components. Sometimes called "dumb components".
+* First, unzip the uncompressed images zip file found in `public/assets/images`.
 
-* These components can render JSX, receive props, and embed JavaScript expressions inside of themselves.
+* Run the following commands:
 
-* In a React application, **most** components should be stateless components. These are easy to test, debug, and they tend to be more reusable &mdash; even across applications &mdash; because they usually don't depend on how the rest of the application works.
+  * Start MongoDB (run `mongod` in your terminal)
+  * In a new terminal window run `npm install`
+  * `npm run seed`
+  * `node server.js`
 
-* So far we've been using stateless components to create static, unchanging UIs. In a real application, we'd want to give some of our components more complex dynamic behaviors.
+* Now that the application is running, navigate to the [localhost](https://localhost:3000)
 
-* Now we're going to introduce stateful components. These special components aren't created using plain JavaScript functions, but with ES6 classes (which, if we want to get technical, are still JavaScript constructor functions once compiled).
+* Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
 
-* Explain that `state` is a special type of property attached to a class component that can contain data we want to associate with that component.
+* Now, using the compression npm package, enable gzip compression in the application.
 
-* Explain that values stored on a component's state are different from regular variables because unlike regular variables, when a component updates its `state` the React application will update itself in the browser to reflect the change wherever necessary.
+* Restart your server and run a new audit.
 
-  * Explain that a component can set and update its own state, whereas its props are always received from up above and considered immutable (can't/shouldn't be changed).
+* Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
 
-* Replace your Create React App's `src` folder with [14-Ins_BasicState](../../../../01-Class-Content/19-react/01-Activities/14-Ins_BasicState/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
+* Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
 
-* Open your browser to [localhost:3000](http://localhost:3000) and demonstrate the rendered app.
+* Restart your server and run a new audit.
 
-  ![Click Counter](Images/14-ClickCounter.png)
+* Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
 
-* Whenever we click the "Increment" button, the click counter goes up by 1. Point out that this is the first time we've built in any kind of dynamic behavior such as event listeners and UI updates into our React apps.
+* Create a `dist` folder in `/public`.
 
-* Open `src/components/Counter.js` in your editor, walk the class through the code:
+  * Inside of `public/dist` create a file called `index.js`
 
-  ![Class Component](Images/14-ClassComponent.png)
+  * Link this `index.js` to your application in `public/index.html`.
 
-  * We create a new class named `Counter` which _extends_ the `React.Component` class.
+* Head to [JSCompress](https://jscompress.com/).
 
-    * Explain that `React.Component` is a class built-in to React which has special features we don't get with stateless functional components. By extending the `React.Component` class, `Counter` now inherits this extra functionality.
+* Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
 
-  * Then we set a `state` property on the component. We set its value to an object with a `count` property set to `0`. This is the initial counter value displayed when the component first loads.
+  * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
 
-    * Our component's `state` property must always be set to an object.
+* Finally, restart your server and run a new audit.
+```
 
-    * Because this component contains its own state, we call this a **stateful component**.
+### 5. Instructor Do: Review Final Gallery App (5 mins)
 
-    * Create React App allows us to use [ES7 property initializer](https://babeljs.io/docs/plugins/transform-class-properties/) syntax. This allows us to attach properties to the class instance without writing out a constructor method.
+* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
 
-  * Scroll down to the `render` method. Explain to the class that this method is built-in to React, and as the name implies, its job is to return the JSX that the component should render. Every class component needs to have this method defined.
+  * npm install
 
-  * Scroll down further to the "Increment" button and point out how the button has an `onClick` prop set to `this.handleIncrement`.
+  * npm install compression
 
-    * Explain that this is how a click event listener is defined in React. When the button is clicked, this component's `handleIncrement` method is called.
-
-    * Explain that event names in React are similar to vanilla JavaScript or jQuery, e.g. `onClick`, `onSubmit`, `onChange`, etc.
-
-  * Scroll back up to the `handleIncrement` method definition. Point out that unlike `render`, this method is using arrow function syntax.
-
-    * Due to the nature of how props are passed to React elements, `this` inside of any method passed as a prop will be `undefined`, rather than the intended component. This is a common source of frustration and bugs for developers new to React. But thanks to the new class property initializer syntax, we can simply write all of our custom methods using arrow functions and never have to worry about this issue.
-
-  * Point out how inside of `handleIncrement` we're calling `this.setState` and passing in an object as an argument.
-
-  * Explain that `setState` is built-in to all class components. We use this method to update our component's `state` by passing it an object containing parts of the component's state we want to update and their new values.
-
-    * Explain that whenever we want to update our component's state, we **ALWAYS** use `this.setState` to do so. Updating our state with this method tells our component that it should re-render itself and all of its children to account for the new state.
-
-    * Explain that if we just updated `this.state.count` directly without using `setState`, we'd never see the click count go up in the view since there'd be no re-render.
-
-      * Example:
-
-      ```js
-      // This wouldn't work as expected
-      this.state.count = this.state.count + 1;
-      ```
-
-* Take a moment to answer any high-level questions the class may have. Most importantly make sure they understand the following:
-
-  * We can use `state` to associate data with our components and keep track of any values we want to update the UI when changed.
-
-  * We can define methods on a class component and pass them as props.
-
-  * The `onClick` prop can be used to set a click event listener to an element.
-
-### 4. Partners Do: Decrement Counter (10 mins)
-
-* Slack out `15-Stu_DecrementCounter/Unsolved`
-
-* In this activity students will add a "Decrement" button and event handler to the previous Click Counter example.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/15-Stu_DecrementCounter/README.md)
-
-### 5. Instructor Do: Review Decrement Counter (10 mins) (High)
-
-* Slack out the [solved](../../../../01-Class-Content/19-react/01-Activities/15-Stu_DecrementCounter/Solved) versions of the previous activity and go over both solutions.
-
-  ![Decrement Counter](Images/05-DecrementCounter.png)
-
-* First go over the code in the basic solution:
-
-  ![Decrement Basic](Images/06-DecrementBasic.png)
-
-  * Point out how we've defined a `handleDecrement` method which decreases the counter by 1.
-
-  * Explain that like all event handlers, `onClick` expects a callback, which is why we write `onClick={this.handleDecrement}` instead of `onClick={this.handleDecrement()}`.
-
-* Then go over the bonus solution:
-
-  * ![Decrement Bonus Render](Images/07-DecrementBonusRender.png)
-
-  * Point out that we've replaced the `.card-body` div with a `CardBody` component which renders its contents.
-
-  * We pass the click count and the event listeners to the `CardBody` component.
-
-* Demonstrate the code inside of the `CardBody` component:
-
-  * ![Decrement Bonus Card](Images/08-DecrementBonusCard.png)
-
-  * This component renders the same JSX that was removed from the `Counter` component. The only difference is that we're accessing the click counter and event handlers on the props argument.
-
-  * Explain that even though the buttons are inside of a child component, the `Counter` component's `count` state is still updated when the buttons are clicked.
-
-  * When the `count` state is updated, The `Counter` component and any of its child components re-render themselves. This is what allows the view to be updated in the browser when the buttons are clicked.
-
-  * Explain that even though data still technically only flows one way (from the top-down) in React, we can allow child components to update their parent's state by passing them a method created in the parent.
-
-* Assure the class that they'll get more practice with working with class components.
-
-* Take a moment to answer any additional questions.
-
-### 6. Students Do: Friend Refactor (20 mins) (Critical)
-
-* Slack out `16-Stu_FriendRefactor/Unsolved`
-
-* In this activity students will further refactor the Friends List application from earlier to use class components, events, and programmatically render the `FriendCard` components.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/16-Stu_FriendRefactor/README.md)
-
-### 7. Instructor Do: Review Friend Refactor (15 mins)
-
-* Go over the [solution](../../../../01-Class-Content/19-react/01-Activities/16-Stu_FriendRefactor/Solved) to the previous activity.
-
-* Demonstrate the completed application in the browser. Point out how we can remove friends by clicking the red x icon.
-
-  ![Friend Refactor](Images/09-FriendRefactor.png)
-
-* Briefly go over the syntax for writing a class component. Be sure to point out the constructor method, how we set the application's initial state. Explain that when defining object properties with ES6, if the object's key and value have the same name, we can omit the colon &mdash; this is just an optional shorthand syntax.
-
-* Point out how we bind the `removeFriend` method inside of the constructor. Ask the class: how does this method remove a friend?
-
-* Point out how inside of the `removeFriend` method we use the filter method to create a new `friends` array from `this.state.friends`. We include only friends with an `id` property **not** equal to the `id` being received into this method. Then we use the `setState` method in order to set `this.state.friends` equal to the new filtered friends array.
-
-  ![Friend Refactor App](Images/10-FriendRefactorApp.png)
-
-* Explain that when we update our component's state by removing one of the friend objects, our component re-renders itself. On the new render, `FriendCard` components are created for each object in `this.state.friends`, which no longer includes the deleted friend. This then triggers our component to re-render, now minus one friend.
-
-  * Remind students that in React, we never modify state directly, but we create new state instead. If the state we're modifying is an array, we'll often use the filter or map method.
-
-* Scroll down to the code where we map over `this.state.friends` and render a `FriendCard` component for each element.
-
-  * Point out the props being passed, in particular, the `id` and the `key` prop. Remind the class that whenever we map over a list of data and return JSX, React wants us to give each element a unique `key` prop. React uses this value internally to help it efficiently render and re-render components from arrays of data.
-
-    * Explain that the `key` prop is unusual because it's used by React but isn't actually available for us to use inside of the component we pass it to. We pass the friend `id` in as a separate prop because we'll need it inside of the `FriendCard` component.
-
-* Open up the `FriendCard` component.
-
-  ![Friend Refactor Card](Images/11-FriendRefactorCard.png)
-
-* Point out how we've attached the `onClick` handler to the "remove" span. When clicked, it calls the `removeFriend` method and passes in `props.id`.
-
-* Ask the class: Why do we have the `removeFriend` handler wrapped inside of another function?
-
-  * Explain that since our event handlers need to be callbacks, we normally can't pass in arguments without invoking them right away. But by wrapping the `removeFriend` method in an another function, we can pass the `id` prop into the inner `removeFriend` method. When the span is clicked, it calls the anonymous callback function, which then calls the `removeFriend` method with the friend's `id` as an argument.
-
-* Take a moment to answer any lingering questions.
-
-### 8. Instructor Do: Demonstrate Forms (15 mins)
-
-In this example we will demonstrate how to handle simple forms with React.
-
-* Swap out your application's `src` folder with [src](../../../../01-Class-Content/19-react/01-Activities/17-Ins_FormsDemo/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
-
-* Open [localhost:3000](http://localhost:3000) in your web browser and demonstrate the rendered application.
-
-  * ![Form Demo](Images/15-FormDemo.png)
-
-  * Whenever we type into the input fields we see the input appended to the "Hello" statement.
-
-  * When we click the "Submit" button, we get an alert with the provided first and last name.
-
-    ![Form Demo Submit](Images/16-FormDemoSubmit.png)
-
-* Now open `src/Form.js` and demonstrate the underlying code. It may be easier to begin with this component's `render` method.
-
-  ![Form Render](Images/17-FormDemoRender.png)
-
-  * Point out the following props attached to the `input` elements:
-
-    * `value`: set to `this.state.firstName` or `this.state.lastName`
-
-    * `name`: set to `firstName` or `lastName`
-
-    * `onChange`: both set to `this.handleInputChange`
-
-* Then go up to the component's `constructor` method. Point out how `this.state.firstName` and `this.state.lastName` are both initially set to an empty string.
-
-  * To make sure everyone is following along so far, ask the class: Where is this state object coming from? Why do we use it?
-
-    * A component's "state" is a property defined on a class component instance used for storing values that we want to associate with it. This property is recognized by React and can be used to embed data inside a component's UI which we want to update over time. Whenever a component's state is updated, its `render` method is fired along with the `render` methods of all of its children. This updates the application's UI to display the new data without having to refresh the browser.
-
-* Then scroll back down to the `render` method and point out how each input has a `value` prop set to the value of one of these state properties.
-
-  ![Form Logic](Images/18-FormDemoLogic.png)
-
-* Ask the class: What would happen if I pre-set the first and last name states to values other than empty strings?
-
-  * The text inside of each input field is determined by their `value` prop. By changing this component's initial state, we're also changing the initial values of the input fields. Demonstrate this live for the class.
-
-* Then scroll down to the `handleInputChange` method. Ask the class: What do you think this method's job is?
-
-  * This method is responsible for updating our state as the user types into the input fields.
-
-* Then ask: What do you think would happen if I removed the `onChange` props from the input fields?
-
-  * Proceed to remove the `onChange` props from both input elements. You should now be unable to type any new characters into the input fields after doing to.
-
-  * Explain that `onChange`, like `onClick` or `onSubmit`, is a built-in event we can listen for by attaching a prop to a primitive JSX tag (a JSX tag that represents a basic HTML element).
-
-  * Explain that by removing the `onChange` prop, we are no longer responding to the input's "change" event and thus are no longer updating our `Form` component's state. The `value` prop on each input field continues to point to the same unchanging state value.
-
-  * Explain that if we were to also remove the `value` prop from an input field altogether, then we could update it, but it wouldn't update our state and we wouldn't have access to its value if we needed it. Explain that we use the `value` and `onChange` props on the input element to sync its value with our components state.
-
-* Go back to the `handleInputChange` method and walk through its logic.
-
-  * `handleInputChange`, like all event handlers, is passed an `event` object that describes the event that took place. We pull off the `name` and `value` properties from the `event.target` object. These correspond to the `name` and `value` properties attached to the element the event was triggered from.
-
-    * Since each input field has a `name` prop set to the name of the state property holding its value, we can run the following code to update the appropriate state:
-
-      ```js
-      this.setState({
-        [name]: value
-      });
-      ```
-
-    * Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets [], that will be computed and used as the property name. Refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names).
-
-    * If students have questions regarding this syntax, demonstrate the same approach in ES5:
-
-      ```js
-      const newState = {};
-      newState[name] = value;
-      this.setState(newState);
-      ```
-
-* Scroll down to the `handleFormSubmit` method. Ask the class: Why are we running `event.preventDefault()`?
-
-  * The default behavior of an HTML form submission, is to refresh the entire web page. We want to prevent the form's default behavior in lieu of our own. Remind the class that we also had to deal with this back when working with jQuery.
-
-* Be sure to point out the code where we throw an alert with the user's first and last name before resetting our `firstName` and `lastName` state to empty strings to clear our input fields. Take a moment to make sure everyone understands how the string template literal syntax is working.
-
-  * String template literals can be used to write multi-line strings and embed expressions without breaking the string. Instead we'd use the ${<expression>} token to embed expressions inside of our string.
-
-* Take another few minutes to make sure everyone understands the code at least well enough to be able to refer back to this example as a starting point as they're building their own React forms.
-
-### 9. Students Do: Fun With Forms (15 mins)
-
-* In this activity students will add some new functionality to the previous form example.
-
-* **Instructions:** [README](../../../../01-Class-Content/19-react/01-Activities/18-Stu_FunWithForms/README.md)
-
-### 10. Everyone Do: Break (30 mins)
-
-### 11. Instructor Do: Review Fun With Forms (10 mins)
-
-
-* Open [Solved/components/Form/index.js](../../../../01-Class-Content/19-react/01-Activities/18-Stu_FunWithForms/Solved/components/Form/index.js) in your browser and demonstrate the application:
-
-  * Changing text in the `first name` and `last name` input fields causes the `hello` text to change after every key press.
-
-  * Submitting the form causes validation alerts if the first and last name inputs are left empty or the password length isn't greater than 6.
-
-* Open [Solved/components/Form/index.js](../../../../01-Class-Content/19-react/01-Activities/18-Stu_FunWithForms/Solved/components/Form/index.js) in your IDE and point out the following:
-
-  * The `input` element has an `onChange` attribute that is set to be a method declared earlier in the component
-
-  * `value` is set to `this.state.firstName`
-
-  * The paragraph above the form displays different properties from the state
+* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
   
 ```js
-<p>
-  Hello {this.state.firstName} {this.state.lastName}
-</p>
-<form className="form">
-  <input
-    value={this.state.firstName}
-    name="firstName"
-    onChange={this.handleInputChange}
-    type="text"
-    placeholder="First Name"
-  />
+const compression = require("compression");
+
+app.use(compression());  
 ```
 
-* Now scroll up to the spot where `handleInputChange()` is declared and point out the following:
+  * With these two lines of code we can easily enable GZip compression in our application for our served files.
 
-  * The `event` object is a built in parameter of callback functions of the `onChange()` event, just as with `onClick()`
+* Ask the class, "Is Tiny PNG our only option for Image Compression?"
 
-  * If the name of the field is `password`, its value is set to be a substring (the first 15 characters) of the input field. Note that there are many other ways of doing password validation, like adding a `minLength` attribute to the `input` element.
+  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
 
-  * `this.setState()` is used to dynamically add an input field and its value to the state. 
+  * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
 
-```js
-handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    let value = event.target.value;
-    const name = event.target.name;
+* Ask the class, "Can you see the ways you can use these performance enhancements in your existing applications?"
 
-    if (name === "password") {
-      value = value.substring(0, 15);
-    }
-    // Updating the input's state
-    this.setState({
-      [name]: value
-    });
-  };
+  * Optimizing our applications to be performant on all devices and connection speeds will make us better developers. We need to consider those with smaller devices or slower speeds at all times as to not alienate any user base.
 
+* Answer any remaining questions.
+
+### 6. Instructor Do: Progressive Web Apps (10 mins)
+
+* Welcome students to class.
+
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
+
+  * It's the Image Gallery application from earlier. But there's something different about it...
+ 
+  * If we open the Settings in Chrome, we will see an option to `Install Images App...`
+ 
+  * When we select `Install Images App...` we are presented with an option to "Install app?"
+ 
+  * When we click `Install`, a new Chrome window opens with our application running in it. 
+ 
+  * It is now installed as a desktop app! If we search our applications, we will find "Images App" listed among them.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is different about our Image Gallery application? 
+  
+  * 🙋 There is added functionality to install it as a desktop application.
+
+  * ☝️ If we can install the Images App application on our laptops, where else might we install it? 
+ 
+* Use student answers to transition to the next activity.
+
+### 7. Student Do: Progressive Web Applications (15 mins)
+
+* Direct students to the activity instructions found in [07-Stu_PWAs](../../../../01-Class-Content/19-PWA/01-Activities/07-Stu_PWAs).
+
+```md
+
+  # Progressive Web Applications
+
+  In this activity, you will install a progressive web application (PWA) using your smart phone. You will also research the definition and production of a PWA. If you are unable to find the icons mentioned in this activity, try them in Chrome on your computer.
+
+  ## Instructions
+
+  * Follow these instructions to install a PWA for your specific smartphone OS:
+
+  * iOs:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
+
+    * 2. Tap the Share button in Safari.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Tap Add in the upper-right corner.
+
+    * 5. Name your PWA, then tap Add in the upper-right corner.
+
+  * Android:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
+
+    * 2. Tap the menu button in the upper right corner of Chrome.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Name your PWA, then tap Add below the promp.
+
+  * Be prepared to answer the following question(s): 
+
+      * What is a progressive web application? 
+
+      * How do we create progressive web applications?
+
+
+  ## 🏆 Bonus
+
+  * What are examples of popular PWAs?
 ```
 
-* Now direct students to the `handleFormSubmit()` method and point out the following:
+### 8. Instructor Do: Progressive Web Apps Review (5 min)
 
-  * `event.preventDefault()` prevents the form from attempting to POST.
+* Use the prompts and talking points below to review the following key point(s):
+  
+  * ✔️ Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript, that allow users to work offline
+  
+  * ✔️ PWAs require a manifest, a service worker and the Cache API
+  
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
 
-  * If the `firstName` or `lastName` properties don't exist, the user is alerted.
+  * ☝️ What is a progressive web application?
+  
+  * 🙋 Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript
+  
+  * ☝️ What is meant by the term 'native' app?
+  
+  * 🙋 The term "native app" refers to applications written for specific platforms. For example, native iPhone apps are written in iOs and Android apps are primarily written in Java. Apple apps will not run on Android devices and vice versa. 
 
-  * If the `password` is less than 6 characters long, the user is alerted.
+  * ☝️ How are PWAs different from native apps?
 
-  * If we were to spend more time on a form that we expect to use in an app, we would want to handle validation errors a little more elegantly.
+  * 🙋 Traditional Mobile Apps require multiple builds across platforms, are less discoverable by search engines and have high abandonment rates.They also offer less usability and don’t leverage mobile device capabilities and are often slow and bloated. PWAs provide advantages of both web and mobile apps such as push notifications, offline experiences,speed and stability. Plus, you can convert a web app into a PWA quickly without the build time of a mobile app.
+  
+  * ☝️ What do we need to learn to convert an application into a progressive web application?
 
-  * After the form is submitted, the fields are all set to empty strings. 
+  * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
+  
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
+  
+  * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
 
-```js
-handleFormSubmit = event => {
-  // Preventing the default behavior of the form submit (which is to refresh the page)
-  event.preventDefault();
-  if (!this.state.firstName || !this.state.lastName) {
-    alert("Fill out your first and last name please!");
-  } else if (this.state.password.length < 6) {
-    alert(
-      `Choose a more secure password ${this.state.firstName} ${this.state
-        .lastName}`
-    );
-  } else {
-    alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-  }
+    ![Application Sidebar](Images/application-sidebar.png)
 
-  this.setState({
-    firstName: "",
-    lastName: "",
-    password: ""
-  });
-};
+  * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
+
+  ![Offline](Images/offline-mode.png)
+
+* Answer any lingering questions before proceeding to the next demo. 
+
+### 9. Instructor Do: Web App Manifest Demo (5 mins)
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔️ `manifest.webmanifest` is JSON file providing information for mobile and desktop installation
+  
+  * ✔️ Manifest properties are referred to as members
+  
+* Open [08-Ins_Manifest/manifest.webmanifest](../../../../01-Class-Content/19-PWA/01-Activities/08-Ins_Manifest/manifest.webmanifest) in your IDE and explain the following: 
+
+  * 🔑 A web app manifest is a simple JSON file containing some metadata about a web application. 
+  
+ ```js
+  {
+    "short_name": "Demo",
+    "name": "Web App Manifest Demo",
+    "icons": [
+      {
+        "src": "/assets/images/icons-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/icons-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#808080",
+    "display": "standalone",
+    "theme_color": "#808080"
+  } 
+  ```
+  * 🔑 Each of the properties in our manifest file is referred to as a **member**.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What do we think the difference is between `name` and `short_name`?
+
+  * 🙋 `short_name` is used on the home screen and in the application menu
+  
+  * ☝️ What are "icons"?
+
+  * 🙋 The `icons` array contains information about the thumbnail images used when installing the PWA on mobile or desktop
+
+  * ☝️ What is the `start_url` member?
+
+  * 🙋 Defines what page is opened when the app is first launched (start_url).
+  
+  * ☝️ What does the `display` member do?
+
+  * 🙋 By using a web app manifest, our app can tell the browser you want your app to open in a standalone window
+
+
+### 10. Student Do: Web App Manifest (15 mins)
+
+* Direct students to the activity instructions found in [09-Stu_Manifest](../../../../01-Class-Content/19-PWA/01-Activities/09-Stu_Manifest)
+
+```md
+# Web App Manifest
+
+In this activity, you will write your first progressive web application manifest.
+
+## Instructions
+
+* Using the instructor demo as a guide, create a manifest for the Image Gallery app.
+
+  * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
+
+  * 🤔 How do you deploy a manifest? Hint: You will need to somehow link it with the web page. (See [Web App Manifest - Deploying a manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Deploying_a_manifest_with_the_link_tag).)
+
+* When finished, run the commands:
+
+  * `npm install`
+
+  * `npm run seed`
+
+  * `npm start`
+
+* Navigate to [localhost:3000](localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
+
+## 💡 Hint(s)
+
+Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
+
+## 🏆 Bonus
+
+* Add additional members to your manifest.
 ```
 
-* Ask the students the following question:
+### 11. Instructor Do: Review Web App Manifest (10 mins)
 
-  * ☝️ Think back to forms you've created in the past. Is there anything else we should do with our data after setting the application state?
+* Use the prompts and talking points below to review the following key point(s):
 
-  * 🙋 We could add a POST request to `handleFormSubmit` so that the user's input can be sent to a server and saved in a database.
+  * The web app manifest tells the browser about your web application and how it should behave once installed. 
 
+* Open [09-Stu_Manifest/Solved/public/manifest.webmanifest](../../../../01-Class-Content/19-PWA/01-Activities/09-Stu_Manifest/Solved/public/manifest.webmanifest) in your IDE and explain the following:
 
-### 12. Instructor Do: AJAX Demo (15 mins)
+  * We give our PWA a name and short name. These can have different values, but for the sake of simplicity, we give them the same value.
 
-In this example we will demonstrate AJAX requests with React.
+  * There are numerous icons for our app, starting at the size of `72x72` through `512x512`.
 
-* Replace your application's `src` folder with [19-Ins_AJAX/src](../../../../01-Class-Content/20-state/01-Activities/19-Ins_AJAX/src). Paste the Bootstrap CDN into `public/index.html`. You may use the snippet provided below:
+  * We set both the theme color and the background color to be white.
 
-  ```html
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+  * We tell the app to run in standalone mode, which means the web app will look and feel like a standalone native app. The app runs in its own window, separate from the browser, and hides standard browser UI elements like the URL bar.
+
+  * 📝 The other display modes we could specify are `fullscreen`, `minimal-ui`, and `browser`.
+
+  ```json
+    {
+    "name": "Images App",
+    "short_name": "Images App",
+    "icons": [
+      {
+        "src": "assets/images/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      ...
+      {
+        "src": "assets/images/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "/",
+    "display": "standalone"
+  }  
   ```
 
-* Install the `axios` library by running the following command:
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
 
-   ```
-   npm install axios
-   ```
+  * ☝️ Which file do we include the `manifest.webmanifest` in?
 
-* Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
+  * 🙋 `index.html` 
 
-* Navigate to [localhost:3000](http://localhost:3000) and demonstrate the application's functionality.
+  * ☝️ What's next on our list of things to do?
+  
+  * 🙋 Add a service worker!
 
-  ![Giphy Demo](Images/03-Giphy-Demo.png)
+### 12. Instructor Do: Intro To Service Workers (5 mins)
 
-  * This app searches the Giphy API for whatever is typed into the input field and then displays the results below.
+* Use the prompts and talking points below to demonstrate the following key point(s):
 
-  * When we first load the app, we should see kitten related results.
+  * ✔️ A service worker is a script that your browser runs in the background on a separate thread from your webpage.
 
-* Open the `src/components` folder and point out the three files inside:
+  * ✔️ Certain functionality can _only_ be implemented from within a service worker, such as caching assets in order to make the application useable without an internet connection or notifying the browser that the application should be installable.
 
-  * `ResultList.js`
+  * ✔️ **Cache API** Similar to localstorage and indexedDB in that this browser API is used for storing data. However Cache API can be used to store entire all front end assets such as images, javascript, HTML, CSS, etc. along with API responses.
 
-  * `SearchForm.js`
+  * ✔️ **Thread** A thread is an independent set of values for the processor that controls what executes in what order. Think of this as another JavaScript application running at the same time as our main application, with the ability to communicate and pass data between threads.
 
-  * `SearchResultContainer.js`
+  * ✔️ Service workers have a lifecycle that consists of 3 main parts.
 
-* Explain to the class that `SearchResultContainer` contains and renders the `ResultList` and `SearchForm` components. This is our application's only stateful component.
+  * ✔️ **Installation**: The service worker creates a version-specific cache.
 
-* Briefly demonstrate this without digging into each component's exact functionality in your editor just yet.
+  * ✔️ **Waiting**: The updated service worker waits until the existing service worker is no longer controlling clients. This step is often skipped with a function, since service workers rarely exist past a new service workers installation.
 
-  ![Render](Images/04-Search-Container-Render.png)
+  * ✔️ **Activation**: This event fires after the service worker has been installed and the previous one has been removed.
 
-* Ask the class: Why do you think `SearchResultContainer` is a stateful component, but `SearchForm` and `ResultList` aren't?
+* Navigate to [10-Ins_Service_Workers](../../../../01-Class-Content/19-PWA/01-Activities/10-Ins_Service_Workers) and run the following commands in your terminal:
 
-  * It's possible to make every component in our React application stateful. But it's usually cleaner and less error prone to have some kind of parent component which contains all of the data and functionality its children will need, and then pass those down as props.
+  ```
+  npm install
+  npm run seed
+  node server.js
+  ```
 
-  * Quick aside: Slack out this [article written by Dan Abramov](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) (Redux Author, React Core Contributor, Create React App Core Contributor) for students to read through on their own time. He describes the pattern of separating components into "container" and "presentational" components. In a nutshell, this can be explained as follows:
+* In a separate tab, run `mongod`.
 
-    * Container components are primarily concerned with how things _work_ and render very little, if any of their own markup. Instead they mostly render other components and pass down the logic and data they need to work.
+* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered and installed.
 
-    * Presentational components are concerned with how things _look_ and typically don't contain any logic that doesn't have to do with their own individual UI.
+  * When our app launches, it registers and installs the service worker.
 
-    * This pattern helps us build components with little to no coupling that can more easily be reused in different parts of app or even across applications. It also lets us stub out our applications appearance by writing presentational components first, and then writing container components once we're ready to make things work.
+  * Using the Chrome Dev Tools, we can unregister the service worker.
 
-  * This isn't important for students to totally understand now, but slack out the article for them to check out later. The most important takeaway should be that there should be a few of these "container" components which act as the "brain" for their children. In our case this is `SearchResultContainer`.
+  * Now, if we refresh the page, we can see that the service worker was installed and registered again.
 
-* Now, open `src/components/SearchResultContainer.js` and walk through the code.
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
 
-  * Our initial state has a `search` property set to an empty string and a `results` property set to an empty array.
+  * ☝️ What are the 2 main steps in service worker lifecycle?
 
-    ![Initial State](Images/05-Initial-Giphy-State.png)
+  * 🙋 Installation and activation. There is also a waiting step that is often skipped.
 
-  * We have a new unfamiliar method defined called `componentDidMount`. Explain that like the `render` method, this method is built-in to React and automatically run **after the component is rendered for the first time.**
+---
 
-    ![Component Did Mount](Images/06-Component-Did-Mount.png)
+### 13. Break (30 mins)
 
-  * Inside of this method we run the `searchGiphy` method and pass in "kittens" as an argument. Before getting into how exactly the `searchGiphy` method works, explain that this code searches the Giphy API and updates our application's `result` state using the results from the AJAX request. By writing this code inside of the `componentDidMount` method, we're saying we want it to run after the initial component render, before state updates take place.
+---
 
-  * Explain that when working with class components in React, we are able to hook into to a few different **component lifecycle events**, that allow us to automatically execute logic at certain times.
+### 14. Student Do: Register Service Worker (15 mins)
 
-    * Explain that these component lifecycle events are similar to some of the DOM lifecycle events we've worked with in vanilla JavaScript or jQuery. For example, in jQuery, `$(document).ready` runs when the entire web page is loaded.
+* Direct students to the next activity located in [11-Stu_Service_Workers](../../../../01-Class-Content/19-PWA/01-Activities/11-Stu_Service_Workers/Unsolved).
 
-    * In React, `componentDidMount` runs after a component and all of its children have been initially rendered and mounted to the DOM, and have no further expected initialization steps.
+* **Instructions**
 
-    * Explain that there are a few different React component lifecycle events we can hook into but `componentDidMount` is probably the one we'll use most frequently as this is the best place to run any async code we need to populate our component's state after the component mounts.
+* Add the following script just above the closing `</body>` tag in `index.html`
 
-    * Ask the class: Why wouldn't we just run our `searchGiphy` method inside of our component's constructor and populate our initial state there? That is, assuming we went back to explicitly using the constructor method.
-
-      * Constructor functions run synchronously and AJAX requests are asynchronous. So we might not have the async data available by the time the component is instantiated.
-
-      * Additionally, running our async code inside of the constructor could cause extra re-renders of our component &mdash; making our application feel slow or glitchy on startup &mdash or introduce difficult to track down bugs.
-
-      * By the time `componentDidMount` is run, there's no more work for our component needs to do. Even if the AJAX request fails or takes a long time to complete, we'd still have our component and its children rendered to some degree.
-
-      * Explain that `componentDidMount` is called automatically once per component instance.
-
-      * Explain that, technically, `render` is another component lifecycle event, but rather than only running once, the `render` method is called every time our component's state is updated or anytime our component receives new props.
-
-      * Slack out this [article on the React component lifecycle](https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1) for students to read on their own time.
-
-  * Go to the `searchGiphy` method and ask the class: What do you think this method is doing? Without even knowing what this `API` object is, what does it look like this method is doing?
-
-    * This method is searching the Giphy API, passing in `this.state.search` as a query. It's then setting `this.state.results` to the JSON array that comes back from the AJAX request.
-
-  * Open `src/utils/API.js` and go through the code inside of our API helper.
-
-     ![Component Did Mount](Images/07-API.png)
-
-    * This file exports an object with a `search` method. Go back to the `SearchResultContainer` and point out how this `search` method corresponds to `API.search`.
-
-    * This `search` method accepts a `query` parameter and returns the following:
-
-      ```js
-      axios.get(BASEURL + query + APIKEY);
-      ```
-
-    * Explain that axios is a third party library we've installed for the purpose of making AJAX requests. React itself doesn't ship with any functionality for making AJAX requests. Instead we can use whatever library we'd like for this.
-
-    * Axios functions _very_ similarly to `$.ajax` in jQuery.
-
-    * By running `axios.get`, we're saying we want to perform a GET request.
-
-    * At the very least, the `axios.get` method requires one argument: the url we want to send the request to. We construct the full Giphy API URL using the `BASEURL`, `query`, and `APIKEY` strings. This should remind students of a few weeks ago when we initially worked with the Giphy API using jQuery.
-
-    * Explain that like `$.ajax`, all of axios's methods return a promise object. By returning this method call, we can deal with what happens _after_ the request in our code which imports this module. i.e. point out how we run the `.then` and `.catch` inside of `SearchResultContainer`.
-
-  * Explain that there are other libraries available for making AJAX requests. We even have a `fetch` method built into modern browsers which is similar, but tends to require more configuration to perform simple requests. We could have even imported jQuery and used `$.ajax` if we wanted to. But it's a better idea to use a smaller, single purpose library for making our AJAX requests.
-
-  * Explain that by writing our logic for performing AJAX requests inside of this `API.js` helper file, we no longer need to care about how exactly the AJAX request is implemented in our components. We'd simply require the file and declaratively make a request using a minimum amount of information instead.
-
-  * Go back to the `searchGiphy` method inside of the `SearchResultContainer` component and briefly go over its code once more now that we've explained the `API` object.
-
-    ![Search Result Container](Images/08-Search-Result-Container.png)
-
-  * Point out that the `handleInputChange` method should look familiar to the previous examples, but re-explain how it works if necessary. Demonstrate how we pass this method to the `SearchForm` component as a prop and set the `onChange` prop of its input field to this method.
-
-  * Inside of the `SearchResultContainer`, the `handleFormSubmit` method is a _little_ different compared to the previous example. Point out how when the form is submitted, we first prevent its default behavior with `event.preventDefault()`. Then we call `this.searchGiphy` which searches the Giphy API for the value of `this.state.search`.
-
-  * Finally, open the `ResultList` component and demonstrate how this component renders a list of images it receives on its `results` prop.
-
-* Take another few minutes to explain any parts of this code which may still not be entirely clear. The major takeaways for this example should be:
-
-  * Most of our application's components should be stateless components primarily concerned with some part of our application's presentation.
-
-  * A smaller number of components should be stateful class components which contain part of our application's business logic and state. Generally these "container" components render our stateless "presentational" components and pass down data and functionality on a need to know basis.
-
-  * `componentDidMount` is a component lifecycle event. This event is triggered once after the component has initially rendered for the first time. This is the best place to perform any initial AJAX requests. There are a few others lifecycle events available, but `componentDidMount` is the one they'll probably end up using the most frequently.
-
-  * We're using the `axios` library to perform our AJAX requests. React itself is primarily concerned with our application's view layer and doesn't include any kind of method for creating AJAX requests. We are free to use whatever library we'd like to perform AJAX requests in React.
-
-  * We're putting our logic for creating AJAX requests into our `API.js` helper file. This way, we don't have to worry about how exactly requests to the Giphy API are performed inside of the components that need to make them.
-
-### 13. Students Do: AJAX (15 mins)
-
-* In this activity students will create a simple React application with which users can query the OMDB API and display information about the movie searched for.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/20-state/01-Activities/20-Stu_AJAX/README.md)
-
-### 14. Instructor Do: Review AJAX (15 mins)
-
-* Once time's up slack out the [03-Stu_AJAX/Solved](../../../../01-Class-Content/20-state/01-Activities/20-Stu_AJAX/Solved) folder and demonstrate the activity solution in your web browser. Be sure to point out the following:
-
-  ![OMDB Browser](Images/09-OMDBBrowser.png)
-
-  * When we search for a movie using the form on the right side, some information about the movie is displayed in the left card.
-
-  * When the component first "mounts", some information about the movie "The Matrix" is displayed.
-
-  * Ask the class: In what part of our application would we be performing this initial AJAX request to the OMDB API?
-
-    * Inside of the `componentDidMount` lifecycle method of `OmdbContainer`. As mentioned before, this method is where we want to perform any initial async logic for our components.
-
-      ![OMDB Did Mount](Images/10-OMDBDidMount.png)
-
-  * Point out the `handleInputChange` method inside of the `OmdbContainer` component. Have a volunteer explain to you how this code works.
-
-    ![Handle Input Change](Images/11-HandleInputChange.png)
-
-    * This method pulls the `value` and `name` properties off of the input element the event was triggered from, and uses those values to set the appropriate state.
-
-  * Ask the class: Since we definitely only have one input field under the control of this `handleInputChange` method, could we decrease the amount of code being used inside of this method?
-
-    * Yes, the current setup accounts for the possibility of adding new input fields. But if we were positive we'd only have one input field, we could use the following code instead:
-
-      ```js
-      handleInputChange = event => {
-        this.setState({
-          search: event.target.value,
+```html
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
         });
-      };
-      ```
+    });
+  }
+</script>
+```
 
-  * Go through the code inside of the `handleFormSubmit` method. Have a volunteer explain what the code is doing and when it's called.
+* Create a `service-worker.js` file in the `public` directory and add the following line of code.
 
-    ![Handle Form Submit](Images/12-HandleFormSubmit.png)
+```js
+console.log("Hello from your service worker file!");
+```
 
-    * Whenever the form is submitted, we first prevent the event's default behavior. By default, whenever we submit an HTML form, it tries to reload the web page. Then we run the `searchMovies` method and pass in `this.state.search` as a query.
+* Refresh your Gallery App or launch it with `npm start` if it is not running.
 
-  * Now scroll down to the `render` method and point out the section of code where the `MovieDetail` component is being rendered.
+* Open your Chrome Dev Tools and navigate to Application then your Service Worker tab. Check to see if your service worker file was successfully found. You should see two messages, one from the `service-worker.js` file and one from the script tag that you put in your `index.html` file.
 
-  * Point out the ternary expression inside of the JSX curly braces. Explain while we can't use an `if` statement inside of JSX curly braces, we _can_ use a ternary expression or short circuit evaluation.
+  ![Service Worker Console](Images/sw-console.png)
 
-    * If necessary, take a few moments to explain the syntax of a ternary expression.
+### 15. Instructor Do: Review Register Service Worker (15 mins)
 
-  * Explain that if we didn't want to write this much logic inside of our `render` method, we could also extract this code into a new method and call that inside of the `render` instead. For example, we could define the following method on the `OmdbContainer` component:
+* Use the prompts and talking points below to review the following key point(s):
+
+  * ✔️ We are adding an event listener to our window element, listening for the `load` event.
+
+  * ✔️ We register our service worker using the `navigator` object.
+
+  * ✔️ We console.log a message letting us know that the service worker registration was successful.
+
+* Open [11-Stu_Service_Workers/Solved/public/index.html](../../../../01-Class-Content/19-PWA/01-Activities/11-Stu_Service_Workers/Solved/public/index.html) and explain the following points:
+
+  * We tell the browser to register our service worker file.
+
+```html
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => {
+          console.log("We found your service worker file!", reg);
+        });
+    });
+  }
+</script>
+```
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What step of the service worker lifecycle have we just completed? 
+
+  * 🙋 The registration step. 
+
+### 16. Instructor Do: Creating An Offline Experience (5 mins)
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔️ All files that need to be cached are stored as strings in an array.
+
+  * ✔️ All files that need to be cached are precached in the `install` step.
+
+  * ✔️ The `activate` step clears out the all outdated caches.
+
+  * ✔️ The `fetch` listener intercepts all fetch requests and uses data from the cache to return a response.
+
+* Open [12-Ins_Caching_Fetching_Files/Solved/](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/) in your IDE and run the following commands:
+
+  * `npm install`
+
+  * `npm start`
+
+* Navigate to [localhost:3000](http://localhost:3000) in your browser and explain the following points:
+
+  * If we inspect our Sources with DevTools, we can see that our service worker is running on a separate thread.
+
+  ![Threads](Images/sw-threads.png)
+
+* Open [12-Ins_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/service-worker.js) in your IDE and explain the following:
+
+  * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
+
+  * Our `FILES_TO_CACHE` variable keeps track of each file that we want to store in our cache. 
+
+  * This is an array of _files_ only, attempting to include entire folders won't work.
+
+  📝 The `ALL_CAPS_SEPARATED_BY_UNDERSCORES` style is just standard convention for the global variables in our service worker. 
 
   ```js
-  renderMovie = () => {
-    if (this.state.result.Title) {
-      return (
-        <MovieDetail
-          src={this.state.result.Poster}
-          director={this.state.result.Director}
-          genre={this.state.result.Genre}
-          released={this.state.result.Released}
-        />
-      );
-    } else {
-      return <h3>No Results to Display</h3>;
-    }
-  };
+  const FILES_TO_CACHE = [
+    "/",
+    "/index.html",
+    "/assets/css/style.css",
+    "/assets/js/loadPosts.js",
+    "/assets/images/Angular-icon.png",
+    "/assets/images/React-icon.png",
+    "/assets/images/Vue.js-icon.png",
+    "/manifest.webmanifest",
+    ...
+    ...
+  ];
+
+  // set cache variable names
+  const CACHE_NAME = 'static-cache-v2';
+  const DATA_CACHE_NAME = 'data-cache-v1';
   ```
 
-  * And then use it in our `render` method like so:
+  * Inside our install event listener callback we open our cache and call `addAll`, passing in `FILES_TO_CACHE`.
 
-    ```js
-      {this.renderMovie()}
-    ```
+  ```js
+  // install
+  self.addEventListener('install', function(evt) {
+    evt.waitUntil(
+      caches.open(CACHE_NAME).then(cache => {
+        console.log('Your files were pre-cached successfully!');
+        return cache.addAll(FILES_TO_CACHE);
+      })
+    );
 
-* Explain that any technique they used to get this part to work is probably okay and encourage them to revisit the [React Documentation on Conditional Rendering](https://facebook.github.io/react/docs/conditional-rendering.html) to learn more about what Facebook has to say on the topic.
+  // skipWaiting() ensures that any new versions of our service worker will take over the page and become activated immediately
+    self.skipWaiting();
+  });
+  ```
 
-* Take another few minutes to answer any remaining questions.
+  * Inside the activate event listener callback, we activate our service worker, cleaning up outdated caches.
 
-### 15. Students Do: Conditional Render (20 mins)
+  ```js
+  // activate
+  self.addEventListener('activate', function(evt) {
+    evt.waitUntil(
+      caches.keys().then(keyList => {
+        return Promise.all(
+          keyList.map(key => {
+            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+              console.log('Removing old cache data', key);
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+    );
 
-* In this activity students will render one of four different components based upon a component's state. This example is meant to further practice conditional rendering with React and demonstrate the need for a component router.
+  // Tells our new service worker to take over.
+    self.clients.claim();
+  });
+  ```
 
-* **Instructions:** [README.md](../../../../01-Class-Content/20-state/01-Activities/21-Stu_ConditionalRender/README.md)
+  * Here we modify the service worker to handle requests to `/api` and store the responses in our cache, so we can easily access them later.
 
-### 16. Instructor Do: Review Conditional Render (15 mins)
+  ```js
+  // fetch
+  self.addEventListener('fetch', function(evt) {
+    if (evt.request.url.includes('/api/')) {
+      console.log('[Service Worker] Fetch (data)', evt.request.url);
 
-* Once time's up slack out the [21-Stu_ConditionalRender/Solved](../../../../01-Class-Content/19-React/01-Activities/21-Stu_ConditionalRender/Solved) version of the activity and go through it as a class. Be sure to demonstrate the solution in your web browser before going into the JavaScript code in your editor.
+      evt.respondWith(
+        caches.open(DATA_CACHE_NAME).then(cache => {
+          return fetch(evt.request)
+            .then(response => {
+              // If the response was good, clone it and store it in the cache.
+              if (response.status === 200) {
+                cache.put(evt.request.url, response.clone());
+              }
 
-  ![Conditional Demo](Images/13-Conditional-Demo.png)
+              return response;
+            })
+  ```
 
-* Point out how when we click the different navigation items, a different component is rendered. Point out that the address bar doesn't _actually_ change when we do this, but we are still rendering different content depending on our application state.
+  * If the network request fails, we try to get the response from our cache.
 
-* Explain that `PortfolioContainer` maintains the state for the currently active page and passes this down to `NavTabs` along with a method for changing the currently active page.
+  ```js
+    .catch(err => {
+      return cache.match(evt.request);
+    });
+  ```
+  
+  * _**Note for instructor:** You will notice that the api requests are not cached on the first visit, when the service worker is installed for the first time. Solutions to deal with this case are most likely too complicated to introduce at this point in the class. Simply refresh the page to allow the service worker to cache the api request making the posts from the database available when the page is viewed offline._
 
-  ![NavTabs](Images/14-NavTabs.png)
+  * If the request path does not include `/api`, then we will assume the requests is for a static file. The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
 
-* Demonstrate the `PortfolioContainer` code and point out how we're using a method to return the appropriate JSX depending on `this.state.currentPage` inside of this component.
+  ```js
+  evt.respondWith(
+    caches.match(evt.request).then(function(response) {
+      return response || fetch(evt.request);
+    })
+  );
+  ```
 
-  ![Conditional Render](Images/15-ConditionalRender.png)
+* Open [12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following:
 
-* Explain that we could have also used a series of ternary operators or short circuit evaluations to accomplish this, but since we have more than a few conditionals, doing it this way can help keep some excess component logic out of the `render` method.
+  * We are going to skip past the DOM element creation and focus on the handling of our "like" POST request. 
 
-* Take a few moments to answer any lingering questions.
+  * When a user likes a post, we increment it's `data-likes` attribute by 1.
 
-### 17. Instructor Do: Review Material (30 mins)
+  ```js
+  function incrementLikes(event) {
+    const statusEl = document.querySelector("#status")
 
-* Ask the students the following questions and use their answers to guide your review:
+    const id = event.currentTarget.getAttribute("id");
+    const oldLikes = parseFloat(event.currentTarget.getAttribute("data-likes"));
+    const likes = oldLikes + 1;
 
-  * ☝️ Which concepts today were difficult to grasp?
+    event.currentTarget.setAttribute("data-likes", likes);
 
-  * ☝️ Are there any activities that we've done today that you would like to spend some time walking through?
+    statusEl.innerText = "";
+  ```
 
-### 18. TAs DO: Slack out information (0 mins)
+  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether or not their save was successful. 
 
-* Slack out the [solved](../../../../01-Class-Content/19-react/01-Activities/31-Stu_FunWithForms/Solved) version of the previous activity. If any time remains go through the code as a class.
+  ```js
+  incrementLikesRequest(id, likes)
+    .then(() => {
+      statusEl.innerText = "Save successful!"
+      updateLikesDisplay(id, likes, true)
+    })
+    .catch(() => {
+      statusEl.innerText = "Sorry, your 'like' cannot be recorded while you are offline."
+      updateLikesDisplay(id, likes, false)
+    });
+  ```
 
-* Inform the class that we'll continue to go through forms in the next lesson.
+  * In `updateLikesDisplay` we indicate to the user whether or not their likes count is up to date by appending `(not saved)` to the like count for each post.
 
-* Recommend students do their best to go through the following sections of the React documentation before the next class:
+  ```js
+  function updateLikesDisplay(id, likes, saved) {
+    const likesCount = document.querySelector(`#likes-count-${id}`);
+    likesCount.innerText = `Likes: ${likes}`;
+    if(!saved) {
+      likesCount.innerText += " (not saved)";
+    }
+  }
+  ```
 
-  * [Forms](https://facebook.github.io/react/docs/forms.html)
+* There is quite a bit of code here so take the time to step through it, clarifying any questions as you go.
 
-  * [Lifting State Up](https://facebook.github.io/react/docs/lifting-state-up.html)
+  * Our service worker is caching all of the files we tell it to so when a user doesn't have a connection, it can deliver them an offline browsing experience. If a user is offline, we must make sure that they can still use the application as much as possible, even if this means letting them know their data won't be saved until later.
 
-  * [State and Lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
 
-### 19. End (0 mins)
+  * ☝️ What kind of events do we have to listen for in our service worker file?
+
+  * 🙋 Install and activate. We also listen for `fetch` if our application interacts with an API.
+
+### 17. Student Do: Caching Files (10 mins)
+
+* Direct students to the next activity located in [13-Stu_Caching_Fetching_Files](../../../../01-Class-Content/19-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Unsolved/).
+
+* Instructions are here: [13-Stu_Caching_Fetching_Files/README.md](../../../../01-Class-Content/19-PWA/01-Activities/13-Stu_Caching_Fetching_Files/README.md/)
+
+### 18. Instructor Do: Review Caching Files (5 mins)
+
+* Open [13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following: 
+
+  * First we set up the files that we need to cache.
+
+  ```js
+  const FILES_TO_CACHE = [
+    '/',
+    '/index.html',
+    '/favicon.ico',
+    '/manifest.webmanifest',
+    '/assets/css/style.css',
+    '/assets/js/loadImages.js',
+    '/assets/images/icons/icon-72x72.png',
+    '/assets/images/icons/icon-96x96.png',
+    '/assets/images/icons/icon-128x128.png',
+    '/assets/images/icons/icon-144x144.png',
+    '/assets/images/icons/icon-152x152.png',
+    '/assets/images/icons/icon-192x192.png',
+    '/assets/images/icons/icon-384x384.png',
+    '/assets/images/icons/icon-512x512.png',
+    '/assets/images/1.jpg',
+    '/assets/images/2.jpg',
+    '/assets/images/3.jpg',
+    '/assets/images/4.jpg',
+    '/assets/images/5.jpg',
+    // ...
+  ];
+
+  const CACHE_NAME = 'static-cache-v2';
+  const DATA_CACHE_NAME = 'data-cache-v1';
+  ```
+
+* Then, we install and register our service worker.
+
+  ```js
+  self.addEventListener('install', function(evt) {
+    evt.waitUntil(
+      caches.open(CACHE_NAME).then(cache => {
+        console.log('Your files were pre-cached successfully!');
+        return cache.addAll(FILES_TO_CACHE);
+      })
+    );
+
+    self.skipWaiting();
+  });
+  ```
+
+  * If done successfully, we should see our static cache in our Application tab.
+
+  ![Static Cache](Images/static-cache.png)
+
+  * Next we activate our service worker.
+
+  ```js
+  self.addEventListener('activate', function(evt) {
+    evt.waitUntil(
+      caches.keys().then(keyList => {
+        return Promise.all(
+          keyList.map(key => {
+            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+              console.log('Removing old cache data', key);
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+    );
+
+    self.clients.claim();
+  });
+  ```
+
+  * Lastly, we handle all fetching for any request with a url that includes `/api/`.
+
+  * If the response is successful, we clone it and store it in our cache.
+
+  * If the network request fails, we grab it from our cache.
+
+  ```js
+  self.addEventListener('fetch', function(evt) {
+    if (evt.request.url.includes('/api/')) {
+      evt.respondWith(
+        caches.open(DATA_CACHE_NAME).then(cache => {
+          return fetch(evt.request)
+            .then(response => {
+              if (response.status === 200) {
+                cache.put(evt.request.url, response.clone());
+              }
+
+              return response;
+            })
+            .catch(err => {
+              return cache.match(evt.request);
+            });
+        })
+      );
+
+      return;
+    }
+
+    evt.respondWith(
+      caches.open(CACHE_NAME).then(cache => {
+        return cache.match(evt.request).then(response => {
+          return response || fetch(evt.request);
+        });
+      })
+    );
+  });
+  ```
+
+  * If done successfully we will see your data cache in your Application tab. At this point we should be able to put our application in offline mode for an offline experience.
+
+  ![Data Cache](Images/data-cache.png)
+
+  ![Offline](Images/offline.png)
+  
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What does a service worker do?
+
+  * 🙋 A service worker acts as an intermediate step in between an API call and the browser. It can cache files and help provide an offline experience.
+
+  * ☝️ When using a service worker, can we send POST requests to an API while offline?
+
+  * 🙋 No, POST/PUT requests must be handled separately. If we wish to "cache" the POST data, we can store it in IndexedDb.
+
+  * ☝️ How many times does the install event run for each service worker? 
+
+  * 🙋 Once.
+
+  * ☝️ What does `self.skipWaiting()` do? 
+
+  * 🙋 `self.skipWaiting()` forces the service worker to activate as soon as it's finished installing.
+
+### 19. Instructor Do: Demo Trip Planner PWA (5 mins)
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+* Navigate to [14-Stu_Map-PWA](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA/Solved) and demonstrate the following functionality: 
+
+  * Open up the Chrome Developer Tools and navigate to the `Service Worker` tab. Here, let's toggle the offline version and refresh the app.
+
+  ![offline mode](./Images/offline-mode.png)
+
+  * Just like our other two apps, all of our resources have been cached and do not require a connection to access.
+
+  * Also demonstrate the PWA install icon in the browser address bar with the PWA logo prompt.
+  
+### 20. Student Do: Trip Planner PWA (30 mins)
+
+* Direct students to the activity instructions found in [14-Stu_Map-PWA](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA)
+
+```md
+# Create a PWA
+
+For this activity you are going to convert the Trip Planner website into a PWA.
+
+## Instructions
+
+* Refer back to the activities we previously worked through to help you accomplish the following steps.
+
+  * Link the app manifest to the website - the `manifest.webamanifest` file has been created for you.
+
+  * Install the service worker to cache static assets - the service worker has been registered for you.
+
+  * Retrieve cached files for an offline experience.
+
+  * Download the PWA.
+
+## BONUS
+
+* Can we use the Cache Storage in the browser to store dynamic requests from the user, for example from a web form? If not, then what can we use?
+
+Use Google or another search engine to research the preceding topic. 
+```
+
+### 21. Instructor Do: Review Trip Planner PWA (15 mins)
+
+* Open [14-Stu_MAP-PWA/Solved/index.html](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA/Solved/index.html) in your IDE and explain the following: 
+
+  * We add the link to the `webmanifest.manifest` file in the `<head>`.
+
+  ```html
+  <link rel="manifest" href="./manifest.webmanifest" />
+  ```
+
+* Open [14-Stu_Map-PWA/Solved/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA/Solved/service-worker.js) in your IDE and explain the following: 
+
+  * The files we need to cache are `index.html`, `style.css`, and the image files; `brandenburg.jpg`, `reichstag.jpg`, and `map.jpg`
+
+  * Our cache will be named `static`.
+
+  * When the install event is emitted, we will add all of our specified files to the `static` cache.
+
+  ```js
+  // install event handler
+  self.addEventListener('install', (event) => {
+    event.waitUntil(
+      caches.open('static').then((cache) => {
+        return cache.addAll([
+          './',
+          './index.html',
+          './assets/css/style.css',
+          './assets/images/brandenburg.jpg',
+          './assets/images/reichstag.jpg',
+          './assets/images/map.jpg'
+        ]);
+      })
+    );
+    console.log('Install');
+    self.skipWaiting();
+  });
+  ```
+
+  * 📝 The `fetch` call will retrieve the assets from the cache when the network call isn't possible.
+
+  ```js
+  // retrieve assets from cache
+  self.addEventListener('fetch', event => {
+    event.respondWith(
+      caches.match(event.request).then( response => {
+        return response || fetch(event.request);
+      })
+    );
+  });
+  ```
+
+### 22. END (0 mins)
 
 ### Lesson Plan Feedback
 
