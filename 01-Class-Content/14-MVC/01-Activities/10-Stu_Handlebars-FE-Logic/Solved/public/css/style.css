@@ -65,7 +65,7 @@
   .add-dish-container {
     display: flex;
     flex-wrap: wrap;
-    width: 35%;
+    width: 50%;
     min-height: 100%;
     min-width: 35%;
     margin: 5px auto;
@@ -75,7 +75,7 @@
     border-width: medium;
     background-color: var(--light);
     color: var(--dark);
-    padding: 50px;
+    padding: 5px;
     text-align: center;
     background-color: var(--tertiary);
   }

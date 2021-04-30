@@ -230,7 +230,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
   * 🔑 On submit, the form handler will capture user input from the form fields in the View and process the data using front-end logic to pass to the Controller, as follows:
 
     ```js
-      document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
+    document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
     ```
 
   * 🔑 We've included a ternary operator again, shown in the following example, to indicate whether the checkbox for "Contains Nuts" has been checked or not:
@@ -243,8 +243,8 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
     ```js
     const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length - 1
-     ];
+      window.location.toString().split('/').length - 1
+    ];
     ```
 
   * 🔑 `fetch()` passes the edit form input to the Controller in the body of the request with the PUT method, like in the following example:
