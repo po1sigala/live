@@ -2,13 +2,13 @@
 
 ## Overview
 
-You'll continue to collaborate with your fellow developers to create a real-world full-stack application that you’ll be able to showcase to potential employers.
+Welcome to the second week of Project 2! You'll continue to collaborate with your fellow developers to create a real-world full-stack application that you’ll be able to showcase to potential employers.
 
-At the end of this unit, you and your group will present your application to your fellow students in a group presentation. Because this is a full-stack web application, you and your fellow developers can concentrate on specific aspects of the project in your presentation, following the principle of the separation of concerns.
+At the end of this unit, you and your group will present your application to your fellow students in a group presentation. Use the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to prepare for the presentation.  Because this is a full-stack web application, you and your fellow developers can concentrate on specific aspects of the project in your presentation, following the principle of the separation of concerns.
 
 But while each individual should be able to speak about their contributions, this is still a group project. Be sure to emphasize how the different parts of your application came together and how you worked as a group!
 
-You'll also begin to revise your professional materials, including your portfolio. Don't forget to add your new project to the portfolio once you've completed it!
+You'll also update your professional materials, including your portfolio, GitHub profile, resume, and LinkedIn profile. Don't forget to add your new project to the portfolio once you've completed it!
 
 ## Key Topics
 
@@ -16,9 +16,9 @@ The following topics will be covered in this unit:
 
 * Full-stack applications
 
-* Git branching workflow
+* [Git branching workflow](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-* Agile software development
+* [Agile software development](https://en.wikipedia.org/wiki/Agile_software_development)
 
 * Collaborative development
 
@@ -40,7 +40,7 @@ You will be employer-ready if you are able to:
 
 ## Homework
 
-For this week's homework, you'll update your portfolio page and other professional materials to build towards being employer-competitive.
+For this week's homework, you'll finish your project and give a presentation on it in class. Then you'll update your portfolio page and other professional materials to build towards being employer-competitive.
 
 If you are opting out of career services, this is **still a required assignment**. Part of being a web developer means being a part of a community. Having a place to share your projects is necessary if you're applying for jobs, but it's also critical on your journey as a developer.
 
@@ -50,7 +50,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer **before** starting attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
+In the next unit, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer **before** starting Unit 17 and attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
 
 ## Resources
 
@@ -68,11 +68,9 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
 Refer to these resources for additional information about topics covered in this unit.
 
-* 📖 [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
+  * 📖 [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) 
 
-* 📖 [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
-
-* 📖 [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
+  * 📖 [MongoDB](https://www.mongodb.com/2)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

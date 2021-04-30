@@ -1,4 +1,4 @@
-# 15 Project 2: Full-Stack Application
+# 15 Project 2: Interactive Full-Stack Application
 
 Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
@@ -6,7 +6,7 @@ As your first opportunity to show employers your collaborative skills and coding
 
 ## Project Requirements
 
-You and your group will use everything you’ve learned over the past six weeks to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+You and your group will use everything you’ve learned over the past six units to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
 * Use Node.js and Express.js to create a RESTful API.
 
@@ -60,15 +60,15 @@ This project is graded based on the following criteria:
 
 * Satisfies the following code requirements:
 
-    * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
+  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
 
-    * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
+  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
 
-    * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
+  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
 
-    * Application includes user authentication (express-session and cookies).
+  * Application includes user authentication (express-session and cookies).
 
-    * Application uses at least one new library, package, or technology not covered in class.
+  * Application uses at least one new library, package, or technology not covered in class.
 
 ### Concept 10%
 
@@ -108,12 +108,11 @@ This project is graded based on the following criteria:
 
 * Every group member should speak during the presentation.
 
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit).
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
 
 ### Collaboration 10%
 
 * There are no major disparities in the number of GitHub contributions between group members.
-
 
 ## How to Submit Your Interactive Full-Stack Project
 

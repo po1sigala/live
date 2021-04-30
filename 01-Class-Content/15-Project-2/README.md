@@ -10,9 +10,9 @@ The following topics will be covered in this unit:
 
 * Full-stack applications
 
-* Git branching workflow
+* [Git branching workflow](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-* Agile software development
+* [Agile software development](https://en.wikipedia.org/wiki/Agile_software_development)
 
 * Collaborative development
 
@@ -60,11 +60,7 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
 Refer to these resources for additional information about topics covered in this unit.
 
-* 📖 [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
-
-* 📖 [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
-
-* 📖 [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
+  * 📖 [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

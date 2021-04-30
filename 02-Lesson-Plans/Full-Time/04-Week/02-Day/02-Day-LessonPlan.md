@@ -2,33 +2,35 @@
 
 ## Overview
 
-Students work in groups on their first project.
+In this class, students will continue working on projects.
 
 ## Instructor Notes
 
 * No classroom instruction today.
 
-* You will assume the role of 'scrum master' and hold standing meetings with each group. The purpose of these scrums is to:
+* You will assume the role of "scrummaster" and hold daily scrum meetings with each group. The purpose of these scrums is to:
 
-  1. Gauge progress on projects
-  
-  2. Course correct if scope creeps or focus shifts
-  
-  3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
+	1. Gauge progress on projects
 
-* To keep the standing meetings short, require that students physically stand up. Ask each student the following questions: 
+	2. Course correct if scope creeps or focus shifts
 
-  * What did you accomplish? 
+	3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
 
-  * What are your goals? 
+* Keep the daily scrums short. Ask **each** student the following questions:
 
-  * Are there any obstacles? 
+	* What did you accomplish? 
+
+	* What are your goals? 
+
+	* Are there any obstacles? 
 
 * Prioritize meeting with any groups that have not yet identified a project idea, drafted a user story, or created a wireframe. These are your at-risk groups.
 
 ## Learning Objectives
 
-* Design, build, and deploy a client-side web application using GitHub Pages
+By the end of class, students will be able to:
+
+* Make progress towards building the MVP of their project
 
 ## Time Tracker
 
@@ -37,7 +39,7 @@ Students work in groups on their first project.
 | 10:00AM | 1   | Instructor Do: Welcome              |  0:05  |
 | 10:05AM | 2   | Student Do: Project Work            |  1:55  |
 | 12:00PM | 3   | BREAK                               |  0:30  |
-| 12:30PM | 4   | Student Do: Continue Project Work   |  2:30  |
+| 12:30PM | 4   | Student Do: Continue Project Work   |  2:00  |
 | 2:30PM  | 5   | END                                 |  0:00  |
 
 ---
@@ -46,17 +48,33 @@ Students work in groups on their first project.
 
 ### 1. Instructor Do: Welcome (5 min)
 
-* Welcome students to class. 
+* Welcome students to class.
+
+* Inform them that they will continue to work on their group project and should ask for help from you and your TAs.
+
+* Also let them know that you will be checking on each group to hold daily scrums with them to gauge their progress.
+
+* Answer any questions before proceeding.
 
 ### 2. Student Do: Project Work
 
-* Direct students to continue to work with their groups on their projects.
+* Direct students to work with their groups on their projects while instructional staff make themselves available for assistance.
 
 ### 3. BREAK (30 min)
 
 ### 4. Student Do: Continue Project Work
 
-* Direct students to continue to work with their groups on their projects.
+* Direct students to continue to work with their groups on their projects while instructional staff make themselves available for assistance.
+
+* Hold daily scrums with each group. Ask each student in the group the following questions:
+
+	* What did you accomplish? 
+
+	* What are your goals? 
+
+	* Are there any obstacles? 
+
+* Answer any questions before ending class.
 
 ### 5. END
 
