@@ -1,5 +1,5 @@
 <div class="menu-container">
-  <div class="card-header col-md-10 text-center">
+  <div class="card-header col-md-12 text-center">
     <h2>
       &#127869 Current Menu
     </h2>
@@ -11,16 +11,14 @@
       {{dish.dish_name}}
     </p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-5">
     <p>
       Guest:
       {{dish.guest_name}}
     </p>
   </div>
-  <div class="col-md-4">
-    {{#if dish.has_nuts}}
-    Contains nuts
-    {{/if}}
+  <div class="col-md-3">
+    🥜: {{#if dish.has_nuts}} Contains nuts {{else}} No nuts {{/if}}
   </div>
   {{/each}}
   <!-- This is the form for adding a new dish -->
