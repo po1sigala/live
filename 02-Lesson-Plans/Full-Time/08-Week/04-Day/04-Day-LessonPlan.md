@@ -25,7 +25,7 @@ In today's class, students will have time both to outline their presentations, a
 	2. Course correct if scope creeps or focus shifts
 
 	3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
-    
+
 * Keep the daily scrums short. Ask each student the following questions:
 
 	* What did you accomplish? 
@@ -33,8 +33,6 @@ In today's class, students will have time both to outline their presentations, a
 	* What are your goals? 
 
 	* Are there any obstacles? 
-
-* In the next unit, students will start using MongoDB. Advise the students to have MongoDB installed before that unit begins. Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
 ## Learning Objectives
 
@@ -116,8 +114,6 @@ By the end of class, students will be able to:
 * Some students may feel nervous with their deadline approaching. Reassure them that they have solid project ideas and that they'll be fine as long as they prepare for their presentation.
 
 * A few groups might not seem poised to finish their apps time. Tell them to drop any undeveloped and unnecessary features. Even if they can't meet their proposed goal, they should still present a functional app in the next class. Add in that they can talk about the dropped features as planned updates.
-
-* In the next unit, students will start using MongoDB. Remind them to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
 * Answer any questions before ending class.
 
