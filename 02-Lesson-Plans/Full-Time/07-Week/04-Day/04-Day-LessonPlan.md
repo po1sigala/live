@@ -239,7 +239,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
     ```
 
-  * We are using the URL to asccess the dish's id, as follows, to ensure that we send the fetch request to the correct endpoint:
+  * We are using the URL to access the dish's id, as follows, to ensure that we send the fetch request to the correct endpoint:
 
     ```js
     const id = window.location.toString().split('/')[
