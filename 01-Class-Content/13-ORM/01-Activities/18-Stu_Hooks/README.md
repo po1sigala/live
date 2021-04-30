@@ -10,9 +10,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when `User.int()` includes Hooks to hash the user's password before it is created.
+* It's done when `User.init()` includes Hooks to hash the user's password before it is created.
 
-* It's done when `User.int()` includes Hooks to hash the user's password before it is updated.
+ * It's done when `User.init()` includes Hooks to hash the user's password before it is updated, only if a password is provided in the payload.
 
 ## 💡 Hints
 
