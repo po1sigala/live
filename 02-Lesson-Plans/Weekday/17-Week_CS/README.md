@@ -34,6 +34,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
 
+Be sure to have MongoDB installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your machine. Also, make sure students have it installed prior to coming to class.
+
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
@@ -56,15 +58,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video for tips and tricks on how to solve the corresponding algorithm.
+  * [01: Reverse Words](../../../01-Class-Content/17-CS/03-Algorithms/01-reverse-no-built-in)
 
-* [01: Reverse Words](../../../01-Class-Content/17-CS/03-Algorithms/01-reverse-no-built-in)
+  * [02: Left Rotation](../../../01-Class-Content/17-CS/03-Algorithms/02-left-rotation)
 
-* [02: Left Rotation](../../../01-Class-Content/17-CS/03-Algorithms/02-left-rotation)
+      * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
-    * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
-
-* [03: Reverse in Place](../../../01-Class-Content/17-CS/03-Algorithms/03-reverse-in-place)
+  * [03: Reverse in Place](../../../01-Class-Content/17-CS/03-Algorithms/03-reverse-in-place)
 
 ### Resources
 
