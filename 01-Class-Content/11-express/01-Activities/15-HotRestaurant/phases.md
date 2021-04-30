@@ -36,7 +36,7 @@ Note: We know this is a hard activity. We know you aren't yet comfortable with N
 
 * Create a set of routes for displaying the HTML pages
 
-* Use jQuery to run AJAX calls to GET and POST data from users to the Express server
+* Use `fetch` to run AJAX calls to GET and POST data from users to the Express server
 
 ---------------------
 
