@@ -9,8 +9,8 @@ async function editFormHandler(event) {
   // What do we call this kind of operator?
   // We call this a ternary operator. It begins with a condition followed by a question mark and two code blocks separated by a :.
   const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
-  console.log(document.querySelector('#has_nuts')
-// window.location gives us access to the URL. We then use the .split() method to access the number at the end of the URL and set that equal to id.
+
+  // window.location gives us access to the URL. We then use the .split() method to access the number at the end of the URL and set that equal to id.
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
