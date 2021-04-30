@@ -1,870 +1,422 @@
-# 9.5 - Intro to Mongoose and IndexedDb (10:00 AM)
+# XX.X Full-Time Lesson Plan: { @TODO Descriptive and Professional Title of This Day's Topics }  (Note: Full-Time Friday LP using PT even unit's .3 LP)
 
 ## Overview
 
-In the class, you will introduce students to Mongoose, a node package that provides a schema-based solution to model your Node application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
-
-This lesson also introduces The Indexed Database API, commonly referred to as IndexedDB. IndexedDB is a JavaScript API provided by web browsers for managing a NoSQL database of JSON objects. 
+@TODO Write a two- or three-sentence overview of the lesson plan.
 
 ## Instructor Notes
 
-* Complete activities `12-25` in `18-NoSQL`
+* In this lesson, students will complete activities `21-Ins_Demo-Title` through `28-Stu_Mini-Project`.
 
-* When moving on to new activities, make sure you refresh and or delete your database in IndexedDB. If you are not seeing changes to your database this will fix it.
+* @TODO Every Instructor Notes block begins with the preceding bullet, which outlines the activities that will be covered during class.
 
-* If students question why they are learning IndexedDB, let them know that the web is moving away from traditional cookies and into client side storage solutions such as IndexedDB. It gives them the ability to have offline mode for their applications which they will be learning more about in the following unit.
+* @TODO Empathize with the instructor. If you only had one hour to prepare for class, what are the things you would want to know up front? What are the potential pitfalls in class? Where are students going to get hung up? 
+
+* @TODO Set the instructor up for success.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* Create custom methods in Mongoose to set and update data purely on the back end.
+* @TODO Bullet the learning objectives for the lesson plan. Refer to your Activity Planner.
 
-* Utilize Mongoose's populate method to create relationships between the collections in their database.
+* @TODO When writing learning objectives, start each one with a measurable verb. Refer to this [list of measurable verbs used to assess learning outcomes](https://www.clinton.edu/curriculumcommittee/listofmeasurableverbs.cxml). For example, "Initialize projects and install third-party packages using npm."
 
-* Explain the pros and cons of storing client side data with cookies and IndexedDB.
+* @TODO If a learning objective is a concept and not a demonstrable skill, use the verb "explain". For example, "Explain the client-server model."
 
-* Request an IndexedDB instance.
+* @TODO Do not use the verb "understand" because it is not measurable.
 
-* Create an object store and add data with the `add` method.
-
-* Search for an item by keyPath with the `get` method.
-
-* Create and search by index with the `getAll` method.
-
-* Utilize Cursors to iterate through and update object store data with the `update` method.
-
-## Slides
-
-N/A
+* @TODO Aim for 3&ndash;6 learning objectives. If you find yourself listing more than six, you may need to rethink the scope of your objectives or the lesson itself. 
 
 ## Time Tracker
+@TODO ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+|        |     | **EVEN.3 BEGINS**                  |          |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:10AM| 2   | Instructor Demo:                   | 0:05     |
+| 10:15AM| 3   | Student Do:                        | 0:15     |
+| 10:30AM| 4   | Instructor Review:                 | 0:10     |
+| 10:40AM| 5   | Instructor Demo:                   | 0:05     |
+| 10:45AM| 6   | Student Do:                        | 0:15     |
+| 11:00AM| 7   | Instructor Review:                 | 0:10     |
+| 11:10AM| 8   | Instructor Demo:                   | 0:05     |
+| 11:15AM| 9   | Student Do:                        | 0:15     |
+| 11:30AM| 10  | Instructor Review:                 | 0:10     |
+| 11:40AM| 11  | Everyone Do: Git                   | 0:20     |
+| 12:00PM| 12  | BREAK                              | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini Project      | 0:05     |
+| 12:35PM| 14  | Student Do: Mini Project           | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini Project    | 0:10     |
+| 1:45PM | 16  | Introduce Homework                 | 0:05     |
+| 1:50PM | 17  | FLEX                               | 0:40     |
+| 2:30PM | 18  | End                                | 0:00     |
 
-[09.5: Intro To Mongoose Time Tracker](https://docs.google.com/spreadsheets/d/1XXPSsxHbSJbndGAqtCeGW6iSeJdwqsDgra0pk8QlxcU/edit#gid=0)
-
-- - - 
+---
 
 ## Class Instruction
 
-### 1. Instructor Do: Custom Methods (10 mins)
-
-* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
-
-  * ✔ Mongoose provides a way for us to create custom methods to manipulate our data.
-
-* Change into [12-Ins-Custom-Methods](../../../../01-Class-Content/18-NoSQL/01-Activities/12-Ins-Custom-Methods) and run `npm install` then `node server.js` to launch the app.
-
-* Visit `localhost:3000` and fill out the form to create a new user and demo the response.
-
-  ```js
-  {
-    "isCool": true,
-    "_id": "5cfbbd607de1a557eeaaa056",
-    "username": "test...the Coolest!",
-    "password": "password1234",
-    "email": "testuser@gmail.com",
-    "userCreated": "2019-06-08T13:51:28.033Z",
-    "__v": 0
-  }
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What is difference about the way our data was returned?
-
-  * 🙋 Our new user has an `isCool` field that is set to `true`.
-
-* Open [12-Ins-Custom-Methods/userModel.js](../../../../01-Class-Content/18-NoSQL/01-Activities/12-Ins-Custom-Methods/userModel.js) and scroll down to the custom methods.
-
-* Here 
-
-  ```js
-  UserSchema.methods.coolifier = function() {
-    this.username = `${this.username}...the Coolest!`;
-    return this.username;
-  };
-
-  UserSchema.methods.makeCool = function() {
-    this.isCool = true;
-    return this.isCool;
-  };
-  ```
-
-* Next open `server.js` and demonstrate how we are calling our methods on our new user.
-
-  ```js
-  app.post("/submit", ({ body }, res) => {
-    const user = new User(body);
-    user.coolifier(); // Bob...the Coolest!
-    user.makeCool(); // isCool = true;
-
-    User.create(user)
-      .then(dbUser => {
-        res.json(dbUser);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-  });
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What are the benefits of using Mongoose?
-
-  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
-
-* Take any clarifying questions before moving on to the students activity.
-
-### 2. Student Do: Custom Methods (15 mins)
-
-* Direct students to the next activity located in [13-Stu-Custom-Methods/Unsolved](../../../../01-Class-Content/18-NoSQL/01-Activities/13-Stu-Custom-Methods/Unsolved)
-
-* **Instructions**
-
-* Open `userModel.js` and create the following custom methods.
-
-  * `setFullName`: sets the current user's `fullName` property to their lastName appended to their `firstName`
-
-  * `lastUpdatedDate`: sets the current user's `lastUpdated` property to `Date.now()`
-
-* When you are finished use your new custom methods in a `POST` request.
-
-### 3. Instructor Do: Review Methods (10 mins)
-
-* Change into [13-Stu-Custom-Methods/Solved](../../../../01-Class-Content/18-NoSQL/01-Activities/13-Stu-Custom-Methods/Solved) and open the `userModel.js` file.
-
-* Ask for a volunteer to lead your through the custom methods they created.
-
-* Next open `server.js` and ask for a volunteer to explain how to call these new methods in that file.
-
-* Start the server and load up the site in your browser to demonstrate the form. 
-
-* Take any clarifying questions before moving on.
-
-### 4. Instructor Do: Mongoose Populate (10 mins)
-
-* Change into [14-Ins-Populate](../../../../01-Class-Content/18-NoSQL/01-Activities/14-Ins-Populate) and start the server with `node server.js`. 
-
-* Then, visit `/books` to see your books listed.
-
-```js
-[{
-    "_id": "5cfbc820bc851f678c714b2c",
-    "author": "Herman Melville",
-    "title": "Moby Dick",
-    "__v": 0
-}, {
-    "_id": "5cfbc83ebc851f678c714b2d",
-    "author": "F. Scott Fitzgerald",
-    "title": "The Great Gatsby",
-    "__v": 0
-}]
-```
-
-* Then visit `/library` to see your library data listed in JSON, including a list of `ObjectIds` in the book property. These are the `ObjectIds` associated with each book we've made.
-
-```js
-[{
-    "books": ["5cfbc510fff60b62b1a9c318", 
-              "5cfbc51cfff60b62b1a9c319", 
-              "5cfbc820bc851f678c714b2c", 
-              "5cfbc83ebc851f678c714b2d"],
-    "_id": "5cfbc29cfff60b62b1a9c317",
-    "name": "Campus Library",
-    "__v": 0
-}]
-```
-
-* Ask students, what if we want to see the data for all of the books stored in our library. We could go back to books, but what if we want to include all of the information about our library and our books, and query that data with just one call.
-
-  * Answer: This is where `Mongoose`'s populate method comes in. Open the `/populated` route in your browser, and go to the books property. All of the books will be there.
-
-  ```js
-  [{
-      "books": [{
-          "_id": "5cfbc820bc851f678c714b2c",
-          "author": "Herman Melville",
-          "title": "Moby Dick",
-          "__v": 0
-      }, {
-          "_id": "5cfbc83ebc851f678c714b2d",
-          "author": "F. Scott Fitzgerald",
-          "title": "The Great Gatsby",
-          "__v": 0
-      }],
-      "_id": "5cfbc29cfff60b62b1a9c317",
-      "name": "Campus Library",
-      "__v": 0
-  }] 
-  ```
-
-* How does this happen?
-
-  * Show them the `Library.js` model, and how it has a reference to the `Book.js` model inside it's schema.
-
-    ```js
-    const mongoose = require("mongoose");
-
-    const Schema = mongoose.Schema;
-
-    const LibrarySchema = new Schema({
-      name: {
-        type: String,
-        unique: true
-      },
-      books: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: "Book"
-        }
-      ]
-    });
-
-    const Library = mongoose.model("Library", LibrarySchema);
-
-    module.exports = Library;
-    ```
-
-  * Then show them the `index.js` file inside of the `models` folder.
-
-    ```js
-    module.exports = {
-    Book: require("./Book"),
-    Library: require("./Library")
-    };
-    ```
-
-  * Explain that when working with multiple models, it's often useful to be able to require all of them at once, rather than individually. 
-  
-  * By exporting an object containing all of our models from the `index.js` file in the models folder, we can then require this object and access all of our models inside of `server.js`.
-
-    ```js
-    const db = require("./models");
-    ```
-
-  * Point out the `populate` method being used in `server.js`.
-
-    ```js
-    app.get("/populated", (req, res) => {
-    db.Library.find({})
-      .populate("books")
-      .then(dbLibrary => {
-        res.json(dbLibrary);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-    });
-    ```
-
-  * Explain that here we are running `populate("books")` after finding books and before handling the result of the query in `.then`.
-
-  * Take any clarifying questions before moving on to the next activity.
-
-### 5. Student Do: Mongoose Populate (20 mins)
-
-* Direct students towards the next activity located in [15-Stu-Populate/Unsolved](../../../../01-Class-Content/18-NoSQL/01-Activities/15-Stu-Populate/Unsolved)
-
-* **Instructions**
-
-  * Open `server.js` and update the `/populate` route to return `Users` populated with notes as JSON to the client.
-
-* **Hint:** Check out the `Note.js` and `User.js` models to see how the schemas there make the populate method possible.
-
-### 6. Instructor Do: Review Mongoose Populate (15 mins)
-
-* Open up [15-Stu-Populate/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/15-Stu-Populate/Solved/server.js).
-
-* Ask for a volunteer to to walk you through the solution.
-
-```js
-app.get("/populateduser", (req, res) => {
-  db.User.find({})
-    .populate("notes")
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-});
-```
-
-### 7. Instructor Do: Review MongoJS and Mongoose (35 mins)
-
-*  Take some time before the break to answer any clarifying questions about the previous activity or any other concepts covered so far in Unit 18.
-
-### 8. Break (30 mins)
-
-### 9. Instructor Do: Intro To IndexedDB (10 mins)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
 
-  * ☝️ How do we store data client-side? 
+### 2. Instructor Demo: { ACTIVITY NAME } (5 min) 
 
-  * 🙋 Cookies, local storage, session storage.
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
 
-  * ☝️ What is a cookie?
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
 
-  * 🙋 A cookie is a small piece of data sent from a website and stored on the user's computer by the user's web browser.
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
 
-  * ☝️ What are some of the issues we encounter storing data client-side? 
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
 
-  * 🙋 String value pairs, objects must be stringified and strings must be converted to JSON. Size limits.
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
 
-  * ☝️ From the name, what do we think IndexedDB is?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 The Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
+  * ☝️ How would we build this?
 
-### 10. Instructor Do: Creating an IndexedDB Connection (5 mins)
+  * 🙋 @TODO { YES, HOW? } 
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+* Answer any questions before proceeding to the next activity.
 
-  * ✔ We access `indexedDB` via the `window` object.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
 
-  * ✔ We create a new IndexedDB connection using the `open` method and pass it a name for the DB and a version number.
+### 3. Student Do: { ACTIVITY NAME } (15 min) 
 
-  * ✔ Our request returns a result that we can then manipulate.
+* Direct students to the activity instructions found in `@TODO/folder/file`.
 
-  ```js
-  const request = indexedDB.open("firstDatabase", 1);
-  
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
   ```
 
-* Open [16-Ins_Opening_IndexedDB](../../../../01-Class-Content/18-NoSQL/01-Activities/16-Ins_Opening_IndexedDB/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ![16-Ins_Opening_IndexedDB.png](Images/16-Ins_Opening_IndexedDB.png)
+### 4. Instructor Review: { ACTIVITY NAME } (10 min) 
 
-* Navigate into the `16-Ins_Opening_IndexedDB` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `firstDatabase`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Ask the class the following question(s): 
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
 
-  * ☝️ How many arguments does the `open` method take and what are they for?
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * 🙋 Two and the first one is the DB name, the second is the version number. The version number controls which version of the schema to use.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-### 11. Student Do: Creating an IndexedDB Connection (10 mins)
+  * ✔️ @TODO { THIS }
 
-* Direct students to the activity instructions found in [17-Stu_Opening_IndexedDB](../../../../01-Class-Content/18-NoSQL/01-Activities/17-Stu_Opening_IndexedDB/Unsolved):
+  * ✔️ @TODO { THAT }
 
-```md
-# Requesting an IndexedDB Database
+  * ✔️ @TODO { THE OTHER }
 
-In this activity, you will create a request for an indexedDB database and console.log the name of the db to the screen. 
+* Open `@TODO/folder/file` in your IDE and explain the following: 
 
-## Instructions
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
 
-* Write code to request an IndexedDB database instance.
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
 
-* On success, log the name of the database to your console.
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
-## 💡 Hint(s)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Use the [indexedDB open docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
 
-* You can `console.log` the `request` to so what attributes are available to you.
+  * 🙋 @TODO { YES, WE DO! }
 
-## 🏆 Bonus
+  * ☝️ What can we do if we don't completely understand this?
 
-* How can we check that indexedDB is enabled before trying to open a connection? Use the following link to research and update your solution [Using IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
 
-```
+* Answer any questions before proceeding to the next activity.
 
-### 12. Instructor Do: Review Creating an IndexedDB Connection (5 mins)
+### 5. Instructor Demo: { ACTIVITY NAME } (5 min) 
 
-* Use the prompts and talking points below to review the following key point(s):
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
 
-  * ✔ We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * ✔ In the `onsuccess` method we `console.log(request.result.name);` 
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
 
-  ✔ The `onsuccess` method is called every time we make a request.
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
 
-* Open [17-Stu_Opening_IndexedDB](../../../../01-Class-Content/18-NoSQL/01-Activities/17-Stu_Opening_IndexedDB/Solved/index.html) in your IDE and explain the following point(s):
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
 
-  * We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * In the `onsuccess` method we `console.log` the `name` of the `result`, which is the database name.
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
 
-  ```js
-  const request = window.indexedDB.open("firstDatabase", 1);
-    request.onsuccess = event => {
-    console.log(request.result.name);
-  };
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+### 6. Student Do: { ACTIVITY NAME } (15 min) 
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
   ```
 
-  * 🔑 Our `open` method takes two arguments, first the db name and then the version number. 
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Ask the class the following question(s):
+### 7. Instructor Review: { ACTIVITY NAME } (10 min) 
 
-  * ☝️ What happens when we call `open` on `indexedDB`?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 The call to the `open()` method returns a request object with a `result` (success) value that you handle as an event. 
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
 
-* Answer any questions before proceeding to the next demo.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 13. Instructor Do: Creating Object Stores (5 mins)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+  * ✔️ @TODO { THIS }
 
-  * ✔ Object stores can be thought of as a "table" where we hold data.
+  * ✔️ @TODO { THAT }
 
-  * ✔ Object stores can hold any data type.
+  * ✔️ @TODO { THE OTHER }
 
-  * ✔ Object stores are schema-less, unlike SQL databases.
+* Open `@TODO/folder/file` in your IDE and explain the following: 
 
-  * ✔ We create our object stores in the `onupgradeneeded` method which is called when you change the db version. ie: From no database to 1, from 1 to 2 etc.
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
 
-  * ✔ If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered.
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
 
-*  Open [18-Ins_Creating_Object_Stores](../../../../01-Class-Content/18-NoSQL/01-Activities/18-Ins_Creating_Object_Stores/index.html) in your IDE and explain the above points.
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  
-  request.onupgradeneeded = function(event) {
-    const db = event.target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+
+  * 🙋 @TODO { YES, WE DO! }
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: { ACTIVITY NAME } (5 min) 
+
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
+
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+
+### 9. Student Do: { ACTIVITY NAME } (15 min) 
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
   ```
 
-* Next open [18-Ins_Creating_Object_Stores](../../../../01-Class-Content/18-NoSQL/01-Activities/18-Ins_Creating_Object_Stores/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ![18-Ins_Creating_Object_Stores.png](Images/18-Ins_Creating_Object_Stores.png)
+### 10. Instructor Review: { ACTIVITY NAME } (10 min) 
 
-* We navigate into the `20-Ins_Creating_Object_Stores` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* When we click on the database tab, we can see that we now have an empty object store called `todoList`.
+  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
 
-* Ask the class the following question(s): 
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * ☝️ What is an object store?
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * 🙋 It's similar to an SQL table and where we store data in IndexedDB.
+  * ✔️ @TODO { THIS }
 
-  * ☝️ What is the main difference between an object store and an SQL table?
+  * ✔️ @TODO { THAT }
 
-  * 🙋 Object stores do not have schemas.
+  * ✔️ @TODO { THE OTHER }
 
-### 14. Student Do: Create an Object Store (15 mins)
+* Open `@TODO/folder/file` in your IDE and explain the following: 
 
-* Direct students to the activity instructions found in [19-Stu_Creating_Object_Stores](../../../../01-Class-Content/18-NoSQL/01-Activities/19-Stu_Creating_Object_Stores/Unsolved):
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
 
-```md
-# Creating an Object Store
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
 
-In this activity, you will create an object store for your IndexedDB database.
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
-## Instructions
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Write code to request an IndexedDB database instance.
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
 
-* On success, log the result to your console.
+  * 🙋 @TODO { YES, WE DO! }
 
-* Inside the `onupgradeneeded` method, create an object store for you database called `todoList`.
+  * ☝️ What can we do if we don't completely understand this?
 
-## 💡 Hint(s)
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
 
-* Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
+* Answer any questions before proceeding to the next activity.
 
-* You can `console.log` the `request` to so what attributes are available to you.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
 
-## 🏆 Bonus
+### 11. Everyone Do: Git (20 min)
 
-* Use the [keyPath](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath) docs to research what a `keyPath` is and how to add it to your `objectStore`.
-```
+* @TODO Open [Git docs](https://git-scm.com/docs/{TITLE}) in your browser and explain the following:
 
-### 15. Instructor Do: Review Creating Object Stores (5 mins)
+  * @TODO GIVE A SHORT EXPLANATION OF THIS GIT CONCEPT/COMMAND.
 
-* Use the prompts and talking points below to review the following key point(s):
+* Direct students to the activity instructions found in `@TODO/folder/file`.
 
-  * ✔ We create the object store in the `onupgradeneeded` method.
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Open [19-Stu_Creating_Object_Stores](../../../../01-Class-Content/18-NoSQL/01-Activities/19-Stu_Creating_Object_Stores/Solved/index.html) in your IDE and review the code snippet.
+* Open your command line and demonstrate the following:
 
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-    
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
 
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
+
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+
+* Answer any questions before proceeding.
+
+### 12. BREAK (30 min)
+
+### 13. Instructor Demo: Mini Project (5 min) 
+
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
+
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following:
+
+  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+
+  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 @TODO { YES, HOW? } 
+
+* Answer any questions before allowing students to start the mini project.
+
+### 14. Student Do: Mini Project (60 min)
+
+* Direct students to the activity instructions found in `@TODO/folder/file`.
+
+* Break your students into groups that will work together on this activity.
+
+  ```md
+  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
   ```
 
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Ask the class the following question(s):
+### 15. Instructor Review: Mini Project (10 min)  
 
-  * ☝️ What do we use object stores for? 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 To store our indexedDB data.
+  * ☝️ How comfortable do you feel with the mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-* Answer any questions before proceeding to the next demo.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 16. Instructor Do: Defining Object Store Data with Indexes (5 mins)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+  * ✔️ @TODO { THIS }
 
-  * ✔ Object stores are schema-less and have no native search capability.
+  * ✔️ @TODO { THAT }
 
-  * ✔ We create indexes on object store "columns" so we can query.
+  * ✔️ @TODO { THE OTHER }
 
-  * ✔ We use the `createIndex(indexName, keyPath)` method to create indexes, it takes two arguments.
+* Open `@TODO/folder/file` in your IDE and explain the following: 
 
-  * ✔ The `indexName` is what you use to access the index when querying.
+  * @TODO { WE DO THIS AND THE RESULT IS THAT }
 
-  * ✔ The `keyPath` is the actual name of the "column."
+    ```
+    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+    ```
 
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
 
-* Open [20-Ins_Creating_Indexes](../../../../01-Class-Content/18-NoSQL/01-Activities/20-Ins_Creating_Indexes/index.html) in your IDE and review the code snippet.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("timestamp", "timestamp");
-  };
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
+  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
 
-* Open [20-Ins_Creating_Indexes](../../../../01-Class-Content/18-NoSQL/01-Activities/20-Ins_Creating_Indexes/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
+  * 🙋 @TODO { YES, WE DO! }
 
-  ![20-Ins_Creating_Indexes.png](Images/20-Ins_Creating_Indexes.png)
+  * ☝️ What can we do if we don't completely understand this?
 
-  * We navigate into the `22-Ins_Creating_Indexes` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
+  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
 
-  * When we click on the database tab, we can see that we now have an empty object store called `todoList`. Inside our `todoList` object store we now have a `timestamp` index that we can use to query on.
+* Answer any questions before proceeding to the next activity.
 
-* Ask the class the following question(s): 
+### 16. Instructor Demo: Introduce Homework (5 min)
 
-  * ☝️ What are indexes for?
+@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
 
-  * 🙋 They are used to query on object store "columns" since they have no way to natively search.
+* Open `@TODO/folder/file` in your browser and demonstrate the following:
 
-### 17. Student Do: Defining Object Store Data with Indexes (10 mins)
+* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following:
 
-* Direct students to the activity instructions found in [21-Stu_Creating_Indexes](../../../../01-Class-Content/18-NoSQL/01-Activities/21-Stu_Creating_Indexes/Unsolved):
+  * @TODO { WHAT ARE WE GOING TO BE BUILD? }
 
-```md
-# Creating Indexes
+  * @TODO { ISN'T THIS NEAT! A SOPHISTICATED OR MODERN APPLICATION OF A KEY TOPIC. }
 
-In this activity, you will create an index on your object store that can be used to query data.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-## Instructions
+  * ☝️ What are we learning?
 
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+  * 🙋 @TODO { YES, WHAT? }.
 
-* Write code to request an IndexedDB database instance.
+  * ☝️ How does this project build off or extend previously learned material?
 
-* On success, log the result to your console.
+  * 🙋 @TODO {YES, WHAT? }.
 
-* Inside the `onupgradeneeded` method, create an object store for you database called `todoList`. 
+  * ☝️ How does this project relate to your career goals?
 
-* Next, create three indexes for your ToDoList called `icebox`, `inprogress` and `complete`. 
+  * 🙋 @TODO { HOW DO COMPANIES USE IT IN INTERESTING WAYS? HOW POPULAR OR IN-DEMAND IS IT? WHY IS THE PROJECT ENTICING TO EMPLOYERS? }
 
-## 💡 Hint(s)
+* Ask TAs to direct students to the Homework Requirements found in `@TODO/folder/file`.
 
-* Use the [createIndex](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex) docs if you are stuck.
+### 17. FLEX (40 min)
 
-## 🏆 Bonus
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
-* The `createObjectStore` method takes an optional `keyPath`. Using the [docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore), update your code to pass the `keyPath` option when your store is created.
-```
+* @TODO Provide GUIDED instruction for review.
 
-### 18. Instructor Do: Review Defining Object Store Data with Indexes (5 mins)
+* Answer any questions before ending the class.
 
-* Open [21-Stu_Creating_Indexes](../../../../01-Class-Content/18-NoSQL/01-Activities/21-Stu_Creating_Indexes/Solved/index.html) in your IDE and explain the following point(s):
+### 18. END (0 min)
 
-  * We simply call the `createIndex` method on our object store and create three new indexes, giving each of them an `indexName` and `keyPath`.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-  ```js
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("icebox", "icebox");
-    objectStore.createIndex("inprogress", "inprogress");
-    objectStore.createIndex("complete", "complete");
-  };
-  ```
-
-  * 🔑 Recall that the `indexName` is what you use to access the index and the `keyPath` is the actual name of the "column."
-
-* Answer any questions before proceeding to the next demo.
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-### 19. Instructor Do: Adding and Getting Object Store Data (5 mins)
-  
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We add data to our object stores with the `add` method.
-
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
-
-  * ✔ We use `get` object store method to query by `keyPath`.
-
-  * ✔ We use the `getAll` object store method to query by indexes.
-
-* Open [22-Ins_Adding_Getting_Data](../../../../01-Class-Content/18-NoSQL/01-Activities/22-Ins_Adding_Getting_Data/index.html) in your IDE and review the following code.
-
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", { keyPath: "listID" }); // can now query by listID
-    todoListStore.createIndex("statusIndex", "status"); // can now query by statusIndex
-  }
-
-  todoListStore.add({ listID: "1", status: "complete" }); // adding data
-
-  const getRequest = todoListStore.get("1"); // querying by keyPath
-  const getRequestIdx = statusIndex.getAll("complete"); // querying by index
-
-  ```
-
-* Open [22-Ins_Adding_Getting_Data](../../../../01-Class-Content/18-NoSQL/01-Activities/22-Ins_Adding_Getting_Data/index.html) in your browser and open your Chrome Developer tools and navigate to your console.
-
-  ![22-Ins_Adding_Getting_Data](Images/22-Ins_Adding_Getting_Data.png)
-
-  * We navigate into the `22-Ins_Adding_Getting_Data` directory and open `index.html` from the command line. When we click on the database tab, we can see that we now have data in our `todoList` object store.
-
-* Next open your developer tools console to show the data being returned from our `get` and `getAll` methods.
-
-  ![22-Ins_Adding_Getting_Data-console](Images/22-Ins_Adding_Getting_Data-console.png)
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is a keyPath?
-
-  * 🙋 A keyPath gives us a way to query our column's data.
-
-  * ☝️ What is an index?
-
-  * 🙋 An index is another way to more efficiently and specifically query for data.
-
-### 20. Student Do: Adding and Getting Object Store Data (15 mins)
-
-* Direct students to the activity instructions found in [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/18-NoSQL/01-Activities/23-Stu_Adding_Getting_Data/Unsolved):
-
-```md
-# Adding and Getting Data
-
-In this activity, you will create add and retrieve data from an objectStore using a keyPath and index.
-
-## Instructions
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* In the `onupgradeneeded` method: 
-
-  * Create a `todoList` object store with a `listID` keyPath that can be used to query on.
-
-  * Create an index for a "column" you'd like to query on. ie: due-date
-
-* In the `onsuccess` method:
-
-  * Create variables for a new `transaction` on your database, `objectStore` and the `index` you created.
-
-  * Add four new items to your object store with the `add` method.
-
-  * Using the `get` method, return an item from your object store.
-
-  * Using the `getAll` method, query by index and return all items.
-
-## 💡 Hint(s)
-
-* Use the following docs if you are stuck.
-
-  * [add](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add) 
-
-  * [get](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get)
-
-  * [getAll](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll)
-
-## 🏆 Bonus
-
-* Make a new request that removes all of your data from the object store. Use [the clear docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/clear) as your guide.
-```
-
-### 21. Instructor Do: Review Adding and Getting Object Store Data (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-  
-  * ✔ We add data to our object stores with the `add` method.
-
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
-
-  * ✔ We use `get` object store method to query by `keyPath`.
-
-  * ✔ We use the `getAll` object store method to query by indexes.
-
-* Open [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/18-NoSQL/01-Activities/23-Stu_Adding_Getting_Data/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We first create an object store and pass it the optional `keyPath` argument of `listID` that we can use to query with.
-  
-  * We then create an index on our `todoListStore` with `createIndex`, passing it an `index` of `statusIndex` and a `keyPath` of `status`.
-  
-  * We then simply use the `add` method to add records to our object store.
-
-  * Next, we make a get request to our object store using the `get` method, which queries by `keyPath`.
-
-  * Finally we make another get request with `getAll` and query by our `index`.
-
-* Open [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/18-NoSQL/01-Activities/23-Stu_Adding_Getting_Data/index.html) in your IDE and review the following code.
-
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", {keyPath: "listID"}); 
-    todoListStore.createIndex("statusIndex", "status"); 
-  }
-
-  todoListStore.add({ listID: "1", status: "complete" }); 
-
-  const getRequest = todoListStore.get("1"); 
-  const getRequestIdx = statusIndex.getAll("complete"); 
-
-  ```
-
-  * 🔑 Querying by `index` is more efficient than by `keyPath`. When creating a schema, if you know the data you will be searching for most often, creating an `index` for that data is ideal.
-
-* Ask the class the following question(s):
-
-  * ☝️ When querying with the `getAll` method, what argument do you pass it?
-
-  * 🙋 The value of the index you want returned.
-
-* Answer any questions before proceeding to the next demo.
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-### 22. Instructor Do: Updating Data With Cursors (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We open a cursor request on our object store with `openCursor`.
-
-  * ✔ On success we have a result that we can iterate through.
-
-  * ✔ We use the `continue` key word to move through the records.
-
-* Open [24-Ins_Updating_Data_With_Cursors](../../../../01-Class-Content/18-NoSQL/01-Activities/24-Ins_Updating_Data_With_Cursors/index.html) in your IDE and review the following code.
-
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-      if (cursor) {
-        console.log(cursor.value);
-        cursor.continue();
-      } else {
-        console.log("No documents left!");
-      }
-    };
-  ```
-
-* Open [24-Ins_Updating_Data_With_Cursors](../../../../01-Class-Content/18-NoSQL/01-Activities/24-Ins_Updating_Data_With_Cursors/index.html) in your browser and open your Chrome Developer tools and navigate to your console.
-
-   ![24-Ins_Updating_Data_With_Cursors](Images/24-Ins_Updating_Data_With_Cursors.png)
-
-  * We navigate into the `24-Ins_Updating_Data_With_Cursors` directory and open `index.html` from the command line. Next open your Chrome Developer tools and navigate into the console to see the data being returned.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is a cursor used for?
-
-  * 🙋 It gives us a way to iterate through our object stores files.
-
-### 23. Student Do: Updating Data With Cursors (15 mins)
-
-* Direct students to the activity instructions found in [25-Stu_Updating_Data_With_Cursors](../../../../01-Class-Content/18-NoSQL/01-Activities/25-Stu_Updating_Data_With_Cursors/Unsolved):
-
-```md
-# Updating Data With Cursors
-
-In this activity, you will be updating records in your object store using a Cursor.
-
-## Instructions
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Inside ` getCursorRequest.onsuccess`
-
-  * Set the `result` to a variable named `cursor`.
-
-  * Check the status of each cursor's value and if it's equal to "in-progress", set the status to "complete".
-
-## 💡 Hint(s)
-
-* Use the [cursor docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor), specifically `cursor.value`, `cursor.update` and `cursor.continue` to solve the activity.
-
-## 🏆 Bonus
-
-* Make a new request that removes any tasks with the status "backlog" from the object store. Use [the delete docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete) as your guide.
-```
-
-### 24. Instructor Do: Review Updating Data With Cursors (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We open a cursor request on our object store with `openCursor`.
-
-  * ✔ On success we have a result that we can iterate through.
-
-  * ✔ We use the `continue` key word to move through the records.
-
-* Open [25-Stu_Updating_Data_With_Cursors](../../../../01-Class-Content/18-NoSQL/01-Activities/25-Stu_Updating_Data_With_Cursors/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We first open a cursor on our object store with `openCursor()`.
-
-  * Then in our `onsuccess` method we check to see if our cursor has any data in it.
-
-  * If it does, we check the status of each cursor's value and if it's equal to "in-progress" we set the status to "complete" with the `update` method.
-
-  * We then call `continue` to move to the next record, until there are none left to evaluate.
-
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-        if (cursor) {
-          if (cursor.value.status === "in-progress") {
-            const todo = cursor.value;
-            todo.status = "complete";
-             cursor.update(todo);
-          }
-          cursor.continue();
-        }
-      };
-  ```
-
-* Ask the class the following question(s):
-
-  * ☝️ What does the `continue` method do?
-
-  * 🙋 Continues to the next record, exiting when there are none left.
-
-* Answer any questions before proceeding to the next demo.
-
-### 25. End
-
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
