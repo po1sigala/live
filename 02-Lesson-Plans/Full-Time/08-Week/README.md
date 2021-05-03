@@ -28,9 +28,12 @@ Refer to the Class Content Unit Overview for [Unit 15](../../../01-Class-Content
 
 ## Heads-Up
 
-Before the next unit, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
+In Unit 17, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
+
+Before Unit 18, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
 If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
+
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
