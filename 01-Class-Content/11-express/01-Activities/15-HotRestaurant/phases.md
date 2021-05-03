@@ -104,7 +104,7 @@ Then, thoroughly test your application for bugs. Check if there are any obvious 
 
 Then, if you have more time -- begin to tackle any bonus of your choice:
 
-* Add buttons for "checking off" individuals from the reservation list. Once this happens, the next person on the waitlist should be addd to the main reservation list.
+* Add buttons for "checking off" individuals from the reservation list. Once this happens, the next person on the waitlist should be added to the main reservation list.
 
 * Add code to your server so that it "counts" every time a person visits any of the pages. Display a running count on the website.
 
