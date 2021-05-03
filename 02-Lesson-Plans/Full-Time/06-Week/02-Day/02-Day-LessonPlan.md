@@ -57,7 +57,7 @@ Today's class is focused on creating an Express-based web server. Students will 
 
 * Then explain to them that in future applications we'll eventually be using `fetch` API methods for sending such post requests to our server.
 
-* Then have them install the program [Insomnia Core](https://insomnia.rest/) if they haven't already. (Note: Students may ask questions like: "Do you always have to use Insomnia Core to send post requests?" Use this as an opportunity to explain that Insomnia Core is simply a GUI for development, and that in future opportunities we'll be using jQuery or other front-end code approaches for sending the same post requests.)
+* Then have them install the program [Insomnia Core](https://insomnia.rest/) if they haven't already. (Note: Students may ask questions like: "Do you always have to use Insomnia Core to send post requests?" Use this as an opportunity to explain that Insomnia Core is simply a GUI for development, and that in future opportunities we'll be using `fetch` or other front-end code approaches for sending the same post requests.)
 
 * Walk students through the process of sending POST requests in Insomnia Core. If you are unfamiliar with Insomnia Core use the following points as a guide:
 
@@ -274,7 +274,7 @@ app.get('/', (req, res) =>
 
       * Add code to your server so that it "counts" every time a person visits any of the pages. Display a running count on the website. 
 
-      * Add buttons for "checking off" individuals from the reservation list. Once this happens, the next person on the waitlist should be addd to the main reservation list.
+      * Add buttons for "checking off" individuals from the reservation list. Once this happens, the next person on the waitlist should be added to the main reservation list.
 
       * Add a button for sending emails to individuals on the wait-list letting them know they have a table ready. You will need to use node-mailer or a similar npm package to make this work. (A hard task, but very cool).
 
