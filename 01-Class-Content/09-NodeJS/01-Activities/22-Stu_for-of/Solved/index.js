@@ -1,18 +1,21 @@
+// Helper function to output text in the terminal in a cyan color
 const green = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
 
+// Top 10 Spotify songs in an array
 const songs = [
-  'MONTERO (Call Me By Your Name)',
-  'Peaches (feat. Daniel Caesar & Giveon)',
-  'Kiss Me More (feat. SZA)',
-  'Astronaut In The Ocean',
-  'Save Your Tears (with Ariana Grande) (Remix)',
-  'RAPSTAR',
-  'Levitating (feat. DaBaby)',
-  'Leave The Door Open',
-  'Botella Tras Botella',
-  'Fiel',
+  '1: MONTERO (Call Me By Your Name)',
+  '2: Peaches (feat. Daniel Caesar & Giveon)',
+  '3: Kiss Me More (feat. SZA)',
+  '4: Astronaut In The Ocean',
+  '5: Save Your Tears (with Ariana Grande) (Remix)',
+  '6. RAPSTAR',
+  '7. Levitating (feat. DaBaby)',
+  '8. Leave The Door Open',
+  '9. Botella Tras Botella',
+  '10. Fiel',
 ];
 
-for (const [index, song] of songs.entries()) {
-  green(`${index + 1}: ${song}`);
+// `for .. of` loop to iterate over each song
+for (const song of songs) {
+  green(song);
 }
