@@ -24,8 +24,4 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 
-<<<<<<< HEAD
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-=======
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
->>>>>>> 53fe21e41 (Add solved and unsolved code)
