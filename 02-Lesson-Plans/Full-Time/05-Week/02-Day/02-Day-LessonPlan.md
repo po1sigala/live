@@ -46,31 +46,31 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                              | Duration |
-|---     |---  |---                                         |---       |
-| 10:00AM| 1   | Instructor Demo: Modularization            | 0:05     |
-| 10:05AM| 2   | Student Do: Modularization                 | 0:15     |
-| 10:20AM| 3   | Instructor Review: Modularization          | 0:10     |
-| 10:30AM| 4   | Instructor Demo: `npm`                     | 0:05     |
-| 10:35AM| 5   | Student Do: Package.json and npm           | 0:15     |
-| 10:50AM| 6   | Instructor Review: `npm`                   | 0:10     |
-| 11:00AM| 7   | Instructor Demo: Inquirer                  | 0:05     |
-| 11:05AM| 8   | Student Do: Inquirer users                 | 0:15     |
-| 11:20AM| 9   | Instructor Review: Inquirer users          | 0:10     |
-| 11:30AM| 10  | FLEX                                       | 0:30     |
-| 12:00PM| 11  | BREAK                                      | 0:30     |
-| 12:30PM| 12  | Instructor Do: Stoke Curiosity             | 0:10     |
-| 12:40PM| 13  | Instructor Demo: for...of                  | 0:05     |
-| 12:45PM| 14  | Student Do: for...of                       | 0:15     |
-| 1:00PM | 15  | Instructor Review: for...of                | 0:10     |
-| 1:10PM | 16  | Instructor Demo: Rest and Spread           | 0:05     |
-| 1:15PM | 17  | Student Do: Rest and Spread                | 0:15     |
-| 1:30PM | 18  | Instructor Review: Rest and Spread         | 0:10     |
-| 1:40PM | 19  | Instructor Demo: Object Destructuring      | 0:05     |
-| 1:45PM | 20  | Student Do: Object Destructuring           | 0:15     |
-| 2:00PM | 21  | Instructor Review: Object Destructuring    | 0:10     |
-| 2:10PM | 22  | Everyone Do: Git                           | 0:20     |
-| 2:30PM | 23  | END                                        | 0:00     |
+| Start   | #   | Activity Name                           | Duration |
+| ------- | --- | --------------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Demo: Modularization         | 0:05     |
+| 10:05AM | 2   | Student Do: Modularization              | 0:15     |
+| 10:20AM | 3   | Instructor Review: Modularization       | 0:10     |
+| 10:30AM | 4   | Instructor Demo: `npm`                  | 0:05     |
+| 10:35AM | 5   | Student Do: Package.json and npm        | 0:15     |
+| 10:50AM | 6   | Instructor Review: `npm`                | 0:10     |
+| 11:00AM | 7   | Instructor Demo: Inquirer               | 0:05     |
+| 11:05AM | 8   | Student Do: Inquirer users              | 0:15     |
+| 11:20AM | 9   | Instructor Review: Inquirer users       | 0:10     |
+| 11:30AM | 10  | FLEX                                    | 0:30     |
+| 12:00PM | 11  | BREAK                                   | 0:30     |
+| 12:30PM | 12  | Instructor Do: Stoke Curiosity          | 0:10     |
+| 12:40PM | 13  | Instructor Demo: for...of               | 0:05     |
+| 12:45PM | 14  | Student Do: for...of                    | 0:15     |
+| 1:00PM  | 15  | Instructor Review: for...of             | 0:10     |
+| 1:10PM  | 16  | Instructor Demo: Rest and Spread        | 0:05     |
+| 1:15PM  | 17  | Student Do: Rest and Spread             | 0:15     |
+| 1:30PM  | 18  | Instructor Review: Rest and Spread      | 0:10     |
+| 1:40PM  | 19  | Instructor Demo: Object Destructuring   | 0:05     |
+| 1:45PM  | 20  | Student Do: Object Destructuring        | 0:15     |
+| 2:00PM  | 21  | Instructor Review: Object Destructuring | 0:10     |
+| 2:10PM  | 22  | Everyone Do: Git                        | 0:20     |
+| 2:30PM  | 23  | END                                     | 0:00     |
 
 ---
 
@@ -707,17 +707,17 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to use `for...of` loops to iterate through data inside objects.
+  * As a developer, I want to be able to use `for...of` loops to iterate through data inside an array.
 
   ## Acceptance Criteria
 
-  * It's done when I have selected all the inside `#songs` elements in the `html`.
-
-  * It's done when I have iterated through the song collection with a `for...of` loop and added a `class` of `red` to each element.
+  * It's done when I have iterated through the `songs` array with a `for...of` loop and logging each in a cyan color.
 
   ## 💡 Hints
 
   What part of the object is essential in setting up the iteration of a `for...of` loop?
+
+  How can we use the provided `outputCyanText()` to console log text in a specific color?
 
   ## 🏆 Bonus
 
@@ -744,30 +744,53 @@ Use [Google](https://www.google.com) or another search engine to research this.
   
   * ✔️ Iterator
 
-* Open `22-Stu_for-of/Solved/index.html` in your browser and explain the following:
+* Open `22-Stu_for-of/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 The syntax for the `for...of` loop reads very similar to plain English, which helps conceptualize what is happening in the program.
 
   * 🔑 The syntax is relatively straightforward. The key takeaway is knowing when to use and what to use it for.
-
-  * When we open the `index.html` file, we notice that each line item in the unordered list has a green color.
   
-  * This is the result of using the `for...of` loop to iterate over each line item and add the class of `green` to the class list for the given element, as follows:
+* Navigate to `22-Stu_for-of/Solved/` in your terminal and run `node index` from the command line to demonstrate the following:
+
+  * When we run the `index.js` file, we notice that a song list containing Spotify's top 10 tracks in a cyan color:
+
+    ```console
+    Spotify top 10:
+
+    1: MONTERO (Call Me By Your Name)
+    2: Peaches (feat. Daniel Caesar & Giveon)
+    3: Kiss Me More (feat. SZA)
+    4: Astronaut In The Ocean
+    5: Save Your Tears (with Ariana Grande) (Remix)
+    6. RAPSTAR
+    7. Levitating (feat. DaBaby)
+    8. Leave The Door Open
+    9. Botella Tras Botella
+    10. Fiel
+    ```
+  
+  * Provided to us is a helper function, `outputCyanText` that will uses ANSI escape codes to output text in a specific color to the terminal.
+
+    > ANSI Escape codes indicate cursor location, color, font styling, and other options inside text-based terminals.
 
     ```js
-        const songs = document.querySelectorAll("ul > li");
+    const outputCyanText = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
+    ```
+  
+  * This is the result of using the `for...of` loop to iterate over each item in the `songs` array and invoke the provided `outputCyanText()` method with the song's title:
 
-        for (const song of songs) {
-            song.classList.add("green");
-        }
+    ```js
+    for (const song of songs) {
+      outputCyanText(song);
+    }
     ```
 
   * 🔑 If you forget the syntax, VS Code can help you create these types of loops by offering a snippet to work from. You can try it yourself by typing `forof` and simply pressing Enter, which will result in the following code:
 
     ```js
-        for (const iterator of object) {
-            
-        }
+    for (const iterator of object) {
+        
+    }
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
