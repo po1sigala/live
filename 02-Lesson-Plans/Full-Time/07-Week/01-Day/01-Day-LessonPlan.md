@@ -915,13 +915,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
     });
     ```
     
-  * 🔑 Open Insomnia Core and make a DELETE request to `localhost:3001/api/books/:isbn` with the following data in JSON format:
-
-    ```json
-    {
-      "isbn": "9780137043293"
-    },
-    ```
+  * 🔑 Open Insomnia Core and make a DELETE request to `localhost:3001/api/books/9780137043293`. This deletes the book by the isbn number.
 
   * 🔑 Make a GET request to `http://localhost:3001/api/books/` in Insomnia Core to show students that the book *Essential Scrum: A Practical Guide to the Most Popular Agile Process* was deleted.
 
