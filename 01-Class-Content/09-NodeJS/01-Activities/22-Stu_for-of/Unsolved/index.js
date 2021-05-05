@@ -1,7 +1,7 @@
 // Helper function to output text in the terminal in a cyan color
 const outputCyanText = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
 
-// Top 10 Spotify songs in an object
+// Top 10 Spotify songs in an array
 const songs = [
   '1: MONTERO (Call Me By Your Name)',
   '2: Peaches (feat. Daniel Caesar & Giveon)',

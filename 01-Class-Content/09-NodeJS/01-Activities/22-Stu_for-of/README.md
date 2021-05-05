@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-What part of the object is essential in setting up the iteration of a `for...of` loop?
+What is the iterable we will use in our `for...of` loop?
 
 How can we use the provided `outputCyanText()` method to console log text in a specific color?
 

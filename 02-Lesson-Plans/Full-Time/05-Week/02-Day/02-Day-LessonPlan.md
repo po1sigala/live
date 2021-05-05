@@ -711,13 +711,13 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   ## Acceptance Criteria
 
-  * It's done when I have iterated through the `songs` array with a `for...of` loop and logging each in a cyan color.
+  * It's done when I have iterated through the `songs` array with a `for...of` loop and logged each in a cyan color.
 
   ## 💡 Hints
 
-  What part of the object is essential in setting up the iteration of a `for...of` loop?
+  What is the iterable we will use in our `for...of` loop?
 
-  How can we use the provided `outputCyanText()` to console log text in a specific color?
+  How can we use the provided `outputCyanText()` method to console log text in a specific color?
 
   ## 🏆 Bonus
 
