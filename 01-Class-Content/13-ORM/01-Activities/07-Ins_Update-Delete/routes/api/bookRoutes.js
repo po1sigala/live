@@ -12,7 +12,14 @@ router.get('/', (req, res) => {
 // GET a book
 router.get('/:isbn', (req, res) => {
   // Get one book from the book table
-  Book.findOne({ isbn: req.body.isbn }).then((bookData) => {
+  Book.findOne(
+    {
+      // Gets the book based on the isbn given in the request parameters
+      where: { 
+        isbn: req.params.isbn 
+      },
+    }
+  ).then((bookData) => {
     res.json(bookData);
   });
 });
