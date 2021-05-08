@@ -113,7 +113,6 @@ In today's class, you will prepare students for technical interviews through the
   * During each question, allow the candidate to do some research on the question using Google to help outline a solution. The interviewer can spend that time reviewing the solution code and come up with prompts to support the candidate.
 
   * Take this seriously, but don't put too much pressure on yourself to get to an answer! The idea is to be conversational about these questions to help both of you come to a solution that you can understand and explain in an interview setting.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -310,7 +309,7 @@ In today's class, you will prepare students for technical interviews through the
 
   * **Mongo Terms**: Use this slide to cover the relevant Mongo terms.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before proceeding.
 
 ### 7. BREAK (30 min)
 
@@ -684,10 +683,10 @@ In today's class, you will prepare students for technical interviews through the
 
   ```sql
   db.students.find(
-      {$or:[
-          {"hobbies":{"$in":["Reading"]}},
-          {"os":{"$in":["mac"]}}
-      ]}
+    {$or:[
+      {"hobbies":{"$in":["Reading"]}},
+      {"os":{"$in":["mac"]}}
+    ]}
   )
   ```
 
@@ -831,16 +830,14 @@ db.animals.find().sort({ class:-1 });
   ## Seed Zoo DB
   Run the following in the mongo shell if you did not add at least 5 animals in the previous activity:
 
-    ```js
-    use zoo;
-    db.animals.insertMany([
-      {"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"},
-      {"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"},
-      {"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"},
-      {"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"},
-      {"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"}
-    ]);
-    ```
+  use zoo;
+  db.animals.insertMany([
+    {"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"},
+    {"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"},
+    {"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"},
+    {"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"},
+    {"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"}
+  ]);
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.

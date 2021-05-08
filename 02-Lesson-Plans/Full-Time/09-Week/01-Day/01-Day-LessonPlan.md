@@ -882,13 +882,9 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     function evenIndexMultiplier(number, index) {
-    
       if (index % 2 === 0) {
-    
         return number * 10;
-
       }
-
       return number;
     }
     ```
@@ -901,7 +897,6 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     const evenIndexes = arrayIndex.map(evenIndexMultiplier);
-
     ```
 
 * Run `node index.js` from the command line and demonstrate the following: 
@@ -958,7 +953,6 @@ In this class, students will be re-introduced to JavaScript within the context o
   * What other built-in functions are also higher-order functions? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -995,9 +989,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   
     ```js
     function findAverage(accumulator, currentValue, index, array) {
-    
       if (index === array.length - 1) {
-    
       return (accumulator + currentValue) / array.length;
       }
     }
@@ -1007,13 +999,9 @@ In this class, students will be re-introduced to JavaScript within the context o
   
     ```js
     function findAverage(accumulator, currentValue, index, array) {
-    
       if (index === array.length - 1) {
-    
         return (accumulator + currentValue) / array.length;
       }
-
-  
       return accumulator + currentValue;
     }
     ```
@@ -1060,27 +1048,20 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     function bankAccount() {
-    
       const checking = 400;
-
       const savings = 1000;
-     }
+    }
     ```
   
   * 🔑 To use a closure, the function must return an object with some type functionality, whether it be one method or multiple.
 
     ```js
     function bankAccount() {
-    
       const checking = 400;
-
       const savings = 1000;
-
       return {
         displayFunds: function () {
-
           // Code...
-      
         },
       };
     }
@@ -1090,19 +1071,13 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     function bankAccount() {
-    
       const checking = 400;
-
       const savings = 1000;
-
       return {
-
         displayFunds: function () {
-
           console.log(
             `You have $${checking} in your checking account and $${savings} in your savings account`
           );
-
         },
       };
     }
@@ -1120,9 +1095,9 @@ In this class, students will be re-introduced to JavaScript within the context o
   
   * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment. 
 
-      ```
-      You have $400 in your checking account and $1000 in your savings account
-      ```
+    ```
+    You have $400 in your checking account and $1000 in your savings account
+    ```
 
   * The next statement we will see is from `console.dir`. Feel free to look up what `console.dir` does, but we are only using it for demonstration purposes.
 
@@ -1208,7 +1183,6 @@ In this class, students will be re-introduced to JavaScript within the context o
   * What is the lexical environment? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -1243,7 +1217,6 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     function counter() {
-
       let count = 0;
     }
     ```
@@ -1252,13 +1225,9 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     ```js
     function counter() {
-    
       let count = 0;
-
       return {
-
         increment: function () {
-        
           return count++;
         },
       };

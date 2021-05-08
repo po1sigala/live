@@ -102,13 +102,11 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     function createUser(name, age, city) {
-
       let user = {
         name: name,
         age: age,
         city: city
       }
-
     }
     ```
 
@@ -118,22 +116,18 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     function createUser(name, age, city) {
-
       let user = {
         name: name,
         age: age,
         city: city
       }
-
-        return {
-
-          introduceSelf: function() {
-              // Code...
-          },
-
-          location: function() {
-              // Code...
-          }
+      return {
+        introduceSelf: function() {
+          // Code...
+        },
+        location: function() {
+          // Code...
+        }
       }
     }
     ```
@@ -142,34 +136,27 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     function createUser(name, age, city) {
-
       let user = {
         name: name,
         age: age,
         city: city
       }
-
-        return {
-
-          introduceSelf: function() {
-            
-            return console.log(`Hi my name is ${user.name} and I am currently ${user.age} years old!`)
-          },
-
-          location: function() {
-
-            return console.log(`${user.name} is located in ${user.city}`)
-          }
+      return {
+        introduceSelf: function() {
+          return console.log(`Hi my name is ${user.name} and I am currently ${user.age} years old!`)
+        },
+        location: function() {
+          return console.log(`${user.name} is located in ${user.city}`)
+        }
       }
     }
-
     ```
 
   * 🔑 This is similar to JavaScript classes except that we no longer need the `new` keyword; instead, we use the `createUser` factory function to create a user.
 
-  ```js
-  const userOne = createUser('Beverly', 58, 'Phoenix')
-  ```
+    ```js
+    const userOne = createUser('Beverly', 58, 'Phoenix')
+    ```
 
 * Run `node index.js` from the command line and demonstrate the following:
   
@@ -240,7 +227,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * Is the `new` keyword required when using a factory function? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -267,12 +253,10 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     function Student(name, gradeYear) {
-    
       let student = {
         name: name,
         gradeYear: gradeYear,
       };
-
     }
     ```
 
@@ -282,20 +266,15 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     function Student(name, gradeYear) {
-    
       let student = {
         name: name,
         gradeYear: gradeYear,
       };
-
       return {
-      
         greet: function () {
-
           console.log(
             `My name is ${student.name} and I am in ${student.gradeYear} grade`
           );
-
         },
       };
     }
@@ -338,24 +317,22 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     class Device {
-        constructor(name){
-            this.name = name
-        }
-
-        takePicture() {
-            console.log(`Taking picture with ${this.name}`)
-        }
+      constructor(name){
+        this.name = name
+      }
+      takePicture() {
+        console.log(`Taking picture with ${this.name}`)
+      }
     }
 
     class Phone extends Device {
-        constructor(name, ringTone) {
-            super(name) 
-            this.ringTone = ringTone
-        }
-
-        call() {
-            console.log(`Phone: ${this.ringTone}`)
-        }
+      constructor(name, ringTone) {
+        super(name) 
+        this.ringTone = ringTone
+      }
+      call() {
+        console.log(`Phone: ${this.ringTone}`)
+      }
     }
     ```
 
@@ -398,27 +375,23 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     class Appliance {
-        constructor(noise){
-            this.noise = noise
-        }
-
-        makeNoise() {
-            console.log(this.noise)
-        }
+      constructor(noise){
+        this.noise = noise
+      }
+      makeNoise() {
+        console.log(this.noise)
+      }
     }
 
     class Dryer extends Appliance {
-        constructor(noise) {
-            super(noise)
-
-        }
-
-        dry() {
-            console.log(`Dryer is on: ${this.noise}`);
-        }
+      constructor(noise) {
+        super(noise)
+      }
+      dry() {
+        console.log(`Dryer is on: ${this.noise}`);
+      }
     }
-
-      ``` 
+    ``` 
 
   * The `Phone` class inherits from the `Device` class, and the `Dryer` class inherits from the `Appliance` class.
   
@@ -449,14 +422,12 @@ In today's class, students will take a dive deep into how JavaScript executes. T
       dry: () =>
         console.log(`Finish drying in ${state.timer} minutes. ${state.noise}`),
     });
-
     ```
 
   * 🔑 Create a function named `Phone` which receives the `name` and `ringTone` that we will store in an object named `state`.
 
     ```js
     const Phone = (name, ringTone) => {
-    
       const state = {
         name,
         ringTone
@@ -468,12 +439,10 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     const Phone = (name, ringTone) => {
-    
       const state = {
         name,
         ringTone
       };
-
       return { ...phoneCall(state) };
     };
     ```
@@ -482,23 +451,19 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     const Dryer = (noise, timer) => {
-
       const state = {
         noise,
         timer
       };
-
       return { ...makeNoise(state), ...drying(state) };
     };
 
     const Washer = (name, noise, ringTone) => {
-
       const state = {
         name,
         noise,
         ringTone
       };
-
       return { ...makeNoise(state), ...phoneCall(state) };
     };
     ```
@@ -576,7 +541,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * What are the three paradigms of JavaScript? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -605,7 +569,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
         title: 'Unit 17 - Computer Science',
         description: 'CS for JS',
       };
-
     };
     ```
 
@@ -627,7 +590,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
         title: 'Unit 17 - Computer Science',
         description: 'CS for JS',
       };
-
       return { ...getInformation(state) };
     };
     ```
@@ -708,15 +670,10 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     const clickHandler = function(event) {
-
       let count = parseInt(event.target.getAttribute('data-count'));
-
       if (event.target.matches('button')) {
-      
         count++;
-      
         event.target.setAttribute('data-count', count);
-
         event.target.textContent = `Clicks: ${count}`;
       }
     }
@@ -724,9 +681,9 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * 🔑 The last task is to add an event listener to the container that holds the buttons.
 
-      ```js
-      containerEl.addEventListener('click', clickHandler);
-      ```
+    ```js
+    containerEl.addEventListener('click', clickHandler);
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -766,7 +723,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * Why is it important to minimize the number of variables in the global namespace? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -799,9 +755,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     const clickHandler = function () {
-
       let count = 0;
-
     ```
 
   * Next, we leverage closures by returning a function that increments the `count` variable by one.
@@ -810,15 +764,12 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     const clickHandler = function () {
-
       let count = 0;
-
       return function () { 
-
         count++; 
-
         this.textContent = `Clicks: ${count}`;
       };
+    };
     ```
   
   * We are using a `for...loop` to attach an event listener to each `button` element.
@@ -829,9 +780,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     ```js
     for (let i = 0; i < buttons.length; i++) {
-
       buttons[i].addEventListener('click', clickHandler());
-
     }
     ```
 
@@ -959,7 +908,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * What is a more efficient search algorithm?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -1071,7 +1019,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * In programming, what is a stack overflow?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -1100,13 +1047,13 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     const Fibonacci = (position) => {}
     ```
 
-    * 🔑 If the input position is less than `2`, we can assume that the position will be `0` or `1`, which are the actual values of the Fibonacci sequence at that position:
+  * 🔑 If the input position is less than `2`, we can assume that the position will be `0` or `1`, which are the actual values of the Fibonacci sequence at that position:
 
-      ```js
-      if (position < 2) {
-        return position;
-      }
-      ```
+    ```js
+    if (position < 2) {
+      return position;
+    }
+    ```
 
   * 🔑 We get a value of the Fibonacci sequence by adding the previous two position values in the sequence, so we need to calculate their values with the same function, which will call it again and again until `position` is under `2`: 
 
@@ -1200,7 +1147,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * What is worst possible Big-O complexity that an algorithm can have? What is the best?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -1235,7 +1181,6 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```js
     while (start <= end) {
       let mid = Math.floor((start + end) / 2);
-
       if (array[mid] === element) {
         // We must return true once we have found the element being searched for.
         return true;

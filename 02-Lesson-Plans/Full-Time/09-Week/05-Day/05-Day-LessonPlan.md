@@ -28,27 +28,26 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-|        |     | **EVEN.3 BEGINS**                  |          |
-| 10:00AM| 1   | Instructor Do: Welcome     | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Creating Indexes                  | 0:05     |
-| 10:15AM| 3   | Student Do: Creating Indexes                       | 0:15     |
-| 10:30AM| 4   | Instructor Review: Creating Indexes                | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Adding Getting Data                  | 0:05     |
-| 10:45AM| 6   | Student Do: Adding Getting Data                       | 0:15     |
-| 11:00AM| 7   | Instructor Review: Adding Getting Data                | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Updating Data with Cursors                  | 0:05     |
-| 11:15AM| 9   | Student Do: Updating Data with Cursors                       | 0:15     |
-| 11:30AM| 10  | Instructor Review: Updating Data with Cursors                | 0:10     |
-| 11:40AM| 11  | FLEX                     | 0:20     |
-| 12:00PM| 12  | BREAK                              | 0:30     |
-| 12:30PM| 13  | Instructor Demo: Mini Project      | 0:05     |
-| 12:35PM| 14  | Student Do: Mini Project           | 0:60     |
-| 1:35PM | 15  | Instructor Review: Mini Project    | 0:10     |
-| 1:45PM | 16  | Introduce Homework                 | 0:05     |
-| 1:50PM | 17  | FLEX                               | 0:40     |
-| 2:30PM | 18  | End                                | 0:00     |
+| Start  | #   | Activity Name                                 | Duration |
+|---     |---  |---                                            |---       |
+| 10:00AM| 1   | Instructor Do: Welcome                        | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Creating Indexes             | 0:05     |
+| 10:15AM| 3   | Student Do: Creating Indexes                  | 0:15     |
+| 10:30AM| 4   | Instructor Review: Creating Indexes           | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Adding Getting Data          | 0:05     |
+| 10:45AM| 6   | Student Do: Adding Getting Data               | 0:15     |
+| 11:00AM| 7   | Instructor Review: Adding Getting Data        | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Updating Data with Cursors   | 0:05     |
+| 11:15AM| 9   | Student Do: Updating Data with Cursors        | 0:15     |
+| 11:30AM| 10  | Instructor Review: Updating Data with Cursors | 0:10     |
+| 11:40AM| 11  | FLEX                                          | 0:20     |
+| 12:00PM| 12  | BREAK                                         | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini Project                 | 0:05     |
+| 12:35PM| 14  | Student Do: Mini Project                      | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini Project               | 0:10     |
+| 1:45PM | 16  | Introduce Homework                            | 0:05     |
+| 1:50PM | 17  | FLEX                                          | 0:40     |
+| 2:30PM | 18  | End                                           | 0:00     |
 
 ---
 
@@ -439,9 +438,7 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
   * 🙋 Continues to the next record, exiting when there are none left.
 
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* Answer any questions before proceeding.
 
 ### 11. FLEX (20 min)
 
