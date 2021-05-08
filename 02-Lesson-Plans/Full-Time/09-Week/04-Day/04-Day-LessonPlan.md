@@ -1,18 +1,12 @@
-# XX.X Full-Time Lesson Plan: { @TODO Descriptive and Professional Title of This Day's Topics } (Note: Full-Time Thursday LP using PT even unit's .1/.2 LPs)
+# 09.4 Full-Time Lesson Plan: Introduction to Mongoose
 
 ## Overview
 
-@TODO Write a two- or three-sentence overview of the lesson plan.
+In the class, you will introduce students to Mongoose, a node package that provides a schema-based solution to model your Node application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. Students will also learn about IndexedDB.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_Demo-Title` through `20-Stu_Activity-Title`.
-
-* @TODO Every Instructor Notes block begins with the preceding bullet, which outlines the activities that will be covered during class.
-
-* @TODO Empathize with the instructor. If you only had one hour to prepare for class, what are the things you would want to know up front? What are the potential pitfalls in class? Where are students going to get hung up? 
-
-* @TODO Set the instructor up for success.
+* In this lesson, students will complete activities `09-Ins_MongoJS-Review` through `19-Stu-Creating_Object_Stores`.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
@@ -22,270 +16,556 @@
 
 ## Learning Objectives
 
-* @TODO Bullet the learning objectives for the lesson plan. Refer to your Activity Planner.
+* Create a Mongoose schema to dictate rules for their MongoDB data.
 
-* @TODO When writing learning objectives, start each one with a measurable verb. Refer to this [list of measurable verbs used to assess learning outcomes](https://www.clinton.edu/curriculumcommittee/listofmeasurableverbs.cxml). For example, "Initialize projects and install third-party packages using npm."
+* Create custom methods in Mongoose to set and update data purely on the back end.
 
-* @TODO If a learning objective is a concept and not a demonstrable skill, use the verb "explain". For example, "Explain the client-server model."
+* Implement Mongoose CRUD methods to create, read, update and delete data.
 
-* @TODO Do not use the verb "understand" because it is not measurable.
+* Utilize Mongoose's populate method to create relationships between the collections in their database.
 
-* @TODO Aim for 3&ndash;6 learning objectives. If you find yourself listing more than six, you may need to rethink the scope of your objectives or the lesson itself. 
+* Explain the pros and cons of storing client side data with cookies and IndexedDB.
+
+* Request an IndexedDB instance.
+
+* Create an object store and add data with the `add` method.
 
 ## Time Tracker
-@TODO ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo:                   | 0:05     |
-| 10:05AM| 2   | Student Do:                        | 0:15     |
-| 10:20AM| 3   | Instructor Review:                 | 0:10     |
-|        |     | **EVEN.2 BEGINS**                  |          |
-| 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
-| 10:40AM| 5   | Instructor Demo:                   | 0:05     |
-| 10:45AM| 6   | Student Do:                        | 0:15     |
-| 11:00AM| 7   | Instructor Review:                 | 0:10     |
-| 11:10AM| 8   | Instructor Demo:                   | 0:05     |
-| 11:15AM| 9   | Student Do:                        | 0:15     |
-| 11:30AM| 10  | Instructor Review:                 | 0:10     |
-| 11:40AM| 11  | FLEX                               | 0:20     |
-| 12:00PM| 12  | BREAK                              | 0:30     |
-| 12:30PM| 13  | Instructor Demo:                   | 0:05     |
-| 12:35PM| 14  | Student Do:                        | 0:15     |
-| 12:50PM| 15  | Instructor Review:                 | 0:10     |
-| 1:00PM | 16  | Instructor Demo:                   | 0:05     |
-| 1:05PM | 17  | Student Do:                        | 0:15     |
-| 1:20PM | 18  | Instructor Review:                 | 0:10     |
-| 1:30PM | 19  | Instructor Demo:                   | 0:05     |
-| 1:35PM | 20  | Student Do:                        | 0:15     |
-| 1:50PM | 21  | Instructor Review:                 | 0:10     |
-| 2:00PM | 22  | FLEX                               | 0:30     |
-| 2:30PM | 23  | END                                | 0:00     |
+
+| Start  | #   | Activity Name                             | Duration |
+|---     |---  |---                                        |---       |
+| 10:00AM| 1   | Instructor Demo: MongoJS Warmup           | 0:05     |
+| 10:05AM| 2   | Student Do: MongoJS Review                | 0:15     |
+| 10:20AM| 3   | Instructor Review: MongoJS Review         | 0:10     |
+| 10:30AM| 4   | Instructor Do: Stoke Curiosity            | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Mongoose Schema          | 0:05     |
+| 10:45AM| 6   | Student Do: Mongoose Schema               | 0:15     |
+| 11:00AM| 7   | Instructor Review: Mongoose Schema        | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Custom Methods           | 0:05     |
+| 11:15AM| 9   | Student Do: Custom Methods                | 0:15     |
+| 11:30AM| 10  | Instructor Review: Custom Methods         | 0:10     |
+| 11:40AM| 11  | FLEX                                      | 0:20     |
+| 12:00PM| 12  | BREAK                                     | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Populate                 | 0:05     |
+| 12:35PM| 14  | Student Do: Populate                      | 0:15     |
+| 12:50PM| 15  | Instructor Review: Populate               | 0:10     |
+| 1:00PM | 16  | Instructor Demo: Opening IndexedDB        | 0:05     |
+| 1:05PM | 17  | Student Do: Opening IndexedDB             | 0:15     |
+| 1:20PM | 18  | Instructor Review: Opening IndexedDB      | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Creating Object Stores   | 0:05     |
+| 1:35PM | 20  | Student Do: Creating Object Stores        | 0:15     |
+| 1:50PM | 21  | Instructor Review: Creating Object Stores | 0:10     |
+| 2:00PM | 22  | FLEX                                      | 0:30     |
+| 2:30PM | 23  | END                                       | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 1. Instructor Demo: MongoJS Warmup (5 min) 
 
 * Welcome students to class.
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Start class with a quick review by opening up `09-Stu-MongoJS-Review/Solved/server.js` on your machine. Run `npm install` then `node server.js` to launch the application.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Demonstrate to the students how the app lets you add books as well as mark books read or unread.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * Note the fact that an explicit route for the root, `http://localhost:3000` does not exist. However, the page still loads `index.html` from the `/public` folder. 
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+* Explain to the students that this is a convention from the static middleware that we are using. 
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * Point to this line: `app.use(express.static("public"));`
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How would we build this?
-
-  * 🙋 @TODO { YES, HOW? } 
+* Tell the class that in the next activity they will complete the routes in the server file so the site can display and edit the book data.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `09-Stu-MongoJS-Review/README.md`.
 
-### 2. Student Do: { ACTIVITY NAME } (15 min) 
+### 2. Student Do: MongoJS Review (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `09-Stu-MongoJS-Review/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # MongoJS Review
+
+  ## Instructions
+
+  * Complete the routes in the server file so the site can display and edit the book data. 
+
+  ## 💡 Hint(s)
+
+  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+
+  ## 🏆 Bonus
+
+  * Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 3. Instructor Review: MongoJS Review (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Open `09-Stu-MongoJS-Review/Solved/server.js` and scroll down to the routes.
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+* Use the prompts and talking points below to review each route.
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Our `/submit` route uses `save` to create a new record.
 
-* Use the prompts and talking points (🔑) below to review the following key points:
+```js
+app.post("/submit", ({ body }, res) => {
+  const book = body;
 
-  * ✔️ @TODO { THIS }
+  book.read = false;
 
-  * ✔️ @TODO { THAT }
+  db.books.save(book, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.send(data);
+    }
+  });
+});
+```
 
-  * ✔️ @TODO { THE OTHER }
+* Our `/read` route uses `find` to return books that have `read: true`.
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+```js
+app.get("/read", (req, res) => {
+  db.books.find({ read: true }, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
+```
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+* Our `/unread` route uses `find` to return books that have `read: false`.
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+```js
+app.get("/unread", (req, res) => {
+  db.books.find({ read: false }, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.json(data);
+    }
+  });
+});
+```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+* Our `/markread/:id` route finds a book by `ObjectID` and uses `update` to set `read: true`.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+```js
+app.put("/markread/:id", ({ params }, res) => {
+  db.books.update(
+    {
+      _id: mongojs.ObjectId(params.id)
+    },
+    {
+      $set: {
+        read: true
+      }
+    },
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+    (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    }
+  );
+});
+```
 
-  * 🙋 @TODO { YES, WE DO! }
+* Our `/markunread/:id` route finds a book by `ObjectID` and uses `update` to set `read: false`.
 
-  * ☝️ What can we do if we don't completely understand this?
+```js
+app.put("/markunread/:id", ({ params }, res) => {
+  db.books.update(
+    {
+      _id: mongojs.ObjectId(params.id)
+    },
+    {
+      $set: {
+        read: false
+      }
+    },
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+    (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    }
+  );
+});
+```
 
 * Answer any questions before proceeding to the next activity.
 
-                                        **EVEN.2 BEGINS**
+### 4. Instructor Do: Introduce Mongoose (10 mins)
 
-### 4. Instructor Do: Stoke Curiosity (10 mins)
+* Tell the class that they are now going to be introduced to Mongoose, an Object Data Modeling (ODM) library for Mongo and Node. 
 
-* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
+* Use the prompts and talking points below to demonstrate the following key point(s):
 
-### 5. Instructor Demo: { ACTIVITY NAME } (5 min) 
+  * ✔ Mongoose lets you define schemas for your collections.
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+  * ✔ It also helps manage data relationships and enforce validations.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Next open `10-Ins-Mongoose-Schema` in your IDE and run `npm install` followed by `node server.js`.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+* In your terminal you should see the following if the connection was successful.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+```js
+{ array: [ 'item1', 'item2', 'item3' ],
+  _id: 5d445e4e98a11a33f37d6010,
+  boolean: false,
+  string:
+   '"Don\'t worry if it doesn\'t work right. If everything did, you\'d be out of a job" - Mosher\'s Law of Software Engineering',
+  number: 42,
+  date: 2019-08-02T16:01:18.500Z,
+  __v: 0 }
+```
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+* Step through the code that we used to make our db connection and schema.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* We first require the Mongoose package and our `exampleModel` file, which contains our schema.
 
-  * ☝️ How would we build this?
+  ```js
+  const mongoose = require("mongoose");
+  const Example = require("./exampleModel.js"); // we will go over this file next as it contains our schema
+  ```
 
-  * 🙋 @TODO { YES, HOW? } 
+* We then open a connection `mongodb://localhost/dbExample` on our locally running instance of MongoDB.
+
+  ```js
+  mongoose.connect("mongodb://localhost/dbExample", { useNewUrlParser: true });
+  ```
+
+* Then we create some data to insert into our database.
+
+  ```js
+  const data = {
+    array: ["item1", "item2", "item3"],
+    boolean: false,
+    string:
+      "We are learning mongoose!",
+    number: 42
+  };
+  ```
+
+* Next we call `create` on our `Example` schema and pass in our data.
+
+  ```js
+  Example.create(data)
+    .then(dbExample => {
+      console.log(dbExample);
+    })
+    .catch(({ message }) => {
+      console.log(message);
+    });
+  ```
+
+* Now open `10-Ins-Mongoose-Schema/exampleModel.js` in your editor.
+
+* Tell the class that Mongoose models are similar to those in sequelize. 
+
+* We define a schema for the model and then use the model to query our database. 
+
+* Next, step through each section of the code.
+
+* First we import mongoose and create a `Schema` reference.
+
+  ```js
+  const mongoose = require("mongoose");
+  const Schema = mongoose.Schema;
+  ```
+
+* Next we create a new schema called `ExampleSchema`.
+
+  ```js
+  const ExampleSchema = new Schema({
+    string: {
+      type: String,
+      trim: true,
+      required: "String is Required" // validator
+    },
+
+    number: {
+      type: Number,
+      unique: true, // this is not a validator, but a built in helper
+      required: true // validator
+    },
+
+    email: {
+      type: String,
+      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+
+    boolean: Boolean,
+
+    array: Array,
+
+    date: {
+      type: Date,
+      default: Date.now
+    },
+
+    longstring: {
+      type: String,
+      validate: [({ length }) => length >= 6, "Longstring should be longer."]
+    }
+  });
+  ```
+  
+* We then compile our schema into a Model.
+
+  ```js
+  const Example = mongoose.model("Example", ExampleSchema);
+  export default Example;
+  ```
+
+* Tell the class that all schema types have the built-in `required` validator. 
+
+* Point out that numbers have `min` and `max` validators while strings have `enum`, `match`, `minlength`, and `maxlength` validators.
+
+* Ask the students the following question(s):
+
+  * ☝️ What are the benefits of using Mongoose?
+
+  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+### 5. Instructor Demo: Mongoose Schema (5 min) 
 
-### 6. Student Do: { ACTIVITY NAME } (15 min) 
+* Open `11-Stu-Mongoose-Schema/Solved` on your machine and run `npm install` then `node server.js` to launch the app. 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Create a new user and demonstrate the response.
+
+  ```js
+  {
+    "_id": "5cfab6403da88328fcc7ac39",
+    "username": "demo",
+    "password": "demo",
+    "email": "demo@gmail.com",
+    "userCreated": "2019-06-07T19:08:48.294Z",
+    "__v": 0
+  }
+  ```
+
+* Try to create another user with the same email to demonstrate the validations.
+
+  ```js
+  {
+    "driver": true,
+    "name": "MongoError",
+    "index": 0,
+    "code": 11000,
+    "errmsg": "E11000 duplicate key error collection: userdb.users index: email_1 dup key:  {: \"demo@gmail.com\" }"
+  }
+  ```
+
+* Tell the students that in the next activity they will implement the schema validations that they see here.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `11-Stu-Mongoose-Schema/README.md`.
+
+### 6. Student Do: Mongoose Schema (15 min) 
+
+* Direct students to the activity instructions found in `11-Stu-Mongoose-Schema/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # User Schema
+
+  In this activity you will create a user schema with mongoose.
+
+  ## Instructions
+
+  * In `userModel.js` add four attributes to your schema.
+
+    * username: A string that will be be required, and also trimmed.
+
+    * password: A string that will be required, trimmed, and at least 6 characters.
+
+    * email: A string that must be a valid email address and unique in our collection.
+
+    * userCreated: A date that will default to the current date.
+
+  ## 💡 Hint(s)
+
+  * The regex for checking if a string is an email is: `/.+\@.+\..+/`
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 7. Instructor Review: Mongoose Schema (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ✔ We can use `required` to check for the presence of an attribute.
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+  * ✔ We can use `validate` to enforce a validation.
 
-* Use the prompts and talking points (🔑) below to review the following key points:
+* Open `11-Stu-Mongoose-Schema/Solved/userModel.js`in your IDE and step through each attribute, checking for understanding.
 
-  * ✔️ @TODO { THIS }
+```js
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-  * ✔️ @TODO { THAT }
+const UserSchema = new Schema({
+  username: {
+    type: String,
+    trim: true,
+    required: "Username is Required"
+  },
 
-  * ✔️ @TODO { THE OTHER }
+  password: {
+    type: String,
+    trim: true,
+    required: "Password is Required",
+    validate: [({ length }) => length >= 6, "Password should be longer."]
+  },
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  email: {
+    type: String,
+    unique: true,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+  },
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  userCreated: {
+    type: Date,
+    default: Date.now
+  }
+});
+```
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+* Students may be confused with `match`, explain that it uses a regular expression to check for a valid email address.
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+* Ask the students the following question(s):
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+  * ☝️ What is the `match` method checking for in our `email` attribute?
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
-
-  * 🙋 @TODO { YES, WE DO! }
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-### 8. Instructor Demo: { ACTIVITY NAME } (5 min) 
-
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
-
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
-
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
-
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
-
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How would we build this?
-
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 It is checking the regular expression against the user's email input.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+### 8. Instructor Demo: Custom Methods (5 min) 
 
-### 9. Student Do: { ACTIVITY NAME } (15 min) 
+* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+  * ✔ Mongoose provides a way for us to create custom methods to manipulate our data.
+
+* Change into `12-Ins-Custom-Methods` and run `npm install` then `node server.js` to launch the app.
+
+* Visit `localhost:3000` and fill out the form to create a new user and demo the response.
+
+  ```js
+  {
+    "isCool": true,
+    "_id": "5cfbbd607de1a557eeaaa056",
+    "username": "test...the Coolest!",
+    "password": "password1234",
+    "email": "testuser@gmail.com",
+    "userCreated": "2019-06-08T13:51:28.033Z",
+    "__v": 0
+  }
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What is difference about the way our data was returned?
+
+  * 🙋 Our new user has an `isCool` field that is set to `true`.
+
+* Open `12-Ins-Custom-Methods/userModel.js` and scroll down to the custom methods.
+
+  ```js
+  UserSchema.methods.coolifier = function() {
+    this.username = `${this.username}...the Coolest!`;
+    return this.username;
+  };
+
+  UserSchema.methods.makeCool = function() {
+    this.isCool = true;
+    return this.isCool;
+  };
+  ```
+
+* Next open `server.js` and demonstrate how we are calling our methods on our new user.
+
+  ```js
+  app.post("/submit", ({ body }, res) => {
+    const user = new User(body);
+    user.coolifier(); // Bob...the Coolest!
+    user.makeCool(); // isCool = true;
+
+    User.create(user)
+      .then(dbUser => {
+        res.json(dbUser);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+  });
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What are the benefits of using Mongoose?
+
+  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `13-Stu-Custom-Methods/README.md`.
+
+### 9. Student Do: Custom Methods (15 min) 
+
+* Direct students to the activity instructions found in `13-Stu-Custom-Methods/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # Custom Methods
+
+  ## Instructions
+
+  * Open `userModel.js` and create the following custom methods.
+
+    * `setFullName`: sets the current user's `fullName` property to their lastName appended to their `firstName`
+
+    * `lastUpdatedDate`: sets the current user's `lastUpdated` property to `Date.now()`
+
+  * When you are finished use your new custom methods in a `POST` request.
+
+  ## 💡 Hint(s)
+
+  * Use the [Mongoose docs on schema instance methods](https://mongoosejs.com/docs/guide.html#methods) if you are stuck.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 10. Instructor Review: Custom Methods (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Open `13-Stu-Custom-Methods/Solved/userModel.js` file.
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+* Ask for a volunteer to lead your through the custom methods they created.
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Next open `server.js` and ask for a volunteer to explain how to call these new methods in that file.
 
-* Use the prompts and talking points (🔑) below to review the following key points:
-
-  * ✔️ @TODO { THIS }
-
-  * ✔️ @TODO { THAT }
-
-  * ✔️ @TODO { THE OTHER }
-
-* Open `@TODO/folder/file` in your IDE and explain the following: 
-
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
-
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
-
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
-
-  * 🙋 @TODO { YES, WE DO! }
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+* Start the server and load up the site in your browser to demonstrate the form. 
 
 * Answer any questions before proceeding.
 
@@ -293,223 +573,375 @@
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
-* @TODO Provide GUIDED instruction for review.
+* Ask students if they have any questions about Mongoose so far.
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 13. Instructor Demo: Populate (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Change into `14-Ins-Populate` and start the server with `node server.js`. 
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Then, visit `/books` to see your books listed.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+```js
+[{
+    "_id": "5cfbc820bc851f678c714b2c",
+    "author": "Herman Melville",
+    "title": "Moby Dick",
+    "__v": 0
+}, {
+    "_id": "5cfbc83ebc851f678c714b2d",
+    "author": "F. Scott Fitzgerald",
+    "title": "The Great Gatsby",
+    "__v": 0
+}]
+```
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+* Then visit `/library` to see your library data listed in JSON, including a list of `ObjectIds` in the book property. These are the `ObjectIds` associated with each book we've made.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+```js
+[{
+    "books": ["5cfbc510fff60b62b1a9c318", 
+              "5cfbc51cfff60b62b1a9c319", 
+              "5cfbc820bc851f678c714b2c", 
+              "5cfbc83ebc851f678c714b2d"],
+    "_id": "5cfbc29cfff60b62b1a9c317",
+    "name": "Campus Library",
+    "__v": 0
+}]
+```
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Ask students, what if we want to see the data for all of the books stored in our library. We could go back to books, but what if we want to include all of the information about our library and our books, and query that data with just one call.
 
-  * ☝️ How would we build this?
+  * Answer: This is where `Mongoose`'s populate method comes in. Open the `/populated` route in your browser, and go to the books property. All of the books will be there.
 
-  * 🙋 @TODO { YES, HOW? } 
+  ```js
+  [{
+      "books": [{
+          "_id": "5cfbc820bc851f678c714b2c",
+          "author": "Herman Melville",
+          "title": "Moby Dick",
+          "__v": 0
+      }, {
+          "_id": "5cfbc83ebc851f678c714b2d",
+          "author": "F. Scott Fitzgerald",
+          "title": "The Great Gatsby",
+          "__v": 0
+      }],
+      "_id": "5cfbc29cfff60b62b1a9c317",
+      "name": "Campus Library",
+      "__v": 0
+  }] 
+  ```
+
+* How does this happen?
+
+  * Show them the `Library.js` model, and how it has a reference to the `Book.js` model inside it's schema.
+
+    ```js
+    const mongoose = require("mongoose");
+
+    const Schema = mongoose.Schema;
+
+    const LibrarySchema = new Schema({
+      name: {
+        type: String,
+        unique: true
+      },
+      books: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Book"
+        }
+      ]
+    });
+
+    const Library = mongoose.model("Library", LibrarySchema);
+
+    module.exports = Library;
+    ```
+
+  * Then show them the `index.js` file inside of the `models` folder.
+
+    ```js
+    module.exports = {
+    Book: require("./Book"),
+    Library: require("./Library")
+    };
+    ```
+
+  * Explain that when working with multiple models, it's often useful to be able to require all of them at once, rather than individually. 
+  
+  * By exporting an object containing all of our models from the `index.js` file in the models folder, we can then require this object and access all of our models inside of `server.js`.
+
+    ```js
+    const db = require("./models");
+    ```
+
+  * Point out the `populate` method being used in `server.js`.
+
+    ```js
+    app.get("/populated", (req, res) => {
+    db.Library.find({})
+      .populate("books")
+      .then(dbLibrary => {
+        res.json(dbLibrary);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+    });
+    ```
+
+  * Explain that here we are running `populate("books")` after finding books and before handling the result of the query in `.then`.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `15-Stu-Populate/README.md`.
 
-### 14. Student Do: { ACTIVITY NAME } (15 min) 
+### 14. Student Do: Populate (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `15-Stu-Populate/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # Populate
+
+  ## Instructions
+
+  * Open `server.js` and update the `/populate` route to return `Users` populated with notes as JSON to the client.
+
+  ## 💡 Hint(s)
+
+  * Check out the `Note.js` and `User.js` models to see how the schemas there make the populate method possible.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 15. Instructor Review: Populate (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Open up `15-Stu-Populate/Solved/server.js`.
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+* Ask for a volunteer to to walk you through the solution.
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
-
-* Use the prompts and talking points (🔑) below to review the following key points:
-
-  * ✔️ @TODO { THIS }
-
-  * ✔️ @TODO { THAT }
-
-  * ✔️ @TODO { THE OTHER }
-
-* Open `@TODO/folder/file` in your IDE and explain the following: 
-
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
-
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
-
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
-
-  * 🙋 @TODO { YES, WE DO! }
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+```js
+app.get("/populateduser", (req, res) => {
+  db.User.find({})
+    .populate("notes")
+    .then(dbUser => {
+      res.json(dbUser);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
+```
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 16. Instructor Demo: Opening IndexedDB (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Introduce the students to the Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Use the prompts and talking points below to demonstrate the following key point(s):
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * ✔ We access `indexedDB` via the `window` object.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * ✔ We create a new IndexedDB connection using the `open` method and pass it a name for the DB and a version number.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * ✔ Our request returns a result that we can then manipulate.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+  ```js
+  const request = indexedDB.open("firstDatabase", 1);
+  
+  request.onsuccess = event => {
+    console.log(request.result);
+  };
+  ```
 
-  * ☝️ How would we build this?
+* Open `16-Ins_Opening_IndexedDB/index.html` in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
 
-  * 🙋 @TODO { YES, HOW? } 
+  ![16-Ins_Opening_IndexedDB.png](Images/16-Ins_Opening_IndexedDB.png)
+
+* Navigate into the `16-Ins_Opening_IndexedDB` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `firstDatabase`.
+
+* Ask the class the following question(s): 
+
+  * ☝️ How many arguments does the `open` method take and what are they for?
+
+  * 🙋 Two and the first one is the DB name, the second is the version number. The version number controls which version of the schema to use.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `17-Stu_Opening_IndexedDB/README.md`.
 
-### 17. Student Do: { ACTIVITY NAME } (15 min) 
+### 17. Student Do: Opening IndexedDB (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `17-Stu_Opening_IndexedDB/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # Requesting an IndexedDB Database
+
+  In this activity, you will create a request for an indexedDB database and console.log the name of the db to the screen. 
+
+  ## Instructions
+
+  * Write code to request an IndexedDB database instance.
+  * On success, log the name of the database to your console.
+
+  ## 💡 Hint(s)
+
+  * Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
+
+  * You can `console.log` the `request` to so what attributes are available to you.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 18. Instructor Review: Opening IndexedDB (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Use the prompts and talking points below to review the following key point(s):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ✔ We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
+  
+  * ✔ In the `onsuccess` method we `console.log(request.result.name);` 
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+  ✔ The `onsuccess` method is called every time we make a request.
 
-* Use the prompts and talking points (🔑) below to review the following key points:
+* Open `17-Stu_Opening_IndexedDB/Solved/index.html` in your IDE and explain the following point(s):
 
-  * ✔️ @TODO { THIS }
+  * We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
+  
+  * In the `onsuccess` method we `console.log` the `name` of the `result`, which is the database name.
 
-  * ✔️ @TODO { THAT }
+  ```js
+  const request = window.indexedDB.open("firstDatabase", 1);
+    request.onsuccess = event => {
+    console.log(request.result.name);
+  };
+  ```
 
-  * ✔️ @TODO { THE OTHER }
+  * 🔑 Our `open` method takes two arguments, first the db name and then the version number. 
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Ask the class the following question(s):
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * ☝️ What happens when we call `open` on `indexedDB`?
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
-
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
-
-  * 🙋 @TODO { YES, WE DO! }
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 The call to the `open()` method returns a request object with a `result` (success) value that you handle as an event. 
 
 * Answer any questions before proceeding to the next activity.
 
-### 19. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 19. Instructor Demo: Creating Object Stores (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Use the prompts and talking points below to demonstrate the following key point(s):
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * ✔ Object stores can be thought of as a "table" where we hold data.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * ✔ Object stores can hold any data type.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * ✔ Object stores are schema-less, unlike SQL databases.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * ✔ We create our object stores in the `onupgradeneeded` method which is called when you change the db version. ie: From no database to 1, from 1 to 2 etc.
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+  * ✔ If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered.
 
-  * ☝️ How would we build this?
+*  Open `18-Ins_Creating_Object_Stores/index.html` in your IDE and explain the above points.
 
-  * 🙋 @TODO { YES, HOW? } 
+  ```js
+  const request = window.indexedDB.open("todoList", 1);
+  
+  request.onupgradeneeded = function(event) {
+    const db = event.target.result;
+    const objectStore = db.createObjectStore("todoList");
+  };
+
+  request.onsuccess = event => {
+    console.log(request.result);
+  };
+  ```
+
+* Next open `18-Ins_Creating_Object_Stores/index.html` in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
+
+  ![18-Ins_Creating_Object_Stores.png](Images/18-Ins_Creating_Object_Stores.png)
+
+* We navigate into the `20-Ins_Creating_Object_Stores` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
+
+* When we click on the database tab, we can see that we now have an empty object store called `todoList`.
+
+* Ask the class the following question(s): 
+
+  * ☝️ What is an object store?
+
+  * 🙋 It's similar to an SQL table and where we store data in IndexedDB.
+
+  * ☝️ What is the main difference between an object store and an SQL table?
+
+  * 🙋 Object stores do not have schemas.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `19-Stu_Creating_Object_Stores/README.md`.
 
-### 20. Student Do: { ACTIVITY NAME } (15 min) 
+### 20. Student Do: Creating Object Stores (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `19-Stu_Creating_Object_Stores/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # Creating an Object Store
+
+  In this activity, you will create an object store for your IndexedDB database.
+
+  ## Instructions
+
+  * Write code to request an IndexedDB database instance.
+  * On success, log the result to your console.
+  * Inside the `onupgradeneeded` method, create an object store for you database called `toDoList`.
+
+  ## 💡 Hint(s)
+
+  * Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
+  * You can `console.log` the `request` to so what attributes are available to you.
+
+  ## 🏆 Bonus
+
+  * Use the [keyPath](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath) docs to research what a `keyPath` is and how to add it to your `objectStore`.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 21. Instructor Review: Creating Object Stores (10 min) 
 
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+* Use the prompts and talking points below to review the following key point(s):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ✔ We create the object store in the `onupgradeneeded` method.
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Open `19-Stu_Creating_Object_Stores/Solved/index.html` in your IDE and review the code snippet.
 
-* Use the prompts and talking points (🔑) below to review the following key points:
+  ```js
+  const request = window.indexedDB.open("todoList", 1);
+    
+  request.onsuccess = event => {
+    console.log(request.result);
+  };
 
-  * ✔️ @TODO { THIS }
+  request.onupgradeneeded = ({ target }) => {
+    const db = target.result;
+    const objectStore = db.createObjectStore("todoList");
+  };
+  ```
 
-  * ✔️ @TODO { THAT }
+* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
 
-  * ✔️ @TODO { THE OTHER }
+* Ask the class the following question(s):
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * ☝️ What do we use object stores for? 
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
-
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
-
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
-
-  * 🙋 @TODO { YES, WE DO! }
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 To store our indexedDB data.
 
 * Answer any questions before proceeding.
 
@@ -517,7 +949,7 @@
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
-* @TODO Provide GUIDED instruction for review.
+* Ask students if they have any questions about IndexedDB or anything else covered so far in this unit.
 
 * Answer any questions before ending the class.
 
@@ -526,4 +958,4 @@
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
