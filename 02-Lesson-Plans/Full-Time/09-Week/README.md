@@ -10,7 +10,7 @@ For the Unit 17 mini-project, students will practice the technical interview por
 
 In Unit 18, we will be introducing students to the NoSQL database with MongoDB and Mongoose. We'll also be showing students how to store data in IndexedDB.
 
-Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content/17-CS/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/README.md)for detailed information on key topics, learning objectives, and homework.
+Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content/17-CS/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 

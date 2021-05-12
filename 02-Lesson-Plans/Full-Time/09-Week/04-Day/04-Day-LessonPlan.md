@@ -900,7 +900,7 @@ app.get("/populateduser", (req, res) => {
 
   * Write code to request an IndexedDB database instance.
   * On success, log the result to your console.
-  * Inside the `onupgradeneeded` method, create an object store for you database called `toDoList`.
+  * Inside the `onupgradeneeded` method, create an object store for your database called `toDoList`.
 
   ## 💡 Hint(s)
 
