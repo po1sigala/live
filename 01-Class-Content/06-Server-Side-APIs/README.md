@@ -102,6 +102,12 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📹 [Git Guide Video: Project Collaboration](https://2u-20.wistia.com/medias/60x5om18ac)
 
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+
 ### General
 
 Refer to these resources for additional information about topics covered in this unit.
