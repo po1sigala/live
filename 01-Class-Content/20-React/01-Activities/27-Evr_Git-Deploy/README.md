@@ -50,6 +50,7 @@ Now lets add the `predeploy` and `deploy` scripts to `package.json`.
     "start": "react-scripts start",
     "build": "react-scripts build",
 ```
+
 # Deploy the Site
 
 Now is the time to deploy the React app to GitHub Pages. To do this, run the following command:
