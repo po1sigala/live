@@ -43,7 +43,7 @@ npm i gh-pages
 
 Now lets add the `predeploy` and `deploy` scripts to `package.json`. 
 
-```json
+```text
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -73,7 +73,7 @@ Check that your source branch is `gh-pages`, as shown in the following image:
 
 Finally, let's refresh the page to make sure that the page has been published. This notification will appear in green, as shown in the following image:
 
-![In GitHub Pages, a green notification states Your site is published, followed by a link to the site.](./Images/04-published.png)
+![In GitHub Pages, a green notification states, "Your site is published", followed by a link to the site.](./Images/04-published.png)
 
 Click on the URL to check that everything looks good.
 
