@@ -34,7 +34,7 @@ In today's class, you will prepare students for technical interviews through the
 
 ## Slide Deck
 
-* [Unit 18 Slide Deck](https://docs.google.com/presentation/d/1JHT8-zZ-JWHg_zKDXEVy-leNegSipr26HBTNIEl3J3Y/edit?usp=sharing)
+* [Unit 18 Slide Deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -295,7 +295,7 @@ In today's class, you will prepare students for technical interviews through the
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1JHT8-zZ-JWHg_zKDXEVy-leNegSipr26HBTNIEl3J3Y/edit?usp=sharing) and follow these prompts with their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing) and follow these prompts with their corresponding slides:
 
   * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
 
