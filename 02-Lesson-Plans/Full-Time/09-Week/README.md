@@ -70,7 +70,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Unit 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
 
-  * [Unit 18: Intro To MongoDB](https://docs.google.com/presentation/d/1JHT8-zZ-JWHg_zKDXEVy-leNegSipr26HBTNIEl3J3Y/edit?usp=sharing)
+  * [Unit 18: Intro To MongoDB](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing)
 
 ### Algorithms
 

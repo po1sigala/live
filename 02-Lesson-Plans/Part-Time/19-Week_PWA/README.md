@@ -40,11 +40,11 @@ N/A
 
 ### Time Tracker(s)
 
-  * [Unit 19-PWA Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1s5szPwHVNDpeiUlZ8ndGBiq6QTeTo7YW/edit?dls=true)
+  * [Unit 19-PWA Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1eDBMDxGxeXK44XfEzpSHYhD91buf2EVmiMQReykOd6g/edit?usp=sharing)
 
-  * [Unit 19-PWA Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1nAEVVhWc660YTUTVAVndTty0U7snFwtW/edit?dls=true)
+  * [Unit 19-PWA Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1O_wG2FN045Ts9D2poo9CucC8l-WibO2LuvJYCU5nixA/edit?usp=sharing)
 
-  * [Unit 19-PWA Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1dMB6lDHbRxoGMttesDEvRUvDDchhVtGM/edit?dls=true)
+  * [Unit 19-PWA Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1r3f4FeB0r9GK9x4NxY92KOdhp9rkSlVulHlU53hy4mc/edit?usp=sharing)
 
 ## Algorithms
 
