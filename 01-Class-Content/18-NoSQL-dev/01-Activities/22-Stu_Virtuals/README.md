@@ -2,13 +2,13 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to implement a Mongoose virtual in my schema to get and set data, but not persist that data to the database so that I can get and set computed properties on documents.
+* As a developer, I want to implement a Mongoose virtual in my schema to get and set data. As a developer, I do not want that data to persist to the database so I can get and set computed properties on documents.
 
 ## Acceptance Criteria
 
 * It's done when I have created a new `Schema` called `userSchema` with a `name` and `age` attribute.
 
-* It's done when I have set the vale of the `name` attribute to an object containing two more attributes: `first` and `last`.
+* It's done when I have set the value of the `name` attribute to an object containing two more attributes: `first` and `last`.
 
 * It's done when I have defined a new `Model` for a `User` that makes use of the `userSchema` made in step 1.
 
@@ -19,10 +19,10 @@ Work with a partner to implement the following user story:
 * It's done when I have run the code using `npm start` to see the desired output below:
 
     ```sh
-    > node index
+    > npm start
 
-    userSchema full name getter: Ada Lovelace
-    userSchema full name setter: Grace Hopper
+    fullName virtual getter: Ada Lovelace
+    fullName virtual setter: Grace Hopper
     ```
 
 ## 💡 Hints
@@ -38,4 +38,4 @@ If you have completed this activity, work through the following challenge with y
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
