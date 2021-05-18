@@ -2,7 +2,9 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to implement a Mongoose virtual in my schema to get and set data. As a developer, I do not want that data to persist to the database so I can get and set computed properties on documents.
+* As a developer, I want to implement a Mongoose virtual in my schema to get and set data. 
+
+* As a developer, I do not want that data to persist to the database so I can get and set computed properties on documents.
 
 ## Acceptance Criteria
 
