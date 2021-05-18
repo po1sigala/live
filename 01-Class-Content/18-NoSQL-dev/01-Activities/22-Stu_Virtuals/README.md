@@ -21,7 +21,8 @@ Work with a partner to implement the following user story:
     ```sh
     > node index
 
-    Ada Lovelace
+    userSchema full name getter: Ada Lovelace
+    userSchema full name setter: Grace Hopper
     ```
 
 ## 💡 Hints
