@@ -19,7 +19,7 @@ TypeError: Invalid schema configuration: `Tag` is not a valid type at path `ref`
 
 1. Navigate to `Unsolved/` in your command line window
 
-2. Run `npm run seed` to populate our example database
+2. Run `npm run seed` to populate an example database
 
 3. Run `npm start` to attempt to query the database
 
