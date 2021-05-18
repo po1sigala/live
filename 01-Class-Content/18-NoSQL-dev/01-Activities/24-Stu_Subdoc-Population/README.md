@@ -2,11 +2,11 @@
 
 Work with a partner to resolve the following issue(s):
 
-* As a user, I should be able to see a list of tags associated with a `post` after run a query for all posts using the Mongoose populate method.
+* As a user, I should be able to see all tags associated with a `post` after running the Mongoose populate method on the `Posts` model.
 
 ## Expected Behavior
 
-When a user queries a `post`, the controller should find the `post` with an array populated with associated `tags`.
+When a user queries a `post`, the controller should return the `post` with an array populated with the associated `tags`.
 
 ## Actual Behavior
 
@@ -23,7 +23,7 @@ TypeError: Invalid schema configuration: `Tag` is not a valid type at path `ref`
 
 3. Run `npm start` to attempt to query the database
 
-4. Notice error
+4. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type at path `ref`.``
 
 ## 💡 Hints
 
@@ -33,9 +33,9 @@ When referencing another schema inside our Post schema, what attributes and type
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are the performance benefits associated with using the populate method in mongoose as opposed to the $lookup operator in MongoDB? 
+* What are the performance benefits associated with using the populate method in Mongoose as opposed to the `$lookup` operator in MongoDB? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
