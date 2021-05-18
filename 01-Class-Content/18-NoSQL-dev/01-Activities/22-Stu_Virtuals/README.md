@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have defined a `set()` method on the `fullName` virtual that takes a string containing the full name of the user and sets the virtual attribute values for `first` and `last`.
 
-* It's done when I have ran the code by running `npm start` to see the desired output below:
+* It's done when I have run the code using `npm start` to see the desired output below:
 
     ```sh
     > node index
