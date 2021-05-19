@@ -17,21 +17,29 @@
     USE demoDB
     ```
 
-  * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
+* 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
   
-  *  We use the `insertOne()` method to insert a single document into our new collection, `collection1`. We can also use `insertOne()` to add data to an existing collection using the same syntax.  
+    *  We use the `insertOne()` method to insert a single document into our new collection, `collection1`.
+
+    * The `db` refers to the current database in use. Our database is `demoDB`.
+
+    * `collection1` is the name of the collection we want to add data to. Since `collection1` doesn't exist yet, it will be automatically created.
+
+    * `insertOne()` is the method we want to use.
+
+    * We use this same syntax to add a document to both a new and existing collection. We can also use this same syntax to perform other tasks, such as fetching data. 
+
+    ```sh
+    db.collection1.insertOne()
+    ```
+
+  * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter` to insert the data.
 
     ```sh
     db.collection1.insertOne({ pet: "dog", breed: "chihuahua"})
     ```
 
-  * We define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter`.
-
-    ```sh
-    db.collection1.insertOne({ pet: "dog", breed: "chihuahua"})
-    ```
-
-  * When a document have been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that     MongoDB creates for us is included in this object. 
+  * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that     MongoDB creates for us is included in this object. 
 
     ```sh
     { acknowledged: true,
@@ -39,7 +47,7 @@
     }
     ```
 
-  * To find all the documents in the collection, we use `find()`. Notice that when our new document is returned, an `_id` has been inserted into the document.
+  * 🔑 To fetch the document we just created, we use the same syntax with the `find()` method. Notice that when our new document is returned, an `_id` has been inserted into the document.
 
     ```sh
     db.collection1.find()
