@@ -25,13 +25,13 @@ postSchema.virtual('commentCount').get(function () {
   return this.comments.length;
 });
 
-// Initialize our Post
+// Initialize our Post model
 const PostModel = model('post', postSchema);
 
 // Create a post
 const newPost = new PostModel({
   text: 'This is a test post',
-  username: 'coolperson',
+  username: 'coolPerson',
 });
 
 // Create a comment
