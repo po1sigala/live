@@ -17,7 +17,7 @@
     USE demoDB
     ```
 
-* 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
+  * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
   
     *  We use the `insertOne()` method to insert a single document into our new collection, `collection1`.
 
