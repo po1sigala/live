@@ -25,7 +25,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[MongoDB Compass Docs on Connect o MongoDB](https://docs.mongodb.com/compass/current/connect/)
+[MongoDB Compass Docs on Connect to MongoDB](https://docs.mongodb.com/compass/current/connect/)
 
 [MongoDB Compass Docs on Embedded MongoDB Shell](https://docs.mongodb.com/compass/current/embedded-shell/)
 
@@ -41,7 +41,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Image showing myPracticeDB Database with one document in Compass](https://docs.mongodb.com/compass/current/documents/modify/)
+![Image showing myPracticeDB Database with one document in Compass](./assets/image_1.png)
 
 ---
 
