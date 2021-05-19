@@ -9,16 +9,12 @@ module.exports = {
   // Get a single comment
   getSingleComment(req, res) {
     Comment.findOne({ _id: req.params.commentId })
-      .then((comment) => {
-        if (!comment) {
-          return res.status(404).json({ message: 'No comment with this id' });
-        }
-        res.json(comment);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      .then((comment) =>
+        !comment
+          ? res.status(404).json({ message: 'No comment found with that id' })
+          : res.json(comment)
+      )
+      .catch((err) => res.status(500).json(err));
   },
   // Create a comment
   createComment(req, res) {
