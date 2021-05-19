@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It is done when the first document is skipped based on the values supplied in Express query parameters and the results are limited to 5 documents. 
 
-* It is done when routes are successfully tested and the resulted returned in Insomnia. 
+* It is done when routes are successfully tested and the results returned in Insomnia. 
 
 ## 📝 Notes
 
