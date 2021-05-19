@@ -8,11 +8,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have created a new `Schema` called `userSchema` with a `name` and `age` attribute.
-
-* It's done when I have set the value of the `name` attribute to an object containing two more attributes: `first` and `last`.
-
-* It's done when I have defined a new `Model` for a `User` that makes use of the `userSchema` made in step 1.
+* It's done when I have created a new `Schema` called `userSchema` with a `first` name, `last` name, and `age` attribute.
 
 * It's done when I have defined a virtual property on the `userSchema` called `fullName` that will get the `first` and `last` attributes and return a string containing the full name of the user.
 
@@ -21,10 +17,11 @@ Work with a partner to implement the following user story:
 * It's done when I have run the code using `npm start` to see the desired output below:
 
     ```sh
-    > npm start
+    > node index
 
-    fullName virtual getter: Ada Lovelace
-    fullName virtual setter: Grace Hopper
+    🚀  ada.fullName: Ada Lovelace
+    🚀  ada.first: Ada
+    🚀  ada.last: Lovelace
     ```
 
 ## 💡 Hints
