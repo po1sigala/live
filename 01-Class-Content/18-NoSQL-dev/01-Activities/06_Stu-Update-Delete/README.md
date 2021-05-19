@@ -8,9 +8,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the single document with the `_id`  of `1000` is deleted. No other documents should be deleted. 
+* It's done when the single document with the `_id`  of `1000` is deleted. No other documents should be removed. 
 
-* It's done when the single document that contains the name value `Artemis` is updated and the new name that appears is `Suko`.
+* It's done when the single document that contains the name value `Artemis` is updated and replaced with the name `Suko`.
 
 * It is done when the results have been logged to the console. 
 
