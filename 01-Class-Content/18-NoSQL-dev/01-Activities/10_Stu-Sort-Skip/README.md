@@ -4,7 +4,7 @@ Work with a partner to implement the following user story:
 
 * As a developer, I want to change the order in which read operations return documents.
 
-* As a developer, I want to omit documents from the beginning of the list of returned document and limit the returned number of documents.  
+* As a developer, I want to omit documents from the beginning of the list of returned documents and limit the returned number of documents.  
 
 ## Acceptance Criteria
 
