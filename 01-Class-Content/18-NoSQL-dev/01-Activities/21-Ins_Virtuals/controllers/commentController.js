@@ -30,7 +30,7 @@ module.exports = {
         !post
           ? res
               .status(404)
-              .json({ message: 'comment created, but no user with this ID' })
+              .json({ message: 'comment created, but no posts with this ID' })
           : res.json({ message: 'comment created' })
       )
       .catch((err) => {
