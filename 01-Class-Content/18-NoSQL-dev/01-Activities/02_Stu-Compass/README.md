@@ -25,7 +25,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[MongoDB Compass Docs on Connect o MongoDB](https://docs.mongodb.com/compass/current/connect/)
+[MongoDB Compass Docs on Connect to MongoDB](https://docs.mongodb.com/compass/current/connect/)
 
 [MongoDB Compass Docs on Embedded MongoDB Shell](https://docs.mongodb.com/compass/current/embedded-shell/)
 
