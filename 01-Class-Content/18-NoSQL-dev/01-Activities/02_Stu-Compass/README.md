@@ -1,10 +1,10 @@
-# 📖 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; START WITH A VERB! (e.g., Implement Media Queries for Screens)
+# 📖 Creating and Viewing Data With MongoDB Compass
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a MongoDB database to store my data. 
+* As a developer, I want to create a MongoDB database to store data. 
 
-* As an developer, I want to add a document to the database and visually explore that data using Compass. 
+* As an developer, I want to add a collection to my database and insert a document so that I can visually explore that data using MongoDB Compass. 
 
 ## Acceptance Criteria
 
@@ -13,11 +13,11 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a new local database named `myPracticeDB` using Compass's Embedded MongoDB Shell (MongoSH Beta).
 
-* It's done when I use the Embedded MongoDB Shell to add a new document that contains two fields: a name and an occupation. A value should be supplied for each field.
+* It's done when I use the Embedded MongoDB Shell to add a new collection named `collection1` and insert a document into that collection that contains two fields: a name and an occupation. A value should be supplied for each field.
 
-* It's done when I refresh the page and the the `myPracticeDB` appears on the list of databases.
+* It's done when I refresh the page and the `myPracticeDB` appears on the list of databases.
 
-* It's done when I open the `myPracticeDB` and the document I just created is visible on the Documents tab.
+* It's done when I open the `collection1` collection and the document I just created is visible on the Documents tab and an `_id` field has been automatically inserted.
 
 * It's done when I modify the existing document to have an additional field of `age` and the field is provided a value. 
 
@@ -35,27 +35,27 @@ Refer to the documentation:
 
 [MongoDB Compass Docs on Viewing Documents](https://docs.mongodb.com/compass/current/documents/view/)
 
-[MongoDB Compass Docs on Modifying Documents]()
+[MongoDB Compass Docs on Modifying Documents](https://docs.mongodb.com/compass/current/documents/modify/)
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Image showing myPracticeDB Database with one document in Compass]()
+![Image showing myPracticeDB Database with one document in Compass](https://docs.mongodb.com/compass/current/documents/modify/)
 
 ---
 
 ## 💡 Hints
 
-* { @TODO Include hints to point students in the right direction. Remember, hints are guides, not answers! }
+* What shell command do you use to create a new database? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* { @TODO Refer to the Activity Planner for the bonus question. Always phrase it as a question! } 
+* How can you perform create, insert and delete operations in bulk using MongoDB? When would this be useful? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
