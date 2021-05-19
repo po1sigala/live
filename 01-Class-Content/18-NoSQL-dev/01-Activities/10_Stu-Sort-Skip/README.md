@@ -10,9 +10,9 @@ Work with a partner to implement the following user story:
 
 * It's done when the documents are returned in descending order based on the values supplied in Express query parameters.  
 
-* It is done when the first document is skipped based on the values supplied in Express query parameters and the results are limited to 5 documents. 
+* It's done when the first document is skipped based on the values supplied in Express query parameters and the results are limited to 5 documents. 
 
-* It is done when routes are successfully tested and the results returned in Insomnia. 
+* It's done when routes are successfully tested and the results returned in Insomnia. 
 
 ## 📝 Notes
 
