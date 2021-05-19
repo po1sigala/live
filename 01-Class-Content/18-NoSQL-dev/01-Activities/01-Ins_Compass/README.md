@@ -47,13 +47,13 @@
 
 * On the Local page in Compass, do the following to explore our data using Compass's interface.
 
-* When we click on the `Refresh` at the top of the Compass screen and the `demoBD` database we just created should appear on the list of available databases. 
+  * When we click on the `Refresh` at the top of the Compass screen and the `demoBD` database we just created should appear on the list of available databases. 
 
-*  We click on the arrow to the left of the `demoBD` database to open it and click on the `collection1` collection that appears below. 
+  *  We click on the arrow to the left of the `demoBD` database to open it and click on the `collection1` collection that appears below. 
 
-*  The new document that we created appears in the Documents tab.
+  *  The new document that we created appears in the Documents tab.
   
-*  Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app. 
+  *  Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app. 
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
