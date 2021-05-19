@@ -6,12 +6,12 @@ module.exports = {
       .then((comment) => res.json(comment))
       .catch((err) => res.status(500).json(err));
   },
-  // get single comment by id
+  // Get a single comment
   getSingleComment(req, res) {
     Comment.findOne({ _id: req.params.commentId })
       .then((comment) => {
         if (!comment) {
-          return res.status(404).json({ message: 'No comment with this id!' });
+          return res.status(404).json({ message: 'No comment with this id' });
         }
         res.json(comment);
       })
@@ -20,7 +20,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
-  // create a comment
+  // Create a comment
   createComment(req, res) {
     Comment.create(req.body)
       .then((comment) => {
@@ -35,7 +35,7 @@ module.exports = {
           ? res
               .status(404)
               .json({ message: 'comment created, but no user with this ID' })
-          : res.json({ message: 'comment created!' })
+          : res.json({ message: 'comment created' })
       )
       .catch((err) => {
         console.error(err);

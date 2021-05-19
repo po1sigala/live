@@ -21,15 +21,4 @@ module.exports = {
       .then((dbPostData) => res.json(dbPostData))
       .catch((err) => res.status(500).json(err));
   },
-  addComment(req, res) {
-    Post.findOneAndUpdate(
-      { _id: req.params.postId },
-      { $addToSet: { comments: req.body } },
-      { runValidators: true, new: true }
-    ).then((post) =>
-      !post
-        ? res.status(404).json({ message: 'No post with that ID' })
-        : res.json(post).catch((err) => res.status(500).json(err))
-    );
-  },
 };
