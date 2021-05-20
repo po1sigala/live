@@ -42,7 +42,8 @@
   * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that     MongoDB creates for us is included in this object. 
 
     ```sh
-    { acknowledged: true,
+    { 
+     acknowledged: true,
      insertedId: ObjectId("60a46fb6845ecbd2f2736329") 
     }
     ```
