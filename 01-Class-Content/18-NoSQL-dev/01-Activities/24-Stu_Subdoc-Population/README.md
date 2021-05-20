@@ -13,8 +13,9 @@ When a user queries a `post`, the controller should return the `post` with an ar
 When a user runs the application in an attempt to get a post, they are presented with an error:
 
 ```sh
-TypeError: Invalid schema configuration: `Tag` is not a valid type at path `ref`
+TypeError: Invalid schema configuration: 'Tag' is not a valid type at path 'ref'
 ```
+
 ## Steps to Reproduce the Problem
 
 1. Navigate to `Unsolved/` in your command line window
@@ -33,7 +34,7 @@ When referencing another schema inside our Post schema, what attributes and type
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are the performance benefits associated with using the populate method in Mongoose as opposed to the `$lookup` operator in MongoDB? 
+* What are the performance benefits associated with using the populate method in Mongoose as opposed to the `$lookup` operator in MongoDB?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
