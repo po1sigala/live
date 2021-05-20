@@ -14,33 +14,33 @@
   * 🔑 To create a database, we select the new database using the `USE` command and give it a name. The `USE` command performs two common functions. If the database already exists, the `USE` command selects the existing database for use. If the database does not yet exist, `USE` creates the database as well as selects it for use.
 
     ```sh
-    USE demoDB
+    USE animalShelterDB
     ```
 
   * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
   
     *  We use the `insertOne()` method to insert a single document into our new collection, `collection1`.
 
-    * The `db` refers to the current database in use. Our database is `demoDB`.
+    * The `db` refers to the current database in use. Our database is `animalShelterDB`.
 
-    * `collection1` is the name of the collection we want to add data to. Since `collection1` doesn't exist yet, it will be automatically created.
+    * `adoptablePetsCollection` is the name of the collection we want to add data to. Since `adoptablePetsCollection` doesn't exist yet, it will be automatically created.
 
     * `insertOne()` is the method we want to use.
 
     * We use this same syntax to add a document to both a new and existing collection. We can also use this same syntax to perform other tasks, such as fetching data. 
 
     ```sh
-    db.collection1.insertOne()
+    db.adoptablePetsCollection.insertOne()
     ```
 
   * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter` to insert the data.
 
     ```sh
-    db.collection1.insertOne({ pet: "dog", breed: "chihuahua"})
+    db.adoptablePetsCollection.insertOne({ pet: "dog", breed: "chihuahua"})
     ```
 
-  * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that   MongoDB creates for us is included in this object. 
-
+  * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that   MongoDB creates for us is included in this object. The field name `_id` is reserved for use as a primary key in a MongoDB database and the value provided must be unique.
+  
     ```sh
     { 
      acknowledged: true,
