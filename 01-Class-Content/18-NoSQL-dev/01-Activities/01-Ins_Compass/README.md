@@ -60,7 +60,7 @@
 
   * When we click on the `Refresh` at the top of the Compass screen and the `demoBD` database we just created should appear on the list of available databases. 
 
-  *  We click on the arrow to the left of the `shelterDB` database to open it and click on the `petsCollection` collection that appears below. 
+  *  We click on the arrow to the left of the `shelterDB` database to open it and click on the `petCollection` collection that appears below. 
 
   *  The new document that we created appears in the Documents tab.
   
