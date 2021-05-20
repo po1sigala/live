@@ -17,7 +17,7 @@
   * 🔑 To create a database, we select the new database using the `USE` command and give it a name. The `USE` command performs two common functions. If the database already exists, the `USE` command selects the existing database for use. If the database does not yet exist, `USE` creates the database as well as selects it for use.
 
     ```sh
-    USE shelterDB
+    USE shelterDB;
     ```
 
   * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
@@ -33,13 +33,13 @@
     * We use this same syntax to add a document to both a new and existing collection. We can also use this same syntax to perform other tasks, such as fetching data. 
 
     ```sh
-    db.petCollection.insertOne()
+    db.petCollection.insertOne();
     ```
 
   * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter` to insert the data.
 
     ```sh
-    db.petCollection.insertOne({ pet: "dog", breed: "chihuahua"})
+    db.petCollection.insertOne({ pet: "dog", breed: "chihuahua"});
     ```
 
   * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that   MongoDB creates for us is included in this object. 
@@ -54,7 +54,7 @@
   * 🔑 To fetch the document we just created, we use the same syntax with the `find()` method. Notice that when our new document is returned, an `_id` has been inserted into the document.
 
     ```sh
-    db.petCollection.find()
+    db.petCollection.find();
     ```
 
 * On the Local page in Compass, do the following to explore our data using Compass's interface.
