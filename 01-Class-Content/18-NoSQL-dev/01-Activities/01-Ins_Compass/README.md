@@ -51,14 +51,14 @@
   * 🔑 To fetch the document we just created, we use the same syntax with the `find()` method. Notice that when our new document is returned, an `_id` has been inserted into the document.
 
     ```sh
-    db.collection1.find()
+    db.adoptablePetsCollection.find()
     ```
 
 * On the Local page in Compass, do the following to explore our data using Compass's interface.
 
-  * When we click on the `Refresh` at the top of the Compass screen and the `demoBD` database we just created should appear on the list of available databases. 
+  * When we click on the `Refresh` at the top of the Compass screen and the `animalShelterDB` database we just created should appear on the list of available databases. 
 
-  *  We click on the arrow to the left of the `demoBD` database to open it and click on the `collection1` collection that appears below. 
+  *  We click on the arrow to the left of the `animalShelterDB` database to open it and click on the `availablePets` collection that appears below. 
 
   *  The new document that we created appears in the Documents tab.
   
