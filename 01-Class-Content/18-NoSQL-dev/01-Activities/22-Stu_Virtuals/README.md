@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have run the code and added a user using Insomnia.
 
-    ```console
+    ```json
     {  
         "first": "Ada",
         "last": "Lovelace",
@@ -26,7 +26,7 @@ Work with a partner to implement the following user story:
     }
     ```
 
-* It's done when I have performed a GET request to get all users and confirmed that the `fullName` virtual attribute is present in response.
+* It's done when I have performed a GET request to `http://localhost:3001/api/users/` to get all users and confirmed that the `fullName` virtual attribute is present in response.
 
 ## 💡 Hints
 
