@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of Creating and Reading Data with MongoDB JS 
 
-Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [connection.js](./Unsolved/connection.js).
+Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js).
 
 
 ## 📝 Notes
@@ -9,7 +9,7 @@ Refer to the documentation:
 
 [Express Docs on Integrating MongoDB](https://expressjs.com/en/guide/database-integration.html#mongodb)
 
-[MongoDB Docs on Find](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/retrieve/)
+[MongoDB Docs on Find](https://docs.mongodb.com/drivers/node/usage-examples/findOne/)
 
 [MongoDB Docs on Insert a Document](https://docs.mongodb.com/drivers/node/fundamentals/crud/write-operations/insert/)
 

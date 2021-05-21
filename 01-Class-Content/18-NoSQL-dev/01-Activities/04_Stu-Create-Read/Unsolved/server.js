@@ -6,7 +6,7 @@ const app = express();
 const port = 3001;
 
 // Connection string to local instance of MongoDB including database name
-const connectionStringURI = `mongodb://localhost:27017/shelterDB`;
+const connectionStringURI = `mongodb://localhost:27017/inventoryDB`;
 
 // Declare a variable to hold the connection
 let db;
@@ -29,7 +29,7 @@ app.use(express.json());
 
 app.post('/create', function (req, res) {
   // Use db connection to add a document
-  db.collection('petCollection').insertOne({"name": req.body.name, "breed": req.body.breed}, 
+  db.collection('bookCollection').insertOne({"title": req.body.title, "author": req.body.author}, 
     function (err,results) {
       if (err) throw err;
       res.json(results);
@@ -39,7 +39,7 @@ app.post('/create', function (req, res) {
 
 app.get('/read', function (req, res) {
   // Use db connection to find all documents in collection
-  db.collection('petCollection')
+  db.collection('bookCollection')
     .find()
     .toArray(function (err, results) {
       if (err) throw err;
