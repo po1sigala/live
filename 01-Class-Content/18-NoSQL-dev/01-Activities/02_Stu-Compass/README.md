@@ -15,9 +15,9 @@ Work with a partner to implement the following user story:
 
 * It's done when I use the Embedded MongoDB Shell to add a new collection named `collection1` and insert a document into that collection that contains two fields: a name and an occupation. A value should be supplied for each field.
 
-* It's done when I refresh the page and the `myPracticeDB` appears on the list of databases.
+* It's done when I refresh the page and the `inventoryDB` appears on the list of databases.
 
-* It's done when I open the `collection1` collection and the document I just created is visible on the Documents tab and an `_id` field has been automatically inserted.
+* It's done when I open the `bookCollection` collection and the document I just created is visible on the Documents tab and an `_id` field has been automatically inserted.
 
 * It's done when I modify the existing document to have an additional field of `age` and the field is provided a value. 
 
