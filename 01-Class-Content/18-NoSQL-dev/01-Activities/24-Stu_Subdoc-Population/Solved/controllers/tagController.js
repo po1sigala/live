@@ -1,9 +1,9 @@
-const Tag = require('../models/Tag');
+const Tag = require('../models/Tags');
 
 module.exports = {
   getTags(req, res) {
-    Tag.find()
-      .then((users) => res.json(users))
+    Tag.find({})
+      .then((tags) => res.json(tags))
       .catch((err) => res.status(500).json(err));
   },
   getSingleTag(req, res) {

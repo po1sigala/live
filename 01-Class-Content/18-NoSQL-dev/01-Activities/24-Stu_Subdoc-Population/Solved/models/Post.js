@@ -33,10 +33,10 @@ const postSchema = new Schema(
 
 // Create a virtual property `upvoteCount` that gets the amount of comments per user
 postSchema
-  .virtual('upvoteCount')
+  .virtual('tagCount')
   // Getter
   .get(function () {
-    return this.meta.upvotes;
+    return this.tags.length;
   });
 
 // Initialize our Post model

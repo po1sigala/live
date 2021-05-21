@@ -25,3 +25,7 @@ tagSchema
   .get(function () {
     return `color: ${this.color}`;
   });
+
+const Tag = model('tag', tagSchema);
+
+module.exports = Tag;

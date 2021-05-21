@@ -1,30 +1,33 @@
 const connection = require('../config/connection');
-const { Post, User } = require('../models');
-const getRandomName = require('./data');
-
-console.log(getRandomName());
-connection.on('error', (err) => err);
+const { Post, Tags } = require('../models');
+const { getRandomColor, getRandomPost } = require('./data');
 
 connection.once('open', async () => {
-  console.log('connected');
   await Post.deleteMany({});
-  await User.deleteMany({});
+  await Tags.deleteMany({});
 
-  const users = [];
+  const tags = [];
+  const posts = [];
 
   for (let i = 0; i < 20; i++) {
-    const fullName = getRandomName();
-    const first = fullName.split(' ')[0];
-    const last = fullName.split(' ')[1];
+    const tagname = getRandomColor();
+    const post = getRandomPost(50);
 
-    users.push({
-      first,
-      last,
-      age: Math.floor(Math.random() * (99 - 18 + 1) + 18),
+    tags.push({
+      tagname,
+      color: tagname,
+    });
+
+    posts.push({
+      published: true,
+      text: post,
+      tags: [],
     });
   }
 
-  await User.collection.insertMany(users);
-  console.log(users);
+  await Post.collection.insertMany(posts);
+  await Tags.collection.insertMany(tags);
+  console.log(tags);
+  console.log(posts);
   process.exit(0);
 });
