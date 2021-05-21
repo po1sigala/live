@@ -1,0 +1,10 @@
+{
+  "name": "24-Stu_Subdoc-Population",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10"
+  }
+}
