@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-// Schema to create User model
+// Schema to create Post model
 const postSchema = new Schema(
   {
     published: {
@@ -29,19 +29,15 @@ const postSchema = new Schema(
   }
 );
 
-// Create a virtual property `commentCount` that gets the amount of comments per user
+// Create a virtual property `upvoteCount` that gets the amount of comments per user
 postSchema
-  .virtual('upvotes')
+  .virtual('upvoteCount')
   // Getter
   .get(function () {
     return this.meta.upvotes;
-  })
-  // Setter to set the first and last name
-  .set(function (v) {
-    const result = v ? (this.meta.upvotes += 1) : 1;
-    return result;
   });
 
+// Initialize our Post model
 const Post = model('post', postSchema);
 
 module.exports = Post;
