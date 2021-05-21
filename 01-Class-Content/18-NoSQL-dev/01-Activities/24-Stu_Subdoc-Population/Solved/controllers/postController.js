@@ -1,4 +1,4 @@
-const { Post, User } = require('../models');
+const { Post, Tags } = require('../models');
 
 module.exports = {
   getPosts(req, res) {
@@ -18,23 +18,7 @@ module.exports = {
   // create a new post
   createPost(req, res) {
     Post.create(req.body)
-      .then((post) => {
-        return User.findOneAndUpdate(
-          { _id: req.body.userId },
-          { $push: { posts: post._id } },
-          { new: true }
-        );
-      })
-      .then((user) =>
-        !user
-          ? res
-              .status(404)
-              .json({ message: 'Post created, but found no user with that ID' })
-          : res.json('Created the post 🎉')
-      )
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      .then((post) => res.json(post))
+      .catch((err) => res.status(500).json(err));
   },
 };

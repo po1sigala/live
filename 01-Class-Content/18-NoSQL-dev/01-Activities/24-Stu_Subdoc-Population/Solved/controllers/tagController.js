@@ -20,7 +20,23 @@ module.exports = {
   // create a new user
   createTag(req, res) {
     Tag.create(req.body)
-      .then((dbTagData) => res.json(dbTagData))
-      .catch((err) => res.status(500).json(err));
+      .then((tag) => {
+        return Post.findOneAndUpdate(
+          { _id: req.body.postId },
+          { $push: { tags: tag._id } },
+          { new: true }
+        );
+      })
+      .then((user) =>
+        !user
+          ? res
+              .status(404)
+              .json({ message: 'Tag created, but found no post with that ID' })
+          : res.json('Created the tag 🎉')
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   },
 };
