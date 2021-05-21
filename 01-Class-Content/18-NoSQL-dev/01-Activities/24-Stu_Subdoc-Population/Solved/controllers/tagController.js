@@ -1,13 +1,13 @@
-const Tag = require('../models/Tags');
+const { Tags, Post } = require('../models');
 
 module.exports = {
   getTags(req, res) {
-    Tag.find({})
+    Tags.find({})
       .then((tags) => res.json(tags))
       .catch((err) => res.status(500).json(err));
   },
   getSingleTag(req, res) {
-    Tag.findOne({ _id: req.params.tagId })
+    Tags.findOne({ _id: req.params.tagId })
       .select('-__v')
       .populate('posts')
       .then((tag) =>
@@ -19,7 +19,7 @@ module.exports = {
   },
   // create a new user
   createTag(req, res) {
-    Tag.create(req.body)
+    Tags.create(req.body)
       .then((tag) => {
         return Post.findOneAndUpdate(
           { _id: req.body.postId },

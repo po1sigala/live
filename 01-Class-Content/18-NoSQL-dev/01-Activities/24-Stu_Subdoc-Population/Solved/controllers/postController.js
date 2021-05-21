@@ -1,4 +1,4 @@
-const { Post, Tags } = require('../models');
+const { Post } = require('../models');
 
 module.exports = {
   getPosts(req, res) {
