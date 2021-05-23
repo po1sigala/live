@@ -19,7 +19,7 @@ connection.once('open', async () => {
     });
 
     posts.push({
-      published: true,
+      published: Math.random() < 0.5,
       text: post,
       tags: [],
     });

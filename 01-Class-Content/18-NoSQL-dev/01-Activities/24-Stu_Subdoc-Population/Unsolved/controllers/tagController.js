@@ -23,7 +23,7 @@ module.exports = {
       .then((tag) => {
         return Post.findOneAndUpdate(
           { _id: req.body.postId },
-          { $push: { tags: tag._id } },
+          { $push: { tags: tag.id } },
           { new: true }
         );
       })
