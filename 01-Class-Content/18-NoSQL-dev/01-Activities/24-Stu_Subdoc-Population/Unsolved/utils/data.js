@@ -42,4 +42,9 @@ const getRandomPost = (words) => {
 const getRandomColor = () =>
   `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
-module.exports = { getRandomWord, getRandomColor, getRandomPost };
+module.exports = {
+  getRandomWord,
+  getRandomColor,
+  getRandomPost,
+  genRandomIndex,
+};

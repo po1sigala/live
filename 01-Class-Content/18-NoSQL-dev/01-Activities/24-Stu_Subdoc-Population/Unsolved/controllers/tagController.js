@@ -3,6 +3,8 @@ const { Tags, Post } = require('../models');
 module.exports = {
   getTags(req, res) {
     Tags.find({})
+      .select('-__v')
+      .populate('posts')
       .then((tags) => res.json(tags))
       .catch((err) => res.status(500).json(err));
   },
@@ -23,7 +25,7 @@ module.exports = {
       .then((tag) => {
         return Post.findOneAndUpdate(
           { _id: req.body.postId },
-          { $push: { tags: tag.id } },
+          { $push: { tags: tag._id } },
           { new: true }
         );
       })

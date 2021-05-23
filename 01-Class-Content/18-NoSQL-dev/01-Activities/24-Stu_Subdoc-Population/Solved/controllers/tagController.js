@@ -3,6 +3,8 @@ const { Tags, Post } = require('../models');
 module.exports = {
   getTags(req, res) {
     Tags.find({})
+      .select('-__v')
+      .populate('posts')
       .then((tags) => res.json(tags))
       .catch((err) => res.status(500).json(err));
   },
@@ -17,7 +19,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // create a new user
+  // create a new tag
   createTag(req, res) {
     Tags.create(req.body)
       .then((tag) => {
