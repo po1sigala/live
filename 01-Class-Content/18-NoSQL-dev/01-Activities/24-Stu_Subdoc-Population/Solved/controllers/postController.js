@@ -4,7 +4,10 @@ module.exports = {
   getPosts(req, res) {
     Post.find()
       .then((posts) => res.json(posts))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.error({ message: err });
+        return res.status(500).json(err);
+      });
   },
   getSinglePost(req, res) {
     Post.findOne({ _id: req.params.postId })

@@ -2,6 +2,7 @@ const connection = require('../config/connection');
 const { Post, Tags } = require('../models');
 const { getRandomColor, getRandomPost } = require('./data');
 
+console.time('seeding');
 connection.once('open', async () => {
   await Post.deleteMany({});
   await Tags.deleteMany({});
@@ -27,7 +28,8 @@ connection.once('open', async () => {
 
   await Post.collection.insertMany(posts);
   await Tags.collection.insertMany(tags);
-  console.log(tags);
-  console.log(posts);
+  console.table(tags);
+  console.table(posts, ['published', 'tags', '_id']);
+  console.timeEnd('seeding');
   process.exit(0);
 });

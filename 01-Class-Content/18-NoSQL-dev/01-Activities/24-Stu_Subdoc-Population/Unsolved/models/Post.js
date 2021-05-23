@@ -11,6 +11,12 @@ const postSchema = new Schema(
       type: Date,
       default: Date.now,
     },
+    tags: [
+      {
+        type: 'Tag',
+        ref: 'Tag',
+      },
+    ],
     text: {
       type: String,
       minLength: 15,

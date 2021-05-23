@@ -31,7 +31,7 @@ const postSchema = new Schema(
   }
 );
 
-// Create a virtual property `upvoteCount` that gets the amount of comments per user
+// Create a virtual property `tagCount` that gets the amount of comments per user
 postSchema
   .virtual('tagCount')
   // Getter
