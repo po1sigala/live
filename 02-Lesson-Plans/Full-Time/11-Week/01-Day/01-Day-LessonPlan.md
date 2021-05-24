@@ -1,4 +1,4 @@
-# 21.1 Full-Time Lesson Plan: GraphQL 
+# 11.1 Full-Time Lesson Plan: GraphQL and MERN
 
 ## Overview 
 
