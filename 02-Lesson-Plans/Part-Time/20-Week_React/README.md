@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Heads-Up
 
-You will introduce students to the GraphQL Playground. For more information on using GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+You will introduce students to the GraphQL Playground. If you are new to the GraphQL and the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
 
 ## Helpful Links
 
