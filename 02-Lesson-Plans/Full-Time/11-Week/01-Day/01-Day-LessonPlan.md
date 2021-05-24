@@ -956,269 +956,814 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 14. Instructor Review: Query Arguments (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with query arguments? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `args`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `findById()`
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `populate()`
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `08-Stu_Query-Arguments/Solved/schemas/resolvers.js` in your IDE and explain the following: 
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * When we use a query with arguments, we create an object that holds the information we need to pass to our resolver.
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+  * 🔑 To have access to that object, our resolver function uses `args`.
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * Because `args` is the second of the positional parameters that the resolver can take, we list `args` second so it keeps its place:
+
+     ```js
+     class: async (parent, args) => {
+     ```
+
+  * 🔑 To return the data we need, we call the method `findById()` on the `Class` model we imported to read data from the MongoDB database. The `findById()` method is a built-in method on Mongoose models that allows us to easily search for a single method by `id`. Because we want the data in the `id`, we use `args.id`:
+
+     ```js
+     return await Class.findById(args.id);
+     ```
+
+  * 🔑 To access the related `Professor` object, we use `populate()`:
+
+     ```js
+     return await Class.findById(args.id).populate('professor');
+     ```
+
+* Navigate to `08-Stu_Query-Arguments/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+
+  * 🔑 We use the `classes` entry point to query all the `Class` objects using the field `name` and `_id`. This will give us a list of the the names and ids for all of the classes:
+
+     ```gql
+     query getAllClassIdNames {
+       classes {
+         name
+         _id
+       }
+     }
+     ```
+
+  * We copy one of the ids returned:
+
+     ```json
+     "_id": "Copy_This_ID"
+     ```
+
+  * In the Query Variables pane, we give the value of the `id` variable the value of the id that we just copied, and we make sure that both `id` and the id that we just copied are surrounded by quotes:
+
+     ```json
+     {"id" : "Add_Copied_ID_Here"}
+     ```
+
+  * We enter the query using a variable into the query editor:
+
+     ```gql
+     query class($id: ID!) {
+       class(id: $id) {
+         name
+         professor {
+           name
+         }
+       }
+     }
+     ```
+
+  * We click the Play button. If our resolver is successful, both the class and professor's name will be fetched.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ How can we get more specific results using arguments? 
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 Arguments allow us to query for more specific data by passing information from our query to our resolver. For example, we can search for a specific `id` by passing the information about that `id` to the resolver, which then can use that information to search the database for that specific object using that data.
+
+  * ☝️ Why use variables in our queries? 
+
+  * 🙋 Variables allow us to make our queries more durable. For example, by using a variable when searching by id, we only had to change the value of the variable to search for another object. If we didn't have variables, we would have to write a whole new query.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on handling arguments](https://www.apollographql.com/docs/apollo-server/data/resolvers/#handling-arguments), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 15. Instructor Demo: Mutations (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Open `09-schemas/typeDefs.js` in your IDE and explain the following:
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * GraphQL does more than retrieve existing data. We can also use GraphQL to write data as well.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * 🔑 The mutation type is similar to the query type. However, instead of providing an entry point to read an object or objects, the mutation type provides an entry point to write an object or objects.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * 🔑 We create an entry point `addSchool` and set the object that it will write to to be a `School` object.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * 🔑 We also pass in arguments that define the fields that will be written. This information will be passed to the resolver.
+
+     ```js
+       type Mutation {
+         addSchool(name: String!, location: String!, studentCount: Int!): School
+       }
+     ```
+
+* Open `09-Ins_Mutations//schemas/resolvers.js` in your IDE and explain the following:
+
+  * 🔑 We enter the arguments that we wanted passed in as a parameter in the same order as we defined the fields in the mutation type:
+
+     ```js
+     addSchool: async (parent, { name, location, studentCount }) => {
+     ```
+
+  * 🔑 We call `create()` on the imported `School` model to write to our MongoDB database:
+
+     ```js
+     return await School.create({ name, location, studentCount });
+     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 A mutation is way to write data using GraphQL. We use the mutation type to define the entry point to the data to be written and a mutation resolver to provide the functionality to write the data to our database.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Mutations/README.md`.
 
-### 16. Student Do: { ACTIVITY NAME } (15 min) 
+### 16. Student Do: Mutations (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `10-Stu_Mutations/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
-  ```
+     ```md
+     # 🐛 Class Mutation Does Not Show that Object Was Updated
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+     Work with a partner to resolve the following issue:
 
-### 17. Instructor Review: { ACTIVITY NAME } (15 min) 
+     * As a developer, I want access to updated values so the front end can be updated accordingly.
+
+     ## Expected Behavior
+
+     Updating a class's building number should show the new value in the returned object.
+
+     ## Actual Behavior
+
+     The returned object still shows the old building number.
+
+     ## Steps to Reproduce the Problem
+
+     Follow these steps to reproduce the problem:
+
+     1. In the command line, navigate to `10-Stu_Mutations/Unsolved`.
+
+     2. Run `npm install`, `npm run seed`, and `npm start`.
+
+     3. Open <localhost:3001/graphql> in the browser.
+
+     4. Set the following variables in the Query Variables panel:
+
+       {
+         "id": "<insert ID of a class here>",
+         "building": "AA"
+       }
+
+     5. Run the following mutation:
+
+         mutation updateClass($id: ID!, $building: String!) {
+           updateClass(id: $id, building: $building) {
+             name
+             building
+           }
+         }
+
+     6. Note that the `building` property in the returned data is not set to `"AA"`.
+
+     ---
+
+     ## 💡 Hints
+
+     * How else could you verify if the data is being updated correctly?
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * What tools will you need to run GraphQL queries in your own front end? 
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 17. Instructor Review: Mutations (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with mutations? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `findOneAndUpdate()`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `{new: true}`
 
-  * ✔️ @TODO { THE OTHER }
+* Open `10-Stu_Mutations/Solved/schemas/resolvers.js` in your IDE and explain the following: 
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * When your mutation is not working as expected, a great place to look is the resolver.
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * We have written a mutation to update the building for a specific class. However, it looks like when we run the mutation, the building is not being updated.
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+  * When your mutation is not working as expected, a great place to look is the resolver.
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  *  Because we are using Mongoose, we must import the model to write data to MongoDB. It looks like we have imported the `Class` model successfully.
+
+     ```js
+     const { School, Class, Professor } = require('../models');
+     ```
+
+  *  We also need to make sure that our arguments are passed to the resolver. It looks like this is working too:
+
+     ```js
+     updateClass: async (parent, { id, building }) => {
+     ```
+
+  * 🔑 To write the data, we call the `.findOneAndUpdate()` method on the imported `Class` model and pass in the specific information needed to find the class by id and update the building:
+
+     ```js
+     return await Class.findOneAndUpdate(
+       { _id: id }, 
+       { building },
+     }
+     ```
+
+  * 🔑 By default, the object returned will not be the one updated. To return the new object, we set `new` to be `true`. Adding this line will fix the bug in our resolver:
+
+     ```js
+     { new: true }
+     ```
+
+* Navigate to `10-Stu_Mutations/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+
+  * 🔑 We test if our resolver is now working by using an existing `Class` object id and adding the the provided test object to the Query Variable editor:
+
+     ```json
+       {
+         "id": "<insert ID of a class here>",
+         "building": "AA"
+       }
+       ```
+
+  * 🔑 Next we run the provided mutation:
+
+     ```gql
+       mutation updateClass($id: ID!, $building: String!) {
+         updateClass(id: $id, building: $building) {
+           name
+           building
+         }
+       }
+     ```
+
+  * The updated information should now be fetched.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ How can we use mutations to create and update data? 
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 We use the mutation type to define the entry point for the object we want to write or update. We write a mutation resolver that performs the task of creating or updating the data.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-                                **ODD.2 LESSON PLAN BEGINS**
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on mutations](https://www.apollographql.com/docs/android/essentials/mutations/#gatsby-focus-wrapper), and stay for office hours to ask for help.
 
 ### 18. Instructor Do: Stoke Curiosity (10 min)
 
-* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
+* Ask the class the following questions (☝️):
 
-### 19. Instructor Demo: { ACTIVITY NAME } (5 min) 
+  * ☝ What exactly is an `API`?
+  
+* Encourage students to respond with their own thoughts and observations and let them know they are on the right track.
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Explain that, as developers, it is important to be able to define what an API, or Application Programming Interface, is and how it is used to handle data in the context of our applications.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* To practice, let's take a look at the API we will be using to build our own full-stack MERN apps.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+* Navigate to `11-Ins_MERN-Setup` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+* Open `http://localhost:3001/graphql` to demonstrate the following:
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * An API is the part of the server that responds to data requests and sends responses. When we open the Playground, we can visualize how a GraphQL API performs these tasks.
+
+  * When we click on the `schema` tab, we see a set of instructions. APIs use instructions to define the shape of the data that can be requested and the functions that will be executed when requests are made.
+
+  * We can also make a request for specific data by writing a query. Once a request is made, the API executes the function needed to handle the request. The requested data is then returned as a JSON object:
+ 
+     ```gql
+     query allProfiles {
+       profiles {
+        _id
+        name
+        skills
+       }
+     } 
+     ```
+
+* Open the [illustration of MERN three-layer architecture in the Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g9aa02552a2_0_6) and explain the following: 
+
+  * In a MERN app, requests are sent to the API from the client.
+
+  * The API handles the request, executes a function to retrieve data from a database, and returns a JSON object. The client can then use that returned object to display the results to the user.
+
+* Explain that during today's class, we will focus on the tools needed to integrate a React.js front end to enable it to send requests to a GraphQL API and use the returned JSON object to display data on a page.
+
+* Remind that students while there is a lot to cover today, by the end of the class they will have all the steps needed to start building a full-stack MERN app on their own.
+
+### 19. Instructor Demo: MERN Setup (5 min) 
+
+* Navigate to `11-Ins_MERN-Setup` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
+
+* Open `http://localhost:3001/graphql` to demonstrate the following:
+
+  * When we open up the GraphQL Playground, we see that our API is up and running and ready to receive requests. Yet, there is no front end on this port.
+
+  * 🔑 In a MERN setup, the front end and back end are separate entities.
+
+* Open `http://localhost:3000` to demonstrate the following:
+
+  * 🔑 The React.js front end is located on a separate port.
+
+* Open `11-Ins_MERN-Setup/` in your IDE to demonstrate the following:
+
+  * 🔑 When we look at the structure of our project directory, we see all the code needed to run the front end is contained in the `client` directory and all the code needed to run the back end is contained in the `server` directory.
+
+  * Because they are two separate apps, we need to use two separate terminals to start up each app independently and run them on their own ports.
+
+  * However, in a development environment, using two terminals can be cumbersome. So, to start up both apps simultaneously, we can add a third app located at the root. This will allow us to use just one set of commands -- and a single terminal -- to control both apps.
+
+* Open `11-Ins_MERN-Setup/package.json` in your IDE to demonstrate the following:
+
+  * 🔑 The root-level `package.json` belongs to this third app. We install `concurrently` as a development dependency at the root level so that we can run multiple commands at the same time during development. The installed dependency appears in `package.json`:
+  
+     ```js
+     "devDependencies": {
+       "concurrently": "^5.1.0"
+     } 
+     ``` 
+  
+  * 🔑 We then add the scripts needed to start up both apps using a single terminal:
+    
+     ```js
+      "scripts": {
+       "start": "node server/server.js",
+       "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+       "install": "cd server && npm i && cd ../client && npm i",
+       "seed": "cd server && npm run seed",
+       "build": "cd client && npm run build"
+     }
+     ```
+
+* Open `11-Ins_MERN-Setup/client/package.json` in your IDE to demonstrate the following:
+
+  * While in development, we also need a way for our front end to send requests to our back end on a different port.
+
+  * To do this, we will use a proxy to handle requests and update them to include the URL location of our back end.
+
+  * We add a `proxy` field to the client's `package.json` and add the URL of our back end as the value. Now, while in development, requests will be prefixed by `"http://localhost:3001"` to allow them to be received by the API.
+  
+     ```json
+     "proxy": "http://localhost:3001"`
+     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ How does our front end and back end communicate when running on separate ports? 
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 In the client directory's `package.json` we add a proxy that identifies the port where the server is running. This allows the front end (or client) to send requests to the API, which is the back end (or the server).  We can then use the npm package `concurrently` to start up both the front end and back end during development, using `npm run develop`.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
 
-### 20. Student Do: { ACTIVITY NAME } (15 min) 
+### 20. Student Do: MERN Setup (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
-  ```
+   ```md
+   # 📐 Add Comments to Implementation of the MERN-stack Architecture
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+   Work with a partner to add comments in the [Unsolved README.md file](./Unsolved/README.md) describing the functionality of the code found in [package.json](./Unsolved/package.json), [client/package.json](./Unsolved/client/package.json), and [server/server.js](./Unsolved/server/server.js).
 
-### 21. Instructor Review: { ACTIVITY NAME } (10 min) 
+   ## 📝 Notes
+
+   Refer to the documentation: 
+
+   [Create React App Docs on proxying API requests](https://create-react-app.dev/docs/proxying-api-requests-in-development)
+
+   ---
+
+   ## 🏆 Bonus
+
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+   * What GitHub tool can we use to automate functionality such as running tests or deploying our applications?
+
+   Use [Google](https://www.google.com) or another search engine to research this.
+
+   ---
+   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: MERN Setup (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with the implementation of MERN-stack architecture? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `"proxy": "http://localhost:3001"`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `concurrently`
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `install`
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * ✔️ `seed` 
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * ✔️ `develop` 
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+  * ✔️ `../client/build'`
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+* Open `12-MERN-Setup/Solved/client/package.json` in your IDE and explain the following: 
+
+  *  The `client` directory contains all the code needed to run our React.js front end.
+
+  * 🔑 We check the proxy to the client's `package.json` to identify the port where the server will run. The proxy directs requests to the API and will allow our front end and back end to communicate:
+
+     ```json
+     "proxy": "http://localhost:3001"
+     ```
+
+* Open `12-MERN-Setup/Solved/package.json` in your IDE and explain the following: 
+
+  * At the root of our project folder, we have a third app that contains a `package.json`.
+
+  * This `package.json` contains scripts that allow us to easily start up our `client` and `server` apps in a single set of terminal commands while in development.
+
+  * 🔑  When we enter `npm install` into the terminal, npm will execute the terminal commands defined in the `install` script, installing the dependencies in both the `client` and `server` directories:
+
+     ```json
+     "install": "cd server && npm i && cd ../client && npm i"
+     ```
+
+  * 🔑 We also add a script to execute the terminal commands to seed our database:
+
+     ```json
+     "seed": "cd server && npm run seed"
+     ```
+
+  * 🔑 To run our `client` and `server` simultaneously, we first install `concurrently` as a development dependency at the root-level:
+
+     ```json
+     "devDependencies": {
+       "concurrently": "^5.1.0"
+     }
+     ```
+
+  * 🔑 We then use `concurrently` in our `develop` script to execute the commands to start up the `client` and `server` simultaneously by simply entering `npm run develop`:
+
+     ```json
+     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+     ```
+
+* Open `12-MERN-Setup/Solved/server/server.js` in your IDE and explain the following:
+
+  * When we are ready to deploy our app, we will create a production build of our React.js front end and set the Express.js server to serve the `build` directory. This will allow our front end and back end to operate from the same port when in production:
+
+     ```js
+     if (process.env.NODE_ENV === 'production') {
+      app.use(express.static(path.join(__dirname, '../client/build')));
+     }
+
+     app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/build/index.html'));
+     });
+     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ How can we use this boilerplate app when developing our own MERN full-stack apps? 
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 This app has the code needed to connect our front end and back end in both development and production for any MERN app. This makes it a great resource to refer to when building our own MERN apps.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Create React App docs on proxying API requests](https://create-react-app.dev/docs/proxying-api-requests-in-development), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 22. Instructor Demo: { ACTIVITY NAME } (5 min) 
+### 22. Instructor Demo: useQuery (5 min) 
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Navigate to `13-Ins_useQuery` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* Open `http://localhost:3000` to demonstrate the following:
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * When we seed our database and open the app, we see a roster of friends and their endorsed skills.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * Each time this page loads, the client sends a request to the API. The returned data is then displayed on the page, allowing us to see the roster.
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+* Open `13-Ins_useQuery/client/src/App.js` in your IDE and demonstrate the following: 
+
+  * To set up our React.js front end to be able to send requests, we need to use one more tool.
+
+  * 🔑 Apollo Client is a library that allows us to handle data using the GraphQL on the front end.
+
+  * 🔑 We first install `@apollo/client` and import the component and classes we need for setup:
+
+     ```js
+     import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+     ```
+
+  * 🔑 Next, we create a new instance of the imported `ApolloClient` class to implement the core client-side API and provide the uri of our GraphQL API so we can send requests. We also create a new instance of `InMemoryCache` to enable caching:
+
+     ```js
+     const client = new ApolloClient({
+       uri: '/graphql',
+       cache: new InMemoryCache()
+     });
+     ```
+    
+  * 🔑 To access the `ApolloClient` instance from anywhere in your component tree, we use the `ApolloProvider` component to wrap our React.js app:
+
+     ```js
+     <ApolloProvider client={client}>
+       <div className="flex-column justify-flex-start min-100-vh">
+         <Header />
+         <div className="container">
+           <Home />
+         </div>
+         <Footer />
+       </div>
+     </ApolloProvider>
+     ```
+  
+  * Now, our Apollo Client is set up and we are ready to write a query and start sending requests.
+
+* Open `13-Ins_useQuery/client/src/utils/queries,js` in your IDE and demonstrate the following: 
+
+  * 🔑 We write a query that uses the `profile` entry point and return values for the `_id`, `name`, and `skills` fields. It is important that these values match a type defined in our GraphQL API schema exactly. Otherwise, the query will not work:
+
+     ```js
+     query allProfiles {
+       profiles {
+         _id
+         name
+         skills
+       }
+     }
+     ```
+  
+  * 🔑 For our query to execute, it must be contained in a `gql` function. We import the functionality from `apollo/client` at the top of the page:
+
+     ```js
+     import { gql } from '@apollo/client';
+     ```
+
+  * 🔑 Next, we wrap our query in the `gql` function and add `export` so we can use our query in our component:
+
+     ```js
+     export const QUERY_PROFILES = gql`
+       query allProfiles {
+         profiles {
+           _id
+           name
+          skills
+         }
+       }
+     `;
+     ```
+
+* 🔑 Open `13-Ins_useQuery/client/src/pages/Home.js` in your IDE and demonstrate the following: 
+
+  * We import the query into the component where we want our data to be displayed:
+
+     ```js
+     import { QUERY_PROFILES } from '../utils/queries';
+     ```
+
+  * 🔑 We also import the `useQuery` Hook from `apollo/client` to return our data:
+
+     ```js
+     import { useQuery } from '@apollo/client';
+     ```
+
+  * We use the `useQuery` Hook to execute the query when the page renders. The returned object will contain both `loading` and `data` properties:
+
+     ```js
+     const { loading, data } = useQuery(QUERY_PROFILES);
+     ```
+
+  * We can then store the returned data in a variable so we can display the information on our page:
+  
+     ```js
+     const profiles = data?.profiles || [];
+     ...
+ 
+     <ProfileList
+       profiles={profiles}
+       title="Here's the current roster of friends..."
+     />
+     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What is Apollo Client? 
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋  Apollo Client is a powerful library allows us to request data from our API and handles the whole request cycle.
 
+  * ☝️ What can we do with Apollo Client?
+
+  * 🙋  Using Apollo Client, we can easily execute a query and use the returned data to populate our page in a few lines of code.
+  
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_useQuery/README.md`.
 
-### 23. Student Do: { ACTIVITY NAME } (15 min) 
+### 23. Student Do: useQuery (15 min) 
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `14-Stu_useQuery/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-  ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
-  ```
+   ```md
+   # 🏗️ Implement Query to Retrieve Thought Data
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+   Work with a partner to implement the following user story:
 
-### 24. Instructor Review: { ACTIVITY NAME } (15 min)
+   * As a user, when I visit the application's homepage, I am shown a list of thoughts.
+
+  ## Acceptance Criteria
+
+   The activity is complete when it meets the following criteria:
+
+   * The application's homepage displays all thought data queried from the API in a list.
+
+   * The homepage renders a loading screen when the thought data has not returned from the API yet.
+
+   ## Assets
+
+   The following image demonstrates the web application's appearance and functionality:
+
+   ![The Tech Thoughts homepage displays a list of thoughts, who wrote them, and when they were created.](./Images/01-screenshot.png)
+
+   ---
+
+   ## 💡 Hints
+
+   * Where can a query be created to be used anywhere in our application?
+
+   * What properties returned from `useQuery()` can be used to determine if the request hasn't completed yet?
+
+   * How can we seed the database so there's data to query?
+
+   ## 🏆 Bonus
+
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+   * What React API is the Apollo Client provider functionality built with?
+
+   Use [Google](https://www.google.com) or another search engine to research this.
+
+   ---
+
+   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 24. Instructor Review: useQuery (10 min) 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with using the `useQuery` Hook? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `gql`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `import { useQuery }`
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `import { QUERY_THOUGHTS }`
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+  * ✔️ `useQuery(QUERY_THOUGHTS)`
+  
+* Open `14-Stu_UseQuery/client/src/App.js` in your IDE and explain the following:
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * To send requests, we first have to set up Apollo Client in our `App.js` file and create a new `ApolloClient` instance that identifies the URL of our GraphQL server. This step has already been done for us:
 
-    ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
+     ```js
+     const client = new ApolloClient({
+       uri: '/graphql',
+       cache: new InMemoryCache(),
+     });
+     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+* Open `14-Stu_UseQuery/client/src/utils/queries.js` in your IDE and explain the following: 
+
+  * The app is running and ready to make requests. Let's create a new query.
+
+  * 🔑 We start by using the entry point `thoughts` and add the fields we want to access. It is important to refer to the schema so that the names match a defined type exactly:
+
+     ```js
+     query getThoughts {
+       thoughts {
+         _id
+         thoughtText
+         thoughtAuthor
+         createdAt
+       }
+     }
+     ```
+
+  * 🔑 We then wrap our completed query in a `gql` function and export it:
+
+     ```js
+     export const QUERY_THOUGHTS = gql`
+       query getThoughts {
+       thoughts {
+         _id
+         thoughtText
+         thoughtAuthor
+         createdAt
+       }
+     }
+     `;
+     ```
+
+* Open `14-Stu_UseQuery/client/src/pages/Home.js` in your IDE and explain the following: 
+
+  * 🔑 To use our query, we start by importing the `useQuery` Hook and the query into the component where we want the data to be displayed:
+
+     ```js
+     import { useQuery } from '@apollo/client';
+     import { QUERY_THOUGHTS } from '../utils/queries';
+     ```
+
+  * 🔑 We then use the `useQuery` Hook to execute the query and return a JSON object that contains loading information and the requested data:
+
+     ```js
+     const { loading, data } = useQuery(QUERY_THOUGHTS);
+     ```
+
+  * 🔑 If data is returned, we store the returned data in a variable. If no data is available, we use an empty array instead:
+
+     ```js
+     const thoughts = data?.thoughts || [];
+     ```
+
+  * 🔑 We use the variable to access the data in our JSX so the data can be displayed on our page:
+  
+     ```js
+     <ThoughtList
+       thoughts={thoughts}
+       title="Some Feed for Thought(s)..."
+     />
+     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ How do we use the `useQuery` Hook to return data? 
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 The `useQuery` Hook takes in a GraphQL query wrapped in a `gql` function and returns the requested data as a JSON object. We can then use that data object to display information on the page.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on queries](https://www.apollographql.com/docs/react/data/queries/), and stay for office hours to ask for help.
 
-* Answer any questions before ending the class.
+* Answer any questions before proceeding to the next activity.
 
 ### 25. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
