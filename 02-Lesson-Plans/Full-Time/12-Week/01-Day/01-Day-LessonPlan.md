@@ -69,7 +69,6 @@ By the end of class, students will be able to:
 
 * Students should deploy at least one project or homework assignment that they've completed and link to it from their portfolio page.
 
-
 ### 3. Student Do: Project Brainstorming (90 mins)
 
 * Direct students to begin brainstorming with their group members to identify project ideas, project designs, and research which new library, package, or technology they can use that hasn't been discussed yet.
