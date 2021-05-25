@@ -48,33 +48,33 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 ## Time Tracker
 @TODO ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity     | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Apollo Server     | 0:05     |
-| 10:15AM| 3   | Student Do: Apollo Server          | 0:15     |
-| 10:30AM| 4   | Instructor Review:  Apollo Server  | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Queries           | 0:05     |
-| 10:45AM| 6   | Student Do: Queries                | 0:15     |
-| 11:00AM| 7   | Instructor Review: Queries         | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Resolvers         | 0:05     |
-| 11:15AM| 9   | Student Do: Resolvers              | 0:15     |
-| 11:30AM| 10  | Instructor Review: Resolvers       | 0:10     |
-| 11:40AM| 11  | Instructor Demo: Query Arguments   | 0:05     |
-| 11:45AM| 12  | Student Do:  Query Arguments       | 0:15     |
-| 12:00PM| 13  | BREAK                              | 0:30     |
-| 12:30PM| 14  | Instructor Review: Query Arguments | 0:10     |
-| 12:40PM| 15  | Instructor Demo: Mutations         | 0:05     |
-| 12:45AM| 16  | Student Do:  Mutations             | 0:15     |
-| 1:00PM | 17  | Instructor Review:  Mutations      | 0:15     |
-| 1:15PM| 18  | Instructor Do: Stoke Curiosity      | 0:10     |
-| 1:25PM| 19  | Instructor Demo: MERN Setup         | 0:05     |
-| 1:30PM| 20  | Student Do: MERN Setup              | 0:15     |
-| 1:45PM| 21  | Instructor Review:  MERN Setup      | 0:10     |
-| 1:55PM| 22  | Instructor Demo: useQuery           | 0:05     |
-| 2:00PM| 23  | Student Do: useQuery                | 0:15     |
-| 2:15PM| 24  | Instructor Review: useQuery         | 0:15     |
-| 2:30PM| 25  | END                                 | 0:00     |
+| Start  | #   | Activity Name                             | Duration |
+|---     |---  |---                                        |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Apollo Server            | 0:05     |
+| 10:15AM| 3   | Student Do: Apollo Server                 | 0:15     |
+| 10:30AM| 4   | Instructor Review:  Apollo Server         | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Queries                  | 0:05     |
+| 10:45AM| 6   | Student Do: Queries                       | 0:15     |
+| 11:00AM| 7   | Instructor Review: Queries                | 0:10     |
+| 11:10AM| 8   | Instructor Demo: typeDefs and Resolvers   | 0:05     |
+| 11:15AM| 9   | Student Do: typeDefs and Resolvers        | 0:15     |
+| 11:30AM| 10  | Instructor Review: typeDefs and Resolvers | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Query Arguments          | 0:05     |
+| 11:45AM| 12  | Student Do:  Query Arguments              | 0:15     |
+| 12:00PM| 13  | BREAK                                     | 0:30     |
+| 12:30PM| 14  | Instructor Review: Query Arguments        | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Mutations                | 0:05     |
+| 12:45AM| 16  | Student Do:  Mutations                    | 0:15     |
+| 1:00PM | 17  | Instructor Review:  Mutations             | 0:15     |
+| 1:15PM| 18  | Instructor Do: Stoke Curiosity             | 0:10     |
+| 1:25PM| 19  | Instructor Demo: MERN Setup                | 0:05     |
+| 1:30PM| 20  | Student Do: MERN Setup                     | 0:15     |
+| 1:45PM| 21  | Instructor Review:  MERN Setup             | 0:10     |
+| 1:55PM| 22  | Instructor Demo: useQuery                  | 0:05     |
+| 2:00PM| 23  | Student Do: useQuery                       | 0:15     |
+| 2:15PM| 24  | Instructor Review: useQuery                | 0:15     |
+| 2:30PM| 25  | END                                        | 0:00     |
 
 ---
 
