@@ -61,7 +61,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 | 1:40PM | 19  | Instructor Demo: Context Resolver      | 0:05     |
 | 1:45PM | 20  | Student Do: Context Resolver           | 0:15     |
 | 2:00PM | 21  | Instructor Review:  Context Resolver   | 0:10     |
-| 2:10PM | 22  | Everyone Do: Git                       | 0:20     |
+| 2:10PM | 22  | Everyone Do: GitHub Actions            | 0:20     |
 | 2:30PM | 23  | END                                    | 0:00     |
 
 ---
