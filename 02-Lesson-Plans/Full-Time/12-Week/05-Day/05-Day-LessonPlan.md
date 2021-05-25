@@ -2,7 +2,6 @@
 
 ## Overview
 
-
 In this class, students will present their projects to their peers.
 
 ## Instructor Notes
