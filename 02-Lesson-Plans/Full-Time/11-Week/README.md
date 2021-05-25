@@ -8,7 +8,7 @@ Students will learn how to use React Router to add dynamic client-side routing t
 
 In Unit 22, you will introduce complex state management techniques and review the key tools needed to build a MERN-stack app with routing and authentication. Students will also be introduced to the Stripe payment platform.
 
-Refer to the [Class Content Unit Overview for 21](../../../01-Class-Content/21-MERN/README.md) and [Class Content Unit Overview](../../../01-Class-Content/22-State/README.md) for detailed information on key topics, learning objectives, and homework.
+Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content/21-MERN/README.md) and [Unit 22](../../../01-Class-Content/22-State/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
