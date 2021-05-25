@@ -327,7 +327,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Today we will revisit some GraphQL concepts as well as some React Hooks that we were introduced to previously. Let's get started!
 
-### 2. Instructor Demo: React Hooks Review (5 min)
+### 5. Instructor Demo: React Hooks Review (5 min)
 
 * Navigate to `11-Ins_React-Hooks-Review` in your command line and run `npm install` and `npm start`.
 
@@ -436,7 +436,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_React-Hooks-Review/README.md`.
 
-### 3. Student Do: React Hooks Review (15 min)
+### 6. Student Do: React Hooks Review (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_React-Hooks-Review/README.md`.
 
@@ -486,7 +486,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: React Hooks Review (10 min)
+### 7. Instructor Review: React Hooks Review (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -599,7 +599,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: React Router Review (5 min)
+### 8. Instructor Demo: React Router Review (5 min)
 
 * Navigate to `13-Ins_React-Router-Review` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
@@ -716,7 +716,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_React-Router-Review/README.md`.
 
-### 6. Student Do: React Router Review (15 min)
+### 9. Student Do: React Router Review (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_React-Router-Review/README.md`.
 
@@ -764,7 +764,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: React Router Review (10 min)
+### 10. Instructor Review: React Router Review (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -903,7 +903,13 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Apollo Client (5 min)
+### 11. FLEX (20 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+### 12. BREAK (30 mins)
+
+### 13. Instructor Demo: Apollo Client (5 min)
 
 * Navigate to `15-Ins_Apollo-Review` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
@@ -1003,7 +1009,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Apollo-Review/README.md`.
 
-### 9. Student Do: Apollo Review (15 min)
+### 14. Student Do: Apollo Client Review (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Apollo-Review/README.md`.
 
@@ -1041,9 +1047,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. BREAK (15 min)
-
-### 11. Instructor Review: Apollo Review (10 min)
+### 15. Instructor Review: Apollo Review (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1154,7 +1158,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Answer any questions before proceeding to the next activity.
 
-### 12. Instructor Demo: JWT (5 min)
+### 16. Instructor Demo: JWT (5 min)
 
 * Open `17-Ins_JWT-Review/server/utils/auth.js` in your IDE and explain the following:
 
@@ -1244,7 +1248,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_JWT-Review/README.md`.
 
-### 13. Student Do: JWT (15 min)
+### 17. Student Do: JWT (15 min)
 
 * Direct students to the activity instructions found in `18-Stu_JWT-Review/README.md`.
 
@@ -1307,7 +1311,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 14. Instructor Review: JWT (10 min)
+### 18. Instructor Review: JWT (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1393,7 +1397,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: useReducer (5 min)
+### 19. Instructor Demo: useReducer (5 min)
 
 * Copy the `src` directory from `19-Ins_useReducer-Review` and paste it into `00-practice-app`.
 
@@ -1488,7 +1492,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_useReducer-Review/README.md`.
 
-### 16. Student Do: useReducer (15 min)
+### 20. Student Do: useReducer (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_useReducer-Review/README.md`.
 
@@ -1528,7 +1532,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 17. Instructor Review: useReducer (15 min)
+### 21. Instructor Review: useReducer (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1659,9 +1663,13 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   * 🙋 We can refer to supplemental material, read the [React documentation on useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer), and stay for office hours to ask for help.
 
+### 22. FLEX (30 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
 * Answer any questions before ending the class.
 
-### 18. END (0 min)
+### 23. END (0 mins)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
