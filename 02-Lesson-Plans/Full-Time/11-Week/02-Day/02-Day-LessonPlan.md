@@ -1575,7 +1575,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   
   * With the workflow in place in the repository, we can now create a new branch, make a pull request to `dev` or `main`, and witness the workflow in action!
 
-* Answer any questions before students go on break.
+* Answer any questions before ending the class.
 
 ### 23. END (0 min)
 

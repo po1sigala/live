@@ -1759,7 +1759,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * 🙋 We can refer to supplemental material, read the [Apollo Docs on queries](https://www.apollographql.com/docs/react/data/queries/), and stay for office hours to ask for help.
 
-* Answer any questions before proceeding to the next activity.
+* Answer any questions before ending the class.
 
 ### 25. END (0 min)
 
