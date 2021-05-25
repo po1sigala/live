@@ -47,7 +47,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 * [Unit 21 Slide Deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
 
 ## Time Tracker
-@TODO ADD ACTIVITY TITLES for Instructor Demo, Student Do, and Instructor Review
+
 | Start  | #   | Activity Name                             | Duration |
 |---     |---  |---                                        |---       |
 | 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
