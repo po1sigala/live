@@ -908,7 +908,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: Apollo Client (5 min)
+### 13. Instructor Demo: Apollo Client Review (5 min)
 
 * Navigate to `15-Ins_Apollo-Review` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
@@ -1046,7 +1046,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Apollo Review (10 min)
+### 15. Instructor Review: Apollo Client Review (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
