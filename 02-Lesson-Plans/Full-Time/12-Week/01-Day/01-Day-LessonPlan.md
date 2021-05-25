@@ -6,13 +6,11 @@ Today's class will be focused on introducing students to project 3 requirements.
 
 ## Instructor Notes
 
-* Today students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack MERN app.
-
-* Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
-
 * Today's class will be focused on introducing students to the requirements for project 3.
 
-* Students will begin work on their final project.
+* Students will also begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack MERN app.
+
+* Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
 
 * Leverage the TAs to help any groups lagging behind during the lesson. We want to give students as much time to brainstorm project ideas as possible.
 
