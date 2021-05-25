@@ -70,6 +70,8 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 ### 1. Instructor Demo: useMutation (5 min) 
 
+* Welcome students to class.
+
 * Navigate to `15-Ins_useMutation` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
 
 * Open `http://localhost:3000` to demonstrate the following:

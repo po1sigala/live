@@ -73,6 +73,8 @@ n this class, students will be introduced to complex state management within the
 
 ### 1. Instructor Demo: Mini-Project (5 min)
 
+* Welcome students to class.
+
 * Navigate to `28-Stu_Mini-Project/Solved` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
 * Open `localhost:3000/` in your browser and demonstrate the following:
@@ -412,8 +414,6 @@ n this class, students will be introduced to complex state management within the
 * This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
-
-* Welcome students to class.
 
 * Open the [Unit 22 slide deck](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing) and follow these prompts on their corresponding slides:
 

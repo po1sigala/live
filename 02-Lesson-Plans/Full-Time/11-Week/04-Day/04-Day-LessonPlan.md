@@ -277,8 +277,6 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 ### 4. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class.
-
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What is GraphQL?
