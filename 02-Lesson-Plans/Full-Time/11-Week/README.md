@@ -28,7 +28,7 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * In the state management activities in Unit 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documention to find information on specific issues and then apply that information to their own code. 
 
-* Many of the activities in Unit 21 allow students to review the skills needed for final projects. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
+* Many of the activities in Unit 22 allow students to review the skills needed for final projects. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
 
 ## Career Connection
 
