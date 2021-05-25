@@ -34,7 +34,7 @@ n this class, students will be introduced to complex state management within the
 
 * Explain and use providers inside a React component.
 
-* Explain the concept of consumer and accessing React context.
+* Explain the concept of `Consumer` and accessing React `Context`.
 
 * Explain and use actions with a Reducer function.
 
