@@ -1,4 +1,4 @@
-# 11.2 Full-Time Lesson Plan: 
+# 11.2 Full-Time Lesson Plan: GraphQL and JSON Web Tokens
 
 ## Overview
 

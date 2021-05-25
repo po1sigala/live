@@ -32,13 +32,11 @@ n this class, students will be introduced to complex state management within the
 
 ## Learning Objectives
 
-* Identify use cases for Redux.
+* Explain and use providers inside a React component.
 
-* Implement Redux to manage state in a React application.
+* Explain the concept of consumer and accessing React context.
 
-* Implement the Stripe payment platform in a MERN-stack application.
-
-* Explain and implement the Context API.
+* Explain and use actions with a Reducer function.
 
 ## Slide Deck
 
