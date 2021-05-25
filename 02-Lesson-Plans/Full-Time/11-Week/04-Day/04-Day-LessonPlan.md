@@ -1,4 +1,5 @@
 # 11.4 Full-Time Lesson Plan: useReducers Hook and MERN Review
+
 ## Overview
 
 In this class, students will learn about the `useReducer` hook. This class also reviews key MERN-stack topics including React Hooks, React Router, Apollo Client, and user authentication -- emphasizing the skills that students will need for final projects.
