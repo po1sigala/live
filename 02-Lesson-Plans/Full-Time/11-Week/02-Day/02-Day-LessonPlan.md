@@ -28,7 +28,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Use React Router to tie a component to a URL route.
 
- * Create and verify a JSON Web Token to log in the user.
+* Create and verify a JSON Web Token to log in the user.
 
 * Store, check expiration of, and pass JSON Web Tokens to an Apollo Client.
 
