@@ -22,8 +22,6 @@ Refer to the [Class Content Unit Overview for Unit 23](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 16](../../../01-Class-Content/24-Project-3-Contd/04-Career-Connection/README.md).
-
 * If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
 ## Heads-Up
