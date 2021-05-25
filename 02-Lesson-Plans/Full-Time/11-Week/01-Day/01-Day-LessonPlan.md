@@ -247,8 +247,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * What are the pros and cons of GraphQL vs. REST? 
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
