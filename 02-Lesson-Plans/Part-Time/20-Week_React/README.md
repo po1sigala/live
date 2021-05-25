@@ -8,7 +8,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Instructor/TA Notes
 
-* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change. 
+* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change.
 
 * Make sure you're well-versed in React Hooks so that you can explain how they work to students, who might be confused at first about this different approach to building web app UIs.
 
@@ -16,7 +16,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 * This unit uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `src/` directory before each activity.
 
-* Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line. 
+* Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
 
 ## Career Connection
 
@@ -26,7 +26,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Heads-Up
 
-React can be a daunting topic to novices. Be mindful of this and try to put yourself in the mindset of someone who has never heard of things like props, state, and React Hooks. It can be tempting to rush through these topics without stopping to explain them thoroughly. As always, check in with students about how they're doing, and remind them to be patient with themselves as they absorb this new material.
+You will introduce students to the GraphQL Playground. If you are new to the GraphQL and the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
 
 ## Helpful Links
 
@@ -50,29 +50,29 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-* [01: Maximum Continuous Sub-Array](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray/README.md)
+* [01: Maximum Continuous Sub-Array](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray/)
 
-* [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times/README.md)
+* [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times/)
 
-   * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
+  * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
 
-* [03: Int to Roman Numeral](./../../../01-Class-Content/20-React/03-Algorithms/03-int-to-roman/README.md)
+* [03: Int to Roman Numeral](./../../../01-Class-Content/20-React/03-Algorithms/03-int-to-roman/)
 
 ### Resources
 
 * [React Docs: Getting Started](https://reactjs.org/docs/getting-started.html)
 
 * [Create React App Docs: Getting Started](https://create-react-app.dev/docs/getting-started/)
- 
+
 * [React Docs on rendering elements](https://reactjs.org/docs/rendering-elements.html)
 
 * [React Docs on components and props](https://reactjs.org/docs/components-and-props.html)
 
 * [React Docs on JSX](https://reactjs.org/docs/introducing-jsx.html)
 
-   * [React Docs on JSX expressions](https://reactjs.org/docs/jsx-in-depth.html) 
+  * [React Docs on JSX expressions](https://reactjs.org/docs/jsx-in-depth.html)
 
-* [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) 
+* [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
 * [React Docs on handling events](https://reactjs.org/docs/handling-events.html)
 
@@ -80,9 +80,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [React Docs on Hooks](https://reactjs.org/docs/hooks-intro.html)
 
-   * [React Docs on useState](https://reactjs.org/docs/hooks-state.html)
+  * [React Docs on useState](https://reactjs.org/docs/hooks-state.html)
 
-   * [React Docs on useEffect](https://reactjs.org/docs/hooks-effect.html)
+  * [React Docs on useEffect](https://reactjs.org/docs/hooks-effect.html)
 
 * [React Docs on styling](https://reactjs.org/docs/faq-styling.html)
 
@@ -90,8 +90,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [React Docs on testing](https://reactjs.org/docs/testing.html)
 
-* [React Docs on lists and keys](https://reactjs.org/docs/lists-and-keys.html)          
- 
+* [React Docs on lists and keys](https://reactjs.org/docs/lists-and-keys.html)
+
 * [Create React App Docs on deployment](https://create-react-app.dev/docs/deployment)
 
 * [GitHub Docs on deploying to GitHub pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site)
