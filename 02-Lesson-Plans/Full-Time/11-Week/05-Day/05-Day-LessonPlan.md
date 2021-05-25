@@ -1058,7 +1058,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   
 * Answer any questions before students go on break.
 
-### 12. BREAK (40 min)
+### 12. BREAK (30 min)
 
 ### 13. Instructor Demo: Mini-Project (5 min)
 
@@ -1338,11 +1338,15 @@ Today's lesson will further explore complex state management in MERN-stack appli
   
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
+### 17. FLEX (40 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
 * Answer any questions before ending the class.
 
-### 17. END (0 min)
+### 18. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+ © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
