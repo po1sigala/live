@@ -6,7 +6,7 @@ In Unit 21, students will apply their knowledge of MongoDB, Express.js, React.js
 
 Students will learn how to use React Router to add dynamic client-side routing to apps, which makes it possible for users to bookmark URLs and use the browser’s forward and back buttons. They'll also learn GraphQL, an open-source data query and manipulation language for APIs that provides declarative data fetching. Finally, students will add authentication to a MERN app by using a JSON Web Token.
 
-In this unit, you will introduce complex state management techniques and review the key tools needed to build a MERN-stack app with routing and authentication. Students will also be introduced to the Stripe payment platform.
+In Unit 22, you will introduce complex state management techniques and review the key tools needed to build a MERN-stack app with routing and authentication. Students will also be introduced to the Stripe payment platform.
 
 Refer to the [Class Content Unit Overview for 21](../../../01-Class-Content/21-MERN/README.md) and [Class Content Unit Overview](../../../01-Class-Content/22-State/README.md) for detailed information on key topics, learning objectives, and homework.
 
