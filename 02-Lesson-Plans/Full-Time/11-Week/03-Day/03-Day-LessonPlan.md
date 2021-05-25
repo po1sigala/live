@@ -2,7 +2,7 @@
 
 ## Overview
 
-n this class, students will be introduced to complex state management within their apps. They will learn about key state management concepts like providers, consumers, reducers, and actions. Students will also work in groups to refactor a fully functioning MERN-stack app to use a GraphQL API built with Apollo Server and Apollo Client.
+In this class, students will be introduced to complex state management within their apps. They will learn about key state management concepts like providers, consumers, reducers, and actions. Students will also work in groups to refactor a fully functioning MERN-stack app to use a GraphQL API built with Apollo Server and Apollo Client.
 
 ## Instructor Notes
 
