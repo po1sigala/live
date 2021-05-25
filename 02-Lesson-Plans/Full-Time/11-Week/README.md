@@ -32,7 +32,7 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder for Unit 21](../../../01-Class-Content/22-State/04-Career-Connection/README.md) and [Career Connection folder for Unit 22](../../../01-Class-Content/21-MERN/04-Career-Connection/README.md)..
+* Remind students that related Career Services material can be found in their [Career Connection folder for Unit 21](../../../01-Class-Content/21-MERN/04-Career-Connection/README.md) and [Career Connection folder for Unit 22](../../../01-Class-Content/22-State/04-Career-Connection/README.md).
 
 * If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
