@@ -44,28 +44,28 @@ n this class, students will be introduced to complex state management within the
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                      | Duration |
-|---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project      | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project           | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project    | 0:10     |
-| 11:15AM| 4   | Introduce Homework                 | 0:05     |
-| 11:20AM| 5   | FLEX                               | 0:30     |
-| 11:50PM| 6  | Instructor Do: Stoke Curiosity      | 0:10     |
-| 12:00PM| 7  | BREAK                               | 0:30     |
-| 12:30PM| 8  | Instructor Demo: Providers          | 0:05     |
-| 12:35PM| 9  | Student Do: Providers               | 0:15     |
-| 12:50PM| 10 | Instructor Review: Providers        | 0:10     |
-| 1:00PM | 11 | Instructor Demo: Consumers          | 0:05     |
-| 1:05PM | 12 | Student Do: Consumers               | 0:15     |
-| 1:20PM | 13 | Instructor Review: Consumers        | 0:10     |
-| 1:30PM | 14 | Instructor Demo: Reducers           | 0:05     |
-| 1:35PM | 15 | Student Do: Reducers                | 0:15     |
-| 1:50PM | 16 | Instructor Review: Reducers         | 0:10     |
-| 2:00PM | 17 | Instructor Demo: Actions            | 0:05     |
-| 2:05PM | 18 | Student Do: Actions                 | 0:15     |
-| 2:20PM | 19 | Instructor Review: Actions          | 0:10     |
-| 2:30PM | 20 | END                                 | 0:00     |
+| Start  | #   | Activity Name                       | Duration |
+|---     |---  |---                                  |---       |
+| 10:00AM| 1   | Instructor Demo: Mini Project       | 0:05     |
+| 10:05AM| 2   | Student Do: Mini Project            | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini Project     | 0:10     |
+| 11:15AM| 4   | Introduce Homework                  | 0:05     |
+| 11:20AM| 5   | FLEX                                | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity      | 0:10     |
+| 12:00PM| 7   | BREAK                               | 0:30     |
+| 12:30PM| 8   | Instructor Demo: Providers          | 0:05     |
+| 12:35PM| 9   | Student Do: Providers               | 0:15     |
+| 12:50PM| 10  | Instructor Review: Providers        | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Consumers          | 0:05     |
+| 1:05PM | 12  | Student Do: Consumers               | 0:15     |
+| 1:20PM | 13  | Instructor Review: Consumers        | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Reducers           | 0:05     |
+| 1:35PM | 15  | Student Do: Reducers                | 0:15     |
+| 1:50PM | 16  | Instructor Review: Reducers         | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Actions            | 0:05     |
+| 2:05PM | 18  | Student Do: Actions                 | 0:15     |
+| 2:20PM | 19  | Instructor Review: Actions          | 0:10     |
+| 2:30PM | 20  | END                                 | 0:00     |
 
 ---
 
