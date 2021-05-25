@@ -1,9 +1,22 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 // TODO: Import the IssueList component here
 
-afterEach(cleanup);
+let container = null;
+
+beforeEach(() => {
+  // Setup a DOM element as the target
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // Cleanup on exiting to prevent this test from altering the results of future tests
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
 
 describe('Renders a list of issues', () => {
   const issues = [
@@ -26,10 +39,20 @@ describe('Renders a list of issues', () => {
   ];
 
   it('renders', () => {
-    // TODO: Add an it block to check to see if the component renders properly
+    act(() => {
+      // TODO: Add code to check whether or not the component renders properly
+      render();
+    });
+    expect(container.textContent).toContain(
+      'Git: Support git history in VSCode'
+    );
   });
 
   it('matches snapshot', () => {
-    // TODO: Add an it block to check to see if the component matches the snapshot
+    act(() => {
+      // TODO: Add code to check whether or not the rendered component matches the snapshot
+      const fragment = render();
+      expect(fragment).toMatchSnapshot();
+    });
   });
 });

@@ -1,16 +1,32 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-// TODO: import the SearchBar component here
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+// TODO: Import SearchBar component
 
-afterEach(cleanup);
+let container = null;
 
-describe('Renders a list of issues', () => {
-  it('renders', () => {
+beforeEach(() => {
+  // Setup a DOM element as the target
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // Cleanup on exiting to prevent this test from altering the results of future tests
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+describe("Renders a list of issues", () => {
+  it("renders", () => {
     // TODO: Use the render method to make sure that the component renders properly
+    act(() => render());
   });
 
-  it('matches snapshot', () => {
+  it("matches snapshot", () => {
     // TODO: Check to see if the component matches the snapshot
+    const fragment = render();
+    expect(fragment).toMatchSnapshot();
   });
 });

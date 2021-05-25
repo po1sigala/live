@@ -1,18 +1,33 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 import SearchBar from '../SearchBar';
 
-afterEach(cleanup);
+let container = null;
+
+beforeEach(() => {
+  // Setup a DOM element as the target
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // Cleanup on exiting to prevent this test from altering the results of future tests
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
 
 describe('Renders a list of issues', () => {
   it('renders', () => {
-    render(<SearchBar />);
+    act(() => {
+      render(<SearchBar />, container);
+      return undefined;
+    });
   });
 
   it('matches snapshot', () => {
-    const { asFragment } = render(<SearchBar />);
-
-    expect(asFragment()).toMatchSnapshot();
+    const fragment = render(<SearchBar />, container);
+    expect(fragment).toMatchSnapshot();
   });
 });

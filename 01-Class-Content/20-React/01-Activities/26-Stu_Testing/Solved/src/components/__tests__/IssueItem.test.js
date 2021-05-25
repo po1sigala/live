@@ -1,13 +1,24 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 import IssueItem from '../IssueItem';
 
-afterEach(cleanup);
+let container = null;
 
-// Here we check to see if each IssueItem will render properly.
+beforeEach(() => {
+  // Setup a DOM element as the target
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // Cleanup on exiting to prevent this test from altering the results of future tests
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
 describe('Renders each issue individually', () => {
-  // Here is our test issue
   const issue = {
     url: 'https://api.github.com/repos/microsoft/vscode/issues/68',
     html_url: 'https://github.com/microsoft/vscode/issues/68',
@@ -17,15 +28,20 @@ describe('Renders each issue individually', () => {
     title: 'Git: Support git history in VSCode',
   };
 
-  // Here we check to see if each IssueItem will render properly given the props key and issue
   it('renders', () => {
-    render(<IssueItem key={issue.id} issue={issue} />);
+    act(() => {
+      render(<IssueItem key={issue.id} issue={issue} />, container);
+    });
+    expect(container.textContent).toBe('Git: Support git history in VSCode');
   });
 
-  // Finally we check to see if the IssueItem matches the snapshot
   it('matches snapshot', () => {
-    const { asFragment } = render(<IssueItem key={issue.id} issue={issue} />);
-
-    expect(asFragment()).toMatchSnapshot();
+    act(() => {
+      const fragment = render(
+        <IssueItem key={issue.id} issue={issue} />,
+        container
+      );
+      expect(fragment).toMatchSnapshot();
+    });
   });
 });
