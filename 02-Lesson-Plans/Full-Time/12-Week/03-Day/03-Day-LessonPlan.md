@@ -1,4 +1,4 @@
-# 08.3 Full-Time Lesson Plan: Project 2
+# 12.3 Full-Time Lesson Plan: Project 3
 
 ## Overview
 

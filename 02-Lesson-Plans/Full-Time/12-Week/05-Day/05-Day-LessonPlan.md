@@ -1,16 +1,19 @@
-# 08.5 Full-Time Lesson Plan: Project 2 Presentations
+# 12.5 Full-Time Lesson Plan: Project 3 Presentations
 
 ## Overview
 
-In this class, students will present their projects to their peers. 
+
+In this class, students will present their projects to their peers.
 
 ## Instructor Notes
 
-* Congratulate your class! This is a major milestone in their journey. 
+* Congratulate your class! This is a major milestone in their journey.
+
+* Ask your students to think back to the very first day of class when they may have struggled with HTML and CSS. Remind them that they have grown from beginners into full-stack developers in a very short amount of time, which is a huge accomplishment. Remind students that web development is hard, and that they should celebrate not only their ability to make it all the way to final project week, but also the skills they have acquired.
 
 * Project presentations are a rare opportunity for students to practice speaking on technical topics in front of an audience of peers.
 
-* Limit presentations to 10 minutes: 7 or 8 for the presentation itself followed by 2 or 3 minutes for Q & A. This will ensure that every group presents and allow padding for transitions between groups. 
+* Limit presentations to 10 minutes: 7 or 8 for the presentation itself followed by 2 or 3 minutes for Q & A. This will ensure that every group presents and allow padding for transitions between groups.
 
 * Prior to class, prepare a list of questions to ask each group to encourage discussion.
 
@@ -42,7 +45,9 @@ By the end of class, students will be able to:
 
 ### 1. Instructor Do: Welcome (5 min)
 
-* Welcome students to class. 
+* Welcome students to class.
+
+* Congratulate your class for making it this far in the course and developing their projects to a state worth presenting. This is a huge milestone for students and they should take a moment to celebrate how far they have come.
 
 * Address any last-minute questions before presentations.
 
@@ -60,7 +65,11 @@ By the end of class, students will be able to:
 
 * Present superlative 'awards' and congratulate each group for accomplishing this huge milestone!
 
-* Answer any questions before ending class.
+* Take a moment with your class for some self-refection, and remind students that learning is an ongoing process.
+
+* Remind students that they should take a moment to celebrate their accomplishments as a team, and ensure them that they have put in the time and effort to be a developer.
+
+* Assure students that applying for positions can take some time, and they may face rejection, but to not be discouraged. Remind them to leverage personal connections and apply to as many jobs as they can, even if they don't fit all the requirements.
 
 ### 5. END
 

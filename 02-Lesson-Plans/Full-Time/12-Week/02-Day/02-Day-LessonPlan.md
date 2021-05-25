@@ -1,4 +1,4 @@
-# 08.2 Full-Time Lesson Plan: Project 2
+# 12.2 Full-Time Lesson Plan: Project 3
 
 ## Overview
 
@@ -8,21 +8,21 @@ In this class students will continue working on projects.
 
 * No classroom instruction today.
 
-* You will assume the role of "scrummaster" and hold daily scrum meetings with each group. The purpose of these scrums is to: 
+* You will assume the role of "scrummaster" and hold daily scrum meetings with each group. The purpose of these scrums is to:
 
-	1. Gauge progress on projects
+ 1. Gauge progress on projects
 
-	2. Course correct if scope creeps or focus shifts
+ 2. Course correct if scope creeps or focus shifts
 
-	3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
-    
+ 3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade.
+
 * Keep the daily scrums short. Ask each student the following questions:
 
-	* What did you accomplish? 
+  * What did you accomplish?
 
-	* What are your goals? 
+  * What are your goals?
 
-	* Are there any obstacles? 
+  * Are there any obstacles?
 
 ## Learning Objectives
 
@@ -47,7 +47,7 @@ By the end of class, students will be able to:
 ### 1. Instructor Do: Welcome (5 min)
 
 * Welcome students to class.
- 
+
 * Inform them that they will continue to work on their group project and should ask for help from you and your TAs.
 
 * Also let them know that you will be checking on each group to hold daily scrums with them to gauge their progress.
