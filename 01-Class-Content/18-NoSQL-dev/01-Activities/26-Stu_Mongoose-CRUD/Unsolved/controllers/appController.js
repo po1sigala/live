@@ -15,7 +15,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // create a new application
+  // TODO: Add comments to the functionality of the createApplication method
   createApplication(req, res) {
     Application.create(req.body)
       .then((application) => {
@@ -37,6 +37,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  // TODO: Add comments to the functionality of the updateApplication method
   updateApplication(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
@@ -53,6 +54,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  // TODO: Add comments to the functionality of the deleteApplication method
   deleteApplication(req, res) {
     Application.findOneAndRemove({ _id: req.params.applicationId })
       .then((application) =>
@@ -73,7 +75,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // Add a application tag
+  // TODO: Add comments to the functionality of the addTag method
   addTag(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
@@ -87,7 +89,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // Remove application response
+  // TODO: Add comments to the functionality of the addTag method
   removeTag(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },

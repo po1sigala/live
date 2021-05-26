@@ -4,7 +4,9 @@ Work with a partner to add comments describing the functionality of the CRUD ope
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Be sure to run `npm install`, `npm run seed` and `npm start`.
+
+Refer to the documentation:
 
 [Mongoose Documentation on Constructing Models](https://mongoosejs.com/docs/models.html)
 
