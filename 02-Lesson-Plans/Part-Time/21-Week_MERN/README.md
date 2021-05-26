@@ -66,6 +66,10 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 ### Resources
 
+* [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+
+* [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+
 * [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
 
 * [Apollo Docs on queries and mutations](https://graphql.org/learn/queries/)
