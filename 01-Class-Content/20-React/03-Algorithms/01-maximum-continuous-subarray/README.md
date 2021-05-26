@@ -6,7 +6,9 @@ In this activity, you will create a function that takes in an array and returns 
 
 ## Instructions
 
-* Open [Unsolved/maximum-continuous-subarray.js](Unsolved/maximum-continuous-subarray.js) in your code editor. This is the only file you will modify in this activity. In this file, you will be writing code in the body of the `maxSumArray` function to achieve the following:
+* Open [Unsolved/maximum-continuous-subarray.js](Unsolved/maximum-continuous-subarray.js) in your code editor. This is the only file you will modify in this activity.
+
+*  In this file, you will be writing code in the body of the `maxSumArray` function to achieve the following:
 
   * Given an array of integers, find the contiguous subarray that has the largest sum.
 
