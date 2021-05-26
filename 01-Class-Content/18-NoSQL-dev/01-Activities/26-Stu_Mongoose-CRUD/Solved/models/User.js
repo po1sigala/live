@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 // Schema to create User model
 const userSchema = new Schema(
@@ -9,7 +9,7 @@ const userSchema = new Schema(
     videos: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Video',
+        ref: "Video",
       },
     ],
   },
@@ -25,19 +25,19 @@ const userSchema = new Schema(
 
 // Create a virtual property `fullName` that gets and sets the user's full name
 userSchema
-  .virtual('fullName')
+  .virtual("fullName")
   // Getter
   .get(function () {
     return `${this.first} ${this.last}`;
   })
   // Setter to set the first and last name
   .set(function (v) {
-    const first = v.split(' ')[0];
-    const last = v.split(' ')[1];
+    const first = v.split(" ")[0];
+    const last = v.split(" ")[1];
     this.set({ first, last });
   });
 
 // Initialize our User model
-const User = model('user', userSchema);
+const User = model("user", userSchema);
 
 module.exports = User;
