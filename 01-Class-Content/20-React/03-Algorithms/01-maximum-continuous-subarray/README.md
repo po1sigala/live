@@ -1,6 +1,6 @@
 # Maximum Continuous Sub-Array
 
-In this activity, you will create a function that takes in an array and returns the sum of the maximum contiguous, or continuous, subarray. 
+In this activity, you will create a function that takes in an array and returns the sum of the maximum continuous, or contiguous, subarray. 
 
 > Note: Contiguous refers to items that are next to each other in sequence. In the array [1, 2, 3, -27 ,5], for example, [1, 2, 3] is contiguous subarray while [1, 2, 3, 5] is not, since 5 is not directly next to 3 in the sequence. 
 
