@@ -8,8 +8,8 @@ describe("maxSumArray", function() {
     expect(result).to.eql(1);
   });
 
-  it(`should return 1 if given the array [-1,2]`, function() {
-    let arr1 = [-1,2]
+  it(`should return 1 if given the array [-1, 2]`, function() {
+    let arr1 = [-1, 2]
     let result = maxSumArray(arr1);
     expect(result).to.eql(1);
   });
