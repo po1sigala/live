@@ -34,9 +34,9 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 ## Heads-Up
 
-* In Unit 21, you will introduce students to the GraphQL Playground. If you are new to the GraphQL and the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+In Unit 21, you will introduce students to the GraphQL Playground. If you are new to the GraphQL and the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
 
-* Unit 22 will explore state management and the Context API. We'll also review the key concepts in React to help students prepare for their final projects and solidify their understanding of these more advanced skills. 
+Unit 22 will explore state management and the Context API. We'll also review the key concepts in React to help students prepare for their final projects and solidify their understanding of these more advanced skills. 
 
 ## Helpful Links
 
@@ -77,7 +77,7 @@ Unit 19:
 Unit 20:
 
   * [01: Maximum Continuous Subarray](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray)
-  
+
   * [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times)
 
     * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
