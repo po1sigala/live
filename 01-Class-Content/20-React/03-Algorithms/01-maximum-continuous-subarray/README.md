@@ -15,7 +15,7 @@ In this activity, you will create a function that takes in an array and returns 
   * See the following array for an example:
 
      ```js
-     var arr1 = [[-1,2]
+     var arr1 = [-1, 2]
      ```
 
   *  In the case above, the array only contains two integers so the maximum sum will be the sum of both integers or 1. 
