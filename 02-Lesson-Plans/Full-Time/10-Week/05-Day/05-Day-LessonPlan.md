@@ -30,26 +30,26 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                             | Duration |
-|---     |---  |---                                        |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
-| 10:10AM| 2   | Instructor Demo: React Style              | 0:05     |
-| 10:15AM| 3   | Student Do: React Style                   | 0:15     |
-| 10:30AM| 4   | Instructor Review: React Style            | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Conditional Rendering    | 0:05     |
-| 10:45AM| 6   | Student Do: Conditional Rendering         | 0:15     |
-| 11:00AM| 7   | Instructor Review: Conditional Rendering  | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Testing                  | 0:05     |
-| 11:15AM| 9   | Student Do: Testing                       | 0:15     |
-| 11:30AM| 10  | Instructor Review: Testing                | 0:10     |
-| 11:40AM| 11  | Everyone Do: Github Pages                 | 0:20     |
-| 12:00PM| 12  | BREAK                                     | 0:30     |
-| 12:30PM| 13  | Instructor Demo: Mini Project             | 0:05     |
-| 12:35PM| 14  | Student Do: Mini Project                  | 0:60     |
-| 1:35PM | 15  | Instructor Review: Mini Project           | 0:10     |
-| 1:45PM | 16  | Introduce Homework                        | 0:05     |
-| 1:50PM | 17  | FLEX                                      | 0:40     |
-| 2:30PM | 18  | End                                       | 0:00     |
+| Start   | #   | Activity Name                            | Duration |
+| ------- | --- | ---------------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Do: Stoke Curiosity           | 0:10     |
+| 10:10AM | 2   | Instructor Demo: React Style             | 0:05     |
+| 10:15AM | 3   | Student Do: React Style                  | 0:15     |
+| 10:30AM | 4   | Instructor Review: React Style           | 0:10     |
+| 10:40AM | 5   | Instructor Demo: Conditional Rendering   | 0:05     |
+| 10:45AM | 6   | Student Do: Conditional Rendering        | 0:15     |
+| 11:00AM | 7   | Instructor Review: Conditional Rendering | 0:10     |
+| 11:10AM | 8   | Instructor Demo: Testing                 | 0:05     |
+| 11:15AM | 9   | Student Do: Testing                      | 0:15     |
+| 11:30AM | 10  | Instructor Review: Testing               | 0:10     |
+| 11:40AM | 11  | Everyone Do: Github Pages                | 0:20     |
+| 12:00PM | 12  | BREAK                                    | 0:30     |
+| 12:30PM | 13  | Instructor Demo: Mini Project            | 0:05     |
+| 12:35PM | 14  | Student Do: Mini Project                 | 0:60     |
+| 1:35PM  | 15  | Instructor Review: Mini Project          | 0:10     |
+| 1:45PM  | 16  | Introduce Homework                       | 0:05     |
+| 1:50PM  | 17  | FLEX                                     | 0:40     |
+| 2:30PM  | 18  | End                                      | 0:00     |
 
 ---
 
@@ -923,179 +923,191 @@ By the end of class, students will be able to:
 
   * The `SearchBar` component is responsible for rendering the search bar and also managing the current search term that the user enters:
 
-     ```js
-     import React, { useState } from 'react';
+    ```js
+    import React, { useState } from 'react';
 
-     function SearchBar({ onFormSubmit }) {
-       const [term, setTerm] = useState('microsoft/vscode');
-       console.log('SearchBar -> term', term);
+    function SearchBar({ onFormSubmit }) {
+      const [term, setTerm] = useState('microsoft/vscode');
+      console.log('SearchBar -> term', term);
 
-       const sendTerm = (e) => {
-         e.preventDefault();
+      const sendTerm = (e) => {
+        e.preventDefault();
 
-         onFormSubmit(term);
-       };
+        onFormSubmit(term);
+      };
 
-       return (
-         <div className="search-bar ui segment">
-           <form className="ui form" onSubmit={sendTerm}>
-             <div className="field">
-               <label>Retrieve GitHub Issues</label>
-               <input
-                 type="text"
-                 value={term}
-                 onChange={(e) => setTerm(e.target.value)}
-                 placeholder="facebook/react"
-               />
-             </div>
-           </form>
-         </div>
-       );
-     }
+      return (
+        <div className="search-bar ui segment">
+          <form className="ui form" onSubmit={sendTerm}>
+            <div className="field">
+              <label>Retrieve GitHub Issues</label>
+              <input
+                type="text"
+                value={term}
+                onChange={(e) => setTerm(e.target.value)}
+                placeholder="facebook/react"
+              />
+            </div>
+          </form>
+        </div>
+      );
+    }
 
-     export default SearchBar;
-
-     ```
+    export default SearchBar;
+    ```
 
 * Open `00-practice-app/src/components/IssueList.js` and briefly review the code in this component.
 
   * The `IssueList` component is responsible for taking the array of issues that we received from the GitHub API and mapping over them to return an `IssueItem` component:
 
-     ```js
-     import React from 'react';
-     import IssueItem from '../components/IssueItem';
+    ```js
+    import React from 'react';
+    import IssueItem from '../components/IssueItem';
 
-     const IssueList = ({ issues }) => {
-       console.log('IssueList -> issues', issues);
-       const renderedList = issues.map((issue) => {
-         return <IssueItem key={issue.id} issue={issue} />;
-       });
+    const IssueList = ({ issues }) => {
+      console.log('IssueList -> issues', issues);
+      const renderedList = issues.map((issue) => {
+        return <IssueItem key={issue.id} issue={issue} />;
+      });
 
-       return <div className="ui relaxed divided list">{renderedList}</div>;
-     };
+      return <div className="ui relaxed divided list">{renderedList}</div>;
+    };
 
-     export default IssueList;
-     ```
+    export default IssueList;
+    ```
 
 * Open `00-practice-app/src/components/IssueItem.js` and briefly review the code in this component.
 
   * The `IssueItem` component is responsible for taking the data passed down for each issue and rendering some JSX with the issue title:
 
-     ```js
-     import React from 'react';
+    ```js
+    import React from 'react';
 
-     const IssueItem = ({ issue }) => {
-       return (
-         <div className="item">
-           <i className="large github middle aligned icon"></i>
-           <div className="content">
-             <a
-               className="header"
-               href={issue.html_url}
-               target="_blank"
-               rel="noreferrer"
-             >
-               {issue.title}
-             </a>
-             <div className="description">{issue.description}</div>
-           </div>
-         </div>
-       );
-     };
+    const IssueItem = ({ issue }) => {
+      return (
+        <div className="item">
+          <i className="large github middle aligned icon"></i>
+          <div className="content">
+            <a
+              className="header"
+              href={issue.html_url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {issue.title}
+            </a>
+            <div className="description">{issue.description}</div>
+          </div>
+        </div>
+      );
+    };
 
-     export default IssueItem;
-
-     ```
+    export default IssueItem;
+    ```
 
 * Open `00-practice-app/src/components/__tests__/SearchBar.test.js` and briefly review the code in this component.
 
   * The test component for the `SearchBar` component first requires us to import the testing framework and also the component that we are testing:
   
      ```js
-     import React from 'react';
-     import { render, cleanup } from '@testing-library/react';
-     import '@testing-library/jest-dom/extend-expect';
-     import SearchBar from '../SearchBar';
+    import React from "react";
+    import { render, unmountComponentAtNode } from "react-dom";
+    import { act } from "react-dom/test-utils";
+    import SearchBar from "../SearchBar";
      ```
 
   * First we use the `render()` method to make sure that the component renders properly:
 
-     ```js
-     describe('Renders a list of issues', () => {
-       it('renders', () => {
-         render(<SearchBar />);
-       });
-     ```
+    ```js
+    describe("Renders a list of issues", () => {
+      it("renders", () => {
+        act(() => {
+          render(<SearchBar />, container);
+          return undefined;
+        });
+      });
+    ```
 
   * We also check whether the component matches the snapshot.
   
   * 🔑 Snapshots are markups of how the DOM should look when the component is rendered. They are generated when the tests are run and are stored in a `snapshots` folder in the same directory as the test:
 
-     ```js
-     it('matches snapshot', () => {
-       const { asFragment } = render(<SearchBar />);
-
-       expect(asFragment()).toMatchSnapshot();
-     });
-     ```
+    ```js
+    it("matches snapshot", () => {
+      const fragment = render(<SearchBar />, container);
+      expect(fragment).toMatchSnapshot();
+    });
+    ```
 
 * Open `00-practice-app/src/components/__tests__/IssueList.test.js` and briefly review the code in this component.
 
   * In the `IssueList.test.js` file, we first import the component we are testing as well as the testing framework:
 
-     ```js
-     import React from 'react';
-     import { render, cleanup } from '@testing-library/react';
-     import '@testing-library/jest-dom/extend-expect';
-     import IssueList from '../IssueList';
-     ```
+    ```js
+    import React from 'react';
+    import { render, unmountComponentAtNode } from 'react-dom';
+    import { act } from 'react-dom/test-utils';
+    import IssueItem from '../IssueItem';
+    ```
 
   * First we check whether that component renders properly:
 
-     ```js
-     it('renders', () => {
-       render(<IssueList issues={issues} />);
-     });
-     ```
+    ```js
+    it('renders', () => {
+      act(() => {
+        render(<IssueList issues={issues} />, container);
+      });
+      expect(container.textContent).toContain(
+        'Git: Support git history in VSCode'
+      );
+    ```
 
   * We also check that the rendered component matches the snapshot:
 
-     ```js
-     it('matches snapshot', () => {
-       const { asFragment } = render(<IssueList issues={issues} />);
-
-       expect(asFragment()).toMatchSnapshot();
-     });
-     ```
+    ```js
+    it('matches snapshot', () => {
+        act(() => {
+          const fragment = render(<IssueList issues={issues} />, container);
+          expect(fragment).toMatchSnapshot();
+        });
+      });
+    ```
 
 * Open `00-practice-app/src/components/__tests__/IssueItem.test.js` and briefly review the code in this component.
 
-  * We first import the `IssueItem` component and the testing framework:
+  * We first import the `IssueItem` and `IssueList` component and the testing framework:
 
-     ```js
-     import React from 'react';
-     import { render, cleanup } from '@testing-library/react';
-     import '@testing-library/jest-dom/extend-expect';
-     import IssueItem from '../IssueItem';
-     ```
+    ```js
+    import React from 'react';
+    import { render, unmountComponentAtNode } from 'react-dom';
+    import { act } from 'react-dom/test-utils';
+    import IssueItem from '../IssueItem';
+    ```
 
   * Using the sample issue provided in the testing component, we then check that the component renders properly:
 
-     ```js
-     it('renders', () => {
-       render(<IssueItem key={issue.id} issue={issue} />);
-     });
-     ```
+    ```js
+    it('renders', () => {
+      act(() => {
+        render(<IssueItem key={issue.id} issue={issue} />, container);
+      });
+      expect(container.textContent).toBe('Git: Support git history in VSCode');
+    });
+    ```
 
   * Once again, we check that the rendered component matches the snapshot:
 
-     ```js
-     it('matches snapshot', () => {
-       const { asFragment } = render(<IssueItem key={issue.id} issue={issue} />);
-
-       expect(asFragment()).toMatchSnapshot();
-     });
-     ```
+    ```js
+    it('matches snapshot', () => {
+      act(() => {
+        const fragment = render(
+          <IssueItem key={issue.id} issue={issue} />,
+          container
+        );
+        expect(fragment).toMatchSnapshot();
+      });
+    });
+    ```
 
 * Navigate to `00-practice-app` in the terminal and demonstrate the following:
   
