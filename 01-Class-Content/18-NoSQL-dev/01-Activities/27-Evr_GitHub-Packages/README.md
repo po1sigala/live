@@ -87,13 +87,14 @@ Now it's time to actually create a simple package that we can upload to GitHub P
     git push -u origin main
     ```
 
-> **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
+    > **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
 
 9. Now that we have everything ready to go, let's publish!
 
     ```sh
     npm publish
     ```
+
 * **Note**: Remember that the `npm publish` command will publish our package to GitHub packages and not the `npm` registry because of the way we've configured our `.npmrc`.
 
 ## Installing GitHub Packages
@@ -102,25 +103,25 @@ If you want to share this package with someone, they can follow these instructio
 
 1. Create a local `.npmrc` file in the project directory where the package will be installed and add the following code:
 
-```sh
-@OWNER:registry=https://npm.pkg.github.com
-```
+    ```sh
+    @OWNER:registry=https://npm.pkg.github.com
+    ```
 
-**Note**: Be sure to replace OWNER with your personal GitHub username.
+    **Note**: Be sure to replace OWNER with your personal GitHub username.
 
 2. Add the package name to the list of dependencies located in your `package.json` file.
 
-```json
-"dependencies": {
-    "@<YOUR_GITHUB_USERNAME>/github-pkg-demo": "1.0.0"
-},
-```
+    ```json
+    "dependencies": {
+        "@<YOUR_GITHUB_USERNAME>/github-pkg-demo": "1.0.0"
+    },
+    ```
 
 3. Then, simply run `npm install` as you normally would.
 
-```sh
-npm install
-```
+    ```sh
+    npm install
+    ```
 
 ![packages-page](./Images/02-packages-page.png)
 

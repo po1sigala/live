@@ -31,9 +31,9 @@ const applicationSchema = new Schema(
   }
 );
 
-// Create a virtual property `responses` that gets the amount of response per application
+// Create a virtual property `getTags` that gets the amount of tags associated with an application
 applicationSchema
-  .virtual('getResponses')
+  .virtual('getTags')
   // Getter
   .get(function () {
     return this.tags.length;
