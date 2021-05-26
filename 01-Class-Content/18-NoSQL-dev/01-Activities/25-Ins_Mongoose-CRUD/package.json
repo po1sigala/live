@@ -1,10 +1,16 @@
 {
-  "name": "25-Ins_Mongoose-CRUD",
+  "name": "23-Ins_Subdoc-Population",
   "version": "1.0.0",
+  "description": "Instructor demo for populating subdocs",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index",
+    "start:dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.11"
+    "mongoose": "^5.12.10"
   }
 }

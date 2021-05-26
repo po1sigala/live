@@ -1,6 +1,6 @@
-const { connect, connection } = require('mongoose');
+const { connect, connection } = require("mongoose");
 
-connect('mongodb://localhost/usersPosts', {
+connect("mongodb://localhost/videosAndResponses", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
