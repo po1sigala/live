@@ -8,19 +8,19 @@ describe("maxSumArray", function() {
     expect(result).to.eql(1);
   });
 
-  it(`should return 1 if given the array [-1,2]`, function() {
-    let arr1 = [-1,2]
+  it(`should return 1 if given the array [-1, 2]`, function() {
+    let arr1 = [-1, 2]
     let result = maxSumArray(arr1);
     expect(result).to.eql(1);
   });
 
-  it(`should return 10 if given the array [1,2,3,4]`, function() {
+  it(`should return 10 if given the array [1, 2, 3, 4]`, function() {
     let arr1 = [1, 2, 3, 4]
     let result = maxSumArray(arr1);
     expect(result).to.eql(10);
   });
 
-  it(`should return 10 if given the array [1,2,-50,4,5]`, function() {
+  it(`should return 10 if given the array [1, 2, -50, 4, 5]`, function() {
     let arr1 = [1, 2, -50, 4, 5]
     let result = maxSumArray(arr1);
     expect(result).to.eql(9);
