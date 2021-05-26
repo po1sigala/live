@@ -6,7 +6,7 @@ In Unit 19, you will cover measuring and optimizing the performance of web appli
 
 In Unit 20, you will teach students how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications. They will also learn how to use `create-react-app` to scaffold their React apps. You will help them render elements in JSX and write JSX expressions. You will also help them understand more complex topics like React Hooks, fetching data, and creating fully functional React forms.
 
-Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content/19-PWA/README.md) and [Unit 20](../../../01-Class-Content/20-React/README.md)for detailed information on key topics, learning objectives, and homework.
+Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content/19-PWA/README.md) and [Unit 20](../../../01-Class-Content/20-React/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 

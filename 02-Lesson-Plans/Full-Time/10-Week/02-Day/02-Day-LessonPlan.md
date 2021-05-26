@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today's class will continue our journey into web performance by learning more about progressive web apps. We will start with our basic Gallery App and step by step, implement a web app manifest as well as a service worker. This new functionality will provide us with a fully functioning progressive web app that delivers an offline experience to our users. We will also learn  about Webpack. Webpack is a module bundler, with its main purpose being bundling JavaScript files for use in a browser. Webpack provides a lot of functionality that developers can take advantage of to make their programs more performant.
+Today's class will continue our journey into web performance by learning more about progressive web apps. We will start with our basic Gallery App and step by step, implement a web app manifest as well as a service worker. This new functionality will provide us with a fully functioning progressive web app that delivers an offline experience to our users. We will also learn about Webpack. Webpack is a module bundler, with its main purpose being bundling JavaScript files for use in a browser. Webpack provides a lot of functionality that developers can take advantage of to make their programs more performant.
 
 ## Instructor Notes
 
@@ -320,7 +320,6 @@ By the end of class, students will be able to:
   * Refresh your Gallery App or launch it with `npm start` if it is not running.
 
   * Open your Chrome Dev Tools > Application and navigate to the Service Worker tab. Check to see if your service worker file was successfully found. You should see two messages, one from the `service-worker.js` file and one from the script tag that you put in your `index.html` file.
-  ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
@@ -653,14 +652,13 @@ By the end of class, students will be able to:
 
     7. Type the remaining code to cache responses for requests for data. The function handling the `fetch` event should resemble the following:
 
-      ![Fetch](Images/fetch-code.png)
+    ![Fetch](Images/fetch-code.png)
 
-      If done successfully you will see your data cache in your Application tab. At this point you should be able to put your application in offline mode for an offline experience.
+    If done successfully you will see your data cache in your Application tab. At this point you should be able to put your application in offline mode for an offline experience.
 
-      ![Data Cache](Images/data-cache.png)
+    ![Data Cache](Images/data-cache.png)
 
-      ![Offline](Images/offline.png)
-  ```
+    ![Offline](Images/offline.png)
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
@@ -810,7 +808,7 @@ By the end of class, students will be able to:
 
   * Open up the Chrome Developer Tools and navigate to the `Service Worker` tab. Here, let's toggle the offline version and refresh the app.
 
-  ![offline mode](./Images/offline-mode.png)
+  ![offline mode](./Images/offline.png)
 
   * Just like our other two apps, all of our resources have been cached and do not require a connection to access.
 
