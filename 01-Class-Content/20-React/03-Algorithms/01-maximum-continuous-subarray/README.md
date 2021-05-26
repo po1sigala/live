@@ -1,46 +1,43 @@
 # Maximum Continuous Sub-Array
 
-In this activity, you will create a function that takes in two sorted arrays of integers. Your function should return a new two-element array that contains one number from each sorted array with the smallest difference.
+In this activity, you will create a function that takes in an array and returns the sum of the maximum continuous subarray. 
 
 ## Instructions
 
-* Open [Unsolved/smallest-difference.js](Unsolved/smallest-difference.js) in your code editor. This is the only file you will modify in this activity.
+* Open [Unsolved/maximum-continuous-subarray.js](Unsolved/maximum-continuous-subarray.js) in your code editor. This is the only file you will modify in this activity.
 
-  * In this file, you will be writing code in the body of the `smallestDifference` function to achieve the following:
+  * In this file, you will be writing code in the body of the `maxSumArray` function to achieve the following:
 
-    * Return a two-element array that contains the integers from both arrays with the smallest distance.
+    * Given an array of integers, find the continuous subarray that has the largest sum.
 
-    * See the following arrays for an example:
-
-       ```js
-       var arr1 = [1, 6, 7, 9];
-       var arr1 = [8, 9, 10, 11, 12, 13];
-       ```
-
-    * The preceding arrays should return the following:
+    * See the following array for an example:
 
        ```js
-       [9, 9];
+       var arr1 = [[-1,2]
        ```
 
-    * Both arrays contain the number `9`, and the difference between same numbers is `0`.
+    *  In this case, the array only contains two integers, so the maximum sum will be the sum of both integers or 1. 
 
-    * See the following arrays for an example:
+    * See the following array for an example:
 
        ```js
-       var arr1 = [2, 4, 6, 8, 15, 20];
-       var arr2 = [17, 25, 30, 47];
+       var arr1 = [1, 2, 3, 4]
        ```
 
-    * The preceding arrays should return the following:
+    * In this case, since all the integers are positive, the maximum sum will equal the sum of all the integers in the array or 10.
+
+
+     * See the following array for an example:
 
        ```js
-       [15, 17];
+       var numbers =  [-2,1,-3,4,-1,2,1,-5,4]
        ```
 
-    * The difference between `15` and `17` is `2`, which is the smallest difference between any two numbers across the arrays.
+    * In this case, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4, -1, 2, 1]. So in this case, 6 should be returned.
 
-    * Assume that each array will contain at least one integer.
+    * Assume that the array will contains only integers and the the integers can be positive or negative. 
+
+    * Assume that if there is only one integer in a given array, the value of the integer will be returned. 
 
 * You can check whether your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
@@ -50,7 +47,9 @@ In this activity, you will create a function that takes in two sorted arrays of 
 
 ### Hints
 
-* How can you use the fact that the arrays are sorted to your advantage?
+* What properties and methods on the Math object may help simplify your solution code?
+
+* Why is it important if the array has only positive, only negative, or both positive and negative numbers?
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
