@@ -1,13 +1,13 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-// TODO: Import SearchBar component
+import React from 'react';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
+import SearchBar from '../SearchBar';
 
 let container = null;
 
 beforeEach(() => {
   // Setup a DOM element as the target
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
@@ -18,15 +18,16 @@ afterEach(() => {
   container = null;
 });
 
-describe("Renders a list of issues", () => {
-  it("renders", () => {
-    // TODO: Use the render method to make sure that the component renders properly
-    act(() => render());
+describe('Renders a list of issues', () => {
+  it('renders', () => {
+    act(() => {
+      render(<SearchBar />, container);
+      return undefined;
+    });
   });
 
-  it("matches snapshot", () => {
-    // TODO: Check to see if the component matches the snapshot
-    const fragment = render();
+  it('matches snapshot', () => {
+    const fragment = render(<SearchBar />, container);
     expect(fragment).toMatchSnapshot();
   });
 });
