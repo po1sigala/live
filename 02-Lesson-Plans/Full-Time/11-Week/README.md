@@ -112,7 +112,7 @@ Unit 22:
 
 * [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
-* [Git Docs on customizing Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+* [GitHub Docs on actions](https://docs.github.com/en/actions)
 
 * [Context API documentation](https://reactjs.org/docs/context.html)
 
