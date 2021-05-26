@@ -1,130 +1,83 @@
-# 10.1 Lesson Plan - Web Performance (10:00 AM)
+# 10.1 Full-Time Lesson Plan: Progressive Web Applications (PWA)
 
-## Overview
+## Overview 
 
-In this lesson we will complete the Mini Project for Unit 17, then begin the performance unit. We will use Lighthouse to audit the performance of webpages, and go through the different options we have to increase performance in our applications. Performance is an incredibly important aspect of being a developer. While building large applications, keeping them performing is a top priority.
-
-- - -
-
-## Learning Objectives
-
-* By the end of class student's will be able to...
-  * Articulate the meaning of web performance and how it effects their users.
-  * Explain how assets like JavaScript files and images impact the performance of a web page.
-  * Use Lighthouse to audit a sites various performance metrics.
-  * Use minification to lower JS file sizes.
-  * Use the compression npm package to enable gzip compression in their applications
-  * Use online image compression to compress image files while retaining image quality.
-  * Explain and implement lazy loading into their applications so images are only loaded as needed.
+Today's class will be focused on Web Performance. We will use Lighthouse to audit the performance of webpages, and go through the different options we have to increase performance in our applications. Performance is an incredibly important aspect of being a developer. While building large applications, keeping them performing is a top priority.
 
 ## Instructor Notes
 
-* We will be making use of students Project 2 during the first half of todays class. Ensure all students have a deployed project to work with.
+* In this lesson, students will complete activities `01-Stu_Lighthouse` through `07-Stu_PWAs`.
 
-* Todays class you will be using an auditing system by Google called Lighthouse. Familiarize yourself with the tool prior to class. You can find the documentation [here](https://developers.google.com/web/tools/lighthouse/). 
+* We will be making use of the students' Project 2 during the first half of today's class. Ensure all students have a deployed project to work with.
+
+* Today's class you will be using an auditing system by Google called Lighthouse. Familiarize yourself with the tool prior to class. You can find the documentation [here](https://developers.google.com/web/tools/lighthouse/). 
 
   * Lighthouse can hang in some browsers, if possible please use Chrome.
 
 * Improving scores in Lighthouse will be a big win for students today, so be sure to slowly go through the first audit report of the day to give students an understanding of how they can improve.
 
-## Slides
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+## Learning Objectives
+
+By the end of class, students will be able to:
+
+* Articulate the meaning of web performance and how it effects their users.
+
+* Explain how assets like JavaScript files and images impact the performance of a web page.
+
+* Use Lighthouse to audit a sites various performance metrics.
+
+* Use minification to lower JS file sizes.
+
+* Use the compression npm package to enable gzip compression in their applications
+
+* Use online image compression to compress image files while retaining image quality.
+
+* Explain and implement lazy loading into their applications so images are only loaded as needed.
+
+## Slide Deck
 
 * N/A
 
 ## Time Tracker
 
-[10.1 Time Tracker](https://docs.google.com/spreadsheets/d/1nwgyx7Oo_jpMzea59A-Tm79aVMSAIPyyCKJHndB4oHg/edit#gid=0)
+| Start  | #   | Activity Name                           | Duration |
+|---     |---  |---                                      |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity          | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Lighthouse Audit       | 0:05     |
+| 10:15AM| 3   | Student Do: Lighthouse Audit            | 0:15     |
+| 10:30AM| 4   | Instructor Review: Lighthouse Audit     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: JS Minification        | 0:05     |
+| 10:45AM| 6   | Student Do: JS Minification             | 0:15     |
+| 11:00AM| 7   | Instructor Review: JS Minification      | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Enable Compression     | 0:05     |
+| 11:15AM| 9   | Student Do: Enable Compression          | 0:15     |
+| 11:30AM| 10  | Instructor Review: Enable Compression   | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Image Compression      | 0:05     |
+| 11:45AM| 12  | Student Do: Image Compression           | 0:15     |
+| 12:00PM| 13  | BREAK                                   | 0:30     |
+| 12:30PM| 14  | Instructor Review: Image Compression    | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Lazy Loading           | 0:05     |
+| 12:45AM| 16  | Student Do: Lazy Loading                | 0:15     |
+| 1:00PM | 17  | Instructor Review: Lazy Loading         | 0:15     |
+| 1:15PM | 18  | Instructor Demo: Optimize Gallery App   | 0:05     |
+| 1:20PM | 19  | Student Do: Optimize Gallery App        | 0:20     |
+| 1:40PM | 20  | Instructor Review: Optimize Gallery App | 0:15     |
+| 1:55PM | 21  | Instructor Demo: Progressive Web Apps   | 0:05     |
+| 2:00PM | 22  | Student Do: Progressive Web Apps        | 0:15     |
+| 2:15PM | 23  | Instructor Review: Progressive Web Apps | 0:15     |
+| 2:30PM | 24  | END                                     | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
-
-### 1. Intro Mini Project (5 mins)
-
-* **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following unit on PWAs.
-
-* Change into [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Solved/public/db.js) in your terminal and run `npm install` folowed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
-
-* Demo the functionality of the app and tell students they are going to build the IndexedDB storage functionality in the next activity. This feature will enable users to enter transactions when the device is not online and sync the transactions with the backend when network service is restored.
-
-* Let students ask questions and then move on to the next activity.
-
-### 2. Student Do: Mini Project (60 mins)
-
-* Direct students to the activity instructions found in [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Unsolved):
-
-```md
-# Mini Project
-
-In this activity, you will implement IndexedDB so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api. Write all of your IndexedDB code in `public/db.js`.
-
-## Instructions
-
-* Create a new db request for a `budget` database.
-
-* Inside `onupgradeneeded`, create an object store called `pending` and set `autoIncrement` to `true`.
-
-* Inside your `saveRecord()` function:
-
-  * Create a transaction on the `pending` object store with `readwrite` access.
-
-  * Access your pending object store.
-
-  * Add a record to your store with the `add` method.
-
-* Inside the `checkDatabase` function:
-
-  * Open a transaction on your `pending` object store.
-  
-  * Access your `pending` object store.
-
-  * Get all records from store and set to a variable.
-
-* Inside `getAll.onsuccess`:
-
-  * If successful, open a transaction on your `pending` object store.
-
-  * Access your `pending` object store.
-
-  * Clear all items in your store.
-
-## 💡 Hint(s)
-
-* You can use the the comments in `public/db.js` as a guide.
-
-## 🏆 Bonus
-
-* Create a button that resets all funds to zero in your indexedDB.
-
-```
-
-### 3. Instructor Do: Review Mini Project (10 mins)
-
-* Treat this review as a question and answer session to help students who might be stuck, since there are 10 minutes allotted.
-
-* Open [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Solved/public/db.js) in your IDE and walk students review the solved code, letting the students ask questions about the key methods and functions they had to write.
-
-  * `onupgradeneeded`
-
-  * `saveRecord()`
-
-  * `checkDatabase()`
-
-  * `saveRecord()`
-
-  * `onsuccess`
-
-* Ask for volunteers to share or help if students are stuck.
-
-### 4. Instructor Do: Review Unit 17 (45 mins)
-
-* Take some time answering lingering questions about the Mini Project. If no questions remain, lead a review on the topics learned in Unit 17. 
-
-### 5. Break (30 mins)
-
-
-### 6. Instructor Do: Welcome/Intro Web Performance (5 mins)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class and then open Google Chrome. 
 
@@ -172,11 +125,11 @@ In this activity, you will implement IndexedDB so the budget tracker persists da
 
   * Getting concrete analysis on the performance metrics of a web page is important in improving it in the future.
 
-* Use student answers to transition to demoing Lighthouse.
+* Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Do: Demo Lighthouse (10 mins)
+### 2. Instructor Demo: Lighthouse Audit (5 min) 
 
-* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with after break later today.
+* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
 
   * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
 
@@ -214,29 +167,37 @@ In this activity, you will implement IndexedDB so the budget tracker persists da
 
 * When working on improving a webpage's performance, we should use Lighthouse to complete frequent audits. These can be incredibly helpful in pinpointing where our efforts should be focused.
 
-### 8. Student Do: Lighthouse Audit (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the activity instructions found in [01-Stu_Lighthouse](../../../../01-Class-Content/19-PWA/01-Activities/01-Stu_Lighthouse/README.md)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
 
-```md
-# Lighthouse Audits
+### 3. Student Do: Lighthouse Audit (15 min) 
 
-In this activity you will use Google Lighthouse to audit your second group project to find out performance metrics.
+* Direct students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
 
-## Instructions
+* Break your students into pairs that will work together on this activity.
 
-* We are going to utilize your second group project for these coming activities to check its performance metrics.
+  ```md
+  # Lighthouse Audits
 
-* Navigate to the deployed URL of your project.
+  In this activity you will use Google Lighthouse to audit your second group project to find out performance metrics.
 
-* Open the Chrome Dev Tools and click the `Audits` tab.
+  ## Instructions
 
-* Scroll down and click `Run Audits` and allow Lighthouse to run.
+  * We are going to utilize your second group project for these coming activities to check its performance metrics.
 
-* Read through the provided report and be prepared to talk about the `Opportunities` portion of your audit!
-```
+  * Navigate to the deployed URL of your project.
 
-### 9. Instructor Do: Review Audits (5 mins)
+  * Open the Chrome Dev Tools and click the `Audits` tab.
+
+  * Scroll down and click `Run Audits` and allow Lighthouse to run.
+
+  * Read through the provided report and be prepared to talk about the `Opportunities` portion of your audit!
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 4. Instructor Review: Lighthouse Audit (10 min) 
 
 * Ask the class the following question(s):
 
@@ -248,19 +209,21 @@ In this activity you will use Google Lighthouse to audit your second group proje
 
   * How long did it take to become interactive?
 
-* Are there any commonalities you hear?
+  * Are there any commonalities you hear?
 
-### 10. Instructor Do: JS Minification (10 mins)
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: JS Minification (5 min) 
 
 * Ask the class the following question(s):
 
-* "What do you think minification means"?
+  * "What do you think minification means"?
 
-  * Minification is the process of taking our code and removing all unnecessary characters and whitespace without loss of functionality in an attempt to save file space.
+    * Minification is the process of taking our code and removing all unnecessary characters and whitespace without loss of functionality in an attempt to save file space.
 
-* Ask the class, "Where have we seen minification before?"
+  * "Where have we seen minification before?"
 
-  * Bootstrap and jQuery are two examples of minified source code
+    * Bootstrap and jQuery are two examples of minified source code
 
 * Open [JSCompress](https://jscompress.com/) and paste the following code into the textarea:
 
@@ -290,34 +253,43 @@ In this activity you will use Google Lighthouse to audit your second group proje
 
   * Minification saves us space, and smaller file sizes create faster downloads for the user. The faster our assets can download, the faster the page will load them for our user.
 
-### 11. Student Do: Minify your JavaScript (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the activity instructions located in [02-Stu_Minifiy-JS](../../../../01-Class-Content/19-PWA/01-Activities/02-Stu_Minify-JS/README.md)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
 
-```md
-# Minify Your JS
+### 6. Student Do: JS Minification (15 min) 
 
-In this activity you will minify your JavaScript using an online tool.
+* Direct students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
 
-## Instructions
+* Break your students into pairs that will work together on this activity.
 
-* Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
+  ```md
+  # Minify Your JS
 
-* Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
+  In this activity you will minify your JavaScript using an online tool.
 
-  * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
+  ## Instructions
 
-* Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
+  * Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
 
-* Create a `dist` folder in the root of your project.
+  * Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
 
-  * Create an `index.js` file inside of your `dist` folder.
+    * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
 
-  * Copy/paste the minified JS of your dist folder into your `dist/index.js`
+  * Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
 
-* Be sure to link your `dist/index.js` code to your application.
-```
-### 12. Instructor Do: Review Minification (5 mins)
+  * Create a `dist` folder in the root of your project.
+
+    * Create an `index.js` file inside of your `dist` folder.
+
+    * Copy/paste the minified JS of your dist folder into your `dist/index.js`
+
+  * Be sure to link your `dist/index.js` code to your application.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: JS Minification (10 min) 
 
 * Ask the class the following question(s):
 
@@ -335,9 +307,9 @@ In this activity you will minify your JavaScript using an online tool.
 
   * How might we minify image files?
 
-* Use students answers to transition to the next activity.
+* Answer any questions before proceeding to the next activity.
 
-### 13. Instructor Do: Compression npm package (10 mins)
+### 8. Instructor Demo: Enable Compression (5 min) 
 
 * Ask the class, "What do we do with files that are so large they are slowing load times?"
 
@@ -375,31 +347,39 @@ In this activity you will minify your JavaScript using an online tool.
 
   **Note**: In order to see both rows, you may need to click the "Network Settings" cogwheel and click on the "Use large request rows" checkbox.
 
-### 14. Students Do: Enable Compression (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the activity instructions located [03-Stu_Enable-Compression](../../../../01-Class-Content/19-PWA/01-Activities/03-Stu_Enable-Compression/README.md)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
 
-```md
-# GZip Compression
+### 9. Student Do: Enable Compression (15 min) 
 
-In this activity you are going to use an NPM package called compression to enable GZip compression in your project.
+* Direct students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
 
-## Instructions
+* Break your students into pairs that will work together on this activity.
 
-* Navigate to [compression npm](https://www.npmjs.com/package/compression)
+  ```md
+  # GZip Compression
 
-  * Read about the installation procedure and some of the API's functionality. Use the docs to enable compression in your application.
+  In this activity you are going to use an NPM package called compression to enable GZip compression in your project.
 
-* Once completed, navigate to your page and look at the traffic via the Network tab.
+  ## Instructions
 
-  * You should be able to see the sizes of the files your page is requesting.
+  * Navigate to [compression npm](https://www.npmjs.com/package/compression)
 
-  * Take note of the differing file sizes.
+    * Read about the installation procedure and some of the API's functionality. Use the docs to enable compression in your application.
 
-  * This shows your Uncompressed/Compressed file sizes.
-```
+  * Once completed, navigate to your page and look at the traffic via the Network tab.
 
-### 15. Instructor Do: Review Compression (5 mins)
+    * You should be able to see the sizes of the files your page is requesting.
+
+    * Take note of the differing file sizes.
+
+    * This shows your Uncompressed/Compressed file sizes.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Enable Compression (10 min) 
 
 * Open [03-Stu_Enable-Compression](../../../../01-Class-Content/19-PWA/01-Activities/03-Stu_Enable-Compression/Solved) in your IDE and explain the following points
 
@@ -417,9 +397,9 @@ In this activity you are going to use an NPM package called compression to enabl
   app.use(compression());
   ```
 
-* Answer any questions before proceeding to break.
+* Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Do: Image Compression (10 mins)
+### 11. Instructor Demo: Image Compression (5 min) 
 
 * Ask the class the following question(s):
 
@@ -437,31 +417,41 @@ In this activity you are going to use an NPM package called compression to enabl
 
   * What lossy image compression basically means is that some of the image data is lost during compression. Once an image has used lossy compression, you cannot reverse the process due to this loss of data. The data lost will normally result in almost unnoticeable changes in image quality most of the time. 
 
-### 17. Student Do: Image Compression (10 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Direct students to the activity instructions located in [04-Stu_Image-Compression](../../../../01-Class-Content/19-PWA/01-Activities/04-Stu_Image-Compression/README.md)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
 
-```md
-# Image Compression
+### 12. Student Do: Image Compression (15 min) 
 
-In this activity you are going to use an online compression tool to decrease image file sizes for the Gallery App.
+* Direct students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
 
-## Instructions
+* Break your students into pairs that will work together on this activity.
 
-* In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
+  ```md
+  # Image Compression
 
-* First, unzip the `uncompressedImages.zip` file.
+  In this activity you are going to use an online compression tool to decrease image file sizes for the Gallery App.
 
-* Next, navigate to [Tiny PNG](https://tinypng.com/).
+  ## Instructions
 
-  * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
+  * In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
 
-* Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
+  * First, unzip the `uncompressedImages.zip` file.
 
-* Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
-```
+  * Next, navigate to [Tiny PNG](https://tinypng.com/).
 
-### 18. Instructor Do: Review Image Compression (5 mins)
+    * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
+
+  * Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
+
+  * Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 13. BREAK (30 min)
+
+### 14. Instructor Review: Image Compression (10 min) 
 
 * Ask the class the following question(s):
 
@@ -487,9 +477,9 @@ In this activity you are going to use an online compression tool to decrease ima
 
   * Loading everything at once is the default. There is a concept in programming referred to as `lazy loading` that allows us to only download assets as they are needed.
 
-* Use students answers to transition to the next activity.
+* Answer any questions before proceeding to the next activity.
 
-### 19. Instructor Do: Lazy Loading (10 mins)
+### 15. Instructor Demo: Lazy Loading (5 min) 
 
 * Open our completed [Lazy Loading Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
 
@@ -544,12 +534,286 @@ function initLazyImages() {
 
   * By loading only necessary images, we can cut download/load times consistently and ensure as fast an experience as possible.
 
-* Let the students know that they will be trying lazy loading out themselves in the next lesson.
+* Answer any questions before proceeding to the next activity.
 
-### 20. End
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
 
-### Lesson Plan Feedback
+### 16. Student Do: Lazy Loading (15 min) 
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+* Direct students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Lazy Loading Images
+
+  In this activity you are going to work with the Intersection Observer API to implement lazy loading functionality for our Gallery App.
+
+  ## Instructions
+
+  * In this activity you are going to take the Gallery App and implement Lazy Loading functionality.
+
+    * This will allow for us to load images only as they are needed, saving loading times.
+
+  * You will primarily be working within `loadImages.js`
+
+  * Inside of `public/assets/images` is a `.zip` file containing all the images needed for the app. Unzip this file and make sure the contents end up in your images folder.
+
+  * After you have completed implementing lazy loading, open your Dev Tools and run another Lighthouse Audit.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 17. Instructor Review: Lazy Loading (15 min) 
+
+* Open [loadImages.js](../../../../01-Class-Content/19-PWA/01-Activities/05-Stu_Gallery-Lazy-Load/Solved/public/assets/js/loadImages.js) and walk students through the code that enables lazy loading in our application.
+
+  ```js
+  function initLazyImages() {
+    const lazyImages = document.querySelectorAll(".lazy-image");
+  ```
+
+  * First we create a `const` called `lazyImages`. We save all elements with the class `lazy-image` to this constant variable
+
+  ```js
+    function onIntersection(imageEntities) {
+      imageEntities.forEach(image => {
+        if (image.isIntersecting) {
+          observer.unobserve(image.target);
+          image.target.src = image.target.dataset.src;
+        }
+      });
+    }
+  ```
+  * Next, we create an `onIntersection` function. In this function we state that for each mage, if the image is intersecting the viewport we load our image and stop observing it as it is now on screen.
+
+  ```js
+    const observer = new IntersectionObserver(onIntersection);
+  ```
+
+  * We used a constructor function to create a new instance of IntersectionObserver, saving it to a constant variable `observer`. This allowed us to use it in our `onIntersection` function.
+
+  ```js
+    lazyImages.forEach(image => observer.observe(image));
+  }
+  ```
+
+  * The final line subscribes all images to be observed by IntersectionObserver to it can download the proper image when the placeholder is scrolled into view.
+
+* Answer any questions before proceeding to the next activity.
+
+### 18. Instructor Demo: Optimize Gallery App (5 min) 
+
+* Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
+
+* For this next activity, students will take the completed gallery application and minify all of the JS.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
+
+### 19. Student Do: Optimize Gallery App (20 min) 
+
+* Direct students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Optimize Gallery App
+
+  In this activity you will use the Lazy Loading, GZip Compression, Image Compression, and Lighthouse to improve the performance of the Gallery App.
+
+  ## Instructions
+
+  * First, unzip the uncompressed images zip file found in `public/assets/images`.
+
+  * Run the following commands:
+
+    * Start MongoDB (run `mongod` in your terminal)
+    * In a new terminal window run `npm install`
+    * `npm run seed`
+    * `node server.js`
+
+  * Now that the application is running, navigate to the [localhost](https://localhost:3000)
+
+  * Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
+
+  * Now, using the compression npm package, enable gzip compression in the application.
+
+  * Restart your server and run a new audit.
+
+  * Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
+
+  * Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
+
+  * Restart your server and run a new audit.
+
+  * Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
+
+  * Create a `dist` folder in `/public`.
+
+    * Inside of `public/dist` create a file called `index.js`
+
+    * Link this `index.js` to your application in `public/index.html`.
+
+  * Head to [JSCompress](https://jscompress.com/).
+
+  * Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
+
+    * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
+
+  * Finally, restart your server and run a new audit.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 20. Instructor Review: Optimize Gallery App (15 min) 
+
+* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
+
+  * npm install
+
+  * npm install compression
+
+* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
+  
+  ```js
+  const compression = require("compression");
+
+  app.use(compression());  
+  ```
+
+  * With these two lines of code we can easily enable GZip compression in our application for our served files.
+
+* Ask the class, "Is Tiny PNG our only option for Image Compression?"
+
+  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
+
+  * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
+
+* Ask the class, "Can you see the ways you can use these performance enhancements in your existing applications?"
+
+  * Optimizing our applications to be performant on all devices and connection speeds will make us better developers. We need to consider those with smaller devices or slower speeds at all times as to not alienate any user base.
+
+* Answer any questions before proceeding to the next activity.
+
+### 21. Instructor Demo: Progressive Web Apps (5 min) 
+
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
+
+  * It's the Image Gallery application from earlier. But there's something different about it...
+ 
+  * If we open the Settings in Chrome, we will see an option to `Install Images App...`
+ 
+  * When we select `Install Images App...` we are presented with an option to "Install app?"
+ 
+  * When we click `Install`, a new Chrome window opens with our application running in it. 
+ 
+  * It is now installed as a desktop app! If we search our applications, we will find "Images App" listed among them.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is different about our Image Gallery application? 
+  
+  * 🙋 There is added functionality to install it as a desktop application.
+
+  * ☝️ If we can install the Images App application on our laptops, where else might we install it? 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `07-Stu_PWAs/README.md`.
+
+### 22. Student Do: Progressive Web Apps (15 min) 
+
+* Direct students to the activity instructions found in `07-Stu_PWAs/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Progressive Web Applications
+
+  In this activity, you will install a progressive web application (PWA) using your smart phone. You will also research the definition and production of a PWA. If you are unable to find the icons mentioned in this activity, try them in Chrome on your computer.
+
+  ## Instructions
+
+  * Follow these instructions to install a PWA for your specific smartphone OS:
+
+  * iOs:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
+
+    * 2. Tap the Share button in Safari.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Tap Add in the upper-right corner.
+
+    * 5. Name your PWA, then tap Add in the upper-right corner.
+
+  * Android:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
+
+    * 2. Tap the menu button in the upper right corner of Chrome.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Name your PWA, then tap Add below the promp.
+
+  * Be prepared to answer the following question(s): 
+
+      * What is a progressive web application? 
+
+      * How do we create progressive web applications?
+
+  ## 🏆 Bonus
+
+  * What are examples of popular PWAs?
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 23. Instructor Review: Progressive Web Apps (15 min)
+
+* Use the prompts and talking points below to review the following key point(s):
+  
+  * ✔️ Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript, that allow users to work offline
+  
+  * ✔️ PWAs require a manifest, a service worker and the Cache API
+  
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is a progressive web application?
+  
+  * 🙋 Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript
+  
+  * ☝️ What is meant by the term 'native' app?
+  
+  * 🙋 The term "native app" refers to applications written for specific platforms. For example, native iPhone apps are written in iOs and Android apps are primarily written in Java. Apple apps will not run on Android devices and vice versa. 
+
+  * ☝️ How are PWAs different from native apps?
+
+  * 🙋 Traditional Mobile Apps require multiple builds across platforms, are less discoverable by search engines and have high abandonment rates.They also offer less usability and don’t leverage mobile device capabilities and are often slow and bloated. PWAs provide advantages of both web and mobile apps such as push notifications, offline experiences,speed and stability. Plus, you can convert a web app into a PWA quickly without the build time of a mobile app.
+  
+  * ☝️ What do we need to learn to convert an application into a progressive web application?
+
+  * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
+  
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
+  
+  * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
+
+    ![Application Sidebar](Images/application-sidebar.png)
+
+  * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
+
+  ![Offline](Images/offline-mode.png)
+
+* Answer any questions before ending the class.
+
+### 24. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
