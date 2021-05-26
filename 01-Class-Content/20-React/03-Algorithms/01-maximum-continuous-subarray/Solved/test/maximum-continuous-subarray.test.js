@@ -26,7 +26,7 @@ describe("maxSumArray", function() {
     expect(result).to.eql(9);
   });
 
-  it(`should return 6 if given the array [-2,1,-3,4,-1,2,1,-5,4]`, function() {
+  it(`should return 6 if given the array [-2, 1, -3, 4, -1, 2, 1, -5, 4]`, function() {
     let arr1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
     let result = maxSumArray(arr1);
     expect(result).to.eql(6);
