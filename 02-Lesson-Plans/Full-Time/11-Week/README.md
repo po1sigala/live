@@ -71,6 +71,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Algorithms
 
 Unit 21:
+
   * [01: Plus One](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
 
   * [02: One Edit Away](../../../01-Class-Content/21-MERN/03-Algorithms/02-one-edit-away)
