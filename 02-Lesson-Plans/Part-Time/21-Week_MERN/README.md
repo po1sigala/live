@@ -66,6 +66,10 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 ### Resources
 
+* [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+
+* [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+
 * [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
 
 * [Apollo Docs on queries and mutations](https://graphql.org/learn/queries/)
@@ -86,7 +90,7 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 * [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
-* [Git Docs on customizing Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+* [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
