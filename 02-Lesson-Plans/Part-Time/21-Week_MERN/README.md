@@ -90,7 +90,7 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 * [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
-* [GitHub Docs on actions](https://docs.github.com/en/actions)
+* [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -116,7 +116,7 @@ Unit 22:
 
 * [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
-* [GitHub Docs on actions](https://docs.github.com/en/actions)
+* [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
 
 * [Context API documentation](https://reactjs.org/docs/context.html)
 
