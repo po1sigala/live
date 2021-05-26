@@ -34,7 +34,7 @@ In this activity, you will create a function that takes in an array and returns 
      var arr1 = [1, 2, -50, 4, 5]
      ```
 
-   * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4,6] or 9.
+   * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4,5] or 9.
 
    * See the following array for an example:
 
