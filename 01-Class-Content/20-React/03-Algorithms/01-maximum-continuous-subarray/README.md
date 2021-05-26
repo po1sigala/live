@@ -26,7 +26,7 @@ In this activity, you will create a function that takes in an array and returns 
      var arr1 = [1, 2, 3, 4]
      ```
 
-   * In the case above, since all the integers are positive, the maximum sum you can get by adding sequential integers is the same as the sum of the array or 10.
+   * In the case above, since all the integers are positive, the maximum sum you can get by adding sequential integers is the same as the sum of the array, or 10.
 
    * See the following array for an example:
 
