@@ -18,7 +18,7 @@ In this activity, you will create a function that takes in an array and returns 
      var arr1 = [-1, 2]
      ```
 
-  *  In the case above, the array only contains two integers so the maximum sum will be the sum of both integers or 1. 
+  *  In the case above, the array only contains two integers, so the maximum sum will be the sum of both integers, or 1. 
 
   * See the following array for an example:
 
