@@ -76,6 +76,8 @@ Unit 19:
 
 Unit 20:
 
+  * [01: Maximum Continuous Subarray](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray)
+  
   * [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times)
 
     * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
