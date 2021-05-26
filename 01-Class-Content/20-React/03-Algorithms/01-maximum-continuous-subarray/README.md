@@ -6,43 +6,41 @@ In this activity, you will create a function that takes in an array and returns 
 
 ## Instructions
 
-* Open [Unsolved/maximum-continuous-subarray.js](Unsolved/maximum-continuous-subarray.js) in your code editor. This is the only file you will modify in this activity.
+* Open [Unsolved/maximum-continuous-subarray.js](Unsolved/maximum-continuous-subarray.js) in your code editor. This is the only file you will modify in this activity. In this file, you will be writing code in the body of the `maxSumArray` function to achieve the following:
 
-  * In this file, you will be writing code in the body of the `maxSumArray` function to achieve the following:
+  * Given an array of integers, find the contiguous subarray that has the largest sum.
 
-    * Given an array of integers, find the contiguous subarray that has the largest sum.
+  * See the following array for an example:
 
-    * See the following array for an example:
+     ```js
+     var arr1 = [[-1,2]
+     ```
 
-       ```js
-       var arr1 = [[-1,2]
-       ```
+  *  In the case above, the array only contains two integers so the maximum sum will be the sum of both integers or 1. 
 
-    *  In the case above, the array only contains two integers so the maximum sum will be the sum of both integers or 1. 
+  * See the following array for an example:
 
-    * See the following array for an example:
+     ```js
+     var arr1 = [1, 2, 3, 4]
+     ```
 
-       ```js
-       var arr1 = [1, 2, 3, 4]
-       ```
+   * In the case above, since all the integers are positive, the maximum sum you can get by adding sequential integers is the same as the sum of the array or 10.
 
-     * In the case above, since all the integers are positive, the maximum sum you can get by adding sequential integers is the same as the sum of the array or 10.
+   * See the following array for an example:
 
-     * See the following array for an example:
+     ```js
+     var arr1 = [1, 2, -50, 4, 5]
+     ```
 
-       ```js
-       var arr1 = [1, 2, -50, 4, 5]
-       ```
+   * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4,6] or 9.
 
-     * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4,6] or 9.
+   * See the following array for an example:
 
-     * See the following array for an example:
+     ```js
+     var numbers =  [-2,1,-3,4,-1,2,1,-5,4]
+     ```
 
-       ```js
-       var numbers =  [-2,1,-3,4,-1,2,1,-5,4]
-       ```
-
-     * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4, -1, 2, 1]. So in this case, 6 should be returned.
+   * In the case above, the maximum sum you can get from adding sequential numbers is adding the numbers in the subarray [4, -1, 2, 1]. So in this case, 6 should be returned.
 
    * Assume that the array will contain only integers and the integers can be positive or negative. 
 
@@ -52,9 +50,9 @@ In this activity, you will create a function that takes in an array and returns 
 
 * You can check whether your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
 
-  * Functions that PASS the tests will be denoted with a green check mark.
+   * Functions that PASS the tests will be denoted with a green check mark.
 
-  * Functions that FAIL the tests will be denoted with a red X and an error message.
+   * Functions that FAIL the tests will be denoted with a red X and an error message.
 
 ### Hints
 
