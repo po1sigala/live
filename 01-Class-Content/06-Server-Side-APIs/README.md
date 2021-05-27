@@ -82,7 +82,17 @@ Get ready for your first group project! In the next unit, you and your teammates
 
 ## Resources
 
-Here are some additional resources to help solidify the topics covered in this unit:
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Code Review Videos
+
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+  * [📹 Code Review: Fetch!](https://2u-20.wistia.com/medias/xl4b9n3l1z)
+
+  * [📹 Code Review: Network, Status, Location!](https://2u-20.wistia.com/medias/smcipszslc)
+
+  * [📹 Launch Ready: MVP and GitHub Project!](https://2u-20.wistia.com/medias/9p2hr71gaw)
 
 ### Git Guide
 
@@ -91,6 +101,12 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
   * 📖 [Git Guide: Project Collaboration](./01-Activities/26-Evr_Git-Collaboration)
 
   * 📹 [Git Guide Video: Project Collaboration](https://2u-20.wistia.com/medias/60x5om18ac)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
+
+  * 📖 [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
 
 ### General
 
