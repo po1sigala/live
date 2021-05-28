@@ -1,47 +1,110 @@
-# Unit 21: React Week 2
+# Unit 21: MERN
 
 ## Overview
 
-In the previous unit, we built and deployed our first static React application to GitHub Pages. In this unit, we will integrate React as the View layer into a full-stack web application using the MVC paradigm and deploy it to Heroku. The stack we will work with is known as MERN, short for MongoDB Express React and Node.
+This week, you will use your skills in MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
+
+You’ll use React Router to make the application behave more like a multi-page application, allowing users to bookmark URLs and use the browser’s forward and back buttons. You’ll also add GraphQL, an open-source data query and manipulation language for APIs that lets you fetch only the data you want from the database when you need it. Finally, you’ll learn how to use a JSON Web Token, or JWT, to add authentication to your site. 
 
 ## Key Topics
 
-* React Router
-* Lifecycle methods
-* MERN
-* Proxy
-* AJAX calls
+The following topics will be covered in this unit:
 
-## Comprehension Check
+* [GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
 
-You will be employer-ready if you can answer the following questions:
+* [GraphQL Query](https://graphql.org/learn/queries/)
 
-1. What is required to work with a MERN application in a development environment?
-2. What is React Router doing in the context of an SPA?
-3. How does one configure a MERN application for deployment to a production environment?
+* [Resolvers](https://www.apollographql.com/docs/tutorial/resolvers/)
+
+* [Query parameters](https://graphql.org/graphql-js/passing-arguments/)
+
+* [Mutations](https://www.apollographql.com/docs/react/data/mutations/)
+
+* [useMutation Hook](https://www.apollographql.com/docs/tutorial/mutations/)
+
+* [useQuery Hook](https://www.apollographql.com/docs/tutorial/queries/)
+
+* [React Router](https://reactrouter.com/web/guides/quick-start)
+
+* [JSON Web Tokens](https://jwt.io/introduction)
+
+* [Authentication in GraphQL API](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+
+* [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
 ## Learning Objectives
 
-You will be employer-competitive if you are able to:
+You will be employer-ready if you are able to:
 
-* Explain the importance and use of React lifecycle methods
-* Explain and identify the pros and cons of React Single-Page Applications
-* Implement React Router for conditional rendering of components
-* Configure a proxy server for local development of a MERN application
-* Implement MVC paradigm in a MERN application
-* Distinguish the differences between a Container Component and a Presentational Component
-* Successfully configure and deploy a MERN application to Heroku
+* Define a GraphQL schema and implement resolvers to handle data population.
 
-## Homework: Google Books Search
+* Write a GraphQL query to read data with and without parameters.
 
-* In this activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB so that users can save books to review or purchase later.
+* Use a GraphQL mutation to create and update data.
 
-## Helpful Links
+* Execute queries and mutations using `useQuery()` and `useMutation()` Hooks.
 
-* [React Router](https://reacttraining.com/react-router/)
+* Update GraphQL's in-memory cache.
 
-* [Proxying API Requests in Development](https://facebook.github.io/create-react-app/docs/proxying-api-requests-in-development)
+* Implement client-side routing by using React Router.
 
-* [React Lifecycle Methods Diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+* Securely transmit data as a JSON object using JWT.
 
-* [Presentational vs. Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+* Implement server-side authentication in GraphQL API.
+
+## Technical Interview Preparation
+
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
+
+* [01: Plus One](./03-Algorithms/01-plus-one)
+
+* [02: One Edit Away](./03-Algorithms/02-one-edit-away)
+
+* [03: Caesar Cipher](./03-Algorithms/03-caesar-cipher)
+
+  * 📹 [Let's Code Caesar Cipher!](https://2u-20.wistia.com/medias/bcfetr7mvf)
+
+### Assessments
+
+Assess your knowledge by answering technical interview questions and solving coding challenges.
+
+* [Unit 21 Assessment](https://forms.gle/MgELRy6rvTXQz6M16)
+
+## Homework
+
+As a developer, you will often be tasked with working with an existing codebase and updating the app to use a new technology. For this week's homework, you will take an existing book search engine that was built using a RESTful API and refactor it to use a GraphQL API.
+
+## Career Connection
+
+Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
+
+## Heads-Up
+
+During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project. 
+
+## Resources
+
+Here are some additional resources to help solidify the topics covered in this unit.
+
+### Git Guide
+
+Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+
+  * 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions) 
+
+  * 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
+
+### Full-Stack Blog Posts
+
+Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides.
+
+  * 📖 Blog Post: [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+
+  * 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

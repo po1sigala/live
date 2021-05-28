@@ -1,135 +1,256 @@
-# Google Books Search
+# 21 MERN: Book Search Engine
 
-### Overview
+## Your Task
 
-In this activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB so that users can save books to review or purchase later.
+Your assignment this week is emblematic of the fact that most modern websites are driven by two things: data and user demands. This shouldn't come as a surprise, as the ability to personalize user data is the cornerstone of real-world web development today. And as user demands evolve, applications need to be more performant.
 
-### Commits
+This week, you’ll take starter code with a fully functioning Google Books API search engine built with a RESTful API, and refactor it to be a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. It's already set up to allow users to save book searches to the back end. 
 
-Having an active and healthy commit history on GitHub is important for your future job search. It is also extremely important for making sure your work is saved in your repository. If something breaks, committing often ensures you are able to go back to a working version of your code.
+To complete the assignment, you’ll need to do the following:
 
-* Committing often is a signal to employers that you are actively working on your code and learning.
+1. Set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
 
-  * We use the mantra “commit early and often.”  This means that when you write code that works, add it and commit it!
+2. Modify the existing authentication middleware so that it works in the context of a GraphQL API.
 
-  * Numerous commits allow you to see how your app is progressing and give you a point to revert to if anything goes wrong.
+3. Create an Apollo Provider so that requests can communicate with an Apollo Server.
 
-* Be clear and descriptive in your commit messaging.
+4. Deploy your application to Heroku with a MongoDB database using MongoDB Atlas. Use the [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) walkthrough for instructions.
 
-  * When writing a commit message, avoid vague messages like "fixed." Be descriptive so that you and anyone else looking at your repository knows what happened with each commit.
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+## User Story
 
-* Deploy this application using Heroku, follow our guide on [deploying MERN applications to Heroku](../04-Important/MERNHerokuDeploy.md) to do so.
+```md
+AS AN avid reader
+I WANT to search for new books to read
+SO THAT I can keep a list of books to purchase
+```
 
-### Submission on BCS
 
-* **Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!**
+## Acceptance Criteria
 
-### Instructions
+```md
+GIVEN a book search engine
+WHEN I load the search engine
+THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
+WHEN I click on the Search for Books menu option
+THEN I am presented with an input field to search for books and a submit button
+WHEN I am not logged in and enter a search term in the input field and click the submit button
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site
+WHEN I click on the Login/Signup menu option
+THEN a modal appears on the screen with a toggle between the option to log in or sign up
+WHEN the toggle is set to Signup
+THEN I am presented with three inputs for a username, an email address, and a password, and a signup button
+WHEN the toggle is set to Login
+THEN I am presented with two inputs for an email address and a password and login button
+WHEN I enter a valid email address and create a password and click on the signup button
+THEN my user account is created and I am logged in to the site
+WHEN I enter my account’s email address and password and click on the login button
+THEN I the modal closes and I am logged in to the site
+WHEN I am logged in to the site
+THEN the menu options change to Search for Books, an option to see my saved books, and Logout
+WHEN I am logged in and enter a search term in the input field and click the submit button
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account
+WHEN I click on the Save button on a book
+THEN that book’s information is saved to my account
+WHEN I click on the option to see my saved books
+THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account
+WHEN I click on the Remove button on a book
+THEN that book is deleted from my saved books list
+WHEN I click on the Logout button
+THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
+```
 
-* This application requires at minimum 2 pages, check out the following mockup images for each page:
 
-  * [Search](Search.png) - User can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
+## Mock-Up
 
-  * [Saved](Saved.png) - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
+Let's start by revisiting the web application's appearance and functionality.
 
-1. Start by using the [01-Ins_Mern/create-react-express](../01-Activities/01-Ins_Mern/create-react-express) example as a base for your application.
+As you can see in the following animation, a user can type a search term (in this case, "star wars") in a search box and the results appear:
 
-2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
+![Animation shows "star wars" typed into a search box and books about Star Wars appearing as results.](./Assets/21-mern-homework-demo-01.gif)
 
-3. Using mongoose, then create a Book schema.
+The user can save books by clicking "Save This Book!" under each search result, as shown in the following animation:
 
-4. At a minimum, books should have each of the following fields:
+![Animation shows user clicking "Save This Book!" button to save books that appear in search results. The button label changes to "Book Already Saved" after it is clicked and the book is saved.](./Assets/21-mern-homework-demo-02.gif)
 
-* `title` - Title of the book from the Google Books API
+A user can view their saved books on a separate page, as shown in the following animation:
 
-* `authors` - The books's author(s) as returned from the Google Books API
+![The Viewing Lernantino's Books page shows the books that the user Lernaninto has saved.](./Assets/21-mern-homework-demo-03.gif)
 
-* `description` - The book's description as returned from the Google Books API
 
-* `image` - The Book's thumbnail image as returned from the Google Books API
+## Getting Started
 
-* `link` - The Book's information link as returned from the Google Books API
+In order for this application to use a GraphQL API, you’ll need to refactor the API to use GraphQL on the back end and add some functionality to the front end. The following sections contain details about the files you’ll need to modify on the back end and the front end.
 
-* Creating `documents` in your `books` collection similar to the following:
+**Important**: Make sure to study the application before building upon it. Better yet, start by making a copy of it. It's already a working application&mdash;you're converting it from RESTful API practices to a GraphQL API.
 
-    ```js
-    {
-      authors: ["Suzanne Collins"]
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-      title: "The Hunger Games"
-    }
-    ```
+### Back-End Specifications
 
-5. Create a layout similar to the mockups displayed above. This should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
+You’ll need to complete the following tasks in each of these back-end files:
 
-* The layout should include at least two React Components for each page `Search` and `Saved`.
+* `server.js`: Implement the Apollo Server and apply it to the Express server as middleware.
 
-* Feel free to try out alternative CSS framework to Bootstrap.
+* `auth.js`: Update the auth middleware function to work with the GraphQL API.
 
-6. Add the following Express routes for your app:
+	**Hint**: Refer to the class activities as a refresher on how to do this.
 
-* `/api/books` (get) - Should return all saved books as JSON.
+* `Schemas` directory:
 
-* `/api/books` (post) - Will be used to save a new book to the database.
+	* `index.js`: Export your typeDefs and resolvers.
 
-* `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
+	* `resolvers.js`: Define the query and mutation functionality to work with the Mongoose models.
 
-* `*` (get) - Will load your single HTML page in `client/build/index.html`. Make sure you have this _after_ all other routes are defined.
+		**Hint**: Use the functionality in the `user-controller.js` as a guide.
 
-* Deploy your application to Heroku once complete. **You must use Create React App** and current versions of React and React-Router-Dom for this assignment.
+	* `typeDefs.js`: Define the necessary `Query` and `Mutation` types:
 
-- - -
+		* `Query` type:
 
-### Bonus Live Updates to Saved Books
+			* `me`: Which returns a `User` type.
+		
+		* `Mutation` type:
 
-* Use React routing and [socket.io](http://socket.io) to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
+			* `login`: Accepts an email and password as parameters; returns an `Auth` type.
 
-  * Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
+			* `addUser`: Accepts a username, email, and password as parameters; returns an `Auth` type.
 
-  * [Socket.io NPM package](https://www.npmjs.com/package/socket.io)
+			* `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
 
-### Reminder: Submission on BCS
+			* `removeBook`: Accepts a book's `bookId` as a parameter; returns a `User` type.
+			
+		* `User` type:
 
-* **This assignment must be deployed.** * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
+			* `_id`
 
-- - -
+			* `username`
 
-### Minimum Requirements
+			* `email`
 
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Hosting on Heroku and adding a README.md are required for this homework. In addition, add this homework to your portfolio, more information can be found below.
+			* `bookCount`
 
-- - -
+			* `savedBooks` (This will be an array of the `Book` type.)
 
-### Create a README.md
+		* `Book` type:
 
-Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:
+			* `bookId` (Not the `_id`, but the book's `id` value returned from Google's Book API.)
 
-* [About READMEs](https://help.github.com/articles/about-readmes/)
+			* `authors` (An array of strings, as there may be more than one author.)
 
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+			* `description`
 
-- - -
+			* `title`
 
-### Add To Your Portfolio
+			* `image`
 
-After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
+			* `link`
 
-- - -
+		* `Auth` type:
 
-### Hosting on Heroku
+			* `token`
 
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
+			* `user` (References the `User` type.)
 
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
 
-- - -
+### Front-End Specifications
 
-### One More Thing
+You'll need to create the following front-end files:
 
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+* `queries.js`: This will hold the query `GET_ME`, which will execute the `me` query set up using Apollo Server.
 
-**Good Luck!**
+* `mutations.js`:
+
+	* `LOGIN_USER` will execute the `loginUser` mutation set up using Apollo Server.
+
+	* `ADD_USER` will execute the `addUser` mutation.
+
+	* `SAVE_BOOK` will execute the `saveBook` mutation.
+
+	* `REMOVE_BOOK` will execute the `removeBook` mutation.
+
+Additionally, you’ll need to complete the following tasks in each of these front-end files:
+
+* `App.js`: Create an Apollo Provider to make every request work with the Apollo Server.
+	
+* `SearchBooks.js`:
+
+	* Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
+
+	* Make sure you keep the logic for saving the book's ID to state in the `try...catch` block! 
+
+* `SavedBooks.js`:
+
+	* Remove the `useEffect()` Hook that sets the state for `UserData`.
+
+	* Instead, use the `useQuery()` Hook to execute the `GET_ME` query on load and save it to a variable named `userData`.
+
+	* Use the `useMutation()` Hook to execute the `REMOVE_BOOK` mutation in the `handleDeleteBook()` function instead of the `deleteBook()` function that's imported from `API` file. (Make sure you keep the `removeBookId()` function in place!)
+
+* `SignupForm.js`: Replace the `addUser()` functionality imported from the `API` file with the `ADD_USER` mutation functionality.
+
+* `LoginForm.js`: Replace the `loginUser()` functionality imported from the `API` file with the `LOGIN_USER` mutation functionality.
+
+
+## Grading Requirements
+
+This homework is graded based on the following criteria:
+
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the preceding acceptance criteria plus the following:
+
+	* Has an Apollo Server that uses GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
+
+	* Use an Apollo Server and apply it to the Express.js server as middleware.
+
+	* Include schema settings for resolvers and typeDefs as outlined in the homework instructions.
+
+	* Modify the existing authentication middleware to work in the context of a GraphQL API.
+
+	* Use an Apollo Provider so that the application can communicate with the Apollo Server.
+
+	* Application must be deployed to Heroku.
+
+
+### Deployment: 32%
+
+* Application deployed at live URL.
+
+* Application loads with no errors.
+
+* Application GitHub URL submitted.
+
+* GitHub repository contains application code.
+
+
+### Application Quality: 15%
+
+* User experience is intuitive and easy to navigate.
+
+* User interface style is clean and polished.
+
+* Application resembles the mock-up functionality provided in the homework instructions.
+
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains high-quality README file with description, screenshot, and link to the deployed application.
+
+
+## Review
+
+You are required to submit BOTH of the following for review:
+
+* The URL of the functional, deployed application.
+
+* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

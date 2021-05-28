@@ -1,1105 +1,1270 @@
-# 9.1 - Masters of MongoDB (10:00 AM)
+# 09.1 Full-Time Lesson Plan: How Does JavaScript Execute? 
 
-## Overview
+## Overview 
 
-In this class, you will introduce the concept of the NoSQL database with MongoDB, go over its pros and cons compared with MySQL, and ultimately detail all of the required steps to employ MongoDB in future projects.
+In this class, students will be re-introduced to JavaScript within the context of some general computer-science concepts. They will learn about how JavaScript executes an application, including global and functional execution context, in order to understand how the various components work together to run a program. Along the way, they'll review various data structures, including stacks, queues, and callback queues. Students will also use the browser to understand the role of Web APIs and asynchronous behavior. Next, they'll learn about higher-order functions and how to implement them. Finally, they'll explore closures, including how to leverage them using factory functions. 
 
 ## Instructor Notes
 
-* Complete activities `1-11` in `17-NoSQL`
+* In this lesson, students will complete activities `01-Ins_Global-Execution-Context` through `14-Stu_Closures`.
 
-* Before class, make sure you install MongoDB and Robo 3T on your machine--you'll need both.
+* Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* If you haven't used MongoDB much in the past, take a look at this week's queries and solutions. This should prime you for the lecture.
+* The first activity, `01-Ins_Global-Execution-Context`, steps through the process of how JavaScript executes in the browser. This allows students to "peek behind the curtain" to observe which JavaScript components execute the different parts of a program.
+
+* Students might get stuck on the difference between scope and context. **Scope** refers to the accessibility of variables, whereas **context** refers to the object to which the function belongs. For more information, refer to this [blog post on Scope vs. Context](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/).
+
+* You will use Jest to test some of the activities. Before class, be sure to familiarize yourself with the unit tests and their descriptions.
+
+* Activities `04-Stu_Functional-Execution-Context` through `08-Stu_Queues` have test suites. Most of the instructions on how to pass the tests are described in each unit test. Please do not modify the tests. These are Node.js activities, so you will need to run `npm install` before running the tests. A `jest --watch` script is used to simplify re-running tests.
+
+* The last activity of the class, `10-Stu_Callback-Queues`, uses a `while` loop to create a blocking process that makes the page unresponsive and slow to load. Students may need to refresh their browsers or select the Block button to demonstrate the blocking effect. The activity's objective is to **delay** the blocking process in order to allow the page to render quickly, thus improving the UX and webpage performance.
+
+* Closures are a large part of the day's activities. If you are feeling a little unsure about them, take some time to become more familiar with them before class.
+
+* In `13-Ins_Closures`, we use `console.dir`. Encourage students to learn about it on their own time, as we will only be using it for demonstration purposes.
+
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* Identify and explain the differences between SQL and noSQL databases.
+* Explain the differences between a global execution context and a function execution context.
 
-* Install MongoDB and Robo 3T.
+* Identify when a function execution context is created and what is stored in it.
 
-* Create a Mongo database.
-  
-* Perform basic CRUD actions on their Mongo database.
+* Describe the functions of the call stack and the callback queue.
 
-* Create a Mongoose schema to dictate rules for their MongoDB data.
+* Compare and contrast a stack vs. a queue in terms of LIFO and FIFO.
 
-## Slides
+* Summarize asynchronous behavior and the role of the event loop.
 
-[9.1: Intro To MongoDB](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing)
+* Construct their own higher-order functions.
 
-[9.1: Career Services](https://docs.google.com/presentation/d/18inCMR9TB47q3yEY-YflqA-96cBqXheM9X0BrD0Gk9Y/edit#slide=id.p7)
+## Slide Deck
+
+* [Unit 17 Slide Deck](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
 
 ## Time Tracker
 
-[9.1: Intro To MongoDB Time Tracker](https://docs.google.com/spreadsheets/d/1C-zfaTXOhNrgey7S0YsHv_vlX2YogdaGv5Jm_Vi5qBM/edit#gid=0)
+| Start  | #   | Activity Name                                   | Duration |
+|---     |---  |---                                              |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Global Execution Context       | 0:05     |
+| 10:15AM| 3   | Student Do: Global Execution Context            | 0:15     |
+| 10:30AM| 4   | Instructor Review: Global Execution Context     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Functional Execution Context   | 0:05     |
+| 10:45AM| 6   | Student Do: Functional Execution Context        | 0:15     |
+| 11:00AM| 7   | Instructor Review: Functional Execution Context | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Stacks                         | 0:05     |
+| 11:15AM| 9   | Student Do: Stacks                              | 0:15     |
+| 11:30AM| 10  | Instructor Review: Stacks                       | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Queues                         | 0:05     |
+| 11:45AM| 12  | Student Do: Queues                              | 0:15     |
+| 12:00PM| 13  | BREAK                                           | 0:30     |
+| 12:30PM| 14  | Instructor Review: Queues                       | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Callback Queue                 | 0:05     |
+| 12:45AM| 16  | Student Do: Callback Queue                      | 0:15     |
+| 1:00PM | 17  | Instructor Review: Callback Queue               | 0:15     |
+| 1:15PM | 18  | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 1:25PM | 19  | Instructor Demo: Higher-Order Functions         | 0:05     |
+| 1:30PM | 20  | Student Do: Higher-Order Functions              | 0:15     |
+| 1:45PM | 21  | Instructor Review: Higher-Order Functions       | 0:10     |
+| 1:55PM | 22  | Instructor Demo: Closures                       | 0:05     |
+| 2:00PM | 23  | Student Do: Closures                            | 0:15     |
+| 2:15PM | 24  | Instructor Review: Closures                     | 0:15     |
+| 2:30PM | 25  | END                                             | 0:00     |
 
-### 1. Instructor Do: What is MongoDB (10 min)
+---
+
+## Class Instruction
+
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1SIwBii8Paawah55hr-7ros9vJ_tzLURSBvuU1gUVWoI/edit?usp=sharing) and follow these prompts with their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing) and follow these prompts on the corresponding slides:
 
-  * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
+  * **What is computer science?**
 
-  * **What's MongoDB?**: MongoDB is a very popular noSQL database that uses a document-oriented model as opposed to a table-based relational model (SQL). MongoDB stores data in BSON format (effectively, compressed JSONs).
+    * Formally known as "the study of computers and computational systems." 
+    
+    * The study of the design, development, and analysis of software systems.
 
-  * **Relational Databases**: Relational databases rely heavily on joins to combine relevant data.
+    * The art of telling a computer what to do through a set of instructions.
 
-  * **Document Database (NoSQL)**: NoSQL databases on the other hand are effectively JSON objects and are very flexible. 
+  * **How will understanding computer science make us better programmers?**
+   
+    * These concepts often appear during technical interviews.
+
+    * When inheriting large codebases, you might be asked to optimize code efficiency.
+
+    * Understanding what makes up a program will help us design software more efficiently.
+    
+    * Discovering how a program executes can tell us how to avoid performance issues.
+    
+    * Computational thinking refers to the formulation of a solution using logic, patterns, and problem solving methods.
+
+  * **Which computer science concepts will we learn?**
+
+    * We will learn about algorithms and how to gauge their performance.
+    
+    * We will learn about data structures and how they are implemented in JavaScript.
+
+  * **What is Big O notation?**
+
+    * Big O notation helps us describe how runtime will scale when we increase input size (n).
+
+    * It is denoted with a capital O alongside the growth factor (in parentheses).
+
+      * Example: The time complexity of simple search is O(n)
+
+  * **What is a data structure?**
+
+    * A way of storing data so that it can be used efficiently by the computer or browser.
+
+    * They are built upon simpler primitive data types (like variables).
+
+    * It is non-opinionated, in the sense that it is only responsible for holding the data. 
+
+  * **Why is computer science a common category for technical interview questions?** 
+
+    * Understanding computer science fundamentals shows that you know how a program functions and how to make it faster and more efficient.
+
+    * Many job candidates are also computer science graduates.
+
+    * Comprehending use cases of data structures and the algorithms that manipulate them will help you create more performant applications.
   
-  * **MongoDB Storage**: Mongo databases contain collections which contain documents. 
-
-  * **Mongo Terms**: Use this slide to cover the relevant Mongo terms.
-
-### 2. Students Do: Installing MongoDB / Robo 3T (20 min)
-
-**Part 1: Install Mongo**
-
-* Guide students to the [MongoDB Community Edition Installation Manual](https://docs.mongodb.com/manual/installation/#mongodb-community-edition-installation-tutorials), and have them follow the instructions for their operating system. 
-
-* After 10 minutes ask the class:
-
-  * Can everyone start up MongoDB by typing `mongod` into your terminal/bash window?
-
-  * If mongo is successfully installed, their terminal/bash screens will look like this:
-
-  ```bash
-  ➜  ~ mongod
-  2019-05-03T11:00:35.067-0400 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] MongoDB starting : pid=785 port=27017 dbpath=/data/db 64-bit host=Daniels-MBP-2
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] db version v4.0.3
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] allocator: system
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] modules: none
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten] build environment:
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     distarch: x86_64
-  2019-05-03T11:00:35.110-0400 I CONTROL  [initandlisten]     target_arch: x86_64
-  ```
-
-  * _Note: Many students will have installed `mongod` as a service. Running `mongod` will produce an error in this case. Another way to verify that `mongod` is running is to have the student open a new terminal window and run `mongo`. Then, verify that the `mongo` cli connected to the `mongod` service successfully._
-
-* If there are any remaining students who do not have it installed and configured, ask them to raise their hand so a TA can help debug the issue.
-
-**Part 2: Install Robo 3T**
-
-* Tell the class that they are now going to install Robo 3T, a native cross-platform MongoDB management tool that will make working with MongoDB easier and more intuitive.
-
-* Direct the students to the Mongo 3T install page [https://robomongo.org/download](https://robomongo.org/download) and have them click the green download button.
-
-  ![Download Robo 3T](Images/install-robo-3t.png)
-
-* Next have them choose their OS and download the application.
-
-  ![Download Robo 3T](Images/choose-os.png)
-
-* After installing students should be able to successfully open Robo 3T on their machine.
-
-* Ask the students the following question(s):
-
-  * ☝️ Did anyone have trouble installing Mongo or Robot 3T
-
-  * 🙋 If yes, have a TA come around and help those students.
-
-* Take any questions before moving on.
-
-### 3. Instructor Do: Create, Insert and Find (10 min) 
-
-* In order to get set up for the activity, direct the students to:
+  * **Mini-Project**
   
-  * Run `mongod` in one tab, if they haven't already. Explain that `mongod` is the primary daemon process for the MongoDB system that handles data access and requests and background management operations. Tell them that when you start `mongod` you're telling your machine to start the MongoDB process and run it in the background.
+    * A mock interview to practice technical communication and problem-solving in a live setting.
+
+* Navigate to `28-Stu_Mini-Project/README.md` in your IDE and demonstrate the following:
+
+  * Although we may know how to write code, we also need to learn how to explain our code verbally in an interview. 
   
-  * Run `mongo` to start up the mongo shell in another tab. Explain that `mongo` is the command-line shell that connects to the specific instance of `mongod` that they just started.
+  * This will demonstrate to an interviewer how we solve problems in a logical and iterative manner.
 
-* Next explain that you'll be going over how to create a database, insert data into a collection and find stored data using MongoDB.
+  * This will also showcase our ability to communicate technical concepts clearly and concisely.
 
-* Following the comments and queries located in [01-Ins-Create-Insert-and-Find/queries.md](../../../..01-Class-Content/17-NoSQL/01-Activities/01-Ins-Create-Insert-and-Find/README.md), demonstrate to the class how to create a new database, insert and find new records.
+  * In this mini-project, you'll practice interviewing with one another while learning how to implement sorting algorithms.
 
-* Switch to a new database:
+  * Each of the students will take turns as the candidate and interviewer to help prepare for a technical interview.
 
-  ```
-  use lessondb
-  ```
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Show the current db:
+  * ☝️ What are we learning?
 
-  ```
-  db
-  ```
+  * 🙋 How to communicate technical concepts in a clear and concise manner.
 
-* Insert data:
+  * ☝️ How does interview practice build off or extend previously learned material?
 
-  ```js
-  db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
-  ```
+  * 🙋 Just knowing the material isn't enough for technical interviews. By practicing technical communication, we will improve our ability to show off what we have learned.
 
-* As a class, come up with five more countries and insert them into the db using the same syntax as above.
+  * ☝️ How does this project relate to your career goals?
 
-  * Observe where the data was entered in the MongoDB instance (in mongod).
+  * 🙋 Just knowing how to code is not enough to pass most technical interviews. Learning soft skills such as communication is a key factor in most hires.
 
-* Find all data in the collection:
+* Answer any questions before proceeding to the next activity.
 
-  ```js
-  db.places.find()
-  ```
+### 2. Instructor Demo: Global Execution Context (5 min) 
 
-  * NOTE: the MongoDB `_id` was created automatically.
+* Open `01-Ins_Global-Execution-Context/index.html` in your browser and demonstrate the following:
 
-  * This id is specific for each doc in the collection:
-
-* Add `.pretty()` to make your data more readable:
-
-  ```
-  db.places.find().pretty()
-  ```
-
-* Find specific data by matching a field:
-
-  ```js
-  db.places.find({"continent": "Africa"})
-  db.places.find({"country": "Morocco"})
-  ```
-
-* Find specific data by matching an _id:
-
-  ```js
-  db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})`
-  ```
-
-* When you are done tell the class that this is just the beginning as they will be sharpening their mongo skills in the coming days and weeks.
-
-* Ask the students the following question(s):
-
-  * ☝️ What keyword do we use to switch to a new database?
-
-  * 🙋 The `use` keyword.
-
-  * ☝️ What keyword do we use to find data?
-
-  * 🙋 The `find` keyword.
-
-* Take any questions before moving on.
-
-### 4. Students Do: Create, Insert and Find data in MongoDB (10 min)
-
-* Direct students to the instructions of their next activity in [02-Create-Insert-and-Find/Unsolved/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/02-Create-Insert-and-Find/Unsolved/README.md).
-
-```md
-# Creating, Inserting and Finding in MongoDB
-
-## Instructions
-
-* Use the command line to create a classroom database. 
-
-* Insert entries for yourself and the people in your row in a `students` collection.
-
-* Each document should have:
-
-  * A field of `name` with the person's name.
-
-  * A field of `rownumber` which will contain the row number that they are in.
-
-  * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
-
-  * A field of `hobbies` with an array of the hobbies the person likes to do.
-
-* Use find commands to get:
-
-  * A list of everyone in your row.
-
-  * An entry for a single person.
-
-  * The entries for all the Mac users in your row.
-
-## 💡 Hint(s)
-
-* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
-
-## 🏆 Bonus
-
-* If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
-
-```
-
-### 5. Instructor Do: Review Create, Insert and Find data in MongoDB (5 min)
-
-* Open [02-Stu-Create-Insert-and-Find/Solved/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/02-Stu-Create-Insert-and-Find/Solved/README.md) in your IDE and run the following commands.
-
-* Create a classroom db and insert a classmate**
-
-  ```sql
-  use classroom
-  db.students.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
-  ```
-
-* Find all students in row 3**
-
-  ```sql
-  db.students.find({row:3})
-  ```
-
-* Find students named Steve**
-
-  ```sql
-  db.students.find({name:'Steve'})
-  ```
-
-* Find students in row 3 that use Mac's**
-
-  ```sql
-  db.students.find({row:3, os:'Mac'})
-  ```
-
-* BONUS: Find by entry in an array**
-
-  ```sql
-  db.students.find({"hobbies": {$in: ["Coding"]}})
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ How do we find a record inside an array?
-
-  * 🙋 Review the syntax using `db.students.find({"hobbies": {$in: ["Coding"]}})` as an example.
-
-* Take any questions before moving on.
-
-### 6. Instructor Do: Updating, Deleting and Dropping in MongoDB (10 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We use `update` to update a value.
-
-  * ✔ We use `$set` to replace the value of a field with the specified value.
-
-  * ✔ We use `push` to update values in an array.
-
-  * ✔ We use `remove` to delete items.
-
-  * ✔ We use `drop` to drop a collection.
-
-* Open [03-Ins-Update-Delete-and-Drop/queries.md](../../../../01-Class-Content/17-NoSQL/01-Activities/03-Ins-Update-Delete-and-Drop/README.md) in your IDE and lead students the following commands.
-
-* Make sure you are using the database, `lessondb`,  that we created earlier.
-
-  ```sql
-  db
-  use lessondb
-  ```
-
-**Update**
-
-* Tell the class that we update data using `db.[COLLECTION_NAME].update()`
-
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}})
-  ```
-
-* Note that the above will only update the first entry it matches.
+  * 🔑 When the program runs, the `main()` function is placed onto the call stack and a global execution context is created.
   
-* Explain that to update multiple entries we add `{multi: true}`.
+  * The `main()` function is a reference to the program that is running. `main()` is removed off the call stack when the program has concluded its execution.
 
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
+  * 🔑 Follow the comment prompts, following the thread of execution in sequence, describing how each statement is processed.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is a Web API?
+
+  * 🙋 A library of methods and properties located on the `window` object, which is associated with the browser.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Global-Execution-Context/README.md`.
+
+### 3. Student Do: Global Execution Context (15 min) 
+
+* Direct students to the activity instructions found in `02-Stu_Global-Execution-Context/README.md`.
+
+* Break students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to the Code Execution Process
+
+  Work with a partner to add comments that describe the functionality of the code found in [Unsolved](./Unsolved).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+  
+  [MDN Web Docs on the event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+
+  * Due to the visual nature of this exercise, it might be helpful to sketch the execution context and allocation of variables.
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+    * What is the scope chain? 
+
+  Use [Google](https://www.google.com) or another search engine to research the above.
   ```
 
-* Recall from the earlier demo the structure of our document:
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome. It's a good way for your team to prioritize students who need extra help.
 
-  ```sql
-  db.places.insert({"continent": "Africa", "country": "Morocco", "majorCities": ["Casablanca", "Fez", "Marrakech"]})
+### 4. Instructor Review: Global Execution Context (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with execution context? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Call stack and callback queue
+
+  * ✔️ Web APIs
+
+  * ✔️ Execution context
+
+* Open `02-Stu_Global-Execution-Context/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 The variable `carNoise` is stored in the global execution context and is assigned the value `Honk`.
+  
+  * The function definition `goFast` is also stored in the global execution context and is assigned the function definition.
+  
+  * 🔑 A conditional statement evaluates the `confirm()` to execute `goFast()`. Because `confirm()` is a Web API, once it has resolved, the function `goFast()` is placed on the callback queue, then is allowed to get pushed onto the call stack to be executed by the event loop.
+  
+  * 🔑 When `goFast()` is invoked, the argument of the function is assigned to the parameter `speed` in the functional execution context of `goFast`.
+
+  * `makeNoise` is stored in the function execution context of `goFast`.
+
+  * 🔑 Invoking `makeNoise()` places the function on the call stack. Once executed, a new functional execution context is created for `makeNoise`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens to the functional execution context when a function has executed?
+
+  * 🙋 When the function has completed execution, the functional execution context is removed from the program's memory during a memory clean-up process. The memory no longer stores the associated local variables or function definitions.
+
+  * ☝️ What are some benefits of having variables that are locally scoped?
+
+  * 🙋 Enables duplicate variable names without conflict in an application, privatization of variables, and abstraction of code; and reduces pollution of the global namespace.
+
+  * ☝️ What can we do if we don't completely understand this?
+  
+  * We can refer to supplemental material, read the [MDN Web Docs on the this keyword, global context, and function context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: Functional Execution Context (5 min) 
+
+* Open `03-Ins_Functional-Execution-Context/assets/js/script.js` in your IDE and demonstrate the following:
+
+  * 🔑 Keyword `this` in the global execution context refers to the `window` in the browser.
+  
+  * 🔑 In a functional execution context, the value of `this` depends on how the function was called.
+
+* Open `03-Ins_Functional-Execution-Context/index.html` in your browser, open the console, and demonstrate the following:
+
+  * When calling a method of an object, `this` refers to the object it was called from.
+  
+  * 🔑 Functional execution context includes a reference to how the function was called to assign `this`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens to `this` if we refactor `myFuncB` to use an arrow function?
+
+  * 🙋 `this` retains the reference to `window`.
+
+  * ☝️ Why is this important to know?
+
+  * 🙋 Questions about `this` are popular technical interview questions.
+
+  * ☝️ What happens to the value of `this` in `myFuncA` if we add `use strict`?
+
+  * 🙋 `this` becomes `undefined` in the `myFuncA` because it was not assigned.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Functional-Execution-Context/README.md`.
+
+### 6. Student Do: Functional Execution Context (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Functional-Execution-Context/README.md`.
+
+* Break students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Unit Tests Fail Due to ReferenceError
+
+  Work with a partner to resolve the following issue:
+
+  * The unit tests for the function do not pass.
+
+  ## Expected Behavior
+
+  * When we run the unit test, the defined tests pass.
+
+  ## Actual Behavior
+
+  * When we run the unit tests, the defined tests do not pass.
+
+  ## Steps to Reproduce the Problem
+
+  1. In the command line, from the [Unsolved](./Unsolved) directory, run `npm install`.
+
+  2. Run `npm test` to run the unit test.
+
+  3. The tests defined in the `__tests__` directory do not pass.
+
+  ---
+
+  ## 💡 Hints
+
+  * How can the unit test descriptions help us determine what the function is or is not doing?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+    * What does the keyword `this` reference in Node.js for the global context?
+
+  Use [Google](https://www.google.com) or another search engine to research the above.
   ```
 
-* Ask the students the following question(s):
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * ☝️ What do you think will happen when I run the following command, even though there is not a `capital` field in the document?
+### 7. Instructor Review: Functional Execution Context (10 min) 
 
-    ```sql
-    db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with functional execution context? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Functional execution context lifecycle
+
+  * ✔️ Return statement
+
+  * ✔️ Private variables
+
+* Open `04-Stu_Functional-Execution-Context/Solved/index.js` in your IDE and explain the following: 
+
+  * 🔑 The variables `total` and `i` are declared in the inner function `sum()`. Therefore neither variable can be accessed in the scope of the outer function `arg()` and can be considered private variables.
+  
+  *  This was the cause of the error which failed the tests. 
+
+    ```js
+    function sum() {
+      let total = 0;
+      for(let i = 0; i < array.length; i++) {
+        total += array[i];
+      }
+    }
     ```
 
-  * 🙋 `$set` will create the field `capital`.
+  * 🔑 By adding the statement `return total` to the inner function `sum()`, we explicitly end the function's execution, remove the function execution context, pop `sum()` off the call stack, and assign the value of `total` to where `sum()` was called.
 
-* Tell the class that the newly created field can now be updated with the same command:
+    ```js
+    function sum() {
+      let total = 0;
+      for(let i = 0; i < array.length; i++) {
+        total += array[i];
+      }
 
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
-  ```
-
-* We can update the values in an array with `$push`:
-
-  ```sql
-  db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})
-  ```
-
-**Delete**
-
-* We delete an entry with `db.[COLLECTION_NAME].remove()`
-
-  ```sql
-  db.places.remove({"country": "Morocco"})
-  ```
-
-* We can also empty a collection with `db.[COLLECTION_NAME].remove()`
-
-  ```sql
-  db.places.remove({})
-  ```
-
-**Drop**
-
-* We drop a collection with `db.[COLLECTION_NAME].drop()`
-
-  ```sql
-  db.places.drop()
-  ```
-
-* To drop a database:
-
-  ```sql
-  db.dropDatabase()
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What does the `$push` method do?
-
-  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
-
-  * ☝️ Which method deletes an entry from a collection?
-
-  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
-
-* Take any clarifying questions before moving on.
-
-### 7. Students Do: Update, Delete and Drop in MongoDB (15 min)
-
-* Direct students towards the next activity in [04-Student-Update-Delete-and-Drop/Unsolved/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/04-Stu-Update-Delete-and-Drop/Unsolved/README.md)
-
-```md
-# Update, Delete and Drop in MongoDB
-
-* Go back to your classroom database. You've decided to take on a new hobby, extreme basket weaving. While practicing for your Extreme Basket Weaving Competition, you broke the computer of the person next to you. They're now using a new operating system now. Another student in your row saw you break that computer and wisely decided to move. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn’t leave with candy. All this work made you hungry, so you bought yourself some candy. 
+      return total;
+    }
+    ```
   
-## Instructions
+  * Calling `sum()` in the outer function executes the inner function, which returns the sum of the numbers in the array. 
 
-* Add Extreme Basket Weaving to your array of hobbies.
+    ```js
+    function avg(array) {
+      function sum() {
+        let total = 0;
+        for(let i = 0; i < array.length; i++) {
+          total += array[i];
+        }
+        // total is accessible in the sum()'s execution context
+        return total;
+      }
+      // value of total is returned to where sum() is invoked
+      return sum()/array.length;
+    }
+    ```
 
-* Change the operating system of the student next to you.
-
-* Remove the student to the other side of you from your database.
-
-* Add a field of `gavecandy` with a value of `false` to everyone in the array.
-
-* Change the value of `gavecandy` to true for yourself.
-
-## 💡 Hint(s)
-
-* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
-
-## 🏆 Bonus 
-
-* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
-
-```
-
-### 8. Instructor Do: Review Update, Delete and Drop in MongoDB (5 min)
-
-* Open [04-Stu-Update-Delete-and-Drop/Solved/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/04-Stu-Update-Delete-and-Drop/Solved/README.md) in your IDE and walk students through the queries.
-
-* Go back to your classroom database.
-
-  ```sql
-  db
-  use classroom
-  ```
-
-* You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
-
-  ```sql
-  db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basket weaving"}})
-  ```
-
-* While practicing for your Extreme Basket weaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
-
-  ```sql
-  db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})
-  ```
-
-* Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
-
-  ```sql
-  db.students.remove({name: [name of another neighbor]})
-  ```
-
-* You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
-
-  ```sql
-  db.students.update({}, {$set: {gavecandy:false}}, {multi:true})
-  ```
-
-* All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
-
-  ```sql
-  db.students.update({name:'Steve'}, {$set: {gavecandy:true}})
-  ```
-
-## Bonus
-
-* Insert five more documents with one command.
-
-  ```sql
-  db.students.insertMany([
-    {name: 'Jane', row:1, os:'Mac', hobbies:['Coding', 'Sleeping', 'Karate'] },
-    {name: 'Mary', row:2, os:'Mac', hobbies:['Baseball', 'Basketball', 'Tai Chi'] },
-    {name: 'Alexis', row:3, os:'Lin', hobbies:['Gaming', 'Reading', 'Gardening'] },
-    {name: 'Gary', row:4, os:'Mac', hobbies:['Walking', 'Reading', 'Mountain Climbing'] },
-    {name: 'Ed', row:5, os:'Win', hobbies:['Coding', 'Karate', 'Scuba Diving'] }
-  ]);
-  ```
-
-* Return all documents of students who have reading as a hobby or a mac operating system.
-
-  ```sql
-  db.students.find(
-      {$or:[
-          {"hobbies":{"$in":["Reading"]}},
-          {"os":{"$in":["mac"]}}
-      ]}
-  )
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What does the `$push` method do?
-
-  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
-
-  * ☝️ Which method deletes an entry from a collection?
-
-  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
-
-* When you are done take any clarifying questions before moving on.
-
-### 9. Instructor Do: Sorting in MongoDB (10 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ MongoDB has a way to sort results just like MySQL.
-
-  * ✔ We can sort by `integer`, `_id` and `class`.
-
-* Tell the students to create a new db named `zoo` and insert 5 animals with the following attributes:
-
-  * `numLegs` an integer that points to the number of legs.
-
-  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
-
-  * `weight` an integer that points to the animals weight.
-
-  * `name` a string that points to the animal's name.
-
-* Example:
-
-  ```js
-  {
-    "name": "Panda",
-    "numLegs": 4,
-    "class": "mammal",
-    "weight": 254
-  }
-
-  db.animals.insert({"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"});
-  db.animals.insert({"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"});
-  db.animals.insert({"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"});
-  db.animals.insert({"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"});
-  db.animals.insert({"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"});
-  ```
-
-* Open [05-Ins-Sorting-In-Mongo/README.md](../../../../01-Class-Content/17-NoSQL/01-Activities/05-Ins-Sorting-In-Mongo/README.md) in your IDE and demonstrate some of the most common ways we sort using MongoDB.
-
-* In the mongo shell, run the following commands one at a time having students follow along.
-
-* **Sort by id:**
-
-* The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
-
-  * Explain that a value of `1` is for ascending order and `-1` is for descending order.
-
-```sql
-db.animals.find().sort({ _id:1 });
-db.animals.find().sort({ _id:-1 });
-```
-
-* **Sort by an integer - numLegs:**
-
-```sql
-db.animals.find().sort({ numLegs:1 });
-db.animals.find().sort({ numLegs:-1 });
-```
-
-* **Sort by a string - class:**
-
-```sql
-db.animals.find().sort({ class:1 });
-db.animals.find().sort({ class:-1 });
-```
-
-* When you are done, check for understanding and take any further questions before moving on.
-
-### 10. Instructor Do: Introduction to MongoJS (10 mins)
-
-* Tell the class that now that they have an understanding of how MongoDB works we are going to dive into MongoJS.
-
-* MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
-
-  * We are going to use this to interact with our Node.JS applications.
+  * Navigate to `04-Stu_Functional-Execution-Context/Solved` in the terminal and execute the following commands:
   
-* Ask the students the following question(s):
+    ```bash
+    npm install; npm test;
+    ```
 
-  * ☝️ What does the `sort` method use to determine what order to put records in?
+  * Demonstrate that all the tests are passing.
 
-  * 🙋 The `timestamp`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* When you are done take any clarifying questions before moving on.
+  * ☝️ Why do we want to have private variables?
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+  * 🙋 Allows variables to have duplicate names without conflicts in a program, eliminates accidental data modifications due to pollution of the global namespace, abstracts logic to single concerns, and adds security by eliminating availability to variables.
 
-  * ✔ MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
+  * ☝️ What happens to the functional execution context of a function when that function has finished executing?
 
-* Have the students visit [MongoJS](https://www.npmjs.com/package/mongojs) in their browser.
+  * 🙋 The functional execution context of a function is destroyed when the function finishes executing.
 
-* Ask for a volunteer to guess how you might use `MongoJS`: `find`, `insert`, `remove` and `sort`.
+  * ☝️ What can we do if we don't completely understand this?
 
-* These methods are nearly identical to running them in the `mongo` shell so they will feel comfortable with MongoJS.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on function context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#Function_context), and stay for office hours to ask for help.
 
-* Tell the class not to worry if they are confused, they will get plenty of practice moving forward.
+* Answer any questions before proceeding to the next activity.
 
-### 11. Student Do: MongoJS Sorting (15 mins)
+### 8. Instructor Demo: Stacks (5 min) 
 
-* Open [06-Stu-MongoJS-Sorting/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/06-Stu-MongoJS-Sorting/Solved/server.js) solution on your machine, and run `server.js` with Node.
+* Navigate to `05-Ins_Stacks` in your terminal and execute the following command:
 
-* Visit the different routes in your web browser to show students the results:
+  ```bash
+  npm install; npm test;
+  ```
 
-  * `/` will display a simple hello world message.
-  * `/all` will display JSON with every animal in your zoo collection.
-  * `/name` will display JSON with every animal, sorted by name.
-  * `/weight` will display JSON with every animal, sorted by weight.
-
-* Next direct students towards the unsolved version located in [06-Stu-MongoJS-Sorting/Unsolved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/06-Stu-MongoJS-Sorting/Unsolved/server.js) and have them complete the activity.
-
-* **Instructions:**
-
-* Create four routes that display results from your zoo collection
-
-  * 0: Root: Displays a simple "Hello World" message (no mongo required).
-  * 1: All: Send JSON response with all animals
-  * 2: Name: Send JSON response sorted by name in ascending order
-  * 3: Weight: Send JSON response sorted by weight in descending order
-
-* Tell your students to ask you or a TA for help if they have any questions while working on the assignment.
-
-### 12. Break (30 mins)
-
-### 13. Instructor Do: Review Mongo JS Sorting (5 mins)
-
-* Ask the students how the activity went, and encourage anyone who had trouble using it. 
-
-* Remember, even if it is similar to using the `mongo` shell, this is still the first time they've used this node package.
-
-* Open [06-Stu-MongoJS-Sorting/Unsolved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/06-Stu-MongoJS-Sorting/Unsolved/server.js) on your machine and ask for volunteers to help guide you through the activity.
-
-* After each route, start the `server.js` file and use your web browser to check the route. 
-
-* If it works, great! If not, ask the student who gave the answer if you had mistyped something (since they gave the answer they'll probably be able to point out the error better than anyone).
-
-* Answer any clarifying questions before moving on.
-
-### 14. Student Do: MongoJS CRUD (20 mins)
-
-* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) on your machine and demonstrate the solved version of the app by creating, updating and deleting a few notes.
-
-  * Note that to update a note you have to click on it's title, then update the form and submit.
-
-* After demoing, direct students to the unsolved activity located in [07-Stu-Mongo-CRUD/Unsolved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/07-Stu-Mongo-CRUD/Unsolved/server.js)
-
-* **Instructions:**
-
-  * Update the [server.js](Unsolved/server.js) file to include the following six routes.
-
-  * You can see a list of methods available to you here. [https: github.com/mafintosh/mongojs#api](https://github.com/mafintosh/mongojs#api).
-
-  * Save a note to the database's collection `POST: /submit`
-
-  * Retrieve all notes from the database's collection `GET: /all`
+* Open `05-Ins_Stacks/__tests__/index.test.js` in your IDE to demonstrate the following:
   
-  * Retrieve one note in the database's collection by it's ObjectId `GET: /find/:id`
+  * The test descriptions give you clues on how to implement a stack, which is a type of data structure:
     
-  * Update one note in the database's collection by it's ObjectId `POST: /update/:id`
+    * `container` is the name of the initialized variable. What is the data type?
 
-  * Delete one note from the database's collection by it's ObjectId `DELETE: /delete/:id`
+    * The names and functionality are described for both methods. 
 
-  * Clear the entire note collection `DELETE: /clearall`
+  * The third test description tells us that we can add an item to the top of the stack (i.e., the end of the array).
 
-### 15. Instructor Do: Review MongoJS CRUD (10 mins)
+  * The fourth test description tells us that we can remove an item from the top of the stack (i.e., the end of the array).
 
-* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) and walk students through the code.
+* Navigate to `05-Ins_Stacks` in the terminal and execute the following command:
 
-* Take any clarifying questions before moving on.
+  ```bash
+  npm install; npm test;
+  ```
 
-### 16. Instructor Do: Demonstrate Robo 3T (5 mins)
+  * The response in the console reveals that all four tests are passing.
+   
+  * Remind students not to change or modify any of the tests.
 
-* Instruct your students to open the application. They should see a window like this:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ![6-roboConnect](Images/6-roboConnect.jpg)
+  * ☝️ Does anyone know why a stack's operations are considered last-in-first-out or LIFO?
 
-* They should hit the connect button. Do the same to show students what comes next.
+  * 🙋 The latest item to be added to a stack is also first one to be removed. 
 
-  * `/all` will display JSON with every animal in your zoo collection.
+  * ☝️ In a JavaScript execution context, what is being added and removed from the stack?
 
-  * `/name` will display JSON with every animal, sorted by name.
+  * 🙋 Function calls. 
 
-  * `/weight` will display JSON with every animal, sorted by weight.
+  * ☝️ Why are we learning about stacks?
 
-* When you are done take any clarifying questions before moving on.
+  * 🙋 Data structures store data and are fundamental components in computer science. Data structures commonly appear on technical interview questions, so understanding basic ones such as a stack is important.
 
-### 17. Student Do: Robot 3T Practice (5 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Instruct students to drop their classroom collection and create a new one.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
 
-* **Instructions:**
+### 9. Student Do: Stacks (15 min) 
 
-  * ONLY USE ROBO 3T FOR THIS ASSIGNMENT
+* Direct students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
 
-  * In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement a Stack by using a Class
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to create a class that implements a stack data structure so that I can better understand how a JavaScript call stack works.
+
+  ## Acceptance Criteria
+
+  * It's done when we run the tests for the `Stack` class and the defined tests pass.
+
+  ---
+
+  ## 💡 Hints
+
+  * Which array methods can be used to implement a stack?
+
+  * What do the unit test descriptions tell us about which methods we need?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+    * What are some other data structures? Think about what their use cases might be.
+
+  Use [Google](https://www.google.com) or another search engine to research the above.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Stacks (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with stacks? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ LIFO
+
+  * ✔️ `push`/`pop` methods
+
+* Open `06-Stu_Stacks/Solved/index.js` in your IDE and explain the following: 
+
+  * 🔑 We use a constructor to create a container to store the data. We assign the default value as an empty array.
+
+    ```js
+    class Stack {
+    constructor(container = []) {
+      this.container = container;
+    }
+    ```
+
+  * 🔑 We use an array to simulate the concept of a stack, where the end of the array is the "top" of the stack.
+
+  * 🔑 Add the method, `addToStack`, to add an element at the end of the array using the array method `push`. We use a parameter to add the element.
+
+    ```js
+    addToStack(el) {
+      return this.container.push(el);
+    }
+    ```
+
+  * 🔑 Add the method `removeFromStack` to remove an element from the end of the array using the array method `pop`.
+
+    ```js
+    removeFromStack()) {
+      return this.container.pop();
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is a real-world situation that replicates the operations in a stack?
+
+  * 🙋 A stack of books, cafeteria trays, Pez dispensers, or lip balm.
+
+  * ☝️ What is an example of a stack in programming?
+
+  * 🙋 The JavaScript call stack! In a string or array, we can also use a stack to reverse order, check for symmetry, or check for equality.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Wikipedia documentation on data structures](https://en.wikipedia.org/wiki/Data_structure), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Queues (5 min) 
+
+* Navigate to `07-Ins_Queues` in your terminal and execute the following command:
+
+  ```bash
+  npm install; npm test;
+  ```
+
+* All four tests are currently passing.
+
+* Open `07-Ins_Queues/__tests__/index.test.js` in your IDE to demonstrate the following:
+
+  * The test descriptions give you clues on how to implement a queue, which is a type of data structure:
+    
+    * `container` is the name of the initialized variable. 
+
+    * The names and functionality are described for both methods. 
+
+  * The third test description tells us that we can add an item to the **back** of the queue (i.e., the array).
+
+  * The fourth test description tells us that we can remove an item from the **front** of the queue (i.e., the array).
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How is this data structure different from a stack?
+
+  * 🙋 Stacks only add and remove elements from the top of the structure, whereas queues add from one side and remove from the other.
+
+  * ☝️ Why are a queue's operations considered first-in-first-out or FIFO?
+
+  * 🙋 The first item to be added is the first item to be removed.
+
+  * ☝️ How does this relate to JavaScript callbacks?
+
+  * 🙋 The first callback added to the queue will be the first processed by the event loop.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
+
+### 12. Student Do: Queues (15 min) 
+
+* Direct students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement a Queue by using a Class
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to create a class that implements a queue data structure so that I can better understand how a JavaScript callback queue works.
+
+  ## Acceptance Criteria
+
+  * It's done when we run tests for the `Queue` class and the defined tests pass.
+
+  ---
+
+  ## 💡 Hints
+
+  * Which array methods can be used to implement a queue?
+
+  * What do the unit test descriptions tell us about which methods we need?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+    * What are some uses cases for a queue in programming?
+
+  Use [Google](https://www.google.com) or another search engine to research the above.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 13. BREAK (30 min)
+
+### 14. Instructor Review: Queues (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with queues? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ FIFO
+
+  * ✔️ `push`/`shift` methods
+
+* Open `08-Stu_Queues/Unsolved/index.js` in your IDE and explain the following: 
+
+  * 🔑 We initialize the Stack class with a container to store the data. This was set at default value as an empty array.
+
+    ```js
+    class Queue {
+    constructor(container = []) {
+      this.container = container;
+    }
+    ```
+
+  * 🔑 Add the method, `addToQueue`, to add an element at the back of the array using the array method `push`.
+
+    ```js
+    addToQueue(el) {
+      return this.container.push(el);
+    }
+    ```
+
+  * 🔑 Add the method, `removeFromQueue`, to remove an element from the front of the array using the array method `shift`.
+
+    ```js
+    removeFromQueue() {
+      return this.container.shift();
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Can someone name a real world situation that replicates the operations in a queue?
+
+  * 🙋 Grocery store line, on-ramp for the freeway, or getting on/off public transportation
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [documentation on data structures in Wikipedia](https://en.wikipedia.org/wiki/Data_structure), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 15. Instructor Demo: Callback Queue (5 min) 
+
+* Run `09-Ins_Callback-Queue/index.js` from the command line and demonstrate the following: 
+
+  * 🔑 The sequence of the logs is altered due to the `setTimeout`.
+
+  * Even when a timer set to zero, the log sequence is still affected due to the event loop and callback queue.
   
-    * This should be entered using the `right-click -> Insert Object` method. 
+  * 🔑 The timer only guarantees a minimum amount of accounted time, not when the callback will execute.
 
-  * Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * As students enter their BSON info into slack, insert it into your database.
+  * ☝️ What is causing the delay for the statement "Are you listening?" even though the timer is set to zero?
 
-  * By the end of the exercise, you should have every student's information in your classroom collection.
+  * 🙋 Because `setTimeout` is a Web API, once the timer resolves, the callback function is first placed in the callback queue which must wait for the event loop to then check for an idle call stack before allowing the statement to get pushed onto the stack so it can be executed.
 
-* Direct students to the next activity located in [08-Stu-Robo-3T](../../../../01-Class-Content/17-NoSQL/01-Activities/08-Stu-Robo-3T/README.md).
+* Answer any questions before proceeding to the next activity.
 
-```md
-# Robot 3T
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Callback-Queue/README.md`.
 
-* In this activity, you will practice using Robo 3T.
+### 16. Student Do: Callback Queue (15 min) 
 
-## Instructions
+* Direct students to the activity instructions found in `10-Stu_Callback-Queue/README.md`.
 
-* Drop your classroom collection and create a new one.
+* Break your students into pairs that will work together on this activity.
 
-* In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
+  ```md
+  # 🐛 User Interaction with Application Is Blocked on Page Load
 
-  * This should be entered using the `right-click -> Insert Object` method. 
+  Work with a partner to resolve the following issue:
 
-* Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
+  * User interactivity with the application is blocked on page load.
 
-* As students enter their BSON info into slack, insert it into your database.
+  ## Expected Behavior
 
-* By the end of the exercise, you should have every student's information in your classroom collection.
-```
+  * When the page loads, a user can interact with the form elements.
 
-## 18. Instructor Do: Reintroduce Career Services (10 mins)
+  * A user must still wait 8 seconds before they can submit the form, though.
 
-* Ask the students to raise their hand if they are actively engaged in or intend to engage in a job search at the end of the program.
+  ## Actual Behavior
 
-* Remind the class that, now that they are over two-thirds of the way through the program, this is a great time to start thinking about their job search and engaging with the many Career Services options provided as part of the program.
+  * When the page loads, a user is temporarily blocked from interacting with any elements on the page.
 
-* Go through the [slides on Career Services](https://docs.google.com/presentation/d/18inCMR9TB47q3yEY-YflqA-96cBqXheM9X0BrD0Gk9Y/edit#slide=id.p7).
+  ## Steps to Reproduce the Problem
 
-* If there are any questions, advise students to reach out to their Student Success Manager.
+  1. Open the `index.html` file in the browser.
 
-### 19. Instructor Do: Demo MongoJS Warmup (5 mins)
+  2. The page takes an extended length of time to load.
 
-* Open [09-Stu-Mongojs-Review/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/09-Stu-Mongojs-Review/Solved/server.js) on your machine. Run `npm install` then `node server.js` to launch the application.
+  ---
 
-* Demonstrate to the students how the app lets you add books as well as mark books read or unread.
+  ## 💡 Hints
 
-  * Note the fact that an explicit route for the root, `http://localhost:3000` does not exist. However, the page still loads `index.html` from the `/public` folder. 
+  * What is a better user experience for delaying functionality?
 
-* Explain to the students that this is a convention from the static middleware that we are using. 
+  ## 🏆 Bonus
 
-  * Point to this line: `app.use(express.static("public"));`
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Tell the class that in the next activity they will complete the routes in the server file so the site can display and edit the book data.
+  * What are common blocking and non-blocking functions in JavaScript?
 
-### 20. Student Do: MongoJS Warm Up (15 mins)
+  Use [Google](https://www.google.com) or another search engine to research the above.
+  ```
 
-* Direct the students towards the activity located in [09-Stu-Mongojs-Review/Unsolved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/09-Stu-Mongojs-Review/Unsolved/server.js)
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-```md
-# MongoJS Review
+### 17. Instructor Review: Callback Queue (15 min) 
 
-## Instructions
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Complete the routes in the server file so the site can display and edit the book data. 
+  * ☝️ How comfortable do you feel with callback queues? (Poll via Fist to Five, Slack, or Zoom)
 
-## 💡 Hint(s)
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-## 🏆 Bonus 
+  * ✔️ Node.js vs. the browser 
 
-* Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/) to see how you can accomplish this.
+  * ✔️ Asynchronous behavior
 
-```
+* Open `10-Stu_Callback-Queues/Solved/index.html` in your IDE and explain the following:
 
-### 21. Instructor Do: Review MongoJS Warmup (5 mins)
+  * We add a class to initially hide the `<button>` element.
+
+    ```html
+    <button class="btn form-input display-none">Submit</button>
+    ```
+
+* Open `10-Stu_Callback-Queues/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 We can leverage the asynchronous behavior of JavaScript by placing the delay in a `setTimeout()`.
+
+    ```js
+    setTimeout(() => {
+      document.querySelector('form button')
+        .classList.remove('display-none');
+    }, 8000);
+    ```
+
+  * Delaying with a `setTimeout()` allows the page to render and time for the user to interact with the other elements.
+
+  * 🔑 Best practice is to use timers when creating intentional delays instead of blocking the event loop with synchronous logic.
   
-* Open [09-Stu-Mongojs-Review/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/09-Stu-Mongojs-Review/Solved/server.js) and scroll down to the routes.
+  * Node.js and the browser work similarly in the way they handle asynchronous behavior.
 
-* Use the prompts and talking points below to review each route.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Our `/submit` route uses `save` to create a new record.
+  * ☝️ Why do synchronous processes block the call stack?
 
-```js
-app.post("/submit", ({ body }, res) => {
-  const book = body;
+  * 🙋 JavaScript is single threaded, so synchronous network requests or large processing loads occupy the thread, not allowing any other code to execute. 
 
-  book.read = false;
+  * ☝️ What is the role of the event loop in asynchronous behavior in JavaScript?
 
-  db.books.save(book, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.send(data);
-    }
-  });
-});
-```
+  * 🙋 The event loop pushes callback functions onto the call stack from the callback queue when the call stack is empty or idle.
 
-* Our `/read` route uses `find` to return books that have `read: true`.
+  * ☝️ What can we do if we don't completely understand this?
 
-```js
-app.get("/read", (req, res) => {
-  db.books.find({ read: true }, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.json(data);
-    }
-  });
-});
-```
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Event_loop), and stay for office hours to ask for help.
 
-* Our `/unread` route uses `find` to return books that have `read: false`.
+* Answer any questions before proceeding to the next activity.
 
-```js
-app.get("/unread", (req, res) => {
-  db.books.find({ read: false }, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.json(data);
-    }
-  });
-});
-```
+### 18. Instructor Do: Stoke Curiosity (10 min)
 
-* Our `/markread/:id` route finds a book by `ObjectID` and uses `update` to set `read: true`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```js
-app.put("/markread/:id", ({ params }, res) => {
-  db.books.update(
-    {
-      _id: mongojs.ObjectId(params.id)
-    },
-    {
-      $set: {
-        read: true
-      }
-    },
-
-    (error, data) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.send(data);
-      }
-    }
-  );
-});
-```
-
-* Our `/markunread/:id` route finds a book by `ObjectID` and uses `update` to set `read: false`.
-
-```js
-app.put("/markunread/:id", ({ params }, res) => {
-  db.books.update(
-    {
-      _id: mongojs.ObjectId(params.id)
-    },
-    {
-      $set: {
-        read: false
-      }
-    },
-
-    (error, data) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.send(data);
-      }
-    }
-  );
-});
-```
-
-* When you are done, take any clarifying questions and move on to the next demonstration.
-
-### 22. Instructor Do: Introduce Mongoose (10 mins)
-
-* Tell the class that they are now going to be introduced to Mongoose, an Object Data Modeling (ODM) library for Mongo and Node. 
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ Mongoose lets you define schemas for your collections.
-
-  * ✔ It also helps manage data relationships and enforce validations.
-
-* Next open [10-Ins-Mongoose-Schema](../../../../01-Class-Content/17-NoSQL/01-Activities/10-Ins-Mongoose-Schema) in your IDE and run `npm install` followed by `node server.js`.
-
-* In your terminal you should see the following if the connection was successful.
-
-```js
-{ array: [ 'item1', 'item2', 'item3' ],
-  _id: 5d445e4e98a11a33f37d6010,
-  boolean: false,
-  string:
-   '"Don\'t worry if it doesn\'t work right. If everything did, you\'d be out of a job" - Mosher\'s Law of Software Engineering',
-  number: 42,
-  date: 2019-08-02T16:01:18.500Z,
-  __v: 0 }
-```
-
-* Step through the code that we used to make our db connection and schema.
-
-* We first require the Mongoose package and our `exampleModel` file, which contains our schema.
-
-  ```js
-  const mongoose = require("mongoose");
-  const Example = require("./exampleModel.js"); // we will go over this file next as it contains our schema
-  ```
-
-* We then open a connection `mongodb://localhost/dbExample` on our locally running instance of MongoDB.
-
-  ```js
-  mongoose.connect("mongodb://localhost/dbExample", { useNewUrlParser: true });
-  ```
-
-* Then we create some data to insert into our database.
-
-  ```js
-  const data = {
-    array: ["item1", "item2", "item3"],
-    boolean: false,
-    string:
-      "We are learning mongoose!",
-    number: 42
-  };
-  ```
-
-* Next we call `create` on our `Example` schema and pass in our data.
-
-  ```js
-  Example.create(data)
-    .then(dbExample => {
-      console.log(dbExample);
-    })
-    .catch(({ message }) => {
-      console.log(message);
-    });
-  ```
-
-* Now open [10-Ins-Mongoose-Schema](../../../../01-Class-Content/17-NoSQL/01-Activities/10-Ins-Mongoose-Schema/exampleModel.js) in your editor.
-
-* Tell the class that Mongoose models are similar to those in sequelize. 
-
-* We define a schema for the model and then use the model to query our database. 
-
-* Next, step through each section of the code.
-
-* First we import mongoose and create a `Schema` reference.
-
-  ```js
-  const mongoose = require("mongoose");
-  const Schema = mongoose.Schema;
-  ```
-
-* Next we create a new schema called `ExampleSchema`.
-
-  ```js
-  const ExampleSchema = new Schema({
-    string: {
-      type: String,
-      trim: true,
-      required: "String is Required" // validator
-    },
-
-    number: {
-      type: Number,
-      unique: true, // this is not a validator, but a built in helper
-      required: true // validator
-    },
-
-    email: {
-      type: String,
-      match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-    },
-
-    boolean: Boolean,
-
-    array: Array,
-
-    date: {
-      type: Date,
-      default: Date.now
-    },
-
-    longstring: {
-      type: String,
-      validate: [({ length }) => length >= 6, "Longstring should be longer."]
-    }
-  });
-  ```
+  * ☝ What is a paradigm in programming?
   
-* We then compile our schema into a Model.
+  * 🙋 A paradigm a style or philosophy that a programming language follows.
 
-  ```js
-  const Example = mongoose.model("Example", ExampleSchema);
-  export default Example;
+  * ☝️ What is object-oriented programming (OOP)?
+
+  * 🙋 OOP is a programming paradigm that JavaScript uses. In OOP, we model the data around objects.
+
+  * ☝️ What other paradigms does JavaScript use?
+
+  * 🙋 Functional and procedural.
+
+* Explain that we will be learning about the technical portion of the interview process, with a focus on the functional paradigm of JavaScript.
+
+  * ☝️ In JavaScript, how else can we create objects?
+
+  * 🙋 With classes and constructor functions.
+
+  * ☝️ What are some problems that may occur when using class inheritance?
+
+  * 🙋 The larger the app becomes, the more difficult it can be to restructure the class hierarchy.
+  
+* Explain to students that we will be learning an entirely new way to build objects by using factory functions.
+
+* Let students know ahead of time that these topics can get abstract and encourage them to ask questions.
+
+* JavaScript has many layers, and interviewers want to know how well a candidate understands them. 
+
+* In JavaScript, we have a design choice to make early on that will dictate if we use inheritance or composition.
+
+* JavaScript uses three different paradigms and it is important as developers that we understand each one and how to leverage them to our benefit.
+
+* Let students know that this knowledge comes with time and practice, and to not fall into that sinking feeling of imposter syndrome.They have been using these concepts all along and now we are just expanding on that knowledge.
+
+### 19. Instructor Demo: Higher Order Functions (5 min) 
+
+* Open `11-Ins_Higher-Order-Functions/index.js` in your IDE and explain the following:
+
+  * We first create a function that we will be using to pass into the JavaScript provided higher-order function, `.map()`.
+
+  * We have access to the element and the index of the element which is provided to us through the `.map()` method.
+
+    ```js
+    function evenIndexMultiplier(number, index) {
+      // Code...
+    }
+    ```
+  
+  * Next, we create the logic for the function that will be passed into the higher-order function, the `.map()` method.
+
+    ```js
+    function evenIndexMultiplier(number, index) {
+      if (index % 2 === 0) {
+        return number * 10;
+      }
+      return number;
+    }
+    ```
+
+  * 🔑 Finally, we pass the newly created function into the `.map()` method and storing it into a variable named `evenIndexes`.
+  
+  * 🔑 Now we have a function which accepts another function as an argument, creating a higher-order function.
+
+  * 🔑 We are not limited to only using `evenIndexMultiplier` inside the `.map()` method. We can use `evenIndexMultiplier` anywhere in the application or even in a custom higher-order function.
+
+    ```js
+    const evenIndexes = arrayIndex.map(evenIndexMultiplier);
+    ```
+
+* Run `node index.js` from the command line and demonstrate the following: 
+
+  * As we can see every even index is being multiplied by ten which is exactly what the function was meant to do.
+
+  ```
+  [10, 52, 350, 6, 720, 7, 30, 19, 320, 54, 780, 95, 970]
   ```
 
-* Tell the class that all schema types have the built-in `required` validator. 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Point out that numbers have `min` and `max` validators while strings have `enum`, `match`, `minlength`, and `maxlength` validators.
+  * ☝️ How can we use higher-order functions to our benefit?
 
-* Ask the students the following question(s):
+  * 🙋 It makes our code more reusable.
 
-  * ☝️ What are the benefits of using Mongoose?
+  * ☝️ Are we limited to using a higher-order function provided by JavaScript?
 
-  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
+  * 🙋 No, we can create our own. The function just needs to be able to accept another function for an argument.
 
-* Take any clarifying questions before moving on to the students activity.
+* Answer any questions before proceeding to the next activity.
 
-### 23. Instructor Do: Demo Solved Mongoose Schema (5 mins)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Higher-Order-Functions/README.md`.
 
-* Open [11-Stu-Mongoose-Schema/Solved](../../../../01-Class-Content/17-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Solved) on your machine and run `npm install` then `node server.js` to launch the app. 
+### 20. Student Do: Higher-Order Functions (15 min) 
 
-* Create a new user and demonstrate the response.
+* Direct students to the activity instructions found in `12-Stu_Higher-Order-Functions/README.md`.
 
-  ```js
-  {
-    "_id": "5cfab6403da88328fcc7ac39",
-    "username": "demo",
-    "password": "demo",
-    "email": "demo@gmail.com",
-    "userCreated": "2019-06-07T19:08:48.294Z",
-    "__v": 0
-  }
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create a Function to Pass into the Reducer Method That Finds the Average of an Array of Numbers
+
+  Work with a partner to implement the following user story:
+
+  * As a teacher, I want to be able to find the average grade of my entire class.
+
+  * As a developer, I want to be able to reuse my `findAverage` function in multiple filter method calls throughout my application so that my code is not being duplicated unnecessarily.
+
+  ## Acceptance Criteria
+
+  * It's done when the `findAverage` function correctly calculates the average of an array of numbers.
+
+  * It's done when the `findAverage` function is being correctly passed through the `.reduce()` method.
+
+  ## 💡 Hints
+
+  How do you find out how many elements are in an array? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other built-in functions are also higher-order functions? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Try to create another user with the same email to demonstrate the validations.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  {
-    "driver": true,
-    "name": "MongoError",
-    "index": 0,
-    "code": 11000,
-    "errmsg": "E11000 duplicate key error collection: userdb.users index: email_1 dup key:  {: \"demo@gmail.com\" }"
-  }
+### 21. Instructor Review: Higher-Order Functions (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with higher-order functions? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Accepting another function as an argument
+
+  * ✔️ `.reduce()`
+
+* Open `12-Stu_Higher-Order-Functions/Solved/index.js` in your IDE and explain the following: 
+
+  * We create a function named `findAverage` that has access to four arguments: `accumulator`, `currentValue`, `index`, and `array`.
+
+  * 🔑 We have access to these arguments because they are provided to us through the `.reduce()` method.
+
+    ```js
+    function findAverage(accumulator, currentValue, index, array) {
+      // Code...
+    }
+    ```
+
+  * Check to see if we are at the final index of the given array.
+
+  * If so, we return the total plus the current value and divide it by how many elements are in the array. 
+  
+    ```js
+    function findAverage(accumulator, currentValue, index, array) {
+      if (index === array.length - 1) {
+      return (accumulator + currentValue) / array.length;
+      }
+    }
+    ```
+    
+  * If we have not reached the end of the array, add the total to the current value we are on. 
+  
+    ```js
+    function findAverage(accumulator, currentValue, index, array) {
+      if (index === array.length - 1) {
+        return (accumulator + currentValue) / array.length;
+      }
+      return accumulator + currentValue;
+    }
+    ```
+  
+  * 🔑 Pass the newly created `findAverage` function into the `.reduce()` method.
+
+    ```js
+    let gradeAverage = grades.reduce(findAverage);
+    ```
+
+* Run `node index.js` from the command line and demonstrate the following:
+
+  * 🔑 Inside the `console`, we should see the correct average being displayed.
+
+    ```
+    [79.5]
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some other JavaScript methods that are higher-order functions?
+
+  * 🙋 `.filter()` `.forEach()`
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 22. Instructor Demo: Closures (5 min) 
+
+* Open `13-Ins_Closures/index.js` in your IDE and explain the following:
+
+  * 🔑 We first create a function named `bankAccount`, which will be the outer function, and create a closure around the soon-to-exist inner function:
+
+    ```js
+    function bankAccount() {
+      // Code...
+    }
+    ```
+
+  * Next, we create two variables inside the outer function, which will be scoped to the inner function that we will be creating.
+
+    ```js
+    function bankAccount() {
+      const checking = 400;
+      const savings = 1000;
+    }
+    ```
+  
+  * 🔑 To use a closure, the function must return an object with some type functionality, whether it be one method or multiple.
+
+    ```js
+    function bankAccount() {
+      const checking = 400;
+      const savings = 1000;
+      return {
+        displayFunds: function () {
+          // Code...
+        },
+      };
+    }
+    ```
+
+  * Inside the object being returned, we create a `displayFunds` method that logs the `checking` and `savings` variables.
+
+    ```js
+    function bankAccount() {
+      const checking = 400;
+      const savings = 1000;
+      return {
+        displayFunds: function () {
+          console.log(
+            `You have $${checking} in your checking account and $${savings} in your savings account`
+          );
+        },
+      };
+    }
+    ```
+
+  * Let's store the `bankAccount` function inside a variable and test what happens when we call the `displayFunds()` method.
+
+    ```js
+    const myBank = bankAccount();
+
+    myBank.displayFunds()
+    ```
+
+* Run `node index.js` from the command line and explain the following:
+  
+  * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment. 
+
+    ```
+    You have $400 in your checking account and $1000 in your savings account
+    ```
+
+  * The next statement we will see is from `console.dir`. Feel free to look up what `console.dir` does, but we are only using it for demonstration purposes.
+
+    ```js
+    console.dir(myBank)
+    ```
+
+  * 🔑 By doing this, we can inspect the scope of the `displayFunds()` method and see that it does have a closure with a reference to the two variables in the outer functions' lexical environment.
+
+  * Another interesting thing to point out is that the function is also an object.
+
+    ```
+    Object
+      displayFunds: ƒ ()
+        arguments: null
+        caller: null
+        length: 0
+        name: "displayFunds"
+        prototype: {constructor: ƒ}
+        __proto__: ƒ ()
+        [[FunctionLocation]]: Closures.js:24
+        [[Scopes]]: Scopes[3]
+          0: Closure (bankAccount)
+            checking: 400
+            savings: 1000
+          1: Script {myBank: {…}}
+          2: Global {window: Window, self: Window, document: document, name: "", location: Location, …}
+      __proto__: Object
+    ```
+
+  * 🔑 For the final two statements, we can see that the variables inside the `bankAccount()` function are not accessible from outside the function's lexical environment.
+
+    ```
+    undefined
+    undefined
+    ``` 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Can we access a function's variable from outside of its scope?
+
+  * 🙋 No, we have to be inside its lexical environment.
+
+  * ☝️ How do we use a closure?
+
+  * 🙋 Returning an inner function that has access to the outer function's lexical environment.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Closures/README.md`.
+
+### 23. Student Do: Closures (15 min) 
+
+* Direct students to the activity instructions found in `14-Stu_Closures/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create a Counter Function That Uses a Private Variable
+
+  Work with a partner to implement the following user story:
+
+  * As a teacher, I want a way to keep track of the number of students I see every day.
+
+  * As a developer, I want to keep my `count` variable data private.
+
+  ## Acceptance Criteria
+
+  * It's done when the `Counter` function correctly increments by 1.
+
+  * It's done when I can only access the `count` variable from within the `Counter` function.
+
+  * It's done when all of the unit tests pass using `npm test`.
+
+  ## 💡 Hints
+
+  When is a closure created? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the lexical environment? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Tell the students that in the next activity they will implement the schema validations that they see here.
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 24. Student Do: Mongoose Schema (15 mins)
+### 24. Instructor Review: Closures (15 min)
 
-* Direct students towards the next activity located in [11-Stu-Mongoose-Schema/Unsolved](../../../../01-Class-Content/17-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Unsolved).
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```md
-# User Schema
+  * ☝️ How comfortable do you feel with closures? (Poll via Fist to Five, Slack, or Zoom)
 
-In this activity you will create a user schema with mongoose.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-## Instructions
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* In `userModel.js` add four attributes to your schema.
+  * ✔️ Closures
 
-  * username: A string that will be be required, and also trimmed.
+  * ✔️ Private variables
 
-  * password: A string that will be required, trimmed, and at least 6 characters.
+  * ✔️ Lexical environment
 
-  * email: A string that must be a valid email address and unique in our collection.
+* Open `14-Stu_Closures/Solved/index.js` in your IDE and explain the following: 
 
-  * userCreated: A date that will default to the current date.
+  * 🔑 By creating the function `counter`, we have also created a closure.
 
-## 💡 Hint(s)
+    ```js
+    function counter() {
+      // Code...
+    }
+    ```
+ 
+  * 🔑 Inside the outer function, we create a private `count` variable that will hold the number of times the function is called.
 
-* The regex for checking if a string is an email is: /.+\@.+\..+/
+    ```js
+    function counter() {
+      let count = 0;
+    }
+    ```
 
-```
+  * 🔑 Next, we use the closure by returning an object by using the `increment` method, which increases the `count` by one.
 
-### 25. Instructor Do: Review Mongoose Schema (10 mins)
+    ```js
+    function counter() {
+      let count = 0;
+      return {
+        increment: function () {
+          return count++;
+        },
+      };
+    }
+    ```
 
-* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
+  * If we type `npm test` in the command line, we should see the following:
 
-  * ✔ We can use `required` to check for the presence of an attribute.
+    ```bash
+      PASS  __tests__/index.test.js
+      √ counter is a defined function (2 ms)
+      √ counter is returning as an object
+      √ count should equal 0 (1 ms)
+      √ count should equal 1
+      √ count should equal 4
 
-  * ✔ We can use `validate` to enforce a validation.
+    Test Suites: 1 passed, 1 total
+    Tests:       5 passed, 5 total
+    Snapshots:   0 total
+    Time:        1.974 s
+    ```
 
-* Open [11-Stu-Mongoose-Schema/Solved](../../../../01-Class-Content/17-NoSQL/01-Activities/11-Stu-Mongoose-Schema/Solved) in your IDE and step through each attribute, checking for understanding.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```js
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+  * ☝️ How else could we use closures?
 
-const UserSchema = new Schema({
-  username: {
-    type: String,
-    trim: true,
-    required: "Username is Required"
-  },
+  * 🙋 We could conceal sensitive variables that shouldn't be mutated outside of the function's scope.
 
-  password: {
-    type: String,
-    trim: true,
-    required: "Password is Required",
-    validate: [({ length }) => length >= 6, "Password should be longer."]
-  },
+  * ☝️ What can we do if we don't completely understand this?
 
-  email: {
-    type: String,
-    unique: true,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
-  },
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), and stay for office hours to ask for help.
 
-  userCreated: {
-    type: Date,
-    default: Date.now
-  }
-});
-```
+* Answer any questions before ending the class.
 
-* Students may be confused with `match`, explain that it uses a regular expression to check for a valid email address.
+### 25. END (0 min)
 
-* Ask the students the following question(s):
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-  * ☝️ What is the `match` method checking for in our `email` attribute?
-
-  * 🙋 It is checking the regular expression against the user's email input.
-
-* Take any clarifying questions before moving on to the students activity.
-
-
-### 26. END (0 mins)
-
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

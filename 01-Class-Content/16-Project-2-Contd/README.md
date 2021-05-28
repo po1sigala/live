@@ -50,7 +50,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer **before** starting Unit 17 and attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
+In the next unit, you'll get to take a deeper dive into JavaScript and learn how it relates to computer science. We are pulling back the curtains to examine some of the more challenging aspects of JavaScript. Get ready to learn all about data structures and closures!
 
 ## Resources
 
@@ -62,15 +62,11 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
 
   * 📖 [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
-  * 📖 [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) 
-
 ### General
 
 Refer to these resources for additional information about topics covered in this unit.
 
   * 📖 [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) 
-
-  * 📖 [MongoDB](https://www.mongodb.com/2)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
