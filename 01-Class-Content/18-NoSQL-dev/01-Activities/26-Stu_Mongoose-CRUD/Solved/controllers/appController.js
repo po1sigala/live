@@ -25,7 +25,7 @@ module.exports = {
       .then((application) => {
         return User.findOneAndUpdate(
           { _id: req.body.userId },
-          { $push: { applications: application._id } },
+          { $addToSet: { applications: application._id } },
           { new: true }
         );
       })
