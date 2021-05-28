@@ -98,6 +98,16 @@ In the next unit, you will learn JavaScript fundamentals such as variables, func
 
 Here are some additional resources to help solidify the topics covered in this unit.
 
+### Code Review Videos
+
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+  * [📹 Code Review: Introduction to Flexbox!](https://2u-20.wistia.com/medias/7j4tjqlxju)
+
+  * [📹 Code Review: Pseudo-Classes, Pseudo-Elements & Data Attributes!](https://2u-20.wistia.com/medias/2o1ljwdrqi)
+
+  * [📹 Code Review: CSS Variables & Selectors!](https://2u-20.wistia.com/medias/91xb80z88j)
+
 ### Git Guide
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
