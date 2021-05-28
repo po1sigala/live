@@ -1,870 +1,1255 @@
-# 9.2 - Intro to Mongoose and IndexedDb (10:00 AM)
+# 09.2 Full-Time Lesson Plan: Functional Programming in JavaScript
 
 ## Overview
 
-In the class, you will introduce students to Mongoose, a node package that provides a schema-based solution to model your Node application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
-
-This lesson also introduces The Indexed Database API, commonly referred to as IndexedDB. IndexedDB is a JavaScript API provided by web browsers for managing a NoSQL database of JSON objects. 
+In today's class, students will take a dive deep into how JavaScript executes. They will start off with factory functions. Then they will learn about the difference between inheritance and a composition-based approach to designing an application. Students will be introduced to a new way to delegate events by using closures. Then the lesson diverges from the JavaScript-specific topics and introduces students to algorithms that they're likely to encounter during a technical interview. 
 
 ## Instructor Notes
 
-* Complete activities `12-25` in `17-NoSQL`
+* In this lesson, students will complete activities `15-Ins_Factory-Functions` through `27-Evr_Shell`.
 
-* When moving on to new activities, make sure you refresh and or delete your database in IndexedDB. If you are not seeing changes to your database this will fix it.
+* Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* If students question why they are learning IndexedDB, let them know that the web is moving away from traditional cookies and into client side storage solutions such as IndexedDB. It gives them the ability to have offline mode for their applications which they will be learning more about in the following unit.
+* This class deals with some abstract topics, so it's important to start a dialogue and keep the conversation going so that students can better grasp these topics and feel comfortable asking questions.
+
+* Closures are a large part of the day's activities. If you are feeling a little unsure about them, take some time to become more familiar with them before class.
+
+* The `17-Ins_Factory-Vs-Constructor` demo might take longer than five minutes, but the previous and subsequent activities should take less time. It's important to take the time to talk about the code while live-coding the demo for this particular activity.
+
+* We will use jest in a couple of the activities, so make sure students use `npm test` when prompted.
+
+* Because [Big O notation](https://www.bigocheatsheet.com/) is difficult to explain in an activity, spend some time after each algorithm review to help students visualize the differences in time complexities and performance.
+
+* If students struggle with the `Everyone Do: Shell` activity, walk them through it using the talking points provided. Otherwise, support the students as they do the activity and briefly review it at the end. They might not be able to finish, and that's okay!
+
+* **Important:** Remind students to have MongoDB installed before coming to the next class! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* Create custom methods in Mongoose to set and update data purely on the back end.
+* Explain the lexical environment.
 
-* Utilize Mongoose's populate method to create relationships between the collections in their database.
+* Identify encapsulated variables.
 
-* Explain the pros and cons of storing client side data with cookies and IndexedDB.
+* Create a factory function.
 
-* Request an IndexedDB instance.
+* Distinguish the difference between inheritance and composition design.
 
-* Create an object store and add data with the `add` method.
+* Implement a linear search algorithm.
 
-* Search for an item by keyPath with the `get` method.
+* Use recursion to solve a Fibonacci sequence algorithm.
 
-* Create and search by index with the `getAll` method.
+* Implement a binary search algorithm and know when to use it over a linear search algorithm.
 
-* Utilize Cursors to iterate through and update object store data with the `update` method.
-
-## Slides
-
-N/A
+* Write shell scripts to be executed from the command line.
 
 ## Time Tracker
 
-[09.2: Intro To Mongoose Time Tracker](https://docs.google.com/spreadsheets/d/1XXPSsxHbSJbndGAqtCeGW6iSeJdwqsDgra0pk8QlxcU/edit#gid=0)
+| Start  | #   | Activity Name                                        | Duration |
+|---     |---  |---                                                   |---       |
+| 10:00AM| 1   | Instructor Demo: Factory Functions                   | 0:05     |
+| 10:05AM| 2   | Student Do: Factory Functions                        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Factory Functions                 | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Constructor vs. Factory functions   | 0:05     |
+| 10:35AM| 5   | Student Do: Constructor vs. Factory functions        | 0:15     |
+| 10:50AM| 6   | Instructor Review: Constructor vs. Factory functions | 0:10     |
+| 11:00AM| 7   | Instructor Demo: Event Delegation and Handling       | 0:05     |
+| 11:05AM| 8   | Student Do: Event Delegation and Handling            | 0:15     |
+| 11:20AM| 9   | Instructor Review: Event Delegation and Handling     | 0:10     |
+| 11:30AM| 10  | FLEX                                                 | 0:30     |
+| 12:00PM| 11  | BREAK                                                | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity                       | 0:10     |
+| 12:40PM| 13  | Instructor Demo: Linear Search                       | 0:05     |
+| 12:45PM| 14  | Student Do: Linear Search                            | 0:15     |
+| 1:00PM | 15  | Instructor Review: Linear Search                     | 0:10     |
+| 1:10PM | 16  | Instructor Demo: Recursion                           | 0:05     |
+| 1:15PM | 17  | Student Do: Recursion                                | 0:15     |
+| 1:30PM | 18  | Instructor Review: Recursion                         | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Binary Search                       | 0:05     |
+| 1:45PM | 20  | Student Do: Binary Search                            | 0:15     |
+| 2:00PM | 21  | Instructor Review: Binary Search                     | 0:10     |
+| 2:10PM | 22  | Everyone Do: Shell Scripts                           | 0:20     |
+| 2:30PM | 23  | END                                                  | 0:00     |
 
-- - - 
+---
 
 ## Class Instruction
 
-### 1. Instructor Do: Custom Methods (10 mins)
-
-* Use the prompts and talking points below to demonstrate the following Mongoose key point(s):
-
-  * ✔ Mongoose provides a way for us to create custom methods to manipulate our data.
-
-* Change into [12-Ins-Custom-Methods](../../../../01-Class-Content/17-noSQL/01-Activities/12-Ins-Custom-Methods) and run `npm install` then `node server.js` to launch the app.
-
-* Visit `localhost:3000` and fill out the form to create a new user and demo the response.
-
-  ```js
-  {
-    "isCool": true,
-    "_id": "5cfbbd607de1a557eeaaa056",
-    "username": "test...the Coolest!",
-    "password": "password1234",
-    "email": "testuser@gmail.com",
-    "userCreated": "2019-06-08T13:51:28.033Z",
-    "__v": 0
-  }
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What is difference about the way our data was returned?
-
-  * 🙋 Our new user has an `isCool` field that is set to `true`.
-
-* Open [12-Ins-Custom-Methods/userModel.js](../../../../01-Class-Content/17-noSQL/01-Activities/12-Ins-Custom-Methods/userModel.js) and scroll down to the custom methods.
-
-* Here 
-
-  ```js
-  UserSchema.methods.coolifier = function() {
-    this.username = `${this.username}...the Coolest!`;
-    return this.username;
-  };
-
-  UserSchema.methods.makeCool = function() {
-    this.isCool = true;
-    return this.isCool;
-  };
-  ```
-
-* Next open `server.js` and demonstrate how we are calling our methods on our new user.
-
-  ```js
-  app.post("/submit", ({ body }, res) => {
-    const user = new User(body);
-    user.coolifier(); // Bob...the Coolest!
-    user.makeCool(); // isCool = true;
-
-    User.create(user)
-      .then(dbUser => {
-        res.json(dbUser);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-  });
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What are the benefits of using Mongoose?
-
-  * 🙋 It let's use create a schema, enforce validations and overall make it easier to interface with a Mongoose database.
-
-* Take any clarifying questions before moving on to the students activity.
-
-### 2. Student Do: Custom Methods (15 mins)
-
-* Direct students to the next activity located in [13-Stu-Custom-Methods/Unsolved](../../../../01-Class-Content/17-noSQL/01-Activities/13-Stu-Custom-Methods/Unsolved)
-
-* **Instructions**
-
-* Open `userModel.js` and create the following custom methods.
-
-  * `setFullName`: sets the current user's `fullName` property to their lastName appended to their `firstName`
-
-  * `lastUpdatedDate`: sets the current user's `lastUpdated` property to `Date.now()`
-
-* When you are finished use your new custom methods in a `POST` request.
-
-### 3. Instructor Do: Review Methods (10 mins)
-
-* Change into [13-Stu-Custom-Methods/Solved](../../../../01-Class-Content/17-noSQL/01-Activities/13-Stu-Custom-Methods/Solved) and open the `userModel.js` file.
-
-* Ask for a volunteer to lead your through the custom methods they created.
-
-* Next open `server.js` and ask for a volunteer to explain how to call these new methods in that file.
-
-* Start the server and load up the site in your browser to demonstrate the form. 
-
-* Take any clarifying questions before moving on.
-
-### 4. Instructor Do: Mongoose Populate (10 mins)
-
-* Change into [14-Ins-Populate](../../../../01-Class-Content/17-noSQL/01-Activities/14-Ins-Populate) and start the server with `node server.js`. 
-
-* Then, visit `/books` to see your books listed.
-
-```js
-[{
-    "_id": "5cfbc820bc851f678c714b2c",
-    "author": "Herman Melville",
-    "title": "Moby Dick",
-    "__v": 0
-}, {
-    "_id": "5cfbc83ebc851f678c714b2d",
-    "author": "F. Scott Fitzgerald",
-    "title": "The Great Gatsby",
-    "__v": 0
-}]
-```
-
-* Then visit `/library` to see your library data listed in JSON, including a list of `ObjectIds` in the book property. These are the `ObjectIds` associated with each book we've made.
-
-```js
-[{
-    "books": ["5cfbc510fff60b62b1a9c318", 
-              "5cfbc51cfff60b62b1a9c319", 
-              "5cfbc820bc851f678c714b2c", 
-              "5cfbc83ebc851f678c714b2d"],
-    "_id": "5cfbc29cfff60b62b1a9c317",
-    "name": "Campus Library",
-    "__v": 0
-}]
-```
-
-* Ask students, what if we want to see the data for all of the books stored in our library. We could go back to books, but what if we want to include all of the information about our library and our books, and query that data with just one call.
-
-  * Answer: This is where `Mongoose`'s populate method comes in. Open the `/populated` route in your browser, and go to the books property. All of the books will be there.
-
-  ```js
-  [{
-      "books": [{
-          "_id": "5cfbc820bc851f678c714b2c",
-          "author": "Herman Melville",
-          "title": "Moby Dick",
-          "__v": 0
-      }, {
-          "_id": "5cfbc83ebc851f678c714b2d",
-          "author": "F. Scott Fitzgerald",
-          "title": "The Great Gatsby",
-          "__v": 0
-      }],
-      "_id": "5cfbc29cfff60b62b1a9c317",
-      "name": "Campus Library",
-      "__v": 0
-  }] 
-  ```
-
-* How does this happen?
-
-  * Show them the `Library.js` model, and how it has a reference to the `Book.js` model inside it's schema.
-
-    ```js
-    const mongoose = require("mongoose");
-
-    const Schema = mongoose.Schema;
-
-    const LibrarySchema = new Schema({
-      name: {
-        type: String,
-        unique: true
-      },
-      books: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: "Book"
-        }
-      ]
-    });
-
-    const Library = mongoose.model("Library", LibrarySchema);
-
-    module.exports = Library;
-    ```
-
-  * Then show them the `index.js` file inside of the `models` folder.
-
-    ```js
-    module.exports = {
-    Book: require("./Book"),
-    Library: require("./Library")
-    };
-    ```
-
-  * Explain that when working with multiple models, it's often useful to be able to require all of them at once, rather than individually. 
-  
-  * By exporting an object containing all of our models from the `index.js` file in the models folder, we can then require this object and access all of our models inside of `server.js`.
-
-    ```js
-    const db = require("./models");
-    ```
-
-  * Point out the `populate` method being used in `server.js`.
-
-    ```js
-    app.get("/populated", (req, res) => {
-    db.Library.find({})
-      .populate("books")
-      .then(dbLibrary => {
-        res.json(dbLibrary);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-    });
-    ```
-
-  * Explain that here we are running `populate("books")` after finding books and before handling the result of the query in `.then`.
-
-  * Take any clarifying questions before moving on to the next activity.
-
-### 5. Student Do: Mongoose Populate (20 mins)
-
-* Direct students towards the next activity located in [15-Stu-Populate/Unsolved](../../../../01-Class-Content/17-noSQL/01-Activities/15-Stu-Populate/Unsolved)
-
-* **Instructions**
-
-  * Open `server.js` and update the `/populate` route to return `Users` populated with notes as JSON to the client.
-
-* **Hint:** Check out the `Note.js` and `User.js` models to see how the schemas there make the populate method possible.
-
-### 6. Instructor Do: Review Mongoose Populate (15 mins)
-
-* Open up [15-Stu-Populate/Solved/server.js](../../../../01-Class-Content/17-noSQL/01-Activities/15-Stu-Populate/Solved/server.js).
-
-* Ask for a volunteer to to walk you through the solution.
-
-```js
-app.get("/populateduser", (req, res) => {
-  db.User.find({})
-    .populate("notes")
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-});
-```
-
-### 7. Instructor Do: Review MongoJS and Mongoose (35 mins)
-
-*  Take some time before the break to answer any clarifying questions about the previous activity or any other concepts covered so far in Unit 17.
-
-### 8. Break (30 mins)
-
-### 9. Instructor Do: Intro To IndexedDB (10 mins)
+### 1. Instructor Demo: Factory Functions (5 min) 
 
 * Welcome students to class.
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* Open `15-Ins_Factory-Functions/index.js` in your IDE and explain the following:
 
-  * ☝️ How do we store data client-side? 
+  * We create a function that accepts three arguments: `name`, `age`, and `city`.
 
-  * 🙋 Cookies, local storage, session storage.
+    ```js
+    function createUser(name, age, city) {
+      // Code...
+    }
+    ```
 
-  * ☝️ What is a cookie?
+  * Factory functions are similar to JavaScript classes.
 
-  * 🙋 A cookie is a small piece of data sent from a website and stored on the user's computer by the user's web browser.
+  * 🔑 Instead of using a `constructor()` and binding the arguments to `this`, we create an object inside the function that holds our arguments.
 
-  * ☝️ What are some of the issues we encounter storing data client-side? 
+  * 🔑 Because we don't have a `constructor()` function, `this` refers to the parent object.
 
-  * 🙋 String value pairs, objects must be stringified and strings must be converted to JSON. Size limits.
-
-  * ☝️ From the name, what do we think IndexedDB is?
-
-  * 🙋 The Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
-
-### 10. Instructor Do: Creating an IndexedDB Connection (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We access `indexedDB` via the `window` object.
-
-  * ✔ We create a new IndexedDB connection using the `open` method and pass it a name for the DB and a version number.
-
-  * ✔ Our request returns a result that we can then manipulate.
-
-  ```js
-  const request = indexedDB.open("firstDatabase", 1);
-  
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Open [16-Ins_Opening_IndexedDB](../../../../01-Class-Content/17-nosql/01-Activities/16-Ins_Opening_IndexedDB/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![16-Ins_Opening_IndexedDB.png](Images/16-Ins_Opening_IndexedDB.png)
-
-* Navigate into the `16-Ins_Opening_IndexedDB` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `firstDatabase`.
-
-* Ask the class the following question(s): 
-
-  * ☝️ How many arguments does the `open` method take and what are they for?
-
-  * 🙋 Two and the first one is the DB name, the second is the version number. The version number controls which version of the schema to use.
-
-### 11. Student Do: Creating an IndexedDB Connection (10 mins)
-
-* Direct students to the activity instructions found in [17-Stu_Opening_IndexedDB](../../../../01-Class-Content/17-nosql/01-Activities/17-Stu_Opening_IndexedDB/Unsolved):
-
-```md
-# Requesting an IndexedDB Database
-
-In this activity, you will create a request for an indexedDB database and console.log the name of the db to the screen. 
-
-## Instructions
-
-* Write code to request an IndexedDB database instance.
-
-* On success, log the name of the database to your console.
-
-## 💡 Hint(s)
-
-* Use the [indexedDB open docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
-
-* You can `console.log` the `request` to so what attributes are available to you.
-
-## 🏆 Bonus
-
-* How can we check that indexedDB is enabled before trying to open a connection? Use the following link to research and update your solution [Using IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
-
-```
-
-### 12. Instructor Do: Review Creating an IndexedDB Connection (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * ✔ In the `onsuccess` method we `console.log(request.result.name);` 
-
-  ✔ The `onsuccess` method is called every time we make a request.
-
-* Open [17-Stu_Opening_IndexedDB](../../../../01-Class-Content/17-nosql/01-Activities/17-Stu_Opening_IndexedDB/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * In the `onsuccess` method we `console.log` the `name` of the `result`, which is the database name.
-
-  ```js
-  const request = window.indexedDB.open("firstDatabase", 1);
-    request.onsuccess = event => {
-    console.log(request.result.name);
-  };
-  ```
-
-  * 🔑 Our `open` method takes two arguments, first the db name and then the version number. 
-
-* Ask the class the following question(s):
-
-  * ☝️ What happens when we call `open` on `indexedDB`?
-
-  * 🙋 The call to the `open()` method returns a request object with a `result` (success) value that you handle as an event. 
-
-* Answer any questions before proceeding to the next demo.
-
-### 13. Instructor Do: Creating Object Stores (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ Object stores can be thought of as a "table" where we hold data.
-
-  * ✔ Object stores can hold any data type.
-
-  * ✔ Object stores are schema-less, unlike SQL databases.
-
-  * ✔ We create our object stores in the `onupgradeneeded` method which is called when you change the db version. ie: From no database to 1, from 1 to 2 etc.
-
-  * ✔ If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered.
-
-*  Open [18-Ins_Creating_Object_Stores](../../../../01-Class-Content/17-nosql/01-Activities/18-Ins_Creating_Object_Stores/index.html) in your IDE and explain the above points.
-
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  
-  request.onupgradeneeded = function(event) {
-    const db = event.target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
-
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Next open [18-Ins_Creating_Object_Stores](../../../../01-Class-Content/17-nosql/01-Activities/18-Ins_Creating_Object_Stores/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![18-Ins_Creating_Object_Stores.png](Images/18-Ins_Creating_Object_Stores.png)
-
-* We navigate into the `20-Ins_Creating_Object_Stores` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
-
-* When we click on the database tab, we can see that we now have an empty object store called `todoList`.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is an object store?
-
-  * 🙋 It's similar to an SQL table and where we store data in IndexedDB.
-
-  * ☝️ What is the main difference between an object store and an SQL table?
-
-  * 🙋 Object stores do not have schemas.
-
-### 14. Student Do: Create an Object Store (15 mins)
-
-* Direct students to the activity instructions found in [19-Stu_Creating_Object_Stores](../../../../01-Class-Content/17-nosql/01-Activities/19-Stu_Creating_Object_Stores/Unsolved):
-
-```md
-# Creating an Object Store
-
-In this activity, you will create an object store for your IndexedDB database.
-
-## Instructions
-
-* Write code to request an IndexedDB database instance.
-
-* On success, log the result to your console.
-
-* Inside the `onupgradeneeded` method, create an object store for you database called `todoList`.
-
-## 💡 Hint(s)
-
-* Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
-
-* You can `console.log` the `request` to so what attributes are available to you.
-
-## 🏆 Bonus
-
-* Use the [keyPath](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath) docs to research what a `keyPath` is and how to add it to your `objectStore`.
-```
-
-### 15. Instructor Do: Review Creating Object Stores (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We create the object store in the `onupgradeneeded` method.
-
-* Open [19-Stu_Creating_Object_Stores](../../../../01-Class-Content/17-nosql/01-Activities/19-Stu_Creating_Object_Stores/Solved/index.html) in your IDE and review the code snippet.
-
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-    
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
-  ```
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Ask the class the following question(s):
-
-  * ☝️ What do we use object stores for? 
-
-  * 🙋 To store our indexedDB data.
-
-* Answer any questions before proceeding to the next demo.
-
-### 16. Instructor Do: Defining Object Store Data with Indexes (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ Object stores are schema-less and have no native search capability.
-
-  * ✔ We create indexes on object store "columns" so we can query.
-
-  * ✔ We use the `createIndex(indexName, keyPath)` method to create indexes, it takes two arguments.
-
-  * ✔ The `indexName` is what you use to access the index when querying.
-
-  * ✔ The `keyPath` is the actual name of the "column."
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Open [20-Ins_Creating_Indexes](../../../../01-Class-Content/17-nosql/01-Activities/20-Ins_Creating_Indexes/index.html) in your IDE and review the code snippet.
-
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("timestamp", "timestamp");
-  };
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Open [20-Ins_Creating_Indexes](../../../../01-Class-Content/17-nosql/01-Activities/20-Ins_Creating_Indexes/index.html) in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![20-Ins_Creating_Indexes.png](Images/20-Ins_Creating_Indexes.png)
-
-  * We navigate into the `22-Ins_Creating_Indexes` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
-
-  * When we click on the database tab, we can see that we now have an empty object store called `todoList`. Inside our `todoList` object store we now have a `timestamp` index that we can use to query on.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What are indexes for?
-
-  * 🙋 They are used to query on object store "columns" since they have no way to natively search.
-
-### 17. Student Do: Defining Object Store Data with Indexes (10 mins)
-
-* Direct students to the activity instructions found in [21-Stu_Creating_Indexes](../../../../01-Class-Content/17-nosql/01-Activities/21-Stu_Creating_Indexes/Unsolved):
-
-```md
-# Creating Indexes
-
-In this activity, you will create an index on your object store that can be used to query data.
-
-## Instructions
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Write code to request an IndexedDB database instance.
-
-* On success, log the result to your console.
-
-* Inside the `onupgradeneeded` method, create an object store for you database called `todoList`. 
-
-* Next, create three indexes for your ToDoList called `icebox`, `inprogress` and `complete`. 
-
-## 💡 Hint(s)
-
-* Use the [createIndex](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex) docs if you are stuck.
-
-## 🏆 Bonus
-
-* The `createObjectStore` method takes an optional `keyPath`. Using the [docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore), update your code to pass the `keyPath` option when your store is created.
-```
-
-### 18. Instructor Do: Review Defining Object Store Data with Indexes (5 mins)
-
-* Open [21-Stu_Creating_Indexes](../../../../01-Class-Content/17-nosql/01-Activities/21-Stu_Creating_Indexes/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We simply call the `createIndex` method on our object store and create three new indexes, giving each of them an `indexName` and `keyPath`.
-
-  ```js
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("icebox", "icebox");
-    objectStore.createIndex("inprogress", "inprogress");
-    objectStore.createIndex("complete", "complete");
-  };
-  ```
-
-  * 🔑 Recall that the `indexName` is what you use to access the index and the `keyPath` is the actual name of the "column."
-
-* Answer any questions before proceeding to the next demo.
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-### 19. Instructor Do: Adding and Getting Object Store Data (5 mins)
-  
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We add data to our object stores with the `add` method.
-
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
-
-  * ✔ We use `get` object store method to query by `keyPath`.
-
-  * ✔ We use the `getAll` object store method to query by indexes.
-
-* Open [22-Ins_Adding_Getting_Data](../../../../01-Class-Content/17-nosql/01-Activities/22-Ins_Adding_Getting_Data/index.html) in your IDE and review the following code.
-
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", { keyPath: "listID" }); // can now query by listID
-    todoListStore.createIndex("statusIndex", "status"); // can now query by statusIndex
-  }
-
-  todoListStore.add({ listID: "1", status: "complete" }); // adding data
-
-  const getRequest = todoListStore.get("1"); // querying by keyPath
-  const getRequestIdx = statusIndex.getAll("complete"); // querying by index
-
-  ```
-
-* Open [22-Ins_Adding_Getting_Data](../../../../01-Class-Content/17-nosql/01-Activities/22-Ins_Adding_Getting_Data/index.html) in your browser and open your Chrome Developer tools and navigate to your console.
-
-  ![22-Ins_Adding_Getting_Data](Images/22-Ins_Adding_Getting_Data.png)
-
-  * We navigate into the `22-Ins_Adding_Getting_Data` directory and open `index.html` from the command line. When we click on the database tab, we can see that we now have data in our `todoList` object store.
-
-* Next open your developer tools console to show the data being returned from our `get` and `getAll` methods.
-
-  ![22-Ins_Adding_Getting_Data-console](Images/22-Ins_Adding_Getting_Data-console.png)
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is a keyPath?
-
-  * 🙋 A keyPath gives us a way to query our column's data.
-
-  * ☝️ What is an index?
-
-  * 🙋 An index is another way to more efficiently and specifically query for data.
-
-### 20. Student Do: Adding and Getting Object Store Data (15 mins)
-
-* Direct students to the activity instructions found in [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/17-nosql/01-Activities/23-Stu_Adding_Getting_Data/Unsolved):
-
-```md
-# Adding and Getting Data
-
-In this activity, you will create add and retrieve data from an objectStore using a keyPath and index.
-
-## Instructions
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* In the `onupgradeneeded` method: 
-
-  * Create a `todoList` object store with a `listID` keyPath that can be used to query on.
-
-  * Create an index for a "column" you'd like to query on. ie: due-date
-
-* In the `onsuccess` method:
-
-  * Create variables for a new `transaction` on your database, `objectStore` and the `index` you created.
-
-  * Add four new items to your object store with the `add` method.
-
-  * Using the `get` method, return an item from your object store.
-
-  * Using the `getAll` method, query by index and return all items.
-
-## 💡 Hint(s)
-
-* Use the following docs if you are stuck.
-
-  * [add](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add) 
-
-  * [get](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get)
-
-  * [getAll](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll)
-
-## 🏆 Bonus
-
-* Make a new request that removes all of your data from the object store. Use [the clear docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/clear) as your guide.
-```
-
-### 21. Instructor Do: Review Adding and Getting Object Store Data (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-  
-  * ✔ We add data to our object stores with the `add` method.
-
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
-
-  * ✔ We use `get` object store method to query by `keyPath`.
-
-  * ✔ We use the `getAll` object store method to query by indexes.
-
-* Open [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/17-nosql/01-Activities/23-Stu_Adding_Getting_Data/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We first create an object store and pass it the optional `keyPath` argument of `listID` that we can use to query with.
-  
-  * We then create an index on our `todoListStore` with `createIndex`, passing it an `index` of `statusIndex` and a `keyPath` of `status`.
-  
-  * We then simply use the `add` method to add records to our object store.
-
-  * Next, we make a get request to our object store using the `get` method, which queries by `keyPath`.
-
-  * Finally we make another get request with `getAll` and query by our `index`.
-
-* Open [23-Stu_Adding_Getting_Data](../../../../01-Class-Content/17-nosql/01-Activities/23-Stu_Adding_Getting_Data/index.html) in your IDE and review the following code.
-
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", {keyPath: "listID"}); 
-    todoListStore.createIndex("statusIndex", "status"); 
-  }
-
-  todoListStore.add({ listID: "1", status: "complete" }); 
-
-  const getRequest = todoListStore.get("1"); 
-  const getRequestIdx = statusIndex.getAll("complete"); 
-
-  ```
-
-  * 🔑 Querying by `index` is more efficient than by `keyPath`. When creating a schema, if you know the data you will be searching for most often, creating an `index` for that data is ideal.
-
-* Ask the class the following question(s):
-
-  * ☝️ When querying with the `getAll` method, what argument do you pass it?
-
-  * 🙋 The value of the index you want returned.
-
-* Answer any questions before proceeding to the next demo.
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-### 22. Instructor Do: Updating Data With Cursors (5 mins)
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We open a cursor request on our object store with `openCursor`.
-
-  * ✔ On success we have a result that we can iterate through.
-
-  * ✔ We use the `continue` key word to move through the records.
-
-* Open [24-Ins_Updating_Data_With_Cursors](../../../../01-Class-Content/17-nosql/01-Activities/24-Ins_Updating_Data_With_Cursors/index.html) in your IDE and review the following code.
-
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-      if (cursor) {
-        console.log(cursor.value);
-        cursor.continue();
-      } else {
-        console.log("No documents left!");
+    ```js
+    function createUser(name, age, city) {
+      let user = {
+        name: name,
+        age: age,
+        city: city
       }
-    };
-  ```
+    }
+    ```
 
-* Open [24-Ins_Updating_Data_With_Cursors](../../../../01-Class-Content/17-nosql/01-Activities/24-Ins_Updating_Data_With_Cursors/index.html) in your browser and open your Chrome Developer tools and navigate to your console.
+  * 🔑 Factory functions use closures to encapsulate variables, making it difficult to mutate the data from outside of the function scope.
 
-   ![24-Ins_Updating_Data_With_Cursors](Images/24-Ins_Updating_Data_With_Cursors.png)
+  * For us to leverage closures, we need to return an object with a method inside of it. We return two, `introduceSelf()` and `location()`.
 
-  * We navigate into the `24-Ins_Updating_Data_With_Cursors` directory and open `index.html` from the command line. Next open your Chrome Developer tools and navigate into the console to see the data being returned.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is a cursor used for?
-
-  * 🙋 It gives us a way to iterate through our object stores files.
-
-### 23. Student Do: Updating Data With Cursors (15 mins)
-
-* Direct students to the activity instructions found in [25-Stu_Updating_Data_With_Cursors](../../../../01-Class-Content/17-nosql/01-Activities/25-Stu_Updating_Data_With_Cursors/Unsolved):
-
-```md
-# Updating Data With Cursors
-
-In this activity, you will be updating records in your object store using a Cursor.
-
-## Instructions
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Inside ` getCursorRequest.onsuccess`
-
-  * Set the `result` to a variable named `cursor`.
-
-  * Check the status of each cursor's value and if it's equal to "in-progress", set the status to "complete".
-
-## 💡 Hint(s)
-
-* Use the [cursor docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor), specifically `cursor.value`, `cursor.update` and `cursor.continue` to solve the activity.
-
-## 🏆 Bonus
-
-* Make a new request that removes any tasks with the status "backlog" from the object store. Use [the delete docs](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete) as your guide.
-```
-
-### 24. Instructor Do: Review Updating Data With Cursors (5 mins)
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We open a cursor request on our object store with `openCursor`.
-
-  * ✔ On success we have a result that we can iterate through.
-
-  * ✔ We use the `continue` key word to move through the records.
-
-* Open [25-Stu_Updating_Data_With_Cursors](../../../../01-Class-Content/17-nosql/01-Activities/25-Stu_Updating_Data_With_Cursors/Solved/index.html) in your IDE and explain the following point(s):
-
-  * We first open a cursor on our object store with `openCursor()`.
-
-  * Then in our `onsuccess` method we check to see if our cursor has any data in it.
-
-  * If it does, we check the status of each cursor's value and if it's equal to "in-progress" we set the status to "complete" with the `update` method.
-
-  * We then call `continue` to move to the next record, until there are none left to evaluate.
-
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-        if (cursor) {
-          if (cursor.value.status === "in-progress") {
-            const todo = cursor.value;
-            todo.status = "complete";
-             cursor.update(todo);
-          }
-          cursor.continue();
+    ```js
+    function createUser(name, age, city) {
+      let user = {
+        name: name,
+        age: age,
+        city: city
+      }
+      return {
+        introduceSelf: function() {
+          // Code...
+        },
+        location: function() {
+          // Code...
         }
-      };
+      }
+    }
+    ```
+
+  * Inside both of the methods, we `console.log` the user using the object we created with dot notation instead of `this`.
+
+    ```js
+    function createUser(name, age, city) {
+      let user = {
+        name: name,
+        age: age,
+        city: city
+      }
+      return {
+        introduceSelf: function() {
+          return console.log(`Hi my name is ${user.name} and I am currently ${user.age} years old!`)
+        },
+        location: function() {
+          return console.log(`${user.name} is located in ${user.city}`)
+        }
+      }
+    }
+    ```
+
+  * 🔑 This is similar to JavaScript classes except that we no longer need the `new` keyword; instead, we use the `createUser` factory function to create a user.
+
+    ```js
+    const userOne = createUser('Beverly', 58, 'Phoenix')
+    ```
+
+* Run `node index.js` from the command line and demonstrate the following:
+  
+  * As we can see, the new user we created works as expected, without using a JavaScript class.
+
+  * 🔑 The new user has a reference to the `createUser` function which has the data we want encapsulated in it.
+
+  * All of this is done using closures.
+
+    ```
+    Hi my name is Beverly and I am currently 58 years old!
+    Beverly is located in Phoenix
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Inside a factory function, what does `this` refer to?
+
+  * 🙋 The parent object.
+
+  * ☝️ Do we need to use the `new` keyword with factory functions?
+
+  * 🙋 No, we can forgo it entirely. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Factory-Functions/README.md`.
+
+### 2. Student Do: Factory Functions (15 min) 
+
+* Direct students to the activity instructions found in `16-Stu_Factory-Functions/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Factory Function Returns Undefined Values When the Inner Function Is Called
+
+  Work with a partner to resolve the following issue(s):
+
+  * As a developer, I want the inner function of my factory function to correctly log the variables when called.
+
+  ## Expected Behavior
+
+  When a user calls the `greet` method on the `Student` function, the values should be correctly displayed in the console.
+
+  ## Actual Behavior
+
+  When a user calls the `greet` method on the `Student` function, they see undefined values instead of the `name` and `gradeYear`.
+  
+  ## Steps to Reproduce the Problem
+
+  1. Create a new student variable and assign it to the `Student` function. 
+
+  2. Call the `greet` method on the newly created student variable.
+
+  3. Check the console to see undefined values.
+
+  4. Run `npm test` to check if all unit test pass.
+
+  ## 💡 Hints
+
+  What is the context of `this` when inside a factory function? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Is the `new` keyword required when using a factory function? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Ask the class the following question(s):
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * ☝️ What does the `continue` method do?
+### 3. Instructor Review: Factory Functions (10 min) 
 
-  * 🙋 Continues to the next record, exiting when there are none left.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Answer any questions before proceeding to the next demo.
+  * ☝️ How comfortable do you feel with factory functions? (Poll via Fist to Five, Slack, or Zoom)
 
-### 25. End
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### Lesson Plan Feedback
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * ✔️ Factory functions
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * ✔️ `new`
+
+  * ✔️ `this`
+
+* Open `16-Stu_Factory-Functions/Solved/index.js` in your IDE and explain the following: 
+
+  * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `student`.
+
+    ```js
+    function Student(name, gradeYear) {
+      let student = {
+        name: name,
+        gradeYear: gradeYear,
+      };
+    }
+    ```
+
+  * Remember, `this` is being bound to the parent object instead of the new one being created.
+
+  * 🔑 If we want to access the `name` and `gradeYear`, we must use the student object we stored it in.
+
+    ```js
+    function Student(name, gradeYear) {
+      let student = {
+        name: name,
+        gradeYear: gradeYear,
+      };
+      return {
+        greet: function () {
+          console.log(
+            `My name is ${student.name} and I am in ${student.gradeYear} grade`
+          );
+        },
+      };
+    }
+    ```
+
+  * 🔑 Now we create a new student with the `Student` factory function without using the `new` keyword.
+
+    ```js
+    const newStudent = Student('Dominique', '11th');
+    ```
+    
+  * If we type `npm test` in the command line, we should see the following:
+
+    ```bash
+    Test Suites: 1 passed, 1 total
+    Tests:       4 passed, 4 total
+    Snapshots:   0 total
+    Time:        1.924 s
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Do we use a `constructor()` function inside a factory function?
+
+  * 🙋 No.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 4. Instructor Demo: Factory vs. Constructor (5 min) 
+
+* Open `17-Ins_Factory-Vs-Constructor/constructor.js` in your IDE and explain the following:
+
+  * Now we'll step back and look at how we've been creating classes in JavaScript so far.
+
+  * This application will have a simple `Device` class and a `Phone` class that `extends` from it.
+
+    ```js
+    class Device {
+      constructor(name){
+        this.name = name
+      }
+      takePicture() {
+        console.log(`Taking picture with ${this.name}`)
+      }
+    }
+
+    class Phone extends Device {
+      constructor(name, ringTone) {
+        super(name) 
+        this.ringTone = ringTone
+      }
+      call() {
+        console.log(`Phone: ${this.ringTone}`)
+      }
+    }
+    ```
+
+  * Now we have a basic class tree. The `Phone` can `call`, and it inherits the `takePicture` method from the `Device` class.
+
+    ```js
+    const nokia = new Phone('Nokia', 'ring')
+    nokia.call()
+    nokia.takePicture()
+    console.log(nokia)
+    ```
+
+  * If we run this in Node.js, we can see that it is working like we expected.
+
+    ```
+    Phone: ring
+    Taking picture with Nokia
+    ```
+
+  * Next, we'll have a quick refresher on how the prototype chain works with classes by inspecting the `Nokia` variable we created.
+
+  * 🔑 By looking at the `__proto__` object, we can see the reference to the `Device`, which holds the `takePicture` method that the `Phone` class inherits.
+
+    ```
+    Phone {name: "Nokia", ringTone: "ring"}
+      name: "Nokia"
+      ringTone: "ring"
+      __proto__: Device
+        call: ƒ call()
+        constructor: class Phone
+        __proto__:
+          constructor: class Device
+          takePicture: ƒ takePicture()
+          __proto__: Object
+    ```
+
+  * In this application, we create two more classes: `Appliance` and `Dryer`, which extends from `Appliance`.
+
+  * Like earlier, they each have a method and some type of data stored.
+
+    ```js
+    class Appliance {
+      constructor(noise){
+        this.noise = noise
+      }
+      makeNoise() {
+        console.log(this.noise)
+      }
+    }
+
+    class Dryer extends Appliance {
+      constructor(noise) {
+        super(noise)
+      }
+      dry() {
+        console.log(`Dryer is on: ${this.noise}`);
+      }
+    }
+    ``` 
+
+  * The `Phone` class inherits from the `Device` class, and the `Dryer` class inherits from the `Appliance` class.
+  
+  * With the current class hierarchy, it would be difficult to create an `Appliance` that could make a `call` without rewriting the `call` method.
+
+  * 🔑 Having to rewrite logic violates the DRY (Don't Repeat Yourself) principle of programming.
+
+  * 🔑 This can quickly get out of control if we decide to make additional changes similar to this one.
+
+* Open `17-Ins_Factory-Vs-Constructor/factory-functions.js` in your IDE and explain the following:
+
+  * Let's look at how we can take a composition-based approach with factory functions.
+
+  * 🔑 We create factory functions that accept `state` as an argument and return a method that uses the information provided through the `state`.
+
+  * We can think of state as an object that stores information that the function needs.
+    
+    ```js
+    const phoneCall = (state) => ({
+      call: () => console.log(`${state.name}'s Phone: ${state.ringTone}`),
+    });
+
+    const makeNoise = (state) => ({
+      noise: () => console.log(state.noise),
+    });
+
+    const drying = (state) => ({
+      dry: () =>
+        console.log(`Finish drying in ${state.timer} minutes. ${state.noise}`),
+    });
+    ```
+
+  * 🔑 Create a function named `Phone` which receives the `name` and `ringTone` that we will store in an object named `state`.
+
+    ```js
+    const Phone = (name, ringTone) => {
+      const state = {
+        name,
+        ringTone
+      };
+    };
+    ```
+
+  * 🔑 Let's return an object, using the `...` operator and the action function, passing in the `state` to it.
+
+    ```js
+    const Phone = (name, ringTone) => {
+      const state = {
+        name,
+        ringTone
+      };
+      return { ...phoneCall(state) };
+    };
+    ```
+
+  * Using the same logic, let's create `Dryer` and `Washer` factory functions.
+
+    ```js
+    const Dryer = (noise, timer) => {
+      const state = {
+        noise,
+        timer
+      };
+      return { ...makeNoise(state), ...drying(state) };
+    };
+
+    const Washer = (name, noise, ringTone) => {
+      const state = {
+        name,
+        noise,
+        ringTone
+      };
+      return { ...makeNoise(state), ...phoneCall(state) };
+    };
+    ```
+
+  * We will test out the new factory functions to see if they work as expected.
+
+    ```js
+    // No need to add the `new` keyword because we are using a factory function.
+    const nokia = Phone('Nokia', 'ring');
+    const decker = Dryer('brshhuhsh', 35);
+    const wPool = Washer('Whirlpool', 'brshhh', 'ring ring from the washer');
+    // Test if the action functions work correctly with the newly created phone.
+    nokia.call();
+    decker.noise();
+    decker.dry();
+    wPool.call();
+    wPool.noise();
+    ```
+
+  * If we run this in Node.js, we can see that it is working as expected.
+
+  * 🔑 With **inheritance**, we design types based on what they are. With **composition**, we design types based on what they do.
+
+    ```
+    Nokia's Phone: ring
+    brshhuhsh
+    Finish drying in 35 minutes. brshhuhsh
+    Whirlpool's Phone: ring ring from the washer
+    brshhh
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens if we want to create an appliance that can make a phone call?
+
+  * 🙋 We would have to make a new `call` method on the `Appliance`.
+
+  * ☝️ What is the difference between inheritance and composition design?
+
+  * 🙋 Inheritance is based on what types are. Composition is based on what types do.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Factory-Vs-Constructor/README.md`.
+
+### 5. Student Do: Factory vs. Constructor (15 min) 
+
+* Direct students to the activity instructions found in `18-Stu_Factory-Vs-Constructor/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Refactor the Lesson Class to a Factory Function
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to move away from an inheritance-based approach and start using a composition-based approach so that my application's tree hierarchy is less rigid.
+
+  * As a teacher, I want to be able to add a new lesson with a title and description to the collection of lessons I can teach.
+
+  ## Acceptance Criteria
+
+  * It's done when the `Lesson` class is a factory function, making the application less rigid in case we decide to add new features.
+
+  * It's done when I can call the `information` method on the `Lesson` function and it correctly logs the private variable.
+
+  ## 💡 Hints
+
+  What scope does your inner function have access to? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the three paradigms of JavaScript? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 6. Instructor Review: Factory vs. Constructor (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with factory functions vs. constructor functions? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Inheritance
+
+  * ✔️ Composition
+
+* Open `18-Stu_Factory-Vs-Constructor/Solved/index.js` in your IDE and explain the following: 
+
+  * Create a function named `lesson` and two variables named `title` and `description`inside an object labeled `state`.
+
+    ```js
+    const lesson = function () {  
+      const state = {
+        title: 'Unit 17 - Computer Science',
+        description: 'CS for JS',
+      };
+    };
+    ```
+
+  * 🔑 Instead of creating a method, we will create a function named `getInformation` that accepts the `state` as an argument.
+
+  * We will return an inner function that logs the `title` and `description`.
+
+    ```js
+    const getInformation = (state) => ({
+      information: () => console.log(state.title, state.description),
+    });
+    ```
+
+  * Inside the `lesson` function, we must return the action function `getInformation`, passing in the `state` object.
+
+    ```js
+    const lesson = function () {  
+      const state = {
+        title: 'Unit 17 - Computer Science',
+        description: 'CS for JS',
+      };
+      return { ...getInformation(state) };
+    };
+    ```
+
+  * 🔑 There is no need to use the `new` keyword with a factory function.
+
+    ```js
+    const csForJS = lesson();
+    csForJS.information();
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Do factory functions use the `extends` keyword?
+
+  * 🙋 No, they don't rely on inheritance.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Wikipedia article on composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 7. Instructor Demo: Event Delegation and Handling (5 min) 
+
+* Open `19-Ins_Event-Delegation-Handling/index.html` in your browser and demonstrate the following:
+
+  *  We should see five buttons, each having the label `clicks` followed by a number keeping track of how many times we click.
+
+  *  If we click a button, we should see its respected value increase.
+
+  *  Each button should track its own value.
+
+* Open `19-Ins_Event-Delegation-Handling/index.html` in your IDE and explain the following: 
+
+  * 🔑 Inside the HTML file, we can see five `<button>` elements inside a `<div>` element with the `id="container"`.
+
+  * Each button has its own `data-count` attribute.
+
+    ```html
+      <body>
+        <div id="container" style="margin: 5px;">
+          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+        </div>
+    <script src="assets/js/script.js"></script>
+    </body>
+    ```
+
+* Open `19-Ins_Event-Delegation-Handling/assets/js/script.js` in your IDE and explain the following: 
+
+  * First we want to select the `container` in which the five buttons are housed.
+
+  * 🔑 Remember that in event delegation, the event listener is attached to the parent element.
+
+  * When a child element is clicked, the event will bubble up the DOM until it reaches the event listener.
+
+    ```js
+    const containerEl = document.getElementById('container');
+    ```
+
+  *  Let's create a function that accepts an `event` for an argument.
+
+  *  Next we parse the `data-count` attribute into a number and store it in a `count` variable.
+
+    ```js
+    const clickHandler = function(event) {
+      let count = parseInt(event.target.getAttribute('data-count'));
+    }
+    ```
+
+  *  We create an `if...` statement that increases the `count` variable by 1 if the `button` element has been clicked.
+
+  *  Finally, we update the `data-count` attribute and the display so that the correct value is being shown.
+
+    ```js
+    const clickHandler = function(event) {
+      let count = parseInt(event.target.getAttribute('data-count'));
+      if (event.target.matches('button')) {
+        count++;
+        event.target.setAttribute('data-count', count);
+        event.target.textContent = `Clicks: ${count}`;
+      }
+    }
+    ```
+
+  * 🔑 The last task is to add an event listener to the container that holds the buttons.
+
+    ```js
+    containerEl.addEventListener('click', clickHandler);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we implement a closure to this event handler?
+
+  * 🙋 We could encapsulate the `count` variable. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Event-Delegation-Handling/README.md`.
+
+### 8. Student Do: Event Delegation and Handling (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu_Event-Delegation-Handling/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Using Closures for Event Delegation
+
+  Work with a partner to add comments that describe the functionality of the code found in [script.js](./Unsolved/assets/js/script.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+  
+  [MDN Web Docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
+  * What is a practical use for closures?
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Why is it important to minimize the number of variables in the global namespace? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 9. Instructor Review: Event Delegation and Handling (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with event handling and delegation using closures? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Event delegation
+
+  * ✔️ Closures
+
+* Open `20-Stu_Event-Delegation-Handling/Solved/assets/js/script.js` in your IDE and explain the following: 
+
+  * 🔑 Create a variable that holds the `button` element.
+
+  * Instead of selecting the container that holds the buttons, we will select each button individually.
+
+    ```js
+    const buttons = document.getElementsByTagName('button');
+    ```
+
+  * Let's create a function with a `count` variable set to zero.
+
+    ```js
+    const clickHandler = function () {
+      let count = 0;
+    ```
+
+  * Next, we leverage closures by returning a function that increments the `count` variable by one.
+
+  * The `this` keyword is referring to the `button` element that is being clicked.
+
+    ```js
+    const clickHandler = function () {
+      let count = 0;
+      return function () { 
+        count++; 
+        this.textContent = `Clicks: ${count}`;
+      };
+    };
+    ```
+  
+  * We are using a `for...loop` to attach an event listener to each `button` element.
+
+  * 🔑 Now each button has its own reference to `count` instead of a reference to a global variable or attribute.
+
+  * 🔑 Instead of doing a costly read on the DOM, we now only read and mutate the private `count` variable.
+
+    ```js
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', clickHandler());
+    }
+    ```
+
+* If we open `20-Stu_Event-Delegation-Handling/Solved/index.html` in the browser, we should see the following:
+
+  * The buttons still work, but now each button leverages closures.
+
+  * 🔑 We no longer need to rely on the event to bubble up the DOM until it reaches a listener, which avoids costly reads on the DOM.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Do the buttons need to be inside a container to work with closures?
+
+  * 🙋 No, we attach the event listener to each button, avoiding event bubbling.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 10. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* The unit so far has been very abstract so check with the students to see if they have any questions about anything we've covered so far.
+
+### 11. BREAK (30 min)
+
+### 12. Instructor Do: Stoke Curiosity (10 min)
+
+* Explain that even though most of us will apply for JavaScript-related jobs, technical interviews typically also assess our knowledge of a few general computer science topics.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ In computing, what is an algorithm?
+
+  * 🙋 An algorithm is a self-contained series of steps that describes a way to solve a problem for a human or machine. 
+
+  * ☝️ Are algorithms the same thing as functions? 
+
+  * 🙋 No, an algorithm is an abstracted idea of how to solve a problem, whereas a function is a means of implementing the steps outlined by the algorithm.
+
+  * ☝️ Why is it important for a full-stack JavaScript developer to understand and articulate how to implement popular computer science algorithms? 
+
+  * 🙋 Understanding algorithms helps developers think about a problem in a conceptual and abstracted way, allowing them to come to a better and more efficient solution&mdash;ultimately making them better developers!
+
+  * ☝️ Do we think some algorithms can solve problems more quickly than others?
+
+  * 🙋 Yes, and it usually depends on the type of problem being solved. That's why it's important for us to know how different types of algorithms work in different situations.  
+
+* Open [the Big-O Cheat Sheet](https://www.bigocheatsheet.com/) and explain the following while walking through the chart:
+
+  * 🔑 In computer science, we measure an algorithm's efficiency by finding the potential amount of steps it will take to solve a problem in a worst-case scenario in relation to the size of the data it's being performed on. 
+
+  * 🔑 This is what's known as the **Big-O complexity** of an algorithm. It's how we can identify which algorithms will work better given a specific problem that needs solving. 
+
+* Explain that today we will learn about popular algorithms, how to implement them, and how to go about solving questions about them in a technical interview.
+
+* Answer any questions before proceeding to the next activity.
+
+## 13. Instructor Demo: Linear Search (5 min) 
+
+* Open the [Searching Sorted List Visualizer](https://www.cs.usfca.edu/~galles/visualization/Search.html) in your browser, perform a linear search function, and demonstrate the following:
+
+  * 🔑 We can search for where an element appears in an array by checking each value one at a time.
+
+  * 🔑 When we find that element, we return the index of where it appeared and then stop the function.
+
+  * 🔑 If we don't find the element we're looking for, we receive a `-1` back because there is no `-1` index in a JavaScript array.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we approach this?
+
+  * 🙋 We need to pseudocode it!
+
+* Open `21-Ins_Linear-Search/linear-search.md` in your IDE and explain the following:
+
+  * 🔑 During a technical interview, it's always a good idea to spend some time pseudocoding and laying out your thought process before writing code.
+
+  * 🔑 For a linear search algorithm implementation using JavaScript, this is what those steps might look like, but they may vary depending on the person implementing it.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What assumptions can we make about this algorithm's implementation?
+
+  * 🙋 We can assume that the input array will be an array of numbers and that it has at least one element in it. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Linear-Search/README.md`.
+
+### 14. Student Do: Linear Search (15 min)
+
+* Direct students to the activity instructions found in `22-Stu_Linear-Search/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement a Linear Search Algorithm
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to be able to find the position of a value in a set of data.
+
+  ## Acceptance Criteria
+
+  * It's done when the search algorithm function can accept an input array and value to find.
+
+  * It's done when the search algorithm returns the position of the value we are searching for.
+
+  * It's done when the search algorithm returns `-1` to indicate that the value is not in the data set.
+
+  ---
+
+  ## 💡 Hints
+
+  How can we run the unit tests to test our algorithm?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is a more efficient search algorithm?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Linear Search (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with the linear search algorithm? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Array and element inputs
+
+  * ✔️ Return the index
+
+  * ✔️ Big O(n) complexity
+
+* Open `22-Stu_Linear-Search/Solved/index.js` in your IDE and explain the following: 
+
+  * 🔑 We create a function that accepts the array we're searching in and the element we're searching the array for:
+
+    ```js
+    const linearSearch = (array, element) => {};
+    ```
+
+  * 🔑 We iterate through the array and check every single element if it matches the one we're searching for and return the index of the matched element:
+
+    ```js
+    // Loop the given array.
+    for (let index = 0; index < array.length; index++) {
+      // Check to see if the index of the given array is equal to the element we are searching for.
+      if (array[index] === element) {
+        // Exit the search by returning the index of the element.
+        return index;
+      }
+    }
+    ```
+
+  * If we don't find a match, the `for` loop ends and we return `-1` to indicate it isn't in this array.
+
+  * 🔑 Because the worse case scenario of this algorithm is that the loop takes us all the way through the array, its complexity grows at a 1:1 rate with how big the input array is, giving it a Big O complexity of `O(n)`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some good features of this algorithm?
+
+  * 🙋 It will work on unsorted arrays and has a predictable level of complexity.
+
+  * ☝️ What may be a drawback of this algorithm?
+
+  * 🙋 If we have a very large array to search through, the Big O complexity `O(n)` can become inefficient. 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read more about search algorithms, and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 16. Instructor Demo: Recursion (5 min) 
+
+* Navigate to `23-Ins_Recursion` from the command line, run `node index.js` and demonstrate the following: 
+
+  * 🔑 When we run this file, we get a number countdown printed on the page.
+
+  * 🔑 We could do this with a loop, but we didn't.
+
+* Navigate to `23-Ins_Recursion/index.js` in your IDE and explain the following
+
+  * 🔑 Instead of a loop, we use a recursive function to call itself over and over again until we meet the exit condition we've defined ourselves.
+
+  * 🔑 If we didn't have this condition in place, known as a "base" or "exit" condition, our program would loop indefinitely and cause our program to crash.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some use cases for using recursion over loops?
+
+  * 🙋 Recursion allows us to control when the next iteration happens and is very useful for when we don't exactly know how many times we need the functionality to run. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Recursion/README.md`.
+
+### 17. Student Do: Recursion (15 min) 
+
+* Direct students to the activity instructions found in `24-Stu_Recursion/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of a Fibonacci Sequence Algorithm
+
+  Work with a partner to add comments that describe the functionality of the code found in [Unsolved](./Unsolved).
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [Math Is Fun: The Fibonacci Sequence](https://www.mathsisfun.com/numbers/Fibonacci-sequence.html)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * In programming, what is a stack overflow?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: Recursion (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with recursion? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ We search by position
+
+  * ✔️ No recursion for 0 or 1 positions
+
+  * ✔️ Value is the sum of previous values
+
+* Open `24-Stu_Recursion/Solved/index.js` in your IDE and explain the following: 
+
+  * 🔑 The function returns the value of a given position in the Fibonacci sequence:
+
+    ```js
+    const Fibonacci = (position) => {}
+    ```
+
+  * 🔑 If the input position is less than `2`, we can assume that the position will be `0` or `1`, which are the actual values of the Fibonacci sequence at that position:
+
+    ```js
+    if (position < 2) {
+      return position;
+    }
+    ```
+
+  * 🔑 We get a value of the Fibonacci sequence by adding the previous two position values in the sequence, so we need to calculate their values with the same function, which will call it again and again until `position` is under `2`: 
+
+    ```js
+    return Fibonacci(position - 1) + Fibonacci(position - 2);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we visualize this algorithm? Is there a specific data structure we can use to model it?
+
+  * 🙋 We can visualize it as a binary tree data structure, with each node spawning two nodes below it, which then spawn two nodes below them, and so on.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read about the [Fibonacci sequence](https://www.mathsisfun.com/numbers/Fibonacci-sequence.html) and the [MDN docs on recursive functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Recursion), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 19. Instructor Demo: Binary Search (5 min) 
+
+* Open the [Searching Sorted List visualizer](https://www.cs.usfca.edu/~galles/visualization/Search.html) in your browser, perform a binary search, and demonstrate the following:
+
+  * 🔑 Unlike the linear search, a binary search works by checking one value at a time starting in the middle of the data set. 
+
+  * 🔑 We identify if the value we're searching for is greater or less than the middle value and cut out half of the data set when we know the value is in the other half.
+
+  * 🔑 If we don't find the element we're looking for, we receive a `-1` back, because there is no `-1` index in a JavaScript array.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We need to pseudocode it!
+
+* Open `25-Ins_Binary-Search/binary-search.md` in your IDE and explain the following:
+
+  * 🔑 During a technical interview, it's always a good idea to spend some time pseudocoding and laying out your thought process before writing code.
+
+  * 🔑 For a binary search algorithm implementation using JavaScript, this is what those steps might look like, but may have more or less depending on the person implementing it.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What assumptions can we make about this algorithm's implementation?
+
+  * 🙋 We can assume that the input array must be sorted for it to work.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Binary-Search/README.md`.
+
+### 20. Student Do: Binary Search (15 min) 
+
+* Direct students to the activity instructions found in `26-Stu_Binary-Search/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Binary Search Algorithm Not Passing Tests
+
+  Work with a partner to resolve the following issue:
+
+  * As a developer, I want to be able to find the position of a value in a data set by using a binary search function.
+
+  ## Expected Behavior
+
+  When we run unit tests to test the binary search function, the defined tests pass.
+
+  ## Actual Behavior
+
+  When we run unit tests to test the binary search function, the defined tests do not pass.
+
+  ## Steps to Reproduce the Problem
+
+  1. In the command line, from the [Unsolved](./Unsolved) directory, run `npm install`.
+
+  2. Run `npm run test` to run the unit tests.
+
+  3. The tests defined in the `__tests__` directory do not pass.
+
+  ---
+
+  ## 💡 Hints
+
+  How can the unit test descriptions help us determine what the function is or is not doing?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is worst possible Big-O complexity that an algorithm can have? What is the best?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Binary Search (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with a binary search algorithm? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Adjust start and end positions
+
+  * ✔️ The `while` loop
+
+  * ✔️ Exit conditions
+
+* Open `26-Stu_Binary-Search` in your IDE and explain the following: 
+
+  * 🔑 We start by getting the start and end positions, which we will update when we determine what half our value lies in:
+
+    ```js
+    let start = 0;
+    let end = array.length - 1;
+    ```
+
+  * 🔑 We use a `while` loop to continuously run the functionality of getting a middle value, checking if the searched value is greater than, less than, or equal to it, and adjusting the start and end points if we need to:
+
+    ```js
+    while (start <= end) {
+      let mid = Math.floor((start + end) / 2);
+      if (array[mid] === element) {
+        // We must return true once we have found the element being searched for.
+        return true;
+      } else if (array[mid] < element) {
+        start = mid + 1;
+      } else {
+        end = mid - 1;
+      }
+    }
+    ```
+
+  * 🔑 We are done running this function when either the middle value is the value we're searching for or we've cut the search array down so much that the end value becomes less than the start value and the `while` loop ends to return `false`.  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the Big O complexity of this algorithm? 
+
+  * 🙋 It has a Big O complexity of `O(log n)` because it effectively cuts its input in half every pass.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Wikipedia entry on binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Shell/README.md`.
+
+## 22. Everyone Do: Shell Scripts (20 min)
+
+* Open your command line environment and demonstrate the following:
+
+  * We've been using this environment throughout the class to perform a number of functions for our computer, Node.js applications, and Git repositories.
+
+  * This is because our command line is powered by what's known as a "shell," which has a programming language of its own that we can use to help perform complex tasks and provide automation in our workflow. 
+
+* Direct students to the activity instructions found in `27-Evr_Shell/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Open `27-Evr_Shell/Solved/git-file-cleanup.sh` in your IDE and demonstrate the following:
+
+  * 🔑 In order to write our own commands to be executed as programs across our computers, we must begin the file with a shebang interpreter directive:
+
+    ```sh
+    #!/bin/bash
+    ```
+
+  * 🔑 We can store commands in variables and recall them whenever we want, such as a Git command to be executed from our program:
+
+    ```sh
+    TO_REMOVE=`git clean -f -d -n`;
+    ```
+
+  * A lot of Git commands that affect the repository have what's known as a "dry run" `-n` option to show what would happen without actually doing it.
+
+  * 🔑 These commands can be set up for execution anywhere in our `.bashrc` or `.zshrc` files as "aliases":
+
+    ```sh
+    # in a run command file...
+    alias gfc="~/git-file-cleanup.sh"
+    ```
+
+* Congratulate students on taking a moment to quickly learn a new programming language! 
+
+* Answer any questions before ending the class.
+
+### 23. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
