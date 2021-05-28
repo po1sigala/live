@@ -25,7 +25,7 @@ module.exports = {
       .then((tag) => {
         return Post.findOneAndUpdate(
           { _id: req.body.postId },
-          { $push: { tags: tag._id } },
+          { $addToSet: { tags: tag._id } },
           { new: true }
         );
       })
