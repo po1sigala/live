@@ -86,4 +86,17 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
+  removeScore(req, res) {
+    Assignment.findOneAndUpdate(
+      { _id: req.params.assignmentId },
+      { $pull: { scores: { scoreId: req.params.scoreId } } },
+      { runValidators: true, new: true }
+    )
+      .then((assignment) =>
+        !assignment
+          ? res.status(404).json({ message: 'No assignment with this id!' })
+          : res.json(assignment)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 };
