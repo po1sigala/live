@@ -24,12 +24,6 @@ const courseSchema = new Schema(
         ref: 'Student',
       },
     ],
-    assignments: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Assignment',
-      },
-    ],
   },
   {
     toJSON: {
@@ -48,3 +42,7 @@ courseSchema
   .get(function () {
     return this.assignments.length;
   });
+
+const Course = model('course', courseSchema);
+
+module.exports = Course;

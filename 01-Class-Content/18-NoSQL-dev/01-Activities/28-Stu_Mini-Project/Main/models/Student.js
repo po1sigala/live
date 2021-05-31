@@ -18,10 +18,10 @@ const studentSchema = new Schema(
       required: true,
       max_length: 50,
     },
-    grades: [
+    assignments: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Grades',
+        ref: 'Assignment',
       },
     ],
   },
