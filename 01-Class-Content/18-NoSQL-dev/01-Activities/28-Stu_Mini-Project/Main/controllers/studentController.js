@@ -9,7 +9,7 @@ const headCount = async () =>
 // Aggregation function for getting the avg of their grades
 const grade = async (studentId) =>
   Student.aggregate([
-    { $group: { _id: studentId, score: { $avg: '$score' } } },
+    { $group: { _id: studentId, score: { $avg: '$assignments.score' } } },
   ]);
 
 module.exports = {
