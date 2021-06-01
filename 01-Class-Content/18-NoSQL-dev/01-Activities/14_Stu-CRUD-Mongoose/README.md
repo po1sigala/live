@@ -22,19 +22,11 @@ Refer to the documentation:
 
 [Mongoose docs on queries](https://mongoosejs.com/docs/queries.html)
 
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-{TODO: Will add image with final data}
-
-![]()
-
 ---
 
 ## 💡 Hints
 
-* What pattern do Mongoose callbacks follow? Why is this important to understand? 
+* What pattern do Mongoose callbacks follow?
 
 ## 🏆 Bonus
 
