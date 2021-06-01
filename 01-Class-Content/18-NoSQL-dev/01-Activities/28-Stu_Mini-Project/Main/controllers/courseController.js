@@ -22,7 +22,10 @@ module.exports = {
   createCourse(req, res) {
     Course.create(req.body)
       .then((course) => res.json(course))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.log(err);
+        return res.status(500).json(err);
+      });
   },
   // Delete a course
   deleteCourse(req, res) {
@@ -36,4 +39,17 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // Update a course
+  updateCourse(req, res) {
+    Course.findOneAndUpdate(
+      { _id: req.params.courseId },
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
+      .then((course) =>
+        !course
+          ? res.status(404).json({ message: 'No course with this id!' })
+          : res.json(course)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 };

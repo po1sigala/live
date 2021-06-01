@@ -22,7 +22,7 @@ router
 // /api/assignments/:assignmentId/scores
 router.route('/:assignmentId/scores').post(addScore);
 
-// /api/assignments/:assignmentId/scores/:tagId
+// /api/assignments/:assignmentId/scores/:scoreId
 router.route('/:assignmentId/scores/:scoreId').delete(removeScore);
 
 module.exports = router;

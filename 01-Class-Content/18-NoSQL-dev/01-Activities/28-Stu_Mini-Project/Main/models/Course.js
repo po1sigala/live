@@ -33,15 +33,13 @@ const courseSchema = new Schema(
   }
 );
 
-courseSchema
-  .virtual('headCount')
-  .get(function () {
-    return this.students.length;
-  })
-  .virtual('assignmentCount')
-  .get(function () {
-    return this.assignments.length;
-  });
+courseSchema.virtual('headCount').get(function () {
+  return this.students?.length;
+});
+
+courseSchema.virtual('assignmentCount').get(function () {
+  return this.assignments?.length;
+});
 
 const Course = model('course', courseSchema);
 
