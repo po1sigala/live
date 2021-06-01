@@ -2,19 +2,19 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to perform queries to create, read, update, and delete data.
+* As a developer, I want to execute queries to create, read, update, and delete data in a MongoDB database using Mongoose.
 
 ## Acceptance Criteria
 
 * It's done when using a Mongoose CRUD method, I can create a document.
 
-* It's done when using a Mongoose CRUD method, I can insert data into an existing document.
+* It's done when using a Mongoose CRUD method, I can insert data into an single, existing document.
 
-* It's done when using a Mongoose CRUD method, I can update data into an existing document.
+* It's done when using a Mongoose CRUD method, I can update data in a single, existing document.
 
-* It's done when using a Mongoose CRUD method, I can delete an existing document.
+* It's done when using a Mongoose CRUD method, I can delete an existing document and no other documents are deleted.
 
-* It's done when
+* It's done when each query can be executed multiple times. 
 
 ## 📝 Notes
 
