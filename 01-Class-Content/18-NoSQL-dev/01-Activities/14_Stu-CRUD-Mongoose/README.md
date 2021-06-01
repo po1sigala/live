@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when using a Mongoose CRUD method, I can create a document.
 
-* It's done when using a Mongoose CRUD method, I can insert data into an single, existing document.
+* It's done when using a Mongoose CRUD method, I can insert data into a single, existing document.
 
 * It's done when using a Mongoose CRUD method, I can update data in a single, existing document.
 
