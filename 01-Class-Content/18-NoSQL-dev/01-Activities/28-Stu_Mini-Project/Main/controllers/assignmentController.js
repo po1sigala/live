@@ -21,7 +21,7 @@ module.exports = {
       .then((assignment) => {
         return Student.findOneAndUpdate(
           { _id: req.body.studentId },
-          { $addToSet: { assignments: assignment._id } },
+          { $addToSet: { assignments: assignment } },
           { new: true }
         );
       })

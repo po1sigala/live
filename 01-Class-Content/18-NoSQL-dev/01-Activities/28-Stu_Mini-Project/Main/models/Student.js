@@ -21,7 +21,7 @@ const studentSchema = new Schema(
     assignments: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Assignment',
+        ref: 'assignment',
       },
     ],
   },

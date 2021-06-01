@@ -22,6 +22,6 @@ const assignmentSchema = new Schema(
   }
 );
 
-const Assignment = model('grade', assignmentSchema);
+const Assignment = model('assignment', assignmentSchema);
 
 module.exports = Assignment;

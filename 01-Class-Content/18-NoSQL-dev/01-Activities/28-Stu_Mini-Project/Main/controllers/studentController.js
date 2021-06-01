@@ -7,15 +7,9 @@ const headCount = async () =>
     .then((numberOfStudents) => numberOfStudents);
 
 // Aggregation function for getting the avg of their grades
-
-const grade = async () =>
+const grade = async (studentId) =>
   Student.aggregate([
-    {
-      $group: {
-        _id: '$id',
-        AverageGrade: { $avg: { $ifNull: ['$assignments', 0] } },
-      },
-    },
+    { $group: { _id: studentId, score: { $avg: '$score' } } },
   ]);
 
 module.exports = {
@@ -29,21 +23,28 @@ module.exports = {
         };
         return res.json(studentObj);
       })
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.log(err);
+        return res.status(500).json(err);
+      });
   },
   // Get a single student
   getSingleStudent(req, res) {
     Student.findOne({ _id: req.params.studentId })
+      .populate('assignments')
       .select('-__v')
       .then(async (student) =>
         !student
           ? res.status(404).json({ message: 'No student with that ID' })
           : res.json({
               student,
-              grade: await grade(),
+              grade: await grade(req.params.studentId),
             })
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        console.log(err);
+        return res.status(500).json(err);
+      });
   },
   // create a new student
   createStudent(req, res) {
