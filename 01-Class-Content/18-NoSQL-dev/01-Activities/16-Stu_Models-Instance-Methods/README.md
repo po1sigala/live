@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to perform an action on a specific instance of a model. 
+* As a developer, I want to perform an action on a specific instance of a Mongoose model. 
 
 ## Acceptance Criteria
 
