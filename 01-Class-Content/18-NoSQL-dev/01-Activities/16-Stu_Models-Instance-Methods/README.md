@@ -8,7 +8,9 @@ Work with a partner to implement the following user story:
 
 * It's done when I define a new schema named `animalSchema`.
 
-* It's done when I assign a function to the methods object of the `animalSchema` schema to populate document references and execute the a callback when complete
+* It's done when I assign a function to the methods object of the `animalSchema` schema to populate document references.
+
+* It's done when I apply the populate instance method to a specific model. 
 
 ---
 
