@@ -22,7 +22,7 @@ What is the difference between and instance method and a static method?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you add a query helper methods to extend Mongoose's chainable query builder API?
+* How can you add query helper methods to extend Mongoose's chainable query builder API?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
