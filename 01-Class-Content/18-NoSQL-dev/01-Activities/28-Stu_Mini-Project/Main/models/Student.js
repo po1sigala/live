@@ -34,28 +34,7 @@ const studentSchema = new Schema(
     id: false,
   }
 );
-// TODO: Come back and build the calculate grade virtual
-// TODO: Ideas for virtuals - get complete/incomplete assignments. Get letter grade. Get average.
-// Create a virtual property `fullName` that gets and sets the user's full name
-// userSchema
-//   .virtual('getCurrentGrade')
-//   // Getter
-//   .get(function () {
-//     return `${this.first} ${this.last}`;
-//   })
-//   // Setter to set the first and last name
-//   .set(function (v) {
-//     const first = v.split(' ')[0];
-//     const last = v.split(' ')[1];
-//     this.set({ first, last });
-//   });
 
-studentSchema.virtual('fullName').set(function (name) {
-  const [first, last] = name.split(' ');
-  return `${first} ${last}`;
-});
-
-// Initialize our User model
 const Student = model('student', studentSchema);
 
 module.exports = Student;

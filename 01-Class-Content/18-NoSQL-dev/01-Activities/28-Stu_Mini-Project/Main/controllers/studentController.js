@@ -1,20 +1,47 @@
 const { Student, Assignment } = require('../models');
 
+// Aggregation function
+const headCount = async () =>
+  Student.aggregate()
+    .count('studentCount')
+    .then((numberOfStudents) => numberOfStudents);
+
+// Aggregation function for getting the avg of their grades
+
+const grade = async () =>
+  Student.aggregate([
+    {
+      $group: {
+        _id: '$id',
+        AverageGrade: { $avg: { $ifNull: ['$assignments', 0] } },
+      },
+    },
+  ]);
+
 module.exports = {
   // Get all students
   getStudents(req, res) {
     Student.find()
-      .then((students) => res.json(students))
+      .then(async (students) => {
+        const studentObj = {
+          students,
+          headCount: await headCount(),
+        };
+        return res.json(studentObj);
+      })
       .catch((err) => res.status(500).json(err));
   },
   // Get a single student
   getSingleStudent(req, res) {
     Student.findOne({ _id: req.params.studentId })
       .select('-__v')
-      .then((student) =>
+      .then(async (student) =>
         !student
           ? res.status(404).json({ message: 'No student with that ID' })
-          : res.json(student)
+          : res.json({
+              student,
+              grade: await grade(),
+            })
       )
       .catch((err) => res.status(500).json(err));
   },

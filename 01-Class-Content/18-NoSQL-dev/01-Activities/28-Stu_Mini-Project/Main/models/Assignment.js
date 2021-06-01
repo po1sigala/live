@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const Score = require('./Score');
 
 const assignmentSchema = new Schema(
   {
@@ -7,7 +6,13 @@ const assignmentSchema = new Schema(
       type: 'String',
       default: () => 'Unnamed Assignment',
     },
-    scores: [Score],
+    score: {
+      type: Number,
+      required: true,
+      min_value: 0,
+      max_value: 100,
+      default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70),
+    },
   },
   {
     toJSON: {
