@@ -1,8 +1,21 @@
 const { Student, Assignment } = require('../models');
 
-// TODO: Add an aggregate function to determine the amount of students
+// Aggregation function
+const headCount = async () =>
+  Student.aggregate()
+    .count('studentCount')
+    .then((numberOfStudents) => numberOfStudents);
 
-// TODO: Add an aggregate function to get the students overall grade
+// Aggregation function for getting the avg of their grades
+const grade = async (studentId) =>
+  Student.aggregate([
+    { $match: { _id: studentId } },
+    { $group: { _id: studentId, score: { $avg: '$assignments.score' } } },
+  ]);
+
+console.log(
+  grade('60b651e05a12a36cca484fce').then((data) => console.log(data))
+);
 
 module.exports = {
   // Get all students
