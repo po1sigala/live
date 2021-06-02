@@ -1,6 +1,8 @@
 # 📐 Add Comments to Implementation of Models and Schemas With Mongoose
 
-Work with a partner to add comments describing the functionality of the code found in [models/books.js](./Unsolved/models/books.js) and [server.js](./Unsolved/server.js).
+{TODO: Update file path to actual files when activity written}
+
+Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/Models) and [Unsolved](./Unsolved/Models).
 
 ## 📝 Notes
 
