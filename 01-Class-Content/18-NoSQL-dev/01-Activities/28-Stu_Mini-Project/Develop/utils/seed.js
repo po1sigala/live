@@ -6,12 +6,20 @@ connection.on('error', (err) => err);
 
 connection.once('open', async () => {
   console.log('connected');
+
+  // Drop existing courses
   await Course.deleteMany({});
+
+  // Drop existing students
   await Student.deleteMany({});
 
+  // Create empty array to hold the students
   const students = [];
+
+  // Get some random assignment objects using a helper function that we imported from ./data
   const assignments = getRandomAssignments(20);
 
+  // Loop 20 times -- add students to the students array
   for (let i = 0; i < 20; i++) {
     const fullName = getRandomName();
     const first = fullName.split(' ')[0];
@@ -26,15 +34,17 @@ connection.once('open', async () => {
     });
   }
 
+  // Add students to the collection and await the results
   await Student.collection.insertMany(students);
 
+  // Add courses to the collection and await the results
   await Course.collection.insertOne({
     courseName: 'UCLA',
     inPerson: false,
     students: [...students],
   });
 
-  // loop through the saved applications, for each application we need to generate a application response and insert the application responses
+  // Log out the seed data to indicate what should appear in the database
   console.table(students);
   console.table(assignments);
   console.info('Seeding complete! 🌱');

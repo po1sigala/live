@@ -99,7 +99,7 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // remove reaction from a student
+  // Remove assignment from a student
   removeAssignment(req, res) {
     Student.findOneAndUpdate(
       { _id: req.params.studentId },
