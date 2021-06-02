@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const assignmentSchema = require('./Assignment');
 
 // Schema to create Student model
 const studentSchema = new Schema(
@@ -18,20 +19,12 @@ const studentSchema = new Schema(
       required: true,
       max_length: 50,
     },
-    assignments: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'assignment',
-      },
-    ],
+    assignments: [assignmentSchema],
   },
   {
-    // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
-    // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
     toJSON: {
-      virtuals: true,
+      getters: true,
     },
-    id: false,
   }
 );
 
