@@ -16,7 +16,8 @@ app.get('/all-books', function(req, res) {
     if (result) {
       res.json(result)
     } else {
-      console.log("Uh Oh, something went wrong")
+      console.log("Uh Oh, something went wrong");
+      res.json(err);
     }
   });
 });
