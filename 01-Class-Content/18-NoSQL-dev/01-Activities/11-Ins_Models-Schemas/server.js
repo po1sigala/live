@@ -17,7 +17,7 @@ app.get('/all-items', function(req, res) {
       res.json(result)
     } else {
       console.log("Uh Oh, something went wrong");
-      res.json(err)
+      res.json(err);
     }
   });
 });
