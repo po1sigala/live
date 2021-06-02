@@ -8,7 +8,7 @@ The completed application should meet the following criteria:
 
 * As a user, I want to be able to view all the students and get a total of the number of students enrolled.
 
-* As a user, I want to be able to view a specific student's overall grade in the class and their grade on each assignment.
+* As a user, I want to be able to view a specific student's overall grade in the class using MongoDB operators and their score on each assignment.
 
 * As a user, I want to be able to execute create, read, update, and destroy operations on `courses`, `students`, and their `assignments`.
 
@@ -16,7 +16,7 @@ The completed application should meet the following criteria:
 
 * The application must make use of a MongoDB database, the Mongoose ODM, and Express.js.
 
-* The database must be seeded with some sample data.
+* The database must be seeded with sample data.
 
 * The API should be tested using Insomnia since this project doesn't require creating a front end.
 
