@@ -8,14 +8,16 @@ const headCount = async () =>
 
 // Aggregation function for getting the avg of their grades
 const grade = async (studentId) =>
+  // Student.aggregate([
+  //   { $match: { _id: studentId } },
+  //   // { $group: { _id: studentId, score: { $avg: '$assignments.score' } } },
+  //   { $group: { _id: studentId, score: { $sum: '$assignments.score' } } },
+  // ]);
   Student.aggregate([
-    { $match: { _id: studentId } },
-    { $group: { _id: studentId, score: { $avg: '$assignments.score' } } },
+    {
+      $unwind: '$assignments',
+    },
   ]);
-
-console.log(
-  grade('60b651e05a12a36cca484fce').then((data) => console.log(data))
-);
 
 module.exports = {
   // Get all students
@@ -36,8 +38,8 @@ module.exports = {
   // Get a single student
   getSingleStudent(req, res) {
     Student.findOne({ _id: req.params.studentId })
-      .populate('assignments')
       .select('-__v')
+      .lean()
       .then(async (student) =>
         !student
           ? res.status(404).json({ message: 'No student with that ID' })
@@ -66,6 +68,39 @@ module.exports = {
           : Assignment.deleteMany({ _id: { $in: student.assignments } })
       )
       .then(() => res.json({ message: 'Student and grades deleted!' }))
+      .catch((err) => res.status(500).json(err));
+  },
+  // Add an assignment to a student
+  addAssignment(req, res) {
+    Student.findOneAndUpdate(
+      { _id: req.params.studentId },
+      { $addToSet: { assignments: req.body } },
+      { runValidators: true, new: true }
+    )
+      .then((student) => {
+        console.log(student);
+        return !student
+          ? res
+              .status(404)
+              .json({ message: 'No student found with that ID :(' })
+          : res.json(student);
+      })
+      .catch((err) => res.status(500).json(err));
+  },
+  // remove reaction from a thought
+  removeAssignment(req, res) {
+    Student.findOneAndUpdate(
+      { _id: req.params.studentId },
+      { $pull: { assignment: { assignmentId: req.params.assignmentId } } },
+      { runValidators: true, new: true }
+    )
+      .then((student) =>
+        !student
+          ? res
+              .status(404)
+              .json({ message: 'No student found with that ID :(' })
+          : res.json(student)
+      )
       .catch((err) => res.status(500).json(err));
   },
 };
