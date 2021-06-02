@@ -1,6 +1,3 @@
-// Require schema and model from mongoose
-const { Schema, model } = require('mongoose');
-
 // Define Mongoose
 const mongoose = require('mongoose');
 
@@ -26,7 +23,8 @@ Item.create({
   item: 'banana',
   stockCount: 10,
   price: 1,
-  inStock: true },
+  inStock: true 
+  },
   function (err) {
     if (err) return handleError(err);
 });

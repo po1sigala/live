@@ -1,5 +1,4 @@
 // Require schema and model from mongoose
-const { Schema, model } = require('mongoose');
 const mongoose = require('mongoose');
 
 // Construct a new instance of the schema class
@@ -26,7 +25,8 @@ Book.create({
   publisher: 'Scholastic',
   stockCount: 10,
   price: 10,
-  inStock: true },
+  inStock: true 
+  },
   function (err) {
     if (err) return handleError(err);
 });
