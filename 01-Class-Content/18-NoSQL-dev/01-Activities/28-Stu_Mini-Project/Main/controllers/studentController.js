@@ -1,21 +1,19 @@
-const { Student, Assignment } = require('../models');
+const { Student, Course } = require('../models');
 
-// Aggregation function
+// Aggregation function to get the number of students overall
 const headCount = async () =>
   Student.aggregate()
     .count('studentCount')
     .then((numberOfStudents) => numberOfStudents);
 
-// Aggregation function for getting the avg of their grades
+// Aggregation function for getting the overall grade using $avg
 const grade = async (studentId) =>
-  // Student.aggregate([
-  //   { $match: { _id: studentId } },
-  //   // { $group: { _id: studentId, score: { $avg: '$assignments.score' } } },
-  //   { $group: { _id: studentId, score: { $sum: '$assignments.score' } } },
-  // ]);
   Student.aggregate([
     {
       $unwind: '$assignments',
+    },
+    {
+      $group: { _id: studentId, overallGrade: { $avg: '$assignments.score' } },
     },
   ]);
 
@@ -59,35 +57,50 @@ module.exports = {
       .then((student) => res.json(student))
       .catch((err) => res.status(500).json(err));
   },
-  // Delete a student and associated apps
+  // Delete a student and remove them from the course
   deleteStudent(req, res) {
-    Student.findOneAndDelete({ _id: req.params.studentId })
+    Student.findOneAndRemove({ _id: req.params.studentId })
       .then((student) =>
         !student
-          ? res.status(404).json({ message: 'No student with that ID' })
-          : Assignment.deleteMany({ _id: { $in: student.assignments } })
+          ? res.status(404).json({ message: 'No such student exists' })
+          : Course.findOneAndUpdate(
+              { students: req.params.studentId },
+              { $pull: { students: req.params.studentId } },
+              { new: true }
+            )
       )
-      .then(() => res.json({ message: 'Student and grades deleted!' }))
-      .catch((err) => res.status(500).json(err));
+      .then((course) =>
+        !course
+          ? res.status(404).json({
+              message: 'Student deleted, but no courses found',
+            })
+          : res.json({ message: 'Student successfully deleted' })
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   },
+
   // Add an assignment to a student
   addAssignment(req, res) {
+    console.log('You are adding an assignment');
+    console.log(req.body);
     Student.findOneAndUpdate(
       { _id: req.params.studentId },
       { $addToSet: { assignments: req.body } },
       { runValidators: true, new: true }
     )
-      .then((student) => {
-        console.log(student);
-        return !student
+      .then((student) =>
+        !student
           ? res
               .status(404)
               .json({ message: 'No student found with that ID :(' })
-          : res.json(student);
-      })
+          : res.json(student)
+      )
       .catch((err) => res.status(500).json(err));
   },
-  // remove reaction from a thought
+  // remove reaction from a student
   removeAssignment(req, res) {
     Student.findOneAndUpdate(
       { _id: req.params.studentId },

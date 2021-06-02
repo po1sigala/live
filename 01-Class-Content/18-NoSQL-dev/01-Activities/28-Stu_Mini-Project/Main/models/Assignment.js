@@ -6,20 +6,21 @@ const assignmentSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
-  },
-  {
     assignmentName: {
-      type: 'String',
-      default: () => 'Unnamed Assignment',
+      type: String,
+      required: true,
+      maxlength: 50,
+      minlength: 4,
+      default: 'Unnamed assignment',
     },
-  },
-  {
     score: {
       type: Number,
       required: true,
-      min_value: 0,
-      max_value: 100,
       default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70),
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
     },
   },
   {
