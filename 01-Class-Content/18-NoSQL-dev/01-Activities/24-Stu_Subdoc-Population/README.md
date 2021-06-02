@@ -13,7 +13,7 @@ When a user queries a `post`, the controller should return the `post` with an ar
 When a user runs the application in an attempt to get a post, they are presented with an error:
 
 ```sh
-TypeError: Invalid schema configuration: 'Tag' is not a valid type at path 'ref'
+TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags`
 ```
 
 ## Steps to Reproduce the Problem
@@ -22,13 +22,15 @@ TypeError: Invalid schema configuration: 'Tag' is not a valid type at path 'ref'
 
 2. Run `npm run seed` to populate an example database
 
-3. Run `npm start` to attempt to query the database
+3. Run `npm run dev` to attempt to query the database
 
-4. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type at path `ref`.``
+4. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags``
 
 ## 💡 Hints
 
-When referencing another schema inside our Post schema, what attributes and types need to be specified?  
+When referencing another schema inside our Post schema, what attributes and types need to be specified?
+
+Use `npm run dev` to automatically restart your application after you save changes
 
 ## 🏆 Bonus
 
