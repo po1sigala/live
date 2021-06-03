@@ -9,9 +9,20 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Finds all documents in department
+// Creates a new department
+app.post('/new-department/:department', function(req, res, err) {
+  const newDepartment = new Department({ name: req.params.department });
+  newDepartment.save();
+  if (newDepartment) {
+    res.json(newDepartment);
+  } else {
+    console.log("Uh Oh, something went wrong");
+    res.json(err);
+  }
+});
+
+// Finds all documents
 app.get('/all-departments', function(req, res) {
-  // Using model in route to find all documents that are instances of that model
   Department.find({}, function(err, result) {
     if (err) throw err;
     if (result) {
