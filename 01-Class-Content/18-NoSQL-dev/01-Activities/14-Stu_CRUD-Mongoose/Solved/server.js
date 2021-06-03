@@ -55,6 +55,7 @@ app.post('/find-one-update/:department', function(req, res) {
   Department.findOneAndUpdate(
     { name: 'Kids' },
     { name: req.params.department },
+    { new: true },
     function (err, result) {
       if (err) throw err;
       if (result) {

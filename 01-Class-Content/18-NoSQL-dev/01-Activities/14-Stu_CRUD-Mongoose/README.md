@@ -2,27 +2,29 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to execute a query that can update an existing document.
+* As a developer, I want to be able to find a single document and update it using a Mongoose CRUD method.
 
 ## Acceptance Criteria
 
-* It's done when I test the `POST` route in Insomnia, 
+* It's done when I use a Mongoose CRUD method to select a single document with the name property of `Kids` and update it. 
 
-* It's done when using the same Mongoose method, the value `Kids` is updated to the value entered in a route parameter.
+* It's done when the updated document has a new name property value that matches the value provided in the route parameter. 
 
-* It's done when I can enter the value that I want to replace `Kids` in a route parameter. 
+* It's done when only the name property has been updated in the document.
+
+* It's done when I test the `POST` Route in Insomnia and the updated document is returned. 
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[Mongoose docs on queries](https://mongoosejs.com/docs/queries.html)
+[Mongoose docs on findOneAndUpdate()](https://mongoosejs.com/docs/tutorials/findoneandupdate.html)
 
 ---
 
 ## 💡 Hints
 
-* What pattern do Mongoose callbacks follow?
+* How can you add an option to your Mongoose CRUD method so that the updated object is returned?
 
 ## 🏆 Bonus
 
