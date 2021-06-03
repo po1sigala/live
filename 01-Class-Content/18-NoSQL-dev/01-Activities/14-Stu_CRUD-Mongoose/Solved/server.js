@@ -9,7 +9,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Creates a new department
+// Creates a new document
 app.post('/new-department/:department', function(req, res, err) {
   const newDepartment = new Department({ name: req.params.department });
   newDepartment.save();
@@ -62,11 +62,15 @@ app.delete('/find-one-delete/:department', function(req, res) {
   });
 });
 
-// Finds the first instance of a document with the name of "Kids" and updates name to provided URL param value
+// Finds the first document with the name of "Kids" and updates name to provided URL param value
 app.post('/find-one-update/:department', function(req, res) {
+  // Uses findOneAndUpdate() method on model
   Department.findOneAndUpdate(
+    // Find first document with name of "Kids"
     { name: 'Kids' },
+    // Replace name with value in URL param
     { name: req.params.department },
+    // Sets to true so updated information is returned; Otherwise original document will be returned
     { new: true },
     function (err, result) {
       if (err) throw err;
