@@ -10,7 +10,7 @@ When I test the `sum-price` route in Insomnia, summary statistics for only items
 
 ## Actual Behavior
 
-When I test the `sum-price` route in Insomnia, summary statistics for only items that are in stock should be returned.
+When I test the `sum-price` route in Insomnia, summary statistics all items are returned.
 
 ## Steps to Reproduce the Problem
 
