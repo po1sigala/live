@@ -6,11 +6,17 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I define a new schema named `animalSchema`.
+* It's done when I define a new schema named `bookSchema`.
 
-* It's done when I assign a function to the methods object of the `animalSchema` schema to populate document references.
+* It's done when the new schema has three properties: `title`, `author`, and `price`
 
-* It's done when I apply the populate instance method to a specific model. 
+* It's done when I assign a function to the methods object of the `bookSchema` schema that reduces the price by 50 percent and console logs the title of the book and the reduced price. 
+
+* It's done when I have created a model named `Book`.
+
+* It's done when I have created an instance of the model, or document, named `discountedBook`.
+
+* It's done when the price of discountedBook is reduced by 50 percent and the results logged to the console. 
 
 ---
 
