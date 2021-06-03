@@ -23,7 +23,7 @@ app.get('/all-departments', function(req, res) {
   });
 });
 
-// Finds first instance of document that meets criteria, in this case with the name "Kids"
+// Finds first instance of document that meets criteria, in this case with the name property of "Kids"
 app.get('/find-one-department', function(req, res) {
   Department.findOne({name: "Kids"}, function(err, result) {
     if (err) throw err;
@@ -36,7 +36,7 @@ app.get('/find-one-department', function(req, res) {
   });
 });
 
-// Finds one department provided in URL param and deletes
+// Finds one document and deletes 
 app.delete('/find-one-delete/:department', function(req, res) {
   Department.findOneAndDelete({ name: req.params.department }, function (err, result) {
     if (err) throw err;
