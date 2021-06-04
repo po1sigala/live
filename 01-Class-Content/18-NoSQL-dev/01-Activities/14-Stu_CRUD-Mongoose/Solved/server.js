@@ -35,7 +35,7 @@ app.get('/all-departments', function(req, res) {
   });
 });
 
-// Finds first document that meets criteria, in this case with the name property of "Kids"
+// Find first document with name equal to"Kids"
 app.get('/find-one-department', function(req, res) {
   Department.findOne({name: "Kids"}, function(err, result) {
     if (err) throw err;
@@ -62,7 +62,7 @@ app.delete('/find-one-delete/:department', function(req, res) {
   });
 });
 
-// Finds the first document with the name of "Kids" and updates name to provided URL param value
+// Finds the first document with the name with the value equal to 'Kids' and updates that name to the provided URL param value
 app.post('/find-one-update/:department', function(req, res) {
   // Uses findOneAndUpdate() method on model
   Department.findOneAndUpdate(
