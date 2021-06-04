@@ -15,7 +15,6 @@ const grocerySchema = new mongoose.Schema({
 const Item = mongoose.model('Item', grocerySchema);
 
 // Will add data only if collection is empty to prevent duplicates
-// Note that two documents can have the same name value
 Item.find({}).exec(function (err, collection) {
   if (collection.length === 0) {
     Item.insertMany(
