@@ -6,11 +6,11 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When I test the `sum-price` route in Insomnia, summary statistics for only items that are in stock should be returned.
+When I test the `sum-price` GET route in Insomnia, summary statistics for only items that are in stock should be returned.
 
 ## Actual Behavior
 
-When I test the `sum-price` route in Insomnia, summary statistics all items are returned.
+When I test the `sum-price` GET route in Insomnia, summary statistics all items are returned.
 
 ## Steps to Reproduce the Problem
 
