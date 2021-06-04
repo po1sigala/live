@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 // Child documents or subdocuments can be embedded into a parent document
-
 // the managerSchema defines the shape for manager subdocument
 const managerSchema = new mongoose.Schema({
   name: { type: String, required: true },
