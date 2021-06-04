@@ -10,7 +10,7 @@ const departmentSchema = new mongoose.Schema({
 // Schemas can also define methods that act on an instance of the model or document
 // This custom method extends the methods object 
 departmentSchema.methods.getDocumentInfo = function() {
-  // This this keyword is used to specify the properties belonging to the particular instance
+  // The 'this' keyword is used to specify the properties belonging to the particular instance
   console.log("This department has the name " + this.name + " and a total stock of " + this.totalStock)
 };
 
