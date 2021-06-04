@@ -7,7 +7,6 @@ const bookSchema = new mongoose.Schema({
   // Configure individual properties using Schema Types
   title: { type: String, required: true },
   author: { type: String, required: false },
-  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
   publisher: String,
   stockCount: Number,
   price: Number,
