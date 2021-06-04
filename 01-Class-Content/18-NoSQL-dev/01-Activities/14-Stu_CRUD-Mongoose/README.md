@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I use a Mongoose CRUD method to select a single document with the name property of `Kids` and update it. 
+* It's done when I use a Mongoose CRUD method to select a single document with the `name` property of `Kids` and update it. 
 
 * It's done when the updated document has an updated `name` property value that matches the value provided in the route parameter. 
 
