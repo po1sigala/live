@@ -1,4 +1,4 @@
-# 🐛 TITLE WRITTEN AS A GITHUB ISSUE AND/OR JIRA TICKET; SHORT & DESCRIPTIVE (e.g., Submit button on landing page returns 404)
+# 🐛 GET Route Returning Wrong Summary Price Data
 
 Work with a partner to resolve the following issue(s):
 
