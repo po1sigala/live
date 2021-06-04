@@ -1,6 +1,6 @@
 # Unit 18 Mini-Project: Student Statistics Backend
 
-In this activity, you will build a student statistics application that uses Express.js, a MongoDB database, and the Mongoose ODM. The app must feature the aggregate method to show statistics like the total number of students and a given students overall grade. This back-end project must be deployed using MongoDB Atlas.
+In this activity, you will build a student statistics application that uses Express.js, a MongoDB database, and the Mongoose ODM. The app must feature MongoDB aggregate functions to show statistics like the total number of students and a given students overall grade. This project back-end only project must be deployed using MongoDB Atlas and Heroku.
 
 ## Instructions
 
@@ -10,7 +10,7 @@ The completed application should meet the following criteria:
 
 * As a user, I want to be able to view a specific student's overall grade in the class using MongoDB operators and their score on each assignment.
 
-* As a user, I want to be able to execute create, read, update, and destroy operations on `courses`, `students`, and their `assignments`.
+* As a user, I want to be able to execute create, read, update, and delete operations on `courses`, `students`, and their `assignments`.
 
 ### Specifications
 
@@ -18,13 +18,13 @@ The completed application should meet the following criteria:
 
 * The database must be seeded with sample data.
 
-* The API should be tested using Insomnia since this project doesn't require creating a front end.
+* The `Student` model should have a `GET` method that returns all students and also head count using MongoDB `aggregate` functions.
 
-* The `Student` model should have a `GET` all students method that also returns a student head count using the `aggregate` method in Mongoose.
-
-* The `Student` model should have a `GET` a single student method that also returns that students overall grade using the `aggregate` method in Mongoose.
-
+* The `Student` model should have a `GET` method that returns a single student and also the students overall grade using MongoDB `aggregate` functions.
+  
 * The project should make use of MongoDB operators like or `$addToSet`, `$unwind`, `$group` and `$avg`.
+
+* The endpoint `api/students/<student id>` should be tested using Insomnia to ensure that the `aggregate` function returns the student's overall grade.
 
 * The backend should be deployed using Heroku and MongoDB Atlas.
 
@@ -36,7 +36,7 @@ The completed application should meet the following criteria:
 
 * How can we use the `$avg` [MongoDB operator](https://docs.mongodb.com/manual/reference/operator/aggregation/avg/) to calculate the overall grade for a student?
 
-* How can we use the information from the [Full-Stack blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) to help in deploying the mini-project?
+* How can we use the information from the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) to help in deploying the mini-project?
 
 ## 🏆 Bonus
 
