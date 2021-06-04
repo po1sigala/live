@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the updated document has an updated `name` property value that matches the value provided in the route parameter. 
 
-* It's done when only the name property has been updated in the document and no other changes have been made. 
+* It's done when only the `name` property has been updated in the document and no other changes have been made. 
 
 * It's done when I test the `POST` Route in Insomnia and the updated document is returned. 
 
