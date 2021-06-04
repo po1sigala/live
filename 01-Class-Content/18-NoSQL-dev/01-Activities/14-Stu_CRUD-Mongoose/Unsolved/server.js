@@ -62,8 +62,8 @@ app.delete('/find-one-delete/:department', function(req, res) {
 });
 
 app.post('/find-one-update/:department', function(req, res) {
-  // TODO: Write route that finds the first instance of document with name of 'Kids'
-  // and replaces it with value in URL param
+ // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
+ // Update that name with the value given from the URL param
 });
 
 db.once('open', () => {
