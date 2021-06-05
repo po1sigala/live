@@ -1,17 +1,17 @@
 [
   {
-    "name": "London"
+    "location_name": "London"
   },
   {
-    "name": "Paris"
+    "location_name": "Paris"
   },
   {
-    "name": "Pismo Beach"
+    "location_name": "Pismo Beach"
   },
   {
-    "name": "Miami"
+    "location_name": "Miami"
   },
   {
-    "name": "Austin"
+    "location_name": "Austin"
   }
 ]

@@ -52,7 +52,7 @@ In this mini-project, you will work with a group to build an API using Node.js, 
 
     * `id`: primary key
     
-    * `name`
+    * `location_name`
 
   * `Trips`
       
