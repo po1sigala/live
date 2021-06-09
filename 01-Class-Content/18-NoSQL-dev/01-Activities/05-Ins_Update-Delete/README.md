@@ -32,7 +32,7 @@
 
   * 🔑 To update the document we just created, we use the `updateOne()` method.
 
-    * The first object we add is key pair that we want to use to find the document. In this case, we are going to find the document by it's item name. This information is important so that only the document that you want updated is changed. 
+    * The first object we add is key pair that we want to use to find the document, or the filter. In this case, we are going to use the filter to find the document by it's item name. This information is important so that only the document that you want updated is changed. 
 
     * Then, we use the MongoDB update operator `$set` to set our new value, updating our document. 
 
@@ -42,8 +42,8 @@
 
   * 🔑 To delete the document we just updated, we use the `deleteOne()` method.
 
-    * It is important that you provide filter information so that only the document we want deleted is deleted. In this case, the document with the item name of `apple` will be deleted. 
-
+    * It is important that you provide filter information so that only the document we want deleted is deleted. In this case, only the document with the item name of `apple` will be deleted. If there happens to be more than one document with the item of `apple`, only the first one will be deleted. 
+    
     ```sh
     db.groceryCollection.deleteOne( {"item": "apple"})
     ```
