@@ -41,11 +41,11 @@ app.get('/read', function (req, res) {
 app.delete('/delete', function (req, res) {
   // Use .deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
-    // This is the filter. The delete will find the title that matches the title provided in the request body
-    { title: req.body.title },
+    // This is the filter. The delete only the document that matches the _id provided in the request body
+    { _id: req.body.title },
     function (err) {
       if (err) throw err;
       res.send('Document deleted')
     }
-  )
-})
+  );
+});

@@ -26,6 +26,8 @@
 
   * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter` to insert the data.
 
+  * Make sure you note the generated `ObjectId(STRING-VALUE-HERE`. We will use this unique identifier to delete this record later on. 
+
     ```sh
     db.groceryCollection.insertOne( {"item": "banana", "department": "produce"} );
     ```
@@ -42,13 +44,20 @@
 
   * 🔑 To delete the document we just updated, we use the `deleteOne()` method.
 
-    * It is important that you provide filter information so that only the document we want deleted is deleted. In this case, only the document with the item name of `apple` will be deleted. If there happens to be more than one document with the item of `apple`, only the first one will be deleted. 
+    * It is important that you provide filter information so that only the document we want deleted is deleted. 
+    
+    * In this case, only the document with the item name of `apple` will be deleted. If there happens to be more than one document with the item of `apple`, only the first one will be deleted. 
     
     ```sh
     db.groceryCollection.deleteOne( {"item": "apple"})
     ```
 
-  * 🔑 To verify that the document has been deleted, we can use a `find()`. If successful, no documents should be returned. 
+    * A better way to do this is to use the unique identifier, the `_id`. Replace the `item` field with `_id` and paste the ObjectID you noted above as the key-pair value. 
+
+    ```sh
+    db.groceryCollection.deleteOne({ "_id" : ObjectId("YOUR-UNIQUE_ID")} )
+
+  * 🔑 To verify that the document has been deleted, we can use the `find` method. If successful, no documents should be returned. 
 
     ```sh
     db.groceryCollection.find({})
