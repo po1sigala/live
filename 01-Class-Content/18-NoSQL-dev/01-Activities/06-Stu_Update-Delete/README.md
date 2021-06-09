@@ -1,4 +1,4 @@
-# 🏗️ Update and Delete Data with MongoDB JS
+# 🏗️ Delete Data with MongoDB JS
 
 Work with a partner to implement the following user story:
 
@@ -8,23 +8,15 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the single document with the `_id`  of `1000` is deleted. No other documents should be removed. 
+* It's done when I use the existing `/create` GET Route to create a new document that includes a title.
 
-* It's done when the single document that contains the `name` value `Artemis` is updated and replaced with the name `Suko`.
+* It's done when I add a new `/delete` DELETE route that uses a filter to find a single document by title and deletes that document. The title name should be provided by the request body. 
 
-* It is done when the results have been logged to the console. 
-
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-![This image shows the results of update and delete methods]({TODO})
-
----
+* It is done when I test the route using Insomnia and the document I just created is deleted. No other documents should be changed. 
 
 ## 💡 Hints
 
-Why is it important to specify a query parameter when updating and deleting documents? 
+Why is it important to specify a filter when updating and deleting documents? 
 
 ## 🏆 Bonus
 
