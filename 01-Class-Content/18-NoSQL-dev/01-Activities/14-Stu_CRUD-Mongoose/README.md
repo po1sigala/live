@@ -2,31 +2,29 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to execute queries to create, read, update, and delete data in a MongoDB database using Mongoose.
+* As a developer, I want to be able to find a single document and update it using a Mongoose CRUD method.
 
 ## Acceptance Criteria
 
-* It's done when using a Mongoose CRUD method, I can create a document.
+* It's done when I use a Mongoose CRUD method to select a single document with the `name` property of `Kids` and update it. 
 
-* It's done when using a Mongoose CRUD method, I can insert data into a single, existing document.
+* It's done when the updated document has an updated `name` property value that matches the value provided in the route parameter. 
 
-* It's done when using a Mongoose CRUD method, I can update data in a single, existing document.
+* It's done when only the `name` property has been updated in the document and no other changes have been made. 
 
-* It's done when using a Mongoose CRUD method, I can delete an existing document and no other documents are deleted.
-
-* It's done when each query can be executed multiple times. 
+* It's done when I test the `POST` Route in Insomnia and the updated document is returned. 
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-[Mongoose docs on queries](https://mongoosejs.com/docs/queries.html)
+[Mongoose docs on findOneAndUpdate()](https://mongoosejs.com/docs/tutorials/findoneandupdate.html)
 
 ---
 
 ## 💡 Hints
 
-* What pattern do Mongoose callbacks follow?
+* How can you add an option to your Mongoose CRUD method so that the updated object is returned?
 
 ## 🏆 Bonus
 
