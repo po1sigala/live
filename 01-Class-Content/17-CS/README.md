@@ -126,7 +126,7 @@ The Git Guide for this unit reviews shell scripts:
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides. The following blog post is relevant to this unit:
 
-* 📖 [Regex Tutorial](http://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
+* 📖 [Regex Tutorial](https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial)
 
 * 📖 [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
 
