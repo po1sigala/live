@@ -6,7 +6,6 @@ const port = 3001;
 
 const connectionStringURI = `mongodb://localhost:27017/groceryListDB`;
 
-
 let db;
 
 mongodb.connect(
