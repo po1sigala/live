@@ -4,7 +4,7 @@ const mongodb = require('mongodb').MongoClient;
 const app = express();
 const port = 3001;
 
-const connectionStringURI = `mongodb://localhost:27017/groceryListDB`;
+const connectionStringURI = `mongodb://localhost:27017/authorListDB`;
 
 
 let db;
@@ -15,9 +15,9 @@ mongodb.connect(
   function (err, client) {
     db = client.db();
     // Drops any documents, if they exist
-    db.collection('groceryList').deleteMany({});
+    db.collection('authorList').deleteMany({});
     // Adds data to database
-    db.collection('groceryList').insertOne(data, function (err, res) {
+    db.collection('authorList').insertOne(data, function (err, res) {
       if (err) {
         return console.log(err);
       }
@@ -31,21 +31,21 @@ mongodb.connect(
 
 // Data for document
 const data = {
-  department: 'produce',
+  author: 'Dr. Seuss',
   // Embedded document
-  items: [
-    { name: 'apple', type: 'Granny Smith', price: 4 },
-    { name: 'apple', type: 'Red Delicious', price: 2 },
-    { name: 'apple', type: 'Macintosh', price: 3 },
-    { name: 'pear', price: 2 },
+  books: [
+    { title: 'Oh the Places You Will Go!', price: 10 },
+    { title: 'Cat in the Hat', price: 5 },
+    { title: 'Green Eggs and Ham', price: 4 },
   ],
 };
 
 app.use(express.json());
 
-app.get('/all-apples', function (req, res) {
-  db.collection('groceryList')
-    .find({ 'items.name': 'apple' })
+app.get('/price-less-than-20', function (req, res) {
+  db.collection('authorList')
+    // Use dot notation to access embedded document
+    .find({ 'books.price': { $lte: 20 } })
     .toArray(function (err, results) {
       if (err) throw err;
       res.send(results);
