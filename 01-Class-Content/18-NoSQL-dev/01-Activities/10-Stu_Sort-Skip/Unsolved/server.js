@@ -1,0 +1,54 @@
+const express = require('express');
+const mongodb = require('mongodb').MongoClient;
+
+const app = express();
+const port = 3001;
+
+const connectionStringURI = `mongodb://localhost:27017/numbersDB`;
+
+let db;
+
+const data = [
+  { number: 1 },
+  { number: 7 },
+  { number: -3 },
+  { number: 11 },
+  { number: 12 },
+  { number: 1000 },
+  { number: 8 },
+  { number: 2 },
+  { number: 15 },
+  { number: 4 },
+  { number: 2 },
+  { number: 90 },
+];
+
+mongodb.connect(
+  connectionStringURI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  function (err, client) {
+    db = client.db();
+    db.collection('numberList').deleteMany({});
+    db.collection('numberList').insertMany(data, function (err, res) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("Data inserted");
+    });
+
+    app.listen(port, () => {
+      console.log(`Example app listening at http://localhost:${port}`)
+    });
+  });
+
+app.use(express.json());
+
+// Get request to read all the documents in a collection
+app.get('/read', function (req, res) {
+  db.collection('numberList')
+    .find()
+    .toArray(function (err, results) {
+      if (err) throw err;
+      res.send(results);
+    });
+});

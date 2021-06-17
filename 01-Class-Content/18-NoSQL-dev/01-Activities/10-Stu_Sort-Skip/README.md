@@ -4,13 +4,15 @@ Work with a partner to implement the following user story:
 
 * As a developer, I want to change the order in which read operations return documents.
 
-* As a developer, I want to omit documents from the beginning of the list of returned documents and limit the returned number of documents.  
+* As a developer, I want to omit documents from the list of returned documents and limit the returned number of documents.
 
 ## Acceptance Criteria
 
-* It's done when the documents are returned in descending order based on the values supplied in Express query parameters.  
+* It's done when the documents are returned in descending order using MongoDB methods.
 
-* It's done when the first document is skipped based on the values supplied in Express query parameters and the results are limited to 5 documents. 
+* It's done the results are limited to 5 documents. 
+
+* It's done when documents that contain the largest five numbers are skipped.
 
 * It's done when routes are successfully tested and the results returned in Insomnia. 
 
@@ -22,20 +24,9 @@ Refer to the documentation:
 
 [MongoDB Docs on Skip Returned Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/skip/)
 
-[Express Routing](https://expressjs.com/en/guide/routing.html)
-
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-{TODO}
-![]()
-
----
-
 ## 💡 Hints
 
-* Why is it important to use a unique field when sorting documents?
+* Does MongoDB store documents in a particular order? What happens if there are duplicate values? 
 
 ## 🏆 Bonus
 
