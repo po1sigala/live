@@ -22,7 +22,7 @@ const sess = {
     maxAge: 3600,
     // TODO: Add a comment describing the functionality of the httpOnly attribute
     httpOnly: true,
-    // TODO: Add a comment describing the functionality of the httpOnly attribute
+    // TODO: Add a comment describing the functionality of the secure attribute
     secure: false,
     // TODO: Add a comment describing the functionality of the sameSite attribute
     sameSite: 'strict',
