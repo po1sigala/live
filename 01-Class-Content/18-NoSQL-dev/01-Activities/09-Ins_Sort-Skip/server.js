@@ -11,16 +11,16 @@ let db;
 const data = [
   { letter: "a"},
   { letter: "c" },
-  { letter: "d" },
-  { letter: "g" },
+  { letter: "e" },
+  { letter: "f" },
+  { letter: "h" },
   { letter: "i" },
   { letter: "j" },
-  { letter: "k" },
   { letter: "l" },
-  { letter: "a" },
-  { letter: "f" },
-  { letter: "d" },
   { letter: "b" },
+  { letter: "d" },
+  { letter: "g" },
+  { letter: "k" },
 ];
 
 mongodb.connect(
