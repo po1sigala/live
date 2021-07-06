@@ -106,6 +106,8 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
+In the upcoming unit, you will be using an application called Insomnia to make requests to routes you create with Express.js. Be sure to install Insomnia on your computer by visiting the link to the [Insomnia download page](https://insomnia.rest/download) before the end of this unit.
+
 In the next unit, you'll start using Heroku to host your web applications. Be sure to have the Heroku CLI installed on your computer BEFORE class. You can refer to the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) for extra guidance.
 
 ## Resources
