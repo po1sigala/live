@@ -1,13 +1,18 @@
 const { Schema, model } = require('mongoose');
 
-// TODO: Create a User schema called `userSchema`.
-/* 
-  first: String,
-  last: String,
-  age: Number
-*/
-
-// TODO: Mongoose will not include virtuals by default, so modify the schema such that it does
+const userSchema = new Schema(
+  {
+    first: String,
+    last: String,
+    age: Number,
+  },
+  {
+    toJSON: {
+      // TODO: Mongoose will not include virtuals by default, so add a `virtuals` property and set it's value to true
+    },
+    id: false,
+  }
+);
 
 // TODO: Create a virtual property `fullName` on the userSchema
 

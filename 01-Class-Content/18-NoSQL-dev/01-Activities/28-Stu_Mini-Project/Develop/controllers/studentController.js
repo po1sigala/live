@@ -1,6 +1,6 @@
 const { Student, Course } = require('../models');
 
-// TODO: Create an aggregation function to get the number of students overall
+// TODO: Create an aggregate function to get the number of students overall
 const headCount = async () =>
   Student.aggregate()
     // Your code here
