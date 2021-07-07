@@ -32,7 +32,7 @@ The completed application should meet the following criteria:
 
 * Be sure to run `npm run seed`, to seed your database before testing with Insomnia.
 
-* Run `npm start:dev` to have the server automatically restart whenever changes are saved.
+* Run `npm run dev` to have the server automatically restart whenever changes are saved.
 
 * How can we use the `$avg` [MongoDB operator](https://docs.mongodb.com/manual/reference/operator/aggregation/avg/) to calculate the overall grade for a student?
 
