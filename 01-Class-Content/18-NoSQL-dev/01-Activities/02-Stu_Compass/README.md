@@ -9,6 +9,7 @@ Work with a partner to implement the following user story:
 ## Acceptance Criteria
 
 * It's done when I click the `Connect` button to navigate to the Compass home page. 
+
 > Note: You do not have to paste a connection string before clicking 'Connect`.
 
 * It's done when I have created a new local database named `inventoryDB` using Compass's Embedded MongoDB Shell (MongoSH Beta).

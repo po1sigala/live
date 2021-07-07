@@ -45,7 +45,7 @@ app.use(express.json());
 app.get('/all-apples', function (req, res) {
   db.collection('groceryList')
     // Use dot notation for embedded document
-    .find({ 'items.name': 'apple' })
+    .find({ 'items.price': 2 })
     .toArray(function (err, results) {
       if (err) throw err;
       res.send(results);
