@@ -18,13 +18,11 @@ TypeError: Invalid schema configuration: `Tag` is not a valid type within the ar
 
 ## Steps to Reproduce the Problem
 
-1. Navigate to `Unsolved/` in your command line window //Add npm install?
+1. Navigate to `Unsolved/` in your command line window and run `npm i`
 
-2. Run `npm run seed` to populate an example database
+2. Run `npm run seed` to populate an example database, or `npm run dev` to run the development server.
 
-3. Run `npm run dev` to attempt to query the database 
-
-4. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags``
+3. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags``
 
 ## 💡 Hints
 

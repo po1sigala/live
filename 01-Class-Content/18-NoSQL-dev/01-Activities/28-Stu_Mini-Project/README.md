@@ -1,6 +1,6 @@
 # Unit 18 Mini-Project: Student Statistics Backend
 
-In this activity, you will build a student statistics application that uses Express.js, a MongoDB database, and the Mongoose ODM. The app must feature MongoDB aggregate functions to show statistics like the total number of students and a given students overall grade. This project back-end only project must be deployed using MongoDB Atlas and Heroku.
+In this activity, you will start with an existing codebase for a mostly complete application. You will be adding aggregate methods to the `Student` controller to show a student's overall grade and the number of students. Finally, you will spend the remaining time deploying the application using MongoDB Atlas and Heroku.
 
 ## Instructions
 
@@ -18,21 +18,21 @@ The completed application should meet the following criteria:
 
 * The database must be seeded with sample data.
 
-* The `Student` model should have a `GET` method that returns all students and also head count using MongoDB `aggregate` functions.
+* The `Student` controller should have a `headCount` aggregate function to get the total number of students by making use of MongoDB aggregate operators.
 
-* The `Student` model should have a `GET` method that returns a single student and also the students overall grade using MongoDB `aggregate` functions.
+* The `Student` controller should have a `grade` aggregate function that returns a single student and also the student's overall grade using MongoDB aggregate operators.
   
-* The project should make use of MongoDB operators like or `$addToSet`, `$unwind`, `$group` and `$avg`.
+* The project will require research of MongoDB operators such as `$addToSet`, `$unwind`, `$group`, and `$avg`.
 
-* The endpoint `api/students/<student id>` should be tested using Insomnia to ensure that the `aggregate` function returns the student's overall grade.
+* The endpoints `api/students/<student id>`, and `api/students/` should be tested using Insomnia to ensure that the aggregate functions return the student's overall grade and headcount respectively.
 
-* The backend should be deployed using Heroku and MongoDB Atlas.
+* This backend application should be deployed using Heroku and MongoDB Atlas. Refer to the resources below for further instructions.
 
 ## 💡 Hints
 
 * Be sure to run `npm run seed`, to seed your database before testing with Insomnia.
 
-* Run `npm start:dev` to have the server automatically restart whenever changes are saved.
+* Run `npm run dev` to have the server automatically restart whenever changes are saved.
 
 * How can we use the `$avg` [MongoDB operator](https://docs.mongodb.com/manual/reference/operator/aggregation/avg/) to calculate the overall grade for a student?
 

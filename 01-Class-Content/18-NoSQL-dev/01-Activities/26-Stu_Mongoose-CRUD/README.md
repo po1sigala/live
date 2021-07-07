@@ -1,6 +1,6 @@
 # 📐 Add Comments to Mongoose CRUD Operations
 
-Work with a partner to add comments describing the functionality of the CRUD operations found in [Unsolved/controllers](./Unsolved/controllers).
+Work with a partner to add comments describing the functionality of the CRUD operations found in [Unsolved/controllers/appController.js](./Unsolved/controllers/appController.js).
 
 ## 📝 Notes
 

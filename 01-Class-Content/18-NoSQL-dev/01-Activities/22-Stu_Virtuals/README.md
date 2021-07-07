@@ -8,8 +8,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have created a new `Schema` called `userSchema` inside `Unsolved/models/User.js` with a `first` name, `last` name, and `age` attribute.
-
 * It's done when I have defined a virtual property on the `userSchema` called `fullName` that will get the `first` and `last` attributes and return a string containing the full name of the user.
 
 * It's done when I have defined a `set()` method on the `fullName` virtual that takes a string containing the full name of the user and sets the virtual attribute values for `first` and `last`.
@@ -31,6 +29,8 @@ Work with a partner to implement the following user story:
 ## 💡 Hints
 
 What method do we use on a Mongoose schema to create a virtual property?
+
+Why do we need the `this` keyword when working with virtuals?
 
 ## 🏆 Bonus
 

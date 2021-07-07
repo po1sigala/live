@@ -6,5 +6,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.12.10"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node utils/seed.js"
   }
 }
