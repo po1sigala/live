@@ -9,6 +9,7 @@ module.exports = {
   },
   getSinglePost(req, res) {
     Post.findOne({ _id: req.params.postId })
+      .populate('comments')
       .then((post) =>
         !post
           ? res.status(404).json({ message: 'No post with that ID' })
