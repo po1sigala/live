@@ -9,7 +9,7 @@ const port = 3001;
 const connectionStringURI = `mongodb://localhost:27017/shelterDB`;
 
 // Declare a variable to hold the connection
-const db;
+let db;
 
 // Creates a connection to a MongoDB instance and returns the reference to the database
 mongodb.connect(

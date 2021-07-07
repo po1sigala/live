@@ -1,4 +1,4 @@
-# Instructor Demo: MongoDB Compass - Update and Delete
+#  Instructor Demo: MongoDB Compass - Update and Delete
 
 * Open Compass on your local machine to do the following:
 
