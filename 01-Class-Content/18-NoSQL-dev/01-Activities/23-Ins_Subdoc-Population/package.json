@@ -7,10 +7,13 @@
   "scripts": {
     "start": "node index",
     "seed": "node utils/seed.js",
-    "start:dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.12.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
