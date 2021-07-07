@@ -1,14 +1,6 @@
 const connection = require('../config/connection');
 const User = require('../models/User');
-const { getRandomName, getRandomUserName, genRandomIndex } = require('./data');
-
-/* User schema
-  {
-    first: String,
-    last: String,
-    age: Number,
-  },
-*/
+const { getRandomName } = require('./data');
 
 // Start the seeding runtime timer
 console.time('seeding');

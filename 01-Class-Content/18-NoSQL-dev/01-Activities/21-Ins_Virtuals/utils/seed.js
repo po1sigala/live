@@ -7,21 +7,6 @@ const {
   genRandomIndex,
 } = require('./data');
 
-/* Post schema
-  {
-    text: String,
-    username: String,
-    comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }],
-  },
-*/
-
-/* Comment schema
-{
-  text: String,
-  username: String,
-}
-*/
-
 // Start the seeding runtime timer
 console.time('seeding');
 
@@ -47,13 +32,13 @@ connection.once('open', async () => {
   // Wait for the comments to be inserted into the database
   await Comment.collection.insertMany(comments);
 
-  // For each of the comments that exist, make a random post of length 50
+  // For each of the comments that exist, make a random post of 10 words
   comments.forEach(() => makePost(getRandomPost(10)));
 
   // Wait for the posts array to be inserted into the database
   await Post.collection.insertMany(posts);
 
-  // Log out a pretty table for tags and posts, excluding the excessively long text property
+  // Log out a pretty table for comments and posts
   console.table(comments);
   console.table(posts);
   console.timeEnd('seeding complete 🌱');
