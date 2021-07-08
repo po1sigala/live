@@ -31,18 +31,26 @@ mongodb.connect(
 // Data for document
 const data = {
   department: 'produce',
+  promotions: {
+    Monday: 'free banana',
+    Tuesday: 'free apple',
+    Wednesday: '50% off grapes',
+    Thursday: '25% off pears'
+    Friday: '50% off all produce',
+  },
   // Embedded document
   items: [
     { name: 'apple', type: 'Granny Smith', price: 4 },
     { name: 'apple', type: 'Red Delicious', price: 2 },
     { name: 'apple', type: 'Macintosh', price: 3 },
     { name: 'pear', price: 2 },
+    { name: 'banana', price: 1 },
   ],
 };
 
 app.use(express.json());
 
-app.get('/all-apples', function (req, res) {
+app.get('/free-item-days', function (req, res) {
   db.collection('groceryList')
     // Use dot notation for embedded document
     .find({ 'items.name': 'apple' })
