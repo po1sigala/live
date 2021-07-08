@@ -29,7 +29,7 @@ mongodb.connect(
   function ( client) {
     db = client.db();
     db.collection('letterList').deleteMany({});
-    db.collection('letterList').insertMany(data, function (err) {
+    db.collection('letterList').insertMany(data, function (err, res) {
       if (err) {
         return console.log(err);
       }

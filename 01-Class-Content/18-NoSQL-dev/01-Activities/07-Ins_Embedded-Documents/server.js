@@ -31,7 +31,7 @@ mongodb.connect(
 
 app.use(express.json());
 
-// This will return any documents with embedded documents that meet the criteria
+// This will return any documents with embedded documents that match
 app.get('/sale-over-30', function (req, res) {
   db.collection('groceryList')
     // Use dot notation for embedded document
