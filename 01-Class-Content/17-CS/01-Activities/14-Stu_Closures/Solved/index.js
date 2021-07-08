@@ -6,7 +6,7 @@ function counter() {
   return {
     increment: function () {
       // Increment the outer function's 'count' variable by one.
-      return count++;
+      return ++count;
     },
   };
 }
