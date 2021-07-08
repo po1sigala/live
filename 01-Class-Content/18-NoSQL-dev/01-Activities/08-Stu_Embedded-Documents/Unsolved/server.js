@@ -16,11 +16,11 @@ mongodb.connect(
     // Drops any documents, if they exist
     db.collection('authorList').deleteMany({});
     // Adds data to database
-    db.collection('authorList').insertMany(data, function (err, res) {
+    db.collection('authorList').insertOne(data, function (err, res) {
       if (err) {
         return console.log(err);
       }
-      console.log(res.ops);
+      console.log(res.ops[0]);
     });
 
     app.listen(port, () => {
