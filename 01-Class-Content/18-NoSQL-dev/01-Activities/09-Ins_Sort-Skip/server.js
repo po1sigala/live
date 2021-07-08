@@ -43,7 +43,7 @@ mongodb.connect(
 
 app.use(express.json());
 
-// Get request to read all the documents in a collection
+// GET request to read all the documents in a collection
 app.get('/read', function (req, res) {
   db.collection('letterList')
     // find() returns all documents. Equivalent to `Select *` in SQL. 

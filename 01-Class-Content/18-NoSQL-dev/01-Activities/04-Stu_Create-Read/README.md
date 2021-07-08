@@ -19,7 +19,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is Atomicity? Why is it important to understand when performing write operations with MongoDB?			
+* What is Atomicity? Why is it important to understand when performing write operations with MongoDB?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
