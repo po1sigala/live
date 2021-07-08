@@ -6,6 +6,7 @@ const port = 3001;
 
 const connectionStringURI = `mongodb://localhost:27017/authorListDB`;
 
+
 let db;
 
 mongodb.connect(
@@ -27,6 +28,17 @@ mongodb.connect(
       console.log(`Example app listening at http://localhost:${port}`)
     });
   });
+
+// Data for document
+const data = {
+  author: 'Dr. Seuss',
+  // Embedded document
+  books: [
+    { title: 'Oh the Places You Will Go!', price: 10 },
+    { title: 'Cat in the Hat', price: 5 },
+    { title: 'Green Eggs and Ham', price: 4 },
+  ],
+};
 
 app.use(express.json());
 
