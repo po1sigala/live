@@ -1,7 +1,4 @@
 // TODO: Complete the 'counter' function below.
-function counter() {
-    
-}
-  
-  module.exports = counter;
-  
+function counter() {}
+
+module.exports = counter;
