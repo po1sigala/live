@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+const data = require('./models/data');
 
 const app = express();
 const port = 3001;
@@ -16,11 +17,11 @@ mongodb.connect(
     // Drops any documents, if they exist
     db.collection('groceryList').deleteMany({});
     // Adds data to database
-    db.collection('groceryList').insertOne(data, function (err, res) {
+    db.collection('groceryList').insertMany(data, function (err, res) {
       if (err) {
         return console.log(err);
       }
-      console.log(res.ops[0]);
+      console.log(res.ops);
     });
 
     app.listen(port, () => {
@@ -28,32 +29,14 @@ mongodb.connect(
     });
   });
 
-// Data for document
-const data = {
-  department: 'produce',
-  promotions: {
-    Monday: 'free banana',
-    Tuesday: 'free apple',
-    Wednesday: '50% off grapes',
-    Thursday: '25% off pears'
-    Friday: '50% off all produce',
-  },
-  // Embedded document
-  items: [
-    { name: 'apple', type: 'Granny Smith', price: 4 },
-    { name: 'apple', type: 'Red Delicious', price: 2 },
-    { name: 'apple', type: 'Macintosh', price: 3 },
-    { name: 'pear', price: 2 },
-    { name: 'banana', price: 1 },
-  ],
-};
-
 app.use(express.json());
 
-app.get('/free-item-days', function (req, res) {
+// This will return any documents with embedded documents that meet the criteria
+app.get('/sale-over-30', function (req, res) {
   db.collection('groceryList')
     // Use dot notation for embedded document
-    .find({ 'items.name': 'apple' })
+    // $gte specifies we want percentage discounts greater than 30
+    .find({ 'promotion.percentage_discount': { $gte: 30 } })
     .toArray(function (err, results) {
       if (err) throw err;
       res.send(results);
