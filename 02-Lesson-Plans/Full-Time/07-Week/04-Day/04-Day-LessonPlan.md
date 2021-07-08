@@ -1032,7 +1032,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
   
     * `password`: "password1234"
 
-  * **Important:** Adding cookie settings allows us to change settings associated with the cookie that gets sent to the client. This cookie gets sent to the client immediately after `express-session` is added to our server. With some changes however, we can change how our session is identified on the server whenever sessions are used. Cookies allow us to store information about the session on the user's client.
+  * **Important**: Adding cookie settings allows us to change settings associated with the cookie that gets sent to the client. This cookie gets sent to the client immediately after `express-session` is added to our server. With some changes however, we can change how our session is identified on the server whenever sessions are used. Cookies allow us to store information about the session on the user's client.
   
   * Once a session id, or `sid`, is generated on the server, `express-session` will reflect that information in a cookie on the client.
 
