@@ -1,8 +1,8 @@
-# 09.1 Full-Time Lesson Plan: How Does JavaScript Execute? 
+# 09.1 Full-Time Lesson Plan: How Does JavaScript Execute?
 
-## Overview 
+## Overview
 
-In this class, students will be re-introduced to JavaScript within the context of some general computer-science concepts. They will learn about how JavaScript executes an application, including global and functional execution context, in order to understand how the various components work together to run a program. Along the way, they'll review various data structures, including stacks, queues, and callback queues. Students will also use the browser to understand the role of Web APIs and asynchronous behavior. Next, they'll learn about higher-order functions and how to implement them. Finally, they'll explore closures, including how to leverage them using factory functions. 
+In this class, students will be re-introduced to JavaScript within the context of some general computer-science concepts. They will learn about how JavaScript executes an application, including global and functional execution context, in order to understand how the various components work together to run a program. Along the way, they'll review various data structures, including stacks, queues, and callback queues. Students will also use the browser to understand the role of Web APIs and asynchronous behavior. Next, they'll learn about higher-order functions and how to implement them. Finally, they'll explore closures, including how to leverage them using factory functions.
 
 ## Instructor Notes
 
@@ -50,33 +50,33 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                                   | Duration |
-|---     |---  |---                                              |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity                  | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Global Execution Context       | 0:05     |
-| 10:15AM| 3   | Student Do: Global Execution Context            | 0:15     |
-| 10:30AM| 4   | Instructor Review: Global Execution Context     | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Functional Execution Context   | 0:05     |
-| 10:45AM| 6   | Student Do: Functional Execution Context        | 0:15     |
-| 11:00AM| 7   | Instructor Review: Functional Execution Context | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Stacks                         | 0:05     |
-| 11:15AM| 9   | Student Do: Stacks                              | 0:15     |
-| 11:30AM| 10  | Instructor Review: Stacks                       | 0:10     |
-| 11:40AM| 11  | Instructor Demo: Queues                         | 0:05     |
-| 11:45AM| 12  | Student Do: Queues                              | 0:15     |
-| 12:00PM| 13  | BREAK                                           | 0:30     |
-| 12:30PM| 14  | Instructor Review: Queues                       | 0:10     |
-| 12:40PM| 15  | Instructor Demo: Callback Queue                 | 0:05     |
-| 12:45AM| 16  | Student Do: Callback Queue                      | 0:15     |
-| 1:00PM | 17  | Instructor Review: Callback Queue               | 0:15     |
-| 1:15PM | 18  | Instructor Do: Stoke Curiosity                  | 0:10     |
-| 1:25PM | 19  | Instructor Demo: Higher-Order Functions         | 0:05     |
-| 1:30PM | 20  | Student Do: Higher-Order Functions              | 0:15     |
-| 1:45PM | 21  | Instructor Review: Higher-Order Functions       | 0:10     |
-| 1:55PM | 22  | Instructor Demo: Closures                       | 0:05     |
-| 2:00PM | 23  | Student Do: Closures                            | 0:15     |
-| 2:15PM | 24  | Instructor Review: Closures                     | 0:15     |
-| 2:30PM | 25  | END                                             | 0:00     |
+| Start   | #   | Activity Name                                   | Duration |
+| ------- | --- | ----------------------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 10:10AM | 2   | Instructor Demo: Global Execution Context       | 0:05     |
+| 10:15AM | 3   | Student Do: Global Execution Context            | 0:15     |
+| 10:30AM | 4   | Instructor Review: Global Execution Context     | 0:10     |
+| 10:40AM | 5   | Instructor Demo: Functional Execution Context   | 0:05     |
+| 10:45AM | 6   | Student Do: Functional Execution Context        | 0:15     |
+| 11:00AM | 7   | Instructor Review: Functional Execution Context | 0:10     |
+| 11:10AM | 8   | Instructor Demo: Stacks                         | 0:05     |
+| 11:15AM | 9   | Student Do: Stacks                              | 0:15     |
+| 11:30AM | 10  | Instructor Review: Stacks                       | 0:10     |
+| 11:40AM | 11  | Instructor Demo: Queues                         | 0:05     |
+| 11:45AM | 12  | Student Do: Queues                              | 0:15     |
+| 12:00PM | 13  | BREAK                                           | 0:30     |
+| 12:30PM | 14  | Instructor Review: Queues                       | 0:10     |
+| 12:40PM | 15  | Instructor Demo: Callback Queue                 | 0:05     |
+| 12:45AM | 16  | Student Do: Callback Queue                      | 0:15     |
+| 1:00PM  | 17  | Instructor Review: Callback Queue               | 0:15     |
+| 1:15PM  | 18  | Instructor Do: Stoke Curiosity                  | 0:10     |
+| 1:25PM  | 19  | Instructor Demo: Higher-Order Functions         | 0:05     |
+| 1:30PM  | 20  | Student Do: Higher-Order Functions              | 0:15     |
+| 1:45PM  | 21  | Instructor Review: Higher-Order Functions       | 0:10     |
+| 1:55PM  | 22  | Instructor Demo: Closures                       | 0:05     |
+| 2:00PM  | 23  | Student Do: Closures                            | 0:15     |
+| 2:15PM  | 24  | Instructor Review: Closures                     | 0:15     |
+| 2:30PM  | 25  | END                                             | 0:00     |
 
 ---
 
@@ -90,28 +90,28 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * **What is computer science?**
 
-    * Formally known as "the study of computers and computational systems." 
-    
+    * Formally known as "the study of computers and computational systems."
+
     * The study of the design, development, and analysis of software systems.
 
     * The art of telling a computer what to do through a set of instructions.
 
   * **How will understanding computer science make us better programmers?**
-   
+
     * These concepts often appear during technical interviews.
 
     * When inheriting large codebases, you might be asked to optimize code efficiency.
 
     * Understanding what makes up a program will help us design software more efficiently.
-    
+
     * Discovering how a program executes can tell us how to avoid performance issues.
-    
+
     * Computational thinking refers to the formulation of a solution using logic, patterns, and problem solving methods.
 
   * **Which computer science concepts will we learn?**
 
     * We will learn about algorithms and how to gauge their performance.
-    
+
     * We will learn about data structures and how they are implemented in JavaScript.
 
   * **What is Big O notation?**
@@ -128,9 +128,9 @@ In this class, students will be re-introduced to JavaScript within the context o
 
     * They are built upon simpler primitive data types (like variables).
 
-    * It is non-opinionated, in the sense that it is only responsible for holding the data. 
+    * It is non-opinionated, in the sense that it is only responsible for holding the data.
 
-  * **Why is computer science a common category for technical interview questions?** 
+  * **Why is computer science a common category for technical interview questions?**
 
     * Understanding computer science fundamentals shows that you know how a program functions and how to make it faster and more efficient.
 
@@ -144,7 +144,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Navigate to `28-Stu_Mini-Project/README.md` in your IDE and demonstrate the following:
 
-  * Although we may know how to write code, we also need to learn how to explain our code verbally in an interview. 
+  * Although we may know how to write code, we also need to learn how to explain our code verbally in an interview.
   
   * This will demonstrate to an interviewer how we solve problems in a logical and iterative manner.
 
@@ -170,7 +170,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: Global Execution Context (5 min) 
+### 2. Instructor Demo: Global Execution Context (5 min)
 
 * Open `01-Ins_Global-Execution-Context/index.html` in your browser and demonstrate the following:
 
@@ -190,7 +190,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Global-Execution-Context/README.md`.
 
-### 3. Student Do: Global Execution Context (15 min) 
+### 3. Student Do: Global Execution Context (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Global-Execution-Context/README.md`.
 
@@ -222,7 +222,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Global Execution Context (10 min) 
+### 4. Instructor Review: Global Execution Context (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -238,7 +238,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ Execution context
 
-* Open `02-Stu_Global-Execution-Context/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `02-Stu_Global-Execution-Context/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 The variable `carNoise` is stored in the global execution context and is assigned the value `Honk`.
   
@@ -268,7 +268,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Functional Execution Context (5 min) 
+### 5. Instructor Demo: Functional Execution Context (5 min)
 
 * Open `03-Ins_Functional-Execution-Context/assets/js/script.js` in your IDE and demonstrate the following:
 
@@ -300,7 +300,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Functional-Execution-Context/README.md`.
 
-### 6. Student Do: Functional Execution Context (15 min) 
+### 6. Student Do: Functional Execution Context (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Functional-Execution-Context/README.md`.
 
@@ -346,7 +346,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Functional Execution Context (10 min) 
+### 7. Instructor Review: Functional Execution Context (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -362,11 +362,11 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ Private variables
 
-* Open `04-Stu_Functional-Execution-Context/Solved/index.js` in your IDE and explain the following: 
+* Open `04-Stu_Functional-Execution-Context/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 The variables `total` and `i` are declared in the inner function `sum()`. Therefore neither variable can be accessed in the scope of the outer function `arg()` and can be considered private variables.
   
-  *  This was the cause of the error which failed the tests. 
+  * This was the cause of the error which failed the tests.
 
     ```js
     function sum() {
@@ -390,7 +390,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     }
     ```
   
-  * Calling `sum()` in the outer function executes the inner function, which returns the sum of the numbers in the array. 
+  * Calling `sum()` in the outer function executes the inner function, which returns the sum of the numbers in the array.
 
     ```js
     function avg(array) {
@@ -431,7 +431,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Stacks (5 min) 
+### 8. Instructor Demo: Stacks (5 min)
 
 * Navigate to `05-Ins_Stacks` in your terminal and execute the following command:
 
@@ -442,10 +442,10 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `05-Ins_Stacks/__tests__/index.test.js` in your IDE to demonstrate the following:
   
   * The test descriptions give you clues on how to implement a stack, which is a type of data structure:
-    
+
     * `container` is the name of the initialized variable. What is the data type?
 
-    * The names and functionality are described for both methods. 
+    * The names and functionality are described for both methods.
 
   * The third test description tells us that we can add an item to the top of the stack (i.e., the end of the array).
 
@@ -458,18 +458,18 @@ In this class, students will be re-introduced to JavaScript within the context o
   ```
 
   * The response in the console reveals that all four tests are passing.
-   
+
   * Remind students not to change or modify any of the tests.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Does anyone know why a stack's operations are considered last-in-first-out or LIFO?
 
-  * 🙋 The latest item to be added to a stack is also first one to be removed. 
+  * 🙋 The latest item to be added to a stack is also first one to be removed.
 
   * ☝️ In a JavaScript execution context, what is being added and removed from the stack?
 
-  * 🙋 Function calls. 
+  * 🙋 Function calls.
 
   * ☝️ Why are we learning about stacks?
 
@@ -479,7 +479,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
 
-### 9. Student Do: Stacks (15 min) 
+### 9. Student Do: Stacks (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
 
@@ -515,7 +515,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Stacks (10 min) 
+### 10. Instructor Review: Stacks (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -529,7 +529,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ `push`/`pop` methods
 
-* Open `06-Stu_Stacks/Solved/index.js` in your IDE and explain the following: 
+* Open `06-Stu_Stacks/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 We use a constructor to create a container to store the data. We assign the default value as an empty array.
 
@@ -574,7 +574,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Queues (5 min) 
+### 11. Instructor Demo: Queues (5 min)
 
 * Navigate to `07-Ins_Queues` in your terminal and execute the following command:
 
@@ -587,10 +587,10 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `07-Ins_Queues/__tests__/index.test.js` in your IDE to demonstrate the following:
 
   * The test descriptions give you clues on how to implement a queue, which is a type of data structure:
-    
-    * `container` is the name of the initialized variable. 
 
-    * The names and functionality are described for both methods. 
+    * `container` is the name of the initialized variable.
+
+    * The names and functionality are described for both methods.
 
   * The third test description tells us that we can add an item to the **back** of the queue (i.e., the array).
 
@@ -614,7 +614,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
 
-### 12. Student Do: Queues (15 min) 
+### 12. Student Do: Queues (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
 
@@ -652,7 +652,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: Queues (10 min) 
+### 14. Instructor Review: Queues (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -666,7 +666,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ `push`/`shift` methods
 
-* Open `08-Stu_Queues/Unsolved/index.js` in your IDE and explain the following: 
+* Open `08-Stu_Queues/Unsolved/index.js` in your IDE and explain the following:
 
   * 🔑 We initialize the Stack class with a container to store the data. This was set at default value as an empty array.
 
@@ -705,9 +705,9 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: Callback Queue (5 min) 
+### 15. Instructor Demo: Callback Queue (5 min)
 
-* Run `09-Ins_Callback-Queue/index.js` from the command line and demonstrate the following: 
+* Run `09-Ins_Callback-Queue/index.js` from the command line and demonstrate the following:
 
   * 🔑 The sequence of the logs is altered due to the `setTimeout`.
 
@@ -725,7 +725,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Callback-Queue/README.md`.
 
-### 16. Student Do: Callback Queue (15 min) 
+### 16. Student Do: Callback Queue (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Callback-Queue/README.md`.
 
@@ -771,7 +771,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 17. Instructor Review: Callback Queue (15 min) 
+### 17. Instructor Review: Callback Queue (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -781,7 +781,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Node.js vs. the browser 
+  * ✔️ Node.js vs. the browser
 
   * ✔️ Asynchronous behavior
 
@@ -793,7 +793,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     <button class="btn form-input display-none">Submit</button>
     ```
 
-* Open `10-Stu_Callback-Queues/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `10-Stu_Callback-Queues/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 We can leverage the asynchronous behavior of JavaScript by placing the delay in a `setTimeout()`.
 
@@ -814,7 +814,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ☝️ Why do synchronous processes block the call stack?
 
-  * 🙋 JavaScript is single threaded, so synchronous network requests or large processing loads occupy the thread, not allowing any other code to execute. 
+  * 🙋 JavaScript is single threaded, so synchronous network requests or large processing loads occupy the thread, not allowing any other code to execute.
 
   * ☝️ What is the role of the event loop in asynchronous behavior in JavaScript?
 
@@ -856,7 +856,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Let students know ahead of time that these topics can get abstract and encourage them to ask questions.
 
-* JavaScript has many layers, and interviewers want to know how well a candidate understands them. 
+* JavaScript has many layers, and interviewers want to know how well a candidate understands them.
 
 * In JavaScript, we have a design choice to make early on that will dictate if we use inheritance or composition.
 
@@ -864,7 +864,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Let students know that this knowledge comes with time and practice, and to not fall into that sinking feeling of imposter syndrome.They have been using these concepts all along and now we are just expanding on that knowledge.
 
-### 19. Instructor Demo: Higher Order Functions (5 min) 
+### 19. Instructor Demo: Higher Order Functions (5 min)
 
 * Open `11-Ins_Higher-Order-Functions/index.js` in your IDE and explain the following:
 
@@ -899,11 +899,11 @@ In this class, students will be re-introduced to JavaScript within the context o
     const evenIndexes = arrayIndex.map(evenIndexMultiplier);
     ```
 
-* Run `node index.js` from the command line and demonstrate the following: 
+* Run `node index.js` from the command line and demonstrate the following:
 
   * As we can see every even index is being multiplied by ten which is exactly what the function was meant to do.
 
-  ```
+  ```console
   [10, 52, 350, 6, 720, 7, 30, 19, 320, 54, 780, 95, 970]
   ```
 
@@ -921,7 +921,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Higher-Order-Functions/README.md`.
 
-### 20. Student Do: Higher-Order Functions (15 min) 
+### 20. Student Do: Higher-Order Functions (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_Higher-Order-Functions/README.md`.
 
@@ -957,7 +957,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Higher-Order Functions (10 min) 
+### 21. Instructor Review: Higher-Order Functions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -971,7 +971,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ `.reduce()`
 
-* Open `12-Stu_Higher-Order-Functions/Solved/index.js` in your IDE and explain the following: 
+* Open `12-Stu_Higher-Order-Functions/Solved/index.js` in your IDE and explain the following:
 
   * We create a function named `findAverage` that has access to four arguments: `accumulator`, `currentValue`, `index`, and `array`.
 
@@ -985,7 +985,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * Check to see if we are at the final index of the given array.
 
-  * If so, we return the total plus the current value and divide it by how many elements are in the array. 
+  * If so, we return the total plus the current value and divide it by how many elements are in the array.
   
     ```js
     function findAverage(accumulator, currentValue, index, array) {
@@ -994,8 +994,8 @@ In this class, students will be re-introduced to JavaScript within the context o
       }
     }
     ```
-    
-  * If we have not reached the end of the array, add the total to the current value we are on. 
+
+  * If we have not reached the end of the array, add the total to the current value we are on.
   
     ```js
     function findAverage(accumulator, currentValue, index, array) {
@@ -1016,7 +1016,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * 🔑 Inside the `console`, we should see the correct average being displayed.
 
-    ```
+    ```console
     [79.5]
     ```
 
@@ -1032,7 +1032,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-### 22. Instructor Demo: Closures (5 min) 
+### 22. Instructor Demo: Closures (5 min)
 
 * Open `13-Ins_Closures/index.js` in your IDE and explain the following:
 
@@ -1093,9 +1093,9 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Run `node index.js` from the command line and explain the following:
   
-  * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment. 
+  * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment.
 
-    ```
+    ```console
     You have $400 in your checking account and $1000 in your savings account
     ```
 
@@ -1109,7 +1109,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * Another interesting thing to point out is that the function is also an object.
 
-    ```
+    ```console
     Object
       displayFunds: ƒ ()
         arguments: null
@@ -1130,10 +1130,10 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * 🔑 For the final two statements, we can see that the variables inside the `bankAccount()` function are not accessible from outside the function's lexical environment.
 
+    ```console
+    undefined
+    undefined
     ```
-    undefined
-    undefined
-    ``` 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1149,7 +1149,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Closures/README.md`.
 
-### 23. Student Do: Closures (15 min) 
+### 23. Student Do: Closures (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_Closures/README.md`.
 
@@ -1203,7 +1203,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * ✔️ Lexical environment
 
-* Open `14-Stu_Closures/Solved/index.js` in your IDE and explain the following: 
+* Open `14-Stu_Closures/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 By creating the function `counter`, we have also created a closure.
 
@@ -1212,7 +1212,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       // Code...
     }
     ```
- 
+
   * 🔑 Inside the outer function, we create a private `count` variable that will hold the number of times the function is called.
 
     ```js
@@ -1228,7 +1228,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       let count = 0;
       return {
         increment: function () {
-          return count++;
+          return ++count;
         },
       };
     }
