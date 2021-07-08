@@ -1048,7 +1048,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * The `maxAge` attribute is set to `86400` milliseconds, meaning that the user has approximately one day until their cookie is expired:
 
-    > **Note:** In this demo, we specify a `maxAge`, but it is not necessary to do so. A default `maxAge` will be added automatically if you don't declare one.
+    > **Note**: In this demo, we specify a `maxAge`, but it is not necessary to do so. A default `maxAge` will be added automatically if you don't declare one.
 
     ```js
     const sess = {
