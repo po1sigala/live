@@ -26,10 +26,10 @@ const data = [
 mongodb.connect(
   connectionStringURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function (err, client) {
+  function ( client) {
     db = client.db();
     db.collection('letterList').deleteMany({});
-    db.collection('letterList').insertMany(data, function (err, res) {
+    db.collection('letterList').insertMany(data, function (err) {
       if (err) {
         return console.log(err);
       }
