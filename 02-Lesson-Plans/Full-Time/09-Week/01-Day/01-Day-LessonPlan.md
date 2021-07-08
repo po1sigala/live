@@ -903,7 +903,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * As we can see every even index is being multiplied by ten which is exactly what the function was meant to do.
 
-  ```console
+  ```text
   [10, 52, 350, 6, 720, 7, 30, 19, 320, 54, 780, 95, 970]
   ```
 
@@ -1016,7 +1016,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * 🔑 Inside the `console`, we should see the correct average being displayed.
 
-    ```console
+    ```text
     [79.5]
     ```
 
@@ -1095,7 +1095,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   
   * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment.
 
-    ```console
+    ```text
     You have $400 in your checking account and $1000 in your savings account
     ```
 
@@ -1109,7 +1109,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * Another interesting thing to point out is that the function is also an object.
 
-    ```console
+    ```text
     Object
       displayFunds: ƒ ()
         arguments: null
@@ -1130,7 +1130,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   * 🔑 For the final two statements, we can see that the variables inside the `bankAccount()` function are not accessible from outside the function's lexical environment.
 
-    ```console
+    ```text
     undefined
     undefined
     ```

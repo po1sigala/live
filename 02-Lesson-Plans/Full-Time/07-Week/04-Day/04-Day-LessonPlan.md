@@ -1018,7 +1018,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Cookies (5 min)### 12. Instructor Demo: Cookies (5 min)
+### 16. Instructor Demo: Cookies (5 min)
 
 * Navigate to `17-Ins_Cookies` and run `npm install` and `npm start` from your command line.
 
