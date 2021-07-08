@@ -38,7 +38,7 @@ const data = [
       { name: 'Neil Gaiman', featured: true },
       { name: 'Terry Pratchett', featured: true },
     ],
-    details: { ISBN: 9780425132159, price: 10, total_in_stock: 10 },
+    information: { ISBN: 9780425132159, price: 10, total_in_stock: 10 },
   },
   {
     title: 'Heads You Lose',
@@ -47,8 +47,8 @@ const data = [
       { name: 'David Hayward', featured: false },
     ],
     // One-to-one embedded document relationship
-    // Each book has one set of details
-    details: { ISBN: 9780399157400, price: 20, total_in_stock: 8 },
+    // Each book has one set of information
+    information: { ISBN: 9780399157400, price: 20, total_in_stock: 8 },
   },
   {
     title: 'Between the Lines',
@@ -56,7 +56,7 @@ const data = [
       { name: 'Jodi Picoult', featured: true },
       { name: 'Samantha Van Leer', featured: false },
     ],
-    details: { ISBN: 9781451635751, price: 5, total_in_stock: 5 },
+    information: { ISBN: 9781451635751, price: 5, total_in_stock: 5 },
   },
 ];
 
@@ -66,7 +66,7 @@ app.use(express.json());
 app.get('/price-less-than-10', function (req, res) {
   db.collection('authorList')
     // Use dot notation to query on an embedded document
-    .find({ 'details.price': { $lt: 10 } })
+    .find({ 'information.price': { $lt: 10 } })
     .toArray(function (err, results) {
       if (err) throw err;
       res.send(results);
