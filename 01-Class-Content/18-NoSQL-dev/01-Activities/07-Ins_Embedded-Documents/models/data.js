@@ -22,6 +22,14 @@ const data = [
       percentage_discount: 20,
     },
   },
+  {
+    department: 'snacks',
+    promotion: {
+      promotion_id: 'chips',
+      sale: 'free granola bar',
+      percentage_discount: 50,
+    },
+  },
   // Using multiple embedded document to create a relationship to a single document
   // This is a one-to-many relationship
   {
