@@ -8,11 +8,11 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When I query the data using the `db.collection.find()` method, the matching data should be returned. 
+When I query the embedded data using the `db.collection.find()` method, the matching data should be returned. 
 
 ## Actual Behavior
 
-When I query the data using the `db.collection.find()` method, no matching data is returned.
+When I query the embedded data using the `db.collection.find()` method, no matching data is returned.
 
 ## Steps to Reproduce the Problem
 
