@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the documents are returned in descending order using MongoDB methods.
 
-* It's done the results are limited to 5 documents. 
+* It's done the results are limited to 5 documents.
 
 * It's done when documents that contain the largest five numbers are skipped.
 
@@ -26,7 +26,7 @@ Refer to the documentation:
 
 ## 💡 Hints
 
-* Does MongoDB store documents in a particular order? What happens if there are duplicate values? 
+* Does MongoDB store documents in a particular order? What happens if there are duplicate values?
 
 ## 🏆 Bonus
 
