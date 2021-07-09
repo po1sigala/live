@@ -1,4 +1,4 @@
-#  Instructor Demo: MongoDB Compass
+# Instructor Demo: MongoDB Compass
 
 * MongoDB Compass is the GUI for MongoDB and is a great way to explore a database and interact with data in a visual way. 
 
@@ -6,11 +6,11 @@
 
   * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on localhost with default port `27017`. We will use the default connection at `localhost:27017` to connect to Compass.  
 
-  *  With a MongoDB server installed locally and running, we click on `Connect` on the `New Connection` page to connect to the localhost on port `27017`. 
+  * With a MongoDB server installed locally and running, we click on `Connect` on the `New Connection` page to connect to the localhost on port `27017`. 
   
   > Note: You do not need to paste a connection string in the box since you are using the default setting. Simply click `Connect`.
 
-  *  At the bottom left of the Home screen, we click on `MONGOSH BETA` to open a MongoDB shell. 
+  * At the bottom left of the Home screen, we click on `MONGOSH BETA` to open a MongoDB shell. 
 
 * Open the MongoDB shell to do the following: 
 
@@ -22,7 +22,7 @@
 
   * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step. 
   
-    *  We use the `insertOne()` method to insert a single document into our new collection, `petCollection`.
+    * We use the `insertOne()` method to insert a single document into our new collection, `petCollection`.
 
     * The `db` refers to the current database in use. Our database is `shelterDB`.
 
@@ -61,11 +61,11 @@
 
   * When we click on the `Refresh` at the top of the Compass screen and the `shelterBD` database we just created should appear on the list of available databases. 
 
-  *  We click on the arrow to the left of the `shelterDB` database to open it and click on the `petCollection` collection that appears below. 
+  * We click on the arrow to the left of the `shelterDB` database to open it and click on the `petCollection` collection that appears below. 
 
-  *  The new document that we created appears in the Documents tab.
+  * The new document that we created appears in the Documents tab.
   
-  *  Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app. 
+  * Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app. 
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

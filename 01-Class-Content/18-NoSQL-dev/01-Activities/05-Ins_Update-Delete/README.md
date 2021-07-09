@@ -1,10 +1,10 @@
-#  Instructor Demo: MongoDB Compass - Update and Delete
+# Instructor Demo: MongoDB Compass - Update and Delete
 
 * Open Compass on your local machine to do the following:
 
   * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on localhost with default port `27017`. We will use the default connection at `localhost:27017` to connect to Compass.  
 
-  * With a MongoDB server installed locally and running, we click on `Connect` on the `New Connection` page to connect to the localhost on port `27017`. 
+  * With a MongoDB server installed locally and running, we click on `Connect` on the `New Connection` page to connect to the localhost on port `27017`.
   
   > Note: You do not need to paste a connection string in the box since you are using the default setting. Simply click `Connect`.
 
@@ -34,7 +34,7 @@
 
   * 🔑 To update the document we just created, we use the `updateOne()` method.
 
-    * The first object we add is key pair that we want to use to find the document, or the filter. In this case, we are going to use the filter to find the document by it's item name. This information is important so that only the document that you want updated is changed. 
+    * The first object we add is key pair that we want to use to find the document, or the filter. In this case, we are going to use the filter to find the document by it's item name. This information is important so that only the document that you want updated is changed.
 
     * Then, we use the MongoDB update operator `$set` to set our new value, updating our document. 
 
@@ -45,9 +45,9 @@
   * 🔑 To delete the document we just updated, we use the `deleteOne()` method.
 
     * It is important that you provide filter information so that only the document we want deleted is deleted. 
-    
+
     * In this case, only the document with the item name of `apple` will be deleted. If there happens to be more than one document with the item of `apple`, only the first one will be deleted. 
-    
+
     ```sh
     db.groceryCollection.deleteOne( {"item": "apple"})
     ```
@@ -57,7 +57,7 @@
     ```sh
     db.groceryCollection.deleteOne({ "_id" : ObjectId("YOUR-UNIQUE_ID")} )
 
-  * 🔑 To verify that the document has been deleted, we can use the `find` method. If successful, no documents should be returned. 
+  * 🔑 To verify that the document has been deleted, we can use the `find` method. If successful, no documents should be returned.
 
     ```sh
     db.groceryCollection.find({})

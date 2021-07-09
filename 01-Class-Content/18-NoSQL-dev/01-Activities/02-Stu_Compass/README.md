@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to create a MongoDB database to store data. 
+* As a developer, I want to create a MongoDB database to store data.
 
 * As a developer, I want to add a collection to my database and insert a document so that I can visually explore that data using MongoDB Compass. 
 
@@ -48,7 +48,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* What shell command do you use to create a new database? 
+* What shell command do you use to create a new database?
 
 ## 🏆 Bonus
 
