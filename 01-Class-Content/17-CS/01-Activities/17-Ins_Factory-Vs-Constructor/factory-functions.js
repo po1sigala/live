@@ -30,7 +30,7 @@ const Phone = (name, ringTone) => {
 const nokia = Phone('Nokia', 'ring');
 
 // Test if our action functions work correctly with our newly created phone.
-Nokia.call();
+nokia.call();
 
 const Dryer = (noise, timer) => {
   const state = {
