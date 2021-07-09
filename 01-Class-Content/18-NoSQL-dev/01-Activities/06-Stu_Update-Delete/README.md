@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I add a new `/delete` DELETE route that uses a filter to find a single document by its unique `_id` and deletes that document. The `_id` value should be provided by the request body. 
 
-* It is done when I test the route using Insomnia and the document I just created is deleted. No other documents should be changed. 
+* It is done when I test the route using Insomnia and the document I just created is deleted. No other documents should be changed.
 
 ## 💡 Hints
 
