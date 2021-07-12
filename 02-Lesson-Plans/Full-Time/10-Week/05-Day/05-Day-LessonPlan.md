@@ -835,7 +835,7 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when I have ran `npm install pretty` inside my practice react app directory.
+  * It's done when I have run `npm install pretty` inside my practice react app directory.
 
   * It's done when I have imported the necessary components files into `*.test.js`.
 

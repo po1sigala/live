@@ -31,7 +31,8 @@ describe('IssueItem', () => {
 
   it('should contain the expected text', () => {
     act(() => {
-      // TODO: Add a render code block that checks to see if the component renders properly (hint: the render method needs a target "container")
+      // TODO: Add a render code block that checks to see if the component renders properly
+      // HINT: The render method needs a target "container"
       render();
     });
     expect(container.textContent).toBe('Git: Support git history in VSCode');
