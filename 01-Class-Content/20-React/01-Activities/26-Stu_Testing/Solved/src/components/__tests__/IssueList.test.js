@@ -2,6 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import IssueList from '../IssueList';
+import pretty from 'pretty';
 
 let container = null;
 
@@ -36,20 +37,30 @@ const issues = [
     title: 'Provide option to opt out of line ending normalisation for files',
   },
 ];
-describe('Renders a list of issues', () => {
-  it('renders', () => {
+
+describe('IssueList', () => {
+  // In this example, we render the IssueList component and format the rendered HTML with the pretty package before saving it as an snapshot.
+  it('should render', () => {
+    // Render the component inside the target container
     act(() => {
       render(<IssueList issues={issues} />, container);
     });
-    expect(container.textContent).toContain(
-      'Git: Support git history in VSCode'
-    );
+
+    // Format the rendered HTML with the pretty package
+    const html = pretty(container.innerHTML);
+
+    // Save the rendered HTML as an snapshot
+    expect(html).toMatchSnapshot();
   });
 
-  it('matches snapshot', () => {
+  // In this example, we check to see if the issueList contains the text "Git: Support git history in VSCode"
+  it('should contain text', () => {
+    // Render the component
     act(() => {
-      const fragment = render(<IssueList issues={issues} />, container);
-      expect(fragment).toMatchSnapshot();
+      render(<IssueList issues={issues} />, container);
     });
+
+    // Check to see if the rendered HTML contains the text "Git: Support git history in VSCode"
+    expect(container.innerHTML).toContain('Git: Support git history in VSCode');
   });
 });

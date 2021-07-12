@@ -1,13 +1,14 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
+import React from 'react';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 // TODO: Import the IssueItem component here
+import pretty from 'pretty';
 
 let container = null;
 
 beforeEach(() => {
   // Setup a DOM element as the target
-  container = document.createElement("div");
+  container = document.createElement('div');
   document.body.appendChild(container);
 });
 
@@ -18,29 +19,24 @@ afterEach(() => {
   container = null;
 });
 
-describe("Renders each issue individually", () => {
+describe('IssueItem', () => {
   const issue = {
-    url: "https://api.github.com/repos/microsoft/vscode/issues/68",
-    html_url: "https://github.com/microsoft/vscode/issues/68",
+    url: 'https://api.github.com/repos/microsoft/vscode/issues/68',
+    html_url: 'https://github.com/microsoft/vscode/issues/68',
     id: 117635943,
-    node_id: "MDU6SXNzdWUxMTc2MzU5NDM=",
+    node_id: 'MDU6SXNzdWUxMTc2MzU5NDM=',
     number: 68,
-    title: "Git: Support git history in VSCode",
+    title: 'Git: Support git history in VSCode',
   };
 
-  it("renders", () => {
+  it('should contain the expected text', () => {
     act(() => {
-      // TODO: Add a render code block that checks to see if the component renders properly
+      // TODO: Add a render code block that checks to see if the component renders properly (hint: the render method needs a target "container")
       render();
     });
-    expect(container.textContent).toBe("Git: Support git history in VSCode");
+    expect(container.textContent).toBe('Git: Support git history in VSCode');
   });
 
-  it("matches snapshot", () => {
-    act(() => {
-      // TODO: Add code to check whether or not the rendered component matches the snapshot
-      const fragment = render();
-      expect(fragment).toMatchSnapshot();
-    });
-  });
+  // TODO: render the IssueItem component and format the rendered HTML with the pretty package before saving it as an snapshot.
+  it('should match snapshot', () => {});
 });

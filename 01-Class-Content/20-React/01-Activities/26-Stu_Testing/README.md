@@ -4,7 +4,9 @@
 
 Before you begin this activity, be sure to add the following line of code to the head section in [00-practiceapp/public/index.html](../00-practice-app/public/index.html):
 
-     `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />`
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+```
 
 ## Activity
 
@@ -13,6 +15,8 @@ Work with a partner to implement the following user story:
 * As a developer, I want to check whether my components render properly so that I can be confident when I ship the code for production.
 
 ## Acceptance Criteria
+
+* It's done when I have ran `npm install pretty` inside my practice react app directory.
 
 * It's done when I have imported the necessary components files into `*.test.js`.
 
