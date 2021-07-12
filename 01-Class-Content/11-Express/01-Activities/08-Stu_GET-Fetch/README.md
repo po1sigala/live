@@ -14,7 +14,7 @@ When a user requests the terms by clicking **Fetch Pets**, nothing is rendered t
 
 ## Steps to Reproduce the Problem
 
-1. Open the page by visiting [http://localhost:3000](http://localhost:3000)
+1. Open the page by visiting [http://localhost:3001](http://localhost:3000)
 
 2. Open the developer console by pressing Command+Option+K (Mac), or Ctrl+Shift+J (Windows).
 
