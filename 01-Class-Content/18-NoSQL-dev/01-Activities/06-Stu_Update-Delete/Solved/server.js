@@ -56,7 +56,7 @@ app.delete-example('/delete', function (req, res) {
   // Use .deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
   // This is the filter. The delete only the document that matches the _id provided in the request body
-    { _id: `ObjectId(${req.body.id{color}})` },
+    { _id: `ObjectId(${req.body.id})` },
     function (err) {
       if (err) throw err;
       res.send('Document deleted');
