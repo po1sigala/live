@@ -38,14 +38,28 @@ app.get('/read', function (req, res) {
     });
 });
 
+//To delete an object, the numerical id string must be wrapped with ObjectID()
 app.delete('/delete', function (req, res) {
   // Use .deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
     // This is the filter. The delete only the document that matches the _id provided in the request body
-    { _id: req.body.title },
+    { _id: req.body.id },
     function (err) {
       if (err) throw err;
       res.send('Document deleted')
+    }
+  );
+});
+
+// This version uses template literal
+app.delete-example('/delete', function (req, res) {
+  // Use .deleteOne() to delete one object
+  db.collection('bookCollection').deleteOne(
+  // This is the filter. The delete only the document that matches the _id provided in the request body
+    { _id: `ObjectId(${req.body.id})` },
+    function (err) {
+      if (err) throw err;
+      res.send('Document deleted');
     }
   );
 });

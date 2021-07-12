@@ -14,13 +14,13 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a new local database named `inventoryDB` using Compass's Embedded MongoDB Shell (MongoSH Beta).
 
-* It's done when I use the Embedded MongoDB Shell to add a new collection named `bookCollection` and insert a document into that collection that contains one field: a title. A value should be supplied for the field.
+* It's done when I have added a new collection named `bookCollection`, inserted a field called `title`, and provided a value for the `title` field.
 
 * It's done when I refresh the page and the `inventoryDB` appears on the list of databases.
 
 * It's done when I open the `bookCollection` collection and the document I just created is visible on the Documents tab and an `_id` field has been automatically inserted.
 
-* It's done when I modify the existing document to have an additional field of `author` and the field is provided a value. 
+* It's done when I have modified the existing document, added a new field called `author`, and provided a value for the `author` field. 
 
 ## 📝 Notes
 

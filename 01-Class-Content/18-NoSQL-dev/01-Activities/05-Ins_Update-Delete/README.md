@@ -26,7 +26,7 @@
 
   * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we click `enter` to insert the data.
 
-  * Make sure you note the generated `ObjectId(STRING-VALUE-HERE`. We will use this unique identifier to delete this record later on.
+  * Make sure you note the generated `ObjectId(STRING-VALUE-HERE)`. We will use this unique identifier to delete this record later on. 
 
     ```sh
     db.groceryCollection.insertOne( {"item": "banana", "department": "produce"} );

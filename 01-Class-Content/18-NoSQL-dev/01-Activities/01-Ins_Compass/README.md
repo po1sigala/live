@@ -59,7 +59,7 @@
 
 * On the Local page in Compass, do the following to explore our data using Compass's interface.
 
-  * When we click on the `Refresh` at the top of the Compass screen and the `demoBD` database we just created should appear on the list of available databases. 
+  * When we click on the `Refresh` at the top of the Compass screen and the `shelterBD` database we just created should appear on the list of available databases. 
 
   * We click on the arrow to the left of the `shelterDB` database to open it and click on the `petCollection` collection that appears below. 
 
