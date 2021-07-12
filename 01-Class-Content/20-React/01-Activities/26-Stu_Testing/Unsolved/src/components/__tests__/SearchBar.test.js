@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import SearchBar from '../SearchBar';
 import pretty from 'pretty';
+import SearchBar from '../SearchBar';
 
 let container = null;
 

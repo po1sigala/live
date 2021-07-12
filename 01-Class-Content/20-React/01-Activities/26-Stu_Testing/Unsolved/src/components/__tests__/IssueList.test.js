@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-// TODO: Import the IssueList component
 import pretty from 'pretty';
+// TODO: Import the IssueList component
 
 let container = null;
 

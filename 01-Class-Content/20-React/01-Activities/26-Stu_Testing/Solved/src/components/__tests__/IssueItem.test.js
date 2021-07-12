@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import IssueItem from '../IssueItem';
 import pretty from 'pretty';
+import IssueItem from '../IssueItem';
 
 let container = null;
 
