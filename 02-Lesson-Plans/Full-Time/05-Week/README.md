@@ -36,9 +36,13 @@ Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content
 
 ## Heads-Up
 
-* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
+* In Unit 11, we will explore the use of servers and Express.js on the back end of an application.
 
-**Note**: While Heroku may require students to enter a credit or debit card, but they will absolutely NOT be charged unless they decide to purchase additional services.
+* Unit 11 will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
+
+* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
+
+In Unit 12, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the MySQL installation guide on The Full-Stack Blog by the end of this unit to minimize installation time next unit.
 
 ## Helpful Links
 
