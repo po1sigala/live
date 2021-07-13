@@ -28,7 +28,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/READ
 
 * In the next unit, we will explore the use of servers and Express.js on the back end of an application.
 
-* The next unit will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
+* We will also introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
 
 * Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
 
