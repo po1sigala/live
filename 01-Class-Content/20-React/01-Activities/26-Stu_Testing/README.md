@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have run `npm install pretty` inside my practice react app directory.
+* It's done when I have run `npm install pretty` inside my practice React app directory.
 
 * It's done when I have imported the necessary components files into `*.test.js`.
 
