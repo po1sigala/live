@@ -22,7 +22,7 @@ Today's lesson will cover the basics of ES6 classes and how to use them when org
 
 * The next unit will have students writing and testing Express.js routes using an app called Insomnia. Direct students to the [Insomnia download page](https://insomnia.rest/download) and advise them to have it installed before the next unit.
 
-*  Students will also start using Heroku in the upcoming unit. Advise them to sign up for a Heroku account and install the Heroku CLI before they start the next unit. Direct students to the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) for extra guidance.
+* Students will also start using Heroku in the upcoming unit. Advise them to sign up for a Heroku account and install the Heroku CLI before they start the next unit. Direct students to the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli) for extra guidance.
 
 ## Learning Objectives
 
