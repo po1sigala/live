@@ -58,11 +58,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-* [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
+* [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
-* [Full-Stack Blog on Heroku deployment](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
+* [Heroku Deployment Guide](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
 
-* [Full-Stack Blog on MySQL installation](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
+* [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
 
 * [Express.js documentation on the Hello World example](https://expressjs.com/en/starter/hello-world.html)
 
