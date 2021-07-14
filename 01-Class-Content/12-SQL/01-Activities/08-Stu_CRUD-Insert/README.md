@@ -4,11 +4,11 @@ Work with a partner to add comments describing the functionality of the code fou
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
-[MySQL Docs on SELECT Statement](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+[MySQL documentation on SELECT](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
-[MySQL Docs on INSERT Statement](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
+[MySQL documentation on INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
 
 ---
 
@@ -16,7 +16,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is CRUD?
+* Which operations can you perform on data using MySQL?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
