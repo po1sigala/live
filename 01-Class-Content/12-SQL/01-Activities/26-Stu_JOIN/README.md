@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to select records that have matching values from two tables.
+* As a developer, I want to create a single table that includes data on book titles and prices.
 
 ## Acceptance Criteria
 
@@ -12,13 +12,13 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Table showing combined data from both tables](./assets/image_1.png)
+![The new table includes both book_name and price columns.](./assets/image_1.png)
 
 ---
 
 ## 💡 Hints
 
-What is the relationship between the two tables? 
+What is the relationship between the two tables?
 
 ## 🏆 Bonus
 

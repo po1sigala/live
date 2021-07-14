@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to delete a table from an existing database and replace it with a new table. 
+* As a developer, I want to delete a table from an existing database and replace it with a new table.
 
 ## Acceptance Criteria
 
@@ -14,13 +14,13 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Image of Tables](./assets/image_1.png)
+![A table called "biographies" contains fields for "id" and "name".](./assets/image_1.png)
 
 ---
 
 ## 💡 Hints
 
-How can you display a list of existing tables in a database? 
+How can you display a list of existing tables in a database?
 
 ## 🏆 Bonus
 

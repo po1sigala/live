@@ -2,31 +2,31 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to link two tables using a primary and foreign keys.
+* As a developer, I want to organize my data by linking a `customers` table with a related `customer_orders` table.
 
 ## Acceptance Criteria
 
-* It's done when the `id` column the `customers` table is defined as the primary key.
+* It's done when the `id` column in the `customers` table is defined as the primary key.
 
-* It's done the foreign key in the `customer_orders` table refers to the `customers` table primary key.
+* It's done when the foreign key in the `customer_orders` table refers to the `customers` table primary key.
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Schema of Two Tables](./assets/image_1.png)
+![The schema displays a customers table and a customer_order table, each linked by the customer_id value.](./assets/image_1.png)
 
 ---
 
 ## 💡 Hints
 
-* What is the difference between the primary and foreign key constraints?
+What is the difference between primary and foreign key constraints?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are the advantages of using multiple, related tables to store our data? 
+* What are the advantages of using multiple, related tables to store data?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

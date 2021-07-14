@@ -8,57 +8,57 @@ This week, you’ll add the final layer to your tech stack: the database. Storin
 
 The following topics will be covered in this unit:
 
-  * [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-getting-started.html)
+* [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-getting-started.html)
 
-  * [Creating and Selecting a Database](https://dev.mysql.com/doc/refman/8.0/en/creating-database.html)
+* [Creating and selecting a database](https://dev.mysql.com/doc/refman/8.0/en/creating-database.html)
 
-  * [Creating Tables](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html)
+* [Creating tables](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html)
 
-  * [SELECT Statement](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+* [SELECT statement](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
-  * [INSERT Statement](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
+* [INSERT statement](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
 
-  * [UPDATE Statement](https://dev.mysql.com/doc/refman/8.0/en/update.html)
+* [UPDATE statement](https://dev.mysql.com/doc/refman/8.0/en/update.html)
 
-  * [DELETE Statement](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
+* [DELETE statement](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
 
-  * [Connecting Database to Node.js App](https://www.npmjs.com/package/mysql2#installation)
+* [Connecting database to Node.js app](https://www.npmjs.com/package/mysql2#installation)
 
-  * [Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+* [Data types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
-  * [Schemas](https://docs.oracle.com/cd/B19306_01/server.102/b14220/schema.htm)
+* [Schemas](https://docs.oracle.com/cd/B19306_01/server.102/b14220/schema.htm)
 
-  * [Seeds](https://dev.mysql.com/doc/refman/8.0/en/loading-tables.html)
+* [Seeds](https://dev.mysql.com/doc/refman/8.0/en/loading-tables.html)
 
-  * [Primary Keys](https://dev.mysql.com/doc/refman/8.0/en/constraint-primary-key.html)
+* [Primary keys](https://dev.mysql.com/doc/refman/8.0/en/constraint-primary-key.html)
 
-  * [Foreign Keys](https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html)
+* [Foreign keys](https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html)
 
-  * [Prepared Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-prepared-statements.html)
+* [Prepared statements](https://dev.mysql.com/doc/refman/8.0/en/sql-prepared-statements.html)
 
-  * [Aggregate Functions](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html)
+* [Aggregate functions](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html)
 
-  * [Joins](https://dev.mysql.com/doc/refman/8.0/en/join.html)
+* [Joins](https://dev.mysql.com/doc/refman/8.0/en/join.html)
 
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
 
-* Use the MySQL Shell to execute commands
+* Use MySQL Shell to execute commands.
 
-* Create a database schema
+* Create a database schema.
 
-* Seed a database for use in application development
+* Seed a database for use in application development.
 
-* Perform CRUD functions using MySQL commands
+* Perform CRUD functions using MySQL commands.
 
 * Specify the relationship between tables using primary and foreign keys.
 
-* Write a SQL query that joins two tables together
+* Write a SQL query that joins two tables together.
 
 * Implement `?` prepared statements in conjunction with `INSERT`, `UPDATE`, and `DELETE`
 
-* Use aggregate functions to perform a calculation on a set of values.
+* Perform a calculation on a set of values using aggregate functions.
 
 ## Technical Interview Preparation
 
@@ -84,7 +84,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-Developers frequently have to create interfaces that make it easy for non-developers to view and interact with information stored in databases. These interfaces are called content management systems (CMS). Your challenge this week is to build a command-line application to manage a company's employee database, using Node.js, [Inquirer](https://www.npmjs.com/package/inquirer), and MySQL.
+Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL2.
 
 ## Career Connection
 
@@ -92,7 +92,7 @@ Career Services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-During Week 13, you will build on your MySQL skills and learn to use Sequelize, an object-relational mapping (ORM) library, to simplify your MySQL queries and easily handle data in a full-stack app.
+In the next unit, you will learn to use Sequelize, an object-relational mapping (ORM) library, to simplify your MySQL queries and easily handle data in a full-stack app.
 
 ## Resources
 
@@ -100,7 +100,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 ### Git Guide
 
-Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
+Refer to the Git Guide to review the Git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the Git concept.
 
   * 📖 [Git Guide: Git Cherry-Pick](./01-Activities/27-Evr_Git-Cherry-Picking/README.md) 
 
@@ -110,15 +110,19 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: @TODO LINK TO BLOG POST {TODO: ADD BOTH WHEN LINKS READY}
+  * 📖 Blog Post: [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
+
+  * 📖 Blog Post: [MySQL Reference Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-reference-guide)
+
+  * 📖 Blog Post: [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
 ### General
 
 Refer to these resources for additional information about topics covered in this unit.
 
-  * 📖 [MySQL documentation on Getting Started](https://dev.mysql.com/doc/mysql-getting-started/en/)
+  * 📖 [MySQL documentation on getting started](https://dev.mysql.com/doc/mysql-getting-started/en/)
   
-  * 📖 [NPM documentation on Node MySQL 2](https://www.npmjs.com/package/mysql2)
+  * 📖 [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
  
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

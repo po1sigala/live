@@ -8,7 +8,7 @@ Welcome to another Career Connection! This unit is tackling Structured Query Lan
 
 Your first exposure to SQL can be a little overwhelming, especially in the beginning, because a lot of errors can arise during setup. But once you've got it working, Structured Query Language is immensely useful.
 
-> **Nerd Note:** You’ll find that some people pronounce SQL as “S-Q-L,” while others call it “sequel.” Each pronunciation is completely valid!
+> **Nerd Note**: You’ll find that some people pronounce SQL as “S-Q-L,” while others call it “sequel.” Each pronunciation is completely valid!
 
 ### Flavors of SQL
 
@@ -68,10 +68,13 @@ Please refer to the class repository to find these algorithms:
 
 For practice in a live, interview-style IDE, complete the following algorithm challenge. The solution will be discussed in the weekly recommended session.
 
-Once you start, you'll have seven days to complete it. After the seven days has elapsed, the challenge will close.
+Once you start, you'll have seven days to complete it. After seven days, the challenge will close.
 
 - CodeSignal Algorithm: [Camel Case Separation](https://app.codesignal.com/public-test/Az2qBBpbLLktvi6MR/6KJ2ebjXrCiSPo)
 
 ![online-events](./assets/online-events.png)
 
 If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

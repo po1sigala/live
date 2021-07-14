@@ -10,7 +10,7 @@ When a user makes a request to an endpoint, the middleware will intercept the re
 
 ## Actual Behavior
 
-When a user makes a request to endpoints in the application, we can see that something was written to the filesystem, but no logging by custom middleware takes place.
+When a user makes a request to endpoints in the application, we can tell that something was written to the file system, but custom middleware does not log any information.
 
 ## Steps to Reproduce the Problem
 
