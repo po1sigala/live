@@ -1702,7 +1702,7 @@ Students will also learn how to create modular routes for better organization an
 
   * 🔑 This Git Guide also covers some additional commands, including `git blame`. For more information, refer to the [Git documentation on git blame](https://www.git-scm.com/docs/git-blame).
 
-  * Answer any questions before ending the class.
+* Answer any questions before ending the class.
 
 ### 23. END (0 min)
 

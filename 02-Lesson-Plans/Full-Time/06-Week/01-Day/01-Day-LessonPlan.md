@@ -854,7 +854,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * Answer any questions before proceeding to the next activity.
 
-### 12. Instructor Demo: GET-Fetch (5 min)
+### 11. Instructor Demo: GET-Fetch (5 min)
 
 * Navigate to `07-Ins_GET-Fetch/server.js` in your command line and run `npm install` and `npm start`.
 
@@ -940,7 +940,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_GET-Fetch/README.md`.
 
-### 13. Student Do: GET-Fetch (15 min)
+### 12. Student Do: GET-Fetch (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_GET-Fetch/README.md`.
 
@@ -1298,7 +1298,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
     * Open Insomnia and click the plus sign (+), then click New Request. You can also do this using the keyboard shortcut Command+N (Mac) or Ctrl+N (Windows).
 
-    * In the Insomnia interface, change the HTTP method to GET and input the endpoint for GitHub: <https://api.github.com/repos/microsoft/vscode/pulls?state=open>
+    * In the Insomnia interface, change the HTTP method to GET and input the endpoint for GitHub: `https://api.github.com/repos/microsoft/vscode/pulls?state=open`
 
     * Let's review the different parts of this URI.
 
