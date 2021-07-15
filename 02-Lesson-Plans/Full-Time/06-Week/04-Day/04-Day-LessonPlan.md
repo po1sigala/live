@@ -450,7 +450,7 @@ In this lesson, students will continue using MySQL Shell to execute CRUD functio
     });
     ```
 
-  * When we run the `server.js` file,  the query is executed and the data is printed to the screen.
+  * When we run the `server.js` file, the query is executed and the data is printed to the screen.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
