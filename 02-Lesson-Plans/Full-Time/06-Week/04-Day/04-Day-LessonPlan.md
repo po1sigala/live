@@ -10,7 +10,7 @@ In this lesson, students will continue using MySQL Shell to execute CRUD functio
 
 * Have your MySQL password ready so that you can use MySQL Shell to demonstrate the activities.
 
-**Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
+* **Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
 
 * Make sure that students can initialize the MySQL Shell using the command `mysql -u root -p`. They will need their MySQL password. Students should also be encouraged to use a MySQL password that is not used for any other personal accounts.
 
@@ -78,7 +78,7 @@ In this lesson, students will continue using MySQL Shell to execute CRUD functio
 
 ### 1. Instructor Demo: CRUD Delete (5 min)
 
-* Open `09-_CRUD-Delete/db/delete.sql` in your IDE and explain the following:
+* Open `09-Ins_CRUD-Delete/db/delete.sql` in your IDE and explain the following:
 
   * 🔑 We can delete a row in a table by first using the `DELETE FROM` command to select a table:
 

@@ -8,7 +8,7 @@ Today's lesson will delve further into SQL queries. You will introduce students 
 
 * In this lesson, students will complete activities `21-Ins_Prepared-Statements` through `28-Stu_Mini-Project`.
 
-* In the Stoke Curiosity section, you will use a  sample MySQL database to demonstrate the real-world application of SQL. Before class, visit the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/), then download it and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
+* In the Stoke Curiosity section, you will use a sample MySQL database to demonstrate the real-world application of SQL. Before class, visit the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/), then download it and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
 
 * Make sure that students can initialize the MySQL command-line prompt using the command `mysql -u root -p`. They will need their MySQL password. Students should be encouraged to use a password that is not used for any other personal accounts.
 
