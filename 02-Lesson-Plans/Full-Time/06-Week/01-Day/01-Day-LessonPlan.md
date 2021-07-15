@@ -854,7 +854,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * Answer any questions before proceeding to the next activity.
 
-### 12. Instructor Demo: GET-Fetch (5 min)
+### 11. Instructor Demo: GET-Fetch (5 min)
 
 * Navigate to `07-Ins_GET-Fetch/server.js` in your command line and run `npm install` and `npm start`.
 
@@ -940,7 +940,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_GET-Fetch/README.md`.
 
-### 13. Student Do: GET-Fetch (15 min)
+### 12. Student Do: GET-Fetch (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_GET-Fetch/README.md`.
 
