@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lesson, students will learn how to create an API, define the routes, perform back-end logic, and save data using the built-in Node.js `fs` module. Performing HTTP requests using Insomnia will also be introduced
+In this lesson, students will learn how to create an API, define the routes, perform back-end logic, and save data using the built-in Node.js `fs` module. Performing HTTP requests using Insomnia will also be introduced.
 
 ## Instructor Notes
 
@@ -87,17 +87,17 @@ In this lesson, students will learn how to create an API, define the routes, per
     * Express.js exists on the back end of an application.
 
     * Express.js is considered the de facto standard for creating routes in Node.js applications.
-  
+
   * **What is a route?**
-  
+
     * Routes are a lot like traffic lanes at an airport. Certain lanes are designated for dropping people off, picking up passengers, picking up luggage, and so on.
 
     * Similarly, routes allow us to send and receive data depending on which route and **HTTP method** we use.
 
     * A route can be used for different kinds of requests, to create, read, update, and delete data.
-  
+
   * **What is a RESTful API?**
-  
+
     * **REST**, or **representational state transfer**, is an architecture for creating a web service like an API.
 
     * While REST is the architecture, the API defines the interface that clients use to interact with the server.
@@ -113,11 +113,11 @@ In this lesson, students will learn how to create an API, define the routes, per
       * Maintain a uniform interface between the client and the server so that they can evolve separately.
 
       * Optionally, can perform code on demand.
-  
+
   * **What are the HTTP methods?**
 
     * You will use the following four main HTTP methods:
-  
+
       * **POST** submits data to the specified resource, often causing a change on the server.
 
       * **GET** retrieves a resource from the server.
@@ -127,13 +127,13 @@ In this lesson, students will learn how to create an API, define the routes, per
       * **PUT** replaces a specified resource with a payload.
 
   * **What does the code look like?**
-  
+
   * Here we have an example of a few Express.js routes:
 
     * Use `get()`, `post()`, `delete()`, and similar methods to create routes.
 
     * The first argument is the path, `/api/reviews`.
-  
+
   * Here we have an example of a POST route:
 
     * The **path** is the part of the route that comes after the base URL.
@@ -145,15 +145,15 @@ In this lesson, students will learn how to create an API, define the routes, per
   * **How does this relate to the front end?**
 
     * We use the Fetch API to make requests to the Express.js server.
-  
+
     * We can create `fetch()` requests that the server-side routes understand and respond to.
-  
+
     * POST requests will send a request body that we capture server-side.
 
     * Making `fetch()` requests will be very similar to making calls to a third-party API. The only difference is that this API will run locally.
 
     * Requests must be concluded to prevent the client application from hanging indefinitely.
-  
+
     * Methods attached to the response object allow us to conclude a request-response cycle.
 
 * Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
@@ -163,7 +163,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * For the mini-project, we will add new routes to a full-stack application for sharing UI/UX tips.
 
   * Using your newly acquired Express.js skills, you will add a wildcard route that sends users to a 404 page if they end up in the wrong place.
-  
+
   * You will also create a route to track how users are interacting with the app, and all of those diagnostics will be written to the file system using the `fs` module in Node.js. Pretty neat!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -191,7 +191,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * 🔑 When we run the application, we encounter a page called Express Routing.
 
   * 🔑 We can also see a message asking us to visit `/routes` and `/send`.
-  
+
   * These routes were created using Express.js. Let's review the code and determine what is going on.
 
 * Open `01-Ins_Setup/server.js` in your IDE to demonstrate the following:
@@ -207,7 +207,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```js
     const app = express();
     ```
-  
+
   * When using Express.js, we can specify which port we want the server to run on. This demo sets that port number to a variable called `port`:
 
     ```js
@@ -215,11 +215,11 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * In the `server.js` file, we use a built-in Node.js package called `path` to resolve the path of files that are located on the server:
-  
+
     ```js
     const path = require('path');
     ```
-  
+
   * To serve static assets like an HTML or CSS file, we need to first set up the static middleware and point it at the `public` folder:
 
     ```js
@@ -229,7 +229,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * This demo features two different routes: `/send` and `/routes`.
 
   * Additionally, a root path sends the client a string that instructs them to visit `/send` or `/routes`:
-  
+
     ```js
     app.get('/', (req, res) => res.send('Navigate to /send or /routes'));
     ```
@@ -237,7 +237,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     **Note**: Because we set up middleware for the `public` folder, Express.js automatically looks for an `index.html` in the `public` folder to send when a user visits the root path. Because we do have an `index.html` file in the `public` folder, that is shown in the browser now. If we didn't have an `index.html` file in the `public` folder, the browser would display the message `Navigate to /send or /routes`.
 
   * Next, the `/send` route uses the `path` library to resolve the path to the `public` folder. Then we use `res.sendFile()` to send an HTML file to the client:
-  
+
     ```js
     app.get('/send', (req, res) =>
       res.sendFile(path.join(__dirname, 'public/sendFile.html'))
@@ -253,7 +253,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * With all Express.js apps, it is important to initialize the server using the `app.listen()` method.
-  
+
   * The `listen()` method accepts a port as the first argument and a callback function as the second argument. The `listen()` method is responsible for listening for incoming connections on the specified port:
 
     ```js
@@ -267,7 +267,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * ☝️ How would we build this?
 
   * 🙋 We can create an Express.js server by requiring the Express.js package, creating the routes, and using `app.listen()` to start the server.
-  
+
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Setup/README.md`.
@@ -283,13 +283,13 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to implement Express.js into my app so that client requests relate to server responses. 
+  * As a developer, I want to implement Express.js into my app so that client requests relate to server responses.
 
   ## Acceptance Criteria
 
   * It's done when I have created an `app` variable set to the value of `express()`.
 
-  * It's done when I have set up middleware to serve static files from `/public`. 
+  * It's done when I have set up middleware to serve static files from `/public`.
 
   * It's done when I have created an HTML route to serve up `paths.html`.
 
@@ -329,11 +329,11 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `02-Stu_Setup/Solved/server.js` in your IDE and explain the following:
 
   * When we open `server.js`, we see that we are missing the middleware that will help us send static files to the client.
-  
+
   * First we need to mount the static middleware function to the Express.js server, using the `app.use()` method.
-  
+
   * To serve HTML, CSS, and images, we use the `express.static()` method. This function accepts a root path. In this case, we set the root to the `public` folder:
-  
+
     ```js
     app.use(express.static('public'));
     ```
@@ -349,7 +349,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * The next step is to create the **route handler** function. This is a callback function that accepts two arguments for a request and response object.
-  
+
   * We want to send the client an HTML file when they visit this path, so we use the `res` object and a `sendFile()` method:
 
     ```js
@@ -383,11 +383,11 @@ In this lesson, students will learn how to create an API, define the routes, per
   * 🔑 When we run the application and visit the `http://localhost:3001/` page, we are presented with a definition for an API.
 
   * 🔑 This example also includes another endpoint, `http://localhost:3001/api`.
-  
+
   * 🔑 This endpoint is very similar to the first one -- but the first returns a simple string that contains an HTML element, and the second is an `api` endpoint that returns JSON.
-  
+
   * The two endpoints are very useful for different purposes:
-  
+
     * We can send entire files that contain HTML using `res.sendFile()`.
 
     * We can send a `body` parameter to the client using the `res.send()` method.
@@ -403,7 +403,7 @@ In this lesson, students will learn how to create an API, define the routes, per
       ```
 
   * Now let's review the `/api` endpoint.
-  
+
   * Notice that we are using a new method, `res.json()`. This method sends a JSON response with the correct content type.
 
   * In the case of the `/api` endpoint, we will send the client JSON that contains the definition for the term **API**. Notice that the data is organized like a typical JSON object:
@@ -449,7 +449,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * It's done when I have created an API route to `/api/terms`.
 
-  * It's done when GET requests made using the browser to the API endpoint return the content found in `terms.json`. 
+  * It's done when GET requests made using the browser to the API endpoint return the content found in `terms.json`.
 
   ---
 
@@ -461,7 +461,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What other methods are available on the `res` object? 
+  * What other methods are available on the `res` object?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
@@ -537,9 +537,9 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```js
     app.get('/', (req, res) => res.send('Visit http://localhost:3001/api'));
     ```
-  
+
   * The main objective of this activity was to create an `/api` endpoint that would return a list of web-related terms to the client as JSON.
-  
+
     * First we set up the `/api` endpoint with the `get()` method.
 
     * In the callback function, we use `res.json()` to send the content of the JSON file that we required at the top of the file:
@@ -555,7 +555,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Why is JSON the preferred way to send data to a client when creating web applications?
-  
+
   * 🙋 JavaScript Object Notation (JSON) is a common data structure that can be used with many front-end applications and services. It sends and receives data for back-end services, like Express.js APIs.
 
   * ☝️ What can we do if we don't completely understand this?
@@ -573,7 +573,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * When we run this demo, we are prompted with a message to make a GET request to `http://localhost:3001/api/terms`.
 
   * 🔑 Making a GET request to an API endpoint in the browser is as simple as visiting the endpoint as if it were a proper webpage.
-  
+
   * Notice that for the `api/terms` endpoint, we get back some JSON that contains a list of all the web terms for this activity:
 
     ```json
@@ -597,7 +597,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * We can also use endpoints to get information on one specific resource. We can do this by using optional route parameters.
-  
+
 * Navigate to `http://localhost:3001/api/terms/seo` in your browser to get information on the term **SEO**.
 
   * We get information for that term by providing the optional route parameter `name`:
@@ -672,9 +672,9 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   How are route parameters denoted when building route paths?
 
-  How can we chain multiple parameters together in the same path? 
+  How can we chain multiple parameters together in the same path?
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Express.js documentation on query parameters](http://expressjs.com/en/guide/routing.html#route-paths)
 
@@ -708,9 +708,9 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `06-Stu_Query-Params/Unsolved/server.js` in your IDE and explain the following:
 
   * Note in the `Unsolved` file that some new features have been added to the application.
-  
+
   * Some new helper functions help sort the data.
-  
+
   * These helper functions sort the terms in ascending or descending order, based on their `relevance` property. Students can explore these functions further after class or during office hours:
 
     ```js
@@ -725,7 +725,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```js
     app.get('/api/terms/', (req, res) => { ... }
     ```
-  
+
   * When we make a GET request with the following query string, a list of terms sorted by relevance is returned:
 
     ```sh
@@ -733,7 +733,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * 🔑 The query string is denoted by a question mark, `?`. The **key** follows the question mark, and the **value** follows the equals sign, `=`.
-  
+
   * At this point, the `req.query` object contains the following:
 
     ```bash
@@ -741,9 +741,9 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * Now we know that `req.query` contains key-value pairs. Let's examine the rest of the logic in this route.
-  
+
   * First we create a Boolean value to check whether a query string was provided at all, and if so, we set the variable `hasQuery` to `true`:
-  
+
     ```js
     const hasQuery = Object.keys(req.query).length > 0;
     ```
@@ -791,7 +791,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * The next route is for getting all possible terms in a given category.
-  
+
   * To start, we create the route using `app.get()` and provide it a path with a parameter of `:category`:
 
     ```js
@@ -806,7 +806,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * The next step is to find all the terms that match the requested category. To do this, we set up a `for` loop that iterates through the terms.
-  
+
   * We check whether the requested category is equal to the category that we are currently looping through, and if so we push it to the `result` array:
 
     ```js
@@ -817,7 +817,7 @@ In this lesson, students will learn how to create an API, define the routes, per
       }
     }
     ```
-  
+
   * Before we close out this route handler, we return the result as JSON:
 
     ```js
@@ -825,11 +825,11 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * The final route in the sever file will return a list of all the possible categories that a term can have.
-  
+
   * Similarly, we create this route by using the `app.get()` method while providing a path of `/api/categories`.
-  
+
   * Inside the route handler, we map through the term data and create a new array that contains only the category called `categories` for each term.
-  
+
   * Then we filter the `categories` array, remove any duplicates, and assign to a variable called `result`. Finally, we return that `result` as JSON:
 
     ```js
@@ -863,7 +863,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * 🔑 When we run this application and visit `http://localhost:3001`, we find a single button that reads **Fetch terms**.
 
   * 🔑 After we click the button, the page renders each term to the DOM using client-side JavaScript.
-  
+
   * We have been working with the back end and creating routes with Express.js; in this demo, we see how client-side requests relate to server-side responses.
 
 * Open `07-Ins_GET-Fetch/server.js` in your IDE to demonstrate the following:
@@ -874,7 +874,7 @@ In this lesson, students will learn how to create an API, define the routes, per
       app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, 'index.html'));
       });
-      
+
       app.get('/api/terms', (req, res) => res.json(termData));
       ```
 
@@ -885,7 +885,7 @@ In this lesson, students will learn how to create an API, define the routes, per
   * In the `public` folder, we have an `index.js` file to accompany the `index.html` file.
 
   * Note that we first created a helper function that will return results from a `fetch()` request.
-  
+
   * 🔑 The important part of any `fetch()` request is the method and the path. Here we set the method to `GET` and the path `/api/terms`:
 
     ```js
@@ -1007,17 +1007,17 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `http://localhost:3001` in your browser to demonstrate the following:
 
   * When we run this application and visit `http://localhost:3001`, we notice that there is a button that doesn't seem to do anything.
-  
+
   * After we open the developer console, we encounter an error that tells us there was a problem parsing the JSON data:
 
     ```console
     Uncaught (in promise) SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
     ```
-  
+
   * In the developer window, navigate to the Network tab and click the **Fetch pets** button once again.
-  
+
   * Note that a network request is being made from the front end, resulting in a 404 error -- which means that the requested resource wasn't found.
-  
+
   * We know that the client is attempting a request of some sort, so we can start troubleshooting this issue in the front-end JavaScript.
 
 * Return to `08-Stu_GET-Fetch/Unsolved/public/index.js` in your IDE to demonstrate the following:
@@ -1033,7 +1033,7 @@ In this lesson, students will learn how to create an API, define the routes, per
           .then((res) => res.json())
           .then((data) => data);
       ```
-  
+
   * Additionally, the application is meant to get data instead of saving data to the server. As a result, a POST request doesn't make sense here.
 
   * Let's see what happens when we change `POST` to `GET`. Save the code, refresh the page, and try again.
@@ -1045,7 +1045,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `08-Stu_GET-Fetch/Unsolved/public/index.js` in your IDE to demonstrate the following:
 
   * Remove the `body` attribute of the `fetch()` request, and save the file.
-  
+
   * Your code should now look something like the following example:
 
     ```js
@@ -1063,7 +1063,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `http://localhost:3001` in your browser to demonstrate the following:
 
   * After we refresh the page and click **Fetch pets**, the application seems to work as intended!
-  
+
   * You should see a list of pets, with a description and an image for each pet.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1102,17 +1102,17 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * This can be a problem as apps grow!
-  
+
   * 🔑 The process of creating individual routes to serve static files is time-consuming and inefficient. Let's explore a different approach in the other `server.js` file.
-  
+
 * Open `09-Ins_Static-Assets/server.js` in your IDE to demonstrate the following:
 
   * 🔑 The amount of code is reduced drastically, while providing clients with access to any file in the `public` folder.
-  
+
   * To use middleware in your Express.js application, use the `app.use()` function to mount the `express.static` middleware at the `public` directory.
 
     > **Important:** You might have noticed that some previous activities used `express.static` without properly introducing it. In those activities, we needed to use `express.static` to serve the required HTML and CSS. This demo and the upcoming activity will provide some context as to what this middleware does and why it is required.
-  
+
   * That this server uses the built-in static middleware that Express.js provides to us. This allows us to serve images, CSS files, and JS files from the public directory:
 
     ```js
@@ -1124,7 +1124,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `http://localhost:3001/images/cat.jpg` in your browser to demonstrate the following:
 
   * We can reference assets in the `public` folder even if they are nested inside directories.
-  
+
   * While the two servers accomplish the same thing, using static middleware will help us write less code, with more flexibility.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1144,7 +1144,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Break your students into pairs that will work together on this activity.
 
   ```md
-    # 📖 Implement Middleware for Static Assets
+  # 📖 Implement Middleware for Static Assets
 
   Work with a partner to implement the following user story:
 
@@ -1156,11 +1156,11 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * It's done when I have used the `express.static()` method to declare the root directory to serve assets from.
 
-  * It's done when I have used the `express.static()` method (inside the `app.use()` method) for granting access to the `public` folder assets. 
+  * It's done when I have used the `express.static()` method (inside the `app.use()` method) for granting access to the `public` folder assets.
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Express.js documentation on serving static files ](http://expressjs.com/en/starter/static-files.html)
 
@@ -1168,7 +1168,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   ## 💡 Hints
 
-  How would we use routes to access the contents of a directory nested inside the `public` directory? 
+  How would we use routes to access the contents of a directory nested inside the `public` directory?
 
   ## 🏆 Bonus
 
@@ -1207,7 +1207,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * 🔑 Note also that the current method to serve `index.html` is to create a static route to the `public` folder.
-  
+
   * When creating a static route to a folder, Express.js will automatically look for an `index.html` file and serve it to the client:
 
     ```js
@@ -1227,7 +1227,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `http://localhost:3001/` in your browser and demonstrate the following:
 
   * 🔑 All we needed to do to automatically serve static assets was add the `express.static` middleware by mounting it with `app.use()`.
-  
+
   * While it is not required, we could clean up the code even further by removing the `path` module and the root path, as it is no longer needed to serve up the `index.html` file.
 
   * After you refactor your code, it will look something like this:
@@ -1268,29 +1268,29 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What kind of data might we need to update in a web application?
-  
+
   * 🙋 We might need to update anything that lives in the database. Specific examples include updating a blog post, creating a review for a movie, submitting login information, and more.
-  
+
   * ☝️ What applications do you use daily that make POST requests to function properly?
-  
+
   * 🙋 Some applications, including Canvas, rely on POST requests for logging in and submitting homework.
-  
+
   * ☝️ Why is data persistence important in full-stack applications?
-  
+
   * 🙋 Data persistence prevents the application from losing user data when the user leaves the page. It also helps to reassure users that their work won't be lost.
-  
+
   * ☝️ How will learning how to create POST routes and requests contribute to your success in this course and in your future career?
-  
+
   * ☝️ POST routes and requests make up some of the core functionality of modern web applications. Knowing how to create POST routes and make POST requests will make you a more competitive job applicant!
 
 ### 19. Instructor Demo: Insomnia (5 min)
 
 * Open `11-Ins_Insomnia/README.md` in your IDE to demonstrate the following:
-  
+
   * This activity demonstrates using Insomnia to make a GET request to the GitHub API.
 
   * Open Insomnia on your machine or download it locally (if you haven't already) by visiting the [Insomnia download page](https://insomnia.rest/download).
-  
+
   * Refer to the `11-Ins_Insomnia/README.md` file for instructions and talking points.
 
     ```md
@@ -1356,7 +1356,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   Do we need to pass a request body to the server when we are using query parameters?
 
-  How can the [GitHub Docs on pulls](https://docs.github.com/en/rest/reference/pulls) help us with usage? 
+  How can the [GitHub Docs on pulls](https://docs.github.com/en/rest/reference/pulls) help us with usage?
 
   ## 🏆 Bonus
 
@@ -1386,7 +1386,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Open `12-Stu_Insomnia/Solved/server.js` in your IDE and explain the following:
 
   * 🔑 This activity doesn't have a database, so first we need to import the JSON file that contains some data that we can use with the endpoint.
-  
+
   * The JSON file contains sample data that you would receive from GitHub's API:
 
     ```js
@@ -1416,13 +1416,13 @@ In this lesson, students will learn how to create an API, define the routes, per
 * Navigate to `12-Stu_Insomnia/Solved/server.js` in your command line and run `npm install` and `npm start`.
 
   * In Insomnia, create a new GET request by selecting it from the list of HTTP methods, and enter `http://localhost:3001/api`.
-  
+
   * Ensure that we receive a response from the server and note the status code at the top of the response pane.
 
 * Open the [MDN Web Docs on HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) in your browser to demonstrate the following:
 
   * We received a 200 response code in Insomnia. These status codes correspond to the HTTP response codes outlined in the HTTP protocol.
-  
+
   * Successful responses usually fall between 200 and 299.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1446,13 +1446,13 @@ In this lesson, students will learn how to create an API, define the routes, per
   * 🔑 This demo shows how we can set up POST routes for the Express.js server. To begin, let's open Insomnia and create a new POST request to the endpoint `http://localhost:3001/api/reviews`.
 
   * 🔑 After making a request to the endpoint, we receive a simple response that the request was received.
-  
+
 * Open `13-Ins_POST-Requests/server.js` in your IDE to demonstrate the following:
 
   * Let's look at the server file and examine the POST route.
 
   * The POST route begins with the `app.post()` method.
-  
+
   * Much like GET requests, the first argument is the endpoint that we want to create, and the second is the route handler function:
 
     ```js
@@ -1460,11 +1460,11 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * Inside the body of the handler, the client is sent a message using the `res.json()` method.
-  
+
   * The `req` object is also being used to dynamically slot in the method attribute that is provided by Express.js.
-  
+
   * A few console logs will also provide us with additional information about the client in the terminal. We are using the `req` object again to access another property called `rawHeaders`.
-  
+
   * `rawHeaders` contains the headers that are automatically generated by Insomnia and sent with each request:
 
     ```js
@@ -1549,15 +1549,15 @@ In this lesson, students will learn how to create an API, define the routes, per
     const express = require('express');
     const port = 3001;
     ```
-  
+
   * We also have an `app` variable that is set to the value of the `express()` function:
 
     ```js
     const app = express();
     ```
-  
+
   * The routes for both `/api/reviews` and `/api/upvotes` have already been started, so let's finish them.
-  
+
   * 🔑 In the `/api/reviews` route handler, the first thing we want to do is tell the client that we received their request. We do this by invoking `res.json()` and passing in a message:
 
     ```js
@@ -1565,7 +1565,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```
 
   * 🔑 Invoking the `res.json()` method will conclude the request-response cycle, but as far as the server is concerned, we can still run the rest of the code in the code block.
-  
+
   * We use the `console.info()` method to print a message to the console that a request was received. We construct the output string using the `req.method()` object and string interpolation:
 
     ```js
@@ -1603,7 +1603,7 @@ In this lesson, students will learn how to create an API, define the routes, per
       console.info(`${req.method} request received to upvote`);
     });
     ```
-  
+
   * 🔑 If you want to, when creating routes in Express.js, you can perform some logic to update a resource inside of a GET route handler. The different methods on the `app` object are designed to aid organization and readability rather than dictate exactly how APIs should be implemented. However, for the API to be considered RESTful, we should keep the POST logic to POST routes and GET logic to GET routes.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

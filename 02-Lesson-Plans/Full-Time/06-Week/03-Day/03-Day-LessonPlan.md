@@ -1,9 +1,8 @@
-# 06.3 Full-Time Lesson Plan: Introduction to MySQL 
+# 06.3 Full-Time Lesson Plan: Introduction to MySQL
 
 ## Overview
 
-In this lesson, students will complete a mini project that reinforces routing and implementing an Express.js server. 
-This lesson also introduces MySQL Shell and executing CRUD functions using SQL commands. 
+In this lesson, students will complete a mini project that reinforces routing and implementing an Express.js server. This lesson also introduces MySQL Shell and executing CRUD functions using SQL commands.
 
 ## Instructor Notes
 
@@ -13,7 +12,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
 
 * Have your MySQL password ready so that you can use MySQL Shell to demonstrate the activities.
 
-**Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
+* **Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
 
 * Make sure that students can initialize the MySQL Shell using the command `mysql -u root -p`. They will need their MySQL password. Students should also be encouraged to use a MySQL password that is not used for any other personal accounts.
 
@@ -39,7 +38,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
 
 ## Slide Deck
 
-[Unit 12 Slide Deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
+* [Unit 12 Slide Deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -79,17 +78,17 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
   * 🔑 For the mini-project today, we will add two new routes to the UI/UX tips application.
 
   * 🔑 We will implement a wildcard route to direct users to a 404 page, as well as a diagnostics route to log information whenever a user submits a failed form submission.
-  
+
 * Open `http://localhost:3001/test` in your browser to demonstrate the following:
 
   * Note that when we visit a route that doesn't exist, the application directs us to a 404 page.
 
   * The 404 page contains a graphic and a button to return to the previous page.
-  
+
 * Open `http://localhost:3001/` in your browser to visit the main page once again:
 
   * We will input information that will cause the form validation to fail.
-  
+
   * Enter a tip that is shorter than 15 characters and a username that is no longer than 4 characters:
 
     ```sh
@@ -98,7 +97,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
     ```
 
   * These are the two conditions that we check for when validation fails.
-  
+
   * 🔑 Note that we get an error message that the tip is invalid if it does not meet the length requirement.
 
   * The front end then makes a request to the `api/diagnostics` route, which logs the failed submission to the database -- or in this case, a `diagnostics.json` file.
@@ -146,13 +145,13 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
 
   * As a developer, I want to log usage statistics from users of my site.
 
-  * As a developer, I want to be able to deploy my apps to Heroku. 
-    
+  * As a developer, I want to be able to deploy my apps to Heroku.
+
   ## Acceptance Criteria
 
   * It's done when I have created a wildcard route in `server.js` that will send the users to a 404 page.
 
-  * It's done when I have created a custom `404.html` page for my wildcard route to serve. 
+  * It's done when I have created a custom `404.html` page for my wildcard route to serve.
 
   * It's done when I have created a POST route for `/api/diagnostics` that will store information about the invalid form submissions.
 
@@ -185,7 +184,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project  (10 min)  
+### 3. Instructor Review: Mini Project  (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -198,17 +197,17 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
   * ✔️ Wildcard routes
 
   * ✔️ `fs.writeFile()`
-  
+
   * ✔️ Modular routes
 
 * Open `28-Stu_Mini-Project/Main/server.js` in your IDE and explain the following:
 
   * In `server.js`, we have a few routes for the root and some static HTML files. Let's begin by creating a wildcard route.
-  
+
   * First we invoke `app.get()` -- but instead of providing a full path, we use an asterisk (`*`)to denote a wildcard route.
-  
+
   * A **wildcard route** handles all paths that are not defined by one of the other route files. Much like any other route handler, it accepts a `res` and `req` object.
-  
+
   * In the wildcard route, we use the `res.sendFile()` method to send a static `404.html` page located in the public directory:
 
     ```js
@@ -216,7 +215,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
       res.sendFile(path.join(__dirname, 'public/pages/404.html'))
     );
     ```
-  
+
   * In the `server.js` file, we also want to make sure that we are allowing static files like images to be served from the public directory:
 
     ```js
@@ -267,7 +266,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
   * First we create a new file called `diagnostics.js` in the routes directory. This file will contain all the routes that use the `/diagnostics` path.
 
   * We require `express.Router()` and assign it to a variable called `diagnostics`. We also import an npm package called `uuid` that will help generate UUIDs.
-  
+
   * If we receive any failed submission data, we want to write that data to a `diagnostics.json` file. To do so, we also require some helper functions to read and write to the file:
 
     ```js
@@ -275,7 +274,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
     const { v4: uuidv4 } = require('uuid');
     const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
     ```
-  
+
   * Then we create the POST route so that we can receive information from the front end when a user makes a form submission that doesn't validate:
 
     ```js
@@ -295,7 +294,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
     ```
 
   * Inside the route handler, we first check that the information we got from the front end is invalid. If so, we write that payload to the `diagnostics.json` file.
-  
+
   * If the front end sent us a valid submission, we send back a message that the submission is unsuitable for logging because there was nothing wrong with it:
 
     ```js
@@ -343,7 +342,7 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
   * In the `index.js` file for the front end, we create a POST request using a function called `submitDiagnostics()`.
 
   * This function accepts a submission object and gets invoked when the user-submitted data is invalid.
-  
+
   * In the `options` object, we specify that we are making a POST request. Additionally, we convert the JSON object to a string using the `JSON.stringify()` function:
 
     ```js
@@ -384,19 +383,19 @@ This lesson also introduces MySQL Shell and executing CRUD functions using SQL c
   * We are going to build a note-taking application using Express.js!
 
   * When this application is complete, we will be able to create notes, save notes to the file system, and retrieve notes from the back end.
-  
+
   * The application features a useful interface for you to work with.
-  
+
   * You will create HTML routes for `/api/notes` that will serve up a `notes.html` file.
 
   * You will implement a wildcard route that will serve up the `index.html` file.
-  
+
   * Also, you will create some API endpoints for `api/notes` to GET and POST new notes.
-  
+
   * You will implement some form of UUID management for each note.
-  
+
   * As a bonus, you can optionally implement a DELETE route for a specific note.
-  
+
   * Finally, you will deploy your application using Heroku!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

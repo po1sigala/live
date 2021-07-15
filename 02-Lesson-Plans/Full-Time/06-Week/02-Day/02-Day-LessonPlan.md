@@ -13,7 +13,7 @@ Students will also learn how to create modular routes for better organization an
 * At the beginning of class, post the link to the [Insomnia download page](https://insomnia.rest/download) in Slack. Instruct students to download and install Insomnia if they have not yet done so.
 
 * Each activity will require spinning up a new Express.js server. Students might encounter a common error with the code `EADDRINUSE`, due to the port being used. They can easily fix this error by running one of the following commands based on their operating system:
-  
+
   * Mac:
 
     ```bash
@@ -93,11 +93,11 @@ Students will also learn how to create modular routes for better organization an
   * When we run the server, we find that it is listening on port `http://localhost:3001/`.
 
   * Inside the `server.js` file, there are two routes for `/api/reviews` -- one to handle GET requests and another to handle POST requests.
-  
+
   * 🔑 In a lot of cases, POST requests will be designed to accept a request body from the client. However, to use the data that we get from the client, we need to intercept that request first and parse the data into JSON.
 
   * 🔑 Middleware acts as a sort of net that captures the client request before it reaches the route logic.
-  
+
   * Middleware in Express.js can access both the request and response object and optionally modify the data before passing it along.
 
   * First we add the middleware to the server and set it up to handle JSON and URL-encoded form data:
@@ -118,7 +118,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * Next we have a POST route with a handler that will check whether the request object exists and has a property called `product`. If so, we prepare a response and then send it off to the client.
-  
+
   * If we don't have a proper request object or the require property, `product`, we send a message to the client that they are missing some information in the request body:
 
     ```js
@@ -144,7 +144,7 @@ Students will also learn how to create modular routes for better organization an
 * Open Insomnia on your local machine and demonstrate the following:
 
   * Create a new POST request to `localhost:3001/api/reviews` and select the Body tab. From the Body drop-down menu, choose JSON.
-  
+
   * Copy the following request object and click Send:
 
     ```json
@@ -191,11 +191,11 @@ Students will also learn how to create modular routes for better organization an
 
   * It's done when I use Insomnia to make a POST request to `api/upvotes/:review:id`, using URL-encoded data to upvote a given post.
 
-  * It's done when I verify that both POST requests return a response that contains the updated vote count. 
+  * It's done when I verify that both POST requests return a response that contains the updated vote count.
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Express.js documentation on req.body](http://expressjs.com/en/api.html#req.body)
 
@@ -235,9 +235,9 @@ Students will also learn how to create modular routes for better organization an
 * Open `16-Stu_Body-Parsing/Solved/server.js` in your IDE and explain the following:
 
   * When we open the server file, we first need to mount the middleware functions.
-  
+
   * To mount the middleware functions, we use the `app.use()` method provided by Express.js. The `use()` method mounts a specific middleware to the server.
-  
+
   * To make the endpoints accept both JSON, we first add middleware for parsing JSON:
 
     ```js
@@ -252,7 +252,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * Next, we add another middleware function for the parsing of URL-encoded data. This is a method on the `express` object, called `express.urlencoded()`.
-  
+
   * We also pass an additional options object to `express.urlencoded()`. The `extended` option allows us to choose whether we want to parse strings with the included `qs` library:
 
     ```js
@@ -262,9 +262,9 @@ Students will also learn how to create modular routes for better organization an
     **Note**: `qs` is a library that parses and stringifies queries and provides additional security.
 
   * URL-encoded data represents another way to submit a request body to the server besides JSON, which we are used to.
-  
+
   * For example, if we had an HTML form with an `upvote` field, the URL-encoded data would look something like this:
-  
+
     ```sh
     "upvote=true"
     ```
@@ -286,11 +286,11 @@ Students will also learn how to create modular routes for better organization an
 * Open Insomnia to demonstrate the following:
 
   * Create a GET request to `/api/reviews` and copy the id of one of the reviews.
-  
+
   * Create a new POST request to `/api/upvotes/:review_id`, substituting `review_id` for the id that you copied from the GET request.
-  
+
   * In the Insomnia interface, choose the body type as **Form URL encoded**, and enter `upvote` as the key, with a value of `true`.
-  
+
   * Click Send, and you should receive the updated vote count as a response from the server:
 
     ```json
@@ -298,7 +298,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * Now let's test whether we can submit regular JSON with the same data. Create a new POST request with a URL of `/api/upvotes/:review_id`, substituting the `review_id` with the one we used in the previous request.
-  
+
   * From the drop-down, choose JSON as the request body type, and provide the following object:
 
     ```json
@@ -306,7 +306,7 @@ Students will also learn how to create modular routes for better organization an
         "upvote": true
       }
     ```
-  
+
   * Click Submit, and verify that your response includes the updated vote count:
 
     ```json
@@ -334,11 +334,11 @@ Students will also learn how to create modular routes for better organization an
   * 🔑 When we run this application, we find that the server starts on port 3001. We also encounter a message to visit `http://localhost:3001/` in the browser.
 
   * 🔑 When we visit this page in the browser, a form prompts us to submit a review.
-  
+
   * There are input fields for each item on the page as well as a Submit button.
-  
+
   * This exercise adds front-end functionality to make a POST request to the server, using the Fetch API that is built into modern browsers.
-  
+
   * After the form has been submitted, we get its status and a new ID for the review that was submitted.
 
 * Open `17-Ins_POST-Fetch/public/scripts/index.js` in your IDE to demonstrate the following:
@@ -352,7 +352,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * We will create a new `review` object using the `.value` from these elements. Then we will save a new review, using the Fetch API to send that object to the endpoint.
-  
+
   * Once we have the new `review` object, we can perform the logic inside the event handler for the form itself:
 
     ```js
@@ -360,7 +360,7 @@ Students will also learn how to create modular routes for better organization an
 
     reviewForm.addEventListener('submit', (e) => { /* Fetch Request Logic */ }
     ```
-  
+
   * In the next activity, we will add comments to the functionality of this app.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -398,7 +398,7 @@ Students will also learn how to create modular routes for better organization an
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What other content types could you set when sending a request? 
+  * What other content types could you set when sending a request?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
@@ -428,11 +428,11 @@ Students will also learn how to create modular routes for better organization an
   * 🔑 When we run this app from the command line and open `http://localhost:3001/`, we are presented with a form to submit a review.
 
   * 🔑 Note also that the form accepts a username or email address, a product, and finally a review for that product.
-  
+
   * After submitting the form, we are presented with a status message and the ID for the review that we just submitted.
 
 * Open `18-Stu_POST-Fetch/server.js` in your IDE to demonstrate the following:
-  
+
   * In the `server.js` file, we require the necessary dependencies, set a port for the server, and initialize the middleware to parse JSON and URL-encoded data:
 
     ```js
@@ -451,7 +451,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * 🔑 We know that the front end will use the Fetch API to make a POST request to the server, so let's examine the route for handling POST requests to `/api/reviews`:
-  
+
   * First we use destructuring assignment to extract the request body into `product`, `review`, and `username` variables:
 
     ```js
@@ -460,7 +460,7 @@ Students will also learn how to create modular routes for better organization an
 
       const { product, review, username } = req.body;
     ```
-  
+
   * If all three of these variables exist, we create a new `review` object and a `response` object:
 
     ```js
@@ -477,7 +477,7 @@ Students will also learn how to create modular routes for better organization an
           body: newReview,
         };
     ```
-  
+
   * 🔑 In this demo, we are not writing to the actual file system, so at the end of the route handler, we simply return the `response` object, which contains a `status` and the `newReview` that we created:
 
     ```js
@@ -506,7 +506,7 @@ Students will also learn how to create modular routes for better organization an
       }
     })
     ```
-  
+
   * Let's examine the front end and study the corresponding `fetch()` POST request.
 
 * Open `18-Stu_POST-Fetch/public/scripts/index.js` in your IDE to demonstrate the following:
@@ -521,9 +521,9 @@ Students will also learn how to create modular routes for better organization an
       ```
 
   * We use the `reviewForm` variable to attach the event listener.
-  
+
   * 🔑 In the event handler, we prevent the default behavior of the browser by using `e.preventDefault()`, and then we create a `newReview` object from the data that the user enters.
-  
+
   * Notice that the `newReview` object is very similar to the new `review` object that we created in the back-end route handler:
 
     ```js
@@ -549,13 +549,13 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * 🔑 Inside the `postReview()` helper function, we use the Fetch API to make a POST request to the server.
-  
+
   * Remember that POST requests accept a path or endpoint, and an `options` object. The `options` object has `method`, `headers`, and `body` properties.
-  
-  * 🔑 Before we send the `review` object to the server, we coerce the object into a string, using the `JSON.stringify()` method.  
-  
+
+  * 🔑 Before we send the `review` object to the server, we coerce the object into a string, using the `JSON.stringify()` method.
+
   * If the response was successful, we log out the successful response and return the data that was used to create the alert for the client.
-  
+
   * If an error occurs, we log out that error to the console using `console.error()`:
 
     ```js
@@ -598,7 +598,7 @@ Students will also learn how to create modular routes for better organization an
   * 🔑 When we run this app, we are presented with the same review form as last time. If we enter the required information and click Submit, we get a message that includes the review ID.
 
   * 🔑 There is a feature that has been added to this application that will create a new JSON file for each product that gets reviewed.
-  
+
   * Let's find out where these files are being saved to the file system.
 
 * Open `19-Ins_Data-Persistence` in your IDE to demonstrate the following:
@@ -608,7 +608,7 @@ Students will also learn how to create modular routes for better organization an
 * Open `19-Ins_Data-Persistence/server.js` in your IDE to demonstrate the following:
 
   * Let's review the server-side logic for the `/api/reviews` POST route handler.
-  
+
   * First we set up the POST route, using `app.post()`, with the path `/api/reviews`:
 
     ```js
@@ -616,7 +616,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * We also use destructuring assignment to get the values of `product`, `review`, and `username`.
-  
+
   * We check whether those exist, then make a new `review` object:
 
     ```js
@@ -636,13 +636,13 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * With the stringified version of the review, called `reviewString`, we can now write to the file system.
-  
+
   * First we invoke the `fs.writeFile()` method, which accepts the arguments `path` and `data`.
-  
+
   * For `path`, we use string interpolation to create the file name, using the `newReview.product` property.
-  
+
   * The second argument, `data`, will be the stringified version of the review that we created earlier.
-  
+
   * The callback function will log if there is an error in saving the file. Otherwise, we will log to the terminal that the save was successful:
 
     ```js
@@ -686,7 +686,7 @@ Students will also learn how to create modular routes for better organization an
 
   ## Expected Behavior
 
-  When a user adds a review, the review should append to the list of reviews in the JSON file. 
+  When a user adds a review, the review should append to the list of reviews in the JSON file.
 
   ## Actual Behavior
 
@@ -700,7 +700,7 @@ Students will also learn how to create modular routes for better organization an
 
   3. Fill out the necessary fields to add a review.
 
-  4. Check the content of `db/reviews.json` and note that the old entries have been replaced. 
+  4. Check the content of `db/reviews.json` and note that the old entries have been replaced.
 
   ---
 
@@ -759,13 +759,13 @@ Students will also learn how to create modular routes for better organization an
 * Navigate to `20-Stu_Data-Persistence/Solved/` in your command line and run `npm install` and `npm start`.
 
 * Open `http://localhost:3001/` in your browser to demonstrate the following:
-  
+
   * 🔑 On the page, enter a username, product, and a review to use as an example, then click Submit.
-  
+
 * Open `20-Stu_Data-Persistence/Solved/db/reviews.json` in your IDE to demonstrate the following:
-  
+
   * Note that each review is getting appended to the list of already existing reviews.
-  
+
   * 🔑 To observe how the reviews are appended rather than overwritten, let's refer to the `app.post()` route for `/api/reviews`.
 
 * Open `20-Stu_Data-Persistence/Solved/server.js` in your IDE to demonstrate the following:
@@ -788,9 +788,9 @@ Students will also learn how to create modular routes for better organization an
       ```
 
   * 🔑 The key to resolving this bug is to first read the content of the `reviews` file so that we can add to it. After that, we will be able to write the new list of reviews in the JSON file.
-  
+
   * 🔑 To read the content of the `reviews.json` file, we use the native `fs.readFile()` method from Node.js. We specify the path for the file that we want to read, the file's encoding, and a callback function.
-  
+
   * The callback function will accept an `err` argument, used for error handling, and also a `data` argument, which will contain the content of the `reviews.json` file:
 
     ```js
@@ -806,7 +806,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * If no error exists, we move on to the next step. We parse the content of the file that we just read.
-  
+
   * We can assume that the data we get back will contain the existing reviews, so we store them in a variable called `parsedReviews`:
 
     ```js
@@ -820,11 +820,11 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * We now have the `newReview` object included in the `parsedReviews` array, so it is time to write the file back to the file system.
-  
+
   * To save the `parsedReviews` array, we invoke `fs.writeFile()`, which takes a path, the data we want to save, and a callback.
-  
+
   * In this case, the path is the relative path to the `reviews.json` file. The data is the `parsedReviews` array, and the callback will simply log out any errors or success messages from the write attempt:
-  
+
     ```js
     fs.writeFile(
       './db/reviews.json',
@@ -903,7 +903,7 @@ Students will also learn how to create modular routes for better organization an
   * 🔑 The page displays a list of UI/UX tips in addition to a form to add a new tip.
 
   * 🔑 When we add a new tip and click Submit, a message indicates that the tip has been added.
-  
+
 * Open `21-Ins_Modular-Routing/server.js` in your IDE to demonstrate the following:
 
   * Note that the server file contains routes that have different paths:
@@ -922,7 +922,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
 * This demo contains all routes inside the same file. There are many ways to create your server, but creating modular routes is ideal for readability and organization.
-  
+
 * We could clean up this application by creating a `routes` folder that contains all the modular routes, divided into three files -- one named `tips.js` that contains all the route logic for the endpoint `/api/tips`, one for feedback called `feedback.js` that contains all the route logic for the endpoint `/api/feedback`, and an `index.js` file that will require all the other routes in that folder.
 
 * For the next activity, we will need to read the Express.js documentation to learn how to create modular routes. Let's get started!
@@ -930,7 +930,7 @@ Students will also learn how to create modular routes for better organization an
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What are the benefits of modularizing routes in your application?
-  
+
   * 🙋 Modularizing routes allows for the separation of concerns and makes the code easier to read and easier to maintain.
 
   * ☝️ What is the first step to create modular routes for this application?
@@ -952,13 +952,13 @@ Students will also learn how to create modular routes for better organization an
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to modularize my route logic from the rest of my server so that I can separate concerns appropriately. 
+  * As a developer, I want to modularize my route logic from the rest of my server so that I can separate concerns appropriately.
 
   ## Acceptance Criteria
 
   * It's done when the routes in `server.js` are broken into modules based on different endpoints.
 
-  * It's done when I have created a `routes` directory to hold my route files. 
+  * It's done when I have created a `routes` directory to hold my route files.
 
   * It's done when I have created a `tipsRouter.js` file that uses `express.Router()`.
 
@@ -966,11 +966,11 @@ Students will also learn how to create modular routes for better organization an
 
   * It's done when I have created an `index.js` file that imports all my router files.
 
-  * It's done when I have required my `routes.js` file inside my `server.js` file. 
+  * It's done when I have required my `routes.js` file inside my `server.js` file.
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Express.js documentation on express.Router()](http://expressjs.com/en/guide/routing.html#express-router)
 
@@ -1010,7 +1010,7 @@ Students will also learn how to create modular routes for better organization an
 * Open `22-Stu_Modular-Routing/Solved/server.js` in your IDE and explain the following:
 
   * When we open the `server.js` file, we notice that the file is much cleaner and easier to read after the refactor.
-  
+
   * Modular routes drastically reduce the lines of code in a single file and allow for separation of concerns:
 
     ```js
@@ -1052,7 +1052,7 @@ Students will also learn how to create modular routes for better organization an
     ```js
     const fb = require('express').Router();
     ```
-  
+
   * Next, we export the `fb` variable at the bottom of the file so that we don't forget:
 
     ```js
@@ -1067,9 +1067,9 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * Now that we have the Express.js `fb` router, we move the routes related to the `/feedback` endpoint into this file.
-  
+
   * 🔑 Notice that instead of using `app.get('/api/feedback')`, we are now referring to the `fb` router to create routes.
-  
+
   * 🔑 Additionally, we no longer need to specify `/api` or `/feedback`, as those will be appended to the full path later in this example:
 
     ```js
@@ -1147,7 +1147,7 @@ Students will also learn how to create modular routes for better organization an
 
     module.exports = tips;
     ```
-  
+
   * Now that we have the routes isolated into modules, we require them in a central `index.js` file that we can use in the server.
 
 * Open `22-Stu_Modular-Routing/Solved/routes/index.js` in your IDE to demonstrate the following:
@@ -1157,7 +1157,7 @@ Students will also learn how to create modular routes for better organization an
     ```js
     const express = require('express');
     ```
-  
+
   * Next, we require the modular routes inside the `index.js` file:
 
     ```js
@@ -1188,7 +1188,7 @@ Students will also learn how to create modular routes for better organization an
 
 * Open `22-Stu_Modular-Routing/Solved/routes/index.js` in your IDE to demonstrate the following:
 
-  * 🔑  When we look at the `index.js` file in the `routes` directory for comparison, we can see that we have used the endpoint from the `server.js` file to form our `api/tips` endpoint. Notice both use the `use()` method. 
+  * 🔑  When we look at the `index.js` file in the `routes` directory for comparison, we can see that we have used the endpoint from the `server.js` file to form our `api/tips` endpoint. Notice both use the `use()` method.
 
     ```js
     app.use('/tips', tipsRouter);
@@ -1238,21 +1238,21 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * The server is making use of custom middleware functions to log out requests to the console.
-  
+
   * We have worked with middleware to parse JSON and URL-encoded requests, but now we get to create the middleware function using Express.js to add functionality to the app.
-  
+
   * Let's examine the code to learn how to implement custom middleware in an application!
-  
+
 * Open `23-Ins_Custom-Middleware/server.js` in your IDE to demonstrate the following:
 
   * Middleware functions have access to the request object (`req`), the response object (`res`), the `next()` function, and the application’s request-response cycle.
 
   * The `next()` function invokes the next middleware function and also relinquishes control of the data:
-  
+
     ```js
     const middleware = (req, res, next) => { ... }
     ```
-  
+
   * We create a function titled `middleware` that logs out the request type and request path to the console. It also uses ANSI escape codes to print the output in yellow to differentiate it from the rest of the output:
 
     ```js
@@ -1272,7 +1272,7 @@ Students will also learn how to create modular routes for better organization an
     ```js
     app.use(middleware);
     ```
-  
+
   * The routes in this example are minimal but will be sufficient for causing the middleware to run and log requests to the console:
 
     ```js
@@ -1347,7 +1347,7 @@ Students will also learn how to create modular routes for better organization an
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Custom Middleware (10 min)  
+### 18. Instructor Review: Custom Middleware (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1422,7 +1422,7 @@ Students will also learn how to create modular routes for better organization an
 * Open Insomnia and submit a new POST request to `http://localhost:3001/` to demonstrate the following:
 
   * After we require the middleware function in the server and mount it in the correct order inside the file, the request is logged in the terminal similar to the following:
-  
+
     ```bash
     Express server listening on port 3001! Visit http://localhost:3001/ in your browser
     📗 GET request to /
@@ -1430,7 +1430,7 @@ Students will also learn how to create modular routes for better organization an
     📗 GET request to /scripts/index.js
     📗 GET request to /api/tips
     ```
-  
+
   * Move the `app.use(clog)` method just above the `app.listen()` method and run the POST request again:
 
     ```bash
@@ -1438,7 +1438,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * Note that the requests are no longer logged to the console.
-  
+
   * 🔑 Order is important, as the file gets parsed from top to bottom. We want to make sure that the custom middleware mounts at the top of the `server.js` file.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1470,7 +1470,7 @@ Students will also learn how to create modular routes for better organization an
   * First make sure that you have already installed the Heroku CLI, by running the command `heroku --version` in your terminal.
 
     **Note**: For anyone who receives a `command not found` error, share the link to the [Heroku CLI download page](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
-  
+
   * Next, using a dedicated secondary CLI, we will log in using the Heroku CLI:
 
     ```sh
@@ -1497,10 +1497,10 @@ Students will also learn how to create modular routes for better organization an
 
     ```sh
     heroku create
- 
+
     ```
   * Then we check whether the remote URL for Heroku was added to the repository:
-    
+
     ```sh
     git remote -v
     ```
@@ -1510,7 +1510,7 @@ Students will also learn how to create modular routes for better organization an
     ```sh
     git push heroku main
     ```
-  
+
   * This might take a moment, but once it completes, run `heroku open` to view the webpage!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -1577,7 +1577,7 @@ Students will also learn how to create modular routes for better organization an
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Heroku (10 min)  
+### 21. Instructor Review: Heroku (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1602,7 +1602,7 @@ Students will also learn how to create modular routes for better organization an
     ```
 
   * 🔑 Next, we create a Git repository inside the folder that contains the code we want to deploy.
-  
+
   * We also add and commit the files so that we have something to push to Heroku:
 
     ```sh
@@ -1636,13 +1636,13 @@ Students will also learn how to create modular routes for better organization an
     remote: -----> Discovering process types
     remote:        Procfile declares types     -> (none)
     remote:        Default types for buildpack -> web
-    remote: 
+    remote:
     remote: -----> Compressing...
     remote:        Done: 33.8M
     remote: -----> Launching...
     remote:        Released v3
     remote:        https://vast-cliffs-60302.herokuapp.com/ deployed to Heroku
-    remote: 
+    remote:
     remote: Verifying deploy... done.
     To https://git.heroku.com/vast-cliffs-60302.git
     ```
@@ -1682,7 +1682,7 @@ Students will also learn how to create modular routes for better organization an
 * Open the [Git documentation on git log](https://www.git-scm.com/docs/git-log) in your browser and explain the following:
 
   * The command `git log` provides a list of commits that have been made to a given repository. You can use it to query specific folders, authors, date ranges, and keywords, to get specific information about the history of your repository.
-  
+
   * In this Git Guide, we explore the history of an open source project to learn how to use some lesser-known Git commands.
 
 * Direct students to the activity instructions found in `27-Evr_Git-History/README.md`.
@@ -1692,7 +1692,7 @@ Students will also learn how to create modular routes for better organization an
 * Open your command line and demonstrate the following:
 
   * When we run `git log`, we get an output to the command line that contains a list of previous commits. We can filter this information further to get exactly what we are looking for.
-  
+
   * In preparation for the activity, visit the [GitHub repository for Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and clone the repository to your local machine:
 
     ```bash
