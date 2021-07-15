@@ -1298,7 +1298,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
     * Open Insomnia and click the plus sign (+), then click New Request. You can also do this using the keyboard shortcut Command+N (Mac) or Ctrl+N (Windows).
 
-    * In the Insomnia interface, change the HTTP method to GET and input the endpoint for GitHub: <https://api.github.com/repos/microsoft/vscode/pulls?state=open>
+    * In the Insomnia interface, change the HTTP method to GET and input the endpoint for GitHub: `https://api.github.com/repos/microsoft/vscode/pulls?state=open`
 
     * Let's review the different parts of this URI.
 
