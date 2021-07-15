@@ -1,87 +1,132 @@
-# Week 06: Express and MySQL
+# Unit 11 & 12 Instructor Overview: Express.js and SQL 
 
 ## Overview
 
-This unit is focused on learning how server-side code works and creating an Express-based web server. Students will be introduced to the concepts of routing, request/response handling, and GET/POST requests.
+In Unit 11, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
 
-We will also start working with databases by introducing MySQL and SQL queries before connecting them to Node and user-input.
+In Unit 12, you’ll introduce students to the final layer to your tech stack: the database. Students will learn to design a MySQL database capable of storing large amounts of data as well as the tools needed to create, read, update and delete data. Connecting a MySQL database to a Node.js application using an Express.js server is also discussed.
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
+Refer to the Class Content Unit Overview for [Unit 11](../../../01-Class-Content/11-Express/README.md) and [Unit 12](../../../01-Class-Content/12-SQL/README.md) for detailed information on key topics, learning objectives, and homework.
 
-  * [11-Express Unit Overview](../../../01-Class-Content/11-express/README.md)
+## Instructor/TA Notes
 
-  * [12-MySQL Unit Overview](../../../01-Class-Content/12-mysql/README.md)
+* In Unit 11, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
-## Instructor / TA Notes
+* We will use Insomnia to make HTTP requests to Express.js routes. Be sure to have students [install Insomnia](https://insomnia.rest/download) before class.
 
-* This unit, there is a larger focus on the concept of server-side code. Make sure that the class can explain the purpose of server-side code to you before moving on to Express. 
+* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another unit. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
 
-* Students' first exposure to MySQL is most likely going to seem overwhelming. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
+* This unit also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
 
-* Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of this unit's activities.
+* For Unit 12, please make sure that you have [installed MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) on your machine and be prepared to troubleshoot any issues students may have faced during setup. 
+
+* Unit 12 activities use MySQL Shell. Please make sure you have your MySQL password ready for use to demonstrate the activities. 
+
+* After starting the MySQL server, make sure that students can initialize the MySQL Shell, using the command `mysql -u root -p`. They will need their MySQL password.
+
+  * If macOS users get the error message `command not found`, they might need to add the following into their `.bash_profile` or `.zshrc` file:
+ 
+    `export PATH="${PATH}:/usr/local/mysql/bin/"`
+
+  * If Windows users get the `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)
+  mysql-installation-windows-path.html).
+
+* This week's homework uses MySQL, Node.js and Inquirer to build a command line application. For a refresher on Inquirer, refer students to the [NPM documentation on Inquirer](https://www.npmjs.com/package/inquirer).
 
 ## Career Connection
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
 
-[Express](../../../01-Class-Content/11-Express/04-Important/CAREER-CONNECTION.md).
-[MySQL](../../../01-Class-Content/12-MySQL/04-Important/CAREER-CONNECTION.md).
+* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 11](../../../01-Class-Content/11-Express/04-Career-Connection/README.md) and [Unit 12](../../../01-Class-Content/12-SQL/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
-## Heads Up
+## Heads-Up
 
-* In this unit, students are going to use Heroku to host their web applications. Be sure students have already signed up for a Heroku account and [installed the Heroku CLI](../../../01-Class-Content/11-express/04-Important/heroku-install.md) on their computers.
+During Unit 13, students will build on their MySQL skills and learn to use [Sequelize](https://sequelize.org/), an object-relational mapping (ORM) library, to simplify the MySQL queries and easily handle data in a full-stack app.
 
-* Students are also going to use MySQL. Be sure students have already installed both the MySQL Server and Workbench on their [Mac](../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) or [Windows](../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers **before** coming to class.
-
-* In the next unit we will be working with ORMs and Handlebars. Before jumping into Handlebars, we will be going over how to send MySQL data from the back-end to the front-end. Be prepared to spend some extra time on Express before starting Handlebars.
+During Unit 14, students will combine everything they've learned so far to create their first full-stack application&mdash;with Handlebars.js, MVC architecture, and front-end authentication.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [6.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
+  * [06.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
-  * [6.2 - Lesson Plan](02-Day/02-Day-LessonPlan.md)
+  * [06.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
+  
+  * [06.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
-  * [6.3 - Lesson Plan](03-Day/03-Day-LessonPlan.md)
+  * [06.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
+  
+  * [06.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-  * [6.4 - Lesson Plan](04-Day/04-Day-LessonPlan.md)
+### Homework
 
-  * [6.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
+  * [Unit 11 Homework](../../../01-Class-Content/11-Express/02-Homework)
+
+  * [Unit 12 Homework](../../../01-Class-Content/12-SQL/02-Homework)
 
 ### Slide Decks
 
-  * [6.1: Intro to Node Servers](https://docs.google.com/presentation/d/1tVXZx3l2azL-NsN-sVPlHmYPbkYsKrvLE_mXR6XH96M/edit?usp=sharing)
+  * [Unit 11: Express.js](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing)
 
-  * [6.2: Express Yourself](https://docs.google.com/presentation/d/1W0_OTbihkOibQbwIt3nbeqOJchgM9IBAkvgPMOm7Oq4/edit?usp=sharing)
+  * [Unit 12: SQL](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
 
-### Time Tracker(s)
+### Algorithms
 
-  * [Unit 12-Title Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/105fwzlYpuj5EqJutMqekdjo9_fcyiMhE/edit#gid=194207795)
+Unit 11:
 
-  * [Unit 12-Title Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1OqSsyFSCE1bBPxIoM5Ql2ak9iMCwXGP2/edit#gid=412217995)
+* [01: Most Songs In Playlist](../../../01-Class-Content/11-Express/03-Algorithms/01-most-songs-in-playlist)
 
-  * [Unit 12-Title Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1HaQZhIABW3us3z_EtTpz5oj0h888YxWW/edit#gid=1519417688)
+* [02: Is Perfect Square](../../../01-Class-Content/11-Express/03-Algorithms/02-is-perfect-square)
 
-  * [Unit 12-Title Day 4 Time Tracker](https://docs.google.com/spreadsheets/d/1ZecDzfTzFRKFMWICcLQiD9ehS8UZRl5-/edit#gid=1889363014)
+* [03: Array Search 2D](../../../01-Class-Content/11-Express/03-Algorithms/03-array-search-2d)
 
-  * [Unit 12-Title Day 5 Time Tracker](https://docs.google.com/spreadsheets/d/1f2mWnABZScVsJKpcUxVUoLgP5hZJCpd0/edit#gid=489496587)
+  * 📹 [Let's Code: Array Search 2D!](https://2u-20.wistia.com/medias/qbtymlf1fx)
 
-## Algorithms
+Unit 12:
 
-### Unit 11
+* [01: Multiply Into 20](../../../01-Class-Content/12-SQL/03-Algorithms/01-multiply-into-20)
 
-  * [01-most-songs-in-playlist](../../../01-Class-Content/11-Express/03-Algorithms/01-most-songs-in-playlist)
+  * 📹 [Let's Code Multiply Into 20!](https://2u-20.wistia.com/medias/joflnt5aqv)
 
-  * [02-is-perfect-square](../../../01-Class-Content/11-Express/03-Algorithms/02-is-perfect-square)
+* [02: Zeroes and Ones](../../../01-Class-Content/12-SQL/03-Algorithms/02-zeroes-and-ones)
 
-  * [03-array-search-2d](../../../01-Class-Content/11-Express/03-Algorithms/03-array-search-2d)
+* [03: Merge Sorted](../../../01-Class-Content/12-SQL/03-Algorithms/03-merge-sorted)
 
-### Unit 12
+### Resources
 
-  * [01-multiply-into-20](../../../01-Class-Content/12-MySQL/03-Algorithms/01-multiply-into-20)
+* [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
-  * [02-zeroes-and-ones](../../../01-Class-Content/12-MySQL/03-Algorithms/02-zeroes-and-ones)
+* [Heroku Deployment Guide](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
 
-  * [03-merge-sorted](../../../01-Class-Content/12-MySQL/03-Algorithms/03-merge-sorted)
+* [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
+
+* [Express.js documentation on the Hello World example](https://expressjs.com/en/starter/hello-world.html)
+
+* [Express.js documentation on response methods](https://expressjs.com/en/guide/routing.html#response-methods)
+
+* [Express.js documentation on route paths](http://expressjs.com/en/guide/routing.html#route-paths)
+
+* [Express.js documentation on basic routing](https://expressjs.com/en/starter/basic-routing.html)
+
+* [Express.js documentation on serving static files](http://expressjs.com/en/starter/static-files.html)
+
+* [Express.js documentation on express.Router](http://expressjs.com/en/guide/routing.html#express-router)
+
+* [Express.js documentation on writing middleware](https://expressjs.com/en/guide/writing-middleware.html)
+
+* [MDN Web Docs on using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+* [Insomnia documentation on getting started](https://support.insomnia.rest/article/11-getting-started)
+
+* [Node.js documentation on the fs module](https://nodejs.org/api/fs.html)
+
+* [Heroku documentation on getting started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
+
+* [MySQL documentation on Getting Started](https://dev.mysql.com/doc/mysql-getting-started/en/)
+  
+* [NPM documentation on Node MySQL 2](https://www.npmjs.com/package/mysql2)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
