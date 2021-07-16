@@ -12,7 +12,7 @@ The following topics will be covered in this unit:
 
 * [API vs. HTML routes](https://expressjs.com/en/guide/routing.html#response-methods)
 
-* [req.query and params](http://expressjs.com/en/guide/routing.html#route-paths)
+* [req.query and params](https://expressjs.com/en/guide/routing.html#route-parameters)
 
 * [GET with Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
@@ -26,7 +26,7 @@ The following topics will be covered in this unit:
 
 * [POST with Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-* [Data persistence using JSON](https://nodejs.org/api/fs.html)
+* [Data persistence using JSON](https://nodejs.org/api/fs.html#fs_file_system)
 
 * [Modular routing](http://expressjs.com/en/guide/routing.html#express-router)
 
