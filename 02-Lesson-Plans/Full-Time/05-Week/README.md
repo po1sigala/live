@@ -2,7 +2,7 @@
 
 ## Overview
 
-In Unit 09, you will introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files. 
+In Unit 09, you will introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
 
 In Unit 10, you will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
@@ -20,9 +20,9 @@ Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content
 
 * Many students will benefit from more information about prototypal inheritance. Try to provide them with helpful supplementary resources, but avoid spending too much in-class time on the subject if some students seem to be struggling.
 
-* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class. 
+* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class.
 
-* Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first. 
+* Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first.
 
 * Similarly, do not feel discouraged if your students still do not understand the concept after you have explained it to them. Keep encouraging your students and reassuring them that they will understand it with time and practice. If you are comfortable doing so, you can share your own personal experiences learning and working with OOP.
 
@@ -40,9 +40,9 @@ Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content
 
 * Unit 11 will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
 
-* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
+* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
-In Unit 12, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the MySQL installation guide on The Full-Stack Blog by the end of this unit to minimize installation time next unit.
+* In Unit 12, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the MySQL installation guide on The Full-Stack Blog by the end of this unit to minimize installation time next unit.
 
 ## Helpful Links
 
