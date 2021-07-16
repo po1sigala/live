@@ -1,47 +1,90 @@
-# Unit 11: Express
+# Unit 11 Instructor Overview: Express.js
 
 ## Overview
 
-This unit is focused on learning how server-side code works and creating an Express-based web server. Students will be introduced to the concepts of routing, request/response handling, and GET/POST requests.
+In this unit, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/11-Express/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/11-Express/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-This unit, there is a larger focus on the concept of server-side code. Make sure that the class can explain the purpose of server-side code to you before moving on to Express. 
+* In this unit, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
-## Heads Up
+* We will use Insomnia to make HTTP requests to Express.js routes. Be sure to have students [install Insomnia](https://insomnia.rest/download) before class.
 
-Next week we start on MySQL. Make sure that you send out the instructions for installing to install MySQL by the end of this unit to minimize install time next unit.
+* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another unit. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
+
+* This unit also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
+
+## Career Connection
+
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/11-Express/04-Career-Connection/README.md).
+
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+
+## Heads-Up
+
+In the next unit, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) by the end of this unit to minimize installation time next unit.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [11.1 - Lesson Plan](01-Day_Servers/11.1-LESSON-PLAN.md)
+* [11.1 Lesson Plan](./01-Day_Express-Starter/11.1-LESSON-PLAN.md)
 
-  * [11.2 - Lesson Plan](02-Day_Express-Yourself/11.2-LESSON-PLAN.md)
+* [11.2 Lesson Plan](./02-Day_POST-Persistent-Data/11.2-LESSON_PLAN.md)
+  
+* [11.3 Lesson Plan](./03-Day_Router-Middleware-Heroku/11.3-LESSON-PLAN.md)
 
-  * [11.3 - Lesson Plan](03-Day_Express-Mini-Project/11.3-LESSON-PLAN.md)
+### Homework
+
+* [Unit 11 Homework](../../../01-Class-Content/11-Express/02-Homework)
 
 ### Slide Decks
 
-  * [11.1: Intro to Node Servers](https://docs.google.com/presentation/d/1EWJxjwlLUBqfhVrYlfqNG6RJGDVBZCYOYRitbnVHeD0/edit?usp=sharing)
+* [Unit 11: Express.js](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing)
 
-  * [11.2: Express Yourself](https://docs.google.com/presentation/d/1H1xhjeQyMGXW7fufs2GJe4j6twEvYpDNhhuZJNcuHEk/edit?usp=sharing)
+### Algorithms
 
-### Time Tracker(s)
+* [01: Most Songs In Playlist](../../../01-Class-Content/11-Express/03-Algorithms/01-most-songs-in-playlist)
 
-  * [Unit 11-Express Day 1 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1FI0bkiVoJRlGkyzEPvjkTkBrS4bjjQzZ/view?usp=sharing)
+* [02: Is Perfect Square](../../../01-Class-Content/11-Express/03-Algorithms/02-is-perfect-square)
 
-  * [Unit 11-Express Day 2 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1pQx3VPyRHlQR_zGkHvoXEXtJSgHR8Gav/view?usp=sharing)
+* [03: Array Search 2D](../../../01-Class-Content/11-Express/03-Algorithms/03-array-search-2d)
 
-  * [Unit 11-Express Day 3 Time Tracker](https://drive.google.com/a/trilogyed.com/file/d/1NfYn5qxxKGeX7_N_DgAjkgE3lI1SQeJW/view?usp=sharing)
+  * 📹 [Let's Code: Array Search 2D!](https://2u-20.wistia.com/medias/qbtymlf1fx)
 
-## Algorithms
+### Resources
 
-  * [01-most-songs-in-playlist](../../../01-Class-Content/11-Express/03-Algorithms/01-most-songs-in-playlist)
+* [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
-  * [02-is-perfect-square](../../../01-Class-Content/11-Express/03-Algorithms/02-is-perfect-square)
+* [Heroku Deployment Guide](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
 
-  * [03-array-search-2d](../../../01-Class-Content/11-Express/03-Algorithms/03-array-search-2d)
+* [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
+
+* [Express.js documentation on the Hello World example](https://expressjs.com/en/starter/hello-world.html)
+
+* [Express.js documentation on response methods](https://expressjs.com/en/guide/routing.html#response-methods)
+
+* [Express.js documentation on route paths](http://expressjs.com/en/guide/routing.html#route-paths)
+
+* [Express.js documentation on basic routing](https://expressjs.com/en/starter/basic-routing.html)
+
+* [Express.js documentation on serving static files](http://expressjs.com/en/starter/static-files.html)
+
+* [Express.js documentation on express.Router](http://expressjs.com/en/guide/routing.html#express-router)
+
+* [Express.js documentation on writing middleware](https://expressjs.com/en/guide/writing-middleware.html)
+
+* [MDN Web Docs on using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+* [Insomnia documentation on getting started](https://support.insomnia.rest/article/11-getting-started)
+
+* [Node.js documentation on the fs module](https://nodejs.org/api/fs.html)
+
+* [Heroku documentation on getting started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,436 +1,1166 @@
-## 6.3 - Intro to MySQL (10:00 AM)
+# 06.3 Full-Time Lesson Plan: Introduction to MySQL
 
 ## Overview
 
-Today, in the process of building today's assignment, students will reinforce their understanding of Express Servers, Routing, and the utility AJAX for front-end interaction. 
-
-MySQL, while extremely useful and powerful, is unlike any other programming language your students have encountered thus far and will undoubtedly lead to some confusion. As if that were not enough, MySQL brings with it its own unique set of stumbling blocks that can blindside you and trip your class up if you are not prepared for them. Do not worry though, as we are here to help guide you through this opening to one of the web's most powerful server-side storage tools.
+In this lesson, students will complete a mini project that reinforces routing and implementing an Express.js server. This lesson also introduces MySQL Shell and executing CRUD functions using SQL commands.
 
 ## Instructor Notes
 
-* `Summary: Complete activity 15 in Unit 11 and 1-2 in Unit 12`
+* In this lesson, students will complete activities `28-Stu_Mini-Project` through `08-Stu_CRUD-Insert`.
 
-* Towards the end of class, let all students know that there is a thorough video outlining the solution to this activity that you will Slack out. (See Recap + Closing Thoughts) 
+* Make sure that you have installed MySQL on your machine before class, and be prepared to troubleshoot any issues that students might have encountered during setup. For more information, refer to the [MySQL installation page](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/).
 
-* Throughout today's class, constantly encourage students to look back at the previous activity from class on the Star Wars Express application. 
+* Have your MySQL password ready so that you can use MySQL Shell to demonstrate the activities.
 
-* Direct the students to the `04-Important` folder where there are installation instructions for both the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell, if they haven't installed it yet.
+* **Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
 
-* The lesson after the break is most likely not going to be an easy one. As mentioned in the overview above, there are a lot of hurdles which can both intimidate and block students from wanting to dive into and mess around with MySQL. It does not help that, unlike Visual Studio Code, MySQL Workbench does not have the friendliest of designs and seems somewhat cluttered. Make sure to keep your class calm and reassure them that all of this will make more sense as they spend more time with the language and MySQL Workbench.
+* Make sure that students can initialize the MySQL Shell using the command `mysql -u root -p`. They will need their MySQL password. Students should also be encouraged to use a MySQL password that is not used for any other personal accounts.
 
-* Since MySQL has the potential to bring about a lot of errors on its inaugural setup, we have set aside portions of time for the critical assignments for you and your TA's to assist the class as necessary over the course of today's assignments. If some students finish the assignments without issue, then have them also go around and assist those who are still facing problems. Do your best to keep everyone in the class on the same page so that no one is left behind.
+  * If macOS users get a `command not found` error message, they might need to add the following into their `.bash_profile` or `.zshrc` file: `export PATH="${PATH}:/usr/local/mysql/bin/"`.
 
-* **Disable Safe Mode Before Class!** In order to demonstrate the importance of unique identifiers and primary keys, we will be deleting rows using where statements that don't use a key column. To demonstrate this successfully, you must disable safe mode by toggling the option in Preferences -> SQL Editor and then reconnecting or by running the command `SET SQL_SAFE_UPDATES = 0;` in workbench.
+  * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
 
-![alt-text](Images/safe-mode.png)
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To create a real-world application for handling reservations using Node/Express
+* Execute commands using the MySQL Shell.
 
-* To have MySQL Workbench installed and running on everyone's computers
+* Create and delete a database.
 
-* To create a localhost connection to a MySQL server and have everyone successfully connect to it
+* Create a table to store data.
 
-## Slides
+* Perform create and read functions using MySQL commands.
 
-* N/A
+## Slide Deck
+
+* [Unit 12 Slide Deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
 
 ## Time Tracker
 
-[Unit 11-Express Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1HaQZhIABW3us3z_EtTpz5oj0h888YxWW/edit#gid=1519417688)
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Demo: Mini Project      | 0:05     |
+| 10:05AM| 2   | Student Do: Mini Project           | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini Project    | 0:10     |
+| 11:15AM| 4   | Introduce Homework                 | 0:05     |
+| 11:20AM| 5   | FLEX                               | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 12:00PM| 7   | BREAK                              | 0:30     |
+| 12:30PM| 8   | Instructor Demo: MySQL Shell       | 0:05     |
+| 12:35PM| 9   | Student Do: MySQL Shell            | 0:15     |
+| 12:50PM| 10  | Instructor Review: MySQL Shell     | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Databases         | 0:05     |
+| 1:05PM | 12  | Student Do: Databases              | 0:15     |
+| 1:20PM | 13  | Instructor Review: Databases       | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Tables            | 0:05     |
+| 1:35PM | 15  | Student Do: Tables                 | 0:15     |
+| 1:50PM | 16  | Instructor Review: Tables          | 0:10     |
+| 2:00PM | 17  | Instructor Demo: CRUD Insert       | 0:05     |
+| 2:05PM | 18  | Student Do: CRUD Insert            | 0:15     |
+| 2:20PM | 19  | Instructor Review: CRUD Insert     | 0:10     |
+| 2:30PM | 20  | END                                | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
+### 1. Instructor Demo: Mini Project (5 min)
 
-### 1. Partners Do: Continue Phase IV - Backend Logic + AJAX (60 mins)
+* Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
 
-* Proceed with the fourth phase.
+* Open `localhost:3001` in your browser to demonstrate the following:
 
-  * Phase IV: For this fourth phase, aim to complete the following:
+  * 🔑 For the mini-project today, we will add two new routes to the UI/UX tips application.
 
-    * Backend Team: 
+  * 🔑 We will implement a wildcard route to direct users to a 404 page, as well as a diagnostics route to log information whenever a user submits a failed form submission.
 
-      * Create the logic that handles reservation requests. Your code should work such that POST requests take in JSON objects, checks if there is any space left, then adds the JSON object to either the reservation array or the waitlist array. Your POST route should also respond to requests with a confirmation (true or false) of whether or not the requestor has a reservation (or is on the waiting list).
+* Open `http://localhost:3001/test` in your browser to demonstrate the following:
 
-      * You should be using Insomnia Core to do all your testing at this point.
+  * Note that when we visit a route that doesn't exist, the application directs us to a 404 page.
 
-    * Frontend Team:
+  * The 404 page contains a graphic and a button to return to the previous page.
 
-      * Begin to do serious research on AJAX. Specifically, focus your attention on how AJAX can be used to do both GET and POST requests. 
+* Open `http://localhost:3001/` in your browser to visit the main page once again:
 
-      * Then create the necessary code on your `tables.html` page such that it can retrieve data from the Backend Team's API. In essence you will be creating an AJAX GET request to retrieve the data.
+  * We will input information that will cause the form validation to fail.
 
-      * Then create the necessary code on your `reserve.html` page such that it can send data to the Backend Team's API. In essence you will be creating an AJAX POST request to send the data. 
+  * Enter a tip that is shorter than 15 characters and a username that is no longer than 4 characters:
 
-    * All: This is the most challenging part of today's activity. Be persistent! You can do this!
+    ```sh
+    tip: short message
+    username: test
+    ```
 
-### 2. Partners Do: Phase V - De-bugging + Bonus (20 mins)
+  * These are the two conditions that we check for when validation fails.
 
-* Proceed with the final phase. Slack out the following instructions to help guide them:
+  * 🔑 Note that we get an error message that the tip is invalid if it does not meet the length requirement.
 
-  * Phase V: For the fifth and final phase, aim to complete the following:
+  * The front end then makes a request to the `api/diagnostics` route, which logs the failed submission to the database -- or in this case, a `diagnostics.json` file.
 
-    * All: 
+* Open `28-Stu_Mini-Project/Main/db/diagnostics.json` in your IDE to demonstrate the following:
 
-      * Complete any remaining functionality from the previous phase if you need more time. 
+  * Note that the failed submission has been logged to the JSON file and given a unique identifier:
 
-      * Then, thoroughly test your application for bugs. Check if there are any obvious ways to crash the application. 
+    ```json
+    {
+        "time": 1617228788871,
+        "error_id": "11f8ee6f-a3c7-4b86-97d6-ae0eb763fc72",
+        "errors": {
+            "username": "Invalid username!",
+            "tip": "Tip must be at least 15 characters",
+            "topic": ""
+        }
+    }
+    ```
 
-      * Then, if you have more time -- begin to tackle any bonus of your choice. 
+  * Let's start adding these features to the UI/UX tips app!
 
-### 3. Instructor Do: Recap (5 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Take the stage again. Let students know that this was a hard activity but an incredibly realistic one. 
+  * ☝️ How would we build this?
 
-* Encourage them by informing them that they've reached a highly significant point in their coding careers. Being able to build front-end and back-end applications like this one will allow them to build any number of applications. 
+  * 🙋 We can start by researching how to create a wildcard route in Express.js, to redirect users to a 404 HTML file. Additionally, we can create a POST route for `api/diagnostics`, to log the failed submissions. Finally, we create the `fetch()` request that will send the POST request to the diagnostics endpoint.
 
-* Slack out the [video solution](https://youtu.be/G7RvQMW2DOg?list=PLgJ8UgkiorCmI_wKKVt5FlkTG63sQF6rr) and HIGHLY HIGHLY encourage them to review it on their own. Let them know that the accompanying code has been thoroughly commented and that they should consider working in groups to dissect it. 
+* Answer any questions before allowing students to start the mini-project.
 
-### 4. Review Mini Project + Unit 11 (35 mins)
+### 2. Student Do: Mini Project (60 min)
 
-* Take a moment to answer lingering questions from the mini project at a high level, then proceed to lead a review on the topics learned in Unit 11.
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
-- - -
+* Break your students into groups that will work together on this activity.
 
-### 5. Break (30 mins)
+  ```md
+  # 🏗️ Unit 11 Mini Project: Add Routes to Existing Application
 
-- - -
+  In this mini-project, you will work with a group to add routes to an existing application. You will create one wildcard route for serving up a 404 page, as well as a diagnostics route for logging failed form validation.
 
-### 6. Instructor Do: Introduction to SQL and MySQL (5 mins)
+  * As a developer, I want to be able to add routes to an existing application.
 
-* Warn them that this part of the lesson will be going over something entirely new, and that it may take them some time to pick up this new language since it is almost entirely unlike any of the other programs they have learned up to this point.
+  * As a developer, I want to serve up a custom 404 page when the requested resource doesn't exist.
 
-* Tell them not to worry though as, despite the difficulties many may face over the course of the class, there will be ample time given to make sure everyone is on the same page.
+  * As a developer, I want to log usage statistics from users of my site.
 
-* Before diving into any of this lesson's demos or even having the students install MySQL Workbench on their devices, take some time to go over the purpose SQL and MySQL.
+  * As a developer, I want to be able to deploy my apps to Heroku.
 
-* SQL (often pronounced "Sequel") stands for "Structured Query Language" and is a powerful programming tool that was specifically designed to allow programmers with the ability to create, populate, manipulate, and access databases so as to provide them with an easy method to deal with server-side storage.
+  ## Acceptance Criteria
 
-* MySQL (often pronounced "My Sequel") is a popular type of open source software that can be placed on a server so as to allow SQL commands to affect the data stored on the server.
+  * It's done when I have created a wildcard route in `server.js` that will send the users to a 404 page.
 
-* Data using SQL is stored in tables on the server much like those you would create in Microsoft Excel or in Google Sheets, making the data easy to visualize and search through.
+  * It's done when I have created a custom `404.html` page for my wildcard route to serve.
 
-### 7. Everyone Do: Install MySQL Workbench (5 mins)
+  * It's done when I have created a POST route for `/api/diagnostics` that will store information about the invalid form submissions.
 
-* Let students know that debugging installs is a skill they will need as as developer, and to use this as a learning experience at troubleshooting installations and configuring software on their machines. If their install is easy, tell them to help someone who might be having some trouble!
+  * It's done when I have created a GET route for `/api/diagnostics` that will return the content of `db/diagnostics/json`.
 
-* Announce to the class that, in order to code in MySQL, they will require a coding environment other than that of Visual Studio Code.
+  * It's done when I have created a `fetch()` request on the front end that will send a POST request to `/api/diagnostics` every time a user attempts to submit an invalid form.
 
-* Direct the students to the `04-Important` folder where there are installation instructions for the MySQL Server and Workbench for [Mac](../../../../01-Class-Content/12-MySQL/04-Important/mysql-mac-guide.md) and [Windows](../../../../01-Class-Content/12-MySQL/04-Important/mysql-windows-guide.md) computers, as well as instructions on initializing the MySQL Shell.
+  * It's done when I have tested my `/api/diagnostics` endpoint using Insomnia.
 
-* Be sure everyone has everything installed and running correctly before continuing the lesson. 
+  * It's done when I have tested the wildcard route by visiting any non-existent path, like `http://localhost/test`.
 
-### 8. Instructor Do: Creating a Localhost Connection Demo (10 mins)
+  * It's done when I have deployed the finished application to Heroku.
 
-* Explain to the class how, since we do not have a defined server for them to connect to, we are going to set up something called a "localhost connection" for them to use.
+  ---
 
-  * This type of connection allows us to create locally stored data on our computers as if they were an external server.
+  ## 💡 Hints
 
-  * This is a much better alternative to spending hundreds to thousands of dollars on buying a server itself for the purposes of practicing on.
+  How can we declare a wildcard route in Express.js?
 
-* Open up MySQL Workbench and click the (+) symbol next to the text which reads "MySQL Connections"
+  How will `fs.writeFile()` help us log usage stats?
 
-  * Enter "Local Instance MySQL" as your connection name
+  ## 🏆 Bonus
 
-  * Make sure your connection is set to "Standard (TCP/IP)"
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Enter "localhost" as the Hostname
+  * How else could we implement statistics logging without making a request from the front end?
 
-  * Enter "3306" as the port for your connection. You can leave this part out of the connection and it could still work.
-
-  * Enter your MySQL username into the Username section (Default is "root")
-
-  * Click on the **Store In Vault...** button beside the Password option and enter in your MySQL password (Default is empty)
-
-    * Mac users will see **Store in Keychain**.
-
-  * Leave the Default Schema field empty
-
-    ![New Connection](Images/New_Connection.png)
-
-* Click on the "Test Connection" button so as to ensure that you have properly connected to your new localhost connection. If successful, hit okay and your new connection should appear on the main page.
-
-  * It is imperative that the server be started for Workbench to be able to connect to the database.
-
-* Now double-click on that connection, enter your password if necessary, and the SQL editor will appear.
-
-* Check to see if there are any questions and answer them to the best of your ability.
-
-### 9. Students Do: Creating a Localhost Connection (25 mins)
-
-* Let the class know that MySQL Workbench can sometimes seem a little hard to comprehend when loaded up for the first time and that confusion is perfectly normal.
-
-* Also let them know that there are some errors that are likely to pop up over the course of this assignment but that you and the TA's will be walking around to help them with whatever issues make themselves known.
-
-  * Students who have successfully created a localhost connection should be encouraged to help those who seem to be struggling as well, especially if they happened upon the same kind of error that the struggling student is having.
-
-  * If they feel they cannot help their fellow students, have them start reading up on how databases are created and used in MySQL.
-
-* Slack out the following instructions...
-
-* **Instructions**
-
-  * Now it is your turn to set up a localhost connection! This may seem as if it will be an easy task, but there are some common errors and hurdles that might stand in your way as you work to create your first ever MySQL connection.
-
-  * Start out by opening up MySQL Workbench and hitting the (+) button next to the text which reads "MySQL Connections". 
-
-  * Enter the following credentials into the on-screen prompt...
-
-    * Connection Name: Local Instance MySQL
-
-    * Connection Method: Standard (TCP/IP)
-
-    * Hostname: localhost
-
-    * Port: 3306
-
-    * Username: &lt;Your MySQL Username> (Defaults to "root")
-
-    * Password: &lt;Your MySQL Password> (Defaults to empty)
-
-    * Keep the Default Schema field empty
-
-  * Hit "Test Connection" and, if the connection is successful, hit okay and double-click on the newly created field under the "MySQL Connections" text on the home page
-
-    * If the connection fails, raise your hand and one of us will come around to help you out. Until we come by, however, take this time to go online and see if there is anything online which might tell you what went wrong. Do not worry if you cannot find anything though, we will make sure to figure this out.
-
-  * If your connection was successful and you have nothing else to do, feel free to help those around you in creating their connections.
-
-  * BONUS: Look into how you can create and use databases using SQL commands
-
-  * BONUS: Look into the reasons why MySQL uses port 3306 as its default
-
-### 10. Instructor Do: Connections Vs. Databases (5 mins)
-
-* Now that everyone has created a connection to the localhost and is comfortably inside the SQL editor, ask your students whether or not this means that they have created a database as well.
-
-* The answer is that they have not... Yet.
-
-  * Point out how the "SCHEMAS" section on the left side of their page is pretty much empty other than including the built-in sys, sakila, and world databases. These databases would not appear on external servers.
-
-    ![Schemas](Images/Schemas.png)
-
-* Connecting to a server does not mean that you have created a database on that server. This means that, even if we wanted to, we could not yet populate our localhost connection with data until we create a database to house the data.
-
-* The connection is a road which leads to an empty lot. Before we can populate the area, we first need to lay the foundations for houses (create a database), and build the houses (create a table).
-
-### 11. Instructor Do: Creating a MySQL Database (5 mins)
-
-* Within the MySQL Workbench editor, type `CREATE DATABASE animals_db;`
-
-  * Explain to the class how this line of code will, when executed, create a MySQL database on the server they are connected to.
-
-  * Also make certain to point out the semicolon at the end of the statement
-
-* Next, find the lightning-bolt symbol just above the editor and click on it to execute your code.
-
-  ![SQL Bar](Images/SQL_Bar.png)
-
-* Point out how, on the bottom of the screen, there is a confirmation stating that the database has successfully been created.
-
-  ![Confirmation](Images/Confirmation.png)
-
-* Something seems off though... See if anyone in the class can figure it out and give them a few seconds to think it through before answering.
-
-  * The database never appeared in the navigator on the left side of the page! Does that mean that our code actually failed?
-
-  * Nope! We just need to reload our connection and the "animals_db" database will now appear within the navigator. We have just successfully created our first-ever database!
-
-### 12. Instructor Do: Creating a Table (10 mins)
-
-* Now that we have got a database, we start digging into the real meat of MySQL and start creating tables within our new database!
-
-* On the line underneath `CREATE DATABASE animals_db;` type the following lines of code (explaining as you type, see below)
-
-  ```sql
-  USE animals_db;
-
-  CREATE TABLE people (
-    name VARCHAR(30) NOT NULL,
-    has_pet BOOLEAN NOT NULL,
-    pet_name VARCHAR(30),
-    pet_age INTEGER(10)
-  );
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* As you type, explain what each line does. Make sure to touch upon the syntax as well.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * `USE animals_db;` tells MySQL that all of the code that follows will be affecting the data stored within the `animals_db` database.
-  * `CREATE TABLE people (<COLUMNS>);` creates a table called `people` with the columns listed within the parentheses.
-  * `name VARCHAR(30) NOT NULL` creates a column of `name` which can hold character strings within it of up to 30 characters and will not allow null fields.
-  * `has_pet BOOLEAN NOT NULL` creates a column of `has_pet` which can hold either true or false within it and will not allow null fields.
-  * `pet_name VARCHAR(30)` creates a column of `pet_name` which can hold character strings within it of up to 30 characters and will allow null fields.
-  * `pet_age INTEGER(10)` creates a column of `pet_age` which can hold whole numbers with precision up to 11 places.
+### 3. Instructor Review: Mini Project  (10 min)
 
-* After going through the code, hit the lightning-bolt button and make note of the error which appears at the bottom of the screen saying that "animals_db" already exists.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * MySQL data is persistent and therefore is not deleted or overwritten when identical commands are run unless specifically commanded to. This means that when we create a database or table with an identical name to one which already exists, an error will occur telling you that the database/table already exists.
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-  * Ask your students what they could do to avoid these kinds of errors. They will most likely come up with the fact that you could simply delete that line of code and then run the commands again - which would work - but point out how deleting working code is not something you want to get into the habit of doing.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * Instead, show them how you can actually highlight the lines of code you wish to be run and then click the lightning-bolt symbol to only run the selected portion. This is a much better method of running SQL code than deleting past code.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-    ![Highlight](Images/Highlighting.png)
+  * ✔️ Wildcard routes
 
-* Highlight the above code and then hit the lightning-bolt symbol for MySQL Workbench to run it. Reload your connection to the server and, using the navigator, point out how there is now a table called "people" in our database.
+  * ✔️ `fs.writeFile()`
 
-### 13. Students Do: Setting Up FavoriteDB (10 mins)
+  * ✔️ Modular routes
 
-* Slack out the following file and instructions
+* Open `28-Stu_Mini-Project/Main/server.js` in your IDE and explain the following:
 
-* **File**:
+  * In `server.js`, we have a few routes for the root and some static HTML files. Let's begin by creating a wildcard route.
 
-  * `favorite_db_unsolved.sql` in `02-FavoriteDB-NoData/Unsolved`
+  * First we invoke `app.get()` -- but instead of providing a full path, we use an asterisk (`*`)to denote a wildcard route.
 
-* **Instructions**:
+  * A **wildcard route** handles all paths that are not defined by one of the other route files. Much like any other route handler, it accepts a `res` and `req` object.
 
-  * For the table favorite_foods...
+  * In the wildcard route, we use the `res.sendFile()` method to send a static `404.html` page located in the public directory:
 
-    * Create the column "food" which can take in a 50 character string and cannot be NULL
-    * Create the column "score" which can take in an integer
+    ```js
+    app.get('*', (req, res) =>
+      res.sendFile(path.join(__dirname, 'public/pages/404.html'))
+    );
+    ```
 
-  * For the table favorite_songs...
+  * In the `server.js` file, we also want to make sure that we are allowing static files like images to be served from the public directory:
 
-    * Create the column "song" which can take in a 100 character string and cannot be NULL
-    * Create the column "artist" which can take in a 50 character string
-    * Create the column "score" which can take in an integer
+    ```js
+    app.use(express.static('public'));
+    ```
 
-  * For the table favorite_movies...
+  * Now that we have the wildcard route and the static middleware, the next step is to create the static HTML file for this page.
 
-    * Create the column "movie" which can take in a string and cannot be NULL
-    * Create the column "five_times" which can take in a boolean
-    * create the column "score" which can take in an integer
+* Open `28-Stu_Mini-Project/Main/public/pages/404.html` in your IDE to demonstrate the following:
 
-  * BONUS: Go online and look into how one might go about adding data into a table.
+  * The 404 page is a simple HTML file that contains an image and links to a JavaScript file:
 
-### 14. Everyone Do: Go Over FavoriteDB (15 mins)
+    ```html
+    ...
+      <main class="text-center">
+        <h1>The page you are looking for is in another castle.</h1>
+        <img src="./images/notfound.jpg" />
+        <section class="big-button">
+          <button class="btn" id="back">Get me out of here!</button>
+        </section>
+      </main>
+    <script src="./scripts/404.js"></script>
+    ...
+    ```
 
-* Copy and paste the data inside of `favoriteDB.SQL` in `02-FavoriteDB-NoData/Solved` into MySQL Workbench to go over what each line of code does once more.
+* Open `28-Stu_Mini-Project/Main/public/scripts/404.js` in your IDE to demonstrate the following:
 
-* Especially make sure to point out how `DEFAULT` works in this example, as this will help with the homework and make SQL easier to handle.
+  * In the front-end JavaScript for the 404 page, we need a selector for the go-back button, and a function to direct the user back to the page they were previously on:
 
-  * `DEFAULT` is used to insert a default value into a column. In this case, it is used to set the default `BOOLEAN` value for the `five_time` column to `false`.
+    ```js
+    const goBackBtn = document.getElementById('back');
 
-### 15. Adding and Updating Data In Tables (15 mins)
+    const goBack = (e) => {
+      e.preventDefault();
 
-* Once everyone is back from break, ask the class whether or not there is any data in our tables yet?
+      history.back();
+    };
 
-  * The answer is, of course, that there is still no data stored within the server. Unlike before, however, we are now all set to start adding data into our tables!
+    goBackBtn.addEventListener('click', goBack);
+    ```
 
-* Open up "animals_db" once more within MySQL Workbench and type `SELECT * FROM people;` into the editor before highlighting this line of code and running it. Explain this to your students as you type in the code.
+    **Note**: The built-in browser API `history` allows us to manipulate the user's browsing history.
 
-* This will bring up a visual of the table we have created and students should note that there is nothing stored within the table just yet. We will be changing this now.
+  * Next, we need to create the `api/diagnostics` route for logging failed form submissions.
 
-  ![Table View](Images/Table_View.png)
+* Open `28-Stu_Mini-Project/Main/routes/diagnostics.js` in your IDE to demonstrate the following:
 
-* Moving back into the editor, type the following code into it while explaining what it does.
+  * First we create a new file called `diagnostics.js` in the routes directory. This file will contain all the routes that use the `/diagnostics` path.
 
-  ```sql
-  INSERT INTO people (name, has_pet, pet_name, pet_age)
-  VALUES ("Ahmed", true, "Rockington", 100);
+  * We require `express.Router()` and assign it to a variable called `diagnostics`. We also import an npm package called `uuid` that will help generate UUIDs.
 
-  SELECT * FROM people;
+  * If we receive any failed submission data, we want to write that data to a `diagnostics.json` file. To do so, we also require some helper functions to read and write to the file:
+
+    ```js
+    const diagnostics = require('express').Router();
+    const { v4: uuidv4 } = require('uuid');
+    const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+    ```
+
+  * Then we create the POST route so that we can receive information from the front end when a user makes a form submission that doesn't validate:
+
+    ```js
+    diagnostics.post('/', (req, res) => { ... }
+    ```
+
+  * In this implementation, we expect a request body from the front end that contains an `isValid` property and an `errors` object. With this information, we create a `payload` object with a few extra properties, including `time` and `error_id`:
+
+    ```js
+    const { isValid, errors } = req.body;
+
+    const payload = {
+      time: Date.now(),
+      error_id: uuidv4(),
+      errors,
+    };
+    ```
+
+  * Inside the route handler, we first check that the information we got from the front end is invalid. If so, we write that payload to the `diagnostics.json` file.
+
+  * If the front end sent us a valid submission, we send back a message that the submission is unsuitable for logging because there was nothing wrong with it:
+
+    ```js
+    if (!isValid) {
+      readAndAppend(payload, './db/diagnostics.json');
+      res.json(`Diagnostic information added 🔧`);
+    } else {
+      res.json({
+        message: 'Object is valid, not logging. Check front end implementation',
+        error_id: payload.error_id,
+      });
+    }
+    ```
+
+  * Finally, we export the diagnostics router for use in the main router file:
+
+    ```js
+    module.exports = diagnostics;
+    ```
+
+* Open `28-Stu_Mini-Project/Main/routes/index.js` in your IDE to demonstrate the following:
+
+  * In the `index.js` route file, we import the diagnostics router and assign it to a variable called `diagnosticsRouter`:
+
+    ```js
+    const express = require('express');
+
+    const tipsRouter = require('./tips');
+    const feedbackRouter = require('./feedback');
+    const diagnosticsRouter = require('./diagnostics');
+
+    const app = express();
+
+    app.use('/tips', tipsRouter);
+    app.use('/feedback', feedbackRouter);
+    app.use('/diagnostics', diagnosticsRouter);
+
+    module.exports = app;
+    ```
+
+  * Now that we have the diagnostics route, we can create the `fetch()` request for the front end.
+
+* Open `28-Stu_Mini-Project/Main/public/scripts/index.js` in your IDE to demonstrate the following:
+
+  * In the `index.js` file for the front end, we create a POST request using a function called `submitDiagnostics()`.
+
+  * This function accepts a submission object and gets invoked when the user-submitted data is invalid.
+
+  * In the `options` object, we specify that we are making a POST request. Additionally, we convert the JSON object to a string using the `JSON.stringify()` function:
+
+    ```js
+    const submitDiagnostics = (submissionObj) => {
+      fetch('/api/diagnostics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionObj),
+      })
+        .then((response) => response.json())
+        .then(() => showErrors(submissionObj.errors))
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    };
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What other use cases can you envision for creating Express.js APIs?
+
+  * 🙋 We can add back-end APIs to future projects and implement endpoints for databases.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Express.js documentation on express()](https://expressjs.com/en/4x/api.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 4. Instructor Demo: Introduce Homework (5 min)
+
+* Navigate to `02-Homework/Main/` in your command line and run `npm install` and `npm start`.
+
+* Open `http://localhost:3001` in your browser to demonstrate the following:
+
+  * We are going to build a note-taking application using Express.js!
+
+  * When this application is complete, we will be able to create notes, save notes to the file system, and retrieve notes from the back end.
+
+  * The application features a useful interface for you to work with.
+
+  * You will create HTML routes for `/api/notes` that will serve up a `notes.html` file.
+
+  * You will implement a wildcard route that will serve up the `index.html` file.
+
+  * Also, you will create some API endpoints for `api/notes` to GET and POST new notes.
+
+  * You will implement some form of UUID management for each note.
+
+  * As a bonus, you can optionally implement a DELETE route for a specific note.
+
+  * Finally, you will deploy your application using Heroku!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to create a full-stack application using Express.js, with data persistent storage that allows for creating, reading, and optionally updating data.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 This activity help you expand your skill set to the back end -- by combining your existing front-end knowledge with a new understanding of Express.js, to create a full-stack application.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 This project will help you become employer-ready by providing a new project that you can add to your portfolio. You will also demonstrate to future employers that you can deploy the apps that you create.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Advise students that the next unit will have them working with MySQL and databases. Remind students that they will need to install MySQL Server on their machine before the beginning of the next unit. Provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions.
+
+* Answer any questions before proceeding.
+
+### 5. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+### 6. Instructor Do: Stoke Curiosity (10 min)
+
+* Welcome students to class.
+
+* Open the [slide deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing) and follow these prompts on their corresponding slides:
+
+  * **What is SQL?**
+
+    * **SQL**, or **Structured Query Language**, is a query language that allows us to interact with a database.
+
+  * **How does SQL interact with a database?**
+
+    * SQL uses a **query**, or a structured inquiry, to react with data that is stored in a database. You can use a SQL query to create, read, update, and delete data.
+
+  * **What is a relational database?**
+
+    * A **relational database** organizes data into tables. A table holds a group of data and is divided into rows and columns. The tables can be linked to form relationships.
+
+  * **How do we link tables?**
+
+    * Tables can be linked based on data that is common to both of them. **Keys** identify rows of data in a table. By matching keys between two tables, a relationship is formed.
+
+  * **What does a query do?**
+
+    * A SQL query interacts with data in a database using the names of tables, columns, and relationships between tables. Queries enable us to supply data to the front end to build sites that can interact with lots of data quickly and easily.
+
+  * **Why learn SQL?**
+
+    * SQL is a marketable skill that's used in a majority of databases in every economic sector, from manufacturing, logistics, and health care to insurance, commerce, and much more. SQL also makes it easy to handle large amounts of data and scale up quickly.
+
+* Navigate to `28-Stu_Mini-Project/Main` in your command line and start up the MySQL Shell:
+
+  ```sh
+  mysql -u root -p
   ```
 
-* This code does pretty much what it says on the tin, it inserts data into the "people" table and then specifies what columns that data will be entered into. Values then places the data contained in the parentheses into the corresponding columns listed after the INSERT INTO statement.
+* Create the database by running the schema file, then exit the MySQL Shell using the `exit` command:
 
-* Enter the following code into the editor above the select statement and below the previous statement. Before running the three statements, however, ask the class what they think will happen to the table.
-
-  ```sql
-  INSERT INTO people (name, has_pet, pet_name, pet_age)
-  VALUES ("Jacob", true, "Misty", 10);
+  ```sh
+  SOURCE db/schema.sql
   ```
 
-* The code WILL run, but as you can see, the data from the first insert statement has been duplicated. This is because, unlike tables and databases, there can be identical data stored within a table. As such, students should make sure to be careful when adding insert statements into their code.
+* Add your MySQL password to the `server.js` file and run `npm install` and `node server.js`.
 
-* Write the following lines of code into the editor underneath the last insert statement and ask the class what they think will happen to the table
+* Open `http://localhost:3001/api/movies` demonstrate the following:
 
-  ```sql
-  INSERT INTO people (name, has_pet)
-  VALUES ("Peter", false);
+  * We use SQL queries to write and retrieve data from the database.
+
+  * This SQL query returns the `id` and `title` from each row in the movies database.
+
+  * The data is returned as an object that we can then manipulate and use to populate the page.
+
+  * Using a SQL query, we can return even large sets of data quickly.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning to use SQL, or Structured Query Language, to access a database.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 We will use an Express.js server to send the SQL queries and access the database.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 SQL is used in many industries and is a highly sought-after skill in the development field.
+
+* Answer any questions before proceeding to the next activity.
+
+### 7. BREAK (30 min)
+
+### 8. Instructor Demo: MySQL Shell (5 min)
+
+* Open the command line. Navigate to `01-Ins_MySQL-Shell` and demonstrate the following:
+
+  * 🔑 To start, we navigate to the root directory of the project and then type the following command into the terminal to confirm that the MySQL server is up and running:
+
+    ```sh
+    mysql --version
+    ```
+
+  * 🔑 Next, in the terminal, at the root directory of the project, we enter the following command and enter the MySQL password when prompted:
+
+    ```sh
+    mysql -u root -p
+    ```
+
+  * 🔑 We write each command after the `mysql` prompt. Don't forget, all commands must end with a semicolon!
+
+    ```sql
+    CREATE DATABASE demo_db;
+    ```
+
+  * 🔑 We can also write the commands in a SQL file and execute the file in MySQL Shell using `source`:
+
+    ```sql
+    source schema.sql
+    ```
+
+  * 🔑 To exit MySQL Shell, we type `quit`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are two ways that we can execute commands using MySQL Shell?
+
+  * 🙋 We can enter the command after the `mysql` prompt, or we can write the command in a SQL file and then execute the the file using `source`.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_MySQL-Shell/README.md`.
+
+### 9. Student Do: MySQL Shell (15 min)
+
+* Direct students to the activity instructions found in `02-Stu_MySQL-Shell/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Execute a SQL File Using MySQL Shell
+
+  Work with a partner to implement the following user story:
+
+  * As developer, I want to execute MySQL statements from a file using the command-line interface.
+
+  ## Acceptance Criteria
+
+  * It's done when the `schema.sql` file is executed using the command-line interface and a message reading `Query OK` is returned.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [MySQL documentation on installing and starting MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-started-installing)
+
+  [MySQL documentation on executing SQL statements from a text file](https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html)
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The file execution output indicates "Query OK", along with the number of rows affected.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Which commands do you use to start MySQL in the command line?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What kind of database is MySQL?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Highlight this line of code and the select statement to show how data has been added to only the "name" and "has_pet" columns of the table while the rest of the row has null values. This is because we filled only those columns that required data while those that did not require data were automatically filled with null values.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * If we were to try to create a new row in our table without filling those columns requiring data, the code would return an error and would not be able to run.
+### 10. Instructor Review: MySQL Shell (10 min)
 
-* Oh! It looks like Peter actually DOES have a pet and we should probably change the data in our table to reflect this! Write the following statement and then see if anyone can figure out what it would do.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```sql
-  UPDATE people
-  SET has_pet = true
-  WHERE name = "Peter";
+  * ☝️ How comfortable do you feel with MySQL Shell? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `schema.sql`
+
+  * ✔️ `SOURCE`
+
+* Navigate to `02-Stu_MySQL-Shell/Solved` in your command line and explain the following:
+
+  * To open the MySQL Shell, we execute `mysql -u root -p` in the command line and then enter the MySQL password:
+
+    ```sh
+    mysql -u root -p
+    ```
+
+  * 🔑 We then use the `SOURCE` command to execute the schema from the `schema.sql` shell. Don't forget the semicolon!
+
+    ```sh
+    SOURCE schema.sql;
+    ```
+
+  * 🔑 We use the `SHOW` command to display the existing databases and confirm that the new database has been created:
+
+    ```sh
+    SHOW DATABASES;
+    ```
+
+  * To exit MySQL Shell, we enter the command `quit`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we execute a schema file in MySQL Shell?
+
+  * 🙋 To execute a `schema.sql` file in MySQL Shell, we use the `SOURCE` command.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on getting started with MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-getting-started.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Databases (5 min)
+
+* Open `03-Ins_Databases` in your command line and demonstrate the following:
+
+  * 🔑 We use a database to store and organize data that we will access with MySQL.
+
+  * 🔑 To create a new database, first we navigate to the command line and enter `mysql -u root -p` to open MySQL Shell:
+
+    ```sh
+    mysql -u root -p
+    ```
+
+  * 🔑 Then we use the `CREATE DATABASE` command and add the database that we want to create:
+
+      ```sql
+      CREATE DATABASE inventory_db;
+      ```
+
+  * 🔑 The `CREATE` command is all we really need, but it is a good idea to check whether the database has already been created, and drop it if so. We do this before we create the database:
+
+      ```sql
+      DROP DATABASE IF EXISTS inventory_db;
+      CREATE DATABASE inventory_db;
+      ```
+
+  * 🔑 Once a database is created, we enter `USE` to select the database:
+
+      ```sql
+      USE inventory_db;
+      ```
+
+  * 🔑 We also check which database is currently in use:
+
+      ```sql
+      SELECT DATABASE();
+      ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we create and select a database using MySQL?
+
+  * 🙋 We use the `CREATE` command to create a database and the `USE` command to select a database.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Databases/README.md`.
+
+### 12. Student Do: Databases (15 min)
+
+* Direct students to the activity instructions found in `04-Stu_Databases/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Use MySQL Statements to Delete, Create, and Select a Database
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to delete an existing database.
+
+  * As a developer, I want to create a new database and select that database for use.
+
+  ## Acceptance Criteria
+
+  * It's done when `sample_db` is dropped and no longer appears on the list of all databases.
+
+  * It's done when a new `books_db` database is created and selected for use.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [MySQL documentation on creating and selecting a database](https://dev.mysql.com/doc/refman/8.0/en/creating-database.html)
+
+  [MySQL documentation on DROP DATABASE](https://dev.mysql.com/doc/refman/8.0/en/drop-database.html)
+
+  ---
+
+  ## 💡 Hints
+
+  Which statement can we use to show all databases?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * SQL is a **relational database management system**, or **RDBMS**. What are the characteristics of an RDBMS? What other database systems fall into the category of RDBMS?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* This code updates the data stored in the columns specified in the SET statement in the row where the data in the "name" column is equal to "Peter"
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * If we did not include that WHERE statement, then our UPDATE would have set the values for all columns instead of those of a specific row. That would have been a pretty major error and is why the WHERE statement is so important.
+### 13. Instructor Review: Databases (10 min)
 
-### 16. Students Do: Adding Data to FavoriteDB (10 Mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Slack out the following instructions
+  * ☝️ How comfortable do you feel with databases? (Poll via Fist to Five, Slack, or Zoom)
 
-* **Instructions**
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * It is time to add some data into FavoriteDB! The data that you add should be unique to you and you should try to test your skills in not only adding new data, but also attempt to update old data as well!
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * Try to add at least three rows of data to each table.
+  * ✔️ `DROP DATABASE`
 
-  * BONUS: Look into how you you might go about creating a column that can hold a default value within it and how default values work when creating new rows.
+  * ✔️ `CREATE DATABASE`
 
-  * BONUS: Look into how you might go about creating a column with a default value that automatically go up with each new row
+  * ✔️ `USE`
 
-  * BONUS: Look into the concept of making a column the "primary key"
+* Open `04-Stu_Databases/Solved/schema.sql` in your IDE and explain the following:
 
-  * ULTRA BONUS: Try to create a column called "id" in one of your tables that can contain an integer, is the primary key for the table, cannot be NULL, and automatically increments with each new row added.
+  * To drop and create a database, we can either enter the commands directly into MySQL Shell or use a file.
 
-### 17. Instructor Do: The Value of Unique Values (5 mins)
+  * 🔑 To drop the `sample_db` database, we use the `DROP` command:
 
-* You know, that duplicate data in our table is starting to become something of an eyesore... Let's change that! Type in the following line of code which should remove the rows that contain the string "Ahmed" within the "name" column.
+    ```sql
+    DROP DATABASE IF EXISTS sample_db;
+    ```
 
-  ```sql
-  DELETE FROM people
-  WHERE name = "Ahmed";
+  * 🔑 To create a new `books_db` database, we start by checking whether a database of the same name already exists -- and if so, we drop it:
+
+    ```sql
+    DROP DATABASE IF EXISTS books_db;
+    ```
+
+  * 🔑 Then we add a new `books_db` database using the `CREATE` command:
+
+    ```sql
+    CREATE DATABASE books_db;
+    ```
+
+  * 🔑 To select the `books_db` database, we use the `USE` command:
+
+    ```sql
+    USE books_db;
+    ```
+
+* Navigate to `04-Stu_Databases/Solved` in your command line and enter `mysql -u root -p` to open MySQL Shell.
+
+  * We execute the schema file in the MySQL Shell using `SOURCE`:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * To check that the `books_db` database is in use, we use `SELECT DATABASE()`:
+
+    ```sql
+    SELECT DATABASE();
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Which command do we use to delete a database?
+
+  * 🙋 We use the `DROP DATABASE` command. To prevent an error from occurring if the database does not exist, we add `IF EXISTS`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on CREATE DATABASE](https://dev.mysql.com/doc/refman/8.0/en/create-database.html) and the [MySQL documentation on DROP DATABASE](https://dev.mysql.com/doc/refman/8.0/en/drop-database.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 14. Instructor Demo: Tables (5 min)
+
+* Open `05-Ins_Tables/db/schema.sql` in your IDE and demonstrate the following:
+
+  * 🔑 To add data to databases, we use tables.
+
+  * 🔑 We start by creating a database to hold the tables:
+
+    ```sql
+    DROP DATABASE IF EXISTS inventory_db;
+    CREATE DATABASE inventory_db;
+    ```
+
+  * 🔑 Then we select the database where we plan to add the tables:
+
+    ```sql
+    USE inventory_db;
+    ```
+
+  * 🔑 To create a new table, we use the `CREATE TABLE` command, followed by the name of the new table:
+
+    ```sql
+    CREATE TABLE produce;
+    ```
+
+  * 🔑 Next, in parentheses `()`, we add the names of the columns that will hold the data and describe the type of data that the column will hold. We designate an integer using `INT` and specify a string of up to 100 characters using `VARCHAR(100)`:
+
+    ```sql
+    CREATE TABLE produce (
+      id INT,
+      name VARCHAR(100)
+    );
+    ```
+
+* Navigate to `05-Ins_Tables/db` in your command line and enter `mysql -u root -p` to open MySQL Shell.
+
+  * We execute the schema file using the `SOURCE` command:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * We use the `SHOW` command to list the tables in the database and check that the table has been successfully added:
+
+    ```sql
+    SHOW TABLES;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we add data to the database?
+
+  * 🙋 We create a table to hold the data. Tables are composed of columns, which hold types of data like integers or strings.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Tables/README.md`.
+
+### 15. Student Do: Tables (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Tables/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Add Table to Database
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to delete a table from an existing database and replace it with a new table.
+
+  ## Acceptance Criteria
+
+  * It's done when a new table, `biographies`, has been created and includes two columns, `id` and `name`.
+
+  * It's done when the `id` column has a data type of `INT` and the `name` column has a data type of `VARCHAR(100)`.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![A table called "biographies" contains fields for "id" and "name".](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How can you display a list of existing tables in a database?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the difference between a table and a database?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* Well... It deleted the duplicate! Too bad it also deleted the original row as well. That's a little annoying. See if the class understands why this happened.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * Because the name "Ahmed" appears twice within the table, SQL assumes that we want to delete every column that contains that name and does not understand that we are simply trying to delete the duplicate.
+### 16. Instructor Review: Tables (10 min)
 
-* To prevent this kind of thing from occurring, programmers will oftentimes want to create a column that automatically populates each new row with unique data. This allows them to select and affect that row more easily.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Open up `animalsDBWithID.sql` in `03-animals_dbWithID` and copy the code into MySQL Workbench before running it.
+  * ☝️ How comfortable do you feel with tables? (Poll via Fist to Five, Slack, or Zoom)
 
-  * Be sure to note how we have now replaced our old update statement with one in which the WHERE statement now uses the id column to select the row we want to affect.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-    * Explain that a **primary key** uniquely identifies a row.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-      * `AUTO_INCREMENT` generates a new value for each inserted record in the table. By default, the starting value for `AUTO_INCREMENT` is 1, and it will increment by 1 for each new record. We're using this with our unique `PRIMARY KEY` so we automatically get unique, incrementing values for each table row.
+  * ✔️ `CREATE TABLE`
 
-      * Point out that, because it auto-increments, each row's ID is guaranteed to be unique. This ensures that we don't identify and update the wrong row when we execute CRUD statements.
+  * ✔️ `SHOW TABLES`
 
-      * Point out that our insert statements have not changed, as we do not need to insert data specifically into the id column. MySQL automatically provides a value for this column, fulfilling the uniqueness constraint by automatically incrementing the last value used as an ID.
+* Open `06-Stu_Tables/Solved/db/schema.sql` in your IDE and explain the following:
 
-* We purposefully included the same kind of error that we had within the other code where there are two identical rows. Thanks to the auto-incrementing primary key of id, however, we can now more easily remove the duplicate through using the following code.
+  * Tables store data in databases. To start, we create a database to hold the new table:
 
-  ```sql
-  DELETE FROM people
-  WHERE id = 2;
+    ```sql
+    DROP DATABASE IF EXISTS books_db;
+    CREATE DATABASE books_db;
+    ```
+
+  * Then, to select the new database, we enter the `USE` command:
+
+    ```sql
+    USE books_db;
+    ```
+
+  * 🔑 Next, we use the `CREATE` command to give the table a name:
+
+    ```sql
+    CREATE TABLE biographies;
+    ```
+
+  * Tables are composed of columns that hold a certain data type. We add two columns, `int` and `name`, and add their data types:
+
+    ```sql
+    CREATE TABLE biographies (
+      id INT,
+      name VARCHAR(100)
+    );
+    ```
+
+* Navigate to `06-Stu_Tables/Solved/db` in your command line and enter `mysql -u root -p` to open MySQL Shell.
+
+  * We execute the file using `SOURCE`:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * We check that the database was created, using `SHOW DATABASES;`:
+
+    ```sql
+    SHOW DATABASES;
+    ```
+
+  * 🔑 We check that the new table is part of the database, using `SHOW TABLES;`:
+
+    ```sql
+    SHOW TABLES;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we create a table to store data inside a database?
+
+  * 🙋 We select the database using the `USE` command. Then we use the `CREATE TABLE` command to create a table.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on creating a table](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Instructor Demo: CRUD Insert (5 min)
+
+* Open `07-Ins-CRUD-Insert/db/insert-one.sql` in your IDE and explain the following:
+
+  * In a MySQL table, data is stored in rows. To add a row to an existing table, we use the `INSERT INTO` command, followed by the name of the table where we want to add data:
+
+    ```sql
+    INSERT INTO produce
+    ```
+
+  * The data must fit into the existing columns. So we specify the columns where we want to add data:
+
+    ```sql
+    INSERT INTO produce (id, name)
+    ```
+
+  * We then add data for the row -- making sure that the data matches the assigned data type -- using `VALUES`:
+
+    ```sql
+    INSERT INTO produce (id, name)
+      VALUES (1, "apple");
+    ```
+
+* Open `07-Ins-CRUD-Insert/db/insert-many.sql` in your IDE and explain the following:
+
+  * We can also add data to multiple rows at the same time, making sure that we separate each row of data with a comma (`,`):
+
+    ```sql
+    INSERT INTO produce (id, name)
+      VALUES
+       ( 1, "apple"),
+       ( 2, "orange"),
+       ( 3, "banana");
+    ```
+
+* Navigate to `07-Ins_CRUD-Insert/db` in your command line and enter `mysql -u root -p` to open MySQL Shell.
+
+  * We execute the `schema.sql` file in MySQL Shell to create the database and table:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * We use `SELECT DATABASE()` to check that the database is now in use and that the table has been added. This is the table where we will add the data:
+
+    ```sql
+    SELECT DATABASE();
+    ```
+
+  * We execute the `insert-many.sql` file in the shell to add multiple rows of data:
+
+    ```sql
+    SOURCE insert-many.sql;
+    ```
+
+  * Now that we have stored data in the table, we can access and manipulate it with a query. We use the `SELECT` command to select data -- and an asterisk (`*`) to select all the data in each row:
+
+    ```sql
+    SELECT * from produce;
+    ```
+
+  * The data from each row is returned in the command line.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we add data to a table?
+
+  * 🙋 We use the `INSERT INTO` command.
+
+  * ☝️ How do write a query to select all the data in a table?
+
+  * 🙋 We use the `SELECT` command. To select all, we can use an asterisk.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_CRUD-Insert/README.md`.
+
+### 18. Student Do: CRUD Insert (15 min)
+
+* Direct students to the activity instructions found in `08-Stu_CRUD-Insert/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Selecting and Inserting Data Using MySQL
+
+  Work with a partner to add comments describing the functionality of the code found in [insert-seeds.sql](./Unsolved/db/insert-select.sql).
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [MySQL documentation on SELECT](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+  [MySQL documentation on INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Which operations can you perform on data using MySQL?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* This does precisely what we wanted it to: Delete the duplicate, and preserve the original.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-- - -
+### 19. Instructor Review: CRUD Insert (10 min)
 
-### End
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-- - -
+  * ☝️ How comfortable do you feel adding data to a table and selecting the data? (Poll via Fist to Five, Slack, or Zoom)
 
-### Lesson Plan Feedback
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * ✔️ `INSERT INTO`
+
+  * ✔️ `VALUES`
+
+  * ✔️ `SELECT *`
+
+* Open `08-Stu-CRUD-Insert/Solved/db/schema.sql` in your IDE and explain the following:
+
+  * We check whether a database named `books_db` already exists, and if so, we drop it:
+
+    ```sql
+    DROP DATABASE IF EXISTS books_db;
+    ```
+
+  * We create a new database using `CREATE DATABASE`:
+
+    ```sql
+    CREATE DATABASE books_db;
+    ```
+
+  * We select the new database with `USE`:
+
+    ```sql
+    USE books_db;
+    ```
+
+  * We create a new table, `biographies`, with two columns: `id` and `name`. Each column is assigned a data type that determines the kind of information it will hold:
+
+    ```sql
+    CREATE TABLE biographies (
+      id INT NOT NULL,
+      name VARCHAR(100) NOT NULL
+    );
+    ```
+
+* Open `08-Stu-CRUD-Insert/Solved/db/insert-select.sql` in your IDE and explain the following:
+
+  * 🔑 Now that we have created a database and a table to hold data, we can insert the data. We use the `INSERT INTO` command to select the table and the columns where we want to add data:
+
+    ```sql
+    INSERT INTO biographies (id, name)
+    ```
+
+  * 🔑 Next, we use `VALUES` to add values:
+
+    ```sql
+    VALUES
+      ( 001, "Diary of Anne Frank"),
+      ( 002, "Frida: A Biography of Frida Kahlo"),
+      ( 003, "Long Walk to Freedom");
+    ```
+
+  * To query the database and select all the data from the new table, we use `SELECT *`:
+
+     ```sql
+     SELECT * from biographies;
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we insert data into a table?
+
+  * 🙋 We first have to select the database where the table is located. Then we use the `INSERT INTO` command to select the table and columns where we want to add data. Finally, we use the `VALUES` command to add new rows of data.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html), and stay for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
