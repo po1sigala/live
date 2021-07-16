@@ -22,7 +22,7 @@ The following topics will be covered in this unit:
 
 * [DELETE statement](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
 
-* [Connecting database to Node.js app](https://www.npmjs.com/package/mysql2#installation)
+* [Connecting MySQL to Node.js app using mysql2](https://www.npmjs.com/package/mysql2)
 
 * [Data types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
