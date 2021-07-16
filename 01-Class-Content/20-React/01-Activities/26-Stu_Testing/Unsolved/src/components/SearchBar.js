@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
+// We take our props object and assign each property to it's own variable name.
+// In this case we only passed one prop, `onFormSubmit`
 function SearchBar({ onFormSubmit }) {
+  // Our state variable for the search term. Defaults to "microsoft/vscode".
   const [term, setTerm] = useState('microsoft/vscode');
-  console.log('SearchBar -> term', term);
 
   const sendTerm = (e) => {
     e.preventDefault();

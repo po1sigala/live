@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import pretty from 'pretty';
 import IssueItem from '../IssueItem';
 
 let container = null;
@@ -18,7 +19,7 @@ afterEach(() => {
   container = null;
 });
 
-describe('Renders each issue individually', () => {
+describe('IssueItem', () => {
   const issue = {
     url: 'https://api.github.com/repos/microsoft/vscode/issues/68',
     html_url: 'https://github.com/microsoft/vscode/issues/68',
@@ -28,20 +29,18 @@ describe('Renders each issue individually', () => {
     title: 'Git: Support git history in VSCode',
   };
 
-  it('renders', () => {
+  it('should contain the expected text', () => {
     act(() => {
       render(<IssueItem key={issue.id} issue={issue} />, container);
     });
     expect(container.textContent).toBe('Git: Support git history in VSCode');
   });
 
-  it('matches snapshot', () => {
+  // In this example, we render the IssueItem component and format the rendered HTML with the pretty package before saving it as an snapshot.
+  it('should match snapshot', () => {
     act(() => {
-      const fragment = render(
-        <IssueItem key={issue.id} issue={issue} />,
-        container
-      );
-      expect(fragment).toMatchSnapshot();
+      render(<IssueItem key={issue.id} issue={issue} />, container);
     });
+    expect(pretty(container.innerHTML)).toMatchSnapshot();
   });
 });

@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 function SearchBar({ onFormSubmit }) {
   // Our state variable for the search term. Defaults to "microsoft/vscode".
   const [term, setTerm] = useState('microsoft/vscode');
-  console.log('SearchBar -> term', term);
 
   const sendTerm = (e) => {
     e.preventDefault();
