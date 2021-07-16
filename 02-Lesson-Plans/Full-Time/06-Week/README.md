@@ -1,4 +1,4 @@
-# Unit 11 & 12 Instructor Overview: Express.js and SQL 
+# Unit 11 & 12 Instructor Overview: Express.js and SQL
 
 ## Overview
 
@@ -18,14 +18,14 @@ Refer to the Class Content Unit Overview for [Unit 11](../../../01-Class-Content
 
 * This unit also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
 
-* For Unit 12, please make sure that you have [installed MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) on your machine and be prepared to troubleshoot any issues students may have faced during setup. 
+* For Unit 12, please make sure that you have [installed MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) on your machine and be prepared to troubleshoot any issues students may have faced during setup.
 
-* Unit 12 activities use MySQL Shell. Please make sure you have your MySQL password ready for use to demonstrate the activities. 
+* Unit 12 activities use MySQL Shell. Please make sure you have your MySQL password ready for use to demonstrate the activities.
 
 * After starting the MySQL server, make sure that students can initialize the MySQL Shell, using the command `mysql -u root -p`. They will need their MySQL password.
 
   * If macOS users get the error message `command not found`, they might need to add the following into their `.bash_profile` or `.zshrc` file:
- 
+
     `export PATH="${PATH}:/usr/local/mysql/bin/"`
 
   * If Windows users get the `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)
@@ -54,11 +54,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [06.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
   * [06.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
-  
+
   * [06.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
   * [06.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
-  
+
   * [06.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
 ### Homework
@@ -103,6 +103,10 @@ Unit 12:
 
 * [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
 
+* [MySQL Reference Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-reference-guide)
+
+* [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+
 * [Express.js documentation on the Hello World example](https://expressjs.com/en/starter/hello-world.html)
 
 * [Express.js documentation on response methods](https://expressjs.com/en/guide/routing.html#response-methods)
@@ -126,7 +130,8 @@ Unit 12:
 * [Heroku documentation on getting started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true)
 
 * [MySQL documentation on Getting Started](https://dev.mysql.com/doc/mysql-getting-started/en/)
-  
+
 * [NPM documentation on Node MySQL 2](https://www.npmjs.com/package/mysql2)
+
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

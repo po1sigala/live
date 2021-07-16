@@ -39,7 +39,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [12.1 Lesson Plan](./01-Day_Intro-MySQL/12.1-LESSON-PLAN.md)
 
 * [12.2 Lesson Plan](./02-Day_MySQL-Node/12.2-LESSON-PLAN.md)
-  
+
 * [12.3 Lesson Plan](./03-Day_Big-Data-MySQL/12.3-LESSON-PLAN.md)
 
 ### Homework
@@ -62,9 +62,15 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-* 📖 [MySQL documentation on getting started](https://dev.mysql.com/doc/mysql-getting-started/en/)
-  
-* 📖 [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
+* [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
+
+* [MySQL Reference Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-reference-guide)
+
+* [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+
+* [MySQL documentation on getting started](https://dev.mysql.com/doc/mysql-getting-started/en/)
+
+* [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
