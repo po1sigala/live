@@ -33,7 +33,7 @@ describe('Visibility', () => {
     expect(letter.visible).toBe(false);
   });
 
-  it('should return the guessed character when using toString', () => {
+  it('Should return the guessed character when using toString', () => {
     const letter = new Letter('j');
 
     letter.guess('j');
