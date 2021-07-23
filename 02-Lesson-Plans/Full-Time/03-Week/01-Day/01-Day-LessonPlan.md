@@ -1237,7 +1237,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
     ```html
     <div class="row align-items-end">
       <div class="col-12 col-md-6">
-        <img class="img-fluid" src="https://placehold.it/1920x1080" alt="video placeholder" />
+        <img class="img-fluid" src="https://via.placeholder.com/1920x1080" alt="video placeholder" />
       </div>
 
       <div class="col-12 col-md-6">
