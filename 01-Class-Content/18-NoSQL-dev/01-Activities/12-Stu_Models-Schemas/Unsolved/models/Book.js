@@ -12,24 +12,27 @@ const bookSchema = new mongoose.Schema({
 
 const Book = mongoose.model('Book', bookSchema);
 
-Book.create({ 
-  title: 'Diary of Anne Frank',
-  author: 'Anne Frank',
-  publisher: 'Scholastic',
-  stockCount: 10,
-  price: 10,
-  inStock: true 
+const handleError = (err) => console.error(err);
+
+Book.create(
+  {
+    title: 'Diary of Anne Frank',
+    author: 'Anne Frank',
+    publisher: 'Scholastic',
+    stockCount: 10,
+    price: 10,
+    inStock: true,
   },
-  function (err) {
-    if (err) return handleError(err);
-});
+  (err) => (err ? handleError(err) : console.log('Created new document'))
+);
 
-Book.create({ title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' }, function (err) {
-  if (err) return handleError(err);
-});
+Book.create(
+  { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
+  (err) => (err ? handleError(err) : console.log('Created new document'))
+);
 
-Book.create({ title: 'Harold and the Purple Crayon'}, function (err) {
-  if (err) return handleError(err)
-});
+Book.create({ title: 'Harold and the Purple Crayon' }, (err) =>
+  err ? handleError(err) : console.log('Created new document')
+);
 
 module.exports = Book;
