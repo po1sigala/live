@@ -13,20 +13,22 @@ const grocerySchema = new mongoose.Schema({
   lastAccessed: { type: Date, default: Date.now },
 });
 
-// Using mongoose.model() to compile a model based on the schema 
+// Using mongoose.model() to compile a model based on the schema
 // 'Item' is the name of the model
 // grocerySchema is the name of the schema we are using to create a new instance of the model
 const Item = mongoose.model('Item', grocerySchema);
 
+const handleError = (err) => console.error(err);
+
 // We use the model to create individual documents that have the properties as defined in our schema
-Item.create({ 
-  item: 'banana',
-  stockCount: 10,
-  price: 1,
-  inStock: true 
+Item.create(
+  {
+    item: 'banana',
+    stockCount: 10,
+    price: 1,
+    inStock: true,
   },
-  function (err) {
-    if (err) return handleError(err);
-});
+  (err) => (err ? handleError(err) : console.log('Created new document'))
+);
 
 module.exports = Item;
