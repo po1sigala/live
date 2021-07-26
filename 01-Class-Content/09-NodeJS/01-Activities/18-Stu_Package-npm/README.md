@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to keep track of dependencies using `npm`. 
+* As a developer, I want to be able to keep track of dependencies using `npm`.
 
 * As a developer, I want to initialize my project and create a `package.json` file.
 
@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 * [npm-init](https://docs.npmjs.com/cli/v6/commands/npm-init)
 
@@ -32,7 +32,9 @@ It's possible that the `node_modules` folder is hidden in the `files.exclude` se
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`?
+
+* What is `npx` and how is it different from `npm install`?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
