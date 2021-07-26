@@ -18,27 +18,30 @@ const bookSchema = new mongoose.Schema({
 // Using mongoose.model() to compile a model based on the schema 'bookSchema'
 const Book = mongoose.model('Book', bookSchema);
 
+const handleError = (err) => console.error(err);
+
 // Create a new instance of the model, a document
-Book.create({ 
-  title: 'Diary of Anne Frank',
-  author: 'Anne Frank',
-  publisher: 'Scholastic',
-  stockCount: 10,
-  price: 10,
-  inStock: true 
+Book.create(
+  {
+    title: 'Diary of Anne Frank',
+    author: 'Anne Frank',
+    publisher: 'Scholastic',
+    stockCount: 10,
+    price: 10,
+    inStock: true,
   },
-  function (err) {
-    if (err) return handleError(err);
-});
+  (err) => (err ? handleError(err) : console.log('Created new document'))
+);
 
 // Create a new instance with only required title and author
-Book.create({ title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' }, function (err) {
-  if (err) return handleError(err);
-});
+Book.create(
+  { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
+  (err) => (err ? handleError(err) : console.log('Created new document'))
+);
 
 // Create a new instance with only required title
-Book.create({ title: 'Harold and the Purple Crayon'}, function (err) {
-  if (err) return handleError(err)
-});
+Book.create({ title: 'Harold and the Purple Crayon' }, (err) =>
+  err ? handleError(err) : console.log('Created new document')
+);
 
 module.exports = Book;

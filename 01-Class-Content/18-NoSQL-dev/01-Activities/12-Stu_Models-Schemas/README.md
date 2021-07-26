@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of Models and Schemas With Mongoose
 
-Work with a partner to add comments describing the functionality of the code found in [models/books.js](./Unsolved/models/Book.js) and [server.js](./Unsolved/server.js).
+Work with a partner to add comments describing the functionality of the code found in [models/Books.js](./Unsolved/models/Book.js) and [server.js](./Unsolved/server.js).
 
 ## 📝 Notes
 
