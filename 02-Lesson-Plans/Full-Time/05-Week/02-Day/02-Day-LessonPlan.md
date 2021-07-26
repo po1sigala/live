@@ -364,7 +364,9 @@ It's possible that the `node_modules` folder is hidden in the `files.exclude` se
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`?
+
+* What is `npx` and how is it different from `npm install`?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 ```
@@ -417,6 +419,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
   * Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
+
+  * Another tool that you will use often is `npx`, which stands for "node-package-runner". This is a tool that allows us to run a command from a specific package without having to install it. It doesn't make much sense for us to use `npx` in this activity, but being aware of it will help us understand it's use case later in the course.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
