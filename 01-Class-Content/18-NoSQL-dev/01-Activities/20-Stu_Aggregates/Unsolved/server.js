@@ -11,11 +11,10 @@ app.use(express.json());
 
 app.get('/all-books', (req, res) => {
   Book.find({}, (err, result) => {
-    if (err) throw err;
-    if (result) {
-      res.json(result)
+    if (err) {
+      res.status(500).send(err);
     } else {
-      console.log("Uh Oh, something went wrong")
+      res.status(200).json(result);
     }
   });
 });
@@ -34,11 +33,13 @@ app.get('/sum-price', (req, res) => {
       },
     ],
     (err, result) => {
-      if (err) throw err;
-      if (result) {
-        res.json(result);
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).json(result);
       }
-    });
+    }
+  );
 });
 
 db.once('open', () => {

@@ -10,9 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/sum-price', (req, res) => {
-  // Call aggregate() on model 
+  // Call aggregate() on model
   Item.aggregate(
-    [ // Where prices are less or equal to 5
+    [
+      // Where prices are less or equal to 5
       { $match: { price: { $lte: 5 } } },
       {
         $group: {
@@ -20,21 +21,23 @@ app.get('/sum-price', (req, res) => {
           _id: null,
           // Sum of all prices
           sum_price: { $sum: '$price' },
-          // Average of all prices 
+          // Average of all prices
           avg_price: { $avg: '$price' },
-          // Maximum price 
+          // Maximum price
           max_price: { $max: '$price' },
-          // Minimum price 
+          // Minimum price
           min_price: { $min: '$price' },
         },
       },
     ],
     (err, result) => {
-      if (err) throw err;
-      if (result) {
-        res.json(result);
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).send(result);
       }
-    });
+    }
+  );
 });
 
 db.once('open', () => {

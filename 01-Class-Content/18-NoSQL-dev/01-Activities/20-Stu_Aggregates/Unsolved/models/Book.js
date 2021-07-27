@@ -1,5 +1,4 @@
 // Require schema and model from mongoose
-const { Schema, model } = require('mongoose');
 const mongoose = require('mongoose');
 
 // Construct a new instance of the schema class
@@ -26,7 +25,7 @@ Book.create([
   { title: 'Hello, World 3,0', price: 7, inStock: true },
   { title: 'Hello World 4.0', price: 20, inStock: true },
   { title: 'Hello, World 5.0', price: 2, inStock: false },
-  { title: 'Hello World Infinity', price: 25, inStock: false},
+  { title: 'Hello World Infinity', price: 25, inStock: false },
   { title: 'Hello World Infinity and Beyond', price: 4, inStock: true },
 ]);
 

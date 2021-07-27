@@ -12,20 +12,20 @@ app.use(express.json());
 app.get('/all-books', (req, res) => {
   // Using model in route
   Book.find({}, (err, result) => {
-    if (err) throw err;
-    if (result) {
-      res.json(result)
+    if (err) {
+      res.status(500).send(err);
     } else {
-      console.log("Uh Oh, something went wrong")
+      res.status(200).json(result);
     }
   });
 });
 
-// Get Aggregate Functions 
+// Get Aggregate Functions
 app.get('/sum-price', (req, res) => {
-  // Call aggregate() on model 
+  // Call aggregate() on model
   Book.aggregate(
-    [ // Where prices are less or equal to 5
+    [
+      // Where prices are less or equal to 5
       { $match: { inStock: true } },
       {
         $group: {
@@ -33,21 +33,23 @@ app.get('/sum-price', (req, res) => {
           _id: null,
           // Sum of all prices
           sum_price: { $sum: '$price' },
-          // Average of all prices 
+          // Average of all prices
           avg_price: { $avg: '$price' },
-          // Maximum price 
+          // Maximum price
           max_price: { $max: '$price' },
-          // Minimum price 
+          // Minimum price
           min_price: { $min: '$price' },
         },
       },
     ],
     (err, result) => {
-      if (err) throw err;
-      if (result) {
-        res.json(result);
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).json(result);
       }
-    });
+    }
+  );
 });
 
 db.once('open', () => {
