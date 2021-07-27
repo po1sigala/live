@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created an instance of the model, or document, named `discountedBook`.
 
-* It's done when the price of `discountedBook` is reduced by 50 percent and the results logged to the console. 
+* It's done when I test the instance method by running `Book.js` and the price of `discountedBook` is reduced by 50 percent and the results logged to the console.
 
 ---
 
