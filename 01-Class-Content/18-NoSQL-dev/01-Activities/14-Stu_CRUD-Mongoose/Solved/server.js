@@ -10,14 +10,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Creates a new document
-app.post('/new-department/:department', function (req, res, err) {
+app.post('/new-department/:department', function (req, res) {
   const newDepartment = new Department({ name: req.params.department });
   newDepartment.save();
   if (newDepartment) {
-    res.json(newDepartment);
+    res.status(200).json(newDepartment);
   } else {
     console.log('Uh Oh, something went wrong');
-    res.json(err);
+    res.status(500).json({ message: 'something went wrong' });
   }
 });
 
@@ -26,22 +26,22 @@ app.get('/all-departments', function (req, res) {
   // Using model in route to find all documents that are instances of that model
   Department.find({}, function (err, result) {
     if (result) {
-      res.json(result);
+      res.status(200).json(result);
     } else {
       console.log('Uh Oh, something went wrong');
-      res.json(err);
+      res.status(500).json({ message: 'something went wrong' });
     }
   });
 });
 
-// Find first document with name equal to"Kids"
+// Find first document with name equal to "Kids"
 app.get('/find-one-department', function (req, res) {
   Department.findOne({ name: 'Kids' }, function (err, result) {
     if (result) {
-      res.json(result);
+      res.status(200).json(result);
     } else {
       console.log('Uh Oh, something went wrong');
-      res.json(err);
+      res.status(500).json({ message: 'something went wrong' });
     }
   });
 });
@@ -52,11 +52,11 @@ app.delete('/find-one-delete/:department', function (req, res) {
     { name: req.params.department },
     function (err, result) {
       if (result) {
-        res.json(result);
+        res.status(200).json(result);
         console.log(`Deleted: ${result}`);
       } else {
         console.log('Uh Oh, something went wrong');
-        res.json(err);
+        res.status(500).json({ message: 'something went wrong' });
       }
     }
   );
@@ -74,11 +74,11 @@ app.post('/find-one-update/:department', function (req, res) {
     { new: true },
     function (err, result) {
       if (result) {
-        res.json(result);
+        res.status(200).json(result);
         console.log(`Deleted: ${result}`);
       } else {
         console.log('Uh Oh, something went wrong');
-        res.json(err);
+        res.status(500).json({ message: 'something went wrong' });
       }
     }
   );

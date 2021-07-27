@@ -7,6 +7,8 @@ const departmentSchema = new mongoose.Schema({
 
 const Department = mongoose.model('Department', departmentSchema);
 
+const handleError = (err) => console.error(err);
+
 // Will add data only if collection is empty to prevent duplicates
 // More than one document can have the same name value
 Department.find({}).exec(function (err, collection) {
@@ -21,8 +23,10 @@ Department.find({}).exec(function (err, collection) {
         { name: 'Contemporary' },
         { name: 'Biography' },
       ],
-      function(err) {
-        if (err) return handleError(err);
+      function (insertErr) {
+        if (insertErr) {
+          handleError(insertErr);
+        }
       }
     );
   }
