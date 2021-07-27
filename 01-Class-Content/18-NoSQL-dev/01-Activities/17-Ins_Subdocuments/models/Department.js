@@ -35,8 +35,11 @@ const employeeData = [
 
 Department.create(
   { name: 'Shoes', manager: managerData, employees: employeeData },
-  function (err, small) {
-    if (err) return handleError(err);
+  (err, data) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log(data);
   }
 );
 
