@@ -7,11 +7,16 @@ const departmentSchema = new mongoose.Schema({
 
 const Department = mongoose.model('Department', departmentSchema);
 
+const handleError = (err) => console.error(err);
+
 // Will add data only if collection is empty to prevent duplicates
 // Note that two documents can have the same name value
-Department.find({}).exec(function (err, collection) {
+Department.find({}).exec((err, collection) => {
+  if (err) {
+    return handleError(err);
+  }
   if (collection.length === 0) {
-    Department.insertMany(
+    return Department.insertMany(
       [
         { name: 'Produce' },
         { name: 'Dairy' },
@@ -21,11 +26,11 @@ Department.find({}).exec(function (err, collection) {
         { name: 'Wine' },
         { name: 'Flowers' },
       ],
-      function(err) {
-        if (err) return handleError(err);
-      }
+      (insertError) =>
+        insertError ? handleError(insertError) : console.log('Inserted')
     );
   }
+  return console.log('Already populated');
 });
 
 module.exports = Department;

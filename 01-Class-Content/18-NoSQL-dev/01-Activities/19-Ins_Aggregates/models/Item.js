@@ -9,7 +9,7 @@ const grocerySchema = new mongoose.Schema({
   price: Number,
 });
 
-// Using mongoose.model() to compile a model based on the schema 
+// Using mongoose.model() to compile a model based on the schema
 // 'Item' is the name of the model
 // grocerySchema is the name of the schema we are using to create a new instance of the model
 const Item = mongoose.model('Item', grocerySchema);
@@ -30,12 +30,14 @@ Item.find({}).exec(function (err, collection) {
         { item: 'snack cake', price: 4 },
         { item: 'wine', price: 10 },
       ],
-      function(err) {
-        if (err) return handleError(err);
+      function (insertError, insertedItems) {
+        if (insertError) {
+          console.log(insertError);
+        }
+        console.log('Inserted items:', insertedItems);
       }
     );
   }
-})
-
+});
 
 module.exports = Item;

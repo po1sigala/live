@@ -8,10 +8,12 @@ const departmentSchema = new mongoose.Schema({
 });
 
 // Schemas can also define methods that act on an instance of the model or document
-// This custom method extends the methods object 
-departmentSchema.methods.getDocumentInfo = function() {
+// This custom method extends the methods object
+departmentSchema.methods.getDocumentInfo = function () {
   // The 'this' keyword is used to specify the properties belonging to the particular instance
-  console.log("This department has the name " + this.name + " and a total stock of " + this.totalStock)
+  console.log(
+    `This department has the name ${this.name} and a total stock of ${this.totalStock}`
+  );
 };
 
 // Models are constructors compiled from a schema and pass down the properties and methods to each instance
@@ -21,10 +23,12 @@ const Department = mongoose.model('Department', departmentSchema);
 const produce = new Department({ name: 'Produce', totalStock: 100 });
 
 // Instance methods are called on the document
-produce.getDocumentInfo()
+produce.getDocumentInfo();
 
 // In addition to custom methods, documents also have access to a range of built-in instance models like get()
-let responseGetInstance = produce.get('totalStock', String);
-console.log("The value of the totalStock for this document in string form is " + responseGetInstance);
+const responseGetInstance = produce.get('totalStock', String);
+console.log(
+  `The value of the totalStock for this document in string form is ${responseGetInstance}`
+);
 
 module.exports = Department;
