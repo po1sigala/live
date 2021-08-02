@@ -52,7 +52,7 @@ Follow these instructions to deploy your project to GitHub Pages:
 
 3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-4. On the Settings page, scroll down to the GitHub Pages section. Then, in the section labeled Source, select the `main` branch as your source.
+4. On the Settings page, scroll down to the GitHub Pages tab on the left of the screen and click on it. On the Pages screen in the section labeled Source, select the `main` branch as your source.
 
 5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
