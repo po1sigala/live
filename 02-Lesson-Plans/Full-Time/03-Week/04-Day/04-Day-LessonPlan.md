@@ -87,11 +87,11 @@ By the end of class, students will be able to:
 
     ```js
     var userName = document.createElement('h3');
-    var issueBody = document.createElement('p');
+    var issueTitle = document.createElement('p');
     userName.textContent = data[i].user.login;
-    issueBody.textContent = data[i].body;
+    issueTitle.textContent = data[i].title;
     issueContainer.append(userName);
-    issueContainer.append(issueBody);  
+    issueContainer.append(issueTitle);
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -143,7 +143,7 @@ By the end of class, students will be able to:
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How could you use `fetch()` to retrieve JSON from a data file instead of a third-party API?
+  * What are some other third-party APIs you could make `fetch()` requests to?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
@@ -488,7 +488,7 @@ By the end of class, students will be able to:
 
   * ✔️ `response.status`
 
-  * ✔️ `text.Content`
+  * ✔️ `textContent`
 
 * Open `14-Stu_Fetch_Status/Solved/assets/js/script.js` in your IDE and explain the following:
 
@@ -499,7 +499,7 @@ By the end of class, students will be able to:
       if (response.status !== 200) {
     ```
 
-  * 🔑 We assign the `textContext` to be equal to the `response.status`, as shown in the following example:
+  * 🔑 We assign the `textContent` to be equal to the `response.status`, as shown in the following example:
 
     ```js
     responseText.textContent = response.status;

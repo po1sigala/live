@@ -1,879 +1,1767 @@
-## 11.1 - MERN (10:00 AM) <!--links--> &nbsp; [⬅️](../../10-Week/05-Day/05-Day-LessonPlan.md) &nbsp; [➡️](../02-Day/02-Day-LessonPlan.md)
+# 11.1 Full-Time Lesson Plan: GraphQL and MERN
 
-## Overview
+## Overview 
 
-In this class, we will be deepening students understanding of ReactJS through reviewing all of the concepts covered over the previous few classes to build applications. We will also cover connecting Create React App to an Express backend as well as deploying to Heroku. 
-
-At the end of class, we will introduce the final project's requirements and help the students conceptualize their project idea.
+This class covers GraphQL, including using the Apollo Server to set up `typeDefs` and `resolvers`, making queries and using mutations, and using the GraphQL Playground. The three-layer MERN architecture, setting up a MERN application and the `useQuery` hook are also discussed.
 
 ## Instructor Notes
 
-* `Summary: Complete activities 01-06 in Unit 21`.
+* In this lesson, students will complete activities `01-Ins_Apollo-Server` through `14-Stu_useQuery`.
 
-* Today's activities will contain significantly more boilerplate than the previous React lessons. Be sure to direct the class's attention to the important aspects of each exercise.
+* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
-* Today's class will introduce little new material but will provide plenty of opportunity to review concepts covered over the past few classes.
+* Today's slide deck includes an introduction to the MERN framework. This is a great opportunity to remind students of how far they have come since starting with HTML and CSS and encourage them to start thinking about how they can apply their new skills to their final, full-stack projects and their future careers.
 
-* Leverage the TAs to help any groups struggling to conceptualize their final project idea. We want to give students as much time to brainstorm project ideas as possible.
+* The second Stoking Curiosity is intentionally structured to allow students to think about what an API is and how it is used in a full-stack MERN app. Rather than provide a quick answer to the initial question, encourage students to share their observations in their own words and frame their observations in the context of what they are learning. This will help solidify their understanding of this important concept.
+
+* Some of today's activities rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app using `npm install`, `npm run seed`, and `npm start`and point to `localhost:3001/graphql` in the browser.
+
+* For a refresher on how to use the GraphQL Playground, see the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+
+* For students who need help opening up the apps used in today's activities or accessing GraphQL Playground, step-by-step instructions are found in `02-Stu_Apollo-Server/README.md`.
+
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To obtain a basic understanding of connecting a Create React App to an Express backend.
+* Explain how the client, server, and database layers work together to build a full-stack MERN app.
 
-* To become comfortable communicating with an Express server from a React app.
+* Integrate an Apollo Server with Express.js to create GraphQL server.
 
-* To increase understanding and comfort using React Router.
+* Write queries using the GraphQL query language.
 
-* To conceptualize final project idea with project group.
+* Design a schema using `typedefs` and `resolvers`.
 
-## Slides
+* Use mutations to modify server-side data.
 
-[11.1: MERN](https://docs.google.com/presentation/d/1pO7pPyaCtPqP-d7fwkqORi9Mcx8wcZXlXLAUvJPyOEA/edit?usp=sharing)
+* Create a full-stack MERN app for use in both development and production environments.
 
-[Final Project](https://docs.google.com/presentation/d/1FrCs35N0763wNqv6SRKFgF0IcDzBa5J7r6XM46nHqy4/edit?usp=sharing)
+* Use the `useQuery` Apollo Hook to fetch and update data.
+
+## Slide Deck
+
+* [Unit 21 Slide Deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
 
 ## Time Tracker
 
-[11.1 Time Tracker](https://docs.google.com/spreadsheets/d/1gK-Ac1LTLa-up748RZouk9-VIxAeLtQxEK-YNBSWnMI/edit?usp=sharing)
+| Start  | #   | Activity Name                             | Duration |
+|---     |---  |---                                        |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Apollo Server            | 0:05     |
+| 10:15AM| 3   | Student Do: Apollo Server                 | 0:15     |
+| 10:30AM| 4   | Instructor Review:  Apollo Server         | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Queries                  | 0:05     |
+| 10:45AM| 6   | Student Do: Queries                       | 0:15     |
+| 11:00AM| 7   | Instructor Review: Queries                | 0:10     |
+| 11:10AM| 8   | Instructor Demo: typeDefs and Resolvers   | 0:05     |
+| 11:15AM| 9   | Student Do: typeDefs and Resolvers        | 0:15     |
+| 11:30AM| 10  | Instructor Review: typeDefs and Resolvers | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Query Arguments          | 0:05     |
+| 11:45AM| 12  | Student Do:  Query Arguments              | 0:15     |
+| 12:00PM| 13  | BREAK                                     | 0:30     |
+| 12:30PM| 14  | Instructor Review: Query Arguments        | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Mutations                | 0:05     |
+| 12:45AM| 16  | Student Do:  Mutations                    | 0:15     |
+| 1:00PM | 17  | Instructor Review:  Mutations             | 0:15     |
+| 1:15PM| 18  | Instructor Do: Stoke Curiosity             | 0:10     |
+| 1:25PM| 19  | Instructor Demo: MERN Setup                | 0:05     |
+| 1:30PM| 20  | Student Do: MERN Setup                     | 0:15     |
+| 1:45PM| 21  | Instructor Review:  MERN Setup             | 0:10     |
+| 1:55PM| 22  | Instructor Demo: useQuery                  | 0:05     |
+| 2:00PM| 23  | Student Do: useQuery                       | 0:15     |
+| 2:15PM| 24  | Instructor Review: useQuery                | 0:15     |
+| 2:30PM| 25  | END                                        | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: Welcome Class (5 mins)
+## Class Instruction
 
-* Take a moment to congratulate them on making it this far. This is historically by far one of the most challenging topics covered in the entire course.
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-* Check the pulse of the class so far. Ask them what their thoughts are so far when it comes to working with the library. Ask which concepts they'd like to spend more time on. Make a mental note to focus a bit more on those concepts as they come up during class today.
+* Welcome students to class.
 
-* If students feel as though they haven't totally mastered React yet, assure them that even seasoned developers sometimes struggle to wrap their heads around many of the ideas introduced by the library.
+* Open the [Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g419d479a5c_0_53) and follow these prompts on their corresponding slides:
 
-* We've covered a ton of material over the past week, and even more so over the entirety of the course. Try to put into perspective how amazing their progress has been.
+  * **What Is the MERN Stack?**: The MERN stack is a group of four technologies that, when used together, create our “stack”. There are other stacks besides MERN, but the MERN stack uses technologies we already learned to quickly build a full-stack app. The four MERN technologies are: MongoDB, Express.js, React.js, and Node.js.
 
-### 2. Instructor Do: Slides (15 mins)
+  * **How Does the MERN Stack Work?**: The MERN stack has a three-layered architecture based on the Model-View-Controller design pattern. Each interconnected layer performs a specific function in the application.
 
-* Open the [11.1: MERN](https://docs.google.com/presentation/d/1pO7pPyaCtPqP-d7fwkqORi9Mcx8wcZXlXLAUvJPyOEA/edit?usp=sharing) slide deck. Be sure to give students enough time to answer each question and discuss before going over the answers.
+  * **The Client Layer: React.js**: React.js is a front-end JavaScript library that allows us to turn reusable components into interactive user interfaces. The client layer controls what the user sees and how the user interacts with data. In the client layer, data retrieved from the database can be displayed. Users can also input data using the user interface.
 
-### 3. Instructor Do: Mern Demo (15 mins)
+  * **The Server Layer: Express.js and Node.js**: Express.js is a web framework for Node.js that handles requests and connects the client layer with the database layer. The server layer defines how data is handled in our apps and routes it between the database and client layers. The server layer listens for events from the client layer and then responds by executing methods that save and retrieve data from the database layer.
 
-* In this example you will demonstrate Create React App with an Express backend.
+  * **The Database Layer: MongoDB**: MongoDB is a general purpose, document-based, distributed NoSQL database. The database layer is used to store all the data needed for your application to function. MongoDB stores JSON natively (technically BSON) making it work easily with JavaScript apps.
 
-* Explain to the class that since beginning to learn React we've only been working with front-end code. We haven't set up a database, or an express server, we've just been working on the front-end with React.
+* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `28-Stu_Mini-Project/Main` and run `npm install`, `npm run seed`, and `npm run develop`. Be sure to have a MongoDB instance running! 
 
-* Point out that we _have been_ using a development server with Create React App. This development server's only purpose is to provide us with the live reloading functionality. When it comes time to deploy our app for production, Create React App can generate a static, standalone, HTML and JavaScript file containing the app.
+* Open `http://localhost:3000/` to demonstrate the following:
 
-* Explain that in most real applications, we'll often need a production quality server such as Express for connecting to a database or setting up API routes.
+  * This app is built using the MERN framework and uses technologies that we have already learned: React.js, Node.js, Express.js, and MongoDB.
 
-* Inform students that we'll be providing them with a Create React App Express boilerplate which they can use for the homework assignment or projects. There's no need to completely understand every aspect of the code in order to be productive, but we're going to walk through an example to give them at least a working high level understanding. This set up is _loosely_ based off of [Fullstack React's Food Lookup Demo](https://github.com/fullstackreact/food-lookup-demo).
+  * When we open the app, everything we see is the client layer. The **client layer**, or front end, is the how the user inputs and views data.
 
-* Open [01-Ins_Mern](../../../../01-Class-Content/21-MERN/01-Activities/01-Ins_Mern) in your editor and cd into it.
+  * When we interact with the app by selecting technologies for a matchup or voting on existing matchup pairs, we trigger an event that is handled on the backend. The backend contains the logic for handling data and is not seen by the user.
 
-* In your editor, point out your sidebar with the `client` folder expanded, ask the class: What's something unusual we see here?
+  * The **server layer** listens for events triggered by the client. For example, when we vote or select a pair of technologies to create a matchup using the user interface, the server layer responds to that event by executing a function to save the user generated data in the database.
 
-  ![Mern Sidebar](Images/01-MernSidebar.png)
-
-  * We have 2 `package.json` files, with different sets of dependencies.
-
-* Explain that Create React App handles what would have otherwise been a complicated build process and also gives our app live reloading in development. In order to still hang on to all of these benefits, our boilerplate consists of 2 node applications working together.
-
-  * One app is Create React App.
-
-  * The other is the Node/Express backend.
-
-* Explain that since we have two node apps, we have to install dependencies for both. While at the root of the project directory, run the following commands:
-
-  ```
-  npm install
-  ```
-
-  * You should now have 2 `node_modules` folders: one at the root of the project and one inside of the `client` folder.
-
-* Explain that during development (while we're working on the app and running it locally) the live reloading development server still runs on port 3000.
-
-* Open the `package.json` file inside of the `client` folder:
-
-  ![CRA Proxy](Images/02-CRAProxy.png)
-
-  * Explain that the `proxy` setting is part of Create React App and can be read about in its documentation. It automatically forwards all HTTP requests from our React application to another specified base url.
-
-  * Ask the class: If our live reloading server is on port 3000 by default, why might we be forwarding our React app's requests to port 3001?
-
-    * We don't want to send HTTP requests to the dev server, instead we want to send them to our Express app which we have running on port 3001 — though we could use any port as long as we specify it.
-
-      ![Server](Images/03-Server.png)
-
-    * In a nutshell, we'd make HTTP requests to the endpoints defined in our Express server, but wouldn't have to specify that it's running on a different port in every request, e.g. we'd write `axios.get('/api/books');` instead of `axios.get('http://localhost:3001/api/books');`.
-
-* Now point out the `package.json` at the root of the application directory:
-
-  ![Server Package](Images/04-ServerPackage.png)
-
-  * Bring the class's attention to the `scripts` section of the `package.json` file. Explain that we can define shortcuts for commands which we need to use in order to work with our node apps. So far we haven't had too much use for these, but with our current setup we need to run multiple, sometimes complex commands for various actions such as starting both the live-reloading server and the Express application.
-
-  * While the number of scripts may seem initially overwhelming, we only need to care about two, _maybe_ three of these.
-
-    * Point out the `start` command. Explain that if we are running our application on Heroku, it simply starts the Node server. If we're running it locally, it starts the Node server and live reloading Create React App server at the same time. The React app should appear to start as expected on port 3000, however in the background the Express server is running on PORT 3001.
-
-    * Now, stop both servers and point out the `build` command. Explain that this builds a static version of our React app which can be deployed. With the `client` folder expanded, go ahead and run `npm run build` in your terminal.
-
-    * Point out how we now have a `client/build` folder. This contains static versions of our HTML page, CSS, minified JavaScript, and other assets. Explain that we won't actually use these locally on our machines, but our Express app will serve these on Heroku. The `heroku-post-build` script tells heroku to run this command automatically for us when we deploy so we don't have to keep doing this ourselves.
-
-    * Inform the class that for now, if the only thing they remember is `npm start` runs the API server and the React app, then they're fine for now.
-
-* Slack out [Fullstack React's Food Lookup Demo](https://github.com/fullstackreact/food-lookup-demo) for them to look at on their own time.
-
-* Take another few minutes to answer any high level questions. Assure everyone that they're about to get some hands-on experience in the next activity.
-
-### 4. Students Do: React Recipes (15 mins)
-
-* Introduce [02-Stu_Recipes](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes)
-
-* In this example students will complete a recipe finder application by adding code to render a list of recipes retrieved from an AJAX request.
-
-```md
-* Open [Unsolved](Unsolved) in your editor. From the root of the project folder, run `npm install` to install the required dependencies.
-
-* This application uses a Mongo database, so be sure to start `mongod`.
-
-* In order to initially populate the database, run the following command at the project root: `npm run seed`.
-
-* This should insert a few records into the MongoDB.
-
-* Run `npm start` to start the React app and Express server. Visit [localhost:3000](http://localhost:3000) in your web browser to view the app.
-
-* Enter a search term, e.g. "burgers" in the input field and submit. This won't have any visible affect on the page yet, but should submit an AJAX request and log the response to the console. Take a moment to study the response logged.
-
-  ![Recipe Log](Images/01-RecipeLog.gif)
-
-* The goal of this activity is to render these recipes to the DOM.
-
-### Part 1
-
-* For this section the only file you will need to modify is `App.js`. Take a few moments to study the code in the file.
-
-* Using the `RecipeList` and `RecipeListItem` components, add code to render the array of recipes where indicated in the file.
-
-  * The `RecipeList` component renders a `ul` tag and accepts children. The `RecipeListItem` component renders an `li` tag with some formatting to hold the recipe's title, thumbnail, etc.
-
-* Using a `RecipeList` component as a container, map over `recipes` and render one `RecipeListItem` component for each recipe object in `recipes`.
-
-* Pass the rendered `RecipeListItem` components each property of their recipe object, i.e. :
-
-  * `title`
-
-  * `href`
-
-  * `ingredients`
-
-  * `thumbnail`
-
-* Test your solution by searching for a recipe in your browser. If successful so far, you should see the following:
-
-  ![Recipe Incomplete](Images/02-RecipeIncomplete.gif)
-
-* No matter the search query, the same hard coded recipe is being rendered in each `RecipeListItem` component. We'll address this problem next!
-
-### Part 2
-
-* If the previous section was completed correctly, the only file you should need to modify for this section is `RecipeListItem.js`.
-
-* Currently the rendered `RecipeListItem` components are displaying hard coded recipe data. Modify the `RecipeListItem` component file so that it utilizes all of the passed props where appropriate. Look at the hard coded data to determine how each prop should be used.
-
-* If completed successfully, searching for a recipe in your browser should render dynamic results relevant to the search. (Keep in mind the data set is limited so not all searches will return something. Try "pizza", "hamburger", "turkey", or "quinoa" for a few.)
-
-  ![Recipe List](Images/03-RecipeList.gif)
-
-### Hints
-
-* Check out the [React Documentation](https://facebook.github.io/react/docs/lists-and-keys.html) on rendering lists of components if you need a refresher on this.
-
-* Rather than mapping over recipes and rendering primitive `ul` and `li` tags, you'll be using the pre-built `RecipeList` and `RecipeListItem` components.
-
-* Ask for help if you're stuck!
-
-### Bonus
-
-* Add code so that if a recipe doesn't come with a thumbnail url, use a placeholder image instead. Check out [placehold.it](https://placeholder.com/) for placeholder images.
-
-* Add code so that if `recipes` is an empty array, render a message indicating that no recipes are available.
-
-```
-
-### 5. Instructor Do: Review React Recipes (10 mins)
-
-* Open [02-Stu_Recipes/Solved](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved) in your IDE.
-
-* Run `npm install` to install dependencies at the project root, this should also install the dependencies in the `client` folder.
-
-* This application uses a Mongo database, so be sure to start `mongod`.
-
-* In order to initially populate the database, run the following command at the project root: `npm run seed`.
-
-* This should insert a few records into the MongoDB.
-
-* Cd back up to the project root and run `npm start` to start the application. Open [localhost:3000](http://localhost:3000) in your browser to demonstrate the solution.
-
-  ![Recipe List](Images/06-RecipeList.gif)
-
-* Whenever we search for a recipe in the search field, a list of recipes is rendered using the data from the AJAX request.
-
-  * Avoid letting students get too hung up on the server side code. The main focus of today's lesson is still React, and they can dig into the code in its entirety on their own time.
-
-* Open the [client/src/App.js](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved/client/src/App.js) file and go over the new code:
-
-  * Make sure everyone understands where the props we're passing the `RecipeListItem` components are coming from.
-
-  * The recipe objects received from the AJAX request have these properties. We're passing them to the `RecipeListItem` to be used.  
-
-```js
-<Row>
-  <Col size="xs-12">
-    {!recipes.length ? (
-      <h1 className="text-center">No Recipes to Display</h1>
-    ) : (
-      <RecipeList>
-        {recipes.map(recipe => {
-          return (
-            <RecipeListItem
-              key={recipe.title}
-              title={recipe.title}
-              href={recipe.href}
-              ingredients={recipe.ingredients}
-              thumbnail={recipe.thumbnail}
-            />
-          );
-        })}
-      </RecipeList>
-    )}
-  </Col>
-</Row>
-```
-
-* Now open [client/src/components/RecipeList/index.js](../../../../01-Class-Content/21-MERN/01-Activities/02-Stu_Recipes/Solved/client/src/components/RecipeList/index.js) in your IDE and point out the following:
-
-  * `props.thumbnail` (an image URL for the recipe) is passed to the `Thumbnail` component which renders the image
-
-  * `props.title` (the name of the recipe) is rendered inside of the heading
-
-  * `props.ingredients` (a comma-delimited list of ingredients) is rendered inside of the paragraph tag
-
-  * `props.href` (the URL to the original recipe) is rendered inside of the anchor tag
-
-```js
-export function RecipeListItem({
-  thumbnail,
-  title,
-  ingredients,
-  href
-}) {
-  return (
-    <li className="list-group-item">
-      <Container>
-        <Row>
-          <Col size="xs-4 sm-2">
-            <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
-          </Col>
-          <Col size="xs-8 sm-9">
-            <h3>{title}</h3>
-            <p>Ingredients: {ingredients}</p>
-            <a rel="noreferrer noopener" target="_blank" href={href}>
-              Go to recipe!
-            </a>
-          </Col>
-        </Row>
-      </Container>
-    </li>
-  );
-}
-```
-
-* Take a few minutes to answer any questions about this activity.
-
-* Explain that while this activity was interesting, it didn't have any kind of persistent storage. The next few activities will utilize a Mongo database and should help prepare them for their homework assignment and final projects.
-
-### 6. Students Do: AJAX Books (10 mins)
-
-* Introduce students to [03-Stu_AJAXBooks](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks)
-
-* In this activity students will work to add functionality to a full stack React Reading List application.
-
-```md
-# AJAX Books
-
-In this activity we will add functionality to a full stack React application for retrieving books from a database.
-
-## Instructions
-
-* Open the [Unsolved](Unsolved) folder in your editor and run `npm install` at the project's root.
-
-* This application uses a Mongo database, so be sure to start `mongod`.
-
-* In order to initially populate the database, run the following command at the project root: `npm run seed`.
-
-* This should insert a few records into the MongoDB.
-
-* Run `npm start` at the project root to start the application.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and take a moment to study the rendered application.
-
-  * This example is a reading list application. **Currently the app isn't fully functional.**
-
-* Open up `client/src/pages/Books.js` and add code so that when the component mounts, it performs an AJAX request to retrieve all of the books in the database. Once the AJAX request is complete, it should set `books` equal to the array of books.
-
-* If successful, a list of books should be rendered on the right side of the page.
-
-  * We'll work on making the form functional in the next activity.
-
-## Hints
-
-* Use the API helper module (`client/src/utils/API.js`) to perform an AJAX request which should return _all_ of the books in the database.
-
-* The only file you will need to modify is `client/src/pages/Books.js`.
-
-```
-
-* Instructional staff should be walking around the room during this activity, available for assistance.
-
-### 7. Instructor Do: Review AJAX List (10 mins)
-
-* Open and run the [03-Stu_AJAXBooks/Solved](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks/Solved) to the previous activity and demonstrate the result in your browser:
-
-  * ![Ajax List](Images/06-AJAXList.gif)
-
-* The goal of this activity was just to render the initial list of books. We'll work on actually making the form functional in the next activity.
-
-* Open the `Books` component [client/src/pages/Books.js](../../../../01-Class-Content/21-MERN/01-Activities/03-Stu_AJAXBooks/Solved/client/src/pages/Books.js) in your IDE.
-
-* Have a volunteer explain the code to you.
-
-  * We import the `API` module into our component.
-
-  * When the component is created the `useEffect` callback is called. Inside we call `loadBooks()` which we've defined below.
-
-  * `loadBooks()` uses the pre-written `API` module to retrieve all of the books from the database and then sets them to `books`.
-
-  * Point out how even though we don't know much about how our backend is configured, we were still able to make an AJAX request to it to retrieve all of the books. This is because we're using the `API` helper module which contains methods for making requests to various endpoints.
-
-  ```js
-  function Books() {
-  // Setting our component's initial state
-  const [books, setBooks] = useState([])
-  const [formObject, setFormObject] = useState({})
-
-  // Load all books and store them with setBooks
-  useEffect(() => {
-    loadBooks()
-  }, [])
-
-  // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
-      .then(res => 
-        setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-  };
-
-  ```
-
-  * Further down below, a list is being rendered from `books`. When the list is empty, a message is displayed explaining this. Otherwise the list of books is rendered.
-
-```js
-{books.length ? (
-  <List>
-    {books.map(book => {
-      return (
-        <ListItem key={book._id}>
-          <a href={"/books/" + book._id}>
-            <strong>
-              {book.title} by {book.author}
-            </strong>
-          </a>
-          <DeleteBtn onClick={() => deleteBook(book._id)} />
-        </ListItem>
-      );
-    })}
-  </List>
-) : (
-  <h3>No Results to Display</h3>
-)}
-```
-
-  * Take a few moments to make sure everyone understands these pieces of code.
-
-### 8. Students Do: AJAX Form Delete (15 mins)
-
-* Introduce students to [04-Stu_AJAXFormDelete](../../../../01-Class-Content/21-MERN/01-Activities/04-Stu_AJAXFormDelete)
-
-* In this activity students will add functionality to the React Reading List app to save and delete books.
-
-```md
-* Open the [Unsolved](Unsolved) folder and install dependencies by running `npm install` at the project root.
-
-* Start the app by running `npm start` from the project root.
-
-* Once the app starts open your browser to [localhost:3000](http://localhost:3000).
-
-* Open [Unsolved](Unsolved/client/src/pages/Books.js).
-
-### Part 1
-
-* Open the `Books.js` file. Add code so that `formObject.title`, `formObject.author`, and `formObject.synopsis` are updated as their corresponding `Input` components are updated (see the `name` properties on each `Input`). Any props you attach to the `Input` components will be passed down to their underlying elements, so there's no need to modify any code other than the code inside of `Books.js`.
-
-* Add code so that when the `FormBtn` is clicked, an AJAX request is performed saving the new book. An object containing the new book's `title`, `author` and `synopsis` should be passed into the `API.saveBook` method.
-
-### Part 2
-
-* Add code to the `Books.js` file so that when the `DeleteBtn` (`✗` button) component is clicked, its book is deleted from the database and the books displayed are updated. To accomplish this you should create a new method (`deleteBook`) on the `Books` component, which calls the `API.deleteBook` method when the `DeleteBtn` is clicked.
-
-#### Hints
-
-* The only file you need to modify is `Books.js`.
-
-* See [React's Documentation on Handling Events](https://facebook.github.io/react/docs/handling-events.html)
-
-```
-
-### 9. Instructor Do: Review AJAX Form Delete (10 mins)
-
-* Open up the [04-Stu_AJAXFormDelete/Solved](../../../../01-Class-Content/21-MERN/01-Activities/04-Stu_AJAXFormDelete/Solved) to the previous activity and go over the new code as a class. The only changes that needed to be made are in the `client/src/pages/Books.js` file.
-
-  * It may be easier to explain starting by going through the code in the `return` block involving the form elements.
-
-  * In order to capture the values from the form, we add `value` and `onChange` props to the `Input` components.
-
-```js
-return (
-  <Container fluid>
-    <Row>
-      <Col size="md-6">
-        <Jumbotron>
-          <h1>What Books Should I Read?</h1>
-        </Jumbotron>
-        <form>
-          <Input
-            onChange={handleInputChange}
-            name="title"
-            placeholder="Title (required)"
-            value={formObject.title}
-          />
-          <Input
-            onChange={handleInputChange}
-            name="author"
-            placeholder="Author (required)"
-            value={formObject.author}
-          />
-          <TextArea
-            onChange={handleInputChange}
-            name="synopsis"
-            placeholder="Synopsis (Optional)"
-            value={formObject.synopsis}
-          />
-          <FormBtn
-            disabled={!(formObject.author && formObject.title)}
-            onClick={handleFormSubmit}
-          >
-            Submit Book
-          </FormBtn>
-        </form>
-      </Col>
-      <Col size="md-6 sm-12">
-        <Jumbotron>
-          <h1>Books On My List</h1>
-        </Jumbotron>
-        {books.length ? (
-          <List>
-            {books.map(book => {
-              return (
-                <ListItem key={book._id}>
-                  <a href={"/books/" + book._id}>
-                    <strong>
-                      {book.title} by {book.author}
-                    </strong>
-                  </a>
-                  <DeleteBtn onClick={() => deleteBook(book._id)} />
-                </ListItem>
-              );
-            })}
-          </List>
-        ) : (
-          <h3>No Results to Display</h3>
-        )}
-      </Col>
-    </Row>
-  </Container>
-);
-```
-
-  * Ask the class: How roles do the `value`, `name`, and `onChange` props have in updating our component state with the form data?
-
-  * When the user attempts to type into one of the input fields, the input field doesn't update right away, instead the `onChange` event handler is fired.
-
-  ```js
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
-  };
-  ```
-
-  * Like event handlers in jQuery and vanilla JavaScript, `handleInputChange` receives an `event` object containing information about the event which occurred as a parameter.
-
-  * From this event object we can grab the `name` attribute and `value` of the input field. The `value` is what the input would change to if it weren't being controlled by React, and the `name` is the name of the input's corresponding state value.
-
-  * Then we update `formObject[name]` to be the new `value`.
-
-  * `onChange` updates the component's `state` which then updates the text displayed in the input field.
-
-* Go over the `handleFormSubmit` method:
-
-  * We first prevent the default behavior of the form submission (which would have been to refresh the page).
-
-  * Next we check that the `title` and `author` (the "required" fields) are not null before continuing.
-
-  * If we have a `title` and `author`, submit the book data using the `API.saveBook` method.
-
-  * Once the request completes successfully, run `loadBooks()` in order to update the books displayed.
-
-  ```js
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    if (formObject.title && formObject.author) {
-      API.saveBook({
-        title: formObject.title,
-        author: formObject.author,
-        synopsis: formObject.synopsis
-      })
-        .then(() => setFormObject({
-          title: "",
-          author: "",
-          synopsis: ""
-        }))
-        .then(() => loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
-  ```
-
-* Finally, go over the `delete` book method:
-
-  * It expects to receive an `id` argument to pass to the `API.deleteBook` method.
-
-  * Once complete, `loadBooks()` is run to retrieve and display the updated list of books.
-
-  ```js
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
-      .catch(err => console.log(err));
-  }
-  ```
-
-  * Point out how we wrap the `onClick` handler in an anonymous function so that we can pass in the `_id` of the book as an argument.
-
-  * Wrapping a click handler in an anonymous function is another way of passing arguments into it.
-
-```js
-<ListItem key={book._id}>
-  <a href={"/books/" + book._id}>
-    <strong>
-      {book.title} by {book.author}
-    </strong>
-  </a>
-  <DeleteBtn onClick={() => deleteBook(book._id)} />
-</ListItem>
-```
-
-* Take a few moments to answer any remaining questions.
-
-- - -
-
-### 10. Everyone Do: BREAK (30 mins)
-
-- - -
-
-### 11. Students Do: React Router (20 mins)
-
-* Introduce [05-Stu_ReactRouter](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter)
-
-* _The unsolved activity will throw exceptions until students complete the first part of the activity._
-
-* In this activity students will add React Router to the React Reading List in order to add a books `Detail` page and a `NoMatch` 404 page. Students will need to look up how to use route params with React Router.
-
-* Instructional staff should be walking around the classroom during this activity, available for assistance and making sure students understand all of the activity requirements.
-
-```md
-
-* Open the [Unsolved](Unsolved) folder and install dependencies by running `npm install` at the project root.
-
-* Start the app by running `npm start` from the project root.
-
-* Once the app starts open your browser to [localhost:3000](http://localhost:3000).
-
-* Open [App.js](Unsolved/client/src/App.js).
-
-### Part 1
-
-* Set up React Router inside of the `client/src/App.js` file.
-
-  * The `/` and `/books` routes should both render the `Books` component page.
-
-### Part 2
-
-* Notice that inside of the `pages` folder we have a `NoMatch` component. This is the component for our 404 page.
-
-* Add a route for the new `NoMatch` component. This should only render if no other routes are matched. e.g. `/sjdfhjsdhfjsa` or `/notarealroute/lalala` should both render the `NoMatch` component page. 
-
-  * You will need to use the `Switch` component from the React Router Dom library to accomplish this. An example can be found [here](https://reacttraining.com/react-router/web/example/no-match).
-
-### Part 3
-
-* Notice that in the `pages` folder we have a `Detail` component. This component displays additional information about a book.
-
-* Add a route for the the new `Detail` component. This should render when the `/books/:id` path is matched. e.g. if a book's `_id` is `59a39cf2549cf482c814333f`, then `/books/59a39cf2549cf482c814333f` should render its book `Detail` page.
-
-* Inside of the `Detail` component, add code so that when the component mounts, we retrieve the book for the rendered route and save it to `book`. e.g. when the route is `/books/59a39cf2549cf482c814333f`, an AJAX request should be made to get the book with an `_id` of `59a39cf2549cf482c814333f`. If completed successfully, you should see the book's synopsis on this page.
-
-  * You may need to look into [URL params with React Router](https://reacttraining.com/react-router/web/example/url-params) to accomplish this.
-
-### Hints
-
-* Parts 1 - 2 will only require you modify the `client/src/App.js` file.
-
-* The React Router DOM library should already be installed.
-
-* The React Router documentation is your friend!
-
-* Ask the instructor or a TA if you're having difficulty understanding any of the activity requirements.
-
-```
-
-### 12. Instructor Do: Review React Router (15 mins)
-
-* Once time's up, go over the [05-Stu_ReactRouter/Solved](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved) version of the last activity.
-
-* Open the [client/src/App.js](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved/client/src/App.js) file in your IDE go over the new code:
-
-  * Point out how both the `/` and `/books` `Route` components both render the `Books` component.
-
-  * The `/books/:id` `Route` component renders the `Detail` component.
-
-  * This component is for rendering details about a particular book.
-
-```js
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-
-function App() {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
-```
-
-  ![Details](Images/17-Details.png)
-
-  * Similar to routes in Express, we can utilize route parameters. The values of any route parameters are available to us inside of the rendered component the object provided by the `useParams` hook. Inside of the `client/src/pages/Detail.js` file, we access the `id` parameter:
-
-  ```js
-  import { Link, useParams } from "react-router-dom";
+  * The server layer can also retrieve data from the **database layer**.
   
-  // ...
+  * When we click on View All Matchups, the server layer executes a method to retrieve the requested data from the database layer. The populated list of matchups is displayed to the user.
 
-  function Detail(props) {
-    const [book, setBook] = useState({})
+  * This three-layer architecture makes it easier to store, manipulate, and represent data. This makes the MERN stack an ideal solution for highly interactive apps and those that require data to be fetched quickly and easily.
 
-    // When this component mounts, grab the book with the _id of props.match.params.id
-    // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-    const {id} = useParams()
-    useEffect(() => {
-      API.getBook(id)
-        .then(res => setBook(res.data))
-        .catch(err => console.log(err));
-    }, [])
-  ```
+  * During today's class, we will focus on fetching and storing data by using an add-on technology that builds on our existing Express.js server.
 
-  * Go back to the `App.js` file and point out the `Route` component rendering the `NoMatch` component . Explain that this component _should_ be rendered on every route since we haven't provided it a `path` prop.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * The reason the `NoMatch` route works as expected is because of the `Switch` component wrapping our `Route`s. The `Switch` component ensures that once one of the routes are rendered, none of the routes that come after it are even checked. So as long as one of the routes match, the `NoMatch` component is not rendered. But if _none_ of the routes match, then `NoMatch` is rendered. It is like the "default" case in a switch-case statement.
+  * ☝️ What are we learning?
 
-```js
-<Router>
-  <div>
-    <Nav />
-    <Switch>
-      <Route exact path={["/", "/books"]}>
-        <Books />
-      </Route>
-      <Route exact path="/books/:id">
-        <Detail />
-      </Route>
-      <Route>
-        <NoMatch />
-      </Route>
-    </Switch>
-  </div>
-</Router>
-```
+  * 🙋 We are learning how to structure a full-stack app by using the MERN stack.
 
-* Take another few minutes answering any remaining questions.
+  * ☝️ How does this project build on or extend previously learned material?
 
-### 13. Students Do: Deploy (15 mins)
+  * 🙋 The MERN stack relies on JavaScript and technologies that we have learned throughout the course: React.js, MongoDB, Express.js, and Node.js.
 
-* In this final activity, students are tasked with deploying the React Reading List app to Heroku. They can use the [05-Stu_ReactRouter/Solved](../../../../01-Class-Content/21-MERN/01-Activities/05-Stu_ReactRouter/Solved) version of the previous activity.
+  * ☝️ How does this project relate to your career goals?
 
-* **Instructions:** [06-Stu_Deployment/README.md](../../../../01-Class-Content/21-MERN/01-Activities/06-Stu_Deployment/README.md)
+  * 🙋 The MERN framework uses the MVC pattern, a pattern common in software development, to connect a front end, back end, and database to create a full-stack app. It also uses JavaScript technologies commonly used in development on the job. Learning MERN is also a great way to become familiar with full-stack web development and gain skills in building interactive apps that are scalable and capable of handling large data sets.
 
-### 14. Instructor Do: Review Deploy (5 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Take a poll to see how many students were able to successfully deploy the React Reading List to Heroku.
+### 2. Instructor Demo: Apollo Server (5 min) 
 
-* Explain that when it comes to their homework assignments and final projects, they should make sure they have deployment figured out sooner rather than later.
+* Navigate to `01-Ins_Apollo_Server` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
-* There are now more reasons why a Heroku deployment could fail than there ever have been before, so urge them to not try and push to Heroku for the first time right before an assignment is due.
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
 
-* They can refer back to the instructions provided with the activity for deploying a full stack react app to Heroku, and as always, yourself and the TAs are available to help during office hours.
+  * At the heart of interactive full-stack apps is the need to retrieve data quickly and accurately.
 
-### 15. Instructor Do: What's Next? (03 mins)
+  * 🔑 We use GraphQL to efficiently and precisely fetch the data queried in a single request.
 
-* Open the [Final Project Slides](https://docs.google.com/presentation/d/1FrCs35N0763wNqv6SRKFgF0IcDzBa5J7r6XM46nHqy4/edit?usp=sharing) and explain what to expect in the last few classes.
+  * 🔑 **GraphQL** is a query language that allows us to build even complex queries quickly and concisely, helping to make sure our queries fetch data -- and only the data we need -- quickly.
 
-* Congratulate the students on getting this far! Go over what they have learned in the past few months.
+  * The GraphQL Playground is a great way to to visually explore how GraphQL can be used to request and fetch data.
+  
+  * 🔑 In the GraphQL playground, we can enter a query to retrieve data from our database. This query will return the names of all the classes in our database:
 
-* Tell them about the lectures they can expect, as well as final project presentations and their day with potential employers.
+     ```gql
+     query classes{
+       classes {
+         name
+       }
+     }
+     ```
 
-* Announce: no homework for the rest of the course! Well, except for:
+  * Next, when we click the play button, we see a JSON object that contains only the data we requested. This ability to easily write specific queries and return precise results is one of the main advantages of GraphQL.
 
-  * This week's homework (they still gotta hand that one in).
+  * We will be using GraphQL Playground in today's class to test our code amd make sure our queries work.
 
-  * Weekly project deliverables -- more on that soon.
+ * 🔑 To use GraphQL, we will need to set up a GraphQL server. Apollo Server is a popular GraphQL server that can be used as an add-on to an existing Node.js and Express.js server.
 
-* Tell class that learning doesn't end when they finish the course. There's a literal argosy of languages, frameworks, libraries and other technologies for web developers to study -- and no doubt, this heap of knowledge will build as the years pass.
+* Open `01-Ins_Apollo_Server/server.js` in your IDE and demonstrate the following:
 
-* Point being: web developers must always teach themselves new skills to stay relevant in this field!
+  * To add Apollo Server to our existing Express.js and Node.js server structure, we run `npm install apollo-server-express` and import the `ApolloServer` class:
 
-* But add in something along these lines. "No problem! If you learned anything in this boot camp, it's how to grasp these technologies quick &mdash; you're ready for this."
+     ```js
+     const { ApolloServer } = require('apollo-server-express');
+     ```
 
-### 16. Instructor Do: Final Project - The Deets (07 mins)
+  * We must also import the schemas directory. GraphQL relies on a schema bundle that includes two parts: the `typeDefs`, which defines the schema, and `resolvers`, or functions, that are responsible for populating data for a single field in the schema:
 
-* Spend a few minutes introducing the requirements for the final project (Slides 7-20).
+     ```js
+     const { typeDefs, resolvers } = require('./schemas');
+     ```
 
-* Tell students should challenge themselves, and that you'll take no excuses. They've made it this far already &mdash; it's time for them to take everything they learned and produce their best work yet.
+  * We create a new instance of the `ApolloServer` class. The `ApolloServer` class instance takes both `typeDefs` and `resolvers` as parameters:
 
-* **Go over what's expected for the project:**
+     ```js
+     const server = new ApolloServer({
+       typeDefs,
+       resolvers
+     });
+     ```
 
-  * Whatever they build should have utility.
+  * We call the `.appleMiddleware()` method to integrate Express.js with the Apollo Server and connect the schema. This will enable our app to use GraphQL:
 
-  * They should have market or real-world research that proves their idea has REAL value to people.
+     ```js
+     server.applyMiddleware({ app });
+     ```
 
-  * They should perform research on other web / mobile applications in their app's domain.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * They should put serious time and thought into this.
+  * ☝️ How would we build this?
 
-  * They should report problems they're facing along the way.
+  * 🙋 To integrate GraphQL in our MERN apps, we must connect a GraphQL schema to our Express.js server. We do this by adding an Apollo Server to our existing `service layer` and importing our schema.
 
-  * They should use some form of project management system (Jira, Trello and so on).
+* Answer any questions before proceeding to the next activity.
 
-  * They should dig deep into documentation and external resources to find the tools they need.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
 
-* **Go over what's required of each group. Each Project:**
+### 3. Student Do: Apollo Server (15 min) 
 
-  * Must use ReactJS.
+* Direct students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
 
-  * Must use a Node and Express Web Server.
+* Break your students into pairs that will work together on this activity.
 
-  * Must be backed by a MySQL or MongoDB Database with a Sequelize or Mongoose ORM.
+     ```md
+     # 📐 Add Comments to Implementation of an Apollo Server
 
-  * Must have both GET and POST routes for retrieving and adding new data.
+     Work with a partner to add comments describing the functionality of the code found in the following files:
 
-  * Must be deployed using Heroku (with Data).
+     * [server.js](./Unsolved/server.js)
 
-  * Must utilize at least two libraries, packages, or technologies that we haven't discussed.
+     * [schemas/typeDefs.js](./Unsolved/schemas/typeDefs.js)
 
-  * Must allow for or involve the authentication of users in some way.
+     * [schemas/resolvers.js](./Unsolved/schemas/resolvers.js)
 
-  * Must have a polished frontend / UI.
+     ## 📝 Notes
 
-  * Must have folder structure that meets MVC Paradigm.
+     To Launch GraphQL Playground, follow these steps:
 
-  * Must meet good quality coding standards (indentation, scoping, naming).
+     1. In the command line, navigate to `02-Stu_Apollo-Server/Unsolved`.
 
-* **Finally, go over each Project Deliverables**
+     2. Run `npm install`.
 
-  * **Deliverable 1**: A detailed plan of action with the following:
+     3. With a MongoDB instance running, run `npm run seed` to seed the data.
 
-    * An overview of the intended application and WHY you feel it's valuable.
+     4. To start the server and launch the app, run `npm start`.
 
-    * A breakdown of roles by group member.
+     5. To launch the GraphQL Playground, open <localhost:3001/graphql> in the browser.
 
-    * A schedule for completion of various tasks.
+     Refer to the documentation: 
 
-    * A screenshot of your Jira, Trello, or Project Management Board that shows breakdown of tasks assigned to group members with a schedule.
+     * [Apollo Docs on getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/)
 
-    * A set of DETAILED screen-by-screen design layouts with annotations describing all UI/UX components and all data relevant to the screen.
+     * [Apollo Docs on integrating with Node.js middleware](https://www.apollographql.com/docs/apollo-server/integrations/middleware/)
 
-      * On this note, show Slides 18-19 as an example of a UI/UX and Data Flow layout. Tell the class that you'll expect something akin to these drafts.
+     ---
 
-  * **Deliverable 2**: A functioning **minimal viable product** (i.e., a prototype version of your app that shows the intended function). This should be as close to a working app as possible and include:
+     ## 🏆 Bonus
 
-    * A 5-7 minute presentation that discusses what your app is, what it does, and how it works. You will be presenting to instructors and TAs during class.
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    * A screenshot of your Jira, Trello, or Project Management Board that shows breakdown of tasks assigned to group members with a schedule. This should be updated to reflect remaining priorities and completed tasks.
+     * What are the pros and cons of GraphQL vs. REST? 
 
-  * **Deliverable 3**: A significantly more polished version of the app.
+     Use [Google](https://www.google.com) or another search engine to research this.
+     ```
 
-    * This should literally seem like an app that you would submit.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-    * Include a summary of significant issues faced to date and their resolution.
+### 4. Instructor Review: Apollo Server (10 min) 
 
-    * Provide a detailed description of each person's contributions.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * Submit a detailed plan that describes remaining efforts. This should describe remaining issues like:
-      * Stretch Features
-      * Bugs
-      * Enhancements
-      * UI Polishing
+  * ☝️ How comfortable do you feel with integrating Apollo Server? (Poll via Fist to Five, Slack, or Zoom)
 
-  * **Deliverable 4**: The Presentation!
-    * A 7-10 minute demonstration of your app.
-    * More on this as we near closer to the end.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
-* Ask if anyone has any questions before moving on.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-### 17. Students Do: Conceptualize the Final App (70 mins)
+  * ✔️ `require('apollo-server-express')`
 
-* When you close the Slide Deck, direct your students to form into their groups to think about the app they'll create over the next month.
+  * ✔️ `require('./schemas')`
 
-* By the time the class ends, they should tell you the following details about their project:
+  * ✔️ `new ApolloServer({typeDefs,resolvers})`
 
-  * What the app will do.
-  * What technologies they expect their app to implement.
-  * Who will be responsible for each part of the app.
-  * Who will be responsible for each part of deliverable #1.
+  * ✔️ `applyMiddleware()`
 
-* Record these responses in a list and make sure each group has given you those four items before they leave class.
+  * ✔️ `typeDefs`
 
-* As they're thinking about their apps, you and the TAs should walk the classroom and check in on their progress. Once again, make sure they pick something that will challenge them (but not something so ambitious that it will destroy them).
+  * ✔️ `resolvers`
 
-- - -
+* Open `02-Stu_Apollo-Server/Solved/server.js` in your IDE and explain the following: 
 
-### 18. END (0 mins)
+  * 🔑 Apollo Server is a library that we use with an existing Express.js server. We require the `apollo-server-express` dependency and import the `ApolloServer` class:
 
+     ```js
+     const { ApolloServer } = require('apollo-server-express');
+     ```
+
+  * 🔑 We also import the `typedefs` and `resolvers` from the `schemas` directory:
+
+     ```js
+     const { typeDefs, resolvers } = require('./schemas');
+     ```
+
+  * 🔑 Next, we create a new instance of the `ApolloServer` class named `server`. This instance takes both parts of the schema -- the `typedefs` and `resolvers` -- as parameters, and allows us to use our schema to handle our data:
+
+     ```js
+     const server = new ApolloServer({
+       typeDefs,
+       resolvers
+     });
+     ```
+
+  * We call the `.applyMiddleware()` method to update Express.js to use Apollo Server. Our GraphQL server is now set up and ready to use with our schema:
+
+     ```js
+     server.applyMiddleware({ app });
+     ```
+
+* Open `02-Stu_Apollo-Server/Solved/schemas/typeDefs.js` in your IDE and explain the following:
+  
+  * 🔑 We use `typeDefs` to define our schema and the types it contains.
+
+  * Most defined types are objects. Each object holds a collection of fields that describes the data. The `Class` object will have fields for an id, name, and building as well as the credit hours for the course:
+
+     ```js
+      type Class {
+       _id: ID
+       name: String
+       building: String
+       creditHours: Int
+     }
+     ```
+
+  * We also have access to another type, Query. **Query types** define the entry point of every GraphQL query, and control what data can be accessed. The `classes` query type allows us to query an array of all the `Class` objects:
+
+     ```js
+     type Query {
+       classes: [Class]
+     }
+     ```
+* Open `02-Stu_Apollo-Server/Solved/schemas/resolvers.js` in your IDE and explain the following:
+
+  * 🔑 A **resolver** is a function that's responsible for populating the data that has been defined by our typeDefs.
+
+  * 🔑 To write a resolver, we use the name of a defined entry point and then assign the action that will be used to fetch the data:
+
+     ```js
+     const resolvers = {
+       Query: {
+         classes: async () => {
+         return await Class.find({});
+         }
+       }
+     };
+     ```
+ 
+* We will use the GraphQL Playground to explore queries, typeDefs, and resolvers in greater depth in the next activities.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use Apollo Server to integrate GraphQL into our app? 
+
+  * 🙋 Apollo Server is a GraphQL server that helps you connect a GraphQL schema to a HTTPS server such as Express.js. To use GraphQL in our app, we must update Express.js to use Apollo Server and connect a schema that defines our data and how that data should be handled.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: Queries (5 min) 
+
+* Navigate to `03-Ins_Queries` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+  * To open the GraphQL Playground when using Apollo Server, we start up our app and navigate to `localhost:3001/graphql`. No further setup is needed.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
+
+  * 🔑 We click on the `schema` tab on the right to inspect our app's schema. If the server has been correctly set up, we should see the schema's object and query types auto-populate.
+
+  * 🔑 The `object type` shows us the fields that we have access to in our query and the type of data it holds. Fields can be strings, integers, or even a queryable field that holds another object.
+
+  * The Class object has an `id`, `name`, `building`, and `creditHours` field. In addition, the `professor` field is a queryable field that holds a singe `Professor` object:
+
+     ```js
+     type Class {
+       _id: ID
+       name: String
+       building: String
+       creditHours: Int
+       professor: Professor
+     }
+     ```
+
+  * 🔑 The `query type` tells us what data we can access and the entry point to that data. To access the array of `Class` objects, we use the `classes` entry point:
+
+     ```js
+     type Query {
+       schools: [School]
+       classes: [Class]
+       professors: [Professor]
+     }
+     ```
+
+  * 🔑 To create a query, we start by entering the name of the entry point we want to use. Because we want to work with `Class` objects, we use the `classes` entry point. We then list the fields we want included in our results. The `Class` object contains a `name` field, so we list the field `name` inside the brackets:
+
+     ```gql
+     query classes {
+       classes {
+       name
+       }
+     }
+     ```
+
+  * We click on the play button to run the query. A list containing the name of each class is returned.
+
+  * 🔑 To access the professor data in the same query, we start by adding `professor` to the list of fields. Then, to display data from the `Professor` object, we use a sub-query to list the names of the fields from the `Professor` object. The GraphQL Playground makes this simple by providing a list of the names of the fields we can use:
+
+     ```gql
+     query classes {
+      classes {
+        name
+        professor {
+         name
+        }
+      }
+     }
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we build a query using GraphQL?
+
+  * 🙋 GraphQL is organized using types and fields. The query type gives us the entry point for our query. The object type provides the fields that we can use to retrieve data. We start by listing the entry point for the data we want to use. Then, we add the fields we want included in our results.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Queries/README.md`.
+
+### 6. Student Do: Queries (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Queries/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+     ```md
+     # 🏗️ Write GraphQL Queries for Front-End Team
+
+     Work with a partner to implement the following user story:
+
+     * As a developer, I want a list of queries that I will need to use on the front end.
+
+     ## Acceptance Criteria
+
+     * It's done when I have a GraphQL query that returns the following:
+
+       * Every school's name, location, and student body count
+
+       * Every class's name
+
+       * Every professor's name
+
+     * It's done when I have a GraphQL query that returns the following:
+
+       * Every class's name, credit hours, and building number
+
+       * Every professor's name and student review score
+
+     * It's done when I have a GraphQL query that returns the following:
+
+       * Every professor's ID, name, student review score, office hours, and office building number
+
+     ---
+
+     ## 💡 Hints
+
+     * What tools within the GraphQL Playground can reveal the data that is available to you?
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * What other GraphQL IDEs can you use besides the built-in Playground? 
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Queries (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with GraphQL queries? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Types and fields
+
+  * ✔️ Queryable fields
+
+  * ✔️ Query type
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+
+  * 🔑 GraphQL uses types and fields to organize data. We open the `schema` app to view the entry points for our data as well as the fields contained in each object. These will be used to write our queries.
+
+  * 🔑 To query the `Professor` data, we use the `professors` entry point. Then we list the fields on the `Professor` object that we want included in the results. This query returns the `id`, `name`, `student score`, `office hours`, and `office location` for each professor:
+
+     ```gql
+     query professors {
+       professors {
+         _id
+         name
+         studentScore
+         officeHours
+         officeLocation
+       }
+     } 
+     ```
+
+  * 🔑 We can also write more complex queries. When we inspect the `Class` object, we see that it contains a queryable field that can retrieve a single `Professor` object. This makes it easy to access the `Professor` data and `Class` data by using a single query:
+
+     ```js
+     type Class {
+       _id: ID
+       name: String
+       building: String
+       creditHours: Int
+       professor: Professor
+     }
+     ```
+
+  * 🔑 We access the array of Class objects using the `classes` entry point and list the names of the fields that we want retrieved. Then we list the fields from the `Professor` object that we want retrieved.
+
+  * This query returns each class object and the associated professor's name and student score:
+
+     ```gql
+     query classes {
+       classes {
+         name
+         creditHours
+         building
+         professor {
+           name
+           studentScore
+         }
+       }
+     }
+     ```
+
+  * 🔑 We can also nest queries easily. The entry point `schools` gives us access to the array of `School` objects. The `School` object also includes a queryable field that returns an array of all the `Class` objects:
+
+     ```js
+     type School {
+       _id: ID
+       name: String
+       location: String
+       studentCount: Int
+       classes: [Class]
+     }
+     ```
+
+  * Using `schools` as our entry point, we can return data from the `School`, `Class`, and `Professor` objects all in a single query because `School` gives us access to the `Class` objects and the `Class` objects gives us access to the `Professor` object:
+
+     ```gql
+     query schools {
+       schools {
+         name
+         location
+         studentCount
+         classes {
+           name
+           professor {
+          name
+           }
+         }
+       }
+     }
+
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use schemas to help us write our queries? 
+
+  * 🙋 The schema defines the data objects and the entry points to access that data. When we write a query, we start with the entry point used to access the data and then list the fields from our data object that contains the data we need.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [GraphQL Docs on queries and mutations](https://graphql.org/learn/queries/) and the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: typeDefs and Resolvers (5 min) 
+
+* Open `05-Ins_TypeDefs-Resolvers/schemas/typeDefs.js` in your IDE and demonstrate the following:
+
+  * 🔑 For our queries to work, we must define our types to provide access to the data that we will need.
+
+  * 🔑 Each object contains a collection of related fields that return a particular type of data. These fields determine what data can be accessed from the database and provide a shape to our data.
+  
+  * The `Professor` object contains fields that will return data containing  `name`, `id`, `officeHours`, `officelocation`, and `studentScore` data. These fields should match how the data in your database is structured:
+
+     ```js
+     type Professor {
+       _id: ID
+       name: String
+       officeHours: String
+       officeLocation: String
+       studentScore: Float
+     }
+     ```
+
+  * 🔑 We also use fields to define relationships between objects.
+
+  * The `Class` object needs to access the information about a single related `Professor` object. We use a queryable field to retrieve a single `Professor` object. When the data from the `Class` object is queried, the data from the corresponding `Professor` object will also be available:
+
+     ```js
+       type Class {
+       _id: ID
+       name: String
+       building: String
+       creditHours: Int
+       professor: Professor
+     }
+     ```
+
+  * Likewise, the `School` object needs access to all of the `Class` objects. We use a queryable field to retrieve an array of all the `Class` objects:
+
+     ```js
+     type School {
+       _id: ID
+       name: String
+       location: String
+       studentCount: Int
+       classes: [Class]
+     }
+     ```
+
+  * 🔑 To access our data, we must also define an entry point. These entry points control the data that the query has access to. The `professors` entry point is used to access the array of all `Professor` objects. Likewise, the `schools` entry point controls the access to the array of all the `School` objects:
+
+     ```js
+     type Query {
+       schools: [School]
+       classes: [Class]
+       professors: [Professor]
+     }
+     ```
+
+* Open `05-Ins_TypeDefs-Resolvers/schemas/resolvers.js` in your IDE and demonstrate the following:
+
+  * To respond to a query, we must also write a function that determines how the data for each field is populated when we make a query.
+
+  * 🔑 Because we are using Mongoose, we must import our models. These models create and read data from the MongoDB database:
+
+     ```js
+     const { School, Class, Professor } = require('../models');
+     ```
+
+  * 🔑 When we write a query using the `professors` entry point, we call `.find()` on the `Professor` model that we imported to return all the data contained in the model instance, or document. This populates the fields:
+
+     ```js
+     professors: async () => {
+       return await Professor.find({});
+     }
+     ```
+
+  * We can also write a resolver that populates the data of a queryable field.
+
+  * 🔑 The `.populate()` method allows us to reference documents in other MongoDB collections easily. We use `.populate()`, to fetch data for queryable field `professor`:
+
+     ```js
+     classes: async () => {
+       return await Class.find({}).populate('professor');
+     }
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 To query data with GraphQL, we need a schema that will define the shape of the data. The `object type` contains fields that will determine what type of data will be returned. The `query type` defines the entry points. Then, to make our queries work, we write `resolvers`, which are functions used to populate the data fields.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_TypeDefs-Resolvers/README.md`.
+
+### 9. Student Do: typeDefs and Resolvers (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu_TypeDefs-Resolvers/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+     ```md
+     # 🏗️ Update Professors to Include Their Classes
+
+     Work with a partner to implement the following user story:
+
+     * As a developer, I want to be able to query for professors and their classes at the same time.
+
+     ## Acceptance Criteria
+
+     * It's done when a query in the GraphQL Playground is able to return data similar to the following:
+
+       "professors": [
+         {
+           "name": "Rebecca Watts",
+           "classes": [
+             {
+               "name": "Introduction to Computational Thinking"
+             },
+             {
+               "name": "User Interface Design"
+             },
+             {
+               "name": "Internet Architecture and Protocols"
+             }
+           ]
+         }
+       ]
+     ---
+
+     ## 💡 Hints
+
+     * What back-end components make up a complete GraphQL schema?
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * What other types can be used in a GraphQL schema?
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: typeDefs and Resolvers (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with typeDefs and resolvers? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `typeDef`
+
+  * ✔️ `resolver`
+
+  * ✔️ `populate()`
+
+* Open `06-Stu_TypeDefs-Resolvers/Solved/schemas/typeDefs.js` in your IDE and explain the following: 
+
+  * 🔑 The `Professor` object contains a queryable field that returns an array of `Class` objects:
+
+     ```js
+     type Professor {
+       _id: ID
+       name: String
+       officeHours: String
+       officeLocation: String
+       studentScore: Float
+       classes: [Class]
+     ```
+  
+  * 🔑 To access the array of `Professor` objects, we use the `professors` entry point:
+
+     ```js
+     type Query {
+       schools: [School]
+       classes: [Class]
+       professors: [Professor]
+     }
+     ````
+
+* Open `06-Stu_TypeDefs-Resolvers/Solved/schemas/resolvers.js` in your IDE and explain the following:
+
+  * We write a query using the `professors` entry point and call `.find()` on the `Professor` model we imported to populate the data:
+
+     ```js
+     professors: async () => {
+       return await Professor.find({})
+     }
+     ```
+
+  * 🔑 We then call the `.populate()` method to access the class data needed so we can query the array of `Class` objects. The data for both the professors and associated classes will be returned:
+
+     ```js
+     professors: async () => {
+       return await Professor.find({}).populate('classes');
+     }
+     ```
+
+* Navigate to `6-Stu_TypeDefs-Resolvers/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
+
+  * To test if our `typeDefs` and `resolvers` work, we write a query using the `professors` entry point to return data that contains both the professor's name and the name of each class they teach:
+
+     ```gql
+     query professorsClasses {
+       professors{
+         name
+         classes {
+           name
+         }  
+       }  
+     }
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we need to write resolvers to query our data? 
+
+  * 🙋 Resolvers are the functions that determine how the data fields are populated. Without resolvers, we wouldn't have any data to work with! 
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on resolvers](https://www.apollographql.com/docs/apollo-server/data/resolvers/) and the [Apollo Docs on schema basics](https://www.apollographql.com/docs/apollo-server/schema/schema/), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Query Arguments (5 min) 
+
+* Navigate to `07-Ins_Query-Arguments` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
+
+  * 🔑 We can also create more specific queries by passing arguments.
+
+  * 🔑 Up until now, we have been using an entry point that returns an array of all the objects and returns one or more fields in each object. For example, we use the `classes` entry point to return the id of all the `Class` objects:
+
+     ```gql
+     query classIDs {
+       classes {
+       _id
+       }
+     }  
+     ```
+
+  * Often, though, we want to query a more specific result like a single class.
+
+  * When we open up the schema tab, we see a new entry point has been defined in the query type. The `class` entry point provides access to a single `Class` object. Note that single objects don't have brackets around them!
+
+     ```js
+     class(id: ID!): Class
+     ```
+
+  * 🔑 The class entry point also has an argument that allows us to define the id of the class object we want to fetch:
+
+     ```js
+     class(id: ID!)
+     ```
+
+  * The `ID!` is important here. The `ID` specifies the type of data that must be returned. The exclamation point `!` means that the data is required. Because we want our resolver function to search by ID for a particular class object, if that data is not provided, the search will not work.
+
+  * 🔑 To create a query, we start with the `class` endpoint and then specify the id of the specific `Class` object we want queried. (**Note**: the query will not yet return data):
+
+     ```gql
+     query classInline {
+       class(id: "1000") {
+         name
+       }
+     }
+     ```
+
+  * The data passed in the argument is then used by the resolver to retrieve the specific class. Because no resolver has been written, no data is returned. In the next activity, you will be building that resolver to make it work.
+
+  * 🔑 To make our queries more durable, we can also add a variable. Variables are identified by a dollar sign `$` and allow us to reuse the same query over and over:
+
+     ```gql
+      query classVariable($id: ID!) {
+       class(id: $id) {
+         name
+       }
+     }
+     ```
+
+  * We start by requiring our variable and setting the data type of the variable to the required type. For an id, it is the ID type. We also want to make sure that we only run the query if the variable is not null, so we add the exclamation point:
+
+     ```gql
+     query classVariable($id: ID!) 
+     ```
+
+  * We then use the `class` entry point, and assign the `id` a value as we did before. In this case, we set the value of `id` to be the value held in the variable.
+
+  * In our completed apps, the value for the variable is typically provided by the client. However, we can test the query using the GraphQL playground.
+
+  * We enter the variable name and pass a value -- in JSON -- in the Query Variables pane, to test the query. We use just the variable name, not the `$` identifier:
+
+     ```js
+     {id: "1000"}
+     ```
+
+  * This variable provides the information needed by the resolver to fetch the data. Our next task is to set up the resolver so our queries work.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we add an argument to our query?
+
+  * 🙋 An argument allows us to write more specific queries. When we add an argument to our query, the argument is then passed to our resolver function. The resolver can then use that information to make a more targeted search.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Query-Arguments/README.md`.
+
+### 12. Student Do: Query Arguments (15 min)
+
+* Direct students to the activity instructions found in `08-Stu_Query-Arguments/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+     ```md
+     # 📖 Create a Class Resolver to Return Individual Classes
+
+     Work with a partner to implement the following user story:
+
+     * As a developer, I want to be able to query for individual classes.
+
+     ## Acceptance Criteria
+
+     * It's done when the following GraphQL query returns a single class object:
+
+       query class($id: ID!) {
+         class(id: $id) {
+           name
+           professor {
+             name
+           }
+         }
+       }
+
+     ## 📝 Notes
+
+     Refer to the documentation: 
+
+     [Apollo Docs on handling arguments](https://www.apollographql.com/docs/apollo-server/data/resolvers/#handling-arguments)
+
+     ---
+
+     ## 💡 Hints
+
+     * What database query would retrieve a single object?
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * How do you differentiate between required and optional arguments?
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 13. BREAK (30 min)
+
+### 14. Instructor Review: Query Arguments (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with query arguments? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `args`
+
+  * ✔️ `findById()`
+
+  * ✔️ `populate()`
+
+* Open `08-Stu_Query-Arguments/Solved/schemas/resolvers.js` in your IDE and explain the following: 
+
+  * When we use a query with arguments, we create an object that holds the information we need to pass to our resolver.
+
+  * 🔑 To have access to that object, our resolver function uses `args`.
+
+  * Because `args` is the second of the positional parameters that the resolver can take, we list `args` second so it keeps its place:
+
+     ```js
+     class: async (parent, args) => {
+     ```
+
+  * 🔑 To return the data we need, we call the method `findById()` on the `Class` model we imported to read data from the MongoDB database. The `findById()` method is a built-in method on Mongoose models that allows us to easily search for a single method by `id`. Because we want the data in the `id`, we use `args.id`:
+
+     ```js
+     return await Class.findById(args.id);
+     ```
+
+  * 🔑 To access the related `Professor` object, we use `populate()`:
+
+     ```js
+     return await Class.findById(args.id).populate('professor');
+     ```
+
+* Navigate to `08-Stu_Query-Arguments/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+
+  * 🔑 We use the `classes` entry point to query all the `Class` objects using the field `name` and `_id`. This will give us a list of the the names and ids for all of the classes:
+
+     ```gql
+     query getAllClassIdNames {
+       classes {
+         name
+         _id
+       }
+     }
+     ```
+
+  * We copy one of the ids returned:
+
+     ```json
+     "_id": "Copy_This_ID"
+     ```
+
+  * In the Query Variables pane, we give the value of the `id` variable the value of the id that we just copied, and we make sure that both `id` and the id that we just copied are surrounded by quotes:
+
+     ```json
+     {"id" : "Add_Copied_ID_Here"}
+     ```
+
+  * We enter the query using a variable into the query editor:
+
+     ```gql
+     query class($id: ID!) {
+       class(id: $id) {
+         name
+         professor {
+           name
+         }
+       }
+     }
+     ```
+
+  * We click the Play button. If our resolver is successful, both the class and professor's name will be fetched.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we get more specific results using arguments? 
+
+  * 🙋 Arguments allow us to query for more specific data by passing information from our query to our resolver. For example, we can search for a specific `id` by passing the information about that `id` to the resolver, which then can use that information to search the database for that specific object using that data.
+
+  * ☝️ Why use variables in our queries? 
+
+  * 🙋 Variables allow us to make our queries more durable. For example, by using a variable when searching by id, we only had to change the value of the variable to search for another object. If we didn't have variables, we would have to write a whole new query.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on handling arguments](https://www.apollographql.com/docs/apollo-server/data/resolvers/#handling-arguments), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 15. Instructor Demo: Mutations (5 min) 
+
+* Open `09-schemas/typeDefs.js` in your IDE and explain the following:
+
+  * GraphQL does more than retrieve existing data. We can also use GraphQL to write data as well.
+
+  * 🔑 The mutation type is similar to the query type. However, instead of providing an entry point to read an object or objects, the mutation type provides an entry point to write an object or objects.
+
+  * 🔑 We create an entry point `addSchool` and set the object that it will write to to be a `School` object.
+
+  * 🔑 We also pass in arguments that define the fields that will be written. This information will be passed to the resolver.
+
+     ```js
+       type Mutation {
+         addSchool(name: String!, location: String!, studentCount: Int!): School
+       }
+     ```
+
+* Open `09-Ins_Mutations//schemas/resolvers.js` in your IDE and explain the following:
+
+  * 🔑 We enter the arguments that we wanted passed in as a parameter in the same order as we defined the fields in the mutation type:
+
+     ```js
+     addSchool: async (parent, { name, location, studentCount }) => {
+     ```
+
+  * 🔑 We call `create()` on the imported `School` model to write to our MongoDB database:
+
+     ```js
+     return await School.create({ name, location, studentCount });
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 A mutation is way to write data using GraphQL. We use the mutation type to define the entry point to the data to be written and a mutation resolver to provide the functionality to write the data to our database.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Mutations/README.md`.
+
+### 16. Student Do: Mutations (15 min) 
+
+* Direct students to the activity instructions found in `10-Stu_Mutations/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+     ```md
+     # 🐛 Class Mutation Does Not Show that Object Was Updated
+
+     Work with a partner to resolve the following issue:
+
+     * As a developer, I want access to updated values so the front end can be updated accordingly.
+
+     ## Expected Behavior
+
+     Updating a class's building number should show the new value in the returned object.
+
+     ## Actual Behavior
+
+     The returned object still shows the old building number.
+
+     ## Steps to Reproduce the Problem
+
+     Follow these steps to reproduce the problem:
+
+     1. In the command line, navigate to `10-Stu_Mutations/Unsolved`.
+
+     2. Run `npm install`, `npm run seed`, and `npm start`.
+
+     3. Open <localhost:3001/graphql> in the browser.
+
+     4. Set the following variables in the Query Variables panel:
+
+       {
+         "id": "<insert ID of a class here>",
+         "building": "AA"
+       }
+
+     5. Run the following mutation:
+
+         mutation updateClass($id: ID!, $building: String!) {
+           updateClass(id: $id, building: $building) {
+             name
+             building
+           }
+         }
+
+     6. Note that the `building` property in the returned data is not set to `"AA"`.
+
+     ---
+
+     ## 💡 Hints
+
+     * How else could you verify if the data is being updated correctly?
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * What tools will you need to run GraphQL queries in your own front end? 
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 17. Instructor Review: Mutations (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with mutations? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `findOneAndUpdate()`
+
+  * ✔️ `{new: true}`
+
+* Open `10-Stu_Mutations/Solved/schemas/resolvers.js` in your IDE and explain the following: 
+
+  * When your mutation is not working as expected, a great place to look is the resolver.
+
+  * We have written a mutation to update the building for a specific class. However, it looks like when we run the mutation, the building is not being updated.
+
+  * When your mutation is not working as expected, a great place to look is the resolver.
+
+  *  Because we are using Mongoose, we must import the model to write data to MongoDB. It looks like we have imported the `Class` model successfully.
+
+     ```js
+     const { School, Class, Professor } = require('../models');
+     ```
+
+  *  We also need to make sure that our arguments are passed to the resolver. It looks like this is working too:
+
+     ```js
+     updateClass: async (parent, { id, building }) => {
+     ```
+
+  * 🔑 To write the data, we call the `.findOneAndUpdate()` method on the imported `Class` model and pass in the specific information needed to find the class by id and update the building:
+
+     ```js
+     return await Class.findOneAndUpdate(
+       { _id: id }, 
+       { building },
+     }
+     ```
+
+  * 🔑 By default, the object returned will not be the one updated. To return the new object, we set `new` to be `true`. Adding this line will fix the bug in our resolver:
+
+     ```js
+     { new: true }
+     ```
+
+* Navigate to `10-Stu_Mutations/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+
+  * 🔑 We test if our resolver is now working by using an existing `Class` object id and adding the the provided test object to the Query Variable editor:
+
+     ```json
+       {
+         "id": "<insert ID of a class here>",
+         "building": "AA"
+       }
+       ```
+
+  * 🔑 Next we run the provided mutation:
+
+     ```gql
+       mutation updateClass($id: ID!, $building: String!) {
+         updateClass(id: $id, building: $building) {
+           name
+           building
+         }
+       }
+     ```
+
+  * The updated information should now be fetched.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use mutations to create and update data? 
+
+  * 🙋 We use the mutation type to define the entry point for the object we want to write or update. We write a mutation resolver that performs the task of creating or updating the data.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on mutations](https://www.apollographql.com/docs/android/essentials/mutations/#gatsby-focus-wrapper), and stay for office hours to ask for help.
+
+### 18. Instructor Do: Stoke Curiosity (10 min)
+
+* Ask the class the following questions (☝️):
+
+  * ☝ What exactly is an `API`?
+  
+* Encourage students to respond with their own thoughts and observations and let them know they are on the right track.
+
+* Explain that, as developers, it is important to be able to define what an API, or Application Programming Interface, is and how it is used to handle data in the context of our applications.
+
+* To practice, let's take a look at the API we will be using to build our own full-stack MERN apps.
+
+* Navigate to `11-Ins_MERN-Setup` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
+
+* Open `http://localhost:3001/graphql` to demonstrate the following:
+
+  * An API is the part of the server that responds to data requests and sends responses. When we open the Playground, we can visualize how a GraphQL API performs these tasks.
+
+  * When we click on the `schema` tab, we see a set of instructions. APIs use instructions to define the shape of the data that can be requested and the functions that will be executed when requests are made.
+
+  * We can also make a request for specific data by writing a query. Once a request is made, the API executes the function needed to handle the request. The requested data is then returned as a JSON object:
+ 
+     ```gql
+     query allProfiles {
+       profiles {
+        _id
+        name
+        skills
+       }
+     } 
+     ```
+
+* Open the [illustration of MERN three-layer architecture in the Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g9aa02552a2_0_6) and explain the following: 
+
+  * In a MERN app, requests are sent to the API from the client.
+
+  * The API handles the request, executes a function to retrieve data from a database, and returns a JSON object. The client can then use that returned object to display the results to the user.
+
+* Explain that during today's class, we will focus on the tools needed to integrate a React.js front end to enable it to send requests to a GraphQL API and use the returned JSON object to display data on a page.
+
+* Remind that students while there is a lot to cover today, by the end of the class they will have all the steps needed to start building a full-stack MERN app on their own.
+
+### 19. Instructor Demo: MERN Setup (5 min) 
+
+* Navigate to `11-Ins_MERN-Setup` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
+
+* Open `http://localhost:3001/graphql` to demonstrate the following:
+
+  * When we open up the GraphQL Playground, we see that our API is up and running and ready to receive requests. Yet, there is no front end on this port.
+
+  * 🔑 In a MERN setup, the front end and back end are separate entities.
+
+* Open `http://localhost:3000` to demonstrate the following:
+
+  * 🔑 The React.js front end is located on a separate port.
+
+* Open `11-Ins_MERN-Setup/` in your IDE to demonstrate the following:
+
+  * 🔑 When we look at the structure of our project directory, we see all the code needed to run the front end is contained in the `client` directory and all the code needed to run the back end is contained in the `server` directory.
+
+  * Because they are two separate apps, we need to use two separate terminals to start up each app independently and run them on their own ports.
+
+  * However, in a development environment, using two terminals can be cumbersome. So, to start up both apps simultaneously, we can add a third app located at the root. This will allow us to use just one set of commands -- and a single terminal -- to control both apps.
+
+* Open `11-Ins_MERN-Setup/package.json` in your IDE to demonstrate the following:
+
+  * 🔑 The root-level `package.json` belongs to this third app. We install `concurrently` as a development dependency at the root level so that we can run multiple commands at the same time during development. The installed dependency appears in `package.json`:
+  
+     ```js
+     "devDependencies": {
+       "concurrently": "^5.1.0"
+     } 
+     ``` 
+  
+  * 🔑 We then add the scripts needed to start up both apps using a single terminal:
+    
+     ```js
+      "scripts": {
+       "start": "node server/server.js",
+       "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+       "install": "cd server && npm i && cd ../client && npm i",
+       "seed": "cd server && npm run seed",
+       "build": "cd client && npm run build"
+     }
+     ```
+
+* Open `11-Ins_MERN-Setup/client/package.json` in your IDE to demonstrate the following:
+
+  * While in development, we also need a way for our front end to send requests to our back end on a different port.
+
+  * To do this, we will use a proxy to handle requests and update them to include the URL location of our back end.
+
+  * We add a `proxy` field to the client's `package.json` and add the URL of our back end as the value. Now, while in development, requests will be prefixed by `"http://localhost:3001"` to allow them to be received by the API.
+  
+     ```json
+     "proxy": "http://localhost:3001"`
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How does our front end and back end communicate when running on separate ports? 
+
+  * 🙋 In the client directory's `package.json` we add a proxy that identifies the port where the server is running. This allows the front end (or client) to send requests to the API, which is the back end (or the server).  We can then use the npm package `concurrently` to start up both the front end and back end during development, using `npm run develop`.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
+
+### 20. Student Do: MERN Setup (15 min) 
+
+* Direct students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+   ```md
+   # 📐 Add Comments to Implementation of the MERN-stack Architecture
+
+   Work with a partner to add comments in the [Unsolved README.md file](./Unsolved/README.md) describing the functionality of the code found in [package.json](./Unsolved/package.json), [client/package.json](./Unsolved/client/package.json), and [server/server.js](./Unsolved/server/server.js).
+
+   ## 📝 Notes
+
+   Refer to the documentation: 
+
+   [Create React App Docs on proxying API requests](https://create-react-app.dev/docs/proxying-api-requests-in-development)
+
+   ---
+
+   ## 🏆 Bonus
+
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+   * What GitHub tool can we use to automate functionality such as running tests or deploying our applications?
+
+   Use [Google](https://www.google.com) or another search engine to research this.
+
+   ---
+   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: MERN Setup (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with the implementation of MERN-stack architecture? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `"proxy": "http://localhost:3001"`
+
+  * ✔️ `concurrently`
+
+  * ✔️ `install`
+
+  * ✔️ `seed` 
+
+  * ✔️ `develop` 
+
+  * ✔️ `../client/build'`
+
+* Open `12-MERN-Setup/Solved/client/package.json` in your IDE and explain the following: 
+
+  *  The `client` directory contains all the code needed to run our React.js front end.
+
+  * 🔑 We check the proxy to the client's `package.json` to identify the port where the server will run. The proxy directs requests to the API and will allow our front end and back end to communicate:
+
+     ```json
+     "proxy": "http://localhost:3001"
+     ```
+
+* Open `12-MERN-Setup/Solved/package.json` in your IDE and explain the following: 
+
+  * At the root of our project folder, we have a third app that contains a `package.json`.
+
+  * This `package.json` contains scripts that allow us to easily start up our `client` and `server` apps in a single set of terminal commands while in development.
+
+  * 🔑  When we enter `npm install` into the terminal, npm will execute the terminal commands defined in the `install` script, installing the dependencies in both the `client` and `server` directories:
+
+     ```json
+     "install": "cd server && npm i && cd ../client && npm i"
+     ```
+
+  * 🔑 We also add a script to execute the terminal commands to seed our database:
+
+     ```json
+     "seed": "cd server && npm run seed"
+     ```
+
+  * 🔑 To run our `client` and `server` simultaneously, we first install `concurrently` as a development dependency at the root-level:
+
+     ```json
+     "devDependencies": {
+       "concurrently": "^5.1.0"
+     }
+     ```
+
+  * 🔑 We then use `concurrently` in our `develop` script to execute the commands to start up the `client` and `server` simultaneously by simply entering `npm run develop`:
+
+     ```json
+     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+     ```
+
+* Open `12-MERN-Setup/Solved/server/server.js` in your IDE and explain the following:
+
+  * When we are ready to deploy our app, we will create a production build of our React.js front end and set the Express.js server to serve the `build` directory. This will allow our front end and back end to operate from the same port when in production:
+
+     ```js
+     if (process.env.NODE_ENV === 'production') {
+      app.use(express.static(path.join(__dirname, '../client/build')));
+     }
+
+     app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/build/index.html'));
+     });
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use this boilerplate app when developing our own MERN full-stack apps? 
+
+  * 🙋 This app has the code needed to connect our front end and back end in both development and production for any MERN app. This makes it a great resource to refer to when building our own MERN apps.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Create React App docs on proxying API requests](https://create-react-app.dev/docs/proxying-api-requests-in-development), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 22. Instructor Demo: useQuery (5 min) 
+
+* Navigate to `13-Ins_useQuery` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
+
+* Open `http://localhost:3000` to demonstrate the following:
+
+  * When we seed our database and open the app, we see a roster of friends and their endorsed skills.
+
+  * Each time this page loads, the client sends a request to the API. The returned data is then displayed on the page, allowing us to see the roster.
+
+* Open `13-Ins_useQuery/client/src/App.js` in your IDE and demonstrate the following: 
+
+  * To set up our React.js front end to be able to send requests, we need to use one more tool.
+
+  * 🔑 Apollo Client is a library that allows us to handle data using the GraphQL on the front end.
+
+  * 🔑 We first install `@apollo/client` and import the component and classes we need for setup:
+
+     ```js
+     import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+     ```
+
+  * 🔑 Next, we create a new instance of the imported `ApolloClient` class to implement the core client-side API and provide the uri of our GraphQL API so we can send requests. We also create a new instance of `InMemoryCache` to enable caching:
+
+     ```js
+     const client = new ApolloClient({
+       uri: '/graphql',
+       cache: new InMemoryCache()
+     });
+     ```
+    
+  * 🔑 To access the `ApolloClient` instance from anywhere in your component tree, we use the `ApolloProvider` component to wrap our React.js app:
+
+     ```js
+     <ApolloProvider client={client}>
+       <div className="flex-column justify-flex-start min-100-vh">
+         <Header />
+         <div className="container">
+           <Home />
+         </div>
+         <Footer />
+       </div>
+     </ApolloProvider>
+     ```
+  
+  * Now, our Apollo Client is set up and we are ready to write a query and start sending requests.
+
+* Open `13-Ins_useQuery/client/src/utils/queries,js` in your IDE and demonstrate the following: 
+
+  * 🔑 We write a query that uses the `profile` entry point and return values for the `_id`, `name`, and `skills` fields. It is important that these values match a type defined in our GraphQL API schema exactly. Otherwise, the query will not work:
+
+     ```js
+     query allProfiles {
+       profiles {
+         _id
+         name
+         skills
+       }
+     }
+     ```
+  
+  * 🔑 For our query to execute, it must be contained in a `gql` function. We import the functionality from `apollo/client` at the top of the page:
+
+     ```js
+     import { gql } from '@apollo/client';
+     ```
+
+  * 🔑 Next, we wrap our query in the `gql` function and add `export` so we can use our query in our component:
+
+     ```js
+     export const QUERY_PROFILES = gql`
+       query allProfiles {
+         profiles {
+           _id
+           name
+          skills
+         }
+       }
+     `;
+     ```
+
+* 🔑 Open `13-Ins_useQuery/client/src/pages/Home.js` in your IDE and demonstrate the following: 
+
+  * We import the query into the component where we want our data to be displayed:
+
+     ```js
+     import { QUERY_PROFILES } from '../utils/queries';
+     ```
+
+  * 🔑 We also import the `useQuery` Hook from `apollo/client` to return our data:
+
+     ```js
+     import { useQuery } from '@apollo/client';
+     ```
+
+  * We use the `useQuery` Hook to execute the query when the page renders. The returned object will contain both `loading` and `data` properties:
+
+     ```js
+     const { loading, data } = useQuery(QUERY_PROFILES);
+     ```
+
+  * We can then store the returned data in a variable so we can display the information on our page:
+  
+     ```js
+     const profiles = data?.profiles || [];
+     ...
+ 
+     <ProfileList
+       profiles={profiles}
+       title="Here's the current roster of friends..."
+     />
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is Apollo Client? 
+
+  * 🙋  Apollo Client is a powerful library allows us to request data from our API and handles the whole request cycle.
+
+  * ☝️ What can we do with Apollo Client?
+
+  * 🙋  Using Apollo Client, we can easily execute a query and use the returned data to populate our page in a few lines of code.
+  
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_useQuery/README.md`.
+
+### 23. Student Do: useQuery (15 min) 
+
+* Direct students to the activity instructions found in `14-Stu_useQuery/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+   ```md
+   # 🏗️ Implement Query to Retrieve Thought Data
+
+   Work with a partner to implement the following user story:
+
+   * As a user, when I visit the application's homepage, I am shown a list of thoughts.
+
+  ## Acceptance Criteria
+
+   The activity is complete when it meets the following criteria:
+
+   * The application's homepage displays all thought data queried from the API in a list.
+
+   * The homepage renders a loading screen when the thought data has not returned from the API yet.
+
+   ## Assets
+
+   The following image demonstrates the web application's appearance and functionality:
+
+   ![The Tech Thoughts homepage displays a list of thoughts, who wrote them, and when they were created.](./Images/01-screenshot.png)
+
+   ---
+
+   ## 💡 Hints
+
+   * Where can a query be created to be used anywhere in our application?
+
+   * What properties returned from `useQuery()` can be used to determine if the request hasn't completed yet?
+
+   * How can we seed the database so there's data to query?
+
+   ## 🏆 Bonus
+
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+   * What React API is the Apollo Client provider functionality built with?
+
+   Use [Google](https://www.google.com) or another search engine to research this.
+
+   ---
+
+   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 24. Instructor Review: useQuery (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with using the `useQuery` Hook? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `gql`
+
+  * ✔️ `import { useQuery }`
+
+  * ✔️ `import { QUERY_THOUGHTS }`
+
+  * ✔️ `useQuery(QUERY_THOUGHTS)`
+  
+* Open `14-Stu_UseQuery/client/src/App.js` in your IDE and explain the following:
+
+  * To send requests, we first have to set up Apollo Client in our `App.js` file and create a new `ApolloClient` instance that identifies the URL of our GraphQL server. This step has already been done for us:
+
+     ```js
+     const client = new ApolloClient({
+       uri: '/graphql',
+       cache: new InMemoryCache(),
+     });
+     ```
+
+* Open `14-Stu_UseQuery/client/src/utils/queries.js` in your IDE and explain the following: 
+
+  * The app is running and ready to make requests. Let's create a new query.
+
+  * 🔑 We start by using the entry point `thoughts` and add the fields we want to access. It is important to refer to the schema so that the names match a defined type exactly:
+
+     ```js
+     query getThoughts {
+       thoughts {
+         _id
+         thoughtText
+         thoughtAuthor
+         createdAt
+       }
+     }
+     ```
+
+  * 🔑 We then wrap our completed query in a `gql` function and export it:
+
+     ```js
+     export const QUERY_THOUGHTS = gql`
+       query getThoughts {
+       thoughts {
+         _id
+         thoughtText
+         thoughtAuthor
+         createdAt
+       }
+     }
+     `;
+     ```
+
+* Open `14-Stu_UseQuery/client/src/pages/Home.js` in your IDE and explain the following: 
+
+  * 🔑 To use our query, we start by importing the `useQuery` Hook and the query into the component where we want the data to be displayed:
+
+     ```js
+     import { useQuery } from '@apollo/client';
+     import { QUERY_THOUGHTS } from '../utils/queries';
+     ```
+
+  * 🔑 We then use the `useQuery` Hook to execute the query and return a JSON object that contains loading information and the requested data:
+
+     ```js
+     const { loading, data } = useQuery(QUERY_THOUGHTS);
+     ```
+
+  * 🔑 If data is returned, we store the returned data in a variable. If no data is available, we use an empty array instead:
+
+     ```js
+     const thoughts = data?.thoughts || [];
+     ```
+
+  * 🔑 We use the variable to access the data in our JSX so the data can be displayed on our page:
+  
+     ```js
+     <ThoughtList
+       thoughts={thoughts}
+       title="Some Feed for Thought(s)..."
+     />
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use the `useQuery` Hook to return data? 
+
+  * 🙋 The `useQuery` Hook takes in a GraphQL query wrapped in a `gql` function and returns the requested data as a JSON object. We can then use that data object to display information on the page.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on queries](https://www.apollographql.com/docs/react/data/queries/), and stay for office hours to ask for help.
+
+* Answer any questions before ending the class.
+
+### 25. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,555 +1,956 @@
-# 9.3 Lesson Plan - Web Performance (10:00 AM)
+# 09.3 Full-Time Lesson Plan: Technical Interview and MongoDB
 
 ## Overview
 
-In this lesson we will complete the Mini Project for Unit 17, then begin the performance unit. We will use Lighthouse to audit the performance of webpages, and go through the different options we have to increase performance in our applications. Performance is an incredibly important aspect of being a developer. While building large applications, keeping them performing is a top priority.
-
-- - -
-
-## Learning Objectives
-
-* By the end of class student's will be able to...
-  * Articulate the meaning of web performance and how it effects their users.
-  * Explain how assets like JavaScript files and images impact the performance of a web page.
-  * Use Lighthouse to audit a sites various performance metrics.
-  * Use minification to lower JS file sizes.
-  * Use the compression npm package to enable gzip compression in their applications
-  * Use online image compression to compress image files while retaining image quality.
-  * Explain and implement lazy loading into their applications so images are only loaded as needed.
+In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. Then we will start a new unit on NoSQL databases. You will introduce the concept of the NoSQL database with MongoDB, go over its pros and cons compared with MySQL, and ultimately detail all of the required steps to employ MongoDB in future projects. 
 
 ## Instructor Notes
 
-* We will be making use of students Project 2 during the first half of todays class. Ensure all students have a deployed project to work with.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 17 through `08-Stu_Robo-3T` in Unit 18.
 
-* Todays class you will be using an auditing system by Google called Lighthouse. Familiarize yourself with the tool prior to class. You can find the documentation [here](https://developers.google.com/web/tools/lighthouse/). 
+* Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-  * Lighthouse can hang in some browsers, if possible please use Chrome.
+* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&ndash3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
 
-* Improving scores in Lighthouse will be a big win for students today, so be sure to slowly go through the first audit report of the day to give students an understanding of how they can improve.
+* Be sure students have MongoDB installed! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) if they haven't installed it already. If needed, use the FLEX time to help students with the install.
 
-## Slides
+* If you haven't used MongoDB much in the past, take a look at this week's queries and solutions. This should prime you for the lecture.
 
-* N/A
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+## Learning Objectives
+
+* Articulate and implement sorting algorithms in a technical interview setting.
+
+* Identify and explain the differences between SQL and noSQL databases.
+
+* Create a MongoDB database.
+
+* Perform basic CRUD actions on their Mongo database.
+
+## Slide Deck
+
+* [Unit 18 Slide Deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing)
 
 ## Time Tracker
 
-[9.3 Time Tracker](https://docs.google.com/spreadsheets/d/1nwgyx7Oo_jpMzea59A-Tm79aVMSAIPyyCKJHndB4oHg/edit#gid=0)
+| Start  | #   | Activity Name                         | Duration |
+|---     |---  |---                                    |---       |
+| 10:00AM| 1   | Instructor Demo: Mini Project         | 0:05     |
+| 10:05AM| 2   | Student Do: Mini Project              | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini Project       | 0:10     |
+| 11:15AM| 4   | Introduce Homework                    | 0:05     |
+| 11:20AM| 5   | FLEX                                  | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity        | 0:10     |
+| 12:00PM| 7   | BREAK                                 | 0:30     |
+| 12:30PM| 8   | Instructor Demo: Create Insert Find   | 0:05     |
+| 12:35PM| 9   | Student Do: Create Insert Find        | 0:15     |
+| 12:50PM| 10  | Instructor Review: Create Insert Find | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Update Delete Drop   | 0:05     |
+| 1:05PM | 12  | Student Do: Update Delete Drop        | 0:15     |
+| 1:20PM | 13  | Instructor Review: Update Delete Drop | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Sorting in Mongo     | 0:05     |
+| 1:35PM | 15  | Student Do: MongoJS Sorting           | 0:15     |
+| 1:50PM | 16  | Instructor Review: MongoJS Sorting    | 0:10     |
+| 2:00PM | 17  | Student Do: Mongo CRUD                | 0:05     |
+| 2:05PM | 18  | Instructor Review: Mongo CRUD         | 0:15     |
+| 2:20PM | 19  | Student Do: Robo 3T                   | 0:10     |
+| 2:30PM | 20  | END                                   | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
+### 1. Instructor Demo: Mini Project (5 min) 
 
-### 1. Intro Mini Project (5 mins)
+* Welcome students to class.
 
-* **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following unit on PWAs.
+* Open `28-Stu_Mini-Project/README.md` in your IDE and explain the following:
 
-* Change into [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Solved/public/db.js) in your terminal and run `npm install` folowed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
+  * 🔑 Technical interviews are intimidating for even the most experienced developers, so it's good to practice either with others or on your own to build confidence.
 
-* Demo the functionality of the app and tell students they are going to build the IndexedDB storage functionality in the next activity. This feature will enable users to enter transactions when the device is not online and sync the transactions with the backend when network service is restored.
+  * 🔑 The questions asked during an interview are sometimes purposefully ambiguous and will require the candidate to follow up with some questions or assumptions. This gives the interviewer an idea of how the candidate approaches problems, even if they do not know the solution.
 
-* Let students ask questions and then move on to the next activity.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 2. Student Do: Mini Project (60 mins)
+  * ☝️ What happens if we don't know the answer to a question asked?
 
-* Direct students to the activity instructions found in [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Unsolved):
+  * 🙋 During an interview, be honest about it and talk your way through it anyway, asking questions as needed. In this environment, work together to come to a solution.
 
-```md
-# Mini Project
+* Answer any questions before inviting students to start the mini-project.
 
-In this activity, you will implement IndexedDB so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api. Write all of your IndexedDB code in `public/db.js`.
+### 2. Student Do: Mini Project (60 min)
 
-## Instructions
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
-* Create a new db request for a `budget` database.
+* Break your students into groups that will work together on this activity.
 
-* Inside `onupgradeneeded`, create an object store called `pending` and set `autoIncrement` to `true`.
+  ```md
+  # Mini-Project: Technical Interview Practice (Sorting Algorithms)
 
-* Inside your `saveRecord()` function:
+  In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate. 
 
-  * Create a transaction on the `pending` object store with `readwrite` access.
+  ## Roles
 
-  * Access your pending object store.
+  * **The Interviewer**: The role of the interviewer is to pose the question, ensure the candidate understands what is expected of them as they work towards a solution, and respond to any questions the candidate has without giving away the answer. 
 
-  * Add a record to your store with the `add` method.
+  * **The Candidate**: The role of the candidate is to ensure that the problem stated by the interviewer is clear by asking clarifying questions and stating assumptions, pseudocoding a solution, and then implementing it (if time allows).
 
-* Inside the `checkDatabase` function:
+  ## Instructions
 
-  * Open a transaction on your `pending` object store.
-  
-  * Access your `pending` object store.
+  * Take turns playing each role and go through each interview question. 
 
-  * Get all records from store and set to a variable.
+  * Spend about 20 minutes on each, allowing time for research of the problem, pseudocoding the solution, implementing the solution, and discussing throughout for clarification.
 
-* Inside `getAll.onsuccess`:
+  * The interviewer can use the prompts and solutions laid out for each question in the [Main](./Main) directory.
 
-  * If successful, open a transaction on your `pending` object store.
+  * The candidate can use the prompts, notes, and workspace for each question in the [Develop](./Develop) directory.
 
-  * Access your `pending` object store.
+  * During each question, allow the candidate to do some research on the question using Google to help outline a solution. The interviewer can spend that time reviewing the solution code and come up with prompts to support the candidate.
 
-  * Clear all items in your store.
+  * Take this seriously, but don't put too much pressure on yourself to get to an answer! The idea is to be conversational about these questions to help both of you come to a solution that you can understand and explain in an interview setting.
+  ```
 
-## 💡 Hint(s)
+* While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* You can use the the comments in `public/db.js` as a guide.
+### 3. Instructor Review: Mini Project (10 min)  
 
-## 🏆 Bonus
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Create a button that resets all funds to zero in your indexedDB.
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-```
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 3. Instructor Do: Review Mini Project (10 mins)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Treat this review as a question and answer session to help students who might be stuck, since there are 10 minutes allotted.
+  * ✔️ Sorting algorithms
 
-* Open [26-Stu-Mini-Project](../../../../01-Class-Content/17-NoSQL/01-Activities/26-Stu-Mini-Project/Solved/public/db.js) in your IDE and walk students review the solved code, letting the students ask questions about the key methods and functions they had to write.
+  * ✔️ The role of the interviewer
 
-  * `onupgradeneeded`
+  * ✔️ The role of the candidate
 
-  * `saveRecord()`
+* Open `28-Stu_Mini-Project/Main/01_bubble-sort/bubble-sort.js` in your IDE and explain the following: 
 
-  * `checkDatabase()`
-
-  * `saveRecord()`
-
-  * `onsuccess`
-
-* Ask for volunteers to share or help if students are stuck.
-
-### 4. Instructor Do: Review Unit 17 (45 mins)
-
-* Take some time answering lingering questions about the Mini Project. If no questions remain, lead a review on the topics learned in Unit 17. 
-
-### 5. Break (30 mins)
-
-
-### 6. Instructor Do: Welcome/Intro Web Performance (5 mins)
-
-* Welcome students to class and then open Google Chrome. 
-
-* Open your Dev Tools Network Tab and Throttle your connection to `Slow 3G`
-
-  * ![Throttle Connection](./Images/throttleConnection.png)
-
-* Navigate to [Amazon.com](https://amazon.com/).
-  
-  * The page is going to load extremely slowly.
-
-* Ask the class, "What can the Network Tab show us?"
-
-  * The network tab gives developers a view into what assets are being loaded and when, as well as total load times. Direct the students attention to the loading time chart.
-
-  ![Network Chart](./Images/networkChart.png)
-
-  * Amazon will load assets for well over a minute, and this traffic can all be watched inside of our dev tools.
-
-* Ask the class, "What is throttling?"
-
-  * Throttling a connection is the act of using software to deliberately slow down or "throttle" a connections speed to be slower than it would normally.
-
-* Ask the class, "Why would we want to throttle our connection?"
-
-  * While we might have a nice and fast connection, a large portion of the planet does not have access to speeds even comparable to a slow 3g cellular network. 
-
-  * By throttling our connection, we can see how our users with worse connections might experience our content, and will help us understand what is slowing loading times most.
-  
-* Loading times like we are seeing with a throttled connection on Amazon can be a huge deterrent to users.
-
-* Ask the class, "Have you ever left a webpage due to it taking too long to load"
-
-  * It's safe to say anyone who has used the internet has experienced this.. This is a common occurrence all over the world, as not all people have access to fast network connections.
-  
-  * One of the biggest factors that leads to a poor user experience is slow page load times.
-
-* Ask the class, "What do you think the most important part of the user experience is?". Call on one or two students for answers.
-
-  * Performance. Speed and response times are paramount, as making users wait for response to input or loading information is a guaranteed way to lose those users.
-
-  * When it comes to the web every second counts. Todays class will be about how webpages can be optimized to save the end user time and provide a more fluid experience.
-
-* Ask the class, "How do we know what is causing our page to perform poorly or well?"
-
-  * Getting concrete analysis on the performance metrics of a web page is important in improving it in the future.
-
-* Use student answers to transition to demoing Lighthouse.
-
-### 7. Instructor Do: Demo Lighthouse (10 mins)
-
-* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with after break later today.
-
-  * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
-
-  * It provides audits for performance, accessibility, SEO, and progressive web applications.
-
-  * Lighthouse can be run directly from our Chrome Dev Tools. This makes it a fast, simple, and effective way to get insights into our pages overall performance metrics.
-
-  * Open chrome dev tools, and click the `Audits` tab.
-
-  ![Audits Tab](Images/auditsTab.png)
-
-  * Scroll down and click `Run Audits`
-
-  ![Run Audits](Images/runAudits.png)
-
-* Open the generated `Audit Report` and walk students through the following:
-
-  * The *performance* section will be the first you encounter, and one of the most useful for todays class. This section will tell us why our site might be performing poorly and delivering a poor user experience. It will also give us actionable items to fix.
-
-  * Hovering over the different status signs next to the times shown will give you information on what that test means.
-
-  ![Hover](Images/performanceSection.png)
-
-  * Each audit has a reference doc explaining why the audit is important, as well as how to fix it. These reference docs will lay out why this metric is important to the user experience and give reasons why we might be lacking in the specified audit.
-
-  * One of the main metrics Lighthouse looks for is the *first meaningful paint*.
-
-  * A paint occurs when content is loaded on the screen. Lighthouse measures the first *Contentful* paint, which means when any content is loaded. It also measures the first *meaningful* paint which occurs when the primary content becomes visible.
-
-  * One of the most important metrics it takes is *Time to Interactive*. This is the time it takes for the webpage being audited to become usable. A long delay in interactivity can lead to page abandonment.
-
-* Ask the class, "What is web page abandonment?"
-
-  * Abandonment occurs when a user leaves a web page without completing the task they set out to.
-
-* When working on improving a webpage's performance, we should use Lighthouse to complete frequent audits. These can be incredibly helpful in pinpointing where our efforts should be focused.
-
-### 8. Student Do: Lighthouse Audit (10 mins)
-
-* Direct students to the activity instructions found in [01-Stu_Lighthouse](../../../../01-Class-Content/18-PWA/01-Activities/01-Stu_Lighthouse/README.md)
-
-```md
-# Lighthouse Audits
-
-In this activity you will use Google Lighthouse to audit your second group project to find out performance metrics.
-
-## Instructions
-
-* We are going to utilize your second group project for these coming activities to check its performance metrics.
-
-* Navigate to the deployed URL of your project.
-
-* Open the Chrome Dev Tools and click the `Audits` tab.
-
-* Scroll down and click `Run Audits` and allow Lighthouse to run.
-
-* Read through the provided report and be prepared to talk about the `Opportunities` portion of your audit!
-```
-
-### 9. Instructor Do: Review Audits (5 mins)
-
-* Ask the class the following question(s):
-
-  * What are some of the 'Opportunities' for improvement you found in your applications?
-
-  * How long did the first content paint take?
-
-  * How long did the first meaningful paint take?
-
-  * How long did it take to become interactive?
-
-* Are there any commonalities you hear?
-
-### 10. Instructor Do: JS Minification (10 mins)
-
-* Ask the class the following question(s):
-
-* "What do you think minification means"?
-
-  * Minification is the process of taking our code and removing all unnecessary characters and whitespace without loss of functionality in an attempt to save file space.
-
-* Ask the class, "Where have we seen minification before?"
-
-  * Bootstrap and jQuery are two examples of minified source code
-
-* Open [JSCompress](https://jscompress.com/) and paste the following code into the textarea:
+  * 🔑 A bubble sort function can be implemented in a couple of ways. One way involves sorting the array one index at a time, the other will iterate the entire array multiple times and sort elements gradually until it doesn't need to sort anymore. The second way is slightly more efficient because we build in a base condition to end early if the array is sorted:
 
     ```js
-    var myArray = [1, 2, 3, 4, 5];
+    while (!sorted) {
+      sorted = true;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
+          const tmp = array[i];
 
-    for(var i=0; i < myArray.length; i++){
-      console.log(myArray[i]);
+          array[i] = array[i + 1];
+
+          array[i + 1] = tmp;
+
+          sorted = false;
+        }
+      }
     }
     ```
 
-* Click the `Compress JavaScript` button to minify the code snippet and explain the following point(s):
+  * 🔑 The interviewer will likely want the candidate to be able to articulate the differences between the two implementations and why one might be more efficient than the other.
 
-* ![Minify JS](Images/minifyJS.jpg)
+  * 🔑 The candidate should be able to articulate the need for a temporary variable to hold an element being swapped and how a flag can be set to determine if the array has been sorted yet or not. 
 
-  * The minifier moved our `myArray` declaration into our `for loop`.
+* Open `28-Stu_Mini-Project/Main/02_quick-sort/quick-sort.js` in your IDE and explain the following: 
 
-  * The minifier removed all whitespace between characters, and put all of our code on one line.
+  * 🔑 A quick sort algorithm works by recursively splitting an array in two based on greater than or less than values compared to a pivot element until there are numerous arrays in order that can be concatenated back together and returned in a sorted fashion:
 
-  * The minification process resulted in a 30% decrease in the size of the JavaScript.
+    ```js
+    const quickSort = (array) => {
+      if (array.length <= 1) {
+        return array;
+      }
 
-  ![Minified](Images/minification.jpg)
+      const pivot = array.splice(Math.floor(Math.random() * array.length), 1);
 
-  * While the code may look different after minification, it will function exactly the same
+      const left = [];
+      const right = [];
 
-* Ask the class, "What are the benefits of minification?"
+      array.forEach((el) => {
+        if (el <= pivot) {
+          left.push(el);
+        } else {
+          right.push(el);
+        }
+      });
 
-  * Minification saves us space, and smaller file sizes create faster downloads for the user. The faster our assets can download, the faster the page will load them for our user.
+      return quickSort(left).concat(pivot, quickSort(right));
+    };
+    ```
 
-### 11. Student Do: Minify your JavaScript (10 mins)
+  * 🔑 The interviewer might ask this question to see if the candidate has a good understanding of recursion.
 
-* Direct students to the activity instructions located in [02-Stu_Minifiy-JS](../../../../01-Class-Content/18-PWA/01-Activities/02-Stu_Minify-JS/README.md)
+  * 🔑 The candidate should be able to visualize the recursive nature of this type of algorithm and be able to explain why the selection of a random pivot point works for this type of algorithm. 
 
-```md
-# Minify Your JS
+* Open `28-Stu_Mini-Project/Main/03_merge-sort/merge-sort.js` in your IDE and explain the following: 
 
-In this activity you will minify your JavaScript using an online tool.
+  * 🔑 A merge sort algorithm involves using recursion to continuously break apart an array until we're left with a series of single-element arrays:
 
-## Instructions
+    ```js
+    const mergeSort = (array) => {
+      if (array.length <= 1) {
+        return array;
+      }
 
-* Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
+      const middle = Math.floor(array.length / 2);
 
-* Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
+      const left = array.slice(0, middle);
+      const right = array.slice(middle);
 
-  * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
+      return mergeArrays(mergeSort(left), mergeSort(right));
+    };
+    ```
 
-* Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
+  * All of these arrays are then compared to one another and used to build a new array that's sorted and eventually returned:
 
-* Create a `dist` folder in the root of your project.
+    ```js
+    const mergeArrays = (leftArray, rightArray) => {
+      const resultArray = [];
 
-  * Create an `index.js` file inside of your `dist` folder.
+      let leftIndex = 0;
+      let rightIndex = 0;
 
-  * Copy/paste the minified JS of your dist folder into your `dist/index.js`
+      while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+        if (leftArray[leftIndex] < rightArray[rightIndex]) {
+          resultArray.push(leftArray[leftIndex]);
+          leftIndex++;
+        } else {
+          resultArray.push(rightArray[rightIndex]);
+          rightIndex++;
+        }
+      }
+    
+      return resultArray
+        .concat(leftArray.slice(leftIndex))
+        .concat(rightArray.slice(rightIndex));
+    };
+    ```
 
-* Be sure to link your `dist/index.js` code to your application.
-```
-### 12. Instructor Do: Review Minification (5 mins)
+  * 🔑 This is a difficult interview question, so the interviewer might ask this when they are confident in the previous answers a candidate has provided. Because it's a bit longer to implement in code, the interviewer will likely want to ensure that the candidate can accurately describe a solution in pseudocode first so that time isn't lost. 
 
-* Ask the class the following question(s):
+  * 🔑 The candidate should be able to again visualize the recursive nature of this algorithm and explain that rather than trying to sort a large set of data, we break our data into smaller sets and iteratively sort them back together.
 
-  * How much of a reduction they saw in JS sizes from Input to Output?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * How this could benefit developers, especially those with massive code bases?
+  * ☝️ How can we prepare ourselves for questions like this during an interview?
 
-* While the minified code certainly appears different than the code we input to start, all of the functionality is retained.
+  * 🙋 We can practice and not be discouraged if we can't always get to an answer!
 
-* Ask the class, "Why might we not want to edit our minified code?".
+  * ☝️ What can we do if we don't completely understand this?
 
-  * It is important to have minified code in it's own file. It is not recommended to attempt editing minified code as it can be difficult to read, and even more difficult to debug due to the lack of readability.
+  * 🙋 We can refer to supplemental material, undertake more interview practice among ourselves, and stay for office hours to ask for help.
 
-* Ask the class the following question(s):
+* Answer any questions before proceeding to the next activity.
 
-  * How might we minify image files?
+### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Use students answers to transition to the next activity.
+* Open `02-Homework/README.md` in your browser and explain the following:
 
-### 13. Instructor Do: Compression npm package (10 mins)
+  * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts. 
 
-* Ask the class, "What do we do with files that are so large they are slowing load times?"
+  * In this homework, you will write a tutorial that explains the components that go into a specific regular expression, or regex.
 
-  * We compress those files.
+  * You will have to do some research on regex in order to properly write your tutorial.
 
-* Ask the class, "What is a zip file?"
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning regex by writing a tutorial about it.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 The more knowledge we have about certain tools and algorithms, the more effective we will be as developers.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Regex is a powerful tool that we can implement, just like an algorithm. Knowledge about it will make us more confident in our skills both on the job and during a technical interview.
+
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+### 5. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in Unit 17 or getting started on the homework.
+
+* If there are students who haven't installed MongoDB on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
+
+* Direct students to install Robo 3T, a native cross-platform MongoDB management tool that will make working with MongoDB easier and more intuitive.
+
+  * Direct the students to the Robo 3T install page [https://robomongo.org/download](https://robomongo.org/download) and have them click the green download button.
+
+  ![Download Robo 3T](Images/install-robo-3t.png)
+
+  * Next have them choose their OS and download the application.
+
+  ![Download Robo 3T](Images/choose-os.png)
   
-  * A `.zip` file is a compressed version of a normal folder. When you `unzip` it, the folder contains all of the information it had before it was zipped.
+  * After installing students should be able to successfully open Robo 3T on their machine.
 
-* On the web we can use something called GZip compression via an NPM Package called `compression`.
+### 6. Instructor Do: Stoke Curiosity (10 min)
 
-  * GZip is a form of data compression -- it takes a piece of data and makes it smaller. The original data can be restored by un-zipping the compressed file.
+* Open the [slide deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing) and follow these prompts with their corresponding slides:
 
-  * It is relevant to web apps and web sites because the HTTP protocol includes the ability to gzip data that is being sent.
+  * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
 
-  * This middleware will enable compression for our project, allowing for compressed versions of our files to be sent over the network for faster download times.
+  * **What's MongoDB?**: MongoDB is a very popular noSQL database that uses a document-oriented model as opposed to a table-based relational model (SQL). MongoDB stores data in BSON format (effectively, compressed JSONs).
 
-* Navigate to [compression npm](https://www.npmjs.com/package/compression)
+  * **Relational Databases**: Relational databases rely heavily on joins to combine relevant data.
 
-* Tell the class that using this middleware enables compression with just 3 lines of code.
+  * **Document Database (NoSQL)**: NoSQL databases on the other hand are effectively JSON objects and are very flexible. 
+  
+  * **MongoDB Storage**: Mongo databases contain collections which contain documents. 
 
-* Now we are going to show students around the `Network` tab in Chrome Dev Tools.
+  * **Mongo Terms**: Use this slide to cover the relevant Mongo terms.
 
-* Open up your `network` tab in the chrome dev tools. Navigate to the [New York Times](https://www.nytimes.com/). 
+* Answer any questions before proceeding.
 
-  ![Network Tab](Images/networkTab.png)
+### 7. BREAK (30 min)
 
-* Point students to all the incoming network traffic shown, and more specifically the file sizes column.
+### 8. Instructor Demo: Create Insert Find (5 min) 
 
-  ![Network Traffic](Images/networkTraffic.png)
+* In order to get set up for the activity, direct the students to:
+  
+  * Run `mongod` in one tab, if they haven't already. Explain that `mongod` is the primary daemon process for the MongoDB system that handles data access and requests and background management operations. Tell them that when you start `mongod` you're telling your machine to start the MongoDB process and run it in the background.
+  
+  * Run `mongo` to start up the mongo shell in another tab. Explain that `mongo` is the command-line shell that connects to the specific instance of `mongod` that they just started.
 
-* There is a file size showing the compressed size (Smaller number) and its uncompressed size (larger number).
+* Next explain that you'll be going over how to create a database, insert data into a collection and find stored data using MongoDB.
 
-  * Files that don't have two numbers are uncompressed files being sent unchanged.
+* Following the comments and queries located in `01-Ins-Create-Insert-and-Find/README.md`, demonstrate to the class how to create a new database, insert and find new records.
 
-  **Note**: In order to see both rows, you may need to click the "Network Settings" cogwheel and click on the "Use large request rows" checkbox.
+* Switch to a new database:
 
-### 14. Students Do: Enable Compression (10 mins)
-
-* Direct students to the activity instructions located [03-Stu_Enable-Compression](../../../../01-Class-Content/18-PWA/01-Activities/03-Stu_Enable-Compression/README.md)
-
-```md
-# GZip Compression
-
-In this activity you are going to use an NPM package called compression to enable GZip compression in your project.
-
-## Instructions
-
-* Navigate to [compression npm](https://www.npmjs.com/package/compression)
-
-  * Read about the installation procedure and some of the API's functionality. Use the docs to enable compression in your application.
-
-* Once completed, navigate to your page and look at the traffic via the Network tab.
-
-  * You should be able to see the sizes of the files your page is requesting.
-
-  * Take note of the differing file sizes.
-
-  * This shows your Uncompressed/Compressed file sizes.
-```
-
-### 15. Instructor Do: Review Compression (5 mins)
-
-* Open [03-Stu_Enable-Compression](../../../../01-Class-Content/18-PWA/01-Activities/03-Stu_Enable-Compression/Solved) in your IDE and explain the following points
-
-  * We first `npm install compression`
-
-  * We then add the following code to our `server.js`:
-
-  ```js
-  const express = require("express");
-  const mongoose = require("mongoose");
-  const compression = require("compression");
-
-  const app = express();
-
-  app.use(compression());
+  ```
+  use lessondb
   ```
 
-* Answer any questions before proceeding to break.
+* Show the current db:
 
-### 16. Instructor Do: Image Compression (10 mins)
+  ```
+  db
+  ```
 
-* Ask the class the following question(s):
+* Insert data:
 
-* Have you ever gone to a site and experienced slow image loading times?
+  ```js
+  db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
+  ```
 
-  * Images are one of the most used assets on the web. They are everywhere, and there are more than you can imagine.
+* As a class, come up with five more countries and insert them into the db using the same syntax as above.
 
-  * This is normally due to oversized images or high resolution images being downloaded and taking time. Images are one of the main culprits in slowing down web loading times.
+  * Observe where the data was entered in the MongoDB instance (in mongod).
 
-* How might we be able to fix the problem of images that are too large?
+* Find all data in the collection:
 
-  * We can use a concept called *Image Compression*. For the purposes of our course we are going to talk about *Lossy Image Compression*.
+  ```js
+  db.places.find()
+  ```
 
-* What do we mean by "lossy" image compression?
+  * NOTE: the MongoDB `_id` was created automatically.
 
-  * What lossy image compression basically means is that some of the image data is lost during compression. Once an image has used lossy compression, you cannot reverse the process due to this loss of data. The data lost will normally result in almost unnoticeable changes in image quality most of the time. 
+  * This id is specific for each doc in the collection:
 
-### 17. Student Do: Image Compression (10 mins)
+* Add `.pretty()` to make your data more readable:
 
-* Direct students to the activity instructions located in [04-Stu_Image-Compression](../../../../01-Class-Content/18-PWA/01-Activities/04-Stu_Image-Compression/README.md)
+  ```
+  db.places.find().pretty()
+  ```
 
-```md
-# Image Compression
+* Find specific data by matching a field:
 
-In this activity you are going to use an online compression tool to decrease image file sizes for the Gallery App.
+  ```js
+  db.places.find({"continent": "Africa"})
+  db.places.find({"country": "Morocco"})
+  ```
 
-## Instructions
+* Find specific data by matching an _id:
 
-* In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
+  ```js
+  db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})`
+  ```
 
-* First, unzip the `uncompressedImages.zip` file.
+* When you are done tell the class that this is just the beginning as they will be sharpening their mongo skills in the coming days and weeks.
 
-* Next, navigate to [Tiny PNG](https://tinypng.com/).
+* Ask the students the following question(s):
 
-  * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
+  * ☝️ What keyword do we use to switch to a new database?
 
-* Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
+  * 🙋 The `use` keyword.
 
-* Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
-```
+  * ☝️ What keyword do we use to find data?
 
-### 18. Instructor Do: Review Image Compression (5 mins)
+  * 🙋 The `find` keyword.
 
-* Ask the class the following question(s):
+* Answer any questions before proceeding to the next activity.
 
-* Did you see a loss in image quality?
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu-Create-Insert-and-Find/README.md`.
 
-  * Image compression allows us to lower load times for our users without a loss of visual fidelity.
+### 9. Student Do: Create Insert Find (15 min) 
 
-* Do you see the benefits of compressing images?
+* Direct students to the activity instructions found in `02-Stu-Create-Insert-and-Find/README.md`.
 
-  * When we can save space while maintaining visual quality, that is a win win. It allows for us to have high resolution images for our page while we are still decreasing download/load times for our user.
+* Break your students into pairs that will work together on this activity.
 
-* What are some other things we can do to decrease our load times?
+  ```md
+  # Creating, Inserting and Finding in MongoDB
 
-  * We can load only images that are present on the screen. If the image is not visible to the user, we shouldn't bother downloading it yet.
+  ## Instructions
 
-* Ask the class, "What if a user doesn't scroll through all of the images?"
+  * Use the command line to create a classroom database. 
 
-  * Now that we have compressed all of our images, we are certainly saving space. Point out, we are loading all 38 images when there is only 6-9 images showing at any time. If a students user is on mobile, it would only be 1-2 images at any time.
+  * Insert entries for yourself and the people in your row in a `students` collection.
 
-  * This poses multiple problems. It not only makes loading slower, but is costly when it comes to data and those people using mobile who may not have an unlimited data plan. We certainly don't want to cost our user time and money, so what can be done?
+  * Each document should have:
 
-* Ask the class, "Why do we load all of the images at page load, if the user might not see them all?"
+    * A field of `name` with the person's name.
 
-  * Loading everything at once is the default. There is a concept in programming referred to as `lazy loading` that allows us to only download assets as they are needed.
+    * A field of `rownumber` which will contain the row number that they are in.
 
-* Use students answers to transition to the next activity.
+    * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
 
-### 19. Instructor Do: Lazy Loading (10 mins)
+    * A field of `hobbies` with an array of the hobbies the person likes to do.
 
-* Open our completed [Lazy Loading Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
+  * Use find commands to get:
 
-  * If it loads too quickly, open your `Network` tab in your Dev Tools and throttle to `slow 3g`, disable cache, and refresh the page.
+    * A list of everyone in your row.
 
-  * ![Throttle Connection](Images/throttleConnection.png)
+    * An entry for a single person.
 
-* Ask the class, "What would enable us to know when an image is coming into the users viewport?"
+    * The entries for all the Mac users in your row.
 
-  * A Web API based on `scroll` events and the viewport intersection would allow us to keep an eye on when an element is or is not in view of our user.
+  ## 💡 Hint(s)
 
-  * In the case of this application, we are loading 38 images when we may not need them all. Using lazy loading, If images were scrolled onto the screen that event would then load the images if they had entered the viewport.
+  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
 
-* Ask the class, "What web API would allow us this functionality?
+  ## 🏆 Bonus 
 
-  * The `Intersection Observer API`. It provides a way to asynchronously observe when an element is or is not within our users viewport. 
+  * If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
+  ```
 
-  * We can use this API to watch and then target elements as they enter the viewport
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Ask the class, "How can the Intersection Observer API help us with loading images?"
+### 10. Instructor Review: Create Insert Find (10 min) 
 
-  * We are able to target images we would like, and observe them. As they enter the viewport of our user we can trigger a function that will then and only then load the image that has entered the viewport.
+* Open `02-Stu-Create-Insert-and-Find/Solved/README.md` in your IDE and run the following commands.
 
-  * Let's look at a code snippet that enables image lazy loading via JavaScript.
+* Create a classroom db and insert a classmate**
+
+  ```sql
+  use classroom
+  db.students.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
+  ```
+
+* Find all students in row 3**
+
+  ```sql
+  db.students.find({row:3})
+  ```
+
+* Find students named Steve**
+
+  ```sql
+  db.students.find({name:'Steve'})
+  ```
+
+* Find students in row 3 that use Mac's**
+
+  ```sql
+  db.students.find({row:3, os:'Mac'})
+  ```
+
+* BONUS: Find by entry in an array**
+
+  ```sql
+  db.students.find({"hobbies": {$in: ["Coding"]}})
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ How do we find a record inside an array?
+
+  * 🙋 Review the syntax using `db.students.find({"hobbies": {$in: ["Coding"]}})` as an example.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Update Delete Drop (5 min) 
+
+* Use the prompts and talking points below to review the following key point(s):
+
+  * ✔ We use `update` to update a value.
+
+  * ✔ We use `$set` to replace the value of a field with the specified value.
+
+  * ✔ We use `push` to update values in an array.
+
+  * ✔ We use `remove` to delete items.
+
+  * ✔ We use `drop` to drop a collection.
+
+* Open `03-Ins-Update-Delete-and-Drop/README.md` in your IDE and lead students the following commands.
+
+* Make sure you are using the database, `lessondb`,  that we created earlier.
+
+  ```sql
+  db
+  use lessondb
+  ```
+
+**Update**
+
+* Tell the class that we update data using `db.[COLLECTION_NAME].update()`
+
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}})
+  ```
+
+* Note that the above will only update the first entry it matches.
   
-* Walk through the comments below:
+* Explain that to update multiple entries we add `{multi: true}`.
 
-```js
-function initLazyImages() {
-  // Gather all of our images into a variable
-  const lazyImages = document.querySelectorAll(".lazy-image"); 
-  
-  function onIntersection(imageEntities) {
-    imageEntities.forEach(image => {
-      // When the image begins to intersect viewport, execute the if code block
-      if (image.isIntersecting) {
-        // Now that it is in viewport, we do not need to observe it anymore.
-        observer.unobserve(image.target);
-        // Set the image src to the image that has entered viewport.
-        image.target.src = image.target.dataset.src;
-      }
-    });
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
+  ```
+
+* Recall from the earlier demo the structure of our document:
+
+  ```sql
+  db.places.insert({"continent": "Africa", "country": "Morocco", "majorCities": ["Casablanca", "Fez", "Marrakech"]})
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What do you think will happen when I run the following command, even though there is not a `capital` field in the document?
+
+    ```sql
+    db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+    ```
+
+  * 🙋 `$set` will create the field `capital`.
+
+* Tell the class that the newly created field can now be updated with the same command:
+
+  ```sql
+  db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
+  ```
+
+* We can update the values in an array with `$push`:
+
+  ```sql
+  db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})
+  ```
+
+**Delete**
+
+* We delete an entry with `db.[COLLECTION_NAME].remove()`
+
+  ```sql
+  db.places.remove({"country": "Morocco"})
+  ```
+
+* We can also empty a collection with `db.[COLLECTION_NAME].remove()`
+
+  ```sql
+  db.places.remove({})
+  ```
+
+**Drop**
+
+* We drop a collection with `db.[COLLECTION_NAME].drop()`
+
+  ```sql
+  db.places.drop()
+  ```
+
+* To drop a database:
+
+  ```sql
+  db.dropDatabase()
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What does the `$push` method do?
+
+  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
+
+  * ☝️ Which method deletes an entry from a collection?
+
+  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu-Update-Delete-and-Drop/README.md`.
+
+### 12. Student Do: Update Delete Drop (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu-Update-Delete-and-Drop/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Update, Delete and Drop in MongoDB
+
+  * Go back to your classroom database. You've decided to take on a new hobby, extreme basket weaving. While practicing for your Extreme Basket Weaving Competition, you broke the computer of the person next to you. They're now using a new operating system now. Another student in your row saw you break that computer and wisely decided to move. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn’t leave with candy. All this work made you hungry, so you bought yourself some candy. 
+    
+  ## Instructions
+
+  * **Your Task:**
+
+  * Add Extreme Basket Weaving to your array of hobbies.
+
+  * Change the operating system of the student next to you.
+
+  * Remove the student to the other side of you from your database.
+
+  * Add a field of `gavecandy` with a value of `false` to everyone in the array.
+
+  * Change the value of `gavecandy` to true for yourself.
+
+  ## 🏆 Bonus
+
+  * Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/insert-documents/](https://docs.mongodb.com/manual/tutorial/insert-documents/) to see how you can accomplish this.
+
+  ## 💡 Hint(s)
+
+  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 13. Instructor Review: Update Delete Drop (10 min) 
+
+* Open `04-Stu-Update-Delete-and-Drop/Solved/README.md` in your IDE and walk students through the queries.
+
+* Go back to your classroom database.
+
+  ```sql
+  db
+  use classroom
+  ```
+
+* You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
+
+  ```sql
+  db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basket weaving"}})
+  ```
+
+* While practicing for your Extreme Basket weaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
+
+  ```sql
+  db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})
+  ```
+
+* Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
+
+  ```sql
+  db.students.remove({name: [name of another neighbor]})
+  ```
+
+* You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
+
+  ```sql
+  db.students.update({}, {$set: {gavecandy:false}}, {multi:true})
+  ```
+
+* All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
+
+  ```sql
+  db.students.update({name:'Steve'}, {$set: {gavecandy:true}})
+  ```
+
+## Bonus
+
+* Insert five more documents with one command.
+
+  ```sql
+  db.students.insertMany([
+    {name: 'Jane', row:1, os:'Mac', hobbies:['Coding', 'Sleeping', 'Karate'] },
+    {name: 'Mary', row:2, os:'Mac', hobbies:['Baseball', 'Basketball', 'Tai Chi'] },
+    {name: 'Alexis', row:3, os:'Lin', hobbies:['Gaming', 'Reading', 'Gardening'] },
+    {name: 'Gary', row:4, os:'Mac', hobbies:['Walking', 'Reading', 'Mountain Climbing'] },
+    {name: 'Ed', row:5, os:'Win', hobbies:['Coding', 'Karate', 'Scuba Diving'] }
+  ]);
+  ```
+
+* Return all documents of students who have reading as a hobby or a mac operating system.
+
+  ```sql
+  db.students.find(
+    {$or:[
+      {"hobbies":{"$in":["Reading"]}},
+      {"os":{"$in":["mac"]}}
+    ]}
+  )
+  ```
+
+* Ask the students the following question(s):
+
+  * ☝️ What does the `$push` method do?
+
+  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
+
+  * ☝️ Which method deletes an entry from a collection?
+
+  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
+
+* Answer any questions before proceeding to the next activity.
+
+### 14. Instructor Demo: Sorting in Mongo (5 min) 
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔ MongoDB has a way to sort results just like MySQL.
+
+  * ✔ We can sort by `integer`, `_id` and `class`.
+
+* Tell the students to create a new db named `zoo` and insert 5 animals with the following attributes:
+
+  * `numLegs` an integer that points to the number of legs.
+
+  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
+
+  * `weight` an integer that points to the animals weight.
+
+  * `name` a string that points to the animal's name.
+
+* Example:
+
+  ```js
+  {
+    "name": "Panda",
+    "numLegs": 4,
+    "class": "mammal",
+    "weight": 254
   }
-  // Create a new instance of Intersection Observer
-  const observer = new IntersectionObserver(onIntersection);
-  // Observe all images on load.
-  lazyImages.forEach(image => observer.observe(image));
-}
+
+  db.animals.insert({"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"});
+  db.animals.insert({"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"});
+  db.animals.insert({"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"});
+  db.animals.insert({"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"});
+  db.animals.insert({"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"});
+  ```
+
+* Open `05-Ins-Sorting-In-Mongo/README.md` in your IDE and demonstrate some of the most common ways we sort using MongoDB.
+
+* In the mongo shell, run the following commands one at a time having students follow along.
+
+* **Sort by id:**
+
+* The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
+
+  * Explain that a value of `1` is for ascending order and `-1` is for descending order.
+
+  ```sql
+  db.animals.find().sort({ _id:1 });
+  db.animals.find().sort({ _id:-1 });
+  ```
+
+* **Sort by an integer - numLegs:**
+
+```sql
+db.animals.find().sort({ numLegs:1 });
+db.animals.find().sort({ numLegs:-1 });
 ```
 
-* Ask the class, "How does this benefit our user?"
+* **Sort by a string - class:**
 
-  * By loading only necessary images, we can cut download/load times consistently and ensure as fast an experience as possible.
+```sql
+db.animals.find().sort({ class:1 });
+db.animals.find().sort({ class:-1 });
+```
 
-* Let the students know that they will be trying lazy loading out themselves in the next lesson.
+* Tell the class that now that they have an understanding of how MongoDB works we are going to dive into MongoJS.
 
-### 20. End
+* MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
 
-### Lesson Plan Feedback
+  * We are going to use this to interact with our Node.JS applications.
+  
+* Ask the students the following question(s):
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * ☝️ What does the `sort` method use to determine what order to put records in?
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  * 🙋 The `timestamp`.
+
+* When you are done take any clarifying questions before moving on.
+
+* Use the prompts and talking points below to demonstrate the following key point(s):
+
+  * ✔ MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
+
+* Have the students visit [MongoJS](https://www.npmjs.com/package/mongojs) in their browser.
+
+* Ask for a volunteer to guess how you might use `MongoJS`: `find`, `insert`, `remove` and `sort`.
+
+* These methods are nearly identical to running them in the `mongo` shell so they will feel comfortable with MongoJS.
+
+* Tell the class not to worry if they are confused, they will get plenty of practice moving forward.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu-MongoJS-Sorting/README.md`.
+
+### 15. Student Do: MongoJS Sorting (15 min) 
+
+* Direct students to the activity instructions found in `06-Stu-MongoJS-Sorting/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # MongoJS Sorting
+
+  ## Instructions
+
+  * Review the two routes provided to you and speak with a partner about what the code is doing.
+
+    * Get `/`: Displays a simple "Hello World" message (no mongo required).
+    
+    * Get `/all`: Send JSON response with all animals. (Uses the same animals collection created in [05-Ins-Sorting-In-Mongo](../05-Ins-Sorting-In-Mongo/README.md))
+
+  * Make two routes that display results from your zoo collection:
+
+    * Name: Send JSON response sorted by name in ascending order.
+
+    * Weight: Send JSON response sorted by weight in descending order.
+
+  ## 💡 Hint(s)
+
+  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+
+  ## 🏆 Bonus
+
+  * Create an additional route that returns the heaviest animal.
+
+  ## Seed Zoo DB
+  Run the following in the mongo shell if you did not add at least 5 animals in the previous activity:
+
+  use zoo;
+  db.animals.insertMany([
+    {"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"},
+    {"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"},
+    {"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"},
+    {"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"},
+    {"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"}
+  ]);
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 16. Instructor Review: MongoJS Sorting (10 min) 
+
+* Open `06-Stu-MongoJS-Sorting/Solved/server.js` solution on your machine, and run `server.js` with Node.
+
+* Visit the different routes in your web browser to show students the results:
+
+  * `/` will display a simple hello world message.
+
+  * `/all` will display JSON with every animal in your zoo collection.
+
+  * `/name` will display JSON with every animal, sorted by name.
+
+  * `/weight` will display JSON with every animal, sorted by weight.
+
+* After each route, start the `server.js` file and use your web browser to check the route. 
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Student Do: Mongo CRUD (5 min) 
+
+* Open `07-Stu-Mongo-CRUD/Solved/server.js` on your machine and demonstrate the solved version of the app by creating, updating and deleting a few notes.
+
+  * Note that to update a note you have to click on it's title, then update the form and submit.
+
+* After demoing, direct students to the activity instructions found in `07-Stu-Mongo-CRUD/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # MongoJS CRUD
+
+  In this activity you will build the backend for a note-taking app.
+
+  ## Instructions
+
+  * Update the [server.js](Unsolved/server.js) file to include the following six routes.
+
+  * Save a note to the database's collection `POST: /submit`.
+
+  * Retrieve all notes from the database's collection `GET: /all`.
+
+  * Retrieve one note in the database's collection by it's ObjectId `GET: /find/:id`.
+
+  * Update one note in the database's collection by it's ObjectId `POST: /update/:id`.
+
+  * Delete one note from the database's collection by it's ObjectId `DELETE: /delete/:id`.
+
+  * Clear the entire note collection `DELETE: /clearall`.
+
+  ## 💡 Hint(s)
+
+  * You can see a list of methods available to you here. [https:github.com/mafintosh/mongojs#api](https://github.com/mafintosh/mongojs#api).
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: Mongo CRUD (15 min) 
+
+* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) and walk students through the code.
+
+* Answer any questions before proceeding.
+
+* Instruct your students to open the Robo 3T application. They should see a window like this:
+
+  ![6-roboConnect](Images/6-roboConnect.jpg)
+
+* They should hit the connect button. Do the same to show students what comes next.
+
+  * `/all` will display JSON with every animal in your zoo collection.
+
+  * `/name` will display JSON with every animal, sorted by name.
+
+  * `/weight` will display JSON with every animal, sorted by weight.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu-Robo-3T/README.md`.
+
+### 19. Student Do: Robo 3T (10 min) 
+
+* Direct students to the activity instructions found in `08-Stu-Robo-3T/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Robot 3T
+
+  * In this activity, you will practice using Robo 3T.
+
+  ## Instructions
+
+  * Drop your classroom collection and create a new one.
+
+  * In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
+
+    * This should be entered using the `right-click -> Insert Object` method. 
+
+  * Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
+
+  * As students enter their BSON info into slack, insert it into your database.
+
+  * By the end of the exercise, you should have every student's information in your classroom collection.
+  ```
+
+* Answer any questions before ending the class.
+
+### 20. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

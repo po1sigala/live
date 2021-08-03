@@ -1,1128 +1,1754 @@
-## 10.4 - The Context API <!--links--> &nbsp; [⬅️](../03-Day/03-Day-LessonPlan.md) &nbsp; [➡️](../05-Day/05-Day-LessonPlan.md)
+# 10.4 Full-Time Lesson Plan: Events, Forms, Fetching Data, and React Hooks
 
 ## Overview
 
-This class introduces students to the React Context API, an easier and lighter weight alternative to state management libraries like Redux or MobX. Learning how to use the Context API will also introduce students to the concept of state management, as well as the benefits/pitfalls of tightly-coupled components.
+In this lesson, you'll review some important React concepts with students to help them understand why it is a powerful tool for creating modern web applications. You will review the concept of props, state, event handlers within React, making forms functional, fetching data from an API in React, and React Hooks.
 
 ## Instructor Notes
 
-- `Summary: Complete activities 7-14 in Unit 20.`
+* In this lesson, students will complete activities `09-Ins_Props` through `20-Stu_Hooks-useEffect`.
 
-- The demos and activities will only include the `src` folder which you will need to replace in your React app's boilerplate to avoid repetitive installs. It's recommended that you completely restart the dev server between activities.
+* Much like in the previous lesson, each activity will require the student to remove the `/src` directory from their `00-practice-app` and replace it with the `/src` for the current activity.
 
-- Today's lesson will rely on instructor led demonstrations, so be sure to spend some time before class reviewing the examples.
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-- Create Context Objects and use them as a means to share state.
+* Explain and use React props.
 
-- Learn about general good practices when working with component-based applications.
+* Explain the concept of state within a React app.
 
-- Identify proper use cases of Context API, while staying aware of its shortcomings.
+* Implement event handlers in React components.
 
-- Utilize a combination of Context Objects, Providers, and consumers via the `useContext` Hook to manage global state.
+* Create functional forms in React.
 
-- Use multiple Context Providers to manage complex state.
-
-## Slides
-
-[10.4: The React Context API](https://docs.google.com/presentation/d/1rHP32SL8aAlHn_0FE-EeD_e6lvERTBwtEpC4UvARdq0/edit?usp=sharing)
+* Explain the `useEffect` Hook and how it can be used inside a React app.
 
 ## Time Tracker
 
-[10.4 Time Tracker](https://docs.google.com/spreadsheets/d/144jIaroDbesRzXbTiQAu32knQ9HjNfeNUwO-1czv6t0/edit?usp=sharing)
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Demo: Props             | 0:05     |
+| 10:05AM| 2   | Student Do: Props                  | 0:15     |
+| 10:20AM| 3   | Instructor Review: Props           | 0:10     |
+| 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: State             | 0:05     |
+| 10:45AM| 6   | Student Do: State                  | 0:15     |
+| 11:00AM| 7   | Instructor Review: State           | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Event Handling    | 0:05     |
+| 11:15AM| 9   | Student Do: Event Handling         | 0:15     |
+| 11:30AM| 10  | Instructor Review: Event Handling  | 0:10     |
+| 11:40AM| 11  | FLEX                               | 0:20     |
+| 12:00PM| 12  | BREAK                              | 0:30     |
+| 12:30PM| 13  | Instructor Demo: React Forms       | 0:05     |
+| 12:35PM| 14  | Student Do: React Forms            | 0:15     |
+| 12:50PM| 15  | Instructor Review: React Forms     | 0:10     |
+| 1:00PM | 16  | Instructor Demo: Fetching Data     | 0:05     |
+| 1:05PM | 17  | Student Do: Fetching Data          | 0:15     |
+| 1:20PM | 18  | Instructor Review: Fetching Data   | 0:10     |
+| 1:30PM | 19  | Instructor Demo: useEffect Hook    | 0:05     |
+| 1:35PM | 20  | Student Do: useEffect Hook         | 0:15     |
+| 1:50PM | 21  | Instructor Review: useEffect Hook  | 0:10     |
+| 2:00PM | 22  | FLEX                               | 0:30     |
+| 2:30PM | 23  | END                                | 0:00     |
 
 ---
 
-### 1. Students Do: Third Party Hooks (20 mins)
+## Class Instruction
 
-- If time permits, introduce students to [07-Stu_ThirdPartyHooks/](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/README.md). Since this activity uses third party Hooks, only proceed with this activity if the students seem to have a solid grasp of Hooks. Otherwise, spend the rest of class answering lingering questions, reviewing, and skimming over the solution with the class.
+### 1. Instructor Demo: Props (5 min) 
 
-  - In this activity we will practice using third party Hooks. Specifically, we will be creating a survey form using the `react-hanger` package on npm.
+* Welcome students to class.
 
-  - Let the students know that `react-hanger` is one of many custom Hooks packages on GitHub. This package contains multiple custom
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `09-Ins_Props/src`.
+  
+* Run `npm start` from the command line and demonstrate the following:
 
-  ````md
-  - Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+  * 🔑 This example is using a Bootstrap alert that tells us that there is an invalid username or password.
 
-  - Install react-hanger by running `npm install react-hanger` in your terminal.
+  * Inside `App.js`, we are returning a component `Alert` with a type attribute of `danger`.
+  
+  * `App.js` also has a variable called `message` that is getting passed as a prop to `Alert`:
 
-  - **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+     ```js
+     const message = "Invalid user id or password"
 
-    ```html
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    ```
-  ````
+     function App() {
+       return <Alert type="danger" message={message} /></Alert>;
+     }
+     ```
 
-  - Start the application in dev mode by running `npm start` in your terminal.
+  * If we look at `/components/Alert.js`, we can see that the component accepts something called `props` as an argument. We refer the data in `props` just like we would with any other JavaScript object:
+  
+     ```js
+     function Alert(props) {
+       console.log(props);
 
-  - Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+       return (
+         <div className={`alert alert-${props.type || "success"}`} role="alert">
+           {props.message}
+         </div>
+       );
+     }
+     ```
 
-    - There are a few fields in our survey form. Before writing any code, try thinking about how you would manage the state of this form.
+  * 🔑 Every component has access to a `props` argument. A prop is always an object that contains all of the values passed to the component.
+  
+  * One of our props is `props.type`, which will be used to change the class of the element and therefore the way it looks.
+  
+  * Similarly, we have a `props.message` key, which contains a string, `"Invalid user id or password"`:
 
-  - Navigate to the [react-hanger docs](https://github.com/kitze/react-hanger) familiarize yourself with the `useInput`, `useBoolean`, and `useNumber` Hooks.
+     ```js
+     return (
+       <div className={`alert alert-${props.type || "success"}`} role="alert">
+      {props.message}
+       </div>
+     );
+     ```
+  
+  * 🔑 We can pass any type of data as a prop, including strings, numbers, arrays, functions, and even entire components!
+  
+  * 🔑 It is important to note that React uses a unidirectional data flow, meaning that data only flows in one direction: from the top down, parent to child.
 
-  - Update this application to accomplish the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    - Each user input should be handled using the `react-hanger` Hooks.
+  * ☝️ If a prop inside the component isn't what we expect it to be, where could we look to find out why?
 
-    - When the user clicks an emoji, indicate which type of response they selected by displaying the text: `You responded that you feel FEELING`. `FEELING` should be replaced with the value of the emoji that they clicked.
+  * 🙋 We would look at the parent component to see what kind of data is being passed.
 
-    - Make your survey form a little more dynamic by displaying a field for additional comments when the user clicks on an emoji.
+* Answer any questions before proceeding to the next activity.
 
-    - When the form is submitted, `console.log` an object containing all of the values from the form.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Props/README.md`.
 
-  ### Hints
+### 2. Student Do: Props (15 min) 
 
-  - There are many ways to satisfy the requirements of this application. It is recommended that you attempt the most straightforward solution first, then refactor your working app.
+* Direct students to the activity instructions found in `10-Stu_Props/README.md`.
 
-  ```
+* Break your students into pairs that will work together on this activity.
 
-  ```
+   ```md
+   # 🏗️ Pass Data Using Props 
 
-### 2. Instructor Do: Review Third Party Hooks (10 mins)
+   ## Before We Begin
 
-- Replace your React application's src folder with [07-Stu_ThirdPartyHooks/Solved](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/Solved/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
+   Before you begin this activity, complete the following steps:
 
-- Demonstrate that the application satisfies the requirements:
+   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-  - Fill out each field in the form with dummy data.
+   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
 
-  - Click `submit`.
+   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-  - Open the console and show that the form object contains the value from each field.
+      `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-- Open [Survey/index.js solved](../../../../01-Class-Content/20-State/01-Activities/07-Stu_ThirdPartyHooks/Solved/src/pages/Survey/index.js) in your IDE and demonstrate the following:
+   ## Activity
 
-  - Even though we used `textarea` instead of `input`, we can still use the `useInput` hook.
+   Work with a partner to implement the following user story:
 
-  - `showComment` is initialized to `false` so that the additional input field is not visible initially.
+   * As a developer, I want to render multiple cards for different animals by passing props to each one.
 
-  - Since we will be setting the rating manually, we do not need to give it upper and lower bounds.
+   ## Acceptance Criteria
 
-  ```js
-  const favoriteThing = useInput("");
-  const showComment = useBoolean(false);
-  const comment = useInput("");
-  const feeling = useInput("");
-  const rating = useNumber(0);
-  ```
+   * It's done when I have updated the return method in `src/components/Display.js` to render a `Card` for each dog.
 
-  - Our form object contains the value of each field. Since `showComment` is only used for display purposes, we do **not** include it in the form object.
+   * It's done when I have passed data for each dog's `name` and `description` as props to the `Card`.
 
-  ```js
-  const handleSubmit = () => {
-    const form = {
-      favoriteThing: favoriteThing.value,
-      comment: comment.value,
-      feeling: feeling.value,
-      rating: rating.value
-    };
-    console.log(form);
-  };
-  ```
+   * It's done when I have added a unique `key` property to each `Card` that gets rendered.  
 
-  - `...favoriteThing.eventBind` binds both the `value` and the `onChange` props of an element, as long as it has a `event.target.value`.
+   ## 💡 Hints
 
-  - This single method would also work with input fields and select elements.
+   * How can we use the [React Docs on components and props](https://facebook.github.io/react/docs/components-and-props.html) to understand props better?
 
-  ```js
-  <textarea {...favoriteThing.eventBind} />
-  ```
+   * What is the term **props** short for?
 
-  - It is very important that we include `role="img"` and `aria-label="angry"` to make the emojis accessible.
+   ## 🏆 Bonus
 
-  - The onClick method toggles our `showComment` boolean and sets the feeling value to angry.
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  ```js
-  <span
-    role="img"
-    aria-label="angry"
-    onClick={() => {
-      showComment.toggle();
-      feeling.setValue("angry");
-    }}
-  >
-    😠
-  </span>
-  ```
+   * How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to React components?
 
-  - We use a ternary operator so that the additional comments textarea only renders if the `showComment` boolean is true.
+   Use [Google](https://www.google.com) or another search engine to research this.
+   ```
 
-  - Once again, `onClick` and `value` are bound to the comment variable.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  <div className="response">
-    {showComment.value ? (
-      <textarea
-        {...comment.eventBind}
-        placeholder="Please add any additional comments"
-      />
-    ) : null}
-  </div>
-  ```
+### 3. Instructor Review: Props (10 min) 
 
-### 3. Stoke Curiosity (10 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-- Tell the students that this unit covers content that is considered the bleeding edge of React. It is important to note that although some of the concepts are brand-new, they are being quickly adopted into the React ecosystem by the community.
+  * ☝️ How comfortable do you feel with props? (Poll via Fist to Five, Slack, or Zoom)
 
-- The reasons that we learn about these new features are:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
-  - Learning brand-new features helps you become employer-competitive.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  - Learning these features will help you to become better versed in React, making you more effective and improving your ability to adapt to new advancements.
+  * ✔️ Props
 
-  - Oftentimes, new features enable a faster, smaller (in file size), or better crafted application.
+  * ✔️ Unidirectional data flow
 
-  - In this unit, the features that we will learn helped solve problems that React developers had been trying to solve for years.
+* Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
-### 4. Students Do: Prop Drilling (20 mins)
+  * First we need to open the `index.js` file and import Bootstrap to style the cards:
 
-- Introduce [08-Stu_PropDrilling/Unsolved](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Unsolved)
+     ```js
+     import React from 'react';
+     import ReactDOM from 'react-dom';
+     import App from './App';
+     import 'bootstrap/dist/css/bootstrap.min.css';
 
-````md
-# Prop Drilling
+     ReactDOM.render(<App />, document.getElementById('root'));
+     ```
 
-In this activity we will review passing props down the component tree in React.
+* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
+  
+  * The first thing we notice is that we are importing another component called `Card` at the top of the file. We will look more closely at this component later in the activity.
 
-## Instructions
+  * Inside the `Display` component, we have an array of objects called `canines`. Each object within that array contains the `name` and `description` of dogs:
 
-* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+     ```js
+     import React from 'react';
+     import Card from './Card';
 
-* Install axios by running `npm install axios` in your terminal.
+     const canines = [
+       {
+         name: 'Spot',
+         description: 'The best boy',
+         id: 1,
+       },
+       {
+         name: 'Zero',
+         description: 'A kind soul',
+         id: 2,
+       },
+       {
+         name: 'Walter',
+         description: 'Friend for life',
+         id: 3,
+       },
+     ];
+     ```
 
-* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* Open `00-practice-app/src/components/Card.js` in your IDE and explain the following:
 
-  ```html
-  <link
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous"
-  />
-  ```
+  * The `Card` component imports React at the top of the file:
 
-* Start the application in dev mode by running `npm start` in your terminal.
+     ```js
+     import React from 'react';
+     ```
 
-* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+  * We pass the props argument to the `Card` component so that we can reference the data passed from the parent:
 
-* The `fetchUsers` function in `src/utils/API.js` returns an array of users that follow this format:
+     ```js
+     export default function Card(props) {
+     ```
 
-  ```js
-  [
-    {
-      login: "username",
-      profileUrl: "https://github.com/username",
-      image: "https://avatars0.githubusercontent.com/u/00000000?v=4"
-    }
-  ];
-  ```
+  * In the return statement for the card, we take the `name` and `description` that were passed as props and render them in the Bootstrap card:
 
-* Update this application to accomplish the following:
+     ```jsx
+     return (
+       <div>
+         <div className="card" style={cardStyle}>
+           <img
+             className="card-img-top"
+             src={`http://placecorgi.com/${randomWidth()}`}
+             alt="Card cap"
+           />
+           <div className="card-body">
+             <h5 className="card-title">{props.name}</h5>
+             <p className="card-text">{props.description}</p>
+             <a href="#" className="btn btn-primary">
+               Adopt {props.name}
+             </a>
+           </div>
+         </div>
+       </div>
+     );
+     ```
 
-  * The card on the gallery page should contain an image of the user, their programming language, and arrow buttons that allow for navigation through different users.
+* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
 
-  * The props should be passed through each component layer in the following manner:
+  * Now that we've looked at the `Card` component and what it does, let's check what is happening in the return statement for `Display`.
+  
+  * First map through each of the animals and return a new `Card` component for each dog.
+  
+  * Each card is made unique to that dog by the props that we pass to it -- specifically, the `name` and `description` props.
+  
+  * 🔑 It is important to provide a unique `key` attribute when mapping through lists like this one. It helps React distinguish one element from another:
 
-    * title (login): Gallery > CardContainer > Card > CardHeading > CardTitle > CardTitleText
+     ```js
+     export default function Display() {
+       return (
+         <div>
+           {canines.map((dog) => (
+             <Card name={dog.name} description={dog.description} key={dog.id} />
+           ))}
+         </div>
+       );
+     }
+     ```
 
-    * image: Gallery > CardContainer > Card > CardImage
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * profileUrl: Gallery > CardContainer > Card > CardBody
+  * ☝️ What are some different ways that we can pass props to a child component?
 
-    * handleClick: Gallery > CardContainer > Card > CardBtn
+  * 🙋 We can pass props to the child component by passing a `props` object as an argument, or we can use object destructuring assignment.
 
-  * Each arrow click should _not_ make an additional API call.
+  * ☝️ What can we do if we don't completely understand this?
 
-````
+  * 🙋 We can refer to supplemental material, read the [React Docs on props](https://reactjs.org/docs/components-and-props.html), and stay for office hours to ask for help.
 
-### 5. Instructor Do: Review Prop Drilling (15 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Run `npm start` in [08-Stu_PropDrilling/Solved](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved) and demonstrate the functioning application in your browser.
+### 4. Instructor Do: Stoke Curiosity (10 mins)
 
-* Open [Gallery.js](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/pages/Gallery.js)  in your IDE. Point out the following key aspects of the activity:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * `Gallery.js` is a stateful component responsible for application logic such as performing API requests. It stores the data response from API requests in state.
+  * ☝ What is state within the context of a React application?
+  
+  * 🙋 **State** is an object that contains property values that belong to a component.
+  
+  * ☝ What is a React Hook?
+  
+  * 🙋 **Hooks** are a new addition to React that let us use state and other React features without writing an ES6 class.
+  
+* Explain that in the beginning, managing the internal state of a component could only be accomplished by creating a class-based component and using a method called `this.setState()`.
 
-  * We use the `useState` hook multiple times so that it's easier to individually manage the different aspects of our state.
+* Explain to students that now, with React Hooks, we can manage state in functional components and also replicate the lifecycle methods that were previously only possible in class-based components.
 
-* Ask the students the following question:
+* Let students know that they will learn how to use React Hooks inside functional components, specifically the `useState` and `useEffect` Hooks.
 
-  * ☝️ Is there a different way we could have organized our state?
+* The most important React Hook, `useState`, is a function exposed by React itself that we can import in components.
 
-  * 🙋 We could have chosen to use one big state object instead of separating them out. This is a tradeoff that students will constantly encounter when trying to manage state. Ideally, we want to organize our code in a way that makes sense.
+* After importing `useState`, we will pluck two values out of it. The first will be the state variable, and the second will be a method to update it.
 
-  * 🙋 Oftentimes, it is best to group similar logic into their own state objects. For example, we may make one state object to contain all of our users, and another to manage the current state of the application. (Combine userIndex and user into one state object)
+* Express that choosing whether to use functional components or class-based components is a design choice by the developer. It is important to be comfortable with both so that you can adapt to existing codebases.
 
-  ```js
-  const [user, setUser] = useState({});
-  const [users, setUsers] = useState([]);
-  const [userIndex, setUserIndex] = useState(0);
-  ```
+* Prepare students for the fact that these topics can get abstract, and encourage them to ask questions as they arise. React Hooks can be a little confusing at first, but most developers appreciate their elegance once they become familiar with them.
 
-- When the component mounts , we run `loadUsers`. Since the second argument is an empty array, `loadUsers` will only be ran once.
+### 5. Instructor Demo: State (5 min) 
 
-```js
-useEffect(() => {
-  loadUsers();
-}, []);
-```
+* Start by deleting the `00-practice-app/src` directory and replacing it with `11-Ins_State/src`.
 
-- `loadUsers` makes a request to our API using the `fetchUsers` method and _then_ updates the respective properties using their setter methods.
+* In the command line, run `npm start` inside the `00-practice-app` directory and demonstrate the following:
 
-```js
-function loadUsers() {
-  API.fetchUsers()
-    .then(users => {
-      setUsers(users);
-      setUser(users[0]);
-    })
-    .catch(err => console.log(err));
-}
-```
+  * When we run the React application, the browser loads a page with a greeting that says, "React state is awesome!"
+  
+  * Instead of being hardcoded, this greeting is actually being rendered from a value that is stored in state.
+  
+  * 🔑 The **state** of a component is an object that holds some information that might change over the life of a component. You will often hear this term used in conjunction with **props**, which we will cover shortly.
+  
+  * This app takes advantage of a React Hook called `useState`, which lets you add React state to functional components.
 
-- In the `return` block, we return a Row component with a CardContainer. We pass to the CardContainer title, image, profileUrl, and handleBtnClick props.
+* Open `00-practice-app/src/components/Greeting.js` in your IDE and demonstrate the following:
 
-```js
-return (
-  <div>
-    <h1 className="text-center">Welcome to LinkedUp</h1>
-    <p className="text-center h3">Click on the arrows to browse users</p>
-    <Row>
-      <CardContainer
-        title={user.login}
-        image={user.image}
-        profileUrl={user.profileUrl}
-        handleBtnClick={handleBtnClick}
-      />
-    </Row>
-  </div>
-);
-```
-
-- When a user clicks one of the buttons in the browser, `handleBtnClick` is called. Using `getAttribute`, we grab the `data-value` attribute off the button that triggered the event. If the value is equal to “next”, we call the `nextUser` method, otherwise we call `previousUser`
-
-```js
-function handleBtnClick(event) {
-  // Get the title of the clicked button
-  const btnName = event.target.getAttribute("data-value");
-  if (btnName === "next") {
-    const newUserIndex = userIndex + 1;
-    nextUser(newUserIndex);
-  } else {
-    const newUserIndex = userIndex - 1;
-    previousUser(newUserIndex);
-  }
-}
-```
+  * At the very top of the component, we must import `useState` with React in order to use it:
 
-- The `nextUser` and `previousUser` methods each update state with the `userIndex` value returned from `handleBtnClick`
+     ```js
+     import React, { useState } from 'react';
+     ```
 
-```js
-function nextUser(userIndex) {
-  // Ensure that the user index stays within our range of users
-  if (userIndex >= users.length) {
-    userIndex = 0;
-  }
-  setUser(users[userIndex]);
-  setUserIndex(userIndex);
-}
+  * We first declare the **state variable** called `greeting` by calling the `useState` Hook.
+  
+  * `useState` is a way to preserve some values between the function calls. React will remember the value of `greeting` in between re-renders.
+  
+  * The `useState` Hook will return the current state and a function to update it, which in this case is called `setGreeting`.
+  
+  * The only argument that `useState` accepts is the initial value of the state variable. In this case, we are starting the `greeting` at `Welcome! React state is awesome!`:
+  
+     ```js
+     const [greeting, setGreeting] = useState('Welcome! React state is awesome!');
+     ```
 
-function previousUser(userIndex) {
-  // Ensure that the user index stays within our range of users
-  if (userIndex < 0) {
-    userIndex = users.length - 1;
-  }
-  setUser(users[userIndex]);
-  setUserIndex(userIndex);
-}
-```
+  * To actually render the greeting in the return method, we simply put it in curly braces inside the JSX:
 
-- Answer any questions related to `Gallery.js`.
+     ```jsx
+     return (
+       <div className="card text-center">
+         <div className="card-header bg-primary text-white">
+           Greeting from state:
+         </div>
+         <div className="card-body">
+           <p className="card-text" style={{ fontSize: '50px' }}>
+             {greeting}
+           </p>
+         </div>
+       </div>
+     );
+     ```
 
-- Then open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardContainer/index.js) and point out the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  - The CardContainer component imports the Card component and passes to it the title, image, profileUrl, and handleBtnClick, props received from the Gallery component.
+  * ☝️ What is returned from the `useState` Hook?
 
-  - We use Object destructuring to get `props.title`, `props.image`, etc. This is not required, but it helps keep our code clean and easy to read.
+  * 🙋 The `useState` Hook returns the state and a function to update it.
+  
+  * ☝️ What role does state play in reloading the UI of your React application?
+  
+  * 🙋 We can use state to associate data with the components and keep track of any values that cause the UI to update.
 
-```js
-function CardContainer({ title, image, profileUrl, handleBtnClick }) {
-  return (
-    <div className="jumbotron card-container">
-      <Card
-        title={title}
-        image={image}
-        profileUrl={profileUrl}
-        handleBtnClick={handleBtnClick}
-      />
-    </div>
-  );
-}
-```
+* Answer any questions before proceeding to the next activity.
 
-- Next, open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/Card/index.js) and point out the following:
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_State/README.md`.
 
-  - The Card component imports the CardHeading, CardImg, CardBtn and CardBody components.
+### 6. Student Do: State (15 min) 
 
-```js
-import CardBody from "../CardBody";
-import CardBtn from "../CardBtn";
-import CardImg from "../CardImage";
-import CardHeading from "../CardHeading";
-```
+* Direct students to the activity instructions found in `12-Stu_State/README.md`.
 
-- The Card component receives props from `CardContainer` and passes the `handleBtnClick` props to both instances of `CardBtn`.
+* Break your students into pairs that will work together on this activity.
 
-- The remaining props are passed through the `CardHeading`, `CardImg`, and `CardBody` components.
+   ```md
+   # 🐛 Non-Functional Increment and Decrement Buttons
 
-- Note the data-value props passed to each CardBtn component.
+   ## Before We Begin
 
-```js
-function Card({ title, image, profileUrl, handleBtnClick }) {
-  return (
-    <div>
-      <CardHeading title={title} />
-      <CardImg image={image} />
-      <CardBody profileUrl={profileUrl} />
-      {!image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-      <CardBtn
-        style={{ opacity: image ? 1 : 0 }}
-        onClick={handleBtnClick}
-        data-value="back"
-      />
-      <CardBtn
-        style={{ opacity: image ? 1 : 0 }}
-        onClick={handleBtnClick}
-        data-value="next"
-      />
-    </div>
-  );
-}
-```
+   Before you begin this activity, complete the following steps:
 
-- Next, open [Components/Card](../../../../01-Class-Content/20-State/01-Activities/08-Stu_PropDrilling/Solved/src/components/CardBtn/index.js) and point out the following:
+   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-  - The `CardBtn` component receives props from the Card component and renders them as attributes.
+   2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
 
-```js
-function CardBtn(props) {
-  return (
-    <button onClick={props.onClick} className={`card-btn ${props["data-value"]}`} {...props} />
-  );
-}
-```
+   3. Import Bootstrap into the [index.js](./Unsolved/src/index.js) file:
+      
+     `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-- Open the components files in the following order: `CardHeading > CardTitle > CardTitleText`.
+   ## Activity
 
-  - Point out that each intermediate component doesn't actually use props for anything besides passing the value down to the next component.
+   Work with a partner to resolve the following issue:
 
-- Return to http://localhost:3000/gallery in the browser and, using the DOM Inspector, point out the corresponding attributes as well as the onClick event associated with each button.
+   * As a user, I want to be able to welcome some students to class by displaying their names in an unordered list on the page. I also want to display a welcome message.
 
-- Ask the students the following questions:
+   ## Expected Behavior
 
-  - ☝️ Why do we refer to this approach as “prop drilling”?
+   Loading the page will show a greeting message and a list of students from the class in an unordered list. These values should be declared as state variables using the `useState` Hook and accessed inside the JSX with curly braces.
 
-  - 🙋 Prop drilling is the process of passing props down through multiple levels of components.
+   ## Actual Behavior
 
-  - ☝️ What are the pros and cons of prop drilling?
+   The page seems to have hardcoded values inside the JSX for the greeting and student names.
 
-  - 🙋 Prop drilling makes it simple to keep track of values since the props data only moves in one direction. When the prop drilling is only a couple of levels deep, it is easy to find out exactly where the props are being used. On the other hand, prop drilling can make your code more complex when you have to drill through many levels of components. Prop drilling can also make your code harder to understand if props are renamed halfway through. You may also pass down more props than necessary and create problems when deleting an intermediate component that uses the props.
+   ## 💡 Hints
 
-  - ☝️ Is there another component where we could make the API call?
+   What do we need to import to use the `useState` Hook?
 
-  - 🙋 We could make the API call from the image component itself, but we avoid doing that since we want the purpose of the image component to be presentational only.
+   ## 🏆 Bonus
 
-### 6. Instructor Do: Giving Context Slides (10 mins)
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-- Open the slide deck [10.4: The React Context API](https://docs.google.com/presentation/d/1rHP32SL8aAlHn_0FE-EeD_e6lvERTBwtEpC4UvARdq0/edit?usp=sharing).
+   * What other Hooks can we use with React?
 
-- Using the slides as guide and reference, explain the following:
+   Use [Google](https://www.google.com) or another search engine to research this.
+   ```
 
-  **Component Lifecycle**: The 3 main phases of the component lifecycle are mounting, updating, and unmounting. Point out that the 2 primary ways of causing a component to re-render are passing it _new_ props or by using the `setState()` method.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  **Prop Drilling**: Prop drilling is the process that you have to go through to get data to parts of the React Component tree. Remind the students that it's often best to keep the state as close to where it's relevant as possible. We can't simply add state to the lowest level component because that would defeat the purpose of using presentational components. Use this question as a segway into the next slide.
+### 7. Instructor Review: State (10 min) 
 
-  **Presentational vs. Container Components**: We separate the _logic_ and the _looks_ of our application so that our code is easier to understand, test, debug, and maintain. Container components include the logic of the application, which is often stored in the component's state, requiring us to use class components instead of functional components. Presentational components are primarily used for UI elements like layout, and often use stateless functional components (often referred to as "dumb" components) to render their content.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  **ContextAPI**: Oftentimes, applications need an easier way to manage state than passing `props` down several component levels. To avoid adding in unnecessary state, we can use a feature called the React Context API. The React Context API provides a solution to this problem without introducing the complexity of an entire state management library.
+  * ☝️ How comfortable do you feel with the `useState` Hook? (Poll via Fist to Five, Slack, or Zoom)
 
-  **Providers & Consumers**: Explain that a Context `Provider` is used to wrap a component that has a child component that will need access to the Context Object. Explain that a Context `Consumer` is used to access properties of a Context Object. All `Consumer`s must be descendants of their respective `Provider`s.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
-  **Loosely Coupled Components**: Make sure to emphasize the importance of keeping components loosely coupled. This is a topic that is important for students to grasp.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  **State Management**: Let students know that they should be mindful of how often they're using the Context API. If they begin to use the Context API rampantly throughout their code, it may be time to consider using Redux or another state management library.
+  * ✔️ `useState` Hook
 
-### 7. Instructor Do: useContext Demo (10 mins)
+  * ✔️ Default state values
 
-- Run [useContext Demo](../../../../01-Class-Content/20-state/01-Activities/09-Ins_useContext/) by copying the `src` folder into your prepared CRA application. Navigate to http://localhost:3000/ in your browser and demonstrate the following:
+* Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
-  - The application still works the same as the previous iteration, but this time utilizes global state.
+  * First we want to import Bootstrap to make sure that the `className` attributes apply the proper styles to the page:
 
-- Open [DeveloperContext.js](../../../../01-Class-Content/20-state/01-Activities/09-Ins_useContext/src/utils/DeveloperContext.js) in your IDE and explain the following:
+     ```js
+     import 'bootstrap/dist/css/bootstrap.min.css';
+     ```
 
-  - We create and export a new Context object initialized with default values:
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
 
-  ```js
-  import React from "react";
+  * Inside the `App.js` file, we can see that we import something called `Greeting.js` and return it in the `App` component:
 
-  const DeveloperContext = React.createContext({
-    name: "",
-    mood: "",
-    lifeLongLearner: false,
-    excitementLevel: 0
-  });
+     ```js
+     import React from "react";
+     import Greeting from "./components/Greeting";
 
-  export default DeveloperContext;
-  ```
+     function App() {
+       return <Greeting />;
+     }
 
-- Open [Developer.js](../../../../01-Class-Content/20-state/01-Activities/09-Ins_useContext/src/components/Developer.js) in your IDE and explain the following:
+     export default App;
+     ```
 
-  - We import the `DeveloperContext` object:
+* Open `00-practice-app/src/components/Greeting.js` in your IDE and explain the following:
 
-  ```js
-  import DeveloperContext from "../utils/DeveloperContext";
-  ```
+  * To use the `useState` Hook from React, we have to modify the import statement at the top of the file:
 
-  - The `useContext` Hook replaces the need for a `contextConsumer` that you'll find in the React docs.
+     ```js
+     import React, { useState } from 'react';
+     ```
 
-  ```js
-  const DeveloperInfo = () => {
-    const { name, mood, excitementLevel } = useContext(DeveloperContext);
+  * With the `useState` Hook, we declare a state variable called `greeting` and a function to update `setGreeting`. The `useState` Hook accepts only one argument, which will be the initial value for `greeting`. In this case, this is `Welcome the following students to class!`:
 
-    return (
-      <div className="container">
-        <h2>Name: {name}</h2>
-        <h3>Status: {mood}</h3>
-        <h3 style={mood === "determined" ? { opacity: 1 } : { opacity: 0 }}>
-          Excitement Level: {excitementLevel}
-        </h3>
-      </div>
-    );
-  };
-  ```
+     ```js
+     function Greeting() {
+       const [greeting, setGreeting] = useState('Welcome the following students to class!');
+     ```
 
-  - 📝 The `useContext` Hook takes a Context Object as an argument. This means that you cannot forget to import the proper context into your file.
+  * Because the app will render a list of students, we also want to create a state variable called `group`. This will be an array that contains a few students from the class. Notice that we immediately set an initial value for the state variable with three names:
 
-  - 📝 The `useContext` Hook is read only, meaning you cannot set the Context Object by passing in properties.
+     ```js
+     const [group, setGroup] = useState(["John", "Grace", "Jared"]);
+     ```
 
-  - 📝 The `useContext` Hook still requires you to wrap one of its ancestor components with a Context Provider.
+  * In the return statement, we see the JSX that will render when this component loads. We use curly braces to render the greeting inside a `p` tag.
 
-  - 🎗️ Just like the Context API, the best use-case for `useContext` is avoiding prop drilling.
+  * We also created a unordered list that will display the name of each person in `group` by accessing the array index position:
 
-- Open [App.js](../../../../01-Class-Content/20-state/01-Activities/09-Ins_useContext/src/App.js)
-  and explain the following:
+     ```js
+     return (
+       <div className="card text-center">
+         <div className="card-header bg-primary text-white">State activity!</div>
+         <div className="card-body">
+           <p className="card-text">{greeting}</p>
+           <ul>
+             <li>{group[0]}</li>
+             <li>{group[1]}</li>
+             <li>{group[2]}</li>
+           </ul>
+         </div>
+       </div>
+     );
+     ```
 
-  - We import the `DeveloperContext`:
+  * 🔑 Remember that, for React to function properly, state variables shouldn't be updated directly. The **virtual DOM (VDOM)** only knows to update when the state of the application has changed. For this reason, if we wanted to update `greeting`, for example, we would use the method that is returned from the `useState` Hook, `setGreeting()`.
 
-  ```js
-  import DeveloperContext from "./utils/DeveloperContext";
-  ```
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  - The `DeveloperContext.Provider` still wraps all of the components that will need to consume its state. We pass `developerState` to the Context Provider as the value prop.
+  * ☝️ What two things does `useState` return?
 
-  ```js
-  <DeveloperContext.Provider value={developerState}>
-    <DeveloperInfo />
-    <MoodBtns changeMood={changeMood} />
-  </DeveloperContext.Provider>
-  ```
+  * 🙋 `useState` returns the state variable and a function to update it.
 
-  - 📝`changeMood` is passed as a prop into `MoodBtns` so that the change in state still happens at the top-level component.
+  * ☝️ What can we do if we don't completely understand this?
 
-### 8. Students Do: Hooking in Context Activity (15 mins)
+  * 🙋 We can refer to supplemental material, read the [React Docs on useState](https://reactjs.org/docs/hooks-state.html), and stay for office hours to ask for help.
 
-- Introduce students to [useContext unsolved](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Unsolved)
+* Answer any questions before proceeding to the next activity.
 
-```md
-In this activity we will practice using the useContext Hook in React by creating a global state for our articles.
+### 8. Instructor Demo: Event Handling (5 min) 
 
-# Instructions
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `13-Ins_Event-Handling/src/`.
 
-- Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+* Run `npm start` from the command line and demonstrate the following:
 
-- Start the application in dev mode by running `npm start` in your terminal.
+  * When we launch this React app, we can see that it is very similar functionally to the previous example.
 
-- Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+  * Let's look at `00-practice-app/src/components/Counter.js`. To use the `useState` Hook, we need to first import it with React at the top of the file:
 
-- Update this application to accomplish the following:
+     ```js
+     import React, { useState } from 'react';
+     ```
 
-- Combine all of the `useState` Hooks that are relevant to the information retreived from the Wikipedia article into a single `useState` Hook.
+  * We can see that we create a state variable for `count` and a function called `setCount()` to update it.
+  
+  * We set the initial value of `count` to 0:
 
-- Create a Context Object that will be used to store the state of the article called `ArticleContext`.
+     ```js
+     let [count, setCount] = useState(0);
+     ```
 
-- Wrap the components that will need access to the Context Object with a Context Provider.
+  * In the `Counter` component, we will declare a method, `setCount()`, that will be used later in the code. This function will be called when a user clicks on the increment button.
+  
+  * 🔑 Notice that we did not update the `count` variable directly. When dealing with class-based components, we always use `setCount` to update state and allow React to become aware of the change:
 
-- Update the `SearchResults` component with the `useContext` Hook to to elimintate the need for props.
-```
+     ```js
+     const handleClick = () => {
+       setCount((count + 1));
+       console.log(`New value of count: ${count}`);
+     };
+     ```
 
-### 9. Instructor Do: Review Hooking in Context Activity (10 mins)
+  * In the JSX, we refer to the `handleIncrement()` method by making it the value of the `onClick` attribute for the button. We also refer to the count variable, `count`, to render it on the page:
 
-- Open up [useContext Solved Search page](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/pages/Search/index.js) in your IDE.
+     ```js
+     return (
+       <div className="card text-center">
+         <div className="card-header bg-primary text-white">Click Counter!</div>
+         <div className="card-body">
+           <p className="card-text">Click Count: {count}</p>
+           <button className="btn btn-primary" type="button" onClick={handleIncrement}>
+             Increment
+           </button>
+         </div>
+       </div>
+     );
+     ```
 
-  - Note that the `articleState` only contains the necessary properties: `title` and `url`.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  const [articleState, setArticleState] = useState({
-    title: "",
-    url: ""
-  });
-  ```
+  * ☝️ Why wouldn't we want to update the state variable, `count`, directly?
 
-  - The `articleState` is set after the article is retrieved with a single Hook.
+  * 🙋 For the component to re-render itself, we must use the method we declared with `useState`. If we updated the variable directly, the component would not re-render.
 
-  - Note that we do not have to change the `[search]` provided as the second argument of the `useEffect` Hook because we kept that part of our state isolated.
+* Answer any questions before proceeding to the next activity.
 
-  ```js
-  useEffect(() => {
-    API.searchTerms(search)
-      .then(res => {
-        if (res.data.length === 0) {
-          throw new Error("No results found.");
-        }
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
-        setArticleState({
-          title: res.data[1][0],
-          url: res.data[3][0]
-        });
-      })
-      .catch(err => setError(err));
-  }, [search]);
-  ```
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
-- Open up [SearchResults component](../../../../01-Class-Content/20-State/01-Activities/10-Stu_useContext/Solved/src/components/SearchResults/index.js).
+### 9. Student Do: Event Handling (15 min) 
 
-  - First, we import the context object from its utility file.
+* Direct students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
-  - Then, we pass it into the `useContext` Hook.
+* Break your students into pairs that will work together on this activity.
 
-  - Remind students that we no longer need to receive props from a parent component and can use the `article` object instead.
+   ```md
+   # 📐 Add Comments to Implementation of Event Handlers
 
-  ```js
-  import ArticleContext from "../../utils/ArticleContext";
-  function SearchResults() {
-    const { title, url } = useContext(ArticleContext);
-    return (
-      <ul className="list-group search-results">
-        <li className="list-group-item">
-          <h2>{title}</h2>
-          <a href={url}>{url}</a>
-        </li>
-      </ul>
-    );
-  }
-  ```
+   ## Before We Begin
 
-  - Show that we wrapped all of the components in a Context Provider.
+   Before you begin this activity, complete the following steps:
 
-  ```js
-  return (
-    <ArticleContext.Provider value={articleState} >
-    <div>
-        <Container style={{ minHeight: "100vh" }}>
-          <h1 className="text-center">Search For Anything on Wikipedia</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: error ? 1 : 0, marginBottom: 10 }}
-          >
-  ...
-  )
-  ```
+   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-### 10. Everyone Do: Break (30 mins)
+   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
 
-### 11. Instructor Do: Demo Dynamic Context (10 mins)
+   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-- Run [DynamicContext Demo](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/) in your browser to demonstrate the application. Click each button and show that the alert changes for each button.
+     `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-- Open [AlertContext.js Solved](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/src/AlertContext.js) in your IDE and point out the following:
+   ## Activity
 
-  - The Context Object has been isolated to its own file.
+   Work with a partner to add comments describing the functionality of the code found in the [components](../00-practice-app/src/components) folder.
 
-  - The `.createContext` React method is still used to create a new context, this time using an object instead of a primitive type.
+   ## 📝 Notes
 
-  - The object contains the same keys that we intend to pass to the Consumer with our Provider. Since we know that we'll end up overwriting all of these values, we set up default values that have the same type.
+   Refer to the documentation: 
 
-  - There is an empty onClick method since we will need some way of updating our Alert component. For now, `undefined` is returned, since the method will later be provided in `App.js`.
+   [React Docs on handling events](https://reactjs.org/docs/handling-events.html)
 
-  - 📝 Context API best practices require that we initialize the default values to have a consistent type with the values we intend to provide later. Ex: `onClick` should **not** be initialized as an empty string.
+   ---
 
-  ```js
-  import React from "react";
-  // default context object with properties corresponding to Provider values
+   ## 🏆 Bonus
 
-  const AlertContext = React.createContext({
-    display: false,
-    theme: "",
-    onClick: () => undefined
-  });
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  export default AlertContext;
-  ```
+   * What does `this` refer to when dealing with a class-based component?
 
-- Open [App.js Solved](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/src/App.js) and point out the following:
+   Use [Google](https://www.google.com) or another search engine to research this.
+   ```
 
-  - We import our Home component from pages and our AlertContext object from the components directory.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  ```js
-  import * as React from "react";
-  import Home from "./pages/Home";
-  import AlertContext from "./components/AlertContext";
-  ```
+### 10. Instructor Review: Event Handling (10 min) 
 
-  - `App` is a functional component. We initialize `state` with properties that correspond to those we declared in our `AlertContext` object. The `onClick` method takes in the parameters `theme` and `display`. These parameters will later be used to control the class of our Alert component to determine whether or not to display it.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  function App() {
-    const [pageState, setPageState] = useState({
-      display: false,
-      theme: "success",
-      onClick: (theme, display) => {
-        // Remember, the setter method on state does not merge like this.setState does
-        // We use the spread operator so that we don't lose our onClick method whenever the state is updated.
-        setPageState({ ...pageState, theme, display });
-      }
-    });
-    // App component that provides initial context values
-    // Here we are overwritting the context object to be equal to the state of App
-    return (
-      <AlertContext.Provider value={pageState}>
-        <Home />
-      </AlertContext.Provider>
-    );
-  }
-  ```
+  * ☝️ How comfortable do you feel with handling events in React? (Poll via Fist to Five, Slack, or Zoom)
 
-  - We wrap the `AlertContext` object around the `Home` component and pass to the Provider the object stored in state.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
-  - 📝 We did not pass props to the `Home` component.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-- Open [Home.js Solved](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/src/pages/Home.js) in your IDE and point out that there are no references to props.
+  * ✔️ Updating parent components
 
-  ```js
-  function Home() {
-    document.title = "Dynamic Context";
-    return (
-      <div>
-        <div style={{ textAlign: "center" }}>
-          <h1>Dynamic Context API Practice!</h1>
-          <h3 className="mb-4">Press a button to get an alert!</h3>
-        </div>
-        <div style={{ margin: "0 auto" }}>
-          <Content />
-        </div>
-      </div>
-    );
-  }
-  ```
+  * ✔️ Defining event handlers
 
-- Open [Content.js Solved](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/src/components/Content.js) and point out the following:
+* Open `00-practice-app/src/components/App.js` in your IDE and explain the following:
 
-  - We import the `useContext` Hook, the `Alert` component and the `AlertContext` object:
+  * In `App.js`, we are importing the `Counter` component and rendering it in the return method:
 
-  ```js
-  import React, { useContext } from "react";
-  import Alert from "./Alert";
-  import AlertContext from "./AlertContext";
-  ```
+     ```js
+     import React from "react";
+     import Counter from "./components/Counter";
 
-  - The Content component returns the `AlertContext` object wrapped around a `div` containing three buttons and the `Alert` component. Using the `useContext` Hook, we inject the values passed from state to the Provider in the `App` component.
+     function App() {
+       return <Counter />;
+     }
 
-  - Each button uses the `onClick` method provided by the `AlertContext`, passing in different strings corresponding with the `className` of the button.
+     export default App;
+     ```
+
+* Open `00-practice-app/src/components/Counter.js` in your IDE and explain the following:
+
+  * Remember that when we use `useState`, we have to import it using React at the top of the component. This is the first thing we did in this file:
+
+     ```js
+     import React, { useState } from 'react';
+     ```
+
+  * We also import `CardBody` for use in the return statement.
+
+     ```js
+     import CardBody from './CardBody';
+     ```
+
+  * After we declare our functional component, `Counter`, we then set up the state variable and a function to update it. Notice that we use `let` so that the value of `count` can change at some point. We also set the initial value to `0`:
+
+     ```js
+     let [count, setCount] = useState(0);
+     ```
+
+  * Next, we need to create some event handlers that we can point to when the increment or decrement buttons are clicked. We call on the `setCount()` method inside these methods so that we can change the count itself:
+
+     ```js
+     const handleIncrement = () => {
+       setCount(count + 1);
+     };
+
+     const handleDecrement = () => {
+       setCount(count - 1);
+     };
+     ```
+
+  * In the return statement, we want to pass these click handlers to the `CardBody` component. To do this, we pass them as props. We also have one more prop being passed, which is the actual count:
+
+     ```jsx
+     return (
+       <div className="card text-center">
+         <div className="card-header bg-primary text-white">Click Counter!</div>
+         <CardBody
+           count={count}
+           handleIncrement={handleIncrement}
+           handleDecrement={handleDecrement}
+         />
+       </div>
+     );
+     ```
+
+* Open `00-practice-app/src/components/CardBody.js` in your IDE and explain the following:
+
+  * In `CardBody.js`, we are creating a functional component called `CardBody` that accepts props. `CardBody` will be a child component of `Counter`.
+  
+  * If we were to run `console.log(props)` at the beginning of the component, we would see an object with `count`, `handleIncrement()`, and `handleDecrement()`:
+
+     ```js
+     function CardBody(props) { ... }
+     ```
+
+  * The return method for the `CardBody` component contains some JSX with Bootstrap classes for styling and also two buttons. Those buttons assign `props.handleIncrement` and `props.handleDecrement` to the `onClick` attribute respectively:
+
+     ```js
+     return (
+       <div className="card-body">
+         <p className="card-text">Click Count: {props.count}</p>
+         <button
+           type="button"
+           className="btn btn-primary"
+           onClick={props.handleIncrement}
+         >
+           Increment
+         </button>{' '}
+         <button
+           type="button"
+           className="btn btn-danger"
+           onClick={props.handleDecrement}
+         >
+           Decrement
+         </button>
+       </div>
+     );
+     ```
+
+  * Sometimes props will be assigned to variables using destructuring assignment syntax, allowing us to avoid having to type `props.` before each key. In this scenario, the `CardBody` component would look something like this:
+
+     ```js
+     function CardBody({count, handleIncrement, handleDecrement}) {
+       return (
+         <div className="card-body">
+           <p className="card-text">Click Count: {count}</p>
+           <button
+             type="button"
+             className="btn btn-primary"
+             onClick={handleIncrement}
+           >
+             Increment
+           </button>{' '}
+           <button
+             type="button"
+             className="btn btn-danger"
+             onClick={handleDecrement}
+           >
+             Decrement
+           </button>
+         </div>
+       );
+     }
+     ```
+
+  * As with all components in React, we want to make sure that we export it so that we can use it inside `Counter.js`:
+
+     ```js
+     export default CardBody;
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do you pass an event handler to a component?
+
+  * 🙋 We can pass event handlers and other functions as props to child components.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [React Docs on event handling](https://reactjs.org/docs/handling-events.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 11. FLEX (20 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* If the students are struggling with React, use this time to review the concepts that they need the most help with. Take time to review the activities more in depth. 
+
+### 12. BREAK (30 mins)
+
+### 13. Instructor Demo: React Forms (5 min) 
+
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `15-Ins_React-Forms/src`.
+
+* Run `npm start` from the command line and demonstrate the following:
+
+* Open <http://localhost:3000> in your browser and demonstrate the following:
+
+  * 🔑 When we type a first and last name, the page updates display the username that was entered.
+
+  * 🔑 When we press Enter, we receive an alert that greets us with the name we provided.
+  
+* Open `00-practice-app/src/components/Form/index.js` in your IDE and explain the following:
+  
+  * Note that the component is no longer a single file in the components directory. In larger React applications, it is common to create nested folders for each component in case the component has its own dependencies, like a CSS file.
+  
+  * The first thing that we import in the `index.js` file of the `Form` component is a `style.css` file that is in the same directory. This file contains a few classes that apply only to the `Form` component.
 
     ```js
-    const Content = () => {
-      const alert = useContext(AlertContext);
-      return (
-        <div className="text-center">
-          <button
-            onClick={() => alert.onClick("success", true)}
-            className="btn btn-success mx-3"
-          >
-            Success
+    import React, { useState } from 'react';
+    import './style.css';
+    ```
+
+  * If we look at the `input` elements in the return method, we can see that there are some props attached to them.
+  
+  * We are passing the state variables `firstName` and `lastName`. Additionally, we have two `onChange` attributes, which are set to `handleInputChange`:
+
+    ```js
+    return (
+      <div>
+        <p>
+          Hello {firstName} {lastName}
+        </p>
+        <form className="form">
+          <input
+            value={firstName}
+            name="firstName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="First Name"
+          />
+          <input
+            value={lastName}
+            name="lastName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Last Name"
+          />
+          <button type="button" onClick={handleFormSubmit}>
+            Submit
           </button>
-          <button
-            onClick={() => alert.onClick("warning", true)}
-            className="btn btn-warning mx-3"
-          >
-            Warning
-          </button>
-          <button
-            onClick={() => alert.onClick("danger", true)}
-            className="btn btn-danger mx-3"
-          >
-            Danger
-          </button>
-          <Alert style={{ opacity: alert.display ? 1 : 0 }} type={alert.theme}>
-            You pressed a {alert.theme} button!
-          </Alert>
-        </div>
-      );
+        </form>
+      </div>
+    );
+    ```
+
+  * At the top of the component, we initialize the state variables by using the `useState` Hook. We set both `firstName` and `lastName` to an empty string as the initial value for both variables:
+  
+     ```js
+     const [firstName, setFirstName] = useState('');
+     const [lastName, setLastName] = useState('');
+     ```
+
+  * 🔑 Notice that in the input elements, we set the value of the input to be equal to these state variables:
+
+    ```js
+    <input
+      value={firstName}
+      name="firstName"
+      onChange={handleInputChange}
+      type="text"
+      placeholder="First Name"
+    />
+    <input
+      value={lastName}
+      name="lastName"
+      onChange={handleInputChange}
+      type="text"
+      placeholder="Last Name"
+    />
+    ```
+
+  * The event listener that is attached to these input elements is called `handleInputChange()`. It is responsible for updating state when the user types something in the text field.
+  
+  * Notice that we accept the event as an argument. We assign `name` and `value` to their own variables from the `e.target` object.
+  
+  * Next, we create a ternary statement that will set the `firstName` or `lastName` depending on the `name` attribute of the input element:
+
+    ```js
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+
+      return name === 'firstName' ? setFirstName(value) : setLastName(value);
     };
     ```
 
+  * When working with React forms, it typically is not sufficient to only handle events concerning input changes. We should also consider button clicks, such as the user clicking "submit" in this case.
+  
+  * To handle this logic, we created another handler called `handleFormSubmit()`. This method accepts the event as an argument, prevents the page from refreshing, sends an alert to the user, and finally clears the input after the user clicks "submit":
+
+    ```js
+    const handleFormSubmit = (e) => {
+      e.preventDefault();
+
+      alert(`Hello ${firstName} ${lastName}`);
+      setFirstName('');
+      setLastName('');
+    };
+    ```
+
+  * This method is then attached to the `onClick` attribute of the submit button:
+
+    ```jsx
+    <button type="button" onClick={handleFormSubmit}>
+      Submit
+    </button>
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We would first create the React component that renders the form and then create methods to handle input changes and form submission.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_React-Forms/README.md`.
+
+### 14. Student Do: React Forms (15 min) 
+
+* Direct students to the activity instructions found in `16-Stu_React-Forms/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement Functionality for the Forms Section
+
+  ## Before We Begin
+
+  Before you begin this activity, complete the following steps:
+
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+
+  ## Activity
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to prevent empty input for the email and username fields of a form.
+    
+  * As a developer, I want to improve the user experience by automatically clearing the input fields after the user clicks submit.
+
+  * As a developer, I want to make the application more robust by adding a password input field.
+
+  * As a developer, I want to ensure that the email and password provided by the user are valid.
+
+  ## Acceptance Criteria
+
+  This activity is complete when the following criteria are met:
+
+  * It's done when I have created a state variable, `password`.
+
+  * It's done when I have added a condition to check if the input type is `password` and to update state using `setPassword`.
+
+  * It's done when I have used the methods in the `helper.js` file to validate the format of the email and the strength of the password.
+
+  * It's done when I have set the input fields back to empty strings after the user clicks submit.
+
+  * It's done when I have added a new input field in the return statement with `name`, `type`, `placeholder`, `value`, and `onChange` attributes.
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could we have implemented basic form validation without using helper functions?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * 📝 We pass to the `Alert` component props pulled off the `alert` object.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: React Forms (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with building form functionality in React? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `event.preventDefault()`
+
+  * ✔️ Destructuring assignment syntax
+
+* Open `00-practice-app/src/components/Form/index.js` in your IDE and explain the following:
+
+  * At the top of the `index.js` for the `Form` component, we need to import `useState` with React first. We are also importing some helper functions that will check the `password` and `email` for validity. These are located in the `/utils` folder:
+
+     ```js
+     import React, { useState } from 'react';
+     import { checkPassword, validateEmail } from '../../utils/helpers';
+     ```
+
+  * If we open `index.js`, we can see that the `Form` component initializes some state variables by using the `useState` Hook. Each of them is set to empty strings to start:
+
+     ```js
+     function Form() {
+       const [email, setEmail] = useState('');
+       const [userName, setUserName] = useState('');
+       const [password, setPassword] = useState('');
+       const [errorMessage, setErrorMessage] = useState('');
+     ```
+  
+  * If we look at the return method, we have another form, but this time we also have a `password` input. Notice how each input has a `value`, `name`, and `onChange` prop.
+  
+  * 🔑 When dealing with passwords, remember to set the input type to `password` instead of `text`, which tells the browser to hide the user's input as they type it:
+
+     ```js
+     return (
+       <div>
+         <p>Hello {userName}</p>
+         <form className="form">
+           <input
+             value={email}
+             name="email"
+            onChange={handleInputChange}
+             type="email"
+             placeholder="email"
+           />
+           <input
+             value={userName}
+             name="userName"
+             onChange={handleInputChange}
+             type="text"
+             placeholder="username"
+           />
+           <input
+             value={password}
+             name="password"
+             onChange={handleInputChange}
+             type="password"
+             placeholder="Password"
+           />
+           <button type="button" onClick={handleFormSubmit}>Submit</button>
+         </form>
+         ...
+       </div>
+     );
+     ```
+
+  * The `onChange` attribute for each of these input fields is responsible for calling the `handleInputChange()` whenever the user enters anything.
+  
+  * First we check the `name` attribute of each element and, depending on its value, update the corresponding state variable:
+
+     ```js
+     const handleInputChange = (e) => {
+       const { target } = e;
+       const inputType = target.name;
+       const inputValue = target.value;
+
+       if (inputType === 'email') {
+         setEmail(inputValue);
+       } else if (inputType === 'userName') {
+         setUserName(inputValue);
+       } else {
+         setPassword(inputValue);
+       }
+     };
+     ```
+
+  * When it comes time for the user to actually submit the form, we have an event for that. It is attached to the `onSubmit` attribute of the form, which then calls `handleFormSubmit()`.
+  
+  * In the logic, we check whether the `email` is invalid or `userName` is empty. If so, we set an error message and return out of the code block.
+  
+  * We do the same with the password. If `password` is not valid, set an error message and return out of the code block.
+
+  * In the event that everything checks out, we send an alert to the user and set the state variables back to empty strings:
+  
+     ```js
+     const handleFormSubmit = (e) => {
+       e.preventDefault();
+
+       if (!validateEmail(email) || !userName) {
+         setErrorMessage('Email or username is invalid');
+         return;
+       }
+       if (!checkPassword(password)) {
+         setErrorMessage(
+           `Choose a more secure password for the account: ${userName}`
+         );
+         return;
+       }
+       alert(`Hello ${userName}`);
+
+       setUserName('');
+       setPassword('');
+       setEmail('');
+     };
+     ```
+
+  * State is updated when we enter any character into the first name and last name inputs, due to the `handleInputChange()` method. As a result, the page updates in real time when we type:
+
+     ```jsx
+     return (
+       <div>
+         <p>Hello {userName}</p>
+       ...
+       </div>
+     )
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we use `event.preventDefault()` in the function to handle the form submission?
+
+  * 🙋 With single-page apps and React, we don't want the page to refresh when the user clicks submit.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [React Docs on forms](https://reactjs.org/docs/forms.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Fetching Data (5 min) 
+
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
+
+* Open `00-practice-app/src/components` in your IDE.
+
+* Run `npm start` from the command line and demonstrate the following:
+
+  * 🔑 When we start the application, we see a series of cat-related images.
+
+  * 🔑 When the component mounts, a request for cats is sent to the Giphy API and the results are displayed on the page.
+  
+* Open `00-practice-app/src/components/SearchResultContainer.js` in your IDE and demonstrate the following:
+  
+  * Immediately, you will notice that this component looks different than the functional components we have been working with. That's because this is a **class-based component**, which uses ES6 class syntax and stores state in an object instead of using Hooks.
+  
+  * 🔑 It is not extremely important to know how to write class-based components, because we now have React Hooks, but it is beneficial to at least be aware of their existence and how they work.
+
+  * With class-based components, we can use something called **lifecycle methods**. The one we will use here is called `componentDidMount`. This method takes a callback that will run every time the component is mounted.
+
+  * The `SearchResultContainer` component contains and renders the `ResultList` component:
+
+     ```js
+     import React, { Component } from "react";
+     import ResultList from "./ResultList";
+     import API from "../utils/API";
+ 
+     render() {
+       return (
+         <div>
+           <ResultList results={this.state.results} />
+         </div>
+       );
+     }
+     ```
+  
+  * Notice that `SearchResultContainer` is the only stateful component in this application. The parent component contains all the data and functionality that the children will need and passes them down as props.
+  
+  * This pattern helps us build components with little to no coupling that can easily be reused in different parts of the app or even across applications. For example, we could create a `<SearchForm />` component that passes state props the same way:
 
-  ```
+    ```jsx
+    <SearchForm
+      search={this.state.search}
+      handleFormSubmit={this.handleFormSubmit}
+      handleInputChange={this.handleInputChange}
+    />
+    <ResultList results={this.state.results} />
+    ```
+  
+  * The state object contains an empty array called `results`:
 
-- Open [Alert.js Solved](../../../../01-Class-Content/20-state/01-Activities/11-Ins_DynamicContext/src/components/Alert.js) and point out that it accepts props as we expect it to.
+    ```js
+    state = {
+      search: '',
+      results: [],
+    };
+    ```
 
-```js
-const Alert = props => {
-  return (
-    <div
-      role="alert"
-      className={`alert alert-${props.type} fade in`}
-      style={{ width: "80%", margin: "0 auto", marginTop: 18, ...props.style }}
-    >
-      {props.children}
-    </div>
-  );
-};
-```
+  * The component can perform a search after it mounts by using the React lifecycle method `componentDidMount()`. This method is built in to React and will automatically run after the component is rendered for the first time.
 
-- Answer any questions before starting the activity.
+  * Inside the `componentDidMount()` method, we invoke another method, `searchGiphy()`, that performs the API request, passing in the search term of `"kittens"`:
+  
+    ```js
+    componentDidMount() {
+      this.searchGiphy("kittens");
+    }
+    ```
 
-### 12. Students Do: Dynamic Context (20 mins)
+  * The `API.search()` method, which is imported from `/utils`, takes the response from the GET request and sets it to the value of `results` in state.
+  
+  * Instead of using something like `setResults()` with React Hooks, we use `this.setState()` by passing in the updated object that we want to set:
 
-- Files: [05-Stu_DynamicContext](../../../../01-Class-Content/21-react/01-Activities/05-Stu_DynamicContext)
+    ```js
+    searchGiphy = (query) => {
+      search(query)
+        .then((res) => this.setState({ results: res.data.data }))
+        .catch((err) => console.log(err));
+    };
+    ```
 
-````md
-# Dynamic Context
+* Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
+  
+  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
+  
+  * Inside our `API.js` file, we import two environmental variables that will help us keep our API key secure, but also allow us to form the request URL for our GET request:
 
-In this activity we will continue to practice using the Context API in React. This activity continues where the first activity left off. To help strengthen your Context API skills, you will replace as many instances of prop drilling as you can.
+    ```js
+    import axios from 'axios';
 
-## Instructions
+    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
 
-- Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+    const search = (query) =>
+      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
 
-- Install axios by running `npm install axios` in your terminal.
+    export default search;
+    ```
 
-- **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```html
-  <link
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-  />
-  ```
+  * ☝️ What is Axios? Can it be compared to another piece of technology that we've used on the front end?
 
-- Start the application in dev mode by running `npm start` in your terminal.
+  * 🙋 Axios is an npm package that performs AJAX requests and returns the results. It is similar to the functionality in the browser's `fetch()` method.
+  
+  * ☝️ What does `componentDidMount()` do?
 
-- Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+  * 🙋 `componentDidMount()` is a React lifecycle method that will run a callback whenever the component is loaded. In this case, we used it to invoke an API request.
 
-- Update this application to include the following:
+* Answer any questions before proceeding to the next activity.
 
-  - Add a Context API file to the `utils` folder.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
 
-  - Remove prop-drilling from the application and replace it with the Context API.
+### 17. Student Do: Fetching Data (15 min) 
 
-  - The Context object should include the user information and any methods you might.
+* Direct students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
 
-  - Use a Context Provider to wrap the components that will need access to the Context.
+* Break your students into pairs that will work together on this activity.
 
-  - Use Context Consumers to access the properties that are stored in the Context.
+   ```md
+   # 🐛 Information from the OMDB API Does Not Display
 
-### Hints
+   ## Before We Begin
 
-- The Context object that you will create will need to be the same for both the Provider and the Consumer. How can you ensure that it's the same object without using state?
-````
+   Before you begin this activity, complete the following steps:
 
-### 13. Instructor Do: Review Dynamic Context (10 mins)
+    1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-- Open [Dynamic Context solved](../../../../01-Class-Content/20-state/01-Activities/12-Stu_DynamicContext/Solved) in your IDE and point out the following:
+    2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
 
-  - The solution is designed to showcase how a single Context Object may be used in multiple places. In this example, we primarily use the UserContext in our `CardImg` and `CardTitleText` components to display the user's information. However, we still make use of the consumer in the `CardBtn` component as well to handle the button click.
+    3. Rename the `.env.example` file to `.env`.
 
-  - It is worth noting that we only used the consumers as close as possible to the components that needed the data.
+    4. To make API requests, we need to use Axios. Make sure that it's installed by running `npm i axios`.
 
-  - We import the API, `CardContext` object and CardContainer and Row components.
+    5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-  ```js
-  import React, { Component } from "react";
-  import API from "../utils/API";
-  import UserContext from "../utils/userContext";
-  import CardContainer from "../components/CardContainer";
-  import Row from "../components/Row";
-  ```
+     `import 'bootstrap/dist/css/bootstrap.min.css'`
+   
+   ## Activity
 
-  ```js
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({});
-  const [userIndex, setUserIndex] = useState(0);
+   Work with a partner to resolve the following issue:
 
-  // When the component mounts, a call will be made to get users.
-  useEffect(() => {
-    loadUsers();
-  }, []);
+   * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
 
-  function loadUsers() {
-    API.getLanguagesList()
-      .then(languages => {
-        API.getUsersByLanguage(languages[0]).then(users => {
-          setUsers(users);
-          setUser(users[0]);
-        });
-      })
-      .catch(err => console.log(err));
-  }
-  ```
+   ## Expected Behavior
+  
+   * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
 
-  - The `UserContext` Provider passes in each state variable as properties of an object to the Context Object as the default `value` prop. This includes the `handleBtnClick` method that our button will use.
+   * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
 
-  ```js
-  return (
-    <UserContext.Provider value={{ user, users, handleBtnClick }}>
-      <div>
-        <h1 className="text-center">Welcome to LinkedUp</h1>
-        <h3 className="text-center">Click on the arrows to browse users</h3>
-        <Row>
-          <CardContainer />
-        </Row>
-      </div>
-    </UserContext.Provider>
-  );
-  ```
+   * When the user enters a search term and clicks submit, the results for the search should display on the left side of the page.
 
-- Open [UserContext.js Solved](../../../../01-Class-Content/20-state/01-Activities/12-Stu_DynamicContext/src/utils/UserContext.js) in your IDE and point out the following:
+   ## Actual Behavior
 
-  - The User Context was added to a separate file in order to decouple it from any particular component.
+   * When a user searches for a movie, they find out that they cannot enter any text into the search field. 
 
-  - The user property values are initialized to `""` to demonstrate that they will be overwritten by the new values given by the Provider.
+   * Additionally, the search button doesn't seem to do anything in its current state. 
 
-  ```js
-  import React from "react";
+   ## 💡 Hints
 
-  const UserContext = React.createContext({
-    login: "",
-    language: "",
-    image: "",
-    handleBtnClick: () => {}
-  });
+   * Why might we need to use `event.preventDefault()` in event handlers?
 
-  export default UserContext;
-  ```
+   * Only one file needs to be modified for this activity. Which file is it?
 
-  - 📝 Context API best practices require that we initialize the default values to have a consistent type with the values we intend to provide later. Ex: `handleBtnClick` should **not** be initialized as an empty string.
+   ## 🏆 Bonus
 
-- Ask the students the following question:
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  - ☝️ How many of you created separate contexts for the images and titles?
+   * How could we show a loading element before the search results are displayed? What React feature allows for this kind of behavior?
 
-  - 🙋 While having multiple providers may be overkill for this small application, let the students know that in a larger application, there could be several component layers separating related components. In those situations, having multiple providers would be better than passing a single context object through multiple levels of components.
+   Use [Google](https://www.google.com) or another search engine to research this.
+   ```
 
-### 14. Instructor Do: Demo Multiple Contexts (10 mins)
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-- Walk students through the process of using multiple context objects.
+### 18. Instructor Review: Fetching Data (10 min) 
 
-  - Point out that before creating multiple context objects, students should think about why it might not always suit them to only use one.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  - The Context Object for a theme may be set instantly within a stateless component, whereas other properties may rely on AJAX calls in a stateful component.
+  * ☝️ How comfortable do you feel with making API requests in React? (Poll via Fist to Five, Slack, or Zoom)
 
-  - Creating multiple Context Objects can help separate concerns, preventing unnecessary pieces of data from being passed to consumers that may not need access to them.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
-  - Providers must wrap the parents of whichever components need access to context.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-- Open up `App.js` point out the following:
+  * ✔️ Axios
 
-  - There's a new `getUserToken` method that returns a dummy value.
+  * ✔️ `API.js`
+  
+* Ensure that `axios` is added as a dependency:
 
-  - We've split our state into two objects. This makes it much easier to separate the two contexts.
+   ```sh
+   npm i axios
+   ```
 
-  - 🗒Note that in `setAlert`, we used the spread operator since setters do not automatically merge with the previous state object.
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
 
-```js
-import React, { useState } from "react";
-import Home from "./pages/Home";
-import ThemeContext from "./components/ThemeContext";
-import UserContext from "./components/UserContext";
-import AlertContext from "./components/AlertContext";
+  * In `App.js`, we are importing and returning another component called `OmdbContainer`:
 
-function App() {
+     ```js
+     import React from "react";
+     import OmdbContainer from "./components/OmdbContainer";
 
-  const [user, setUser] = useState({
-    name: "Bob",
-    getUserToken: getUserToken
-  })
+     function App() {
+       return <OmdbContainer />;
+     }
 
-  const [alert, setAlert] = useState({
-    display: false,
-    theme: "success",
-    onClick: (theme, display) => setAlert({...alert, theme, display})
-  })
+     export default App;
+     ```
 
-  function getUserToken() {
-    return "SampleToken123";
-  }
-```
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
 
-- In our `return` block, 3 providers are returned, but it doesn't matter if one Provider wraps another, as long as they both wrap an ancestor of the element with the `useContext` Hook.
+  * This component contains the state and most of the methods that we will pass down to child components.
+  
+  * The state has a `result` property, which is set to an empty object initially, and a `search` property, where we will store the search term that the user enters. Initially, it is set to an empty string:
 
-- The Alert and User Providers receive state objects as their value, while the Theme Provider receives a string literal.
+     ```js
+     state = {
+       result: {},
+       search: ""
+     };
+     ```
 
-```js
-<AlertContext.Provider value={alert}>
-  <UserContext.Provider value={user}>
-    <ThemeContext.Provider value={"dark"}>
-      <Home />
-    </ThemeContext.Provider>
-  </UserContext.Provider>
-</AlertContext.Provider>
-```
+  * The first thing we need to add is a `componentDidMount()` method to the component. This lifecycle method runs after the component mounts, and uses the `this.searchMovies()` method to make an API request to OMDB for the movie "The Matrix":
 
-- Take a moment to go over `NavLink.js`.
+     ```js
+     componentDidMount() {
+       this.searchMovies("The Matrix");
+     }
+     ```
 
-  - Bring up that `useContext` is once again being used at the closest possible element that it can to avoid prop drilling.
+  * The `this.searchMovies()` method gets called inside `componentDidMount()`. This method uses the `API` module to make a GET request by using `axios`. The result is then saved to the state object using `this.setState()`:
 
-  ```js
-  const NavLink() {
-    const { name } = useContext(UserContext);
-    return (
-      <div style={{ marginLeft: "40px" }}>
-        <h2>Welcome {name}!</h2>
-      </div>
-    );
-  }
-  ```
+     ```js
+     searchMovies = query => {
+       API.search(query)
+         .then(res => this.setState({ result: res.data }))
+         .catch(err => console.log(err));
+     };
+     ```
 
-- Address any lingering questions students have.
+* Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
 
-### 15. Student Do: Multiple Contexts (20 mins)
+  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
 
-- Files: [14-Stu_MultipleContexts](../../../../01-Class-Content/20-State/01-Activities/14-Stu_MultipleContexts)
+  * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
 
-````md
-# Multiple Contexts
-In this activity we will continue to practice using the Context API in React. This activity continues where the last activity left off. To help strengthen your Context API skills, you will introduce another Context Object to your application.
+    ```js
+    import axios from 'axios';
 
-## Instructions
+    const BASEURL = process.env.REACT_APP_BASEURL;
+    const APIKEY = process.env.REACT_APP_APIKEY;
 
-* Replace your React application's src folder with [Unsolved/src](Unsolved/src).
+    export default {
+      search(query) {
+        return axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
+      },
+    };
+    ```
 
-* Install axios by running `npm install axios` in your terminal.
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
 
-* **Recommended:** Add the Bootstrap and Font Awesome CDNs to your application's `index.html` file:
+  * To have the `this.state.search` variable updated with the current search term, we needed to create a `handleInputChange` method.
+  
+  * The `handleInputChange()` method gets called every time the user types in the input field. Without this method, the user is not able to type in the input field.
 
-  ```html
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-  ```
+     ```js
+     handleInputChange = event => {
+       const value = event.target.value;
+       const name = event.target.name;
+       this.setState({
+         [name]: value
+       });
+     };
+     ```
 
-* Start the application in dev mode by running `npm start` in your terminal.
+  * Inside the `this.setState()` method, we are passing an object that has a key of `[name]` and a value of `value`.
+  
+  * We put `[name]` in brackets because we are using a **computed property name**, which is another way to set the key of an object without knowing ahead of time what it should be called. This makes the code more reusable and resilient to change. We could in theory use this `handleInputChange()` method for different input elements than the current search field.
 
-* Open your browser to [localhost:3000](http://localhost:3000) and study the rendered application.
+    ```js
+      this.setState({
+        [name]: value
+      });
+    ```
 
-* Update this application to include the following:
+  * The `handleInputChange()` method is then passed down to the `SearchForm` component as a prop of the same name, `handleInputChange()`:
 
-  * Create a separate Context Object for the languages.
+     ```jsx
+     <Card heading="Search">
+       <SearchForm
+         value={this.state.search}
+         handleInputChange={this.handleInputChange}
+         handleFormSubmit={this.handleFormSubmit}
+       />
+     </Card>
+     ```
 
-  * Update the application so that data pertaining to the user is stored in a nested object within the Gallery state.
+  * To get the movie search working, we need to create a `handleFormSubmit()` method that will be invoked whenever the user clicks submit to search for a movie.
 
-  * Add the ability to select a different language.
+  * Much like the `componentDidMount()` method, here we are making use of the `this.searchMovies()` method. Remember that this method imports functionality from `API.js` to perform the actual API request.
+  
+  * We use the value of `this.state.search` as the search term. The state variable, `result`, is then updated with the data that we get back from the OMDB API.
 
-  * Ensure that data pertaining to the language is stored in a different nested object within the Gallery state.
+  * Notice that we use `event.preventDefault()` to stop the default browser behavior of refreshing the page when the submit button is clicked:
 
-  * If a new language is selected, the card should be updated with the information of the first user of the selected language.
+     ```js
+     handleFormSubmit = event => {
+       event.preventDefault();
+       this.searchMovies(this.state.search);
+     };
+     ```
 
-### Hints
+  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
 
-* Try to get the user functionality working before moving on to the language selector.
+     ```jsx
+     <SearchForm
+       value={this.state.search}
+       handleInputChange={this.handleInputChange}
+       handleFormSubmit={this.handleFormSubmit}
+     />
+     ```
 
-* Make sure you call `loadUser` whenever the language changes.
+  * Finally, after the search has been preformed and the `this.state.result` variable has been updated with the results from the OMDB API request, we can display that data in the component:
 
-````
+     ```js
+     render() {
+       return (
+         <Container>
+           <Row>
+             <Col size="md-8">
+               <Card
+                 heading={this.state.result.Title || "Search for a Movie to Begin"}
+               >
+                 {this.state.result.Title ? (
+                   <MovieDetail
+                     title={this.state.result.Title}
+                     src={this.state.result.Poster}
+                     director={this.state.result.Director}
+                     genre={this.state.result.Genre}
+                     released={this.state.result.Released}
+                   />
+                 ) : (
+                   <h3>No Results to Display</h3>
+                 )}
+               </Card>
+             </Col>
+             <Col size="md-4">
+               <Card heading="Search">
+                 <SearchForm
+                   value={this.state.search}
+                   handleInputChange={this.handleInputChange}
+                   handleFormSubmit={this.handleFormSubmit}
+                 />
+               </Card>
+             </Col>
+           </Row>
+         </Container>
+       );
+     }
+     ```
 
-### 16. Instructor Do: Review The Gallery Multiple Contexts (10 mins)
+  * The JSX is using a ternary operator, which acts like an `if` statement. We first check whether `this.state.result` has a `Title` property, which would mean that a movie was found in the API request.
+  
+  * If we have a movie result, we display a `MovieDetail` component by passing down the result data as props. Otherwise, we display an `h3` saying that there are no results:
 
-- Open [14-Stu_MultipleContexts/Solved/src/utils/userContext.js](../../../../01-Class-Content/20-State/01-Activities/14-Stu_MultipleContexts/Solved/src/utils/userContext.js) in your IDE and go over the following:
+     ```js
+     {this.state.result.Title ? (
+       <MovieDetail
+         title={this.state.result.Title}
+         src={this.state.result.Poster}
+         director={this.state.result.Director}
+         genre={this.state.result.Genre}
+         released={this.state.result.Released}
+       />
+     ) : (
+       <h3>No Results to Display</h3>
+     )}
+     ```
 
-  - Point out that the properties of `UserContext` are only relevant to the user information. The `language` property is not referring to the current selected language, but instead, it refers to the user's `language` property.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  import React from "react";
+  * ☝️ What is one reason that a user might not be able to type in a input field inside a React app?
 
-  const UserContext = React.createContext({
-    login: "",
-    language: "",
-    image: "",
-    handleBtnClick: () => {}
-  });
+  * 🙋 The search field needs an `onChange` handler to update state when the user types something.
 
-  export default UserContext;
-  ```
+  * ☝️ What are some of the use cases for lifecycle methods such as `componentDidMount()`?
 
-  - Open [14-Stu_MultipleContexts/Solved/src/pages/Gallery.js)](../../../../01-Class-Content/20-State/01-Activities/14-Stu_MultipleContexts/Solved/src/pages/Gallery.js) in your IDE.
+  * 🙋 The lifecycle methods help us run code after specific events, such as the component updating, mounting, or unmounting.
 
-  - Point out that **both** the `UserContext.Provider` and the `LanguageContextProvider` wrap the contents of the entire page. Even though the `LanguageSelector` does not use the `UserContext`, there is no harm in wrapping components with Providers they do not need.
+  * ☝️ What can we do if we don't completely understand this?
 
-  - Also note that the User Context Provider wraps the Language Context Provider. It doesn't matter which provider wraps the other, as long as they both wrap an ancestor of the component that will use the `useContext` Hook.
+  * 🙋 We can refer to supplemental material, read the [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html), and stay for office hours to ask for help.
 
-  - We create language and user objects by individually passing the variables we declared at the top of the file.
+* Answer any questions before proceeding to the next activity.
 
-  - We don't need to contain the indexes in our context objects since they are only needed in the `Gallery.js` file.
+### 19. Instructor Demo: useEffect Hook (5 min) 
 
-  ```js
-  return (
-    <UserContext.Provider value={{ user, users, handleUserBtnClick }}>
-      <LanguageContext.Provider
-        value={{ language, languages, handleLanguageBtnClick }}
-      >
-        <div>
-          <h1 className="text-center">Welcome to LinkedUp</h1>
-          <h3 className="text-center">Click on the arrows to browse users</h3>
-          <LanguageSelector />
-          <Row>
-            <CardContainer />
-          </Row>
-        </div>
-      </LanguageContext.Provider>
-    </UserContext.Provider>
-  );
-  ```
+* Being by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Hooks-useEffect/src`.
 
-  - Maintaining large state objects can be complex, often involving the use of the `...` spread operator. In this use case, it was reasonable to create separate variables for each property of each context object.
+* Run `npm start` from the command line and demonstrate the following:
 
-  - 🗒 Note that we don't need to create states for the `handleBtnClick` functions in each context object, since they will never change.
+  * When we run the React app and the browser opens, there is a button that increments the count displayed on the screen.
 
-  ```js
-  const [languages, setLanguages] = useState([]);
-  const [language, setLanguage] = useState("");
-  const [languageIndex, setLanguageIndex] = useState(0);
+  * Also, the page is notifying us that the browser's local storage is being updated.
+  
+  * This functionality is using a React Hook called `useEffect`. This Hook is used in a very similar fashion to React lifecycle methods like `componentDidUpdate()`.
 
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({});
-  const [userIndex, setUserIndex] = useState(0);
-  ```
+* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
 
-- Address any lingering questions students have.
+  * Inside the `Display` component, we can see right away that this is a functional component and not a class-based component.
+  
+  * 🔑 React Hooks can only be used with functional components.
+  
+  * First, we need to import `useEffect` in the React import statement, along with `useState`:
 
-### 17. Students Do: Work on HW (30 mins)
+     ```js
+     import React, { useState, useEffect } from 'react';
+     ```
 
-### 18. End
+  * In our component, we have initialized state using the `useState` Hook. We made a `count` variable with a default value of `0`, and a function to update it called `setCount`:
 
-* Note that there is an extra `15-Bonus_ClassContext` example activity for students who are curious about using the Context API in regular class components.
+     ```js
+     const [count, setCount] = useState(0);
+     ```
 
-### Lesson Plan Feedback
+  * The `useEffect` Hook comes into play when we want some code to run after the state is updated. For example, if the `count` is changed from `1` to `2`, we want to do something.
+  
+  * In this example, we are setting a `localStorage` variable called `myCount` with the same count that's in the state.
+  
+  * 🔑 The `setItem()` method updates `localStorage` and accepts the key name and value:
+  
+     ```js
+     useEffect(() => localStorage.setItem('myCount', count));
+     ```
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * 🔑 If we wanted this to only run one time after the page loads, we could provide an optional empty dependency array as a second argument to the `useEffect` Hook. We could also specify which variables we want to watch for changes by passing `count` into this array:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+     ```js
+     useEffect(() => {
+      localStorage.setItem('myCount', count)
+     }, []); // runs once
+     ```
+
+     ```js
+     useEffect(() => {
+      localStorage.setItem('myCount', count)
+     }, [count]); // re-creates the closure every time the "count" variable changes
+     ```
+
+  * The return method contains JSX with a button that has an `onClick` attribute set to `handleIncrease` in order to update the state:
+
+     ```jsx
+     return (
+       <div>
+         <p>You clicked {count} times</p>
+         <code>check localStorage in developer console</code>
+         <hr />
+         <button type="button" onClick={handleIncrease}>
+           Click me
+         </button>
+       </div>
+     );
+     ```
+
+  * `handleIncrease` is responsible for updating the state variable `count`, and nothing more:
+
+     ```js
+     const handleIncrease = () => {
+       setCount(count + 1);
+     };
+     ```
+
+* Open <http://localhost:3000> in the browser and open the developer console. Examine the local storage for this page and notice that the count variable is updated every time the state changes.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We would determine what code needs to run when the state changes and then use the `useEffect` Hook inside our functional component.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+
+### 20. Student Do: useEffect Hook (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+   ```md
+   # 📖 Implement the useEffect Hook
+
+   ## Before We Begin
+
+   Before you begin this activity, complete the following steps:
+
+   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+
+   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+   
+   ## Activity
+
+   Work with a partner to implement the following user story:
+
+   * As a developer, I want to be able to use the `useEffect` Hook to update the browser tab to reflect the current temperature.
+
+   ## Acceptance Criteria
+
+   * It's done when I have imported `useEffect` into [Thermostat.js](../00-React-App/src/components/Thermostat.js).
+
+   * It's done when I have set a value for the `temp` variable.
+
+   * It's done when I have used the `useEffect` Hook to set the `document.title` to the current temperature.
+
+   ## 📝 Notes
+
+   Refer to the documentation: 
+
+   [React Docs on the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
+
+   ## 🏆 Bonus
+
+   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+   * What are some other use cases for the `useEffect()` Hook?
+
+   Use [Google](https://www.google.com) or another search engine to research this.
+   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: useEffect Hook (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with the `useEffect` Hook? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ React Hooks
+
+  * ✔️ Optional dependency array
+
+* In the command line, run the application by typing `npm start`.
+
+* Open `00-practice-app/src/components/Thermostat.js` in your IDE and explain the following:
+
+  * This application updates the `document.title` every time the user clicks one of the buttons to raise or lower the temperature.
+  
+  * This is accomplished by using the `useEffect` Hook, which we imported with React:
+
+     ```js
+     import React, { useState, useEffect } from 'react';
+     ```
+  
+  * We start by creating a `temp` variable and `setTemp` as a function to update it. We also set an initial value of `75`:
+
+     ```js
+     const [temp, setTemp] = useState(75);
+     ```
+
+  * Next, we create a `useEffect` Hook that will update the `document.title` as a side effect whenever the state is changed:
+  
+     ```js
+     useEffect(() => {
+       document.title = `${temp}° Fahrenheit`;
+     });
+     ```
+
+  * Finally, we have the render method that returns the JSX we see on the page. It contains two button elements that have the inline `onClick` attribute set to `increaseTemp` or `decreaseTemp`:
+
+     ```jsx
+     <button
+       type="button"
+       className="btn btn-danger"
+       onClick={increaseTemp}
+     >
+       Raise temperature
+     </button>{' '}
+     <button
+       type="button"
+       className="btn btn-primary"
+       onClick={decreaseTemp}
+     >
+     ```
+
+  * Both of the click handlers are responsible for updating the state of the temp variable:
+
+     ```js
+     const increaseTemp = () => {
+       setTemp(temp + 1);
+     };
+
+     const decreaseTemp = () => {
+       setTemp(temp - 1);
+     };
+     ```
+  
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What would happen if we provided an empty array as the second argument to the `useEffect` Hook?
+
+  * 🙋 The `document.title` would only update one time.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [React Docs on useEffect](https://reactjs.org/docs/hooks-effect.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 22. FLEX (30 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Again, React can be overwhelming so use this time to help students who are struggling with the unit.
+
+* Answer any questions before ending the class.
+
+### 23. END (0 mins)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

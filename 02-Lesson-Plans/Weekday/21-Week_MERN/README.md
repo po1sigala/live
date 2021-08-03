@@ -1,45 +1,94 @@
-# Unit 21: MERN
+# Unit 21 Instructor Overview: MERN
 
 ## Overview
 
-In this unit, we will be tying the front end and back end together with a MERN application and students will begin to work on project 3.
+This week, students will apply their knowledge of MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/21-MERN/README.md) for detailed information on key topics, learning objectives and homework.
+Students will learn how to use React Router to add dynamic client-side routing to apps, which makes it possible for users to bookmark URLs and use the browser’s forward and back buttons. They'll also learn GraphQL, an open-source data query and manipulation language for APIs that provides declarative data fetching. Finally, students will add authentication to a MERN app by using a JSON Web Token.
 
-## Instructor / TA Notes
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/21-MERN/README.md) for detailed information on key topics, learning objectives, and homework.
 
-* The activities in this unit will contain significantly more boilerplate than the previous React lessons. Be sure to direct the class's attention to the important aspects of each exercise.
+## Instructor/TA Notes 
+
+* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face. 
+
+* Some activities in this unit rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser. 
+
+* For a refresher on how to use the GraphQL Playground, see the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+
+* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface. 
+
+* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations. 
+
+* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons. 
+
+## Career Connection
+
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/21-MERN/04-Career-Connection/README.md).
+
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+
+## Heads-Up
+
+During the next unit, we will build on the full-stack app development skills covered in this unit, as well as explore state management and the Context API. We'll also review the key concepts covered in this unit to help students prepare for their final projects and solidify their understanding of these more advanced skills. 
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide deck, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [21.1 - Lesson Plan](01-Day_MERN/21.1-LESSON-PLAN.md)
+  * [21.1 Lesson Plan](./01-Day_GraphQL/21.1-LESSON-PLAN.md)
 
-  * [21.2 - Lesson Plan](02-Day_Intro-Project-3/21.2-LESSON-PLAN.md)
+  * [21.2 Lesson Plan](./02-Day_Front-End/21.2-LESSON-PLAN.md)
+  
+  * [21.3 Lesson Plan](./03-Day_JWT/21.3-LESSON-PLAN.md)
 
-  * [21.3 - Lesson Plan](03-Day_React-Project-3/21.3-LESSON-PLAN.md)
+### Homework
 
-### Slide Decks
+  * [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
 
-  * [21.1: MERN](https://docs.google.com/presentation/d/1pTDZ37jFNFVHDa6v9qxRHr_CtKVWj0WOJ2O5p_ZlDEY/edit?usp=sharing)
+### Slide Deck
 
-  * [21.2: Final Project](https://docs.google.com/presentation/d/1ulUf1lCaj4sH1K7ym8sZL1IOuvHDeiwbe_NAOBqhwE8/edit?usp=sharing)
+  * [Unit 21: MERN](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
 
-### Time Tracker(s)
+### Algorithms
+  
+  * [01: Plus One](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
 
-  * [Unit 21-MERN Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1mZOzw2A6_s5C_u-18Z1hFxNO4m9FqDc_qiq0c_Tis80/edit#gid=1323041200)
+  * [02: One Edit Away](../../../01-Class-Content/21-MERN/03-Algorithms/02-one-edit-away)
 
-  * [Unit 21-MERN Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1uEOFspLvfjW6erY3dHVnOx5FXQal0ZUO9XIsYyobfXE/edit#gid=1526123852)
+  * [03: Caesar Cipher](../../../01-Class-Content/21-MERN/03-Algorithms/03-caesar-cipher)
 
-  * [Unit 21-MERN Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1tCQWgjimAwuPSHc2KSJfYLKA2pEcMfHQf8AZnfWfYKA/edit#gid=1938794889)
+    * 📹 [Let's Code Caesar Cipher!](https://2u-20.wistia.com/medias/bcfetr7mvf)
 
-## Algorithms
+### Resources
 
-  * [01-plus-one](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
+* [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
 
-  * [02-sum-array-digits](../../../01-Class-Content/21-MERN/03-Algorithms/02-sum-array-digits)
+* [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
-  * [03-one-edit-away](../../../01-Class-Content/21-MERN/03-Algorithms/03-one-edit-away)
+* [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
 
-  * [04-caesar-cipher](../../../01-Class-Content/21-MERN/03-Algorithms/04-caesar-cipher)
+* [Apollo Docs on queries and mutations](https://graphql.org/learn/queries/)
+
+* [Apollo Docs on writing query resolvers](https://www.apollographql.com/docs/tutorial/resolvers/)
+
+* [GraphQL Docs on passing arguments](https://graphql.org/graphql-js/passing-arguments/)
+
+* [Apollo Docs on mutations](https://www.apollographql.com/docs/react/data/mutations/)
+
+* [Apollo Docs on updating data with mutations](https://www.apollographql.com/docs/tutorial/mutations/)
+
+* [Apollo Docs on fetching data with queries](https://www.apollographql.com/docs/tutorial/queries/)
+
+* [React Router quick start guide](https://reactrouter.com/web/guides/quick-start)
+
+* [Introduction to JSON Web Tokens](https://jwt.io/introduction)
+
+* [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+
+* [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

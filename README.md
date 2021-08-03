@@ -12,7 +12,7 @@ Welcome to the Full-Stack Coding Bootcamp! The repository houses the Ground curr
 
 ### Class Content
 
-You will find unit overviews, all activitiy files, and homework instructions and solutions in [01-Class-Content](01-Class-Content).
+You will find unit overviews, all activity files, and homework instructions and solutions in [01-Class-Content](01-Class-Content).
 
 Use these materials to build your class repository.
 

@@ -1,452 +1,1318 @@
-## 6.4 - Node Gets a SQL (10:00 AM)
+# 06.4 Full-Time Lesson Plan: MySQL and Node.js
 
 ## Overview
 
-While the first class of the week took us away from JavaScript and Node for a tiny bit, today's class combines the old with the new in a way that shows just how powerful a MySQL server can be. With that being said, be on the lookout for small errors in syntax over the course of today's lesson. MySQL is VERY particular about the syntax that is used and this can lead to stress.
+In this lesson, students will continue using MySQL Shell to execute CRUD functions using SQL commands. They will connect a MySQL database to a Node.js application and develop a database schema, using various data types and foreign and primary keys. They will also learn about seeding a database.
 
-## Instructor's Notes
+## Instructor Notes
 
-* `Summary: Complete activities 03-10 in Unit 12`
+* In this lesson, students will complete activities `09-Ins_CRUD-Delete` through `20-Stu_Foreign-Primary-Key`.
 
-**IMPORTANT**: If you are using MySQL 8, you will need to have your class run the following query in the MySQL Workbench
+* Have your MySQL password ready so that you can use MySQL Shell to demonstrate the activities.
 
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourRootPassword'
-```
+* **Important**: You will be demonstrating command-line commands that contain your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
 
-Failure to do so will result in 
-```sh
-Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
-```
+* Make sure that students can initialize the MySQL Shell using the command `mysql -u root -p`. They will need their MySQL password. Students should also be encouraged to use a MySQL password that is not used for any other personal accounts.
 
-* MySQL in Node is VERY particular about the syntax that it uses and will return an error if it finds something isn't right. Tell your students to be on the lookout for small issues with their syntax before thinking there is anything else wrong with their code.
+  * If macOS users get a `command not found` error message, they might need to add the following into their `.bash_profile` or `.zshrc` file: `export PATH="${PATH}:/usr/local/mysql/bin/"`.
 
-* Those students who struggled with either MySQL or Node might find today's class difficult as well since it is built upon both of those concepts. If you can, try to help them catch up during the longer assignments if it looks as if they are having trouble.
+  * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
+
+* For the activities that use an Express.js server, you will be required to pass your username and SQL password as a parameter of `createConnection()`. Make sure to change the provided user -- if you are not using the default `root` -- and add your personal SQL password before running each demo or activity. The changes will need to be made in the `server.js` file.
+
+* In the Stoke Curiosity section, you will use a sample MySQL database to demonstrate the real-world application of SQL. Before class, visit the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/), then download it and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
+
+* The Stoke Curiosity instructions differ from the instructions provided in the GitHub repo, so be sure to review them ahead of time. The instructions in this lesson plan aim to reinforce the skills that students learn in class and prevent a possible permissions error during installation.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-* To create a connection to a MySQL database using Node
+* Perform CRUD functions using MySQL commands.
 
-* To create, read, update, and delete data from a MySQL database using Node
+* Configure a Node.js application to connect to a MySQL database.
 
-* To work with a group in taking a basic concept for a server side application and creating a working prototype for that application within a given time frame
+* Use data types to specify the type of data that each column can hold.
 
-## Slides
+* Create a database schema.
 
-* N/A
+* Seed a database for use in application development.
+
+* Specify the relationship between tables using primary and foreign keys.
 
 ## Time Tracker
 
-[6.4 Time Tracker](https://docs.google.com/spreadsheets/d/1ZecDzfTzFRKFMWICcLQiD9ehS8UZRl5-/edit#gid=1889363014)
+| Start  | #   | Activity Name                         | Duration |
+|---     |---  |---                                    |---       |
+| 10:00AM| 1   | Instructor Demo: CRUD Delete          | 0:05     |
+| 10:05AM| 2   | Student Do: CRUD Delete               | 0:15     |
+| 10:20AM| 3   | Instructor Review: CRUD Delete        | 0:10     |
+| 10:30AM| 4   | Instructor Do: Stoke Curiosity        | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Connect to Node.js   | 0:05     |
+| 10:45AM| 6   | Student Do: Connect to Node.js        | 0:15     |
+| 11:00AM| 7   | Instructor Review: Connect to Node.js | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Data Types           | 0:05     |
+| 11:15AM| 9   | Student Do: Data Types                | 0:15     |
+| 11:30AM| 10  | Instructor Review: Data Types         | 0:10     |
+| 11:40AM| 11  | FLEX                                  | 0:20     |
+| 12:00PM| 12  | BREAK                                 | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Schema               | 0:05     |
+| 12:35PM| 14  | Student Do: Schema                    | 0:15     |
+| 12:50PM| 15  | Instructor Review: Schema             | 0:10     |
+| 1:00PM | 16  | Instructor Demo: Seeds                | 0:05     |
+| 1:05PM | 17  | Student Do: Seeds                     | 0:15     |
+| 1:20PM | 18  | Instructor Review: Seeds              | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Keys                 | 0:05     |
+| 1:35PM | 20  | Student Do: Keys                      | 0:15     |
+| 1:50PM | 21  | Instructor Review: Keys               | 0:10     |
+| 2:00PM | 22  | FLEX                                  | 0:30     |
+| 2:30PM | 23  | END                                   | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
-### 1. Students Do: Making and Using an ID Column (10 mins)
+### 1. Instructor Demo: CRUD Delete (5 min)
 
-* Slack out the following instructions
+* Open `09-Ins_CRUD-Delete/db/delete.sql` in your IDE and explain the following:
 
-* **Instructions**
+  * 🔑 We can delete a row in a table by first using the `DELETE FROM` command to select a table:
 
-  * Make a new database called "programming_db" and switch into it for this activity
+    ```sql
+    DELETE FROM produce
+    ```
 
-  * Create a table called "programming_languages" which includes a primary key named "id" which will automatically increment which each new row created, a string column called "languages," and a numeric column called "rating."
+  * 🔑 Because we do not want to delete all the rows, we use the `WHERE` clause to specify a condition for the row. In this case, we want to delete the row where `id` equals `2`:
 
-  * Insert some data into the table and then modify the data using the id column.
+    ```sql
+    WHERE id = 2;
+    ```
 
-  * BONUS: Study up on how to add columns to a table and then create a boolean column called "mastered" which has a default value of `true`.
+* Open `09-Ins_CRUD-Delete/db/update.sql` in your IDE and explain the following:
 
-  * BONUS: Start looking into the concept of joins in SQL
+  * 🔑 We can also use the `UPDATE` command to change the data. To start, we select the table that we want to update:
 
-### 2. Everyone Do: programming_db Solution (15 mins)
+    ```sql
+    UPDATE produce
+    ```
 
-* Open up `programmingDB` in `04-programmingDB/Solved` and copy the code into MySQL Workbench.
+  * 🔑 Then we use `SET` to assign the new data to a column:
 
-* Go over the bits of code which create "id" and set it as the primary key once more. Make sure everyone understands how this works and explain how useful this will be in this week's homework.
+    ```sql
+    SET name = "strawberry"
+    ```
 
-### 3. Instructor Do: Breaking Into the Join (10 mins)
+  * 🔑 We only want the `name` column to have the value of `strawberry` in the row where the `id` is `1`, so we add a `WHERE` clause:
 
-* Now we are getting into one of the more difficult aspects of MySQL, but tell your class that this information will be very useful to them in the homework should they decide to attempt the challenge assignment.
+    ```sql
+    WHERE id = 1;
+    ```
 
-* Joins allow those using MySQL to combine two or more individual tables together using a value that is shared between them.
+* Navigate to `09-Ins_CRUD-Delete/db` in your command line and enter `mysql -u root -p` to open MySQL Shell.
 
-* Open up `books.sql` in `05-books` and then copy it into MySQL Workbench. Take a moment to demonstrate the structure of the `books` and `authors` tables.
+  * We execute the `schema.sql` file in MySQL Shell to create the database and table:
 
-* Explain that we can utilize joins to combine and display data from both tables. Point out how the `books` table has a foreign key of `authorId` which corresponds to the `id` of a row in the `authors` table. Explain that these tables have what's known as a one-to-many relationship, since a book can only have one author, but an author can have many books.
+    ```sql
+    SOURCE schema.sql;
+    ```
 
-* Explain that foreign keys are most commonly used to relate tables since primary keys are unique and won't change. Demonstrate each query below, showing students the resulting table, and explaining the differences between each join.
+  * We use `SELECT *` to display the contents of the `produce` table:
 
-  * INNER JOIN: Combines tables where the specified data-values within a column match one-another
+    ```sql
+    SELECT * FROM produce;
+    ```
 
-  * LEFT JOIN: Combines tables and shows all of the values of the first table specified while only the values which match on the second side will be shown
+  * We execute the `delete.sql` file to run the delete query:
 
-  * RIGHT JOIN: Combines tables and shows all of the values of the second table specified while only the values which match on the first table will be shown
+    ```sql
+    SOURCE delete.sql;
+    ```
 
+  * When we run a `SELECT` query to display the contents of the `produce` table again, we find that the row has been deleted:
 
-### 4. Instructor Do: Creating a Database Connection Demo (5 mins)
+    ```sql
+    SELECT * FROM produce;
+    ```
 
-* First thing is first, we cannot manipulate the data within a MySQL database without first creating a connection to that specific database. This is actually a lot easier than it sounds thanks to the "MySQL" package for Node.
+  * We execute the `update.sql` file to run the update query:
 
-* Open up your terminal and navigate to the folder `06-iceCreamWithConnection` but do not yet open up the file containing your code.
+    ```sql
+    SOURCE update.sql;
+    ```
 
-* Within your terminal, type `npm install mysql` and then hit enter to download the package.
+  * When we run a `SELECT` query to display the contents of the `produce` table again, we find that the data for row `2` has changed:
 
-* With the MySQL package now installed, open up `iceCreamDBConnection.js` and explain each line of code:
+    ```sql
+    SELECT * FROM produce;
+    ```
 
-```js
-const mysql = require("mysql");
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  ```js
-  const mysql = require('mysql');
+  * ☝️ Which clause do we use to specify a condition?
+
+  * 🙋 We use the `WHERE` clause to specify a condition. For example, if we set the condition to `id = 2`, then only the row with the `id` of `2` will be deleted or updated.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_CRUD-Delete/README.md`.
+
+### 2. Student Do: CRUD Delete (15 min)
+
+* Direct students to the activity instructions found in `10-Stu_CRUD-Delete/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Data Not Updating in Database
+
+  Work with a partner to resolve the following issue(s):
+
+  * As a user, I want to update a single row of data in a table using a MySQL statement.
+
+  ## Expected Behavior
+
+  When I execute a MySQL statement, I want only the data with an `id` of `2` to update to `Candide`.
+
+  ## Actual Behavior
+
+  When I execute a MySQL statement to update the data, the data in every row displays the new value.
+
+  ## Steps to Reproduce the Problem
+
+  1. Create a `books_db` database and select it for use.
+
+  2. Execute the `insert.sql` file in the command line to insert data.
+
+  3. Execute the `update.sql` file to update the table.
+
+  4. Enter the query `SELECT * FROM fiction` to view the contents of the table.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The table lists three data entries, with "Candide" appearing in row 2.](./assets/image-1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What clause do we use to filter and select specific rows to be updated?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How do we distinguish SQL syntax from other text?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
-  
-  * The following code block creates a connection to the "ice_creamDB" database using a localhost connection.
 
-  ```js
-  const connection = mysql.createConnection({
-    host: 'localhost',
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-    // Your port, if not 3306
-    port: 3306,
+### 3. Instructor Review: CRUD Delete (10 min)
 
-    // Your MySQL username
-    user: 'root',
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-```js
-connection.connect((err) => {
-  if(err) throw err;
-  console.log(`connected as id ${connection.threadId}`);
-});
-```
+  * ☝️ How comfortable do you feel deleting and updating data? (Poll via Fist to Five, Slack, or Zoom)
 
-    // Name of database
-    database: 'ice_creamDB',
-  });
-  ```
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * The following lines of code are used to have Node connect to the MySQL server. Then it will inform the user that they have connected properly.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  ```js
-  connection.connect((err) => {
-    if (err) throw err;
-    console.log('connected as id ' + connection.threadId);
-    connection.end();
-  });
-  ```
+  * ✔️ `UPDATE`
 
-* Run the code in your terminal (after filling in your MySQL password correctly) and show the result to the class, asking for any questions regarding this process before slacking out the following assignment.
+  * ✔️ `SET`
 
-![SQL Connection](Images/SQL_Connection.png)
+  * ✔️ `WHERE`
 
-### 3. Students Do: Creating a Database Connection (10 mins)
+* Open `10-Stu_CRUD-Delete/Solved/schema.sql` in your IDE and explain the following:
 
-* More time than necessary has been provided to this particular assignment to ensure that everyone creates a connection to MySQL through Node.
+  * We create a `books_db` database and select it for use:
 
-* Throughout this class the students are going to be working on creating an application that takes in music data to create personalized playlists. 
+    ```sql
+    DROP DATABASE IF EXISTS books_db;
+    CREATE DATABASE books_db;
+    USE books_db;
+    ```
 
-* **Instructions**
+  * We create a table named `fiction` to hold the data. The table has an `id` column and a `name` column:
 
-  * Throughout this class we are going to be working on creating an application that takes in music data to create personalized playlists. 
+    ```sql
+    CREATE TABLE fiction (
+      id INT NOT NULL,
+      name VARCHAR(100) NOT NULL
+    );
+    ```
 
-  * Create your `playlistDB` database in MySQL.
+* Open `10-Stu_CRUD-Delete/Solved/insert.sql` in your IDE and explain the following:
 
-  **Remember, you must create a database before attempting to connect to it. Doing otherwise will return an error.**
+  * We use `INSERT INTO` to add data:
 
-  * Create a new file and name it `playlistConnection.js`.
+    ```sql
+    INSERT INTO fiction (id, name)
+      VALUES
+       ( 001, "To Kill a Mockingbird"),
+       ( 002, "100 Years of Solitude"),
+       ( 003, "War and Peace");
+    ```
 
-  * Create a connection to the database using Node.js.
+* Open `10-Stu_CRUD-Delete/Solved/update.sql` in your IDE and explain the following:
 
-  * BONUS: Using MySQL Workbench, create a table in your database with four columns.
+  * Now that we have data in the table, we use the `UPDATE` command to update the data in the `fiction` table:
 
-    * Primary Key of "ID" which auto-increments
-    * A column called "title"
-    * A column called "artist"
-    * A column called "genre"
+    ```sql
+    UPDATE fiction
+    ```
 
-  * BONUS: Using MySQL Workbench, populate your table with a few rows of dummy data
+  * Then we use `SET` to determine the column where the data will be updated:
 
-* While they are working on this assignment, create a table called "products" within your `ice_creamDB` database and populate it with the data located within `iceCreamSeeds.sql` in `07-iceCreamReadData`
+    ```sql
+    SET name = "Candide"
+    ```
 
-* Students will be creating their own database of playlists. You will be working with a database that is different but with the same number of rows in each table to help mirror as students create  and work with their own data.
+  * Next, we add a condition to determine which rows will be changed. If we don't set a condition, all the rows will be changed:
 
-### 6. Instructor Do: Reading Data From a Database (10 mins)
+    ```sql
+    WHERE id = 2;
+    ```
 
-* After everyone has finished the previous assignment, open up `iceCreamDBConnection.js` in `06-iceCreamWithConnection` once more
+* Navigate to `10-Stu_CRUD-Delete/Solved` in your command line and enter `mysql -u root -p` to open MySQL Shell.
 
-* While we have created a connection to our MySQL databases, we have not yet grabbed any data from it. As you might imagine, this is kind of an important feature to be missing so we are going to solve that now
+  * We execute the `schema.sql` file in the MySQL Shell to create the database along with the table. We then execute the `insert.sql` file to add data:
 
-* Turns out that calling records from a MySQL database using Node is a whole lot easier than one might initially imagine so long as you understand SQL syntax. This is because the MySQL package uses pretty much the same syntax as SQL in its usage
+    ```sql
+    SOURCE schema.sql;
+    SOURCE insert.sql;
+    ```
 
-* To emphasize this, update the following code to the end of `iceCreamDBConnection.js` in `06-iceCreamWithConnection` so that it matches the code found within `iceCreamReadData.js`in `07-iceCreamReadData` and then discuss it with the class before running it in your terminal
+  * We use `SELECT *` to display the contents of the `fiction` table:
 
-```js
-const afterConnection = () => {
-  connection.query('SELECT * FROM products', (err, res) => {
-    if (err) throw err;
-    console.log(res);
-    connection.end();
-  });
-};
+    ```sql
+    SELECT * FROM fiction;
+    ```
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log(`connected as id ${connection.threadId}`);
-  afterConnection();
-});
-```
+  * Now that we have specified a condition using a `WHERE` clause, only the second row has changed!
 
-* Through calling `connection.query('SELECT * FROM products', (err, res) =>`, we are telling Node to send an SQL query to our database and return the data collected through the "res" variable
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* The string portion uses SQL syntax and should be contained within a pair of quotes. Because of this, you should tell your students to be very careful with their syntax since even small differences could lead to an error being returned.
+  * ☝️ Which CRUD operations can we perform using a SQL query?
 
-  * The query contained within the string can be switched out with any other kind of SQL query which will allow you to collect specific types of data as well.
+  * 🙋 We can create data using `INSERT`, read data using `SELECT`, update data using `UPDATE`, and delete data using `DELETE`.
 
-  * Point out that we run the query inside of the body of the `connect` method's callback function. Since the `connection.connect` and `connection.query` methods both run asynchronously, there's no guarantee that the `connection.query` method will run after `connect` if it's run from outside. If we didn't want to put the entire query method inside of the callback, we could also wrap the query method inside of a function. Example:
+  * ☝️ What can we do if we don't completely understand this?
 
-  ```js
-  connection.connect((err) => {
-    if (err) throw err;
-    console.log(`connected as id ${connection.threadId}`);
-    selectAll();
-  });
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on examples of common queries](https://dev.mysql.com/doc/refman/8.0/en/examples.html), and stay for office hours to ask for help.
 
-  const selectAll = () => {
-    connection.query("SELECT * FROM products", (err, res) => {
-      if (err) throw err;
-      console.log(res);
+* Answer any questions before proceeding to the next activity.
+
+### 4. Instructor Do: Stoke Curiosity (10 mins)
+
+* If you have not yet downloaded the sample database, download it from the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/employees-installation.html) and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
+
+* Explain that while these activities involve relatively small sets of data, many companies use SQL to handle large amounts of data quickly and easily.
+
+* Emphasize that the skills students are learning in class are the same skills that they will use on the job to handle large datasets in the workplace -- making SQL a highly transferable skill.
+
+* Open the `test_db/employees.sql` directory in your IDE to demonstrate the following:
+
+  * MySQL provides a sample database that we can use to practice querying large amounts of data, similar to datasets found in the workplace.
+
+  * Just like the databases that we have created in class, the sample database uses the `CREATE` and `USE` commands to create and select the database:
+
+    ```sql
+    DROP DATABASE IF EXISTS employees;
+    CREATE DATABASE IF NOT EXISTS employees;
+    USE employees;
+    ```
+
+  * The sample database also comprises numerous tables, which all contain columns that hold certain data. For example, each column in the `employees` table is assigned a specific type of data, as well as a primary key:
+
+    ```sql
+    CREATE TABLE employees (
+      emp_no      INT             NOT NULL,
+      birth_date  DATE            NOT NULL,
+      first_name  VARCHAR(14)     NOT NULL,
+      last_name   VARCHAR(16)     NOT NULL,
+      gender      ENUM ('M','F')  NOT NULL,
+      hire_date   DATE            NOT NULL,
+      PRIMARY KEY (emp_no)
+    );
+    ```
+
+  * During class today, we will learn more about applying data types and keys to tables.
+
+  * The description of the database and tables make up the **schema** of the dataset. As datasets grow, we must plan out the schema to define both the types of data that each table can hold as well as the relationship between the tables.
+
+* Open the [MySQL documentation on the Employees sample database schema](https://dev.mysql.com/doc/employee/en/sakila-structure.html) in your browser to demonstrate the following:
+
+  * Databases large and small use schemas to define the structure of each table.
+
+  * The diagram on this page shows that the `employees` table is linked to numerous other tables. These relationships allow us to query to return meaningful data, while keeping the data organized.
+
+* Navigate to the `test_db` directory in your command line to demonstrate the following:
+
+  * After downloading the dataset, we navigate to the unpacked directory to work with it using MySQL Shell:
+
+    ```sh
+    cd test_db/
+    mysql -u root -p
+    ```
+
+  * In MySQL Shell, we use the `SOURCE` command to execute the `employees.sql` file:
+
+    ```sql
+    SOURCE employees.sql;
+    ```
+
+  * Then we check that the employees database is now in use:
+
+    ```sql
+    SELECT DATABASE();
+    ```
+
+  * Now let's view the tables contained in the database:
+
+    ```sql
+    SHOW TABLES;
+    ```
+
+  * To find out how big the database is, we can use a new method -- the aggregate function `COUNT()` --  to return the number of rows in the `employees` table:
+
+    ```sql
+    SELECT COUNT(*) FROM employees;
+    ```
+
+  * This tells us that there are over 300,000 employees in the database!
+
+* Whether a table contains 10 rows or 300,000, it is important to build databases that can scale up quickly and easily. Today we will focus on tools that we can use to build databases, provide practice data for development, and connect databases to a MySQL server.
+
+### 5. Instructor Demo: Connect to Node.js (5 min)
+
+* Navigate to `11-Ins_Connect-Node/db` in your command line and enter `mysql -u root -p` to enter MySQL Shell.
+
+* Run `SOURCE schema.sql;` and `SOURCE seeds.sql;` to create and seed the database.
+
+* Exit the MySQL Shell and run `npm install` to demonstrate the following:
+
+  * So far, we have worked with MySQL using MySQL Shell. However, we might want to access and manipulate data using an app. To do so, we can connect a MySQL database to an Express.js server.
+
+  >**Note**: Before running the following code and any subsequent demos that use an Express.js server, be sure to add your MySQL password to the `server.js` file as a parameter of the `mysql.createConnection()` function.
+
+  * Then run the server using the following command:
+
+    ```sh
+    node server.js
+    ```
+
+  * When we do so, data is printed to the command line. This data is the result of a query run directly in the Express.js server.
+
+* Open `11-Ins_Connect-Node/server.js` in the IDE to demonstrate the following:
+
+  * 🔑 We use the npm `mysql2` package to easily connect the MySQL database to the Express.js server:
+
+    ```js
+    const mysql = require('mysql2');
+    ```
+
+  * 🔑 Once we have required `mysql2`, we create a new database instance using `CreateConnection()`:
+
+    ```js
+    const db = mysql.createConnection();
+    ```
+
+  * 🔑 We also specify the host, user, password, and database. These configurations should match the way we access the database using MySQL Shell:
+
+    ```js
+    {
+      host: 'localhost',
+      user: 'root',
+      password: '',
+      database: 'classlist_db'
+    },
+    ```
+
+  * 🔑 Now that we are connected to the database, we can query it directly in Express.js using the `query()` function:
+
+    ```js
+    db.query()
+    ```
+
+  * The `query()` function takes two parameters -- the actual query that we want to execute and the function that we want performed. Note that the query looks exactly the same as it did when we queried using MySQL Shell:
+
+    ```js
+    db.query('SELECT * FROM students', function (err, results) {
+      console.log(results);
     });
-  }
+    ```
+
+  * When we run the `server.js` file, the query is executed and the data is printed to the screen.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What steps do we take to connect a MySQL database to an Express.js server?
+
+  * 🙋 We require the npm `mysql2` package. Then we use `CreateConnection()` to connect the MySQL database to Express.js.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Connect-Node/README.md`.
+
+### 6. Student Do: Connect to Node (15 min)
+
+* Direct students to the activity instructions found in `12-Stu_Connect-Node/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of MySQL in Node.js Environment
+
+  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2#installation)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the components of client-server architecture? How does a MySQL database fit into this model?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-  * Inform the class that what's most likely to trip them up while working with the mysql npm package is dealing with asynchrony. One way to deal with this is to kick off the next piece of code from within the callback function of the previous. This will become more clear as we work through the rest of the activities and the homework assignment.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Run the code in your terminal and the data contained within your database should be returned to you as an array of objects.
+### 7. Instructor Review: Connect to Node (10 min)
 
-    ![SQL Data](Images/SQL_Data.png)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * Be sure to make note of the `RowDataPacket` that comes before each object. Students may think that this would impact the ways in which you would call specific data (eg. `res[0].RowDataPacket.id`), but this is not actually necessary. The data can be called normally.
+  * ☝️ How comfortable do you feel connecting to Node.js? (Poll via Fist to Five, Slack, or Zoom)
 
-* Also make sure to note how `res` is only available inside of the scope of the function. `res` would be undefined outside of the query callback function unless the data was stored within a global variable.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-### 7. Students Do: Collecting Data From a Database (15 mins)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Once again, more than enough time has been given for this assignment so as to provide students with the opportunity to tackle the bonuses since both of these would assist them greatly in tackling this week's homework.
+  * ✔️ `require('mysql2')`
 
-* While this assignment is going on, take a few moments to take the code contained within `playlistSeeds.sql` in `08-playlistRead` and run it in MySQL Workbench so that you can go over the assignment with the class afterwards
+  * ✔️ `createConnection()`
 
-* Check to see if there are any questions from the previous part of the lesson before slacking out the following instructions to the class...
+  * ✔️ `query()`
 
-* **Instructions**
+* Navigate to `12-Stu_Connect-Node/Solved/db` in your command line.
 
-  * Using the connection and song data you put together earlier into the class, we are going to print playlists to the Git Bash console based upon the genre or artist.
+  * When we use MySQL Shell, we set the user to `root`, using the `-u` flag, and we enter the MySQL password using the `-p` flag. We will need this information when we connect the database to the Express.js server:
 
-  * First create code that prints all songs within your database to the terminal.
+    ```sql
+    mysql -u root -p
+    ```
 
-  * Now create code that prints songs of a specific genre/artist to the terminal.
+  * To create the database and provide seed data, we execute the `schema.sql` and `seeds.sql` files in MySQL Shell:
 
-    * If you don't have many songs in your database at this point in time, take this moment to add some more to it. Try to give yourself a variety of songs to work with.
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
 
-    * HINT: Remember that you can call specific data using SQL commands we went over last class. If you are having trouble, make sure to look into SQL commands once more.
+  * Next, we display the database currently in use:
 
-  * BONUS: Use 'placeholder' values or string concatenation to build a MySQL query which allows you to change pieces of the query on the fly (e.g. using a variable to build the `WHERE` clause, instead of a static string).
+    ```sql
+    SELECT DATABASE();
+    ```
 
-    * There are a couple different ways to accomplish this task, but the most common one can be found within the [documentation for the MySQL package](https://github.com/mysqljs/mysql#performing-queries).
+  * We connect that database to the Express.js server, using the exact name returned by the `SELECT` command.
 
-### 8. Everyone Do: Collecting Data From a Database (10 mins)
+* Open `12-Stu_Connect-Node/Solved/server.js` in your IDE and explain the following:
 
-* Open up the file titled `playlistRead.js` in `08-playlistRead` in your editor to go over some of the finer points of the past assignment.
+  * 🔑 We require the npm `mysql2` package to connect the database to the server:
 
-    ![Playlist Data](Images/Playlist_Data.png)
+    ```js
+    const mysql = require('mysql2');
+    ```
 
-* While the first query is much like that which we went over earlier, the second one is the one that is most interesting because it contains a query that seems incomplete as there is a question mark at the end of it. What this syntax allows the user to do, however, is place an array after the query string whose contents will replace the question marks with those variables contained within the array.
+  * 🔑 We then use the `mysql2` method `createConnection()` to create a new instance of a MySQL database and store the connection in a variable called `db`:
 
-  * Why is this useful? It allows for programmers to plug in multiple variables using the same bit of code. We will go over this kind of thing more in future classes, but anything that makes a piece of code more reusable is a bonus in the wild world of programming.
+    ```js
+    const db = mysql.createConnection()
+    ```
 
-### 9. Instructor Do: Creating, Updating, and Deleting Data Using Node (15 mins)
+  * 🔑 To connect to the database that we just created using MySQL Shell, we enter the user, the password, and the name of the database -- exactly as this information was entered previously:
 
-* When creating programs that deal with databases, there is a rather fun acronym which a lot of programmers use in order to remind themselves which functions they have available to them. This acronym is CRUD :
-
-
-```
-C - CREATE - INSERT INTO pets (name, type, age) VALUES ("fido", "dog", 3);
-R - READ   - SELECT * FROM pets;
-U - UPDATE - UPDATE pets SET name="under dog" WHERE type = "dog";
-D - DELETE - DELETE FROM pets WHERE type = "mouse";
-```
-
-* So far we have only really gone over one of the four letters of CRUD today, but now that we have a firm understanding on the basics we can more easily jump into the others without spending as much time on them independently. This is because they all use nearly identical calls to that of your typical READ query with many of the changes only being the SQL query being made.
-
-* Go over each of the following examples one at a time, adding them into your ice-cream application from earlier in the class and running them in your terminal. You may use use `09-iceCreamCRUD` as a guide.
-
-```js
-const createProduct = () => {
-  console.log('Inserting a new product...\n');
-  const query = connection.query(
-    'INSERT INTO products SET ?',
-    {
-      flavor: 'Rocky Road',
-      price: 3.0,
-      quantity: 50,
-    },
-    (err, res) => {
-      if (err) throw err;
-      console.log(`${res.affectedRows} product inserted!\n`);
-      // Call updateProduct AFTER the INSERT completes
-      updateProduct();
-    }
-  );
-
-  // logs the actual query being run
-  console.log(query.sql);
-};
-```
-
-* Point out to students how similar this looks to the code which reads data, with the only major differences being the query made and the data entered.
-
-  * When inserting data into a MySQL database using Node, the format is to use object notation with the keys being the columns that you would like to insert data into.
-
-  * Make sure that the data you are entering into your columns matches the types the server is expecting. Doing otherwise might cause the server to crash since it will not know how to handle the data you are passing it.
-
-* Point out how you can assign the query to a variable and use `query.sql` to determine what the query being run against the database is.
-
-```js
-const updateProduct = () => {
-  console.log('Updating all Rocky Road quantities...\n');
-  const query = connection.query(
-    'UPDATE products SET ? WHERE ?',
-    [
-      {
-        quantity: 100,
+    ```js
+    const db = mysql.createConnection(
+     {
+       host: 'localhost',
+       user: 'root',
+       password: '',
+       database: 'classlist_db'
       },
-      {
-        flavor: 'Rocky Road',
-      },
-    ],
-    (err, res) => {
-      if (err) throw err;
-      console.log(`${res.affectedRows} products updated!\n`);
-      // Call deleteProduct AFTER the UPDATE completes
-      deleteProduct();
-    }
-  );
+      console.log(`Connected to the classlist_db database.`)
+    );
+    ```
 
-  // logs the actual query being run
-  console.log(query.sql);
-};
-```
+  * 🔑 To test that the database has been successfully connected, we call the `query()` method on the new database instance. The method takes in two parameters -- the query that we want to execute and the function that we want performed:
 
-* Updating data is VERY similar to creating data, the only significant difference being the addition of the WHERE statement which allows you to interact with specific rows of data
+    ```js
+    db.query('SELECT * FROM students', function (err, results) {
+      console.log(results);
+    });
+    ```
 
-  * Your students will also notice that we are using two question marks within this statement, one for the SET and one for the WHERE. What's cool about this is that, by using an array, we are able to replace both question marks with the elements contained within said array.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * First question mark is replaced with the first object in the array while the second question mark is replaced with the second object in the array.
+  * ☝️ How can we execute a MySQL query in an Express.js server?
 
-```js
-const deleteProduct = () => {
-  console.log('Deleting all strawberry icecream...\n');
-  connection.query(
-    'DELETE FROM products WHERE ?',
-    {
-      flavor: 'strawberry',
-    },
-    (err, res) => {
-      if (err) throw err;
-      console.log(`${res.affectedRows} products deleted!\n`);
-      // Call readProducts AFTER the DELETE completes
-      readProducts();
-    }
-  );
-};
-```
+  * 🙋 We use the `query()` method. The first parameter is the query -- entered just as we would enter it into MySQL Shell -- and the second is the action that we want performed.
 
-* Deleting MySQL data through Node is almost entirely identical to a READ query that includes a WHERE statement within it. Not much else to it other than that.
+  * ☝️ What can we do if we don't completely understand this?
 
-```js
-const readProducts = () => {
-  console.log('Selecting all products...\n');
-  connection.query('SELECT * FROM products', (err, res) => {
-    if (err) throw err;
-    // Log all results of the SELECT statement
-    console.log(res);
-    connection.end();
-  });
-};
-```
+  * 🙋 We can refer to supplemental material, read the [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2), and stay for office hours to ask for help.
 
-* Students should already be familiar with reading data at this point but ask your class if they have any questions and answer them as best you can before moving onto the next activity.
+* Answer any questions before proceeding to the next activity.
 
-### 10. Students Do: CRUD Playlist (20 mins)
+### 8. Instructor Demo: Data Types (5 min)
 
-* Slack out the following instructions.
+* Open `13-Stu_Data-Types/db/schema.sql` in your IDE and explain the following:
 
-* **Instructions**
+  * When we create a scalable database that can hold a large amount of data, we want to make sure that we store useful data of the right type.
 
-  * It's time to start making our playlist application a little more functional through including all four C.R.U.D elements within it.
+  * 🔑 We use the **data type** attribute to assign specific types of data to columns and limit the types of data that a column can hold.
 
-  * Add in some pieces of code that CREATE, UPDATE, and DELETE specific pieces of data from your MySQL database. Make sure to include a READ statement at the end as well to ensure that the changes you are making are working properly.
+  * 🔑 We use the `INT` or `INTEGER` data type to store whole numbers:
 
-  * BONUS: After successfully adding CRUD to your application, it's time to test your mettle and see if you can make it so this app is more dynamic. Add the ability for users to dynamically input their own data into the database using the Inquirer NPM package.
+    ```sql
+    id INT
+    ```
 
-    * HINT: Recall that you can create MySQL queries which include variables using question marks. Proper usage of this will help you quite a bit.
+  * 🔑 For shorter strings of text, we use `VARCHAR` and specify a number of characters. For longer strings of indeterminate length, we use `TEXT`:
 
-    * HINT: Remember to take into account the scope of Inquirer package when putting your application together.
+    ```sql
+    course_title VARCHAR(30),
+    course_description TEXT,
+    ```
 
-- - -
+  * 🔑 For values that are true or false, we use the `BOOLEAN` data type:
 
-### 11. BREAK (30 mins)
+    ```sql
+    active BOOLEAN
+    ```
 
-- - -
+  * 🔑 For each of these common data types, we have also added the `NOT NULL` constraint. We use `NOT NULL` when we want to require that each row of the table has data for that particular column:
 
-### 12. Groups Do: Great-Bay (60 mins)
+    ```sql
+    id INT NOT NULL,
+    course_title VARCHAR(30) NOT NULL,
+    course_description TEXT NOT NULL,
+    active BOOLEAN NOT NULL,
+    ```
 
-* When everyone is back from break, split them up into groups of three or four and then slack out the following instructions...
+  * We can also set a column to automatically generate data, like a date:
 
-* **Instructions**
+    ```sql
+    date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+    ```
 
-  * Within your groups you are going to be creating a Node application called "Great-Bay" which allows users to create and bid on assorted items, tasks, jobs, or projects.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * The basic application is fairly simple: Upon loading up the program, the user is prompted on whether they would like to "POST AN ITEM" or "BID ON AN ITEM"
+  * ☝️ Why do we add a data type attribute to the columns?
 
-    * If the user selects "POST AN ITEM" they are prompted for an assortment of information regarding the item and then that information is added to the database so that others can bid on it
+  * 🙋 We add a data type attribute to limit the type of data that the column can store, and thereby ensure that only useful data is stored in the database.
 
-    * If the user selects "BID ON AN ITEM" they are shown a list of all available items and then are prompted to select what they would like to bid on. The console then asks them how much they would like to bid, and their bid is compared to the previous highest bid. If their bid is higher, inform the user of their success and replace the previous bid with the new one. If their bid is lower (or equal), inform the user of their failure and boot them back to the selection screen.
+* Answer any questions before proceeding to the next activity.
 
-  * Once your group has put together the basic application, it's time to test your collective skills on some additional functionality, or "addons". Remember to take into consideration the amount of time you have been given when choosing what addons you would like to tackle.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Data-Types/README.md`.
 
-    * Create a sign up and login system that prompts users for a username and password upon loading up the app. **Do not worry about setting up a truly secure database if you choose to tackle this addon. Just worry about building working sign up and login features.**
+### 9. Student Do: Data Types (15 min)
 
-    * Create a system on the "POST AN ITEM" which allows users to look at the auctions they have created. On this screen they can add new auctions, modify previous auctions, or close bidding on an auction.
+* Direct students to the activity instructions found in `14-Stu_Data-Types/README.md`.
 
-    * Create a system which allows users to view all of the auctions of which they are the leading bidder.
+* Break your students into pairs that will work together on this activity.
 
-    * Create a third option on the main screen which allows administrators to modify the database as they see fit.
+  ```md
+  # 📖 Implement Data Types and Constraints
 
-    * Create visually appealing tables. This means making dynamic console code and it is a lot harder than it might seem at first so do not think this one is so simple.
+  Work with a partner to implement the following user story:
 
-    * Create a search function that allows users to look through the database of available auctions to find those that share the specified keyword or username.
+  * As a developer, I want to limit each column so that it accepts only one type of data.
 
-    * Get creative! There are a lot of addons to this app which you could create so feel free to work with your group to come up with something not listed above!
+  ## Acceptance Criteria
 
-### 13. Everyone Do: Share Your Work (20 mins)
+  * It's done when each column in the `customers` table has a defined data type and constraint.
 
-* With any luck, the class has been able to tackle not only the basic assignment, but has also managed to put together a few different addons for the application which they can share with everyone else.
+  * It's done when the values in the `id`, `first_name`, and `last_name` columns cannot be `NULL`.
 
-* Start out this part of the class by asking a group who feels confident in their code for the basic application and is confident that it works to slack it out and then walk the rest of the class through it. Make yourself available to answer questions the rest of the class might have regarding the group's code if there are any individuals who seem very confused.
+  ## 📝 Notes
 
-* Next, start running through the list of addons we suggested above and see if there are any groups out there who are willing to share their solutions with the class.
+  Refer to the documentation:
 
-* Finally, ask the class if there were any groups who went above and beyond to create their own addons for the application and have them share this code with the class as well.
+  [MySQL documentation on data types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
-### 14. Instructor Do: Review Unit 12 (40 mins)
+  ---
 
-* Answer any lingering questions from the previous assignment. If none remain, proceed to lead a review on Unit 12 so far.
+  ## 💡 Hints
 
-### Lesson Plan Feedback
+  If no value is supplied to a column, what value is set by default?
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  ## 🏆 Bonus
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * MySQL constraints are classified as either column-level or table-level constraints. What is the difference?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Data Types (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with data types and constraints? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `INT`
+
+  * ✔️ `VARCHAR()`
+
+  * ✔️ `NOT NULL`
+
+  * ✔️ `BOOLEAN`
+
+* Open `14-Stu_Data-Types/Solved/db/schema.sql` in your IDE and explain the following:
+
+  * 🔑 When we create columns for a table, it is important to properly define the columns using data types. For an id, we use `INT` or `INTEGER`, to allow only whole numbers:
+
+      ```sql
+      id INT
+      ```
+
+  * 🔑 When we add string values to a column, we should limit the data to the size that we need. By setting the column to `VARCHAR(30)`, we allow names of up to 30 characters:
+
+      ```sql
+      first_name VARCHAR(30),
+      last_name VARCHAR(30),
+      ```
+
+  * 🔑 Booleans represent data that we can express as `True` or `False`. But without a built-in Boolean data type, MySQL tables use `Boolean` as a synonym for `TinyInt(1)` -- which can have a value of either `0` or `1`. So in this case, a column with a `Boolean` data type will display the data as `0` for false or `1` for true:
+
+      ```sql
+      value_card_member BOOLEAN
+      ```
+
+  * 🔑 In addition to data types, we use **constraints** to further limit the data. The `NOT NULL` constraint helps ensure that each row holds a value for that column and that no `NULL` values are allowed:
+
+      ```sql
+      id INT NOT NULL,
+      first_name VARCHAR(30) NOT NULL,
+      last_name VARCHAR(30) NOT NULL,
+      value_card_member BOOLEAN NOT NULL
+      ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it important to select the right data type and constraints for each column?
+
+  * 🙋 By specifying the type of data that each column can hold as well as the amount of space that each piece of data can occupy -- and using constraints to further define rules for each column -- we can better enforce the integrity of the database.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on data types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 11. FLEX (20 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Check if students need additional support using MySQL Shell or understanding any of the SQL concepts learned so far.
+
+### 12. BREAK (30 mins)
+
+### 13. Instructor Demo: Schemas (5 min)
+
+* Open `15-Ins_Schema/index.html` in your browser and demonstrate the following:
+
+  * Schema design is an important step in developing a database that can efficiently handle datasets of all sizes.
+
+  * 🔑 When planning a database, it is important to consider the type of data that you will be storing and how the data is related. For example, the data for the `registrar_db` database can be separated into four categories (or tables): `courses`, `students`, `instructors`, and `classrooms`.
+
+  * 🔑 On a more granular level, for every table we need a unique way to identify a row of data -- usually the `id`. And each column should represent one piece of data that can easily be defined by a single data type.
+
+  * After planning these details, we can actually create the database and tables.
+
+* Open `15-Ins_Schema/db/schema.sql` in your IDE and demonstrate the following:
+
+  * 🔑 We start to build the schema by creating and selecting the database:
+
+    ```sql
+    DROP DATABASE IF EXISTS registrar_db;
+    CREATE DATABASE registrar_db;
+    USE registrar_db;
+    ```
+
+  * 🔑 Next, we check whether the table exists, and if so, we drop it. Then we create a new table using `CREATE TABLE`:
+
+    ```sql
+    DROP TABLE IF EXISTS courses;
+    CREATE TABLE courses ()
+    ```
+
+  * 🔑 We add an `id` column for each table, followed by additional columns that hold the other data. For each column, we add a data type and constraints as needed:
+
+    ```sql
+    DROP TABLE IF EXISTS students;
+    CREATE TABLE students (
+      id INT NOT NULL,
+      first_name VARCHAR(30) NOT NULL,
+      last_name VARCHAR(30) NOT NULL,
+      active BOOLEAN NOT NULL,
+      date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+    );
+    ```
+
+* Navigate to `15-Ins_Schema/db` in your command line and input `mysql -u root -p`, to enter MySQL Shell and demonstrate the following:
+
+  * To execute the schema, we use the `SOURCE` command:
+
+      ```sql
+      SOURCE schema.sql;
+      ```
+
+  * We use the `DESCRIBE` command in MySQL Shell to view the table and the data type for each column:
+
+      ```sql
+      DESCRIBE students;
+      ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we include an `id` column in each table?
+
+  * 🙋 The `id` provides a unique identifier for each row of data, making it easier to work with.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Schema/README.md`.
+
+### 14. Student Do: Schema (15 min)
+
+* Direct students to the activity instructions found in `16-Stu_Schema/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Design Schema With Tables
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to design a schema that contains two tables.
+
+  ## Acceptance Criteria
+
+  * It's done when the schema includes two tables.
+
+  * It's done when each table has two or more columns, and each column has a defined data type and constraint.
+
+  * It's done when the schema matches the diagram.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The schema displays two tables, one labeled "products" and one labeled "categories", each with rows for id and other data.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Which MySQL command do we use to display a table and information about each field's data types?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What issues can we avoid by having a well-designed schema?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Schema (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel designing a schema? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ `CREATE DATABASE`
+
+  * ✔️ `USE`
+
+  * ✔️ `CREATE TABLE`
+
+  * ✔️ Data types
+
+  * ✔️ `NOT NULL`
+
+  * ✔️ `DESCRIBE`
+
+* Open `16-Stu_Schema/Solved/db/schema.sql` in your IDE and explain the following:
+
+  * 🔑 We check whether the database exists, and if so, we drop it. Then we create the database using the `CREATE DATABASE` command:
+
+     ```sql
+     DROP DATABASE IF EXISTS grocery_db;
+    CREATE DATABASE grocery_db;
+     ```
+
+  * 🔑 We use the `USE` command to specify which database the tables will be added to:
+
+      ```sql
+      USE grocery_db;
+      ```
+
+  * 🔑 We use the `CREATE` command to add a new table:
+
+      ```sql
+      CREATE TABLE products(
+      );
+      ```
+
+  * 🔑 We add an `id` column to the table and set it to  `NOT NULL`, so that the column must always contain a value. We also add columns that hold specific types of data that we need to store in the database:
+
+      ```sql
+      CREATE TABLE products(
+        id INT NOT NULL,
+        product_name VARCHAR(30) NOT NULL,
+        category_name VARCHAR(100) NOT NULL,
+        price INT NOT NULL,
+        in_stock BOOLEAN
+      );
+      ```
+
+  * 🔑 We use the `CREATE` command to add a second table and assign a data type to each column:
+
+      ```sql
+      CREATE TABLE categories(
+        id INT NOT NULL,
+        category_name VARCHAR(30) NOT NULL
+      );
+      ```
+
+* Navigate to `16-Stu_Schema/Solved/db` in your command line and input `mysql -u root -p`, to enter MySQL Shell and demonstrate the following:
+
+  * To execute the schema, we use the `SOURCE` command:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * 🔑 We use the `DESCRIBE` command in MySQL Shell to check that the new tables have been created and that they hold the right data types:
+
+      ```sql
+      DESCRIBE products;
+      DESCRIBE categories;
+      ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we drop the `grocery_db` database if it exists?
+
+  * 🙋 We use the `DROP` command before so that we can start fresh and add the new database without error.
+
+  * ☝️ Why do we need a schema?
+
+  * 🙋 A schema describes the data that we want to store in the database and serves as a template for the tables -- helping us to build an efficient database that can handle datasets of all sizes.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to the lesson plan, read the [MySQL documentation on getting information about databases and tables](https://dev.mysql.com/doc/refman/8.0/en/getting-information.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Seeds (5 min)
+
+* Navigate to `17-Ins_Seeds/db` in your command line and input `mysql -u root -p`, to enter MySQL Shell and demonstrate the following:
+
+  * After we initialize MySQL Shell, we set up the database:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * 🔑 This schema provides the blueprint for the data. But during development we will need some actual data to work with, so we will create a `seeds` file.
+
+  * 🔑 After we create the `seeds` file, we will import that data into the database:
+
+    ```sql
+    SOURCE db/seeds.sql
+    ```
+
+  * At that point, we will be able to query the data -- using `SELECT *` to display all the data that has been added to the `courses` table:
+
+    ```sql
+    SELECT * FROM courses;
+    ```
+
+* Open `17-Ins_Seeds/db/seeds.sql` in your IDE and explain the following:
+
+  * Now let's look more closely at the data that we just imported.
+
+  * 🔑 We use an `INSERT INTO` command to specify the table that we want to add data to and the columns:
+
+    ```sql
+    INSERT INTO courses (id, course_title, course_description, active)
+    ```
+
+  * 🔑 We then use a `VALUES` clause to specify the values. These values will provide **seeds**, or sample data, that we can work with during development. We can also use seeds to provide static values, like country codes, that might be used in both development and production:
+
+    ```sql
+    VALUES (001, "Algebra I", "Linear equations, inequalities, functions, and graphs", true),
+       (002, "Pre-Calculus", "Polynomials, Complex Numbers, Vectors", true),
+       (003, "Calculus I", "Limits, Differentiation, Derivatives", true),
+       (004, "Euclidean Geometry", "Intuitively Appealing Axioms Galore", false);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we use seeds to provide sample data during development?
+
+  * 🙋 Having sample data available during development allows us to test the schema design and queries.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Seeds/README.md`.
+
+### 17. Student Do: Student Do: Seeds (15 min)
+
+* Direct students to the activity instructions found in `18-Stu_Seeds/README.md`
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Seed Data Not Populating Table
+
+  Work with a partner to resolve the following issue(s):
+
+  * As a developer, I should be able to populate my table with seed data.
+
+  ## Expected Behavior
+
+  When the `seeds.sql` file is executed in MySQL Shell, the data should populate my table.
+
+  ## Actual Behavior
+
+  When the `seeds.sql` file is executed, the data is not successfully populated in the table.
+
+  ## Steps to Reproduce the Problem
+
+  1. Execute `schema.sql` in MySQL Shell to create the database and table.
+
+  2. Execute `seeds.sql` in MySQL Shell to populate data in the table.
+
+  3. Run `SELECT * FROM products;` to view seeded data.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The completed table displays an id column and a name column, holding five rows of data.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  Which MySQL statement do we use to add data to a table?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can you alter an existing table?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 18. Instructor Review: Seeds (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel seeding data? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `INSERT INTO`
+
+  * ✔️ `VALUES`
+
+* Open `18-Stu_Seeds/Solved/db/schema.sql` in your IDE and explain the following:
+
+  * 🔑 We start by referring to the table in the schema. The `products` table has three columns, all set to `NOT NULL`, so that they must contain a value:
+
+     ```sql
+     CREATE TABLE products (
+       id INT NOT NULL,
+       product_name VARCHAR(30) NOT NULL,
+      category_name VARCHAR(30) NOT NULL
+     );
+     ```
+
+* Open `18-Stu_Seeds/Solved/db/seeds.sql` in your IDE and explain the following:
+
+  * 🔑 We use the `INSERT INTO` statement to specify which table we are adding data to and which columns they belong to. Because the `id` column is set to `NOT NULL`, we must provide a value:
+
+     ```sql
+     INSERT INTO products (id, product_name, category_name)
+     ```
+
+  * 🔑 Then we use `VALUES` to insert values into the columns, separating each row with a comma and ensuring that the seed data appears in the same order as the column list:
+
+    ```sql
+    VALUES (001, "spinach", "produce"),
+       (002, "peanut butter", "staples"),
+       (003, "peas-canned", "canned goods"),
+       (004, "ice cream", "frozen"),
+       (005, "potato chips", "snacks");
+    ```
+
+* Navigate to `18-Stu_Seeds/Solved/db` in your command line and input `mysql -u root -p`, to enter MySQL Shell and demonstrate the following:
+
+  * To execute the schema and seed the data, we use the `SOURCE` command:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+  * To test that the data has been successfully added, we use `SELECT *`:
+
+    ```sql
+    SELECT * FROM products;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are the benefits of seeding a table?
+
+  * 🙋 Seeding a table with sample data allows us to test queries and interact with the database. We can also use seeding to populate a table in which the data will not change, like country codes or zip codes.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on loading data into a table](https://dev.mysql.com/doc/refman/8.0/en/loading-tables.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 19. Instructor Demo: Foreign and Primary Keys (5 min)
+
+* Open `19-Ins_Foreign-Primary-Key/index.html` in your browser and demonstrate the following:
+
+  * Storing data in tables is useful, but the ability to form relationships between groups of data is what truly makes MySQL powerful.
+
+  * This schema includes two tables: `instructors` and `courses`. The `instructors` table holds information for each individual instructor. The `courses` table holds data about each course.
+
+  * 🔑 Because each course has an instructor, we form a relationship to link the data between the two tables.
+
+  * 🔑 We use primary and foreign keys to link the `id` of the individual instructor with the `courses` table.
+
+* Open `19-Ins_Foreign-Primary-Key/db/schema.sql` in your IDE and demonstrate the following:
+
+  * 🔑 A way to identify the rows of a table, a **primary key** must be unique and set to `NOT NULL`. In the `instructors` table, we set the `id` to be the primary key:
+
+    ```sql
+    CREATE TABLE instructors (
+      id INT NOT NULL,
+      first_name VARCHAR(30),
+      last_name VARCHAR(30),
+     PRIMARY KEY (id)
+    );
+    ```
+
+  * 🔑 We use the primary key for the `instructors` table  to link to the `courses` table.
+
+  * 🔑 In the `courses` table, we add a column that will hold the `id`, and we limit it to the same type of data as the primary key that we just set up (in this case, an `INT`):
+
+    ```sql
+    instructor_id INT
+    ```
+
+  * 🔑 Then we designate the column as a **foreign key**, or a column that refers to the primary key of another table:
+
+    ```sql
+    FOREIGN KEY (instructor_id)
+    ```
+
+  * Unlike primary keys, foreign keys can contain `NULL` values:
+
+  * 🔑 To define the relationship, we use the `REFERENCES` command, followed by the name of the table and column that we want to reference:
+
+    ```sql
+    REFERENCES instructors(id)
+    ```
+
+  * 🔑 Because the data is now related, we need to consider what will happen data is deleted from the parent table. So if the instructor data is no longer available, the column will be set to `NULL`:
+
+    ```sql
+    ON DELETE SET NULL
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we link tables using primary and foreign keys?
+
+  * 🙋 We use a primary key to provide a unique identifier for each row of data in a table that we want to reference. Then we use a foreign key in a second table to link the two tables.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Foreign-Primary-Key/README.md`.
+
+### 20. Student Do: Foreign and Primary Keys (15 min)
+
+* Direct students to the activity instructions found in `20-Stu_Foreign-Primary-Key/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Use Primary Key and Foreign Key to Define Relationship Between Tables
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to organize my data by linking a `customers` table with a related `customer_orders` table.
+
+  ## Acceptance Criteria
+
+  * It's done when the `id` column in the `customers` table is defined as the primary key.
+
+  * It's done when the foreign key in the `customer_orders` table refers to the `customers` table primary key.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The schema displays a customers table and a customer_order table, each linked by the customer_id value.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What is the difference between primary and foreign key constraints?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the advantages of using multiple, related tables to store data?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Foreign and Primary Keys (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with primary and foreign keys? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `PRIMARY KEY`
+
+  * ✔️ `FOREIGN KEY`
+
+  * ✔️ `REFERENCES`
+
+* Open `20-Stu_Foreign-Primary-Key/Solved/db/schema.sql;` in your IDE and explain the following:
+
+  * 🔑 We set the primary key of the `customers` table to the `id`, to provide a unique identifier that we can reference in another table:
+
+    ```sql
+    CREATE TABLE customers (
+      id INT NOT NULL,
+      first_name VARCHAR(30),
+      last_name VARCHAR(30),
+      PRIMARY KEY (id)
+    );
+    ```
+
+  * 🔑 Then, in the table where we want to reference the data, we add a column that will hold the `customer_id` values:
+
+    ```sql
+    customer_id INT,
+    ```
+
+  * 🔑 We set the column that references data from another table as the foreign key:
+
+    ```sql
+    FOREIGN KEY (customer_id)
+    ```
+
+  * 🔑 We use `REFERENCES` to define the relationship and describe what we want to happen if the parent data is no longer available:
+
+    ```sql
+    REFERENCES customers(id)
+    ON DELETE SET NULL
+    ```
+
+* Navigate to `20-Stu_Foreign-Primary-Key/Solved/db` in your command line and input `mysql -u root -p`, to enter MySQL Shell and demonstrate the following:
+
+  * To execute the schema and seed the data, we use the `SOURCE` command:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+  * We use `DESCRIBE` to check whether the primary key and foreign key were added to the table. The foreign key will be shown as `MUL`, or "multiple", meaning that it does not need to be unique, unlike the primary key:
+
+    ```sql
+    DESCRIBE customers;
+    DESCRIBE customer_order;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it important that a primary key is unique?
+
+  * 🙋 Making the primary key unique helps to ensure that we can access an individual row of data -- and only that row.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on PRIMARY KEY and UNIQUE](https://dev.mysql.com/doc/refman/5.6/en/constraint-primary-key.html) and the [MySQL documentation on FOREIGN KEY](https://dev.mysql.com/doc/refman/5.6/en/create-table-foreign-keys.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 22. FLEX (30 mins)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Answer any questions before ending the class.
+
+### 23. END (0 mins)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

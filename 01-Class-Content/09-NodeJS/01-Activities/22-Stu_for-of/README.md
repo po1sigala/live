@@ -2,17 +2,17 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to use `for...of` loops to iterate through data inside objects.
+* As a developer, I want to be able to use `for...of` loops to iterate through data inside an array.
 
 ## Acceptance Criteria
 
-* It's done when I have selected all the inside `#songs` elements in the `html`.
-
-* It's done when I have iterated through the song collection with a `for...of` loop and added a `class` of `red` to each element.
+* It's done when I have iterated through the `songs` array with a `for...of` loop and logged each in a cyan color.
 
 ## 💡 Hints
 
-What part of the object is essential in setting up the iteration of a `for...of` loop?
+What is the iterable we will use in our `for...of` loop?
+
+How can we use the provided `outputCyanText()` method to console log text in a specific color?
 
 ## 🏆 Bonus
 

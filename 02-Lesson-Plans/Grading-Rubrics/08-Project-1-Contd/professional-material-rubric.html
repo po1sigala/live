@@ -529,29 +529,13 @@
               title: "Portfolio",
               subtitle: null,
               questions: [
-                {
-                  title: "Portfolio contains name, email, and phone number",
+              {
+                  title:
+                    "Portfolio contains contact information",
                   score: 8,
-                  type: "likert",
-                  options: [
-                    {
-                      message: "Portfolio does not contain name, email, or phone number",
-                      score: 0
-                    },
-                    {
-                      message: "Portfolio is missing 2 of the 3 following: name, email, or phone number",
-                      score: 2
-                    },
-                    {
-                      message: "Portfolio is missing 1 of the 3 following: name, email, or phone number",
-                      score: 4
-                    },
-                    {
-                      message: "Portfolio contains name, email, and phone number",
-                      score: 8
-                    }
-                  ],
-                  message: "",
+                  type: "true false",
+                  message:
+                    "Portfolio doesn't contain contact information",
                   status: false
                 },
                 {
@@ -633,32 +617,28 @@
               subtitle: null,
               questions: [
                 {
-                  title: "GitHub profile contains real photo, bio, location, email, and link to deployed portfolio",
+                  title: "GitHub profile contains photo or avatar, bio, email, and link to deployed portfolio",
                   score: 10,
                   type: "likert",
                   options: [
                     {
-                      message: "GitHub profile does not contain real photo, bio, location, email, and link to deployed portfolio",
+                      message: "GitHub profile does not contain photo or avatar, bio, email, and link to deployed portfolio",
                       score: 0
                     },
                     {
-                      message: "GitHub profile is missing 4 of the 5 following: photo, bio, location, email, and link to deployed portfolio",
-                      score: 2
+                      message: "GitHub profile is missing 3 of the 4 following: photo or avatar, bio, email, and link to deployed portfolio",
+                      score: 3
                     },
                     {
-                      message: "GitHub profile is missing 3 of the 5 following: photo, bio, location, email, and link to deployed portfolio",
-                      score: 4
+                      message: "GitHub profile is missing 2 of the 4 following: photo or avatar, bio, email, and link to deployed portfolio",
+                      score: 5
                     },
                     {
-                      message: "GitHub profile is missing 2 of the 5 following: photo, bio, location, email, and link to deployed portfolio",
-                      score: 6
-                    },
-                    {
-                      message: "GitHub profile is missing 1 of the 5 following: photo, bio, location, email, and link to deployed portfolio",
+                      message: "GitHub profile is missing 1 of the 4 following: photo or avatar, bio, email, and link to deployed portfolio",
                       score: 8
                     },
                     {
-                      message: "GitHub profile contains real photo, bio, location, email, and link to deployed portfolio",
+                      message: "GitHub profile contains photo or avatar, bio, email, and link to deployed portfolio",
                       score: 10
                     }
                   ],
@@ -684,10 +664,10 @@
                   status: false
                 },
                 {
-                  title: "Student is following at least a few classmates on GitHub",
+                  title: "Student is following at least a few classmates and/or other developers on GitHub",
                   score: 10,
                   type: "true false",
-                  message: "Student should be following at least a few classmates on GitHub",
+                  message: "Student should be following at least a few classmates and/or other developers on GitHub",
                   status: false
                 }
               ]

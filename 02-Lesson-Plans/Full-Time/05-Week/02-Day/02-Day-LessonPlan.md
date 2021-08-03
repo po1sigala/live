@@ -1,6 +1,6 @@
 # 05.2 Full-Time Lesson Plan: Node.js
 
-## Overview 
+## Overview
 
 In this lesson, we will take a deeper dive into the world that is Node.js. We will explore how to take advantage of native modules that come built into Node.js itself. We will access the file system, pass command-line arguments into applications, get acquainted with Node Package Manager, and finally build CLI apps using a package called `inquirer`.
 
@@ -20,7 +20,7 @@ In this lesson, we will take a deeper dive into the world that is Node.js. We wi
 
   * [MDN Web Docs on destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -46,50 +46,50 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                              | Duration |
-|---     |---  |---                                         |---       |
-| 10:00AM| 1   | Instructor Demo: Modularization            | 0:05     |
-| 10:05AM| 2   | Student Do: Modularization                 | 0:15     |
-| 10:20AM| 3   | Instructor Review: Modularization          | 0:10     |
-| 10:30AM| 4   | Instructor Demo: `npm`                     | 0:05     |
-| 10:35AM| 5   | Student Do: Package.json and npm           | 0:15     |
-| 10:50AM| 6   | Instructor Review: `npm`                   | 0:10     |
-| 11:00AM| 7   | Instructor Demo: Inquirer                  | 0:05     |
-| 11:05AM| 8   | Student Do: Inquirer users                 | 0:15     |
-| 11:20AM| 9   | Instructor Review: Inquirer users          | 0:10     |
-| 11:30AM| 10  | FLEX                                       | 0:30     |
-| 12:00PM| 11  | BREAK                                      | 0:30     |
-| 12:30PM| 12  | Instructor Do: Stoke Curiosity             | 0:10     |
-| 12:40PM| 13  | Instructor Demo: for...of                  | 0:05     |
-| 12:45PM| 14  | Student Do: for...of                       | 0:15     |
-| 1:00PM | 15  | Instructor Review: for...of                | 0:10     |
-| 1:10PM | 16  | Instructor Demo: Rest and Spread           | 0:05     |
-| 1:15PM | 17  | Student Do: Rest and Spread                | 0:15     |
-| 1:30PM | 18  | Instructor Review: Rest and Spread         | 0:10     |
-| 1:40PM | 19  | Instructor Demo: Object Destructuring      | 0:05     |
-| 1:45PM | 20  | Student Do: Object Destructuring           | 0:15     |
-| 2:00PM | 21  | Instructor Review: Object Destructuring    | 0:10     |
-| 2:10PM | 22  | Everyone Do: Git                           | 0:20     |
-| 2:30PM | 23  | END                                        | 0:00     |
+| Start   | #   | Activity Name                           | Duration |
+| ------- | --- | --------------------------------------- | -------- |
+| 10:00AM | 1   | Instructor Demo: Modularization         | 0:05     |
+| 10:05AM | 2   | Student Do: Modularization              | 0:15     |
+| 10:20AM | 3   | Instructor Review: Modularization       | 0:10     |
+| 10:30AM | 4   | Instructor Demo: `npm`                  | 0:05     |
+| 10:35AM | 5   | Student Do: Package.json and npm        | 0:15     |
+| 10:50AM | 6   | Instructor Review: `npm`                | 0:10     |
+| 11:00AM | 7   | Instructor Demo: Inquirer               | 0:05     |
+| 11:05AM | 8   | Student Do: Inquirer users              | 0:15     |
+| 11:20AM | 9   | Instructor Review: Inquirer users       | 0:10     |
+| 11:30AM | 10  | FLEX                                    | 0:30     |
+| 12:00PM | 11  | BREAK                                   | 0:30     |
+| 12:30PM | 12  | Instructor Do: Stoke Curiosity          | 0:10     |
+| 12:40PM | 13  | Instructor Demo: for...of               | 0:05     |
+| 12:45PM | 14  | Student Do: for...of                    | 0:15     |
+| 1:00PM  | 15  | Instructor Review: for...of             | 0:10     |
+| 1:10PM  | 16  | Instructor Demo: Rest and Spread        | 0:05     |
+| 1:15PM  | 17  | Student Do: Rest and Spread             | 0:15     |
+| 1:30PM  | 18  | Instructor Review: Rest and Spread      | 0:10     |
+| 1:40PM  | 19  | Instructor Demo: Object Destructuring   | 0:05     |
+| 1:45PM  | 20  | Student Do: Object Destructuring        | 0:15     |
+| 2:00PM  | 21  | Instructor Review: Object Destructuring | 0:10     |
+| 2:10PM  | 22  | Everyone Do: Git                        | 0:20     |
+| 2:30PM  | 23  | END                                     | 0:00     |
 
 ---
 
-### 1. Instructor Demo: Modularization (5 min) 
+### 1. Instructor Demo: Modularization (5 min)
 
 * Welcome students to class. Ask if anyone has any questions before starting the first activity.
 
 * Open the `15-Ins_Modularization` directory in your IDE.
 
-* Run `node index.js` from the command line and demonstrate the following: 
+* Run `node index.js` from the command line and demonstrate the following:
 
-  * 🔑 We see the following output of this file: 
+  * 🔑 We see the following output of this file:
 
   ```sh
   apple
   1
   ```
 
-* 🔑  We are importing a dependency, `badmath`, and logging the results of `badmath.pie` and `badmath.predictable`, as follows: 
+* 🔑  We are importing a dependency, `badmath`, and logging the results of `badmath.pie` and `badmath.predictable`, as follows:
 
   ```js
   var badmath = require("./badmath.js");
@@ -134,7 +134,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Maths/README.md`.
 
-### 2. Student Do: Modularization (15 min) 
+### 2. Student Do: Modularization (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Maths/README.md`.
 
@@ -182,7 +182,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 3. Instructor Review: Modularization (10 min) 
+### 3. Instructor Review: Modularization (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -198,7 +198,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `process.argv`
 
-* Open `16-Stu_Maths/Solved/index.js` in your IDE and explain the following: 
+* Open `16-Stu_Maths/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 This exercise combines the concepts of `process.argv` with the idea of `module.exports`.
 
@@ -266,9 +266,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Node Package Manager (npm) (5 min) 
+### 4. Instructor Demo: Node Package Manager (npm) (5 min)
 
-* Run `17-Ins-npm/npm/index.js` from the command line and demonstrate the following: 
+* Run `17-Ins-npm/npm/index.js` from the command line and demonstrate the following:
 
   * 🔑  When we run this JavaScript file with Node.js, we will see an error message of `MODULE_NOT_FOUND`.
 
@@ -285,11 +285,11 @@ Use [Google](https://www.google.com) or another search engine to research this.
     npm i badmath
     ```
 
-  * 🔑 The `-y` flag tells npm to answer "yes" to each question it normally asks during the init process, to save us some time. 
+  * 🔑 The `-y` flag tells npm to answer "yes" to each question it normally asks during the init process, to save us some time.
 
-  * The second command, `npm i`, is shorthand for `npm install`. These two commands can be used interchangeably. `npm i badmath` will reach out to npm's registry and install the latest version of the package you named after the command. In this case, you are installing `badmath`. 
- 
-* Open the `17-Ins-npm/init` folder to examine the additional file. 
+  * The second command, `npm i`, is shorthand for `npm install`. These two commands can be used interchangeably. `npm i badmath` will reach out to npm's registry and install the latest version of the package you named after the command. In this case, you are installing `badmath`.
+
+* Open the `17-Ins-npm/init` folder to examine the additional file.
 
   * 🔑  You will notice a difference immediately. This folder comes with a `package.json` file. This describes the repository itself as well as any scripts, dependencies, and licenses associated with the project.
 
@@ -364,14 +364,16 @@ It's possible that the `node_modules` folder is hidden in the `files.exclude` se
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`? 
+* How does the `-y` flag save us some time when running `npm init`? What does the `-g` flag do when running `npm install`?
+
+* What is `npx` and how is it different from `npm install`?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 6. Instructor Review: Node Package Manager (npm) (10 min) 
+### 6. Instructor Review: Node Package Manager (npm) (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -385,7 +387,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `npm install`
 
-* Open `18-Stu-Package-npm/Solved/package.json` in your IDE and explain the following: 
+* Open `18-Stu-Package-npm/Solved/package.json` in your IDE and explain the following:
 
   * 🔑 We start by running `npm init -y`, which will generate the `package.json` file. Optionally, we can run the command without the `-y` flag to allow for more custom responses.
 
@@ -394,13 +396,13 @@ Use [Google](https://www.google.com) or another search engine to research this.
   npm init
   ```
 
-  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer`, or just `npm i inquirer`. 
+  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer`, or just `npm i inquirer`.
 
   ```sh
   npm install inquirer
   ```
 
-  * If we check our `package.json` file again, we will see `inquirer` listed under `dependencies`. 
+  * If we check our `package.json` file again, we will see `inquirer` listed under `dependencies`.
 
   ```json
   "dependencies": {
@@ -418,6 +420,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * Running `npm install` is a great first step with any project or exercise that you cloned down from another user or organization.
 
+  * Another tool that you will use often is `npx`, which stands for "node-package-execute". This is a tool that allows us to run a command from a specific package without having to install it. It doesn't make much sense for us to use `npx` in this activity, but being aware of it will help us understand its use case later in the course.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we install a specific package?
@@ -430,9 +434,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: inquirer (5 min) 
+### 7. Instructor Demo: inquirer (5 min)
 
-* Run `19-Ins_Inquirer-Demo/index.js` from the command line and demonstrate the following: 
+* Run `19-Ins_Inquirer-Demo/index.js` from the command line and demonstrate the following:
 
   * 🔑 We can see a `package.json` that exists already, indicating that we should run the following command:
 
@@ -485,7 +489,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
   
   * The input of each prompt will be stored in an `object` property that corresponds to the `name` value. The `type` values are built into `inquirer` and allow us to enter secure passwords.
   
-  * The `message` property is the prompt that the user ends up seeing. 
+  * The `message` property is the prompt that the user ends up seeing.
 
   * Once all of the prompts are answered, we can then work with the user `response`. Here, the `response` parameter in the `.then` callback corresponds with the user input, which `inquirer` stores in an object, as follows:
 
@@ -497,18 +501,18 @@ Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
   * Here we are checking whether the confirmed password input is strictly equal to the password provided in the previous response. We then use a conditional (ternary) operator to check if the passwords match. If so, we log "success!"; otherwise, we let the user know they forgot their password.
- 
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Based on the name alone, what do you think the `inquirer` package allows us to do?
 
-  * 🙋 It might be used to inquire, or ask for, information from someone&mdash;the user of the application. 
+  * 🙋 It might be used to inquire, or ask for, information from someone&mdash;the user of the application.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Inquirer-Users/README.md`.
 
-### 8. Student Do: inquirer Users (15 min) 
+### 8. Student Do: inquirer Users (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Inquirer-Users/README.md`.
 
@@ -564,9 +568,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ `JSON.stringify()`
 
-  * ✔️ `.then(answers => `
+  * ✔️ `.then(answers =>`
 
-* Open `20-Stu_Inquirer-Users/Solved/index.js` in your IDE and explain the following: 
+* Open `20-Stu_Inquirer-Users/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 The application requires two dependencies, one third-party (`inquirer`) and the other standard library (`fs`), as shown in the following example:
 
@@ -654,29 +658,33 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * The ES in ES6 stands for **ECMAScript**. ECMAScript itself is a programming language, but as far as we are concerned, it is just a language from which syntax rules are inherited. We can find a more detailed history in the [Wikipedia article on ECMAScript](https://en.wikipedia.org/wiki/ECMAScript).
 
-### 13. Instructor Demo: for...of (5 min) 
+### 13. Instructor Demo: for...of (5 min)
 
 * Open `21-Ins_for-of/index.js` in your browser and demonstrate the following:
 
-* Run `node index.js` after commenting out the `.map` example. 
+* Run `node index.js` after commenting out the multidimensional array example.
 
   * 🔑 Notice when we run the code that we see each value in the songs array, as follows:
 
     ```js
-    const songs = ['Bad Guy', 'Old Town Road', '7 Rings'];
+    const songs = ['Bad Guy', 'The Wheels on the Bus', 'Friday'];
 
-    for (const value of songs) {
-        console.log(value);
-    }
+    for (const value of songs) console.log(value);
     ```
 
-  * 🔑 After we comment in the second example, we use a `for...of` loop to iterate over an object or map, as shown in the following code:
+  * 🔑 We see in the second example, we use a `for...of` loop to iterate over a multidimensional array.
+  
+  * 🔑 A multidimensional array is an array of elements where each element is another array. In other words, a multidimensional array is an array of arrays.
 
     ```js
-    const songs = new Map([['Bad Guy', 1], ['Old Town Road', 2]]);
+    const moreSongs = [
+      ['Bad Guy', 1],
+      ['The Wheels on the Bus', 2],
+      ['Friday', 3],
+    ];
 
-    for (const [key, value] of songs) {
-        console.log(`${key}'s chart position is ${value}`);
+    for (const [key, value] of moreSongs) {
+      console.log(`${key}'s chart position is ${value}`);
     }
     ```
 
@@ -692,7 +700,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_for-of/README.md`.
 
-### 14. Student Do: for...of (15 min) 
+### 14. Student Do: for...of (15 min)
 
 * Direct students to the activity instructions found in `22-Stu_for-of/README.md`.
 
@@ -703,17 +711,17 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to use `for...of` loops to iterate through data inside objects.
+  * As a developer, I want to be able to use `for...of` loops to iterate through data inside an array.
 
   ## Acceptance Criteria
 
-  * It's done when I have selected all the inside `#songs` elements in the `html`.
-
-  * It's done when I have iterated through the song collection with a `for...of` loop and added a `class` of `red` to each element.
+  * It's done when I have iterated through the `songs` array with a `for...of` loop and logged each in a cyan color.
 
   ## 💡 Hints
 
-  What part of the object is essential in setting up the iteration of a `for...of` loop?
+  What is the iterable we will use in our `for...of` loop?
+
+  How can we use the provided `outputCyanText()` method to console log text in a specific color?
 
   ## 🏆 Bonus
 
@@ -740,30 +748,53 @@ Use [Google](https://www.google.com) or another search engine to research this.
   
   * ✔️ Iterator
 
-* Open `22-Stu_for-of/Solved/index.html` in your browser and explain the following: 
+* Open `22-Stu_for-of/Solved/index.js` in your IDE and explain the following:
 
-    * 🔑 The syntax for the `for...of` loop reads very similar to plain English, which helps conceptualize what is happening in the program.
+  * 🔑 The syntax for the `for...of` loop reads very similar to plain English, which helps conceptualize what is happening in the program.
 
   * 🔑 The syntax is relatively straightforward. The key takeaway is knowing when to use and what to use it for.
-
-  * When we open the `index.html` file, we notice that each line item in the unordered list has a green color.
   
-  * This is the result of using the `for...of` loop to iterate over each line item and add the class of `green` to the class list for the given element, as follows:
+* Navigate to `22-Stu_for-of/Solved/` in your terminal and run `node index` from the command line to demonstrate the following:
+
+  * When we run the `index.js` file, we notice that a song list containing Spotify's top 10 tracks in a cyan color:
+
+    ```console
+    Spotify top 10:
+
+    1: MONTERO (Call Me By Your Name)
+    2: Peaches (feat. Daniel Caesar & Giveon)
+    3: Kiss Me More (feat. SZA)
+    4: Astronaut In The Ocean
+    5: Save Your Tears (with Ariana Grande) (Remix)
+    6. RAPSTAR
+    7. Levitating (feat. DaBaby)
+    8. Leave The Door Open
+    9. Botella Tras Botella
+    10. Fiel
+    ```
+  
+  * Provided to us is a helper function, `outputCyanText` that will uses ANSI escape codes to output text in a specific color to the terminal.
+
+    > ANSI Escape codes indicate cursor location, color, font styling, and other options inside text-based terminals.
 
     ```js
-        const songs = document.querySelectorAll("ul > li");
+    const outputCyanText = (text) => console.log(`\x1b[36m${text}\x1b[0m`);
+    ```
+  
+  * This is the result of using the `for...of` loop to iterate over each item in the `songs` array and invoke the provided `outputCyanText()` method with the song's title:
 
-        for (const song of songs) {
-            song.classList.add("green");
-        }
+    ```js
+    for (const song of songs) {
+      outputCyanText(song);
+    }
     ```
 
   * 🔑 If you forget the syntax, VS Code can help you create these types of loops by offering a snippet to work from. You can try it yourself by typing `forof` and simply pressing Enter, which will result in the following code:
-    
+
     ```js
-        for (const iterator of object) {
-            
-        }
+    for (const iterator of object) {
+        
+    }
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -778,9 +809,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Rest and Spread Operators (5 min) 
+### 16. Instructor Demo: Rest and Spread Operators (5 min)
 
-* Navigate to `23-Ins_Rest-and-Spread/index.js` in your IDE and run `node index.js` from the command line to demonstrate the following: 
+* Navigate to `23-Ins_Rest-and-Spread/index.js` in your IDE and run `node index.js` from the command line to demonstrate the following:
 
   * 🔑 When we run the file, we get output for a few different operations: without the rest parameter, with the rest parameter, without spread operator, and with spread operator, as shown in the following example:
 
@@ -823,7 +854,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * 🔑  The takeaway here is that variables are now available inside the array of the function. We can also pass as many in as we want.
 
-  * 🔑  The spread operator `...` allows iterables like arrays, objects, and strings to be expanded into single arguments or elements. 
+  * 🔑  The spread operator `...` allows iterables like arrays, objects, and strings to be expanded into single arguments or elements.
   
   * You can compare this to pouring items out of a cup. The only difference is that the items are variables and the cup is an iterable.
 
@@ -853,7 +884,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Rest-and-Spread/README.md`.
 
-### 17. Student Do: Rest and Spread Operators (15 min) 
+### 17. Student Do: Rest and Spread Operators (15 min)
 
 * Direct students to the activity instructions found in `24-Stu_Rest-and-Spread/README.md`.
 
@@ -903,7 +934,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ Rest parameter syntax (`...`)
 
-* Open `24-Stu_Rest-and-Spread/Solved/index.js` in your IDE and explain the following: 
+* Open `24-Stu_Rest-and-Spread/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 In the first exercise, we are using the spread operator to copy the items in the `songs` array to the `new_songs` array. Much like we would be dumping out the contents of a cup, we are populating the `new_songs` array with the items in `songs`, as shown in the following code:
 
@@ -923,7 +954,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     };
     ```
   
-  * 🔑 Then we modified the `addition()` function to make use of the rest parameters. The `additionSpread()` function allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary. 
+  * 🔑 Then we modified the `addition()` function to make use of the rest parameters. The `additionSpread()` function allows us to pass in as many arguments as we need. This is particularly useful in this case where we want to add as many numbers as necessary.
 
     ```js
     const additionSpread = (...array) => {
@@ -953,11 +984,11 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 19. Instructor Demo: Object Destructuring (5 min) 
+### 19. Instructor Demo: Object Destructuring (5 min)
 
 * Open `25-Ins_Obj-Destructuring/index.js` in your browser.
 
-* Run `node index.js` from the command line and demonstrate the following: 
+* Run `node index.js` from the command line and demonstrate the following:
 
   * 🔑 Notice that when we run the `index.js` file we see several variables logged to the terminal. Each of these are different ways of accessing variables inside an object.
 
@@ -991,7 +1022,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Obj-Destructuring/README.md`.
 
-### 20. Student Do: Object Destructuring (15 min) 
+### 20. Student Do: Object Destructuring (15 min)
 
 * Direct students to the activity instructions found in `26-Stu_Obj-Destructuring/README.md`.
 
@@ -1045,7 +1076,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ Destructuring arrays
 
-* Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following: 
+* Open `26-Stu_Obj-Destructuring/Solved/index.js` in your IDE and explain the following:
 
   * This exercise highlights how we can pluck off multiple properties at once, saving us a few lines of code.
 
@@ -1099,7 +1130,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Does the order matter when passing destructured object properties into a function? 
+  * ☝️ Does the order matter when passing destructured object properties into a function?
 
   * 🙋 No! Because we are referring to the properties in the object by name, the key names will align with the correct value every time.
 
@@ -1113,24 +1144,24 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ### 22. Everyone Do: Git Fork (20 min)
 
-*  Open [Git docs](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
+* Open [Git docs](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in your browser and explain the following:
 
-  * Forking allows you to contribute to a repository that you don't have push access to. When you fork a project, GitHub will make an exact copy of the project that will live on your account that you can push to.
+* Forking allows you to contribute to a repository that you don't have push access to. When you fork a project, GitHub will make an exact copy of the project that will live on your account that you can push to.
   
-  * This workflow then allows you to create a pull request to the parent repository when you have finished your contributions. This is a very common workflow in many open source projects. 
+* This workflow then allows you to create a pull request to the parent repository when you have finished your contributions. This is a very common workflow in many open source projects.
 
 * Direct students to the activity instructions found in `27-Evr_Git-Fork/README.md`.
 
 * While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-* Open your browser and choose a repository to fork. Click the green fork button. 
+* Open your browser and choose a repository to fork. Click the green fork button.
 
 * Open your command line and demonstrate the following:
 
-  * After we clone the repository, we will want to visit our own fork and copy the Git URL to clone it the local machine, as follows:
+  * After we clone the repository, we will want to visit our own fork on GitHub and copy the Git URL to clone it the local machine. After that, we change into the directory for our forked repository:
 
     ```sh
-    git clone git@github.com:microsoft/vscode.git
+    git clone git@github.com:<YOUR_GITHUB_USERNAME>/forking-tutorial.git && cd forking-tutorial
     ```
 
   * 🔑 After you clone the local repository, run the following command to demonstrate that the remote is pointed to your namespace rather than the parent repository:

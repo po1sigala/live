@@ -1,53 +1,58 @@
-# Unit 16: Project-2-Contd
+# Unit 16 Instructor Overview: Project 2 Continued
 
 ## Overview
 
-In this unit, we will continue to work on project 2, with presentations on the third day.
+In this unit, students will continue to work on their second project and present their projects to the class at the end of the unit. They'll also begin to revise their professional materials, including their portfolios, and add their projects once they've completed them.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-2-Contd/README.md) for detailed information on key topics, learning objectives and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-2-Contd/README.md) for detailed information on key topics, learning objectives, and homework.
 
-## Instructor / TA Notes
+## Instructor/TA Notes
 
-Encourage students to spend time deciding how they want to present their project before project day presentations.
+* Encourage students to spend time deciding how they want to present their project before presentation day.
 
-### Regional Content
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students early in the week to give them ample time to prepare for their presentations.
 
-At the start of this unit, you will add regional content to the class-specific repo.
+* Prepare a slide deck of superlative awards to give to each group. Use [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing), and feel free to customize it as you see fit for your cohort.
 
-The four programming languages included in Regional content are Java, C#, PHP, and Python. Each folder contains its own Power Pack, a unit of async content for that programming language. These folders are located [here](../../../01-Class-Content/25-Power-Packs/).
+## Career Connection
 
-Because this content is asynchronous, you won’t teach it during your class. You will provide it to students by uploading it to the class-specific repo.
+* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/16-Project-2-Contd/04-Career-Connection/README.md).
 
-This content is self-paced, self-guided, and designed to help students continue to learn new skills after their boot camp has ended. It will also allow them to keep coding and stay engaged while they search for their first developer role. You should remind students that in order to be employer-competitive, it is important that they continuously add new skills and technologies to their knowledge base.
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
-## Heads Up
+## Heads-Up
 
-Before next unit, make sure you install MongoDB and Robo 3T on your machine--you'll need both.
-
-If you haven't used MongoDB much in the past, take a look at next week's queries and solutions. This should prime you for the lecture.
+In the next unit, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [16.1 - Lesson Plan](01-Day/16.1-LESSON-PLAN.md)
+  * [16.1 Lesson Plan](./01-Day/16.1-LESSON-PLAN.md)
 
-  * [16.2 - Lesson Plan](02-Day/16.2-LESSON-PLAN.md)
+  * [16.2 Lesson Plan](./02-Day/16.2-LESSON-PLAN.md)
+  
+  * [16.3 Lesson Plan](./03-Day/16.3-LESSON-PLAN.md)
 
-  * [16.3 - Lesson Plan](03-Day/16.3-LESSON-PLAN.md)
+### Homework
+
+  * [Unit 16 Homework](../../../01-Class-Content/16-Project-2-Contd/02-Homework)
 
 ### Slide Decks
 
-  * N/A
+  * [Superlative Awards](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing)
 
-### Time Tracker(s)
+### Resources
 
-  * N/A
+* [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
-## Algorithms
+* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
-  * [01-missing-number](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/01-missing-number)
+* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-  * [02-left-rotation](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/02-left-rotation)
+* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 
-  * [03-ransom-note](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/03-ransom-note)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

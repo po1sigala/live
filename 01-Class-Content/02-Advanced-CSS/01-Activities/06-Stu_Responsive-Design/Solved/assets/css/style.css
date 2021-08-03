@@ -46,14 +46,7 @@ aside {
   text-align: center;
 }
 
-/* 
-What does the flex-shrink property specify?
-It specifies how much a flex item will shrink relative to the rest of the flex items
-What is doing here? 
-We are telling the footer to not shrink as much as the other items.
-*/
 footer {
-  flex-shrink: 0;
   padding: 20px;
   text-align: center;
   background: #13293d;
