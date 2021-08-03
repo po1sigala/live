@@ -1,302 +1,1541 @@
-# 7.2 Lesson Plan: Bringing it from front to back (10:00 AM)
+# 07.2 Full-Time Lesson Plan: Object-Relational Mapping (ORM)
 
 ## Overview
 
-Today's course will be building upon the lessons your students have learned the past couple of weeks as they bring all of their front-end and back-end knowledge together to create a fully-functional Node application.
+As students continue to learn Sequelize in today's class, they will learn about password hashing with `bcrypt`, incorporating Hooks, and creating a secure login route for users. They will create a custom method that corresponds to a custom route. Later in the lesson, students will learn how to relate data between SQL tables using Sequelize associations and how to model one-to-one, one-to-many, and many-to-many relationships. Students will also learn how to write SQL subqueries with Sequlize literals and end with ESLint as their Git activity.
 
-`Summary: Complete activities 7-14 in Unit 13`
+## Instructor Notes
+
+* In this lesson, students will complete activities `15-Ins_Password-Hashing` through `27-Evr_Eslint`.
+
+* Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions that students might have.
+
+* See the [Sequelize documentation on associations](https://sequelize.org/master/manual/assocs.html) to review how to create relationships. The documentation provides limited real-world examples, so be sure to look at how associations are implemented in the activities and mini-project before class.
+
+* You will use MySQL for today's activities, so be sure to have your MySQL server up and running. You can create the database `cars_db` ahead of time or demonstrate it live in class.
+
+* Instead of relying on a front end, all of the activities will use Insomnia Core to test the routes. Be sure to have it installed and set up for class. 
+
+* To speed up demonstrations and activity reviews, you might want to run `npm install` and create the database for every activity before class starts. 
+
+* Don't forget to run `node seeds/seed.js` before each demo or activity review, to seed the database. Remind students of the seed file too.
+
+* All activities will require changing the `.env.EXAMPLE` file to `.env` and filling it with your MySQL credentials. Instruct students who arrive early to fill out that information ahead of time so that they can focus on the task at hand.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+* If the students struggle with the `Everyone Do: ESLint` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+
+* `npx` is used in the `Everyone Do: ESLint` activity, but it is not a learning objective. If students get hung up on `npx`, briefly explain what it is but do not linger on it.  
 
 ## Learning Objectives
 
-* To use HTML/jQuery GET, POST, PUT, and DELETE commands appropriately
+* Encrypt a password with `bcrypt`.
 
-* To create full-stack web applications that will Create, Read, Update, and Delete data from a MySQL database
+* Automate functionality using Sequelize Hooks.
 
-* Students will use use Express.js, MySQL and Handlebars together to create a dynamic application
+* Create and run a custom method on a Sequelize instance.
 
-## Slides
+* Implement various Sequelize associations to create one-to-one, one-to-many, and many-to-many data relationships.
 
-* N/A
+* Perform subqueries using a combination of Sequelize methods and plain SQL syntax.
+
+* Enforce code styling for an application using ESLint.
 
 ## Time Tracker
 
-[7.2 Time Tracker](https://docs.google.com/spreadsheets/d/1XbDjm7AZdupRlGdaYNkX1dqalr8iQ3h_QOC5Y38NCOY/edit?usp=sharing)
+| Start  | #   | Activity Name                       | Duration |
+|---     |---  |---                                  |---       |
+| 10:00AM| 1   | Instructor Demo: Password Hashing   | 0:05     |
+| 10:05AM| 2   | Student Do: Password Hashing        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Password Hashing | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Hooks              | 0:05     |
+| 10:35AM| 5   | Student Do: Hooks                   | 0:15     |
+| 10:50AM| 6   | Instructor Review: Hooks            | 0:10     |
+| 11:00AM| 7   | Instructor Demo: Instance Method    | 0:05     |
+| 11:05AM| 8   | Student Do: Instance Method         | 0:15     |
+| 11:20AM| 9   | Instructor Review: Instance Method  | 0:10     |
+| 11:30AM| 10  | FLEX                                | 0:30     |
+| 12:00PM| 11  | BREAK                               | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity      | 0:10     |
+| 12:40PM| 13  | Instructor Demo: One-to-One         | 0:05     |
+| 12:45PM| 14  | Student Do: One-to-One              | 0:15     |
+| 1:00PM | 15  | Instructor Review: One-to-One       | 0:10     |
+| 1:10PM | 16  | Instructor Demo: One-to-Many        | 0:05     |
+| 1:15PM | 17  | Student Do: One-to-Many             | 0:15     |
+| 1:30PM | 18  | Instructor Review: One-to-Many      | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Literals           | 0:05     |
+| 1:45PM | 20  | Student Do: Literals                | 0:15     |
+| 2:00PM | 21  | Instructor Review: Literals         | 0:10     |
+| 2:10PM | 22  | Everyone Do: ESLint                 | 0:20     |
+| 2:30PM | 23  | END                                 | 0:00     |
 
-- - -
+---
 
-### Class Instruction
+## Class Instruction
 
-### 1. Instructor Do: Using HTTP Requests (15 mins)
+### 1. Instructor Demo: Password Hashing (5 min) 
 
-* Welcome students to class and let students know about the topic for today. Building a full stack application using `Express.js`, `MySQL`, and `Handlebars`.
+* Welcome students to class.
 
-* Demonstrate the application stored within the `07-TaskSaver` folder with GET and POST commands in front of students.
+* Open `15-Ins_Password-Hashing/routes/api/userRoutes.js` in your IDE and demonstrate the following:
 
-* Make sure to copy `07-TaskSaver/schema.sql` into MySQL Workbench and run the code so as to set up the database you will be reading/affecting.
+  * Like we discussed earlier, password hashing is a crucial step in securing user data in the database. An application's first interaction with a user password occurs as soon as that user creates an account. 
+  
+  * In that first interaction, we must intervene and hash the plaintext password before it is stored in the database. To do this, we use a Node.js package called `bcrypt`. 
 
-* Also make sure to run `npm install` within the terminal.
+  * 🔑 First we import `bcrypt` into the `userRoutes.js` file by adding the `require` expression at the top of the file, as shown in the following code:
 
-* Point out how lines 1–33 in `07-TaskSaver/server.js` is boilerplate code meant to set up the application which we will be able to copy and paste into future applications.
+    ```js
+    const bcrypt = require('bcrypt');
+    ```
 
-* Explain the routes within `07-TaskSaver/server.js`, being sure to point out how data is being collected and added from our MySQL database.
+  * 🔑 In the POST route to create a new user, we take the data for a new user from `req.body` and assign it to `newUser`, as shown in the following code:
 
-* Explain how the form's method inside of `07-TaskSaver/views/index.handlebars` is POST and the action of `'/'` points to the following part of the `server.js` file: `app.post('/', function(req, res)`.
+    ```js
+    router.post('/', async (req, res) => {
+      try {
+        const newUser = req.body;
+    ```
 
-* By making it so that the form's method is POST, we are essentially telling our server that we are going to be posting data to our database. It is extremely similar to using a `jQuery.post()` command.
+  * 🔑 Then, in the `bcrypt` hash function, we pass in the `req.body.password`, which is the plaintext password created by the user. We also pass in a `saltRound` value of `10`. The resulting hashed password is then saved as the `newUser.password`, as follows:
 
-* Explain that you need the `express.json` and `express.urlEncoded` middleware to be able to use `req.body.task` in `07-TaskSaver/server.js` within the `app.post('/', function(req, res)` section.
+    ```js
+    router.post('/', async (req, res) => {
+      try {
+        const newUser = req.body;
+        newUser.password = await bcrypt.hash(req.body.password, 10);
+    ```
 
-  * Check to make sure students remember the concept of middleware:
+  * Next we create a new user using the `newUser` data with the hashed password, and we save it in the database, as follows:
 
-    * Middleware is a function we can run before the browser's request reaches our routes. 
-    
-    * The `express.json` and `express.urlEncoded` middleware transforms the request so that we can read the data that was sent on `req.body`.
-    
-    * Middleware can be defined using the `app.use` method.
+    ```js
+    router.post('/', async (req, res) => {
+      try {
+        const newUser = req.body;
+        newUser.password = await bcrypt.hash(req.body.password, 10);
+        const userData = await User.create(newUser);
+    ```
 
-* Explain what `{{#each tasks}}` is doing in the `07-TaskSaver/views/index.handlebars` file.
+* Run `npm start` in your command line and demonstrate the following in Insomnia Core:
 
-* Explain the following line from the `07-TaskSaver/views/index.handlebars` file: `<textarea type="text" name="task"></textarea>`.
+  * We will make a POST request to `localhost:3001/api/users/` to create a new user. Notice that the password is `Password123` in plaintext, as shown in the following example:
 
-* When data is sent from the front-end to the back-end using the POST method, the key which a specific set of data is contained within is determined by the "name" of the HTML element.
+    ```json
+    {
+      "username": "test2",
+      "email": "test2@email.com",
+      "password": "Password123"
+    }
+    ```
 
-### 2. Partners Do: Understanding TaskSaver (15 mins)
+  * When we see the returned data, we see that the password saved in the database is hashed and salted&mdash;as shown in the following example:
 
-* Before answering any questions regarding the previous section, slack out `07-TaskSaver` to your class and have them set up the application on their computers.
+    ```json
+    {
+      "id": 4,
+      "username": "test2",
+      "email": "test2@email.com",
+      "password": "$2b$10$pQgQagcm85YW1b/0j5MrU.iH2iSCsne.FAMjcxp6izuXEJH.lgiqS"
+    }
+    ```
 
-* Have your students go through the code line-by-line with the person sitting next to them as they work to solidify the lessons learned up above.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 3. Students Do: Wishes Application (20 mins)
+  * ☝️ How would we build this?
 
-* After answering whatever questions your students may have regarding the previous activity, open up the `08-Wishes/Solved` application and demonstrate what your students will be building over the next 20 minutes.
+  * 🙋 We would need to use `bcrypt` to hash the password before saving a new user in the database.
 
-* Slack out the following instructions:
+* Answer any questions before proceeding to the next activity.
 
-  * **Instructions**
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Password-Hashing/README.md`.
 
-    * Create an app with Express, MySQL and Handlebars.
+### 2. Student Do: Password Hashing (15 min) 
 
-      * HINT: this app will be very similar to the app your instructor just demonstrated and slacked out. Please feel free to leverage that code when creating this code.
+* Direct students to the activity instructions found in `16-Stu_Password-Hashing/README.md`.
 
-    * Create a `schema.sql` file and create the following inside of that file:
+* Break your students into pairs that will work together on this activity.
 
-      1. Make a database called "wishes_db"
+  ```md
+  # 📐 Add Comments to Implementation of the Login Route
 
-      2. Inside of that database, make a table called "wishes" which will have a wish column and an id column. The id will be automatically incremented while also being the primary key.
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/routes/api/user-routes.js).
 
-      3. Run your `schema.sql` file within MySQL Workbench before moving onto the next steps.
+  ## 📝 Notes
 
-    * In your `server.js` file, you will have to create two routes: a get route for `'/'` and a post route for `'/'`.
+  Refer to the documentation: 
 
-      * Render all of the wishes from the wishes table when the `'/'` get route is hit. Additionally show the form that the user can use to create a new wish. The form will POST to the `'/'` route.
+  [npm documentation on bcrypt](https://www.npmjs.com/package/bcrypt)
 
-      * The `'/'` post route will insert the wish from the form into the wishes table and will redirect the user back to the `'/'` get route.
+  ---
 
-### 4. Instructor Do: Wishes Application Summary (10 mins)
+  ## 🏆 Bonus
 
-* Open up the `08-Wishes` folder and its files within your editor, and go over the code line-by-line with your class, making sure to explain what is happening within your code to the best of your ability.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-### 5. Instructor Do: Putting and Deleting (20 mins)
+  * How can we persist a login state?
 
-* Open up the `09-DayPlanner` folder within your editor and within your terminal, running `npm install` before running `server.js` and opening up the application within your browser to demonstrate how the application works.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-* Point out how we create PUT and DELETE routes with Express.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help. 
 
-* Point out how to use jQuery to send PUT and DELETE requests (and that there are no shorthand methods available like for GET and POST).
+### 3. Instructor Review: Password Hashing (10 min) 
 
-### 6. Partners Do: Going Over the Day Planner (15 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Slack out `09-DayPlanner` to your students, have them run the application on their computers, and then have them explain the code to their partners line-by-line.
+  * ☝️ How comfortable do you feel with password hashing using `bcrypt`? (Poll via Fist to Five, Slack, or Zoom)
 
-### 7. Everyone Do: Watch List (25 mins)
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-* Once everyone seems to have finished picking their way through the code and you have answered whatever questions your students may have had, slack out the following instructions found in `10-WatchList/README.md` file.
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-  * **Instructions**
+  * ✔️ `findOne()`
 
-    * Create a full-stack application with Express, MySQL and Handlebars.
+  * ✔️ `res.status(404)`
 
-      * HINT: this web application will be very similar to the app your instructor just demonstrated and slacked out. Please feel free to leverage that code when creating this code.
+  * ✔️ `bcrypt.compare()`
 
-    * Create a `schema.sql` file. Inside of that file, do the following:
+  * ✔️ `res.status(400)`
 
-      1. Make a database called moviePlannerDB
+* Open `16-Stu_Password-Hashing/Solved/routes/api/userRoutes.js` in your IDE and explain the following: 
 
-      2. Inside of that database make a movies table which will contain a movie column and an id column. The id will be automatically incremented while also being the primary key.
+  * For this reverse-engineering activity, we had to add comments describing the `/login` route.
 
-      3. Run your `schema.sql` file within MySQL Workbench before moving onto the next steps.
+  * 🔑 First, we need to search the database for a user with the provided email that the user used to login. We do that by using `.findOne()`, as follows:
 
-    * In your server.js file, you will create four routes: `get`, `post`, `put`, and `delete`.
+    ```js
+    router.post('/login', async (req, res) => {
+      try {
+        const userData = await User.findOne({ where: { email: req.body.email } });
+    ```
 
-      * Render the main `index.handlebars` when the `'/'` get route is hit with all of the movies from the movies table.
+  * 🔑 If we cannot find any user in the database with that email address, we need to return a 404 status code with an error message. 
+  
+  * However, be careful not to specify which part of the login attempt failed. Revealing that information could help hackers figure out whether they need to use a different email address or password, making it easier to access sensitive data! Refer to the following message for an example of an error message:
 
-      * Your application should have a set of routes on `'/movies'` for create, update, and delete operations on the movies table.
+    ```js
+    if (!userData) {
+      res.status(404).json({ message: 'Login failed. Please try again!' });
+      return;
+    }
+    ```
 
-      * Show a delete button next to each movie. When one of the delete buttons is clicked, the code should send a DELETE request to  delete the associated movie from your database.
+  * 🔑 If the user is found in the database, then we use `bcrypt.compare()` to compare the user password with the hashed password saved in the database, as follows:
 
-      * Additionally, show the form that the user can use to add a movie to be watched.  When the submit button is clicked, the code will post to the `'/movies'` route, which will insert the movie from the form into the movies table and return the ID of the new movie.
+    ```js
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      userData.password
+    );
+    ```
 
-      * Have another form that will update a movie in the movies table. The form will include two inputs: an id input and a movie title input. Remember to leverage a PUT method.
+  * 🔑 If the password does not match, then we need to return a 400 status code with an error message. Again, we should avoid specifying what was wrong with the login info provided. See the following message for an example:
 
-      * Remember: best practices for REST include:
-        * Put your REST API on it's own URL (e.g. `'/todos'`).
-        * A POST that creates an item should return the ID of the item it created.
-        * PUT and DELETE should specify the ID of the item they're intended to affect in the URL (e.g. `'/todos/123'`).
-        * If the ID for the item specified in a PUT or DELETE couldn't be found, return a 404.
-        * If an error occurs in the server, return an error code (e.g. 500).
+    ```js
+    if (!validPassword) {
+      res.status(400).json({ message: 'Login failed. Please try again!' });
+      return;
+    }
+    ```
 
-### 8. Instructor Do: WatchList Review (10 mins)
+  * If everything goes well, we return a 200 status code with a success message, as follows:
 
-* Open up the `10-WatchList/Solved` folder and its files within your editor, and go over the code line-by-line with your class, making sure to explain what is happening within your code to the best of your ability.
+    ```js
+    res.status(200).json({ message: 'You are now logged in!' });
+    ```
 
-- - -
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-### 9. Break (30 mins)
+  * ☝️ Rather than doing this in the routes, where is a better place to handle password hashing?
 
-- - -
+  * 🙋 In the `User` model! Because the password is directly related to the `User` model, it is better to handle the password hashing using Hooks in the model file.
 
-### 10. Students Do: Quotes App (20 mins)
+  * ☝️ What can we do if we don't completely understand this?
 
-* Open up the `11-QuotesApp/Solved` folder within git bash and run the `schema.sql` and `seeds.sql` files to set up our database before running `npm install` and `node server.js` so as to demonstrate how the Quotes application they will be making is going to work.
+  * 🙋 We can refer to supplemental material, read the [npm documentation on bcrypt](https://www.npmjs.com/package/bcrypt), and stick around for office hours to ask for help.
 
-  * Keep your working application open so that it may serve as a reminder to your students on what kind of application they are making during the following activity.
+* Answer any questions before proceeding to the next activity.
 
-* Answer any and all questions regarding this application before slacking out the following:
+### 4. Instructor Demo: Hooks (5 min) 
 
-  * **Files**
+* Navigate to `17-Ins_Hooks` and be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. 
 
-    * `11-QuotesApp/Unsolved`
+* Open `17-Ins_Hooks/models/User.js` in your IDE and demonstrate the following:
+  
+  * As we've seen so far, Sequelize offers many tools that make it easier for us to communicate with the database. For example, **Hooks** can help us perform actions before and after calls in Sequelize are executed. 
 
-  * **Instructions**
+  * 🔑 There are many Hooks available to us through Sequelize, but for now we will only touch on `beforeCreate()` and `beforeUpdate()`. 
 
-    * Using Express, MySQL, Handlebars, and the starter code which was slacked out to you as a jumping-off point, you will be creating a simple web application which allows users to create, read, update, and delete popular quotes.
+  * 🔑 We can declare Hooks in a few ways. For this activity, we will declare a Hook via the `init()` method in the `User` model. 
 
-    * Your application will have two pages:
+  * 🔑 When including Hooks via the `init()` method, we add them between where the model attributes are defined and where the connection instance is passed, as follows:
 
-      * One will show all of the quotes within a database and will allow users to create a new quote or delete an existing one. A button next to each, labeled "Update This Quote," will take users to the other page which shows the quote selected and will allow them to update it with new information.
+    ```js
+    User.init(
+      {
+        //model attributes
+      },
+      {
+        hooks: {
+          // hooks
+        },
+        ///connection instance
+      }
+    );
+    ```
 
-    * Make sure to run the code contained within the `schema.sql` and `seeds.sql` files beforehand so that you have a database with which to work.
+  * We are passing `newUserData` into both the `beforeCreate()` and the `beforeUpdate()` Hooks, so that whenever a user instance is created or updated, these Hooks have access to the user data.
 
-### 11. Everyone Do: Quotes App Review (10 mins)
+  * 🔑 The `beforeCreate()` method accepts `newUserData`, uses `toLowerCase()` to set the email address to lowercase, and then returns `newUserData` with the newly formatted email address&mdash;as shown in the following example:
 
-* Open up `11-QuotesApp/Solved/server.js`, `11-QuotesApp/Solved/views/index.handlebars`, and `11-QuotesApp/Solved/views/single-quote.handlebars` within your editor, and go through the code line-by-line with your students, calling upon individuals to explain what the code does before clearing up any lingering confusion by going over it yourself as well.
+    ```js
+    beforeCreate: async (newUserData) {
+      newUserData.email = await newUserData.email.toLowerCase();
+      return newUserData;
+    },
+    ```
 
-* Explain briefly the `express.static` middleware when you get to it. In short, it is express code that will automatically respond with static files when requests are made that match the path in the defined folder (in this case the `public` folder).
-  * For example, if someone (e.g. the browser) makes a `GET` request for `/assets/css/style.css`, your express app will automatically send back the `CSS` file without you having to write any extra route handlers (or doing any `res.send`s).
-  * Tell students that it's not critical that they understand exactly how this works for now. They can treat it like their other route handling, but the takeaway is that requests for static files (any paths that matching a path in the defined folder) will be handled by `express.static` BEFORE any of the other code they've written is hit.
-    * A common pitfall here is that students may try to have an `index.html` file in the `public` folder and also try to handle the `/` route for GET requests in their `server.js` - warn them that `express.static` will swallow those requests if you put it first!
+  * 🔑 The `beforeUpdate()` method is identical to `beforeCreate()` in the `User` model, as follows:
 
-### 12. Instructor Do: Introducing the ORM (20 mins)
+    ```js
+    beforeUpdate: async (newUserData) {
+      newUserData.email = await newUserData.email.toLowerCase();
+      return newUserData;
+    },
+    ``` 
 
-* One of the major annoyances of dealing with databases through Node has been how much code we are having to write/rewrite in order to accomplish tasks that are remarkably similar from one activity to the next. In fact, there have even been times where we were having to rewrite repetitive MySQL queries within the very same application. This is far less than ideal code since, as we have discussed in the past, programmers like being able to reuse similar code, time and time again, wherever possible, to simplify/speed-up their apps.
+    However, there is one small difference regarding the `beforeUpdate()` Hook, located in `userRoutes.js`. We will discuss this difference next.
 
-* In the past, we have done this by creating basic functions which take in variables to accomplish similar-but-different tasks. What if I told you that there was a way to do this with MySQL queries as well? That would speed things up and would make working with databases quite a bit simpler, wouldn't it? Thankfully... Object-Relational Mappers (or ORMs) serve just such a purpose, and that is what we are going to be going over in detail today.
+* Open `17-Ins_Hooks/routes/api/userRoutes.js` and scroll down to the PUT route, then demonstrate the following: 
 
-* Open up `12-OrmExample` within your folder system, run `12-OrmExample/db/schema.sql` and `12-OrmExample/db/seeds.sql` files within MySQL Workbench, and then open up `12-OrmExample/server.js`, `12-OrmExample/config/connection.js`, and `12-OrmExample/config/orm.js` within your editor to show your students the code it contains. Ask your students if they can spot what is new here...
+  * We add the option `individualHooks: true` because the ` update()` method could potentially match more than one entry, and we want the Hook to run on each match. Refer to the following code for an example:
 
-  * All of our database-connection code is contained within `connection.js`, which is then required in `orm.js`, which is then required in `server.js`.
+    ```js
+    router.put('/:id', async (req, res) => {
+      try {
+        const userData = await User.update(req.body, {
+          where: {
+            id: req.params.id,
+          },
+          individualHooks: true
+        });
+    ```
 
-  * `orm.js` contains ALL of our MySQL queries inside of it as methods within an object referred to as "orm."
+* To test the Hooks, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
 
-  * These methods take in variables which are then used to alter the properties of our queries. In other words, we can now make similar queries to different MySQL tables, columns, and rows without having to write out entirely new MySQL commands every time. Instead, all we have to do is change around the variables we pass into the method we are calling upon.
+  * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. Notice that the email address is capitalized in the body of the request, as follows:
 
-* Demonstrate the power of ORMs by running `npm install` and `node server.js` within your terminal.
+    ```json
+    {
+      "username": "test",
+      "email": "TEST@email.com",
+      "password": "Password123"
+    }
+    ```
 
-  * Feel free to change around the variables passed into your ORM to show how adaptable it is.
+  * 🔑 When the data is returned, we should see that the email address has been saved in lowercase, as follows:
 
-* Emphasize time and time again the reasons why writing an ORM is considered helpful: efficiency, legibility, and reusability.
+    ```json
+    {
+      "username": "test",
+      "email": "test@email.com",
+      "password": "Password123"
+    }
+    ```
 
-### 13. Partners Do: Discussion of ORMs (10 mins)
+  * 🔑 We will make a PUT request to `http://localhost:3001/api/users/1` to update the user we just created, as shown in the following example:
 
-* Have students talk to each other about the pros of ORM, and see if they can come up with specific situations in which an ORM would be considered valuable.
+    ```json
+    {
+      "username": "test",
+      "email": "TEST1234@email.com",
+      "password": "Password123"
+    }
+    ```
 
-* Call students back together after five minutes or so to share their thoughts regarding the usefulness of ORMs.
+  * 🔑 When the data is returned, we should see that the email address has been updated and stored in lowercase, as shown in the following example: 
 
-### 14. Students Do: Party Database App (20 mins)
+    ```json
+    {
+      "username": "test",
+      "email": "test1234@email.com",
+      "password": "Password123"
+    }
+    ```
 
-* Once you have answered any and all questions regarding ORMs and how they are used, Slack out the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * **Files**
+  * ☝️ How can we use Hooks to automate `bcrypt` password hashing for users?
 
-    * `13-PartyDatabase/Unsolved`
+  * 🙋 We can add Hooks to the `User` model to hash passwords for user instances before they are created or updated.
 
-  * **Instructions**
+* Answer any questions before proceeding to the next activity.
 
-    * You will be creating a holiday party planner application. We want to help create parties for our clients whilst also keeping track of all the events that we are host. In MySQL, create a database called `party_db` with two tables structured like the tables below. Utilize the provided `schema.sql` and `seeds.sql` file in order to build the tables and seed initial values.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Hooks/README.md`.
 
-      | id | party_name              | party_type | party_cost | client_id |
-      | -- | ----------------------- | ---------- | ---------- | --------- |
-      | 1  | Everybody Loves Raymond | tv         | 500        | 1         |
-      | 2  | Big Bang Theory         | tv         | 900        | 1         |
-      | 3  | Top Gun                 | movie      | 200        | 2         |
-      | 4  | Whiskey                 | grown-up   | 300        | 2         |
-      | 5  | Cigar                   | grown-up   | 250        | 3         |
+### 5. Student Do: Hooks (15 min) 
 
-      | id | client_name |
-      | -- | ----------- |
-      | 1  | Bilal       |
-      | 2  | Brianne     |
-      | 3  | Vincent     |
+* Direct students to the activity instructions found in `18-Stu_Hooks/README.md`.
 
-    * Create a Node MySQL application with an ORM that executes once the server is launched.
+* Break your students into pairs that will work together on this activity.
 
-    * You will not need Express or Handlebars for this assignment. Use `console.log` to print the data collected to the console.
+  ```md
+  # 🏗️ Use Hooks to Hash a Password
 
-    * Create a MySQL database with the tables and data which were slacked out to you.
+  Work with a partner to implement the following user story:
 
-    * Create a Node app and connect it to MySQL with a `config` folder and with a `connection.js` file inside of that folder.
+  * As a user, I want to be able to log in with my password.
 
-    * Create an `orm.js` file, and make an ORM that will do the following:
+  * As a user, I want to be able to change my password.
 
-      * Console log all the party names.
-      * Console log all the client names.
-      * Console log all the parties that have a party-type of grown-up.
-      * Console log all the clients and their parties.
+  * As a user, I want to know that my password is being stored securely.
 
-    * BONUS: create a function within your ORM that will let the user add more clients and parties to the database.
+  ## Acceptance Criteria
 
-### 15. Everyone Do: Party Database App Review (10 mins)
+  * It's done when `User.init()` includes Hooks to hash the user's password before it is created.
 
-* Open up `13-PartyDatabase`, run `13-PartyDatabase/Solved/db/schema.sql` and `13-PartyDatabase/Solved/db/seeds.sql` within MySQL Workbench, and then open up `13-PartyDatabase/Solved/server.js`, `13-PartyDatabase/Solved/config/connection.js`, and `13-PartyDatabase/Solved/config/orm.js` within your editor before going over the code line-by-line with your students.
+  * It's done when `User.init()` includes Hooks to hash the user's password before it is updated, only if a password is provided in the paylod.
 
-  * Keep `13-PartyDatabase/Solved/server.js` and `13-PartyDatabase/Solved/config/orm.js` open alongside one another so that they can see how the two files are working together.
+  ## 💡 Hints
 
-* Call upon random students within the class, and have them attempt to explain what each line does first before diving into the code and explaining it in more detail.
+  * What have you learned about hashing a password, `async` and `await`, and `try...catch`? 
 
-  * Open up `13-PartyDatabase` inside of your terminal, run `npm install` and then—after each new ORM function has been discussed—run `node server.js` in order to show your class visually what each ORM function does.
+  * What are three methods for adding Hooks to your code? How is adding a Hook via `init()` different from the other options?
 
-### 16. Instructor Do: The Asynchronous Problem (10 mins)
+  ## 🏆 Bonus
 
-* Open up `14-TheAsynchProblem` within your terminal, run `14-TheAsynchProblem/db/schema.sql` and `14-TheAsynchProblem/db/seeds.sql` inside of MySQL Workbench, and then open up `14-TheAsynchProblem/server.js` and `14-TheAsynchProblem/config/orm.js` within your editor alongside one another.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Ask your students what they think is going to happen when `node server.js` is run inside of your terminal.
+  * Hooks are considered **middleware** in programming terms. What are some other examples of middleware used in Node applications?
 
-  * Most of your class will likely think that your code will return data from the database. This is not the case, but let them think that for the time being nonetheless.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-* Run `npm install` and then `node server.js` within your terminal only to find that your code has returned "undefined" of all things without any error popping up on the screen. Prompt your students to see if any of them know the reason this occurred.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help. 
 
-  * The query to our MySQL database is asynchronous to the rest of our JavaScript code, and as such, our server is not waiting for a response from the database before running our `console.log` command. This, as you might imagine, is a big problem and we are going to need to come up with some way to fix it.
+### 6. Instructor Review: Hooks (10 min) 
 
-### 17. Partners Do: Solving the Asynchronous Problem (10 mins)
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Prompt your class to work in pairs to see if they can come up with the reason why our code is console.logging "undefined" despite no errors being recorded.
+  * ☝️ How comfortable do you feel using Hooks in Sequelize? (Poll via Fist to Five, Slack, or Zoom)
 
-* Also prompt them to see if they can come up with a possible solution to this problem.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
-  * Let them know that they are free to search the web for potential causes/solutions to this issue, as it is a problem that many new coders have faced and that they will continue to face for years and years to come.
+* Use the prompts and talking points below to review the following key (🔑) points:
 
-  * Feel free to Slack out the code contained within `14-TheAsynchProblem` to your students to run, test, and mess with on their own. This could help them to discover a solution and should build up their debugging skills.
+  * ✔️ `beforeCreate()`
 
-* Call the class back together after a solid amount of time to see if anyone knows what the problem is and how we might go about solving it.
+  * ✔️ `beforeUpdate()`
 
-  * PROBLEM: Our query and the rest of our code are asynchronous and thus no data is being returned before the `console.log` is being executed.
+  * ✔️ Hashing passwords inside Hooks with `bcrpyt`
 
-  * SOLUTION: Provide our ORM with a callback function which serves to tell the server to wait until the data has been returned before moving on.
+* Open `18-Stu_Hooks/Solved/models/User.js` in your IDE and explain the following: 
 
-### 18. END (0 mins)
+  * 🔑 We create a `beforeCreate()` Hook in the `User.js` file to make sure that a user can create a profile and that their password will be stored securely with `bcrypt` before the record is stored, as shown in the following example:
 
-### Lesson Plan Feedback
+    ```js
+    beforeCreate: async (newUserData) => {
+      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      return newUserData;
+    }  
+    ```
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * 🔑 The user's password is set as equal to a hashed password, using `bcrypt`. Then `newUserData` is returned, as follows:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+    ```js
+    beforeCreate: async (newUserData) => {
+      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      return newUserData;
+    }   
+    ```
+
+  * `async` and `await` are included in the method, to write cleaner code that enables Promise-based behavior, as follows:
+
+    ```js
+    beforeCreate: async (newUserData) => {
+      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      return newUserData;
+    }  
+    ```
+  
+  * 🔑 We can repeat the preceding steps to create the `beforeUpdate()` method. However, we add a conditional statement that will only hash a user's password if it is included in the payload. Without this conditional statement, the user's information could become corrupted and they would not be able to login. We accomplish this as follows:
+
+    ```js
+    beforeUpdate: async (updatedUserData) => {
+      if (updatedUserData.password) {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        }
+      return updatedUserData;
+    },
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What other commonly used Hooks are available to us?
+
+  * 🙋 We could also use the `afterCreate`, `afterUpdate`, `beforeDestroy`, and `afterDestroy` Hooks, among others.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on Hooks](https://sequelize.org/master/manual/hooks.html), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 7. Instructor Demo: Instance Methods (5 min) 
+
+* Navigate to `19-Ins_Instance-Method` and be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. 
+
+* Open `19-Ins_Instance-Method/models/User.js` in your IDE and demonstrate the following:
+
+  * 🔑 Sometimes we want to access only a specific data point rather than ALL of the data associated with a user. For example, maybe we want to know if a user in a pet adoption database currently has any pets. Instead of using GET to return all of that user's information, we can use **instance methods** to find the specific data we want&mdash;whether that user has pets or not. 
+
+  * 🔑 Sequelize allows us to write instance methods within models (in this example, the `User` model) to access specific data that we can then return to users. 
+  
+  * Let's look at `User.js`. In the following example, to create a user instance for the pet adoption database, we must include the number of pets that a user currently has:
+
+    ```js
+    User.init(
+      {
+        // previous model attributes above...
+        
+        numberOfPets: {
+          type: DataTypes.INTEGER,
+        },
+      },
+    )
+    ```
+
+* Run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+
+  * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. We've set `numberOfPets` equal to `2`, as follows, because the user has two pets:
+
+    ```json
+    {
+      "username": "test",
+      "email": "test@email.com",
+      "password": "Password123",
+      "numberOfPets": 2
+    }
+    ```
+
+  * 🔑 When the data is returned, we should see that the user's pets have been stored in the record, as follows: 
+
+    ```json
+    {
+      "username": "test",
+      "email": "test@email.com",
+      "password": "Password123",
+      "numberOfPets": 2
+    }
+    ```
+
+  * Many users in this pet adoption database might not have pets yet, so let's create another user to reflect that. See the following code for an example:
+
+    ```json
+    {
+      "username": "test2",
+      "email": "test2@email.com",
+      "password": "Password890",
+      "numberOfPets": 0
+    }
+    ```
+
+  * When the data is returned, we should see that this user's pets have been stored in the record as `"numberOfPets": 0`. Refer to the following code for an example:
+
+    ```json
+    {
+      "username": "test2",
+      "email": "test2@email.com",
+      "password": "Password890",
+      "numberOfPets": 0
+    }
+    ```
+
+  * We have created the users; now we want to check whether a user has pets or not&mdash;without returning ALL of their information&mdash;by creating an instance method.
+
+  * 🔑 Let's look at the `User` model in `User.js`. Note the simple instance method called `hasPets` at the top. 
+  
+  * Inside the instance method, we use a conditional statement to check whether `this.numberOfPets` (where `this` represents one particular user) is greater than 0. If the number is greater than 0, it returns `true`. Otherwise, it returns `false`. Refer to the following statement for an example:
+
+    ```js
+    class User extends Model {
+      // This instance method uses a conditional statement to check if a user has pets
+      hasPets() {
+      if (this.numberOfPets > 0) {
+          return true;
+        } else {
+        return false;
+        }
+      }
+    }
+    ```
+
+  * The instance method checks whether a user has any pets, but now we need to make sure that this method is actually usable. To do that, we need to write a custom route.
+
+* 🔑 Open `19-Ins_Instance_Method/routes/api/userRoutes.js` in your IDE and demonstrate the following:
+
+  * 🔑 We have included a new route specifically for the instance method `hasPets`, as follows: 
+
+    ```js
+    router.get('/:id/hasPets', async (req, res) => {
+
+    }
+    ```
+  
+  * First we find a user by their primary key (provided by params). If `userData` evaluates as `false` (no user exists with that primary key), then we will send an error message&mdash;as shown in the following example:
+
+    ```js
+    try {
+      const userData = await User.findByPk(req.params.id);
+      if (!userData) {
+        res.status(404).json({ message: 'No user with this id!' });
+        return;
+      }
+    ```
+  
+  * If a user does exist at the primary key, we get to use the instance method that we wrote in `User.js` to see if that user has pets, as follows: 
+
+    ```js
+    const petData = userData.hasPets();
+    ```
+  
+  * If `petData` evaluates as `false` (the user has no pets), then the user will receive the message `"This person has no pets."` See the following code for an example:
+  
+    ```js
+    if (!petData) {
+      res.status(400).json({ message: 'This person has no pets.' });
+      return;
+    }
+    ```
+
+  * Otherwise, the user will see the message `"This person has pets!"` The code here should look something like the following example:
+
+    ```js
+    res.json({ message: 'This person has pets!' });
+    ```
+  
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+
+  * 🔑 We will make a GET request to `http://localhost:3001/api/users/1/hasPets` to check the route and instance method.
+
+  * 🔑 When the data is returned, we should see the following message, because the first user we created did have pets: 
+
+    ```json
+    {
+      "message": "This person has pets!"
+    }
+    ```
+
+  * 🔑 Now let's check the second user. We will make a GET request to `http://localhost:3001/api/users/2/hasPets`.
+
+  * 🔑 When the data is returned, we should see the following message, because the second user we created had no pets: 
+
+    ```json
+    {
+      "message": "This person has no pets."
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we return specific data about one instance?
+
+  * 🙋 We would add an instance method inside the model to return specific data about that one instance. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Instance-Method/README.md`.
+
+### 8. Student Do: Instance Methods (15 min) 
+
+* Direct students to the activity instructions found in `20-Stu_Instance-Method/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Create a Custom Instance Method
+
+  Work with a partner to implement the following user story:
+
+  * As a user, I want to log in to my account with my password.
+
+  * As a developer, I want to allow a user to log in to their account securely so that their password information isn't compromised. 
+
+  ## Acceptance Criteria
+
+  * It's done when the model includes an instance method.
+
+  * It's done when the instance method compares the user's input with the user's hashed password.
+
+  ## 💡 Hints
+
+  What tools does `bcrypt` offer to help us compare user input to a hashed password?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can we DRY up the code using Sequelize's static model methods?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help. 
+
+### 9. Instructor Review: Instance Methods (10 min) 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel adding instance methods to your models? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+  
+  * ✔️ `checkPassword()` 
+
+  * ✔️ `bcrypt.compareSync()`
+
+* Open `20-Stu_Instance-Methods/Solved/routes/api/userRoutes.js` in your IDE and explain the following: 
+
+  * The `checkPassword()` instance method is used in the `/login` route. Understanding how `checkPassword()` is being used in the `/login` route can give us clues to what the instance method needs to accomplish. 
+
+  * We can tell from the `/login` route that the instance method will need to take in the user's password (from `req.body`) as an argument and then determine whether it matches the password stored in that user's record&dash;as shown in the following example:
+
+    ```js
+    router.post('/login', async (req, res) => {
+      
+      const validPassword = await userData.checkPassword(req.body.password);
+      if (!validPassword) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect email or password, please try again' });
+        return;
+      }
+      res.json({ user: userData, message: 'You are now logged in!' });
+      };
+    ```
+
+* Open `20-Stu_Instance-Methods/Solved/models/User.js` in your IDE and explain the following: 
+
+  * 🔑 First, we want to write the instance method `checkPassword()` inside the `User` model in `User.js`, as follows: 
+
+    ```js
+    class User extends Model {
+      checkPassword(loginPw) {
+        
+        }
+    }
+    ```
+
+  * 🔑 `bcrypt` offers a method called `compareSync()` that allows us to easily check a password. As shown in the following example, it takes two arguments&mdash;`loginPw` (the password sent in the body of the POST request) and `this.password` (the password stored in this particular user record): 
+
+    ```js
+    class User extends Model {
+      checkPassword(loginPw) {
+        bcrypt.compareSync(loginPw, this.password);
+        }
+    }
+    ```
+
+  * Remember, the `/login` route expects `checkPassword()` to evaluate as either `true` or `false`. `compareSync` returns a Boolean&mdash;so all we need to do is return it in the instance method, as follows:
+
+    ```js
+    class User extends Model {
+      checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+      }
+    }
+    ```
+  
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+
+  * We will make a POST request to `http://localhost:3001/api/users` to create a new user, as shown in the following example:
+
+    ```json
+    {
+      "username": "test",
+      "email": "test@email.com",
+      "password": "Password123"
+    }
+    ```
+
+  * When the data is returned, the password is hashed because `User.js` includes a `beforeCreate` Hook that uses `bcrypt` to hash the user's password, as follows: 
+
+    ```json
+    {
+      "id": 1,
+      "username": "test",
+      "email": "test@email.com",
+      "password": "$2b$10$ItAeYIqhuEzADqxHsMe6Mu.r3lzZ.Ewb0gnWw0md3OkRsqPnFKbbG"
+    }
+    ```
+
+  * Now we will make a POST request to `http://localhost:3001/api/users/login` to log in, as shown in the following example:
+
+    ```json
+    {
+      "email": "test@email.com",
+      "password": "Password123"
+    }
+    ```
+
+  * If the code is working, we should see the following message when the data is returned:  
+
+    ```json
+    {
+      "user": {
+        "id": 1,
+        "username": "test",
+        "email": "test@email.com",
+        "password": "$2b$10$ItAeYIqhuEzADqxHsMe6Mu.r3lzZ.Ewb0gnWw0md3OkRsqPnFKbbG"
+      },
+      "message": "You are now logged in!"
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ When do you need to incorporate an instance method into your model?
+
+  * 🙋 When you need to get data or do something related to one specific instance of a model.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on model instances](https://sequelize.org/master/manual/model-instances.html), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding.
+
+### 10. FLEX (30 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit.
+
+* Ask the students if they have any questions regarding anything they've learned in Unit 13 so far.
+
+### 11. BREAK (30 min)
+
+### 12. Instructor Do: Stoke Curiosity (10 min)
+
+* Remind students that one of the main offerings of SQL is the ability to connect multiple tables of data to each other to create relationships between them. 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some examples of data that we could relate using SQL? 
+
+  * 🙋 Artists and albums or songs, pet owners and their pets, and more! Almost any relationship that exists in real life can be represented in a SQL database.
+
+  * ☝️ Why would we want to represent these real-world relationships in an application?
+
+  * 🙋 Web applications like social networks and online stores that remember customers' personal preferences are all digital representations of characteristics and relationships that exist in real life. These kinds of apps can help users more easily connect with each other, shop online, and accomplish other daily tasks.
+
+  * ☝️ Using plain SQL, how do we establish these relationships?
+
+  * 🙋 We define a relationship between tables by creating a foreign key column that holds a reference to the primary key of the related data.
+
+  * ☝️ Can we build the same type of relationships using Sequelize?
+
+  * 🙋 You bet! 
+
+* Explain that today we will focus on how Sequelize allows us to more clearly define relationships between data. Students will also learn some other interesting tools to become better developers.
+
+* Answer any questions before proceeding to the next activity.
+
+## 13. Instructor Demo: One-to-One (5 min) 
+
+* Navigate to `21-Ins_One-to-One` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. Then run `npm start` from the command line and demonstrate the following:
+
+  * 🔑 By default, Sequelize logs the commands that it performs on the SQL server, even on load. You can see that in the following example:
+
+    ```bash
+    Executing (default): CREATE TABLE IF NOT EXISTS `driver` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+    Executing (default): SHOW INDEX FROM `driver`
+    Executing (default): CREATE TABLE IF NOT EXISTS `license` (`id` INTEGER NOT NULL auto_increment , `license_number` CHAR(36) BINARY, `is_donor` TINYINT(1) DEFAULT true, `driver_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`driver_id`) REFERENCES `driver` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+    Executing (default): SHOW INDEX FROM `license`
+    ```
+
+  * 🔑 In these statements that create the tables, the `license` table stores a reference to the `driver` table as a foreign key. 
+
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we want license data to have a reference to a driver?
+
+  * 🙋 A driver's license belongs to a specific driver, so we need to know which driver holds this license.
+
+* Open `21-Ins_One-to-One/models/Driver.js` in your IDE and explain the following:
+
+  * 🔑 In the `Driver` model, nothing indicates ownership of a license.
+
+* Open `21-Ins_One-to-One/models/License.js` in your IDE and explain the following:
+
+  * 🔑 However, a column in the `License` model specifically references the `Driver` model, as follows:
+
+    ```js
+    // This column will store a reference of the `id` of the `Driver` that owns this License
+    driver_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        // This references the `driver` model, which we set in `Driver.js` as its `modelName` property
+        model: 'driver',
+        key: 'id',
+      },
+    },
+    ```
+
+* Open `21-Ins_One-to-One/models/index.js` in your IDE and explain the following:
+
+  * 🔑 We import both models and instruct Sequelize to create a relationship between them, like in the following example:
+
+    ```js
+    // Define a Driver as having one License to create a foreign key in the `license` table
+    Driver.hasOne(License, {
+      foreignKey: 'driver_id',
+      // When we delete a Driver, make sure to also delete the associated License.
+      onDelete: 'CASCADE',
+    });
+
+    // We can also define the association starting with License
+    License.belongsTo(Driver, {
+      foreignKey: 'driver_id',
+    });
+    ```
+
+  * We need to import the models into `index.js` before establishing any associations between them.
+
+* Ask the class the following question (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What do we think the `hasOne()` method does here?
+
+  * 🙋 A driver should only have one driver's license, so the `hasOne()` method probably enforces that!
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_One-to-One/README.md`.
+
+### 14. Student Do: One-to-One (15 min) 
+
+* Direct students to the activity instructions found in `22-Stu_One-to-One/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of a One-to-One Association
+
+  Work with a partner to add comments describing the functionality of the code found in the following files: 
+
+  * [Unsolved/models/index.js](./Unsolved/models/index.js)
+
+  * [Unsolved/models/LibraryCard.js](./Unsolved/models/LibraryCard.js)
+
+  * [Unsolved/routes/api/readerRoutes.js](./Unsolved/routes/api/readerRoutes.js)
+
+  * [Unsolved/routes/api/libraryCardRoutes.js](./Unsolved/routes/api/libraryCardRoutes.js)
+
+  ## 📝 Notes
+
+  Refer to the documentation: 
+
+  [Sequelize documentation on associations](https://sequelize.org/master/manual/assocs.html)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is an entity-relationship diagram (ERD)?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 15. Instructor Review: One-to-One (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with one-to-one relationships in Sequelize? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Foreign key columns
+
+  * ✔️ Sequelize association methods
+
+  * ✔️ Performing JOIN with `include` option
+
+* Open `22-Stu_One-to-One/Solved/models/LibraryCard.js` in your IDE and explain the following: 
+
+  * 🔑 We create a foreign key column to reference the library card's `Reader`, as shown in the following example:
+
+    ```js
+    reader_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'reader',
+        key: 'id',
+      },
+    },
+    ```
+
+* Open `22-Stu_One-to-One/Solved/models/index.js` in your IDE and explain the following: 
+
+  * 🔑 We import both models, associate them to one another, and export them as an object, like in the following example:
+
+    ```js
+    const Reader = require('./Reader');
+    const LibraryCard = require('./LibraryCard');
+
+    Reader.hasOne(LibraryCard, {
+      foreignKey: 'reader_id',
+      onDelete: 'CASCADE',
+    });
+
+    LibraryCard.belongsTo(Reader, {
+      foreignKey: 'reader_id',
+    });
+
+    module.exports = { Reader, LibraryCard };
+    ```
+
+* Open `22-Stu_One-to-One/Solved/routes/api/readerRoutes.js` in your IDE and explain the following: 
+
+  * In the API route files, we import both models through destructuring, as follows:
+
+    ```js
+    const { LibraryCard, Reader } = require('../../models');
+    ```
+
+  * 🔑 Also in the API route files, the GET routes use the `include` option to perform a SQL JOIN, as shown in the following example:
+
+    ```js
+    const readerData = await Reader.findAll({
+      include: [{ model: LibraryCard }],
+    });
+    ```
+
+* If time allows, seed the database, run the app, and use Insomnia Core to demonstrate the following:
+
+  * We can now create a library card and associate it with a reader by running a POST request to `/api/cards` with the following JSON body:
+
+    ```json
+    {
+      "reader_id": 1
+    }
+    ```
+
+  * We can also query a reader and get their associated library card by running a GET request to `/api/readers`.  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What would happen if a reader tried to create a second card? 
+
+  * 🙋 They would run into something called a **foreign key constraint**, which helps control data and maintain relationships between tables. This foreign key constraint would prevent users from associating a second library card with a single reader.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on one-to-one relationships](https://sequelize.org/master/manual/assocs.html#one-to-one-relationships), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 16. Instructor Demo: One-to-Many (5 min) 
+
+* Navigate to `23-Ins_One-to-Many` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
+
+* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+
+  * 🔑 When we perform a GET request to `/api/drivers/1`, we get a response like the following example&mdash;including not only the driver's license data but also an array of their owned cars:
+
+    ```json
+    {
+      "id": 1,
+      "name": "Sal",
+      "address": "200 Response St",
+      "license": {
+        "id": 1,
+        "license_number": "bea06fda-0543-4cc7-82e9-3743fccf566b",
+        "is_donor": true,
+        "driver_id": 1
+      },
+      "cars": [
+        {
+          "id": 2,
+          "make": "Honda",
+          "model": "Accord",
+          "mileage": 30000,
+          "driver_id": 1
+        },
+        {
+          "id": 4,
+          "make": "Toyota",
+          "model": "Camry",
+          "mileage": 60000,
+          "driver_id": 1
+        },
+        {
+          "id": 6,
+          "make": "Subaru",
+          "model": "Outback",
+          "mileage": 20000,
+          "driver_id": 1
+        }
+      ]
+    }
+    ```
+
+* Open `23-Ins_One-to-Many` in your IDE and demonstrate the following:
+
+  * 🔑 In `models/Car.js`, we create a model with a column to reference the `id` of the driver who owns it, as shown in the following example:
+
+    ```js
+    driver_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'driver',
+        key: 'id',
+      },
+    },
+    ```
+
+  * 🔑 In `models/index.js`, drivers have one license. But now they also have many cars, and cars belong to one driver, as you can see in the following example:
+
+    ```js
+    Driver.hasMany(Car, {
+      foreignKey: 'driver_id',
+      onDelete: 'CASCADE',
+    });
+
+    Car.belongsTo(Driver, {
+      foreignKey: 'driver_id',
+    });
+    ```
+
+  * 🔑 In `routes/api/driverRoutes.js`, the GET route queries use the `include` option to perform a JOIN to retrieve the associated driver's license and cars, as follows:
+
+    ```js
+    const driverData = await Driver.findByPk(req.params.id, {
+      include: [{ model: License }, { model: Car }],
+    });
+    ``` 
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Can we create a new driver's license or car without a driver? 
+
+  * 🙋 Nope! Both belong to specific drivers, so the driver has to exist in the database before the license or car can be created. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_One-to-Many/README.md`.
+
+### 17. Student Do: One-to-Many (15 min) 
+
+* Direct students to the activity instructions found in `24-Stu_One-to-Many/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement One-to-Many Association Between Reader and Book Models
+
+  Work with a partner to implement the following user story:
+
+  * As a book owner, I want to see the books in my collection.
+
+  ## Acceptance Criteria
+
+  * It's done when the MySQL table for book data has a foreign key referencing the reader table.
+
+  * It's done when the response of a GET request to `/api/readers` or `/api/readers/:id` includes the books owned by a reader, like the following JSON:
+
+      ```json
+      {
+        "id": 1,
+        "name": "Lernantino",
+        "email": "lernantino@gmail.com",
+        "password": "$2b$10$AcbPGE6mNk3aZAnFCan1XeVVbuDYhQiHxOQ/gIG/PSUj2WoOR2pGC",
+        "library_card": {
+          "id": 2,
+          "card_number": "8342e78a-7265-4060-9834-81a19c76c041",
+          "reader_id": 1
+        },
+        "books": [
+          {
+            "id": 4,
+            "title": "The Pragmatic Programmer: Your Journey To Mastery",
+            "author": "David Thomas",
+            "isbn": "978-0135957059",
+            "pages": 352,
+            "edition": 2,
+            "is_paperback": false,
+            "reader_id": 1
+          },
+          {
+            "id": 6,
+            "title": "Algorithms of Oppression: How Search Engines Reinforce Racism",
+            "author": "Safiya Umoja Noble",
+            "isbn": "978-1479837243",
+            "pages": 256,
+            "edition": 1,
+            "is_paperback": true,
+            "reader_id": 1
+          }
+        ]
+      }
+      ```
+
+  ---
+
+  ## 💡 Hints
+
+  When you associate these models, what will the relationship look like? Would users belong to books, or would books belong to users? 
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * As a JavaScript developer using Sequelize, why do you still need to know SQL?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 18. Instructor Review: One-to-Many (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with one-to-many relationships? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ Foreign key column
+
+  * ✔️ `hasMany()` 
+
+  * ✔️ `include`
+
+* Open `24-Stu_One-to-Many/Solved/models/Book.js` in your IDE and explain the following: 
+
+  * 🔑 We add a column, as follows, to store a reference to the reader that owns the book: 
+
+    ```js
+    reader_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'reader',
+        key: 'id',
+      },
+    },
+    ```
+
+* Open `24-Stu_One-to-Many/Solved/models/index.js` in your IDE and explain the following: 
+
+  * 🔑 We create the relationship between readers and books by declaring that readers have many books and a book belongs to one reader, as shown in the following example:
+
+    ```js
+    Reader.hasMany(Book, {
+      foreignKey: 'reader_id',
+      onDelete: 'CASCADE',
+    });
+
+    Book.belongsTo(Reader, {
+      foreignKey: 'reader_id',
+    });
+    ```
+
+* Open `24-Stu_One-to-Many/Solved/routes/api/readerRoutes.js` in your IDE and explain the following: 
+
+  * 🔑 We use the `include` option to perform a JOIN like in the following example: 
+
+    ```js
+    const readerData = await Reader.findAll({
+      include: [{ model: LibraryCard }, { model: Book }],
+    });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What happens to the books or library cards owned by a reader if that reader is deleted?
+
+  * 🙋 They will also be deleted, because we set `onDelete: 'CASCADE'`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on one-to-many relationships](https://sequelize.org/master/manual/assocs.html#one-to-many-relationships), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+## 19. Instructor Demo: Sequelize Literals (5 min) 
+
+* Navigate to `25-Ins_Literals` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
+
+* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+
+  * 🔑 When we perform a GET request to `/api/drivers/2`, we get a response that resembles the following example&mdash;including everything from before but also the total mileage of all cars owned by the driver:
+
+    ```json
+    {
+      "id": 2,
+      "name": "Lernantino",
+      "address": "404 Express Blvd",
+      "totalMileage": "150000",
+      "license": {
+        "id": 2,
+        "license_number": "54f17c3c-aef2-49ac-b68a-b66f8645222d",
+        "is_donor": true,
+        "driver_id": 2
+      },
+      "cars": [
+        {
+          "id": 1,
+          "make": "Ford",
+          "model": "Mustang",
+          "mileage": 40000,
+          "driver_id": 2
+        },
+        {
+          "id": 4,
+          "make": "Toyota",
+          "model": "Camry",
+          "mileage": 60000,
+          "driver_id": 2
+        },
+        {
+          "id": 5,
+          "make": "Toyota",
+          "model": "Corolla",
+          "mileage": 50000,
+          "driver_id": 2
+        }
+      ]
+    }
+    ```
+
+* Open `25-Ins_Literals/routes/api/driverRoutes.js` in your IDE and demonstrate the following:
+
+  * 🔑 We update the query to include a new attribute called `totalMileage` that has a value of the output of a SQL function, as follows:
+
+    ```js
+    const driverData = await Driver.findAll({
+      include: [{ model: License }, { model: Car }],
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              '(SELECT SUM(mileage) FROM car WHERE car.driver_id = driver.id)'
+            ),
+            'totalMileage',
+          ],
+        ],
+      },
+    });
+    ```
+
+  * 🔑 Because we need to perform a SQL query on the database connection, we import the Sequelize instance at the top of the file, as shown in the following example:
+
+    ```js
+    const sequelize = require('../../config/connection');
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we want to use regular SQL with Sequelize?
+
+  * 🙋 Sequelize provides a lot of built-in functionality, but it can be easier to write a more complex query using regular SQL syntax instead. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Literals/README.md`.
+
+### 20. Student Do: Sequelize Literals (15 min) 
+
+* Direct students to the activity instructions found in `26-Stu_Literals/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Users Route Is Missing Data
+
+  Work with a partner to resolve the following issues:
+
+  * As a user, I want to see the books I own and a count of how many of those are short novels.
+
+  ## Expected Behavior
+
+  When a request is made for user data, the response includes a `shortBooks` property that counts the books with between 100 and 300 pages.
+
+  ## Actual Behavior
+
+  The user data in the response does not include a `shortBooks` property.
+
+  ## Steps to Reproduce the Problem
+
+  1. Run `node seeds.js` from the command line to seed the database.
+
+  2. Run `npm start` to start the server.
+
+  3. In Insomnia Core, make a GET request to `/api/readers/1`.
+
+  4. Note that the response data does not include a `shortBooks` property.
+
+  ---
+
+  ## 💡 Hints
+
+  How could you obtain this short novel count using a regular SQL query?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How would you build a many-to-many relationship using Sequelize?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+### 21. Instructor Review: Sequelize Literals (10 min)  
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel using regular SQL queries in Sequelize? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ `attribute` 
+
+  * ✔️ `sequel.literal()` 
+
+  * ✔️ `COUNT()` 
+
+* Open `26-Stu_Literals/Solved/routes/api/readerRoutes.js` in your IDE and explain the following: 
+
+  * 🔑 For the GET routes, we add the `attributes` option to instruct Sequelize to include or exclude any columns or fields, as follows:
+
+    ```js
+    const readerData = await Reader.findAll({
+      include: [{ model: LibraryCard }, { model: Book }],
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to get a count of all short books
+            sequelize.literal(
+              '(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 AND 300 AND book.reader_id = reader.id)'
+            ),
+            'shortBooks',
+          ],
+        ],
+      },
+    });
+    ```
+
+  * 🔑 In the `include` option, we add an array with the `sequelize.literal()` query first and the attribute name we'll use second. 
+
+  * 🔑 The SQL `COUNT()` function will return the number of books with between 100 and 300 pages.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we make this code easier to read in the route's callback function?
+
+  * 🙋 We can create a static Sequelize method to perform on the model.
+
+  * ☝️ Why does the SQL query have to explicitly include `book.reader_id = reader.id`?
+
+  * 🙋 Without that part of the query, it would count ALL books and not just the books owned by this reader.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Sequelize documentation on subqueries](https://sequelize.org/master/manual/sub-queries.html), and stick around for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Eslint/README.md`.
+
+## 22. Everyone Do: ESLint (20 min)
+
+* Open the [ESLint documentation](https://eslint.org/) in your browser and explain the following:
+
+  * We can use **ESLint** to help enforce code styling and consistency in web applications.
+
+* Direct students to the activity instructions found in `27-Evr_Eslint/README.md`:
+
+  ```md
+  # 🐛 Code Not Following ESLint Rules
+
+  Work with a partner to resolve the following issues:
+
+  * As a developer on a team, I want my team's codebase to follow uniform formatting and styling, using ESLint rules.
+
+  ## Expected Behavior
+
+  The code in [Unsolved/example.js](Unsolved/example.js) should pass all tests and rules listed in [Unsolved/.eslintrc.json](Unsolved/.eslintrc.json), and it should not have red underlines.
+
+  ## Actual Behavior
+
+  The code in [Unsolved/example.js](Unsolved/example.js) does not pass most rules listed in [Unsolved/.eslintrc.json](Unsolved/.eslintrc.json), and it does have red underlines.
+
+  ## Steps to Reproduce the Problem
+
+  1. Install the [VS Code EsLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+  2. From the command line, run `npm install` in the [Unsolved](./Unsolved) folder.
+
+  3. Open [Unsolved/example.js](Unsolved/example.js) in your code editor. If you completed the previous steps correctly, you should see red annotations under different parts of the code. Hovering over each one displays a popover that lists an ESLint rule being broken.
+
+      * Alternatively, you can run `npm run test` to get a list of code styling errors and where they occur.
+
+  ---
+
+  ## 💡 Hints
+
+  How can we better understand the rules in [Unsolved/.eslintrc.json](Unsolved/.eslintrc.json) using the [ESLint documentation on rules](https://eslint.org/docs/rules/)?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can we ensure that the code passes all ESLint checks before merging a GitHub pull request? 
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
+
+* Navigate to `27-Evr_Eslint/Unsolved` on the command line, run `npm install`, and demonstrate the following:
+
+  * 🔑 If we run `npm run test`, ESLint will check all of the JavaScript files for code styling issues by comparing it to both its internal base rules and the rules that are present in `.eslintrc.json`.
+
+* Open `27-Evr_EsLint/Unsolved` in your IDE to demonstrate the following:
+
+  * 🔑 The ESLint extension for VS Code also allows us to open a file like `example.js` and view what's wrong. We can highlight underlined code to get a dialog that explains what's wrong and how we can fix it.
+
+  * In the `.eslintrc.json` file, we can tell ESLint how to handle certain rules and formats.
+
+  * In `package.json`, we use the `npm run test` script to run the `npm run lint` script. 
+
+  * The `npm run lint` script uses `npx` to temporarily download ESLint as an executable command and run it on all files that match the extension of `.js`. We use `exit 0` at the end, like in the following example, to prevent Node.js from throwing an error when the linting doesn't pass:
+
+    ```json
+    "lint": "npx eslint **/*.js --quiet; exit 0",
+    ``` 
+
+* Answer any questions before ending the class.
+
+### 23. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,107 +1,78 @@
-# 12.5 Final Project Presentations (10:00 AM)
+# 12.5 Full-Time Lesson Plan: Project 3 Presentations
 
-In this lecture, your students will present their project apps to the class. They’ll afterwards answer open-floor questions from you, TAs and classmates. This is a **crucial** lecture for your students, so make sure you follow the advice in this plan.
+## Overview
 
-## Instructor Priorities
-
-* Students should expect an extended class today--these presentations tend to last longer than our allotted time.
-
-* Students should know the parts of their apps that impress you and the TAs, as well as what they can improve on for future projects. This will help direct their focus for future assignments (what aspects of web development they need to work on).
+In this class, students will present their projects to their peers.
 
 ## Instructor Notes
 
-* Arrive early to support students, and get the room set up.
+* Congratulate your class! This is a major milestone in their journey.
 
-* Have your TAs reference [05-Day-Time-Tracker](https://drive.google.com/a/trilogyed.com/file/d/1Wyx9aC4lKA5UaQjunQZcExJG-iX32a2_/view?usp=sharing) to help keep track of time during class.
+* Ask your students to think back to the very first day of class when they may have struggled with HTML and CSS. Remind them that they have grown from beginners into full-stack developers in a very short amount of time, which is a huge accomplishment. Remind students that web development is hard, and that they should celebrate not only their ability to make it all the way to final project week, but also the skills they have acquired.
 
-## Class Objectives
+* Project presentations are a rare opportunity for students to practice speaking on technical topics in front of an audience of peers.
 
-* _Arrive early to class_ so that you can set the room up for presentations.
+* Limit presentations to 10 minutes: 7 or 8 for the presentation itself followed by 2 or 3 minutes for Q & A. This will ensure that every group presents and allow padding for transitions between groups.
 
-* To provide students more time and support for their group projects.
+* Prior to class, prepare a list of questions to ask each group to encourage discussion.
 
-## Slides
+* Prior to class, and during presentations if necessary, collaborate with your TAs to prepare a slide deck of superlative "awards" for groups. Refer to [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing).
 
-N/A
+## Learning Objectives
+
+By the end of class, students will be able to:
+
+* Demonstrate deployed projects
+
+* Explain the technical implementation of their projects
+
+* Describe their individual roles and contributions to their projects
 
 ## Time Tracker
 
-[12.5 Time Tracker](https://docs.google.com/spreadsheets/d/11U5c19_MgNqgtcha8q8Y6cr0gNnzPl7pD7VkKtHKJp0/edit?usp=sharing)
+| Start  | #   | Activity Name                      | Duration |
+|---     |---  |---                                 |---       |
+| 10:00AM| 1   | Instructor Do: Welcome             | 0:05     |
+| 10:05AM| 2   | Student Do: Presentations          | 1:55     |
+| 12:00PM| 3   | BREAK                              | 0:30     |
+| 12:30PM| 4   | Student Do: Presentations          | 2:00     |
+| 2:30PM | 5   | End                                | 0:00     |
 
-- - -
+---
 
-### 1. Introduce Presentations (10 mins)
+## Class Instruction
 
-* Be sure you are all setup for presentations.
+### 1. Instructor Do: Welcome (5 min)
 
-* Congratulate your class for developing their projects to a state worth presenting.
+* Welcome students to class.
 
-* Tell students to deploy their latest changes to GitHub. When they demonstrate their project, they'll clone their files to the projector's computer.
+* Congratulate your class for making it this far in the course and developing their projects to a state worth presenting. This is a huge milestone for students and they should take a moment to celebrate how far they have come.
 
-  * Make sure groups have deployed their app to Heroku, as well. We want to see their projects in action.
+* Address any last-minute questions before presentations.
 
-* Give students a rundown of how they're presentations should pan out.
+### 2. Student Do: Presentations
 
-  1. They should last about eight minutes, followed by two-to-four minutes of open-floor Q&A.
-  2. They need to show confidence! All of them have contributed to impressive projects--they need to recognize and project that during their demonstrations.
+* Project groups will have 10 minutes to present their project and have a brief Q & A.
 
-* Ask which groups would like to go first, then second, then third and so on. When groups stop responding, assign the remaining teams to random slots (and write this list down).
+* If there aren't many questions, ask the group to explain how they built their application and encourage them to speak technically to some of their code.
 
-### 2. Presentations Pt.1 (105 mins)
+### 3. BREAK (30 mins)
 
-* Go down the list and send each group up to the front of class. Give students roughly three minutes of setup time.
+### 4. Student Do: Presentations
 
-* When a group nears the 9-minute mark, motion for them to draw their presentation to a close (like pointing to your watch/imaginary watch). **Don't say anything**--you don't want your voice to interrupt them & throw them off.
+* Continue the presentations.
 
-* Follow each of these presentations up with questions about their projects. Let TAs and classmates ask questions, too.
+* Present superlative 'awards' and congratulate each group for accomplishing this huge milestone!
 
-* When the Q&A session ends, point out what you found impressive and what they can improve on for future demonstrations.
+* Take a moment with your class for some self-refection, and remind students that learning is an ongoing process.
 
-* When a group finishes after 12pm, announce a break.
+* Remind students that they should take a moment to celebrate their accomplishments as a team, and ensure them that they have put in the time and effort to be a developer.
 
-### 3. Lunch (30 mins)
+* Assure students that applying for positions can take some time, and they may face rejection, but to not be discouraged. Remind them to leverage personal connections and apply to as many jobs as they can, even if they don't fit all the requirements.
 
-### 4. Presentations Pt.2 (110 mins)
+### 5. END
 
-* Just like in step 2, send each group up to the front of class when their turn comes.
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-* When the last group finishes, tell each of them that they should put their projects up on LinkedIn, with links to their GitHub and Heroku deployments.
-
-* Congratulate them! It's challenging to conceive, develop and present a new web app. Remind them how much they've learned over the past 6 months.
-
-* Dismiss the class.
-
-### 5. Introduce Portfolio Update (10 mins)
-
-Open up the instructions for updating the students portfolio
-
-* [Portfolio Update Instructions](../../../../01-Class-Content/16-Project-2-Contd/02-Homework#updated-portfolio)
-
-* Explain to students the importance of having an up-to-date portfolio, whether it be for the job search or just networking! Let them know how proud you are of the hard work they have done and to go ahead and update their portfolios to add and show off this finished project.
-
-### 6. After Project Demos (5 mins)
-
-After students have presented their projects, please take some time to submit their work to the form below. This will assist future instructional staff.
-
-### 7. End (0 mins)
-
-* [Student Project Examples](https://goo.gl/forms/d82FCYMGeRcrxruQ2)
-
-# Instructor Do: Private Self-Reflection (0 min)
-
-Take some time on your own after class to think about the following questions. If there's anything that you're not sure how to answer, feel free to reach out to the curriculum team!
-
-1. How did today's class go?
-2. How did you teach it?
-3. How well do you feel you did teaching it?
-4. Why are you teaching it?
-5. Why did you teach it that way?
-6. What evidence can I collect to show my students are understanding?
-7. How will my students know they are getting it?
-
-
-### Lesson Plan Feedback
-
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
-
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

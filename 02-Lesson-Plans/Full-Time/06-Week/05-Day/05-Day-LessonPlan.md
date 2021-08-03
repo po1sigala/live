@@ -1,264 +1,1054 @@
-## 6.5 - MySQL Big Data (10:00 AM) 
+# 06.5 Full-Time Lesson Plan: Big Data
 
 ## Overview
 
-Today's class focuses on using those MySQL skills students have acquired earlier in the week to deal with big data. On top of this, students should also become proficient in creating/using "schema.sql" and "seeds.sql" files while also learning how to import data using .CSV files.
+Today's lesson will delve further into SQL queries. You will introduce students to prepared statements, aggregate functions, and joins. Students will also collaborate on a mini-project that reinforces SQL concepts as they build a command-line application that incorporates a SQL database with an Express.js server.
 
 ## Instructor Notes
 
-* `Summary: Complete activities 11-14 in Unit 12`
+* In this lesson, students will complete activities `21-Ins_Prepared-Statements` through `28-Stu_Mini-Project`.
 
-* Today's class is far gentler than the past two have been and should be looked at as a time to help everyone catch up with one-another. Throughout the assignment, you and your TA's should be moving about the room to help those who seem to be struggling.
+* In the Stoke Curiosity section, you will use a sample MySQL database to demonstrate the real-world application of SQL. Before class, visit the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/), then download it and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
 
-* There are also times during which you will be calling the class back together to go over the previous part of the activity with them so that no one gets left behind.
+* Make sure that students can initialize the MySQL command-line prompt using the command `mysql -u root -p`. They will need their MySQL password. Students should be encouraged to use a password that is not used for any other personal accounts.
 
-* Despite all of this, today should hopefully be an easier day for your students as the assignment itself is not terribly challenging overall.
+  * If macOS users get a `command not found` error message, they might need to add the following into their `.bash_profile` or `.zshrc` file: `export PATH="${PATH}:/usr/local/mysql/bin/"`.
 
-* **Extra Resources:** Send out the following link before or after class and encourage students to tackle the two MySQL questions in [Whiteboarding Overview and Questions](https://coding-bootcamp-whiteboarding-algorithms.readthedocs-hosted.com/en/latest/). This was given with the course pre-work but after this week, students should be able to accomplish those questions.
+  * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
 
-* Have your TAs reference [03-Day-TimeTracker](https://drive.google.com/a/trilogyed.com/file/d/1bgCBIYaRmjrEVbjAGkY1GKW-BGA2eyuj/view?usp=sharing) to help keep track of time during class.
+* For the activities that use an Express.js server, you will be required to pass your username and SQL password as a parameter of `createConnection()`. Make sure to change the provided user -- if you are not using the default `root` -- and add your personal SQL password before running each demo or activity. The changes will need to be made in the `server.js` file.
+
+* **Important**: You will be demonstrating with a file that contains your database credentials. Be sure that your MySQL password is not used for any other personal accounts, because it will be visible during the demonstrations.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Learning Objectives
 
-* To introduce students to the processes of creating and working within databases which deal with large data
+By the end of class, students will be able to:
 
-* To help solidify the foundations of MySQL and SQL syntax
+* Write a SQL query that joins two tables together.
 
-* To learn how to create MySQL schemas and import large amounts of external data into a database
+* Implement `?` prepared statements in conjunction with `INSERT`, `UPDATE`, and `DELETE`.
 
-## Slides
-
-* N/A
+* Perform a calculation on a set of values using aggregate functions.
 
 ## Time Tracker
 
-[6.5 Time Tracker](https://docs.google.com/spreadsheets/d/1f2mWnABZScVsJKpcUxVUoLgP5hZJCpd0/edit#gid=489496587)
+| Start  | #   | Activity Name                         | Duration |
+|---     |---  |---                                    |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity        | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Prepared Statement   | 0:05     |
+| 10:15AM| 3   | Student Do: Prepared Statement        | 0:15     |
+| 10:30AM| 4   | Instructor Review: Prepared Statement | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Count                | 0:05     |
+| 10:45AM| 6   | Student Do: Count                     | 0:15     |
+| 11:00AM| 7   | Instructor Review: Count              | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Join                 | 0:05     |
+| 11:15AM| 9   | Student Do: Join                      | 0:15     |
+| 11:30AM| 10  | Instructor Review: Join               | 0:10     |
+| 11:40AM| 11  | Everyone Do: Git                      | 0:20     |
+| 12:00PM| 12  | BREAK                                 | 0:30     |
+| 12:30PM| 13  | Instructor Demo: Mini-Project         | 0:05     |
+| 12:35PM| 14  | Student Do: Mini-Project              | 0:60     |
+| 1:35PM | 15  | Instructor Review: Mini-Project       | 0:10     |
+| 1:45PM | 16  | Introduce Homework                    | 0:05     |
+| 1:50PM | 17  | FLEX                                  | 0:40     |
+| 2:30PM | 18  | End                                   | 0:00     |
 
-- - -
+---
 
 ## Class Instruction
 
-### Optional - MySQL Quiz (10 minutes)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-If your class is struggling with MySQL fundamentals (Connecting, creating schemas, etc.) spend 10 minutes doing this quick warm-up activity: `0-MySQL PopQuiz` in `11-popQuiz/README.md`.
+* Welcome students to class.
 
-### 1. Instructor Do: Introduction to Big Data (5 min)
+* If you have not yet downloaded the sample database, download it from the [MySQL Employees sample database page](https://dev.mysql.com/doc/employee/en/employees-installation.html) and unzip the file. You can also download it directly from the [GitHub repo for the Employees sample database](https://github.com/datacharmer/test_db).
 
-* Up until this point we have been dealing with fairly small collections of data on our servers, but that is going to change today as we move into creating and working within MySQL databases containing massive amounts of data.
+* Congratulate the students! At this point, they have learned the basic tools needed to design a relational SQL database that can handle large amounts of data.
 
-* The reason we are doing this is because one of the major advantages of MySQL over other server systems is that it can pretty easily handle large datasets. This makes it ideal for industries who require vast collections of data to be stored and called back at a moments notice.
+* Note, however, that designing a database is just the beginning. SQL developers must also be able to manipulate large amounts of data to answer real-world questions.
 
-* Working with big data can seem rather intimidating at first due to the size of the systems you are working with, but it is not terribly different than working on smaller servers. The only major difference here is the amount of information you are sifting through in order to create programs.
+* Emphasize that database queries start with a plain-language question that can be solved using the data and the SQL query language.
 
-### 2. Partners Do: Examining The Dataset (10 mins)
+* Open the `test_db/` directory in your command line to demonstrate the following:
 
-* Slack out `TopSongs.csv` in `12-Top5000Schema` to the class and have them look through it for a few minutes after telling them that this is the dataset they will be working with today. It contains 5000 lines of music data within it.
+  * Imagine that, on the job, we want to know the first and last names of all employees born in March. To answer this question, we have to find a way to query a database that contains thousands of records to get the results that we need -- and only those results.
 
-* Explain the data that each column contains. Reading the first from left to right, we have:
+  * We start by opening MySQL Shell:
 
-  * Columns containing the **artist name**; **song name**; **year**; **raw popularity score** for the song from the entire world; and then one column for each of the **raw popularity scores** for the song from the USA; UK; Europe (i.e., non-English speaking countries in Europe); and the rest of the world, respectively.
-
-  * Explain that "raw score" numbers reflect the "total value of music industry sales", where a higher raw score indicates a greater volume of sales.
-
-* Now that they have looked through the dataset, prompt them to work in pairs to come up with how they might go about creating a database/table for this data.
-
-* After a few minutes of discussion, call the class back together and start asking individuals around the room how they would go about creating a database and table to hold this data.
-
-* Most individuals should manage to make it up until the creation of a table fairly easily, but then there may be some struggles when it comes to making the table itself.
-
-  * The key feature to point out here is that we will have to create a table with nine columns.
-
-* Once you are satisfied that everyone has a good idea as to what they would do, continue onto the next section.
-
-### 3. Instructor Do: Setting Up Schemas and Planting Seeds (5 min)
-
-* As many of your students have likely noticed by now, the actual code used to affect MySQL servers is not saved directly onto their servers. In fact, the only thing that IS saved when you run SQL queries are the changes you have made to the server.
-
-* This can be rather troublesome when you want to create an identical database on a separate server as you would have to rewrite all of your code again in order to do so. What a hassle!
-
-* Fortunately there are other ways in which MySQL developers save their code for just such a reason! They use "schema.sql" files to save their database/table creation codes and "seeds.sql" files to save those statements they use to insert data into their tables. All they have to do in order to create copies of their databases, therefore, is copy the code contained within these files, paste it into MySQL Workbench, and then run the code.
-
-### 4. Students Do: Preparing the Database (20 mins)
-
-* Once any and all questions have been answered, slack out the following activity...
-
-* **Instructions**
-
-  * It's time to test your skills in creating databases and tables as you create a database called `top_songsDB` which will eventually house all of the music data contained within `TopSongs.csv`
-
-    * Within your database create a table called `Top5000` and create columns capable of holding all of the data contained within `TopSongs.csv` properly.
-
-    * All of your code should be written and saved within a filed called `schema.sql` so that you can use this same code later should the need ever arise
-
-    * HINT: Try to have your table's columns match those within the CSV file as closely as possible or else you may find the next step in this assignment more difficult than it would otherwise be
-
-    * BONUS: Create a `seeds.sql` file that adds the data for the first three songs found within `TopSongs.csv` to your table
-
-    * BONUS: Look into how MySQL Workbench can import and export data files. What file types does it accept? How does it convert the data?
-
-### 5. Everyone Do: Going Over the Database (10 mins)
-
-* When everyone has finished the assignment, ask for a member of the class to share their `schema.sql` file and walk the class through the logic of their creation.
-
-  * You may want to choose a student whose code you are confident will work. Remember that the table being created should match the data-types contained within the CSV file with the default type being VARCHAR.
-
-  * While they are discussing their code, you may want to have a TA check to make sure everything will run properly when the data is imported. If it is, great! You shouldn't have to work your way through the solution as much. If it does not work, however, make sure you are able to gently point out the reasons why it won't work and correct them.
-
-* After the student has gone over their code and you have made sure everything works correctly, you may want to work your way through the code with the class one more time to make certain they all understand how everything works. Remember, this class is as much about catch-up and review as it is about working with big data.
-
-### 6. Instructor Do: Importing Data Demo (10 mins)
-
-* When everyone's questions have been answered to the best of your ability, open up MySQL Workbench and navigate into your `TopSongsDB` database. Keep yourself open to questions as you walk students through importing data.
-
-* Once you are inside of this database, type in the following code to show your empty table.
-
-```sql
-SELECT * FROM Top5000;
-```
-
-* Now that your table is on display at the bottom of the page, navigate into the import/export wizard at the top of the table area near the center.
-
-* Find the csv file you want to import within the file browser and then double-click.
-
-  * Larger files take longer to import, so don't freak out if this takes a while to accomplish.
-
-  * MySQL Workbench may say that it is "Not Responding" while importing... It is lying. When MySQL Workbench is importing a large file, it devotes all of its processes to that task and this makes it seem like the program has frozen when it is still working. Just be patient and give it time to import.
-
-  * If you don't want to deal with the full 5000 rows of data and want to go with something a touch more manageable, we have also provided you with `Top1000Songs.csv` in `12-Top5000Schema` which holds significantly less data inside of it.
-
-* When the file has been fully imported, select apply in the lower-right portion of the table-display screen to commit your additions to the database.
-
-  * Once again, this may take some time so do not freak out if it looks like MySQL Workbench has frozen
-
-    ![Top5000](Images/Top5000.png)
-
-* Now that all of the data has been imported, it's time to show the class the MASSIVE table that we have put together. While the importing process may have taken some time, it was certainly better than having to deal with inserting each row individually as that would have taken FOREVER!
-
-### 7. Students Do: Importing and Working With Big Data (50 mins)
-
-* Answer whatever questions your students may have before slacking out the following instructions...
-
-* **Files**
-
-  * `TopSongs.csv` in `13-Top5000Schema`
-
-  * `Top1000Songs.csv` in `13-Top5000Schema`
-
-* **Instructions**
-
-  * Now that we have learned how to import big collections of data into a server, it is time to put this new knowledge to the test by importing all of the data contained within `TopSongs.csv` into our database.
-
-    * HINT: Remember, bigger datasets require more time to import properly, so be patient
-
-    * HINT: If you feel that the import process is taking far too long, feel free to use `Top1000Songs.csv` instead. We would highly recommend working with the bigger dataset if you can, however.
-
-    * HINT: Take the downtime you have been given to start on the next part of the activity
-
-  * With all of your data successfully imported into the database, begin working on a Node console application which will allow you to collect more specialized pieces of data. For example...
-
-    * A query which returns all data for songs sung by a specific artist
-    * A query which returns all artists who appear within the top 5000 more than once
-    * A query which returns all data contained within a specific range
-    * A query which searches for a specific song in the top 5000 and returns the data for it
-
-  * HINT: There are some MySQL queries which could make some of these tasks even easier to accomplish. Feel free to look at MySQL's documentation to find some of them.
-
-- - -
-
-### 8. BREAK (30 mins)
-
-- - -
-
-### 9. Everyone Do: Going Over Working With Big Data (15 mins)
-
-* Open up `TopSongsCode.js` in `13-Top5000Code` within your editor and go over it with the class, going over the steps we used to create the database and import our table-data into it once more as well so that your students are 100% clear on how this process works.
-
-* We used some new SQL commands within our code which your students may not have found unless they decided to look online. These include the `GROUP BY` and `BETWEEN`statements.
-
-  * `GROUP BY` groups elements with shared values together and then allows us to use the `HAVING count(*) >1` statement to determine if there are multiples within that group.
-
-  * `BETWEEN ? AND ?` allows us to select information between a specific range.
-
-* Briefly explain the notion of **indexes**.
-
-  * Explain that evaluating certain queries, such as `WHERE` and `BETWEEN` queries, requires MySQL to examine a large number of rows.
-
-  * Explain that this generally doesn't become a problem until our database grows very large in size, but it's something to think about when designing a table structure or when identifying that certain types of queries will be used more than others.
-
-  * Explain that instructing MySQL to use certain columns as _indexes_ helps speed up the evaluation of such queries by limiting the number of records MySQL has to examine.
-
-    * Rather than read a table row-by-row to execute a `WHERE` clause, an index takes data from a column in a table, and stores it alphabetically in a separate location called an index. Then when the data needs to be accessed, it's searched for it in this shorter list (the index) and then looks at the row(s) the data comes from when a match is found.
-
-    * Explain that indexes also improve the performance of certain `JOIN` and `BETWEEN` clauses.
-
-  * Explain that we can manually set arbitrary columns as indexes using the `ADD INDEX` statement.
-
-    * Briefly demonstrate the syntax for this command on-screen: `ALTER TABLE`top5000`ADD INDEX` song `(`song`)`.
-
-    * The following query would take advantage of the index:
-
-    ```sql
-    SELECT * from top5000 WHERE song = 'freebird'
+    ```bash
+    mysql -u root -p
     ```
 
-  * Explain that MySQL automatically creates an index associated with a table's primary key, so there's no need to create an index for that.
+  * Next, we import the schema and check that the `employees` database is in use:
 
-  * Explain that one determines the appropriate indexes for a table on a case-by-case basis, and that we won't dive into the guidelines just now.
+    ```sql
+    SOURCE employees.sql;
+    SELECT DATABASE();
+    ```
 
-    * Emphasize again that indexes won't make a demonstrable difference for databases of the size we'll work with in class, but it's helpful to understand the concept as students are likely to encounter them in large databases they'll meet on the job.
-  
-  * If any time remains go over [this article explaining MySQL indexes](https://atech.blog/viaduct/mysql-indexes-primer) as a class or otherwise suggest students read over it when they have a chance later.
+  * Now let's look at the tables to determine which table is likely to hold the data we need.  We use the `SHOW` command to display the tables, then the `DESCRIBE` command to display the columns used in the `employees` table:
 
+    ```sql
+    SHOW TABLES;
+    DESCRIBE employees;
+    ```
 
-### 10. Students Do: Two Tables Are Better Than One (60 mins)
+  * The `employees` table has a column for `birth_date` (with a data type of `DATE`), as well as columns for both the employee's first and last name. Querying this table should get us answers.
 
-* Explain that, when dealing with big databases, it is very likely that you will have to work with two or more datasets that are related, but which have some degree of separation between them. In this case we have a table of the top 5000 songs and a table of the top 3000 albums.
+  * We start writing the query by using `SELECT` to select the columns we want to use from the table. Because we need the names of the employees, we include the `first_name` and `last_name` columns as well as the `birth_date` column:
 
-* Emphasize the relationship between databases and tables: Tables live **in** databases—i.e., databases consist of tables.
+    ```sql
+    SELECT first_name, last_name, birth_date FROM employees
+    ```
 
-  * Alternatively: A **table** stores information in rows and columns. A **database** is a collection of related tables.
+  * Next, we add a `WHERE` clause to include only the employees who have a birthday in March. The `DATE` data type includes a handy `MONTH()` method that makes it easy to select by month:
 
-* Take a moment to answer questions, and then slack out the following activity.
+    ```sql
+    WHERE MONTH(birth_date) = 3
+    ```
 
-* **Files**
+  * Because this is a big company, thousands of employees might have a birthday in March. So before we test whether the query gets us the answers we need, we will want to limit the results to just a small sample. We can do that by using `LIMIT`:
 
-  * `TopAlbums.csv` in `14-TwoTables`
+    ```sql
+    LIMIT 25;
+    ```
 
-* **Instructions**
+  * When we enter the test query into MySQL Shell, it returns the information we need -- a list of the first and last names of 25 employees born in March. Now we can remove the limit, to return a list that includes all employees with a birthday in March:
 
-  * Your assignment is to take these two large sets of data and come up with a method to join them together in order to figure out if a given artist's song and album made it into the charts at the time of their release.
+    ```sql
+    SELECT first_name, last_name, birth_date FROM employees WHERE MONTH(birth_date) = 3 Limit 25;
+    ```
 
-    * HINT: This can be done in a couple different ways using external data as well, but you do have all of the data you need within your database to find the correlations. Give your methods some though before having to rely upon external info.
+  * SQL developers must frequently answer questions -- both mundane and complex -- with data. During today's class, we will focus on ways to access large amounts of data to answer such questions. Then we will apply these skills by building and querying a database.
 
-    * HINT: Remember that MySQL has the ability to combine two or more tables together so long as they share equivalent data. What data is similar between the two lists?
+### 2. Instructor Demo: Prepared Statement (5 min)
 
-  * Once you have managed to successfully bring the two datasets together, start making queries like those you made earlier to this new table as well.
+* Navigate to `21-Ins_Prepared-Statements/db` in your command line and enter `mysql -u root -p` to start MySQL Shell and demonstrate the following:
 
-### 11. Everyone Do: Going Over Two Tables (15 mins)
+  * We create the database using the schema file, then seed the data:
 
-* Open up `TopSongsAndAlbumsCode.js` in `14-TwoTables` and go over the function which was added to the bottom. The query down there is far longer and far more confusing than the rest, so go over it step-by-step in great detail so that everyone in your class understands what it does.
+    ```sh
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
 
-* Once it seems everyone has an idea of how that code works, ask a few brave souls to come up to the front to share their additions to the code with the class. Let them describe their code and field the questions as well, only jumping in when you feel the need to.
+* Exit the MySQL Shell and run `npm install` and `node server.js` to demonstrate the following:
 
-### 12. Instructor Do: Review Unit 12 (40 mins)
+  * 🔑 We can execute a query directly in the Express.js server to delete a single row from the table.
 
-* Answer any lingering questions from the previous activity. If none remain, proceed to lead a review on Unit 12. If students feel comfortable with MySQL, feel free to review Express instead.
+* Open `21-Ins_Prepared-Statements/server.js` in your IDE and explain the following:
 
-# Instructor Do: Private Self-Reflection (0 min)
+  * 🔑 To delete a single row, we use the `DELETE` command with a `WHERE` clause:
 
-Take some time on your own after class to think about the following questions. If there's anything that you're not sure how to answer, feel free to reach out to the curriculum team!
+    ```sql
+    DELETE FROM course_names WHERE id = 3;
+    ```
 
-1. How did today's class go?
-2. How did you teach it?
-3. How well do you feel you did teaching it?
-4. Why are you teaching it?
-5. Why did you teach it that way?
-6. What evidence can I collect to show my students are understanding?
-7. How will my students know they are getting it?
+  * 🔑 Hardcoding works if we only want to delete a particular row. But to make the query more durable, we can use a prepared statement.
 
+  * 🔑 A **prepared statement** is a parameterized query that uses a `?` as a placeholder for the value of the id:
 
-### Lesson Plan Feedback
+    ```sql
+    DELETE FROM books WHERE id = ?
+    ```
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+  * 🔑 For the `DELETE` command to work, we provide the value of the id as the second parameter of the `query()` function:
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+    ```js
+    db.query(`DELETE FROM course_names WHERE id = ?`, 3, (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log(result);
+    });
+    ```
+
+  * When the query is executed, that value will be inserted into the query (in place of the `?`), and the row with the `id` of `3` will be removed.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why use a prepared statement?
+
+  * 🙋 A prepared statement allows us to make queries more durable. Instead of hardcoding a value, we can use a `?` placeholder and then provide a value to be inserted as a parameter to the `query()` function. This way we can use a single query to handle multiple points of data, just by reassigning the `?`.
+
+    Prepared statements also make code safer by preventing SQL injection, a vulnerability that allows an attacker to interfere with queries to a database and gain access to data.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Prepared_Statements/README.md`.
+
+### 3. Student Do: Prepared Statements (15 min)
+
+* Direct students to the activity instructions found in `22-Stu_Prepared_Statements/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Query Not Deleting Row from Table
+
+  Work with a partner to resolve the following issue(s):
+
+  * As a developer, I want to be able to delete a specific row from the `favorite_books` table.
+
+  ## Expected Behavior
+
+  When I run `server.js`, the row with the `id` of `2` should be deleted from the table and the updated table displayed in the console.
+
+  ## Actual Behavior
+
+  When I run `server.js`, an `ER_PARSE_ERROR` error is returned and the table is not updated.
+
+  ## Steps to Reproduce the Problem
+
+  1. In MySQL Shell, execute the `db/schema.sql` file.
+
+  2. Next, execute the `db/seeds.sql` file.
+
+  3. Run `node server.js` to start the Express.js server. The results of the query and the table are shown in the console.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![A successful console log displays results for id values of 1 through 7, but the row with the id of 2 has been deleted.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What does the `?` represent in a prepared statement?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can you set user-defined values using a MySQL statement?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 4. Instructor Review: Prepared Statements (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with prepared statements? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Prepared statements
+
+* Open `22-Stu_Prepared-Statements/Solved/server.js` in your IDE and explain the following:
+
+  * 🔑 We use a prepared statement to insert a parameter (represented by a `?` placeholder) into the query:
+
+    ```sql
+    DELETE FROM favorite_books WHERE id = ?
+    ```
+
+  * 🔑 To execute the `DELETE` command, we must supply the prepared statement with a value. We assign the `deletedRow` variable a value of `2`:
+
+    ```js
+    let deletedRow = 2;
+    ```
+
+  * 🔑 To execute the query, we add the variable name as the second argument for the query function. This will set the `id` equal to `2` when the query is executed:
+
+    ```js
+    db.query(`DELETE FROM favorite_books WHERE id = ?`, deletedRow, (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+     console.log(result);
+    });
+    ```
+
+* Navigate to `22-Stu_Prepared-Statements/Solved/db` in your command line and enter `mysql -u root -p` to start MySQL Shell and demonstrate the following:
+
+  * We create the database using the schema file, then seed the data:
+
+    ```sh
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+* Exit the MySQL Shell and navigate to `22-Stu_Prepared-Statements/Solved/`. Run `npm install` and `node server.js` to demonstrate the following:
+
+  * Now that we have added the variable name as the second argument, when the query function is executed, the row with the `id` of `2` is deleted.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What does the question mark represent in a prepared statement?
+
+  * 🙋 The question mark is a placeholder for a value in a query. For the query to execute, a value must be provided.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on prepared statements](https://dev.mysql.com/doc/refman/8.0/en/sql-prepared-statements.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: Aggregate Functions (5 min)
+
+* Navigate to `23-Ins_COUNT-GROUPBY/db` in your command line and enter `mysql -u root -p` to start MySQL Shell and demonstrate the following:
+
+  * For times when we want a quick way to provide summary information about certain data, **aggregate functions** allow us to perform simple calculations.
+
+  * We execute the schema file and seeds to create and populate the database:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+  * We select all from the `course_names` table to check that the tables are populated and view the data:
+
+    ```sql
+    SELECT * FROM course_names;
+    ```
+
+  * Aggregate functions enable us to view a summary of the data in a table. Using an aggregate function in a query, we can find the total count and sum of a column. To run these queries, we execute the `queries.sql` file:
+
+    ```sql
+    SOURCE queries.sql;
+    ```
+
+* Open `23-Ins_COUNT-GROUPBY/db/queries.sql` in your IDE and demonstrate the following:
+
+  * Let's look at the query we just ran in the MySQL Shell. To select all from the `course_names` table, we use `SELECT *`:
+
+    ```sql
+    SELECT *
+    FROM course_names;
+    ```
+
+  * We can count the numbers of something in a group of data by adding the `GROUP BY` clause. In this case, doing so will provide the total count of courses for each department:
+
+    ```sql
+    SELECT department, COUNT(id) AS number_courses
+    FROM course_names
+    GROUP BY department;
+    ```
+
+  * To return the sum of a column of numbers, we use the aggregate function `SUM()`. When calculating the total, `SUM()` ignores `null` values:
+
+    ```sql
+    SELECT department, SUM(total_enrolled) AS sum_enrolled
+    FROM course_names
+    GROUP BY department;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What information can aggregate functions provide?
+
+  * 🙋 Aggregate functions can provide summary data for an entire table or for a group of data from the table.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_COUNT-GROUPBY/README.md`.
+
+### 6. Student Do: Aggregate Functions (15 min)
+
+* Direct students to the activity instructions found in `24-Stu_COUNT-GROUPBY/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of Aggregate Functions in MySQL Queries
+
+  Work with a partner to add comments describing the functionality of the code found in [server](./Unsolved/server.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [MySQL documentation on aggregate functions](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other aggregate functions can we use in MySQL queries?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Aggregate Functions (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with aggregate functions? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `COUNT()`
+
+  * ✔️ `GROUP BY`
+
+  * ✔️ `SUM()`
+
+* Open `24-Stu_COUNT-GROUPBY/Solved/db/schema.sql` in your IDE and demonstrate the following:
+
+  * The `favorite_books` table has an `id` column that is a primary key. We can use a primary key or another unique identifier to count all the rows in the table:
+
+    ```sql
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ```
+
+  * The `in_stock` column is a Boolean that returns a value of `true` or `false`. We can use this column to create a grouping of books that are in stock and those that are not:
+
+    ```sql
+    in_stock BOOLEAN
+    ```
+
+  * The `quantity` column is an integer. We can use that column to get a sum of all of the books:
+
+    ```sql
+    quantity INT NOT NULL
+    ```
+
+* Open `24-Stu_COUNT-GROUPBY/Solved/server.js` in your IDE and demonstrate the following:
+
+  * 🔑 For a total count of all the rows of the table, we use the aggregate function `COUNT()` to count each `id` value. We use `AS` to provide an alias column name for the counts:
+
+    ```sql
+    SELECT COUNT(id) AS total_count
+    ```
+
+  * 🔑 Because we want to count the number of books in stock and out of stock, we add `GROUP BY`. This will give us the total count of books with an in-stock value of `true` and the total count of books with an in-stock value of `false`:
+
+    ```sql
+    GROUP BY in_stock
+    ```
+
+  * 🔑 To count the total books in each department, we use the `SUM()` aggregate function to tally the `quantity` column:
+
+    ```sql
+    SUM(quantity)
+    ```
+
+  * 🔑 To get the maximum quantity of all books in each department, we use the `MAX()` aggregate function:
+
+    ```sql
+    MAX(quantity)
+    ```
+
+  * 🔑 To get the minimum quantity of all books in each department, we use the `MIN()` aggregate function:
+
+    ```sql
+    MIN(quantity)
+    ```
+
+  * 🔑 To get the average quantity of all books in each department, we use the `AVG()` aggregate function:
+
+    ```sql
+    AVG(quantity)
+    ```
+
+  * To execute the queries inside the Express.js server, we call the `query()` method on the database instance:
+
+    ```sql
+    db.query('SELECT COUNT(id) AS total_count FROM favorite_books GROUP BY in_stock', function (err, results) {
+      console.log(results);
+      });
+    ```
+
+* Navigate to `24-Stu_COUNT-GROUPBY/Solved/db` in your command line and enter `mysql -u root -p` to start MySQL Shell and demonstrate the following:
+
+  * To execute the queries, we first execute the schema and seed the data:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+  * We can then exit the shell and navigate to `24-Stu_COUNT-GROUPBY/Solved/`. Enter `npm install` and `node server` to spin up our Express.js server. The results of our queries print to the command line showing the aggregate values.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use aggregate functions to get summary data for the tables?
+
+  * 🙋 We use aggregate functions to operate on sets of values. Aggregate functions include `COUNT()`, `SUM()`, `MIN()`, `MAX()`, and `AVG()`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MySQL documentation on aggregate functions](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Joins (5 min)
+
+* Navigate to `25-Ins_Join/db` in the command line and demonstrate the following:
+
+  * 🔑 We initialize MySQL Shell and enter the MySQL password. Make sure that MySQL Server is running!
+
+    ```sh
+    mysql -u root -p
+    ```
+
+  * 🔑 We set up the database and tables:
+
+    ```sql
+    SOURCE schema.sql;
+    ```
+
+  * 🔑 We seed the database:
+
+    ```sql
+    SOURCE seeds.sql;
+    ```
+
+  * 🔑 We join the `department` and `course_names` data together by executing the query found in `query.sql`.
+
+    ```sql
+    SOURCE query.sql;
+    ```
+
+* Navigate to `25-Ins_Join/db/schema.sql` in your IDE and demonstrate the following:
+
+  * We use a primary key to set a unique identifer for each row of data in the `department` table:
+
+    ```sql
+    CREATE TABLE department (
+      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(30) NOT NULL
+    );
+    ```
+
+  * Then we use a foreign key to establish a relationship. In the `course_names` table, the foreign key `department` will point to the primary key of another table -- in this case the id from the `department` table:
+
+    ```sql
+    CREATE TABLE course_names (
+      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(30) NOT NULL,
+      department INT,
+      FOREIGN KEY (department)
+      REFERENCES department(id)
+      ON DELETE SET NULL
+    );
+    ```
+
+  * This relationship will allow us to join the tables.
+
+* Navigate to `25-Ins_Join/db/query.sql` in your IDE and demonstrate the following:
+
+  * To make a join, we start by selecting data from the `course_names` table:
+
+    ```sql
+    SELECT *
+    FROM course_names
+    ```
+
+  * Then we join the `department` table based on the relationship that we established with the primary and foreign keys:
+
+    ```sql
+    JOIN department ON course_names.department = department.id;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 First we would use primary and foreign keys to set a relationship between the tables. Then we would write a query that uses the `JOIN` clause.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Join/README.md`.
+
+### 9. Student Do: Join (15 min)
+
+* Direct students to the activity instructions found in `26-Stu_Join/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Implement Join Clause to Combine Two Tables
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to create a single table that includes data on book titles and prices.
+
+  ## Acceptance Criteria
+
+  * It's done when the matching values in the `book_prices` and `favorite_books` tables are combined and a new table is returned.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![The new table includes both book_name and price columns.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What is the relationship between the two tables?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is a many-to-many relationship?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: JOINS (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with SQL joins? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points below to review the following key (🔑) points:
+
+  * ✔️ `SELECT AS`
+
+  * ✔️ `JOIN` clause
+
+  * ✔️ `ON` clause
+
+* Open `26-Stu_Joins/Solved/db/query.sql` in your IDE and explain the following:
+
+  * 🔑 We select the columns that we want to appear in the joined table by using the `SELECT` command. Because we are working with two tables, we use dot notation to enter the name of the table, followed by the name of the column:
+
+    ```sql
+    SELECT
+    favorite_books.book_name
+    ```
+
+  * 🔑 We use the `AS` clause to rename the columns. This alias will appear as the column name at the top of the table:
+
+    ```sql
+    SELECT
+    favorite_books.book_name AS name, book_prices.price AS price
+    ```
+
+  * We use `FROM` to select the `favorite_books` table. The `favorite_books` table references the `book_prices` table with a foreign key:
+
+    ```sql
+    FROM favorite_books
+    ```
+
+  * 🔑 We then join the `book_prices` table, using the `JOIN` clause:
+
+    ```sql
+    JOIN book_prices
+    ```
+
+  * 🔑 We use the `ON` clause to show the relationship between the two tables. The schema shows that the `price` column in the new table references the `id` column from the `book_prices` table:
+
+     ```sql
+     JOIN book_prices ON favorite_books.book_price = book_prices.id;
+     ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What's the purpose of a `JOIN` clause?
+
+  * 🙋 To combine data from two different but related tables.
+
+  * ☝️ Why is it important to include an `ON` clause?
+
+  * 🙋 The `ON` clause specifies the relationship between the tables that we want to join.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to the lesson plan, read the [MySQL documentation on the JOIN clause](https://dev.mysql.com/doc/refman/5.7/en/join.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Cherry-Picking/README.md`.
+
+### 11. Everyone Do: Git (20 min)
+
+* Open the [Git Docs on git cherry-pick](https://git-scm.com/docs/git-cherry-pick) in your browser and explain the following:
+
+  * Sometimes you will work on code that has already been fixed or completed in another commit, by another developer. `git cherry-pick` allows you to pull one or multiple commits into your branch.
+
+* Direct students to the activity instructions found in `27-Evr_Git-Cherry-Picking/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Open your command line and demonstrate the following:
+
+  * When we cherry-pick, we are pulling a particular commit into the branch. To start, let's make a new branch in the repo so that we can pull in a commit:
+
+    ```sh
+    git checkout main
+    git checkout -b feature/mybranch
+    ```
+
+  * 🔑 Now we can make a second branch, which is the branch that we will cherry-pick from:
+
+    ```sh
+    git checkout main
+    git checkout -b feature/notifications
+    ```
+
+  * We open that branch in the IDE and add an `index.html` file:
+
+    ```sh
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Git Cherry-Pick!</title>
+      </head>
+      <body>
+       <script src="app.js"></script>
+       <code>Git Cherry-Pick 🍒</code>
+      </body>
+     </html>
+    ```
+
+  * We then commit the changes:
+
+    ```sh
+    git add -A
+    git commit -m "Add index.html file to notifications branch."
+    ```
+
+  * Each time we commit a file, we get a hash code. To view the hashes, we can use `git log`.
+
+  * We will use that hash code to cherry-pick the commit. We go back to the branch where we want to pull in the commit:
+
+    ```sh
+    git checkout feature/mybranch
+    ```
+
+  * While in that branch, we use the `cherry-pick` command plus the hash code:
+
+    ```sh
+    git cherry-pick <hash>
+    ```
+
+* Answer any questions before students go on break.
+
+### 12. BREAK (30 min)
+
+### 13. Instructor Demo: Mini Project (5 min)
+
+* Open `28-Stu_Mini-Project/Main/db` from the command line and run `mysql -u root` to open MySQL Shell and explain the following:
+
+  * We use the `SOURCE` command to create and seed the database:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seeds.sql;
+    ```
+
+* Exit MySQL Shell and run `npm install` and `node server.js`.
+
+* Navigate to `localhost:3001/api/movie-reviews` in your browser to demonstrate the following:
+
+  * 🔑 When we enter a GET route in the browser, the results of the query are displayed.
+
+  * While we can enter a GET route into the browser, we will need to use Insomnia to test other routes.
+
+* Navigate to Insomnia to demonstrate the following:
+
+  * We select POST and enter `localhost:3001/api/new-movies` to test the route.
+
+  * To add the name of the new movies, we click on JSON and add a new key-pair, making sure we match the column name exactly:
+
+    ```json
+    {
+      "movie_name": "Hello, World!"
+    }
+    ```
+
+  * Then we click Send to send the request.
+
+  * To check that the movie has been added, we select a GET route (`localhost:3001/api/movies`) and click Send. If successful, the new movie will be added to the database.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 First we need to create a database. Then we will use `mysql2` to connect the database to an Express.js server. Finally, we will build routes in Express.js to query the data.
+
+* Answer any questions before allowing students to start the mini project.
+
+### 14. Student Do: Mini-Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
+
+* Break your students into groups that will work together on this activity.
+
+  ```md
+  # Unit 12 Mini-Project: Movie Database
+
+  In this mini-project, you will build Rest API routes for creating, retrieving, and deleting movies from a MySQL database.
+
+  ## User Stories
+
+  * As a user, I want to create a new database.
+
+  * As a user, I want to store movie names and reviews in the database in two separate tables.
+
+  * As a user, I want to see a list of all movies.
+
+  * As a user, I want to be able to create and delete a movie.
+
+  * As a user, I want to return a list of all the reviews and the associated movie name.
+
+  ## Acceptance Criteria
+
+  * It's done when `movie_db` is created and contains a `movies` and `reviews` table.
+
+  * It's done when `movie_db` has been seeded with data.
+
+  * It's done when the `/api/movies` route renders a list of all movies.
+
+  * It's done when the `/api/add-movie` route successfully adds a movie when tested using Insomnia.
+
+  * It's done when the `/api/update-review` route successfully updates a movie when tested using Insomnia.
+
+  * It's done when the `/api/movie/:id` route deletes a route when tested using Insomnia.
+
+  ## Assets
+
+  Design the following database schema that contains two tables:
+
+  ![The database schema includes a movies table and a reviews table, linked by the movie id.](./assets/image_1.png)
+
+  ## Notes
+
+  To test your routes you will use Insomnia. If you have not already downloaded it, you will need to visit the [Insomnia download page](https://insomnia.rest/download) and do so.
+
+  Refer to the documentation:
+
+  [Insomnia documentation on getting started](https://support.insomnia.rest/category/152-using-insomnia)
+
+  [Express.js documentation on routing](https://expressjs.com/en/guide/routing.html)
+
+  [MySQL documentation on joins](https://dev.mysql.com/doc/refman/8.0/en/join.html)
+
+  [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
+
+  ---
+
+  ## 💡 Hints
+
+  How can you link your `movies` and `reviews` tables?
+
+  How can you execute a query in an Express.js server using the npm `MySQL2` package?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can you add a route to update a review?
+
+  Use [Google](www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 15. Instructor Review: Mini-Project (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `schema.sql`
+
+  * ✔️ `seeds.sql`
+
+  * ✔️ `createConnection()`
+
+  * ✔️ Query
+
+  * ✔️ `query()`
+
+* Open `28-Stu_Mini-Project/Main/db/schema.sql` in your IDE and explain the following:
+
+  * We start by creating a schema that describes the tables and data we want to store.
+
+  * 🔑 We link the two tables using a foreign key. The foreign key references the `movie_id` column from the `movies` table:
+
+    ```sql
+    CREATE TABLE reviews (
+      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      movie_id INT,
+      review TEXT NOT NULL,
+      FOREIGN KEY (movie_id)
+      REFERENCES movies(id)
+      ON DELETE SET NULL
+    );
+    ```
+
+* Open `28-Stu_Mini-Project/Main/db/seeds.sql` in your IDE and explain the following:
+
+  * 🔑 We insert data to seed the database using the `INSERT INTO` command:
+
+    ```sql
+    INSERT INTO movies (movie_name)
+      VALUES ("Lion King"),
+        ("The Godfather"),
+        ("West Side Story"),
+        ("Parasite"),
+        ("The Wizard of Oz");
+
+    INSERT INTO reviews (movie_id, review)
+      VALUES (1, "Zazu is underrated. Give that hornbill a sequel!"),
+        (2, "I'm gonna make him an offer you can't refuse, watch this movie"),
+        (1, "Scar is the lion everyone loves to hate"),
+        (3, "Ten years of ballet and three years of tap to join a gang in this neighborhood"),
+        (5, "The tin man gave a metallic, hollow performance"),
+        (1, "Hakuna matata"),
+        (5, "Those flying monkeys are nightmare fuel!");
+    ```
+
+  * 🔑 To create the routes, we start by writing a query to access the data:
+
+    ```sql
+    INSERT INTO movies (movie_name)
+    VALUES (?);
+    ```
+
+* Open `28-Stu_Mini-Project/Main/server.js` in your IDE and explain the following:
+
+  * We use the Node.js package `mysql2` to connect the database to an Express.js server:
+
+    ```js
+    const mysql = require('mysql2');
+    ```
+
+  * 🔑 Then we create a connection to the database using `createConnection()`:
+
+    ```js
+    const db = mysql.createConnection(
+      {
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'movies_db'
+      },
+      console.log(`Connected to the movies_db database.`)
+    );
+    ```
+
+  * 🔑 Now that we have a connection, we can query the database directly from the Express.js environment. We use the `query()` method to execute the query on the database:
+
+    ```js
+    db.query(sql, params, (err, result) => {
+      if (err) {
+        res.status(400).json({ error: err.message });
+        return;
+      }
+      res.json({
+        message: 'success',
+        data: body
+      });
+    ```
+
+  * 🔑 Finally, we wrap the query in an Express.js route. The paths define the endpoints at which requests can be made. When a route is requested, the query will be executed:
+
+    ```js
+    app.post('/api/new-movie', ({ body }, res) => {
+      const sql = `INSERT INTO movies (movie_name)
+      VALUES (?)`;
+      const params = [body.movie_name];
+
+     db.query(sql, params, (err, result) => {
+      if (err) {
+        res.status(400).json({ error: err.message });
+        return;
+      }
+      res.json({
+        message: 'success',
+        data: body
+      });
+      });
+     });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use a route to execute a query in Express.js?
+
+  * 🙋 First we connect the database using `mysql2`. Then we use the `query()` method to execute the query, and we wrap the method in a valid Express.js route.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Express.js documentation on routing](https://expressjs.com/en/guide/routing.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Introduce Homework (5 min)
+
+* Open `12-SQL/02-Homework/Main/db` from the command line and run `mysql -u root -p` to open MySQL Shell and demonstrate the following.
+
+  * We use the `SOURCE` command to create and seed the database:
+
+    ```sql
+    SOURCE schema.sql;
+    SOURCE seed.sql;
+    ```
+
+* Exit MySQL Shell and run `npm install` and `npm start` to demonstrate the following:
+
+  * From the command line, we can run numerous queries to add, select, and delete employees.
+
+  * We click on View All Employees to select all of the employees.
+
+  * We can also select employees by department or delete an employee. Each time we make a selection, a query is executed on the database and the results are displayed.
+
+  * To complete this project, you will have to design a database that can handle the necessary queries, as well as use your skills to perform queries that rely on one or more tables.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to build a database, perform queries, and join tables.
+
+  * ☝️ How does this project build off or extend previously learned material?
+
+  * 🙋 To complete this project, we will have to use the skills learned this week, like creating a schema, seeding a database, writing queries, and performing joins.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 SQL is an in-demand skill used in many workplaces.
+
+* Ask TAs to direct students to the Homework Requirements found in `12-SQL/02-Homework/README.md`.
+
+### 17. FLEX (40 min)
+
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+
+* Answer any questions before ending the class.
+
+### 18. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

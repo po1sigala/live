@@ -68,7 +68,13 @@ You will be employer-ready if you are able to:
 
 ## Technical Interview Preparation
 
-You will be employer-competitive if you are able to successfully complete the assessments.
+You will be employer-competitive if you are able to solve the following algorithms and successfully complete the assessments.
+
+### Algorithms
+
+Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to best solve algorithm problems.
+
+* 📹 [Let's Code Computational Thinking!](https://2u-20.wistia.com/medias/dus2zex4d7)
 
 ### Assessments
 
@@ -91,6 +97,16 @@ In the next unit, you will learn JavaScript fundamentals such as variables, func
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit.
+
+### Code Review Videos
+
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+  * [📹 Code Review: Introduction to Flexbox!](https://2u-20.wistia.com/medias/7j4tjqlxju)
+
+  * [📹 Code Review: Pseudo-Classes, Pseudo-Elements & Data Attributes!](https://2u-20.wistia.com/medias/2o1ljwdrqi)
+
+  * [📹 Code Review: CSS Variables & Selectors!](https://2u-20.wistia.com/medias/91xb80z88j)
 
 ### Git Guide
 

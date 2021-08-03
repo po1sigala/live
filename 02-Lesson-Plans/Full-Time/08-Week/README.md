@@ -1,89 +1,80 @@
-# Week 8: Project 2
+# Unit 15 & 16 Instructor Overview: Project 2
 
 ## Overview
 
-In this unit, we will work with eslint and begin Project 2 work. There will be presentations on the last day.
+In Unit 15, students will begin work on their second project of the Boot Camp--a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
+In Unit 16, students will continue to work on their second project and present their projects to the class at the end of the unit. They'll also begin to revise their professional materials, including their portfolios, and add their projects once they've completed them.
 
-  * [Project 2 Unit Overview](../../../01-Class-Content/15-project-2/README.md)
+Refer to the Class Content Unit Overview for [Unit 15](../../../01-Class-Content/15-Project-2/README.md) and [Unit 16](../../../01-Class-Content/16-Project-2-Contd/README.md)for detailed information on key topics, learning objectives, and homework.
 
-  * [Project 2 Cont'd Unit Overview](../../../01-Class-Content/16-Project-2-Contd/README.md)
+## Instructor/TA Notes
 
-## Instructor / TA Notes
+* Prepare a list of project group members prior to the first class of Unit 15. This time, assign three students per group, all around the same skill level. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
 
-* Encourage students to spend time pseudocoding their project and researching APIs before writing any code.
+* Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
 
-* Encourage students to spend time deciding how they want to present their project before project day presentations.
+* Encourage students to spend time deciding how they want to present their project before presentation day.
 
-### Regional Content
+* Share the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) with students early in the week to give them ample time to prepare for their presentations.
 
-At the start of this unit, you will add regional content to the class-specific repo.
-
-The four programming languages included in Regional content are Java, C#, PHP, and Python. Each folder contains its own Power Pack, a unit of async content for that programming language. These folders are located [here](../../../01-Class-Content/25-Power-Packs/).
-
-Because this content is asynchronous, you won’t teach it during your class. You will provide it to students by uploading it to the class-specific repo.
-
-This content is self-paced, self-guided, and designed to help students continue to learn new skills after their boot camp has ended. It will also allow them to keep coding and stay engaged while they search for their first developer role. You should remind students that in order to be employer-competitive, it is important that they continuously add new skills and technologies to their knowledge base.
-
-## Heads Up
-
-Before next unit, make sure you install MongoDB and Robo 3T on your machine--you'll need both.
-
-If you haven't used MongoDB much in the past, take a look at next week's queries and solutions. This should prime you for the lecture.
+* Prepare a slide deck of superlative awards to give to each group. Use [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing), and feel free to customize it as you see fit for your cohort.
 
 ## Career Connection
 
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
+* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 16](../../../01-Class-Content/16-Project-2-Contd/04-Career-Connection/README.md).
 
-[Project 2](../../../01-Class-Content/16-Project-2-Contd/04-Important/CAREER-CONNECTION.md).
+* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+## Heads-Up
+
+In Unit 17, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
+
+Before Unit 18, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
+
+If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [8.1 - Lesson Plan](./01-Day/01-Day-LessonPlan.md)
+  * [08.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
-  * [8.2 - Lesson Plan](./02-Day/02-Day-LessonPlan.md)
+  * [08.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
+  
+  * [08.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
-  * [8.3 - Lesson Plan](./03-Day/03-Day-LessonPlan.md)
+  * [08.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
+  
+  * [08.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-  * [8.4 - Lesson Plan](./04-Day/04-Day-LessonPlan.md)
+### Homework
 
-  * [8.5 - Lesson Plan](./05-Day/05-Day-LessonPlan.md)
+  * [Unit 15 Homework](../../../01-Class-Content/15-Project-2/02-Homework)
+
+  * [Unit 16 Homework](../../../01-Class-Content/16-Project-2-Contd/02-Homework)
 
 ### Slide Decks
 
-  * [8.1: Linting and Projects](https://docs.google.com/presentation/d/1qgylK_F-8fGtw6GOEXjolSZlT8JlzBGzDwp8i_8LQUU/edit?usp=sharing)
+  * [Unit 15: Project 2](https://docs.google.com/presentation/d/1_Ap23wFlGvGS4HfMVgBWPNlFo8IkHV0bTO6QvYs9XT0/edit?usp=sharing)
 
-### Time Tracker(s)
+  * [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing)
 
-  * [Unit 8 Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/15_tbyjsZEsAfdRjuvn2_TfqxUsxGjrgHlIl1gG11nvw/edit?usp=sharing)
+  * [Superlative Awards](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing)
 
-  * [Unit 8 Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/10bkhLFnfAzql5EZU9U829vKHlzwlH6Tm4TqCgKeXE9g/edit?usp=sharing)
+### Resources
 
-  * [Unit 8 Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1jaYLVZa1UHRruf39qKgflhku8fe7plbTN01IbTsmVaI/edit?usp=sharing)
+* [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
 
-  * [Unit 8 Day 4 Time Tracker](https://docs.google.com/spreadsheets/d/1XqG8uuuz3CEuaqAd0SvZJOBq0ZkL5BnGQ4WrF9z2fV8/edit?usp=sharing)
+* [Agile Methodology](https://en.wikipedia.org/wiki/Agile_software_development)
 
-  * [Unit 8 Day 5 Time Tracker](https://docs.google.com/spreadsheets/d/1NiDV0PhfOYpniX4pZBHSIK_FFS_QkZdyrYkua-His1s/edit?usp=sharing)
+* [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
-## Algorithms
+* [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 
-### Unit 15
+* [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
 
-  * [01-square-root](../../../01-Class-Content/15-Project-2/03-Algorithms/01-square-root)
-
-  * [02-needle-in-the-haystack](../../../01-Class-Content/15-Project-2/03-Algorithms/02-needle-in-the-haystack)
-
-  * [03-remove-duplicates](../../../01-Class-Content/15-Project-2/03-Algorithms/03-remove-duplicates)
-
-### Unit 16
-
-  * [01-missing-number](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/01-missing-number)
-
-  * [02-left-rotation](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/02-left-rotation)
-
-  * [03-ransom-note](../../../01-Class-Content/16-Project-2-Contd/03-Algorithms/03-ransom-note)
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

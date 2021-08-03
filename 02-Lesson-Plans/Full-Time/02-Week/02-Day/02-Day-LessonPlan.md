@@ -8,17 +8,17 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * In this lesson, students will complete activities `15-Ins_Functions` through `27-Evr_Git-Branch`.
 
-* Be sure to review the activities and try to anticipate questions that students might ask. 
+* Be sure to review the activities and try to anticipate questions that students might ask.
 
-* In `18-Stu_Scope`, students will work with a partner to debug some broken code and learn more about scope and shadowing. This is a challenging activity, especially for learners new to programming languages. Review the solution code before class and try to anticipate questions that might arise. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) so that you can confidently answer students' questions. 
+* In `18-Stu_Scope`, students will work with a partner to debug some broken code and learn more about scope and shadowing. This is a challenging activity, especially for learners new to programming languages. Review the solution code before class and try to anticipate questions that might arise. If need be, review the [MDN Web Docs on scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) so that you can confidently answer students' questions.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Learning Objectives
 
@@ -66,11 +66,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 ## Class Instruction
 
-### 1. Instructor Demo: Functions (5 min) 
+### 1. Instructor Demo: Functions (5 min)
 
 * Welcome students to class.
 
-* Open `15-Ins_Functions/script.js` in your IDE and demonstrate the following: 
+* Open `15-Ins_Functions/script.js` in your IDE and demonstrate the following:
 
   * 🔑 We create reusable blocks of code using functions.
 
@@ -83,7 +83,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * 🔑 The block of code we want to execute goes in curly brackets `{}`. Then, after the code we want to execute, we use `return`. The return statement stops the execution of the function, as shown in the following example:
 
     ```js
-    function declareHello() { 
+    function declareHello() {
     console.log("Hello, I am a function declaration.");
     console.log("-----------------------------------");
     return;
@@ -93,7 +93,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * 🔑 We can also use `var` to declare a function expression. After the assignment operator `=`, we use `function` followed by parentheses `()`. Just like before, in the following example, the code block goes inside curly brackets `{}` and `return` is used:
 
     ```js
-    var expressHello = function() { 
+    var expressHello = function() {
     console.log("Hello, I am a function expression.");
     console.log("-----------------------------------");
     return;
@@ -110,7 +110,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * 🔑 Functions can also take parameters! Parameters allow us to pass values into a function by giving the values a name. In the following example, the values we want to use in the code block are given the names `x`, `y`, and `z`:
 
     ```js
-    function declareHelloAgain(x,y,z) { 
+    function declareHelloAgain(x,y,z) {
     console.log("Hello, my parameter's values are " + x + ", " + y + ", and " + z);
     console.log("-----------------------------------");
     return;
@@ -123,25 +123,25 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     declareHelloAgain(7, "Hello", true);
     ```
 
-* Open `15-Ins_Functions/index.html` in your browser and navigate to the console to demonstrate the following: 
+* Open `15-Ins_Functions/index.html` in your browser and navigate to the console to demonstrate the following:
 
-  * Calling a function executes the code block one time. To execute the block of code again, simply call the function again. This makes the code block easily reusable. 
+  * Calling a function executes the code block one time. To execute the block of code again, simply call the function again. This makes the code block easily reusable.
 
-  * When we call `declareHelloAgain`, the values provided for `x`, `y`, and `z`can be accessed by the function. So the message `"Hello, my parameter's values are 7, Hello, and true"` is logged. 
-  
+  * When we call `declareHelloAgain`, the values provided for `x`, `y`, and `z`can be accessed by the function. So the message `"Hello, my parameter's values are 7, Hello, and true"` is logged.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are two ways that we can create a reusable block of code? 
+  * ☝️ What are two ways that we can create a reusable block of code?
 
   * 🙋 We can create a function declaration or a function expression.
 
-  * ☝️ How do we execute a function? 
+  * ☝️ How do we execute a function?
 
-  * 🙋 Declaring a function only gives a block of code a name. To execute it, we have to call it every time we want the action performed. 
+  * 🙋 Declaring a function only gives a block of code a name. To execute it, we have to call it every time we want the action performed.
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Student Do: Functions (15 min) 
+### 2. Student Do: Functions (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Functions/README.md`.
 
@@ -156,9 +156,9 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   ## Acceptance Criteria
 
-  * It's done when I provide two values in function arguments and the function evaluates the values' equality. 
+  * It's done when I provide two values in function arguments and the function evaluates the values' equality.
 
-  * It's done if, when the values are strictly equal, the message "They are equal in type and value" is logged. 
+  * It's done if, when the values are strictly equal, the message "They are equal in type and value" is logged.
 
   * It's done if, when the two values are equal but not strictly equal, the message "They are equal in value" is logged.
 
@@ -166,7 +166,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   ## 💡 Hints
 
-  How can we use parameters to give a name to the two values that we want to evaluate with the function? 
+  How can we use parameters to give a name to the two values that we want to evaluate with the function?
 
   ## 🏆 Bonus
 
@@ -179,7 +179,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 3. Instructor Review: Functions (10 min) 
+### 3. Instructor Review: Functions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -215,7 +215,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     }
     ```
 
-  * If the two values are not strictly equal, we check whether they are equal in value only with `==`. So we add an `else if` statement that will log `"They are equal in value"` if `x == y` evaluates to `true`, as shown in the following example: 
+  * If the two values are not strictly equal, we check whether they are equal in value only with `==`. So we add an `else if` statement that will log `"They are equal in value"` if `x == y` evaluates to `true`, as shown in the following example:
 
     ```js
     } else if (x == y) {
@@ -255,17 +255,17 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Open `16-Stu_Functions/Solved/index.html` in your browser and navigate to the console to demonstrate the following:
 
-  * When a function is called, the values assigned inside the parentheses `()` are used to execute the code. 
+  * When a function is called, the values assigned inside the parentheses `()` are used to execute the code.
 
   * So when we assign the values `10` and `10`, the message `"They are equal in type and value"` logs to the console.
 
-  * When we assign the values `10` and `true`, the message `"They are not equal"` logs. 
+  * When we assign the values `10` and `true`, the message `"They are not equal"` logs.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How can using functions improve code? 
+  * ☝️ How can using functions improve code?
 
-  * 🙋 Functions are reusable blocks of code that we can execute again and again. Using functions makes code cleaner and more modular. 
+  * 🙋 Functions are reusable blocks of code that we can execute again and again. Using functions makes code cleaner and more modular.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -273,7 +273,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Scope (5 min) 
+### 4. Instructor Demo: Scope (5 min)
 
 * Open `17-Ins_Scope/index.html` in your IDE and demonstrate the following:
 
@@ -343,11 +343,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * ☝️ What does it mean if a variable is locally scoped?
 
-  * 🙋 A local variable is only available inside its own function. It is not available to other functions or scripts. 
+  * 🙋 A local variable is only available inside its own function. It is not available to other functions or scripts.
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Student Do: Scope (15 min) 
+### 5. Student Do: Scope (15 min)
 
 * Direct students to the activity instructions found in `18-Stu_Scope/README.md`.
 
@@ -358,11 +358,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   Work with a partner to resolve the following issue(s):
 
-  * As a developer, I want to log messages to the console using variables declared in both global and local scope. 
+  * As a developer, I want to log messages to the console using variables declared in both global and local scope.
 
   ## Expected Behavior
 
-  When the console is opened, a series of messages should log to the console. 
+  When the console is opened, a series of messages should log to the console.
 
   ## Actual Behavior
 
@@ -370,7 +370,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   ## 💡 Hints
 
-  Think about how the variable is being used. Is it being made available to all functions, or is it only being used by one function? 
+  Think about how the variable is being used. Is it being made available to all functions, or is it only being used by one function?
 
   ## 🏆 Bonus
 
@@ -383,7 +383,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 6. Instructor Review: Scope (10 min) 
+### 6. Instructor Review: Scope (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -399,7 +399,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * ✔️ Shadowing
 
-* Open `18-Stu_Scope/Solved/script.js` in your IDE and explain the following: 
+* Open `18-Stu_Scope/Solved/script.js` in your IDE and explain the following:
 
   * 🔑 We declare the variable `shout` in the global scope so that it is available to all functions, including `justShout` and `shoutItAllOut`, as shown in the following example:
 
@@ -414,7 +414,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     function shoutItAllOut() {
       console.log(shout + " it all out! ");
       return;
-    }  
+    }
     ```
 
   * 🔑 In the following example, the variable `animals` has been declared locally inside the `sayLions` function, so it is only available in that function:
@@ -432,7 +432,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     ```js
     function sayTigers() {
       var animal = "Tigers";
-      console.log("and " + animal + " and "); 
+      console.log("and " + animal + " and ");
       return;
     }
     ```
@@ -455,7 +455,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     function singAlong() {
       var sing = "Sing";
       console.log(sing + ",");
-      var singASong = function () {  
+      var singASong = function () {
         console.log(sing + " a Song.");
       };
       singASong();
@@ -464,7 +464,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why is it important to know if the variables are defined in the local or global scope? 
+  * ☝️ Why is it important to know if the variables are defined in the local or global scope?
 
   * 🙋 Scope tells us where the variables are accessible to use in our code. If we define the variables in the wrong scope, we will get errors!
 
@@ -474,11 +474,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Methods (5 min) 
+### 7. Instructor Demo: Methods (5 min)
 
 * Open `19-Ins_Methods/index.html` in your browser and demonstrate the following:
 
-  * 🔑 Arrays have access to built-in methods that allow us to manipulate arrays and the elements they hold. 
+  * 🔑 Arrays have access to built-in methods that allow us to manipulate arrays and the elements they hold.
 
   * 🔑 Array methods are easy to use. We simply use the name of the array, followed by a dot `.`, and the name of the method with parentheses `()`. The `sort()` method, shown in the following example, sorts the elements in an array in alphabetical and ascending order:
 
@@ -510,13 +510,13 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * 🙋 They give us access to a wide range of functionality when writing code.
 
-  * ☝️ What is an array method? 
+  * ☝️ What is an array method?
 
-  * 🙋 An array method is a built-in method that we can use to manipulate arrays and the elements stored in them. 
+  * 🙋 An array method is a built-in method that we can use to manipulate arrays and the elements stored in them.
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Student Do: Methods (15 min) 
+### 8. Student Do: Methods (15 min)
 
 * Direct students to the activity instructions found in`20-Stu_Methods/README.md`.
 
@@ -529,11 +529,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * As a developer, I want to use array methods to add and remove elements from an array and join two arrays.
 
-  * As a developer, I want to use a string method to return a new string that contains only capital letters. 
+  * As a developer, I want to use a string method to return a new string that contains only capital letters.
 
   ## Acceptance Criteria
 
-  * It's done when the string `"Canis Major"` is added as the first element of the `constellations` array and no elements are removed. 
+  * It's done when the string `"Canis Major"` is added as the first element of the `constellations` array and no elements are removed.
 
   * It's done when `"Venus"` is removed from the `planets` array.
 
@@ -553,14 +553,14 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What happens when you use `typeof` on an array? What is returned? Is that what you expected? Why or why not? 
+  * What happens when you use `typeof` on an array? What is returned? Is that what you expected? Why or why not?
 
-  Use [Google](https://www.google.com) or another search engine to research this. 
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 9. Instructor Review: Methods (10 min) 
+### 9. Instructor Review: Methods (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -571,14 +571,14 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 * Use the prompts and talking points (🔑) below to review the following key points:
 
   * ✔️ `unshift()`
-  
+
   * ✔️ `pop()`
 
   * ✔️ `concat()`
 
   * ✔️ `toUpperCase()`
 
-* Open `20-Stu_Methods/Solved/script.js` in your IDE and explain the following: 
+* Open `20-Stu_Methods/Solved/script.js` in your IDE and explain the following:
 
   * 🔑 We use the `unshift()` array method to add an element to the beginning of the `constellation` array. The value added to the array goes inside the parentheses `()`, like in the following example:
 
@@ -642,21 +642,21 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Open [Play SpaceWars!](https://www.masswerk.at/spacewar/) in your browser and demonstrate the following:
 
-  * We can also play this remake of the game online. 
+  * We can also play this remake of the game online.
 
-  * The game uses letters to input users' choices. The W, A, S, and D keys control one of the spaceships. The I, J, K, and L keys control the other. 
+  * The game uses letters to input users' choices. The W, A, S, and D keys control one of the spaceships. The I, J, K, and L keys control the other.
 
   * Different actions are performed based on the user input. If the user enters W, the ship spins one way. If A is entered, the ship spins the other way.
 
-  * The game is ended when a specific condition is met&mdash;when one of the ships is destroyed. 
+  * The game is ended when a specific condition is met&mdash;when one of the ships is destroyed.
 
-* Inform the students that while technologies have certainly changed, the logic pioneered by MIT scientists is much the same as the logic we will use to build the interactive Rock, Paper, Scissors game in the next class. 
+* Inform the students that while technologies have certainly changed, the logic pioneered by MIT scientists is much the same as the logic we will use to build the interactive Rock, Paper, Scissors game in the next class.
 
-## 13. Instructor Demo: Objects (5 min) 
+## 13. Instructor Demo: Objects (5 min)
 
 * Open `21-Ins_Objects/script.js` in your IDE and demonstrate the following:
 
-  * 🔑 JavaScript **objects** are a lot like objects in real life. They are things that have distinct characteristics or properties. For this first JavaScript object, the thing we will create is a planet. 
+  * 🔑 JavaScript **objects** are a lot like objects in real life. They are things that have distinct characteristics or properties. For this first JavaScript object, the thing we will create is a planet.
 
   * 🔑 We use object literal notation to create the `planet` object, and we use curly brackets `{}` to hold the values, as follows:
 
@@ -669,7 +669,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     ```js
     name: "Earth"
     ```
-  
+
   * 🔑 Objects usually have many related properties that help to define the object, as shown in the following example:
 
     ```js
@@ -696,17 +696,17 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ When would we want to use an object in JavaScript? 
+  * ☝️ When would we want to use an object in JavaScript?
 
   * 🙋 When we want to create an unordered collection of properties that describe a particular thing.
 
-  * ☝️ How do we access a value stored in an object? 
+  * ☝️ How do we access a value stored in an object?
 
   * 🙋 We use dot notation and bracket notation. Both use the object's name and the associated key.
 
-  * ☝️ Where have we used bracket notation before? 
+  * ☝️ Where have we used bracket notation before?
 
-  * 🙋 We used bracket notation with arrays. 
+  * 🙋 We used bracket notation with arrays.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -721,21 +721,21 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   Work with a partner to implement the following user story:
 
-  * As a coffee shop owner, I want to store data about my customer's drink order in an object and log a message indicating whether the drink is ready or still in the queue. 
+  * As a coffee shop owner, I want to store data about my customer's drink order in an object and log a message indicating whether the drink is ready or still in the queue.
 
-  ## Acceptance Criteria 
+  ## Acceptance Criteria
 
-  * It's done when the `customerOrder` object has three properties that store the drink's name, the number of sugars, and a Boolean indicating whether the order is ready. 
+  * It's done when the `customerOrder` object has three properties that store the drink's name, the number of sugars, and a Boolean indicating whether the order is ready.
 
-  * It's done when the drink name and the number of sugars is logged to the console. 
+  * It's done when the drink name and the number of sugars is logged to the console.
 
-  * It's done when, if the order is ready, the message `"Ready for pick-up"` logs. 
+  * It's done when, if the order is ready, the message `"Ready for pick-up"` logs.
 
-  * It's done when, if the order is not ready, the message `"Still in order queue"` logs. 
+  * It's done when, if the order is not ready, the message `"Still in order queue"` logs.
 
   ## 💡 Hints
 
-  How can we use dot notation or bracket notation to access an object's values? 
+  How can we use dot notation or bracket notation to access an object's values?
 
   ## 🏆 Bonus
 
@@ -748,7 +748,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 15. Instructor Review: Objects (10 min) 
+### 15. Instructor Review: Objects (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -758,15 +758,15 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Object literal 
+  * ✔️ Object literal
 
-  * ✔️ Key-value pairs 
+  * ✔️ Key-value pairs
 
   * ✔️ Dot notation
 
   * ✔️ Bracket notation
 
-* Open `22-Objects/Solved/script.js` in your IDE and explain the following: 
+* Open `22-Objects/Solved/script.js` in your IDE and explain the following:
 
   * 🔑 We declare a `customerDrink` object using object literal notation. We give the object three properties, as follows:
 
@@ -789,7 +789,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
     ```js
     console.log(customerDrink);
     ```
- 
+
   * 🔑 We use dot notation to access a value stored in a key-value pair, as shown in the following example:
 
     ```js
@@ -808,7 +808,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How are key-value pairs used in objects? 
+  * ☝️ How are key-value pairs used in objects?
 
   * 🙋 The key is a unique identifier used to access the value. In objects, key-value pairs define the properties of an object.
 
@@ -818,7 +818,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Answer any questions before proceeding to the next activity.
 
-## 16. Instructor Demo: Object Methods (5 min) 
+## 16. Instructor Demo: Object Methods (5 min)
 
 * Open `23-Ins_Object-Methods/script.js` in your IDE and demonstrate the following:
 
@@ -874,20 +874,20 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is a method? 
+  * ☝️ What is a method?
 
   * 🙋 A method is a function associated with an object. It is also a property of the object.
 
 * Answer any questions before proceeding to the next activity.
 
-### 17. Student Do: Object Methods (15 min) 
+### 17. Student Do: Object Methods (15 min)
 
 * Direct students to the activity instructions found in `24-Stu_Objects-Methods/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 🐛 Messages Not Logging to Console 
+  # 🐛 Messages Not Logging to Console
 
   Work with a partner to resolve the following issue(s):
 
@@ -895,28 +895,28 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   ## Expected Behavior
 
-  When a name is stored in the `chosenPet` variable, a message should log to the console indicating whether the pet is available and whether it is a dog or a cat. If the pet is not available, a message should indicate that and suggest the shelter's featured cat and dog. No errors should be returned. 
+  When a name is stored in the `chosenPet` variable, a message should log to the console indicating whether the pet is available and whether it is a dog or a cat. If the pet is not available, a message should indicate that and suggest the shelter's featured cat and dog. No errors should be returned.
 
   ## Actual Behavior
 
-  No message is logged to the console, and an error message indicating an `Uncaught ReferenceError` is returned. 
+  No message is logged to the console, and an error message indicating an `Uncaught ReferenceError` is returned.
 
   ## 💡 Hints
 
-  Look at each console log. What is the intended input? How can you use the object name and key to access the values and methods you need to make the code work? 
+  Look at each console log. What is the intended input? How can you use the object name and key to access the values and methods you need to make the code work?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How can you convert an object into an array using `Object.values()`? 
+  * How can you convert an object into an array using `Object.values()`?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 18. Instructor Review: Object Methods (10 min) 
+### 18. Instructor Review: Object Methods (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -932,7 +932,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * ✔️ `shelter.dogs[0]`
 
-* Open `24-Stu_Object-Methods/Solved/script.js` in your IDE and explain the following: 
+* Open `24-Stu_Object-Methods/Solved/script.js` in your IDE and explain the following:
 
   * The `chosenPet` variable holds the name of the chosen pet, as follows:
 
@@ -942,9 +942,9 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use keys to access an object's properties? 
+  * ☝️ How do we use keys to access an object's properties?
 
-  * 🙋 We first use the object's name. Then we use the key to identify the data we want to access. 
+  * 🙋 We first use the object's name. Then we use the key to identify the data we want to access.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -952,17 +952,17 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: this (5 min) 
+## 19. Instructor Demo: this (5 min)
 
-* Open `25-Ins_Object-This/index.html` in your browser and navigate to the console and demonstrate the following: 
+* Open `25-Ins_Object-This/index.html` in your browser and navigate to the console and demonstrate the following:
 
   * 🔑 When we log the keyword `this`, the `window` object is logged.
 
-  * 🔑 The `window` object represents the browser's open window and has many properties, including methods. 
+  * 🔑 The `window` object represents the browser's open window and has many properties, including methods.
 
-* Open `25-Ins_Object-This/script.js` in your IDE and demonstrate the following: 
+* Open `25-Ins_Object-This/script.js` in your IDE and demonstrate the following:
 
-  * The `this` keyword refers an object. The global object is the open browser window. You can see `this` at work in the following example: 
+  * The `this` keyword refers an object. The global object is the open browser window. You can see `this` at work in the following example:
 
     ```js
     console.log(this);
@@ -981,11 +981,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
     ```js
     logPopulation: function () {
-      if (this.isPopulated) {  
+      if (this.isPopulated) {
         console.log("This planet's population is " + this.population);
       } else {
         console.log("The planet is unpopulated");
-      }   
+      }
     }
     ```
 
@@ -993,11 +993,11 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * ☝️ What does the keyword `this` refer to?
 
-  * 🙋 The keyword `this` refers to the object it belongs to. If `this` is not inside another object, it refers to the global object, or `window`. 
+  * 🙋 The keyword `this` refers to the object it belongs to. If `this` is not inside another object, it refers to the global object, or `window`.
 
 * Answer any questions before proceeding to the next activity.
 
-### 20. Student Do: this (15 min) 
+### 20. Student Do: this (15 min)
 
 * Direct students to the activity instructions found in `26_Stu_Object-This/README.md`.
 
@@ -1018,14 +1018,14 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What does the `window` object represent? Is the global object always the `window` object? 
+  * JavaScript has its own built-in `Math` object with mathematical functions we can use. How can we combine `Math.floor()` and `Math.random()` to randomly select an element from an array? 
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 21. Instructor Review: this (10 min) 
+### 21. Instructor Review: this (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1041,7 +1041,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * ✔️ `this` in object method
 
-* Open `26-Stu_Object_This/Solved/script.js` in your IDE and explain the following: 
+* Open `26-Stu_Object_This/Solved/script.js` in your IDE and explain the following:
 
   * 🔑 When we log the keyword `this` alone&mdash;like in the following example&mdash;the global object, or `window`, is logged:
 
@@ -1052,18 +1052,18 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * When we use `this` inside a function, `this` refers to the global object, as follows:
 
     ```js
-    function helloThis() { 
-      console.log("Inside this function, this is " + this); 
+    function helloThis() {
+      console.log("Inside this function, this is " + this);
     }
-    ``` 
+    ```
 
   * 🔑 When we use `this` inside an object, `this` is local and belongs to that object, as shown in the following example:
 
     ```js
-    var child = { 
+    var child = {
       age: 10,
       ageTenYears: function() {
-        console.log(this.age + 10); 
+        console.log(this.age + 10);
       }
     };
     ```
@@ -1071,14 +1071,14 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * 🔑 When we use `this` in a nested object, `this` refers to the object where it is used even if it is inside another object, like in the following example:
 
     ```js
-    var investor = {  
+    var investor = {
       name: "Cash Saver",
       investment: {
       initialInvestment: 5000,
       investmentGrowth: function() {
         console.log(this.initialInvestment * 1.15)
         }
-      }   
+      }
     };
     ```
 
@@ -1091,13 +1091,13 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the global object? 
+  * ☝️ What is the global object?
 
   * 🙋 The global object is the object that exists in the global scope. The `window` object is the global object.
 
-  * ☝️ What does the keyword `this` refer to inside an object? 
+  * ☝️ What does the keyword `this` refer to inside an object?
 
-  * 🙋 The keyword `this` refers to the object. 
+  * 🙋 The keyword `this` refers to the object.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -1115,7 +1115,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * Using Git, we can create a copy of the `main` branch and then work in a different branch. Doing so enables us to work in isolation, without messing up the codebase.
 
-  * In this activity, we'll explore the `git branch`, `git checkout`, and `git merge` commands and how we can use them to work in different branches and merge branches locally. 
+  * In this activity, we'll explore the `git branch`, `git checkout`, and `git merge` commands and how we can use them to work in different branches and merge branches locally.
 
 * Direct students to the activity instructions found in `27-Evr_Git-Branch/README.md`.
 
@@ -1123,7 +1123,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * Open your command line and demonstrate the following:
 
-  * 🔑 We can create a new branch to work in, as shown in the following code, but it doesn't immediately take us to that new branch: 
+  * 🔑 We can create a new branch to work in, as shown in the following code, but it doesn't immediately take us to that new branch:
 
     ```bash
     git branch <name-of-branch>
@@ -1144,7 +1144,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
   * 🔑 When we finish making changes in the branch, we commit the work to it and `checkout` back to the branch we want this new code to be merged to, then we merge it with the following command:
 
     ```bash
-    git add .
+    git add -A
     git commit -m 'commit message'
 
     git checkout main

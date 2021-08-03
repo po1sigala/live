@@ -1,72 +1,84 @@
-# 12.3 Project Work (10:00 AM)
+# 12.3 Full-Time Lesson Plan: Project 3
 
 ## Overview
 
-During this lecture, most of class will center on project work. You and the TAs should check up on each group and make sure they're moving smoothly toward presentations.
-
-## Instructor Priorities
-
-* Students should have the entirety of class to work on their projects.
-
-* Make sure your students make measurable progress with their project work.
+In this class students will continue working on projects.
 
 ## Instructor Notes
 
-* Students are happily moving along with their projects, make sure they are on the right track and remind them of deadlines. Provide any support you can where necessary
+* No classroom instruction today.
 
-* It's **crucial** that you steer any off-course projects back on track.
+* You will assume the role of "scrummaster" and hold daily scrum meetings with each group. The purpose of these scrums is to: 
 
-  * To that end, you should remind students that they can reach out to you and the TAs for support outside of class.
+	1. Gauge progress on projects
 
-## Class Objectives
+	2. Course correct if scope creeps or focus shifts
 
-* Provide students more time and support for their group projects.
+	3. Most importantly, hold students accountable. Participation is a requirement for receipt of a passing grade. 
+    
+* Keep the daily scrums short. Ask each student the following questions:
 
-## Slides
+	* What did you accomplish? 
 
-N/A
+	* What are your goals? 
+
+	* Are there any obstacles? 
+
+## Learning Objectives
+
+By the end of class, students will be able to:
+
+* Make progress towards building the MVP of their project
 
 ## Time Tracker
 
-[12.3 Time Tracker](https://docs.google.com/spreadsheets/d/1SjnxSA2fO5lNMdzaooD0j_P7ubuxw4X-dpx72aOKk9I/edit?usp=sharing)
+| Start  | #   | Activity Name                       | Duration |
+|---     |---  |---                                  |---       |
+| 10:00AM| 1   | Instructor Do: Welcome              | 0:05     |
+| 10:05AM| 2   | Student Do: Project Work            | 1:55     |
+| 12:00PM| 3   | BREAK                               | 0:30     |
+| 12:30PM| 4   | Student Do: Project Work            | 2:00     |
+| 2:30PM | 5   | END                                 | 0:00     |
 
-- - -
+---
 
-### 1. Instructor Do: Ask About Projects (5 mins)
+## Class Instruction
 
-* Tell your students how you're excited to see the projects they'll present. You should talk about how your impressed with the concepts they've come up with, that they should feel proud about working toward the goals they devised.
+### 1. Instructor Do: Welcome (5 min)
 
-  * Assure them that they've come a long way over the length of this course.
-  * Answer these reassuringly—if you ever had similar doubts, chime in with your experiences on overcoming them.  
-  * If no one says anything, they're likely apprehensive about admitting fears to their classmates. Assure them that if they're anxious about their project work, then no doubt other students feel the same way. Encourage them to share these thoughts—talking about them is an essential step to overcoming them.
+* Welcome students to class.
+ 
+* Inform them that they will continue to work on their group project and should ask for help from you and your TAs.
 
-### 2. Students Do: Project Work (120 mins)
+* Also let them know that you will be checking on each group to hold daily scrums with them to gauge their progress.
 
-* Ensure that students have deployed at least one project, homework, or activity and linked to it from their portfolio before they move on.
+* Answer any questions before proceeding.
+  
+### 2. Student Do: Project Work 
 
-* Add in that they should come into the next class expecting to devote at least 30 minutes to outlining their presentations.
+* Direct students to continue to work with their groups on their projects while instructional staff make themselves available for assistance.
 
-* TAs and Instructors: For the next 90 minutes, you're Senior Developers! Walk around the class as mentors for each group's team. Ask them about their progress so far; offer them advice on how they can finish their work in time.
-  * Maybe a member of the team finished all the work their role entailed. Perhaps they're waiting for other people to complete a certain task before they can continue. Make sure any students in these situations ask their teammates how else they can help.
-  * Some students might be stumped by technology that they hadn't gone over in class but are trying to use in their project. See if you can help out. If you're not familiar with the tech, direct the encumbered student to someone on the Boot Camp team who is.
-    * In any case, just make sure all teams seem prepared to complete their projects by Saturday.
+* Hold daily scrums with each group. Ask each student in the group the following questions:
 
-- - -
+	* What did you accomplish? 
 
-### 3. Break (30 mins)
+	* What are your goals? 
 
-- - -
+	* Are there any obstacles? 
 
-### 4. Everyone Do: Project Work (115 mins)
+### 3. BREAK (30 mins)
 
-* Allow students to continue working on their projects.
+### 4. Student Do: Project Work 
 
-  * Rotate between groups to offer help to whomever needs it.
+* Direct students to continue to work with their groups on their projects while instructional staff make themselves available for assistance.
 
-### 5. End (0 mins)
+* Continue holding daily scrums with each group.
 
-### Lesson Plan Feedback
+* Answer any questions before ending class.
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+### 5. END (0 min)
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

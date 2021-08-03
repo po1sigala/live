@@ -1,586 +1,819 @@
-## 10.1 - Intro to React (10:00 AM) <!--links--> &nbsp; [⬅️](../../09-Week/05-Day/05-Day-LessonPlan.md) &nbsp; [➡️](../02-Day/02-Day-LessonPlan.md)
+# 10.1 Full-Time Lesson Plan: Progressive Web Applications (PWA)
 
-## Overview
+## Overview 
 
-In this class, we will be introducing students to the basic concepts of ReactJS, JSX, and building layouts through a component-based mindset.
+Today's class will be focused on Web Performance. We will use Lighthouse to audit the performance of webpages, and go through the different options we have to increase performance in our applications. Performance is an incredibly important aspect of being a developer. While building large applications, keeping them performing is a top priority.
 
 ## Instructor Notes
 
-* `Summary: Complete activities 19-react/01-Activities/01-Stu_DocumentationQuestions through 19-react/01-Activities/12-Stu_PropsReview`.
+* In this lesson, students will complete activities `01-Stu_Lighthouse` through `07-Stu_PWAs`.
 
-* It is recommended that you arrange for students to globally install both Create React App before today's class. If students have problems running `create-react-app`, direct them to remove their global install and use `npx` to run `create-react-app` instead: 
+* We will be making use of the students' Project 2 during the first half of today's class. Ensure all students have a deployed project to work with.
 
-  * `npm uninstall -g create-react-app npx create-react-app <appname>`
+* Today's class you will be using an auditing system by Google called Lighthouse. Familiarize yourself with the tool prior to class. You can find the documentation [here](https://developers.google.com/web/tools/lighthouse/). 
 
-* Let students know that today's class is meant to be a **gentle** introduction to React. Few if any of your students will have even the faintest knowledge of React &mdash; so this class is all about an initial exposure.
+  * Lighthouse can hang in some browsers, if possible please use Chrome.
 
-* Let students know that we won't be able to teach them **all** of React in the amount of time we have. In order to "get good" they are going to have to do their own work outside of class. Our role is essentially, to give them the high-points so they understand the terms and know how to proceed.
+* Improving scores in Lighthouse will be a big win for students today, so be sure to slowly go through the first audit report of the day to give students an understanding of how they can improve.
 
-* Students may feel a little overwhelmed with the new unusual syntax. Remind them that at the end of the day, we're still just working with JavaScript. Prioritize making sure they understand concepts, rather than worrying about them perfectly memorizing syntax. Memorization will come with practice and repetition, so work on instilling concepts early on.
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 
-* **Important:** In order to avoid continuous NPM installs, all of today's activity Solved and Unsolved versions include only a `src` folder. Students and yourself should scaffold out a React app once with Create React App, and then swap out the `src` folder for each activity. It's recommended that you completely restart the dev server between activities.
+* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-### Learning Objectives
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
-* To begin to feel comfortable building static UIs with JSX.
+## Learning Objectives
 
-* To gain an initial understanding of the component-based paradigm in ReactJS.
+By the end of class, students will be able to:
 
-* To dissect and build a few simple examples using ReactJS.
+* Articulate the meaning of web performance and how it effects their users.
 
-## Slides
+* Explain how assets like JavaScript files and images impact the performance of a web page.
 
-[10.1: Intro to React, Components, and JSX](https://docs.google.com/presentation/d/1a1qwF0MIf2D1FtnfuJvqQ2wWYxnUz71DSVlesxqYWzs/edit?usp=sharing)
+* Use Lighthouse to audit a sites various performance metrics.
 
+* Use minification to lower JS file sizes.
+
+* Use the compression npm package to enable gzip compression in their applications
+
+* Use online image compression to compress image files while retaining image quality.
+
+* Explain and implement lazy loading into their applications so images are only loaded as needed.
+
+## Slide Deck
+
+* N/A
 
 ## Time Tracker
 
-[10.1 Time Tracker](https://docs.google.com/spreadsheets/d/1NjFssI5jL39mLWGlG2LV6qvwezyOaNrjTP3q3QTyrz4/edit?usp=sharing)
+| Start  | #   | Activity Name                           | Duration |
+|---     |---  |---                                      |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity          | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Lighthouse Audit       | 0:05     |
+| 10:15AM| 3   | Student Do: Lighthouse Audit            | 0:15     |
+| 10:30AM| 4   | Instructor Review: Lighthouse Audit     | 0:10     |
+| 10:40AM| 5   | Instructor Demo: JS Minification        | 0:05     |
+| 10:45AM| 6   | Student Do: JS Minification             | 0:15     |
+| 11:00AM| 7   | Instructor Review: JS Minification      | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Enable Compression     | 0:05     |
+| 11:15AM| 9   | Student Do: Enable Compression          | 0:15     |
+| 11:30AM| 10  | Instructor Review: Enable Compression   | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Image Compression      | 0:05     |
+| 11:45AM| 12  | Student Do: Image Compression           | 0:15     |
+| 12:00PM| 13  | BREAK                                   | 0:30     |
+| 12:30PM| 14  | Instructor Review: Image Compression    | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Lazy Loading           | 0:05     |
+| 12:45AM| 16  | Student Do: Lazy Loading                | 0:15     |
+| 1:00PM | 17  | Instructor Review: Lazy Loading         | 0:15     |
+| 1:15PM | 18  | Instructor Demo: Optimize Gallery App   | 0:05     |
+| 1:20PM | 19  | Student Do: Optimize Gallery App        | 0:20     |
+| 1:40PM | 20  | Instructor Review: Optimize Gallery App | 0:15     |
+| 1:55PM | 21  | Instructor Demo: Progressive Web Apps   | 0:05     |
+| 2:00PM | 22  | Student Do: Progressive Web Apps        | 0:15     |
+| 2:15PM | 23  | Instructor Review: Progressive Web Apps | 0:15     |
+| 2:30PM | 24  | END                                     | 0:00     |
 
-### 1. Instructor Do: Go Through Slides (15 mins)
+---
 
-* The most important part to get across today is the concept of components &mdash; self-contained modules that are responsible for producing part of an application's UI and functionality (i.e. all of the layout and functionality code for a "chat box" or "like button" might be in the same file or folder). This is radically different from the concept of separating the view and logic layers. When we split up our application into components, we're still separating its concerns, but we aren't necessarily separating its technologies.
+## Class Instruction
 
-* Remember to emphasize that today's class is meant to be a primer. Not comprehensive coverage. Don't let them get intimidated.
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
-### 2. Partners Do: Installation + Documentation Research (15 mins)
+* Welcome students to class and then open Google Chrome. 
 
-* Have students work with partners and introduce them to [01-Stu_DocumentationQuestions](../../../../01-Class-Content/19-react/01-Activities/01-Stu_DocumentationQuestions/README.md).
+* Open your Dev Tools Network Tab and Throttle your connection to `Slow 3G`
 
-* The first task in this assignment instructs them to install Create React App if they haven't already. Instructional staff should be walking around offering assistance with the research questions, as well as the installation process (which should be fairly straight forward).
+  * ![Throttle Connection](./Images/throttleConnection.png)
 
-* Have them work with one another on answering the questions listed using the React.js documentation. Have them divide up the work the questions among teammates, and discuss answers afterwards rather than going through them all one at a time together.
+* Navigate to [Amazon.com](https://amazon.com/).
+  
+  * The page is going to load extremely slowly.
 
-* Let them know that going through the official documentation may feel challenging at first, but encourage them to revisit it again after todays class. Once they have a basic understanding of React, they should find that the React documentation is some of the best there is for any library.
+* Ask the class, "What can the Network Tab show us?"
 
-* Encourage them to take this task seriously as it will help them gain a basic sense of things.
+  * The network tab gives developers a view into what assets are being loaded and when, as well as total load times. Direct the students attention to the loading time chart.
 
-### 3. Instructor Do: Review Questions (10 mins)
+  ![Network Chart](./Images/networkChart.png)
 
-* Slack out the [Solved](../../../../01-Class-Content/19-react/01-Activities/01-Stu_DocumentationQuestions/Solved/README.md) version of the activity and call on various students to answer a few of the questions out loud.
+  * Amazon will load assets for well over a minute, and this traffic can all be watched inside of our dev tools.
 
-* Most importantly, make sure students have a basic understanding of JSX and components along with some of the motivations behind them.
+* Ask the class, "What is throttling?"
 
-  * We use components as a way to separate our application into reusable pieces of its UI. This allows us to think about each part of our application's interface in isolation and allows us to quickly build new views into our apps over time since we'll be able to reuse component's we've already created.
+  * Throttling a connection is the act of using software to deliberately slow down or "throttle" a connections speed to be slower than it would normally.
 
-  * Using JSX is optional but most React projects make use of it. JSX allows us to describe the UI our components using familiar HTML-like markup in our JavaScript. This allows us to quickly describe and understand the UI our components will produce as well take advantage of the full power of JavaScript, rather than be limited to the features available in a templating language such as Handlebars.
+* Ask the class, "Why would we want to throttle our connection?"
 
-* Answer any additional questions students may have before moving on, but assure the class things will become clearer as we work with a few examples.
+  * While we might have a nice and fast connection, a large portion of the planet does not have access to speeds even comparable to a slow 3g cellular network. 
 
-### 4. Instructor Do: Demo Create React App (14 mins)
+  * By throttling our connection, we can see how our users with worse connections might experience our content, and will help us understand what is slowing loading times most.
+  
+* Loading times like we are seeing with a throttled connection on Amazon can be a huge deterrent to users.
 
-* Demonstrate for students how we can quickly create a React application using Create React App. Run the following command in the terminal and have students follow along if they wish:
+* Ask the class, "Have you ever left a webpage due to it taking too long to load"
 
-  * `npx create-react-app reactpractice`
+  * It's safe to say anyone who has used the internet has experienced this.. This is a common occurrence all over the world, as not all people have access to fast network connections.
+  
+  * One of the biggest factors that leads to a poor user experience is slow page load times.
 
-    * Explain that to scaffold out a React app with create-react-app, we run `npx create-react-app` followed by a name for our application.
+* Ask the class, "What do you think the most important part of the user experience is?". Call on one or two students for answers.
 
-* Once everything has been installed, cd into your application's directory and start the app by running `npm start` in your terminal and navigating to `localhost:3000`. Explain that this command starts our app in development mode, i.e. this "mode" is meant for development as our application will auto-reload as we make changes to it.
+  * Performance. Speed and response times are paramount, as making users wait for response to input or loading information is a guaranteed way to lose those users.
 
-  ![Create React App](Images/01-Create-React-App.png)
+  * When it comes to the web every second counts. Todays class will be about how webpages can be optimized to save the end user time and provide a more fluid experience.
 
-* Show off the resulting web page, then go back to your code and walk the class through the generated boilerplate. In particular, point out the following key aspects:
+* Ask the class, "How do we know what is causing our page to perform poorly or well?"
 
-  * A `src` folder is generated, and we'll mostly be working out of here. Anything inside this folder gets processed by Babel, and then combined into a single `bundle.js` file by webpack. You can see what the combined `bundle.js` file looks like if you were to navigate to [localhost:3000/static/js/bundle.js](http://localhost:3000/static/js/bundle.js) in your browser.
+  * Getting concrete analysis on the performance metrics of a web page is important in improving it in the future.
 
-  * We have an `index.js` file in the `src` directory. This is where execution of our React application begins. In this way, it is similar to the `server.js` file we've been starting all of our node applications with. In order to run any code in our React app, it needs to be directly written here, or else required/imported here.
+* Answer any questions before proceeding to the next activity.
 
-    ![Index](Images/02-Index.png)
+### 2. Instructor Demo: Lighthouse Audit (5 min) 
 
-  * The `src` folder is where our React components will live. For now, we just have an `App` component. Don't go too deep into the specifics of the `App.js` file yet, but point out that this file is producing some JSX, which corresponds to the web page we have rendered in the browser.
+* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
 
-  * The `src` folder is also where we'd put any tests we'd like to associate with our components. Create React App ships with [Jest](https://facebook.github.io/jest/), a library for running JavaScript tests that work with React out of the box. For our purposes of learning to use React to build applications, we won't dive into writing tests for React apps, but it's nice to know that we **can** without any extra overhead.
+  * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
 
-  * Point out the `registerServiceWorker.js` file. At the time of writing, this is a fairly new addition to Create React App. We don't need to understand the contents of this file, and most of the activities we'll go over will have it removed for brevity, but it helps cache API responses to help make our app perform better for users with poor internet connections.
+  * It provides audits for performance, accessibility, SEO, and progressive web applications.
 
-  * We have a `public` folder. This is primarily for containing the `index.html` that will eventually be served to users visiting our application. Point out the `#root` element &mdash; explain that this will contain our entire rendered, React application. Explain that when we build our React application for production, a `bundle.js` file containing all of our application's JavaScript is generated and added inside of the `index.html` file. We can also store files in this folder which we don't want to be processed by Webpack and Babel. For example, we can place static CSS files here or link to external CDNs in the `head` tag of the `index.html`.
+  * Lighthouse can be run directly from our Chrome Dev Tools. This makes it a fast, simple, and effective way to get insights into our pages overall performance metrics.
 
-  * Assure the class that we're going to see this setup over and over again, and there isn't a need to completely memorize every aspect of the Create React App boilerplate right now. The most important takeaways are:
+  * Open chrome dev tools, and click the `Audits` tab.
 
-    * We're going to be writing most of our code inside of the `src` folder.
+  ![Audits Tab](Images/auditsTab.png)
 
-    * The "entry" file to our React application will be the `index.js` file.
+  * Scroll down and click `Run Audits`
 
-    * We start our React app in development mode with the command `npm start`. This means our app will live update as we change it, which is why we're running our app on a server.
+  ![Run Audits](Images/runAudits.png)
 
-### 5. Partners Do: Hello World Example (15 mins)
+* Open the generated `Audit Report` and walk students through the following:
 
-* Inform the class that now that we have a high-level understanding of Create React App, they're now going work in groups to dissect a simpler example and answer some questions.
+  * The *performance* section will be the first you encounter, and one of the most useful for todays class. This section will tell us why our site might be performing poorly and delivering a poor user experience. It will also give us actionable items to fix.
 
-* Introduce students to [HelloReact](../../../../01-Class-Content/19-react/01-Activities/02-Stu_HelloReact/README.md)
+  * Hovering over the different status signs next to the times shown will give you information on what that test means.
 
-### 6. Instructor Do: Review Hello World Example (10 mins)
+  ![Hover](Images/performanceSection.png)
 
-* Open the [Solved](../../../../01-Class-Content/19-react/01-Activities/15-Stu_HelloReact/Solved/README.md) version of the activity in your IDE and go over the answers with the class. Use the solution as a guide to walk the class through the code.
+  * Each audit has a reference doc explaining why the audit is important, as well as how to fix it. These reference docs will lay out why this metric is important to the user experience and give reasons why we might be lacking in the specified audit.
 
-* Point out how JSX can either represent primitive HTML tags or React components.
+  * One of the main metrics Lighthouse looks for is the *first meaningful paint*.
 
-* Demonstrate how we can alternatively write all of our component's code inside of `index.js`. Inform them that this is fine for very small examples, but we'll want something closer to the original setup as our projects grow.
+  * A paint occurs when content is loaded on the screen. Lighthouse measures the first *Contentful* paint, which means when any content is loaded. It also measures the first *meaningful* paint which occurs when the primary content becomes visible.
 
-* If necessary, take a few extra minutes here to briefly discuss any confusing ES6 syntax. This portion of the lesson utilizes the `const` identifier, and ES2015 modules.
+  * One of the most important metrics it takes is *Time to Interactive*. This is the time it takes for the webpage being audited to become usable. A long delay in interactivity can lead to page abandonment.
 
-* 🗒Note the following takeaways:
+* Ask the class, "What is web page abandonment?"
 
-  * `const` works like var, but it's meant for values that aren't going to be reassigned, otherwise `let` is preferred.
+  * Abandonment occurs when a user leaves a web page without completing the task they set out to.
 
-  * `ES2015 modules` are part of a new module system introduced with ES6. So far we've been working with CommonJS modules (`module.exports` & `require` syntax) &mdash; which for our purposes today will work similarly.
+* When working on improving a webpage's performance, we should use Lighthouse to complete frequent audits. These can be incredibly helpful in pinpointing where our efforts should be focused.
 
-  * As we'll see a bit later, ES2015 modules allow for finer tune control over what is exported and imported from a module. For now just compare the new syntax to what they're used to.
+* Answer any questions before proceeding to the next activity.
 
-* Take a moment to answer any lingering questions.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
 
-### 7. Students Do: HelloDiv (10 mins)
+### 3. Student Do: Lighthouse Audit (15 min) 
 
-* In this activity students will write a React component that displays their name and some information about themselves.
+* Direct students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
 
-* **Instructions:** [README](../../../../01-Class-Content/19-react/01-Activities/03-Stu_HelloDiv/README.md)
+* Break your students into pairs that will work together on this activity.
 
-### 8. Instructor Do: Review HelloDiv (5 mins)
+  ```md
+  # Lighthouse Audits
 
-* Once time is up, go over the [Solved](../../../../01-Class-Content/19-react/01-Activities/03-Stu_HelloDiv/Solved) version of the activity as a class.
+  In this activity you will use Google Lighthouse to audit your second group project to find out performance metrics.
 
-* Make sure everyone understands the following concepts:
+  ## Instructions
 
-  * `HelloDiv` is exported and rendered inside of `App`.
+  * We are going to utilize your second group project for these coming activities to check its performance metrics.
 
-  * `App` is exported and then rendered inside of `index.js` as the first argument to the `ReactDOM.render` method.
+  * Navigate to the deployed URL of your project.
 
-  * The second argument to the `ReactDOM.render` method is the real DOM element that our React application should be rendered inside of.
+  * Open the Chrome Dev Tools and click the `Audits` tab.
 
-  * `HelloDiv`, like most components we'll write, is a JavaScript function; it returns some JSX.
+  * Scroll down and click `Run Audits` and allow Lighthouse to run.
 
-    ![HelloDiv](Images/03-HelloDiv.png)
+  * Read through the provided report and be prepared to talk about the `Opportunities` portion of your audit!
+  ```
 
-    * Some students may have an error when they tried to render multiple JSX elements. Explain that _normally_, we aren't able to render multiple JSX elements from a component without an enclosing parent tag.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-      * This may seem strange at first, but if we think about our component in the same way we think about any other JavaScript function, it makes perfect sense: a JavaScript function can only return one value. To have separate groups of JSX being returned outside of a parent element would be like trying to write a JavaScript function that returns multiple different variables at once.
+### 4. Instructor Review: Lighthouse Audit (10 min) 
 
-  * **Note:** With the release of React 16, we _do_ have another option for returning multiple JSX elements from a component: we can return an array.
+* Ask the class the following question(s):
 
-    * Based on your students' level of understanding and comfort so far, you may want to skip over explaining this as there aren't any activities or use cases we'll run into where understanding this pattern is required.
+  * What are some of the 'Opportunities' for improvement you found in your applications?
 
-    * If you choose to proceed, the `HelloDiv` component can also be written as follows:
+  * How long did the first content paint take?
+
+  * How long did the first meaningful paint take?
+
+  * How long did it take to become interactive?
+
+  * Are there any commonalities you hear?
+
+* Answer any questions before proceeding to the next activity.
+
+### 5. Instructor Demo: JS Minification (5 min) 
+
+* Ask the class the following question(s):
+
+  * "What do you think minification means"?
+
+    * Minification is the process of taking our code and removing all unnecessary characters and whitespace without loss of functionality in an attempt to save file space.
+
+  * "Where have we seen minification before?"
+
+    * Bootstrap and jQuery are two examples of minified source code
+
+* Open [JSCompress](https://jscompress.com/) and paste the following code into the textarea:
 
     ```js
-      function HelloDiv() {
-        return (
-          <h1>Hey guys! I'm a header!</h1>,
-          <h2>Things I like!</h2>,
-          <ul>
-            <li>Peas</li>
-            <li>Carrots</li>
-            <li>Love</li>
-          </ul>
-        );
-      }
+    var myArray = [1, 2, 3, 4, 5];
+
+    for(var i=0; i < myArray.length; i++){
+      console.log(myArray[i]);
+    }
     ```
 
-### 9. Instructor Do: Hello Bootstrap (10 mins)
+* Click the `Compress JavaScript` button to minify the code snippet and explain the following point(s):
 
-* Welcome the class back from break!
+* ![Minify JS](Images/minifyJS.jpg)
 
-* So far we've only just begun to work with React but we've still managed to learn a few key things:
+  * The minifier moved our `myArray` declaration into our `for loop`.
 
-  * In React, we structure our code into components.
+  * The minifier removed all whitespace between characters, and put all of our code on one line.
 
-  * A component is a JavaScript function that describes some part of our application's UI.
+  * The minification process resulted in a 30% decrease in the size of the JavaScript.
 
-  * Inside of our components, we describe our application's UI using JSX: a markup syntax that resembles HTML.
+  ![Minified](Images/minification.jpg)
 
-* Explain that we're now going to go over how we can add Bootstrap to a React project.
+  * While the code may look different after minification, it will function exactly the same
 
-* Replace your React application's src folder with [04-Ins_HelloBootstrap/src](../../../../01-Class-Content/19-react/01-Activities/04-Ins_HelloBootstrap/src) and start the development server by running `npm start`. See the rendered application at [localhost:3000](http://localhost:3000).
+* Ask the class, "What are the benefits of minification?"
 
-  ![No Bootstrap](Images/04-NoBootstrap.png)
+  * Minification saves us space, and smaller file sizes create faster downloads for the user. The faster our assets can download, the faster the page will load them for our user.
 
-* Explain to the class that the rendered elements in this example are using Bootstrap classes.
+* Answer any questions before proceeding to the next activity.
 
-  * Without going into the component code yet, assure everyone that all of the React code is correct. Ask the class: Why then isn't my page rendering Bootstrap elements? What did I forget?
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
 
-    * We need to include Bootstrap into our project somehow.
+### 6. Student Do: JS Minification (15 min) 
 
-    * Open up the example in your code editor and ask the class: What should I do to if I wanted to add Bootstrap using a CDN?
+* Direct students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
 
-      * So you don't have to go looking for it: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>`
+* Break your students into pairs that will work together on this activity.
 
-      * Try to get the class to lead you to the `index.html` file inside of the `public` folder. Ask them: Where should I put this link? Remind them that earlier we mentioned there was a folder where we keep static assets we don't want to be processed.
+  ```md
+  # Minify Your JS
 
-      * We can add our Bootstrap CDN to `public/index.html` in the Create React App generated code in order to include Bootstrap for all of our components. After adding the CDN, go back to your web browser and demonstrate the updated page.
+  In this activity you will minify your JavaScript using an online tool.
 
-    ![Hello Bootstrap](Images/05-HelloBootstrap.png)
+  ## Instructions
 
-* Now open up the `components/HelloBootstrap.js` file and demonstrate the code. The JSX code being rendered is close to the HTML we'd use to render the same Bootstrap elements without React.
+  * Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
 
-  ![Hello Bootstrap](Images/06-HelloBootstrap.png)
+  * Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
 
-* Ask the class: can anyone spot the key difference between this JSX and the HTML we'd normally write?
+    * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
 
-  * `className` is used instead of `class`. Explain that this is because in JavaScript, `class` is a reserved word, similar to `var` or `for` or `function`.
+  * Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
 
-    * Explain that there are other differences between HTML and JSX which we'll run into soon.
+  * Create a `dist` folder in the root of your project.
 
-  * Remind students that JSX isn't HTML, so there are a few caveats. JSX is sugar syntax for calls to the `React.createElement` method, and according to [Facebook's React Docs](https://facebook.github.io/react/docs/introducing-jsx.html#specifying-children-with-jsx): "JSX is closer to JavaScript than HTML".
+    * Create an `index.js` file inside of your `dist` folder.
 
-### 10. Students Do: Hello Bootstrap (10 mins)
+    * Copy/paste the minified JS of your dist folder into your `dist/index.js`
 
-* In this activity, students will be given slightly less starter code and tasked with creating a React application which renders Bootstrap components to the page.
-
-* **Instructions:** [README](../../../../01-Class-Content/19-react/01-Activities/05-Stu_HelloBootstrap/README.md)
-
-### 11. Instructor Do: Review Hello Bootstrap (8 mins)
-
-* Briefly go over the [Basic Solved](../../../../01-Class-Content/19-react/01-Activities/05-Stu_HelloBootstrap/Solved/Basic) version of the previous activity.
-
-  ![Hello Bootstrap Solved](Images/07-HelloBootstrapSolved.png)
-
-* The most important takeaways are:
-
-  * If we want to render multiple JSX elements, they should be contained within a single parent element, such as a `div`.
-
-  * Void elements, such as `input` tags, are represented by JSX tags with a self-closing forward slash, i.e. `<input />`.
-
-  * We need to import the `react` library anywhere that we are utilizing JSX.
-
-  * We use `className` instead of `class` because `class` is a reserved word in JavaScript.
-
-* Take a few moments to demonstrate the [Bonus Solution](../../../../01-Class-Content/19-react/01-Activities/05-Stu_HelloBootstrap/Solved/Bonus). The rendered page should be the same, so you only need to walk demonstrate the code in your editor.
-
-  * The main takeaway here is that we can define our components in different files and compose multiple components inside of another component (`Navbar`, `Jumbotron`, and `Card` are rendered inside of `App`).
-
-    ![Hello Bootstrap Bonus](Images/08-HelloBootstrapBonus.png)
-
-  * This is powerful because it begins to demonstrate the potential for code reuse. Instead of having to rewrite every UI element from scratch using individual HTML tags, we could write a component once and reuse it across our entire application.
-
-- - -
-
-### 10. Everyone Do: BREAK (30 mins)
-
-- - -
-
-### 13. Instructor Do: JSX Variables (8 mins)
-
-* Replace your React app's `src` folder with [06-Ins_JSXVariables/src](../../../../01-Class-Content/19-react/01-Activities/06-Ins_JSXVariables/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
-
-* Once the app starts, open [localhost:3000](http://localhost:3000) in your web browser.
-
-  ![JSX Variables Demo](Images/09-JSXVariableDemo.png)
-
-* Point out that the HTML code being rendered to the browser isn't much different than the code we've already worked with. At first glance, it doesn't appear as though we're doing anything new.
-
-* Open `src/components/JSXVariables.js` and walk the class through the code.
-
-  ![JSX Variables](Images/10-JSXVariables.png)
-
-* Point out the following key points:
-
-  * We can write comments inside of our JSX using JavaScript's multi-line comment syntax inside of curly braces. If we were to try and write regular JavaScript comments inside of our JSX, the code would break.
-
-  * In addition to being able to write comments inside of the curly braces, we can also embed JavaScript expressions. This works similarly to the `{{ }}` double curly braces we've worked with in Handlebars.
-
-    * We use the `name`, `num1`, and `num2` variables inside of our JSX code. Try updating the `name` variable and demonstrating to the class how when the page refreshes, we have the updated name being rendered.
-
-    * Rendering `name` is a fairly simple example, but we can also evaluate entire expressions inside of JSX curly braces. Point out how we're producing random numbers and reversing `name` further down below.
-
-      * Explain that an expression is any valid set of literals, variables, operators, and expressions that evaluates to a single value. In other words, anything we can assign to a variable or pass as a function argument is an expression. This doesn't include loops or conditionals, which we have various ways to deal with that we'll go over later.
-
-    * Explain that these curly braces are how we get data from our JavaScript code into the views React renders.
-
-      * Point out that this is different from jQuery or vanilla JavaScript where we have to call methods to explicitly set the inner text of an element.
-
-    * Remind everyone that when we were working with Handlebars, we couldn't write raw JavaScript code inside of the `{{}}` double curly braces. Instead we had to use the Handlebars templating language which only exposed certain functionality. Since what we're writing inside of the JSX curly braces is just regular JavaScript, we have access to the full power of JavaScript inside of our views.
-
-* Take a moment to answer any questions, but avoid getting too off track.
-
-### 14. Students Do: JSX Variables (10 mins)
-
-* In this activity students will render JavaScript expressions inside of JSX curly braces.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/07-Stu_JSXVariables/README.md)
-
-### 15. Instructor Do: Review JSX Variables (5 mins)
-
-* Go over the [Solved](../../../../01-Class-Content/19-react/01-Activities/07-Stu_JSXVariables/Solved) version of the activity.
-
-  ![JSX Curly](Images/10-JSXCurly.png)
-
-* Make sure everyone understands that when we use JSX curly braces, it means we want to evaluate a JavaScript expression inside. The final value of the expression will be rendered to the page.
-
-### 16. Instructor Do: CSS Demo (10 mins)
-
-* Inform the class that now we're going to talk about some new built-in options for styling our components.
-
-* Replace your React app's `src` folder with [08-Ins_CSSDemo/src](../../../../01-Class-Content/19-react/01-Activities/08-Ins_CSSDemo/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
-
-* Open your browser to [localhost:3000](http://localhost:3000) and demonstrate the rendered application.
-
-  ![CSS Demo](Images/11-CSSDemo.png)
-
-* Explain that Create React App allows us to import CSS into our components. Open the `Header` component to demonstrate this.
-
-  ![Header](Images/12-Header.png)
-
-* Point out that we aren't saving the stylesheet to a variable. Instead, whenever we import a stylesheet, an internal style tag is created and added to the document.
-
-* Demonstrate how the `Header` is using the classes defined in the `Header.css` stylesheet it's importing.
-
-  ![Header Styles](Images/13-HeaderStyles.png)
-
-* This approach may be a good idea if we want to keep our component more closely coupled to its styles. Ask the class: How many times have you been working on a project or homework assignment and had a CSS issue because of CSS that was a little messy?
-
-* By separating our CSS files by component, we'll generally have smaller, more manageable stylesheets. Adding new styles or changing existing ones should be easier as our applications grow larger.
-
-* Explain that we are also able to add inline styles to JSX elements. Open the `Card` component to demonstrate this.
-
-  ![Inline Styles](Images/14-InlineStyles.png)
-
-* Point out that we can set a `style` similarly to how we can when writing regular HTML code, but with two key differences. Ask the class: What's happening inside of our JSX that we wouldn't do with regular HTML?
-
-  * React expects the `style` property to be an object, rather than a string.
-
-  * We're using JSX curly braces to embed the style object.
-
-* Point out that the object properties are camelCased and non-numerical values are strings. Numerical values will default to pixels if a unit of measurement is expected.
-
-* Explain that writing inline styles with JavaScript objects may feel a little strange, but this has some advantages over using actual stylesheets:
-
-  * Using a `style` property, our styles are scoped to the components they're attached to, meaning we won't have any issues with CSS scoping or naming collisions.
-
-  * Because our styles are defined using a JavaScript, we can can write JavaScript logic to determine what our styles should be at any given point. This will be useful as we begin to build more dynamic apps.
-
-* Explain that we could define our component's styles inside of a CSS stylesheet, we could use inline styles, or we could use some mixture of the two.
-
-  * It's up to us to decide how we want to organize our component styles, but there is value in being consistent in whichever approach or hybrid approach we take.
-
-### 17. Students Do: CSS Props (10 mins)
-
-* In this activity students will change the appearance of an application's components using inline styles.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/09-Stu_StyleProp/README.md)
-
-* Slack out `09-Stu_StyleProp/Unsolved`
-
-### 18. Instructor Do: Go through Slides (10 mins) (High)
-
-* Go through the remainder of the slides.
-
-### 19. Instructor Do: Props Demo (15 mins) (High)
-
-* Inform the class that we can conceptualize React components as JavaScript functions.
-
-* It's a component's job to describe and _return_ some part of our application's UI.
-
-* Ask the class: If a component is a function that _returns_ some data, what else might a component be able to do?
-
-  * Since it's a function, a component can also receive arguments.
-
-* This allows us write components that behave differently based on the arguments that they receive.
-
-* We call the arguments we pass into React components `props`.
-
-* If you haven't already done so, scaffold out a React application by running the following command in your terminal: `create-react-app demoapp`.
-
-* This example uses Bootstrap. Add the following link tag to your React app's `public/index.html` file:
-
-  ```html
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+  * Be sure to link your `dist/index.js` code to your application.
   ```
 
-* Replace your React app's `src` folder with [10-Ins_PropsDemo/src](../../../../01-Class-Content/19-react/01-Activities/10-Ins_PropsDemo/src). Stop the dev server if it is already running. Start the app in dev mode by running `npm start`.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Demonstrate the rendered page in your web browser:
+### 7. Instructor Review: JS Minification (10 min) 
 
-  ![Alert Danger](Images/01-AlertDanger.png)
+* Ask the class the following question(s):
 
-* This example is rendering a simple Bootstrap alert element. Open `src/components/Alert.js` and demonstrate the code:
+  * How much of a reduction they saw in JS sizes from Input to Output?
 
-  ![Alert Component](Images/02-AlertComponent.png)
+  * How this could benefit developers, especially those with massive code bases?
 
-* Explain that every component has access to a `props` argument. Props is always an object containing all of the values passed the component.
+* While the minified code certainly appears different than the code we input to start, all of the functionality is retained.
 
-* We're using `props.type` to determine what the evaluated `className` of the `div` element is.
+* Ask the class, "Why might we not want to edit our minified code?".
 
-* This component renders `props.children` between it's `div` tags.
+  * It is important to have minified code in it's own file. It is not recommended to attempt editing minified code as it can be difficult to read, and even more difficult to debug due to the lack of readability.
 
-* Compare this to the value of `props` as it is logged to the console:
+* Ask the class the following question(s):
 
-  ![Logged Props](Images/03-LoggedProps.png)
+  * How might we minify image files?
 
-* Point out that since `props.type` is equal to "danger", then the computed `className` of the `div` in the `Alert` component is "alert alert-danger". This Bootstrap class is providing our component its styles.
+* Answer any questions before proceeding to the next activity.
 
-* The `Alert` component is also receiving a `children` prop with a value set to "Invalid id or password" &mdash; the same message being displayed inside of the rendered Bootstrap alert element.
+### 8. Instructor Demo: Enable Compression (5 min) 
 
-* Open `src/App.js` in your editor and explain to the class how these props are being passed into the `Alert` component.
+* Ask the class, "What do we do with files that are so large they are slowing load times?"
 
-  ![Alert Props](Images/04-AlertProps.png)
+  * We compress those files.
 
-* We have 2 ways of passing props into a component:
+* Ask the class, "What is a zip file?"
+  
+  * A `.zip` file is a compressed version of a normal folder. When you `unzip` it, the folder contains all of the information it had before it was zipped.
 
-* First, we can set an attribute to the rendered component's tag.
+* On the web we can use something called GZip compression via an NPM Package called `compression`.
 
-  * We're passing a `type` prop equal to `danger`.
+  * GZip is a form of data compression -- it takes a piece of data and makes it smaller. The original data can be restored by un-zipping the compressed file.
 
-* Second, we can give a component a sibling tag and pass an expression between the tags.
+  * It is relevant to web apps and web sites because the HTTP protocol includes the ability to gzip data that is being sent.
 
-  * We don't name this prop, it is automatically set a `children` key.
+  * This middleware will enable compression for our project, allowing for compressed versions of our files to be sent over the network for faster download times.
 
-  * We're passing a `children` prop equal to "Invalid user id or password".
+* Navigate to [compression npm](https://www.npmjs.com/package/compression)
 
-* Demonstrate how you can change what is rendered by the `Alert` component by passing it a different `type` and `children` prop.
+* Tell the class that using this middleware enables compression with just 3 lines of code.
 
-  * For example, setting `type` to "success" and `children` to "Welcome Back!" would render the following in the browser:
+* Now we are going to show students around the `Network` tab in Chrome Dev Tools.
 
-    ![Alert Success](Images/05-AlertSuccess.png)
+* Open up your `network` tab in the chrome dev tools. Navigate to the [New York Times](https://www.nytimes.com/). 
 
-* Explain that having this familiar syntax for passing props to our components is another way for JSX to be similar to HTML. We don't need to explicitly call any functions or modify any object properties ourselves.
+  ![Network Tab](Images/networkTab.png)
 
-* Explain that props allow us to customize our components so that we can reuse them in different situations.
+* Point students to all the incoming network traffic shown, and more specifically the file sizes column.
 
-  * For example, we might use this `Alert` component on a sign-in page and render a different alert depending on whether or not a user has successfully logged into their account.
+  ![Network Traffic](Images/networkTraffic.png)
 
-* Inform the class that we can pass any type of data as a prop, including strings, numbers, arrays, functions, even entire components.
+* There is a file size showing the compressed size (Smaller number) and its uncompressed size (larger number).
 
-* Props are the primary means by which we pass data around our React apps. React utilizes a unidirectional data flow, meaning data only flows one direction: from the top down, parent to child.
+  * Files that don't have two numbers are uncompressed files being sent unchanged.
 
-  * This unidirectional data flow makes changes in React apps more predictable and easier to debug.
+  **Note**: In order to see both rows, you may need to click the "Network Settings" cogwheel and click on the "Use large request rows" checkbox.
 
-* Ask the class: If a prop inside of our component isn't what we expect it to be, where could we look to find out why?
+* Answer any questions before proceeding to the next activity.
 
-  * We could look at the component's parent.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
 
-  * In this example, `App` and `Alert` have a parent/child relationship. `Alert` is being rendered inside of `App` and `App` is passing props to `Alert`.
+### 9. Student Do: Enable Compression (15 min) 
 
-* Take a moment to answer any questions before the first activity.
+* Direct students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
 
-### 20. Partners Do: Calculator Props (10 mins)
+* Break your students into pairs that will work together on this activity.
 
-* In this activity students will work with a partner to write a component that accepts props, performs arithmetic and renders the result.
+  ```md
+  # GZip Compression
 
-* **Instructions:** [README](../../../../01-Class-Content/19-react/01-Activities/11-Stu_PropsCalculator/README.md)
+  In this activity you are going to use an NPM package called compression to enable GZip compression in your project.
 
-### 21. Instructor Do: Review Calculator Props (10 mins)
+  ## Instructions
 
-* Open [PropsCalculator solved](../../../../01-Class-Content/19-react/01-Activities/11-Stu_PropsCalculator/Solved) in your IDE.
+  * Navigate to [compression npm](https://www.npmjs.com/package/compression)
 
-* Demonstrate how the completed example renders the result of each problem in the browser:
+    * Read about the installation procedure and some of the API's functionality. Use the docs to enable compression in your application.
 
-  ![Rendered Math](Images/01-RenderedMath.png)
+  * Once completed, navigate to your page and look at the traffic via the Network tab.
 
-* Demonstrate the code inside of the `Calculator` component:
+    * You should be able to see the sizes of the files your page is requesting.
 
-  ![Calculator](Images/02-CalculatorCode.png)
+    * Take note of the differing file sizes.
 
-* Point out how we're passing each `Math` component 3 props:
+    * This shows your Uncompressed/Compressed file sizes.
+  ```
 
-  * `num1`
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-  * `operator`
+### 10. Instructor Review: Enable Compression (10 min) 
 
-  * `num2`
+* Open [03-Stu_Enable-Compression](../../../../01-Class-Content/19-PWA/01-Activities/03-Stu_Enable-Compression/Solved) in your IDE and explain the following points
 
-* Point out how the numbers are wrapped in JSX curly braces, but the operator is in quotes.
+  * We first `npm install compression`
 
-* Ask the class: Why do you think this is?
-
-  * The operator is a string literal, and we can express that shorthand just using quotes without curly braces. The following are equivalent:
+  * We then add the following code to our `server.js`:
 
   ```js
-  <Math num1={19} operator={"+"} num2={341} />
+  const express = require("express");
+  const mongoose = require("mongoose");
+  const compression = require("compression");
+
+  const app = express();
+
+  app.use(compression());
   ```
 
-  * This shorthand only works for string literals. All other values we pass as props need to be in JSX curly braces.
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Image Compression (5 min) 
+
+* Ask the class the following question(s):
+
+* Have you ever gone to a site and experienced slow image loading times?
+
+  * Images are one of the most used assets on the web. They are everywhere, and there are more than you can imagine.
+
+  * This is normally due to oversized images or high resolution images being downloaded and taking time. Images are one of the main culprits in slowing down web loading times.
+
+* How might we be able to fix the problem of images that are too large?
+
+  * We can use a concept called *Image Compression*. For the purposes of our course we are going to talk about *Lossy Image Compression*.
+
+* What do we mean by "lossy" image compression?
+
+  * What lossy image compression basically means is that some of the image data is lost during compression. Once an image has used lossy compression, you cannot reverse the process due to this loss of data. The data lost will normally result in almost unnoticeable changes in image quality most of the time. 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
+
+### 12. Student Do: Image Compression (15 min) 
+
+* Direct students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Image Compression
+
+  In this activity you are going to use an online compression tool to decrease image file sizes for the Gallery App.
+
+  ## Instructions
+
+  * In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
+
+  * First, unzip the `uncompressedImages.zip` file.
+
+  * Next, navigate to [Tiny PNG](https://tinypng.com/).
+
+    * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
+
+  * Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
+
+  * Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 13. BREAK (30 min)
+
+### 14. Instructor Review: Image Compression (10 min) 
+
+* Ask the class the following question(s):
+
+* Did you see a loss in image quality?
+
+  * Image compression allows us to lower load times for our users without a loss of visual fidelity.
+
+* Do you see the benefits of compressing images?
+
+  * When we can save space while maintaining visual quality, that is a win win. It allows for us to have high resolution images for our page while we are still decreasing download/load times for our user.
+
+* What are some other things we can do to decrease our load times?
+
+  * We can load only images that are present on the screen. If the image is not visible to the user, we shouldn't bother downloading it yet.
+
+* Ask the class, "What if a user doesn't scroll through all of the images?"
+
+  * Now that we have compressed all of our images, we are certainly saving space. Point out, we are loading all 38 images when there is only 6-9 images showing at any time. If a students user is on mobile, it would only be 1-2 images at any time.
+
+  * This poses multiple problems. It not only makes loading slower, but is costly when it comes to data and those people using mobile who may not have an unlimited data plan. We certainly don't want to cost our user time and money, so what can be done?
+
+* Ask the class, "Why do we load all of the images at page load, if the user might not see them all?"
+
+  * Loading everything at once is the default. There is a concept in programming referred to as `lazy loading` that allows us to only download assets as they are needed.
+
+* Answer any questions before proceeding to the next activity.
+
+### 15. Instructor Demo: Lazy Loading (5 min) 
+
+* Open our completed [Lazy Loading Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
+
+  * If it loads too quickly, open your `Network` tab in your Dev Tools and throttle to `slow 3g`, disable cache, and refresh the page.
+
+  * ![Throttle Connection](Images/throttleConnection.png)
+
+* Ask the class, "What would enable us to know when an image is coming into the users viewport?"
+
+  * A Web API based on `scroll` events and the viewport intersection would allow us to keep an eye on when an element is or is not in view of our user.
+
+  * In the case of this application, we are loading 38 images when we may not need them all. Using lazy loading, If images were scrolled onto the screen that event would then load the images if they had entered the viewport.
+
+* Ask the class, "What web API would allow us this functionality?
+
+  * The `Intersection Observer API`. It provides a way to asynchronously observe when an element is or is not within our users viewport. 
+
+  * We can use this API to watch and then target elements as they enter the viewport
+
+* Ask the class, "How can the Intersection Observer API help us with loading images?"
+
+  * We are able to target images we would like, and observe them. As they enter the viewport of our user we can trigger a function that will then and only then load the image that has entered the viewport.
+
+  * Let's look at a code snippet that enables image lazy loading via JavaScript.
+  
+* Walk through the comments below:
+
+```js
+function initLazyImages() {
+  // Gather all of our images into a variable
+  const lazyImages = document.querySelectorAll(".lazy-image"); 
+  
+  function onIntersection(imageEntities) {
+    imageEntities.forEach(image => {
+      // When the image begins to intersect viewport, execute the if code block
+      if (image.isIntersecting) {
+        // Now that it is in viewport, we do not need to observe it anymore.
+        observer.unobserve(image.target);
+        // Set the image src to the image that has entered viewport.
+        image.target.src = image.target.dataset.src;
+      }
+    });
+  }
+  // Create a new instance of Intersection Observer
+  const observer = new IntersectionObserver(onIntersection);
+  // Observe all images on load.
+  lazyImages.forEach(image => observer.observe(image));
+}
+```
+
+* Ask the class, "How does this benefit our user?"
+
+  * By loading only necessary images, we can cut download/load times consistently and ensure as fast an experience as possible.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
+
+### 16. Student Do: Lazy Loading (15 min) 
+
+* Direct students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Lazy Loading Images
+
+  In this activity you are going to work with the Intersection Observer API to implement lazy loading functionality for our Gallery App.
+
+  ## Instructions
+
+  * In this activity you are going to take the Gallery App and implement Lazy Loading functionality.
+
+    * This will allow for us to load images only as they are needed, saving loading times.
+
+  * You will primarily be working within `loadImages.js`
+
+  * Inside of `public/assets/images` is a `.zip` file containing all the images needed for the app. Unzip this file and make sure the contents end up in your images folder.
+
+  * After you have completed implementing lazy loading, open your Dev Tools and run another Lighthouse Audit.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 17. Instructor Review: Lazy Loading (15 min) 
+
+* Open [loadImages.js](../../../../01-Class-Content/19-PWA/01-Activities/05-Stu_Gallery-Lazy-Load/Solved/public/assets/js/loadImages.js) and walk students through the code that enables lazy loading in our application.
 
   ```js
-  <Math num1={19} operator="+" num2={341} />
+  function initLazyImages() {
+    const lazyImages = document.querySelectorAll(".lazy-image");
   ```
 
-* Open the `Math` component and go through the code:
-
-  ![Math Code](Images/03-MathCode.png)
-
-* Point out that the `props` argument should be an object containing all of the values passed to the rendered `Math` component in the `Calculator.js` file.
-
-* We're running a switch case over `props.operator`. Depending on the operator, a different operator is performed with `props.num1` and `props.num2`. The result is stored in the `value` variable.
-
-* Point out how at the bottom of the function, we're returning `<span>{value}</span>`.
-
-* Explain that a function component only renders what is returned from it. With arrow functions, we have to explicitly write the `return` keyword when the function contains more than one statement.
-
-* Explain that we must either return JSX from a component, or nothing at all. This is why we had to wrap the `value` inside of the span tags.
-
-* Take another few minutes to answer any remaining questions.
-
-### 22. Partners Do: Props Review (15 mins)
-
-* Introduce students to [Props review](../../../../01-Class-Content/19-react/01-Activities/12-Stu_PropsReview/)
-
-* In this activity students will work with partners to make an existing React application more DRY through the use of reusable components and props.
-
-* **Instructions:** [README.md](../../../../01-Class-Content/19-react/01-Activities/12-Stu_PropsReview/README.md)
-
-* Instructional staff should be walking around the room available to assist students during this activity.
-
-### 23. Instructor Do: Review Props Review (10 mins)
-
-* Slack out the [solution](../../../../01-Class-Content/19-react/01-Activities/12-Stu_PropsReview/Solved) to the previous activity. Go through the code as a class.
-
-  ![Friend Card](Images/07-RenderedFriends.png)
-
-* Point out how the application being rendered to the browser doesn't look any different to the unsolved version, but now we've made our code more DRY by creating a reusable component, `FriendCard`, to render each friend with the appropriate prop inside of the `App` component.
-
-  ![Friend Card](Images/08-FriendsApp.png)
-
-* Open the `src/components/FriendCard/index.js` file and go through the code.
-
-  ![Friend Card](Images/09-FriendCard.png)
-
-* Point out that we use the `props` argument to access all of the values passed into the `FriendCard` component.
-
-  * Since props is an expression we want to embed inside of our JSX, we use JSX curly braces to do so.
-
-* Ask the class: In a real application, where might all of the friend JSON data come from?
-
-  * Normally we might receive the friend JSON from an AJAX request, and probably won't know ahead of time which friends will need to be rendered.
-
-* In your editor's sidebar, point out how each component is contained inside of its own folder containing a CSS file, and an `index.js` file.
-
-  ![Index Sidebar](Images/10-IndexSidebar.png)
-
-* Ask the class: "Why are we using `index.js` to hold the component instead of `FriendCard.js`?"
-
-  * Whenever we require/import a folder instead of a file, the folder's `index.js` file is required/imported by default (if it exists).
-
-  * This allows us to keep our paths for importing these components short. e.g. we can do:
+  * First we create a `const` called `lazyImages`. We save all elements with the class `lazy-image` to this constant variable
 
   ```js
-  import FriendCard from "./components/FriendCard";
+    function onIntersection(imageEntities) {
+      imageEntities.forEach(image => {
+        if (image.isIntersecting) {
+          observer.unobserve(image.target);
+          image.target.src = image.target.dataset.src;
+        }
+      });
+    }
   ```
-
-  * instead of:
+  * Next, we create an `onIntersection` function. In this function we state that for each mage, if the image is intersecting the viewport we load our image and stop observing it as it is now on screen.
 
   ```js
-  import FriendCard from "./components/FriendCard/FriendCard";
+    const observer = new IntersectionObserver(onIntersection);
   ```
 
-  * Giving all of our components their own folder is another option for organizing our React apps. Each folder could contain any CSS or other dependencies the component will need.
+  * We used a constructor function to create a new instance of IntersectionObserver, saving it to a constant variable `observer`. This allowed us to use it in our `onIntersection` function.
 
-* Spend another moment making sure the class understands the overall concept of passing and receiving props. Go back and forth between the `friends.json` file, the `FriendCard` component, and your web browser to visually demonstrate how the data is being used.
+  ```js
+    lazyImages.forEach(image => observer.observe(image));
+  }
+  ```
 
-* Point out that while is code is more DRY than it was, we're still manually rendering a `FriendCard` for each piece of data &mdash; we'll come back and solve this problem in a later activity!
+  * The final line subscribes all images to be observed by IntersectionObserver to it can download the proper image when the placeholder is scrolled into view.
 
-### 24. END (0 mins)
+* Answer any questions before proceeding to the next activity.
 
-* Listed below are sections of the React Documentation that pertain to today's lesson. All are short reads, encourage students to browse through these resources to help reinforce the concepts covered today.
+### 18. Instructor Demo: Optimize Gallery App (5 min) 
 
-  * [Hello World](https://facebook.github.io/react/docs/hello-world.html)
+* Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
 
-  * [Introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
+* For this next activity, students will take the completed gallery application and minify all of the JS.
 
-  * [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html)
+* Answer any questions before proceeding to the next activity.
 
-  * [Components and Props](https://facebook.github.io/react/docs/components-and-props.html)
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
 
-### Lesson Plan Feedback
+### 19. Student Do: Optimize Gallery App (20 min) 
 
-How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this anonymous survey.
+* Direct students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
 
-[Class Survey](https://forms.gle/nYLbt6NZUNJMJ1h38)
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Optimize Gallery App
+
+  In this activity you will use the Lazy Loading, GZip Compression, Image Compression, and Lighthouse to improve the performance of the Gallery App.
+
+  ## Instructions
+
+  * First, unzip the uncompressed images zip file found in `public/assets/images`.
+
+  * Run the following commands:
+
+    * Start MongoDB (run `mongod` in your terminal)
+    * In a new terminal window run `npm install`
+    * `npm run seed`
+    * `node server.js`
+
+  * Now that the application is running, navigate to the [localhost](https://localhost:3000)
+
+  * Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
+
+  * Now, using the compression npm package, enable gzip compression in the application.
+
+  * Restart your server and run a new audit.
+
+  * Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
+
+  * Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
+
+  * Restart your server and run a new audit.
+
+  * Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
+
+  * Create a `dist` folder in `/public`.
+
+    * Inside of `public/dist` create a file called `index.js`
+
+    * Link this `index.js` to your application in `public/index.html`.
+
+  * Head to [JSCompress](https://jscompress.com/).
+
+  * Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
+
+    * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
+
+  * Finally, restart your server and run a new audit.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 20. Instructor Review: Optimize Gallery App (15 min) 
+
+* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
+
+  * npm install
+
+  * npm install compression
+
+* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
+  
+  ```js
+  const compression = require("compression");
+
+  app.use(compression());  
+  ```
+
+  * With these two lines of code we can easily enable GZip compression in our application for our served files.
+
+* Ask the class, "Is Tiny PNG our only option for Image Compression?"
+
+  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
+
+  * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
+
+* Ask the class, "Can you see the ways you can use these performance enhancements in your existing applications?"
+
+  * Optimizing our applications to be performant on all devices and connection speeds will make us better developers. We need to consider those with smaller devices or slower speeds at all times as to not alienate any user base.
+
+* Answer any questions before proceeding to the next activity.
+
+### 21. Instructor Demo: Progressive Web Apps (5 min) 
+
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
+
+  * It's the Image Gallery application from earlier. But there's something different about it...
+ 
+  * If we open the Settings in Chrome, we will see an option to `Install Images App...`
+ 
+  * When we select `Install Images App...` we are presented with an option to "Install app?"
+ 
+  * When we click `Install`, a new Chrome window opens with our application running in it. 
+ 
+  * It is now installed as a desktop app! If we search our applications, we will find "Images App" listed among them.
+
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is different about our Image Gallery application? 
+  
+  * 🙋 There is added functionality to install it as a desktop application.
+
+  * ☝️ If we can install the Images App application on our laptops, where else might we install it? 
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `07-Stu_PWAs/README.md`.
+
+### 22. Student Do: Progressive Web Apps (15 min) 
+
+* Direct students to the activity instructions found in `07-Stu_PWAs/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # Progressive Web Applications
+
+  In this activity, you will install a progressive web application (PWA) using your smart phone. You will also research the definition and production of a PWA. If you are unable to find the icons mentioned in this activity, try them in Chrome on your computer.
+
+  ## Instructions
+
+  * Follow these instructions to install a PWA for your specific smartphone OS:
+
+  * iOs:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
+
+    * 2. Tap the Share button in Safari.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Tap Add in the upper-right corner.
+
+    * 5. Name your PWA, then tap Add in the upper-right corner.
+
+  * Android:
+
+    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
+
+    * 2. Tap the menu button in the upper right corner of Chrome.
+
+    * 3. Tap the icon labeled Add to Home Screen.
+
+    * 4. Name your PWA, then tap Add below the promp.
+
+  * Be prepared to answer the following question(s): 
+
+      * What is a progressive web application? 
+
+      * How do we create progressive web applications?
+
+  ## 🏆 Bonus
+
+  * What are examples of popular PWAs?
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 23. Instructor Review: Progressive Web Apps (15 min)
+
+* Use the prompts and talking points below to review the following key point(s):
+  
+  * ✔️ Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript, that allow users to work offline
+  
+  * ✔️ PWAs require a manifest, a service worker and the Cache API
+  
+* Ask the class the following question(s) and call on students for the corresponding answer(s):
+
+  * ☝️ What is a progressive web application?
+  
+  * 🙋 Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript
+  
+  * ☝️ What is meant by the term 'native' app?
+  
+  * 🙋 The term "native app" refers to applications written for specific platforms. For example, native iPhone apps are written in iOs and Android apps are primarily written in Java. Apple apps will not run on Android devices and vice versa. 
+
+  * ☝️ How are PWAs different from native apps?
+
+  * 🙋 Traditional Mobile Apps require multiple builds across platforms, are less discoverable by search engines and have high abandonment rates.They also offer less usability and don’t leverage mobile device capabilities and are often slow and bloated. PWAs provide advantages of both web and mobile apps such as push notifications, offline experiences,speed and stability. Plus, you can convert a web app into a PWA quickly without the build time of a mobile app.
+  
+  * ☝️ What do we need to learn to convert an application into a progressive web application?
+
+  * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
+  
+* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
+  
+  * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
+
+    ![Application Sidebar](Images/application-sidebar.png)
+
+  * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
+
+  ![Offline](Images/offline-mode.png)
+
+* Answer any questions before ending the class.
+
+### 24. END (0 min)
+
+How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
