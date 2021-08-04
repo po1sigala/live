@@ -2,23 +2,21 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Welcome to your first Career Connection! In each unit of this course, Career Connections will review real-world applications for the material covered, preparing you to be tested on your new knowledge in technical interviews and equipping you with strategies to become employer-competitive.
 
 We've consulted many employers to learn what will help applicants stand out from the crowd. With that knowledge, we'll suggest steps that you can take every week to reach that point.
 
 ### Becoming Employer-Competitive
 
-Here at Career Services, we often refer to two job-preparedness levels: **employer-ready** and **employer-competitive**. Let's review what these terms mean:
+Here at career services, we often refer to two job-preparedness levels: **employer-ready** and **employer-competitive**. Let's review what these terms mean:
 
 * **Employer-ready** means that you meet the minimum requirements to apply for a developer job. You have strong, complete job search materials (such as a resume, portfolio, and LinkedIn profile). With some luck, an employer might notice your application and decide that you fit their needs.
 
 * **Employer-competitive** means that you've given yourself the best chance to secure your desired job. You've compiled excellent job search materials, you know how to prepare for interviews, and you use multiple networking strategies to proactively seek and pursue the jobs you want. 
 
-    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to Career Services](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/intro-to-career-services). 
+    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to career services](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/intro-to-career-services). 
 
-Most of the students who work with Career Services to become employer-competitive find employment within six months after graduation! 
+Most of the students who work with career services to become employer-competitive find employment within six months after graduation! 
 
 Becoming employer-competitive requires that you start now to position yourself as a developer, think like a developer, and engage with the online development community. Ready to get started? Complete the following three steps, and you’ll be that much closer to acing the job interview when the time comes.
 
@@ -108,9 +106,7 @@ When you've answered these questions on your own, search the internet to check y
 
 ### Career Services Events
 
-![Career Services online events logo](./assets/online-events.png)
-
-To learn more about the technical interviewing process, see [Career Services' upcoming workshops](https://careerservicesonlineevents.splashthat.com/).
+To learn more about the technical interviewing process, see [Career services' upcoming workshops](https://careerservicesonlineevents.splashthat.com/).
 
 ---
 

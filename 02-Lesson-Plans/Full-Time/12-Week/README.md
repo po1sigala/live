@@ -22,7 +22,7 @@ Refer to the [Class Content Unit Overview for Unit 23](../../../01-Class-Content
 
 ## Career Connection
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

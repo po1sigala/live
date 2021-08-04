@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Welcome to another Career Connection! And congratulations on completing even more intense material, during which jQuery became a new friend. 
 
 You might come across articles that question whether anyone should still learn jQuery in this day and age. Although jQuery was originally developed to do what JavaScript couldn't, by now JavaScript has developed and introduced many of the features that popularized jQuery. 
@@ -59,8 +57,6 @@ For practice in a live, interview-style IDE complete the following algorithm cha
 Once you start, you'll have seven days to complete it. After seven days, the challenge will close. The solution will be discussed in the weekly recommended session.
 
 ### Career Services Events
-
-![Career Services online events logo](./assets/online-events.png)
 
 To learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 

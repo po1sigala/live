@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Welcome to another Career Connection! This unit is tackling Structured Query Language, or SQL for short.
 
 Your first exposure to SQL can be a little overwhelming, especially in the beginning, because a lot of errors can arise during setup. But once you've got it working, Structured Query Language is immensely useful.
@@ -52,7 +50,7 @@ If you haven't already, write that resume! Once you’ve submitted it for review
 
 Once you've checked your resume for all of the preceding criteria, submit it to your Profile Coach.
 
-Not sure how? Check with your Career Director or instructional team!
+Not sure how? Check with your Career Coach or instructional team!
 
 ### Technical Interview Preparation
 
@@ -71,8 +69,6 @@ For practice in a live, interview-style IDE, complete the following algorithm ch
 Once you start, you'll have seven days to complete it. After seven days, the challenge will close.
 
 - CodeSignal Algorithm: [Camel Case Separation](https://app.codesignal.com/public-test/Az2qBBpbLLktvi6MR/6KJ2ebjXrCiSPo)
-
-![online-events](./assets/online-events.png)
 
 If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 

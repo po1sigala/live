@@ -34,9 +34,9 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 17](../../../01-Class-Content/17-CS/04-Career-Connection/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/04-Important/CAREER-CONNECTION.md).
+* Remind students that related Career services material can be found in their Career Connection folder for [Unit 17](../../../01-Class-Content/17-CS/04-Career-Connection/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/04-Important/CAREER-CONNECTION.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

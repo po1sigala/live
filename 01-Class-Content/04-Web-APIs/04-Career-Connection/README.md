@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png)
-
 Congratulations! You've learned how to work with Web APIs and DOM manipulation, meaning that you can now use JavaScript to manipulate data on the page. No longer do prospective employers stare at static blocks of text on your portfolio website&mdash;instead, they can scroll past dynamic graphics and cards and can contact you with the click of a button.
 
 ### Becoming Employer-Competitive
@@ -63,8 +61,6 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 - CodeSignal Algorithm: [Count Vowel Consonant](https://app.codesignal.com/public-test/YvSg9mctHApfLBuMH/qBHxbHRS4Yghf8)
 
 ### Career Services Events 
-
-![Career Services online events logo](./assets/online-events.png)
 
 If you want to hear more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 

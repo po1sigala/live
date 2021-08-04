@@ -19,9 +19,9 @@ In this unit, we will be introducing students to the NoSQL database with MongoDB
 * In the next unit, we will spend a lot of time practicing performance optimizing techniques. This should serve as a transition into the React unit. If necessary, replace some activities in the next unit with review/skipped activities from this unit.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/18-NoSQL/04-Important/CAREER-CONNECTION.md).
+Remind students that related Career services material can be found in their [important folder](../../../01-Class-Content/18-NoSQL/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
 
 ## Helpful Links
 

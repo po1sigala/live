@@ -86,7 +86,7 @@ In the homework, you’ll create a portfolio page using React. This project will
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](http://bit.ly/CodingCS).
+Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career services website](http://bit.ly/CodingCS).
 
 ## Heads-Up
 

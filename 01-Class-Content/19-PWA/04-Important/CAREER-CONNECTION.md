@@ -2,8 +2,6 @@
 
 ## Career Connection: PWAs
 
-![cs-logo](./assets/cs_logo.png)
-
 ### Introduction
 
 You're covering Progressive Web Applications and are learning how to optimize legacy applications to ensure that they are more accessible to devices running on slower connections. We get it, at first, this might not seem like an incredibly exciting topic—but it's an incredibly important skillset to have as you start talking with prospective employers!
@@ -77,6 +75,6 @@ Once you start, you'll have seven days to complete it. After the seven days has 
 
 - CodeSignal Algorithm: [Missing Number](https://app.codesignal.com/public-test/xttcwYyLzN9udSHRm/oEiyqtuFgGaFLj)
 
-![online-events](./assets/online-events.png)
+### Career Services Events
 
 If you're interested in hearing more about the technical interviewing process, check out our [upcoming workshops!](https://careerservicesonlineevents.splashthat.com/)

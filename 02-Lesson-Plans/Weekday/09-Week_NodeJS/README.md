@@ -18,9 +18,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
+* Remind students that related Career services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

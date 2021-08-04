@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Now you're learning a cutting edge technology that is being quickly adapted by enterprise companies across the globe&mdash;NoSQL databases! We learned MongoDB along with an ORM called Mongoose, but there are also others out there which we'll look at in this section.
 
 But first, a little more about the professional use cases of a NoSQL database. Databases like MongoDB are being adopted by enterprise companies as a quick and easy way to spin up new applications. However, they are not without their criticisms. For example:
@@ -63,6 +61,6 @@ Once you start, you'll have seven days to complete it. After the seven days has 
 
 - CodeSignal Algorithm: [Word Tumble](https://app.codesignal.com/public-test/W38trZ3bQdqpabN2X/SvJ3vebQ5oLSJu)
 
-![Career Services online events](./assets/online-events.png)
+### Career Services Events
 
 If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!

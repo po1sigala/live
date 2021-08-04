@@ -42,7 +42,7 @@ Part of being a web developer means being a part of a community. Having a place 
 
 ## Career Connection
 
-For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
+For more information about Career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career services website](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

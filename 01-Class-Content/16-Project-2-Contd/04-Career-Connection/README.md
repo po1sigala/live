@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 By the end of Project #2, you’ll have built your first collaborative full-stack web application. What an accomplishment! Armed with two group projects to show off, you should take a few steps to prepare for the last part of this course: your journey to landing your first job as a full-stack developer! First of all, consider how you might talk about this project when applying for jobs. Then update your portfolio page and other professional materials to become more employer-competitive.
 
 ### Technical Interview Preparation
@@ -112,7 +110,5 @@ Update your resume with the skills you’ve learned since the first group projec
 Update your LinkedIn profile with your new skills and technologies and make sure that you include a strong bio statement, a professional photo, and links to your Github profile and portfolio.
 
 ### Career Services Events
-
-![Career Services Online Events graphic](./assets/online-events.png)
 
 If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!

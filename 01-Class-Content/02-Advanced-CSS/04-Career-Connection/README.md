@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Welcome, welcome! Congratulations&mdash;you've now added advanced CSS to your skill set, in addition to the HTML and CSS that you learned previously. 
 
 CSS is one of those technologies that developers tend to either love or hate. Whichever side you're on, the cold hard truth is that every developer must use it. Even back-end developers will occasionally be asked to quickly put together interfaces for their applications to demonstrate how they work. 
@@ -84,8 +82,6 @@ For each of the following questions, write down your answer before looking at th
     This one doesn't have a right or wrong answer. Developers have opinions, and prospective employers want to know that you do too. List two or three things you found difficult or irritating about learning CSS, and describe how you overcame those.
 
 ### Career Services Events
-
-![online-events](./assets/online-events.png)
 
 To learn more about the technical interviewing process and to practice algorithms in a mock interview, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
 

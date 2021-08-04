@@ -26,9 +26,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in the [Career Connection folder](../../../01-Class-Content/17-CS/04-Career-Connection/README.md).
+* Remind students that related Career services material can be found in the [Career Connection folder](../../../01-Class-Content/17-CS/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](http://bit.ly/CodingCS).
+* If you'd like more information on Career services, visit the [Career services resources page](http://bit.ly/CodingCS).
 
 ## Heads-Up
 
