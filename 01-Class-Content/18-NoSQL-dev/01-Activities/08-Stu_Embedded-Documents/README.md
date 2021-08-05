@@ -8,7 +8,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When I query the embedded data using the `db.collection.find()` method, the matching data should be returned. 
+When I query the embedded data using the `db.collection.find()` method, the matching data should be returned.
 
 ## Actual Behavior
 
@@ -18,9 +18,9 @@ When I query the embedded data using the `db.collection.find()` method, no match
 
 1. In the Unsolved folder, run `npm install` and `node server`
 
-2. Open Insomnia and enter the GET Route `/price-less-than-10`. A list of books that have a price of less than $10 should be returned.
+2. Open Insomnia and enter the GET Route `/price-less-than-10`. A list of books that have a price of less than $10 is not returned.
 
-3. Open Insomnia and enter the GET Route `/featured-authors`. A list of books that have at least one featured author should be returned.
+3. Open Insomnia and enter the GET Route `/featured-authors`. A list of books that have at least one featured author is not returned.
 
 ---
 
