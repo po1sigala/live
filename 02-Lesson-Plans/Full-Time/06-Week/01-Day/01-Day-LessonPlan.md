@@ -1240,8 +1240,6 @@ In this lesson, students will learn how to create an API, define the routes, per
 
     app.use(express.static('public'));
 
-    app.get('/jobs', (req, res) => res.json(db));
-
     app.listen(port, () =>
       console.log(
         `Serving static asset routes on port ${port}! Visit http://localhost:3001/`
