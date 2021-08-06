@@ -1,7 +1,7 @@
 const express = require('express');
 
 const PORT = 3001;
-const reviews = require('./db/reviews.js');
+const reviews = require('./db/reviews');
 
 const app = express();
 
@@ -61,29 +61,17 @@ app.post('/api/reviews', (req, res) => {
   console.log(req.body);
 });
 
+// POST request to upvote a review
 app.post('/api/upvotes/:review_id', (req, res) => {
-  // Log our request to the terminal
-  if (req.body && req.params.review_id && req.body.upvote) {
+  if (req.body && req.params.review_id) {
     console.info(`${req.method} request received to upvote a review`);
-
-    let requestedUpvote;
-    // Coerce the string value to a boolean value (only needed for URL encoded body)
-    if (typeof req.body.upvote === 'boolean') {
-      requestedUpvote = req.body.upvote;
-    } else {
-      requestedUpvote = req.body.upvote == 'true';
-    }
-
-    // Log the request body
-    console.info(req.body);
-
     const reviewId = req.params.review_id;
-
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId && requestedUpvote) {
+      if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}`);
+        // send back the updated vote count
+        res.json(currentReview);
         return;
       }
     }
