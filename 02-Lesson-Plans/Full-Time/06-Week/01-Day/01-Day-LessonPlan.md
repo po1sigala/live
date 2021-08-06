@@ -717,7 +717,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     const { sortData } = require('./sortData');
 
     const sortHelper = (type) =>
-      termData.sort(sortData('name', 'relevance', `${type}`));
+      termData.sort(sortData('term', 'relevance', `${type}`));
     ```
 
   * The first route will return all the terms in the database. This route also contains the logic to sort the terms by relevance (in ascending or descending order) using query strings:
