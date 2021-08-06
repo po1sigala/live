@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have created an Express.js server that hosts on `http://localhost:3001`.
+* It's done when I have required the `db.json` file in the server.js file.
 
-* It's done when I have created an endpoint for `/api` that will return a list of pull requests for a given GitHub repository.
+* It's done when I have created a variable called `app` in the server.js file that is an instance of the Express.js app.
 
-* It's done when my endpoint accepts multiple queries for `organization` and `repository`.
+* It's done when I have created a `GET` route for `/api` that will return the content of our json file.
 
-* It's done when I have tested my endpoints by performing a GET request in Insomnia to both `api/organization` and `/api/repository` and verified that the desired results for each route are returned.
+* It's done when I have tested my endpoint by performing a `GET` request to `/api` using Insomnia.
 
 ---
 
