@@ -382,7 +382,7 @@ Students will also learn how to create modular routes for better organization an
   ```md
   # 📐 Add Comments to Implementation of Client-Side POST Requests
 
-  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js).
+  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [public/scripts/index.js](./Unsolved/public/scripts/index.js).
 
   ## 📝 Notes
 
@@ -500,9 +500,9 @@ Students will also learn how to create modular routes for better organization an
         };
 
         console.log(response);
-        res.json(response);
+        res.status(201).json(response);
       } else {
-        res.json('Error in posting review');
+        res.status(500).json('Error in posting review');
       }
     })
     ```
@@ -846,9 +846,9 @@ Students will also learn how to create modular routes for better organization an
         body: newReview,
       };
 
-      res.json(response);
+      res.status(201).json(response);
     } else {
-      res.json('Error in posting review');
+      res.status(500).json('Error in posting review');
     }
     ```
 
@@ -1497,8 +1497,8 @@ Students will also learn how to create modular routes for better organization an
 
     ```sh
     heroku create
-
     ```
+
   * Then we check whether the remote URL for Heroku was added to the repository:
 
     ```sh

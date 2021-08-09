@@ -47,9 +47,9 @@ app.post('/api/reviews', (req, res) => {
     };
 
     console.log(response);
-    res.json(response);
+    res.status(201).json(response);
   } else {
-    res.json('Error in posting review');
+    res.status(500).json('Error in posting review');
   }
 });
 

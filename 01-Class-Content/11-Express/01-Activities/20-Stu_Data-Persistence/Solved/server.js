@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const reviews = require('./db/reviews.json');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
@@ -21,7 +20,7 @@ app.get('/', (req, res) =>
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {
   // Send a message to the client
-  res.json(`${req.method} request received to get reviews`);
+  res.status(200).json(`${req.method} request received to get reviews`);
 
   // Log our request to the terminal
   console.info(`${req.method} request received to get reviews`);
@@ -74,9 +73,9 @@ app.post('/api/reviews', (req, res) => {
     };
 
     console.log(response);
-    res.json(response);
+    res.status(201).json(response);
   } else {
-    res.json('Error in posting review');
+    res.status(500).json('Error in posting review');
   }
 });
 
