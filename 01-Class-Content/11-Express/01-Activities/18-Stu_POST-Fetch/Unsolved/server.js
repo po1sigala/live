@@ -56,6 +56,7 @@ app.post('/api/reviews', (req, res) => {
       product,
       review,
       username,
+      upvotes: Math.floor(Math.random() * 201) - 100,
       review_id: uuid(),
     };
 
@@ -76,32 +77,37 @@ app.post('/api/reviews', (req, res) => {
 });
 
 // GET request for upvotes
-app.get('/api/upvotes', (req, res) => {
-  // Inform the client
-  res.json(`${req.method} request received to retrieve upvote count`);
-
-  // Log our request to the terminal
-  console.info(`${req.method} request received to retrieve upvote count`);
+app.get('/api/upvotes/:review_id', (req, res) => {
+  fs.readFile(path.join(__dirname, '/public/reviews.json'), (err, data) => {
+    if (err) {
+      res.json(err);
+    } else {
+      const reviews = JSON.parse(data);
+      for (let i = 0; i < reviews.length; i++) {
+        const currentReview = reviews[i];
+        if (currentReview.review_id === req.params.review_id) {
+          res.json({
+            message: `The review with ID ${currentReview.review_id} has ${currentReview.upvotes}`,
+            upvotes: currentReview.upvotes,
+          });
+          return;
+        }
+      }
+      res.json('Review ID not found');
+    }
+  });
 });
 
-// Post request to upvote a review
+// POST request to upvote a review
 app.post('/api/upvotes/:review_id', (req, res) => {
-  // Log our request to the terminal
-  if (req.body && req.params.review_id && req.body.upvote) {
+  if (req.body && req.params.review_id) {
     console.info(`${req.method} request received to upvote a review`);
-
-    // Log the request body
-    console.info(req.body);
-
     const reviewId = req.params.review_id;
-    const requestedUpvote = req.body.upvote;
-
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
-      // console.log(currentReview.review_id, reviewId);
-      if (currentReview.review_id === reviewId && requestedUpvote) {
+      if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}`);
+        res.json(`New upvote count is: ${currentReview.upvotes}!`);
         return;
       }
     }
