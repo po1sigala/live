@@ -56,7 +56,7 @@ app.post('/api/reviews', (req, res) => {
       product,
       review,
       username,
-      upvotes: Math.floor(Math.random() * 201) - 100,
+      upvotes: Math.floor(Math.random() * 100),
       review_id: uuid(),
     };
 
@@ -68,10 +68,10 @@ app.post('/api/reviews', (req, res) => {
     console.log(response);
 
     // TODO: Add a comment explaining the functionality of res.json()
-    res.json(response);
+    res.status(201).json(response);
   } else {
     // TODO: Add a comment describing the purpose of the else statement in this POST request.
-    res.json('Error in posting review');
+    res.status(500).json('Error in posting review');
   }
 });
 

@@ -56,7 +56,7 @@ app.post('/api/reviews', (req, res) => {
       product,
       review,
       username,
-      upvotes: Math.floor(Math.random() * 201) - 100,
+      upvotes: Math.floor(Math.random() * 100),
       review_id: uuid(),
     };
 
@@ -66,9 +66,9 @@ app.post('/api/reviews', (req, res) => {
     };
 
     console.log(response);
-    res.json(response);
+    res.status(201).json(response);
   } else {
-    res.json('Error in posting review');
+    res.status(500).json('Error in posting review');
   }
 });
 
@@ -78,14 +78,14 @@ app.get('/api/upvotes/:review_id', (req, res) => {
   for (let i = 0; i < reviews.length; i++) {
     const currentReview = reviews[i];
     if (currentReview.review_id === req.params.review_id) {
-      res.json({
+      res.status(200).json({
         message: `The review with ID ${currentReview.review_id} has ${currentReview.upvotes}`,
         upvotes: currentReview.upvotes,
       });
       return;
     }
   }
-  res.json('Review ID not found');
+  res.status(404).json('Review ID not found');
 });
 
 // POST request to upvote a review
@@ -97,11 +97,11 @@ app.post('/api/upvotes/:review_id', (req, res) => {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}!`);
+        res.status(200).json(`New upvote count is: ${currentReview.upvotes}!`);
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).json('Review ID not found');
   }
 });
 
