@@ -458,10 +458,11 @@ In this lesson, students will complete a mini project that reinforces routing an
   mysql -u root -p
   ```
 
-* Create the database by running the schema file, then exit the MySQL Shell using the `exit` command:
+* Create the database by running the schema and seeds file, then exit the MySQL Shell using the `exit` command:
 
   ```sh
-  SOURCE db/schema.sql
+  SOURCE db/schema.sql;
+  SOURCE db/seeds.sql;
   ```
 
 * Add your MySQL password to the `server.js` file and run `npm install` and `node server.js`.
