@@ -19,22 +19,24 @@ app.get('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to get reviews`);
 
   // Sending all reviews to the client
-  return res.json(reviews);
+  return res.status(200).json(reviews);
 });
 
 // GET request for a single review
 app.get('/api/reviews/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
+  if (req.params.review_id) {
     console.info(`${req.method} request received to get a single a review`);
     const reviewId = req.params.review_id;
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {
-        res.json(currentReview);
+        res.status(200).json(currentReview);
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).send('Review not found');
+  } else {
+    res.status(400).send('Review ID not provided');
   }
 });
 
@@ -52,9 +54,9 @@ app.post('/api/reviews', (req, res) => {
       status: 'success',
       data: req.body,
     };
-    res.json(`Review for ${response.data.product} has been added!`);
+    res.status(201).json(response);
   } else {
-    res.json('Request body must at least contain a product name');
+    res.status(400).json('Request body must at least contain a product name');
   }
 
   // Log the response body to the console
@@ -70,11 +72,11 @@ app.post('/api/upvotes/:review_id', (req, res) => {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}!`);
+        res.status(200).json(`New upvote count is: ${currentReview.upvotes}!`);
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).json('Review ID not found');
   }
 });
 

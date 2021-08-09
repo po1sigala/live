@@ -26,22 +26,6 @@ app.get('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to get reviews`);
 });
 
-// GET request for a single review
-app.get('/api/reviews/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
-    console.info(`${req.method} request received to get a single a review`);
-    const reviewId = req.params.review_id;
-    for (let i = 0; i < reviews.length; i++) {
-      const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId) {
-        res.json(currentReview);
-        return;
-      }
-    }
-    res.json('Review ID not found');
-  }
-});
-
 // POST request to add a review
 app.post('/api/reviews', (req, res) => {
   // Log that a POST request was received
@@ -82,45 +66,6 @@ app.post('/api/reviews', (req, res) => {
     res.json(response);
   } else {
     res.json('Error in posting review');
-  }
-});
-
-// GET request for upvotes
-app.get('/api/upvotes/:review_id', (req, res) => {
-  fs.readFile(path.join(__dirname, '/public/reviews.json'), (err, data) => {
-    if (err) {
-      res.json(err);
-    } else {
-      const reviews = JSON.parse(data);
-      for (let i = 0; i < reviews.length; i++) {
-        const currentReview = reviews[i];
-        if (currentReview.review_id === req.params.review_id) {
-          res.json({
-            message: `The review with ID ${currentReview.review_id} has ${currentReview.upvotes}`,
-            upvotes: currentReview.upvotes,
-          });
-          return;
-        }
-      }
-      res.json('Review ID not found');
-    }
-  });
-});
-
-// POST request to upvote a review
-app.post('/api/upvotes/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
-    console.info(`${req.method} request received to upvote a review`);
-    const reviewId = req.params.review_id;
-    for (let i = 0; i < reviews.length; i++) {
-      const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId) {
-        currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}!`);
-        return;
-      }
-    }
-    res.json('Review ID not found');
   }
 });
 

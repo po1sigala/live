@@ -1,8 +1,8 @@
 const express = require('express');
-const { fstat } = require('fs');
 const path = require('path');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
+const reviews = require('./db/reviews');
 
 const PORT = 3001;
 
@@ -19,16 +19,13 @@ app.get('/', (req, res) =>
 
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {
-  // Send a message to the client
-  res.json(`${req.method} request received to get reviews`);
-
-  // Log our request to the terminal
-  console.info(`${req.method} request received to get reviews`);
+  console.info(`GET /api/reviews`);
+  res.status(200).json(reviews);
 });
 
-// GET request for a single review
+// GET a single review
 app.get('/api/reviews/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
+  if (req.params.review_id) {
     console.info(`${req.method} request received to get a single a review`);
     const reviewId = req.params.review_id;
     for (let i = 0; i < reviews.length; i++) {
@@ -38,7 +35,9 @@ app.get('/api/reviews/:review_id', (req, res) => {
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).send('Review not found');
+  } else {
+    res.status(400).send('Review ID not provided');
   }
 });
 
@@ -73,26 +72,20 @@ app.post('/api/reviews', (req, res) => {
   }
 });
 
-// GET request for upvotes
+// GET request for a specific review's upvotes
 app.get('/api/upvotes/:review_id', (req, res) => {
-  fs.readFile(path.join(__dirname, '/public/reviews.json'), (err, data) => {
-    if (err) {
-      res.json(err);
-    } else {
-      const reviews = JSON.parse(data);
-      for (let i = 0; i < reviews.length; i++) {
-        const currentReview = reviews[i];
-        if (currentReview.review_id === req.params.review_id) {
-          res.json({
-            message: `The review with ID ${currentReview.review_id} has ${currentReview.upvotes}`,
-            upvotes: currentReview.upvotes,
-          });
-          return;
-        }
-      }
-      res.json('Review ID not found');
+  console.info(`${req.method} request received to get upvotes for a review`);
+  for (let i = 0; i < reviews.length; i++) {
+    const currentReview = reviews[i];
+    if (currentReview.review_id === req.params.review_id) {
+      res.json({
+        message: `The review with ID ${currentReview.review_id} has ${currentReview.upvotes}`,
+        upvotes: currentReview.upvotes,
+      });
+      return;
     }
-  });
+  }
+  res.json('Review ID not found');
 });
 
 // POST request to upvote a review

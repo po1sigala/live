@@ -26,22 +26,6 @@ app.get('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to get reviews`);
 });
 
-// GET request for a single review
-app.get('/api/reviews/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
-    console.info(`${req.method} request received to get a single a review`);
-    const reviewId = req.params.review_id;
-    for (let i = 0; i < reviews.length; i++) {
-      const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId) {
-        res.json(currentReview);
-        return;
-      }
-    }
-    res.json('Review ID not found');
-  }
-});
-
 // POST request to add a review
 app.post('/api/reviews', (req, res) => {
   // Log that a POST request was received
