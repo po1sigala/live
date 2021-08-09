@@ -18,7 +18,7 @@ feedbackForm
     };
 
     // Fetch POST request to the server
-    fetch('http://localhost:3001/api/feedback', {
+    fetch('api/feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

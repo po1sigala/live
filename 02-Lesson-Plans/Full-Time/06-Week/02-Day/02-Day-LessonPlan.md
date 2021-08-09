@@ -658,8 +658,16 @@ Students will also learn how to create modular routes for better organization an
   * Even though we created the logic to write to the file system, it is still necessary to conclude the route handler by sending something to the client using `res.json()`:
 
     ```js
-    res.json(response);
+    res.status(201).json(response);
     ```
+
+  * Also, we handle any errors that may occur by sending a response with the `res.status(500)` method.
+
+    ```js
+    res.status(500).json("Error in posting review");
+    ```
+
+  * 🔑 Remember that status codes in the 200 range indicate success and status codes in the 500 range indicate an error.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
