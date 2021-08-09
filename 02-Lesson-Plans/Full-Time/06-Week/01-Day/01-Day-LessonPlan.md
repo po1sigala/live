@@ -447,7 +447,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * It's done when I have created an `app` variable set to the value of `express()`.
 
-  * It's done when I have created an API route to `/api/terms`.
+  * It's done when I have created an API route to `/api/`.
 
   * It's done when GET requests made using the browser to the API endpoint return the content found in `terms.json`.
 
