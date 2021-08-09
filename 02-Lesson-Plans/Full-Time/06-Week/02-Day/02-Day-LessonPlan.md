@@ -382,7 +382,7 @@ Students will also learn how to create modular routes for better organization an
   ```md
   # 📐 Add Comments to Implementation of Client-Side POST Requests
 
-  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [public/scripts/index.js](./Unsolved/public/scripts/index.js).
+  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [index.js](./Unsolved/public/scripts/index.js).
 
   ## 📝 Notes
 
