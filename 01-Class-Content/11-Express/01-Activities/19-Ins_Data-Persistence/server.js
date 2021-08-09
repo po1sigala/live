@@ -116,11 +116,7 @@ app.post('/api/upvotes/:review_id', (req, res) => {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-<<<<<<< HEAD
         res.json(`New upvote count is: ${currentReview.upvotes}!`);
-=======
-        res.json(`Review for ${currentReview.product} has been upvoted!`);
->>>>>>> aa9a59869f39ef8e08434e7cb0365c627c2abffb
         return;
       }
     }
