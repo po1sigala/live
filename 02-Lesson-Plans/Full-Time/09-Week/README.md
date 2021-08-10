@@ -40,9 +40,11 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 ## Heads-Up
 
-* Next week, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). 
+* In Unit 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). 
 
-* They will also start learning about React. Students may feel a little overwhelmed with the new, unusual syntax. Remind them that at the end of the day, we're still just working with JavaScript. Prioritize making sure they understand concepts, rather than worrying about them perfectly memorizing syntax.
+* In Unit 20, you will build on React foundations, and guide students through application development using three-layer MERN architecture.  You will also introduce students to the GraphQL Playground and Apollo Server. If you are new to the GraphQL and the GraphQL Playground or Apollo Server, please refer to the Apollo Docs on GraphQL Playground and the [Apollo Docs on introduction to Apollo Server](https://www.apollographql.com/docs/apollo-server/).
+
+>> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
 ## Helpful Links
 
