@@ -26,7 +26,7 @@ How can the [GitHub Docs on pulls](https://docs.github.com/en/rest/reference/pul
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you save multiple request URLs in Insomnia Core?
+* How can you save multiple request URLs in Insomnia?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

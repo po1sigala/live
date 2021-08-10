@@ -465,17 +465,18 @@ Students will also learn how to create modular routes for better organization an
 
     ```js
     if (product && review && username) {
-        const newReview = {
-          product,
-          review,
-          username,
-          review_id: uuid(),
-        };
+      const newReview = {
+        product,
+        review,
+        username,
+        upvotes: Math.floor(Math.random() * 100),
+        review_id: uuid(),
+      };
 
-        const response = {
-          status: 'success',
-          body: newReview,
-        };
+      const response = {
+        status: 'success',
+        body: newReview,
+      };
     ```
 
   * 🔑 In this demo, we are not writing to the actual file system, so at the end of the route handler, we simply return the `response` object, which contains a `status` and the `newReview` that we created:
@@ -491,6 +492,7 @@ Students will also learn how to create modular routes for better organization an
           product,
           review,
           username,
+          upvotes: Math.floor(Math.random() * 100),
           review_id: uuid(),
         };
 
@@ -625,6 +627,7 @@ Students will also learn how to create modular routes for better organization an
         product,
         review,
         username,
+        upvotes: Math.floor(Math.random() * 100),
         review_id: uuid(),
       };
     ```

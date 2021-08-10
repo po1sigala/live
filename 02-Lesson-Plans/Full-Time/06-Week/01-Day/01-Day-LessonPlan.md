@@ -1360,7 +1360,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * How can you save multiple request URLs in Insomnia Core?
+  * How can you save multiple request URLs in Insomnia?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```

@@ -41,7 +41,7 @@ app.post('/api/reviews', (req, res) => {
       product,
       review,
       username,
-      upvotes: Math.floor(Math.random() * 201) - 100,
+      upvotes: Math.floor(Math.random() * 100),
       review_id: uuid(),
     };
 
