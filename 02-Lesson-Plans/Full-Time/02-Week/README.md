@@ -26,9 +26,9 @@ Refer to the Class Content Unit Overview for [Unit 03](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related Career services material can be found in their Career Connection folder for [Unit 03](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md) and [Unit 04](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 03](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md) and [Unit 04](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
 
-* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

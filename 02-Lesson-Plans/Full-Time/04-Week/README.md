@@ -34,11 +34,11 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
 ## Career Connection
 
-* There is no Career services material for Unit 07.
+* There is no career services material for Unit 07.
 
-* Remind students that related Career services material can be found in their Career Connection folder for [Unit 08](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md). 
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 08](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md). 
 
-* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

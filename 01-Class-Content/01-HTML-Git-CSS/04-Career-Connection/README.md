@@ -106,7 +106,7 @@ When you've answered these questions on your own, search the internet to check y
 
 ### Career Services Events
 
-To learn more about the technical interviewing process, see [Career services' upcoming workshops](https://careerservicesonlineevents.splashthat.com/).
+To learn more about the technical interviewing process, see [career services' upcoming workshops](https://careerservicesonlineevents.splashthat.com/).
 
 ---
 

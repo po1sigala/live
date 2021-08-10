@@ -84,7 +84,7 @@ This section contains tasks tips and tasks for instructors and TAs to follow dur
 
 ### End of Week (or Unit)
 
-* Make the Career services announcement (found in the Unit Overview).
+* Make the career services announcement (found in the Unit Overview).
 
 * Push solutions to any homework assignments that were due.
 

@@ -74,7 +74,7 @@ For your homework, you'll build a weather dashboard using various endpoints from
 
 ## Career Connection
 
-Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career services website](https://careernetwork.2u.com/).
+Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

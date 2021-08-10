@@ -28,9 +28,9 @@ In this unit, you will implement CDNs to leverage third-party APIs, like CSS fra
 
 ## Career Connection
 
-* Remind students that related Career services material can be found in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
 
-* If you'd like more information on Career services, visit the [Career services resources page](https://careernetwork.2u.com/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
 
 ## Heads-Up
 

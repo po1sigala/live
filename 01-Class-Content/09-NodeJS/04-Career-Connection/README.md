@@ -64,7 +64,7 @@ The Projects section of your portfolio should make it easy for prospective emplo
 
 #### Step #3: Submit Portfolio Link on Bootcamp Spot
 
-Last but not least, submit your portfolio on Bootcamp Spot! Once you do this, you are one step closer to being marked as employer-ready. When this happens, a number of Career services resources will open up to you, such as employer networking events and webinars, online interactive workshops, and more!
+Last but not least, submit your portfolio on Bootcamp Spot! Once you do this, you are one step closer to being marked as employer-ready. When this happens, a number of career services resources will open up to you, such as employer networking events and webinars, online interactive workshops, and more!
 
 ### Technical Interview Preparation
 

@@ -40,7 +40,7 @@ Instead of using the front end you developed for your first project, you should 
 
 ## Career Connection
 
-For more information about Career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career services website](https://careernetwork.2u.com/).
+For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/).
 
 ## Heads-Up
 
