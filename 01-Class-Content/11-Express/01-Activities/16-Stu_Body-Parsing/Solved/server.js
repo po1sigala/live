@@ -1,7 +1,7 @@
 const express = require('express');
 
 const PORT = 3001;
-const reviews = require('./db/reviews.js');
+const reviews = require('./db/reviews');
 
 const app = express();
 
@@ -19,22 +19,24 @@ app.get('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to get reviews`);
 
   // Sending all reviews to the client
-  return res.json(reviews);
+  return res.status(200).json(reviews);
 });
 
 // GET request for a single review
 app.get('/api/reviews/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
+  if (req.params.review_id) {
     console.info(`${req.method} request received to get a single a review`);
     const reviewId = req.params.review_id;
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {
-        res.json(currentReview);
+        res.status(200).json(currentReview);
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).send('Review not found');
+  } else {
+    res.status(400).send('Review ID not provided');
   }
 });
 
@@ -52,42 +54,29 @@ app.post('/api/reviews', (req, res) => {
       status: 'success',
       data: req.body,
     };
-    res.json(`Review for ${response.data.product} has been added!`);
+    res.status(201).json(response);
   } else {
-    res.json('Request body must at least contain a product name');
+    res.status(400).json('Request body must at least contain a product name');
   }
 
   // Log the response body to the console
   console.log(req.body);
 });
 
+// POST request to upvote a review
 app.post('/api/upvotes/:review_id', (req, res) => {
-  // Log our request to the terminal
-  if (req.body && req.params.review_id && req.body.upvote) {
+  if (req.body && req.params.review_id) {
     console.info(`${req.method} request received to upvote a review`);
-
-    let requestedUpvote;
-    // Coerce the string value to a boolean value (only needed for URL encoded body)
-    if (typeof req.body.upvote === 'boolean') {
-      requestedUpvote = req.body.upvote;
-    } else {
-      requestedUpvote = req.body.upvote == 'true';
-    }
-
-    // Log the request body
-    console.info(req.body);
-
     const reviewId = req.params.review_id;
-
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId && requestedUpvote) {
+      if (currentReview.review_id === reviewId) {
         currentReview.upvotes += 1;
-        res.json(`New upvote count is: ${currentReview.upvotes}`);
+        res.status(200).json(`New upvote count is: ${currentReview.upvotes}!`);
         return;
       }
     }
-    res.json('Review ID not found');
+    res.status(404).json('Review ID not found');
   }
 });
 

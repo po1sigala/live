@@ -10,18 +10,19 @@ Work with a partner to implement the following user story:
 
 * It's done when I have used the `express.static()` method to declare the root directory to serve assets from.
 
-* It's done when I have used the `express.static()` method (inside the `app.use()` method) for granting access to the `public` folder assets. 
+* It's done when I have used the `express.static()` method (inside the `app.use()` method) for granting access to the `public` folder assets.
+
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
-[Express.js documentation on serving static files ](http://expressjs.com/en/starter/static-files.html)
+[Express.js documentation on serving static files](http://expressjs.com/en/starter/static-files.html)
 
 ---
 
 ## 💡 Hints
 
-How would we use routes to access the contents of a directory nested inside the `public` directory? 
+How would we use routes to access the contents of a directory nested inside the `public` directory?
 
 ## 🏆 Bonus
 
