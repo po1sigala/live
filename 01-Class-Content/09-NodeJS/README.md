@@ -96,7 +96,7 @@ In the homework for this unit, you’ll create a command-line application that u
 
 ## Career Connection
 
-Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/).
+Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

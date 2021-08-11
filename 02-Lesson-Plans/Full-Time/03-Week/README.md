@@ -39,7 +39,7 @@ Refer to the following links for detailed information on key topics, learning ob
 
 * [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
-If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
+If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

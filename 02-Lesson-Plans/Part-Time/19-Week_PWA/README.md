@@ -21,7 +21,7 @@ Next unit we will start React, with the following unit covering state management
 ## Career Connection
 Remind students that related career services material can be found in their [important folder](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
+If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 
 ## Helpful Links

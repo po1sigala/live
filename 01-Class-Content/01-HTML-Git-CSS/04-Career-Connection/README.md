@@ -14,7 +14,7 @@ Here at career services, we often refer to two job-preparedness levels: **employ
 
 * **Employer-competitive** means that you've given yourself the best chance to secure your desired job. You've compiled excellent job search materials, you know how to prepare for interviews, and you use multiple networking strategies to proactively seek and pursue the jobs you want.
 
-    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to career services](https://careernetwork.2u.com/articles/2021/07/18/career-pathways-web-development/). 
+    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to career services](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/articles/2021/07/18/career-pathways-web-development/). 
 
 Most of the students who work with career services to become employer-competitive find employment within six months after graduation! 
 

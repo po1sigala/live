@@ -32,7 +32,7 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 * Remind students that related career services material can be found in their Career Connection folder for [Unit 19](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md) and [Unit 20](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
 
-* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
