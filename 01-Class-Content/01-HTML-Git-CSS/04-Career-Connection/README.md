@@ -12,9 +12,9 @@ Here at career services, we often refer to two job-preparedness levels: **employ
 
 * **Employer-ready** means that you meet the minimum requirements to apply for a developer job. You have strong, complete job search materials (such as a resume, portfolio, and LinkedIn profile). With some luck, an employer might notice your application and decide that you fit their needs.
 
-* **Employer-competitive** means that you've given yourself the best chance to secure your desired job. You've compiled excellent job search materials, you know how to prepare for interviews, and you use multiple networking strategies to proactively seek and pursue the jobs you want. 
+* **Employer-competitive** means that you've given yourself the best chance to secure your desired job. You've compiled excellent job search materials, you know how to prepare for interviews, and you use multiple networking strategies to proactively seek and pursue the jobs you want.
 
-    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to career services](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/intro-to-career-services). 
+    > **Deep Dive:** To learn more about becoming employer-competitive, see this [Intro to career services](https://careernetwork.2u.com/articles/2021/07/18/career-pathways-web-development/). 
 
 Most of the students who work with career services to become employer-competitive find employment within six months after graduation! 
 
@@ -86,7 +86,7 @@ Review the search results for each category. Then write your answers to the foll
 
 Before you move on to the next module, make sure to add HTML, CSS, and Git to the Technical Skills list on your resume. This will help you pass those pesky automated resume scanners and will indicate to potential employers that you have the skills they need.
 
-> **Deep Dive:** To learn more, refer to the [Develop Your Resume milestone page](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume).
+> **Deep Dive:** To learn more, refer to the [Develop Your Resume milestone page](https://mycareerspot.org/resume).
 
 ### Prepare for the Technical Interview
 

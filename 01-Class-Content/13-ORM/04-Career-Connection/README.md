@@ -4,7 +4,7 @@
 
 Congratulations! You've added yet another crucial asset to your web development toolbox. But coding skills alone won't get you a job&mdash;you also need to work toward becoming employer-ready.
 
-If you still haven't completed the career services [Develop Your Resume milestone](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume), be sure to send that resume to a Profile Coach as soon as possible. This important step will help you unlock employer-ready status and access a wide range of career-related materials.
+If you still haven't completed the career services [Develop Your Resume milestone](https://mycareerspot.org/resume), be sure to send that resume to a Profile Coach as soon as possible. This important step will help you unlock employer-ready status and access a wide range of career-related materials.
 
 ### Object-Relational Mapping (ORM)
 

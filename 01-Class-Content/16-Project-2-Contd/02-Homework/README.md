@@ -37,7 +37,7 @@ If you are opting out of career services, this is *still a required assignment*.
 
 ## Updated Portfolio
 
-💁 Need help updating your Portfolio? Check out the [career services milestone resources for online presence](https://careernetwork.2u.com/onlinepresence).
+💁 Need help updating your Portfolio? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
 Your updated portfolio should:
 
@@ -118,13 +118,13 @@ Your GitHub profile must contain at least the following items:
 
 ## Updated Resume 
 
-💁 Need help building a resume? Check out the [career services milestone resources](https://careernetwork.2u.com/resume).
+💁 Need help building a resume? Check out the [career services milestone resources](https://mycareerspot.org/resume).
 
 Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
 
 ## Updated LinkedIn 
 
-💁 Need help updating your LinkedIn? Check out the [career services milestone resources for online presence](https://careernetwork.2u.com/onlinepresence).
+💁 Need help updating your LinkedIn? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
 
 Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
 
