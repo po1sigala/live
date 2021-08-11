@@ -38,7 +38,7 @@ For practice in a live, interview-style IDE, complete the following algorithm ch
 
 - CodeSignal Algorithm: [Missing Number](https://app.codesignal.com/public-test/xttcwYyLzN9udSHRm/oEiyqtuFgGaFLj)
 
-If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 - - -
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

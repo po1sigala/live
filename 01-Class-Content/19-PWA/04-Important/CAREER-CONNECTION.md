@@ -77,4 +77,4 @@ Once you start, you'll have seven days to complete it. After the seven days has 
 
 ### Career Services Events
 
-If you're interested in hearing more about the technical interviewing process, check out our [upcoming workshops!](https://careerservicesonlineevents.splashthat.com/)
+If you're interested in hearing more about the technical interviewing process, check out our [upcoming workshops!](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)
