@@ -7,7 +7,7 @@ const PORT = 3001;
 const app = express();
 
 const sortHelper = (type) =>
-  termData.sort(sortData('name', 'relevance', `${type}`));
+  termData.sort(sortData('term', 'relevance', `${type}`));
 
 // GET route to get all of the terms or all the terms sorted
 app.get('/api/terms/', (req, res) => {

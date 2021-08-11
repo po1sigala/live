@@ -26,6 +26,8 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line. 
 
+>> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+
 ## Career Connection
 
 * Remind students that related career services material can be found in their Career Connection folder for [Unit 19](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md) and [Unit 20](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
