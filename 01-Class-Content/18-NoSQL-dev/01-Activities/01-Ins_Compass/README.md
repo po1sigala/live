@@ -63,7 +63,7 @@ MongoDB Compass is the GUI for MongoDB and is a great way to explore a database 
 
   * We click on the arrow to the left of the `shelterDB` database to open it and click on the `petCollection` collection that appears below.
 
-  * Once the `petCollection` is opened, the new document that we created appears in the Documents tab on the right of hte screen. 
+  * Once the `petCollection` is opened, the new document that we created appears in the Documents tab on the right of the screen. 
   
   * Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app.
 
