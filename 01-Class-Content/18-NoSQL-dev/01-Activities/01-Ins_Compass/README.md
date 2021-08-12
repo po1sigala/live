@@ -1,6 +1,6 @@
 # Instructor Demo: MongoDB Compass
 
-* MongoDB Compass is the GUI for MongoDB and is a great way to explore a database and interact with data visually. If you have not yet done so, please refer to [MongoDB docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) to download Compass prior to starting the activity.
+MongoDB Compass is the GUI for MongoDB and is a great way to explore a database and interact with data visually. If you have not yet done so, please refer to [MongoDB docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) to download Compass prior to starting the activity.
 
 * With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
@@ -14,9 +14,9 @@
 
   * The built-in MongoDB shell is located on the bottom left of the Local screen. Click on `MONGOSH` to open a new MongoDB shell.
 
-* in the open MongoDB shell, do the following: 
+* In the open MongoDB shell, do the following: 
 
-  * 🔑 To create a database, we select the new database using the `USE` command and give it a name. The `USE` command performs two common functions. If the database already exists, the `USE` command selects the existing database for use. If the database does not yet exist, `USE` creates the database as well as selects it for use.
+  * 🔑 To create a database, we select the new database using the `use` command and give it a name. The `use` command performs two common functions. If the database already exists, the `use` command selects the existing database for use. If the database does not yet exist, `use` creates the database as well as selects it for use.
 
   * To create a new `shelterDB` database, we enter `use` followed by the name of the database, `shetlerDB` after the prompt. 
 
@@ -65,7 +65,7 @@
 
   * Once the `petCollection` is opened, the new document that we created appears in the Documents tab on the right of hte screen. 
   
-  * Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app. 
+  * Using the visual interface we can explore, modify, and even delete the data using the `Find` and edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app.
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

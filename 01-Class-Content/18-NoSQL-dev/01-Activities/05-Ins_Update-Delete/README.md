@@ -1,6 +1,6 @@
 # Instructor Demo: MongoDB Compass - Update and Delete
 
-* If you have not yet done so, please refer to [MongoDB docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) to download Compass prior to starting the activity.
+If you have not yet done so, please refer to [MongoDB docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) to download Compass prior to starting the activity.
 
 * With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
@@ -12,7 +12,7 @@
 
 * In the open MongoDB shell, do the following: 
 
-  * 🔑 To create a database, we select the new database using the `USE` command and give it a name. 
+  * 🔑 To create a database, we select the new database using the `use` command and give it a name. 
 
     ```sh
     use mygroceryDB;
