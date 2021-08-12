@@ -10,7 +10,7 @@ MongoDB Compass is the GUI for MongoDB and is a great way to explore a database 
   
   > Note: You do not need to paste a connection string in the text box since you are using the default setting. Simply click on the `Connect` button and proceed to the next screen.
 
-  * At the top left of the `Local` screen under `host`, we see that a successful connection to the default `localhost:27017` has been made. 
+  * At the top left of the Local screen under `host`, we see that a successful connection to the default `localhost:27017` has been made. 
 
   * The built-in MongoDB shell is located on the bottom left of the Local screen. Click on `MONGOSH` to open a new MongoDB shell.
 
