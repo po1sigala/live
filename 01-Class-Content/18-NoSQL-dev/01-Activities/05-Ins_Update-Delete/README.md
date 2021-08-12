@@ -24,7 +24,7 @@ If you have not yet done so, please refer to [MongoDB docs on downloading and in
     db.groceryCollection.insertOne( {"item": "banana", "department": "produce"} );
     ```
 
-  * Click `enter` to execute the shell command. Make sure you note the generated `ObjectId(STRING-VALUE-HERE)`. We will use this unique identifier to delete this record later on.
+  * Click `enter` to execute the shell command. Make sure you note the generated `ObjectId({Unique-ID-String-Here})`. We will use this unique identifier to delete this record later on.
 
   * 🔑 To verify that the document has been added to our new collection, we can use the `find` method. If successful, our new document will be returned. 
 
