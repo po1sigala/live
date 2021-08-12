@@ -1,46 +1,46 @@
 # Instructor Demo: MongoDB Compass
 
-* MongoDB Compass is the GUI for MongoDB and is a great way to explore a database and interact with data in a visual way. 
+* MongoDB Compass is the GUI for MongoDB and is a great way to explore a database and interact with data visually. If you have not yet done so, please refer to [MongoDB docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) to download Compass prior to starting the activity.
 
-* Open Compass on your local machine to do the following:
+* With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
   * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on localhost with default port `27017`. We will use the default connection at `localhost:27017` to connect to Compass.  
 
-  * With a MongoDB server installed locally and running, click on the `Connect` button under `New Connection` at the center of the page.
+  * Click on the `Connect` button under `New Connection` at the center of the screen.
   
-  > Note: You do not need to paste a connection string in the text box since you are using the default setting. Simply click on the `Connect` button to connect and proceed to the next screen.
+  > Note: You do not need to paste a connection string in the text box since you are using the default setting. Simply click on the `Connect` button and proceed to the next screen.
 
-  * At the top left of the next screen under `host`, we see that we have successfully connected to `localhost:27017`.
+  * At the top left of the `Local` screen under `host`, we see that a successful connection to the default `localhost:27017` has been made. 
 
-  * The built-in MongoDB shell is located the bottom left of the Local screen. Click on `MONGOSH` to open a new MongoDB shell.
+  * The built-in MongoDB shell is located on the bottom left of the Local screen. Click on `MONGOSH` to open a new MongoDB shell.
 
-* Open the MongoDB shell to do the following: 
+* in the open MongoDB shell, do the following: 
 
   * 🔑 To create a database, we select the new database using the `USE` command and give it a name. The `USE` command performs two common functions. If the database already exists, the `USE` command selects the existing database for use. If the database does not yet exist, `USE` creates the database as well as selects it for use.
 
-  * To create a new `shelterDB` we enter, `useshelterDB;` after the prompt. 
+  * To create a new `shelterDB` database, we enter `use` followed by the name of the database, `shetlerDB` after the prompt. 
 
     ```sh
     use shelterDB;
     ```
 
-  * 🔑 Data in MongoDB databases is stored in one or more collections. Just like creating a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step.
+  * 🔑 Data in MongoDB databases is stored in one or more collections. Just like when we create a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step.
 
-    * We start our command with `db.` This `db` refers to the current database in use. We then entire the name of the collection we want to use. Since `petCollection` doesn't exist yet, it will be automatically created when the command is executed.
+    * We start our command with `db.` This `db` refers to the current database in use. We then use dot notation to enter the name of the collection we want to use. Since `petCollection` doesn't exist yet, it will be automatically created when our command is executed.
 
-    * We use the `insertOne()` method to insert a single document into our new collection, `petCollection`.
+    * Next, we add the `insertOne()` method to insert a single document into our new collection, `petCollection`.
 
       ```sh
       db.petCollection.insertOne();
       ```
 
-  * 🔑 Before executing the command, we fist must add our data. We define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`.
+  * 🔑 Before we can execute the command, though, we must add our document's data. We define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`.
 
     ```sh
     db.petCollection.insertOne({ pet: "dog", breed: "chihuahua"});
     ```
 
-  * Now that our command is complete, we click `enter` to insert the data.
+  * Now that our command is complete and contains the data we want to insert, we click `enter` to execute the command. 
 
   * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that MongoDB creates for us is included in this object. 
 
