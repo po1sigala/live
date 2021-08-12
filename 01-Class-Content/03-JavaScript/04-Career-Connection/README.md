@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![The text "Career Services" is overlaid on a blue circle.](./assets/cs_logo.png#right)
-
 Now you've learned some of the fundamental technologies on which all web applications are built. And you've added another tool to your skill set: JavaScript! Never underestimate the importance of JavaScript as a web technology. More than 94% of websites use it in some way. To learn more, read this Medium article [How Important is JavaScript for Modern Web Developers?](https://medium.com/@mindfiresolutions.usa/how-important-is-javascript-for-modern-web-developers-2854309b9f52)
 
 If you search for JavaScript on [Indeed.com](https://indeed.com/), you'll find hundreds, if not thousands, of search results. However, a search for JavaScript alone won't paint an accurate picture of job availability. JavaScript development is continuous, with numerous other technologies evolving and deriving from it, so companies might instead list frameworks or libraries that use JavaScript.
@@ -88,9 +86,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 ### Career Services Events
 
-![The text "Career Services Online Events" is overlaid on a photo of various people looking out a window.](./assets/online-events.png)
-
-If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 

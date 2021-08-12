@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Welcome, welcome! Congratulations&mdash;you've now added advanced CSS to your skill set, in addition to the HTML and CSS that you learned previously. 
 
 CSS is one of those technologies that developers tend to either love or hate. Whichever side you're on, the cold hard truth is that every developer must use it. Even back-end developers will occasionally be asked to quickly put together interfaces for their applications to demonstrate how they work. 
@@ -85,9 +83,7 @@ For each of the following questions, write down your answer before looking at th
 
 ### Career Services Events
 
-![online-events](./assets/online-events.png)
-
-To learn more about the technical interviewing process and to practice algorithms in a mock interview, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+To learn more about the technical interviewing process and to practice algorithms in a mock interview, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

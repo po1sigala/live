@@ -20,9 +20,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
 
-* For more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/additionalresources).
+* For more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/additionalresources).
 
 ## Heads-Up
 
