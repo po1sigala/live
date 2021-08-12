@@ -35,7 +35,7 @@ const postSchema = new Schema(
 postSchema
   .virtual('tagCount')
   // Getter
-  .get(function () {
+  .get(() => {
     return this.tags.length;
   });
 

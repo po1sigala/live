@@ -33,7 +33,7 @@ const postSchema = new Schema(
 postSchema
   .virtual('upvoteCount')
   // Getter
-  .get(function () {
+  .get(() => {
     return this.meta.upvotes;
   });
 

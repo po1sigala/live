@@ -8,8 +8,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/all-books', function (req, res) {
-  Book.find({}, function (err, result) {
+app.get('/all-books', (req, res) => {
+  Book.find({}, (err, result) => {
     if (err) {
       res.status(500).send({ message: 'Internal Server Error' });
     } else {

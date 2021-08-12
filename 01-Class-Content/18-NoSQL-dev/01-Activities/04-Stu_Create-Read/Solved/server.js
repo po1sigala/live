@@ -17,24 +17,26 @@ mongodb.connect(
   connectionStringURI,
   // Sets connection string parser and Server Discover and Monitoring engine to true and avoids warning
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function (err, client) {
+  (err, client) => {
     // Use client.db() constructor to add new db instance
     db = client.db();
     app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
-  });
+  }
+);
 
 // Built in Express function that parses incoming requests to JSON
 app.use(express.json());
 
 // Post request to create a single document to collection
-app.post('/create', function (req, res) {
+app.post('/create', (req, res) => {
   // collection() creates or selects instance of collection. Takes in collection name
   // insertOne() inserts single document into collection. Takes in object.
-  db.collection('bookCollection').insertOne({"title": req.body.title, "author": req.body.author}, 
+  db.collection('bookCollection').insertOne(
+    { title: req.body.title, author: req.body.author },
     // Handles error or results
-    function (err,results) {
+    (err, results) => {
       if (err) throw err;
       res.json(results);
     }
@@ -42,12 +44,12 @@ app.post('/create', function (req, res) {
 });
 
 // Get request ro read all the documents in a collection
-app.get('/read', function (req, res) {
+app.get('/read', (req, res) => {
   db.collection('bookCollection')
-    // find() returns all documents. Equivalent to `Select *` in SQL. 
+    // find() returns all documents. Equivalent to `Select *` in SQL.
     .find()
     // Returns all the documents in an array
-    .toArray(function (err, results) {
+    .toArray((err, results) => {
       // Handles error or results
       if (err) throw err;
       res.send(results);

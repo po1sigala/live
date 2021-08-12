@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Creates a new document
-app.post('/new-department/:department', function (req, res) {
+app.post('/new-department/:department', (req, res) => {
   const newDepartment = new Department({ name: req.params.department });
   newDepartment.save();
   if (newDepartment) {
@@ -22,9 +22,9 @@ app.post('/new-department/:department', function (req, res) {
 });
 
 // Finds all documents
-app.get('/all-departments', function (req, res) {
+app.get('/all-departments', (req, res) => {
   // Using model in route to find all documents that are instances of that model
-  Department.find({}, function (err, result) {
+  Department.find({}, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -35,8 +35,8 @@ app.get('/all-departments', function (req, res) {
 });
 
 // Find first document with name equal to "Kids"
-app.get('/find-one-department', function (req, res) {
-  Department.findOne({ name: 'Kids' }, function (err, result) {
+app.get('/find-one-department', (req, res) => {
+  Department.findOne({ name: 'Kids' }, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -47,10 +47,10 @@ app.get('/find-one-department', function (req, res) {
 });
 
 // Finds first document that matches and deletes
-app.delete('/find-one-delete/:department', function (req, res) {
+app.delete('/find-one-delete/:department', (req, res) => {
   Department.findOneAndDelete(
     { name: req.params.department },
-    function (err, result) {
+    (err, result) => {
       if (result) {
         res.status(200).json(result);
         console.log(`Deleted: ${result}`);
@@ -62,7 +62,7 @@ app.delete('/find-one-delete/:department', function (req, res) {
   );
 });
 
-app.post('/find-one-update/:department', function (req, res) {
+app.post('/find-one-update/:department', (req, res) => {
   // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
   // Update that name with the value given from the URL param
 });

@@ -11,7 +11,7 @@ const handleError = (err) => console.error(err);
 
 // Will add data only if collection is empty to prevent duplicates
 // More than one document can have the same name value
-Department.find({}).exec(function (err, collection) {
+Department.find({}).exec((err, collection) => {
   if (collection.length === 0) {
     Department.insertMany(
       [
@@ -23,7 +23,7 @@ Department.find({}).exec(function (err, collection) {
         { name: 'Contemporary' },
         { name: 'Biography' },
       ],
-      function (insertErr) {
+      (insertErr) => {
         if (insertErr) {
           handleError(insertErr);
         }

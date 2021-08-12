@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Creates a new department
-app.post('/new-department/:department', function (req, res) {
+app.post('/new-department/:department', (req, res) => {
   const newDepartment = new Department({ name: req.params.department });
   newDepartment.save();
   if (newDepartment) {
@@ -22,9 +22,9 @@ app.post('/new-department/:department', function (req, res) {
 });
 
 // Finds all departments
-app.get('/all-departments', function (req, res) {
+app.get('/all-departments', (req, res) => {
   // Using model in route to find all documents that are instances of that model
-  Department.find({}, function (err, result) {
+  Department.find({}, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -35,9 +35,9 @@ app.get('/all-departments', function (req, res) {
 });
 
 // Finds the first matching document
-app.get('/find-one-department', function (req, res) {
+app.get('/find-one-department', (req, res) => {
   // Using model in route to find all documents that are instances of that model
-  Department.findOne({ name: 'Wine' }, function (err, result) {
+  Department.findOne({ name: 'Wine' }, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -49,10 +49,10 @@ app.get('/find-one-department', function (req, res) {
 
 // Finds first document matching parameter and deletes
 // For demo, use 'Wine' as URL param
-app.delete('/find-one-delete/:departmentName', function (req, res) {
+app.delete('/find-one-delete/:departmentName', (req, res) => {
   Department.findOneAndDelete(
     { name: req.params.departmentName },
-    function (err, result) {
+    (err, result) => {
       if (result) {
         res.status(200).json(result);
         console.log(`Deleted: ${result}`);

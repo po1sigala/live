@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Creates a new document
-app.post('/new-department/:department', function (req, res) {
+app.post('/new-department/:department', (req, res) => {
   const newDepartment = new Department({ name: req.params.department });
   newDepartment.save();
   if (newDepartment) {
@@ -22,9 +22,9 @@ app.post('/new-department/:department', function (req, res) {
 });
 
 // Finds all documents
-app.get('/all-departments', function (req, res) {
+app.get('/all-departments', (req, res) => {
   // Using model in route to find all documents that are instances of that model
-  Department.find({}, function (err, result) {
+  Department.find({}, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -35,8 +35,8 @@ app.get('/all-departments', function (req, res) {
 });
 
 // Find first document with name equal to "Kids"
-app.get('/find-one-department', function (req, res) {
-  Department.findOne({ name: 'Kids' }, function (err, result) {
+app.get('/find-one-department', (req, res) => {
+  Department.findOne({ name: 'Kids' }, (err, result) => {
     if (result) {
       res.status(200).json(result);
     } else {
@@ -47,10 +47,10 @@ app.get('/find-one-department', function (req, res) {
 });
 
 // Finds first document that matches and deletes
-app.delete('/find-one-delete/:department', function (req, res) {
+app.delete('/find-one-delete/:department', (req, res) => {
   Department.findOneAndDelete(
     { name: req.params.department },
-    function (err, result) {
+    (err, result) => {
       if (result) {
         res.status(200).json(result);
         console.log(`Deleted: ${result}`);
@@ -63,7 +63,7 @@ app.delete('/find-one-delete/:department', function (req, res) {
 });
 
 // Finds the first document with the name with the value equal to 'Kids' and updates that name to the provided URL param value
-app.post('/find-one-update/:department', function (req, res) {
+app.post('/find-one-update/:department', (req, res) => {
   // Uses findOneAndUpdate() method on model
   Department.findOneAndUpdate(
     // Find first document with name of "Kids"
@@ -72,7 +72,7 @@ app.post('/find-one-update/:department', function (req, res) {
     { name: req.params.department },
     // Sets to true so updated information is returned; Otherwise original document will be returned
     { new: true },
-    function (err, result) {
+    (err, result) => {
       if (result) {
         res.status(200).json(result);
         console.log(`Deleted: ${result}`);

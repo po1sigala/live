@@ -15,7 +15,7 @@ const grocerySchema = new mongoose.Schema({
 const Item = mongoose.model('Item', grocerySchema);
 
 // Will add data only if collection is empty to prevent duplicates
-Item.find({}).exec(function (err, collection) {
+Item.find({}).exec((err, collection) => {
   if (collection.length === 0) {
     Item.insertMany(
       [
@@ -30,7 +30,7 @@ Item.find({}).exec(function (err, collection) {
         { item: 'snack cake', price: 4 },
         { item: 'wine', price: 10 },
       ],
-      function (insertError, insertedItems) {
+      (insertError, insertedItems) => {
         if (insertError) {
           console.log(insertError);
         }

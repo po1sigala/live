@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Finds all departments
-app.get('/all-departments', function (req, res) {
+app.get('/all-departments', (req, res) => {
   // Using model in route to find all documents that are instances of that model
-  Department.find({}, function (err, result) {
+  Department.find({}, (err, result) => {
     if (err) {
       res.status(500).json({ message: 'Internal server error' });
     }

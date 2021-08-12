@@ -25,7 +25,7 @@ const bookData = [
   { title: 'History of Hogwarts', price: 5 },
 ];
 
-Department.create({ name: 'Books', books: bookData }, function (err, data) {
+Department.create({ name: 'Books', books: bookData }, (err, data) => {
   if (err) {
     console.log(err);
   } else {

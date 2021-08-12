@@ -9,7 +9,7 @@ const bookSchema = new mongoose.Schema({
 });
 
 // Extend methods object with custom method
-bookSchema.methods.getDiscount = function () {
+bookSchema.methods.getDiscount = () => {
   const discountPrice = this.price * 0.5;
   console.log(
     `The book's title is ${this.title} and the discounted price is ${discountPrice}`
