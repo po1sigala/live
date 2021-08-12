@@ -26,7 +26,7 @@ If you have not yet done so, please refer to [MongoDB docs on downloading and in
 
   * Click `enter` to execute the shell command. Make sure you note the generated `ObjectId({Unique-ID-String-Here})`. We will use this unique identifier to delete this record later on.
 
-  * 🔑 To verify that the document has been added to our new collection, we can use the `find` method. If successful, our new document will be returned. 
+  * 🔑 To verify that the document has been added to our new collection, we can use the `find` method and pass in an empty object `{}` so that all documents currently in the collection will be returned. 
 
     ```sh
     db.groceryCollection.find({});
