@@ -18,7 +18,7 @@ If you have not yet done so, please refer to [MongoDB docs on downloading and in
     use mygroceryDB;
     ```
 
-  * 🔑 We use the `insertOne()` method to a create a new collection, `groceryCollection` and insert a single document with two key pairs. click `enter` to execute the shell command. 
+  * 🔑 We use the `insertOne()` method to a create a new collection, `groceryCollection` and insert a single document with two key pairs.
 
     ```sh
     db.groceryCollection.insertOne( {"item": "banana", "department": "produce"} );
@@ -52,7 +52,7 @@ If you have not yet done so, please refer to [MongoDB docs on downloading and in
     db.groceryCollection.deleteOne( {"item": "apple"});
     ```
 
-    * However, a better way to do this is to use the unique identifier, the `_id`. Replace the `item` field with `_id` and paste the ObjectID you noted above as the key-pair value and click `enter` to execute the command. 
+    * A better way to do this is to use the unique identifier, the `_id`. Replace the `item` field with `_id` and paste the ObjectID you noted above as the key-pair value and click `enter` to execute the command. 
 
     ```sh
     db.groceryCollection.deleteOne({ "_id" : ObjectId("YOUR-UNIQUE_ID")} );

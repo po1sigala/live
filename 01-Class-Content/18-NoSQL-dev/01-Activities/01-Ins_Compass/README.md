@@ -18,7 +18,7 @@ MongoDB Compass is the GUI for MongoDB and is a great way to explore a database 
 
   * 🔑 To create a database, we select the new database using the `use` command and give it a name. The `use` command performs two common functions. If the database already exists, the `use` command selects the existing database for use. If the database does not yet exist, `use` creates the database as well as selects it for use.
 
-  * To create a new `shelterDB` database, we enter `use` followed by the name of the database, `shetlerDB` after the prompt. 
+  * To create a new `shelterDB` database, we enter `use` followed by the name of the database, `shelterDB` after the prompt. 
 
     ```sh
     use shelterDB;
