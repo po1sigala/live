@@ -34,7 +34,7 @@ MongoDB Compass is the GUI for MongoDB and is a great way to explore a database 
       db.petCollection.insertOne();
       ```
 
-  * 🔑 Before we can execute the command, though, we must add our document's data. We define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`.
+  * 🔑 Before we can execute the command, though, we must add our document's data. We define an object that contains the fields and values that we want to store and pass the object into `insertOne()`.
 
     ```sh
     db.petCollection.insertOne({ pet: "dog", breed: "chihuahua"});
