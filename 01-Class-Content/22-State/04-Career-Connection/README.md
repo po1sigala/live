@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Go ahead and start the tech interview prep!
 
 ### Technical Interview Preparation
@@ -24,9 +22,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 - CodeSignal Algorithm: [Change to Ones](https://app.codesignal.com/public-test/jYHQ873GTw8sCwmDv/3LodRHTbsfXA6s)
 
-![online-events](./assets/online-events.png)
-
-If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

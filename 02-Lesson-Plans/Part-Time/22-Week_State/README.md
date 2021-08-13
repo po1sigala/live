@@ -14,6 +14,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/22-State/RE
 
 * Many of the activities this week allow students to review the skills needed for final projects. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
 
+>> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+
 * In this week's homework, the students will refactor the e-commerce platform from [Activity 26](../../../01-Class-Content/22-State/01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses Redux. Students can access the code in the class repo or [download the activity code here](https://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
 
 * Be sure to create a practice React app before class by navigating to `01-Class-Content/22-State-dev/01-Activities` and running `npx create-react-app 00-practice-app`.
@@ -24,9 +26,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/22-State/RE
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/22-State/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/22-State/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 You finally made it to React! Hopefully it will be everything you dreamed it is. Many students consider React this magical fantasy land that will do everything much more easily, and will create the most amazing applications -- and it does, once you've gotten over that steep learning curve.
 
 In many ways, it can feel like you're starting to learn front-end development all over again. This time, everything is ES6 JavaScript syntax and classes, JSX, and CSS as a JavaScript object. It's a whole new world -- and one we couldn't possibly teach you everything about in just a couple of weeks.
@@ -40,9 +38,7 @@ For practice in a live, interview-style IDE, complete the following algorithm ch
 
 - CodeSignal Algorithm: [Missing Number](https://app.codesignal.com/public-test/xttcwYyLzN9udSHRm/oEiyqtuFgGaFLj)
 
-![online-events](./assets/online-events.png)
-
-If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 - - -
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
