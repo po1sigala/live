@@ -36,21 +36,21 @@ The following animations show examples of the application's API routes being tes
 
 The following animation shows GET routes to return all users and all thoughts being tested in Insomnia Core:
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia Core.](./assets/homework/18-nosql-homework-demo-01.gif)
+![Demo of GET routes to return all users and all thoughts being tested in Insomnia Core.](./Assets/18-nosql-homework-demo-01.gif)
 
 The following animation shows GET routes to return a single user and a single thought being tested in Insomnia Core:
 
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia Core.](./assets/homework/18-nosql-homework-demo-02.gif)
+![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia Core.](./Assets/18-nosql-homework-demo-02.gif)
 
 The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia Core:
 
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia Core.](./assets/homework/18-nosql-homework-demo-03.gif)
+![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia Core.](./Assets/18-nosql-homework-demo-03.gif)
 
 In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia Core.
 
 The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia Core:
 
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia Core.](./assets/homework/18-nosql-homework-demo-04.gif)
+![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia Core.](./Assets/18-nosql-homework-demo-04.gif)
 
 In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia Core.
 
@@ -257,11 +257,6 @@ You are required to submit BOTH of the following for review:
 * A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-<!-- !TODO ASK IF THESE ARE RELEVANT -->
-> **Note:** You are allowed to miss up to two homework assignments and still earn your certificate. If you complete all homework assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Submit, then indicate you are skipping by typing “I choose to skip this assignment” in the text box.
-
-Comments are disabled for graded submissions in BootCamp Spot. If you have questions about your feedback, please notify your instructional staff or the Student Success Manager. If you would like to resubmit your work for an improved grade, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
