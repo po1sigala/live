@@ -250,6 +250,10 @@ This homework is graded based on the following criteria:
 
 * Repository contains a high-quality README with description and a link to a walkthrough video.
 
+### Bonus: +10 Points
+
+* Application deletes a user's associated thoughts when the user is deleted.
+
 ## Review
 
 You are required to submit BOTH of the following for review:
