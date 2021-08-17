@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, you will learn about NoSQL databases and perform CRUD operations using MongoDB, a popular NoSQL, document-based database. You will also learn to use Mongoose, an Object Data Modeling (ODM) library with your underlying MongoDB database to enforce a specific schema and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
+In this unit, you will learn about NoSQL databases and perform CRUD operations using MongoDB, a popular NoSQL, document-based database. You will also learn to use Mongoose, an Object Data Modeling (ODM) library with your underlying MongoDB database to enforce a specific schema and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also covered.
 
 ## Key Topics
 
@@ -48,7 +48,7 @@ You will be employer-ready if you are able to:
 
 * Limit, sort, and skip documents using MongoDB methods
 
-* Define the structure of the database with schema and use validators
+* Define the structure of the database with a Mongoose schema
 
 * Create a model to map to the MongoDB document and provide functionality
 
@@ -72,13 +72,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-  * [01-valid-brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
+  * [01: Valid Brackets](./03-Algorithms/01-valid-brackets)
 
     * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
 
-  * [02-min-increment-for-unique](../../../01-Class-Content/18-NoSQL/03-Algorithms/02-min-increment-for-unique)
+  * [02: Minimum Increment for Uniqueness](./03-Algorithms/02-min-increment-for-unique)
 
-  * [03-peak-finder](../../../01-Class-Content/18-NoSQL/03-Algorithms/03-peak-finder)
+  * [03: Peak Finder](./03-Algorithms/03-peak-finder)
 
 ### Assessments
 
@@ -108,7 +108,7 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📖 [Git Guide](./01-Activities/27-Evr-GitHub-Packages) 
 
-  * 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
+    * 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
 
 ### Full-Stack Blog Posts
 

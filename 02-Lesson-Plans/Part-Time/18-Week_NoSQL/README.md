@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this unit, we will be introduce students to NoSQL databases and performing CRUD operations using MongoDB. Students will also learn to use Mongoose, an Object Data Modeling (ODM) library, to enforce a specific schema on data and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
+In this unit, you will introduce students to NoSQL databases and performing CRUD operations using MongoDB, a popular NoSQL, document-based database. Students will also learn to use Mongoose, an Object Data Modeling (ODM) library, to enforce a specific schema on data and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/No-SQL/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -30,7 +30,6 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/No-SQL/READ
 
 In Unit 19, students will learn about Progressive Web Applications (PWA) and explore tools to improve both performance and offline capability. Refer to [MDN web docs on progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) for more information on the PWA design pattern.
 
-
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
@@ -55,14 +54,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ## Algorithms
 
-  * [01-valid-brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
+  * [01: Valid Brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
 
     * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
 
-  * [02-min-increment-for-unique](../../../01-Class-Content/18-NoSQL/03-Algorithms/02-min-increment-for-unique)
+  * [02: Minimum Increment for Uniqueness](../../../01-Class-Content/18-NoSQL/03-Algorithms/02-min-increment-for-unique)
 
-  * [03-peak-finder](../../../01-Class-Content/18-NoSQL/03-Algorithms/03-peak-finder)
-
+  * [03: Peak Finder](../../../01-Class-Content/18-NoSQL/03-Algorithms/03-peak-finder)
 
 ### Resources
 
