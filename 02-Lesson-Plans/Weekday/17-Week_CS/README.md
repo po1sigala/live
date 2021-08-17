@@ -32,9 +32,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Heads-Up
 
-In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
+In the next unit, we will return to the back end and learn about NoSQL databases using MongoDB, a popular, document-based database that integrates easily with JavaScript. 
 
-Be sure to have MongoDB installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your machine. Also, make sure students have it installed prior to coming to class.
+Be sure to have MongoDB and Compass installed on your machine before class. Follow the [How to Install MongoDB](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. Also, make sure students have it installed prior to coming to class.
+
+Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [Set Up MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
 
 ## Helpful Links
 
