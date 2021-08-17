@@ -56,7 +56,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
     * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
 
-  * [02: Minimum Increment for Uniqueness](../../../01-Class-Content/18-NoSQL/03-Algorithms/02-min-increment-for-unique)
+  * [02: Min Increment for Unique](../../../01-Class-Content/18-NoSQL/03-Algorithms/02-min-increment-for-unique)
 
   * [03: Peak Finder](../../../01-Class-Content/18-NoSQL/03-Algorithms/03-peak-finder)
 

@@ -76,7 +76,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
     * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
 
-  * [02: Minimum Increment for Uniqueness](./03-Algorithms/02-min-increment-for-unique)
+  * [02: Min Increment for Unique](./03-Algorithms/02-min-increment-for-unique)
 
   * [03: Peak Finder](./03-Algorithms/03-peak-finder)
 
