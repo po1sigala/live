@@ -110,9 +110,9 @@ Career Services material for this unit is located in the [Career Connection fold
 
 In the next unit, we will return to the back end and learn about NoSQL databases using MongoDB, a popular, document-based database that integrates easily with JavaScript. 
 
-Be sure to have MongoDB and Compass installed on your machine before class. Follow the [How to Install MongoDB](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. 
+Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. 
 
-Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [Set Up MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
+Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
 
 ## Resources
 

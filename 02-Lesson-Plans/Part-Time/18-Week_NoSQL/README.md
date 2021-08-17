@@ -8,11 +8,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/No-SQL/READ
 
 ## Instructor/TA Notes
 
-* Be sure to have MongoDB installed on your machine before the first class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) for instructions.
+* Be sure to have MongoDB and Compass installed on your machine before the first class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) for instructions.
 
 * Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. To use, make sure that you first have both MongoDB and Node.js installed. For start-up instructions refer to [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html)/
-
-* MongoDB Compass is a powerful GUI that is used in this unit to help students explore data visually. Please make sure to download Compass prior to class. Refer to [MongoDB Docs on downloading and installing Compass](https://docs.mongodb.com/compass/current/install/) for details on how to install on Windows, macOS, and Linux environments.
 
 * Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [Get started free with MongoDB Atlas](https://docs.atlas.mongodb.com/getting-started/).
 
