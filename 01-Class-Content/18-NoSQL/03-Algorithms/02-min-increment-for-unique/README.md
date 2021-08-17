@@ -1,4 +1,4 @@
-# Min Increment for Unique
+# Min Increment For Unique
 
 In this activity you will be writing code to create a function that takes in an array of numbers and returns the minimum number of increments needed to make the numbers unique.
 
