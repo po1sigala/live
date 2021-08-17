@@ -32,6 +32,8 @@ WHEN the user inputs a note
 THEN the note  will be shown on the page, and saved to their note taking application when their connection is back online.
 ```
 
+## Mock-Up
+
 The following animation demonstrates the application functionality:
 
 TODO add demo gif
