@@ -56,6 +56,8 @@ In addition to this, your walkthrough video should show the POST and DELETE rout
 
 ## Getting Started
 
+Be sure to have MongoDB installed on your machine. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB locally.
+
 Use the following guidelines to set up your models and API routes:
 
 ### Models
