@@ -22,7 +22,7 @@ const tagSchema = new Schema(
 tagSchema
   .virtual('getTagCss')
   // Getter
-  .get(() => {
+  .get(function () {
     return `color: ${this.color}`;
   });
 
