@@ -42,7 +42,7 @@ app.get('/read', (req, res) => {
 
 // To delete an object, the numerical id string must be wrapped with ObjectID()
 app.delete('/delete', (req, res) => {
-  // Use .deleteOne() to delete one object
+  // Use deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
     // This is the filter. The delete only the document that matches the _id provided in the request body
     { _id: req.body.id },
@@ -52,17 +52,3 @@ app.delete('/delete', (req, res) => {
     }
   );
 });
-
-// This version uses template literal
-app.delete -
-  example('/delete', (req, res) => {
-    // Use .deleteOne() to delete one object
-    db.collection('bookCollection').deleteOne(
-      // This is the filter. The delete only the document that matches the _id provided in the request body
-      { _id: `ObjectId(${req.body.id})` },
-      (err) => {
-        if (err) throw err;
-        res.send('Document deleted');
-      }
-    );
-  });
