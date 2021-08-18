@@ -50,7 +50,7 @@ app.delete('/delete', function (req, res) {
     }
   );
 });
-
+/*
 // This version uses template literal
 app.delete-example('/delete', function (req, res) {
   // Use .deleteOne() to delete one object
@@ -63,3 +63,4 @@ app.delete-example('/delete', function (req, res) {
     }
   );
 });
+*/
