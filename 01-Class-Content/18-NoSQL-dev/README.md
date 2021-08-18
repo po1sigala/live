@@ -84,7 +84,7 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 Assess your knowledge by answering technical interview questions and solving coding challenges.
 
-* @TODO LINK TO ASSESSMENT {WHEN BACK FROM EDITORIAL}
+* [Unit 18 Technical Interview Questions](https://docs.google.com/forms/d/e/1FAIpQLSesqYIGeSdWi219EmLoi73sCnMjn88KvVRG1Jibcmao37IKSw/viewform)
 
 ## Homework
 
