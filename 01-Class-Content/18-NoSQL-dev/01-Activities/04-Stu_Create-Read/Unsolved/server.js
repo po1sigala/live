@@ -31,9 +31,22 @@ app.post('/create', (req, res) => {
   );
 });
 
+app.post('/create-many', function (req, res) {
+  db.collection('bookCollection').insertMany(
+    [
+      {"title" : "Oh the Places We Will Go!"},
+      {"title" : "Diary of Anne Frank"}
+    ], 
+    function (err,results) {
+      if (err) throw err;
+      res.json(results);
+    }
+  );
+});
+
 app.get('/read', (req, res) => {
   db.collection('bookCollection')
-    .find()
+    .find({})
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
