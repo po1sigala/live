@@ -63,11 +63,11 @@ app.delete('/find-one-delete/:genre', (req, res) => {
 app.post('/find-one-update/:genre', (req, res) => {
   // Uses findOneAndUpdate() method on model
   Genre.findOneAndUpdate(
-    // Find first document with name of "Kids"
+    // Finds first document with name of "Kids"
     { name: 'Kids' },
-    // Replace name with value in URL param
+    // Replaces name with value in URL param
     { name: req.params.genre },
-    // Sets to true so updated information is returned; Otherwise original document will be returned
+    // Sets to true so updated document is returned; Otherwise original document will be returned
     { new: true },
     (err, result) => {
       if (result) {

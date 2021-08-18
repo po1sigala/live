@@ -6,17 +6,17 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I use a Mongoose CRUD method to select a single document with the `name` property of `Kids` and update it. 
+* It's done when I use a Mongoose CRUD method to select a single document with the `name` property of `Kids` and update it.
 
-* It's done when the updated document has an updated `name` property value that matches the value provided in the route parameter. 
+* It's done when the updated document has an updated `name` property value that matches the value provided in the route parameter.
 
-* It's done when only the `name` property has been updated in the document and no other changes have been made. 
+* It's done when only the `name` property has been updated in the document and no other changes have been made.
 
-* It's done when I test the `POST` Route in Insomnia and the updated document is returned. 
+* It's done when I test the `POST` Route in Insomnia and the updated document is returned.
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [Mongoose docs on findOneAndUpdate()](https://mongoosejs.com/docs/tutorials/findoneandupdate.html)
 

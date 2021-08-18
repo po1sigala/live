@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I test the instance method by running `node models/Book.js`.
 
-* It's down when the price of `discountedBook` is reduced by 50 percent and the results logged to the console.
+* It's down when the price of `discountedBook` is reduced by 50 percent and the results are logged to the console.
 
 ---
 

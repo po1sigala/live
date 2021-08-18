@@ -62,6 +62,7 @@ app.delete('/find-one-delete/:genre', (req, res) => {
 app.post('/find-one-update/:genre', (req, res) => {
   // TODO: Write a route that will find the first instance of a document that contains a name with the value equal to 'Kids'
   // Update that name with the value given from the URL param
+  // Return the updated document
 });
 
 db.once('open', () => {

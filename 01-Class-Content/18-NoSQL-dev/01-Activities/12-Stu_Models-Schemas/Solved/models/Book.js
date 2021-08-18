@@ -33,7 +33,7 @@ Book.create(
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 
-// Create a new instance with only required title and author
+// Create a new instance with required title and optional author properties
 Book.create(
   { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
   (err) => (err ? handleError(err) : console.log('Created new document'))

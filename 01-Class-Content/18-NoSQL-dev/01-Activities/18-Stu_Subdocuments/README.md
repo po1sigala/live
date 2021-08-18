@@ -18,6 +18,8 @@ Work with a partner to implement the following user story:
 
 * It's done when I have created a new instance of the `Library` model which includes the `books` subdocument.
 
+* It's done when I test the `GET` route in Insomnia and the subdocuments are nested in the parent document.
+
 ## 📝 Notes
 
 Refer to the documentation:
