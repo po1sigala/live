@@ -35,7 +35,7 @@ app.get('/all-departments', (req, res) => {
 });
 
 // Find first document with name equal to "Kids"
-app.get('/find-one-department', (req, res) => {
+app.get('/find-kids-department', (req, res) => {
   Department.findOne({ name: 'Kids' }, (err, result) => {
     if (result) {
       res.status(200).json(result);

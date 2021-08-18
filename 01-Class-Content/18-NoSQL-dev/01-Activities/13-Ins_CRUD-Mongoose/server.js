@@ -35,7 +35,7 @@ app.get('/all-departments', (req, res) => {
 });
 
 // Finds the first matching document
-app.get('/find-one-department', (req, res) => {
+app.get('/find-wine-department', (req, res) => {
   // Using model in route to find all documents that are instances of that model
   Department.findOne({ name: 'Wine' }, (err, result) => {
     if (result) {
