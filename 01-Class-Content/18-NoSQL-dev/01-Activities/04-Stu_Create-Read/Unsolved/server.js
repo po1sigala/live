@@ -37,7 +37,7 @@ app.post('/create-many', function (req, res) {
       {"title" : "Oh the Places We Will Go!"},
       {"title" : "Diary of Anne Frank"}
     ], 
-    function (err,results) {
+    (err,results) => {
       if (err) throw err;
       res.json(results);
     }
