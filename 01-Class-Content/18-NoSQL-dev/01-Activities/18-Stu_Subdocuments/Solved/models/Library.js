@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 
 // Child documents or subdocuments can be embedded into a parent document
-// The bookSchema defines the shape for the employee subdocument
+// The bookSchema defines the schema of the subdocument
 const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   price: Number,
 });
 
-// departmentSchema provides the shape of the parent document
-const departmentSchema = new mongoose.Schema({
+// The librarySchema defines the schema of the parent document
+const librarySchema = new mongoose.Schema({
   name: { type: String, required: true },
-  // This will include an array that holds all the employees' information
+  // This will include an array that holds all the books
   books: [bookSchema],
   lastAccessed: { type: Date, default: Date.now },
 });
 
 // Uses mongoose.model() to create model
-const Department = mongoose.model('Department', departmentSchema);
+const Library = mongoose.model('Library', librarySchema);
 
 // Uses model to create new instance including subdocument
 const bookData = [
@@ -25,7 +25,7 @@ const bookData = [
   { title: 'History of Hogwarts', price: 5 },
 ];
 
-Department.create({ name: 'Books', books: bookData }, (err, data) => {
+Library.create({ name: 'Books', books: bookData }, (err, data) => {
   if (err) {
     console.log(err);
   } else {
@@ -33,4 +33,4 @@ Department.create({ name: 'Books', books: bookData }, (err, data) => {
   }
 });
 
-module.exports = Department;
+module.exports = Library;
