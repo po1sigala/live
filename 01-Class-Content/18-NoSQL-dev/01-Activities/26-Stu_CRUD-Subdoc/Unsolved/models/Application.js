@@ -35,7 +35,7 @@ const applicationSchema = new Schema(
 applicationSchema
   .virtual('getTags')
   // Getter
-  .get(() => {
+  .get(function () {
     return this.tags.length;
   });
 

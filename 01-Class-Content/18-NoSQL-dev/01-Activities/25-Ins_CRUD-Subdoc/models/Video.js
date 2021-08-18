@@ -35,7 +35,7 @@ const videoSchema = new Schema(
 videoSchema
   .virtual('getResponses')
   // Getter
-  .get(() => {
+  .get(function () {
     return this.responses.length;
   });
 

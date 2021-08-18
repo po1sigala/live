@@ -16,7 +16,7 @@ const postSchema = new Schema(
 );
 
 // Create a virtual property `commentCount` that gets the amount of comments per post
-postSchema.virtual('commentCount').get(() => {
+postSchema.virtual('commentCount').get(function () {
   return this.comments.length;
 });
 
