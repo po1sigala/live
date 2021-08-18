@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to perform an action on a specific instance of a Mongoose model. 
+* As a developer, I want to perform an action on a specific instance of a Mongoose model.
 
 ## Acceptance Criteria
 
@@ -10,14 +10,14 @@ Work with a partner to implement the following user story:
 
 * It's done when the new schema has three properties: `title`, `author`, and `price`
 
-* It's done when I assign a function to the methods object of the `bookSchema` that reduces the price by 50 percent and console logs the title of the book and the reduced price. 
+* It's done when I assign a function named `getDiscount` to the methods object of the `bookSchema` that reduces the price by 50 percent and console logs the title of the book and the reduced price.
 
 * It's done when I have created a model named `Book`.
 
 * It's done when I have created an instance of the model, or document, named `discountedBook`.
 
-* It's done when I test the instance method by running `Book.js`.
- 
+* It's done when I test the instance method by running `node models/Book.js`.
+
 * It's down when the price of `discountedBook` is reduced by 50 percent and the results logged to the console.
 
 ---
