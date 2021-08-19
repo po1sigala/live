@@ -25,7 +25,7 @@ app.get('/sum-price', (req, res) => {
   // Call aggregate() on model
   Book.aggregate(
     [
-      // Where prices are less or equal to 5
+      // Filter books that are in stock
       { $match: { inStock: true } },
       {
         $group: {

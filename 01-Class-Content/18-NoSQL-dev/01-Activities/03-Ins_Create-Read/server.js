@@ -17,31 +17,33 @@ mongodb.connect(
   connectionStringURI,
   // Sets connection string parser and Server Discover and Monitoring engine to true and avoids warning
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function (err, client) {
+  (err, client) => {
     // Use client.db() constructor to add new db instance
     db = client.db();
     app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
-  });
+  }
+);
 
 app.use(express.json());
 
-app.post('/create', function (req, res) {
+app.post('/create', (req, res) => {
   // Use db connection to add a document
-  db.collection('petCollection').insertOne({"name": req.body.name, "breed": req.body.breed}, 
-    function (err,results) {
+  db.collection('petCollection').insertOne(
+    { name: req.body.name, breed: req.body.breed },
+    (err, results) => {
       if (err) throw err;
       res.json(results);
     }
   );
 });
 
-app.get('/read', function (req, res) {
+app.get('/read', (req, res) => {
   // Use db connection to find all documents in collection
   db.collection('petCollection')
     .find()
-    .toArray(function (err, results) {
+    .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
     });

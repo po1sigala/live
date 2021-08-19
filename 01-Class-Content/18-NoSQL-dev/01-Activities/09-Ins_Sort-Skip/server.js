@@ -9,52 +9,53 @@ const connectionStringURI = `mongodb://localhost:27017/alphabetDB`;
 let db;
 
 const data = [
-  { letter: "a"},
-  { letter: "c" },
-  { letter: "e" },
-  { letter: "f" },
-  { letter: "h" },
-  { letter: "i" },
-  { letter: "j" },
-  { letter: "l" },
-  { letter: "b" },
-  { letter: "d" },
-  { letter: "g" },
-  { letter: "k" },
+  { letter: 'a' },
+  { letter: 'c' },
+  { letter: 'e' },
+  { letter: 'f' },
+  { letter: 'h' },
+  { letter: 'i' },
+  { letter: 'j' },
+  { letter: 'l' },
+  { letter: 'b' },
+  { letter: 'd' },
+  { letter: 'g' },
+  { letter: 'k' },
 ];
 
 mongodb.connect(
   connectionStringURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function ( client) {
+  (client) => {
     db = client.db();
     db.collection('letterList').deleteMany({});
-    db.collection('letterList').insertMany(data, function (err, res) {
+    db.collection('letterList').insertMany(data, (err, res) => {
       if (err) {
         return console.log(err);
       }
-      console.log("Data inserted");
+      console.log('Data inserted');
     });
 
     app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
-  });
+  }
+);
 
 app.use(express.json());
 
 // GET request to read all the documents in a collection
-app.get('/read', function (req, res) {
+app.get('/read', (req, res) => {
   db.collection('letterList')
-    // find() returns all documents. Equivalent to `Select *` in SQL. 
+    // find() returns all documents. Equivalent to `Select *` in SQL.
     .find()
-    // sort() sorts in ascending or descending order 
+    // sort() sorts in ascending or descending order
     .sort({ letter: 1 })
     // skips first returned document
     .skip(1)
     // limits returns to 10
     .limit(10)
-    .toArray(function (err, results) {
+    .toArray((err, results) => {
       // Handles error or results
       if (err) throw err;
       res.send(results);
