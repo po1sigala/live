@@ -1,4 +1,4 @@
-# 📖 Implement Sort and Skip to Change How the Documents are Returned
+# 📖 Implement Cursor Methods to Change How the Documents are Returned
 
 Work with a partner to implement the following user story:
 

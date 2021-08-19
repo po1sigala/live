@@ -44,7 +44,7 @@ mongodb.connect(
 
 app.use(express.json());
 
-// Get request to read all the documents in a collection
+// TODO: Update route to use cursor methods
 app.get('/read', (req, res) => {
   db.collection('numberList')
     .find()

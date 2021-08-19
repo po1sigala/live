@@ -1,4 +1,4 @@
-# 🏗️ Delete Data with MongoDB JS
+# 🏗️ Delete Data with MongoDB and Express.js
 
 Work with a partner to implement the following user story:
 
