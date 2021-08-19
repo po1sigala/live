@@ -16,6 +16,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/22-State/RE
 
 >> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
+* In `24-Stu_Stripe` students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
+
 * In this week's homework, the students will refactor the e-commerce platform from [Activity 26](../../../01-Class-Content/22-State/01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses Redux. Students can access the code in the class repo or [download the activity code here](https://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
 
 * Be sure to create a practice React app before class by navigating to `01-Class-Content/22-State-dev/01-Activities` and running `npx create-react-app 00-practice-app`.
