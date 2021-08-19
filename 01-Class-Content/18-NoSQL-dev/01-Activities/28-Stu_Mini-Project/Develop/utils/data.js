@@ -80,7 +80,7 @@ const appDescriptions = [
   'Learn Piano',
   'Starbase Defender',
   'Tower Defense',
-  'Monopoly Money Manger',
+  'Monopoly Money Manager',
   'Movie trailers',
   'Hello world',
   'Stupid Social Media App',

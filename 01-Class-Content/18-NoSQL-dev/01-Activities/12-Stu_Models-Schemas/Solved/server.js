@@ -9,9 +9,9 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/all-books', function (req, res) {
+app.get('/all-books', (req, res) => {
   // Using model in route
-  Book.find({}, function (err, result) {
+  Book.find({}, (err, result) => {
     if (err) {
       res.status(500).send({ message: 'Internal Server Error' });
     } else {

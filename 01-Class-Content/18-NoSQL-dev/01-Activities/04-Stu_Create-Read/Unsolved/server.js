@@ -11,28 +11,43 @@ let db;
 mongodb.connect(
   connectionStringURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function (err, client) {
+  (err, client) => {
     db = client.db();
     app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
-  });
+  }
+);
 
 app.use(express.json());
 
-app.post('/create', function (req, res) {
-  db.collection('bookCollection').insertOne({"title": req.body.title, "author": req.body.author}, 
-    function (err,results) {
+app.post('/create', (req, res) => {
+  db.collection('bookCollection').insertOne(
+    { title: req.body.title, author: req.body.author },
+    (err, results) => {
       if (err) throw err;
       res.json(results);
     }
   );
 });
 
-app.get('/read', function (req, res) {
+app.post('/create-many', function (req, res) {
+  db.collection('bookCollection').insertMany(
+    [
+      {"title" : "Oh the Places We Will Go!"},
+      {"title" : "Diary of Anne Frank"}
+    ], 
+    (err,results) => {
+      if (err) throw err;
+      res.json(results);
+    }
+  );
+});
+
+app.get('/read', (req, res) => {
   db.collection('bookCollection')
-    .find()
-    .toArray(function (err, results) {
+    .find({})
+    .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
     });

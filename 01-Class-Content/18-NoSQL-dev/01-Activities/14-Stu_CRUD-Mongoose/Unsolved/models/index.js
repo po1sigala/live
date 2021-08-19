@@ -1,3 +1,3 @@
-const Department = require('./Department');
+const Genre = require('./Genre');
 
-module.exports = { Department };
+module.exports = { Genre };
