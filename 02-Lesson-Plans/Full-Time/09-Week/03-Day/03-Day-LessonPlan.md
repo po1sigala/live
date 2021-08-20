@@ -12,7 +12,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&ndash3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
 
-* Be sure students have MongoDB installed! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) if they haven't installed it already. If needed, use the FLEX time to help students with the install.
+* Be sure students have MongoDB and Compass installed! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) if they haven't installed it already. If needed, use the FLEX time to help students with the install.
 
 * If you haven't used MongoDB much in the past, take a look at this week's queries and solutions. This should prime you for the lecture.
 
