@@ -3,8 +3,6 @@ const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = (env) => {
-
-
   return {
     mode: 'development',
     entry: {
@@ -17,7 +15,6 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -26,7 +23,20 @@ module.exports = (env) => {
     ],
     module: {
       rules: [
-        
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,

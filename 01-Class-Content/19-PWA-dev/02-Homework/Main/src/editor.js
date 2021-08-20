@@ -1,4 +1,4 @@
-export class Editor {
+export default class {
   constructor() {
     this.update = [];
     this.editor = CodeMirror('#main', {
@@ -9,12 +9,12 @@ export class Editor {
   }
 
   setContent(content) {
-      this.editor.dispatch({
-          changes: {
-              from: 0,
-              to: this.editor.state.doc.toString().length,
-              insert: content
-          }
-      })
+    this.editor.dispatch({
+      changes: {
+        from: 0,
+        to: this.editor.state.doc.toString().length,
+        insert: content,
+      },
+    });
   }
 }

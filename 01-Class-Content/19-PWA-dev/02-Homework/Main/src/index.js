@@ -1,33 +1,36 @@
 import { Workbox } from 'workbox-window';
-
+import { editor } from './editor';
 const main = document.querySelector('#main');
 
 main.innerHTML = '';
+let cm;
 
 try {
-  const editor = CodeMirror(main, {
-    lineNumbers: true,
-    tabSize: 2,
-    value: 'console.log("Hello, World");',
+  cm = CodeMirror(main, {
+    value: '',
   });
-
-  console.log(editor);
-  editor;
-  console.log(editor.getValue());
-
-  editor.on('change', (editor) => {
-    const text = editor.doc.getValue();
-    console.log(text);
-  });
-} catch (err) {
-  console.error(err);
-  main.innerHTML = `<div class="loading-container">
-                      <div class="loading-spinner"></div>
-                    </div>`;
+} catch (e) {
+  console.error(e);
 }
 
-if ('serviceWorker' in navigator) {
-  const wb = new Workbox('/src-sw.js');
+// CodeMirror save method
+cm.on('change', () => {
+  const text = cm.getValue();
+  localStorage.setItem('code', text);
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'code.js';
+  a.click();
+  URL.revokeObjectURL(url);
+});
 
-  wb.register();
+// Check if service workers are supported
+if ('serviceWorker' in navigator) {
+  // register workbox service worker
+  const workboxSW = new Workbox('/src-sw.js');
+  workboxSW.register();
+} else {
+  console.error('Service workers are not supported in this browser.');
 }
