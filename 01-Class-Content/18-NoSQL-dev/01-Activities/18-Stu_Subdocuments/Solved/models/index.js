@@ -1,3 +1,3 @@
-const Department = require('./Department');
+const Library = require('./Library');
 
-module.exports = { Department };
+module.exports = { Library };

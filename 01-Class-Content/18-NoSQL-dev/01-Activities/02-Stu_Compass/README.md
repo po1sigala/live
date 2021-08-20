@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 > Note: You do not have to paste a connection string before clicking 'Connect`.
 
-* It's done when I have created a new local database named `inventoryDB` using Compass's Embedded MongoDB Shell (MongoSH Beta).
+* It's done when I have created a new local database named `inventoryDB` using Compass's Embedded MongoDB Shell (MongoSH).
 
 * It's done when I have added a new collection named `bookCollection`, inserted a field called `title`, and provided a value for the `title` field.
 
@@ -42,7 +42,7 @@ Refer to the documentation:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Image showing myPracticeDB Database with one document in Compass](./assets/image_1.png)
+![Image showing bookCollection collection with one document in Compass](./assets/image_1.png)
 
 ---
 

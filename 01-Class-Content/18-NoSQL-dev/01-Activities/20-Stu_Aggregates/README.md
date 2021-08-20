@@ -2,35 +2,35 @@
 
 Work with a partner to resolve the following issue(s):
 
-*  As a user, I should be able to see summary statistics for the prices of items in stock. 
+* As a user, I should be able to see summary statistics for the prices of books in stock.
 
 ## Expected Behavior
 
-When I test the `sum-price` GET route in Insomnia, summary statistics for only items that are in stock should be returned.
+When I test the `sum-price` GET route in Insomnia, summary statistics for only books that are in stock should be returned.
 
 ## Actual Behavior
 
-When I test the `sum-price` GET route in Insomnia, summary statistics all items are returned.
+When I test the `sum-price` GET route in Insomnia, summary statistics all books are returned.
 
 ## Steps to Reproduce the Problem
 
-1. Run `npm install` and `node server` to start the app.
+1. Run `npm install` and `npm start` to start the app.
 
 2. Navigate to Insomnia on your local machine and test the `sum-price` GET route.
 
-3. The summary data for all items are being returned. To see a list of all items for comparison, use the `all-books` GET route. 
+3. The summary data for all books are being returned. To see a list of all books for comparison, use the `all-books` GET route.
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Returned data showing only in-stock summary items](./assets/image_1.png)
+![Returned data showing only in-stock summary books.](./assets/image_1.png)
 
 ---
 
 ## 💡 Hints
 
-What MongoDB aggregate pipeline stage do you use to filter data? 
+What MongoDB aggregate pipeline stage do you use to filter data?
 
 ## 🏆 Bonus
 

@@ -26,33 +26,29 @@ const data = [
 mongodb.connect(
   connectionStringURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  function (err, client) {
+  (err, client) => {
     db = client.db();
-    db.collection('authorList').deleteMany({});
-    db.collection('numberList').insertMany(data, function (err, res) {
+    db.collection('numberList').deleteMany({});
+    db.collection('numberList').insertMany(data, (err, res) => {
       if (err) {
         return console.log(err);
       }
-      console.log("Data inserted");
+      console.log('Data inserted');
     });
 
     app.listen(port, () => {
-      console.log(`Example app listening at http://localhost:${port}`)
+      console.log(`Example app listening at http://localhost:${port}`);
     });
-  });
+  }
+);
 
 app.use(express.json());
 
-// Get request to read all the documents in a collection
-app.get('/read', function (req, res) {
+// TODO: Update route to use cursor methods
+app.get('/read', (req, res) => {
   db.collection('numberList')
-    // find() returns all documents. Equivalent to `Select *` in SQL. 
     .find()
-    .sort({ number: -1 })
-    .skip(5)
-    .limit(5)
-    .toArray(function (err, results) {
-      // Handles error or results
+    .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
     });

@@ -22,13 +22,13 @@ const Department = mongoose.model('Department', departmentSchema);
 // Instances created from a model have access to the methods and properties
 const produce = new Department({ name: 'Produce', totalStock: 100 });
 
-// Instance methods are called on the document
-produce.getDocumentInfo();
-
-// In addition to custom methods, documents also have access to a range of built-in instance models like get()
+// Documents have access to a range of built-in instance methods like get()
 const responseGetInstance = produce.get('totalStock', String);
 console.log(
   `The value of the totalStock for this document in string form is ${responseGetInstance}`
 );
+
+// Instance methods are called on the document
+produce.getDocumentInfo();
 
 module.exports = Department;
