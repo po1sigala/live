@@ -35,6 +35,7 @@ In Unit 18, we will return to the back end and learn about NoSQL databases using
 Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. Also, make sure students have it installed prior to coming to class.
 
 Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
+
 If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
 
 ## Helpful Links

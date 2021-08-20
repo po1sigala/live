@@ -106,9 +106,9 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide](./01-Activities/27-Evr-GitHub-Packages) 
+  * 📖 [Git Guide: GitHub Packages](./01-Activities/27-Evr-GitHub-Packages) 
 
-    * 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
+* 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
 
 ### Full-Stack Blog Posts
 

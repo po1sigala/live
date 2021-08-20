@@ -50,7 +50,6 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-## Algorithms
 
   * [01: Valid Brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
 
