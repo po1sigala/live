@@ -5,20 +5,22 @@ import './css/style.css';
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
-const cm = new Editor();
+const loadSpinner = () => {
+  const spinner = document.createElement('div');
+  spinner.classList.add('spinner');
+  spinner.innerHTML = `
+  <div class="loading-container">
+  <div class="loading-spinner" />
+  </div>
+  `;
+  main.appendChild(spinner);
+};
 
-// CodeMirror save method
-cm.on('change', () => {
-  const text = cm.getValue();
-  localStorage.setItem('code', text);
-  // const blob = new Blob([text], { type: 'text/plain' });
-  // const url = URL.createObjectURL(blob);
-  // const a = document.createElement('a');
-  // a.href = url;
-  // a.download = 'code.js';
-  // a.click();
-  // URL.revokeObjectURL(url);
-});
+const editor = new Editor();
+
+if (typeof editor === 'undefined') {
+  loadSpinner();
+}
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
