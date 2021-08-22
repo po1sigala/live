@@ -1,29 +1,23 @@
 import { Workbox } from 'workbox-window';
-import { editor } from './editor';
+import Editor from './editor';
+import './css/style.css';
+
 const main = document.querySelector('#main');
-
 main.innerHTML = '';
-let cm;
 
-try {
-  cm = CodeMirror(main, {
-    value: '',
-  });
-} catch (e) {
-  console.error(e);
-}
+const cm = new Editor();
 
 // CodeMirror save method
 cm.on('change', () => {
   const text = cm.getValue();
   localStorage.setItem('code', text);
-  const blob = new Blob([text], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'code.js';
-  a.click();
-  URL.revokeObjectURL(url);
+  // const blob = new Blob([text], { type: 'text/plain' });
+  // const url = URL.createObjectURL(blob);
+  // const a = document.createElement('a');
+  // a.href = url;
+  // a.download = 'code.js';
+  // a.click();
+  // URL.revokeObjectURL(url);
 });
 
 // Check if service workers are supported

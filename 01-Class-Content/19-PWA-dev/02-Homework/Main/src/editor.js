@@ -1,11 +1,20 @@
 export default class {
   constructor() {
     this.update = [];
-    this.editor = CodeMirror('#main', {
-      lineNumbers: true,
-      tabSize: 2,
-      value: 'console.log("Hello, World");',
-    });
+
+    // check if CodeMirror is loaded
+    if (typeof CodeMirror === 'undefined') {
+      throw new Error('CodeMirror is not loaded');
+    } else {
+      this.editor = CodeMirror(document.querySelector('#main'), {
+        value: '',
+        mode: 'javascript',
+        theme: 'monokai',
+        lineNumbers: true,
+        lineWrapping: true,
+        autofocus: true,
+      });
+    }
   }
 
   setContent(content) {
