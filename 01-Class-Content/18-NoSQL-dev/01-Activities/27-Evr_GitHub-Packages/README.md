@@ -10,7 +10,7 @@ We will go through these steps together, but to be sure we have the right resour
 
 ## Create an Access Token
 
-In order to publish packages to GitHub Packages, we will first need to authenticate ourselves by generating a personal access token on GitGub.
+In order to publish packages to GitHub Packages, we will first need to authenticate ourselves by generating a personal access token on GitHub.
 
 1. Navigate to GitHub Settings - Developer settings - [Personal access tokens](https://github.com/settings/tokens).
 
