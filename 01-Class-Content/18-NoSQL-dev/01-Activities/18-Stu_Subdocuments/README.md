@@ -1,4 +1,4 @@
-# 📖 Implementing Subdocuments in Mongoose Schema
+# 📖 Implementing Subdocuments in a Mongoose Schema
 
 Work with a partner to implement the following user story:
 

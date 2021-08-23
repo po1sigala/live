@@ -24,7 +24,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-What is the difference between and instance method and a static method?
+What is the difference between an instance method and a static method?
 
 ## 🏆 Bonus
 
