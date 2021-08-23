@@ -1,6 +1,7 @@
 export default class {
   constructor() {
     this.update = [];
+    const localData = localStorage.getItem('content');
 
     // check if CodeMirror is loaded
     if (typeof CodeMirror === 'undefined') {
@@ -8,7 +9,7 @@ export default class {
     }
 
     this.editor = CodeMirror(document.querySelector('#main'), {
-      value: '',
+      value: localData || 'console.log("Hello world!")',
       mode: 'javascript',
       theme: 'monokai',
       lineNumbers: true,
@@ -21,7 +22,7 @@ export default class {
     // then the editor is ready, load the saved code
     // TODO: load from indexedDB
     this.editor.on('ready', () => {
-      this.editor.setValue(localStorage.getItem('content') || '');
+      this.editor.setValue(localStorage.getItem('content'));
     });
 
     this.editor.on('change', () => {
