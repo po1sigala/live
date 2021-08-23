@@ -1,7 +1,7 @@
 const localData = localStorage.getItem('content');
 
 const database = () => {
-  // database logic for IDB
-}
+  console.log('database');
+};
 
-export database;
+export default database;
