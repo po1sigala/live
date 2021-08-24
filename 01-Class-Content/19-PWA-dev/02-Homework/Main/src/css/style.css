@@ -52,7 +52,7 @@ body {
   }
 }
 .app-update {
-  display: none
+  display: none;
   position: absolute;
   right: 10px;
 }
