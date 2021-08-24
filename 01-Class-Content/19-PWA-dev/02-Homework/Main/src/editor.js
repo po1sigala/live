@@ -1,8 +1,7 @@
-import { putDb } from './database';
+import { getDb, putDb } from './database';
 
 export default class {
   constructor() {
-    this.update = [];
     const localData = localStorage.getItem('content');
 
     // check if CodeMirror is loaded
@@ -11,7 +10,7 @@ export default class {
     }
 
     this.editor = CodeMirror(document.querySelector('#main'), {
-      value: localData || 'console.log("Hello world!")',
+      value: '',
       mode: 'javascript',
       theme: 'monokai',
       lineNumbers: true,
@@ -21,21 +20,20 @@ export default class {
       tabSize: 2,
     });
 
-    // then the editor is ready, load the saved code
-    this.editor.on('ready', () => {
-      this.editor.setValue(
-        localStorage.getItem('content') || 'console.log("Hello world!")'
-      );
+    // When the editor is ready, set the value to whatever is store in indexeddb
+    getDb().then((data) => {
+      console.info('Loaded data from IndexedDB, injecting into editor');
+      this.editor.setValue(data || localData || 'console.log("hello world")');
     });
 
     this.editor.on('change', () => {
-      // save the content of the editor
       localStorage.setItem('content', this.editor.getValue());
     });
 
+    // Save the content of the editor when the editor itself is loses focus
     this.editor.on('blur', () => {
-      // save the content of the editor
-      putDb(this.editor.getValue());
+      console.log('The editor has lost focus');
+      putDb(localStorage.getItem('content'));
     });
   }
 }

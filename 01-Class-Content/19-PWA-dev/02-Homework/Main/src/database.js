@@ -1,6 +1,6 @@
 import { openDB } from 'idb';
 
-const db = async () =>
+const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
@@ -12,25 +12,26 @@ const db = async () =>
     },
   });
 
-// method to put a new entry in the database
+// Put stuff in the database
 export const putDb = async (content) => {
+  console.log('PUT to the database');
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   const request = store.put({ id: 1, value: content });
   const result = await request;
-  console.info(result);
+  console.log('🚀 - data saved to the database', result);
 };
 
+// Get stuff from the database
 export const getDb = async () => {
+  console.log('GET from the database');
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readonly');
   const store = tx.objectStore('jate');
   const request = store.get(1);
   const result = await request;
-  // log the result
-  return result;
+  return result.value;
 };
 
-db();
-// get the data from localstorage and store it in the database
+initdb();
