@@ -1,3 +1,5 @@
+import { putDb } from './database';
+
 export default class {
   constructor() {
     this.update = [];
@@ -20,9 +22,10 @@ export default class {
     });
 
     // then the editor is ready, load the saved code
-    // TODO: load from indexedDB
     this.editor.on('ready', () => {
-      this.editor.setValue(localStorage.getItem('content'));
+      this.editor.setValue(
+        localStorage.getItem('content') || 'console.log("Hello world!")'
+      );
     });
 
     this.editor.on('change', () => {
@@ -30,16 +33,9 @@ export default class {
       localStorage.setItem('content', this.editor.getValue());
     });
 
-    // read the content of the editor
-    this.read = () => {
-      return this.editor.getValue() || '';
-    };
-
-    // set the content of the editor
-    // TODO: save to indexedDB when the editor doesn't have focus or the user is not editing
-    this.save = (content) => {
-      this.editor.setValue(content);
-      localStorage.setItem('content', content);
-    };
+    this.editor.on('blur', () => {
+      // save the content of the editor
+      putDb(this.editor.getValue());
+    });
   }
 }

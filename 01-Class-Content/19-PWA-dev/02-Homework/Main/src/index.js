@@ -1,6 +1,6 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import { database } from './database';
+import './database';
 import './css/style.css';
 
 const main = document.querySelector('#main');
@@ -17,7 +17,7 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
-const editor = new Editor();
+export const editor = new Editor();
 
 if (typeof editor === 'undefined') {
   loadSpinner();

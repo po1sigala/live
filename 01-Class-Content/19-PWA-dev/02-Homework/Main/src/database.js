@@ -1,73 +1,36 @@
-const localData = localStorage.getItem('content');
+import { openDB } from 'idb';
 
-const IDBDatabase =
-  window.indexedDB ||
-  window.webkitIndexedDB ||
-  window.mozIndexedDB ||
-  window.msIndexedDB;
-
-// create an indexdb database
-const request = IDBDatabase.open('content', 1);
-const db = request.result;
-
-const transaction = db.transaction(['content'], 'readwrite');
-const objectStore = transaction.objectStore('content');
-
-// add a new item in the database
-export const addItem = (item) => {
-  objectStore.add(item);
-};
-
-// get all items from the database
-export const getAllItems = () => {
-  return new Promise((resolve, reject) => {
-    const req = objectStore.getAll();
-    req.onsuccess = () => {
-      resolve(req.result);
-    };
-    req.onerror = (e) => {
-      reject(e);
-    };
+const db = async () =>
+  openDB('jate', 1, {
+    upgrade(db) {
+      if (db.objectStoreNames.contains('jate')) {
+        console.log('jate database already exists');
+        return;
+      }
+      db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
+      console.log('jate database created');
+    },
   });
+
+// method to put a new entry in the database
+export const putDb = async (content) => {
+  const jateDb = await openDB('jate', 1);
+  const tx = jateDb.transaction('jate', 'readwrite');
+  const store = tx.objectStore('jate');
+  const request = store.put({ id: 1, value: content });
+  const result = await request;
+  console.info(result);
 };
 
-// get specific item from the database
-export const getItem = (id) => {
-  return new Promise((resolve, reject) => {
-    const req = objectStore.get(id);
-    req.onsuccess = () => {
-      resolve(req.result);
-    };
-    req.onerror = (e) => {
-      reject(e);
-    };
-  });
+export const getDb = async () => {
+  const jateDb = await openDB('jate', 1);
+  const tx = jateDb.transaction('jate', 'readonly');
+  const store = tx.objectStore('jate');
+  const request = store.get(1);
+  const result = await request;
+  // log the result
+  return result;
 };
 
-// remove item from the database
-export const removeItem = (id) => {
-  return new Promise((resolve, reject) => {
-    const req = objectStore.delete(id);
-    req.onsuccess = () => {
-      resolve(req.result);
-    };
-    req.onerror = (e) => {
-      reject(e);
-    };
-  });
-};
-
-// update item in the database
-export const updateItem = (id, item) => {
-  return new Promise((resolve, reject) => {
-    const req = objectStore.put(item, id);
-    req.onsuccess = () => {
-      resolve(req.result);
-    };
-    req.onerror = (e) => {
-      reject(e);
-    };
-  });
-};
-
-export default database;
+db();
+// get the data from localstorage and store it in the database
