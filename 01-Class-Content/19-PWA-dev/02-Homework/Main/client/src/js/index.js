@@ -1,7 +1,11 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
+<<<<<<< HEAD:01-Class-Content/19-PWA-dev/02-Homework/Main/client/src/js/index.js
 import './css/style.css';
+=======
+import '../css/style.css';
+>>>>>>> 3039f2473 (Merge branch 'BCCOD-1754-Unit-19-HW-Build' of https://github.com/coding-boot-camp/fullstack-ground into BCCOD-1754-Unit-19-HW-Build):01-Class-Content/19-PWA-dev/02-Homework/Main/src/index.js
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
