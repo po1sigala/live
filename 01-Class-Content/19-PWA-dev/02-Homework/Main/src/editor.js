@@ -1,4 +1,5 @@
 import { getDb, putDb } from './database';
+import { header } from './header';
 
 export default class {
   constructor() {
@@ -23,7 +24,7 @@ export default class {
     // When the editor is ready, set the value to whatever is store in indexeddb
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
-      this.editor.setValue(data || localData || 'console.log("hello world")');
+      this.editor.setValue(data || localData || header);
     });
 
     this.editor.on('change', () => {
