@@ -60,8 +60,7 @@ THEN I should have proper build scripts for a webpack application
 
 The following animation demonstrates the application functionality:
 
-<!-- link an image in markdown -->
-![](./Assets/00-demo.gif)
+![Demonstration of the finished Unit 19 Homework being used in the browser and then installed](./Assets/00-demo.gif)
 
 ## Grading Requirements
 
