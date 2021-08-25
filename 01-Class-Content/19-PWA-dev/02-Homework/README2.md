@@ -1,4 +1,4 @@
-# Unit 19 PWA Homework: Online/Offline Note-taker
+# Unit 19 PWA Homework: Text Editor
 
 ## Your Task
 
@@ -27,9 +27,33 @@ SO THAT I reliably take notes with or without an internet connection.
 ## Acceptance Criteria
 
 ```md
-GIVEN a user is on Note taking App without an internet connection
-WHEN the user inputs a note
-THEN the note  will be shown on the page, and saved to their note taking application when their connection is back online.
+GIVEN an a text editor web application 
+WHEN I open my application in my editor
+THEN I should see a client server folder structure
+WHEN I run `npm start:dev` from the root directory
+THEN I find that my application should start up the backend and serve the client
+WHEN I run the text editor application from my terminal
+THEN I find that my JavaScript files have been bundled using webpack
+WHEN I run my webpack plugins
+THEN I find that I have a generated HTML file, service worker, and a manifest file
+WHEN I use next-gen JavaScript in my application
+THEN I find that the text editor still works in the browser
+WHEN I open the text editor
+THEN I find that IndexedDB has immediately created a database storage
+WHEN I enter content and subsequently click off of the window
+THEN I find that the content in the text editor has been saved with IndexedDB
+WHEN I reopen the text editor after closing it
+THEN I find that the content in the text editor has been retrieved from our IndexedDB
+WHEN I click on the Install button
+THEN I download my web application as an icon on my desktop
+WHEN I load my web application
+THEN I should have a registered service worker using workbox
+WHEN I register a service worker
+THEN I should have my static assets pre cached upon loading
+WHEN I pre cache my static assets
+THEN I proceed to cache my pages and any subsequent static assets
+WHEN I deploy to Heroku
+THEN I should have proper build scripts for a webpack application
 ```
 
 ## Mock-Up
