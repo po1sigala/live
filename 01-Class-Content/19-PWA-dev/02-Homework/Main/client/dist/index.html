@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Scratch Pad</title>
-    <link rel="stylesheet" href="./src/css/style.css">
+    <title>J.A.T.E</title>
+    
       <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
       </link>
@@ -18,24 +18,17 @@
       <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
       </link>
-  </head>
+  <script defer src="main.bundle.js"></script><script defer src="install.bundle.js"></script><meta name="theme-color" content="#225ca3" /><link rel="manifest" href="/manifest.json" /></head>
   <body>
     <nav id="navbar">
-      ScratchPad
-      <button id="app-update" class="app-update">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="white"
-        >
-          <path fill="none" d="M0 0h24v24H0V0z" />
-          <path
-            d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
-          />
-        </svg>
-      </button>
+      <div class="nav-btn">
+        <a class="btn btn-sm btn-dark" id="butInstall" role="button">Install Me!</a>
+      </div>
+     <h1> Just Another Text Editor</h1>
+     
+      <div class="navbar-brand" 
+            ><img src="./assets/icons/icon_96x96.png"
+          /></div>
     </nav>
 
     <main id="main">
@@ -43,12 +36,6 @@
         <div class="loading-spinner"></div>
       </div>
     </main>
-    <div id="myDiv"></div>
-
-    <script
-      defer
-      async
-      src="main.bundle.js"></script>
-    </script>
+    
   </body>
 </html>
