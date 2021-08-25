@@ -2,26 +2,28 @@
 
 ## Your Task
 
-Add functionality to our existing Note-taker application to allow for offline access and functionality.
+As you progress through this course, you have put together a number of impressive projects that can be shown off to potential employers. This project is no exception, in fact, it features some of the most impressive aspects of the concepts you have learned so far.
 
-The user will be able to add notes to their Note-taker with or without a connection. When entering notes offline, they should populate the notes area when brought back online.
+Your task is to build a text editor that runs in the browser. The editor will be a single page application that meets the PWA criteria. Additionally the application will feature a number of data persistence techniques that will serve as redundancy in case one of options is not supported by the browser. The application will also function offline.
+
+You will take an existing application that is already built and implement the methods for getting and storing data to an IndexedDB database. You will be using a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+
+You will deploy this full stack application to Heroku using our guide on how to [Full-Stack Post on Deploying an Application to Heroku](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
 
 Offline Functionality:
 
-  * Enter notes offline
+* Enter notes offline
 
-  * Enter notes offline
+* Load all assets and frameworks from the cache
 
-When brought back online:
-
-  * Offline entries should be added to Note-taker.
+* Store data in IndexedDB from LocalStorage
 
 ## User Story
 
 ```md
-AS AN employee with a busy schedule
-I WANT to add important note to a note taking application
-SO THAT I reliably take notes with or without an internet connection.
+AS A developer with a modern browser and a mobile device
+I WANT to record notes or make a code snippet in a web application
+SO THAT I reliably store them for later use either with or without an internet connection
 ```
 
 ## Acceptance Criteria
@@ -58,12 +60,12 @@ THEN I should have proper build scripts for a webpack application
 
 The following animation demonstrates the application functionality:
 
-TODO add demo gif
-
+<!-- link an image in markdown -->
+![](./Assets/00-demo.gif)
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria: 
+This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
@@ -71,7 +73,7 @@ This homework is graded based on the following criteria:
 
   * Uses a IndexedDB API in their application.
 
-  * The application works without an internet connection. 
+  * The application works without an internet connection.
 
   * Automatically saves on a set time.
 
