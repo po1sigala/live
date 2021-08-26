@@ -4,7 +4,7 @@
 
 In this unit, you will introduce students to NoSQL databases and performing CRUD operations using MongoDB, a popular NoSQL, document-based database. Students will also learn to use Mongoose, an Object Data Modeling (ODM) library, to enforce a specific schema on data and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/No-SQL/README.md) for detailed information on key topics, learning objectives, and homework.
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/18-NoSQL/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
@@ -20,7 +20,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/No-SQL/READ
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/No-SQL/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/18-NoSQL/04-Career-Connection/README.md).
 
 * If you'd like more information on career services, visit the [Career Services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -49,7 +49,6 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Unit 18: NoSQL](https://docs.google.com/presentation/d/1tsxce_ukQswTyiPlxV9BfzshLkwquUHWdxNrFQYlHvM/edit?usp=sharing)
 
 ### Algorithms
-
 
   * [01: Valid Brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
 
