@@ -6,7 +6,6 @@
   "scripts": {
     "start": "",
     "start:prod": "",
-    "start:dev": "",
     "server": "",
     "build": "",
     "install": "",

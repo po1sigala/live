@@ -60,7 +60,19 @@ THEN I should have proper build scripts for a webpack application
 
 The following animation demonstrates the application functionality:
 
-![Demonstration of the finished Unit 19 Homework being used in the browser and then installed](./Assets/00-demo.gif)
+![Demonstration of the finished Unit 19 Homework being used in the browser and then installed.](./Assets/00-demo.gif)
+
+The following image shows the application's `manifest.json` file:
+
+![Demonstration of the finished Unit 19 Homework with a manifest file in the browser.](./Assets/01-manifest.png)
+
+The following image shows the application's registered service worker:
+
+![Demonstration of the finished Unit 19 Homework with a registered service worker in the browser.](./Assets/02-service-worker.png)
+
+The following image shows the application's IndexedDB storage:
+
+![Demonstration of the finished Unit 19 Homework with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
 
 ## Grading Requirements
 
@@ -74,7 +86,19 @@ This homework is graded based on the following criteria:
 
   * The application works without an internet connection.
 
-  * Automatically saves on a set time.
+  * Automatically saves on when the DOM window is unfocused.
+
+  * Bundled with webpack.
+
+  * Create a service worker with workbox.
+
+  * Cache static and page assets.
+
+  * Application must have a generated `manifest.json`. 
+
+  * Progressive Web App functionality (Can be installed).
+
+  * Deployed to Heroku with build scripts.
 
 ### Deployment: 32%
 
