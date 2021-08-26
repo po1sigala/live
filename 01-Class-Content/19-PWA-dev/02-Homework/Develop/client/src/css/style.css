@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  font-size:22px
+  font-size: 22px;
 }
 #navbar {
   height: var(--navbar-height);
@@ -192,7 +192,7 @@ h1 {
   .navbar-brand {
     display: none;
   }
-  
+
   #navbar {
     justify-content: center;
   }
