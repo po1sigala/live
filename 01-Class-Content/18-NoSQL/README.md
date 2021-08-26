@@ -56,7 +56,7 @@ You will be employer-ready if you are able to:
 
 * Explain the difference between an instance method and a static method
 
-* Create and manipulate a subdocument 
+* Create and manipulate a subdocument
 
 * Access MongoDB's aggregate framework through Mongoose's `aggegrate()` method
 
@@ -72,13 +72,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-  * [01: Valid Brackets](./03-Algorithms/01-valid-brackets)
+* [01: Valid Brackets](./03-Algorithms/01-valid-brackets)
 
-    * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
+  * 📹 [Let's Code Valid Brackets!](https://2u-20.wistia.com/medias/dazwcql05r)
 
-  * [02: Min Increment for Unique](./03-Algorithms/02-min-increment-for-unique)
+* [02: Min Increment for Unique](./03-Algorithms/02-min-increment-for-unique)
 
-  * [03: Peak Finder](./03-Algorithms/03-peak-finder)
+* [03: Peak Finder](./03-Algorithms/03-peak-finder)
 
 ### Assessments
 
@@ -106,16 +106,16 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: GitHub Packages](./01-Activities/27-Evr-GitHub-Packages) 
+  * 📖 [Git Guide: GitHub Packages](./01-Activities/27-Evr-GitHub-Packages)
 
-* 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
+  * 📹 [Git Guide Video: GitHub Packages](https://2u-20.wistia.com/medias/z1aozrjw74)
 
 ### Full-Stack Blog Posts
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, like walkthroughs, articles, and installation guides.
 
   * 📖 Blog Post: [How to Install MongoDB](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
-  
+
   * 📖 Blog Post: [Set Up MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas)
 
   * 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
