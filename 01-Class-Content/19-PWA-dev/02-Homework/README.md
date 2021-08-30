@@ -10,14 +10,6 @@ You will take an existing application that is already built and implement the me
 
 You will deploy this full stack application to Heroku using the [deployment guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
 
-Offline Functionality:
-
-* Enter notes offline
-
-* Load all assets and frameworks from the cache
-
-* Store data in IndexedDB from LocalStorage
-
 ## User Story
 
 ```md
@@ -32,7 +24,7 @@ SO THAT I can reliably retrieve them for later use
 GIVEN a text editor web application 
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
-WHEN I run `npm run dev` from the root directory
+WHEN I run `npm run start` from the root directory
 THEN I find that my application should start up the backend and serve the client
 WHEN I run the text editor application from my terminal
 THEN I find that my JavaScript files have been bundled using webpack
@@ -86,7 +78,7 @@ This homework is graded based on the following criteria:
 
   * The application works without an internet connection.
 
-  * Automatically saves on when the DOM window is unfocused.
+  * Automatically saves when the DOM window is unfocused.
 
   * Bundled with webpack.
 
