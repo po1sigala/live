@@ -2,7 +2,7 @@
 
 ## Your Task
 
-As you progress through this course, you have put together a number of impressive projects that can be shown off to potential employers. This project is no exception, in fact, it features some of the most impressive aspects of the concepts you have learned so far.
+As you progressed through this course, you have put together a number of impressive projects that can be shown off to potential employers. This project is no exception; in fact, it features some of the most impressive aspects of the concepts you have learned so far.
 
 Your task is to build a text editor that runs in the browser. The editor will be a single page application that meets the PWA criteria. Additionally the application will feature a number of data persistence techniques that will serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
