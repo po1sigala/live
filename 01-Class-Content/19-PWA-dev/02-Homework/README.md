@@ -29,7 +29,7 @@ SO THAT I reliably store them for later use either with or without an internet c
 ## Acceptance Criteria
 
 ```md
-GIVEN an a text editor web application 
+GIVEN a text editor web application 
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
 WHEN I run `npm start:dev` from the root directory
