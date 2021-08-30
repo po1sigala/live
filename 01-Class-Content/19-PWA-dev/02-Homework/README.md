@@ -8,7 +8,7 @@ Your task is to build a text editor that runs in the browser. The editor will be
 
 You will take an existing application that is already built and implement the methods for getting and storing data to an IndexedDB database. You will be using a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
 
-You will deploy this full stack application to Heroku using our guide on how to [Full-Stack Post on Deploying an Application to Heroku](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+You will deploy this full stack application to Heroku using the [deployment guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
 
 Offline Functionality:
 
