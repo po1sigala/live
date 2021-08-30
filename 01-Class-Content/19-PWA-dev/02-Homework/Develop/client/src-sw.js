@@ -7,7 +7,7 @@ const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
-// Set up page cache
+// TODO: Implement a page-specific strategy for the following
 const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
@@ -27,7 +27,5 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// Set up asset cache
-registerRoute(
-  
-);
+// TODO: Implement asset caching
+registerRoute();

@@ -21,9 +21,9 @@ Offline Functionality:
 ## User Story
 
 ```md
-AS A developer with a modern browser and a mobile device
-I WANT to record notes or make a code snippet in a web application
-SO THAT I reliably store them for later use either with or without an internet connection
+AS A developer
+I WANT to create notes or code snippets with or without an internet connection
+SO THAT I can reliably retrieve them for later use
 ```
 
 ## Acceptance Criteria
@@ -32,7 +32,7 @@ SO THAT I reliably store them for later use either with or without an internet c
 GIVEN an a text editor web application 
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
-WHEN I run `npm start:dev` from the root directory
+WHEN I run `npm run dev` from the root directory
 THEN I find that my application should start up the backend and serve the client
 WHEN I run the text editor application from my terminal
 THEN I find that my JavaScript files have been bundled using webpack
