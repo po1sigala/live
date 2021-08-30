@@ -82,15 +82,13 @@ This homework is graded based on the following criteria:
 
   * Bundled with webpack.
 
-  * Create a service worker with workbox.
+  * Create a service worker with workbox that Caches static assets.
 
-  * Cache static and page assets.
+  * The application should use babel in order to use async / await.
 
-  * Application must have a generated `manifest.json`. 
+  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in. 
 
   * Progressive Web App functionality (Can be installed).
-
-  * Deployed to Heroku with build scripts.
 
 ### Deployment: 32%
 
@@ -101,6 +99,8 @@ This homework is graded based on the following criteria:
 * Application GitHub URL submitted
 
 * GitHub repo contains application code
+
+* Deployed to Heroku with build scripts.
 
 ### Application Quality: 15%
 
