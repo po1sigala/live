@@ -102,7 +102,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
 
-  * [📹 Code Review: JavaScript Objcts!](https://2u-20.wistia.com/medias/iaiw7q7fkw)
+  * [📹 Code Review: JavaScript Objects!](https://2u-20.wistia.com/medias/iaiw7q7fkw)
 
 ### Git Guide
 
