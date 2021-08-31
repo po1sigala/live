@@ -73,13 +73,8 @@ function Form() {
           type="text"
           placeholder="username"
         />
-        <input
-          value={password}
-          name="password"
-          onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
-        />
+        {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
+        {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}
         <button type="button" onClick={handleFormSubmit}>
           Submit
         </button>
