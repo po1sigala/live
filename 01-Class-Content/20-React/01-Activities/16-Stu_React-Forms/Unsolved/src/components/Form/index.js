@@ -1,5 +1,4 @@
-// TODO: Import useState with React
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
 // Here we import a helper function that will check if the email is valid
@@ -16,12 +15,13 @@ function Form() {
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
-    let target = e.target;
-    let inputType = target.name;
-    let inputValue = target.value;
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
     // Based on the input type, we set the state of either email, username, and password
     // TODO: Add an else statement to the end that will set the password to the value of 'inputValue'
+
     if (inputType === 'email') {
       setEmail(inputValue);
     } else if (inputType === 'userName') {
@@ -32,19 +32,27 @@ function Form() {
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
+
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
     if (!validateEmail(email) || !userName) {
-      setErrorMessage('Fill out email and username please!');
-    } else if (!checkPassword(password)) {
+      setErrorMessage('Email or username is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+    if (!checkPassword(password)) {
       setErrorMessage(
         `Choose a more secure password for the account: ${userName}`
       );
-    } else {
-      alert(`Hello ${userName}`);
+      return;
     }
 
+    // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
     // TODO: Set the password back to an empty string after the user clicks submit
+
     setEmail('');
+    alert(`Hello ${userName}`);
   };
 
   return (
@@ -65,9 +73,16 @@ function Form() {
           type="text"
           placeholder="username"
         />
-        {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
-        {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}
-        <button onClick={handleFormSubmit}>Submit</button>
+        <input
+          value={password}
+          name="password"
+          onChange={handleInputChange}
+          type="password"
+          placeholder="Password"
+        />
+        <button type="button" onClick={handleFormSubmit}>
+          Submit
+        </button>
       </form>
       {errorMessage && (
         <div>
