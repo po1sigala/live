@@ -30,7 +30,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation:
 
-* [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)
+* [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
 
 ## Assets
 
