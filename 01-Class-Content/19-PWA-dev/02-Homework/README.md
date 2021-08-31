@@ -74,33 +74,31 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses a IndexedDB API in their application.
+  * Uses a IndexedDB API in their application
 
-  * The application works without an internet connection.
+  * The application works without an internet connection
 
-  * Automatically saves when the DOM window is unfocused.
+  * Automatically saves when the DOM window is unfocused
 
-  * Bundled with webpack.
+  * Bundled with webpack
 
-  * Create a service worker with workbox that Caches static assets.
+  * Create a service worker with workbox that Caches static assets
 
-  * The application should use babel in order to use async / await.
+  * The application should use babel in order to use async / await
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in. 
+  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
 
-  * Progressive Web App functionality (Can be installed).
+  * Progressive Web App functionality (Can be installed)
 
 ### Deployment: 32%
 
-* Application deployed at live URL
+* Application deployed to Heroku at live URL with build scripts
 
 * Application loads with no errors
 
 * Application GitHub URL submitted
 
 * GitHub repo contains application code
-
-* Deployed to Heroku with build scripts.
 
 ### Application Quality: 15%
 
