@@ -1,4 +1,4 @@
-# 📖 Implement Caching for CSS and JS
+# 📖 Implement Caching for CSS and JS files
 
 Work with a partner to implement the following user story:
 
@@ -16,13 +16,21 @@ Work with a partner to implement the following user story:
 
 * It's done when I have updated the `plugins` array in the `webpack.config.js` file to invoke a new `generateSw()` method.
 
-* It's done when I have created a root level `./src/src-sw.js` file that will invoke workbox precaching using the `precacheAndRoute` method.
+* It's done when I have passed an object to the `generateSw()` method in the `webpack.config.js` file that contains the following properties:
+
+  * `runtimeCaching`: An array of objects that define the strategies to use for caching.
+
+  * `urlPattern`: A string that is used to match URLs.
+
+  * `handler`: A string that is used to specify the caching strategy to use.
+
+* It's done when I have specified a `urlPattern` for `/css` and `/js` in the `runtimeCaching` array.
 
 ## 📝 Notes
 
 Refer to the documentation:
 
-* [Google Docs on Caching Strategies](https://developers.google.com/web/tools/workbox/guides/caching-strategies)
+* [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)
 
 ## Assets
 
@@ -35,7 +43,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* The `self.__precacheManifest` variable gets dynamically generated and contains a list of files that are used for what purpose?
+* What other caching recipe lends itself to caching of JS and CSS files?
 
 ## 🏆 Bonus
 
