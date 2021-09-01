@@ -10,7 +10,6 @@ Work with a partner to find which key metrics need improvement in the following 
 
 3. Add comments to the text file in the [Solved](./Solved/audit.txt)
 
-
 Refer to the documentation: 
 
 * [Google Docs on Lighthouse Audits](https://developers.google.com/web/tools/lighthouse)
