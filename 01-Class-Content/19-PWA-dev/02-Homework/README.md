@@ -74,11 +74,11 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses a IndexedDB API in their application
+  * Uses a IndexedDB in their application
 
   * The application works without an internet connection
 
-  * Automatically saves when the DOM window is unfocused
+  * Automatically saves the text editor content when the DOM window is unfocused
 
   * Bundled with webpack
 
@@ -88,7 +88,7 @@ This homework is graded based on the following criteria:
 
   * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
 
-  * Progressive Web App functionality (Can be installed)
+  * Can be installed as a Progressive Web Application
 
 ### Deployment: 32%
 

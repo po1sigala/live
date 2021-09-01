@@ -539,251 +539,325 @@
         function Model() {
           this.title = `Unit 19 PWA HW Rubric (Coding)`;
           this.categories = [
-	{
-		title: "Technical Acceptance Criteria",
-		subtitle: null,
-		solution: null,
-		previewText: null,
-		score: 0,
-		questions: [
-			{
-				title: "Uses a IndexedDB API in their application",
-				score: 5,
-				type: "likert",
-				options: [
-					{
-						message: "The application does not use the IndexedDB API",
-						score: 0
-					},
-					{
-						message: "The IndexedDB object store is created",
-						score: 1
-					},
-					{
-						message: "The PUT method works",
-						score: 2
-					},
-					{
-						message: "The GET method works",
-						score: 2
-					}
-				],
-				message: "",
-				status: false
-			},
-			{
-				title: "The application works without an internet connection",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Automatically saves when the DOM window is unfocused",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Bundled with webpack",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Create a service worker with workbox that Caches static assets",
-				score: 5,
-				type: "likert",
-				options: [
-					{
-						message: "The application does not register a service worker",
-						score: 0
-					},
-					{
-						message: "The application registers a service worker",
-						score: 2
-					},
-					{
-						message: "The service worker caches static assets",
-						score: 3
-					}
-				],
-				message: "",
-				status: false
-			},
-			{
-				title: "The application should use babel in order to use async / await",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Progressive Web App functionality (Can be installed)",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			}
-		]
-	},
-	{
-		title: "Deployment",
-		subtitle: null,
-		solution: null,
-		previewText: null,
-		score: 0,
-		questions: [
-			{
-				title: "Application deployed to Heroku at live URL with build scripts",
-				score: 8,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Application loads with no errors",
-				score: 8,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Application GitHub URL submitted",
-				score: 8,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "GitHub repo contains application code",
-				score: 8,
-				type: "true false",
-				message: "",
-				status: false
-			}
-		]
-	},
-	{
-		title: "Application Quality",
-		subtitle: null,
-		solution: null,
-		previewText: null,
-		score: 0,
-		questions: [
-			{
-				title: "Application user experience is intuitive and easy to navigate",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Application user interface style is clean and polished",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Application resembles the mock-up functionality provided in the homework instructions",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			}
-		]
-	},
-	{
-		title: "Repository Quality",
-		subtitle: null,
-		solution: null,
-		previewText: null,
-		score: 0,
-		questions: [
-			{
-				title: "Repository has a unique name",
-				score: 2,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Repository follows best practices for file structure and naming conventions",
-				score: 2,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.",
-				score: 2,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Repository contains multiple descriptive commit messages",
-				score: 2,
-				type: "true false",
-				message: "",
-				status: false
-			},
-			{
-				title: "Repository contains quality README file with description, screenshot, and link to deployed application",
-				score: 5,
-				type: "true false",
-				message: "",
-				status: false
-			}
-		]
-	},
-	{
-		title: "Academic Integrity",
-		subtitle: "If any of of the following are true, partner with your instructor to investigate plagiarism. Contact your SSM if you believe plagiarism has occurred.",
-		solution: null,
-		previewText: null,
-		score: null,
-		questions: [
-			{
-				title: "Application contains a low number of commits",
-				score: 0,
-				type: "true false",
-				message: null,
-				status: false
-			},
-			{
-				title: "Application codebase appears advanced for the student, at this point in the course, or in general",
-				score: 0,
-				type: "true false",
-				message: null,
-				status: false
-			},
-			{
-				title: "Application package.json file references a different author and/or repository",
-				score: 0,
-				type: "true false",
-				message: null,
-				status: false
-			},
-			{
-				title: "Application package.json file references much older versions of npm packages",
-				score: 0,
-				type: "true false",
-				message: null,
-				status: false
-			}
-		]
-	}
+  {
+    title: "Technical Acceptance Criteria",
+    subtitle: null,
+    solution: null,
+    previewText: null,
+    score: 0,
+    questions: [
+      {
+        title: "Uses a IndexedDB in their application",
+        score: 5,
+        type: "likert",
+        options: [
+          {
+            message: "The application does not use the IndexedDB API",
+            score: 0
+          },
+          {
+            message: "The IndexedDB object store is created",
+            score: 1
+          },
+          {
+            message: "The application has either a PUT or GET method",
+            score: 3
+          },
+          {
+            message: "The application has both a PUT and GET method",
+            score: 5
+          }
+        ],
+        message: "",
+        status: false
+      },
+      {
+        title: "The application works without an internet connection",
+        score: 5,
+        type: "true false",
+        message: "The application does not work without an internet connection",
+        status: false
+      },
+      {
+        title: "Automatically saves the text editor content when the DOM window is unfocused",
+        score: 5,
+        type: "true false",
+        message: "The text editor content is not saved when the DOM window is unfocused",
+        status: false
+      },
+      {
+        title: "Bundled with webpack",
+        score: 5,
+        type: "true false",
+        message: "The application is not bundled using webpack",
+        status: false
+      },
+      {
+        title: "Create a service worker with workbox that Caches static assets",
+        score: 5,
+        type: "likert",
+        options: [
+          {
+            message: "The application does not register a service worker",
+            score: 0
+          },
+          {
+            message: "The application registers a service worker",
+            score: 2
+          },
+          {
+            message: "The application registers a service worker and the service worker caches static assets",
+            score: 5
+          }
+        ],
+        message: "",
+        status: false
+      },
+      {
+        title: "The application should use babel in order to use async / await",
+        score: 5,
+        type: "true false",
+        message: "The application does notuse babel in order to use async / await",
+        status: false
+      },
+      {
+        title: "Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in",
+        score: 5,
+        type: "true false",
+        message: "The application does not have a generated `manifest.json` using the `WebpackPwaManifest` plug-in",
+        status: false
+      },
+      {
+        title: "Progressive Web App functionality (Can be installed)",
+        score: 5,
+        type: "true false",
+        message: "",
+        status: false
+      }
+    ]
+  },
+  {
+    title: "Deployment",
+    subtitle: null,
+    solution: null,
+    previewText: null,
+    score: 0,
+    questions: [
+      {
+        title: "Application deployed to Heroku at live URL with build scripts",
+        score: 8,
+        type: "true false",
+        message: "Application isn't deployed and doesn't have build scripts",
+        status: false
+      },
+      {
+        title: "Application loads with no errors",
+        score: 8,
+        type: "true false",
+        message: "Application isn't deployed",
+        status: false
+      },
+      {
+        title: "Application GitHub URL submitted",
+        score: 8,
+        type: "true false",
+        message: "Missing GitHub submission URL",
+        status: false
+      },
+      {
+        title: "GitHub repo contains application code",
+        score: 8,
+        type: "true false",
+        message: "GitHub repo is empty",
+        status: false
+      }
+    ]
+  },
+  {
+    title: "Application Quality",
+    subtitle: null,
+    score: 0,
+    questions: [
+        {
+            title: "Application user experience is intuitive and easy to navigate",
+            score: 5,
+            type: "likert",
+            options: [
+                {
+                    message: "Application user experience is not intuitive and easy to navigate",
+                    score: 0
+                },
+                {
+                    message: "Application user experience could be much more intuitive and easy to navigate",
+                    score: 2
+                },
+                {
+                    message: "Application user experience could be a lot more intuitive and easy to navigate",
+                    score: 4
+                },
+                {
+                    message: "Application user experience is intuitive and easy to navigate",
+                    score: 5
+                }
+            ],
+            message: "",
+            status: false
+        },
+        {
+            title: "Application user interface style is clean and polished",
+            score: 5,
+            type: "likert",
+            options: [
+                {
+                    message: "Application user interface is not clean and polished",
+                    score: 0
+                },
+                {
+                    message: "Application user interface could be much better",
+                    score: 2
+                },
+                {
+                    message: "Application user interface could be a bit better",
+                    score: 4
+                },
+                {
+                    message: "Application user interface style is clean and polished",
+                    score: 5
+                }
+            ],
+            message: "",
+            status: false
+        },
+        {
+            title: "Application resembles the mock-up functionality provided in homework instructions",
+            score: 5,
+            type: "likert",
+            options: [
+                {
+                    message: "Application doesn't resemble the mock-up functionality provided in homework instructions",
+                    score: 0
+                },
+                {
+                    message: "Application could resemble mock-up functionality provided with homework instructions much more closely",
+                    score: 2
+                },
+                {
+                    message: "Application could resemble mock-up functionality provided with homework instructions a bit more closely",
+                    score: 4
+                },
+                {
+                    message: "Application resembles the mock-up functionality provided in homework instructions",
+                    score: 5
+                }
+            ],
+            message: "",
+            status: false
+        }
+      ]
+    },
+{
+  title: "Repository Quality",
+  subtitle: null,
+  score: 0,
+  questions: [
+      {
+          title: "Repository has a unique name",
+          score: 2,
+          type: "true false",
+          message: "Repo doesn't have a unique name",
+          status: false
+      },
+      {
+          title:
+              "Repository follows best practices for file structure and naming conventions",
+          score: 2,
+          type: "true false",
+          message:
+              "Code doesn't follow recommended file/folder structure",
+          status: false
+      },
+      {
+          title:
+              "Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.",
+          score: 2,
+          type: "true false",
+          message:
+              "Code doesn't follow good practices for class/id names, indentation, lacks quality comments",
+          status: false
+      },
+      {
+          title:
+              "Repository contains multiple descriptive commit messages",
+          score: 2,
+          type: "true false",
+          message:
+              "Repo doesn't contain multiple descriptive commit messages",
+          status: false
+      },
+      {
+          title: "Repository contains quality README with description, screenshot, link to deployed application",
+          score: 5,
+          type: "likert",
+          options: [
+              {
+                  message: "Repo doesn't include a high quality README with screenshots, a description, link to deployed application",
+                  score: 0
+              },
+              {
+                  message: "Repository README is missing 2 of the following: description, screenshot, or link to deployed application",
+                  score: 2
+              },
+              {
+                  message: "Repository README is missing 1 of the following: description, screenshot, or link to deployed application",
+                  score: 4
+              },
+              {
+                  message: "Repository contains quality README with description, screenshot, link to deployed application",
+                  score: 5
+              }
+          ],
+          message: "",
+          status: false
+      }
+  ]
+},
+  {
+    title: "Academic Integrity",
+    subtitle: "If any of of the following are true, partner with your instructor to investigate plagiarism. Contact your SSM if you believe plagiarism has occurred.",
+    solution: null,
+    previewText: null,
+    score: null,
+    questions: [
+      {
+        title: "Application contains a low number of commits",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application codebase appears advanced for the student, at this point in the course, or in general",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application package.json file references a different author and/or repository",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application package.json file references much older versions of npm packages",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      }
+    ]
+  }
 ];
 
           this.initStorage();
