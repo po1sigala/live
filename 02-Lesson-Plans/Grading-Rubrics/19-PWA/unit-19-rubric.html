@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
-    <title>HW Grading Rubric</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css" rel="stylesheet" />
+    <title>Unit 19 PWA HW Rubric</title>
     <style>
       *,
       *::before,
@@ -55,6 +59,21 @@
         font-size: 1.2rem;
       }
 
+      h3.solution {
+        margin-top: 20px!important;
+      }
+
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+
+      a:hover {
+        transition: all .2s ease-in-out;
+        color: white;
+        text-decoration: underline;
+      }
+
       label {
         font-size: 0.9rem;
         line-height: 2;
@@ -75,6 +94,16 @@
         clip: rect(1px 1px 1px 1px);
         clip: rect(1px, 1px, 1px, 1px);
         white-space: nowrap;
+      }
+
+      .select-lg,
+      .select-lg option {
+        font-family: "Inter", sans-serif;
+        padding: 10px;
+      }
+
+      .narrow {
+        width: 800px;
       }
 
       #app {
@@ -198,6 +227,15 @@
         color: #e2e2e2;
       }
 
+      .card-header h2 {
+        display: inline-block;
+      }
+
+      .card .cat-score {
+        margin-left: 20px;
+        font-size: smaller;
+      }
+
       .card h3 {
         font-size: 1.2rem;
         font-weight: 700;
@@ -210,7 +248,6 @@
       .card label,
       .card legend {
         color: #7a869c;
-        font-weight: 300;
         border-width: 0;
         display: block;
         font-size: 1.1rem;
@@ -218,7 +255,19 @@
         line-height: 1.8em;
         margin: 0;
         padding: 0;
-        text-transform: uppercase;
+      }
+
+      .card legend {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .card legend .score {
+        font-size: smaller;
+        margin-left: 20px;
+        font-weight: 100;
+        min-width: 5%;
       }
 
       .dark .card p,
@@ -330,6 +379,7 @@
 
       button.copy {
         margin-left: 0.4rem;
+        font-size: .8rem;
       }
 
       button:focus {
@@ -352,7 +402,6 @@
         font-size: 1.2rem;
         border: none;
         font-family: monospace;
-        white-space: pre-wrap;
         background-color: #d5d9de;
         padding: 0.9rem;
         border-radius: 6px;
@@ -360,12 +409,37 @@
         width: 100%;
       }
 
+      .summary h2,
+      .dark .summary h2 {
+        font-size: 1.2rem;
+        font-family: "Inter", sans-serif;
+        margin-top: 35px;
+        margin-bottom: 5px;
+      }
+
+      .summary h2:first-of-type,
+      .dark .summary h2:first-of-type {
+        margin-top: 15px;
+      }
+
       .dark .summary {
         background: #6b6a6a;
         color: #e2e2e2;
       }
 
-      .summary:empty {
+      .summary pre,
+      .dark .summary pre {
+        white-space: pre-wrap;
+        border-radius: 5px;
+        padding: 15px;
+        border: solid 2px rgba(0,0,0,.4);
+      }
+
+      .summary pre:empty {
+        display: none;
+      }
+
+      .summary pre:empty + button {
         display: none;
       }
 
@@ -438,163 +512,353 @@
         }
       }
     </style>
+    <script>
+      $(function () {
+        let $select2 = $('.select2').select2({
+          containerCssClass: "wrap"
+        })
+
+        function triggerEvent(name, val) {
+          let selected = $("select[name='" + name + "']")
+          let change = new Event('change', { bubbles: true })
+          selected[0].dispatchEvent(change)
+        }
+
+        $('.select2').on('select2:select', function (e) {
+          triggerEvent(e.target.name, e.target.value)
+        });
+      })
+  </script>
   </head>
   <body>
     <div id="app"></div>
-
     <script>
       (function(window) {
         "use strict";
 
         function Model() {
-          this.title = "Unit 19 PWA HW Rubric";
+          this.title = `Unit 19 PWA HW Rubric (Coding)`;
           this.categories = [
-            {
-              title: "Deployment",
-              subtitle: null,
-              questions: [
+  {
+    title: "Technical Acceptance Criteria",
+    subtitle: null,
+    solution: null,
+    previewText: null,
+    score: 0,
+    questions: [
+      {
+        title: "Application uses IndexedDB to create an object store and includes both GET and PUT methods",
+        score: 5,
+        type: "likert",
+        options: [
+          {
+            message: "The application does not use IndexedDB",
+            score: 0
+          },
+          {
+            message: "Application uses IndexedDB to create an object store, but doesn't include GET or PUT methods",
+            score: 1
+          },
+          {
+            message: "Application uses IndexedDB to create an object store, but only includes one of the 2 following: a GET or PUT method",
+            score: 3
+          },
+          {
+            message: "Application uses IndexedDB to create an object store and includes both GET and PUT methods",
+            score: 5
+          }
+        ],
+        message: "",
+        status: false
+      },
+      {
+        title: "The application works without an internet connection",
+        score: 5,
+        type: "true false",
+        message: "The application does not work without an internet connection",
+        status: false
+      },
+      {
+        title: "Application automatically saves the content in the text editor when the DOM window is unfocused",
+        score: 5,
+        type: "true false",
+        message: "Content in the text editor content is not saved when the DOM window is unfocused",
+        status: false
+      },
+      {
+        title: "The application is bundled with webpack",
+        score: 5,
+        type: "true false",
+        message: "The application is not bundled using webpack",
+        status: false
+      },
+      {
+        title: "The application creates a service worker with workbox that caches static assets",
+        score: 5,
+        type: "likert",
+        options: [
+          {
+            message: "The application does not register a service worker with workbox that caches static assets",
+            score: 0
+          },
+          {
+            message: "The application creates a service worker with workbox, but it does not cache static assets",
+            score: 2
+          },
+          {
+            message: "The application creates a service worker with workbox that caches static assets",
+            score: 5
+          }
+        ],
+        message: "",
+        status: false
+      },
+      {
+        title: "The application uses Babel to use async/await",
+        score: 5,
+        type: "true false",
+        message: "The application does not use Babel to use async/await",
+        status: false
+      },
+      {
+        title: "Application has a manifest.json generated using the WebpackPwaManifest plug-in",
+        score: 5,
+        type: "true false",
+        message: "The application does not have a manifest.json",
+        status: false
+      },
+      {
+        title: "Application can be installed as a Progressive Web Application",
+        score: 5,
+        type: "true false",
+        message: "Application cannot be installed as a Progressive Web Application",
+        status: false
+      }
+    ]
+  },
+  {
+    title: "Deployment",
+    subtitle: null,
+    solution: null,
+    previewText: null,
+    score: 0,
+    questions: [
+      {
+        title: "Application deployed to Heroku at live URL with build scripts",
+        score: 8,
+        type: "true false",
+        message: "Application isn't deployed and doesn't have build scripts",
+        status: false
+      },
+      {
+        title: "Application loads with no errors",
+        score: 8,
+        type: "true false",
+        message: "Application isn't deployed",
+        status: false
+      },
+      {
+        title: "Application GitHub URL submitted",
+        score: 8,
+        type: "true false",
+        message: "Missing GitHub submission URL",
+        status: false
+      },
+      {
+        title: "GitHub repo contains application code",
+        score: 8,
+        type: "true false",
+        message: "GitHub repo is empty",
+        status: false
+      }
+    ]
+  },
+  {
+    title: "Application Quality",
+    subtitle: null,
+    score: 0,
+    questions: [
+        {
+            title: "Application user experience is intuitive and easy to navigate",
+            score: 5,
+            type: "likert",
+            options: [
                 {
-                  title: "Student submitted application GitHub URL",
-                  score: 19,
-                  message: "Missing GitHub submission URL",
-                  status: false
+                    message: "Application user experience is not intuitive and easy to navigate",
+                    score: 0
                 },
                 {
-                  title: "GitHub Repo contains application code",
-                  score: 16,
-                  message: "GitHub repo is empty",
-                  status: false
+                    message: "Application user experience could be much more intuitive and easy to navigate",
+                    score: 2
+                },
+                {
+                    message: "Application user experience could be a lot more intuitive and easy to navigate",
+                    score: 4
+                },
+                {
+                    message: "Application user experience is intuitive and easy to navigate",
+                    score: 5
                 }
-              ]
-            },
-            {
-              title: "Technical Acceptance Criteria",
-              subtitle:
-                "Keep your browser console open and watch out for errors from this point forward.",
-              questions: [
+            ],
+            message: "",
+            status: false
+        },
+        {
+            title: "Application user interface style is clean and polished",
+            score: 5,
+            type: "likert",
+            options: [
                 {
-                  title:
-                    "Application allows users to enter deposits and expenses",
-                  score: 8,
-                  message: "Application does not track deposits or expenses",
-                  status: false
+                    message: "Application user interface is not clean and polished",
+                    score: 0
                 },
                 {
-                  title:
-                    "Application has offline functionality",
-                  score: 8,
-                  message:
-                    "Application does not have offline functionality",
-                  status: false
+                    message: "Application user interface could be much better",
+                    score: 2
                 },
                 {
-                  title:
-                    "Application allows users to enter deposits offline",
-                  score: 8,
-                  message:
-                    "Application doesn't allow users to enter deposits offline",
-                  status: false
+                    message: "Application user interface could be a bit better",
+                    score: 4
                 },
                 {
-                  title:
-                    "Application allows users to enter expenses offline",
-                  score: 8,
-                  message:
-                    "Application doesn't allow users to enter expenses offline",
-                },
-                {
-                  title: "Application tracks entries made offline",
-                  score: 8,
-                  message: "Application doesn't track entries made offline",
-                  status: false
+                    message: "Application user interface style is clean and polished",
+                    score: 5
                 }
-              ]
-            },
-            {
-              title: "Repository Quality",
-              subtitle: null,
-              questions: [
+            ],
+            message: "",
+            status: false
+        },
+        {
+            title: "Application resembles the mock-up functionality provided in homework instructions",
+            score: 5,
+            type: "likert",
+            options: [
                 {
-                  title: "Repository has a unique name",
-                  score: 2,
-                  message: "Repo doesn't have a unique name",
-                  status: false
+                    message: "Application doesn't resemble the mock-up functionality provided in homework instructions",
+                    score: 0
                 },
                 {
-                  title:
-                    "Repository follows best practices for file structure and naming conventions",
-                  score: 2,
-                  message:
-                    "Code doesn't follow recommended file/folder structure",
-                  status: false
+                    message: "Application could resemble mock-up functionality provided with homework instructions much more closely",
+                    score: 2
                 },
                 {
-                  title:
-                    "Repository follows best practices for variable and function naming conventions, indentation, quality comments, etc.",
-                  score: 4,
-                  message:
-                    "Code doesn't follow good practices for variable names, indentation, lacks quality comments",
-                  status: false
+                    message: "Application could resemble mock-up functionality provided with homework instructions a bit more closely",
+                    score: 4
                 },
                 {
-                  title:
-                    "Repository contains quality README with description, screenshot, link to deployed application",
-                  score: 7,
-                  message:
-                    "Repo doesn't include a high quality README with screenshots, a description, link to deployed application",
-                  status: false
+                    message: "Application resembles the mock-up functionality provided in homework instructions",
+                    score: 5
                 }
-              ]
-            },
-            {
-              title: "Application Quality",
-              subtitle: null,
-              questions: [
-                {
-                  title:
-                    "Application user experience is intuitive and easy to navigate",
-                  score: 10,
-                  message:
-                    "Application user experience could be more intuitive",
-                  status: false
-                }
-              ]
-            },
-            {
-              title: "Academic Integrity",
-              subtitle:
-                "If any of of the following are true, partner with your instructor to investigate plagiarism. Contact your SSM if you believe plagiarism has occurred.",
-              questions: [
-                {
-                  title: "Application contains a low number of commits",
-                  score: 0,
-                  message: null,
-                  status: false
-                },
-                {
-                  title:
-                    "Application codebase appears advanced for the student, at this point in the course, or in general",
-                  score: 0,
-                  message: null,
-                  status: false
-                },
-                {
-                  title:
-                    "Application package.json file references a different author and/or repository",
-                  score: 0,
-                  message: null,
-                  status: false
-                },
-                {
-                  title:
-                    "Application package.json file references much older versions of npm packages",
-                  score: 0,
-                  message: null,
-                  status: false
-                }
-              ]
-            }
-          ];
+            ],
+            message: "",
+            status: false
+        }
+      ]
+    },
+{
+  title: "Repository Quality",
+  subtitle: null,
+  score: 0,
+  questions: [
+      {
+          title: "Repository has a unique name",
+          score: 2,
+          type: "true false",
+          message: "Repo doesn't have a unique name",
+          status: false
+      },
+      {
+          title:
+              "Repository follows best practices for file structure and naming conventions",
+          score: 2,
+          type: "true false",
+          message:
+              "Code doesn't follow recommended file/folder structure",
+          status: false
+      },
+      {
+          title:
+              "Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.",
+          score: 2,
+          type: "true false",
+          message:
+              "Code doesn't follow good practices for class/id names, indentation, lacks quality comments",
+          status: false
+      },
+      {
+          title:
+              "Repository contains multiple descriptive commit messages",
+          score: 2,
+          type: "true false",
+          message:
+              "Repo doesn't contain multiple descriptive commit messages",
+          status: false
+      },
+      {
+          title: "Repository contains quality README with description, screenshot, link to deployed application",
+          score: 5,
+          type: "likert",
+          options: [
+              {
+                  message: "Repo doesn't include a high quality README with screenshots, a description, link to deployed application",
+                  score: 0
+              },
+              {
+                  message: "Repository README is missing 2 of the following: description, screenshot, or link to deployed application",
+                  score: 2
+              },
+              {
+                  message: "Repository README is missing 1 of the following: description, screenshot, or link to deployed application",
+                  score: 4
+              },
+              {
+                  message: "Repository contains quality README with description, screenshot, link to deployed application",
+                  score: 5
+              }
+          ],
+          message: "",
+          status: false
+      }
+  ]
+},
+  {
+    title: "Academic Integrity",
+    subtitle: "If any of of the following are true, partner with your instructor to investigate plagiarism. Contact your SSM if you believe plagiarism has occurred.",
+    solution: null,
+    previewText: null,
+    score: null,
+    questions: [
+      {
+        title: "Application contains a low number of commits",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application codebase appears advanced for the student, at this point in the course, or in general",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application package.json file references a different author and/or repository",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      },
+      {
+        title: "Application package.json file references much older versions of npm packages",
+        score: 0,
+        type: "true false",
+        message: null,
+        status: false
+      }
+    ]
+  }
+];
 
           this.initStorage();
         }
@@ -607,13 +871,27 @@
           this.isDarkMode =
             JSON.parse(localStorage.getItem("isDarkMode")) || false;
 
-          this.categories.forEach(category => {
+          this.categories
+          .forEach(category => {
+            category.score = 0;
             category.questions.forEach(question => {
+              question.category = category.title;
               question.status = false;
               question.id = this.questions.length;
               question.flagged = category.title === "Academic Integrity";
-              question.message && this.messages.add(question.message);
+              question.bonus = category.title === "Bonus";
+              if (question.type === "likert") {
+                question.message = question.options[0].message.split(" - ").pop();
+              };
+
+              let messageObj = {
+                message : question.message,
+                category : question.category
+              };
+
+              question.message && !question.bonus && this.messages.add(messageObj);
               this.questions.push(question);
+              category.score += question.score;
             });
           });
         };
@@ -626,11 +904,29 @@
         Model.prototype.toggleRadio = function(radio) {
           const id = Number(radio.getAttribute("name"));
           const question = this.questions[id];
+          const questionScore = document.querySelector("span[data-id='" + id + "']");
+          const category = question.category;
+          const categoryScore = document.querySelector("span[data-cat='" + category.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
+          const resultsCategoryScore = document.querySelector("span[data-res-cat='" + category.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
 
           question.status = !question.status;
 
           if (question.status === true) {
-            this.messages.delete(question.message);
+            
+            if (!question.bonus) {
+              this.messages.forEach(message => {
+                if (message.message === question.message) {
+                  this.messages.delete(message);
+                }
+              })
+            } else {
+              let messageObj = {
+                message : question.message,
+                category : category
+              }
+              this.messages.add(messageObj);
+            }
+
             this.score += question.score;
 
             if (question.flagged) {
@@ -641,12 +937,108 @@
               this.flagged.delete(question.id);
             }
 
-            if (question.message) {
-              this.messages.add(question.message);
+            if (!question.bonus) {
+              if (question.message) {
+                let messageObj = {
+                  message: question.message,
+                  category: category
+                }
+                this.messages.add(messageObj);
+              }
+            } else {
+              this.messages.forEach(message => {
+                if (message.message === question.message) {
+                  this.messages.delete(message);
+                }
+              })
             }
 
             this.score -= question.score;
           }
+
+          if (category !== "Academic Integrity") {
+            if (question.status) {
+              questionScore.textContent = question.score;
+            } else {
+              questionScore.textContent = 0;
+            }
+
+            const catQuestions = this.categories.filter(cat => cat.title === category)[0].questions;
+            let categoryTotal = 0;
+
+            catQuestions.forEach(question => {
+              if (question.type === "true false") {
+                if (question.status) {
+                  categoryTotal += question.score;
+                }
+              } else {
+                let score = document.querySelector("select[name='" + question.id + "']").value;
+                categoryTotal += parseInt(score);
+              }
+            })
+
+            categoryScore.textContent = categoryTotal;
+            resultsCategoryScore.textContent = categoryTotal;
+          }
+
+        };
+
+        Model.prototype.handleSelect = function (select) {
+          const id = Number(select.getAttribute("name"));
+          const question = this.questions[id];
+          const questionScore = document.querySelector("span[data-id='" + id + "']");
+          const oldScore = questionScore.textContent;
+          const category = question.category;
+          const categoryScore = document.querySelector("span[data-cat='" + category.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
+          const resultsCategoryScore = document.querySelector("span[data-res-cat='" + category.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
+          let newMessage = select.selectedOptions[0].text.split(" - ").pop();
+          
+          if (newMessage === "Open this menu") {
+            newMessage = select[1].text.split(" - ").pop();
+          };
+
+          if (question.type === "likert") {
+
+            this.messages.forEach(item => {
+              if (item.message === question.message) {
+                this.messages.delete(item)
+              }
+            })
+           
+           question.message = newMessage;
+
+           let messageObj = {
+              message: newMessage,
+              category: category
+            }
+
+            this.messages.add(messageObj);
+
+          };
+
+          
+          
+          this.score -= parseInt(oldScore);
+          this.score += parseInt(select.value);
+          questionScore.textContent = select.value;
+
+          const catQuestions = this.categories.filter(cat => cat.title === category)[0].questions;
+          let categoryTotal = 0;
+
+          catQuestions.forEach(question => {
+              if (question.type === "true false") {
+                if (question.status) {
+                  categoryTotal += question.score;
+                }
+              } else {
+                let score = document.querySelector("select[name='" + question.id + "']").value;
+                categoryTotal += parseInt(score);
+              }
+            })
+
+          categoryScore.textContent = categoryTotal;
+          resultsCategoryScore.textContent = categoryTotal;
+
         };
 
         Model.prototype.calcGrade = function() {
@@ -697,58 +1089,99 @@
 
         View.prototype.cacheDom = function() {
           this.darkModeToggle = document.querySelector("#dark-mode");
+
           this.radios = Array.from(
             document.querySelectorAll("input[type='radio']")
           );
+
+          this.selects = Array.from(
+            document.querySelectorAll("select")
+          );
+
           this.totals = document.querySelector(".totals");
           this.grade = document.querySelector(".grade");
           this.alert = document.querySelector("div[role='alert']");
           this.summaryHeading = document.querySelector(".summary-heading");
           this.summary = document.querySelector(".summary");
+          
+          this.model.categories
+          .filter(category => category.title !== "Academic Integrity")
+          .map(category => {
+            let summary = category.title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase();
+            let summaryName = summary + "-summary";
+            return this[summaryName] = document.querySelector("." + summary);
+            })
+
           this.resetButton = document.querySelector(".reset");
-          this.copyButton = document.querySelector(".copy");
+          
+          this.model.categories
+          .filter(category => category.title !== "Academic Integrity")
+          .map(category => {
+            let button = category.title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase();
+            let buttonName = "copyButton-" + button;
+            return this[buttonName] = document.querySelector(".copy-" + button);
+            })
         };
 
-        View.prototype.createFieldset = function({ title, id }) {
+        View.prototype.createFieldset = function({ title, id, score, status, category, type, options }) {
           return `<fieldset class="input-group">
           <legend>
-            ${title}
+            <span class="title">${title}</span> ${category === "Academic Integrity" ? "" : "<span class='score'><span data-id='" + id + "' class='current-score'>0</span> / " + score + "</span>"}
           </legend>
-          <div class="radio-group">
+          ${type === "true false" ?
+          `<div class="radio-group">
             <input type="radio" name="${id}" id="${id}-true" value="true">
             <label for="${id}-true">True</label>
           </div>
           <div class="radio-group">
             <input type="radio" name="${id}" id="${id}-false" value="false" checked>
             <label for="${id}-false">False</label>
-          </div>
+          </div>` :
+          `<div class="select-group">
+            <select name="${id}" class="select-lg select2 narrow wrap">
+              <option value="0" selected>Open this menu</option>
+              ${options.map(option => `<option value="${option.score}">${option.score} - ${option.message}</option>`)}
+            </select>
+          </div>`
+        }
         </fieldset>`;
         };
 
-        View.prototype.createCard = function({ title, subtitle, questions }) {
+        View.prototype.createCard = function({ title, subtitle, solution, previewText, questions, score }) {
           return `<div class="card">
-          <h2>${title}</h2>
+          <div class="card-header"><h2>${title}</h2> ${title !== "Academic Integrity" ? "<span class='cat-score'><span data-cat='" + title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "'>0</span> / " + score + "</span>" : ""}</div>
           ${subtitle ? `<h3>${subtitle}</h3>` : ""}
+          ${solution ? `<h3 class="solution">Solution: <a href=${solution} target="_blank" rel="noopener noreferrer">${previewText !== null ? previewText : solution}</a></h3>` : ""}
           ${questions.map(child => this.createFieldset(child)).join("")}
           </div>`;
         };
 
         View.prototype.createResults = function() {
           return `<div class="card">
-        <h2 class="totals">(0/100)</h2>
         <h2>Recommended Grade: <span class="grade">F</span></h2>
+        <h2 class="totals">Total: (0/100)</h2>
         <div class="d-none" role="alert">
           You've selected <strong>True</strong> for one of more Academic
           Integrity prompts and are advised to investigate plagiarism before
           issuing a grade.
         </div>
-        <h3 class="summary-heading d-none">Summary:</h3>
-        <pre class="summary" aria-label="summary">${[...this.model.messages]
-          .map(message => `* ${message}\n`)
-          .join("")}</pre>
+        <div class="summary" aria-label="summary">
+        ${this.model.categories
+          .filter(category => category.title !== "Academic Integrity")
+          .map(category => {
+            let score = category.score;
+            let title = category.title;
+            let catClass = title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase();
+
+            return "<h2>" + title + "<span class='cat-score'><span data-res-cat='" + title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "'>0</span> / " + score + "</span></h2><pre class='" + catClass + "'>" + [...this.model.messages]
+            .filter(messageObj => messageObj.category === category.title)
+            .map(messageObj => `* ${messageObj.message}\n`)
+            .join("") + "</pre><button class='copy copy-" + catClass + "'>Copy To Clipboard</button>"
+            })
+          .join("")}
+        </div>
         <div class="btn-container">
           <button class="reset">Reset Form</button>
-          <button class="copy">Copy To Clipboard</button>
         </div>
       </div>`;
         };
@@ -790,7 +1223,7 @@
 
         View.prototype.update = function() {
           const roundedScore = Math.min(100, Math.ceil(this.model.score));
-          this.totals.textContent = `(${roundedScore}/ 100)`;
+          this.totals.textContent = `Total: (${roundedScore}/ 100)`;
 
           const letterGrade = this.model.calcGrade();
           this.grade.textContent = letterGrade;
@@ -807,9 +1240,17 @@
             this.wrapper.classList.remove("dark");
           }
 
-          this.summary.textContent = [...this.model.messages]
-            .map(message => `* ${message}\n`)
-            .join("");
+          this.model.categories
+          .filter(category => category.title !== "Academic Integrity")
+          .forEach(category => {
+            let catClass = category.title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase();
+
+            this[catClass + "-summary"].innerHTML = [...this.model.messages]
+            .filter(messageObj => messageObj.category === category.title)
+            .map(messageObj => `* ${messageObj.message}\n`)
+            .join("")
+            })
+
         };
 
         function Controller(model, view) {
@@ -821,12 +1262,15 @@
         Controller.prototype.addEventListeners = function() {
           this.view.wrapper.addEventListener("change", event => {
             const { target } = event;
-
-            if (!target.matches("input[type='radio']")) {
-              return;
+            
+            if (target.name !== "dark-mode") {
+              if (!target.matches("input[type='radio']")) {
+                this.model.handleSelect(target);
+              } else {
+                this.model.toggleRadio(target);
+              }
             }
 
-            this.model.toggleRadio(target);
             this.view.update();
           });
 
@@ -837,19 +1281,50 @@
               radio => (radio.checked = radio.hasAttribute("checked"))
             );
 
+            this.view.selects.forEach(
+              select => select.selectedIndex = null
+            )
+            
+            this.model.questions
+            .filter(question => question.category !== "Academic Integrity")
+            .forEach(question => {
+              const id = question.id;
+              const questionScore = document.querySelector("span[data-id='" + id + "']");
+              questionScore.textContent = 0;
+            });
+            
+            this.model.categories
+            .filter(category => category.title !== "Academic Integrity")
+            .forEach(category => {
+              const title = category.title
+              const categoryScore = document.querySelector("span[data-cat='" + title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
+              const resultsCategoryScore = document.querySelector("span[data-res-cat='" + title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase() + "']");
+              categoryScore.textContent = 0;
+              resultsCategoryScore.textContent = 0;
+            });
+
             this.view.update();
             window.scrollTo(0, 0);
           });
 
-          this.view.copyButton.addEventListener("click", () => {
-            const selection = window.getSelection();
-            const range = document.createRange();
+          this.model.categories
+            .filter(category => category.title !== "Academic Integrity")
+            .forEach(category => {
+              let title = category.title.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').toLowerCase();
+              let buttonName = "copyButton-" + title;
+              
+              let summaryName = title + "-summary";
 
-            range.selectNodeContents(this.view.summary);
-            selection.removeAllRanges();
-            selection.addRange(range);
-            document.execCommand("copy");
-          });
+              this.view[buttonName].addEventListener("click", () => {
+                const selection = window.getSelection();
+                const range = document.createRange();
+                range.selectNodeContents(this.view[summaryName]);
+                selection.removeAllRanges();
+                selection.addRange(range);
+                document.execCommand("copy");
+              });
+            });
+
 
           this.view.darkModeToggle.addEventListener("change", () => {
             this.model.toggleDarkMode();
@@ -867,4 +1342,5 @@
       })(window);
     </script>
   </body>
-</html>
+  </html>
+    
