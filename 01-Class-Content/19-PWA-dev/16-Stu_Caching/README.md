@@ -12,23 +12,19 @@ Work with a partner to implement the following user story:
 
 * It's done when I have registered the service worker inside the `client/index.js` file after checking to see if the browser supports service workers.
 
-* It's done when I have imported and configured the `workbox-webpack-plugin` to the `webpack.config.js` file.
+* It's done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-* It's done when I have updated the `plugins` array in the `webpack.config.js` file to invoke a new `generateSw()` method.
+* It's done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
-* It's done when I have passed an object to the `generateSw()` method in the `webpack.config.js` file that contains the following properties:
+* It's done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-  * `runtimeCaching`: An array of objects that define the strategies to use for caching.
-
-  * `urlPattern`: A string that is used to match URLs.
-
-  * `handler`: A string that is used to specify the caching strategy to use.
-
-* It's done when I have specified a `urlPattern` for `/css` and `/js` in the `runtimeCaching` array.
+* It's done when I have registered a route for the caching of static assets (js, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request.
 
 ## 📝 Notes
 
 Refer to the documentation:
+
+* Matching can be done against the destination of the incoming request, which can be accessed using the `destination` property of the `request` object.
 
 * [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
 
@@ -43,7 +39,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-* What other caching recipe lends itself to caching of JS and CSS files?
+* What does the `staleWhileRevalidate` strategy do? Is there another strategy that could be used?
 
 ## 🏆 Bonus
 
