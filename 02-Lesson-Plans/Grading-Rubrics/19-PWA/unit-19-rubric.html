@@ -547,24 +547,24 @@
     score: 0,
     questions: [
       {
-        title: "Uses a IndexedDB in their application",
+        title: "Application uses IndexedDB to create an object store and includes both GET and PUT methods",
         score: 5,
         type: "likert",
         options: [
           {
-            message: "The application does not use the IndexedDB API",
+            message: "The application does not use IndexedDB",
             score: 0
           },
           {
-            message: "The IndexedDB object store is created",
+            message: "Application uses IndexedDB to create an object store, but doesn't include GET or PUT methods",
             score: 1
           },
           {
-            message: "The application has either a PUT or GET method",
+            message: "Application uses IndexedDB to create an object store, but only includes one of the 2 following: a GET or PUT method",
             score: 3
           },
           {
-            message: "The application has both a PUT and GET method",
+            message: "Application uses IndexedDB to create an object store and includes both GET and PUT methods",
             score: 5
           }
         ],
@@ -579,34 +579,34 @@
         status: false
       },
       {
-        title: "Automatically saves the text editor content when the DOM window is unfocused",
+        title: "Application automatically saves the content in the text editor when the DOM window is unfocuses",
         score: 5,
         type: "true false",
-        message: "The text editor content is not saved when the DOM window is unfocused",
+        message: "Content in the text editor content is not saved when the DOM window is unfocused",
         status: false
       },
       {
-        title: "Bundled with webpack",
+        title: "The application is bundled with webpack",
         score: 5,
         type: "true false",
         message: "The application is not bundled using webpack",
         status: false
       },
       {
-        title: "Create a service worker with workbox that Caches static assets",
+        title: "The application creates a service worker with workbox that caches static assets",
         score: 5,
         type: "likert",
         options: [
           {
-            message: "The application does not register a service worker",
+            message: "The application does not register a service worker with workbox that caches static assets",
             score: 0
           },
           {
-            message: "The application registers a service worker",
+            message: "The application creates a service worker with workbox, but it does not cache static assets",
             score: 2
           },
           {
-            message: "The application registers a service worker and the service worker caches static assets",
+            message: "The application creates a service worker with workbox that caches static assets",
             score: 5
           }
         ],
@@ -614,24 +614,24 @@
         status: false
       },
       {
-        title: "The application should use babel in order to use async / await",
+        title: "The application uses Babel to use async/await",
         score: 5,
         type: "true false",
-        message: "The application does notuse babel in order to use async / await",
+        message: "The application does not use Babel to use async/await",
         status: false
       },
       {
-        title: "Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in",
+        title: "Application has a manifest.json generated using the WebpackPwaManifest plug-in",
         score: 5,
         type: "true false",
-        message: "The application does not have a generated `manifest.json` using the `WebpackPwaManifest` plug-in",
+        message: "The application does not have a manifest.json",
         status: false
       },
       {
-        title: "Progressive Web App functionality (Can be installed)",
+        title: "Application can be installed as a Progressive Web Application",
         score: 5,
         type: "true false",
-        message: "",
+        message: "Application cannot be installed as a Progressive Web Application",
         status: false
       }
     ]

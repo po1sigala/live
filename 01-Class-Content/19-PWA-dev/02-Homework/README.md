@@ -74,11 +74,11 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses a IndexedDB in their application
+  * Uses IndexedDB to create an object store and includes both GET and PUT methods
 
   * The application works without an internet connection
 
-  * Automatically saves the text editor content when the DOM window is unfocused
+  * Automatically saves content inside the text editor when the DOM window is unfocused
 
   * Bundled with webpack
 
