@@ -23,7 +23,7 @@ Refer to the documentation:
 ## Assets
 
 <!-- TODO: Add a screenshot -->
-The following image demonstrates the web application's appearance and functionality:
+The following image demonstrates Watch mode is currently on:
 
 ![]()
 
@@ -33,7 +33,7 @@ The following image demonstrates the web application's appearance and functional
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How would we do this in production mode?
+* How can we implement Watch mode in production?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

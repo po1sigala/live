@@ -20,7 +20,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we run lighthouse from the CLI?
+* How can we run a Lighthouse audit for a website from the CLI?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
