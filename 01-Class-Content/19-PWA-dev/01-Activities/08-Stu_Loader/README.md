@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I can see the web application load and operate without errors on different browsers.
 
-* It's done when webpack has successfully created a bundle.
+* It's done when webpack has successfully created a bundle in the `dist/` folder.
 
 ## 📝 Notes
 
