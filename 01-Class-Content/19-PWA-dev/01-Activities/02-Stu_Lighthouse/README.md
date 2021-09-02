@@ -1,6 +1,6 @@
 # 📐 Analyze the Lighthouse Audit
 
-Work with a partner to find which key metrics need improvement in the following Lighthouse audit. 
+Work with a partner to identify which key metrics need improvement using a Lighthouse audit. 
 
 ## 📝 Notes
 
