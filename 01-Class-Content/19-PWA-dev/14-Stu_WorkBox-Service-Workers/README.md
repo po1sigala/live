@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of a Workbox Service Worker
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved/client/index.js](./Unsolved) and [Unsolved/src-sw.js](./Unsolved/src-sw.js).
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved) and [src-sw.js](./Unsolved/src-sw.js).
 
 ## 📝 Notes
 

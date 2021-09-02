@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-* It's done when I have registered a route for the caching of static assets (js, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request.
+* It's done when I have registered a route for the caching of static assets (JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request.
 
 ## 📝 Notes
 

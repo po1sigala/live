@@ -2,7 +2,7 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to spin up the client and backend servers so that I can test the full application, not just the client.
+* As a developer, I want to be able to start the client and backend servers simultaneously so that I can test the full application, not just the client.
 
 ## Acceptance Criteria
 
@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![ @TODO add image]()
 
 ---
 
