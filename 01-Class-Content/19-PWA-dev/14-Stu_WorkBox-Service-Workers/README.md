@@ -12,8 +12,7 @@ Refer to the documentation:
 
 ---
 
-<!-- TODO Ask Sarah to make a custom version of this graphic  -->
-<!-- https://res.cloudinary.com/scotch/image/upload/v1536590617/kxhshgxmbcl1aw7gncem.png -->
+@TODO [BCCOD-2297](https://jira.2u.com/browse/BCCOD-2297?filter=-1)
 
 ## 🏆 Bonus
 

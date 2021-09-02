@@ -24,13 +24,13 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation:
 
-* Matching can be done against the destination of the incoming request, which can be accessed using the `destination` property of the `request` object.
+* What are some different methods we can match files we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 
 * [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
 
 ## Assets
 
-<!-- TODO: Add a screenshot -->
+@TODO: Add a screenshot
 The following image demonstrates the web application's appearance and functionality:
 
 ![]()

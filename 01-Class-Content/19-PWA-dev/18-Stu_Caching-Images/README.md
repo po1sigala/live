@@ -2,15 +2,15 @@
 
 Work with a partner to resolve the following issue(s):
 
-* As a user, I want to be able to rely on the browser to cache images so that I can view them faster, especially when navigating a site with a lot of images.
+* As a developer, I want to be able to rely on the browser to cache images so that I can create a faster application for the end user.
 
 ## Expected Behavior
 
-When the user visits a page for the second, third and fourth time, the browser should be able to find the images in the cache and not need to make a request to the server.
+The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by inspecting the network tab in the browser when the user visits the page after the first time.
 
 ## Actual Behavior
 
-After the user visits the page for the first time, it is necessary to make a request to the server for the image. After the user visits the page for the second time, the images should load from the cache making the app feel snappy. This is not the case however as indicated by multiple network requests being made to the server for the images.
+When a user visits the page even after the first time, the browser is still making network requests to the server to retrieve the images.
 
 ## Steps to Reproduce the Problem
 
