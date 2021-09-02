@@ -12,8 +12,6 @@ Work with a partner to implement the following user story:
 
 * It's done when I have successfully installed the HtmlWebpackPlugin to generate an HTML file.
 
-
-
 ## Assets
 
 <!-- TODO: Add a screenshot -->
