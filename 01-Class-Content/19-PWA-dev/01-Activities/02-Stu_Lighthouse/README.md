@@ -4,7 +4,7 @@ Work with a partner to identify which key metrics need improvement using a Light
 
 ## 📝 Notes
 
-1. Review the Lighthouse audit in the [Unsolved](./Unsolved/audit.png)
+1. Review the [Lighthouse audit](./Unsolved/audit.png).
 
 2. Find which metrics must be modified to improve the loading time of the website.
 
