@@ -1,10 +1,10 @@
 # 📐 Analyze the Lighthouse Audit
 
-Work with a partner to find which key metrics need improvement in the following Lighthouse audit. 
+Work with a partner to identify which key metrics need improvement using a Lighthouse audit. 
 
 ## 📝 Notes
 
-1. Review the Lighthouse audit in the [Unsolved](./Unsolved/audit.png)
+1. Review the [Lighthouse audit](./Unsolved/audit.png).
 
 2. Find which metrics must be modified to improve the loading time of the website.
 
