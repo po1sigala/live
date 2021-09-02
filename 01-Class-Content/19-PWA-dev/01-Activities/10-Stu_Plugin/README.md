@@ -1,4 +1,4 @@
-# 🏗️ Generate HTML files to serve the Webpack Bundles
+# 🏗️ Generate an HTML file to serve Webpack Bundles
 
 Work with a partner to implement the following user story:
 
@@ -9,6 +9,10 @@ Work with a partner to implement the following user story:
 * It's done when I can generate an HTML file that contains the references to the webpack bundles.
 
 * It's done when the generated HTML file follows the template, `index.html`.
+
+* It's done when I have successfully installed the HtmlWebpackPlugin to generate an HTML file.
+
+
 
 ## Assets
 

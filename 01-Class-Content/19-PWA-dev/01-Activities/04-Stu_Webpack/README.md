@@ -8,9 +8,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when a bundle is created from the command line using the command `npm run build`.
+* It's done when a bundle is created in the `dist/` folder from the command line using the command `npm run build`.
   
-* It's done when Watch Mode is initiated from the command line using the command, `npm run watch`.
+* It's done when Watch Mode is initiated from the command line using the command, `npm run watch`, as indicated in the following screenshot.
 
 ## 📝 Notes
 

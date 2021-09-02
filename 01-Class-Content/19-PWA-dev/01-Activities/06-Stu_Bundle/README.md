@@ -6,11 +6,11 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-When a developer executes the build command from the command line, a bundle is created.
+When a developer executes the build command from the command line, a bundle is created in the `dist/` folder.
 
 ## Actual Behavior
 
-When a developer executes the build command, an error message is displayed and a bundle is NOT created.
+When a developer executes the build command, an error message is displayed in the terminal.
 
 ## Steps to Reproduce the Problem
 
@@ -21,7 +21,7 @@ When a developer executes the build command, an error message is displayed and a
 ## Assets
 
 <!-- TODO: Add a screenshot -->
-The following image demonstrates the web application's bundle was successfully created:
+The following image confirms that a bundle was created by displaying a success message in the terminal:
 
 ![]()
 
@@ -29,7 +29,9 @@ The following image demonstrates the web application's bundle was successfully c
 
 ## 💡 Hints
 
-The error message in the terminal: `Module not found: Error`, is critical.
+The error message in the terminal: `Module not found: Error`, is a critical clue.
+
+Which module is needed by webpack to create a bundle?
 
 ## 🏆 Bonus
 
