@@ -12,20 +12,24 @@ When a user clicks the delete button, the contact card will be removed from the 
 
 ## Actual Behavior
 
-When a user clicks the delete button, the contact card remains on the page and an error is thrown in the console.
+When a user clicks the delete button, the To Do list item  remains on the page and an error is thrown in the console.
 
 ## Steps to Reproduce the Problem
 
-1. Open web page. 
+1. In the command line, navigate to `26-Stu_IndexedDB-CRUD/Unsolved`.
 
-2. Create a new contact card at the bottom of the page.
+2. Run `npm install`.
 
-3. Click the delete button on the newly created contact card.
+3. To launch the application, run `npm run build`.
+
+4. Create a new To Do item at the bottom of the page.
+
+5. Click the delete button on the newly created list item.
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
-
+@TODO: Add assets
 ![]()
 
 ---

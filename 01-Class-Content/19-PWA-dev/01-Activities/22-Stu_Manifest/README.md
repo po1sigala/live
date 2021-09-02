@@ -13,7 +13,7 @@ Work with a partner to implement the following user story:
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
-
+@TODO: Add assets
 ![]()
 
 ---

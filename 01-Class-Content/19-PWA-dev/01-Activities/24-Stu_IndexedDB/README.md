@@ -1,12 +1,12 @@
 # 📐 Add Comments to Implementation of IndexedDB
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved/src/js/database.js).
+Work with a partner to add comments describing the functionality of the code found in the [database.js](./Unsolved/src/js/database.js) file.
 
 ## 📝 Notes
 
-To Launch the application, follow these steps:
+To launch the application, follow these steps:
 
-1. In the command line, navigate to `02-Stu_IndexedDB/Unsolved`.
+1. In the command line, navigate to `24-Stu_IndexedDB/Unsolved`.
 
 2. Run `npm install`.
 

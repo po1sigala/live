@@ -1,12 +1,14 @@
 # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
 
-In this mini-project, you are given a fully functioning PWA that is almost ready to be deployed to Heroku. We can easily install this application via `localhost` but now it's up to us to make it installable via the web. We have released applications before on Heroku and it has been a pretty painless experience. PWAs are not much different but we need to implement a few different scripts so that Heroku can deliver our web application with the right bundle created by Webpack.
+In this mini-project, you are given a simple application that needs to be updated to use Webpack, service-workers, IndexedDB, and we need it to have PWA functionality. Once we have updated our application with these new features, we can work on Deploying our application to Heroku. Heroku isn't new to us, but we will need to work on a handful of special scripts so Heroku knows to deploy our bundled application.
 
 ## User Stories
 
 Work with your group to resolve the following issues:
 
 * As a user, I want to be able to install the web application as a PWA.
+
+* As a user, I want to be able to add and remove my contact cards.
 
 * As a developer, I want all my scripts to run from the root directory `package.json`.
 
@@ -26,9 +28,15 @@ Work with your group to resolve the following issues:
 
 The mini-project is complete when the following criteria are met:
 
-* The web application can be installed from the web address provided by Heroku.
+* The application uses Webpack for bundling.
 
-* Deployed using Heroku.
+* The application uses a service worker to cache static assets.
+
+* The application uses IndexedDB GET, ADD, and DELETE methods.
+
+* The application uses babel for async/await.
+
+* The application uses CSS loaders.
 
 * Scripts are placed in the root directory's `package.json`.
 
@@ -43,6 +51,10 @@ The mini-project is complete when the following criteria are met:
 * `npm run install` installs the dependencies for the client.
 
 * `npm run client` starts the client without the server.
+
+* The web application can be installed from the web address provided by Heroku.
+
+* Deployed using Heroku.
 
 ---
 
