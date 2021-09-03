@@ -34,7 +34,7 @@ export const getDb = async () => {
 };
 
 export const deleteDb = async (id) => {
-  console.log('DELETE from the database');
+  console.log('DELETE from the database', id);
   const contactDb = await openDB('contact', 1);
   const tx = contactDb.transaction('contact', 'readwrite');
   const store = tx.objectStore('contact');
