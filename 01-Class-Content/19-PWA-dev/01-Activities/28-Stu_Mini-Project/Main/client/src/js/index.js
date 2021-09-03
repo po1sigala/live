@@ -54,9 +54,6 @@ const fetchCards = async () => {
 
 }
 
-const btn  = document.getElementById('2');
-
-console.log(deleteCard);
 
 fetchCards();
 // Check if service workers are supported
