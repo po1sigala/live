@@ -28,7 +28,7 @@ form.addEventListener('submit', (event) => {
   postDb(name, home, cell, email);
 
   // Submit the form
-  form.submit();
+  form.reset();
 
   // Reload the DOM
   fetchCards();
