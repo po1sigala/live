@@ -1,4 +1,4 @@
-// import './css/jass.css';
+import './css/style.css';
 
 const targetEl = document.querySelector('.flexbox');
 console.log('🚀 - file: index.js - line 4 - targetEl', targetEl);
@@ -10,7 +10,6 @@ async function getDevArticles() {
 }
 
 getDevArticles().then((articles) => {
-  console.log(articles);
   document.getElementById('articles').innerHTML = '';
   articles.forEach((article) => {
     const articleEl = document.createElement('article');
