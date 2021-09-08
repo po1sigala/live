@@ -1,46 +1,8 @@
 import '../css/styles.css';
 
-import { postDb, getAllDb, getOneDb, deleteDb, putDb } from './database';
+import { postDb, getAllDb } from './database';
 
 const form = document.getElementById('contact-form');
-
-// Adds deleteCard() to the global scope so each card has access to it.
-window.deleteItem = (e) => {
-  // Grabs the id from the button element attached to the contact card.
-  let id = parseInt(e.parentElement.id);
-
-  console.log(id);
-  // Delete the card
-  deleteDb(id);
-
-  // Reload the DOM
-  fetchList();
-};
-
-window.editList = async (e) => {
-  let id = parseInt(e.parentElement.id);
-  // const todo = form.elements['todo-edit'].value;
-  console.log(id);
-  let todo = await getOneDb(id);
-
-  let input = `
-  <form action="" onsubmit="editTodo(event)">
-        <input type="text" id="${id}" value="${todo.todo}" />
-    </form>
-  `;
-
-  document.getElementById(id).innerHTML = input;
-};
-
-window.editTodo = async (e) => {
-e.preventDefault()
-let id = parseInt(e.target.children[0].id)
-let todo = e.target.children[0].value
-  console.log(e.target.children[0].id);
-  console.log(e.target.children[0].value);
-  putDb(id, todo)
-  fetchList();
-};
 
 form.addEventListener('submit', (event) => {
   // handle the form data

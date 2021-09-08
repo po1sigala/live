@@ -24,7 +24,11 @@ When a user clicks the delete button, the To Do list item  remains on the page a
 
 4. Create a new To Do item at the bottom of the page.
 
-5. Click the delete button on the newly created list item.
+4. Open the `index.html` file in the `dist` directory.
+
+5. Click on a list item which should remove the list item.
+
+6. Click on the edit button and we should be able to edit the list item.
 
 ## Assets
 

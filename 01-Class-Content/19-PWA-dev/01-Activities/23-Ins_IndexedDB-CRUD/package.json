@@ -1,5 +1,5 @@
 {
-  "name": "TODO",
+  "name": "23-Ins_Indexed-CRUD",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
