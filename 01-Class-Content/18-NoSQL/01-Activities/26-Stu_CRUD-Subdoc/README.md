@@ -1,14 +1,12 @@
 # 📐 Add Comments to Mongoose CRUD Operations
 
-Work with a partner to add comments describing the functionality of the CRUD operations found in [Unsolved/controllers/appController.js](./Unsolved/controllers/appController.js).
+Work with a partner to add comments that describe the functionality of the CRUD operations found in [Unsolved/controllers/appController.js](./Unsolved/controllers/appController.js).
 
 ## 📝 Notes
 
-Be sure to run `npm install`, `npm run seed` and `npm start`.
+* Be sure to run `npm install`, `npm run seed`, and `npm start`.
 
-Refer to the documentation:
-
-[Mongoose Documentation on Constructing Models](https://mongoosejs.com/docs/models.html)
+* Refer to the documentation: [Mongoose docs on constructing models](https://mongoosejs.com/docs/models.html)
 
 ---
 

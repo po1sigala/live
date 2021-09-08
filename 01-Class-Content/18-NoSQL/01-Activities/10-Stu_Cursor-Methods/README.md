@@ -1,4 +1,4 @@
-# 📖 Implement Cursor Methods to Change How the Documents are Returned
+# 📖 Implement Sort and Skip to Change How Documents Are Returned
 
 Work with a partner to implement the following user story:
 
@@ -8,21 +8,21 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when the documents are returned in descending order using MongoDB methods.
+* It is done when the documents are returned in descending order using MongoDB methods.
 
-* It's done the results are limited to 5 documents.
+* It is done the results are limited to five documents.
 
-* It's done when documents that contain the largest five numbers are skipped.
+* It is done when documents that contain the largest five numbers are skipped.
 
-* It's done when routes are successfully tested and the results returned in Insomnia. 
+* It is done when routes are successfully tested and the results are returned in Insomnia.
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
-[MongoDB Docs on Sort Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/sort/)
+[MongoDB docs on Sort Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/sort/)
 
-[MongoDB Docs on Skip Returned Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/skip/)
+[MongoDB docs on Skip Returned Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/skip/)
 
 ## 💡 Hints
 
@@ -36,4 +36,5 @@ If you have completed this activity, work through the following challenge with y
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
+---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

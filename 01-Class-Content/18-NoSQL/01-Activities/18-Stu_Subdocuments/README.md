@@ -1,4 +1,4 @@
-# 📖 Implementing Subdocuments in a Mongoose Schema
+# 📖 Implement Subdocuments in a Mongoose Schema
 
 Work with a partner to implement the following user story:
 
@@ -6,25 +6,25 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I define a new schema named `bookSchema` for the subdocument.
+* It is done when I define a new schema named `bookSchema` for the subdocument.
 
-* It's done when the `bookSchema` has two properties: `title` and `price`.
+* It is done when the `bookSchema` has two properties: `title` and `price`.
 
-* It's done when the `books` subdocument is nested in the parent document.
+* It is done when the `books` subdocument is nested in the parent document.
 
-* It's done when I have created a model named `Library`.
+* It is done when I have created a model named `Library`.
 
-* It's done when I have created an array of three books using the `bookSchema`.
+* It is done when I have created an array of three books using the `bookSchema`.
 
-* It's done when I have created a new instance of the `Library` model which includes the `books` subdocument.
+* It is done when I have created a new instance of the `Library` model which includes the `books` subdocument.
 
-* It's done when I test the `GET` route in Insomnia and the subdocuments are nested in the parent document.
+* It is done when I test the `GET` route in Insomnia and the subdocuments are nested in the parent document.
 
 ## 📝 Notes
 
 Refer to the documentation:
 
-[Mongoose Docs on Subdocuments](https://mongoosejs.com/docs/subdocs.html)
+[Mongoose docs on subdocuments](https://mongoosejs.com/docs/subdocs.html)
 
 ## 💡 Hints
 
