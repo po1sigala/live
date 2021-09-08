@@ -6,17 +6,13 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
-  devServer: {
-    hot: true,
-    static: './dist',
-    overlay: true,
-  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
       template: './index.html',
     }),
   ],
+  // TODO: add devServer config
   module: {
     rules: [
       {

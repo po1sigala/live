@@ -16,6 +16,8 @@ Work with a partner to implement the following user story:
 
 * It's done when I have enabled the overlay in `webpack.config.js` so that I can see the errors in the browser.
 
+* It's done when I have added some content to the `style.css` file so that when I save the file, the changes are reflected in the browser due to hot module replacement.
+
 ## 📝 Notes
 
 Refer to the documentation:
