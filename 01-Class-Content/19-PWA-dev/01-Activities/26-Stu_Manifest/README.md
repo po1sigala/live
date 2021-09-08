@@ -1,4 +1,4 @@
-# 🏗️ Implement a Manifest.json file with Webpack
+# 📖 Implement a Manifest.json file with Webpack
 
 Work with a partner to implement the following user story:
 
@@ -10,11 +10,11 @@ Work with a partner to implement the following user story:
 
 * It's done when I can see my `manifest.json` file generated inside of Chrome Dev Tools.
 
-## Assets
+## 📝 Notes
 
-The following image demonstrates the web application's appearance and functionality:
-@TODO: Add assets
-![]()
+Refer to the documentation:
+
+[Webpack PWA Manifest plugin documentation.](https://www.npmjs.com/package/webpack-pwa-manifest)
 
 ---
 
