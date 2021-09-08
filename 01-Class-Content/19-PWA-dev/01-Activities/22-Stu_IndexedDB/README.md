@@ -10,9 +10,11 @@ To launch the application, follow these steps:
 
 2. Run `npm install`.
 
-3. To launch the application, run `npm run build`.
+3. To launch the application, run `npm run start`.
 
-4. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
+4. Open the `index.html` file in the `dist` directory.
+
+5. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
 
 
 Refer to the documentation: 
