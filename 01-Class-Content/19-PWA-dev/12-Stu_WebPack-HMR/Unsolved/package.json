@@ -1,5 +1,5 @@
 {
-  "name": "12-Stu_WebPack-HMR (Unsolved)",
+  "name": "12-stu_webpack-hmr-unsolved",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack"

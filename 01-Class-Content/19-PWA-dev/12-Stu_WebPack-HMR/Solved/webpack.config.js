@@ -9,7 +9,6 @@ module.exports = {
   devServer: {
     hot: true,
     static: './dist',
-    overlay: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

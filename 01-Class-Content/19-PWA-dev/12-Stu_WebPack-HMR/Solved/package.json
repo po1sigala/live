@@ -1,5 +1,5 @@
 {
-  "name": "12-Stu_WebPack-HMR (Solved)",
+  "name": "12-stu_webpack-hmr-solved",
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --open",
