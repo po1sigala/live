@@ -20,7 +20,6 @@ module.exports = {
     }),
     // Add workbox-webpack-plugin to the plugins array and pass in the options `clientsClaim: true` so that the browser will take control of the service worker.
     // `skipWaiting: true` will make the browser wait for the service worker to become ready before activating it.
-
     new GenerateSW({
       clientsClaim: true,
       skipWaiting: true,

@@ -8,13 +8,6 @@ const getDevArticles = async () => {
   return articles;
 };
 
-const logger = (type, message, extra = '') => {
-  const badge = `%c${type}`;
-  const style =
-    'color: white; background-color: orange; padding: 2px 5px; border-radius: 5px; font-weight: bold';
-  console.log(badge, style, message, extra);
-};
-
 getDevArticles().then((articles) => {
   document.getElementById('articles').innerHTML = '';
   articles.forEach((article) => {
@@ -48,8 +41,5 @@ if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js');
-    navigator.serviceWorker.ready.then((registration) => {
-      logger('Service Worker', 'Service Worker is ready', registration);
-    });
   });
 }
