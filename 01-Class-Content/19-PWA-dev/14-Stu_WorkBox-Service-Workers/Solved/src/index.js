@@ -35,3 +35,11 @@ getDevArticles().then((articles) => {
     targetEl.appendChild(articleEl);
   });
 });
+
+// Register the service worker in the browser
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
