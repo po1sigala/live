@@ -1,13 +1,12 @@
 import './css/style.css';
 
 const targetEl = document.querySelector('.flexbox');
-console.log('🚀 - file: index.js - line 4 - targetEl', targetEl);
 // get the articles
-async function getDevArticles() {
+const getDevArticles = async () => {
   const response = await fetch('https://dev.to/api/articles');
   const articles = await response.json();
   return articles;
-}
+};
 
 getDevArticles().then((articles) => {
   document.getElementById('articles').innerHTML = '';
