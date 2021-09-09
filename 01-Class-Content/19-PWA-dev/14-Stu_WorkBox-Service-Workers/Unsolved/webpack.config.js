@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// Import workbox-webpack-plugin
+// TODO: Explain what the workbox-webpack-plugin does and why it is needed in this case
 const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -18,8 +18,9 @@ module.exports = {
       title: 'Development',
       template: './index.html',
     }),
-    // Add workbox-webpack-plugin to the plugins array and pass in the options `clientsClaim: true` so that the browser will take control of the service worker.
-    // `skipWaiting: true` will make the browser wait for the service worker to become ready before activating it.
+    // TODO: add a comment explaining what the GenerateSW plugin does
+
+    // TODO: add a comment explaining what the `clientsClaim` and `skipWaiting` options do
     new GenerateSW({
       clientsClaim: true,
       skipWaiting: true,

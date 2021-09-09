@@ -1,10 +1,10 @@
 # 📐 Add Comments to Implementation of a Workbox Service Worker
 
-Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved) and [src-sw.js](./Unsolved/src-sw.js).
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/src/index.js) and [src-sw.js](./Unsolved/webpack.config.js).
 
 ## 📝 Notes
 
-Be sure to annotate which of the three phases of the service worker lifecycle you are working with (registration, installation, and activation).
+Be sure to annotate what the purpose of the `workbox-webpack-plugin` is, and how the `GenerateSW` function is used.
 
 Refer to the documentation:
 

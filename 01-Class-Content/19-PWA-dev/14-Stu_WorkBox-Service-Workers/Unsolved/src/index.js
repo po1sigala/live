@@ -36,10 +36,12 @@ getDevArticles().then((articles) => {
   });
 });
 
-// Register the service worker in the browser
+// TODO: Add a comment describing the functionality of the service worker
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
   window.addEventListener('load', () => {
+    // TODO: Add a comment explaining what phase the service worker is in after the following line of code
+
+    // TODO: Explain why the following file doesn't exist in our project
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
