@@ -4,8 +4,6 @@ const headerEl = document.querySelector('.header');
 
 headerEl.innerHTML = '<h1>hot module reloading 🔥</h1>';
 
-// Clear out the loading message that exists in the target element
-
 // Create a new element in memory
 const moduleContent2 = document.createElement('div');
 moduleContent2.id = 'module-2';
