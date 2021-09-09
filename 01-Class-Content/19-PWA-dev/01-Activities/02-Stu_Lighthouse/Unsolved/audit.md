@@ -1,0 +1,18 @@
+# Lighthouse Audit
+
+## Performance Metrics
+
+Which metrics in the Lighthouse audit need to be improved to speed up the page load of the website. (Add bullet points if necessary)
+
+* 
+
+* 
+
+## List the Opportunities
+
+List possible opportunities to improve on the load time of the website. (Add bullet points if necessary)
+
+* 
+
+*  
+
