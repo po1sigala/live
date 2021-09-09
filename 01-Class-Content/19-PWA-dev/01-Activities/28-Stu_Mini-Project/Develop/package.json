@@ -1,15 +1,16 @@
 {
-  "name": "Contact",
+  "name": "mini-project develop",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  /* TODO: Add the correct build scripts */
   "scripts": {
-    "start": "concurrently \"cd server && npm run server\" \"cd client && npm run start\"",
-    "start:prod": "npm run build && cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
-    "build": "cd client && npm run build",
-    "install": "cd client && npm install",
-    "client": "cd client && npm start"
+    "start": "",
+    "start:prod": "",
+    "server": "",
+    "build": "",
+    "install": "",
+    "client": ""
   },
   "keywords": [],
   "author": "",

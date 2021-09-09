@@ -1,6 +1,6 @@
 # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
 
-In this mini-project, you are given a simple application that needs to be updated to use Webpack, service-workers, IndexedDB, and we need it to have PWA functionality. Once we have updated our application with these new features, we can work on Deploying our application to Heroku. Heroku isn't new to us, but we will need to work on a handful of special scripts so Heroku knows to deploy our bundled application.
+In this mini-project, you are given a simple application that needs to be updated to use Webpack, service-workers, IndexedDB, and we need it to have PWA functionality in order to work properly. Once we have updated our application with these new features, we can work on Deploying our application to Heroku. Heroku isn't new to us, but we will need to work on a handful of special scripts so Heroku knows to deploy our bundled application.
 
 ## User Stories
 
@@ -38,7 +38,7 @@ The mini-project is complete when the following criteria are met:
 
 * The application uses CSS loaders.
 
-* Scripts are placed in the root directory's `package.json`.
+* Scripts are placed in the root and client directory's `package.json`.
 
 * `npm run start` starts both the client and server.
 

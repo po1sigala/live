@@ -20,21 +20,21 @@ When a user clicks the delete button, the To Do list item  remains on the page a
 
 2. Run `npm install`.
 
-3. To launch the application, run `npm run build`.
+3. To launch the application, run `npm run dev`.
 
-4. Create a new To Do item at the bottom of the page.
+4. Open `localhost:8080`.
 
-4. Open the `index.html` file in the `dist` directory.
+5. Create a new To Do item at the bottom of the page.
 
-5. Click on a list item which should remove the list item.
+6. Click on a list item which should remove the list item.
 
-6. Click on the edit button and we should be able to edit the list item.
+7. Click on the edit button and we should be able to edit the list item.
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
-@TODO: Add assets
-![]()
+
+![Demo of the TODO list by adding, removing, and editing a list item](./Assets/todo-list.gif)
 
 ---
 
