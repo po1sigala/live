@@ -1,24 +1,24 @@
-# 🏗️ Delete Data with MongoDB and Express.js
+# 🏗️ Delete Data Using MongoDB and Express.js
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to delete an existing document in a MongoDB database. 
+* As a developer, I want to be able to delete an existing document in a MongoDB database.
 
-* As a developer, I want to be able to update data in an existing document in a MongoDB database. 
+* As a developer, I want to be able to update data in an existing document in a MongoDB database.
 
 ## Acceptance Criteria
 
-* It's done when I use the existing `/create` GET Route to create a new document that includes a title.
+* It is done when I use the existing `/create` GET Route to create a new document that includes a title.
 
-* It's done when I add a new `/delete` DELETE route that uses a filter to find a single document by its unique `_id` and deletes that document. The `_id` value should be provided by the request body.
+* It is done when I add a new `/delete` DELETE route that uses a filter to find a single document by its unique `_id` and deletes that document. The `_id` value should be provided by the request body.
 
-* It is done when I test the route using Insomnia and the document I just created is deleted. No other documents should be changed.
+* It is done when I test the route using Insomnia and the document that I just created is deleted. No other documents should be changed.
 
 ## 💡 Hints
 
-Why is it important to specify a filter when updating and deleting documents? 
+* Why is it important to specify a filter when updating and deleting documents?
 
-Do you need to use `ObjectId()` when sending an `_id` string in JSON? Why or why not? 
+* Do you need to use `ObjectId()` when sending an `_id` string in JSON? Why or why not?
 
 ## 🏆 Bonus
 

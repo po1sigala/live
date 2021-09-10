@@ -1,6 +1,6 @@
-# 🐛 GET Route Returning Wrong Summary Price Data
+# 🐛 GET Route Returns Wrong Summary Price Data
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issue:
 
 * As a user, I should be able to see summary statistics for the prices of books in stock.
 
@@ -10,9 +10,11 @@ When I test the `sum-price` GET route in Insomnia, summary statistics for only b
 
 ## Actual Behavior
 
-When I test the `sum-price` GET route in Insomnia, summary statistics all books are returned.
+When I test the `sum-price` GET route in Insomnia, summary statistics for all books are returned.
 
 ## Steps to Reproduce the Problem
+
+Follow these steps to reproduce the problem:
 
 1. Run `npm install` and `npm start` to start the app.
 
@@ -36,7 +38,7 @@ What MongoDB aggregate pipeline stage do you use to filter data?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Aggregate middleware in one of four types of Mongoose middleware. What are the others and how are they used?
+* Aggregate middleware is one of four types of Mongoose middleware. What are the other three and how are they used?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
