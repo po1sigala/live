@@ -22,9 +22,9 @@ Refer to the Class Content Unit Overview for [Unit 15](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their Career Connection folder for [Unit 16](../../../01-Class-Content/16-Project-2-Contd/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 16](../../../01-Class-Content/16-Project-2-Contd/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

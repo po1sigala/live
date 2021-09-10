@@ -19,9 +19,9 @@ In this unit we will cover measuring and optimizing the performance of web appli
 Next unit we will start React, with the following unit covering state management in React using cutting-edge techniques. Ensure that you are up to date with the latest best practices, including the use of Hooks, the Context API, and a general understanding of how redux works.
 
 ## Career Connection
-Remind students that related Career Services material can be found in their [important folder](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md).
+Remind students that related career services material can be found in their [important folder](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 
 ## Helpful Links

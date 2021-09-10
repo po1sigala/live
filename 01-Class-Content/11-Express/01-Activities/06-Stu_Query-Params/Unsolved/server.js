@@ -8,7 +8,7 @@ const PORT = 3001;
 const app = express();
 
 const sortHelper = (type) =>
-  termData.sort(sortData('name', 'relevance', `${type}`));
+  termData.sort(sortData('term', 'relevance', `${type}`));
 
 // TODO: Add a comment describing the functionality of this route
 

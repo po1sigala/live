@@ -20,13 +20,15 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
 
-* For more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/additionalresources).
+* For more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/additionalresources).
 
 ## Heads-Up
 
-You will introduce students to the GraphQL Playground. If you are new to the GraphQL and the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+During the next unit, you will build on React foundations, and guide students through application development using three-layer MERN architecture.  You will also introduce students to the GraphQL Playground and Apollo Server. If you are new to the GraphQL and the GraphQL Playground or Apollo Server, please refer to the Apollo Docs on GraphQL Playground and the [Apollo Docs on introduction to Apollo Server](https://www.apollographql.com/docs/apollo-server/).
+
+>> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
 ## Helpful Links
 

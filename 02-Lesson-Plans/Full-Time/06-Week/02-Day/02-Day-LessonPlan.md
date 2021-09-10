@@ -189,7 +189,7 @@ Students will also learn how to create modular routes for better organization an
 
   * It's done when I use Insomnia to make a POST request to `api/upvotes/:review_id`, using JSON to upvote a given post.
 
-  * It's done when I use Insomnia to make a POST request to `api/upvotes/:review:id`, using URL-encoded data to upvote a given post.
+  * It's done when I use Insomnia to make a POST request to `api/upvotes/:review_id`, using URL-encoded data to upvote a given post.
 
   * It's done when I verify that both POST requests return a response that contains the updated vote count.
 
@@ -382,7 +382,7 @@ Students will also learn how to create modular routes for better organization an
   ```md
   # 📐 Add Comments to Implementation of Client-Side POST Requests
 
-  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js).
+  Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [index.js](./Unsolved/public/scripts/index.js).
 
   ## 📝 Notes
 
@@ -465,17 +465,18 @@ Students will also learn how to create modular routes for better organization an
 
     ```js
     if (product && review && username) {
-        const newReview = {
-          product,
-          review,
-          username,
-          review_id: uuid(),
-        };
+      const newReview = {
+        product,
+        review,
+        username,
+        upvotes: Math.floor(Math.random() * 100),
+        review_id: uuid(),
+      };
 
-        const response = {
-          status: 'success',
-          body: newReview,
-        };
+      const response = {
+        status: 'success',
+        body: newReview,
+      };
     ```
 
   * 🔑 In this demo, we are not writing to the actual file system, so at the end of the route handler, we simply return the `response` object, which contains a `status` and the `newReview` that we created:
@@ -491,6 +492,7 @@ Students will also learn how to create modular routes for better organization an
           product,
           review,
           username,
+          upvotes: Math.floor(Math.random() * 100),
           review_id: uuid(),
         };
 
@@ -500,9 +502,9 @@ Students will also learn how to create modular routes for better organization an
         };
 
         console.log(response);
-        res.json(response);
+        res.status(201).json(response);
       } else {
-        res.json('Error in posting review');
+        res.status(500).json('Error in posting review');
       }
     })
     ```
@@ -625,6 +627,7 @@ Students will also learn how to create modular routes for better organization an
         product,
         review,
         username,
+        upvotes: Math.floor(Math.random() * 100),
         review_id: uuid(),
       };
     ```
@@ -658,8 +661,16 @@ Students will also learn how to create modular routes for better organization an
   * Even though we created the logic to write to the file system, it is still necessary to conclude the route handler by sending something to the client using `res.json()`:
 
     ```js
-    res.json(response);
+    res.status(201).json(response);
     ```
+
+  * Also, we handle any errors that may occur by sending a response with the `res.status(500)` method.
+
+    ```js
+    res.status(500).json("Error in posting review");
+    ```
+
+  * 🔑 Remember that status codes in the 200 range indicate success and status codes in the 500 range indicate an error.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -846,9 +857,9 @@ Students will also learn how to create modular routes for better organization an
         body: newReview,
       };
 
-      res.json(response);
+      res.status(201).json(response);
     } else {
-      res.json('Error in posting review');
+      res.status(500).json('Error in posting review');
     }
     ```
 
@@ -1497,8 +1508,8 @@ Students will also learn how to create modular routes for better organization an
 
     ```sh
     heroku create
-
     ```
+
   * Then we check whether the remote URL for Heroku was added to the repository:
 
     ```sh

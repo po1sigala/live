@@ -36,9 +36,10 @@ Refer to the following links for detailed information on key topics, learning ob
 ## Career Connection
 
 * [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
+
 * [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
 
-If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

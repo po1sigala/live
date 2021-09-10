@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Now you're getting familiar with Express.js, a framework for creating server-side APIs using Node.js. Equipped with Express.js, you can now create a full-stack application with both a client and a server backed by a MySQL database. That's exciting&mdash;and a phenomenal change from when you were creating sites with just HTML and CSS.
 
 ### Express.js in the Workplace
@@ -52,9 +50,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 * CodeSignal Algorithm: [Add One](https://app.codesignal.com/public-test/ThqFTjkqwzQrcoqKB/AhsPkH8G6H8qqi)
 
-![online-events](./assets/online-events.png)
-
-If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

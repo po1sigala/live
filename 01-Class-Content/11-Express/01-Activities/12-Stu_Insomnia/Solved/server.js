@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   res.send(
-    'Use the API endpoint at <a href="https://localhost:3001/api">localhost:3001/api</a>'
+    'Use the API endpoint at <a href="http://localhost:3001/api">localhost:3001/api</a>'
   );
 });
 

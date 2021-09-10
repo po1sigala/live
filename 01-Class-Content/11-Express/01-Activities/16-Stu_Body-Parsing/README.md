@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I use Insomnia to make a POST request to `api/upvotes/:review_id`, using JSON to upvote a given post.
 
-* It's done when I use Insomnia to make a POST request to `api/upvotes/:review:id`, using URL-encoded data to upvote a given post.
+* It's done when I use Insomnia to make a POST request to `api/upvotes/:review_id`, using URL-encoded data to upvote a given post.
 
 * It's done when I verify that both POST requests return a response that contains the updated vote count.
 
