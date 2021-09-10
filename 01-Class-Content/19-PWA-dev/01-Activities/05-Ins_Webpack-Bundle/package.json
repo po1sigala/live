@@ -1,7 +1,7 @@
 {
   "name": "03-ins_webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "todo app",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

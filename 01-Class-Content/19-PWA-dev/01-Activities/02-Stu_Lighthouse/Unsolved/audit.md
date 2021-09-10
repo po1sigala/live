@@ -8,9 +8,9 @@ Which metrics in the Lighthouse audit need to be improved to speed up the page l
 
 * 
 
-## List the Opportunities
+## Improvement Suggestions
 
-List possible opportunities to improve on the load time of the website. (Add bullet points if necessary)
+List possible opportunities to improve on the load time of the website. (Add bullet points if necessary) 
 
 * 
 
