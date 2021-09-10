@@ -6,11 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have installed the `concurrently` npm package.
+* It's done when I have isolated the existing code into the `client` and `server` folders.
 
-* It's done when I have configured the npm scripts in `package.json` to run both servers using `concurrently`.
+* It's done when I have installed the `concurrently` npm package at the root of the project.
 
-* It's done when I have configured the `proxy` setting in `package.json` to send requests not handled by the client to the backend server.
+* It's done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
 
 * It's done when I have ensured that the ports are not conflicting with any other services.
 
