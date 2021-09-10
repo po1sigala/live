@@ -1,6 +1,5 @@
 // Grab the target element
 const targetEl = document.getElementById('target');
-console.log('inside mod1');
 
 // Clear out the loading message that exists in the target element
 targetEl.innerHTML = '';
