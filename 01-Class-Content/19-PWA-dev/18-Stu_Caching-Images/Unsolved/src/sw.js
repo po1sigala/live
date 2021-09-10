@@ -1,11 +1,9 @@
-// Caching js and css requires workbox-strategies to be installed
-// To actually respond to requests with a cached response, we need to use a strategy called StaleWhileRevalidate
-// This strategy will first check the cache for a response, and if it finds one, it will return it.
-
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 import { precacheAndRoute } from 'workbox-precaching';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+
+// Note to self: come back and import ExpirationPlugin later :)
 
 // The precacheAndRoute() method takes an array of URLs to precache. The self._WB_MANIFEST is an array that contains the list of URLs to precache.
 precacheAndRoute(self.__WB_MANIFEST);
@@ -23,11 +21,22 @@ const matchCallback = ({ request }) => {
   );
 };
 
-// The registerRoute() method takes three arguments:
-// 1. A RegExp or string to match the URL against
-// 2. A callback function that returns a response
-// 3. An optional options object
+// Register route for caching images
+// The cache first strategy is often the best choice for images because it saves bandwidth and improves performance.
+registerRoute(
+  ({ request }) => request.destination === 'test',
+  new CacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
+);
 
+// Register route for caching CSS and JS files
 registerRoute(
   matchCallback,
   new StaleWhileRevalidate({

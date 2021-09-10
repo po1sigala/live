@@ -1,4 +1,3 @@
-// Import the workbox-window module after installing it
 import { Workbox } from 'workbox-window';
 import './css/style.css';
 
@@ -48,17 +47,5 @@ getDevArticles().then((articles) => {
   });
 });
 
-// Register the service worker in the browser using the workbox-window library
+// TODO: Register the service worker in the browser using the workbox-window library
 // https://developers.google.com/web/tools/workbox/modules/workbox-window
-if ('serviceWorker' in navigator) {
-  // The new Workbox object is created here and accepts the location of the service worker file
-  const wb = new Workbox('/sw.js');
-  logger(
-    'Service Worker',
-    'Inject Manifest Plugin Service Worker is ready',
-    wb
-  );
-
-  // Call the register method on the service worker to register the service worker
-  wb.register();
-}
