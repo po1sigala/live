@@ -1,4 +1,4 @@
-module.exports = function (data, successRate = 0.98, maxLatencyMs = 1000) {
+const mockApi = (data, successRate = 0.98, maxLatencyMs = 1000) => {
   // eslint-disable-next-line no-new
   new Promise((resolve, reject) => {
     const successRoll = Math.random();
@@ -13,3 +13,5 @@ module.exports = function (data, successRate = 0.98, maxLatencyMs = 1000) {
     }
   });
 };
+
+mockApi.exports = mockApi;

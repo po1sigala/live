@@ -1,5 +1,5 @@
 const config = {
-  entry: './src/app.js',
+  entry: './assets/app.js',
   output: {
     path: `${__dirname}/dist`,
     filename: 'bundle.js',

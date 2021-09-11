@@ -9,23 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./assets/app.js":
+/*!***********************!*\
+  !*** ./assets/app.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// Import the filesystem module\nconst fs = __webpack_require__(/*! fs */ \"?569f\");\n\nconst data = 'This is a file containing a collection of music lyrics.';\nconst textEl = document.querySelector('#text');\n\n// fs.writeFile(\n//   'lyrics.txt',\n//   data,\n//   {\n//     encoding: 'utf8',\n//     flag: 'w',\n//     mode: 0o666,\n//   },\n//   (err) => {\n//     if (err) console.log(err);\n//     else {\n//       console.log('File written successfully\\n');\n//       console.log('The written has the following contents:');\n//       console.log(textEl);\n//       console.log(fs.readFileSync('lyrics.txt', 'utf8'));\n//       // const lyricText = fs.readFileSync('movies.txt', 'utf8')\n//       // textEl.innerHTML = `<div> ${lyricText} <div>`;\n//     }\n//   }\n// );\n\n\n//# sourceURL=webpack://07-ins_webpack-loader/./src/app.js?");
+eval("const calculations = __webpack_require__(/*! ./calculations */ \"./assets/calculations.js\");\n\nconst priceEl = document.getElementById(\"price\");\nconst balanceEl = document.getElementById(\"balance\");\nconst expenseEl = document.getElementById(\"expense\");\nconst expensesListEl = document.getElementById(\"expenses-list\");\nconst submitBtn = document.getElementById(\"submit\");\nconst resetBtn = document.getElementById(\"reset\");\n\nfunction addToList(name, price) {\n  expensesListEl.innerHTML += `<li class=\"list-group-item\">Name: ${name}\n    <span class=\"ml-4\">Price: ${price}</span></li>`;\n}\n\nfunction submit(e) {\n  e.preventDefault();\n  const total = calculations.subtract(Number(balanceEl.innerText), priceEl.value);\n  balanceEl.innerText = total;\n  addToList(expenseEl.value, priceEl.value);\n}\n\nfunction reset(e) {\n  e.preventDefault();\n  const total = 2000;\n  balanceEl.innerText = total;\n  expensesListEl.innerHTML = \"\";\n}\n\nsubmitBtn.onclick = submit;\nresetBtn.onclick = reset;\n\n//# sourceURL=webpack://webpack-demo/./assets/app.js?");
 
 /***/ }),
 
-/***/ "?569f":
-/*!********************!*\
-  !*** fs (ignored) ***!
-  \********************/
-/***/ (() => {
+/***/ "./assets/calculations.js":
+/*!********************************!*\
+  !*** ./assets/calculations.js ***!
+  \********************************/
+/***/ ((module) => {
 
-eval("/* (ignored) */\n\n//# sourceURL=webpack://07-ins_webpack-loader/fs_(ignored)?");
+eval("function subtract(a, b) {\n  return a - b;\n}\n\nmodule.exports = {\n  subtract\n};\n\n//# sourceURL=webpack://webpack-demo/./assets/calculations.js?");
 
 /***/ })
 
@@ -60,7 +60,7 @@ eval("/* (ignored) */\n\n//# sourceURL=webpack://07-ins_webpack-loader/fs_(ignor
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/app.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./assets/app.js");
 /******/ 	
 /******/ })()
 ;

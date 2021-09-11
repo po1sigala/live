@@ -1,24 +1,22 @@
 const config = {
-  entry: './src/js/app.js',
+  entry: {
+    app: './src/app.js',
+    chart: './src/expenseChart.js',
+  },
   output: {
     path: `${__dirname}/dist`,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
         test: /\.m?js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ['@babel/transform-runtime'],
           },
         },
       },
