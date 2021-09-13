@@ -1,22 +1,23 @@
-const priceEl = document.getElementById('price');
-const expenseEl = document.getElementById('expense');
-const expensesListEl = document.getElementById('expenses-list');
+const loanEl = document.getElementById('loan');
+const rateEl = document.getElementById('rate');
+const termEl = document.getElementById('term');
+const monthlyPaymentEl = document.getElementById('monthly-payment');
 const submitBtn = document.getElementById('submit');
-const resetBtn = document.getElementById('reset');
-
-function addToList(name, price) {
-  expensesListEl.innerHTML += `<li class="list-group-item">Name: ${name}
-    <span class="ml-4">Price: ${price}</span></li>`;
-}
 
 function submit(e) {
   e.preventDefault();
-  addToList(expenseEl.value, priceEl.value);
-}
+  const principle = parseInt(loanEl.value, 10);
 
-function reset(e) {
-  e.preventDefault();
+  const rate = parseFloat(rateEl.value);
+  const monthlyRate = rate / 12 / 100;
+
+  const term = parseInt(termEl.value, 10);
+  const payNum = term * 12;
+
+  const ratePow = (1 + rate) ** payNum;
+  const monthlyPayment = (principle * monthlyRate * ratePow) / (ratePow - 1);
+
+  monthlyPaymentEl.innerText = `$${monthlyPayment}`;
 }
 
 submitBtn.onclick = submit;
-resetBtn.onclick = reset;
