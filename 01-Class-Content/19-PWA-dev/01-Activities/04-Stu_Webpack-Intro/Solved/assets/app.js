@@ -19,8 +19,9 @@ function submit(e) {
   const payNum = months(term);
   // Calculate loan formula
   const monthlyPayment = loanPayment(principle, monthlyRate, payNum);
-
+  // Render Monthly Loan Amount
   monthlyPaymentEl.innerText = `$${monthlyPayment.toFixed(2)}`;
 }
 
+// Submit Button Event Listener
 submitBtn.onclick = submit;
