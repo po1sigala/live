@@ -2,9 +2,7 @@
 
 Work with a partner to resolve the following issue(s):
 
-* As a user, I want to be able to delete a contact card when I click the delete button.
-
-* As a developer, I want to remove the contact card for the IndexedDB so that the front end can be appropriately updated.
+* As a user, I want to be able to delete on click and edit a list item when I click on the list item.
 
 ## Expected Behavior
 
@@ -22,7 +20,7 @@ When a user clicks the delete button, the To Do list item  remains on the page a
 
 3. To launch the application, run `npm run dev`.
 
-4. Open `localhost:8080`.
+4. Navigate to `http://localhost:8080` in your browser.
 
 5. Create a new To Do item at the bottom of the page.
 

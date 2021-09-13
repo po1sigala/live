@@ -1,5 +1,5 @@
 {
-  "name": "24-Stu_IndexedDB-CRUD Solved",
+  "name": "26-Stu_Manifest Solved",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",

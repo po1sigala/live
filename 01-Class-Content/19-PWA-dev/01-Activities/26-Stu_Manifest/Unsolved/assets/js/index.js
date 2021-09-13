@@ -19,12 +19,12 @@ window.deleteItem = (e) => {
 
 window.editList = async (e) => {
   let id = parseInt(e.parentElement.id);
-  // const todo = form.elements['todo-edit'].value;
+  
   console.log(id);
   let todo = await getOneDb(id);
 
   let input = `
-  <form action="" onsubmit="editTodo(event)">
+    <form action="" onsubmit="editTodo(event)">
         <input type="text" id="${id}" value="${todo.todo}" />
     </form>
   `;
@@ -65,9 +65,9 @@ const fetchList = async () => {
     console.log(data);
     listItem += `
     <div class="flex-row align-center justify-space between" id="${data.id}">
-            <li class="mr-2" id="list-item" onclick="deleteItem(this)">${data.todo}</li>
-            <button class="btn btn-sm btn-info" onclick="editList(this)" id="edit-btn">Edit</button>
-          </div>
+      <li class="mr-2" id="list-item" onclick="deleteItem(this)">${data.todo}</li>
+      <button class="btn btn-sm btn-info" onclick="editList(this)" id="edit-btn">Edit</button>
+    </div>
     `;
   }
 

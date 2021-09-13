@@ -45,18 +45,18 @@ const fetchCards = async () => {
     console.log(data);
     card += `
     <div class="card card-rounded col-md-3 m-2">
-          <div class="card-header card-rounded">
-            <h1>${data.name}</h1>
-          </div>
-          <div class="card-body">
-            <p>Home Phone: ${data.home_phone}</p>
-            <p>Cell Phone: ${data.cell_phone}</p>
-            <p>Email: ${data.email}</p>
-          </div>
-          <div class="flex-row justify-flex-end p-1">
-            <button class="btn btn-sm btn-danger" id="${data.id}" onclick="deleteCard(this)">Delete</button>
-          </div>
-        </div>
+      <div class="card-header card-rounded">
+        <h1>${data.name}</h1>
+      </div>
+      <div class="card-body">
+        <p>Home Phone: ${data.home_phone}</p>
+        <p>Cell Phone: ${data.cell_phone}</p>
+        <p>Email: ${data.email}</p>
+      </div>
+      <div class="flex-row justify-flex-end p-1">
+        <button class="btn btn-sm btn-danger" id="${data.id}" onclick="deleteCard(this)">Delete</button>
+      </div>
+    </div>
     `;
   }
 

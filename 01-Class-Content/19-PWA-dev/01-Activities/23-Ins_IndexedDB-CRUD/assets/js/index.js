@@ -5,7 +5,7 @@ import { postDb, getAllDb } from './database';
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (event) => {
-  // handle the form data
+  // Handle the form data
   event.preventDefault();
   const todo = form.elements['todo'].value;
 
