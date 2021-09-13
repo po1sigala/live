@@ -1,3 +1,7 @@
-export function months(years) {
+const months = (years) => {
   return years * 12;
-}
+};
+
+module.exports = {
+  months,
+};
