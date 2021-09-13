@@ -1,3 +1,4 @@
+// Need to import the plugin
 const path = require('path');
 
 const config = {
