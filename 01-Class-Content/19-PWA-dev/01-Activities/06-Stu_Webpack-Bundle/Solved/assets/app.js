@@ -27,4 +27,3 @@ function reset(e) {
 }
 
 submitBtn.onclick = submit;
-resetBtn.onclick = reset;
