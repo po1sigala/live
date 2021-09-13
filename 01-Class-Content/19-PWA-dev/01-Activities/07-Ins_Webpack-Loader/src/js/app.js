@@ -1,7 +1,6 @@
-/* eslint-disable */
 const bookData = require('../../utils/bookData');
-const listEl = document.querySelector('#data-list');
 
+const listEl = document.querySelector('#data-list');
 
 const getData = (data, successRate = 0.98, maxLatencyMs = 1000) =>
   new Promise((resolve, reject) => {
@@ -14,7 +13,6 @@ const getData = (data, successRate = 0.98, maxLatencyMs = 1000) =>
       setTimeout(() => reject('API failed to return data'), latency);
     }
   });
-
 
 // Mock API Call
 const fetchData = async () => {
