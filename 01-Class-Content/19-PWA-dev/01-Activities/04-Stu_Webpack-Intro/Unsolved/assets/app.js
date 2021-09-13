@@ -17,6 +17,7 @@ function submit(e) {
   // Convert into values for loan formula
   const monthlyRate = monthlyInterest(rate);
   const payNum = months(term);
+  console.log(payNum);
   // Calculate loan formula
   const monthlyPayment = loanPayment(principle, monthlyRate, payNum);
 

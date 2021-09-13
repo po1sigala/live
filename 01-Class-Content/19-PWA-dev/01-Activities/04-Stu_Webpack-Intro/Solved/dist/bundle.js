@@ -23,10 +23,9 @@ eval("const { monthlyInterest } = __webpack_require__(/*! ./convertInterest */ \
 /*!***********************************!*\
   !*** ./assets/convertInterest.js ***!
   \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"monthlyInterest\": () => (/* binding */ monthlyInterest)\n/* harmony export */ });\nfunction monthlyInterest(rate) {\n  return rate / 12 / 100;\n}\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/convertInterest.js?");
+eval("const monthlyInterest = (rate) => {\n  return rate / 12 / 100;\n};\n\nmodule.exports = {\n  monthlyInterest,\n};\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/convertInterest.js?");
 
 /***/ }),
 
@@ -34,10 +33,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!****************************!*\
   !*** ./assets/loanCalc.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loanPayment\": () => (/* binding */ loanPayment)\n/* harmony export */ });\nfunction loanPayment(principle = 300000, rate = 0.00416, term = 360) {\n  const ratePow = (1 + rate) ** term;\n\n  return (principle * rate * ratePow) / (ratePow - 1);\n}\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/loanCalc.js?");
+eval("const loanPayment = (principle = 300000, rate = 0.00416, term = 360) => {\n  const ratePow = (1 + rate) ** term;\n\n  return (principle * rate * ratePow) / (ratePow - 1);\n};\n\nmodule.exports = {\n  loanPayment,\n};\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/loanCalc.js?");
 
 /***/ }),
 
@@ -45,10 +43,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!********************************!*\
   !*** ./assets/monthlyTerms.js ***!
   \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"months\": () => (/* binding */ months)\n/* harmony export */ });\nfunction months(years) {\n  return years * 12;\n}\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/monthlyTerms.js?");
+eval("const months = (years) => {\n  return years * 12;\n};\n\nmodule.exports = {\n  months,\n};\n\n\n//# sourceURL=webpack://webpack-scripts/./assets/monthlyTerms.js?");
 
 /***/ })
 
@@ -77,35 +74,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
