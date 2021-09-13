@@ -1,9 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 
-// create writeFile function using promises instead of a callback function
-const writeFileAsync = util.promisify(fs.writeFile);
+// Use writeFileSync method to use promises instead of a callback function
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -40,7 +38,7 @@ const promptUser = () => {
   ]);
 };
 
-const generateHTML = (answers) =>
+const generateHTML = ({ name, location, github, linkedin }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,12 +50,12 @@ const generateHTML = (answers) =>
 <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
+    <h1 class="display-4">Hi! My name is ${name}</h1>
+    <p class="lead">I am from ${location}.</p>
     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      <li class="list-group-item">My GitHub username is ${github}</li>
+      <li class="list-group-item">LinkedIn: ${linkedin}</li>
     </ul>
   </div>
 </div>
@@ -67,7 +65,8 @@ const generateHTML = (answers) =>
 // Bonus using writeFileAsync as a promise
 const init = () => {
   promptUser()
-    .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+  // Use writeFileSync method to use promises instead of a callback function
+    .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
     .then(() => console.log('Successfully wrote to index.html'))
     .catch((err) => console.error(err));
 };
