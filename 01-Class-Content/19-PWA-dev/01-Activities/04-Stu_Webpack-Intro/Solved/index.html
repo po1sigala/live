@@ -33,10 +33,6 @@
       <h1>Mortgage Calculator</h1>
       <form class="mb-5">
         <div>
-          <!-- <h3>The loan cost: $<span id="principle">300000</span></h3>
-          <h3>The repayment period: <span id="loan-length">300000</span></h3>
-          <h3>The interest rate: <span id="rate">5.0</span>%</h3> -->
-          <!-- <h3>Your current balance is: $<span id="balance">2000</span></h3> -->
 					<div class="heading-title">Calculate your mortgage payments based on the cost of the property, loan term, and interest rate.</div>
         </div>
         <div class="input-group">
@@ -57,6 +53,7 @@
             class="form-control"
             placeholder="Enter Interest Rate"
           />
+					<span class="input-group-addon">%</span>
         </div>
 				<div class="input-group">
           <input
@@ -64,15 +61,15 @@
             type="number"
             aria-describedby="loanTerm"
             class="form-control"
-            placeholder="Enter Length of Loan Term"
+            placeholder="Enter Length of Loan Term in Years"
           />
         </div>
         <br />
         <button id="submit" class="btn btn-primary">Submit</button>
         <!-- <button id="reset" class="btn btn-danger">Reset</button> -->
       </form>
-      <h1 class="text-center">Monthly Payment Calculation</h1>
-      <div id="monthly-payment" class="payment"></div>
+      <h1>Monthly Payment Calculation</h1>
+      <h2 class="input-group" id="monthly-payment"></h2>
     </div>
 
     <script type="text/javascript" src="dist/bundle.js"></script>
