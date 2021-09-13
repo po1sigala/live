@@ -1,3 +1,7 @@
+const { monthlyInterest } = require('./convertInterest');
+const { loanPayment } = require('./loanCalc');
+const { months } = require('./monthlyTerms');
+
 const loanEl = document.getElementById('loan');
 const rateEl = document.getElementById('rate');
 const termEl = document.getElementById('term');
@@ -6,18 +10,17 @@ const submitBtn = document.getElementById('submit');
 
 function submit(e) {
   e.preventDefault();
+  // Get values from user inputs
   const principle = parseInt(loanEl.value, 10);
-
   const rate = parseFloat(rateEl.value);
-  const monthlyRate = rate / 12 / 100;
-
   const term = parseInt(termEl.value, 10);
-  const payNum = term * 12;
+  // Convert into values for loan formula
+  const monthlyRate = monthlyInterest(rate);
+  const payNum = months(term);
+  // Calculate loan formula
+  const monthlyPayment = loanPayment(principle, monthlyRate, payNum);
 
-  const ratePow = (1 + rate) ** payNum;
-  const monthlyPayment = (principle * monthlyRate * ratePow) / (ratePow - 1);
-
-  monthlyPaymentEl.innerText = `$${monthlyPayment}`;
+  monthlyPaymentEl.innerText = `$${monthlyPayment.toFixed(2)}`;
 }
 
 submitBtn.onclick = submit;
