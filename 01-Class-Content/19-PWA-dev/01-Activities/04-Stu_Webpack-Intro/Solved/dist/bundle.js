@@ -15,7 +15,7 @@
   \***********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const mortgage = __webpack_require__(/*! ./mortgage */ \"./assets/mortgage.js\");\nconst convertInterest = __webpack_require__(/*! ./convertInterest */ \"./assets/convertInterest.js\");\n\nconst loanEl = document.getElementById('loan');\nconst rateEl = document.getElementById('rate');\nconst termEl = document.getElementById('term');\nconst monthlyPaymentEl = document.getElementById('monthly-payment');\nconst submitBtn = document.getElementById('submit');\n\n// const montlyInterest = convertInterest.monthlyInterest(rate);\n\n// function addToList(name, price) {\n//   expensesListEl.innerHTML += `<li class=\"list-group-item\">Name: ${name}\n//     <span class=\"ml-4\">Price: ${price}</span></li>`;\n// }\n\nfunction submit(e) {\n  e.preventDefault();\n  console.log(loanEl.value);\n  console.log(rateEl.value);\n  console.log(termEl.value);\n  // const total = mortgage.mortgagePayment(\n  //   Number(balanceEl.innerText),\n  //   priceEl.value\n  // );\n  // balanceEl.innerText = total;\n  // addToList(expenseEl.value, priceEl.value);\n}\n\n\n\nsubmitBtn.onclick = submit;\n\n\n//# sourceURL=webpack://webpack-demo/./assets/app.js?");
+eval("const { mortgagePayment } = __webpack_require__(/*! ./mortgage */ \"./assets/mortgage.js\");\nconst convertInterest = __webpack_require__(/*! ./convertInterest */ \"./assets/convertInterest.js\");\nconst { months } = __webpack_require__(/*! ./monthlyTerms */ \"./assets/monthlyTerms.js\");\n\nconst loanEl = document.getElementById('loan');\nconst rateEl = document.getElementById('rate');\nconst termEl = document.getElementById('term');\nconst monthlyPaymentEl = document.getElementById('monthly-payment');\nconst submitBtn = document.getElementById('submit');\n\n// const\nfunction submit(e) {\n  e.preventDefault();\n  const principle = parseInt(loanEl.value, 10);\n  console.log(principle);\n\n  const rate = parseFloat(rateEl.value);\n  // const monthlyRate = convertInterest.monthlyInterest(rate);\n  const monthlyRate = rate / 12 / 100;\n  console.log(monthlyRate);\n\n  const term = parseInt(termEl.value, 10);\n  // const payNum = months(term);\n  const payNum = term * 12;\n\n  const monthlyPay = mortgagePayment(principle, monthlyRate, payNum);\n  monthlyPaymentEl.innerText = monthlyPay;\n  console.log(monthlyPay);\n\n\n\n  // const total = mortgage.mortgagePayment(\n  //   Number(balanceEl.innerText),\n  //   priceEl.value\n  // );\n  // balanceEl.innerText = total;\n  // addToList(expenseEl.value, priceEl.value);\n}\n\nsubmitBtn.onclick = submit;\n\n\n//# sourceURL=webpack://webpack-demo/./assets/app.js?");
 
 /***/ }),
 
@@ -29,13 +29,23 @@ eval("function monthlyInterest(rate) {\n  return rate / 12 / 100;\n}\n\nmodule.e
 
 /***/ }),
 
+/***/ "./assets/monthlyTerms.js":
+/*!********************************!*\
+  !*** ./assets/monthlyTerms.js ***!
+  \********************************/
+/***/ ((module) => {
+
+eval("function months(years) {\n  return years * 12;\n}\n\nmodule.exports = months;\n\n\n//# sourceURL=webpack://webpack-demo/./assets/monthlyTerms.js?");
+
+/***/ }),
+
 /***/ "./assets/mortgage.js":
 /*!****************************!*\
   !*** ./assets/mortgage.js ***!
   \****************************/
 /***/ ((module) => {
 
-eval("function mortgagePayment(principle, rate, term) {\n  return a - b;\n}\n\nmodule.exports = mortgagePayment;\n\n\n//# sourceURL=webpack://webpack-demo/./assets/mortgage.js?");
+eval("function mortgagePayment(principle = 300000, rate = 0.00416, term = 360) {\n  const ratePow = (1 + rate) ** term;\n\n  return (principle * rate * ratePow) / (ratePow - 1);\n}\n\nmodule.exports = mortgagePayment;\n\n\n//# sourceURL=webpack://webpack-demo/./assets/mortgage.js?");
 
 /***/ })
 
