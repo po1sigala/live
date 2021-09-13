@@ -1,23 +1,27 @@
-const priceEl = document.getElementById("price");
-const balanceEl = document.getElementById("balance");
-const expenseEl = document.getElementById("expense");
-const expensesListEl = document.getElementById("expenses-list");
-const submitBtn = document.getElementById("submit");
-const resetBtn = document.getElementById("reset");
+const { monthlyInterest } = require('./convertInterest');
+const { loanPayment } = require('./loanCalc');
+const { months } = require('./monthlyTerms');
 
-function addToList(name, price) {
-  expensesListEl.innerHTML += `<li class="list-group-item">Name: ${name}
-    <span class="ml-4">Price: ${price}</span></li>`;
-}
+const loanEl = document.getElementById('loan');
+const rateEl = document.getElementById('rate');
+const termEl = document.getElementById('term');
+const monthlyPaymentEl = document.getElementById('monthly-payment');
+const submitBtn = document.getElementById('submit');
 
 function submit(e) {
   e.preventDefault();
-  addToList(expenseEl.value, priceEl.value);
+  // Get values from user inputs
+  const principle = parseInt(loanEl.value, 10);
+  const rate = parseFloat(rateEl.value);
+  const term = parseInt(termEl.value, 10);
+  // Convert into values for loan formula
+  const monthlyRate = monthlyInterest(rate);
+  const payNum = months(term);
+  // Calculate loan formula
+  const monthlyPayment = loanPayment(principle, monthlyRate, payNum);
+  // Render Monthly Loan Amount
+  monthlyPaymentEl.innerText = `$${monthlyPayment.toFixed(2)}`;
 }
 
-function reset(e) {
-  e.preventDefault();
-}
-
+// Submit Button Event Listener
 submitBtn.onclick = submit;
-resetBtn.onclick = reset;

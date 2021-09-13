@@ -35,37 +35,37 @@
         <div>
 					<div class="heading-title">Calculate your loan payments based on the cost of the loan, loan term, and interest rate.</div>
         </div>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
+        <div class="input-group row mb-2">
+          <span class="input-group-addon col-1">$</span>
           <input
             id="loan"
             type="number"
             aria-describedby="loanAmount"
-            class="form-control"
+            class="form-control col-5"
             placeholder="Enter Loan Amount"
           />
         </div>
-        <div class="input-group">
+        <div class="input-group row mb-2">
           <input
             id="rate"
             type="number"
             aria-describedby="interestRate"
-            class="form-control"
+            class="form-control col-5"
             placeholder="Enter Interest Rate"
           />
-					<span class="input-group-addon">%</span>
+					<span class="input-group-addon col-1">%</span>
         </div>
-				<div class="input-group">
+				<div class="input-group row mb-2">
           <input
             id="term"
             type="number"
             aria-describedby="loanTerm"
-            class="form-control"
-            placeholder="Enter Length of Loan Term in Years"
+            class="form-control col-6"
+            placeholder="Loan Term in Years"
           />
         </div>
         <br />
-        <button id="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" class="btn btn-primary offset-5">Submit</button>
       </form>
       <h1>Monthly Payment Calculation</h1>
       <h2 class="input-group" id="monthly-payment"></h2>
