@@ -1,9 +1,12 @@
+const path = require('path');
+
 const config = {
   entry: './assets/app.js',
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
+  // Add the plugin using the index.html file
   mode: 'development',
 };
 
