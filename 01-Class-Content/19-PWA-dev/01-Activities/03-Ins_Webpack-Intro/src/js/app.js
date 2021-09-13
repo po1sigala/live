@@ -1,14 +1,15 @@
-console.log("Hello webpack!");
+console.log('Hello webpack!');
 
 const current = new Date(Date.now());
 
-alert(`The current time is: ${current.toString()}`);
+console.log(`The current time is: ${current.toString()}`);
 
 const start = Date.now();
 
 console.log('starting timer...');
-// expected output: starting timer...x  x 
+// expected output: starting timer...x  x
 
+// Simple countdown of 2 seconds.
 setTimeout(() => {
   const millis = Date.now() - start;
 
@@ -16,12 +17,11 @@ setTimeout(() => {
   // expected output: seconds elapsed = 2
 }, 2000);
 
-
+// logs each second
 const counter = () => {
-
   setInterval(() => {
-    console.log("seconds counter")
+    console.log('seconds counter');
   }, 1000);
-}
+};
 
 counter();
