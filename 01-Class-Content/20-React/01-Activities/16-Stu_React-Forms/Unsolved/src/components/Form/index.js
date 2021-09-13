@@ -47,7 +47,7 @@ function Form() {
       return;
     }
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    // If successful, we want to clear out the input after registration.
     setUserName('');
     // TODO: Set the password back to an empty string after the user clicks submit
 
