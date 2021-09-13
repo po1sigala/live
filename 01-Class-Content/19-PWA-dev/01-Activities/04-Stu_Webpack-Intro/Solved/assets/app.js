@@ -23,9 +23,14 @@ function submit(e) {
   // const payNum = months(term);
   const payNum = term * 12;
 
-  const monthlyPay = mortgagePayment(principle, monthlyRate, payNum);
-  monthlyPaymentEl.innerText = monthlyPay;
-  console.log(monthlyPay);
+  // const monthlyPay = mortgagePayment(principle, monthlyRate, payNum);
+
+  const ratePow = (1 + rate) ** payNum;
+
+  const monthlyPayment = (principle * monthlyRate * ratePow) / (ratePow - 1);
+
+  monthlyPaymentEl.innerText = monthlyPayment;
+  console.log(monthlyPayment);
 
 
 
