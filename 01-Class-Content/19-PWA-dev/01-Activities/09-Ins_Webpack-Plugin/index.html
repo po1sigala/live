@@ -1,57 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mock API Call</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML Plugin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-</head>
-
-<body>
-  <div class="dark container">
-    <div class="menu menu-style">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </div>
-    <!-- <div class="container"> -->
-    <div class="row toggle">
-      <div class="col">
-        <p>Dark Mode</p>
-      </div>
-      <label class="switch col">
-        <input type="checkbox" id="theme-switcher">
-        <span class="slider round"></span>
-      </label>
-      <div class="col">
-        <p>Light Mode</p>
+  <body>
+    <header id="header-background">
+      <div class="logo"></div>
+    </header>
+    <div class="list-background">
+      <div class="container pt-3 pr-3 pl-5">
+        <h1 class="header-style">Essential Summer Reading</h1>
+        <ul id="data-list" class="list-style"></ul>
       </div>
     </div>
-    <div class="row">
-      <h2>Theme Switcher</h2>
-    </div>
-    </div>
-    <div class="row">
-      <div>
-        
-      </div>
-      
-    </div>
-    <div class="footer">
-      <ul>
-        <li><a href="#home">Terms of Use</a></li>
-        <li><a href="#gallery">Privacy Policy</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    <!-- </div> -->
-</body>
+    <script type="text/javascript" src="dist/main.bundle.js"></script>
+  </body>
 </html>

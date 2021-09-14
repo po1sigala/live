@@ -1,17 +1,20 @@
 {
-  "name": "Webpack-plugin Demo",
+  "name": "07-ins_loader",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
     "watch": "webpack -w",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "2U",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^5.3.2",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0"
