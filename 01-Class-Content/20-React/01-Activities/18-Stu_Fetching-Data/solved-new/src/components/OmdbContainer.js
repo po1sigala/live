@@ -26,17 +26,12 @@ const OmdbContainer = () => {
   }, []);
 
   // Handler for input changes to the search form
-  const handleInputChange = (e) => {
-    const value = e.target.value;
+  const handleInputChange = (e) => setSearch(e.target.value);
 
-    // Set the state for the input name and value
-    setSearch({ search: value });
-  };
-
-  // Handler for form submission. When the form is submitted use the API.search method to search for the movie(s)
+  // Handler for what happens when the search form is submitted
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    searchMovie(search.search);
+    searchMovie(search);
   };
 
   // Destructure the result object to make the code more readable

@@ -1,77 +1,78 @@
-import React, { Component } from "react";
-import Container from "./Container";
-import Row from "./Row";
-import Col from "./Col";
-import Card from "./Card";
-import SearchForm from "./SearchForm";
-import MovieDetail from "./MovieDetail";
-import API from "../utils/API";
+import Container from './Container';
+import Row from './Row';
+import Col from './Col';
+import Card from './Card';
+import SearchForm from './SearchForm';
+import MovieDetail from './MovieDetail';
+import API from '../utils/API';
+import { useState, useEffect } from 'react';
 
-class OmdbContainer extends Component {
-  state = {
-    result: {},
-    search: ""
-  };
+import React from 'react';
 
-  // When this component mounts, search for the movie "The Matrix"
-  componentDidMount() {
-    this.searchMovies("The Matrix");
-  }
+const OmdbContainer = () => {
+  // Set state for the search result and the search query
+  const [result, setResult] = useState({});
+  const [search, setSearch] = useState('');
 
-  searchMovies = query => {
+  // When the search form is submitted, use the API.search method to search for the movie(s)
+  const searchMovie = (query) =>
     API.search(query)
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
+      .then((res) => setResult(res.data))
+      .catch((err) => console.log(err));
+
+  // When the component mounts, use the API.search method to render a default search result
+  useEffect(() => {
+    searchMovie('The Matrix');
+  }, []);
+
+  // Handler for input changes to the search form
+  const handleInputChange = (e) => setSearch(e.target.value);
+
+  // Handler for what happens when the search form is submitted
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    searchMovie(search);
   };
 
-  handleInputChange = event => {
-    const value = event.target.value;
-    const name = event.target.name;
-    this.setState({
-      [name]: value
-    });
-  };
+  // Destructure the result object to make the code more readable
+  const {
+    Title = '',
+    Poster = '',
+    Director = '',
+    Genre = '',
+    Released = '',
+  } = result;
 
-  // When the form is submitted, search the OMDB API for the value of `this.state.search`
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.searchMovies(this.state.search);
-  };
-
-  render() {
-    return (
-      <Container>
-        <Row>
-          <Col size="md-8">
-            <Card
-              heading={this.state.result.Title || "Search for a Movie to Begin"}
-            >
-              {this.state.result.Title ? (
-                <MovieDetail
-                  title={this.state.result.Title}
-                  src={this.state.result.Poster}
-                  director={this.state.result.Director}
-                  genre={this.state.result.Genre}
-                  released={this.state.result.Released}
-                />
-              ) : (
-                <h3>No Results to Display</h3>
-              )}
-            </Card>
-          </Col>
-          <Col size="md-4">
-            <Card heading="Search">
-              <SearchForm
-                value={this.state.search}
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
+  return (
+    <Container>
+      <Row>
+        <Col size="md-8">
+          <Card heading={Title || 'Search for a Movie to Begin'}>
+            {Title ? (
+              <MovieDetail
+                title={Title}
+                src={Poster}
+                director={Director}
+                genre={Genre}
+                released={Released}
               />
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Card>
+        </Col>
+        <Col size="md-4">
+          <Card heading="Search">
+            <SearchForm
+              value={search}
+              handleInputChange={handleInputChange}
+              handleFormSubmit={handleFormSubmit}
+            />
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default OmdbContainer;
