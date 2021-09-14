@@ -1,3 +1,5 @@
+import { Workbox } from 'workbox-window';
+
 import './css/style.css';
 
 const targetEl = document.querySelector('.flexbox');
@@ -38,10 +40,14 @@ getDevArticles().then((articles) => {
 
 // TODO: Add a comment describing the functionality of the service worker
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    // TODO: Add a comment explaining what phase the service worker is in after the following line of code
+  // TODO: Add a comment what the Workbox constructor does and why it is needed
+  const wb = new Workbox('/sw.js');
+  logger(
+    'Service Worker',
+    'Inject Manifest Plugin Service Worker is ready',
+    wb
+  );
 
-    // TODO: Explain why the following file doesn't exist in our project
-    navigator.serviceWorker.register('/service-worker.js');
-  });
+  // Call the register method on the service worker to register the service worker
+  wb.register();
 }

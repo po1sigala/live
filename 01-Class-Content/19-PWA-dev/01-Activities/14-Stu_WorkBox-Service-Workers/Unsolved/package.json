@@ -2,12 +2,10 @@
   "name": "workbox-service-workers",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "John McCambridge <jmccamb@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --open",
     "build": "webpack --mode production",
-    "postinstall": "webpack",
     "start": "webpack && node server.js"
   },
   "devDependencies": {
@@ -20,6 +18,7 @@
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "workbox-window": "^6.3.0"
   }
 }

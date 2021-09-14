@@ -2,12 +2,10 @@
   "name": "20-stu_client-server-solved",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "John McCambridge <jmccamb@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
-    "postinstall": "webpack",
     "start": "webpack && webpack serve"
   },
   "devDependencies": {

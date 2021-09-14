@@ -7,6 +7,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
+  // The devServer config is for the webpack-dev-server. The hot option is for hot module replacement,
+  // which is a feature that allows you to update a module without refreshing the page.
   devServer: {
     hot: true,
     static: './dist',

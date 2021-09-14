@@ -6,6 +6,11 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
   devServer: {
     hot: true,
     static: './dist',
@@ -23,10 +28,5 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
 };

@@ -1,3 +1,4 @@
+import { Workbox } from 'workbox-window';
 import './css/style.css';
 
 const targetEl = document.querySelector('.flexbox');
@@ -43,13 +44,17 @@ getDevArticles().then((articles) => {
   });
 });
 
-// Register the service worker in the browser
+// Register the service worker in the browser using the workbox-window library
+// https://developers.google.com/web/tools/workbox/modules/workbox-window
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-    navigator.serviceWorker.ready.then((registration) => {
-      logger('Service Worker', 'Service Worker is ready', registration);
-    });
-  });
+  // The new Workbox object is created here and accepts the location of the service worker file
+  const wb = new Workbox('/sw.js');
+  logger(
+    'Service Worker',
+    'Inject Manifest Plugin Service Worker is ready',
+    wb
+  );
+
+  // Call the register method on the service worker to register the service worker
+  wb.register();
 }
