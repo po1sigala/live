@@ -1,13 +1,13 @@
 const path = require('path');
 
-// Create the configuration object so webpack knows what to bundle and where to output the bundle
 const config = {
-  entry: './public/assets/js/app.js',
+  entry: './assets/js/app.js',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',
+  // Add the module for loader rules
 };
 
 module.exports = config;
