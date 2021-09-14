@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
@@ -7,62 +8,73 @@ import SearchForm from './SearchForm';
 import MovieDetail from './MovieDetail';
 import API from '../utils/API';
 
-class OmdbContainer extends Component {
-  state = {
-    result: {},
-    search: '',
-  };
+const OmdbContainer = () => {
+  const [result, setResult] = useState({});
+  const [search, setSearch] = useState('');
 
-  // TODO: componentDidMount method needs to be fixed
-  componentDidMount() {
-    searchMovies("The Matrix")
-  }
-  searchMovies = (query) => {
+  // When the search form is submitted, use the API.search method to search for the movie(s)
+  const searchMovie = (query) =>
     API.search(query)
-      .then((res) => this.setState({ result: res.data }))
+      .then((res) => setResult(res.data))
       .catch((err) => console.log(err));
+
+  // TODO: Fix the useEffect hook running after every
+  useEffect(() => {
+    searchMovie('The Matrix');
+  });
+
+  // TODO: Fix the handleInputChange function
+  const handleInputChange = (e) => console.log(e.target.value);
+
+  // TODO: Fix the handleFormSubmit function not actually searching for the movie
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
   };
 
-  // TODO: handleInputChange method needs to be fixed
-  handleInputChange = event => {
-    console.log(e.target.value)
-  };
+  // Destructure the result object to make the code more readable, assign them to empty strings to start
+  const {
+    Title = '',
+    Poster = '',
+    Director = '',
+    Genre = '',
+    Released = '',
+  } = result;
 
-  // TODO: handleFormSubmit method needs to call `this.searchMovies(this.state.search)`
-  handleFormSubmit = event => {
-    console.log(this.state.search)
-  };
+  /* Fall back to default header if `Title` is undefined
+  Does `Title` exist? If so, render the `MovieDetail` card 
+  If not, render a different header */
 
-  render() {
-    return (
-      <Container>
-        <Row>
-          <Col size="md-8">
-            <Card
-              heading={this.state.result.Title || 'Search for a Movie to Begin'}
-            >
+  return (
+    <Container>
+      <Row>
+        <Col size="md-8">
+          <Card heading={Title || 'Search for a Movie to Begin'}>
+            {Title ? (
               <MovieDetail
-                title={this.state.result.Title}
-                src={this.state.result.Poster}
-                director={this.state.result.Director}
-                genre={this.state.result.Genre}
-                released={this.state.result.Released}
+                title={Title}
+                src={Poster}
+                director={Director}
+                genre={Genre}
+                released={Released}
               />
-            </Card>
-          </Col>
-          <Col size="md-4">
-            <Card heading="Search">
-              <SearchForm
-                value={this.state.search}
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-              />
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Card>
+        </Col>
+        <Col size="md-4">
+          <Card heading="Search">
+            <SearchForm
+              value={search}
+              handleInputChange={handleInputChange}
+              handleFormSubmit={handleFormSubmit}
+            />
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default OmdbContainer;

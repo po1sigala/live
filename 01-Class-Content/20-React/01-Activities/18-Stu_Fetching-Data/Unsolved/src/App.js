@@ -1,8 +1,5 @@
-import React from "react";
-import OmdbContainer from "./components/OmdbContainer";
+import OmdbContainer from './components/OmdbContainer';
 
-function App() {
+export default function App() {
   return <OmdbContainer />;
 }
-
-export default App;

@@ -1,3 +1,5 @@
+import React from 'react';
+import { useState, useEffect } from 'react';
 import Container from './Container';
 import Row from './Row';
 import Col from './Col';
@@ -5,9 +7,6 @@ import Card from './Card';
 import SearchForm from './SearchForm';
 import MovieDetail from './MovieDetail';
 import API from '../utils/API';
-import { useState, useEffect } from 'react';
-
-import React from 'react';
 
 const OmdbContainer = () => {
   // Set state for the search result and the search query
@@ -20,7 +19,9 @@ const OmdbContainer = () => {
       .then((res) => setResult(res.data))
       .catch((err) => console.log(err));
 
-  // When the component mounts, use the API.search method to render a default search result
+  // When the component loads, use the API.search method to render a default search result
+  // The empty optional array [] will cause the hook to only run one time after the component loads
+  // Refer to https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects
   useEffect(() => {
     searchMovie('The Matrix');
   }, []);
@@ -34,7 +35,7 @@ const OmdbContainer = () => {
     searchMovie(search);
   };
 
-  // Destructure the result object to make the code more readable
+  // Destructure the result object to make the code more readable, assign them to empty strings to start
   const {
     Title = '',
     Poster = '',
@@ -42,6 +43,10 @@ const OmdbContainer = () => {
     Genre = '',
     Released = '',
   } = result;
+
+  /* Fall back to default header if `Title` is undefined
+  Does `Title` exist? If so, render the `MovieDetail` card 
+  If not, render a different header */
 
   return (
     <Container>
