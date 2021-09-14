@@ -1,9 +1,15 @@
+const path = require('path');
+
 // Create a config object that contains the entry point and bundle location
 const config = {
-  entry: './assets/app.js',
+  // Create the main entry
+  entry: {
+    main: './assets/app.js',
+  },
+  // In production mode, a content hash would also be created for version control
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js', // => main.bundle.js
+    path: path.resolve(__dirname, 'dist'),
   },
   // Production mode is the default
   mode: 'development',
