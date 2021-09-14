@@ -62,7 +62,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
 </body>
 </html>`;
 
-// Bonus using writeFileAsync as a promise
+// Bonus using writeFileSync as a promise
 const init = () => {
   promptUser()
   // Use writeFileSync method to use promises instead of a callback function
