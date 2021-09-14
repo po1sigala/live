@@ -12,9 +12,9 @@ function addToList(name, price) {
     <span class="ml-4">Price: ${price}</span></li>`;
 }
 
-function submit(e) {
+async function submit(e) {
   e.preventDefault();
-  const total = calculations.subtract(
+  const total = await calculations.subtract(
     Number(balanceEl.innerText),
     priceEl.value
   );
@@ -24,7 +24,6 @@ function submit(e) {
 
 function reset(e) {
   e.preventDefault();
-  const total = 2000;
   balanceEl.innerText = total;
   expensesListEl.innerHTML = '';
 }
