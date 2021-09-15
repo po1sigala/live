@@ -5,6 +5,7 @@ const config = {
   // Create the main entry
   entry: {
     main: './assets/app.js',
+    weekly: './assets/weekly.js',
   },
   // In production mode, a content hash would also be created for version control
   output: {

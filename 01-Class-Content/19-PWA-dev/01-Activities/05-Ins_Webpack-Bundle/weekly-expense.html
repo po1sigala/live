@@ -26,7 +26,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>Budget Tracker</title>
+    <title>Weekly Expense Tracker</title>
   </head>
 
   <body>
@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Budget Tracker</a>
+              <a class="nav-link active" aria-current="page" href="./index.html">Budget Tracker</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./weekly-expense.html">Weekly Budget</a>
+              <a class="nav-link" href="#">Weekly Budget</a>
             </li>
             </li>
           </ul>
@@ -49,11 +49,11 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Budget Tracker</h1>
+      <h1>Weekly Expense Tracker</h1>
       <form class="mb-5">
         <div>
-          <h3>Your budget is: $<span id="budget">2000</span></h3>
-          <h3>Your current balance is: $<span id="balance">2000</span></h3>
+          <h3>Your weekly budget is: $<span id="budget">300</span></h3>
+          <h3>Your current balance is: $<span id="balance">300</span></h3>
         </div>
         <div class="form-group">
           <input
@@ -61,7 +61,7 @@
             class="form-control"
             id="expense"
             aria-describedby="expenseName"
-            placeholder="Enter expense"
+            placeholder="Enter day"
           />
         </div>
         <div class="input-group">
@@ -70,7 +70,7 @@
             id="price"
             type="number"
             class="form-control"
-            placeholder="price"
+            placeholder="Expenses for the day"
           />
         </div>
         <br />
@@ -81,6 +81,6 @@
       <ul id="expenses-list" class="list-group"></ul>
     </div>
     <!-- Update link to the new bundle -->
-    <script type="text/javascript" src="dist/main.bundle.js"></script>
+    <script type="text/javascript" src="dist/weekly.bundle.js"></script>
   </body>
 </html>
