@@ -4,7 +4,7 @@
 
 * With Lighthouse you can audit any web page for performance, accessibility, progressive web apps, SEO and more.
 
-* 🔑 According the Google, the #1 reason a user will bounce or leave a website is due to slow loading time.
+* 🔑 According to Google, the #1 reason a user will leave a website is due to slow loading time.
 
   ![The most important metric for user retention is page loading time.](./assets/speed-impact.png)
 
