@@ -1,3 +1,4 @@
+// ES Modules import the JavaScript functions
 import monthlyInterest from './convertInterest';
 import loanPayment from './loanCalc';
 import months from './monthlyTerms';
@@ -28,7 +29,8 @@ function submit(e) {
   monthlyPaymentEl.innerText = `$${monthlyPayment.toFixed(2)}`;
 }
 
-// Async function returns a promise
+// Async function returns a promise from mock API
+// Disclaimer: this is fake data
 async function getRate() {
   // Call to Mock API
   const currentRate = await getData(6.11);
@@ -36,7 +38,7 @@ async function getRate() {
   return currentRate;
 }
 
-// Async function retrieves the current rate
+// Displays the current rate
 async function displayRate(e) {
   e.preventDefault();
   rateBtn.remove();
@@ -47,6 +49,6 @@ async function displayRate(e) {
   currentRateEl.appendChild(getRateEl);
 }
 
-// Submit Button Event Listener
+// Click Event Listeners
 submitBtn.onclick = submit;
 rateBtn.onclick = displayRate;

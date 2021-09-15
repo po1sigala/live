@@ -1,11 +1,8 @@
-const path = require('path');
+// Import package to create path
 
 const config = {
   entry: './src/app.js',
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  // add output to dynamically name bundles
   mode: 'development',
 };
 

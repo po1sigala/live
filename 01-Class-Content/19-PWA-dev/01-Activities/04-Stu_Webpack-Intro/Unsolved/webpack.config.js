@@ -1,10 +1,9 @@
-const config = {
-  entry: './assets/app.js',
-  output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js',
-  },
-  mode: 'development',
-};
+// Create webpack configuration object
 
-module.exports = config;
+// Entry point
+
+// Output file
+
+// Mode declaration
+
+// Make the object available

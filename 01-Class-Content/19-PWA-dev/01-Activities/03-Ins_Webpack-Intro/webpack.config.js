@@ -1,6 +1,6 @@
 // Create a config object that contains the entry point and bundle location
 const config = {
-  // Default name for entry point is main
+  // Entry point for initial bundle for page load
   entry: './assets/app.js',
   output: {
     path: `${__dirname}/dist`,
