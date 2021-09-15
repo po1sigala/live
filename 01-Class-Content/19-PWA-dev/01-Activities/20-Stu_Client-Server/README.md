@@ -1,4 +1,4 @@
-# 🏗️  Spin up The Client and Backend Servers Simultaneously
+# 🏗️  Start The Client and Backend Servers Simultaneously
 
 Work with a partner to implement the following user story:
 
@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![ @TODO add image]()
+> **Asset Needed:** [Jira Ticket](https://jira.2u.com/browse/BCCOD-2297?filter=-2)
 
 ---
 
