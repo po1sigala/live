@@ -24,7 +24,7 @@ Refer to the documentation:
 
 The following image demonstrates Watch mode is currently on:
 
-![The command line displays the watch webpack watch command](./Assets/watch-terminal.png)
+![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
 
 ---
 
