@@ -9,6 +9,7 @@ const getDevArticles = async () => {
   return articles;
 };
 
+// Logger method to help service worker events stand out in the console
 const logger = (type, message, extra = '') => {
   const badge = `%c${type}`;
   const style =

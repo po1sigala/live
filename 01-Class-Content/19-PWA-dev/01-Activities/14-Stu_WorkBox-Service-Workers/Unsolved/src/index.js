@@ -3,11 +3,18 @@ import { Workbox } from 'workbox-window';
 import './css/style.css';
 
 const targetEl = document.querySelector('.flexbox');
-// get the articles
+
 const getDevArticles = async () => {
   const response = await fetch('https://dev.to/api/articles');
   const articles = await response.json();
   return articles;
+};
+
+const logger = (type, message, extra = '') => {
+  const badge = `%c${type}`;
+  const style =
+    'color: white; background-color: orange; padding: 2px 5px; border-radius: 5px; font-weight: bold';
+  console.log(badge, style, message, extra);
 };
 
 getDevArticles().then((articles) => {
