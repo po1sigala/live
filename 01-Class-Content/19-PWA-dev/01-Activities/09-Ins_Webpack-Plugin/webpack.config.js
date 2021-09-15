@@ -1,13 +1,23 @@
+const path = require('path');
+// The HTML plugin is imported
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 // Create a config object that contains the entry point and bundle location
 const config = {
   // Default name for entry point is main
   entry: './assets/app.js',
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  // Production mode is the default
+  // Production mode is the default setting
   mode: 'development',
+  plugins: [
+    // This plugin uses the current index.html file and inserts the bundle.
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
+  ],
 };
 
 module.exports = config;
