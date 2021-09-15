@@ -13,6 +13,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
   },
   // Production mode is the default
+  // Development mode creates legible outputs
   mode: 'development',
 };
 
