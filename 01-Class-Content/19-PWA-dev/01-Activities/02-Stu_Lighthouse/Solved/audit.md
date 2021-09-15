@@ -2,7 +2,7 @@
 
 ## Performance Metrics
 
-Which metrics in the Lighthouse audit are failing?
+Which metrics in the Lighthouse audit are failing? 
 List the metric and its respective score. (Add bullet points if necessary)
 
 * Time to Interactive: 10.7 s

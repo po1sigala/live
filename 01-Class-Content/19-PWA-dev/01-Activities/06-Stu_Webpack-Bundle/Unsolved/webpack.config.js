@@ -1,8 +1,13 @@
-// Import package to create path
 
 const config = {
-  // Add multiple entry points to Code Split
-  // Add output to dynamically name bundles
+  entry: {
+    main: './assets/app.js',
+    cost: './assets/cost.js',
+  },
+  output: {
+    filename: '[entry].bundle.js', 
+    path: path.resolve(_dirname, 'dist'),
+  },
   mode: 'development',
 };
 

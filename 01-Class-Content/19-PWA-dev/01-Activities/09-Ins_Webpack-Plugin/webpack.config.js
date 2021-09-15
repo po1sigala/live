@@ -16,6 +16,7 @@ const config = {
     // This plugin uses the current index.html file and inserts the bundle.
     new HtmlWebpackPlugin({
       template: './index.html',
+      title: 'Webpack Demo'
     }),
   ],
 };

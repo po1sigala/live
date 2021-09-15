@@ -1,14 +1,14 @@
 {
-	"name": "Unsolved-Webpack-Loader",
-	"version": "1.0.0",
-	"description": "",
-	"main": "app.js",
-	"scripts": {
-		"watch": "webpack --watch",
-		"build": "npm run webpack",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "2U",
-	"license": "ISC"
+  "name": "Unsolved-Webpack-Loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "2U",
+  "license": "ISC"
 }

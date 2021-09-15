@@ -20,24 +20,21 @@ When a developer executes the build command, an error message is displayed in th
 
 ## Assets
 
-<!-- TODO: Add a screenshot -->
 The following image confirms that a bundle was created by displaying a success message in the terminal:
 
-![]()
+![Command line successfully compiling our web application.](./Assets/chunks.png)
 
 ---
 
 ## 💡 Hints
 
-The error message in the terminal: `Module not found: Error`, is a critical clue.
-
-Which module is needed by webpack to create a bundle?
+How are the bundles being generated?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you dynamically name your bundles?
+* What does chunking do for us?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

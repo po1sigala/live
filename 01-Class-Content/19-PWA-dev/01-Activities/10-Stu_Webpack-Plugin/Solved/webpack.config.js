@@ -14,6 +14,7 @@ const config = {
     // This plugin uses the current index.html file and inserts the bundles.
     new HtmlWebpackPlugin({
       template: './index.html',
+      title: 'Loan Calculator'
     }),
   ],
 };

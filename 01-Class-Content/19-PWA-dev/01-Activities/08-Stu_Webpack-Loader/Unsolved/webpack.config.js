@@ -7,7 +7,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',
-  // Add the module for loader rules
+  // TODO: Add the module for loader rules
 };
 
 module.exports = config;

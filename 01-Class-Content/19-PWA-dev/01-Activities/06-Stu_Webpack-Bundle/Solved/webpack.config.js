@@ -6,7 +6,7 @@ const config = {
     cost: './assets/cost.js',
   },
   output: {
-    filename: '[name].bundle.js', // Dynamically named bundles
+    filename: '[name].bundle.js', 
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',

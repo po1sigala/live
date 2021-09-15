@@ -1,11 +1,16 @@
 // Webpack configuration object
 const config = {
-  entry: './assets/app.js', // entry point
+  // entry point
+  entry: './assets/app.js',
   output: {
-    path: `${__dirname}/dist`, // output file
+    // output file
+    path: `${__dirname}/dist`, 
     filename: 'bundle.js',
   },
-  mode: 'development', // Mode setting
+
+  // Mode setting
+  
+  mode: 'development',
 };
 // Make this object available
 module.exports = config;

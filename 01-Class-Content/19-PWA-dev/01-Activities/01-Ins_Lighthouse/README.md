@@ -12,7 +12,7 @@
   
 * From the audit, you can see the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why the audit is important, as well as how to fix it.
 
-https://developers.google.com/web/tools/lighthouse#devtools
+[Google Documentation on Lighthouse DevTools](https://developers.google.com/web/tools/lighthouse#devtools)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
