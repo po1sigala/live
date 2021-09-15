@@ -2,14 +2,14 @@ const path = require('path');
 
 // Create a config object that contains the entry point and bundle location
 const config = {
-  // Create the main entry
+  // Create the multiple entry points
   entry: {
     main: './assets/app.js',
     weekly: './assets/weekly.js',
   },
-  // In production mode, a content hash would also be created for version control
+  // Multiple bundles are created dynamically according to the entry points
   output: {
-    filename: '[name].bundle.js', // => main.bundle.js
+    filename: '[name].bundle.js', // => main.bundle.js, weekly.bundle.js
     path: path.resolve(__dirname, 'dist'),
   },
   // Production mode is the default
