@@ -14,12 +14,6 @@ Work with a partner to implement the following user story:
 
 * It's done when I have ensured that the ports are not conflicting with any other services.
 
-## Assets
-
-The following image demonstrates the web application's appearance and functionality:
-
-> **Asset Needed:** [Jira Ticket](https://jira.2u.com/browse/BCCOD-2297?filter=-2)
-
 ---
 
 ## 💡 Hints
