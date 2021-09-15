@@ -1,4 +1,3 @@
-
 const config = {
   entry: {
     main: './assets/app.js',
