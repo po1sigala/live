@@ -16,10 +16,9 @@ Work with a partner to implement the following user story:
 
 ## Assets
 
-<!-- TODO: Add a screenshot -->
 The following image demonstrates the web application's appearance and functionality:
 
-![]()
+![The output of the loan calculator with 300k loan.](./Assets/loan-calculator.png)
 
 ---
 
