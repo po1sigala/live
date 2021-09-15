@@ -14,7 +14,7 @@ When a user clicks the delete button, the To Do list item  remains on the page a
 
 ## Steps to Reproduce the Problem
 
-1. In the command line, navigate to `26-Stu_IndexedDB-CRUD/Unsolved`.
+1. In the command line, navigate to `24-Stu_IndexedDB-CRUD/Unsolved`.
 
 2. Run `npm install`.
 
