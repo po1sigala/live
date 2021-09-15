@@ -8,7 +8,7 @@ Work with a partner to identify which key metrics need improvement using a Light
 
 2. Find which metrics must be modified to improve the loading time of the website.
 
-3. Add comments to the markdown file in the [Solved](./Solved/audit.md)
+3. Add comments to the markdown file in the [audit.md](./Unsolved/audit.md)
 
 Refer to the documentation:   
 
