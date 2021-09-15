@@ -6,10 +6,8 @@ const getData = (data, successRate = 0.98, maxLatencyMs = 1000) =>
     if (successRoll <= successRate) {
       setTimeout(() => resolve(data), latency);
     } else {
-      setTimeout(() => reject('API failed to return data'), latency);
+      setTimeout(() => reject(new Error('fail')), latency);
     }
   });
 
-module.exports = {
-  getData,
-};
+export default getData;

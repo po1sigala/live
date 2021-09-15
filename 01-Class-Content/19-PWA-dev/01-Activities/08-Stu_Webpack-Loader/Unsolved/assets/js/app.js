@@ -1,7 +1,9 @@
-const { monthlyInterest } = require('./convertInterest');
-const { loanPayment } = require('./loanCalc');
-const { months } = require('./monthlyTerms');
-const { getData } = require('./getData');
+import monthlyInterest from './convertInterest';
+import loanPayment from './loanCalc';
+import months from './monthlyTerms';
+import getData from './getData';
+// Import the CSS module
+import '../css/style.css';
 
 const loanEl = document.getElementById('loan');
 const rateEl = document.getElementById('rate');
@@ -26,12 +28,15 @@ function submit(e) {
   monthlyPaymentEl.innerText = `$${monthlyPayment.toFixed(2)}`;
 }
 
+// Async function returns a promise
 async function getRate() {
+  // Call to Mock API
   const currentRate = await getData(6.11);
   console.log(currentRate);
   return currentRate;
 }
 
+// Async function retrieves the current rate
 async function displayRate(e) {
   e.preventDefault();
   rateBtn.remove();

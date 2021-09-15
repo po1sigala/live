@@ -4,6 +4,4 @@ const loanPayment = (principle = 300000, rate = 0.00416, term = 360) => {
   return (principle * rate * ratePow) / (ratePow - 1);
 };
 
-module.exports = {
-  loanPayment,
-};
+export default loanPayment;

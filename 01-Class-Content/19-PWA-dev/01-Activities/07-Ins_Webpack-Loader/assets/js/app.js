@@ -1,4 +1,5 @@
-const calculations = require('./calculations');
+import '../css/style.css';
+import subtract from './calculations';
 
 const priceEl = document.getElementById('price');
 const balanceEl = document.getElementById('balance');
@@ -14,10 +15,7 @@ function addToList(name, price) {
 
 async function submit(e) {
   e.preventDefault();
-  const total = await calculations.subtract(
-    Number(balanceEl.innerText),
-    priceEl.value
-  );
+  const total = await subtract(Number(balanceEl.innerText), priceEl.value);
   balanceEl.innerText = total;
   addToList(expenseEl.value, priceEl.value);
 }

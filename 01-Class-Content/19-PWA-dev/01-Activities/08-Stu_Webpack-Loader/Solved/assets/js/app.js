@@ -1,7 +1,9 @@
-const { monthlyInterest } = require('./convertInterest');
-const { loanPayment } = require('./loanCalc');
-const { months } = require('./monthlyTerms');
-const { getData } = require('./getData');
+import monthlyInterest from './convertInterest';
+import loanPayment from './loanCalc';
+import months from './monthlyTerms';
+import getData from './getData';
+// Import the CSS module
+import '../css/style.css';
 
 const loanEl = document.getElementById('loan');
 const rateEl = document.getElementById('rate');

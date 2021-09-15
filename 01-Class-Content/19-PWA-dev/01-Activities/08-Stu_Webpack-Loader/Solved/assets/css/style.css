@@ -5,4 +5,5 @@
 
 .input-group-addon {
   padding: .5rem;
+  min-width: 55px;
 }
