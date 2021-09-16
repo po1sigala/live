@@ -16,6 +16,7 @@ To launch the application, follow these steps:
 
 5. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
 
+This activity takes place in Chrome DevTools, we will be hooking up the UI in future activities.
 
 Refer to the documentation: 
 
