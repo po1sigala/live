@@ -20,44 +20,38 @@ Open the `manifest.json` file, do the following:
 
       ```json
       "icons": [
-          {
-          "src": "/assets/icons/icon_512x512.png",
-          "sizes": "512x512",
-          "type": "image/png"
-          },
-          {
-          "src": "/assets/icons/icon_384x384.png",
-          "sizes": "384x384",
-          "type": "image/png"
-          },
-          {
-          "src": "/assets/icons/icon_256x256.png",
-          "sizes": "256x256",
-          "type": "image/png"
-          },
-          {
-          "src": "/assets/icons/icon_192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-          },
-          {
-          "src": "/assets/icons/icon_128x128.png",
-          "sizes": "128x128",
-          "type": "image/png"
-          },
-          {
-          "src": "/assets/icons/icon_96x96.png",
-          "sizes": "96x96",
-          "type": "image/png"
-          }
-      ],
+            {
+            "src": "/assets/images/icon_96x96.png",
+            "type": "image/png",
+            "sizes": "96x96",
+            "purpose": "any maskable"
+            },
+            {
+            "src": "/assets/images/icon_128x128.png",
+            "type": "image/png",
+            "sizes": "128x128",
+            "purpose": "any maskable"
+            },
+            {
+            "src": "/assets/images/icon_192x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+            },
+            {
+            "src": "/assets/images/icon_512x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+            }
+        ]
       ```
 
   * 🔑 The next two properties are the `name` and `short_name` which do exactly what there name suggests.
 
       ```json
-      "name": "TODOs",
-      "short_name": "TODOs",
+      "short_name": "Manifest",
+      "name": "TODOs Manifest Example"
       ```
 
   * 🔑 The`orientation` allows us to define which angle our application is viewed in, while the  `display` property allows us to define preferred display mode.

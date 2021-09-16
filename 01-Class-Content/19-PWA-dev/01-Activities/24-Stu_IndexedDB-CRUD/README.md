@@ -10,7 +10,9 @@ When a user clicks the delete button, the contact card will be removed from the 
 
 ## Actual Behavior
 
-When a user clicks the delete button, the To Do list item  remains on the page and an error is thrown in the console.
+When a user clicks on the item it is removed from the list of tasks.
+
+When a user clicks on the `Edit` button, a text input should be displayed with the list item that you want to edit. After pressing the `Enter` key the list item will be updated accordingly.
 
 ## Steps to Reproduce the Problem
 
@@ -44,7 +46,7 @@ What types of permissions do you need when altering data inside of a database?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How dooes the usage of CRUD operations with IndexedDB compare with their usage with SQL databases? 
+* How does the usage of CRUD operations with IndexedDB compare with their usage with SQL databases? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
