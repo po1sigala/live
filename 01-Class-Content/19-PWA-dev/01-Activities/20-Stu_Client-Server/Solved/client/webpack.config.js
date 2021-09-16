@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Client Server',
       template: './index.html',
     }),
     new InjectManifest({

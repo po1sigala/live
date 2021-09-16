@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Dev.to Posts',
       template: './index.html',
     }),
     // Add workbox-webpack-plugin to the plugins array and pass in the options `clientsClaim: true` so that the browser will take control of the service worker.
