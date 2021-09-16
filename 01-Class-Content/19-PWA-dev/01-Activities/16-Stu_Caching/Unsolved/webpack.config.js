@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Dev.to Posts',
       template: './index.html',
     }),
     // TODO: Add the InjectManifest plugin and provide it a service worker file

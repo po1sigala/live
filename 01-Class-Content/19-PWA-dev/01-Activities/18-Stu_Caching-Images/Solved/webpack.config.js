@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Caching Images! 🖼',
       template: './index.html',
     }),
     new InjectManifest({
