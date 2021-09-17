@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It's done when a production ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
   
-* It's done when Watch Mode is initiated from the command line using the command, `npm run watch`, as indicated in the following screenshot.
+* It's done when watch mode is initiated from the command line using the command, `npm run watch`, as indicated in the following screenshot.
 
 ## 📝 Notes
 

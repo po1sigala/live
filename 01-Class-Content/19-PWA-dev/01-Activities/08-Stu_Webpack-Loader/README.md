@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I can see the web application load and operate without errors on different browsers.
+* It's done when I can see the web application load and operate without errors if I were using Internet Explorer or an old version of Firefox or Chrome.
 
 * It's done when webpack has successfully created a bundle in the `dist/` folder.
 
