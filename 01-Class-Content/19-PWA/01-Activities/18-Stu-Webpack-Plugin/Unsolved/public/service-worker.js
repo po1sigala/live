@@ -50,7 +50,8 @@ const FILES_TO_CACHE = [
   '/assets/images/35.jpg',
   '/assets/images/36.jpg',
   '/assets/images/37.jpg',
-  '/assets/images/38.jpg'
+  '/assets/images/38.jpg',
+  '/api/images'
 ];
 
 const STATIC_CACHE = "static-cache-v1";

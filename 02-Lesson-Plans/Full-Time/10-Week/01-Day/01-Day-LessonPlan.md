@@ -809,6 +809,8 @@ function initLazyImages() {
 
   ![Offline](Images/offline-mode.png)
 
+* Make a note, that if students were to make a PWA with external libraries such as Bootstrap, that those styles will need to be accounted in the manifest and service worker.
+
 * Answer any questions before ending the class.
 
 ### 24. END (0 min)
