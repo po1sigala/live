@@ -14,7 +14,7 @@ When a developer executes the build command, an error message is displayed in th
 
 ## Steps to Reproduce the Problem
 
-1. Execute the command `npm install`, to install the web app's dependencies.
+1. Execute the command `npm install`, to download the web app's dependencies.
 
 2. Execute the command, `npm run build`, from the command line to create a bundle.
 
