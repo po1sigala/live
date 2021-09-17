@@ -16,13 +16,15 @@ Work with a partner to implement the following user story:
 
 * It's done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
 
-* It's done when I have ensured that the ports are not conflicting with any other services.
+* It's done when I am able to start the client and the backend server concurrently by running `npm start`.
 
 ---
 
 ## 💡 Hints
 
 * Concurrently can also be configured to shorten npm commands. How can we include this in our solution?
+
+* Remember to close any other servers you may have running to free up the needed ports.
 
 ## 🏆 Bonus
 
