@@ -6,7 +6,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have isolated the existing code into the `client` and `server` folders.
+* It's done when I have moved the existing code into a new `client` folder.
+
+* It's done when I have created a simple express server in the `server` folder.
+
+* It's done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
 
 * It's done when I have installed the `concurrently` npm package at the root of the project.
 
