@@ -8,7 +8,7 @@ Work with a partner to resolve the following issue(s):
 
 The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by inspecting the network tab in the browser when the user visits the page after the first time.
 
-In your network tab, you will see a series of network requests responding to the image requests with an "initiator" of `StrategyHandler`. This means that the browser is using the cache to serve the image. 
+In your network tab, you will see a series of network requests responding to the image requests with an "initiator" of `StrategyHandler`. This means that the browser is using the cache to serve the image.
 
 ## Actual Behavior
 
@@ -24,11 +24,12 @@ When a user visits the page even after the first time, the browser is still maki
 
 ## Assets
 
-The following image demonstrates the web application's appearance and functionality:
+The following image demonstrates the properly functioning network requests to the cache:
 
-![]()
+![Network tab of chrome based browser showing 200 status codes](./Images/network.png)
 
 ---
+
 ## 💡 Hints
 
 What is a cache miss and how can we use the advanced recipe to resolve this issue?
