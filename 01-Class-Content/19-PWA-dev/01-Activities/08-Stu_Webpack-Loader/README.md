@@ -1,30 +1,42 @@
-# 📖 Implement Babel and Async Await
+# 🐛 The Get the Latest Interest Button Does Not Work
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to use modern JavaScript patterns like async/await.
+* As a developer, I want to be able to use Async / Await with webpack.
 
-* As a user, I want to use the web application regardless of the selected browser.
+* As a user, I want to be able to get the latest interest rates when I click the appropriate button.
 
-## Acceptance Criteria
+## Expected Behavior
 
-* It's done when I can see the web application load and operate without errors if I were using Internet Explorer or an old browser version like Google Chrome v54.
+When I click the `Get the latest interest rates button` button, an up to date interest rate should appear.
 
-* It's done when webpack has successfully created a bundle in the `dist/` folder.
+## Actual Behavior
 
-## 📝 Notes
+When a user clicks the `Get the latest interest rates button` button, an error appears in the console.
 
-Refer to the documentation: 
+## Steps to Reproduce the Problem
 
-[Babel Docs on Async/Await](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
+1. Execute the command `npm install`, to download the web app's dependencies.
 
-[Babel Docs about JavaScript Compiling](https://babeljs.io/docs/en/)
+2. Execute the command, `npm run watch`, from the command line to create a bundle.
+
+3. Open up the `index.html` file with live server.
+
+4. Click on the `Get the latest interest rates button` button and check the console in Chrome DevTools.
+
+## Assets
+
+The following image confirms that a bundle was created by displaying a success message in the terminal:
+
+![The Get the latest interest rates button on the web application.](./Assets/interest-button.png)
+
+![The latest interest rate being displayed on the web application.](./Assets/interest.png)
 
 ---
 
 ## 💡 Hints
 
-View different websites using https://www.browserstack.com/responsive 
+Which plugins do we need for Async / Await to work in our browser?
 
 ## 🏆 Bonus
 
