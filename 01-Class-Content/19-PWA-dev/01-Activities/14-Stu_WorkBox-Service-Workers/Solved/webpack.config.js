@@ -18,9 +18,8 @@ module.exports = {
       title: 'Dev.to Posts',
       template: './index.html',
     }),
-    // Add workbox-webpack-plugin to the plugins array and pass in the options `clientsClaim: true` so that the browser will take control of the service worker.
-    // `skipWaiting: true` will make the browser wait for the service worker to become ready before activating it.
-
+    // The GenerateSW plugin will create a service worker file for you
+    // and add it to the webpack asset pipeline. Good for precaching assets and when you have simple configurations.
     new GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
