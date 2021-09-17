@@ -27,9 +27,9 @@ const fetchList = async () => {
     console.log(data);
     listItem += `
     <div class="flex-row align-center justify-space between" id="${data.id}">
-            <li class="mr-2" id="list-item" onclick="deleteItem(this)">${data.todo}</li>
-            <button class="btn btn-sm btn-info" onclick="editList(this)" id="edit-btn">Edit</button>
-          </div>
+      <li class="mr-2" id="list-item" onclick="deleteItem(this)">${data.todo}</li>
+      <button class="btn btn-sm btn-info" onclick="editList(this)" id="edit-btn">Edit</button>
+    </div>
     `;
   }
 

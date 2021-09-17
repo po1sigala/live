@@ -1,1 +1,1 @@
-import './database.js'
+import './database.js';

@@ -25,8 +25,8 @@ window.editList = async (e) => {
 
   let input = `
   <form action="" onsubmit="editTodo(event)">
-        <input type="text" id="${id}" value="${todo.todo}" />
-    </form>
+    <input type="text" id="${id}" value="${todo.todo}" />
+  </form>
   `;
 
   document.getElementById(id).innerHTML = input;

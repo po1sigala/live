@@ -2,15 +2,21 @@
 
 Work with a partner to resolve the following issue(s):
 
-* As a user, I want to be able to delete on click and edit a list item when I click on the list item.
+* As a user, I want to be able to delete a list item from the list when I click on the list item.
+
+* As a user, I want to be able to edit a list item when I click on the `Edit` button.
 
 ## Expected Behavior
 
-When a user clicks the delete button, the contact card will be removed from the page.
+When a user clicks on the item it is removed from the list of tasks.
+
+When a user clicks on the `Edit` button, a text input is displayed with the list item to be edited. After pressing the `Enter` key the list item is updated accordingly.
 
 ## Actual Behavior
 
-When a user clicks the delete button, the To Do list item  remains on the page and an error is thrown in the console.
+When a user clicks on the item it is NOT removed from the list of tasks.
+
+When a user clicks on the `Edit` button, a text input does not appear with the list item to be edited. After pressing the `Enter` key the list item is not updated properly.
 
 ## Steps to Reproduce the Problem
 
@@ -24,9 +30,9 @@ When a user clicks the delete button, the To Do list item  remains on the page a
 
 5. Create a new To Do item at the bottom of the page.
 
-6. Click on a list item which should remove the list item.
+6. Click on a list item to attempt to delete it.
 
-7. Click on the edit button and we should be able to edit the list item.
+7. Click on the edit button to attempt to edit the list item.
 
 ## Assets
 
@@ -44,7 +50,7 @@ What types of permissions do you need when altering data inside of a database?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How dooes the usage of CRUD operations with IndexedDB compare with their usage with SQL databases? 
+* How does the usage of CRUD operations with IndexedDB compare with their usage with SQL databases? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

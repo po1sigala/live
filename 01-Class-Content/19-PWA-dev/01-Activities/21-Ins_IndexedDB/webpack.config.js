@@ -14,6 +14,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
+        title: 'IndexedDB Demo'
       }),
      
     ],
