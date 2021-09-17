@@ -55,6 +55,6 @@ if ('serviceWorker' in navigator) {
     wb
   );
 
-  // Call the register method on the service worker to register the service worker
+  // Here we call the register method on the service worker to register the service worker
   wb.register();
 }
