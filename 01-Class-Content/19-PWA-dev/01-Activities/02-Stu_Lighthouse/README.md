@@ -20,7 +20,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What steps are necessary to run a Lighthouse audit in the CLI for https://www.weather.com?
+* What other ways can your run a Lighthouse audit? What steps are necessary to run a Lighthouse audit in the CLI?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

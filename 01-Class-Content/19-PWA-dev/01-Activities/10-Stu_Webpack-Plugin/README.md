@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the generated HTML file has a generated page title.
 
-* It's done when I can generate an HTML file that contains the references to the webpack bundles.
+* It's done when I can generate an HTML file that contains the references to the webpack bundle.
 
 ## Assets
 

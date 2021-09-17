@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I can see the web application load and operate without errors if I were using Internet Explorer or an old browser\\ nmk for instance Google Chrome 54.
+* It's done when I can see the web application load and operate without errors if I were using Internet Explorer or an old browser version like Google Chrome v54.
 
 * It's done when webpack has successfully created a bundle in the `dist/` folder.
 
@@ -21,6 +21,10 @@ Refer to the documentation:
 [Babel Docs about JavaScript Compiling](https://babeljs.io/docs/en/)
 
 ---
+
+## 💡 Hints
+
+View different websites using https://www.browserstack.com/responsive 
 
 ## 🏆 Bonus
 
