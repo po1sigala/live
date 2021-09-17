@@ -49,12 +49,8 @@ getDevArticles().then((articles) => {
 // https://developers.google.com/web/tools/workbox/modules/workbox-window
 if ('serviceWorker' in navigator) {
   // The new Workbox object is created here and accepts the location of the service worker file
-  const wb = new Workbox('/sw.js');
-  logger(
-    'Service Worker',
-    'Inject Manifest Plugin Service Worker is ready',
-    wb
-  );
+  const wb = new Workbox('/service-worker.js');
+  logger('Service Worker', 'GenerateSW Service Worker is ready', wb);
 
   // Call the register method on the service worker to register the service worker
   wb.register();

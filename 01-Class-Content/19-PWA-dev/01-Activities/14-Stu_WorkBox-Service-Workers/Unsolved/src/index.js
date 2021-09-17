@@ -48,13 +48,9 @@ getDevArticles().then((articles) => {
 // TODO: Add a comment describing the functionality of the service worker
 if ('serviceWorker' in navigator) {
   // TODO: Add a comment what the Workbox constructor does and why it is needed
-  const wb = new Workbox('/sw.js');
-  logger(
-    'Service Worker',
-    'Inject Manifest Plugin Service Worker is ready',
-    wb
-  );
+  const wb = new Workbox('/service-worker.js');
+  logger('Service Worker', 'GenerateSW Service Worker is ready', wb);
 
-  // Here we call the register method on the service worker to register the service worker
+  // Call the register method on the service worker to register the service worker
   wb.register();
 }
