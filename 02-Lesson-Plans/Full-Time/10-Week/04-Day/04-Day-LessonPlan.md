@@ -1126,7 +1126,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-### 21. Instructor Demo: useEffect Hook (5 min)
+### 16. Instructor Demo: useEffect Hook (5 min)
 
 * Being by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Hooks-useEffect/src`.
 
