@@ -1,4 +1,4 @@
-# 🐛 The Get the Latest Interest Button Does Not Work
+# 🐛 Get the Latest Interest Button Does Not Work
 
 Work with a partner to resolve the following issue(s):
 
