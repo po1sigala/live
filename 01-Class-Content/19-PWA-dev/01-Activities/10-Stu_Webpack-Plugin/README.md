@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I can generate an HTML file that contains the references to the webpack bundles.
+* It's done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
 
 * It's done when the generated HTML file follows the template, `index.html`.
 
 * It's done when the generated HTML file has a generated page title.
 
-* It's done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
+* It's done when I can generate an HTML file that contains the references to the webpack bundle.
 
 ## Assets
 
@@ -30,7 +30,7 @@ How do we ensure the format of the HTML file that's generated follows with our t
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Why do we have to use the 'new' syntax with webpack plugins?
+* Why do we have to use the `new` syntax with webpack plugins?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

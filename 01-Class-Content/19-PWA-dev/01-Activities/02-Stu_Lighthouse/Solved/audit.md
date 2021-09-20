@@ -22,4 +22,3 @@ List possible opportunities to improve on the load time of the website.
 * Properly size images
 
 * Defer offscreen images
-
