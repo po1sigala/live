@@ -12,11 +12,9 @@ Work with a partner to implement the following user story:
 
 * It's done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
 
-* It's done when I have added a `hot` property to the `devServer` property in `webpack.config.js`
+* It's done when I have added a `hot` property to the `devServer` property in `webpack.config.js` and set it's value to `true`.
 
-* It's done when I have enabled the overlay in `webpack.config.js` so that I can see the errors in the browser.
-
-* It's done when I have added some content to the `style.css` file so that when I save the file, the changes are reflected in the browser due to hot module replacement.
+* It's done when I have modified or added some content to the `style.css` file. For example, try changing the `h1` font weight in the `style.css` file and save it. The changes should be reflected in the browser.
 
 ## 📝 Notes
 
@@ -26,7 +24,7 @@ Refer to the documentation:
 
 ## 💡 Hints
 
-* What other setting beside `liveReload: false` would we need to change in order to prevent the page from refreshing automatically when we make changes?
+* What other options are available for the `devServer` property?
 
 ## 🏆 Bonus
 

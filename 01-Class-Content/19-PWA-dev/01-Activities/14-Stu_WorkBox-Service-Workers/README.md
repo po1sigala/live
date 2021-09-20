@@ -1,18 +1,12 @@
 # 📐 Add Comments to Implementation of a Workbox Service Worker
 
-Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/src/index.js) and [src-sw.js](./Unsolved/webpack.config.js).
+Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/src/index.js) and [webpack.config.js](./Unsolved/webpack.config.js).
 
 ## 📝 Notes
-
-Be sure to annotate what the purpose of the `workbox-webpack-plugin` is, and how the `GenerateSW` function is used.
 
 Refer to the documentation:
 
 * [Workbox Service Worker](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW)
-
----
-
-@TODO [BCCOD-2297](https://jira.2u.com/browse/BCCOD-2297?filter=-1)
 
 ## 🏆 Bonus
 

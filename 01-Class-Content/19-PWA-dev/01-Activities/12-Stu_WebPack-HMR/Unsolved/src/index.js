@@ -35,3 +35,8 @@ getDevArticles().then((articles) => {
     targetEl.appendChild(articleEl);
   });
 });
+
+// TODO: Here we check if hot module replacement is enabled. Finish the code block to accept hot swapped modules.
+if (module.hot) {
+  // Code here
+}

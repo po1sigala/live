@@ -19,6 +19,8 @@ module.exports = {
       title: 'Caching',
       template: './index.html',
     }),
+    // The InjectManifest plugin will generate a list of URLs to precache and add
+    // that precache manifest to an existing service worker file. It will otherwise leave the file as-is.
     new InjectManifest({
       swSrc: './src/sw.js',
     }),

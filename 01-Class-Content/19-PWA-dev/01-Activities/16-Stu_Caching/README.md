@@ -8,8 +8,6 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have installed the `workbox-webpack-plugin` as a dependency.
-
 * It's done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
 * It's done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
@@ -25,15 +23,6 @@ Work with a partner to implement the following user story:
 Refer to the documentation:
 
 * [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
-
-## Assets
-
-@TODO: Add a screenshot
-The following image demonstrates the web application's appearance and functionality:
-
-![]()
-
----
 
 ## 💡 Hints
 

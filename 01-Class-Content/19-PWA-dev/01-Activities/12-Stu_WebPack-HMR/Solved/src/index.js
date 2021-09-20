@@ -35,3 +35,12 @@ getDevArticles().then((articles) => {
     targetEl.appendChild(articleEl);
   });
 });
+
+// Code to check if hot module replacement is enabled, and if so, hot swap modules on the fly
+if (module.hot) {
+  module.hot.accept((err) => {
+    if (err) {
+      console.error('Cannot apply HMR update.', err);
+    }
+  });
+}
