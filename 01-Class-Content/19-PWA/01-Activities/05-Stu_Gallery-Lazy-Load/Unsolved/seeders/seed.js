@@ -181,8 +181,8 @@ const imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Cactus",
-    image: "Seamstress with Sowing Machine",
+    description: "Seamstress with Sowing Machine",
+    image: "/assets/images/30.jpg",
     rating: 0,
     date: new Date(Date.now())
   },

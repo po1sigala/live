@@ -829,7 +829,7 @@ By the end of class, students will be able to:
 
   For this activity you are going to convert the Trip Planner website into a PWA.
 
-  This activity only requires a front-end since service workers and `manifest.webamanifest` file run on the web. Make sure to open the `index.html` file with live server.
+  This activity only requires a front-end since service workers and `manifest.webamanifest` file run on the web. Make sure to open the `index.html` file with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
   ## Instructions
 
