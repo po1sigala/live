@@ -4,15 +4,15 @@ Work with a partner to resolve the following issue(s):
 
 * As a developer, I want to be able to use Async / Await with webpack.
 
-* As a user, I want to be able to get the latest interest rates when I click the appropriate button.
+* As a user, I want to be able to get the latest interest rate when I click the appropriate button.
 
 ## Expected Behavior
 
-When I click the `Get the latest interest rates button` button, an up to date interest rate should appear.
+When I click the `Get the latest interest rate` button, an up to date interest rate should appear.
 
 ## Actual Behavior
 
-When a user clicks the `Get the latest interest rates button` button, an error appears in the console.
+When a user clicks the `Get the latest interest rate` button, an error appears in the console.
 
 ## Steps to Reproduce the Problem
 
@@ -22,7 +22,7 @@ When a user clicks the `Get the latest interest rates button` button, an error a
 
 3. Open up the `index.html` file with live server.
 
-4. Click on the `Get the latest interest rates button` button and check the console in Chrome DevTools.
+4. Click on the `Get the latest interest rate` button and check the console in Chrome DevTools.
 
 ## Assets
 
