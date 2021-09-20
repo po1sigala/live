@@ -28,7 +28,7 @@ When a user clicks the `Get the latest interest rate` button, an error appears i
 
 The following image confirms that a bundle was created by displaying a success message in the terminal:
 
-![The Get the latest interest rates button on the web application.](./Assets/interest-button.png)
+![Get the latest interest rate button on the web application.](./Assets/interest-button.png)
 
 ![The latest interest rate being displayed on the web application.](./Assets/interest.png)
 
