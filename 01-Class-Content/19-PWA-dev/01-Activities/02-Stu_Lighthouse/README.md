@@ -4,13 +4,15 @@
 
   ## 📝 Notes
 
-  1. Navigate to [weather.com](https://weather.com/)in the browser.
+  1. Navigate to [weather.com](https://weather.com/).
 
   2. Generate a Lighthouse report on performance.
   
-  3. Find which metrics must be modified to improve the loading time of the website.
+  3. Select the proper categories that would return an audit based on performance.
 
-  4. Add comments to the markdown file in the [audit.md] to address which metrics are most problematic in regards to performance and how to fix them.(./Unsolved/audit.md)
+  4. Find which metrics must be modified to improve the loading time of the website.
+
+  5. Add comments to the markdown file in the [audit.md] for the metrics that are most problematic for performance. Also describe the process of how to improve the metrics.(./Unsolved/audit.md)
 
   Refer to the documentation:   
 
