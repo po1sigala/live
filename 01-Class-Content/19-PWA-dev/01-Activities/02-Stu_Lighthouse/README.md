@@ -1,22 +1,24 @@
 # 📐 Analyze the Lighthouse Audit
 
-Work with a partner to identify which key metrics need improvement using a Lighthouse audit. 
+  Work with a partner to identify which key metrics need improvement using a Lighthouse audit. 
 
-## 📝 Notes
+  ## 📝 Notes
 
-1. Review the [Lighthouse audit](./Unsolved/assets/audit.png).
+  1. Navigate to [weather.com](https://weather.com/)in the browser.
 
-2. Find which metrics must be modified to improve the loading time of the website.
+  2. Generate a Lighthouse report on performance.
+  
+  3. Find which metrics must be modified to improve the loading time of the website.
 
-3. Add comments to the markdown file in the [audit.md](./Unsolved/audit.md)
+  4. Add comments to the markdown file in the [audit.md] to address which metrics are most problematic in regards to performance and how to fix them.(./Unsolved/audit.md)
 
-Refer to the documentation:   
+  Refer to the documentation:   
 
-* [Google Docs on Lighthouse Audits](https://developers.google.com/web/tools/lighthouse)
+  * [Google Docs on Lighthouse Audits](https://developers.google.com/web/tools/lighthouse)
 
----
+  ---
 
-## 🏆 Bonus
+  ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
