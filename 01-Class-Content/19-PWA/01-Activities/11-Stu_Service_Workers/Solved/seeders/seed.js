@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
-var db = require("../models");
+const mongoose = require("mongoose");
+const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/imageperformance", {
   useNewUrlParser: true
 });
 
-var imageSeed = [
+const imageSeed = [
   {
     description: "Day At The Library",
     image: "/assets/images/1.jpg",
@@ -43,7 +43,7 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Building",
+    description: "Notre Dame",
     image: "/assets/images/7.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -61,13 +61,13 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Skwad",
+    description: "Curious Pigeons",
     image: "/assets/images/10.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Man On Bridge",
+    description: "Man On The Brooklyn Bridge",
     image: "/assets/images/11.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -79,13 +79,13 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Searching",
+    description: "Finding Answers",
     image: "/assets/images/13.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Flyers On The Wall",
+    description: "Flyers On Wall",
     image: "/assets/images/14.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -97,7 +97,7 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Sunset",
+    description: "At The Edge",
     image: "/assets/images/16.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -145,7 +145,7 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Airline Puddle",
+    description: "Airplane Puddle",
     image: "/assets/images/24.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -157,19 +157,19 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Grooves",
+    description: "Boat Prow",
     image: "/assets/images/26.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Brick Photo",
+    description: "Snap",
     image: "/assets/images/27.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Blue",
+    description: "Hydrophobic",
     image: "/assets/images/28.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -181,7 +181,7 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Sewing",
+    description: "Seamstress with Sowing Machine",
     image: "/assets/images/30.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -199,19 +199,19 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Hamster",
+    description: "Hammy",
     image: "/assets/images/33.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Technology",
+    description: "Bottom Of The Slide",
     image: "/assets/images/34.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Notre Dame",
+    description: "Frosty Window",
     image: "/assets/images/35.jpg",
     rating: 0,
     date: new Date(Date.now())
@@ -219,6 +219,19 @@ var imageSeed = [
   {
     description: "Railroad",
     image: "/assets/images/36.jpg",
+    rating: 0,
+    date: new Date(Date.now())
+  },
+
+  {
+    description: "Awesomeness",
+    image: "/assets/images/37.jpg",
+    rating: 0,
+    date: new Date(Date.now())
+  },
+  {
+    description: "Feathers",
+    image: "/assets/images/38.jpg",
     rating: 0,
     date: new Date(Date.now())
   }
