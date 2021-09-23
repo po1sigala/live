@@ -2,7 +2,7 @@
 const targetEl = document.getElementById('target');
 const headerEl = document.querySelector('.header');
 
-headerEl.innerHTML = '<h1>caching images</h1>';
+headerEl.innerHTML = '<h1>client server</h1>';
 
 // Create a new element in memory
 const moduleContent2 = document.createElement('div');

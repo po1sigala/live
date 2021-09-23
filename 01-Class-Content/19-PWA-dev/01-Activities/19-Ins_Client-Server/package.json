@@ -1,11 +1,11 @@
 {
-  "name": "20-stu_client-server-solved",
+  "name": "19-ins_client-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"cd server && npm run server\" \"cd client && npm run start\"",
-    "start:prod": "npm run build && cd server && node server.js",
+    "start:dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run server\" ",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
