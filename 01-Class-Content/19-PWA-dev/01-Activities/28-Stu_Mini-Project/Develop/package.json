@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start:dev": "",
     "start": "",
-    "start:prod": "",
     "server": "",
     "build": "",
     "install": "",
