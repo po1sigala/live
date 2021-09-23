@@ -19,7 +19,7 @@ getDevArticles().then((articles) => {
         <div class="col s12">
           <div class="card blue-grey darken-1">
             <div class="card-image">
-              <img src="${article.cover_image || ''}">
+              <img crossorigin="anonymous" src="${article.cover_image || ''}">
             </div>
             <div class="card-content white-text">
               <span class="card-title">${article.title}</span>
