@@ -6,9 +6,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by inspecting the network tab in the browser when the user visits the page after the first time.
-
-In your network tab, you will see a series of network requests responding to the image requests with an "initiator" of `StrategyHandler`. This means that the browser is using the cache to serve the image.
+The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by refreshing the page a few times and then checking the cache storage in the chrome dev tools. The images should be cached and the images should be displayed almost instantly.
 
 ## Actual Behavior
 
