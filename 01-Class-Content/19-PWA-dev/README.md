@@ -4,9 +4,9 @@
 
 This unit will focus on Progressive Web Apps (PWAs). Progressive web apps aim to blend the benefits of a traditional browser experience with those of a mobile application. PWAs may utilize the Service Worker and Cache APIs to cache assets and API responses to ensure applications work without an internet connection.
 
-Many of the tools and technologies used to create PWAs can be leveraged in applications that help improve performance and accessibility to web applications. One of the tools are services workers which can be used to cache our static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to cut down on network bandwidth and improve overall load times. 
+Many of the tools and technologies used to create PWAs can be leveraged in applications that help improve performance and accessibility to web applications. One of the tools is services workers which can be used to cache our static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to cut down on network bandwidth and improve overall load times. 
 
-In earlier units, we learned that JavaScript runs on a single thread which is something that developers need to consider when dealing with performance. Good news is that services workers run on a completely different thread.
+In earlier units, we learned that JavaScript runs on a single thread which is something that developers need to consider when dealing with performance. The good news is that services workers run on a completely different thread.
 
 For us to unlock the power of services workers, we will be using workbox along with webpack. Workbox is a library from Google that removes a lot of the headache that comes along with setting up a service worker.
 
@@ -16,11 +16,61 @@ With the use of webpack, developers can deliver applications with optimized code
 
 The following topics will be covered in this unit:
 
-* @TODO LIST THE 13-15 KEY TOPICS OF UNIT & LINK TO PRIMARY SOURCES
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+* [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+
+* [Webpack](https://webpack.js.org/concepts/)
+
+* [ES6 Import Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+
+* [CSS loader](https://www.npmjs.com/package/css-loader)
+
+* [Babel](https://babeljs.io/)
+
+* [HTMLWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+
+* [Webpack Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/)
+
+* [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+
+* [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+
+* [Workbox](https://developers.google.com/web/tools/workbox)
+
+* [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+
+* [Worbox Routing](https://developers.google.com/web/tools/workbox/modules/workbox-routing)
+
+* [Workbox Strategies](https://developers.google.com/web/tools/workbox/modules/workbox-strategies)
+
+* [Concurrently](https://www.npmjs.com/package/concurrently)
+
+* [InedexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
+* [idb](https://www.npmjs.com/package/idb)
+
+* [Manifest](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+
+* [WebpackPwaManifest](https://www.npmjs.com/package/webpack-pwa-manifest)
 
 ## Learning Objectives
 
 You will be employer-ready if you are able to:
+
+* Recognize which metrics in a Lighthouse audit affect page load times.
+
+* Identify the main purpose of a module bundler like webpack.
+
+* Set up webpack dependencies in an application with npm scripts.
+
+* Create a bundle and use it to provide interaction for a webpage.
+
+* Compare webpack in development vs production mode.
+
+* Extend webpack’s functionality for non-JavaScript files, transpile modern JavaScript for older browsers, and automate bundle output file names.
+
+* Create an `index.html` file using a template with a webpack plugin to automate bundle insertion. 
 
 * Implement service workers to a web application.
 
@@ -44,9 +94,13 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-* @TODO LIST & LINK TO ALGORITHMS
+* [01: Reverse No Built-in](./03-Algorithms/01-reverse-no-built-in)
 
-  * 📹 Let's Code { @TODO ADD LINK TO ALGO VIDEO }
+* [02: Reverse In Place](./03-Algorithms/02-reverse-in-place)
+
+* [03: Left-Rotation](./03-Algorithms/03-left-rotation)
+
+  * [📹 Let's Code Left Rotation](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
 ### Assessments
 
@@ -64,7 +118,7 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-Next week, you will get your first introduction to React, a front-end library created by Facebook. React will take your front-end web development skills to the next level. You will get to learn all about components, state, hooks and much much more. Get ready because React is a hot comodity in the software engineering field.
+Next week, you will get your first introduction to React, a front-end library created by Facebook. React will take your front-end web development skills to the next level. You will get to learn all about components, state, hooks, and much much more. Get ready because React is a hot commodity in the software engineering field.
 
 ## Resources
 
@@ -78,11 +132,5 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/1vox01752z) 
 
-### General
-
-Refer to these resources for additional information about topics covered in this unit.
-
-  * 📖 Resource: @TODO ADD LINK TO RESOURCE
-
 ---
-@TODO © YEAR Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
