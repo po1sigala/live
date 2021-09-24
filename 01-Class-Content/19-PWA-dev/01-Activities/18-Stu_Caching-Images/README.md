@@ -6,7 +6,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by refreshing the page a few times and then checking the cache storage in the chrome dev tools. The images should be cached and the images should be displayed almost instantly.
+The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify the cache is working properly by opening the developer console, clicking the application tab and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, the network requests for images will be responded to by the service worker with a 200 response.
 
 ## Actual Behavior
 
