@@ -6,7 +6,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_Props` through `20-Stu_Hooks-useEffect`.
+* In this lesson, students will complete activities `09-Ins_Props` through `21-Stu_Fetching-Data`.
 
 * Much like in the previous lesson, each activity will require the student to remove the `/src` directory from their `00-practice-app` and replace it with the `/src` for the current activity.
 
@@ -47,12 +47,12 @@ In this lesson, you'll review some important React concepts with students to hel
 | 12:30PM| 13  | Instructor Demo: React Forms       | 0:05     |
 | 12:35PM| 14  | Student Do: React Forms            | 0:15     |
 | 12:50PM| 15  | Instructor Review: React Forms     | 0:10     |
-| 1:00PM | 16  | Instructor Demo: Fetching Data     | 0:05     |
-| 1:05PM | 17  | Student Do: Fetching Data          | 0:15     |
-| 1:20PM | 18  | Instructor Review: Fetching Data   | 0:10     |
-| 1:30PM | 19  | Instructor Demo: useEffect Hook    | 0:05     |
-| 1:35PM | 20  | Student Do: useEffect Hook         | 0:15     |
-| 1:50PM | 21  | Instructor Review: useEffect Hook  | 0:10     |
+| 1:00PM | 16  | Instructor Demo: useEffect Hook    | 0:05     |
+| 1:05PM | 17  | Student Do: useEffect Hook         | 0:15     |
+| 1:20PM | 18  | Instructor Review: useEffect Hook  | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Fetching Data     | 0:05     |
+| 1:35PM | 20  | Student Do: Fetching Data          | 0:15     |
+| 1:50PM | 21  | Instructor Review: Fetching Data   | 0:10     |
 | 2:00PM | 22  | FLEX                               | 0:30     |
 | 2:30PM | 23  | END                                | 0:00     |
 
@@ -60,7 +60,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Class Instruction
 
-### 1. Instructor Demo: Props (5 min) 
+### 1. Instructor Demo: Props (5 min)
 
 * Welcome students to class.
 
@@ -124,7 +124,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Props/README.md`.
 
-### 2. Student Do: Props (15 min) 
+### 2. Student Do: Props (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Props/README.md`.
 
@@ -176,7 +176,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Props (10 min) 
+### 3. Instructor Review: Props (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -329,7 +329,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Prepare students for the fact that these topics can get abstract, and encourage them to ask questions as they arise. React Hooks can be a little confusing at first, but most developers appreciate their elegance once they become familiar with them.
 
-### 5. Instructor Demo: State (5 min) 
+### 5. Instructor Demo: State (5 min)
 
 * Start by deleting the `00-practice-app/src` directory and replacing it with `11-Ins_State/src`.
 
@@ -394,7 +394,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_State/README.md`.
 
-### 6. Student Do: State (15 min) 
+### 6. Student Do: State (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_State/README.md`.
 
@@ -444,7 +444,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: State (10 min) 
+### 7. Instructor Review: State (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -536,7 +536,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Event Handling (5 min) 
+### 8. Instructor Demo: Event Handling (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `13-Ins_Event-Handling/src/`.
 
@@ -595,7 +595,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
-### 9. Student Do: Event Handling (15 min) 
+### 9. Student Do: Event Handling (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
@@ -639,7 +639,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Event Handling (10 min) 
+### 10. Instructor Review: Event Handling (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -797,11 +797,11 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
-* If the students are struggling with React, use this time to review the concepts that they need the most help with. Take time to review the activities more in depth. 
+* If the students are struggling with React, use this time to review the concepts that they need the most help with. Take time to review the activities more in depth.
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: React Forms (5 min) 
+### 13. Instructor Demo: React Forms (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `15-Ins_React-Forms/src`.
 
@@ -929,7 +929,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_React-Forms/README.md`.
 
-### 14. Student Do: React Forms (15 min) 
+### 14. Student Do: React Forms (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_React-Forms/README.md`.
 
@@ -983,7 +983,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: React Forms (10 min) 
+### 15. Instructor Review: React Forms (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1126,403 +1126,9 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Fetching Data (5 min) 
+### 16. Instructor Demo: useEffect Hook (5 min)
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
-
-* Open `00-practice-app/src/components` in your IDE.
-
-* Run `npm start` from the command line and demonstrate the following:
-
-  * 🔑 When we start the application, we see a series of cat-related images.
-
-  * 🔑 When the component mounts, a request for cats is sent to the Giphy API and the results are displayed on the page.
-  
-* Open `00-practice-app/src/components/SearchResultContainer.js` in your IDE and demonstrate the following:
-  
-  * Immediately, you will notice that this component looks different than the functional components we have been working with. That's because this is a **class-based component**, which uses ES6 class syntax and stores state in an object instead of using Hooks.
-  
-  * 🔑 It is not extremely important to know how to write class-based components, because we now have React Hooks, but it is beneficial to at least be aware of their existence and how they work.
-
-  * With class-based components, we can use something called **lifecycle methods**. The one we will use here is called `componentDidMount`. This method takes a callback that will run every time the component is mounted.
-
-  * The `SearchResultContainer` component contains and renders the `ResultList` component:
-
-     ```js
-     import React, { Component } from "react";
-     import ResultList from "./ResultList";
-     import API from "../utils/API";
- 
-     render() {
-       return (
-         <div>
-           <ResultList results={this.state.results} />
-         </div>
-       );
-     }
-     ```
-  
-  * Notice that `SearchResultContainer` is the only stateful component in this application. The parent component contains all the data and functionality that the children will need and passes them down as props.
-  
-  * This pattern helps us build components with little to no coupling that can easily be reused in different parts of the app or even across applications. For example, we could create a `<SearchForm />` component that passes state props the same way:
-
-    ```jsx
-    <SearchForm
-      search={this.state.search}
-      handleFormSubmit={this.handleFormSubmit}
-      handleInputChange={this.handleInputChange}
-    />
-    <ResultList results={this.state.results} />
-    ```
-  
-  * The state object contains an empty array called `results`:
-
-    ```js
-    state = {
-      search: '',
-      results: [],
-    };
-    ```
-
-  * The component can perform a search after it mounts by using the React lifecycle method `componentDidMount()`. This method is built in to React and will automatically run after the component is rendered for the first time.
-
-  * Inside the `componentDidMount()` method, we invoke another method, `searchGiphy()`, that performs the API request, passing in the search term of `"kittens"`:
-  
-    ```js
-    componentDidMount() {
-      this.searchGiphy("kittens");
-    }
-    ```
-
-  * The `API.search()` method, which is imported from `/utils`, takes the response from the GET request and sets it to the value of `results` in state.
-  
-  * Instead of using something like `setResults()` with React Hooks, we use `this.setState()` by passing in the updated object that we want to set:
-
-    ```js
-    searchGiphy = (query) => {
-      search(query)
-        .then((res) => this.setState({ results: res.data.data }))
-        .catch((err) => console.log(err));
-    };
-    ```
-
-* Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
-  
-  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
-  
-  * Inside our `API.js` file, we import two environmental variables that will help us keep our API key secure, but also allow us to form the request URL for our GET request:
-
-    ```js
-    import axios from 'axios';
-
-    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
-
-    const search = (query) =>
-      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
-
-    export default search;
-    ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What is Axios? Can it be compared to another piece of technology that we've used on the front end?
-
-  * 🙋 Axios is an npm package that performs AJAX requests and returns the results. It is similar to the functionality in the browser's `fetch()` method.
-  
-  * ☝️ What does `componentDidMount()` do?
-
-  * 🙋 `componentDidMount()` is a React lifecycle method that will run a callback whenever the component is loaded. In this case, we used it to invoke an API request.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
-
-### 17. Student Do: Fetching Data (15 min) 
-
-* Direct students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-   ```md
-   # 🐛 Information from the OMDB API Does Not Display
-
-   ## Before We Begin
-
-   Before you begin this activity, complete the following steps:
-
-    1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
-
-    2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
-
-    3. Rename the `.env.example` file to `.env`.
-
-    4. To make API requests, we need to use Axios. Make sure that it's installed by running `npm i axios`.
-
-    5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
-
-     `import 'bootstrap/dist/css/bootstrap.min.css'`
-   
-   ## Activity
-
-   Work with a partner to resolve the following issue:
-
-   * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
-
-   ## Expected Behavior
-  
-   * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
-
-   * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
-
-   * When the user enters a search term and clicks submit, the results for the search should display on the left side of the page.
-
-   ## Actual Behavior
-
-   * When a user searches for a movie, they find out that they cannot enter any text into the search field. 
-
-   * Additionally, the search button doesn't seem to do anything in its current state. 
-
-   ## 💡 Hints
-
-   * Why might we need to use `event.preventDefault()` in event handlers?
-
-   * Only one file needs to be modified for this activity. Which file is it?
-
-   ## 🏆 Bonus
-
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-   * How could we show a loading element before the search results are displayed? What React feature allows for this kind of behavior?
-
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 18. Instructor Review: Fetching Data (10 min) 
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with making API requests in React? (Poll via Fist to Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
-
-* Use the prompts and talking points (🔑) below to review the following key points:
-
-  * ✔️ Axios
-
-  * ✔️ `API.js`
-  
-* Ensure that `axios` is added as a dependency:
-
-   ```sh
-   npm i axios
-   ```
-
-* Open `00-practice-app/src/App.js` in your IDE and explain the following:
-
-  * In `App.js`, we are importing and returning another component called `OmdbContainer`:
-
-     ```js
-     import React from "react";
-     import OmdbContainer from "./components/OmdbContainer";
-
-     function App() {
-       return <OmdbContainer />;
-     }
-
-     export default App;
-     ```
-
-* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
-
-  * This component contains the state and most of the methods that we will pass down to child components.
-  
-  * The state has a `result` property, which is set to an empty object initially, and a `search` property, where we will store the search term that the user enters. Initially, it is set to an empty string:
-
-     ```js
-     state = {
-       result: {},
-       search: ""
-     };
-     ```
-
-  * The first thing we need to add is a `componentDidMount()` method to the component. This lifecycle method runs after the component mounts, and uses the `this.searchMovies()` method to make an API request to OMDB for the movie "The Matrix":
-
-     ```js
-     componentDidMount() {
-       this.searchMovies("The Matrix");
-     }
-     ```
-
-  * The `this.searchMovies()` method gets called inside `componentDidMount()`. This method uses the `API` module to make a GET request by using `axios`. The result is then saved to the state object using `this.setState()`:
-
-     ```js
-     searchMovies = query => {
-       API.search(query)
-         .then(res => this.setState({ result: res.data }))
-         .catch(err => console.log(err));
-     };
-     ```
-
-* Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
-
-  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
-
-  * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
-
-    ```js
-    import axios from 'axios';
-
-    const BASEURL = process.env.REACT_APP_BASEURL;
-    const APIKEY = process.env.REACT_APP_APIKEY;
-
-    export default {
-      search(query) {
-        return axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
-      },
-    };
-    ```
-
-* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
-
-  * To have the `this.state.search` variable updated with the current search term, we needed to create a `handleInputChange` method.
-  
-  * The `handleInputChange()` method gets called every time the user types in the input field. Without this method, the user is not able to type in the input field.
-
-     ```js
-     handleInputChange = event => {
-       const value = event.target.value;
-       const name = event.target.name;
-       this.setState({
-         [name]: value
-       });
-     };
-     ```
-
-  * Inside the `this.setState()` method, we are passing an object that has a key of `[name]` and a value of `value`.
-  
-  * We put `[name]` in brackets because we are using a **computed property name**, which is another way to set the key of an object without knowing ahead of time what it should be called. This makes the code more reusable and resilient to change. We could in theory use this `handleInputChange()` method for different input elements than the current search field.
-
-    ```js
-      this.setState({
-        [name]: value
-      });
-    ```
-
-  * The `handleInputChange()` method is then passed down to the `SearchForm` component as a prop of the same name, `handleInputChange()`:
-
-     ```jsx
-     <Card heading="Search">
-       <SearchForm
-         value={this.state.search}
-         handleInputChange={this.handleInputChange}
-         handleFormSubmit={this.handleFormSubmit}
-       />
-     </Card>
-     ```
-
-  * To get the movie search working, we need to create a `handleFormSubmit()` method that will be invoked whenever the user clicks submit to search for a movie.
-
-  * Much like the `componentDidMount()` method, here we are making use of the `this.searchMovies()` method. Remember that this method imports functionality from `API.js` to perform the actual API request.
-  
-  * We use the value of `this.state.search` as the search term. The state variable, `result`, is then updated with the data that we get back from the OMDB API.
-
-  * Notice that we use `event.preventDefault()` to stop the default browser behavior of refreshing the page when the submit button is clicked:
-
-     ```js
-     handleFormSubmit = event => {
-       event.preventDefault();
-       this.searchMovies(this.state.search);
-     };
-     ```
-
-  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
-
-     ```jsx
-     <SearchForm
-       value={this.state.search}
-       handleInputChange={this.handleInputChange}
-       handleFormSubmit={this.handleFormSubmit}
-     />
-     ```
-
-  * Finally, after the search has been preformed and the `this.state.result` variable has been updated with the results from the OMDB API request, we can display that data in the component:
-
-     ```js
-     render() {
-       return (
-         <Container>
-           <Row>
-             <Col size="md-8">
-               <Card
-                 heading={this.state.result.Title || "Search for a Movie to Begin"}
-               >
-                 {this.state.result.Title ? (
-                   <MovieDetail
-                     title={this.state.result.Title}
-                     src={this.state.result.Poster}
-                     director={this.state.result.Director}
-                     genre={this.state.result.Genre}
-                     released={this.state.result.Released}
-                   />
-                 ) : (
-                   <h3>No Results to Display</h3>
-                 )}
-               </Card>
-             </Col>
-             <Col size="md-4">
-               <Card heading="Search">
-                 <SearchForm
-                   value={this.state.search}
-                   handleInputChange={this.handleInputChange}
-                   handleFormSubmit={this.handleFormSubmit}
-                 />
-               </Card>
-             </Col>
-           </Row>
-         </Container>
-       );
-     }
-     ```
-
-  * The JSX is using a ternary operator, which acts like an `if` statement. We first check whether `this.state.result` has a `Title` property, which would mean that a movie was found in the API request.
-  
-  * If we have a movie result, we display a `MovieDetail` component by passing down the result data as props. Otherwise, we display an `h3` saying that there are no results:
-
-     ```js
-     {this.state.result.Title ? (
-       <MovieDetail
-         title={this.state.result.Title}
-         src={this.state.result.Poster}
-         director={this.state.result.Director}
-         genre={this.state.result.Genre}
-         released={this.state.result.Released}
-       />
-     ) : (
-       <h3>No Results to Display</h3>
-     )}
-     ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What is one reason that a user might not be able to type in a input field inside a React app?
-
-  * 🙋 The search field needs an `onChange` handler to update state when the user types something.
-
-  * ☝️ What are some of the use cases for lifecycle methods such as `componentDidMount()`?
-
-  * 🙋 The lifecycle methods help us run code after specific events, such as the component updating, mounting, or unmounting.
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 We can refer to supplemental material, read the [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html), and stay for office hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-### 19. Instructor Demo: useEffect Hook (5 min) 
-
-* Being by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Hooks-useEffect/src`.
+* Being by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Hooks-useEffect/src`.
 
 * Run `npm start` from the command line and demonstrate the following:
 
@@ -1607,11 +1213,11 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Hooks-useEffect/README.md`.
 
-### 20. Student Do: useEffect Hook (15 min) 
+### 17. Student Do: useEffect Hook (15 min)
 
-* Direct students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+* Direct students to the activity instructions found in `18-Stu_Hooks-useEffect/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -1655,9 +1261,9 @@ In this lesson, you'll review some important React concepts with students to hel
    Use [Google](https://www.google.com) or another search engine to research this.
    ```
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: useEffect Hook (10 min) 
+### 18. Instructor Review: useEffect Hook (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1736,7 +1342,356 @@ In this lesson, you'll review some important React concepts with students to hel
 
   * 🙋 We can refer to supplemental material, read the [React Docs on useEffect](https://reactjs.org/docs/hooks-effect.html), and stay for office hours to ask for help.
 
-* Answer any questions before proceeding.
+* Answer any questions before ending the class.
+
+### 19. Instructor Demo: Fetching Data (5 min)
+
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
+
+* Open `00-practice-app/src/components` in your IDE.
+
+* Run `npm start` from the command line and demonstrate the following:
+
+  * 🔑 When we start the application, we see a series of cat-related images.
+
+  * 🔑 When the component mounts, a request for cats is sent to the Giphy API and the results are displayed on the page.
+  
+* Open `00-practice-app/src/components/SearchResultContainer.js` in your IDE and demonstrate the following:
+  
+  * 🔑 The `useEffect` Hook can also be used to fetch data from an API. This is useful for fetching data that is not immediately available, and very similar to the `componentDidMount` lifecycle method found in older class-based components.
+
+  * With `useEffect`, we can set it to run only once, by passing an empty array as the second argument. Optionally, if we wanted it to watch for changes we could pass in a state variable in that array. However, we will not be using this in this activity. Notice that we invoke the `useEffect` Hook inside our function component, as shown below:
+
+    ```js
+    useEffect(() => {
+      // code to run when the component loads
+    }, []);
+    ```
+
+  * The `SearchResultContainer` component contains and renders the `ResultList` component:
+
+    ```js
+    return (
+      <div>
+        {/* Pass our results to the ResultsList component to map over */}
+        <ResultList results={results} />
+      </div>
+    );
+    ```
+  
+  * Notice that `SearchResultContainer` is the only stateful component in this application. This is what would be considered the parent component that passes down the state variable to its children.
+
+  * The component can perform a search after it loads by using the React `useEffect` hook. This method is built-in to React, but it does have to be imported.
+
+  * Inside the `useEffect()`, we invoke another method, `searchGiphy()`, that performs the API request, passing in the search term of `"kittens"`:
+  
+    ```js
+    useEffect(() => {
+      searchGiphy('kittens');
+    }, []);
+    ```
+
+  * The `search()` method, which is imported from `/utils`, takes the response from the GET request and sets it to the value of `results`.
+
+  * You can see this method being using in the`searchGiphy()` method below:
+
+    ```js
+    const searchGiphy = async (query) => {
+      const response = await search(query);
+      setResults(response.data.data);
+    };
+    ```
+
+* Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
+  
+  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
+  
+  * Inside our `API.js` file, we import two environmental variables that will not only help us keep our API key secure, but also allow us to form the request URL for our GET request:
+
+    ```js
+    import axios from 'axios';
+
+    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
+
+    const search = (query) =>
+      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
+
+    export default search;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is Axios? Can it be compared to another piece of technology that we've used on the front end?
+
+  * 🙋 Axios is an npm package that performs AJAX requests and returns the results. It is similar to the functionality in the browser's `fetch()` method.
+  
+  * ☝️ How could we make our component refresh after every change to the search term?
+
+  * 🙋 We can use the `useEffect` Hook to perform the search whenever the search term changes by passing in the search term as the second argument.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Fetching-Data/README.md`.
+
+### 20. Student Do: Fetching Data (15 min)
+
+* Direct students to the activity instructions found in `20-Stu_Fetching-Data/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md  
+  # 🐛 Information from the OMDB API Does Not Display
+
+  ## Before We Begin
+
+  Before you begin this activity, complete the following steps:
+
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+
+  2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+
+  3. Rename the `.env.example` file to `.env`.
+
+  4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
+
+  5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+
+      ```js
+      import 'bootstrap/dist/css/bootstrap.min.css';
+      ```
+
+  ## Activity
+
+  Work with a partner to resolve the following issue:
+
+  * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
+
+  ## Expected Behavior
+    
+  * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
+
+  * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
+
+  * When the user enters a search term and clicks submit, the results for the search should display on the left side of the page.
+
+  ## Actual Behavior
+
+  * When a user searches for a movie, they find out that they cannot enter any text into the search field.
+
+  * Additionally, the search button doesn't seem to do anything in its current state.
+
+  ## 💡 Hints
+
+  * Why might we need to use `event.preventDefault()` in event handlers?
+
+  * Only one file needs to be modified for this activity. Which file is it?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could we show a loading element before the search results are displayed? What React feature allows for this kind of behavior?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Fetching Data (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with making API requests in React? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Axios
+
+  * ✔️ `API.js`
+  
+* Ensure that `axios` is added as a dependency:
+
+   ```sh
+   npm i axios
+   ```
+
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
+
+  * In `App.js`, we are importing and returning another component called `OmdbContainer`:
+
+     ```js
+     import React from "react";
+     import OmdbContainer from "./components/OmdbContainer";
+
+     function App() {
+       return <OmdbContainer />;
+     }
+
+     export default App;
+     ```
+
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
+
+  * This component contains the state and most of the methods that we will pass down to child components.
+  
+  * First we create a result state variable using the `useState` hook that will be used to store the results of the API request. Additionally, we create another state variable called `search` that will store the search term that the user enters.
+
+    ```js
+    const [result, setResult] = useState({});
+    const [search, setSearch] = useState('');
+    ```
+
+  * When the component loads, we use the `searchMovies` method to render a default search term of The Matrix.
+
+  * 🔑  Notice that we pass an empty array as the second argument to `useEffect`. This is because we want to run the `searchMovies` method only once when the component loads.
+
+    ```js
+    useEffect(() => {
+      searchMovie('The Matrix');
+    }, []);
+    ```
+
+  * The `searchMovies()` method uses the `API` module to make a GET request by using `axios`. The result is then saved to the state object using `setResult()`:
+
+    ```js
+    const searchMovie = (query) =>
+      API.search(query)
+        .then((res) => setResult(res.data))
+        .catch((err) => console.log(err));
+      };
+    ```
+
+* Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
+
+  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
+
+  * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
+
+    ```js
+    import axios from 'axios';
+
+    const BASEURL = process.env.REACT_APP_BASEURL;
+    const APIKEY = process.env.REACT_APP_APIKEY;
+
+    const search = async (query) =>
+      axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
+
+    export default { search };
+    ```
+
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
+
+  * To have the `search` variable updated with the current search term, we needed to create a `handleInputChange` method.
+  
+  * The `handleInputChange()` method gets called every time the user types in the input field. Without this method, the user is not able to type in the input field.
+
+    ```js
+    const handleInputChange = (e) => setSearch(e.target.value);
+    ```
+
+  * The `handleInputChange()` method is then passed down to the `SearchForm` component as a prop of the same name, `handleInputChange()`:
+
+    ```jsx
+    <Card heading="Search">
+      <SearchForm
+        value={search}
+        handleInputChange={handleInputChange}
+        handleFormSubmit={handleFormSubmit}
+      />
+    </Card>
+    ```
+
+  * To get the movie search working, we need to create a `handleFormSubmit()` method that will be invoked whenever the user clicks submit to search for a movie.
+
+  * Notice that we use `event.preventDefault()` to stop the default browser behavior of refreshing the page when the submit button is clicked:
+
+    ```js
+    const handleFormSubmit = (e) => {
+      e.preventDefault();
+      searchMovie(search);
+    };
+    ```
+
+  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
+
+    ```js
+    <SearchForm
+      value={search}
+      handleInputChange={handleInputChange}
+      handleFormSubmit={handleFormSubmit}
+    />
+    ```
+
+  * Finally, after the `search` variable has been updated with the results from the OMDB API request, we can display that data in the component:
+
+    ```js
+    return (
+      <Container>
+        <Row>
+          <Col size="md-8">
+            <Card heading={Title || 'Search for a Movie to Begin'}>
+              {Title ? (
+                <MovieDetail
+                  title={Title}
+                  src={Poster}
+                  director={Director}
+                  genre={Genre}
+                  released={Released}
+                />
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Card>
+          </Col>
+          <Col size="md-4">
+            <Card heading="Search">
+              <SearchForm
+                value={search}
+                handleInputChange={handleInputChange}
+                handleFormSubmit={handleFormSubmit}
+              />
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    );
+    ```
+
+  * The JSX is using a ternary operator, which acts like an `if` statement. We first check whether `result` has a `Title` property, which would mean that a movie was found in the API request.
+  
+  * If we have a movie result, we display a `MovieDetail` component by passing down the result data as props. Otherwise, we display an `h3` saying that there are no results:
+
+    ```js
+    {Title ? (
+      <MovieDetail
+        title={Title}
+        src={Poster}
+        director={Director}
+        genre={Genre}
+        released={Released}
+      />
+    ) : (
+      <h3>No Results to Display</h3>
+    )}
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is one reason that a user might not be able to type in a input field inside a React app?
+
+  * 🙋 The search field needs an `onChange` handler to update state when the user types something.
+
+  * ☝️ What are some of the use cases for `useEffect`?
+
+  * 🙋 The `useEffect` hook is used to run a piece of code on a specific condition.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Axios Docs](https://axios-http.com/docs/), or ask the instructor for help.
+
+* Answer any questions before ending the class.
 
 ### 22. FLEX (30 mins)
 

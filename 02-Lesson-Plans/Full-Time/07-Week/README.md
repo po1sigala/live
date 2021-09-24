@@ -32,6 +32,8 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 * Be prepared to remind students how to start their MySQL server on Day 1. They will need to use it starting with `08-Stu_Data-Serialization`.
 
+* **Important**: Activities `15-Ins_Sessions` through `18-Stu_Cookies` are aimed at providing an **introduction** to sessions and cookies as they may encounter them in the workplace. Aim to keep your explanations simple to fit in the alloted timeframe and remind students that on the job when they encounter similar, challenging codebases they will often have to refer to the documentation and do more research on their own.
+
 * You'll need to install the VS Code extensions ESLint and Prettier to properly demonstrate both libraries.
 
 * If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 

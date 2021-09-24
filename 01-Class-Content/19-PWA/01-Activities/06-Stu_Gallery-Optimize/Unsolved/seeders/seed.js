@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
-var db = require("../models");
+const mongoose = require("mongoose");
+const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/imageperformance", {
   useNewUrlParser: true
 });
 
-var imageSeed = [
+const imageSeed = [
   {
     description: "Day At The Library",
     image: "/assets/images/1.jpg",
@@ -61,164 +61,177 @@ var imageSeed = [
     date: new Date(Date.now())
   },
   {
-    description: "Skwad",
+    description: "Curious Pigeons",
     image: "/assets/images/10.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Floating Book",
+    description: "Man On The Brooklyn Bridge",
     image: "/assets/images/11.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Finding Answers",
+    description: "Floating Book",
     image: "/assets/images/12.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Flyers On Wall",
+    description: "Finding Answers",
     image: "/assets/images/13.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Caution, Wet Floor",
+    description: "Flyers On Wall",
     image: "/assets/images/14.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "At The Edge",
+    description: "Caution, Wet Floor",
     image: "/assets/images/15.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Museum",
+    description: "At The Edge",
     image: "/assets/images/16.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Foggy Morning",
+    description: "Museum",
     image: "/assets/images/17.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Look Up",
+    description: "Foggy Morning",
     image: "/assets/images/18.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "City",
+    description: "Look Up",
     image: "/assets/images/19.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Parking Garage",
+    description: "City",
     image: "/assets/images/20.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Giraffe",
+    description: "Parking Garage",
     image: "/assets/images/21.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "On The Rocks",
+    description: "Giraffe",
     image: "/assets/images/22.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Airplane Puddle",
+    description: "On The Rocks",
     image: "/assets/images/23.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Good Boy",
+    description: "Airplane Puddle",
     image: "/assets/images/24.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Hydrophobic",
+    description: "Good Boy",
     image: "/assets/images/25.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Snap",
+    description: "Boat Prow",
     image: "/assets/images/26.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Space Rock",
+    description: "Snap",
     image: "/assets/images/27.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Count The Rings",
+    description: "Hydrophobic",
     image: "/assets/images/28.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Ice Cream",
+    description: "Count The Rings",
     image: "/assets/images/29.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Cactus",
+    description: "Seamstress with Sowing Machine",
     image: "/assets/images/30.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Hammy",
+    description: "Ice Cream",
     image: "/assets/images/31.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Bottom Of The Slide",
+    description: "Cactus",
     image: "/assets/images/32.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Railroad",
+    description: "Hammy",
     image: "/assets/images/33.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Frosty Window",
+    description: "Bottom Of The Slide",
     image: "/assets/images/34.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Feathers",
+    description: "Frosty Window",
     image: "/assets/images/35.jpg",
     rating: 0,
     date: new Date(Date.now())
   },
   {
-    description: "Awesomeness",
+    description: "Railroad",
     image: "/assets/images/36.jpg",
+    rating: 0,
+    date: new Date(Date.now())
+  },
+
+  {
+    description: "Awesomeness",
+    image: "/assets/images/37.jpg",
+    rating: 0,
+    date: new Date(Date.now())
+  },
+  {
+    description: "Feathers",
+    image: "/assets/images/38.jpg",
     rating: 0,
     date: new Date(Date.now())
   }
