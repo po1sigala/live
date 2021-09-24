@@ -54,11 +54,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * [01: Reverse No Built-in](../../../01-Class-Content/19-PWA/03-Algorithms/01-reverse-no-built-in/)
+  * [01: Reverse Is ArmStrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong/)
 
-  * [02: Reverse In Place](../../../01-Class-Content/19-PWA/03-Algorithms/02-reverse-in-place/)
+  * [02: Max Profit](../../../01-Class-Content/19-PWA/03-Algorithms/02-max-profit/)
 
-  * [03: Left-Rotation](../../../01-Class-Content/19-PWA/03-Algorithms/03-left-rotation/)
+  * [03: Smallest Difference](../../../01-Class-Content/19-PWA/03-Algorithms/03-smallest-difference/)
 
     * [📹 Let's Code Left Rotation](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 

@@ -94,11 +94,11 @@ You will be employer-competitive if you are able to solve the following algorith
 
 Practicing algorithm-based interview questions is one of the best ways to prepare for interviews. Watch the `📹 Let's Code` video(s) for tips and tricks on how to solve the algorithm.
 
-* [01: Reverse No Built-in](./03-Algorithms/01-reverse-no-built-in)
+* [01: Is Armstrong](./03-Algorithms/01-is-armstrong)
 
-* [02: Reverse In Place](./03-Algorithms/02-reverse-in-place)
+* [02: Max Profit](./03-Algorithms/02-max-profit)
 
-* [03: Left-Rotation](./03-Algorithms/03-left-rotation)
+* [03: Smallest Difference](./03-Algorithms/03-smallest-difference)
 
   * [📹 Let's Code Left Rotation](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
