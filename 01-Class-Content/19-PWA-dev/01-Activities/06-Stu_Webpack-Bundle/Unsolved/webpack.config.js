@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   // Multiple entry points 
   entry: {
@@ -5,8 +7,8 @@ const config = {
     cost: './assets/cost.js',
   },
   output: {
-    filename: '[entry].bundle.js',
-    path: path.resolve(_dirname, 'dist'),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',
 };

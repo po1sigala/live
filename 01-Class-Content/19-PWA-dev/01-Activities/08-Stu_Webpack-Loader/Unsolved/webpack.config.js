@@ -14,17 +14,17 @@ const config = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.m?js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     // Babel enables use of the latest JavaScript w/o needing browser polyfills
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['@babel/preset-env']
-      //     },
-      //   },
-      // },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          // Babel enables use of the latest JavaScript w/o needing browser polyfills
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
     ],
   },
 };

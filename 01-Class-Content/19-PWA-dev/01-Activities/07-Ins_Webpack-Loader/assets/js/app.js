@@ -1,5 +1,5 @@
 import '../css/style.css';
-import subtract from './calculations';
+import {subtract} from './calculations';
 
 const priceEl = document.getElementById('price');
 const balanceEl = document.getElementById('balance');
