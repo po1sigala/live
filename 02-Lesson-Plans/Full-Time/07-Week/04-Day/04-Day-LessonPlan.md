@@ -1160,7 +1160,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
     }),
     ```
 
-* Remind students that it is okay if they do not fully understand sessions right now. This activity is aimed to be an introduction to a concept they are likely to encounter on the job. Encourage them to research more on their own.
+* Remind students that it is okay if they do not fully understand cookies right now. This activity is aimed to be an introduction to a concept they are likely to encounter on the job. Encourage them to research more on their own.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
