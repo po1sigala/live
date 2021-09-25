@@ -1,18 +1,20 @@
-# Unit 19 Instructor Overview: PWA 
+# Unit 19 Instructor Overview: Progressive Web Applications (PWA) 
 
 ## Overview
 
-In this unit, students will be learning about Progressive Web Application (PWA) and the tools used to create them. We want to stress that some of these tools such as Webpack, service workers, and IndexedDB are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. We also want to use this unit as a pre-cursor to the upcoming React unit since Webpack is an important part of React. Students will be able to see the client-server architecture which is different from the MVC model they have been using in the past few units.
+In this unit, students will be learning about Progressive Web Application (PWA) and the tools used to create them. We want to stress that some of these tools such as Webpack, service workers, and IndexedDB are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like Webpack and Workbox can optimize and boost the performance of web applications so more users can comfortably use our application.
+
+We also want to use this unit as a pre-cursor to the upcoming React unit since Webpack is an important part of React. Students will be able to see the client-server architecture which is different from the MVC model they have been using in the past few units.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* For days 2 & 3, make sure you clear your cache before each activity to avoid unruly behavior. It would be a good idea to have students do clear their cache too before each activity.
+* For days 2 & 3, make sure you work in an incognito window for each activity to avoid unruly behavior. It would be a good idea to have students do the same for each activity.
 
 * Take some time to refresh yourself on how the service worker API works. For the service worker activities, you will have to use offline mode which is in the `Application` tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-* Day 3 students learn about the `manifest.json` file so it would be a good idea to review how this file works and its purpose.
+* * On Day 3, students learn about the `manifest.json` file so it would be a good idea to review how this file works and its purpose.
 
 * The Homework uses the Codemirror library but they should not have to edit that file in any way to complete the Homework.
 
@@ -20,7 +22,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/{XX-TITLE}/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md).
 
 * If you'd like more information on career services, visit the [Career Services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -38,11 +40,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [19.1 Lesson Plan](./03-Day_Webpack/14.1-LESSON-PLAN.md)
+  * [19.1 Lesson Plan](./03-Day_Webpack/19.1-LESSON-PLAN.md)
 
-  * [19.2 Lesson Plan](./03-Day_Workbox/14.2-LESSON-PLAN.md)
+  * [19.2 Lesson Plan](./03-Day_Workbox/19.2-LESSON-PLAN.md)
   
-  * [19.3 Lesson Plan](./03-Day_IndexedDB/14.3-LESSON-PLAN.md)
+  * [19.3 Lesson Plan](./03-Day_IndexedDB/19.3-LESSON-PLAN.md)
 
 ### Homework
 
@@ -54,19 +56,19 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Algorithms
 
-  * [01: Reverse Is ArmStrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong/)
+  * [01: Is ArmStrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong/)
+
+    * [📹 Let's Code Is Armstrong](https://2u-20.wistia.com/medias/qpq5grsk37)
 
   * [02: Max Profit](../../../01-Class-Content/19-PWA/03-Algorithms/02-max-profit/)
 
   * [03: Smallest Difference](../../../01-Class-Content/19-PWA/03-Algorithms/03-smallest-difference/)
 
-    * [📹 Let's Code Left Rotation](https://2u-20.wistia.com/medias/kfyhj4z6fn)
-
 ### Resources
 
 * [Google Documentation on Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
-* [MDN Web Docs onPWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+* [MDN Web Docs on PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
 * [Webpack Documentation](https://webpack.js.org/concepts/)
 

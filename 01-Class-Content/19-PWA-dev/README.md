@@ -1,4 +1,4 @@
-# Unit 19: PWA
+# Unit 19: Progressive Web Applications (PWA)
 
 ## Overview
 
@@ -96,11 +96,11 @@ Practicing algorithm-based interview questions is one of the best ways to prepar
 
 * [01: Is Armstrong](./03-Algorithms/01-is-armstrong)
 
+  * [📹 Let's Code Is Armstrong](https://2u-20.wistia.com/medias/qpq5grsk37)
+
 * [02: Max Profit](./03-Algorithms/02-max-profit)
 
 * [03: Smallest Difference](./03-Algorithms/03-smallest-difference)
-
-  * [📹 Let's Code Left Rotation](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
 ### Assessments
 
@@ -130,7 +130,7 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📖 [Git Guide: Git Hooks](./01-Activities/27-Evr_Git-Hooks)
 
-  * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/1vox01752z) 
+  * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/xpb67vj99g) 
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

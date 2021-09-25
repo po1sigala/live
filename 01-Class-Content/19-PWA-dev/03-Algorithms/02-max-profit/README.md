@@ -16,13 +16,11 @@ In this activity you will be writing code to create a function that takes in an 
     var arr = [1, 6, 7, 9];
     ```
 
-    * The following should be returned:
+    * The following should be returned since buying when the stock is `1` and selling when the stock is `9` yields `8`:
 
     ```js
     8;
     ```
-
-    * Since buying when the stock is `1` and selling when the stock is `9` yields `8`.
 
     * Given the following array:
 
@@ -30,13 +28,11 @@ In this activity you will be writing code to create a function that takes in an 
     var arr = [9, 7, 4, 1];
     ```
 
-    * The following should be returned:
+    * The following should be returned since the stock decreases every day, there is no possible profit to be made:
 
     ```js
     0;
     ```
-
-    * Since the stock decreases every day, there is no possible profit to be made.
 
     * Assume the array will only contain non-negative integers.
 
