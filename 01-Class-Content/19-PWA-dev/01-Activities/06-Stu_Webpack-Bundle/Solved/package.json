@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "watch": "webpack --watch",
-    "build": "npm run webpack"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "2U",
