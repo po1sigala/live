@@ -3,17 +3,17 @@
 ## Performance Metrics
 
 Which metrics are failing and what do they measure?
-List the metric their definition. (Add bullet points if necessary)
+List the metric and their definition. (Add bullet points if necessary)
 
 * **Time to interactive:** Measures how much time until the webpage is fully functional.
 
 * **Total Blocking Time:** Sum of all time periods between **First Contentful Paint**(FCP) and Time to Interactive. FCP marks the time which the first text or image is painted.
   
-* **Speed Index:** Measures how quickly the contents of the page are visibly populated.
+* Speed Index: Measures how quickly the contents of the page are visibly populated.
 
-* **Cumulative Layout Shift:** Measures the movement of visible elements within the viewport.
+* Cumulative Layout Shift: Measures the movement of visible elements within the viewport.
   
-* 🔑 **Largest Contentful Paint:** Marks the time at which the largest text or image is painted.
+* **Largest Contentful Paint:** Marks the time at which the largest text or image is painted.
 
 ## List a corrective measure for each metric selected above.
 

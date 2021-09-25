@@ -1,16 +1,15 @@
 # Lighthouse Audit
 
-It's important to remember that metrics can vary greatly between systems.
-
 ## Performance Metrics
 
-Which metrics in the Lighthouse audit need to be improved to speed up the page load of the website. (Add bullet points if necessary)
+Which metrics are failing and what do they measure?
+List the metric and their definition. (Add bullet points if necessary)
 
 * 
 
 * 
 
-## Improvement Suggestions
+## List a corrective measure for each metric selected above.
 
 List possible opportunities to improve on the load time of the website. (Add bullet points if necessary) 
 
