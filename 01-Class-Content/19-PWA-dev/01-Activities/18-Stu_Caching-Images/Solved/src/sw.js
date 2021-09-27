@@ -27,7 +27,7 @@ const matchCallback = ({ request }) => {
 registerRoute(
   ({ request }) => request.destination === 'image',
   new CacheFirst({
-    cacheName: 'images',
+    cacheName: 'my-image-cache',
     plugins: [
       new ExpirationPlugin({
         maxEntries: 60,

@@ -15,7 +15,7 @@ moduleContent.innerHTML = `
   <div class="col s12">
     <div class="card darken-1">
       <div class="card-image">
-        <img src="https://picsum.photos/id/238/400/550" alt="placeholder image">
+        <img crossorigin="anonymous" src="https://picsum.photos/id/238/400/550" alt="placeholder image">
       </div>
       <div class="card-content dark-text">
         <span class="card-title">This content was added by module 1</span>

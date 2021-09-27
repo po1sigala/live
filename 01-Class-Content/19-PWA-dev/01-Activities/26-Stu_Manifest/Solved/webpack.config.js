@@ -21,8 +21,6 @@ module.exports = () => {
 
       new GenerateSW(),
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
         name: 'TODOs',
         short_name: 'TODOs',
         description: 'Keep track of important tasks!',

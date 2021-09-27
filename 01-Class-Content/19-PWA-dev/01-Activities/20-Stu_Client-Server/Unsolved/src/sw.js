@@ -33,6 +33,9 @@ registerRoute(
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
     ],
   })
 );

@@ -8,7 +8,7 @@ module.exports = {
   },
   devServer: {
     // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
-    hot: 'true',
+    hot: 'only',
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
-    "start": "webpack && webpack serve"
+    "start": "webpack --watch"
   },
   "devDependencies": {
     "webpack-cli": "^4.8.0",
