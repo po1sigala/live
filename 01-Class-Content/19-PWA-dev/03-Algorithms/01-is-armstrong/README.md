@@ -1,6 +1,6 @@
 # Is Armstrong
 
-In this activity you will be writing code to create a function that takes a positive integer and returns `true` if the integer is an armstrong number, else return `false`. To find out if a number is an armstrong number, take each individual digit and raise it to the power of the length of the entire number and add the digits. If the sum equals the original number, the number is an armstrong number. For more information, refer to the following [Michigan Tech University on What is an Armstrong Number](https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap04/arms.html).
+In this activity you will be writing code to create a function that takes a positive integer and returns `true` if the integer is an armstrong number, else return `false`. To find out if a number is an armstrong number, take each individual digit and raise it to the power of the length of the entire number and add the digits. If the sum equals the original number, the number is an armstrong number. For more information, refer to the following [Michigan Tech University article on "What is an Armstrong Number?"](https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap04/arms.html).
 
 ## Instructions
 
