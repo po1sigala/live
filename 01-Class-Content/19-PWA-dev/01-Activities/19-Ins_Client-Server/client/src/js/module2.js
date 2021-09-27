@@ -2,7 +2,7 @@
 const targetEl = document.getElementById('target');
 const headerEl = document.querySelector('.header');
 
-headerEl.innerHTML = '<h1>caching images</h1>';
+headerEl.innerHTML = '<h1>client server</h1>';
 
 // Create a new element in memory
 const moduleContent2 = document.createElement('div');
@@ -15,7 +15,7 @@ moduleContent2.innerHTML = `
     <div class="col s12">
       <div class="card darken-1">
         <div class="card-image">
-          <img src="https://picsum.photos/id/237/400/500" alt="placeholder image" style="border-radius: 5px">
+          <img crossorigin="anonymous" src="https://picsum.photos/id/237/400/500" alt="placeholder image" style="border-radius: 5px">
         </div>
         <div class="card-content dark-text">
           <span class="card-title">This content was added by module 2</span>

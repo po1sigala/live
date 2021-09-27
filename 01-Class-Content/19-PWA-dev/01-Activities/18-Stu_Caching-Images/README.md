@@ -6,9 +6,7 @@ Work with a partner to resolve the following issue(s):
 
 ## Expected Behavior
 
-The browser should load images almost instantly from the cache and not need to make a request to the server. This can be verified by inspecting the network tab in the browser when the user visits the page after the first time.
-
-In your network tab, you will see a series of network requests responding to the image requests with an "initiator" of `StrategyHandler`. This means that the browser is using the cache to serve the image.
+The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify the cache is working properly by opening the developer console, clicking the application tab and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, the network requests for images will be responded to by the service worker with a 200 response.
 
 ## Actual Behavior
 
