@@ -347,6 +347,8 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Open `17-Ins_Factory-Vs-Constructor/constructor/constructor.js` in your browser and navigate to Chrome DevTools to explain the following:
 
+  * We see the following output in the console:
+
     ```
     Phone: ring
     Taking picture with Nokia
