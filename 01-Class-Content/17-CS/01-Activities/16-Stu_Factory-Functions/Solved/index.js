@@ -1,5 +1,5 @@
 function student(name, gradeYear) {
-  // Store the function's Arguments as an object named `student`.
+  // Store the function's Arguments as an object named `studentInfo`.
   let studentInfo = {
     name: name,
     gradeYear: gradeYear,

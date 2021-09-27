@@ -249,7 +249,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Open `16-Stu_Factory-Functions/Solved/index.js` in your IDE and explain the following: 
 
-  * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `student`.
+  * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `studentInfo`.
 
     ```js
     function student(name, gradeYear) {
@@ -262,7 +262,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * Remember, `this` is being bound to the parent object instead of the new one being created.
 
-  * 🔑 If we want to access the `name` and `gradeYear`, we must use the student object we stored it in.
+  * 🔑 If we want to access the `name` and `gradeYear`, we must use the `studentInfo` object we stored it in.
 
     ```js
     function student(name, gradeYear) {
