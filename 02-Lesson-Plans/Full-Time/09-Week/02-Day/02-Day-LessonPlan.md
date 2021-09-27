@@ -309,7 +309,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ### 4. Instructor Demo: Factory vs. Constructor (5 min) 
 
-* Open `17-Ins_Factory-Vs-Constructor/constructor.js` in your IDE and explain the following:
+* Open `17-Ins_Factory-Vs-Constructor/constructor/constructor.js` in your IDE and explain the following:
 
   * Now we'll step back and look at how we've been creating classes in JavaScript so far.
 
@@ -345,7 +345,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     console.log(nokia)
     ```
 
-  * If we run this in Node.js, we can see that it is working like we expected.
+* Open `17-Ins_Factory-Vs-Constructor/constructor/constructor.js` in your browser and navigate to Chrome DevTools to explain the following:
 
     ```
     Phone: ring
@@ -401,7 +401,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * 🔑 This can quickly get out of control if we decide to make additional changes similar to this one.
 
-* Open `17-Ins_Factory-Vs-Constructor/factory-functions.js` in your IDE and explain the following:
+* Open `17-Ins_Factory-Vs-Constructor/factory-function/factory-functions.js` in your IDE and explain the following:
 
   * Let's look at how we can take a composition-based approach with factory functions.
 
@@ -483,7 +483,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     wPool.noise();
     ```
 
-  * If we run this in Node.js, we can see that it is working as expected.
+* Open `17-Ins_Factory-Vs-Constructor/factory-function/factory-functions.js` in your browser and navigate to Chrome DevTools to explain the following:
 
   * 🔑 With **inheritance**, we design types based on what they are. With **composition**, we design types based on what they do.
 
