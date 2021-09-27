@@ -40,9 +40,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [19.1 Lesson Plan](./03-Day_Webpack/19.1-LESSON-PLAN.md)
+  * [19.1 Lesson Plan](./01-Day_Webpack/19.1-LESSON-PLAN.md)
 
-  * [19.2 Lesson Plan](./03-Day_Workbox/19.2-LESSON-PLAN.md)
+  * [19.2 Lesson Plan](./02-Day_Workbox/19.2-LESSON-PLAN.md)
   
   * [19.3 Lesson Plan](./03-Day_IndexedDB/19.3-LESSON-PLAN.md)
 
