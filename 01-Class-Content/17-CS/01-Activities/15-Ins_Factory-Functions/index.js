@@ -1,7 +1,7 @@
 // Create a function which accepts three arguments name, age, and city.
 // We will be creating an object with a function instead of a class.
 function createUser(name, age, city) {
-    // Create an user object and map the function arguements to a key in the object.
+    // Create an user object and map the function arguments to a key in the object.
     const user = {
         name: name,
         age: age,

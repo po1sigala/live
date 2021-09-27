@@ -252,8 +252,8 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `student`.
 
     ```js
-    function Student(name, gradeYear) {
-      let student = {
+    function student(name, gradeYear) {
+      let studentInfo = {
         name: name,
         gradeYear: gradeYear,
       };
@@ -265,25 +265,25 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * 🔑 If we want to access the `name` and `gradeYear`, we must use the student object we stored it in.
 
     ```js
-    function Student(name, gradeYear) {
-      let student = {
+    function student(name, gradeYear) {
+      let studentInfo = {
         name: name,
         gradeYear: gradeYear,
       };
       return {
         greet: function () {
           console.log(
-            `My name is ${student.name} and I am in ${student.gradeYear} grade`
+            `My name is ${studentInfo.name} and I am in ${studentInfo.gradeYear} grade`
           );
         },
       };
     }
     ```
 
-  * 🔑 Now we create a new student with the `Student` factory function without using the `new` keyword.
+  * 🔑 Now we create a new student with the `student` factory function without using the `new` keyword.
 
     ```js
-    const newStudent = Student('Dominique', '11th');
+    const newStudent = student('Dominique', '11th');
     ```
     
   * If we type `npm test` in the command line, we should see the following:

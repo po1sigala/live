@@ -2,7 +2,7 @@
 const buttons = document.getElementsByTagName('button');
 
 const clickHandler = function () {
-// Create a 'count' variable which will be a part of the clickHadler function's lexical environment.
+// Create a 'count' variable which will be a part of the clickHandler function's lexical environment.
   let count = 0;
 
   // return an inner function which creates closure. 

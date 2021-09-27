@@ -433,6 +433,8 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 ### 8. Instructor Demo: Stacks (5 min)
 
+**Important:** Only show the passing test since student's will be creating a stack on their own in the next activity.
+
 * Navigate to `05-Ins_Stacks` in your terminal and execute the following command:
 
   ```bash
@@ -575,6 +577,8 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Answer any questions before proceeding to the next activity.
 
 ### 11. Instructor Demo: Queues (5 min)
+
+**Important:** Only show the passing test since student's will be creating a queue on their own in the next activity.
 
 * Navigate to `07-Ins_Queues` in your terminal and execute the following command:
 

@@ -1,6 +1,6 @@
-function Student(name, gradeYear) {
-  // Store the function's argruments as an object named `student`.
-  let student = {
+function student(name, gradeYear) {
+  // Store the function's Arguments as an object named `student`.
+  let studentInfo = {
     name: name,
     gradeYear: gradeYear,
   };
@@ -10,16 +10,16 @@ function Student(name, gradeYear) {
     greet: function () {
       console.log(
         // Access the students name and grade year using dot notation.
-        `My name is ${student.name} and I am in ${student.gradeYear} grade`
+        `My name is ${studentInfo.name} and I am in ${studentInfo.gradeYear} grade`
       );
     },
   };
 }
 
 // Create a new student passing a name and grade year as arguments.
-const newStudent = Student('Dominique', '11th');
+const newStudent = student('Dominique', '11th');
 
 // Call the `greet` function on the newly created student.
 newStudent.greet();
 
-module.exports = Student;
+module.exports = student;
