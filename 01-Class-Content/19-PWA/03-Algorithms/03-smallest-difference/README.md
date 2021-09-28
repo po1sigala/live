@@ -17,13 +17,11 @@ In this activity you will be writing code to create a function that takes in two
     var arr1 = [8, 9, 10, 11, 12, 13];
     ```
 
-    * The following should be returned:
+    * The following should be returned since both arrays contain the number `9` and the difference between same numbers is `0`:
 
     ```js
     [9, 9];
     ```
-
-    * Since both arrays contain the number `9` and the difference between same numbers is `0`.
 
     * Given the following arrays:
 
@@ -32,13 +30,11 @@ In this activity you will be writing code to create a function that takes in two
     var arr2 = [17, 25, 30, 47];
     ```
 
-    * The following should be returned:
+    * The following should be returned since the difference between `15` and `17` is `2`, the smallest difference between any two numbers across the arrays:
 
     ```js
     [15, 17];
     ```
-
-    * Since the difference between `15` and `17` is `2`, the smallest difference between any two numbers across the arrays
 
     * Assume each array will contain at least one integer.
 
