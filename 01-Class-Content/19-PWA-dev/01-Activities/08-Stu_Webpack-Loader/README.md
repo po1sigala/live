@@ -12,7 +12,7 @@ When I click the `Get the latest interest rate` button, an up to date interest r
 
 ## Actual Behavior
 
-When a user clicks the `Get the latest interest rate` button, an error appears in the console.
+When a user clicks the `Get the latest interest rate` button, the interest rate doesn't appear.
 
 ## Steps to Reproduce the Problem
 
@@ -37,6 +37,8 @@ The following image confirms that a bundle was created by displaying a success m
 ## 💡 Hints
 
 Which plugins do we need for Async / Await to work in our browser?
+
+To see the error in the console, open the console window in DevTools and select the Settings button (⚙️). Then select the Preserve log checkbox so the error persists in the console.
 
 ## 🏆 Bonus
 

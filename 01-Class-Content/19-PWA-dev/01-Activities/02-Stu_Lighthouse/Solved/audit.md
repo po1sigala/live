@@ -2,23 +2,28 @@
 
 ## Performance Metrics
 
-Which metrics in the Lighthouse audit are failing? 
-List the metric and its respective score. (Add bullet points if necessary)
+Which metrics are failing and what do they measure?
+List the metric and their definition. (Add bullet points if necessary)
 
-* Time to Interactive: 10.7 s
+* **Time to interactive:** Measures how much time until the webpage is fully functional.
 
-* First Contentful Paint: 1.2 s
+* **Total Blocking Time:** Sum of all time periods between **First Contentful Paint**(FCP) and Time to Interactive. FCP marks the time which the first text or image is painted.
+  
+* Speed Index: Measures how quickly the contents of the page are visibly populated.
 
-* Total Blocking Time: 940 ms
+* Cumulative Layout Shift: Measures the movement of visible elements within the viewport.
+  
+* **Largest Contentful Paint:** Marks the time at which the largest text or image is painted.
 
-## List the Opportunities
+## List a corrective measure for each metric selected above.
 
-List possible opportunities to improve on the load time of the website.
+* Time to interactive: Defer or remove unneeded JavaScript.
 
-* Reduce unused JavaScript
+* Total Blocking Time: Optimize JavaScript to reduce the amount it is loaded, parsed, and executed.
 
-* Eliminate render-blocking resources
+* Speed Index: Reduce load on the call stack or the main thread.
 
-* Properly size images
+* Largest Contentful Paint: Reduce render blocking JavaScript.
 
-* Defer offscreen images
+* Cumulative Layout Shift: Always include size attributes on your images and video elements.
+  

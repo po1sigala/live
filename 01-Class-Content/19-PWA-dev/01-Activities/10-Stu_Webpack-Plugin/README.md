@@ -1,8 +1,8 @@
-# 🏗️ Generate an HTML file to serve Webpack Bundles
+# 🏗️ Generate an HTML file that References a Webpack Bundle
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to generate HTML files that contain references to the webpack bundles.
+* As a developer, I want to generate an HTML file that contain a reference to a dynamically named webpack bundle.
 
 ## Acceptance Criteria
 
@@ -10,9 +10,9 @@ Work with a partner to implement the following user story:
 
 * It's done when the generated HTML file follows the template, `index.html`.
 
-* It's done when the generated HTML file has a generated page title.
+* It's done when the generated HTML file has inserted the page title, Loan Calculator, from the `webpack.config.js` file.
 
-* It's done when I can generate an HTML file that contains the references to the webpack bundle.
+* It's done when I can generate an HTML file that contains a reference to the webpack bundle.
 
 ## Assets
 

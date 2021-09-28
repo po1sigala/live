@@ -1,6 +1,6 @@
 const path = require('path');
 
-// Create a config object that contains the entry point and bundle location
+// Create a config object that contains the entry and output points
 const config = {
   // Create the multiple entry points
   entry: {
