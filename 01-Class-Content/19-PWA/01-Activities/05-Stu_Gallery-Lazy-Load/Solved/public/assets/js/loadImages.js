@@ -35,19 +35,14 @@ function loadImages() {
 function createCards(data) {
   const container = document.querySelector(".container");
   container.innerHTML = "";
-  let lastRow;
   const row = createEl("div", "row");
 
-  return data.forEach(function(image, index) {
+  
+  data.forEach(function(image, index) {
     const col = createEl("div", "col-md-4 mt-4");
     col.appendChild(createCard(image));
-    if (index % 3 === 0) {
-      row.appendChild(col);
-      container.appendChild(row);
-      lastRow = row;
-    }
-
-    return lastRow.appendChild(col);
+    row.appendChild(col);
+    container.appendChild(row);   
   });
 }
 
