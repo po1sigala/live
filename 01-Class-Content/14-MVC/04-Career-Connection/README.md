@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services logo](./assets/cs_logo.png#right)
-
 Previously, you focused on sending a JSON file that you could use to create webpages back to the client. Now you've learned a new way to do this, through templating and the MVC folder structure model!
 
 Handlebars.js doesn't win over every developer. In this unit, we cover a lot of ground, and we do it pretty fast. However, we can't stress how important it is, especially if you end up working in a language like Python, C#, or Java. After all, most programming languages used for server-side web application development are compatible with a templating engine or use their own proprietary templating engine&mdash;and almost all work like Handlebars.js.
@@ -52,9 +50,9 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 - CodeSignal Algorithm: [Check Palindrome](https://app.codesignal.com/public-test/zE2ktiq86xwEnMov2/bY2xgpYL4NGKoE)
 
-![Online events logo](./assets/online-events.png)
+### Career Services Events
 
-If you want to hear more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you want to hear more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

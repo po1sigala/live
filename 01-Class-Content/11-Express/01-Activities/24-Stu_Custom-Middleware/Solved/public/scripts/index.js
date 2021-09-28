@@ -33,7 +33,7 @@ const createCard = (tip) => {
 
 // Get a list of existing tips from the server
 const getTips = () =>
-  fetch('http://localhost:3001/api/tips', {
+  fetch('api/tips', {
     method: 'GET', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const getTips = () =>
 
 // Post a new tip to the page
 const postTip = (tip) =>
-  fetch('http://localhost:3001/api/tips', {
+  fetch('api/tips', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -447,7 +447,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * It's done when I have created an `app` variable set to the value of `express()`.
 
-  * It's done when I have created an API route to `/api/terms`.
+  * It's done when I have created an API route to `/api/`.
 
   * It's done when GET requests made using the browser to the API endpoint return the content found in `terms.json`.
 
@@ -717,7 +717,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     const { sortData } = require('./sortData');
 
     const sortHelper = (type) =>
-      termData.sort(sortData('name', 'relevance', `${type}`));
+      termData.sort(sortData('term', 'relevance', `${type}`));
     ```
 
   * The first route will return all the terms in the database. This route also contains the logic to sort the terms by relevance (in ascending or descending order) using query strings:
@@ -1240,8 +1240,6 @@ In this lesson, students will learn how to create an API, define the routes, per
 
     app.use(express.static('public'));
 
-    app.get('/jobs', (req, res) => res.json(db));
-
     app.listen(port, () =>
       console.log(
         `Serving static asset routes on port ${port}! Visit http://localhost:3001/`
@@ -1342,13 +1340,13 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   ## Acceptance Criteria
 
-  * It's done when I have created an Express.js server that hosts on `http://localhost:3001`.
+  * It's done when I have required the `db.json` file in the server.js file.
 
-  * It's done when I have created an endpoint for `/api` that will return a list of pull requests for a given GitHub repository.
+  * It's done when I have created a variable called `app` in the server.js file that is an instance of the Express.js app.
 
-  * It's done when my endpoint accepts multiple queries for `organization` and `repository`.
+  * It's done when I have created a `GET` route for `/api` that will return the content of our json file.
 
-  * It's done when I have tested my endpoints by performing a GET request in Insomnia to both `api/organization` and `/api/repository` and verified that the desired results for each route are returned.
+  * It's done when I have tested my endpoint by performing a `GET` request to `/api` using Insomnia.
 
   ---
 

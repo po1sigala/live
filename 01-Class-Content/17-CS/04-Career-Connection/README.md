@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Computer science fundamentals, eh? That's tough stuff, and you have to try and get your head around it pretty quickly. If you're walking away from the material a little confused about it's relevance or why you should care&mdash;that's okay! 
 
 Here's the deal: we've taught you how to build web applications from scratch since day one. And you can now do that using MongoDB or MySQL, Node.js, Express.js, and React. You can build essentially anything you want with a little creativity and hard work. And that's largely what you'll be doing day-to-day as a web developer when you land that job you've been working very hard for!
@@ -28,7 +26,7 @@ So by now you should have completed all of the following professional materials:
 
 If you have not yet submitted them to a Career Materials Advisor, now is the time to do so! Remember, if you get marked off as having completed all employer-ready tasks, you are eligible to be referred to employer partners that come looking for recruits!
 
-As we mentioned already, this is the last Career Connection that you'll see. From here on out, you'll work with your Career Director one-on-one for job interview preparation, job search help, and whatever else you need that is career related. Career Directors can be booked out a couple of weeks in advance, so it's important that you get on their schedule now!
+As we mentioned already, this is the last Career Connection that you'll see. From here on out, you'll work with your Career Coach one-on-one for job interview preparation, job search help, and whatever else you need that is career related. Career Coachs can be booked out a couple of weeks in advance, so it's important that you get on their schedule now!
 
 ### Technical Interview Preparation
 
@@ -38,9 +36,7 @@ Once you start, you'll have seven days to complete it. After the seven days have
 
 * CodeSignal Algorithm: [Gimme Some Space](https://app.codesignal.com/public-test/AxFMTeyBvraiNL7H2/qzdetcA7ztuarH)
 
-![online-events](./assets/online-events.png)
-
-If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you're interested in learning more about the technical interviewing process and practicing algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

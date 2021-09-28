@@ -16,7 +16,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/24-Project-
 
 ## Career Connection
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

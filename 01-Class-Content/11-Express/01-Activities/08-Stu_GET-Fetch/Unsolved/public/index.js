@@ -23,9 +23,10 @@ const renderPet = (pet) => {
   cardImageEl.setAttribute('src', pet.image_url);
   cardBodyTitle.innerHTML = pet.name;
   cardBodyEl.innerText = pet.description;
-  petEl.appendChild(cardBodyTitle);
-  petEl.appendChild(cardBodyEl);
-  petEl.appendChild(cardImageEl);
+  cardEl.appendChild(cardBodyTitle);
+  cardEl.appendChild(cardBodyEl);
+  cardEl.appendChild(cardImageEl);
+  petEl.appendChild(cardEl);
 };
 
 const buttonHandler = () =>

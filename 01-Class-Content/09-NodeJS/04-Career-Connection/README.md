@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services logo](./assets/cs_logo.png)
-
 Up until now, you've written code and developed applications that solidified your skills as front-end developers. But now you're jumping into Node.js and getting your first taste of back-end development!
 
 By now you should have a pretty good idea about the differences between front-end, back-end, and full-stack development. But just to be sure, let's look at a few job descriptions to clarify. 
@@ -66,7 +64,7 @@ The Projects section of your portfolio should make it easy for prospective emplo
 
 #### Step #3: Submit Portfolio Link on Bootcamp Spot
 
-Last but not least, submit your portfolio on Bootcamp Spot! Once you do this, you are one step closer to being marked as employer-ready. When this happens, a number of Career Services resources will open up to you, such as employer networking events and webinars, online interactive workshops, and more!
+Last but not least, submit your portfolio on Bootcamp Spot! Once you do this, you are one step closer to being marked as employer-ready. When this happens, a number of career services resources will open up to you, such as employer networking events and webinars, online interactive workshops, and more!
 
 ### Technical Interview Preparation
 
@@ -82,9 +80,7 @@ Please refer to the class repository to find the following algorithms:
 
 ### Career Services Events 
 
-![Career Services Online Events logo](./assets/online-events.png)
-
-If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, check out our [upcoming workshops!](https://careerservicesonlineevents.splashthat.com/)
+If you're interested in hearing more about the technical interviewing process and practicing algorithms in a mock interview setting, check out our [upcoming workshops!](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 This week you go from using jQuery and Web API methods like `setTimeout()` and `setInterval()` to retrieving complete datasets in JSON format from two different GitHub API endpoints. 
 
 And this is where things get really exciting. Now, instead of only making websites with static content that you wrote yourself, you can build fully functional web applications by pulling in new data from different providers.
@@ -64,9 +62,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 ### Career Services Events
 
-![Career Services Online Events graphic](./assets/online-events.png)
-
-If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 
