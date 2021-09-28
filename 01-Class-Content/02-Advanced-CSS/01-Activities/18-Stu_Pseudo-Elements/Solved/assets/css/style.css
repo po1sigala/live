@@ -29,7 +29,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9C6ae;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -59,7 +59,7 @@ article p {
   font-size: 110%;
 }
 
-/* Keyword - Underline, black text, grab cursor */
+/* Underline, black text, grab cursor */
 span[data-descr] {
   position: relative;
   text-decoration: underline;
@@ -67,7 +67,7 @@ span[data-descr] {
   cursor: grab;
 }
 
-/* Position tooltip above the keyword, same color as header and nav links, no border-radius, smaller font size */
+/* Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
 span[data-descr]:hover::after,
 span[data-descr]:focus::after {
   content: attr(data-descr);
@@ -129,7 +129,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header, main {
+  header,
+  main {
     flex-direction: column;
   }
 

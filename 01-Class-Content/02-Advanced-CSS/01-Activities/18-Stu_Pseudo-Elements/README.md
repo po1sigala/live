@@ -2,27 +2,29 @@
 
 Work with a partner to implement the following user story:
 
-* As a user, I want to hover over keywords and read short info on them instead of having all of the text on the page.
+* As a user, I want to hover over terms or phrases and read short info on them instead of having that info directly on the page.
 
 ## Acceptance Criteria
 
-* It's done when special keywords are underlined and change the cursor to a hand icon when the user hovers over them.
+* It's done when certain terms and phrases are underlined and change the cursor to a hand icon when the user hovers over them.
 
-* It's done when the user hovers over a keyword and a rectangular tooltip appears next to the keyword.
+* It's done when the user hovers over the term or phrase and a rectangular tooltip appears next to it.
 
-  * For example, if the keyword is "Cascading Style Sheets," the tooltip would say, "Commonly known as CSS."
+  * For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
 
-  * It's done when the tooltip has the same background color and text color as the header and navbar items.
+* It's done when the tooltip has the same background color and text color as the header and navbar items.
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [MDN Web Docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 
 ---
 
 ## 💡 Hints
+
+* Feel free to choose which terms or phrases from the given text you want to apply the tooltip to!
 
 * How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
