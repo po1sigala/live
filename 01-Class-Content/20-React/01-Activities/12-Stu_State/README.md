@@ -1,4 +1,4 @@
-# 🐛 Non-Functional Increment and Decrement Buttons
+# 🐛 Hardcoded Values in JSX
 
 ## Before We Begin
 
@@ -9,14 +9,16 @@ Before you begin this activity, complete the following steps:
 2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
 
 3. Import Bootstrap into the [index.js](./Unsolved/src/index.js) file:
-      
+
      `import 'bootstrap/dist/css/bootstrap.min.css'`
 
 ## Activity
 
 Work with a partner to resolve the following issue:
 
-* As a user, I want to be able to welcome some students to class by displaying their names in an unordered list on the page. I also want to display a welcome message.
+* As a user, I want to be able to welcome some students to class by displaying their names in an unordered list on the page along with a welcome message.
+
+* As a developer, I want to use state variables using the `useState` hook and access those variables inside the JSX.
 
 ## Expected Behavior
 
@@ -24,7 +26,7 @@ Loading the page will show a greeting message and a list of students from the cl
 
 ## Actual Behavior
 
-* The page seems to have hardcoded values inside the JSX for the greeting and student names.
+The page seems to have hardcoded values inside the JSX for the greeting and student names.
 
 ## 💡 Hints
 
