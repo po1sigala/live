@@ -46,14 +46,16 @@ Now it's time to actually create a simple package that we can upload to GitHub P
 
 3. Open `package.json` and modify the `name` field such that your project name includes your GitHub username. For example, if my username was `TestUser22` and the package name was `github-pkg-demo`, then I should have this in my `package.json`. Also we will want to add a repository entry that includes a `url` set to the value of what will be our remote.
 
-    ```json
-    }
-      "name": "@TestUser22/github-pkg-demo",
-      "repository": {
-            "url": "git://github.com/TestUser22/github-pkg-demo.git"
-        },
-    }
-    ```
+**Important:** The `url` field should be set to the value of the remote that we will be pushing to. This is the URL that will be used to access the package on GitHub Packages. The `git://` protocol does not require authentication and is read-only, so for the purposes of the demo we will use this for our remote. In practice however, you should use the `SSH` protocol (git@github.com:TestUser22/github-pkg-demo.git) when possible.
+
+```json
+}
+    "name": "@TestUser22/github-pkg-demo",
+    "repository": {
+        "url": "git://github.com/TestUser22/github-pkg-demo.git"
+    },
+}
+```
 
 4. Next, create a local `.npmrc` file at the root of your project directory. Inside the local `.npmrc` file, add the following. Be sure to replace OWNER with your own GitHub username.
 
