@@ -4,13 +4,15 @@ Work with a partner to add comments that describe the functionality of the code 
 
 ## 📝 Notes
 
-Refer to the documentation:
+  Refer to the documentation:
 
-[Express docs on Integrating MongoDB](https://expressjs.com/en/guide/database-integration.html#mongodb)
+  [Express docs on Integrating MongoDB](https://expressjs.com/en/guide/database-integration.html#mongodb)
 
-[MongoDB docs on Find a Document](https://docs.mongodb.com/drivers/node/usage-examples/findOne/)
+  [MongoDB docs on Find a Document](https://docs.mongodb.com/drivers/java/sync/current/usage-examples/findOne/)
 
-[MongoDB docs on Insert a Document](https://docs.mongodb.com/drivers/node/fundamentals/crud/write-operations/insert/)
+  [MongoDB docs on Insert a Document](https://docs.mongodb.com/manual/tutorial/insert-documents/)
+
+  ---
 
 ---
 

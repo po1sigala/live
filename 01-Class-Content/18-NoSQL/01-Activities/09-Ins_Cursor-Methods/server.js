@@ -26,7 +26,7 @@ const data = [
 mongodb.connect(
   connectionStringURI,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  (client) => {
+  (err, client) => {
     db = client.db();
     db.collection('letterList').deleteMany({});
     db.collection('letterList').insertMany(data, (err, res) => {
