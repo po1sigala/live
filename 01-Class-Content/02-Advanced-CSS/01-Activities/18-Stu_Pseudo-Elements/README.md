@@ -10,8 +10,6 @@ Work with a partner to implement the following user story:
 
 * It's done when the user hovers over the term or phrase and a rectangular tooltip appears next to it.
 
-  * For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
-
 * It's done when the tooltip has the same background color and text color as the header and navbar items.
 
 ## 📝 Notes
@@ -24,7 +22,7 @@ Refer to the following documentation:
 
 ## 💡 Hints
 
-* Feel free to choose which terms or phrases from the given text you want to apply the tooltip to!
+* Feel free to choose which terms or phrases from the given text you want to apply the tooltip to! For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
 
 * How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
