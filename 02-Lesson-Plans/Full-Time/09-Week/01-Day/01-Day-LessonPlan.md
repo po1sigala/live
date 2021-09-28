@@ -1095,7 +1095,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     myBank.displayFunds()
     ```
 
-* Run `node index.js` from the command line and explain the following:
+* Open `13-Ins_Closures/index.html` in your browser and navigate to Chrome DevTools to explain the following:
   
   * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment.
 
