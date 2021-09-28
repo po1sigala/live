@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = (answers) =>
+const generateHTML = ({ name, location, github, linkedin }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +13,12 @@ const generateHTML = (answers) =>
 <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
+    <h1 class="display-4">Hi! My name is ${name}</h1>
+    <p class="lead">I am from ${location}.</p>
     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      <li class="list-group-item">My GitHub username is ${github}</li>
+      <li class="list-group-item">LinkedIn: ${linkedin}</li>
     </ul>
   </div>
 </div>

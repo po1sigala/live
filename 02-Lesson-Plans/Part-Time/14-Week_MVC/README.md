@@ -18,15 +18,17 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * Be prepared to remind students how to start their MySQL server on Day 1. They will need to use it starting with `08-Stu_Data-Serialization`.
 
+* **Important**: Activities `15-Ins_Sessions` through `18-Stu_Cookies` are aimed at providing an **introduction** to sessions and cookies as they may encounter them in the workplace. Aim to keep your explanations simple to fit in the alloted timeframe and remind students that on the job when they encounter similar, challenging codebases they will often have to refer to the documentation and do more research on their own.
+
 * You'll need to install the VS Code extensions ESLint and Prettier to properly demonstrate both libraries for Day 3.
 
 * If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
 ## Career Connection
 
-* Remind students that related Career Services material can be found in their [Career Connection folder](../../../01-Class-Content/14-MVC/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/14-MVC/04-Career-Connection/README.md).
 
-* If you'd like more information on Career Services, visit the [Career Services resources page](https://mycareerspot.org/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

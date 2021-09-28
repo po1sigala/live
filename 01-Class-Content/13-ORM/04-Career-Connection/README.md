@@ -2,11 +2,9 @@
 
 ## Career Connection
 
-![The text "Career Services" is overlaid on a blue circle.](./assets/cs_logo.png#right)
-
 Congratulations! You've added yet another crucial asset to your web development toolbox. But coding skills alone won't get you a job&mdash;you also need to work toward becoming employer-ready.
 
-If you still haven't completed the Career Services [Develop Your Resume milestone](https://sites.google.com/2u.com/careerservices-webdev/coding-milestones/milestone-develop-your-resume), be sure to send that resume to a Profile Coach as soon as possible. This important step will help you unlock employer-ready status and access a wide range of career-related materials.
+If you still haven't completed the career services [Develop Your Resume milestone](https://mycareerspot.org/resume), be sure to send that resume to a Profile Coach as soon as possible. This important step will help you unlock employer-ready status and access a wide range of career-related materials.
 
 ### Object-Relational Mapping (ORM)
 
@@ -58,9 +56,7 @@ Once you start, you'll have seven days to complete it. After seven days, the cha
 
 ### Career Services Events
 
-![The text "Career Services Online Events" is overlaid on a banner-length image of various people looking out a window.](./assets/online-events.png)
-
-If you want to learn more about the technical interviewing process and practice algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you want to learn more about the technical interviewing process and practice algorithms in a mock-interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

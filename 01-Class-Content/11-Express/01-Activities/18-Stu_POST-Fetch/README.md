@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of Client-Side POST Requests
 
-Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js).
+Work with a partner to add comments describing the functionality of the code found in [server.js](./Unsolved/server.js) and [index.js](./Unsolved/public/scripts/index.js).
 
 ## 📝 Notes
 

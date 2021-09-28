@@ -88,7 +88,7 @@ For your homework this week, you will use HTML and advanced CSS techniques to bu
 
 ## Career Connection
 
-This week's Career Services material can be found in this unit's [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
+This week's career services material can be found in this unit's [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 

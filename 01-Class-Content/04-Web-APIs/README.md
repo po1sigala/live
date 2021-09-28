@@ -82,7 +82,7 @@ In this week's homework, you'll build a timed coding quiz with multiple-choice q
 
 ## Career Connection
 
-Career Services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about Career Services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [Career Services website](https://mycareerspot.org/).
+Career services material for this unit is located in the [Career Connection folder](./04-Career-Connection/README.md). For more information about career services, including coding milestones, demo days, technical toolkits, workshops, and additional resources, visit the [career services website](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
@@ -91,6 +91,12 @@ When you are are researching DOM and event resources, you might find jQuery solu
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit.
+
+### Code Review Videos
+
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+  * [📹 Code Review: DOM API Methods!](https://2u-20.wistia.com/medias/bz7gtz1g9a)
 
 ### Git Guide
 

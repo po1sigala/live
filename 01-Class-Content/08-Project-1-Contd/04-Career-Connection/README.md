@@ -2,8 +2,6 @@
 
 ## Career Connection
 
-![Career Services Logo](./assets/cs_logo.png#right)
-
 Now that you've had some practice with APIs and have a project to share, you should update your portfolio page and other materials to build toward being employer-competitive.
 
 Part of being a web developer means being a part of a community. Having a place to share your projects is necessary if you're applying for jobs, but it’s also critical on your journey as a developer.
@@ -84,6 +82,4 @@ Update your LinkedIn Profile with a strong bio statement, a professional photo, 
 
 ### Career Services Events
 
-![Career Services Online Events graphic](./assets/online-events.png)
-
-If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careerservicesonlineevents.splashthat.com/)!
+If you want to learn more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
