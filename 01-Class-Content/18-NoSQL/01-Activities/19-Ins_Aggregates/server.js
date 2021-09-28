@@ -20,7 +20,7 @@ app.get('/sum-price', (req, res) => {
           // Group by null (no additional grouping by id)
           _id: null,
           // Sum of all prices
-          avg_price: { $sum: '$price' },
+          sum_price: { $sum: '$price' },
           // Average of all prices
           avg_price: { $avg: '$price' },
           // Maximum price
