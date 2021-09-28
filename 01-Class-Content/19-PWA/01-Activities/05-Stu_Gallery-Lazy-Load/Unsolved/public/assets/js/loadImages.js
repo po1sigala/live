@@ -9,7 +9,7 @@ function createEl(htmlString = "", className) {
 }
 
 function initLazyImages() {
-  // Enter your lazy loading code here
+  // TODO: Enter your lazy loading code here
 }
 
 function loadImages() {
@@ -37,7 +37,7 @@ function createCard(image) {
   const card = createEl("div", "card");
   const imageContainer = createEl("div", "card__image-container");
   const img = createEl("img", "card-img-top card__image--cover");
-  // Enter your additional code here
+  // TODO: Enter your additional code here
   img.setAttribute("src", image.image);
   img.setAttribute("alt", image.description);
 
