@@ -17,7 +17,7 @@ function bankAccount() {
   };
 }
 
-// Create a new varriable which holds the `bankAccount` function.
+// Create a new variable which holds the `bankAccount` function.
 const myBank = bankAccount();
 
 // With our newly created variable call the `displayFunds` method attached to it.
