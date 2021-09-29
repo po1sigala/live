@@ -74,6 +74,7 @@ export default function reducer(state, action) {
       };
     }
 
+    // Take a copy of existing state and modify the `studentName` property (initially an empty string). Used for input field in the UI.
     case SET_STUDENT_NAME: {
       return {
         ...state,
@@ -81,6 +82,7 @@ export default function reducer(state, action) {
       };
     }
 
+    // Take a copy of existing state and modify the `studentMajor` property (initially an empty string). Used for dropdown field in the UI.
     case SET_STUDENT_MAJOR: {
       return {
         ...state,
