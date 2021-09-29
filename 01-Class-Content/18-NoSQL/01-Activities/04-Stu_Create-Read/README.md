@@ -12,8 +12,6 @@ Work with a partner to add comments that describe the functionality of the code 
 
   [MongoDB docs on Insert a Document](https://docs.mongodb.com/manual/tutorial/insert-documents/)
 
-  ---
-
 ---
 
 ## 🏆 Bonus

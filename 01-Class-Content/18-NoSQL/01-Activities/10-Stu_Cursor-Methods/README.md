@@ -20,9 +20,9 @@ Work with a partner to implement the following user story:
 
  Refer to the documentation:
 
-  [MongoDB docs on Sort Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/sort/)
+  [MongoDB docs on Sort Results](https://docs.mongodb.com/manual/reference/method/cursor.sort/)
 
-  [MongoDB docs on Skip Returned Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/skip/)
+  [MongoDB docs on Skip Returned Results](https://docs.mongodb.com/manual/reference/method/cursor.skip/)
 
 ## 💡 Hints
 
