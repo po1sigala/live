@@ -67,3 +67,6 @@ yarn.lock
 .DS_Store
 .vscode
 *.xslx
+
+# React practice app
+00-practice-app
