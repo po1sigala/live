@@ -1084,7 +1084,7 @@ In this class, students will be introduced to complex state management within th
     case 'REMOVE_CAR': {
       return {
         ...state,
-        cars: [...state.cars].filter((car) => car.id !== action.payload),
+        cars: state.cars.filter((car) => car.id !== action.payload),
       };
     }
     ```
