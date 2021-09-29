@@ -16,7 +16,7 @@ const bookSchema = new mongoose.Schema({
 });
 
 // Using mongoose.model() to compile a model based on the schema 'bookSchema'
-const Book = mongoose.model('Book', bookSchema);
+const Book = mongoose.model('MyBook', bookSchema);
 
 // Create new instances of the model, a document
 Book.create([

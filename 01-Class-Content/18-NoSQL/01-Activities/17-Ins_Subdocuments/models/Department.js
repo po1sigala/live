@@ -27,7 +27,7 @@ const departmentSchema = new mongoose.Schema({
 const Department = mongoose.model('Department', departmentSchema);
 
 // Uses model to create new instance including subdocument
-const managerData = { name: 'Lewis', salary: 80000 };
+const managerData = { name: 'Taylor', salary: 80000 };
 const employeeData = [
   { name: 'Ann', salary: 40000 },
   { name: 'Liu', salary: 50000 },

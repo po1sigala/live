@@ -10,7 +10,7 @@ Work with a partner to implement the following user story:
 
 * It is done when the documents are returned in descending order using MongoDB methods.
 
-* It is done the results are limited to five documents.
+* It is done when the results are limited to five documents.
 
 * It is done when documents that contain the largest five numbers are skipped.
 
@@ -18,11 +18,11 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the documentation:
+ Refer to the documentation:
 
-[MongoDB docs on Sort Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/sort/)
+  [MongoDB docs on Sort Results](https://docs.mongodb.com/manual/reference/method/cursor.sort/)
 
-[MongoDB docs on Skip Returned Results](https://docs.mongodb.com/drivers/node/fundamentals/crud/read-operations/skip/)
+  [MongoDB docs on Skip Returned Results](https://docs.mongodb.com/manual/reference/method/cursor.skip/)
 
 ## 💡 Hints
 
