@@ -30,9 +30,9 @@ Refer to the Class Content Unit Overview for [Unit 15](../../../01-Class-Content
 
 In Unit 17, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
 
-Before Unit 18, make sure you install MongoDB on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
+Before Unit 18, make sure you install MongoDB and Robo 3T on your machine. Encourage the students to install it prior to class using the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and the [Robo 3T download page](https://robomongo.org/download).
 
-If you haven't used MongoDB much in the past, take a look at next week's queries and solutions.
+If you haven't used MongoDB and Robo 3T much in the past, take a look at next week's queries and solutions.
 
 ## Helpful Links
 
@@ -43,11 +43,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [08.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
   * [08.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
-  
+
   * [08.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
   * [08.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
-  
+
   * [08.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
 ### Homework
