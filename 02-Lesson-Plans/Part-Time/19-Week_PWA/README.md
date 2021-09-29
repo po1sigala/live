@@ -1,4 +1,4 @@
-# Unit 19 Instructor Overview: Progressive Web Applications (PWA) 
+# Unit 19 Instructor Overview: Progressive Web Applications (PWA)
 
 ## Overview
 
@@ -14,7 +14,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 * Take some time to refresh yourself on how the service worker API works. For the service worker activities, you will have to use offline mode which is in the `Application` tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-* * On Day 3, students learn about the `manifest.json` file so it would be a good idea to review how this file works and its purpose.
+* On Day 3, students learn about the `manifest.json` file so it would be a good idea to review how this file works and its purpose.
 
 * The Homework uses the Codemirror library but they should not have to edit that file in any way to complete the Homework.
 
@@ -43,7 +43,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [19.1 Lesson Plan](./01-Day_Webpack/19.1-LESSON-PLAN.md)
 
   * [19.2 Lesson Plan](./02-Day_Workbox/19.2-LESSON-PLAN.md)
-  
+
   * [19.3 Lesson Plan](./03-Day_IndexedDB/19.3-LESSON-PLAN.md)
 
 ### Homework
@@ -80,7 +80,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [MDN Web Docs on Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
-* [MDN Web Docs on InedexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* [MDN Web Docs on IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
 * [MDN Web Docs on the Manifest File](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 

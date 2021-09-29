@@ -4,7 +4,7 @@
 
 This unit will focus on Progressive Web Apps (PWAs). Progressive web apps aim to blend the benefits of a traditional browser experience with those of a mobile application. PWAs may utilize the Service Worker and Cache APIs to cache assets and API responses to ensure applications work without an internet connection.
 
-Many of the tools and technologies used to create PWAs can be leveraged in applications that help improve performance and accessibility to web applications. One of the tools is services workers which can be used to cache our static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to cut down on network bandwidth and improve overall load times. 
+Many of the tools and technologies used to create PWAs can be leveraged in applications that help improve performance and accessibility to web applications. One of the tools is services workers which can be used to cache our static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to cut down on network bandwidth and improve overall load times.
 
 In earlier units, we learned that JavaScript runs on a single thread which is something that developers need to consider when dealing with performance. The good news is that services workers run on a completely different thread.
 
@@ -40,13 +40,13 @@ The following topics will be covered in this unit:
 
 * [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
-* [Worbox Routing](https://developers.google.com/web/tools/workbox/modules/workbox-routing)
+* [Workbox Routing](https://developers.google.com/web/tools/workbox/modules/workbox-routing)
 
 * [Workbox Strategies](https://developers.google.com/web/tools/workbox/modules/workbox-strategies)
 
 * [Concurrently](https://www.npmjs.com/package/concurrently)
 
-* [InedexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
 * [idb](https://www.npmjs.com/package/idb)
 
@@ -70,7 +70,7 @@ You will be employer-ready if you are able to:
 
 * Extend webpack’s functionality for non-JavaScript files, transpile modern JavaScript for older browsers, and automate bundle output file names.
 
-* Create an `index.html` file using a template with a webpack plugin to automate bundle insertion. 
+* Create an `index.html` file using a template with a webpack plugin to automate bundle insertion.
 
 * Implement service workers to a web application.
 
@@ -130,7 +130,7 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
   * 📖 [Git Guide: Git Hooks](./01-Activities/27-Evr_Git-Hooks/README.md)
 
-  * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/xpb67vj99g) 
+  * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/xpb67vj99g)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

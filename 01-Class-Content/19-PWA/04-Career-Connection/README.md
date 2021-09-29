@@ -23,7 +23,9 @@ Are you already looking at companies that you'd like to interview with? If not, 
 #### Step 2
 
 * Using one of the companies you'd like to work at, locate their home page
+
 * Once on their home page, run a Lighthouse audit using "Applied Slow 4G" enabled
+
 * Note the areas that you could improve their website/web application and how, using the skills you learned this week, you could improve the audit scores
 
 ### Looking to the Future
@@ -76,3 +78,6 @@ Once you start, you'll have seven days to complete it. After the seven days has 
 - CodeSignal Algorithm: [Missing Number](https://app.codesignal.com/public-test/xttcwYyLzN9udSHRm/oEiyqtuFgGaFLj)
 
 If you're interested in hearing more about the technical interviewing process, check out our [upcoming workshops!](https://careerservicesonlineevents.splashthat.com/)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

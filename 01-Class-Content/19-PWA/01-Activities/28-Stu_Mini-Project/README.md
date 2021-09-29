@@ -1,6 +1,6 @@
 # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Scripts
 
-In this mini-project, you are given a simple application that needs to be updated to use Webpack, service-workers, IndexedDB, and we need it to have PWA functionality in order to work properly. Once we have updated our application with these new features, we can work on Deploying our application to Heroku. Heroku isn't new to us, but we will need to work on a handful of special scripts so Heroku knows to deploy our bundled application.
+In this mini-project, you are given a simple application that needs to be updated to use Webpack, service-workers, IndexedDB, and we need it to have PWA functionality in order to work properly. Once we have updated our application with these new features, we can work on deploying our application to Heroku. Heroku isn't new to us, but we will need to work on a handful of special scripts so Heroku knows to deploy our bundled application.
 
 ## User Stories
 
@@ -14,7 +14,7 @@ Work with your group to resolve the following issues:
 
 * As a developer, I want to be able to run in the command line `npm run start` and have both my client and server start.
 
-* As a developer, I want to be able to run in the command line `npm run start:prod` to run our build script and start our server. 
+* As a developer, I want to be able to run in the command line `npm run start:prod` to run our build script and start our server.
 
 * As a developer, I want to be able to run in the command line `npm run server` and have just our server start without the client.
 
@@ -71,5 +71,4 @@ If you have completed this activity, work through the following challenge with y
 * Incorporate a way to edit information on the contact card using a PUT method with IndexedDB.
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

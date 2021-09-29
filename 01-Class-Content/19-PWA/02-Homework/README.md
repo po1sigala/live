@@ -8,7 +8,7 @@ Your task is to build a text editor that runs in the browser. The editor will be
 
 You will take an existing application that is already built and implement the methods for getting and storing data to an IndexedDB database. You will be using a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
 
-You will deploy this full stack application to Heroku using the [deployment guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+You will deploy this full stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
 
 ## User Story
 
@@ -21,7 +21,7 @@ SO THAT I can reliably retrieve them for later use
 ## Acceptance Criteria
 
 ```md
-GIVEN a text editor web application 
+GIVEN a text editor web application
 WHEN I open my application in my editor
 THEN I should see a client server folder structure
 WHEN I run `npm run start` from the root directory
