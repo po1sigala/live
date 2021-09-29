@@ -11,14 +11,14 @@ In today's class, students will begin by working with styling CSS boxes. The the
 * Skim over the following documentation to get familiar with some of the advanced CSS selectors that students will be using:
 
   * [MDN Web Docs on pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
-  
+
   * [MDN Web Docs on pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
-  
-  * [MDN Web Docs on adjacent sibling combinators](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) 
+
+  * [MDN Web Docs on adjacent sibling combinators](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator)
 
 * Today's lesson also touches on typography. Students will likely see different fonts on their machines depending on their operating system, so be prepared to discuss web-safe fonts and font fallbacks.
 
-* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -194,7 +194,7 @@ By the end of class, students will be able to do the following:
 
   * Right now, the product cards are just rectangular boxes with no styling. Let's change that!
 
-* Open `10-Stu_Box-Styling/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `10-Stu_Box-Styling/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * First we should identify which element we are targeting. All of our product cards have a class of `.card`, so that's where we will add the code:
 
@@ -280,7 +280,7 @@ By the end of class, students will be able to do the following:
 
 * Open Chrome DevTools and delete the `<style>` element to remove all of the styles on the page.
 
-* Explain that this is how the form was originally styled by the browser. In today's class, we'll look at additional CSS properties that will help us rebuild our own forms. 
+* Explain that this is how the form was originally styled by the browser. In today's class, we'll look at additional CSS properties that will help us rebuild our own forms.
 
 ### 5. Instructor Demo: CSS Resets (5 min)
 
@@ -406,7 +406,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ Selector specificity
 
-* Open `12-Stu_CSS-Resets/Solved/index.html` in your IDE and explain the following: 
+* Open `12-Stu_CSS-Resets/Solved/index.html` in your IDE and explain the following:
 
   * We needed to swap the `<link>` elements so that the `reset.css` style sheet loads first:
 
@@ -417,7 +417,7 @@ By the end of class, students will be able to do the following:
 
   * 🔑 When style sheets have conflicting CSS rules, like a generic `h1` selector, the style sheet that's loaded second will take precedence.
 
-* Open `12-Stu_CSS-Resets/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `12-Stu_CSS-Resets/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * 🔑 The CSS rules for `<ul>` elements didn't conflict because the selectors in `style.css` were more specific. For example, a `<ul>` inside of a `<nav>` element:
 
@@ -458,7 +458,7 @@ By the end of class, students will be able to do the following:
 * Open `13-Ins_Typography/index.html` in your browser. Inspect the `<p class="one">` element with Chrome DevTools to explain the following:
 
   * 🔑 The class has a `font-family` value of `'Helvetica', 'Arial', sans-serif`.
-  
+
   * 🔑 Multiple fonts are listed in case the user's operating system can't find the first or second one. Helvetica, for instance, is usually not installed on Windows machines.
 
   * 🔑 The `font-weight` and `font-style` properties can make a font appear bold or slanted, but by how much depends on the font being used. For instance, `oblique` will often look the same as `italic`.
@@ -534,7 +534,7 @@ By the end of class, students will be able to do the following:
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [MDN Web Docs on fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 
@@ -544,7 +544,7 @@ By the end of class, students will be able to do the following:
 
   ![The blog page includes a monospaced list and headings with a serif font.](./Images/01-CSS-typography.png)
 
-  --- 
+  ---
 
   ## 💡 Hint
 
@@ -575,7 +575,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ Font percentages
 
-* Open `14-Stu_Typography/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `14-Stu_Typography/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * We adjusted the `body` CSS rule to include a base `line-height` and `font-size`:
 
@@ -641,7 +641,7 @@ By the end of class, students will be able to do the following:
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: Pseudo-Classes (5 min) 
+### 13. Instructor Demo: Pseudo-Classes (5 min)
 
 * Open `15-Ins_Pseudo-Classes/index.html` in your browser and demonstrate the following:
 
@@ -687,7 +687,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Pseudo-Classes`.
 
-### 14. Student Do: Pseudo-Classes (15 min) 
+### 14. Student Do: Pseudo-Classes (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Pseudo-Classes`.
 
@@ -723,7 +723,7 @@ By the end of class, students will be able to do the following:
   * [MDN Web Docs on using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
   * [MDN Web Docs on flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-    
+
   ## 💡 Hints
 
   * How would the CSS `display` property help?
@@ -741,7 +741,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Pseudo-Classes (10 min) 
+### 15. Instructor Review: Pseudo-Classes (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -755,7 +755,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `display: none` vs `display: block`
 
-* Open `16-Stu_Pseudo-Classes/Solved/index.html` in your IDE and explain the following: 
+* Open `16-Stu_Pseudo-Classes/Solved/index.html` in your IDE and explain the following:
 
   * We added `<h3>` and `<ul>` elements inside of the resources `<div>`:
 
@@ -778,7 +778,7 @@ By the end of class, students will be able to do the following:
     </div>
     ```
 
-* Open `16-Stu_Pseudo-Classes/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `16-Stu_Pseudo-Classes/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * 🔑 We initially set the `<ul>` element to `display: none` to remove it from the document flow:
 
@@ -865,7 +865,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Pseudo-Elements`.
 
-### 17. Student Do: Pseudo-Elements (15 min) 
+### 17. Student Do: Pseudo-Elements (15 min)
 
 * Direct students to the activity instructions found in `18-Stu_Pseudo-Elements`.
 
@@ -876,25 +876,29 @@ By the end of class, students will be able to do the following:
 
   Work with a partner to implement the following user story:
 
-  * As a user, I want to hover over keywords and read short info on them instead of having all of the text on the page.
+  * As a user, I want to hover over terms or phrases and read short info on them instead of having that info directly on the page.
 
   ## Acceptance Criteria
 
-  * It's done when special keywords are underlined and change the cursor to a hand icon when the user hovers over them.
+  * It's done when certain terms and phrases are underlined and change the cursor to a hand icon when the user hovers over them.
 
-  * It's done when the user hovers over a keyword and a rectangular tooltip appears next to the keyword.
+  * It's done when the user hovers over the term or phrase and a rectangular tooltip appears next to it.
 
-    * For example, if the keyword is "Cascading Style Sheets," the tooltip would say, "Commonly known as CSS."
+    * For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
 
   * It's done when the tooltip has the same background color and text color as the header and navbar items.
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [MDN Web Docs on ::after](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 
+  ---
+
   ## 💡 Hints
+
+  * Feel free to choose which terms or phrases from the given text you want to apply the tooltip to! For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
 
   * How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
 
@@ -911,7 +915,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Pseudo-Elements (10 min) 
+### 18. Instructor Review: Pseudo-Elements (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -927,7 +931,9 @@ By the end of class, students will be able to do the following:
 
   * ✔️ Relative vs absolute positioning
 
-* Open `18-Stu_Pseudo-Elements/Solved/index.html` in your IDE and explain the following: 
+* Open `18-Stu_Pseudo-Elements/Solved/index.html` in your IDE and explain the following:
+
+  * You could've used any term or phrase to apply the tooltip. In this example, I will use the phrase, "Cascading Style Sheets".
 
   * 🔑 We added a custom `data-descr` attribute to each `<span>` element to hold the hidden tooltip text:
 
@@ -983,7 +989,7 @@ By the end of class, students will be able to do the following:
 
 * Answer any questions before proceeding to the next activity.
 
-### 19. Instructor Demo: Custom Forms  (5 min) 
+### 19. Instructor Demo: Custom Forms  (5 min)
 
 * Open `19-Ins_Form-Styles/index.html` in your browser. Use Chrome DevTools to demonstrate the following:
 
@@ -1005,7 +1011,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Custom-Forms`.
 
-### 20. Student Do: Custom Forms (15 min) 
+### 20. Student Do: Custom Forms (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Custom-Forms`.
 
@@ -1029,7 +1035,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Custom Forms (10 min) 
+### 21. Instructor Review: Custom Forms (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1045,7 +1051,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ Additional pseudo-classes
 
-* Open `20-Stu_Custom-Forms/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `20-Stu_Custom-Forms/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * 🔑 We set the `<select>` element's `appearance` to `none` and inserted a background image to replace the arrow that originally came with `appearance`. We used `-moz` and `-webkit` vendor prefixes to ensure this works for other browsers besides Chrome:
 
