@@ -1324,7 +1324,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   
   * 🔑 If you don't have access to your code from this activity, there is a mirror link in the unit overview for you to get started.
 
-  * **Important**: The homework this week requires a specific version (>=7.0) of `npm` in order to install peer dependencies for the GraphQL. By default, Heroku uses `npm 6.x`, which may cause some issues. This is a good opportunity to educate students on how to configure their Heroku environment to meet the needs of the project, as shown in the following `package.json` snippet:
+  * **Important**: The homework this week requires a specific version (>=7.0) of `npm` in order to install peer dependencies like GraphQL. By default, Heroku uses `npm 6.x`, which may cause some issues. This is a good opportunity to educate students on how to configure their Heroku environment to meet the needs of the project, as shown in the following `package.json` snippet:
 
   ```json
   {
