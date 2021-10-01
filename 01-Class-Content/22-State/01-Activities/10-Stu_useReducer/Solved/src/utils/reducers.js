@@ -5,6 +5,8 @@ import {
   UPDATE_STUDENT,
   ADD_MAJOR,
   REMOVE_MAJOR,
+  SET_STUDENT_NAME,
+  SET_STUDENT_MAJOR,
 } from './actions';
 
 // Create a function that will handle combining two objects. Accepts state and an action as an argument.
@@ -71,6 +73,23 @@ export default function reducer(state, action) {
         majors: [...state.majors].filter((major) => major !== action.payload),
       };
     }
+
+    // Take a copy of existing state and modify the `studentName` property (initially an empty string). Used for input field in the UI.
+    case SET_STUDENT_NAME: {
+      return {
+        ...state,
+        studentName: action.payload,
+      };
+    }
+
+    // Take a copy of existing state and modify the `studentMajor` property (initially an empty string). Used for dropdown field in the UI.
+    case SET_STUDENT_MAJOR: {
+      return {
+        ...state,
+        studentMajor: action.payload,
+      };
+    }
+
     // Default to returning the state as is in our switch statement
     default:
       return state;

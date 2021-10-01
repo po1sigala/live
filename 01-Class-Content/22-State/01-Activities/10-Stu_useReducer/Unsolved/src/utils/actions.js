@@ -40,3 +40,7 @@ export const ADD_MAJOR = 'ADD_MAJOR';
  * - updates majors array
  */
 export const REMOVE_MAJOR = 'REMOVE_MAJOR';
+
+export const SET_STUDENT_NAME = 'SET_STUDENT_NAME';
+
+export const SET_STUDENT_MAJOR = 'SET_STUDENT_MAJOR';

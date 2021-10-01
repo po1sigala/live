@@ -8,7 +8,6 @@ Your challenge this week is to refactor the e-commerce platform from [Activity 2
 
 **On the Job**: Web developers frequently have to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help. They must sift through it to find the information that matches the specific problem they’re trying to solve. This assignment will allow you to practice a skill that you’ll use many times over the course of your career.
 
-
 ## User Story
 
 ```md
@@ -39,7 +38,7 @@ This section reviews the web application's general appearance and functionality.
 
 The following animation shows how a user can register using the Signup page and then navigate to the Products page:
 
-![A user registers on the Signup page and then navigates to the Products page, which displays images and descriptions of products.](./Assets/22-state-homework-demo-01.gif) 
+![A user registers on the Signup page and then navigates to the Products page, which displays images and descriptions of products.](./Assets/22-state-homework-demo-01.gif)
 
 The following animation shows how the user can select a category, choose a product, view details about it on the product page, and add and remove it from their shopping cart:
 
@@ -53,7 +52,17 @@ Finally, the user can check out by going to their shopping cart, as shown in the
 
 For instructions to add Redux to your application, refer to the [Redux Fundamentals basic tutorial](https://redux.js.org/basics/basic-tutorial). Note that the documentation will refer to additional packages that you'll need to complete this implementation.
 
-**Important**: Be sure to review ALL of the documentation, because there are newer methods that can make these tools much easier to implement. React has gone through several iterations; as such, some React-and-Redux tutorials will assume that you aren't using Hooks.
+Be sure to review ALL of the documentation, because there are newer methods that can make these tools much easier to implement. React has gone through several iterations; as such, some React-and-Redux tutorials will assume that you aren't using Hooks.
+
+**Important**: The homework requires a specific version `(>=7.0)` of `npm` in order to install peer dependencies like GraphQL when deploying to Heroku. By default, Heroku uses `npm 6.x`, which may cause some issues. Be sure to refer to the [Heroku Docs on Specifying an NPM Version](https://devcenter.heroku.com/articles/nodejs-support#specifying-an-npm-version) to ensure your `package.json` file is set up correctly, as shown in the following snippet:
+
+  ```json
+  {
+    "engines": {
+      "npm": "7.x"
+    }
+  }
+  ```
 
 ## Grading Requirements
 
@@ -63,9 +72,9 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the preceding acceptance criteria plus the following:
 
-    * Retains all the functionality of the original application.
+  * Retains all the functionality of the original application.
 
-    * Application must be deployed to Heroku.
+  * Application must be deployed to Heroku.
 
 ### Deployment: 32%
 

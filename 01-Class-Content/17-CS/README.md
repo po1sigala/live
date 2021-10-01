@@ -4,7 +4,7 @@
 
 In this unit, we will look at how computer science relates to JavaScript in order to prepare you for the technical interview portion of the job interview, which every developer eventually faces. Some of these topics may feel abstract and confusing at times, but remember&mdash;you've been using JavaScript for several months. Now we are simply taking a closer look at how JavaScript executes so we can better understand how our code interacts with its environment.
 
-In the first two lessons, we will dissect JavaScript in order to learn how our code executes at a granular level. We will also explore the fascinating behavior of closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design. 
+In the first two lessons, we will dissect JavaScript in order to learn how our code executes at a granular level. We will also explore the fascinating behavior of closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design.
 
 In the final lesson, we will review search algorithms and how recursion works in JavaScript. For the mini-project, you will practice a mock interview with your peers. This will give you an opportunity to learn about the technical interview portion of the web-developer job interview process. You'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
@@ -108,7 +108,7 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer **before** attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
+In the next unit, you'll start working with NoSQL databases using MongoDB and Robo 3T. Be sure to have them installed on your computer **before** attending your classes. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer and the [Robo 3T download page](https://robomongo.org/download) to install Robo 3T.
 
 ## Resources
 

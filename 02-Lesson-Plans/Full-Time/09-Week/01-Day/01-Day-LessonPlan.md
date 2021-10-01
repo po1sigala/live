@@ -433,6 +433,8 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 ### 8. Instructor Demo: Stacks (5 min)
 
+**Important**: Only demonstrate the passing tests since students will be creating a stack on their own in the next activity.
+
 * Navigate to `05-Ins_Stacks` in your terminal and execute the following command:
 
   ```bash
@@ -575,6 +577,8 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Answer any questions before proceeding to the next activity.
 
 ### 11. Instructor Demo: Queues (5 min)
+
+**Important**: Only demonstrate the passing tests since students will be creating a queue on their own in the next activity.
 
 * Navigate to `07-Ins_Queues` in your terminal and execute the following command:
 
@@ -1091,7 +1095,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     myBank.displayFunds()
     ```
 
-* Run `node index.js` from the command line and explain the following:
+* Open `13-Ins_Closures/index.html` in your browser and navigate to Chrome DevTools to explain the following:
   
   * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment.
 

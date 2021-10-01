@@ -24,7 +24,7 @@ export const StudentProvider = ({ children }) => {
   // Function to add a student
   const addStudent = (student) => {
     // Check if the user forgot to enter a name
-    if (student.name) {
+    if (!student.name) {
       return;
     }
     const id = students.length + 1;

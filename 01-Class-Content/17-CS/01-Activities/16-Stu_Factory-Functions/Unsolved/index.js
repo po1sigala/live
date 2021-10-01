@@ -1,6 +1,6 @@
 // TODO: Fix the `greet` function so that it returns the correct values.
-function Student(name, gradeYear) {
-  let student = {
+function student(name, gradeYear) {
+  let studentInfo = {
     name: name,
     gradeYear: gradeYear,
   };
@@ -14,7 +14,7 @@ function Student(name, gradeYear) {
   };
 }
 
-const newStudent = Student('Dominique', '11th');
+const newStudent = student('Dominique', '11th');
 newStudent.greet();
 
-module.exports = Student;
+module.exports = student;
