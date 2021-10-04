@@ -1,12 +1,13 @@
-// Open this file in the browser and display the console in DevTools.
-
 // Highlight which elements in the DOM are the children of the parent element
+// Uncomment the following two lines to see the which elements are the children to the #top
 // $('#top').children().css('color', 'yellow');
-console.log($('#top').children());
+// console.log($('#top').children());
 
-// $('#top').children().eq(0).css('text-decoration', 'underline');
+// Uncomment the following line to see the which element is the first direct child of the <main>
+// $('#top').children().eq(0).addClass('boxy');
 
-// Starting from `<main id="top">`, add an li element to the list, ul.
+// Uncomment the following line to add a list item to the list
+// $('#top').children().eq(4).append($('<li>Classmates</li>'));
 
-// Starting from `<main id="top">`, add the classes to all of its child `<li>` elements
-// $('#top').children().eq(4).children().css('background-color', 'aqua');
+// Uncomment the following line to style the list items
+// $('#top').children('ul').children().addClass('bg-primary text-dark mb-3 p-3').css('border-radius', '.4rem');
