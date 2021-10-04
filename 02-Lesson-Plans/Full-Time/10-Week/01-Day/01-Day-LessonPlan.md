@@ -129,7 +129,7 @@ By the end of class, students will be able to:
 
 ### 2. Instructor Demo: Lighthouse Audit (5 min) 
 
-* Open the [Gallery App](https://lazyyload.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
+* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
 
   * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
 
