@@ -129,7 +129,7 @@ By the end of class, students will be able to:
 
 ### 2. Instructor Demo: Lighthouse Audit (5 min) 
 
-* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
+* Open the [Gallery App](https://lazyyload.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
 
   * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
 
@@ -481,7 +481,7 @@ By the end of class, students will be able to:
 
 ### 15. Instructor Demo: Lazy Loading (5 min) 
 
-* Open our completed [Lazy Loading Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
+* Open our completed [Lazy Loading Gallery App](https://lazyyload.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
 
   * If it loads too quickly, open your `Network` tab in your Dev Tools and throttle to `slow 3g`, disable cache, and refresh the page.
 
