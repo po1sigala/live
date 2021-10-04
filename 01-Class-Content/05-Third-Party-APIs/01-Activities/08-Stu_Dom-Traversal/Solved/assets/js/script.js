@@ -2,13 +2,12 @@
 // Assemble: Create/select DOM elements
 var rootEl = $('#root');
 
-// Starting from the root element, `<main id="root">`, select all the boxes and turn them white.
+// Starting from the root element, `<main id="root">`, select all the boxes and change the background color to white.
 rootEl.children('ul').children().css('background-color', 'white');
 
-// Starting from <main id="root">, we select the last `<ul>` or the third row.
+// Select the last `<ul>` or the third row.
+// Long traverals can be segmented to provide better readability.
 var rowThree = rootEl.children('ul').eq(2);
 
-// Add the O to the first box in the last row for the win
-// Select the children of the `<ul>` to select the list items, then select the first list item and add the text.
+// Select the children of the `<ul>`, then select the first box and add the 'O'.
 rowThree.children().eq(0).text('O');
-console.log(rowThree)
