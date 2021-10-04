@@ -2,7 +2,9 @@
 
 Work with a partner to implement the following user story:
 
-* As a game developer, I want to automate certain aspects of Tic-Tac-Toe.
+* As a game developer, I want to programmatically change the board style.
+
+* As a game developer, I want to programmatically add the winning move.
 
 ## Acceptance Criteria
 
@@ -18,6 +20,8 @@ Refer to the following documentation:
 
 [jQuery Docs on Traversing](https://api.jquery.com/category/traversing) 
 
+[jQuery Docs on Markup Changes](https://api.jquery.com/text/) 
+
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
@@ -28,7 +32,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hint 
 
-* There are multiple ways to accomplish a goal using method-chaining!
+* The starting point for all the the traversals in this activity must begin at the `<main id="root">`, which has been assigned for you as `rootEl`.
   
 ## 🏆 Bonus 
 
