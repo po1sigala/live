@@ -1,12 +1,12 @@
 # Is Armstrong
 
-In this activity you will be writing code to create a function that takes a positive integer and returns `true` if the integer is an armstrong number, else return `false`. To find out if a number is an armstrong number, take each individual digit and raise it to the power of the length of the entire number and add the digits. If the sum equals the original number, the number is an armstrong number. For more information, refer to the following [Michigan Tech University article on "What is an Armstrong Number?"](https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap04/arms.html).
+In this activity, you will write code to create a function that takes a positive integer and returns `true` if the integer is an armstrong number, else return `false`. To find out if a number is an armstrong number, take each individual digit and raise it to the power of the length of the entire number and add the digits. If the sum equals the original number, the number is an armstrong number. For more information, refer to the following [Michigan Tech University article on "What is an Armstrong Number?"](https://pages.mtu.edu/~shene/COURSES/cs201/NOTES/chap04/arms.html).
 
 ## Instructions
 
-* Open [Unsolved/is-armstrong.js](./Unsolved/is-armstrong.js) in your code editor -- **this is the only file you will modify in this activity.**
+* Open [01-is-armstrong/Unsolved/is-armstrong.js](./Unsolved/is-armstrong.js) in your code editor; this is the only file you will modify in this activity.
 
-  * In this file you will be writing code in the body of the `isArmstrong` function to achieve the following:
+  * In this file, you will write code in the body of the `isArmstrong` function to achieve the following:
 
     * Return `true` if the provided number is an armstrong number, else return `false`.
 
@@ -36,11 +36,11 @@ In this activity you will be writing code to create a function that takes a posi
 
     * Assume the given number is a non-negative whole number.
 
-* You can check to see if your function works properly by opening [Unsolved/test.html](./Unsolved/test.html) in your web browser.
+* You can check to see if your function works properly by opening [01-is-armstrongUnsolved/test.html](./Unsolved/test.html) in your web browser.
 
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
+  * Functions that pass the tests will be denoted with a green check mark.
 
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  * Functions that fail the tests will be denoted with a red x and an error message.
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

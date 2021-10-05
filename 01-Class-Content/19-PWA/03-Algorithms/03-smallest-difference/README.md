@@ -1,14 +1,14 @@
 # Smallest Difference
 
-In this activity you will be writing code to create a function that takes in two sorted arrays of integers. Your function should return a new two element array containing one number from each sorted array with the smallest difference.
+In this activity, you will write code to create a function that takes in two sorted arrays of integers. Your function should return a new two element array containing one number from each sorted array with the smallest difference.
 
 ## Instructions
 
-* Open [Unsolved/smallest-difference.js](./Unsolved/smallest-difference.js) in your code editor -- **this is the only file you will modify in this activity.**
+* Open [03-smallest-difference/Unsolved/smallest-difference.js](./Unsolved/smallest-difference.js) in your code editor; this is the only file you will modify in this activity.
 
-  * In this file you will be writing code in the body of the `smallestDifference` function to achieve the following:
+  * In this file, you will write code in the body of the `smallestDifference` function to achieve the following:
 
-    * Return a two element array containing the integers from both arrays with the smallest distance.
+    * Return a two-element array that contains the integers from both arrays with the smallest distance.
 
     * For example, given the following arrays:
 
@@ -38,11 +38,11 @@ In this activity you will be writing code to create a function that takes in two
 
     * Assume each array will contain at least one integer.
 
-* You can check to see if your function works properly by opening [Unsolved/test.html](./Unsolved/test.html) in your web browser.
+* You can check to see if your function works properly by opening [03-smallest-difference/Unsolved/test.html](./Unsolved/test.html) in your web browser.
 
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
+  * Functions that pass the tests will be denoted with a green check mark.
 
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  * Functions that fail the tests will be denoted with a red x and an error message.
 
 ### Hints
 
