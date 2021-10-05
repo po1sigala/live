@@ -8,15 +8,15 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
+* It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-* It's done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
+* It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
-* It's done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
+* It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
-* It's done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
+* It is done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-* It's done when I have registered a route for the caching of static assets (JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
+* It is done when I have registered a route for the caching of static assets (JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
 
 ## 📝 Notes
 

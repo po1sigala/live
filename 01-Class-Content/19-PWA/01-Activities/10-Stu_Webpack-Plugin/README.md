@@ -6,13 +6,13 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
+* It is done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
 
-* It's done when the generated HTML file follows the template, `index.html`.
+* It is done when the generated HTML file follows the template, `index.html`.
 
-* It's done when the generated HTML file has a generated page title.
+* It is done when the generated HTML file has a generated page title.
 
-* It's done when I can generate an HTML file that contains the references to the webpack bundle.
+* It is done when I can generate an HTML file that contains the references to the webpack bundle.
 
 ## Assets
 

@@ -8,21 +8,21 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I installed `webpack-dev-server` as a `devDependency`.
+* It is done when I installed `webpack-dev-server` as a `devDependency`.
 
-* It's done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
+* It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
 
-* It's done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
+* It is done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
 
-* It's done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set it's value to `only`.
+* It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set it's value to `only`.
 
-* It's done when I have opened `Unsolved/src/index.js` and made the following changes:
+* It is done when I have opened `Unsolved/src/index.js` and made the following changes:
 
   * Import the css file from the css folder.
 
   * Added logic to accept hot module replacement (HMR), as this is an opt-in feature.
 
-* It's done when I have modified or added some content to the `style.css` file. For example, try changing the `h1` font weight in the `style.css` file and save it. The changes should be reflected in the browser.
+* It is done when I have modified or added some content to the `style.css` file. For example, try changing the `h1` font weight in the `style.css` file and save it. The changes should be reflected in the browser.
 
 ## 📝 Notes
 

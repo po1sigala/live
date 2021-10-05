@@ -6,9 +6,9 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when I can install my application as a Progressive Web App.
+* It is done when I can install my application as a Progressive Web App.
 
-* It's done when I can see my `manifest.json` file generated inside of Chrome Dev Tools.
+* It is done when I can see my `manifest.json` file generated inside of Chrome Dev Tools.
 
 ## 📝 Notes
 
