@@ -2,33 +2,33 @@
 
 ## Overview
 
-In this unit, students will be learning about Progressive Web Application (PWA) and the tools used to create them. We want to stress that some of these tools such as Webpack, service workers, and IndexedDB are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like Webpack and Workbox can optimize and boost the performance of web applications so more users can comfortably use our application.
+In this unit, students will be learning about Progressive Web Applications (PWAs) and the tools used to create them. We want to stress that some of these tools -- such as Webpack, service workers, and IndexedDB -- are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like Webpack and Workbox can optimize and boost the performance of web applications so that more users can comfortably use your application.
 
-We also want to use this unit as a pre-cursor to the upcoming React unit since Webpack is an important part of React. Students will be able to see the client-server architecture which is different from the MVC model they have been using in the past few units.
+We also want to use this unit as a precursor to the upcoming React unit, because Webpack is an important part of React. Students will be able to see the client-server architecture, which is different from the MVC model that they have been using in the previous few units.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* For days 2 & 3, make sure you work in an incognito window for each activity to avoid unruly behavior. It would be a good idea to have students do the same for each activity.
+* On Day 2 and Day 3, make sure you work in an incognito window for each activity to avoid unruly behavior. It would be a good idea to have students do the same.
 
-* Take some time to refresh yourself on how the service worker API works. For the service worker activities, you will have to use offline mode which is in the `Application` tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
+* Take some time to refresh yourself on how the service worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-* On Day 3, students learn about the `manifest.json` file so it would be a good idea to review how this file works and its purpose.
+* On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-* The Homework uses the Codemirror library but they should not have to edit that file in any way to complete the Homework.
+* The homework uses the Codemirror library, but they should not have to edit that file in any way to complete the homework.
 
-* PWAs can be frustrating at times, so be considerate if a student is having trouble grasping it.
+* PWAs can be frustrating at times, so be compassionate if a student is having trouble grasping it.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the [Career Connection folder](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md).
 
-* If you'd like more information on career services, visit the [Career Services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In the next unit, students will be getting their first introduction to React. This is a huge step for them so give students a lot of encouragement.
+* In the next unit, students will be getting their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
 
 * Make sure that you are familiar with components, state, and hooks before jumping into the lesson.
 
