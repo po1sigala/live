@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this class, we will perform DOM manipulations that students are already familiar with, except this time we'll be using jQuery. Then we will begin to look into Bootstrap components and layouts.
+In this class, we will perform DOM manipulations that students are already familiar with, except this time we'll be using jQuery. We will use the equivalent strategy of traversing down the DOM tree through children elements from the parent element. Then we will begin to look into Bootstrap components and layouts.
 
 ## Instructor Notes
 
@@ -10,7 +10,7 @@ In this class, we will perform DOM manipulations that students are already famil
 
 * Take a few minutes before class to get familiar with the [jQuery API documentation](https://api.jquery.com/), as students will rely heavily on it in class and might need help finding answers.
 
-* Throughout the class, reiterate often that the DOM methods we have used previously like `document.getElementById`, `document.createElement`, and `Element.innerHTML` all have corresponding jQuery methods as well as a powerful selector feature, to select elements in the DOM.
+* Throughout the class, reiterate often that the vanilla JavaScript DOM methods we have used previously like `document.getElementById`, `document.body.children`, and `Element.innerHTML` all have corresponding jQuery methods as well as a powerful selector feature, to select elements in the DOM.
 
 * Students can get hung up on learning the correct syntax. Encourage them that the interface gets easier to understand with practice and time.
 
@@ -25,12 +25,12 @@ In this class, we will perform DOM manipulations that students are already famil
 We will use jQuery to do the following:
 
 * Create and select DOM elements.
-  
+
 * Assign content or styling to a DOM element.
 
 * Append, prepend, and replace elements to the DOM.
 
-* Traverse the DOM through parent, child, and sibling elements.
+* Traverse the DOM through child elements.
 
 * Attach event listeners and their corresponding event handling functionality.
 
@@ -86,7 +86,7 @@ We will use jQuery to do the following:
 
   * **What languages do we use to build web apps?**
 
-    * We use HTML for content and structure, CSS for styling and layout, and JavaScript for handling logic, interaction, and fetching data. 
+    * We use HTML for content and structure, CSS for styling and layout, and JavaScript for handling logic, interaction, and fetching data.
 
   * **How do we interact with HTML and CSS using JavaScript?**
 
@@ -108,14 +108,14 @@ We will use jQuery to do the following:
 
     * Yes, there are! The web is filled with tools that other developers have built and made available for us to use in our projects! These third-party APIs exist to help us carry out specific tasks that we can do ourselves with CSS or JavaScript but that might be too complex or time-consuming to do by hand.
 
-  * **How can we learn to use and implement these APIs?** 
-  
-    * Because these APIs are provided by developers (like us!) of all different backgrounds, there is no one correct way to learn how to use them. 
+  * **How can we learn to use and implement these APIs?**
+
+    * Because these APIs are provided by developers (like us!) of all different backgrounds, there is no one correct way to learn how to use them.
 
     * What’s important is that you identify what problem an API solves for you and how to properly integrate it into your existing application.
 
-    * You can try the following strategies to learn more about specific APIs: 
-    
+    * You can try the following strategies to learn more about specific APIs:
+
       * Read the official documentation and practice with the provided examples.
 
       * Reverse-engineer finished code to see how something was accomplished.
@@ -148,7 +148,7 @@ We will use jQuery to do the following:
 
   * ☝️ What are we learning?
 
-  * 🙋 We are learning how to use third-party APIs in our applications. 
+  * 🙋 We are learning how to use third-party APIs in our applications.
 
   * ☝️ How does this project build off or extend previously learned material?
 
@@ -160,23 +160,23 @@ We will use jQuery to do the following:
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: jQuery Elements (5 min) 
+### 2. Instructor Demo: jQuery Elements (5 min)
 
 * Open `01-Ins_jQuery-Elements/index.html` in your IDE and show the following:
-  
+
   * Notice there is barely any markup on this page!
-  
+
 * Open `01-Ins_jQuery-Elements/index.html` in the browser. Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How did we render these elements to the page?
-  
+
   * 🙋 We can create elements dynamically with jQuery. We can populate a list by looping through an array, then creating each element and attaching it to the webpage.
 
 * Open `01-Ins_jQuery-Elements/index.html` in your IDE again and demonstrate the following:
 
-  * We insert the jQuery CDN link with the `<script>` at the bottom of the `<body>`. 
-  
-  * We can find this link on the [jQuery CDN page](https://code.jquery.com/). We chose the minified version of jQuery 3.5.1. 
+  * We insert the jQuery CDN link with the `<script>` at the bottom of the `<body>`.
+
+  * We can find this link on the [jQuery CDN page](https://code.jquery.com/). We chose the minified version of jQuery 3.5.1.
 
 * Open `01-Ins_jQuery-Elements/assets/js/script.js` in your IDE and demonstrate the following:
 
@@ -212,7 +212,7 @@ We will use jQuery to do the following:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are the vanilla JavaScript functions that can achieve similar results?
+  * ☝️ What are the vanilla JavaScript methods that can achieve similar results?
 
   * 🙋 `document.createElement`, `document.querySelector`, `Element.textContent`, `Element.setAttribute`, `Element.className`, and `Element.style`.
 
@@ -220,7 +220,7 @@ We will use jQuery to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_jQuery-Elements/README.md`.
 
-### 3. Student Do: jQuery Elements (15 min) 
+### 3. Student Do: jQuery Elements (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_jQuery-Elements/README.md`.
 
@@ -239,7 +239,7 @@ We will use jQuery to do the following:
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [jQuery API documentation](https://api.jquery.com/)
 
@@ -247,11 +247,11 @@ We will use jQuery to do the following:
 
   The following image demonstrates the web application's appearance and functionality:
 
-  ![A quote appears in blue text on a black background, with the author's name in white text on the next line.](./Images/01-quote.png)  
+  ![A quote appears in blue text on a black background, with the author's name in white text on the next line.](./Images/01-quote.png)
 
   ---
 
-  ## 💡 Hints 
+  ## 💡 Hints
 
   * Don’t forget to add jQuery to `index.html` before you begin.
 
@@ -260,7 +260,7 @@ We will use jQuery to do the following:
   ## 🏆 Bonus
 
   If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
-  
+
   * How can we add event listeners using jQuery?
 
   Use [Google](https://www.google.com) or another search engine to answer this question.
@@ -269,7 +269,7 @@ We will use jQuery to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 4. Instructor Review: jQuery Elements (10 min) 
+### 4. Instructor Review: jQuery Elements (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -285,7 +285,7 @@ We will use jQuery to do the following:
 
   * ✔️ Append to the page using `append()`
 
-* Open `02-Stu_jQuery-Elements/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `02-Stu_jQuery-Elements/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 We begin by using the jQuery ID selector, `$("#root")`, and assigning it to a variable `rootEl`.
 
@@ -294,13 +294,13 @@ We will use jQuery to do the following:
     ```
 
   * We can use this variable, `rootEl`, to modify the `<div id="root">` with jQuery methods.
-  
+
   * We can also create elements by placing the angle brackets around the element:
 
     ```js
-    var authorEl = $("<p>"); 
+    var authorEl = $("<p>");
     ```
-  
+
   * 🔑 We can add text content with the `text()` method:
 
     ```js
@@ -310,7 +310,7 @@ We will use jQuery to do the following:
   * We can create an `<h1>` element for the quote text:
 
     ```js
-    var quoteEl = $("<h1>"); 
+    var quoteEl = $("<h1>");
     ```
 
   * We can assign a class using the `addClass()` method:
@@ -318,7 +318,7 @@ We will use jQuery to do the following:
     ```js
     authorEl.addClass("plain");
     ```
-  
+
   * We can add text content to the quote element with the `text()` method:
 
       ```js
@@ -355,18 +355,18 @@ We will use jQuery to do the following:
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Click Events (5 min) 
+### 5. Instructor Demo: Click Events (5 min)
 
 * Open `03-Ins_Click-Events/index.html` in the browser and show the following:
 
   * 🔑 We can click each button to trigger a different response.
-  
-  * 🔑 All the elements were created dynamically, except the empty `<div>`. 
+
+  * 🔑 All the elements were created dynamically, except the empty `<div>`.
 
 * Open `03-Ins_Click-Events/assets/js/script.js` in your IDE and show the following statements:
-  
+
   * We create references to the DOM elements we will work with first:
-  
+
     ```js
     var alertButtonEl = $('#alert-btn');
     var themeButtonEl = $('#theme-btn');
@@ -395,7 +395,7 @@ We will use jQuery to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Click-Events/README.md`.
 
-### 6. Student Do: Click Events (15 min) 
+### 6. Student Do: Click Events (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Click-Events/README.md`.
 
@@ -410,7 +410,7 @@ Work with a partner to resolve the following issues:
 
 * As a user, I should be able to single-click the "Generate Password" button to generate a new password.
 
-* As a user, I should be able to generate a 15-character password upon click. 
+* As a user, I should be able to generate a 15-character password upon click.
 
 ## Expected Behavior
 
@@ -434,11 +434,11 @@ The following image demonstrates the web application's appearance and functional
 
 ---
 
-## 💡 Hint 
+## 💡 Hint
 
 * How can we ensure that our HTML elements have the correct event listeners attached to them?
-  
-## 🏆 Bonus 
+
+## 🏆 Bonus
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
@@ -447,7 +447,7 @@ If you have completed the activity and want to further your knowledge, work thro
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 7. Instructor Review: Click Events (10 min) 
+### 7. Instructor Review: Click Events (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -460,19 +460,19 @@ If you have completed the activity and want to further your knowledge, work thro
   * ✔️ Correct selector
 
   * ✔️ `click`, not `dblclick`
-  
+
   * ✔️ The password is displayed to the page
 
-* Open `04-Stu_Click-Events/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `04-Stu_Click-Events/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 The jQuery selector at the top of the file used the incorrect selector syntax and should select by ID and not class:
-  
+
     ```js
     var passwordBtnEl = $('#password-btn');
     ```
 
   * 🔑 Because the `.on()` method will listen for any valid browser event, we can simply change it to say `click`:
-  
+
     ```js
     passwordBtnEl.on('click', function () {
     ```
@@ -485,7 +485,7 @@ If you have completed the activity and want to further your knowledge, work thro
     ```
 
   * We create the variables first, then the functionality, then the event listener bindings. This approach ensures that everything exists before we put it to use in the JavaScript.
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Could we listen for both click and double-click events on one element?
@@ -517,11 +517,11 @@ If you have completed the activity and want to further your knowledge, work thro
     ```js
     formEl.on('submit', handleFormSubmit);
     ```
-  
+
   * We use the jQuery `.val()` method on form elements to retrieve the input values:
 
     ```js
-    firstNameEl.val() 
+    firstNameEl.val()
     ```
 
   * Because there can be more than one checked item, we need to select the checked elements and store them in an array using the jQuery `$.each()` method:
@@ -541,7 +541,7 @@ If you have completed the activity and want to further your knowledge, work thro
     ```js
     $('input[type="text"]').val('');
     $('input[type="email"]').val('');
-    $('input[type="checkbox"]').prop('checked', false); 
+    $('input[type="checkbox"]').prop('checked', false);
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -567,7 +567,7 @@ Work with a partner to implement the following user storys:
 
 * As an online shopper, I want to be able to add items to my shopping list so that I can view them all in one place.
 
-* As an online shopper, I want to be able to quickly add another item to my list. 
+* As an online shopper, I want to be able to quickly add another item to my list.
 
 ## Acceptance Criteria
 
@@ -577,7 +577,7 @@ Work with a partner to implement the following user storys:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [jQuery documentation on forms](https://api.jquery.com/category/forms/)
 
@@ -598,8 +598,8 @@ The following image demonstrates the web application's appearance and functional
 ## 🏆 Bonus
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
- 
-* How can we reset form elements using plain JavaScript? 
+
+* How can we reset form elements using plain JavaScript?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
@@ -623,7 +623,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ✔️ Validating form submission
 
-* Open `06-Stu_Form-Elements/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `06-Stu_Form-Elements/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 We attach the `submit` event to the form element using `.on()`:
 
@@ -636,7 +636,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     ```js
     var shoppingItem = $('input[name="shopping-input"]').val();
     ```
-  
+
   * 🔑 If we click Submit and nothing is in the `<input>`, do nothing:
 
     ```js
@@ -660,104 +660,140 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 11. Instructor Demo: DOM Traversal (5 min) 
+### 11. Instructor Demo: DOM Traversal (5 min)
 
-* Open `07-Ins_Dom-Traversal/index.html` in the browser and demonstrate the following:
-  
-  * 🔑 We use traversal methods to select different elements and change the styling.
-  
-  * 🔑 We can travel down through the children elements or up through the parent elements.
+* Open `07-Ins_Dom-Traversal/index.html` in the browser and open the Elements tab in DevTools to demonstrate the following:
 
-* Open `07-Ins_Dom-Traversal/index.html` in your IDE and show the following:
-  
-  * We notice the position of the empty `<div>` in the markup:
+  * 🔑 Explain the element hierarchical structure of the markup. Expand all the elements on the page in the Elements tab, including the `<ul>`.
 
-    ```html
-    <div id="top"></div>
-    ```
+  * Explain that all the visible elements on the page are children or grandchildren to the `<main id="top">` element.
 
-* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and demonstrate the following:
+  * In the Elements tab, examine the `<script>` elements at the bottom of the `<body>` for jQuery and the `script.js` file.
 
-  * From the empty `<div>`, we can select elements in the DOM tree:
-  
-    ```js
-    $('#top').siblings().first().addClass('p-5').css('border', '#1bbc9b solid 2px');
-    ```
+* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and notice that JavaScript statements are commented. Only uncomment the requested lines to reveal each effect on the webpage.
 
-  * We can chain methods together to combine searches.
-
-  * We can nest selectors inside of jQuery methods:
+  * Uncomment the lines 3 and 4 to illustrate which elements are selected by the jQuery traversal methods:
 
     ```js
-    $('#top').siblings().eq(4).append($('<li>Classmates</li>'));
+    $('#top').children().css('color', 'yellow');
+    console.log($('#top').children());
     ```
-  
-  * We can use `.css()` at each search to see which elements were returned.
+
+* Refresh `07-Ins_Dom-Traversal/index.html` in your browser to display how the webpage has been modified.
+
+  * Keep the console in DevTools open to view any logs. We will continually refresh this webpage to view DOM changes after each uncommented line.
+
+  * Note that we can chain traversal methods to the jQuery selector to select descendants or ancestors.
+
+  * Note that the `children()` traversal method only affects direct children. The reason why the list items also have yellow font is because the unordered list parent element `<ul>` was assigned the css rule `{ color: yellow; }` which affects the list items, as can be seen in the browser's Elements tab.
+
+  * In the console, we can see the log of the children of the element `<main id="top">` and its corresponding index starting with index 0. Note that only the direct children, not any further nested elements like the `<li>` elements are logged.
+
+* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and uncomment line 7 and explain the following:
+
+  * The traversal method `eq(0)` was chained to the previous statement. Chaining allows us to further select elements from the array of children elements selected previously by the index number.
+
+  * The `addClass()` method was used to add the class `boxy` to the `<h1>`.
+
+* Refresh `07-Ins_Dom-Traversal/index.html` in your browser to display how the webpage has been modified.
+
+  * Open the Elements tab and select the `<h1>` to view the `.boxy` class selector and its corresponding CSS rules or view `style.css` in the IDE.
+
+  * Notice that although the text color was changed to red in the class rule, it was overwritten by the `css()` method due to its cascading priority. The `css(color, red)` method can be chained to this statement to override the previous `css(color, yellow)` statement.
+
+* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and uncomment line 10 and explain the following:
+
+  * Note that in this statement we select the `<ul>` in the array of children elements to append an additional list item.
+
+  ```js
+  $('#top').children().eq(4).append($('<li>Classmates</li>'));
+  ```
+
+* Refresh `07-Ins_Dom-Traversal/index.html` in your browser to display how the webpage has been modified.
+
+* Open `07-Ins_Dom-Traversal/assets/js/script.js` in your IDE and uncomment line 13 and explain the following:
+
+  * Note that in the following statement, we select the `<ul>` this time by filtering the array to find the '<ul>' element.
+
+  ```js
+  $('#top').children('ul').children().addClass('bg-primary text-dark mb-3 p-3').css('border-radius', '.4rem');
+  ```
+
+  * In the preceding statement, methods are chained to select the children of the `<ul>`, the `<li>`. A class and a CSS rule are added to the list items by chaining additional methods.
+
+* Refresh `07-Ins_Dom-Traversal/index.html` in your browser to display how the webpage has been modified.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the name of the method to traverse down one level to the descendant elements?
+  * ☝️ What is the name of the jQuery traversal method that will only select direct descendants?
 
-  * 🙋 `.children()` 
-  
+  * 🙋 `.children()`
+
+  * ☝️ If the jQuery selector returns an array of elements, which method can select the first element?
+
+  * 🙋 `eq(0)`
+
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Dom-Traversal/README.md`.
 
-### 12. Student Do: DOM Traversal (15 min) 
+### 12. Student Do: DOM Traversal (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_Dom-Traversal/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-```md
-# 📖 Implement Tic-Tac-Toe Automation
+  ```md
+  # 📖 Implement Tic-Tac-Toe Automation
 
-Work with a partner to implement the following user story:
+  Work with a partner to implement the following user story:
 
-* As a game developer, I want to automate certain aspects of Tic-Tac-Toe.
+  * As a game developer, I want to programmatically change the board style.
 
-## Acceptance Criteria
+  * As a game developer, I want to programmatically add the winning move.
 
-* It's done when the board's tiles are automatically styled on page load.
+  ## Acceptance Criteria
 
-* It's done when the X player is blocked from winning.
+  * It's done when the board's tiles are automatically styled on page load.
 
-* It's done when the O player has won.
+  * It's done when the X player is blocked from winning.
 
-## 📝 Notes
+  * It's done when the O player has won.
 
-Refer to the following documentation: 
+  * It's done when all traversals begin the `<main>` element.
 
-[jQuery documentation on traversing](https://api.jquery.com/category/traversing) 
+  ## 📝 Notes
 
-## Assets
+  Refer to the following documentation:
 
-The following image demonstrates the web application's appearance and functionality:
+  [jQuery Docs on Traversing](https://api.jquery.com/category/traversing)
 
-![The tic-tac-toe board shows that O is victorious](./Images/01-solution-screenshot.png)
+  [jQuery Docs on Markup Changes](https://api.jquery.com/text/)
 
----
+  ## Assets
 
-## 💡 Hints
+  The following image demonstrates the web application's appearance and functionality:
 
-* There are multiple ways to accomplish a goal using method-chaining!
-  
-## 🏆 Bonus 
+  ![A Tic-Tac-Toe board shows that the O player has won the game.](./Images/01-solution-screenshot.png)
 
-If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+  ---
 
-* What are some alternative methods to traverse up and down the DOM tree? 
+  ## 💡 Hint
 
-Use [Google](https://www.google.com) or another search engine to research this.
+  * The starting point for all the the traversals in this activity must begin at the `<main id="root">`, which has been assigned for you as `rootEl`.
 
-```
+  ## 🏆 Bonus
+
+  If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
+
+  * What are some alternative methods to traverse up and down the DOM tree? Use [Google](https://www.google.com) or another search engine to answer this question.
+  ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: DOM Traversal (10 min) 
+### 14. Instructor Review: DOM Traversal (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -767,47 +803,45 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-  * ✔️ `closest()`, `find()` traverse
+  * ✔️ `children`, `eq()`, traversal methods for nested elements
 
   * ✔️ Method chaining
 
-  * ✔️ `first()`, `last()`, `eq()` select
+  * ✔️ `text()`
 
-* Open `08-Stu_Dom-Traversal/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `08-Stu_Dom-Traversal/Solved/assets/js/script.js` in your IDE and explain the following:
 
-  * 🔑 We use the `find()` method to search all descendant elements with a selector. Then we use the `css()` method to change the styling:
+  * The starting point of the traversals at `<main id="root">` has been assigned to `rootEl`.
+
+  * 🔑 To select the background color for all the boxes, we must select the children of the `<ul>`, then apply the CSS rule to these elements with `css()`.
 
     ```js
-    rootEl.find("li").css("background-color", "white");
+    rootEl.children('ul').children().css('background-color', 'white');
     ```
-  
-  * 🔑 We can chain the methods together to combine searches. We can compartmentalize the search by row to make them more legible:
+
+  * 🔑 We can chain the methods together to combine searches to further filter down into nested elements.
+
+  * Select the last row since it contains the winning move.
 
     ```js
-    var rowThree = rootEl.children().last().children();
+    var rowThree = rootEl.children('ul').eq(2);
     ```
-  
-  * 🔑 We use `first()`, to select the first element of the set of returned elements. We use the `text("O")` to insert the text O:
+
+  * 🔑 We use `eq(0)`, to select the first element of the last row. We use the `text('O')` to insert the text O into the first box of row three:
 
     ```js
-    rowThree.first().text("O");
-    ```
-  
-  * 🔑 We use `closest("main")`, to select all the ancestor elements that is a `<main>`:
-
-    ```js
-    $(".item-c2").closest("main").children().children().eq(0).text("O");
+    rowThree.children().eq(0).text('O');
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Which of the methods that we used begins a search with itself?
+  * ☝️ Which jQuery method is used to add text to an element?
 
-  * 🙋 `closest()` 
+  * 🙋 `text()`
 
-  * ☝️ What is the utility of traversal methods?
+  * ☝️ What is the use of traversal methods?
 
-  * 🙋 Allows selection of elements when using the selector is not possible.
+  * 🙋 Allows selection of elements when using the selector is not possible, for instance for dynamically created elements.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -817,24 +851,24 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * In preparation for the activity, ask TAs to Slack the instruction text to the students in their class-specific channel.
 
-### 15. Instructor Demo: Event Delegation (5 min) 
+### 15. Instructor Demo: Event Delegation (5 min)
 
-* Open `09-Ins_Event-Delegation/index.html` in your browser and demonstrate the following: 
+* Open `09-Ins_Event-Delegation/index.html` in your browser and demonstrate the following:
 
   * 🔑 We see a white message board with a Show Letters button.
 
   * 🔑 When we click the Show Letters button, that button disappears and instead we see buttons with the letters of the alphabet on them. We also see a Clear button.
-  
+
   * 🔑 When we click on a letter button, that letter is rendered on the message board.
 
   * 🔑 When we click the Clear button, the message board is cleared.
 
-* Open `09-Ins_Event-Delegation/assets/js/script.js` in your IDE and demonstrate the following:  
+* Open `09-Ins_Event-Delegation/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 We have a few `click` events going on. While we could use the jQuery `.click()` method, it would only work for elements that exist on the page at the time `click()` is used. But our letter buttons are dynamically created elements, meaning we'd need to use event delegation to account for them.
-  
+
   * 🔑 Therefore, we must delegate the event listener to the parent element, `<div id="buttons">`, because the letters are not available when the `document` loads:
-  
+
     ```js
     buttonListEl.on('click', '.letter-button', function (event) {
       var displayLetterEl = $('<div>');
@@ -848,20 +882,20 @@ Use [Google](https://www.google.com) or another search engine to research this.
     ```
 
   * 🔑 We use `.on()` to attach the `click` event so that we only listen for the event on the descendants with the class selector `.letter-button`.
-  
-  * 🔑 We retrieve the user's selection using `$(event.target)` and assign the text content to the letter's `data-letter` attribute. 
-  
+
+  * 🔑 We retrieve the user's selection using `$(event.target)` and assign the text content to the letter's `data-letter` attribute.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ Is it necessary to use the `.on()` method instead of the `.click()` method when delegating events?
 
-  * 🙋 Yes, to leverage the `.on()` method's extra feature that filters the descendant elements. 
+  * 🙋 Yes, to leverage the `.on()` method's extra feature that filters the descendant elements.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Event-Delegation/README.md`.
 
-### 16. Student Do: Event Delegation (15 min) 
+### 16. Student Do: Event Delegation (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Event-Delegation/README.md`.
 
@@ -876,33 +910,33 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when each item's Remove button can be clicked to remove its respective shopping list item. 
+* It's done when each item's Remove button can be clicked to remove its respective shopping list item.
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
 [jQuery documentation on event delegation](https://learn.jquery.com/events/event-delegation/)
 
 ## 💡 Hints
 
 * Use your knowledge in DOM traversal to select an element's parent.
-  
+
 * The jQuery method for deleting an element is `.remove()`.
 
 ## 🏆 Bonus
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* What are some alternatives to using jQuery? Discuss the merits with your partner. 
+* What are some alternatives to using jQuery? Discuss the merits with your partner.
 
-You can read this [guide to whether you need jQuery](http://youmightnotneedjquery.com/) to see some alternatives. 
+You can read this [guide to whether you need jQuery](http://youmightnotneedjquery.com/) to see some alternatives.
 
 ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 17. Instructor Review: Event Delegation (15 min) 
+### 17. Instructor Review: Event Delegation (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -918,7 +952,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   * ✔️ `.parent()`
 
-* Open `10-Stu_Event-Delegation/Solved/assets/js/script.js`in your IDE and explain the following: 
+* Open `10-Stu_Event-Delegation/Solved/assets/js/script.js`in your IDE and explain the following:
 
   * 🔑 We can attach the `on()` event listener to the parent element, `shoppingListEl`, to listen for the click on the shopping list item buttons:
 
@@ -960,7 +994,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
 * Explain that in this class, we will learn about a CSS framework called **Bootstrap**.
 
-* Liken Bootstrap to jQuery, but for CSS instead of JavaScript. 
+* Liken Bootstrap to jQuery, but for CSS instead of JavaScript.
 
 * Explain that Bootstrap is a **CSS Framework** and is essentially a very large stylesheet that offers a lot of solutions for layout and design needs&mdash;reducing the amount of custom CSS that developers need to create for their apps.
 
@@ -984,7 +1018,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
 * Explain that all of this is built using CSS properties that we already know; Bootstrap has simply done a lot of the work for us. All we have to do is learn how to apply their prebuilt CSS classes, and we can use their styles! This can save developers valuable time when working on long, intense projects.
 
-### 19. Instructor Demo: Bootstrap Components (5 min) 
+### 19. Instructor Demo: Bootstrap Components (5 min)
 
 * Open `11-Ins_Bootstrap-Components/index.html` in your browser and walk through each example:
 
@@ -1014,7 +1048,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Bootstrap-Components/README.md`.
 
-### 20. Student Do: Bootstrap Components (15 min) 
+### 20. Student Do: Bootstrap Components (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_Bootstrap-Components/README.md`
 
@@ -1043,7 +1077,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [Bootstrap documentation on components](https://getbootstrap.com/docs/4.5/components/)
 
@@ -1065,14 +1099,14 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * How did Bootstrap come to be, and how are CSS frameworks like it useful for developers? 
+  * How did Bootstrap come to be, and how are CSS frameworks like it useful for developers?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 21. Instructor Review: Bootstrap Components (10 min) 
+### 21. Instructor Review: Bootstrap Components (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1088,7 +1122,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   * ✔️ Some components rely on the Bootstrap JavaScript to work.
 
-* Open `12-Stu_Bootstrap-Components/Solved/index.html` in your IDE and explain the following: 
+* Open `12-Stu_Bootstrap-Components/Solved/index.html` in your IDE and explain the following:
 
   * 🔑 Everything implemented here can be found in the documentation and sample code.
 
@@ -1136,7 +1170,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   * 🙋 Most likely not; we might want to create some left and right columns to help put more content higher up on the page.
 
-### 22. Instructor Demo: Bootstrap Layout (5 min) 
+### 22. Instructor Demo: Bootstrap Layout (5 min)
 
 * Open `13-Ins_Bootstrap-Layout/index.html` in your browser and demonstrate the following:
 
@@ -1164,7 +1198,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Bootstrap-Layout/README.md`.
 
-### 23. Student Do: Bootstrap Layout (15 min) 
+### 23. Student Do: Bootstrap Layout (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_Bootstrap-Layout/README.md`.
 
@@ -1185,7 +1219,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   ## 📝 Notes
 
-  Refer to the following documentation: 
+  Refer to the following documentation:
 
   [Bootstrap documentation on the grid](https://getbootstrap.com/docs/4.5/layout/grid/)
 
@@ -1205,7 +1239,7 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-  * What are some ways Chrome DevTools can demystify the CSS powering the grid? 
+  * What are some ways Chrome DevTools can demystify the CSS powering the grid?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
@@ -1228,10 +1262,10 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
   * ✔️ We don't need to take up the full width.
 
-* Open `14-Stu_Bootstrap-Layout/Solved/index.html` in your IDE and explain the following: 
+* Open `14-Stu_Bootstrap-Layout/Solved/index.html` in your IDE and explain the following:
 
-  * 🔑 Every grid layout we create starts with an HTML element receiving a class of `row` and turns it into a flexbox layout. 
-  
+  * 🔑 Every grid layout we create starts with an HTML element receiving a class of `row` and turns it into a flexbox layout.
+
   * 🔑 Walk through this portion of the solution HTML to explain the column sizing at different breakpoints and the grid alignment with `align-items-end`:
 
     ```html
@@ -1256,17 +1290,17 @@ You can read this [guide to whether you need jQuery](http://youmightnotneedjquer
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What do the `-sm`, `-md`, and `-lg` in the class names do for us? 
+  * ☝️ What do the `-sm`, `-md`, and `-lg` in the class names do for us?
 
   * 🙋 They instruct the columns to be different sizes on different screen widths using media queries.
 
-  * ☝️ Did anyone find anything interesting in the documentation that we didn't use here? 
+  * ☝️ Did anyone find anything interesting in the documentation that we didn't use here?
 
   * 🙋 We can automatically size columns with simple `col` classes and reorder them, amongst many other things!
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation on the grid](https://getbootstrap.com/docs/4.5/layout/grid/), and stay for office hours to ask for help. Use the Bootstrap examples provided in the documentation to give yourself a starting point, then continue to tweak the class names to try and configure different layouts. Having a good understanding of CSS flexbox properties will ultimately be the best way to learn it too. 
+  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation on the grid](https://getbootstrap.com/docs/4.5/layout/grid/), and stay for office hours to ask for help. Use the Bootstrap examples provided in the documentation to give yourself a starting point, then continue to tweak the class names to try and configure different layouts. Having a good understanding of CSS flexbox properties will ultimately be the best way to learn it too.
 
 * Answer any questions before proceeding to the next demo.
 
