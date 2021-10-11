@@ -12,13 +12,13 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 * On Day 2 and Day 3, make sure you work in an incognito window for each activity to avoid unruly behavior. It would be a good idea to have students do the same.
 
-* Take some time to refresh yourself on how the service worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
+* Take some time to refresh your memory of how the service worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
 * On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
 * The homework uses the Codemirror library, but they should not have to edit that file in any way to complete the homework.
 
-* PWAs can be frustrating at times, so be compassionate if a student is having trouble grasping it.
+* PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 
 ## Career Connection
 
