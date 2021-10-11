@@ -30,7 +30,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 * In the next unit, students will be getting their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
 
-* Make sure that you are familiar with components, state, and hooks before jumping into the lesson.
+* Make sure that you are familiar with components, state, and hooks before starting the lesson.
 
 * We are getting to the end of the boot camp and students are probably starting to feel the fatigue. Try to keep the morale high!
 
@@ -50,7 +50,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Unit 19 Homework](../../../01-Class-Content/19-PWA/02-Homework)
 
-### Slide Decks
+### Slide Deck
 
   * [Unit 19: PWA](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
 
