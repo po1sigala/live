@@ -1,6 +1,6 @@
 # 🐛 The Bundle Command Fails
 
-Work with a partner to resolve the following issue(s):
+Work with a partner to resolve the following issue:
 
 * As a developer, I should be able to create a bundle from the command line.
 
@@ -14,11 +14,13 @@ When a developer executes the build command, an error message is displayed in th
 
 ## Steps to Reproduce the Problem
 
-1. Execute the command `npm install`, to download the web app's dependencies.
+To reproduce the problem, follow these steps:
 
-2. Execute the command, `npm run build`, from the command line to create a bundle.
+1. Execute the command `npm install` to download the web app's dependencies.
 
-3. Instead of a success message that states a bundle is created, an error message indicates the bundle process failed.
+2. Execute the command `npm run build` from the command line to create a bundle.
+
+3. Instead of a success message that states a bundle is created, an error message indicates that the bundle process failed.
 
 ## Assets
 
@@ -36,7 +38,7 @@ How are the bundles being generated?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What does chunking do for us?
+* What does lazy loading do for us?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

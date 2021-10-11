@@ -24,7 +24,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## 💡 Hints
 
-How do we ensure the format of the HTML file that's generated follows with our template, `index.html`?
+How do we ensure that the format of the HTML file that's generated follows with our template, `index.html`?
 
 ## 🏆 Bonus
 

@@ -8,23 +8,23 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It is done when a production ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
+* It is done when a production-ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
   
-* It is done when watch mode is initiated from the command line using the command, `npm run watch`, as indicated in the following screenshot.
+* It is done when watch mode is initiated from the command line using the command `npm run watch`, as indicated in the screenshot below.
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-* [Webpack Docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
+* [Webpack docs on watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
 
-* [Webpack Doc on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
+* [Webpack docs on npm scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
 
 ## Assets
 
-The following image demonstrates Watch mode is currently on:
+The following image demonstrates watch mode is currently on:
 
-![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
+![The command line displays the webpack watch command.](./Assets/watch-terminal.png)
 
 ---
 
@@ -32,7 +32,7 @@ The following image demonstrates Watch mode is currently on:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we implement Watch mode in production?
+* How can we implement watch mode in production?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
