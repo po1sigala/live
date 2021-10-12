@@ -1,4 +1,4 @@
-# 📖 Implement a Manifest.json file with Webpack
+# 📖 Implement a Manifest.json File with Webpack
 
 Work with a partner to implement the following user story:
 
@@ -26,7 +26,7 @@ How could our JSON be represented in a JavaScript object?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What are each of the keys in a `manifest.json` file responsible for? 
+* What is each key in a `manifest.json` file responsible for? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

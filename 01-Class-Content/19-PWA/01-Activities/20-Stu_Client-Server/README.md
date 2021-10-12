@@ -1,4 +1,4 @@
-# 🏗️  Start The Client and Backend Servers Simultaneously
+# 🏗️  Start the Client and Backend Servers Simultaneously
 
 Work with a partner to implement the following user story:
 
@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It is done when I have moved the existing code into a new `client` folder.
 
-* It is done when I have created a simple express server in the `server` folder.
+* It is done when I have created a simple Express server in the `server` folder.
 
 * It is done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
 
@@ -22,9 +22,9 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-* Concurrently can also be configured to shorten npm commands. How can we include this in our solution?
+* `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
 
-* Remember to close any other servers you may have running to free up the needed ports.
+* Remember to close any other servers you may have running in order to free up the needed ports.
 
 ## 🏆 Bonus
 

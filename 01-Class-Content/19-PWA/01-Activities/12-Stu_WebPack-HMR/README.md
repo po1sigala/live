@@ -2,25 +2,25 @@
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add a webpack-dev-server to my project so that I can use hot module replacement (HMR) to update the page without a full page refresh.
+* As a developer, I want to add a webpack-dev-server to my project so that I can use Hot Module Replacement (HMR) to update the page without a full page refresh.
 
 * As a developer, I want to learn how to configure webpack-dev-server so that it can test my project in a way that allows my work to continue without much downtime.
 
 ## Acceptance Criteria
 
-* It is done when I installed `webpack-dev-server` as a `devDependency`.
+* It is done when I have installed `webpack-dev-server` as a `devDependency`.
 
 * It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
 
 * It is done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
 
-* It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set it's value to `only`.
+* It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to `only`.
 
 * It is done when I have opened `Unsolved/src/index.js` and made the following changes:
 
-  * Import the css file from the css folder.
+  * Imported the CSS file from the CSS folder.
 
-  * Added logic to accept hot module replacement (HMR), as this is an opt-in feature.
+  * Added logic to accept Hot Module Replacement (HMR), as this is an opt-in feature.
 
 * It is done when I have modified or added some content to the `style.css` file. For example, try changing the `h1` font weight in the `style.css` file and save it. The changes should be reflected in the browser.
 
@@ -30,9 +30,9 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation:
 
-* [Webpack Docs on hot module replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr)
+* [Webpack docs on Hot Module Replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr)
 
-* [Webpack Docs on webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+* [Webpack docs on webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
 
 ## 💡 Hints
 

@@ -1,4 +1,4 @@
-# 📖 Implement Caching for CSS and JS files
+# 📖 Implement Caching for CSS and JS Files
 
 Work with a partner to implement the following user story:
 
@@ -10,19 +10,19 @@ Work with a partner to implement the following user story:
 
 * It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-* It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
+* It is done when I have registered a new workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
 * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
 * It is done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-* It is done when I have registered a route for the caching of static assets (JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
+* It is done when I have registered a route for the caching of static assets (such as JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request. This is accomplished in the `src/sw.js` file.
 
 ## 📝 Notes
 
 Refer to the documentation:
 
-* [Google Docs on Common Recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
+* [Google docs on common recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
 
 ## 💡 Hints
 
@@ -34,7 +34,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is the difference between GenerateSW and InjectManifest?
+* What is the difference between `GenerateSW` and `InjectManifest`?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
