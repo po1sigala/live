@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of IndexedDB
 
-Work with a partner to add comments describing the functionality of the code found in the [database.js](./Unsolved/src/js/database.js) file.
+Work with a partner to add comments that describe the functionality of the code found in the [database.js](./Unsolved/src/js/database.js) file.
 
 ## 📝 Notes
 
