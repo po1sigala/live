@@ -2,9 +2,9 @@
 
 ## Overview
 
-In this unit, students will be learning about Progressive Web Applications (PWAs) and the tools used to create them. We want to stress that some of these tools -- such as Webpack, service workers, and IndexedDB -- are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like Webpack and Workbox can optimize and boost the performance of web applications so that more users can comfortably use your application.
+In this unit, students will be learning about Progressive Web Applications (PWAs) and the tools used to create them. We want to stress that some of these tools -- such as webpack, service workers, and IndexedDB -- are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use your application.
 
-We also want to use this unit as a precursor to the upcoming React unit, because Webpack is an important part of React. Students will be able to see the client-server architecture, which is different from the MVC model that they have been using in the previous few units.
+We also want to use this unit as a precursor to the upcoming React unit, because webpack is an important part of React. Students will be able to see the client-server architecture, which is different from the MVC model that they have been using in the previous few units.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
 
@@ -70,19 +70,19 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [MDN Web Docs on PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
-* [Webpack Documentation](https://webpack.js.org/concepts/)
+* [Webpack documentation](https://webpack.js.org/concepts/)
 
-* [Babel Documentation](https://babeljs.io/)
+* [Babel documentation](https://babeljs.io/)
 
-* [MDN Web Docs on Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+* [MDN Web Docs on service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
-* [Google Documentation on Workbox](https://developers.google.com/web/tools/workbox)
+* [Google Documentation on workbox](https://developers.google.com/web/tools/workbox)
 
 * [MDN Web Docs on Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
 * [MDN Web Docs on IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
-* [MDN Web Docs on the Manifest File](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+* [MDN Web Docs on the manifest file](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
