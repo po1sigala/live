@@ -2,15 +2,15 @@
 
 ## Overview
 
-In this unit, we'll learn about Progressive Web Apps (PWAs), which blend the benefits of a traditional browser experience with those of a mobile application. PWAs use the service worker and cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection.
+In this unit, you'll learn about Progressive Web Apps (PWAs), which blend the benefits of a traditional browser experience with those of a mobile application. PWAs use the Service Worker and Cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection.
 
-Many of the tools and technologies used to create PWAs can be leveraged in applications that help improve performance and accessibility to web applications. One of these tools is services workers, which can be used to cache static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to reduce network bandwidth and improve overall load times.
+Many of the tools and technologies used to create PWAs can be leveraged to help improve application performance and accessibility. One of these tools is services workers, which can be used to cache static CSS, JavaScript, HTML files, images, and even API requests. This allows developers to reduce network bandwidth and improve overall load times.
 
-In previous units, we learned that JavaScript runs on a single thread, which is something that developers need to consider with regard to performance. The good news is that services workers run on a completely different thread.
+In previous units, you learned that JavaScript runs on a single thread, which is something that developers need to consider with regard to performance. The good news is that services workers run on a completely different thread.
 
-To unlock the power of services workers, we will use webpack and workbox. Workbox is a Google library that makes it much easier to set up a service worker. By using webpack, we can deliver applications with optimized code called bundles. Webpack allows us to implement CSS loaders to make our CSS files more modular. 
+To unlock the power of services workers, you will use webpack and workbox. Workbox is a Google library that makes it much easier to set up a service worker. By using webpack, you can deliver applications with optimized code, called bundles. Webpack also allows you to implement CSS loaders to make your CSS files more modular. 
 
-We will also implement a transpiler called Babel so that we can use ES6 syntax in the browser. Finally, we will learn how to use webpack plugins.
+You will also implement Babel, a transpiler that allows you to use ES6 syntax in the browser. Finally, you will learn how to use webpack plugins.
 
 ## Key Topics
 
@@ -24,7 +24,7 @@ The following topics will be covered in this unit:
 
 * [ES6 Import Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
-* [CSS loader](https://www.npmjs.com/package/css-loader)
+* [CSS loaders](https://www.npmjs.com/package/css-loader)
 
 * [Babel](https://babeljs.io/)
 

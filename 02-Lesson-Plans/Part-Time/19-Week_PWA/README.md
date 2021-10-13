@@ -2,21 +2,21 @@
 
 ## Overview
 
-In this unit, students will be learning about Progressive Web Applications (PWAs) and the tools used to create them. We want to stress that some of these tools -- such as webpack, service workers, and IndexedDB -- are not exclusive to PWAs. These are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use your application.
+In this unit, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
 
-We also want to use this unit as a precursor to the upcoming React unit, because webpack is an important part of React. Students will be able to see the client-server architecture, which is different from the MVC model that they have been using in the previous few units.
+This unit is a precursor to the upcoming React unit, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
 Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
 
 ## Instructor/TA Notes
 
-* On Day 2 and Day 3, make sure you work in an incognito window for each activity to avoid unruly behavior. It would be a good idea to have students do the same.
+* On Day 2 and Day 3, make sure you work in an incognito window for each activity to avoid caching issues. It would be a good idea to have students do the same.
 
-* Take some time to refresh your memory of how the service worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the service worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
+* Take some time to refresh your memory on how the Service Worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the Service Worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
 * On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-* The homework uses the Codemirror library, but they should not have to edit that file in any way to complete the homework.
+* The homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
 
 * PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 
@@ -28,7 +28,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 ## Heads-Up
 
-* In the next unit, students will be getting their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
+* In the next unit, students will get their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
 
 * Make sure that you are familiar with components, state, and hooks before starting the lesson.
 
@@ -66,7 +66,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Resources
 
-* [Google Documentation on Lighthouse](https://developers.google.com/web/tools/lighthouse)
+* [Google documentation on Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
 * [MDN Web Docs on PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
@@ -76,7 +76,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [MDN Web Docs on service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
-* [Google Documentation on workbox](https://developers.google.com/web/tools/workbox)
+* [Google documentation on workbox](https://developers.google.com/web/tools/workbox)
 
 * [MDN Web Docs on Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
