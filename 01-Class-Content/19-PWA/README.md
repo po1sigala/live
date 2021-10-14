@@ -8,7 +8,7 @@ Many of the tools and technologies used to create PWAs can be leveraged to help 
 
 In previous units, you learned that JavaScript runs on a single thread, which is something that developers need to consider with regard to performance. The good news is that services workers run on a completely different thread.
 
-To unlock the power of services workers, you will use webpack and workbox. Workbox is a Google library that makes it much easier to set up a service worker. By using webpack, you can deliver applications with optimized code, called bundles. Webpack also allows you to implement CSS loaders to make your CSS files more modular. 
+To unlock the power of service workers, you will use webpack and workbox. Workbox is a Google library that makes it much easier to set up a service worker. By using webpack, you can deliver applications with optimized code, called bundles. Webpack also allows you to implement CSS loaders to make your CSS files more modular. 
 
 You will also implement Babel, a transpiler that allows you to use ES6 syntax in the browser. Finally, you will learn how to use webpack plugins.
 
