@@ -1,4 +1,4 @@
-# 🐛 The Delete Button Does Not Remove the Card When Clicked
+# 🐛 The Delete Button Does Not Remove the List Item When Clicked
 
 Work with a partner to resolve the following issues:
 
