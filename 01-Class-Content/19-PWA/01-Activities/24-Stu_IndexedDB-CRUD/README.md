@@ -14,7 +14,7 @@ When a user clicks on the Edit button, a text input is displayed with the list i
 
 ## Actual Behavior
 
-When a user clicks on the item, it is noy removed from the list of tasks.
+When a user clicks on the item, it is not removed from the list of tasks.
 
 When a user clicks the Edit button, a text input does not appear with the list item to be edited. After pressing the Enter key, the list item is not updated properly.
 
