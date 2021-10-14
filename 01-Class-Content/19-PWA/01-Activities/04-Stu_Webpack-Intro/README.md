@@ -4,7 +4,7 @@ Work with a partner to implement the following user story:
 
 * As a developer, I want to bundle the JavaScript file from the command line.
 
-* As a developer, I want to start webpack's Watch Mode from the command line.
+* As a developer, I want to start webpack's watch mode from the command line.
 
 ## Acceptance Criteria
 
@@ -16,15 +16,15 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-* [Webpack docs on watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
+* [Webpack docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
 
-* [Webpack docs on npm scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
+* [Webpack docs on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
 
 ## Assets
 
-The following image demonstrates watch mode is currently on:
+The following image demonstrates that watch mode is currently on:
 
-![The command line displays the webpack watch command.](./Assets/watch-terminal.png)
+![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
 
 ---
 

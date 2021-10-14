@@ -1,4 +1,4 @@
-# 🏗️ Generate an HTML file to serve Webpack Bundles
+# 🏗️ Generate an HTML file to Serve Webpack Bundles
 
 Work with a partner to implement the following user story:
 
@@ -18,19 +18,19 @@ Work with a partner to implement the following user story:
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The output of the loan calculator with 300k loan.](./Assets/loan-calculator.png)
+![The output of the loan calculator with a 300k loan.](./Assets/loan-calculator.png)
 
 ---
 
 ## 💡 Hints
 
-How do we ensure that the format of the HTML file that's generated follows with our template, `index.html`?
+How do we ensure that the format of the HTML file that's generated follows our template, `index.html`?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Why do we have to use the `new` syntax with webpack plugins?
+* Why must we use the `new` syntax with webpack plugins?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

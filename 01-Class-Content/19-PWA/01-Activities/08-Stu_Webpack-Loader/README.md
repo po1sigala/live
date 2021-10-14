@@ -2,51 +2,49 @@
 
 Work with a partner to resolve the following issues:
 
-* As a developer, I want to be able to use Async/Await with webpack.
+* As a developer, I want to be able to use async/await with webpack.
 
 * As a user, I want to be able to get the latest interest rate when I click the appropriate button.
 
 ## Expected Behavior
 
-When I click the `Get the latest interest rate` button, an up-to-date interest rate should appear.
+When I click the "Get the latest interest rate" button, an up-to-date interest rate should appear.
 
 ## Actual Behavior
 
-When a user clicks the `Get the latest interest rate` button, the interest rate does not appear.
+When a user clicks the "Get the latest interest rate" button, an error appears in the console.
 
 ## Steps to Reproduce the Problem
 
 To reproduce the problem, follow these steps:
 
-1. Execute the command `npm install` to download the web app's dependencies.
+1. At the command line, execute the command `npm install` to download the web app's dependencies.
 
-2. Execute the command `npm run watch` to create a bundle.
+2. At the command line, execute the command `npm run watch` to create a bundle.
 
-3. Open the `index.html` file with a live server.
+3. Open the `index.html` file with live server.
 
-4. Click the `Get the latest interest rate` button and check the console in Chrome DevTools.
+4. Click the "Get the latest interest rate" button and check the console in Chrome DevTools.
 
 ## Assets
 
-The following images confirm that a bundle was created by displaying a success message in the terminal:
+The following image confirms that a bundle was created by displaying a success message in the terminal:
 
 ![Get the latest interest rate button in the web application.](./Assets/interest-button.png)
 
-![The latest interest rate being displayed on the web application.](./Assets/interest.png)
+![The latest interest rate is displayed on the web application.](./Assets/interest.png)
 
 ---
 
 ## 💡 Hints
 
-* Which plugins do we need for Async/Await to work in our browser?
-
-* To see the error in the console, open the console window in DevTools and select the Settings button (⚙️). Then select the Preserve log checkbox so the error persists in the console.
+Which plugins do we need for async/await to work in our browser?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What Babel plugin allows object rest and spread operators to be used?
+* What Babel plugin would allow object rest and spread operators to be used?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

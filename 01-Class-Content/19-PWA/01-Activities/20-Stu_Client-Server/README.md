@@ -1,8 +1,8 @@
-# 🏗️  Start the Client and Backend Servers Simultaneously
+# 🏗️  Start the Client and Back-End Servers Simultaneously
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to start the client and backend servers simultaneously so that I can test the full application, not just the client.
+* As a developer, I want to be able to start the client and back-end servers simultaneously so that I can test the full application, not just the client.
 
 ## Acceptance Criteria
 
@@ -24,7 +24,7 @@ Work with a partner to implement the following user story:
 
 * `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
 
-* Remember to close any other servers you may have running in order to free up the needed ports.
+* Remember to close any other servers that you may have running to free up the needed ports.
 
 ## 🏆 Bonus
 

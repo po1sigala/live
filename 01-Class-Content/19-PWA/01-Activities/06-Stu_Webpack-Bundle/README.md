@@ -16,11 +16,11 @@ When a developer executes the build command, an error message is displayed in th
 
 To reproduce the problem, follow these steps:
 
-1. Execute the command `npm install` to download the web app's dependencies.
+1. At the command line, execute the command `npm install` to download the web app's dependencies.
 
-2. Execute the command `npm run build` from the command line to create a bundle.
+2. At the command line, execute the command `npm run build` to create a bundle.
 
-3. Instead of a success message that states a bundle is created, an error message indicates that the bundle process failed.
+3. Instead of a success message that states a bundle is created, an error message indicates the bundle process failed.
 
 ## Assets
 
@@ -38,7 +38,7 @@ How are the bundles being generated?
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What does lazy loading do for us?
+* What does chunking do for us?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

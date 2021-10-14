@@ -1,6 +1,6 @@
 # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
 
-In this mini-project, you are given a simple application that needs to be updated to use webpack, service workers, and IndexedDB -- and we need it to have PWA functionality in order to work properly. Once we have updated our application with these new features, we can deploy it to Heroku. Heroku is not new to us, but we will need to add a handful of special scripts so that it knows to deploy our bundled application.
+In this mini-project, you are given a simple application that needs to be updated to use webpack, service workers, and IndexedDB. In addition, it must have PWA functionality in order to work properly. Once you have updated the application with these new features, you will deploy it to Heroku. Heroku is not new to you, but you will need to add a handful of special scripts so that it knows to deploy your bundled application.
 
 ## User Stories
 
@@ -12,17 +12,17 @@ Work with your group to resolve the following issues:
 
 * As a developer, I want all my scripts to run from the root directory `package.json`.
 
-* As a developer, I want to be able to run in the command line `npm run start` and have both my client and server start.
+* As a developer, I want to be able to run `npm run start` in the command line and have both my client and server start.
 
-* As a developer, I want to be able to run in the command line `npm run start:prod` to run our build script and start our server.
+* As a developer, I want to be able to run `npm run start:prod` in the command line to run our build script and start our server.
 
-* As a developer, I want to be able to run in the command line `npm run server` and have just our server start without the client.
+* As a developer, I want to be able to run `npm run server` in the command line and have just our server start without the client.
 
-* As a developer, I want to be able to run in the command line `npm run build` and have our client run the webpack build script.
+* As a developer, I want to be able to run `npm run build` in the command line and have our client run the webpack build script.
 
-* As a developer, I want to be able to run in the command line `npm run install` and have all of the client's dependencies installed.
+* As a developer, I want to be able to run `npm run install` in the command line and have all of the client's dependencies installed.
 
-* As a developer, I want to be able to run in the command line `npm run client` and have just our client start without the server.
+* As a developer, I want to be able to run `npm run client` in the command line and have just our client start without the server.
 
 ## Acceptance Criteria
 
@@ -54,7 +54,7 @@ The mini-project is complete when the following criteria are met:
 
 * The web application can be installed from the web address provided by Heroku.
 
-* Deployed using Heroku.
+* The web application is deployed using Heroku.
 
 ---
 

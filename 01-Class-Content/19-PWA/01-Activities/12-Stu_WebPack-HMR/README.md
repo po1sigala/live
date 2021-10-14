@@ -1,10 +1,10 @@
-# 📖 Add WebPack Development Server to a Project With Hot Module Replacement (HMR)
+# 📖 Add WebPack Development Server to a Project Using Hot Module Replacement (HMR)
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to add a webpack-dev-server to my project so that I can use Hot Module Replacement (HMR) to update the page without a full page refresh.
+* As a developer, I want to add a `webpack-dev-server` to my project so that I can use Hot Module Replacement (HMR) to update the page without a full page refresh.
 
-* As a developer, I want to learn how to configure webpack-dev-server so that it can test my project in a way that allows my work to continue without much downtime.
+* As a developer, I want to learn how to configure `webpack-dev-server` so that it can test my project in a way that allows my work to continue without much downtime.
 
 ## Acceptance Criteria
 
@@ -20,9 +20,9 @@ Work with a partner to implement the following user story:
 
   * Imported the CSS file from the CSS folder.
 
-  * Added logic to accept Hot Module Replacement (HMR), as this is an opt-in feature.
+  * Added logic to accept Hot Module Replacement (HMR), as this is an optional feature.
 
-* It is done when I have modified or added some content to the `style.css` file. For example, try changing the `h1` font weight in the `style.css` file and save it. The changes should be reflected in the browser.
+* It is done when I have modified or added some content to the `style.css` file. For example, I changed the `h1` font weight in the `style.css` file and saved it; and that change is reflected in the browser.
 
 ## 📝 Notes
 
@@ -42,7 +42,7 @@ Refer to the documentation:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What is another way we can run `webpack-dev-server` without needing to add it to our `package.json` file?
+* What is another way to run `webpack-dev-server` without needing to add it to our `package.json` file?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

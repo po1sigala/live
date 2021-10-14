@@ -10,13 +10,13 @@ Work with a partner to implement the following user story:
 
 * It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-* It is done when I have registered a new workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
+* It is done when I have registered a new Wqorkbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
 * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
 * It is done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-* It is done when I have registered a route for the caching of static assets (such as JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't precached, by matching against the destination of the incoming request. This is accomplished in the `src/sw.js` file.
+* It is done when I have registered a route for the caching of static assets (e.g., JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't pre-cached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
 
 ## 📝 Notes
 
@@ -28,7 +28,7 @@ Refer to the documentation:
 
 * What does the `staleWhileRevalidate` strategy do? Is there another strategy that could be used?
 
-* What are some different methods we can match files we want to cache? How can we use the `destination` property on the `request` object to our advantage?
+* What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 
 ## 🏆 Bonus
 
