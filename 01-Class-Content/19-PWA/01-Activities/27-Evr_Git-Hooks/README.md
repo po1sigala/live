@@ -149,11 +149,11 @@ Remember, though, that everyone on your team would need to set up this Git hook 
 
 ## Resources
 
-* For more information on Git hooks, read the [Git docs on customizing Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
+* For more information on Git hooks, refer to the [Git docs on customizing Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 
-* For a refresher on shell scripting, check out [The Bash Hackers Wiki](https://wiki.bash-hackers.org/).
+* For a refresher on shell scripting, refer to [The Bash Hackers Wiki](https://wiki.bash-hackers.org/).
 
-* Our `post-checkout` hook used a regular expression. For more information, look over the [regular expression syntax cheatsheet from the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
+* Our `post-checkout` hook used a regular expression. For more information, refer to the [MDN Web Docs regular expression syntax cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet).
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -1,30 +1,30 @@
-# 🏗️  Start The Client and Backend Servers Simultaneously
+# 🏗️  Start the Client and Back-End Servers Simultaneously
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to be able to start the client and backend servers simultaneously so that I can test the full application, not just the client.
+* As a developer, I want to be able to start the client and back-end servers simultaneously so that I can test the full application, not just the client.
 
 ## Acceptance Criteria
 
-* It's done when I have moved the existing code into a new `client` folder.
+* It is done when I have moved the existing code into a new `client` folder.
 
-* It's done when I have created a simple express server in the `server` folder.
+* It is done when I have created a simple Express server in the `server` folder.
 
-* It's done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
+* It is done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
 
-* It's done when I have installed the `concurrently` npm package at the root of the project.
+* It is done when I have installed the `concurrently` npm package at the root of the project.
 
-* It's done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
+* It is done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
 
-* It's done when I am able to start the client and the backend server concurrently by running `npm start`.
+* It is done when I am able to start the client and the backend server concurrently by running `npm start`.
 
 ---
 
 ## 💡 Hints
 
-* Concurrently can also be configured to shorten npm commands. How can we include this in our solution?
+* `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
 
-* Remember to close any other servers you may have running to free up the needed ports.
+* Remember to close any other servers that you may have running to free up the needed ports.
 
 ## 🏆 Bonus
 

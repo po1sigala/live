@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of a Workbox Service Worker
 
-Work with a partner to add comments describing the functionality of the code found in [index.js](./Unsolved/src/index.js) and [webpack.config.js](./Unsolved/webpack.config.js).
+Work with a partner to add comments that describe the functionality of the code found in [index.js](./Unsolved/src/index.js) and [webpack.config.js](./Unsolved/webpack.config.js).
 
 ## 📝 Notes
 
