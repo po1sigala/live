@@ -422,7 +422,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Compass/README.md`.
 
-### 9. Student Do: Compass(15 min) 
+### 9. Student Do: Compass (15 min) 
 
 * Direct students to the activity instructions found in `02-Stu_Compass/README.md`, which are also shown below.
 
