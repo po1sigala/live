@@ -10,7 +10,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* This class deals with some abstract topics, so it's important to start a dialogue and keep the conversation going so that students can better grasp these topics and feel comfortable asking questions.
+* Today's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
 * Closures are a large part of the day's activities. If you are feeling a little unsure about them, take some time to become more familiar with them before class.
 
@@ -249,11 +249,11 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Open `16-Stu_Factory-Functions/Solved/index.js` in your IDE and explain the following: 
 
-  * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `student`.
+  * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `studentInfo`.
 
     ```js
-    function Student(name, gradeYear) {
-      let student = {
+    function student(name, gradeYear) {
+      let studentInfo = {
         name: name,
         gradeYear: gradeYear,
       };
@@ -262,28 +262,28 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * Remember, `this` is being bound to the parent object instead of the new one being created.
 
-  * 🔑 If we want to access the `name` and `gradeYear`, we must use the student object we stored it in.
+  * 🔑 If we want to access the `name` and `gradeYear`, we must use the `studentInfo` object we stored it in.
 
     ```js
-    function Student(name, gradeYear) {
-      let student = {
+    function student(name, gradeYear) {
+      let studentInfo = {
         name: name,
         gradeYear: gradeYear,
       };
       return {
         greet: function () {
           console.log(
-            `My name is ${student.name} and I am in ${student.gradeYear} grade`
+            `My name is ${studentInfo.name} and I am in ${studentInfo.gradeYear} grade`
           );
         },
       };
     }
     ```
 
-  * 🔑 Now we create a new student with the `Student` factory function without using the `new` keyword.
+  * 🔑 Now we create a new student with the `student` factory function without using the `new` keyword.
 
     ```js
-    const newStudent = Student('Dominique', '11th');
+    const newStudent = student('Dominique', '11th');
     ```
     
   * If we type `npm test` in the command line, we should see the following:
@@ -309,7 +309,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ### 4. Instructor Demo: Factory vs. Constructor (5 min) 
 
-* Open `17-Ins_Factory-Vs-Constructor/constructor.js` in your IDE and explain the following:
+* Open `17-Ins_Factory-Vs-Constructor/constructor/constructor.js` in your IDE and explain the following:
 
   * Now we'll step back and look at how we've been creating classes in JavaScript so far.
 
@@ -345,7 +345,9 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     console.log(nokia)
     ```
 
-  * If we run this in Node.js, we can see that it is working like we expected.
+* Open `17-Ins_Factory-Vs-Constructor/constructor/index.html` in your browser and navigate to Chrome DevTools to explain the following:
+
+  * We see the following output in the console:
 
     ```
     Phone: ring
@@ -401,7 +403,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * 🔑 This can quickly get out of control if we decide to make additional changes similar to this one.
 
-* Open `17-Ins_Factory-Vs-Constructor/factory-functions.js` in your IDE and explain the following:
+* Open `17-Ins_Factory-Vs-Constructor/factory-function/factory-functions.js` in your IDE and explain the following:
 
   * Let's look at how we can take a composition-based approach with factory functions.
 
@@ -483,7 +485,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     wPool.noise();
     ```
 
-  * If we run this in Node.js, we can see that it is working as expected.
+* Open `17-Ins_Factory-Vs-Constructor/factory-function/index.html` in your browser and navigate to Chrome DevTools to explain the following:
 
   * 🔑 With **inheritance**, we design types based on what they are. With **composition**, we design types based on what they do.
 
@@ -804,9 +806,90 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this unit or completing the **OPTIONAL** activity below. 
 
 * The unit so far has been very abstract so check with the students to see if they have any questions about anything we've covered so far.
+
+* Open [Leetcode](https://leetcode.com/) in your browser and explain the following:
+
+  * Leetcode is a popular platform that allows developers to practice algorithms similar to those they may face in an interview setting. 
+
+  * To use Leetcode, we must first create an account. Leetcode offers both a paid and free version. For most developers, the free version is a great place to start. 
+
+  * After logging in to Leetcode, we click on `Problems` to see a range of practice algorithms. Each algorithm is ranked from `Easy` to `Hard`. When starting out, it is a good idea to start with the `Easy` algorithms to practice the steps needed to solve algorithms and gain confidence. We will be working together on the Square Root Algorithm, an `Easy` problem.
+
+* Open [Leetcode Square Root Algorithm](https://leetcode.com/problems/sqrtx/) in your browser and explain the following:
+
+  * Leetcode offers multiple program languages to code your solution. We select `JavaScript` from the drop down menu at the top. 
+
+  * When solving any algorithm -- either in Leetcode or an interview setting, it is important to first read and understand the directions, especially the `Input` and `Output` expected. Leetcode provides the instructions on the left side of the screen.
+
+  * For this algorithm, the input will always be a non-negative integer defined as `x`. 
+
+  * The output is the square root of `x`. However, the result must be truncated, meaning if the result is 2.8, the algorithm should be returned as a whole integer, or 2. Understanding exactly the output required often provides a clue about how to solve the algorithm. 
+
+  * Once we understand the required input and output, we are ready to pseudocode our algorithm. In an interview, it is important to talk through your solution as you code and not work in silence! Pseudocode is a great way to help organize your thoughts and provide quick talking points.
+
+    ```js
+    // Find the square root of a positive integer `x`
+
+    // Truncate number so that it is a whole number (always round down)
+    ```
+
+  * Next, let's expand the pseudocode by thinking about how we might find the square root of the integer. There are multiple ways to mathematically find the square root of an integer, but in this case we are going to look for perfect squares and return its square root. Otherwise, we can find nearest smaller perfect square of the integer and return the square root of that value. 
+
+    ```js
+    // The square root of 0 is always zero, so if x === 0, we can return x.
+    // The square root of 1 is always 1, so if x === 1, we can return x.
+    // Perfect squares are always whole integers and the product of multiplying an integer by itself ie. 2 * 2 = 4
+    // If an integer is not a perfect square, the result should be rounded down to the square root of the nearest smaller perfect square ie, if input === 5, return 2. 
+    ```
+
+  * Now that we have thought through the process with psuedocode, we can start to think of the JavaScript needed to make our algorithm work. The first line is simple, we can return x if the value of x is 0 or 1.
+
+    ```js
+    if(x === 1 || x=== 0) return x;
+    ```
+
+  * Next, let's add some variables we can use to find our solution. We use `squared` to hold our perfect square and `i` as a counter.
+
+    ```js
+    let squared = 0;
+    let i = 0;
+    ```
+
+  * Since we want to test for perfect squares, we use a `while` loop that will find the perfect square of an increasing number, in our case `i`.  If we find a match, we can return `i`, since that will be the square root. If not, we keep going until the perfect square or `squared` is larger than the value of `x`. When that happens, we know the value we want to return is `i - 1`, since that will be the square root of the nearest, smaller perfect square.  
+ 
+    ```js
+    while (squared < x ) {
+      i++;
+      squared = i * i;
+      if (squared === x) return i;  
+    }
+    return (i-1)
+    ```
+
+  * We run our completed code to see the input and output. If our code passes the tests, it is accepted.
+
+    ```js
+    var mySqrt = function(x) {
+      if(x === 1 || x=== 0) return x;
+      let squared = 0;
+      let i = 0;
+    
+      while (squared < x ) {
+        i++;
+        squared = i * i;
+        if (squared === x) return i;  
+      }
+      return (i-1)
+    }
+   ```
+
+  * In an interview setting, talking through your process as you code is as important as getting the right answer, so make sure to practice thinking through each step to explaining your solution to others.
+
+* If time remains, have students work in pairs to solve a Leetcode algorithm of their choice or have them practice explaining the solution above to their partner. 
+
 
 ### 11. BREAK (30 min)
 

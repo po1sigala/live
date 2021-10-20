@@ -2,11 +2,15 @@
 
 ## Overview
 
-In the class, you will introduce students to Mongoose, a node package that provides a schema-based solution to model your Node application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box. Students will also learn about IndexedDB.
+In this class, you will explain MongoDB skip, sort, and limit methods. You will also introduce students to Mongoose, a Node.js package that provides a schema-based solution that you can use to model your Node.js application data. Students will build upon their knowledge of MongoDB and learn about how Mongoose makes it easier to handle data from the database.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_MongoJS-Review` through `19-Stu-Creating_Object_Stores`.
+* In this lesson, students will complete activities `09-Ins_Cursor-Methods` through `19-Ins_Aggregates`.
+
+* Today's activities do not have a front end and all routes will be tested using Insomnia. Please make sure you have Insomnia installed locally prior to class. Refer to the [Insomnia installation docs](https://insomnia.rest/download) as needed.
+
+* As we continue to work with MongoDB, Mongoose will be the focus of today's activities. Reassure students that Mongoose is simply a "wrapper" around MongoDB that uses a schema to map to a MongoDB collection and makes it easier to manage relationships among data. This relationship is similar to how Sequelize works with MySQL.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
 

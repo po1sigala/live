@@ -6,6 +6,8 @@ In Unit 17, we will shift gears a bit to introduce students to general computer-
 
 We will dissect JavaScript and review how code executes at a granular level. We will also learn about closures and how we can leverage them in our code. We will compare inheritance and composition in application design. And we will review search algorithms and recursion in JavaScript. 
 
+* The Unit 17 activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others. 
+
 For the Unit 17 mini-project, students will practice the technical interview portion of a mock interview for a web-developer job with their peers. They'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
 In Unit 18, we will be introducing students to the NoSQL database with MongoDB and Mongoose. We'll also be showing students how to store data in IndexedDB.
@@ -26,15 +28,19 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 * If students struggle with the `bash shell` activity, `27-Evr_Shell`, walk through it with them using the talking points provided. Otherwise, support the students as they work on the activity and briefly review it at the end. 
 
-* In Unit 18, you'll start working with NoSQL databases using MongoDB. Be sure to have MongoDB installed on your computer. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your computer.
+* In Unit 18, you will focus on NoSQL databases. Be sure to have MongoDB and Compass installed on your machine before the first class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) for instructions.
 
-* Note that students with MacOS running Catalina may need to use brew tap to install MongoDB. Refer to this [blog post about MongoDB's Brew Tap](https://www.mongodb.com/blog/post/mongodbs-official-brew-tap-now-open-and-flowing)
+* Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. To use, make sure that you first have both MongoDB and Node.js installed. For start-up instructions, refer to the [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html).
 
-* When working with IndexedDB, make sure you refresh and or delete your database in IndexedDB in between activities.
+* Mongo Atlas, a fully managed cloud database, will be used to deploy the Unit 18 mini-project to Heroku. For instructions on how to sign up for an account and deploy a free cluster, refer to [Get started free with MongoDB Atlas](https://docs.atlas.mongodb.com/getting-started/).
+
+* Unit 18's activities do not have a front end and all routes will be tested using Insomnia. Please make sure that you have Insomnia installed locally prior to class. Refer to [Insomnia installation docs](https://insomnia.rest/download) as needed.
+
+* Though MongoDB might be new to most learners, Unit 18's activities build on skills developed in earlier units, including Express servers, SQL databases, data relationships, and queries. Where possible, encourage students to make connections to prior learning and start thinking about the role that databases such as MongoDB play in their apps.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 17](../../../01-Class-Content/17-CS/04-Career-Connection/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/04-Important/CAREER-CONNECTION.md).
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 17](../../../01-Class-Content/17-CS/04-Career-Connection/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/04-Career-Connection/README.md).
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -72,7 +78,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [Unit 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
 
-  * [Unit 18: Intro To MongoDB](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing)
+  * [Unit 18: NoSQL](https://docs.google.com/presentation/d/1tsxce_ukQswTyiPlxV9BfzshLkwquUHWdxNrFQYlHvM/edit?usp=sharing)
 
 ### Algorithms
 
@@ -131,6 +137,12 @@ Unit 18:
   * [Quick Sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Quicksort)
 
   * [MongoDB Installation Guide](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb)
+
+  * [Understanding the different types of NoSQL databases](https://www.mongodb.com/scale/types-of-nosql-databases)
+
+  * [MongoDB docs on getting started](https://docs.mongodb.com/manual/tutorial/getting-started/)
+
+  * [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html)
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
