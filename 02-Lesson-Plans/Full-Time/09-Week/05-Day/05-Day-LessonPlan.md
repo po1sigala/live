@@ -59,8 +59,6 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 ### 1. Instructor Do: Stoke Curiosity (10 min)
 
-### 1. Instructor Do: Stoke Curiosity (10 min)
-
 * Welcome students to class.
 
 * Congratulate students on their hard work and explain where MongoDB fits into the bigger picture as we move into the MERN stack, which is a combination of MongoDB, Express, React, and Node.js that is used to build web applications.
