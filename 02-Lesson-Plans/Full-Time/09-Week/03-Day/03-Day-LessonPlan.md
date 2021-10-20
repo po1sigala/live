@@ -287,19 +287,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * This time can be utilized for reviewing key topics learned so far in Unit 17 or getting started on the homework.
 
-* If there are students who haven't installed MongoDB on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
-
-* Direct students to install Robo 3T, a native cross-platform MongoDB management tool that will make working with MongoDB easier and more intuitive.
-
-  * Direct the students to the Robo 3T install page [https://robomongo.org/download](https://robomongo.org/download) and have them click the green download button.
-
-  ![Download Robo 3T](Images/install-robo-3t.png)
-
-  * Next have them choose their OS and download the application.
-
-  ![Download Robo 3T](Images/choose-os.png)
-  
-  * After installing students should be able to successfully open Robo 3T on their machine.
+* If there are students who haven't installed MongoDB and Compass on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
