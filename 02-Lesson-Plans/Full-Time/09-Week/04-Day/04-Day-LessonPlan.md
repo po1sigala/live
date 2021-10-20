@@ -42,9 +42,9 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 | 10:05AM| 2   | Student Do: Cursor Methods                | 0:15     |
 | 10:20AM| 3   | Instructor Review: Cursor Methods         | 0:10     |
 | 10:30AM| 4   | Instructor Do: Stoke Curiosity            | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Models-Schemas           | 0:05     |
-| 10:45AM| 6   | Student Do: Models-Schemas                | 0:15     |
-| 11:00AM| 7   | Instructor Review: Model-Schemas          | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Models and Schema        | 0:05     |
+| 10:45AM| 6   | Student Do: Models and Schema             | 0:15     |
+| 11:00AM| 7   | Instructor Review: Model and Schema       | 0:10     |
 | 11:10AM| 8   | Instructor Demo: CRUD Mongoose            | 0:05     |
 | 11:15AM| 9   | Student Do: CRUD Mongoose                 | 0:15     |
 | 11:30AM| 10  | Instructor Review: CRUD Mongoose          | 0:10     |
@@ -774,373 +774,638 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: Populate (5 min) 
+### 13. Instructor Demo: Instance Methods (5 min) 
 
-* Change into `14-Ins-Populate` and start the server with `node server.js`. 
+* Open `15-Ins_Models-Instance-Methods/models/Department.js` in your IDE and demonstrate the following:
 
-* Then, visit `/books` to see your books listed.
+  * 🔑 We use instance methods to perform some action on a specific instance. There are built-in instance methods with Mongoose as well as custom instance methods that we can create.
 
-```js
-[{
-    "_id": "5cfbc820bc851f678c714b2c",
-    "author": "Herman Melville",
-    "title": "Moby Dick",
-    "__v": 0
-}, {
-    "_id": "5cfbc83ebc851f678c714b2d",
-    "author": "F. Scott Fitzgerald",
-    "title": "The Great Gatsby",
-    "__v": 0
-}]
-```
-
-* Then visit `/library` to see your library data listed in JSON, including a list of `ObjectIds` in the book property. These are the `ObjectIds` associated with each book we've made.
-
-```js
-[{
-    "books": ["5cfbc510fff60b62b1a9c318", 
-              "5cfbc51cfff60b62b1a9c319", 
-              "5cfbc820bc851f678c714b2c", 
-              "5cfbc83ebc851f678c714b2d"],
-    "_id": "5cfbc29cfff60b62b1a9c317",
-    "name": "Campus Library",
-    "__v": 0
-}]
-```
-
-* Ask students, what if we want to see the data for all of the books stored in our library. We could go back to books, but what if we want to include all of the information about our library and our books, and query that data with just one call.
-
-  * Answer: This is where `Mongoose`'s populate method comes in. Open the `/populated` route in your browser, and go to the books property. All of the books will be there.
-
-  ```js
-  [{
-      "books": [{
-          "_id": "5cfbc820bc851f678c714b2c",
-          "author": "Herman Melville",
-          "title": "Moby Dick",
-          "__v": 0
-      }, {
-          "_id": "5cfbc83ebc851f678c714b2d",
-          "author": "F. Scott Fitzgerald",
-          "title": "The Great Gatsby",
-          "__v": 0
-      }],
-      "_id": "5cfbc29cfff60b62b1a9c317",
-      "name": "Campus Library",
-      "__v": 0
-  }] 
-  ```
-
-* How does this happen?
-
-  * Show them the `Library.js` model, and how it has a reference to the `Book.js` model inside it's schema.
+  * First, let's define the schema for Department.
 
     ```js
-    const mongoose = require("mongoose");
-
-    const Schema = mongoose.Schema;
-
-    const LibrarySchema = new Schema({
-      name: {
-        type: String,
-        unique: true
-      },
-      books: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: "Book"
-        }
-      ]
+    const departmentSchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      totalStock: Number,
+      lastAccessed: { type: Date, default: Date.now },
     });
-
-    const Library = mongoose.model("Library", LibrarySchema);
-
-    module.exports = Library;
     ```
 
-  * Then show them the `index.js` file inside of the `models` folder.
+  * 🔑 Next, we need to create the custom instance methods. After defining our schema, we can create a custom instance method `getDocumentInfo` to the `methods` object of our schema. This will get the `name` and `totalStock` data for that instance.
 
     ```js
-    module.exports = {
-    Book: require("./Book"),
-    Library: require("./Library")
+    departmentSchema.methods.getDocumentInfo = function () {
+      console.log(
+        `This department has the name ${this.name} and a total stock of ${this.totalStock}`
+      );
     };
     ```
 
-  * Explain that when working with multiple models, it's often useful to be able to require all of them at once, rather than individually. 
-  
-  * By exporting an object containing all of our models from the `index.js` file in the models folder, we can then require this object and access all of our models inside of `server.js`.
+  * Let's create the `Department` model and a new instance of the model, called `produce` with a `totalStock` value of `100`.
 
     ```js
-    const db = require("./models");
+    const Department = mongoose.model('Department', departmentSchema);
+
+    const produce = new Department({ name: 'Produce', totalStock: 100 });
     ```
 
-  * Point out the `populate` method being used in `server.js`.
+  * 🔑 Before we use the custom instance method, let's first use the built-in instance method `.get()` to get the `totalStock` of `produce`.
 
     ```js
-    app.get("/populated", (req, res) => {
-    db.Library.find({})
-      .populate("books")
-      .then(dbLibrary => {
-        res.json(dbLibrary);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-    });
+    const responseGetInstance = produce.get('totalStock', String);
+    console.log(
+      `The value of the totalStock for this document in string form is ${responseGetInstance}`
+    );
     ```
 
-  * Explain that here we are running `populate("books")` after finding books and before handling the result of the query in `.then`.
+  * The instance method `.get()` takes in three parameters: the path, and two optional parameters, type and options. In our case, we are getting the value of `totalStock` and we want it returned as a `String`. We didn't use options in our case.
+
+  * Now let's call the custom instance method, `.getDocumentInfo()`, on the instance.
+
+    ```js
+    produce.getDocumentInfo();
+    ```
+
+* In the command line, run `npm install` and `node models/Department.js` to demonstrate the following:
+
+  * First, we see the response from the built-in instance method.
+
+    ```text
+    The value of the totalStock for this document in string form is 100
+    ```
+
+  * Then we see the response from calling the `getDocumentInfo()` custom instance method on `produce`.
+
+    ```text
+    This department has the name Produce and a total stock of 100
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use a custom instance method with our model?
+
+  * 🙋 We need to define the schema, create a custom instance method, and run the custom method on an instance of the model.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `15-Stu-Populate/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Models-Instance-Methods/README.md`.
 
-### 14. Student Do: Populate (15 min) 
+### 14. Student Do: Instance Methods (15 min)
 
-* Direct students to the activity instructions found in `15-Stu-Populate/README.md`.
+* Direct students to the activity instructions found in `16-Stu_Models-Instance-Methods/README.md`, which are also shown below.
 
-* Break your students into pairs that will work together on this activity.
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # Populate
+  # 🏗️ Implement Instance Methods on a Mongoose Model
 
-  ## Instructions
+  Work with a partner to implement the following user story:
 
-  * Open `server.js` and update the `/populate` route to return `Users` populated with notes as JSON to the client.
+  * As a developer, I want to perform an action on a specific instance of a Mongoose model.
 
-  ## 💡 Hint(s)
+  ## Acceptance Criteria
 
-  * Check out the `Note.js` and `User.js` models to see how the schemas there make the populate method possible.
-  ```
+  * It is done when I define a new schema named `bookSchema`.
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  * It is done when the new schema has three properties: `title`, `author`, and `price`.
 
-### 15. Instructor Review: Populate (10 min) 
+  * It is done when I assign a function named `getDiscount` to the methods object of the `bookSchema` that reduces the price by 50 percent and console logs the title of the book and the reduced price.
 
-* Open up `15-Stu-Populate/Solved/server.js`.
+  * It is done when I have created a model named `Book`.
 
-* Ask for a volunteer to to walk you through the solution.
+  * It is done when I have created an instance of the model, or document, named `discountedBook`.
 
-```js
-app.get("/populateduser", (req, res) => {
-  db.User.find({})
-    .populate("notes")
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-});
-```
+  * It is done when I test the instance method by running `node models/Book.js`.
 
-* Answer any questions before proceeding to the next activity.
+  * It is done when the price of `discountedBook` is reduced by 50 percent and the results are logged to the console.
 
-### 16. Instructor Demo: Opening IndexedDB (5 min) 
+  ---
 
-* Introduce the students to the Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
+  ## 💡 Hints
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We access `indexedDB` via the `window` object.
-
-  * ✔ We create a new IndexedDB connection using the `open` method and pass it a name for the DB and a version number.
-
-  * ✔ Our request returns a result that we can then manipulate.
-
-  ```js
-  const request = indexedDB.open("firstDatabase", 1);
-  
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Open `16-Ins_Opening_IndexedDB/index.html` in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![16-Ins_Opening_IndexedDB.png](Images/16-Ins_Opening_IndexedDB.png)
-
-* Navigate into the `16-Ins_Opening_IndexedDB` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `firstDatabase`.
-
-* Ask the class the following question(s): 
-
-  * ☝️ How many arguments does the `open` method take and what are they for?
-
-  * 🙋 Two and the first one is the DB name, the second is the version number. The version number controls which version of the schema to use.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `17-Stu_Opening_IndexedDB/README.md`.
-
-### 17. Student Do: Opening IndexedDB (15 min) 
-
-* Direct students to the activity instructions found in `17-Stu_Opening_IndexedDB/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Requesting an IndexedDB Database
-
-  In this activity, you will create a request for an indexedDB database and console.log the name of the db to the screen. 
-
-  ## Instructions
-
-  * Write code to request an IndexedDB database instance.
-  * On success, log the name of the database to your console.
-
-  ## 💡 Hint(s)
-
-  * Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
-
-  * You can `console.log` the `request` to so what attributes are available to you.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 18. Instructor Review: Opening IndexedDB (10 min) 
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * ✔ In the `onsuccess` method we `console.log(request.result.name);` 
-
-  ✔ The `onsuccess` method is called every time we make a request.
-
-* Open `17-Stu_Opening_IndexedDB/Solved/index.html` in your IDE and explain the following point(s):
-
-  * We first request our DB instance with `const request = window.indexedDB.open("firstDatabase", 1);`
-  
-  * In the `onsuccess` method we `console.log` the `name` of the `result`, which is the database name.
-
-  ```js
-  const request = window.indexedDB.open("firstDatabase", 1);
-    request.onsuccess = event => {
-    console.log(request.result.name);
-  };
-  ```
-
-  * 🔑 Our `open` method takes two arguments, first the db name and then the version number. 
-
-* Ask the class the following question(s):
-
-  * ☝️ What happens when we call `open` on `indexedDB`?
-
-  * 🙋 The call to the `open()` method returns a request object with a `result` (success) value that you handle as an event. 
-
-* Answer any questions before proceeding to the next activity.
-
-### 19. Instructor Demo: Creating Object Stores (5 min) 
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ Object stores can be thought of as a "table" where we hold data.
-
-  * ✔ Object stores can hold any data type.
-
-  * ✔ Object stores are schema-less, unlike SQL databases.
-
-  * ✔ We create our object stores in the `onupgradeneeded` method which is called when you change the db version. ie: From no database to 1, from 1 to 2 etc.
-
-  * ✔ If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered.
-
-*  Open `18-Ins_Creating_Object_Stores/index.html` in your IDE and explain the above points.
-
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  
-  request.onupgradeneeded = function(event) {
-    const db = event.target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
-
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Next open `18-Ins_Creating_Object_Stores/index.html` in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![18-Ins_Creating_Object_Stores.png](Images/18-Ins_Creating_Object_Stores.png)
-
-* We navigate into the `20-Ins_Creating_Object_Stores` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
-
-* When we click on the database tab, we can see that we now have an empty object store called `todoList`.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is an object store?
-
-  * 🙋 It's similar to an SQL table and where we store data in IndexedDB.
-
-  * ☝️ What is the main difference between an object store and an SQL table?
-
-  * 🙋 Object stores do not have schemas.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `19-Stu_Creating_Object_Stores/README.md`.
-
-### 20. Student Do: Creating Object Stores (15 min) 
-
-* Direct students to the activity instructions found in `19-Stu_Creating_Object_Stores/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Creating an Object Store
-
-  In this activity, you will create an object store for your IndexedDB database.
-
-  ## Instructions
-
-  * Write code to request an IndexedDB database instance.
-  * On success, log the result to your console.
-  * Inside the `onupgradeneeded` method, create an object store for your database called `toDoList`.
-
-  ## 💡 Hint(s)
-
-  * Use the [open](https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open) docs to learn about the arguments it takes.
-  * You can `console.log` the `request` to so what attributes are available to you.
+  What is the difference between an instance method and a static method?
 
   ## 🏆 Bonus
 
-  * Use the [keyPath](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath) docs to research what a `keyPath` is and how to add it to your `objectStore`.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can you add query helper methods to extend Mongoose's chainable query builder API?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Creating Object Stores (10 min) 
+### 15. Instructor Review: Instance Methods (10 min)
 
-* Use the prompts and talking points below to review the following key point(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔ We create the object store in the `onupgradeneeded` method.
+  * ☝️ How comfortable do you feel with instance methods? (Poll via Fist to Five, Slack, or Zoom)
 
-* Open `19-Stu_Creating_Object_Stores/Solved/index.html` in your IDE and review the code snippet.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-    
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-  };
+  * ✔️ `.getDiscount()`
+
+* Open `16-Stu_Models-Instance-Methods/Solved/models/Book.js` in your IDE and explain the following:
+
+  * First, we have to define a new schema named `bookSchema` that has three properties: `title`, `author`, and `price`.
+
+    ```js
+    const bookSchema = new mongoose.Schema({
+      title: { type: String, required: true },
+      author: String,
+      price: { type: Number, required: true },
+    });
+    ```
+
+  * 🔑 Next, we created a custom instance method, `.getDiscount()`. We assigned it to the `methods` object of the `bookSchema`. This function will reduce the price by 50 percent and console log the title and reduced price of the book.
+
+    ```js
+    bookSchema.methods.getDiscount = function () {
+      const discountPrice = this.price * 0.5;
+      console.log(
+        `The book's title is ${this.title} and the discounted price is ${discountPrice}`
+      );
+    };
+    ```
+
+  * Then we create a model named `Book`.
+
+    ```js
+    const Book = mongoose.model('Book', bookSchema);
+    ```
+
+  * Then we create a new instance of the model called `discountedBook`. You can name the book and price whatever you want.
+
+    ```js
+    const discountedBook = new Book({
+      title: 'Oh the Places You Will Go!',
+      price: 100,
+    });
+    ```
+
+  * Finally, we called the `.getDiscount()` custom instance method on the instance.
+
+    ```js
+    discountedBook.getDiscount();
+    ```
+
+* In the command line, run `npm install` and `node models/Book.js` to demonstrate the following:
+
+  * When we run the file, we see the discounted price of the book in the console.
+
+    ```text
+    The book's title is Oh the Places You Will Go! and the discounted price is 50
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Where should we define the custom instance methods?
+
+  * 🙋 We should define custom instance methods right after we define our schema.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on instance methods](https://mongoosejs.com/docs/guide.html#methods), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 16. Instructor Demo: Subdocuments (5 min)
+
+* Open `17-Ins_Subdocuments/models/Department.js` in your IDE and demonstrate the following:
+
+  * 🔑 In Mongoose, **subdocuments** are documents that are embedded in other documents; these are otherwise known as **embedded documents** in MongoDB. This allows us to nest schemas in parent schemas. In Mongoose, we can do this in two ways: an array of subdocuments or a single nested subdocument.
+
+  * 🔑 First, we need to define the schema of the subdocuments, also called the **child documents**. Let's create a `managerSchema` and `employeeSchema`.
+
+    ```js
+    const managerSchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      salary: Number,
+    });
+
+    const employeeSchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      salary: Number,
+    });
+    ```
+
+  * Next, let's define the schema of the parent document that will include these two child documents.
+
+    ```js
+    const departmentSchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      manager: managerSchema,
+      employees: [employeeSchema],
+      lastAccessed: { type: Date, default: Date.now },
+    });
+    ```
+
+  * In the preceding code block, we included the `manager` as a single nested subdocument and the `employees` as an array of subdocuments.
+
+  * Let's create the model and instances of the model to see how this will look! Notice that the `managerData` is a single object, but the `employeeData` is an array of objects.
+
+    ```js
+    const Department = mongoose.model('Department', departmentSchema);
+
+    const managerData = { name: 'Taylor', salary: 80000 };
+    const employeeData = [
+      { name: 'Ann', salary: 40000 },
+      { name: 'Liu', salary: 50000 },
+    ];
+
+    Department.create(
+      { name: 'Shoes', manager: managerData, employees: employeeData },
+      (err, data) => {
+        if (err) {
+          console.error(err);
+        }
+        console.log(data);
+      }
+    );
+    ```
+
+* In the command line, run `npm install` and `npm start` to demonstrate the following:
+
+  * When we run the application, we see the `Shoes` department returned with one manager and an array of two employees.
+
+    ```js
+    {
+      _id: 611d528eed231427e2d386e3,
+      name: 'Shoes',
+      manager: { _id: 611d528eed231427e2d386e4, name: 'Taylor', salary: 80000 },
+      employees: [
+        { _id: 611d528eed231427e2d386e5, name: 'Ann', salary: 40000 },
+        { _id: 611d528eed231427e2d386e6, name: 'Liu', salary: 50000 }
+      ],
+      lastAccessed: 2021-08-18T18:33:50.036Z,
+      __v: 0
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We need to create the schema for the child and parent documents.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Subdocuments/README.md`.
+
+### 17. Student Do: Subdocuments (15 min)
+
+* Direct students to the activity instructions found in `18-Stu_Subdocuments/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
+
+  ```md
+  # 📖 Implement Subdocuments in a Mongoose Schema
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to nest a child document in a parent document.
+
+  ## Acceptance Criteria
+
+  * It is done when I define a new schema named `bookSchema` for the subdocument.
+
+  * It is done when the `bookSchema` has two properties: `title` and `price`.
+
+  * It is done when the `books` subdocument is nested in the parent document.
+
+  * It is done when I have created a model named `Library`.
+
+  * It is done when I have created an array of three books using the `bookSchema`.
+
+  * It is done when I have created a new instance of the `Library` model which includes the `books` subdocument.
+
+  * It is done when I test the `GET` route in Insomnia and the subdocuments are nested in the parent document.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [Mongoose docs on subdocuments](https://mongoosejs.com/docs/subdocs.html)
+
+  ## 💡 Hints
+
+  * When is subdocument data saved?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What method can we use to remove a subdocument?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-* Ask the class the following question(s):
+### 18. Instructor Review: Subdocuments (10 min)
 
-  * ☝️ What do we use object stores for? 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 To store our indexedDB data.
+  * ☝️ How comfortable do you feel with subdocuments? (Poll via Fist to Five, Slack, or Zoom)
 
-* Answer any questions before proceeding.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `bookSchema`
+
+  * ✔️ `librarySchema`
+
+  * ✔️ `Library` model
+
+  * ✔️ `Books` instance
+
+* Open `18-Stu_Subdocuments/Solved/models/Library.js` in your IDE and explain the following:
+
+  * 🔑 First, we define the subdocument schema, which in our case is `bookSchema`.
+
+    ```js
+    const bookSchema = new mongoose.Schema({
+      title: { type: String, required: true },
+      price: Number,
+    });
+    ```
+
+  * 🔑 Next, we nest the subdocument `books` in the parent document as an array.
+
+    ```js
+    const librarySchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      books: [bookSchema],
+      lastAccessed: { type: Date, default: Date.now },
+    });
+    ```
+
+  * 🔑 Then, we create a model named `Library` using the `librarySchema`.
+
+    ```js
+    const Library = mongoose.model('Library', librarySchema);
+    ```
+
+  * 🔑 Finally, we create the array of books that will use the `bookSchema` when we create a new instance of `Library`. You can use any titles of books and prices.
+
+    ```js
+    const bookData = [
+      { title: 'Diary of Anne Frank', price: 10 },
+      { title: 'One Thousand Years of Solitude', price: 20 },
+      { title: 'History of Hogwarts', price: 5 },
+    ];
+
+    Library.create({ name: 'Books', books: bookData }, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(data);
+      }
+    });
+    ```
+
+* In the command line, run `npm install` and `npm start` to demonstrate the following:
+
+  * When we start the application, we see the new `Books` instance returned that has an array of `books` nested within it, similar to the following:
+
+    ```js
+    {
+      _id: 611d5dbd896f452ac77fec21,
+      name: 'Books',
+      books: [
+        {
+          _id: 611d5dbd896f452ac77fec22,
+          title: 'Diary of Anne Frank',
+          price: 10
+        },
+        {
+          _id: 611d5dbd896f452ac77fec23,
+          title: 'One Thousand Years of Solitude',
+          price: 20
+        },
+        {
+          _id: 611d5dbd896f452ac77fec24,
+          title: 'History of Hogwarts',
+          price: 5
+        }
+      ],
+      lastAccessed: 2021-08-18T19:21:33.017Z,
+      __v: 0
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ When should we define the subdocument's schema?
+
+  * 🙋 The subdocument schema must be defined before the parent document's schema.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on subdocuments](https://mongoosejs.com/docs/subdocs.html), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 19. Instructor Demo: Aggregates (5 min)
+
+* Open `19-Ins_Aggregates/server.js` in your IDE and demonstrate the following:
+
+  * 🔑 The `aggregate()` function is how you would use MongoDB's aggregation framework with Mongoose. Remember, Mongoose is simply a "wrapper", so any aggregation query that works with MongoDB will work in Mongoose.
+
+  * 🔑 An aggregation framework is an array of stages. Each stage transforms the document before passing it on to the next stage. This array of stages that you pass into the `aggregate()` function is called the **aggregation pipeline**.
+
+  * 🔑 One stage that is used commonly is the `$match` stage. This is the stage where we can filter out documents that don't match the given `filter` parameter.
+
+  * Let's say that we have a collection of various grocery items and prices. We want to find the sum, average, maximum price, and minimum price of these items. But we only want to query items whose prices are less than or equal to 5.
+
+  * 🔑 In order to filter out the items that are not less than or equal to 5, we would use the `$match` stage.
+
+    ```js
+    app.get('/sum-price', (req, res) => {
+      Item.aggregate(
+        [
+          // Where prices are less than or equal to 5
+          { $match: { price: { $lte: 5 } } },
+    ```
+
+  * 🔑 Another stage that is often used is the `$group` stage. This stage is similar to a `reduce()` function. We can group data from multiple documents by a specified expression and combine them into one result.
+
+  * Let's take a look at our example again. After we filter out the items whose prices are not less than or equal to 5, we can use the `$group` stage to run different aggregation operators, like `$sum`, `$avg`, `$max`, and `$min` on the filtered items.
+
+    ```js
+    {
+      $group: {
+        // Group by null (no additional grouping by id)
+        _id: null,
+        // Sum of all prices
+        sum_price: { $sum: '$price' },
+        // Average of all prices
+        avg_price: { $avg: '$price' },
+        // Maximum price
+        max_price: { $max: '$price' },
+        // Minimum price
+        min_price: { $min: '$price' },
+      },
+    },
+    ```
+
+* In the command line, run `npm install` and `npm start` to start the application. Open Insomnia to demonstrate the following:
+
+  * Let's make a GET request to `localhost:3001/sum-price`. We should get the sum of the prices, an average price, the maximum price, and the minimum price of the items whose prices are less than or equal to 5, similar to the following:
+
+    ```json
+    [
+      {
+        "_id": null,
+        "sum_price": 23,
+        "avg_price": 2.875,
+        "max_price": 5,
+        "min_price": 1
+      }
+    ]
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What two stages do we use to filter and group our aggregate results?
+
+  * 🙋 We use the `$match` stage to filter out documents and the `$group` stage to group the results of the aggregation performed into one document.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Aggregates/README.md`.
+
+### 20. Student Do: Aggregates (15 min)
+
+* Direct students to the activity instructions found in `20-Stu_Aggregates/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
+
+  ```md
+  # 🐛 GET Route Returns Wrong Summary Price Data
+
+  Work with a partner to resolve the following issue:
+
+  * As a user, I should be able to see summary statistics for the prices of books in stock.
+
+  ## Expected Behavior
+
+  When I test the `sum-price` GET route in Insomnia, summary statistics for only books that are in stock should be returned.
+
+  ## Actual Behavior
+
+  When I test the `sum-price` GET route in Insomnia, summary statistics for all books are returned.
+
+  ## Steps to Reproduce the Problem
+
+  Follow these steps to reproduce the problem:
+
+  1. Run `npm install` and `npm start` to start the app.
+
+  2. Navigate to Insomnia on your local machine and test the `sum-price` GET route.
+
+  3. The summary data for all books are being returned. To see a list of all books for comparison, use the `all-books` GET route.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Returned data showing only in-stock summary books.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What MongoDB aggregate pipeline stage do you use to filter data?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Aggregate middleware is one of four types of Mongoose middleware. What are the other three and how are they used?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Aggregates (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with aggregates? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `$match`
+
+* Open `20-Stu_Aggregates/Solved/server.js` in your IDE and explain the following:
+
+  * We are given a collection of books, but we only want the stats on the books that are in stock. We need to filter out the books that are not in stock.
+
+  * 🔑 In order to do that, we need to use the `$match` stage before the `$group` stage in the aggregate pipeline.
+
+    ```js
+    app.get('/sum-price', (req, res) => {
+      Book.aggregate(
+        [
+          // Where book is in stock
+          { $match: { inStock: true } },
+          {
+            $group: {
+              _id: null,
+              sum_price: { $sum: '$price' },
+              avg_price: { $avg: '$price' },
+              max_price: { $max: '$price' },
+              min_price: { $min: '$price' },
+            },
+          },
+        ],
+        (err, result) => {
+          if (err) {
+            res.status(500).send(err);
+          } else {
+            res.status(200).json(result);
+          }
+        }
+      );
+    });
+    ```
+
+* In the command line, run `npm install` and `npm start` to start the application. Open Insomnia and demonstrate the following:
+
+  * When we make a GET request to `localhost:3001/all-books`, we get a list of all of the books. Notice that there are some books whose `inStock` property is set to `false`. We want to filter out those books.
+
+  * When we make a GET request to `localhost:3001/sum-price`, we get a summary of the prices for the books that are in stock, similar to the following:
+
+    ```json
+    [
+      {
+        "_id": null,
+        "sum_price": 36,
+        "avg_price": 9,
+        "max_price": 20,
+        "min_price": 4
+      }
+    ]
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between aggregation pipeline stages and aggregation pipeline operators?
+
+  * 🙋 Aggregation pipeline stages appear in an array in the `aggregate()` function and documents pass through the stages in sequence. Aggregation pipeline operators are used in the pipeline stages to construct expressions. The most common ones are arithmetic expression operators that perform math operations on numbers. In our activity, we used accumulator operators like `$avg`, `$max`, `$min`, and `$sum`.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on aggregate](https://mongoosejs.com/docs/api/aggregate.html), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
 
 ### 22. FLEX (30 mins)
 
