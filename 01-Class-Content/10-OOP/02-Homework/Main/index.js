@@ -13,6 +13,11 @@ const render = require('./src/page-template.js');
 const teamMembers = [];
 const idArray = [];
 
+// Inform user of usage
+console.log(
+  '\nWelcome to the team generator!\nUse `npm run reset` to reset the dist/ folder\n'
+);
+
 function appMenu() {
   function createManager() {
     console.log('Please build your team 👥');
