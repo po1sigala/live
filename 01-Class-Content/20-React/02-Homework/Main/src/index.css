@@ -101,10 +101,6 @@ header a {
   color: var(--light);
 }
 
-header img {
-  opacity: 0.5;
-}
-
 button {
   font-size: 1rem;
   font-weight: 600;
@@ -185,6 +181,7 @@ header img {
   left: 0;
   height: auto;
   filter: sepia(1) opacity(60%);
+  opacity: 0.5;
 }
 
 nav {
