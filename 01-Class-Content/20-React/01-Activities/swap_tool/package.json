@@ -1,0 +1,14 @@
+{
+  "name": "sswap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "John McCambridge <jmccamb@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0"
+  }
+}
