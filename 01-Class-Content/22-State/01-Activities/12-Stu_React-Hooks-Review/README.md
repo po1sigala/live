@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [React documentation on using the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
 
