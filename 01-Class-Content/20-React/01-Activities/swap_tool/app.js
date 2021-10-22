@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const inquirer = require("inquirer");
 
 const fs = require("fs-extra");
@@ -55,8 +57,6 @@ const otherFolders = getDirectories(parentDir).filter(
   (dir) => dir !== reactApp
 );
 
-console.log(reactApp);
-// The actual prompt
 inquirer
   .prompt([
     {
@@ -74,38 +74,41 @@ inquirer
     },
   ])
   .then((answers) => {
-    // Bool that is true if there is a unsolved folder in srcToCopy
-    const hasUnsolved = fs.existsSync(
-      path.join(parentDir, answers.srcToCopy, "Unsolved")
-    );
+    if (answers.replaceSrc) {
+      // Bool that is true if there is a unsolved folder in srcToCopy
+      const hasUnsolved = fs.existsSync(
+        path.join(parentDir, answers.srcToCopy, "Unsolved")
+      );
 
-    // Directory to copy from depending on whether this is an activity or a ins demo (hasUnsolved)
-    const srcToCopy = hasUnsolved
-      ? `${answers.srcToCopy}/Unsolved/src`
-      : `${answers.srcToCopy}/src`;
+      // Directory to copy from depending on whether this is an activity or a ins demo (hasUnsolved)
+      const srcToCopy = hasUnsolved
+        ? `${answers.srcToCopy}/Unsolved/src`
+        : `${answers.srcToCopy}/src`;
 
-    // Full paths to the directories
-    const reactAppPath = path.join(parentDir, reactApp, "src");
-    const srcToCopyPath = path.join(parentDir, srcToCopy);
+      // Full paths to the directories
+      const reactAppPath = path.join(parentDir, reactApp, "src");
+      const srcToCopyPath = path.join(parentDir, srcToCopy);
 
-    // Delete everything inside the react app's src directory
-    try {
-      fs.removeSync(reactAppPath);
-    } catch (err) {
-      error(`Error deleting ${reactAppPath}`);
-      error(err);
-      process.exit(1);
-    }
+      // Delete everything inside the react app's src directory
+      try {
+        fs.removeSync(reactAppPath);
+      } catch (err) {
+        error(`Error deleting ${reactAppPath}`);
+        error(err);
+        process.exit(1);
+      }
 
-    // Say what is happening
-    info(`Copying ${srcToCopy} to ${reactApp}/src`);
+      info(`Copying ${srcToCopy} to ${reactApp}/src`);
 
-    // Copy the src directory
-    try {
-      fs.copySync(srcToCopyPath, reactAppPath);
-      success(`Copied:\n${srcToCopyPath} \n${reactAppPath}`);
-    } catch (err) {
-      error(`Error copying ${srcToCopyPath} to ${reactAppPath}`);
-      error(err);
+      // Copy the src directory
+      try {
+        fs.copySync(srcToCopyPath, reactAppPath);
+        success(`Copied:\n${srcToCopyPath} \n${reactAppPath}`);
+      } catch (err) {
+        error(`Error copying ${srcToCopyPath} to ${reactAppPath}`);
+        error(err);
+      }
+    } else {
+      error(`Nothing to do.`);
     }
   });

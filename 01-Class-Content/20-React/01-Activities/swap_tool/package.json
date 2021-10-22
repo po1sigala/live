@@ -5,10 +5,14 @@
   "author": "John McCambridge <jmccamb@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "chmod +x app.js && npm link"
   },
   "dependencies": {
     "fs-extra": "^10.0.0",
     "inquirer": "^8.2.0"
+  },
+  "bin": {
+    "sswap": "./app.js"
   }
 }
