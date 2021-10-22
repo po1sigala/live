@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of Stripe
 
-Work with a partner to add comments describing the functionality of the code found in [24-Stu_Stripe/Unsolved/client/src/components/Cart/index.js](24-Stu_Stripe/Unsolved/client/src/components/Cart/index.js).
+Work with a partner to add comments describing the functionality of the code found in [Cart/index.js](./Unsolved/client/src/components/Cart/index.js).
 
 ## 📝 Notes
 
@@ -8,7 +8,7 @@ What information does the front end need to reference a checkout session?
 
 Which packages do we need to import at the top of the file?
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [Stripe documentation on prebuilt Checkout page](https://stripe.com/docs/checkout/integration-builder)
 
