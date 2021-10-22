@@ -16,7 +16,6 @@ const error = (msg) => console.log(chalk.red(msg));
 const success = (msg) => console.log(chalk.green(msg));
 const info = (msg) => console.log(chalk.yellow(msg));
 
-//  Helper function to get a list of directories in a directory
 const getDirectories = (srcpath) =>
   fs
     .readdirSync(srcpath)
@@ -39,13 +38,12 @@ const isReactApp = (dir) => {
   return false;
 };
 
-// Variable to hold the first react app found of all the directories
+// React app directory
 const reactApp = getDirectories(parentDir).find((dir) =>
   isReactApp(path.join(parentDir, dir))
 );
 info(`Practice app found: ${reactApp}`);
 
-// Check if there is no practice app to copy to
 if (!reactApp) {
   error(`You don't seem to have a practice React App to copy to.`);
   error(`Please run ${info("npx create-react-app 00-practice-app")} first.`);
@@ -75,7 +73,6 @@ inquirer
   ])
   .then((answers) => {
     if (answers.replaceSrc) {
-      // Bool that is true if there is a unsolved folder in srcToCopy
       const hasUnsolved = fs.existsSync(
         path.join(parentDir, answers.srcToCopy, "Unsolved")
       );
