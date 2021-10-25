@@ -26,11 +26,14 @@ let activitiesDir;
 const parentDir = currentDir.split("/").slice(0, -1).join("/");
 
 if (isActivityDir(parentDir)) {
+  console.log(`${parentDir} (parentDir) is the activity directory`);
   activitiesDir = parentDir;
 } else if (isActivityDir(currentDir)) {
+  console.log(`${currentDir} (currentDir) is the activity directory`);
   activitiesDir = currentDir;
 } else {
   error("🚫  Could not find an activity directory");
+  console.log(`${currentDir} (currentDir) is NOT the activity directory`);
   process.exit(1);
 }
 
