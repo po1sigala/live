@@ -14,16 +14,29 @@ const error = (msg) => console.log(chalk.red(msg));
 const success = (msg) => console.log(chalk.green(msg));
 const info = (msg) => console.log(chalk.yellow(msg));
 
+// Helper to check if the directory is the activities directory
+const isActivityDir = (dir) => dir.endsWith("01-Activities");
+
 /* Because this will be a CLI app that will most likely live inside the 
 20-React/01-Activities directory, we can assume that all the activity directories will
 be in the parent of the current directory */
 
-const parentDir = currentDir.split("/").slice(0, -1).join("/");
-console.log(`🚀 Parent directory: ${parentDir}`);
+let activitiesDir;
 
-const isActivityDir = (dir) => dir.endsWith("01-Activities");
+const parentDir = currentDir.split("/").slice(0, -1).join("/");
 
 if (isActivityDir(parentDir)) {
+  activitiesDir = parentDir;
+} else if (isActivityDir(currentDir)) {
+  activitiesDir = currentDir;
+} else {
+  error("🚫  Could not find an activity directory");
+  process.exit(1);
+}
+
+console.log(`🚀 Activities directory: ${activitiesDir}`);
+
+if (isActivityDir(activitiesDir)) {
   success(`✅  Running from the correct directory!`);
 } else {
   error(`🚫  You are not in the right directory!`);
@@ -53,20 +66,20 @@ const isReactApp = (dir) => {
 };
 
 // React app directory
-const reactApp = getDirectories(parentDir).find((dir) =>
-  isReactApp(path.join(parentDir, dir))
+const reactApp = getDirectories(activitiesDir).find((dir) =>
+  isReactApp(path.join(activitiesDir, dir))
 );
 
 if (!reactApp) {
   error(`You don't seem to have a practice React App to copy to.`);
-  error(`Please run "npx create-react-app" in ${parentDir} first.`);
+  error(`Please run "npx create-react-app" in ${activitiesDir} first.`);
   process.exit(1);
 } else {
   info(`✅  Practice app found! ${reactApp}`);
 }
 
 // Choices for the inuquirer prompt
-const otherFolders = getDirectories(parentDir).filter(
+const otherFolders = getDirectories(activitiesDir).filter(
   (dir) => dir !== reactApp
 );
 
@@ -89,7 +102,7 @@ inquirer
   .then((answers) => {
     if (answers.replaceSrc) {
       const hasUnsolved = fs.existsSync(
-        path.join(parentDir, answers.srcToCopy, "Unsolved")
+        path.join(activitiesDir, answers.srcToCopy, "Unsolved")
       );
 
       // Directory to copy from depending on whether this is an activity or a ins demo (hasUnsolved)
@@ -98,8 +111,8 @@ inquirer
         : `${answers.srcToCopy}/src`;
 
       // Full paths to the directories
-      const reactAppPath = path.join(parentDir, reactApp, "src");
-      const srcToCopyPath = path.join(parentDir, srcToCopy);
+      const reactAppPath = path.join(activitiesDir, reactApp, "src");
+      const srcToCopyPath = path.join(activitiesDir, srcToCopy);
 
       // Delete everything inside the react app's src directory
       try {
