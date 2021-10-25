@@ -2,19 +2,33 @@
 
 const inquirer = require("inquirer");
 
+// log the current directory
+const currentDir = process.cwd();
+
 const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
-
-/* Because this will be a CLI app that will most likely live inside the 
-20-React/01-Activities directory, we can assume that all the activity directories will
-be in the parent of the current directory */
-const parentDir = path.resolve(__dirname, "..");
 
 // Logger methods
 const error = (msg) => console.log(chalk.red(msg));
 const success = (msg) => console.log(chalk.green(msg));
 const info = (msg) => console.log(chalk.yellow(msg));
+
+/* Because this will be a CLI app that will most likely live inside the 
+20-React/01-Activities directory, we can assume that all the activity directories will
+be in the parent of the current directory */
+
+const parentDir = currentDir.split("/").slice(0, -1).join("/");
+console.log(`🚀 Parent directory: ${parentDir}`);
+
+const isActivityDir = (dir) => dir.endsWith("01-Activities");
+
+if (isActivityDir(parentDir)) {
+  success(`✅  Running from the correct directory!`);
+} else {
+  error(`🚫  You are not in the right directory!`);
+  process.exit(1);
+}
 
 const getDirectories = (srcpath) =>
   fs
@@ -42,12 +56,13 @@ const isReactApp = (dir) => {
 const reactApp = getDirectories(parentDir).find((dir) =>
   isReactApp(path.join(parentDir, dir))
 );
-info(`Practice app found: ${reactApp}`);
 
 if (!reactApp) {
   error(`You don't seem to have a practice React App to copy to.`);
-  error(`Please run ${info("npx create-react-app 00-practice-app")} first.`);
+  error(`Please run "npx create-react-app" in ${parentDir} first.`);
   process.exit(1);
+} else {
+  info(`✅  Practice app found! ${reactApp}`);
 }
 
 // Choices for the inuquirer prompt
@@ -95,10 +110,9 @@ inquirer
         process.exit(1);
       }
 
-      info(`Copying ${srcToCopy} to ${reactApp}/src`);
-
       // Copy the src directory
       try {
+        info(`Copying ${srcToCopy} to ${reactApp}/src`);
         fs.copySync(srcToCopyPath, reactAppPath);
         success(`Copied:\n${srcToCopyPath} \n${reactAppPath}`);
       } catch (err) {
