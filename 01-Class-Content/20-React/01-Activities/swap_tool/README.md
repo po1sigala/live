@@ -6,28 +6,10 @@
 
 1. Navigate to the `swap_tool` folder and run `npm install` or `yarn`.
 
-2. Run `npm start` or `yarn start` from the command line.
+2. Run the `sswap` command in the terminal.
 
-3. Choose what activity's `src/` you want to move to your react app!
+3. Choose the `src` directory you want to swap with the `src` directory of your practice app.
 
-* (Optional) If you are using macOS, you can run `npm run perms`, to add the `sswap` command to your path and run the CLI from anywhere.
+## Troubleshooting
 
----
-
-## Installation (macOS)
-
-If you are using macOS, you can install `sswap` and add the command to your PATH by running the following command:
-
-```bash
-npm run perms
-```
-
-After the app is installed, you can run `sswap` by running the following command:
-
-```bash
-sswap
-```
-
-## Installation (Windows)
-
-For now, users will need to run the application like they would any other node application. Install the dependencies with `npm i` and then run `npm start`.
+The `sswap` command will be available anywhere in the terminal after you run `npm install` or `yarn`, but if you run into any issues, you can also run `npm start` from the `swap_tool` folder.
