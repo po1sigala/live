@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "perms": "chmod +x app.js && npm unlink sswap && npm link",
+    "perms": "chmod +x app.js && npm i && npm unlink sswap && npm link",
     "build": "pkg app.js -t node14-win-x64,node14-macos-x64,node14-macos-arm64 -o dist/sswap"
   },
   "dependencies": {

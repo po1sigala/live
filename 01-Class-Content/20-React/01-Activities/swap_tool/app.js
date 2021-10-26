@@ -134,6 +134,7 @@ inquirer
       } catch (err) {
         error(`Error copying ${srcToCopyPath} to ${reactAppPath}`);
         error(err);
+        process.exit(1);
       }
     } else {
       error(`Nothing to do.`);
