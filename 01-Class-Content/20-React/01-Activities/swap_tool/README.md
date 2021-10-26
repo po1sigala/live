@@ -10,7 +10,7 @@
 
 3. Choose what activity's `src/` you want to move to your react app!
 
-* (Optional) If you are using macOS and have ran `npm run perms`, you can just run `sswap` from anywhere to run the CLI.
+* (Optional) If you are using macOS, you can run `npm run perms`, to add the `sswap` command to your path and run the CLI from anywhere.
 
 ---
 
