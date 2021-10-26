@@ -12,4 +12,4 @@
 
 ## Troubleshooting
 
-The `sswap` command will be available anywhere in the terminal after you run `npm install` or `yarn`, but if you run into any issues, you can also run `npm start` from the `swap_tool` folder.
+The `sswap` command will be available in the terminal after you run `npm install` or `yarn`, but if you run into any issues, you can also run `npm start` from the `swap_tool` folder.
