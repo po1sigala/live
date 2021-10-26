@@ -23,7 +23,11 @@ be in the parent of the current directory */
 
 let activitiesDir;
 
-const parentDir = currentDir.split("/").slice(0, -1).join("/");
+const isWindows = () => process.platform === "win32";
+
+const parentDir = !isWindows()
+  ? currentDir.split("/").slice(0, -1).join("/")
+  : currentDir.split("\\").slice(0, -1).join("\\");
 
 if (isActivityDir(parentDir)) {
   console.log(`${parentDir} (parentDir) is the activity directory`);
