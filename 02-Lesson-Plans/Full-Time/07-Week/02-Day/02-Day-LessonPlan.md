@@ -1058,7 +1058,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Navigate to `23-Ins_One-to-Many` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following:
+* Run `npm start` from the command line and use Insomnia to demonstrate the following:
 
   * 🔑 When we perform a GET request to `/api/drivers/1`, we get a response like the following example&mdash;including not only the driver's license data but also an array of their owned cars:
 
