@@ -24,7 +24,7 @@ Refer to the Class Content Unit Overview for [Unit 11](../../../01-Class-Content
 
 * After starting the MySQL server, make sure that students can initialize the MySQL Shell, using the command `mysql -u root -p`. They will need their MySQL password.
 
-   * If Mac users get a `command not found` error, set up a `.zshrc` file in your home directory and add the `mysql` command to it. To do this, navigate to the home directory and type the following command in the command line: echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc`. Mac users who install using Homebrew should not face this issue. Refer to [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions. 
+   * If Mac users get a `command not found` error, set up a `.zshrc` file in your home directory and add the `mysql` command to it. To do this, navigate to the home directory and type the following command in the command line: echo `export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc`. Mac users who install using Homebrew should not face this issue. Refer to [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions. 
 
   * If Windows users get the `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)
   mysql-installation-windows-path.html).
