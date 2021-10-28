@@ -6,7 +6,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_Props` through `21-Stu_Fetching-Data`.
+* In this lesson, students will complete activities `09-Ins_Props` through `20-Stu_Fetching-Data`.
 
 * Much like in the previous lesson, each activity will require the student to replace the `/src` directory from their `00-practice-app` with the current activity by manually copying and pasting, or by using the `sswap` utility located in the `01-Activities/swap_tool` directory.
 
