@@ -18,7 +18,7 @@ In today's lesson, you will introduce students to React. You'll start by guiding
   
 * Each activity will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
-* To save time in class, students are expected to either copy the `Unsolved/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory and run `sswap`.
+* To save time in class, students are expected to either copy the `Unsolved/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run `sswap`.
 
 * Shortly after you review the slide deck, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
 
