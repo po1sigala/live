@@ -8,7 +8,7 @@ In this lesson, you will teach students how to style React components, use condi
 
 * In this lesson, students will complete activities `21-Ins_React-Style` through `28-Stu_Mini-Project`.
 
-* Today's in-class activities will use `00-practice-app` once again. A good first step is to remove the existing `/src` directory if you haven't already.
+* Today's in-class activities will use `00-practice-app` once again. Be sure to copy the `src` directory for each activity or use the `sswap` command to swap the directories.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
