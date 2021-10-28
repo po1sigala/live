@@ -8,7 +8,7 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * In this lesson, students will complete activities `23-Stu-Mini-Project` from Unit 19 through `08-Stu_JSX-expressions` in Unit 20.
 
-* **Important:** To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
+* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
 
    ```sh
    echo "SKIP_PREFLIGHT_CHECK=true" > .env
@@ -18,9 +18,13 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * When using the `create-react-app` utility to create a React app, the project directory will also automatically be created as part of the process. Students might be tempted to start by creating a directory for their project, which is not necessary and might actually cause some confusion. The name you provide to the command will be the directory name -- for example, `npx create-react-app my-app` creates a directory called `/my-app`. The name `my-app` will also be used as the name of the project inside the `package.json` file that is generated.
 
-* In the first activity, students will use `create-react-app` to set up a practice React app that they will re-purpose for almost every subsequent in-class activity in the unit. Reusing the original app will save students time by not having to run the utility for each subsequent activity. To make this possible, students will need to replace the `/src` directory with the one in the current activity's folder. You'll run through this in this lesson to familiarize students with the process.
+* The practice app will be called `00-practice-app`, but the name isn't as important as it's location. The `00-practice-app` directory will be created in the `01-Activities` directory.
 
-* Shortly after you review the slide deck, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
+* Each activity will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+
+* To save time in class, students are expected to copy the `Unsolved/src` directory from the activity folders to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
+
+* Shortly after you review the slide deck for Unit 20, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
 
 * Several activities in this unit require students to import Bootstrap into the `/src/index.js` file. If students ask why their activities do not match the solution, check whether they've done this.
 
@@ -75,11 +79,11 @@ By the end of class, students will be able to:
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
-* Run the following commands from the command line: 
+* Run the following commands from the command line:
 
   * `npm install`
 
@@ -116,7 +120,7 @@ By the end of class, students will be able to:
 
   ## Instructions
 
-  * Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application. 
+  * Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application.
 
   * We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
 
@@ -181,7 +185,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini Project (10 min)
 
 * Open `index.js` in your IDE and point out the following:
 
@@ -191,8 +195,8 @@ By the end of class, students will be able to:
 
 * Open `domMethod.js` in your IDE and point out the following:
 
-  * It is not entirely necessary for us to understand exactly how every line in `createElement` works. 
-  
+  * It is not entirely necessary for us to understand exactly how every line in `createElement` works.
+
   * It is valuable to get practice working with code we do not fully understand because new developers almost always start their careers working with an unfamiliar codebase.
 
   * The `createElement` function returns a DOM element and has the following parameters:
@@ -322,7 +326,7 @@ By the end of class, students will be able to:
 
 * Open `webpack.config.js` in your IDE and point out the following:
 
-  * There are 3 different entry points created for each app. 
+  * There are 3 different entry points created for each app.
 
   * Each bundle will include all dependencies brought into each entry file with ES6 `import`.
 
@@ -360,7 +364,7 @@ By the end of class, students will be able to:
     ]
     ```
 
-* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over. 
+* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over.
 
   * Some students may be frustrated with the amount of time they needed to spend refactoring code so that it could be easily chunked by webpack.
 
@@ -374,7 +378,7 @@ By the end of class, students will be able to:
 
 * Navigate to <http://localhost:3001> in Chrome and demonstrate the following:
 
-    * We are given a Budget Tracker app that we will convert into a PWA to allow for offline access and functionality. 
+    * We are given a Budget Tracker app that we will convert into a PWA to allow for offline access and functionality.
 
     * We can add expenses and deposits to our budget with or without a connection.
 
@@ -388,11 +392,11 @@ By the end of class, students will be able to:
 
     * ☝️ How are these skills relevant to a career in web development?
 
-    * 🙋 PWAs blend the benefits of a traditional browser experience with those of a mobile application. PWAs can ensure applications work without an internet connection by using the Service Worker and Cache APIs to cache assets and API responses. Having the skills to build or convert to PWAs is crucial in this day and age. 
+    * 🙋 PWAs blend the benefits of a traditional browser experience with those of a mobile application. PWAs can ensure applications work without an internet connection by using the Service Worker and Cache APIs to cache assets and API responses. Having the skills to build or convert to PWAs is crucial in this day and age.
 
     * ☝️ How will this challenge improve your portfolio?
 
-    * 🙋 It will show employers your ability to measure and optimize the performance of web applications. 
+    * 🙋 It will show employers your ability to measure and optimize the performance of web applications.
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
@@ -413,7 +417,7 @@ By the end of class, students will be able to:
     * This unit is all about React, which is a powerful JavaScript library for building user interfaces.
 
   * **What Is React?**
-  
+
     * React is one of the most powerful, in-demand front-end JavaScript libraries available today.
 
     * React is a library that helps you create complex and responsive single-page applications.
@@ -435,7 +439,7 @@ By the end of class, students will be able to:
   * **Can You Give Me an Example?**
 
     * Facebook’s UI is a great example of React in action.
-  
+
     * Each section of the page is a component that has tons of real-time updates happening every second.
 
     * The component design pattern allows Facebook to add a search bar and messenger to nearly every page that the user visits.
@@ -453,9 +457,9 @@ By the end of class, students will be able to:
     * Separate components are easier to test.
 
     * Helps isolate bugs, saving time.
-  
+
   * **What Are Props?**
-  
+
     * **Props** are a specialized type of parameter passed into a React component that help define attributes in the user interface, similar to DOM attributes.
 
     * Props allow data to be passed from a parent component to a child component.
@@ -463,17 +467,17 @@ By the end of class, students will be able to:
     * **Props** is short for **properties** and refers to an normal JavaScript object that contains key-value pairs.
 
   * **How Is This Different Than Regular DOM Manipulation?**
-  
+
     * In JavaScript, the application’s state and UI are updated independently of each other.
 
     * With React, whenever the application’s state changes, the DOM updates to reflect it.
 
     * With React, the UI is a pure function of the application’s state.
-  
+
   * **How Do We Handle Constant Data Changes?**
-  
+
   * **Rapid Data Changes in Plain Vanilla Javascript**
-  
+
     * JavaScript is fast, but whenever we update the DOM, the browser needs to recalculate the CSS, update the layout, and repaint the webpage. This can be a slow process.
 
   * **Rapid Data Changes in React**
@@ -489,7 +493,7 @@ By the end of class, students will be able to:
     * We isolate the attribute changes, event handling, and other DOM manipulation that we would otherwise use when building an app.
 
   * **Can We Get a Visualization, Please?**
-  
+
     * **Virtual DOM** is a JavaScript object that models the real DOM.
 
     * Whenever some part of the application’s state changes, the virtual DOM receives the UI updates first.
@@ -501,7 +505,7 @@ By the end of class, students will be able to:
   * **What Are the Pros and Cons?**
 
     * **Pros**
-  
+
       * Reusable components.
 
       * UI updates in response to state change, reducing DOM manipulation code needed.
@@ -521,7 +525,7 @@ By the end of class, students will be able to:
     * Babel and Webpack
 
   * **What Is Webpack?**
-  
+
     * Webpack lets you modularize front-end code the same way you do in Node with CommonJS modules (require, module.exports).
 
     * Webpack also lets you apply various transformations on your assets via plugins.
@@ -529,9 +533,9 @@ By the end of class, students will be able to:
   * **What Is Babel?**
 
     * Babel lets you transpile next-generation JavaScript (ES6, ES7, ES8) into ES5 JavaScript that most browsers understand.
-  
+
   * **How Do We Learn React?**
-  
+
     * React was designed to help create snappy single-page applications, but learning it can be daunting at first. Don’t worry -- we will break it down into small digestible topics and take things one step at a time.
 
     * You can try the following to learn React:
@@ -553,7 +557,7 @@ By the end of class, students will be able to:
     * We will build a bucket-list app using React.
 
     * Building this app should be a fun exercise in using your newly acquired React skills.
-  
+
     * You will be able to tell your friends and family about how you used React Hooks, components, state, and so many other cool React concepts!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -574,7 +578,7 @@ By the end of class, students will be able to:
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: Create React App (5 min) 
+### 8. Instructor Demo: Create React App (5 min)
 
 * It's time to introduce the very useful `create-react-app` utility. Let students know that this useful command-line utility will create the skeleton of a React app for them. The only downside is that running it can take some time. For this reason, in this first activity we'll use it to create a practice React app that we will then reuse for the rest of the unit's activities. To make that work, we'll only need to swap out the `/src` file for each activity.
 
@@ -589,7 +593,7 @@ By the end of class, students will be able to:
   * 🔑 We can see that `create-react-app` runs a series of scripts to create a new directory, repository, and folder structure for a boilerplate React application.
 
   * We can deduce that the argument after `create-react-app` is the name of the application that we want to create.
-  
+
   * This process might take some time to complete. When it's done, you will see a boilerplate application in the `00-practice-app` directory, with the following file structure (excluding `node_modules`):
 
      ```sh
@@ -615,11 +619,11 @@ By the end of class, students will be able to:
      ```
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
-  
+
   * For each subsequent activity in this unit, we will remove the `/src` directory in `00-practice-app` and replace it with the `/src` directory in the activity's `/Unsolved` folder. Let's practice that now.
 
 * Open `01-Ins_Create-React-App` and replace your newly created `00-practice-app/src` directory with the one found in `01-Ins_Create-React-App`.
-  
+
   * After we replace the `/src` directory, we can see the browser refresh and load the new content.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -632,7 +636,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to direct students to the activity instructions found in `02-Stu_Create-React-App/README.md`.
 
-### 9. Student Do: Create React App (15 min) 
+### 9. Student Do: Create React App (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Create-React-App/README.md`.
 
@@ -642,9 +646,9 @@ By the end of class, students will be able to:
    # 📐 Add Comments That Describe the Functionality of a React App
 
    ## Before We Begin
-   
+
    Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
-   
+
    To do this, follow these steps:
 
    1. In the command line, navigate to `20-React/01-Activities`.
@@ -663,10 +667,10 @@ By the end of class, students will be able to:
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
-   
+
    ---
 
    ## 🏆 Bonus
@@ -680,7 +684,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Create React App (10 min) 
+### 10. Instructor Review: Create React App (10 min)
 
 * Before you review the activity, make sure that you replace the `/src` directory with the one found in `02-Stu_Create-React-App`.
 
@@ -701,9 +705,9 @@ By the end of class, students will be able to:
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
   * After we copy the `/src` directory, we notice that there are some comments in the `index.js` file for us to complete.
-  
+
   * React is a JavaScript library that is used to build web application user interfaces.
-  
+
   * 🔑 As of React version 17, the React library no longer requires us to add `import React from 'react` to transform JSX. However, most in-production React codebases still use them because this is a recent change, so in this unit we include the import React statements in the activities:
 
      ```js
@@ -711,7 +715,7 @@ By the end of class, students will be able to:
      ```
 
   * 🔑  The `React` module is an entry point to the React library, while `react-dom` provides access to DOM-specific methods:
-  
+
      ```js
      import ReactDOM from 'react-dom';
 
@@ -719,9 +723,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑  `ReactDOM.render()` takes a React component or tree of React components and eventually renders them to the DOM.
-  
+
   * The first argument is the component we want to render (`<App />`), and second is the target element to render to (`#root`):
-  
+
      ```js
      ReactDOM.render(<App />, document.getElementById('root'));
      ```
@@ -764,15 +768,15 @@ By the end of class, students will be able to:
 
      export default HelloReact;
      ```
-  
+
   * The curly braces allow us to pass values and expressions into the view. In this example, we are passing in the variable `text`.
-  
+
   * JSX is a syntax extension to JavaScript that looks like HTML and is compiled to a widely supported ES5 syntax called Babel:
-  
+
      ```jsx
      <p>Hello World! Here is {text}</p>
      ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we make sure that each component has access to the React library?
@@ -785,14 +789,14 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Render Elements (5 min) 
+### 11. Instructor Demo: Render Elements (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `03-Ins_Render-Element/src`.
 
 * Run `npm start` from the command line in `00-practice-app`and demonstrate the following:
 
   * 🔑 When we run the app, we see that the page renders with some elements like a header, a `p` tag, and an unordered list.
-  
+
   * We also see that the `/src` directory contains an `index.js` file, an `App.js`file , and a components folder like the previous example.
 
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
@@ -800,7 +804,7 @@ By the end of class, students will be able to:
   * We see that `index.js` is the entry point for the application.
 
   * It imports `App` from `App.js` and uses `ReactDOM.render()` to render it to the element `#root`:
-  
+
      ```js
      import React from 'react';
      import ReactDOM from 'react-dom';
@@ -810,7 +814,7 @@ By the end of class, students will be able to:
      ```
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
-  
+
   * Investigating `App.js` allows us to see that this component returns some JSX, including another component called `Welcome`, denoted by the `<Welcome />` tag:
 
      ```js
@@ -833,11 +837,11 @@ By the end of class, students will be able to:
      ```js
      export default function Welcome() {
      ```
-  
+
   * Because it is possible to export more than one component from a file, we use the `default` keyword to tell React that this component should be imported if none is specified.
 
   * We can see several elements inside the `Welcome` component's return statement:
-  
+
      ```js
      return (
        <div className="container">
@@ -854,9 +858,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 Notice that the JSX elements are wrapped in a single `parent` element.
-  
+
   * Also note that we use `className` instead of `class` inside JSX, to avoid namespace issues with JavaScript `class` keywords.
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
@@ -867,7 +871,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Render-Element/README.md`.
 
-### 12. Student Do: Render Elements (15 min) 
+### 12. Student Do: Render Elements (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Render-Element/README.md`.
 
@@ -915,7 +919,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Render Elements (10 min) 
+### 13. Instructor Review: Render Elements (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -949,9 +953,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 We can see when we open `index.js` that `App` is getting exported and then rendered as the first argument to the `ReactDOM.render()` method.
-  
+
   * 🔑 Also, we can see that the second argument getting passed to `ReactDOM.render()` is the real DOM element that the React app should render to:
-  
+
      ```js
      import React from 'react';
      import ReactDOM from 'react-dom';
@@ -961,7 +965,7 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 Inside `HelloDiv.js`, similar to normal JavaScript functions, we want to have one return value. As a result, we need to wrap all the elements inside a parent element.
-  
+
   * Again, we import React as with all other functional or class-based components:
 
      ```js
@@ -996,18 +1000,18 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 14. Instructor Demo: Components (5 min) 
+### 14. Instructor Demo: Components (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `05-Ins_Component/src`.
 
 * Run `npm start` from the command line and demonstrate the following:
 
   * 🔑 When we start the React app, the page renders with the two components found in `/components`.
-  
+
   * Remember that components are JavaScript functions that describe some part of the application's user interface. They usually return some JSX and can also be written as classes.
 
   * 🔑 Also note that in `App.js`, we are importing the two components `List` and `Nav` at the top of the file. The return statement includes a parent `div` that contains both the `Nav` and `List` components.
-  
+
   * We can see that the `List` component has an attribute called users and is set to the value of `users`, one of the imports:
 
      ```js
@@ -1028,7 +1032,7 @@ By the end of class, students will be able to:
      ```
 
   * If we navigate into the `00-practice-app/src/components/Nav.js` file, we can see that this component seems responsible for returning JSX associated with the navigation bar for the page.
-  
+
   * We also see that we have one style object, called `linkStyle`, that is being used for each link:
 
      ```js
@@ -1068,11 +1072,11 @@ By the end of class, students will be able to:
        );
      }
      ```
-  
+
   * If we open `00-practice-app/src/components/List.js`, we can see that this component is mapping over a list of users and rendering `li` elements for each user. The sole responsibility of the component is to return a list of users with the `map()` method.
-  
+
   * The `List` component receives a `props` object. We use destructuring assignment to assign `users` to its own variable.
-  
+
   * Passing `props` to the component allows us to use that data inside the return method.
 
   * 🔑 The `users` array is being passed to the `List` component as a **prop**:
@@ -1109,7 +1113,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Component/README.md`.
 
-### 15. Student Do: Components (15 min) 
+### 15. Student Do: Components (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Component/README.md`.
 
@@ -1128,8 +1132,8 @@ By the end of class, students will be able to:
 
    3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-      `import 'bootstrap/dist/css/bootstrap.min.css'` 
- 
+      `import 'bootstrap/dist/css/bootstrap.min.css'`
+
    ## Activity
 
    Work with a partner to implement the following user story:
@@ -1144,7 +1148,7 @@ By the end of class, students will be able to:
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    * [React Docs on lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 
@@ -1165,7 +1169,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 16. Instructor Review: Components (10 min) 
+### 16. Instructor Review: Components (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1200,9 +1204,9 @@ By the end of class, students will be able to:
      ```
 
   * Now let's look at the `List` component. This file is where we used `map()` to iterate over each grocery item and return a new array of `li` tags for each item.
-  
+
   * When creating a collection of JSX elements using the `map()` method, we must provide a unique `key` attribute to the parent element that gets returned -- usually something specific to the data that you are working with, like an id. This `key` attribute allows React to track changes to the virtual DOM and select specific elements properly.
-  
+
   * We write JavaScript inside JSX by using curly braces (`{}`):
 
      ```js
@@ -1218,7 +1222,7 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 Notice that `map()` returns an array of `li` items. Whenever we try to render an array that contains JSX, React knows to render each JSX element separately.
-  
+
   * React also expects a `key` attribute to exist on each `li` element. This helps React determine which `li` is which.
 
   * Let's imagine that the user wanted to render a list of items that had not been purchased yet. We could do that using the `filter()` method:
@@ -1253,7 +1257,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 17. Instructor Demo: JSX Expressions (5 min) 
+### 17. Instructor Demo: JSX Expressions (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `07-Ins_JSX-expressions/src`.
 
@@ -1262,9 +1266,9 @@ By the end of class, students will be able to:
   * 🔑 When we run this React app, the browser loads a page with some basic styling and what appear to be some JSX variables.
 
   * 🔑 Open `src/components/JSXVariables.js`. The point of this exercise is writing JSX expressions inside the components.
-  
+
   * **JSX** stands for **JavaScript XML**. JSX allows us to write HTML in React code. It is identical to HTML in almost every way, except for how it is processed: JSX elements are converted to React elements when the code is run.
-  
+
   * Here is an example of some JSX code:
 
      ```js
@@ -1280,7 +1284,7 @@ By the end of class, students will be able to:
      ```
 
   * The first option is familiar: it is much like normal HTML. JSX is an extension of JavaScript and is translated into normal JavaScript when the code runs.
-  
+
   * One cool thing about JSX is that we can write comments in it by using single curly braces. This might look similar to the expressions we used in Handlebars.js, but we are using a set of single curly braces instead of double curly braces:
 
      ```js
@@ -1328,7 +1332,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_JSXexpressions/README.md`.
 
-### 18. Student Do: JSX Expressions (15 min) 
+### 18. Student Do: JSX Expressions (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_JSXexpressions/README.md`.
 
@@ -1348,7 +1352,7 @@ By the end of class, students will be able to:
    3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
      `import 'bootstrap/dist/css/bootstrap.min.css'`
-   
+
    ## Activity
 
    Work with a partner to implement the following user story:
@@ -1380,7 +1384,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 19. Instructor Review: JSX Expressions (10 min) 
+### 19. Instructor Review: JSX Expressions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
