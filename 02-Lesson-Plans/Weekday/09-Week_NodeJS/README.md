@@ -34,9 +34,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [09.1 Lesson Plan](01-Day_Intro-NodeJS/09.1-LESSON-PLAN.md)
 
-* [09.2 Lesson Plan](02-Day_ES6/09.2-LESSON-PLAN.md)
+* [09.2 Lesson Plan](02-Day_Filesystem/09.2-LESSON-PLAN.md)
 
-* [09.3 Lesson Plan](03-Day_Asynch-JS/09.3-LESSON-PLAN.md)
+* [09.3 Lesson Plan](02-Day_ES6/09.3-LESSON-PLAN.md)
 
 ### Homework
 
