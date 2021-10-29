@@ -1,7 +1,9 @@
 // 1. Using arrays
 const songs = ['Bad Guy', 'The Wheels on the Bus', 'Friday'];
 
-for (const value of songs) console.log(value);
+for (const song of songs) {
+  console.log(song);
+}
 
 /* Output:
   Bad Guy
@@ -18,8 +20,9 @@ const moreSongs = [
   ['Friday', 3],
 ];
 
-for (const [key, value] of moreSongs) {
-  console.log(`${key}'s chart position is ${value}`);
+// for of loop
+for (const song of moreSongs) {
+  console.log(song);
 }
 
 /* Output:
