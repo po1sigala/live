@@ -13,20 +13,20 @@ const jaime = {
 const aryaName = arya.name;
 const aryaParents = arya.parents;
 
-console.log(aryaName); // prints `"Arya Stark"`
-console.log(aryaParents); // prints `["Eddard Stark", "Catelyn Stark"]`
+console.log(aryaName); // logs `"Arya Stark"`
+console.log(aryaParents); // logs `["Eddard Stark", "Catelyn Stark"]`
 
 // Now with ES6 object destructuring syntax, we can do this:
 
 const { name, parents } = arya;
 
-console.log(name); // prints `"Jaime Lannister"`
-console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
+console.log(name); // logs `"Jaime Lannister"`
+console.log(parents); // logs `["Tywin Lannister", "Joanna Lannister"]`
 
 // We can also rename our destructured properties like so:
 
 const { name: jaimeName } = jaime;
-console.log(jaimeName); // prints `"Jaime Lannister"`
+console.log(jaimeName); // logs `"Jaime Lannister"`
 
 // We can also destructure parameters using the same feature. e.g. previously we might have done something like this:
 
@@ -41,9 +41,9 @@ logCharacter(arya);
 const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];
 const [winterfell, casterlyRock, kingLanding] = locations;
 
-console.log(winterfell); // prints `"Winterfell"`
-console.log(casterlyRock); // prints `"Casterly Rock"`
-console.log(kingLanding); // prints `"Kings Landing"`
+console.log(winterfell); // logs `"Winterfell"`
+console.log(casterlyRock); // logs `"Casterly Rock"`
+console.log(kingLanding); // logs `"Kings Landing"`
 
 // But now we can do this:
 
