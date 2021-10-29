@@ -801,7 +801,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ How do you know when to use a `for...of` loop?
 
-  * 🙋 While it generally depends on the situation, `for...of` loops help most when you need to iterate through key-value pairs in an object.
+  * 🙋 A `for of` loop is used to iterate over an array or other iterable object. The terms iterable means something that can be iterated over, such as an array or a string.
 
   * ☝️ What can we do if we don't completely understand this?
 
