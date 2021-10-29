@@ -37,6 +37,14 @@ const logCharacter = (character) =>
 
 logCharacter(arya);
 
+// We can also use array destructuring to pull off an array's elements
+const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];
+const [winterfell, casterlyRock, kingLanding] = locations;
+
+console.log(winterfell); // prints `"Winterfell"`
+console.log(casterlyRock); // prints `"Casterly Rock"`
+console.log(kingLanding); // prints `"Kings Landing"`
+
 // But now we can do this:
 
 const betterLogCharacter = ({ name, parents }) =>

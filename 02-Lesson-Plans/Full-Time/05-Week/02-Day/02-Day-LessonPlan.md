@@ -1012,6 +1012,13 @@ Use [Google](https://www.google.com) or another search engine to research this.
     betterLogCharacter(jaime);
     ```
 
+    * Destructuring assignment can also be used on arrays. Consider the following example:
+
+    ```js
+    const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];
+    const [winterfell, casterlyRock, kingLanding] = locations;
+    ```
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
