@@ -36,7 +36,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [09.2 Lesson Plan](02-Day_Filesystem/09.2-LESSON-PLAN.md)
 
-* [09.3 Lesson Plan](02-Day_ES6/09.3-LESSON-PLAN.md)
+* [09.3 Lesson Plan](03-Day_ES6/09.3-LESSON-PLAN.md)
 
 ### Homework
 
