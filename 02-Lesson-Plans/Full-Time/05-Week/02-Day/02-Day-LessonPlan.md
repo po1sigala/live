@@ -683,8 +683,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
       ['Friday', 3],
     ];
 
-    for (const [key, value] of moreSongs) {
-      console.log(`${key}'s chart position is ${value}`);
+    for (const song of moreSongs) {
+      console.log(song);
     }
     ```
 
