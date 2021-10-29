@@ -801,7 +801,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ How do you know when to use a `for...of` loop?
 
-  * 🙋 A `for of` loop is used to iterate over an array or other iterable object. The terms iterable means something that can be iterated over, such as an array or a string.
+  * 🙋 A `for of` loop is used to iterate over each element of an object. Arrays and strings are examples of iterable objects that are capable of returning each element one at a time.
 
   * ☝️ What can we do if we don't completely understand this?
 
