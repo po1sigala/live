@@ -22,9 +22,7 @@ To reproduce the problem, follow these steps:
 
 2. At the command line, execute the command `npm run watch` to create a bundle.
 
-3. Open the `index.html` file with live server.
-
-4. Click the "Get the latest interest rate" button and check the console in Chrome DevTools.
+3. Note the illegal operation error. 
 
 ## Assets
 
