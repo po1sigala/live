@@ -6,7 +6,7 @@ Work with a partner to resolve the following issue:
 
 ## Expected Behavior
 
-The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify that the cache is working properly by opening the developer console, clicking the Application tab and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, network requests for images will be responded to by the service worker with a 200 response.
+The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify that the cache is working properly by opening the developer console, clicking the Application tab in DevTools and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, network requests for images will be responded to by the service worker with a 200 response.
 
 ## Actual Behavior
 

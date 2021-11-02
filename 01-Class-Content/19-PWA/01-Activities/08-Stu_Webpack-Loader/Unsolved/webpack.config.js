@@ -4,7 +4,7 @@ const config = {
   entry: './assets/js/app.js',
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/'),
   },
   mode: 'development',
   // Add the module for loader rules
