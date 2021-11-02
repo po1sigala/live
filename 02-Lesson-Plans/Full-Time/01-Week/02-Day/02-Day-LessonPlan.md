@@ -94,13 +94,13 @@ In today's class, students will be continue working with HTML and be introduced 
   * As previously explained, we use `class` attributes to identify multiple elements for CSS styling:
 
       ```html
-      <section class="lesson box-orange">
+      <section class="section box-orange">
       ```
 
   * And we use `id` to select a unique element for styling&mdash;which can be useful if we want to apply certain styling to only one specific element on the page:
 
     ```html
-    <section class="lesson" id="box-yellow">
+    <section class="section" id="box-yellow">
     ```
 
 * Open `09-Ins-CSS-Color/assets/style.css` in your browser and demonstrate the following:
@@ -110,7 +110,7 @@ In today's class, students will be continue working with HTML and be introduced 
   * 🔑 Each rule block comprises a selector that indicates the element or elements you want to style and the CSS properties to be applied. The name of the selector will match the name of the `class` or `id` attribute in your HTML. A `.` precedes the name of a class. A `#` precedes the id:
 
     ```css
-    .lesson {
+    .section {
       width: 200px;
       height: 200px;
     }
@@ -242,12 +242,12 @@ In today's class, students will be continue working with HTML and be introduced 
   * We use `class` attributes to identify groups of elements that we want to style. To apply the style to just one unique element, we can use an `id` attribute:
 
     ```html
-    <section class="lesson" id="section-1">
+    <section class="section" id="section-1">
     ```
 
 * Open `10-Stu_CSS-Color/Solved/assets/css/style.css` in your IDE and explain the following:
 
-  * 🔑 We add the CSS property `color` to change the font color of `section-1` to yellow, and we add the `background-color` property to change the background to purple. We can either specify predefined colors or use hex codes:
+  * 🔑 We add the CSS property `color` to change the font color of `section-1` to yellow, and we add the `background-color` proprty to change the background to purple. We can either specify predefined colors or use hex codes:
 
     ```css
     #section-1 {
@@ -446,17 +446,17 @@ In today's class, students will be continue working with HTML and be introduced 
   * We add the missing `id` and `class` attributes on the HTML elements so that the styles can display:
 
     ```html
-    <section class="lesson">
+    <section class="section">
       <h2>Baby Spiders</h2>
       <p id="fact-1">A baby spider is called a spiderling 🕷️.</p>
     </section>
 
-    <section class="lesson">
+    <section class="section">
       <h2>Beds</h2>
       <p id="fact-2">The word "bed" looks like a bed 🛏️.</p>
     </section>
 
-    <section class="lesson">
+    <section class="section">
       <h2>Powerful Squirrels</h2>
       <p id="fact-3">Approximately 10-20% of US power outages 🔌 are caused by squirrels 🐿️.</p>
     </section>
@@ -466,10 +466,10 @@ In today's class, students will be continue working with HTML and be introduced 
 
   * Now that the HTML is properly set up, we can add the styles needed so the font styles are displayed.
 
-  * 🔑 We add a `font-family` property to the `section` rule block, applying this font family to all sections that have the `lesson` class:
+  * 🔑 We add a `font-family` property to the `section` rule block, applying this font family to all sections that have the `section` class:
 
     ```css
-    .lesson {
+    .section {
       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       background-color: #fffacd;
     }
