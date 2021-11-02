@@ -1,8 +1,6 @@
-# Career Connection: Progressive Web Applications (PWA)
+# Career Connection
 
-## Career Connection: Progressive Web Applications (PWA)
-
-### Introduction
+## Career Connection
 
 This week, you're learning how to create Progressive Web Applications (PWA) and optimize legacy applications to ensure that they are accessible to devices running on slower connections. While this might not sound like an exciting topic, it is an incredibly important skillset to have as you start talking with prospective employers!
 
@@ -10,7 +8,7 @@ In an ideal world, we'd all love to go out and write code using the latest techn
 
 So when you go out on that job interview, remember to tell the interviewer what you can do for their legacy applications while also developing their cutting-edge applications!
 
-#### Employer-Competitive Advantage
+### Employer-Competitive Advantage
 
 Are you already looking at companies that you'd like to interview with? If not, then start with Step 1. If you already have a list of companies that you're interested in working for in the future, jump ahead to Step 2.
 
@@ -62,7 +60,7 @@ To put these steps into practice, complete the following task:
 
 3. Implement fixes for them.
 
-### Technical Interview Preparation
+### Prepare for the Technical Interview
 
 Many companies use algorithm questions during the technical interview. We strongly recommend that you practice these. Doing so will prepare you to handle some of the most common questions in an interview or promotion discussion.
 
@@ -78,7 +76,9 @@ For practice in a live, interview-style IDE, complete the following CodeSignal a
 
 * CodeSignal Algorithm: [Missing Number](https://app.codesignal.com/public-test/xttcwYyLzN9udSHRm/oEiyqtuFgGaFLj)
 
-If you're interested in learning more about the technical interviewing process, attend a [career services workshops](https://careerservicesonlineevents.splashthat.com/).
+### Career Services Events
+
+If you want to hear more about the technical interviewing process and practice algorithms in a mock interview setting, attend one of our [upcoming workshops](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp)!
 
 ---
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
