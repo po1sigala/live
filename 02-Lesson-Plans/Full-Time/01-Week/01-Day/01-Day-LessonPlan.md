@@ -1036,7 +1036,7 @@ By the end of class, students will be able to:
   * A `class` attribute can be used to select and style one or more elements:
 
     ```html
-    <section class="lesson">
+    <section class="section">
     ```
 
   * The `id` attribute is used to select a single element for styling:
@@ -1132,7 +1132,7 @@ By the end of class, students will be able to:
   * 🔑 We use a global `class` attribute to add a `section` identifier to all sections:
 
     ```html
-    <section class="lesson">
+    <section class="section">
     ```
 
   * 🔑 We use a global `id` attribute to add a unique identifier to the email list item:
