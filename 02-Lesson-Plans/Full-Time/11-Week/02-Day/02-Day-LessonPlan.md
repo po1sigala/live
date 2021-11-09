@@ -8,7 +8,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * In this lesson, students will complete activities `15-Ins_useMutation` through `27-Evr_GitHub-Actions`.
 
-* **Important**: React Router recentedly [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm  command to install React Router version 5: `npm install react-router-dom@5`.
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm  command to install React Router version 5: `npm install react-router-dom@5`.
 
 * The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you have not yet done it, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
@@ -70,7 +70,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 ## Class Instruction
 
-### 1. Instructor Demo: useMutation (5 min) 
+### 1. Instructor Demo: useMutation (5 min)
 
 * Welcome students to class.
 
@@ -83,7 +83,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * 🔑 To create and modify data, we use mutations. This allows us to have a full CRUD app.
 
 * Open `15-Ins_useMutation/client/src/utils/mutations.js` to demonstrate the following:
-  
+
   * Setting up a mutation is a lot like setting up a query. First, we set up our front end to send requests using Apollo Client.
 
   * 🔑 Then, we write our mutation, making sure our entry point and fields match definitions in our schema exactly and that our variable definition is set. We also define a variable `$name`. This variable will be used to pass back data when our mutation executes:
@@ -113,8 +113,8 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
      ```js
      const [addProfile, { error }] = useMutation(ADD_PROFILE);
-     ``` 
-  
+     ```
+
   * Because we want our mutation function to execute when we submit the form, we place it inside the `handleFormSubmit` function:
 
      ```js
@@ -122,9 +122,9 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
        variables: { name },
      });
      ```
-    
+
   * 🔑 We then assign a value to our mutation variable that represents the name entered by the user:
-  
+
      ```js
      variables: { name }
      ```
@@ -150,7 +150,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ When are mutations executed using `useMutation`? 
+  * ☝️ When are mutations executed using `useMutation`?
 
   * 🙋 Mutations are not immediately executed when the page is rendered. Instead, the `useMutation()` Hook returns a mutation function that can be called inside another function. This makes it easy to attach a mutation to an event, like a form submission.
 
@@ -158,7 +158,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_useMutation/README.md `.
 
-### 2. Student Do: useMutation (15 min) 
+### 2. Student Do: useMutation (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_useMutation/README.md `.
 
@@ -185,7 +185,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
    * Where can we define mutations that accept arguments?
 
-   * What information about the mutation's state can we use in our UI? 
+   * What information about the mutation's state can we use in our UI?
 
    ## 🏆 Bonus
 
@@ -194,12 +194,12 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
    * How can Apollo Client be set up as a state management tool?
 
    Use [Google](https://www.google.com) or another search engine to research this.
-  
+
    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: useMutation (10 min) 
+### 3. Instructor Review: useMutation (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -219,7 +219,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * ✔️ `variables: { ...formState }`
 
-* Open `16-Stu_useMutation/Solved/client/src/utils/mutations.js` in your IDE and explain the following:   
+* Open `16-Stu_useMutation/Solved/client/src/utils/mutations.js` in your IDE and explain the following:
 
   * 🔑 The `ADD-THOUGHT` mutation has two variables `$thoughtText` and `$thoughtAuther`. We will use these variables to pass back data that is entered by the user:
 
@@ -246,7 +246,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
      `;
      ```
 
-* Open `16-Stu_useMutation/Solved/client/src/components/ThoughtForm/index.js` in your IDE and explain the following: 
+* Open `16-Stu_useMutation/Solved/client/src/components/ThoughtForm/index.js` in your IDE and explain the following:
 
   * 🔑 In the component where we want use the mutation, we import both the mutation and the `useMutation` Hook:
 
@@ -297,7 +297,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use variables to pass data inputted by the user back to our mutation? 
+  * ☝️ How do we use variables to pass data inputted by the user back to our mutation?
 
   * 🙋 When we write a mutation, we define the variable. Then, when the mutation is executed, we assign the variable a value. This value is then passed back to the mutation so that it can be used in the associated function to create, update, or delete data.
 
@@ -307,7 +307,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Apollo Cache (5 min) 
+### 4. Instructor Demo: Apollo Cache (5 min)
 
 * Navigate to `17-Ins_Apollo-Cache` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
@@ -324,7 +324,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
       ```js
      import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
      ```
-  
+
   * We then set the cache value in our `client` to a new instance of a `InMemoryCache()` object. We will reference this `cache` object when we want to retrieve data or update the data stored in the cache:
 
      ```js
@@ -357,7 +357,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
      ```
 
   * Next, we combine the data from the newly executed mutation function with the data we retrieved from the cache and store the results in our `data` property:
-  
+
      ```js
      data: { profiles: [...profiles, addProfile] }
      ```
@@ -373,7 +373,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use an `update()` function to modify our cache? 
+  * ☝️ How do we use an `update()` function to modify our cache?
 
   * 🙋 We pass the update function as the second argument of our `useMutation` Hook. Then, we retrieve the existing data from our cache and combine it with the data generated when our mutation executed and write the new data to our cache.
 
@@ -412,7 +412,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   3. Fill out the form at the top of the page and submit the form to see the error.
 
-  ## Assets 
+  ## Assets
 
   The following image shows the error:
 
@@ -422,10 +422,10 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   ## 💡 Hint
 
-  * Where does the cache update functionality go when executing a mutation?  
+  * Where does the cache update functionality go when executing a mutation?
 
   ## 🏆 Bonus
- 
+
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
   * What is another means of storing data globally client-side that we can implement?
@@ -438,7 +438,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 6. Instructor Review: Apollo Cache (10 min) 
+### 6. Instructor Review: Apollo Cache (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -452,27 +452,27 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * ✔️ `{ data: { addThought } }`
 
-* Open `18-Stu_Apollo-Cache/Solved/client/src/components/ThoughtForm/index.js` in your IDE and explain the following: 
+* Open `18-Stu_Apollo-Cache/Solved/client/src/components/ThoughtForm/index.js` in your IDE and explain the following:
 
   * 🔑 The update function modifies the data in the cache to match the changes made in the database when a mutation executes. However, it looks like we have a `TypeError` and the function is not working properly.
 
   * For the `update()` function to operate properly, we must pass in two arguments: a cache object and a `data` property that holds the value of data returned from our mutation function. Because our broken code is returning a `TypeError`, it is likely that one of these is not the right type.
 
   * 🔑 The data is not separate from the `addThought()` mutation data. Instead, the data we want to store IS the mutation data, identified as `addThought()`. This could be causing the bug!
- 
+
     ```js
-     update(cache, data, addThought)   
+     update(cache, data, addThought)
     ```
 
   * To fix the error, we add the `data` property to the mutation data and give it a value of `{addThought}`. Now the `update()` function has the data -- in the format it needs:
 
     ```js
     update(cache, { data: { addThought } }) {
-    ``` 
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What two things do we need to pass into the update function? 
+  * ☝️ What two things do we need to pass into the update function?
 
   * 🙋 We pass the cache object that represents the Apollo Client cache as well as a data property that holds the data returned when the mutation is executed.
 
@@ -482,14 +482,14 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: React Router (5 min) 
+### 7. Instructor Demo: React Router (5 min)
 
 * Navigate to `19-Ins_React-Router` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
 
 * Open `http://localhost:3000` in your browser to demonstrate the following:
 
-  * At this point, we have covered all that is needed so that our front end can send requests to our GraphQL API and handle responses. Congrats, that is a huge step! 
-  
+  * At this point, we have covered all that is needed so that our front end can send requests to our GraphQL API and handle responses. Congrats, that is a huge step!
+
   * To make it easy for our user to easily navigate between multiple pages, though, we have a bit more more work to do.
 
   * When we enter `http://localhost:3000/` in our browser we are directed to the home page.
@@ -553,7 +553,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Open `19-Ins_React-Router/client/src/pages/Profile.js` in your IDE to demonstrate the following:
 
-  * When the user clicks on the link inside our app or enters the page's URL in the browser, we want only the associated tech friend's information to display on the page. 
+  * When the user clicks on the link inside our app or enters the page's URL in the browser, we want only the associated tech friend's information to display on the page.
 
   * 🔑 To do this, we first grab the needed profile id from the URL's parameter using the `useParams()` Hook:
 
@@ -570,13 +570,13 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     ```
 
   * 🔑 We can then use the returned data to populate the page:
-  
+
     ```js
     <h2 className="card-header">
       {profile.name}'s friends have endorsed these skills...
     </h2>
     ```
-    
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we use React Router to add navigation to our site?
@@ -587,7 +587,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_React-Router/README.md`.
 
-### 8. Student Do: React Router (15 min) 
+### 8. Student Do: React Router (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_React-Router/README.md`.
 
@@ -656,7 +656,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * ✔️ `useParams()`
 
-* Open `20-Stu_React-Router/client/src/App.js` in your IDE and explain the following: 
+* Open `20-Stu_React-Router/client/src/App.js` in your IDE and explain the following:
 
   * 🔑 To navigate to the thoughts page, we first must define a route. Because the route is dynamic and will change based on the id of the thought we want to display, we use a `:thoughtID` parameter:
 
@@ -666,8 +666,8 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     </Route>
     ```
 
-* Open `20-Stu_React-Router/client/src/components/ThoughtList/index.js` in your IDE and explain the following: 
-  
+* Open `20-Stu_React-Router/client/src/components/ThoughtList/index.js` in your IDE and explain the following:
+
   * To access the page from inside our app, we use a link.
 
   * 🔑 Inside our map function, we create a link component that uses the route we just created. Then, we assign the value of the `:thoughtId` parameter to be the id of our current thought:
@@ -679,7 +679,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
       >
     ```
 
-* Open `20-Stu_React-Router/client/src/pages/SingleThought.js` in your IDE and explain the following: 
+* Open `20-Stu_React-Router/client/src/pages/SingleThought.js` in your IDE and explain the following:
 
   * 🔑 To populate the data for the individual thought on our page, we first retrieve the id from the URL's parameter using the `useParams()` Hook:
 
@@ -694,21 +694,21 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
       variables: { thoughtId: thoughtId },
     });
     ```
-    
+
   * We can then use the returned data to display information on our page:
-  
+
     ```js
     <h3 className="card-header bg-dark text-light p-2 m-0">
       {thought.thoughtAuthor} <br />
       <span style={{ fontSize: '1rem' }}>
          had this thought on {thought.createdAt}
       </span>
-    </h3> 
+    </h3>
     ```
-    
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are two ways we can access a page when we use React Router? 
+  * ☝️ What are two ways we can access a page when we use React Router?
 
   * 🙋 We can access the page directly, by entering the URL of the page directly into the browser. If the path uses a variable, a value for the variable must be provided. We can also use a Link component to allow a user to click on a link and be directed to another page.
 
@@ -731,7 +731,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 * Open the [JSON Web Token Debugger](https://jwt.io/#debugger-io) in your browser and demonstrate the following:
 
   * We use a JSON Web Token to securely send signed and verified data as a JSON object. Each JWT is made up of three parts: the header, payload, and signature.
-  
+
   * We use the header to hold the token's metadata. This includes the algorithm used and the token type:
 
     ```js
@@ -854,7 +854,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * 🔑 We can access this `auth` object through two mutation entry points: `login` and `addProfile`. Let's use the `addProfile` entry point to add a new profile to see a generated token.
 
   * We write a mutation in the editor that takes in three values: name, email, and password:
-  
+
     ```js
     mutation addProfile($name: String!, $email: String!, $password: String!) {
       addProfile(name: $name, email: $email, password: $password) {
@@ -923,7 +923,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What are the pros and cons of using JSON Web Tokens? 
+  * What are the pros and cons of using JSON Web Tokens?
 
   Use [Google](https://www.google.com) or another search engine to research this.
 
@@ -932,7 +932,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Sign JWT (10 min)  
+### 15. Instructor Review: Sign JWT (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -956,7 +956,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
     ```js
     const { User, Thought } = require('../models');
-    const { signToken } = require('../utils/auth'); 
+    const { signToken } = require('../utils/auth');
     ```
 
   * 🔑 We then write an `addUser` resolver and pass in `username`, `email`, and `password` as arguments. This resolver will use our imported `signToken()` method:
@@ -977,7 +977,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     const token = signToken(user);
     return { token, user };
     ```
-  
+
   * 🔑 For the `login` mutation, we pass in the `email` and `password` that we want to check against an existing user:
 
     ```js
@@ -1043,7 +1043,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     ```
 
   * Next, we create a new class `AuthService` and add the functionality needed to store our token so we can easily retrieve it and include it with a request to the server:
-  
+
     ```js
     class AuthService {}
     ```
@@ -1132,7 +1132,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
             console.error(e);
           }
     ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What library do we use to decode the information in our token on the front end?
@@ -1184,7 +1184,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   ## 💡 Hints
 
-  * Where do we store all of our client-side authentication functionality? 
+  * Where do we store all of our client-side authentication functionality?
 
   * What unit of time measurement does the JSON Web Token use compared to JavaScript?
 
@@ -1202,7 +1202,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Decode JWT (10 min)  
+### 18. Instructor Review: Decode JWT (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1240,7 +1240,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     if (decoded.exp < Date.now() / 1000)
     ```
 
-  * Once a valid comparison is made, the user will be prevented from immediately logging out. 
+  * Once a valid comparison is made, the user will be prevented from immediately logging out.
 
     ```js
     isTokenExpired(token) {
@@ -1327,7 +1327,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
       throw new AuthenticationError('You need to be logged in!');
     },
     ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we verify and decode a token before it reaches the resolver?
@@ -1405,7 +1405,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Context Resolver (10 min)  
+### 21. Instructor Review: Context Resolver (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1493,8 +1493,8 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Open the [GitHub Docs Introduction to GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions) in your browser and explain the following:
 
-  * **GitHub Actions** are automated tasks or workflows that run when certain events are triggered, like pull requests. At their core, they are a series of commands that allow us to automate things like deployment, testing, and linting. 
-  
+  * **GitHub Actions** are automated tasks or workflows that run when certain events are triggered, like pull requests. At their core, they are a series of commands that allow us to automate things like deployment, testing, and linting.
+
   * Using this guide, you will create a GitHub Action that automatically runs linting checks on any pull request made to the `main` or `develop` branches. Actions like this can especially benefit collaborative efforts like group projects.
 
 * Direct students to the activity instructions found in `27-Evr_GitHub-Actions/README.md`.
@@ -1516,7 +1516,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     ```sh
     npm i eslint --save-dev
     ```
-  
+
   * With `eslint` installed as a developer dependency, we add a new script to the `package.json` file that allows us to run linting checks with a single command:
 
     ```json
@@ -1541,7 +1541,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     ```
 
   * We build the GitHub workflow by creating directories called `.github` and `.workflows`, with a `main.yml` file inside the `.workflows` directory.
-  
+
   * Then we add the workflow to the `main.yml` file, telling GitHub which actions to execute when a specific trigger happens:
 
     ```yml
@@ -1576,7 +1576,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     ```
 
   * After that, we save the changes, commit all the files, and push to GitHub once again.
-  
+
   * With the workflow in place in the repository, we can now create a new branch, make a pull request to `dev` or `main`, and witness the workflow in action!
 
 * Answer any questions before ending the class.

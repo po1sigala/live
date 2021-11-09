@@ -1,4 +1,4 @@
-# Unit 22 Instructor Overview: State 
+# Unit 22 Instructor Overview: State
 
 ## Overview
 
@@ -10,11 +10,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/22-State/RE
 
 * Be sure to prepare and review the activities before class. Try to anticipate any questions that students might have.
 
-* In the state management activities, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code. 
+* In the state management activities, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code.
 
 * Many of the activities this week allow students to review the skills needed for final projects. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
 
-* **Important**: React Router recentedly [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm  command to install React Router version 5: `npm install react-router-dom@5`.
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm  command to install React Router version 5: `npm install react-router-dom@5`.
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
@@ -47,7 +47,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [22.1 Lesson Plan](./01-Intro-State/22.1-LESSON-PLAN.md)
 
   * [22.2 Lesson Plan](./02-MERN-Review/22.2-LESSON-PLAN.md)
-  
+
   * [23.3 Lesson Plan](./03-MERN-Redux/22.3-LESSON-PLAN.md)
 
 ### Homework
