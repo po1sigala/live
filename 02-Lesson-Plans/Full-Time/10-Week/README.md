@@ -10,16 +10,15 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 ## Instructor/TA Notes
 
-* We will be making use of the students' Project 2 in the first lesson of Unit 19. Ensure all students have a deployed project to work with.
+* On Day 2 and Day 3 of Unit 19, make sure you work in an incognito window for each activity to avoid caching issues. It would be a good idea to have students do the same.
 
-* When working with PWAs, you may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
+* Take some time to refresh your memory on how the Service Worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the Service Worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-* Webpack can be a difficult tool to get your head around, so be as clear as possible in your explanations and be ready to answer plenty of student questions. It is recommended that you review the webpack [docs](https://webpack.js.org/concepts). You may want to read [Why Webpack](https://webpack.js.org/concepts/why-webpack) so that you are prepared to answer student questions like "Why are we learning this?".
+* On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change. 
+* The homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
 
-* Make sure you're well-versed in React Hooks so that you can explain how they work to students, who might be confused at first about this different approach to building web app UIs.
-
+* PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 * The homework for Unit 20 invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their homework.
 
 * Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `src/` directory before each activity.
@@ -30,7 +29,7 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 19](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md) and [Unit 20](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 19](../../../01-Class-Content/19-PWA/04-Career-Connection/CAREER-CONNECTION.md) and [Unit 20](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
