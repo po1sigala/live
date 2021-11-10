@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function Card(props) {
+// TODO: Modify this function so that it accepts props from the parent component
+export default function Card() {
   const cardStyle = {
     width: '18rem',
   };
@@ -11,8 +12,9 @@ export default function Card(props) {
     return number.toString().split('.')[0];
   };
 
+  // TODO: Update the return statement to display the data we received as props
   return (
-    <div>
+    <div className="container">
       <div className="card" style={cardStyle}>
         <img
           className="card-img-top"
@@ -20,10 +22,10 @@ export default function Card(props) {
           alt="Card cap"
         />
         <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">{props.description}</p>
+          <h5 className="card-title">{/* Display the dog's name here */}</h5>
+          <p className="card-text">{/* Display the dog's name here */}</p>
           <a href="#" className="btn btn-primary">
-            Adopt {props.name}
+            Adopt {/* Display the dog's name here */}
           </a>
         </div>
       </div>
