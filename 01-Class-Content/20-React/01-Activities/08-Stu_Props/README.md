@@ -22,7 +22,9 @@ Work with a partner to implement the following user story:
 
 * It's done when I have updated the return method in `src/components/Display.js` to render a card.
 
-* It's done when I have passed data for the dog's `name` and `description` as props to the `Card`.
+* It's done when I have passed data for the dog's `name`, `description`, and `id` as props to the `Card`.
+
+* It's done when I have modified to `Card` component to render the `canine` properties.
 
 ## 💡 Hints
 
