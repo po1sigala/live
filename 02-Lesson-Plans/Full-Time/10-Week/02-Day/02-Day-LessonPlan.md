@@ -40,32 +40,31 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                       | Duration |
-|---     |---  |---                                  |---       |
-| 10:00AM| 1   | Instructor Demo: Cache CSS and JavaScript Files                   | 0:05     |
-| 10:05AM| 2   | Student Do: Cache CSS and JavaScript Files                        | 0:15     |
-| 10:20AM| 3   | Instructor Review: Cache CSS and JavaScript Files                 | 0:10     |
-| 10:30AM| 4   | Instructor Demo: Caching Images                    | 0:05     |
+| Start  | #   | Activity Name                                     | Duration |
+|---     |---  |---                                                |---       |
+| 10:00AM| 1   | Instructor Demo: Cache CSS and JavaScript Files   | 0:05     |
+| 10:05AM| 2   | Student Do: Cache CSS and JavaScript Files        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Cache CSS and JavaScript Files | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Caching Images                   | 0:05     |
 | 10:35AM| 5   | Student Do: Caching Images                        | 0:15     |
 | 10:50AM| 6   | Instructor Review: Caching Images                 | 0:10     |
-| 11:00AM| 7   | Instructor Demo: Client-Server Model                    | 0:05     |
-| 11:05AM| 8   | Student Do: Client-Server Model                        | 0:15     |
-| 11:20AM| 9   | Instructor Review: Client-Server Model                 | 0:10     |
-| 11:30AM| 10  | FLEX                                | 0:30     |
-| 12:00PM| 11  | BREAK                               | 0:30     |
-|        |     | **ODD.3 BEGINS**                    |          |
-| 12:30PM| 12  | Instructor Do: Stoke Curiosity      | 0:10     |
-| 12:40PM| 13  | Instructor Demo:                    | 0:05     |
-| 12:45PM| 14  | Student Do:                         | 0:15     |
-| 1:00PM | 15  | Instructor Review:                  | 0:10     |
-| 1:10PM | 16  | Instructor Demo:                    | 0:05     |
-| 1:15PM | 17  | Student Do:                         | 0:15     |
-| 1:30PM | 18  | Instructor Review:                  | 0:10     |
-| 1:40PM | 19  | Instructor Demo:                    | 0:05     |
-| 1:45PM | 20  | Student Do:                         | 0:15     |
-| 2:00PM | 21  | Instructor Review:                  | 0:10     |
-| 2:10PM | 22  | Everyone Do: Git                    | 0:20     |
-| 2:30PM | 23  | END                                 | 0:00     |
+| 11:00AM| 7   | Instructor Demo: Client-Server Model              | 0:05     |
+| 11:05AM| 8   | Student Do: Client-Server Model                   | 0:15     |
+| 11:20AM| 9   | Instructor Review: Client-Server Model            | 0:10     |
+| 11:30AM| 10  | FLEX                                              | 0:30     |
+| 12:00PM| 11  | BREAK                                             | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity                    | 0:10     |
+| 12:40PM| 13  | Instructor Demo: IndexedDB                        | 0:05     |
+| 12:45PM| 14  | Student Do: IndexedDB                             | 0:15     |
+| 1:00PM | 15  | Instructor Review: IndexedDB                      | 0:10     |
+| 1:10PM | 16  | Instructor Demo: IndexedDB CRUD                   | 0:05     |
+| 1:15PM | 17  | Student Do: IndexedDB CRUD                        | 0:15     |
+| 1:30PM | 18  | Instructor Review: IndexedDB CRUD                 | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Manifest                         | 0:05     |
+| 1:45PM | 20  | Student Do: Manifest                              | 0:15     |
+| 2:00PM | 21  | Instructor Review: Manifest                       | 0:10     |
+| 2:10PM | 22  | Everyone Do: Git                                  | 0:20     |
+| 2:30PM | 23  | END                                               | 0:00     |
 
 ---
 
