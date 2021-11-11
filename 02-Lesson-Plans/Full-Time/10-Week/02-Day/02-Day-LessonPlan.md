@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this class, students will learn how to use the workbox library to cache and serve static assets. Students will also become familiar with the different methods workbox provides to create a service worker. Additionally, students will learn some of the caching strategies that workbox provides out of the box.
+In this class, students will learn how to use the workbox library to cache and serve static assets. Students will also become familiar with the different methods workbox provides to create a service worker and learn some of the caching strategies that workbox provides out of the box. In addition, students will be introduced to IndexedDB, which allows developers to store large amounts of data on the client side. 
 
 ## Instructor Notes
 
@@ -15,6 +15,16 @@ In this class, students will learn how to use the workbox library to cache and s
 * For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
 
 * In addition to using a private window, students can troubleshoot caching issues further by completely unregistering the service worker. This will allow the browser to cache the assets again. Details on how to do this will vary among browsers, but generally you can find the option to do this in the browser's developer tools.
+
+* Some of these activities rely on a browser response. If you are not seeing the intended results, please close your browser entirely and restart to begin a new browser session. This will often clear any issues.
+
+* When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+* PWAs and IndexedDB can be frustrating at times, so take some time to familiarize yourself with the behavior of each activity. This is also a good opportunity for students to practice troubleshooting unexpected behaviors in their application.
+
+* Some of these activities rely on a browser response. If you are not seeing the intended results, please close your browser entirely and restart to begin a new browser session. This will often clear any issues.
+
+* When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
