@@ -20,9 +20,11 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
+The activity is done when it meets the following criteria:
+
 * It's done when I have updated the return method in `src/components/Display.js` to render a card.
 
-* It's done when I have passed data for the dog's `name`, `description`, and `id` as props to the `Card`.
+* It's done when I have passed data for the dog's `name`, `description`, and `id` as props to the `Card` component.
 
 * It's done when I have modified to `Card` component to render the `canine` properties.
 
@@ -36,6 +38,9 @@ Work with a partner to implement the following user story:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to React components?
+* How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to our React components?
 
 Use [Google](https://www.google.com) or another search engine to research this.
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
