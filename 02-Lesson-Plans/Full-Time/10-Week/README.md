@@ -39,6 +39,8 @@ In Unit 21, you will introduce students to the GraphQL Playground. If you are ne
 
 Unit 22 will explore state management and the Context API. We'll also review the key concepts in React to help students prepare for their final projects and solidify their understanding of these more advanced skills. 
 
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of Unit 21 and 22 activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
