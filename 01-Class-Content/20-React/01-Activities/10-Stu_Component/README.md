@@ -10,8 +10,8 @@ Before you complete this activity, complete the following steps:
 
 3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-      `import 'bootstrap/dist/css/bootstrap.min.css'`
- 
+  `import 'bootstrap/dist/css/bootstrap.min.css'`
+
 ## Activity
 
 Work with a partner to implement the following user story:
@@ -26,10 +26,9 @@ The activity is done when it meets the following criteria:
 
 * It's done when each `li` tag displays the `text` property of each grocery object using the `map()` method.
 
-
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 * [React Docs on lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 

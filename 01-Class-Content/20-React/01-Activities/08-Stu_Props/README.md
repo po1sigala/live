@@ -1,4 +1,4 @@
-# 🏗️ Pass Data Using Props 
+# 🏗️ Pass Data Using Props
 
 ## Before We Begin
 
@@ -10,23 +10,23 @@ Before you begin this activity, complete the following steps:
 
 3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-      `import 'bootstrap/dist/css/bootstrap.min.css'`
+  `import 'bootstrap/dist/css/bootstrap.min.css'`
 
 ## Activity
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to render multiple cards for different animals by passing props to each one.
+* As a developer, I want to render a card by passing props.
 
 ## Acceptance Criteria
 
 The activity is done when it meets the following criteria:
 
-* It's done when I have updated the return method in `src/components/Display.js` to render a `Card` for each dog.
+* It's done when I have updated the return method in `src/components/Display.js` to render a card.
 
-* It's done when I have passed data for each dog's `name` and `description` as props to the `Card`.
+* It's done when I have passed data for the dog's `name`, `description`, and `id` as props to the `Card` component.
 
-* It's done when I have added a unique `key` property to each `Card` that gets rendered.  
+* It's done when I have modified to `Card` component to render the `canine` properties.
 
 ## 💡 Hints
 
