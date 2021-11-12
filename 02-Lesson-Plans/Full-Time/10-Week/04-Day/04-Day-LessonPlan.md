@@ -6,7 +6,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_Props` through `20-Stu_Fetching-Data`.
+* In this lesson, students will complete activities `09-Ins_Components` through `20-Stu_Fetching-Data`.
 
 * Much like in the previous lesson, each activity will require the student to replace the `/src` directory from their `00-practice-app` with the current activity by manually copying and pasting, or by using the `sswap` utility located in the `01-Activities/swap_tool` directory.
 
@@ -32,9 +32,9 @@ In this lesson, you'll review some important React concepts with students to hel
 
 | Start  | #   | Activity Name                      | Duration |
 |---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo: Props             | 0:05     |
-| 10:05AM| 2   | Student Do: Props                  | 0:15     |
-| 10:20AM| 3   | Instructor Review: Props           | 0:10     |
+| 10:00AM| 1   | Instructor Demo: Components        | 0:05     |
+| 10:05AM| 2   | Student Do: Components             | 0:15     |
+| 10:20AM| 3   | Instructor Review: Components      | 0:10     |
 | 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
 | 10:40AM| 5   | Instructor Demo: State             | 0:05     |
 | 10:45AM| 6   | Student Do: State                  | 0:15     |
@@ -60,246 +60,282 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Class Instruction
 
-### 1. Instructor Demo: Props (5 min)
+### 1. Instructor Demo: Components (5 min)
 
 * Welcome students to class.
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `09-Ins_Props/src`.
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `09-Ins_Component/src`.
 
 * Run `npm start` from the command line and demonstrate the following:
 
-  * 🔑 This example is using a Bootstrap alert that tells us that there is an invalid username or password.
+  * 🔑 When we start the React app, the page renders with the two components found in `/components`.
 
-  * Inside `App.js`, we are returning a component `Alert` with a type attribute of `danger`.
+  * Remember that components are JavaScript functions that describe some part of the application's user interface. They usually return some JSX and can also be written as classes.
 
-  * `App.js` also has a variable called `message` that is getting passed as a prop to `Alert`:
+  * 🔑 Also note that in `App.js`, we are importing the two components `List` and `Nav` at the top of the file. The return statement includes a parent `div` that contains both the `Nav` and `List` components.
 
-     ```js
-     const message = "Invalid user id or password"
+    ```js
+    import List from './components/List';
+    import Nav from './components/Nav';
 
-     function App() {
-       return <Alert type="danger" message={message} /></Alert>;
-     }
-     ```
+    export default function App() {
+      return (
+        <div>
+          <Nav />
+          <List users={users} />
+        </div>
+      );
+    }
+    ```
 
-  * If we look at `/components/Alert.js`, we can see that the component accepts something called `props` as an argument. We refer the data in `props` just like we would with any other JavaScript object:
+  * We can see that the `List` component has an attribute called `users` and is set to the value of `users`, one of the imports:
 
-     ```js
-     function Alert(props) {
-       console.log(props);
+    ```js
+    import users from './users';
 
-       return (
-         <div className={`alert alert-${props.type || "success"}`} role="alert">
-           {props.message}
-         </div>
-       );
-     }
-     ```
+    export default function App() {
+      return (
+        <div>
+          <Nav />
+          <List users={users} />
+        </div>
+      );
+    }
+    ```
 
-  * 🔑 Every component has access to a `props` argument. A prop is always an object that contains all of the values passed to the component.
+  * If we navigate into the `00-practice-app/src/components/Nav.js` file, we can see that this component seems responsible for returning JSX associated with the navigation bar for the page.
 
-  * One of our props is `props.type`, which will be used to change the class of the element and therefore the way it looks.
+  * We also see that we have one style object, called `linkStyle`, that is being used for each link:
 
-  * Similarly, we have a `props.message` key, which contains a string, `"Invalid user id or password"`:
+    ```js
+    export default function Nav() {
+      const linkStyle = { border: '1px black', padding: '5px' };
 
-     ```js
-     return (
-       <div className={`alert alert-${props.type || "success"}`} role="alert">
-      {props.message}
-       </div>
-     );
-     ```
+      return (
+        <nav className="main-header-menu">
+          <section
+            style={{
+              display: 'flex',
+              fontFamily: 'helvetica',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+            }}
+          >
+            <div style={linkStyle}>
+              <a href="#">Home</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Login</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Register</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">About</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Contact</a>
+            </div>
+          </section>
+        </nav>
+      );
+    }
+    ```
 
-  * 🔑 We can pass any type of data as a prop, including strings, numbers, arrays, functions, and even entire components!
+  * If we open `00-practice-app/src/components/List.js`, we can see that this component is mapping over a list of users and rendering `li` elements for each user. The sole responsibility of the component is to return a list of users with the `map()` method.
 
-  * 🔑 It is important to note that React uses a unidirectional data flow, meaning that data only flows in one direction: from the top down, parent to child.
+    ```js
+    export default function List({ users }) {
+      return (
+        <div className="container">
+          <h1>Random Users:</h1>
+          <ul className="list-group">
+            {/* Here we use the map method to iterate through each user and return a new array of list items for each user */}
+            {users.map((user) => (
+              <li className="list-group-item" key={user.login.uuid}>
+                {`${user.name.first} ${user.name.last} (${user.login.username})`}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    ```
+
+  * The `List` component receives a `props` object. We use destructuring assignment to assign `users` to its own variable.
+
+    ```js
+    export default function List({ users }) {
+    ```
+
+  * Passing `props` to the component allows us to use that data inside the return method.
+
+  * 🔑 The `users` array is being passed to the `List` component as a **prop**:
+
+    ```js
+    {users.map((user) => (
+      <li className="list-group-item" key={user.login.uuid}>
+        {`${user.name.first} ${user.name.last} (${user.login.username})`}
+      </li>
+    ))}
+    ```
+
+  * 🔑 The `map()` method is very similar to a `forEach` loop. The key difference is that `map()` doesn't actually mutate the original data. Instead, it makes a copy of the data and returns a new array.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ If a prop inside the component isn't what we expect it to be, where could we look to find out why?
+  * ☝️ What are the benefits of using the `map()` method to render data inside a React component?
 
-  * 🙋 We would look at the parent component to see what kind of data is being passed.
+  * 🙋 The `map()` method allows us to render more than one of the same kind of element with a few lines of code. This is at the core of what it means to have DRY (Don't Repeat Yourself) code. We also have the benefit of leaving the initial data untouched as a result of `map()` returning a new array to work with.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Props/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Component/README.md`.
 
-### 2. Student Do: Props (15 min)
+### 2. Student Do: Components (15 min)
 
-* Direct students to the activity instructions found in `10-Stu_Props/README.md`.
+* Direct students to the activity instructions found in `10-Stu_Component/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-   ```md
-   # 🏗️ Pass Data Using Props
+  ```md
+  # 📖 Implement Map() Inside a Component
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Before you begin this activity, complete the following steps:
+  Before you begin this activity, complete the following steps:
 
-   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
 
-   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+  3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-      `import 'bootstrap/dist/css/bootstrap.min.css'`
+    `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-   ## Activity
+  ## Activity
 
-   Work with a partner to implement the following user story:
+  Work with a partner to implement the following user story:
 
-   * As a developer, I want to render multiple cards for different animals by passing props to each one.
+  * As a developer, I want to be able to map over a list of data and render components for each piece of data.
 
-   ## Acceptance Criteria
+  ## Acceptance Criteria
 
-   * It's done when I have updated the return method in `src/components/Display.js` to render a `Card` for each dog.
+  * It's done when I have modified the `List` component so that inside its `ul` tags, one `li` tag renders for each item in the array of grocery objects being passed via props.
 
-   * It's done when I have passed data for each dog's `name` and `description` as props to the `Card`.
+  * It's done when each `li` tag displays the `text` property of each grocery object using the `map()` method.
 
-   * It's done when I have added a unique `key` property to each `Card` that gets rendered.
+  ## 📝 Notes
 
-   ## 💡 Hints
+  Refer to the documentation:
 
-   * How can we use the [React Docs on components and props](https://facebook.github.io/react/docs/components-and-props.html) to understand props better?
+  * [React Docs on lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 
-   * What is the term **props** short for?
+  * [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-   ## 🏆 Bonus
+  ## 💡 Hints
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  We only need to modify one file for the activity. Which one is it?
 
-   * How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to React components?
+  ## 🏆 Bonus
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  * How could we render a list of only the groceries that have NOT been purchased? Could we use the [filter() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to help us with this?
 
-### 3. Instructor Review: Props (10 min)
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 3. Instructor Review: Components (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with props? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with mapping over data inside React components? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Props
+  * ✔️ `map()`
 
-  * ✔️ Unidirectional data flow
+  * ✔️ Key
+
+  * ✔️ Immutability
 
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
-  * First we need to open the `index.js` file and import Bootstrap to style the cards:
+  * The assignment was to modify the `List` component so that inside its `ul`, one `li` tag renders for each item in the array of grocery objects being passed via props.
+
+  * First we need to add Bootstrap to the `index.js` file to take advantage of some style classes:
+
+    ```js
+    import 'bootstrap/dist/css/bootstrap.min.css'
+    ```
+
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
+
+  *  Next, if we open the `App.js` file, we can see that we are passing the list of groceries to the `List` component as a prop. `List` is a child component of `App`:
+
+    ```js
+    function App() {
+      return <List groceries={groceries} />;
+    }
+    ```
+
+* Open `00-practice-app/src/components/List.js` in your IDE and explain the following:
+
+  * Now let's look at the `List` component. This file is where we used `map()` to iterate over each grocery item and return a new array of `li` tags for each item.
+
+  * 🔑 When creating a collection of JSX elements using the `map()` method, we must provide a unique `key` attribute to the parent element that gets returned -- usually something specific to the data that you are working with, like an id. This `key` attribute allows React to track changes to the virtual DOM and select specific elements properly.
+
+  * We write JavaScript inside JSX by using curly braces (`{}`):
+
+    ```js
+    return (
+      <ul className="list-group">
+        {props.groceries.map(item => (
+          <li className="list-group-item" key={item.id}>
+            {item.name}
+          </li>
+        ))}
+      </ul>
+    );
+    ```
+
+  * 🔑 Notice that `map()` returns an array of `li` items. Whenever we try to render an array that contains JSX, React knows to render each JSX element separately.
+
+  * Let's imagine that the user wanted to render a list of items that had not been purchased yet. We could do that using the `filter()` method:
 
      ```js
-     import React from 'react';
-     import ReactDOM from 'react-dom';
-     import App from './App';
-     import 'bootstrap/dist/css/bootstrap.min.css';
+     function List(props) {
+       const notPurchased = props.groceries.filter(grocery => !grocery.purchased);
 
-     ReactDOM.render(<App />, document.getElementById('root'));
-     ```
-
-* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
-
-  * The first thing we notice is that we are importing another component called `Card` at the top of the file. We will look more closely at this component later in the activity.
-
-  * Inside the `Display` component, we have an array of objects called `canines`. Each object within that array contains the `name` and `description` of dogs:
-
-     ```js
-     import React from 'react';
-     import Card from './Card';
-
-     const canines = [
-       {
-         name: 'Spot',
-         description: 'The best boy',
-         id: 1,
-       },
-       {
-         name: 'Zero',
-         description: 'A kind soul',
-         id: 2,
-       },
-       {
-         name: 'Walter',
-         description: 'Friend for life',
-         id: 3,
-       },
-     ];
-     ```
-
-* Open `00-practice-app/src/components/Card.js` in your IDE and explain the following:
-
-  * The `Card` component imports React at the top of the file:
-
-     ```js
-     import React from 'react';
-     ```
-
-  * We pass the props argument to the `Card` component so that we can reference the data passed from the parent:
-
-     ```js
-     export default function Card(props) {
-     ```
-
-  * In the return statement for the card, we take the `name` and `description` that were passed as props and render them in the Bootstrap card:
-
-     ```jsx
-     return (
-       <div>
-         <div className="card" style={cardStyle}>
-           <img
-             className="card-img-top"
-             src={`http://placecorgi.com/${randomWidth()}`}
-             alt="Card cap"
-           />
-           <div className="card-body">
-             <h5 className="card-title">{props.name}</h5>
-             <p className="card-text">{props.description}</p>
-             <a href="#" className="btn btn-primary">
-               Adopt {props.name}
-             </a>
-           </div>
-         </div>
-       </div>
-     );
-     ```
-
-* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
-
-  * Now that we've looked at the `Card` component and what it does, let's check what is happening in the return statement for `Display`.
-
-  * First map through each of the animals and return a new `Card` component for each dog.
-
-  * Each card is made unique to that dog by the props that we pass to it -- specifically, the `name` and `description` props.
-
-  * 🔑 It is important to provide a unique `key` attribute when mapping through lists like this one. It helps React distinguish one element from another:
-
-     ```js
-     export default function Display() {
        return (
-         <div>
-           {canines.map((dog) => (
-             <Card name={dog.name} description={dog.description} key={dog.id} />
+         <ul className="list-group">
+           {notPurchased.map(item => (
+             <li className="list-group-item" key={item.id}>
+               {item.name}
+             </li>
            ))}
-         </div>
+         </ul>
        );
      }
      ```
 
+  * With the `notPurchased` variable, we are setting it to an array of groceries where the `purchased` property is `false`, and mapping through that instead.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are some different ways that we can pass props to a child component?
+  * ☝️ Why can't we use something like `forEach` to render an array with React?
 
-  * 🙋 We can pass props to the child component by passing a `props` object as an argument, or we can use object destructuring assignment.
+  * 🙋 React requires a return value, and `forEach` doesn't return anything. It simply iterates over elements in an array. The `map()` method, however, returns a new array of elements and leaves the original array intact.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [React Docs on props](https://reactjs.org/docs/components-and-props.html), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
