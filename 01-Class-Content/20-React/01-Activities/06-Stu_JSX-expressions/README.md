@@ -10,8 +10,8 @@ Before you complete this activity, complete the following steps:
 
 3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-     `import 'bootstrap/dist/css/bootstrap.min.css'`
-   
+  `import 'bootstrap/dist/css/bootstrap.min.css'`
+
 ## Activity
 
 Work with a partner to implement the following user story:

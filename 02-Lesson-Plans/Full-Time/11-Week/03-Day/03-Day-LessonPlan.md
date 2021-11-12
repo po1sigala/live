@@ -8,6 +8,8 @@ In this class, students will be introduced to complex state management within th
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` through `08-Stu_Actions`.
 
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+
 * Be sure to create a practice React app before class, by navigating to `01-Class-Content/22-State/01-Activities` and running the following command:
 
   ```sh
@@ -155,7 +157,7 @@ In this class, students will be introduced to complex state management within th
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini-Project (10 min)  
+### 3. Instructor Review: Mini-Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -327,7 +329,7 @@ In this class, students will be introduced to complex state management within th
     ```js
     const { loading, data } = useQuery(QUERY_TECH);
     ```
-  
+
   * 🔑 When we apply the `useMutation()` hook to the imported mutation, it does not execute right away. Instead, it returns a mutation function that we can apply in our code:
 
     ```js
@@ -422,9 +424,9 @@ In this class, students will be introduced to complex state management within th
     * This unit will be an introduction to state management using React and Redux. In today's class, we will cover providers, consumers, reducers, and actions.
 
   * **Pure vs. Impure Functions**
-  
+
     * We need to understand the difference between the two because this distinction relates to the way state is managed by React and Redux.
-  
+
   * **Let’s Talk About Pure Functions**
 
     * Pure functions keep data passed to the function untouched by the function itself.
@@ -444,15 +446,15 @@ In this class, students will be introduced to complex state management within th
       * Often modify the values that are passed in.
 
   * **Impure and Pure Examples**
-  
+
     * Pure function -- Regardless of what number we pass in, we will get a predictable result every time.
 
     * Impure function -- The data that gets passed to impure functions can be mutated. Impure functions might include calls to a database or API, possibly returning something unexpected.
-  
+
   * **Creating Pure Functions**
-  
+
     * Creating pure functions is an effective technique to apply to all of your JavaScript, but it is especially useful when creating React components.
-  
+
   * **React Hooks and Context API**
 
     * React manages state through a combination of Hooks and the Context API.
@@ -460,17 +462,17 @@ In this class, students will be introduced to complex state management within th
     * React Context enables us to share data globally and follows a very similar design pattern to Redux, a similar but separate library.
 
     * A good use for the Context API would be making a user’s account information available to all subscribing components.
-  
+
   * **Redux**
-  
+
     * Redux is another library that helps us manage the state of complex applications.
 
     * Redux requires a lot of boilerplate code, but its utility increases exponentially with an application’s complexity.
 
     * Instead of learning about the Redux library, we will focus on the concepts and design patterns that Redux uses.
-  
+
   * **The React Parts**
-  
+
     * Today we will cover three core React state components. Some of these will overlap with Redux:
 
       * **Providers** allow child components to subscribe to context changes.
@@ -478,7 +480,7 @@ In this class, students will be introduced to complex state management within th
       * **Consumers** allow for consumption of the data made available by the provider.
 
       * **Reducers** take the current state and the desired action and return a new copy of the state object.
-  
+
   * **The Redux Parts**
 
     * We will also cover three core Redux concepts:
@@ -488,23 +490,23 @@ In this class, students will be introduced to complex state management within th
       * **Reducers** handle all actions by taking in the previous state and returning a new state object.
 
       * **Store** grants the entire application access to the reducer function and the global state.
-  
+
   * **The Principles of Redux**
-  
+
     * Redux comprises three core principles.
-  
+
   * **Principle 1: State Tree**
 
     * Every stateful aspect of your application can be represented by a single JavaScript object, known as the **state tree**.
-  
+
   * **Principle 2: Read-Only**
 
     * The state tree is **read-only** -- meaning that to change the state tree, you need to dispatch an action.
 
     * The action describes the change that the state will undergo, in a declarative manner.
-  
+
   * **Principle 3: Pure Functions**
-  
+
     * Try to make your reducers pure functions. It is considered bad practice to use side effects inside reducer functions.
 
   * **Mini-Project**
@@ -516,7 +518,7 @@ In this class, students will be introduced to complex state management within th
 * Open `28-Stu_Mini-Project/Main` in your browser to demonstrate the following:
 
   * In this assignment, we will build a digital garage, replacing React Hooks with Redux.
-  
+
   * This will be a fun way to implement Redux into an application and provide global state to the components.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -565,7 +567,7 @@ In this class, students will be introduced to complex state management within th
   * This information is visible even though we didn't pass it as a prop directly to the `<UserComponent>`.
 
 * Open `01-Ins_Providers/utils/UserContext.js` in your browser to demonstrate the following:
-  
+
   * This is possible because of `React.createContext()`, which returns an object that contains two components, a `Provider` and a `Consumer`. Here we create a new context called `UserContext` by assigning it a value of `React.createContext()`:
 
     ```js
@@ -577,7 +579,7 @@ In this class, students will be introduced to complex state management within th
     ```jsx
     <UserContext.Provider />
     ```
-  
+
   * The `UserContext.Provider` component accepts a `value` property. This will be the data that we want to make available to any child component of the `Provider`. In this case, the value is the `currentUser`:
 
     ```jsx
@@ -585,7 +587,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
 * Navigate to the `App` component and note the following:
-  
+
   * The `UserComponent` can use the data supplied by the `Provider` because it is wrapped inside the `Provider` itself:
 
     ```js
@@ -677,7 +679,7 @@ In this class, students will be introduced to complex state management within th
     ```js
     import React, { createContext, useContext } from 'react';
     ```
-  
+
   * 🔑 We begin by creating a context for students called `StudentContext`:
 
     ```js
@@ -685,13 +687,13 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * 🔑 `useContext` is a Hook that allows us to create custom methods that will make the context available inside other components. It accepts an argument of a context object. Here we pass in `StudentContext`:
-  
+
     ```js
     export const useStudentContext = () => useContext(StudentContext);
     ```
 
   * We can see that `StudentProvider` is a function that accepts props and will return the `Provider` component. It also contains the initial state object.
-  
+
   * It is important to note that we receive `children` as a property inside the `props` object. We are using destructuring assignment to assign it to the variable `children`:
 
     ```js
@@ -775,7 +777,7 @@ In this class, students will be introduced to complex state management within th
 
 * Navigate to `00-practice-app` in your command line and run `npm install` and `npm run test`.
 
-  * We run `npm run test` from the command line to check that we wrote everything correctly and the unit tests are passing: 
+  * We run `npm run test` from the command line to check that we wrote everything correctly and the unit tests are passing:
 
     ```bash
     PASS  src/__tests__/app.test.js
@@ -830,9 +832,9 @@ In this class, students will be introduced to complex state management within th
     ```
 
 * Open `src/components/ThemeComponent.js` and note the following:
-  
+
   * To consume the data in `ThemeContext`, we import `useTheme` inside `ThemeComponent`.
-  
+
   * The two variables that were passed to the provider are assigned using destructuring assignment. Now we can consume `darkTheme` and `toggleTheme` inside the component:
 
     ```js
@@ -840,7 +842,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * You will find that this is a common pattern for consuming context inside a React component.
-  
+
   * Alternatively, we can consume the value inside a context by accessing the `<ThemeContext.Consumer>` component -- but many developers consider the `useContext` Hook more elegant.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -912,7 +914,7 @@ In this class, students will be introduced to complex state management within th
 * Open `04-Stu_Consumers/Unsolved/src/utils/StudentContext.js` in your IDE and explain the following:
 
   * In this activity we accessed global state variables `student` and `majors` inside the `StudentList` component. To do that, we needed a custom Hook that would grant us access to those values.
-  
+
   * The `StudentContext.js` file contains the custom Hook that gets exported:
 
     ```js
@@ -933,7 +935,7 @@ In this class, students will be introduced to complex state management within th
 * Open `/src/components/StudentList` and note the following:
 
   * At the top of the `StudentList` component, we import the custom `useStudentContext` to get the consume values from the context.
-  
+
   * We use destructuring assignment to give the `students` array and methods to their own variable names that can be used inside the `StudentList` component:
 
     ```js
@@ -947,7 +949,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * Using the methods that we can now access, the next step is to add the `onClick` event to the button for removing a student:
-  
+
     ```jsx
     {students.map((student) => (
       <tr key={student.id}>
@@ -969,7 +971,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * To properly display a list of available majors on the page, we map over each major and return an `option` element for each one.
-  
+
   * As with all JavaScript code inside JSX, we wrap all of it inside curly braces:
 
     ```js
@@ -981,7 +983,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * Next, we make the Add Student button work by adding an `onClick` that would invoke the `addStudent()` method:
-  
+
     ```js
     <button
       type="button"
@@ -996,7 +998,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * In the return method for `StudentList`, we use the `students` array itself to conditionally render either a student list or a message that no students were found.
-  
+
   * Because we are using the `students` array provided to us by the `useContext` Hook, we can reference it in the component:
 
     ```js
@@ -1044,11 +1046,11 @@ In this class, students will be introduced to complex state management within th
 * End the running process for the React app, and then run the tests using `npm run test`.
 
   * This demo includes tests for the reducer function so that we can ensure it works before implementing it into the app.
-  
+
   * 🔑 A **reducer** is a function that accepts state and an action and returns a new state object. Reducers also keep all of the actions that can be performed on the state object in one place.
 
 * Open `05-Ins_Reducers/src/utils/reducers.js` in your IDE and explain the following:
-  
+
   * The `reducers.js` file consolidates all actions into one function by using a `switch` statement.
 
   * The `switch` statement will check the type of action that we passed and perform some work based on that action:
@@ -1062,7 +1064,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * The first case for adding a car will create a variable, `newCar`, that will contain the `id` and a copy of the `action.payload`.
-  
+
   * Then it returns a copy of state with the updated `cars` array:
 
     ```js
@@ -1123,7 +1125,7 @@ In this class, students will be introduced to complex state management within th
   * As a developer, I want to implement reducers into my application to update global state.
 
   * As a developer, I want to be able to diagnose and fix the issue associated with the reducer that is causing the tests to fail.
-    
+
   ## Expected Behavior
 
   When the tests are run, all of them should pass.
@@ -1174,13 +1176,13 @@ In this class, students will be introduced to complex state management within th
   * ✔️ Pure functions
 
 * First, run `npm run test` in the command-line window to demonstrate that the tests are currently failing.
-  
+
   * Reiterate to students that the goal of this activity is to write code in the `reducers.js` file that would allow the tests to pass.
 
 * Open `06-Stu_Reducers/src/utils/StudentContext.js` in your IDE and explain the following:
 
   * The application hasn't implemented the reducer yet and is still using methods inside the `StudentContext`.
-  
+
   * The idea is to extract that functionality into a single reducer function. Let's look at those methods to see what we need to include in the reducer function:
 
     ```js
@@ -1218,7 +1220,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * The first action, `ADD_STUDENT`,  returns a new copy of state with an updated `students` array.
-  
+
   * We populate the `students` array with existing students using the spread operator, and we add the new student from the `payload` property of the `action` object:
 
     ```js
@@ -1233,7 +1235,7 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * The other action to account for is `REMOVE_STUDENT`, which also returns a new copy of state with an updated `students` array.
-  
+
   * First we populate the `students` array with existing students, as long as they don't have the `id` that was included in `action.payload`:
 
     ```js
@@ -1284,7 +1286,7 @@ In this class, students will be introduced to complex state management within th
 * Open `07-Ins_Actions/src/utils/actions.js` in your IDE and explain the following:
 
   * 🔑 It is common practice to set variable names for each kind of action in a new file called `actions.js`.
-  
+
   * Doing so allows those actions to be referenced by other parts of your application as it grows in scale:
 
     ```js
@@ -1293,17 +1295,17 @@ In this class, students will be introduced to complex state management within th
     ```
 
   * Inside the `actions.js` file, we have some actions that are annotated.
-  
+
   * **Actions** are events that trigger specific functionality in the reducer:
 
     ```js
     export const START_CAR = 'START_CAR';
     ```
-  
+
 * Open `07-Ins_Actions/src/utils/reducers.js` and explain the following:
 
   * The reducer function now accounts for some additional actions, like stopping and starting the engine.
-  
+
   * This action could easily be refactored into a `TOGGLE_CAR` action by setting the `isRunning` value to the opposite of whatever `action.payload.isRunning` currently is, but for the sake of adding multiple actions we divided them into two:
 
     ```js
@@ -1344,7 +1346,7 @@ In this class, students will be introduced to complex state management within th
 * Open `07-Ins_Actions/src/utils/CarContext.js` and explain the following:
 
   * Notice that the methods in `CarContext` are nearly identical to those in the reducer function.
-  
+
   * The two are so similar because we haven't yet refactored the application to use the reducer. We will do this later.
 
   * In the upcoming activity, we will simply be annotating the `actions.js` file.
@@ -1426,9 +1428,9 @@ In this class, students will be introduced to complex state management within th
 * Open `08-Stu_Actions/Solved/src/utils/reducers.js` in your IDE and explain the following:
 
   * To calculate the `newStudentId`, we have to rely on the `students` array inside the state. We take the last index position in the array and add one to it to generate the new `id`.
-  
+
   * Then we create a `newStudent` object with the content of the `action.payload` and the `newStudentId`.
-  
+
   * Finally, we return a copy of state with an updated `students` array that now includes the `newStudent` object:
 
     ```js
@@ -1441,11 +1443,11 @@ In this class, students will be introduced to complex state management within th
           ...state,
           students: [...state.students, newStudent],
         };
-      }  
+      }
     ```
 
   * The next action to annotate is the `REMOVE_STUDENT` action. The first part of this action is to make a copy of the `students` array and filter out the `id` included in `action.payload`.
-  
+
   * The way the `REMOVE_STUDENT` action is set up, we can immediately return a copy of `state` with the updated `students` array, performing the filter inline:
 
     ```js
@@ -1456,7 +1458,7 @@ In this class, students will be introduced to complex state management within th
             (student) => student.id !== action.payload
           ),
         };
-      }  
+      }
     ```
 
   * The next action in `action.js` is `UPDATE_STUDENT`. Let's look at the code block for this one, inside the reducer function.
@@ -1489,7 +1491,7 @@ In this class, students will be introduced to complex state management within th
 
   * Finally, we return a copy of state with the new `students` array, which we call `newStudentsList`:
 
-    ```js  
+    ```js
     return {
       ...state,
       students: newStudentsList,

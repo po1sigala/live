@@ -8,6 +8,8 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * In this lesson, students will complete activities `21-Ins_Typedefs` through `28-Stu_Mini-Project`.
 
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+
 * Make sure to set up your React practice app before class. If you encounter any issues regarding conflicting versions of `eslint` when running the practice app, run the following command in the terminal:
 
   ```sh
@@ -68,9 +70,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What is Redux?
-  
+
   * 🙋 Redux is a predictable state container for JavaScript apps. The idea is to have a single store that holds your application's state.
-  
+
   * 🙋 Redux, like the Context API, prevents developers from having to drill props down several layers of components.
 
 * Redux is very similar to the Context API. The core principles of React's Context API are influenced heavily by Redux. While it's not common to work with both on the same project, it is important to be familiar with both the Context API and Redux. Today we will look more closely at Redux and refactor an app so that it uses Redux instead of React Hooks.
@@ -99,9 +101,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * The `typeDefs` file describes how the request and response data should be formatted.
-  
+
   * The `resolvers` file contains an object with the possible `Query` and `Mutation` functions.
-  
+
 * Open `21-Ins_Typedefs/server/schemas/typeDefs.js` in your IDE to demonstrate the following:
 
   * First, inside the type definitions file, we import `gql` from `apollo-server-express`:
@@ -122,19 +124,19 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * The query references the different kinds of data we can request. For example, if we want to get a list of all the posts, we can state that the posts returned should be of type `Post`.
-  
+
   * 🔑 We declare type definitions by providing the data type after the colon. Data types wrapped in square brackets indicate that multiple items of a given type should be returned:
 
     ```js
     posts: [Post]
     ```
-  
+
   * Also defined in the `typeDefs` file is the `Post` type, a custom type that we created to describe the data that we can expect a `Post` to include.
-  
+
   * The definition is saying that a `Post` will have an `id` property that is a number (`Int`) and that it cannot be null.
-  
+
   * The `Post` type definition also includes a `title` of type `String`, an `authorId` of type `ID` that can't be null, and a `votes` property of type `Int`.
-  
+
   * 🔑 Note that the items that can't be null are annotated with an exclamation mark:
 
     ```js
@@ -147,7 +149,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * Returning to the `Query` type definition, note that we have some queries that accept parameters -- for example, the `author` query.
-  
+
   * The `author` query should return a specific author after it receives an `id` as an argument, and it should return data of type `Author`:
 
     ```js
@@ -158,9 +160,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * This file also includes a definition for `Mutation`. This definition will describe the resolvers that can mutate data in the database, similar to PUT or POST requests in REST APIs.
-  
+
   * In the `createPost` definition, we state that this mutation accepts an argument of `post` that is of another custom type, `PostData`.
-  
+
   * It also describes the data that should be returned, which in this case is a type of `authorResponse`:
 
     ```js
@@ -207,7 +209,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
   * It's done when I have created a `typeDefs.js` file in `/server/schemas`.
 
-  * It's done when I have required `gql` from the `apollo-server-express` library. 
+  * It's done when I have required `gql` from the `apollo-server-express` library.
 
   * It's done when I have created a `typeDefs` template that contains types for `Category`, `Product`, `Order`, and `User`.
 
@@ -228,7 +230,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Type Definitions (10 min)  
+### 4. Instructor Review: Type Definitions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -255,7 +257,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * In the `typeDefs` file for this activity, we have some predefined types for `Auth`, `Query`, and `Mutation`.
-  
+
   * Some of these types rely on other custom types that haven't been defined yet, like `Category`, `Product`, `Order`, and `User`:
 
     ```js
@@ -310,7 +312,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
       },
     });
     ```
-  
+
   * Now we have enough information to create the type definition for `Category`!
 
 * Open `22-Stu_Typedefs/Solved/server/schemas/typeDefs.js` in your IDE and explain the following:
@@ -331,13 +333,13 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * The `Product` schema is more complex than that of `Category`.
 
   * The schema includes a `name`, `description`, `image`, `price`, `quantity`, and `category`.
-  
+
   * Most of these properties are pretty easy to decipher, except the last one. Note the `ref` property that is set to the string `'Category'` -- telling us that the `category` property is referencing the `Category` schema.
-  
+
 * Open `22-Stu_Typedefs/Solved/server/schemas/typeDefs.js` in your IDE and explain the following:
 
   * Now that we have a grasp of the structure of `Product` and `Category`, we can start writing the type definitions.
-  
+
   * Note that we are referencing another custom type, `Category`, for the `category` property:
 
     ```js
@@ -374,7 +376,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
 * Open `22-Stu_Typedefs/Solved/server/schemas/typeDefs.js` in your IDE and explain the following:
-  
+
   * Now we can create the definition for `Order`:
 
     ```js
@@ -418,7 +420,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
 * Open `22-Stu_Typedefs/Solved/server/schemas/typeDefs.js` in your IDE and explain the following:
-  
+
   * Now that we have reviewed the `User` schema, we can write the code for the definition:
 
     ```js
@@ -450,7 +452,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Open `localhost:3000` in your browser and demonstrate the following:
 
   * When we run this application, we are presented with an app called Shop-Shop.
-  
+
   * Let's begin by logging in to an account that has already been created:
 
     ```console
@@ -459,9 +461,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * We can add items to the cart and then check out!
-  
+
   * When we select "check out", we are redirected to the Stripe checkout.
-  
+
   * 🔑 Stripe is a payment processing service for online merchants. It offers a useful set of developer tools that we will explore in this demo.
 
 * Open `23-Ins_Stripe/server/schemas/resolvers.js` in your IDE to demonstrate the following:
@@ -471,9 +473,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```sh
     npm install --save @stripe/react-stripe-js @stripe/stripe-js
     ```
-  
+
   * Once the dependencies are installed, we can import Stripe with the API key.
-  
+
   * Notice the second set of parentheses after the import statement, which indicates that we invoking Stripe's JavaScript closure with the public API key passed in as an argument:
 
     ```js
@@ -481,7 +483,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * In the `resolvers` file, let's look at the `checkout()` method inside the `Query` object for the resolver.
-  
+
   * The method accepts `args` and `context` that will later be used to get the list of products that was passed to this method:
 
     ```js
@@ -497,9 +499,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * Then we loop through each of those products and create a new product object that will be used by Stripe. We call on the `products.create()` method to do this.
-  
+
   * The `products.create()` method has a required property of `name` that we provide from the current product in the array.
-  
+
   * We also provide a few optional arguments, like the product `description` and the `image` property:
 
     ```js
@@ -512,9 +514,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * Then we create a price for each product, by creating a new variable called `price` inside the loop.
-  
+
   * We call on the Stripe `prices.create()` method to assign a price for an existing product. This method takes a required parameter of `currency`, a `product` perimeter, and `unit_amount`.
-  
+
   * The `unit_amount` is in cents, so we multiply by 100:
 
     ```js
@@ -533,9 +535,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
       quantity: 1
     });
     ```
-  
+
   * Now that we have all of the items ready to send off to Stripe in the `line_items` array, it is time to create the checkout session.
-  
+
   * 🔑 A checkout session represents the payment session and also tells Stripe the line items in the order, the cost of the items, and the payment options the user has.
 
   * To create a session object, we create a variable `session` and set its value to the response we get from the `session.create()` method.
@@ -587,7 +589,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
   Which packages do we need to import at the top of the file?
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Stripe documentation on prebuilt Checkout page](https://stripe.com/docs/checkout/integration-builder)
 
@@ -610,7 +612,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Stripe (10 min)  
+### 7. Instructor Review: Stripe (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -633,15 +635,15 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * Let's look at the `Cart` component, where we import the front-end Stripe package. Specifically, we import a method called `loadStripe()`.
 
   * `loadStripe()` is a Promise that will return the Stripe object when the `stripe-js` package has been loaded into the component.
-  
+
   * To use Stripe, we need to authenticate ourselves with Stripe's back end. `loadStripe()` accepts an argument containing the public-facing API key.
-  
+
   * We assign the return value of the `loadStripe()` Promise to a variable called `stripePromise`:
 
     ```js
     const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
     ```
-  
+
   * We also declare `getCheckoutQuery`, which is returned with a `data` object from an Apollo Hook called `useLazyQuery`. This method allows us to make a query to the back end for the checkout data:
 
     ```js
@@ -649,7 +651,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * This file also uses React's `useEffect` Hook in two different places.
-  
+
   * The first `useEffect` callback lists `data` as the only item in the optional dependency array.
 
   * This means that when `data` is returned from the `getCheckout()` query, the code inside this block will run:
@@ -657,7 +659,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```js
     useEffect(() => { ... }, [data])
     ```
-  
+
   * In the `useEffect` callback, we first ask whether a `data` variable exists. If so, that means that we have received the checkout session data from the back end.
 
   * Finally, we redirect the user to the Stripe checkout page, passing along the session information:
@@ -671,13 +673,13 @@ Today's lesson will further explore complex state management in MERN-stack appli
       }
     }, [data]);
     ```
-  
+
   * Now let's review the second use of `useEffect` in this component.
-  
+
   * Initially we check whether the cart's length or the `dispatch()` function has been updated in any way.
-  
+
   * We are watching these two items for changes by including them in the `useEffect` optional dependency array.
-  
+
   * Inside the `useEffect` callback, we declare a scoped helper function called `getCart()` that is responsible for populating the cart:
 
     ```js
@@ -686,7 +688,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
     ```
-  
+
   * We add a check to determine whether the cart is empty, and if so we call the `getCart()` method:
 
     ```js
@@ -696,9 +698,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * In the `Cart` component, we also have a method called `submitCheckout()`.
-  
+
   * This method is responsible for pushing all of the cart items into an array that contains only the `id` for each product. We assign this new array to the variable `productIds`:
-  
+
     ```js
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
@@ -725,7 +727,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * We use this `submitCheckout()` method by attaching it to the `onClick` attribute of the checkout button.
-  
+
   * First, however, we verify that the user is logged in by using some conditional rendering:
 
     ```js
@@ -735,7 +737,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
       <span>(log in to check out)</span>
     )}
     ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we redirect the user to the Stripe payment page?
@@ -782,7 +784,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * We use actions when calling the `dispatch()` function to let the reducer know what sort of work should be performed on the global state.
 
   * Let's look at how the first action, `UPDATE_ACCOUNT_NAME`, is being used.
-  
+
   * We want the users to be able to update their account name if they want, so we attach a function that will handle what happens when a user clicks the "submit" button:
 
     ```jsx
@@ -824,9 +826,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Open `25-Ins_Actions-Reducers/client/src/components/AccountDisplay.js` in your IDE to demonstrate the following:
 
   * Another feature of the small application allows the user to log in and out. That is what the second action, `UPDATE_ACCOUNT_STATUS`, is for.
-  
+
   * In the return statement, we invoke the `dispatch()` function from the `onClick()` method of the login button.
-  
+
   * Notice that the text content of the button also gets changed based on the `loggedIn` status from state. This is the property we will be updating:
 
     ```js
@@ -847,7 +849,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * Once the action has been dispatched, it gets passed to the reducer, where the `switch` statement will once again decide which code should be executed.
 
   * The `UPDATE_ACCOUNT_STATUS` case will return a copy of the current state, with the updated `isLoggedIn` property provided in the action payload.
-  
+
   * The `isLoggedIn` property is simply inverted from what it was when the dispatch function was called:
 
     ```js
@@ -886,7 +888,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
   How can we account for multiple types of actions inside the reducer?
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [React documentation on useReducer](https://reactjs.org/docs/Hooks-reference.html#usereducer)
 
@@ -909,7 +911,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Actions/Reducers (10 min)  
+### 10. Instructor Review: Actions/Reducers (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -928,11 +930,11 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Open `26-Stu_Actions-Reducers/Unsolved/client/src/utils/reducers.js` in your IDE and explain the following:
 
   * This application called Shop-Shop is a small marketplace app that offers a lot of features, like adding items to your cart, updating products, updating cart quantities, and clearing your cart.
-  
+
   * This application's reducer has a lot of moving parts. Let's review each action.
-  
+
   * In the reducer `switch` statement, we have an `UPDATE_PRODUCTS` case.
-  
+
   * 🔑 Note that the reducer is being passed a copy of the current state and an action:
 
       ```js
@@ -940,7 +942,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
       ```
 
   * In the `UPDATE_PRODUCTS` case, we return a copy of the current state using the spread operator and an updated products array.
-  
+
   * The products array is set to an array that includes the content of `action.payload`:
 
       ```js
@@ -954,9 +956,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * The next action we want to review is the `UPDATE_CART_QUANTITY`.
 
   * The `UPDATE_CART_QUANTITY` case returns a new object that contains a copy of the current state, an updated `cartOpen` value, and an updated `cart` object.
-  
+
   * To update the cart quantity, we first reference the existing state's `cart`.
-  
+
   * We map over each product and, for each one, ask if the `id` passed into the `action.payload` is the same as the current product. If so, we want to change that particular product's quantity to the one included in `action.payload`:
 
     ```js
@@ -974,11 +976,11 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * Now let's review the `REMOVE_FROM_CART` case. We start by declaring a new variable called `newState`.
-  
+
   * Next, we filter through all of the products inside the current cart. If a product doesn't match the `id` from the `action.payload`, we don't include it in the new cart.
-  
+
   * We directly assign the return value of the filter to `newState`.
-  
+
   * Now that we have the `newState` object, we can return a copy of state, a Boolean value that indicates whether or not the cart is open, and the updated cart:
 
     ```js
@@ -1024,12 +1026,12 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Open the [GitHub documentation on continuous integration](https://docs.github.com/en/actions/guides/about-continuous-integration) in your browser and explain the following:
 
   * **Continuous deployment** is the automated process by which new features and bug fixes are delivered to end-users.
-  
+
   * In this Git Guide, you will set up a GitHub action that will enable you to automatically deploy your application to Heroku. This process can be adapted easily to work with your chosen cloud platform.
-  
+
   * You will learn more about **CI/CD**, a term that you will hear often and that references the **continuous integration and continuous deployment** pipeline.
-  
-  * At the end of this guide, you will be able to automate the deployment of your apps!  
+
+  * At the end of this guide, you will be able to automate the deployment of your apps!
 
 * Direct students to the activity instructions found in `27-Evr-Continuous-Deployment/README.md`.
 
@@ -1040,7 +1042,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 * Open your command line and demonstrate the following:
 
   > Be sure to run `create-react-app` outside of the class repository folder to avoid any complications. If you already ran `create-react-app` inside the class repository, you will need to add a `.env` file to avoid conflicting versions of `eslint`. You can do this by running the following command at the root of your React app: `echo "SKIP_PREFLIGHT_CHECK=true" > .env`.
-  
+
 * To get up and running, we will need to create a boilerplate React application that will eventually be automatically deployed to Heroku:
 
     ```sh
@@ -1049,15 +1051,15 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
 * 🔑 You will also need to create a GitHub repository for this project and add the remote URL to your local React app directory:
-  
+
     ```sh
     git remote add origin <gh_remote_url>
     ```
 
 * The guide will have you create some files that will instruct GitHub on how to interact with your Heroku application. This brings us to the next step to get you up and running.
-  
+
 * Visit the [Heroku page to create a new app](https://dashboard.heroku.com/new-app), and create an app for this project.
-  
+
 * Answer any questions before students go on break.
 
 ### 12. BREAK (30 min)
@@ -1075,7 +1077,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * When we load this application, we are presented with a digital garage.
 
   * In this app, we can perform a few actions like adding a car and turning a car's engine on or off.
-  
+
   * Let's take a moment and check out the starter code.
 
 * Open `28-Stu_Mini-Project/Develop/src/components/CarComponent.js` in your IDE to demonstrate the following:
@@ -1093,7 +1095,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
 * 🔑 In this mini-project, you will refactor the application so that it uses Redux instead of React Hooks.
-  
+
 * 🔑 React's implementation of global state is heavily based on the Redux library -- so while this might sound like a daunting task, most of your code will be similar.
 
 * This will also be an exercise in using documentation to find examples of how to implement certain features. Use the official [Redux documentation](https://redux.js.org/introduction/getting-started) as a resource.
@@ -1128,9 +1130,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * Create a `store.js` file in the `utils` directory. This file should do the following:
 
     * Import `{ createStore }` from `redux`.
-    
+
     * Import `reducers` from `./reducers`.
-    
+
     * Create a default export of `createStore` that accepts an argument of `reducers`.
 
   * Open `/utils/CarContext.js` and import `{ Provider }` from `react-redux` and `store` from `./store`.
@@ -1139,10 +1141,10 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
   * Clean up any unused code left over from the React Hooks.
 
-  * Run the application using `npm run start` to ensure that functionality is unchanged for the end-user. 
+  * Run the application using `npm run start` to ensure that functionality is unchanged for the end-user.
 
   ---
-    
+
   ## 💡 Hints
 
   How can we use the [Redux Fundamentals guide](https://redux.js.org/tutorials/fundamentals/part-1-overview) to find examples of implementation?
@@ -1160,7 +1162,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Mini-Project  (10 min)  
+### 15. Instructor Review: Mini-Project  (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1191,13 +1193,13 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * The first task in this mini-project is to create a store. The Redux store will hold the entire state tree.
 
   * Much like the React Context API, we can only update the store using a `dispatch()` function.
-  
+
   * In the `store.js` file, the first thing we do is import `createStore` from `redux`:
 
     ```js
     import { createStore } from 'redux';
     ```
-  
+
   * 🔑 We should only have one store for the application.
 
   * We import the `reducers` file from `./reducers`:
@@ -1207,7 +1209,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```
 
   * We also create a `default` export for the reducer.
-  
+
   * The `createStore()` method accepts an argument of `reducer`, much like the `useReducer` Hook from React:
 
     ```js
@@ -1270,15 +1272,15 @@ Today's lesson will further explore complex state management in MERN-stack appli
     ```js
     import { Provider } from 'react-redux';
     ```
-  
+
   * We also import the `store` that we just created from the `utils` folder:
 
     ```js
     import store from './store';
     ```
-  
+
   * Finally, we need to refactor the `CarContext.js` file. First, we remove the `CarContext` export at the top, and then we remove the custom `useCar` Hook.
-  
+
   * We also moved the `randomNum()` helper function into the `CarComponent`.
 
   * The `CarProvider()` function should then return the `Provider` that we imported from `redux`, with a value of `store` set to `store`. The final revisions should look something like this:
@@ -1319,9 +1321,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * Today we will refactor the marketplace application from `26-Stu_Actions_Reducers` so that it uses Redux.
 
   * Now that you know more about implementing state management with React Hooks and have some experience with Redux, it is time to test your skills with full Redux!
-  
+
   * Much like the mini-project, this application will function the same as before but will use Redux instead of React Hooks.
-  
+
   * 🔑 If you don't have access to your code from this activity, there is a mirror link in the unit overview for you to get started.
 
   * **Important**: The homework requires a specific version (>=7.0) of `npm` in order to install peer dependencies like GraphQL. By default, Heroku uses `npm 6.x`, which may cause some issues. This is a good opportunity to educate students on how to configure their Heroku environment to meet the needs of the project, as shown in the following `package.json` snippet:
@@ -1349,7 +1351,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * ☝️ How does this project relate to your career goals?
 
   * 🙋 This project will demonstrate not only that you can learn new technologies but that you can do it relatively quickly -- which will help distinguish you from other applicants and appeal to potential employers.
-  
+
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
 ### 17. FLEX (40 min)

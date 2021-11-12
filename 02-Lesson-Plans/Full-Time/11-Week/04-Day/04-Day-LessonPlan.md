@@ -8,6 +8,8 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In this lesson, students will complete activities `09-Ins_useReducer` through `20-Stu_useReducer-Review`.
 
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+
 * Be sure to prepare and review the activities before class. Try to anticipate any questions that students might have.
 
 * Today's activities emphasize the skills needed for full-stack app development. Because the code and activities will be familiar, encourage students to use activity time to further explore the code, ask questions, and build on their existing skills. For an additional challenge, encourage students to explore the Bonus.
@@ -77,9 +79,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `src/components/ThemeComponent.js` in your IDE and demonstrate the following:
 
   * In this demo, we are introducing a new React Hook called `useReducer`. This is where we can start to use the `reducer` that we have been making.
-  
+
   * The `useReducer` Hook accepts a `reducer` and an initial state object as an argument and returns an array that contains the `state` object and a `dispatch()` function.
-  
+
   * Here is the implementation in `ThemeComponent`. We begin by importing the reducer and the `useReducer` Hook into the component:
 
     ```js
@@ -92,16 +94,16 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     const [state, dispatch] = useReducer(reducer, initialState);
     ```
-  
+
   * Instead of calling the methods from inside components as we have before, now we will call `dispatch()`, which accepts an object that contains `type` and `payload` attributes.
-  
+
   * Here is an example of dispatch being called in the `ThemeComponent`:
-  
+
     ```js
     onClick={() =>
       dispatch({ type: TOGGLE_THEME, payload: state.darkTheme })
     }
-    ```  
+    ```
 
 * Navigate to `00-practice-app` in your command line and run `npm install` and `npm start`.
 
@@ -159,7 +161,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [React documentation on useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
@@ -201,7 +203,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `src/components/StudentList.js` in your IDE and explain the following:
 
   * We first need to import the `useReducer` Hook from React to complete this activity.
-  
+
   * We also need to import the action types and the `reducer`:
 
     ```js
@@ -217,7 +219,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * To use the `useReducer` Hook, first we have to consider the `reducer` and `initialState` objects that need to be passed. The reducer might be easy to remember because it is called `reducer`, but `initialState` might be tricky to remember.
-  
+
   * The custom Hook `useStudentContext` will return `students` and `majors` -- exactly what we need for the initial state object. So we set the initial state's value to exactly the return value of `useStudentContext`:
 
     ```js
@@ -225,7 +227,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * Now that we know what to pass, we initialize the `useReducer` Hook.
-  
+
   * 🔑  Remember that `useReducer` returns `state` and a `dispatch()` function:
 
     ```js
@@ -233,7 +235,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * Next we refactor the `students` array such that it pulls from the global state rather than a local variable.
-  
+
   * To do this, we add `state.students` in place of `students`:
 
     ```js
@@ -283,9 +285,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * ☝️ What is GraphQL?
 
   * 🙋 GraphQL is a modern query language that is an alternative to REST APIs.
-  
+
   * ☝️ What are some of the benefits to using GraphQL to build APIs?
-  
+
   * 🙋 GraphQL allows clients to request the exact data they need using only one endpoint and makes it easier to aggregate data from multiple sources.
 
 * Another benefit of GraphQL is the ability to have strictly typed interfaces. For example, consider the following endpoint that uses a standard RESTful API:
@@ -309,9 +311,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `localhost:4000/graphql` in your browser to demonstrate the following:
 
   * The schema provided to GraphQL will outline the available resources and the parameters that we can use.
-  
+
   * Click the "docs" tab on the right side of the page to demonstrate the self-documentation of the Apollo playground.
-  
+
   * Run the following query inside the Apollo playground to demonstrate the request-response flow of GraphQL:
 
     ```gql
@@ -462,7 +464,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [React documentation on using the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
 
@@ -508,7 +510,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     import React, { useState, useEffect } from 'react';
     ```
-  
+
   * Then we create a new state variable using the `useState` Hook inside the `App` component:
 
     ```js
@@ -543,9 +545,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `12-Stu_React-Hooks-Review/Unsolved/src/components/IssueList.js` in your IDE and demonstrate the following:
 
   * In the components directory, we no longer need a `SearchBar` component to maintain a state variable for `term`. Because we are performing one hardcoded search, we can move on to the `IssueList` component.
-  
+
   * `IssueList` accepts `props` as an argument and uses the `issues` property of `props` to create a list that ultimately gets rendered to the screen.
-  
+
   * We map over the `issues` inside the `IssueList` and store the result in a new variable called `renderedList`. Each issue will be rendered in its own `IssueItem` component:
 
     ```js
@@ -629,7 +631,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
         <Router>
           ...
         </Router>
-      ) 
+      )
     ```
 
   * We wrap each individual component in a `Route` tag that contains the path of the component:
@@ -637,15 +639,15 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     <Route exact path="/" component={Home} />
     ```
-  
+
   * For each `Route`, we add a `path` attribute that specifies what the path should be in the URL. For example, the preceding route will be located at `http://localhost:3000/;`.
-  
+
   * We can also add a `component` property that tells React Router which component you want to reference at a given path.
-  
+
   * 🔑 The `exact` keyword used before `path` tells React Router that we want to match the `/` path exactly. If we were to pass in an `id` of some sort (ex. `/:id`), this would fail to match.
 
   * We can also add path parameters to routes -- such as the route to get a specific profile.
-  
+
   * `:profileId` is a path parameter in the URL that will encompass anything that follows `/profile`, allowing us to access specific profile pages using the URL `http://localhost:3000/profiles/<profileId>`:
 
     ```js
@@ -655,7 +657,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `13-Ins_React-Router-Review/client/src/components/ProfileList/index.js` in your IDE to demonstrate the following:
 
   * We can navigate between components using the `Link` component.
-  
+
   * To do this, we first import `Link`:
 
     ```js
@@ -674,7 +676,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
 * Open `13-Ins_React-Router-Review/client/src/pages/Profile.js` in your IDE and explain the following:
-  
+
   * To access the URL parameters from the route, we use the `useParams` Hook:
 
     ```js
@@ -682,7 +684,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * We can also run queries inside the React component by using the `useQuery` Hook, which is specific to Apollo but is incredibly useful for conditional rendering.
-  
+
   * The `useQuery` Hook accepts a `gql` query string and returns an object that contains `loading`, `error`, and `data` properties:
 
     ```js
@@ -776,25 +778,25 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * ✔️ Exact path
 
   * ✔️ Component attribute
-  
+
   * ✔️ Apollo Hooks
 
 * Open `14-Stu_React-Router-Review/Solved/client/src/App.js` in your IDE and explain the following:
 
   * When we open the `App` component, the first thing we need to do is add a route for displaying a single thought's comments.
-  
+
   * 🔑 In this exercise, to nest the component that we want to render, we have enclosed the `SingleThought` component with the opening and closing `<Route>` tags.
-  
+
   * This route has a `path` attribute and a path parameter of `:thoughtId`:
 
     ```js
     <Route exact path="/thoughts/:thoughtId">
       <SingleThought />
-    </Route>` 
+    </Route>`
     ```
 
 * Open `14-Stu_React-Router-Review/Solved/client/src/components/ThoughtList/index.js` in your IDE to demonstrate the following:
-  
+
   * To create internal hyperlinks, we have to import the `Link` component from `react-router-dom`:
 
     ```js
@@ -802,7 +804,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * In the return statement, we use string interpolation to concatenate the `/thoughts/` route with the specific `thought._id`, causing the `Link` component to point to that specific thought page.
-  
+
   * The `thought._id` is the path parameter for `:thoughtId`:
 
     ```js
@@ -813,7 +815,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
 * Open `14-Stu_React-Router-Review/Solved/client/src/pages/SingleThought.js` in your IDE to demonstrate the following:
-  
+
   * Now that we have the link to an individual thought page, let's review the code for the `SingleThought` component.
 
   * To extract the `thoughtId` from the path parameter, we must import the `useParams` Hook from `react-router-dom`:
@@ -832,7 +834,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * 🔑 To run a GraphQL query in an Apollo application, we use the `useQuery` Hook. This Hook accepts a GraphQL query string and returns an object with `loading`, `error`, and `data` properties.
-  
+
   * We also pass a configuration object for the variables. In this case, we only have one for `thoughtId`:
 
     ```js
@@ -917,25 +919,25 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * 🔑 When we start the application, we are presented with a form where we can enter the name of a profile that we would like to add. Once we have added the profile, the page should update and display the recently added name to the list.
 
   * 🔑 To mutate data in the database, we need to use the `useMutation` Hook included with Apollo.
-  
+
   * But first let's review how to create the mutation itself.
 
 * Open `15-Ins_Apollo-Review/client/src/utils/mutations.js` in your IDE to demonstrate the following:
 
   * 🔑 Instead of writing the mutation inside the playground, we declare it as a variable inside the `mutations.js` file, using the `gql` library from `Apollo`:
-  
+
     ```js
     export const ADD_PROFILE = gql`
     ```
-  
+
   * The mutation starts with the actual word `mutation`, to tell Apollo that we want to update some data instead of just querying it. Next, we name the mutation `addProfile`:
 
     ```js
     mutation addProfile($name: String!) {
     ```
-  
+
   * 🔑 Note that the mutation name, `addProfile`, and variable name, `ADD_PROFILE`, are the same, helping to prevent confusion within the code.
-  
+
   * We then explicitly tell Apollo that we will expect a `name` variable that is of type `String`. All variables in GraphQL queries and mutations are denoted by a dollar sign:
 
     ```js
@@ -972,7 +974,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * Now that we have access to the `addProfile` mutation function, it is time to use it in the component. In this case, because the function is a Promise, we want to execute it inside of a `try...catch` block.
 
   * We want the `addProfile()` function to fire when a user submits the form, so we handle this logic inside the `handleFormSubmit()` function.
-  
+
   * The`addProfile` mutation expects a `name` to be passed to the function. To do this, we pass an object to the `addProfile` method that includes a `variables` object. Inside, we will pass `name`:
 
     ```js
@@ -1033,7 +1035,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   Where can we define mutations that accept arguments?
 
-  What information about the mutation's state can we use in the UI? 
+  What information about the mutation's state can we use in the UI?
 
   ## 🏆 Bonus
 
@@ -1065,7 +1067,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * This activity requires a mutation that would accept multiple arguments for the `thoughtText` and the `thoughtAuthor`.
 
   * 🔑 Note that both variables that we pass to the mutation have to be of type `String`, and they can't be `null` or `undefined`, as indicated by the exclamation mark.
-  
+
   * We assign the entire query to a template string preceded by `gql`:
 
     ```js
@@ -1107,7 +1109,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-      
+
       try {
         const { data } = addThought({
           variables: { ...formState },
@@ -1119,11 +1121,11 @@ In this class, students will learn about the `useReducer` hook. This class also 
       }
     };
     ```
-  
+
   * 🔑 Remember that the `addThought()` mutation function is a Promise, so to gracefully handle errors we will implement a `try...catch` block.
 
   * First we assign the value of the `addThought()` function to `data`, assuming that the mutation is successful.
-  
+
   * We also pass an object to the `addProfile()` method that includes a `variables` object. Inside, we will pass the content of the `formState` object:
 
     ```js
@@ -1164,7 +1166,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * 🔑 We use JSON Web Tokens to authenticate users and keep the full-stack app secure.
 
   * 🔑 To start, we implement middleware that will decode the token before it reaches the resolver.
-  
+
   * First we import the `jwt` library into the auth file:
 
     ```js
@@ -1186,7 +1188,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * Now that we have the token stored from the request object, we can check whether it is valid by using the `jwt.verify()` method. This method accepts a token, a public or private secret, and a verify options object.
-  
+
   * If the token is valid, we can assign the payload to the `data` variable:
 
     ```js
@@ -1197,7 +1199,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       console.log('Invalid token');
     }
     ```
-  
+
   * Once we have the payload assigned to the `data` variable, we can return the request object from the `authMiddleware()` function:
 
     ```js
@@ -1225,7 +1227,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * To use the payload provided by the context, we pass in a `context` object, along with the `parent` and `args` parameters -- allowing us to pass data from the token so that it can be used by the resolvers.
 
 * Open `17-Ins_JWT-Review/server/schemas/resolvers.js` in your IDE to demonstrate the following:
-  
+
   * 🔑 The order of the arguments is important in this case. Because parameters in resolvers are positional, the `context` parameter must always be in the third place:
 
     ```js
@@ -1266,7 +1268,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   ## Actual Behavior
 
-  The profile page displays a message informing the user that they must be logged in to see the content. 
+  The profile page displays a message informing the user that they must be logged in to see the content.
 
   ## Steps to Reproduce the Problem
 
@@ -1282,7 +1284,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       "email": "lernantino@techfriends.dev",
       "password": "password10"
     }
-    
+
   5. Navigate to <localhost:3000/me>.
 
   6. The app doesn't display the thoughts from this user.
@@ -1329,7 +1331,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Open `18-Stu_JWT-Review/Solved/server/utils/auth.js` in your IDE and explain the following:
 
   * In this activity, we need to resolve an issue associated with individual thoughts not being displayed for a given user. Users are presented with a message that they need to log in.
-  
+
   * Inside the `auth.js` file, we find that the logic in the `authMiddleware()` function is responsible for checking whether a token is valid or not. If the token is valid, we return a `data` object that can be used by the resolver:
 
     ```js
@@ -1401,21 +1403,21 @@ In this class, students will learn about the `useReducer` hook. This class also 
 * Copy the `src` directory from `19-Ins_useReducer-Review` and paste it into `00-practice-app`.
 
 * Navigate to `00-practice-app` in your command line and run `npm start`.
-  
+
 * Open `localhost:3000` in your browser to demonstrate the following:
 
   * 🔑 When we run the application, we are presented with a page that asks a user to enter a username.
 
   * 🔑 As the user is typing, the application will check whether the username is valid or not.
-  
+
   * Also, when the user clicks submit, they are presented with a message regarding the validity of their final submission.
 
 * Open `src/components/NameComponent.js` in your IDE and demonstrate the following:
 
   * In this demo we are reviewing the `useReducer` Hook inside of a username validator. If the username is valid, the alert will return a message that the username is valid. Otherwise, we provide a message that states that the username is invalid.
-  
+
   * The `useReducer` Hook accepts a `reducer` and an initial state object as an argument and returns an array that contains the `state` object and a `dispatch()` function.
-  
+
   * Here is the implementation in `NameComponent`. We begin by importing the `reducer` and the `useReducer` Hook into the component:
 
     ```js
@@ -1429,11 +1431,11 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     const [state, dispatch] = useReducer(reducer, initialState);
     ```
-  
+
   * To update state, call `dispatch()`, which accepts an object that contains `type` and `payload` attributes.
-  
+
   * Let's look at the `handleInputChange()` method, where we first use the `dispatch()` function.
-  
+
   * In the return method, the input has an `onChange` property that references `handleInputChange()`:
 
     ```js
@@ -1443,7 +1445,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       onChange={handleInputChange}
     ></input>
     ```
-  
+
   * When the user starts typing a username, the function `handleInputChange()` gets called and will in turn invoke the `dispatch()` function using the `CHANGE` action:
 
     ```js
@@ -1454,7 +1456,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       });
     };
     ```
-  
+
   * We use the `dispatch()` function again when the user wants to submit their username:
 
     ```js
@@ -1465,7 +1467,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       type="button"
     >
     ```
-  
+
   * On submit, the `handleSubmit()` function will be invoked, dispatching the `SUBMIT` type and also alerting the user as to the validity of their username:
 
     ```js
@@ -1512,9 +1514,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   When is local state being used as opposed to global state in this application?
 
-  What do we need to pass to the `dispatch()` function to add a new major? 
+  What do we need to pass to the `dispatch()` function to add a new major?
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [React documentation on useReducer Hook](https://reactjs.org/docs/hooks-reference.html#usereducer)
 
@@ -1566,7 +1568,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```
 
   * In the `StudentList` file, we create a new state variable called `newMajorName`, along with a function to update it.
-  
+
   * This is a local state variable that will be used to hold the value of the new major before we dispatch any actions:
 
     ```js
@@ -1586,7 +1588,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
       }}
     >
     ```
-  
+
 * Open `20-Stu_useReducer-Review/Solved/src/utils/reducers.js` in your IDE to demonstrate the following:
 
   * When the action is dispatched to the reducer, the `switch` statement will look for a case called `REMOVE_STUDENT` and enter that code block.
@@ -1619,9 +1621,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
       </option>
     ))}
     ```
-  
+
   * Let's examine the button that invokes the `ADD_MAJOR` action.
-  
+
   * Remember that earlier we created a new local state variable called `newMajorName` -- which is used when we invoke the `dispatch()` method with an action of `ADD_MAJOR` and a payload of `newMajorName`:
 
     ```js
@@ -1636,11 +1638,11 @@ In this class, students will learn about the `useReducer` hook. This class also 
       }}
     >
     ```
-  
+
 * Open `20-Stu_useReducer-Review/Solved/src/utils/reducers.js` in your IDE to demonstrate the following:
 
   * When the `ADD_MAJOR` action is dispatched, we return to the reducers file and check which case in the `switch` statement gets used.
-  
+
   * In this code block, we are simply returning a copy of state and an updated copy of the majors array with the payload from the action:
 
     ```js
