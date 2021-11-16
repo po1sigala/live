@@ -1074,7 +1074,7 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when `lesson` is assigned as a class attribute for all `<section>` HTML elements.
+  * It's done when `lesson` is assigned to a class attribute for all `<section>` HTML elements.
 
   * It's done when the email list item is given a unique attribute named `email`.
 
