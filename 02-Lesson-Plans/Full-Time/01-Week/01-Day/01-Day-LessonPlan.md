@@ -1074,7 +1074,7 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when a single attribute named `section` is added to all semantic `<section>` HTML elements.
+  * It's done when `lesson` is assigned as a class attribute for all `<section>` HTML elements.
 
   * It's done when the email list item is given a unique attribute named `email`.
 
@@ -1129,7 +1129,7 @@ By the end of class, students will be able to:
 
 * Open `08-Stu_Attributes/Solved/index.html` in your IDE and explain the following:
 
-  * 🔑 We use a global `class` attribute to add a `section` identifier to all sections:
+  * 🔑 We assign the `lesson` `class` to all `<section>` elements:
 
     ```html
     <section class="lesson">
