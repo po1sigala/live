@@ -2,7 +2,7 @@
 
 ## Overview
 
-In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. In Unit 18, you will also introduce students to NoSQL databases and executing CRUD functions using MongoDB commands. You will also explore embedded documents.
+In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. In Unit 18, you will introduce students to NoSQL databases and executing CRUD functions using MongoDB commands. You will also explore embedded documents.
 
 ## Instructor Notes
 
@@ -10,7 +10,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&ndash3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
+* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&mdash;3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
 
 * Be sure to install MongoDB and Compass on your machine before class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
@@ -20,7 +20,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While MongoDB may be new to most learners, today's activities build on skills developed in prior units including Express servers, SQL databases, data management, and queries. Where possible, encourage students to make connections to prior learning and start thinking of the role databases such as MongoDB play in their apps.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -73,7 +73,7 @@ In today's class, you will prepare students for technical interviews through the
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
@@ -100,17 +100,17 @@ In today's class, you will prepare students for technical interviews through the
   ```md
   # Mini-Project: Technical Interview Practice (Sorting Algorithms)
 
-  In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate. 
+  In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate.
 
   ## Roles
 
-  * **The Interviewer**: The role of the interviewer is to pose the question, ensure the candidate understands what is expected of them as they work towards a solution, and respond to any questions the candidate has without giving away the answer. 
+  * **The Interviewer**: The role of the interviewer is to pose the question, ensure the candidate understands what is expected of them as they work towards a solution, and respond to any questions the candidate has without giving away the answer.
 
   * **The Candidate**: The role of the candidate is to ensure that the problem stated by the interviewer is clear by asking clarifying questions and stating assumptions, pseudocoding a solution, and then implementing it (if time allows).
 
   ## Instructions
 
-  * Take turns playing each role and go through each interview question. 
+  * Take turns playing each role and go through each interview question.
 
   * Spend about 20 minutes on each, allowing time for research of the problem, pseudocoding the solution, implementing the solution, and discussing throughout for clarification.
 
@@ -125,7 +125,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -141,7 +141,7 @@ In today's class, you will prepare students for technical interviews through the
 
   * ✔️ The role of the candidate
 
-* Open `28-Stu_Mini-Project/Main/01_bubble-sort/bubble-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/01_bubble-sort/bubble-sort.js` in your IDE and explain the following:
 
   * 🔑 A bubble sort function can be implemented in a couple of ways. One way involves sorting the array one index at a time, the other will iterate the entire array multiple times and sort elements gradually until it doesn't need to sort anymore. The second way is slightly more efficient because we build in a base condition to end early if the array is sorted:
 
@@ -164,9 +164,9 @@ In today's class, you will prepare students for technical interviews through the
 
   * 🔑 The interviewer will likely want the candidate to be able to articulate the differences between the two implementations and why one might be more efficient than the other.
 
-  * 🔑 The candidate should be able to articulate the need for a temporary variable to hold an element being swapped and how a flag can be set to determine if the array has been sorted yet or not. 
+  * 🔑 The candidate should be able to articulate the need for a temporary variable to hold an element being swapped and how a flag can be set to determine if the array has been sorted yet or not.
 
-* Open `28-Stu_Mini-Project/Main/02_quick-sort/quick-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/02_quick-sort/quick-sort.js` in your IDE and explain the following:
 
   * 🔑 A quick sort algorithm works by recursively splitting an array in two based on greater than or less than values compared to a pivot element until there are numerous arrays in order that can be concatenated back together and returned in a sorted fashion:
 
@@ -195,9 +195,9 @@ In today's class, you will prepare students for technical interviews through the
 
   * 🔑 The interviewer might ask this question to see if the candidate has a good understanding of recursion.
 
-  * 🔑 The candidate should be able to visualize the recursive nature of this type of algorithm and be able to explain why the selection of a random pivot point works for this type of algorithm. 
+  * 🔑 The candidate should be able to visualize the recursive nature of this type of algorithm and be able to explain why the selection of a random pivot point works for this type of algorithm.
 
-* Open `28-Stu_Mini-Project/Main/03_merge-sort/merge-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/03_merge-sort/merge-sort.js` in your IDE and explain the following:
 
   * 🔑 A merge sort algorithm involves using recursion to continuously break apart an array until we're left with a series of single-element arrays:
 
@@ -234,14 +234,14 @@ In today's class, you will prepare students for technical interviews through the
           rightIndex++;
         }
       }
-    
+
       return resultArray
         .concat(leftArray.slice(leftIndex))
         .concat(rightArray.slice(rightIndex));
     };
     ```
 
-  * 🔑 This is a difficult interview question, so the interviewer might ask this when they are confident in the previous answers a candidate has provided. Because it's a bit longer to implement in code, the interviewer will likely want to ensure that the candidate can accurately describe a solution in pseudocode first so that time isn't lost. 
+  * 🔑 This is a difficult interview question, so the interviewer might ask this when they are confident in the previous answers a candidate has provided. Because it's a bit longer to implement in code, the interviewer will likely want to ensure that the candidate can accurately describe a solution in pseudocode first so that time isn't lost.
 
   * 🔑 The candidate should be able to again visualize the recursive nature of this algorithm and explain that rather than trying to sort a large set of data, we break our data into smaller sets and iteratively sort them back together.
 
@@ -261,7 +261,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * Open `02-Homework/README.md` in your browser and explain the following:
 
-  * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts. 
+  * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts.
 
   * In this homework, you will write a tutorial that explains the components that go into a specific regular expression, or regex.
 
@@ -345,7 +345,7 @@ In today's class, you will prepare students for technical interviews through the
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: Compass (5 min) 
+### 8. Instructor Demo: Compass (5 min)
 
 * With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
@@ -422,7 +422,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Compass/README.md`.
 
-### 9. Student Do: Compass (15 min) 
+### 9. Student Do: Compass (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Compass/README.md`, which are also shown below.
 
@@ -492,7 +492,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Compass (10 min) 
+### 10. Instructor Review: Compass (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -587,7 +587,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Create-Read (5 min) 
+### 11. Instructor Demo: Create-Read (5 min)
 
 * Navigate to `03-Ins_Create-Read/` from the command line and run `npm install` and `node server` to demonstrate the following in Insomnia.
 
@@ -651,7 +651,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Create-Read/README.md`
 
-### 12. Student Do: Create-Read (15 min) 
+### 12. Student Do: Create-Read (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Create-Read/README.md`, which are also shown below.
 
@@ -685,7 +685,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Create-Read (10 min) 
+### 13. Instructor Review: Create-Read (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -803,7 +803,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * Answer any questions before proceeding to the next activity.
 
-### 14. Instructor Demo: Update-Delete (5 min) 
+### 14. Instructor Demo: Update-Delete (5 min)
 
 * With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
@@ -877,7 +877,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Update-Delete/README.md`.
 
-### 15. Student Do: Update-Delete (15 min) 
+### 15. Student Do: Update-Delete (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Update-Delete/README.md`, which are also shown below.
 
@@ -917,7 +917,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 16. Instructor Review: Update-Delete (10 min) 
+### 16. Instructor Review: Update-Delete (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 

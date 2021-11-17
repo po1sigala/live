@@ -24,6 +24,8 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 ## Learning Objectives
 
+By the end of class, students will be able to:
+
 * Explain and execute CRUD operations using Mongoose subdocuments.
 
 * Configure Heroku for deployment of a Node.js application using MongoDB Atlas.
@@ -138,7 +140,7 @@ In this lesson, you will teach students how to create computed properties in Mon
         console.log(`API server running on port ${PORT}!`);
       });
     });
-      ```
+    ```
 
   * Similarly, we created a central `index.js` file for our `api/`, `models/`, and `controllers/` to keep things organized.
 
@@ -229,7 +231,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Virtuals/README.md`.
 
-### 3. Student Do: Creating Indexes (15 min) 
+### 3. Student Do: Creating Indexes (15 min)
 
 * Direct students to the activity instructions found in `21-Stu_Creating_Indexes/README.md`.
 
@@ -268,7 +270,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to implement a Mongoose virtual in my schema to get and set data. 
+  * As a developer, I want to implement a Mongoose virtual in my schema to get and set data.
 
   * As a developer, I do not want that data to persist in the database, so I can get and set computed properties on documents.
 
@@ -282,13 +284,13 @@ In this lesson, you will teach students how to create computed properties in Mon
 
   * It is done when I have run the code and added a user using Insomnia.
 
-      ```json
-      {  
-          "first": "Ada",
-          "last": "Lovelace",
-          "age": 36
-      }
-      ```
+    ```json
+    {
+        "first": "Ada",
+        "last": "Lovelace",
+        "age": 36
+    }
+    ```
 
   * It is done when I have performed a GET request to `http://localhost:3001/api/users/` to get all users and confirmed that the `fullName` virtual attribute is present in the response.
 
@@ -309,7 +311,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Virtuals (10 min)  
+### 4. Instructor Review: Virtuals (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -475,7 +477,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
     ```json
     {
-      "meta": { 
+      "meta": {
         "upvotes": 156,
         "bookmarks": 12
       },
@@ -526,7 +528,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 * Open `23-Ins_Subdoc-Population/controllers/userController.js` in your IDE to demonstrate the following:
 
   * Notice that we call on the `populate` method to populate the posts array for our new user inside the `getSingleUser` method, which is inside the `userController`.
-  
+
   * The `populate` method is a Mongoose method that allows you to populate a subdocument. The `populate` method takes a path to the subdocument and a path to the parent document. In this case, we are populating the posts array for the user.
 
     ```js
@@ -605,7 +607,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Subdocument Population (10 min)  
+### 7. Instructor Review: Subdocument Population (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -660,7 +662,7 @@ In this lesson, you will teach students how to create computed properties in Mon
   * 🔑  To associate a subdocument with a parent document, we use the `ref` attribute. This attribute takes a string that represents the path to the subdocument. In our case, we are linking the `tags` array to the `Tag` schema and listing the type of the subdocument as `Schema.Types.ObjectId`.
 
   * This means that we will only reference `Tag` documents by their `_id` attribute instead of the entire document.
-  
+
 * Open `24-Stu_Subdoc-Population/models/Tag.js` in your IDE and explain the following:
 
   * For organization, we first imported all the models into one central file, `models/index.js`. Inside that file, we require both the `Post` and `Tags` schemas and export them.
@@ -677,7 +679,7 @@ In this lesson, you will teach students how to create computed properties in Mon
   * First, we use the imported `Tags` schema from `models/index.js` and invoke one of the built-in Mongoose methods, `.find()`, to find all the tags in the database.
 
   * We also chained an additional method called `select`, which allows us to limit the fields returned from the database. In our case, we are removing the `-__v` field, which is the Mongoose version number.
-  
+
     ```js
     getTags(req, res) {
       Tags.find({})
@@ -771,7 +773,7 @@ In this lesson, you will teach students how to create computed properties in Mon
       "tagCount": 2
     }
     ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How can subdocuments be used to make a more efficient API?
@@ -793,7 +795,7 @@ In this lesson, you will teach students how to create computed properties in Mon
   * Before we test the application, let's first make a GET request to `http://localhost:3001/api/users/` to see if the server is up and running.
 
   * You should see a list of users with properties like `videos`, `first`, `last`, `age`, and `_id`.
-  
+
     ```json
     [
       {
@@ -816,7 +818,7 @@ In this lesson, you will teach students how to create computed properties in Mon
     ```
 
   * Change the endpoint to `http://localhost:3001/api/videos/` to show that endpoints are set up for videos as well.
-  
+
   * Next, we can use the `_id` of a user to create a video by adding it as a property in our request object called `userId`. Copy the following JSON snippet in the body of a POST request to `http://localhost:3001/api/videos/`.
 
     ```json
@@ -897,7 +899,6 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_CRUD-Subdoc/README.md`.
 
-
 ### 9. Student Do: CRUD with Subdocuments (15 min)
 
 * Direct students to the activity instructions found in `26-Stu_CRUD-Subdoc/README.md`, which are also shown below.
@@ -939,7 +940,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 * Use the prompts and talking points (🔑) below to review the following key points:
 
   * ✔️ `.create()`
-  
+
   * ✔️ `.find()` and `.findOne()`
 
   * ✔️ `findOneAndUpdate()`
@@ -955,10 +956,10 @@ In this lesson, you will teach students how to create computed properties in Mon
   * `find()` happens to be one of the first methods listed in the `appController.js` file. We use the `.find()` method to find all of the applications in our database.
 
     ```js
-    getApplications(req, res) { 
-       Application.find() 
-         .then((applications) => res.json(applications)) 
-         .catch((err) => res.status(500).json(err)); 
+    getApplications(req, res) {
+       Application.find()
+         .then((applications) => res.json(applications))
+         .catch((err) => res.status(500).json(err));
     }
     ```
 
@@ -1012,7 +1013,7 @@ In this lesson, you will teach students how to create computed properties in Mon
     * The second parameter is the `update` object that will update the user document.
 
     * The third parameter is the `options` object that we will pass to the `findOneAndUpdate` method; note that this is optional.
-  
+
   * 🔑 The `new: true` option is important because it tells Mongoose to return the updated document instead of the original document.
 
     ```js
@@ -1075,7 +1076,7 @@ In this lesson, you will teach students how to create computed properties in Mon
       )
     ...
     ```
-  
+
   * 🔑 In the `.then()` method, we return the updated application if it is found and updated, or we return a `404` status code if the application is not found, as shown in the following code snippet containing the full `updateApplication` method:
 
     ```js
@@ -1220,11 +1221,11 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 ### 12. BREAK (30 min)
 
-### 13. Instructor Demo: Mini Project (5 min) 
+### 13. Instructor Demo: Mini Project (5 min)
 
 * **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following unit on PWAs.
 
-* Change into `26-Stu-Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
+* Change into `26-Stu_Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
 
 * Demo the functionality of the app and tell students they are going to build the IndexedDB storage functionality in the next activity. This feature will enable users to enter transactions when the device is not online and sync the transactions with the backend when network service is restored.
 
@@ -1232,7 +1233,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 ### 14. Student Do: Mini Project (60 min)
 
-* Direct students to the activity instructions found in `26-Stu-Mini-Project/README.md`.
+* Direct students to the activity instructions found in `26-Stu_Mini-Project/README.md`.
 
 * Break your students into groups that will work together on this activity.
 
@@ -1258,7 +1259,7 @@ In this lesson, you will teach students how to create computed properties in Mon
   * Inside the `checkDatabase` function:
 
     * Open a transaction on your `BudgetStore` object.
-    
+
     * Access your `BudgetStore` object store.
 
     * Get all records from store and set to a variable.
@@ -1275,7 +1276,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
   * You can use the the comments in `public/db.js` as a guide.
 
-  * If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode. 
+  * If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode.
 
   ## 🏆 Bonus
 
@@ -1284,7 +1285,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Mini-Project (10 min)  
+### 15. Instructor Review: Mini-Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1401,7 +1402,7 @@ In this lesson, you will teach students how to create computed properties in Mon
   * Notice that our `package.json` file has a `scripts` section. This section contains a `start`, `dev`, `seed`, and -- a new one -- `heroku-postbuild`. The `heroku postbuild` script tells Heroku which commands to run after the app has been created.
 
   * We can see that the postbuild script will run our seeds file (`seed.js`) and then run our `start` script. This data will be stored in our remote MongoDB Atlas database.
-  
+
   * 🔑 MongoDB Atlas has a great tool for visualizing the data that we have stored in our database, much like their Compass utility. If you are curious, feel free to check it out by clicking on the collections tab in the MongoDB Atlas dashboard.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):

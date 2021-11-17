@@ -12,7 +12,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * As we continue to work with MongoDB, Mongoose will be the focus of today's activities. Reassure students that Mongoose is simply a "wrapper" around MongoDB that uses a schema to map to a MongoDB collection and makes it easier to manage relationships among data. This relationship is similar to how Sequelize works with MySQL.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -66,7 +66,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 ## Class Instruction
 
-### 1. Instructor Demo: Cursor Methods (5 min) 
+### 1. Instructor Demo: Cursor Methods (5 min)
 
 * Open `09-Ins_Cursor-Methods/server.js` in your IDE and explain the following:
 
@@ -106,7 +106,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Cursor-Methods/README.md`.
 
-### 2. Student Do: Cursor Methods (15 min) 
+### 2. Student Do: Cursor Methods (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Cursor-Methods/README.md`, which are also shown below.
 
@@ -155,7 +155,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Cursor Methods (10 min) 
+### 3. Instructor Review: Cursor Methods (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -267,7 +267,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Models and Schema (5 min) 
+### 5. Instructor Demo: Models and Schema (5 min)
 
 * Open `11-Ins_Models-Schemas/config/connection.js` in your IDE and demonstrate the following:
 
@@ -363,13 +363,13 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
   * ☝️ How do we use a Mongoose model to create a new document?
 
-  * 🙋 First, we would need to create a schema that defines the properties of the data we want to store. Then we would compile the model. Finally, we would create new documents based on the model we just created. 
+  * 🙋 First, we would need to create a schema that defines the properties of the data we want to store. Then we would compile the model. Finally, we would create new documents based on the model we just created.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Models-Schemas/README.md`.
 
-### 6. Student Do: Models and Schema (15 min) 
+### 6. Student Do: Models and Schema (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_Models-Schemas/README.md`, which are also shown below.
 
@@ -403,7 +403,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Models and Schema (10 min) 
+### 7. Instructor Review: Models and Schema (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -516,7 +516,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: CRUD Mongoose (5 min) 
+### 8. Instructor Demo: CRUD Mongoose (5 min)
 
 * Open the previous Instructor Demo file, `11-Ins_Models-Schemas/models/Item.js`, in your IDE and demonstrate the following:
 
@@ -639,7 +639,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_CRUD-Mongoose/README.md`
 
-### 9. Student Do: CRUD Mongoose (15 min) 
+### 9. Student Do: CRUD Mongoose (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_CRUD-Mongoose/README.md`, which are also shown below.
 
@@ -685,7 +685,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: CRUD Mongoose (10 min) 
+### 10. Instructor Review: CRUD Mongoose (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -774,7 +774,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: Instance Methods (5 min) 
+### 13. Instructor Demo: Instance Methods (5 min)
 
 * Open `15-Ins_Models-Instance-Methods/models/Department.js` in your IDE and demonstrate the following:
 
