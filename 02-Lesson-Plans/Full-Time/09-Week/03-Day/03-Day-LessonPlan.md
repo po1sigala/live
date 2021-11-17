@@ -2,21 +2,25 @@
 
 ## Overview
 
-In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. Then we will start a new unit on NoSQL databases. You will introduce the concept of the NoSQL database with MongoDB, go over its pros and cons compared with MySQL, and ultimately detail all of the required steps to employ MongoDB in future projects. 
+In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. In Unit 18, you will introduce students to NoSQL databases and executing CRUD functions using MongoDB commands. You will also explore embedded documents.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 17 through `08-Stu_Robo-3T` in Unit 18.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 17 through `08-Stu_Embedded-Documents` in Unit 18.
 
 * Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&ndash3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
+* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&mdash;3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
 
-* Be sure students have MongoDB and Compass installed! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) if they haven't installed it already. If needed, use the FLEX time to help students with the install.
+* Be sure to install MongoDB and Compass on your machine before class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
-* If you haven't used MongoDB much in the past, take a look at this week's queries and solutions. This should prime you for the lecture.
+* MongoDB Compass is a powerful GUI that is used in today's lesson to help students explore data visually. Refer to the the [MongoDB Compass docs on interacting with data](https://docs.mongodb.com/compass/current/manage-data/) for details on how to connect to a local MongoDB host and work with data with Compass.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Today's MongoDB activities do not have a front end, and all routes will be tested using Insomnia. Please make sure you have Insomnia installed locally prior to class. Refer to the [Insomnia installation docs](https://insomnia.rest/download) as needed.
+
+* While MongoDB may be new to most learners, today's activities build on skills developed in prior units including Express servers, SQL databases, data management, and queries. Where possible, encourage students to make connections to prior learning and start thinking of the role databases such as MongoDB play in their apps.
+
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -28,9 +32,13 @@ In today's class, you will prepare students for technical interviews through the
 
 * Identify and explain the differences between SQL and noSQL databases.
 
-* Create a MongoDB database.
+* Create and manipulate data using MongoDB Compass.
 
-* Perform basic CRUD actions on their Mongo database.
+* Insert, find, and return documents stored in a MongoDB database.
+
+* Update and delete documents stored in a MongoDB database.
+
+* Explain how embedded documents can be used to create one-to-one and one-to-many relationships.
 
 ## Slide Deck
 
@@ -38,34 +46,34 @@ In today's class, you will prepare students for technical interviews through the
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                         | Duration |
-|---     |---  |---                                    |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project         | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project              | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project       | 0:10     |
-| 11:15AM| 4   | Introduce Homework                    | 0:05     |
-| 11:20AM| 5   | FLEX                                  | 0:30     |
-| 11:50PM| 6   | Instructor Do: Stoke Curiosity        | 0:10     |
-| 12:00PM| 7   | BREAK                                 | 0:30     |
-| 12:30PM| 8   | Instructor Demo: Create Insert Find   | 0:05     |
-| 12:35PM| 9   | Student Do: Create Insert Find        | 0:15     |
-| 12:50PM| 10  | Instructor Review: Create Insert Find | 0:10     |
-| 1:00PM | 11  | Instructor Demo: Update Delete Drop   | 0:05     |
-| 1:05PM | 12  | Student Do: Update Delete Drop        | 0:15     |
-| 1:20PM | 13  | Instructor Review: Update Delete Drop | 0:10     |
-| 1:30PM | 14  | Instructor Demo: Sorting in Mongo     | 0:05     |
-| 1:35PM | 15  | Student Do: MongoJS Sorting           | 0:15     |
-| 1:50PM | 16  | Instructor Review: MongoJS Sorting    | 0:10     |
-| 2:00PM | 17  | Student Do: Mongo CRUD                | 0:05     |
-| 2:05PM | 18  | Instructor Review: Mongo CRUD         | 0:15     |
-| 2:20PM | 19  | Student Do: Robo 3T                   | 0:10     |
-| 2:30PM | 20  | END                                   | 0:00     |
+| Start  | #   | Activity Name                            | Duration |
+|---     |---  |---                                       |---       |
+| 10:00AM| 1   | Instructor Demo: Mini Project            | 0:05     |
+| 10:05AM| 2   | Student Do: Mini Project                 | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini Project          | 0:10     |
+| 11:15AM| 4   | Introduce Homework                       | 0:05     |
+| 11:20AM| 5   | FLEX                                     | 0:30     |
+| 11:50PM| 6   | Instructor Do: Stoke Curiosity           | 0:10     |
+| 12:00PM| 7   | BREAK                                    | 0:30     |
+| 12:30PM| 8   | Instructor Demo: Compass                 | 0:05     |
+| 12:35PM| 9   | Student Do: Compass                      | 0:15     |
+| 12:50PM| 10  | Instructor Review: Compass               | 0:10     |
+| 1:00PM | 11  | Instructor Demo: Create-Read             | 0:05     |
+| 1:05PM | 12  | Student Do: Create-Read                  | 0:15     |
+| 1:20PM | 13  | Instructor Review: Create-Read           | 0:10     |
+| 1:30PM | 14  | Instructor Demo: Update-Delete           | 0:05     |
+| 1:35PM | 15  | Student Do: Update-Delete                | 0:15     |
+| 1:50PM | 16  | Instructor Review: Update-Delete         | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Embedded Documents      | 0:05     |
+| 2:05PM | 18  | Student Do: Mongo Embedded Documents     | 0:15     |
+| 2:20PM | 19  | Instructor Review: Embedded Documents    | 0:10     |
+| 2:30PM | 20  | END                                      | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
@@ -92,17 +100,17 @@ In today's class, you will prepare students for technical interviews through the
   ```md
   # Mini-Project: Technical Interview Practice (Sorting Algorithms)
 
-  In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate. 
+  In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate.
 
   ## Roles
 
-  * **The Interviewer**: The role of the interviewer is to pose the question, ensure the candidate understands what is expected of them as they work towards a solution, and respond to any questions the candidate has without giving away the answer. 
+  * **The Interviewer**: The role of the interviewer is to pose the question, ensure the candidate understands what is expected of them as they work towards a solution, and respond to any questions the candidate has without giving away the answer.
 
   * **The Candidate**: The role of the candidate is to ensure that the problem stated by the interviewer is clear by asking clarifying questions and stating assumptions, pseudocoding a solution, and then implementing it (if time allows).
 
   ## Instructions
 
-  * Take turns playing each role and go through each interview question. 
+  * Take turns playing each role and go through each interview question.
 
   * Spend about 20 minutes on each, allowing time for research of the problem, pseudocoding the solution, implementing the solution, and discussing throughout for clarification.
 
@@ -117,7 +125,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -133,7 +141,7 @@ In today's class, you will prepare students for technical interviews through the
 
   * ✔️ The role of the candidate
 
-* Open `28-Stu_Mini-Project/Main/01_bubble-sort/bubble-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/01_bubble-sort/bubble-sort.js` in your IDE and explain the following:
 
   * 🔑 A bubble sort function can be implemented in a couple of ways. One way involves sorting the array one index at a time, the other will iterate the entire array multiple times and sort elements gradually until it doesn't need to sort anymore. The second way is slightly more efficient because we build in a base condition to end early if the array is sorted:
 
@@ -156,9 +164,9 @@ In today's class, you will prepare students for technical interviews through the
 
   * 🔑 The interviewer will likely want the candidate to be able to articulate the differences between the two implementations and why one might be more efficient than the other.
 
-  * 🔑 The candidate should be able to articulate the need for a temporary variable to hold an element being swapped and how a flag can be set to determine if the array has been sorted yet or not. 
+  * 🔑 The candidate should be able to articulate the need for a temporary variable to hold an element being swapped and how a flag can be set to determine if the array has been sorted yet or not.
 
-* Open `28-Stu_Mini-Project/Main/02_quick-sort/quick-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/02_quick-sort/quick-sort.js` in your IDE and explain the following:
 
   * 🔑 A quick sort algorithm works by recursively splitting an array in two based on greater than or less than values compared to a pivot element until there are numerous arrays in order that can be concatenated back together and returned in a sorted fashion:
 
@@ -187,9 +195,9 @@ In today's class, you will prepare students for technical interviews through the
 
   * 🔑 The interviewer might ask this question to see if the candidate has a good understanding of recursion.
 
-  * 🔑 The candidate should be able to visualize the recursive nature of this type of algorithm and be able to explain why the selection of a random pivot point works for this type of algorithm. 
+  * 🔑 The candidate should be able to visualize the recursive nature of this type of algorithm and be able to explain why the selection of a random pivot point works for this type of algorithm.
 
-* Open `28-Stu_Mini-Project/Main/03_merge-sort/merge-sort.js` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/03_merge-sort/merge-sort.js` in your IDE and explain the following:
 
   * 🔑 A merge sort algorithm involves using recursion to continuously break apart an array until we're left with a series of single-element arrays:
 
@@ -226,14 +234,14 @@ In today's class, you will prepare students for technical interviews through the
           rightIndex++;
         }
       }
-    
+
       return resultArray
         .concat(leftArray.slice(leftIndex))
         .concat(rightArray.slice(rightIndex));
     };
     ```
 
-  * 🔑 This is a difficult interview question, so the interviewer might ask this when they are confident in the previous answers a candidate has provided. Because it's a bit longer to implement in code, the interviewer will likely want to ensure that the candidate can accurately describe a solution in pseudocode first so that time isn't lost. 
+  * 🔑 This is a difficult interview question, so the interviewer might ask this when they are confident in the previous answers a candidate has provided. Because it's a bit longer to implement in code, the interviewer will likely want to ensure that the candidate can accurately describe a solution in pseudocode first so that time isn't lost.
 
   * 🔑 The candidate should be able to again visualize the recursive nature of this algorithm and explain that rather than trying to sort a large set of data, we break our data into smaller sets and iteratively sort them back together.
 
@@ -253,7 +261,7 @@ In today's class, you will prepare students for technical interviews through the
 
 * Open `02-Homework/README.md` in your browser and explain the following:
 
-  * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts. 
+  * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts.
 
   * In this homework, you will write a tutorial that explains the components that go into a specific regular expression, or regex.
 
@@ -279,672 +287,981 @@ In today's class, you will prepare students for technical interviews through the
 
 * This time can be utilized for reviewing key topics learned so far in Unit 17 or getting started on the homework.
 
-* If there are students who haven't installed MongoDB on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
-
-* Direct students to install Robo 3T, a native cross-platform MongoDB management tool that will make working with MongoDB easier and more intuitive.
-
-  * Direct the students to the Robo 3T install page [https://robomongo.org/download](https://robomongo.org/download) and have them click the green download button.
-
-  ![Download Robo 3T](Images/install-robo-3t.png)
-
-  * Next have them choose their OS and download the application.
-
-  ![Download Robo 3T](Images/choose-os.png)
-  
-  * After installing students should be able to successfully open Robo 3T on their machine.
+* If there are students who haven't installed MongoDB and Compass on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing) and follow these prompts with their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1tsxce_ukQswTyiPlxV9BfzshLkwquUHWdxNrFQYlHvM/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Introduction to MongoDB (Title)**: Today's class will be an introduction to MongoDB. 
+  * **What Is NoSQL?**: NoSQL is an umbrella term for any database that is not a traditional relational SQL database. There are four main types of NoSQL databases: document databases, graph databases, key-value stores, and column-oriented databases.
 
-  * **What's MongoDB?**: MongoDB is a very popular noSQL database that uses a document-oriented model as opposed to a table-based relational model (SQL). MongoDB stores data in BSON format (effectively, compressed JSONs).
+  * **How Do NoSQL Databases Store Data?**: While NoSQL databases are all non-relational, each NoSQL database stores data very differently and are used differently by developers. In this unit, we will focus on MongoDB, a general purpose, NoSQL, document database that uses documents to store data and works great with JavaScript because it stores data in objects.
 
-  * **Relational Databases**: Relational databases rely heavily on joins to combine relevant data.
+  * **How Does MongoDB Store Data Differently from SQL Databases?** and **SQL Is a Relational Database**: SQL uses rows and tables to store data, enforcing a rigid schema. Because SQL is a relational database, SQL also relies on joins to combine related data from different tables.
 
-  * **Document Database (NoSQL)**: NoSQL databases on the other hand are effectively JSON objects and are very flexible. 
-  
-  * **MongoDB Storage**: Mongo databases contain collections which contain documents. 
+  * **MongoDB Uses Documents and Objects Instead of Tables and Rows**: MongoDB stores data in objects which are stored in a format called BSON, or Binary JSON. BSON looks and acts just like JSON, but is optimized for faster parsing.
 
-  * **Mongo Terms**: Use this slide to cover the relevant Mongo terms.
+  * **Groups of Documents Are Stored in Collections**: Unlike SQL tables, collections do not have an enforced schema to limit the type of data stored. Each document in a collection can have different fields (keys) and can contain different types of data.
 
-* Answer any questions before proceeding.
+  * **Related Data Can Be Stored in Embedded Documents**: Unlike SQL, related data in MongoDB is not split between tables. Instead, related data is nested within a single object as an embedded document.
+
+  * **SQL vs. MongoDB**: Let’s compare how data is stored in SQL and MongoDB databases. SQL relationships are relational and SQL enforces a rigid schema and uses rows tables. MongoDB is NoSQL, does not enforce a rigid schema, and uses documents and collections. Finally, SQL relies on joins to relate data, whereas MongoDB uses embedded documents.
+
+  * **So Why Use MongoDB?**: MongoDB stores data as a BSON object, making it a great fit for JavaScript apps. MongoDB does not use tables or enforce a rigid schema, allowing more flexibility for developers. MongoDB is a great choice for heterogeneous data, and scales easily. MongoDB is capable of storing related data well.
+
+  * **Instructor Demonstration: Mini-Project**: Transition to demonstrating the mini-project.
+
+* In the command line, navigate to `28-Stu_Mini-Project/Main` and run `npm install` to demonstrate the following:
+
+  * Before we can query our database, we first need to insert data using `npm run seed`.
+
+  * In the console, we can see all the data that has been populated and added to our database. We can query this data by using a `GET` request.
+
+  * Next, we run `npm start` to start the app on port 3001.
+
+* Open Insomnia on your local machine to demonstrate the following:
+
+  * We make a `GET` request to the route `localhost:3001/api/students` to return a list of all of the student data as well as each student's associated grades.
+
+  * In the data returned, we see that each `student` document is made up of key-value pairs and has multiple, related `assignment` documents embedded that provide details of each assignment. Notice that this structure looks and functions just like the objects we have been working with in JavaScript.
+
+  * In today's class, we will learn how to write our own routes to create, read, update, and delete these document objects in a MongoDB database.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning how to use MongoDB, a NoSQL database, to store our data and retrieve it using CRUD operations.
+
+  * ☝️ How does this project build on or extend previously learned material?
+
+  * 🙋 We learned how to create a JavaScript object in Unit 3. We also learned how to use and query a database using SQL in Unit 12, and how to create routes to perform CRUD operations with Express in Unit 11. MongoDB builds on all of these skills.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 MongoDB is a popular NoSQL database solution for companies large and small. MongoDB is also the "M" in two popular technology stacks -- MERN and MEAN -- which are used by developers to create easily scalable full-stack apps. We will learn more about the MERN stack in the weeks ahead, and we will use MongoDB to store data for our final projects.
+
+* Answer any questions before proceeding to the next activity.
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: Create Insert Find (5 min) 
+### 8. Instructor Demo: Compass (5 min)
 
-* In order to get set up for the activity, direct the students to:
-  
-  * Run `mongod` in one tab, if they haven't already. Explain that `mongod` is the primary daemon process for the MongoDB system that handles data access and requests and background management operations. Tell them that when you start `mongod` you're telling your machine to start the MongoDB process and run it in the background.
-  
-  * Run `mongo` to start up the mongo shell in another tab. Explain that `mongo` is the command-line shell that connects to the specific instance of `mongod` that they just started.
+* With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
-* Next explain that you'll be going over how to create a database, insert data into a collection and find stored data using MongoDB.
+  * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on `localhost` with default port `27017`. We will use the default connection at `localhost:27017` to connect to Compass.
 
-* Following the comments and queries located in `01-Ins-Create-Insert-and-Find/README.md`, demonstrate to the class how to create a new database, insert and find new records.
+  * Below New Connection at the center of the screen, click the Connect button.
 
-* Switch to a new database:
+    > Note: You do not need to paste a connection string in the text box, because you are using the default setting. Simply click the Connect button and proceed to the next screen.
 
-  ```
-  use lessondb
-  ```
+  * At the top-left of the Local screen under `host`, we see that a successful connection to the default `localhost:27017` has been made.
 
-* Show the current db:
+  * The built-in MongoDB shell is located on the bottom-left of the Local screen. Click MONGOSH to open a new MongoDB shell.
 
-  ```
-  db
-  ```
+* In the open MongoDB shell, do the following:
 
-* Insert data:
+  * 🔑 To create a database, we select the new database using the `use` command and give it a name. The `use` command performs two common functions. If the database already exists, the `use` command selects the existing database for use. If the database does not yet exist, `use` creates the database as well as selects it for use.
 
-  ```js
-  db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})
-  ```
+  * To create a new `shelterDB` database, we type `use` followed by the name of the database, `shelterDB`, after the prompt.
 
-* As a class, come up with five more countries and insert them into the db using the same syntax as above.
-
-  * Observe where the data was entered in the MongoDB instance (in mongod).
-
-* Find all data in the collection:
-
-  ```js
-  db.places.find()
-  ```
-
-  * NOTE: the MongoDB `_id` was created automatically.
-
-  * This id is specific for each doc in the collection:
-
-* Add `.pretty()` to make your data more readable:
-
-  ```
-  db.places.find().pretty()
-  ```
-
-* Find specific data by matching a field:
-
-  ```js
-  db.places.find({"continent": "Africa"})
-  db.places.find({"country": "Morocco"})
-  ```
-
-* Find specific data by matching an _id:
-
-  ```js
-  db.places.find({_id: ObjectId("5416fe1d94bcf86cd785439036")})`
-  ```
-
-* When you are done tell the class that this is just the beginning as they will be sharpening their mongo skills in the coming days and weeks.
-
-* Ask the students the following question(s):
-
-  * ☝️ What keyword do we use to switch to a new database?
-
-  * 🙋 The `use` keyword.
-
-  * ☝️ What keyword do we use to find data?
-
-  * 🙋 The `find` keyword.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu-Create-Insert-and-Find/README.md`.
-
-### 9. Student Do: Create Insert Find (15 min) 
-
-* Direct students to the activity instructions found in `02-Stu-Create-Insert-and-Find/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Creating, Inserting and Finding in MongoDB
-
-  ## Instructions
-
-  * Use the command line to create a classroom database. 
-
-  * Insert entries for yourself and the people in your row in a `students` collection.
-
-  * Each document should have:
-
-    * A field of `name` with the person's name.
-
-    * A field of `rownumber` which will contain the row number that they are in.
-
-    * A field of `os` which will contain the Operating System of the computer they are using: 'Mac', 'Win', etc
-
-    * A field of `hobbies` with an array of the hobbies the person likes to do.
-
-  * Use find commands to get:
-
-    * A list of everyone in your row.
-
-    * An entry for a single person.
-
-    * The entries for all the Mac users in your row.
-
-  ## 💡 Hint(s)
-
-  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
-
-  ## 🏆 Bonus 
-
-  * If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 10. Instructor Review: Create Insert Find (10 min) 
-
-* Open `02-Stu-Create-Insert-and-Find/Solved/README.md` in your IDE and run the following commands.
-
-* Create a classroom db and insert a classmate**
-
-  ```sql
-  use classroom
-  db.students.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
-  ```
-
-* Find all students in row 3**
-
-  ```sql
-  db.students.find({row:3})
-  ```
-
-* Find students named Steve**
-
-  ```sql
-  db.students.find({name:'Steve'})
-  ```
-
-* Find students in row 3 that use Mac's**
-
-  ```sql
-  db.students.find({row:3, os:'Mac'})
-  ```
-
-* BONUS: Find by entry in an array**
-
-  ```sql
-  db.students.find({"hobbies": {$in: ["Coding"]}})
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ How do we find a record inside an array?
-
-  * 🙋 Review the syntax using `db.students.find({"hobbies": {$in: ["Coding"]}})` as an example.
-
-* Answer any questions before proceeding to the next activity.
-
-### 11. Instructor Demo: Update Delete Drop (5 min) 
-
-* Use the prompts and talking points below to review the following key point(s):
-
-  * ✔ We use `update` to update a value.
-
-  * ✔ We use `$set` to replace the value of a field with the specified value.
-
-  * ✔ We use `push` to update values in an array.
-
-  * ✔ We use `remove` to delete items.
-
-  * ✔ We use `drop` to drop a collection.
-
-* Open `03-Ins-Update-Delete-and-Drop/README.md` in your IDE and lead students the following commands.
-
-* Make sure you are using the database, `lessondb`,  that we created earlier.
-
-  ```sql
-  db
-  use lessondb
-  ```
-
-**Update**
-
-* Tell the class that we update data using `db.[COLLECTION_NAME].update()`
-
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}})
-  ```
-
-* Note that the above will only update the first entry it matches.
-  
-* Explain that to update multiple entries we add `{multi: true}`.
-
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"continent": "Antarctica"}}, {multi: true})
-  ```
-
-* Recall from the earlier demo the structure of our document:
-
-  ```sql
-  db.places.insert({"continent": "Africa", "country": "Morocco", "majorCities": ["Casablanca", "Fez", "Marrakech"]})
-  ```
-
-* Ask the students the following question(s):
-
-  * ☝️ What do you think will happen when I run the following command, even though there is not a `capital` field in the document?
-
-    ```sql
-    db.places.update({"country": "Morocco"}, {$set: {"capital": "Rabat"}})
+    ```sh
+    use shelterDB;
     ```
 
-  * 🙋 `$set` will create the field `capital`.
+  * 🔑 Data in MongoDB databases is stored in one or more collections. Just like when we create a database, we do not have to use a special command to create the collection. Instead, we can simply give the new collection a name and insert data in a single step.
 
-* Tell the class that the newly created field can now be updated with the same command:
+    * We start our command with `db.` This `db` refers to the current database in use. We then use dot notation to enter the name of the collection that we want to use. Because `petCollection` doesn't exist yet, it will be automatically created when our command is executed.
 
-  ```sql
-  db.places.update({"country": "Morocco"}, {$set: {"capital": "RABAT"}})
-  ```
+    * Next, we add the `insertOne()` method to insert a single document into our new collection, `petCollection`.
 
-* We can update the values in an array with `$push`:
+      ```sh
+      db.petCollection.insertOne();
+      ```
 
-  ```sql
-  db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})
-  ```
+  * 🔑 Before we can execute the command, though, we must add our document's data. We define an object that contains the fields and values that we want to store, and pass the object into `insertOne()`.
 
-**Delete**
+    ```sh
+    db.petCollection.insertOne({ pet: "dog", breed: "chihuahua"});
+    ```
 
-* We delete an entry with `db.[COLLECTION_NAME].remove()`
+  * Now that our command is complete and contains the data we want to insert, we press Enter to execute the command.
 
-  ```sql
-  db.places.remove({"country": "Morocco"})
-  ```
+  * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that MongoDB creates for us is included in this object.
 
-* We can also empty a collection with `db.[COLLECTION_NAME].remove()`
+    ```sh
+    {
+     acknowledged: true,
+     insertedId: ObjectId("{Unique-ID-String-Here}")
+    }
+    ```
 
-  ```sql
-  db.places.remove({})
-  ```
+  * 🔑 To fetch the document we just created, we use the same syntax with the `find()` method. Notice that when our new document is returned, an `_id` has been inserted into the document.
 
-**Drop**
+    ```sh
+    db.petCollection.find();
+    ```
 
-* We drop a collection with `db.[COLLECTION_NAME].drop()`
+* Scroll to the top of the page, and do the following to explore our data using Compass's interface:
 
-  ```sql
-  db.places.drop()
-  ```
+  * When we click on the `Refresh` located the top of the Compass screen below `Local`, the `shelterDB` database that we just created should appear in the list of available databases.
 
-* To drop a database:
+  * We click on the arrow to the left of the `shelterDB` database to open it, and then click on the `petCollection` collection that appears below.
 
-  ```sql
-  db.dropDatabase()
-  ```
+  * Once the `petCollection` is opened, the new document that we created appears in the Documents tab on the right of the screen.
 
-* Ask the students the following question(s):
+  * Using the visual interface, we can explore, modify, and even delete the data using the Find and Edit buttons on the page. In the next steps, we will learn to perform these CRUD operations within our app.
 
-  * ☝️ What does the `$push` method do?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
+  * ☝️ How would we create a new database and insert data?
 
-  * ☝️ Which method deletes an entry from a collection?
-
-  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
+  * 🙋 To create a new database, we use the `use` command followed by the name of the new database that we want to create. To add data, we first must define a collection to hold that data within the database. Then we use an insert method to add our new data object into the collection.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu-Update-Delete-and-Drop/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Compass/README.md`.
 
-### 12. Student Do: Update Delete Drop (15 min) 
+### 9. Student Do: Compass (15 min)
 
-* Direct students to the activity instructions found in `04-Stu-Update-Delete-and-Drop/README.md`.
+* Direct students to the activity instructions found in `02-Stu_Compass/README.md`, which are also shown below.
 
-* Break your students into pairs that will work together on this activity.
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # Update, Delete and Drop in MongoDB
+  # 📖 Create and View Data Using MongoDB Compass
 
-  * Go back to your classroom database. You've decided to take on a new hobby, extreme basket weaving. While practicing for your Extreme Basket Weaving Competition, you broke the computer of the person next to you. They're now using a new operating system now. Another student in your row saw you break that computer and wisely decided to move. You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn’t leave with candy. All this work made you hungry, so you bought yourself some candy. 
-    
-  ## Instructions
+  Work with a partner to implement the following user story:
 
-  * **Your Task:**
+  * As a developer, I want to create a MongoDB database to store data.
 
-  * Add Extreme Basket Weaving to your array of hobbies.
+  * As a developer, I want to add a collection to my database and insert a document so that I can visually explore that data using MongoDB Compass.
 
-  * Change the operating system of the student next to you.
+  ## Acceptance Criteria
 
-  * Remove the student to the other side of you from your database.
+  * It is done when I click the Connect button to navigate to the Compass home page.
 
-  * Add a field of `gavecandy` with a value of `false` to everyone in the array.
+    > Note: You do not have to paste a connection string before clicking Connect.
 
-  * Change the value of `gavecandy` to true for yourself.
+  * It is done when I have created a new local database named `inventoryDB` using Compass's Embedded MongoDB Shell (MongoSH).
+
+  * It is done when I have added a new collection named `bookCollection`, inserted a field called `title`, and provided a value for the `title` field.
+
+  * It is done when I refresh the page and the `inventoryDB` appears on the list of databases.
+
+  * It is done when I open the `bookCollection` collection and the document I just created is visible on the Documents tab and an `_id` field has been automatically inserted.
+
+  * It is done when I have modified the existing document, added a new field called `author`, and provided a value for the `author` field.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [MongoDB Compass docs on Connect to MongoDB](https://docs.mongodb.com/compass/current/connect/)
+
+  [MongoDB Compass docs on Embedded MongoDB Shell](https://docs.mongodb.com/compass/current/embedded-shell/)
+
+  [MongoDB docs on Creating a MongoDB Database with the CLI (the MongoDB shell)](https://www.mongodb.com/basics/create-database)
+
+  [MongoDB docs on MongoDB CRUD Operations](https://docs.mongodb.com/manual/crud/)
+
+  [MongoDB Compass docs on View Documents](https://docs.mongodb.com/compass/current/documents/view/)
+
+  [MongoDB Compass docs on Modify Documents](https://docs.mongodb.com/compass/current/documents/modify/)
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Image showing bookCollection collection with one document in Compass.](./assets/image_1.png)
+
+  ---
+
+  ## 💡 Hints
+
+  * What shell command do you use to create a new database?
 
   ## 🏆 Bonus
 
-  * Insert five more documents with one command. Use [https://docs.mongodb.com/manual/tutorial/insert-documents/](https://docs.mongodb.com/manual/tutorial/insert-documents/) to see how you can accomplish this.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  ## 💡 Hint(s)
+  * How can you perform create, insert, and delete operations in bulk using MongoDB? When would this be useful?
 
-  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Update Delete Drop (10 min) 
+### 10. Instructor Review: Compass (10 min)
 
-* Open `04-Stu-Update-Delete-and-Drop/Solved/README.md` in your IDE and walk students through the queries.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Go back to your classroom database.
+  * ☝️ How comfortable do you feel with Compass? (Poll via Fist to Five, Slack, or Zoom)
 
-  ```sql
-  db
-  use classroom
-  ```
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-* You've decided to take on a new hobby. Add Extreme Basketweaving to your array of hobbies.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  ```sql
-  db.students.update({name: "Steve"}, {$push: {"hobbies":"Extreme Basket weaving"}})
-  ```
+  * ✔️ MongoDB Shell
 
-* While practicing for your Extreme Basket weaving Competition, you broke the computer of the person next to you. They're using a new Operating System now. Change their os field.
+  * ✔️ `insertOne()`
 
-  ```sql
-  db.students.update({name: [name of neighbor]}, {$set: {os:[name of another os]}})
-  ```
+  * ✔️ `find()`
 
-* Another student in your row saw you break that computer and wisely decided to move. Remove them from your database.
+* Open Compass on your local machine to do the following:
 
-  ```sql
-  db.students.remove({name: [name of another neighbor]})
-  ```
+  * 🔑  With MongoDB server installed and running locally, we use the default connection at `localhost:27017` to connect to Compass by clicking on the `Connect` button.
 
-* You are worried everyone else will leave and you'll have to sit all alone. You decide to bribe everyone who didn't leave with candy. Add a field of `gavecandy` with a value of false to everyone in the array so you can keep track.
+  * On the Local screen, scroll to the bottom and click on `MONGOSH` to open an embedded MongoDB shell. We will use this shell to enter our commands.
 
-  ```sql
-  db.students.update({}, {$set: {gavecandy:false}}, {multi:true})
-  ```
+* Open the MongoDB shell to do the following:
 
-* All this work made you hungry, so you bought yourself some candy. Change the value of `gavecandy` to `true` in your entry.
+  * 🔑 To create a database, we select the new database using the `use` command and give it the name `inventoryDB`.
 
-  ```sql
-  db.students.update({name:'Steve'}, {$set: {gavecandy:true}})
-  ```
+    ```sh
+    use inventoryDB;
+    ```
 
-## Bonus
+    * We use the `insertOne()` method to insert a single document into our new collection, `bookCollection`. In the next step, we will define the data for our new document.
 
-* Insert five more documents with one command.
+    ```sh
+    db.bookCollection.insertOne();
+    ```
 
-  ```sql
-  db.students.insertMany([
-    {name: 'Jane', row:1, os:'Mac', hobbies:['Coding', 'Sleeping', 'Karate'] },
-    {name: 'Mary', row:2, os:'Mac', hobbies:['Baseball', 'Basketball', 'Tai Chi'] },
-    {name: 'Alexis', row:3, os:'Lin', hobbies:['Gaming', 'Reading', 'Gardening'] },
-    {name: 'Gary', row:4, os:'Mac', hobbies:['Walking', 'Reading', 'Mountain Climbing'] },
-    {name: 'Ed', row:5, os:'Win', hobbies:['Coding', 'Karate', 'Scuba Diving'] }
-  ]);
-  ```
+  * 🔑 To add our data, we define an object that contains the fields and values that we want to store and pass the object into our `insertOne()`. Then we press Enter to insert the data.
 
-* Return all documents of students who have reading as a hobby or a mac operating system.
+    ```sh
+    db.bookCollection.insertOne({ title: "Hello World: The Real Story"});
+    ```
 
-  ```sql
-  db.students.find(
-    {$or:[
-      {"hobbies":{"$in":["Reading"]}},
-      {"os":{"$in":["mac"]}}
-    ]}
-  )
-  ```
+  * When a document has been successfully created, an object is returned. If we have not explicitly included a value for the `_id` field, the inserted ID that MongoDB creates is included in this object.
 
-* Ask the students the following question(s):
+    ```sh
+    {
+     acknowledged: true,
+     insertedId: ObjectId("{Unique-ID-String-Here}")
+    }
+    ```
 
-  * ☝️ What does the `$push` method do?
+  * It is important to note that `insertOne()` method is only one of the ways to insert data with MongoDB. We can also use `insert()` to add single or multiple documents, or `insertMany()` to add an array of documents.
 
-  * 🙋 It updates the values in an array, `db.places.update({"country": "Morocco"}, {$push: {"majorcities": "Agadir"}})`
+  * 🔑 We can also fetch our new document in various ways. One way is to simply use the `find()` method. This will return all of the documents currently in our collection.
 
-  * ☝️ Which method deletes an entry from a collection?
+      ```sh
+    db.bookCollection.find();
+    ```
 
-  * 🙋 We can use remove, `db.[COLLECTION_NAME].remove()`
+  * 🔑 We can also use the `find()` method and pass in an empty object `{}`. Because the filter contains no data, this will return all the documents in the collection.
 
-* Answer any questions before proceeding to the next activity.
+    ```sh
+    db.bookCollection.find({});
+    ```
 
-### 14. Instructor Demo: Sorting in Mongo (5 min) 
+  * 🔑 To fetch the only document we just created, we use the `find()` method and pass in a filter. This will return only the documents currently in our collection that match the data in the filter. Using a filter is a useful way to limit the number of documents returned to only those you actually need.
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+    ```sh
+    db.bookCollection.find({ title: "Hello World: The Real Story"});
+    ```
 
-  * ✔ MongoDB has a way to sort results just like MySQL.
+* Click Refresh at the top of the Compass screen to demonstrate the following:
 
-  * ✔ We can sort by `integer`, `_id` and `class`.
+  * When we click Refresh at the top of the Compass screen, the `inventoryDB` database that we just created should appear in the list of available databases.
 
-* Tell the students to create a new db named `zoo` and insert 5 animals with the following attributes:
+  * When we click the arrow to the left of the `inventoryDB` database to open it and click the `bookCollection` collection that appears below, the new document that we created appears in the Documents tab.
 
-  * `numLegs` an integer that points to the number of legs.
+  * Using the visual interface, we can modify the existing document, add a new field called `author`, and provide a value for the `author` field.
 
-  * `class` as string that points to the animal's class ("reptile", "mammal" etc).
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * `weight` an integer that points to the animals weight.
+  * ☝️ What CRUD function does the `insertOne()` method perform?
 
-  * `name` a string that points to the animal's name.
+  * 🙋 The `insertOne()` method is used to create a single, new document.
 
-* Example:
+  * ☝️ What CRUD function does the `find()` method perform?
 
-  ```js
-  {
-    "name": "Panda",
-    "numLegs": 4,
-    "class": "mammal",
-    "weight": 254
-  }
+  * 🙋 The `find()` method reads data from a MongoDB database.
 
-  db.animals.insert({"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"});
-  db.animals.insert({"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"});
-  db.animals.insert({"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"});
-  db.animals.insert({"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"});
-  db.animals.insert({"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"});
-  ```
+  * ☝️ What can we do if we don't completely understand this?
 
-* Open `05-Ins-Sorting-In-Mongo/README.md` in your IDE and demonstrate some of the most common ways we sort using MongoDB.
-
-* In the mongo shell, run the following commands one at a time having students follow along.
-
-* **Sort by id:**
-
-* The id contains a timestamp, so sorting by id will sort by when they were entered to the database.
-
-  * Explain that a value of `1` is for ascending order and `-1` is for descending order.
-
-  ```sql
-  db.animals.find().sort({ _id:1 });
-  db.animals.find().sort({ _id:-1 });
-  ```
-
-* **Sort by an integer - numLegs:**
-
-```sql
-db.animals.find().sort({ numLegs:1 });
-db.animals.find().sort({ numLegs:-1 });
-```
-
-* **Sort by a string - class:**
-
-```sql
-db.animals.find().sort({ class:1 });
-db.animals.find().sort({ class:-1 });
-```
-
-* Tell the class that now that they have an understanding of how MongoDB works we are going to dive into MongoJS.
-
-* MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
-
-  * We are going to use this to interact with our Node.JS applications.
-  
-* Ask the students the following question(s):
-
-  * ☝️ What does the `sort` method use to determine what order to put records in?
-
-  * 🙋 The `timestamp`.
-
-* When you are done take any clarifying questions before moving on.
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ MongoJS wraps `mongodb-native` and emulates the official MongoDB API.
-
-* Have the students visit [MongoJS](https://www.npmjs.com/package/mongojs) in their browser.
-
-* Ask for a volunteer to guess how you might use `MongoJS`: `find`, `insert`, `remove` and `sort`.
-
-* These methods are nearly identical to running them in the `mongo` shell so they will feel comfortable with MongoJS.
-
-* Tell the class not to worry if they are confused, they will get plenty of practice moving forward.
+  * 🙋 We can refer to supplemental material, read the [MongoDB docs on introduction to MongoDB](https://docs.mongodb.com/manual/introduction/), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu-MongoJS-Sorting/README.md`.
+### 11. Instructor Demo: Create-Read (5 min)
 
-### 15. Student Do: MongoJS Sorting (15 min) 
+* Navigate to `03-Ins_Create-Read/` from the command line and run `npm install` and `node server` to demonstrate the following in Insomnia.
 
-* Direct students to the activity instructions found in `06-Stu-MongoJS-Sorting/README.md`.
+* Open Insomnia on your local machine to demonstrate the following:
 
-* Break your students into pairs that will work together on this activity.
+  * We can use the `find()` and `insertOne()` methods in our Express routes to create and read data from our MongoDB database.
+
+  * To create a new document, we create a `POST` request and add the route `localhost:3001/create`.
+
+  * We then add the data we want to insert as a JSON object and click `Send` to insert our data.
+
+    ```json
+    {
+	    "name": "Mickey",
+	    "breed": "chihuahua"
+    }
+    ```
+
+  * In the returned data, we see that our new document includes an `_id` field.
+
+  * To fetch the new document that we just created from our database, we make a `GET` request and add the route `localhost:3001/read` and click Send.
+
+  * Our new document, including the `_id` field with the same value, is returned. If our collection contains any other documents, those documents will be returned as well.
+
+* Open `03-Ins_Create-Read/` in your IDE to demonstrate the following:
+
+  * The `POST` request that we tested with Insomnia uses `insertOne()` to add a single document with a `name` and a `breed` field to the `petCollection`.
+
+    ```js
+    app.post('/create', (req, res) => {
+      db.collection('petCollection').insertOne(
+        { name: req.body.name, breed: req.body.breed },
+        (err, results) => {
+          if (err) throw err;
+          res.json(results);
+        }
+      );
+    });
+    ```
+
+  * The `GET` route that we tested uses `find()` to retrieve all the documents from the `petCollection`.
+
+    ```js
+    app.get('/read', (req, res) => {
+      db.collection('petCollection')
+      .find()
+      .toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    });
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we perform create and read operations on a MongoDB database using Express routes?
+
+  * 🙋 We use the MongoDB methods `insertOne()` and `find()` to create a new document and read all the documents in a collection, respectively.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Create-Read/README.md`
+
+### 12. Student Do: Create-Read (15 min)
+
+* Direct students to the activity instructions found in `04-Stu_Create-Read/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # MongoJS Sorting
+  # 📐 Add Comments to Implementation of Creating and Reading Data with MongoDB and Express.js
 
-  ## Instructions
+  Work with a partner to add comments that describe the functionality of the code found in [server.js](./Unsolved/server.js).
 
-  * Review the two routes provided to you and speak with a partner about what the code is doing.
+  ## 📝 Notes
 
-    * Get `/`: Displays a simple "Hello World" message (no mongo required).
-    
-    * Get `/all`: Send JSON response with all animals. (Uses the same animals collection created in [05-Ins-Sorting-In-Mongo](../05-Ins-Sorting-In-Mongo/README.md))
+  Refer to the documentation:
 
-  * Make two routes that display results from your zoo collection:
+  [Express docs on Integrating MongoDB](https://expressjs.com/en/guide/database-integration.html#mongodb)
 
-    * Name: Send JSON response sorted by name in ascending order.
+  [MongoDB docs on Find a Document](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 
-    * Weight: Send JSON response sorted by weight in descending order.
+  [MongoDB docs on Insert a Document](https://docs.mongodb.com/manual/tutorial/insert-documents/)
 
-  ## 💡 Hint(s)
-
-  * Use the [Mongo guides](https://docs.mongodb.com/guides/) if you are stuck.
+  ---
 
   ## 🏆 Bonus
 
-  * Create an additional route that returns the heaviest animal.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  ## Seed Zoo DB
-  Run the following in the mongo shell if you did not add at least 5 animals in the previous activity:
+  * What is **atomicity** within the context of databases? Why is it important to understand when performing write operations with MongoDB?
 
-  use zoo;
-  db.animals.insertMany([
-    {"name":"Panda", "numLegs":4, "class":"mammal", "weight": 254, "whatIWouldReallyCallIt":"Captain Fuzzy Face"},
-    {"name":"Dog", "numLegs":4, "class":"mammal", "weight": 60, "whatIWouldReallyCallIt":"Captain Fuzzy Face II"},
-    {"name":"Ostrich", "numLegs":2, "class":"aves", "weight": 230, "whatIWouldReallyCallIt":"Steve"},
-    {"name":"Kangaroo", "numLegs":2, "class":"marsupial", "weight": 200, "whatIWouldReallyCallIt":"Bouncer"},
-    {"name":"Chameleon", "numLegs":4, "class":"reptile", "weight": 5, "whatIWouldReallyCallIt":"Scales"}
-  ]);
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 16. Instructor Review: MongoJS Sorting (10 min) 
+### 13. Instructor Review: Create-Read (10 min)
 
-* Open `06-Stu-MongoJS-Sorting/Solved/server.js` solution on your machine, and run `server.js` with Node.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Visit the different routes in your web browser to show students the results:
+  * ☝️ How comfortable do you feel with creating and reading data with a MongoDB database? (Poll via Fist to Five, Slack, or Zoom)
 
-  * `/` will display a simple hello world message.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * `/all` will display JSON with every animal in your zoo collection.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * `/name` will display JSON with every animal, sorted by name.
+  * ✔️ `require('mongodb').MongoClient`
 
-  * `/weight` will display JSON with every animal, sorted by weight.
+  * ✔️ `mongodb://localhost:27017/inventoryDB`
 
-* After each route, start the `server.js` file and use your web browser to check the route. 
+  * ✔️ `mongodb.connect()`
+
+  * ✔️ `collection()`
+
+  * ✔️ `insertOne()`
+
+  * ✔️ `find()`
+
+* Open `04-Stu_Create-Read/Solved/server.js` in your IDE and explain the following:
+
+  * 🔑 To integrate MongoDB into an existing Express server, we must install the `mongodb` package using the command `npm install mongodb`, and require `mongodb` and the `MongoClient` class in the `server.js` file.
+
+    ```js
+    const mongodb = require('mongodb').MongoClient;
+    ```
+
+  * 🔑 We connect to a local instance of MongoDB, including the database name, using `mongodb://localhost:27017/` and appending the database name.
+
+    ```js
+    const connectionStringURI = `mongodb://localhost:27017/inventoryDB`;
+    ```
+
+  * We declare a variable to store our connection.
+
+    ```js
+    let db;
+    ```
+
+  * 🔑 We then use the `db` variable to create a connection to a MongoDB instance and return the reference to the database.
+
+    ```js
+    mongodb.connect(
+      connectionStringURI,
+      (err, client) => {
+        db = client.db();
+        app.listen(port, () => {
+          console.log(`Example app listening at http://localhost:${port}`);
+        });
+      }
+    )
+    ```
+
+  * 🔑 After MongoDB is integrated into the server, we can then use MongoDB methods to perform CRUD operations -- such as create and read -- directly in a route. This allows us to interact with the underlying MongoDB in our apps.
+
+  * To create a `POST` request, we start by creating a `POST` request and defining a `/create` route.
+
+    ```js
+    app.post('/create', (req, res) => {}
+    ```
+
+  * Inside the request, we add our query. We use `collection()` to create or select an instance of a collection and `insertOne()` to add a single document to the selected collection. We also add handling for both errors and the results.
+
+    ```js
+    db.collection('bookCollection').insertOne(
+      { title: req.body.title, author: req.body.author },
+      (err, results) => {
+        if (err) throw err;
+        res.json(results);
+      }
+    );
+    ```
+
+  * To insert multiple documents, we use `insertMany()` and place the documents we want to insert inside an array.
+
+    ```js
+    app.post('/create-many', function (req, res) {
+      db.collection('bookCollection').insertMany(
+        [
+          {"title" : "Oh the Places We Will Go!"},
+          {"title" : "Diary of Anne Frank"}
+        ],
+        (err,results) => {
+          if (err) throw err;
+          res.json(results);
+        }
+      );
+    });
+    ```
+
+  * To create a `GET` request to fetch data, we use the `find()` method. Since the filter contains no data, all documents will be returned. We also use the `toArray()` method so that multiple documents are returned in an array. Because the filter contains no data, all documents will be returned.
+
+    ```js
+    app.get('/read', (req, res) => {
+      db.collection('bookCollection')
+      .find({})
+      .toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    })
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we insert multiple documents using a single MongoDB method?
+
+  * 🙋 We use the `insertMany()` method and pass in an array containing all the documents we want to add.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MongoDB docs on insert methods](https://docs.mongodb.com/manual/reference/insert-methods/) and the [MongoDOB docs on query methods](https://docs.mongodb.com/manual/tutorial/query-documents/), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 17. Student Do: Mongo CRUD (5 min) 
+### 14. Instructor Demo: Update-Delete (5 min)
 
-* Open `07-Stu-Mongo-CRUD/Solved/server.js` on your machine and demonstrate the solved version of the app by creating, updating and deleting a few notes.
+* With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
-  * Note that to update a note you have to click on it's title, then update the form and submit.
+  * Below New Connection at the center of the screen, click Connect.
 
-* After demoing, direct students to the activity instructions found in `07-Stu-Mongo-CRUD/README.md`.
+  * The built-in MongoDB shell is located on the bottom-left of the Local screen. Click MONGOSH to open a new MongoDB shell.
 
-* Break your students into pairs that will work together on this activity.
+* In the open MongoDB shell, do the following:
+
+  * 🔑 To create a database, we select the new database using the `use` command, and give it a name.
+
+    ```sh
+    use mygroceryDB;
+    ```
+
+  * 🔑 We use the `insertOne()` method to a create a new collection, `groceryCollection`, and insert a single document with two key pairs.
+
+    ```sh
+    db.groceryCollection.insertOne( {"item": "banana", "department": "produce"} );
+    ```
+
+  * Click Enter to execute the shell command. Make sure you note the generated `ObjectId({Unique-ID-String-Here})`. We will use this unique identifier to delete this record later on.
+
+  * 🔑 To verify that the document has been added to our new collection, we can use the `find` method and pass in an empty object `{}` so that all documents currently in the collection will be returned.
+
+    ```sh
+    db.groceryCollection.find({});
+    ```
+
+  * 🔑 To update the document we just created, we use the `updateOne()` method to update a single document.
+
+    * The first object that we add is key pair that we want to use to find the document, or the filter. In this case, we are going to use the filter to find the document by its item name. Using a filter is important so that only the document that you want updated is changed -- not all the documents.
+
+    * Then, we use the MongoDB update operator `$set` to set our new value, updating our document.
+
+    ```sh
+    db.groceryCollection.updateOne({"item": "banana"}, {$set: { "item" : "apple"}});
+    ```
+
+  * 🔑 To delete the document that we just updated, we use the `deleteOne()` method.
+
+    * It is important that you provide filter information so that only the document that you want deleted is deleted, and not all the documents in the collection!
+
+    * In this case, only the document with the item name of `apple` will be deleted. If there happens to be more than one document with the item of `apple`, only the first one will be deleted. Don't press Enter yet!
+
+      ```sh
+      db.groceryCollection.deleteOne( {"item": "apple"});
+      ```
+
+    * A better way to do this is to use the unique identifier, the `_id`. Replace the `item` field with `_id` and paste the ObjectID you noted above as the key-pair value and press Enter to execute the command.
+
+      ```sh
+      db.groceryCollection.deleteOne({ "_id" : ObjectId("YOUR-UNIQUE_ID")} );
+      ```
+
+  * 🔑 To verify that the document has been deleted, we can use the `find` method. If successful, no documents should be returned, because the one document in the collection has now been deleted.
+
+      ```sh
+      db.groceryCollection.find({});
+      ```
+
+  * While this demonstration uses `updateOne()` and `deleteOne()` to work with a single document, MongoDB has multiple update and delete methods that we can use to best handle our data.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can we use MongoDB methods to perform update and delete operations on a MongoDB database?
+
+  * 🙋 We can use MongoDB's `updateOne()` to update a single document and `deleteOne()` to delete a single document. But MongoDB is not limited to working on one document at a time. There are multiple update and delete methods that we can research and use in our code to work with both single documents and multiple documents at the same time.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Update-Delete/README.md`.
+
+### 15. Student Do: Update-Delete (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Update-Delete/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # MongoJS CRUD
+  # 🏗️ Delete Data Using MongoDB and Express.js
 
-  In this activity you will build the backend for a note-taking app.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to be able to delete an existing document in a MongoDB database.
 
-  * Update the [server.js](Unsolved/server.js) file to include the following six routes.
+  * As a developer, I want to be able to update data in an existing document in a MongoDB database.
 
-  * Save a note to the database's collection `POST: /submit`.
+  ## Acceptance Criteria
 
-  * Retrieve all notes from the database's collection `GET: /all`.
+  * It is done when I use the existing `/create` GET Route to create a new document that includes a title.
 
-  * Retrieve one note in the database's collection by it's ObjectId `GET: /find/:id`.
+  * It is done when I add a new `/delete` DELETE route that uses a filter to find a single document by its unique `_id` and deletes that document. The `_id` value should be provided by the request body.
 
-  * Update one note in the database's collection by it's ObjectId `POST: /update/:id`.
+  * It is done when I test the route using Insomnia and the document that I just created is deleted. No other documents should be changed.
 
-  * Delete one note from the database's collection by it's ObjectId `DELETE: /delete/:id`.
+  ## 💡 Hints
 
-  * Clear the entire note collection `DELETE: /clearall`.
+  * Why is it important to specify a filter when updating and deleting documents?
 
-  ## 💡 Hint(s)
+  * Do you need to use `ObjectId()` when sending an `_id` string in JSON? Why or why not?
 
-  * You can see a list of methods available to you here. [https:github.com/mafintosh/mongojs#api](https://github.com/mafintosh/mongojs#api).
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are indexes? How do they support the efficient execution of queries in MongoDB?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Mongo CRUD (15 min) 
+### 16. Instructor Review: Update-Delete (10 min)
 
-* Open [07-Stu-Mongo-CRUD/Solved/server.js](../../../../01-Class-Content/18-NoSQL/01-Activities/07-Stu-Mongo-CRUD/Solved/server.js) and walk students through the code.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Answer any questions before proceeding.
+  * ☝️ How comfortable do you feel with updating and deleting data in a MongoDB database? (Poll via Fist to Five, Slack, or Zoom)
 
-* Instruct your students to open the Robo 3T application. They should see a window like this:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  ![6-roboConnect](Images/6-roboConnect.jpg)
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* They should hit the connect button. Do the same to show students what comes next.
+  * ✔️ `deleteOne()`
 
-  * `/all` will display JSON with every animal in your zoo collection.
+  * ✔️ filter object
 
-  * `/name` will display JSON with every animal, sorted by name.
+* Open `06-Stu_Update-Delete/Solved/server.js` in your IDE and explain the following:
 
-  * `/weight` will display JSON with every animal, sorted by weight.
+  * To use an Express route to query a MongoDB database, we first have to require and connect to the MongoDB database. In this code, that work has already been done for us.
+
+    ```js
+    const express = require('express');
+    const mongodb = require('mongodb').MongoClient;
+
+    const app = express();
+    const port = 3001;
+
+    const connectionStringURI = `mongodb://localhost:27017/inventoryDB`;
+
+    let db;
+
+    mongodb.connect(
+      connectionStringURI,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      (err, client) => {
+        db = client.db();
+        app.listen(port, () => {
+        console.log(`Example app listening at http://localhost:${port}`)
+      });
+    });
+
+    app.use(express.json());
+    ```
+
+  * Next, we create a `DELETE` request that we will use to delete data and define the `/delete` route.
+
+    ```js
+    app.delete('/delete', (req, res) => {...}
+    ```
+
+  * 🔑 In this route, we will use the `deleteOne()` method to delete a single document by id. Don't forget that the numerical id string must be wrapped with `ObjectID()` for now. One of the advantages of Mongoose, which we will learn about later in this unit, is that it makes deleting by id easier and we won't have to manually do this step.
+
+    ```js
+    db.collection('bookCollection').deleteOne(...)
+    ```
+
+  * 🔑 When using a delete method, it is very important that we specify a filter so that only the documents we want deleted are removed. This filter will match the id that we provide in the request body and only delete that document, not all documents!
+
+    ```js
+    db.collection('bookCollection').deleteOne({ _id: req.body.id },...)
+    ```
+
+  * 🔑 We also add logic to handle our data response and possible errors. If the document is deleted, `Document deleted` will be returned.
+
+    ```js
+    (err) => {
+      if (err) throw err;
+      res.send('Document deleted');
+    }
+    ```
+
+* Navigate to `06-Stu_Update-Delete/Solved/` in your command line and run `npm install` and `node server` to demonstrate the following in Insomnia:
+
+  * To test our route, we first use a POST request with the route `localhost:3001/create` to insert a new document with a title `Hello World` into our database. We add the data object into the request body as JSON.
+
+    ```json
+    {
+	      "title": "Hello World"
+    }
+    ```
+
+  * We click SEND and copy the id string for our new document from the returned data. We will use that to delete the document that we just created by id.
+
+  * To delete our document, we use a DELETE request with the route `localhost:3001/delete`. In the request body, we add the string of the new document that we copied, wrapped in `ObjectID()`.
+
+    ```json
+    {
+	    "_id": "ObjectID({INSERT-ID-WITHOUT-QUOTES})"
+    }
+    ```
+
+  * We click SEND and see that `Document deleted` has been returned.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it important to use a filter object when using a MongoDB delete method?
+
+  * 🙋 When using a delete method, it is important that you only remove the documents you are targeting, not all the documents. Using a filter allows us to target only the documents we want to delete. In addition, by filtering by id, we know we are only targeting one document, because each id is unique.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MongoDB docs on delete methods](https://docs.mongodb.com/manual/reference/delete-methods/), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu-Robo-3T/README.md`.
+### 17. Instructor Demo: Embedded Documents (5 min)
 
-### 19. Student Do: Robo 3T (10 min) 
+* Open `07-Ins_Embedded-Documents/models/data.js` in your IDE and demonstrate the following:
 
-* Direct students to the activity instructions found in `08-Stu-Robo-3T/README.md`.
+  * To create a data relationship in MongoDB, it is possible to use a reference to establish a relationship between two documents. This is similar to SQL databases' primary and foreign keys. In this example, the `promotion_id` refers to the promotion object below.
 
-* Break your students into pairs that will work together on this activity.
+    ```js
+     {
+       department: 'floral',
+       promotion_id: 'flowers',
+     },
+     {
+      promotion_id: 'flowers',
+      sale: 'discount on red flowers',
+      percentage_discount: 50,
+    },
+    ```
+
+  * We can also model relationships much more easily by using embedded documents. An embedded document is simply a document inside another relationship. Using embedded documents reduces the number of read operations needed to retrieve data and makes it simple to determine relationships among documents.
+
+  * To model a one-to-one relationship, we embed one related document as a subdocument. In this instance, the parent document has one related promotion child document.
+
+    ```js
+    {
+      department: 'frozen',
+      promotion: {
+        promotion_id: 'popsicle',
+        sale: 'discount frozen treats',
+        percentage_discount: 20,
+      },
+    }
+    ```
+
+  * To model a one-to-many relationship, we add many related embedded documents. In this instance, the parent document has multiple related child documents.
+
+    ```js
+    {
+      department: 'produce',
+      promotion: [
+        {
+          promotion_id: 'Monday',
+          sale: 'discount on bananas',
+          percentage_discount: 25,
+        },
+        {
+          promotion_id: 'Tuesday',
+          sale: 'half-price apples',
+          percentage_discount: 50,
+        },
+        {
+          promotion_id: 'Wednesday',
+          sale: 'discount on cherries',
+          percentage_discount: 10,
+        },
+        {
+          promotion_id: 'Thursday',
+          sale: 'free grapes',
+          percentage_discount: 100,
+        },
+        {
+          promotion_id: 'Friday',
+          sale: '5% off berries',
+          percentage_discount: 5,
+        },
+        {
+          promotion_id: 'Saturday',
+          sale: 'discount on all fruit',
+          percentage_discount: 30,
+        },
+        {
+          promotion_id: 'Sunday',
+          sale: 'discount on all fruit',
+          percentage_discount: 12,
+        },
+      ],
+    },
+    ```
+
+* Open `07-Ins_Embedded-Documents/server.js` in your IDE and demonstrate the following:
+
+  * Just like any other object, to access the data in an embedded object, we use dot notation. This will find any document in the `groceryList` collection that has a `percentage_discount` that is greater than 30 inside the `promotion` document.
+
+    ```js
+    app.get('/sale-over-30', (req, res) => {
+      db.collection('groceryList')
+      .find({ 'promotion.percentage_discount': { $gte: 30 } })
+      .toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    })
+    ```
+
+* Navigate to `07-Ins_Embedded-Document/` in your command line and run `npm install` and `node server` to demonstrate the following in Insomnia:
+
+  * When we test the `GET` request with the route `localhost:3001/sale-over-30`, all documents that have a matching percentage discount are returned.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we model a one-to-one or one-to-many relationship with MongoDB?
+
+  * 🙋 We can embed one or more related subdocuments, or child documents, and access them using dot notation.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Embedded-Document/README.md`.
+
+### 18. Student Do: Embedded Document (15 min)
+
+* Direct students to the activity instructions found in `08-Stu_Embedded-Document/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # Robot 3T
+  # 🐛 Query on Embedded Document Not Returning Matching Data
 
-  * In this activity, you will practice using Robo 3T.
+  Work with a partner to resolve the following issue(s):
 
-  ## Instructions
+  * As a book store owner, I should be able to execute a query that returns a list of books that have a price of less than $10.
 
-  * Drop your classroom collection and create a new one.
+  * As a book store owner, I should be able to execute a query that returns a list of books that has at least one featured author.
 
-  * In a new classroom collection, re-enter your `name`, `os`, and `hobby` info array. 
+  ## Expected Behavior
 
-    * This should be entered using the `right-click -> Insert Object` method. 
+  When I query the embedded data using the `db.collection.find()` method, the matching data should be returned.
 
-  * Next, Slack out your `name`, `os` and `hobbies` into the classroom chat.
+  ## Actual Behavior
 
-  * As students enter their BSON info into slack, insert it into your database.
+  When I query the embedded data using the `db.collection.find()` method, no matching data is returned.
 
-  * By the end of the exercise, you should have every student's information in your classroom collection.
+  ## Steps to Reproduce the Problem
+
+  Follow these steps to reproduce the problem:
+
+  1. In the Unsolved folder, run `npm install` and `node server`.
+
+  2. Open Insomnia and enter the GET Route `/price-less-than-10`. A list of books that have a price of less than $10 is not returned.
+
+  3. Open Insomnia and enter the GET Route `/featured-authors`. A list of books that have at least one featured author is not returned.
+
+  ---
+
+  ## 💡 Hints
+
+  What notation do you use to access an object inside another object in JavaScript?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How would you query an array of embedded documents in MongoDB?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 19. Instructor Review: Embedded Documents (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with embedded documents? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ One-to-one relationships
+
+  * ✔️ Dot notation
+
+  * ✔️ One-to-many relationship
+
+* Open `08-Stu_Embedded-Documents/Solved/server.js` in your IDE and explain the following:
+
+  * When we look at the data, we see that each book has one set of information. This is a one-to-one relationship. We also see that the information is an embedded document.
+
+    ```js
+    {
+      title: 'Heads You Lose',
+      authors: [
+        { name: 'Lisa Lutz', featured: false },
+        { name: 'David Hayward', featured: false },
+      ],
+      information: { ISBN: 9780399157400, price: 20, total_in_stock: 8 },
+    },
+    ```
+
+  * 🔑 To access the `price` field inside the embedded `information` document, we use dot notation.
+
+    ```js
+    app.get('/price-less-than-10', (req, res) => {
+      db.collection('authorList')
+      .find({ 'information.price': { $lt: 10 } })
+      .toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    });
+    ```
+
+  * When we look at the data, we see that each book can have multiple authors. This is a one-to-many relationship.
+
+    ```js
+    {
+      title: 'Good Omens',
+      authors: [
+        { name: 'Neil Gaiman', featured: true },
+        { name: 'Terry Pratchett', featured: true },
+      ],
+      information: { ISBN: 9780425132159, price: 10, total_in_stock: 10 },
+    },
+    ```
+
+  * 🔑 To access the `featured` field inside the embedded `author` document, we can use dot notation.
+
+    ```js
+    app.get('/featured-authors', (req, res) => {
+      db.collection('authorList')
+      .find({ 'authors.featured': true })
+      .toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    });
+    ```
+
+* Navigate to `08-Stu_Embedded-Document/Solved` in your command line and run `npm install` and `node server` to demonstrate the following in Insomnia:
+
+  * When we test the `GET` request with the route `localhost:3001/price-less-than-10`, all documents that have an embedded document with a `price` field that is less than 10 are returned.
+
+  * When we test the `GET` request with the route `localhost:3001/featured-authors`, all documents that have an embedded document with a `featured` field that is `true` are returned.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we access fields in an embedded document?
+
+  * 🙋 Because we are working with objects, we use dot notation.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MongoDB docs on modeling one-to-one relationships with embedded documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/) and the [MongoDB docs on modeling one-to-many relationships with embedded documents](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/), and attend Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 

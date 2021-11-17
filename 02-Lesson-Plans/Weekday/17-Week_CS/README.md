@@ -12,9 +12,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Instructor/TA Notes
 
-* In the first lesson, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
+* This unit's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
 * Some activities use a testing library to debug or build code. Lesson content moves fluidly between the browser and Node.js, so familiarize yourself with when you'll use `npm install` to run the test suites.
+
+* In the first lesson, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
 
 * In the second lesson, we teach advanced JavaScript concepts including closures, classes, and factory functions. Take some time before class to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Some students might have a hard time understanding these concepts. Encourage them to be patient with themselves, and remind them that the best way to understand these topics is through coding practice.
 
@@ -32,11 +34,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Heads-Up
 
-In the next unit, we will return to the back end and learn about NoSQL databases using MongoDB, a popular, document-based database that integrates easily with JavaScript.
+In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
 
-Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. Also, make sure students have it installed prior to coming to class.
+Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass on your machine.
 
-Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
+Also, make sure students have MongoDB and Compass installed prior to coming to class.
 
 ## Helpful Links
 
@@ -64,7 +66,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [02: Left Rotation](../../../01-Class-Content/17-CS/03-Algorithms/02-left-rotation)
 
-      * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
+    * 📹 [Let's Code Left Rotation!](https://2u-20.wistia.com/medias/kfyhj4z6fn)
 
   * [03: Reverse in Place](../../../01-Class-Content/17-CS/03-Algorithms/03-reverse-in-place)
 
