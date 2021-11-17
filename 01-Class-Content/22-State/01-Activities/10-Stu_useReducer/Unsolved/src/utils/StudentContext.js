@@ -32,6 +32,10 @@ export const StudentProvider = ({ children }) => {
     'Engineering',
   ];
 
+  // Initial state for the input fields/ dropdown menus
+  const studentMajor = '';
+  const studentName = '';
+
   // The value prop expects an initial state object
   return (
     <StudentContext.Provider value={{ students, majors }}>

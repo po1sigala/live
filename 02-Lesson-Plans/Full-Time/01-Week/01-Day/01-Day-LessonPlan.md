@@ -16,6 +16,8 @@ Today's lesson introduces students to the tools they need to succeed in the cour
 
 * Remind students that they can always refer to their prework for more detailed instructions on how to install the tools they need for this course. Most of the setup and command-line/Git commands have already been covered in their prework.
 
+* It is recommended that students who use Windows 10 turn off OneDrive so that they can follow the class activities easily. Refer to [Microsoft docs on turning off OneDrive](https://support.microsoft.com/en-us/office/turn-off-disable-or-uninstall-onedrive-f32a17ce-3336-40fe-9c38-6efb09f944b0) for step-by-step instructions.
+
 * Normally, each student will be expected to do a `git pull` of the class repository to have the day's activities ready and open in VS Code. However, for this first class, some students might not have access to the repository yet or know how to use `git pull`, which is introduced during today's activities. For that reason, instruct a TA to post the activity instructions on Slack, and if possible, share the instructions on the screen during the `Student Do` section of each activity.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
@@ -1034,7 +1036,7 @@ By the end of class, students will be able to:
   * A `class` attribute can be used to select and style one or more elements:
 
     ```html
-    <section class="section">
+    <section class="lesson">
     ```
 
   * The `id` attribute is used to select a single element for styling:
@@ -1130,7 +1132,7 @@ By the end of class, students will be able to:
   * 🔑 We use a global `class` attribute to add a `section` identifier to all sections:
 
     ```html
-    <section class="section">
+    <section class="lesson">
     ```
 
   * 🔑 We use a global `id` attribute to add a unique identifier to the email list item:

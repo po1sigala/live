@@ -6,9 +6,9 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `23-Stu-Mini-Project` from Unit 19 through `08-Stu_JSX-expressions` in Unit 20.
+* In this lesson, students will complete activities `23-Stu-Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
 
-* **Important:** To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
+* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
 
    ```sh
    echo "SKIP_PREFLIGHT_CHECK=true" > .env
@@ -18,9 +18,13 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * When using the `create-react-app` utility to create a React app, the project directory will also automatically be created as part of the process. Students might be tempted to start by creating a directory for their project, which is not necessary and might actually cause some confusion. The name you provide to the command will be the directory name -- for example, `npx create-react-app my-app` creates a directory called `/my-app`. The name `my-app` will also be used as the name of the project inside the `package.json` file that is generated.
 
-* In the first activity, students will use `create-react-app` to set up a practice React app that they will re-purpose for almost every subsequent in-class activity in the unit. Reusing the original app will save students time by not having to run the utility for each subsequent activity. To make this possible, students will need to replace the `/src` directory with the one in the current activity's folder. You'll run through this in this lesson to familiarize students with the process.
+* The practice app will be called `00-practice-app`, but the name isn't as important as it's location. The `00-practice-app` directory will be created in the `01-Activities` directory.
 
-* Shortly after you review the slide deck, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
+* Each activity will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+
+* To save time in class, students are expected to copy the `Unsolved/src` directory from the activity folders to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
+
+* Shortly after you review the slide deck for Unit 20, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
 
 * Several activities in this unit require students to import Bootstrap into the `/src/index.js` file. If students ask why their activities do not match the solution, check whether they've done this.
 
@@ -63,23 +67,23 @@ By the end of class, students will be able to:
 | 1:00PM | 11  | Instructor Demo: Render Elements     | 0:05     |
 | 1:05PM | 12  | Student Do: Render Elements          | 0:15     |
 | 1:20PM | 13  | Instructor Review: Render Elements   | 0:10     |
-| 1:30PM | 14  | Instructor Demo: Components          | 0:05     |
-| 1:35PM | 15  | Student Do: Components               | 0:15     |
-| 1:50PM | 16  | Instructor Review: Components        | 0:10     |
-| 2:00PM | 17  | Instructor Demo: JSX Expressions     | 0:05     |
-| 2:05PM | 18  | Student Do: JSX Expressions          | 0:15     |
-| 2:20PM | 19  | Instructor Review: JSX Expressions   | 0:10     |
+| 1:30PM | 14  | Instructor Demo: JSX Expressions     | 0:05     |
+| 1:35PM | 15  | Student Do: JSX Expressions          | 0:15     |
+| 1:50PM | 16  | Instructor Review: JSX Expressions   | 0:10     |
+| 2:00PM | 17  | Instructor Demo: Props               | 0:05     |
+| 2:05PM | 18  | Student Do: Props                    | 0:15     |
+| 2:20PM | 19  | Instructor Review: Props             | 0:10     |
 | 2:30PM | 20  | END                                  | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
-* Run the following commands from the command line: 
+* Run the following commands from the command line:
 
   * `npm install`
 
@@ -116,7 +120,7 @@ By the end of class, students will be able to:
 
   ## Instructions
 
-  * Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application. 
+  * Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application.
 
   * We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
 
@@ -181,7 +185,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini Project (10 min)
 
 * Open `index.js` in your IDE and point out the following:
 
@@ -191,8 +195,8 @@ By the end of class, students will be able to:
 
 * Open `domMethod.js` in your IDE and point out the following:
 
-  * It is not entirely necessary for us to understand exactly how every line in `createElement` works. 
-  
+  * It is not entirely necessary for us to understand exactly how every line in `createElement` works.
+
   * It is valuable to get practice working with code we do not fully understand because new developers almost always start their careers working with an unfamiliar codebase.
 
   * The `createElement` function returns a DOM element and has the following parameters:
@@ -322,7 +326,7 @@ By the end of class, students will be able to:
 
 * Open `webpack.config.js` in your IDE and point out the following:
 
-  * There are 3 different entry points created for each app. 
+  * There are 3 different entry points created for each app.
 
   * Each bundle will include all dependencies brought into each entry file with ES6 `import`.
 
@@ -360,7 +364,7 @@ By the end of class, students will be able to:
     ]
     ```
 
-* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over. 
+* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over.
 
   * Some students may be frustrated with the amount of time they needed to spend refactoring code so that it could be easily chunked by webpack.
 
@@ -374,7 +378,7 @@ By the end of class, students will be able to:
 
 * Navigate to <http://localhost:3001> in Chrome and demonstrate the following:
 
-    * We are given a Budget Tracker app that we will convert into a PWA to allow for offline access and functionality. 
+    * We are given a Budget Tracker app that we will convert into a PWA to allow for offline access and functionality.
 
     * We can add expenses and deposits to our budget with or without a connection.
 
@@ -388,11 +392,11 @@ By the end of class, students will be able to:
 
     * ☝️ How are these skills relevant to a career in web development?
 
-    * 🙋 PWAs blend the benefits of a traditional browser experience with those of a mobile application. PWAs can ensure applications work without an internet connection by using the Service Worker and Cache APIs to cache assets and API responses. Having the skills to build or convert to PWAs is crucial in this day and age. 
+    * 🙋 PWAs blend the benefits of a traditional browser experience with those of a mobile application. PWAs can ensure applications work without an internet connection by using the Service Worker and Cache APIs to cache assets and API responses. Having the skills to build or convert to PWAs is crucial in this day and age.
 
     * ☝️ How will this challenge improve your portfolio?
 
-    * 🙋 It will show employers your ability to measure and optimize the performance of web applications. 
+    * 🙋 It will show employers your ability to measure and optimize the performance of web applications.
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
@@ -413,7 +417,7 @@ By the end of class, students will be able to:
     * This unit is all about React, which is a powerful JavaScript library for building user interfaces.
 
   * **What Is React?**
-  
+
     * React is one of the most powerful, in-demand front-end JavaScript libraries available today.
 
     * React is a library that helps you create complex and responsive single-page applications.
@@ -435,7 +439,7 @@ By the end of class, students will be able to:
   * **Can You Give Me an Example?**
 
     * Facebook’s UI is a great example of React in action.
-  
+
     * Each section of the page is a component that has tons of real-time updates happening every second.
 
     * The component design pattern allows Facebook to add a search bar and messenger to nearly every page that the user visits.
@@ -453,9 +457,9 @@ By the end of class, students will be able to:
     * Separate components are easier to test.
 
     * Helps isolate bugs, saving time.
-  
+
   * **What Are Props?**
-  
+
     * **Props** are a specialized type of parameter passed into a React component that help define attributes in the user interface, similar to DOM attributes.
 
     * Props allow data to be passed from a parent component to a child component.
@@ -463,17 +467,17 @@ By the end of class, students will be able to:
     * **Props** is short for **properties** and refers to an normal JavaScript object that contains key-value pairs.
 
   * **How Is This Different Than Regular DOM Manipulation?**
-  
+
     * In JavaScript, the application’s state and UI are updated independently of each other.
 
     * With React, whenever the application’s state changes, the DOM updates to reflect it.
 
     * With React, the UI is a pure function of the application’s state.
-  
+
   * **How Do We Handle Constant Data Changes?**
-  
+
   * **Rapid Data Changes in Plain Vanilla Javascript**
-  
+
     * JavaScript is fast, but whenever we update the DOM, the browser needs to recalculate the CSS, update the layout, and repaint the webpage. This can be a slow process.
 
   * **Rapid Data Changes in React**
@@ -489,7 +493,7 @@ By the end of class, students will be able to:
     * We isolate the attribute changes, event handling, and other DOM manipulation that we would otherwise use when building an app.
 
   * **Can We Get a Visualization, Please?**
-  
+
     * **Virtual DOM** is a JavaScript object that models the real DOM.
 
     * Whenever some part of the application’s state changes, the virtual DOM receives the UI updates first.
@@ -501,7 +505,7 @@ By the end of class, students will be able to:
   * **What Are the Pros and Cons?**
 
     * **Pros**
-  
+
       * Reusable components.
 
       * UI updates in response to state change, reducing DOM manipulation code needed.
@@ -521,7 +525,7 @@ By the end of class, students will be able to:
     * Babel and Webpack
 
   * **What Is Webpack?**
-  
+
     * Webpack lets you modularize front-end code the same way you do in Node with CommonJS modules (require, module.exports).
 
     * Webpack also lets you apply various transformations on your assets via plugins.
@@ -529,9 +533,9 @@ By the end of class, students will be able to:
   * **What Is Babel?**
 
     * Babel lets you transpile next-generation JavaScript (ES6, ES7, ES8) into ES5 JavaScript that most browsers understand.
-  
+
   * **How Do We Learn React?**
-  
+
     * React was designed to help create snappy single-page applications, but learning it can be daunting at first. Don’t worry -- we will break it down into small digestible topics and take things one step at a time.
 
     * You can try the following to learn React:
@@ -553,7 +557,7 @@ By the end of class, students will be able to:
     * We will build a bucket-list app using React.
 
     * Building this app should be a fun exercise in using your newly acquired React skills.
-  
+
     * You will be able to tell your friends and family about how you used React Hooks, components, state, and so many other cool React concepts!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -574,7 +578,7 @@ By the end of class, students will be able to:
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: Create React App (5 min) 
+### 8. Instructor Demo: Create React App (5 min)
 
 * It's time to introduce the very useful `create-react-app` utility. Let students know that this useful command-line utility will create the skeleton of a React app for them. The only downside is that running it can take some time. For this reason, in this first activity we'll use it to create a practice React app that we will then reuse for the rest of the unit's activities. To make that work, we'll only need to swap out the `/src` file for each activity.
 
@@ -589,7 +593,7 @@ By the end of class, students will be able to:
   * 🔑 We can see that `create-react-app` runs a series of scripts to create a new directory, repository, and folder structure for a boilerplate React application.
 
   * We can deduce that the argument after `create-react-app` is the name of the application that we want to create.
-  
+
   * This process might take some time to complete. When it's done, you will see a boilerplate application in the `00-practice-app` directory, with the following file structure (excluding `node_modules`):
 
      ```sh
@@ -615,11 +619,11 @@ By the end of class, students will be able to:
      ```
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
-  
+
   * For each subsequent activity in this unit, we will remove the `/src` directory in `00-practice-app` and replace it with the `/src` directory in the activity's `/Unsolved` folder. Let's practice that now.
 
 * Open `01-Ins_Create-React-App` and replace your newly created `00-practice-app/src` directory with the one found in `01-Ins_Create-React-App`.
-  
+
   * After we replace the `/src` directory, we can see the browser refresh and load the new content.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -632,7 +636,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to direct students to the activity instructions found in `02-Stu_Create-React-App/README.md`.
 
-### 9. Student Do: Create React App (15 min) 
+### 9. Student Do: Create React App (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Create-React-App/README.md`.
 
@@ -642,9 +646,9 @@ By the end of class, students will be able to:
    # 📐 Add Comments That Describe the Functionality of a React App
 
    ## Before We Begin
-   
+
    Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
-   
+
    To do this, follow these steps:
 
    1. In the command line, navigate to `20-React/01-Activities`.
@@ -663,10 +667,10 @@ By the end of class, students will be able to:
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
-   
+
    ---
 
    ## 🏆 Bonus
@@ -680,7 +684,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Create React App (10 min) 
+### 10. Instructor Review: Create React App (10 min)
 
 * Before you review the activity, make sure that you replace the `/src` directory with the one found in `02-Stu_Create-React-App`.
 
@@ -701,9 +705,9 @@ By the end of class, students will be able to:
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
   * After we copy the `/src` directory, we notice that there are some comments in the `index.js` file for us to complete.
-  
+
   * React is a JavaScript library that is used to build web application user interfaces.
-  
+
   * 🔑 As of React version 17, the React library no longer requires us to add `import React from 'react` to transform JSX. However, most in-production React codebases still use them because this is a recent change, so in this unit we include the import React statements in the activities:
 
      ```js
@@ -711,7 +715,7 @@ By the end of class, students will be able to:
      ```
 
   * 🔑  The `React` module is an entry point to the React library, while `react-dom` provides access to DOM-specific methods:
-  
+
      ```js
      import ReactDOM from 'react-dom';
 
@@ -719,9 +723,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑  `ReactDOM.render()` takes a React component or tree of React components and eventually renders them to the DOM.
-  
+
   * The first argument is the component we want to render (`<App />`), and second is the target element to render to (`#root`):
-  
+
      ```js
      ReactDOM.render(<App />, document.getElementById('root'));
      ```
@@ -764,15 +768,15 @@ By the end of class, students will be able to:
 
      export default HelloReact;
      ```
-  
+
   * The curly braces allow us to pass values and expressions into the view. In this example, we are passing in the variable `text`.
-  
+
   * JSX is a syntax extension to JavaScript that looks like HTML and is compiled to a widely supported ES5 syntax called Babel:
-  
+
      ```jsx
      <p>Hello World! Here is {text}</p>
      ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we make sure that each component has access to the React library?
@@ -785,14 +789,14 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Render Elements (5 min) 
+### 11. Instructor Demo: Render Elements (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `03-Ins_Render-Element/src`.
 
 * Run `npm start` from the command line in `00-practice-app`and demonstrate the following:
 
   * 🔑 When we run the app, we see that the page renders with some elements like a header, a `p` tag, and an unordered list.
-  
+
   * We also see that the `/src` directory contains an `index.js` file, an `App.js`file , and a components folder like the previous example.
 
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
@@ -800,7 +804,7 @@ By the end of class, students will be able to:
   * We see that `index.js` is the entry point for the application.
 
   * It imports `App` from `App.js` and uses `ReactDOM.render()` to render it to the element `#root`:
-  
+
      ```js
      import React from 'react';
      import ReactDOM from 'react-dom';
@@ -810,7 +814,7 @@ By the end of class, students will be able to:
      ```
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
-  
+
   * Investigating `App.js` allows us to see that this component returns some JSX, including another component called `Welcome`, denoted by the `<Welcome />` tag:
 
      ```js
@@ -833,11 +837,11 @@ By the end of class, students will be able to:
      ```js
      export default function Welcome() {
      ```
-  
+
   * Because it is possible to export more than one component from a file, we use the `default` keyword to tell React that this component should be imported if none is specified.
 
   * We can see several elements inside the `Welcome` component's return statement:
-  
+
      ```js
      return (
        <div className="container">
@@ -854,9 +858,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 Notice that the JSX elements are wrapped in a single `parent` element.
-  
+
   * Also note that we use `className` instead of `class` inside JSX, to avoid namespace issues with JavaScript `class` keywords.
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
@@ -867,7 +871,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Render-Element/README.md`.
 
-### 12. Student Do: Render Elements (15 min) 
+### 12. Student Do: Render Elements (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Render-Element/README.md`.
 
@@ -915,7 +919,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Render Elements (10 min) 
+### 13. Instructor Review: Render Elements (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -949,9 +953,9 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 We can see when we open `index.js` that `App` is getting exported and then rendered as the first argument to the `ReactDOM.render()` method.
-  
+
   * 🔑 Also, we can see that the second argument getting passed to `ReactDOM.render()` is the real DOM element that the React app should render to:
-  
+
      ```js
      import React from 'react';
      import ReactDOM from 'react-dom';
@@ -961,7 +965,7 @@ By the end of class, students will be able to:
      ```
 
   * 🔑 Inside `HelloDiv.js`, similar to normal JavaScript functions, we want to have one return value. As a result, we need to wrap all the elements inside a parent element.
-  
+
   * Again, we import React as with all other functional or class-based components:
 
      ```js
@@ -996,323 +1000,66 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 14. Instructor Demo: Components (5 min) 
+### 14. Instructor Demo: JSX Expressions (5 min)
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `05-Ins_Component/src`.
-
-* Run `npm start` from the command line and demonstrate the following:
-
-  * 🔑 When we start the React app, the page renders with the two components found in `/components`.
-  
-  * Remember that components are JavaScript functions that describe some part of the application's user interface. They usually return some JSX and can also be written as classes.
-
-  * 🔑 Also note that in `App.js`, we are importing the two components `List` and `Nav` at the top of the file. The return statement includes a parent `div` that contains both the `Nav` and `List` components.
-  
-  * We can see that the `List` component has an attribute called users and is set to the value of `users`, one of the imports:
-
-     ```js
-     import React from 'react';
-     import List from './components/List';
-     import Nav from './components/Nav';
-
-     import users from './users';
-
-     export default function App() {
-       return (
-         <div>
-           <Nav />
-           <List users={users} />
-         </div>
-       );
-     }
-     ```
-
-  * If we navigate into the `00-practice-app/src/components/Nav.js` file, we can see that this component seems responsible for returning JSX associated with the navigation bar for the page.
-  
-  * We also see that we have one style object, called `linkStyle`, that is being used for each link:
-
-     ```js
-     import React from 'react';
-
-     export default function Nav() {
-       const linkStyle = { border: '1px black', padding: '5px' };
-
-       return (
-         <nav className="main-header-menu">
-           <section
-             style={{
-               display: 'flex',
-               fontFamily: 'helvetica',
-               flexDirection: 'row',
-               alignItems: 'flex-start',
-               justifyContent: 'flex-start',
-             }}
-           >
-             <div style={linkStyle}>
-               <a href="#">Home</a>
-             </div>
-             <div style={linkStyle}>
-               <a href="#">Login</a>
-             </div>
-             <div style={linkStyle}>
-               <a href="#">Register</a>
-             </div>
-             <div style={linkStyle}>
-               <a href="#">About</a>
-             </div>
-             <div style={linkStyle}>
-               <a href="#">Contact</a>
-             </div>
-           </section>
-         </nav>
-       );
-     }
-     ```
-  
-  * If we open `00-practice-app/src/components/List.js`, we can see that this component is mapping over a list of users and rendering `li` elements for each user. The sole responsibility of the component is to return a list of users with the `map()` method.
-  
-  * The `List` component receives a `props` object. We use destructuring assignment to assign `users` to its own variable.
-  
-  * Passing `props` to the component allows us to use that data inside the return method.
-
-  * 🔑 The `users` array is being passed to the `List` component as a **prop**:
-
-     ```js
-     import React from 'react';
-
-     export default function List({ users }) {
-       console.log('List -> users', users);
-       return (
-         <div className="container">
-           <h1>Random Users:</h1>
-           <ul className="list-group">
-             {users.map((user) => (
-               <li className="list-group-item" key={user.login.uuid}>
-                 {`${user.name.first} ${user.name.last} (${user.login.username})`}
-               </li>
-             ))}
-           </ul>
-         </div>
-       );
-     }
-     ```
-
-  * 🔑 The `map()` method is very similar to a `forEach` loop. The key difference is that `map()` doesn't actually mutate the original data. Instead, it makes a copy of the data and returns a new array.
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What are the benefits of using the `map()` method to render data inside a React component?
-
-  * 🙋 The `map()` method allows us to render more than one of the same kind of element with a few lines of code. This is at the core of what it means to have DRY (Don't Repeat Yourself) code. We also have the benefit of leaving the initial data untouched as a result of `map()` returning a new array to work with.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Component/README.md`.
-
-### 15. Student Do: Components (15 min) 
-
-* Direct students to the activity instructions found in `06-Stu_Component/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-   ```md
-   # 📖 Implement Map() Inside a Component
-
-   ## Before We Begin
-
-   Before you begin this activity, complete the following steps:
-
-   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
-
-   2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
-
-   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
-
-      `import 'bootstrap/dist/css/bootstrap.min.css'` 
- 
-   ## Activity
-
-   Work with a partner to implement the following user story:
-
-   * As a developer, I want to be able to map over a list of data and render components for each piece of data.
-
-   ## Acceptance Criteria
-
-   * It's done when I have modified the `List` component so that inside its `ul` tags, one `li` tag renders for each item in the array of grocery objects being passed via props.
-
-   * It's done when each `li` tag displays the `text` property of each grocery object using the `map()` method.
-
-   ## 📝 Notes
-
-   Refer to the documentation: 
-
-   * [React Docs on lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html)
-
-   * [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-
-   ## 💡 Hints
-
-   We only need to modify one file for the activity. Which one is it?
-
-   ## 🏆 Bonus
-
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-   * How could we render a list of only the groceries that have NOT been purchased? Could we use the [filter() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to help us with this?
-
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 16. Instructor Review: Components (10 min) 
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with mapping over data inside React components? (Poll via Fist to Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
-
-* Use the prompts and talking points (🔑) below to review the following key points:
-
-  * ✔️ React components
-
-  * ✔️ `map()`
-
-  * ✔️ Immutability
-
-* Be sure to first copy the contents of `06-Stu_Component/Solved/Basic/src` to `00-practice-app` before explaining the following:
-
-  * The assignment was to modify the `List` component so that inside its `ul`, one `li` tag renders for each item in the array of grocery objects being passed via props.
-
-  * First we need to add Bootstrap to the `index.js` file to take advantage of some style classes:
-
-     ```js
-     import 'bootstrap/dist/css/bootstrap.min.css'
-     ```
-
-  * Next, if we open the `App.js` file, we can see that we are passing the list of groceries to the `List` component as a prop:
-
-     ```js
-     function App() {
-       return <List groceries={groceries} />;
-     }
-     ```
-
-  * Now let's look at the `List` component. This file is where we used `map()` to iterate over each grocery item and return a new array of `li` tags for each item.
-  
-  * When creating a collection of JSX elements using the `map()` method, we must provide a unique `key` attribute to the parent element that gets returned -- usually something specific to the data that you are working with, like an id. This `key` attribute allows React to track changes to the virtual DOM and select specific elements properly.
-  
-  * We write JavaScript inside JSX by using curly braces (`{}`):
-
-     ```js
-     return (
-       <ul className="list-group">
-         {props.groceries.map(item => (
-           <li className="list-group-item" key={item.id}>
-             {item.name}
-           </li>
-         ))}
-       </ul>
-     );
-     ```
-
-  * 🔑 Notice that `map()` returns an array of `li` items. Whenever we try to render an array that contains JSX, React knows to render each JSX element separately.
-  
-  * React also expects a `key` attribute to exist on each `li` element. This helps React determine which `li` is which.
-
-  * Let's imagine that the user wanted to render a list of items that had not been purchased yet. We could do that using the `filter()` method:
-
-     ```js
-     function List(props) {
-       const notPurchased = props.groceries.filter(grocery => !grocery.purchased);
-
-       return (
-         <ul className="list-group">
-           {notPurchased.map(item => (
-             <li className="list-group-item" key={item.id}>
-               {item.name}
-             </li>
-           ))}
-         </ul>
-       );
-     }
-     ```
-
-  * With the `notPurchased` variable, we are setting it to an array of groceries where the `purchased` property is `false`, and mapping through that instead.
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ Why can't we use something like `forEach` to render an array with React?
-
-  * 🙋 React requires a return value, and `forEach` doesn't return anything. It simply iterates over elements in an array. The `map()` method, however, returns a new array of elements and leaves the original array intact.
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), and stay for office hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-### 17. Instructor Demo: JSX Expressions (5 min) 
-
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `07-Ins_JSX-expressions/src`.
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `05-Ins_JSX-expressions/src`.
 
 * Run `npm start` from the command line and demonstrate the following:
 
   * 🔑 When we run this React app, the browser loads a page with some basic styling and what appear to be some JSX variables.
 
   * 🔑 Open `src/components/JSXVariables.js`. The point of this exercise is writing JSX expressions inside the components.
-  
+
   * **JSX** stands for **JavaScript XML**. JSX allows us to write HTML in React code. It is identical to HTML in almost every way, except for how it is processed: JSX elements are converted to React elements when the code is run.
-  
+
   * Here is an example of some JSX code:
 
-     ```js
-     const awesomeElement = <span>JSX is the best!</span>
+    ```js
+    const awesomeElement = <span>JSX is the best!</span>
 
-     ReactDOM.render(awesomeElement, document.getElementById('root'));
-     ```
+    ReactDOM.render(awesomeElement, document.getElementById('root'));
+    ```
 
   * Here is an example of the same code without JSX:
 
-     ```js
-     const awesomeElement = React.createElement('span', {}, 'JSX is the best!')
-     ```
+    ```js
+    const awesomeElement = React.createElement('span', {}, 'JSX is the best!')
+    ```
 
   * The first option is familiar: it is much like normal HTML. JSX is an extension of JavaScript and is translated into normal JavaScript when the code runs.
-  
+
   * One cool thing about JSX is that we can write comments in it by using single curly braces. This might look similar to the expressions we used in Handlebars.js, but we are using a set of single curly braces instead of double curly braces:
 
-     ```js
-       return (
-         <div className="main-container">
-           <div className="container">
-             <div className="jumbotron">
-               {/* JavaScript expressions can be escaped inside of curly braces */}
-     ```
+    ```js
+    return (
+      <div className="main-container">
+        <div className="container">
+          <div className="jumbotron">
+            {/* JavaScript expressions can be escaped inside of curly braces */}
+    ```
 
   * We use the `name`, `num1`, and `num2` variables inside the JSX code. If we were to update one of these variables with a new value, the value would be reflected on the page:
 
-     ```jsx
-     <h2>My name is {name}. But you can call me...</h2>
-     <h1>The JSX Boss!</h1>
-     <hr />
-     <h2>I can do math: {num1 + num2}.</h2>
-     ```
+    ```jsx
+    <h2>My cat's name is {name}. But you can call me...</h2>
+    <h1>The JSX Boss!</h1>
+    <hr />
+    <h2>I can do math: {num1 + num2}.</h2>
+    ```
 
   * We use these curly braces to get JavaScript variables inside the JSX view that React will ultimately render.
 
   * We can see that rendering variables like `name` is pretty straightforward, but we can also evaluate entire expressions that are inside JSX curly braces. Notice in the following code that we're producing random numbers and reversing `name` as well:
 
-     ```jsx
-     <h2>
-       I can generate random numbers:
-       {Math.floor(Math.random() * 10) + 1},
-       {Math.floor(Math.random() * 10) + 1},
-       {Math.floor(Math.random() * 10) + 1}.
-     </h2>
-     <h2>I can even reverse my name: {name.split('').reverse()}</h2>
-     ```
+    ```jsx
+    <h2>
+      I can generate random numbers:
+      {Math.floor(Math.random() * 10) + 1},
+      {Math.floor(Math.random() * 10) + 1},
+      {Math.floor(Math.random() * 10) + 1}.
+    </h2>
+    <h2>I can even reverse my name: {name.split('').reverse()}</h2>
+    ```
 
   * Given these examples, we can deduce that an **expression** is any valid set of literals, variables, operators, or expressions that evaluates to a single value.
 
@@ -1326,61 +1073,61 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_JSXexpressions/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_JSX-expressions/README.md`.
 
-### 18. Student Do: JSX Expressions (15 min) 
+### 15. Student Do: JSX Expressions (15 min)
 
-* Direct students to the activity instructions found in `08-Stu_JSXexpressions/README.md`.
+* Direct students to the activity instructions found in `06-Stu_JSX-expressions/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-   ```md
-   # 🏗️ Implement JSX Expressions
+  ```md
+  # 🏗️ Implement JSX Expressions
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Before you begin this activity, complete the following steps:
+  Before you begin this activity, complete the following steps:
 
-   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
 
-   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+  3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-     `import 'bootstrap/dist/css/bootstrap.min.css'`
-   
-   ## Activity
+    `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-   Work with a partner to implement the following user story:
+  ## Activity
 
-   * As a developer, I want to be able to use JSX expressions to render variables in my components.
+  Work with a partner to implement the following user story:
 
-   ## Acceptance Criteria
+  * As a developer, I want to be able to use JSX expressions to render variables in my components.
 
-   * It's done when I create the JavaScript variables requested in [JSXVariables.js](../00-practice-app/src/components/JSXVariables.js).
+  ## Acceptance Criteria
 
-   * It's done when I render a `name` variable that will hold my name.
+  * It's done when I create the JavaScript variables requested in [JSXVariables.js](../00-practice-app/src/components/JSXVariables.js).
 
-   * It's done when I render the number of letters in the `name` variable.
+  * It's done when I render a `name` variable that will hold my name.
 
-   * It's done when I create a variable called `thoughts` that contains a string regarding my thoughts on React.
+  * It's done when I render the number of letters in the `name` variable.
 
-   ## 💡 Hints
+  * It's done when I create a variable called `thoughts` that contains a string regarding my thoughts on React.
 
-   How can we use the [React Docs on JSX](https://reactjs.org/docs/introducing-jsx.html) to help us while working with JSX?
+  ## 💡 Hints
 
-   ## 🏆 Bonus
+  How can we use the [React Docs on JSX](https://reactjs.org/docs/introducing-jsx.html) to help us while working with JSX?
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  ## 🏆 Bonus
 
-   * What other array methods are available to use on the `name` variable?
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  * What other array methods are available to use on the `name` variable?
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
-### 19. Instructor Review: JSX Expressions (10 min) 
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 16. Instructor Review: JSX Expressions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1398,36 +1145,36 @@ By the end of class, students will be able to:
 
   * First we need to open the `index.js` file and import Bootstrap for styling:
 
-     ```js
-     import 'bootstrap/dist/css/bootstrap.min.css';
-     ```
+    ```js
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    ```
 
 * Next, open `00-practice-app/src/components/JSXVariables.js` in your IDE and explain the following:
 
   * First we add the requested variables near the top of the `JSXVariables.js` file:
 
-     ```js
-     const name = 'Christan';
-     const thoughts = 'is amazing!!!'
-     ```
+    ```js
+    const name = 'Christan';
+    const thoughts = 'is amazing!!!';
+    ```
 
   * We use these variables and methods inside the JSX expressions, using the curly braces:
 
-     ```js
-     function JSXVariables() {
-       return (
-         <div className="main-container">
-           <div className="container">
-             <div className="jumbotron">
-               <h1>Hi! My name is ({name})</h1>
-               <h2>My name has ({name.length}) letters</h2>
-               <h2>I think React ({thoughts})</h2>
-             </div>
-           </div>
-         </div>
-       );
-     }
-     ```
+    ```js
+    function JSXVariables() {
+      return (
+        <div className="main-container">
+          <div className="container">
+            <div className="jumbotron">
+              <h1>Hi! My name is ({name})</h1>
+              <h2>My name has ({name.length}) letters</h2>
+              <h2>I think React ({thoughts})</h2>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ```
 
   * 🔑 Notice how we can invoke methods directly inside the curly braces. We can also do things like reference the length of the name variable by using `{name.length}`.
 
@@ -1440,6 +1187,229 @@ By the end of class, students will be able to:
   * ☝️ What can we do if we don't completely understand this?
 
   * 🙋 We can refer to supplemental material, read the [React Docs on JSX](https://reactjs.org/docs/introducing-jsx.html), and stay for office hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 17. Instructor Demo: Props (5 min)
+
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `07-Ins_Props/src`.
+
+* Run `npm start` from the command line and demonstrate the following:
+
+  * 🔑 This example is using a Bootstrap alert that tells us that there is an invalid username or password.
+
+  * 🔑 Components are independent and reusable bits of code. They are simply JavaScript functions that return a JSX expression that renders as HTML. Components can come in two types, Class components and Functional components. We will be dealing with Functional components in this course.
+
+  * Inside `App.js`, we are returning a component `Alert` with a type attribute of `danger`.
+
+  * `App.js` also has a variable called `message` that is getting passed as a prop to `Alert`:
+
+    ```js
+    const message = 'Invalid user id or password';
+    const alertType = "danger"
+
+    function App() {
+      return <Alert type={alertType} message={message} />;
+    }
+    ```
+
+  * If we look at `/components/Alert.js`, we can see that the component accepts something called `props` as an argument. We refer the data in `props` just like we would with any other JavaScript object:
+
+    ```js
+    function Alert(props) {
+      console.log(props);
+
+      return (
+        <div className={`alert alert-${props.type || 'success'}`} role="alert">
+          {props.message}
+        </div>
+      );
+    }
+    ```
+
+  * 🔑 Props are a way to pass down data as objects to nested components as arguments. These are known as child components.
+
+  * One of our props is `props.type`, which will be used to change the class of the element and therefore the way it looks.
+
+  * Similarly, we have a `props.message` key, which contains a string, `"Invalid user id or password"`:
+
+    ```js
+    return (
+      <div className={`alert alert-${props.type || 'success'}`} role="alert">
+        {props.message}
+      </div>
+    );
+    ```
+
+  * 🔑 We can pass any type of data as a prop, including strings, numbers, arrays, functions, and even entire components!
+
+  * 🔑 It is important to note that React uses a unidirectional data flow, meaning that data only flows in one direction: from the top down, parent to child.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ If a prop inside the component isn't what we expect it to be, where could we look to find out why?
+
+  * 🙋 We would look at the parent component to see what kind of data is being passed.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Props/README.md`.
+
+### 18. Student Do: Props (15 min)
+
+* Direct students to the activity instructions found in `08-Stu_Props/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🏗️ Pass Data Using Props
+
+  ## Before We Begin
+
+  Before you begin this activity, complete the following steps:
+
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+
+  3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+
+    `import 'bootstrap/dist/css/bootstrap.min.css'`
+
+  ## Activity
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to render a card by passing props.
+
+  ## Acceptance Criteria
+
+  * It's done when I have updated the return method in `src/components/Display.js` to render a card.
+
+  * It's done when I have passed data for the dog's `name`, `description`, and `id` as props to the `Card` component.
+
+  * It's done when I have modified to `Card` component to render the `canine` properties.
+
+  ## 💡 Hints
+
+  * How can we use the [React Docs on components and props](https://facebook.github.io/react/docs/components-and-props.html) to understand props better?
+
+  * What is the term **props** short for?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to React components?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 19. Instructor Review: Props (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with props? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ props
+
+  * ✔️ Unidirectional data flow
+
+* Open `00-practice-app/src/index.js` in your IDE and explain the following:
+
+  * First we need to open the `index.js` file and import Bootstrap to style the cards:
+
+    ```js
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    ```
+
+* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
+
+  * The first thing we notice is that we are importing another component called `Card` at the top of the file. We will look more closely at this component later in the activity.
+
+    ```js
+    import Card from './Card';
+    ```
+
+  * Inside the `Display` component, we have an object called `canine`. Each object within that array contains the `name` and `description` of dogs:
+
+    ```js
+    const canine = {
+      name: 'Spot',
+      description: 'The best boy',
+      id: 1,
+    };
+    ```
+
+* Open `00-practice-app/src/components/Card.js` in your IDE and explain the following:
+
+  * The `Card` component imports React at the top of the file:
+
+    ```js
+    import React from 'react';
+    ```
+
+  * We pass the props argument to the `Card` component so that we can reference the data passed from the parent:
+
+    ```js
+    export default function Card(props) {
+    ```
+
+  * In the return statement for the card, we take the `name`, `description`, and `id` that were passed as props and render them in the Bootstrap card:
+
+    ```jsx
+    return (
+      <div className="container">
+        <div className="card" style={cardStyle}>
+          <img
+            className="card-img-top"
+            src={`http://placecorgi.com/${randomWidth()}`}
+            alt="Card cap"
+          />
+          <div className="card-body">
+          <h5 className="card-title">Name: {props.name}</h5>
+            <p className="card-text">Description: {props.description}</p>
+            <p className="card-text">ID: {props.id}</p>
+            <a href="#" className="btn btn-primary">
+              Adopt {props.name}
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+    ```
+
+* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
+
+  * Now that we've looked at the `Card` component and what it does, let's check what is happening in the return statement for `Display`.
+
+  * A card is populated with the `canine` properties pass to the `Card` component as props -- specifically, the `name`, `description`, `id` props.
+
+    ```js
+    export default function Display() {
+      return (
+        <div>
+            <Card name={canine.name} description={canine.description} id={canine.id} />
+        </div>
+      );
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some different ways that we can pass props to a component?
+
+  * 🙋 We can pass props to the child component by passing a `props` object as an argument, or we can use object destructuring assignment.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [React Docs on props](https://reactjs.org/docs/components-and-props.html), and stay for office hours to ask for help.
 
 * Answer any questions before ending the class.
 

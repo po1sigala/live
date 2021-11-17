@@ -1,12 +1,12 @@
 // 1. Object
 const nodejs = {
-  name: 'Node.js',
+  pkgName: 'Node.js',
   type: 'JavaScript runtime environment',
 };
 
 const { name, type } = nodejs;
 
-console.log(name); // <= Node.js
+console.log(pkgName); // <= Node.js
 console.log(type); // <= JavaScript runtime environment
 
 // 2. Nested Object

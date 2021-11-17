@@ -481,7 +481,7 @@ By the end of class, students will be able to:
 
 ### 15. Instructor Demo: Lazy Loading (5 min) 
 
-* Open our completed [Lazy Loading Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
+* Open our completed [Lazy Loading Gallery App](https://lazyyload.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
 
   * If it loads too quickly, open your `Network` tab in your Dev Tools and throttle to `slow 3g`, disable cache, and refresh the page.
 
@@ -808,6 +808,8 @@ function initLazyImages() {
   * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
 
   ![Offline](Images/offline-mode.png)
+
+* Make a note, that if students were to make a PWA with external libraries such as Bootstrap, that those styles and associated JavaScript files will need to be accounted in the manifest and service worker.
 
 * Answer any questions before ending the class.
 
