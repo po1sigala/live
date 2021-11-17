@@ -6,9 +6,9 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `09-Ins_Props` through `20-Stu_Hooks-useEffect`.
+* In this lesson, students will complete activities `09-Ins_Components` through `20-Stu_Fetching-Data`.
 
-* Much like in the previous lesson, each activity will require the student to remove the `/src` directory from their `00-practice-app` and replace it with the `/src` for the current activity.
+* Much like in the previous lesson, each activity will require the student to replace the `/src` directory from their `00-practice-app` with the current activity by manually copying and pasting, or by using the `sswap` utility located in the `01-Activities/swap_tool` directory.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
@@ -32,9 +32,9 @@ In this lesson, you'll review some important React concepts with students to hel
 
 | Start  | #   | Activity Name                      | Duration |
 |---     |---  |---                                 |---       |
-| 10:00AM| 1   | Instructor Demo: Props             | 0:05     |
-| 10:05AM| 2   | Student Do: Props                  | 0:15     |
-| 10:20AM| 3   | Instructor Review: Props           | 0:10     |
+| 10:00AM| 1   | Instructor Demo: Components        | 0:05     |
+| 10:05AM| 2   | Student Do: Components             | 0:15     |
+| 10:20AM| 3   | Instructor Review: Components      | 0:10     |
 | 10:30AM| 4   | Instructor Do: Stoke Curiosity     | 0:10     |
 | 10:40AM| 5   | Instructor Demo: State             | 0:05     |
 | 10:45AM| 6   | Student Do: State                  | 0:15     |
@@ -47,12 +47,12 @@ In this lesson, you'll review some important React concepts with students to hel
 | 12:30PM| 13  | Instructor Demo: React Forms       | 0:05     |
 | 12:35PM| 14  | Student Do: React Forms            | 0:15     |
 | 12:50PM| 15  | Instructor Review: React Forms     | 0:10     |
-| 1:00PM | 16  | Instructor Demo: Fetching Data     | 0:05     |
-| 1:05PM | 17  | Student Do: Fetching Data          | 0:15     |
-| 1:20PM | 18  | Instructor Review: Fetching Data   | 0:10     |
-| 1:30PM | 19  | Instructor Demo: useEffect Hook    | 0:05     |
-| 1:35PM | 20  | Student Do: useEffect Hook         | 0:15     |
-| 1:50PM | 21  | Instructor Review: useEffect Hook  | 0:10     |
+| 1:00PM | 16  | Instructor Demo: useEffect Hook    | 0:05     |
+| 1:05PM | 17  | Student Do: useEffect Hook         | 0:15     |
+| 1:20PM | 18  | Instructor Review: useEffect Hook  | 0:10     |
+| 1:30PM | 19  | Instructor Demo: Fetching Data     | 0:05     |
+| 1:35PM | 20  | Student Do: Fetching Data          | 0:15     |
+| 1:50PM | 21  | Instructor Review: Fetching Data   | 0:10     |
 | 2:00PM | 22  | FLEX                               | 0:30     |
 | 2:30PM | 23  | END                                | 0:00     |
 
@@ -60,246 +60,282 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ## Class Instruction
 
-### 1. Instructor Demo: Props (5 min) 
+### 1. Instructor Demo: Components (5 min)
 
 * Welcome students to class.
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `09-Ins_Props/src`.
-  
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `09-Ins_Component/src`.
+
 * Run `npm start` from the command line and demonstrate the following:
 
-  * 🔑 This example is using a Bootstrap alert that tells us that there is an invalid username or password.
+  * 🔑 When we start the React app, the page renders with the two components found in `/components`.
 
-  * Inside `App.js`, we are returning a component `Alert` with a type attribute of `danger`.
-  
-  * `App.js` also has a variable called `message` that is getting passed as a prop to `Alert`:
+  * Remember that components are JavaScript functions that describe some part of the application's user interface. They usually return some JSX and can also be written as classes.
 
-     ```js
-     const message = "Invalid user id or password"
+  * 🔑 Also note that in `App.js`, we are importing the two components `List` and `Nav` at the top of the file. The return statement includes a parent `div` that contains both the `Nav` and `List` components.
 
-     function App() {
-       return <Alert type="danger" message={message} /></Alert>;
-     }
-     ```
+    ```js
+    import List from './components/List';
+    import Nav from './components/Nav';
 
-  * If we look at `/components/Alert.js`, we can see that the component accepts something called `props` as an argument. We refer the data in `props` just like we would with any other JavaScript object:
-  
-     ```js
-     function Alert(props) {
-       console.log(props);
+    export default function App() {
+      return (
+        <div>
+          <Nav />
+          <List users={users} />
+        </div>
+      );
+    }
+    ```
 
-       return (
-         <div className={`alert alert-${props.type || "success"}`} role="alert">
-           {props.message}
-         </div>
-       );
-     }
-     ```
+  * We can see that the `List` component has an attribute called `users` and is set to the value of `users`, one of the imports:
 
-  * 🔑 Every component has access to a `props` argument. A prop is always an object that contains all of the values passed to the component.
-  
-  * One of our props is `props.type`, which will be used to change the class of the element and therefore the way it looks.
-  
-  * Similarly, we have a `props.message` key, which contains a string, `"Invalid user id or password"`:
+    ```js
+    import users from './users';
 
-     ```js
-     return (
-       <div className={`alert alert-${props.type || "success"}`} role="alert">
-      {props.message}
-       </div>
-     );
-     ```
-  
-  * 🔑 We can pass any type of data as a prop, including strings, numbers, arrays, functions, and even entire components!
-  
-  * 🔑 It is important to note that React uses a unidirectional data flow, meaning that data only flows in one direction: from the top down, parent to child.
+    export default function App() {
+      return (
+        <div>
+          <Nav />
+          <List users={users} />
+        </div>
+      );
+    }
+    ```
+
+  * If we navigate into the `00-practice-app/src/components/Nav.js` file, we can see that this component seems responsible for returning JSX associated with the navigation bar for the page.
+
+  * We also see that we have one style object, called `linkStyle`, that is being used for each link:
+
+    ```js
+    export default function Nav() {
+      const linkStyle = { border: '1px black', padding: '5px' };
+
+      return (
+        <nav className="main-header-menu">
+          <section
+            style={{
+              display: 'flex',
+              fontFamily: 'helvetica',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+            }}
+          >
+            <div style={linkStyle}>
+              <a href="#">Home</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Login</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Register</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">About</a>
+            </div>
+            <div style={linkStyle}>
+              <a href="#">Contact</a>
+            </div>
+          </section>
+        </nav>
+      );
+    }
+    ```
+
+  * If we open `00-practice-app/src/components/List.js`, we can see that this component is mapping over a list of users and rendering `li` elements for each user. The sole responsibility of the component is to return a list of users with the `map()` method.
+
+    ```js
+    export default function List({ users }) {
+      return (
+        <div className="container">
+          <h1>Random Users:</h1>
+          <ul className="list-group">
+            {/* Here we use the map method to iterate through each user and return a new array of list items for each user */}
+            {users.map((user) => (
+              <li className="list-group-item" key={user.login.uuid}>
+                {`${user.name.first} ${user.name.last} (${user.login.username})`}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    ```
+
+  * The `List` component receives a `props` object. We use destructuring assignment to assign `users` to its own variable.
+
+    ```js
+    export default function List({ users }) {
+    ```
+
+  * Passing `props` to the component allows us to use that data inside the return method.
+
+  * 🔑 The `users` array is being passed to the `List` component as a **prop**:
+
+    ```js
+    {users.map((user) => (
+      <li className="list-group-item" key={user.login.uuid}>
+        {`${user.name.first} ${user.name.last} (${user.login.username})`}
+      </li>
+    ))}
+    ```
+
+  * 🔑 The `map()` method is very similar to a `forEach` loop. The key difference is that `map()` doesn't actually mutate the original data. Instead, it makes a copy of the data and returns a new array.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ If a prop inside the component isn't what we expect it to be, where could we look to find out why?
+  * ☝️ What are the benefits of using the `map()` method to render data inside a React component?
 
-  * 🙋 We would look at the parent component to see what kind of data is being passed.
+  * 🙋 The `map()` method allows us to render more than one of the same kind of element with a few lines of code. This is at the core of what it means to have DRY (Don't Repeat Yourself) code. We also have the benefit of leaving the initial data untouched as a result of `map()` returning a new array to work with.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Props/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Component/README.md`.
 
-### 2. Student Do: Props (15 min) 
+### 2. Student Do: Components (15 min)
 
-* Direct students to the activity instructions found in `10-Stu_Props/README.md`.
+* Direct students to the activity instructions found in `10-Stu_Component/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-   ```md
-   # 🏗️ Pass Data Using Props 
+  ```md
+  # 📖 Implement Map() Inside a Component
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Before you begin this activity, complete the following steps:
+  Before you begin this activity, complete the following steps:
 
-   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-   2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
 
-   3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+  3. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-      `import 'bootstrap/dist/css/bootstrap.min.css'`
+    `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-   ## Activity
+  ## Activity
 
-   Work with a partner to implement the following user story:
+  Work with a partner to implement the following user story:
 
-   * As a developer, I want to render multiple cards for different animals by passing props to each one.
+  * As a developer, I want to be able to map over a list of data and render components for each piece of data.
 
-   ## Acceptance Criteria
+  ## Acceptance Criteria
 
-   * It's done when I have updated the return method in `src/components/Display.js` to render a `Card` for each dog.
+  * It's done when I have modified the `List` component so that inside its `ul` tags, one `li` tag renders for each item in the array of grocery objects being passed via props.
 
-   * It's done when I have passed data for each dog's `name` and `description` as props to the `Card`.
+  * It's done when each `li` tag displays the `text` property of each grocery object using the `map()` method.
 
-   * It's done when I have added a unique `key` property to each `Card` that gets rendered.  
+  ## 📝 Notes
 
-   ## 💡 Hints
+  Refer to the documentation:
 
-   * How can we use the [React Docs on components and props](https://facebook.github.io/react/docs/components-and-props.html) to understand props better?
+  * [React Docs on lists and keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 
-   * What is the term **props** short for?
+  * [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-   ## 🏆 Bonus
+  ## 💡 Hints
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  We only need to modify one file for the activity. Which one is it?
 
-   * How could we use the [style tag](https://facebook.github.io/react/docs/dom-elements.html#style) to add additional style to React components?
+  ## 🏆 Bonus
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  * How could we render a list of only the groceries that have NOT been purchased? Could we use the [filter() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to help us with this?
 
-### 3. Instructor Review: Props (10 min) 
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 3. Instructor Review: Components (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with props? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with mapping over data inside React components? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Props
+  * ✔️ `map()`
 
-  * ✔️ Unidirectional data flow
+  * ✔️ Key
+
+  * ✔️ Immutability
 
 * Open `00-practice-app/src/index.js` in your IDE and explain the following:
 
-  * First we need to open the `index.js` file and import Bootstrap to style the cards:
+  * The assignment was to modify the `List` component so that inside its `ul`, one `li` tag renders for each item in the array of grocery objects being passed via props.
+
+  * First we need to add Bootstrap to the `index.js` file to take advantage of some style classes:
+
+    ```js
+    import 'bootstrap/dist/css/bootstrap.min.css'
+    ```
+
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
+
+  *  Next, if we open the `App.js` file, we can see that we are passing the list of groceries to the `List` component as a prop. `List` is a child component of `App`:
+
+    ```js
+    function App() {
+      return <List groceries={groceries} />;
+    }
+    ```
+
+* Open `00-practice-app/src/components/List.js` in your IDE and explain the following:
+
+  * Now let's look at the `List` component. This file is where we used `map()` to iterate over each grocery item and return a new array of `li` tags for each item.
+
+  * 🔑 When creating a collection of JSX elements using the `map()` method, we must provide a unique `key` attribute to the parent element that gets returned -- usually something specific to the data that you are working with, like an id. This `key` attribute allows React to track changes to the virtual DOM and select specific elements properly.
+
+  * We write JavaScript inside JSX by using curly braces (`{}`):
+
+    ```js
+    return (
+      <ul className="list-group">
+        {props.groceries.map(item => (
+          <li className="list-group-item" key={item.id}>
+            {item.name}
+          </li>
+        ))}
+      </ul>
+    );
+    ```
+
+  * 🔑 Notice that `map()` returns an array of `li` items. Whenever we try to render an array that contains JSX, React knows to render each JSX element separately.
+
+  * Let's imagine that the user wanted to render a list of items that had not been purchased yet. We could do that using the `filter()` method:
 
      ```js
-     import React from 'react';
-     import ReactDOM from 'react-dom';
-     import App from './App';
-     import 'bootstrap/dist/css/bootstrap.min.css';
+     function List(props) {
+       const notPurchased = props.groceries.filter(grocery => !grocery.purchased);
 
-     ReactDOM.render(<App />, document.getElementById('root'));
-     ```
-
-* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
-  
-  * The first thing we notice is that we are importing another component called `Card` at the top of the file. We will look more closely at this component later in the activity.
-
-  * Inside the `Display` component, we have an array of objects called `canines`. Each object within that array contains the `name` and `description` of dogs:
-
-     ```js
-     import React from 'react';
-     import Card from './Card';
-
-     const canines = [
-       {
-         name: 'Spot',
-         description: 'The best boy',
-         id: 1,
-       },
-       {
-         name: 'Zero',
-         description: 'A kind soul',
-         id: 2,
-       },
-       {
-         name: 'Walter',
-         description: 'Friend for life',
-         id: 3,
-       },
-     ];
-     ```
-
-* Open `00-practice-app/src/components/Card.js` in your IDE and explain the following:
-
-  * The `Card` component imports React at the top of the file:
-
-     ```js
-     import React from 'react';
-     ```
-
-  * We pass the props argument to the `Card` component so that we can reference the data passed from the parent:
-
-     ```js
-     export default function Card(props) {
-     ```
-
-  * In the return statement for the card, we take the `name` and `description` that were passed as props and render them in the Bootstrap card:
-
-     ```jsx
-     return (
-       <div>
-         <div className="card" style={cardStyle}>
-           <img
-             className="card-img-top"
-             src={`http://placecorgi.com/${randomWidth()}`}
-             alt="Card cap"
-           />
-           <div className="card-body">
-             <h5 className="card-title">{props.name}</h5>
-             <p className="card-text">{props.description}</p>
-             <a href="#" className="btn btn-primary">
-               Adopt {props.name}
-             </a>
-           </div>
-         </div>
-       </div>
-     );
-     ```
-
-* Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
-
-  * Now that we've looked at the `Card` component and what it does, let's check what is happening in the return statement for `Display`.
-  
-  * First map through each of the animals and return a new `Card` component for each dog.
-  
-  * Each card is made unique to that dog by the props that we pass to it -- specifically, the `name` and `description` props.
-  
-  * 🔑 It is important to provide a unique `key` attribute when mapping through lists like this one. It helps React distinguish one element from another:
-
-     ```js
-     export default function Display() {
        return (
-         <div>
-           {canines.map((dog) => (
-             <Card name={dog.name} description={dog.description} key={dog.id} />
+         <ul className="list-group">
+           {notPurchased.map(item => (
+             <li className="list-group-item" key={item.id}>
+               {item.name}
+             </li>
            ))}
-         </div>
+         </ul>
        );
      }
      ```
 
+  * With the `notPurchased` variable, we are setting it to an array of groceries where the `purchased` property is `false`, and mapping through that instead.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are some different ways that we can pass props to a child component?
+  * ☝️ Why can't we use something like `forEach` to render an array with React?
 
-  * 🙋 We can pass props to the child component by passing a `props` object as an argument, or we can use object destructuring assignment.
+  * 🙋 React requires a return value, and `forEach` doesn't return anything. It simply iterates over elements in an array. The `map()` method, however, returns a new array of elements and leaves the original array intact.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [React Docs on props](https://reactjs.org/docs/components-and-props.html), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -308,13 +344,13 @@ In this lesson, you'll review some important React concepts with students to hel
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝ What is state within the context of a React application?
-  
+
   * 🙋 **State** is an object that contains property values that belong to a component.
-  
+
   * ☝ What is a React Hook?
-  
+
   * 🙋 **Hooks** are a new addition to React that let us use state and other React features without writing an ES6 class.
-  
+
 * Explain that in the beginning, managing the internal state of a component could only be accomplished by creating a class-based component and using a method called `this.setState()`.
 
 * Explain to students that now, with React Hooks, we can manage state in functional components and also replicate the lifecycle methods that were previously only possible in class-based components.
@@ -329,18 +365,18 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Prepare students for the fact that these topics can get abstract, and encourage them to ask questions as they arise. React Hooks can be a little confusing at first, but most developers appreciate their elegance once they become familiar with them.
 
-### 5. Instructor Demo: State (5 min) 
+### 5. Instructor Demo: State (5 min)
 
 * Start by deleting the `00-practice-app/src` directory and replacing it with `11-Ins_State/src`.
 
 * In the command line, run `npm start` inside the `00-practice-app` directory and demonstrate the following:
 
   * When we run the React application, the browser loads a page with a greeting that says, "React state is awesome!"
-  
+
   * Instead of being hardcoded, this greeting is actually being rendered from a value that is stored in state.
-  
+
   * 🔑 The **state** of a component is an object that holds some information that might change over the life of a component. You will often hear this term used in conjunction with **props**, which we will cover shortly.
-  
+
   * This app takes advantage of a React Hook called `useState`, which lets you add React state to functional components.
 
 * Open `00-practice-app/src/components/Greeting.js` in your IDE and demonstrate the following:
@@ -352,13 +388,13 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * We first declare the **state variable** called `greeting` by calling the `useState` Hook.
-  
+
   * `useState` is a way to preserve some values between the function calls. React will remember the value of `greeting` in between re-renders.
-  
+
   * The `useState` Hook will return the current state and a function to update it, which in this case is called `setGreeting`.
-  
+
   * The only argument that `useState` accepts is the initial value of the state variable. In this case, we are starting the `greeting` at `Welcome! React state is awesome!`:
-  
+
      ```js
      const [greeting, setGreeting] = useState('Welcome! React state is awesome!');
      ```
@@ -385,66 +421,68 @@ In this lesson, you'll review some important React concepts with students to hel
   * ☝️ What is returned from the `useState` Hook?
 
   * 🙋 The `useState` Hook returns the state and a function to update it.
-  
+
   * ☝️ What role does state play in reloading the UI of your React application?
-  
+
   * 🙋 We can use state to associate data with the components and keep track of any values that cause the UI to update.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_State/README.md`.
 
-### 6. Student Do: State (15 min) 
+### 6. Student Do: State (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_State/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
-   ```md
-   # 🐛 Non-Functional Increment and Decrement Buttons
+  ```md
+  # 🐛 Hardcoded Values in JSX
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Before you begin this activity, complete the following steps:
+  Before you begin this activity, complete the following steps:
 
-   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-   2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/src/) and paste it into [00-practice-app](../00-practice-app/).
 
-   3. Import Bootstrap into the [index.js](./Unsolved/src/index.js) file:
-      
-     `import 'bootstrap/dist/css/bootstrap.min.css'`
+  3. Import Bootstrap into the [index.js](./Unsolved/src/index.js) file:
 
-   ## Activity
+      `import 'bootstrap/dist/css/bootstrap.min.css'`
 
-   Work with a partner to resolve the following issue:
+  ## Activity
 
-   * As a user, I want to be able to welcome some students to class by displaying their names in an unordered list on the page. I also want to display a welcome message.
+  Work with a partner to resolve the following issue:
 
-   ## Expected Behavior
+  * As a user, I want to be able to welcome some students to class by displaying their names in an unordered list on the page along with a welcome message.
 
-   Loading the page will show a greeting message and a list of students from the class in an unordered list. These values should be declared as state variables using the `useState` Hook and accessed inside the JSX with curly braces.
+  * As a developer, I want to use state variables using the `useState` hook and access those variables inside the JSX.
 
-   ## Actual Behavior
+  ## Expected Behavior
 
-   The page seems to have hardcoded values inside the JSX for the greeting and student names.
+  Loading the page will show a greeting message and a list of students from the class in an unordered list. These values should be declared as state variables using the `useState` Hook and accessed inside the JSX with curly braces.
 
-   ## 💡 Hints
+  ## Actual Behavior
 
-   What do we need to import to use the `useState` Hook?
+  The page seems to have hardcoded values inside the JSX for the greeting and student names.
 
-   ## 🏆 Bonus
+  ## 💡 Hints
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  * What do we need to import in order to use the `useState` Hook?
 
-   * What other Hooks can we use with React?
+  ## 🏆 Bonus
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are some other Hooks that we can use with React?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: State (10 min) 
+### 7. Instructor Review: State (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -536,7 +574,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Event Handling (5 min) 
+### 8. Instructor Demo: Event Handling (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `13-Ins_Event-Handling/src/`.
 
@@ -551,7 +589,7 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * We can see that we create a state variable for `count` and a function called `setCount()` to update it.
-  
+
   * We set the initial value of `count` to 0:
 
      ```js
@@ -559,7 +597,7 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * In the `Counter` component, we will declare a method, `setCount()`, that will be used later in the code. This function will be called when a user clicks on the increment button.
-  
+
   * 🔑 Notice that we did not update the `count` variable directly. When dealing with class-based components, we always use `setCount` to update state and allow React to become aware of the change:
 
      ```js
@@ -595,7 +633,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
-### 9. Student Do: Event Handling (15 min) 
+### 9. Student Do: Event Handling (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_Event-Handling/README.md`.
 
@@ -622,7 +660,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    [React Docs on handling events](https://reactjs.org/docs/handling-events.html)
 
@@ -639,7 +677,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Event Handling (10 min) 
+### 10. Instructor Review: Event Handling (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -718,7 +756,7 @@ In this lesson, you'll review some important React concepts with students to hel
 * Open `00-practice-app/src/components/CardBody.js` in your IDE and explain the following:
 
   * In `CardBody.js`, we are creating a functional component called `CardBody` that accepts props. `CardBody` will be a child component of `Counter`.
-  
+
   * If we were to run `console.log(props)` at the beginning of the component, we would see an object with `count`, `handleIncrement()`, and `handleDecrement()`:
 
      ```js
@@ -797,11 +835,11 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * This time can be utilized for reviewing key topics learned so far in this unit.
 
-* If the students are struggling with React, use this time to review the concepts that they need the most help with. Take time to review the activities more in depth. 
+* If the students are struggling with React, use this time to review the concepts that they need the most help with. Take time to review the activities more in depth.
 
 ### 12. BREAK (30 mins)
 
-### 13. Instructor Demo: React Forms (5 min) 
+### 13. Instructor Demo: React Forms (5 min)
 
 * Begin by deleting the `00-practice-app/src` directory and replacing it with `15-Ins_React-Forms/src`.
 
@@ -812,11 +850,11 @@ In this lesson, you'll review some important React concepts with students to hel
   * 🔑 When we type a first and last name, the page updates display the username that was entered.
 
   * 🔑 When we press Enter, we receive an alert that greets us with the name we provided.
-  
+
 * Open `00-practice-app/src/components/Form/index.js` in your IDE and explain the following:
-  
+
   * Note that the component is no longer a single file in the components directory. In larger React applications, it is common to create nested folders for each component in case the component has its own dependencies, like a CSS file.
-  
+
   * The first thing that we import in the `index.js` file of the `Form` component is a `style.css` file that is in the same directory. This file contains a few classes that apply only to the `Form` component.
 
     ```js
@@ -825,7 +863,7 @@ In this lesson, you'll review some important React concepts with students to hel
     ```
 
   * If we look at the `input` elements in the return method, we can see that there are some props attached to them.
-  
+
   * We are passing the state variables `firstName` and `lastName`. Additionally, we have two `onChange` attributes, which are set to `handleInputChange`:
 
     ```js
@@ -858,7 +896,7 @@ In this lesson, you'll review some important React concepts with students to hel
     ```
 
   * At the top of the component, we initialize the state variables by using the `useState` Hook. We set both `firstName` and `lastName` to an empty string as the initial value for both variables:
-  
+
      ```js
      const [firstName, setFirstName] = useState('');
      const [lastName, setLastName] = useState('');
@@ -884,9 +922,9 @@ In this lesson, you'll review some important React concepts with students to hel
     ```
 
   * The event listener that is attached to these input elements is called `handleInputChange()`. It is responsible for updating state when the user types something in the text field.
-  
+
   * Notice that we accept the event as an argument. We assign `name` and `value` to their own variables from the `e.target` object.
-  
+
   * Next, we create a ternary statement that will set the `firstName` or `lastName` depending on the `name` attribute of the input element:
 
     ```js
@@ -898,7 +936,7 @@ In this lesson, you'll review some important React concepts with students to hel
     ```
 
   * When working with React forms, it typically is not sufficient to only handle events concerning input changes. We should also consider button clicks, such as the user clicking "submit" in this case.
-  
+
   * To handle this logic, we created another handler called `handleFormSubmit()`. This method accepts the event as an argument, prevents the page from refreshing, sends an alert to the user, and finally clears the input after the user clicks "submit":
 
     ```js
@@ -929,7 +967,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_React-Forms/README.md`.
 
-### 14. Student Do: React Forms (15 min) 
+### 14. Student Do: React Forms (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_React-Forms/README.md`.
 
@@ -951,7 +989,7 @@ In this lesson, you'll review some important React concepts with students to hel
   Work with a partner to implement the following user story:
 
   * As a developer, I want to prevent empty input for the email and username fields of a form.
-    
+
   * As a developer, I want to improve the user experience by automatically clearing the input fields after the user clicks submit.
 
   * As a developer, I want to make the application more robust by adding a password input field.
@@ -983,7 +1021,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: React Forms (10 min) 
+### 15. Instructor Review: React Forms (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1015,9 +1053,9 @@ In this lesson, you'll review some important React concepts with students to hel
        const [password, setPassword] = useState('');
        const [errorMessage, setErrorMessage] = useState('');
      ```
-  
+
   * If we look at the return method, we have another form, but this time we also have a `password` input. Notice how each input has a `value`, `name`, and `onChange` prop.
-  
+
   * 🔑 When dealing with passwords, remember to set the input type to `password` instead of `text`, which tells the browser to hide the user's input as they type it:
 
      ```js
@@ -1054,7 +1092,7 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * The `onChange` attribute for each of these input fields is responsible for calling the `handleInputChange()` whenever the user enters anything.
-  
+
   * First we check the `name` attribute of each element and, depending on its value, update the corresponding state variable:
 
      ```js
@@ -1074,13 +1112,13 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * When it comes time for the user to actually submit the form, we have an event for that. It is attached to the `onSubmit` attribute of the form, which then calls `handleFormSubmit()`.
-  
+
   * In the logic, we check whether the `email` is invalid or `userName` is empty. If so, we set an error message and return out of the code block.
-  
+
   * We do the same with the password. If `password` is not valid, set an error message and return out of the code block.
 
   * In the event that everything checks out, we send an alert to the user and set the state variables back to empty strings:
-  
+
      ```js
      const handleFormSubmit = (e) => {
        e.preventDefault();
@@ -1126,418 +1164,24 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Fetching Data (5 min) 
+### 16. Instructor Demo: useEffect Hook (5 min)
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
-
-* Open `00-practice-app/src/components` in your IDE.
-
-* Run `npm start` from the command line and demonstrate the following:
-
-  * 🔑 When we start the application, we see a series of cat-related images.
-
-  * 🔑 When the component mounts, a request for cats is sent to the Giphy API and the results are displayed on the page.
-  
-* Open `00-practice-app/src/components/SearchResultContainer.js` in your IDE and demonstrate the following:
-  
-  * Immediately, you will notice that this component looks different than the functional components we have been working with. That's because this is a **class-based component**, which uses ES6 class syntax and stores state in an object instead of using Hooks.
-  
-  * 🔑 It is not extremely important to know how to write class-based components, because we now have React Hooks, but it is beneficial to at least be aware of their existence and how they work.
-
-  * With class-based components, we can use something called **lifecycle methods**. The one we will use here is called `componentDidMount`. This method takes a callback that will run every time the component is mounted.
-
-  * The `SearchResultContainer` component contains and renders the `ResultList` component:
-
-     ```js
-     import React, { Component } from "react";
-     import ResultList from "./ResultList";
-     import API from "../utils/API";
- 
-     render() {
-       return (
-         <div>
-           <ResultList results={this.state.results} />
-         </div>
-       );
-     }
-     ```
-  
-  * Notice that `SearchResultContainer` is the only stateful component in this application. The parent component contains all the data and functionality that the children will need and passes them down as props.
-  
-  * This pattern helps us build components with little to no coupling that can easily be reused in different parts of the app or even across applications. For example, we could create a `<SearchForm />` component that passes state props the same way:
-
-    ```jsx
-    <SearchForm
-      search={this.state.search}
-      handleFormSubmit={this.handleFormSubmit}
-      handleInputChange={this.handleInputChange}
-    />
-    <ResultList results={this.state.results} />
-    ```
-  
-  * The state object contains an empty array called `results`:
-
-    ```js
-    state = {
-      search: '',
-      results: [],
-    };
-    ```
-
-  * The component can perform a search after it mounts by using the React lifecycle method `componentDidMount()`. This method is built in to React and will automatically run after the component is rendered for the first time.
-
-  * Inside the `componentDidMount()` method, we invoke another method, `searchGiphy()`, that performs the API request, passing in the search term of `"kittens"`:
-  
-    ```js
-    componentDidMount() {
-      this.searchGiphy("kittens");
-    }
-    ```
-
-  * The `API.search()` method, which is imported from `/utils`, takes the response from the GET request and sets it to the value of `results` in state.
-  
-  * Instead of using something like `setResults()` with React Hooks, we use `this.setState()` by passing in the updated object that we want to set:
-
-    ```js
-    searchGiphy = (query) => {
-      search(query)
-        .then((res) => this.setState({ results: res.data.data }))
-        .catch((err) => console.log(err));
-    };
-    ```
-
-* Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
-  
-  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
-  
-  * Inside our `API.js` file, we import two environmental variables that will help us keep our API key secure, but also allow us to form the request URL for our GET request:
-
-    ```js
-    import axios from 'axios';
-
-    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
-
-    const search = (query) =>
-      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
-
-    export default search;
-    ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What is Axios? Can it be compared to another piece of technology that we've used on the front end?
-
-  * 🙋 Axios is an npm package that performs AJAX requests and returns the results. It is similar to the functionality in the browser's `fetch()` method.
-  
-  * ☝️ What does `componentDidMount()` do?
-
-  * 🙋 `componentDidMount()` is a React lifecycle method that will run a callback whenever the component is loaded. In this case, we used it to invoke an API request.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
-
-### 17. Student Do: Fetching Data (15 min) 
-
-* Direct students to the activity instructions found in `/18-Stu_Fetching-Data/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-   ```md
-   # 🐛 Information from the OMDB API Does Not Display
-
-   ## Before We Begin
-
-   Before you begin this activity, complete the following steps:
-
-    1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
-
-    2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
-
-    3. Rename the `.env.example` file to `.env`.
-
-    4. To make API requests, we need to use Axios. Make sure that it's installed by running `npm i axios`.
-
-    5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
-
-     `import 'bootstrap/dist/css/bootstrap.min.css'`
-   
-   ## Activity
-
-   Work with a partner to resolve the following issue:
-
-   * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
-
-   ## Expected Behavior
-  
-   * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
-
-   * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
-
-   * When the user enters a search term and clicks submit, the results for the search should display on the left side of the page.
-
-   ## Actual Behavior
-
-   * When a user searches for a movie, they find out that they cannot enter any text into the search field. 
-
-   * Additionally, the search button doesn't seem to do anything in its current state. 
-
-   ## 💡 Hints
-
-   * Why might we need to use `event.preventDefault()` in event handlers?
-
-   * Only one file needs to be modified for this activity. Which file is it?
-
-   ## 🏆 Bonus
-
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-   * How could we show a loading element before the search results are displayed? What React feature allows for this kind of behavior?
-
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 18. Instructor Review: Fetching Data (10 min) 
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ How comfortable do you feel with making API requests in React? (Poll via Fist to Five, Slack, or Zoom)
-
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
-
-* Use the prompts and talking points (🔑) below to review the following key points:
-
-  * ✔️ Axios
-
-  * ✔️ `API.js`
-  
-* Ensure that `axios` is added as a dependency:
-
-   ```sh
-   npm i axios
-   ```
-
-* Open `00-practice-app/src/App.js` in your IDE and explain the following:
-
-  * In `App.js`, we are importing and returning another component called `OmdbContainer`:
-
-     ```js
-     import React from "react";
-     import OmdbContainer from "./components/OmdbContainer";
-
-     function App() {
-       return <OmdbContainer />;
-     }
-
-     export default App;
-     ```
-
-* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
-
-  * This component contains the state and most of the methods that we will pass down to child components.
-  
-  * The state has a `result` property, which is set to an empty object initially, and a `search` property, where we will store the search term that the user enters. Initially, it is set to an empty string:
-
-     ```js
-     state = {
-       result: {},
-       search: ""
-     };
-     ```
-
-  * The first thing we need to add is a `componentDidMount()` method to the component. This lifecycle method runs after the component mounts, and uses the `this.searchMovies()` method to make an API request to OMDB for the movie "The Matrix":
-
-     ```js
-     componentDidMount() {
-       this.searchMovies("The Matrix");
-     }
-     ```
-
-  * The `this.searchMovies()` method gets called inside `componentDidMount()`. This method uses the `API` module to make a GET request by using `axios`. The result is then saved to the state object using `this.setState()`:
-
-     ```js
-     searchMovies = query => {
-       API.search(query)
-         .then(res => this.setState({ result: res.data }))
-         .catch(err => console.log(err));
-     };
-     ```
-
-* Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
-
-  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
-
-  * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
-
-    ```js
-    import axios from 'axios';
-
-    const BASEURL = process.env.REACT_APP_BASEURL;
-    const APIKEY = process.env.REACT_APP_APIKEY;
-
-    export default {
-      search(query) {
-        return axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
-      },
-    };
-    ```
-
-* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
-
-  * To have the `this.state.search` variable updated with the current search term, we needed to create a `handleInputChange` method.
-  
-  * The `handleInputChange()` method gets called every time the user types in the input field. Without this method, the user is not able to type in the input field.
-
-     ```js
-     handleInputChange = event => {
-       const value = event.target.value;
-       const name = event.target.name;
-       this.setState({
-         [name]: value
-       });
-     };
-     ```
-
-  * Inside the `this.setState()` method, we are passing an object that has a key of `[name]` and a value of `value`.
-  
-  * We put `[name]` in brackets because we are using a **computed property name**, which is another way to set the key of an object without knowing ahead of time what it should be called. This makes the code more reusable and resilient to change. We could in theory use this `handleInputChange()` method for different input elements than the current search field.
-
-    ```js
-      this.setState({
-        [name]: value
-      });
-    ```
-
-  * The `handleInputChange()` method is then passed down to the `SearchForm` component as a prop of the same name, `handleInputChange()`:
-
-     ```jsx
-     <Card heading="Search">
-       <SearchForm
-         value={this.state.search}
-         handleInputChange={this.handleInputChange}
-         handleFormSubmit={this.handleFormSubmit}
-       />
-     </Card>
-     ```
-
-  * To get the movie search working, we need to create a `handleFormSubmit()` method that will be invoked whenever the user clicks submit to search for a movie.
-
-  * Much like the `componentDidMount()` method, here we are making use of the `this.searchMovies()` method. Remember that this method imports functionality from `API.js` to perform the actual API request.
-  
-  * We use the value of `this.state.search` as the search term. The state variable, `result`, is then updated with the data that we get back from the OMDB API.
-
-  * Notice that we use `event.preventDefault()` to stop the default browser behavior of refreshing the page when the submit button is clicked:
-
-     ```js
-     handleFormSubmit = event => {
-       event.preventDefault();
-       this.searchMovies(this.state.search);
-     };
-     ```
-
-  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
-
-     ```jsx
-     <SearchForm
-       value={this.state.search}
-       handleInputChange={this.handleInputChange}
-       handleFormSubmit={this.handleFormSubmit}
-     />
-     ```
-
-  * Finally, after the search has been preformed and the `this.state.result` variable has been updated with the results from the OMDB API request, we can display that data in the component:
-
-     ```js
-     render() {
-       return (
-         <Container>
-           <Row>
-             <Col size="md-8">
-               <Card
-                 heading={this.state.result.Title || "Search for a Movie to Begin"}
-               >
-                 {this.state.result.Title ? (
-                   <MovieDetail
-                     title={this.state.result.Title}
-                     src={this.state.result.Poster}
-                     director={this.state.result.Director}
-                     genre={this.state.result.Genre}
-                     released={this.state.result.Released}
-                   />
-                 ) : (
-                   <h3>No Results to Display</h3>
-                 )}
-               </Card>
-             </Col>
-             <Col size="md-4">
-               <Card heading="Search">
-                 <SearchForm
-                   value={this.state.search}
-                   handleInputChange={this.handleInputChange}
-                   handleFormSubmit={this.handleFormSubmit}
-                 />
-               </Card>
-             </Col>
-           </Row>
-         </Container>
-       );
-     }
-     ```
-
-  * The JSX is using a ternary operator, which acts like an `if` statement. We first check whether `this.state.result` has a `Title` property, which would mean that a movie was found in the API request.
-  
-  * If we have a movie result, we display a `MovieDetail` component by passing down the result data as props. Otherwise, we display an `h3` saying that there are no results:
-
-     ```js
-     {this.state.result.Title ? (
-       <MovieDetail
-         title={this.state.result.Title}
-         src={this.state.result.Poster}
-         director={this.state.result.Director}
-         genre={this.state.result.Genre}
-         released={this.state.result.Released}
-       />
-     ) : (
-       <h3>No Results to Display</h3>
-     )}
-     ```
-
-* Ask the class the following questions (☝️) and call on students for the answers (🙋):
-
-  * ☝️ What is one reason that a user might not be able to type in a input field inside a React app?
-
-  * 🙋 The search field needs an `onChange` handler to update state when the user types something.
-
-  * ☝️ What are some of the use cases for lifecycle methods such as `componentDidMount()`?
-
-  * 🙋 The lifecycle methods help us run code after specific events, such as the component updating, mounting, or unmounting.
-
-  * ☝️ What can we do if we don't completely understand this?
-
-  * 🙋 We can refer to supplemental material, read the [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html), and stay for office hours to ask for help.
-
-* Answer any questions before proceeding to the next activity.
-
-### 19. Instructor Demo: useEffect Hook (5 min) 
-
-* Being by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Hooks-useEffect/src`.
+* Being by deleting the `00-practice-app/src` directory and replacing it with `17-Ins_Hooks-useEffect/src`.
 
 * Run `npm start` from the command line and demonstrate the following:
 
   * When we run the React app and the browser opens, there is a button that increments the count displayed on the screen.
 
   * Also, the page is notifying us that the browser's local storage is being updated.
-  
+
   * This functionality is using a React Hook called `useEffect`. This Hook is used in a very similar fashion to React lifecycle methods like `componentDidUpdate()`.
 
 * Open `00-practice-app/src/components/Display.js` in your IDE and explain the following:
 
   * Inside the `Display` component, we can see right away that this is a functional component and not a class-based component.
-  
+
   * 🔑 React Hooks can only be used with functional components.
-  
+
   * First, we need to import `useEffect` in the React import statement, along with `useState`:
 
      ```js
@@ -1551,11 +1195,11 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * The `useEffect` Hook comes into play when we want some code to run after the state is updated. For example, if the `count` is changed from `1` to `2`, we want to do something.
-  
+
   * In this example, we are setting a `localStorage` variable called `myCount` with the same count that's in the state.
-  
+
   * 🔑 The `setItem()` method updates `localStorage` and accepts the key name and value:
-  
+
      ```js
      useEffect(() => localStorage.setItem('myCount', count));
      ```
@@ -1607,11 +1251,11 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Hooks-useEffect/README.md`.
 
-### 20. Student Do: useEffect Hook (15 min) 
+### 17. Student Do: useEffect Hook (15 min)
 
-* Direct students to the activity instructions found in `20-Stu_Hooks-useEffect/README.md`.
+* Direct students to the activity instructions found in `18-Stu_Hooks-useEffect/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -1625,7 +1269,7 @@ In this lesson, you'll review some important React concepts with students to hel
    1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
    2. Copy the `/src` folder from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
-   
+
    ## Activity
 
    Work with a partner to implement the following user story:
@@ -1642,7 +1286,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    [React Docs on the Effect Hook](https://reactjs.org/docs/hooks-effect.html)
 
@@ -1655,9 +1299,9 @@ In this lesson, you'll review some important React concepts with students to hel
    Use [Google](https://www.google.com) or another search engine to research this.
    ```
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: useEffect Hook (10 min) 
+### 18. Instructor Review: useEffect Hook (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1676,13 +1320,13 @@ In this lesson, you'll review some important React concepts with students to hel
 * Open `00-practice-app/src/components/Thermostat.js` in your IDE and explain the following:
 
   * This application updates the `document.title` every time the user clicks one of the buttons to raise or lower the temperature.
-  
+
   * This is accomplished by using the `useEffect` Hook, which we imported with React:
 
      ```js
      import React, { useState, useEffect } from 'react';
      ```
-  
+
   * We start by creating a `temp` variable and `setTemp` as a function to update it. We also set an initial value of `75`:
 
      ```js
@@ -1690,7 +1334,7 @@ In this lesson, you'll review some important React concepts with students to hel
      ```
 
   * Next, we create a `useEffect` Hook that will update the `document.title` as a side effect whenever the state is changed:
-  
+
      ```js
      useEffect(() => {
        document.title = `${temp}° Fahrenheit`;
@@ -1725,7 +1369,7 @@ In this lesson, you'll review some important React concepts with students to hel
        setTemp(temp - 1);
      };
      ```
-  
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What would happen if we provided an empty array as the second argument to the `useEffect` Hook?
@@ -1736,7 +1380,356 @@ In this lesson, you'll review some important React concepts with students to hel
 
   * 🙋 We can refer to supplemental material, read the [React Docs on useEffect](https://reactjs.org/docs/hooks-effect.html), and stay for office hours to ask for help.
 
-* Answer any questions before proceeding.
+* Answer any questions before ending the class.
+
+### 19. Instructor Demo: Fetching Data (5 min)
+
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
+
+* Open `00-practice-app/src/components` in your IDE.
+
+* Run `npm start` from the command line and demonstrate the following:
+
+  * 🔑 When we start the application, we see a series of cat-related images.
+
+  * 🔑 When the component mounts, a request for cats is sent to the Giphy API and the results are displayed on the page.
+
+* Open `00-practice-app/src/components/SearchResultContainer.js` in your IDE and demonstrate the following:
+
+  * 🔑 The `useEffect` Hook can also be used to fetch data from an API. This is useful for fetching data that is not immediately available, and very similar to the `componentDidMount` lifecycle method found in older class-based components.
+
+  * With `useEffect`, we can set it to run only once, by passing an empty array as the second argument. Optionally, if we wanted it to watch for changes we could pass in a state variable in that array. However, we will not be using this in this activity. Notice that we invoke the `useEffect` Hook inside our function component, as shown below:
+
+    ```js
+    useEffect(() => {
+      // code to run when the component loads
+    }, []);
+    ```
+
+  * The `SearchResultContainer` component contains and renders the `ResultList` component:
+
+    ```js
+    return (
+      <div>
+        {/* Pass our results to the ResultsList component to map over */}
+        <ResultList results={results} />
+      </div>
+    );
+    ```
+
+  * Notice that `SearchResultContainer` is the only stateful component in this application. This is what would be considered the parent component that passes down the state variable to its children.
+
+  * The component can perform a search after it loads by using the React `useEffect` hook. This method is built-in to React, but it does have to be imported.
+
+  * Inside the `useEffect()`, we invoke another method, `searchGiphy()`, that performs the API request, passing in the search term of `"kittens"`:
+
+    ```js
+    useEffect(() => {
+      searchGiphy('kittens');
+    }, []);
+    ```
+
+  * The `search()` method, which is imported from `/utils`, takes the response from the GET request and sets it to the value of `results`.
+
+  * You can see this method being using in the`searchGiphy()` method below:
+
+    ```js
+    const searchGiphy = async (query) => {
+      const response = await search(query);
+      setResults(response.data.data);
+    };
+    ```
+
+* Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
+
+  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
+
+  * Inside our `API.js` file, we import two environmental variables that will not only help us keep our API key secure, but also allow us to form the request URL for our GET request:
+
+    ```js
+    import axios from 'axios';
+
+    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
+
+    const search = (query) =>
+      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
+
+    export default search;
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is Axios? Can it be compared to another piece of technology that we've used on the front end?
+
+  * 🙋 Axios is an npm package that performs AJAX requests and returns the results. It is similar to the functionality in the browser's `fetch()` method.
+
+  * ☝️ How could we make our component refresh after every change to the search term?
+
+  * 🙋 We can use the `useEffect` Hook to perform the search whenever the search term changes by passing in the search term as the second argument.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Fetching-Data/README.md`.
+
+### 20. Student Do: Fetching Data (15 min)
+
+* Direct students to the activity instructions found in `20-Stu_Fetching-Data/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 Information from the OMDB API Does Not Display
+
+  ## Before We Begin
+
+  Before you begin this activity, complete the following steps:
+
+  1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
+
+  2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+
+  3. Rename the `.env.example` file to `.env`.
+
+  4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
+
+  5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+
+      ```js
+      import 'bootstrap/dist/css/bootstrap.min.css';
+      ```
+
+  ## Activity
+
+  Work with a partner to resolve the following issue:
+
+  * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
+
+  ## Expected Behavior
+
+  * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
+
+  * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
+
+  * When the user enters a search term and clicks submit, the results for the search should display on the left side of the page.
+
+  ## Actual Behavior
+
+  * When a user searches for a movie, they find out that they cannot enter any text into the search field.
+
+  * Additionally, the search button doesn't seem to do anything in its current state.
+
+  ## 💡 Hints
+
+  * Why might we need to use `event.preventDefault()` in event handlers?
+
+  * Only one file needs to be modified for this activity. Which file is it?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How could we show a loading element before the search results are displayed? What React feature allows for this kind of behavior?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 21. Instructor Review: Fetching Data (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with making API requests in React? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ Axios
+
+  * ✔️ `API.js`
+
+* Ensure that `axios` is added as a dependency:
+
+   ```sh
+   npm i axios
+   ```
+
+* Open `00-practice-app/src/App.js` in your IDE and explain the following:
+
+  * In `App.js`, we are importing and returning another component called `OmdbContainer`:
+
+     ```js
+     import React from "react";
+     import OmdbContainer from "./components/OmdbContainer";
+
+     function App() {
+       return <OmdbContainer />;
+     }
+
+     export default App;
+     ```
+
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
+
+  * This component contains the state and most of the methods that we will pass down to child components.
+
+  * First we create a result state variable using the `useState` hook that will be used to store the results of the API request. Additionally, we create another state variable called `search` that will store the search term that the user enters.
+
+    ```js
+    const [result, setResult] = useState({});
+    const [search, setSearch] = useState('');
+    ```
+
+  * When the component loads, we use the `searchMovies` method to render a default search term of The Matrix.
+
+  * 🔑  Notice that we pass an empty array as the second argument to `useEffect`. This is because we want to run the `searchMovies` method only once when the component loads.
+
+    ```js
+    useEffect(() => {
+      searchMovie('The Matrix');
+    }, []);
+    ```
+
+  * The `searchMovies()` method uses the `API` module to make a GET request by using `axios`. The result is then saved to the state object using `setResult()`:
+
+    ```js
+    const searchMovie = (query) =>
+      API.search(query)
+        .then((res) => setResult(res.data))
+        .catch((err) => console.log(err));
+      };
+    ```
+
+* Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
+
+  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
+
+  * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
+
+    ```js
+    import axios from 'axios';
+
+    const BASEURL = process.env.REACT_APP_BASEURL;
+    const APIKEY = process.env.REACT_APP_APIKEY;
+
+    const search = async (query) =>
+      axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
+
+    export default { search };
+    ```
+
+* Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
+
+  * To have the `search` variable updated with the current search term, we needed to create a `handleInputChange` method.
+
+  * The `handleInputChange()` method gets called every time the user types in the input field. Without this method, the user is not able to type in the input field.
+
+    ```js
+    const handleInputChange = (e) => setSearch(e.target.value);
+    ```
+
+  * The `handleInputChange()` method is then passed down to the `SearchForm` component as a prop of the same name, `handleInputChange()`:
+
+    ```jsx
+    <Card heading="Search">
+      <SearchForm
+        value={search}
+        handleInputChange={handleInputChange}
+        handleFormSubmit={handleFormSubmit}
+      />
+    </Card>
+    ```
+
+  * To get the movie search working, we need to create a `handleFormSubmit()` method that will be invoked whenever the user clicks submit to search for a movie.
+
+  * Notice that we use `event.preventDefault()` to stop the default browser behavior of refreshing the page when the submit button is clicked:
+
+    ```js
+    const handleFormSubmit = (e) => {
+      e.preventDefault();
+      searchMovie(search);
+    };
+    ```
+
+  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
+
+    ```js
+    <SearchForm
+      value={search}
+      handleInputChange={handleInputChange}
+      handleFormSubmit={handleFormSubmit}
+    />
+    ```
+
+  * Finally, after the `search` variable has been updated with the results from the OMDB API request, we can display that data in the component:
+
+    ```js
+    return (
+      <Container>
+        <Row>
+          <Col size="md-8">
+            <Card heading={Title || 'Search for a Movie to Begin'}>
+              {Title ? (
+                <MovieDetail
+                  title={Title}
+                  src={Poster}
+                  director={Director}
+                  genre={Genre}
+                  released={Released}
+                />
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Card>
+          </Col>
+          <Col size="md-4">
+            <Card heading="Search">
+              <SearchForm
+                value={search}
+                handleInputChange={handleInputChange}
+                handleFormSubmit={handleFormSubmit}
+              />
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    );
+    ```
+
+  * The JSX is using a ternary operator, which acts like an `if` statement. We first check whether `result` has a `Title` property, which would mean that a movie was found in the API request.
+
+  * If we have a movie result, we display a `MovieDetail` component by passing down the result data as props. Otherwise, we display an `h3` saying that there are no results:
+
+    ```js
+    {Title ? (
+      <MovieDetail
+        title={Title}
+        src={Poster}
+        director={Director}
+        genre={Genre}
+        released={Released}
+      />
+    ) : (
+      <h3>No Results to Display</h3>
+    )}
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is one reason that a user might not be able to type in a input field inside a React app?
+
+  * 🙋 The search field needs an `onChange` handler to update state when the user types something.
+
+  * ☝️ What are some of the use cases for `useEffect`?
+
+  * 🙋 The `useEffect` hook is used to run a piece of code on a specific condition.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Axios Docs](https://axios-http.com/docs/), or ask the instructor for help.
+
+* Answer any questions before ending the class.
 
 ### 22. FLEX (30 mins)
 

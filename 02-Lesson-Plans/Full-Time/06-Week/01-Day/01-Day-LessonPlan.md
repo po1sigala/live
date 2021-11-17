@@ -6,7 +6,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `01-Ins_Setup` through `10-Stu_Static-Assets`.
+* In this lesson, students will complete activities `01-Ins_Setup` through `14-Stu_POST-Requests`.
 
 * As class begins, remind students that they will need Insomnia for the majority of this unit. Post the link for the [Insomnia download page](https://insomnia.rest/download) in Slack and instruct students to download and install Insomnia if they have not yet done so.
 

@@ -1,8 +1,13 @@
 // Import useReducer
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 
 // Import type variables
-import { ADD_STUDENT, REMOVE_STUDENT } from '../utils/actions';
+import {
+  ADD_STUDENT,
+  REMOVE_STUDENT,
+  SET_STUDENT_NAME,
+  SET_STUDENT_MAJOR,
+} from '../utils/actions';
 
 // Import reducer from our utils folder
 import reducer from '../utils/reducers';
@@ -14,9 +19,6 @@ export default function StudentList() {
 
   // Initialize `useReducer` hook. Returns state and a dispatch function. Accepts arguments of our reducer and initial state
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const [newStudentName, setNewStudentName] = useState('');
-  const [newStudentMajor, setNewStudentMajor] = useState('');
 
   return (
     <div>
@@ -65,15 +67,19 @@ export default function StudentList() {
 
             <div className="add-student">
               <input
-                value={newStudentName}
-                onChange={(e) => setNewStudentName(e.target.value)}
+                value={state.studentName}
+                onChange={(e) =>
+                  dispatch({ type: SET_STUDENT_NAME, payload: e.target.value })
+                }
                 placeholder="New student name..."
                 type="text"
               />
 
               <select
-                onChange={(e) => setNewStudentMajor(e.target.value)}
-                value={newStudentMajor}
+                onChange={(e) =>
+                  dispatch({ type: SET_STUDENT_MAJOR, payload: e.target.value })
+                }
+                value={state.studentMajor}
               >
                 <option>Choose major...</option>
                 {/* Access our majors array from our state object returned from useReducer */}
@@ -90,7 +96,10 @@ export default function StudentList() {
                   console.log('🚀 StudentList.js: Dispatched add student! ');
                   return dispatch({
                     type: ADD_STUDENT,
-                    payload: { name: newStudentName, major: newStudentMajor },
+                    payload: {
+                      name: state.studentName,
+                      major: state.studentMajor,
+                    },
                   });
                 }}
               >

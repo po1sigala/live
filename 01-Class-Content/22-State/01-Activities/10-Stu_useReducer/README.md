@@ -18,7 +18,7 @@ Copy the `src` directory from the `Unsolved` folder into `00-practice-app` befor
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [React documentation on useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 

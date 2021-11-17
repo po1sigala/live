@@ -31,9 +31,14 @@ export const StudentProvider = ({ children }) => {
     'Engineering',
   ];
 
+  const studentMajor = '';
+  const studentName = '';
+
   // The value prop expects an initial state object
   return (
-    <StudentContext.Provider value={{ students, majors }}>
+    <StudentContext.Provider
+      value={{ students, majors, studentName, studentMajor }}
+    >
       {/* We render children in our component so that any descendent can access the value from the provider */}
       {children}
     </StudentContext.Provider>

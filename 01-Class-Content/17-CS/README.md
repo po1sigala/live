@@ -4,7 +4,7 @@
 
 In this unit, we will look at how computer science relates to JavaScript in order to prepare you for the technical interview portion of the job interview, which every developer eventually faces. Some of these topics may feel abstract and confusing at times, but remember&mdash;you've been using JavaScript for several months. Now we are simply taking a closer look at how JavaScript executes so we can better understand how our code interacts with its environment.
 
-In the first two lessons, we will dissect JavaScript in order to learn how our code executes at a granular level. We will also explore the fascinating behavior of closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design. 
+In the first two lessons, we will dissect JavaScript in order to learn how our code executes at a granular level. We will also explore the fascinating behavior of closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design.
 
 In the final lesson, we will review search algorithms and how recursion works in JavaScript. For the mini-project, you will practice a mock interview with your peers. This will give you an opportunity to learn about the technical interview portion of the web-developer job interview process. You'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
@@ -108,9 +108,9 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In the next unit, we will return to the back end and learn about NoSQL databases using MongoDB, a popular, document-based database that integrates easily with JavaScript. 
+In the next unit, we will return to the back end and learn about NoSQL databases using MongoDB, a popular, document-based database that integrates easily with JavaScript.
 
-Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally. 
+Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally.
 
 Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
 
