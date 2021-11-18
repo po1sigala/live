@@ -18,7 +18,7 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 * In the first activity of Unit 13, `01-Ins_Sequelize-Setup`, you will hardcode the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure that you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity. 
 
-* Instead of relying on a front end, all of the activities will use Insomnia Core to test the routes. Be sure to have it installed and ready for class.
+* Instead of relying on a front end, all of the activities will use Insomnia to test the routes. Be sure to have it installed and ready for class.
 
 * Unit 13 also introduces RESTful routes. Highlight the convention for students and tell them that they will revisit the pattern at a later point.
 

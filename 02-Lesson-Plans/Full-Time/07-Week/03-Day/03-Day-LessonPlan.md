@@ -75,7 +75,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Navigate to `28-Stu_Mini-Project/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following:
+* Run `npm start` from the command line and use Insomnia to demonstrate the following:
 
   * 🔑 When we perform a GET request to `/api/travellers/:id` (pick an `id`), we receive data for a traveller, along with the locations they plan on visiting and more information for that trip, as shown in the following example:
 
@@ -135,25 +135,25 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   ## Acceptance Criteria
 
-  * It's done when the GET route `/api/travellers` returns all traveller data without associated trips in Insomnia Core.
+  * It's done when the GET route `/api/travellers` returns all traveller data without associated trips in Insomnia.
 
-  * It's done when the POST route `/api/travellers` creates traveller data and returns a successful response in Insomnia Core.
+  * It's done when the POST route `/api/travellers` creates traveller data and returns a successful response in Insomnia.
 
-  * It's done when the GET route `/api/travellers/:id` returns a single traveller's data with their associated trips and a list of locations in Insomnia Core. 
+  * It's done when the GET route `/api/travellers/:id` returns a single traveller's data with their associated trips and a list of locations in Insomnia. 
 
-  * It's done when the DELETE route `/api/travellers/:id` removes a traveller and any trips associated with them and returns a successful response in Insomnia Core.
+  * It's done when the DELETE route `/api/travellers/:id` removes a traveller and any trips associated with them and returns a successful response in Insomnia.
 
-  * It's done when the GET route `/api/locations` returns all location data in Insomnia Core.
+  * It's done when the GET route `/api/locations` returns all location data in Insomnia.
 
-  * It's done when the POST route `/api/locations` creates location data and returns a successful response in Insomnia Core.
+  * It's done when the POST route `/api/locations` creates location data and returns a successful response in Insomnia.
 
-  * It's done when the GET route `/api/locations/:id` returns a single location's data, with its associated trips, in Insomnia Core. 
+  * It's done when the GET route `/api/locations/:id` returns a single location's data, with its associated trips, in Insomnia. 
 
-  * It's done when the DELETE route `/api/locations/:id` removes a location and any trips associated with it and returns a successful response in Insomnia Core.
+  * It's done when the DELETE route `/api/locations/:id` removes a location and any trips associated with it and returns a successful response in Insomnia.
 
   * It's done when the POST route `/api/trips` creates trip data between associated travellers and locations.
 
-  * It's done when the DELETE route `/api/trips/:id` removes a trip and returns a successful response in Insomnia Core.
+  * It's done when the DELETE route `/api/trips/:id` removes a trip and returns a successful response in Insomnia.
 
   * It's done when the API is successfully deployed to Heroku with a MySQL database.
 
@@ -347,7 +347,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Navigate to `02-Homework/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following:
+* Run `npm start` from the command line and use Insomnia to demonstrate the following:
 
   * We will build an e-commerce application back end that works with products, categories, and tags.
 

@@ -26,7 +26,7 @@ Work with a partner to resolve the following issues:
 
 1. Run `npm start` in your command line to start the server.
 
-2. Open Insomnia Core and make a GET request to `api/users/10`.
+2. Open Insomnia and make a GET request to `api/users/10`.
 
 3. The 200 status code is returned.
 

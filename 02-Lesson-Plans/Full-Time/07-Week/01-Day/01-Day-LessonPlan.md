@@ -12,7 +12,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 * The first activity, `01-Ins_Sequelize-Setup`, hardcodes the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Be sure to create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
-* Instead of relying on a front end, all of the activities use Insomnia Core to test the routes. Be sure to have it installed and set up for class.
+* Instead of relying on a front end, all of the activities use Insomnia to test the routes. Be sure to have it installed and set up for class.
 
 * Activities `05-Ins_Create` through `08-Stu_Update-Delete` include a `/seed` POST route to make it easier to populate the database with books. In activity `09-Ins_Async-Await`, we switch to using a proper seed script in the `seeds` directory.
 
@@ -160,7 +160,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 * Run `npm start` from the command line to start the server.
 
-* Open Insomnia Core and demonstrate the following:
+* Open Insomnia and demonstrate the following:
 
   * We can make a GET request to `http://localhost:3001/api/travellers` to see all travellers in the database.
 
@@ -627,7 +627,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 * Rename the `05-Ins_Create/.env.EXAMPLE` file to `.env` and fill in your credentials.
 
-* Navigate to `05-Ins_Create` and run `npm install` and `npm start` from the command line to demonstrate the following in Insomnia Core:
+* Navigate to `05-Ins_Create` and run `npm install` and `npm start` from the command line to demonstrate the following in Insomnia:
 
   * We can make a POST request to `http://localhost:3001/api/books/` to create a single book with the following JSON:
 
@@ -711,7 +711,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
   * ☝️ How can we test these methods as part of the Express.js routes?
 
-  * 🙋 Make POST requests with Insomnia Core.
+  * 🙋 Make POST requests with Insomnia.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -871,7 +871,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
   * 🔑 Navigate to `07-Ins_Update-Delete` and run `npm start` from the command line.
   
-  * 🔑 Make a PUT request to `localhost:3001/api/books/9780201896831` with the following JSON data as the body of the request in Insomnia Core: 
+  * 🔑 Make a PUT request to `localhost:3001/api/books/9780201896831` with the following JSON data as the body of the request in Insomnia: 
 
     ```json
     {
@@ -915,9 +915,9 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
     });
     ```
     
-  * 🔑 Open Insomnia Core and make a DELETE request to `localhost:3001/api/books/9780137043293`. This deletes the book by the isbn number.
+  * 🔑 Open Insomnia and make a DELETE request to `localhost:3001/api/books/9780137043293`. This deletes the book by the isbn number.
 
-  * 🔑 Make a GET request to `http://localhost:3001/api/books/` in Insomnia Core to show students that the book *Essential Scrum: A Practical Guide to the Most Popular Agile Process* was deleted.
+  * 🔑 Make a GET request to `http://localhost:3001/api/books/` in Insomnia to show students that the book *Essential Scrum: A Practical Guide to the Most Popular Agile Process* was deleted.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1107,7 +1107,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
  * 🔑 This makes the asynchronous code read and run more like synchronous code. We have the added benefit of not having to deal with long `then()` and `catch()` chains.
 
-* 🔑 Rename the `.env.EXAMPLE` file and fill in your credentials. Run `npm start` from the `09-Ins_Update-Delete` directory. Open Insomnia Core and show that all requests to `localhost:3001/api/books` still work.
+* 🔑 Rename the `.env.EXAMPLE` file and fill in your credentials. Run `npm start` from the `09-Ins_Update-Delete` directory. Open Insomnia and show that all requests to `localhost:3001/api/books` still work.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1307,9 +1307,9 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
   * We use HTTP status codes for the responses that are returned to us.
 
-* Run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* Run `npm start` from the command line and demonstrate the following in Insomnia: 
 
-  * 🔑 Before we look at the code, let's create a user in the database. We can do that by making a POST request to `localhost:3001/api/users/` and providing the following JSON data as the body of the request in Insomnia Core:
+  * 🔑 Before we look at the code, let's create a user in the database. We can do that by making a POST request to `localhost:3001/api/users/` and providing the following JSON data as the body of the request in Insomnia:
 
     ```json
     {
@@ -1415,7 +1415,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
   1. Run `npm start` in your command line to start the server.
 
-  2. Open Insomnia Core and make a GET request to `api/users/10`.
+  2. Open Insomnia and make a GET request to `api/users/10`.
 
   3. The 200 status code is returned.
 
@@ -1510,11 +1510,11 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 ### 22. Instructor Demo: Validation (5 min) 
 
-* Navigate to `13-Ins_Validation` and run `npm start` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. Then demonstrate the following in Insomnia Core:
+* Navigate to `13-Ins_Validation` and run `npm start` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. Then demonstrate the following in Insomnia:
 
   * When securing and ensuring the quality of user data, it is important to prevent any bad data from being saved in the database. For example, what if a user's password is too short or not secure enough? Or what if someone tries to sign up with the same email address twice? 
 
-  * 🔑 Let's try to create a new user with the email address in the wrong email format. Make a POST request to `localhost:3001/api/users/` and provide the following JSON data as the body of the request in Insomnia Core:
+  * 🔑 Let's try to create a new user with the email address in the wrong email format. Make a POST request to `localhost:3001/api/users/` and provide the following JSON data as the body of the request in Insomnia:
 
     ```json
     {
