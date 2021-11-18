@@ -20,6 +20,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git
 
 * The mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups. 
 
+* One main objective of the mini-project is to give students the experience of collaborating in a group setting. It is likely that many teams do not complete the assignment in the alotted time. Students must be told from the beginning, that project completion is NOT an expectation. For more details regarding the learning design and objectives of the mini-project, take a look at the [wiki page regarding Mini Project Expectations.](https://github.com/coding-boot-camp/fullstack-ground/wiki/Mini-Project-Expectations)
+
 ## Career Connection
 
 * Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Career-Connection/README.md).
