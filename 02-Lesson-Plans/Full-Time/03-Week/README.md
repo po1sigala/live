@@ -2,11 +2,11 @@
 
 ## Overview
 
-When developers find themselves repeating a task, they tend to look for a way to simplify their workflow. We saw earlier how CSS frameworks were developed to ensure consistency across applications and to expedite developer workflows. Tools with similar goals have emerged in the JavaScript ecosystem. 
+When developers find themselves repeating a task, they tend to look for a way to simplify their workflow. We saw earlier how CSS frameworks were developed to ensure consistency across applications and to expedite developer workflows. Tools with similar goals have emerged in the JavaScript ecosystem.
 
 jQuery is a JavaScript library that simplifies DOM manipulation and event handling. It allows us to write fewer lines of code than we'd need to if we were using plain ol' JavaScript to accomplish the same end. jQuery also provides a number of methods for animations and working with APIs.
 
-Some argue that jQuery is slowly being phased out and replaced with front-end frameworks such as React. You might not see as many job listings for jQuery developers, but it’s an important skill to master as the library is still widely used in both new and legacy code. 
+Some argue that jQuery is slowly being phased out and replaced with front-end frameworks such as React. You might not see as many job listings for jQuery developers, but it’s an important skill to master as the library is still widely used in both new and legacy code.
 
 Also this week we will learn the Fetch web API which can data from server-side APIs, like the OpenWeather API.
 
@@ -44,6 +44,8 @@ If you'd like more information on career services, visit the [career services re
 ## Heads-Up
 
 For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
+
+However there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 ## Helpful Links
 

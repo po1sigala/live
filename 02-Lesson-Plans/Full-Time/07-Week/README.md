@@ -2,7 +2,7 @@
 
 ## Overview
 
-In Unit 13, you will teach students to use the ORM library Sequelize to connect to and seed a database. In the process, students will create and configure Sequelize models, use validation tools, encrypt a password using `bcrypt`, automate functionality with Hooks, and use SQL in literals. Students will also model relationships and relate data between SQL tables using Sequelize associations. With the help of RESTful routes, they will map HTTP verbs to CRUD actions and build custom routes that map to instance methods. Additionally, students will learn to catch errors with `try...catch` and use `async` and `await` instead of Promises. 
+In Unit 13, you will teach students to use the ORM library Sequelize to connect to and seed a database. In the process, students will create and configure Sequelize models, use validation tools, encrypt a password using `bcrypt`, automate functionality with Hooks, and use SQL in literals. Students will also model relationships and relate data between SQL tables using Sequelize associations. With the help of RESTful routes, they will map HTTP verbs to CRUD actions and build custom routes that map to instance methods. Additionally, students will learn to catch errors with `try...catch` and use `async` and `await` instead of Promises.
 
 In Unit 14, students will use the separation of concerns principle and the MVC framework to build full-stack web apps. They will use Handlebars.js features including expressions, built-in helpers, custom helpers, and partials to build static templates that can render dynamic data. Students will use front-end logic to make requests and pass data to the back end. They will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. They will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create their own custom middleware for user authentication. Students will also incorporate sessions and cookies using the Sequelize store. They will be introduced to Prettier before starting on the mini-project.
 
@@ -16,7 +16,7 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 * Run `npm install` before the Instructor Demo to ensure that you have the full five-minute window for instruction.
 
-* In the first activity of Unit 13, `01-Ins_Sequelize-Setup`, you will hardcode the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure that you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity. 
+* In the first activity of Unit 13, `01-Ins_Sequelize-Setup`, you will hardcode the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure that you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
 * Instead of relying on a front end, all of the activities will use Insomnia Core to test the routes. Be sure to have it installed and ready for class.
 
@@ -36,7 +36,7 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 * You'll need to install the VS Code extensions ESLint and Prettier to properly demonstrate both libraries.
 
-* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Career Connection
 
@@ -46,9 +46,11 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 ## Heads-Up
 
-* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15). 
+* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15).
 
 * In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class.
+
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * Let students know that they will be allowed to create their own groups for the final project.
 
@@ -61,11 +63,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [07.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
   * [07.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
-  
+
   * [07.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
   * [07.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
-  
+
   * [07.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
 ### Homework
