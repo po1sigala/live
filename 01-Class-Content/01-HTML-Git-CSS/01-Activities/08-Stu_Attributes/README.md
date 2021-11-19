@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when a single attribute named `section` is added to all semantic `<section>` HTML elements.
+* It's done when `lesson` is assigned as a class attribute for all `<section>` HTML elements.
 
 * It's done when the email list item is given a unique attribute named `email`.
 

@@ -20,6 +20,10 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git
 
 * The mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups. 
 
+* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the unit’s activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had.
+
+* Remind students that they are not expected to complete the project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can. In addition, please use the review time to go over the mini-project's key points.  Finally, encourage students to compare their progress when working on the mini-project to the solution code they receive, so that they can reverse engineer the solution to better understand it on their own.
+
 ## Career Connection
 
 * Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Career-Connection/README.md).
