@@ -1,4 +1,4 @@
-# Unit 15 Instructor Overview: Project 2  
+# Unit 15 Instructor Overview: Project 2
 
 ## Overview
 
@@ -9,6 +9,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/15-Project-
 ## Instructor/TA Notes
 
 * Prepare a list of project group members prior to the first class for this unit. This time, assign three students per group, all around the same skill level. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
+
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code. Remind them that they already have code they can reuse for authentication from the previous unit.
 
@@ -31,7 +33,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [15.1 Lesson Plan](./01-Day/15.1-LESSON-PLAN.md)
 
   * [15.2 Lesson Plan](./02-Day/15.2-LESSON-PLAN.md)
-  
+
   * [15.3 Lesson Plan](./03-Day/15.3-LESSON-PLAN.md)
 
 ### Homework
