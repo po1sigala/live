@@ -1,12 +1,14 @@
 # 04.1 Full-Time Lesson Plan: Project 1
 
-## Overview 
+## Overview
 
 In this class, we will learn about agile project management and create our own GitHub issues and projects in preparation for Project 1.
 
 ## Instructor Notes
 
-* Determine project groups prior to class. Assign three students per group: one advanced, one average, one struggling.  **DO NOT allow students to work alone or in pairs.** Group projects are one of the few opportunities for students to work collaboratively. 
+* Determine project groups prior to class. Assign three students per group: one advanced, one average, one struggling.  **DO NOT allow students to work alone or in pairs.** Group projects are one of the few opportunities for students to work collaboratively.
+
+* However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * If students complain about group configurations, remind them of the following:
 
@@ -14,9 +16,9 @@ In this class, we will learn about agile project management and create our own G
 
   * Working collaboratively is an important skill to acquire as a developer
 
-* Students will be allowed to form their own groups for the final project. 
+* Students will be allowed to form their own groups for the final project.
 
-* The first 50 minutes of class are lecture on agile software development. Students then break into groups to brainstorm ideas and prepare user stories and wireframes. Use the time after break to meet with each team to discuss their idea and course correct as you see fit. 
+* The first 50 minutes of class are lecture on agile software development. Students then break into groups to brainstorm ideas and prepare user stories and wireframes. Use the time after break to meet with each team to discuss their idea and course correct as you see fit.
 
 * The Instructor Demo activities ask you to create a project repository. You can create one on-the-fly or you may want to create on in advance.
 
@@ -24,7 +26,7 @@ In this class, we will learn about agile project management and create our own G
 
 By the end of class, students will be able to:
 
-* Explain agile software development 
+* Explain agile software development
 
 * Explain minimum viable product (MVP) in relation to agile software development
 
@@ -32,7 +34,7 @@ By the end of class, students will be able to:
 
 * Write user stories
 
-* Explain scrum and standing meetings 
+* Explain scrum and standing meetings
 
 * Submit a project proposal for feedback
 
@@ -69,19 +71,19 @@ By the end of class, students will be able to:
 
   * **Project**: A project is "any undertaking, carried out individually or collaboratively and possibly involving research or design, that is carefully planned (usually by a project team) to achieve a particular aim." [Wikipedia: Project](https://en.wikipedia.org/wiki/Project)
 
-  * **How do we carefully plan a project?**: 
+  * **How do we carefully plan a project?**:
 
   * **Project management**: Project management is the practice of initiating, planning, executing, controlling, and closing the work of a team to achieve specific goals and meet specific success criteria at the specified time. The primary challenge of project management is to achieve all of the project goals within the given constraints. [Wikipedia: Project management](https://en.wikipedia.org/wiki/Project_management)
 
   * **What is the definition of agile?**: In general, what does it mean to be _agile_?
 
-  * **agile [ aj-uhl, -ahyl ]**: According to dictionary.com, agile is "quick and well-coordinated in movement". 
+  * **agile [ aj-uhl, -ahyl ]**: According to dictionary.com, agile is "quick and well-coordinated in movement".
 
   * **What is agile software development?**: What do we think "agile" means in terms of software development?
 
-  * **Agile software development**: Agile software development is an iterative approach to developing software. Teams deliver value to their customers faster by working incrementally rather than working towards a big launch. Teams improve and respond to change by continuously evaluating project plans, requirements and user needs. 
+  * **Agile software development**: Agile software development is an iterative approach to developing software. Teams deliver value to their customers faster by working incrementally rather than working towards a big launch. Teams improve and respond to change by continuously evaluating project plans, requirements and user needs.
 
-  * **What is iterative development?**: What is _iteration_? If iteration is the repetition of a process in order to generate a sequence of outcomes, what is _iterative development_? 
+  * **What is iterative development?**: What is _iteration_? If iteration is the repetition of a process in order to generate a sequence of outcomes, what is _iterative development_?
 
   * **Iterative and Incremental Development**: In an iterative approach to development, working software is the primary measure of progress. Our goal is to build functional applications, even if they are very simple, like a skateboard. If we set out to build a sports car, we may never get there and we will have unhappy customers along the way.
 
@@ -93,11 +95,11 @@ By the end of class, students will be able to:
 
   * **Determining a Minimum Viable Product**: There are a lot of approaches to defining a minimum viable product, but we can simplify it to three questions: 1) who is your audience?; 2) what is the problem that the product will address?; 3) how does the product solve that problem?
 
-  * **What is a user story?**: 
+  * **What is a user story?**:
 
   * **User stories**: In software development and product management, a user story is an informal, natural language description of one or more features of a software system. User stories are often written from the perspective of an end user or user of a system. [Wikipedia: User story](https://en.wikipedia.org/wiki/User_story)
 
-  * **What is acceptance criteria?**: 
+  * **What is acceptance criteria?**:
 
   * **Acceptance criteria**: Acceptance criteria define the boundaries of a user story and are used to confirm when a story is completed and working as intended. [Wikipedia: Acceptance criteria](https://en.wikipedia.org/wiki/User_story#Acceptance_criteria)
 
@@ -113,13 +115,13 @@ By the end of class, students will be able to:
 
   * We start by creating a new repository for our project.
 
-  * After creating our project repository, we see an `Issues` tab next to the `Code` tab. 
-  
+  * After creating our project repository, we see an `Issues` tab next to the `Code` tab.
+
   * If we navigate to the `Issues` tab, we will see any open Issues.
 
-  * If we click the `New Issue` button, we are routed to a form where we can create a new issue. 
+  * If we click the `New Issue` button, we are routed to a form where we can create a new issue.
 
-  * When we create an Issue, we want to give it a descriptive and accurate title: 
+  * When we create an Issue, we want to give it a descriptive and accurate title:
 
   ```md
   See referral traffic for inbound analysis
@@ -133,19 +135,19 @@ By the end of class, students will be able to:
   SO THAT I can adapt strategy to convert more leads
   ```
 
-  * We also want to add acceptance criteria: 
+  * We also want to add acceptance criteria:
 
   ```md
   GIVEN I am an authenticated user
-  WHEN I request a range of referral traffic 
+  WHEN I request a range of referral traffic
   THEN a chart is generated
   ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the difference between user stories and issues? 
+  * ☝️ What is the difference between user stories and issues?
 
-  * 🙋 User stories are informal descriptions, whereas issues are our way of tracking features, tasks, bugs, or other improvements. 
+  * 🙋 User stories are informal descriptions, whereas issues are our way of tracking features, tasks, bugs, or other improvements.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -159,7 +161,7 @@ By the end of class, students will be able to:
 
 3. A reminder app that keeps track of important tasks.
 
-* Upon completion, ask a few students to name the prompt they chose, and describe the user story. 
+* Upon completion, ask a few students to name the prompt they chose, and describe the user story.
 
 ### 4. Instructor Do: Agile, Continued (5 mins)
 
@@ -187,7 +189,7 @@ By the end of class, students will be able to:
 
 * Ask the class the following question(s) and call on students for the corresponding answer(s):
 
-  * ☝️ Why do we use Kanban boards to track the status of our project. 
+  * ☝️ Why do we use Kanban boards to track the status of our project.
 
   * 🙋 Kanban boards help you and your team visualize the status of the project. Another advantage of Kanban is that it's much less complex to manage than many other popular methods of project management.
 
@@ -211,7 +213,7 @@ By the end of class, students will be able to:
 
 * Open the slide deck and follow these prompts with their corresponding slides:
 
-  * **What is daily scrum?**: 
+  * **What is daily scrum?**:
 
   * **Stand-up Meetings**: Stand-up meetings are used to hold teams accountable to each other. Team members make commitments to work on aspects of the project and report out progress. Stand-up meetings are useful in identifying issues as they arise and developing plans to resolve them. There are generally three questions each team member answers in a stand-up: 1) What was accomplished?; 2) What are your goals?; 3) Are there any obstacles to achieving your goals? [Wikipedia: Stand-up meeting](https://en.wikipedia.org/wiki/Stand-up_meeting)
 
@@ -219,7 +221,7 @@ By the end of class, students will be able to:
 
   * **Get Professional**: Remember, projects are your portfolio pieces. Use project week as an opportunity to push yourself and prove your knowledge. Keep you MVP simple and add features as you go to avoid feature creep.
 
-  * **Project Requirements**: 
+  * **Project Requirements**:
 
   * **Presentation Requirements**:
 
@@ -233,13 +235,13 @@ By the end of class, students will be able to:
 
 ### 8. Student Do: Break into Teams
 
-* Direct students to begin working in their groups to identify project ideas, research APIs, and create project designs. 
+* Direct students to begin working in their groups to identify project ideas, research APIs, and create project designs.
 
-* At your discretion, feel free to utilize TAs and host "workshops" to help steer groups in the right direction. 
+* At your discretion, feel free to utilize TAs and host "workshops" to help steer groups in the right direction.
 
 * Use the talking points below to guide and encourage the students:
 
-  * Many of you may only have a rough idea of what your project will consist of. This is a good opportunity to rule out ideas and get a good sense of what is feasible. 
+  * Many of you may only have a rough idea of what your project will consist of. This is a good opportunity to rule out ideas and get a good sense of what is feasible.
 
   * Be cautious of underestimating the amount of time that features will take to implement. Try thinking of the MVP for each idea and attempt to pick the idea that excites your group and seems feasible in the time you have.
 

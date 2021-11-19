@@ -10,6 +10,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/23-Project-
 
 * For the final project, students will be choosing their own groups. Let students know that they should contact the instructor or TAs when they have decided on their groups for approval. Please be flexible and empathetic in addressing student concerns regarding groups, or the lack of members to team up with.
 
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
+
 * Students can also use this time to work on their portfolios and any unfinished career homework assignments.
 
 * Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code.
@@ -35,7 +37,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [23.1 Lesson Plan](./01-Day/23.1-LESSON-PLAN.md)
 
 * [23.2 Lesson Plan](./02-Day/23.2-LESSON-PLAN.md)
-  
+
 * [23.3 Lesson Plan](./03-Day/23.3-LESSON-PLAN.md)
 
 ### Homework

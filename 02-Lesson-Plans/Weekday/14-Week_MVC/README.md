@@ -22,7 +22,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 * You'll need to install the VS Code extensions ESLint and Prettier to properly demonstrate both libraries for Day 3.
 
-* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
+* If the students struggle with the Everyone Do: Prettier activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
 ## Career Connection
 
@@ -32,9 +32,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/14-MVC/READ
 
 ## Heads-Up
 
-* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15). 
+* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15).
 
 * In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class.
+
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * Let students know that they will be allowed to create their own groups for the final project.
 
@@ -47,7 +49,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [14.1 Lesson Plan](./01-Day_Handlebars/14.1-LESSON-PLAN.md)
 
   * [14.2 Lesson Plan](./02-Day_Authentication/14.2-LESSON-PLAN.md)
-  
+
   * [14.3 Lesson Plan](./03-Day_Review/14.3-LESSON-PLAN.md)
 
 ### Homework

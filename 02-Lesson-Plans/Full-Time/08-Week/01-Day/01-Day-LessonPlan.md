@@ -1,12 +1,14 @@
 # 08.1 Full-Time Lesson Plan: Project 2
 
-## Overview 
+## Overview
 
 Today's class will be focused on introducing students to project 2 requirements.
 
 ## Instructor Notes
 
 * Today's class will be focused on introducing students to the requirements for project 2.
+
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * Students will begin work on their second project.
 
@@ -41,7 +43,7 @@ By the end of class, students will be able to:
 
 ## Class Instruction
 
-### 1. Instructor Do: Introduce Project (15 min) 
+### 1. Instructor Do: Introduce Project (15 min)
 
 * Welcome students to class. Praise students for making it to their second group projects.
 
@@ -84,11 +86,11 @@ By the end of class, students will be able to:
       * "Require pull request reviews before merging"
 
       * "Include administrators"
-  
+
     * Click "Create"
 
   * 🔑 Once the branch is protected, invite the other group members as collaborators.
-  
+
 * Answer any questions before breaking up your students into their project groups.
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -97,11 +99,11 @@ By the end of class, students will be able to:
 
 * Direct students to begin to brainstorming with their group members to identify project ideas, project designs, and research which new library, package, or technology they can use that hasn't been discussed yet.
 
-* At your discretion, feel free to utilize TAs and host "workshops" to help steer groups in the right direction. 
+* At your discretion, feel free to utilize TAs and host "workshops" to help steer groups in the right direction.
 
 * Use the talking points below to guide and encourage the students:
 
-  * Many of you may only have a rough idea of what your project will consist of. This is a good opportunity to rule out ideas and get a good sense of what is feasible. 
+  * Many of you may only have a rough idea of what your project will consist of. This is a good opportunity to rule out ideas and get a good sense of what is feasible.
 
   * Be cautious of underestimating the amount of time that features will take to implement. Try thinking of the MVP for each idea and attempt to pick the idea that excites your group and seems feasible in the time you have.
 
