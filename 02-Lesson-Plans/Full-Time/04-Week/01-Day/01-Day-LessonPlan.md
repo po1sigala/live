@@ -8,7 +8,7 @@ In this class, we will learn about agile project management and create our own G
 
 * Determine project groups prior to class. Assign three students per group: one advanced, one average, one struggling.  **DO NOT allow students to work alone or in pairs.** Group projects are one of the few opportunities for students to work collaboratively.
 
-* However there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
+* However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 * If students complain about group configurations, remind them of the following:
 

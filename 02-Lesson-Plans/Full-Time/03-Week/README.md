@@ -45,7 +45,7 @@ If you'd like more information on career services, visit the [career services re
 
 For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
-However there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
+However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 ## Helpful Links
 
