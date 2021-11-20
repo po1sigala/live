@@ -1,5 +1,5 @@
 {
-  "name": "Solved",
+  "name": "Unsolved",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.12"
+    "mongoose": "^6.0.13"
   }
 }
