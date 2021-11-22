@@ -17,7 +17,7 @@ export default function reducer(state, action) {
     case REMOVE_CAR: {
       return {
         ...state,
-        cars: [...state.cars].filter((car) => car.id !== action.payload),
+        cars: state.cars.filter((car) => car.id !== action.payload),
       };
     }
     case START_CAR: {

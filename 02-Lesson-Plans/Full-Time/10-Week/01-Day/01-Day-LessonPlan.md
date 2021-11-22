@@ -1,6 +1,6 @@
 # 10.1 Full-Time Lesson Plan: Progressive Web Applications (PWA)
 
-## Overview 
+## Overview
 
 In this class, you will introduce the concept of bundling an application using webpack and its impact on webpage performance. You'll also demonstrate how to configure webpack to incorporate even more performance improvements, lazy loading, and development-process improvements.
 
@@ -196,7 +196,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: Lighthouse (5 min) 
+### 2. Instructor Demo: Lighthouse (5 min)
 
 * In your browswer, open the [Make My Trip website](https://www.makemytrip.com/).
 
@@ -224,7 +224,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Lighthouse/README.md`.
 
-### 3. Student Do: Lighthouse (15 min) 
+### 3. Student Do: Lighthouse (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Lighthouse/README.md`, which are also shown below.
 
@@ -260,7 +260,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Lighthouse (10 min) 
+### 4. Instructor Review: Lighthouse (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -314,7 +314,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Webpack Intro (5 min) 
+### 5. Instructor Demo: Webpack Intro (5 min)
 
 * Open `03-Ins_Webpack-Intro/package.json` in your IDE and demonstrate the following:
 
@@ -380,7 +380,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Webpack-Intro/README.md`.
 
-### 6. Student Do: Webpack Intro (15 min) 
+### 6. Student Do: Webpack Intro (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Webpack-Intro/README.md`, which are also shown below.
 
@@ -428,7 +428,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Webpack Intro (10 min) 
+### 7. Instructor Review: Webpack Intro (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -493,7 +493,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: Webpack Bundle (5 min) 
+### 8. Instructor Demo: Webpack Bundle (5 min)
 
 * Open `05-Ins_Webpack-Bundle/webpack.config.js` in your IDE and demonstrate the following:
 
@@ -569,7 +569,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Webpack-Bundle/README.md`.
 
-### 9. Student Do: Webpack Bundle (15 min) 
+### 9. Student Do: Webpack Bundle (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_Webpack-Bundle/README.md`, which are also shown below.
 
@@ -623,7 +623,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Webpack Bundle (10 min) 
+### 10. Instructor Review: Webpack Bundle (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -653,7 +653,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Webpack Loader (5 min) 
+### 11. Instructor Demo: Webpack Loader (5 min)
 
 * Open `07-Ins_Webpack-Loader/assets/js/app.js` in your IDE and demonstrate the following:
 
@@ -766,7 +766,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Webpack-Loader/README.md`.
 
-### 12. Student Do: Webpack Loader (15 min) 
+### 12. Student Do: Webpack Loader (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_Webpack-Loader/README.md`, which are also shown below.
 
@@ -826,7 +826,7 @@ By the end of class, students will be able to:
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: Webpack Loader (10 min) 
+### 14. Instructor Review: Webpack Loader (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -894,7 +894,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: Webpack Plugin (5 min) 
+### 15. Instructor Demo: Webpack Plugin (5 min)
 
 * Navigate to `09-Ins_Webpack-Plugin` and run the commands `npm i && npm run watch`.
 
@@ -957,7 +957,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Webpack-Plugin`.
 
-### 16. Student Do: Webpack Plugin (15 min) 
+### 16. Student Do: Webpack Plugin (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Webpack-Plugin/README.md`, which are also shown below.
 
@@ -1003,7 +1003,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 17. Instructor Review: Webpack Plugin (15 min) 
+### 17. Instructor Review: Webpack Plugin (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1080,7 +1080,7 @@ By the end of class, students will be able to:
 
   * 🙋 We can refer to supplemental material, read the [webpack docs on HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/), and attend Office Hours to ask for help.
 
-  * Answer any questions before proceeding to the next activity. 
+  * Answer any questions before proceeding to the next activity.
 
 ### 18. Instructor Do: Stoke Curiosity (10 min)
 
@@ -1098,7 +1098,7 @@ By the end of class, students will be able to:
 
 * We will start with the project setup needed to replace modules on the fly, move on to learning how to generate a service worker using Workbox, and finally learn how to implement caching strategies that make your app faster, and if configured correctly, able to work offline.
 
-### 19. Instructor Demo: Hot Module Replacement (5 min) 
+### 19. Instructor Demo: Hot Module Replacement (5 min)
 
 * In the terminal, navigate to `11-Ins_WebPack-HMR` and run `npm i && npm run dev`. This will install the dependencies and run the development server.
 
@@ -1136,7 +1136,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_WebPack-HMR/README.md`.
 
-### 20. Student Do: Hot Module Replacement (15 min) 
+### 20. Student Do: Hot Module Replacement (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_WebPack-HMR/README.md`, which are also shown below.
 
@@ -1195,7 +1195,7 @@ By the end of class, students will be able to:
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
 
-### 21. Instructor Review: Hot Module Replacement (10 min) 
+### 21. Instructor Review: Hot Module Replacement (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1290,7 +1290,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 22. Instructor Demo: Workbox Service Workers (5 min) 
+### 22. Instructor Demo: Workbox Service Workers (5 min)
 
 * Navigate to `13-Ins_WorkBox-Service-Workers` in your terminal, run `npm i && npm run dev`, and demonstrate the following:
 
@@ -1350,7 +1350,7 @@ By the end of class, students will be able to:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_WorkBox-Service-Workers/README.md`.
 
-### 23. Student Do: Workbox Service Workers (15 min) 
+### 23. Student Do: Workbox Service Workers (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_WorkBox-Service-Workers/README.md`, which are also shown below.
 
@@ -1485,7 +1485,7 @@ By the end of class, students will be able to:
   * ☝️ What can we do if we don't completely understand this?
 
   * 🙋 We can refer to supplemental material, read the [Workbox docs on GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW), and attend Office Hours to ask for help.
-  
+
 * Answer any questions before ending the class.
 
 ### 25. END (0 min)

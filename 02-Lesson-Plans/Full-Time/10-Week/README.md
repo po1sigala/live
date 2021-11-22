@@ -16,14 +16,20 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 * On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-* The homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
+* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change.
+
+* Make sure you're well-versed in React Hooks so that you can explain how they work to students, who might be confused at first about this different approach to building web app UIs.
 
 * PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 * The homework for Unit 20 invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their homework.
 
-* Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `src/` directory before each activity.
+* Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `/src` directory before each activity.
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
+
+* Each activity in Unit 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+
+* To save time in class, students are expected to copy the `/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
 
 >> Important: The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 

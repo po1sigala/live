@@ -3,7 +3,6 @@ CREATE DATABASE registrar_db;
 
 USE registrar_db;
 
-DROP TABLE IF EXISTS courses;
 CREATE TABLE courses (
   id INT NOT NULL,
   course_title VARCHAR(30) NOT NULL,
@@ -12,7 +11,6 @@ CREATE TABLE courses (
   date_added DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
-DROP TABLE IF EXISTS students;
 CREATE TABLE students (
   id INT NOT NULL,
   first_name VARCHAR(30) NOT NULL,
@@ -21,7 +19,6 @@ CREATE TABLE students (
   date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
-DROP TABLE IF EXISTS instructors;
 CREATE TABLE instructors (
   id INT NOT NULL,
   first_name VARCHAR(30) NOT NULL,
@@ -30,7 +27,6 @@ CREATE TABLE instructors (
   date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
-DROP TABLE IF EXISTS classrooms;
 CREATE TABLE classrooms (
   id INT NOT NULL,
   building_name VARCHAR(30) NOT NULL,

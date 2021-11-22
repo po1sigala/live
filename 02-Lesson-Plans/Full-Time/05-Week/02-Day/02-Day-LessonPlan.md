@@ -683,8 +683,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
       ['Friday', 3],
     ];
 
-    for (const [key, value] of moreSongs) {
-      console.log(`${key}'s chart position is ${value}`);
+    for (const song of moreSongs) {
+      console.log(song);
     }
     ```
 
@@ -801,7 +801,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ How do you know when to use a `for...of` loop?
 
-  * 🙋 While it generally depends on the situation, `for...of` loops help most when you need to iterate through key-value pairs in an object.
+  * 🙋 A `for of` loop is used to iterate over each element of an object. Arrays and strings are examples of iterable objects that are capable of returning each element one at a time.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -1012,6 +1012,13 @@ Use [Google](https://www.google.com) or another search engine to research this.
     betterLogCharacter(jaime);
     ```
 
+    * Destructuring assignment can also be used on arrays. Consider the following example:
+
+    ```js
+    const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];
+    const [winterfell, casterlyRock, kingLanding] = locations;
+    ```
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
@@ -1088,7 +1095,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
     ```js
     const nodejs = {
-      name: 'Node.js',
+      pkgName: 'Node.js',
       type: 'JavaScript runtime environment',
     };
 

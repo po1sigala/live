@@ -65,7 +65,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
 // Bonus using writeFileSync as a promise
 const init = () => {
   promptUser()
-  // Use writeFileSync method to use promises instead of a callback function
+    // Use writeFileSync method to use promises instead of a callback function
     .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
     .then(() => console.log('Successfully wrote to index.html'))
     .catch((err) => console.error(err));

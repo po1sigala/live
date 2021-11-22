@@ -14,9 +14,13 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 * The homework for this unit invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their homework.
 
-* This unit uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `src/` directory before each activity.
+* Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `/src` directory before each activity.
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
+
+* Each activity in Unit 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+
+* To save time in class, students are expected to copy the `/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
 
 ## Career Connection
 
