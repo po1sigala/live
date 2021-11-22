@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/myfirstmongooseapp', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+})
 
-// Export connection
+// Export connection 
 module.exports = mongoose.connection;
