@@ -8,15 +8,19 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/20-React/RE
 
 ## Instructor/TA Notes
 
-* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change. 
+* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change.
 
 * Make sure you're well-versed in React Hooks so that you can explain how they work to students, who might be confused at first about this different approach to building web app UIs.
 
 * The homework for this unit invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their homework.
 
-* This unit uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `src/` directory before each activity.
+* Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `/src` directory before each activity.
 
-* Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line. 
+* Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
+
+* Each activity in Unit 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+
+* To save time in class, students are expected to copy the `/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
 
 ## Career Connection
 
@@ -39,7 +43,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [20.1 Lesson Plan](01-Day_Intro-React/20.1-LESSON-PLAN.md)
 
 * [20.2 Lesson Plan](02-Day_Props-Lists-State/20.2-LESSON-PLAN.md)
-  
+
 * [20.3 Lesson Plan](03-Day_React-Style-Tests/20.3-LESSON-PLAN.md)
 
 ### Homework
@@ -72,9 +76,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [React Docs on JSX](https://reactjs.org/docs/introducing-jsx.html)
 
-  * [React Docs on JSX expressions](https://reactjs.org/docs/jsx-in-depth.html) 
+  * [React Docs on JSX expressions](https://reactjs.org/docs/jsx-in-depth.html)
 
-* [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) 
+* [React Docs on state and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
 * [React Docs on handling events](https://reactjs.org/docs/handling-events.html)
 
@@ -92,7 +96,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [React Docs on testing](https://reactjs.org/docs/testing.html)
 
-* [React Docs on lists and keys](https://reactjs.org/docs/lists-and-keys.html)          
+* [React Docs on lists and keys](https://reactjs.org/docs/lists-and-keys.html)
 
 * [Create React App Docs on deployment](https://create-react-app.dev/docs/deployment)
 

@@ -14,7 +14,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * You will use MySQL for today's activities, so be sure to have your MySQL server up and running. You can create the database `cars_db` ahead of time or demonstrate it live in class.
 
-* Instead of relying on a front end, all of the activities will use Insomnia Core to test the routes. Be sure to have it installed and set up for class. 
+* Instead of relying on a front end, all of the activities will use Insomnia to test the routes. Be sure to have it installed and set up for class. 
 
 * To speed up demonstrations and activity reviews, you might want to run `npm install` and create the database for every activity before class starts. 
 
@@ -121,7 +121,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
         const userData = await User.create(newUser);
     ```
 
-* Run `npm start` in your command line and demonstrate the following in Insomnia Core:
+* Run `npm start` in your command line and demonstrate the following in Insomnia:
 
   * We will make a POST request to `localhost:3001/api/users/` to create a new user. Notice that the password is `Password123` in plaintext, as shown in the following example:
 
@@ -326,7 +326,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
         });
     ```
 
-* To test the Hooks, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* To test the Hooks, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. Notice that the email address is capitalized in the body of the request, as follows:
 
@@ -510,7 +510,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     )
     ```
 
-* Run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* Run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. We've set `numberOfPets` equal to `2`, as follows, because the user has two pets:
 
@@ -619,7 +619,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     res.json({ message: 'This person has pets!' });
     ```
   
-* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a GET request to `http://localhost:3001/api/users/1/hasPets` to check the route and instance method.
 
@@ -753,7 +753,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     }
     ```
   
-* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * We will make a POST request to `http://localhost:3001/api/users` to create a new user, as shown in the following example:
 
@@ -845,7 +845,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Answer any questions before proceeding to the next activity.
 
-## 13. Instructor Demo: One-to-One (5 min) 
+### 13. Instructor Demo: One-to-One (5 min)
 
 * Navigate to `21-Ins_One-to-One` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. Then run `npm start` from the command line and demonstrate the following:
 
@@ -858,7 +858,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     Executing (default): SHOW INDEX FROM `license`
     ```
 
-  * 🔑 In these statements that create the tables, the `license` table stores a reference to the `driver` table as a foreign key. 
+  * 🔑 In these statements that create the tables, the `license` table stores a reference to the `driver` table as a foreign key.
 
 * Ask the class the following question (☝️) and call on students for the answers (🙋):
 
@@ -916,7 +916,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_One-to-One/README.md`.
 
-### 14. Student Do: One-to-One (15 min) 
+### 14. Student Do: One-to-One (15 min)
 
 * Direct students to the activity instructions found in `22-Stu_One-to-One/README.md`.
 
@@ -964,13 +964,15 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Use the prompts and talking points below to review the following key (🔑) points:
 
+  * ✔️ `hasOne()`
+  
   * ✔️ Foreign key columns
 
-  * ✔️ Sequelize association methods
+   * ✔️ `belongsTo`
 
   * ✔️ Performing JOIN with `include` option
 
-* Open `22-Stu_One-to-One/Solved/models/LibraryCard.js` in your IDE and explain the following: 
+* Open `22-Stu_One-to-One/Solved/models/LibraryCard.js` in your IDE and explain the following:
 
   * 🔑 We create a foreign key column to reference the library card's `Reader`, as shown in the following example:
 
@@ -984,19 +986,27 @@ As students continue to learn Sequelize in today's class, they will learn about 
     },
     ```
 
-* Open `22-Stu_One-to-One/Solved/models/index.js` in your IDE and explain the following: 
+* Open `22-Stu_One-to-One/Solved/models/index.js` in your IDE and explain the following:
 
   * 🔑 We import both models, associate them to one another, and export them as an object, like in the following example:
 
     ```js
     const Reader = require('./Reader');
     const LibraryCard = require('./LibraryCard');
+    ```
 
+    * 🔑 To associate the `Reader` model with the `LibraryCard` model in a one-to-one relationship, we use the `hasOne()` method to declare a model has one of another model, or in this case, the `Reader` has one `LibraryCard`. The foreign key will be defined on the `Reader` model. 
+
+    ```js
     Reader.hasOne(LibraryCard, {
       foreignKey: 'reader_id',
       onDelete: 'CASCADE',
     });
+    ```
 
+    * 🔑 We then use the `belongsTo()` method to define the relationship between two models. It is important that both `hasOne()` and `belongsTo` are both used. They are a pair!
+
+    ```js
     LibraryCard.belongsTo(Reader, {
       foreignKey: 'reader_id',
     });
@@ -1004,7 +1014,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     module.exports = { Reader, LibraryCard };
     ```
 
-* Open `22-Stu_One-to-One/Solved/routes/api/readerRoutes.js` in your IDE and explain the following: 
+* Open `22-Stu_One-to-One/Solved/routes/api/readerRoutes.js` in your IDE and explain the following:
 
   * In the API route files, we import both models through destructuring, as follows:
 
@@ -1020,7 +1030,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     });
     ```
 
-* If time allows, seed the database, run the app, and use Insomnia Core to demonstrate the following:
+* If time allows, seed the database, run the app, and use Insomnia to demonstrate the following:
 
   * We can now create a library card and associate it with a reader by running a POST request to `/api/cards` with the following JSON body:
 
@@ -1034,9 +1044,9 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What would happen if a reader tried to create a second card? 
+  * ☝️ What two methods do we use to create a one-to-one relationship using Sequelize?  
 
-  * 🙋 They would run into something called a **foreign key constraint**, which helps control data and maintain relationships between tables. This foreign key constraint would prevent users from associating a second library card with a single reader.
+  * 🙋  In Sequelize, to form an association we use the `hasOne()` method to establish that a model has one of another model. Then, we use the `belongsTo()` method to define the relationship between the two models. It is important to use both of the association methods together to successfully define a one-to-one relationship. 
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -1044,11 +1054,11 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Answer any questions before proceeding to the next activity.
 
-## 16. Instructor Demo: One-to-Many (5 min) 
+### 16. Instructor Demo: One-to-Many (5 min)
 
 * Navigate to `23-Ins_One-to-Many` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+* Run `npm start` from the command line and use Insomnia to demonstrate the following:
 
   * 🔑 When we perform a GET request to `/api/drivers/1`, we get a response like the following example&mdash;including not only the driver's license data but also an array of their owned cars:
 
@@ -1122,19 +1132,19 @@ As students continue to learn Sequelize in today's class, they will learn about 
     const driverData = await Driver.findByPk(req.params.id, {
       include: [{ model: License }, { model: Car }],
     });
-    ``` 
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Can we create a new driver's license or car without a driver? 
+  * ☝️ Can we create a new driver's license or car without a driver?
 
-  * 🙋 Nope! Both belong to specific drivers, so the driver has to exist in the database before the license or car can be created. 
+  * 🙋 Nope! Both belong to specific drivers, so the driver has to exist in the database before the license or car can be created.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_One-to-Many/README.md`.
 
-### 17. Student Do: One-to-Many (15 min) 
+### 17. Student Do: One-to-Many (15 min)
 
 * Direct students to the activity instructions found in `24-Stu_One-to-Many/README.md`.
 
@@ -1218,13 +1228,15 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
   * ✔️ Foreign key column
 
-  * ✔️ `hasMany()` 
+  * ✔️ `hasMany()`
+
+  * ✔️ `belongsTo()`
 
   * ✔️ `include`
 
-* Open `24-Stu_One-to-Many/Solved/models/Book.js` in your IDE and explain the following: 
+* Open `24-Stu_One-to-Many/Solved/models/Book.js` in your IDE and explain the following:
 
-  * 🔑 We add a column, as follows, to store a reference to the reader that owns the book: 
+  * 🔑 We add a column, as follows, to store a reference to the reader that owns the book:
 
     ```js
     reader_id: {
@@ -1236,24 +1248,28 @@ As students continue to learn Sequelize in today's class, they will learn about 
     },
     ```
 
-* Open `24-Stu_One-to-Many/Solved/models/index.js` in your IDE and explain the following: 
+* Open `24-Stu_One-to-Many/Solved/models/index.js` in your IDE and explain the following:
 
-  * 🔑 We create the relationship between readers and books by declaring that readers have many books and a book belongs to one reader, as shown in the following example:
+  * 🔑 We create the relationship between readers and books by using the `hasMany()` relationship to declare readers have many books, as shown in the following example:
 
     ```js
     Reader.hasMany(Book, {
       foreignKey: 'reader_id',
       onDelete: 'CASCADE',
     });
+    ```
 
+  * 🔑 We pair the `hasMany()` association method with a `belongsTo()` declaration to show that while each reader has many books, a book belongs to a single reader. This forms the one-to-many relationship:
+    
+    ```js
     Book.belongsTo(Reader, {
       foreignKey: 'reader_id',
     });
     ```
 
-* Open `24-Stu_One-to-Many/Solved/routes/api/readerRoutes.js` in your IDE and explain the following: 
+* Open `24-Stu_One-to-Many/Solved/routes/api/readerRoutes.js` in your IDE and explain the following:
 
-  * 🔑 We use the `include` option to perform a JOIN like in the following example: 
+  * 🔑 We use the `findAll()` to find to return all of our data and an an `include` statement to identify the models we want to join:
 
     ```js
     const readerData = await Reader.findAll({
@@ -1277,7 +1293,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Navigate to `25-Ins_Literals` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+* Run `npm start` from the command line and use Insomnia to demonstrate the following: 
 
   * 🔑 When we perform a GET request to `/api/drivers/2`, we get a response that resembles the following example&mdash;including everything from before but also the total mileage of all cars owned by the driver:
 
@@ -1383,7 +1399,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
   2. Run `npm start` to start the server.
 
-  3. In Insomnia Core, make a GET request to `/api/readers/1`.
+  3. In Insomnia, make a GET request to `/api/readers/1`.
 
   4. Note that the response data does not include a `shortBooks` property.
 

@@ -93,7 +93,7 @@ app.get('/api/movie-reviews', (req, res) => {
   });
 });
 
-// Update review name
+// BONUS: Update review name
 app.put('/api/review/:id', (req, res) => {
   const sql = `UPDATE reviews SET review = ? WHERE id = ?`;
   const params = [req.body.review, req.params.id];

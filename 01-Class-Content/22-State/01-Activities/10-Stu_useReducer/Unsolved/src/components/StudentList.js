@@ -61,15 +61,19 @@ export default function StudentList() {
 
             <div className="add-student">
               <input
-                value={newStudentName}
-                onChange={(e) => setNewStudentName(e.target.value)}
+                value={state.studentName}
+                onChange={(e) =>
+                  dispatch({ type: SET_STUDENT_NAME, payload: e.target.value })
+                }
                 placeholder="New student name..."
                 type="text"
               />
 
               <select
-                onChange={(e) => setNewStudentMajor(e.target.value)}
-                value={newStudentMajor}
+                onChange={(e) =>
+                  dispatch({ type: SET_STUDENT_MAJOR, payload: e.target.value })
+                }
+                value={state.studentMajor}
               >
                 <option>Choose major...</option>
                 {/* // TODO: Refactor to access `students` from our state object */}
@@ -82,7 +86,7 @@ export default function StudentList() {
               <button
                 type="button"
                 onClick={() => {
-                  // TODO: Call dispatch method with an object containing type and payload
+                  // TODO: Call dispatch method with an object containing type and payload for adding a new student
                 }}
               >
                 Add Student

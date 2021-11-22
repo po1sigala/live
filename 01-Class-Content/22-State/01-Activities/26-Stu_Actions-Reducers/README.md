@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of a Reducer
 
-Work with a partner to add comments describing the functionality of the code found in [reducers.js](.Unsolved/client/src/utils/reducers.js).
+Work with a partner to add comments describing the functionality of the code found in [reducers.js](./Unsolved/client/src/utils/reducers.js).
 
 ## 📝 Notes
 
@@ -8,7 +8,7 @@ What is the purpose of the action argument that gets passed to the reducer funct
 
 How can we account for multiple types of actions inside the reducer?
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [React documentation on useReducer](https://reactjs.org/docs/Hooks-reference.html#usereducer)
 

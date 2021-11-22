@@ -8,3 +8,14 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+.boxy {
+  color: red;
+  border: #48b4ef 2px solid;
+  text-align: center;
+  border-radius: .4rem;
+}
+
+.bg-primary {
+  background-color: #48b4ef;
+}

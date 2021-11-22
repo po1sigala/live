@@ -1036,7 +1036,7 @@ By the end of class, students will be able to:
   * A `class` attribute can be used to select and style one or more elements:
 
     ```html
-    <section class="section">
+    <section class="lesson">
     ```
 
   * The `id` attribute is used to select a single element for styling:
@@ -1074,7 +1074,7 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when a single attribute named `section` is added to all semantic `<section>` HTML elements.
+  * It's done when `lesson` is assigned as a class attribute for all `<section>` HTML elements.
 
   * It's done when the email list item is given a unique attribute named `email`.
 
@@ -1129,10 +1129,10 @@ By the end of class, students will be able to:
 
 * Open `08-Stu_Attributes/Solved/index.html` in your IDE and explain the following:
 
-  * 🔑 We use a global `class` attribute to add a `section` identifier to all sections:
+ 🔑 We assign the `lesson` class attribute to all `<section>` elements:
 
     ```html
-    <section class="section">
+    <section class="lesson">
     ```
 
   * 🔑 We use a global `id` attribute to add a unique identifier to the email list item:
