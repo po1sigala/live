@@ -1082,6 +1082,8 @@ By the end of class, students will be able to:
 
   * It's done when the portfolio list item is given a unique attribute named `portfolio`.
 
+  * It's done when the existing image's `src` attribute specifies the relative path to the `image-1.jpg` file found in the `assets` directory and the `alt` attribute describes the image.
+
   * It's done when the finished page matches the mockup.
 
   ## Assets
