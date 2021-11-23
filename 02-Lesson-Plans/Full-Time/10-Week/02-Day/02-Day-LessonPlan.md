@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this class, students will learn how to use the workbox library to cache and serve static assets. Students will also become familiar with the different methods workbox provides to create a service worker and learn some of the caching strategies that workbox provides out of the box. In addition, students will be introduced to IndexedDB, which allows developers to store large amounts of data on the client side. 
+In this class, students will learn how to use the workbox library to cache and serve static assets. Students will also become familiar with the different methods workbox provides to create a service worker and learn some of the caching strategies that workbox provides out of the box. In addition, students will be introduced to IndexedDB, which allows developers to store large amounts of data on the client side.  We have used `localStorage` in the past for client-side storage, but we were very limited in the amount and type of data we could store. IndexedDB can help us store more data in more complex data structures.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `15-Ins_Caching` through `27-Stu_Activity-Title`.
+* In this lesson, students will complete activities `15-Ins_Caching` through `27-Evr_Git-Hooks`.
 
 * This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
@@ -37,6 +37,12 @@ In this class, students will learn how to use the workbox library to cache and s
 * Leverage caching strategies to optimize performance.
 
 * Execute a full-stack application with a server and client-side development server.
+
+* Implement IndexedDB inside a JavaScript application.
+
+* Implement CREATE, READ, UPDATE, and DELETE commands for an IndexedDB instance.
+
+* Convert an existing application into a Progressive Web Application (PWA).
 
 ## Time Tracker
 
@@ -70,7 +76,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ## Class Instruction
 
-### 1. Instructor Demo: Cache CSS and JavaScript Files (5 min) 
+### 1. Instructor Demo: Cache CSS and JavaScript Files (5 min)
 
 * Welcome students to class.
 
@@ -133,7 +139,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
 
-### 2. Student Do: Cache CSS and JavaScript Files (15 min) 
+### 2. Student Do: Cache CSS and JavaScript Files (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Caching/README.md`, which are also shown below.
 
@@ -152,7 +158,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-  * It is done when I have registered a new Wqorkbox service worker inside the `src/index.js` file using the `Workbox` constructor.
+  * It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
   * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
@@ -183,7 +189,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Cache CSS and JavaScript Files (10 min) 
+### 3. Instructor Review: Cache CSS and JavaScript Files (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -289,7 +295,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Caching Images (5 min) 
+### 4. Instructor Demo: Caching Images (5 min)
 
 * Navigate to `17-Ins_Caching-Images` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
 
@@ -313,7 +319,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Caching-Images/README.md`.
 
-### 5. Student Do: Caching Images (15 min) 
+### 5. Student Do: Caching Images (15 min)
 
 * Direct students to the activity instructions found in `18-Stu_Caching-Images/README.md`, which are also shown below.
 
@@ -367,7 +373,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 6. Instructor Review: Caching Images (10 min) 
+### 6. Instructor Review: Caching Images (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -440,7 +446,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Client-Server Model (5 min) 
+### 7. Instructor Demo: Client-Server Model (5 min)
 
 * Navigate to `19-Ins_Client-Server` in your terminal and run `npm i` to install all dependencies and demonstrate the following:
 
@@ -468,7 +474,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Client-Server/README.md`.
 
-### 8. Student Do:  Client-Server Model (15 min) 
+### 8. Student Do:  Client-Server Model (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Client-Server/README.md`, which are also shown below.
 
@@ -514,7 +520,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 9. Instructor Review: Client-Server Model (10 min) 
+### 9. Instructor Review: Client-Server Model (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -606,245 +612,821 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ### 12. Instructor Do: Stoke Curiosity (10 min)
 
-* @TODO The first building block of every class is used to stoke curiosity on the topic. This may be using a slide deck or demonstration of the last activity of the day combined with pseudocoding. How are you going to stoke curiosity? Write two or three sentences describing your approach. 
+* Congratulate the class on learning how to implement new web technologies such as webpack and workbox. These tools can give our applications a performance boost and improve the user experience.
 
-## 13. Instructor Demo: { ACTIVITY NAME } (5 min) 
+* Remind students that the React unit is on the horizon and that much of what they've learned in this unit can be applied to learning React.
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Today's class will be focused on making our application installable on users' devices!
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+* The web applications we create can be configured to act like a native application.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+  * ☝️ What are some examples of native applications?
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * 🙋 Microsoft Word, Zoom . . . basically, any application that you need to install.
+
+  * ☝️ What are some benefits of a native application?
+
+  * 🙋 Native applications don't require an internet connection and desktop icon to work.
+
+* We also will be taking a look at a new API called IndexedDB which will unlock a more advanced front-end data storage option.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How have we stored data on the front end in the past?
+
+  * 🙋 Local storage!
+
+* We will be able to run CRUD operations and process data much more efficiently with IndexedDB versus local storage.
+
+* Answer any questions before proceeding to the next activity.
+
+## 13. Instructor Demo: IndexedDB (5 min)
+
+* Open `21-Ins_IndexedDB/assets/js/database.js` in your IDE and explain the following:
+
+  * 🔑 We have to install the `idb` package as a regular dependency and import it into the `database.js` file.
+
+    ```js
+    import { openDB } from 'idb';
+    ```
+
+  * The `idb` package is a lightweight wrapper that takes care of some of the more messy parts of IndexedDB. The main reason we are using the `idb` package is that it allows us to take advantage of async/await.
+
+  * We have created an asynchronous function called `initDB()`, which will immediately invoke the `OpenDB` method we imported earlier.
+
+    ```js
+    const initdb = async () =>
+      openDB('demo-db', 1, {
+    });
+    ```
+
+  * 🔑 The first argument is the name of the database we want, which is `demo-db`, followed by the version number.
+
+  * The version number allows us to check if our user is using an old version of our schema. This will be our only schema, so we will not have to worry about changing versions.
+
+  * A schema in IndexedDB is basically just a data store.
+
+  * 🔑 Next, we set the correct schema using the `upgrade` method.
+
+     ```js
+      const initdb = async () =>
+        openDB('demo-db', 1, {
+          upgrade(db) {
+          if (db.objectStoreNames.contains('demo-db')) {
+            console.log('demo-db database already exists');
+            return;
+          }
+
+          db.createObjectStore('demo-db', { keyPath: 'id', autoIncrement: true });
+          console.log('demo-db database created');
+        },
+    });
+    ```
+
+  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `creaateObjectStore()` method.
+
+  * 🔑 We use the `keyPath` property to specify the name of the key field in the `demo-db` object and set it to auto-increment.
+
+  * Finally, we call the `initDb()` function at the bottom of the `database.js` file.
+
+    ```js
+    initDb()
+    ```
+
+* Run `npm install` and `npm run start` and open up the `index.html` in the `dist` directory using Live Server.
+
+* Navigate to the Application tab in Chrome DevTools and demonstrate the following:
+
+  * 🔑 In the `IndexedDb` section, if we expand it, we can see the `demo-db` storage object.
+
+  * 🔑 By clicking on the storage object, we can already see the id field even though we have zero records.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 By using the `OpenDB()` from the `idb` package.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_IndexedDB/README.md`.
 
-### 14. Student Do: { ACTIVITY NAME } (15 min)
+### 14. Student Do: IndexedDB (15 min)
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `22-Stu_IndexedDB/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 📐 Add Comments to Implementation of IndexedDB
+
+  Work with a partner to add comments that describe the functionality of the code found in the [database.js](./Unsolved/src/js/database.js) file.
+
+  ## 📝 Notes
+
+  This activity takes place in Chrome DevTools; we will hook up the UI in later activities.
+
+  To launch the application and view the IndexedDB store in Chrome DevTools, follow these steps:
+
+  1. In the command line, navigate to `24-Stu_IndexedDB/Unsolved`.
+
+  2. Run `npm install`.
+
+  3. To launch the application, run `npm run start`.
+
+  4. Open the `index.html` file in the browser from the  `dist` directory.
+
+  5. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
+
+  Refer to the documentation:
+
+  * [NPM docs on IndexedDB](https://www.npmjs.com/package/idb)
+
+  * [MDN Web Docs on the IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How does an object store in IndexedDB compare to a table or collection in other databases?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 15. Instructor Review: IndexedDB (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with IndexedDB? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ Set up IndexedDB
 
-  * ✔️ @TODO { THAT }
+  * ✔️ Create an object store
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ Versions
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `22-Stu_IndexedDB/Solved/assets/js/database.js` in your IDE and explain the following:
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * We import in the `idb` package and create an asynchronous  `initDB()` function.
 
+    ```js
+    import { openDB } from 'idb';
+
+    const initdb = async () =>
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * 🔑 The `idb` package allows us to make IndexedDB asynchronous and cleans up a lot of the messy syntax that IndexedDB has.
+
+  * We call the `OpenDB()` method from the `idb` package.
+
+    ```js
+    const initdb = async () =>
+    openDB('todos', 1, {
+      upgrade(db) {
+        if (db.objectStoreNames.contains('todos')) {
+          console.log('todos database already exists');
+          return;
+        }
+
+        db.createObjectStore('todos', { keyPath: 'id', autoIncrement: true });
+        console.log('todos database created');
+      },
+    });
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 For the `OpenDB()` method, we pass in the name of our database and the version we want to use.
+
+  * 🔑 Next, we call the `upgrade()` function, which takes our database as an argument. Check to see if the object store already exists in the users' web browser.
+
+  * 🔑 Finally, we create a new object store if one doesn't already exist. The object store will always have an `id keyPath` that auto-increments for us.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ What does the `keyPath` do?
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 It automatically creates a new key to identify data records that are stored in the database.
+
+  * ☝️ On which tab in Chrome DevTools can we inspect our object store?
+
+  * 🙋 The Application tab under `IndexedDB`.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-## 16. Instructor Demo: { ACTIVITY NAME } (5 min) 
+## 16. Instructor Demo: IndexedDB CRUD (5 min)
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Open `23-Stu_IndexedDB-CRUD/assets/js/database.js` in your IDE and explain the following:
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * 🔑 To use the IndexedDB object store that we set up, we need to implement a CRUD operation.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * We create and export an asynchronous function called `postDb()`.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+    ```js
+    export const postDb = async (content) => {
+    };
+    ```
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * The `postDb()` function will accept the `content` that we want to store in the database as an argument.
+
+  * Next, we open a transaction with our database.
+
+    ```js
+    export const postDb = async (content) => {
+      const todosDb = await openDB('todos', 1);
+
+      const tx = todosDb.transaction('todos', 'readwrite');
+
+      const store = tx.objectStore('todos');
+
+      const request = store.add({ todo: content });
+
+      const result = await request;
+      console.log('🚀 - data saved to the database', result);
+    };
+    ```
+
+  * 🔑 We store the connection to our database inside a variable called `todosDb`.
+
+  * 🔑 Next, we create a new `transaction` that expects the database name and privileges. Because we are writing to the database, we need to set the privileges to `readwrite`.
+
+  * 🔑 Create a variable that will hold a reference to the object store.
+
+  * 🔑 Finally, we use the `add()` method that is attached to the object store and pass in the `contents`.
+
+  * Once we have finished writing to the database, we expect a result to confirm the transaction.
+
+  * Let's look at how we can retrieve all the data in the database.
+
+    ```js
+    // Export a function we will use to GET all from the database.
+    export const getAllDb = async () => {
+      // Create a connection to the database database and version we want to use.
+      const todosDb = await openDB('todos', 1);
+
+      // Create a new transaction and specify the database and data privileges.
+      const tx = todosDb.transaction('todos', 'readonly');
+
+      // Open up the desired object store.
+      const store = tx.objectStore('todos');
+
+      // Use the .getAll() method to get all data in the database.
+      const request = store.getAll();
+
+      // Get confirmation of the request.
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
+
+  * 🔑 This is similar to earlier, but this time we are using `getAll()` on the object store.
+
+  * Let's look at how we can retrieve a single record in the database.
+
+    ```js
+    export const getOneDb = async (id) => {
+      console.log('GET from the database');
+
+      // Create a connection to the database and version we want to use.
+      const todosDb = await openDB('todos', 1);
+
+      // Create a new transaction and specify the database and data privileges.
+      const tx = todosDb.transaction('todos', 'readonly');
+
+      // Open up the desired object store.
+      const store = tx.objectStore('todos');
+
+      // Use the .get() method to get a piece of data from the database based on the id.
+      const request = store.get(id);
+
+      // Get confirmation of the request.
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
+
+  * 🔑 This is similar to what we did earlier, but this time we are using `get()` on the object store and pass in the `id`.
+
+* Run `npm run dev` and open up the `localhost:8080` to demonstrate the following:
+
+  * Add an item to the TODO list and open the Application tab in Chrome DevTools. Under the `IndexedDB` section, inspect the contents of the object store.
+
+  * 🔑 We see that our data is now being stored and retrieved from the IndexedDB object store.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 We need to open a transaction with the desired object store, and use it to correct the method on our store.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_IndexedDB-CRUD/README.md`.
 
-### 17. Student Do: { ACTIVITY NAME } (15 min) 
+### 17. Student Do: IndexedDB CRUD (15 min)
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `24-Stu_IndexedDB-CRUD/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 🐛 The Delete Button Does Not Remove the List Item When Clicked
+
+  Work with a partner to resolve the following issues:
+
+  * As a user, I want to be able to delete a list item from a list when I click on the list item.
+
+  * As a user, I want to be able to edit a list item when I click the Edit button.
+
+  ## Expected Behavior
+
+  When a user clicks on an item, it is removed from the list of tasks.
+
+  When a user clicks on the Edit button, a text input is displayed with the list item to be edited. After pressing the Enter key, the list item is updated accordingly.
+
+  ## Actual Behavior
+
+  When a user clicks on the item, it is noy removed from the list of tasks.
+
+  When a user clicks the Edit button, a text input does not appear with the list item to be edited. After pressing the Enter key, the list item is not updated properly.
+
+  ## Steps to Reproduce the Problem
+
+  To reproduce the problem, follow these steps:
+
+  1. In the command line, navigate to `24-Stu_IndexedDB-CRUD/Unsolved`.
+
+  2. Run `npm install`.
+
+  3. To launch the application, run `npm run dev`.
+
+  4. Navigate to `http://localhost:8080` in your browser.
+
+  5. Create a new To Do item at the bottom of the page.
+
+  6. Click on a list item to attempt to delete it.
+
+  7. Click the Edit button to attempt to edit the list item.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Demo of the TODO list by adding, removing, and editing a list item.](./Assets/todo-list.gif)
+
+  ---
+
+  ## 💡 Hints
+
+  What types of permissions do you need to alter data inside a database?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How does the usage of CRUD operations with IndexedDB compare with their usage with SQL databases?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 18. Instructor Review: IndexedDB CRUD (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with CRUD in IndexedDB? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ IndexedDB CRUD
 
-  * ✔️ @TODO { THAT }
+  * ✔️ `.delete()`
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `.put()`
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `24-Stu_IndexedDB-CRUD/Solved/assets/js/database.js` in your IDE and explain the following:
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * 🔑 Because we are altering a record in the database, we need to use `readwrite` privileges in our transaction.
 
+    ```js
+    export const deleteDb = async (id) => {
+      console.log('DELETE from the database', id);
+      const todosDb = await openDB('todos', 1);
+      const tx = todosDb.transaction('todos', 'readwrite');
+      const store = tx.objectStore('todos');
+      const request = store.delete(id);
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
-    ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 We must use the `todos` database in the transaction for the proper data to be updated.
+
+    ```js
+    export const putDb = async (id, content) => {
+      console.log('PUT to the database');
+      const todosDb = await openDB('todos', 1);
+      const tx = todosDb.transaction('todos', 'readwrite');
+      const store = tx.objectStore('todos');
+      const request = store.put({ id: id, todo: content });
+      const result = await request;
+      console.log('🚀 - data saved to the database', result);
+    };
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ What is the name of the method to get all of the records in the database?
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 `getAll()`
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: { ACTIVITY NAME } (5 min) 
+## 19. Instructor Demo: Manifest (5 min)
 
-@TODO USE THE FOLLOWING FOR BROWSER AND/OR COMMAND LINE DEMOS, RESPECTIVELY. REMOVE IF UNUSED
+* Open `25-Ins_Manifest/manifest.json` in your IDE and explain the following:
 
-* Open `@TODO/folder/file` in your browser and demonstrate the following:
+  * 🔑 The `manifest.json` file is a JSON file that contains certain metadata about our web application that informs the user's browser or mobile device how to run the application.
 
-* Run `@TODO/folder/file { AND ARGS, IF ANY }` from the command line and demonstrate the following: 
+  * 🔑 For our web application, we have to provide a `name` property inside the `manifest.json` file.
 
-  * 🔑 @TODO { WHEN WE DO THIS, IT DOES THAT. }
+    ```json
+    {
+      "short_name": "Manifest",
+      "name": "TODOs Manifest Example",
+    }
+    ```
 
-  * 🔑 @TODO { WE ALSO SEE THESE THINGS. }
+  * We can optionally provide a `short_name` for our web application.
+
+  * 🔑 Next, we provide our `icons` for all different types of screens.
+
+    ```json
+    {
+      "short_name": "Manifest",
+      "name": "TODOs Manifest Example",
+      "icons": [
+        {
+          "src": "/assets/images/icon_96x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_128x128.png",
+          "type": "image/png",
+          "sizes": "128x128",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_192x192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_512x512.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "any maskable"
+        }
+      ],
+    }
+    ```
+
+  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application.
+
+  * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
+
+    ```json
+    {
+    "short_name": "Manifest",
+    "name": "TODOs Manifest Example",
+    "icons": [
+      {
+        "src": "/assets/images/icon_96x96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_128x128.png",
+        "type": "image/png",
+        "sizes": "128x128",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_512x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "/",
+    "description": "Keep track of important tasks!",
+    "background_color": "#7eb4e2",
+    "theme_color": "#7eb4e2"
+    }
+    ```
+
+  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
+
+* Open `25-Ins_Manifest/assets/js/install.js` in your IDE and explain the following:
+
+  * 🔑 When we launch the application in our browser, we will see an install button inside of the address bar.
+
+  * 🔑 We also can create our own install button, using the following:
+
+    ```js
+    const installBtn = document.getElementById("installBtn");
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        console.log('👍', 'beforeinstallprompt', event);
+        // Store the event so it can be used later.
+        window.deferredPrompt = event;
+        // Remove the 'hidden' class from the install anchor tag.
+        installBtn.classList.toggle('hidden', false);
+      });
+
+    installBtn.addEventListener('click', async () => {
+      console.log('👍', 'installBtn-clicked');
+      const promptEvent = window.deferredPrompt;
+      if (!promptEvent) {
+      return;
+      }
+      // Show the install prompt.
+      promptEvent.prompt();
+      // Show the result
+      const result = await promptEvent.userChoice;
+      console.log('👍', 'userChoice', result);
+      // Reset the deferred prompt variable, prompt() can only be used once.
+      window.deferredPrompt = null;
+      installBtn.classList.toggle('hidden', true);
+    });
+
+    window.addEventListener('appinstalled', (event) => {
+      console.log('👍', 'appinstalled', event);
+      // Clear the prompt
+      window.deferredPrompt = null;
+    });
+    ```
+
+  * We have connected our `<a>` tag to now launch the installation prompt.
+
+* Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
+
+  * 🔑 For the `manifest.json` file to work, you need a service worker in place. Here, we have just created a simple service worker that caches the assets.
+
+* Open `25-Ins_Manifest/index.html` in your IDE and explain the following:
+
+  * 🔑 For the `manifest.json` file to work, we need to import it into our `index.html` file.
+
+    ```html
+    <link rel="manifest" href="./manifest.json">
+    ```
+
+* Open `25-Ins_Manifest/index.html` with Live Server and demonstrate the following:
+
+  * Click the install button in the address bar.
+
+  * Click the Install! button on the webpage.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What file do we need to create an installable PWA?
 
-  * 🙋 @TODO { YES, HOW? } 
+  * 🙋 A `manifest.json` file!
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Manifest/README.md`.
 
-### 20. Student Do: { ACTIVITY NAME } (15 min) 
+### 20. Student Do: Manifest (15 min)
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+* Direct students to the activity instructions found in `26-Stu_Manifest/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  @TODO ADD ACTIVITY INSTRUCTIONS, TABBED ONCE OR TWICE (DEPENDING ON CODE SNIPPETS IN ACTIVITY INSTRUCTIONS)
+  # 📖 Implement a Manifest.json File with Webpack
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to be able to automatically generate a `manifest.json` file inside `dist` when I run my application.
+
+  ## Acceptance Criteria
+
+  * It is done when I can install my application as a Progressive Web App.
+
+  * It is done when I can see my `manifest.json` file generated inside Chrome DevTools.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  [Webpack PWA Manifest plugin documentation.](https://www.npmjs.com/package/webpack-pwa-manifest)
+
+  ---
+
+  ## 💡 Hints
+
+  How could our JSON be represented in a JavaScript object?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is each key in a `manifest.json` file responsible for?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: { ACTIVITY NAME } (10 min) 
+### 21. Instructor Review: Manifest (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with @TODO { TOPIC }? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with `manifest.json`? (Poll via Fist to Five, Slack, or Zoom)
 
-* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ @TODO { THIS }
+  * ✔️ `manifest.json`
 
-  * ✔️ @TODO { THAT }
+  * ✔️ Installable web applications
 
-  * ✔️ @TODO { THE OTHER }
+  * ✔️ `manifest.json` properties
 
-* Open `@TODO/folder/file` in your IDE and explain the following: 
+* Open `26-Stu_Manifest/Solved/webpack.config.js` in your IDE and explain the following:
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+  * 🔑 Install the webpack plugin `webpack-pwa-manifest`.
 
+    ```bash
+    npm install --save-dev webpack-pwa-manifest
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * Import the `webpack-pwa-manifest` package into your `webpack.config.js` file.
+
+    ```js
+    const WebpackPwaManifest = require('webpack-pwa-manifest');
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 Under the `plugins` property, declare a new plugin using `WebpackPwaManifest`.
+
+    ```js
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: './index.html',
+        }),
+
+        new GenerateSW(),
+        new WebpackPwaManifest({ }),
+
+      ],
+    ```
+
+  * 🔑 Fill out the JavaScript object with the properties that we saw inside the `manifest.json` file earlier.
+
+    ```js
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: './index.html',
+        }),
+
+        new GenerateSW(),
+        new WebpackPwaManifest({
+          name: 'TODOs',
+          short_name: 'TODOs',
+          description: 'Keep track of important tasks!',
+          background_color: '#7eb4e2',
+          theme_color: '#7eb4e2',
+          start_url: '/',
+          publicPath: '/',
+          icons: [
+            {
+              src: path.resolve('assets/images/logo.png'),
+              sizes: [96, 128, 192, 256, 384, 512],
+              destination: path.join('assets', 'icons'),
+            },
+          ],
+         }),
+
+      ],
+    ```
+
+* 🔑 You can see most of the JSON coordinates to a key in the JavaScript object, but we have two properties that look different.
+
+* 🔑 The `publicPath` tells webpack where to serve the bundled.
+
+* 🔑 The `icons` now generate the properly sized icons for us based on one provided image.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ @TODO { DO WE END OUR REVIEWS WITH A QUESTION? }
+  * ☝️ What is the name of the webpack plugin that we use to generate a `manifest.json` file?
 
-  * 🙋 @TODO { YES, WE DO! }
+  * 🙋 `webpack-pwa-manifest`
+
+  * ☝️ Do we need a service worker for us to use a `manifest.json` file?
+
+  * 🙋 Yes!
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 @TODO We can refer to supplemental material, read the [{ DOCS }]({ URL }), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Hooks/README.md`.
 
 ## 22. Everyone Do: Git (20 min)
 
-* @TODO Open [Git docs](https://git-scm.com/docs/{TITLE}) in your browser and explain the following:
+* Open the [Git Docs on Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in your browser and explain the following:
 
-  * @TODO GIVE A SHORT EXPLANATION OF THIS GIT CONCEPT/COMMAND.
+  * When working with a team, we often have a certain set of practices that we want everyone to follow when using a repository. Git hooks provide a convenient way to execute custom scripts when a certain action is performed in order to remind the team of the established rules.
 
-* Direct students to the activity instructions found in `@TODO/folder/file`.
+  * For example, if we want to add a reminder to our teammates about the way the commit message should be styled, we can set up a Git hook to listen for a commit event and then execute a script to send an automated reminder.
 
-* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  * Each Git hook is local to a single repository, and we must install the hook in each repository where we want the script to execute.
 
-* Open your command line and demonstrate the following:
+  * To install a Git hook, we either start with a pre-written sample hook provided by Git or write a custom hook on our own.
 
-  * @TODO { WE DO THIS AND THE RESULT IS THAT }
+* Direct students to the activity instructions found in `27-Evr_Git-Hooks/README.md`.
 
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+* Open the command line and demonstrate the following:
+
+  * 🔑 We initialize a new repository and enter `ls .git/hooks` to see a list of pre-written sample hooks that Git provides with each new repository.
+
+    ```bash
+    mkdir hook-test
+    cd hook-test
+    git init
+    ls .git/hooks
     ```
-    @TODO ADD CODE SNIPPET, TABBED TWICE (4 SPACES)
+
+  * Let's explore one of these hooks. We enter `code .git/hooks/pre-commit.sample` to open the `pre-commit` hook in VS Code.
+
+  * 🔑 We see that Git hooks are written as shell hooks, and this hook is executed before a commit is made to check if files that use non-ASCII names are being used. To apply this hook to our repository, we simply rename it and remove the `.sample` extension.
+
+    ```bash
+    mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
     ```
 
-  * 🔑 @TODO DON'T FORGET TO USE THE KEY EMOJI ON KEY POINTS, BUT ONLY KEY POINTS, NOT _EVERY_ POINT
+  * 🔑 We can also write our own custom hooks. To start, we add a new file in the `hooks` directory to hold our custom hook and set the permissions to execute.
+
+    ```bash
+    touch .git/hooks/post-checkout
+    chmod +x .git/hooks/post-checkout
+    code .git/hooks/post-checkout
+    ```
+
+  * We then add the shell script logic to set a safe list of issue/feature names, get the current branch, and check if the name matches a name in the safe list.
+
+    ```bash
+    #!/bin/sh
+    safelist=("main", "develop", "staging")
+    branch=$(git branch --show-current)
+    if [[ ! ${safelist[*]} =~ "$branch" ]] && [[ ! "$branch" =~ ^(issue/|feature/).* ]]
+    then
+      echo "Warning!"
+      echo 'If feature or issue branch, please use "issue/" or "feature/" prefix.'
+    fi
+    ```
+
+  * We can now use our new Git hook to set a reminder to use the team's naming convention within the repository.
 
 * Answer any questions before ending the class.
 
@@ -852,4 +1434,5 @@ In this class, students will learn how to use the workbox library to cache and s
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+---
+2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -6,19 +6,19 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `23-Stu-Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
-
-* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
-
-   ```sh
-   echo "SKIP_PREFLIGHT_CHECK=true" > .env
-   ```
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
 
 * The first activity for this unit will use `npx create-react-app`. The `npx` command allows us to run an executable binary locally without needing to install it globally first. In the context of React, it also ensures that students use the latest version of the utility.
 
 * When using the `create-react-app` utility to create a React app, the project directory will also automatically be created as part of the process. Students might be tempted to start by creating a directory for their project, which is not necessary and might actually cause some confusion. The name you provide to the command will be the directory name -- for example, `npx create-react-app my-app` creates a directory called `/my-app`. The name `my-app` will also be used as the name of the project inside the `package.json` file that is generated.
 
 * The practice app will be called `00-practice-app`, but the name isn't as important as it's location. The `00-practice-app` directory will be created in the `01-Activities` directory.
+
+* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
+
+   ```sh
+   echo "SKIP_PREFLIGHT_CHECK=true" > .env
+   ```
 
 * Each activity will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
@@ -54,9 +54,9 @@ By the end of class, students will be able to:
 
 | Start  | #   | Activity Name                        | Duration |
 |---     |---  |---                                   |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project        | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project             | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project      | 0:10     |
+| 10:00AM| 1   | Instructor Demo: Mini-Project        | 0:05     |
+| 10:05AM| 2   | Student Do: Mini-Project             | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini-Project      | 0:10     |
 | 11:15AM| 4   | Introduce Homework                   | 0:05     |
 | 11:20AM| 5   | FLEX                                 | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity       | 0:10     |
@@ -79,7 +79,9 @@ By the end of class, students will be able to:
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min)
+### 1. Instructor Demo: Mini-Project (5 min)
+
+* Welcome students to class.
 
 * Navigate to `28-Stu_Mini-Project/Main` in Unit 19 from the command line and run `npm install` and `npm run start`.
 
@@ -109,7 +111,7 @@ By the end of class, students will be able to:
 
 * Answer any questions before allowing students to start the mini-project.
 
-### 2. Student Do: Mini Project (60 min)
+### 2. Student Do: Mini-Project (60 min)
 
 * Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`, which are also shown below.
 
@@ -191,7 +193,7 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)
+### 3. Instructor Review: Mini-Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -652,7 +654,7 @@ By the end of class, students will be able to:
 
       * And most importantly, ask questions!
 
-* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` and demonstrate the following:
+* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `28-Stu_Mini-Project/Main/bucket-list` and demonstrate the following:
 
   * Run `npm install` and then `npm start` to begin the demonstration.
 
@@ -686,9 +688,9 @@ By the end of class, students will be able to:
 
 * In the command line, navigate to `01-Class-Content/20-React/01-Activities` and run the following command:
 
-   ```sh
-   npx create-react-app 00-practice-app
-   ```
+  ```sh
+  npx create-react-app 00-practice-app
+  ```
 
   * 🔑 When we run this command, the npm package runner, `npx`, will execute the latest version of the `create-react-app` utility.
 
@@ -698,27 +700,27 @@ By the end of class, students will be able to:
 
   * This process might take some time to complete. When it's done, you will see a boilerplate application in the `00-practice-app` directory, with the following file structure (excluding `node_modules`):
 
-     ```sh
-     ├── README.md
-     ├── package.json
-     ├── public
-     │   ├── favicon.ico
-     │   ├── index.html
-     │   ├── logo192.png
-     │   ├── logo512.png
-     │   ├── manifest.json
-     │   └── robots.txt
-     ├── src
-     │   ├── App.css
-     │   ├── App.js
-     │   ├── App.test.js
-     │   ├── index.css
-     │   ├── index.js
-     │   ├── logo.svg
-     │   ├── reportWebVitals.js
-     │   └── setupTests.js
-     └── yarn.lock
-     ```
+    ```sh
+    ├── README.md
+    ├── package.json
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── src
+    │   ├── App.css
+    │   ├── App.js
+    │   ├── App.test.js
+    │   ├── index.css
+    │   ├── index.js
+    │   ├── logo.svg
+    │   ├── reportWebVitals.js
+    │   └── setupTests.js
+    └── yarn.lock
+    ```
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
 
@@ -744,45 +746,45 @@ By the end of class, students will be able to:
 
 * Break students into pairs that will work together on this activity.
 
-   ```md
-   # 📐 Add Comments That Describe the Functionality of a React App
+  ```md
+  # 📐 Add Comments That Describe the Functionality of a React App
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
+  Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
 
-   To do this, follow these steps:
+  To do this, follow these steps:
 
-   1. In the command line, navigate to `20-React/01-Activities`.
+  1. In the command line, navigate to `20-React/01-Activities`.
 
-   2. Run the command `npx create-react-app 00-practice-app`.
+  2. Run the command `npx create-react-app 00-practice-app`.
 
-   3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+  3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
 
-   4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+  4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
 
-   5. Run `npm start` to ensure that the source files were transplanted successfully.
+  5. Run `npm start` to ensure that the source files were transplanted successfully.
 
-   ## Activity
+  ## Activity
 
-   Work with a partner to add comments that describe the functionality of the code in [00-practice-app/src](../00-practice-app/src).
+  Work with a partner to add comments that describe the functionality of the code in [00-practice-app/src](../00-practice-app/src).
 
-   ## 📝 Notes
+  ## 📝 Notes
 
-   Refer to the documentation:
+  Refer to the documentation:
 
-   [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
+  [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
 
-   ---
+  ---
 
-   ## 🏆 Bonus
+  ## 🏆 Bonus
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-   * What are some other flags that you can use with the `create-react-app` utility?
+  * What are some other flags that you can use with the `create-react-app` utility?
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 

@@ -14,9 +14,9 @@ In this class, you will introduce the concept of bundling an application using w
 
 * The first activity, `01-Ins_Lighthouse`, generates a Lighthouse report. Only performance is stressed, but it would be a good idea to mention accessibility, SEO, and best practices for further student investigation.
 
-* The `08-Stu_Webpack-Loader` activity uses ES modules to further demonstrate the use of Babel. All the other activities use CommonJS for modularization.
-
 * The student activity `06-Stu_Webpack-Bundle` is a debugging activity that contains two errors. To fix the app, students must import the `path` module and add `name` in the output of the `webpack.config.js`.
+
+* The `08-Stu_Webpack-Loader` activity uses ES modules to further demonstrate the use of Babel. All the other activities use CommonJS for modularization.
 
 * The `08-Stu_Webpack-Loader` activity contains a mock API request. The interest rate is fake data; make a point to tell students that.
 
@@ -35,7 +35,6 @@ In this class, you will introduce the concept of bundling an application using w
 * If you are comfortable doing so, live code the solutions to the activities. If not, use the solutions provided and follow the prompts and talking points for review.
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
-
 
 ## Learning Objectives
 
@@ -63,36 +62,33 @@ By the end of class, students will be able to:
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                             | Duration |
-|---     |---  |---                                        |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity            | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Lighthouse               | 0:05     |
-| 10:15AM| 3   | Student Do: Lighthouse                    | 0:15     |
-| 10:30AM| 4   | Instructor Review: Lighthouse             | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Webpack Intro            | 0:05     |
-| 10:45AM| 6   | Student Do: Webpack Intro                 | 0:15     |
-| 11:00AM| 7   | Instructor Review: Webpack Intro          | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Webpack Bundle           | 0:05     |
-| 11:15AM| 9   | Student Do: Webpack Bundle                | 0:15     |
-| 11:30AM| 10  | Instructor Review: Webpack Bundle         | 0:10     |
-| 11:40AM| 11  | Instructor Demo: Webpack Loader           | 0:05     |
-| 11:45AM| 12  | Student Do: Webpack Loader                | 0:15     |
-| 12:00PM| 13  | BREAK                                     | 0:30     |
-| 12:30PM| 14  | Instructor Review: Webpack Loader         | 0:10     |
-| 12:40PM| 15  | Instructor Demo: Webpack Plugin           | 0:05     |
-| 12:45AM| 16  | Student Do: Webpack Plugin                | 0:15     |
-| 1:00PM | 17  | Instructor Review: Webpack Plugin         | 0:15     |
-| 1:15PM| 18  | Instructor Do: Stoke Curiosity             | 0:10     |
-| 1:25PM| 19  | Instructor Demo: Hot Module Replacement    | 0:05     |
-| 1:30PM| 20  | Student Do: Hot Module Replacement         | 0:15     |
-| 1:45PM| 21  | Instructor Review: Hot Module Replacement  | 0:10     |
-| 1:55PM| 22  | Instructor Demo: WorkBox Service Workers   | 0:05     |
-| 2:00PM| 23  | Student Do: WorkBox Service Workers        | 0:15     |
-| 2:15PM| 24  | Instructor Review: WorkBox Service Workers | 0:15     |
-| 2:30PM| 25  | END                                        | 0:00     |
-
-
-
+| Start  | #   | Activity Name                              | Duration |
+|---     |---  |---                                         |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity             | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Lighthouse                | 0:05     |
+| 10:15AM| 3   | Student Do: Lighthouse                     | 0:15     |
+| 10:30AM| 4   | Instructor Review: Lighthouse              | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Webpack Intro             | 0:05     |
+| 10:45AM| 6   | Student Do: Webpack Intro                  | 0:15     |
+| 11:00AM| 7   | Instructor Review: Webpack Intro           | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Webpack Bundle            | 0:05     |
+| 11:15AM| 9   | Student Do: Webpack Bundle                 | 0:15     |
+| 11:30AM| 10  | Instructor Review: Webpack Bundle          | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Webpack Loader            | 0:05     |
+| 11:45AM| 12  | Student Do: Webpack Loader                 | 0:15     |
+| 12:00PM| 13  | BREAK                                      | 0:30     |
+| 12:30PM| 14  | Instructor Review: Webpack Loader          | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Webpack Plugin            | 0:05     |
+| 12:45AM| 16  | Student Do: Webpack Plugin                 | 0:15     |
+| 1:00PM | 17  | Instructor Review: Webpack Plugin          | 0:15     |
+| 1:15PM | 18  | Instructor Do: Stoke Curiosity             | 0:10     |
+| 1:25PM | 19  | Instructor Demo: Hot Module Replacement    | 0:05     |
+| 1:30PM | 20  | Student Do: Hot Module Replacement         | 0:15     |
+| 1:45PM | 21  | Instructor Review: Hot Module Replacement  | 0:10     |
+| 1:55PM | 22  | Instructor Demo: WorkBox Service Workers   | 0:05     |
+| 2:00PM | 23  | Student Do: WorkBox Service Workers        | 0:15     |
+| 2:15PM | 24  | Instructor Review: WorkBox Service Workers | 0:15     |
+| 2:30PM | 25  | END                                        | 0:00     |
 
 ---
 
@@ -198,11 +194,11 @@ By the end of class, students will be able to:
 
 ### 2. Instructor Demo: Lighthouse (5 min)
 
-* In your browswer, open the [Make My Trip website](https://www.makemytrip.com/).
+* In your browser, open the [Make My Trip website](https://www.makemytrip.com/).
 
 * Open the DevTools and click on the `>>` on the menu at the right. Select `Lighthouse` from the drop-down.
 
-* Select the `Performace`, `Progressive Web App`, `Best Practices`, `Accessibility` and `SEO` categories. For device, leave the default `mobile.` Leave any other options unchecked and click on `Generate Report'.
+* Select the `Performance`, `Progressive Web App`, `Best Practices`, `Accessibility` and `SEO` categories. For device, leave the default `mobile.` Leave any other options unchecked and click on `Generate Report'.
 
   * To get started, we'll focus on the main driver for high bounce rates, which are slow page loads.
 
@@ -320,7 +316,7 @@ By the end of class, students will be able to:
 
   * The `devDependencies` webpack and `webpack-cli` enable webpack to compile the bundles.
 
-  * 🔑 To create the devDependencies, use the command `npm install -D webpack webpack-cli`. When they are installed, they will appaer in the `package.json` as the following shows:
+  * 🔑 To create the devDependencies, use the command `npm install -D webpack webpack-cli`. When they are installed, they will appear in the `package.json` as the following shows:
 
   * 🔑 It is also important that we add the scripts to enable webpack to run in development mode and production mode, as the following shows:
 
@@ -449,7 +445,7 @@ By the end of class, students will be able to:
   * 🔑 The webpack and webpack-cli are installed as `devDependencies`.
 
     ```sh
-    npm install -D webpack wepack-cli
+    npm install -D webpack webpack-cli
     ```
 
   * 🔑 Add the npm scripts to run either the development mode or production mode of webpack from the terminal.
@@ -1083,8 +1079,6 @@ By the end of class, students will be able to:
   * Answer any questions before proceeding to the next activity.
 
 ### 18. Instructor Do: Stoke Curiosity (10 min)
-
-* Welcome students to class.
 
 * Progressive Web Apps and service workers first appeared in the browser in 2015. However, the concept was first discussed by Steve Jobs in 2007 just 18 days before the first iPhone shipped. At the time, Steve Jobs envisioned a way to create web applications that look and behave like native apps. The idea was to leverage the browser's native APIs to create a web application that could run on any device. We now know that history played out differently with the advent of the app store, but the concept remains relevant today.
 
