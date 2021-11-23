@@ -26,6 +26,8 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-S
 
 For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
 
+However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
+
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
@@ -35,7 +37,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [06.1 Lesson Plan](./01-Day_Fetch-Request/06.1-LESSON-PLAN.md)
 
   * [06.2 Lesson Plan](./02-Day_Fetch-Location/06.2-LESSON-PLAN.md)
-  
+
   * [06.3 Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
 
 ### Unit Homework
@@ -59,7 +61,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 ### Resources
 
   * [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
-  
+
   * [MDN Web Docs on the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
   * [MDN Web Docs on XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)

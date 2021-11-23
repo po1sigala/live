@@ -18,6 +18,8 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
   * Working collaboratively is an important skill to acquire as a developer.
 
+* There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
+
 * The Instructor Demo activities on the first day of Unit 07 ask you to create a project repository. You can create one on-the-fly or you may want to create on in advance.
 
 * Be sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
@@ -36,7 +38,7 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
 * There is no career services material for Unit 07.
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 08](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md). 
+* Remind students that related career services material can be found in their Career Connection folder for [Unit 08](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -57,11 +59,11 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [04.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
   * [04.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
-  
+
   * [04.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
   * [04.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
-  
+
   * [04.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
 ### Homework
