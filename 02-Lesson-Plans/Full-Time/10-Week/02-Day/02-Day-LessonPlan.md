@@ -1,1585 +1,1438 @@
-# 10.2 Full-Time Lesson Plan: PWAs and Webpack
+# 19.2 Full-Time Lesson Plan: Workbox, Caching, and Service Workers
 
 ## Overview
 
-Today's class will continue our journey into web performance by learning more about progressive web apps. We will start with our basic Gallery App and step by step, implement a web app manifest as well as a service worker. This new functionality will provide us with a fully functioning progressive web app that delivers an offline experience to our users. We will also learn about Webpack. Webpack is a module bundler, with its main purpose being bundling JavaScript files for use in a browser. Webpack provides a lot of functionality that developers can take advantage of to make their programs more performant.
+In this class, students will learn how to use the workbox library to cache and serve static assets. Students will also become familiar with the different methods workbox provides to create a service worker and learn some of the caching strategies that workbox provides out of the box. In addition, students will be introduced to IndexedDB, which allows developers to store large amounts of data on the client side.  We have used `localStorage` in the past for client-side storage, but we were very limited in the amount and type of data we could store. IndexedDB can help us store more data in more complex data structures.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `08-Ins_Manifest` through `22-Stu-Chunking`.
+* In this lesson, students will complete activities `15-Ins_Caching` through `27-Evr_Git-Hooks`.
 
-* You may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
+* This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
-* Some of today's activities use mongoDB to store data. It is recommended that you open a separate tab in your terminal and run `mongod`. Don't forget to kill the process at the end of class.
+  > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application.
 
-* It is recommended that you take some time to familiarize yourself with service workers before class begins. Specifically, look over the service worker lifecycle and caching and returning requests at https://developers.google.com/web/fundamentals/primers/service-workers/.
+* For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
 
-* Webpack can be a difficult tool to get your head around, so be as clear as possible in your explanations and be ready to answer plenty of student questions. It is recommended that you review the webpack [docs](https://webpack.js.org/concepts). You may want to read [Why Webpack](https://webpack.js.org/concepts/why-webpack) so that you are prepared to answer student questions like "Why are we learning this?".
+* In addition to using a private window, students can troubleshoot caching issues further by completely unregistering the service worker. This will allow the browser to cache the assets again. Details on how to do this will vary among browsers, but generally you can find the option to do this in the browser's developer tools.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Some of these activities rely on a browser response. If you are not seeing the intended results, please close your browser entirely and restart to begin a new browser session. This will often clear any issues.
 
-* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+* When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+* PWAs and IndexedDB can be frustrating at times, so take some time to familiarize yourself with the behavior of each activity. This is also a good opportunity for students to practice troubleshooting unexpected behaviors in their application.
+
+* Some of these activities rely on a browser response. If you are not seeing the intended results, please close your browser entirely and restart to begin a new browser session. This will often clear any issues.
+
+* When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
 ## Learning Objectives
 
-By the end of class, students will be able to:
+* Leverage caching strategies to optimize performance.
 
-* Explain the benefits a progressive web app offers a user over a traditional app.
+* Execute a full-stack application with a server and client-side development server.
 
-* Implement and explain the role of a web app manifest.
+* Implement IndexedDB inside a JavaScript application.
 
-* Implement and explain the role of a service worker.
+* Implement CREATE, READ, UPDATE, and DELETE commands for an IndexedDB instance.
 
-* Successfully cache and fetch files to deliver them in an offline experience.
-
-* Install a PWA on both desktop and mobile devices
-
-* Create a basic Webpack configuration file.
-
-* Bundle their JavaScript code into a single file.
-
-* Add Webpack plugins to their Webpack configs.
-
-* Convert web applications to PWA using Webpack 
-
-* Perform code splitting using webpack.
+* Convert an existing application into a Progressive Web Application (PWA).
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                               | Duration |
-|---     |---  |---                                          |---       |
-| 10:00AM| 1   | Instructor Demo: Manifest                   | 0:05     |
-| 10:05AM| 2   | Student Do: Manifest                        | 0:15     |
-| 10:20AM| 3   | Instructor Review: Manifest                 | 0:10     |
-| 10:30AM| 4   | Instructor Demo: Service Workers            | 0:05     |
-| 10:35AM| 5   | Student Do: Service Workers                 | 0:15     |
-| 10:50AM| 6   | Instructor Review: Service Workers          | 0:10     |
-| 11:00AM| 7   | Instructor Demo: Caching Fetching Files     | 0:05     |
-| 11:05AM| 8   | Student Do: Caching Fetching Files          | 0:15     |
-| 11:20AM| 9   | Instructor Review: Caching Fetching Files   | 0:10     |
-| 11:30AM| 10  | Instructor Demo: Trip Planner PWA           | 0:05     |
-| 11:35AM| 11  | Student Do: Trip Planner PWA                | 0:25     |
-| 12:00PM| 12  | BREAK                                       | 0:30     |
-| 12:30PM| 13  | Instructor Review: Trip Planner PWA         | 0:10     |
-| 12:40PM| 14  | Instructor Demo: Intro to Webpack           | 0:05     |
-| 12:45PM| 15  | Student Do: Budget Tracker                  | 0:10     |
-| 12:55PM| 16  | Instructor Review: Budget Tracker           | 0:05     |
-| 1:00PM | 17  | Instructor Demo: Bundle Analyzer Plugin     | 0:05     |
-| 1:05PM | 18  | Student Do: Gallery App with Webpack        | 0:10     |
-| 1:15PM | 19  | Instructor Review: Gallery App with Webpack | 0:05     |
-| 1:20PM | 20  | Instructor Demo: Pure Functions             | 0:10     |
-| 1:30PM | 21  | Student Do: Pure Functions                  | 0:15     |
-| 1:45PM | 22  | Instructor Review: Pure Functions           | 0:10     |
-| 1:55PM | 23  | Instructor Demo: Chunking                   | 0:10     |
-| 2:05PM | 24  | Student Do: Chunking                        | 0:15     |
-| 2:20PM | 25  | Instructor Review: Chunking                 | 0:10     |
-| 2:30PM | 26  | END                                         | 0:00     |
+| Start  | #   | Activity Name                                     | Duration |
+|---     |---  |---                                                |---       |
+| 10:00AM| 1   | Instructor Demo: Cache CSS and JavaScript Files   | 0:05     |
+| 10:05AM| 2   | Student Do: Cache CSS and JavaScript Files        | 0:15     |
+| 10:20AM| 3   | Instructor Review: Cache CSS and JavaScript Files | 0:10     |
+| 10:30AM| 4   | Instructor Demo: Caching Images                   | 0:05     |
+| 10:35AM| 5   | Student Do: Caching Images                        | 0:15     |
+| 10:50AM| 6   | Instructor Review: Caching Images                 | 0:10     |
+| 11:00AM| 7   | Instructor Demo: Client-Server Model              | 0:05     |
+| 11:05AM| 8   | Student Do: Client-Server Model                   | 0:15     |
+| 11:20AM| 9   | Instructor Review: Client-Server Model            | 0:10     |
+| 11:30AM| 10  | FLEX                                              | 0:30     |
+| 12:00PM| 11  | BREAK                                             | 0:30     |
+| 12:30PM| 12  | Instructor Do: Stoke Curiosity                    | 0:10     |
+| 12:40PM| 13  | Instructor Demo: IndexedDB                        | 0:05     |
+| 12:45PM| 14  | Student Do: IndexedDB                             | 0:15     |
+| 1:00PM | 15  | Instructor Review: IndexedDB                      | 0:10     |
+| 1:10PM | 16  | Instructor Demo: IndexedDB CRUD                   | 0:05     |
+| 1:15PM | 17  | Student Do: IndexedDB CRUD                        | 0:15     |
+| 1:30PM | 18  | Instructor Review: IndexedDB CRUD                 | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Manifest                         | 0:05     |
+| 1:45PM | 20  | Student Do: Manifest                              | 0:15     |
+| 2:00PM | 21  | Instructor Review: Manifest                       | 0:10     |
+| 2:10PM | 22  | Everyone Do: Git                                  | 0:20     |
+| 2:30PM | 23  | END                                               | 0:00     |
 
 ---
 
 ## Class Instruction
 
-### 1. Instructor Demo: Manifest (5 min) 
+### 1. Instructor Demo: Cache CSS and JavaScript Files (5 min)
 
 * Welcome students to class.
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+* Navigate to `15-Ins_Caching` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
 
-  * ✔️ `manifest.webmanifest` is JSON file providing information for mobile and desktop installation
-  
-  * ✔️ Manifest properties are referred to as members
-  
-* Open [08-Ins_Manifest/manifest.webmanifest](../../../../01-Class-Content/19-PWA/01-Activities/08-Ins_Manifest/manifest.webmanifest) in your IDE and explain the following: 
+* **Important:** Unlike the previous instructor demos, this one will not open the browser automatically. This is by design so that you can see the caching strategy messages in the console as the page loads for the first time.
 
-  * 🔑 A web app manifest is a simple JSON file containing some metadata about a web application. 
-  
- ```js
-  {
-    "short_name": "Demo",
-    "name": "Web App Manifest Demo",
-    "icons": [
-      {
-        "src": "/assets/images/icons-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/images/icons-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
+* Open a new incognito window in your browser and then open the developer console in the new window. Once you have the window open with the developer console in view, navigate to `http://localhost:8080`.
+
+  * 🔑 When we run this application, we see a page with a few modules being loaded, as we saw with the Hot Module Replacement activity. This isn't the interesting part, however.
+
+  * 🔑 As the page loads, we can see some messages in the console that tell us what is happening in response to our caching strategy.
+
+  * 🔑 In order to take advantage of these caching strategies, we will use a new method to generate the service worker called `InjectManifest`. This method is used to inject a manifest file into the service worker on the fly.
+
+  * 🔑 `InjectManifest`, much like the `GenerateSW` method, accepts a configuration object and is added to the `plugins` array in our webpack configuration, as shown in the webpack configuration snippet below:
+
+    ```js
+     plugins: [
+    new HtmlWebpackPlugin({
+        title: 'Caching',
+        template: './index.html',
+      }),
+      new InjectManifest({
+        swSrc: './src/sw.js',
+      }),
     ],
-    "start_url": "/",
-    "background_color": "	#808080",
-    "display": "standalone",
-    "theme_color": "#808080"
-  } 
-  ```
-  * 🔑 Each of the properties in our manifest file is referred to as a **member**.
+    ```
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * 🔑 On the initial load, we see messages in the console that tell us that there was no cached response found in `static-resources`. This is in part because of the caching strategy we are using, as shown in the following snippet:
 
-  * ☝️ What do we think the difference is between `name` and `short_name`?
+    ```console
+    workbox | Router is responding to: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css
+    workbox | Router is responding to: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
+    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
+    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
+    workbox | Router is responding to: /index.bundle.js
+    ```
 
-  * 🙋 `short_name` is used on the home screen and in the application menu
-  
-  * ☝️ What are "icons"?
+  * 🔑 This kind of response is expected for the first visit because our current caching strategy checks to see if we have a cached response to return first. Because we don't have a cached response to return, we will have to fetch the resource from the network.
 
-  * 🙋 The `icons` array contains information about the thumbnail images used when installing the PWA on mobile or desktop
+  * 🔑 This kind of strategy is called the `StaleWhileRevalidate` caching strategy. This strategy will first check to see if there is a cached response, and if there is, it will return that response. Otherwise, it will fetch the response from the network and update the cache.
 
-  * ☝️ What is the `start_url` member?
+  * 🔑 On subsequent visits, we will see a message in the console that tells us that we have a cached response in `static-resources`. This is a result of the cached response being returned, as shown in the following screenshot:
 
-  * 🙋 Defines what page is opened when the app is first launched (start_url).
-  
-  * ☝️ What does the `display` member do?
+    ```console
+    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
+    logger.js:50 | Found a cached response in the 'static-resources' cache. Will update with the network response in the background.
+    ```
 
-  * 🙋 By using a web app manifest, our app can tell the browser you want your app to open in a standalone window
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why does the `StaleWhileRevalidate` strategy sound like a good choice for static assets on a webpage?
+
+  * 🙋 `StaleWhileRevalidate` is a good choice for static assets because it allows us to respond quickly from the cache, but also update resources in the background.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `09-Stu_Manifest/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Caching`.
 
-### 2. Student Do: Manifest (15 min) 
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
 
-* Direct students to the activity instructions found in `09-Stu_Manifest/README.md`.
+### 2. Student Do: Cache CSS and JavaScript Files (15 min)
+
+* Direct students to the activity instructions found in `16-Stu_Caching/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Web App Manifest
+  # 📖 Implement Caching for CSS and JS Files
 
-  In this activity, you will write your first progressive web application manifest.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to cache the CSS and JS files so that I don't have to download them every time I load a page.
 
-  * Using the instructor demo as a guide, create a manifest for the Image Gallery app.
+  * As a developer, I want to implement workbox caching strategies so that I can improve the performance of the app.
 
-    * 🤔 Where do you create the `manifest.webmanifest` in the application architecture?
+  ## Acceptance Criteria
 
-    * 🤔 How do you deploy a manifest? Hint: You will need to somehow link it with the web page. (See [Web App Manifest - Deploying a manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Deploying_a_manifest_with_the_link_tag).)
+  * It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-  * When finished, run the commands:
+  * It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
-    * `npm install`
+  * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
-    * `npm run seed`
+  * It is done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-    * `npm start`
+  * It is done when I have registered a route for the caching of static assets (e.g., JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't pre-cached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
 
-  * Navigate to [localhost:3000](localhost:3000) and open `DevTools > Application > Manifest` to verify successful loading of the manifest.
+  ## 📝 Notes
 
-  ## 💡 Hint(s)
+  Refer to the documentation:
 
-  Read the [MDN Web App Manifest documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) 
+  * [Google docs on common recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
+
+  ## 💡 Hints
+
+  * What does the `staleWhileRevalidate` strategy do? Is there another strategy that could be used?
+
+  * What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 
   ## 🏆 Bonus
 
-  * Add additional members to your manifest.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the difference between `GenerateSW` and `InjectManifest`?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Manifest (10 min) 
+### 3. Instructor Review: Cache CSS and JavaScript Files (10 min)
 
-* Use the prompts and talking points below to review the following key point(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * The web app manifest tells the browser about your web application and how it should behave once installed. 
+  * ☝️ How comfortable do you feel with caching JS and CSS files? (Poll via Fist to Five, Slack, or Zoom)
 
-* Open [09-Stu_Manifest/Solved/public/manifest.webmanifest](../../../../01-Class-Content/19-PWA/01-Activities/09-Stu_Manifest/Solved/public/manifest.webmanifest) in your IDE and explain the following:
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * We give our PWA a name and short name. These can have different values, but for the sake of simplicity, we give them the same value.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * There are numerous icons for our app, starting at the size of `72x72` through `512x512`.
+  * ✔️ `injectManifest`
 
-  * We set both the theme color and the background color to be white.
+  * ✔️ Caching strategies
 
-  * We tell the app to run in standalone mode, which means the web app will look and feel like a standalone native app. The app runs in its own window, separate from the browser, and hides standard browser UI elements like the URL bar.
+  * ✔️ `swSrc`
 
-  * 📝 The other display modes we could specify are `fullscreen`, `minimal-ui`, and `browser`.
+* Open `16-Stu_Caching/Solved/webpack.config.js` in your IDE and explain the following:
 
-  ```json
-    {
-    "name": "Images App",
-    "short_name": "Images App",
-    "icons": [
-      {
-        "src": "assets/images/icons/icon-72x72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-      },
-      ...
-      {
-        "src": "assets/images/icons/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
+  * To have proper caching, we need to use a caching strategy. And to use a caching strategy, we need to generate a service worker using the `InjectManifest` plugin.
+
+  * 🔑 The `InjectManifest` plugin is used to inject a manifest file into the service worker on the fly. We start off by importing it into our webpack config.
+
+    ```js
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    const { InjectManifest } = require('workbox-webpack-plugin');
+    ```
+
+* Open `src/index.js` in your IDE to demonstrate the following:
+
+  * As with all service workers, we need to register a service worker in our `src/index.js` file. We start off by registering a new `Workbox` service worker.
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      const wb = new Workbox('/sw.js');
+
+      wb.register();
+    }
+    ```
+
+* Open `16-Stu_Caching/Solved/webpack.config.js` in your IDE and explain the following:
+
+  * Now that we have the logic to register our service worker, and we imported the `InjectManifest` plugin, we need to add the `InjectManifest` plugin to our `plugins` array.
+
+  * 🔑 One of the options that we can pass to the `InjectManifest` constructor is the `swSrc` property. This property specifies the location of the service worker file that contains our own custom code for caching.
+
+  * Here is a sample of the the `InjectManifest` plugin in the `plugins` array:
+
+    ```js
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Caching',
+        template: './index.html',
+      }),
+
+      new InjectManifest({
+        swSrc: './src/sw.js',
+      }),
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "start_url": "/",
-    "display": "standalone"
-  }  
-  ```
+    ```
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* Open `Solved/src/sw.js` in your IDE to demonstrate the following:
 
-  * ☝️ Which file do we include the `manifest.webmanifest` in?
+  * The service worker is where all of our logic for caching assets is located. We can see that the starer code already has the `StaleWhileRevalidate` caching strategy imported for us.
 
-  * 🙋 `index.html` 
+  * The `StaleWhileRevalidate` strategy will try to serve the cached version of the resource if it is available, but if the cached version is not available, it will make a network request, serve the asset, and store the cached version of the resource in the background.
 
-  * ☝️ What's next on our list of things to do?
-  
-  * 🙋 Add a service worker!
+  * With the `StaleWhileRevalidate` strategy, every request that is served from the cache is accompanied by a request to the server to check and see if a newer version is available. If a newer version is available, the cached version is updated and served to the user on the next request.
 
-* Answer any questions before proceeding to the next activity.
+  * We match the assets by using the `destination` property on the `request` object. This property is a string that contains the path to the asset. In our case, we are looking for those destinations that include style or script files, as shown in the handler below:
 
-### 4. Instructor Demo: Service Workers (5 min) 
+    ```js
+    const matchCallback = ({ request }) => {
+      return (request.destination === 'style' || request.destination === 'script' );
+    };
+    ```
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+  * Next, we have to register the route in our service worker. We do this by using the `staleWhileRevalidate` constructor.
 
-  * ✔️ A service worker is a script that your browser runs in the background on a separate thread from your webpage.
+    ```js
+    registerRoute(
+      matchCallback,
+      new StaleWhileRevalidate({
+        cacheName,
+        plugins: [
+          // This plugin will cache responses with these headers to a maximum-age of 30 days
+          new CacheableResponsePlugin({
+            statuses: [0, 200],
+          }),
+        ],
+      })
+    );
+    ```
 
-  * ✔️ Certain functionality can _only_ be implemented from within a service worker, such as caching assets in order to make the application useable without an internet connection or notifying the browser that the application should be installable.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔️ **Cache API** Similar to localstorage and indexedDB in that this browser API is used for storing data. However Cache API can be used to store entire all front end assets such as images, javascript, HTML, CSS, etc. along with API responses.
+  * ☝️ How does the `StaleWhileRevalidate` caching strategy work?
 
-  * ✔️ **Thread** A thread is an independent set of values for the processor that controls what executes in what order. Think of this as another JavaScript application running at the same time as our main application, with the ability to communicate and pass data between threads.
+  * 🙋 The `StaleWhileRevalidate` will try to serve the cached version of the resource if it is available, but if the cached version is not available, it will make a network request, serve the asset and store the cached version of the resource in the background.
 
-  * ✔️ Service workers have a lifecycle that consists of 3 main parts.
+  * ☝️ What can we do if we don't completely understand this?
 
-  * ✔️ **Installation**: The service worker creates a version-specific cache.
-
-  * ✔️ **Waiting**: The updated service worker waits until the existing service worker is no longer controlling clients. This step is often skipped with a function, since service workers rarely exist past a new service workers installation.
-
-  * ✔️ **Activation**: This event fires after the service worker has been installed and the previous one has been removed.
-
-* Navigate to [10-Ins_Service_Workers](../../../../01-Class-Content/19-PWA/01-Activities/10-Ins_Service_Workers) and run the following commands in your terminal:
-
-  ```
-  npm install
-  npm run seed
-  node server.js
-  ```
-
-* In a separate tab, run `mongod`.
-
-* Open your Chrome Dev Tools > Application and demonstrate that the service worker has been registered and installed
-
-  * When our app launches, it registers and installs the service worker.
-
-  * Using the Chrome Dev Tools, we can unregister the service worker.
-
-  * Now, if we refresh the page, we can see that the service worker was installed and registered again.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What are the 2 main steps in service worker lifecycle?
-
-  * 🙋 Installation and activation. There is also a waiting step that is often skipped. 
+  * 🙋 We can refer to supplemental material, read the [Google docs on common recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `11-Stu_Service_Workers/README.md`.
+### 4. Instructor Demo: Caching Images (5 min)
 
-### 5. Student Do: Service Workers (15 min) 
+* Navigate to `17-Ins_Caching-Images` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
 
-* Direct students to the activity instructions found in `11-Stu_Service_Workers/README.md`.
+  * 🔑 When we run the `npm run dev` command, we can see in the browser that our demo is now serving images inside two of the modules.
+
+  * 🔑 This demo also uses the `InjectManifest` plugin to inject a manifest file into the service worker on the fly.
+
+  * 🔑 The key difference, however, is that we are now using the `CacheFirst` caching strategy.
+
+  * 🔑 This strategy is very straightforward and does what the name suggests. The service worker will always look first to the cache and fall back to the network if a cached version is not available.
+
+  * 🔑 The `CacheFirst` strategy is a perfect choice for optimizing repetitive requests, since it only reaches out to the network for "fresh" assets.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 Building a route for images is very similar to building a route for CSS and JavaScript files. The only difference is that we match the `images` destination and invoke the `CacheFirst` constructor when registering the route.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Caching-Images/README.md`.
+
+### 5. Student Do: Caching Images (15 min)
+
+* Direct students to the activity instructions found in `18-Stu_Caching-Images/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Registering A Service Worker
+  # 🐛 Images Are Not Being Cached Properly
 
-  In this activity you will be registering your first service worker.
+  Work with a partner to resolve the following issue:
 
-  ## Instructions
+  * As a developer, I want to be able to rely on the browser to cache images so that I can create a faster application for the end user.
 
-  * Add the following script just above the `</body>` tag in `index.html`
+  ## Expected Behavior
 
-  ```html
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("service-worker.js")
-          .then(reg => {
-            console.log("We found your service worker file!", reg);
-          });
-      });
-    }
-  </script>
+  The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify that the cache is working properly by opening the developer console, clicking the Application tab in DevTools and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, network requests for images will be responded to by the service worker with a 200 response.
+
+  ## Actual Behavior
+
+  When a user visits the page after the first time, the browser is still making network requests to the server to retrieve the images.
+
+  ## Steps to Reproduce the Problem
+
+  To reproduce the problem, follow these steps:
+
+  1. Start the dev server by running `npm run dev`.
+
+  2. Open a new browser tab and navigate to `http://localhost:3000/`.
+
+  3. Open Chrome DevTools, click the Network tab, and notice that there are multiple requests to the server for the images that were not cached.
+
+  ## Assets
+
+  The following image demonstrates the properly functioning network requests to the cache:
+
+  ![Network tab of chrome based browser showing 200 status codes](./Images/network.png)
+
+  ---
+
+  ## 💡 Hints
+
+  What is a cache miss and how can we use the advanced recipe to resolve this issue?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is the Cache Storage API? How do we use it?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
-
-  * Create a `service-worker.js` file in the `public` directory and add the following line of code.
-
-  ```js
-  console.log("Hi from your service-worker.js file!");
-  ```
-
-  * Refresh your Gallery App or launch it with `npm start` if it is not running.
-
-  * Open your Chrome Dev Tools > Application and navigate to the Service Worker tab. Check to see if your service worker file was successfully found. You should see two messages, one from the `service-worker.js` file and one from the script tag that you put in your `index.html` file.
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 6. Instructor Review: Service Workers (10 min) 
+### 6. Instructor Review: Caching Images (10 min)
 
-* Use the prompts and talking points below to review the following key point(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔️ We are adding an event listener to our window element, listening for the `load` event.
+  * ☝️ How comfortable do you feel with caching images using Workbox? (Poll via Fist to Five, Slack, or Zoom)
 
-  * ✔️ We register our service worker using the `navigator` object.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * ✔️ We console.log a message letting us know that the service worker registration was successful.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Open [11-Stu_Service_Workers/Solved/public/index.html](../../../../01-Class-Content/19-PWA/01-Activities/11-Stu_Service_Workers/Solved/public/index.html) and explain the following points:
+  * ✔️ `CacheFirst`
 
-  * We tell the browser to register our service worker file.
+  * ✔️ `ExpirationPlugin`
 
-  ```html
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("service-worker.js")
-          .then(reg => {
-            console.log("We found your service worker file!", reg);
-          });
-      });
-    }
-  </script>
-  ```
+* Open `18-Stu_Caching-Images/Solved/src/sw.js` in your IDE and explain the following:
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * 🔑 In order to cache images, we need to use the `CacheFirst` caching strategy. This strategy needs to be imported from the `workbox-strategies` package. We added this on to our existing import for the `staleWhileRevalidate` strategy.
 
-  * ☝️ What step of the service worker lifecycle have we just completed? 
+    ```js
+    import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+    ```
 
-  * 🙋 The registration step. 
+  * 🔑 The `CacheFirst` strategy is a good choice for images because the same images are often requested multiple times in a short period of time.
+
+  * To use the `CacheFirst` strategy, we need to register the route with the `CacheFirst` constructor. We can do this by using the `registerRoute` method.
+
+  * Any requests that have a destination of `images` will be handled by the `CacheFirst` strategy.
+
+    ```js
+    registerRoute(
+      ({ request }) => request.destination === 'image',
+        new CacheFirst({})
+      );
+    ```
+
+  * 🔑 The `ExpirationPlugin` is a plugin that will automatically remove stale assets from the cache. This plugin needs to be imported from the `workbox-expiration` package.
+
+    ```js
+    import { ExpirationPlugin } from 'workbox-expiration';
+    ```
+
+  * The `ExpirationPlugin` will be included inside the `CacheFirst` constructor and will accept a cache name and a number of options.
+
+  * We also provided some options to the `ExpirationPlugin` constructor. We can use the `maxAgeSeconds` option to set the maximum age of the asset in the cache. This will remove assets that are older than the specified number of seconds.
+
+  * We can also use the `maxEntries` option to set the maximum number of assets that can be stored in the cache. This will prevent the cache from growing too large.
+
+    ```js
+      new CacheFirst({
+      cacheName: 'my-image-cache',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 60,
+          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+        }),
+      ],
+    })
+    ```
+
+  * Let's test our work by running the `npm i && npm run dev` command again from the root of the `/Solved` directory. This time, we can see that the images are now being cached. Specifically, after a few refreshes, the browser will show a new cache called `my-image-cache` that contains the images.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some challenges that you encountered with caching images?
+
+  * 🙋 Caching images can be difficult to troubleshoot due to cors issues. We can use the `cors-anywhere` package to proxy requests to the server, or we can make sure that the images are served from the same domain as the server.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Workbox docs on caching images](https://developers.google.com/web/tools/workbox/guides/common-recipes), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Caching Fetching Files (5 min) 
+### 7. Instructor Demo: Client-Server Model (5 min)
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+* Navigate to `19-Ins_Client-Server` in your terminal and run `npm i` to install all dependencies and demonstrate the following:
 
-  * ✔️ All files that need to be cached are stored as strings in an array.
+  * Instead of opening the browser right away, run `npm run` to list the available commands.
 
-  * ✔️ All files that need to be cached are precached in the `install` step.
+  * Notice that the list of available commands reflects the scripts that are defined in the `package.json` file.
 
-  * ✔️ The `activate` step clears out the all outdated caches.
+  * 🔑 If we run `ls` in the terminal, we should also see that this demo is split up into two directories: `client` and `server`. Both of which have their own `package.json` files, in addition to the `package.json` file for the root directory.
 
-  * ✔️ The `fetch` listener intercepts all fetch requests and uses data from the cache to return a response.
+  * 🔑 We have two directories because we want to separate our front-end code from our back-end code in order to prepare for the future. This separation will allow us to create a more modular and reusable codebase, especially when we start working with React or any other front-end framework that uses a bundler such as webpack.
 
-* Open [12-Ins_Caching_Fetching_Files/](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/) in your IDE and run the following commands:
+  * 🔑 One thing we need to think about is deployment. Let's say that we have an application that has an Express server and a front-end client. We would need some way to spin up the server and the client on the same machine using a single command, while also having the server and client running on different ports.
 
-  * `npm install`
+  * 🔑 We can use the `concurrently` command to run multiple commands at the same time.
 
-  * `npm start`
+  * In the next activity, we will learn how to use the `concurrently` command to run multiple commands at the same time.
 
-* Navigate to [localhost:3000](http://localhost:3000) in your browser and explain the following points:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * If we inspect our Sources with DevTools, we can see that our service worker is running on a separate thread.
+  * ☝️ How would we build this?
 
-  ![Threads](Images/sw-threads.png)
-
-* Open [12-Ins_Caching_Fetching_Files/public/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/service-worker.js) in your IDE and explain the following: 
-
-  * Now that we have successfully registered our service worker, we'll step through the code that will install and activate it. This will give our service worker the ability to cache the files we tell it to and deliver them in an offline experience for our users.
-
-  * Our `FILES_TO_CACHE` variable keeps track of each file that we want to store in our cache. 
-
-  * This is an array of _files_ only, attempting to include entire folders won't work.
-
-  📝 The `ALL_CAPS_SEPARATED_BY_UNDERSCORES` style is just standard convention for the global variables in our service worker. 
-
-  ```js
-  const FILES_TO_CACHE = [
-    "/",
-    "/index.html",
-    "/assets/css/style.css",
-    "/assets/js/loadPosts.js",
-    "/assets/images/Angular-icon.png",
-    "/assets/images/React-icon.png",
-    "/assets/images/Vue.js-icon.png",
-    "/manifest.webmanifest",
-    ...
-    ...
-  ];
-
-  // set cache variable names
-  const CACHE_NAME = 'static-cache-v2';
-  const DATA_CACHE_NAME = 'data-cache-v1';
-  ```
-
-  * Inside our install event listener callback we open our cache and call `addAll`, passing in `FILES_TO_CACHE`.
-
-  ```js
-  // install
-  self.addEventListener('install', function(evt) {
-    evt.waitUntil(
-      caches.open(CACHE_NAME).then(cache => {
-        console.log('Your files were pre-cached successfully!');
-        return cache.addAll(FILES_TO_CACHE);
-      })
-    );
-
-  // skipWaiting() ensures that any new versions of our service worker will take over the page and become activated immediately
-    self.skipWaiting();
-  });
-  ```
-
-  * Inside the activate event listener callback, we activate our service worker, cleaning up outdated caches.
-
-  ```js
-  // activate
-  self.addEventListener('activate', function(evt) {
-    evt.waitUntil(
-      caches.keys().then(keyList => {
-        return Promise.all(
-          keyList.map(key => {
-            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-              console.log('Removing old cache data', key);
-              return caches.delete(key);
-            }
-          })
-        );
-      })
-    );
-
-  // Tells our new service worker to take over.
-    self.clients.claim();
-  });
-  ```
-
-  * Here we modify the service worker to handle requests to `/api` and store the responses in our cache, so we can easily access them later.
-
-  ```js
-  // fetch
-  self.addEventListener('fetch', function(evt) {
-    if (evt.request.url.includes('/api/')) {
-      console.log('[Service Worker] Fetch (data)', evt.request.url);
-
-      evt.respondWith(
-        caches.open(DATA_CACHE_NAME).then(cache => {
-          return fetch(evt.request)
-            .then(response => {
-              // If the response was good, clone it and store it in the cache.
-              if (response.status === 200) {
-                cache.put(evt.request.url, response.clone());
-              }
-
-              return response;
-            })
-  ```
-
-  * If the network request fails, we try to get the response from our cache.
-
-  ```js
-    .catch(err => {
-      return cache.match(evt.request);
-    });
-  ```
-
-  * _**Note for instructor:** You will notice that the api requests are not cached on the first visit, when the service worker is installed for the first time. Solutions to deal with this case are most likely too complicated to introduce at this point in the class. Simply refresh the page to allow the service worker to cache the api request making the posts from the database available when the page is viewed offline._
-
-  * If the request path does not include `/api`, then we will assume the requests is for a static file. The file is returned from the cache if a matching request is found and falls back to fetching the resource if nothing is cached.
-
-  ```js
-  evt.respondWith(
-    caches.match(evt.request).then(function(response) {
-      return response || fetch(evt.request);
-    })
-  );
-  ```
-
-* Open [12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js](../../../../01-Class-Content/19-PWA/01-Activities/12-Ins_Caching_Fetching_Files/public/assets/js/loadPosts.js) in your IDE and explain the following: 
-
-  * We are going to skip past the DOM element creation and focus on the handling of our "like" POST request. 
-
-  * When a user likes a post, we increment it's `data-likes` attribute by 1.
-
-  ```js
-  function incrementLikes(event) {
-    const statusEl = document.querySelector("#status")
-
-    const id = event.currentTarget.getAttribute("id");
-    const oldLikes = parseFloat(event.currentTarget.getAttribute("data-likes"));
-    const likes = oldLikes + 1;
-
-    event.currentTarget.setAttribute("data-likes", likes);
-
-    statusEl.innerText = "";
-  ```
-
-  * `incrementLikesRequest` makes an API call, then sets a status DOM element at the top of the page to let the user know whether or not their save was successful. 
-
-  ```js
-  incrementLikesRequest(id, likes)
-    .then(() => {
-      statusEl.innerText = "Save successful!"
-      updateLikesDisplay(id, likes, true)
-    })
-    .catch(() => {
-      statusEl.innerText = "Sorry, your 'like' cannot be recorded while you are offline."
-      updateLikesDisplay(id, likes, false)
-    });
-  ```
-
-  * In `updateLikesDisplay` we indicate to the user whether or not their likes count is up to date by appending `(not saved)` to the like count for each post.
-
-  ```js
-  function updateLikesDisplay(id, likes, saved) {
-    const likesCount = document.querySelector(`#likes-count-${id}`);
-    likesCount.innerText = `Likes: ${likes}`;
-    if(!saved) {
-      likesCount.innerText += " (not saved)";
-    }
-  }
-  ```
-
-* There is quite a bit of code here so take the time to step through it, clarifying any questions as you go.
-
-  * Our service worker is caching all of the files we tell it to so when a user doesn't have a connection, it can deliver them an offline browsing experience. If a user is offline, we must make sure that they can still use the application as much as possible, even if this means letting them know their data won't be saved until later.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What kind of events do we have to listen for in our service worker file?
-
-  * 🙋 Install and activate. We also listen for `fetch` if our application interacts with an API. 
+  * 🙋 We would start by moving our entire application into a single directory called `client`. We would then create a new directory called `server` and add a simple Express.js server to it. Finally, we could update our `package.json` file to include the `concurrently` package and update our `start` script to run the `concurrently` command.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `13-Stu_Caching_Fetching_Files/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Client-Server/README.md`.
 
-### 8. Student Do: Caching Fetching Files (15 min) 
+### 8. Student Do:  Client-Server Model (15 min)
 
-* Direct students to the activity instructions found in `13-Stu_Caching_Fetching_Files/README.md`.
+* Direct students to the activity instructions found in `20-Stu_Client-Server/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # The Offline Experience
+  # 🏗️ Start the Client and Back-End Servers Simultaneously
 
-  In this activity you will be enabling functionality to allow your application to work offline.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to be able to start the client and back-end servers simultaneously so that I can test the full application, not just the client.
 
-  * Open a terminal and start `mongod` if it isn't already running.
+  ## Acceptance Criteria
 
-  * Open another terminal and run the commands:
+  * It is done when I have moved the existing code into a new `client` folder.
 
-    * `npm install`
+  * It is done when I have created a simple Express server in the `server` folder.
 
-    * `npm run seed`
+  * It is done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
 
-    * `npm start`
+  * It is done when I have installed the `concurrently` npm package at the root of the project.
 
-  * Add the following code to your `service-worker.js` file.
+  * It is done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
 
-  * Copy/Type out the following code snippets when adding them to your application, it will help you solidify what you are doing!
+  * It is done when I am able to start the client and the backend server concurrently by running `npm start`.
 
-  * As you go through each step, keep your Chrome Develop tools open to monitor your progress and debug if needed.
+  ---
 
-    1. Uncomment the code to set up cache files in `service-worker.js`.
+  ## 💡 Hints
 
-    ![Files To Cache](Images/cache-code.png)
+  * `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
 
-    2. Add code to install and register your service worker.
+  * Remember to close any other servers that you may have running to free up the needed ports.
 
-    ```js
-    // install
-    self.addEventListener("install", function (evt) {
-      // pre cache image data
-      evt.waitUntil(
-        caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/images"))
-        );
-        
-      // pre cache all static assets
-      evt.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
-      );
+  ## 🏆 Bonus
 
-      // tell the browser to activate this service worker immediately once it
-      // has finished installing
-      self.skipWaiting();
-    });
-    ```
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    3. If done successfully, you should see your static cache in your Application tab.
+  * What is a proxy server?
 
-    ![Static Cache](Images/static-cache.png)
-
-    4. Add code to activate the service worker and remove old data from the cache.
-
-    ```js
-    self.addEventListener("activate", function(evt) {
-      evt.waitUntil(
-        caches.keys().then(keyList => {
-          return Promise.all(
-            keyList.map(key => {
-              if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-                console.log("Removing old cache data", key);
-                return caches.delete(key);
-              }
-            })
-          );
-        })
-      );
-
-      self.clients.claim();
-    });
-    ```
-
-    5. Enable the service worker to intercept network requests.
-
-    ```js
-    self.addEventListener('fetch', function(evt) {
-    // code to handle requests goes here
-    });
-    ```
-
-    6. Serve static files from the cache. Proceed with a network request when the resource is not in the cache. This code allows the page to be accessible offline. (This code should be placed in the function handling the `fetch` event.)
-
-    ```js
-    evt.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(evt.request).then(response => {
-          return response || fetch(evt.request);
-        });
-      })
-    );
-    ```
-
-    7. Type the remaining code to cache responses for requests for data. The function handling the `fetch` event should resemble the following:
-
-    ![Fetch](Images/fetch-code.png)
-
-    If done successfully you will see your data cache in your Application tab. At this point you should be able to put your application in offline mode for an offline experience.
-
-    ![Data Cache](Images/data-cache.png)
-
-    ![Offline](Images/offline.png)
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 9. Instructor Review: Caching Fetching Files (10 min) 
+### 9. Instructor Review: Client-Server Model (10 min)
 
-* Open [13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/13-Stu_Caching_Fetching_Files/Solved/public/service-worker.js) in your IDE and explain the following: 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * First we set up the files that we need to cache.
+  * ☝️ How comfortable do you feel with the client server model? (Poll via Fist to Five, Slack, or Zoom)
 
-  ```js
-  const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/favicon.ico',
-    '/manifest.webmanifest',
-    '/assets/css/style.css',
-    '/assets/js/loadImages.js',
-    '/assets/images/icons/icon-72x72.png',
-    '/assets/images/icons/icon-96x96.png',
-    '/assets/images/icons/icon-128x128.png',
-    '/assets/images/icons/icon-144x144.png',
-    '/assets/images/icons/icon-152x152.png',
-    '/assets/images/icons/icon-192x192.png',
-    '/assets/images/icons/icon-384x384.png',
-    '/assets/images/icons/icon-512x512.png',
-    '/assets/images/1.jpg',
-    '/assets/images/2.jpg',
-    '/assets/images/3.jpg',
-    '/assets/images/4.jpg',
-    '/assets/images/5.jpg',
-    // ...
-  ];
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  const CACHE_NAME = 'static-cache-v2';
-  const DATA_CACHE_NAME = 'data-cache-v1';
-  ```
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Then, we install and register our service worker.
+  * ✔️ `express`
 
-  ```js
-  self.addEventListener('install', function(evt) {
-    evt.waitUntil(
-      caches.open(CACHE_NAME).then(cache => {
-        console.log('Your files were pre-cached successfully!');
-        return cache.addAll(FILES_TO_CACHE);
-      })
-    );
+  * ✔️ `ports`
 
-    self.skipWaiting();
-  });
-  ```
+  * ✔️ Separate `client` and `server` directories
 
-  * If done successfully, we should see our static cache in our Application tab.
+* Navigate to `20-Stu_Client-Server` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
 
-  ![Static Cache](Images/static-cache.png)
+  * 🔑 When we run this command, we notice that our terminal beings to start both the client's start command and the backend Express.js server.
 
-  * Next we activate our service worker.
+    ```console
+    concurrently "cd server && npm run server" "cd client && npm run dev"
+    ```
 
-  ```js
-  self.addEventListener('activate', function(evt) {
-    evt.waitUntil(
-      caches.keys().then(keyList => {
-        return Promise.all(
-          keyList.map(key => {
-            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-              console.log('Removing old cache data', key);
-              return caches.delete(key);
-            }
-          })
-        );
-      })
-    );
+  * 🔑 We can see that because of our root level `dev` command, we invoke `concurrently` to run both the client and the backend server at the same time.
 
-    self.clients.claim();
-  });
-  ```
+  * The server is navigated to first, and then the `npm run server` command is invoked. This will start the Express server and listen on port `3000`.
 
-  * Lastly, we handle all fetching for any request with a url that includes `/api/`.
+* Open `Solved/server/server.js` in your IDE to demonstrate the following:
 
-  * If the response is successful, we clone it and store it in our cache.
+  * Notice that the static HTML route is configured to serve the contents of the `client/dist` directory.
 
-  * If the network request fails, we grab it from our cache.
+     ```js
+     const express = require('express');
 
-  ```js
-  self.addEventListener('fetch', function(evt) {
-    if (evt.request.url.includes('/api/')) {
-      evt.respondWith(
-        caches.open(DATA_CACHE_NAME).then(cache => {
-          return fetch(evt.request)
-            .then(response => {
-              if (response.status === 200) {
-                cache.put(evt.request.url, response.clone());
-              }
+     const app = express();
+     const PORT = process.env.PORT || 3000;
 
-              return response;
-            })
-            .catch(err => {
-              return cache.match(evt.request);
-            });
-        })
-      );
+     app.use(express.static('../client/dist'));
+     app.use(express.urlencoded({ extended: true }));
+     app.use(express.json());
 
-      return;
-    }
+     require('./routes/htmlRoutes')(app);
 
-    evt.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(evt.request).then(response => {
-          return response || fetch(evt.request);
-        });
-      })
-    );
-  });
-  ```
+     app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
+     ```
 
-  * If done successfully we will see your data cache in your Application tab. At this point we should be able to put our application in offline mode for an offline experience.
+  * 🔑 Remember that the `dist` directory is the output of our webpack build.
 
-  ![Data Cache](Images/data-cache.png)
+  * There is also a single HTML route that serves the contents of the `client/dist/index.html` file.
 
-  ![Offline](Images/offline.png)
-  
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+     ```js
+     module.exports = (app) =>
+       app.get('/', (req, res) =>
+         res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+       );
+     ```
 
-  * ☝️ What does a service worker do?
+* Open `Solved/package.json` in your IDE to demonstrate the following:
 
-  * 🙋 A service worker acts as an intermediate step in between an API call and the browser. It can cache files and help provide an offline experience.
+  * Now let's review the other half of our `concurrently` command , `cd client && npm run start`. In this case, the `npm run` command will invoke the `webpack && webpack-serve` command to build the client's application and run a server that watches for changes.
 
-  * ☝️ When using a service worker, can we send POST requests to an API while offline?
+  * The resulting `dist` directory is the output of our webpack build.
 
-  * 🙋 No, POST/PUT requests must be handled separately. If we wish to "cache" the POST data, we can store it in IndexedDb.
+  * 🔑 We already set up an Express.js server in the `server` directory, which will serve the static HTML file found in the `client/dist` directory, so we don't need to do anything else.
 
-  * ☝️ How many times does the install event run for each service worker? 
+  * 🔑 **Important:** You may be asking yourself, "Why don't we just run the `npm run dev` command in the `client` directory?" The answer is that the `webpack-dev-server` is meant to be a tool for development, and not a replacement for a production server. Additionally, running two servers with one bash command makes it hard to keep track of different outputs. For example, if one process fails, others still keep running and you won't even notice the difference.
 
-  * 🙋 Once.
+* Run `npm start` from the root of the `Solved` directory and visit `http://localhost:3000` in your browser to demonstrate the final result.
 
-  * ☝️ What does `self.skipWaiting()` do? 
+* Notice that our application is now running just as it did before, but now we have the infrastructure to run both the client and the backend server at the same time if we wanted to.
 
-  * 🙋 `self.skipWaiting()` forces the service worker to activate as soon as it's finished installing.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How does concurrent server/client development work?
+
+  * 🙋 The idea is that we can run both the client and the backend server at the same time when developing, and when it comes time to deploy, we can run the build command for the client, and then the server command for the backend.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Open-CLI Docs on concurrently](https://github.com/open-cli-tools/concurrently), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding.
 
-## 10. Instructor Demo: Trip Planner PWA (5 min) 
+### 10. FLEX (30 min)
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+* This time can be utilized for reviewing key topics learned so far in this unit.
 
-* Navigate to [14-Stu_Map-PWA](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA/Solved) and demonstrate the following functionality: 
+### 11. BREAK (30 min)
 
-  * Open up the Chrome Developer Tools and navigate to the `Service Worker` tab. Here, let's toggle the offline version and refresh the app.
+### 12. Instructor Do: Stoke Curiosity (10 min)
 
-  ![offline mode](./Images/offline.png)
+* Congratulate the class on learning how to implement new web technologies such as webpack and workbox. These tools can give our applications a performance boost and improve the user experience.
 
-  * Just like our other two apps, all of our resources have been cached and do not require a connection to access.
+* Remind students that the React unit is on the horizon and that much of what they've learned in this unit can be applied to learning React.
 
-  * Also demonstrate the PWA install icon in the browser address bar with the PWA logo prompt.
+* Today's class will be focused on making our application installable on users' devices!
+
+* The web applications we create can be configured to act like a native application.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are some examples of native applications?
+
+  * 🙋 Microsoft Word, Zoom . . . basically, any application that you need to install.
+
+  * ☝️ What are some benefits of a native application?
+
+  * 🙋 Native applications don't require an internet connection and desktop icon to work.
+
+* We also will be taking a look at a new API called IndexedDB which will unlock a more advanced front-end data storage option.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How have we stored data on the front end in the past?
+
+  * 🙋 Local storage!
+
+* We will be able to run CRUD operations and process data much more efficiently with IndexedDB versus local storage.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Map-PWA/README.md`.
+## 13. Instructor Demo: IndexedDB (5 min)
 
-### 11. Student Do: Trip Planner PWA (25 min)
+* Open `21-Ins_IndexedDB/assets/js/database.js` in your IDE and explain the following:
 
-* Direct students to the activity instructions found in `14-Stu_Map-PWA/README.md`.
+  * 🔑 We have to install the `idb` package as a regular dependency and import it into the `database.js` file.
+
+    ```js
+    import { openDB } from 'idb';
+    ```
+
+  * The `idb` package is a lightweight wrapper that takes care of some of the more messy parts of IndexedDB. The main reason we are using the `idb` package is that it allows us to take advantage of async/await.
+
+  * We have created an asynchronous function called `initDB()`, which will immediately invoke the `OpenDB` method we imported earlier.
+
+    ```js
+    const initdb = async () =>
+      openDB('demo-db', 1, {
+    });
+    ```
+
+  * 🔑 The first argument is the name of the database we want, which is `demo-db`, followed by the version number.
+
+  * The version number allows us to check if our user is using an old version of our schema. This will be our only schema, so we will not have to worry about changing versions.
+
+  * A schema in IndexedDB is basically just a data store.
+
+  * 🔑 Next, we set the correct schema using the `upgrade` method.
+
+     ```js
+      const initdb = async () =>
+        openDB('demo-db', 1, {
+          upgrade(db) {
+          if (db.objectStoreNames.contains('demo-db')) {
+            console.log('demo-db database already exists');
+            return;
+          }
+
+          db.createObjectStore('demo-db', { keyPath: 'id', autoIncrement: true });
+          console.log('demo-db database created');
+        },
+    });
+    ```
+
+  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `creaateObjectStore()` method.
+
+  * 🔑 We use the `keyPath` property to specify the name of the key field in the `demo-db` object and set it to auto-increment.
+
+  * Finally, we call the `initDb()` function at the bottom of the `database.js` file.
+
+    ```js
+    initDb()
+    ```
+
+* Run `npm install` and `npm run start` and open up the `index.html` in the `dist` directory using Live Server.
+
+* Navigate to the Application tab in Chrome DevTools and demonstrate the following:
+
+  * 🔑 In the `IndexedDb` section, if we expand it, we can see the `demo-db` storage object.
+
+  * 🔑 By clicking on the storage object, we can already see the id field even though we have zero records.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 By using the `OpenDB()` from the `idb` package.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_IndexedDB/README.md`.
+
+### 14. Student Do: IndexedDB (15 min)
+
+* Direct students to the activity instructions found in `22-Stu_IndexedDB/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Create a PWA
+  # 📐 Add Comments to Implementation of IndexedDB
 
-  For this activity you are going to convert the Trip Planner website into a PWA.
+  Work with a partner to add comments that describe the functionality of the code found in the [database.js](./Unsolved/src/js/database.js) file.
 
-  This activity only requires a front-end since service workers and `manifest.webamanifest` file run on the web. Make sure to open the `index.html` file with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+  ## 📝 Notes
 
-  ## Instructions
+  This activity takes place in Chrome DevTools; we will hook up the UI in later activities.
 
-  * Refer back to the activities we previously worked through to help you accomplish the following steps.
+  To launch the application and view the IndexedDB store in Chrome DevTools, follow these steps:
 
-    * Link the app manifest to the website - the `manifest.webamanifest` file has been created for you.
+  1. In the command line, navigate to `24-Stu_IndexedDB/Unsolved`.
 
-    * Install the service worker to cache static assets - the service worker has been registered for you.
+  2. Run `npm install`.
 
-    * Retrieve cached files for an offline experience.
+  3. To launch the application, run `npm run start`.
 
-    * Download the PWA.
+  4. Open the `index.html` file in the browser from the  `dist` directory.
 
-  ## BONUS
+  5. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
 
-  * Can we use the Cache Storage in the browser to store dynamic requests from the user, for example from a web form? If not, then what can we use?
+  Refer to the documentation:
 
-  Use Google or another search engine to research the preceding topic. 
+  * [NPM docs on IndexedDB](https://www.npmjs.com/package/idb)
+
+  * [MDN Web Docs on the IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How does an object store in IndexedDB compare to a table or collection in other databases?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 12. BREAK (30 min)
+### 15. Instructor Review: IndexedDB (10 min)
 
-### 12. Instructor Review: Trip Planner PWA (10 min) 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Open [14-Stu_MAP-PWA/Solved/index.html](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map_PWA/Solved/index.html) in your IDE and explain the following: 
+  * ☝️ How comfortable do you feel with IndexedDB? (Poll via Fist to Five, Slack, or Zoom)
 
-  * We add the link to the `webmanifest.manifest` file in the `<head>`.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  ```html
-  <link rel="manifest" href="./manifest.webmanifest" />
-  ```
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Open [14-Stu_Map-PWA/Solved/service-worker.js](../../../../01-Class-Content/19-PWA/01-Activities/14-Stu_Map-PWA/Solved/service-worker.js) in your IDE and explain the following: 
+  * ✔️ Set up IndexedDB
 
-  * The files we need to cache are `index.html`, `style.css`, and the image files; `brandenburg.jpg`, `reichstag.jpg`, and `map.jpg`
+  * ✔️ Create an object store
 
-  * Our cache will be named `static`.
+  * ✔️ Versions
 
-  * When the install event is emitted, we will add all of our specified files to the `static` cache.
+* Open `22-Stu_IndexedDB/Solved/assets/js/database.js` in your IDE and explain the following:
 
-  ```js
-  // install event handler
-  self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('static').then((cache) => {
-        return cache.addAll([
-          './',
-          './index.html',
-          './assets/css/style.css',
-          './assets/images/brandenburg.jpg',
-          './assets/images/reichstag.jpg',
-          './assets/images/map.jpg'
-        ]);
-      })
-    );
-    console.log('Install');
-    self.skipWaiting();
-  });
-  ```
+  * We import in the `idb` package and create an asynchronous  `initDB()` function.
 
-  * 📝 The `fetch` call will retrieve the assets from the cache when the network call isn't possible.
+    ```js
+    import { openDB } from 'idb';
 
-  ```js
-  // retrieve assets from cache
-  self.addEventListener('fetch', event => {
-    event.respondWith(
-      caches.match(event.request).then( response => {
-        return response || fetch(event.request);
-      })
-    );
-  });
-  ```
+    const initdb = async () =>
+    ```
 
-* Answer any questions before proceeding to the next activity.
+  * 🔑 The `idb` package allows us to make IndexedDB asynchronous and cleans up a lot of the messy syntax that IndexedDB has.
 
-## 14. Instructor Demo: Intro to Webpack (5 min) 
+  * We call the `OpenDB()` method from the `idb` package.
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+    ```js
+    const initdb = async () =>
+    openDB('todos', 1, {
+      upgrade(db) {
+        if (db.objectStoreNames.contains('todos')) {
+          console.log('todos database already exists');
+          return;
+        }
 
-  * ☝️ In terms of performance, what are the skills we have learned so far?
+        db.createObjectStore('todos', { keyPath: 'id', autoIncrement: true });
+        console.log('todos database created');
+      },
+    });
+    ```
 
-  * 🙋 Compression, minification, lazy-loading, and caching.
+  * 🔑 For the `OpenDB()` method, we pass in the name of our database and the version we want to use.
 
-  * ☝️ What if our application has dependencies? Do we minify those by-hand?
+  * 🔑 Next, we call the `upgrade()` function, which takes our database as an argument. Check to see if the object store already exists in the users' web browser.
 
-  * 🙋 No, that would be inefficient and take a long time.
+  * 🔑 Finally, we create a new object store if one doesn't already exist. The object store will always have an `id keyPath` that auto-increments for us.
 
-  * ☝️ Today we're learning webpack. What do you think webpack does?
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * 🙋 Webpack is a module bundler. What this means is that Webpack takes our JavaScript and all of its dependencies and bundles it into a single file.
+  * ☝️ What does the `keyPath` do?
 
-* There are two main phases to a module bundler.
+  * 🙋 It automatically creates a new key to identify data records that are stored in the database.
 
-  * Dependency Resolution
+  * ☝️ On which tab in Chrome DevTools can we inspect our object store?
 
-  * Packing
+  * 🙋 The Application tab under `IndexedDB`.
 
-* Navigate to [15-Ins-Webpack-Intro/](../../../../01-Class-Content/19-PWA/01-Activities/15-Ins-Webpack-Intro/) from the command line and run:
+  * ☝️ What can we do if we don't completely understand this?
 
-  * `npm install webpack webpack-cli -D`
-
-* Open `webpack.config.js` in your IDE and point out the following:
-
-  * In order to use Webpack, we need to provide a configuration file that Webpack will use to build off of.
-
-  * Entry is the main JavaScript file that our application uses.
-
-  * Output is an object describing the bundle that Webpack will build. The path property is the folder that the file will be created in. In this configuration, we are telling Webpack that the output file should be in a folder named `dist` and the file itself should be named `bundle.js`.
-
-  * In the dependency resolution phase, Webpack looks for an entry point. When the entry point is identified the main purpose of dependency resolution is to scan and gather all of the pieces of code and dependencies required to make the code function. The map of required code and dependencies is referred to as a _dependency graph_. Once this graph as been made, we continue to the packing phase.
-
-  * Setting the mode property allows us to create custom configurations for different environments. In this configuration, we are specifying that this build should be used for development.
-
-```js
-const config = {
-  entry: "./src/app.js",
-  output: {
-    path: __dirname + "/dist",
-    filename: "bundle.js"
-  },
-  mode: "development"
-};
-module.exports = config;
-```
-
-* Open `package.json` in your IDE and point out the following:
-
-  * 📝 Adding `-D` to the npm install command causes the packages to be saved as "devDependencies" in the `package.json`. While "dependencies" are dependencies that are used at runtime, "devDependencies" are meant to be packages that are only needed in development.
-
-  * The JavaScript bundle that Webpack creates does **not** need Webpack to run.
-
-  * We have added the script "build" so that when `npm run build` is ran, it executes `webpack --watch`. This command will watch over your entry point(s) for changes and build again if any files are changed.
-
-```json
-{
-  "name": "webpack-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "build": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
-  }
-}
-```
-
-* Run `webpack` from the command line and explain the following:
-
-  * Running `webpack` created a new folder named `dist` with the new bundle inside a file named `bundle.js`.
-
-  * Webpack takes the dependency graph that was created and then packs all of the code and dependencies necessary into an output file specified within the configuration file.
-
-* Open the file `dist/app.js` in your IDE.
-
-  * Show that the JavaScript is a minified bundle of `src/app.js` and any dependencies it has.
-
-  * Use `Find` with your IDE to point out that the minified bundle contains `console.log` from `src/app.js`.
-
-* Open `index.html` in your IDE.
-
-  * Point out that we have to update the script tag so that it uses our new webpack build.
-
-  ```html
-  <script type="text/javascript" src="./dist/bundle.js"></script>
-  ```
-
-* Now open `index.html` in your browser and point out the following:
-
-  * `Hello webpack` appears in the console, coming from the file `bundle.js`.
-
-* Lastly run `npm run build` from the command line and explain the following:
-
-  * The build script set up in `package.json` runs and watches for any changes in our files, similar to how `nodemon` watches for changes. In order to kill the process, type `Ctrl + C` in your terminal.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu-Webpack-Intro/README.md`.
+## 16. Instructor Demo: IndexedDB CRUD (5 min)
 
-### 15. Student Do: Budget Tracker (10 min)
+* Open `23-Stu_IndexedDB-CRUD/assets/js/database.js` in your IDE and explain the following:
 
-* Direct students to the activity instructions found in `16-Stu-Webpack-Intro/README.md`.
+  * 🔑 To use the IndexedDB object store that we set up, we need to implement a CRUD operation.
+
+  * We create and export an asynchronous function called `postDb()`.
+
+    ```js
+    export const postDb = async (content) => {
+    };
+    ```
+
+  * The `postDb()` function will accept the `content` that we want to store in the database as an argument.
+
+  * Next, we open a transaction with our database.
+
+    ```js
+    export const postDb = async (content) => {
+      const todosDb = await openDB('todos', 1);
+
+      const tx = todosDb.transaction('todos', 'readwrite');
+
+      const store = tx.objectStore('todos');
+
+      const request = store.add({ todo: content });
+
+      const result = await request;
+      console.log('🚀 - data saved to the database', result);
+    };
+    ```
+
+  * 🔑 We store the connection to our database inside a variable called `todosDb`.
+
+  * 🔑 Next, we create a new `transaction` that expects the database name and privileges. Because we are writing to the database, we need to set the privileges to `readwrite`.
+
+  * 🔑 Create a variable that will hold a reference to the object store.
+
+  * 🔑 Finally, we use the `add()` method that is attached to the object store and pass in the `contents`.
+
+  * Once we have finished writing to the database, we expect a result to confirm the transaction.
+
+  * Let's look at how we can retrieve all the data in the database.
+
+    ```js
+    // Export a function we will use to GET all from the database.
+    export const getAllDb = async () => {
+      // Create a connection to the database database and version we want to use.
+      const todosDb = await openDB('todos', 1);
+
+      // Create a new transaction and specify the database and data privileges.
+      const tx = todosDb.transaction('todos', 'readonly');
+
+      // Open up the desired object store.
+      const store = tx.objectStore('todos');
+
+      // Use the .getAll() method to get all data in the database.
+      const request = store.getAll();
+
+      // Get confirmation of the request.
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
+
+  * 🔑 This is similar to earlier, but this time we are using `getAll()` on the object store.
+
+  * Let's look at how we can retrieve a single record in the database.
+
+    ```js
+    export const getOneDb = async (id) => {
+      console.log('GET from the database');
+
+      // Create a connection to the database and version we want to use.
+      const todosDb = await openDB('todos', 1);
+
+      // Create a new transaction and specify the database and data privileges.
+      const tx = todosDb.transaction('todos', 'readonly');
+
+      // Open up the desired object store.
+      const store = tx.objectStore('todos');
+
+      // Use the .get() method to get a piece of data from the database based on the id.
+      const request = store.get(id);
+
+      // Get confirmation of the request.
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
+
+  * 🔑 This is similar to what we did earlier, but this time we are using `get()` on the object store and pass in the `id`.
+
+* Run `npm run dev` and open up the `localhost:8080` to demonstrate the following:
+
+  * Add an item to the TODO list and open the Application tab in Chrome DevTools. Under the `IndexedDB` section, inspect the contents of the object store.
+
+  * 🔑 We see that our data is now being stored and retrieved from the IndexedDB object store.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We need to open a transaction with the desired object store, and use it to correct the method on our store.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_IndexedDB-CRUD/README.md`.
+
+### 17. Student Do: IndexedDB CRUD (15 min)
+
+* Direct students to the activity instructions found in `24-Stu_IndexedDB-CRUD/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Budget Tracker
+  # 🐛 The Delete Button Does Not Remove the List Item When Clicked
 
-  In this activity we will create a bundle.js file with Webpack.
+  Work with a partner to resolve the following issues:
 
-  ## Instructions
+  * As a user, I want to be able to delete a list item from a list when I click on the list item.
 
-  * Run the following command: `npm install webpack webpack-cli -D`
+  * As a user, I want to be able to edit a list item when I click the Edit button.
 
-  * Create a file called `webpack.config.js`.
+  ## Expected Behavior
 
-  * Using the entry point of `src/app.js`, make Webpack output a bundle file in a folder called `dist/`.
+  When a user clicks on an item, it is removed from the list of tasks.
 
-  * In `index.html`, change the JavaScript file src to be your new bundle file.
+  When a user clicks on the Edit button, a text input is displayed with the list item to be edited. After pressing the Enter key, the list item is updated accordingly.
 
-  * Add the necessary scripts to `package.json`, then run Webpack with the `--watch` option.
+  ## Actual Behavior
 
-  * Update this application to accomplish the following:
+  When a user clicks on the item, it is noy removed from the list of tasks.
 
-    * When the user types in a value to the price field and clicks submit, the remaining balance should be updated.
+  When a user clicks the Edit button, a text input does not appear with the list item to be edited. After pressing the Enter key, the list item is not updated properly.
 
-    * Using the `require` module and `module.exports`, move the code that calculates the new budget to a file named `calculations.js`.
+  ## Steps to Reproduce the Problem
 
-    * Update the `reset` function so that when clicked, it sets the current balance back to its original balance and clears the list of expenses.
+  To reproduce the problem, follow these steps:
 
-  ### Hints
+  1. In the command line, navigate to `24-Stu_IndexedDB-CRUD/Unsolved`.
 
-  * Make sure that Webpack is working properly before attempting to make adjustments to the app.
+  2. Run `npm install`.
+
+  3. To launch the application, run `npm run dev`.
+
+  4. Navigate to `http://localhost:8080` in your browser.
+
+  5. Create a new To Do item at the bottom of the page.
+
+  6. Click on a list item to attempt to delete it.
+
+  7. Click the Edit button to attempt to edit the list item.
+
+  ## Assets
+
+  The following image demonstrates the web application's appearance and functionality:
+
+  ![Demo of the TODO list by adding, removing, and editing a list item.](./Assets/todo-list.gif)
+
+  ---
+
+  ## 💡 Hints
+
+  What types of permissions do you need to alter data inside a database?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How does the usage of CRUD operations with IndexedDB compare with their usage with SQL databases?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 16. Instructor Review: Budget Tracker (5 min) 
+### 18. Instructor Review: IndexedDB CRUD (10 min)
 
-* Open `16-Stu-Webpack-Intro/Solved/` in the browser and demonstrate the following functionality:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * When we add multiple expenses, we see that our balance adjusts for each submission.
+  * ☝️ How comfortable do you feel with CRUD in IndexedDB? (Poll via Fist to Five, Slack, or Zoom)
 
-  * When we click the reset button, the expenses list gets cleared and the balance is reset to its original value.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-* Open `16-Stu-Webpack-Intro/Solved/app.js` in your IDE and point out the following:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * At the top of the file, we bring in `module.exports` from the calculations file.
+  * ✔️ IndexedDB CRUD
 
-  * Webpack allows us to use modules, including the `require` module just like we can in Node.js apps.
+  * ✔️ `.delete()`
 
-  * 📝 If we were not using Webpack, we wouldn't be able to use `require` in client-side JavaScript.
+  * ✔️ `.put()`
 
-  ```js
-  const calculations = require("./calculations");
-  ```
+* Open `24-Stu_IndexedDB-CRUD/Solved/assets/js/database.js` in your IDE and explain the following:
 
-  * Our subtract function needs to parse `balanceEl.innerText` from a String to a Number before perfoming the `-` operation.
+  * 🔑 Because we are altering a record in the database, we need to use `readwrite` privileges in our transaction.
 
-```js
-function submit() {
-    const total = calculations.subtract(Number(balanceEl.innerText), priceEl.value);
-    balanceEl.innerText = total;
-    addToList(expenseEl.value, priceEl.value);
-}
+    ```js
+    export const deleteDb = async (id) => {
+      console.log('DELETE from the database', id);
+      const todosDb = await openDB('todos', 1);
+      const tx = todosDb.transaction('todos', 'readwrite');
+      const store = tx.objectStore('todos');
+      const request = store.delete(id);
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
 
-function reset() {
-    const total = 2000;
-    balanceEl.innerText = total;
-    expensesListEl.innerHTML = '';
-}
-```
+  * 🔑 We must use the `todos` database in the transaction for the proper data to be updated.
 
-* Open `webpack.config.js` in your IDE and point out the following:
+    ```js
+    export const putDb = async (id, content) => {
+      console.log('PUT to the database');
+      const todosDb = await openDB('todos', 1);
+      const tx = todosDb.transaction('todos', 'readwrite');
+      const store = tx.objectStore('todos');
+      const request = store.put({ id: id, todo: content });
+      const result = await request;
+      console.log('🚀 - data saved to the database', result);
+    };
+    ```
 
-  * We use the same configuration as the previous demo.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Open `package.json` in your IDE and point out the following:
+  * ☝️ What is the name of the method to get all of the records in the database?
 
-  * We use the same configuration as the previous demo.
+  * 🙋 `getAll()`
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+  * ☝️ What can we do if we don't completely understand this?
 
-  * ☝️ Which JavaScript file do we link to index.html? 
-
-  * 🙋 Our JavaScript bundle, `./dist/bundle.js`
-
-* Answer any questions before proceeding to the next activity.
-
-## 17. Instructor Demo: Bundle Analyzer Plugin (5 min) 
-
-* Open [17-Ins-First-Plugin/package.json](../../../../01-Class-Content/19-PWA/01-Activities/17-Ins-First-Plugin/package.json) in your IDE and explain the following: 
-
-  * We've added webpack-bundle-analyzer to our devDependencies and the chart.js library to our dependencies.
-
-  * The `webpack-bundle-analyzer` is a plugin that will build an interactive visualization of all of the dependencies in our project.
-
-* Open [17-Ins-First-Plugin/webpack.config.js](../../../../01-Class-Content/19-PWA/01-Activities/17-Ins-First-Plugin/webpack.config.js) in your IDE and point out the following:
-
-  * Webpack plugins can be used to perform tasks that Webpack can't perform by default. Some of these tasks include asset management, additional bundle optimization, and adding PWA capabilities.
-
-  * Plugins could be used multiple times in the same configuration file, so it is important that you create an instance of one by using the keyword `new`.
-
-  * Emphasize that we've simply added a library so that we can analyze its impact on the total bundle size.
-
-* Run `npm run build` from the command line, navigate to [http://127.0.0.1:8888](http://127.0.0.1:8888) in your browser if the tab does not automatically open and explain the following:
-
-![Bundle Analyzer](Images/bundleAnalyzer.png)
-
-  * This plugin helps us analyze the different impacts that libraries have on the bundle size of our application.
-
-  * When we mouse over the `bundle.js` section, then the `chart.js` section we can see that the chart.js library makes up a significant portion of our total bundle size.
-
-  * ☝️ Why is `moment.js` included here, even though we didn't install it?
-
-  * 🙋 Even though we didn't explicitly install `moment.js`, it is a dependency of `chart.js`, and adds to the total bundle size of our application.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu-Webpack-Plugin/README.md`.
+## 19. Instructor Demo: Manifest (5 min)
 
-### 18. Student Do: Gallery App with Webpack (10 min) 
+* Open `25-Ins_Manifest/manifest.json` in your IDE and explain the following:
 
-* Direct students to the activity instructions found in `18-Stu-Webpack-Plugin/README.md`.
+  * 🔑 The `manifest.json` file is a JSON file that contains certain metadata about our web application that informs the user's browser or mobile device how to run the application.
 
-* Break your students into pairs that will work together on this activity.
+  * 🔑 For our web application, we have to provide a `name` property inside the `manifest.json` file.
 
-  ```md
-  # PWAs with Webpack
+    ```json
+    {
+      "short_name": "Manifest",
+      "name": "TODOs Manifest Example",
+    }
+    ```
 
-  * In this activity we will adjust our Gallery app so that Webpack minifies and bundles our code.
+  * We can optionally provide a `short_name` for our web application.
 
-  ## Instructions
+  * 🔑 Next, we provide our `icons` for all different types of screens.
 
-  * Before you begin, make sure to install all of the necessary dependencies with `npm install`.
-
-  * Run the following command: `npm install webpack-pwa-manifest -D`. (https://github.com/arthurbergmz/webpack-pwa-manifest)
-
-  * In a separate tab in your terminal, start a mongodb server with `mongod`.
-
-  * Run `npm start` to make sure that the application works as expected.
-
-  * Using the entry point of `public/assets/js/app.js`, make Webpack output a bundle file in a folder called `/public/dist/`.
-
-  * Update `webpack.config.js` to use the `WebpackPwaManifest` plugin. This will generate a `manifest.json` file to replace the one we manually created. Use the values from `manifest.webmanifest` in activity `13-Stu_Caching_Fetching_Files` to provide the configuration values passed to `WebpackPwaManifest`. Use the plugin to create icons following the example in the [webpack-pwa-manifest documentation](https://github.com/arthurbergmz/webpack-pwa-manifest).
-
-  * Add the script `"prestart": "npm run webpack"` to the scripts in `package.json` so that Webpack will build every time the application is started.
-
-  * In `index.html`, change the JavaScript file src to be your new bundle file and the link to the manifest to be the one generated by the `WebpackPwaManifest` plugin.
-
-  * In `service-worker.js`, update the `FILES_TO_CACHE` array with files generated from Webpack.
-
-  * Change the mode to `"production"` in `webpack.config.js` so that the generated bundle will be minified.
-
-  ### Bonus
-
-  * Install the bundle analyzer plugin and identify which modules contribute the most to the total bundle size.
-
-  ### Hints
-
-  * Try clearing application storage and disabling cache after making changes to your application. If it appears to be working, use Chrome DevTools to toggle `offline mode` and ensure that the application uses the service worker.
-
-  * You may find it easier to override the default behavior of `webpack-pwa-manifest` by setting the `fingerprints` and `inject` options to `false`, since you are manually providing the links to `manifest.json` and the names of the icon images to cache. 
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 19. Instructor Review: Gallery App with Webpack (5 min) 
-
-* Open [18-Stu-Webpack-Plugin](../../../../01-Class-Content/19-PWA/01-Activities/18-Stu-Webpack-Plugin/Solved) in your terminal.
-
-* Run the following commands to start the application:
-
-```bash
-node seeders/seed.js
-npm install
-npm start
-```
-
-* Navigate to [http://localhost:3000](http://localhost:3000) in your browser and point out the following: 
-
-  * If we inspect our Service Worker with DevTools, we see that `dist/bundle.js` is cached.
-
-  * Additionally, "Service Worker registered successfully" was logged to the console.
-
-  * The plugin, `WebpackPwaManifest`, generates a manifest.json file to be included in our build directory. While most of the properties are the same as a regular manifest.json, this plugin also automatically resizes all of our icons to the appropriate sizes and allows for the use of ES6 features and JavaScript comments. Setting `figerprints` and `inject` to `false` makes the names of the output files predictable so that we can manually add code to `service-worker.js` to cache the generated manifest and image files. _Point out that there are webpack plugins available that can generate our html using the "fingerprinted" names generated by webpack._
-
-  ```js
-  plugins: [
-    new WebpackPwaManifest({
-      filename: "manifest.json",
-      inject: false,
-      fingerprints: false,
-      name: "Images App",
-      short_name: "Images App",
-      theme_color: "#ffffff",
-      background_color: "#ffffff",
-      start_url: "/",
-      display: "standalone",
-      icons: [
+    ```json
+    {
+      "short_name": "Manifest",
+      "name": "TODOs Manifest Example",
+      "icons": [
         {
-          src: path.resolve(
-            __dirname,
-            "public/assets/images/icons/icon-512x512.png"
-          ),
-          size: [72, 96, 128, 144, 152, 192, 384, 512]
+          "src": "/assets/images/icon_96x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_128x128.png",
+          "type": "image/png",
+          "sizes": "128x128",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_192x192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "/assets/images/icon_512x512.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "any maskable"
         }
-      ]
-    })
-  ]
-  ```
+      ],
+    }
+    ```
 
-* Open `package.json` in your IDE and point out the following:
+  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application.
 
-  * Our plugin must be installed as a devDependency. 
+  * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
 
-  * We've also added the script "prestart", which is a built in npm script that will automatically run before each time `npm start` is run.
-
-* Answer any questions before proceeding to the next activity.
-
-## 20. Instructor Demo: Pure Functions (10 min) 
-
-* The next demo is going to use a couple of ES6 features that aren't supported in all browsers.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What tool do you think we will need to use to allow us to use ES6 in all browsers?
-
-  * 🙋 Babel. This is true, but in order to use Babel with our Webpack build we will need to utilize a Babel feature known as a **loader**.
-
-  * Normally, Webpack only knows how to process regular JavaScript. Loaders allow Webpack to compile and bundle non-JavaScript resources like CSS, HTML, TypeScript, and more. Specifically, the Babel loader goes through all of our JavaScript files and transpiles ES6 into ES5.
-
-* Open `16-Ins-Pure-Functions/webpack.config.js` in your IDE and point out the following:
-
-  * We've created a new object called module and within it define an array of rules. 
-
-  * `test` is a regular expression that describes the files that you want to match.
-
-  * Since Babel loader is pretty slow, it is especially important that you define an `exclude` property that contains a regular expression that matches all files in your `node_modules` folder.
-
-  * The `use` property is where we define which loader we are going to use, along with any presets or configurations to pass to the loader. Here, we are telling Webpack to use the babel-loader for all JavaScript files that are not in `node_modules`, and to use a preset called `@babel/preset-env`.
-
-  ```js
-  module: {
-      rules: [{
-          test: /\.m?js$/,
-          exclude: /(node_modules)/,
-          use: {
-              loader: 'babel-loader',
-              options: {
-                  presets: ['@babel/preset-env']
-              }
-          }
-      }]
-  }
-  ```
-
-  * Now that we've added our loader, we need to install Babel itself, the loader, and any presets that we want to use. 
-
-* Run `npm install @babel/core babel-loader @babel/preset-env -D` from the command line.
-
-* Open up `src/app.js` and point out the reorganization of the files. 
-
-* We have added the `Chart.js` library so that we can see a bar chart of our expenses. 
-
-  * Remember, Webpack allows us to import other npm modules into our application. 
-  
-  * We've separated the files into files like `elements.js` and `expenses.js` to help further modularize our code. There is no definitively "right" way to split up your code. The main goal when refactoring code to be split between files is to create functions that are reusable and relatively "pure", when possible.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What does it mean for a function to be pure?
-
-  * 🙋 Pure functions are straightforward with singular purposes. They do not have any "side effects" within them. **Side effects** are bits of code that interact with the outside world like database calls or changes to the DOM.
-  
-  * 🙋 In pure functions, whenever data needs to be modified, it is not mutated. Instead, we create a new variable that describes the new mutation. Pure functions have the advantage of being easily testable and reusable. It is considered best practice to use pure functions whenever possible.
-  
-  * ☝️ What does it mean for a function to be impure?
-
-  * 🙋 Impure functions tend to have multiple purposes. The might contain database or network calls. Even though it is preferred to keep your functions simple, impure functions are often unavoidable. 
-
-* Open `src/calculations.js` in your IDE and point out the following:
-
-  * The `subtract` function is a pure function. It creates a new variable for the result, instead of modifying the input and contains no side effects.
-
-  ```js
-  export function subtract(a, b) {
-    const result = a - b
-    return result;
-  }
-  ```
-
-* Open `src/app.js` in your IDE and point out the following:
-
-  * The `submit` function is an impure function. It modifies existing values and has multiple side effects.
-
-  ```js
-  function submit() {
-    const total = subtract(Number(balanceEl.innerText), priceEl.value);
-    balanceEl.innerText = total;
-    addToList(expenseEl.value, priceEl.value);
-    updateChart(expensesChart, expenseEl.value, priceEl.value);
-  }
-  ```
-  
-* Run `npm install` in your terminal and open `index.html` file in your browser and demonstrate the following functionality:
-
-  * The submit button adds new expenses to the list.
-
-  * The chart is updated with the new expenses.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu-PWA-refactor/README.md`.
-
-### 21. Student Do: Pure Functions (15 min) 
-
-* Direct students to the activity instructions found in `20-Stu-PWA-refactor/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # PWA Refactor
-
-  In this activity we will adjust our Gallery app so that Webpack minifies and bundles our code.
-
-  ## Instructions
-
-  * Run `npm install`.
-
-  * Run `npm install -D babel-loader @babel/core @babel/preset-env`.
-
-  * Using `19-Ins-Pure-Functions/webpack.config.js` as a reference, update `Unsolved/webpack.config.js` to use babel-loader.
-
-  * Using the ES6 import/export syntax, separate functions out into separate JavaScript files to make your application more modular.
-
-  * While there are many ways that you can separate your JavaScript files, it is recommended that you create somethings similar to the following file structure:
-
-    * `app.js` Loads images and calls the `createCards` function.
-
-    * `cardCreation.js` Responsible for all functions related to the creation of cards.
-
-    * `domMethods.js` Responsible for all functions related to manipulating the DOM.
-
-    * `rating.js` Handles the creation of the ratings form and the update method.
-
-  * Adjust the files in the `FILES_TO_CACHE` array within `public/service-worker.js` so that the Webpack bundle is cached instead.
-
-  * Run `npm start` and make sure that the application still works as expected.
-
-  ### Hints
-
-  * Try testing out functionality of the application on [localhost](<http://localhost:3000>) every time you make changes. This will help you identify the code that does not work as expected.
-
-  * You can use the [Babel Loader Docs](https://github.com/babel/babel-loader) as an additional reference.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 22. Instructor Review: Pure Functions (10 min) 
-
-* Open [20-Stu-PWA-refactor/Solved/webpack.config.js](../../../../01-Class-Content/19-PWA/01-Activities/20-Stu-PWA-refactor/Solved/webpack.config.js) in your IDE and explain the following:
-
-  * The configuration object is updated to use `babel-loader` to transpile only files ending in ".js".
-
-  * Code in "node_modules" is not transpiled by the `babel-loader` so that our code will run on a wider range of browsers and browser versions. It allows us to write code that uses more modern syntax and still have the code work on browsers that do not support some features.
-
-  ```js
-  module: {
-    rules: [
+    ```json
+    {
+    "short_name": "Manifest",
+    "name": "TODOs Manifest Example",
+    "icons": [
       {
-        test: /\.js$/, // files must end in ".js" to be transpiled
-        exclude: /node_modules/, // don't transpile code from "node_modules"
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
+        "src": "/assets/images/icon_96x96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_128x128.png",
+        "type": "image/png",
+        "sizes": "128x128",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/images/icon_512x512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
       }
-    ]
-  }
-  ```
+    ],
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "/",
+    "description": "Keep track of important tasks!",
+    "background_color": "#7eb4e2",
+    "theme_color": "#7eb4e2"
+    }
+    ```
 
-* Next, open [Solved/public/assets/js/](../../../../01-Class-Content/19-PWA/01-Activities/20-Stu-PWA-refactor/Solved/public/assets/js/) and demonstrate how the code was split up into separate modules.
+  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
 
-  * Remind students that there is no definitively "right" way to split up your code. The main goal when refactoring code to split between files is to create functions that are reusable and relatively "pure", when possible.
+* Open `25-Ins_Manifest/assets/js/install.js` in your IDE and explain the following:
 
-  * Open the terminal, cd to `.../20-Stu-PWA-refactor/Solved`, and run `npm run build` to run Webpack. (Run `npm install` first if you haven't done so already.)
+  * 🔑 When we launch the application in our browser, we will see an install button inside of the address bar.
 
-  * Show students how Webpack created `bundle.js` which includes the code from all the modules from `public/assets/js`.
+  * 🔑 We also can create our own install button, using the following:
+
+    ```js
+    const installBtn = document.getElementById("installBtn");
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        console.log('👍', 'beforeinstallprompt', event);
+        // Store the event so it can be used later.
+        window.deferredPrompt = event;
+        // Remove the 'hidden' class from the install anchor tag.
+        installBtn.classList.toggle('hidden', false);
+      });
+
+    installBtn.addEventListener('click', async () => {
+      console.log('👍', 'installBtn-clicked');
+      const promptEvent = window.deferredPrompt;
+      if (!promptEvent) {
+      return;
+      }
+      // Show the install prompt.
+      promptEvent.prompt();
+      // Show the result
+      const result = await promptEvent.userChoice;
+      console.log('👍', 'userChoice', result);
+      // Reset the deferred prompt variable, prompt() can only be used once.
+      window.deferredPrompt = null;
+      installBtn.classList.toggle('hidden', true);
+    });
+
+    window.addEventListener('appinstalled', (event) => {
+      console.log('👍', 'appinstalled', event);
+      // Clear the prompt
+      window.deferredPrompt = null;
+    });
+    ```
+
+  * We have connected our `<a>` tag to now launch the installation prompt.
+
+* Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
+
+  * 🔑 For the `manifest.json` file to work, you need a service worker in place. Here, we have just created a simple service worker that caches the assets.
+
+* Open `25-Ins_Manifest/index.html` in your IDE and explain the following:
+
+  * 🔑 For the `manifest.json` file to work, we need to import it into our `index.html` file.
+
+    ```html
+    <link rel="manifest" href="./manifest.json">
+    ```
+
+* Open `25-Ins_Manifest/index.html` with Live Server and demonstrate the following:
+
+  * Click the install button in the address bar.
+
+  * Click the Install! button on the webpage.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What file do we need to create an installable PWA?
+
+  * 🙋 A `manifest.json` file!
 
 * Answer any questions before proceeding to the next activity.
 
-## 23. Instructor Demo: Chunking (10 min) 
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Manifest/README.md`.
 
-* Tell the class that just like the lazy loading they worked with using Images, JavaScript can also be loaded as needed.
+### 20. Student Do: Manifest (15 min)
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What is lazy loading?
-
-  * 🙋 Lazy loading allows us to load resources on an as-needed basis, instead of on page load.
-
-  * ☝️ If there is JavaScript specific to a part of the page a user is using, when do you think it should be downloaded?
-
-  * 🙋 We should only download the JavaScript specific to a part of the page when the user navigates to that page.
-
-  * ☝️ Could deferring the downloading save us time on page load?
-
-  * 🙋 Absolutely. Longer bundle sizes result in longer load times.
-
-* Open `21-Ins-Chunking/webpack.config.js` in your IDE and point out the following:
-
-  * We have added a second entry point to our bundle. This entry point is `chart`.
-
-  * `chart` points to `./src/expenseChart.js`.
-
-  * `filename: "[name].bundle.js"` dynamically names our bundle after the name of the entry point. For instance, the entry point `chart` will create a bundle named `chart.bundle.js`.
-
-  * By creating multiple entry points, we can defer the loading of a particular bundle until the code required is needed.
-
-* Open `chart.html` and point out the following:
-
-  * We've added a `<script>` tag to our html that loads our `chart.js` JavaScript bundle.
-
-  ```html
-  <script type="text/javascript" src="./dist/chart.bundle.js"></script>
-  ```
-
-* Open `21-Ins-Chunking` in your IDE and run the following commands from your command line:
-
-  * `npm install`
-
-  * `npm run build`
-
-* Open the `index.html` in your browser and point out the following:
-
-  * If we inspect out Network in DevTools, we can see that the chart.js has not been loaded yet.
-
-  * Only once we click the `chart` link in the navbar of the page does the `chart.js` bundle load.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What are the possible setbacks of this method?
-
-  * 🙋 If both of our bundles require some of the same dependencies, those will be included and both bundles and thus we will end up with duplicated code between bundles. 
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu-Chunking/README.md`.
-
-### 24. Student Do: Chunking (15 min) 
-
-* Direct students to the activity instructions found in `22-Stu-Chunking/README.md`.
+* Direct students to the activity instructions found in `26-Stu_Manifest/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Chunking
+  # 📖 Implement a Manifest.json File with Webpack
 
-  In this activity, we will practice using multiple entry points to split up our JavaScript code.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to be able to automatically generate a `manifest.json` file inside `dist` when I run my application.
 
-  * Run `npm install`.
+  ## Acceptance Criteria
 
-  * In `webpack.config.js`, add entry points for JavaScript files for the three pages, home, detail, and favorites.
+  * It is done when I can install my application as a Progressive Web App.
 
-  * Update `service-worker.js` file so that it caches the new bundles.
+  * It is done when I can see my `manifest.json` file generated inside Chrome DevTools.
 
-  * Make sure to update each html file so that it also uses the appropriate bundle.
+  ## 📝 Notes
 
-  * Note that the gallery application has been upgraded with the ability to save your favorite images to IndexedDb. 
+  Refer to the documentation:
 
-  * Once again, there are many ways that you can separate your JavaScript files. It is recommended that you create somethings similar to the following file structure to avoid chunking unused code:
+  [Webpack PWA Manifest plugin documentation.](https://www.npmjs.com/package/webpack-pwa-manifest)
 
-    * `api.js` Loads images from the api.
+  ---
 
-    * `cardCreation.js` Responsible for all functions related to the creation of cards.
+  ## 💡 Hints
 
-    * `domMethods.js` Responsible for all functions related to manipulating the DOM.
+  How could our JSON be represented in a JavaScript object?
 
-    * `detail.js` Responsible for the Detail page of the application.
+  ## 🏆 Bonus
 
-    * `favorites.js` Responsible for the Favorites page of the application.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    * `home.js` Responsible for the Home page of the application.
+  * What is each key in a `manifest.json` file responsible for?
 
-    * `indexedDb.js` Contains a helper method to interact with IndexedDb.
-
-    * `rating.js` Handles the creation of the ratings form and the update method.
-
-  * Run `npm start` and make sure that the application still works as expected.
-
-  * Navigate to each page and make sure that the bundle files are all being cached by the service worker.
-
-  ### Hints
-
-  * Try testing out functionality of the application at [http://localhost:3000](http://localhost:3000) every time you make changes. This will help you identify the code that does not work as expected.
-
-  * If extracting functionality from a JavaScript file causes any of the pages to stop working, do **not** continue until you understand why it's not working as expected.
-
-  * Ask the instructor or a TA for help if you get stuck or are unsure why a function isn't working.
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 25. Instructor Review: Chunking (10 min) 
+### 21. Instructor Review: Manifest (10 min)
 
-* Open [22-Stu-Chunking/Solved/webpack.config.js](../../../../01-Class-Content/19-PWA/01-Activities/22-Stu-Chunking/Solved/webpack.config.js) in your IDE and explain the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * There are now three entry points designated.
+  * ☝️ How comfortable do you feel with `manifest.json`? (Poll via Fist to Five, Slack, or Zoom)
 
-  ```js
-  entry: {
-    app: './public/assets/js/home.js',
-    detail: './public/assets/js/detail.js',
-    favorites: './public/assets/js/favorites.js'
-  }
-  ```
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * We also used the `[name].bundle.js` syntax in our output to dynamically name our bundle after the entry point it was built from.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  ```js
-  output: {
-    path: __dirname + '/public/dist',
-    filename: '[name].bundle.js'
-  }
-  ```
+  * ✔️ `manifest.json`
 
-* Now run the following commands from the command line:
+  * ✔️ Installable web applications
 
-  * `npm install`
+  * ✔️ `manifest.json` properties
 
-  * `npm start`
+* Open `26-Stu_Manifest/Solved/webpack.config.js` in your IDE and explain the following:
 
-  * In the console, we have 3 `bundle.js` files and the bundle naming aligns with the entry points provided in the `webpack.config.js`
+  * 🔑 Install the webpack plugin `webpack-pwa-manifest`.
 
-![3 Bundles](Images/multipleBundles.png)
+    ```bash
+    npm install --save-dev webpack-pwa-manifest
+    ```
 
-* Run the following command from the command line: `npm run webpack`
+  * Import the `webpack-pwa-manifest` package into your `webpack.config.js` file.
 
-* In your browser, navigate to [localhost](<https://localhost:3000>) and explain the following:
+    ```js
+    const WebpackPwaManifest = require('webpack-pwa-manifest');
+    ```
 
-  * If we open up our `Network` tab and toggle JS, we can click a picture's name and see that `detail.bundle.js` is loaded when we view the details of an image.
+  * 🔑 Under the `plugins` property, declare a new plugin using `WebpackPwaManifest`.
 
-![Network JS](Images/networkJS.png)
+    ```js
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: './index.html',
+        }),
 
-* In your browser, click on the link to the favorites page and point out the following:
+        new GenerateSW(),
+        new WebpackPwaManifest({ }),
 
-  *  `favorites.bundle.js` loads.
+      ],
+    ```
 
-  * Lazy loading is a great way to defer loading of resources that are not necessary, but there are possible problems it can raise.
+  * 🔑 Fill out the JavaScript object with the properties that we saw inside the `manifest.json` file earlier.
 
-  * Most notably, if multiple entry points have some of the same dependencies, those dependencies will be duplicated across bundles.
+    ```js
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: './index.html',
+        }),
+
+        new GenerateSW(),
+        new WebpackPwaManifest({
+          name: 'TODOs',
+          short_name: 'TODOs',
+          description: 'Keep track of important tasks!',
+          background_color: '#7eb4e2',
+          theme_color: '#7eb4e2',
+          start_url: '/',
+          publicPath: '/',
+          icons: [
+            {
+              src: path.resolve('assets/images/logo.png'),
+              sizes: [96, 128, 192, 256, 384, 512],
+              destination: path.join('assets', 'icons'),
+            },
+          ],
+         }),
+
+      ],
+    ```
+
+* 🔑 You can see most of the JSON coordinates to a key in the JavaScript object, but we have two properties that look different.
+
+* 🔑 The `publicPath` tells webpack where to serve the bundled.
+
+* 🔑 The `icons` now generate the properly sized icons for us based on one provided image.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the name of the webpack plugin that we use to generate a `manifest.json` file?
+
+  * 🙋 `webpack-pwa-manifest`
+
+  * ☝️ Do we need a service worker for us to use a `manifest.json` file?
+
+  * 🙋 Yes!
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_Git-Hooks/README.md`.
+
+## 22. Everyone Do: Git (20 min)
+
+* Open the [Git Docs on Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in your browser and explain the following:
+
+  * When working with a team, we often have a certain set of practices that we want everyone to follow when using a repository. Git hooks provide a convenient way to execute custom scripts when a certain action is performed in order to remind the team of the established rules.
+
+  * For example, if we want to add a reminder to our teammates about the way the commit message should be styled, we can set up a Git hook to listen for a commit event and then execute a script to send an automated reminder.
+
+  * Each Git hook is local to a single repository, and we must install the hook in each repository where we want the script to execute.
+
+  * To install a Git hook, we either start with a pre-written sample hook provided by Git or write a custom hook on our own.
+
+* Direct students to the activity instructions found in `27-Evr_Git-Hooks/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+* Open the command line and demonstrate the following:
+
+  * 🔑 We initialize a new repository and enter `ls .git/hooks` to see a list of pre-written sample hooks that Git provides with each new repository.
+
+    ```bash
+    mkdir hook-test
+    cd hook-test
+    git init
+    ls .git/hooks
+    ```
+
+  * Let's explore one of these hooks. We enter `code .git/hooks/pre-commit.sample` to open the `pre-commit` hook in VS Code.
+
+  * 🔑 We see that Git hooks are written as shell hooks, and this hook is executed before a commit is made to check if files that use non-ASCII names are being used. To apply this hook to our repository, we simply rename it and remove the `.sample` extension.
+
+    ```bash
+    mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
+    ```
+
+  * 🔑 We can also write our own custom hooks. To start, we add a new file in the `hooks` directory to hold our custom hook and set the permissions to execute.
+
+    ```bash
+    touch .git/hooks/post-checkout
+    chmod +x .git/hooks/post-checkout
+    code .git/hooks/post-checkout
+    ```
+
+  * We then add the shell script logic to set a safe list of issue/feature names, get the current branch, and check if the name matches a name in the safe list.
+
+    ```bash
+    #!/bin/sh
+    safelist=("main", "develop", "staging")
+    branch=$(git branch --show-current)
+    if [[ ! ${safelist[*]} =~ "$branch" ]] && [[ ! "$branch" =~ ^(issue/|feature/).* ]]
+    then
+      echo "Warning!"
+      echo 'If feature or issue branch, please use "issue/" or "feature/" prefix.'
+    fi
+    ```
+
+  * We can now use our new Git hook to set a reminder to use the team's naming convention within the repository.
 
 * Answer any questions before ending the class.
 
-### 26. END (0 min)
+### 23. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
