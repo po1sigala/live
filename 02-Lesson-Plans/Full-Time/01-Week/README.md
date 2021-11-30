@@ -10,19 +10,23 @@ Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content
 
 ## Instructor / TA Notes
 
-* During the first 70 minutes of the first class, the university will lead introductory activities and provide important course-specific information to the students. 
+* During the first 70 minutes of the first class, the university will lead introductory activities and provide important course-specific information to the students.
 
 * Also during the first class, you will review the tools that students will need in this course, including Slack, VS Code, and GitHub. Refer to the [Slack workspace set-up guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), the [VS Code download page](https://code.visualstudio.com/download), and the [GitHub Docs on setting up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines.
 
 * Remind students that they can always refer to their prework for more detailed installation instructions. However, if a student is struggling to install or use the required tools, encourage them to stay for office hours for additional help.
 
-* In addition to HTML, CSS, and Git fundamentals, the activities for this week also aim to familiarize students with classroom expectations. Make sure to emphasize the importance of doing a `git pull` of the class repo before each class. 
+* In addition to HTML, CSS, and Git fundamentals, the activities for this week also aim to familiarize students with classroom expectations. Make sure to emphasize the importance of doing a `git pull` of the class repo before each class.
 
-* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise. 
+* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise.
+
+* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the unit’s activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had. For more information, please read the [wiki post on Mini-Project Expectations](https://github.com/coding-boot-camp/fullstack-ground/wiki/Mini-Project-Expectations).
+
+* Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can. In addition, please use the `Instructor Review: Mini-project` time to go over the mini-project's key points.  Finally, encourage students to compare their progress when working on the mini-project to the solution code they receive, so that they can reverse engineer the solution to better understand it on their own.
 
 * The Unit 01 mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
 
-* Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code.
 
 * Be ready to use Chrome DevTools and the device emulator to quickly demonstrate various CSS concepts on different screen sizes.
 
@@ -40,7 +44,7 @@ If you'd like more information on career services, visit the [career services re
 
 ## Heads Up
 
-* Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during office hours. 
+* Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during office hours.
 
 * Starting with the next unit, students will be solving algorithms that they are likely to see in technical interviews. It is recommended that you familiarize yourself with the weekly algorithm problems, so you can help students with any questions they might have&mdash;they're sure to have some!
 

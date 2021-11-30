@@ -1,4 +1,4 @@
-# Unit 01 Instructor Overview: HTML, CSS, and Git  
+# Unit 01 Instructor Overview: HTML, CSS, and Git
 
 ## Overview
 
@@ -8,21 +8,21 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git
 
 ## Instructor/TA Notes
 
-* During the first 70 minutes of the first class, the university will lead introductory activities and provide important course-specific information to the students. 
+* During the first 70 minutes of the first class, the university will lead introductory activities and provide important course-specific information to the students.
 
 * Also during the first class, you will review the tools that students will need in this course, including Slack, VS Code, and GitHub. Refer to the [Slack workspace set-up guide](https://slack.com/help/articles/212675257-Join-a-Slack-workspace), the [VS Code download page](https://code.visualstudio.com/download), and the [GitHub Docs on setting up Git](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git) to review set-up and installation on both Windows and Mac machines.
 
 * Remind students that they can always refer to their prework for more detailed installation instructions. However, if a student is struggling to install or use the required tools, encourage them to stay for office hours for additional help.
 
-* In addition to HTML, CSS, and Git fundamentals, the activities for this week also aim to familiarize students with classroom expectations. Make sure to emphasize the importance of doing a `git pull` of the class repo before each class. 
+* In addition to HTML, CSS, and Git fundamentals, the activities for this week also aim to familiarize students with classroom expectations. Make sure to emphasize the importance of doing a `git pull` of the class repo before each class.
 
-* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise. 
+* For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise.
 
-* The mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups. 
+* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the unit’s activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had. For more information, please read the [wiki post on Mini-Project Expectations](https://github.com/coding-boot-camp/fullstack-ground/wiki/Mini-Project-Expectations).
 
-* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the unit’s activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had.
+* Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can. In addition, please use the `Instructor Review: Mini-project` time to go over the mini-project's key points.  Finally, encourage students to compare their progress when working on the mini-project to the solution code they receive, so that they can reverse engineer the solution to better understand it on their own.
 
-* Remind students that they are not expected to complete the project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can. In addition, please use the review time to go over the mini-project's key points.  Finally, encourage students to compare their progress when working on the mini-project to the solution code they receive, so that they can reverse engineer the solution to better understand it on their own.
+* This unit's mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
 
 ## Career Connection
 
@@ -32,7 +32,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/01-HTML-Git
 
 ## Heads-Up
 
-In the next unit, students will build on CSS and other fundamentals as they delve into responsive web design and advanced CSS. 
+In the next unit, students will build on CSS and other fundamentals as they delve into responsive web design and advanced CSS.
 
 ## Helpful Links
 
@@ -43,7 +43,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [01.1 Lesson Plan](./01-Day_Intro-Git/01.1-LESSON-PLAN.md)
 
   * [01.2 Lesson Plan](./02-Day_HTML-CSS/01.2-LESSON-PLAN.md)
-  
+
   * [01.3 Lesson Plan](./03-Day_CSS/01.3-LESSON-PLAN.md)
 
 ### Homework
@@ -52,7 +52,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Slide Decks
 
-  * [Unit 01: Computational Thinking](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing) 
+  * [Unit 01: Computational Thinking](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing)
 
 ### Algorithms
 
