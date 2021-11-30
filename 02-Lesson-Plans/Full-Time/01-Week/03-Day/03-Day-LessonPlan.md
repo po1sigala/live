@@ -10,7 +10,7 @@ In today's class, students will wrap up Unit 01 by collaborating on a mini-proje
 
 * Unit 01 mini-project builds on the fundamental HTML and CSS concepts that students learned this week. Encourage students to review previous activities for help with syntax and for further study.
 
-* Reassure students that they are not expected to complete the mini-project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can.
+* Reassure students that they are not expected to complete the mini-project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
 * Although students will work on individual projects for the mini-project, they will be put into groups. Encourage them to brainstorm together and share their learnings. This will be the first of many opportunities for students to collaborate and work in groups.
 
@@ -81,7 +81,7 @@ By the end of class, students will be able to do the following:
 
   * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class.
 
-  * Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own, manageable scope of work as a group, while working to complete as much as they can.
+  * Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
   * 🔑 For the first mini-project, you will be creating a landing page using HTML and CSS. Each of you will work on your own landing page. However, you will still be put into groups so that you can brainstorm and work together through the specifications of the mini-project.
 
