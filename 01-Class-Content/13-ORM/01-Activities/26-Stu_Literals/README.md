@@ -18,7 +18,7 @@ The user data in the response does not include a `shortBooks` property.
 
 2. Run `npm start` to start the server.
 
-3. In Insomnia Core, make a GET request to `/api/readers/1`.
+3. In Insomnia, make a GET request to `/api/readers/1`.
 
 4. Note that the response data does not include a `shortBooks` property.
 

@@ -14,7 +14,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * You will use MySQL for today's activities, so be sure to have your MySQL server up and running. You can create the database `cars_db` ahead of time or demonstrate it live in class.
 
-* Instead of relying on a front end, all of the activities will use Insomnia Core to test the routes. Be sure to have it installed and set up for class. 
+* Instead of relying on a front end, all of the activities will use Insomnia to test the routes. Be sure to have it installed and set up for class. 
 
 * To speed up demonstrations and activity reviews, you might want to run `npm install` and create the database for every activity before class starts. 
 
@@ -121,7 +121,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
         const userData = await User.create(newUser);
     ```
 
-* Run `npm start` in your command line and demonstrate the following in Insomnia Core:
+* Run `npm start` in your command line and demonstrate the following in Insomnia:
 
   * We will make a POST request to `localhost:3001/api/users/` to create a new user. Notice that the password is `Password123` in plaintext, as shown in the following example:
 
@@ -326,7 +326,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
         });
     ```
 
-* To test the Hooks, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* To test the Hooks, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. Notice that the email address is capitalized in the body of the request, as follows:
 
@@ -510,7 +510,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     )
     ```
 
-* Run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* Run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a POST request to `http://localhost:3001/api/users` to create a new user. We've set `numberOfPets` equal to `2`, as follows, because the user has two pets:
 
@@ -619,7 +619,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     res.json({ message: 'This person has pets!' });
     ```
   
-* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * 🔑 We will make a GET request to `http://localhost:3001/api/users/1/hasPets` to check the route and instance method.
 
@@ -753,7 +753,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     }
     ```
   
-* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia Core: 
+* If you have time, run `npm start` from the command line and demonstrate the following in Insomnia: 
 
   * We will make a POST request to `http://localhost:3001/api/users` to create a new user, as shown in the following example:
 
@@ -1030,7 +1030,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
     });
     ```
 
-* If time allows, seed the database, run the app, and use Insomnia Core to demonstrate the following:
+* If time allows, seed the database, run the app, and use Insomnia to demonstrate the following:
 
   * We can now create a library card and associate it with a reader by running a POST request to `/api/cards` with the following JSON body:
 
@@ -1293,7 +1293,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
 * Navigate to `25-Ins_Literals` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
-* Run `npm start` from the command line and use Insomnia Core to demonstrate the following: 
+* Run `npm start` from the command line and use Insomnia to demonstrate the following: 
 
   * 🔑 When we perform a GET request to `/api/drivers/2`, we get a response that resembles the following example&mdash;including everything from before but also the total mileage of all cars owned by the driver:
 
@@ -1399,7 +1399,7 @@ As students continue to learn Sequelize in today's class, they will learn about 
 
   2. Run `npm start` to start the server.
 
-  3. In Insomnia Core, make a GET request to `/api/readers/1`.
+  3. In Insomnia, make a GET request to `/api/readers/1`.
 
   4. Note that the response data does not include a `shortBooks` property.
 
