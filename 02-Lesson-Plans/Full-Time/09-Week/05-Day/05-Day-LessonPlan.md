@@ -1,46 +1,52 @@
-# 09.5 Full-Time Lesson Plan: IndexedDB
+# 09.5 Full-Time Lesson Plan: Advanced Mongoose
 
 ## Overview
 
-This lesson continues The Indexed Database API, commonly referred to as IndexedDB. IndexedDB is a JavaScript API provided by web browsers for managing a NoSQL database of JSON objects. 
+In this lesson, you will teach students how to create computed properties in Mongoose using virtual properties. You will also cover populating a subdocument in Mongoose after it has been created. Finally, you will go through the various create, read, update, and delete operations that can be performed on a Mongoose document.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `20-Ins_Creating_Indexes` through `26-Stu-Mini-Project`.
+* In this lesson, students will complete activities `21-Ins_Virtuals` through `28-Stu_Mini-Project`.
 
-* When moving on to new activities, make sure you refresh and or delete your database in IndexedDB. If you are not seeing changes to your database this will fix it.
+* This lesson features a mini-project that requires students to use MongoDB Atlas. MongoDB Atlas is a cloud-based MongoDB service that provides high availability, high performance, and a simple, intuitive interface. MongoDB Atlas is available for free, but it does require an account in order to create a cluster. To create an account, refer to the [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
 
-* If students question why they are learning IndexedDB, let them know that the web is moving away from traditional cookies and into client side storage solutions such as IndexedDB. It gives them the ability to have offline mode for their applications which they will be learning more about in the following unit.
+* Students might find it difficult to understand the difference between data that gets stored in the database and information that gets computed on the fly using virtual properties. Be sure to read the [Mongoose docs on virtual properties](https://mongoosejs.com/docs/tutorials/virtuals.html) before class to ensure that help teach students the difference between the two.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Most activities in this lesson will require students to run the seed script by running `npm run seed` at the command line inside the `Unsolved` directory for each activity.
 
-* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live-code the solutions to the activities. If not, simply use the solutions provided and follow the prompts and talking points for review.
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
+* If the students struggle with the "Everyone Do: Git" activity, walk through it using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
+
 ## Learning Objectives
 
-* Search for an item by keyPath with the `get` method.
+By the end of class, students will be able to:
 
-* Create and search by index with the `getAll` method.
+* Explain and execute CRUD operations using Mongoose subdocuments.
 
-* Utilize Cursors to iterate through and update object store data with the `update` method.
+* Configure Heroku for deployment of a Node.js application using MongoDB Atlas.
+
+* Implement a Mongoose virtual property to create computed properties.
 
 ## Time Tracker
 
 | Start  | #   | Activity Name                                 | Duration |
 |---     |---  |---                                            |---       |
 | 10:00AM| 1   | Instructor Do: Welcome                        | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Creating Indexes             | 0:05     |
-| 10:15AM| 3   | Student Do: Creating Indexes                  | 0:15     |
-| 10:30AM| 4   | Instructor Review: Creating Indexes           | 0:10     |
-| 10:40AM| 5   | Instructor Demo: Adding Getting Data          | 0:05     |
-| 10:45AM| 6   | Student Do: Adding Getting Data               | 0:15     |
-| 11:00AM| 7   | Instructor Review: Adding Getting Data        | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Updating Data with Cursors   | 0:05     |
-| 11:15AM| 9   | Student Do: Updating Data with Cursors        | 0:15     |
-| 11:30AM| 10  | Instructor Review: Updating Data with Cursors | 0:10     |
-| 11:40AM| 11  | FLEX                                          | 0:20     |
+| 10:10AM| 2   | Instructor Demo: Virtuals                     | 0:05     |
+| 10:15AM| 3   | Student Do: Virtuals                          | 0:15     |
+| 10:30AM| 4   | Instructor Review: Virtuals                   | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Subdocument Population       | 0:05     |
+| 10:45AM| 6   | Student Do: Subdocument Population            | 0:15     |
+| 11:00AM| 7   | Instructor Review: Subdocument Population     | 0:10     |
+| 11:10AM| 8   | Instructor Demo: CRUD Subdocuments            | 0:05     |
+| 11:15AM| 9   | Student Do: CRUD Subdocuments                 | 0:15     |
+| 11:30AM| 10  | Instructor Review: CRUD Subdocuments          | 0:10     |
+| 11:40AM| 11  | Everyone Do: Git                              | 0:20     |
 | 12:00PM| 12  | BREAK                                         | 0:30     |
 | 12:30PM| 13  | Instructor Demo: Mini Project                 | 0:05     |
 | 12:35PM| 14  | Student Do: Mini Project                      | 0:60     |
@@ -53,79 +59,177 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
 ## Class Instruction
 
-### 1. Instructor Do: Welcome (10 min)
+### 1. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* Congratulate students on their hard work and explain where MongoDB fits into the bigger picture as we move into the MERN stack, which is a combination of MongoDB, Express, React, and Node.js that is used to build web applications.
 
-  * ☝️ How do we store data client-side? 
+* The topic of today's lesson is using Mongoose to build out fully functional CRUD applications. These applications will feature the ability to create, read, update, and delete data, and also perform those same operations on subdocuments. Additionally, students will learn how to deploy a back-end application to Heroku using MongoDB Atlas.
 
-  * 🙋 Cookies, local storage, session storage.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is a cookie?
+  * ☝️ Why would someone use something like MongoDB Atlas?
 
-  * 🙋 A cookie is a small piece of data sent from a website and stored on the user's computer by the user's web browser.
+  * 🙋 MongoDB Atlas is a great option for a developer to deploy their database to a remote server. It has the ability to scale automatically, and it's free. It also works well with Heroku by giving the developer quick snippets for the connection string and database name.
 
-  * ☝️ What are some of the issues we encounter storing data client-side? 
+  * 🙋 What are the advantages of using MongoDB as opposed to a relational database? What are the disadvantages?
 
-  * 🙋 String value pairs, objects must be stringified and strings must be converted to JSON. Size limits.
+  * ☝️ The advantages of MongoDB include the ability to store data in a schema-less way. Additionally, with a wrapper like Mongoose, we can define the structure of our data in advance and keep our application as modular as possible. Mongoose also makes it easy to create relationships among documents and subdocuments.
 
-  * ☝️ rom the name, what do we think IndexedDB is?
+  * 🙋 What does it mean when people say that Mongoose is a wrapper around MongoDB?
 
-  * 🙋 The Indexed Database API (IndexedDB) is a JavaScript application programming interface provided by web browsers for managing a NoSQL database of JSON objects in the client.
+  * ☝️ A wrapper is something that wraps around another piece of software. Mongoose is a wrapper around MongoDB and provides a set of methods that allow us to interact with MongoDB in a more familiar way.
 
-* Answer any questions before proceeding to the next activity.
+  * 🙋 How can we connect our Heroku application to MongoDB Atlas?
 
-### 2. Instructor Demo: Creating Indexes (5 min) 
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ Object stores are schema-less and have no native search capability.
-
-  * ✔ We create indexes on object store "columns" so we can query.
-
-  * ✔ We use the `createIndex(indexName, keyPath)` method to create indexes, it takes two arguments.
-
-  * ✔ The `indexName` is what you use to access the index when querying.
-
-  * ✔ The `keyPath` is the actual name of the "column."
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-* Open `20-Ins_Creating_Indexes/index.html` in your IDE and review the code snippet.
-
-  ```js
-  const request = window.indexedDB.open("todoList", 1);
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("timestamp", "timestamp");
-  };
-  request.onsuccess = event => {
-    console.log(request.result);
-  };
-  ```
-
-* Open `20-Ins_Creating_Indexes/index.html` in your browser and open your Chrome Developer tools and navigate to `Application` then `IndexedDB`.
-
-  ![20-Ins_Creating_Indexes.png](Images/20-Ins_Creating_Indexes.png)
-
-  * We navigate into the `22-Ins_Creating_Indexes` directory and open `index.html` from the command line. Inside the `IndexedDB` tab we see that we now have a new database connection called `todoList`.
-
-  * When we click on the database tab, we can see that we now have an empty object store called `todoList`. Inside our `todoList` object store we now have a `timestamp` index that we can use to query on.
-
-* Ask the class the following question(s): 
-
-  * ☝️ What are indexes for?
-
-  * 🙋 They are used to query on object store "columns" since they have no way to natively search.
+  * ☝️ We can use Heroku's MongoDB add-on to connect our application to MongoDB Atlas, or we can get the connection string and database name and add them to our Heroku application as environment variables. We will use the latter option in the mini-project in order to get acquainted with connection strings in general.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `21-Stu_Creating_Indexes/README.md`.
+### 2. Instructor Demo: Virtuals (5 min)
 
-### 3. Student Do: Creating Indexes (15 min) 
+* Open `21-Ins_Virtuals/server.js` in your IDE and run `npm i && npm run seed && npm start` from your command line to demonstrate the following:
+
+  * 🔑 In this demo, we will be using virtuals to create computed properties that are not stored in the database.
+
+  * First, let's review the folder structure of this application:
+
+    ```sh
+    .
+    ├── config
+    │   └── connection.js
+    ├── controllers
+    │   ├── commentController.js
+    │   └── postController.js
+    ├── models
+    │   ├── Comment.js
+    │   ├── Post.js
+    │   └── index.js
+    ├── package.json
+    ├── routes
+    │   ├── api
+    │   │   ├── commentRoutes.js
+    │   │   ├── index.js
+    │   │   └── postRoutes.js
+    │   └── index.js
+    ├── server.js
+    ├── utils
+    │   ├── data.js
+    │   └── seed.js
+    ```
+
+  * To keep things organized, we broke up our code into multiple files. In the server file, you can see that we import the database connection and routes at the top:
+
+    ```js
+    const express = require('express');
+    const db = require('./config/connection');
+    const routes = require('./routes');
+
+    const PORT = 3001;
+    const app = express();
+
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
+    app.use(routes);
+
+    db.once('open', () => {
+      app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
+      });
+    });
+    ```
+
+  * Similarly, we created a central `index.js` file for our `api/`, `models/`, and `controllers/` to keep things organized.
+
+  * Now that we have an understanding of the folder structure, let's take a look at our `models` folder and dive into the main concept for this demo: virtuals.
+
+* Open `21-Ins_Virtuals/models/Post.js` in your IDE to demonstrate the following:
+
+  * Virtuals give us a way to create computed properties that are not stored in the database.
+
+  * Virtuals also allow the user of your API to get computed properties from the server without having to write front-end logic to calculate them.
+
+  * The example used in this demo is a computed property that calculates the number of comments on a post.
+
+  * **Important**: Mongoose will not include virtuals in the schema unless you explicitly tell it to. As a result, we add an options object to our schema definition to tell Mongoose to include virtuals by setting the `virtuals` property to `true`.
+
+  * In addition, you will see that we have a `toJSON` property that is used to indicate which properties of the document should be returned when the document is converted to JSON. Virtuals are not included by default, so we have to add them to the `toJSON` property.
+
+  * Our `postSchema` has the following properties:
+
+    ```js
+    const postSchema = new Schema(
+      {
+        text: String,
+        username: String,
+        comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }],
+      },
+      {
+        toJSON: {
+          virtuals: true,
+        },
+        id: false,
+      }
+    );
+    ```
+
+  * To create a virtual property, we use the `virtual` method and pass in the name of the property that we want to create. In this case, we want to create a property called `commentCount` that will return the number of comments on a post.
+
+  * We then define a getter function that returns the value of the property that we want to create.
+
+  * Virtuals are defined in the `Post` model.
+
+    ```js
+    postSchema.virtual('commentCount').get(function () {
+      return this.comments.length;
+    });
+    ```
+
+  * We can then access the property in our `Post` model.
+
+    ```js
+    post.commentCount;
+    ```
+
+* Make a GET request to `http://localhost:3001/api/posts` in Insomnia and demonstrate the following:
+
+  * You should see a list of posts with a `commentCount` property. Whereas our seed data is set to have a static number of comments, we can see that the `commentCount` property is dynamically calculated.
+
+    ```json
+    [
+      {
+        "comments": [
+          "6113e9dbad15d35c4b407adc"
+        ],
+        "_id": "6113e9dbad15d35c4b407ae0",
+        "text": " blandit curabitur imsum nullam hendrerit ut imperdiet nunc a nullam",
+        "username": "Alex",
+        "commentCount": 1
+      },
+      {
+        "comments": [
+          "6113e9dbad15d35c4b407adb"
+        ],
+        "_id": "6113e9dbad15d35c4b407ae1",
+        "text": " nullam libero gravida orci lorem lacinia lorem nullam imperdiet dolor",
+        "username": "Zennon",
+        "commentCount": 1
+      }
+    ]
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we use virtuals to create computed properties that are not stored in the database?
+
+  * 🙋 We could build a virtual property in our model by using the `virtual` method and passing in the name of the property that we want to create. The `get` method is then used to define the getter function that will return the computed property.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `22-Stu_Virtuals/README.md`.
+
+### 3. Student Do: Creating Indexes (15 min)
 
 * Direct students to the activity instructions found in `21-Stu_Creating_Indexes/README.md`.
 
@@ -153,308 +257,973 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Creating Indexes (10 min) 
+### 3. Student Do: Virtuals (15 min)
 
-* Open `21-Stu_Creating_Indexes/Solved/index.html` in your IDE and explain the following point(s):
+* Direct students to the activity instructions found in `22-Stu_Virtuals/README.md`, which are also shown below.
 
-  * We simply call the `createIndex` method on our object store and create three new indexes, giving each of them an `indexName` and `keyPath`.
+* Break your students into pairs who will work together on this activity.
 
-  ```js
-  request.onupgradeneeded = ({ target }) => {
-    const db = target.result;
-    const objectStore = db.createObjectStore("todoList");
-    objectStore.createIndex("icebox", "icebox");
-    objectStore.createIndex("inprogress", "inprogress");
-    objectStore.createIndex("complete", "complete");
-  };
-  ```
+  ````md
+  # 🏗️ Create a Virtual
 
-  * 🔑 Recall that the `indexName` is what you use to access the index and the `keyPath` is the actual name of the "column."
+  Work with a partner to implement the following user story:
 
-* Answer any questions before proceeding to the next demo.
+  * As a developer, I want to implement a Mongoose virtual in my schema to get and set data.
 
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+  * As a developer, I do not want that data to persist in the database, so I can get and set computed properties on documents.
 
-### 5. Instructor Demo: Adding Getting Data (5 min) 
+  ## Acceptance Criteria
 
-* Use the prompts and talking points below to demonstrate the following key point(s):
+  * It is done when I have defined a virtual property on the `userSchema` called `fullName` that will get the `first` and `last` attributes and return a string containing the full name of the user.
 
-  * ✔ We add data to our object stores with the `add` method.
+  * It is done when I have defined a `set()` method on the `fullName` virtual that takes a string containing the full name of the user and sets the virtual attribute values for `first` and `last`.
 
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
+  * It is done when I allow the schema to include virtuals in `res.json()` by setting the `toJSON` schema option to `{ virtuals: true }`.
 
-  * ✔ We use `get` object store method to query by `keyPath`.
+  * It is done when I have run the code and added a user using Insomnia.
 
-  * ✔ We use the `getAll` object store method to query by indexes.
+    ```json
+    {
+        "first": "Ada",
+        "last": "Lovelace",
+        "age": 36
+    }
+    ```
 
-* Open `22-Ins_Adding_Getting_Data/index.html` in your IDE and review the following code.
+  * It is done when I have performed a GET request to `http://localhost:3001/api/users/` to get all users and confirmed that the `fullName` virtual attribute is present in the response.
 
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", { keyPath: "listID" }); // can now query by listID
-    todoListStore.createIndex("statusIndex", "status"); // can now query by statusIndex
-  }
+  ## 💡 Hints
 
-  todoListStore.add({ listID: "1", status: "complete" }); // adding data
+  * What method do we use on a Mongoose schema to create a virtual property?
 
-  const getRequest = todoListStore.get("1"); // querying by keyPath
-  const getRequestIdx = statusIndex.getAll("complete"); // querying by index
+  * Why do we need the `this` keyword when working with virtuals?
 
-  ```
+  ## 🏆 Bonus
 
-* Open `22-Ins_Adding_Getting_Data/index.html` in your browser and open your Chrome Developer tools and navigate to your console.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  ![22-Ins_Adding_Getting_Data](Images/22-Ins_Adding_Getting_Data.png)
+  * What are some of the limitations of Mongoose virtuals as they relate to queries?
 
-  * We navigate into the `22-Ins_Adding_Getting_Data` directory and open `index.html` from the command line. When we click on the database tab, we can see that we now have data in our `todoList` object store.
-
-* Next open your developer tools console to show the data being returned from our `get` and `getAll` methods.
-
-  ![22-Ins_Adding_Getting_Data-console](Images/22-Ins_Adding_Getting_Data-console.png)
-
-* Ask the class the following question(s): 
-
-  * ☝️ What is a keyPath?
-
-  * 🙋 A keyPath gives us a way to query our column's data.
-
-  * ☝️ What is an index?
-
-  * 🙋 An index is another way to more efficiently and specifically query for data.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `23-Stu_Adding_Getting_Data/README.md`.
-
-### 6. Student Do: Adding Getting Data (15 min) 
-
-* Direct students to the activity instructions found in `23-Stu_Adding_Getting_Data/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Adding and Getting Data
-
-  In this activity, you will create add and retrieve data from an objectStore using a keyPath and index.
-
-  ## Instructions
-
-  * In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-  * In the `onupgradeneeded` method:
-
-    * Create a `toDoList` object store with a `listID` keyPath that can be used to query on.
-
-    * Create an index for a "column" you'd like to query on. ie: due-date
-
-  * In the `onsuccess` method:
-
-    * Create variables for a new `transaction` on your database, `objectStore` and the `index` you created.
-
-    * Add four new items to your object store with the `add` method.
-
-    * Using the `get` method, return an item from your object store.
-
-    * Using the `getAll` method, query by index and return all items.
-
-  ## 💡 Hint(s)
-
-  * Use the following docs if you are stuck.
-
-    * [add](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add)
-
-    * [get](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get)
-
-    * [getAll](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll)
-  ```
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ````
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Adding Getting Data (10 min) 
+### 4. Instructor Review: Virtuals (10 min)
 
-* Use the prompts and talking points below to review the following key point(s):
-  
-  * ✔ We add data to our object stores with the `add` method.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔ We can add a `keyPath` argument when we create our object stores that let's us query.
+  * ☝️ How comfortable do you feel with virtual properties? (Poll via Fist to Five, Slack, or Zoom)
 
-  * ✔ We use `get` object store method to query by `keyPath`.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * ✔ We use the `getAll` object store method to query by indexes.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Open `23-Stu_Adding_Getting_Data/Solved/index.html` in your IDE and explain the following point(s):
+  * ✔️ `toJSON: { virtuals: true }`
 
-  * We first create an object store and pass it the optional `keyPath` argument of `listID` that we can use to query with.
-  
-  * We then create an index on our `todoListStore` with `createIndex`, passing it an `index` of `statusIndex` and a `keyPath` of `status`.
-  
-  * We then simply use the `add` method to add records to our object store.
+  * ✔️ `this` keyword inside controllers
 
-  * Next, we make a get request to our object store using the `get` method, which queries by `keyPath`.
+* Open `22-Stu_Virtuals/Solved/models/User.js` in your IDE and explain the following:
 
-  * Finally we make another get request with `getAll` and query by our `index`.
+  * To get the full name of a user, we need to access the `first` and `last` attributes of the user. These attributes are part of the `userSchema`.
 
-* Open `23-Stu_Adding_Getting_Data/index.html` in your IDE and review the following code.
-
-  ```js
-  request.onupgradeneeded = event => {
-    const db = event.target.result;
-    const todoListStore = db.createObjectStore("todoList", {keyPath: "listID"}); 
-    todoListStore.createIndex("statusIndex", "status"); 
-  }
-
-  todoListStore.add({ listID: "1", status: "complete" }); 
-
-  const getRequest = todoListStore.get("1"); 
-  const getRequestIdx = statusIndex.getAll("complete"); 
-  ```
-
-  * 🔑 Querying by `index` is more efficient than by `keyPath`. When creating a schema, if you know the data you will be searching for most often, creating an `index` for that data is ideal.
-
-* Ask the class the following question(s):
-
-  * ☝️ When querying with the `getAll` method, what argument do you pass it?
-
-  * 🙋 The value of the index you want returned.
-
-* Answer any questions before proceeding to the next demo.
-
-* In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
-
-### 8. Instructor Demo: Updating Data with Cursors (5 min) 
-
-* Use the prompts and talking points below to demonstrate the following key point(s):
-
-  * ✔ We open a cursor request on our object store with `openCursor`.
-
-  * ✔ On success we have a result that we can iterate through.
-
-  * ✔ We use the `continue` key word to move through the records.
-
-* Open `24-Ins_Updating_Data_With_Cursors/index.html` in your IDE and review the following code.
-
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-      if (cursor) {
-        console.log(cursor.value);
-        cursor.continue();
-      } else {
-        console.log("No documents left!");
+    ```js
+    const userSchema = new Schema(
+      {
+        first: String,
+        last: String,
+        age: Number,
       }
-    };
-  ```
+    );
+    ```
 
-* Open `24-Ins_Updating_Data_With_Cursors/index.html` in your browser and open your Chrome Developer tools and navigate to your console.
+  * Next, we create a virtual property on the `userSchema` called `fullName`, which will get the `first` and `last` attributes and return a string that contains the full name of the user.
 
-  ![24-Ins_Updating_Data_With_Cursors](Images/24-Ins_Updating_Data_With_Cursors.png)
+  * **Important**: The `this` keyword is used inside the `userSchema`.
 
-  * We navigate into the `24-Ins_Updating_Data_With_Cursors` directory and open `index.html` from the command line. Next open your Chrome Developer tools and navigate into the console to see the data being returned.
+  * To do this, we invoke the `virtual` method on the `userSchema` and pass in the name of the property that we want to create. Then we use the `get` method to define the getter function that will return the computed property.
 
-* Ask the class the following question(s): 
+    ```js
+    userSchema.virtual('fullName').get(function () {
+      return `${this.first} ${this.last}`;
+    });
+    ```
 
-  * ☝️ What is a cursor used for?
+  * We also want the virtual property to be able to work in the other direction by setting the `first` and `last` attributes of the user. We can do this by defining a `set` method on the `fullName` virtual.
 
-  * 🙋 It gives us a way to iterate through our object stores files.
+  * Next, we define a `set()` method on the `fullName` virtual that takes a string containing the full name of the user and sets the virtual attribute values for `first` and `last`.
+
+    ```js
+    userSchema.virtual('fullName').set(function (v) {
+      const first = v.split(' ')[0];
+      const last = v.split(' ')[1];
+      this.set({ first, last });
+    });
+    ```
+
+  * We can also chain the getter and setter methods for a virtual property.
+
+    ```js
+    userSchema
+      .virtual('fullName')
+      .get(function () {
+        return `${this.first} ${this.last}`;
+      })
+      .set(function (v) {
+        const first = v.split(' ')[0];
+        const last = v.split(' ')[1];
+        this.set({ first, last });
+      });
+    ```
+
+  * Finally, we allow the schema to include virtuals in `res.json()` by setting the `toJSON` schema option to `{ virtuals: true }`.
+
+    ```js
+    const userSchema = new Schema(
+      {
+        first: String,
+        last: String,
+        age: Number,
+      },
+      {
+        toJSON: {
+          virtuals: true,
+        },
+        id: false,
+      }
+    );
+    ```
+
+* Now let's add a user to the database and see if we can get the full name of the user.
+
+* Make a POST request to `http://localhost:3001/api/users` with the following JSON and demonstrate the following:
+
+  * Notice that the `fullName` virtual property is present in the response after sending the request that contains the following data:
+
+    ```json
+    {
+      "first": "Ada",
+      "last": "Lovelace",
+      "age": 36
+    }
+    ```
+
+  * Confirm that the `fullName` virtual property is present in the response.
+
+    ```json
+    {
+      "_id": "611419e5c033b36b1775193f",
+      "first": "Ada",
+      "last": "Lovelace",
+      "age": 36,
+      "__v": 0,
+      "fullName": "Ada Lovelace"
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are the benefits of virtual properties?
+
+  * 🙋 The benefits of virtual properties are that they allow us to define a property that is computed from other properties, and they also allow us to get information without needing that data to be stored in the database.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on virtuals](https://mongoosejs.com/docs/tutorials/virtuals.html), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `25-Stu_Updating_Data_With_Cursors/README.md`.
+### 5. Instructor Demo: Subdocument Population (5 min)
 
-### 9. Student Do: Updating Data with Cursors (15 min) 
+* 💡 In the command line, navigate to `23-Ins_Subdoc-Population` and run `npm i && npm run seed && npm start` to seed the database with some data and start the server.
 
-* Direct students to the activity instructions found in `25-Stu_Updating_Data_With_Cursors/README.md`.
+* To demonstrate the `populate` method, let's first add a `user` to the database. The user will also have a posts array that will be populated with a few posts.
 
-* Break your students into pairs that will work together on this activity.
+* Make a POST request to `http://localhost:3001/api/users` with the following JSON and demonstrate the following:
+
+  * First, let's add a user to the database.
+
+    ```json
+    {
+      "first": "Ada",
+      "last": "Lovelace",
+      "age": 36
+    }
+    ```
+
+  * You will see the new user in the response, including an `_id` and `posts` array. The posts array will be empty, because we haven't populated it yet.
+
+  * For now, let's copy the `_id` of the new user and use it to populate the posts array as shown in the response we got from the POST request.
+
+    ```json
+    {
+      "posts": [],
+      "_id": "61152e041fad508595cb68d6",
+      "first": "Ada",
+      "last": "Lovelace",
+      "age": 36,
+      "__v": 0,
+      "fullName": "Ada Lovelace"
+    }
+    ```
+
+  * Copy the `_id` of the new user and use it to populate to the posts array for our new user, Ada.
+
+* Make a POST request to `http://localhost:3001/api/posts` with the following JSON and demonstrate the following:
+
+  * Now we can make a post that we can use to populate the posts array for our new user. Be sure to include a `userId` property that references the `_id` of the new user that we just created.
+
+    ```json
+    {
+      "meta": {
+        "upvotes": 156,
+        "bookmarks": 12
+      },
+      "published": true,
+      "text": "Why pineapple is awesome on Pizza: A true story",
+      "userId": "61152e041fad508595cb68d6"
+    }
+    ```
+
+  * You should see a response that looks like the following:
+
+    ```json
+    "Created the post 🎉"
+    ```
+
+  * Now let's make a GET request for all users and see if the posts array is populated for our new user.
+
+* Make a GET request to `http://localhost:3001/api/users/<user_id_of_the_new_user>` and demonstrate the following:
+
+  * You should see the new user in the response, including an `_id` and `posts` array. The posts array should now have a post.
+
+    ```json
+    {
+      "posts": [
+        {
+          "meta": {
+            "upvotes": 454,
+            "bookmarks": 10
+          },
+          "published": true,
+          "_id": "611535921fad508595cb68e7",
+          "text": "Why pineapple is awesome on Pizza: A true story",
+          "createdAt": "2021-08-12T14:52:02.536Z",
+          "__v": 0,
+          "upvoteCount": 454
+        }
+      ],
+      "_id": "61152e041fad508595cb68d6",
+      "first": "Ada",
+      "last": "Lovelace",
+      "age": 36,
+      "fullName": "Ada Lovelace"
+    }
+    ```
+
+  * You might be wondering how the `posts` array was populated if all we stored was a reference to the post's id.
+
+* Open `23-Ins_Subdoc-Population/controllers/userController.js` in your IDE to demonstrate the following:
+
+  * Notice that we call on the `populate` method to populate the posts array for our new user inside the `getSingleUser` method, which is inside the `userController`.
+
+  * The `populate` method is a Mongoose method that allows you to populate a subdocument. The `populate` method takes a path to the subdocument and a path to the parent document. In this case, we are populating the posts array for the user.
+
+    ```js
+    getSingleUser(req, res) {
+      User.findOne({ _id: req.params.userId })
+        .select('-__v')
+        .populate('posts')
+        .then((user) =>
+          !user
+            ? res.status(404).json({ message: 'No user with that ID' })
+            : res.json(user)
+        )
+        .catch((err) => res.status(500).json(err));
+    },
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How could we use the `populate` method to populate the posts array for our new user?
+
+  * 🙋 We could use the `populate` method to populate any subdocument by passing in a path to the subdocument and a path to the parent document when creating the method.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Subdoc-Population/README.md`.
+
+### 6. Student Do: Subdocument Population (15 min)
+
+* Direct students to the activity instructions found in `24-Stu_Subdoc-Population/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
+
+  ````md
+  # 🐛 Tag Population Not Working
+
+  Work with a partner to resolve the following issue:
+
+  * As a user, I should be able to see all tags associated with a `post` after running the Mongoose populate method on the `Posts` model.
+
+  ## Expected Behavior
+
+  When a user queries a `post`, the controller should return the `post` with an array that is populated with the associated `tags`.
+
+  ## Actual Behavior
+
+  When a user runs the application in an attempt to get a post, they are presented with the following error:
+
+  ```sh
+  TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags`
+  ```
+
+  ## Steps to Reproduce the Problem
+
+  Follow these steps to reproduce the problem:
+
+  1. In the command line, navigate to `Unsolved/` and run `npm i`.
+
+  2. Run `npm run seed` to populate an example database, or `npm run dev` to run the development server.
+
+  3. Notice the following error: ``TypeError: Invalid schema configuration: `Tag` is not a valid type within the array `tags``.
+
+  ## 💡 Hints
+
+  * When referencing another schema inside a Post schema, what attributes and types must be specified?
+
+  * Use `npm run dev` to automatically restart your application after you save changes.
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What are the performance benefits associated with using the populate method in Mongoose as opposed to the `$lookup` operator in MongoDB?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ````
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Subdocument Population (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with populating subdocuments? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `Schema.Types.ObjectId`
+
+  * ✔️ `ref`
+
+  * ✔️ `populate()`
+
+* Open `24-Stu_Subdoc-Population/Solved/models/Post.js` in your IDE and explain the following:
+
+  * 🔑 In this activity, we are again working with the `Posts` schema, but this time each `post` will have an associated `tags` array that is linked via the `ref` attribute.
+
+    ```js
+    const postSchema = new Schema(
+      {
+        published: {
+          type: Boolean,
+          default: false,
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        },
+        tags: [
+          {
+            type: Schema.Types.ObjectId,
+            ref: 'Tag',
+          },
+        ],
+        text: {
+          type: String,
+          minLength: 15,
+          maxLength: 500,
+        },
+      },
+      {
+        toJSON: {
+          virtuals: true,
+        },
+        id: false,
+      }
+    );
+    ```
+
+  * 🔑  To associate a subdocument with a parent document, we use the `ref` attribute. This attribute takes a string that represents the path to the subdocument. In our case, we are linking the `tags` array to the `Tag` schema and listing the type of the subdocument as `Schema.Types.ObjectId`.
+
+  * This means that we will only reference `Tag` documents by their `_id` attribute instead of the entire document.
+
+* Open `24-Stu_Subdoc-Population/models/Tag.js` in your IDE and explain the following:
+
+  * For organization, we first imported all the models into one central file, `models/index.js`. Inside that file, we require both the `Post` and `Tags` schemas and export them.
+
+    ```js
+    const Tags = require('./Tags');
+    const Post = require('./Post');
+
+    module.exports = { Tags, Post };
+    ```
+
+* Open `24-Stu_Subdoc-Population/Solved/controllers/tagController.js` in your IDE to demonstrate the following:
+
+  * First, we use the imported `Tags` schema from `models/index.js` and invoke one of the built-in Mongoose methods, `.find()`, to find all the tags in the database.
+
+  * We also chained an additional method called `select`, which allows us to limit the fields returned from the database. In our case, we are removing the `-__v` field, which is the Mongoose version number.
+
+    ```js
+    getTags(req, res) {
+      Tags.find({})
+        .select('-__v')
+    ...
+    ```
+
+  * In the `getTags` method, we are using the `populate` method to populate the `posts` array for each `id` in the array that is associated with a post.
+
+  * 🔑  The `populate` method takes a path to the subdocument and a path to the parent document. In this case, we are populating the `posts` array for each `tag`.
+
+    ```js
+    getTags(req, res) {
+      Tags.find({})
+        .select('-__v')
+        .populate('posts')
+        .then((tags) => res.json(tags))
+        .catch((err) => res.status(500).json(err));
+    },
+    ```
+
+  * In this controller, we also have logic to create a new tag, and subsequently update a post with that tag.
+
+  * To do this, we created a `createTag` method that takes a tag object and creates a new tag document. After the new tag is created, we associate it with the post by using the `$addToSet` operator.
+
+  * All of this logic is wrapped in a `then` block that is executed when the `createTag` method is successful. We use the `findOneAndUpdate` method to update the post with the new tag.
+
+  * The `findOneAndUpdate` method takes two parameters: the query to find the document to update, and the update object.
+
+  * The `addToSet` operator is a MongoDB operator that adds a value to an array if it does not already exist.
+
+    ```js
+    createTag(req, res) {
+      Tags.create(req.body)
+        .then((tag) => {
+          return Post.findOneAndUpdate(
+            { _id: req.body.postId },
+            { $addToSet: { tags: tag._id } },
+            { new: true }
+          );
+        })
+        .then((user) =>
+          !user
+            ? res
+                .status(404)
+                .json({ message: 'Tag created, but found no post with that ID' })
+            : res.json('Created the tag 🎉')
+        )
+      ...
+    ```
+
+  * It is important to handle errors in this method. If the `createTag` method fails, we want to return a 500 error to the user.
+
+    ```js
+    // continued from above
+        .catch((err) => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+    },
+    ```
+
+  * Let's make a POST request to add a new tag to a post, but first let's make a GET request and pick one of our existing posts to work with.
+
+  * Make a GET request to `http://localhost:3001/api/posts/` and copy the `_id` of one of the posts. Let's imagine for this example that the `_id` is `6116dd5c38283bccf74a2353`.
+
+  * Next, make a POST request to `http://localhost:3001/api/tags/` with the following JSON body, but replace the `_id` with the `_id` of the post you picked:
+
+    ```json
+    {
+      "postId": "6116dd5c38283bccf74a2353",
+      "tagName": "new tag",
+      "color": "red"
+    }
+    ```
+
+  * Finally, make a GET request to `http://localhost:3001/api/posts/<post_id>` to see the new tag.
+
+  * You should see the new tag in the `tags` array.
+
+    ```json
+    {
+      "published": true,
+      "tags": [
+        "6116dd5c38283bccf74a2346",
+        "6116dda010026bcd0afe649b"
+      ],
+      "_id": "6116dd5c38283bccf74a2353",
+      "text": " a ut blandit consectetur ut imperdiet hendrerit orci lorem orci adipiscing lacinia ut ut imperdiet ornare consectetur ornare imsum a dolor nunc vel ornare imsum adipiscing odio nunc gravida quis elit purus imperdiet hendrerit a a nunc elit nullam gravida purus lacinia libero adipiscing hendrerit odio gravida quis ut hendrerit",
+      "createdAt": "2021-08-13T21:01:30.484Z",
+      "tagCount": 2
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How can subdocuments be used to make a more efficient API?
+
+  * 🙋 Subdocuments are a great way to reduce the number of queries to the database.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on populate](https://mongoosejs.com/docs/populate.html), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: CRUD with Subdocuments (5 min)
+
+* In the command line, navigate to `25-Ins_CRUD-Subdoc/` and run `npm i && npm run seed && npm start` to seed the database with some data and start the server.
+
+  * In this demo, we are working with an API that features users, videos, and responses to videos. To demonstrate the CRUD functionality, we are going to create a new video, update an existing video, and delete a video.
+
+  * Before we test the application, let's first make a GET request to `http://localhost:3001/api/users/` to see if the server is up and running.
+
+  * You should see a list of users with properties like `videos`, `first`, `last`, `age`, and `_id`.
+
+    ```json
+    [
+      {
+        "videos": [],
+        "_id": "611973218d5b58f2b343620f",
+        "first": "Sarah",
+        "last": "Smith",
+        "age": 29,
+        "fullName": "Sarah Smith"
+      },
+      {
+        "videos": [],
+        "_id": "611973218d5b58f2b3436210",
+        "first": "Bob",
+        "last": "Jones",
+        "age": 86,
+        "fullName": "Bob Jones"
+      },
+    ]
+    ```
+
+  * Change the endpoint to `http://localhost:3001/api/videos/` to show that endpoints are set up for videos as well.
+
+  * Next, we can use the `_id` of a user to create a video by adding it as a property in our request object called `userId`. Copy the following JSON snippet in the body of a POST request to `http://localhost:3001/api/videos/`.
+
+    ```json
+    {
+      "userId": "611973218d5b58f2b343620f",
+      "published": true,
+      "advertiserFriendly": false,
+      "description": "CRUD methods in Mongoose",
+    }
+    ```
+
+  * You should get a response that the video was created, and if you make a GET request to `http://localhost:3001/api/videos/`, you should see the video you just created at the end of the list.
+
+    ```json
+    {
+      "published": true,
+      "advertiserFriendly": false,
+      "_id": "61197bd4f4a65ff36e7f1e0f",
+      "description": "CRUD methods in Mongoose",
+      "createdAt": "2021-08-15T20:40:52.604Z",
+      "responses": [],
+      "__v": 0,
+      "getResponses": 0
+    }
+    ```
+
+  * To set up an API like this, we would first begin by creating our controller for users, videos, and responses. Once all of those are created, we can import them into a single file and begin to create the routes for the API.
+
+  * To get an idea of what that would look like, let's check out the `videoRoutes.js` file inside the `api` folder.
+
+* Open `25-Ins_CRUD-Subdoc/routes/api/videoRoutes.js` in your IDE and demonstrate the following:
+
+  * 🔑 Notice that we can use a destructuring assignment to assign each function to its own variable, and then chain them together on a single router.
+
+    ```js
+    // videoRoutes.js
+    const router = require('express').Router();
+    const {
+      getVideos,
+      getSingleVideo,
+      createVideo,
+      updateVideo,
+      deleteVideo,
+      addVideoResponse,
+      removeVideoResponse,
+    } = require('../../controllers/videoController');
+
+    // /api/videos
+    router.route('/').get(getVideos).post(createVideo);
+
+    // /api/videos/:videoId
+    router
+      .route('/:videoId')
+      .get(getSingleVideo)
+      .put(updateVideo)
+      .delete(deleteVideo);
+
+    // /api/videos/:videoId/responses
+    router.route('/:videoId/responses').post(addVideoResponse);
+
+    // /api/videos/:videoId/responses/:responseId
+    router.route('/:videoId/responses/:responseId').delete(removeVideoResponse);
+
+    module.exports = router;
+    ```
+
+  * 🔑 When we do this, we are organizing our routes into logical groups. For example, we can see that we have a `/` route that handles GET requests to `/api/videos` and a `/:videoId` route that handles GET, PUT, and DELETE requests to `/api/videos/:videoId`.
+
+  * 🔑 We can also see that we have a `/:videoId/responses` route that handles POST requests to `/api/videos/:videoId/responses` and a `/:videoId/responses/:responseId` route that handles DELETE requests to `/api/videos/:videoId/responses/:responseId`.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it useful to be able to create, read, update, and delete data in a subdocument?
+
+  * 🙋 Being able to modify the subdocument without having to completely replace the entire document is a great way to keep the API clean and efficient.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_CRUD-Subdoc/README.md`.
+
+### 9. Student Do: CRUD with Subdocuments (15 min)
+
+* Direct students to the activity instructions found in `26-Stu_CRUD-Subdoc/README.md`, which are also shown below.
+
+* Break your students into pairs who will work together on this activity.
 
   ```md
-  # Updating Data With Cursors
+  # 📐 Add Comments to Mongoose CRUD Operations
 
-  In this activity, you will be updating records in your object store using a Cursor.
+  Work with a partner to add comments that describe the functionality of the CRUD operations found in [Unsolved/controllers/appController.js](./Unsolved/controllers/appController.js).
 
-  ## Instructions
+  ## 📝 Notes
 
-  * In your browser's DevTools, be sure to have deleted the "todoList" database from the list of IndexedDB in the Application tab before starting this activity!
+  * Be sure to run `npm install`, `npm run seed`, and `npm start`.
 
-  * Inside ` getCursorRequest.onsuccess`
+  * Refer to the documentation: [Mongoose docs on constructing models](https://mongoosejs.com/docs/models.html)
 
-    * Set the `result` to a variable named `cursor`.
-    
-    * Check the status of each cursor's value and if it's equal to "in-progress", set the status to "complete".
+  ---
 
-  ## 💡 Hint(s)
+  ## 🏆 Bonus
 
-  * Use the following [cursor](https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor) methods.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    * `cursor.value`
+  * What is the difference between `findOneAndDelete()` and `findOne()` + `remove()`? Or similarly, what is the difference between `findOneAndUpdate()` and `findOne()` + `save()`?
 
-    * `cursor.update`
-
-    * `cursor.continue`
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: Updating Data with Cursors (10 min) 
+### 10. Instructor Review: CRUD with Subdocuments (10 min)
 
-* Use the prompts and talking points below to review the following key point(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ✔ We open a cursor request on our object store with `openCursor`.
+  * ☝️ How comfortable do you feel with Mongoose CRUD operations on subdocuments? (Poll via Fist to Five, Slack, or Zoom)
 
-  * ✔ On success we have a result that we can iterate through.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * ✔ We use the `continue` key word to move through the records.
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-* Open `25-Stu_Updating_Data_With_Cursors/Solved/index.html` in your IDE and explain the following point(s):
+  * ✔️ `.create()`
 
-  * We first open a cursor on our object store with `openCursor()`.
+  * ✔️ `.find()` and `.findOne()`
 
-  * Then in our `onsuccess` method we check to see if our cursor has any data in it.
+  * ✔️ `findOneAndUpdate()`
 
-  * If it does, we check the status of each cursor's value and if it's equal to "in-progress" we set the status to "complete" with the `update` method.
+  * ✔️ `findAndRemove()`
 
-  * We then call `continue` to move to the next record, until there are none left to evaluate.
+* Open `26-Stu_CRUD-Subdoc/Solved/controllers/appController.js` in your IDE and explain the following:
 
-  ```js
-  const getCursorRequest = todoListStore.openCursor();
-    getCursorRequest.onsuccess = e => {
-      const cursor = e.target.result;
-        if (cursor) {
-          if (cursor.value.status === "in-progress") {
-            const todo = cursor.value;
-            todo.status = "complete";
-             cursor.update(todo);
-          }
-          cursor.continue();
-        }
-      };
-  ```
+  * In this activity, we are taking a look at the `appController.js` file to see how we can use Mongoose CRUD operations to create, read, update, and delete data.
 
-* Ask the class the following question(s):
+  * The first methods we want to understand are `.create()`, `.find()`, and `.findOne()`.
 
-  * ☝️ What does the `continue` method do?
+  * `find()` happens to be one of the first methods listed in the `appController.js` file. We use the `.find()` method to find all of the applications in our database.
 
-  * 🙋 Continues to the next record, exiting when there are none left.
+    ```js
+    getApplications(req, res) {
+       Application.find()
+         .then((applications) => res.json(applications))
+         .catch((err) => res.status(500).json(err));
+    }
+    ```
 
-* Answer any questions before proceeding.
+  * 🔑 Notice that all of the methods are contained in a single `module.exports` object. This is a design choice and not a strict requirement.
 
-### 11. FLEX (20 min)
+  * First we invoke our Application model's `.find()` method to find all of the applications in our database. This is a promise, so we can use the `.then()` method to handle the response.
 
-* This time can be utilized for reviewing key topics learned so far in this unit..
+  * We name the response object `applications` and we simply return the applications array to the user using `res.json()`.
 
-* Ask students if they have any questions about IndexedDB or anything else covered so far in this unit.
+  * 🔑 It is also important to note that we are using `.find()` instead of `.findOne()` because we want to return all of the applications in our database.
 
-* Answer any questions before proceeding.
+  * Finally, we must use `.catch()` to handle any errors that may occur.
+
+    ```js
+    // appController.js
+      getApplications(req, res) {
+        Application.find()
+          .then((applications) => res.json(applications))
+          .catch((err) => res.status(500).json(err));
+      },
+    ```
+
+  * 🔑 Remember that you must respond even if you do not have any data to return. This will help you to ensure that your application is still working if the request fails.
+
+  * The next method that we want to take a look at is the `findOne` method. We use the `.findOne()` method to find a single application in our database.
+
+  * The `findOne` method takes a single parameter, `_id`, which is the unique identifier for the application that was provided in the URL, otherwise known in our code as `req.params.applicationId`.
+
+  * If the application is found, we return the application to the user using `res.json()`. We also use the `.catch()` method to handle any errors that may occur, and respond with a 500 status code. This allows us to gracefully handle errors, as shown in the following code:
+
+    ```js
+    getSingleApplication(req, res) {
+      Application.findOne({ _id: req.params.applicationId })
+        .then((application) =>
+          !application
+            ? res.status(404).json({ message: 'No application with that ID' })
+            : res.json(application)).catch((err) => res.status(500).json(err));
+        },
+    ```
+
+  * Next, we have a method called `createApplication`. We use the `.create()` method to create a new application in our database.
+
+  * 🔑 The interesting thing to note about this method is that it is also responsible for updating the user whose application is being created. We handle all this logic in the `.then()` method after the application is created.
+
+  * Once the application is created, we return another promise that will handle updating the user whose application is being created with the `findOneAndUpdate` method and a MongoDB operator called `$addToSet`. This operator will add the new application to the user's list of applications.
+
+  * The `findOneAndUpdate` method is a promise that will return the updated `user` document and update the `applications` array in the `user` document. This method accepts the following parameters:
+
+    * The first parameter is the `query` object that will find the user document that we want to update.
+
+    * The second parameter is the `update` object that will update the user document.
+
+    * The third parameter is the `options` object that we will pass to the `findOneAndUpdate` method; note that this is optional.
+
+  * 🔑 The `new: true` option is important because it tells Mongoose to return the updated document instead of the original document.
+
+    ```js
+    createApplication(req, res) {
+      Application.create(req.body)
+        .then((application) => {
+          return User.findOneAndUpdate(
+            { _id: req.body.userId },
+            { $addToSet: { applications: application._id } },
+            { new: true }
+          );
+        })
+      ...
+    ```
+
+  * After the user has been updated, we return a message to the user depending on whether the application was created successfully or not.
+
+  * 🔑 Feel free to do a refresher on the ternary operator syntax before going into more detail about the `.then()` and `.catch()` methods.
+
+    ```js
+    createApplication(req, res) {
+      Application.create(req.body)
+        .then((application) => {
+          return User.findOneAndUpdate(
+            { _id: req.body.userId },
+            { $addToSet: { applications: application._id } },
+            { new: true }
+          );
+        })
+        .then((user) =>
+          !user
+            ? res.status(404).json({
+                message: 'Application created, but found no user with that ID',
+              })
+            : res.json('Created the application 🎉')
+        )
+        .catch((err) => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+    },
+    ```
+
+  * Next, we will look at the update and delete methods for the `applications` collection. These are titled `updateApplication` and `deleteApplication`, respectively.
+
+  * The `updateApplication` method is used to update an application in our database. It also uses the `findOneAndUpdate` method to find the application and update it.
+
+  * The parameter for the `findOneAndUpdate` method is the `query` object that finds the application that we want to update. We also use the `update` object that we want to update the application with and the `options` object that we want to pass to the `findOneAndUpdate` method.
+
+  * Inside the `update` object, we use the `$set` operator to update the entire body of a given `application`, which is selected by using the `req.params.applicationId` passed in from the URL.
+
+  * 🔑 The `runValidators: true` option is important because it tells Mongoose to run the application's validators before saving the application. A validator makes sure that the application is properly formatted before it is saved.
+
+    ```js
+    updateApplication(req, res) {
+      Application.findOneAndUpdate(
+        { _id: req.params.applicationId },
+        { $set: req.body },
+        { runValidators: true, new: true }
+      )
+    ...
+    ```
+
+  * 🔑 In the `.then()` method, we return the updated application if it is found and updated, or we return a `404` status code if the application is not found, as shown in the following code snippet containing the full `updateApplication` method:
+
+    ```js
+    updateApplication(req, res) {
+      Application.findOneAndUpdate(
+        { _id: req.params.applicationId },
+        { $set: req.body },
+        { runValidators: true, new: true }
+      )
+        .then((application) =>
+          !application
+            ? res.status(404).json({ message: 'No application with this id!' })
+            : res.json(application)
+        )
+        .catch((err) => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+    },
+    ```
+
+  * The `deleteApplication` method is used to delete an application from our database. It uses the `findOneAndRemove` method to find the application and remove it.
+
+  * After the application has been removed, we return another promise that will handle updating the user whose application is being deleted with the `findOneAndUpdate` method and a MongoDB operator called `$pull`. This operator will remove the application from the user's list of applications.
+
+  * The full `deleteApplication` method is shown below.
+
+    ```js
+    deleteApplication(req, res) {
+      Application.findOneAndRemove({ _id: req.params.applicationId })
+        .then((application) =>
+          !application
+            ? res.status(404).json({ message: 'No application with this id!' })
+            : User.findOneAndUpdate(
+                { applications: req.params.applicationId },
+                { $pull: { applications: req.params.applicationId } },
+                { new: true }
+              )
+        )
+        .then((user) =>
+          !user
+            ? res.status(404).json({
+                message: 'Application created but no user with this id!',
+              })
+            : res.json({ message: 'Application successfully deleted!' })
+        )
+        .catch((err) => res.status(500).json(err));
+    },
+    ```
+
+  * Finally, we have some methods to handle the adding and removing of tags from an application. These methods are `addTag` and `removeTag`.
+
+  * 🔑 One thing to note about these methods is that because the tags are a subdocument in the `application` document, we still invoke the Application model's `findOneAndUpdate` method, and use the `$addToSet` operator to add the tag to the `tags` array.
+
+  * This means that if we were to make a POST request to `/applications/:applicationId/tags`, we would be adding a tag to the `tags` array of the application document.
+
+  * Similarly, we use the `$pull` operator to remove the tag from the `tags` array.
+
+    ```js
+    addTag(req, res) {
+      Application.findOneAndUpdate(
+        { _id: req.params.applicationId },
+        { $addToSet: { tags: req.body } },
+        { runValidators: true, new: true }
+      )
+        .then((application) =>
+          !application
+            ? res.status(404).json({ message: 'No application with this id!' })
+            : res.json(application)
+        )
+        .catch((err) => res.status(500).json(err));
+    },
+
+    removeTag(req, res) {
+      Application.findOneAndUpdate(
+        { _id: req.params.applicationId },
+        { $pull: { tags: { responseId: req.params.tagId } } },
+        { runValidators: true, new: true }
+      )
+        .then((application) =>
+          !application
+            ? res.status(404).json({ message: 'No application with this id!' })
+            : res.json(application)
+        )
+        .catch((err) => res.status(500).json(err));
+    },
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the `_id` field in the `applications` collection?
+
+  * 🙋 The `_id` field is a MongoDB `ObjectId`, which is a 12-byte string that is unique to each document.
+
+  * ☝️ What do the `$addToSet` and `$pull` operators do?
+
+  * 🙋 The `$addToSet` operator adds a value to an array if it does not already exist. The `$pull` operator removes a value from an array if it exists.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Mongoose docs on subdocuments](https://mongoosejs.com/docs/subdocs.html#finding-a-subdocument), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `27-Evr_GitHub-Packages/README.md`.
+
+### 11. Everyone Do: Git (20 min)
+
+* Open [GitHub Packages Getting Started](https://docs.github.com/en/packages) in your browser and explain the following:
+
+  * In this section, we will use GitHub to manage our packages.
+
+  * GitHub offers a service very similar to npm, but with a few differences. In many ways, GitHub packages are similar to npm packages, except that they are managed by GitHub.
+
+  * This makes a lot of sense for developers who already have their code on GitHub, but it can still be confusing for those that haven't published a package before.
+
+  * This guide will walk you through the steps needed to create and publish a GitHub package. At the end of the guide, you will be able to create a GitHub package and publish it so that it can be installed when running `npm install`.
+
+  * This process will involve the following steps:
+
+    1. Generating a GitHub Access Token.
+
+    2. Adding the token to a file called `.npmrc`.
+
+    3. Configuring the `package.json` file and the repository URL.
+
+    4. Setting a registry variable in the `.npmrc` file.
+
+    5. Writing some code that simply console logs a message.
+
+    6. Publishing the package with `npm publish`.
+
+    7. Testing the package locally by adding it to the list of dependencies in `package.json` and running `npm install`.
+
+  * This may sound like a lot, but there is no need to worry. This guide will help you get through it and help you understand the process.
+
+* Direct students to the activity instructions found in `27-Evr_GitHub-Packages/README.md`.
+
+* While everyone is working on the activity, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+* Answer any questions before students go on break.
 
 ### 12. BREAK (30 min)
 
-### 13. Instructor Demo: Mini Project (5 min) 
+### 13. Instructor Demo: Mini Project (5 min)
 
 * **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following unit on PWAs.
 
-* Change into `26-Stu-Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
+* Change into `26-Stu_Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
 
 * Demo the functionality of the app and tell students they are going to build the IndexedDB storage functionality in the next activity. This feature will enable users to enter transactions when the device is not online and sync the transactions with the backend when network service is restored.
 
@@ -462,7 +1231,7 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
 ### 14. Student Do: Mini Project (60 min)
 
-* Direct students to the activity instructions found in `26-Stu-Mini-Project/README.md`.
+* Direct students to the activity instructions found in `26-Stu_Mini-Project/README.md`.
 
 * Break your students into groups that will work together on this activity.
 
@@ -488,7 +1257,7 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
   * Inside the `checkDatabase` function:
 
     * Open a transaction on your `BudgetStore` object.
-    
+
     * Access your `BudgetStore` object store.
 
     * Get all records from store and set to a variable.
@@ -505,7 +1274,7 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
   * You can use the the comments in `public/db.js` as a guide.
 
-  * If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode. 
+  * If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode.
 
   ## 🏆 Bonus
 
@@ -514,51 +1283,191 @@ This lesson continues The Indexed Database API, commonly referred to as IndexedD
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Mini Project (10 min)  
+### 15. Instructor Review: Mini-Project (10 min)
 
-* Treat this review as a question and answer session to help students who might be stuck, since there are 10 minutes allotted.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Open `26-Stu-Mini-Project/Solved/public/db.js` in your IDE and walk students review the solved code, letting the students ask questions about the key methods and functions they had to write.
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-  * `onupgradeneeded`
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * `saveRecord()`
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * `checkDatabase()`
+  * ✔️ MongoDB Atlas
 
-  * `saveRecord()`
+  * ✔️ Aggregate Methods
 
-  * `onsuccess`
+  * ✔️ MongoDB Operators (`$addToSet`, `$unwind`, `$group`, `$avg`)
 
-* Ask for volunteers to share or help if students are stuck.
+* Open `28-Stu_Mini-Project/Main/controllers/studentController.js` in your IDE and explain the following:
+
+  * To get the number of students enrolled, we were tasked with creating a function that executes an aggregate pipeline that counts the number of students in the database.
+
+  * 🔑  To do this, we chained the `count` method to the `aggregate` method. The `count` method accepts a single argument, which is the `collection` that we want to count. In our case, we are counting the number of students in the `students` collection.
+
+  * 🔑  This is an async function, so we used the `await` keyword to wait for the result of the `aggregate` method to be returned.
+
+    ```js
+    const headCount = async () =>
+      Student.aggregate()
+        .count('studentCount')
+        .then((numberOfStudents) => numberOfStudents);
+    ```
+
+  * In this same file, we also created a `grade` function that returns the overall grade for a student. This function is also async, so we used the `await` keyword to wait for the result of the `aggregate` method.
+
+  * 🔑  To get the overall grade for a student, we used the `$avg` operator, which calculates the average of a field, but first we had to use the `$unwind` operator to get the individual scores for each assignment.
+
+    ```js
+    const grade = async (studentId) =>
+      Student.aggregate([
+        {
+          $unwind: '$assignments',
+        },
+      ...
+    ```
+
+  * 🔑  The `$group` operator in MongoDB is used to group documents by a field. In this case, we are grouping the documents by the `studentId`, and then we are calculating the average of the `score` field and storing it in the `overallGrade` field.
+
+  * Overall, the function should look something like this:
+
+    ```js
+    const grade = async (studentId) =>
+      Student.aggregate([
+        {
+          $unwind: '$assignments',
+        },
+        {
+          $group: { _id: studentId, overallGrade: { $avg: '$assignments.score' } },
+        },
+      ]);
+    ```
+
+  * Now that we have our `grade` function, we can use it to get the overall grade for a student. This function is called inside the `getSingleStudent` function.
+
+    ```js
+    getSingleStudent(req, res) {
+      Student.findOne({ _id: req.params.studentId })
+        .select('-__v')
+        .then(async (student) =>
+          !student
+            ? res.status(404).json({ message: 'No student with that ID' })
+            : res.json({
+                student,
+                grade: await grade(req.params.studentId),
+              })
+        )
+        .catch((err) => {
+          console.log(err);
+          return res.status(500).json(err);
+        });
+    },
+    ```
+
+  * Similarly, we invoke the `grade` function inside the `getStudents` function.
+
+    ```js
+    getStudents(req, res) {
+      Student.find()
+        .then(async (students) => {
+          const studentObj = {
+            students,
+            headCount: await headCount(),
+          };
+          return res.json(studentObj);
+        })
+        .catch((err) => {
+          console.log(err);
+          return res.status(500).json(err);
+        });
+    },
+    ```
+
+  * Now that we have all the coding done, we had to test our application and push it to Heroku. This process was a little more complicated than the previous activities only because we needed to add a environment variable to our Heroku app that would be used to connect to MongoDB Atlas. But before all of that, we needed to create a Heroku app and deploy our application to it.
+
+  * To do this, we used the `heroku create` command to create a new Heroku app, and then we used the `git push heroku main` command to push our code to Heroku.
+
+  * To get our app using MongoDB Atlas, we had to add a new environment variable to our app. We did this by using the `heroku config:set` command. This can also be done on the Heroku dashboard, but we used the command here because it was easier to remember.
+
+  * 🔑  This environment variable was obtained from the [MongoDB Atlas Databases](https://cloud.mongodb.com/) dashboard after clicking the "connect" button next to your free cluster. It gave us an option to connect to our application and a snippet of code that we used as our `MONGODB_URI` environment variable.
+
+  * 🔑 For more detailed steps on this process, refer to the [Deploy with Heroku and MongoDB Atlas post on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas).
+
+  * Finally, once our Heroku app has been created and our environment variable has been added, we can deploy our application to Heroku.
+
+* Open `28-Stu_Mini-Project/Main/package.json` and explain the following:
+
+  * Notice that our `package.json` file has a `scripts` section. This section contains a `start`, `dev`, `seed`, and -- a new one -- `heroku-postbuild`. The `heroku postbuild` script tells Heroku which commands to run after the app has been created.
+
+  * We can see that the postbuild script will run our seeds file (`seed.js`) and then run our `start` script. This data will be stored in our remote MongoDB Atlas database.
+
+  * 🔑 MongoDB Atlas has a great tool for visualizing the data that we have stored in our database, much like their Compass utility. If you are curious, feel free to check it out by clicking on the collections tab in the MongoDB Atlas dashboard.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between a `MongoDB` and a `MongoDB Atlas` database?
+
+  * 🙋 The difference is that MongoDB Atlas is a cloud service that allows you to store your data in the cloud, while MongoDB typically refers to a local database.
+
+  * ☝️ What is required to deploy a back-end application and connect it to a MongoDB Atlas database?
+
+  * 🙋 You need to create a Heroku app, create a MongoDB Atlas database, and then add a `MONGODB_URI` environment variable to the Heroku app.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read [the Full-Stack Blog post on deploying to Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas), and attend Office Hours to ask for help.
+
+* If you had trouble with this mini-project, do not worry and be sure to ask for help. There are a lot of steps to this project, and it can be hard to get everything right the first time.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 16. Instructor Demo: Introduce Homework (5 min)
 
-* Navigate to `02-Homework/Main` and run `npm start` from the command line to demonstrate the following:
+* Open `01-Class-Content/18-NoSQL/02-Homework/README.md` in your IDE and demonstrate the following:
 
-  * We are able to view, create, and track daily workouts.
+  * This homework assignment requires you to build an API for a social network web application where users can share their thoughts, create a friends list, and react to friends’ thoughts.
 
-  * We can log multiple exercises in a workout on a given day.
+  * The app will use Express.js for routing, MongoDB for storage, and Mongoose for data modeling.
 
-  * I can also track the name, type, weight, sets, reps, and duration of exercise.
+  * Optionally, you can import a time/date management library to make adding timestamps to your data easier. You also have the option to use the native `Date` object.
+
+  * The app uses the following models: `User`, `Thought`, and `Reactions`.
+
+  * Some of these models have virtual fields that will be used to store data that is not part of the model, such as `friendCount`, which returns the number of friends that the user has.
+
+  * The `Thought` model will have `thoughtText`, `userName`, `reactions` (aka replies), and `createdAt` fields. This model will also need a virtual field called `reactCount`, which returns the number of reactions that the `Thought` has.
+
+  * The last model that you need to create is the `Reactions` model. This model will have a `reactionId`, `reactionBody`, `username`, and `createdAt` fields.
+
+  * You will build the following endpoints:
+
+    * `/api/users`
+
+    * `/api/users/:userId`
+
+    * `/api/users/:userId/friends/:friendId`
+
+    * `/api/thoughts`
+
+    * `/api/thoughts/:thoughtId/reactions`
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What are we learning?
 
-  * 🙋 We are creating a MongoDB database with a Mongoose schema. 
+  * 🙋 We are learning how to build a RESTful API using Express.js, MongoDB, and Mongoose.
 
-  * ☝️ How does this project build off or extend previously learned material?
+  * ☝️ How does this project build on or extend previously learned material?
 
-  * 🙋 We are using Express.js and Node.js to build our full-stack application. MongoDB is our NoSQL database and Mongoose is our ODM (Object Document Mapper).
+  * 🙋 This project builds on previous projects where we learned how to create an API, but we are extending our knowledge to use MongoDB and Mongoose instead of MySql.
 
   * ☝️ How does this project relate to your career goals?
 
-  * 🙋 NoSQL databases are becoming very popular these days with the wide use of JavaScript. Knowing how to use both SQL and NoSQL database will make you an even stronger full-stack developer.
+  * 🙋 This project is part of our career goals because it teaches us one piece of the MERN stack, a set of technologies that we will be using in the future.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Homework Requirements found in `01-Class-Content/18-NoSQL/02-Homework/README.md`.
+
+* Answer any questions before ending the class.
 
 ### 17. FLEX (40 min)
 
