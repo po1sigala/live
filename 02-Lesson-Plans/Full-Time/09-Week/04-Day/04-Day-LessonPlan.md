@@ -113,7 +113,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 * Break your students into pairs who will work together on this activity.
 
   ```md
-  # 📖 Implement Sort and Skip to Change How Documents Are Returned
+  # 📖 Implement Cursor Methods to Change How Documents Are Returned
 
   Work with a partner to implement the following user story:
 
@@ -135,10 +135,11 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
 
   Refer to the documentation:
 
-  [MongoDB docs on Sort Results](https://docs.mongodb.com/manual/reference/method/cursor.sort/)
+    * [MongoDB docs on Sort](https://docs.mongodb.com/manual/reference/method/cursor.sort/)
 
-  [MongoDB docs on Skip Returned Results](https://docs.mongodb.com/manual/reference/method/cursor.skip/)
+    * [MongoDB docs on Skip](https://docs.mongodb.com/manual/reference/method/cursor.skip/)
 
+    * [MongoDB docs on Limit](https://docs.mongodb.com/manual/reference/method/cursor.limit/)
 
   ## 💡 Hints
 

@@ -26,7 +26,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/18-NoSQL/RE
 
 ## Heads-Up
 
-In Unit 19, students will learn about Progressive Web Applications (PWA) and explore tools to improve both performance and offline capability. Refer to [MDN Web docs on progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) for more information on the PWA design pattern.
+In Unit 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). Chrome Devtools and Google Lighthouse will be our primary tools for measuring web application performance. We will use the Service Worker and Cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection. To unlock the power of service workers, we will use `webpack` and Workbox.
+
+This unit is a precursor to the upcoming React units, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
 ## Helpful Links
 

@@ -612,7 +612,7 @@ In today's class, you will prepare students for technical interviews through the
 
   * Our new document, including the `_id` field with the same value, is returned. If our collection contains any other documents, those documents will be returned as well.
 
-* Open `03-Ins_Create-Read/` in your IDE to demonstrate the following:
+* Open `03-Ins_Create-Read/server.js` in your IDE to demonstrate the following:
 
   * The `POST` request that we tested with Insomnia uses `insertOne()` to add a single document with a `name` and a `breed` field to the `petCollection`.
 
@@ -1113,7 +1113,7 @@ In today's class, you will prepare students for technical interviews through the
     })
     ```
 
-* Navigate to `07-Ins_Embedded-Document/` in your command line and run `npm install` and `node server` to demonstrate the following in Insomnia:
+* Navigate to `07-Ins_Embedded-Documents/` in your command line and run `npm install` and `node server` to demonstrate the following in Insomnia:
 
   * When we test the `GET` request with the route `localhost:3001/sale-over-30`, all documents that have a matching percentage discount are returned.
 
@@ -1125,11 +1125,11 @@ In today's class, you will prepare students for technical interviews through the
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Embedded-Document/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Embedded-Documents/README.md`.
 
 ### 18. Student Do: Embedded Document (15 min)
 
-* Direct students to the activity instructions found in `08-Stu_Embedded-Document/README.md`, which are also shown below.
+* Direct students to the activity instructions found in `08-Stu_Embedded-Documents/README.md`, which are also shown below.
 
 * Break your students into pairs who will work together on this activity.
 

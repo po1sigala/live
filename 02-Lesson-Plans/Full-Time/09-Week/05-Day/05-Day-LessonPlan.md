@@ -89,9 +89,7 @@ By the end of class, students will be able to:
 
 ### 2. Instructor Demo: Virtuals (5 min)
 
-* Open `21-Ins_Virtuals/server.js` in your IDE.
-
-* In the command line, run `npm i && npm run seed && npm start` and demonstrate the following:
+* Open `21-Ins_Virtuals/server.js` in your IDE and run `npm i && npm run seed && npm start` from your command line to demonstrate the following:
 
   * 🔑 In this demo, we will be using virtuals to create computed properties that are not stored in the database.
 
@@ -788,7 +786,7 @@ By the end of class, students will be able to:
 
 ### 8. Instructor Demo: CRUD with Subdocuments (5 min)
 
-* In the command line, navigate to `26-Stu_CRUD-Subdoc/` and run `npm i && npm run seed && npm start` to seed the database with some data and start the server.
+* In the command line, navigate to `25-Ins_CRUD-Subdoc/` and run `npm i && npm run seed && npm start` to seed the database with some data and start the server.
 
   * In this demo, we are working with an API that features users, videos, and responses to videos. To demonstrate the CRUD functionality, we are going to create a new video, update an existing video, and delete a video.
 
@@ -849,7 +847,7 @@ By the end of class, students will be able to:
 
   * To get an idea of what that would look like, let's check out the `videoRoutes.js` file inside the `api` folder.
 
-* Open `25-Ins-Mongoose-CRUD/routes/api/videoRoutes.js` in your IDE and demonstrate the following:
+* Open `25-Ins_CRUD-Subdoc/routes/api/videoRoutes.js` in your IDE and demonstrate the following:
 
   * 🔑 Notice that we can use a destructuring assignment to assign each function to its own variable, and then chain them together on a single router.
 
@@ -1393,7 +1391,7 @@ By the end of class, students will be able to:
 
   * 🔑  This environment variable was obtained from the [MongoDB Atlas Databases](https://cloud.mongodb.com/) dashboard after clicking the "connect" button next to your free cluster. It gave us an option to connect to our application and a snippet of code that we used as our `MONGODB_URI` environment variable.
 
-  * 🔑 For more detailed steps on this process, refer to [The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas).
+  * 🔑 For more detailed steps on this process, refer to the [Deploy with Heroku and MongoDB Atlas post on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas).
 
   * Finally, once our Heroku app has been created and our environment variable has been added, we can deploy our application to Heroku.
 
@@ -1417,7 +1415,7 @@ By the end of class, students will be able to:
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read [The Full-Stack Blog post on deploying to Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas), and attend Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read [the Full-Stack Blog post on deploying to Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas), and attend Office Hours to ask for help.
 
 * If you had trouble with this mini-project, do not worry and be sure to ask for help. There are a lot of steps to this project, and it can be hard to get everything right the first time.
 

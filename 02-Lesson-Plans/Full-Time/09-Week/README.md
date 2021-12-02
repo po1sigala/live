@@ -46,7 +46,9 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 ## Heads-Up
 
-* In Unit 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). This unit is a precursor to the upcoming React unit, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
+* In Unit 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). Chrome Devtools and Google Lighthouse will be our primary tools for measuring web application performance. We will use the Service Worker and Cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection. To unlock the power of service workers, we will use `webpack` and Workbox.
+
+* This unit is a precursor to the upcoming React units, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
 * In Unit 20, students will learn how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications.
 
