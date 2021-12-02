@@ -137,15 +137,15 @@ In this class, students will be re-introduced to JavaScript within the context o
     * Many job candidates are also computer science graduates.
 
     * Comprehending use cases of data structures and the algorithms that manipulate them will help you create more performant applications.
-  
+
   * **Mini-Project**
-  
+
     * A mock interview to practice technical communication and problem-solving in a live setting.
 
 * Navigate to `28-Stu_Mini-Project/README.md` in your IDE and demonstrate the following:
 
   * Although we may know how to write code, we also need to learn how to explain our code verbally in an interview.
-  
+
   * This will demonstrate to an interviewer how we solve problems in a logical and iterative manner.
 
   * This will also showcase our ability to communicate technical concepts clearly and concisely.
@@ -175,7 +175,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `01-Ins_Global-Execution-Context/index.html` in your browser and demonstrate the following:
 
   * 🔑 When the program runs, the `main()` function is placed onto the call stack and a global execution context is created.
-  
+
   * The `main()` function is a reference to the program that is running. `main()` is removed off the call stack when the program has concluded its execution.
 
   * 🔑 Follow the comment prompts, following the thread of execution in sequence, describing how each statement is processed.
@@ -203,8 +203,8 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   ## 📝 Notes
 
-  Refer to the documentation: 
-  
+  Refer to the documentation:
+
   [MDN Web Docs on the event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 
   * Due to the visual nature of this exercise, it might be helpful to sketch the execution context and allocation of variables.
@@ -215,7 +215,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-    * What is the scope chain? 
+    * What is the scope chain?
 
   Use [Google](https://www.google.com) or another search engine to research the above.
   ```
@@ -241,11 +241,11 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `02-Stu_Global-Execution-Context/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 The variable `carNoise` is stored in the global execution context and is assigned the value `Honk`.
-  
+
   * The function definition `goFast` is also stored in the global execution context and is assigned the function definition.
-  
+
   * 🔑 A conditional statement evaluates the `confirm()` to execute `goFast()`. Because `confirm()` is a Web API, once it has resolved, the function `goFast()` is placed on the callback queue, then is allowed to get pushed onto the call stack to be executed by the event loop.
-  
+
   * 🔑 When `goFast()` is invoked, the argument of the function is assigned to the parameter `speed` in the functional execution context of `goFast`.
 
   * `makeNoise` is stored in the function execution context of `goFast`.
@@ -263,7 +263,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   * 🙋 Enables duplicate variable names without conflict in an application, privatization of variables, and abstraction of code; and reduces pollution of the global namespace.
 
   * ☝️ What can we do if we don't completely understand this?
-  
+
   * We can refer to supplemental material, read the [MDN Web Docs on the this keyword, global context, and function context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
@@ -273,13 +273,13 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `03-Ins_Functional-Execution-Context/assets/js/script.js` in your IDE and demonstrate the following:
 
   * 🔑 Keyword `this` in the global execution context refers to the `window` in the browser.
-  
+
   * 🔑 In a functional execution context, the value of `this` depends on how the function was called.
 
 * Open `03-Ins_Functional-Execution-Context/index.html` in your browser, open the console, and demonstrate the following:
 
   * When calling a method of an object, `this` refers to the object it was called from.
-  
+
   * 🔑 Functional execution context includes a reference to how the function was called to assign `this`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -365,7 +365,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Open `04-Stu_Functional-Execution-Context/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 The variables `total` and `i` are declared in the inner function `sum()`. Therefore neither variable can be accessed in the scope of the outer function `arg()` and can be considered private variables.
-  
+
   * This was the cause of the error which failed the tests.
 
     ```js
@@ -389,7 +389,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       return total;
     }
     ```
-  
+
   * Calling `sum()` in the outer function executes the inner function, which returns the sum of the numbers in the array.
 
     ```js
@@ -408,7 +408,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     ```
 
   * Navigate to `04-Stu_Functional-Execution-Context/Solved` in the terminal and execute the following commands:
-  
+
     ```bash
     npm install; npm test;
     ```
@@ -442,7 +442,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   ```
 
 * Open `05-Ins_Stacks/__tests__/index.test.js` in your IDE to demonstrate the following:
-  
+
   * The test descriptions give you clues on how to implement a stack, which is a type of data structure:
 
     * `container` is the name of the initialized variable. What is the data type?
@@ -479,11 +479,11 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Stacks/README.md`.
 
 ### 9. Student Do: Stacks (15 min)
 
-* Direct students to the activity instructions found in `06-Stu_Stacks/Unsolved/README.md`.
+* Direct students to the activity instructions found in `06-Stu_Stacks/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -616,11 +616,11 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Queues/README.md`.
 
 ### 12. Student Do: Queues (15 min)
 
-* Direct students to the activity instructions found in `08-Stu_Queues/Unsolved/README.md`.
+* Direct students to the activity instructions found in `08-Stu_Queues/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -716,7 +716,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   * 🔑 The sequence of the logs is altered due to the `setTimeout`.
 
   * Even when a timer set to zero, the log sequence is still affected due to the event loop and callback queue.
-  
+
   * 🔑 The timer only guarantees a minimum amount of accounted time, not when the callback will execute.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -811,7 +811,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   * Delaying with a `setTimeout()` allows the page to render and time for the user to interact with the other elements.
 
   * 🔑 Best practice is to use timers when creating intentional delays instead of blocking the event loop with synchronous logic.
-  
+
   * Node.js and the browser work similarly in the way they handle asynchronous behavior.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -835,7 +835,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝ What is a paradigm in programming?
-  
+
   * 🙋 A paradigm a style or philosophy that a programming language follows.
 
   * ☝️ What is object-oriented programming (OOP)?
@@ -855,7 +855,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   * ☝️ What are some problems that may occur when using class inheritance?
 
   * 🙋 The larger the app becomes, the more difficult it can be to restructure the class hierarchy.
-  
+
 * Explain to students that we will be learning an entirely new way to build objects by using factory functions.
 
 * Let students know ahead of time that these topics can get abstract and encourage them to ask questions.
@@ -881,7 +881,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       // Code...
     }
     ```
-  
+
   * Next, we create the logic for the function that will be passed into the higher-order function, the `.map()` method.
 
     ```js
@@ -894,7 +894,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     ```
 
   * 🔑 Finally, we pass the newly created function into the `.map()` method and storing it into a variable named `evenIndexes`.
-  
+
   * 🔑 Now we have a function which accepts another function as an argument, creating a higher-order function.
 
   * 🔑 We are not limited to only using `evenIndexMultiplier` inside the `.map()` method. We can use `evenIndexMultiplier` anywhere in the application or even in a custom higher-order function.
@@ -948,13 +948,13 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   ## 💡 Hints
 
-  How do you find out how many elements are in an array? 
+  How do you find out how many elements are in an array?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What other built-in functions are also higher-order functions? 
+  * What other built-in functions are also higher-order functions?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
@@ -990,7 +990,7 @@ In this class, students will be re-introduced to JavaScript within the context o
   * Check to see if we are at the final index of the given array.
 
   * If so, we return the total plus the current value and divide it by how many elements are in the array.
-  
+
     ```js
     function findAverage(accumulator, currentValue, index, array) {
       if (index === array.length - 1) {
@@ -1000,7 +1000,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     ```
 
   * If we have not reached the end of the array, add the total to the current value we are on.
-  
+
     ```js
     function findAverage(accumulator, currentValue, index, array) {
       if (index === array.length - 1) {
@@ -1009,7 +1009,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       return accumulator + currentValue;
     }
     ```
-  
+
   * 🔑 Pass the newly created `findAverage` function into the `.reduce()` method.
 
     ```js
@@ -1056,7 +1056,7 @@ In this class, students will be re-introduced to JavaScript within the context o
       const savings = 1000;
     }
     ```
-  
+
   * 🔑 To use a closure, the function must return an object with some type functionality, whether it be one method or multiple.
 
     ```js
@@ -1096,7 +1096,7 @@ In this class, students will be re-introduced to JavaScript within the context o
     ```
 
 * Open `13-Ins_Closures/index.html` in your browser and navigate to Chrome DevTools to explain the following:
-  
+
   * 🔑 In the console, we can see that the `displayFunds()` method has access to the `bankAccount()` function's lexical environment.
 
     ```text
@@ -1178,13 +1178,13 @@ In this class, students will be re-introduced to JavaScript within the context o
 
   ## 💡 Hints
 
-  When is a closure created? 
+  When is a closure created?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is the lexical environment? 
+  * What is the lexical environment?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```

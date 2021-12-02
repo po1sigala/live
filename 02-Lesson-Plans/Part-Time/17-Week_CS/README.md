@@ -12,9 +12,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Instructor/TA Notes
 
-* In the first lesson, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
+* This unit's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
 * Some activities use a testing library to debug or build code. Lesson content moves fluidly between the browser and Node.js, so familiarize yourself with when you'll use `npm install` to run the test suites.
+
+* In the first lesson, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
 
 * In the second lesson, we teach advanced JavaScript concepts including closures, classes, and factory functions. Take some time before class to review these subjects so you are prepared for questions about lexical environment, composition, and inheritance. Some students might have a hard time understanding these concepts. Encourage them to be patient with themselves, and remind them that the best way to understand these topics is through coding practice.
 
@@ -34,9 +36,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
 
-Be sure to have MongoDB and Robo 3T installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB on your machine. Navigate to the [Robo 3T download page](https://robomongo.org/download) to install Robo 3T.
+Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass on your machine.
 
-Also, make sure students have them installed prior to coming to class.
+Also, make sure students have MongoDB and Compass installed prior to coming to class.
 
 ## Helpful Links
 

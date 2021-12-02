@@ -1074,13 +1074,15 @@ By the end of class, students will be able to:
 
   ## Acceptance Criteria
 
-  * It's done when `lesson` is assigned as a class attribute for all `<section>` HTML elements.
+  * It's done when the `<section>` elements are given a class attribute with a value of `lesson`.
 
-  * It's done when the email list item is given a unique attribute named `email`.
+  * It's done when the email list item is given a unique attribute with a value of `email`.
 
-  * It's done when the GitHub list item is given a unique attribute named `github`.
+  * It's done when the GitHub list item is given a unique attribute with a value of `github`.
 
-  * It's done when the portfolio list item is given a unique attribute named `portfolio`.
+  * It's done when the portfolio list item is given a unique attribute with a value of `portfolio`.
+
+  * It's done when the existing image's `src` attribute specifies the relative path to the `image-1.jpg` file found in the `assets` directory and the `alt` attribute describes the image.
 
   * It's done when the finished page matches the mockup.
 
@@ -1119,9 +1121,9 @@ By the end of class, students will be able to:
 
   * ✔️ `class`
 
-  * ✔️  `id`
+  * ✔️ `id`
 
-  * ✔️  `href`
+  * ✔️ `src`
 
 * Open `08-Stu_Attributes/Solved/index.html` in your browser and explain the following:
 
@@ -1129,7 +1131,7 @@ By the end of class, students will be able to:
 
 * Open `08-Stu_Attributes/Solved/index.html` in your IDE and explain the following:
 
- 🔑 We assign the `lesson` class attribute to all `<section>` elements:
+  * 🔑 We assign all `<section>` elements a class attribute with the value of `lesson`:
 
     ```html
     <section class="lesson">
@@ -1153,11 +1155,20 @@ By the end of class, students will be able to:
     <li id="portfolio"><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
     ```
 
-  * 🔑 We can link to the external style sheet using a `<link>` element in the `<head>`. The `href` attribute specifies the relative path. Without this link and the `href` attribute pointing to the right path, the styles will not be displayed!
+  * 🔑 We changed the value of the `src` attribute for the image to specify the relative path to the `image-1.jpg` that was in the `assets` directory. We also included a description of the image as the value for the `alt` attribute.
 
     ```html
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <img
+      src="./assets/images/image-1.jpg"
+      alt="Placeholder image with text 200 width and 200 height "
+    />
     ```
+
+  * Finally, remember to link to the external style sheet using a `<link>` element in the `<head>`. The `href` attribute specifies the relative path. Without this link and the `href` attribute pointing to the right path, the styles will not be displayed!
+
+  ```html
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
