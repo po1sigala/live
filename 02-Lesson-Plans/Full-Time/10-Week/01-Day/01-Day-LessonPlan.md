@@ -6,19 +6,17 @@ In this class, you will introduce the concept of bundling an application using w
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `01-Ins_Lighthouse` through `14-Stu_WorkBox-Service-Workers`.
-
-* You will use webpack for the majority of today's activities. The webpack activities only use the front end; there is no back end in any of the activities.
-
-* If you haven't used webpack much previously, take a look at `webpack.config` and the `scripts` in the `package.json` files. This should prime you for the lecture.
+* In this lesson, students will complete activities `01-Ins_Lighthouse` through `14-Stu_Workbox-Service-Workers`.
 
 * The first activity, `01-Ins_Lighthouse`, generates a Lighthouse report. Only performance is stressed, but it would be a good idea to mention accessibility, SEO, and best practices for further student investigation.
 
+* You will use webpack for the majority of today's activities. The activities only use the front end; there is no back end in any of the activities.
+
+* If you haven't used webpack much previously, take a look at the `webpack.config.js` file and the `scripts` in the `package.json` files. This should help prepare you for the class activities.
+
 * The student activity `06-Stu_Webpack-Bundle` is a debugging activity that contains two errors. To fix the app, students must import the `path` module and add `name` in the output of the `webpack.config.js`.
 
-* The `08-Stu_Webpack-Loader` activity uses ES modules to further demonstrate the use of Babel. All the other activities use CommonJS for modularization.
-
-* The `08-Stu_Webpack-Loader` activity contains a mock API request. The interest rate is fake data; make a point to tell students that.
+* The `08-Stu_Webpack-Loader` activity uses ES modules to further demonstrate the use of Babel. All the other activities use CommonJS for modularization. This activity also contains a mock API request but the interest rate is fake data.
 
 * If students ask why they are learning webpack, let them know that since the web is moving towards more advanced front-end applications, a compiler -- webpack -- is needed to process the code into a more performant format that can take advantage of modules, modern JavaScript, and bundles.
 
@@ -85,9 +83,9 @@ By the end of class, students will be able to:
 | 1:25PM | 19  | Instructor Demo: Hot Module Replacement    | 0:05     |
 | 1:30PM | 20  | Student Do: Hot Module Replacement         | 0:15     |
 | 1:45PM | 21  | Instructor Review: Hot Module Replacement  | 0:10     |
-| 1:55PM | 22  | Instructor Demo: WorkBox Service Workers   | 0:05     |
-| 2:00PM | 23  | Student Do: WorkBox Service Workers        | 0:15     |
-| 2:15PM | 24  | Instructor Review: WorkBox Service Workers | 0:15     |
+| 1:55PM | 22  | Instructor Demo: Workbox Service Workers   | 0:05     |
+| 2:00PM | 23  | Student Do: Workbox Service Workers        | 0:15     |
+| 2:15PM | 24  | Instructor Review: Workbox Service Workers | 0:15     |
 | 2:30PM | 25  | END                                        | 0:00     |
 
 ---
@@ -440,7 +438,7 @@ By the end of class, students will be able to:
 
   * ✔️ npm scripts for production and development modes
 
-* Open `04-Stu_Models/Solved/package.json` in your IDE and explain the following:
+* Open `04-Stu_Webpack-Intro/Solved/package.json` in your IDE and explain the following:
 
   * 🔑 The webpack and webpack-cli are installed as `devDependencies`.
 
@@ -1094,7 +1092,7 @@ By the end of class, students will be able to:
 
 ### 19. Instructor Demo: Hot Module Replacement (5 min)
 
-* In the terminal, navigate to `11-Ins_WebPack-HMR` and run `npm i && npm run dev`. This will install the dependencies and run the development server.
+* In the terminal, navigate to `11-Ins_Webpack-HMR` and run `npm i && npm run dev`. This will install the dependencies and run the development server.
 
   * 🔑 When we run this application, we notice that there is a build process happening on the fly, but unlike other start scripts, this time we are not actually outputting the files to the `dist` directory.
 
@@ -1128,16 +1126,16 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_WebPack-HMR/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Webpack-HMR/README.md`.
 
 ### 20. Student Do: Hot Module Replacement (15 min)
 
-* Direct students to the activity instructions found in `12-Stu_WebPack-HMR/README.md`, which are also shown below.
+* Direct students to the activity instructions found in `12-Stu_Webpack-HMR/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 📖 Add WebPack Development Server to a Project Using Hot Module Replacement (HMR)
+  # 📖 Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
 
   Work with a partner to implement the following user story:
 
@@ -1205,7 +1203,7 @@ By the end of class, students will be able to:
 
   * ✔️ `module.hot.accept()`
 
-* Open `Solved/package.json` in your IDE and explain the following:
+* Open `12-Stu_Webpack-HMR/Solved/package.json` in your IDE and explain the following:
 
   * 🔑 Notice that we have added a `devDependencies` object to our `package.json` file. This object contains all of the dependencies that we need to run our development server.
 
@@ -1222,7 +1220,7 @@ By the end of class, students will be able to:
     },
     ```
 
-* Open `Solved/webpack.config.js` in your IDE to demonstrate the following:
+* Open `12-Stu_Webpack-HMR/Solved/webpack.config.js` in your IDE to demonstrate the following:
 
   * Now that we have our script to start the server and have installed the `webpack-dev-server` package, we need to add a `devServer` object to our `webpack.config.js` file.
 
@@ -1242,7 +1240,7 @@ By the end of class, students will be able to:
     }
     ```
 
-* Open `Solved/src/index.js` in your IDE to demonstrate the following:
+* Open `12-Stu_Webpack-HMR/Solved/src/index.js` in your IDE to demonstrate the following:
 
   * 🔑 Even though we have set up HMR, it is by default an opt-in feature. In order to take advantage of it, we need to update the `index.js` file to accept hot modules.
 
@@ -1260,11 +1258,11 @@ By the end of class, students will be able to:
 
   * You don't need to accept hot modules in every file, as changes will bubble up to a file that does accept hot modules. For example, if you make a change to `style.css` and save it, the changes will be reflected in the browser because `style.css` is imported in `index.js`. The same is true for JavaScript files.
 
-* Navigate to `12-Stu_WebPack-HMR/Solved` in your terminal and run `npm i && npm run dev` and demonstrate the following:
+* Navigate to `12-Stu_Webpack-HMR/Solved` in your terminal and run `npm i && npm run dev` and demonstrate the following:
 
   * With the development server running, we can now make changes to our `style.css` file and see the changes reflected in the browser.
 
-  * In `Solved/src/css/style.css`, change the font weight of the `h1` element to `bold`. Notice that when you save, the page is updated in the browser without a full page refresh. You can also see the exact modules that were updated in the browser's console as you refresh the page, as shown in the following snippet:
+  * In `12-Stu_Webpack-HMR/Solved/src/css/style.css`, change the font weight of the `h1` element to `bold`. Notice that when you save, the page is updated in the browser without a full page refresh. You can also see the exact modules that were updated in the browser's console as you refresh the page, as shown in the following snippet:
 
     ```console
     log.js:24 [HMR] Waiting for update signal from WDS...
@@ -1286,7 +1284,7 @@ By the end of class, students will be able to:
 
 ### 22. Instructor Demo: Workbox Service Workers (5 min)
 
-* Navigate to `13-Ins_WorkBox-Service-Workers` in your terminal, run `npm i && npm run dev`, and demonstrate the following:
+* Navigate to `13-Ins_Workbox-Service-Workers` in your terminal, run `npm i && npm run dev`, and demonstrate the following:
 
   * 🔑 When we run the application, the first thing you will notice is that unlike the previous activities, this one doesn't use or require webpack. Instead, we see a simple message that our server is running on port `3000`.
 
@@ -1296,7 +1294,7 @@ By the end of class, students will be able to:
 
   * **Important**: There are two ways to create a service worker. One is to create it manually using the steps found on MDN, and the other is to use the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin. While we will use workbox in the next activity, it is important that we take a look at how to create a service worker manually.
 
-* Open `src/sw.js` in your IDE to demonstrate the following:
+* Open `13-Ins_Workbox-Service-Workers/src/sw.js` in your IDE to demonstrate the following:
 
   * This is a service worker that runs in the background and caches the assets that we are using. Services respond to different events, much like a button or input field.
 
@@ -1322,7 +1320,7 @@ By the end of class, students will be able to:
 
   * Service workers, regardless of whether or not they were made using plain Javascript or generated using workbox, all need to be registered at the entry point for your application. In our case, this file is `index.js`.
 
-* Open `src/index.js` in your IDE to demonstrate the following:
+* Open `13-Ins_Workbox-Service-Workers/src/index.js` in your IDE to demonstrate the following:
 
   * Typically, all one needs to do in order to register a service worker is check to see if they are supported in the browser, and then use the `navigator.serviceWorker.register()` method to register the worker in the browser, as shown in the following code snippet:
 
@@ -1342,11 +1340,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_WorkBox-Service-Workers/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`.
 
 ### 23. Student Do: Workbox Service Workers (15 min)
 
-* Direct students to the activity instructions found in `14-Stu_WorkBox-Service-Workers/README.md`, which are also shown below.
+* Direct students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`, which are also shown below.
 
 * To get a better understanding of how to create a service worker with a framework, we will be using the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin for webpack.
 
@@ -1388,7 +1386,7 @@ By the end of class, students will be able to:
 
   * ✔️ `Workbox()`
 
-* Open `Solved/webpack.config.js` in your IDE to demonstrate the following:
+* Open `14-Stu_Workbox-Service-Workers/Solved/webpack.config.js` in your IDE to demonstrate the following:
 
   * 🔑 To make workbox generate a service worker when the application is built, we will use the `GenerateSW` plugin.
 
@@ -1427,7 +1425,7 @@ By the end of class, students will be able to:
 
   * The setup is so much easier than writing a plain JavaScript service worker from scratch in the previous activity. This is the benefit of using workbox, and this is just the beginning of what workbox can do!
 
-* Open `Solved/src/index.js` in your IDE to demonstrate the following:
+* Open `14-Stu_Workbox-Service-Workers/Solved/src/index.js` in your IDE to demonstrate the following:
 
   * Much like we did with the plain JavaScript service worker, we still need to register the service worker that gets created by `GenerateSW`.
 
@@ -1464,7 +1462,7 @@ By the end of class, students will be able to:
 
   * Now that we have reviewed the service worker, let's test our application in the browser.
 
-* Navigate to `14-Stu_WorkBox-Service-Workers/Solved` in your terminal and run `npm i && npm run dev`. This will install the dependencies and run the development server.
+* Navigate to `14-Stu_Workbox-Service-Workers/Solved` in your terminal and run `npm i && npm run dev`. This will install the dependencies and run the development server.
 
   * When we run the application, the browser will open automatically and we will be taken to a page featuring some articles from the web development site [Dev.to](https://dev.to).
 

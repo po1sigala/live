@@ -217,7 +217,7 @@ In this class, students will learn how to use the workbox library to cache and s
     const { InjectManifest } = require('workbox-webpack-plugin');
     ```
 
-* Open `src/index.js` in your IDE to demonstrate the following:
+* Open `16-Stu_Caching/Solved/src/index.js` in your IDE to demonstrate the following:
 
   * As with all service workers, we need to register a service worker in our `src/index.js` file. We start off by registering a new `Workbox` service worker.
 
@@ -250,7 +250,7 @@ In this class, students will learn how to use the workbox library to cache and s
     ],
     ```
 
-* Open `Solved/src/sw.js` in your IDE to demonstrate the following:
+* Open `16-Stu_Caching/Solved/src/sw.js` in your IDE to demonstrate the following:
 
   * The service worker is where all of our logic for caching assets is located. We can see that the starer code already has the `StaleWhileRevalidate` caching strategy imported for us.
 
@@ -548,7 +548,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * The server is navigated to first, and then the `npm run server` command is invoked. This will start the Express server and listen on port `3000`.
 
-* Open `Solved/server/server.js` in your IDE to demonstrate the following:
+* Open `20-Stu_Client-Server/Solved/server/server.js` in your IDE to demonstrate the following:
 
   * Notice that the static HTML route is configured to serve the contents of the `client/dist` directory.
 
@@ -578,7 +578,7 @@ In this class, students will learn how to use the workbox library to cache and s
        );
      ```
 
-* Open `Solved/package.json` in your IDE to demonstrate the following:
+* Open `20-Stu_Client-Server/Solved/package.json` in your IDE to demonstrate the following:
 
   * Now let's review the other half of our `concurrently` command , `cd client && npm run start`. In this case, the `npm run` command will invoke the `webpack && webpack-serve` command to build the client's application and run a server that watches for changes.
 
@@ -730,7 +730,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
   To launch the application and view the IndexedDB store in Chrome DevTools, follow these steps:
 
-  1. In the command line, navigate to `24-Stu_IndexedDB/Unsolved`.
+  1. In the command line, navigate to `22-Stu_IndexedDB/Unsolved`.
 
   2. Run `npm install`.
 
@@ -828,7 +828,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ## 16. Instructor Demo: IndexedDB CRUD (5 min)
 
-* Open `23-Stu_IndexedDB-CRUD/assets/js/database.js` in your IDE and explain the following:
+* Open `23-Ins_IndexedDB-CRUD/assets/js/database.js` in your IDE and explain the following:
 
   * 🔑 To use the IndexedDB object store that we set up, we need to implement a CRUD operation.
 

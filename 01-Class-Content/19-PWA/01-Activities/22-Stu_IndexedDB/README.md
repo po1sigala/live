@@ -8,7 +8,7 @@ This activity takes place in Chrome DevTools; we will hook up the UI in later ac
 
 To launch the application and view the IndexedDB store in Chrome DevTools, follow these steps:
 
-1. In the command line, navigate to `24-Stu_IndexedDB/Unsolved`.
+1. In the command line, navigate to `22-Stu_IndexedDB/Unsolved`.
 
 2. Run `npm install`.
 
@@ -18,7 +18,7 @@ To launch the application and view the IndexedDB store in Chrome DevTools, follo
 
 5. To view the IndexedDB store, visit the `Application` tab in Chrome DevTools.
 
-Refer to the documentation: 
+Refer to the documentation:
 
 * [NPM docs on IndexedDB](https://www.npmjs.com/package/idb)
 

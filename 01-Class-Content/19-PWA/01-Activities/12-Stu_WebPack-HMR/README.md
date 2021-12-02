@@ -1,4 +1,4 @@
-# 📖 Add WebPack Development Server to a Project Using Hot Module Replacement (HMR)
+# 📖 Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
 
 Work with a partner to implement the following user story:
 
