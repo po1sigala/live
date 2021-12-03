@@ -1,24 +1,36 @@
 # 10.1 Full-Time Lesson Plan: Progressive Web Applications (PWA)
 
-## Overview 
+## Overview
 
-Today's class will be focused on Web Performance. We will use Lighthouse to audit the performance of webpages, and go through the different options we have to increase performance in our applications. Performance is an incredibly important aspect of being a developer. While building large applications, keeping them performing is a top priority.
+In this class, you will introduce the concept of bundling an application using webpack and its impact on webpage performance. You'll also demonstrate how to configure webpack to incorporate even more performance improvements, lazy loading, and development-process improvements.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `01-Stu_Lighthouse` through `07-Stu_PWAs`.
+* In this lesson, students will complete activities `01-Ins_Lighthouse` through `14-Stu_Workbox-Service-Workers`.
 
-* We will be making use of the students' Project 2 during the first half of today's class. Ensure all students have a deployed project to work with.
+* The first activity, `01-Ins_Lighthouse`, generates a Lighthouse report. Only performance is stressed, but it would be a good idea to mention accessibility, SEO, and best practices for further student investigation.
 
-* Today's class you will be using an auditing system by Google called Lighthouse. Familiarize yourself with the tool prior to class. You can find the documentation [here](https://developers.google.com/web/tools/lighthouse/). 
+* You will use webpack for the majority of today's activities. The activities only use the front end; there is no back end in any of the activities.
 
-  * Lighthouse can hang in some browsers, if possible please use Chrome.
+* If you haven't used webpack much previously, take a look at the `webpack.config.js` file and the `scripts` in the `package.json` files. This should help prepare you for the class activities.
 
-* Improving scores in Lighthouse will be a big win for students today, so be sure to slowly go through the first audit report of the day to give students an understanding of how they can improve.
+* The student activity `06-Stu_Webpack-Bundle` is a debugging activity that contains two errors. To fix the app, students must import the `path` module and add `name` in the output of the `webpack.config.js`.
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* The `08-Stu_Webpack-Loader` activity uses ES modules to further demonstrate the use of Babel. All the other activities use CommonJS for modularization. This activity also contains a mock API request but the interest rate is fake data.
 
-* If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
+* If students ask why they are learning webpack, let them know that since the web is moving towards more advanced front-end applications, a compiler -- webpack -- is needed to process the code into a more performant format that can take advantage of modules, modern JavaScript, and bundles.
+
+* Today's activities will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
+
+  > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application.
+
+* For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
+
+* In addition to using a private window, students can troubleshoot caching issues further by completely unregistering the service worker. This will allow the browser to cache the assets again. Details on how to do this will vary among browsers, but generally you can find the option to do this in the browser's developer tools.
+
+* Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
+
+* If you are comfortable doing so, live code the solutions to the activities. If not, use the solutions provided and follow the prompts and talking points for review.
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
 
@@ -26,52 +38,55 @@ Today's class will be focused on Web Performance. We will use Lighthouse to audi
 
 By the end of class, students will be able to:
 
-* Articulate the meaning of web performance and how it effects their users.
+* Recognize which metrics in a Lighthouse audit affect page load times.
 
-* Explain how assets like JavaScript files and images impact the performance of a web page.
+* Identify the main purpose of a module bundler such as webpack.
 
-* Use Lighthouse to audit a sites various performance metrics.
+* Set up webpack’s dependencies in an application with npm scripts.
 
-* Use minification to lower JS file sizes.
+* Create a bundle and use it to provide interaction for a webpage.
 
-* Use the compression npm package to enable gzip compression in their applications
+* Compare webpack in development vs. production mode.
 
-* Use online image compression to compress image files while retaining image quality.
+* Extend webpack’s functionality for non-JavaScript files, transpiling modern JavaScript for older browsers, and automate bundle output file names.
 
-* Explain and implement lazy loading into their applications so images are only loaded as needed.
+* Create an `index.html` file using a template with a webpack plugin to automate bundle insertion.
+
+* Implement service workers to a web application.
 
 ## Slide Deck
 
-* N/A
+* [Unit 19 Slide Deck](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
 
 ## Time Tracker
 
-| Start  | #   | Activity Name                           | Duration |
-|---     |---  |---                                      |---       |
-| 10:00AM| 1   | Instructor Do: Stoke Curiosity          | 0:10     |
-| 10:10AM| 2   | Instructor Demo: Lighthouse Audit       | 0:05     |
-| 10:15AM| 3   | Student Do: Lighthouse Audit            | 0:15     |
-| 10:30AM| 4   | Instructor Review: Lighthouse Audit     | 0:10     |
-| 10:40AM| 5   | Instructor Demo: JS Minification        | 0:05     |
-| 10:45AM| 6   | Student Do: JS Minification             | 0:15     |
-| 11:00AM| 7   | Instructor Review: JS Minification      | 0:10     |
-| 11:10AM| 8   | Instructor Demo: Enable Compression     | 0:05     |
-| 11:15AM| 9   | Student Do: Enable Compression          | 0:15     |
-| 11:30AM| 10  | Instructor Review: Enable Compression   | 0:10     |
-| 11:40AM| 11  | Instructor Demo: Image Compression      | 0:05     |
-| 11:45AM| 12  | Student Do: Image Compression           | 0:15     |
-| 12:00PM| 13  | BREAK                                   | 0:30     |
-| 12:30PM| 14  | Instructor Review: Image Compression    | 0:10     |
-| 12:40PM| 15  | Instructor Demo: Lazy Loading           | 0:05     |
-| 12:45AM| 16  | Student Do: Lazy Loading                | 0:15     |
-| 1:00PM | 17  | Instructor Review: Lazy Loading         | 0:15     |
-| 1:15PM | 18  | Instructor Demo: Optimize Gallery App   | 0:05     |
-| 1:20PM | 19  | Student Do: Optimize Gallery App        | 0:20     |
-| 1:40PM | 20  | Instructor Review: Optimize Gallery App | 0:15     |
-| 1:55PM | 21  | Instructor Demo: Progressive Web Apps   | 0:05     |
-| 2:00PM | 22  | Student Do: Progressive Web Apps        | 0:15     |
-| 2:15PM | 23  | Instructor Review: Progressive Web Apps | 0:15     |
-| 2:30PM | 24  | END                                     | 0:00     |
+| Start  | #   | Activity Name                              | Duration |
+|---     |---  |---                                         |---       |
+| 10:00AM| 1   | Instructor Do: Stoke Curiosity             | 0:10     |
+| 10:10AM| 2   | Instructor Demo: Lighthouse                | 0:05     |
+| 10:15AM| 3   | Student Do: Lighthouse                     | 0:15     |
+| 10:30AM| 4   | Instructor Review: Lighthouse              | 0:10     |
+| 10:40AM| 5   | Instructor Demo: Webpack Intro             | 0:05     |
+| 10:45AM| 6   | Student Do: Webpack Intro                  | 0:15     |
+| 11:00AM| 7   | Instructor Review: Webpack Intro           | 0:10     |
+| 11:10AM| 8   | Instructor Demo: Webpack Bundle            | 0:05     |
+| 11:15AM| 9   | Student Do: Webpack Bundle                 | 0:15     |
+| 11:30AM| 10  | Instructor Review: Webpack Bundle          | 0:10     |
+| 11:40AM| 11  | Instructor Demo: Webpack Loader            | 0:05     |
+| 11:45AM| 12  | Student Do: Webpack Loader                 | 0:15     |
+| 12:00PM| 13  | BREAK                                      | 0:30     |
+| 12:30PM| 14  | Instructor Review: Webpack Loader          | 0:10     |
+| 12:40PM| 15  | Instructor Demo: Webpack Plugin            | 0:05     |
+| 12:45AM| 16  | Student Do: Webpack Plugin                 | 0:15     |
+| 1:00PM | 17  | Instructor Review: Webpack Plugin          | 0:15     |
+| 1:15PM | 18  | Instructor Do: Stoke Curiosity             | 0:10     |
+| 1:25PM | 19  | Instructor Demo: Hot Module Replacement    | 0:05     |
+| 1:30PM | 20  | Student Do: Hot Module Replacement         | 0:15     |
+| 1:45PM | 21  | Instructor Review: Hot Module Replacement  | 0:10     |
+| 1:55PM | 22  | Instructor Demo: Workbox Service Workers   | 0:05     |
+| 2:00PM | 23  | Student Do: Workbox Service Workers        | 0:15     |
+| 2:15PM | 24  | Instructor Review: Workbox Service Workers | 0:15     |
+| 2:30PM | 25  | END                                        | 0:00     |
 
 ---
 
@@ -79,741 +94,1393 @@ By the end of class, students will be able to:
 
 ### 1. Instructor Do: Stoke Curiosity (10 min)
 
-* Welcome students to class and then open Google Chrome. 
+* Welcome students to class.
 
-* Open your Dev Tools Network Tab and Throttle your connection to `Slow 3G`
+* Open the [slide deck](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * ![Throttle Connection](./Images/throttleConnection.png)
+  * **What is a PWA?**: PWA is a design pattern.
 
-* Navigate to [Amazon.com](https://amazon.com/).
-  
-  * The page is going to load extremely slowly.
+    * A Progressive Web App (PWA) is a design pattern that uses web technologies to build a fast, flexible web application that will perform like a native app on any device.
 
-* Ask the class, "What can the Network Tab show us?"
+  * **Are PWAs dependent on a specific technology?**
 
-  * The network tab gives developers a view into what assets are being loaded and when, as well as total load times. Direct the students attention to the loading time chart.
+  * **PWAs are focused on optimizations, not specific tech.**
 
-  ![Network Chart](./Images/networkChart.png)
+    * PWAs do not rely on a single, specific technology. Instead, they use a variety of tools to build and optimize web applications to take advantage of features already available on the user’s device and browser.
 
-  * Amazon will load assets for well over a minute, and this traffic can all be watched inside of our dev tools.
+  * **A PWA Is an Optimized Web App**
 
-* Ask the class, "What is throttling?"
+    * A PWA is simply a web app built using standard technologies that works in a browser and is optimized to improve performance and user experience.
 
-  * Throttling a connection is the act of using software to deliberately slow down or "throttle" a connections speed to be slower than it would normally.
+  * **What makes an app a PWA?**
 
-* Ask the class, "Why would we want to throttle our connection?"
+  * **PWA Design Pattern Optimizations**
 
-  * While we might have a nice and fast connection, a large portion of the planet does not have access to speeds even comparable to a slow 3g cellular network. 
+    * PWA are optimized to be fast.
 
-  * By throttling our connection, we can see how our users with worse connections might experience our content, and will help us understand what is slowing loading times most.
-  
-* Loading times like we are seeing with a throttled connection on Amazon can be a huge deterrent to users.
+    * PWAs are optimized to work offline.
 
-* Ask the class, "Have you ever left a webpage due to it taking too long to load"
+    * PWAs are installable by users directly on their devices.
 
-  * It's safe to say anyone who has used the internet has experienced this.. This is a common occurrence all over the world, as not all people have access to fast network connections.
-  
-  * One of the biggest factors that leads to a poor user experience is slow page load times.
+    * PWAs are secure.
 
-* Ask the class, "What do you think the most important part of the user experience is?". Call on one or two students for answers.
+  * **PWAs Are Fast**
 
-  * Performance. Speed and response times are paramount, as making users wait for response to input or loading information is a guaranteed way to lose those users.
+    * To give the user the look and feel of a native app, assets are bundled. This gives users a faster, more performant app.
 
-  * When it comes to the web every second counts. Todays class will be about how webpages can be optimized to save the end user time and provide a more fluid experience.
+  * **PWAs Work Offline**
 
-* Ask the class, "How do we know what is causing our page to perform poorly or well?"
+    * A PWA also uses a service worker, which allows a user to access visited pages even if the app is offline.
 
-  * Getting concrete analysis on the performance metrics of a web page is important in improving it in the future.
+  * **PWAs Are Installable**
+
+    * A PWA uses a special set of instructions for the browser called a manifest.json, which adds a splash screen and makes the app installable directly on the user’s device.
+
+  * **PWAs Are Secure**
+
+    * A PWA works on a secure connection to help keep users and their data safe.
+
+  * **What are the key benefits of PWAs?**
+
+  * **Key Benefits of PWAs**
+
+    * PWA is an adaptable design pattern with principles that can be applied to any web application.
+
+    * PWAs focus on optimizing web applications to be faster and more performant.
+
+    * PWAs enhance web applications by taking advantage of the user’s browser capability to provide a native app experience on any device.
+
+    * PWAs are cost effective! With PWAs, there is no need to build a separate mobile and desktop application. A single app works for all devices.
+
+    * PWAs can be directly installed by the user. There is no need for costly app stores!
+
+    * PWAs deliver the speed and features that users expect in a modern app.
+
+  * **Mini-Project**: The mini-project for this unit will be a contact directory app that uses service workers, IndexedDB, webpack, and has PWA functionality. We will also deploy the app to Heroku.
+
+* Navigate to `28-Stu_Mini-Project/Main` in your command line and demonstrate the following:
+
+  * We are going to build a contact directory that can work offline.
+
+  * Run `npm install` from the command line to install the dependencies.
+
+  * Run `npm start` from the command line to start the Express.js server.
+
+  * Open the browser at http://localhost:3000/
+
+  * Create two fake people to populate the contact cards.
+
+  * In the DevTools/Network tab, set the Throttling option to Offline. Then refresh the page to see the contact cards persist on the webpage.
+
+  * Install the PWA to display the app as a PWA.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What are we learning?
+
+  * 🙋 We are learning about webpack, bundlers, workbox, service workers, IndexedDB, PWAs, and offline functionality.
+
+  * ☝️ How does this project build on or extend previously learned material?
+
+  * 🙋 We will be using CRUD operations to persist and delete data. We will set up an Express.js server to display the user interface.
+
+  * ☝️ How does this project relate to your career goals?
+
+  * 🙋 Not only do apps need to look impressive, they must also have low latency and load quickly. In the real world, connectivity can be unstable, so provisions must be made to preserve the app's functionality in order to retain users.
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: Lighthouse Audit (5 min) 
+### 2. Instructor Demo: Lighthouse (5 min)
 
-* Open the [Gallery App](https://ancient-brushlands-76706.herokuapp.com/) and run the application. Let students know this is an application they will be working with later today.
+* In your browser, open the [Make My Trip website](https://www.makemytrip.com/).
 
-  * Google has created a tool called Lighthouse which will allow us to run an audit on our page and find out different metrics about how it performs and what is hindering its performance. Lighthouse is a quality auditing tool developed by Google for analyzing web pages.
+* Open the DevTools and click on the `>>` on the menu at the right. Select `Lighthouse` from the drop-down.
 
-  * It provides audits for performance, accessibility, SEO, and progressive web applications.
+* Select the `Performance`, `Progressive Web App`, `Best Practices`, `Accessibility` and `SEO` categories. For device, leave the default `mobile.` Leave any other options unchecked and click on `Generate Report'.
 
-  * Lighthouse can be run directly from our Chrome Dev Tools. This makes it a fast, simple, and effective way to get insights into our pages overall performance metrics.
+  * To get started, we'll focus on the main driver for high bounce rates, which are slow page loads.
 
-  * Open chrome dev tools, and click the `Audits` tab.
+* Briefly show some of the categories Lighthouse will audit for you. Scroll down to the **Performance** section and note that the overall score is rated very bad.
 
-  ![Audits Tab](Images/auditsTab.png)
+* Select the slide button to display the longer descriptions of the performance metrics.
 
-  * Scroll down and click `Run Audits`
+* Examine "First Contentful Paint," "Time to Interactive," "Total Blocking Time," and "Speed Index."
 
-  ![Run Audits](Images/runAudits.png)
+* Follow the link in the [Time to Interactive](https://developer.mozilla.org/en-US/docs/Glossary/Time_to_interactive) to show students how to obtain more information on the metric as well as information on any corrective actions they may wish to take to improve the metric.
 
-* Open the generated `Audit Report` and walk students through the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * The *performance* section will be the first you encounter, and one of the most useful for todays class. This section will tell us why our site might be performing poorly and delivering a poor user experience. It will also give us actionable items to fix.
+  * ☝️ How do we generate an audit report?
 
-  * Hovering over the different status signs next to the times shown will give you information on what that test means.
-
-  ![Hover](Images/performanceSection.png)
-
-  * Each audit has a reference doc explaining why the audit is important, as well as how to fix it. These reference docs will lay out why this metric is important to the user experience and give reasons why we might be lacking in the specified audit.
-
-  * One of the main metrics Lighthouse looks for is the *first meaningful paint*.
-
-  * A paint occurs when content is loaded on the screen. Lighthouse measures the first *Contentful* paint, which means when any content is loaded. It also measures the first *meaningful* paint which occurs when the primary content becomes visible.
-
-  * One of the most important metrics it takes is *Time to Interactive*. This is the time it takes for the webpage being audited to become usable. A long delay in interactivity can lead to page abandonment.
-
-* Ask the class, "What is web page abandonment?"
-
-  * Abandonment occurs when a user leaves a web page without completing the task they set out to.
-
-* When working on improving a webpage's performance, we should use Lighthouse to complete frequent audits. These can be incredibly helpful in pinpointing where our efforts should be focused.
+  * 🙋 Open the Lighthouse tab in DevTools, select the categories, then select the "Generate report" button.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Lighthouse/README.md`.
 
-### 3. Student Do: Lighthouse Audit (15 min) 
+### 3. Student Do: Lighthouse (15 min)
 
-* Direct students to the activity instructions found in `01-Stu_Lighthouse/README.md`.
+* Direct students to the activity instructions found in `02-Stu_Lighthouse/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Lighthouse Audits
+  # 📐 Analyze the Lighthouse Audit
 
-  In this activity you will use Google Lighthouse to audit your second group project to find out performance metrics.
+  Work with a partner to identify the key metrics that need improvement using a Lighthouse audit.
 
-  ## Instructions
+  ## 📝 Notes
 
-  * We are going to utilize your second group project for these coming activities to check its performance metrics.
+  1. Review the [Lighthouse audit](./Unsolved/assets/audit.png).
 
-  * Navigate to the deployed URL of your project.
+  2. Identify which metrics must be modified to improve the loading time of the website.
 
-  * Open the Chrome Dev Tools and click the `Audits` tab.
+  3. Add comments to [audit.md](./Unsolved/audit.md).
 
-  * Scroll down and click `Run Audits` and allow Lighthouse to run.
+  Refer to the documentation:
 
-  * Read through the provided report and be prepared to talk about the `Opportunities` portion of your audit!
+  * [Google docs on Lighthouse audits](https://developers.google.com/web/tools/lighthouse)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What other ways can you run a Lighthouse audit besides from the browser?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Lighthouse Audit (10 min) 
+### 4. Instructor Review: Lighthouse (10 min)
 
-* Ask the class the following question(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * What are some of the 'Opportunities' for improvement you found in your applications?
+  * ☝️ How comfortable do you feel with Lighthouse? (Poll via Fist to Five, Slack, or Zoom)
 
-  * How long did the first content paint take?
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * How long did the first meaningful paint take?
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * How long did it take to become interactive?
+  * ✔️ Largest Contentful Paint
 
-  * Are there any commonalities you hear?
+  * ✔️ Time to Interactive
+
+* Open the [Lighthouse audit report for weather.com](./assets/audit.png) and note that the score can vary from report to report because the measurements are calculated in milliseconds and often depend on external factors such as third-party APIs, server load capacity, and internet connectivity.
+
+* Open the `02-Stu_Lighthouse/Solved/audit.md`. Examine and explain the following questions and answers.
+
+  * Which metrics are failing and what do they measure?
+
+    * 🔑 **Time to Interactive:** Measures how much time until the webpage is fully functional.
+
+    * 🔑 **Total Blocking Time:** Sum of all time periods between First Contentful Paint(FCP) and Time to Interactive. FCP marks the time at which the first text or image is painted.
+
+    * **Speed Index:** Shows how quickly the contents of the page are visibly populated.
+
+    * **Cumulative Layout Shift:** Measures the movement of visible elements within the viewport.
+
+    * 🔑 **Largest Contentful Paint:** Marks the time at which the largest text or image is painted.
+
+* List a corrective measure for each metric selected above.
+
+  * 🔑 Time to Interactive: Defer or remove unneeded JavaScript.
+
+  * 🔑 Total Blocking Time: Optimize JavaScript to reduce the amount that is loaded, parsed, and executed.
+
+  * Speed Index: Reduce load on the call stack or the main thread.
+
+  * 🔑 Largest Contentful Paint: Reduce render blocking JavaScript.
+
+  * Cumulative Layout Shift: Always include size attributes on your images and video elements.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Are these metrics weighted equally in the performance score?
+
+  * 🙋 No, certain metrics like Largest Contentful Paint and Total Blocking Time are weighted more heavily and have a more significant impact on the performance score.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Google docs on Lighthouse performance scoring](https://developers.google.com/web/tools/lighthouse), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: JS Minification (5 min) 
+### 5. Instructor Demo: Webpack Intro (5 min)
 
-* Ask the class the following question(s):
+* Open `03-Ins_Webpack-Intro/package.json` in your IDE and demonstrate the following:
 
-  * "What do you think minification means"?
+  * The `devDependencies` webpack and `webpack-cli` enable webpack to compile the bundles.
 
-    * Minification is the process of taking our code and removing all unnecessary characters and whitespace without loss of functionality in an attempt to save file space.
+  * 🔑 To create the devDependencies, use the command `npm install -D webpack webpack-cli`. When they are installed, they will appear in the `package.json` as the following shows:
 
-  * "Where have we seen minification before?"
+  * 🔑 It is also important that we add the scripts to enable webpack to run in development mode and production mode, as the following shows:
 
-    * Bootstrap and jQuery are two examples of minified source code
+    ```json
+    "scripts": {
+      "watch": "webpack --watch",
+      "build": "webpack --mode production"
+    },
+    ```
 
-* Open [JSCompress](https://jscompress.com/) and paste the following code into the textarea:
+  * The `watch` script enables automatic rebundling when changes in the JavaScript files are detected.
+
+  * The `build` script launches webpack in production mode. This mode is meant to run the app on client machines so it minifies and optimizes the assets on the application as well as much more.
+
+* Open `03-Ins_Webpack-Intro/webpack.config.js` and note the following:
+
+  ```js
+  const config = {
+    // Entry point for initial bundle for page load
+    entry: './assets/app.js',
+    output: {
+      path: `${__dirname}/dist`,
+      filename: 'bundle.js',
+    },
+    // Production mode is the default
+    mode: 'development',
+  };
+  ```
+
+* Note that the `config` object defines the entry point as our main JavaScript file.
+
+* The output point is in the `dist/` folder that will contain the JavaScript bundle.
+
+* The mode is set to development, allowing auto bundling with the watch option.
+
+* Navigate to `03-Ins_Webpack-Intro` directory and run the following command to create a bundle:
+
+  ```bash
+  npm run watch
+  ```
+
+* Open the `03-Ins_Webpack-Intro/index.html` file in your IDE to show the following script element at the bottom of the `<body>`:
+
+  ```html
+  <script type="text/javascript" src="dist/bundle.js"></script>
+  ```
+
+* Open `03-Ins_Webpack-Intro/index.html` in the browser and explain the markup is using the bundle to handle user interactivity for the webpage.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the significance of the `--watch` flag?
+
+  * 🙋 Enables a background process that watches for JavaScript changes and creates a new bundle to persist changes to the bundle.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Webpack-Intro/README.md`.
+
+### 6. Student Do: Webpack Intro (15 min)
+
+* Direct students to the activity instructions found in `04-Stu_Webpack-Intro/README.md`, which are also shown below.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Add NPM Scripts to Implementation of Webpack
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to bundle the JavaScript file from the command line.
+
+  * As a developer, I want to start webpack's watch mode from the command line.
+
+  ## Acceptance Criteria
+
+  * It is done when a production-ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
+
+  * It is done when watch mode is initiated from the command line using the command `npm run watch`, as indicated in the screenshot below.
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  * [Webpack docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
+
+  * [Webpack docs on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
+
+  ## Assets
+
+  The following image demonstrates that watch mode is currently on:
+
+  ![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
+
+  ---
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * How can we implement watch mode in production?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 7. Instructor Review: Webpack Intro (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with webpack installation and creating bundles?
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ webpack.config.js
+
+  * ✔️ webpack and webpack-cli packages
+
+  * ✔️ npm scripts for production and development modes
+
+* Open `04-Stu_Webpack-Intro/Solved/package.json` in your IDE and explain the following:
+
+  * 🔑 The webpack and webpack-cli are installed as `devDependencies`.
+
+    ```sh
+    npm install -D webpack webpack-cli
+    ```
+
+  * 🔑 Add the npm scripts to run either the development mode or production mode of webpack from the terminal.
+
+    ```sh
+    "scripts": {
+      "watch": "webpack --watch",
+      "build": "webpack --mode production"
+    },
+    ```
+
+  * The `--watch` flag enables auto bundling when JavaScript files are modified. This is useful in development mode, but not useful in production.
+
+  * In the `build` script, selecting production mode for webpack minifies and optimizes the bundle in order to maximize performance, but is not useful when trying to debug in development mode.
+
+  * Navigate to the `04-Stu_Webpack-Intro` directory in the terminal and run the following command to initiate the watch command.
+
+    ```sh
+    npm run watch
+    ```
+
+  * Verification that the watch mode is currently on can be found in the terminal.
+
+  * Navigate to the `04-Stu_Webpack-Intro` directory in the terminal and run the following command to create a production-ready bundle.
+
+    ```sh
+    npm run build
+    ```
+
+  * Verification that the bundle has been minified for production mode can be seen in the terminal.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between production and development modes in webpack?
+
+  * 🙋 Development mode allows for more legible code for debugging and auto bundling with the watch option. Production's priority is to optimize the bundle with minification along with a few more size saving measures.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋  We can refer to supplemental material, read the [webpack documentation on webpack modes](https://webpack.js.org/configuration/mode/#mode-production), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 8. Instructor Demo: Webpack Bundle (5 min)
+
+* Open `05-Ins_Webpack-Bundle/webpack.config.js` in your IDE and demonstrate the following:
+
+  * 🔑 We are importing a core Node.js module, `path`, at the top of the file to enable the absolute path reference to be used for the current working directory.
 
     ```js
-    var myArray = [1, 2, 3, 4, 5];
+    const path = require('path');
+    ```
 
-    for(var i=0; i < myArray.length; i++){
-      console.log(myArray[i]);
+  * 🔑 The `config` object has multiple entry points for a multi-page application and enables lazy loading.
+
+    ```js
+    entry: {
+      main: './assets/app.js',
+      weekly: './assets/weekly.js',
+    },
+    ```
+
+  * We use multiple entry points to accommodate the `index.html` and `weekly-expense.html` files.
+
+  * 🔑 A dynamic variable, `name`, is used to create multiple bundle names in the `output` property of the `config` object.
+
+    ```js
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+    ```
+
+    * The `name` variable will be replaced with the `main` and `weekly` keys assigned to the entry points.
+
+  * Navigate to the `05-Ins_Webpack-Bundle` directory in the terminal and run the following command to install the webpack dependencies.
+
+    ```bash
+    npm install
+    ```
+
+  * Remain in the same directory and run the following command to create the bundles.
+
+    ```bash
+    npm run watch
+    ```
+
+  * Verify that multiple bundles with their respective names were created.
+
+  * Open the `05-Ins_Webpack-Bundle/dist` directory to verify the bundles were created.
+
+  * Open `index.html` in the IDE and identify the following:
+
+    ```html
+    <script type="text/javascript" src="dist/main.bundle.js"></script>
+    ```
+
+  * Open the `weekly-expense.html` in the IDE and identify the following:
+
+    ```html
+    <script type="text/javascript" src="dist/weekly.bundle.js"></script>
+    ```
+
+  * Point out that the bundle names in the `dist/` comply with the bundles we created.
+
+  * Open the `index.html` in the browser and perform a basic transaction to demonstrate that this page is functioning properly.
+
+  * Navigate to the `weekly-expense.html` to verify that this page also works.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why would we want multiple bundles?
+
+  * 🙋 This allows the browser to only load and execute the JavaScript necessary for each webpage, which greatly reduce the page loading time.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Webpack-Bundle/README.md`.
+
+### 9. Student Do: Webpack Bundle (15 min)
+
+* Direct students to the activity instructions found in `06-Stu_Webpack-Bundle/README.md`, which are also shown below.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 🐛 The Bundle Command Fails
+
+  Work with a partner to resolve the following issue:
+
+  * As a developer, I should be able to create a bundle from the command line.
+
+  ## Expected Behavior
+
+  When a developer executes the build command from the command line, a bundle is created in the `dist/` folder.
+
+  ## Actual Behavior
+
+  When a developer executes the build command, an error message is displayed in the terminal.
+
+  ## Steps to Reproduce the Problem
+
+  To reproduce the problem, follow these steps:
+
+  1. At the command line, execute the command `npm install` to download the web app's dependencies.
+
+  2. At the command line, execute the command `npm run build` to create a bundle.
+
+  3. Instead of a success message that states a bundle is created, an error message indicates the bundle process failed.
+
+  ## Assets
+
+  The following image confirms that a bundle was created by displaying a success message in the terminal:
+
+  ![Command line successfully compiling our web application.](./Assets/chunks.png)
+
+  ---
+
+  ## 💡 Hints
+
+  How are the bundles being generated?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What does chunking do for us?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 10. Instructor Review: Webpack Bundle (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with creating multiple webpack bundles? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+  * Navigate to `06-Stu_Webpack-Bundle/Unsolved` in the terminal and run the following command to create the bundles.
+
+    ```sh
+    npm run watch
+    ```
+
+  * Webpack will now successfully create two bundles, as noted in the terminal message.
+
+  * Point out that a number of module dependencies are bound together to create the bundles.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is it important for `name` to be used to dynamically output bundle file names?
+
+  * 🙋 Name is a reserve key word that tells webpack to use the property names in the `entry` property to create unique bundle file names.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [webpack docs on output file names](https://webpack.js.org/configuration/output/), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 11. Instructor Demo: Webpack Loader (5 min)
+
+* Open `07-Ins_Webpack-Loader/assets/js/app.js` in your IDE and demonstrate the following:
+
+  * We are using async/await to retrieve the subtract calculation in the `submit` function.
+
+    ```js
+    async function submit(e) {
+      e.preventDefault();
+      const total = await subtract(Number(balanceEl.innerText), priceEl.value);
+      balanceEl.innerText = total;
+      addToList(expenseEl.value, priceEl.value);
     }
     ```
 
-* Click the `Compress JavaScript` button to minify the code snippet and explain the following point(s):
+  * 🔑 In order to maintain functionality of this code on older browsers such as Internet Explorer or Chrome version 57, we must use Babel to transpile our code to an older version of JavaScript that these older browsers can understand.
 
-* ![Minify JS](Images/minifyJS.jpg)
+  * Open `07-Ins_Webpack-Loader/webpack.config.js` in your IDE to reveal the following.
 
-  * The minifier moved our `myArray` declaration into our `for loop`.
+    ```js
+    entry: {...
+    output: {...
+    mode: {...
+    module: {
+      // Loaders
+    }
+    ```
+  * A new property named `module` has been created.
 
-  * The minifier removed all whitespace between characters, and put all of our code on one line.
+  * Within the `module` property, we will add the `rules` array, which will contain a collection of loaders.
 
-  * The minification process resulted in a 30% decrease in the size of the JavaScript.
+  * Loaders will extend webpack's bundling ability beyond JavaScript to other static assets such as style sheets.
 
-  ![Minified](Images/minification.jpg)
+    ```js
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+    ```
 
-  * While the code may look different after minification, it will function exactly the same
+  * Notice in the `test` property, a regex is used to find the style sheets in the application.
 
-* Ask the class, "What are the benefits of minification?"
+  * Navigate to `07-Ins_Webpack-Loader` in the terminal to install these two loaders as `devDependencies`.
 
-  * Minification saves us space, and smaller file sizes create faster downloads for the user. The faster our assets can download, the faster the page will load them for our user.
+    ```sh
+    npm install -D css-loader style-loader
+    ```
+
+  * Open `07-Ins_Webpack-Loader/assets/js/app.js` and examine the following at the top of the file.
+
+    ```js
+    import '../css/style.css';
+    ```
+
+  * Note that there is no `<link>` element in the `index.html` to connect the `style.css` file.
+
+  * The `css-loader` and `style-loader` now link the style sheet through the bundle import statement.
+
+  * Navigate to `07-Ins_Webpack-Loader` in the terminal and run `npm i && npm run watch` to create the bundles.
+
+  * Open `07-Ins_Webpack-Loader/index.html` in the browser to demonstrate that webpack is still styled through the webpack bundle.
+
+  * We will add another loader to allow Babel to transpile modern JavaScript into an older version of JavaScript for older browsers.
+
+    ```js
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/transform-runtime'],
+          },
+        },
+      },
+    ```
+
+  * Note in the configuration above that the `node_modules` are excluded.
+
+  * 🔑 The `babel-loader` uses a preset and a plugin option in order to transpile the modern JavaScript into an older-browser-friendly JavaScript version.
+
+  * Install the following packages as `devDependencies` in the `07-Ins_Webpack-Loader` directory.
+
+    * `@babel/plugin-transform-runtime`
+
+    * `@babel/core`
+
+    * `@babel/preset-env`
+
+    * `@babel/runtime`
+
+    * `babel-loader`
+
+  * 🔑 These packages support `babel-loader` and the preset and plugin options to transpile at runtime.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How does webpack know which files need to be loaded for the style sheets?
+
+  * 🙋 In the `test` property, a regex is used to find the file extensions `.css`.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Webpack-Loader/README.md`.
 
-### 6. Student Do: JS Minification (15 min) 
+### 12. Student Do: Webpack Loader (15 min)
 
-* Direct students to the activity instructions found in `02-Stu_Minify-JS/README.md`.
+* Direct students to the activity instructions found in `08-Stu_Webpack-Loader/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Minify Your JS
+  # 🐛 "Get the Latest Interest" Button Does Not Work
 
-  In this activity you will minify your JavaScript using an online tool.
+  Work with a partner to resolve the following issues:
 
-  ## Instructions
+  * As a developer, I want to be able to use async/await with webpack.
 
-  * Using the project you audited previously, navigate to [JSCompress](https://jscompress.com/)
+  * As a user, I want to be able to get the latest interest rate when I click the appropriate button.
 
-  * Copy the contents of one of your JS files into the compressor and click on the `Compress JavaScript` button.
+  ## Expected Behavior
 
-    * If you see an error, try checking the box labeled `ECMAScript 2019 (via babel-minify)` before trying again.
+  When I click the "Get the latest interest rate" button, an up-to-date interest rate should appear.
 
-  * Note the resulting Input/Output sizes of the JS as shown to the bottom of the textarea.
+  ## Actual Behavior
 
-  * Create a `dist` folder in the root of your project.
+  When a user clicks the "Get the latest interest rate" button, an error appears in the console.
 
-    * Create an `index.js` file inside of your `dist` folder.
+  ## Steps to Reproduce the Problem
 
-    * Copy/paste the minified JS of your dist folder into your `dist/index.js`
+  To reproduce the problem, follow these steps:
 
-  * Be sure to link your `dist/index.js` code to your application.
-  ```
+  1. At the command line, execute the command `npm install` to download the web app's dependencies.
 
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+  2. At the command line, execute the command `npm run watch` to create a bundle.
 
-### 7. Instructor Review: JS Minification (10 min) 
+  3. Note the illegal operation error.
 
-* Ask the class the following question(s):
+  ## Assets
 
-  * How much of a reduction they saw in JS sizes from Input to Output?
+  The following image confirms that a bundle was created by displaying a success message in the terminal:
 
-  * How this could benefit developers, especially those with massive code bases?
+  ![Get the latest interest rate button in the web application.](./Assets/interest-button.png)
 
-* While the minified code certainly appears different than the code we input to start, all of the functionality is retained.
+  ![The latest interest rate is displayed on the web application.](./Assets/interest.png)
 
-* Ask the class, "Why might we not want to edit our minified code?".
+  ---
 
-  * It is important to have minified code in it's own file. It is not recommended to attempt editing minified code as it can be difficult to read, and even more difficult to debug due to the lack of readability.
+  ## 💡 Hints
 
-* Ask the class the following question(s):
+  Which plugins do we need for async/await to work in our browser?
 
-  * How might we minify image files?
+  ## 🏆 Bonus
 
-* Answer any questions before proceeding to the next activity.
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-### 8. Instructor Demo: Enable Compression (5 min) 
+  * What Babel plugin would allow object rest and spread operators to be used?
 
-* Ask the class, "What do we do with files that are so large they are slowing load times?"
-
-  * We compress those files.
-
-* Ask the class, "What is a zip file?"
-  
-  * A `.zip` file is a compressed version of a normal folder. When you `unzip` it, the folder contains all of the information it had before it was zipped.
-
-* On the web we can use something called GZip compression via an NPM Package called `compression`.
-
-  * GZip is a form of data compression -- it takes a piece of data and makes it smaller. The original data can be restored by un-zipping the compressed file.
-
-  * It is relevant to web apps and web sites because the HTTP protocol includes the ability to gzip data that is being sent.
-
-  * This middleware will enable compression for our project, allowing for compressed versions of our files to be sent over the network for faster download times.
-
-* Navigate to [compression npm](https://www.npmjs.com/package/compression)
-
-* Tell the class that using this middleware enables compression with just 3 lines of code.
-
-* Now we are going to show students around the `Network` tab in Chrome Dev Tools.
-
-* Open up your `network` tab in the chrome dev tools. Navigate to the [New York Times](https://www.nytimes.com/). 
-
-  ![Network Tab](Images/networkTab.png)
-
-* Point students to all the incoming network traffic shown, and more specifically the file sizes column.
-
-  ![Network Traffic](Images/networkTraffic.png)
-
-* There is a file size showing the compressed size (Smaller number) and its uncompressed size (larger number).
-
-  * Files that don't have two numbers are uncompressed files being sent unchanged.
-
-  **Note**: In order to see both rows, you may need to click the "Network Settings" cogwheel and click on the "Use large request rows" checkbox.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
-
-### 9. Student Do: Enable Compression (15 min) 
-
-* Direct students to the activity instructions found in `03-Stu_Enable-Compression/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # GZip Compression
-
-  In this activity you are going to use an NPM package called compression to enable GZip compression in your project.
-
-  ## Instructions
-
-  * Navigate to [compression npm](https://www.npmjs.com/package/compression)
-
-    * Read about the installation procedure and some of the API's functionality. Use the docs to enable compression in your application.
-
-  * Once completed, navigate to your page and look at the traffic via the Network tab.
-
-    * You should be able to see the sizes of the files your page is requesting.
-
-    * Take note of the differing file sizes.
-
-    * This shows your Uncompressed/Compressed file sizes.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 10. Instructor Review: Enable Compression (10 min) 
-
-* Open [03-Stu_Enable-Compression](../../../../01-Class-Content/19-PWA/01-Activities/03-Stu_Enable-Compression/Solved) in your IDE and explain the following points
-
-  * We first `npm install compression`
-
-  * We then add the following code to our `server.js`:
-
-  ```js
-  const express = require("express");
-  const mongoose = require("mongoose");
-  const compression = require("compression");
-
-  const app = express();
-
-  app.use(compression());
-  ```
-
-* Answer any questions before proceeding to the next activity.
-
-### 11. Instructor Demo: Image Compression (5 min) 
-
-* Ask the class the following question(s):
-
-* Have you ever gone to a site and experienced slow image loading times?
-
-  * Images are one of the most used assets on the web. They are everywhere, and there are more than you can imagine.
-
-  * This is normally due to oversized images or high resolution images being downloaded and taking time. Images are one of the main culprits in slowing down web loading times.
-
-* How might we be able to fix the problem of images that are too large?
-
-  * We can use a concept called *Image Compression*. For the purposes of our course we are going to talk about *Lossy Image Compression*.
-
-* What do we mean by "lossy" image compression?
-
-  * What lossy image compression basically means is that some of the image data is lost during compression. Once an image has used lossy compression, you cannot reverse the process due to this loss of data. The data lost will normally result in almost unnoticeable changes in image quality most of the time. 
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
-
-### 12. Student Do: Image Compression (15 min) 
-
-* Direct students to the activity instructions found in `04-Stu_Image-Compression/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Image Compression
-
-  In this activity you are going to use an online compression tool to decrease image file sizes for the Gallery App.
-
-  ## Instructions
-
-  * In this activity you will be using [Tiny PNG](https://tinypng.com/) to compress images.
-
-  * First, unzip the `uncompressedImages.zip` file.
-
-  * Next, navigate to [Tiny PNG](https://tinypng.com/).
-
-    * Tiny PNG is an example of a free image compression tool. There are a number of good free and paid applications that run on the web and some that you can download to run natively on the computer. Paid tools will generally offer many more configuration options and handle larger files.
-
-  * Follow the instructions to upload 3 to 5 images to Tiny PNG. The app will begin compressing the images.
-
-  * Click `Download all` once the hap has finished compressing all of the images you uploaded. This will download a `zip` file containing the optimized images. The `zip` fill will most likely be downloaded to your `Downloads` folder.
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: Image Compression (10 min) 
+### 14. Instructor Review: Webpack Loader (10 min)
 
-* Ask the class the following question(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Did you see a loss in image quality?
+  * ☝️ How comfortable do you feel with webpack loaders? (Poll via Fist to Five, Slack, or Zoom)
 
-  * Image compression allows us to lower load times for our users without a loss of visual fidelity.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-* Do you see the benefits of compressing images?
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * When we can save space while maintaining visual quality, that is a win win. It allows for us to have high resolution images for our page while we are still decreasing download/load times for our user.
+  * ✔️ `path.resolve()`
 
-* What are some other things we can do to decrease our load times?
+  * ✔️ `dist`
 
-  * We can load only images that are present on the screen. If the image is not visible to the user, we shouldn't bother downloading it yet.
+* In the terminal, navigate to `08-Stu_Webpack-Loader/Unsolved` and run `npm i && npm run watch` to create the error. Examine the error to reveal the first bug.
 
-* Ask the class, "What if a user doesn't scroll through all of the images?"
+  * The error message in the terminal indicates that the error is an illegal operation on a directory.  .
 
-  * Now that we have compressed all of our images, we are certainly saving space. Point out, we are loading all 38 images when there is only 6-9 images showing at any time. If a students user is on mobile, it would only be 1-2 images at any time.
-
-  * This poses multiple problems. It not only makes loading slower, but is costly when it comes to data and those people using mobile who may not have an unlimited data plan. We certainly don't want to cost our user time and money, so what can be done?
-
-* Ask the class, "Why do we load all of the images at page load, if the user might not see them all?"
-
-  * Loading everything at once is the default. There is a concept in programming referred to as `lazy loading` that allows us to only download assets as they are needed.
-
-* Answer any questions before proceeding to the next activity.
-
-### 15. Instructor Demo: Lazy Loading (5 min) 
-
-* Open our completed [Lazy Loading Gallery App](https://lazyyload.herokuapp.com/) and demo the lazy loading functionality by scrolling to the bottom of the page.
-
-  * If it loads too quickly, open your `Network` tab in your Dev Tools and throttle to `slow 3g`, disable cache, and refresh the page.
-
-  * ![Throttle Connection](Images/throttleConnection.png)
-
-* Ask the class, "What would enable us to know when an image is coming into the users viewport?"
-
-  * A Web API based on `scroll` events and the viewport intersection would allow us to keep an eye on when an element is or is not in view of our user.
-
-  * In the case of this application, we are loading 38 images when we may not need them all. Using lazy loading, If images were scrolled onto the screen that event would then load the images if they had entered the viewport.
-
-* Ask the class, "What web API would allow us this functionality?
-
-  * The `Intersection Observer API`. It provides a way to asynchronously observe when an element is or is not within our users viewport. 
-
-  * We can use this API to watch and then target elements as they enter the viewport
-
-* Ask the class, "How can the Intersection Observer API help us with loading images?"
-
-  * We are able to target images we would like, and observe them. As they enter the viewport of our user we can trigger a function that will then and only then load the image that has entered the viewport.
-
-  * Let's look at a code snippet that enables image lazy loading via JavaScript.
-  
-* Walk through the comments below:
-
-```js
-function initLazyImages() {
-  // Gather all of our images into a variable
-  const lazyImages = document.querySelectorAll(".lazy-image"); 
-  
-  function onIntersection(imageEntities) {
-    imageEntities.forEach(image => {
-      // When the image begins to intersect viewport, execute the if code block
-      if (image.isIntersecting) {
-        // Now that it is in viewport, we do not need to observe it anymore.
-        observer.unobserve(image.target);
-        // Set the image src to the image that has entered viewport.
-        image.target.src = image.target.dataset.src;
-      }
-    });
-  }
-  // Create a new instance of Intersection Observer
-  const observer = new IntersectionObserver(onIntersection);
-  // Observe all images on load.
-  lazyImages.forEach(image => observer.observe(image));
-}
-```
-
-* Ask the class, "How does this benefit our user?"
-
-  * By loading only necessary images, we can cut download/load times consistently and ensure as fast an experience as possible.
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
-
-### 16. Student Do: Lazy Loading (15 min) 
-
-* Direct students to the activity instructions found in `05-Stu_Gallery-Lazy-Load/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Lazy Loading Images
-
-  In this activity you are going to work with the Intersection Observer API to implement lazy loading functionality for our Gallery App.
-
-  ## Instructions
-
-  * In this activity you are going to take the Gallery App and implement Lazy Loading functionality.
-
-    * This will allow for us to load images only as they are needed, saving loading times.
-
-  * You will primarily be working within `loadImages.js`
-
-  * Inside of `public/assets/images` is a `.zip` file containing all the images needed for the app. Unzip this file and make sure the contents end up in your images folder.
-
-  * After you have completed implementing lazy loading, open your Dev Tools and run another Lighthouse Audit.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 17. Instructor Review: Lazy Loading (15 min) 
-
-* Open [loadImages.js](../../../../01-Class-Content/19-PWA/01-Activities/05-Stu_Gallery-Lazy-Load/Solved/public/assets/js/loadImages.js) and walk students through the code that enables lazy loading in our application.
-
-  ```js
-  function initLazyImages() {
-    const lazyImages = document.querySelectorAll(".lazy-image");
-  ```
-
-  * First we create a `const` called `lazyImages`. We save all elements with the class `lazy-image` to this constant variable
-
-  ```js
-    function onIntersection(imageEntities) {
-      imageEntities.forEach(image => {
-        if (image.isIntersecting) {
-          observer.unobserve(image.target);
-          image.target.src = image.target.dataset.src;
-        }
-      });
+    ```sh
+    [Error: EISDIR: illegal operation on a directory, mkdir '/'] {
+      errno: -21,
+      code: 'EISDIR',
+      syscall: 'mkdir',
+      path: '/'
     }
-  ```
-  * Next, we create an `onIntersection` function. In this function we state that for each mage, if the image is intersecting the viewport we load our image and stop observing it as it is now on screen.
+    ```
 
-  ```js
-    const observer = new IntersectionObserver(onIntersection);
-  ```
+* 🔑 Navigate to the `08-Stu_Webpack-Loader/Solved/webpack.config.js` file and open in your IDE:
 
-  * We used a constructor function to create a new instance of IntersectionObserver, saving it to a constant variable `observer`. This allowed us to use it in our `onIntersection` function.
+  * When we create a bundle, a directory is added to our code, the `dist` directory. We use `path.resolve()` to generate a `dist` folder that will hold our `index.html` and bundles. To run our app using the bundles, we will use the `index.html` inside the `dist` folder.
 
-  ```js
-    lazyImages.forEach(image => observer.observe(image));
-  }
-  ```
+    ```js
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+    },
+    ```
 
-  * The final line subscribes all images to be observed by IntersectionObserver to it can download the proper image when the placeholder is scrolled into view.
+  * Also notice that we need to properly configue Babel due to the async/await dependency:
+
+    ```js
+    {
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/transform-runtime'], //insert the runtime
+        },
+      },
+    },
+    ```
+
+* 🔑 Navigate to `08-Stu_Webpack-Loader/Solved/` in the terminal and run `npm install` and `npm run watch` to demonstrate that the error is now gone and the app is bundling as expected.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Do we need Babel to transpile our code in our current versions of Chrome?
+
+  * 🙋 No, we don't, but companies whose customers use legacy systems might.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Babel docs on plugins](https://babeljs.io/docs/en/plugins), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 18. Instructor Demo: Optimize Gallery App (5 min) 
+### 15. Instructor Demo: Webpack Plugin (5 min)
 
-* Web performance is important, and they now have a foundation to learn more and become great at optimizing applications.
+* Navigate to `09-Ins_Webpack-Plugin` and run the commands `npm i && npm run watch`.
 
-* For this next activity, students will take the completed gallery application and minify all of the JS.
+* Open `09-Ins_Webpack-Plugin/index.html` in your browser and demonstrate the following:
+
+  * Create an expense and submit it to see that this functionality is broken.
+
+* Open `09-Ins_Webpack-Plugin/dist/index.html` in the browser and create another expense.
+
+  * Now it works! But how?
+
+* Open `09-Ins_Webpack-Plugin/webpack.config.js` and examine the following:
+
+  * A new `plugin` property contains a new instance of the `HtmlWebpackPlugin` class configured to use the `index.html` file as a template.
+
+  * It's also configured to use the title `Webpack Demo`.
+
+    ```js
+    mode: 'development',
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Webpack Demo'
+      }),
+    ],
+    ```
+
+  * 🔑 Note that the `HtmlWebpackPlugin` module is imported at the top of the `webpack.config.js` file.
+
+    ```js
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    ```
+
+* 🔑 Open the `09-Ins_Webpack-Plugin/package.json` and show that in the `devDependency` is the `html-webpack-plugin` package.
+
+* Open the `09-Ins_Webpack-Plugin/index.html` file in the IDE and show that there is no `<script>` element to import the bundle.
+
+  * The `title` is inserted through the `htmlWebpackPlugin` object.
+
+    ```html
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    ```
+
+* Open the `09-Ins_Webpack-Plugin/dist/index.html` and examine the following:
+
+  * Webpack has output an `index.html` file in the `dist/` folder using the `./index.html` in the root directory with the title from the `webpack.config.js` file and the dynamically named bundle.
+
+  ```html
+  <title>Webpack Demo</title>
+  <script defer src="main.bundle.js"></script>
+  ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ When would the `HtmlWebpackPlugin` be highly useful?
+
+  * 🙋 When there are many pages with lots of entry points and bundle names.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Webpack-Plugin`.
 
-### 19. Student Do: Optimize Gallery App (20 min) 
+### 16. Student Do: Webpack Plugin (15 min)
 
-* Direct students to the activity instructions found in `06-Stu_Gallery-Optimize/README.md`.
+* Direct students to the activity instructions found in `10-Stu_Webpack-Plugin/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # Optimize Gallery App
+  # 🏗️ Generate an HTML file to Serve Webpack Bundles
 
-  In this activity you will use the Lazy Loading, GZip Compression, Image Compression, and Lighthouse to improve the performance of the Gallery App.
+  Work with a partner to implement the following user story:
 
-  ## Instructions
+  * As a developer, I want to generate HTML files that contain references to the webpack bundles.
 
-  * First, unzip the uncompressed images zip file found in `public/assets/images`.
+  ## Acceptance Criteria
 
-  * Run the following commands:
+  * It is done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
 
-    * Start MongoDB (run `mongod` in your terminal)
-    * In a new terminal window run `npm install`
-    * `npm run seed`
-    * `node server.js`
+  * It is done when the generated HTML file follows the template, `index.html`.
 
-  * Now that the application is running, navigate to the [localhost](https://localhost:3000)
+  * It is done when the generated HTML file has a generated page title.
 
-  * Open your Chrome Dev tools and run a Lighthouse audit on the application. Take note of the `performance` score listed at the top of the audit report and the `opportunities` section under `performance`.
+  * It is done when I can generate an HTML file that contains the references to the webpack bundle.
 
-  * Now, using the compression npm package, enable gzip compression in the application.
+  ## Assets
 
-  * Restart your server and run a new audit.
+  The following image demonstrates the web application's appearance and functionality:
 
-  * Next, using [Tiny PNG](https://tinypng.com/), compress all of the images found within the `public/assets/images`
+  ![The output of the loan calculator with a 300k loan.](./Assets/loan-calculator.png)
 
-  * Once you have compressed all of the images, replace the newly compressed images with the original uncompressed found in the applications images directory.
+  ---
 
-  * Restart your server and run a new audit.
+  ## 💡 Hints
 
-  * Now that we have compressed our images and enabled gzip compression, our last step is to minify our JavaScript.
-
-  * Create a `dist` folder in `/public`.
-
-    * Inside of `public/dist` create a file called `index.js`
-
-    * Link this `index.js` to your application in `public/index.html`.
-
-  * Head to [JSCompress](https://jscompress.com/).
-
-  * Take the contents of `/public/assets/js/loadImages.js` and paste it into the text area. Check the box labeled `ECMAScript 2019 (via babel-minify)`. Click `Compress JavaScript`.
-
-    * Take the resulting minified code and copy/paste it into your `/public/dist/index.js`
-
-  * Finally, restart your server and run a new audit.
-  ```
-
-* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
-
-### 20. Instructor Review: Optimize Gallery App (15 min) 
-
-* Navigate to [06-Stu_Gallery-Optimize/Solved](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved) and run the following commands:
-
-  * npm install
-
-  * npm install compression
-
-* Navigate to the [06-Stu_Gallery-Optimize/Solved/server.js](../../../../01-Class-Content/19-PWA/01-Activities/06-Stu_Gallery-Optimize/Solved/server.js)
-  
-  ```js
-  const compression = require("compression");
-
-  app.use(compression());  
-  ```
-
-  * With these two lines of code we can easily enable GZip compression in our application for our served files.
-
-* Ask the class, "Is Tiny PNG our only option for Image Compression?"
-
-  * We can use many different tools when looking to compress images. For our purposes we chose to use Tiny PNG for its ease of use. Feel free to research other image compression tools if you'd like to dive deeper.
-
-  * We will not go through the process of compressing all of the images as we did that earlier in the class, but image compression is an important and easy way to decrease load times.
-
-* Ask the class, "Can you see the ways you can use these performance enhancements in your existing applications?"
-
-  * Optimizing our applications to be performant on all devices and connection speeds will make us better developers. We need to consider those with smaller devices or slower speeds at all times as to not alienate any user base.
-
-* Answer any questions before proceeding to the next activity.
-
-### 21. Instructor Demo: Progressive Web Apps (5 min) 
-
-* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) in your browser and point out the following: 
-
-  * It's the Image Gallery application from earlier. But there's something different about it...
- 
-  * If we open the Settings in Chrome, we will see an option to `Install Images App...`
- 
-  * When we select `Install Images App...` we are presented with an option to "Install app?"
- 
-  * When we click `Install`, a new Chrome window opens with our application running in it. 
- 
-  * It is now installed as a desktop app! If we search our applications, we will find "Images App" listed among them.
-
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
-
-  * ☝️ What is different about our Image Gallery application? 
-  
-  * 🙋 There is added functionality to install it as a desktop application.
-
-  * ☝️ If we can install the Images App application on our laptops, where else might we install it? 
-
-* Answer any questions before proceeding to the next activity.
-
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `07-Stu_PWAs/README.md`.
-
-### 22. Student Do: Progressive Web Apps (15 min) 
-
-* Direct students to the activity instructions found in `07-Stu_PWAs/README.md`.
-
-* Break your students into pairs that will work together on this activity.
-
-  ```md
-  # Progressive Web Applications
-
-  In this activity, you will install a progressive web application (PWA) using your smart phone. You will also research the definition and production of a PWA. If you are unable to find the icons mentioned in this activity, try them in Chrome on your computer.
-
-  ## Instructions
-
-  * Follow these instructions to install a PWA for your specific smartphone OS:
-
-  * iOs:
-
-    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Safari.
-
-    * 2. Tap the Share button in Safari.
-
-    * 3. Tap the icon labeled Add to Home Screen.
-
-    * 4. Tap Add in the upper-right corner.
-
-    * 5. Name your PWA, then tap Add in the upper-right corner.
-
-  * Android:
-
-    * 1. Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/) with Chrome.
-
-    * 2. Tap the menu button in the upper right corner of Chrome.
-
-    * 3. Tap the icon labeled Add to Home Screen.
-
-    * 4. Name your PWA, then tap Add below the promp.
-
-  * Be prepared to answer the following question(s): 
-
-      * What is a progressive web application? 
-
-      * How do we create progressive web applications?
+  How do we ensure that the format of the HTML file that's generated follows our template, `index.html`?
 
   ## 🏆 Bonus
 
-  * What are examples of popular PWAs?
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Why must we use the `new` syntax with webpack plugins?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 23. Instructor Review: Progressive Web Apps (15 min)
+### 17. Instructor Review: Webpack Plugin (15 min)
 
-* Use the prompts and talking points below to review the following key point(s):
-  
-  * ✔️ Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript, that allow users to work offline
-  
-  * ✔️ PWAs require a manifest, a service worker and the Cache API
-  
-* Ask the class the following question(s) and call on students for the corresponding answer(s):
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is a progressive web application?
-  
-  * 🙋 Progressive web applications (PWAs) are mobile or desktop apps delivered through the web, built using HTML, CSS & JavaScript
-  
-  * ☝️ What is meant by the term 'native' app?
-  
-  * 🙋 The term "native app" refers to applications written for specific platforms. For example, native iPhone apps are written in iOs and Android apps are primarily written in Java. Apple apps will not run on Android devices and vice versa. 
+  * ☝️ How comfortable do you feel with webpack plugins? (Poll via Fist to Five, Slack, or Zoom)
 
-  * ☝️ How are PWAs different from native apps?
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-  * 🙋 Traditional Mobile Apps require multiple builds across platforms, are less discoverable by search engines and have high abandonment rates.They also offer less usability and don’t leverage mobile device capabilities and are often slow and bloated. PWAs provide advantages of both web and mobile apps such as push notifications, offline experiences,speed and stability. Plus, you can convert a web app into a PWA quickly without the build time of a mobile app.
-  
-  * ☝️ What do we need to learn to convert an application into a progressive web application?
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * 🙋 There are three primary things we need to learn: Manifests, Service Workers and the Cache API.
-  
-* Navigate to [https://image-gallery-cache.herokuapp.com/](https://image-gallery-cache.herokuapp.com/), open DevTools and explain the following: 
-  
-  * 🔑 If we look under the Application tab in DevTools for our Image Gallery App, we see **Manifest**, **Service Workers** and **Cache Storage** panels.
+  * ✔️ `HtmlWebpackPlugin`
 
-    ![Application Sidebar](Images/application-sidebar.png)
+  * ✔️ `htmlWebpackPlugin.options.title`
 
-  * 🔑 If we check the `offline` button in the Service Workers panel, we see that the application still delivers a full experience with an Internet connection!
+  * ✔️ `template: ./index.html`
 
-  ![Offline](Images/offline-mode.png)
+* Open `10-Stu_Webpack-Plugin/Solved/package.json` in your IDE and explain the following:
 
-* Make a note, that if students were to make a PWA with external libraries such as Bootstrap, that those styles and associated JavaScript files will need to be accounted in the manifest and service worker.
+  * 🔑 In order to use the plugin, we must install the package `html-webpack-plugin` as a `devDependency`.
+
+* Open `10-Stu_Webpack-Plugin/Solved/webpack.config.js` in your IDE and explain the following:
+
+  * We must import the package into the `webpack.config.js` file.
+
+    ```js
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    ```
+
+  * 🔑 We must add the `plugin` property to the `config` object.
+
+    ```js
+    plugins: [
+    ],
+    ```
+
+  * 🔑 Add the `HtmlWebpackPlugin`.
+
+    ```js
+    plugins: [
+      new HtmlWebpackPlugin({
+    }),
+    ],
+    ```
+
+  * 🔑 Configure the `HtmlWebpackPlugin` with the template and the title.
+
+    ```js
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Loan Calculator'
+      }),
+    ],
+    ```
+
+* Open `10-Stu_Webpack-Plugin/Solved/index.html` in your IDE and add the title using the plugin to the HTML template.
+
+  ```html
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  ```
+
+* Navigate to `10-Stu_Webpack-Plugin/Solved` and run the command `npm run watch` to create a new bundle.
+
+* Open `10-Stu_Webpack-Plugin/Solved/dist/index.html` in the IDE to see that the `index.html` file was created with the title and bundle.
+
+* Open `10-Stu_Webpack-Plugin/Solved/dist/index.html` in the browser and check that the app functions properly.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How does webpack know where to insert the title in the `index.html` template?
+
+  * 🙋 The `<%= %>` syntax with the reference to the `htmlWebpackPlugin.options.title` inserts the value into the correct location in the `index.html` template.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [webpack docs on HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/), and attend Office Hours to ask for help.
+
+  * Answer any questions before proceeding to the next activity.
+
+### 18. Instructor Do: Stoke Curiosity (10 min)
+
+* Progressive Web Apps and service workers first appeared in the browser in 2015. However, the concept was first discussed by Steve Jobs in 2007 just 18 days before the first iPhone shipped. At the time, Steve Jobs envisioned a way to create web applications that look and behave like native apps. The idea was to leverage the browser's native APIs to create a web application that could run on any device. We now know that history played out differently with the advent of the app store, but the concept remains relevant today.
+
+* You can get a glimpse of this moment in history by watching the following video: ["One Last Thing" by Steve Jobs at Worldwide Developer Conference 07'](https://youtu.be/ZlE7dzoD6GA)
+
+* It wasn't until 2015 that Google took that concept and gave it some life. The first Progressive Web App (PWA) specification was introduced at the Chrome Dev summit in 2015. Shortly after, developers started to use the specification to create web applications. Some of the most notable examples of PWAs are Twitter, Uber, and Google Maps, which all tout reduced data consumption of about 70% or more.
+
+* Today, creating a PWA is a lot easier than it was back then, and is usually a lot more cost-effective than developing a mobile application. Google has created an amazing set of tools, called workbox, to help developers create a service worker with minimal effort.
+
+* In this unit, you will learn about service workers and how to use them to cache assets, improve performance, and serve static assets. We will look at one that was made from scratch using plain Javascript, and another that was built on top of workbox.
+
+* We will start with the project setup needed to replace modules on the fly, move on to learning how to generate a service worker using Workbox, and finally learn how to implement caching strategies that make your app faster, and if configured correctly, able to work offline.
+
+### 19. Instructor Demo: Hot Module Replacement (5 min)
+
+* In the terminal, navigate to `11-Ins_Webpack-HMR` and run `npm i && npm run dev`. This will install the dependencies and run the development server.
+
+  * 🔑 When we run this application, we notice that there is a build process happening on the fly, but unlike other start scripts, this time we are not actually outputting the files to the `dist` directory.
+
+  * 🔑 Instead, the files are built and sent directly to the browser. The Hot Module Replacement (HMR) will take care of appending a hash to the file name, and the browser will automatically refresh the page when the file changes. For example, this is an example of the file name that will be sent to the browser:
+
+    ```bash
+    index.be865f63154ff82e7d29.hot-update.js
+    ```
+
+* Open `webpack.config.js` in your IDE to demonstrate the following:
+
+  * In this file, you can see that we have set up our webpack config to use Hot Module Replacement by adding a `devServer` options object with a attribute of `hot` set to `only`. This will reload the module without reloading the entire page.
+
+  * 🔑 In development, not having to refresh the page is a benefit so that we can see the change in the browser immediately and also keep an eye on the HMR logs that are generated by webpack.
+
+  * It is important to note that when using webpack, you don't need to install the Hot Module Replacement plugin. You can simply add the `hot` option to the `devServer` object in your webpack config.
+
+  * 🔑 Under the hood, webpack calls on another developer dependency called `webpack-dev-server` when it parses the `devServer` object in the `webpack.config.js` file. You can see this package listed in the `devDependencies` section of the `package.json` file.
+
+* Open the `src/css/style.css` file in your IDE to demonstrate the following:
+
+  * Update the font or font weight of the `h1` element and save the file.
+
+  * 🔑 Notice that when we update some of the content of a CSS file, we don't need to refresh the page to see the updates reflected in the browser.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 We make sure that `webpack-dev-server` is set up to use Hot Module Replacement by adding a `devServer` object to our webpack config and updating our JavaScript to tell Webpack to accept the updated module.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_Webpack-HMR/README.md`.
+
+### 20. Student Do: Hot Module Replacement (15 min)
+
+* Direct students to the activity instructions found in `12-Stu_Webpack-HMR/README.md`, which are also shown below.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📖 Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
+
+  Work with a partner to implement the following user story:
+
+  * As a developer, I want to add a `webpack-dev-server` to my project so that I can use Hot Module Replacement (HMR) to update the page without a full page refresh.
+
+  * As a developer, I want to learn how to configure `webpack-dev-server` so that it can test my project in a way that allows my work to continue without much downtime.
+
+  ## Acceptance Criteria
+
+  * It is done when I have installed `webpack-dev-server` as a `devDependency`.
+
+  * It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
+
+  * It is done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
+
+  * It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to the default: `only`.
+
+  * It is done when I have opened `Unsolved/src/index.js` and made the following changes:
+
+    * Imported the CSS file from the CSS folder.
+
+    * Added logic to accept Hot Module Replacement (HMR), as this is an optional feature.
+
+  * It is done when I have modified or added some content to the `style.css` file. For example, I changed the `h1` font weight in the `style.css` file and saved it; and that change is reflected in the browser.
+
+  ## 📝 Notes
+
+  * If you encounter any issues with loading your most recent changes, try again in a private/incognito window.
+
+  Refer to the documentation:
+
+  * [Webpack docs on Hot Module Replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr)
+
+  * [Webpack docs on webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+
+  ## 💡 Hints
+
+  * What other options are available for the `devServer` property?
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * What is another way to run `webpack-dev-server` without needing to add it to our `package.json` file?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+
+### 21. Instructor Review: Hot Module Replacement (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with Hot Module Replacement and how it can help us in development? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `webpack-dev-server`
+
+  * ✔️ `hot: 'only'`
+
+  * ✔️ `module.hot.accept()`
+
+* Open `12-Stu_Webpack-HMR/Solved/package.json` in your IDE and explain the following:
+
+  * 🔑 Notice that we have added a `devDependencies` object to our `package.json` file. This object contains all of the dependencies that we need to run our development server.
+
+  * 🔑 When creating a project, the `webpack-dev-server` package is best installed as a `devDependency`. The reason for this that it is only used in development and not in production.
+
+  * Keeping your dependencies list to a minimum is a good way to keep your project size down. While this isn't as important for these simple demos, it is good practice and something you should consider when creating your own projects.
+
+  * 🔑 In our scripts, we've also added a `dev` command to run `webpack-dev-server --open`. This command will run the `webpack-dev-server` and open the project in the browser. Optionally, if you don't like this behavior, you can use `--no-open` to prevent the browser from opening.
+
+    ```json
+    "scripts": {
+      "dev": "webpack-dev-server --open",
+      "build": "webpack"
+    },
+    ```
+
+* Open `12-Stu_Webpack-HMR/Solved/webpack.config.js` in your IDE to demonstrate the following:
+
+  * Now that we have our script to start the server and have installed the `webpack-dev-server` package, we need to add a `devServer` object to our `webpack.config.js` file.
+
+  * The `devServer` object contains all of the configuration options for our development server, which gets invoked by the `dev` command.
+
+  * We added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to `only`.
+
+  * 🔑 The hot attribute is a `webpack-dev-server` feature that allows us to use HMR. Additionally, we set this value to `only` so that we can use HMR without a full page refresh, as shown in the finished `webpack.config.js` snippet.
+
+    ```js
+    module.exports = {
+      // Truncated webpack.config.js
+      devServer: {
+        hot: true,
+        static: './dist',
+      },
+    }
+    ```
+
+* Open `12-Stu_Webpack-HMR/Solved/src/index.js` in your IDE to demonstrate the following:
+
+  * 🔑 Even though we have set up HMR, it is by default an opt-in feature. In order to take advantage of it, we need to update the `index.js` file to accept hot modules.
+
+  * This code is added at the bottom of the `index.js` file, but it can be added anywhere in the file. We first check to see if `module.hot` is defined. If it is, we accept hot modules by calling `module.hot.accept()` method, as shown in the following `index.js` snippet:
+
+    ```js
+    if (module.hot) {
+      module.hot.accept((err) => {
+        if (err) {
+          console.error('Cannot apply HMR update.', err);
+        }
+      });
+    }
+    ```
+
+  * You don't need to accept hot modules in every file, as changes will bubble up to a file that does accept hot modules. For example, if you make a change to `style.css` and save it, the changes will be reflected in the browser because `style.css` is imported in `index.js`. The same is true for JavaScript files.
+
+* Navigate to `12-Stu_Webpack-HMR/Solved` in your terminal and run `npm i && npm run dev` and demonstrate the following:
+
+  * With the development server running, we can now make changes to our `style.css` file and see the changes reflected in the browser.
+
+  * In `12-Stu_Webpack-HMR/Solved/src/css/style.css`, change the font weight of the `h1` element to `bold`. Notice that when you save, the page is updated in the browser without a full page refresh. You can also see the exact modules that were updated in the browser's console as you refresh the page, as shown in the following snippet:
+
+    ```console
+    log.js:24 [HMR] Waiting for update signal from WDS...
+    index.js:519 [webpack-dev-server] Hot Module Replacement enabled.
+    index.js:519 [webpack-dev-server] Live Reloading enabled.
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why is knowing how to use Hot Module Replacement helpful when creating a webpack project?
+
+  * 🙋 Using HMR prevents us from having to rebuild the entire project every time we make a change. It also allows us to make changes to the code without having to restart the server.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Webpack docs on Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr), and attend Office Hours to ask for help.
+
+* Answer any questions before proceeding to the next activity.
+
+### 22. Instructor Demo: Workbox Service Workers (5 min)
+
+* Navigate to `13-Ins_Workbox-Service-Workers` in your terminal, run `npm i && npm run dev`, and demonstrate the following:
+
+  * 🔑 When we run the application, the first thing you will notice is that unlike the previous activities, this one doesn't use or require webpack. Instead, we see a simple message that our server is running on port `3000`.
+
+  * This demo is a very simple page that contains a card with a title, a description, and an image. It also features a service worker that is running in the background.
+
+  * 🔑 This demo is very similar to other simple Express applications that we have created in the past, with one key distinction. This application uses a service worker written in plain Javascript to cache the application's assets.
+
+  * **Important**: There are two ways to create a service worker. One is to create it manually using the steps found on MDN, and the other is to use the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin. While we will use workbox in the next activity, it is important that we take a look at how to create a service worker manually.
+
+* Open `13-Ins_Workbox-Service-Workers/src/sw.js` in your IDE to demonstrate the following:
+
+  * This is a service worker that runs in the background and caches the assets that we are using. Services respond to different events, much like a button or input field.
+
+  * In the browser, you can click on the Application tab and see that the service worker is running and what status it is in.
+
+  * There are generally three stages in the service worker life cycle:
+
+    1. Install: When the service worker is installed, it will cache the assets that we are using.
+
+    2. Activate: The phase in which the service worker is activated. This is the phase in which the service worker is ready to handle events.
+
+    3. Claim: The phase when the service worker is claiming the clients that are using it.
+
+  * This particular service worker is also a cache-first strategy, meaning that it will first check to see if the assets are in the cache before trying to fetch them from the network, as show in the following snippet:
+
+    ```js
+    self.addEventListener('fetch', (e) =>
+      e.respondWith(caches.match(e.request).then((res) => res || fetch(e.request)))
+    );
+    ```
+
+  * While knowing how to create a service worker from scratch can be beneficial, in this unit we are going to take a look at how to generate a service worker using workbox.
+
+  * Service workers, regardless of whether or not they were made using plain Javascript or generated using workbox, all need to be registered at the entry point for your application. In our case, this file is `index.js`.
+
+* Open `13-Ins_Workbox-Service-Workers/src/index.js` in your IDE to demonstrate the following:
+
+  * Typically, all one needs to do in order to register a service worker is check to see if they are supported in the browser, and then use the `navigator.serviceWorker.register()` method to register the worker in the browser, as shown in the following code snippet:
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./sw.js')
+        .then((register) => console.log(register));
+    }
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What do service workers do?
+
+  * 🙋 Service workers are a way to cache assets that are used in the application, and are used to speed up the application's loading time.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`.
+
+### 23. Student Do: Workbox Service Workers (15 min)
+
+* Direct students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`, which are also shown below.
+
+* To get a better understanding of how to create a service worker with a framework, we will be using the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin for webpack.
+
+* Break your students into pairs that will work together on this activity.
+
+  ```md
+  # 📐 Add Comments to Implementation of a Workbox Service Worker
+
+  Work with a partner to add comments that describe the functionality of the code found in [index.js](./Unsolved/src/index.js) and [webpack.config.js](./Unsolved/webpack.config.js).
+
+  ## 📝 Notes
+
+  Refer to the documentation:
+
+  * [Workbox Service Worker](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW)
+
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Why don't JavaScript modules work inside service workers?
+
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
+
+### 24. Instructor Review: Workbox Service Workers (15 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with service workers in general? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `GenerateSW`
+
+  * ✔️ `Workbox()`
+
+* Open `14-Stu_Workbox-Service-Workers/Solved/webpack.config.js` in your IDE to demonstrate the following:
+
+  * 🔑 To make workbox generate a service worker when the application is built, we will use the `GenerateSW` plugin.
+
+  * 🔑 `GenerateSW` is a method that supports creating a new service worker file as part of the webpack build process.
+
+  * 🔑 To use the `GenerateSW` plugin, we need to import it and add it to our webpack configuration. Because the entire plugin is rather large, we will destructure it into a variable called `generateSW`.
+
+    ```js
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+    // Import workbox-webpack-plugin
+    const { GenerateSW } = require('workbox-webpack-plugin');
+    ```
+
+  * 🔑 In our exported object, we add a new entry to the `plugins` array that invokes the `GenerateSW` constructor, which accepts a configuration object.
+
+  * 🔑 In our case, we added an option called `clientsClaim`, which instructs the service worker to claim the clients that are using it.
+
+  * 🔑 Note that this aligns with the "claim" phase, or the last step in the service worker life cycle. This is similar to the `clients.claim()` method in our plain JavaScript service worker.
+
+    ```js
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Dev.to Posts',
+        template: './index.html',
+      }),
+      new GenerateSW({
+        clientsClaim: true,
+        skipWaiting: true,
+      }),
+    ],
+    ```
+
+  * In terms of webpack configuration, this is all we need to do to generate a service worker.
+
+  * The setup is so much easier than writing a plain JavaScript service worker from scratch in the previous activity. This is the benefit of using workbox, and this is just the beginning of what workbox can do!
+
+* Open `14-Stu_Workbox-Service-Workers/Solved/src/index.js` in your IDE to demonstrate the following:
+
+  * Much like we did with the plain JavaScript service worker, we still need to register the service worker that gets created by `GenerateSW`.
+
+  * 🔑 At the top of the file, we import a constructor called `Workbox` from the `workbox-window` library. This is a class that aids in handling service worker registration, updates, and reacting to service worker life-cycle events. The import should appear as it does in the following code snippet:
+
+    ```js
+    import { Workbox } from 'workbox-window';
+    ```
+
+  * 🔑 To register, we need to check to make sure service workers are supported in the browser. If they are, we use the `new Workbox()` constructor and assign it a variable called `wb`.
+
+  * 🔑 The `wb` variable is an instance of the `Workbox` class, meaning that we inherit all of the methods and properties of the class, one of which is `wb.register()`. This method is used to register the service worker, as shown in the following code snippet:
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      const wb = new Workbox('/service-worker.js');
+      logger('Service Worker', 'GenerateSW Service Worker is ready', wb);
+
+      wb.register();
+    }
+    ```
+
+  * 🔑 This method accepts a path to the service worker file. You may be wondering why we don't see a service worker file in the IDE. This is because we will be using the `webpack-dev-server` to build our application and serve it on the fly.
+
+  * 🔑 When it comes time to actually building your application by using a command like `npm run build`, you will see a service worker file in the `dist` directory. The resulting files will look like this:
+
+    ```sh
+    .
+    ├── index.bundle.js
+    ├── index.html
+    ├── service-worker.js
+    └── workbox-9cb17bc4.js
+    ```
+
+  * Now that we have reviewed the service worker, let's test our application in the browser.
+
+* Navigate to `14-Stu_Workbox-Service-Workers/Solved` in your terminal and run `npm i && npm run dev`. This will install the dependencies and run the development server.
+
+  * When we run the application, the browser will open automatically and we will be taken to a page featuring some articles from the web development site [Dev.to](https://dev.to).
+
+  * Open the browser's developer tools to see the service worker registration. Additionally, you can see the messages coming from workbox itself with regards to registration, updates, and life cycle events.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the difference between using workbox and plain JavaScript service workers?
+
+  * 🙋 The benefits of using workbox is that it is so much easier to understand and use. It's a great way to get started with service workers without having to write a plain JavaScript service worker from scratch.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Workbox docs on GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW), and attend Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 
-### 24. END (0 min)
+### 25. END (0 min)
 
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 

@@ -10,11 +10,13 @@ In today's class, students will wrap up Unit 01 by collaborating on a mini-proje
 
 * Unit 01 mini-project builds on the fundamental HTML and CSS concepts that students learned this week. Encourage students to review previous activities for help with syntax and for further study.
 
-* Although students will work on individual projects for the mini-project, they will be put into groups. Encourage them to brainstorm together and share their learnings. This will be the first of many opportunities for students to collaborate and work in groups. 
+* Reassure students that they are not expected to complete the mini-project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
-* This mini-project might also be some students' first experience building a development project from scratch. Remind them to break down the project into small, manageable steps and to let both the user story and acceptance criteria guide them to a step-by-step solution. 
+* Although students will work on individual projects for the mini-project, they will be put into groups. Encourage them to brainstorm together and share their learnings. This will be the first of many opportunities for students to collaborate and work in groups.
 
-* The activities of Unit 02 use `max-width` over `min-width` for media query breakpoints. This is because it's simpler to introduce responsive breakpoints with a "desktop-first" approach. 
+* This mini-project might also be some students' first experience building a development project from scratch. Remind them to break down the project into small, manageable steps and to let both the user story and acceptance criteria guide them to a step-by-step solution.
+
+* The activities of Unit 02 use `max-width` over `min-width` for media query breakpoints. This is because it's simpler to introduce responsive breakpoints with a "desktop-first" approach.
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
@@ -71,13 +73,15 @@ By the end of class, students will be able to do the following:
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min) 
+### 1. Instructor Demo: Mini Project (5 min)
 
 * Welcome students to class.
 
 * Open `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-  * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class. 
+  * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class.
+
+  * Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
   * 🔑 For the first mini-project, you will be creating a landing page using HTML and CSS. Each of you will work on your own landing page. However, you will still be put into groups so that you can brainstorm and work together through the specifications of the mini-project.
 
@@ -85,21 +89,21 @@ By the end of class, students will be able to do the following:
 
   * 🔑 The landing page will have a header, footer, and an image.
 
-  * 🔑 The landing page should also use semantic HTML and be accessible. 
+  * 🔑 The landing page should also use semantic HTML and be accessible.
 
   * Be creative! You can choose your own colors, text, and image.
 
   * 🔑 You might need to do a bit of research on your own! As in real life, you will not always be given everything you need to complete a task. Developers have to be able to research and find their own answers.
 
-  * When you approach a complex coding problem like this, break down the challenge into manageable chunks. Work with your group to figure out the steps to complete this mini-project. 
+  * When you approach a complex coding problem like this, break down the challenge into manageable chunks. Work with your group to figure out the steps to complete this mini-project.
 
-  * 🔑 You should also refer frequently to the user story and acceptance criteria. Checking your work against the goal stated in the user story and the conditions established in the acceptance criteria is a great way to stay on track. 
+  * 🔑 You should also refer frequently to the user story and acceptance criteria. Checking your work against the goal stated in the user story and the conditions established in the acceptance criteria is a great way to stay on track.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 We will use HTML to build the structure and use CSS to style the page. 
+  * 🙋 We will use HTML to build the structure and use CSS to style the page.
 
 * Answer any questions before allowing students to start the mini-project.
 
@@ -203,7 +207,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)  
+### 3. Instructor Review: Mini Project (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -221,7 +225,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `position: fixed`
 
-* Open `22-Stu_Mini-Project/Main/index.html` in your IDE and explain the following: 
+* Open `22-Stu_Mini-Project/Main/index.html` in your IDE and explain the following:
 
   * Everyone's landing pages will look different, so don't worry if yours doesn't look exactly like what we are about to review. As long as your landing page fulfills all of the specifications of the project, you did great!
 
@@ -231,7 +235,7 @@ By the end of class, students will be able to do the following:
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css/">
     ```
 
-  * 🔑 We use semantic HTML to define the header and an unordered list to create a list of links: 
+  * 🔑 We use semantic HTML to define the header and an unordered list to create a list of links:
 
     ```html
     <header>
@@ -245,7 +249,7 @@ By the end of class, students will be able to do the following:
     </header>
     ```
 
-  * We use a `<h1>` section heading for the title: 
+  * We use a `<h1>` section heading for the title:
 
     ```html
     <h1 class="text-center">My New Website</h1>
@@ -287,22 +291,22 @@ By the end of class, students will be able to do the following:
     </form>
     ```
 
-  * Finally, we added a footer with a `class` attribute used for styling: 
+  * Finally, we added a footer with a `class` attribute used for styling:
 
     ```html
     <footer class="text-center">
-      © 2021 My New Website Productions 
+      © 2021 My New Website Productions
     </footer>
     ```
 
-* Open `22-Stu_Mini-Project/Main/assets/css/style.css` in your IDE and explain the following: 
+* Open `22-Stu_Mini-Project/Main/assets/css/style.css` in your IDE and explain the following:
 
   * We use a universal selector to set the margin and padding of all elements to 0:
 
     ```css
     * {
       margin:0;
-      padding:0;  
+      padding:0;
     }
     ```
 
@@ -314,7 +318,7 @@ By the end of class, students will be able to do the following:
       padding: 20px;
       text-decoration: none;
     }
-    ``` 
+    ```
 
   * 🔑 To keep the header fixed to the top of the viewport, we set the position to `fixed`:
 
@@ -327,7 +331,7 @@ By the end of class, students will be able to do the following:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why is it important to design webpages with accessibility in mind? 
+  * ☝️ Why is it important to design webpages with accessibility in mind?
 
   * 🙋 Making your website accessible to more people can result in more users!
 
@@ -345,13 +349,13 @@ By the end of class, students will be able to do the following:
 
   * Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand a webpage's content.
 
-  * During this week's activities, we had a brief introduction to the use of semantic HTML and accessibility concerns. This project will require you to do some research to ensure that the goal stated in the user story and each part of the acceptance criteria is fully addressed. 
+  * During this week's activities, we had a brief introduction to the use of semantic HTML and accessibility concerns. This project will require you to do some research to ensure that the goal stated in the user story and each part of the acceptance criteria is fully addressed.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What are we learning?
 
-  * 🙋 We are learning to use HTML and CSS to build a website that is accessible to all users. 
+  * 🙋 We are learning to use HTML and CSS to build a website that is accessible to all users.
 
   * ☝️ How does this project build off or extend previously learned material?
 
@@ -377,27 +381,27 @@ By the end of class, students will be able to do the following:
   * **Why do we use CSS?** CSS allows us to make plain HTML content in our applications look clean and presentable to users.
 
   * **What are some features of a well-designed app?**
-  
+
     * Well-designed apps should have a mobile-responsive layout, good use of color contrast and space, readable font sizes, accessible design, and features that enhance the user's experience.
 
   * **What is our role in implementing these features?**
-  
-    * We are not graphic designers, but as web developers, it is our job to build a user interface that is usable and visually appealing to the app's target audience. 
-  
+
+    * We are not graphic designers, but as web developers, it is our job to build a user interface that is usable and visually appealing to the app's target audience.
+
     * We need to make sure that our app follows accessibility standards, performs well on both mobile and desktop devices, and is easy to maintain.
 
-  * **Can we build well-designed apps with CSS?** 
-  
-    * Yes, we can! Browsers are constantly adding support for more CSS-based tools that we can use. 
+  * **Can we build well-designed apps with CSS?**
+
+    * Yes, we can! Browsers are constantly adding support for more CSS-based tools that we can use.
 
     * Those tools include flexbox and grid for responsive layouts, transitions for animating the user interface, new units of size for developers to use, image color filtering, and more!
 
-  * **How can we learn to build these features?** 
-  
-  * CSS is a unique language, as it gives the developer many options for how to accomplish a goal. The best way to build CSS knowledge is to build apps and experiment with what does or doesn't work! 
-  
+  * **How can we learn to build these features?**
+
+  * CSS is a unique language, as it gives the developer many options for how to accomplish a goal. The best way to build CSS knowledge is to build apps and experiment with what does or doesn't work!
+
   * Try some of the following techniques to learn CSS:
-  
+
     * Read the official documentation and practice with the provided examples.
 
     * Reverse-engineer finished code to see how it was created.
@@ -405,7 +409,7 @@ By the end of class, students will be able to do the following:
     * Build something from scratch.
 
     * Debug a broken app using Chrome DevTools.
-  
+
     * And most importantly, ask questions!
 
   * In this unit, we will learn how to build responsive web designs, perform a CSS reset, and implement CSS custom properties and selectors.
@@ -444,13 +448,13 @@ By the end of class, students will be able to do the following:
 
 ### 7. BREAK (30 min)
 
-### 8. Instructor Demo: Media Query for Screen (5 min) 
+### 8. Instructor Demo: Media Query for Screen (5 min)
 
 * Open `01-Ins_Media-Query-Screen/index.html` in your browser and demonstrate the following:
 
-  * 🔑 We see a dark-blue header, a dark-tan navbar, a green sidebar, and a white body section. We also see white image placeholders. 
+  * 🔑 We see a dark-blue header, a dark-tan navbar, a green sidebar, and a white body section. We also see white image placeholders.
 
-  * 🔑 When we open Chrome DevTools and start shrinking the screen size, these components change colors! 
+  * 🔑 When we open Chrome DevTools and start shrinking the screen size, these components change colors!
 
   * 🔑 First, the header will change to a deep-red color when the screen size gets to 992px. Then, the navbar will change to a dark-pink color when the screen size gets to 768px. Finally, the image placeholders will change to a blue color when the screen size gets to 576px or smaller.
 
@@ -463,7 +467,7 @@ By the end of class, students will be able to do the following:
   * We use `@media screen` and then set the breakpoint using `max-width`:
 
     ```css
-    @media screen and (max-width: 992px) 
+    @media screen and (max-width: 992px)
     ```
 
   * Then we set the styles that will change at that breakpoint. For us, it was changing the header color:
@@ -514,7 +518,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Media-Query-Screen/README.md`.
 
-### 9. Student Do: Media Query for Screen (15 min) 
+### 9. Student Do: Media Query for Screen (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Media-Query-Screen/README.md`.
 
@@ -535,7 +539,7 @@ By the end of class, students will be able to do the following:
 
   * It's done when I change the screen size to 768px or smaller, and the product cards on the screen become stacked on top of each other.
 
-  * Optional: Just for fun, change the background color of the header each time the product cards change layout. 
+  * Optional: Just for fun, change the background color of the header each time the product cards change layout.
 
   ## Assets
 
@@ -564,7 +568,7 @@ By the end of class, students will be able to do the following:
 
 * When breaking everyone into groups, remind students and TAs that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to encourage and prioritize students who need extra help.
 
-### 10. Instructor Review: Media Query for Screen (10 min) 
+### 10. Instructor Review: Media Query for Screen (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -578,7 +582,7 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `width` of cards
 
-* Open `02-Stu_Media-Query-Screen/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `02-Stu_Media-Query-Screen/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * We are given an online store webpage with product cards. When the screen size gets smaller, the product cards shift so that they are clearly viewable on a smaller screen.
 
@@ -628,7 +632,7 @@ By the end of class, students will be able to do the following:
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Flexbox Layout (5 min) 
+### 11. Instructor Demo: Flexbox Layout (5 min)
 
 * Open `03-Ins_Flexbox-Layout/index.html` in your browser and demonstrate the following:
 
@@ -691,7 +695,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Flexbox-Layout/README.md`.
 
-### 12. Student Do: Flexbox Layout (15 min) 
+### 12. Student Do: Flexbox Layout (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Flexbox-Layout/README.md`.
 
@@ -737,7 +741,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 13. Instructor Review: Flexbox Layout (10 min) 
+### 13. Instructor Review: Flexbox Layout (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -751,13 +755,13 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `flex-wrap: wrap`
 
-* Open `04-Stu_Flexbox-Layout/Unsolved/index.html` in your browser and explain the following: 
+* Open `04-Stu_Flexbox-Layout/Unsolved/index.html` in your browser and explain the following:
 
-  * Let's open Chrome DevTools and toggle the device toolbar. When we make the screen smaller, notice what happens to the header and the product cards. The text in the header is squished, and the product cards run off the page! 
-  
+  * Let's open Chrome DevTools and toggle the device toolbar. When we make the screen smaller, notice what happens to the header and the product cards. The text in the header is squished, and the product cards run off the page!
+
   * So we know that the broken code that we need to debug and fix is the `.main-header` and the product cards in the `main` container.
 
-* Open `04-Stu_Flexbox-Layout/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `04-Stu_Flexbox-Layout/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * 🔑 The `main` container and the `.main-header` already have the `display` property set to `flex`:
 
@@ -805,7 +809,7 @@ By the end of class, students will be able to do the following:
 
   * 🔑 The core concept of responsive design is that a webpage should adjust to all devices. In other words, a web app that is created with responsive design in mind will look good and function well no matter what device a user is on.
 
-  * 🔑  Not only is responsive design better for the user, but the tools made available to us by CSS can also make development faster. This is because we don't have to write lines and lines of HTML in order to accommodate multiple devices. 
+  * 🔑  Not only is responsive design better for the user, but the tools made available to us by CSS can also make development faster. This is because we don't have to write lines and lines of HTML in order to accommodate multiple devices.
 
   * Let's open Chrome DevTools and shrink the screen size to see what happens to the page elements.
 
@@ -815,8 +819,8 @@ By the end of class, students will be able to do the following:
 
 * Open `05-Ins_Responsive-Design/assets/css/style.css` in your IDE and explain the following:
 
-  * We accomplished this by using media queries and flexbox properties! 
-  
+  * We accomplished this by using media queries and flexbox properties!
+
   * 🔑 We gave the `flex-direction` property of both `main` and `nav` a value of `column` so that the elements stack on top of each other:
 
     ```css
@@ -891,9 +895,9 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `flex-direction`
 
-* Open `06-Stu_Responsive-Design/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `06-Stu_Responsive-Design/Solved/assets/css/style.css` in your IDE and explain the following:
 
-  * This activity didn't require any coding on our part. Instead we were given a fully functioning webpage, and we had to explain how it works! Through this kind of activity, we can improve our computational thinking skills. 
+  * This activity didn't require any coding on our part. Instead we were given a fully functioning webpage, and we had to explain how it works! Through this kind of activity, we can improve our computational thinking skills.
 
 * Go through each question (🔑) in the `style.css` and call on students for the answers (🙋):
 
@@ -966,9 +970,9 @@ By the end of class, students will be able to do the following:
 
 * Answer any questions before proceeding to the next activity.
 
-### 17. Instructor Demo: Flexbox Placement (5 min) 
+### 17. Instructor Demo: Flexbox Placement (5 min)
 
-* Open `07-Ins_Flexbox-Placement/index.html` in your browser and demonstrate the following: 
+* Open `07-Ins_Flexbox-Placement/index.html` in your browser and demonstrate the following:
 
   * 🔑 When we change the screen size, the two product cards remain centered at all times.
 
@@ -1006,7 +1010,7 @@ By the end of class, students will be able to do the following:
       align-items: center;
     }
     ```
-  
+
   * 🔑 Finally, we set the height according to the height of the viewport:
 
     ```css
@@ -1032,7 +1036,7 @@ By the end of class, students will be able to do the following:
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `08-Stu_Flexbox-Placement/README.md`.
 
-### 18. Student Do: Flexbox Placement (15 min) 
+### 18. Student Do: Flexbox Placement (15 min)
 
 * Direct students to the activity instructions found in `08-Stu_Flexbox-Placement/README.md`.
 
@@ -1078,7 +1082,7 @@ By the end of class, students will be able to do the following:
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 19. Instructor Review: Flexbox Placement (10 min) 
+### 19. Instructor Review: Flexbox Placement (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1094,13 +1098,13 @@ By the end of class, students will be able to do the following:
 
   * ✔️ `align-items: flex-start`
 
-* Open `08-Stu-Flexbox-Placement/Unsolved/index.html` in your browser and demonstrate the following: 
+* Open `08-Stu-Flexbox-Placement/Unsolved/index.html` in your browser and demonstrate the following:
 
   * We see that the navbar links are on the left, but we need them on the right side.
 
   * We also see the long slideshow buttons on both sides of the image. We need to make them smaller and centered.
 
-* Open `08-Stu_Flexbox-Placement/Solved/assets/css/style.css` in your IDE and explain the following: 
+* Open `08-Stu_Flexbox-Placement/Solved/assets/css/style.css` in your IDE and explain the following:
 
   * 🔑 First we need to align the navbar links to the far right, or on the end of the navbar. We do that by giving the `justify-content` property a value of `flex-end`:
 
@@ -1146,7 +1150,7 @@ By the end of class, students will be able to do the following:
 
   * ☝️ What was the main axis of this page?
 
-  * 🙋 The main axis ran top to bottom, which was defined by `flex-direction: column`. 
+  * 🙋 The main axis ran top to bottom, which was defined by `flex-direction: column`.
 
   * ☝️ What can we do if we don't completely understand this?
 

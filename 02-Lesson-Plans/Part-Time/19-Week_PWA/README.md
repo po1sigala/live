@@ -1,55 +1,88 @@
-# Unit 19: PWA
+# Unit 19 Instructor Overview: Progressive Web Applications (PWA)
 
 ## Overview
 
-In this unit we will cover measuring and optimizing the performance of web applications. We will cover PWAs, service workers, analyzing performance, and webpack.
+In this unit, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives and homework.
+This unit is a precursor to the upcoming React unit, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
-## Instructor / TA Notes
+Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
 
-* We will be making use of students Project 2 during the first half of 19.1. Ensure all students have a deployed project to work with.
+## Instructor/TA Notes
 
-* When working with PWAs, you may need to clear your storage periodically in order to see each iteration of activities. Do so in DevTools under `Application > Clear storage > Clear site data`.
+* On Day 2 and Day 3, make sure you work in an incognito window for each activity to avoid caching issues. It would be a good idea to have students do the same.
 
-* Webpack can be a difficult tool to get your head around, so be as clear as possible in your explanations and be ready to answer plenty of student questions. It is recommended that you review the webpack [docs](https://webpack.js.org/concepts). You may want to read [Why Webpack](https://webpack.js.org/concepts/why-webpack) so that you are prepared to answer student questions like "Why are we learning this?".
+* Take some time to refresh your memory on how the Service Worker API works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the Service Worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-## Heads Up
+* On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-Next unit we will start React, with the following unit covering state management in React using cutting-edge techniques. Ensure that you are up to date with the latest best practices, including the use of Hooks, the Context API, and a general understanding of how redux works.
+* The homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
+
+* PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 
 ## Career Connection
-Remind students that related career services material can be found in their [important folder](../../../01-Class-Content/19-PWA/04-Important/CAREER-CONNECTION.md).
 
-If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
+* Remind students that related career services material can be found in the [Career Connection folder](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md).
 
+* If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
+
+## Heads-Up
+
+* In the next unit, students will get their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
+
+* Make sure that you are familiar with components, state, and hooks before starting the lesson.
+
+* We are getting to the end of the boot camp and students are probably starting to feel the fatigue. Try to keep the morale high!
 
 ## Helpful Links
 
+This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
-  * [19.1 - Lesson Plan](01-Day_Performance/19.1-LESSON-PLAN.md)
+  * [19.1 Lesson Plan](./01-Day_Webpack/19.1-LESSON-PLAN.md)
 
-  * [19.2 - Lesson Plan](02-Day_PWA/19.2-LESSON-PLAN.md)
+  * [19.2 Lesson Plan](./02-Day_Workbox/19.2-LESSON-PLAN.md)
 
-  * [19.3 - Lesson Plan](03-Day_Webpack/19.3-LESSON-PLAN.md)
+  * [19.3 Lesson Plan](./03-Day_IndexedDB/19.3-LESSON-PLAN.md)
 
-### Slide Decks
+### Homework
 
-N/A
+  * [Unit 19 Homework](../../../01-Class-Content/19-PWA/02-Homework)
 
-### Time Tracker(s)
+### Slide Deck
 
-  * [Unit 19-PWA Day 1 Time Tracker](https://docs.google.com/spreadsheets/d/1eDBMDxGxeXK44XfEzpSHYhD91buf2EVmiMQReykOd6g/edit?usp=sharing)
+  * [Unit 19: PWA](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
 
-  * [Unit 19-PWA Day 2 Time Tracker](https://docs.google.com/spreadsheets/d/1O_wG2FN045Ts9D2poo9CucC8l-WibO2LuvJYCU5nixA/edit?usp=sharing)
+### Algorithms
 
-  * [Unit 19-PWA Day 3 Time Tracker](https://docs.google.com/spreadsheets/d/1r3f4FeB0r9GK9x4NxY92KOdhp9rkSlVulHlU53hy4mc/edit?usp=sharing)
+  * [01: Is ArmStrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong/)
 
-## Algorithms
+    * [📹 Let's Code Is Armstrong](https://2u-20.wistia.com/medias/qpq5grsk37)
 
-  * [01-is-armstrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong)
+  * [02: Max Profit](../../../01-Class-Content/19-PWA/03-Algorithms/02-max-profit/)
 
-  * [02-max-profit](../../../01-Class-Content/19-PWA/03-Algorithms/02-max-profit)
+  * [03: Smallest Difference](../../../01-Class-Content/19-PWA/03-Algorithms/03-smallest-difference/)
 
-  * [03-smallest-difference](../../../01-Class-Content/19-PWA/03-Algorithms/03-smallest-difference)
+### Resources
+
+* [Google documentation on Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+* [MDN Web Docs on PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+
+* [Webpack documentation](https://webpack.js.org/concepts/)
+
+* [Babel documentation](https://babeljs.io/)
+
+* [MDN Web Docs on service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+
+* [Google documentation on workbox](https://developers.google.com/web/tools/workbox)
+
+* [MDN Web Docs on Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+
+* [MDN Web Docs on IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
+* [MDN Web Docs on the manifest file](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+
+---
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

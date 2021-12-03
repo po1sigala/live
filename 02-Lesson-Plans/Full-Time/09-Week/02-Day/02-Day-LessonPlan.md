@@ -2,7 +2,7 @@
 
 ## Overview
 
-In today's class, students will take a dive deep into how JavaScript executes. They will start off with factory functions. Then they will learn about the difference between inheritance and a composition-based approach to designing an application. Students will be introduced to a new way to delegate events by using closures. Then the lesson diverges from the JavaScript-specific topics and introduces students to algorithms that they're likely to encounter during a technical interview. 
+In today's class, students will take a dive deep into how JavaScript executes. They will start off with factory functions. Then they will learn about the difference between inheritance and a composition-based approach to designing an application. Students will be introduced to a new way to delegate events by using closures. Then the lesson diverges from the JavaScript-specific topics and introduces students to algorithms that they're likely to encounter during a technical interview.
 
 ## Instructor Notes
 
@@ -10,7 +10,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* This class deals with some abstract topics, so it's important to start a dialogue and keep the conversation going so that students can better grasp these topics and feel comfortable asking questions.
+* Today's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
 * Closures are a large part of the day's activities. If you are feeling a little unsure about them, take some time to become more familiar with them before class.
 
@@ -24,7 +24,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * **Important:** Remind students to have MongoDB installed before coming to the next class! Direct students to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
-* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code. 
+* Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -80,7 +80,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ## Class Instruction
 
-### 1. Instructor Demo: Factory Functions (5 min) 
+### 1. Instructor Demo: Factory Functions (5 min)
 
 * Welcome students to class.
 
@@ -159,7 +159,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```
 
 * Run `node index.js` from the command line and demonstrate the following:
-  
+
   * As we can see, the new user we created works as expected, without using a JavaScript class.
 
   * 🔑 The new user has a reference to the `createUser` function which has the data we want encapsulated in it.
@@ -179,13 +179,13 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ Do we need to use the `new` keyword with factory functions?
 
-  * 🙋 No, we can forgo it entirely. 
+  * 🙋 No, we can forgo it entirely.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Factory-Functions/README.md`.
 
-### 2. Student Do: Factory Functions (15 min) 
+### 2. Student Do: Factory Functions (15 min)
 
 * Direct students to the activity instructions found in `16-Stu_Factory-Functions/README.md`.
 
@@ -205,10 +205,10 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   ## Actual Behavior
 
   When a user calls the `greet` method on the `Student` function, they see undefined values instead of the `name` and `gradeYear`.
-  
+
   ## Steps to Reproduce the Problem
 
-  1. Create a new student variable and assign it to the `Student` function. 
+  1. Create a new student variable and assign it to the `Student` function.
 
   2. Call the `greet` method on the newly created student variable.
 
@@ -218,20 +218,20 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   ## 💡 Hints
 
-  What is the context of `this` when inside a factory function? 
+  What is the context of `this` when inside a factory function?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Is the `new` keyword required when using a factory function? 
+  * Is the `new` keyword required when using a factory function?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Factory Functions (10 min) 
+### 3. Instructor Review: Factory Functions (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -247,7 +247,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ `this`
 
-* Open `16-Stu_Factory-Functions/Solved/index.js` in your IDE and explain the following: 
+* Open `16-Stu_Factory-Functions/Solved/index.js` in your IDE and explain the following:
 
   * We create a new function and store its two arguments `name` and `gradeYear` inside a newly created object named `studentInfo`.
 
@@ -285,7 +285,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```js
     const newStudent = student('Dominique', '11th');
     ```
-    
+
   * If we type `npm test` in the command line, we should see the following:
 
     ```bash
@@ -299,7 +299,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ Do we use a `constructor()` function inside a factory function?
 
-  * 🙋 No.
+  * 🙋 No, we can't.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -307,7 +307,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Factory vs. Constructor (5 min) 
+### 4. Instructor Demo: Factory vs. Constructor (5 min)
 
 * Open `17-Ins_Factory-Vs-Constructor/constructor/constructor.js` in your IDE and explain the following:
 
@@ -327,7 +327,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
     class Phone extends Device {
       constructor(name, ringTone) {
-        super(name) 
+        super(name)
         this.ringTone = ringTone
       }
       call() {
@@ -393,10 +393,10 @@ In today's class, students will take a dive deep into how JavaScript executes. T
         console.log(`Dryer is on: ${this.noise}`);
       }
     }
-    ``` 
+    ```
 
   * The `Phone` class inherits from the `Device` class, and the `Dryer` class inherits from the `Appliance` class.
-  
+
   * With the current class hierarchy, it would be difficult to create an `Appliance` that could make a `call` without rewriting the `call` method.
 
   * 🔑 Having to rewrite logic violates the DRY (Don't Repeat Yourself) principle of programming.
@@ -410,7 +410,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * 🔑 We create factory functions that accept `state` as an argument and return a method that uses the information provided through the `state`.
 
   * We can think of state as an object that stores information that the function needs.
-    
+
     ```js
     const phoneCall = (state) => ({
       call: () => console.log(`${state.name}'s Phone: ${state.ringTone}`),
@@ -511,7 +511,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Factory-Vs-Constructor/README.md`.
 
-### 5. Student Do: Factory vs. Constructor (15 min) 
+### 5. Student Do: Factory vs. Constructor (15 min)
 
 * Direct students to the activity instructions found in `18-Stu_Factory-Vs-Constructor/README.md`.
 
@@ -534,20 +534,20 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   ## 💡 Hints
 
-  What scope does your inner function have access to? 
+  What scope does your inner function have access to?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What are the three paradigms of JavaScript? 
+  * What are the three paradigms of JavaScript?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 6. Instructor Review: Factory vs. Constructor (10 min) 
+### 6. Instructor Review: Factory vs. Constructor (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -561,12 +561,12 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ Composition
 
-* Open `18-Stu_Factory-Vs-Constructor/Solved/index.js` in your IDE and explain the following: 
+* Open `18-Stu_Factory-Vs-Constructor/Solved/index.js` in your IDE and explain the following:
 
   * Create a function named `lesson` and two variables named `title` and `description`inside an object labeled `state`.
 
     ```js
-    const lesson = function () {  
+    const lesson = function () {
       const state = {
         title: 'Unit 17 - Computer Science',
         description: 'CS for JS',
@@ -587,7 +587,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
   * Inside the `lesson` function, we must return the action function `getInformation`, passing in the `state` object.
 
     ```js
-    const lesson = function () {  
+    const lesson = function () {
       const state = {
         title: 'Unit 17 - Computer Science',
         description: 'CS for JS',
@@ -615,7 +615,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Event Delegation and Handling (5 min) 
+### 7. Instructor Demo: Event Delegation and Handling (5 min)
 
 * Open `19-Ins_Event-Delegation-Handling/index.html` in your browser and demonstrate the following:
 
@@ -625,26 +625,26 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   *  Each button should track its own value.
 
-* Open `19-Ins_Event-Delegation-Handling/index.html` in your IDE and explain the following: 
+* Open `19-Ins_Event-Delegation-Handling/index.html` in your IDE and explain the following:
 
   * 🔑 Inside the HTML file, we can see five `<button>` elements inside a `<div>` element with the `id="container"`.
 
   * Each button has its own `data-count` attribute.
 
     ```html
-      <body>
-        <div id="container" style="margin: 5px;">
-          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
-          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
-          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
-          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
-          <button class="btn btn-lg" data-count="0">Clicks: 0</button>
-        </div>
+    <body>
+      <div id="container" style="margin: 5px;">
+        <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+        <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+        <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+        <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+        <button class="btn btn-lg" data-count="0">Clicks: 0</button>
+      </div>
     <script src="assets/js/script.js"></script>
     </body>
     ```
 
-* Open `19-Ins_Event-Delegation-Handling/assets/js/script.js` in your IDE and explain the following: 
+* Open `19-Ins_Event-Delegation-Handling/assets/js/script.js` in your IDE and explain the following:
 
   * First we want to select the `container` in which the five buttons are housed.
 
@@ -691,13 +691,13 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ How could we implement a closure to this event handler?
 
-  * 🙋 We could encapsulate the `count` variable. 
+  * 🙋 We could encapsulate the `count` variable.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Event-Delegation-Handling/README.md`.
 
-### 8. Student Do: Event Delegation and Handling (15 min) 
+### 8. Student Do: Event Delegation and Handling (15 min)
 
 * Direct students to the activity instructions found in `20-Stu_Event-Delegation-Handling/README.md`.
 
@@ -710,8 +710,8 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   ## 📝 Notes
 
-  Refer to the documentation: 
-  
+  Refer to the documentation:
+
   [MDN Web Docs on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
   * What is a practical use for closures?
@@ -722,14 +722,14 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Why is it important to minimize the number of variables in the global namespace? 
+  * Why is it important to minimize the number of variables in the global namespace?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 9. Instructor Review: Event Delegation and Handling (10 min) 
+### 9. Instructor Review: Event Delegation and Handling (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -743,7 +743,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ Closures
 
-* Open `20-Stu_Event-Delegation-Handling/Solved/assets/js/script.js` in your IDE and explain the following: 
+* Open `20-Stu_Event-Delegation-Handling/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 Create a variable that holds the `button` element.
 
@@ -767,13 +767,13 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```js
     const clickHandler = function () {
       let count = 0;
-      return function () { 
-        count++; 
+      return function () {
+        count++;
         this.textContent = `Clicks: ${count}`;
       };
     };
     ```
-  
+
   * We are using a `for...loop` to attach an event listener to each `button` element.
 
   * 🔑 Now each button has its own reference to `count` instead of a reference to a global variable or attribute.
@@ -806,9 +806,89 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this unit or completing the **OPTIONAL** activity below.
 
 * The unit so far has been very abstract so check with the students to see if they have any questions about anything we've covered so far.
+
+* Open [Leetcode](https://leetcode.com/) in your browser and explain the following:
+
+  * Leetcode is a popular platform that allows developers to practice algorithms similar to those they may face in an interview setting.
+
+  * To use Leetcode, we must first create an account. Leetcode offers both a paid and free version. For most developers, the free version is a great place to start.
+
+  * After logging in to Leetcode, we click on `Problems` to see a range of practice algorithms. Each algorithm is ranked from `Easy` to `Hard`. When starting out, it is a good idea to start with the `Easy` algorithms to practice the steps needed to solve algorithms and gain confidence. We will be working together on the Square Root Algorithm, an `Easy` problem.
+
+* Open [Leetcode Square Root Algorithm](https://leetcode.com/problems/sqrtx/) in your browser and explain the following:
+
+  * Leetcode offers multiple program languages to code your solution. We select `JavaScript` from the drop down menu at the top.
+
+  * When solving any algorithm -- either in Leetcode or an interview setting, it is important to first read and understand the directions, especially the `Input` and `Output` expected. Leetcode provides the instructions on the left side of the screen.
+
+  * For this algorithm, the input will always be a non-negative integer defined as `x`.
+
+  * The output is the square root of `x`. However, the result must be truncated, meaning if the result is 2.8, the algorithm should be returned as a whole integer, or 2. Understanding exactly the output required often provides a clue about how to solve the algorithm.
+
+  * Once we understand the required input and output, we are ready to pseudocode our algorithm. In an interview, it is important to talk through your solution as you code and not work in silence! Pseudocode is a great way to help organize your thoughts and provide quick talking points.
+
+    ```js
+    // Find the square root of a positive integer `x`
+
+    // Truncate number so that it is a whole number (always round down)
+    ```
+
+  * Next, let's expand the pseudocode by thinking about how we might find the square root of the integer. There are multiple ways to mathematically find the square root of an integer, but in this case we are going to look for perfect squares and return its square root. Otherwise, we can find nearest smaller perfect square of the integer and return the square root of that value.
+
+    ```js
+    // The square root of 0 is always zero, so if x === 0, we can return x.
+    // The square root of 1 is always 1, so if x === 1, we can return x.
+    // Perfect squares are always whole integers and the product of multiplying an integer by itself ie. 2 * 2 = 4
+    // If an integer is not a perfect square, the result should be rounded down to the square root of the nearest smaller perfect square ie, if input === 5, return 2.
+    ```
+
+  * Now that we have thought through the process with psuedocode, we can start to think of the JavaScript needed to make our algorithm work. The first line is simple, we can return x if the value of x is 0 or 1.
+
+    ```js
+    if(x === 1 || x=== 0) return x;
+    ```
+
+  * Next, let's add some variables we can use to find our solution. We use `squared` to hold our perfect square and `i` as a counter.
+
+    ```js
+    let squared = 0;
+    let i = 0;
+    ```
+
+  * Since we want to test for perfect squares, we use a `while` loop that will find the perfect square of an increasing number, in our case `i`.  If we find a match, we can return `i`, since that will be the square root. If not, we keep going until the perfect square or `squared` is larger than the value of `x`. When that happens, we know the value we want to return is `i - 1`, since that will be the square root of the nearest, smaller perfect square.
+
+    ```js
+    while (squared < x ) {
+      i++;
+      squared = i * i;
+      if (squared === x) return i;
+    }
+    return (i-1)
+    ```
+
+  * We run our completed code to see the input and output. If our code passes the tests, it is accepted.
+
+    ```js
+    var mySqrt = function(x) {
+      if(x === 1 || x=== 0) return x;
+      let squared = 0;
+      let i = 0;
+
+      while (squared < x ) {
+        i++;
+        squared = i * i;
+        if (squared === x) return i;
+      }
+      return (i-1)
+    }
+    ```
+
+  * In an interview setting, talking through your process as you code is as important as getting the right answer, so make sure to practice thinking through each step to explaining your solution to others.
+
+* If time remains, have students work in pairs to solve a Leetcode algorithm of their choice or have them practice explaining the solution above to their partner.
 
 ### 11. BREAK (30 min)
 
@@ -820,31 +900,31 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ In computing, what is an algorithm?
 
-  * 🙋 An algorithm is a self-contained series of steps that describes a way to solve a problem for a human or machine. 
+  * 🙋 An algorithm is a self-contained series of steps that describes a way to solve a problem for a human or machine.
 
-  * ☝️ Are algorithms the same thing as functions? 
+  * ☝️ Are algorithms the same thing as functions?
 
   * 🙋 No, an algorithm is an abstracted idea of how to solve a problem, whereas a function is a means of implementing the steps outlined by the algorithm.
 
-  * ☝️ Why is it important for a full-stack JavaScript developer to understand and articulate how to implement popular computer science algorithms? 
+  * ☝️ Why is it important for a full-stack JavaScript developer to understand and articulate how to implement popular computer science algorithms?
 
   * 🙋 Understanding algorithms helps developers think about a problem in a conceptual and abstracted way, allowing them to come to a better and more efficient solution&mdash;ultimately making them better developers!
 
   * ☝️ Do we think some algorithms can solve problems more quickly than others?
 
-  * 🙋 Yes, and it usually depends on the type of problem being solved. That's why it's important for us to know how different types of algorithms work in different situations.  
+  * 🙋 Yes, and it usually depends on the type of problem being solved. That's why it's important for us to know how different types of algorithms work in different situations.
 
 * Open [the Big-O Cheat Sheet](https://www.bigocheatsheet.com/) and explain the following while walking through the chart:
 
-  * 🔑 In computer science, we measure an algorithm's efficiency by finding the potential amount of steps it will take to solve a problem in a worst-case scenario in relation to the size of the data it's being performed on. 
+  * 🔑 In computer science, we measure an algorithm's efficiency by finding the potential amount of steps it will take to solve a problem in a worst-case scenario in relation to the size of the data it's being performed on.
 
-  * 🔑 This is what's known as the **Big-O complexity** of an algorithm. It's how we can identify which algorithms will work better given a specific problem that needs solving. 
+  * 🔑 This is what's known as the **Big-O complexity** of an algorithm. It's how we can identify which algorithms will work better given a specific problem that needs solving.
 
 * Explain that today we will learn about popular algorithms, how to implement them, and how to go about solving questions about them in a technical interview.
 
 * Answer any questions before proceeding to the next activity.
 
-## 13. Instructor Demo: Linear Search (5 min) 
+## 13. Instructor Demo: Linear Search (5 min)
 
 * Open the [Searching Sorted List Visualizer](https://www.cs.usfca.edu/~galles/visualization/Search.html) in your browser, perform a linear search function, and demonstrate the following:
 
@@ -870,7 +950,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ What assumptions can we make about this algorithm's implementation?
 
-  * 🙋 We can assume that the input array will be an array of numbers and that it has at least one element in it. 
+  * 🙋 We can assume that the input array will be an array of numbers and that it has at least one element in it.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -914,7 +994,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 15. Instructor Review: Linear Search (10 min) 
+### 15. Instructor Review: Linear Search (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -930,7 +1010,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ Big O(n) complexity
 
-* Open `22-Stu_Linear-Search/Solved/index.js` in your IDE and explain the following: 
+* Open `22-Stu_Linear-Search/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 We create a function that accepts the array we're searching in and the element we're searching the array for:
 
@@ -963,7 +1043,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ What may be a drawback of this algorithm?
 
-  * 🙋 If we have a very large array to search through, the Big O complexity `O(n)` can become inefficient. 
+  * 🙋 If we have a very large array to search through, the Big O complexity `O(n)` can become inefficient.
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -971,9 +1051,9 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Answer any questions before proceeding to the next activity.
 
-## 16. Instructor Demo: Recursion (5 min) 
+## 16. Instructor Demo: Recursion (5 min)
 
-* Navigate to `23-Ins_Recursion` from the command line, run `node index.js` and demonstrate the following: 
+* Navigate to `23-Ins_Recursion` from the command line, run `node index.js` and demonstrate the following:
 
   * 🔑 When we run this file, we get a number countdown printed on the page.
 
@@ -989,13 +1069,13 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ☝️ What are some use cases for using recursion over loops?
 
-  * 🙋 Recursion allows us to control when the next iteration happens and is very useful for when we don't exactly know how many times we need the functionality to run. 
+  * 🙋 Recursion allows us to control when the next iteration happens and is very useful for when we don't exactly know how many times we need the functionality to run.
 
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `24-Stu_Recursion/README.md`.
 
-### 17. Student Do: Recursion (15 min) 
+### 17. Student Do: Recursion (15 min)
 
 * Direct students to the activity instructions found in `24-Stu_Recursion/README.md`.
 
@@ -1008,7 +1088,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   ## 📝 Notes
 
-  Refer to the documentation: 
+  Refer to the documentation:
 
   [Math Is Fun: The Fibonacci Sequence](https://www.mathsisfun.com/numbers/Fibonacci-sequence.html)
 
@@ -1025,7 +1105,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 18. Instructor Review: Recursion (10 min) 
+### 18. Instructor Review: Recursion (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1041,7 +1121,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ Value is the sum of previous values
 
-* Open `24-Stu_Recursion/Solved/index.js` in your IDE and explain the following: 
+* Open `24-Stu_Recursion/Solved/index.js` in your IDE and explain the following:
 
   * 🔑 The function returns the value of a given position in the Fibonacci sequence:
 
@@ -1057,7 +1137,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     }
     ```
 
-  * 🔑 We get a value of the Fibonacci sequence by adding the previous two position values in the sequence, so we need to calculate their values with the same function, which will call it again and again until `position` is under `2`: 
+  * 🔑 We get a value of the Fibonacci sequence by adding the previous two position values in the sequence, so we need to calculate their values with the same function, which will call it again and again until `position` is under `2`:
 
     ```js
     return Fibonacci(position - 1) + Fibonacci(position - 2);
@@ -1075,11 +1155,11 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: Binary Search (5 min) 
+## 19. Instructor Demo: Binary Search (5 min)
 
 * Open the [Searching Sorted List visualizer](https://www.cs.usfca.edu/~galles/visualization/Search.html) in your browser, perform a binary search, and demonstrate the following:
 
-  * 🔑 Unlike the linear search, a binary search works by checking one value at a time starting in the middle of the data set. 
+  * 🔑 Unlike the linear search, a binary search works by checking one value at a time starting in the middle of the data set.
 
   * 🔑 We identify if the value we're searching for is greater or less than the middle value and cut out half of the data set when we know the value is in the other half.
 
@@ -1107,7 +1187,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Binary-Search/README.md`.
 
-### 20. Student Do: Binary Search (15 min) 
+### 20. Student Do: Binary Search (15 min)
 
 * Direct students to the activity instructions found in `26-Stu_Binary-Search/README.md`.
 
@@ -1153,7 +1233,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: Binary Search (10 min) 
+### 21. Instructor Review: Binary Search (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1169,7 +1249,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * ✔️ Exit conditions
 
-* Open `26-Stu_Binary-Search` in your IDE and explain the following: 
+* Open `26-Stu_Binary-Search` in your IDE and explain the following:
 
   * 🔑 We start by getting the start and end positions, which we will update when we determine what half our value lies in:
 
@@ -1194,11 +1274,11 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     }
     ```
 
-  * 🔑 We are done running this function when either the middle value is the value we're searching for or we've cut the search array down so much that the end value becomes less than the start value and the `while` loop ends to return `false`.  
+  * 🔑 We are done running this function when either the middle value is the value we're searching for or we've cut the search array down so much that the end value becomes less than the start value and the `while` loop ends to return `false`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the Big O complexity of this algorithm? 
+  * ☝️ What is the Big O complexity of this algorithm?
 
   * 🙋 It has a Big O complexity of `O(log n)` because it effectively cuts its input in half every pass.
 
@@ -1216,7 +1296,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   * We've been using this environment throughout the class to perform a number of functions for our computer, Node.js applications, and Git repositories.
 
-  * This is because our command line is powered by what's known as a "shell," which has a programming language of its own that we can use to help perform complex tasks and provide automation in our workflow. 
+  * This is because our command line is powered by what's known as a "shell," which has a programming language of its own that we can use to help perform complex tasks and provide automation in our workflow.
 
 * Direct students to the activity instructions found in `27-Evr_Shell/README.md`.
 
@@ -1245,7 +1325,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     alias gfc="~/git-file-cleanup.sh"
     ```
 
-* Congratulate students on taking a moment to quickly learn a new programming language! 
+* Congratulate students on taking a moment to quickly learn a new programming language!
 
 * Answer any questions before ending the class.
 
