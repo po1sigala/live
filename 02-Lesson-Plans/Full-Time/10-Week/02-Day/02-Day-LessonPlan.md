@@ -1,4 +1,4 @@
-# 19.2 Full-Time Lesson Plan: Workbox, Caching, and Service Workers
+# 10.2 Full-Time Lesson Plan: Workbox, Caching, and Service Workers
 
 ## Overview
 
