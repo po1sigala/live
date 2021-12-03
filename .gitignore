@@ -68,5 +68,8 @@ yarn.lock
 .vscode
 *.xslx
 
+# vscode specific files
+*.code-workspace
+
 # React practice app
 00-practice-app

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+      integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Weekly Expense Tracker</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Budget Tracker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Weekly Budget</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Weekly Expense Tracker</h1>
+      <form class="mb-5">
+        <div>
+          <h3>Your weekly budget is: $<span id="budget">300</span></h3>
+          <h3>Your current balance is: $<span id="balance">300</span></h3>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="expense"
+            aria-describedby="expenseName"
+            placeholder="Enter day"
+          />
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input
+            id="price"
+            type="number"
+            class="form-control"
+            placeholder="Expenses for the day"
+          />
+        </div>
+        <br />
+        <button id="submit" class="btn btn-primary">Submit</button>
+        <button id="reset" class="btn btn-danger">Reset</button>
+      </form>
+      <h1 class="text-center">Daily Expenses:</h1>
+      <ul id="expenses-list" class="list-group"></ul>
+    </div>
+    <!-- Update link to the new bundle -->
+    <script type="text/javascript" src="dist/weekly.bundle.js"></script>
+  </body>
+</html>

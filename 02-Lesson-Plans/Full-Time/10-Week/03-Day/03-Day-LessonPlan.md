@@ -6,19 +6,19 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `23-Stu-Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
-
-* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
-
-   ```sh
-   echo "SKIP_PREFLIGHT_CHECK=true" > .env
-   ```
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
 
 * The first activity for this unit will use `npx create-react-app`. The `npx` command allows us to run an executable binary locally without needing to install it globally first. In the context of React, it also ensures that students use the latest version of the utility.
 
 * When using the `create-react-app` utility to create a React app, the project directory will also automatically be created as part of the process. Students might be tempted to start by creating a directory for their project, which is not necessary and might actually cause some confusion. The name you provide to the command will be the directory name -- for example, `npx create-react-app my-app` creates a directory called `/my-app`. The name `my-app` will also be used as the name of the project inside the `package.json` file that is generated.
 
 * The practice app will be called `00-practice-app`, but the name isn't as important as it's location. The `00-practice-app` directory will be created in the `01-Activities` directory.
+
+* **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
+
+   ```sh
+   echo "SKIP_PREFLIGHT_CHECK=true" > .env
+   ```
 
 * Each activity will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
@@ -54,9 +54,9 @@ By the end of class, students will be able to:
 
 | Start  | #   | Activity Name                        | Duration |
 |---     |---  |---                                   |---       |
-| 10:00AM| 1   | Instructor Demo: Mini Project        | 0:05     |
-| 10:05AM| 2   | Student Do: Mini Project             | 0:60     |
-| 11:05AM| 3   | Instructor Review: Mini Project      | 0:10     |
+| 10:00AM| 1   | Instructor Demo: Mini-Project        | 0:05     |
+| 10:05AM| 2   | Student Do: Mini-Project             | 0:60     |
+| 11:05AM| 3   | Instructor Review: Mini-Project      | 0:10     |
 | 11:15AM| 4   | Introduce Homework                   | 0:05     |
 | 11:20AM| 5   | FLEX                                 | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity       | 0:10     |
@@ -79,326 +79,430 @@ By the end of class, students will be able to:
 
 ## Class Instruction
 
-### 1. Instructor Demo: Mini Project (5 min)
+### 1. Instructor Demo: Mini-Project (5 min)
 
 * Welcome students to class.
 
-* Run the following commands from the command line:
+* Navigate to `28-Stu_Mini-Project/Main` in Unit 19 from the command line and run `npm install` and `npm run start`.
 
-  * `npm install`
+* Open [http://localhost:3000](http://localhost:3000) in your browser and demonstrate the following:
 
-  * `npm start`
+  * The homepage is a simple form with contact information.
 
-* Navigate to [localhost:3000](http://localhost:3000) in your browser and point out the following:
+  * When we fill out the form and submit it, we create a new contact card.
 
-  * Newsy is a news aggregator app that allows us to search for articles classified by topic, then save our favorites.
+* Open the Application tab in Chrome DevTools and demonstrate the following:
 
-  * The home page of the application has some default topics, but we can create your own or remove the default topics.
+  * 🔑 We see that the cards are being saved and retrieved by the `contact` object store under the `IndexedDB` section.
 
-  * Clicking on one of the topics causes the page to display a list and allows us to save each article to our favorites.
+  * 🔑 We can also see that we have a manifest file and active service worker caching assets.
 
-  * Saving a couple of articles to our favorites causes the button to update to a _remove_ button.
+  * We can also install our application via the button in the header or address bar.
 
-  * Navigate to the favorites page in your browser and point out the following:
+* Open the `Elements` tab in Chrome DevTools, expand the `<head>` element, and demonstrate the following:
 
-    * The favorites we selected are listed.
+  * 🔑 We see that our files are being bundled with webpack.
 
-    * The favorites data was stored in IndexedDb, since we are not using a local database for this application.
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-* Answer any questions before allowing students to start the mini project.
+  * ☝️ How would we build this?
 
-### 2. Student Do: Mini Project (60 min)
+  * 🙋 With webpack, workbox, and IndexedDB!
 
-* Direct students to the activity instructions found in `23-Stu_Mini-Project/README.md`.
+* Answer any questions before allowing students to start the mini-project.
 
-* Break your students into pairs that will work together on this activity.
+### 2. Student Do: Mini-Project (60 min)
+
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`, which are also shown below.
+
+* Break your students into groups that will work together on this activity.
 
   ```md
-  # PWA Mini-Project
+  # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
 
-  In this activity we will take an existing news aggregator application and transform it into a PWA that can be installed on a user's device. We will also utilize webpack's minify and chunking features to help reduce the total size of the application.
+  In this mini-project, you are given a simple application that needs to be updated to use webpack, service workers, and IndexedDB. In addition, it must have PWA functionality in order to work properly. Once you have updated the application with these new features, you will deploy it to Heroku. Heroku is not new to you, but you will need to add a handful of special scripts so that it knows to deploy your bundled application.
 
-  ## Instructions
+  ## User Stories
 
-  * Open the [Unsolved](Unsolved) folder and study the existing contents, specifically in the `package.json` file at the root of the application.
+  Work with your group to resolve the following issues:
 
-  * We use a library called `if-env` to check what Node environment we're in when we start our app. If we're in development, then we'll execute the `npm run start:dev` script.
+  * As a user, I want to be able to install the web application as a PWA.
 
-  * We use another library called `concurrently` in development so we can run two processes at once. One for our Express server and one for Webpack. This way we don't have to start and stop the server every time something changes.
+  * As a user, I want to be able to add and remove my contact cards.
 
-  * Install dependencies by running `npm install` at the project root. This will also install the once in the `client` directory.
+  * As a developer, I want all my scripts to run from the root directory `package.json`.
 
-  * Start the app by running `npm start` from the project root.
+  * As a developer, I want to be able to run `npm run start` in the command line and have both my client and server start.
 
-  * Once the app starts open your browser to [localhost:3000](http://localhost:3000).
+  * As a developer, I want to be able to run `npm run start:prod` in the command line to run our build script and start our server.
 
-  * Open [index.js](Unsolved/assets/js/index.js).
+  * As a developer, I want to be able to run `npm run server` in the command line and have just our server start without the client.
 
-  * There are 3 main sections in this application:
+  * As a developer, I want to be able to run `npm run build` in the command line and have our client run the webpack build script.
 
-    * A section that allows you to manage a list of topics.
+  * As a developer, I want to be able to run `npm run install` in the command line and have all of the client's dependencies installed.
 
-    * A section that displays different articles of a given topic. This page will also allow you to save articles to your favorites.
+  * As a developer, I want to be able to run `npm run client` in the command line and have just our client start without the server.
 
-    * A favorites page to view a list of the user's favorite articles. This page also allows the user to remove articles from their favorites.
+  ## Acceptance Criteria
 
-  ### Part 1
+  The mini-project is complete when the following criteria are met:
 
-  * Using the `webpack.config.js` from the previous activities, update the `webpack.config.js` file that uses a babel loader and the necessary plugins to transform the application to a PWA.
+  * The application uses webpack for bundling.
 
-  * Create an entry point for each file in `assets/js`.
+  * The application uses a service worker to cache static assets.
 
-  * Create a `service-worker.js` and make sure to cache all of the bundle files.
+  * The application uses IndexedDB GET, ADD, and DELETE methods.
 
-  ### Part 2
+  * The application uses object store for async/await.
 
-  * Take a moment to study the contents of `index.js`:
+  * The application uses CSS loaders.
 
-    1. `renderTopics()` renders all of the topics to the page using `createTopics`.
+  * Scripts are placed in the root and client directory's `package.json`.
 
-    2. `topicData` is an array of predefined topics to populate the page with.
+  * `npm run start` starts both the client and server.
 
-    3. `createElement()` allows you to create a document element using the a string of its type, and object containing its attributes, and children elements.
+  * `npm run start:prod` runs the `build` script and starts the server.
 
-  * Since `createElement` is a general purpose function that we can use throughout our application, we are going to create a separate file to keep it in named `domMethods`. By doing this, we will be able to import `createElement` into any component we would like without duplicating code.
+  * `npm run server` starts just the server and not the client.
 
-  * Take a moment to study the contents of `topic.js`:
+  * `npm run build` runs the webpack build script in the client.
 
-    1. Remove the `createElement` function and modify the file to use the `createElement` from `domMethods.js`.
+  * `npm run install` installs the dependencies for the client.
 
-    2. Extract the code necessary for indexedDb into its own file and be sure to import it into `topic.js`.
+  * `npm run client` starts the client without the server.
 
-    3. Extract the `loadArticles` function to a new file called API and be sure to import any of its dependencies.
+  * The web application can be installed from the web address provided by Heroku.
 
-  * Take a moment to study the contents of `favorites.js`:
+  * The web application is deployed using Heroku.
 
-    1. Remove the all function declarations for utilities, indexedDb, API, and domMethods.
+  ---
 
-    2. Using ES6 syntax, import all necessary functions.
+  ## 💡 Hints
 
-  ### Hints
+  * How do you navigate to different directories inside bash?
 
-  * You will **not** have to modify any files that are not in the `client` folder.
+  * What is the operator for "and"?
 
-  * Ask the instructor or a TA if you're having difficulty understanding any of the activity requirements.
+  ## 🏆 Bonus
+
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+  * Incorporate a way to edit information on the contact card using a PUT method with IndexedDB.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Mini Project (10 min)
+### 3. Instructor Review: Mini-Project (10 min)
 
-* Open `index.js` in your IDE and point out the following:
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * All of the functions pertaining to the `home` page are in `index.js`.
+  * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
-  * `createElement` is brought in from the `domMethods.js` file.
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
-* Open `domMethod.js` in your IDE and point out the following:
+* Use the prompts and talking points (🔑) below to review the following key points:
 
-  * It is not entirely necessary for us to understand exactly how every line in `createElement` works.
+  * ✔️ Deploy to Heroku
 
-  * It is valuable to get practice working with code we do not fully understand because new developers almost always start their careers working with an unfamiliar codebase.
+  * ✔️ Build scripts
 
-  * The `createElement` function returns a DOM element and has the following parameters:
+  * ✔️ IndexedDB
 
-  1. A string that represents the type of element.
+* Open `28-Stu_Mini-Project/Main/package.json` in your IDE and explain the following:
 
-  2. An object containing all of the attributes to add to the element.
+  * We need to create a few basic scripts to get the application running.
 
-  3. 1 or more children elements to be appended to the element.
+    ```json
+     "scripts": {
+        "server": "cd server nodemon server.js --ignore client",
+        "build": "cd client && npm run build",
+        "install": "cd client && npm install",
+        "client": "cd client && npm start"
+    },
+    ```
 
-  * The `createArticle` function uses a ternary expression to render a `Save to Favorites` button or a `Remove from Favorites` button depending on whether the article is already part of the user's favorites.
+  * 🔑 `server` will start up only the server side of our application.
 
-  * `loadPage` is a callback passed to the `createElement`. The actual function will either use the results from an AJAX request or the results from IndexedDb to render the page, depending on which function was passed through as a callback.
+  * 🔑 `build` will change directories into the `client` and run the clients build script, which we will look at shortly.
 
-  ```js
-  !favorite
-    ? createElement(
-      "button",
-      {
-        class: "button button--primary",
-        onclick: () => {
-          useIndexedDb("articles", "ArticleStore", "put", {
-            source,
-            author,
-            title,
-            description,
-            url,
-            urlToImage,
-            publishedAt,
-            _id
-          });
-          loadPage();
-        }
-      },
-      "Save to Favorites"
-    )
-  ```
+  * 🔑 `install` will change directories into the `client` and install all the necessary packages.
 
-  * `createPlaceholders()` displays placeholders so that content is rendered on the page while the user waits for results from the AJAX request. Although they will only display on the page for a few seconds, they play a significant role in increasing the user's experience on the site.
+  * 🔑 `client` will just start the client.
 
-  ```js
-  // Create and return 4 placeholder articles
-  function createPlaceholders() {
-    const fragment = document.createDocumentFragment();
+  * 🔑 We now have to install the `concurrently` package for our next script.
 
-    for (let i = 0; i < 4; i++) {
-      const placeholder = createPlaceholder();
-      fragment.appendChild(placeholder);
-    }
+    ```json
+     "scripts": {
+        "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+        "start": "npm run build && cd server && node server.js",
+        "server": "cd server nodemon server.js --ignore client",
+        "build": "cd client && npm run build",
+        "install": "cd client && npm install",
+        "client": "cd client && npm start"
+    },
+    ```
 
-    return fragment;
-  }
+  * 🔑 `start:dev` will run our server and webpack server at the same time.
 
-  // Returns markup for a placeholder article
-  function createPlaceholder() {
-    return createElement(
-      "div",
-      { class: "article-skeleton" },
-      createElement(
-        "div",
-        { class: "article-skeleton__header" },
-        createElement("div", { class: "article-skeleton__title" }),
-        createElement("div", { class: "article-skeleton__published" })
-      ),
-      createElement(
-        "div",
-        { class: "article-skeleton__content" },
-        createElement("div", { class: "article-skeleton__image" }),
-        createElement("div", { class: "article-skeleton__text" }),
-        createElement("div", { class: "article-skeleton__text" }),
-        createElement("div", { class: "article-skeleton__text" }),
-        createElement("div", { class: "article-skeleton__text" }),
-        createElement("div", { class: "article-skeleton__text" })
-      )
+  * 🔑 `start` will run our server and webpack build the client for us.
+
+* Open `28-Stu_Mini-Project/Main/client/package.json` in your IDE and explain the following:
+
+  * For the root level `package.json` scripts to work, we need to set up the webpack scripts in the client `package.json` file.
+
+    ```json
+    "scripts": {
+      "dev": "webpack-dev-server",
+      "build": "webpack --mode production",
+      "start": "webpack --watch"
+    },
+    ```
+
+  * 🔑 Now the root level `package.json` can communicate with the client `package.json`.
+
+* Open `28-Stu_Mini-Project/Main/client/src-sw.js` in your IDE and explain the following:
+
+  * Now we create a simple service worker with a workbox to cache static assets for us.
+
+    ```js
+    const { StaleWhileRevalidate } = require('workbox-strategies');
+    const { registerRoute } = require('workbox-routing');
+    const { CacheableResponsePlugin } = require('workbox-cacheable-response');
+    const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
+
+    precacheAndRoute(self.__WB_MANIFEST);
+
+    // Set up asset cache
+    registerRoute(
+      ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+      new StaleWhileRevalidate({
+        cacheName: 'asset-cache',
+        plugins: [
+          new CacheableResponsePlugin({
+            statuses: [0, 200],
+          }),
+        ],
+      })
     );
-  }
-  ```
-
-* Open `topic.js` in your IDE and explain the following:
-
-  * When the `Topic` page is opened, `useIndexedDb` is called to check if any of the articles have been favorited. This is necessary so that articles that have already been saved to the user's favorites can display a `Remove from Favorites` button.
-
-    ```js
-    import { useIndexedDb } from "./indexedDb";
-    import { loadArticles } from "./API";
-    import { renderArticles } from "./domMethods";
-    // Call renderArticles on page load
-    function loadPage() {
-      useIndexedDb("articles", "ArticleStore", "get").then(results => {
-        const favorites = results;
-        loadArticles().then(data => {
-          const mappedData = data.map(article => {
-            article.favorite = false;
-            favorites.forEach(fav => {
-              if (article._id === fav._id) {
-                article.favorite = true;
-              }
-            });
-            return article;
-          });
-          renderArticles(mappedData, loadPage);
-        });
-      });
-    }
-
-    loadPage();
     ```
 
-* Open `service-worker.js` in your IDE and point out the following:
+  * 🔑 With workbox, we need to first specify our `precacheAndRoute(self.__WB_MANIFEST);`.
 
-  * Each html file should be cached with its respective bundle.
+  * 🔑 Next, we use workbox routing with a caching strategy to set up a cache called `asset-cache`.
 
-    ```js
-    const FILES_TO_CACHE = [
-      '/',
-      '/index.html',
-      '/favorites.html',
-      '/topic.html',
-      '/assets/css/style.css',
-      '/dist/app.bundle.js',
-      '/dist/favorites.bundle.js',
-      '/dist/topic.bundle.js',
-      'https://fonts.googleapis.com/css?family=Istok+Web|Montserrat:800&display=swap',
-      'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
-    ];
-    ```
+* Open `28-Stu_Mini-Project/Main/client/webpack.config.js` in your IDE and explain the following:
 
-* Open `webpack.config.js` in your IDE and point out the following:
-
-  * There are 3 different entry points created for each app.
-
-  * Each bundle will include all dependencies brought into each entry file with ES6 `import`.
+  * We have our `entry` files set up, so now we can specify the `output` files.
 
     ```js
-    entry: {
-        app: "./assets/js/index.js",
-        favorites: "./assets/js/favorites.js",
-        topic: "./assets/js/topic.js"
-      },
-      output: {
-        path: __dirname + "/dist",
-        filename: "[name].bundle.js"
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
       },
     ```
 
-  * Although most of the configuration can vary, depending on the app, it's important that the icon `src` points to a valid path to an icon for the application.
+  * The files will be bundled and placed in the `dist` directory.
+
+  * Next, we specify the `plugins` we want to use.
 
     ```js
     plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+      }),
+
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
-        fingerprint: false,
-        name: "Newsy app",
-        short_name: "Newsy",
-        description: "An application that allows you to view different news articles and save your favorites.",
-        background_color: "#01579b",
-        theme_color: "#ffffff",
-        "theme-color": "#ffffff",
-        start_url: "/",
-        icons: [{
-          src: path.resolve("assets/images/icons/android-chrome-192x192.png"),
-          sizes: [96, 128, 192, 256, 384, 512],
-          destination: path.join("assets", "icons")
-        }]
-      })
-    ]
+        fingerprints: false,
+        inject: true,
+        name: 'Contact Cards',
+        short_name: 'Contact',
+        description: 'Never forget your contacts!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
+    ],
     ```
 
-* If time permits, ask the students if there are any parts of the application that they would like to spend more time going over.
+  * `HtmlWebpackPlugin` helps us generate an `index.html` file inside the `dist` directory.
 
-  * Some students may be frustrated with the amount of time they needed to spend refactoring code so that it could be easily chunked by webpack.
+  * `InjectManifest` will inject our custom service worker into our webpack build.
 
-  * If this is the case, remind students that one of the main motivations behind chunking is reducing the bundle size of your code. While there are many strategies one can take to split up their code, it is important that it's split in a way that makes the code reusable and clear in purpose. Sometimes this means large amounts of refactoring functions. This is time well spent since they are making their code easier to test and easier for other developers to work with.
+  * `WebpackPwaManifest` will create a `manifest.json` file with the provided object.
+
+  * Finally, we can add CSS loaders and Babel.
+
+    ```js
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
+        },
+      ],
+    },
+    ```
+
+* Open `28-Stu_Mini-Project/Main/client/src/js/database.js` in your IDE and explain the following:
+
+  * Here, we initialize the database and create an object store named `contacts`.
+
+    ```js
+    const initdb = async () =>
+      openDB('contact', 1, {
+        upgrade(db) {
+          if (db.objectStoreNames.contains('contact')) {
+            console.log('contact database already exists');
+            return;
+          }
+          db.createObjectStore('contact', { keyPath: 'id', autoIncrement: true });
+          console.log('contact database created');
+        },
+      });
+    ```
+
+  * Next, we create a POST function for our database.
+
+    ```js
+    export const postDb = async (name, home, cell, email)  => {
+      const contactDb = await openDB('contact', 1);
+      const tx = contactDb.transaction('contact', 'readwrite');
+      const store = tx.objectStore('contact');
+      const request = store.add({ name: name, home_phone: home, cell_phone: cell, email: email });
+      const result = await request;
+      console.log('🚀 - data saved to the database', result);
+    };
+    ```
+
+  * We open a transaction in the `contact` database with `readwrite` privileges.
+
+  * Once open, we use the `.add()` method on the `store` and pass in the appropriate parameters.
+
+  * Next, we create a GET function for our database.
+
+    ```js
+    export const getDb = async () => {
+      const contactDb = await openDB('contact', 1);
+      const tx = contactDb.transaction('contact', 'readonly');
+      const store = tx.objectStore('contact');
+      const request = store.getAll();
+      const result = await request;
+      console.log('result.value', result);
+      return result;
+    };
+    ```
+
+  * This is the same as earlier, except that we are using the `.getAll()` method instead, which only requires `readonly` privileges.
+
+  * Finally, we create a DELETE function for our database.
+
+    ```js
+    export const deleteDb = async (id) => {
+      const contactDb = await openDB('contact', 1);
+      const tx = contactDb.transaction('contact', 'readwrite');
+      const store = tx.objectStore('contact');
+      const request = store.delete(id);
+      const result = await request;
+      console.log('result.value', result);
+      return result?.value;
+    };
+    ```
+
+* This is the same as earlier, except that we are using the `.delete()` method with the appropriate `id`.
+
+* Open `28-Stu_Mini-Project/Main/.npmrc` in your IDE and explain the following:
+
+  * 🔑 This file tells Heroku to not purge our dev dependencies when we deploy to Heroku. We need webpack for our application to work properly, and webpack is a dev dependency.
+
+  * 🔑 Run the following commands to deploy to Heroku:
+
+    ```sh
+    git init
+    git add -A
+    git commit -m "Ready to deploy!"
+    heroku create
+    git push heroku main
+    ```
+
+  * 🔑 After a couple of minutes, our PWA should be successfully deployed to Heroku!
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ Why do we want to deploy with the dev dependencies?
+
+  * 🙋 We need access to webpack, which is a dev dependency!
+
+  * ☝️ Why do we use `concurrently`?
+
+  * 🙋 So that we can run both the webpack server and node server during development.
+
+  * ☝️ What can we do if we don't completely understand this?
+
+  * 🙋 We can refer to supplemental material, read the [Heroku deployment guide](https://devcenter.heroku.com/articles/git), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 4. Instructor Demo: Introduce Homework (5 min)
 
-* Navigate to `02-Homework/Main` from the command line and run `npm start`.
+* Navigate to `02-Homework/Main` from the command line and run `npm install` and `npm run start`.
 
-* Navigate to <http://localhost:3001> in Chrome and demonstrate the following:
+* Open [http://localhost:3000](http://localhost:3000) in your browser and demonstrate the following:
 
-    * We are given a Budget Tracker app that we will convert into a PWA to allow for offline access and functionality.
+  * We are building a PWA text editor with JavaScript syntax highlighting.
 
-    * We can add expenses and deposits to our budget with or without a connection.
+* Try a simple `console.log()` in the editor to demonstrate the following:
 
-    * When we enter a transaction offline, the app will update the total when brought back online.
+  * Now we can click the install button, and it saves whatever we typed.
+
+* Open the Application tab in Chrome DevTools. Under the "Cache Storage" section, inspect the contents of the object store.
+
+  * We are storing the contents of the editor in IndexedDB and saving `onBlur()` on the window.
+
+  * We can also inspect the service worker, which is caching our static assets so the application can work offline.
+
+  * All of this is bundled with the help of a webpack!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-    * ☝️ What recently acquired skills will help us build this challenge?
+  * ☝️ What are we learning?
 
-    * 🙋 Service workers and PWA web manifest will help us implement offline functionality to this app.
+  * 🙋 PWAs, webpack, workbook, and IndexedDB!
 
-    * ☝️ How are these skills relevant to a career in web development?
+  * ☝️ How does this project build on or extend previously learned material?
 
-    * 🙋 PWAs blend the benefits of a traditional browser experience with those of a mobile application. PWAs can ensure applications work without an internet connection by using the Service Worker and Cache APIs to cache assets and API responses. Having the skills to build or convert to PWAs is crucial in this day and age.
+  * 🙋 We get to apply the PUT method and we use a more complex `index.html` template.
 
-    * ☝️ How will this challenge improve your portfolio?
+  * ☝️ How does this project relate to your career goals?
 
-    * 🙋 It will show employers your ability to measure and optimize the performance of web applications.
+  * 🙋 You get to flex some of your usual JavaScript skills with a hint of web performance!
 
 * Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+
+* Answer any questions before proceeding to the next activity.
 
 ### 5. FLEX (30 min)
 
@@ -550,7 +654,7 @@ By the end of class, students will be able to:
 
       * And most importantly, ask questions!
 
-* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` and demonstrate the following:
+* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `28-Stu_Mini-Project/Main/bucket-list` and demonstrate the following:
 
   * Run `npm install` and then `npm start` to begin the demonstration.
 
@@ -584,9 +688,9 @@ By the end of class, students will be able to:
 
 * In the command line, navigate to `01-Class-Content/20-React/01-Activities` and run the following command:
 
-   ```sh
-   npx create-react-app 00-practice-app
-   ```
+  ```sh
+  npx create-react-app 00-practice-app
+  ```
 
   * 🔑 When we run this command, the npm package runner, `npx`, will execute the latest version of the `create-react-app` utility.
 
@@ -596,27 +700,27 @@ By the end of class, students will be able to:
 
   * This process might take some time to complete. When it's done, you will see a boilerplate application in the `00-practice-app` directory, with the following file structure (excluding `node_modules`):
 
-     ```sh
-     ├── README.md
-     ├── package.json
-     ├── public
-     │   ├── favicon.ico
-     │   ├── index.html
-     │   ├── logo192.png
-     │   ├── logo512.png
-     │   ├── manifest.json
-     │   └── robots.txt
-     ├── src
-     │   ├── App.css
-     │   ├── App.js
-     │   ├── App.test.js
-     │   ├── index.css
-     │   ├── index.js
-     │   ├── logo.svg
-     │   ├── reportWebVitals.js
-     │   └── setupTests.js
-     └── yarn.lock
-     ```
+    ```sh
+    ├── README.md
+    ├── package.json
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── src
+    │   ├── App.css
+    │   ├── App.js
+    │   ├── App.test.js
+    │   ├── index.css
+    │   ├── index.js
+    │   ├── logo.svg
+    │   ├── reportWebVitals.js
+    │   └── setupTests.js
+    └── yarn.lock
+    ```
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
 
@@ -642,45 +746,45 @@ By the end of class, students will be able to:
 
 * Break students into pairs that will work together on this activity.
 
-   ```md
-   # 📐 Add Comments That Describe the Functionality of a React App
+  ```md
+  # 📐 Add Comments That Describe the Functionality of a React App
 
-   ## Before We Begin
+  ## Before We Begin
 
-   Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
+  Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
 
-   To do this, follow these steps:
+  To do this, follow these steps:
 
-   1. In the command line, navigate to `20-React/01-Activities`.
+  1. In the command line, navigate to `20-React/01-Activities`.
 
-   2. Run the command `npx create-react-app 00-practice-app`.
+  2. Run the command `npx create-react-app 00-practice-app`.
 
-   3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+  3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
 
-   4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+  4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
 
-   5. Run `npm start` to ensure that the source files were transplanted successfully.
+  5. Run `npm start` to ensure that the source files were transplanted successfully.
 
-   ## Activity
+  ## Activity
 
-   Work with a partner to add comments that describe the functionality of the code in [00-practice-app/src](../00-practice-app/src).
+  Work with a partner to add comments that describe the functionality of the code in [00-practice-app/src](../00-practice-app/src).
 
-   ## 📝 Notes
+  ## 📝 Notes
 
-   Refer to the documentation:
+  Refer to the documentation:
 
-   [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
+  [React Docs on Hello World](https://Reactjs.org/docs/hello-world.html)
 
-   ---
+  ---
 
-   ## 🏆 Bonus
+  ## 🏆 Bonus
 
-   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+  If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-   * What are some other flags that you can use with the `create-react-app` utility?
+  * What are some other flags that you can use with the `create-react-app` utility?
 
-   Use [Google](https://www.google.com) or another search engine to research this.
-   ```
+  Use [Google](https://www.google.com) or another search engine to research this.
+  ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
