@@ -1,4 +1,4 @@
-# 📐 Add Comments to Implementation of Webpack Setup
+# 📐 Add Comments to Implementation of webpack Setup
 
 Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
 
@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[Webpack Getting Started](https://webpack.js.org/guides/getting-started/)
+[Getting Started with webpack](https://webpack.js.org/guides/getting-started/)
 
 ---
 
