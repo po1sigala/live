@@ -1,36 +1,38 @@
-# 🏗️ Generate an HTML file to Serve Webpack Bundles
+# 📖 Implement webpack plugin at add CSS file to `.dist` folder
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to generate HTML files that contain references to the webpack bundles.
+* As a developer, I want to extract a separate CSS file that is visible in the `.dist` folder. 
 
 ## Acceptance Criteria
 
-* It is done when I have successfully installed the `HtmlWebpackPlugin` to generate an HTML file.
+* It's done when I have installed the `mini-css-extract-plugin`. 
 
-* It is done when the generated HTML file follows the template, `index.html`.
+* It's done when I run `npm i` and `npm run build` and a separate CSS file is displayed in my `.dist` folder. 
 
-* It is done when the generated HTML file has a generated page title.
+## 📝 Notes
 
-* It is done when I can generate an HTML file that contains the references to the webpack bundle.
+Refer to the documentation: 
+
+[MiniCssExtractPlugin with webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/#getting-started)
 
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality:
 
-![The output of the loan calculator with a 300k loan.](./Assets/loan-calculator.png)
+![Image showing filetree with separate main.css file in dist folder.](./assets/file-tree.png)
 
 ---
 
 ## 💡 Hints
 
-How do we ensure that the format of the HTML file that's generated follows our template, `index.html`?
+* What loader works with the `mini-css-extract-plugin`? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* Why must we use the `new` syntax with webpack plugins?
+* What other plugins can we use to enhance our code and improve performance? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

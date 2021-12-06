@@ -1,13 +1,13 @@
 const path = require('path');
 
-const config = {
-  entry: './assets/js/app.js',
+module.exports = {
+  mode: 'development',
+  entry: './src/js/index.js',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'development',
-  // Add the module for loader rules
+
   module: {
     rules: [
       {
@@ -15,19 +15,18 @@ const config = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
         test: /\.m?js$/,
-        exclude: /node_modules/,
         use: {
-          // Babel enables use of the latest JavaScript w/o needing browser polyfills
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/transform-runtime'],
-          },
+            presets: ['@babel/preset-env']
+          }
         },
-      },
-    ],
+      }
+    ]
   },
-};
-
-module.exports = config;
+ }; 

@@ -1,19 +1,24 @@
 {
-  "name": "Solved-Webpack Plugin",
+  "name": "03-ins_webpack-intro",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "private": true,
   "scripts": {
-    "watch": "webpack --watch",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "2U",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "html-webpack-plugin": "^5.3.2",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
   }
 }

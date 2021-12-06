@@ -1,20 +1,16 @@
-# 📐 Analyze the Lighthouse Audit
+# 🏗️ Conduct a Lighthouse Audit of PWA
 
-Work with a partner to identify the key metrics that need improvement using a Lighthouse audit. 
+Work with a partner to implement the following user story:
 
-## 📝 Notes
+* As an developer, I want to review the performance metrics of a live PWA application using Lighthouse. 
 
-1. Review the [Lighthouse audit](./Unsolved/assets/audit.png).
+## Acceptance Criteria
 
-2. Identify which metrics must be modified to improve the loading time of the website.
+* It's done when I have navigated to `https://weather.com/` in an incognito browser.
 
-3. Add comments to [audit.md](./Unsolved/audit.md).
+* It's done when I have navigated to Chrome DevTools Lighthouse tool, selected `Performance` and `Desktop` options and generated a report. 
 
-Refer to the documentation:   
-
-* [Google docs on Lighthouse audits](https://developers.google.com/web/tools/lighthouse)
-
----
+* It's done when I have clicked on the link to each key metric and reviewed the provided information. 
 
 ## 🏆 Bonus
 

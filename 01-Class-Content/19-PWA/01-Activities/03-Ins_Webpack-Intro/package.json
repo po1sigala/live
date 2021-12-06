@@ -1,18 +1,17 @@
 {
-	"name": "Webpack-intro-demo",
-	"version": "1.0.0",
-	"description": "",
-	"main": "app.js",
-	"scripts": {
-		"watch": "webpack --watch",
-		"build": "webpack --mode production",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "2U",
-	"license": "ISC",
-	"devDependencies": {
-		"webpack": "^4.31.0",
-		"webpack-cli": "^3.3.2"
-	}
+  "name": "03-ins_webpack-intro",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
 }
