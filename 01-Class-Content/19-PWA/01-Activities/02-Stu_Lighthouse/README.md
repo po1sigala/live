@@ -12,7 +12,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have used the Chrome Lighthouse extension to generate an audit report. 
 
-* It's done when I selected `Expand View` and have clicked on the link to each key metric and reviewed the provided information. 
+* It's done when I have selected `Expand View` and have clicked on the link to each key metric and reviewed the provided information. 
 
 ## 🏆 Bonus
 
