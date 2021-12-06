@@ -1,38 +1,38 @@
-# 📖 Add NPM Scripts to Implementation of Webpack
+# 📖 Implement webpack plugin at add CSS file to `.dist` folder
 
 Work with a partner to implement the following user story:
 
-* As a developer, I want to bundle the JavaScript file from the command line.
-
-* As a developer, I want to start webpack's watch mode from the command line.
+* As a developer, I want to extract a separate CSS file that is visible in the `.dist` folder. 
 
 ## Acceptance Criteria
 
-* It is done when a production-ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
-  
-* It is done when watch mode is initiated from the command line using the command `npm run watch`, as indicated in the screenshot below.
+* It's done when I have installed the `mini-css-extract-plugin`. 
+
+* It's done when I run `npm i` and `npm run build` and a separate CSS file is displayed in my `.dist` folder. 
 
 ## 📝 Notes
 
 Refer to the documentation: 
 
-* [Webpack docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
-
-* [Webpack docs on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
+[MiniCssExtractPlugin with webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/#getting-started)
 
 ## Assets
 
-The following image demonstrates that watch mode is currently on:
+The following image demonstrates the web application's appearance and functionality:
 
-![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
+![Image showing filetree with separate main.css file in dist folder.](./assets/file-tree.png)
 
 ---
+
+## 💡 Hints
+
+* What loader works with the `mini-css-extract-plugin`? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we implement watch mode in production?
+* What other plugins can we use to enhance our code and improve performance? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
