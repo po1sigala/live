@@ -1,40 +1,39 @@
-# 📖 Add NPM Scripts to Implementation of Webpack
+# 🐛 Loader Returning 'Module Not Found' Error
 
-Work with a partner to implement the following user story:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to bundle the JavaScript file from the command line.
+* As a developer, when I run `npm run build` the build should be successful. 
 
-* As a developer, I want to start webpack's watch mode from the command line.
+## Expected Behavior
 
-## Acceptance Criteria
+When I run `npm run build` the `dist` folder should be created and no errors should be displayed. 
 
-* It is done when a production-ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
-  
-* It is done when watch mode is initiated from the command line using the command `npm run watch`, as indicated in the screenshot below.
+## Actual Behavior
 
-## 📝 Notes
+When I run `npm run build`, an error is displayed and the `dist` folder is not created. 
+ 
+## Steps to Reproduce the Problem
 
-Refer to the documentation: 
+1. Navigate to `Unsolved` folder in terminal.
 
-* [Webpack docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
+2. Run `npm i` and `npm run build` in terminal. 
 
-* [Webpack docs on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
-
-## Assets
-
-The following image demonstrates that watch mode is currently on:
-
-![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
+3. A error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful. 
 
 ---
+
+## 💡 Hints
+
+How do you activate a loader in webpack? 
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we implement watch mode in production?
+* How can you create a custom loader? 
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
