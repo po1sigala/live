@@ -1,4 +1,4 @@
-export function boxClick(){
+export boxClick = () => {
   const box = document.getElementById("box");
   if (box.style.backgroundColor === "blue") {
     box.style.backgroundColor ="yellow";
