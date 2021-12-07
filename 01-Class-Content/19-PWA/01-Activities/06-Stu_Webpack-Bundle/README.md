@@ -19,7 +19,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[Loading Images with webpack](https://webpack.js.org/guides/asset-management/#loading-images)
+[webpack docs on loading images](https://webpack.js.org/guides/asset-management/#loading-images)
 
 ## Assets
 

@@ -14,7 +14,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation: 
 
-[MiniCssExtractPlugin with webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/#getting-started)
+[webpack docs on MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/#getting-started)
 
 ## Assets
 

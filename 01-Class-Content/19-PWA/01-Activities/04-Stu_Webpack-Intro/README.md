@@ -6,7 +6,7 @@ Work with a partner to add comments describing the functionality of the code fou
 
 Refer to the documentation: 
 
-[Getting Started with webpack](https://webpack.js.org/guides/getting-started/)
+[webpack docs on getting started](https://webpack.js.org/guides/getting-started/)
 
 ---
 
