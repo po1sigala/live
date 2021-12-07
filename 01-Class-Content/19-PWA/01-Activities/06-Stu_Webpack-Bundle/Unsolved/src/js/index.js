@@ -6,4 +6,4 @@ import '../css/style.css';
 document.getElementById('boxBtn').addEventListener('click', boxClick);
 document.getElementById('headerBtn').addEventListener('click', headerClick);
 
-// TODO: add image to #box element src
+// TODO: Set src of #box element to Yellow

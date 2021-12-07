@@ -1,4 +1,4 @@
-# 📖 Implement webpack plugin at add CSS file to `.dist` folder
+# 📖 Implement webpack plugin to generate separate CSS file
 
 Work with a partner to implement the following user story:
 
