@@ -6,3 +6,5 @@ export const boxClick = () => {
     box.style.backgroundColor = "blue";
   }
 }
+
+// TODO: Add comment explaining the role of export in this JavaScript function

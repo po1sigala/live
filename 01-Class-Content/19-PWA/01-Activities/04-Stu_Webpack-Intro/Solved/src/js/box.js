@@ -6,3 +6,5 @@ export const boxClick = () => {
     box.style.backgroundColor = "blue";
   }
 }
+
+// We export this function using an export statement so that we can import it to our index.js file

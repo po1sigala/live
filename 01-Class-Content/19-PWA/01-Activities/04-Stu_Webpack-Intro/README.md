@@ -1,6 +1,6 @@
 # 📐 Add Comments to Implementation of webpack Setup
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved](./Unsolved).
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/index.html](./Unsolved/index.html), [Unsolved/src/index.js](./Unsolved/src/index.js), and [Unsolved/src/box.js](./Unsolved/src/box.js)
 
 ## 📝 Notes
 
