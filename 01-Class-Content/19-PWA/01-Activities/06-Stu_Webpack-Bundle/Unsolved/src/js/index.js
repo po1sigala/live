@@ -1,7 +1,7 @@
 import { boxClick } from './box';
 import { headerClick } from './header';
 import '../css/style.css';
-// TODO: import images as Blue and Yellow
+// TODO: Import yellow robot image as 'Yellow'
 
 document.getElementById('boxBtn').addEventListener('click', boxClick);
 document.getElementById('headerBtn').addEventListener('click', headerClick);
