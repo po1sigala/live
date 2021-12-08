@@ -759,7 +759,7 @@ By the end of class, students will be able to:
 
   2. Run the command `npx create-react-app 00-practice-app`.
 
-  3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+  3. After `create-react-app` has completed (which can take a few minutes), run the command `npm install bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
 
   4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
 

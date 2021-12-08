@@ -1490,7 +1490,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
   3. Rename the `.env.example` file to `.env`.
 
-  4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
+  4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm install axios bootstrap`.
 
   5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
@@ -1552,7 +1552,7 @@ In this lesson, you'll review some important React concepts with students to hel
 * Ensure that `axios` is added as a dependency:
 
    ```sh
-   npm i axios
+   npm install axios
    ```
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
