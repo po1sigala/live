@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-
+  // TODO: Add a new set of rules to handle images
   module: {
     rules: [
       {
@@ -16,4 +16,4 @@ module.exports = {
       },
     ],
   },
- }; 
+};

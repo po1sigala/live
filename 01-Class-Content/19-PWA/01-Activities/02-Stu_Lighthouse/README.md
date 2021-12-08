@@ -2,17 +2,21 @@
 
 Work with a partner to implement the following user story:
 
-* As an developer, I want to review the performance metrics of a deployed PWA application using Lighthouse's Chrome extension.  
+* As an developer, I want to review the performance metrics of a deployed PWA application using the Lighthouse Chrome extension.
 
 ## Acceptance Criteria
 
-* It's done when I have installed the [Chrome Lighthouse extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
+* It's done when I have installed the [Lighthouse Chrome extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
 
-* It's done when I have navigated to `https://mini-project-lighthouse.herokuapp.com/` in a Chrome browser. 
+* It's done when I have navigated to `https://mini-project-lighthouse.herokuapp.com/` in a Chrome browser.
 
-* It's done when I have used the Chrome Lighthouse extension to generate an audit report. 
+* It's done when I have used the Lighthouse Chrome extension to generate an audit report.
 
-* It's done when I have selected `Expand View` and have clicked on the link to each key metric and reviewed the provided information. 
+* It's done when I have selected `Expand View` and have clicked on the link to each key metric and reviewed the provided information.
+
+* It's done when I have reviewed the key PWA optimizations.
+
+* It's done when I have noted the performance metrics and PWA optimizations in the [audit.md](./Unsolved/audit.md) file.
 
 ## 🏆 Bonus
 

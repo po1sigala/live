@@ -1,9 +1,7 @@
-import { boxClick } from "./box";
-import {headerClick} from "./header";
+// TODO: Add a comment explaining role of the index.js file and import statements
 
-document.getElementById("boxBtn").addEventListener("click", boxClick);
-document.getElementById("headerBtn").addEventListener("click", headerClick);
+import { boxClick } from './box';
+import { headerClick } from './header';
 
-// TODO: Add comment explaining role of index.js file and import statements
-
-
+document.getElementById('boxBtn').addEventListener('click', boxClick);
+document.getElementById('headerBtn').addEventListener('click', headerClick);

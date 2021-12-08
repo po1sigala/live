@@ -1,8 +1,8 @@
-import { boxClick } from "./box";
-import {headerClick} from "./header";
+// This index.js file is our entry point file
+// We import other modules and assets used in the app into this file
 
-document.getElementById("boxBtn").addEventListener("click", boxClick);
-document.getElementById("headerBtn").addEventListener("click", headerClick);
+import { boxClick } from './box';
+import { headerClick } from './header';
 
-// This is our entry point file. 
-// We import other modules and assets used in the app into this file.
+document.getElementById('boxBtn').addEventListener('click', boxClick);
+document.getElementById('headerBtn').addEventListener('click', headerClick);

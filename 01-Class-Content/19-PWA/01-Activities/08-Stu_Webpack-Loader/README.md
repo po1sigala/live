@@ -2,35 +2,35 @@
 
 Work with a partner to resolve the following issue(s):
 
-* As a developer, when I run `npm run build` the build should be successful. 
+* As a developer, when I run `npm run build`, the build should be successful.
 
 ## Expected Behavior
 
-When I run `npm run build` the `dist` folder should be created and no errors should be displayed. 
+When I run `npm run build`, the `dist` folder should be created and no errors should be displayed.
 
 ## Actual Behavior
 
-When I run `npm run build`, an error is displayed and the `dist` folder is not created. 
- 
+When I run `npm run build`, an error is displayed and the `dist` folder is not created.
+
 ## Steps to Reproduce the Problem
 
 1. Navigate to `Unsolved` folder in terminal.
 
-2. Run `npm i` and `npm run build` in terminal. 
+2. Run `npm install` and `npm run build` in terminal.
 
-3. A error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful. 
+3. A error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful.
 
 ---
 
 ## 💡 Hints
 
-How do you activate a loader in webpack? 
+How do you activate a loader in webpack?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can you create a custom loader? 
+* How can you create a custom loader?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
