@@ -1,30 +1,12 @@
-# 📖 Add NPM Scripts to Implementation of Webpack
+# 📐 Add Comments to Implementation of webpack Setup
 
-Work with a partner to implement the following user story:
-
-* As a developer, I want to bundle the JavaScript file from the command line.
-
-* As a developer, I want to start webpack's watch mode from the command line.
-
-## Acceptance Criteria
-
-* It is done when a production-ready bundle is created in the `dist/` folder from the command line using the command `npm run build`.
-  
-* It is done when watch mode is initiated from the command line using the command `npm run watch`, as indicated in the screenshot below.
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/index.html](./Unsolved/index.html), [Unsolved/src/index.js](./Unsolved/src/js/index.js), and [Unsolved/src/box.js](./Unsolved/src/js/box.js)
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
-* [Webpack docs on Watch mode](https://webpack.js.org/guides/development/#using-watch-mode)
-
-* [Webpack docs on NPM scripts](https://webpack.js.org/guides/getting-started/#npm-scripts)
-
-## Assets
-
-The following image demonstrates that watch mode is currently on:
-
-![The command line displays the watch webpack watch command.](./Assets/watch-terminal.png)
+[webpack docs on getting started](https://webpack.js.org/guides/getting-started/)
 
 ---
 
@@ -32,7 +14,7 @@ The following image demonstrates that watch mode is currently on:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can we implement watch mode in production?
+* What is a dependency graph? How can understanding a dependency graph help developers write leaner, more performant code?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

@@ -80,7 +80,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Welcome students to class.
 
-* Navigate to `15-Ins_Caching` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
+* Navigate to `15-Ins_Caching` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
 
 * **Important:** Unlike the previous instructor demos, this one will not open the browser automatically. This is by design so that you can see the caching strategy messages in the console as the page loads for the first time.
 
@@ -297,7 +297,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ### 4. Instructor Demo: Caching Images (5 min)
 
-* Navigate to `17-Ins_Caching-Images` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
+* Navigate to `17-Ins_Caching-Images` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
 
   * 🔑 When we run the `npm run dev` command, we can see in the browser that our demo is now serving images inside two of the modules.
 
@@ -432,7 +432,7 @@ In this class, students will learn how to use the workbox library to cache and s
     })
     ```
 
-  * Let's test our work by running the `npm i && npm run dev` command again from the root of the `/Solved` directory. This time, we can see that the images are now being cached. Specifically, after a few refreshes, the browser will show a new cache called `my-image-cache` that contains the images.
+  * Let's test our work by running the `npm install && npm run dev` command again from the root of the `/Solved` directory. This time, we can see that the images are now being cached. Specifically, after a few refreshes, the browser will show a new cache called `my-image-cache` that contains the images.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -448,7 +448,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ### 7. Instructor Demo: Client-Server Model (5 min)
 
-* Navigate to `19-Ins_Client-Server` in your terminal and run `npm i` to install all dependencies and demonstrate the following:
+* Navigate to `19-Ins_Client-Server` in your terminal and run `npm install` to install all dependencies and demonstrate the following:
 
   * Instead of opening the browser right away, run `npm run` to list the available commands.
 
@@ -536,7 +536,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * ✔️ Separate `client` and `server` directories
 
-* Navigate to `20-Stu_Client-Server` in your terminal and run `npm i && npm run dev`. This will install the dependencies and start the development server.
+* Navigate to `20-Stu_Client-Server` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
 
   * 🔑 When we run this command, we notice that our terminal beings to start both the client's start command and the backend Express.js server.
 

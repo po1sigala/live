@@ -1,15 +1,23 @@
 const path = require('path');
 
-const config = {
-  entry: {
-    main: './assets/app.js',
-    cost: './assets/cost.js',
-  },
+module.exports = {
+  mode: 'development',
+  entry: './src/js/index.js',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'development',
-};
 
-module.exports = config;
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
+};
