@@ -18,7 +18,7 @@ When I run `npm run build`, an error is displayed and the `dist` folder is not c
 
 2. Run `npm install` and `npm run build` in terminal.
 
-3. A error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful.
+3. An error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful.
 
 ---
 
