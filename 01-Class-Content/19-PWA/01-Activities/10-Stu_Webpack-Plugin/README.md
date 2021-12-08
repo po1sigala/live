@@ -1,4 +1,4 @@
-# 📖 Implement webpack plugin to generate separate CSS file
+# 📖 Implement webpack Plugin to Generate Separate CSS File
 
 Work with a partner to implement the following user story:
 

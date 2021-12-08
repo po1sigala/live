@@ -1,8 +1,8 @@
-# 🏗️ Conduct a Lighthouse Audit of PWA
+# 🏗️ Conduct a Lighthouse Audit of a PWA
 
 Work with a partner to implement the following user story:
 
-* As an developer, I want to review the performance metrics of a deployed PWA application using the Lighthouse Chrome extension.
+* As a developer, I want to review the performance metrics of a deployed PWA application using the Lighthouse Chrome extension.
 
 ## Acceptance Criteria
 
