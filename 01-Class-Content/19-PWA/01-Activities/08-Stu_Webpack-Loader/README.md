@@ -1,50 +1,39 @@
-# 🐛 "Get the Latest Interest" Button Does Not Work
+# 🐛 Loader Returning 'Module Not Found' Error
 
-Work with a partner to resolve the following issues:
+Work with a partner to resolve the following issue(s):
 
-* As a developer, I want to be able to use async/await with webpack.
-
-* As a user, I want to be able to get the latest interest rate when I click the appropriate button.
+* As a developer, when I run `npm run build`, the build should be successful.
 
 ## Expected Behavior
 
-When I click the "Get the latest interest rate" button, an up-to-date interest rate should appear.
+When I run `npm run build`, the `dist` folder should be created and no errors should be displayed.
 
 ## Actual Behavior
 
-When a user clicks the "Get the latest interest rate" button, an error appears in the console.
+When I run `npm run build`, an error is displayed and the `dist` folder is not created.
 
 ## Steps to Reproduce the Problem
 
-To reproduce the problem, follow these steps:
+1. Navigate to `Unsolved` folder in terminal.
 
-1. At the command line, execute the command `npm install` to download the web app's dependencies.
+2. Run `npm install` and `npm run build` in terminal.
 
-2. At the command line, execute the command `npm run watch` to create a bundle.
-
-3. Note the illegal operation error. 
-
-## Assets
-
-The following image confirms that a bundle was created by displaying a success message in the terminal:
-
-![Get the latest interest rate button in the web application.](./Assets/interest-button.png)
-
-![The latest interest rate is displayed on the web application.](./Assets/interest.png)
+3. An error reading "Module not found: Error: path argument is not a string" is displayed in console and the `dist` folder is not created. The build is not successful.
 
 ---
 
 ## 💡 Hints
 
-Which plugins do we need for async/await to work in our browser?
+How do you activate a loader in webpack?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What Babel plugin would allow object rest and spread operators to be used?
+* How can you create a custom loader?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
