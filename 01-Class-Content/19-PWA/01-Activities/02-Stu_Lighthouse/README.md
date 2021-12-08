@@ -22,7 +22,7 @@ Work with a partner to implement the following user story:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* How can use run Lighthouse through the command line or install as a node module?
+* How can run Lighthouse through the command line or install as a node module?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
