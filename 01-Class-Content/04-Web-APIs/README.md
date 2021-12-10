@@ -99,8 +99,6 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
   * [📹 Code Review: DOM API Methods!](https://2u-20.wistia.com/medias/bz7gtz1g9a)
 
   * [📹 Code Review: Local Storage!](https://2u-20.wistia.com/medias/dpteeklsdq)
-  
-  *  [📹 Code Review: Local Storage!](https://2u-20.wistia.com/medias/dpteeklsdq)
 
 ### Git Guide
 
