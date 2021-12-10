@@ -94,7 +94,11 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
   * [📹 Code Review: Bootstrap!](https://2u-20.wistia.com/medias/e8xteir5a7)
 
+  * [📹 Code Review: Bootstrap Grid Layout in HTML!](https://2u-20.wistia.com/medias/hy20onjmgm)
+
   * [📹 Code Review: jQuery UI and Moment.js!](https://2u-20.wistia.com/medias/5hp2hoodod)
+
+  * [📹 Code Review: Add Custom Styling to CSS Framework!](https://2u-20.wistia.com/medias/okmle28p8e)
 
 ### Git Guide
 

@@ -88,6 +88,14 @@ In the next unit, you'll build on the CSS and HTML fundamentals covered in this 
 
 Here are some additional resources to help solidify the topics covered in this unit.
 
+### Code Review Videos
+
+Watch the `📹 Code Review` video(s) to help you grasp the concept of each topic.
+
+  * [📹 Code Review: Basic CSS!](https://2u-20.wistia.com/medias/6podkhopmf)
+
+  * [📹 Code Review: Semantic HTML!](https://2u-20.wistia.com/medias/fz4n2nlq3r)
+
 ### Git Guide
 
 Refer to the Git Guide to review the Git concepts for this unit. Watch the `📹 Git Guide` video for an additional walkthrough on how to use Git.
