@@ -94,6 +94,8 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
   * [📹 Code Review: Parse JSON to Generate HTML!](https://2u-20.wistia.com/medias/3d6yqoeyzb)
 
+  * [📹 Code Review: HTTP Response!](https://2u-20.wistia.com/medias/24ne9a6v8t)
+
   * [📹 Launch Ready: MVP and GitHub Project!](https://2u-20.wistia.com/medias/9p2hr71gaw)
 
 ### Git Guide
