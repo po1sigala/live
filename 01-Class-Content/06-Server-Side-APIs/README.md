@@ -92,6 +92,8 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
   * [📹 Code Review: Network, Status, Location!](https://2u-20.wistia.com/medias/smcipszslc)
 
+  * [📹 Code Review: Parse JSON to Generate HTML!](https://2u-20.wistia.com/medias/3d6yqoeyzb)
+
   * [📹 Launch Ready: MVP and GitHub Project!](https://2u-20.wistia.com/medias/9p2hr71gaw)
 
 ### Git Guide

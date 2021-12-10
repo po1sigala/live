@@ -104,6 +104,18 @@ Watch the `📹 Code Review` video(s) to help you grasp the concept of each topi
 
   * [📹 Code Review: JavaScript Objects!](https://2u-20.wistia.com/medias/iaiw7q7fkw)
 
+  * [📹 Code Review: Conditional Statements Using IF-ELSE!](https://2u-20.wistia.com/medias/f28zc1b8b5)
+
+  * [📹 Code Review: Conditional Statements Using Switch!](https://2u-20.wistia.com/medias/8zwr581zoi)
+
+  * [📹 Code Review: Logical Operators!](https://2u-20.wistia.com/medias/0w91wfpqn8)
+
+  * [📹 Code Review: Comparison Operators!](https://2u-20.wistia.com/medias/wcbladl6j9)
+
+  * [📹 Code Review: Declarations and Expressions!](https://2u-20.wistia.com/medias/uzj26devb1)
+
+  * [📹 Code Review: Chrome Developer Tools Debugger!](https://2u-20.wistia.com/medias/r56l5winew)
+
 ### Git Guide
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
