@@ -34,11 +34,13 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Heads-Up
 
-In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
+* In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
 
-Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass on your machine.
+* Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass on your machine.
 
-Also, make sure students have MongoDB and Compass installed prior to coming to class.
+* Also, make sure students have MongoDB and Compass installed prior to coming to class.
+
+* The Unit 22 Homework will be an extra credit opportunity for students. This change comes from student and instructor feedback on the amount of work and time required to complete both the Unit 22 Homework and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
 
 ## Helpful Links
 
