@@ -100,7 +100,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-In the homework, you’ll create a technical tutorial that explains how a particular regular expression functions. A regular expression, or regex, is a search pattern used by developers. In the tutorial, you’ll break down each part of the expression and describe what it does.
+In this unit's homework, you’ll create a technical tutorial that explains how a particular regular expression functions. A regular expression, or regex, is a search pattern used by developers. In the tutorial, you’ll break down each part of the expression and describe what it does.
 
 ## Career Connection
 
@@ -113,6 +113,8 @@ In the next unit, we will return to the back end and learn about NoSQL databases
 Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass locally.
 
 Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
+
+This is an early heads-up that the Unit 22 Homework will be an optional assignment. It is not required for submission and your final grade will not be affected in any way. The Unit 22 Homework is an opportunity for you to further practice your skills and get feedback on it.
 
 ## Resources
 
