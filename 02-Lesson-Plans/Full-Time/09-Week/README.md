@@ -54,6 +54,8 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
 
+* The Unit 22 Homework will be an optional assignment. This change comes from student and instructor feedback on the amount of work and time required to complete both the Unit 22 Homework and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
+
 ## Helpful Links
 
 This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
