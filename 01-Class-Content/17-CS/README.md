@@ -114,7 +114,7 @@ Be sure to have MongoDB and Compass installed on your machine before class. Foll
 
 Mongo Atlas, a fully managed cloud database, will be used to deploy the Mini-Project to Heroku. For instructions on how to sign-up for a account and deploy a free cluster, refer to [MongoDB Atlas setup guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-set-up-mongodb-atlas).
 
-This is an early heads-up that the Unit 22 Homework will be an extra credit opportunity. It is not required for submission, nor will it count towards one of the two assignments that you can skip. If you choose to submit the Unit 22 Homework, you will receive extra credit points on your final grade. However, if you choose not to submit it, your final grade will not be affected in any way. The Unit 22 Homework is an opportunity for you to further practice your skills and get feedback on it, with the added incentive of receiving extra credit for the work.
+This is an early heads-up that the Unit 22 Homework will be an optional assignment. It is not required for submission and your final grade will not be affected in any way. The Unit 22 Homework is an opportunity for you to further practice your skills and get feedback on it.
 
 ## Resources
 
