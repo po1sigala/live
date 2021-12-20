@@ -1,10 +1,10 @@
 const installBtn = document.getElementById("installBtn");
 const textHeader = document.getElementById("textHeader");
 
-console.log(installBtn);
-
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault();
+  installBtn.style.visibility = 'visible';
+  textHeader.textContent = "Click to Install!"
  
   installBtn.addEventListener('click', () => {
     event.prompt();
