@@ -122,4 +122,4 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 
 ---
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

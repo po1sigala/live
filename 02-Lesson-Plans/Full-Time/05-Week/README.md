@@ -119,4 +119,4 @@ Unit 10:
 * [git stash](https://www.git-scm.com/docs/git-stash)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

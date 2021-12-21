@@ -97,4 +97,4 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 * [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

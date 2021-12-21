@@ -149,4 +149,4 @@ You are required to submit BOTH of the following for review:
 * The URL of the GitHub repository, with a unique name and a README that describes the project.
 
 - - -
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
