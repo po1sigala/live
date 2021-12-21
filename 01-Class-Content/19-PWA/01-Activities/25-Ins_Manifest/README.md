@@ -31,25 +31,25 @@ Open the `manifest.json` file, do the following:
         "src": "./assets/images/icon_96x96.png",
         "type": "image/png",
         "sizes": "96x96",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
         "src": "./assets/images/icon_128x128.png",
         "type": "image/png",
         "sizes": "128x128",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
         "src": "./assets/images/icon_192x192.png",
         "type": "image/png",
         "sizes": "192x192",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
         "src": "./assets/images/icon_192x192.png",
         "type": "image/png",
         "sizes": "512x512",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       }
     ],
       ```

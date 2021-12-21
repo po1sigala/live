@@ -1064,7 +1064,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: Manifest (5 min)
+### 19. Instructor Demo: Manifest (5 min)
 
 * Open `25-Ins_Manifest/manifest.json` in your IDE and explain the following:
 
@@ -1072,51 +1072,47 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * 🔑 For our web application, we have to provide a `name` property inside the `manifest.json` file.
 
+  * We can optionally provide a `short_name` for our web application.
+
     ```json
     {
       "short_name": "Manifest",
       "name": "TODOs Manifest Example",
     }
     ```
-
-  * We can optionally provide a `short_name` for our web application.
 
   * 🔑 Next, we provide our `icons` for all different types of screens.
 
-    ```json
-    {
-      "short_name": "Manifest",
-      "name": "TODOs Manifest Example",
+   ```json
       "icons": [
-        {
-          "src": "/assets/images/icon_96x96.png",
-          "type": "image/png",
-          "sizes": "96x96",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_128x128.png",
-          "type": "image/png",
-          "sizes": "128x128",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_192x192.png",
-          "type": "image/png",
-          "sizes": "192x192",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_512x512.png",
-          "type": "image/png",
-          "sizes": "512x512",
-          "purpose": "any maskable"
-        }
-      ],
-    }
-    ```
+       {
+        "src": "./assets/images/icon_96x96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./assets/images/icon_128x128.png",
+        "type": "image/png",
+        "sizes": "128x128",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+      ```
 
-  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application.
+  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application. We must have this icon for our app to be installable! 
 
   * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
 
@@ -1150,7 +1146,12 @@ In this class, students will learn how to use the workbox library to cache and s
         "purpose": "any maskable"
       }
     ],
-    "orientation": "portrait",
+    ```
+
+  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
+
+    ```json
+     "orientation": "portrait",
     "display": "standalone",
     "start_url": "/",
     "description": "Keep track of important tasks!",
@@ -1159,11 +1160,9 @@ In this class, students will learn how to use the workbox library to cache and s
     }
     ```
 
-  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
-
 * Open `25-Ins_Manifest/assets/js/install.js` in your IDE and explain the following:
 
-  * 🔑 When we launch the application in our browser, we will see an install button inside of the address bar.
+  * 🔑 When we launch the application in our browser and our app is installable, we will see an install button inside of the address bar.
 
   * 🔑 We also can create our own install button, using the following:
 
@@ -1205,11 +1204,30 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, you need a service worker in place. Here, we have just created a simple service worker that caches the assets.
+  * 🔑 For the `manifest.json` file to work, we need to have at the minimum service worker that registers, has scope, and has a fetch method in place. 
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+     });
+    });
+  }
+
+  this.addEventListener('fetch', function (event) {
+    // This fetch function is required for the SW to be detected and is intentionally empty
+    // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
+  });
+  ```
 
 * Open `25-Ins_Manifest/index.html` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, we need to import it into our `index.html` file.
+  * 🔑 For the `manifest.json` file to work, we also need to import it into our `index.html` file.
 
     ```html
     <link rel="manifest" href="./manifest.json">
@@ -1217,9 +1235,13 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `25-Ins_Manifest/index.html` with Live Server and demonstrate the following:
 
-  * Click the install button in the address bar.
-
   * Click the Install! button on the webpage.
+
+* Navigate to your computer's Launchpad (Mac) or Desktop (Windows) to demonstrate the following:
+
+  * The app is installed and an the icon appears. 
+
+  * When we click on the icon, the app launches. 
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
