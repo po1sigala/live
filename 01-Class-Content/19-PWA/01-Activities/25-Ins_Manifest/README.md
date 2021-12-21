@@ -2,7 +2,7 @@
 
 In order to turn your application into a proper Progressive Web Application (PWA), you need to have a `manifest.json` file for your application. The `manifest.json` file let's us define basic metadata for our application, which is used to tell your application how to work when installed.
 
-  * 🔑 A `manifest.json` file can have a multitude of different properties, such as:
+  * 🔑 A `manifest.json` file can have a number of different properties, such as:
 
       * Icons 
 
@@ -16,42 +16,42 @@ In order to turn your application into a proper Progressive Web Application (PWA
 
 Open the `manifest.json` file, do the following:
 
-  * 🔑 The first property we see is `icons` which allows us to define multiple different sizes of our logo. These icons are used once the application is installed.
-
-      ```json
-      "icons": [
-            {
-            "src": "/assets/images/icon_96x96.png",
-            "type": "image/png",
-            "sizes": "96x96",
-            "purpose": "any maskable"
-            },
-            {
-            "src": "/assets/images/icon_128x128.png",
-            "type": "image/png",
-            "sizes": "128x128",
-            "purpose": "any maskable"
-            },
-            {
-            "src": "/assets/images/icon_192x192.png",
-            "type": "image/png",
-            "sizes": "192x192",
-            "purpose": "any maskable"
-            },
-            {
-            "src": "/assets/images/icon_512x512.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "any maskable"
-            }
-        ]
-      ```
-
-  * 🔑 The next two properties are the `name` and `short_name` which do exactly what there name suggests.
+  * 🔑 The first two properties are the `name` and `short_name` which do exactly what there name suggests.
 
       ```json
       "short_name": "Manifest",
-      "name": "TODOs Manifest Example"
+      "name": "TODOs Manifest Example",
+      ```
+
+  * 🔑 The next property we see is `icons` which allows us to define multiple different sizes of our logo. These icons are used once the application is installed. In order to be installable, you must include a 192px and a 512px icon.
+
+      ```json
+      "icons": [
+       {
+        "src": "./assets/images/icon_96x96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./assets/images/icon_128x128.png",
+        "type": "image/png",
+        "sizes": "128x128",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./assets/images/icon_192x192.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+      }
+    ],
       ```
 
   * 🔑 The`orientation` allows us to define which angle our application is viewed in, while the  `display` property allows us to define preferred display mode.
@@ -64,7 +64,7 @@ Open the `manifest.json` file, do the following:
   * 🔑 Next, we define the where we want our applications starting URL.
 
       ```json
-      "start_url": "/",
+      "start_url": "./",
       ```
 
   * 🔑 Finally, we give our application a description and some styling for the boarders of our application.
@@ -77,4 +77,4 @@ Open the `manifest.json` file, do the following:
 
 Once we implement a `manifest.json` file for our TODOs application, we should see a download button in our web address bar.
 
-* 🔑 It's important to remember that we must have a service worker for a `manifest.json` file to work properly.
+* 🔑 It's important to remember that we must register a service worker for a `manifest.json` file to work properly!
