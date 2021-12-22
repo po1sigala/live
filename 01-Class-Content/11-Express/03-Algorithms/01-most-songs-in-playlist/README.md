@@ -37,4 +37,4 @@ In this activity you will be writing code to create a function that takes an arr
 Wouldn't it be easier if there were a way to organize the array by the smallest to the largest number?
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

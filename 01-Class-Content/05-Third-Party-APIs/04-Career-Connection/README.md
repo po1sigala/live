@@ -62,4 +62,4 @@ To learn more about the technical interviewing process and practice algorithms i
 
 ---
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

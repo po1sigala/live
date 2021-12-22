@@ -200,4 +200,4 @@ Congratulations on setting up continuous deployment for your app! It is importan
 * [Heroku documentation on Procfile](https://devcenter.heroku.com/articles/procfile)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

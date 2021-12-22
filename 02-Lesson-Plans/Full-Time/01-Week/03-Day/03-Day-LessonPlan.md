@@ -295,7 +295,7 @@ By the end of class, students will be able to do the following:
 
     ```html
     <footer class="text-center">
-      © 2021 My New Website Productions
+      © 2022 My New Website Productions
     </footer>
     ```
 
@@ -1163,4 +1163,4 @@ By the end of class, students will be able to do the following:
 How did today’s lesson go? Your feedback is important. Please take 5 minutes to complete this [anonymous survey](https://forms.gle/RfcVyXiMmZQut6aJ6).
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

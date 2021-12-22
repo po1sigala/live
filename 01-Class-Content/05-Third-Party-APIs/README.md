@@ -121,4 +121,4 @@ Here are some alternative date/time libraries you can look into:
   * 📖 [js-Joda](https://js-joda.github.io/js-joda/)
 
 - - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

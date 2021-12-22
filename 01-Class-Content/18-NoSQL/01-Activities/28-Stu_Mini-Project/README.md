@@ -45,4 +45,4 @@ The completed application should meet the following specifications:
 * What is the difference between Mongoose and MongoDB? What are the advantages and disadvantages of both?
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -119,4 +119,4 @@ Refer to these resources for additional information about topics covered in this
   * For instructions on how to add an SSH key to GitLab, refer to the 📖 [GitLab Docs on "Add an SSH key to your GitLab account"](https://docs.gitlab.com/ee/ssh/#add-an-ssh-key-to-your-gitlab-account). **Important**: The SSH key you added for **GitHub** uses RSA. As you follow these instructions, in Step 1, it's very important to replace `ED25519` with `rsa`.
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
