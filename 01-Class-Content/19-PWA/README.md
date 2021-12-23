@@ -133,4 +133,4 @@ Refer to the Git Guide to review the git concept for this unit. Watch the Git Gu
   * 📹 [Git Guide Video: Git Hooks](https://2u-20.wistia.com/medias/xpb67vj99g)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

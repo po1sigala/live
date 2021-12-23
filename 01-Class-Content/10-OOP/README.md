@@ -129,4 +129,4 @@ Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) 
   * 📖 [Heroku CLI installation guide](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

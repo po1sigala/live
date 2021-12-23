@@ -123,4 +123,4 @@ This project is graded based on the following criteria:
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

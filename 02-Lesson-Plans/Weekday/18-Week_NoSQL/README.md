@@ -71,4 +71,4 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html)
 
 ---
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
