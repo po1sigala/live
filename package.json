@@ -1,21 +1,21 @@
 {
   "name": "fullstack-ground",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the Full-Stack Coding Boot Camp! This repository houses the Live curriculum.",
   "main": "index.js",
   "scripts": {
     "test": "md-report"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/FullStack-Ground.git"
+    "url": "git+https://github.com/coding-boot-camp/fullstack-ground.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/coding-boot-camp/FullStack-Ground/issues"
+    "url": "https://github.com/coding-boot-camp/fullstack-ground/issues"
   },
-  "homepage": "https://github.com/coding-boot-camp/FullStack-Ground#readme",
+  "homepage": "https://github.com/coding-boot-camp/fullstack-ground#readme",
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -26,7 +26,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "markdown-link-reporter": "^1.1.1",
+    "markdownlint": "^0.25.0",
     "prettier": "^2.0.5"
-  },
-  "dependencies": {}
+  }
 }
