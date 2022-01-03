@@ -1,30 +1,22 @@
-# 🏗️  Start the Client and Back-End Servers Simultaneously
+# 📐 Add Comments to Implementation of Client-Server Model 
 
-Work with a partner to implement the following user story:
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/package.json](./Unsolved/package.json), [Unsolved/server/routes/htmlRoutes.js], and (./Unsolved/package.json), and [Unsolved/server/server.js](./Unsolved/server/server.js).
 
-* As a developer, I want to be able to start the client and back-end servers simultaneously so that I can test the full application, not just the client.
+In addition in the [Unsolved/client/README.md](./Unsolved/client/README.md) and [Unsolved/server/README.md](./Unsolved/server/README.md), add comments describing the files and directories found in both folders.
 
-## Acceptance Criteria
+## 📝 Notes
 
-* It is done when I have moved the existing code into a new `client` folder.
+Refer to the documentation: 
 
-* It is done when I have created a simple Express server in the `server` folder.
+[NPM docs on concurrently](https://www.npmjs.com/package/concurrently)
 
-* It is done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
+[MDN web docs client-server overview](https://expressjs.com/en/starter/installing.html)
 
-* It is done when I have installed the `concurrently` npm package at the root of the project.
+[Installing Express.js server](https://expressjs.com/en/starter/installing.html)
 
-* It is done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
+[Express.js routing](https://expressjs.com/en/starter/basic-routing.html)
 
-* It is done when I am able to start the client and the backend server concurrently by running `npm start`.
-
----
-
-## 💡 Hints
-
-* `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
-
-* Remember to close any other servers that you may have running to free up the needed ports.
+[Installing Express.js server](https://expressjs.com/en/starter/installing.html)
 
 ## 🏆 Bonus
 
@@ -36,3 +28,5 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+[client directory](./Unsolved/client), [server directory](./Unsolved/server), and
