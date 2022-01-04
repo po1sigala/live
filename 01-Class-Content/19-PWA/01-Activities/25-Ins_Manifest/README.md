@@ -46,7 +46,7 @@ Open the `manifest.json` file, do the following:
         "purpose": "any maskable"
       },
       {
-        "src": "./assets/images/icon_192x192.png",
+        "src": "./assets/images/icon_512x512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable"
