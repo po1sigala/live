@@ -1083,13 +1083,13 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * 🔑 Next, we provide our `icons` for all different types of screens.
 
-   ```json
-      "icons": [
-       {
-        "src": "./assets/images/icon_96x96.png",
-        "type": "image/png",
-        "sizes": "96x96",
-        "purpose": "any maskable"
+    ```json
+    "icons": [
+      {
+      "src": "./assets/images/icon_96x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any maskable"
       },
       {
         "src": "./assets/images/icon_128x128.png",
@@ -1110,9 +1110,9 @@ In this class, students will learn how to use the workbox library to cache and s
         "purpose": "any maskable"
       }
     ],
-      ```
+    ```
 
-  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application. We must have this icon for our app to be installable! 
+  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application. We must have this icon for our app to be installable!
 
   * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
 
@@ -1151,13 +1151,12 @@ In this class, students will learn how to use the workbox library to cache and s
   * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
 
     ```json
-     "orientation": "portrait",
+    "orientation": "portrait",
     "display": "standalone",
     "start_url": "/",
     "description": "Keep track of important tasks!",
     "background_color": "#7eb4e2",
     "theme_color": "#7eb4e2"
-    }
     ```
 
 * Open `25-Ins_Manifest/assets/js/install.js` in your IDE and explain the following:
@@ -1204,7 +1203,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, we need to have at the minimum service worker that registers, has scope, and has a fetch method in place. 
+  * 🔑 For the `manifest.json` file to work, we need to have at the minimum service worker that registers, has scope, and has a fetch method in place.
 
     ```js
     if ('serviceWorker' in navigator) {
@@ -1212,18 +1211,18 @@ In this class, students will learn how to use the workbox library to cache and s
         navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-     });
-    });
-  }
+        }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+      });
+    }
 
-  this.addEventListener('fetch', function (event) {
-    // This fetch function is required for the SW to be detected and is intentionally empty
-    // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
-  });
-  ```
+    this.addEventListener('fetch', function (event) {
+      // This fetch function is required for the SW to be detected and is intentionally empty
+      // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
+    });
+    ```
 
 * Open `25-Ins_Manifest/index.html` in your IDE and explain the following:
 
@@ -1239,9 +1238,9 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Navigate to your computer's Launchpad (Mac) or Desktop (Windows) to demonstrate the following:
 
-  * The app is installed and an the icon appears. 
+  * The app is installed and an the icon appears.
 
-  * When we click on the icon, the app launches. 
+  * When we click on the icon, the app launches.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 

@@ -4,13 +4,13 @@ In order to turn your application into a proper Progressive Web Application (PWA
 
   * 🔑 A `manifest.json` file can have a number of different properties, such as:
 
-      * Icons 
+      * Icons
 
       * Page title
 
       * Description
 
-      * Themes 
+      * Themes
 
       * Starting URL
 
@@ -32,26 +32,26 @@ Open the `manifest.json` file, do the following:
         "type": "image/png",
         "sizes": "96x96",
         "purpose": "any maskable"
-      },
-      {
-        "src": "./assets/images/icon_128x128.png",
-        "type": "image/png",
-        "sizes": "128x128",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "./assets/images/icon_192x192.png",
-        "type": "image/png",
-        "sizes": "192x192",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "./assets/images/icon_192x192.png",
-        "type": "image/png",
-        "sizes": "512x512",
-        "purpose": "any maskable"
-      }
-    ],
+        },
+        {
+          "src": "./assets/images/icon_128x128.png",
+          "type": "image/png",
+          "sizes": "128x128",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "./assets/images/icon_192x192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "./assets/images/icon_192x192.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "any maskable"
+        }
+      ],
       ```
 
   * 🔑 The`orientation` allows us to define which angle our application is viewed in, while the  `display` property allows us to define preferred display mode.
