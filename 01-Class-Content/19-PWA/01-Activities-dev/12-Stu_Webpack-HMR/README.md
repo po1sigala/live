@@ -1,4 +1,4 @@
-# 📖 Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
+# 🏗️ Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
 
 Work with a partner to implement the following user story:
 
@@ -23,11 +23,6 @@ Work with a partner to implement the following user story:
 ## 📝 Notes
 
 * If you encounter any issues with loading your most recent changes, refresh the page or try again in a private/incognito window. You may have to refresh a few times!
-
-Refer to the documentation:
-
-* [Webpack docs on Hot Module Replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr)
-
 
 ## 💡 Hints
 
