@@ -1075,10 +1075,8 @@ In this class, students will learn how to use the workbox library to cache and s
   * We can optionally provide a `short_name` for our web application.
 
     ```json
-    {
-      "short_name": "Manifest",
-      "name": "TODOs Manifest Example",
-    }
+    "short_name": "Manifest",
+    "name": "TODOs Manifest Example",
     ```
 
   * 🔑 Next, we provide our `icons` for all different types of screens.
@@ -1086,10 +1084,10 @@ In this class, students will learn how to use the workbox library to cache and s
     ```json
     "icons": [
       {
-      "src": "./assets/images/icon_96x96.png",
-      "type": "image/png",
-      "sizes": "96x96",
-      "purpose": "any maskable"
+        "src": "./assets/images/icon_96x96.png",
+        "type": "image/png",
+        "sizes": "96x96",
+        "purpose": "any maskable"
       },
       {
         "src": "./assets/images/icon_128x128.png",
@@ -1114,46 +1112,22 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application. We must have this icon for our app to be installable!
 
-  * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
-
-    ```json
-    {
-    "short_name": "Manifest",
-    "name": "TODOs Manifest Example",
-    "icons": [
-      {
-        "src": "/assets/images/icon_96x96.png",
-        "type": "image/png",
-        "sizes": "96x96",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "/assets/images/icon_128x128.png",
-        "type": "image/png",
-        "sizes": "128x128",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "/assets/images/icon_192x192.png",
-        "type": "image/png",
-        "sizes": "192x192",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "/assets/images/icon_512x512.png",
-        "type": "image/png",
-        "sizes": "512x512",
-        "purpose": "any maskable"
-      }
-    ],
-    ```
-
-  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
+  * 🔑 The`orientation` allows us to define which angle our application is viewed in, while the  `display` property allows us to define preferred display mode.
 
     ```json
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "/",
+    ```
+
+  * 🔑 Next, we define the where we want our applications starting URL.
+
+    ```json
+    "start_url": "./",
+    ```
+
+  * 🔑 Finally, we give our application a description and some styling for the boarders of our application.
+
+    ```json
     "description": "Keep track of important tasks!",
     "background_color": "#7eb4e2",
     "theme_color": "#7eb4e2"
@@ -1166,55 +1140,41 @@ In this class, students will learn how to use the workbox library to cache and s
   * 🔑 We also can create our own install button, using the following:
 
     ```js
-    const installBtn = document.getElementById("installBtn");
+    const installBtn = document.getElementById('installBtn');
+    const textHeader = document.getElementById('textHeader');
 
     window.addEventListener('beforeinstallprompt', (event) => {
-        console.log('👍', 'beforeinstallprompt', event);
-        // Store the event so it can be used later.
-        window.deferredPrompt = event;
-        // Remove the 'hidden' class from the install anchor tag.
-        installBtn.classList.toggle('hidden', false);
-      });
+      event.preventDefault();
+      installBtn.style.visibility = 'visible';
+      textHeader.textContent = 'Click the button to install!';
 
-    installBtn.addEventListener('click', async () => {
-      console.log('👍', 'installBtn-clicked');
-      const promptEvent = window.deferredPrompt;
-      if (!promptEvent) {
-      return;
-      }
-      // Show the install prompt.
-      promptEvent.prompt();
-      // Show the result
-      const result = await promptEvent.userChoice;
-      console.log('👍', 'userChoice', result);
-      // Reset the deferred prompt variable, prompt() can only be used once.
-      window.deferredPrompt = null;
-      installBtn.classList.toggle('hidden', true);
+      installBtn.addEventListener('click', () => {
+        event.prompt();
+        installBtn.setAttribute('disabled', true);
+        installBtn.textContent = 'Installed!';
+      });
     });
 
     window.addEventListener('appinstalled', (event) => {
+      textHeader.textContent = 'Successfully installed!';
       console.log('👍', 'appinstalled', event);
-      // Clear the prompt
-      window.deferredPrompt = null;
     });
     ```
 
-  * We have connected our `<a>` tag to now launch the installation prompt.
-
 * Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, we need to have at the minimum service worker that registers, has scope, and has a fetch method in place.
+  * 🔑 For the `manifest.json` file to work, we need to have, at the minimum, a service worker that registers, has scope, and has a fetch method in place.
 
     ```js
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
     }
 
@@ -1234,11 +1194,11 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `25-Ins_Manifest/index.html` with Live Server and demonstrate the following:
 
-  * Click the Install! button on the webpage.
+  * Click the button that states "Click Me to Install!" on the webpage.
 
 * Navigate to your computer's Launchpad (Mac) or Desktop (Windows) to demonstrate the following:
 
-  * The app is installed and an the icon appears.
+  * The app is installed and the icon appears.
 
   * When we click on the icon, the app launches.
 

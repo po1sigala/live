@@ -4,7 +4,7 @@ const textHeader = document.getElementById('textHeader');
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   installBtn.style.visibility = 'visible';
-  textHeader.textContent = 'Click to Install!';
+  textHeader.textContent = 'Click the button to install!';
 
   installBtn.addEventListener('click', () => {
     event.prompt();
@@ -14,6 +14,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 window.addEventListener('appinstalled', (event) => {
-  textHeader.textContent = 'Success, Installed!';
+  textHeader.textContent = 'Successfully installed!';
   console.log('👍', 'appinstalled', event);
 });
