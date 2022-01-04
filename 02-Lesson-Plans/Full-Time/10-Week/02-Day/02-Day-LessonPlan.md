@@ -1104,7 +1104,7 @@ In this class, students will learn how to use the workbox library to cache and s
         "purpose": "any maskable"
       },
       {
-        "src": "./assets/images/icon_192x192.png",
+        "src": "./assets/images/icon_512x512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable"
