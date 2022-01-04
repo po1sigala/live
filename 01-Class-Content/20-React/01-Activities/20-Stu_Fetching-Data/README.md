@@ -6,13 +6,11 @@ Before you begin this activity, complete the following steps:
 
 1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+2. Copy the `/src` folder from [Unsolved](./Unsolved/).
 
-3. Rename the `.env.example` file to `.env`.
+3. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
 
-4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
-
-5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
+4. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
      ```js
      import 'bootstrap/dist/css/bootstrap.min.css';
