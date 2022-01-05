@@ -1,5 +1,5 @@
 {
-  "name": "26-Stu_Manifest Solved",
+  "name": "26-Stu_Manifest-Solved",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
