@@ -2,7 +2,6 @@
 import axios from 'axios';
 
 // Using axios, we create a search method that is specific to our use case and export it at the bottom
-
 const search = (query) =>
   axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}$&api_key=dc6zaTOxFJmzC&limit=20`);
 

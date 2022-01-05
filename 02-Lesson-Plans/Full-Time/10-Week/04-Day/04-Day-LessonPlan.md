@@ -1384,7 +1384,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 ### 19. Instructor Demo: Fetching Data (5 min)
 
-* Begin by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Fetching-Data/src` in addition to copying the `.env.example` file and renaming it to `.env`.
+* Begin by deleting the `00-practice-app/src` directory and replacing it with `19-Ins_Fetching-Data/src`.
 
 * Open `00-practice-app/src/components` in your IDE.
 
@@ -1442,17 +1442,11 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Open `00-practice-app/src/utils/API.js` in your IDE and demonstrate the following:
 
-  * `search` is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
-
-  * Inside our `API.js` file, we import two environmental variables that will not only help us keep our API key secure, but also allow us to form the request URL for our GET request:
+  * The `search` method is exported for use inside `SearchResultContainer` and does the actual GET request to Giphy.
 
     ```js
-    import axios from 'axios';
-
-    const { REACT_APP_BASEURL, REACT_APP_APIKEY } = process.env;
-
     const search = (query) =>
-      axios.get(`${REACT_APP_BASEURL}${query}${REACT_APP_APIKEY}&rating=pg`);
+      axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}$&api_key=dc6zaTOxFJmzC&limit=20`);
 
     export default search;
     ```
@@ -1486,17 +1480,15 @@ In this lesson, you'll review some important React concepts with students to hel
 
   1. Delete the `/src` folder in [00-practice-app](../00-practice-app/).
 
-  2. Copy the `/src` folder and `env.example` from [Unsolved](./Unsolved/) and paste it into [00-practice-app](../00-practice-app/).
+  2. Copy the `/src` folder from [Unsolved](./Unsolved/).
 
-  3. Rename the `.env.example` file to `.env`.
+  3. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm i axios bootstrap`.
 
-  4. To make API requests, we need to use Axios and Bootstrap. Make sure they are installed by running `npm install axios bootstrap`.
+  4. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-  5. This project uses Bootstrap, so don't forget to import it inside `index.js`:
-
-      ```js
-      import 'bootstrap/dist/css/bootstrap.min.css';
-      ```
+     ```js
+     import 'bootstrap/dist/css/bootstrap.min.css';
+     ```
 
   ## Activity
 
@@ -1505,7 +1497,7 @@ In this lesson, you'll review some important React concepts with students to hel
   * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
 
   ## Expected Behavior
-
+  
   * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
 
   * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
@@ -1552,7 +1544,7 @@ In this lesson, you'll review some important React concepts with students to hel
 * Ensure that `axios` is added as a dependency:
 
    ```sh
-   npm install axios
+   npm i axios
    ```
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
@@ -1603,18 +1595,13 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Open `00-practice-app/src/utils/API.js` in your IDE and explain the following:
 
-  * In our `API.js` file, we created a couple variables that point to environment variables containing our API key and base URL.
-
   * We abstracted the API request logic into its own module for organization. This method is exported for use in `OmdbContainer`:
 
     ```js
     import axios from 'axios';
 
-    const BASEURL = process.env.REACT_APP_BASEURL;
-    const APIKEY = process.env.REACT_APP_APIKEY;
-
     const search = async (query) =>
-      axios.get(`${BASEURL}${query}${APIKEY}&rating=pg`);
+      axios.get(`https://www.omdbapi.com/?t=${query}trilogy&rating=pg`);
 
     export default { search };
     ```
@@ -1729,7 +1716,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
   * 🙋 We can refer to supplemental material, read the [Axios Docs](https://axios-http.com/docs/), or ask the instructor for help.
 
-* Answer any questions before ending the class.
+* Answer any questions before proceeding to the next activity.
 
 ### 22. FLEX (30 mins)
 
