@@ -2,37 +2,29 @@
 
 Work with a partner to resolve the following issue:
 
-* As a developer, I want to be able use runtime caching
+* As a developer, I want to be able use runtime caching so that my images are cached as they are used. 
 
 ## Expected Behavior
 
-The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify that the cache is working properly by opening the developer console, clicking the Application tab in DevTools and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, network requests for images will be responded to by the service worker with a 200 response.
+Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2. 
 
 ## Actual Behavior
 
-When a user visits the page after the first time, the browser is still making network requests to the server to retrieve the images.
+All images are precached. 
 
 ## Steps to Reproduce the Problem
 
 To reproduce the problem, follow these steps:
 
-1. Start the dev server by running `npm run dev`.
+1. Navigate to the `Unsolved` folder and run `npm install` and `npm run start:dev`
 
-2. Open a new browser tab and navigate to `http://localhost:3000/`.
+2. Open a new incognito browser tab and navigate to `http://localhost:3001/`.
 
-3. Open Chrome DevTools, click the Network tab, and notice that there are multiple requests to the server for the images that were not cached.
-
-## Assets
-
-The following image demonstrates the properly functioning network requests to the cache:
-
-![Network tab of chrome based browser showing 200 status codes](./Images/network.png)
-
----
+3. Open Chrome DevTools, click the Application tab and select Cache Storage to see the precached files. Note: You may need to do hard refresh!
 
 ## 💡 Hints
 
-What is a cache miss and how can we use the advanced recipe to resolve this issue?
+* How can we enable runtime caching when using the GenerateSW class of the workbox webpack plugin?
 
 ## 🏆 Bonus
 
