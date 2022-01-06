@@ -2,7 +2,7 @@
 
 Work with a partner to resolve the following issue:
 
-* As a developer, I want to be able to rely on the browser to cache images so that I can create a faster application for the end user.
+* As a developer, I want to be able use runtime caching
 
 ## Expected Behavior
 

@@ -2,8 +2,8 @@ import './css/style.css';
 
 import header from './js/header';
 
-import Three from '../src/images/three.png';
-import Four from '../src/images/four.png';
+import Three from './images/three.png';
+import Four from './images/four.png';
 
 document.getElementById("three").src= Three;
 document.getElementById("four").src= Four;
