@@ -443,7 +443,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `19-Ins_InjectManifest/InjectManifestExample/client/dist/service-worker.js` in your IDE to demonstrate the following:
 
-  * When the build script is executed, InjectManifest creates a list -- or manifest -- of URLs that are to be preacached and injects them into your existing service worker. This can appear as a separate file in your `dist` directory or injected directly into the bundled, custom service worker file.
+  * When the build script is executed, InjectManifest creates a list -- or manifest -- of URLs that are to be precached and injects them into your existing service worker. This can appear as a separate file in your `dist` directory or injected directly into the bundled, custom service worker file.
 
     ```js
     /**
@@ -511,7 +511,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
   Refer to the documentation:
 
-  * [Workbox docs on InjectManfest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin)
+  * [Workbox docs on InjectManifest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin)
 
   ## 💡 Hints
 
@@ -556,7 +556,7 @@ In this class, students will learn how to use the workbox library to cache and s
     const {InjectManifest} = require('workbox-webpack-plugin');
     ```
 
-  * 🔑 Next, we add InjectManifast last on our list of plugins and make sure to add the service worker source file, or `swSrc`. The `swDest` file provides the the path and filename of the service worker file that is generated during the build.
+  * 🔑 Next, we add InjectManifest last on our list of plugins and make sure to add the service worker source file, or `swSrc`. The `swDest` file provides the the path and filename of the service worker file that is generated during the build.
 
     ```js
     new InjectManifest({
@@ -677,7 +677,7 @@ In this class, students will learn how to use the workbox library to cache and s
     });
     ```
 
-  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `creaateObjectStore()` method.
+  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `createObjectStore()` method.
 
   * 🔑 We use the `keyPath` property to specify the name of the key field in the `demo-db` object and set it to auto-increment.
 

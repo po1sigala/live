@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 Refer to the documentation:
 
-* [Workbox docs on InjectManfest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin)
+* [Workbox docs on InjectManifest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin)
 
 ## 💡 Hints
 

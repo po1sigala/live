@@ -1475,7 +1475,7 @@ By the end of class, students will be able to:
 
   * ☝️ Why is it important to understand the client-server model?
 
-  * 🙋 The client-server model is a common way for developers to modularize their app into reusable components. Understanding the client-server model will also give us a headstart at understanding React and other front-end frameworks that use bundlers like webpack!
+  * 🙋 The client-server model is a common way for developers to modularize their app into reusable components. Understanding the client-server model will also give us a head start at understanding React and other front-end frameworks that use bundlers like webpack!
 
 * Answer any questions before proceeding to the next activity.
 
