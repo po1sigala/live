@@ -1,5 +1,5 @@
 {
-  "name": "19-ins-generate-SW",
+  "name": "19-ins_generate-sw-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
