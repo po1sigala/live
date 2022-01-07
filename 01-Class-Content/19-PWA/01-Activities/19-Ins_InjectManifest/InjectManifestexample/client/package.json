@@ -1,5 +1,5 @@
 {
-  "name": "11-ins_webpack-hmr",
+  "name": "19-ins-injectmanifest",
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --open",

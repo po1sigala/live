@@ -1,5 +1,5 @@
 {
-  "name": "11-ins_webpack-hmr",
+  "name": "17-ins_caching",
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --open",
