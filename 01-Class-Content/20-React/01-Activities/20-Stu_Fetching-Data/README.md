@@ -12,9 +12,9 @@ Before you begin this activity, complete the following steps:
 
 4. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-     ```js
-     import 'bootstrap/dist/css/bootstrap.min.css';
-     ```
+  ```js
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
 
 ## Activity
 
@@ -23,7 +23,7 @@ Work with a partner to resolve the following issue:
 * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
 
 ## Expected Behavior
-  
+
 * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
 
 * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
