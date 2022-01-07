@@ -22,6 +22,13 @@ To reproduce the problem, follow these steps:
 
 3. Open Chrome DevTools, click the Application tab and select Cache Storage to see the precached files. Note: You may need to do hard refresh!
 
+## 📝 Notes
+
+Refer to the documentation: 
+
+[Workbox docs on runtime caching](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack#adding_runtime_caching)
+
+
 ## 💡 Hints
 
 * How can we enable runtime caching when using the GenerateSW class of the workbox webpack plugin?

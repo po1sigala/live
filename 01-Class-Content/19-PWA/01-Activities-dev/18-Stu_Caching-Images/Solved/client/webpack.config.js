@@ -31,16 +31,16 @@ module.exports = {
         handler: 'CacheFirst',
 
         options: {
-          // Use a custom cache name
+          // Use a custom cache name.
           cacheName: 'images',
 
-          // Only cache 2 images
+          // Only cache 2 images.
           expiration: {
             maxEntries: 2,
           },
         },
       }],
-    })
+    }),
   ],
   module: {
     rules: [
