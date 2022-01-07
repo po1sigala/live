@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 * It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
 
-* It is done when I have opened `Unsolved/src/index.js` and added logic to accept Hot Module Replacement (HMR), as shown in the documentation.
+* It is done when I have opened `Unsolved/src/js/index.js` and added logic to accept Hot Module Replacement (HMR), as shown in the documentation.
 
 * It is done when I have opened `Unsolved/src/js/header.js` and updated the code so that the header changes to `orange` instead of `blue` on the button click. 
 
