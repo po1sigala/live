@@ -1,18 +1,18 @@
 # 📖 Use Workbox to Generate a Service Worker
 
-* As an app user, I want to be able to precache assets and view my app even when offline.  
+* As an app user, I want to be able to precache assets and view my app even when offline.
 
 ## Acceptance Criteria
 
-* It’s done when logic is added to the `index.js` to register a service worker. 
+* It’s done when logic is added to the `index.js` to register a service worker.
 
 * It's done when the `webpack.config.js` file is updated to use the GenerateSW class of the workbox webpack plugin.
 
 * It’s done when the app is started using `npm install` and `npm run start:dev` and a log from GenerateSW appears in the console with a message similar to the following: `“The service worker at service-worker.js will precache 5 URLs, totaling 35.1 kB.”`
 
-* It’s done when a `service-worker.js` file is generated in the build directory. 
+* It’s done when a `service-worker.js` file is generated in the build directory.
 
-* It’s done when the service worker is active and the app is still visible even when offline. 
+* It’s done when the service worker is active and the app is still visible even when offline.
 
 ## 📝 Notes
 
@@ -29,7 +29,7 @@ Refer to the documentation:
 
 ## 💡 Hints
 
-* How can we use Chrome DevTools to test if our service worker is active and our app is still visible even when offline? 
+* How can we use Chrome DevTools to test if our service worker is active and our app is still visible even when offline?
 
 ## 🏆 Bonus
 

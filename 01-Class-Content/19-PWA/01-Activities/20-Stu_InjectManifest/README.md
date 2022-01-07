@@ -22,7 +22,7 @@ Refer to the documentation:
 
 ## 💡 Hints
 
-* What is the difference between the `GenerateSW` and `InjectManifest` class? 
+* What is the difference between the `GenerateSW` and `InjectManifest` class?
 
 * What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 

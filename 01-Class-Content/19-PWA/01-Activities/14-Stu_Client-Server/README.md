@@ -1,12 +1,12 @@
-# 📐 Add Comments to Implementation of Client-Server Model 
+# 📐 Add Comments to Implementation of Client-Server Model
 
-Work with a partner to add comments describing the functionality of the code found in [Unsolved/package.json](./Unsolved/package.json), [Unsolved/server/routes/htmlRoutes.js], and (./Unsolved/package.json), and [Unsolved/server/server.js](./Unsolved/server/server.js).
+Work with a partner to add comments describing the functionality of the code found in [Unsolved/package.json](./Unsolved/package.json), [Unsolved/server/routes/htmlRoutes.js](./Unsolved/server/routes/htmlRoutes.js), and [Unsolved/server/server.js](./Unsolved/server/server.js).
 
-In addition in the [Unsolved/client/README.md](./Unsolved/client/README.md) and [Unsolved/server/README.md](./Unsolved/server/README.md), add comments describing the files and directories found in both folders.
+In addition, in the [Unsolved/client/README.md](./Unsolved/client/README.md) and [Unsolved/server/README.md](./Unsolved/server/README.md), add comments describing the files and directories found in both folders.
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [NPM docs on concurrently](https://www.npmjs.com/package/concurrently)
 
@@ -28,5 +28,3 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
-[client directory](./Unsolved/client), [server directory](./Unsolved/server), and

@@ -2,15 +2,15 @@
 
 Work with a partner to resolve the following issue:
 
-* As a developer, I want to be able use runtime caching so that my images are cached as they are used and not automatically precached. 
+* As a developer, I want to be able use runtime caching so that my images are cached as they are used and not automatically precached.
 
 ## Expected Behavior
 
-Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2. 
+Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
 
 ## Actual Behavior
 
-All images are precached when the service worker is loaded.  
+All images are precached when the service worker is loaded.
 
 ## Steps to Reproduce the Problem
 
@@ -24,10 +24,9 @@ To reproduce the problem, follow these steps:
 
 ## 📝 Notes
 
-Refer to the documentation: 
+Refer to the documentation:
 
 [Workbox docs on runtime caching](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack#adding_runtime_caching)
-
 
 ## 💡 Hints
 
