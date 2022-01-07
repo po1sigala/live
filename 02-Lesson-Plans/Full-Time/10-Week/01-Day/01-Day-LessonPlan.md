@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this class, you will introduce webpage performance and optimization, key aspects of a Progressive Webpage or PWA. Lighthouse, a PWA analysis tool, is used to introduce students to the key metrics needed to build a fast, performant PWA experience for users. Then using webpack, a static module bundler for JavaScript applications, students will learn to bundle JavaScript, CSS, and image files. Webpack plugins are also covered. Students will also learn how to use the workbox library to cache and serve static assets. Students will become familiar with the different methods workbox provides to create a service worker.
+In this class, you will introduce webpage performance and optimization, key aspects of a Progressive Webpage or PWA. Lighthouse, a PWA analysis tool, is used to introduce students to the key metrics needed to build a fast, performant PWA experience for users. Then using webpack, a static module bundler for JavaScript applications, students will learn to bundle JavaScript, CSS, and image files. Webpack plugins are also covered. Students will also learn about the client-server model.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `01-Ins_Lighthouse` through `14-Stu_Workbox-Service-Workers`.
+* In this lesson, students will complete activities `01-Ins_Lighthouse` through `14-Stu_Client-Server`.
 
 * For the Lighthouse activity, you will use both DevTool's built-in Lighthouse audit tool and the Lighthouse Chrome extension. Please be sure to install the [Lighthouse Chrome extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) prior to class and add the Lighthouse icon to your toolbar to easily demonstrate generating an audit report.
 
@@ -14,13 +14,11 @@ In this class, you will introduce webpage performance and optimization, key aspe
 
 * **Important**: Today's activities take students through setting up webpack and bundling files step-by-step. As a result, for the first few Instructor Demo and Student activities, you will be required to manually insert the provided `index.html` file into the generated `dist` folder and update the script's src attribute to the output filename to run the build code. In the `09-Ins_Webpack-Plugin` activity, students will learn how to generate the `index.html` file with the `html-webpack-plugin` plugin.
 
-* Today's activities will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
+* This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
-  > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application.
+  > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application. For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
 
-* For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
-
-* In addition to using a private window, students can troubleshoot caching issues further by completely unregistering the service worker. This will allow the browser to cache the assets again. Details on how to do this will vary among browsers, but generally you can find the option to do this in the browser's developer tools.
+* In addition to using an incognito window, students can troubleshoot caching issues further by completely unregistering the service worker. This will allow the browser to cache the assets again. Details on how to do this will vary among browsers, but generally you can find the option to do this in the browser's developer tools.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
@@ -44,7 +42,9 @@ By the end of class, students will be able to:
 
 * Generate an `index.html` file and separate CSS file using webpack plugins.
 
-* Implement service workers to a web application.
+* Incorporate Hot Module Reloading to a webpack app to improve the development experience.
+
+* Identify the client-server model.
 
 ## Slide Deck
 
@@ -75,9 +75,9 @@ By the end of class, students will be able to:
 | 1:25PM | 19  | Instructor Demo: Hot Module Replacement    | 0:05     |
 | 1:30PM | 20  | Student Do: Hot Module Replacement         | 0:15     |
 | 1:45PM | 21  | Instructor Review: Hot Module Replacement  | 0:10     |
-| 1:55PM | 22  | Instructor Demo: Workbox Service Workers   | 0:05     |
-| 2:00PM | 23  | Student Do: Workbox Service Workers        | 0:15     |
-| 2:15PM | 24  | Instructor Review: Workbox Service Workers | 0:15     |
+| 1:55PM | 22  | Instructor Demo: Client-Server Model       | 0:05     |
+| 2:00PM | 23  | Student Do: Client-Server Model            | 0:15     |
+| 2:15PM | 24  | Instructor Review: Client-Server Model     | 0:15     |
 | 2:30PM | 25  | END                                        | 0:00     |
 
 ---
@@ -508,17 +508,17 @@ By the end of class, students will be able to:
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
- * ☝️ What is the role of the entry point?
+  * ☝️ What is the role of the entry point?
 
   * 🙋 The entry point is the JavaScript file, usually named `index.js` that serves as place where webpack will look first to build out the bundle and find dependent modules and assets. To be included in the bundle, the module must be a dependency of our entry point!
 
- * ☝️ What is the role of the output property?
+  * ☝️ What is the role of the output property?
 
   * 🙋 The output property defines where on how and where webpack should output your JavaScript bundles and other assets. Typically, we output to a directory named `dist`. Inside the `dist` directory bundled files, such as a `main.js` will be outputted.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋  We can refer to supplemental material, read the [webpack docs on entry and output ](https://webpack.js.org/concepts/#entry) and the [webpack docs on getting started](https://webpack.js.org/guides/getting-started/), and attend Office Hours to ask for help.
+  * 🙋  We can refer to supplemental material, read the [webpack docs on entry and output](https://webpack.js.org/concepts/#entry) and the [webpack docs on getting started](https://webpack.js.org/guides/getting-started/), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -890,7 +890,7 @@ By the end of class, students will be able to:
 
   * ✔️ `loader`
 
-*  Open `08-Stu_Webpack-Loader/Solved/package.json` in your IDE to demonstrate the following:
+* Open `08-Stu_Webpack-Loader/Solved/package.json` in your IDE to demonstrate the following:
 
   * When a loader is not working, a great place to check first is to make sure all the needed `devDependencies` have been installed.
 
@@ -1178,47 +1178,96 @@ By the end of class, students will be able to:
 
 ### 19. Instructor Demo: Hot Module Replacement (5 min)
 
-* In the terminal, navigate to `11-Ins_Webpack-HMR` and run `npm install && npm run dev`. This will install the dependencies and run the development server.
+* In the terminal, navigate to `11-Ins_Webpack-HMR` and run `npm install` and `npm run dev`. This will install the dependencies, run the development server, and open the `index.html` in the browser.
 
-  * 🔑 When we run this application, we notice that there is a build process happening on the fly, but unlike other start scripts, this time we are not actually outputting the files to the `dist` directory.
+  * 🔑 Previously when working with webpack, we ran `npm run build` to output our files to a `dist` file and manually opened the `index.html` using Live Server. When we run this application, however, the build is sent directly to the browser! This is because we are using a powerful development tool available with webpack: Hot Module Replacement.
 
-  * 🔑 Instead, the files are built and sent directly to the browser. The Hot Module Replacement (HMR) will take care of appending a hash to the file name, and the browser will automatically refresh the page when the file changes. For example, this is an example of the file name that will be sent to the browser:
+  * 🔑 Hot Module Replacement or HMR is used during development to allow modules to be updated at runtime without the need for a full refresh. This saves development time because we can see our changes as we make them.
 
-    ```bash
-    index.be865f63154ff82e7d29.hot-update.js
+  * When we look at the opened app in the browser, we currently see content is being loaded by `module 1` and `module 2`.
+
+* Open `11-Ins_Webpack-HMR/src/js/module1.js` in your IDE to demonstrate the following:
+
+  * 🔑 The `module1.js` file is providing the content to our live page. To test hot reloading is working, let's update the appended HTML so that inside the span element, the text reads: `"THIS IS NEW CONTENT"`.
+
+    ```js
+    <div class="article-container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card darken-1">
+            <div class="card-content dark-text">
+                <span class="card-title">THIS IS NEW CONTENT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     ```
+
+  * We can then save the `module1.js` file and navigate back to our opened browser page to see the content changed. Sometimes, working with HMR can be tricky, so if this doesn't work for you right away, try refreshing or opening your app in an incognito window to see the new content appear.
 
 * Open `11-Ins_Webpack-HMR/package.json` in your IDE to demonstrate the following:
 
-  * When we started up our app, we ran the script `npm run dev`. Before adding options to our config file, let's make sure that the script has been added to our package.json file.
+  * 🔑 To install `webpack-dev-server` as a dev dependency, we use `npm install webpack-dev-server --save-dev`. Once installed, `webpack-dev-server` will appear in the `devDependencies` section of the `package.json` file, as seen below:
 
     ```js
-    "dev": "webpack-dev-server --open",
+    "devDependencies": {
+      "css-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.3.2",
+      "style-loader": "^3.2.1",
+      "webpack": "^5.53.0",
+      "webpack-cli": "^4.8.0",
+      "webpack-dev-server": "^4.1.1"
+    },
     ```
+
+  * To add Hot Module Reloading to our own webpack app, we need to make sure that the script has been added to our package.json file to start our dev server and open up our app in the browser. We add the `--open` tag so that our app will open up in our browser automatically.
+
+    ```js
+    "dev": "webpack-dev-server --open"
+    ```
+
+  * Under the hood, in a development environment webpack calls the `webpack-dev-server` dependency when it parses the `devServer` object in the `webpack.config.js` file.
 
 * Open `11-Ins_Webpack-HMR/webpack.config.js` in your IDE to demonstrate the following:
 
-  * Now we are ready to review the `config` file. In this file, we have set the mode to `development`. Webpack has three modes: `development`, `production` or `none`. By setting the mode, we enable webpack's built-in optimizations that correspond to each environment.
+  * Next, in the `config` file we set the mode to `development`. webpack has three modes: `development`, `production` or `none`. By setting the mode, we enable webpack's built-in optimizations that correspond to each environment.
 
-  * You can also see that we have set up our webpack config to use Hot Module Replacement by adding a `devServer` options object with a attribute of `hot` set to `only`. This will reload the module without reloading the entire page.
+    ```js
+    module.exports = {
+      mode: 'development',
+      entry: {
+        index: './src/index.js',
+      }
+    ```
 
-  * 🔑 In development, not having to refresh the page is a benefit so that we can see the change in the browser immediately and also keep an eye on the HMR logs that are generated by webpack.
+  * We also add a `devServer` option to our configuration. In our `devServer` object, we have added an attribute of `hot` and set it to `only`. This will reload the module without reloading the entire page.
 
-  * It is important to note that when using webpack, you don't need to install the Hot Module Replacement plugin. You can simply add the `hot` option to the `devServer` object in your webpack config.
+    ```js
+    devServer: {
+       hot: 'only',
+    },
+    ```
 
-  * 🔑 Under the hood, webpack calls on another developer dependency called `webpack-dev-server` when it parses the `devServer` object in the `webpack.config.js` file. You can see this package listed in the `devDependencies` section of the `package.json` file.
+* Open `11-Ins_Webpack-HMR/src/index.js` in your IDE to demonstrate the following:
 
-* Open the `11-Ins_Webpack-HMR/src/css/style.css` file in your IDE to demonstrate the following:
+  * 🔑 To accept and react to module updates, we add logic in our `index.js` to check if Hot Module Replacement is enabled and if it is accept and react to the changes. We also add error messaging which will fire if the HMR cannot update.
 
-  * Update the font or font weight of the `h1` element and save the file.
-
-  * 🔑 Notice that when we update some of the content of a CSS file, we don't need to refresh the page to see the updates reflected in the browser.
+    ```js
+    if (module.hot) {
+      module.hot.accept((err) => {
+        if (err) {
+          console.error('Cannot apply HMR update.', err);
+        }
+      });
+    }
+    ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
 
-  * 🙋 We make sure that `webpack-dev-server` is set up to use Hot Module Replacement by adding a `devServer` object to our webpack config and updating our JavaScript to tell Webpack to accept the updated module.
+  * 🙋 We make sure that `webpack-dev-server` is set up to use Hot Module Replacement by adding a `devServer` object to our webpack config and updating our JavaScript to Webpack to accept and react to the updated module.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -1231,7 +1280,7 @@ By the end of class, students will be able to:
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 📖 Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
+  # 🏗️ Add Webpack Development Server to a Project Using Hot Module Replacement (HMR)
 
   Work with a partner to implement the following user story:
 
@@ -1243,29 +1292,19 @@ By the end of class, students will be able to:
 
   * It is done when I have installed `webpack-dev-server` as a `devDependency`.
 
-  * It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
-
   * It is done when I have a `webpack.config.js` file in my project that includes the `devServer` property.
 
-  * It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to the default: `only`.
+  * It is done when I have added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to `only`.
 
-  * It is done when I have opened `Unsolved/src/index.js` and made the following changes:
+  * It is done when I have added a `dev` command to `package.json` that runs `webpack-dev-server --open`.
 
-    * Imported the CSS file from the CSS folder.
+  * It is done when I have opened `Unsolved/src/js/index.js` and added logic to accept Hot Module Replacement (HMR), as shown in the documentation.
 
-    * Added logic to accept Hot Module Replacement (HMR), as this is an optional feature.
-
-  * It is done when I have modified or added some content to the `style.css` file. For example, I changed the `h1` font weight in the `style.css` file and saved it; and that change is reflected in the browser.
+  * It is done when I have opened `Unsolved/src/js/header.js` and updated the code so that the header changes to `orange` instead of `blue` on the button click.
 
   ## 📝 Notes
 
-  * If you encounter any issues with loading your most recent changes, try again in a private/incognito window.
-
-  Refer to the documentation:
-
-  * [Webpack docs on Hot Module Replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr)
-
-  * [Webpack docs on webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+  * If you encounter any issues with loading your most recent changes, refresh the page or try again in a private/incognito window. You may have to refresh a few times!
 
   ## 💡 Hints
 
@@ -1282,12 +1321,11 @@ By the end of class, students will be able to:
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-
 ### 21. Instructor Review: Hot Module Replacement (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with Hot Module Replacement and how it can help us in development? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with Hot Module Replacement and how it can help us during development? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
@@ -1301,46 +1339,50 @@ By the end of class, students will be able to:
 
 * Open `12-Stu_Webpack-HMR/Solved/package.json` in your IDE and explain the following:
 
-  * 🔑 Notice that we have added a `devDependencies` object to our `package.json` file. This object contains all of the dependencies that we need to run our development server.
-
-  * 🔑 When creating a project, the `webpack-dev-server` package is best installed as a `devDependency`. The reason for this that it is only used in development and not in production.
-
-  * Keeping your dependencies list to a minimum is a good way to keep your project size down. While this isn't as important for these simple demos, it is good practice and something you should consider when creating your own projects.
-
-  * 🔑 In our scripts, we've also added a `dev` command to run `webpack-dev-server --open`. This command will run the `webpack-dev-server` and open the project in the browser. Optionally, if you don't like this behavior, you can use `--no-open` to prevent the browser from opening.
+  * To use Hot Module Replacement, we first have to install `webpack-dev-server` as a development dependency. Once installed, it will appear as part of the `devDependencies` object. This object contains all of the dependencies that we need to run our development server.
 
     ```json
-    "scripts": {
-      "dev": "webpack-dev-server --open",
-      "build": "webpack"
+    "devDependencies": {
+      "@babel/core": "^7.16.0",
+      "@babel/preset-env": "^7.16.4",
+      "babel-loader": "^8.2.3",
+      "css-loader": "^6.5.1",
+      "html-webpack-plugin": "^5.5.0",
+      "mini-css-extract-plugin": "^2.4.5",
+      "style-loader": "^3.3.1",
+      "webpack": "^5.64.4",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.7.2"
+    }
+    ```
+
+  * 🔑 In our scripts, we've also added a `dev` command to run `webpack-dev-server --open`. This command will run the `webpack-dev-server` and open the project in the browser. Optionally, if you don't want this behavior, you can use `--no-open` to prevent the browser from opening automatically.
+
+    ```json
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "build": "webpack",
+       "dev": "webpack-dev-server --open"
     },
     ```
 
 * Open `12-Stu_Webpack-HMR/Solved/webpack.config.js` in your IDE to demonstrate the following:
 
-  * Now that we have our script to start the server and have installed the `webpack-dev-server` package, we need to add a `devServer` object to our `webpack.config.js` file.
+  * Now that we have our script to start the server and have installed the `webpack-dev-server` package, we add a `devServer` object to our `webpack.config.js` file. This object contains all of the configuration options for our development server, which gets invoked by the `dev` command.
 
-  * The `devServer` object contains all of the configuration options for our development server, which gets invoked by the `dev` command.
-
-  * We added a `hot` property to the `devServer` object in `webpack.config.js` and set its value to `only`.
-
-  * 🔑 The hot attribute is a `webpack-dev-server` feature that allows us to use HMR. Additionally, we set this value to `only` so that we can use HMR without a full page refresh, as shown in the finished `webpack.config.js` snippet.
+  * 🔑 We add a `hot` property to the `devServer` object in `webpack.config.js` and set its value to `only` so that we can use HMR without a full page refresh, as shown below:
 
     ```js
-    module.exports = {
-      // Truncated webpack.config.js
-      devServer: {
-        hot: true,
-        static: './dist',
-      },
-    }
+    devServer: {
+      hot: 'only',
+    },
     ```
 
 * Open `12-Stu_Webpack-HMR/Solved/src/index.js` in your IDE to demonstrate the following:
 
-  * 🔑 Even though we have set up HMR, it is by default an opt-in feature. In order to take advantage of it, we need to update the `index.js` file to accept hot modules.
+  * 🔑 Even though we have set up HMR, it is by default an opt-in feature. In order to take advantage of it, we need to update the `index.js` file to accept and react to the hot modules.
 
-  * This code is added at the bottom of the `index.js` file, but it can be added anywhere in the file. We first check to see if `module.hot` is defined. If it is, we accept hot modules by calling `module.hot.accept()` method, as shown in the following `index.js` snippet:
+  * This code is added at the bottom of the `index.js` file, but it can be added anywhere in the file. We first check to see if `module.hot` property is defined. If it is, we accept hot modules by calling `module.hot.accept()` method, as shown in the following `index.js` snippet:
 
     ```js
     if (module.hot) {
@@ -1352,19 +1394,28 @@ By the end of class, students will be able to:
     }
     ```
 
-  * You don't need to accept hot modules in every file, as changes will bubble up to a file that does accept hot modules. For example, if you make a change to `style.css` and save it, the changes will be reflected in the browser because `style.css` is imported in `index.js`. The same is true for JavaScript files.
+  * We don't need to accept hot modules in every file. All the files that are imported into `index.js` will bubble up and be hot reloaded.
 
-* Navigate to `12-Stu_Webpack-HMR/Solved` in your terminal and run `npm install && npm run dev` and demonstrate the following:
+* Navigate to `12-Stu_Webpack-HMR/Solved` in your terminal and run `npm install` and `npm run dev` and demonstrate the following:
 
-  * With the development server running, we can now make changes to our `style.css` file and see the changes reflected in the browser.
+  * With the development server running, the page automatically opens in the browser.
 
-  * In `12-Stu_Webpack-HMR/Solved/src/css/style.css`, change the font weight of the `h1` element to `bold`. Notice that when you save, the page is updated in the browser without a full page refresh. You can also see the exact modules that were updated in the browser's console as you refresh the page, as shown in the following snippet:
+* Open `12-Stu_Webpack-HMR/Solved/src/js/header.js` in your IDE to demonstrate the following;
 
-    ```console
-    log.js:24 [HMR] Waiting for update signal from WDS...
-    index.js:519 [webpack-dev-server] Hot Module Replacement enabled.
-    index.js:519 [webpack-dev-server] Live Reloading enabled.
+  * In the `header.js` module, we can change the header's color attribute from `blue` to `orange` to see if we can view the changes without having to rebuild the entire app.
+
+    ```js
+    export const headerClick = () => {
+      const header = document.getElementById('header');
+      if (header.style.color === 'orange') {
+        header.style.color = 'black';
+      } else {
+        header.style.color = 'orange';
+      }
+    };
     ```
+
+  * When we navigate back to the opened app in the browser, we can see the header now changes from black to orange. If it doesn't work, try refreshing the page a few times or testing your app in an incognito window!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1378,201 +1429,192 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 22. Instructor Demo: Workbox Service Workers (5 min)
+### 22. Instructor Demo: Client-Server Model (5 min)
 
-* Navigate to `13-Ins_Workbox-Service-Workers` in your terminal, run `npm install && npm run dev` to demonstrate the following:
+* Navigate to `13-Ins_Client-Server` in your terminal and run `npm install` and `npm run` to demonstrate the following:
 
-  * 🔑 When we run the application, the first thing you will notice is that unlike the previous activities, this one doesn't use or require webpack. Instead, we see a simple message that our server is running on port `3000`.
+  * When we enter `npm run` we can see a list of all the run scripts including `npm run start:dev`. This script uses an npm module called `concurrently` to start the client and server directories at the same time.
 
-  * This demo is a very simple page that contains a card with a title, a description, and an image. It also features a service worker that is running in the background.
-
-  * 🔑 This demo is very similar to other simple Express applications that we have created in the past, with one key distinction. This application uses a service worker written in plain Javascript to cache the application's assets.
-
-  * **Important**: There are two ways to create a service worker. One is to create it manually using the steps found on MDN, and the other is to use the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin. While we will use workbox in the next activity, it is important that we take a look at how to create a service worker manually.
-
-* Open `13-Ins_Workbox-Service-Workers/src/sw.js` in your IDE to demonstrate the following:
-
-  * This is a service worker that runs in the background and caches the assets that we are using. Services respond to different events, much like a button or input field.
-
-  * In the browser, you can click on the Application tab and see that the service worker is running and what status it is in.
-
-  * There are generally three stages in the service worker life cycle:
-
-    1. Install: When the service worker is installed, it will cache the assets that we are using.
-
-    2. Activate: The phase in which the service worker is activated. This is the phase in which the service worker is ready to handle events.
-
-    3. Claim: The phase when the service worker is claiming the clients that are using it.
-
-  * This particular service worker is also a cache-first strategy, meaning that it will first check to see if the assets are in the cache before trying to fetch them from the network, as show in the following snippet:
-
-    ```js
-    self.addEventListener('fetch', (e) =>
-      e.respondWith(caches.match(e.request).then((res) => res || fetch(e.request)))
-    );
+    ```json
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" "
     ```
 
-  * While knowing how to create a service worker from scratch can be beneficial, in this unit we are going to take a look at how to generate a service worker using workbox.
+  * The concurrently npm package is a great tool that will allow us to easily spin up our own Express.js server and serve up our bundled files in the `dist` folder.
 
-  * Service workers, regardless of whether or not they were made using plain Javascript or generated using workbox, all need to be registered at the entry point for your application. In our case, this file is `index.js`.
+* Navigate to `13-Ins_Client-Server` in your terminal and run `npm run start:dev` to demonstrate the following:
 
-* Open `13-Ins_Workbox-Service-Workers/src/index.js` in your IDE to demonstrate the following:
+  * When we execute the `npm run start:dev` script, concurrently runs the client app's build script to create a `dist` directory that contains an `index.html`.  Concurrently also starts an Express.js server to serve up our `index.html` and the assets found in the `dist` directory at the same time.
 
-  * Typically, all one needs to do in order to register a service worker is check to see if they are supported in the browser, and then use the `navigator.serviceWorker.register()` method to register the worker in the browser, as shown in the following code snippet:
+* Open to `localhost:3001/` in your browser to explain the following:
 
-    ```js
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('./sw.js')
-        .then((register) => console.log(register));
-    }
-    ```
+  * Our app is now available at the main route `/` at `localhost:3001`, the route and port assigned by our Express.js server.
+
+  * Using concurrently, instead of manually opening the `index.html` in the dist directory with Live Server like we did in earlier activities or relying on webpack's dev server to serve our build directly to the browser, we can use our own Express server to serve up the bundled app on the `localhost:3001` or whatever port we assign in our `server.js` file.
+
+  * For concurrently to work, however, we have to make some changes to how we organize our app. We will be dividing our app into separate client and server directories, known as the client-server model.
+
+* Open `13-Ins_Client-Server` in your IDE to demonstrate the following:
+
+  * 🔑 When we take a look inside the `13-Ins_Client-Server`, we see we see that there are two main directories: a client directory and a server directory.
+
+  * The client directory contains the front-end files. In addition, when a `dist` file is generated during a build, it will also be located inside the client directory. Since we have been working with a front-end app, all of our current app files will be located in the client directory.
+
+  * The server directory contains all the files needed to run a simple Express.js server with a route to serve up our bundled app's files in the client's `dist` folder.
+
+  * Both the client directory and server directory are actually separate apps that function together thanks to the package.json in the root folder. This package.json contains our `npm run start:dev` script and the concurrently development dependency that allows the client and server to be spun up at the same time.
+
+  * 🔑 Using the client-server model allows us to separate our front-end code from our back-end code in these two directories. This creates a more modular and reusable codebase and is especially important to understand when we start working with React or other front-end frameworks that use bundlers like webpack!
+
+  * During the next activity, you will check out the client and server directories more on your own.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What do service workers do?
+  * ☝️ How would we use the client-server model to modularize our app?
 
-  * 🙋 Service workers are a way to cache assets that are used in the application, and are used to speed up the application's loading time.
+  * 🙋 We would start by modularizing our front-end and back-end into two directories, the client and server folders. Since our app is a front-end app, all of our existing files will go in the client directory. The server directory contains a server and HTML route that allows the `dist/index.html` to be served up easily. Finally, we can start both our client and server apps at the same time using an npm module called `concurrently`.
+
+  * ☝️ Why is it important to understand the client-server model?
+
+  * 🙋 The client-server model is a common way for developers to modularize their app into reusable components. Understanding the client-server model will also give us a head start at understanding React and other front-end frameworks that use bundlers like webpack!
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_Client-Server/README.md`.
 
-### 23. Student Do: Workbox Service Workers (15 min)
+### 23. Student Do: Client-Server Model (15 min)
 
-* Direct students to the activity instructions found in `14-Stu_Workbox-Service-Workers/README.md`, which are also shown below.
-
-* To get a better understanding of how to create a service worker with a framework, we will be using the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin for webpack.
+* Direct students to the activity instructions found in `14-Stu_Client-Server/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 📐 Add Comments to Implementation of a Workbox Service Worker
+  # 📐 Add Comments to Implementation of Client-Server Model
 
-  Work with a partner to add comments that describe the functionality of the code found in [index.js](./Unsolved/src/index.js) and [webpack.config.js](./Unsolved/webpack.config.js).
+  Work with a partner to add comments describing the functionality of the code found in [Unsolved/package.json](./Unsolved/package.json), [Unsolved/server/routes/htmlRoutes.js](./Unsolved/server/routes/htmlRoutes.js), and [Unsolved/server/server.js](./Unsolved/server/server.js).
+
+  In addition, in the [Unsolved/client/README.md](./Unsolved/client/README.md) and [Unsolved/server/README.md](./Unsolved/server/README.md), add comments describing the files and directories found in both folders.
 
   ## 📝 Notes
 
   Refer to the documentation:
 
-  * [Workbox Service Worker](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW)
+  [NPM docs on concurrently](https://www.npmjs.com/package/concurrently)
+
+  [MDN web docs client-server overview](https://expressjs.com/en/starter/installing.html)
+
+  [Installing Express.js server](https://expressjs.com/en/starter/installing.html)
+
+  [Express.js routing](https://expressjs.com/en/starter/basic-routing.html)
+
+  [Installing Express.js server](https://expressjs.com/en/starter/installing.html)
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * Why don't JavaScript modules work inside service workers?
+  * What is a proxy server?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 24. Instructor Review: Workbox Service Workers (15 min)
+### 24. Instructor Review: Client-Server Model (15 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with service workers in general? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with the client-server model? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `GenerateSW`
+  * ✔️ `concurrently`
 
-  * ✔️ `Workbox()`
+  * ✔️ `npm run start:dev`
 
-* Open `14-Stu_Workbox-Service-Workers/Solved/webpack.config.js` in your IDE to demonstrate the following:
+  * ✔️  `server` directory
 
-  * 🔑 To make workbox generate a service worker when the application is built, we will use the `GenerateSW` plugin.
+  * ✔️  `app.use()`
 
-  * 🔑 `GenerateSW` is a method that supports creating a new service worker file as part of the webpack build process.
+  * ✔️  `app.get()`
 
-  * 🔑 To use the `GenerateSW` plugin, we need to import it and add it to our webpack configuration. Because the entire plugin is rather large, we will destructure it into a variable called `generateSW`.
+  * ✔️  `client` directory
 
-    ```js
-    const path = require('path');
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
+* Open `14-Stu_Client-Server/Solved/package.json` in your IDE to explain the following:
 
-    // Import workbox-webpack-plugin
-    const { GenerateSW } = require('workbox-webpack-plugin');
-    ```
+  * 🔑 To use concurrently, we install it as a dev dependency at the root level so that it can access both the client and server directories.
 
-  * 🔑 In our exported object, we add a new entry to the `plugins` array that invokes the `GenerateSW` constructor, which accepts a configuration object.
-
-  * 🔑 In our case, we added an option called `clientsClaim`, which instructs the service worker to claim the clients that are using it.
-
-  * 🔑 Note that this aligns with the "claim" phase, or the last step in the service worker life cycle. This is similar to the `clients.claim()` method in our plain JavaScript service worker.
-
-    ```js
-    plugins: [
-      new HtmlWebpackPlugin({
-        title: 'Dev.to Posts',
-        template: './index.html',
-      }),
-      new GenerateSW({
-        clientsClaim: true,
-        skipWaiting: true,
-      }),
-    ],
-    ```
-
-  * In terms of webpack configuration, this is all we need to do to generate a service worker.
-
-  * The setup is so much easier than writing a plain JavaScript service worker from scratch in the previous activity. This is the benefit of using workbox, and this is just the beginning of what workbox can do!
-
-* Open `14-Stu_Workbox-Service-Workers/Solved/src/index.js` in your IDE to demonstrate the following:
-
-  * Much like we did with the plain JavaScript service worker, we still need to register the service worker that gets created by `GenerateSW`.
-
-  * 🔑 At the top of the file, we import a constructor called `Workbox` from the `workbox-window` library. This is a class that aids in handling service worker registration, updates, and reacting to service worker life-cycle events. The import should appear as it does in the following code snippet:
-
-    ```js
-    import { Workbox } from 'workbox-window';
-    ```
-
-  * 🔑 To register, we need to check to make sure service workers are supported in the browser. If they are, we use the `new Workbox()` constructor and assign it a variable called `wb`.
-
-  * 🔑 The `wb` variable is an instance of the `Workbox` class, meaning that we inherit all of the methods and properties of the class, one of which is `wb.register()`. This method is used to register the service worker, as shown in the following code snippet:
-
-    ```js
-    if ('serviceWorker' in navigator) {
-      const wb = new Workbox('/service-worker.js');
-      logger('Service Worker', 'GenerateSW Service Worker is ready', wb);
-
-      wb.register();
+    ```json
+    "devDependencies": {
+      "concurrently": "^5.2.0"
     }
     ```
 
-  * 🔑 This method accepts a path to the service worker file. You may be wondering why we don't see a service worker file in the IDE. This is because we will be using the `webpack-dev-server` to build our application and serve it on the fly.
+  * 🔑 We also add a script that when executed will navigate into the client directory to run the build script and navigate into the server directory to spin up the Express.js server to serve up our app. Note that order matters here! We first have to run the build and create the `dist` folder before the dist files can be served up by our server!
 
-  * 🔑 When it comes time to actually building your application by using a command like `npm run build`, you will see a service worker file in the `dist` directory. The resulting files will look like this:
-
-    ```sh
-    .
-    ├── index.bundle.js
-    ├── index.html
-    ├── service-worker.js
-    └── workbox-9cb17bc4.js
+    ```json
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" "
     ```
 
-  * Now that we have reviewed the service worker, let's test our application in the browser.
+* Open `14-Stu_Client-Server/Solved/server/README.md` in your IDE to explain the following:
 
-* Navigate to `14-Stu_Workbox-Service-Workers/Solved` in your terminal and run `npm install && npm run dev`. This will install the dependencies and run the development server.
+  * The server directory holds the server-side application. At the root is the server's `package.json` that contains the dependencies and scripts needed for the server app to run.
 
-  * When we run the application, the browser will open automatically and we will be taken to a page featuring some articles from the web development site [Dev.to](https://dev.to).
+  * The `server.js` file is also at the root level. This JavaScript file contains the code needed for our basic Express.js server. At the root level is also a directory containing the logic needed for our HTML route.
 
-  * Open the browser's developer tools to see the service worker registration. Additionally, you can see the messages coming from workbox itself with regards to registration, updates, and life cycle events.
+* Open `14-Stu_Client-Server/Solved/server/server.js` in your IDE to explain the following:
+
+  * 🔑 The `server.js` file contains a basic Express server that runs on port `3001`.
+
+  * 🔑 To use static files in the entire client's `dist` folder, we add the `app.use()` method. This will make sure all the bundled assets we need for our app to run are available for use!
+
+    ```js
+    app.use(express.static('../client/dist'))
+    ```
+
+  * We also require our HTML route. For smaller apps, the routes can sometimes also be placed directly in the `server.js` file. In our case, we modularized the code, by giving the HTML route its own file.
+
+    ```js
+    require('./routes/htmlRoutes')(app);
+    ```
+
+* Open `14-Stu_Client-Server/Solved/server/routes/htmlRoutes.js` in your IDE to explain the following:
+
+  * We access our app through the `index.html` file. Previously, we had to open up the `dist` directory's `index.html` using the Live Server tool. Now, using a simple Express `GET` route, we can match requests to the root route `/` and serve up the `index.html` file in the client's `dist` folder using our own simple server app.
+
+    ```js
+    module.exports = (app) =>
+      app.get('/', (req, res) =>
+        res.sendFile(path.join(__dirname, '../client/dist/index.html'))
+      );
+    ```
+
+  * Now, when we run the build script to create a `dist` directory and spin up the server, our app will appear in the browser at `localhost:3001/` or `localhost:3001`.
+
+* Navigate to `14-Stu_Client-Server/Solved/client/README.md` in your IDE to explain the following:
+
+  * The client directory holds our front-end app. Since our app is a front-end app, all these files will be found in the client directory.
+
+  * At the root level of the client directory, we typically have the client's package.json that contains the scripts and dependencies needed to run the client app, the `index.html`, and configuration files such as `webpack.config.js`.
+
+  * The `src` folder containing our raw JavaScript, CSS, and image files is also in the client folder.
+
+  * When a build script is executed, the `dist` folder will be found in the client folder.
+
+* Navigate to `14-Stu_Client-Server/Solved/` in your terminal and run `npm install` and `npm run start:dev` to explain the following:
+
+  * When we open up the localhost on the port assigned in our Express server, or `localhost:3001`, we can see our Express server is now serving up the client app!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is the difference between using workbox and plain JavaScript service workers?
+  * ☝️ How does concurrently help us use the client-server model?
 
-  * 🙋 The benefits of using workbox is that it is so much easier to understand and use. It's a great way to get started with service workers without having to write a plain JavaScript service worker from scratch.
+  * 🙋 The idea is that we can run both the client and the backend server at the same time when developing, and when it comes time to deploy, we can run the build command for the client, and then the server command for the backend.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Workbox docs on GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW), and attend Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Open-CLI Docs on concurrently](https://github.com/open-cli-tools/concurrently), and attend Office Hours to ask for help.
 
 * Answer any questions before ending the class.
 

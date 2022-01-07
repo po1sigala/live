@@ -6,7 +6,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `15-Ins_Caching` through `27-Evr_Git-Hooks`.
+* In this lesson, students will complete activities `15-Ins_Workbox-Service-Workers` through `27-Evr_Git-Hooks`.
 
 * This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
@@ -76,244 +76,231 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ## Class Instruction
 
-### 1. Instructor Demo: Cache CSS and JavaScript Files (5 min)
+### 1. Instructor Demo: Workbox Service Workers (5 min)
 
 * Welcome students to class.
 
-* Navigate to `15-Ins_Caching` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
+* Navigate to `15-Ins_Workbox-Service-Workers` in your terminal, run `npm install` and `npm run dev` to demonstrate the following:
 
-* **Important:** Unlike the previous instructor demos, this one will not open the browser automatically. This is by design so that you can see the caching strategy messages in the console as the page loads for the first time.
+  * 🔑 When we run the application, the first thing you will notice is that unlike the previous activities, this one doesn't use or require webpack. Instead, we see a simple message that our server is running on port `3001`.
 
-* Open a new incognito window in your browser and then open the developer console in the new window. Once you have the window open with the developer console in view, navigate to `http://localhost:8080`.
+  * This demo is a very simple page that contains a card with a title, a description, and an image. It also features a service worker that is running in the background.
 
-  * 🔑 When we run this application, we see a page with a few modules being loaded, as we saw with the Hot Module Replacement activity. This isn't the interesting part, however.
+  * 🔑 This demo is very similar to other simple Express applications that we have created in the past, with one key distinction. This application uses a service worker written in plain Javascript to cache the application's assets.
 
-  * 🔑 As the page loads, we can see some messages in the console that tell us what is happening in response to our caching strategy.
+  * **Important**: There are two ways to create a service worker. One is to create it manually using the steps found on MDN, and the other is to use the [workbox](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) plugin. While we will use workbox in the next activity, it is important that we take a look at how to create a service worker manually to understand how it works.
 
-  * 🔑 In order to take advantage of these caching strategies, we will use a new method to generate the service worker called `InjectManifest`. This method is used to inject a manifest file into the service worker on the fly.
+* Open `15-Ins_Workbox-Service-Workers/src/sw.js` in your IDE to demonstrate the following:
 
-  * 🔑 `InjectManifest`, much like the `GenerateSW` method, accepts a configuration object and is added to the `plugins` array in our webpack configuration, as shown in the webpack configuration snippet below:
+  * This is a service worker that runs in the background and caches the assets that we are using. Services respond to different events, much like a button or input field.
+
+  * In the browser, we can navigate to Chrome DevTools and click on the Application tab and see that the service worker is running and what status it is in.
+
+  * There are generally three stages in the service worker life cycle:
+
+    1. Install: When the service worker is installed, it will cache the assets that we are using.
+
+    2. Activate: The phase in which the service worker is activated. This is the phase in which the service worker is ready to handle events.
+
+    3. Claim: The phase when the service worker is claiming the clients that are using it.
+
+  * This particular service worker is also a cache-first strategy, meaning that it will first check to see if the assets are in the cache before trying to fetch them from the network. When we create a service worker, it is important to add logic that defines a caching strategy, as shown below:
 
     ```js
-     plugins: [
-    new HtmlWebpackPlugin({
-        title: 'Caching',
-        template: './index.html',
-      }),
-      new InjectManifest({
-        swSrc: './src/sw.js',
-      }),
-    ],
+    self.addEventListener('fetch', (e) =>
+      e.respondWith(caches.match(e.request).then((res) => res || fetch(e.request)))
+    );
     ```
 
-  * 🔑 On the initial load, we see messages in the console that tell us that there was no cached response found in `static-resources`. This is in part because of the caching strategy we are using, as shown in the following snippet:
+* Open `15-Ins_Workbox-Service-Workers/src/index.js` in your IDE to demonstrate the following:
 
-    ```console
-    workbox | Router is responding to: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css
-    workbox | Router is responding to: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
-    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
-    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
-    workbox | Router is responding to: /index.bundle.js
+  * Typically, all one needs to do in order to register a service worker is check to see if they are supported in the browser, and then use the `navigator.serviceWorker.register()` method to register the worker in the browser, as shown below:
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./sw.js')
+        .then((register) => console.log(register));
+    }
     ```
 
-  * 🔑 This kind of response is expected for the first visit because our current caching strategy checks to see if we have a cached response to return first. Because we don't have a cached response to return, we will have to fetch the resource from the network.
-
-  * 🔑 This kind of strategy is called the `StaleWhileRevalidate` caching strategy. This strategy will first check to see if there is a cached response, and if there is, it will return that response. Otherwise, it will fetch the response from the network and update the cache.
-
-  * 🔑 On subsequent visits, we will see a message in the console that tells us that we have a cached response in `static-resources`. This is a result of the cached response being returned, as shown in the following screenshot:
-
-    ```console
-    workbox | Using StaleWhileRevalidate to respond to 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
-    logger.js:50 | Found a cached response in the 'static-resources' cache. Will update with the network response in the background.
-    ```
+* Now that we have explored the fundamentals of how to build a service worker, in the next activity you will refer to the docs to build your own service worker using a simple library called workbox.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why does the `StaleWhileRevalidate` strategy sound like a good choice for static assets on a webpage?
+  * ☝️ What do service workers do?
 
-  * 🙋 `StaleWhileRevalidate` is a good choice for static assets because it allows us to respond quickly from the cache, but also update resources in the background.
+  * 🙋 Service workers are a way to cache assets that are used in the application, and are used to speed up the application's loading time.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Caching`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_Workbox-Service-Workers/README.md`.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `@TODO/folder/file`.
+### 2. Student Do: Workbox Service Workers (15 min)
 
-### 2. Student Do: Cache CSS and JavaScript Files (15 min)
-
-* Direct students to the activity instructions found in `16-Stu_Caching/README.md`, which are also shown below.
+* Direct students to the activity instructions found in `16-Stu_Workbox-Service-Workers/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 📖 Implement Caching for CSS and JS Files
+  # 📖 Use Workbox to Generate a Service Worker
 
-  Work with a partner to implement the following user story:
-
-  * As a developer, I want to cache the CSS and JS files so that I don't have to download them every time I load a page.
-
-  * As a developer, I want to implement workbox caching strategies so that I can improve the performance of the app.
+  * As an app user, I want to be able to precache assets and view my app even when offline.
 
   ## Acceptance Criteria
 
-  * It is done when I have imported `injectManifest` using destructuring assignment from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
+  * It’s done when logic is added to the `index.js` to register a service worker.
 
-  * It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
+  * It's done when the `webpack.config.js` file is updated to use the GenerateSW class of the workbox webpack plugin.
 
-  * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
+  * It’s done when the app is started using `npm install` and `npm run start:dev` and a log from GenerateSW appears in the console with a message similar to the following: `“The service worker at service-worker.js will precache 5 URLs, totaling 35.1 kB.”`
 
-  * It is done when I have specified the `swSrc` and `swDest` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
+  * It’s done when a `service-worker.js` file is generated in the build directory.
 
-  * It is done when I have registered a route for the caching of static assets (e.g., JavaScript, HTML, CSS) by using a `staleWhileRevalidate` strategy for files that aren't pre-cached, by matching against the destination of the incoming request. This is done in the `src/sw.js` file.
+  * It’s done when the service worker is active and the app is still visible even when offline.
 
   ## 📝 Notes
 
   Refer to the documentation:
 
-  * [Google docs on common recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes)
+  * [Workbox docs on generating a service worker with webpack using GenerateSW](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack)
+
+  * [Workbox docs on GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW)
+
+  * [Simulate offline behavior with Chrome DevTools](https://developers.google.com/web/ilt/pwa/tools-for-pwa-developers#simulate_offline_behavior)
+  )
+
+  * [Interact with service workers with Chrome DevTools](https://developers.google.com/web/ilt/pwa/tools-for-pwa-developers#interact_with_service_workers_in_the_browser)
 
   ## 💡 Hints
 
-  * What does the `staleWhileRevalidate` strategy do? Is there another strategy that could be used?
-
-  * What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
+  * How can we use Chrome DevTools to test if our service worker is active and our app is still visible even when offline?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is the difference between `GenerateSW` and `InjectManifest`?
+  * Why don't JavaScript modules work inside service workers?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 3. Instructor Review: Cache CSS and JavaScript Files (10 min)
+### 3. Instructor Review: Workbox Service Workers (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with caching JS and CSS files? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with service workers in general? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `injectManifest`
+  * ✔️ `GenerateSW`
 
-  * ✔️ Caching strategies
+  * ✔️ `Workbox()`
 
-  * ✔️ `swSrc`
+* Open `16-Stu_Workbox-Service-Workers/Solved/client/webpack.config.js` in your IDE to demonstrate the following:
 
-* Open `16-Stu_Caching/Solved/webpack.config.js` in your IDE and explain the following:
+  * 🔑 To make workbox generate a service worker when the application is built, we will use the GenerateSW class to generate a pre-built service worker as part of the webpack build process.
 
-  * To have proper caching, we need to use a caching strategy. And to use a caching strategy, we need to generate a service worker using the `InjectManifest` plugin.
+  * 🔑 GenerateSW is a method that supports creating a new service worker file as part of the webpack build process.
 
-  * 🔑 The `InjectManifest` plugin is used to inject a manifest file into the service worker on the fly. We start off by importing it into our webpack config.
+  * 🔑 To use the GenerateSW class of the workbox webpack plugin, we need to import it and add it to our webpack configuration.
 
     ```js
-    const path = require('path');
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
-    const { InjectManifest } = require('workbox-webpack-plugin');
+    const WorkboxPlugin = require('workbox-webpack-plugin');
     ```
 
-* Open `16-Stu_Caching/Solved/src/index.js` in your IDE to demonstrate the following:
-
-  * As with all service workers, we need to register a service worker in our `src/index.js` file. We start off by registering a new `Workbox` service worker.
+  * 🔑 In our exported object, we add a new entry to the `plugins` array that invokes the GenerateSW class. It is important this plugin is last!
 
     ```js
-    if ('serviceWorker' in navigator) {
-      const wb = new Workbox('/sw.js');
-
-      wb.register();
-    }
+    new WorkboxPlugin.GenerateSW()
     ```
 
-* Open `16-Stu_Caching/Solved/webpack.config.js` in your IDE and explain the following:
+  * In terms of webpack configuration, this is all we need to do to generate a service worker.
 
-  * Now that we have the logic to register our service worker, and we imported the `InjectManifest` plugin, we need to add the `InjectManifest` plugin to our `plugins` array.
+  * The setup is so much easier than writing a plain JavaScript service worker from scratch in the previous activity. This is the benefit of using workbox, and this is just the beginning of what workbox can do!
 
-  * 🔑 One of the options that we can pass to the `InjectManifest` constructor is the `swSrc` property. This property specifies the location of the service worker file that contains our own custom code for caching.
+* Open `16-Stu_Workbox-Service-Workers/Solved/client/src/js/register-sw.js` in your IDE to demonstrate the following:
 
-  * Here is a sample of the the `InjectManifest` plugin in the `plugins` array:
+  * Much like we did with the plain JavaScript service worker, we still need to register the service worker that gets created by `GenerateSW`.
 
-    ```js
-    plugins: [
-      new HtmlWebpackPlugin({
-        title: 'Caching',
-        template: './index.html',
-      }),
-
-      new InjectManifest({
-        swSrc: './src/sw.js',
-      }),
-    ],
-    ```
-
-* Open `16-Stu_Caching/Solved/src/sw.js` in your IDE to demonstrate the following:
-
-  * The service worker is where all of our logic for caching assets is located. We can see that the starer code already has the `StaleWhileRevalidate` caching strategy imported for us.
-
-  * The `StaleWhileRevalidate` strategy will try to serve the cached version of the resource if it is available, but if the cached version is not available, it will make a network request, serve the asset, and store the cached version of the resource in the background.
-
-  * With the `StaleWhileRevalidate` strategy, every request that is served from the cache is accompanied by a request to the server to check and see if a newer version is available. If a newer version is available, the cached version is updated and served to the user on the next request.
-
-  * We match the assets by using the `destination` property on the `request` object. This property is a string that contains the path to the asset. In our case, we are looking for those destinations that include style or script files, as shown in the handler below:
+  * 🔑 To register, we need to check to make sure service workers are supported in the browser. We can then use the window load event to register the service worker. When working with workbox, it is important to check the docs for this code!
 
     ```js
-    const matchCallback = ({ request }) => {
-      return (request.destination === 'style' || request.destination === 'script' );
+    export const registerSW = () => {
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+       });
+      }
     };
     ```
 
-  * Next, we have to register the route in our service worker. We do this by using the `staleWhileRevalidate` constructor.
+  * Now that we have reviewed the service worker, let's test our application in the browser.
 
-    ```js
-    registerRoute(
-      matchCallback,
-      new StaleWhileRevalidate({
-        cacheName,
-        plugins: [
-          // This plugin will cache responses with these headers to a maximum-age of 30 days
-          new CacheableResponsePlugin({
-            statuses: [0, 200],
-          }),
-        ],
-      })
-    );
+* Navigate to `16-Stu_Workbox-Service-Workers/Solved` in your terminal and run `npm install` and `npm run start:dev`.
+
+  * When we start our app, we see a message similar to this in the console, showing that our service worker is running and our files are being precached.
+
+* Open `localhost:3001` in an incognito browser to demonstrate the following:
+
+    ```text
+    “The service worker at service-worker.js will precache 5 URLs, totaling 35.1 kB.”
     ```
+
+* Navigate to `localhost:3001/` in an incognito browser to demonstrate the following:
+
+  * When we open Chrome DevTools, click on the Application tab and select Service Worker, we see our service worker is activated and is running.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How does the `StaleWhileRevalidate` caching strategy work?
+  * ☝️ What is the difference between using workbox and plain JavaScript service workers?
 
-  * 🙋 The `StaleWhileRevalidate` will try to serve the cached version of the resource if it is available, but if the cached version is not available, it will make a network request, serve the asset and store the cached version of the resource in the background.
+  * 🙋 The benefit of using workbox is that it is so much easier to understand and use. It's a great way to get started with service workers without having to write a plain JavaScript service worker from scratch.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Google docs on common recipes](https://developers.google.com/web/tools/workbox/guides/common-recipes), and attend Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Workbox docs on GenerateSW](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 4. Instructor Demo: Caching Images (5 min)
 
-* Navigate to `17-Ins_Caching-Images` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
+* Navigate to `17-Ins_Caching-Images` and run `npm install` and `npm run start:dev` to demonstrate the following:
 
-  * 🔑 When we run the `npm run dev` command, we can see in the browser that our demo is now serving images inside two of the modules.
+  * In the console, we see a log from GenerateSW indicating that our files have been precached similar to the following:
 
-  * 🔑 This demo also uses the `InjectManifest` plugin to inject a manifest file into the service worker on the fly.
+    ```md
+    The service worker at service-worker.js will precache
+    [0] 5 URLs, totaling 38.7 kB.
+    ```
 
-  * 🔑 The key difference, however, is that we are now using the `CacheFirst` caching strategy.
+* Navigate to `localhost:3001` in an incognito window and open DevTools to demonstrate the following:
 
-  * 🔑 This strategy is very straightforward and does what the name suggests. The service worker will always look first to the cache and fall back to the network if a cached version is not available.
+  * Working with a cache can be tricky especially during development. If you are running into issues, it is a good idea to do a hard refresh by holding down the refresh icon on the left side browser toolbar and clicking on "Empty Cache and Hard Reload" on a Mac or pressing `Ctrl + Shift + r` or `F5` on Windows. This will make sure you are seeing the latest changes to your app!
 
-  * 🔑 The `CacheFirst` strategy is a perfect choice for optimizing repetitive requests, since it only reaches out to the network for "fresh" assets.
+  * Once we have done a hard refresh, we can navigate to the Applications tab and click on the `Cache Storage` option under `Cache` to see our apps current cache. When we click on the cache, a clickable table of all cache's files should appear on the right.
+
+  * The images will have names that contain a long string of numbers and letters due to the bundling process. To see our cached images and determine which images are cached, we can click on the Preview mode below the table.
+
+  * In our cache table, it looks like we currently have two precached images even though we have four images in our app. To see why, we can click on the `index.html` file in the table and view it in preview mode.
+
+  * In our `index.html`, it seems two of our images are actually external URL links. Remember, when we use GenerateSW only the images that are stored locally and bundled are included in the cache!
+
+  * By default, when we use GenerateSW all images that have been bundled will be automatically precached when the service worker is installing. This is useful when building a simple app. However, this is often not the behavior we want and it may even slow your app's performance down when apps get larger.
+
+  * That is when adding runtime caching strategy will help make your app more performant and give you more control over when images are cached. In the next activity, you will be adding a runtime strategy to an existing app so that images are only saved once they are used on the page. As usual. Don't forget to consult the documents!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ What is precaching?
 
-  * 🙋 Building a route for images is very similar to building a route for CSS and JavaScript files. The only difference is that we match the `images` destination and invoke the `CacheFirst` constructor when registering the route.
+  * 🙋 When the service worker is installing, files are saved to the cache. This is referred to as "precaching". When using the GenerateSW, precaching is the default behavior.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -326,41 +313,39 @@ In this class, students will learn how to use the workbox library to cache and s
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 🐛 Images Are Not Being Cached Properly
+  # 🐛 Images Are Not Using a Runtime Caching Strategy
 
   Work with a partner to resolve the following issue:
 
-  * As a developer, I want to be able to rely on the browser to cache images so that I can create a faster application for the end user.
+  * As a developer, I want to be able use runtime caching so that my images are cached as they are used and not automatically precached.
 
   ## Expected Behavior
 
-  The browser should load images almost instantly from the cache and not need to download fresh images from the server. You can verify that the cache is working properly by opening the developer console, clicking the Application tab in DevTools and looking for a cache name of `my-image-cache`. Additionally, on subsequent visits to the application, network requests for images will be responded to by the service worker with a 200 response.
+  Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
 
   ## Actual Behavior
 
-  When a user visits the page after the first time, the browser is still making network requests to the server to retrieve the images.
+  All images are precached when the service worker is loaded.
 
   ## Steps to Reproduce the Problem
 
   To reproduce the problem, follow these steps:
 
-  1. Start the dev server by running `npm run dev`.
+  1. Navigate to the `Unsolved` folder and run `npm install` and `npm run start:dev`
 
-  2. Open a new browser tab and navigate to `http://localhost:3000/`.
+  2. Open a new incognito browser tab and navigate to `http://localhost:3001/`.
 
-  3. Open Chrome DevTools, click the Network tab, and notice that there are multiple requests to the server for the images that were not cached.
+  3. Open Chrome DevTools, click the Application tab and select Cache Storage to see the precached files. Note: You may need to do hard refresh!
 
-  ## Assets
+  ## 📝 Notes
 
-  The following image demonstrates the properly functioning network requests to the cache:
+  Refer to the documentation:
 
-  ![Network tab of chrome based browser showing 200 status codes](./Images/network.png)
-
-  ---
+  [Workbox docs on runtime caching](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack#adding_runtime_caching)
 
   ## 💡 Hints
 
-  What is a cache miss and how can we use the advanced recipe to resolve this issue?
+  * How can we enable runtime caching when using the GenerateSW class of the workbox webpack plugin?
 
   ## 🏆 Bonus
 
@@ -377,230 +362,237 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with caching images using Workbox? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with caching images? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `CacheFirst`
+  * ✔️ `exclude`
 
-  * ✔️ `ExpirationPlugin`
+  * ✔️ `runtimeCaching`
 
-* Open `18-Stu_Caching-Images/Solved/src/sw.js` in your IDE and explain the following:
+  * ✔️ `cacheFirst`
 
-  * 🔑 In order to cache images, we need to use the `CacheFirst` caching strategy. This strategy needs to be imported from the `workbox-strategies` package. We added this on to our existing import for the `staleWhileRevalidate` strategy.
+* Open `18-Stu_Caching-Images/Solved/client/webpack.config.js` in your IDE and explain the following:
 
-    ```js
-    import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
-    ```
+  * The GenerateSW class precaches all images by default. However, that is often not the behavior that we want, especially when we have many images.
 
-  * 🔑 The `CacheFirst` strategy is a good choice for images because the same images are often requested multiple times in a short period of time.
+  * Runtime caching allows us to only cache images as we use them. When we use runtime caching, the request is only populated after a request is made for an asset, like an image.
 
-  * To use the `CacheFirst` strategy, we need to register the route with the `CacheFirst` constructor. We can do this by using the `registerRoute` method.
+  * To use runtime caching, we need to add parameters to our GenerateSW class in our `webpack.config.js`.
 
-  * Any requests that have a destination of `images` will be handled by the `CacheFirst` strategy.
+  * First we need to set the property to exclude our images from precaching.
 
     ```js
-    registerRoute(
-      ({ request }) => request.destination === 'image',
-        new CacheFirst({})
-      );
+     exclude: [/\.(?:png|jpg|jpeg|svg)$/],
     ```
 
-  * 🔑 The `ExpirationPlugin` is a plugin that will automatically remove stale assets from the cache. This plugin needs to be imported from the `workbox-expiration` package.
+  * 🔑 Then, we enable `runtimeCaching` to match URLs that are images and use the `CacheFirst` strategy, so that the cache is checked for the URL before making a call on the network. The `CacheFirst` strategy is a perfect choice for optimizing repetitive requests, since it only reaches out to the network for "fresh" assets.
+
+  * We also need to add a custom cache name and can select the maximum number of images we want to hold in the cache at one time. This allows us to control the size of our cache.
 
     ```js
-    import { ExpirationPlugin } from 'workbox-expiration';
+    runtimeCaching: [{
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'images',
+          expiration: {
+            maxEntries: 2,
+          },
+        },
+      }],
     ```
 
-  * The `ExpirationPlugin` will be included inside the `CacheFirst` constructor and will accept a cache name and a number of options.
+* Navigate to `18-Stu_Caching-Images/Solved/` in your terminal and run `npm install` and `npm run start` to demonstrate the following:
 
-  * We also provided some options to the `ExpirationPlugin` constructor. We can use the `maxAgeSeconds` option to set the maximum age of the asset in the cache. This will remove assets that are older than the specified number of seconds.
+  * When we open `localhost:3001` in an incognito window and navigate to the Application Tab and view the cache storage, we see all our images are no longer precached.
 
-  * We can also use the `maxEntries` option to set the maximum number of assets that can be stored in the cache. This will prevent the cache from growing too large.
+  * When we click on the network tab and then click on the `Change Box Image` in our app, we can see that a network call is being used the first time our images are shown on the browser page.
 
-    ```js
-      new CacheFirst({
-      cacheName: 'my-image-cache',
-      plugins: [
-        new ExpirationPlugin({
-          maxEntries: 60,
-          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-        }),
-      ],
-    })
-    ```
-
-  * Let's test our work by running the `npm install && npm run dev` command again from the root of the `/Solved` directory. This time, we can see that the images are now being cached. Specifically, after a few refreshes, the browser will show a new cache called `my-image-cache` that contains the images.
+  * If this doesn't work the first time, don't worry! Caches are notoriously tricky when using `localhost`. Try running a hard refresh to make sure the cache is cleared. Or, if that option fails, you can try changing the port in your `server.js` to a new port you have not yet used such as `3010`. Using these tricks will usually allow you to see the intended behavior!
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What are some challenges that you encountered with caching images?
+  * ☝️ What is runtime caching?
 
-  * 🙋 Caching images can be difficult to troubleshoot due to cors issues. We can use the `cors-anywhere` package to proxy requests to the server, or we can make sure that the images are served from the same domain as the server.
+  * 🙋 When we use a runtime caching strategy, the files are not stored in the cache until they are actually used in the app. For larger apps, a successful runtime caching strategy can help prevent cache bloat and help make your apps perform better.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Workbox docs on caching images](https://developers.google.com/web/tools/workbox/guides/common-recipes), and attend Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Runtime caching with workbox](https://web.dev/runtime-caching-with-workbox/), and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
-### 7. Instructor Demo: Client-Server Model (5 min)
+### 7. Instructor Demo: InjectManifest (5 min)
 
-* Navigate to `19-Ins_Client-Server` in your terminal and run `npm install` to install all dependencies and demonstrate the following:
+> **Important**: The `dist` folder for both of these examples have been pre-generated for you.
 
-  * Instead of opening the browser right away, run `npm run` to list the available commands.
+* Open `19-Ins_InjectManifest/GenerateSWexample/client/dist/service-worker.js` in your IDE to demonstrate the following:
 
-  * Notice that the list of available commands reflects the scripts that are defined in the `package.json` file.
+  * 🔑 When we use the GenerateSW class, a service worker is automatically generated for you in the `dist` folder. This is fine for simple configurations or when you do not want to customize your service worker.
 
-  * 🔑 If we run `ls` in the terminal, we should also see that this demo is split up into two directories: `client` and `server`. Both of which have their own `package.json` files, in addition to the `package.json` file for the root directory.
+  * However, since the service worker is autogenerated, the options for caching are limited and we cannot use our service worker with other APIs.
 
-  * 🔑 We have two directories because we want to separate our front-end code from our back-end code in order to prepare for the future. This separation will allow us to create a more modular and reusable codebase, especially when we start working with React or any other front-end framework that uses a bundler such as webpack.
+  * 🔑 When we need more control over our service worker, we can use another workbox webpack plugin class, InjectManifest.
 
-  * 🔑 One thing we need to think about is deployment. Let's say that we have an application that has an Express server and a front-end client. We would need some way to spin up the server and the client on the same machine using a single command, while also having the server and client running on different ports.
+* Open `19-Ins_InjectManifest/InjectManifestExample/client/src/sw.js` in your IDE to demonstrate the following:
 
-  * 🔑 We can use the `concurrently` command to run multiple commands at the same time.
+  * Using InjectManifest we can build our own custom service worker with more advanced scripts and caching strategies and place the file in our `src` directory.
 
-  * In the next activity, we will learn how to use the `concurrently` command to run multiple commands at the same time.
+* Open `19-Ins_InjectManifest/InjectManifestExample/client/dist/service-worker.js` in your IDE to demonstrate the following:
+
+  * When the build script is executed, InjectManifest creates a list -- or manifest -- of URLs that are to be precached and injects them into your existing service worker. This can appear as a separate file in your `dist` directory or injected directly into the bundled, custom service worker file.
+
+    ```js
+    /**
+    * The precacheAndRoute() method efficiently caches and responds to
+    * requests for URLs in the manifest.
+    * See https://goo.gl/S9QRab.com
+    */
+
+    workbox.precacheAndRoute([{
+      "url": "80551ea7ee802057b7d8.png",
+      "revision": null
+    }, {
+      "url": "bundle.js",
+      "revision": "5769c1b7478f9595223c2626a48d66b3"
+    }, {
+      "url": "fc083abf258238e3b7f5.png",
+      "revision": null
+    }, {
+      "url": "index.html",
+      "revision": "8e97463e73cce4383fab046b0911645f"
+    }, {
+      "url": "main.css",
+      "revision": "985f2d9b63b6a02489442a56cbd104c8"
+    }], {});
+    ```
+
+* Open `19-Ins_InjectManifest/InjectManifestExample/client/dist/sw.js` in your IDE to demonstrate the following:
+
+  * When we use InjectManifest, our custom service worker including any specific configurations we need is bundled but otherwise unchanged. This allows us to add the custom scripts -- and control -- we need to our service worker.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How would we build this?
+  * ☝️ Why would we choose to use the InjectManifest class over GenerateSW?
 
-  * 🙋 We would start by moving our entire application into a single directory called `client`. We would then create a new directory called `server` and add a simple Express.js server to it. Finally, we could update our `package.json` file to include the `concurrently` package and update our `start` script to run the `concurrently` command.
+  * 🙋 When we want to quickly generate a service worker and don't need service workers with other API's, GenerateSW is a great and easier choice. However for more complex configurations, or when you need to interact with an API like WebPush, InjectManifest is a better option because it allows us far more choices to customize how our service worker behaves.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_Client-Server/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `20-Stu_InjectManifest/README.md`.
 
-### 8. Student Do:  Client-Server Model (15 min)
+### 8. Student Do: InjectManifest (15 min)
 
-* Direct students to the activity instructions found in `20-Stu_Client-Server/README.md`, which are also shown below.
+* Direct students to the activity instructions found in `20-Stu_InjectManifest/README.md`, which are also shown below.
 
 * Break your students into pairs that will work together on this activity.
 
   ```md
-  # 🏗️ Start the Client and Back-End Servers Simultaneously
+  # 📖 Implement InjectManifest to Generate a List of URLs to Add to Existing Service Worker
 
   Work with a partner to implement the following user story:
 
-  * As a developer, I want to be able to start the client and back-end servers simultaneously so that I can test the full application, not just the client.
+  * As a developer, I want to generate a list of URLs to precache and add that precache manifest to an existing service worker file.
 
   ## Acceptance Criteria
 
-  * It is done when I have moved the existing code into a new `client` folder.
+  * It is done when I have imported `injectManifest` class from the `workbox-webpack-plugin` inside the `webpack.config.js` file.
 
-  * It is done when I have created a simple Express server in the `server` folder.
+  * It is done when I have registered a new Workbox service worker inside the `src/index.js` file using the `Workbox` constructor.
 
-  * It is done when I have added a single static HTML route that serves the contents of the `client/dist/index.html` file.
+  * It is done when I have added a new `InjectManifest` plugin to the `plugins` array in `webpack.config.js`.
 
-  * It is done when I have installed the `concurrently` npm package at the root of the project.
+  * It is done when I have specified the `swSrc` properties in the `InjectManifest` constructor in the `plugins` array in `webpack.config.js`.
 
-  * It is done when I have configured the npm scripts in the root `package.json` to run both servers using `concurrently`.
+  ## 📝 Notes
 
-  * It is done when I am able to start the client and the backend server concurrently by running `npm start`.
+  Refer to the documentation:
 
-  ---
+  * [Workbox docs on InjectManifest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin)
 
   ## 💡 Hints
 
-  * `concurrently` can also be configured to shorten npm commands. How can we include this in our solution?
+  * What is the difference between the `GenerateSW` and `InjectManifest` class?
 
-  * Remember to close any other servers that you may have running to free up the needed ports.
+  * What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-  * What is a proxy server?
+  * What are some different methods of matching files that we want to cache? How can we use the `destination` property on the `request` object to our advantage?
 
   Use [Google](https://www.google.com) or another search engine to research this.
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
 
-### 9. Instructor Review: Client-Server Model (10 min)
+### 9. Instructor Review: InjectManifest (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with the client server model? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with using InjectManifest? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `express`
+  * ✔️ `InjectManifest`
 
-  * ✔️ `ports`
+  * ✔️ `swSrc`
 
-  * ✔️ Separate `client` and `server` directories
+* Open `20-Stu_InjectManifest/Solved/client/src/sw.js` in your IDE and explain the following:
 
-* Navigate to `20-Stu_Client-Server` in your terminal and run `npm install && npm run dev`. This will install the dependencies and start the development server.
+  * When we use GenerateSW, a complete service worker is generated for us. When we use InjectManifest, we start by creating our own service worker in the `src` directory. This file was provided for us, but is a great resource to refer to when you want to build a custom service worker using InjectManifest on your own.
 
-  * 🔑 When we run this command, we notice that our terminal beings to start both the client's start command and the backend Express.js server.
+* Open `20-Stu_InjectManifest/Solved/client/webpack.config.js` in your IDE and explain the following:
 
-    ```console
-    concurrently "cd server && npm run server" "cd client && npm run dev"
+  * 🔑 In our config file, we require the InjectManifest class of the workbox webpack plugin.
+
+    ```js
+    const {InjectManifest} = require('workbox-webpack-plugin');
     ```
 
-  * 🔑 We can see that because of our root level `dev` command, we invoke `concurrently` to run both the client and the backend server at the same time.
+  * 🔑 Next, we add InjectManifest last on our list of plugins and make sure to add the service worker source file, or `swSrc`. The `swDest` file provides the the path and filename of the service worker file that is generated during the build.
 
-  * The server is navigated to first, and then the `npm run server` command is invoked. This will start the Express server and listen on port `3000`.
+    ```js
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: 'service-worker.js',
+    }),
+    ```
 
-* Open `20-Stu_Client-Server/Solved/server/server.js` in your IDE to demonstrate the following:
+  * Since we have already installed `workbox-webpack-plugin` as a dependency, that is all we need to do to get our service worker up and running.
 
-  * Notice that the static HTML route is configured to serve the contents of the `client/dist` directory.
+* Navigate to `20-Stu_InjectManifest/Solved` and run `npm install` and `npm run start:dev`.
 
-     ```js
-     const express = require('express');
+  * A log appears in the console indicating with a message similar to the following:
 
-     const app = express();
-     const PORT = process.env.PORT || 3000;
+    ```text
+    The service worker at sw.js will precache
+    7 URLs, totaling 66.9 kB.
+    ```
 
-     app.use(express.static('../client/dist'));
-     app.use(express.urlencoded({ extended: true }));
-     app.use(express.json());
+  * When we navigate to Chrome Dev Tools and click on Applications Tab and select Service Workers, we see our service worker is activated.
 
-     require('./routes/htmlRoutes')(app);
+  * When we click on Cache Storage, we see that our files that have been injected into our existing service worker have been precached.
 
-     app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
-     ```
+* Open `20-Stu_InjectManifest/Solved/client/dist/sw.js` in your IDE to demonstrate the following:
 
-  * 🔑 Remember that the `dist` directory is the output of our webpack build.
-
-  * There is also a single HTML route that serves the contents of the `client/dist/index.html` file.
-
-     ```js
-     module.exports = (app) =>
-       app.get('/', (req, res) =>
-         res.sendFile(path.join(__dirname, '../client/dist/index.html'))
-       );
-     ```
-
-* Open `20-Stu_Client-Server/Solved/package.json` in your IDE to demonstrate the following:
-
-  * Now let's review the other half of our `concurrently` command , `cd client && npm run start`. In this case, the `npm run` command will invoke the `webpack && webpack-serve` command to build the client's application and run a server that watches for changes.
-
-  * The resulting `dist` directory is the output of our webpack build.
-
-  * 🔑 We already set up an Express.js server in the `server` directory, which will serve the static HTML file found in the `client/dist` directory, so we don't need to do anything else.
-
-  * 🔑 **Important:** You may be asking yourself, "Why don't we just run the `npm run dev` command in the `client` directory?" The answer is that the `webpack-dev-server` is meant to be a tool for development, and not a replacement for a production server. Additionally, running two servers with one bash command makes it hard to keep track of different outputs. For example, if one process fails, others still keep running and you won't even notice the difference.
-
-* Run `npm start` from the root of the `Solved` directory and visit `http://localhost:3000` in your browser to demonstrate the final result.
-
-* Notice that our application is now running just as it did before, but now we have the infrastructure to run both the client and the backend server at the same time if we wanted to.
+  * Except for the addition of the manifest, the existing service worker, as well as any custom configurations, are otherwise unchanged.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How does concurrent server/client development work?
+  * ☝️ How does InjectManifest work differently than GenerateSW?
 
-  * 🙋 The idea is that we can run both the client and the backend server at the same time when developing, and when it comes time to deploy, we can run the build command for the client, and then the server command for the backend.
+  * 🙋 GenerateSW offers only a limited number of options. With InjectManifest, we have a number of options to cache assets and can include our own custom scripts and service worker file. In addition, GenerateSW generates an entire service worker during the build process. InjectManifest, in contrast, injects a list of URLS to be cached into an existing service worker.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Open-CLI Docs on concurrently](https://github.com/open-cli-tools/concurrently), and attend Office Hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Workbox docs on InjectManifest](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin) and attend Office Hours to ask for help.
 
 * Answer any questions before proceeding.
 
@@ -616,7 +608,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Remind students that the React unit is on the horizon and that much of what they've learned in this unit can be applied to learning React.
 
-* Today's class will be focused on making our application installable on users' devices!
+* The rest of this class will be focused on making our application installable on users' devices!
 
 * The web applications we create can be configured to act like a native application.
 
@@ -685,7 +677,7 @@ In this class, students will learn how to use the workbox library to cache and s
     });
     ```
 
-  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `creaateObjectStore()` method.
+  * 🔑 Check to see if the user already has the `demo-db` object. If not, create a new one called `demo-db` with the `createObjectStore()` method.
 
   * 🔑 We use the `keyPath` property to specify the name of the key field in the `demo-db` object and set it to auto-increment.
 
@@ -1064,7 +1056,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: Manifest (5 min)
+### 19. Instructor Demo: Manifest (5 min)
 
 * Open `25-Ins_Manifest/manifest.json` in your IDE and explain the following:
 
@@ -1072,144 +1064,121 @@ In this class, students will learn how to use the workbox library to cache and s
 
   * 🔑 For our web application, we have to provide a `name` property inside the `manifest.json` file.
 
-    ```json
-    {
-      "short_name": "Manifest",
-      "name": "TODOs Manifest Example",
-    }
-    ```
-
   * We can optionally provide a `short_name` for our web application.
+
+    ```json
+    "short_name": "Manifest",
+    "name": "TODOs Manifest Example",
+    ```
 
   * 🔑 Next, we provide our `icons` for all different types of screens.
 
     ```json
-    {
-      "short_name": "Manifest",
-      "name": "TODOs Manifest Example",
-      "icons": [
-        {
-          "src": "/assets/images/icon_96x96.png",
-          "type": "image/png",
-          "sizes": "96x96",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_128x128.png",
-          "type": "image/png",
-          "sizes": "128x128",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_192x192.png",
-          "type": "image/png",
-          "sizes": "192x192",
-          "purpose": "any maskable"
-        },
-        {
-          "src": "/assets/images/icon_512x512.png",
-          "type": "image/png",
-          "sizes": "512x512",
-          "purpose": "any maskable"
-        }
-      ],
-    }
-    ```
-
-  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application.
-
-  * Let's finish the `manifest.json` file by adding a `description` and a few other properties.
-
-    ```json
-    {
-    "short_name": "Manifest",
-    "name": "TODOs Manifest Example",
     "icons": [
       {
-        "src": "/assets/images/icon_96x96.png",
+        "src": "./assets/images/icon_96x96.png",
         "type": "image/png",
         "sizes": "96x96",
         "purpose": "any maskable"
       },
       {
-        "src": "/assets/images/icon_128x128.png",
+        "src": "./assets/images/icon_128x128.png",
         "type": "image/png",
         "sizes": "128x128",
         "purpose": "any maskable"
       },
       {
-        "src": "/assets/images/icon_192x192.png",
+        "src": "./assets/images/icon_192x192.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "any maskable"
       },
       {
-        "src": "/assets/images/icon_512x512.png",
+        "src": "./assets/images/icon_512x512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable"
       }
     ],
+    ```
+
+  * 🔑 We have to provide an image that is 512px large so that our `manifest.json` file can create a loading screen for our application. We must have this icon for our app to be installable!
+
+  * 🔑 The`orientation` allows us to define which angle our application is viewed in, while the  `display` property allows us to define preferred display mode.
+
+    ```json
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "/",
+    ```
+
+  * 🔑 Next, we define the where we want our applications starting URL.
+
+    ```json
+    "start_url": "./",
+    ```
+
+  * 🔑 Finally, we give our application a description and some styling for the boarders of our application.
+
+    ```json
     "description": "Keep track of important tasks!",
     "background_color": "#7eb4e2",
     "theme_color": "#7eb4e2"
-    }
     ```
-
-  * 🔑 Here, we provide a `start_url` for our web application and some styling with the `theme_color` and `background_color`.
 
 * Open `25-Ins_Manifest/assets/js/install.js` in your IDE and explain the following:
 
-  * 🔑 When we launch the application in our browser, we will see an install button inside of the address bar.
+  * 🔑 When we launch the application in our browser and our app is installable, we will see an install button inside of the address bar.
 
   * 🔑 We also can create our own install button, using the following:
 
     ```js
-    const installBtn = document.getElementById("installBtn");
+    const installBtn = document.getElementById('installBtn');
+    const textHeader = document.getElementById('textHeader');
 
     window.addEventListener('beforeinstallprompt', (event) => {
-        console.log('👍', 'beforeinstallprompt', event);
-        // Store the event so it can be used later.
-        window.deferredPrompt = event;
-        // Remove the 'hidden' class from the install anchor tag.
-        installBtn.classList.toggle('hidden', false);
-      });
+      event.preventDefault();
+      installBtn.style.visibility = 'visible';
+      textHeader.textContent = 'Click the button to install!';
 
-    installBtn.addEventListener('click', async () => {
-      console.log('👍', 'installBtn-clicked');
-      const promptEvent = window.deferredPrompt;
-      if (!promptEvent) {
-      return;
-      }
-      // Show the install prompt.
-      promptEvent.prompt();
-      // Show the result
-      const result = await promptEvent.userChoice;
-      console.log('👍', 'userChoice', result);
-      // Reset the deferred prompt variable, prompt() can only be used once.
-      window.deferredPrompt = null;
-      installBtn.classList.toggle('hidden', true);
+      installBtn.addEventListener('click', () => {
+        event.prompt();
+        installBtn.setAttribute('disabled', true);
+        installBtn.textContent = 'Installed!';
+      });
     });
 
     window.addEventListener('appinstalled', (event) => {
+      textHeader.textContent = 'Successfully installed!';
       console.log('👍', 'appinstalled', event);
-      // Clear the prompt
-      window.deferredPrompt = null;
     });
     ```
 
-  * We have connected our `<a>` tag to now launch the installation prompt.
-
 * Open `25-Ins_Manifest/service-worker.js` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, you need a service worker in place. Here, we have just created a simple service worker that caches the assets.
+  * 🔑 For the `manifest.json` file to work, we need to have, at the minimum, a service worker that registers, has scope, and has a fetch method in place.
+
+    ```js
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+    this.addEventListener('fetch', function (event) {
+      // This fetch function is required for the SW to be detected and is intentionally empty
+      // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
+    });
+    ```
 
 * Open `25-Ins_Manifest/index.html` in your IDE and explain the following:
 
-  * 🔑 For the `manifest.json` file to work, we need to import it into our `index.html` file.
+  * 🔑 For the `manifest.json` file to work, we also need to import it into our `index.html` file.
 
     ```html
     <link rel="manifest" href="./manifest.json">
@@ -1217,9 +1186,13 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Open `25-Ins_Manifest/index.html` with Live Server and demonstrate the following:
 
-  * Click the install button in the address bar.
+  * Click the button that states "Click Me to Install!" on the webpage.
 
-  * Click the Install! button on the webpage.
+* Navigate to your computer's Launchpad (Mac) or Desktop (Windows) to demonstrate the following:
+
+  * The app is installed and the icon appears.
+
+  * When we click on the icon, the app launches.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
