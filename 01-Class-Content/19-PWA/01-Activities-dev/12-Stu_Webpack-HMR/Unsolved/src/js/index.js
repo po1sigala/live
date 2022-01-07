@@ -7,3 +7,5 @@ document.getElementById('boxBtn').addEventListener('click', boxClick);
 document.getElementById('headerBtn').addEventListener('click', headerClick);
 
 document.getElementById('box').src = Yellow;
+
+//TODO: Add logic for Hot Module Reloading

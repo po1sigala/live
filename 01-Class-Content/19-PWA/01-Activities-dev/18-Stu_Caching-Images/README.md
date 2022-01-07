@@ -1,8 +1,8 @@
-# 🐛 Images Are Not Being Cached Properly
+# 🐛 Images Are Not Using a Runtime Caching Strategy
 
 Work with a partner to resolve the following issue:
 
-* As a developer, I want to be able use runtime caching so that my images are cached as they are used. 
+* As a developer, I want to be able use runtime caching so that my images are cached as they are used and not automatically precached. 
 
 ## Expected Behavior
 
@@ -10,7 +10,7 @@ Images should not only be cached as they are used and not precached. In addition
 
 ## Actual Behavior
 
-All images are precached. 
+All images are precached when the service worker is loaded.  
 
 ## Steps to Reproduce the Problem
 

@@ -18,6 +18,7 @@ module.exports = {
       title: 'Webpack Plugin',
     }),
     new MiniCssExtractPlugin(),
+    // TODO: Add parameters to GenerateSW class to configure runtime caching
     new WorkboxPlugin.GenerateSW()
   ],
   module: {
