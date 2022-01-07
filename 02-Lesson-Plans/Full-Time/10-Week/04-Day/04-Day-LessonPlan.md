@@ -1639,7 +1639,7 @@ In this lesson, you'll review some important React concepts with students to hel
     };
     ```
 
-  * The `handleFormSubmit()` method is also passed down to the `SeachForm` component as a prop of the same name, `handleFormSubmit`:
+  * The `handleFormSubmit()` method is also passed down to the `SearchForm` component as a prop of the same name, `handleFormSubmit`:
 
     ```js
     <SearchForm
