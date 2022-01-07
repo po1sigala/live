@@ -277,7 +277,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
 
-  *  Next, if we open the `App.js` file, we can see that we are passing the list of groceries to the `List` component as a prop. `List` is a child component of `App`:
+  * Next, if we open the `App.js` file, we can see that we are passing the list of groceries to the `List` component as a prop. `List` is a child component of `App`:
 
     ```js
     function App() {
@@ -1486,9 +1486,9 @@ In this lesson, you'll review some important React concepts with students to hel
 
   4. This project uses Bootstrap, so don't forget to import it inside `index.js`:
 
-     ```js
-     import 'bootstrap/dist/css/bootstrap.min.css';
-     ```
+      ```js
+      import 'bootstrap/dist/css/bootstrap.min.css';
+      ```
 
   ## Activity
 
@@ -1497,7 +1497,7 @@ In this lesson, you'll review some important React concepts with students to hel
   * As a user, I want to be able to search for the name of a movie using a form on the right and then see the related information on the left.
 
   ## Expected Behavior
-  
+
   * When a user visits the page, the result for "The Matrix" should display on the left side of the page.
 
   * When the user types the name of a movie into the input field, the search term should appear in the field as the user types it.
@@ -1543,24 +1543,24 @@ In this lesson, you'll review some important React concepts with students to hel
 
 * Ensure that `axios` is added as a dependency:
 
-   ```sh
-   npm i axios
-   ```
+  ```sh
+  npm i axios
+  ```
 
 * Open `00-practice-app/src/App.js` in your IDE and explain the following:
 
   * In `App.js`, we are importing and returning another component called `OmdbContainer`:
 
-     ```js
-     import React from "react";
-     import OmdbContainer from "./components/OmdbContainer";
+    ```js
+    import React from "react";
+    import OmdbContainer from "./components/OmdbContainer";
 
-     function App() {
-       return <OmdbContainer />;
-     }
+    function App() {
+      return <OmdbContainer />;
+    }
 
-     export default App;
-     ```
+    export default App;
+    ```
 
 * Open `00-practice-app/src/components/OmdbContainer.js` in your IDE and explain the following:
 
