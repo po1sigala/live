@@ -3,7 +3,7 @@ import CardBody from './CardBody';
 
 export default function Counter() {
   // Here we set the state for count and also create a function to update it.
-  // Set set the initial value to -
+  // Set the initial value to -
   const [count, setCount] = useState(0);
 
   // Helper function to handle when the user clicks increment
