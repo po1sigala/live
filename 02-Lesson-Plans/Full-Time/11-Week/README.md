@@ -14,8 +14,6 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
 * Some activities in Unit 21 rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
 
 * For a refresher on how to use the GraphQL Playground, see the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
@@ -54,49 +52,49 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 ### Lesson Plans
 
-  * [11.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
+* [11.1 Lesson Plan](./01-Day/01-Day-LessonPlan.md)
 
-  * [11.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
+* [11.2 Lesson Plan](./02-Day/02-Day-LessonPlan.md)
 
-  * [11.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
+* [11.3 Lesson Plan](./03-Day/03-Day-LessonPlan.md)
 
-  * [11.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
+* [11.4 Lesson Plan](./04-Day/04-Day-LessonPlan.md)
 
-  * [11.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
+* [11.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
 ### Homework
 
-  * [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
+* [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
 
-  * [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
+* [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
 
 ### Slide Decks
 
-  * [Unit 21: MERN](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
+* [Unit 21: MERN](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
 
-  * [Unit 22: State](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing)
+* [Unit 22: State](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing)
 
 ### Algorithms
 
 Unit 21:
 
-  * [01: Plus One](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
+* [01: Plus One](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
 
-  * [02: One Edit Away](../../../01-Class-Content/21-MERN/03-Algorithms/02-one-edit-away)
+* [02: One Edit Away](../../../01-Class-Content/21-MERN/03-Algorithms/02-one-edit-away)
 
-  * [03: Caesar Cipher](../../../01-Class-Content/21-MERN/03-Algorithms/03-caesar-cipher)
+* [03: Caesar Cipher](../../../01-Class-Content/21-MERN/03-Algorithms/03-caesar-cipher)
 
-    * 📹 [Let's Code Caesar Cipher!](https://2u-20.wistia.com/medias/bcfetr7mvf)
+  * 📹 [Let's Code Caesar Cipher!](https://2u-20.wistia.com/medias/bcfetr7mvf)
 
 Unit 22:
 
-  * [01: Roman Numeral to Int](../../../01-Class-Content/22-State/03-Algorithms/01-roman-to-int)
+* [01: Roman Numeral to Int](../../../01-Class-Content/22-State/03-Algorithms/01-roman-to-int)
 
-  * [02: Rotation Point](../../../01-Class-Content/22-State/03-Algorithms/02-rotation-point)
+* [02: Rotation Point](../../../01-Class-Content/22-State/03-Algorithms/02-rotation-point)
 
-    * 📹 [Let's Code Rotation Point!](https://2u-20.wistia.com/medias/92nkaslwg8)
+  * 📹 [Let's Code Rotation Point!](https://2u-20.wistia.com/medias/92nkaslwg8)
 
-  * [03: Simplify Path](../../../01-Class-Content/22-State/03-Algorithms/03-simplify-path)
+* [03: Simplify Path](../../../01-Class-Content/22-State/03-Algorithms/03-simplify-path)
 
 ### Resources
 
@@ -118,7 +116,7 @@ Unit 22:
 
 * [Apollo Docs on fetching data with queries](https://www.apollographql.com/docs/tutorial/queries/)
 
-* [React Router quick start guide](https://reactrouter.com/web/guides/quick-start)
+* [React Router quick start guide](https://reactrouter.com/docs/en/v6/getting-started/overview#overview)
 
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction)
 
