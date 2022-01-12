@@ -1,6 +1,6 @@
 # Unit 21 Mini-Project: Tech Matchup App
 
-In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Switch>` component in the routes.
+In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Route>` component in the routes.
 
 ## User Stories
 
@@ -38,7 +38,7 @@ The mini-project is complete when the following criteria are met:
 
 * After implementing GraphQL on the server, what tool can you use to test the queries and mutations?
 
-* How can we use `<Switch>` to render the `NotFound` page?
+* How can we use `<Route>` to render the `NotFound` page?
 
 ## 🏆 Bonus
 

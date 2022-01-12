@@ -20,9 +20,15 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
               {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
-              <Route path="/thoughts/:thoughtId" element={<SingleThought />} />
+              <Route 
+                path="/thoughts/:thoughtId" 
+                element={<SingleThought />} 
+              />
             </Routes>
           </div>
           <Footer />

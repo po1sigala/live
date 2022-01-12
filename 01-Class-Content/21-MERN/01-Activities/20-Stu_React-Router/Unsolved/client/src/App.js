@@ -20,7 +20,10 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
               {/* TODO: Add code here that creates a route for displaying a single thought's comments */}
             </Routes>
           </div>

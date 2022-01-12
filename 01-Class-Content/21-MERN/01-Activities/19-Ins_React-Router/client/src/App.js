@@ -20,13 +20,19 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            {/* Wrap Route elements in Routes component */}
+            {/* Wrap Route elements in a Routes component */}
             <Routes>
               {/* Define routes using the Route component to render different page components at different paths */}
               {/* Define a default route that will render the Home component */}
-              <Route path="/" element={<Home />} />
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
               {/* Define a route that will take in variable data */}
-              <Route path="/profiles/:profileId" element={<Profile />} />
+              <Route 
+                path="/profiles/:profileId" 
+                element={<Profile />} 
+              />
             </Routes>
           </div>
           <Footer />
