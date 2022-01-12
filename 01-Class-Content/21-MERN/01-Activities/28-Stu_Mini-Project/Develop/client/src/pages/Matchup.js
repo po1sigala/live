@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getAllTech, createMatchup } from '../utils/api';
 
 const Matchup = () => {
@@ -8,7 +8,7 @@ const Matchup = () => {
     tech1: 'JavaScript',
     tech2: 'JavaScript',
   });
-  let history = useHistory();
+  let navigate = useNavigate();
 
   useEffect(() => {
     const getTechList = async () => {
@@ -43,7 +43,7 @@ const Matchup = () => {
 
       const matchup = await res.json();
       console.log(matchup);
-      history.push(`/matchup/${matchup._id}`);
+      navigate(`/matchup/${matchup._id}`);
     } catch (err) {
       console.error(err);
     }

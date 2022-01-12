@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_TECH } from '../utils/queries';
 import { CREATE_MATCHUP } from '../utils/mutations';
@@ -13,7 +13,7 @@ const Matchup = () => {
     tech1: 'JavaScript',
     tech2: 'JavaScript',
   });
-  let history = useHistory();
+  let navigate = useNavigate();
 
   const [createMatchup, { error }] = useMutation(CREATE_MATCHUP);
 
@@ -30,7 +30,7 @@ const Matchup = () => {
         variables: { ...formData },
       });
 
-      history.push(`/matchup/${data.createMatchup._id}`);
+      navigate(`/matchup/${data.createMatchup._id}`);
     } catch (err) {
       console.error(err);
     }
