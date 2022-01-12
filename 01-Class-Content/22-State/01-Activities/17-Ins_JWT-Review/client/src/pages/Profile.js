@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import SkillsList from '../components/SkillsList';
@@ -26,7 +26,7 @@ const Profile = () => {
 
   // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-    return <Redirect to="/me" />;
+    return <Navigate to="/me" />;
   }
 
   if (loading) {
