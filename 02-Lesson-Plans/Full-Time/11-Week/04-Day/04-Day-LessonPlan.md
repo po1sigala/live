@@ -781,9 +781,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ path
+  * ✔️ path attribute
 
-  * ✔️ Element attribute
+  * ✔️ element attribute
 
   * ✔️ Apollo Hooks
 
