@@ -1,6 +1,6 @@
 # 11.1 Full-Time Lesson Plan: GraphQL and MERN
 
-## Overview 
+## Overview
 
 This class covers GraphQL, including using the Apollo Server to set up `typeDefs` and `resolvers`, making queries and using mutations, and using the GraphQL Playground. The three-layer MERN architecture, setting up a MERN application and the `useQuery` hook are also discussed.
 
@@ -98,7 +98,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * **The Database Layer: MongoDB**: MongoDB is a general purpose, document-based, distributed NoSQL database. The database layer is used to store all the data needed for your application to function. MongoDB stores JSON natively (technically BSON) making it work easily with JavaScript apps.
 
-* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `28-Stu_Mini-Project/Main` and run `npm install`, `npm run seed`, and `npm run develop`. Be sure to have a MongoDB instance running! 
+* After you run through the slides, preview the mini-project for the class. In the command line, navigate to `28-Stu_Mini-Project/Main` and run `npm install`, `npm run seed`, and `npm run develop`. Be sure to have a MongoDB instance running!
 
 * Open `http://localhost:3000/` to demonstrate the following:
 
@@ -111,7 +111,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * The **server layer** listens for events triggered by the client. For example, when we vote or select a pair of technologies to create a matchup using the user interface, the server layer responds to that event by executing a function to save the user generated data in the database.
 
   * The server layer can also retrieve data from the **database layer**.
-  
+
   * When we click on View All Matchups, the server layer executes a method to retrieve the requested data from the database layer. The populated list of matchups is displayed to the user.
 
   * This three-layer architecture makes it easier to store, manipulate, and represent data. This makes the MERN stack an ideal solution for highly interactive apps and those that require data to be fetched quickly and easily.
@@ -134,7 +134,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 2. Instructor Demo: Apollo Server (5 min) 
+### 2. Instructor Demo: Apollo Server (5 min)
 
 * Navigate to `01-Ins_Apollo_Server` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
@@ -147,7 +147,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * 🔑 **GraphQL** is a query language that allows us to build even complex queries quickly and concisely, helping to make sure our queries fetch data -- and only the data we need -- quickly.
 
   * The GraphQL Playground is a great way to to visually explore how GraphQL can be used to request and fetch data.
-  
+
   * 🔑 In the GraphQL playground, we can enter a query to retrieve data from our database. This query will return the names of all the classes in our database:
 
      ```gql
@@ -187,7 +187,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      });
      ```
 
-  * We call the `.appleMiddleware()` method to integrate Express.js with the Apollo Server and connect the schema. This will enable our app to use GraphQL:
+  * We call the `.applyMiddleware()` method to integrate Express.js with the Apollo Server and connect the schema. This will enable our app to use GraphQL:
 
      ```js
      server.applyMiddleware({ app });
@@ -203,7 +203,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
 
-### 3. Student Do: Apollo Server (15 min) 
+### 3. Student Do: Apollo Server (15 min)
 
 * Direct students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
 
@@ -234,7 +234,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      5. To launch the GraphQL Playground, open <localhost:3001/graphql> in the browser.
 
-     Refer to the documentation: 
+     Refer to the documentation:
 
      * [Apollo Docs on getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/)
 
@@ -246,14 +246,14 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-     * What are the pros and cons of GraphQL vs. REST? 
+     * What are the pros and cons of GraphQL vs. REST?
 
      Use [Google](https://www.google.com) or another search engine to research this.
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 4. Instructor Review: Apollo Server (10 min) 
+### 4. Instructor Review: Apollo Server (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -275,7 +275,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `resolvers`
 
-* Open `02-Stu_Apollo-Server/Solved/server.js` in your IDE and explain the following: 
+* Open `02-Stu_Apollo-Server/Solved/server.js` in your IDE and explain the following:
 
   * 🔑 Apollo Server is a library that we use with an existing Express.js server. We require the `apollo-server-express` dependency and import the `ApolloServer` class:
 
@@ -305,7 +305,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      ```
 
 * Open `02-Stu_Apollo-Server/Solved/schemas/typeDefs.js` in your IDE and explain the following:
-  
+
   * 🔑 We use `typeDefs` to define our schema and the types it contains.
 
   * Most defined types are objects. Each object holds a collection of fields that describes the data. The `Class` object will have fields for an id, name, and building as well as the credit hours for the course:
@@ -341,12 +341,12 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        }
      };
      ```
- 
+
 * We will use the GraphQL Playground to explore queries, typeDefs, and resolvers in greater depth in the next activities.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use Apollo Server to integrate GraphQL into our app? 
+  * ☝️ How do we use Apollo Server to integrate GraphQL into our app?
 
   * 🙋 Apollo Server is a GraphQL server that helps you connect a GraphQL schema to a HTTPS server such as Express.js. To use GraphQL in our app, we must update Express.js to use Apollo Server and connect a schema that defines our data and how that data should be handled.
 
@@ -356,7 +356,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 5. Instructor Demo: Queries (5 min) 
+### 5. Instructor Demo: Queries (5 min)
 
 * Navigate to `03-Ins_Queries` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
@@ -425,7 +425,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `04-Stu_Queries/README.md`.
 
-### 6. Student Do: Queries (15 min) 
+### 6. Student Do: Queries (15 min)
 
 * Direct students to the activity instructions found in `04-Stu_Queries/README.md`.
 
@@ -468,7 +468,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-     * What other GraphQL IDEs can you use besides the built-in Playground? 
+     * What other GraphQL IDEs can you use besides the built-in Playground?
 
      Use [Google](https://www.google.com) or another search engine to research this.
 
@@ -478,7 +478,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 7. Instructor Review: Queries (10 min) 
+### 7. Instructor Review: Queries (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -494,7 +494,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ Query type
 
-* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
 
   * 🔑 GraphQL uses types and fields to organize data. We open the `schema` app to view the entry points for our data as well as the fields contained in each object. These will be used to write our queries.
 
@@ -509,7 +509,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
          officeHours
          officeLocation
        }
-     } 
+     }
      ```
 
   * 🔑 We can also write more complex queries. When we inspect the `Class` object, we see that it contains a queryable field that can retrieve a single `Professor` object. This makes it easy to access the `Professor` data and `Class` data by using a single query:
@@ -575,7 +575,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use schemas to help us write our queries? 
+  * ☝️ How do we use schemas to help us write our queries?
 
   * 🙋 The schema defines the data objects and the entry points to access that data. When we write a query, we start with the entry point used to access the data and then list the fields from our data object that contains the data we need.
 
@@ -585,14 +585,14 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 8. Instructor Demo: typeDefs and Resolvers (5 min) 
+### 8. Instructor Demo: typeDefs and Resolvers (5 min)
 
 * Open `05-Ins_TypeDefs-Resolvers/schemas/typeDefs.js` in your IDE and demonstrate the following:
 
   * 🔑 For our queries to work, we must define our types to provide access to the data that we will need.
 
   * 🔑 Each object contains a collection of related fields that return a particular type of data. These fields determine what data can be accessed from the database and provide a shape to our data.
-  
+
   * The `Professor` object contains fields that will return data containing  `name`, `id`, `officeHours`, `officelocation`, and `studentScore` data. These fields should match how the data in your database is structured:
 
      ```js
@@ -679,7 +679,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `06-Stu_TypeDefs-Resolvers/README.md`.
 
-### 9. Student Do: typeDefs and Resolvers (15 min) 
+### 9. Student Do: typeDefs and Resolvers (15 min)
 
 * Direct students to the activity instructions found in `06-Stu_TypeDefs-Resolvers/README.md`.
 
@@ -731,7 +731,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 10. Instructor Review: typeDefs and Resolvers (10 min) 
+### 10. Instructor Review: typeDefs and Resolvers (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -747,7 +747,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `populate()`
 
-* Open `06-Stu_TypeDefs-Resolvers/Solved/schemas/typeDefs.js` in your IDE and explain the following: 
+* Open `06-Stu_TypeDefs-Resolvers/Solved/schemas/typeDefs.js` in your IDE and explain the following:
 
   * 🔑 The `Professor` object contains a queryable field that returns an array of `Class` objects:
 
@@ -760,7 +760,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        studentScore: Float
        classes: [Class]
      ```
-  
+
   * 🔑 To access the array of `Professor` objects, we use the `professors` entry point:
 
      ```js
@@ -801,16 +801,16 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
          name
          classes {
            name
-         }  
-       }  
+         }
+       }
      }
      ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ Why do we need to write resolvers to query our data? 
+  * ☝️ Why do we need to write resolvers to query our data?
 
-  * 🙋 Resolvers are the functions that determine how the data fields are populated. Without resolvers, we wouldn't have any data to work with! 
+  * 🙋 Resolvers are the functions that determine how the data fields are populated. Without resolvers, we wouldn't have any data to work with!
 
   * ☝️ What can we do if we don't completely understand this?
 
@@ -818,7 +818,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 11. Instructor Demo: Query Arguments (5 min) 
+### 11. Instructor Demo: Query Arguments (5 min)
 
 * Navigate to `07-Ins_Query-Arguments` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
@@ -833,7 +833,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        classes {
        _id
        }
-     }  
+     }
      ```
 
   * Often, though, we want to query a more specific result like a single class.
@@ -877,7 +877,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * We start by requiring our variable and setting the data type of the variable to the required type. For an id, it is the ID type. We also want to make sure that we only run the query if the variable is not null, so we add the exclamation point:
 
      ```gql
-     query classVariable($id: ID!) 
+     query classVariable($id: ID!)
      ```
 
   * We then use the `class` entry point, and assign the `id` a value as we did before. In this case, we set the value of `id` to be the value held in the variable.
@@ -930,7 +930,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      ## 📝 Notes
 
-     Refer to the documentation: 
+     Refer to the documentation:
 
      [Apollo Docs on handling arguments](https://www.apollographql.com/docs/apollo-server/data/resolvers/#handling-arguments)
 
@@ -956,7 +956,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 ### 13. BREAK (30 min)
 
-### 14. Instructor Review: Query Arguments (10 min) 
+### 14. Instructor Review: Query Arguments (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -972,7 +972,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `populate()`
 
-* Open `08-Stu_Query-Arguments/Solved/schemas/resolvers.js` in your IDE and explain the following: 
+* Open `08-Stu_Query-Arguments/Solved/schemas/resolvers.js` in your IDE and explain the following:
 
   * When we use a query with arguments, we create an object that holds the information we need to pass to our resolver.
 
@@ -998,7 +998,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Navigate to `08-Stu_Query-Arguments/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
-* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
 
   * 🔑 We use the `classes` entry point to query all the `Class` objects using the field `name` and `_id`. This will give us a list of the the names and ids for all of the classes:
 
@@ -1040,11 +1040,11 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How can we get more specific results using arguments? 
+  * ☝️ How can we get more specific results using arguments?
 
   * 🙋 Arguments allow us to query for more specific data by passing information from our query to our resolver. For example, we can search for a specific `id` by passing the information about that `id` to the resolver, which then can use that information to search the database for that specific object using that data.
 
-  * ☝️ Why use variables in our queries? 
+  * ☝️ Why use variables in our queries?
 
   * 🙋 Variables allow us to make our queries more durable. For example, by using a variable when searching by id, we only had to change the value of the variable to search for another object. If we didn't have variables, we would have to write a whole new query.
 
@@ -1054,7 +1054,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 15. Instructor Demo: Mutations (5 min) 
+### 15. Instructor Demo: Mutations (5 min)
 
 * Open `09-schemas/typeDefs.js` in your IDE and explain the following:
 
@@ -1096,7 +1096,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `10-Stu_Mutations/README.md`.
 
-### 16. Student Do: Mutations (15 min) 
+### 16. Student Do: Mutations (15 min)
 
 * Direct students to the activity instructions found in `10-Stu_Mutations/README.md`.
 
@@ -1155,7 +1155,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-     * What tools will you need to run GraphQL queries in your own front end? 
+     * What tools will you need to run GraphQL queries in your own front end?
 
      Use [Google](https://www.google.com) or another search engine to research this.
 
@@ -1179,7 +1179,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `{new: true}`
 
-* Open `10-Stu_Mutations/Solved/schemas/resolvers.js` in your IDE and explain the following: 
+* Open `10-Stu_Mutations/Solved/schemas/resolvers.js` in your IDE and explain the following:
 
   * When your mutation is not working as expected, a great place to look is the resolver.
 
@@ -1203,7 +1203,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      ```js
      return await Class.findOneAndUpdate(
-       { _id: id }, 
+       { _id: id },
        { building },
      }
      ```
@@ -1216,7 +1216,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Navigate to `10-Stu_Mutations/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
-* Open `localhost:3001/graphql` in your browser and demonstrate the following: 
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
 
   * 🔑 We test if our resolver is now working by using an existing `Class` object id and adding the the provided test object to the Query Variable editor:
 
@@ -1242,7 +1242,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How can we use mutations to create and update data? 
+  * ☝️ How can we use mutations to create and update data?
 
   * 🙋 We use the mutation type to define the entry point for the object we want to write or update. We write a mutation resolver that performs the task of creating or updating the data.
 
@@ -1255,7 +1255,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 * Ask the class the following questions (☝️):
 
   * ☝ What exactly is an `API`?
-  
+
 * Encourage students to respond with their own thoughts and observations and let them know they are on the right track.
 
 * Explain that, as developers, it is important to be able to define what an API, or Application Programming Interface, is and how it is used to handle data in the context of our applications.
@@ -1271,7 +1271,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * When we click on the `schema` tab, we see a set of instructions. APIs use instructions to define the shape of the data that can be requested and the functions that will be executed when requests are made.
 
   * We can also make a request for specific data by writing a query. Once a request is made, the API executes the function needed to handle the request. The requested data is then returned as a JSON object:
- 
+
      ```gql
      query allProfiles {
        profiles {
@@ -1279,10 +1279,10 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
         name
         skills
        }
-     } 
+     }
      ```
 
-* Open the [illustration of MERN three-layer architecture in the Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g9aa02552a2_0_6) and explain the following: 
+* Open the [illustration of MERN three-layer architecture in the Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g9aa02552a2_0_6) and explain the following:
 
   * In a MERN app, requests are sent to the API from the client.
 
@@ -1292,7 +1292,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Remind that students while there is a lot to cover today, by the end of the class they will have all the steps needed to start building a full-stack MERN app on their own.
 
-### 19. Instructor Demo: MERN Setup (5 min) 
+### 19. Instructor Demo: MERN Setup (5 min)
 
 * Navigate to `11-Ins_MERN-Setup` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
 
@@ -1317,15 +1317,15 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 * Open `11-Ins_MERN-Setup/package.json` in your IDE to demonstrate the following:
 
   * 🔑 The root-level `package.json` belongs to this third app. We install `concurrently` as a development dependency at the root level so that we can run multiple commands at the same time during development. The installed dependency appears in `package.json`:
-  
+
      ```js
      "devDependencies": {
        "concurrently": "^5.1.0"
-     } 
-     ``` 
-  
+     }
+     ```
+
   * 🔑 We then add the scripts needed to start up both apps using a single terminal:
-    
+
      ```js
       "scripts": {
        "start": "node server/server.js",
@@ -1343,14 +1343,14 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * To do this, we will use a proxy to handle requests and update them to include the URL location of our back end.
 
   * We add a `proxy` field to the client's `package.json` and add the URL of our back end as the value. Now, while in development, requests will be prefixed by `"http://localhost:3001"` to allow them to be received by the API.
-  
+
      ```json
      "proxy": "http://localhost:3001"`
      ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How does our front end and back end communicate when running on separate ports? 
+  * ☝️ How does our front end and back end communicate when running on separate ports?
 
   * 🙋 In the client directory's `package.json` we add a proxy that identifies the port where the server is running. This allows the front end (or client) to send requests to the API, which is the back end (or the server).  We can then use the npm package `concurrently` to start up both the front end and back end during development, using `npm run develop`.
 
@@ -1358,7 +1358,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
 
-### 20. Student Do: MERN Setup (15 min) 
+### 20. Student Do: MERN Setup (15 min)
 
 * Direct students to the activity instructions found in `12-Stu_MERN-Setup/README.md`.
 
@@ -1371,7 +1371,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
    ## 📝 Notes
 
-   Refer to the documentation: 
+   Refer to the documentation:
 
    [Create React App Docs on proxying API requests](https://create-react-app.dev/docs/proxying-api-requests-in-development)
 
@@ -1390,7 +1390,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 21. Instructor Review: MERN Setup (10 min) 
+### 21. Instructor Review: MERN Setup (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1406,13 +1406,13 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `install`
 
-  * ✔️ `seed` 
+  * ✔️ `seed`
 
-  * ✔️ `develop` 
+  * ✔️ `develop`
 
   * ✔️ `../client/build'`
 
-* Open `12-MERN-Setup/Solved/client/package.json` in your IDE and explain the following: 
+* Open `12-MERN-Setup/Solved/client/package.json` in your IDE and explain the following:
 
   *  The `client` directory contains all the code needed to run our React.js front end.
 
@@ -1422,7 +1422,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      "proxy": "http://localhost:3001"
      ```
 
-* Open `12-MERN-Setup/Solved/package.json` in your IDE and explain the following: 
+* Open `12-MERN-Setup/Solved/package.json` in your IDE and explain the following:
 
   * At the root of our project folder, we have a third app that contains a `package.json`.
 
@@ -1470,7 +1470,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How can we use this boilerplate app when developing our own MERN full-stack apps? 
+  * ☝️ How can we use this boilerplate app when developing our own MERN full-stack apps?
 
   * 🙋 This app has the code needed to connect our front end and back end in both development and production for any MERN app. This makes it a great resource to refer to when building our own MERN apps.
 
@@ -1480,7 +1480,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Answer any questions before proceeding to the next activity.
 
-### 22. Instructor Demo: useQuery (5 min) 
+### 22. Instructor Demo: useQuery (5 min)
 
 * Navigate to `13-Ins_useQuery` in your command line and run `npm install`, `npm run seed` and `npm run develop`.
 
@@ -1490,7 +1490,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * Each time this page loads, the client sends a request to the API. The returned data is then displayed on the page, allowing us to see the roster.
 
-* Open `13-Ins_useQuery/client/src/App.js` in your IDE and demonstrate the following: 
+* Open `13-Ins_useQuery/client/src/App.js` in your IDE and demonstrate the following:
 
   * To set up our React.js front end to be able to send requests, we need to use one more tool.
 
@@ -1510,7 +1510,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        cache: new InMemoryCache()
      });
      ```
-    
+
   * 🔑 To access the `ApolloClient` instance from anywhere in your component tree, we use the `ApolloProvider` component to wrap our React.js app:
 
      ```js
@@ -1524,10 +1524,10 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        </div>
      </ApolloProvider>
      ```
-  
+
   * Now, our Apollo Client is set up and we are ready to write a query and start sending requests.
 
-* Open `13-Ins_useQuery/client/src/utils/queries,js` in your IDE and demonstrate the following: 
+* Open `13-Ins_useQuery/client/src/utils/queries,js` in your IDE and demonstrate the following:
 
   * 🔑 We write a query that uses the `profile` entry point and return values for the `_id`, `name`, and `skills` fields. It is important that these values match a type defined in our GraphQL API schema exactly. Otherwise, the query will not work:
 
@@ -1540,7 +1540,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        }
      }
      ```
-  
+
   * 🔑 For our query to execute, it must be contained in a `gql` function. We import the functionality from `apollo/client` at the top of the page:
 
      ```js
@@ -1561,7 +1561,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      `;
      ```
 
-* 🔑 Open `13-Ins_useQuery/client/src/pages/Home.js` in your IDE and demonstrate the following: 
+* 🔑 Open `13-Ins_useQuery/client/src/pages/Home.js` in your IDE and demonstrate the following:
 
   * We import the query into the component where we want our data to be displayed:
 
@@ -1582,11 +1582,11 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      ```
 
   * We can then store the returned data in a variable so we can display the information on our page:
-  
+
      ```js
      const profiles = data?.profiles || [];
      ...
- 
+
      <ProfileList
        profiles={profiles}
        title="Here's the current roster of friends..."
@@ -1595,19 +1595,19 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ What is Apollo Client? 
+  * ☝️ What is Apollo Client?
 
   * 🙋  Apollo Client is a powerful library allows us to request data from our API and handles the whole request cycle.
 
   * ☝️ What can we do with Apollo Client?
 
   * 🙋  Using Apollo Client, we can easily execute a query and use the returned data to populate our page in a few lines of code.
-  
+
 * Answer any questions before proceeding to the next activity.
 
 * In preparation for the activity, ask TAs to start directing students to the activity instructions found in `14-Stu_useQuery/README.md`.
 
-### 23. Student Do: useQuery (15 min) 
+### 23. Student Do: useQuery (15 min)
 
 * Direct students to the activity instructions found in `14-Stu_useQuery/README.md`.
 
@@ -1658,7 +1658,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
 
-### 24. Instructor Review: useQuery (10 min) 
+### 24. Instructor Review: useQuery (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1675,7 +1675,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * ✔️ `import { QUERY_THOUGHTS }`
 
   * ✔️ `useQuery(QUERY_THOUGHTS)`
-  
+
 * Open `14-Stu_UseQuery/client/src/App.js` in your IDE and explain the following:
 
   * To send requests, we first have to set up Apollo Client in our `App.js` file and create a new `ApolloClient` instance that identifies the URL of our GraphQL server. This step has already been done for us:
@@ -1687,7 +1687,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      });
      ```
 
-* Open `14-Stu_UseQuery/client/src/utils/queries.js` in your IDE and explain the following: 
+* Open `14-Stu_UseQuery/client/src/utils/queries.js` in your IDE and explain the following:
 
   * The app is running and ready to make requests. Let's create a new query.
 
@@ -1719,7 +1719,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      `;
      ```
 
-* Open `14-Stu_UseQuery/client/src/pages/Home.js` in your IDE and explain the following: 
+* Open `14-Stu_UseQuery/client/src/pages/Home.js` in your IDE and explain the following:
 
   * 🔑 To use our query, we start by importing the `useQuery` Hook and the query into the component where we want the data to be displayed:
 
@@ -1741,7 +1741,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      ```
 
   * 🔑 We use the variable to access the data in our JSX so the data can be displayed on our page:
-  
+
      ```js
      <ThoughtList
        thoughts={thoughts}
@@ -1751,7 +1751,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How do we use the `useQuery` Hook to return data? 
+  * ☝️ How do we use the `useQuery` Hook to return data?
 
   * 🙋 The `useQuery` Hook takes in a GraphQL query wrapped in a `gql` function and returns the requested data as a JSON object. We can then use that data object to display information on the page.
 

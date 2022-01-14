@@ -14,6 +14,8 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
+* Let students know that the **Unit 22 Homework will be optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
+
 * **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
 
 * Some activities in Unit 21 rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
@@ -69,6 +71,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   * [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
 
   * [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
+
+    * The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
 ### Slide Decks
 
