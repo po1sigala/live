@@ -8,7 +8,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * In this lesson, students will complete activities `21-Ins_Typedefs` through `28-Stu_Mini-Project`.
 
-* Remind students that this Unit's Homework is optional. If students choose to submit this Homework, they will receive extra credit points on their final grade. However, if they choose not to submit it, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it, with the added incentive of receiving extra credit for the work.
+* Remind students that this Unit's Homework is optional. If they choose not to submit it, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it.
 
 * **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
 
