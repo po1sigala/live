@@ -516,7 +516,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
     ```js
     <Routes>
-      <Route 
+      <Route
         path="/">
         element={<Home />}
       />
@@ -527,7 +527,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
     ```js
     <Routes>
-      <Route 
+      <Route
         path="/profiles/:profileId">
         element={<Profile />}
       />
@@ -637,9 +637,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * Which browser API does React Router leverage?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -658,7 +655,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * ✔️ `<Link>` component
 
-  * ✔️  `useParams()` hook
+  * ✔️ `useParams()` hook
 
 * Open `20-Stu_React-Router/client/src/App.js` in your IDE and explain the following:
 
@@ -680,7 +677,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * 🔑 Inside our map function, we create a link component that uses the route we just created. Then, we assign the value of the `:thoughtId` parameter to be the id of our current thought:
 
     ```js
-     <Link
+    <Link
        className="btn btn-primary btn-block btn-squared"
         to={`/thoughts/${thought._id}`}
     >
