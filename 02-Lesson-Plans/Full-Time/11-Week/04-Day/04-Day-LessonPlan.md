@@ -8,8 +8,6 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In this lesson, students will complete activities `09-Ins_useReducer` through `20-Stu_useReducer-Review`.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
 * Be sure to prepare and review the activities before class. Try to anticipate any questions that students might have.
 
 * Today's activities emphasize the skills needed for full-stack app development. Because the code and activities will be familiar, encourage students to use activity time to further explore the code, ask questions, and build on their existing skills. For an additional challenge, encourage students to explore the Bonus.
@@ -619,7 +617,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * Next, we need to import it into the `App` component. We set an alias for the `BrowserRouter` variable by using the syntax `as Router`:
 
     ```js
-    import { BrowserRouter as Router, Route } from 'react-router-dom';
+    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
     ```
 
   * Inside the `App` component, we wrap all of the elements inside the `Router` tags:
@@ -634,24 +632,32 @@ In this class, students will learn about the `useReducer` hook. This class also 
       )
     ```
 
-  * We wrap each individual component in a `Route` tag that contains the path of the component:
+  * We wrap any `Route` components in a `Routes` tag. Each `Route` component contains the path of the component as well as the component we want to render:
 
     ```js
-    <Route exact path="/" component={Home} />
+    <Routes>
+      <Route 
+        path="/" 
+        element={<Home />} 
+      />
+    </Routes>
     ```
 
-  * For each `Route`, we add a `path` attribute that specifies what the path should be in the URL. For example, the preceding route will be located at `http://localhost:3000/;`.
+  * 🔑 For each `Route`, we add a `path` attribute that specifies what the path should be in the URL. For example, the preceding route will be located at `http://localhost:3000/;`.
 
-  * We can also add a `component` property that tells React Router which component you want to reference at a given path.
-
-  * 🔑 The `exact` keyword used before `path` tells React Router that we want to match the `/` path exactly. If we were to pass in an `id` of some sort (ex. `/:id`), this would fail to match.
+  * 🔑 We can also add a `element` property that tells React Router which component you want to reference at a given path.
 
   * We can also add path parameters to routes -- such as the route to get a specific profile.
 
   * `:profileId` is a path parameter in the URL that will encompass anything that follows `/profile`, allowing us to access specific profile pages using the URL `http://localhost:3000/profiles/<profileId>`:
 
     ```js
-    <Route exact path="/profiles/:profileId" component={Profile} />
+    <Routes>
+      <Route 
+        path="/profiles/:profileId" 
+        element={<Profile />} 
+      />
+    </Routes>
     ```
 
 * Open `13-Ins_React-Router-Review/client/src/components/ProfileList/index.js` in your IDE to demonstrate the following:
@@ -775,9 +781,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ Exact path
+  * ✔️ path attribute
 
-  * ✔️ Component attribute
+  * ✔️ element attribute
 
   * ✔️ Apollo Hooks
 
@@ -790,9 +796,12 @@ In this class, students will learn about the `useReducer` hook. This class also 
   * This route has a `path` attribute and a path parameter of `:thoughtId`:
 
     ```js
-    <Route exact path="/thoughts/:thoughtId">
-      <SingleThought />
-    </Route>`
+    <Routes>
+      <Route 
+        path="/thoughts/:thoughtId">
+        element={<SingleThought />}
+      />
+    </Routes>
     ```
 
 * Open `14-Stu_React-Router-Review/Solved/client/src/components/ThoughtList/index.js` in your IDE to demonstrate the following:

@@ -1,6 +1,6 @@
 # 11.1 Full-Time Lesson Plan: GraphQL and MERN
 
-## Overview 
+## Overview
 
 This class covers GraphQL, including using the Apollo Server to set up `typeDefs` and `resolvers`, making queries and using mutations, and using the GraphQL Playground. The three-layer MERN architecture, setting up a MERN application and the `useQuery` hook are also discussed.
 

@@ -24,7 +24,7 @@ The following topics will be covered in this unit:
 
 * [useQuery Hook](https://www.apollographql.com/docs/tutorial/queries/)
 
-* [React Router](https://reactrouter.com/web/guides/quick-start)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 * [JSON Web Tokens](https://jwt.io/introduction)
 
@@ -84,7 +84,7 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project. 
+During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project.
 
 ## Resources
 
@@ -94,17 +94,17 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions) 
+* 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions)
 
-  * 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
+* 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
 
 ### Full-Stack Blog Posts
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+* 📖 Blog Post: [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
 
-  * 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+* 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

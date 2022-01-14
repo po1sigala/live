@@ -1,6 +1,6 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import SingleThought from './pages/SingleThought';
@@ -19,13 +19,17 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
-            <Route exact path="/thoughts/:thoughtId">
-              <SingleThought />
-            </Route>
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
+              <Route 
+                path="/thoughts/:thoughtId" 
+                element={<SingleThought />} 
+              />
+            </Routes>
           </div>
           <Footer />
         </div>

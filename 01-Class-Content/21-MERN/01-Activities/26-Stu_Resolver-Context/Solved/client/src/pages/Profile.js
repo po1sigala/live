@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import ThoughtForm from '../components/ThoughtForm';
@@ -17,9 +17,9 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
-  // redirect to personal profile page if username is yours
+  // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/me" />;
+    return <Navigate to="/me" />;
   }
 
   if (loading) {

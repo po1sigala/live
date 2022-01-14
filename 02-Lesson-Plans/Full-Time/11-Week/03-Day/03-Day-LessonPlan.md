@@ -8,8 +8,6 @@ In this class, students will be introduced to complex state management within th
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` through `08-Stu_Actions`.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
 * Be sure to create a practice React app before class, by navigating to `01-Class-Content/22-State/01-Activities` and running the following command:
 
   ```sh
@@ -106,7 +104,7 @@ In this class, students will be introduced to complex state management within th
   ```md
   # Unit 21 Mini-Project: Tech Matchup App
 
-  In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Switch>` component in the routes.
+  In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Route>` component in the routes. During your research, you will likely come across examples and documentation on React Router's `<Switch>` component. As of React Router version 6, the `<Switch>` component no longer exists and will cause your application to break.
 
   ## User Stories
 
@@ -144,7 +142,7 @@ In this class, students will be introduced to complex state management within th
 
   * After implementing GraphQL on the server, what tool can you use to test the queries and mutations?
 
-  * How can we use `<Switch>` to render the `NotFound` page?
+  * How can we use `<Route>` to render the `NotFound` page?
 
   ## 🏆 Bonus
 
@@ -165,6 +163,8 @@ In this class, students will be introduced to complex state management within th
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
 
+* If students ran into examples or documentation on React Router's `<Switch>` component, explain to them that it was previously used in place of the current `<Routes>` component. When we previously used `<Switch>`, the first -- and only the first -- match of a route would be rendered. However, with React Router v6, the `<Routes>` component was introduced and behaves much like `<Switch>` but looks for routes that best match instead of traversing routes in order.
+
 * Use the prompts and talking points (🔑) below to review the following key points:
 
   * ✔️ `const server = new ApolloServer()`
@@ -181,7 +181,7 @@ In this class, students will be introduced to complex state management within th
 
   * ✔️ `useMutation()`
 
-  * ✔️ `<Switch>`
+  * ✔️ `<Route>`
 
 * Open `28-Stu_Mini-Project/Main/server/server.js` in your IDE and explain the following:
 
@@ -346,23 +346,27 @@ In this class, students will be introduced to complex state management within th
 
 * Open `28-Stu_Mini-Project/Main/client/src/App.js` in your IDE and explain the following:
 
-  * 🔑 We use a `<Switch>` component to wrap our routes. When we use `<Switch>`, the first -- and only the first -- match of a route will be rendered. This will render our nested routes properly:
+  * 🔑 Remember to use a `<Routes>` component to wrap all of our routes. This is how to nest our routes properly:
 
     ```js
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/matchup">
-        <Matchup />
-      </Route>
-      <Route exact path="/matchup/:id">
-        <Vote />
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route 
+        path="/">
+        element={<Home />}
+      />
+      <Route 
+        path="/matchup">
+        element={<Matchup />}
+      />
+      <Route 
+        path="/matchup/:id">
+        element={<Vote />}
+      />
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+    </Routes>
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -373,7 +377,7 @@ In this class, students will be introduced to complex state management within th
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Apollo Docs on Apollo Client](https://www.apollographql.com/docs/react/why-apollo/), the [Apollo Docs on Apollo Server](https://www.apollographql.com/docs/apollo-server/), and the [React Router Docs on Switch](https://reactrouter.com/web/api/Switch,) and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on Apollo Client](https://www.apollographql.com/docs/react/why-apollo/), the [Apollo Docs on Apollo Server](https://www.apollographql.com/docs/apollo-server/), and the [React Router Docs](https://reactrouter.com/docs/en/v6/getting-started/overview) and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 

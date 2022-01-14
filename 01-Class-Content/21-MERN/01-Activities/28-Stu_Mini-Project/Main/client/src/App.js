@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Matchup from './pages/Matchup';
@@ -16,20 +16,24 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/matchup">
-              <Matchup />
-            </Route>
-            <Route exact path="/matchup/:id">
-              <Vote />
-            </Route>
-            <Route>
-              <NotFound />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Home />}
+            />
+            <Route 
+              path="/matchup" 
+              element={<Matchup />}
+            />
+            <Route 
+              path="/matchup/:id" 
+              element={<Vote />}
+            />
+            <Route 
+              path="*"
+              element={<NotFound />}
+            />
+          </Routes>
         </div>
       </Router>
     </ApolloProvider>
