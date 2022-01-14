@@ -44,6 +44,8 @@ Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content
 
 * In Unit 22, students will continue to build on full-stack app development skills, as well as explore state management and the Context API. You'll also help students prepare for their final projects and solidify their understanding of these more advanced skills.
 
+* The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip. Please remind students about this optional assignment in Unit 22.
+
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
 * React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of Unit 21 uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.

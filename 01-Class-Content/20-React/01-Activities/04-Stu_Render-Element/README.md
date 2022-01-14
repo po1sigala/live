@@ -12,7 +12,7 @@ There should also be an unordered list of interests following the heading.
 
 ## Actual Behavior
 
-The page loads without errors, but the page is empty.
+The page loads with errors in the console and the page is empty.
 
 ## Steps to Reproduce the Problem
 
