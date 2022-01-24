@@ -4,7 +4,7 @@
 
 This week, you will use your skills in MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
 
-You’ll use React Router to make the application behave more like a multi-page application, allowing users to bookmark URLs and use the browser’s forward and back buttons. You’ll also add GraphQL, an open-source data query and manipulation language for APIs that lets you fetch only the data you want from the database when you need it. Finally, you’ll learn how to use a JSON Web Token, or JWT, to add authentication to your site. 
+You’ll use React Router to make the application behave more like a multi-page application, allowing users to bookmark URLs and use the browser’s forward and back buttons. You’ll also add GraphQL, an open-source data query and manipulation language for APIs that lets you fetch only the data you want from the database when you need it. Finally, you’ll learn how to use a JSON Web Token, or JWT, to add authentication to your site.
 
 ## Key Topics
 
@@ -84,7 +84,9 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project. 
+During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project.
+
+Remember the Unit 22 Homework will be an optional assignment. It is not required for submission and your final grade will not be affected in any way. Next week's Homework is an opportunity for you to further practice your skills and get feedback on it.
 
 ## Resources
 
@@ -94,7 +96,7 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions) 
+  * 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions)
 
   * 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
 
