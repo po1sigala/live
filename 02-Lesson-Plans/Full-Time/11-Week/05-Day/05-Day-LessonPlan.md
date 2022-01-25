@@ -34,7 +34,9 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * Create type definitions for Apollo Server applications.
 
-* Implement a store provider in a React App using the Context API.
+* Implement a store provider in a React App using the Context API. 
+
+* We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. [Refer to](https://stripe.com/docs/testing).
 
 * Explain how the reducer function helps manage complex state with libraries like Redux.
 
