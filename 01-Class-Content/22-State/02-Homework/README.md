@@ -48,7 +48,7 @@ Finally, the user can check out by going to their shopping cart, as shown in the
 
 ![The user checks out by going to their shopping cart.](./Assets/22-state-homework-demo-03.gif)
 
-* We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. [Refer to](https://stripe.com/docs/testing).
+* We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to [Stripe docs on testing your integration.](https://stripe.com/docs/testing)
 
 ## Getting Started
 
