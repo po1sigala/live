@@ -26,7 +26,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/01-HTML-Git-CSS/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
