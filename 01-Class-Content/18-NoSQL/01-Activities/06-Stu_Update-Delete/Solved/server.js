@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const port = 3001;
@@ -45,7 +46,7 @@ app.delete('/delete', (req, res) => {
   // Use deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
     // This is the filter. The delete only the document that matches the _id provided in the request body
-    { _id: req.body.id },
+    { _id: ObjectId(req.body.id) },
     (err) => {
       if (err) throw err;
       res.send('Document deleted');
