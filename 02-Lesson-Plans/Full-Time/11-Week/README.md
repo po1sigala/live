@@ -14,9 +14,13 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
-* Some activities in Unit 21 rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+* Let students know that the **Unit 22 Homework will be optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
-* For a refresher on how to use the GraphQL Playground, see the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+
+* Some activities in Unit 21 rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+
+* For a refresher on how to use the Apollo Sandbox, see the [Apollo Docs on Apollo Sandbox]().
 
 * The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
@@ -25,8 +29,6 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 * Before class, install the [React developer tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). It will be used in the Unit 22 `O1-Ins_Providers` demo.
 
 * If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
-
-* Apollo Server recently migrated to Apollo Server 3. This major-version release impacts how Apollo Server interacts in an Express environment. Apollo Server 2 is currently used in the activities. For the Unit 21 Homework, students must **MUST** use the following script `npm install apollo-server-express@2.15.0` to follow the implementation used in class.  Alternately, students can complete the Homework using the latest version of Apollo Server. Please refer them to the [Apollo Server Docs on Migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/#nodejs) and [Apollo Server Docs on Implementing Apollo Server Express with v3](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express). Note that Apollo Server 3 requires the use of `await server.start()` before calling `server.applyMiddleware`.
 
 * In the state management activities in Unit 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documention to find information on specific issues and then apply that information to their own code.
 
@@ -67,6 +69,8 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 * [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
 
 * [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
+
+    * The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
 ### Slide Decks
 
