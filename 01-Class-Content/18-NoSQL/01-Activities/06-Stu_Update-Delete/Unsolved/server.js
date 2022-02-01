@@ -1,5 +1,7 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+// We require in the ObjectId() function from MongoDB for deleting a document by its _id
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const port = 3001;
@@ -30,15 +32,6 @@ app.post('/create', (req, res) => {
       res.json(results);
     }
   );
-});
-
-app.get('/read', (req, res) => {
-  db.collection('bookCollection')
-    .find()
-    .toArray((err, results) => {
-      if (err) throw err;
-      res.send(results);
-    });
 });
 
 app.get('/read', (req, res) => {
