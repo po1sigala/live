@@ -28,7 +28,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-* What tools within the GraphQL Playground can reveal the data that is available to you?
+* What tools within the Apollo Sandbox can reveal the data that is available to you?
 
 ## 🏆 Bonus
 
