@@ -277,7 +277,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      ## 📝 Notes
 
-     To Launch GraphQL Playground, follow these steps:
+     To Launch Apollo Sandbox, follow these steps:
 
      1. In the command line, navigate to `02-Stu_Apollo-Server/Unsolved`.
 
@@ -287,7 +287,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
      4. To start the server and launch the app, run `npm start`.
 
-     5. To launch the GraphQL Playground, open <localhost:3001/graphql> in the browser.
+     5. To launch the Apollo Sandbox, open <localhost:3001/graphql> in the browser.
 
      Refer to the documentation:
 
@@ -399,7 +399,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      };
      ```
 
-* We will use the GraphQL Playground to explore queries, typeDefs, and resolvers in greater depth in the next activities.
+* We will use the Apollo Sandbox to explore queries, typeDefs, and resolvers in greater depth in the next activities.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
