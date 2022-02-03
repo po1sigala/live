@@ -1,4 +1,4 @@
-# 22 State Homework: Redux Store
+# 22 State Homework: Redux Store (Optional)
 
 ## Your Task
 
@@ -7,6 +7,8 @@ In this unit, you learned how to manage global state using React’s Context API
 Your challenge this week is to refactor the e-commerce platform from [Activity 26](../01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. Some guidelines have been provided in the Getting Started section to point you in the right direction. If you haven't yet, download the [e-commerce platform code from Activity 26](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
 
 **On the Job**: Web developers frequently have to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help. They must sift through it to find the information that matches the specific problem they’re trying to solve. This assignment will allow you to practice a skill that you’ll use many times over the course of your career.
+
+Remember, this unit's Homework is **optional**. It is not required for submission and your final grade will not be affected in any way. This Homework is an opportunity for you to further practice your skills and get feedback on it.
 
 ## User Story
 
