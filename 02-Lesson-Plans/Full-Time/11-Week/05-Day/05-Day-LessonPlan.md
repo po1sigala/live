@@ -1318,7 +1318,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 ### 16. Instructor Demo: Introduce Homework (5 min)
 
-> **Important:** Let students know that this Homework is optional!
+* **Important**: Let students know that this Homework is optional!
 
 * Navigate to `02-Homework/Main` in your terminal and run `npm install`, `npm run seed`, and `npm run develop`.
 

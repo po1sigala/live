@@ -1,6 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
-// We require in the ObjectId() function from MongoDB for deleting a document by its _id
+// We import the ObjectId() function from MongoDB
 const { ObjectId } = require('mongodb');
 
 const app = express();
