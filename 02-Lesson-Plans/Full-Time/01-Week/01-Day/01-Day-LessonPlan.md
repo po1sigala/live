@@ -22,7 +22,7 @@ Today's lesson introduces students to the tools they need to succeed in the cour
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -46,7 +46,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 01 Slide Deck](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing)
+* [Module 01 Slide Deck](https://docs.google.com/presentation/d/1eSjztw5kwQvDxH7DcX8CKF1z-45E2_a7CKh8PkKE3R0/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -94,7 +94,7 @@ By the end of class, students will be able to:
 
 ### 2. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [Unit 01 Slide Deck](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [Module 01 Slide Deck](https://docs.google.com/presentation/d/1eSjztw5kwQvDxH7DcX8CKF1z-45E2_a7CKh8PkKE3R0/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What is computational thinking?**
 
@@ -464,7 +464,7 @@ By the end of class, students will be able to:
 
   * 🔑 Type the name of the repository, `first-day-demo`, in the "Repository Name" box.
 
-  * 🔑 We select Public because all of the repositories we create in this course will need to be public to deploy to GitHub Pages and get homework support from TAs. It is possible to host private repositories with GitHub Pro, but a paid account is not necessary for this course.
+  * 🔑 We select Public because all of the repositories we create in this course will need to be public to deploy to GitHub Pages and get support from TAs on Challenges. It is possible to host private repositories with GitHub Pro, but a paid account is not necessary for this course.
 
   * 🔑 Select the "Add a README file" option to have GitHub create a new `README.md` file when creating the repository.
 
@@ -755,8 +755,6 @@ By the end of class, students will be able to:
 * Open the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) in your browser and demonstrate the following:
 
   * While there is not a single right approach, this template provides an excellent guide to the information typically conveyed in a project readme.
-
-  * Note that this resource is available in this week's Homework folder.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
