@@ -12,13 +12,13 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/21-MERN/REA
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
+* The activities in this unit will require some familiarity with GraphQL. If you've never worked with GraphQL or the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+
 * Some activities in this unit rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
 
 * **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
-
-* For a refresher on how to use the GraphQL Playground, see the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
 
 * The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
@@ -36,7 +36,9 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/21-MERN/REA
 
 ## Heads-Up
 
-During the next unit, we will build on the full-stack app development skills covered in this unit, as well as explore state management and the Context API. We'll also review the key concepts covered in this unit to help students prepare for their final projects and solidify their understanding of these more advanced skills.
+* During the next unit, we will build on the full-stack app development skills covered in this unit, as well as explore state management and the Context API. We'll also review the key concepts covered in this unit to help students prepare for their final projects and solidify their understanding of these more advanced skills.
+
+* The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip. Please remind students about this optional assignment in Unit 22.
 
 ## Helpful Links
 
