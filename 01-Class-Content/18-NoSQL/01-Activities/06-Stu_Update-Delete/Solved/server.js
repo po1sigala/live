@@ -1,5 +1,7 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+// We import the ObjectId() function from MongoDB
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const port = 3001;
@@ -44,8 +46,9 @@ app.get('/read', (req, res) => {
 app.delete('/delete', (req, res) => {
   // Use deleteOne() to delete one object
   db.collection('bookCollection').deleteOne(
-    // This is the filter. The delete only the document that matches the _id provided in the request body
-    { _id: req.body.id },
+    // This is the filter. We delete only the document that matches the _id provided in the request body,
+    // after converting from a string to MongoDB's ObjectId type with our ObjectId() function.
+    { _id: ObjectId(req.body.id) },
     (err) => {
       if (err) throw err;
       res.send('Document deleted');

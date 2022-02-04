@@ -20,6 +20,8 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * In `24-Stu_Stripe` students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
 
+* We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to the [Stripe docs on testing your integration](https://stripe.com/docs/testing).
+
 * For the final projects, students will choose their own groups and project ideas. Encourage students to form groups and start brainstorming ideas for their app, and be prepared to help anyone who is struggling to find a group or project idea.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
@@ -1316,7 +1318,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 ### 16. Instructor Demo: Introduce Homework (5 min)
 
-> **Important:** Let students know that this Homework is optional!
+* **Important**: Let students know that this Homework is optional!
 
 * Navigate to `02-Homework/Main` in your terminal and run `npm install`, `npm run seed`, and `npm run develop`.
 

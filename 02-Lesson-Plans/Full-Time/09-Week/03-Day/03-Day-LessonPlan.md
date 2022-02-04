@@ -938,6 +938,7 @@ In today's class, you will prepare students for technical interviews through the
     ```js
     const express = require('express');
     const mongodb = require('mongodb').MongoClient;
+    const { ObjectId } = require('mongodb');
 
     const app = express();
     const port = 3001;
@@ -974,7 +975,7 @@ In today's class, you will prepare students for technical interviews through the
   * 🔑 When using a delete method, it is very important that we specify a filter so that only the documents we want deleted are removed. This filter will match the id that we provide in the request body and only delete that document, not all documents!
 
     ```js
-    db.collection('bookCollection').deleteOne({ _id: req.body.id },...)
+    db.collection('bookCollection').deleteOne({ _id: ObjectId(req.body.id) },...)
     ```
 
   * 🔑 We also add logic to handle our data response and possible errors. If the document is deleted, `Document deleted` will be returned.
