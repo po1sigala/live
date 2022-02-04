@@ -1,4 +1,4 @@
-# 01.5 Full-Time Lesson Plan: Advanced CSS
+# 01.5 Full-Time Lesson Plan: CSS Selectors and Variables
 
 ## Overview
 

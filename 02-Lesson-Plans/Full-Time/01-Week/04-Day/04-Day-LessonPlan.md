@@ -1,4 +1,4 @@
-# 01.4 Full-Time Lesson Plan: Pseudo-Resets
+# 01.4 Full-Time Lesson Plan: CSS Resets, Pseudo-Classes, and Pseudo-Elements
 
 ## Overview
 
