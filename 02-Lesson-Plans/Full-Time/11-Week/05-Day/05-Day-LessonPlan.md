@@ -493,7 +493,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * We await the results of the request for the products in the order:
 
     ```js
-    const { products } = await order.populate('products').execPopulate();
+    const { products } = await order.populate('products');
     ```
 
   * Then we loop through each of those products and create a new product object that will be used by Stripe. We call on the `products.create()` method to do this.
