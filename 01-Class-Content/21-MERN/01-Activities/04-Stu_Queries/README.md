@@ -34,7 +34,7 @@ Work with a partner to implement the following user story:
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What other GraphQL IDEs can you use besides the built-in Playground? 
+* What other GraphQL IDEs can you use besides the Apollo Studio Explorer?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 

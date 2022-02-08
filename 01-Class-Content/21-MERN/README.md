@@ -10,7 +10,7 @@ You’ll use React Router to make the application behave more like a multi-page 
 
 The following topics will be covered in this unit:
 
-* [GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
+* [Apollo Studio Explorer](https://www.apollographql.com/docs/studio/getting-started/)
 
 * [GraphQL Query](https://graphql.org/learn/queries/)
 
@@ -101,8 +101,6 @@ Refer to the Git Guide to review the git concept for this unit. Watch the `📹 
 ### Full-Stack Blog Posts
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides.
-
-* 📖 Blog Post: [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
 
 * 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
