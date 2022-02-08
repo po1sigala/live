@@ -1,32 +1,32 @@
 # 📐 Add Comments to Implementation of an Apollo Server
 
-Work with a partner to add comments describing the functionality of the code found in the following files:
+ Work with a partner to add comments describing the functionality of the code found in the following files:
 
-* [server.js](./Unsolved/server.js)
+   * [server.js](./Unsolved/server.js)
 
-* [schemas/typeDefs.js](./Unsolved/schemas/typeDefs.js)
+   * [schemas/typeDefs.js](./Unsolved/schemas/typeDefs.js)
 
-* [schemas/resolvers.js](./Unsolved/schemas/resolvers.js)
+   * [schemas/resolvers.js](./Unsolved/schemas/resolvers.js)
 
-## 📝 Notes
+ ## 📝 Notes
 
-To Launch GraphQL Playground, follow these steps:
+ To Launch Apollo Sandbox, follow these steps:
 
-1. In the command line, navigate to `02-Stu_Apollo-Server/Unsolved`.
+  1. In the command line, navigate to `02-Stu_Apollo-Server/Unsolved`.
 
-2. Run `npm install`.
+  2. Run `npm install`.
 
-3. With a MongoDB instance running, run `npm run seed` to seed the data.
+  3. With a MongoDB instance running, run `npm run seed` to seed the data.
 
-4. To start the server and launch the app, run `npm start`.
+  4. To start the server and launch the app, run `npm start`.
 
-5. To launch the GraphQL Playground, open <localhost:3001/graphql> in the browser.
+  5. To launch the Apollo Sandbox, open `localhost:3001/graphql` in the browser.
 
 Refer to the documentation: 
 
-* [Getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/)
+  * [Apollo Docs on getting started with Apollo Server Express](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express)
 
-* [Integrating with Node.js middleware](https://www.apollographql.com/docs/apollo-server/integrations/middleware/)
+  * [Apollo Docs on integrating with Node.js middleware](https://www.apollographql.com/docs/apollo-server/integrations/middleware/)
 
 ---
 
