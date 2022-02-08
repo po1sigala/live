@@ -1,6 +1,7 @@
-const bodyParser = require('body-parser');
-const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
+const path = require('path');
+const bodyParser = require('body-parser');
 
 const typeDefs = require('./schemas/typeDefs');
 const resolvers = require('./schemas/resolvers');
@@ -8,6 +9,8 @@ const resolvers = require('./schemas/resolvers');
 const app = express();
 
 app.use(bodyParser.json());
+
+const PORT = process.env.PORT || 3001;
 
 const server = new ApolloServer({
   introspection: true,
@@ -24,12 +27,16 @@ const server = new ApolloServer({
   },
 });
 
-server.applyMiddleware({ app, path: '/graphql' });
-
-app.listen(4000, () => {
-  console.log(`
-    Server is running!
-    Listening on port 4000
-    Explore at http://localhost:4000/graphql
-  `);
-});
+// Create a new instance of an Apollo server with the GraphQL schema
+const startApolloServer = async (typeDefs, resolvers) => {
+  await server.start();
+  server.applyMiddleware({ app, path: '/graphql' });
+  
+  app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    })
+  };
+  
+// Call the async function to start the server
+  startApolloServer(typeDefs, resolvers);

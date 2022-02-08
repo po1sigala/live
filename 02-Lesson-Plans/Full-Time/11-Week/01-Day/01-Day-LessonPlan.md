@@ -387,8 +387,11 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * 🔑 A **resolver** is a function that's responsible for populating the data that has been defined by our typeDefs.
 
-  * 🔑 To write a resolver, we use the name of a defined entry point and then assign the action that will be used to fetch the data:
+* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
 
+* Some activities in this unit rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+
+* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
      ```js
      const resolvers = {
        Query: {
@@ -405,11 +408,11 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ☝️ How do we use Apollo Server to integrate GraphQL into our app?
 
-  * 🙋 Apollo Server is a GraphQL server that helps you connect a GraphQL schema to a HTTPS server such as Express.js. To use GraphQL in our app, we must update Express.js to use Apollo Server and connect a schema that defines our data and how that data should be handled.
+* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
-  * ☝️ What can we do if we don't completely understand this?
+* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
 
-  * 🙋 We can refer to supplemental material, read the [Apollo Docs on getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/), and stay for office hours to ask for help.
+* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
 
 * Answer any questions before proceeding to the next activity.
 
