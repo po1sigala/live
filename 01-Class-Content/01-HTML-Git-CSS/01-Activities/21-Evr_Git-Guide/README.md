@@ -2,7 +2,7 @@
 
 In this activity, we will explore configuring the local Git default branch to `main`. We will also review another way to create a repository, using the `git init` command. Lastly, we will review the `git pull` command.
 
-Git is an important tool that allows developers to track and store versions of content. It also enables you to collaborate and share code with others. During this boot camp, you'll use Git to share code via a class repository, which you'll be required to pull down before each class. In addition, for each homework assignment, you'll provide the grading team with a link to the GitHub repository that contains your code.
+Git is an important tool that allows developers to track and store versions of content. It also enables you to collaborate and share code with others. During this boot camp, you'll use Git to share code via a class repository, which you'll be required to pull down before each class. In addition, for each Challenge, you'll provide the grading team with a link to the GitHub repository that contains your code.
 
 For more information, review the [Full-Stack Blog guide on getting started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git).
 
@@ -135,7 +135,7 @@ You can review the changed files by opening them in VS Code.
 
 ## Share Remote Repository URL
 
-For each unit's Homework, you'll be required to share the URL of your repository.
+For each module's Challenge, you'll be required to share the URL of your repository.
 
 To share the URL, navigate to your repository on GitHub. Then copy the URL from the address bar and share it with your partner in Slack. To view your partner's repository, simply click on the shared link.
 

@@ -16,6 +16,6 @@
 
 * Finally, we reached the footer of our website which is simply a blocked off area at the bottom of the page.
 
-![Finished wireframe of the unit 02 mini-project](./assets/Images/01-wireframe-form-completed.png)
+![Finished wireframe of the Module 02 mini-project](./assets/Images/01-wireframe-form-completed.png)
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

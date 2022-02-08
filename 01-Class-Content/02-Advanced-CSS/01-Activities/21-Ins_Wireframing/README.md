@@ -1,6 +1,6 @@
 ## Activity 21: Create a Wireframe (Instructor)
 
-The following image shows the start of a wireframe for the mini-project for this unit:
+The following image shows the start of a wireframe for the mini-project for this module:
 
 ![Example of an unfinished wireframe with its row and columns highlighted.](./assets/Images/01-unfinished-wireframe.png)
 

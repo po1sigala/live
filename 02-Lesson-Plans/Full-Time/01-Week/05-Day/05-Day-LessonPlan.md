@@ -1,4 +1,4 @@
-# 01.5 Full-Time Lesson Plan: Advanced CSS
+# 01.5 Full-Time Lesson Plan: CSS Selectors and Variables
 
 ## Overview
 
@@ -53,7 +53,7 @@ By the end of class, students will be able to do the following:
 | 12:30PM| 13  | Instructor Demo: Mini Project      | 0:05     |
 | 12:35PM| 14  | Student Do: Mini Project           | 0:60     |
 | 1:35PM | 15  | Instructor Review: Mini Project    | 0:10     |
-| 1:45PM | 16  | Introduce Homework                 | 0:05     |
+| 1:45PM | 16  | Introduce Challenge                | 0:05     |
 | 1:50PM | 17  | FLEX                               | 0:40     |
 | 2:30PM | 18  | End                                | 0:00     |
 
@@ -641,9 +641,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
   * A portfolio is a great way for developers to put themselves out there and demonstrate their skills while having fun. 
 
@@ -663,11 +663,11 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * 🙋 As a developer, you need a place to showcase your work to potential employers. Let your work do the talking for you!
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the Challenge.
 
 * Answer any questions before ending the class.
 
