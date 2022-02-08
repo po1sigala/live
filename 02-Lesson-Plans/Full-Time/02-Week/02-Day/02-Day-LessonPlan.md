@@ -16,7 +16,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 * If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
@@ -618,7 +618,7 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 * Ask the students if there is anything they would like to review.
 

@@ -2,15 +2,15 @@
 
 ## Overview
 
-In this class, we will work on the Unit 03 Mini-Project and then move onto Unit 04 on Web APIs. This will be the students' first introduction to the DOM. Students will gain experience using Web APIs to create, get, and append elements.
+In this class, we will work on the Module 03 Mini-Project and then move onto Module 04 on Web APIs. This will be the students' first introduction to the DOM. Students will gain experience using Web APIs to create, get, and append elements.
 
 ## Instructor Notes 
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 03 through `08-Stu_Create-Append` in Unit 04.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Module 03 through `08-Stu_Create-Append` in Module 04.
 
 * Be sure to review the activities and try to anticipate questions that students might ask. 
 
-* Unit 04 introduces DOM traversal and manipulation. This is a difficult topic for learners new to programming. If students feel overwhelmed, encourage them to talk through the challenge&mdash;in plain language&mdash;with their partner before they begin to write their solutions. You could also encourage them to reference a [visual of the DOM tree](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit#slide=id.g61fae5cd04_0_31) like the one found in the slide deck. 
+* Module 04 introduces DOM traversal and manipulation. This is a difficult topic for learners new to programming. If students feel overwhelmed, encourage them to talk through the challenge&mdash;in plain language&mdash;with their partner before they begin to write their solutions. You could also encourage them to reference a [visual of the DOM tree](https://docs.google.com/presentation/d/1_cxfDKv12UkB_GWn357lh_2OmRIkrwwjshMFAylG3b0/edit#slide=id.gf37b17fcee_0_1908) like the one found in the slide deck. 
 
 * Be prepared to switch between your browser, IDE, and console when demonstrating the activities in this lesson. It is important for students to see how manipulating the DOM with Web APIs affects what is displayed in the browser.
 
@@ -18,7 +18,7 @@ In this class, we will work on the Unit 03 Mini-Project and then move onto Unit 
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -36,7 +36,7 @@ By the end of class students will be able to:
 
 ## Slide Deck
 
-* [Unit 04 Slide Deck](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing)
+* [Module 04 Slide Deck](https://docs.google.com/presentation/d/1_cxfDKv12UkB_GWn357lh_2OmRIkrwwjshMFAylG3b0/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -45,7 +45,7 @@ By the end of class students will be able to:
 | 10:00AM| 1   | Instructor Demo: Mini-Project         | 0:05     |
 | 10:05AM| 2   | Student Do: Mini-Project              | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini-Project       | 0:10     |
-| 11:15AM| 4   | Introduce Homework                    | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                   | 0:05     |
 | 11:20AM| 5   | FLEX                                  | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity        | 0:10     |
 | 12:00PM| 7   | BREAK                                 | 0:30     |
@@ -102,7 +102,7 @@ By the end of class students will be able to:
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 03 Mini-Project: Rock, Paper, Scissors
+  # Module 03 Mini-Project: Rock, Paper, Scissors
 
   In this activity, you will work with a group to build a game using only JavaScript.
 
@@ -274,9 +274,9 @@ By the end of class students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
   * This password generator takes criteria selected by the user and uses it to generate a random string. 
 
@@ -296,21 +296,21 @@ By the end of class students will be able to:
 
   * 🙋 Creating interactive pages and apps is an essential skill in modern web development. This project will be a fantastic addition to your portfolio, to help you demonstrate your JavaScript skills to a future employer. 
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Ask if students have any questions about the homework.
+* Ask if students have any questions about the Challenge.
 
-* Ask the students if there is anything they would like to review from Unit 03 before moving on to Unit 04.
+* Ask the students if there is anything they would like to review from Module 03 before moving on to Module 04.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1_cxfDKv12UkB_GWn357lh_2OmRIkrwwjshMFAylG3b0/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Web APIs**: In this unit, we will learn how to use JavaScript to manipulate HTML with the help of Web APIs. 
+  * **Web APIs**: In this module, we will learn how to use JavaScript to manipulate HTML with the help of Web APIs. 
 
   * **What is the web browser?**: 
 
@@ -338,9 +338,9 @@ By the end of class students will be able to:
 
     * Using the DOM, we can manipulate the HTML elements on the page via JavaScript. 
     
-  * In this unit, we will take the next step in building interactive webpages by learning how to harness the power of the DOM and Web APIs to access, create, and change HTML using JavaScript.
+  * In this module, we will take the next step in building interactive webpages by learning how to harness the power of the DOM and Web APIs to access, create, and change HTML using JavaScript.
   
-  * Let's take a quick look at the mini-project that we will do at the end of this unit.
+  * Let's take a quick look at the mini-project that we will do at the end of this module.
 
 * Navigate to `28-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
