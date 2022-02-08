@@ -150,6 +150,272 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
 
+### 2. Instructor Demo: Apollo Server (5 min)
+
+* Navigate to `01-Ins_Apollo_Server` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+
+* Open `localhost:3001/graphql` in your browser and demonstrate the following:
+
+  * At the heart of interactive full-stack apps is the need to retrieve data quickly and accurately.
+
+  * 🔑 We use GraphQL to efficiently and precisely fetch the data queried in a single request.
+
+  * 🔑 **GraphQL** is a query language that allows us to build even complex queries quickly and concisely, helping to make sure our queries fetch data -- and only the data we need -- quickly.
+
+  * Apollo Sandbox is an Apollo Studio Explorer tool and is a great way to to visually explore how GraphQL can be used to request and fetch data.
+  
+  * 🔑 Using the Apollo Sandbox, we can enter a query to retrieve data from our database. This query will return the names of all the classes in our database:
+
+     ```gql
+     query classes{
+       classes {
+         name
+       }
+     }
+     ```
+
+  * Next, when we click the rectangular play button at the top of the screen we see a JSON object that contains only the data we requested in the response field on the left. This ability to easily write specific queries and return precise results is one of the main advantages of GraphQL.
+
+  * We will be using the Apollo Sandbox in today's class to test our code amd make sure our queries work.
+
+ * 🔑 To use GraphQL, we will need to set up a GraphQL server. Apollo Server is a popular GraphQL server that can be used as an add-on to an existing Node.js and Express.js server.
+
+* Open `01-Ins_Apollo_Server/server.js` in your IDE and demonstrate the following:
+
+  * To add Apollo Server to our existing Express.js and Node.js server structure, we run `npm install apollo-server-express` and import the `ApolloServer` class:
+
+     ```js
+     const { ApolloServer } = require('apollo-server-express');
+     ```
+
+  * We must also import the schemas directory. GraphQL relies on a schema bundle that includes two parts: the `typeDefs`, which defines the schema, and `resolvers`, or functions, that are responsible for populating data for a single field in the schema:
+
+     ```js
+     const { typeDefs, resolvers } = require('./schemas');
+     ```
+
+  * We create a new instance of the `ApolloServer` class. The `ApolloServer` class instance takes both `typeDefs` and `resolvers` as parameters:
+
+     ```js
+     const server = new ApolloServer({
+       typeDefs,
+       resolvers
+     });
+     ```
+
+  * Next, we create an async function that will take in our `typeDefs` and `resolvers` and start our Apollo Server instance. 
+
+    ```js
+    const startApolloServer = async (typeDefs, resolvers) => {...}
+    ```
+
+  * Inside the `startApolloServer` function, we use `await` to start our server. Don't forget, we must wrap `await` inside an async function. Otherwise, we will get an error!
+
+    ```js
+    await server.start()
+    ```
+
+  * We call the `.applyMiddleware()` method to integrate Express.js with the Apollo Server and connect the schema. This will enable our app to use GraphQL:
+
+     ```js
+     server.applyMiddleware({ app });
+     ```
+
+  * Since our Apollo Server works together with Express, we also create an instance of our Express app inside our async function and use it. Using an Express server gives us more flexibility in our server setup and allows additional configurations.
+
+    ```js
+    const app = express();
+
+    app.use(express.urlencoded({ extended: false }));
+    app.use(express.json());
+    ```
+
+  * Then, we start our database and call `app.listen()` to listen the connections on our specified port. 
+
+    ```js
+    db.once('open', () => {
+      app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
+        console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+        })
+      })
+    };
+    ```
+
+  * Since, we can enclosed our functionality in an async function, don't forget to call it at the bottom of of the file to run the scripts!
+
+    ```js
+    startApolloServer(typeDefs, resolvers);
+    ```
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How would we build this?
+
+  * 🙋 To integrate GraphQL in our MERN apps, we must connect a GraphQL schema to our Express.js server. We do this by adding an Apollo Server to our existing `service layer` and importing our schema.
+
+* Answer any questions before proceeding to the next activity.
+
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
+
+### 3. Student Do: Apollo Server (15 min)
+
+* Direct students to the activity instructions found in `02-Stu_Apollo_Server/README.md`.
+
+* Break your students into pairs that will work together on this activity.
+
+     ```md
+     # 📐 Add Comments to Implementation of an Apollo Server
+
+     Work with a partner to add comments describing the functionality of the code found in the following files:
+
+     * [server.js](./Unsolved/server.js)
+
+     * [schemas/typeDefs.js](./Unsolved/schemas/typeDefs.js)
+
+     * [schemas/resolvers.js](./Unsolved/schemas/resolvers.js)
+
+     ## 📝 Notes
+
+     To Launch Apollo Sandbox, follow these steps:
+
+     1. In the command line, navigate to `02-Stu_Apollo-Server/Unsolved`.
+
+     2. Run `npm install`.
+
+     3. With a MongoDB instance running, run `npm run seed` to seed the data.
+
+     4. To start the server and launch the app, run `npm start`.
+
+     5. To launch the Apollo Sandbox, open <localhost:3001/graphql> in the browser.
+
+     Refer to the documentation:
+
+     * [Apollo Docs on getting started with Apollo Server](https://www.apollographql.com/docs/apollo-server/getting-started/)
+
+     * [Apollo Docs on integrating with Node.js middleware](https://www.apollographql.com/docs/apollo-server/integrations/middleware/)
+
+     ---
+
+     ## 🏆 Bonus
+
+     If you have completed this activity, work through the following challenge with your partner to further your knowledge:
+
+     * What are the pros and cons of GraphQL vs. REST?
+
+     Use [Google](https://www.google.com) or another search engine to research this.
+
+     ---
+     ```
+
+* While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
+
+### 4. Instructor Review: Apollo Server (10 min)
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with integrating Apollo Server? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* Use the prompts and talking points (🔑) below to review the following key points:
+
+  * ✔️ `require('apollo-server-express')`
+
+  * ✔️ `require('./schemas')`
+
+  * ✔️ `new ApolloServer({typeDefs,resolvers})`
+
+  * ✔️ `applyMiddleware()`
+
+  * ✔️ `typeDefs`
+
+  * ✔️ `resolvers`
+
+* Open `02-Stu_Apollo-Server/Solved/server.js` in your IDE and explain the following:
+
+  * 🔑 Apollo Server is a library that we use with an existing Express.js server. We require the `apollo-server-express` dependency and import the `ApolloServer` class:
+
+     ```js
+     const { ApolloServer } = require('apollo-server-express');
+     ```
+
+  * 🔑 We also import the `typedefs` and `resolvers` from the `schemas` directory:
+
+     ```js
+     const { typeDefs, resolvers } = require('./schemas');
+     ```
+
+  * 🔑 Next, we create a new instance of the `ApolloServer` class named `server`. This instance takes both parts of the schema -- the `typedefs` and `resolvers` -- as parameters, and allows us to use our schema to handle our data:
+
+     ```js
+     const server = new ApolloServer({
+       typeDefs,
+       resolvers
+     });
+     ```
+
+  * We call the `.applyMiddleware()` method to update Express.js to use Apollo Server. Our GraphQL server is now set up and ready to use with our schema:
+
+     ```js
+     server.applyMiddleware({ app });
+     ```
+
+* Open `02-Stu_Apollo-Server/Solved/schemas/typeDefs.js` in your IDE and explain the following:
+
+  * 🔑 We use `typeDefs` to define our schema and the types it contains.
+
+  * Most defined types are objects. Each object holds a collection of fields that describes the data. The `Class` object will have fields for an id, name, and building as well as the credit hours for the course:
+
+     ```js
+      type Class {
+       _id: ID
+       name: String
+       building: String
+       creditHours: Int
+     }
+     ```
+
+  * We also have access to another type, Query. **Query types** define the entry point of every GraphQL query, and control what data can be accessed. The `classes` query type allows us to query an array of all the `Class` objects:
+
+     ```js
+     type Query {
+       classes: [Class]
+     }
+     ```
+* Open `02-Stu_Apollo-Server/Solved/schemas/resolvers.js` in your IDE and explain the following:
+
+  * 🔑 A **resolver** is a function that's responsible for populating the data that has been defined by our typeDefs.
+
+* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+
+* Some activities in this unit rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+
+* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+     ```js
+     const resolvers = {
+       Query: {
+         classes: async () => {
+         return await Class.find({});
+         }
+       }
+     };
+     ```
+
+* We will use the Apollo Sandbox to explore queries, typeDefs, and resolvers in greater depth in the next activities.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How do we use Apollo Server to integrate GraphQL into our app?
+
+* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
+
+* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
+
+* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
+
+* Answer any questions before proceeding to the next activity.
+
 ### 5. Instructor Demo: Queries (5 min)
 
 * Navigate to `03-Ins_Queries` in your command line and run `npm install`, `npm run seed`, and `npm start`.
