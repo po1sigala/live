@@ -1,10 +1,10 @@
-# Unit 03 Instructor Overview: JavaScript
+# Module 03 Instructor Overview: JavaScript
 
 ## Overview
 
-In this unit, you will introduce students to the fundamentals of JavaScript, including variables, primitive types, arrays, and objects. You will also use logical and comparison operators to construct conditional statements and guide students as they write their first functions and algorithms. 
+In this module, you will introduce students to the fundamentals of JavaScript, including variables, primitive types, arrays, and objects. You will also use logical and comparison operators to construct conditional statements and guide students as they write their first functions and algorithms. 
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/03-JavaScript/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
@@ -18,17 +18,17 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/03-JavaScri
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/03-JavaScript/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-Next unit, we will work with Web APIs. To preview the material, point out that students have already worked with the methods `console.log()`, `alert()`, `confirm()`, and `prompt()`. Then note that these methods are just a few of the many Web API methods available to JavaScript developers. 
+Next module, we will work with Web APIs. To preview the material, point out that students have already worked with the methods `console.log()`, `alert()`, `confirm()`, and `prompt()`. Then note that these methods are just a few of the many Web API methods available to JavaScript developers. 
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -38,13 +38,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [03.3 Lesson Plan](03-Day_Objects/03.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 03 Homework](../../../01-Class-Content/03-JavaScript/02-Homework)
+* [Module 03 Challenge](../../../01-Class-Content/03-JavaScript/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 03: JavaScript](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing)
+* [Module 03: JavaScript](https://docs.google.com/presentation/d/1pC6pzJY2NfLEOuvM7Ms2p9cHaNFkshCEb5_QtylBdF8/edit?usp=sharing)
 
 ### Algorithms
 
