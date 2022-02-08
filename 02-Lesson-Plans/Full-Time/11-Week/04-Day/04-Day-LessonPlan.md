@@ -8,13 +8,8 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In this lesson, students will complete activities `09-Ins_useReducer` through `20-Stu_useReducer-Review`.
 
-<<<<<<< HEAD
 * Unit 22 Homework is **optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip. If students choose to skip this Homework, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it. Please let students know about this extra credit opportunity!
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
-=======
->>>>>>> f41a085f36f626b53d7d33465b7a9575779de60d
 * Be sure to prepare and review the activities before class. Try to anticipate any questions that students might have.
 
 * Today's activities emphasize the skills needed for full-stack app development. Because the code and activities will be familiar, encourage students to use activity time to further explore the code, ask questions, and build on their existing skills. For an additional challenge, encourage students to explore the Bonus.
@@ -611,7 +606,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   * React Router is a great way to add declarative routing to an app. As we click around on the different pages, the router renders the matching route, allowing easy navigation between pages.
 
-* Open `13-Ins_React-Router-Review/client/App.js` in your IDE and demonstrate the following:
+* Open `13-Ins_React-Router-Review/client/src/App.js` in your IDE and demonstrate the following:
 
   * We use React Router to move through a React app while still preserving state. React Router also allows us to be declarative about the route that we want to give for a specific component.
 
