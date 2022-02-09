@@ -1,32 +1,32 @@
-# Unit 04 Instructor Overview: Web APIs 
+# Module 04 Instructor Overview: Web APIs 
 
 ## Overview
 
-In this unit, students will be introduced to the Document Object Model (DOM) and gain experience using Web APIs to manipulate the DOM. Students will also handle click events using `addEventListener()`, work with keyboard events like `keyup` and `keydown`, and use local and session storage.
+In this module, students will be introduced to the Document Object Model (DOM) and gain experience using Web APIs to manipulate the DOM. Students will also handle click events using `addEventListener()`, work with keyboard events like `keyup` and `keydown`, and use local and session storage.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/04-Web-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
 * Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code.
 
-* This week's homework will bring together the key concepts covered in the activities and require students to use both intervals and local storage. However, the students will also need to research and use Web APIs not explicitly introduced in the activities. Explain to students that the methods from class represent just a few of the many options for manipulating the DOM.
+* This week's Challenge will bring together the key concepts covered in the activities and require students to use both intervals and local storage. However, the students will also need to research and use Web APIs not explicitly introduced in the activities. Explain to students that the methods from class represent just a few of the many options for manipulating the DOM.
 
 * Be ready to view and edit local storage and session storage key-value pairs in Chrome DevTools. If you need a quick refresher, refer to the [Google documentation on viewing and editing local storage with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) and the [Google documentation on viewing and editing session storage with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage).
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/04-Web-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-Students may come across jQuery solutions when searching for DOM and event resources. Let them know that we will cover jQuery in the next unit. For now, advise them not to consult resources that mention jQuery or the `$` variable.
+Students may come across jQuery solutions when searching for DOM and event resources. Let them know that we will cover jQuery in the next module. For now, advise them not to consult resources that mention jQuery or the `$` variable.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -36,13 +36,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   
   * [04.3 Lesson Plan](./03-Day_Client-Side-Storage/04.3-LESSON-PLAN.md)
 
-### Unit Homework
+### Challenge
 
-  * [Unit 04 Homework](../../../01-Class-Content/04-Web-APIs/02-Homework)
+  * [Module 04 Challenge](../../../01-Class-Content/04-Web-APIs/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 04: Web APIs](https://docs.google.com/presentation/d/1D3DGPpajoRdzTxMterML_jQqcIy_yhoCrUSdpJhYE5Q/edit?usp=sharing)
+  * [Module 04: Web APIs](https://docs.google.com/presentation/d/1_cxfDKv12UkB_GWn357lh_2OmRIkrwwjshMFAylG3b0/edit?usp=sharing)
 
 ### Algorithms
 

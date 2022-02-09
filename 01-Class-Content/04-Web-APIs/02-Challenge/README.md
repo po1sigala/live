@@ -4,7 +4,7 @@
 
 At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
 This week’s coursework will equip you with all the skills you need to succeed in this assignment.
 
@@ -40,7 +40,7 @@ The following animation demonstrates the application functionality:
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria: 
+This Challenge is graded based on the following criteria: 
 
 ### Technical Acceptance Criteria: 40%
 
@@ -62,7 +62,7 @@ This homework is graded based on the following criteria:
 
 * Application user interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+* Application resembles the mock-up functionality provided in the Challenge instructions.
 
 ### Repository Quality: 13%
 
