@@ -1,4 +1,4 @@
-# 01.1 Full-Time Lesson Plan: Introduction to Command Line and Git
+# 01.1 Full-Time Lesson Plan: HTML, CSS, and Git
 
 ## Overview
 

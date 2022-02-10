@@ -1,4 +1,4 @@
-# 01.2 Full-Time Lesson Plan: Introduction to HTML and CSS
+# 01.2 Full-Time Lesson Plan: HTML, CSS, and Git
 
 ## Overview
 
