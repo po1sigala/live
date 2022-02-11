@@ -30,7 +30,7 @@ In this demo, you will create a profile and verify JSON Web Tokens to log into a
 
 * **DO NOT** explain the code `resolver.js` as that is the objective of the following `22-Stu_Sign-JWT` activity!
 
-* To demonstrate how it all works, run `npm run watch` in your command line and open your browser to <http://localhost:3001/graphql> to view the Apollo Studio Explorer.
+* To demonstrate how it all works, run `npm run watch` in your command line and open your browser to <http://localhost:3001/graphql> to view the Apollo Sandbox.
 
   * Query all users for their `email` and `password`. Make note of one user's email and password to test out the `login()` mutation.
 
@@ -43,7 +43,7 @@ In this demo, you will create a profile and verify JSON Web Tokens to log into a
     }
     ```
 
-  * Open another tab in Apollo Studio Explorer and test the `login()` mutation using the query variables `email` and `password` of the user noted above. 
+  * Open another tab in Apollo Sandbox and test the `login()` mutation using the query variables `email` and `password` of the user noted above.
 
     ```graphql
     mutation login($email: String!, $password: String!) {
