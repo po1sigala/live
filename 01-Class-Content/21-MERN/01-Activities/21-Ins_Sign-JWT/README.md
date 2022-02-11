@@ -30,7 +30,7 @@ In this demo, you will create a profile and verify JSON Web Tokens to log into a
 
 * **DO NOT** explain the code `resolver.js` as that is the objective of the following `22-Stu_Sign-JWT` activity!
 
-* To demonstrate how it all works, run `npm run watch` in your command line and open your browser to <http://localhost:3001/graphql> to view the Apollo Studio Explorer.
+* To demonstrate how it all works, run `npm run watch` in your command line and open your browser to <http://localhost:3001/graphql> to view the Apollo Sandbox.
 
   * Test logging in with credentials found in the database seed files or use these credentials:
 
