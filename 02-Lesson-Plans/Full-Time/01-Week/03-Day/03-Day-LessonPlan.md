@@ -1,4 +1,4 @@
-# 01.3 Full-Time Lesson Plan: Responsive Design
+# 01.3 Full-Time Lesson Plan: HTML, CSS, and Git and Advanced CSS
 
 ## Overview
 
