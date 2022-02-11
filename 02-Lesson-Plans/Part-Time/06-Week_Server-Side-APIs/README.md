@@ -1,36 +1,36 @@
-# Unit 06 Instructor Overview: Server-Side APIs
+# Module 06 Instructor Overview: Server-Side APIs
 
 ## Overview
 
-In this unit, you will teach students how to use the `fetch()` method to make requests to the GitHub API and convert the returned data into HTML elements. You will also discuss the client-server model and leverage the Chrome DevTools Network tab to verify response statuses.
+In this module, you will teach students how to use the `fetch()` method to make requests to the GitHub API and convert the returned data into HTML elements. You will also discuss the client-server model and leverage the Chrome DevTools Network tab to verify response statuses.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/06-Server-Side-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
-* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Module 09, so until then, our activities will continue to use ES5 syntax.
 
 * Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
-* Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
+* Students will use the GitHub API for activities and the OpenWeather API for their Challenge. The OpenWeather API requires signing up for a key.
 
-* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+* Remind students to complete this module's assessment near the end of the week. Students can find it in the Weekly Wrap-Up in Canvas.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career-Connection folder](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
+For the next two modules, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is their only chance to truly learn Git collaboration.
 
 However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -40,13 +40,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [06.3 Lesson Plan](./03-Day_Fetch-Review/06.3-LESSON-PLAN.md)
 
-### Unit Homework
+### Challenge
 
-  * [Unit 06 Homework](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
+  * [Module 06 Challenge](../../../01-Class-Content/06-Server-Side-APIs/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+  * [Module 06: Server-Side APIs](https://docs.google.com/presentation/d/1-5nadf7eI4RgU5V_ymwD-NMWlwO20TDvkb3a4Xm80eM/edit?usp=sharing)
 
 ### Algorithms
 
