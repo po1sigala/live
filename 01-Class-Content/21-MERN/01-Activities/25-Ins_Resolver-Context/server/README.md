@@ -43,7 +43,11 @@ In this demo, you will create a profile and verify JSON Web Tokens to log into a
     }
     ```
 
+<<<<<<< HEAD
   * Open another tab in Apollo Sandbox and test the `login()` mutation using the query variables `email` and `password` of the user noted above.
+=======
+  * Open another tab in Apollo Sandbox and test the `login()` mutation using the query variables `email` and `password` of the user noted above. 
+>>>>>>> 4d6fbbb140f6d48eaa2469fc8264e7e99e97126c
 
     ```graphql
     mutation login($email: String!, $password: String!) {

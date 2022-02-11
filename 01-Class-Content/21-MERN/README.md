@@ -10,7 +10,11 @@ You’ll use React Router to make the application behave more like a multi-page 
 
 The following topics will be covered in this unit:
 
+<<<<<<< HEAD
 * [Apollo Sandbox](https://www.apollographql.com/docs/studio/getting-started/)
+=======
+* [Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/#publishing-schemas-from-sandbox)
+>>>>>>> 4d6fbbb140f6d48eaa2469fc8264e7e99e97126c
 
 * [GraphQL Query](https://graphql.org/learn/queries/)
 
