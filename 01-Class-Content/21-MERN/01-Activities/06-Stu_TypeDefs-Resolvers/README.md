@@ -6,7 +6,7 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when a query in the Apollo Studio Explorer is able to return data similar to the following:
+* It's done when a query in the Apollo Sandbox is able to return data similar to the following:
 
   ```json
   "professors": [

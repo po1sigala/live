@@ -162,7 +162,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * 🔑 **GraphQL** is a query language that allows us to build even complex queries quickly and concisely, helping to make sure our queries fetch data -- and only the data we need -- quickly.
 
-  * Apollo Sandbox is an Apollo Studio Explorer tool and is a great way to to visually explore how GraphQL can be used to request and fetch data.
+  * Apollo Sandbox is an Apollo Sandbox tool and is a great way to to visually explore how GraphQL can be used to request and fetch data.
   
   * 🔑 Using the Apollo Sandbox, we can enter a query to retrieve data from our database. This query will return the names of all the classes in our database:
 
