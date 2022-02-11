@@ -1,12 +1,12 @@
-# 03.3 Full-Time Lesson Plan: Server-side APIs
+# 03.3 Full-Time Lesson Plan: Third-Party APIs and Server-Side APIs
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 5 through `08-Stu_Parse_JSON` in Unit 6.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Module 05 through `08-Stu_Parse_JSON` in Module 06.
 
 * Students will be using Fetch today to make requests to APIs. Take a few minutes before class to get familiar with the [MDN Web Docs on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Module 09, so until then, our activities will continue to use ES5 syntax.
 
 * GitHub's API is the only one we will make requests to, so familiarize yourself with the [GitHub documentation on the REST API](https://docs.github.com/en/rest). Students will rely heavily on it in class and might need help finding answers.
 
@@ -32,7 +32,7 @@ By the end of class students will be able to
 
 ## Slide Deck
 
-* [Unit 06 Slide Deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+* [Module 06 Slide Deck](https://docs.google.com/presentation/d/1-5nadf7eI4RgU5V_ymwD-NMWlwO20TDvkb3a4Xm80eM/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -41,7 +41,7 @@ By the end of class students will be able to
 | 10:00AM| 1   | Instructor Demo: Mini Project       | 0:05     |
 | 10:40AM| 2   | Student Do: Mini Project            | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini Project     | 0:10     |
-| 11:15AM| 4   | Introduce Homework                  | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                 | 0:05     |
 | 11:20AM| 5   | Flex                                | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity      | 0:10     |
 | 12:00PM| 7   | BREAK                               | 0:30     |
@@ -89,7 +89,7 @@ By the end of class students will be able to
 
 ```md
 
-# Mini-Project: Project Tracker
+# Module 05 Mini-Project: Project Tracker
 
 In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts. Break up these phases amongst members of your team.
 
@@ -293,9 +293,9 @@ While you build, remember the following guidelines:
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
   * We see a daily planner with the current day displayed on top and a calendar with timeblocks.
 
@@ -317,25 +317,25 @@ While you build, remember the following guidelines:
 
   * 🙋 We are creating interactive webpages that are dynamically updated using JavaScript. We are also learning to use different libraries that enhance the quality of our web apps.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 * Answer any questions before ending the class.
 
 ### 5. FLEX (30 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 * If there were any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
 
-* Ask the class if there is anything they would like to review before moving on to Unit 6.
+* Ask the class if there is anything they would like to review before moving on to Module 06.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the Unit 6 [slide deck](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the Module 6 [slide deck](https://docs.google.com/presentation/d/1-5nadf7eI4RgU5V_ymwD-NMWlwO20TDvkb3a4Xm80eM/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **Server-Side APIs**
 
-    * This unit is all about server-side APIs, which are APIs that help us more on the data side of applications than the functional side.
+    * This module is all about server-side APIs, which are APIs that help us more on the data side of applications than the functional side.
 
   * **The Big Picture**
 
@@ -343,21 +343,21 @@ While you build, remember the following guidelines:
 
   * **Boot Camp Pointers**
 
-    * Students are routinely challenged during class and homework assignments. Remind them that they’re not alone through the grind! Ask them to rely on their support systems more readily as they start reaching the second phase of the program. 
+    * Students are routinely challenged during class and Challenge assignments. Remind them that they’re not alone through the grind! Ask them to rely on their support systems more readily as they start reaching the second phase of the program. 
 
   * **This Week: Server-Side APIs**
 
-    * Walk through the learning objectives for the week with your class. These are the things they should expect to know by the end of the unit. 
+    * Walk through the learning objectives for the week with your class. These are the things they should expect to know by the end of the module. 
 
   * **This Week's Assignment**
 
-    * Use the assignment description from the unit overview to talk through the different requirements and how they align with the concepts learned throughout the module.
+    * Use the assignment description from the module overview to talk through the different requirements and how they align with the concepts learned throughout the module.
 
   * **Career Connection**
 
-    * Use this slide to speak to you students will use the unit’s content in their careers going forward. It will help provide much-needed context. For many developers, server-side APIs are an integral piece of their day-to-day functions. Take a moment to talk about how you may have used them at work. 
+    * Use this slide to speak to you students will use the module's content in their careers going forward. It will help provide much-needed context. For many developers, server-side APIs are an integral piece of their day-to-day functions. Take a moment to talk about how you may have used them at work. 
 
-    * Remember that students will also be using dynamically created HTML and CSS in their homework assignment this week, so you can feel free to talk about that as well. 
+    * Remember that students will also be using dynamically created HTML and CSS in their Challenge assignment this week, so you can feel free to talk about that as well. 
 
   * **Where do web applications live?**
 
@@ -411,7 +411,7 @@ While you build, remember the following guidelines:
 
 * Navigate to `27-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-  * The mini-project for this unit will use everything we've learned so far to build a search application that retrieves data from the Library of Congress.
+  * The mini-project for this module will use everything we've learned so far to build a search application that retrieves data from the Library of Congress.
 
   * We can search for something by filling out the form and selecting the form's submit button.
 
