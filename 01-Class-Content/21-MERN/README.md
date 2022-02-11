@@ -4,17 +4,13 @@
 
 This week, you will use your skills in MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
 
-You’ll use React Router to make the application behave more like a multi-page application, allowing users to bookmark URLs and use the browser’s forward and back buttons. You’ll also add GraphQL, an open-source data query and manipulation language for APIs that lets you fetch only the data you want from the database when you need it. Finally, you’ll learn how to use a JSON Web Token, or JWT, to add authentication to your site. 
+You’ll use React Router to make the application behave more like a multi-page application, allowing users to bookmark URLs and use the browser’s forward and back buttons. You’ll also add GraphQL, an open-source data query and manipulation language for APIs that lets you fetch only the data you want from the database when you need it. Finally, you’ll learn how to use a JSON Web Token, or JWT, to add authentication to your site.
 
 ## Key Topics
 
 The following topics will be covered in this unit:
 
-<<<<<<< HEAD
-* [Apollo Sandbox](https://www.apollographql.com/docs/studio/getting-started/)
-=======
 * [Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/#publishing-schemas-from-sandbox)
->>>>>>> 4d6fbbb140f6d48eaa2469fc8264e7e99e97126c
 
 * [GraphQL Query](https://graphql.org/learn/queries/)
 
