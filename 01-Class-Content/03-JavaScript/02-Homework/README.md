@@ -46,7 +46,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the preceding acceptance criteria
+* Satisfies all of the preceding acceptance criteria.
 
 ### Deployment: 32%
 
