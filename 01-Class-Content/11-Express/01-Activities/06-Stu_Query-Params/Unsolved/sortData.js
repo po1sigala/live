@@ -3,17 +3,17 @@ const sortData = (firstKey, secondKey, type) => {
   switch (type) {
     case 'asc': {
       return (a, b) => {
-        if (a[firstKey] > b[firstKey]) {
+        if (a[firstKey] < b[firstKey]) {
           return -1;
         }
-        if (a[firstKey] < b[firstKey]) {
+        if (a[firstKey] > b[firstKey]) {
           return 1;
         }
 
-        if (a[secondKey] > b[secondKey]) {
+        if (a[secondKey] < b[secondKey]) {
           return 1;
         }
-        if (a[secondKey] < b[secondKey]) {
+        if (a[secondKey] > b[secondKey]) {
           return -1;
         }
         return 0;
@@ -21,17 +21,17 @@ const sortData = (firstKey, secondKey, type) => {
     }
     case 'dsc': {
       return (a, b) => {
-        if (a[firstKey] < b[firstKey]) {
+        if (a[firstKey] > b[firstKey]) {
           return -1;
         }
-        if (a[firstKey] > b[firstKey]) {
+        if (a[firstKey] < b[firstKey]) {
           return 1;
         }
 
-        if (a[secondKey] < b[secondKey]) {
+        if (a[secondKey] > b[secondKey]) {
           return 1;
         }
-        if (a[secondKey] > b[secondKey]) {
+        if (a[secondKey] < b[secondKey]) {
           return -1;
         }
         return 0;
