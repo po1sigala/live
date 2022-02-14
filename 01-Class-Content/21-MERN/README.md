@@ -86,6 +86,8 @@ Career services material for this unit is located in the [Career Connection fold
 
 During the next unit, we build on our full-stack app development skills as we learn about state management and the Context API. We will also review the key concepts covered in this unit to help you prepare for your final project.
 
+Remember the Unit 22 Homework will be an optional assignment. It is not required for submission and your final grade will not be affected in any way. Next week's Homework is an opportunity for you to further practice your skills and get feedback on it.
+
 ## Resources
 
 Here are some additional resources to help solidify the topics covered in this unit.

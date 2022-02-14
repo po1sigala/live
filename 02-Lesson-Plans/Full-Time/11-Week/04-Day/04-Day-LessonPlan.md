@@ -14,11 +14,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Today's activities emphasize the skills needed for full-stack app development. Because the code and activities will be familiar, encourage students to use activity time to further explore the code, ask questions, and build on their existing skills. For an additional challenge, encourage students to explore the Bonus.
 
-* Some activities will use the React practice app. Remind students to copy the `src` directory into the React practice app. The `README.md` files of these activities will also remind students to do so.
-
-* Be sure to create a practice React app before class by navigating to `01-Class-Content/22-State-dev/01-Activities` and running `npx create-react-app 00-practice-app`.
-
-* If you encounter an error regarding conflicting versions of `eslint` when setting up the practice React app, run `echo "SKIP_PREFLIGHT_CHECK=true" > .env`.
+* Some activities will use the React practice app created in the previous class. Remind students to copy the `src` directory into the React practice app. The `README.md` files of these activities will also remind students to do so.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
@@ -638,9 +634,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
     ```js
     <Routes>
-      <Route 
-        path="/" 
-        element={<Home />} 
+      <Route
+        path="/"
+        element={<Home />}
       />
     </Routes>
     ```
@@ -655,9 +651,9 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
     ```js
     <Routes>
-      <Route 
-        path="/profiles/:profileId" 
-        element={<Profile />} 
+      <Route
+        path="/profiles/:profileId"
+        element={<Profile />}
       />
     </Routes>
     ```
@@ -799,7 +795,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
     ```js
     <Routes>
-      <Route 
+      <Route
         path="/thoughts/:thoughtId">
         element={<SingleThought />}
       />

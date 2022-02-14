@@ -573,12 +573,36 @@
                   status: false
                 },
                 {
-                  title:
-                    "Each project is listed with title, deployment URL, GitHub URL, and a screenshot",
+                  title: "Each project is listed with title, deployment URL, GitHub URL, and a screenshot",
                   score: 8,
-                  type: "true false",
-                  message:
-                    "Each project is not listed with title, deployment URL, GitHub URL, and a screenshot",
+                  type: "likert",
+                  options: [
+                    {
+                      message: "All of the projects are missing all of the 4 following criteria: title, deployment URL, GitHub URL, and a screenshot",
+                      score: 0
+                    },
+                    {
+                      message: "Most of the projects are missing all 4 of the following 4 criteria: title, deployment URL, GitHub URL, or screenshot",
+                      score: 1
+                    },
+                    {
+                      message: "Any of the projects are missing 3 of the following 4 criteria: title, deployment URL, GitHub URL, or screenshot",
+                      score: 2
+                    },
+                    {
+                      message: "Any of the projects are missing 2 of the following 4 criteria: title, deployment URL, GitHub URL, or screenshot",
+                      score: 4
+                    },
+                    {
+                      message: "Any of the projects are missing 1 of the following 4 criteria: title, deployment URL, GitHub URL, or screenshot",
+                      score: 6
+                    },
+                    {
+                      message: "Each project is listed with title, deployment URL, GitHub URL, and a screenshot",
+                      score: 8
+                    }
+                  ],
+                  message: "",
                   status: false
                 },
                 {

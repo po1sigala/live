@@ -14,27 +14,31 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
+* The activities in these units will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+
+* Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most of the activities, you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to `localhost:3001/graphql` in the browser to view Sandbox in the browser.
+
+* These activities use Apollo Server 3, which include a number of breaking changes from Apollo Server 2. Apollo Server 3 requires `graphql` 15.3.0 or later to run successfully. For more information about migrating to Apollo Server 3, including bumped dependencies and removed integrations, refer to [Apollo Docs on migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/).
+
+* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+
+* The `17-Ins_Apollo-Cache` activity in Unit 21 uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
+
+* If you get an `eslint` preflight check error when running the Unit 21 Homework application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
+
 * Let students know that the **Unit 22 Homework will be optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
-* Some activities in Unit 21 rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
-
-* For a refresher on how to use the Apollo Sandbox, see the [Apollo Docs on Apollo Sandbox]().
-
-* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
-
-* For the React activities, be sure to create a practice React app before class by navigating to `01-Class-Content/22-State-dev/01-Activities` and running `npx create-react-app 00-practice-app`.
+* For the React activities in Unit 22, be sure to create a practice React app before class by navigating to `01-Class-Content/22-State/01-Activities` and running `npx create-react-app 00-practice-app`.
 
 * Before class, install the [React developer tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). It will be used in the Unit 22 `O1-Ins_Providers` demo.
 
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
+* In the state management activities in Unit 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code.
 
-* In the state management activities in Unit 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documention to find information on specific issues and then apply that information to their own code.
+* Many of the activities in Unit 22 allow students to review the skills needed for their final project as well as full-stack application development. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
 
-* Many of the activities in Unit 22 allow students to review the skills needed for final projects. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
+* In the `24-Stu_Stripe` activity of Unit 22, students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the Unit 22 Homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the Homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
 
-* In the `24-Stu_Stripe` activity of Unit 22, students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the Unit 22 homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
+* We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to the [Stripe docs on testing your integration](https://stripe.com/docs/testing).
 
 ## Career Connection
 
@@ -44,7 +48,7 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 ## Heads-Up
 
-In Unit 12, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack app. Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
+In Unit 23, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack app. Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
 
 There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
@@ -70,7 +74,7 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
 
-    * The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
+  * The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
 ### Slide Decks
 
@@ -102,17 +106,15 @@ Unit 22:
 
 ### Resources
 
-* [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+* [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/)
 
-* [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+* [Apollo Docs on migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/)
 
-* [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
-
-* [Apollo Docs on queries and mutations](https://graphql.org/learn/queries/)
+* [GraphQL documentation on queries and mutations](https://graphql.org/learn/queries/)
 
 * [Apollo Docs on writing query resolvers](https://www.apollographql.com/docs/tutorial/resolvers/)
 
-* [GraphQL Docs on passing arguments](https://graphql.org/graphql-js/passing-arguments/)
+* [GraphQL documentation on passing arguments](https://graphql.org/graphql-js/passing-arguments/)
 
 * [Apollo Docs on mutations](https://www.apollographql.com/docs/react/data/mutations/)
 
@@ -120,13 +122,17 @@ Unit 22:
 
 * [Apollo Docs on fetching data with queries](https://www.apollographql.com/docs/tutorial/queries/)
 
-* [React Router quick start guide](https://reactrouter.com/docs/en/v6/getting-started/overview#overview)
+* [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US)
+
+* [React Router quick start guide](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction)
 
-* [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+* [Apollo Docs on authentication and authorization](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
 * [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
+
+* [Deploy with Heroku and MongoDB Atlas Blog Post](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
 * [Context API documentation](https://reactjs.org/docs/context.html)
 

@@ -12,17 +12,17 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Today's slide deck includes an introduction to the MERN framework. This is a great opportunity to remind students of how far they have come since starting with HTML and CSS and encourage them to start thinking about how they can apply their new skills to their final, full-stack projects and their future careers.
 
-* The second Stoking Curiosity is intentionally structured to allow students to think about what an API is and how it is used in a full-stack MERN app. Rather than provide a quick answer to the initial question, encourage students to share their observations in their own words and frame their observations in the context of what they are learning. This will help solidify their understanding of this important concept.
+* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+
+* Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most activities during today’s class, you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to `localhost:3001/graphql` in the browser to view Sandbox in the browser.
 
 * Today's activities use Apollo Server 3, which include a number of breaking changes from Apollo Server 2. Apollo Server 3 requires `graphql` 15.3.0 or later to run successfully. For more information about migrating to Apollo Server 3, including bumped dependencies and removed integrations, refer to [Apollo Docs on migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/).
 
-* Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most activities during today’s class you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to localhost:3001/graphql in the browser to view Sandbox in the browser.
+* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
-* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+* For students who need help opening up the apps used in today's activities or accessing the Apollo Sandbox, step-by-step instructions are found in `02-Stu_Apollo-Server/README.md`.
 
-* For a refresher on how to use the Apollo Sandbox, see the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
-
-* For students who need help opening up the apps used in today's activities or accessing Apollo Sandbox, step-by-step instructions are found in `02-Stu_Apollo-Server/README.md`.
+* The second Stoking Curiosity is intentionally structured to allow students to think about what an API is and how it is used in a full-stack MERN app. Rather than provide a quick answer to the initial question, encourage students to share their observations in their own words and frame their observations in the context of what they are learning. This will help solidify their understanding of this important concept.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
@@ -71,14 +71,14 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 | 12:40PM| 15  | Instructor Demo: Mutations                | 0:05     |
 | 12:45AM| 16  | Student Do:  Mutations                    | 0:15     |
 | 1:00PM | 17  | Instructor Review:  Mutations             | 0:15     |
-| 1:15PM| 18  | Instructor Do: Stoke Curiosity             | 0:10     |
-| 1:25PM| 19  | Instructor Demo: MERN Setup                | 0:05     |
-| 1:30PM| 20  | Student Do: MERN Setup                     | 0:15     |
-| 1:45PM| 21  | Instructor Review:  MERN Setup             | 0:10     |
-| 1:55PM| 22  | Instructor Demo: useQuery                  | 0:05     |
-| 2:00PM| 23  | Student Do: useQuery                       | 0:15     |
-| 2:15PM| 24  | Instructor Review: useQuery                | 0:15     |
-| 2:30PM| 25  | END                                        | 0:00     |
+| 1:15PM | 18  | Instructor Do: Stoke Curiosity            | 0:10     |
+| 1:25PM | 19  | Instructor Demo: MERN Setup               | 0:05     |
+| 1:30PM | 20  | Student Do: MERN Setup                    | 0:15     |
+| 1:45PM | 21  | Instructor Review:  MERN Setup            | 0:10     |
+| 1:55PM | 22  | Instructor Demo: useQuery                 | 0:05     |
+| 2:00PM | 23  | Student Do: useQuery                      | 0:15     |
+| 2:15PM | 24  | Instructor Review: useQuery               | 0:15     |
+| 2:30PM | 25  | END                                       | 0:00     |
 
 ---
 
@@ -135,20 +135,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * 🙋 The MERN framework uses the MVC pattern, a pattern common in software development, to connect a front end, back end, and database to create a full-stack app. It also uses JavaScript technologies commonly used in development on the job. Learning MERN is also a great way to become familiar with full-stack web development and gain skills in building interactive apps that are scalable and capable of handling large data sets.
 
 * Answer any questions before proceeding to the next activity.
-
-* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
-
-* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
-
-* Some activities in this unit rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
-
-* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
-
-* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
-
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
-
-* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
 
 ### 2. Instructor Demo: Apollo Server (5 min)
 
@@ -304,8 +290,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * What are the pros and cons of GraphQL vs. REST?
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -331,6 +315,8 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
   * ✔️ `typeDefs`
 
   * ✔️ `resolvers`
+
+    * ✔️ `startApolloServer` async function
 
 * Open `02-Stu_Apollo-Server/Solved/server.js` in your IDE and explain the following:
 
@@ -393,6 +379,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 * Some activities in this unit rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+
      ```js
      const resolvers = {
        Query: {
@@ -408,12 +395,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we use Apollo Server to integrate GraphQL into our app?
-
-* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
-
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
-
-* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -532,9 +513,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * What other GraphQL IDEs can you use besides the built-in Sandbox?
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
-
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -786,8 +764,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * What other types can be used in a GraphQL schema?
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -850,7 +826,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      }
      ```
 
-* Navigate to `6-Stu_TypeDefs-Resolvers/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
+* Navigate to `06-Stu_TypeDefs-Resolvers/Solved` in your command line and run `npm install`, `npm run seed`, and `npm start`.
 
 * Open `localhost:3001/graphql` in your browser and demonstrate the following:
 
@@ -1010,9 +986,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * How do you differentiate between required and optional arguments?
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
-
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1101,7 +1074,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      }
      ```
 
-  * We click the Play button. If our resolver is successful, both the class and professor's name will be fetched.
+  * We click the play button. If our resolver is successful, both the class and professor's name will be fetched.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1121,7 +1094,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 ### 15. Instructor Demo: Mutations (5 min)
 
-* Open `09-schemas/typeDefs.js` in your IDE and explain the following:
+* Open `09-Ins_Mutations/schemas/typeDefs.js` in your IDE and explain the following:
 
   * GraphQL does more than retrieve existing data. We can also use GraphQL to write data as well.
 
@@ -1137,7 +1110,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
        }
      ```
 
-* Open `09-Ins_Mutations//schemas/resolvers.js` in your IDE and explain the following:
+* Open `09-Ins_Mutations/schemas/resolvers.js` in your IDE and explain the following:
 
   * 🔑 We enter the arguments that we wanted passed in as a parameter in the same order as we defined the fields in the mutation type:
 
@@ -1223,9 +1196,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      * What tools will you need to run GraphQL queries in your own front end?
 
      Use [Google](https://www.google.com) or another search engine to research this.
-
-     ---
-
      ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1449,8 +1419,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
    * What GitHub tool can we use to automate functionality such as running tests or deploying our applications?
 
    Use [Google](https://www.google.com) or another search engine to research this.
-
-   ---
    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1477,7 +1445,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `../client/build'`
 
-* Open `12-MERN-Setup/Solved/client/package.json` in your IDE and explain the following:
+* Open `12-Stu_MERN-Setup/Solved/client/package.json` in your IDE and explain the following:
 
   * The `client` directory contains all the code needed to run our React.js front end.
 
@@ -1487,7 +1455,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      "proxy": "http://localhost:3001"
      ```
 
-* Open `12-MERN-Setup/Solved/package.json` in your IDE and explain the following:
+* Open `12-Stu_MERN-Setup/Solved/package.json` in your IDE and explain the following:
 
   * At the root of our project folder, we have a third app that contains a `package.json`.
 
@@ -1519,7 +1487,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
      ```
 
-* Open `12-MERN-Setup/Solved/server/server.js` in your IDE and explain the following:
+* Open `12-Stu_MERN-Setup/Solved/server/server.js` in your IDE and explain the following:
 
   * When we are ready to deploy our app, we will create a production build of our React.js front end and set the Express.js server to serve the `build` directory. This will allow our front end and back end to operate from the same port when in production:
 
@@ -1716,9 +1684,6 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
    * What React API is the Apollo Client provider functionality built with?
 
    Use [Google](https://www.google.com) or another search engine to research this.
-
-   ---
-
    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1741,7 +1706,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * ✔️ `useQuery(QUERY_THOUGHTS)`
 
-* Open `14-Stu_UseQuery/client/src/App.js` in your IDE and explain the following:
+* Open `14-Stu_useQuery/client/src/App.js` in your IDE and explain the following:
 
   * To send requests, we first have to set up Apollo Client in our `App.js` file and create a new `ApolloClient` instance that identifies the URL of our GraphQL server. This step has already been done for us:
 
@@ -1752,7 +1717,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      });
      ```
 
-* Open `14-Stu_UseQuery/client/src/utils/queries.js` in your IDE and explain the following:
+* Open `14-Stu_useQuery/client/src/utils/queries.js` in your IDE and explain the following:
 
   * The app is running and ready to make requests. Let's create a new query.
 
@@ -1784,7 +1749,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      `;
      ```
 
-* Open `14-Stu_UseQuery/client/src/pages/Home.js` in your IDE and explain the following:
+* Open `14-Stu_useQuery/client/src/pages/Home.js` in your IDE and explain the following:
 
   * 🔑 To use our query, we start by importing the `useQuery` Hook and the query into the component where we want the data to be displayed:
 

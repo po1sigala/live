@@ -8,11 +8,13 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * In this lesson, students will complete activities `15-Ins_useMutation` through `27-Evr_GitHub-Actions`.
 
+* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to token based authentication and the MERN framework may face.
+
+* In the previous class, students were introduced to MERN's three-layer architecture and learned how to construct a GraphQL API. Encourage students to refer back to that material, as needed, to review these key concepts.
+
 * The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you have not yet done it, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the homework demo from the class repo to avoid conflicting `eslint` installations.
-
-* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to the MERN framework and React.js may face.
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they work on the activity and do a brief review at the end.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
@@ -148,7 +150,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ When are mutations executed using `useMutation`?
+  * ☝️ When are mutations executed using `useMutation()`?
 
   * 🙋 Mutations are not immediately executed when the page is rendered. Instead, the `useMutation()` Hook returns a mutation function that can be called inside another function. This makes it easy to attach a mutation to an event, like a form submission.
 
@@ -192,7 +194,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
    * How can Apollo Client be set up as a state management tool?
 
    Use [Google](https://www.google.com) or another search engine to research this.
-
    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -219,7 +220,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Open `16-Stu_useMutation/Solved/client/src/utils/mutations.js` in your IDE and explain the following:
 
-  * 🔑 The `ADD-THOUGHT` mutation has two variables `$thoughtText` and `$thoughtAuther`. We will use these variables to pass back data that is entered by the user:
+  * 🔑 The `ADD-THOUGHT` mutation has two variables `$thoughtText` and `$thoughtAuthor`. We will use these variables to pass back data that is entered by the user:
 
      ```js
      ($thoughtText: String!, $thoughtAuthor: String!)
@@ -429,9 +430,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * What is another means of storing data globally client-side that we can implement?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -881,7 +879,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     }
     ```
 
-  * When we click the Play Button, we see that a signed token is stored in the `token` field.
+  * When we click the play button, we see that a signed token is stored in the `token` field.
 
 * Open the [JSON Web Token Debugger](https://jwt.io/#debugger-io) in your browser and demonstrate the following:
 
@@ -931,8 +929,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * What are the pros and cons of using JSON Web Tokens?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1200,9 +1196,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * When would you use JSON Web Tokens vs. cookies for user authentication?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1404,8 +1397,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * How could we implement authentication in a React app without using GraphQL?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.

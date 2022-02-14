@@ -72,7 +72,9 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 ## Homework
 
-Your homework this week is to refactor the e-commerce platform from [Activity 26](./01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. If you haven't yet, download the [Activity 26 code](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
+This unit's Homework is **optional**. It is not required for submission and your final grade will not be affected in any way. The Unit 22 Homework is an opportunity for you to further practice your skills and get feedback on it.
+
+The Homework is to refactor the e-commerce platform from the [26-Stu_Actions-Reducers](./01-Activities/26-Stu_Actions-Reducers/Unsolved) activity so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. If you haven't yet, download the [26-Stu_Actions-Reducers code](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
 
 ## Career Connection
 
@@ -80,7 +82,7 @@ Career services material for this unit is located in the [Career Connection fold
 
 ## Heads-Up
 
-In Week 23, you will apply your skills to designing and developing a full-stack app to showcase to employers. For this final project, you will choose your own team and collaborate to plan and develop an app from idea to finished project, with the support of your instructional team.
+In Unit 23, you will apply your skills to designing and developing a full-stack app to showcase to employers. For this final project, you will choose your own team and collaborate to plan and develop an app from idea to finished project, with the support of your instructional team.
 
 ## Resources
 
