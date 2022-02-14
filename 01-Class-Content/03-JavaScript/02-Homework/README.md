@@ -46,9 +46,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+* Satisfies all of the preceding acceptance criteria.
 
 ### Deployment: 32%
 
