@@ -1,10 +1,10 @@
-# Unit 05 Instructor Overview: Third-Party-APIs
+# Module 05 Instructor Overview: Third-Party APIs
 
 ## Overview
 
-In this unit, you will implement CDNs to leverage third-party APIs, like CSS frameworks, JavaScript libraries, and custom fonts. You will use jQuery to perform DOM manipulation, implement Bootstrap and Google Fonts, and introduce jQuery UI and Moment.js.
+In this module, you will implement CDNs to leverage third-party APIs, like CSS frameworks, JavaScript libraries, and custom fonts. You will use jQuery to perform DOM manipulation, implement Bootstrap and Google Fonts, and introduce jQuery UI and Moment.js.
 
-  * Refer to the [Class Content Unit Overview](../../../01-Class-Content/05-Third-Party-APIs/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
@@ -12,7 +12,7 @@ In this unit, you will implement CDNs to leverage third-party APIs, like CSS fra
 
 * Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
 
-* 05.3 lesson plan includes an activity that involves the `Moment.js` library. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. We will still use it in this unit, but feel free to refer the students to other libraries, such as:
+* 05.3 lesson plan includes an activity that involves the `Moment.js` library. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. We will still use it in this module, but feel free to refer the students to other libraries, such as:
 
   * [Luxon](https://moment.github.io/luxon/)
 
@@ -24,21 +24,21 @@ In this unit, you will implement CDNs to leverage third-party APIs, like CSS fra
 
 * The 05.3 lesson plan also includes an Everyone Do: Git activity. If the students struggle with that activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
-* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+* Remind students to complete this module's assessment near the end of the week. Students can find it in the Weekly Wrap-Up in Canvas.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-Next unit will cover server-side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects during this unit.
+The next module will cover server-side APIs. It is recommended that you try to fill any conceptual holes students have about JavaScript objects during this module.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -48,13 +48,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [05.3 Lesson Plan](03-Day_jQueryUI-Moment/05.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
+* [Module 05 Challenge](../../../01-Class-Content/05-Third-Party-APIs/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
+* [Module 05 Slide Deck](https://docs.google.com/presentation/d/1FjKh60N-t5lF3XMmLDiEfCgiNIqAxbDbIyGZLdtGhjw/edit?usp=sharing)
 
 ### Algorithms
 

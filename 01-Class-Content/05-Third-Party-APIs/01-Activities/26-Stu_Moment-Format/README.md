@@ -14,7 +14,7 @@ Refer to the following documentation:
 
 [Moment.js Docs](https://momentjs.com/docs/#/displaying/)
 
-**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this unit.
+**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this module.
 
 ## 💡 Hints
 
