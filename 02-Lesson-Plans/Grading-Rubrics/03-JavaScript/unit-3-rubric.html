@@ -619,20 +619,24 @@
                   status: false
                 },
                 {
-                  title: "While randomly generated passwords may not necessarily include all user selections for character type, the application's generated passwords consistently demonstrate a valid reflection of user input",
+                  title: "Application generates passwords that consistently demonstrate a valid reflection of user input (but may not necessarily include all user selections for character type)",
                   score: 8,
                   type: "likert",
                   options: [
                     {
-                      message: "Application does not generate a password at all",
+                      message: "Application doesn't generate a password at all",
                       score: 0
                     },
                     {
-                      message: "Application's generated password always includes at least one selected character type, but also character type(s) not selected by user",
+                      message: "Application generates password that only includes character types not selected by user",
+                      score: 2
+                    },
+                    {
+                      message: "Application generates password that always includes at least one selected character type, but also character type(s) not selected by user",
                       score: 4
                     },
                     {
-                      message: "Application's generated password always includes at least one selected character type, and never others",
+                      message: "Application generates passwords that consistently demonstrate a valid reflection of user input (but may not necessarily include all user selections for character type)",
                       score: 8
                     }
                   ],
@@ -640,11 +644,11 @@
                   status: false
                 },
                 {
-                  title: "Application generates valid password based on provided options in all above metrics",
+                  title: "Application generates valid password based on options outlined in all other criteria",
                   score: 8,
                   type: "true false",
                   message:
-                    "Application doesn't generate valid password based on password options",
+                    "Application doesn't generate valid password based on options outlined in all other criteria",
                   status: false
                 }
               ]
