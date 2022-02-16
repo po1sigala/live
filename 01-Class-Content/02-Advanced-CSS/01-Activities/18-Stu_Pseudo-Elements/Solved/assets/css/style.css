@@ -68,8 +68,7 @@ span[data-descr] {
 }
 
 /* Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
+span[data-descr]:hover::after {
   content: attr(data-descr);
   position: absolute;
   left: 0px;
