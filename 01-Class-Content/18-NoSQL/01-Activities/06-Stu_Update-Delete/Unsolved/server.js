@@ -1,7 +1,7 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
 // We import the ObjectId() function from MongoDB
-const { ObjectId } = require('mongodb');
+const ObjectId = require('mongodb').ObjectId;
 
 const app = express();
 const port = 3001;
@@ -43,4 +43,4 @@ app.get('/read', (req, res) => {
     });
 });
 
-// TODO: Add Delete route that deletes by title provided in the request body
+// TODO: Add Delete route that uses a filter and  ObjectId() to delete a single document by id
