@@ -10,7 +10,7 @@ You’ll use React Router to make the application behave more like a multi-page 
 
 The following topics will be covered in this unit:
 
-* [GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
+* [Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/#publishing-schemas-from-sandbox)
 
 * [GraphQL Query](https://graphql.org/learn/queries/)
 
@@ -24,7 +24,7 @@ The following topics will be covered in this unit:
 
 * [useQuery Hook](https://www.apollographql.com/docs/tutorial/queries/)
 
-* [React Router](https://reactrouter.com/web/guides/quick-start)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 * [JSON Web Tokens](https://jwt.io/introduction)
 
@@ -96,17 +96,15 @@ Here are some additional resources to help solidify the topics covered in this u
 
 Refer to the Git Guide to review the git concept for this unit. Watch the `📹 Git Guide` video for an additional walkthrough of the git concept.
 
-  * 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions)
+* 📖 [Git Guide: GitHub Actions](./01-Activities/27-Evr_GitHub-Actions)
 
-  * 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
+* 📹 [Git Guide Video: Github Actions](https://2u-20.wistia.com/medias/nlhzi3ktxc)
 
 ### Full-Stack Blog Posts
 
 Check out the [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/) for additional resources, such as walkthroughs, articles, and installation guides.
 
-  * 📖 Blog Post: [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
-
-  * 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+* 📖 Blog Post: [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

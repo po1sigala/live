@@ -8,8 +8,6 @@ In this class, students will be introduced to complex state management within th
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` through `08-Stu_Actions`.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
 * Be sure to create a practice React app before class, by navigating to `01-Class-Content/22-State/01-Activities` and running the following command:
 
   ```sh
@@ -22,7 +20,7 @@ In this class, students will be introduced to complex state management within th
   echo "SKIP_PREFLIGHT_CHECK=true" > .env
   ```
 
-* Install the [React Developer Tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) for your browser. It is used in the first instructor demo.
+* Install the [React Developer Tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) for your browser. It is used in `01-Ins_Providers`.
 
 * Inform students that not every React application calls for the use of complex state management. Explain that it might be beneficial only when data needs to be accessible by many components at different nesting levels.
 
@@ -106,7 +104,7 @@ In this class, students will be introduced to complex state management within th
   ```md
   # Unit 21 Mini-Project: Tech Matchup App
 
-  In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Switch>` component in the routes.
+  In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Route>` component in the routes. During your research, you will likely come across examples and documentation on React Router's `<Switch>` component. As of React Router version 6, the `<Switch>` component no longer exists and will cause your application to break.
 
   ## User Stories
 
@@ -144,15 +142,13 @@ In this class, students will be introduced to complex state management within th
 
   * After implementing GraphQL on the server, what tool can you use to test the queries and mutations?
 
-  * How can we use `<Switch>` to render the `NotFound` page?
+  * How can we use `<Route>` to render the `NotFound` page?
 
   ## 🏆 Bonus
 
   If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
   * Incorporate user authentication so that only logged-in users can create and vote on matchups.
-
-  ---
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -164,6 +160,8 @@ In this class, students will be introduced to complex state management within th
   * ☝️ How comfortable do you feel with this mini-project? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help.
+
+* If students ran into examples or documentation on React Router's `<Switch>` component, explain to them that it was previously used in place of the current `<Routes>` component. When we previously used `<Switch>`, the first -- and only the first -- match of a route would be rendered. However, with React Router v6, the `<Routes>` component was introduced and behaves much like `<Switch>` but looks for routes that best match instead of traversing routes in order.
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
@@ -181,7 +179,7 @@ In this class, students will be introduced to complex state management within th
 
   * ✔️ `useMutation()`
 
-  * ✔️ `<Switch>`
+  * ✔️ `<Route>`
 
 * Open `28-Stu_Mini-Project/Main/server/server.js` in your IDE and explain the following:
 
@@ -346,23 +344,27 @@ In this class, students will be introduced to complex state management within th
 
 * Open `28-Stu_Mini-Project/Main/client/src/App.js` in your IDE and explain the following:
 
-  * 🔑 We use a `<Switch>` component to wrap our routes. When we use `<Switch>`, the first -- and only the first -- match of a route will be rendered. This will render our nested routes properly:
+  * 🔑 Remember to use a `<Routes>` component to wrap all of our routes. This is how to nest our routes properly:
 
     ```js
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/matchup">
-        <Matchup />
-      </Route>
-      <Route exact path="/matchup/:id">
-        <Vote />
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route
+        path="/">
+        element={<Home />}
+      />
+      <Route
+        path="/matchup">
+        element={<Matchup />}
+      />
+      <Route
+        path="/matchup/:id">
+        element={<Vote />}
+      />
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+    </Routes>
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
@@ -373,7 +375,7 @@ In this class, students will be introduced to complex state management within th
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Apollo Docs on Apollo Client](https://www.apollographql.com/docs/react/why-apollo/), the [Apollo Docs on Apollo Server](https://www.apollographql.com/docs/apollo-server/), and the [React Router Docs on Switch](https://reactrouter.com/web/api/Switch,) and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Apollo Docs on Apollo Client](https://www.apollographql.com/docs/react/why-apollo/), the [Apollo Docs on Apollo Server](https://www.apollographql.com/docs/apollo-server/), and the [React Router Docs](https://reactrouter.com/docs/en/v6/getting-started/overview) and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -381,7 +383,7 @@ In this class, students will be introduced to complex state management within th
 
 * Navigate to `02-Homework/Main` in your command line and run `npm install` and `npm run develop`.
 
-* **Note** If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. You can also avoid the error by running the Homework demo from the class repo, to avoid conflicting `eslint` installations.
+* **Note** If you get an `eslint` preflight check error when running the Homework application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. You can also avoid the error by running the Homework from the class repo, to avoid conflicting `eslint` installations.
 
 * Open `localhost:3000` in your browser and demonstrate the following:
 
@@ -409,7 +411,7 @@ In this class, students will be introduced to complex state management within th
 
   * 🙋 Most modern apps require developers to handle user input and store data. Increasingly, apps are also personalized, with each user having access to their own data stored in accounts. This homework is an opportunity to practice the fundamental skills of implementing a GraphQL API in a full-stack MERN app and using authentication to personalize the experience for each user.
 
-* Ask TAs to direct students to the Homework Requirements found in `02/Homework/README.md`.
+* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
 
 ### 5. FLEX (30 min)
 
@@ -541,7 +543,7 @@ In this class, students will be introduced to complex state management within th
 
 ### 8. Instructor Demo: Providers (5 min)
 
-* Copy the `src` directory from `01-Ins_Providers` and paste it into `00-practice-app`.
+* Be sure to have already created the `00-practice-app` React application! Copy the `src` directory from `01-Ins_Providers` and paste it into `00-practice-app`.
 
 * Navigate to `00-practice-app` in your command line and run `npm install` and `npm start`.
 
@@ -549,7 +551,7 @@ In this class, students will be introduced to complex state management within th
 
   * When we run this application, we see in the browser that the user's account information has been made available by the provider.
 
-  * 🔑 Using the React Developer Tools extension, click on components and then click on `Context.Provider`. Here we can see a preview of what data is available to us.
+  * 🔑 Using the [React Developer Tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi), click on components and then click on `Context.Provider`. Here we can see a preview of what data is available to us.
 
     ```json
     {
@@ -672,7 +674,7 @@ In this class, students will be introduced to complex state management within th
 
   * ✔️ `npm run test`
 
-* Open `01-Activities/02-Stu_Providers/Solved/src/utils/StudentContext.js` in your IDE and explain the following:
+* Open `02-Stu_Providers/Solved/src/utils/StudentContext.js` in your IDE and explain the following:
 
   * To create a global state object for this application, we have to first import `createContext` along with `useContext`:
 

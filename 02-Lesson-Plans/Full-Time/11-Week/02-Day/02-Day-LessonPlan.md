@@ -8,13 +8,13 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * In this lesson, students will complete activities `15-Ins_useMutation` through `27-Evr_GitHub-Actions`.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to token based authentication and the MERN framework may face.
+
+* In the previous class, students were introduced to MERN's three-layer architecture and learned how to construct a GraphQL API. Encourage students to refer back to that material, as needed, to review these key concepts.
 
 * The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you have not yet done it, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the homework demo from the class repo to avoid conflicting `eslint` installations.
-
-* It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to the MERN framework and React.js may face.
+* If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they work on the activity and do a brief review at the end.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
@@ -78,7 +78,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Open `http://localhost:3000` to demonstrate the following:
 
-   * 🔑 When we enter a name into the text box and submit the form, a new profile containing the name we entered is created and the profile is displayed on the page.
+  * 🔑 When we enter a name into the text box and submit the form, a new profile containing the name we entered is created and the profile is displayed on the page.
 
   * 🔑 To create and modify data, we use mutations. This allows us to have a full CRUD app.
 
@@ -150,17 +150,17 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ When are mutations executed using `useMutation`?
+  * ☝️ When are mutations executed using `useMutation()`?
 
   * 🙋 Mutations are not immediately executed when the page is rendered. Instead, the `useMutation()` Hook returns a mutation function that can be called inside another function. This makes it easy to attach a mutation to an event, like a form submission.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_useMutation/README.md `.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `16-Stu_useMutation/README.md`.
 
 ### 2. Student Do: useMutation (15 min)
 
-* Direct students to the activity instructions found in `16-Stu_useMutation/README.md `.
+* Direct students to the activity instructions found in `16-Stu_useMutation/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -194,7 +194,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
    * How can Apollo Client be set up as a state management tool?
 
    Use [Google](https://www.google.com) or another search engine to research this.
-
    ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -221,7 +220,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Open `16-Stu_useMutation/Solved/client/src/utils/mutations.js` in your IDE and explain the following:
 
-  * 🔑 The `ADD-THOUGHT` mutation has two variables `$thoughtText` and `$thoughtAuther`. We will use these variables to pass back data that is entered by the user:
+  * 🔑 The `ADD-THOUGHT` mutation has two variables `$thoughtText` and `$thoughtAuthor`. We will use these variables to pass back data that is entered by the user:
 
      ```js
      ($thoughtText: String!, $thoughtAuthor: String!)
@@ -431,9 +430,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * What is another means of storing data globally client-side that we can implement?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -448,7 +444,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
- * ✔️ `TypeError`
+  * ✔️ `TypeError`
 
   * ✔️ `{ data: { addThought } }`
 
@@ -502,10 +498,10 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * React Router is a library that allows us to easily add navigation and dynamic routing to our apps.
 
-  * 🔑 To use React Router, we start by importing the `BrowserRouter` and `Route` components from `react-router-dom`:
+  * 🔑 To use React Router, we start by importing the `BrowserRouter`, `Routes` and `Route` components from `react-router-dom`:
 
     ```js
-    import { BrowserRouter as Router, Route } from 'react-router-dom';
+    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
     ```
 
   * 🔑 Next, we wrap our `Router` component around our app elements. This allows us to keep track of the location and easily navigate between pages:
@@ -514,20 +510,26 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     <Router>...</Router>
     ```
 
-  * 🔑 To create a static route, we wrap a `Route` component around the page we want to access and identify the path. Now, when we navigate to `http://localhost:3000/`, the `Home` page will display:
+  * 🔑 To create a static route, we wrap a `Route` component around the page we want to access and identify the path. Be sure to wrap any `Route` components within a `Routes` component. Note that within the `Route` component we have a `path` as well as an `element`. The `path` signifies the URL and the `element` signifies which component we want the user to see when they hit that path! Now, when we navigate to `http://localhost:3000/`, the `Home` page will display:
 
     ```js
-    <Route exact path="/">
-      <Home />
-    </Route>
+    <Routes>
+      <Route
+        path="/">
+        element={<Home />}
+      />
+    </Routes>
     ```
 
-  * 🔑 To create a dynamic route, we simply add a parameter `:profileId` to our path. For the `profile` page, the URL will change depending on which tech friend's information is being displayed. The profile pages will now be available at `http://localhost:3000/profiles/<profileId>`:
+  * 🔑 To create a dynamic route, we simply add a parameter `:profileId` to our path. For the `profile` page, the URL will change depending on which tech friend's information is being displayed. Note that regardless of if we want to create a static or dynamic route, the `Route` must be within a `Routes` component. The profile pages will now be available at `http://localhost:3000/profiles/<profileId>`:
 
     ```js
-    <Route exact path="/profiles/:profileId">
-      <Profile />
-    </Route>
+    <Routes>
+      <Route
+        path="/profiles/:profileId">
+        element={<Profile />}
+      />
+    </Routes>
     ```
 
 * Open `19-Ins_React-Router/client/src/components/ProfileList/index.js` in your IDE to demonstrate the following:
@@ -633,9 +635,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * Which browser API does React Router leverage?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -650,20 +649,23 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
 * Use the prompts and talking points (🔑) below to review the following key points:
 
-  * ✔️ `<Route exact path="/thoughts/:thoughtId">`
+  * ✔️ `<Routes>` and `<Route>` components
 
-  * ✔️ `<Link to={`/thoughts/${thought._id}`}>`
+  * ✔️ `<Link>` component
 
-  * ✔️ `useParams()`
+  * ✔️ `useParams()` hook
 
 * Open `20-Stu_React-Router/client/src/App.js` in your IDE and explain the following:
 
   * 🔑 To navigate to the thoughts page, we first must define a route. Because the route is dynamic and will change based on the id of the thought we want to display, we use a `:thoughtID` parameter:
 
     ```js
-    <Route exact path="/thoughts/:thoughtId">
-      <SingleThought />
-    </Route>
+    <Routes>
+      <Route
+        path="/thoughts/:thoughtId"
+        element={<SingleThought />}
+      />
+    </Routes>
     ```
 
 * Open `20-Stu_React-Router/client/src/components/ThoughtList/index.js` in your IDE and explain the following:
@@ -673,10 +675,10 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * 🔑 Inside our map function, we create a link component that uses the route we just created. Then, we assign the value of the `:thoughtId` parameter to be the id of our current thought:
 
     ```js
-     <Link
+    <Link
        className="btn btn-primary btn-block btn-squared"
         to={`/thoughts/${thought._id}`}
-      >
+    >
     ```
 
 * Open `20-Stu_React-Router/client/src/pages/SingleThought.js` in your IDE and explain the following:
@@ -714,7 +716,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, review the [React Router example of URL parameters](https://reactrouter.com/web/example/url-params) and the [React Router example of basic routes](https://reactrouter.com/web/example/basic), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, review the [React Router example of URL parameters](https://reactrouter.com/docs/en/v6/getting-started/overview#reading-url-parameters) and the [React Router example of basic routes](https://reactrouter.com/docs/en/v6/getting-started/overview#configuring-routes), and stay for office hours to ask for help.
 
 ### 10. FLEX (30 min)
 
@@ -740,6 +742,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
       "typ": "JWT"
     }
     ```
+
   * The second part is the payload. We use the payload to hold the JSON object containing the data we wish to transmit as well as a `iat` property, which stands for "Issued at" and describes the time the JWT was issued:
 
     ```js
@@ -876,7 +879,7 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
     }
     ```
 
-  * When we click the Play Button, we see that a signed token is stored in the `token` field.
+  * When we click the play button, we see that a signed token is stored in the `token` field.
 
 * Open the [JSON Web Token Debugger](https://jwt.io/#debugger-io) in your browser and demonstrate the following:
 
@@ -926,8 +929,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * What are the pros and cons of using JSON Web Tokens?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1195,9 +1196,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * When would you use JSON Web Tokens vs. cookies for user authentication?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
-
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.
@@ -1399,8 +1397,6 @@ This class focuses on using Apollo's client-side library to consume a GraphQL AP
   * How could we implement authentication in a React app without using GraphQL?
 
   Use [Google](https://www.google.com) or another search engine to research this.
-
-  ---
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be addressed. It's a good way for your team to prioritize students who need extra help.

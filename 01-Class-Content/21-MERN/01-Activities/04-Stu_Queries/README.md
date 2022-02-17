@@ -28,13 +28,13 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-* What tools within the GraphQL Playground can reveal the data that is available to you?
+* What tools within the Apollo Sandbox can reveal the data that is available to you?
 
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
 
-* What other GraphQL IDEs can you use besides the built-in Playground? 
+* What other GraphQL IDEs can you use besides the Apollo Sandbox?
 
 Use [Google](https://www.google.com) or another search engine to research this.
 
