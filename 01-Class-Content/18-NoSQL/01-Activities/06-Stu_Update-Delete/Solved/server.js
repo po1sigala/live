@@ -4,7 +4,7 @@ const mongodb = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
 const app = express();
-const port = 3050;
+const port = 3001;
 
 const connectionStringURI = `mongodb://localhost:27017/inventoryDB`;
 let db;
