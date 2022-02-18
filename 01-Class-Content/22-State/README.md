@@ -20,7 +20,7 @@ The following topics will be covered in this unit:
 
 * [useState React Hook](https://reactjs.org/docs/hooks-state.html)
 
-* [React Router](https://reactrouter.com/web/guides/quick-start)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview#overview)
 
 * [Apollo Client](https://www.apollographql.com/docs/react/)
 
@@ -74,7 +74,7 @@ Assess your knowledge by answering technical interview questions and solving cod
 
 This unit's Homework is **optional**. It is not required for submission and your final grade will not be affected in any way. The Unit 22 Homework is an opportunity for you to further practice your skills and get feedback on it.
 
-Your homework this week is to refactor the e-commerce platform from [Activity 26](./01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. If you haven't yet, download the [Activity 26 code](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
+The Homework is to refactor the e-commerce platform from the [26-Stu_Actions-Reducers](./01-Activities/26-Stu_Actions-Reducers/Unsolved) activity so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. If you haven't yet, download the [26-Stu_Actions-Reducers code](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
 
 ## Career Connection
 

@@ -28,6 +28,8 @@ Refer to the documentation:
 
 ## 💡 Hints
 
+When we modularize our routes, which dependencies will we need to import at the top of our new files?
+
 How does the separation of concerns help other developers who might work with your code in the future?
 
 ## 🏆 Bonus

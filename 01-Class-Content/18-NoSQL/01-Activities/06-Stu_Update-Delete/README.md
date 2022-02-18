@@ -18,7 +18,7 @@ Work with a partner to implement the following user story:
 
 * Why is it important to specify a filter when updating and deleting documents?
 
-* Do you need to use `ObjectId()` when sending an `_id` string in JSON? Why or why not?
+* Why do you need to require the `ObjectId()` when sending an `_id` string in JSON? 
 
 ## 🏆 Bonus
 
