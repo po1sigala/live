@@ -927,6 +927,12 @@ In today's class, you will prepare students for technical interviews through the
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
 
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ How comfortable do you feel with updating and deleting data in a MongoDB database? (Poll via Fist to Five, Slack, or Zoom)
+
+* Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use Office Hours to get extra help.
+
 * Use the prompts and talking points (🔑) below to review the following key points:
   
   * ✔️ `ObjectId()`
@@ -943,21 +949,21 @@ In today's class, you will prepare students for technical interviews through the
     const ObjectId = require('mongodb').ObjectId;
     ```
 
-  * Next, we create a `DELETE` request that we will use to delete data and define the `/delete` route.
+  * Next, we create a `DELETE` request that we will use to delete data and define the `/delete` route. Remember to wwap the `req.body.id` in `ObjectId` to return the unique identifier from MongoDB. 
 
     ```js
-    app.delete('/delete', (req, res) => {...}
-    ```
-
-  * 🔑 In this route, we will use the `deleteOne()` method to delete a single document by id. Don't forget that the numerical id string must be wrapped with `ObjectID()` for now. One of the advantages of Mongoose, which we will learn about later in this unit, is that it makes deleting by id easier and we won't have to manually do this step.
-
-    ```js
-    db.collection('bookCollection').deleteOne(...)
+    db.collection('bookCollection').deleteOne(
+    // This is the filter. We delete only the document that matches the _id provided in the request body,
+    { _id: ObjectId(req.body.id) },
+    (err) => {
+      if (err) throw err;
+      res.send("Document deleted");
+    }
+  );
     ```
 
   * 🔑 When using a delete method, it is very important that we specify a filter so that only the documents we want deleted are removed. This filter will match the id that we provide in the request body and only delete that document, not all documents!
 
-  * Also, note that since we have required the `ObjectId`, we now have access to the the `ObjectId()` type to return the document's unique identifier. 
 
     ```js
     db.collection('bookCollection').deleteOne({ _id: ObjectId(req.body.id) },...)
@@ -988,7 +994,7 @@ In today's class, you will prepare students for technical interviews through the
 
     ```json
     {
-	    "_id": "ObjectID({INSERT-ID-WITHOUT-QUOTES})"
+	    "id": "{INSERT-COPIED-ID-HERE"
     }
     ```
 
