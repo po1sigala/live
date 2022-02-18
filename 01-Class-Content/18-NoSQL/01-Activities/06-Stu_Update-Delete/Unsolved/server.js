@@ -6,7 +6,7 @@ const ObjectId = require('mongodb').ObjectId;
 const app = express();
 const port = 3001;
 
-const connectionStringURI = `mongodb://localhost:27017/inventoryDB`;
+const connectionStringURI = `mongodb://127.0.0.1:27017/inventoryDB`;
 
 let db;
 
@@ -43,4 +43,4 @@ app.get('/read', (req, res) => {
     });
 });
 
-// TODO: Add Delete route that uses a filter and  ObjectId() to delete a single document by id
+// TODO: Add Delete route that uses a filter to delete a single document by id
