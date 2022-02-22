@@ -98,7 +98,7 @@ module.exports = {
   removeTag(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
-      { $pull: { tags: { responseId: req.params.tagId } } },
+      { $pull: { tags: { tagId: req.params.tagId } } },
       { runValidators: true, new: true }
     )
       .then((application) =>
