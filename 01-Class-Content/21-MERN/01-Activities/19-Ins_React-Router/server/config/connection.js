@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/tech-friends',
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/react-router-demo',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
   }
 );
 

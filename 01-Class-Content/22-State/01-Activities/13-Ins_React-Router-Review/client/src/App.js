@@ -1,6 +1,6 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -20,10 +20,18 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            {/* Define routes to render different page components at different paths */}
-            <Route exact path="/" component={Home} />
-            {/* Define a route that will take in variable data */}
-            <Route exact path="/profiles/:profileId" component={Profile} />
+            <Routes>
+              {/* Define routes to render different page components at different paths */}
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              {/* Define a route that will take in variable data */}
+              <Route 
+                path="/profiles/:profileId" 
+                element={<Profile />} 
+              />
+            </Routes>
           </div>
           <Footer />
         </div>

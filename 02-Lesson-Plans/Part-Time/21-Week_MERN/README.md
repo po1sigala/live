@@ -12,21 +12,19 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/21-MERN/REA
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
-* The activities in this unit will require some familiarity with GraphQL. If you've never worked with GraphQL or the GraphQL Playground, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/).
+* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
 
-* Some activities in this unit rely on the GraphQL Playground. Students do not need to install a separate tool to access this technology. To use the GraphQL Playground, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+* Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most activities during this unit's class, you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to `localhost:3001/graphql` in the browser to view Sandbox in the browser.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
+* This unit's activities use Apollo Server 3, which include a number of breaking changes from Apollo Server 2. Apollo Server 3 requires `graphql` 15.3.0 or later to run successfully. For more information about migrating to Apollo Server 3, including bumped dependencies and removed integrations, refer to [Apollo Docs on migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/).
 
-* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+* The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
-* The `17-Ins_Apollo-Cache` uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the >> arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
+* The `17-Ins_Apollo-Cache` activity uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
-* If you get an `eslint` preflight check error when running the Homework demo, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
+* If you get an `eslint` preflight check error when running the Homework application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
 
-* Apollo Server recently migrated to Apollo Server 3. This major-version release impacts how Apollo Server interacts in an Express environment. Apollo Server 2 is currently used in the activities. For the Homework, students must **MUST** use the following script `npm install apollo-server-express@2.15.0` to follow the implementation used in class.  Alternately, students can complete the Homework using the latest version of Apollo Server. Please refer them to the [Apollo Server Docs on Migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/#nodejs) and [Apollo Server Docs on Implementing Apollo Server Express with v3](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express). Note that Apollo Server 3 requires the use of `await server.start()` before calling `server.applyMiddleware`.
-
-* If you find that students are struggling with the complexity of the unit, encourage them to look back on prior activities as a resources for homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
+* If you find that students are struggling with the complexity of the unit, encourage them to look back on these activities as a resource for Homework preparation and self-study. You can also reassure them that there is time for review during next week's lessons.
 
 ## Career Connection
 
@@ -72,17 +70,15 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 ### Resources
 
-* [Using the GraphQL Playground in a MERN Application](https://coding-boot-camp.github.io/full-stack/apis/graphql-playground-guide)
+* [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/)
 
-* [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
+* [Apollo Docs on migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/)
 
-* [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/)
-
-* [Apollo Docs on queries and mutations](https://graphql.org/learn/queries/)
+* [GraphQL documentation on queries and mutations](https://graphql.org/learn/queries/)
 
 * [Apollo Docs on writing query resolvers](https://www.apollographql.com/docs/tutorial/resolvers/)
 
-* [GraphQL Docs on passing arguments](https://graphql.org/graphql-js/passing-arguments/)
+* [GraphQL documentation on passing arguments](https://graphql.org/graphql-js/passing-arguments/)
 
 * [Apollo Docs on mutations](https://www.apollographql.com/docs/react/data/mutations/)
 
@@ -90,13 +86,17 @@ This section contains links to this unit's lesson plans, homework, slide deck, a
 
 * [Apollo Docs on fetching data with queries](https://www.apollographql.com/docs/tutorial/queries/)
 
-* [React Router quick start guide](https://reactrouter.com/web/guides/quick-start)
+* [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US)
+
+* [React Router quick start guide](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction)
 
-* [Apollo Docs on authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+* [Apollo Docs on authentication and authorization](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 
 * [GitHub Docs on GitHub Actions](https://docs.github.com/en/actions)
+
+* [Deploy with Heroku and MongoDB Atlas Blog Post](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

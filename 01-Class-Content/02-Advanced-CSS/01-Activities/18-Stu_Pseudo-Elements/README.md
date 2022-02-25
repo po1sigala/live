@@ -24,7 +24,7 @@ Refer to the following documentation:
 
 * Feel free to choose which terms or phrases from the given text you want to apply the tooltip to! For example, if the phrase I want to emphasize is "Cascading Style Sheets," the tooltip could say, "Commonly known as CSS."
 
-* How can we use the `::after` pseudo-element along with the `:hover` and `:focus` selectors to create the tooltip?
+* How can we use the `::after` pseudo-element along with the `:hover` selector to create the tooltip?
 
 * How can you designate the keyword to use a `data-descr` custom data attribute for the tooltip text?
 

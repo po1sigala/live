@@ -8,21 +8,13 @@ Today's lesson will further explore complex state management in MERN-stack appli
 
 * In this lesson, students will complete activities `21-Ins_Typedefs` through `28-Stu_Mini-Project`.
 
-* Remind students that this Unit's Homework is optional. If they choose not to submit it, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it.
+* Remind students that this unit's **Homework is optional**. If they choose not to submit it, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it.
 
-* **Important**: React Router recently [upgraded to version 6](https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6) which includes breaking changes with `<Switch>`, `<Redirect> ` and other elements. The content of this week's activities uses React Router version 5. To make sure that students can follow along with activities -- as currently written -- please instruct students to use this npm command to install React Router version 5: `npm install react-router-dom@5`.
-
-* Make sure to set up your React practice app before class. If you encounter any issues regarding conflicting versions of `eslint` when running the practice app, run the following command in the terminal:
-
-  ```sh
-  echo "SKIP_PREFLIGHT_CHECK=true" > .env
-  ```
-
-* In `24-Stu_Stripe` students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
+* In the `24-Stu_Stripe` activity, students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
 
 * We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to the [Stripe docs on testing your integration](https://stripe.com/docs/testing).
 
-* For the final projects, students will choose their own groups and project ideas. Encourage students to form groups and start brainstorming ideas for their app, and be prepared to help anyone who is struggling to find a group or project idea.
+* For Project 03, students will choose their own groups and project ideas. Encourage students to form groups and start brainstorming ideas for their app, and be prepared to help anyone who is struggling to find a group or project idea.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
@@ -499,7 +491,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
   * We await the results of the request for the products in the order:
 
     ```js
-    const { products } = await order.populate('products').execPopulate();
+    const { products } = await order.populate('products');
     ```
 
   * Then we loop through each of those products and create a new product object that will be used by Stripe. We call on the `products.create()` method to do this.

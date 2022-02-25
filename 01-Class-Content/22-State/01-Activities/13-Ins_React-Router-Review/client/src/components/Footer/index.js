@@ -1,12 +1,12 @@
 import React from 'react';
 // Import hooks from React Router
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   // We retrieve the current `location` object data from React Router
   const location = useLocation();
   // We get React Router's history object so we can access and adjust browser history
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <footer className="w-100 mt-auto text-dark p-4">
       <div className="container text-center mb-5">
@@ -14,7 +14,7 @@ const Footer = () => {
           <button
             className="btn btn-dark mb-3"
             // Go back to the previous page in our browser's history
-            onClick={() => history.goBack()}
+            onClick={() => navigate(-1)}
           >
             &larr; Go Back
           </button>
