@@ -204,7 +204,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 
 ## Grading Requirements
 
-> **Note:** If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
