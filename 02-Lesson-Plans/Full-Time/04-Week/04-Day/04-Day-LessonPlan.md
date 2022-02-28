@@ -36,7 +36,7 @@ In this class, students will outline their project presentations and complete wo
 
 * Prioritize working with groups that may be at risk of failure, i.e: unable to deploy a functional application. 
 
-* In the next unit, students will start using Node.js. Advise the students to have Node.js installed before that unit begins. Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+* In the next module, students will start using Node.js. Advise the students to have Node.js installed before that module begins. Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 ## Learning Objectives
 
@@ -119,7 +119,7 @@ By the end of class, students will be able to:
 
 	* Are there any obstacles? 
 
-* In the next unit, students will start using Node.js. Remind them to install it prior to class using the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+* In the next module, students will start using Node.js. Remind them to install it prior to class using the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 * Answer any questions before ending class.
 
