@@ -6,7 +6,7 @@ In Module 07, you will introduce agile project management and help students with
 
 In Module 08, students will continue to work on their projects and will present them to the class at the end of the module. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
 
-Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Group Project for these modules.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the group project for these modules.
 
 ## Instructor / TA Notes
 
