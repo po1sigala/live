@@ -1,16 +1,16 @@
-# Unit 07 & 08 Instructor Overview: Project 1
+# Module 07 & 08 Instructor Overview: Project 1
 
 ## Overview
 
-In Unit 07, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group.
+In Module 07, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group.
 
-In Unit 08, students will continue to work on their projects and will present them to the class at the end of the unit. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
+In Module 08, students will continue to work on their projects and will present them to the class at the end of the module. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
 
-Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content/07-Project-1/README.md) and [Unit 08](../../../01-Class-Content/08-Project-1-Contd/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Group Project for these modules.
 
 ## Instructor / TA Notes
 
-* Prepare a list of project group members prior to the first class of Unit 07. Assign three students per group: one advanced, one average, one struggling. You can add a slide to the Unit 07 slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
+* Prepare a list of project group members prior to the first class of Module 07. Assign three students per group: one advanced, one average, one struggling. You can add a slide to the Module 07 slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
 
 * If students complain about group configurations, remind them of the following:
 
@@ -20,7 +20,7 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
 * There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
-* The Instructor Demo activities on the first day of Unit 07 ask you to create a project repository. You can create one on-the-fly or you may want to create on in advance.
+* The Instructor Demo activities on the first day of Module 07 ask you to create a project repository. You can create one on-the-fly or you may want to create on in advance.
 
 * Be sure to spend plenty of time making sure that students can follow best practices while collaborating with git.
 
@@ -36,23 +36,21 @@ Refer to the Class Content Unit Overview for [Unit 07](../../../01-Class-Content
 
 ## Career Connection
 
-* There is no career services material for Unit 07.
-
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 08](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* Before starting Unit 09, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+* Before starting Module 09, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 * Also, remind students have it installed prior to coming to class!
 
-* In Unit 10, we begin Object-Oriented Programming, constructors, and classes. With that in mind, it's important to get students comfortable with ES6 and other Node.js fundamentals to prepare them for more abstract concepts.
+* In Module 10, we begin Object-Oriented Programming, constructors, and classes. With that in mind, it's important to get students comfortable with ES6 and other Node.js fundamentals to prepare them for more abstract concepts.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -66,15 +64,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [04.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 07 Homework](../../../01-Class-Content/07-Project-1/02-Homework/README.md)
-
-  * [Unit 08 Homework](../../../01-Class-Content/08-Project-1-Contd/02-Homework/README.md)
+  * [Project 1](../../../01-Class-Content/08-Project-1-Contd/02-Challenge/README.md)
 
 ### Slide Decks
 
-  * [Unit 07: Project 1](https://docs.google.com/presentation/d/1rlLC273x8cJyhsxMz2fpfZLy29hAu-GFSEW4PSOJlB0/edit?usp=sharing)
+  * [Module 07: Project 1](https://docs.google.com/presentation/d/1qiKXCTJ54GUJyOucuFgd_rt27a89iEAdhJ2BGaAZ8aA/edit?usp=sharing)
 
   * [Superlative Awards](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing)
 
