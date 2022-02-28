@@ -1,136 +1,122 @@
-# 08 Project 1: Professional Materials
+# 08 Project 1: Interactive Front-End Application
 
-Now that you've had some practice with APIs and have a project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
+At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but it's also *critical* on your journey as a developer.
+A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
 
-## Homework Requirements
+Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
 
-* Updated portfolio featuring Project 1 and two exemplary homework assignments.
+Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
 
-* Updated GitHub profile with pinned repositories featuring Project 1 and two exemplary assignments.
+## Project Requirements
 
-* Updated resume
+You and your group will use everything you’ve learned over the past six modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
-* Updated LinkedIn profile
+* Use a CSS framework other than Bootstrap.
 
-## Grading
+* Be deployed to GitHub Pages.
 
-| Requirement      | Weight |
-| ---------------- | ------ |
-| Portfolio        | 40%    |
-| GitHub Profile   | 40%    |
-| Resume           | 10%    |
-| LinkedIn Profile | 10%    |
+* Be interactive (i.e., accept and respond to user input).
 
-## Instructions
+* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
 
-1. [Updated Portfolio](#updated-portfolio)
+* Does not use alerts, confirms, or prompts (use modals).
 
-2. [Updated GitHub Profile](#updated-github-profile)
+* Use client-side storage to store persistent data.
 
-3. [Updated Resume](#updated-resume)
+* Be responsive.
 
-4. [Updated LinkedIn](#updated-linkedin)
+* Have a polished UI.
 
-## Updated Portfolio
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-💁 Need help updating your Portfolio? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-Your updated portfolio should:
+## Presentation Requirements
 
-1. Display your contact information. If you don't want to share your personal email or phone number, use a separate email that you will only use for coding, also known as a developer email, and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
 
-2. Have links to your GitHub profile and LinkedIn profile
+* Elevator pitch: a one minute description of your application
 
-3. Have a link to a downloadable PDF of your resume
+* Concept: What is your user story? What was your motivation for development?
 
-4. Display at least 2 examples of student work from either deployed projects or homeworks. For each project, make sure you have the following:
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 
-	* Project title
+* Demo: Show your stuff!
 
-	* Link to the deployed version
+* Directions for Future Development
 
-	* Link to the GitHub repository
+* Links to the deployed application and the GitHub repository
 
-	* Screenshot of the deployed application
+## Grading Requirements
 
-5. Have a polished, mobile-responsive user interface.
+This project is graded based on the following criteria:
 
-### Design
+### Technical Acceptance Criteria: 25%
 
-Unfortunately, this is where it gets a little bit subjective. Your site should look
-"polished." Here are a few guidelines on what that means:
+* Satisfies the following code requirements:
 
-* Mobile-first design
+  * Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
 
-* Choose a color palette for your site so it doesn't just look like the default bootstrap theme or an unstyled HTML site.
+  * Application uses client-side storage to store persistent data.
 
-* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
+  * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
 
-## Updated GitHub Profile 
+  * Application uses a CSS framework other than Bootstrap.
 
-Employers (and potential collaborators) _will_ look at your GitHub profile, so put your best face forward. 
+  * Application is interactive (accepts and responds to user input)
 
-Your GitHub profile must contain at least the following items:
+### Concept 10%
 
-1. Profile picture or avatar
+* Application should be a unique and novel idea.
 
-  * A photo or an avatar other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
+* Your group should clearly and concisely articulate your project idea.
 
-2. Biography
+### Deployment: 20%
 
-3. Email address. If you don't want to share your personal email or phone number, use a developer email.
+* Application deployed at live URL and loads with no errors.
 
-4. Link to your deployed portfolio
+* Application GitHub URL submitted.
 
-5. At least 2 pinned repositories:
+### Repository Quality: 10%
 
-	* Navigate to [GitHub](https://github.com/) and go to your profile.
+* Repository has a unique name.
 
-	* Click "Customize your pins"
+* Repository follows best practices for file structure and naming conventions.
 
-	* Click the checkboxes for your project and 2-3 homework assignments that you would like to share
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-6. Follow a few of your classmates and/or other developers. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code.
+* Repository contains multiple descriptive commit messages.
 
-7. README files. Every pinned project should contain a README file with:
+* Repository contains a quality README file with description, screenshot, and link to deployed application.
 
-	* Title of app
+### Application Quality: 15%
 
-	* Live link to deployed app
+* Application user experience is intuitive and easy to navigate.
 
-	* List of technologies used
+* Application user interface style is clean and polished.
 
-	* 1-2 sentences explaining what the app is
+* Application is responsive.
 
-	* 2-3 Screenshots / gifs of the app
+### Presentation 10%
 
-	* License (usually MIT)
-	
-	* Contact information for you and any collaborators
+* Your group should present using Powerpoint or a similar presentation software.
 
-8. Commit history. Every pinned repository should have at least 20 commits.
+* Every group member should speak during the presentation.
 
-## Updated Resume 
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
 
-💁 Need help building a resume? Check out the [career services milestone resources](https://mycareerspot.org/resume).
+### Collaboration 10%
 
-Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
+* There are no major disparities in the number of GitHub contributions between group members.
 
-Your resume should include:
+## How to Submit Your Interactive Front-End Project
 
-* a heading with your name, phone number, professional email address, links to LinkedIn, portfolio and GitHub. If you don't want to share your personal email or phone number, use a separate email that you will only use for coding, also known as a developer email, and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
+**Each member of your group** is required to submit the following for review:
 
-* a technical skills section, with all programming languages and technologies listed
+* The URL of the deployed application.
 
-* 3 of your strongest projects/homework assignments with brief description, languages used, and URL
-
-## Updated LinkedIn
-
-💁 Need help updating your LinkedIn? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
-
-Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
+* The URL of the GitHub repository, with a unique name and a README describing the project.
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
