@@ -70,7 +70,7 @@ You'll use the Stripe API to process payments, which includes making front-end a
 
 ## Grading Requirements
 
-> **Note:** If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
