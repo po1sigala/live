@@ -16,9 +16,7 @@ In this class, students will present their projects to their peers.
 
 * Prior to class, and during presentations if necessary, collaborate with your TAs to prepare a slide deck of superlative "awards" for groups. Refer to [this example](https://docs.google.com/presentation/d/1Tca5VT_S13ioFUO-pewh_g9dJaBQ9prg-vsRwMjyDXU/edit?usp=sharing).
 
-* In the next unit, students will start using Node.js. Advise the students to have Node.js installed before coming to the next class! Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
-
-* Remind students that this unit's homework consists of updating their portfolio with this project as well as updating their GitHub profile, resume, and LinkedIn profile.
+* In the next module, students will start using Node.js. Advise the students to have Node.js installed before coming to the next class! Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
 ## Learning Objectives
 

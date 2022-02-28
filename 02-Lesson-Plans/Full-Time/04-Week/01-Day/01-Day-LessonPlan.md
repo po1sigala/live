@@ -40,7 +40,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 07 Slide Deck](https://docs.google.com/presentation/d/1rlLC273x8cJyhsxMz2fpfZLy29hAu-GFSEW4PSOJlB0/edit?usp=sharing)
+* [Module 07 Slide Deck](https://docs.google.com/presentation/d/1qiKXCTJ54GUJyOucuFgd_rt27a89iEAdhJ2BGaAZ8aA/edit?usp=sharing)
 
 ## Time Tracker
 | Start  | #   | Activity Name                      | Duration |
@@ -65,7 +65,7 @@ By the end of class, students will be able to:
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1rlLC273x8cJyhsxMz2fpfZLy29hAu-GFSEW4PSOJlB0/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1qiKXCTJ54GUJyOucuFgd_rt27a89iEAdhJ2BGaAZ8aA/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What is a project?**: We're about to begin our first project. But first, what is a project?
 
