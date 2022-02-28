@@ -102,6 +102,16 @@ Try to add some additional functionality to your application, such as the abilit
 
 ## Grading Requirements
 
+> **Note:** If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+>
+> * A repository that has no code
+>
+> * A repository that includes a unique name but nothing else
+>
+> * A repository that includes only a README file but nothing else
+>
+> * A repository that only includes starter code
+
 This homework is graded based on the following criteria:
 
 ### Deliverables: 10%
