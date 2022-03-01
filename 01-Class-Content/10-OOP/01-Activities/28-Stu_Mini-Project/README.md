@@ -1,4 +1,4 @@
-# 🏗️ Build Word-Guessing Game
+# Module 10 Mini-Project: 🏗️ Build Word-Guessing Game
 
 Work with a partner to implement the following user story:
 
