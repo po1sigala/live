@@ -42,7 +42,7 @@ In this activity you will write code to create a function that takes an array of
 
 ### Hints
 
-There are a variety of ways to solve this problem, but try the same technique that you used in the Character Count algorithm from a previous unit.
+There are a variety of ways to solve this problem, but try the same technique that you used in the Character Count algorithm from a previous module.
 
 ---
 

@@ -1,4 +1,4 @@
-# 09 Node.js Homework: Professional README Generator
+# 09 Node.js Challenge: Professional README Generator
 
 ## Your Task
 
@@ -59,7 +59,7 @@ Here are some guidelines to help you get started:
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -69,7 +69,7 @@ Here are some guidelines to help you get started:
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria: 
+This Challenge is graded based on the following criteria: 
 
 ### Deliverables: 20%
 
