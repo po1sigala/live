@@ -2,11 +2,11 @@
 
 ## Overview
 
-In this class, we will start by doing the mini-project from Unit 9 on Node.js. Then students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
+In this class, we will start by doing the mini-project from Module 09 on Node.js. Then students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 9 through `08-Stu_Promises` in Unit 10.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Module 09 through `08-Stu_Promises` in Module 10.
 
 * **Important**: Trilogy as a company values transparency and data-driven change quite highly. We know that some areas will need improvement as we grow. It’s hard for us to know what these areas are unless we ask questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to individual feedback at the end of each lesson plan, we would appreciate the feedback of all instructors and TAs in the [mid-course instructional staff survey](https://forms.gle/yPfrY4CjNeAqbVKD6).
 
@@ -16,7 +16,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -30,7 +30,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 
 ## Slide Deck
 
-* [Unit 10 Slide Deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
+* [Module 10 Slide Deck](https://docs.google.com/presentation/d/1DtkslDqhc1kio8D9d3N2jRUAKzJW3BXa6RWRQHzV7Nc/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -39,7 +39,7 @@ In this class, we will start by doing the mini-project from Unit 9 on Node.js. T
 | 10:00AM | 1   | Instructor Demo: Mini Project   | 0:05     |
 | 10:05AM | 2   | Student Do: Mini Project        | 0:60     |
 | 11:05AM | 3   | Instructor Review: Mini Project | 0:10     |
-| 11:15AM | 4   | Introduce Homework              | 0:05     |
+| 11:15AM | 4   | Introduce Challenge             | 0:05     |
 | 11:20AM | 5   | FLEX                            | 0:30     |
 | 11:50PM | 6   | Instructor Do: Stoke Curiosity  | 0:10     |
 | 12:00PM | 7   | BREAK                           | 0:30     |
@@ -233,15 +233,15 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Navigate to `02-Homework/Main` and run `npm i` in your command line.
+* Navigate to `02-Challenge/Main` and run `npm i` in your command line.
 
 * Run `node index.js` from your command line and demonstrate the following:
 
   * We will build a command-line application that will generate REAMDEs for us. 
 
-  * You might actually want to use this application for all your homework in the future. It will also help keep each of your projects looking professional when you are applying for jobs.
+  * You might actually want to use this application for all your Challenges in the future. It will also help keep each of your projects looking professional when you are applying for jobs.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -257,21 +257,21 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
   * 🙋 It will help us learn how to use Node's `fs` module. It also carries an added benefit of helping keep readme files looking fresh. Employers often view job seekers' pinned projects on GitHub, and a sleek readme can be the difference between piquing their interest or seeing them move on to the next candidate.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 * Answer any questions before ending the class.
 
 ### 5. FLEX (30 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1DtkslDqhc1kio8D9d3N2jRUAKzJW3BXa6RWRQHzV7Nc/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **Object-Oriented Programming**
   
-    * This unit will be an introduction to object-oriented programming (OOP). In today's class, we will cover objects and constructors.
+    * This module will be an introduction to object-oriented programming (OOP). In today's class, we will cover objects and constructors.
 
   * **What is programming?** 
   
@@ -359,7 +359,7 @@ It might be a good idea to start building out the HTML skeleton in a real HTML f
 
   * **Mini-Project**
 
-    * For this unit's mini-project, you will build a word-guessing CLI game!
+    * For this module's mini-project, you will build a word-guessing CLI game!
 
 * Navigate to `01-Class-Content/10-OOP/01-Activities/28-Stu_Mini-Project/Main` and run `npm install` in your command line.
 
