@@ -1,4 +1,4 @@
-# Unit 12 Mini-Project: Movie Database
+# Module 12 Mini-Project: Movie Database
 
 In this mini-project, you will build Rest API routes for creating, retrieving, and deleting movies from a MySQL database.
 
