@@ -1,10 +1,10 @@
-# Unit 12 Instructor Overview: SQL
+# Module 12 Instructor Overview: SQL
 
 ## Overview
 
 This week, you’ll introduce students to a final layer of the tech stack: the database. You will teach students how to design a MySQL database that can store large amounts of data, as well as introduce them to the tools to create, read, update, and delete data. You will also cover connecting a MySQL database to a Node.js application using an Express.js server.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/12-SQL/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
@@ -18,21 +18,21 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/12-SQL/READ
 
   * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
 
-* For the homework this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer).
+* For the Challenge this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer).
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/12-SQL/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-During the next unit, students will learn to use [Sequelize](https://sequelize.org/), an object-relational mapping (ORM) library, to simplify their MySQL queries and easily handle data in a full-stack app.
+During the next module, students will learn to use [Sequelize](https://sequelize.org/), an object-relational mapping (ORM) library, to simplify their MySQL queries and easily handle data in a full-stack app.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -42,13 +42,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [12.3 Lesson Plan](./03-Day_Big-Data-MySQL/12.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 12 Homework](../../../01-Class-Content/12-SQL/02-Homework)
+* [Module 12 Challenge](../../../01-Class-Content/12-SQL/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 12: SQL](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
+* [Module 12: SQL](https://docs.google.com/presentation/d/1F-uRmcExGF3NYWAh2vz5Nxi8AJe-WWpwpoeAH7rZsOc/edit?usp=sharing)
 
 ### Algorithms
 

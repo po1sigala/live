@@ -26,13 +26,13 @@ Students will also learn how to create modular routes for better organization an
     taskkill /im node.exe
     ```
 
-* Today's activities also cover persistent storage. Unit 12 covers databases, so for now we will store data using the Node.js `fs` module and JSON files. To accomplish this, some activities include helper functions in a `/helpers` directory.
+* Today's activities also cover persistent storage. Module 12 covers databases, so for now we will store data using the Node.js `fs` module and JSON files. To accomplish this, some activities include helper functions in a `/helpers` directory.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -877,7 +877,7 @@ Students will also learn how to create modular routes for better organization an
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 ### 11. BREAK (30 min)
 

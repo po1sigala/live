@@ -8,7 +8,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * In this lesson, students will complete activities `01-Ins_Setup` through `14-Stu_POST-Requests`.
 
-* As class begins, remind students that they will need Insomnia for the majority of this unit. Post the link for the [Insomnia download page](https://insomnia.rest/download) in Slack and instruct students to download and install Insomnia if they have not yet done so.
+* As class begins, remind students that they will need Insomnia for the majority of this module. Post the link for the [Insomnia download page](https://insomnia.rest/download) in Slack and instruct students to download and install Insomnia if they have not yet done so.
 
 * Insomnia features a **Create query** option that allows the saving of commonly used endpoints. Use this as much as possible to encourage good habits and reference prior requests easily. Refer to the [Insomnia documentation on GraphQL queries](https://support.insomnia.rest/article/176-graphql-queries).
 
@@ -18,7 +18,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -38,7 +38,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 ## Slide Deck
 
-* [Unit 11 Slide Deck](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing)
+* [Module 11 Slide Deck](https://docs.google.com/presentation/d/1GuwaaR-Td4TyFa6mzRs5mKU4bEsC0wbIq_74r96T2gA/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -78,7 +78,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1GuwaaR-Td4TyFa6mzRs5mKU4bEsC0wbIq_74r96T2gA/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What is Express.js?**
 
@@ -340,7 +340,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * 🔑 The next part of this activity requires us to set up another route from scratch. To set up a route, we define the route handler using `app.get()`.
 
-    **Note**: Express.js offers methods for each HTTP verb, including GET, POST, DELETE, and PUT. We will delve into these later in the unit, but for now, let's focus on the `get()` method.
+    **Note**: Express.js offers methods for each HTTP verb, including GET, POST, DELETE, and PUT. We will delve into these later in the module, but for now, let's focus on the `get()` method.
 
   * The first argument of the `app.get()` method is the path. Let's set this one to `/paths`:
 
@@ -1271,7 +1271,7 @@ In this lesson, students will learn how to create an API, define the routes, per
 
   * ☝️ What applications do you use daily that make POST requests to function properly?
 
-  * 🙋 Some applications, including Canvas, rely on POST requests for logging in and submitting homework.
+  * 🙋 Some applications, including Canvas, rely on POST requests for logging in and submitting Challenges.
 
   * ☝️ Why is data persistence important in full-stack applications?
 

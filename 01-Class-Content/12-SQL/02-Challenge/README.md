@@ -102,7 +102,7 @@ Try to add some additional functionality to your application, such as the abilit
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -112,7 +112,7 @@ Try to add some additional functionality to your application, such as the abilit
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Deliverables: 10%
 
@@ -138,7 +138,7 @@ This homework is graded based on the following criteria:
 
     * Uses the [console.table package](https://www.npmjs.com/package/console.table) to print MySQL rows to the console.
 
-* Follows the table schema outlined in the homework instructions.
+* Follows the table schema outlined in the Challenge instructions.
 
 ### Repository Quality: 13%
 

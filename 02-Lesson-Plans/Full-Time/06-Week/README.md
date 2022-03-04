@@ -1,26 +1,26 @@
-# Unit 11 & 12 Instructor Overview: Express.js and SQL
+# Module 11 & 12 Instructor Overview: Express.js and SQL
 
 ## Overview
 
-In Unit 11, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
+In Module 11, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
 
-In Unit 12, you’ll introduce students to the final layer to your tech stack: the database. Students will learn to design a MySQL database capable of storing large amounts of data as well as the tools needed to create, read, update and delete data. Connecting a MySQL database to a Node.js application using an Express.js server is also discussed.
+In Module 12, you’ll introduce students to the final layer to your tech stack: the database. Students will learn to design a MySQL database capable of storing large amounts of data as well as the tools needed to create, read, update and delete data. Connecting a MySQL database to a Node.js application using an Express.js server is also discussed.
 
-Refer to the Class Content Unit Overview for [Unit 11](../../../01-Class-Content/11-Express/README.md) and [Unit 12](../../../01-Class-Content/12-SQL/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
-* In Unit 11, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
+* In Module 11, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
 * We will use Insomnia to make HTTP requests to Express.js routes. Be sure to have students [install Insomnia](https://insomnia.rest/download) before class.
 
-* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another unit. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
+* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another module. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
 
-* This unit also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
+* This module also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
 
-* For Unit 12, please make sure that you have [installed MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) on your machine and be prepared to troubleshoot any issues students may have faced during setup.
+* For Module 12, please make sure that you have [installed MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) on your machine and be prepared to troubleshoot any issues students may have faced during setup.
 
-* Unit 12 activities use MySQL Shell. Please make sure you have your MySQL password ready for use to demonstrate the activities.
+* Module 12 activities use MySQL Shell. Please make sure you have your MySQL password ready for use to demonstrate the activities.
 
 * After starting the MySQL server, make sure that students can initialize the MySQL Shell, using the command `mysql -u root -p`. They will need their MySQL password.
 
@@ -29,23 +29,23 @@ Refer to the Class Content Unit Overview for [Unit 11](../../../01-Class-Content
   * If Windows users get the `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)
   mysql-installation-windows-path.html).
 
-* This week's homework uses MySQL, Node.js and Inquirer to build a command line application. For a refresher on Inquirer, refer students to the [NPM documentation on Inquirer](https://www.npmjs.com/package/inquirer).
+* This week's Challenge uses MySQL, Node.js, and Inquirer to build a command line application. For a refresher on Inquirer, refer students to the [NPM documentation on Inquirer](https://www.npmjs.com/package/inquirer).
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 11](../../../01-Class-Content/11-Express/04-Career-Connection/README.md) and [Unit 12](../../../01-Class-Content/12-SQL/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-During Unit 13, students will build on their MySQL skills and learn to use [Sequelize](https://sequelize.org/), an object-relational mapping (ORM) library, to simplify the MySQL queries and easily handle data in a full-stack app.
+During Module 13, students will build on their MySQL skills and learn to use [Sequelize](https://sequelize.org/), an object-relational mapping (ORM) library, to simplify the MySQL queries and easily handle data in a full-stack app.
 
-During Unit 14, students will combine everything they've learned so far to create their first full-stack application&mdash;with Handlebars.js, MVC architecture, and front-end authentication.
+During Module 14, students will combine everything they've learned so far to create their first full-stack application&mdash;with Handlebars.js, MVC architecture, and front-end authentication.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -59,21 +59,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [06.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 11 Homework](../../../01-Class-Content/11-Express/02-Homework)
+  * [Module 11 Challenge](../../../01-Class-Content/11-Express/02-Challenge)
 
-  * [Unit 12 Homework](../../../01-Class-Content/12-SQL/02-Homework)
+  * [Module 12 Challenge](../../../01-Class-Content/12-SQL/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 11: Express.js](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing)
+  * [Module 11: Express.js](https://docs.google.com/presentation/d/1GuwaaR-Td4TyFa6mzRs5mKU4bEsC0wbIq_74r96T2gA/edit?usp=sharing)
 
-  * [Unit 12: SQL](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
+  * [Module 12: SQL](https://docs.google.com/presentation/d/1F-uRmcExGF3NYWAh2vz5Nxi8AJe-WWpwpoeAH7rZsOc/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 11:
+Module 11:
 
 * [01: Most Songs In Playlist](../../../01-Class-Content/11-Express/03-Algorithms/01-most-songs-in-playlist)
 
@@ -83,7 +83,7 @@ Unit 11:
 
   * 📹 [Let's Code: Array Search 2D!](https://2u-20.wistia.com/medias/qbtymlf1fx)
 
-Unit 12:
+Module 12:
 
 * [01: Multiply Into 20](../../../01-Class-Content/12-SQL/03-Algorithms/01-multiply-into-20)
 
