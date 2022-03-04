@@ -1,12 +1,12 @@
-# Unit 09 & 10 Instructor Overview: Node.js and Object-Oriented Programming (OOP)
+# Module 09 & 10 Instructor Overview: Node.js and Object-Oriented Programming (OOP)
 
 ## Overview
 
-In Unit 09, you will introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
+In Module 09, you will introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
 
-In Unit 10, you will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
+In Module 10, you will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
-Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content/09-NodeJS/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
@@ -20,7 +20,7 @@ Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content
 
 * Many students will benefit from more information about prototypal inheritance. Try to provide them with helpful supplementary resources, but avoid spending too much in-class time on the subject if some students seem to be struggling.
 
-* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class.
+* You will cover polymorphism in this module, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class.
 
 * Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first.
 
@@ -30,23 +30,23 @@ Refer to the Class Content Unit Overview for [Unit 09](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 09](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md) and [Unit 10](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In Unit 11, we will explore the use of servers and Express.js on the back end of an application.
+* In Module 11, we will explore the use of servers and Express.js on the back end of an application.
 
-* Unit 11 will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
+* Module 11 will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
 
-* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
+* Students will also start using Heroku to host their web applications in the next module. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
-* In Unit 12, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the MySQL installation guide on The Full-Stack Blog by the end of this unit to minimize installation time next unit.
+* In Module 12, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the MySQL installation guide on The Full-Stack Blog by the end of this module to minimize installation time next module.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -60,21 +60,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [05.5 Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-* [Unit 09 Homework](../../../01-Class-Content/09-NodeJS/02-Homework)
+* [Module 09 Challenge](../../../01-Class-Content/09-NodeJS/02-Challenge)
 
-* [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework)
+* [Module 10 Challenge](../../../01-Class-Content/10-OOP/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 09: Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+* [Module 09: Node.js](https://docs.google.com/presentation/d/1zkzb8E8ORZbn-JeS47sIEid1bgbN011-xB7CWpzaIQE/edit?usp=sharing)
 
-* [Unit 10: Object-Oriented Programming (OOP)](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
+* [Module 10: Object-Oriented Programming (OOP)](https://docs.google.com/presentation/d/1DtkslDqhc1kio8D9d3N2jRUAKzJW3BXa6RWRQHzV7Nc/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 09:
+Module 09:
 
 * [01: Character Count](../../../01-Class-Content/09-NodeJS/03-Algorithms/01-character-count)
 
@@ -84,7 +84,7 @@ Unit 09:
 
 * [03: Camel Case](../../../01-Class-Content/09-NodeJS/03-Algorithms/03-camel-case)
 
-Unit 10:
+Module 10:
 
 * [01: Linear Search](../../../01-Class-Content/10-OOP/03-Algorithms/01-linear-search)
 

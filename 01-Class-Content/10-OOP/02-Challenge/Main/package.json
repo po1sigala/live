@@ -1,7 +1,7 @@
 {
-  "name": "unit10hw",
+  "name": "module10challenge",
   "version": "1.0.0",
-  "description": "OOP and testing for week 10 homework",
+  "description": "OOP and testing for Module 10 Challenge",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -12,16 +12,8 @@
     "start": "node index.js",
     "reset": "node reset.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stevetrilogy/unit10hw.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stevetrilogy/unit10hw/issues"
-  },
-  "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
   "dependencies": {
     "inquirer": "^6.3.1"
   },
