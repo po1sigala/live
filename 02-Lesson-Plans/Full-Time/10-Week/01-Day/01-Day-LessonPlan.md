@@ -14,6 +14,8 @@ In this class, you will introduce webpage performance and optimization, key aspe
 
 * **Important**: Today's activities take students through setting up webpack and bundling files step-by-step. As a result, for the first few Instructor Demo and Student activities, you will be required to manually insert the provided `index.html` file into the generated `dist` folder and update the script's src attribute to the output filename to run the build code. In the `09-Ins_Webpack-Plugin` activity, students will learn how to generate the `index.html` file with the `html-webpack-plugin` plugin.
 
+* When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
 * This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
   > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application. For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
