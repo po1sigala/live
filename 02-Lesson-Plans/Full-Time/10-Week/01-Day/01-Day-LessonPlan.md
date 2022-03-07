@@ -847,7 +847,7 @@ By the end of class, students will be able to:
 
   ## Actual Behavior
 
-  When I run `npm run build`, an error is displayed and the `dist` folder is not created.
+  When I run `npm run build`, an error is displayed.
 
   ## Steps to Reproduce the Problem
 
