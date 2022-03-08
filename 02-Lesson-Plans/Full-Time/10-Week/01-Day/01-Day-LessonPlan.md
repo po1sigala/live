@@ -1457,7 +1457,7 @@ By the end of class, students will be able to:
 
 * Open `13-Ins_Client-Server` in your IDE to demonstrate the following:
 
-  * 🔑 When we take a look inside the `13-Ins_Client-Server we see that there are two main directories: a client directory and a server directory.
+  * 🔑 When we take a look inside the `13-Ins_Client-Server` we see that there are two main directories: a client directory and a server directory.
 
   * The client directory contains the front-end files. In addition, when a `dist` file is generated during a build, it will also be located inside the client directory. Since we have been working with a front-end app, all of our current app files will be located in the client directory.
 
