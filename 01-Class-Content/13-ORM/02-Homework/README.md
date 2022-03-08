@@ -186,7 +186,7 @@ Create the code needed in `server.js` to sync the Sequelize models to the MySQL 
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -196,7 +196,7 @@ Create the code needed in `server.js` to sync the Sequelize models to the MySQL 
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria: 
+This Challenge is graded based on the following criteria: 
 
 ### Deliverables: 10%
 
@@ -230,9 +230,9 @@ This homework is graded based on the following criteria:
 
   * Syncs Sequelize models to a MySQL database on the server start.
 
-  * Includes column definitions for all four models outlined in the homework instructions.
+  * Includes column definitions for all four models outlined in the Challenge instructions.
 
-  * Includes model associations outlined in the homework instructions.
+  * Includes model associations outlined in the Challenge instructions.
 
 ### Repository Quality: 13%
 

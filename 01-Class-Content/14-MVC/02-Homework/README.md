@@ -68,7 +68,7 @@ You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -78,7 +78,7 @@ You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
@@ -106,7 +106,7 @@ This homework is graded based on the following criteria:
 
 * User interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+* Application resembles the mock-up functionality provided in the Challenge instructions.
 
 ### Repository Quality: 13%
 
