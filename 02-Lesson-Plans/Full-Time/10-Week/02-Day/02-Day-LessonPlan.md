@@ -1111,7 +1111,7 @@ In this class, students will learn how to use the workbox library to cache and s
     "display": "standalone",
     ```
 
-  * 🔑 Next, we define the where we want our applications starting URL.
+  * 🔑 Next, we define where we want our applications starting URL.
 
     ```json
     "start_url": "./",
