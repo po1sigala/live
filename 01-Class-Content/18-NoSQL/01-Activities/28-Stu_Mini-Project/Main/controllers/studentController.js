@@ -1,3 +1,4 @@
+const { Types } = require('mongoose');
 const { Student, Course } = require('../models');
 
 // Aggregate function to get the number of students overall
@@ -9,11 +10,16 @@ const headCount = async () =>
 // Aggregate function for getting the overall grade using $avg
 const grade = async (studentId) =>
   Student.aggregate([
+    // only include the given student by using match
+    { $match: { _id: Types.ObjectId(studentId) } },
     {
       $unwind: '$assignments',
     },
     {
-      $group: { _id: studentId, overallGrade: { $avg: '$assignments.score' } },
+      $group: {
+        _id: Types.ObjectId(studentId),
+        overallGrade: { $avg: '$assignments.score' },
+      },
     },
   ]);
 
