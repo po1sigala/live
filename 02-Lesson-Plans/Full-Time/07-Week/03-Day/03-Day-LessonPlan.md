@@ -2,13 +2,13 @@
 
 ## Overview
 
-In today's class, students will start by doing the mini-project for Unit 13. Then they will learn about the MVC framework and the separation of concerns. Starting with hardcoded data, they will practice using template engines on the front end by implementing Handlebars.js expressions and built-in helpers. Then they will use Sequelize and MySQL to handle data logic on the back end. In the process, they will learn how the Controller mediates between the View and the Model by processing requests for data, using routes to manipulate the database, and passing serialized data to the View.
+In today's class, students will start by doing the mini-project for Module 13. Then they will learn about the MVC framework and the separation of concerns. Starting with hardcoded data, they will practice using template engines on the front end by implementing Handlebars.js expressions and built-in helpers. Then they will use Sequelize and MySQL to handle data logic on the back end. In the process, they will learn how the Controller mediates between the View and the Model by processing requests for data, using routes to manipulate the database, and passing serialized data to the View.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 13 through `08-Stu_Data-Serialization` from Unit 14.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Module 13 through `08-Stu_Data-Serialization` from Module 14.
 
-* Unit 14 introduces students to the template engine **Handlebars.js**. Students might not use Handlebars.js in their careers, but learning this tool will help introduce them to template engines, prepare them to work with React.js, and demonstrate the MVC framework.
+* Module 14 introduces students to the template engine **Handlebars.js**. Students might not use Handlebars.js in their careers, but learning this tool will help introduce them to template engines, prepare them to work with React.js, and demonstrate the MVC framework.
 
 * You will use MySQL for a few of today's activities, so be sure to have your MySQL server up and running. You can create the `dish_db` database ahead of time, or you can demonstrate it live in class.
 
@@ -22,7 +22,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -38,7 +38,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 ## Slide Deck
 
-* [Unit 14 Slide Deck](https://docs.google.com/presentation/d/1rb2QnbKkUfmwqfUEpdQjV8x6S18ShB1BRdLggIVq6yU/edit?usp=sharing)
+* [Module 14 Slide Deck](https://docs.google.com/presentation/d/1RIA8VZVN4_JAaL0xSPf1GPc8b5dJlM5V43EVNEZ_kfA/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -47,7 +47,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 | 10:00AM | 1   | Instructor Demo: Mini-Project                | 0:05     |
 | 10:05AM | 2   | Student Do: Mini-Project                     | 0:60     |
 | 11:05AM | 3   | Instructor Review: Mini-Project              | 0:10     |
-| 11:15AM | 4   | Introduce Homework                           | 0:05     |
+| 11:15AM | 4   | Introduce Challenge                          | 0:05     |
 | 11:20AM | 5   | FLEX                                         | 0:30     |
 | 11:50PM | 6   | Instructor Do: Stoke Curiosity               | 0:10     |
 | 12:00PM | 7   | BREAK                                        | 0:30     |
@@ -119,7 +119,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 * Break your students into groups that will work together on this activity.
 
   ````md
-  # Unit 13 Mini-Project: Travel Planner
+  # Module 13 Mini-Project: Travel Planner
 
   In this mini-project, you will work with a group to build an API using Node.js, Express.js, MySQL, and Sequelize, and you will deploy it to Heroku.
 
@@ -343,9 +343,9 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Navigate to `02-Homework/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
+* Navigate to `02-Challenge/Main` and run `npm install` from the command line. Be sure to change the `.env.EXAMPLE` file into your own `.env` file with your credentials. To speed things up, run `node seeds/seed.js` as well to seed the database tables.
 
 * Run `npm start` from the command line and use Insomnia to demonstrate the following:
 
@@ -353,7 +353,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * When we perform a GET request to `/api/products`, we get all products and their associated categories and tags.
 
-* Open `02-Homework/Develop` in your IDE and explain the following:
+* Open `02-Challenge/Develop` in your IDE and explain the following:
 
   * The structure for this application is already in place; we just need to create the models and finish the routes.
 
@@ -373,19 +373,19 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
   * 🙋 Establishing data relationships is a common&mdash;and crucial&mdash;aspect of back-end web development. If any part of your future career involves working on the back end of a database, you will need to be comfortable using technologies like these to create data associations.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1rb2QnbKkUfmwqfUEpdQjV8x6S18ShB1BRdLggIVq6yU/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1RIA8VZVN4_JAaL0xSPf1GPc8b5dJlM5V43EVNEZ_kfA/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **MVC**
   
-    * This unit is all about the MVC architectural pattern, how it follows the separation of concerns principle, and the tools that help us follow this pattern&mdash;like the templating engine Handlebars.js.
+    * This module is all about the MVC architectural pattern, how it follows the separation of concerns principle, and the tools that help us follow this pattern&mdash;like the templating engine Handlebars.js.
 
   * **What is the separation of concerns principle?**
   
@@ -471,7 +471,7 @@ In today's class, students will start by doing the mini-project for Unit 13. The
 
 * Navigate to <http://localhost:3001/> in your browser and demonstrate the following:
 
-  * The mini-project for this unit uses Handlebars.js to build the View for a crowdfunding app.
+  * The mini-project for this module uses Handlebars.js to build the View for a crowdfunding app.
 
   * The homepage for the crowdfunding app is rendered using Handlebars.js templates and displays all projects from the database.
 
