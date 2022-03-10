@@ -1,132 +1,126 @@
-# 16 Project 2: Professional Materials
+# 16 Project 2: Interactive Full-Stack Application
 
-Now that you've built a full-stack web application and have another project to share, you'll be updating your portfolio page and other materials to build toward being employer-competitive.
+Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but it's also *critical* on your journey as a developer.
+As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
 
-## Homework Requirements
+## Project Requirements
 
-* Updated portfolio featuring at least 3 examples of student work from either deployed projects of homeworks
+You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
-* Update GitHub profile with pinned repositories featuring at least 3 examples of student work from either deployed projects of homeworks
+* Use Node.js and Express.js to create a RESTful API.
 
-* Updated resume
+* Use Handlebars.js as the template engine.
 
-* Updated LinkedIn profile
+* Use MySQL and the Sequelize ORM for the database.
 
+* Have both GET and POST routes for retrieving and adding new data.
 
-## Grading
+* Use at least one new library, package, or technology that we haven’t discussed.
 
-| Requirement      | Weight |
-| ---------------- | ------ |
-| Portfolio        | 40%    |
-| GitHub Profile   | 40%    |
-| Resume           | 10%    |
-| LinkedIn Profile | 10%    |
+* Have a folder structure that meets the MVC paradigm.
 
+* Include authentication (express-session and cookies).
 
-## Instructions
+* Protect API keys and sensitive information with environment variables.
 
-1. [Updated Portfolio](#updated-portfolio)
+* Be deployed using Heroku (with data).
 
-2. [Updated GitHub Profile](#updated-github-profile)
+* Have a polished UI.
 
-3. [Updated Resume](#updated-resume)
+* Be responsive.
 
-4. [Updated LinkedIn](#updated-linkedin)
+* Be interactive (i.e., accept and respond to user input).
 
-## Updated Portfolio
+* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
-💁 Need help updating your Portfolio? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
+* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-Your updated portfolio should:
+## Presentation Requirements
 
-1. Display your contact information. If you don't want to share your personal email or phone number, use a separate email that you will only use for coding, also known as a developer email, and/or a call forwarding service, such as [Google Voice](https://voice.google.com/).
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
 
-2. Have links to your GitHub profile and LinkedIn profile
+* Elevator pitch: a one minute description of your application
 
-3. Have a link to a downloadable PDF of your resume
+* Concept: What is your user story? What was your motivation for development?
 
-4. Display at least 3 examples of student work from either deployed projects or homeworks. For each project, make sure you have the following:
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 
-	* Project title
+* Demo: Show your stuff!
 
-	* Link to the deployed version
+* Directions for Future Development
 
-	* Link to the GitHub repository
+* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 
-	* Screenshot of the deployed application
+## Grading Requirements
 
-5. Have a polished, mobile-responsive user interface.
+This project is graded based on the following criteria:
 
+### Technical Acceptance Criteria: 25%
 
-### Design
+* Satisfies the following code requirements:
 
-Unfortunately, this is where it gets a little bit subjective. Your site should look
-"polished." Here are a few guidelines on what that means:
+  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
 
-* Mobile-first design
+  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
 
-* Choose a color palette for your site so it doesn't just look like the default bootstrap theme or an unstyled HTML site.
+  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
 
-* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
+  * Application includes user authentication (express-session and cookies).
 
+  * Application uses at least one new library, package, or technology not covered in class.
 
-## Updated GitHub Profile 
+### Concept 10%
 
-Employers (and potential collaborators) _will_ look at your GitHub profile, so put your best face forward. 
+* Application should be a unique and novel idea.
 
-Your GitHub profile must contain at least the following items:
+* Your group should clearly and concisely articulate your project idea.
 
-1. Profile picture or avatar
+### Deployment: 20%
 
-	* A photo or an avatar other than the default Github identicon. (a semi-professional to professional photo or an avatar photo are preferred)
+* Application deployed at live URL on Heroku and loads with no errors.
 
-2. Biography
+* Application GitHub URL submitted.
 
-3. Email address. If you don't want to share your personal email or phone number, use a developer email.
+### Repository Quality: 10%
 
-4. Link to your deployed portfolio
+* Repository has a unique name.
 
-5. At least 2 pinned repositories:
+* Repository follows best practices for file structure and naming conventions.
 
-	* Navigate to [GitHub](https://github.com/) and go to your profile.
+* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
 
-	* Click "Customize your pins"
+* Repository contains multiple descriptive commit messages.
 
-	* Click the checkboxes for your project and 2-3 homework assignments that you would like to share
+* Repository contains quality README file with description, screenshot, and link to deployed application.
 
-6. Follow a few of your classmates and/or other developers. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code.
+### Application Quality: 15%
 
-7. README files. Every pinned project should contain a README file with:
+* Application user experience is intuitive and easy to navigate.
 
-	* Title of app
+* Application user interface style is clean and polished.
 
-	* Live link to deployed app
+* Application is responsive.
 
-	* List of technologies used
+### Presentation 10%
 
-	* 1-2 sentences explaining what the app is
+* Your group should present using Powerpoint or a similar presentation software.
 
-	* 2-3 Screenshots / gifs of the app
+* Every group member should speak during the presentation.
 
-	* License (usually MIT)
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
 
-	* Contact information for you and any collaborators
+### Collaboration 10%
 
-8. Commit history. Every pinned repository should have at least 20 commits.
+* There are no major disparities in the number of GitHub contributions between group members.
 
-## Updated Resume 
+## How to Submit Your Interactive Full-Stack Project
 
-💁 Need help building a resume? Check out the [career services milestone resources](https://mycareerspot.org/resume).
+**Each member of your group** is required to submit the following for review:
 
-Submit a clear, concise, and compelling resume, tailored to the type of job you’re looking for.
+* The URL of the deployed application.
 
-## Updated LinkedIn 
+* The URL of the GitHub repository, with a unique name and a README describing the project.
 
-💁 Need help updating your LinkedIn? Check out the [career services milestone resources for online presence](https://mycareerspot.org/onlinepresence).
-
-Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
-
-- - -
+---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
