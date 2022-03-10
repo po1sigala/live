@@ -1,10 +1,10 @@
-# Unit 16 Instructor Overview: Project 2 Continued
+# Module 16 Instructor Overview: Project 2 Continued
 
 ## Overview
 
-In this unit, students will continue to work on their second project and present their projects to the class at the end of the unit. They'll also begin to revise their professional materials, including their portfolios, and add their projects once they've completed them.
+In this module, students will continue to work on their second project and present their projects to the class at the end of the module. They'll also begin to revise their professional materials, including their portfolios, and add their projects once they've completed them.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-2-Contd/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's group project.
 
 ## Instructor/TA Notes
 
@@ -16,17 +16,17 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/16-Project-
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/16-Project-2-Contd/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-In the next unit, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
+In the next module, you'll be taking a look at how computer science relates to what students have learned so far with JavaScript. We recommend that you take a moment to review topics that pertain to data structures, the JavaScript event loop, and closures. Keep in mind that these topics can be hard for students to grasp, but it's important to learn because it will help students prepare for the technical interview phase of any software job.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -36,9 +36,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   
   * [16.3 Lesson Plan](./03-Day/16.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 16 Homework](../../../01-Class-Content/16-Project-2-Contd/02-Homework)
+  * [Project 2](../../../01-Class-Content/16-Project-2-Contd/02-Challenge)
 
 ### Slide Decks
 
