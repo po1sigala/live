@@ -4,14 +4,12 @@ module.exports = {
   getTags(req, res) {
     Tags.find({})
       .select('-__v')
-      .populate('posts')
       .then((tags) => res.json(tags))
       .catch((err) => res.status(500).json(err));
   },
   getSingleTag(req, res) {
     Tags.findOne({ _id: req.params.tagId })
       .select('-__v')
-      .populate('posts')
       .then((tag) =>
         !tag
           ? res.status(404).json({ message: 'No tag with that ID' })
