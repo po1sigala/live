@@ -124,7 +124,7 @@ This project is graded based on the following criteria:
 
 ### Presentation 10%
 
-* Your group should present using Google Slides, Powerpoint, or a similar presentation software.
+* Your group should present using a slide deck.
 
 * Every group member should speak during the presentation.
 
