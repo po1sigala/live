@@ -10,7 +10,7 @@ When I run `npm run build`, the `dist` folder should be created and no errors sh
 
 ## Actual Behavior
 
-When I run `npm run build`, an error is displayed and the `dist` folder is not created.
+When I run `npm run build`, an error is displayed.
 
 ## Steps to Reproduce the Problem
 
