@@ -1297,7 +1297,7 @@ By the end of class, students will be able to:
 
   * ✔️ Aggregate Methods
 
-  * ✔️ MongoDB Operators (`$addToSet`, `$unwind`, `$group`, `$avg`)
+  * ✔️ MongoDB Operators (`$addToSet`, `$unwind`, `$group`, `$match`, `$avg`)
 
 * Open `28-Stu_Mini-Project/Main/controllers/studentController.js` in your IDE and explain the following:
 

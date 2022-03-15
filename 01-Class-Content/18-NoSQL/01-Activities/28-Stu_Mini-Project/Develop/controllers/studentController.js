@@ -1,3 +1,5 @@
+// ObjectId() method for converting a given string of a student's _id value into an ObjectId type for use in student lookup
+const { ObjectId } = require('mongoose').Types;
 const { Student, Course } = require('../models');
 
 // TODO: Create an aggregate function to get the number of students overall
@@ -6,14 +8,17 @@ const headCount = async () =>
     // Your code here
     .then((numberOfStudents) => numberOfStudents);
 
-// TODO: Create a function that executes the aggregate method on the Student model and will calculate the overall grade by using the $avg operator
+// Execute the aggregate method on the Student model and calculate the overall grade by using the $avg operator
 const grade = async (studentId) =>
   Student.aggregate([
+    {
+      // TODO: Ensure we include only the student who can match the given ObjectId using the $match operator
+    },
     {
       $unwind: '$assignments',
     },
     {
-      // Your code here
+      // TODO: Group information for the student with the given ObjectId alongside an overall grade calculated using the $avg operator
     },
   ]);
 
