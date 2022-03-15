@@ -1316,11 +1316,12 @@ By the end of class, students will be able to:
 
   * In this same file, we also created a `grade` function that returns the overall grade for a student. This function is also async, so we used the `await` keyword to wait for the result of the `aggregate` method.
 
-  * 🔑  To get the overall grade for a student, we used the `$avg` operator, which calculates the average of a field, but first we had to use the `$unwind` operator to get the individual scores for each assignment.
+  * 🔑  To get the overall grade for a student, we used the `$avg` operator, which calculates the average of a field. However, we first had to use the `$match` operator to find only the student who matched given `_id` field, as well as the `ObjectId()` method to convert the `studentId` string paramter to a usable `ObjectId` for database lookup. Then, we used the `$unwind` operator to get the individual scores for each assignment.
 
     ```js
     const grade = async (studentId) =>
       Student.aggregate([
+        { $match: { _id: ObjectId(studentId) } },
         {
           $unwind: '$assignments',
         },
@@ -1334,11 +1335,12 @@ By the end of class, students will be able to:
     ```js
     const grade = async (studentId) =>
       Student.aggregate([
+        { $match: { _id: ObjectId(studentId) } },
         {
           $unwind: '$assignments',
         },
         {
-          $group: { _id: studentId, overallGrade: { $avg: '$assignments.score' } },
+          $group: { _id: ObjectId(studentId), overallGrade: { $avg: '$assignments.score' } },
         },
       ]);
     ```

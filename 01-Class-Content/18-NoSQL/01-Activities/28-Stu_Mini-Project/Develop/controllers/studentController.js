@@ -1,4 +1,4 @@
-// ObjectId() method for converting a given string of a student's _id value into an ObjectId type for use in student lookup
+// ObjectId() method for converting studentId string into an ObjectId for querying database
 const { ObjectId } = require('mongoose').Types;
 const { Student, Course } = require('../models');
 
