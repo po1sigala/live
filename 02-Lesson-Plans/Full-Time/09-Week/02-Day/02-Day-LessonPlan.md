@@ -214,7 +214,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   3. Check the console to see undefined values.
 
-  4. Run `npm test` to check if all unit test pass.
+  4. Run `npm test` to check if all unit tests pass.
 
   ## 💡 Hints
 
