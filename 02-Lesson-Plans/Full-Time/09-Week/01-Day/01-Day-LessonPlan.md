@@ -28,7 +28,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -46,7 +46,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 ## Slide Deck
 
-* [Unit 17 Slide Deck](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
+* [Module 17 Slide Deck](https://docs.google.com/presentation/d/16vSjLoHs48HwxdQIc5V67tvhW9f-VZBxElEY2nltVgA/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -86,7 +86,7 @@ In this class, students will be re-introduced to JavaScript within the context o
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing) and follow these prompts on the corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/16vSjLoHs48HwxdQIc5V67tvhW9f-VZBxElEY2nltVgA/edit?usp=sharing) and follow these prompts on the corresponding slides:
 
   * **What is computer science?**
 
