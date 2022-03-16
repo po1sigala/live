@@ -1,18 +1,18 @@
-# Unit 17 Instructor Overview: Computer Science for JavaScript
+# Module 17 Instructor Overview: Computer Science for JavaScript
 
 ## Overview
 
-In this unit, we will shift gears a bit to introduce students to general computer-science concepts as they relate to JavaScript. The end goal is to prepare students for the  technical interview portion of the job interview process. While still project-based, this will be a more concept-dense unit than students are accustomed to.
+In this module, we will shift gears a bit to introduce students to general computer-science concepts as they relate to JavaScript. The end goal is to prepare students for the  technical interview portion of the job interview process. While still project-based, this will be a more concept-dense module than students are accustomed to.
 
 In the first two lessons, we will dissect JavaScript and review how code executes at a granular level. We will also learn about closures and how we can leverage them in our code. Finally, we will compare inheritance and composition in application design. In the final lesson, we will review search algorithms and recursion in JavaScript.
 
 For the mini-project, students will practice the technical interview portion of a mock interview for a web-developer job with their peers. They'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
-* This unit's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
+* This module's activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
 * Some activities use a testing library to debug or build code. Lesson content moves fluidly between the browser and Node.js, so familiarize yourself with when you'll use `npm install` to run the test suites.
 
@@ -28,23 +28,23 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/17-CS/READM
 
 ## Career Connection
 
-* Remind students that related career services material can be found in the [Career Connection folder](../../../01-Class-Content/17-CS/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In the next unit, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
+* In the next module, we will return to the back end and learn about NoSQL databases. We will learn about the features of a non-relational database and how it compares to a relational database. Finally, we will explore why we might use NoSQL for an application.
 
 * Be sure to have MongoDB and Compass installed on your machine before class. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB and Compass on your machine.
 
 * Also, make sure students have MongoDB and Compass installed prior to coming to class.
 
-* The Unit 22 Homework will be an optional assignment. This change comes from student and instructor feedback on the amount of work and time required to complete both the Unit 22 Homework and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
+* The Module 22 Challenge will be an extra credit opportunity for students. This change comes from student and instructor feedback on the amount of work and time required to complete both the Module 22 Challenge and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -54,13 +54,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [17.3 Lesson Plan](03-Day_Algorithms/17.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 17 Homework](../../../01-Class-Content/17-CS/02-Homework)
+  * [Module 17 Challenge](../../../01-Class-Content/17-CS/02-Challenge)
 
 ### Slide Deck
 
-  * [Unit 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
+  * [Module 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/16vSjLoHs48HwxdQIc5V67tvhW9f-VZBxElEY2nltVgA/edit?usp=sharing)
 
 ### Algorithms
 
