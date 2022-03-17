@@ -1,4 +1,4 @@
-# Unit 18 Mini-Project: Student Statistics Back-End
+# Module 18 Mini-Project: Student Statistics Back-End
 
 In this activity, you will start with an existing codebase for a mostly complete application. You will be adding aggregate methods to the `Student` controller to show a student's overall grade and the number of students. Finally, you will spend the remaining time deploying the application using MongoDB Atlas and Heroku.
 

@@ -70,7 +70,7 @@ Each section that describes a component should include more than just one senten
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -80,7 +80,7 @@ Each section that describes a component should include more than just one senten
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Deliverables: 30%
 

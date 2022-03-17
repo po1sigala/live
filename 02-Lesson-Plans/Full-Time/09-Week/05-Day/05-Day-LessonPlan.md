@@ -18,7 +18,7 @@ In this lesson, you will teach students how to create computed properties in Mon
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, simply use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 * If the students struggle with the "Everyone Do: Git" activity, walk through it using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
@@ -51,7 +51,7 @@ By the end of class, students will be able to:
 | 12:30PM| 13  | Instructor Demo: Mini Project                 | 0:05     |
 | 12:35PM| 14  | Student Do: Mini Project                      | 0:60     |
 | 1:35PM | 15  | Instructor Review: Mini Project               | 0:10     |
-| 1:45PM | 16  | Introduce Homework                            | 0:05     |
+| 1:45PM | 16  | Introduce Challenge                           | 0:05     |
 | 1:50PM | 17  | FLEX                                          | 0:40     |
 | 2:30PM | 18  | End                                           | 0:00     |
 
@@ -1221,7 +1221,7 @@ By the end of class, students will be able to:
 
 ### 13. Instructor Demo: Mini Project (5 min)
 
-* **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following unit on PWAs.
+* **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following module on PWAs.
 
 * Change into `26-Stu_Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
 
@@ -1421,11 +1421,11 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `01-Class-Content/18-NoSQL/02-Homework/README.md` in your IDE and demonstrate the following:
+* Open `01-Class-Content/18-NoSQL/02-Challenge/README.md` in your IDE and demonstrate the following:
 
-  * This homework assignment requires you to build an API for a social network web application where users can share their thoughts, create a friends list, and react to friends’ thoughts.
+  * This Challenge requires you to build an API for a social network web application where users can share their thoughts, create a friends list, and react to friends’ thoughts.
 
   * The app will use Express.js for routing, MongoDB for storage, and Mongoose for data modeling.
 
@@ -1465,15 +1465,15 @@ By the end of class, students will be able to:
 
   * 🙋 This project is part of our career goals because it teaches us one piece of the MERN stack, a set of technologies that we will be using in the future.
 
-* Ask TAs to direct students to the Homework Requirements found in `01-Class-Content/18-NoSQL/02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `01-Class-Content/18-NoSQL/02-Challenge/README.md`.
 
 * Answer any questions before ending the class.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Encourage students to get a head start on their homework. Or use this time to answer any questions students have over anything we covered this week.
+* Encourage students to get a head start on their Challenge. Or use this time to answer any questions students have over anything we covered this week.
 
 * Answer any questions before ending the class.
 

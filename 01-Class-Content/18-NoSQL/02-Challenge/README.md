@@ -4,7 +4,7 @@
 
 MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
 
-Your homework is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express.js](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
+Your Challenge is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express.js](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
 
 No seed data is provided, so you’ll need to create your own data using Insomnia after you’ve created your API.
 
@@ -204,7 +204,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -214,7 +214,7 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Deliverables: 10%
 
@@ -244,9 +244,9 @@ This homework is graded based on the following criteria:
 
   * Uses the [Mongoose package](https://www.npmjs.com/package/mongoose) to connect to a MongoDB database.
 
-  * Includes User and Thought models outlined in the homework instructions.
+  * Includes User and Thought models outlined in the Challenge instructions.
 
-  * Includes schema settings for User and Thought models as outlined in the homework instructions.
+  * Includes schema settings for User and Thought models as outlined in the Challenge instructions.
 
   * Includes Reactions as the `reaction` field's subdocument schema in the Thought model.
 
