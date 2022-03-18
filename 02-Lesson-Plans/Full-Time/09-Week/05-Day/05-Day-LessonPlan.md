@@ -639,7 +639,7 @@ By the end of class, students will be able to:
         tags: [
           {
             type: Schema.Types.ObjectId,
-            ref: 'Tag',
+            ref: 'tag',
           },
         ],
         text: {
@@ -685,20 +685,6 @@ By the end of class, students will be able to:
     ...
     ```
 
-  * In the `getTags` method, we are using the `populate` method to populate the `posts` array for each `id` in the array that is associated with a post.
-
-  * 🔑  The `populate` method takes a path to the subdocument and a path to the parent document. In this case, we are populating the `posts` array for each `tag`.
-
-    ```js
-    getTags(req, res) {
-      Tags.find({})
-        .select('-__v')
-        .populate('posts')
-        .then((tags) => res.json(tags))
-        .catch((err) => res.status(500).json(err));
-    },
-    ```
-
   * In this controller, we also have logic to create a new tag, and subsequently update a post with that tag.
 
   * To do this, we created a `createTag` method that takes a tag object and creates a new tag document. After the new tag is created, we associate it with the post by using the `$addToSet` operator.
@@ -740,6 +726,41 @@ By the end of class, students will be able to:
     },
     ```
 
+* Open `24-Stu_Subdoc-Population/Solved/controllers/postController.js` in your IDE to demonstrate the following:
+
+  * First, we use the imported `Posts` schema from models/index.js and invoke one of the built-in Mongoose methods, `.find()`, to find all the posts in the database.
+
+  * In the `getPosts` method, we use the `populate` method to populate the `tags` array for each `id` in the array that is associated with a tag.
+
+  * 🔑 In the `populate` method, we pass in an object with a `path` and `select` property. The `path` property specifies the path to the subdocument, and the select property removes the `-__v` field in those subdocuments. In this case, we use the `populate` method to populate the tags array for each post.
+
+    ```js
+    getPosts(req, res) {
+    Post.find()
+      .populate({ path: 'tags', select: '-__v' })
+      .then((posts) => res.json(posts))
+      .catch((err) => {
+        console.error({ message: err });
+        return res.status(500).json(err);
+      });
+    },
+    ```
+  
+  * We also need to update the `getSinglePost` method with the same `populate` method. In this case, we use the `populate` method to populate the tags array for a single post.
+
+    ```js
+    getSinglePost(req, res) {
+    Post.findOne({ _id: req.params.postId })
+      .populate({ path: 'tags', select: '-__v' })
+      .then((post) =>
+        !post
+          ? res.status(404).json({ message: 'No post with that ID' })
+          : res.json(post)
+      )
+      .catch((err) => res.status(500).json(err));
+    },
+    ```
+
   * Let's make a POST request to add a new tag to a post, but first let's make a GET request and pick one of our existing posts to work with.
 
   * Make a GET request to `http://localhost:3001/api/posts/` and copy the `_id` of one of the posts. Let's imagine for this example that the `_id` is `6116dd5c38283bccf74a2353`.
@@ -762,8 +783,20 @@ By the end of class, students will be able to:
     {
       "published": true,
       "tags": [
-        "6116dd5c38283bccf74a2346",
-        "6116dda010026bcd0afe649b"
+        {
+          "_id": "6228e950c381d33a1bc059f5",
+          "tagname": "#658759",
+          "color": "#658759",
+          "getTagCss": "color: #658759",
+          "id": "6228e950c381d33a1bc059f5"
+        },
+        {
+          "_id": "622901c757f4b7f60b9baf33",
+          "tagName": "new tag",
+          "color": "red",
+          "getTagCss": "color: red",
+          "id": "622901c757f4b7f60b9baf33"
+        }
       ],
       "_id": "6116dd5c38283bccf74a2353",
       "text": " a ut blandit consectetur ut imperdiet hendrerit orci lorem orci adipiscing lacinia ut ut imperdiet ornare consectetur ornare imsum a dolor nunc vel ornare imsum adipiscing odio nunc gravida quis elit purus imperdiet hendrerit a a nunc elit nullam gravida purus lacinia libero adipiscing hendrerit odio gravida quis ut hendrerit",
@@ -1221,64 +1254,98 @@ By the end of class, students will be able to:
 
 ### 13. Instructor Demo: Mini Project (5 min)
 
-* **Instructor Notes:** The mini project activity is intended to give the students a chance to practice with the IndexedDB API and introduce the idea of handling some offline behavior without introducing caching, service workers, or other concepts which will be covered in the following module on PWAs.
+* Open `https://student-stats-db.herokuapp.com/api/students` in your browser and demonstrate the following:
 
-* Change into `26-Stu_Mini-Project/Solved/public/db.js` in your terminal and run `npm install` followed by `node server.js` to launch your app at [http://localhost:3000/](http://localhost:3000/)
+  * This is an API that contains courses, students, and assignments. The specific endpoint that we are using is `/api/students`, where you can see that we have a list of students and also a headcount for each course.
 
-* Demo the functionality of the app and tell students they are going to build the IndexedDB storage functionality in the next activity. This feature will enable users to enter transactions when the device is not online and sync the transactions with the backend when network service is restored.
+  * As you can see in the URL, the application is running on Heroku rather than localhost.
 
-* Answer any questions before allowing students to start the mini project.
+  * 🔑  In this project, we will use Heroku to host our application and MongoDB Atlas to host our MongoDB database.
+
+  * This API has some endpoints that will allow us to retrieve information about the students and assignments. Additionally, we can request a specific student's information and get their overall grade using the `GET /students/:studentId` endpoint.
+
+* Make a GET request to `https://student-stats-db.herokuapp.com/api/students/611ab8ffd85938023d26ba00` and explain the following:
+
+  * 🔑 These keys change with every build, so if the provided `studentId` is incorrect, use one from the `/api/students` endpoint.
+
+  * This is a request to get the information for a specific student.
+
+  * Notice that when getting the information for a specific student, we also get a new field called `grade` that contains the overall grade for the student.
+
+  * This is possible with the use of the `aggregate` pipeline and some MongoDB operators.
+
+  * The `aggregate` pipeline is a way to run multiple queries on the database at the same time.
+
+  * The task of this mini-project is to take a mostly complete API and add the ability to calculate the overall grade of a student. The other part will be learning how to deploy the application to Heroku with a MongoDB back end using the MongoDB Atlas service.
+
+* Ask the class the following questions (☝️) and call on students for the answers (🙋):
+
+  * ☝️ What is the aggregate pipeline and how do did we use it in this activity?
+
+  * 🙋 The aggregate pipeline is a way to run multiple queries on the database at the same time. We used it to get the overall grade for a student.
+
+* Answer any questions before allowing students to start the mini-project.
 
 ### 14. Student Do: Mini Project (60 min)
 
-* Direct students to the activity instructions found in `26-Stu_Mini-Project/README.md`.
+* Direct students to the activity instructions found in `28-Stu_Mini-Project/README.md`.
 
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Mini Project
+  # Module 18 Mini-Project: Student Statistics Back-End
 
-  In this activity, you will implement IndexedDB so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api. Write all of your IndexedDB code in `public/db.js`.
+  In this activity, you will start with an existing codebase for a mostly complete application.
+
+  You will be adding aggregate methods to the `Student` controller to show a student's overall grade and the number of students.
+
+  Finally, you will spend the remaining time deploying the application using MongoDB Atlas and Heroku.
 
   ## Instructions
 
-  * Create a new db request for a `BudgetDB` database.
+  The completed application should meet the following criteria:
 
-  * Inside `onupgradeneeded`, create an object store called `BudgetStore` and set `autoIncrement` to `true`.
+  * As a user, I want to be able to view all the students and get a total of the number of students enrolled.
 
-  * Inside your `saveRecord()` function:
+  * As a user, I want to be able to view a specific student's overall grade in the class using MongoDB operators and their score on each assignment.
 
-    * Create a transaction on the `BudgetStore` object with `readwrite` access.
+  * As a user, I want to be able to execute create, read, update, and delete operations on `courses`, `students`, and `assignments`.
 
-    * Access your `BudgetStore`.
+  ### Specifications
 
-    * Add a record to your store with the `add` method.
+  The completed application should meet the following specifications:
 
-  * Inside the `checkDatabase` function:
+  * The application must make use of a MongoDB database, the Mongoose ODM, and Express.js.
 
-    * Open a transaction on your `BudgetStore` object.
+  * The database must be seeded with sample data.
 
-    * Access your `BudgetStore` object store.
+  * The `Student` controller should have a `headCount` aggregate function to get the total number of students by making use of MongoDB aggregate operators.
 
-    * Get all records from store and set to a variable.
+  * The `Student` controller should have a `grade` aggregate function that returns a single student and also the student's overall grade using MongoDB aggregate operators.
 
-  * Inside `getAll.onsuccess`:
+  * The project will require research of MongoDB operators such as `$addToSet`, `$unwind`, `$group`, `$match`, and `$avg`.
 
-    * If successful, open a transaction on your `BudgetStore` object.
+  * `Student` lookup will require use of the `ObjectId()` method.
 
-    * Access your `BudgetStore` object.
+  * The endpoints `api/students/<student id>` and `api/students/` should be tested using Insomnia to ensure that the aggregate functions return the student's overall grade and headcount respectively.
 
-    * Clear all items in your store.
+  * This back-end application should be deployed using Heroku and MongoDB Atlas. Refer to the resources below for further instructions.
 
-  ## 💡 Hint(s)
+  ## 💡 Hints
 
-  * You can use the the comments in `public/db.js` as a guide.
+  * Be sure to run `npm run seed` to seed your database before testing with Insomnia.
 
-  * If you do not see the key pairs populate in the IndexedDB, try refreshing the page. If it still doesn't work, try opening the browser in Incognito mode.
+  * Run `npm run dev` to have the server automatically restart whenever changes are saved.
+
+  * How can we use the `$avg` [MongoDB operator](https://docs.mongodb.com/manual/reference/operator/aggregation/avg/) to calculate the overall grade for a student?
+
+  * How can we use the `ObjectId` [Mongoose `Type` method](https://mongoosejs.com/docs/schematypes.html#objectids) to ensure we are able to query a student based on the value in their `_id` field?
+
+  * How can we use the information from [The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) to help deploy the mini-project?
 
   ## 🏆 Bonus
 
-  * Create a button that resets all funds to zero in your indexedDB.
+  * What is the difference between Mongoose and MongoDB? What are the advantages and disadvantages of both?
   ```
 
 * While breaking everyone into groups, be sure to remind students and the rest of the instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students who need extra help.
@@ -1297,7 +1364,7 @@ By the end of class, students will be able to:
 
   * ✔️ Aggregate Methods
 
-  * ✔️ MongoDB Operators (`$addToSet`, `$unwind`, `$group`, `$avg`)
+  * ✔️ MongoDB Operators (`$addToSet`, `$unwind`, `$group`, `$match`, `$avg`)
 
 * Open `28-Stu_Mini-Project/Main/controllers/studentController.js` in your IDE and explain the following:
 
@@ -1316,11 +1383,12 @@ By the end of class, students will be able to:
 
   * In this same file, we also created a `grade` function that returns the overall grade for a student. This function is also async, so we used the `await` keyword to wait for the result of the `aggregate` method.
 
-  * 🔑  To get the overall grade for a student, we used the `$avg` operator, which calculates the average of a field, but first we had to use the `$unwind` operator to get the individual scores for each assignment.
+  * 🔑  To get the overall grade for a student, we used the `$avg` operator, which calculates the average of a field. However, we first had to use the `$match` operator to find only the student who matched given `_id` field, as well as the `ObjectId()` method to convert the `studentId` string paramter to a usable `ObjectId` for database lookup. Then, we used the `$unwind` operator to get the individual scores for each assignment.
 
     ```js
     const grade = async (studentId) =>
       Student.aggregate([
+        { $match: { _id: ObjectId(studentId) } },
         {
           $unwind: '$assignments',
         },
@@ -1334,11 +1402,12 @@ By the end of class, students will be able to:
     ```js
     const grade = async (studentId) =>
       Student.aggregate([
+        { $match: { _id: ObjectId(studentId) } },
         {
           $unwind: '$assignments',
         },
         {
-          $group: { _id: studentId, overallGrade: { $avg: '$assignments.score' } },
+          $group: { _id: ObjectId(studentId), overallGrade: { $avg: '$assignments.score' } },
         },
       ]);
     ```
