@@ -1,58 +1,58 @@
-# Unit 19 & 20 Instructor Overview: Progressive Web Applications (PWA) and React
+# Module 19 & 20 Instructor Overview: Progressive Web Applications (PWA) and React
 
 ## Overview
 
-In Unit 19, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
+In Module 19, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
 
-This unit is a precursor to the upcoming React unit, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
+This module is a precursor to the upcoming React module, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
-In Unit 20, you will teach students how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications. They will also learn how to use `create-react-app` to scaffold their React apps. You will help them render elements in JSX and write JSX expressions. You will also help them understand more complex topics like React Hooks, fetching data, and creating fully functional React forms.
+In Module 20, you will teach students how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications. They will also learn how to use `create-react-app` to scaffold their React apps. You will help them render elements in JSX and write JSX expressions. You will also help them understand more complex topics like React Hooks, fetching data, and creating fully functional React forms.
 
-Refer to the Class Content Unit Overview for [Unit 19](../../../01-Class-Content/19-PWA/README.md) and [Unit 20](../../../01-Class-Content/20-React/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
-* For Unit 19 activities, make sure you work in an incognito window for each activity to avoid caching issues. It would be a good idea to have students do the same.
+* For Module 19 activities, make sure you work in an incognito window for each activity to avoid caching issues. It would be a good idea to have students do the same.
 
 * Take some time to refresh your memory on how the Service Worker API and `manifest.json` file works. For the service worker activities, you will have to use offline mode, which is in the Application tab under the Service Worker section in Chrome DevTools. You may have to clear your service workers for `localhost` in the Chrome settings.
 
-* The Unit 19 homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
+* The Module 19 Challenge uses the Codemirror library, but students should not have to edit that file in any way to complete the Challenge.
 
-* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This unit, however, does still include the import statements, as this was a very recent change.
+* Be sure to take some time to review the official React documentation, as there have been some important recent changes concerning React import statements. As of React version 17, it's no longer required to import React in order to process JSX. This module, however, does still include the import statements, as this was a very recent change.
 
 * Make sure you're well-versed in React Hooks so that you can explain how they work to students, who might be confused at first about this different approach to building web app UIs.
 
-* The homework for Unit 20 invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their homework.
+* The Challenge for Module 20 invites students to create an updated portfolio that demonstrates their newly acquired React skills. Students will be required to deploy their application to GitHub Pages for submission. Be sure to review the [React Docs on deployment](https://create-react-app.dev/docs/deployment/#github-pages) so that you can help students with their Challenge.
 
-* Unit 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire unit by swapping out only the `/src` directory before each activity.
+* Module 20 uses `create-react-app` for the first activity to create a "practice" React app. This app will be used for the entire module by swapping out only the `/src` directory before each activity.
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
 
-* Each activity in Unit 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
+* Each activity in Module 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
 * To save time in class, students are expected to copy the `/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 19](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md) and [Unit 20](../../../01-Class-Content/20-React/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In Unit 21, you will build on React foundations, and guide students through application development using three-layer MERN architecture.  You will also introduce students to the GraphQL Playground and Apollo Server. If you are new to the GraphQL and the GraphQL Playground or Apollo Server, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/) and the [Apollo Docs on introduction to Apollo Server](https://www.apollographql.com/docs/apollo-server/).
+* In Module 21, you will build on React foundations, and guide students through application development using three-layer MERN architecture.  You will also introduce students to the GraphQL Playground and Apollo Server. If you are new to the GraphQL and the GraphQL Playground or Apollo Server, please refer to the [Apollo Docs on GraphQL Playground](https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/) and the [Apollo Docs on introduction to Apollo Server](https://www.apollographql.com/docs/apollo-server/).
 
-* In Unit 22, students will continue to build on full-stack app development skills, as well as explore state management and the Context API. You'll also help students prepare for their final projects and solidify their understanding of these more advanced skills.
+* In Module 22, students will continue to build on full-stack app development skills, as well as explore state management and the Context API. You'll also help students prepare for their final projects and solidify their understanding of these more advanced skills.
 
-* The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip. Please remind students about this optional assignment in Unit 22.
+* The Module 22 Challenge will be an extra credit assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip. Please remind students about this extra credit assignment in Module 22.
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
-* Apollo Server recently migrated to Apollo Server 3. This major-version release impacts how Apollo Server interacts in an Express environment. Apollo Server 2 is currently used in the activities. For the Homework, students must **MUST** use the following script `npm install apollo-server-express@2.15.0` to follow the implementation used in class.  Alternately, students can complete the Homework using the latest version of Apollo Server. Please refer them to the [Apollo Server Docs on Migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/#nodejs) and [Apollo Server Docs on Implementing Apollo Server Express with v3](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express). Note that Apollo Server 3 requires the use of `await server.start()` before calling `server.applyMiddleware`.
+* Apollo Server recently migrated to Apollo Server 3. This major-version release impacts how Apollo Server interacts in an Express environment. Apollo Server 2 is currently used in the activities. For the Challenge, students must **MUST** use the following script `npm install apollo-server-express@2.15.0` to follow the implementation used in class.  Alternately, students can complete the Challenge using the latest version of Apollo Server. Please refer them to the [Apollo Server Docs on Migrating to Apollo Server 3](https://www.apollographql.com/docs/apollo-server/migration/#nodejs) and [Apollo Server Docs on Implementing Apollo Server Express with v3](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express). Note that Apollo Server 3 requires the use of `await server.start()` before calling `server.applyMiddleware`.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -66,21 +66,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [10.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 19 Homework](../../../01-Class-Content/19-PWA/02-Homework)
+  * [Module 19 Challenge](../../../01-Class-Content/19-PWA/02-Challenge)
 
-  * [Unit 20 Homework](../../../01-Class-Content/20-React/02-Homework)
+  * [Module 20 Challenge](../../../01-Class-Content/20-React/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 19: PWA](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
+  * [Module 19: PWA](https://docs.google.com/presentation/d/1ygFpytpyJrXNxNbUs-eW0F996kgM-zi4a_WyxNlC2xs/edit?usp=sharing)
 
-  * [Unit 20: React](https://docs.google.com/presentation/d/1V5th9cgx_YcKZDC6kcJJHwrOc-3Ql6JB3AXoW3_Jqkk/edit?usp=sharing)
+  * [Module 20: React](https://docs.google.com/presentation/d/1LeJL4oLTOTTmKL_kKRMQBijRic4zTgBuk2bJ3el_Dn8/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 19:
+Module 19:
 
   * [01: Is ArmStrong](../../../01-Class-Content/19-PWA/03-Algorithms/01-is-armstrong/)
 
@@ -90,7 +90,7 @@ Unit 19:
 
   * [03: Smallest Difference](../../../01-Class-Content/19-PWA/03-Algorithms/03-smallest-difference/)
 
-Unit 20:
+Module 20:
 
 * [01: Maximum Continuous Sub-Array](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray/)
 

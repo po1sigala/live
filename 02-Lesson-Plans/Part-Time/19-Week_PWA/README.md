@@ -1,12 +1,12 @@
-# Unit 19 Instructor Overview: Progressive Web Applications (PWA)
+# Module 19 Instructor Overview: Progressive Web Applications (PWA)
 
 ## Overview
 
-In this unit, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
+In this module, students will learn about Progressive Web Applications (PWAs) and the tools used to create them. Some of these tools&mdash;such as webpack, service workers, and IndexedDB&mdash;are not exclusive to PWAs. They are just a few of the many pieces that make up the PWA framework. Tools like webpack and workbox can optimize and boost the performance of web applications so that more users can comfortably use a web application.
 
-This unit is a precursor to the upcoming React unit, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
+This module is a precursor to the upcoming React module, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
@@ -16,19 +16,19 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 * On Day 3, students learn about the `manifest.json` file, so it would be a good idea to review how this file works as well as its purpose.
 
-* The homework uses the Codemirror library, but students should not have to edit that file in any way to complete the homework.
+* The Challenge uses the Codemirror library, but students should not have to edit that file in any way to complete the Challenge.
 
 * PWAs can be frustrating at times, so try to be understanding if a student is having trouble grasping it.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in the [Career Connection folder](../../../01-Class-Content/19-PWA/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In the next unit, students will get their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
+* In the next module, students will get their first introduction to React. This is a huge step for them, so give students a lot of encouragement.
 
 * Make sure that you are familiar with components, state, and hooks before starting the lesson.
 
@@ -36,7 +36,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/19-PWA/READ
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -46,13 +46,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [19.3 Lesson Plan](./03-Day_IndexedDB/19.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 19 Homework](../../../01-Class-Content/19-PWA/02-Homework)
+  * [Module 19 Challenge](../../../01-Class-Content/19-PWA/02-Challenge)
 
 ### Slide Deck
 
-  * [Unit 19: PWA](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
+  * [Module 19: PWA](https://docs.google.com/presentation/d/1ygFpytpyJrXNxNbUs-eW0F996kgM-zi4a_WyxNlC2xs/edit?usp=sharing)
 
 ### Algorithms
 

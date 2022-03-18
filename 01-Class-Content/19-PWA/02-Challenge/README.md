@@ -1,4 +1,4 @@
-# Unit 19 PWA Homework: Text Editor
+# 19 Progressive Web Applications (PWA): Text Editor
 
 ## Your Task
 
@@ -52,23 +52,23 @@ THEN I should have proper build scripts for a webpack application
 
 The following animation demonstrates the application functionality:
 
-![Demonstration of the finished Unit 19 Homework being used in the browser and then installed.](./Assets/00-demo.gif)
+![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
 
 The following image shows the application's `manifest.json` file:
 
-![Demonstration of the finished Unit 19 Homework with a manifest file in the browser.](./Assets/01-manifest.png)
+![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
 
 The following image shows the application's registered service worker:
 
-![Demonstration of the finished Unit 19 Homework with a registered service worker in the browser.](./Assets/02-service-worker.png)
+![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
 
 The following image shows the application's IndexedDB storage:
 
-![Demonstration of the finished Unit 19 Homework with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -78,7 +78,7 @@ The following image shows the application's IndexedDB storage:
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
@@ -116,7 +116,7 @@ This homework is graded based on the following criteria:
 
 * Application user interface style is clean and polished
 
-* Application resembles the mock-up functionality provided in the homework instructions
+* Application resembles the mock-up functionality provided in the Challenge instructions
 
 ### Repository Quality: 13%
 

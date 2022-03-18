@@ -8,7 +8,7 @@ Your task is to create a portfolio using your new React skills, which will help 
 
 You’ll deploy this application to GitHub Pages. Follow the instructions in the Git Guide or consult the [Create React App Docs on GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages) to create a build that you can deploy.
 
-**Important:** Be sure to push your codebase to the default branch in GitHub -- NOT your built and deployed code. Ensure this happens by using the `gh-pages` branch to host the deployed application's build.
+**Important**: Be sure to push your codebase to the default branch in GitHub -- NOT your built and deployed code. Ensure this happens by using the `gh-pages` branch to host the deployed application's build.
 
 ## User Story
 
@@ -66,7 +66,7 @@ You’ll use `create-react-app` to build your portfolio, which will include the 
 
 * A single `Footer` component that appears on multiple pages
 
-**Note:** Because this application doesn’t include a back end or connect to an API, the contact form doesn't need to save this information right now. You'll add back-end functionality in the next few weeks. In the meantime, consider including your email address and phone number on the Contact page.
+**Note**: Because this application doesn’t include a back end or connect to an API, the contact form doesn't need to save this information right now. You'll add back-end functionality in the next few weeks. In the meantime, consider including your email address and phone number on the Contact page.
 
 ### Projects
 
@@ -82,7 +82,7 @@ For each project that is featured in your portfolio, include the following:
 
 ### Design
 
-As with the previous portfolio homework, remember that "good" design is subjective; however, your site should look polished. Here are a few guidelines on what that means:
+As with the previous portfolio Challenge, remember that "good" design is subjective; however, your site should look polished. Here are a few guidelines on what that means:
 
 * Use mobile-first design.
 
@@ -94,7 +94,7 @@ As with the previous portfolio homework, remember that "good" design is subjecti
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -104,7 +104,7 @@ As with the previous portfolio homework, remember that "good" design is subjecti
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
