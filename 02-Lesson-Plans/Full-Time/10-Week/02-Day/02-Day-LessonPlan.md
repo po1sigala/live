@@ -8,7 +8,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * In this lesson, students will complete activities `15-Ins_Workbox-Service-Workers` through `27-Evr_Git-Hooks`.
 
-* This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
+* This module features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
   > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application.
 
@@ -30,7 +30,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * If you are comfortable doing so, live code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -598,7 +598,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 ### 11. BREAK (30 min)
 
@@ -606,7 +606,7 @@ In this class, students will learn how to use the workbox library to cache and s
 
 * Congratulate the class on learning how to implement new web technologies such as webpack and workbox. These tools can give our applications a performance boost and improve the user experience.
 
-* Remind students that the React unit is on the horizon and that much of what they've learned in this unit can be applied to learning React.
+* Remind students that the React module is on the horizon and that much of what they've learned in this module can be applied to learning React.
 
 * The rest of this class will be focused on making our application installable on users' devices!
 

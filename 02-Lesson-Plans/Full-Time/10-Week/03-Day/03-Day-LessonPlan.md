@@ -6,9 +6,9 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` from Unit 19 through `08-Stu_Props` in Unit 20.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` from Module 19 through `08-Stu_Props` in Module 20.
 
-* The first activity for this unit will use `npx create-react-app`. The `npx` command allows us to run an executable binary locally without needing to install it globally first. In the context of React, it also ensures that students use the latest version of the utility.
+* The first activity for this module will use `npx create-react-app`. The `npx` command allows us to run an executable binary locally without needing to install it globally first. In the context of React, it also ensures that students use the latest version of the utility.
 
 * When using the `create-react-app` utility to create a React app, the project directory will also automatically be created as part of the process. Students might be tempted to start by creating a directory for their project, which is not necessary and might actually cause some confusion. The name you provide to the command will be the directory name -- for example, `npx create-react-app my-app` creates a directory called `/my-app`. The name `my-app` will also be used as the name of the project inside the `package.json` file that is generated.
 
@@ -24,15 +24,15 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * To save time in class, students are expected to copy the `Unsolved/src` directory from the activity folders to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.
 
-* Shortly after you review the slide deck for Unit 20, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
+* Shortly after you review the slide deck for Module 20, you'll demonstrate the mini-project. To prepare, make sure to run `yarn install` or `npm install` inside `01-Class-Content/20-React/01-Activities/28-Stu_Mini-Project/Main/bucket-list` before class begins.
 
-* Several activities in this unit require students to import Bootstrap into the `/src/index.js` file. If students ask why their activities do not match the solution, check whether they've done this.
+* Several activities in this module require students to import Bootstrap into the `/src/index.js` file. If students ask why their activities do not match the solution, check whether they've done this.
 
 * Remind students to do a `git pull` of the class repo and to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -48,7 +48,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 20 Slide Deck](https://docs.google.com/presentation/d/1V5th9cgx_YcKZDC6kcJJHwrOc-3Ql6JB3AXoW3_Jqkk/edit?usp=sharing)
+* [Module 20 Slide Deck](https://docs.google.com/presentation/d/1LeJL4oLTOTTmKL_kKRMQBijRic4zTgBuk2bJ3el_Dn8/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -57,7 +57,7 @@ By the end of class, students will be able to:
 | 10:00AM| 1   | Instructor Demo: Mini-Project        | 0:05     |
 | 10:05AM| 2   | Student Do: Mini-Project             | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini-Project      | 0:10     |
-| 11:15AM| 4   | Introduce Homework                   | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                  | 0:05     |
 | 11:20AM| 5   | FLEX                                 | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity       | 0:10     |
 | 12:00PM| 7   | BREAK                                | 0:30     |
@@ -83,7 +83,7 @@ By the end of class, students will be able to:
 
 * Welcome students to class.
 
-* Navigate to `28-Stu_Mini-Project/Main` in Unit 19 from the command line and run `npm install` and `npm run start`.
+* Navigate to `28-Stu_Mini-Project/Main` in Module 19 from the command line and run `npm install` and `npm run start`.
 
 * Open [http://localhost:3000](http://localhost:3000) in your browser and demonstrate the following:
 
@@ -118,7 +118,7 @@ By the end of class, students will be able to:
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
+  # Module 19 Mini-Project: Deploy Contact Directory App on Heroku with Script
 
   In this mini-project, you are given a simple application that needs to be updated to use webpack, service workers, and IndexedDB. In addition, it must have PWA functionality in order to work properly. Once you have updated the application with these new features, you will deploy it to Heroku. Heroku is not new to you, but you will need to add a handful of special scripts so that it knows to deploy your bundled application.
 
@@ -466,9 +466,9 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Navigate to `02-Homework/Main` from the command line and run `npm install` and `npm run start`.
+* Navigate to `02-Challenge/Main` from the command line and run `npm install` and `npm run start`.
 
 * Open [http://localhost:3000](http://localhost:3000) in your browser and demonstrate the following:
 
@@ -500,25 +500,25 @@ By the end of class, students will be able to:
 
   * 🙋 You get to flex some of your usual JavaScript skills with a hint of web performance!
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 * Answer any questions before proceeding to the next activity.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Unit 19 was a packed unit with many new concepts. If your class ran out of time to cover any activities fully, take this time to review them.
+* Module 19 was a packed module with many new concepts. If your class ran out of time to cover any activities fully, take this time to review them.
 
-* Ask students if they have any questions about PWA or Webpack before started a new unit.
+* Ask students if they have any questions about PWA or Webpack before started a new module.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1V5th9cgx_YcKZDC6kcJJHwrOc-3Ql6JB3AXoW3_Jqkk/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1LeJL4oLTOTTmKL_kKRMQBijRic4zTgBuk2bJ3el_Dn8/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **React**:
 
-    * This unit is all about React, which is a powerful JavaScript library for building user interfaces.
+    * This module is all about React, which is a powerful JavaScript library for building user interfaces.
 
   * **What Is React?**
 
@@ -684,7 +684,7 @@ By the end of class, students will be able to:
 
 ### 8. Instructor Demo: Create React App (5 min)
 
-* It's time to introduce the very useful `create-react-app` utility. Let students know that this useful command-line utility will create the skeleton of a React app for them. The only downside is that running it can take some time. For this reason, in this first activity we'll use it to create a practice React app that we will then reuse for the rest of the unit's activities. To make that work, we'll only need to swap out the `/src` file for each activity.
+* It's time to introduce the very useful `create-react-app` utility. Let students know that this useful command-line utility will create the skeleton of a React app for them. The only downside is that running it can take some time. For this reason, in this first activity we'll use it to create a practice React app that we will then reuse for the rest of the module's activities. To make that work, we'll only need to swap out the `/src` file for each activity.
 
 * In the command line, navigate to `01-Class-Content/20-React/01-Activities` and run the following command:
 
@@ -724,7 +724,7 @@ By the end of class, students will be able to:
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
 
-  * For each subsequent activity in this unit, we will remove the `/src` directory in `00-practice-app` and replace it with the `/src` directory in the activity's `/Unsolved` folder. Let's practice that now.
+  * For each subsequent activity in this module, we will remove the `/src` directory in `00-practice-app` and replace it with the `/src` directory in the activity's `/Unsolved` folder. Let's practice that now.
 
 * Open `01-Ins_Create-React-App` and replace your newly created `00-practice-app/src` directory with the one found in `01-Ins_Create-React-App`.
 
@@ -751,7 +751,7 @@ By the end of class, students will be able to:
 
   ## Before We Begin
 
-  Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
+  Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this module, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
 
   To do this, follow these steps:
 
@@ -812,7 +812,7 @@ By the end of class, students will be able to:
 
   * React is a JavaScript library that is used to build web application user interfaces.
 
-  * 🔑 As of React version 17, the React library no longer requires us to add `import React from 'react` to transform JSX. However, most in-production React codebases still use them because this is a recent change, so in this unit we include the import React statements in the activities:
+  * 🔑 As of React version 17, the React library no longer requires us to add `import React from 'react` to transform JSX. However, most in-production React codebases still use them because this is a recent change, so in this module we include the import React statements in the activities:
 
      ```js
      import React from 'react';
