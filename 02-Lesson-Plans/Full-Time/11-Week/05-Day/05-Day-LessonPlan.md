@@ -1292,6 +1292,28 @@ Today's lesson will further explore complex state management in MERN-stack appli
     }
     ```
 
+* Open `28-Stu_Mini-Project/Main/src/utils/CarComponent.js` in your IDE to demonstrate the following:
+
+  * We longer need `useReducer` from React, so we can take that out of our React import.
+
+    ```js
+    import React, { useState } from 'react';
+    ```
+
+  * Since we want to handle data with Redux, instead we need to import both `useDispatch` and `useSelector` from `react-redux`.
+
+    ```js
+    import { useDispatch, useSelector } from 'react-redux';
+    ```
+
+  * Once imported, we can then use the `useDispatch` hook to dispatch actions as needed and the `useSelector` hook to select data from the store. 
+
+    ```js
+     const dispatch = useDispatch();
+    const state = useSelector((state) => state);
+    ```
+
+
 * Open `localhost:3000` in your browser and demonstrate the following:
 
   * The application works the same using Redux as it did with React Hooks!
