@@ -515,9 +515,13 @@ In this class, students will be introduced to complex state management within th
 
     * For this unit's mini-project, you will build a digital garage!
 
-* Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
+* Remind students that the activities today will use the the `00-practice-app` React application! 
 
-* Open `28-Stu_Mini-Project/Main` in your browser to demonstrate the following:
+* Demonstrate copying the the `src` directory from `28-Stu_Mini-Project/Main` and paste it into `00-practice-app`.
+
+* Navigate to `00-practice-app` in your command line and run `npm install` and `npm start`.
+
+* Open the app in your browser to demonstrate the following:
 
   * In this assignment, we will build a digital garage, replacing React Hooks with Redux.
 
