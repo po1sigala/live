@@ -334,7 +334,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   * When we search for a given term, that term is used to perform a fetch request to GitHub's API.
 
-* Open `11-Ins_React-Hooks-Review/App.js` in your IDE and demonstrate the following:
+* Open `11-Ins_React-Hooks-Review/src/App.js` in your IDE and demonstrate the following:
 
   * We import the `useState` and `useEffect` Hooks into the `App` component:
 
@@ -373,7 +373,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     );
     ```
 
-* Open `11-Ins_React-Hooks-Review/components/SearchBar.js` in your IDE and demonstrate the following:
+* Open `11-Ins_React-Hooks-Review/src/components/SearchBar.js` in your IDE and demonstrate the following:
 
   * Note that the `SearchBar` component accepts props as an argument. In this case, we use destructuring assignment to pluck off the `onFormSubmit()` method.
 
@@ -796,7 +796,8 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     <Routes>
       <Route
-        path="/thoughts/:thoughtId">
+        ...
+        path="/thoughts/:thoughtId"
         element={<SingleThought />}
       />
     </Routes>
