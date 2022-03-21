@@ -304,7 +304,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Navigate to `21-Ins_Typedefs/server` in your command line and run `npm install` and `npm start`.
 
-* Open `localhost:4000/graphql` in your browser to demonstrate the following:
+* Open `localhost:3001/graphql` in your browser to demonstrate the following:
 
   * The schema provided to GraphQL will outline the available resources and the parameters that we can use.
 
