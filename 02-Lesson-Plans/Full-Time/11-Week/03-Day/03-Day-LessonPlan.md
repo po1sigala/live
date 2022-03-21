@@ -20,6 +20,8 @@ In this class, students will be introduced to complex state management within th
   echo "SKIP_PREFLIGHT_CHECK=true" > .env
   ```
 
+* Remind students that they can use the `swap_tool` to easily swap `src` into the practice app. It is found in the Activities folder.  
+
 * Install the [React Developer Tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) for your browser. It is used in `01-Ins_Providers`.
 
 * Inform students that not every React application calls for the use of complex state management. Explain that it might be beneficial only when data needs to be accessible by many components at different nesting levels.
