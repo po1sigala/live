@@ -1,5 +1,5 @@
 // Grab the target element
-const targetEl = document.getElementById('target');
+const targetElTwo = document.getElementById('targetTwo');
 const headerEl = document.querySelector('.header');
 
 headerEl.innerHTML = '<h1>hot module reloading 🔥</h1>';
@@ -23,4 +23,4 @@ moduleContent2.innerHTML = `
   </div>`;
 
 // Append the new element to the target element
-targetEl.appendChild(moduleContent2);
+targetElTwo.appendChild(moduleContent2);
