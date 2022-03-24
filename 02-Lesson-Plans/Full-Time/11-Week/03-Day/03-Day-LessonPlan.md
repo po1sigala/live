@@ -28,7 +28,7 @@ In this class, students will be introduced to complex state management within th
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -40,7 +40,7 @@ In this class, students will be introduced to complex state management within th
 
 ## Slide Deck
 
-* [Unit 22 Slide Deck](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing)
+* [Module 22 Slide Deck](https://docs.google.com/presentation/d/1-3k49f8V-tRaTefWpSrXlts2wEcBC9lKOE0MQtkl_ig/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -49,7 +49,7 @@ In this class, students will be introduced to complex state management within th
 | 10:00AM| 1   | Instructor Demo: Mini Project       | 0:05     |
 | 10:05AM| 2   | Student Do: Mini Project            | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini Project     | 0:10     |
-| 11:15AM| 4   | Introduce Homework                  | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                 | 0:05     |
 | 11:20AM| 5   | FLEX                                | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity      | 0:10     |
 | 12:00PM| 7   | BREAK                               | 0:30     |
@@ -102,7 +102,7 @@ In this class, students will be introduced to complex state management within th
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 21 Mini-Project: Tech Matchup App
+  # Module 21 Mini-Project: Tech Matchup App
 
   In this mini-project, you are given a fully functioning MERN-stack application that allows users to create a matchup between two technologies and vote on their favorite technology. The application currently uses a RESTful API. You will need to refactor it to use a GraphQL API built with Apollo Server and Apollo Client. You will also use React Router's `<Route>` component in the routes. During your research, you will likely come across examples and documentation on React Router's `<Switch>` component. As of React Router version 6, the `<Switch>` component no longer exists and will cause your application to break.
 
@@ -379,15 +379,15 @@ In this class, students will be introduced to complex state management within th
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Navigate to `02-Homework/Main` in your command line and run `npm install` and `npm run develop`.
+* Navigate to `02-Challenge/Main` in your command line and run `npm install` and `npm run develop`.
 
-* **Note** If you get an `eslint` preflight check error when running the Homework application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. You can also avoid the error by running the Homework from the class repo, to avoid conflicting `eslint` installations.
+* **Note** If you get an `eslint` preflight check error when running the Challenge application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. You can also avoid the error by running the Challenge from the class repo, to avoid conflicting `eslint` installations.
 
 * Open `localhost:3000` in your browser and demonstrate the following:
 
-  * For this week's homework, we are taking an existing book search engine that was built using a RESTful API and refactor it to use a GraphQL API.
+  * For this week's Challenge, we are taking an existing book search engine that was built using a RESTful API and refactor it to use a GraphQL API.
 
   * When the app loads, we are presented with an option to "Search for Books" as well as an option to "SignUp/Login".
 
@@ -409,21 +409,21 @@ In this class, students will be introduced to complex state management within th
 
   * ☝️ How does this project relate to your career goals?
 
-  * 🙋 Most modern apps require developers to handle user input and store data. Increasingly, apps are also personalized, with each user having access to their own data stored in accounts. This homework is an opportunity to practice the fundamental skills of implementing a GraphQL API in a full-stack MERN app and using authentication to personalize the experience for each user.
+  * 🙋 Most modern apps require developers to handle user input and store data. Increasingly, apps are also personalized, with each user having access to their own data stored in accounts. This Challenge is an opportunity to practice the fundamental skills of implementing a GraphQL API in a full-stack MERN app and using authentication to personalize the experience for each user.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [Unit 22 slide deck](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [Module 22 slide deck](https://docs.google.com/presentation/d/1-3k49f8V-tRaTefWpSrXlts2wEcBC9lKOE0MQtkl_ig/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **State Management in React**
 
-    * This unit will be an introduction to state management using React and Redux. In today's class, we will cover providers, consumers, reducers, and actions.
+    * This module will be an introduction to state management using React and Redux. In today's class, we will cover providers, consumers, reducers, and actions.
 
   * **Pure vs. Impure Functions**
 
@@ -513,7 +513,7 @@ In this class, students will be introduced to complex state management within th
 
   * **Mini-Project**
 
-    * For this unit's mini-project, you will build a digital garage!
+    * For this module's mini-project, you will build a digital garage!
 
 * Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
 
