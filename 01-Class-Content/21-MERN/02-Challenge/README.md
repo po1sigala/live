@@ -190,7 +190,7 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 
 ## Grading Requirements
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
@@ -200,7 +200,7 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 >
 > * A repository that only includes starter code
 
-This homework is graded based on the following criteria:
+This Challenge is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
@@ -210,7 +210,7 @@ This homework is graded based on the following criteria:
 
 	* Use an Apollo Server and apply it to the Express.js server as middleware.
 
-	* Include schema settings for resolvers and typeDefs as outlined in the homework instructions.
+	* Include schema settings for resolvers and typeDefs as outlined in the Challenge instructions.
 
 	* Modify the existing authentication middleware to work in the context of a GraphQL API.
 
@@ -236,7 +236,7 @@ This homework is graded based on the following criteria:
 
 * User interface style is clean and polished.
 
-* Application resembles the mock-up functionality provided in the homework instructions.
+* Application resembles the mock-up functionality provided in the Challenge instructions.
 
 
 ### Repository Quality: 13%

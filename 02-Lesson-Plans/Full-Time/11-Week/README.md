@@ -1,20 +1,20 @@
-# Unit 21 & 22 Instructor Overview: MERN and State
+# Module 21 & 22 Instructor Overview: MERN and State
 
 ## Overview
 
-In Unit 21, students will apply their knowledge of MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
+In Module 21, students will apply their knowledge of MongoDB, Express.js, React.js, and Node.js to develop the tools needed to build a full-stack MERN app.
 
 Students will learn how to use React Router to add dynamic client-side routing to apps, which makes it possible for users to bookmark URLs and use the browser’s forward and back buttons. They'll also learn GraphQL, an open-source data query and manipulation language for APIs that provides declarative data fetching. Finally, students will add authentication to a MERN app by using a JSON Web Token.
 
-In Unit 22, you will introduce complex state management techniques and review the key tools needed to build a MERN-stack app with routing and authentication. Students will also be introduced to the Stripe payment platform.
+In Module 22, you will introduce complex state management techniques and review the key tools needed to build a MERN-stack app with routing and authentication. Students will also be introduced to the Stripe payment platform.
 
-Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content/21-MERN/README.md) and [Unit 22](../../../01-Class-Content/22-State/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
 * It is highly recommended that prior to class, you go through each demo and activity so that you are familiar with the code and can anticipate issues that students new to GraphQL and the MERN framework may face.
 
-* The activities in these units will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+* The activities in these modules will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
 
 * Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most of the activities, you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to `localhost:3001/graphql` in the browser to view Sandbox in the browser.
 
@@ -22,39 +22,39 @@ Refer to the Class Content Unit Overview for [Unit 21](../../../01-Class-Content
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
-* The `17-Ins_Apollo-Cache` activity in Unit 21 uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
+* The `17-Ins_Apollo-Cache` activity in Module 21 uses Apollo Client Developer Tools to visualize the in-memory cache. If you haven't yet, install the [Apollo Client Developer Tools extension for Google Chrome](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US). Once installed, open Chrome DevTools and navigate to the `>>` arrow on the toolbar to see additional tools available. Click on `Apollo` to open the interface.
 
-* If you get an `eslint` preflight check error when running the Unit 21 Homework application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Homework from the class repo to avoid conflicting `eslint` installations.
+* If you get an `eslint` preflight check error when running the Module 21 Challenge application, add an `.env` folder to the root of the project and add `SKIP_PREFLIGHT_CHECK=true`. The error can also be avoided by running the Challenge from the class repo to avoid conflicting `eslint` installations.
 
-* Let students know that the **Unit 22 Homework will be optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
+* Let students know that the **Module 22 Challenge will be extra credit**. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
-* For the React activities in Unit 22, be sure to create a practice React app before class by navigating to `01-Class-Content/22-State/01-Activities` and running `npx create-react-app 00-practice-app`.
+* For the React activities in Module 22, be sure to create a practice React app before class by navigating to `01-Class-Content/22-State/01-Activities` and running `npx create-react-app 00-practice-app`.
 
-* Before class, install the [React developer tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). It will be used in the Unit 22 `O1-Ins_Providers` demo.
+* Before class, install the [React developer tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). It will be used in the Module 22 `O1-Ins_Providers` demo.
 
-* In the state management activities in Unit 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code.
+* In the state management activities in Module 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code.
 
-* Many of the activities in Unit 22 allow students to review the skills needed for their final project as well as full-stack application development. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
+* Many of the activities in Module 22 allow students to review the skills needed for their final project as well as full-stack application development. Because the code and activities will be familiar, encourage students to use activity time to explore the code, ask questions, and build on their existing skills. Encourage students who need an additional challenge to explore the Bonus.
 
-* In the `24-Stu_Stripe` activity of Unit 22, students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the Unit 22 Homework is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the Homework. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
+* In the `24-Stu_Stripe` activity of Module 22, students are introduced to implementing an e-commerce solution in an existing MERN app using Stripe. This activity serves two learning purposes. First, it is important that students practice reverse engineering an unfamiliar codebase since they are likely to encounter similar e-commerce integrations in the workplace. Second, as the goal of the Module 22 Challenge is to refactor an authentic existing MERN app with a Stripe integration, this activity provides the students the needed exposure to Stripe prior to doing the Challenge. For more information about integrating Stripe, refer to [Stripe docs on getting up and running](https://stripe.com/docs/development/quickstart).
 
 * We'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to the [Stripe docs on testing your integration](https://stripe.com/docs/testing).
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder for Unit 21](../../../01-Class-Content/21-MERN/04-Career-Connection/README.md) and [Career Connection folder for Unit 22](../../../01-Class-Content/22-State/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-In Unit 23, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack app. Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
+In Module 23, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack app. Encourage students to start forming groups and brainstorming ideas for their apps, and be prepared to help anyone who is struggling to find a group or project idea.
 
 There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -68,23 +68,23 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [11.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-* [Unit 21 Homework](../../../01-Class-Content/21-MERN/02-Homework)
+* [Module 21 Challenge](../../../01-Class-Content/21-MERN/02-Challenge)
 
-* [Unit 22 Homework](../../../01-Class-Content/22-State/02-Homework)
+* [Module 22 Challenge](../../../01-Class-Content/22-State/02-Challenge)
 
-  * The Unit 22 Homework will be an optional assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
+  * The Module 22 Challenge will be an extra credit assignment for students. It is not required for submission, nor will it count towards one of the two assignments that students can skip.
 
 ### Slide Decks
 
-* [Unit 21: MERN](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
+* [Module 21: MERN](https://docs.google.com/presentation/d/15HFGsli3B1UvM8-khsTi7-DjkN1zX8mpLULMn7oGwX4/edit?usp=sharing)
 
-* [Unit 22: State](https://docs.google.com/presentation/d/1j5Y-MLor_nfMfQA3Znt_MOTRPAVRbsRFGFFt38iN6p4/edit?usp=sharing)
+* [Module 22: State](https://docs.google.com/presentation/d/1-3k49f8V-tRaTefWpSrXlts2wEcBC9lKOE0MQtkl_ig/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 21:
+Module 21:
 
 * [01: Plus One](../../../01-Class-Content/21-MERN/03-Algorithms/01-plus-one)
 
@@ -94,7 +94,7 @@ Unit 21:
 
   * 📹 [Let's Code Caesar Cipher!](https://2u-20.wistia.com/medias/bcfetr7mvf)
 
-Unit 22:
+Module 22:
 
 * [01: Roman Numeral to Int](../../../01-Class-Content/22-State/03-Algorithms/01-roman-to-int)
 

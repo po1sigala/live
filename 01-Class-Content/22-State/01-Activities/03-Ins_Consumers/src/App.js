@@ -5,7 +5,7 @@ import ThemeProvider from './utils/ThemeContext';
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Unit 22.1: Consumers';
+    document.title = 'Module 22.1: Consumers';
   }, []);
 
   return (
