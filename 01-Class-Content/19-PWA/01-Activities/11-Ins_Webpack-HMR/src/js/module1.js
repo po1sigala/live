@@ -1,8 +1,8 @@
 // Grab the target element
-const targetEl = document.getElementById('target');
+const targetElOne = document.getElementById('targetOne');
 
 // Clear out the loading message that exists in the target element
-targetEl.innerHTML = '';
+targetElOne.innerHTML = '';
 
 // Create a new element in memory
 const moduleContent = document.createElement('div');
@@ -23,4 +23,4 @@ moduleContent.innerHTML = `
 </div>`;
 
 // Append the new element to the target element
-targetEl.appendChild(moduleContent);
+targetElOne.appendChild(moduleContent);
