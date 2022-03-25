@@ -194,20 +194,31 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   * ✔️ `useReducer`
 
-* Be sure that you have copied the `src` directory from `10-Stu_useReducer/Unsolved/` into `00-practice-app`.
+* Be sure that you have copied the `src` directory from `10-Stu_useReducer/Solved/` into `00-practice-app`.
 
 * Open `src/components/StudentList.js` in your IDE and explain the following:
 
   * We first need to import the `useReducer` Hook from React to complete this activity.
 
+   ```js
+   import React, { useReducer } from 'react';
+   ```
+]
+
   * We also need to import the action types and the `reducer`:
 
     ```js
-    import React, { useReducer, useState } from 'react';
-    import { ADD_STUDENT, REMOVE_STUDENT } from '../utils/actions';
-    import reducer from '../utils/reducers';
-    ```
+    // Import type variables
+    import {
+      ADD_STUDENT,
+      REMOVE_STUDENT,
+      SET_STUDENT_NAME,
+      SET_STUDENT_MAJOR,
+    } from '../utils/actions';
 
+    // Import reducer from our utils folder
+    import reducer from '../utils/reducers';
+   
   * Also in this file, the custom `useStudentContext` Hook is being imported from `'../utils/StudentContext'`:
 
     ```js
@@ -304,7 +315,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * Navigate to `21-Ins_Typedefs/server` in your command line and run `npm install` and `npm start`.
 
-* Open `localhost:4000/graphql` in your browser to demonstrate the following:
+* Open `localhost:3001/graphql` in your browser to demonstrate the following:
 
   * The schema provided to GraphQL will outline the available resources and the parameters that we can use.
 
@@ -334,7 +345,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
   * When we search for a given term, that term is used to perform a fetch request to GitHub's API.
 
-* Open `11-Ins_React-Hooks-Review/App.js` in your IDE and demonstrate the following:
+* Open `11-Ins_React-Hooks-Review/src/App.js` in your IDE and demonstrate the following:
 
   * We import the `useState` and `useEffect` Hooks into the `App` component:
 
@@ -373,7 +384,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
     );
     ```
 
-* Open `11-Ins_React-Hooks-Review/components/SearchBar.js` in your IDE and demonstrate the following:
+* Open `11-Ins_React-Hooks-Review/src/components/SearchBar.js` in your IDE and demonstrate the following:
 
   * Note that the `SearchBar` component accepts props as an argument. In this case, we use destructuring assignment to pluck off the `onFormSubmit()` method.
 
@@ -796,7 +807,8 @@ In this class, students will learn about the `useReducer` hook. This class also 
     ```js
     <Routes>
       <Route
-        path="/thoughts/:thoughtId">
+        ...
+        path="/thoughts/:thoughtId"
         element={<SingleThought />}
       />
     </Routes>

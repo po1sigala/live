@@ -20,6 +20,8 @@ In this class, students will be introduced to complex state management within th
   echo "SKIP_PREFLIGHT_CHECK=true" > .env
   ```
 
+* Remind students that they can use the `swap_tool` to easily swap `src` into the practice app. It is found in the Activities folder.  
+
 * Install the [React Developer Tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) for your browser. It is used in `01-Ins_Providers`.
 
 * Inform students that not every React application calls for the use of complex state management. Explain that it might be beneficial only when data needs to be accessible by many components at different nesting levels.
@@ -515,9 +517,13 @@ In this class, students will be introduced to complex state management within th
 
     * For this module's mini-project, you will build a digital garage!
 
-* Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
+* Remind students that the activities today will use the the `00-practice-app` React application! 
 
-* Open `28-Stu_Mini-Project/Main` in your browser to demonstrate the following:
+* Demonstrate copying the the `src` directory from `28-Stu_Mini-Project/Main` and paste it into `00-practice-app`.
+
+* Navigate to `00-practice-app` in your command line and run `npm install` and `npm start`.
+
+* Open the app in your browser to demonstrate the following:
 
   * In this assignment, we will build a digital garage, replacing React Hooks with Redux.
 

@@ -1240,7 +1240,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      return await Class.findOneAndUpdate(
        { _id: id },
        { building },
-     }
+     )
      ```
 
   * 🔑 By default, the object returned will not be the one updated. To return the new object, we set `new` to be `true`. Adding this line will fix the bug in our resolver:
