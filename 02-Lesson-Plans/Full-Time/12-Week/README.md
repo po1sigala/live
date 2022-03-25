@@ -1,12 +1,12 @@
-# Unit 23 & 24 Instructor Overview: Project 3
+# Module 23 & 24 Instructor Overview: Project 3
 
 ## Overview
 
-In Unit 23, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack MERN app. The final project of the Boot Camp will be a full-stack MERN application.
+In Module 23, students will begin work on their final projects. These projects are student-driven; they will be responsible for forming their own teams, brainstorming app ideas, and developing a full-stack MERN app. The final project of the Boot Camp will be a full-stack MERN application.
 
-In Unit 24, students will continue to work on their final project and present their final projects to the class at the end of the unit. They'll also finish up their professional materials, including their portfolios, and add their final projects once they've completed them.
+In Module 24, students will continue to work on their final project and present their final projects to the class at the end of the module. They'll also finish up their professional materials, including their portfolios, and add their final projects once they've completed them.
 
-Refer to the [Class Content Unit Overview for Unit 23](../../../01-Class-Content/23-Project-3/README.md) and  [Class Content Unit Overview for Unit 24](../../../01-Class-Content/24-Project-3-Contd/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the group project for these modules.
 
 ## Instructor/TA Notes
 
@@ -14,7 +14,7 @@ Refer to the [Class Content Unit Overview for Unit 23](../../../01-Class-Content
 
 * There are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
-* Students can also use this time to work on their portfolios and any unfinished career homework assignments.
+* Students can also use this time to work on their portfolios.
 
 * Encourage students to spend time pseudocoding their projects and researching APIs and libraries before writing any code.
 
@@ -28,11 +28,11 @@ Refer to the [Class Content Unit Overview for Unit 23](../../../01-Class-Content
 
 ## Heads-Up
 
-* Remind students to finalize their portfolios by adding a link to their deployed application and completing any unfinished career homework assignments.
+* Remind students to finalize their portfolios by adding a link to their deployed application.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -46,15 +46,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [12.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 23 Homework](../../../01-Class-Content/23-Project-3/02-Homework/README.md)
-
-  * [Unit 24 Homework](../../../01-Class-Content/24-Project-3-Contd/02-Homework/README.md)
+  * [Project 3](../../../01-Class-Content/24-Project-3-Contd/02-Challenge/README.md)
 
 ### Slide Decks
 
-  * [Unit 23: Project 3](https://docs.google.com/presentation/d/1J0mGF93xbfAXJigu__PFhdepQ8eIDI0ADBKG1zHmD34/edit#slide=id.g4831362597_2_495)
+  * [Module 23: Project 3](https://docs.google.com/presentation/d/1LEi2YB8KGHHD4naTSMMWv4QUrDl34tTkdDoX9AcK3UE/edit?usp=sharing)
 
   * [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing)
 
