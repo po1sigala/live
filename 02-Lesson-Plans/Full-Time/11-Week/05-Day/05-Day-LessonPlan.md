@@ -1312,8 +1312,7 @@ Today's lesson will further explore complex state management in MERN-stack appli
      const dispatch = useDispatch();
     const state = useSelector((state) => state);
     ```
-
-
+    
 * Open `localhost:3000` in your browser and demonstrate the following:
 
   * The application works the same using Redux as it did with React Hooks!
