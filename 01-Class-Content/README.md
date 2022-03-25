@@ -34,18 +34,4 @@ We’ll also cover computer science fundamentals, which are essential to web dev
 
 As a capstone to the boot camp, you’ll work in groups to build novel full-stack applications that solve real-world problems and use a wide swath of the languages and libraries you learned over the course of these past few months. We can’t wait to see what you build!
 
-## Up Next
-
-For a closer preview of what we explore in each unit of the boot camp, dive into each unit’s overview to learn the following:
-
-* What you will learn in the unit and why it’s important
-
-* How topics in the unit relate to what came earlier in the boot camp
-
-* Activities you’ll complete and what skills they focus on
-
-* Common interview questions related to that week’s material
-
-* Helpful resources if you want to get ahead or gain more experience after the unit
-
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
