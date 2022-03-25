@@ -1,110 +1,156 @@
-# Unit 24 Final Project Homework: Professional Materials
+# 24 Final Project: MERN Stack Single-Page Application
 
-Now that you've finished the bootcamp and have a projects to share, you'll be updating your portfolio page and other materials to build toward being employer competitive.
+Projects have played a key role in your journey to becoming a full-stack web developer. As you apply for development jobs, your portfolio is absolutely vital to opening doors to opportunities. Your portfolio showcases high-quality deployed examples of your work, and you can use your finished projects for that very purpose.
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but is still *critical* on your journey as a developer.
+This project is a fantastic opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Remember that employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
 
+## Project Requirements
 
-## Requirements
+Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. This project will provide you with the best opportunity to demonstrate your problem-solving skills, which employers will want to see during interviews. Once again, the user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-* Updated portfolio featuring all three projects and at least three  exemplary homework assignments. 
+* Use React for the front end.
 
-* Update GitHub profile with pinned repositories featuring all three projects and three exemplary assignments. 
+* Use GraphQL with a Node.js and Express.js server.
 
-* Updated resume
+* Use MongoDB and the Mongoose ODM for the database.
 
-* Updated LinkedIn profile
+* Use queries and mutations for retrieving, adding, updating, and deleting data.
 
+* Be deployed using Heroku (with data).
 
-## Grading
+* Have a polished UI.
 
-| Requirement      | Weight |
-|---               |---     |
-| Portoflio        | 40%    |
-| GitHub Profile   | 40%    |
-| Resume           | 10%    |
-| LinkedIn Profile | 10%    |
+* Be responsive.
 
+* Be interactive (i.e., accept and respond to user input).
 
-## Instructions
+* Include authentication (JWT).
 
-1. [Updated Portfolio](#updated-portfolio)
-2. [GitHub Profile](#updated-github-profile)
-3. [Updated Resume](#updated-resume)
-4. [Updated LinkedIn](#updated-linkedin)
+* Protect sensitive API key information on the server.
 
-### Updated Portfolio
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
 
-Your updated site should have the following content:
+* Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-* Your name
+### CSS Styling
 
-* Links to your GitHub profile & LinkedIn page as well as your email address and phone number
+Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
 
-* A link to a PDF of your resume
+* Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include [styled-components](https://styled-components.com/) and [Emotion](https://emotion.sh/docs/introduction).
 
-* A list of projects. For each project, make sure you have the following:
+* Try using a component library, such as [Semantic UI](https://semantic-ui.com/), [Chakra UI](https://chakra-ui.com/), or [Ant Design](https://ant.design/).
 
-  * Project title
+* Create all the CSS for your application just using CSS.
 
-  * Link to the deployed version
+Ultimately, it doesn't matter which of these options you choose&mdash;it just needs to look professional and be mobile-friendly.
 
-  * Link to the GitHub repository
+### Payment Platform
 
-  * Screenshot of the deployed application
+Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
 
+### Bonus
 
-#### Design
+Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
 
-Unfortunately, this is where it gets a little bit subjective. Your site should look
-"polished." Here are a few guidelines on what that means:
+* Uses a web manifest
 
-* Mobile-first design
+* Uses a service worker for offline functionality
 
-* Choose a color palette for your site so it doesn't just look like
-the default bootstrap theme or an unstyled HTML site.
+* Is installable
 
-* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
+## Presentation Requirements
 
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
 
-### Updated GitHub Profile 
+* Elevator pitch: a one minute description of your application
 
-* If you haven't yet, now is the time to update the following in your GitHub profile: 
+* Concept: What is your user story? What was your motivation for development?
 
-    * Profile picture
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 
-    * Bio
+* Demo: Show your stuff!
 
-    * Location
+* Directions for Future Development
 
-    * Email
+* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 
-    * Link to your portfolio
+## Grading Requirements
 
-* Employers (and potential collaborators) _will_ look at your GitHub profile, so put your best face forward. 
+This project is graded based on the following criteria:
 
-* Pin some repos that you want to highlight
+### Technical Acceptance Criteria: 25%
 
-  * Navigate to [GitHub](https://github.com/) and go to your profile.
+* Satisfies the following code requirements:
 
-  * Click "Customize your pins"
+  * Application uses React for the front end.
 
-  * Click the checkboxes for your project and 2-3 homework assignments that you would like to share
+  * Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
 
-  * Make sure each of these projects is deployed and add a link to the deployed project in their README files
+  * Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
 
-* Follow your classmates. They are the beginning of your professional network and being a developer is as much about being a part of the community as it is writing code. 
+  * Application includes user authentication using JWT.
 
+### Concept 10%
 
-### Updated Resume 
+* Application should be a unique and novel idea.
 
-Submit a clear, concise and compelling resume, tailored to the type of job you’re looking for.
+* Your group should clearly and concisely articulate your project idea.
 
+### Deployment: 20%
 
-### Updated LinkedIn Profile 
+* Application deployed at live URL on Heroku and loads with no errors.
 
-Update your LinkedIn Profile with a strong bio statement, a professional photo, and links to your Github and portfolio.
+* Application GitHub URL submitted.
 
+### Repository Quality: 10%
 
-- - -
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a high-quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using a slide deck.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
+
+### Collaboration 10%
+
+* There are no major disparities in the number of GitHub contributions between group members.
+
+### Bonus
+
+Fulfilling all three of the following requirements to turn your app into a PWA will add 10 points to your grade. Note that the highest grade you can achieve is still a 100:
+
+* Uses a web manifest
+
+* Uses a service worker for offline functionality
+
+* Is installable
+
+## How to Submit Your MERN Stack Single-Page Application
+
+**Each member of your group** is required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository, with a unique name and a README describing the project.
+
+---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
