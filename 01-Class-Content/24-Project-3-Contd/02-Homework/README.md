@@ -25,7 +25,7 @@ If you are opting out of career services, this is *still a required assignment*.
 | Resume           | 10%    |
 | LinkedIn Profile | 10%    |
 
-> **Note:** If a project submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+> **Note**: If a project submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
 >
 > * A repository that has no code
 >
