@@ -24,7 +24,7 @@ Today's lesson will delve further into SQL queries. You will introduce students 
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 * If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
@@ -57,7 +57,7 @@ By the end of class, students will be able to:
 | 12:30PM| 13  | Instructor Demo: Mini-Project         | 0:05     |
 | 12:35PM| 14  | Student Do: Mini-Project              | 0:60     |
 | 1:35PM | 15  | Instructor Review: Mini-Project       | 0:10     |
-| 1:45PM | 16  | Introduce Homework                    | 0:05     |
+| 1:45PM | 16  | Introduce Challenge                   | 0:05     |
 | 1:50PM | 17  | FLEX                                  | 0:40     |
 | 2:30PM | 18  | End                                   | 0:00     |
 
@@ -799,7 +799,7 @@ By the end of class, students will be able to:
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 12 Mini-Project: Movie Database
+  # Module 12 Mini-Project: Movie Database
 
   In this mini-project, you will build Rest API routes for creating, retrieving, and deleting movies from a MySQL database.
 
@@ -1003,9 +1003,9 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `12-SQL/02-Homework/Main/db` from the command line and run `mysql -u root -p` to open MySQL Shell and demonstrate the following.
+* Open `12-SQL/02-Challenge/Main/db` from the command line and run `mysql -u root -p` to open MySQL Shell and demonstrate the following.
 
   * We use the `SOURCE` command to create and seed the database:
 
@@ -1038,11 +1038,11 @@ By the end of class, students will be able to:
 
   * 🙋 SQL is an in-demand skill used in many workplaces.
 
-* Ask TAs to direct students to the Homework Requirements found in `12-SQL/02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `12-SQL/02-Challenge/README.md`.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 * Answer any questions before ending the class.
 

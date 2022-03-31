@@ -1,10 +1,8 @@
-# 03.5 Full-Time Lesson Plan: Server-side APIs
+# 03.5 Full-Time Lesson Plan: Server-Side APIs
 
 ## Overview 
 
-In this lesson, students will review topics they've learned throughout the course so far to help prepare them for the mini-project and homework. They'll also learn how to set up a GitHub repository for collaboration and how to actually collaborate with others on an application. The purpose of this lesson is to show students how everything they've learned is used in a slightly bigger application.
-
-`Overview: Complete activities 21-27 in Unit 06`
+In this lesson, students will review topics they've learned throughout the course so far to help prepare them for the mini-project and Challenge. They'll also learn how to set up a GitHub repository for collaboration and how to actually collaborate with others on an application. The purpose of this lesson is to show students how everything they've learned is used in a slightly bigger application.
 
 ## Instructor Notes
 
@@ -18,7 +16,7 @@ In this lesson, students will review topics they've learned throughout the cours
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 * If the students struggle with the `Everyone Do: Git` activity, walk through it with the students using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end. 
 
@@ -53,7 +51,7 @@ By the end of class, students will be able to:
 | 12:30PM | 13 | Instructor Demo: Mini-Project      | 0:05     |
 | 12:35PM | 14 | Student Do: Mini-Project           | 0:60     |
 | 1:35PM  | 15 | Instructor Review: Mini-Project    | 0:10     |
-| 1:45PM  | 16 | Introduce Homework                 | 0:05     |
+| 1:45PM  | 16 | Introduce Challenge                | 0:05     |
 | 1:50PM  | 17 | FLEX                               | 0:40     |
 | 2:30PM  | 18 | END                                | 0:00     |
 
@@ -467,7 +465,7 @@ By the end of class, students will be able to:
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 06 Mini-Project: Library of Congress Search Tool
+  # Module 06 Mini-Project: Library of Congress Search Tool
 
   In this activity, you will work with a group to build an application that searches and displays results from the Library of Congress API.
 
@@ -637,9 +635,9 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
   * We will build a weather application that gives us a five-day forecast.
 
@@ -659,13 +657,13 @@ By the end of class, students will be able to:
 
   * 🙋 Most applications on the web today rely on making requests to an API for data. You will be hard-pressed to find a development job that doesn't involve server-side APIs in some way.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Ask the students if there is anything they would like to review from Unit 05 and 06.
+* Ask the students if there is anything they would like to review from Module 05 and 06.
 
 * Answer any questions before ending the class.
 

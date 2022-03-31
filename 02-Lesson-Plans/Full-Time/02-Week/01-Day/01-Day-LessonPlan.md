@@ -18,7 +18,7 @@ This class introduces the fundamentals of JavaScript, including variables, primi
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -36,7 +36,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 03 Slide Deck](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing)
+* [Module 03 Slide Deck](https://docs.google.com/presentation/d/1pC6pzJY2NfLEOuvM7Ms2p9cHaNFkshCEb5_QtylBdF8/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -76,11 +76,11 @@ By the end of class, students will be able to:
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/125APA1-Q3Tu6Sjevvriy2BQy7y7LCrEqxUlovWNGBt0/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1pC6pzJY2NfLEOuvM7Ms2p9cHaNFkshCEb5_QtylBdF8/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **JavaScript** 
   
-    * This unit is all about learning how to use JavaScript to apply logic and make applications feel more dynamic.
+    * This module is all about learning how to use JavaScript to apply logic and make applications feel more dynamic.
 
   * **What do we use HTML and CSS for?**
 
@@ -1281,7 +1281,7 @@ By the end of class, students will be able to:
 
 * Explain that so far, we have been using variables to store a single value&mdash;like `"Hello, World"`, `5`, or `true`&mdash;and writing blocks of code that execute once. But that is not very efficient, especially when working with big data. 
 
-* Stress that during this unit, we will think bigger! JavaScript can handle billions of values. So, building on the JavaScript skills we've acquired so far, we will learn how to store multiple values in a single array, perform an action on all the values stored in a variable with just a few lines of code, and even write code blocks that we can reuse again and again. 
+* Stress that during this module, we will think bigger! JavaScript can handle billions of values. So, building on the JavaScript skills we've acquired so far, we will learn how to store multiple values in a single array, perform an action on all the values stored in a variable with just a few lines of code, and even write code blocks that we can reuse again and again. 
 
 ### 19. Instructor Demo: Arrays (5 min) 
 

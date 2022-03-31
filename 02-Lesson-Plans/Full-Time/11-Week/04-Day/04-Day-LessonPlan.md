@@ -8,7 +8,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * In this lesson, students will complete activities `09-Ins_useReducer` through `20-Stu_useReducer-Review`.
 
-* Unit 22 Homework is **optional**. It is not required for submission, nor will it count towards one of the two assignments that students can skip. If students choose to skip this Homework, their final grade will not be affected in any way. This Homework is an opportunity for students to further practice their skills and get feedback on it. Please let students know about this extra credit opportunity!
+* Module 22 Challenge is **extra credit**. It is not required for submission, nor will it count towards one of the two assignments that students can skip. If students choose to skip this Challenge, their final grade will not be affected in any way. This Challenge is an opportunity for students to further practice their skills and get feedback on it. Please let students know about this extra credit opportunity!
 
 * Be sure to prepare and review the activities before class. Try to anticipate any questions that students might have.
 
@@ -20,7 +20,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -925,7 +925,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 ### 11. FLEX (20 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 ### 12. BREAK (30 mins)
 
@@ -1685,7 +1685,7 @@ In this class, students will learn about the `useReducer` hook. This class also 
 
 ### 22. FLEX (30 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 * Answer any questions before ending the class.
 

@@ -1,4 +1,4 @@
-# 03.1 Full-Time Lesson Plan: Intro to jQuery
+# 03.1 Full-Time Lesson Plan: Third-Party APIs
 
 ## Overview
 
@@ -18,7 +18,7 @@ In this class, we will perform DOM manipulations that students are already famil
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -40,7 +40,7 @@ We will use jQuery to do the following:
 
 ## Slide Deck
 
-* [Unit 05 Slide Deck](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
+* [Module 05 Slide Deck](https://docs.google.com/presentation/d/1FjKh60N-t5lF3XMmLDiEfCgiNIqAxbDbIyGZLdtGhjw/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -80,9 +80,9 @@ We will use jQuery to do the following:
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1FjKh60N-t5lF3XMmLDiEfCgiNIqAxbDbIyGZLdtGhjw/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Third-Party APIs:** This unit is all about learning how to use tools and code built by other developers.
+  * **Third-Party APIs:** This module is all about learning how to use tools and code built by other developers.
 
   * **What languages do we use to build web apps?**
 
@@ -126,11 +126,11 @@ We will use jQuery to do the following:
 
       * And most importantly, ask questions.
 
-* In this unit, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and MomentJS!
+* In this module, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and MomentJS!
 
 * Open `28-Stu_Mini-Project/Solved/index.html` in your browser.
 
-  * 🔑 We are viewing the mini-project that we will be able to build this by the end of this unit.
+  * 🔑 We are viewing the mini-project that we will be able to build this by the end of this module.
 
   * 🔑 It is a web application to track the amount of money earned on projects.
 
@@ -983,7 +983,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 ### 18. Instructor Do: Stoke Curiosity (10 min)
 
-* Remind students that this unit is all about using third-party APIs and libraries to make development work easier at times.
+* Remind students that this module is all about using third-party APIs and libraries to make development work easier at times.
 
 * Ask the class the following question (☝️) and call on students for the answer (🙋):
 

@@ -18,7 +18,7 @@ This lesson is all about exposing students to what's possible with CSS for both 
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
 * If the students struggle with the `Everyone Do: Git` activity, walk through it using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
@@ -53,7 +53,7 @@ By the end of class, students will be able to do the following:
 | 12:30PM| 13  | Instructor Demo: Mini Project      | 0:05     |
 | 12:35PM| 14  | Student Do: Mini Project           | 0:60     |
 | 1:35PM | 15  | Instructor Review: Mini Project    | 0:10     |
-| 1:45PM | 16  | Introduce Homework                 | 0:05     |
+| 1:45PM | 16  | Introduce Challenge                | 0:05     |
 | 1:50PM | 17  | FLEX                               | 0:40     |
 | 2:30PM | 18  | End                                | 0:00     |
 
@@ -85,13 +85,13 @@ By the end of class, students will be able to do the following:
 
     * Interface design: How the user interacts with the elements on the page, with a focus on functionality.
 
-  * Let students know that they will get hands-on experience by creating a wireframe for this unit's mini-project.
+  * Let students know that they will get hands-on experience by creating a wireframe for this module's mini-project.
 
 ### 2. Instructor Demo: Wireframing (5 min) 
 
 * Open `21-Ins_Wireframing/assets/Images/01-unfinished-wireframe.png` in your IDE and explain the following:
 
-  * This image shows the start of a wireframe for the unit's mini-project, with the rows and columns highlighted.
+  * This image shows the start of a wireframe for the module's mini-project, with the rows and columns highlighted.
 
   * 🔑 When creating a wireframe, we want a way to visually represent our page layout. Using rows and columns is an effective way to guide our decision-making when placing elements on the page.
 
@@ -483,7 +483,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 02 Mini-Project: CSS Snippet Cheat Sheet
+  # Module 02 Mini-Project: CSS Snippet Cheat Sheet
 
   In this activity, you will work with a group to build a webpage that will hold a collection of CSS snippets. What better way to learn CSS than to build a knowledge base of CSS?
 
@@ -641,9 +641,9 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
   * A portfolio is a great way for developers to put themselves out there and demonstrate their skills while having fun. 
 
@@ -663,11 +663,11 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * 🙋 As a developer, you need a place to showcase your work to potential employers. Let your work do the talking for you!
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 * Answer any questions before ending the class.
 

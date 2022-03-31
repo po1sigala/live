@@ -1,32 +1,32 @@
-# Unit 13 & 14 Instructor Overview: Object-Relational Mapping (ORM) and Model-View-Controller (MVC)
+# Module 13 & 14 Instructor Overview: Object-Relational Mapping (ORM) and Model-View-Controller (MVC)
 
 ## Overview
 
-In Unit 13, you will teach students to use the ORM library Sequelize to connect to and seed a database. In the process, students will create and configure Sequelize models, use validation tools, encrypt a password using `bcrypt`, automate functionality with Hooks, and use SQL in literals. Students will also model relationships and relate data between SQL tables using Sequelize associations. With the help of RESTful routes, they will map HTTP verbs to CRUD actions and build custom routes that map to instance methods. Additionally, students will learn to catch errors with `try...catch` and use `async` and `await` instead of Promises.
+In Module 13, you will teach students to use the ORM library Sequelize to connect to and seed a database. In the process, students will create and configure Sequelize models, use validation tools, encrypt a password using `bcrypt`, automate functionality with Hooks, and use SQL in literals. Students will also model relationships and relate data between SQL tables using Sequelize associations. With the help of RESTful routes, they will map HTTP verbs to CRUD actions and build custom routes that map to instance methods. Additionally, students will learn to catch errors with `try...catch` and use `async` and `await` instead of Promises.
 
-In Unit 14, students will use the separation of concerns principle and the MVC framework to build full-stack web apps. They will use Handlebars.js features including expressions, built-in helpers, custom helpers, and partials to build static templates that can render dynamic data. Students will use front-end logic to make requests and pass data to the back end. They will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. They will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create their own custom middleware for user authentication. Students will also incorporate sessions and cookies using the Sequelize store. They will be introduced to Prettier before starting on the mini-project.
+In Module 14, students will use the separation of concerns principle and the MVC framework to build full-stack web apps. They will use Handlebars.js features including expressions, built-in helpers, custom helpers, and partials to build static templates that can render dynamic data. Students will use front-end logic to make requests and pass data to the back end. They will begin by using hardcoded data and transition to using seed data with Sequelize and MySQL. They will use the routes in the Controller to manipulate data in the Model, to serialize Sequelize objects before sending them to the View, and create their own custom middleware for user authentication. Students will also incorporate sessions and cookies using the Sequelize store. They will be introduced to Prettier before starting on the mini-project.
 
-Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content/13-ORM/README.md) and [Unit 14](../../../01-Class-Content/14-MVC/README.md)for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
-* For Unit 13, take some time to review the Sequelize documentation to refamiliarize yourself with the library. Focus on implementing Hooks, validations, and associations.
+* For Module 13, take some time to review the Sequelize documentation to refamiliarize yourself with the library. Focus on implementing Hooks, validations, and associations.
 
-* You will use MySQL in all of the activities for this unit, so be sure to have your MySQL server up and running. You can create the databases listed in each activity ahead of time, or you can prepare to demonstrate it live in class.
+* You will use MySQL in all of the activities for this module, so be sure to have your MySQL server up and running. You can create the databases listed in each activity ahead of time, or you can prepare to demonstrate it live in class.
 
 * Run `npm install` before the Instructor Demo to ensure that you have the full five-minute window for instruction.
 
-* In the first activity of Unit 13, `01-Ins_Sequelize-Setup`, you will hardcode the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure that you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
+* In the first activity of Module 13, `01-Ins_Sequelize-Setup`, you will hardcode the database credentials in the `connection.js` file. Every subsequent activity uses a `.env` file. Make sure that you create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
 * Instead of relying on a front end, all of the activities will use Insomnia to test the routes. Be sure to have it installed and ready for class.
 
-* Unit 13 also introduces RESTful routes. Highlight the convention for students and tell them that they will revisit the pattern at a later point.
+* Module 13 also introduces RESTful routes. Highlight the convention for students and tell them that they will revisit the pattern at a later point.
 
-* The introduction to seeding in this unit differs from what students will find in the Sequelize documentation. Consider warning students about the difference in case they look for more information on seeding in the documentation.
+* The introduction to seeding in this module differs from what students will find in the Sequelize documentation. Consider warning students about the difference in case they look for more information on seeding in the documentation.
 
-* For Unit 14, take some time to read through the Handlebars.js documentation and the Express Handlebars documentation to refamiliarize yourself with the template engine. This unit uses Express Handlebars, so the Handlebars.js documentation alone might not provide all of the answers. Focus on expressions, built-in helpers, custom helpers, and partials.
+* For Module 14, take some time to read through the Handlebars.js documentation and the Express Handlebars documentation to refamiliarize yourself with the template engine. This module uses Express Handlebars, so the Handlebars.js documentation alone might not provide all of the answers. Focus on expressions, built-in helpers, custom helpers, and partials.
 
-* This unit introduces students to the template engine Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their careers but more to treat the experience as an introduction to template engines, preparation for React.js, and a way to solidify their understanding of the MVC framework.
+* This module introduces students to the template engine Handlebars.js. The intention is not so much for students to learn Handlebars.js because it will be useful in their careers but more to treat the experience as an introduction to template engines, preparation for React.js, and a way to solidify their understanding of the MVC framework.
 
 * Starting with `07-Ins_Data-Serialization`, each activity requires a `.env` file. Be sure to create one or rename the existing `.env.EXAMPLE` file before demonstrating each activity.
 
@@ -40,13 +40,13 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 13](../../../01-Class-Content/13-ORM/04-Career-Connection/README.md) and [Unit 14](../../../01-Class-Content/14-MVC/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Unit 15).
+* Starting next week, students will work on their group projects. The project groups and project requirements will be announced in the next class (Day 1 of Module 15).
 
 * In the meantime, start thinking about possible project groups. This time, assign three students per group, all around the same skill level. Be ready to assign students to groups in the next class.
 
@@ -56,7 +56,7 @@ Refer to the Class Content Unit Overview for [Unit 13](../../../01-Class-Content
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -70,21 +70,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [07.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 13 Homework](../../../01-Class-Content/13-ORM/02-Homework)
+  * [Module 13 Challenge](../../../01-Class-Content/13-ORM/02-Challenge)
 
-  * [Unit 14 Homework](../../../01-Class-Content/14-MVC/02-Homework)
+  * [Module 14 Challenge](../../../01-Class-Content/14-MVC/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 13: ORM](https://docs.google.com/presentation/d/1_0n8JjM6cgmDyUfqGC6crF47JItD0mn9vzvQeYqZ5OE/edit?usp=sharing)
+  * [Module 13: ORM](https://docs.google.com/presentation/d/12L1MgEGt-oHIPMNWisv2QAxZ3J4NQNpAxk2jY2rXtyM/edit?usp=sharing)
 
-  * [Unit 14: MVC](https://docs.google.com/presentation/d/1rb2QnbKkUfmwqfUEpdQjV8x6S18ShB1BRdLggIVq6yU/edit?usp=sharing)
+  * [Module 14: MVC](https://docs.google.com/presentation/d/1RIA8VZVN4_JAaL0xSPf1GPc8b5dJlM5V43EVNEZ_kfA/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 13:
+Module 13:
 
 * [01: Double Triple Map](../../../01-Class-Content/13-ORM/03-Algorithms/01-double-triple-map/)
 
@@ -94,7 +94,7 @@ Unit 13:
 
 * [03: Squares of a Sorted Array](../../../01-Class-Content/13-ORM/03-Algorithms/03-squares-of-a-sorted-array/)
 
-Unit 14:
+Module 14:
 
   * [01: Common Element](../../../01-Class-Content/14-MVC/03-Algorithms/01-common-element/)
 

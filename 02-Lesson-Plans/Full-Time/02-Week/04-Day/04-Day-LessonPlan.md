@@ -14,7 +14,7 @@ In today's class, students will learn to work with timers while reinforcing thei
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -624,9 +624,9 @@ By the end of class students will be able to:
 
 ### 11. FLEX (20 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
-* Ask the students if there is anything they would like to review from Unit 04 so far.
+* Ask the students if there is anything they would like to review from Module 04 so far.
 
 ### 12. BREAK (30 mins)
 
@@ -1137,7 +1137,7 @@ By the end of class students will be able to:
 
 ### 22. FLEX (30 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 * The primary goal today was to ensure that students feel comfortable setting up event listeners and using their callbacks to manipulate the DOM. Spend some time reviewing and answering any questions students have regarding event listeners.
 

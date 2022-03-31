@@ -1,16 +1,16 @@
-# Unit 10 Instructor Overview: Object-Oriented Programming (OOP)
+# Module 10 Instructor Overview: Object-Oriented Programming (OOP)
 
 ## Overview
 
-In this unit, we will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
+In this module, we will cover some crucial object-oriented programming concepts, including constructors, prototypes, polymorphism, and Promises. We will also introduce students to test-driven development and unit tests. Lastly, we will review the basics of ES6 classes and how they can help organize code.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
 * Many students will benefit from more information about prototypal inheritance. Try to provide them with helpful supplementary resources, but avoid spending too much in-class time on the subject if some students seem to be struggling.
 
-* You will cover polymorphism in this unit, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class. 
+* You will cover polymorphism in this module, primarily focused on **method overloading**. Be sure to review this topic and familiarize yourself with method overloading before class. 
 
 * Warn your students that this module is concept-heavy and that object-oriented programming can be difficult to understand&mdash;but it is crucial in becoming employer-competitive. Reassure them that many new developers struggle with OOP and that confusion is perfectly normal at first. 
 
@@ -20,21 +20,21 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/10-OOP/READ
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/10-OOP/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In the next unit, we will explore the use of servers and Express.js on the back end of an application.
+* In the next module, we will explore the use of servers and Express.js on the back end of an application.
 
 * We will also introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
 
-* Students will also start using Heroku to host their web applications in the next unit. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
+* Students will also start using Heroku to host their web applications in the next module. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -44,13 +44,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [10.3 Lesson Plan](./03-Day_ES6-Classes/10.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 10 Homework](../../../01-Class-Content/10-OOP/02-Homework)
+  * [Module 10 Challenge](../../../01-Class-Content/10-OOP/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 10: Object-Oriented Programming](https://docs.google.com/presentation/d/1Heou5UD956vYb1d4YDCi4GobFCcz4geNifZmz0KISgg/edit?usp=sharing)
+  * [Module 10: Object-Oriented Programming](https://docs.google.com/presentation/d/1DtkslDqhc1kio8D9d3N2jRUAKzJW3BXa6RWRQHzV7Nc/edit?usp=sharing)
 
 ### Algorithms
 

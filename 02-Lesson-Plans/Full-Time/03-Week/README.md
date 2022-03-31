@@ -1,4 +1,4 @@
-# Week 03: Third-Party-APIs and Server-side APIs
+# Module 05 & 06 Instructor Overview: Third-Party APIs and Server-Side APIs
 
 ## Overview
 
@@ -12,44 +12,40 @@ Also this week we will learn the Fetch web API which can data from server-side A
 
 We'll use the `fetch()` method to make requests, parse through the returned datasets, and convert them to HTML elements. We'll explore how this data is typically formatted, how to look for and handle errors that might arise, and more importantly, how to read documentation when working with server-side APIs.
 
-Refer to the following links for detailed information on key topics, learning objectives and homework:
-
-* [05-Third-Party-APIs](../../../01-Class-Content/05-Third-Party-APIs/README.md)
-* [06-Server-Side-APIs](../../../01-Class-Content/06-Server-Side-APIs/README.md)
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
-* In this unit's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
+* In this module's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
 
 * Student's will also gain their first exposure to Bootstrap, so be prepared for numerous questions surrounding that. Head over to the [Docs on Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to familiarize yourself.
 
-* Starting this unit, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
+* Starting this module, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
 
-* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Unit 09, so until then, our activities will continue to use ES5 syntax.
+* The MDN Web Docs use ES6 in their Fetch API examples, but our activities will continue to use ES5 syntax, because that is what students will be familiar with. We will cover ES6 syntax in Module 09, so until then, our activities will continue to use ES5 syntax.
 
 * Along with the Fetch API, students will also briefly experiment with cURL, `XMLHttpRequest` objects, and `$.ajax()`.
 
-* Students will use the GitHub API for activities and the OpenWeather API for their homework. The OpenWeather API requires signing up for a key.
+* Students will use the GitHub API for activities and the OpenWeather API for their Challenge. The OpenWeather API requires signing up for a key.
 
-* Remind students to complete this unit's assessment near the end of the week. Students can find it in the Unit Overview under Technical Interview Preparation.
+* Remind students to complete the assessments for both modules near the end of the week. Students can find them in the Weekly Wrap-Up in Canvas.
 
 ## Career Connection
 
-* [Third-party APIs](../../../01-Class-Content/05-Third-Party-APIs/04-Career-Connection/README.md).
-
-* [Server-side APIs](../../../01-Class-Content/06-Server-Side-APIs/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-For the next two units, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
+For the next two modules, students will work on their first group project. Groups should consist of three to four students each. Don't let students work on a project alone, as this is one of their only chances to learn proper Git collaboration.
 
 However, there are occasional circumstances, such as an illness or a personal emergency, which might force a student to complete a group project on their own. In these circumstances, as the instructor, you will meet with the student and SSM to determine if completing the project independently is the best path forward. If it is, you will share adjusted project requirements and a grading rubric with the student.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
+
 ### Lesson Plans
 
 * [3.1 - Lesson Plan](01-Day/01-Day-LessonPlan.md)
@@ -62,19 +58,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [3.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-* [Unit 05 Homework](../../../01-Class-Content/05-Third-Party-APIs/02-Homework)
-* [Unit 06 Homework](../../../01-Class-Content/06-Server-Side-APIs/02-Homework)
+* [Module 05 Challenge](../../../01-Class-Content/05-Third-Party-APIs/02-Challenge)
+
+* [Module 06 Challenge](../../../01-Class-Content/06-Server-Side-APIs/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 05: Third-Party APIs](https://docs.google.com/presentation/d/1-TxVbjIGv8jMD4pcEtjonVPs8qItpUNHUCfIGMAErxg/edit?usp=sharing)
-* [Unit 06: Server-Side APIs](https://docs.google.com/presentation/d/1tL0nVHEJVeR5Bi1C1bDBUAOY2ncW9ySReklGIAzaRms/edit?usp=sharing)
+* [Module 05: Third-Party APIs](https://docs.google.com/presentation/d/1FjKh60N-t5lF3XMmLDiEfCgiNIqAxbDbIyGZLdtGhjw/edit?usp=sharing)
+
+* [Module 06: Server-Side APIs](https://docs.google.com/presentation/d/1-5nadf7eI4RgU5V_ymwD-NMWlwO20TDvkb3a4Xm80eM/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 05:
+Module 05:
 
 * [01: Fizz Buzz](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/01-fizz-buzz)
 
@@ -84,7 +82,7 @@ Unit 05:
 
 * [03: Vowel Count](../../../01-Class-Content/05-Third-Party-APIs/03-Algorithms/03-vowel-count)
 
-Unit 06:
+Module 06:
 
 * [01: Is Palindrome](../../../01-Class-Content/06-Server-Side-APIs/03-Algorithms/01-is-palindrome)
 

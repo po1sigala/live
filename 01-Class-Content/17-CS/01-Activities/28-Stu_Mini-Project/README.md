@@ -1,4 +1,4 @@
-# Mini-Project: Technical Interview Practice (Sorting Algorithms)
+# Module 17 Mini-Project: Technical Interview Practice (Sorting Algorithms)
 
 In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate. 
 

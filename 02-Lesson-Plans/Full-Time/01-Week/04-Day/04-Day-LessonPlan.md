@@ -1,4 +1,4 @@
-# 01.4 Full-Time Lesson Plan: Pseudo-Resets
+# 01.4 Full-Time Lesson Plan: Advanced CSS
 
 ## Overview
 
@@ -22,7 +22,7 @@ In today's class, students will begin by working with styling CSS boxes. The the
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -637,7 +637,7 @@ By the end of class, students will be able to do the following:
 
 ### 11. FLEX (20 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 ### 12. BREAK (30 mins)
 
@@ -1115,7 +1115,7 @@ By the end of class, students will be able to do the following:
 
 ### 22. FLEX (30 mins)
 
-* This time can be utilized for reviewing key topics learned so far in this unit.
+* This time can be utilized for reviewing key topics learned so far in this module.
 
 * Answer any questions before ending the class.
 

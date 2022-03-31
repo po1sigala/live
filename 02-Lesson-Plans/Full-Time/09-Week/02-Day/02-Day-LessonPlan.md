@@ -28,7 +28,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -214,7 +214,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
   3. Check the console to see undefined values.
 
-  4. Run `npm test` to check if all unit test pass.
+  4. Run `npm test` to check if all unit tests pass.
 
   ## 💡 Hints
 
@@ -568,7 +568,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```js
     const lesson = function () {
       const state = {
-        title: 'Unit 17 - Computer Science',
+        title: 'Module 17 - Computer Science',
         description: 'CS for JS',
       };
     };
@@ -589,7 +589,7 @@ In today's class, students will take a dive deep into how JavaScript executes. T
     ```js
     const lesson = function () {
       const state = {
-        title: 'Unit 17 - Computer Science',
+        title: 'Module 17 - Computer Science',
         description: 'CS for JS',
       };
       return { ...getInformation(state) };
@@ -806,9 +806,9 @@ In today's class, students will take a dive deep into how JavaScript executes. T
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or completing the **OPTIONAL** activity below.
+* This time can be utilized for reviewing key topics learned so far in this module or completing the **OPTIONAL** activity below.
 
-* The unit so far has been very abstract so check with the students to see if they have any questions about anything we've covered so far.
+* The module so far has been very abstract so check with the students to see if they have any questions about anything we've covered so far.
 
 * Open [Leetcode](https://leetcode.com/) in your browser and explain the following:
 

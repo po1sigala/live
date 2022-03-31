@@ -8,7 +8,7 @@ const getInformation = (state) => ({
 const lesson = function () {
   // Store the locally scoped variables.
   const state = {
-    title: 'Unit 17 - Computer Science',
+    title: 'Module 17 - Computer Science',
     description: 'CS for JS',
   };
 

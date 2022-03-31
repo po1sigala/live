@@ -14,7 +14,7 @@ In this lesson, you will teach students how to style React components, use condi
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 * If the students struggle with the Everyone Do: GitHub Pages activity, walk through it with them using the talking points provided. Otherwise, support the students as they do the activity and do a brief review at the end.
 
@@ -47,7 +47,7 @@ By the end of class, students will be able to:
 | 12:30PM | 13  | Instructor Demo: Mini Project            | 0:05     |
 | 12:35PM | 14  | Student Do: Mini Project                 | 0:60     |
 | 1:35PM  | 15  | Instructor Review: Mini Project          | 0:10     |
-| 1:45PM  | 16  | Introduce Homework                       | 0:05     |
+| 1:45PM  | 16  | Introduce Challenge                      | 0:05     |
 | 1:50PM  | 17  | FLEX                                     | 0:40     |
 | 2:30PM  | 18  | End                                      | 0:00     |
 
@@ -1200,7 +1200,7 @@ By the end of class, students will be able to:
 
   * 🔑 The app we will build will allow users to enter a bucket-list item, assign it a priority, and render a list of bucket-list items to the page.
 
-  * We will use most of the React concepts that we've learned in this unit in a fully functional app!
+  * We will use most of the React concepts that we've learned in this module in a fully functional app!
 
   * This exercise will reinforce your ability to use React to iterate through lists and keys.
 
@@ -1219,11 +1219,11 @@ By the end of class, students will be able to:
 * Break your students into groups that will work together on this activity.
 
    ```md
-   ## Unit 20 Mini-Project: Bucket List
+   ## Module 20 Mini-Project: Bucket List
 
    In this mini-project, you are given starter code for a React Bucket List app. Some pieces of the application are not complete, and it is your mission to take what you have learned so far and complete the app.
 
-   This project invites you to use most of the concepts you've learned in this unit. You will manage state using the `useState` Hook, pass data as props to child components, and use lists and keys to render a list of bucket-list items.
+   This project invites you to use most of the concepts you've learned in this module. You will manage state using the `useState` Hook, pass data as props to child components, and use lists and keys to render a list of bucket-list items.
 
    ## Activity
 
@@ -1440,9 +1440,9 @@ By the end of class, students will be able to:
 
 * Answer any questions before proceeding to the next activity.
 
-### 16. Instructor Demo: Introduce Homework (5 min)
+### 16. Instructor Demo: Introduce Challenge (5 min)
 
-* To demonstrate the homework, first create a new React app using `npx create-react-app` and transplant the `/public`, `/src`, and `package.json` from `01-Class-Content/20-React/02-Homework/Main`.
+* To demonstrate the Challenge, first create a new React app using `npx create-react-app` and transplant the `/public`, `/src`, and `package.json` from `01-Class-Content/20-React/02-Challenge/Main`.
 
 * After transplanting the files into the newly created React app, be sure to run `npm install`.
 
@@ -1472,19 +1472,19 @@ By the end of class, students will be able to:
 
   * ☝️ How does this project build on or extend previously learned material?
 
-  * 🙋 This project uses a combination of all the core React concepts that we have touched on in this unit, including managing state, rendering JSX, and passing data from parent to child.
+  * 🙋 This project uses a combination of all the core React concepts that we have touched on in this module, including managing state, rendering JSX, and passing data from parent to child.
 
   * ☝️ How does this project relate to your career goals?
 
   * 🙋 Knowing how to build apps using React is key to remaining employer-competitive. This project gives you an opportunity to create a fully featured React app that can show off your projects and your proficiency with React.
 
-* Ask TAs to direct students to the homework requirements in `01-Class-Content/20-React/02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge requirements in `01-Class-Content/20-React/02-Challenge/README.md`.
 
 ### 17. FLEX (40 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Check if students have any questions about this unit. Allow students to get a head start on the homework.
+* Check if students have any questions about this module. Allow students to get a head start on the Challenge.
 
 * Answer any questions before ending the class.
 

@@ -1,22 +1,22 @@
-# Unit 17 & 18 Instructor Overview: Computer Science for JavaScript and NoSQL
+# Module 17 & 18 Instructor Overview: Computer Science for JavaScript and NoSQL
 
 ## Overview
 
-In Unit 17, we will shift gears a bit to introduce students to general computer-science concepts as they relate to JavaScript. The end goal is to prepare students for the technical interview portion of the job interview process. While still project-based, this will be a more concept-dense unit than students are accustomed to.
+In Module 17, we will shift gears a bit to introduce students to general computer-science concepts as they relate to JavaScript. The end goal is to prepare students for the technical interview portion of the job interview process. While still project-based, this will be a more concept-dense module than students are accustomed to.
 
 We will dissect JavaScript and review how code executes at a granular level. We will also learn about closures and how we can leverage them in our code. We will compare inheritance and composition in application design. And we will review search algorithms and recursion in JavaScript.
 
-The Unit 17 activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
+The Module 17 activities are especially aimed at helping students gain practice experience in interviews and help move them from classroom learners to career-ready developers. Please allow time to share with the class your own experiences as a seasoned industry professional -- as you are comfortable -- in both interviews and on the job. In addition, the activities are built to allow time for conversations centered the key concepts to help the students gain confidence in both asking questions and explaining their ideas to others.
 
-For the Unit 17 mini-project, students will practice the technical interview portion of a mock interview for a web-developer job with their peers. They'll address topics that are foundational to improving code performance and commonly found in technical interviews.
+For the Module 17 mini-project, students will practice the technical interview portion of a mock interview for a web-developer job with their peers. They'll address topics that are foundational to improving code performance and commonly found in technical interviews.
 
-In Unit 18, you will introduce students to NoSQL databases and performing CRUD operations using MongoDB, a popular NoSQL document-based database. Students will also learn how to use Mongoose, an Object Data Modeling (ODM) library, to enforce a specific schema on data and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
+In Module 18, you will introduce students to NoSQL databases and performing CRUD operations using MongoDB, a popular NoSQL document-based database. Students will also learn how to use Mongoose, an Object Data Modeling (ODM) library, to enforce a specific schema on data and handle data relationships. Deployment of an application using Mongo Atlas and Heroku is also discussed.
 
-Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content/17-CS/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor/TA Notes
 
-* In Unit 17, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
+* In Module 17, we will explore JavaScript execution and data structures. To prepare, review concepts related to [execution context vs. scope](https://blog.kevinchisholm.com/javascript/difference-between-scope-and-context/) and the [JavaScript execution process](https://www.youtube.com/watch?v=8aGhZQkoFbQ). To explain JavaScript execution, you should be familiar with the following terminology: thread of execution, execution context, scope chain, event loop, callback queue, and call stack.
 
 * Some activities use a testing library to debug or build code. Lesson content moves fluidly between the browser and Node.js, so familiarize yourself with when you'll use `npm install` to run the test suites.
 
@@ -24,41 +24,41 @@ Refer to the Class Content Unit Overview for [Unit 17](../../../01-Class-Content
 
 * We will focus primarily on algorithms. To prepare, review the algorithms in the [Resources](#resources) section. Students might struggle to understand some of the algorithms, so encourage patience, practice, asking questions, and seeking resources.
 
-* The Unit 17 mini-project is a departure from past projects in that it is an interactive mock interview with a small group of peers. Encourage students to take the mini-project seriously. The main objective is to practice technical communication in preparation for the real-life interview process. Be sure to check on students frequently to motivate them. Add a personal story about any technical interviews you've done if possible.
+* The Module 17 mini-project is a departure from past projects in that it is an interactive mock interview with a small group of peers. Encourage students to take the mini-project seriously. The main objective is to practice technical communication in preparation for the real-life interview process. Be sure to check on students frequently to motivate them. Add a personal story about any technical interviews you've done if possible.
 
 * If students struggle with the `bash shell` activity, `27-Evr_Shell`, walk through it with them using the talking points provided. Otherwise, support the students as they work on the activity and briefly review it at the end.
 
-* In Unit 18, you will focus on NoSQL databases. Be sure to have MongoDB and Compass installed on your machine before the first class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) for instructions.
+* In Module 18, you will focus on NoSQL databases. Be sure to have MongoDB and Compass installed on your machine before the first class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) for instructions.
 
 * Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. To use, make sure that you first have both MongoDB and Node.js installed. For start-up instructions, refer to the [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html).
 
-* Mongo Atlas, a fully managed cloud database, will be used to deploy the Unit 18 mini-project to Heroku. For instructions on how to sign up for an account and deploy a free cluster, refer to [Get started free with MongoDB Atlas](https://docs.atlas.mongodb.com/getting-started/).
+* Mongo Atlas, a fully managed cloud database, will be used to deploy the Module 18 mini-project to Heroku. For instructions on how to sign up for an account and deploy a free cluster, refer to [Get started free with MongoDB Atlas](https://docs.atlas.mongodb.com/getting-started/).
 
-* Unit 18's activities do not have a front end and all routes will be tested using Insomnia. Please make sure that you have Insomnia installed locally prior to class. Refer to [Insomnia installation docs](https://insomnia.rest/download) as needed.
+* Module 18's activities do not have a front end and all routes will be tested using Insomnia. Please make sure that you have Insomnia installed locally prior to class. Refer to [Insomnia installation docs](https://insomnia.rest/download) as needed.
 
-* Though MongoDB might be new to most learners, Unit 18's activities build on skills developed in earlier units, including Express servers, SQL databases, data relationships, and queries. Where possible, encourage students to make connections to prior learning and start thinking about the role that databases such as MongoDB play in their apps.
+* Though MongoDB might be new to most learners, Module 18's activities build on skills developed in earlier modules, including Express servers, SQL databases, data relationships, and queries. Where possible, encourage students to make connections to prior learning and start thinking about the role that databases such as MongoDB play in their apps.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 17](../../../01-Class-Content/17-CS/04-Career-Connection/README.md) and [Unit 18](../../../01-Class-Content/18-NoSQL/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In Unit 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). Chrome Devtools and Google Lighthouse will be our primary tools for measuring web application performance. We will use the Service Worker and Cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection. To unlock the power of service workers, we will use `webpack` and Workbox.
+* In Module 19, students will learn about measuring and optimizing the performance of web applications, as well as learning how to create Progressive Web Applications (PWAs). Chrome Devtools and Google Lighthouse will be our primary tools for measuring web application performance. We will use the Service Worker and Cache APIs to cache assets and API responses, which ensures that the application will continue to work without an internet connection. To unlock the power of service workers, we will use `webpack` and Workbox.
 
-* This unit is a precursor to the upcoming React units, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
+* This module is a precursor to the upcoming React modules, because webpack is an important part of React. While learning about PWAs, students will gain exposure to the client-server architecture, which is different from the MVC model that they had been using in previous weeks.
 
-* In Unit 20, students will learn how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications.
+* In Module 20, students will learn how to create a React single-page application (SPA) from the ground up. Through this process, students will learn about components, state, props, React styling, and how to test React applications.
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
 
-* The Unit 22 Homework will be an optional assignment. This change comes from student and instructor feedback on the amount of work and time required to complete both the Unit 22 Homework and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
+* The Module 22 Challenge will be an extra credit opportunity for students. This change comes from student and instructor feedback on the amount of work and time required to complete both the Module 22 Challenge and Project 03 that week. Please let students know about this ahead of time as they enter Phase 3 of the boot camp.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -72,21 +72,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [09.5 Lesson Plan](./05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-  * [Unit 17 Homework](../../../01-Class-Content/17-CS/02-Homework)
+  * [Module 17 Challenge](../../../01-Class-Content/17-CS/02-Challenge)
 
-  * [Unit 18 Homework](../../../01-Class-Content/18-NoSQL/02-Homework)
+  * [Module 18 Challenge](../../../01-Class-Content/18-NoSQL/02-Challenge)
 
 ### Slide Decks
 
-  * [Unit 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/1oK8WB9pt8GfraNTsWbPNWMFpBYzXe_URem6Ch3oq9eo/edit?usp=sharing)
+  * [Module 17: Computer Science for JavaScript](https://docs.google.com/presentation/d/16vSjLoHs48HwxdQIc5V67tvhW9f-VZBxElEY2nltVgA/edit?usp=sharing)
 
-  * [Unit 18: NoSQL](https://docs.google.com/presentation/d/1tsxce_ukQswTyiPlxV9BfzshLkwquUHWdxNrFQYlHvM/edit?usp=sharing)
+  * [Module 18: NoSQL](https://docs.google.com/presentation/d/1U9HV8gv4am28LWJ46sDm367mrBi0PZ3tpIDYNpRoj3A/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 17:
+Module 17:
 
   * [01: Reverse Words](../../../01-Class-Content/17-CS/03-Algorithms/01-reverse-no-built-in)
 
@@ -96,7 +96,7 @@ Unit 17:
 
   * [03: Reverse in Place](../../../01-Class-Content/17-CS/03-Algorithms/03-reverse-in-place)
 
-Unit 18:
+Module 18:
 
   * [01: Valid Brackets](../../../01-Class-Content/18-NoSQL/03-Algorithms/01-valid-brackets)
 

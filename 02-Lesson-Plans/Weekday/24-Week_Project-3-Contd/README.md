@@ -1,10 +1,10 @@
-# Unit 24 Instructor Overview: Project 3 Continued
+# Module 24 Instructor Overview: Project 3 Continued
 
 ## Overview
 
-In this unit, students will continue to work on their final project and present their final projects to the class at the end of the unit. They'll also finish up their professional materials, including their portfolios, and add their final projects once they've completed them.
+In this module, students will continue to work on their final project and present their final projects to the class at the end of the module. They'll also finish up their professional materials, including their portfolios, and add their final projects once they've completed them.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/24-Project-3-Contd/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's group project.
 
 ## Instructor/TA Notes
 
@@ -20,11 +20,11 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/24-Project-
 
 ## Heads-Up
 
-* Remind students to finalize their portfolios by adding a link to their deployed application and completing any unfinished career homework assignments.
+* Remind students to finalize their portfolios by adding a link to their deployed application.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -34,9 +34,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
   
 * [24.3 Lesson Plan](./03-Day/24.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 24 Homework](../../../01-Class-Content/24-Project-3-Contd/02-Homework/README.md)
+* [Project 3](../../../01-Class-Content/24-Project-3-Contd/02-Challenge/README.md)
 
 ### Slide Decks
 

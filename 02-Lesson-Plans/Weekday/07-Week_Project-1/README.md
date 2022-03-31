@@ -1,14 +1,14 @@
-# Unit 07 Instructor Overview: Project 1
+# Module 07 Instructor Overview: Project 1
 
 ## Overview
 
-In this unit, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group.
+In this module, you will introduce agile project management and help students with their first project, an API-powered interactive front-end web application that pulls data from multiple sources in a creative way. Students will learn how to write user stories and acceptance criteria. Students will create a new repository for their project and learn how to use GitHub Issues and GitHub Projects to keep track of their project progress. You will assume the role of "scrummaster" and hold daily scrum meetings with each group.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-1/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's group project.
 
 ## Instructor/TA Notes
 
-* Prepare a list of project group members prior to the first class for this unit. Assign three students per group: one advanced, one average, one struggling. You can add a slide to this unit's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
+* Prepare a list of project group members prior to the first class for this module. Assign three students per group: one advanced, one average, one struggling. You can add a slide to this module's slide deck to list the group members, or you can send the list out to students via Slack. Let students know that they will be allowed to create their own groups for the final project.
 
 * If students complain about group configurations, remind them of the following:
 
@@ -26,13 +26,13 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-
 
 ## Career Connection
 
-* There is no career services material for this unit.
+* There is no career services material for this module.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* In the next unit, students will present their group project on the last day of class.
+* In the next module, students will present their group project on the last day of class.
 
 * Students must have a deployed project by presentation day, so encourage students to work on deploying their projects by the class prior to presentation day at the latest. Since you can always update deployed projects, it is recommended that students deploy early on and update their live version with every new feature.
 
@@ -40,7 +40,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/07-Project-
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -50,13 +50,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [07.3 Lesson Plan](./03-Day/07.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 07 Homework](../../../01-Class-Content/07-Project-1/02-Homework/README.md)
+  * [Project 1](../../../01-Class-Content/08-Project-1-Contd/02-Challenge/README.md)
 
 ### Slide Decks
 
-  * [Unit 07: Project 1](https://docs.google.com/presentation/d/1rlLC273x8cJyhsxMz2fpfZLy29hAu-GFSEW4PSOJlB0/edit?usp=sharing)
+  * [Module 07: Project 1](https://docs.google.com/presentation/d/1qiKXCTJ54GUJyOucuFgd_rt27a89iEAdhJ2BGaAZ8aA/edit?usp=sharing)
 
 ### Resources
 
