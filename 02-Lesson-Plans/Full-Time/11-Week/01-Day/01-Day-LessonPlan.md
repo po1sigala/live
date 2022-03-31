@@ -12,7 +12,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Today's slide deck includes an introduction to the MERN framework. This is a great opportunity to remind students of how far they have come since starting with HTML and CSS and encourage them to start thinking about how they can apply their new skills to their final, full-stack projects and their future careers.
 
-* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+* The activities in this module will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
 
 * Apollo Sandbox is an Apollo Studio Explorer tool used for local development and replaces the now-deprecated GraphQL Playground. To use Sandbox, you do not have to register for an Apollo account. Instead, Sandbox can be accessed on the same URL as the GraphQL server. For most activities during today’s class, you will do the following to start Sandbox: start the app using `npm install`, `npm run seed`, and `npm start`. Then, navigate to `localhost:3001/graphql` in the browser to view Sandbox in the browser.
 
@@ -28,7 +28,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -48,7 +48,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 ## Slide Deck
 
-* [Unit 21 Slide Deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit?usp=sharing)
+* [Module 21 Slide Deck](https://docs.google.com/presentation/d/15HFGsli3B1UvM8-khsTi7-DjkN1zX8mpLULMn7oGwX4/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -88,7 +88,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
 * Welcome students to class.
 
-* Open the [Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g419d479a5c_0_53) and follow these prompts on their corresponding slides:
+* Open the [Module 21 slide deck](https://docs.google.com/presentation/d/15HFGsli3B1UvM8-khsTi7-DjkN1zX8mpLULMn7oGwX4/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What Is the MERN Stack?**: The MERN stack is a group of four technologies that, when used together, create our “stack”. There are other stacks besides MERN, but the MERN stack uses technologies we already learned to quickly build a full-stack app. The four MERN technologies are: MongoDB, Express.js, React.js, and Node.js.
 
@@ -374,9 +374,9 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
 
   * 🔑 A **resolver** is a function that's responsible for populating the data that has been defined by our typeDefs.
 
-* The activities in this unit will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
+* The activities in this module will require some familiarity with GraphQL and the Apollo Sandbox tool. If you've never worked with GraphQL or the Apollo Sandbox tool, please refer to the [Apollo Docs on Apollo Sandbox](https://www.apollographql.com/docs/studio/explorer/sandbox/).
 
-* Some activities in this unit rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
+* Some activities in this module rely on the Apollo Sandbox. Students do not need to install a separate tool to access this technology. To use the Apollo Sandbox, simply start the app by using `npm install`, `npm run seed`, and `npm start` and then point to `localhost:3001/graphql` in the browser.
 
 * The GraphQL activities and instructor demonstrations require a minimum npm version of 7.0.0 or greater. Prior to class, please be sure to check your npm version and update if needed. Refer to the [NPM docs on updating to latest stable version.](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
 
@@ -1317,7 +1317,7 @@ This class covers GraphQL, including using the Apollo Server to set up `typeDefs
      }
      ```
 
-* Open the [illustration of MERN three-layer architecture in the Unit 21 slide deck](https://docs.google.com/presentation/d/1JU962_gt2iOMECVdvLcsxRs9IwNirB6d6fed4Y1RlG8/edit#slide=id.g9aa02552a2_0_6) and explain the following:
+* Open the [illustration of MERN three-layer architecture in the Module 21 slide deck](https://docs.google.com/presentation/d/15HFGsli3B1UvM8-khsTi7-DjkN1zX8mpLULMn7oGwX4/edit#slide=id.g102fba7df29_0_2442) and explain the following:
 
   * In a MERN app, requests are sent to the API from the client.
 

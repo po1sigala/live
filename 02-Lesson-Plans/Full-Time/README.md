@@ -1,22 +1,21 @@
 # Full Stack Full-Time Lesson Plans
 
-## Homework 
+## Challenge
 
-For full-time students, homework is assigned and due on Mondays and Thursdays. The homework that is assigned on Monday is due on Thursday and the homework assigned on Thursday is due on Monday. 
+For full-time students, each Challenge is assigned and due on Mondays and Thursdays. The Challenge that is assigned on Monday is due on Thursday and the Challenge assigned on Thursday is due on Monday.
 
-_Note: The following are default days of the week that HW is assigned/due in BCS and are subject to change with holidays._
+**Note**: The following are default days of the week that Challenges are assigned/due in BCS and are subject to change with holidays.
 
 ### Monday & Thursday - After Class
 
-* Copy the new homework instructions and, if applicable, `Develop` folder into the class repo.
+**Note**: Students receive Challenge instructions and starter code in Canvas, but you may want to add them to the class repo as well. Students do not receive solution code in Canvas.
 
-* Copy the homework `main` folder for the prior homework assignment into the class repo.
+* Copy the new Challenge instructions and, if applicable, the starter code inside the `Develop` folder into the class repo.
 
+* Copy the Challenge solution code inside the `Main` folder for the prior Challenge assignment into the class repo.
 
 ## Career Connection
 
-Each week students receive Career Connections in the `04-Important` folders that ties what we do in the classroom to the profession, along with technical interviewing practice.
-
-[Computer Science Fundamentals](../../01-Class-Content/22-Computer-Science/04-Important/CAREER-CONNECTION.md).
+Each week, students receive Career Connections in the Weekly Wrap-Up in Canvas that tie what we do in the classroom to the profession, along with technical interviewing practice.
 
 If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).

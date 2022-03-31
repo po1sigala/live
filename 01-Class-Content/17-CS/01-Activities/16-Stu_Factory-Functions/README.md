@@ -20,7 +20,7 @@ When a user calls the `greet` method on the `Student` function, they see undefin
 
 3. Check the console to see undefined values.
 
-4. Run `npm test` to check if all unit test pass.
+4. Run `npm test` to check if all unit tests pass.
 
 ## 💡 Hints
 

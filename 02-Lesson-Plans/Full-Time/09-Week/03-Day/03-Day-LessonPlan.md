@@ -2,15 +2,15 @@
 
 ## Overview
 
-In today's class, you will prepare students for technical interviews through the Unit 17 mini-project. In Unit 18, you will introduce students to NoSQL databases and executing CRUD functions using MongoDB commands. You will also explore embedded documents.
+In today's class, you will prepare students for technical interviews through the Module 17 mini-project. In Module 18, you will introduce students to NoSQL databases and executing CRUD functions using MongoDB commands. You will also explore embedded documents.
 
 ## Instructor Notes
 
-* In this lesson, students will complete activities `28-Stu_Mini-Project` in Unit 17 through `08-Stu_Embedded-Documents` in Unit 18.
+* In this lesson, students will complete activities `28-Stu_Mini-Project` in Module 17 through `08-Stu_Embedded-Documents` in Module 18.
 
 * Be sure to review the activities before class and try to anticipate any questions that students might have.
 
-* The Unit 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&mdash;3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
+* The Module 17 mini-project will not be in a typical group project setting, but rather in smaller groups of 2&mdash;3 students. Students will simulate a technical interview, with one student assuming the role of the interviewer and the other assuming the role of the candidate. If students struggle to adjust to the new format, emphasize that practicing interviews will help them clarify and organize their thoughts so that they are more prepared for a real interview. They should also revisit this on their own time because additional practice will make them more prepared and comfortable with the process. Try to share a personal anecdote of the interview process if possible.
 
 * Be sure to install MongoDB and Compass on your machine before class. Refer to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb).
 
@@ -18,13 +18,13 @@ In today's class, you will prepare students for technical interviews through the
 
 * Today's MongoDB activities do not have a front end, and all routes will be tested using Insomnia. Please make sure you have Insomnia installed locally prior to class. Refer to the [Insomnia installation docs](https://insomnia.rest/download) as needed.
 
-* While MongoDB may be new to most learners, today's activities build on skills developed in prior units including Express servers, SQL databases, data management, and queries. Where possible, encourage students to make connections to prior learning and start thinking of the role databases such as MongoDB play in their apps.
+* While MongoDB may be new to most learners, today's activities build on skills developed in prior modules including Express servers, SQL databases, data management, and queries. Where possible, encourage students to make connections to prior learning and start thinking of the role databases such as MongoDB play in their apps.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -42,7 +42,7 @@ In today's class, you will prepare students for technical interviews through the
 
 ## Slide Deck
 
-* [Unit 18 Slide Deck](https://docs.google.com/presentation/d/18si_kQgZc7lVVNk1zRoEF4RpJN5cB6hsLa9PqX0fPc8/edit?usp=sharing)
+* [Module 18 Slide Deck](https://docs.google.com/presentation/d/1U9HV8gv4am28LWJ46sDm367mrBi0PZ3tpIDYNpRoj3A/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -51,7 +51,7 @@ In today's class, you will prepare students for technical interviews through the
 | 10:00AM| 1   | Instructor Demo: Mini Project            | 0:05     |
 | 10:05AM| 2   | Student Do: Mini Project                 | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini Project          | 0:10     |
-| 11:15AM| 4   | Introduce Homework                       | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                      | 0:05     |
 | 11:20AM| 5   | FLEX                                     | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity           | 0:10     |
 | 12:00PM| 7   | BREAK                                    | 0:30     |
@@ -98,7 +98,7 @@ In today's class, you will prepare students for technical interviews through the
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Mini-Project: Technical Interview Practice (Sorting Algorithms)
+  # Module 17 Mini-Project: Technical Interview Practice (Sorting Algorithms)
 
   In this mini-project, you and a partner will simulate a technical interview by taking turns as the interviewer and job candidate.
 
@@ -257,13 +257,13 @@ In today's class, you will prepare students for technical interviews through the
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/README.md` in your browser and explain the following:
+* Open `02-Challenge/README.md` in your browser and explain the following:
 
   * Sometimes the best way to learn or fully understand a topic is to challenge yourself with teaching it to others. Web developers often do this by writing tutorials and blog posts.
 
-  * In this homework, you will write a tutorial that explains the components that go into a specific regular expression, or regex.
+  * In this Challenge, you will write a tutorial that explains the components that go into a specific regular expression, or regex.
 
   * You will have to do some research on regex in order to properly write your tutorial.
 
@@ -281,21 +281,21 @@ In today's class, you will prepare students for technical interviews through the
 
   * 🙋 Regex is a powerful tool that we can implement, just like an algorithm. Knowledge about it will make us more confident in our skills both on the job and during a technical interview.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in Unit 17 or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in Module 17 or getting started on the Challenge.
 
 * If there are students who haven't installed MongoDB and Compass on their machines yet, direct them to the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) and help with the installation as needed.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1tsxce_ukQswTyiPlxV9BfzshLkwquUHWdxNrFQYlHvM/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1U9HV8gv4am28LWJ46sDm367mrBi0PZ3tpIDYNpRoj3A/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What Is NoSQL?**: NoSQL is an umbrella term for any database that is not a traditional relational SQL database. There are four main types of NoSQL databases: document databases, graph databases, key-value stores, and column-oriented databases.
 
-  * **How Do NoSQL Databases Store Data?**: While NoSQL databases are all non-relational, each NoSQL database stores data very differently and are used differently by developers. In this unit, we will focus on MongoDB, a general purpose, NoSQL, document database that uses documents to store data and works great with JavaScript because it stores data in objects.
+  * **How Do NoSQL Databases Store Data?**: While NoSQL databases are all non-relational, each NoSQL database stores data very differently and are used differently by developers. In this module, we will focus on MongoDB, a general purpose, NoSQL, document database that uses documents to store data and works great with JavaScript because it stores data in objects.
 
   * **How Does MongoDB Store Data Differently from SQL Databases?** and **SQL Is a Relational Database**: SQL uses rows and tables to store data, enforcing a rigid schema. Because SQL is a relational database, SQL also relies on joins to combine related data from different tables.
 
@@ -335,7 +335,7 @@ In today's class, you will prepare students for technical interviews through the
 
   * ☝️ How does this project build on or extend previously learned material?
 
-  * 🙋 We learned how to create a JavaScript object in Unit 3. We also learned how to use and query a database using SQL in Unit 12, and how to create routes to perform CRUD operations with Express in Unit 11. MongoDB builds on all of these skills.
+  * 🙋 We learned how to create a JavaScript object in Module 03. We also learned how to use and query a database using SQL in Module 12, and how to create routes to perform CRUD operations with Express in Module 11. MongoDB builds on all of these skills.
 
   * ☝️ How does this project relate to your career goals?
 

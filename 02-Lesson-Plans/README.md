@@ -4,7 +4,6 @@ Welcome, instructors and TAs! This directory contains the lessons plans and grad
 
 In addition, this README contains guidelines for [how to approach each class week](#how-to-approach-each-week), as well as background information about [why we teach what we teach](#why-we-teach-what-we-teach). We hope this information supports you as you take on the challenge of changing students' lives! 
 
-
 ## How to Approach Each Week
 
 Here are some general tips and reminders about things you should do at different times during the week: at the begining of the week, before class starts, at the beginning of class, during class, and at the end of class. 
@@ -15,14 +14,13 @@ If you have any questions, please check with your SSM.
 
 At the beginning of the class week, complete the following tasks to prepare for class:  
 
-* Review both the instructor-facing and student-facing Unit Overviews.
+* Review the instructor-facing Module Overview and the student-facing content in Canvas.
 
-* Review the homework assignment(s) for the week.
+* Review the Challenge assignment(s) for the week.
 
 * Review the lesson plans for the week.
 
-* Ensure that the homework from previous week(s) has been graded.
-
+* Ensure that the Challenge from previous week(s) has been graded.
 
 ### Before Class Starts
 
@@ -32,9 +30,9 @@ Before class starts, take the following steps to make sure you're prepared to te
 
 * Refer to the Instructor Notes in the lesson plan and/or the associated time tracker to understand the range of activities that you'll cover in class.
 
-* Push any `Unsolved` activities to the class repo for today's lesson. **DO NOT** push `Solved` folders until the end of class. 
+* Push any `Unsolved` activities to the class repo for today's lesson. **DO NOT** push `Solved` folders until the end of class.
 
-* If you are at the beginning of the week (or unit for FT), be sure to include the student-facing Unit Overview.
+**Note**: Students also receive the `Unsolved` activities for each module in Canvas.
 
 #### What NOT to Move Into the Class Repo
 
@@ -60,6 +58,8 @@ This section contains steps that instructors and TAs should take at the beginnin
 
 * Have students do a `git pull` of the class repo to have the class activities ready on their machine.
 
+**Note**: Students also receive the `Unsolved` activities for each module in Canvas.
+
 #### TAs
 
 * Remind students to mark their attendance in BCS. Edit attendance as needed.
@@ -82,11 +82,11 @@ This section contains tasks tips and tasks for instructors and TAs to follow dur
 
 * Push `Solved` activities to the class repo after reviewing the solutions together. Students can `git pull`.
 
-### End of Week (or Unit)
+### End of Week (or Module)
 
-* Make the career services announcement (found in the Unit Overview).
+* Make the career services announcement (found in the Module Overview).
 
-* Push solutions to any homework assignments that were due.
+* Push solutions to any Challenge assignments that were due.
 
 ## Why We Teach What We Teach
 
@@ -100,7 +100,7 @@ A large part of our teaching philosophy rests on the belief that we should give 
 
 ### Why do we still teach jQuery?
 
-Although jQuery is on the decline as a popular front-end framework while React, Vue, and Angular continue to dominate, it persists in many legacy codebases. Thus it's important that our students begin their careers in web development having some familiarity with it. jQuery is now isolated to a single unit&mdash;Unit 05: Third-Party APIs. This will make it easier for us to replace it with a different technology as the web development landscape continues to evolve.
+Although jQuery is on the decline as a popular front-end framework while React, Vue, and Angular continue to dominate, it persists in many legacy codebases. Thus it's important that our students begin their careers in web development having some familiarity with it. jQuery is now isolated to a single module&mdash;Module 05: Third-Party APIs. This will make it easier for us to replace it with a different technology as the web development landscape continues to evolve.
 
 ### Why do we teach Sequelize?
 
@@ -114,7 +114,7 @@ Template engines are common in Java and Python frameworks, such as Django, Flask
 
 It's also important that you emphasize the concepts introduced while using Handlebars so that your students are set up to understand the MVC folder structure as they begin to learn React. Templating engines serve as an important step towards learning React, because the abstractions of a framework are challenging for beginners to understand.
 
-Finally, Handlebars is currently used in only one unit and one project. Isolating Handlebars to a single unit will make it much easier to replace if we move to a different template engine in the future.
+Finally, Handlebars is currently used in only one module and one project. Isolating Handlebars to a single module will make it much easier to replace if we move to a different template engine in the future.
 
 ### Why do we teach Heroku? Why don't we teach cloud deployment through AWS instead?
 

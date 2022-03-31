@@ -1,10 +1,10 @@
-# Unit 09 Instructor Overview: Node.js
+# Module 09 Instructor Overview: Node.js
 
 ## Overview
 
-In this unit, you'll introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
+In this module, you'll introduce students to Node.js and the concepts of standard libraries, modules, npm, and `package.json` files.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
@@ -18,7 +18,7 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/09-NodeJS/R
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connections folder](../../../01-Class-Content/09-NodeJS/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -28,7 +28,7 @@ Next week, we begin OOP, constructors, and classes. With that in mind, it's impo
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -38,13 +38,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [09.3 Lesson Plan](03-Day_ES6/09.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 09 Homework](../../../01-Class-Content/09-NodeJS/02-Homework/README.md)
+* [Module 09 Challenge](../../../01-Class-Content/09-NodeJS/02-Challenge/README.md)
 
 ### Slide Decks
 
-* [Unit 09: Introduction to Node.js](https://docs.google.com/presentation/d/1hXNcmzYqwlhgM-C78vNFKwX10PhW_iwIo0guwzHO48c/edit?usp=sharing)
+* [Module 09: Introduction to Node.js](https://docs.google.com/presentation/d/1zkzb8E8ORZbn-JeS47sIEid1bgbN011-xB7CWpzaIQE/edit?usp=sharing)
 
 ### Algorithms
 

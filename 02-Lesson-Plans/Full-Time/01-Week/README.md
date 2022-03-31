@@ -1,12 +1,12 @@
-# Unit 01 & 02 Instructor Overview: HTML, CSS, Git and Advanced CSS
+# Module 01 & 02 Instructor Overview: HTML, CSS, Git and Advanced CSS
 
 ## Overview
 
-In Unit 01, you will introduce students to HTML, CSS, and version control with Git.
+In Module 01, you will introduce students to HTML, CSS, and version control with Git.
 
-In Unit 02, students will implement media queries and flexbox to create a responsive web design. Students will also overwrite browser defaults by using a CSS reset and then rebuild those styles using advanced CSS concepts, such as pseudo-classes and pseudo-elements.
+In Module 02, students will implement media queries and flexbox to create a responsive web design. Students will also overwrite browser defaults by using a CSS reset and then rebuild those styles using advanced CSS concepts, such as pseudo-classes and pseudo-elements.
 
-Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content/01-HTML-Git-CSS/README.md) and [Unit 02](../../../01-Class-Content/02-Advanced-CSS/README.md) for detailed information on key topics, learning objectives, and homework.
+Review the Roadmap for each module in Canvas for detailed information on key topics, learning objectives, and the Challenges for these modules.
 
 ## Instructor / TA Notes
 
@@ -20,11 +20,11 @@ Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content
 
 * For the `Everyone Do: Git` activity, be prepared to demonstrate configuring the local Git default branch to `main` as well as creating a Git repository using `git init`. You might want to review [Git Basics—Getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) ahead of time to prepare for student questions that might arise.
 
-* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the unit’s activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had. For more information, please read the [wiki post on Mini-Project Expectations](https://github.com/coding-boot-camp/fullstack-ground/wiki/Mini-Project-Expectations).
+* The mini-project is intentionally designed to help students gain experience applying the skills they have learned in the module's activities while challenging them to work on a real-world application in a collaborative setting. It's also designed to allow our students to solve problems before being presented with a solution, a learning science concept known as the generation effect. The generation effect is a phenomenon where information is better remembered if it is generated from one's own mind rather than simply read. When students are asked to solve something they've never seen before, they pull in related knowledge they already have to fill in the gaps in their understanding, and then make a stronger connection between this new solution and the knowledge they already had. For more information, please read the [wiki post on Mini-Project Expectations](https://github.com/coding-boot-camp/fullstack-ground/wiki/Mini-Project-Expectations).
 
 * Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can. In addition, please use the `Instructor Review: Mini-project` time to go over the mini-project's key points. Finally, encourage students to compare their progress when working on the mini-project to the solution code they receive, so that they can reverse engineer the solution to better understand it on their own.
 
-* The Unit 01 mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
+* The Module 01 mini-project builds on the fundamental HTML and CSS concepts covered this week. Students will each work on their own projects, but they will be put into groups so that they can brainstorm together and share their learnings. This will be the first of many opportunities for them to collaborate in groups.
 
 * Remind students to do a `git pull` of the class repo before every class and to have that day's activities ready and open in VS Code.
 
@@ -34,11 +34,11 @@ Refer to the Class Content Unit Overview for [Unit 01](../../../01-Class-Content
 
 * When learning about typography, students will probably see different fonts on their machines depending on the operating system they're using. Therefore, be prepared to discuss web-safe fonts and font fallbacks.
 
-* Remind students to complete the assessments for both units near the end of the week. Students can find them in their Unit Overviews under Technical Interview Preparation.
+* Remind students to complete the assessments for both modules near the end of the week. Students can find them in the Weekly Wrap-Up in Canvas.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their Career Connection folder for [Unit 01](../../../01-Class-Content/01-HTML-Git-CSS/04-Career-Connection/README.md) and [Unit 02](../../../01-Class-Content/02-Advanced-CSS/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
@@ -46,11 +46,11 @@ If you'd like more information on career services, visit the [career services re
 
 * Next week, you will introduce students to JavaScript. This may be a big leap for some students. Be prepared to answer a lot of questions and be available during office hours.
 
-* Starting with the next unit, students will be solving algorithms that they are likely to see in technical interviews. It is recommended that you familiarize yourself with the weekly algorithm problems, so you can help students with any questions they might have&mdash;they're sure to have some!
+* Starting with the next module, students will be solving algorithms that they are likely to see in technical interviews. It is recommended that you familiarize yourself with the weekly algorithm problems, so you can help students with any questions they might have&mdash;they're sure to have some!
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -64,21 +64,21 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [01.5 - Lesson Plan](05-Day/05-Day-LessonPlan.md)
 
-### Homework
+### Challenge
 
-* [Unit 01 Homework](../../../01-Class-Content/01-HTML-Git-CSS/02-Homework)
+* [Module 01 Challenge](../../../01-Class-Content/01-HTML-Git-CSS/02-Challenge)
 
-* [Unit 02 Homework](../../../01-Class-Content/02-Advanced-CSS/02-Homework)
+* [Module 02 Challenge](../../../01-Class-Content/02-Advanced-CSS/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 01: Computational Thinking](https://docs.google.com/presentation/d/1z8sfW7b4X32GT31BGZr5FXCeTay9kfyQ6qhICCCiX-I/edit?usp=sharing)
+* [Module 01: Computational Thinking](https://docs.google.com/presentation/d/1eSjztw5kwQvDxH7DcX8CKF1z-45E2_a7CKh8PkKE3R0/edit?usp=sharing)
 
-* [Unit 02: Advanced CSS](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
+* [Module 02: Advanced CSS](https://docs.google.com/presentation/d/1rT5yNgE7-lTjmLAqPsNJkTTkR_NPQcxZnn9NII1JSuM/edit?usp=sharing)
 
 ### Algorithms
 
-Unit 01:
+Module 01:
 
   * 📹 [Let's Code Pseudocode!](https://2u-20.wistia.com/medias/hppjuvtlvy)
 

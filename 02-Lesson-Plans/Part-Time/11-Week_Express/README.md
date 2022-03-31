@@ -1,34 +1,34 @@
-# Unit 11 Instructor Overview: Express.js
+# Module 11 Instructor Overview: Express.js
 
 ## Overview
 
-In this unit, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
+In this module, students will learn about important features of the Express.js library. They will learn how to create and configure an Express.js app to handle GET and POST routes. Also, they will configure servers to send static files to the client. Students will learn to identify how client-side requests relate to server-side responses. They will parse query strings and parameters, send POST requests using Insomnia, and use the Fetch API. Finally, students learn how to create separation of concerns for their routes.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/11-Express/README.md) for detailed information on key topics, learning objectives, and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's Challenge.
 
 ## Instructor/TA Notes
 
-* In this unit, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
+* In this module, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
 * We will use Insomnia to make HTTP requests to Express.js routes. Be sure to have students [install Insomnia](https://insomnia.rest/download) before class.
 
-* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another unit. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
+* Students will write data to the file system instead of a database. We will cover persistent storage using databases in another module. Review the [Node.js documentation on the fs module](https://nodejs.org/api/fs.html) before class.
 
-* This unit also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
+* This module also features a guide on Git History. Students will clone the Inquirer.js repository for this activity. To allow for more time during the activity, provide students with the link to the [Inquirer.js repository](https://github.com/SBoudrias/Inquirer.js/) to clone before class.
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection folder](../../../01-Class-Content/11-Express/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-In the next unit, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) by the end of this unit to minimize installation time next unit.
+In the next module, students will work with MySQL databases. They will need to install MySQL Server on their machine prior to class. Be sure to provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) by the end of this module to minimize installation time next module.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -38,13 +38,13 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
 * [11.3 Lesson Plan](./03-Day_Router-Middleware-Heroku/11.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-* [Unit 11 Homework](../../../01-Class-Content/11-Express/02-Homework)
+* [Module 11 Challenge](../../../01-Class-Content/11-Express/02-Challenge)
 
 ### Slide Decks
 
-* [Unit 11: Express.js](https://docs.google.com/presentation/d/1wF7D5SWD4RDBwGJhkL08GLuFhlo1FPHwyCZoN3q3M_Y/edit?usp=sharing)
+* [Module 11: Express.js](https://docs.google.com/presentation/d/1GuwaaR-Td4TyFa6mzRs5mKU4bEsC0wbIq_74r96T2gA/edit?usp=sharing)
 
 ### Algorithms
 

@@ -1,17 +1,27 @@
 # Full Stack Part-Time Lesson Plans
 
-## Homework 
+## Challenge 
 
-For part-time students, homework is assigned on the first day of the week (or unit if the calendar is shifted by a holiday or event) and is due _the following_ Saturday, so students have nearly two weeks to submit.
+For part-time students, each Challenge is assigned on the first day of the week (or module if the calendar is shifted by a holiday or event) and is due _the following_ Saturday, so students have nearly two weeks to submit.
 
-_Note: The following are default days of the week that HW is assigned/due in BCS and are subject to change with holidays._
+**Note**: The following are default days of the week that Challenges are assigned/due in BCS and are subject to change with holidays.
 
 ### Monday/Tuesday - After Class
 
-* Copy the new homework instructions and, if applicable, `Develop` folder into the class repo.
+**Note**: Students receive Challenge instructions and starter code in Canvas, but you may want to add them to the class repo as well.
+
+* Copy the new Challenge instructions and, if applicable, the starter code inside the `Develop` folder into the class repo.
 
 ### Saturday of the Following Week - After Class
 
-* Last week's homework is due.
+**Note**: Students do not receive solution code in Canvas.
 
-* Copy the homework `main` folder into the class repo. 
+* Last week's Challenge is due.
+
+* Copy the Challenge solution code inside the `Main` folder for the prior Challenge assignment into the class repo. 
+
+## Career Connection
+
+Each week, students receive Career Connections in the Weekly Wrap-Up in Canvas that tie what we do in the classroom to the profession, along with technical interviewing practice.
+
+If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).

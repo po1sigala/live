@@ -24,7 +24,7 @@ In this lesson, students will complete a mini project that reinforces routing an
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -38,7 +38,7 @@ In this lesson, students will complete a mini project that reinforces routing an
 
 ## Slide Deck
 
-* [Unit 12 Slide Deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing)
+* [Module 12 Slide Deck](https://docs.google.com/presentation/d/1F-uRmcExGF3NYWAh2vz5Nxi8AJe-WWpwpoeAH7rZsOc/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -47,7 +47,7 @@ In this lesson, students will complete a mini project that reinforces routing an
 | 10:00AM| 1   | Instructor Demo: Mini Project      | 0:05     |
 | 10:05AM| 2   | Student Do: Mini Project           | 0:60     |
 | 11:05AM| 3   | Instructor Review: Mini Project    | 0:10     |
-| 11:15AM| 4   | Introduce Homework                 | 0:05     |
+| 11:15AM| 4   | Introduce Challenge                | 0:05     |
 | 11:20AM| 5   | FLEX                               | 0:30     |
 | 11:50PM| 6   | Instructor Do: Stoke Curiosity     | 0:10     |
 | 12:00PM| 7   | BREAK                              | 0:30     |
@@ -135,7 +135,7 @@ In this lesson, students will complete a mini project that reinforces routing an
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # 🏗️ Unit 11 Mini Project: Add Routes to Existing Application
+  # 🏗️ Module 11 Mini Project: Add Routes to Existing Application
 
   In this mini-project, you will work with a group to add routes to an existing application. You will create one wildcard route for serving up a 404 page, as well as a diagnostics route for logging failed form validation.
 
@@ -374,9 +374,9 @@ In this lesson, students will complete a mini project that reinforces routing an
 
 * Answer any questions before proceeding to the next activity.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Navigate to `02-Homework/Main/` in your command line and run `npm install` and `npm start`.
+* Navigate to `02-Challenge/Main/` in your command line and run `npm install` and `npm start`.
 
 * Open `http://localhost:3001` in your browser to demonstrate the following:
 
@@ -412,21 +412,21 @@ In this lesson, students will complete a mini project that reinforces routing an
 
   * 🙋 This project will help you become employer-ready by providing a new project that you can add to your portfolio. You will also demonstrate to future employers that you can deploy the apps that you create.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
-* Advise students that the next unit will have them working with MySQL and databases. Remind students that they will need to install MySQL Server on their machine before the beginning of the next unit. Provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions.
+* Advise students that the next module will have them working with MySQL and databases. Remind students that they will need to install MySQL Server on their machine before the beginning of the next module. Provide students with the [MySQL installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions.
 
 * Answer any questions before proceeding.
 
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1In4Iv-dAv3A3BiU88duttuXpEPcvbr4Qf4RniD8EZsE/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1F-uRmcExGF3NYWAh2vz5Nxi8AJe-WWpwpoeAH7rZsOc/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What is SQL?**
 

@@ -24,7 +24,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review. 
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -46,7 +46,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 ## Slide Deck
 
-* [Unit 13 Slide Deck](https://docs.google.com/presentation/d/1_0n8JjM6cgmDyUfqGC6crF47JItD0mn9vzvQeYqZ5OE/)
+* [Module 13 Slide Deck](https://docs.google.com/presentation/d/12L1MgEGt-oHIPMNWisv2QAxZ3J4NQNpAxk2jY2rXtyM/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -86,11 +86,11 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1_0n8JjM6cgmDyUfqGC6crF47JItD0mn9vzvQeYqZ5OE/) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/12L1MgEGt-oHIPMNWisv2QAxZ3J4NQNpAxk2jY2rXtyM/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **Object-Relational Mapping**
   
-    * This unit is all about using **object-relational mappers**, or **ORMs**, to model your database data on the JavaScript side.
+    * This module is all about using **object-relational mappers**, or **ORMs**, to model your database data on the JavaScript side.
 
   * **What are some of the challenges of using plain SQL in JavaScript?**
   
@@ -152,7 +152,7 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
   
   * **Mini-Project**
 
-    * The mini-project for this unit uses Sequelize to manage the data for a set of travel-related API routes.
+    * The mini-project for this module uses Sequelize to manage the data for a set of travel-related API routes.
 
 * Navigate to `28-Stu_Mini-Project/Main` in your command line.
 

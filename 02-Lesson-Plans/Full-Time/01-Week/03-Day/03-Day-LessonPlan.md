@@ -1,14 +1,14 @@
-# 01.3 Full-Time Lesson Plan: Responsive Design
+# 01.3 Full-Time Lesson Plan: HTML, CSS, and Git and Advanced CSS
 
 ## Overview
 
-In today's class, students will wrap up Unit 01 by collaborating on a mini-project that reinforces HTML and CSS fundamentals. Then students will start Unit 02 by implementing media queries and flexbox to create a responsive web design.
+In today's class, students will wrap up Module 01 by collaborating on a mini-project that reinforces HTML and CSS fundamentals. Then students will start Module 02 by implementing media queries and flexbox to create a responsive web design.
 
 ## Instructor Notes
 
-* In this lesson, students will complete the `22-Stu_Mini-Project` in Unit 01 and activities `01-Ins_Media-Query-Screen` through `08-Stu_Flexbox-Placement` in Unit 02.
+* In this lesson, students will complete the `22-Stu_Mini-Project` in Module 01 and activities `01-Ins_Media-Query-Screen` through `08-Stu_Flexbox-Placement` in Module 02.
 
-* Unit 01 mini-project builds on the fundamental HTML and CSS concepts that students learned this week. Encourage students to review previous activities for help with syntax and for further study.
+* Module 01 mini-project builds on the fundamental HTML and CSS concepts that students learned this week. Encourage students to review previous activities for help with syntax and for further study.
 
 * Reassure students that they are not expected to complete the mini-project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
@@ -16,7 +16,7 @@ In today's class, students will wrap up Unit 01 by collaborating on a mini-proje
 
 * This mini-project might also be some students' first experience building a development project from scratch. Remind them to break down the project into small, manageable steps and to let both the user story and acceptance criteria guide them to a step-by-step solution.
 
-* The activities of Unit 02 use `max-width` over `min-width` for media query breakpoints. This is because it's simpler to introduce responsive breakpoints with a "desktop-first" approach.
+* The activities of Module 02 use `max-width` over `min-width` for media query breakpoints. This is because it's simpler to introduce responsive breakpoints with a "desktop-first" approach.
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students may have.
 
@@ -26,7 +26,7 @@ In today's class, students will wrap up Unit 01 by collaborating on a mini-proje
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -42,7 +42,7 @@ By the end of class, students will be able to do the following:
 
 ## Slide Deck
 
-* [Unit 2 Slide Deck](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing)
+* [Module 2 Slide Deck](https://docs.google.com/presentation/d/1rT5yNgE7-lTjmLAqPsNJkTTkR_NPQcxZnn9NII1JSuM/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -51,7 +51,7 @@ By the end of class, students will be able to do the following:
 | 10:00AM| 1  | Instructor Demo: Mini Project         | 0:05     |
 | 10:05AM| 2  | Student Do: Mini Project              | 0:60     |
 | 11:05AM| 3  | Instructor Review: Mini Project       | 0:10     |
-| 11:15AM| 4  | Introduce Homework                    | 0:05     |
+| 11:15AM| 4  | Introduce Challenge                   | 0:05     |
 | 11:20AM| 5  | FLEX                                  | 0:30     |
 | 11:50PM| 6  | Instructor Do: Stoke Curiosity        | 0:10     |
 | 12:00PM| 7  | BREAK                                 | 0:30     |
@@ -79,7 +79,7 @@ By the end of class, students will be able to do the following:
 
 * Open `22-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
-  * Each mini-project is an opportunity for you to implement what you learned in that unit and work with a group to create an application in class.
+  * Each mini-project is an opportunity for you to implement what you learned in that module and work with a group to create an application in class.
 
   * Reassure students that they are not expected to complete the project in the allotted time and instead encourage them to define their own manageable scope of work as a group, while working to complete as much as they can.
 
@@ -114,7 +114,7 @@ By the end of class, students will be able to do the following:
 * Break your students into groups that will work together on this activity.
 
   ```md
-  # Unit 01 Mini-Project: Landing Page
+  # Module 01 Mini-Project: Landing Page
 
   In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
 
@@ -339,13 +339,13 @@ By the end of class, students will be able to do the following:
 
   * 🙋 We can refer to supplemental material, read the [MDN Web Docs on structuring the web with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML) and the [MDN Web Docs on learning to style HTML using CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS), and stay for office hours to ask for help.
 
-* Answer any questions before proceeding to introduce the homework.
+* Answer any questions before proceeding to introduce the Challenge.
 
-### 4. Instructor Demo: Introduce Homework (5 min)
+### 4. Instructor Demo: Introduce Challenge (5 min)
 
-* Open `02-Homework/Main/index.html` in your browser and demonstrate the following:
+* Open `02-Challenge/Main/index.html` in your browser and demonstrate the following:
 
-  * For Unit 01's homework, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
+  * For Module 01's Challenge, you will use your new HTML and CSS skills to ensure that an existing website is accessible using the provided guidelines.
 
   * Accessibility is an increasingly important consideration in web design. Inclusive design aims to ensure that all users&mdash;including those with disabilities&mdash;can interact with and understand a webpage's content.
 
@@ -365,18 +365,18 @@ By the end of class, students will be able to do the following:
 
   * 🙋 Developers need to be able to design websites with all users in mind so that they can create inclusive user experiences and attract more users to various projects.
 
-* Ask TAs to direct students to the Homework Requirements found in `02-Homework/README.md`.
+* Ask TAs to direct students to the Challenge Requirements found in `02-Challenge/README.md`.
 
 * Answer any questions before proceeding to flex time.
 ### 5. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
 ### 6. Instructor Do: Stoke Curiosity (10 min)
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1ZQE4ze6uHbYu-M-oQ3UBfqTkCGfhHU6ZhLDL8rN-3fg/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1rT5yNgE7-lTjmLAqPsNJkTTkR_NPQcxZnn9NII1JSuM/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
-  * **Advanced CSS**: This unit is all about deepening our knowledge of CSS in order to build attractive, responsive UIs for our applications.
+  * **Advanced CSS**: This module is all about deepening our knowledge of CSS in order to build attractive, responsive UIs for our applications.
 
   * **Why do we use CSS?** CSS allows us to make plain HTML content in our applications look clean and presentable to users.
 
@@ -412,9 +412,9 @@ By the end of class, students will be able to do the following:
 
     * And most importantly, ask questions!
 
-  * In this unit, we will learn how to build responsive web designs, perform a CSS reset, and implement CSS custom properties and selectors.
+  * In this module, we will learn how to build responsive web designs, perform a CSS reset, and implement CSS custom properties and selectors.
 
-  * Let's take a quick look at the mini-project that we will complete at the end of this unit.
+  * Let's take a quick look at the mini-project that we will complete at the end of this module.
 
 * Open `28-Stu_Mini-Project/Solved/index.html` in your browser and open Chrome DevTools to demonstrate simulating a mobile viewport.
 
@@ -424,9 +424,9 @@ By the end of class, students will be able to do the following:
 
   * We can select Responsive and drag the edges of the screen to any size we want. Or we can choose from the drop-down list of popular devices.
 
-  * 🔑 We are viewing the mini-project that we will be able to build by the end of this unit.
+  * 🔑 We are viewing the mini-project that we will be able to build by the end of this module.
 
-  * 🔑 The mini-project is a webpage that holds a collection of CSS snippets that we learned throughout this unit. It's like a CSS cheat sheet!
+  * 🔑 The mini-project is a webpage that holds a collection of CSS snippets that we learned throughout this module. It's like a CSS cheat sheet!
 
   * 🔑 Notice what happens to the layout when we change the screen size. The columns shift and stack as the screen gets smaller. This is called **responsive web design**. This is accomplished by using media queries and flexbox, which we will cover today.
 

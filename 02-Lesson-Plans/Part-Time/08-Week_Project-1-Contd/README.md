@@ -1,10 +1,10 @@
-# Unit 08 Instructor Overview: Project 1
+# Module 08 Instructor Overview: Project 1
 
 ## Overview
 
-In this unit, students will continue to work on their projects and will present them to the class at the end of the unit. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
+In this module, students will continue to work on their projects and will present them to the class at the end of the module. They'll also update their professional materials, including their portfolio, GitHub profile, resume, and LinkedIn profile.
 
-Refer to the [Class Content Unit Overview](../../../01-Class-Content/08-Project-1-Contd/README.md) for detailed information on key topics, learning objectives and homework.
+Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's group project.
 
 ## Instructor/TA Notes
 
@@ -18,19 +18,19 @@ Refer to the [Class Content Unit Overview](../../../01-Class-Content/08-Project-
 
 ## Career Connection
 
-* Remind students that related career services material can be found in their [Career Connection Folder](../../../01-Class-Content/08-Project-1-Contd/04-Career-Connection/README.md).
+* Remind students that related career services material can be found in the Weekly Wrap-Up in Canvas.
 
 * If you'd like more information on career services, visit the [career services resources page](https://careernetwork.2u.com/?utm_medium=Academics&utm_source=boot_camp/).
 
 ## Heads-Up
 
-* Before the next unit, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+* Before the next module, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
-* Also, make sure students have it installed prior to starting Unit 09.
+* Also, make sure students have it installed prior to starting Module 09.
 
 ## Helpful Links
 
-This section contains links to this unit's lesson plans, homework, slide decks, algorithms, and resources.
+This section contains links to this module's lesson plans, Challenge, slide decks, algorithms, and resources.
 
 ### Lesson Plans
 
@@ -40,9 +40,9 @@ This section contains links to this unit's lesson plans, homework, slide decks, 
 
   * [08.3 Lesson Plan](./03-Day/08.3-LESSON-PLAN.md)
 
-### Homework
+### Challenge
 
-  * [Unit 08 Homework](../../../01-Class-Content/08-Project-1-Contd/02-Homework/README.md)
+  * [Project 1](../../../01-Class-Content/08-Project-1-Contd/02-Challenge/README.md)
 
 ### Slide Decks
 

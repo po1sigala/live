@@ -16,7 +16,7 @@ In this class, you will introduce webpage performance and optimization, key aspe
 
 * When demoing the activities, please use `Live Server` to open the `index.html` file from the `dist` directory, unless specified otherwise. If you have not yet downloaded Live Server for VS Code, refer to these [instructions for downloading Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
-* This unit features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
+* This module features activities that will require students to save and refresh the browser in order to see changes. The very nature of PWAs means that, by design, students will likely run into issues with cached assets interfering while debugging and testing.
 
   > **Important**: If you are having issues with cached assets, please use a private or incognito window to view the application. For Chrome users, you can open an incognito window by clicking the three dots in the top-right corner of the browser. From there, click the "New Incognito Window" button. You can also use hot keys to open an incognito window: on macOS, press Command + Shift + N; on Windows, press Control + Shift + N.
 
@@ -26,7 +26,7 @@ In this class, you will introduce webpage performance and optimization, key aspe
 
 * If you are comfortable doing so, live code the solutions to the activities. If not, use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this unit for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice, but instead is a self-study on topics beyond the scope of this module for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -50,7 +50,7 @@ By the end of class, students will be able to:
 
 ## Slide Deck
 
-* [Unit 19 Slide Deck](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing)
+* [Module 19 Slide Deck](https://docs.google.com/presentation/d/1ygFpytpyJrXNxNbUs-eW0F996kgM-zi4a_WyxNlC2xs/edit?usp=sharing)
 
 ## Time Tracker
 
@@ -90,7 +90,7 @@ By the end of class, students will be able to:
 
 * Welcome students to class.
 
-* Open the [slide deck](https://docs.google.com/presentation/d/1mkVX8q7pIQM6giW6ArxB2pjAYFCp2BpjIu1x7MDR6dE/edit?usp=sharing) and follow these prompts on their corresponding slides:
+* Open the [slide deck](https://docs.google.com/presentation/d/1ygFpytpyJrXNxNbUs-eW0F996kgM-zi4a_WyxNlC2xs/edit?usp=sharing) and follow these prompts on their corresponding slides:
 
   * **What is a PWA?**: PWA is a design pattern.
 
@@ -150,7 +150,7 @@ By the end of class, students will be able to:
 
     * PWAs deliver the speed and features that users expect in a modern app.
 
-  * **Mini-Project**: The mini-project for this unit will be a contact directory app that uses service workers, IndexedDB, webpack, and has PWA functionality. We will also deploy the app to Heroku.
+  * **Mini-Project**: The mini-project for this module will be a contact directory app that uses service workers, IndexedDB, webpack, and has PWA functionality. We will also deploy the app to Heroku.
 
 * Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install` and `npm start`.
 
@@ -278,7 +278,7 @@ By the end of class, students will be able to:
 
   * The Lighthouse Chrome extension is another way of generating a performance audit report and is especially useful for auditing apps that have already been deployed.
 
-  * This app is an example of the mini-project we will complete by the end of this unit deployed to Heroku. Using the Lighthouse Chrome extension, we can take a look to see how our deployed app is performing and what improvements we may want to make.
+  * This app is an example of the mini-project we will complete by the end of this module deployed to Heroku. Using the Lighthouse Chrome extension, we can take a look to see how our deployed app is performing and what improvements we may want to make.
 
 * Open the Lighthouse extension by clicking on the icon in the toolbar and click on `Generate Report` to explain the following:
 
@@ -1174,7 +1174,7 @@ By the end of class, students will be able to:
 
 * Today, creating a PWA is a lot easier than it was back then, and is usually a lot more cost-effective than developing a mobile application. Google has created an amazing set of tools, called workbox, to help developers create a service worker with minimal effort.
 
-* In this unit, you will learn about service workers and how to use them to cache assets, improve performance, and serve static assets. We will look at one that was made from scratch using plain Javascript, and another that was built on top of workbox.
+* In this module, you will learn about service workers and how to use them to cache assets, improve performance, and serve static assets. We will look at one that was made from scratch using plain Javascript, and another that was built on top of workbox.
 
 * We will start with the project setup needed to replace modules on the fly, move on to learning how to generate a service worker using Workbox, and finally learn how to implement caching strategies that make your app faster, and if configured correctly, able to work offline.
 

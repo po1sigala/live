@@ -39,23 +39,23 @@
           "error",
           {
             "selector": "TemplateLiteral",
-            "message": "Template literals are not allowed until later units."
+            "message": "Template literals are not allowed until later modules."
           },
           {
             "selector": "ArrowFunctionExpression",
-            "message": "Arrow functions are not allowed until later units."
+            "message": "Arrow functions are not allowed until later modules."
           },
           {
             "selector": "ObjectPattern, ArrayPattern",
-            "message": "Object/Array destructuring is not allowed until later units."
+            "message": "Object/Array destructuring is not allowed until later modules."
           },
           {
             "selector": "SpreadElement, RestElement",
-            "message": "Rest/Spread syntax is not allowed until later units."
+            "message": "Rest/Spread syntax is not allowed until later modules."
           },
           {
             "selector": "VariableDeclaration[kind=/(const|let)/]",
-            "message": "const/let declaration is not allowed until later units."
+            "message": "const/let declaration is not allowed until later modules."
           }
         ]
       },

@@ -4,7 +4,7 @@ import NameProvider from './utils/NameContext';
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Unit 22.2: useReducer Review';
+    document.title = 'Module 22.2: useReducer Review';
   }, []);
 
   return (

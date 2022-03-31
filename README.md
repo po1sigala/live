@@ -12,14 +12,14 @@ Welcome to the Full-Stack Coding Bootcamp! The repository houses the Ground curr
 
 ### Class Content
 
-You will find unit overviews, all activity files, and homework instructions and solutions in [01-Class-Content](01-Class-Content).
+You'll all activity files, Challenge instructions, starter code, and solution code, and weekly algorithms in [01-Class-Content](01-Class-Content).
 
 Use these materials to build your class repository.
 
 
 ### Lesson Plans
 
-You will find grading rubrics, links to slide decks and time trackers, and lesson plans organized by program in [02-Lesson-Plans](02-Lesson-Plans). 
+You'll find grading rubrics, links to slide decks, and lesson plans organized by delivery format in [02-Lesson-Plans](02-Lesson-Plans). 
 
 📝 These materials are _not_ to be shared with students. 
 

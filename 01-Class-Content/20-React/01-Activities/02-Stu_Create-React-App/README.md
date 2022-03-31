@@ -2,7 +2,7 @@
 
 ## Before We Begin
 
-Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this unit, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
+Initializing a React application by using the `create-react-app` command-line utility can take some time. To save time throughout this module, we will create one React application and only replace the `/src` files for each subsequent activity as we work on them. Before you add comments to the code, you will practice the workflow for creating a React app and updating your practice app for subsequent activities.
 
 To do this, follow these steps:
 

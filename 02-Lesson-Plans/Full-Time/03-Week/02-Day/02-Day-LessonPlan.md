@@ -1,4 +1,4 @@
-# 03.2 Full-Time Lesson Plan: Bootstrap
+# 03.2 Full-Time Lesson Plan: Third-Party APIs
 
 ## Overview
 
@@ -26,7 +26,7 @@ This class introduces Bootstrap utilities and how to extend Bootstrap. Student's
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
-* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this unit, for those who want to further their knowledge.
+* Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
 ## Learning Objectives
 
@@ -416,11 +416,11 @@ By the end of class students will be able to:
 
 ### 10. FLEX (30 min)
 
-* This time can be utilized for reviewing key topics learned so far in this unit or getting started on the homework.
+* This time can be utilized for reviewing key topics learned so far in this module or getting started on the Challenge.
 
-* Ask if students have any questions about the homework.
+* Ask if students have any questions about the Challenge.
 
-* Ask the students if there is anything they would like to review from Unit 03 before moving on to Unit 04.
+* Ask the students if there is anything they would like to review from Module 03 before moving on to Module 04.
 
 ### 11. BREAK (30 min)
 
@@ -948,7 +948,7 @@ Refer to the following documentation:
 
 [Moment.js Docs](https://momentjs.com/docs/#/displaying/)
 
-**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this unit.
+**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this module.
 
 ## 💡 Hints
 

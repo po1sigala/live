@@ -5,7 +5,7 @@ import CarProvider from './utils/CarContext';
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Unit 22.1: Reducers';
+    document.title = 'Module 22.1: Reducers';
   }, []);
 
   return (

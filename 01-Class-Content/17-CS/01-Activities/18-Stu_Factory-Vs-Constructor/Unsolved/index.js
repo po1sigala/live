@@ -1,7 +1,7 @@
 // TODO: Refactor the class to a factory function.
 class Lesson {
   constructor() {
-    this.title = 'Unit 17 - Computer Science';
+    this.title = 'Module 17 - Computer Science';
     this.description = 'CS for JS';
   }
   information() {
