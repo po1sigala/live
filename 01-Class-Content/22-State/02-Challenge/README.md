@@ -8,7 +8,7 @@ Your challenge this week is to refactor the e-commerce platform from [Activity 2
 
 **On the Job**: Web developers frequently have to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help. They must sift through it to find the information that matches the specific problem they’re trying to solve. This assignment will allow you to practice a skill that you’ll use many times over the course of your career.
 
-Remember, this module's Challenge is extra credit. It is not required for submission and your final grade will not be affected in any way. This Challenge is an opportunity for you to further practice your skills and get feedback on it.
+Remember, this module's Challenge is extra credit. It is not required for submission, nor will it count towards one of the two assignments that you can skip. If you choose to submit this Challenge, you will receive extra credit points on your final grade. However, if you choose not to submit it, your final grade will not be affected in any way. This Challenge is an opportunity for you to further practice your skills and get feedback on it, with the added incentive of receiving extra credit for the work.
 
 ## User Story
 
