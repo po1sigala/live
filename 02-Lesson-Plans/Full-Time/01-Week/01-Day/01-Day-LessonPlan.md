@@ -844,6 +844,12 @@ By the end of class, students will be able to:
     <a href="https://www.google.com">This is a link to Google.com</a>
     ```
 
+  * Comments can make your code easier to read and are not visible to the user! To make a comment in HTML, we use the following format:
+
+    ```html
+       <!-- Headers -->
+    ``
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we build a webpage using HTML elements?
