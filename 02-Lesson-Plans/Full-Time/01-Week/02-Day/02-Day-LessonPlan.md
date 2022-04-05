@@ -145,6 +145,12 @@ In today's class, students will be continue working with HTML and be introduced 
     }
     ```
 
+   * We can also make comments when writing CSS. To make a comment in CSS, we use the following syntax:
+
+   ```css
+   /* Sets the height and width of the section */
+   ```
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How do we use CSS to add color to webpages?
