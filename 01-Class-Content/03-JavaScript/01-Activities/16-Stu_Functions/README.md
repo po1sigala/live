@@ -18,6 +18,8 @@ Work with a partner to implement the following user story:
 
 How can we use parameters to give a name to the two values that we want to evaluate with the function? 
 
+How can we use the function expression in `sample.js` to help write our own function expression? 
+
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
