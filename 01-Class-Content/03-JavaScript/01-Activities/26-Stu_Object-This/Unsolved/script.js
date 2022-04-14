@@ -25,9 +25,9 @@ var investor = {
    }   
 };
 
-// TODO: Run the helloThis() function to check your results
+// TODO: After commenting, check your results!
 helloThis();
 
-// TODO: Call the object methods to check results
+// TODO: After commenting, check your results!
 child.ageTenYears();
 investor.investment.investmentGrowth();
