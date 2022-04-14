@@ -13,13 +13,13 @@ function isEqual(x, y) {
 // Logs "They are equal in type and value"
 isEqual(10, 10);
 
-// Logs "They are equal in value"
+// TODO: Call the isEqual function so that it logs "They are equal in value"
 isEqual('10', 10);
 
 
 // TODO: Rewrite isEqual as a function expression called 'isEqualTakeTwo`.
-// Refer to sample function expression as needed!
+// Refer to sample functions as needed!
 
-// Logs "They are not equal"
-isEqualTakeTwo(10, true);
+// TODO: Call the isEqualTakeTwo function so that it logs "They are not equal"
+
 
