@@ -1446,7 +1446,7 @@ In this lesson, you'll review some important React concepts with students to hel
 
     ```js
     const search = (query) =>
-      axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}$&api_key=dc6zaTOxFJmzC&limit=20`);
+      axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}$&api_key=zGTBO65XtIkTWFiBcgVCxJX7x8FveHfA&limit=20`);
 
     export default search;
     ```
