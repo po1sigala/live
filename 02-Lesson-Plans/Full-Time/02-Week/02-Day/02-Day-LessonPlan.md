@@ -129,6 +129,8 @@ This class is a continuation of JavaScript fundamentals. The activities today fo
 
   * When we call `declareHelloAgain`, the values provided for `x`, `y`, and `z`can be accessed by the function. So the message `"Hello, my parameter's values are 7, Hello, and true"` is logged.
 
+* Let students know that the code we just covered is found in the `sample.js` file and encourage them to look at it for guidance while completing the activity.
+ 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ What are two ways that we can create a reusable block of code?

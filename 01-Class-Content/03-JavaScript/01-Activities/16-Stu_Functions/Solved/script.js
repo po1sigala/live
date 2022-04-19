@@ -16,7 +16,7 @@ isEqual(10, 10);
 // Logs "They are equal in value"
 isEqual('10', 10);
 
-// Using function expression
+// isEqualTakeTwo using function expression 
 var isEqualTakeTwo = function (x, y) {
   if (x === y) {
     console.log('They are equal in type and value');

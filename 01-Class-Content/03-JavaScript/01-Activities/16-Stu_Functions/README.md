@@ -16,7 +16,7 @@ Work with a partner to implement the following user story:
 
 ## 💡 Hints
 
-How can we use parameters to give a name to the two values that we want to evaluate with the function? 
+How can we use parameters to give a name to the two values that we want to evaluate with the function?  
 
 ## 🏆 Bonus
 
