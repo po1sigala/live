@@ -474,9 +474,9 @@ By the end of class, students will be able to:
 
   * We are building a PWA text editor with JavaScript syntax highlighting.
 
-* Try a simple `console.log()` in the editor to demonstrate the following:
+* Try writing `console.log()` in the JavaScript syntax editor opened in the browser to demonstrate the following:
 
-  * Now we can click the install button, and it saves whatever we typed.
+  * Click the install button, and demonstrate that even when we open and close the installed version of the app, the console.log() we have typed is saved.
 
 * Open the Application tab in Chrome DevTools. Under the "Cache Storage" section, inspect the contents of the object store.
 
