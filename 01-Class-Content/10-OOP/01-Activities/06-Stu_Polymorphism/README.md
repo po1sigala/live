@@ -22,7 +22,7 @@ When the user passes in a number grade or letter grade, the method returns `unde
 
 ## 💡 Hints
 
-How can we use our understanding of function overloading in JavaScript&mdash;having one function that behaves differently depending on input&mdash;to build one method that handles different kinds of arguments? How might the `inRange()` helper function and `switch` statements come in handy?
+With method overloading, a single function can behave differently depending on the type of input&mdash;how can we use this to build a method that accepts different grade formats? How might the `inRange()` helper function and `switch` statements come in handy?
 
 ## 🏆 Bonus
 
