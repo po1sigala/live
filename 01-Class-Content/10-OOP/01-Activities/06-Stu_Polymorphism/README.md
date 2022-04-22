@@ -22,7 +22,9 @@ When the user passes in a number grade or letter grade, the method returns `unde
 
 ## 💡 Hints
 
-With method overloading, a single function can behave differently depending on the type of input&mdash;how can we use this to build a method that accepts different grade formats? How might the `inRange()` helper function and `switch` statements come in handy?
+* With method overloading, a single function can behave differently depending on the type of inputs it receives&mdash;how can we use this to build a object method that accepts different grade formats?
+
+* How might the `inRange()` helper function and `switch` statements come in handy?
 
 ## 🏆 Bonus
 
