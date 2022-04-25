@@ -275,7 +275,7 @@ In this class, you will introduce students to Mongoose, a Node.js package that p
   * 🔑 In order to implement Mongoose, we need to wrap it around our local connection to MongoDB. We use the `connect()` method to accomplish this.
 
     ```js
-     mongoose.connect('mongodb://localhost:27017/mygroceryDB', {
+     mongoose.connect('mongodb://127.0.0.1:27017/mygroceryDB', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
