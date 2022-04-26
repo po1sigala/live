@@ -16,15 +16,29 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-  1. Delete Package.lock.json and Node_modules from the client directory.
+  * Delete the `package.lock.json` file and the `node_modules` from the `client` directory.
 
-  2. Downgrade `react` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
-  3. Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
 
-  4. Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
 
-  5. Run `npm install` to ensure that your project is now running React version 17.
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
 
 * **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
 
@@ -736,15 +750,29 @@ By the end of class, students will be able to:
 
   * **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-    1. Delete Package.lock.json and Node_modules from the client directory.
+  * Delete the `package.lock.json` file and the `node_modules` from the `client` directory.
 
-    2. Downgrade `react` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
-    3. Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
 
-    4. Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
 
-    5. Run `npm install` to ensure that your project is now running React version 17.
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
 
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
 
@@ -785,15 +813,29 @@ By the end of class, students will be able to:
 
   3. `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-    - Delete Package.lock.json and Node_modules from the client directory.
+  * Delete the `package.lock.json` file and the `node_modules` from the `client` directory.
 
-    - Downgrade `react` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
-    - Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
 
-    - Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
 
-    - Run `npm install` to ensure that your project is now running React version 17.
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
 
   4. After `create-react-app` has completed (which can take a few minutes), run the command `npm install bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
 

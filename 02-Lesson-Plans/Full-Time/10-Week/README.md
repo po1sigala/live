@@ -30,15 +30,29 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 * **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-  1. Delete Package.lock.json and Node_modules from the client directory.
+  * Delete the `package.lock.json` file and the `node_modules` from the `client` directory.
 
-  2. Downgrade `react` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
-  3. Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
 
-  4. Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
 
-  5. Run `npm install` to ensure that your project is now running React version 17.
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
 
 * Each activity in Module 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
