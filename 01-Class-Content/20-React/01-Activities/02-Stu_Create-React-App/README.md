@@ -10,11 +10,23 @@ To do this, follow these steps:
 
 2. Run the command `npx create-react-app 00-practice-app`.
 
-3. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+3. `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-4. Copy the `src/` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+    - Delete Package.lock.json and Node_modules from the client directory.
 
-5. Run `npm start` to ensure that the source files were transplanted successfully.
+    - Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+    - Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+    - Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+    - Run `npm install` to ensure that your project is now running React version 17.
+
+4. After `create-react-app` has completed (which can take a few minutes), run the command `npm i bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+
+5. Copy the `src/` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+
+6. Run `npm start` to ensure that the source files were transplanted successfully.
 
 ## Activity
 

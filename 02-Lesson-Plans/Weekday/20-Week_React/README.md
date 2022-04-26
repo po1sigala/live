@@ -18,6 +18,18 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 * Make sure that you have installed `npx` so that you can demonstrate `create-react-app`. To check the installation, run `npx --version` in the command line.
 
+* **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
+
+  1. Delete Package.lock.json and Node_modules from the client directory.
+
+  2. Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+  3. Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+  4. Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+  5. Run `npm install` to ensure that your project is now running React version 17.
+
 * Each activity in Module 20 will rely on this practice app existing inside the `01-Activities` directory. Be sure to copy all activities to the student repo, including the `swap_tool` utility.
 
 * To save time in class, students are expected to copy the `/src` directory from the activity folder to their practice React app. This can be done manually, or with `sswap`, a command line tool that is included in the activities directory. Simply navigate to the [`swap_tool`](../../../../01-Class-Content/20-React/01-Activities/swap_tool/README.md) directory, install the dependencies and run the `sswap` command.

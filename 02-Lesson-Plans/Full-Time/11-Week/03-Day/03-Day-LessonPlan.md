@@ -14,6 +14,18 @@ In this class, students will be introduced to complex state management within th
   npx create-react-app 00-practice-app
   ```
 
+* **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
+
+  1. Delete Package.lock.json and Node_modules from the client directory.
+
+  2. Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+  3. Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+  4. Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+  5. Run `npm install` to ensure that your project is now running React version 17.
+
 * Once your practice React app has been created, you might encounter some issues regarding conflicting versions of `eslint`. If this is the case, also run the following:
 
   ```sh
