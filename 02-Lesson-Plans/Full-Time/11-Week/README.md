@@ -30,6 +30,32 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 * For the React activities in Module 22, be sure to create a practice React app before class by navigating to `01-Class-Content/22-State/01-Activities` and running `npx create-react-app 00-practice-app`.
 
+* **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
+
+  * Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
+
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
+
 * Before class, install the [React developer tools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi). It will be used in the Module 22 `O1-Ins_Providers` demo.
 
 * In the state management activities in Module 22, emphasis is placed on having the students refer to the documentation. Explain that on the job, it is important to be able to use documentation to find information on specific issues and then apply that information to their own code.

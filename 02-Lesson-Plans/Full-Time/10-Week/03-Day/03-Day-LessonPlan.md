@@ -14,6 +14,32 @@ In today's lesson, you will introduce students to React. You'll start by guiding
 
 * The practice app will be called `00-practice-app`, but the name isn't as important as it's location. The `00-practice-app` directory will be created in the `01-Activities` directory.
 
+* **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
+
+  * Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
+
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
+
 * **Important**: To avoid errors due to conflicting versions of ESLint in `fullstack-ground`, navigate to `00-practice-app` in the command line and run the following command:
 
    ```sh
@@ -324,8 +350,8 @@ By the end of class, students will be able to:
         description: 'Never forget your contacts!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: '/',
-        publicPath: '/',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -474,9 +500,9 @@ By the end of class, students will be able to:
 
   * We are building a PWA text editor with JavaScript syntax highlighting.
 
-* Try a simple `console.log()` in the editor to demonstrate the following:
+* Try writing `console.log()` in the JavaScript syntax editor opened in the browser to demonstrate the following:
 
-  * Now we can click the install button, and it saves whatever we typed.
+  * Click the install button, and demonstrate that even when we open and close the installed version of the app, the console.log() we have typed is saved.
 
 * Open the Application tab in Chrome DevTools. Under the "Cache Storage" section, inspect the contents of the object store.
 
@@ -722,6 +748,32 @@ By the end of class, students will be able to:
     └── yarn.lock
     ```
 
+  * **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
+
+  * Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
+
+  * Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+  * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+  * Your `package.json` file should look like the following:
+
+    ```js
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    ```
+
+  * Run `npm install` to ensure that your project is now running React version 17.
+
   * If we change into `00-practice-app` and then run `npm start`, we can see that the application builds and automatically opens a browser window.
 
   * For each subsequent activity in this module, we will remove the `/src` directory in `00-practice-app` and replace it with the `/src` directory in the activity's `/Unsolved` folder. Let's practice that now.
@@ -759,11 +811,37 @@ By the end of class, students will be able to:
 
   2. Run the command `npx create-react-app 00-practice-app`.
 
-  3. After `create-react-app` has completed (which can take a few minutes), run the command `npm install bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+  3. `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-  4. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+    * Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
 
-  5. Run `npm start` to ensure that the source files were transplanted successfully.
+    * Downgrade `react` to 17.0.2 inside of the `package.json` file.
+
+    * Downgrade `react-dom` to 17.0.2 inside of the `package.json` file.
+
+    * Downgrade `@testing-library/react` to ^11.1.0 inside of the `package.json` file.
+
+    * Your `package.json` file should look like the following:
+
+      ```js
+      "dependencies": {
+          "@testing-library/jest-dom": "^5.16.4",
+          "@testing-library/react": "^11.1.0",
+          "@testing-library/user-event": "^13.5.0",
+          "react": "17.0.2",
+          "react-dom": "17.0.2",
+          "react-scripts": "5.0.1",
+          "web-vitals": "^2.1.4"
+      },
+      ```
+
+    * Run `npm install` to ensure that your project is now running React version 17.
+
+  4. After `create-react-app` has completed (which can take a few minutes), run the command `npm install bootstrap dotenv axios --save` to add dependencies that we will need in later activities.
+
+  5. Copy the `/src` folder from `02-Stu_Create-React-App` and paste it into the root of `00-practice-app`.
+
+  6. Run `npm start` to ensure that the source files were transplanted successfully.
 
   ## Activity
 
