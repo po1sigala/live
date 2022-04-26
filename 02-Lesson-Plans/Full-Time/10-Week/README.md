@@ -30,7 +30,7 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 * **Important**: `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-  * Delete the `package.lock.json` file and the `node_modules` from the `client` directory.
+  * Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
 
   * Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
