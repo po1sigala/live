@@ -12,7 +12,7 @@ To do this, follow these steps:
 
 3. `create-react-app` now automatically uses the latest release of React, version 18. Due to several conflicting packages with React version 18, follow the steps below to ensure that all activities work as intended.
 
-    - Delete Package.lock.json and Node_modules from the client directory.
+    - Delete the `package-lock.json` file and `node_modules` folder from the `client` directory.
 
     - Downgrade `react` to 17.0.2 inside of the `package.json` file.
 
